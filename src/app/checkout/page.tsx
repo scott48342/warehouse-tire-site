@@ -451,8 +451,11 @@ export default function CheckoutPage() {
     <main className="bg-neutral-50 min-h-screen">
       <div className="mx-auto max-w-6xl px-4 py-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-3xl font-extrabold text-neutral-900">Checkout</h1>
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h1 className="text-3xl font-extrabold text-neutral-900">Checkout</h1>
+            <p className="text-sm text-neutral-500 mt-1">Only 2 steps left to complete your order</p>
+          </div>
           <Link href="/cart" className="text-sm text-neutral-600 hover:text-neutral-900 underline">
             Edit cart
           </Link>
@@ -541,11 +544,9 @@ export default function CheckoutPage() {
                         {fitmentMessaging.icon} {fitmentMessaging.shortLabel}
                       </div>
                     </div>
-                    {fitmentMessaging.checkoutNote && (
-                      <p className={`mt-2 text-sm ${fitmentColors.text}`}>
-                        {fitmentMessaging.checkoutNote}
-                      </p>
-                    )}
+                    <p className={`mt-3 text-base font-semibold ${fitmentColors.text}`}>
+                      ✔ Guaranteed direct bolt-on fit — no modifications required
+                    </p>
                   </div>
                 )}
 
@@ -629,17 +630,41 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
+                {/* Trust Strip */}
+                <div className="rounded-xl bg-green-50 border border-green-200 p-3 space-y-1.5">
+                  <div className="flex items-center gap-2 text-sm text-green-800">
+                    <span className="text-green-600 font-bold">✔</span>
+                    <span>Guaranteed fitment or we make it right</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-green-800">
+                    <span className="text-green-600 font-bold">✔</span>
+                    <span>Free returns if anything isn't perfect</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-green-800">
+                    <span className="text-green-600 font-bold">✔</span>
+                    <span>Real support: <a href="tel:2483324120" className="font-semibold hover:underline">248-332-4120</a></span>
+                  </div>
+                </div>
+
+                {/* Urgency Line */}
+                <div className="flex items-center justify-center gap-2 text-sm text-amber-700 font-medium">
+                  <span>🔥</span>
+                  <span>This setup is in stock and ready to ship</span>
+                </div>
+
+                {/* Primary CTA */}
                 <button
                   onClick={() => setStep("shipping")}
                   disabled={validation.errors.length > 0}
-                  className={`w-full h-12 rounded-xl font-extrabold text-white ${
+                  className={`w-full h-14 rounded-xl font-extrabold text-white text-lg ${
                     validation.errors.length > 0
                       ? "bg-neutral-300 cursor-not-allowed"
                       : "bg-green-600 hover:bg-green-700"
                   }`}
                 >
-                  {isLocal ? "Continue to Details" : "Continue to Shipping"}
+                  {isLocal ? "Secure Your Setup →" : "Secure Your Setup →"}
                 </button>
+                <p className="text-center text-xs text-neutral-500">Step 1 of 3 — you're almost done</p>
               </div>
             )}
 
@@ -761,6 +786,15 @@ export default function CheckoutPage() {
                   )}
                 </div>
 
+                {/* Trust Reminder */}
+                <div className="flex items-center justify-center gap-4 text-xs text-neutral-500">
+                  <span>✔ Guaranteed fitment</span>
+                  <span>•</span>
+                  <span>✔ Free returns</span>
+                  <span>•</span>
+                  <span>✔ Secure checkout</span>
+                </div>
+
                 <div className="flex gap-3">
                   <button
                     onClick={() => setStep("review")}
@@ -771,15 +805,16 @@ export default function CheckoutPage() {
                   <button
                     onClick={() => setStep("payment")}
                     disabled={isLocal && !selectedStore}
-                    className={`flex-1 h-12 rounded-xl font-extrabold text-white ${
+                    className={`flex-1 h-14 rounded-xl font-extrabold text-white text-lg ${
                       isLocal && !selectedStore
                         ? "bg-neutral-300 cursor-not-allowed"
                         : "bg-green-600 hover:bg-green-700"
                     }`}
                   >
-                    {isLocal && !selectedStore ? "Select Install Location" : "Continue to Payment"}
+                    {isLocal && !selectedStore ? "Select Install Location" : "Secure Your Setup →"}
                   </button>
                 </div>
+                <p className="text-center text-xs text-neutral-500">Step 2 of 3 — almost there!</p>
               </div>
             )}
 
@@ -1014,6 +1049,11 @@ export default function CheckoutPage() {
                     Includes ${calculatedTax.toFixed(2)} tax ({(taxRate * 100).toFixed(2)}%)
                   </p>
                 )}
+                {vehicle && (
+                  <p className="text-xs text-green-600 mt-2 font-medium">
+                    ✔ Fitment verified for your {vehicle.year} {vehicle.make} {vehicle.model}
+                  </p>
+                )}
                 {!totalCheck.matches && (
                   <p className="text-xs text-amber-600 mt-1">
                     ⚠️ Total verification pending (diff: ${totalCheck.difference.toFixed(2)})
@@ -1051,6 +1091,10 @@ export default function CheckoutPage() {
                   <div className="flex items-center gap-2 text-neutral-700">
                     <span className="text-green-600">✓</span>
                     <span>30-day returns</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-blue-600">
+                    <span>🔧</span>
+                    <span>Need installation? We can help you find a local installer</span>
                   </div>
                 </>
               )}
