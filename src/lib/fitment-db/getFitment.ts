@@ -16,7 +16,7 @@
 import { db } from "./db";
 import { vehicleFitments } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, asc, or, ilike, inArray, desc } from "drizzle-orm";
+import { eq, and, asc, or, ilike, inArray, desc, sql } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
 import { applyOverrides } from "./applyOverrides";
 import { getModelVariants } from "./modelAliases";
@@ -368,12 +368,12 @@ export async function getQualityTierReport(): Promise<{
   topMissingComplete: Array<{ year: number; make: string; model: string; tier: string }>;
 }> {
   // Overall stats
-  const { rows: overallRows } = await db.execute<{ tier: string; count: string }>`
+  const overallRows = await db.execute(sql`
     SELECT quality_tier as tier, COUNT(*) as count
     FROM vehicle_fitments
     WHERE year >= 2000
     GROUP BY quality_tier
-  `;
+  `) as { rows: Array<{ tier: string; count: string }> };
   
   const overall = {
     complete: 0,
@@ -382,7 +382,7 @@ export async function getQualityTierReport(): Promise<{
     total: 0,
   };
   
-  for (const row of overallRows) {
+  for (const row of overallRows.rows) {
     const count = parseInt(row.count, 10);
     overall.total += count;
     if (row.tier === "complete") overall.complete = count;
@@ -391,13 +391,14 @@ export async function getQualityTierReport(): Promise<{
   }
   
   // By make
-  const { rows: makeRows } = await db.execute<{ make: string; tier: string; count: string }>`
+  const makeResult = await db.execute(sql`
     SELECT make, quality_tier as tier, COUNT(*) as count
     FROM vehicle_fitments
     WHERE year >= 2015
     GROUP BY make, quality_tier
     ORDER BY make
-  `;
+  `) as { rows: Array<{ make: string; tier: string; count: string }> };
+  const makeRows = makeResult.rows;
   
   const makeMap = new Map<string, { complete: number; partial: number; low_confidence: number }>();
   for (const row of makeRows) {
@@ -416,13 +417,14 @@ export async function getQualityTierReport(): Promise<{
     .sort((a, b) => b.low_confidence - a.low_confidence);
   
   // Top vehicles missing complete data (recent years only)
-  const { rows: missingRows } = await db.execute<{ year: number; make: string; model: string; tier: string }>`
+  const missingResult = await db.execute(sql`
     SELECT DISTINCT year, make, model, quality_tier as tier
     FROM vehicle_fitments
     WHERE year >= 2020 AND quality_tier != 'complete'
     ORDER BY year DESC, make, model
     LIMIT 50
-  `;
+  `) as { rows: Array<{ year: number; make: string; model: string; tier: string }> };
+  const missingRows = missingResult.rows;
   
   return {
     overall,
