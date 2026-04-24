@@ -41,6 +41,16 @@ interface TireOption {
   price: number;
 }
 
+/** Staggered tire pair - front and rear tires for staggered vehicles */
+interface StaggeredTirePair {
+  id: string;
+  brand: string;
+  model: string;
+  front: TireOption;
+  rear: TireOption;
+  totalPrice: number; // 2×front + 2×rear
+}
+
 // ============================================================================
 // Detail Modal Component
 // ============================================================================
@@ -347,6 +357,7 @@ export function POSPackageStep() {
   const [wheels, setWheels] = useState<WheelOption[]>([]);
   const [staggeredPairs, setStaggeredPairs] = useState<StaggeredWheelPair[]>([]);
   const [tires, setTires] = useState<TireOption[]>([]);
+  const [staggeredTirePairs, setStaggeredTirePairs] = useState<StaggeredTirePair[]>([]);
   const [loadingWheels, setLoadingWheels] = useState(true);
   const [loadingTires, setLoadingTires] = useState(false);
   
@@ -357,6 +368,7 @@ export function POSPackageStep() {
   const [selectedWheelDetail, setSelectedWheelDetail] = useState<WheelOption | null>(null);
   const [selectedPairDetail, setSelectedPairDetail] = useState<StaggeredWheelPair | null>(null);
   const [selectedTireDetail, setSelectedTireDetail] = useState<TireOption | null>(null);
+  const [selectedTirePairDetail, setSelectedTirePairDetail] = useState<StaggeredTirePair | null>(null);
   
   // Filters
   const [wheelFilters, setWheelFilters] = useState<WheelFilters>({ brand: "", diameter: "", priceRange: "", finish: "" });
@@ -455,18 +467,98 @@ export function POSPackageStep() {
   useEffect(() => {
     if (!state.vehicle || !state.wheel) {
       setTires([]);
+      setStaggeredTirePairs([]);
       return;
     }
     
     setLoadingTires(true);
     setPhase("tires");
     
+    // For staggered vehicles, fetch both front and rear tires
+    if (state.wheel.staggered && state.wheel.rearDiameter && state.wheel.rearWidth) {
+      const frontParams = new URLSearchParams({
+        year: state.vehicle.year,
+        make: state.vehicle.make,
+        model: state.vehicle.model,
+        wheelDiameter: state.wheel.diameter,
+      });
+      const rearParams = new URLSearchParams({
+        year: state.vehicle.year,
+        make: state.vehicle.make,
+        model: state.vehicle.model,
+        wheelDiameter: state.wheel.rearDiameter,
+        rearWheelDiameter: state.wheel.rearDiameter, // Signal this is rear
+      });
+      if (state.vehicle.trim) {
+        frontParams.set("trim", state.vehicle.trim);
+        rearParams.set("trim", state.vehicle.trim);
+      }
+      
+      // Fetch front and rear tires in parallel
+      Promise.all([
+        fetch(`/api/tires/search?${frontParams}`).then(r => r.json()),
+        fetch(`/api/tires/search?${rearParams}`).then(r => r.json()),
+      ])
+        .then(([frontData, rearData]) => {
+          const normalizeTires = (data: any): TireOption[] => {
+            const results = data.results || data.tires || [];
+            return results.map((t: Record<string, unknown>) => ({
+              sku: (t.partNumber || t.sku || "") as string,
+              brand: (t.brand || "Unknown") as string,
+              model: (t.displayName || t.prettyName || t.description || t.model || "") as string,
+              size: (t.size || "") as string,
+              imageUrl: (t.imageUrl as string) || undefined,
+              price: typeof t.price === "number" ? t.price : (typeof t.cost === "number" ? t.cost + 50 : 0),
+            }));
+          };
+          
+          const frontTires = normalizeTires(frontData);
+          const rearTires = normalizeTires(rearData);
+          
+          // Build tire pairs - match by brand+model
+          const pairs: StaggeredTirePair[] = [];
+          const usedRearSkus = new Set<string>();
+          
+          for (const front of frontTires) {
+            // Find matching rear tire (same brand, same or similar model)
+            const matchingRear = rearTires.find(r => 
+              r.brand === front.brand && 
+              r.model === front.model &&
+              !usedRearSkus.has(r.sku)
+            );
+            
+            if (matchingRear) {
+              usedRearSkus.add(matchingRear.sku);
+              pairs.push({
+                id: `${front.sku}:${matchingRear.sku}`,
+                brand: front.brand,
+                model: front.model,
+                front,
+                rear: matchingRear,
+                totalPrice: (front.price * 2) + (matchingRear.price * 2),
+              });
+            }
+          }
+          
+          setStaggeredTirePairs(pairs.sort((a, b) => a.totalPrice - b.totalPrice));
+          setTires([]); // Clear single tires when showing pairs
+          console.log(`[POS] Built ${pairs.length} staggered tire pairs (${frontTires.length} front, ${rearTires.length} rear)`);
+        })
+        .catch((err) => {
+          console.error("[POS] Error fetching staggered tires:", err);
+          setStaggeredTirePairs([]);
+        })
+        .finally(() => setLoadingTires(false));
+      
+      return;
+    }
+    
+    // Square fitment - single tire search
     const params = new URLSearchParams({
       year: state.vehicle.year,
       make: state.vehicle.make,
       model: state.vehicle.model,
-      wheelDia: state.wheel.diameter,
-      wheelWidth: state.wheel.width,
+      wheelDiameter: state.wheel.diameter,
     });
     if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
     
@@ -483,6 +575,7 @@ export function POSPackageStep() {
           price: typeof t.price === "number" ? t.price : (typeof t.cost === "number" ? t.cost + 50 : 0),
         }));
         setTires(normalized);
+        setStaggeredTirePairs([]); // Clear pairs for square fitment
       })
       .catch((err) => {
         console.error("[POS] Error fetching tires:", err);
@@ -603,9 +696,30 @@ export function POSPackageStep() {
       unitPrice: tire.price,
       setPrice: tire.price * 4,
       quantity: 4,
+      staggered: false,
     };
     setTire(posTire);
     setSelectedTireDetail(null);
+    goToStep("pricing");
+  };
+  
+  /** Handle staggered tire pair selection */
+  const handleSelectStaggeredTirePair = (pair: StaggeredTirePair) => {
+    const posTire: POSTire = {
+      sku: pair.front.sku,
+      rearSku: pair.rear.sku,
+      brand: pair.brand,
+      model: pair.model,
+      size: pair.front.size,
+      rearSize: pair.rear.size,
+      imageUrl: pair.front.imageUrl,
+      unitPrice: pair.front.price,
+      setPrice: pair.totalPrice,
+      quantity: 4,
+      staggered: true,
+    };
+    setTire(posTire);
+    setSelectedTirePairDetail(null);
     goToStep("pricing");
   };
   
@@ -879,9 +993,20 @@ export function POSPackageStep() {
       
       <div className="text-center mb-4">
         <h2 className="text-2xl font-bold text-gray-900">Step 2: Select Tires</h2>
-        <p className="text-gray-500 mt-1">
-          {filteredTires.length} of {tires.length} tires for {state.wheel?.diameter}" wheels
-        </p>
+        {state.wheel?.staggered ? (
+          <>
+            <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm font-medium">
+              <span>⚡</span> Staggered Fitment
+            </div>
+            <p className="text-gray-500 mt-1">
+              {staggeredTirePairs.length} tire pairs • Front: {state.wheel.diameter}" / Rear: {state.wheel.rearDiameter}"
+            </p>
+          </>
+        ) : (
+          <p className="text-gray-500 mt-1">
+            {filteredTires.length} of {tires.length} tires for {state.wheel?.diameter}" wheels
+          </p>
+        )}
       </div>
       
       {loadingTires ? (
@@ -894,11 +1019,107 @@ export function POSPackageStep() {
             Finding matching tires...
           </div>
         </div>
+      ) : state.wheel?.staggered && staggeredTirePairs.length > 0 ? (
+        /* STAGGERED: Show tire pairs */
+        <>
+          {/* Staggered Tire Pairs Grid */}
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {staggeredTirePairs.map((pair) => (
+              <div
+                key={pair.id}
+                onClick={() => setSelectedTirePairDetail(pair)}
+                className="p-4 rounded-xl border-2 border-gray-200 bg-white hover:border-purple-500 hover:shadow-lg transition-all cursor-pointer group"
+              >
+                {/* Two tire sizes side by side */}
+                <div className="flex justify-center gap-4 mb-3">
+                  <div className="text-center">
+                    <div className="text-[10px] text-gray-400 mb-1">FRONT</div>
+                    {pair.front.imageUrl ? (
+                      <img src={pair.front.imageUrl} alt="Front" className="h-16 w-16 object-contain" />
+                    ) : (
+                      <div className="h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center text-xl">🛞</div>
+                    )}
+                    <div className="text-[10px] text-gray-500 mt-1">{pair.front.size}</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-[10px] text-gray-400 mb-1">REAR</div>
+                    {pair.rear.imageUrl ? (
+                      <img src={pair.rear.imageUrl} alt="Rear" className="h-16 w-16 object-contain" />
+                    ) : (
+                      <div className="h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center text-xl">🛞</div>
+                    )}
+                    <div className="text-[10px] text-gray-500 mt-1">{pair.rear.size}</div>
+                  </div>
+                </div>
+                
+                {/* Tire Info */}
+                <div className="text-sm font-medium text-gray-500">{pair.brand}</div>
+                <div className="text-sm font-bold text-gray-900 truncate" title={pair.model}>{pair.model}</div>
+                <div className="text-lg font-black text-purple-600 mt-2">
+                  ${pair.totalPrice.toLocaleString()}
+                </div>
+                <div className="text-xs text-gray-400">2 front + 2 rear</div>
+              </div>
+            ))}
+          </div>
+          
+          {staggeredTirePairs.length === 0 && (
+            <div className="text-center py-12 text-gray-500">
+              No matching tire pairs found. Contact support for assistance.
+            </div>
+          )}
+          
+          {/* Staggered Tire Pair Detail Modal */}
+          {selectedTirePairDetail && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setSelectedTirePairDetail(null)}>
+              <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-4 overflow-hidden" onClick={(e) => e.stopPropagation()}>
+                <div className="flex justify-between items-center p-4 border-b">
+                  <h3 className="text-xl font-bold text-gray-900">{selectedTirePairDetail.brand} {selectedTirePairDetail.model}</h3>
+                  <button onClick={() => setSelectedTirePairDetail(null)} className="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                <div className="p-6">
+                  <div className="flex gap-8 justify-center mb-6">
+                    <div className="text-center">
+                      <div className="text-sm font-bold text-gray-600 mb-2">FRONT (×2)</div>
+                      {selectedTirePairDetail.front.imageUrl && (
+                        <img src={selectedTirePairDetail.front.imageUrl} alt="Front" className="h-24 w-24 object-contain mx-auto" />
+                      )}
+                      <div className="mt-2 text-gray-900 font-medium">{selectedTirePairDetail.front.size}</div>
+                      <div className="text-green-600 font-bold">${selectedTirePairDetail.front.price}/ea</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-sm font-bold text-gray-600 mb-2">REAR (×2)</div>
+                      {selectedTirePairDetail.rear.imageUrl && (
+                        <img src={selectedTirePairDetail.rear.imageUrl} alt="Rear" className="h-24 w-24 object-contain mx-auto" />
+                      )}
+                      <div className="mt-2 text-gray-900 font-medium">{selectedTirePairDetail.rear.size}</div>
+                      <div className="text-green-600 font-bold">${selectedTirePairDetail.rear.price}/ea</div>
+                    </div>
+                  </div>
+                  <div className="bg-purple-50 rounded-xl p-4 text-center">
+                    <div className="text-sm text-purple-600">Total for all 4 tires</div>
+                    <div className="text-3xl font-black text-purple-700">${selectedTirePairDetail.totalPrice.toLocaleString()}</div>
+                    <div className="text-xs text-purple-500 mt-1">
+                      (2 × ${selectedTirePairDetail.front.price} front) + (2 × ${selectedTirePairDetail.rear.price} rear)
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => handleSelectStaggeredTirePair(selectedTirePairDetail)}
+                    className="mt-4 w-full py-3 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition"
+                  >
+                    Select This Tire Set
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       ) : tires.length === 0 ? (
         <div className="text-center py-12 text-gray-500">
           No matching tires found. Try selecting different wheels.
         </div>
       ) : (
+        /* SQUARE: Show individual tires */
         <>
           <TireFilterBar tires={tires} filters={tireFilters} setFilters={setTireFilters} />
           
@@ -943,7 +1164,7 @@ export function POSPackageStep() {
         </>
       )}
       
-      {/* Detail Modal */}
+      {/* Detail Modal (square fitment) */}
       {selectedTireDetail && (
         <TireDetailModal
           tire={selectedTireDetail}
