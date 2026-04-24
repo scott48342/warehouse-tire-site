@@ -2,36 +2,35 @@
  * Analytics Tracking API
  * 
  * POST /api/analytics/track
- * Captures client-side analytics events for server-side aggregation
- * 
- * Used by exit intent and other components for conversion tracking
+ * Captures client-side page views and persists to database
  * 
  * @created 2026-04-23
+ * @updated 2026-04-25 - Fixed: Actually write to database!
  */
 
 import { NextResponse } from "next/server";
-import { headers } from "next/headers";
+import { headers, cookies } from "next/headers";
+import { trackPageView } from "@/lib/analytics/track";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
-// In-memory buffer for recent events (for debugging)
-// In production, you'd send these to a proper analytics service
-const recentEvents: Array<{
-  event: string;
-  data: any;
-  timestamp: number;
-  ip: string;
-}> = [];
+// Cookie name for session tracking
+const SESSION_COOKIE = "wt_session_id";
 
-const MAX_RECENT_EVENTS = 100;
+/**
+ * Generate a unique session ID
+ */
+function generateSessionId(): string {
+  return `s_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
+}
 
 /**
  * POST /api/analytics/track
  * 
  * Body:
- * - event: string (required)
- * - data: object (optional)
- * - timestamp: number (optional)
+ * - path: string (required)
+ * - referrer: string (optional)
  */
 export async function POST(req: Request) {
   try {
@@ -45,64 +44,91 @@ export async function POST(req: Request) {
       return new Response(null, { status: 204 });
     }
 
-    const { event, data = {}, timestamp = Date.now() } = parsed;
+    const { path, referrer } = parsed;
 
-    if (!event) {
+    if (!path) {
       return new Response(null, { status: 204 });
     }
 
-    // Get IP for deduplication
+    // Skip admin and API routes
+    if (path.startsWith("/admin") || path.startsWith("/api")) {
+      return new Response(null, { status: 204 });
+    }
+
+    // Get headers for context
     const headersList = await headers();
-    const ip = headersList.get("x-forwarded-for")?.split(",")[0] || 
+    const cookieStore = await cookies();
+    
+    const ip = headersList.get("x-forwarded-for")?.split(",")[0]?.trim() || 
                headersList.get("x-real-ip") || 
                "unknown";
+    const userAgent = headersList.get("user-agent") || "";
+    const host = headersList.get("host") || headersList.get("x-forwarded-host") || "";
+    
+    // Geo headers (Vercel provides these)
+    const country = headersList.get("x-vercel-ip-country") || null;
+    const city = headersList.get("x-vercel-ip-city") || null;
+    const region = headersList.get("x-vercel-ip-country-region") || null;
 
-    // Store in memory buffer
-    recentEvents.unshift({
-      event,
-      data,
-      timestamp,
-      ip,
+    // Get or create session ID
+    let sessionId = cookieStore.get(SESSION_COOKIE)?.value;
+    const isNewSession = !sessionId;
+    
+    if (!sessionId) {
+      sessionId = generateSessionId();
+    }
+
+    // Build full URL
+    const protocol = headersList.get("x-forwarded-proto") || "https";
+    const fullUrl = `${protocol}://${host}${path}`;
+
+    // Track the page view in the database
+    await trackPageView({
+      sessionId,
+      path,
+      fullUrl,
+      referrer,
+      userAgent,
+      country,
+      city,
+      region,
+      isNewSession,
+      hostname: host,
+      // Pass cookies and headers for test detection
+      cookies: Object.fromEntries(
+        cookieStore.getAll().map(c => [c.name, c.value])
+      ),
+      headers: {
+        "user-agent": userAgent,
+        "x-forwarded-for": ip,
+      },
     });
 
-    // Trim buffer
-    while (recentEvents.length > MAX_RECENT_EVENTS) {
-      recentEvents.pop();
+    // Set session cookie if new
+    const response = new Response(null, { status: 204 });
+    
+    if (isNewSession) {
+      response.headers.set(
+        "Set-Cookie",
+        `${SESSION_COOKIE}=${sessionId}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 24 * 365}`
+      );
     }
 
-    // Log exit intent events for visibility
-    if (event.startsWith("exit_capture")) {
-      console.log(`[Analytics] ${event}`, {
-        ...data,
-        timestamp: new Date(timestamp).toISOString(),
-      });
-    }
-
-    // Return 204 No Content (standard for beacon)
-    return new Response(null, { status: 204 });
+    return response;
   } catch (err) {
     console.error("[analytics/track] Error:", err);
+    // Still return 204 - analytics shouldn't break the site
     return new Response(null, { status: 204 });
   }
 }
 
 /**
  * GET /api/analytics/track
- * Get recent events (for debugging/admin)
+ * Health check
  */
-export async function GET(req: Request) {
-  const url = new URL(req.url);
-  const eventFilter = url.searchParams.get("event");
-  const limit = parseInt(url.searchParams.get("limit") || "50", 10);
-
-  let events = recentEvents;
-  
-  if (eventFilter) {
-    events = events.filter(e => e.event.includes(eventFilter));
-  }
-
+export async function GET() {
   return NextResponse.json({
-    events: events.slice(0, limit),
-    total: events.length,
+    ok: true,
+    message: "Analytics tracking endpoint",
   });
 }
