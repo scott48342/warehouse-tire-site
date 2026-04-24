@@ -344,10 +344,28 @@ export async function markCartRecovered(cartId: string, orderId: string): Promis
 /**
  * Process abandoned carts - mark inactive carts as abandoned
  * Returns count of carts marked as abandoned
+ * 
+ * Also sends owner alerts for high-value carts
  */
 export async function processAbandonedCarts(): Promise<number> {
   const cutoffTime = new Date(Date.now() - ABANDONMENT_THRESHOLD_MS);
   
+  // First, find carts that will be marked abandoned (so we can send alerts)
+  const cartsToAbandon = await db
+    .select()
+    .from(abandonedCarts)
+    .where(
+      and(
+        eq(abandonedCarts.status, "active"),
+        lt(abandonedCarts.lastActivityAt, cutoffTime)
+      )
+    );
+
+  if (cartsToAbandon.length === 0) {
+    return 0;
+  }
+
+  // Mark them as abandoned
   const result = await db
     .update(abandonedCarts)
     .set({
@@ -362,10 +380,21 @@ export async function processAbandonedCarts(): Promise<number> {
       )
     );
 
-  const affectedCount = (result as any).rowCount || 0;
-  if (affectedCount > 0) {
-    console.log(`[AbandonedCart] Marked ${affectedCount} carts as abandoned`);
+  const affectedCount = (result as any).rowCount || cartsToAbandon.length;
+  console.log(`[AbandonedCart] Marked ${affectedCount} carts as abandoned`);
+
+  // Send owner alerts for each abandoned cart (async, don't block)
+  try {
+    const { sendAbandonedCartAlert } = await import("./abandonedCartAlerts");
+    for (const cart of cartsToAbandon) {
+      sendAbandonedCartAlert(cart).catch(err => {
+        console.error(`[AbandonedCart] Failed to send alert for ${cart.cartId}:`, err);
+      });
+    }
+  } catch (err) {
+    console.error("[AbandonedCart] Failed to load alert module:", err);
   }
+
   return affectedCount;
 }
 
