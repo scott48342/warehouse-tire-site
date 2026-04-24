@@ -2766,6 +2766,30 @@ async function handleLegacyPath(
   const profileMs = Date.now() - t0;
   
   // ═══════════════════════════════════════════════════════════════════════════
+  // FETCH QUALITY TIER from new vehicle_fitments table (legacy profile doesn't have it)
+  // This is needed for proper staggered detection
+  // ═══════════════════════════════════════════════════════════════════════════
+  let fetchedQualityTier: string | null = null;
+  try {
+    const tierResult = await db.query(
+      `SELECT quality_tier FROM vehicle_fitments 
+       WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+       ${lookupKey ? "AND (LOWER(modification_id) = LOWER($4) OR LOWER(display_trim) = LOWER($4))" : ""}
+       LIMIT 1`,
+      lookupKey ? [Number(year), make, model, lookupKey] : [Number(year), make, model]
+    );
+    if (tierResult.rows.length > 0) {
+      fetchedQualityTier = tierResult.rows[0].quality_tier;
+      console.log(`[fitment-search] Fetched qualityTier="${fetchedQualityTier}" from vehicle_fitments`);
+    }
+  } catch (e) {
+    console.error(`[fitment-search] Failed to fetch qualityTier:`, e);
+  }
+  
+  // Attach to profile for use in staggered detection
+  (profile as any).qualityTier = fetchedQualityTier || "unknown";
+  
+  // ═══════════════════════════════════════════════════════════════════════════
   // CRITICAL: Apply fitment rules to override incorrect legacy data
   // This handles cases like RAM 1500 Classic vs 5th Gen where bolt pattern differs.
   // ═══════════════════════════════════════════════════════════════════════════
