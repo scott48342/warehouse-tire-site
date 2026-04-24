@@ -1,70 +1,85 @@
-import pg from 'pg';
-import { config } from 'dotenv';
-config({ path: '.env.local' });
+import pg from "pg";
+import fs from "fs";
+
+const envContent = fs.readFileSync(".env.local", "utf-8");
+const dbMatch = envContent.match(/POSTGRES_URL="?([^"\s]+)/);
+const dbUrl = dbMatch ? dbMatch[1].trim() : null;
+
 const { Pool } = pg;
+const pool = new Pool({ connectionString: dbUrl });
 
-const url = process.env.POSTGRES_URL;
-const pool = new Pool({
-  connectionString: url,
-  ssl: url?.includes('neon') || url?.includes('prisma') ? { rejectUnauthorized: false } : undefined
-});
-
-async function main() {
-  // Count total fitments
-  const count = await pool.query(`SELECT COUNT(*) FROM vehicle_fitments`);
-  console.log(`Total fitments: ${count.rows[0].count}`);
-
-  // Check how trims are stored - sample Mustang
-  console.log('\n=== Sample trim data (Mustang 2020+) ===');
-  const mustang = await pool.query(`
-    SELECT DISTINCT year, make, model, raw_trim, display_trim, submodel
-    FROM vehicle_fitments 
-    WHERE model ILIKE '%mustang%' AND year >= 2020
-    ORDER BY year DESC, raw_trim
-    LIMIT 30
-  `);
-  for (const v of mustang.rows) {
-    console.log(`${v.year} ${v.make} ${v.model} | raw="${v.raw_trim || ''}" | display="${v.display_trim || ''}" | submodel="${v.submodel || ''}"`);
+async function check() {
+  const client = await pool.connect();
+  
+  try {
+    console.log('Checking trim data in vehicle_fitments...\n');
+    
+    // Count total records
+    const totalResult = await client.query('SELECT COUNT(*) as count FROM vehicle_fitments');
+    console.log('Total fitment records:', totalResult.rows[0].count);
+    
+    // Count distinct non-empty trims
+    const trimCount = await client.query(`
+      SELECT COUNT(DISTINCT trim) as count 
+      FROM vehicle_fitments 
+      WHERE trim IS NOT NULL AND trim != ''
+    `);
+    console.log('Distinct non-empty trims:', trimCount.rows[0].count);
+    
+    // Sample trims
+    const sampleTrims = await client.query(`
+      SELECT DISTINCT trim 
+      FROM vehicle_fitments 
+      WHERE trim IS NOT NULL AND trim != '' 
+      LIMIT 20
+    `);
+    console.log('\nSample trims:', sampleTrims.rows.map(r => r.trim));
+    
+    // Check Buick Encore
+    const encoreTrims = await client.query(`
+      SELECT DISTINCT year, trim, modification_id, bolt_pattern 
+      FROM vehicle_fitments 
+      WHERE LOWER(make) = 'buick' AND LOWER(model) LIKE '%encore%' 
+      ORDER BY year DESC 
+      LIMIT 20
+    `);
+    console.log('\nBuick Encore data:', encoreTrims.rows);
+    
+    // Check Ford F-150 trims (should have many)
+    const f150Trims = await client.query(`
+      SELECT DISTINCT year, trim, modification_id 
+      FROM vehicle_fitments 
+      WHERE LOWER(make) = 'ford' AND LOWER(model) = 'f-150' AND year = 2024
+      ORDER BY trim
+    `);
+    console.log('\n2024 Ford F-150 trims:', f150Trims.rows);
+    
+    // Check if trim column is mostly empty
+    const emptyTrims = await client.query(`
+      SELECT 
+        COUNT(*) FILTER (WHERE trim IS NULL OR trim = '') as empty_trims,
+        COUNT(*) FILTER (WHERE trim IS NOT NULL AND trim != '') as has_trim,
+        COUNT(*) as total
+      FROM vehicle_fitments
+    `);
+    console.log('\nTrim data breakdown:', emptyTrims.rows[0]);
+    
+    // Check what the trims API would return
+    const trimsAPITest = await client.query(`
+      SELECT DISTINCT trim, modification_id 
+      FROM vehicle_fitments 
+      WHERE year = 2024 AND make ILIKE 'ford' AND model ILIKE 'f-150'
+      ORDER BY trim
+    `);
+    console.log('\nTrims API test (2024 Ford F-150):', trimsAPITest.rows);
+    
+  } finally {
+    client.release();
+    await pool.end();
   }
-
-  // Check Camaro trims
-  console.log('\n=== Sample trim data (Camaro 2019+) ===');
-  const camaro = await pool.query(`
-    SELECT DISTINCT year, make, model, raw_trim, display_trim, submodel
-    FROM vehicle_fitments 
-    WHERE model ILIKE '%camaro%' AND year >= 2019
-    ORDER BY year DESC, raw_trim
-    LIMIT 30
-  `);
-  for (const v of camaro.rows) {
-    console.log(`${v.year} ${v.make} ${v.model} | raw="${v.raw_trim || ''}" | display="${v.display_trim || ''}" | submodel="${v.submodel || ''}"`);
-  }
-
-  // Check for missing display_trim where raw_trim exists
-  console.log('\n=== Missing display_trim (has raw_trim) ===');
-  const missing = await pool.query(`
-    SELECT COUNT(*) as cnt
-    FROM vehicle_fitments 
-    WHERE raw_trim IS NOT NULL AND raw_trim != '' 
-      AND (display_trim IS NULL OR display_trim = '')
-  `);
-  console.log(`Fitments with raw_trim but no display_trim: ${missing.rows[0].cnt}`);
-
-  // Check raw_trim patterns
-  console.log('\n=== Sample raw_trim values ===');
-  const samples = await pool.query(`
-    SELECT DISTINCT raw_trim, COUNT(*) as cnt
-    FROM vehicle_fitments 
-    WHERE raw_trim IS NOT NULL AND raw_trim != ''
-    GROUP BY raw_trim
-    ORDER BY cnt DESC
-    LIMIT 30
-  `);
-  for (const v of samples.rows) {
-    console.log(`"${v.raw_trim}" (${v.cnt})`);
-  }
-
-  await pool.end();
 }
 
-main().catch(console.error);
+check().catch(e => {
+  console.error(e);
+  process.exit(1);
+});
