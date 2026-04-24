@@ -93,6 +93,45 @@ export default function CheckoutPage() {
   });
   const [sameAsBilling, setSameAsBilling] = useState(true);
   const [processing, setProcessing] = useState(false);
+  const [paymentCanceled, setPaymentCanceled] = useState(false);
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CHECKOUT STATE PERSISTENCE
+  // Restore shipping info when returning from canceled payment
+  // ═══════════════════════════════════════════════════════════════════════════
+  useEffect(() => {
+    // Check if returning from canceled payment
+    const params = new URLSearchParams(window.location.search);
+    const canceled = params.get("canceled") === "1";
+    
+    if (canceled) {
+      // Restore shipping info from sessionStorage
+      try {
+        const saved = sessionStorage.getItem("checkout_shipping");
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          setShipping(parsed);
+          setStep("payment"); // Go directly to payment step
+          setPaymentCanceled(true);
+          // Clean up URL
+          window.history.replaceState({}, "", "/checkout");
+        }
+      } catch (e) {
+        console.warn("[Checkout] Failed to restore shipping info:", e);
+      }
+    }
+  }, []);
+
+  // Save shipping info when proceeding to payment
+  useEffect(() => {
+    if (step === "payment" && shipping.firstName && shipping.email) {
+      try {
+        sessionStorage.setItem("checkout_shipping", JSON.stringify(shipping));
+      } catch (e) {
+        // Ignore storage errors
+      }
+    }
+  }, [step, shipping]);
   
   // Default state to Michigan for local mode
   useEffect(() => {
@@ -843,6 +882,13 @@ export default function CheckoutPage() {
             {/* Step: Payment */}
             {step === "payment" && (
               <div className="space-y-4">
+                {/* Canceled payment notice */}
+                {paymentCanceled && (
+                  <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
+                    <p>👋 No problem! Choose a different payment option below.</p>
+                  </div>
+                )}
+
                 {/* Error state */}
                 {stripeError && (
                   <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
