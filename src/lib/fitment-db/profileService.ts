@@ -18,7 +18,7 @@
 import { db } from "./db";
 import { vehicleFitments, fitmentSourceRecords, modificationAliases } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, or, inArray, sql } from "drizzle-orm";
+import { eq, and, or, inArray, sql, ilike } from "drizzle-orm";
 
 /**
  * Case-insensitive make comparison for DB queries.
