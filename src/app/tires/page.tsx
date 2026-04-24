@@ -4107,13 +4107,18 @@ function TireCard({
           <>
             <span className="text-green-600">✓</span>
             <span className="text-green-700">
-              {maxQty >= 20 ? 'In stock' : `${maxQty} in stock`} • Ships 1–2 days
+              {isLocalMode 
+                ? (maxQty >= 20 ? 'In stock • Ready at store' : `${maxQty} in stock`)
+                : (maxQty >= 20 ? 'In stock' : `${maxQty} in stock`) + ' • Ships 1–2 days'
+              }
             </span>
           </>
         ) : (
           <>
             <span className="text-amber-500">📦</span>
-            <span className="text-amber-700">Available • Ships 1–2 weeks</span>
+            <span className="text-amber-700">
+              {isLocalMode ? 'Available • Can order for you' : 'Available • Ships 1–2 weeks'}
+            </span>
           </>
         )}
       </div>
