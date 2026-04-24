@@ -40,15 +40,14 @@ async function getStats() {
       AND customer_email NOT ILIKE '%scott@%'
     `;
     
-    const [todayRes, weekRes, totalRes, flaggedRes, errorsRes, issuesRes, 
-           // Real orders (paid via Stripe)
-           ordersToday, ordersWeek, ordersTotal,
-           // Quotes (excluding test emails)
-           quotesToday, quotesWeek, quotesTotal] = await Promise.all([
-      // Legacy counts (for backwards compat, now excludes test emails)
-      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE ${EXCLUDE_TEST_EMAILS}`),
-      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE - INTERVAL '7 days' ${EXCLUDE_TEST_EMAILS}`),
-      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE 1=1 ${EXCLUDE_TEST_EMAILS}`),
+    const [
+      // Real orders (paid via Stripe)
+      ordersToday, ordersWeek, ordersTotal,
+      // Quotes (checkout attempts, excluding test emails)
+      quotesToday, quotesWeek, quotesTotal,
+      // Admin stats
+      flaggedRes, errorsRes, issuesRes
+    ] = await Promise.all([
       // Real orders from orders table (paid)
       pool.query(`SELECT COUNT(*) as count FROM orders WHERE created_at >= CURRENT_DATE`),
       pool.query(`SELECT COUNT(*) as count FROM orders WHERE created_at >= CURRENT_DATE - INTERVAL '7 days'`),
@@ -57,6 +56,7 @@ async function getStats() {
       pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE ${EXCLUDE_TEST_EMAILS}`),
       pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE - INTERVAL '7 days' ${EXCLUDE_TEST_EMAILS}`),
       pool.query(`SELECT COUNT(*) as count FROM quotes WHERE 1=1 ${EXCLUDE_TEST_EMAILS}`),
+      // Admin stats
       pool.query(`SELECT COUNT(*) as count FROM admin_product_flags WHERE flagged = true`),
       pool.query(`SELECT COUNT(*) as count FROM admin_logs WHERE log_type = 'search_error' AND created_at >= CURRENT_DATE - INTERVAL '24 hours'`),
       pool.query(`
