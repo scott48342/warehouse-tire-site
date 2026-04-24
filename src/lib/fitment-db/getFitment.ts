@@ -16,7 +16,7 @@
 import { db } from "./db";
 import { vehicleFitments } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, asc, or, ilike, inArray, desc, sql } from "drizzle-orm";
+import { eq, and, asc, or, ilike, inArray, desc, sql, SQL } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
 import { applyOverrides } from "./applyOverrides";
 import { getModelVariants } from "./modelAliases";
@@ -27,6 +27,32 @@ import {
   isTierAllowed,
   type QualityTierStats 
 } from "./qualityTier";
+
+// ============================================================================
+// Model Name Matching Helper
+// ============================================================================
+
+/**
+ * Normalize-and-compare for model names.
+ * Handles: "Encore GX" (DB) vs "encore-gx" (URL slug)
+ * Uses ILIKE with pattern matching to handle case and separator differences.
+ */
+function modelNormalizedMatch(modelVariants: string[]): SQL | undefined {
+  // Build ILIKE patterns that match regardless of separators
+  // e.g., "encore-gx" -> "%encore%gx%" matches "Encore GX", "encore-gx", "ENCORE_GX", etc.
+  const patterns = modelVariants.map(v => {
+    const words = v.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/);
+    return `%${words.join('%')}%`;
+  });
+  
+  if (patterns.length === 0) return undefined;
+  if (patterns.length === 1) {
+    return ilike(vehicleFitments.model, patterns[0]);
+  }
+  
+  const conditions = patterns.map(p => ilike(vehicleFitments.model, p));
+  return or(...conditions);
+}
 
 // ============================================================================
 // Types
@@ -236,47 +262,51 @@ export async function listFitmentsWithTierFilter(
   };
   
   // Try to find fitments for the requested year
-  for (const modelName of modelVariants) {
-    // First, get ALL fitments to count tiers
-    const allFitments = await db
-      .select()
-      .from(vehicleFitments)
-      .where(
-        and(
-          eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
-          ilike(vehicleFitments.model, modelName)
-        )
+  // Use normalized model matching to handle "Encore GX" vs "encore-gx"
+  const modelMatch = modelNormalizedMatch(modelVariants);
+  if (!modelMatch) {
+    return { fitments: [], tierStats, usedFallback: false };
+  }
+  
+  // First, get ALL fitments to count tiers
+  const allFitments = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        ilike(vehicleFitments.make, normalizedMake),
+        modelMatch
       )
-      .orderBy(asc(vehicleFitments.displayTrim));
-    
-    if (allFitments.length > 0) {
-      // Count tiers
-      for (const f of allFitments) {
-        tierStats.total++;
-        const tier = (f.qualityTier as QualityTier) || "unknown";
-        if (tier === "complete") tierStats.complete++;
-        else if (tier === "partial") tierStats.partial++;
-        else tierStats.low_confidence++;
-      }
-      
-      // Filter by allowed tiers
-      const filtered = allFitments.filter(f => 
-        isTierAllowed(f.qualityTier, searchType)
-      );
-      
-      if (filtered.length > 0) {
-        const withOverrides = await Promise.all(filtered.map(f => applyOverrides(f)));
-        return {
-          fitments: withOverrides,
-          tierStats,
-          usedFallback: false,
-        };
-      }
-      
-      // No records match tier requirements - need fallback
-      console.log(`[getFitment] No ${allowedTiers.join("/")} tier records for ${year} ${make} ${model} (${searchType} search)`);
+    )
+    .orderBy(asc(vehicleFitments.displayTrim));
+  
+  if (allFitments.length > 0) {
+    // Count tiers
+    for (const f of allFitments) {
+      tierStats.total++;
+      const tier = (f.qualityTier as QualityTier) || "unknown";
+      if (tier === "complete") tierStats.complete++;
+      else if (tier === "partial") tierStats.partial++;
+      else tierStats.low_confidence++;
     }
+    
+    // Filter by allowed tiers
+    const filtered = allFitments.filter(f => 
+      isTierAllowed(f.qualityTier, searchType)
+    );
+    
+    if (filtered.length > 0) {
+      const withOverrides = await Promise.all(filtered.map(f => applyOverrides(f)));
+      return {
+        fitments: withOverrides,
+        tierStats,
+        usedFallback: false,
+      };
+    }
+    
+    // No records match tier requirements - need fallback
+    console.log(`[getFitment] No ${allowedTiers.join("/")} tier records for ${year} ${make} ${model} (${searchType} search)`);
   }
   
   // PHASE 4: FALLBACK - Find closest year with complete data
@@ -325,6 +355,10 @@ async function findClosestCompleteYear(
   const normalizedMake = normalizeMake(make);
   const modelVariants = getModelVariants(model);
   
+  // Use normalized model matching to handle "Encore GX" vs "encore-gx"
+  const modelMatch = modelNormalizedMatch(modelVariants);
+  if (!modelMatch) return null;
+  
   // Search order: prefer newer years, then older
   const yearsToTry = [
     year + 1, year - 1,
@@ -335,24 +369,22 @@ async function findClosestCompleteYear(
   for (const tryYear of yearsToTry) {
     if (tryYear < 2000 || tryYear > 2030) continue;
     
-    for (const modelName of modelVariants) {
-      const fitments = await db
-        .select()
-        .from(vehicleFitments)
-        .where(
-          and(
-            eq(vehicleFitments.year, tryYear),
-            ilike(vehicleFitments.make, normalizedMake),
-            ilike(vehicleFitments.model, modelName),
-            eq(vehicleFitments.qualityTier, "complete")
-          )
+    const fitments = await db
+      .select()
+      .from(vehicleFitments)
+      .where(
+        and(
+          eq(vehicleFitments.year, tryYear),
+          ilike(vehicleFitments.make, normalizedMake),
+          modelMatch,
+          eq(vehicleFitments.qualityTier, "complete")
         )
-        .orderBy(asc(vehicleFitments.displayTrim));
-      
-      if (fitments.length > 0) {
-        const withOverrides = await Promise.all(fitments.map(f => applyOverrides(f)));
-        return { year: tryYear, fitments: withOverrides };
-      }
+      )
+      .orderBy(asc(vehicleFitments.displayTrim));
+    
+    if (fitments.length > 0) {
+      const withOverrides = await Promise.all(fitments.map(f => applyOverrides(f)));
+      return { year: tryYear, fitments: withOverrides };
     }
   }
   
