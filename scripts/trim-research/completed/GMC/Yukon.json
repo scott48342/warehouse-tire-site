@@ -1,0 +1,110 @@
+{
+  "year": 2024,
+  "make": "GMC",
+  "model": "Yukon",
+  "trims": [
+    {
+      "name": "SLE",
+      "wheelSizes": [
+        {"diameter": 18, "width": 8.5},
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "18\" standard, 20\" and 22\" available"
+    },
+    {
+      "name": "SLT",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "20\" standard, 22\" available"
+    },
+    {
+      "name": "AT4",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9}
+      ],
+      "tireSizes": ["275/60R20"],
+      "source": "tiresize.com",
+      "notes": "20\" all-terrain wheels standard"
+    },
+    {
+      "name": "Denali",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "20\" standard, 22\" available"
+    },
+    {
+      "name": "Denali Ultimate",
+      "wheelSizes": [
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/50R22"],
+      "source": "tiresize.com",
+      "notes": "22\" standard on top-tier trim"
+    },
+    {
+      "name": "XL SLE",
+      "wheelSizes": [
+        {"diameter": 18, "width": 8.5},
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "Extended length model. 18\" standard, 20\" and 22\" available"
+    },
+    {
+      "name": "XL SLT",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "Extended length model. 20\" standard, 22\" available"
+    },
+    {
+      "name": "XL AT4",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9}
+      ],
+      "tireSizes": ["275/60R20"],
+      "source": "tiresize.com",
+      "notes": "Extended length off-road model. 20\" standard"
+    },
+    {
+      "name": "XL Denali",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "Extended length model. 20\" standard, 22\" available"
+    },
+    {
+      "name": "XL Denali Ultimate",
+      "wheelSizes": [
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/50R22"],
+      "source": "tiresize.com",
+      "notes": "Extended length top-tier trim. 22\" standard"
+    }
+  ],
+  "boltPattern": "6x139.7",
+  "hubBore": "78.1",
+  "notes": "Full-size SUV. Shares platform with Chevrolet Tahoe/Suburban. XL variants are extended length (Suburban equivalent).",
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

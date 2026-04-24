@@ -1,0 +1,54 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "Tundra",
+  "trims": [
+    {
+      "name": "SR",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["245/75R18"],
+      "source": "caranddriver.com",
+      "notes": "Styled steel wheels"
+    },
+    {
+      "name": "SR5",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["275/65R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 20, "width": null}],
+      "tireSizes": ["275/55R20"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Platinum",
+      "wheelSizes": [{"diameter": 20, "width": null}],
+      "tireSizes": ["275/55R20"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "1794 Edition",
+      "wheelSizes": [{"diameter": 20, "width": null}],
+      "tireSizes": ["275/55R20"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "TRD Pro",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["285/65R18"],
+      "source": "needs_verification",
+      "notes": "Falken Wildpeak A/T Trail tires, lifted suspension"
+    },
+    {
+      "name": "Capstone",
+      "wheelSizes": [{"diameter": 22, "width": null}],
+      "tireSizes": ["265/45R22"],
+      "source": "needs_verification"
+    }
+  ],
+  "notes": "2022+ Tundra uses 3.4L twin-turbo V6 i-FORCE or i-FORCE MAX hybrid. All trims 4x2 or 4x4.",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

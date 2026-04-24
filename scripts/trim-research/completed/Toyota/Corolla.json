@@ -1,0 +1,41 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "Corolla",
+  "trims": [
+    {
+      "name": "L",
+      "wheelSizes": [{"diameter": 16, "width": null}],
+      "tireSizes": ["205/55R16"],
+      "source": "caranddriver.com",
+      "notes": "Steel wheels with covers"
+    },
+    {
+      "name": "LE",
+      "wheelSizes": [{"diameter": 16, "width": null}],
+      "tireSizes": ["205/55R16"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["225/40R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "XLE",
+      "wheelSizes": [{"diameter": 16, "width": null}],
+      "tireSizes": ["205/55R16"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "XSE",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["225/40R18"],
+      "source": "needs_verification"
+    }
+  ],
+  "notes": "L trim has steel wheels with covers. SE/XSE likely have 18-inch alloys.",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

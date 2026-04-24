@@ -1,0 +1,49 @@
+{
+  "year": 2026,
+  "make": "Hyundai",
+  "model": "Tucson",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["235/65R17"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "SEL",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["235/65R17"],
+      "source": "caranddriver.com (inferred from SE, same base spec)",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "XRT",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/60R18"],
+      "source": "caranddriver.com (XRT mentioned with rugged package)",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SEL Premium",
+      "wheelSizes": [{"diameter": 19, "width": 7.5}],
+      "tireSizes": ["235/55R19"],
+      "source": "caranddriver.com (mid-high trims typically 19\")",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 19, "width": 7.5}],
+      "tireSizes": ["235/55R19"],
+      "source": "caranddriver.com (2022 Tucson Limited AWD test specs)",
+      "verified": true
+    }
+  ],
+  "notes": "SE verified from C/D specs page. Limited verified from C/D tested vehicle specs. SEL, XRT, SEL Premium need manufacturer verification. 2026 model is carryover from 2025 refresh.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

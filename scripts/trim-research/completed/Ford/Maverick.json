@@ -1,0 +1,146 @@
+{
+  "make": "Ford",
+  "model": "Maverick",
+  "years": [2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "Maverick launched in 2022 as compact unibody pickup. Standard hybrid FWD, optional 2.0T AWD. Tremor package adds 17\" wheels with all-terrain tires.",
+  "yearData": {
+    "2022": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/65R17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/60HR18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/65R17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/60HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P235/65R17"],
+          "source": "thecarconnection.com",
+          "notes": "All-terrain tires"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/65R17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/60HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P235/65R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/65R17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/60HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P235/65R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/65R17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P235/65R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    }
+  }
+}

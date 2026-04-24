@@ -1,0 +1,50 @@
+{
+  "year": 2026,
+  "make": "Kia",
+  "model": "K5",
+  "trims": [
+    {
+      "name": "LX",
+      "wheelSizes": [{"diameter": 16, "width": 6.5}],
+      "tireSizes": ["205/65R16"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "LXS",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["215/55R17"],
+      "source": "estimated - mid trim upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "GT-Line",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/45R18"],
+      "source": "estimated - sport appearance",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "EX",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/45R18"],
+      "source": "estimated - higher trim",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "GT",
+      "wheelSizes": [{"diameter": 19, "width": 8.5}],
+      "tireSizes": ["245/40R19"],
+      "source": "estimated - performance variant with 2.5T",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "LX verified from C/D specs. 2.5L I4 base with 8-speed auto. GT has 2.5T (290hp). Mid-size sedan.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

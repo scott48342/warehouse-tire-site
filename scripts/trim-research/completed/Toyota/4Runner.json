@@ -1,0 +1,62 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "4Runner",
+  "trims": [
+    {
+      "name": "SR5",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["245/70R17"],
+      "source": "caranddriver.com",
+      "notes": "Dark-Gray Painted Alloy wheels"
+    },
+    {
+      "name": "SR5 Premium",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["245/70R17"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "TRD Sport",
+      "wheelSizes": [{"diameter": 20, "width": null}],
+      "tireSizes": ["245/60R20"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "TRD Off-Road",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["265/70R17"],
+      "source": "needs_verification",
+      "notes": "Goodyear Wrangler Territory A/T tires"
+    },
+    {
+      "name": "TRD Off-Road Premium",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["265/70R17"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 20, "width": null}],
+      "tireSizes": ["245/60R20"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "TRD Pro",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["285/70R17"],
+      "source": "needs_verification",
+      "notes": "BF Goodrich All-Terrain T/A tires, lifted suspension"
+    },
+    {
+      "name": "Trailhunter",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["285/70R17"],
+      "source": "needs_verification",
+      "notes": "Specialized off-road tires, lifted suspension"
+    }
+  ],
+  "notes": "2025+ 4Runner is 6th generation with 2.4L turbo 4-cylinder (also hybrid version). Body-on-frame SUV.",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

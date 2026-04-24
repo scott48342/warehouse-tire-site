@@ -1,0 +1,50 @@
+{
+  "year": 2026,
+  "make": "Kia",
+  "model": "Seltos",
+  "trims": [
+    {
+      "name": "LX",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["215/55R17"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "S",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["215/55R17"],
+      "source": "estimated - same as LX",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "EX",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["215/55R17"],
+      "source": "estimated - same as LX",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/45R18"],
+      "source": "estimated - top trim upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "X-Line",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/50R18"],
+      "source": "estimated - rugged variant",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "LX verified from C/D specs. 2.0L I4 with IVT. Subcompact SUV. 10.25\" touchscreen standard.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

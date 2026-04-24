@@ -1,0 +1,65 @@
+{
+  "make": "Subaru",
+  "model": "WRX",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "Standard", "wheelDiameter": 17, "tireSize": "235/45R17" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "STI", "wheelDiameter": 19, "tireSize": "245/35R19" },
+        { "name": "STI Limited", "wheelDiameter": 19, "tireSize": "245/35R19" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/WRX/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "Standard", "wheelDiameter": 17, "tireSize": "235/45R17" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "STI", "wheelDiameter": 19, "tireSize": "245/35R19" },
+        { "name": "STI Limited", "wheelDiameter": 19, "tireSize": "245/35R19" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/WRX/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "235/45R17" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "GT", "wheelDiameter": 18, "tireSize": "245/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/WRX/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "235/45R17" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "GT", "wheelDiameter": 18, "tireSize": "245/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/WRX/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "235/45R17" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "GT", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "TR", "wheelDiameter": 19, "tireSize": "245/35R19" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/WRX/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "GT", "wheelDiameter": 18, "tireSize": "245/40R18" },
+        { "name": "tS", "wheelDiameter": 19, "tireSize": "245/35R19" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/WRX/2025/"
+    }
+  }
+}

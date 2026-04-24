@@ -1,0 +1,35 @@
+{
+  "year": 2024,
+  "make": "Subaru",
+  "model": "Ascent",
+  "source": "tiresize.com",
+  "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2024/",
+  "fetchedAt": "2026-04-24",
+  "trims": [
+    {
+      "name": "Base",
+      "wheelDiameters": [18],
+      "tireSizes": ["245/60R18"]
+    },
+    {
+      "name": "Limited",
+      "wheelDiameters": [20],
+      "tireSizes": ["245/50R20"]
+    },
+    {
+      "name": "Onyx Edition",
+      "wheelDiameters": [20],
+      "tireSizes": ["245/50R20"]
+    },
+    {
+      "name": "Premium",
+      "wheelDiameters": [18],
+      "tireSizes": ["245/60R18"]
+    },
+    {
+      "name": "Touring",
+      "wheelDiameters": [20],
+      "tireSizes": ["245/50R20"]
+    }
+  ]
+}

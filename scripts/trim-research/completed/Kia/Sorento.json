@@ -1,0 +1,58 @@
+{
+  "year": 2026,
+  "make": "Kia",
+  "model": "Sorento",
+  "trims": [
+    {
+      "name": "LX",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["235/65R17"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "S",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["235/65R17"],
+      "source": "estimated - same as LX",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "EX",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/60R18"],
+      "source": "estimated - mid trim upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX",
+      "wheelSizes": [{"diameter": 19, "width": 7.5}],
+      "tireSizes": ["235/55R19"],
+      "source": "estimated - top trim typically 19\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX Prestige",
+      "wheelSizes": [{"diameter": 19, "width": 7.5}],
+      "tireSizes": ["235/55R19"],
+      "source": "estimated - top trim",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "X-Line",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/60R18"],
+      "source": "estimated - rugged variant",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "LX verified from C/D specs. 2.5L I4 with 8-speed auto. 3-row SUV with 5,401lb GVWR. Available in hybrid/PHEV variants.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

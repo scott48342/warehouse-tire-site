@@ -1,0 +1,35 @@
+{
+  "year": 2024,
+  "make": "Subaru",
+  "model": "Crosstrek",
+  "source": "tiresize.com",
+  "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2024/",
+  "fetchedAt": "2026-04-24",
+  "trims": [
+    {
+      "name": "Base",
+      "wheelDiameters": [17],
+      "tireSizes": ["225/60R17"]
+    },
+    {
+      "name": "Limited",
+      "wheelDiameters": [18],
+      "tireSizes": ["225/55R18"]
+    },
+    {
+      "name": "Premium",
+      "wheelDiameters": [17],
+      "tireSizes": ["225/60R17"]
+    },
+    {
+      "name": "Sport",
+      "wheelDiameters": [18],
+      "tireSizes": ["225/55R18"]
+    },
+    {
+      "name": "Wilderness",
+      "wheelDiameters": [17],
+      "tireSizes": ["225/60R17"]
+    }
+  ]
+}

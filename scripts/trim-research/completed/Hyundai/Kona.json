@@ -1,0 +1,42 @@
+{
+  "year": 2026,
+  "make": "Hyundai",
+  "model": "Kona",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["215/60R17"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "SEL",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["215/60R17"],
+      "source": "estimated - same as SE base",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "N Line",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/45R18"],
+      "source": "estimated - sport variant typically 18\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/45R18"],
+      "source": "estimated - top trim typically 18\"",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "SE verified from C/D specs. 2.0L I4 with IVT. MSRP starts $25,500. Second-gen Kona redesigned for 2024.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

@@ -1,0 +1,92 @@
+{
+  "make": "Subaru",
+  "model": "Forester",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "Wilderness trim uses 17\" for ground clearance. 2025+ introduced hybrid variants and 19\" Sport/Touring.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Touring", "wheelDiameter": 18, "tireSize": "225/55R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Forester/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Touring", "wheelDiameter": 18, "tireSize": "225/55R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Forester/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Touring", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Wilderness", "wheelDiameter": 17, "tireSize": "225/60R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Forester/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Touring", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Wilderness", "wheelDiameter": 17, "tireSize": "225/60R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Forester/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Touring", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Wilderness", "wheelDiameter": 17, "tireSize": "225/60R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Forester/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Sport", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Sport Hybrid", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Touring", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Touring Hybrid", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Wilderness", "wheelDiameter": 17, "tireSize": "235/60R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Forester/2025/"
+    },
+    "2026": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Sport", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Sport Hybrid", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Touring", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Touring Hybrid", "wheelDiameter": 19, "tireSize": "235/50R19" },
+        { "name": "Wilderness", "wheelDiameter": 17, "tireSize": "235/60R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Forester/2026/"
+    }
+  }
+}

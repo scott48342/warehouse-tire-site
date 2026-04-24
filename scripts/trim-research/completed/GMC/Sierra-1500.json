@@ -1,0 +1,91 @@
+{
+  "year": 2024,
+  "make": "GMC",
+  "model": "Sierra 1500",
+  "trims": [
+    {
+      "name": "Pro",
+      "wheelSizes": [
+        {"diameter": 17, "width": 8},
+        {"diameter": 20, "width": 9}
+      ],
+      "tireSizes": ["255/70R17", "265/70R17", "275/60R20"],
+      "source": "tiresize.com",
+      "notes": "17\" standard, 20\" available"
+    },
+    {
+      "name": "SLE",
+      "wheelSizes": [
+        {"diameter": 17, "width": 8},
+        {"diameter": 18, "width": 8.5},
+        {"diameter": 20, "width": 9}
+      ],
+      "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20"],
+      "source": "tiresize.com",
+      "notes": "Multiple wheel options from 17-20 inches"
+    },
+    {
+      "name": "SLT",
+      "wheelSizes": [
+        {"diameter": 18, "width": 8.5},
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "18\" standard, 20\" and 22\" available"
+    },
+    {
+      "name": "Elevation",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9}
+      ],
+      "tireSizes": ["275/60R20"],
+      "source": "tiresize.com",
+      "notes": "20\" standard"
+    },
+    {
+      "name": "AT4",
+      "wheelSizes": [
+        {"diameter": 18, "width": 8.5},
+        {"diameter": 20, "width": 9}
+      ],
+      "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+      "source": "tiresize.com",
+      "notes": "Off-road focused trim with multiple wheel options"
+    },
+    {
+      "name": "AT4X",
+      "wheelSizes": [
+        {"diameter": 18, "width": 8.5}
+      ],
+      "tireSizes": ["275/70R18"],
+      "source": "tiresize.com",
+      "notes": "Extreme off-road trim with 18\" all-terrain setup"
+    },
+    {
+      "name": "Denali",
+      "wheelSizes": [
+        {"diameter": 20, "width": 9},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/60R20", "275/50R22"],
+      "source": "tiresize.com",
+      "notes": "20\" standard, 22\" available"
+    },
+    {
+      "name": "Denali Ultimate",
+      "wheelSizes": [
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/50R22"],
+      "source": "tiresize.com",
+      "notes": "22\" standard on top-tier trim"
+    }
+  ],
+  "boltPattern": "6x139.7",
+  "hubBore": "78.1",
+  "notes": "Full-size pickup truck. Shares platform with Chevrolet Silverado 1500.",
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

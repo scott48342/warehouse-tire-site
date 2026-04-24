@@ -1,0 +1,87 @@
+{
+  "model": "Grand Cherokee",
+  "make": "Jeep",
+  "years": [
+    {
+      "year": 2020,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Laredo", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/70R17"], "source": "tiresize.com"},
+        {"name": "Laredo E", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["245/70R17", "265/60R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Limited X", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "SRT", "wheelSizes": [{"diameter": 20}], "tireSizes": ["295/45R20"], "source": "tiresize.com"},
+        {"name": "Summit", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Trackhawk", "wheelSizes": [{"diameter": 20}], "tireSizes": ["295/45R20"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 18}], "tireSizes": ["265/60R18"], "source": "tiresize.com"},
+        {"name": "Upland", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2021,
+      "trims": [
+        {"name": "80th Anniversary Edition", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Freedom", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Laredo E", "wheelSizes": [{"diameter": 18}], "tireSizes": ["265/60R18"], "source": "tiresize.com"},
+        {"name": "Laredo X", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Limited X", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "SRT", "wheelSizes": [{"diameter": 20}], "tireSizes": ["295/45R20"], "source": "tiresize.com"},
+        {"name": "Summit", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Trackhawk", "wheelSizes": [{"diameter": 20}], "tireSizes": ["295/45R20"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 18}], "tireSizes": ["265/60R18"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Laredo", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["245/70R17", "265/60R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Summit", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Summit Reserve", "wheelSizes": [{"diameter": 21}], "tireSizes": ["275/45R21"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 18}], "tireSizes": ["265/60R18"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Laredo", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["245/70R17", "265/60R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Summit", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Summit Reserve", "wheelSizes": [{"diameter": 21}], "tireSizes": ["275/45R21"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Laredo", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["245/70R17", "265/60R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Summit", "wheelSizes": [{"diameter": 20}, {"diameter": 21}], "tireSizes": ["265/50R20", "275/45R21"], "source": "tiresize.com"},
+        {"name": "Summit Reserve", "wheelSizes": [{"diameter": 21}], "tireSizes": ["275/45R21"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2025,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Laredo", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["245/70R17", "265/60R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["265/60R18", "265/50R20"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 20}], "tireSizes": ["265/50R20"], "source": "tiresize.com"},
+        {"name": "Summit", "wheelSizes": [{"diameter": 20}, {"diameter": 21}], "tireSizes": ["265/50R20", "275/45R21"], "source": "tiresize.com"},
+        {"name": "Summit Reserve", "wheelSizes": [{"diameter": 21}], "tireSizes": ["275/45R21"], "source": "tiresize.com"}
+      ]
+    }
+  ],
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

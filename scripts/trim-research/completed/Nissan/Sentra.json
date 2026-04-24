@@ -1,0 +1,69 @@
+{
+  "make": "Nissan",
+  "model": "Sentra",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "SV trim has optional wheel packages (16 or 17 inch)",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "205/60R16", "notes": "Optional 17\" available" },
+        { "name": "SR", "wheelDiameter": 18, "tireSize": "215/45R18" },
+        { "name": "Nismo", "wheelDiameter": 18, "tireSize": "215/45R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Sentra/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "205/60R16", "notes": "Optional 17\" available" },
+        { "name": "SR", "wheelDiameter": 18, "tireSize": "215/45R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Sentra/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "205/60R16", "notes": "Optional 17\" available" },
+        { "name": "SR", "wheelDiameter": 18, "tireSize": "215/45R18" },
+        { "name": "Midnight Edition", "wheelDiameter": 18, "tireSize": "215/45R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Sentra/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "205/60R16", "notes": "Optional 17\" available" },
+        { "name": "SR", "wheelDiameter": 18, "tireSize": "215/45R18" },
+        { "name": "Midnight Edition", "wheelDiameter": 18, "tireSize": "215/45R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Sentra/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "205/60R16", "notes": "Optional 17\" available" },
+        { "name": "SR", "wheelDiameter": 18, "tireSize": "215/45R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Sentra/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "205/60R16", "notes": "Optional 17\" available" },
+        { "name": "SR", "wheelDiameter": 18, "tireSize": "215/45R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Sentra/2025/"
+    },
+    "2026": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SL", "wheelDiameter": 17, "tireSize": "205/50R17" },
+        { "name": "SR", "wheelDiameter": 18, "tireSize": "215/45R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Sentra/2026/"
+    }
+  }
+}

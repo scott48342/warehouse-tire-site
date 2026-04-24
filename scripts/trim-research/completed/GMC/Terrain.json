@@ -1,0 +1,52 @@
+{
+  "make": "GMC",
+  "model": "Terrain",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "tiresize.com",
+  "researchDate": "2026-04-24",
+  "trims": [
+    {
+      "name": "SL",
+      "wheelSizes": [
+        {"diameter": 17, "width": 7}
+      ],
+      "tireSizes": ["225/65R17"],
+      "notes": "Base trim"
+    },
+    {
+      "name": "SLE",
+      "wheelSizes": [
+        {"diameter": 17, "width": 7},
+        {"diameter": 19, "width": 7.5}
+      ],
+      "tireSizes": ["225/65R17", "235/50R19"],
+      "notes": "Mid-level trim with wheel options"
+    },
+    {
+      "name": "SLT",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7},
+        {"diameter": 19, "width": 7.5}
+      ],
+      "tireSizes": ["225/60R18", "235/50R19"],
+      "notes": "Upper mid-level trim"
+    },
+    {
+      "name": "AT4",
+      "wheelSizes": [
+        {"diameter": 17, "width": 7}
+      ],
+      "tireSizes": ["225/65R17"],
+      "notes": "Off-road oriented with all-terrain tires"
+    },
+    {
+      "name": "Denali",
+      "wheelSizes": [
+        {"diameter": 19, "width": 7.5}
+      ],
+      "tireSizes": ["235/50R19"],
+      "notes": "Luxury trim, 19-inch standard"
+    }
+  ],
+  "verified": true
+}

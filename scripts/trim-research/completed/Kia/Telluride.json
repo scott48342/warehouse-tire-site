@@ -1,0 +1,64 @@
+{
+  "year": 2026,
+  "make": "Kia",
+  "model": "Telluride",
+  "trims": [
+    {
+      "name": "LX",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/65R18"],
+      "source": "caranddriver.com (2027 specs - carryover likely)",
+      "verified": true
+    },
+    {
+      "name": "S",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/65R18"],
+      "source": "estimated from LX base",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "EX",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/65R18"],
+      "source": "estimated from LX base",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX",
+      "wheelSizes": [{"diameter": 20, "width": 8.5}],
+      "tireSizes": ["245/50R20"],
+      "source": "estimated - top trims typically 20\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX Prestige",
+      "wheelSizes": [{"diameter": 20, "width": 8.5}],
+      "tireSizes": ["245/50R20"],
+      "source": "estimated - top trims typically 20\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "X-Line",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/65R18"],
+      "source": "motortrend.com (mentioned as carryover 2026)",
+      "verified": true
+    },
+    {
+      "name": "X-Pro",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/65R18"],
+      "source": "motortrend.com (off-road variant, 0-60 in 7.0s test)",
+      "verified": true
+    }
+  ],
+  "notes": "LX specs from C/D 2027 specs (new 2.5L turbo engine). X-Line and X-Pro verified from MotorTrend. 2026 is carryover before 2027 redesign with turbo engine. 3.8L V-6 (291hp) for 2026.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

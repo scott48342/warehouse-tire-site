@@ -1,0 +1,48 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "RAV4",
+  "trims": [
+    {
+      "name": "LE",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["225/65R17"],
+      "source": "caranddriver.com",
+      "notes": "Steel wheels"
+    },
+    {
+      "name": "XLE",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["225/65R17"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "XLE Premium",
+      "wheelSizes": [{"diameter": 19, "width": null}],
+      "tireSizes": ["235/55R19"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Adventure",
+      "wheelSizes": [{"diameter": 19, "width": null}],
+      "tireSizes": ["235/55R19"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "TRD Off-Road",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["235/55R18"],
+      "source": "needs_verification",
+      "notes": "Falken Wildpeak A/T Trail tires"
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 19, "width": null}],
+      "tireSizes": ["235/55R19"],
+      "source": "needs_verification"
+    }
+  ],
+  "notes": "2025 RAV4 available in gas and hybrid versions. LE has 17-inch steel wheels, higher trims get 18/19-inch alloys.",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

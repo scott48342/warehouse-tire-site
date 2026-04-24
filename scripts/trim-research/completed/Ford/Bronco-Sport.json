@@ -1,0 +1,191 @@
+{
+  "make": "Ford",
+  "model": "Bronco Sport",
+  "years": [2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "Bronco Sport launched in 2021. Based on Escape platform. Badlands trim has more powerful 2.0T engine and unique 28.5\" tires. Heritage and Free Wheeling editions added in 2023.",
+  "yearData": {
+    "2021": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "First Edition",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Heritage Edition",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Heritage Limited Edition",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Free Wheeling",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Heritage",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    }
+  }
+}

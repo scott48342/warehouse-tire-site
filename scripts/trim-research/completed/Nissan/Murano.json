@@ -1,0 +1,73 @@
+{
+  "make": "Nissan",
+  "model": "Murano",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "2025+ is all-new generation with larger wheels across the lineup.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "235/65R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "235/65R18" },
+        { "name": "SL", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "235/55R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Murano/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "235/65R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "235/65R18", "notes": "Optional 20\" available" },
+        { "name": "SL", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Midnight Edition", "wheelDiameter": 20, "tireSize": "235/55R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Murano/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "235/65R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "235/65R18", "notes": "Optional 20\" available" },
+        { "name": "SL", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Midnight Edition", "wheelDiameter": 20, "tireSize": "235/55R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Murano/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "235/65R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "235/65R18", "notes": "Optional 20\" available" },
+        { "name": "SL", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Midnight Edition", "wheelDiameter": 20, "tireSize": "235/55R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Murano/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "235/65R18" },
+        { "name": "SL", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Midnight Edition", "wheelDiameter": 20, "tireSize": "235/55R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Murano/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "SV", "wheelDiameter": 20, "tireSize": "255/55R20" },
+        { "name": "SL", "wheelDiameter": 20, "tireSize": "255/55R20" },
+        { "name": "Platinum", "wheelDiameter": 21, "tireSize": "255/50R21" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Murano/2025/"
+    },
+    "2026": {
+      "trims": [
+        { "name": "SV", "wheelDiameter": 20, "tireSize": "255/55R20" },
+        { "name": "SL", "wheelDiameter": 20, "tireSize": "255/55R20" },
+        { "name": "Platinum", "wheelDiameter": 21, "tireSize": "255/50R21" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Murano/2026/"
+    }
+  }
+}

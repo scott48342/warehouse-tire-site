@@ -1,0 +1,51 @@
+{
+  "make": "Buick",
+  "model": "Envision",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "tiresize.com",
+  "researchDate": "2026-04-24",
+  "trims": [
+    {
+      "name": "Preferred",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7.5}
+      ],
+      "tireSizes": ["235/60R18"],
+      "notes": "Base trim"
+    },
+    {
+      "name": "Sport Touring",
+      "wheelSizes": [
+        {"diameter": 20, "width": 8}
+      ],
+      "tireSizes": ["245/45R20"],
+      "notes": "Sport appearance package"
+    },
+    {
+      "name": "Avenir",
+      "wheelSizes": [
+        {"diameter": 20, "width": 8}
+      ],
+      "tireSizes": ["245/45R20"],
+      "notes": "Top luxury trim, adaptive suspension standard"
+    },
+    {
+      "name": "Essence",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7.5},
+        {"diameter": 20, "width": 8}
+      ],
+      "tireSizes": ["235/60R18", "245/45R20"],
+      "notes": "Pre-2024 mid-level trim"
+    },
+    {
+      "name": "Premium",
+      "wheelSizes": [
+        {"diameter": 20, "width": 8}
+      ],
+      "tireSizes": ["245/45R20"],
+      "notes": "Pre-2021 upper trim"
+    }
+  ],
+  "verified": true
+}

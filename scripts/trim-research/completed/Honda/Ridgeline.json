@@ -1,0 +1,81 @@
+{
+  "model": "Ridgeline",
+  "make": "Honda",
+  "years": {
+    "2026": {
+      "trims": [
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "RTL", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "RTL-E", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Black Edition", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "TrailSport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (2025 carryover)" }
+      ],
+      "notes": "2nd generation Ridgeline (2017+). TrailSport uses all-terrain tires.",
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com" },
+        { "name": "RTL", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com" },
+        { "name": "Black Edition", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com" },
+        { "name": "TrailSport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com" }
+      ],
+      "notes": "2nd generation Ridgeline",
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference from 2025)" },
+        { "name": "RTL", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference from 2025)" },
+        { "name": "RTL-E", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference from 2025)" },
+        { "name": "Black Edition", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference from 2025)" },
+        { "name": "TrailSport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference from 2025)" }
+      ],
+      "notes": "2nd generation Ridgeline",
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL-E", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "Black Edition", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "TrailSport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" }
+      ],
+      "notes": "2nd generation Ridgeline",
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL-E", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "Black Edition", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" }
+      ],
+      "notes": "2nd generation Ridgeline",
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL-E", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "Black Edition", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" }
+      ],
+      "notes": "2nd generation Ridgeline - 2021 refresh",
+      "verified": true
+    },
+    "2020": {
+      "trims": [
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "RTL-E", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "Black Edition", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["245/60R18"], "source": "tiresize.com (inference)" }
+      ],
+      "notes": "2nd generation Ridgeline",
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "primarySource": "tiresize.com"
+}

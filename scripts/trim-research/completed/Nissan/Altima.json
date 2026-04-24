@@ -1,0 +1,241 @@
+{
+  "make": "Nissan",
+  "model": "Altima",
+  "years": {
+    "2020": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["215/60R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SR",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["215/60R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SR",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["215/60R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SR",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["215/60R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SR",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["215/60R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SR",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["215/60R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SR",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["215/60R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["215/55R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SR",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["235/40R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "researchedBy": "subagent:trim-research-nissan-subaru"
+}

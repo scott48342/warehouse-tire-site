@@ -1,0 +1,87 @@
+{
+  "model": "Compass",
+  "make": "Jeep",
+  "years": [
+    {
+      "year": 2020,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 18}], "tireSizes": ["225/55R18"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 19}], "tireSizes": ["235/45R19"], "source": "tiresize.com"},
+        {"name": "Latitude", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["225/60R17", "225/55R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 19}], "tireSizes": ["225/55R18", "235/45R19"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 16}], "tireSizes": ["215/65R16"], "source": "tiresize.com"},
+        {"name": "Sun and Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 17}], "tireSizes": ["215/65R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2021,
+      "trims": [
+        {"name": "80th Anniversary Edition", "wheelSizes": [{"diameter": 19}], "tireSizes": ["235/45R19"], "source": "tiresize.com"},
+        {"name": "Altitude", "wheelSizes": [{"diameter": 18}], "tireSizes": ["225/55R18"], "source": "tiresize.com"},
+        {"name": "Freedom", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com"},
+        {"name": "Latitude", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["225/60R17", "225/55R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 19}], "tireSizes": ["225/55R18", "235/45R19"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 16}], "tireSizes": ["215/65R16"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 17}], "tireSizes": ["215/65R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 18}], "tireSizes": ["225/55R18"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 19}], "tireSizes": ["235/45R19"], "source": "tiresize.com"},
+        {"name": "Latitude", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com"},
+        {"name": "Latitude Lux", "wheelSizes": [{"diameter": 18}], "tireSizes": ["225/55R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 19}], "tireSizes": ["225/55R18", "235/45R19"], "source": "tiresize.com"},
+        {"name": "Red", "wheelSizes": [{"diameter": 19}], "tireSizes": ["235/45R19"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 16}], "tireSizes": ["215/65R16"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 17}], "tireSizes": ["215/65R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 18}], "tireSizes": ["225/55R18"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 19}], "tireSizes": ["235/45R19"], "source": "tiresize.com"},
+        {"name": "Latitude", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com"},
+        {"name": "Latitude Lux", "wheelSizes": [{"diameter": 18}], "tireSizes": ["225/55R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 19}], "tireSizes": ["225/55R18", "235/45R19"], "source": "tiresize.com"},
+        {"name": "Red", "wheelSizes": [{"diameter": 19}], "tireSizes": ["235/45R19"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 17}], "tireSizes": ["215/65R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {"name": "Latitude", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["225/60R17", "225/60R18"], "source": "tiresize.com"},
+        {"name": "Latitude Lux", "wheelSizes": [{"diameter": 18}], "tireSizes": ["225/55R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 19}], "tireSizes": ["225/55R18", "235/45R19"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 17}], "tireSizes": ["215/65R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2025,
+      "trims": [
+        {"name": "Latitude", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["225/60R17", "225/60R18"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 19}], "tireSizes": ["225/55R18", "235/45R19"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 17}], "tireSizes": ["215/65R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2026,
+      "trims": [
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 19}], "tireSizes": ["235/45R19"], "source": "tiresize.com", "notes": "needs_verification for 2026"},
+        {"name": "Latitude", "wheelSizes": [{"diameter": 17}, {"diameter": 18}], "tireSizes": ["225/60R17", "225/55R18"], "source": "tiresize.com", "notes": "needs_verification for 2026"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 18}, {"diameter": 19}], "tireSizes": ["225/55R18", "235/45R19"], "source": "tiresize.com", "notes": "needs_verification for 2026"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["225/60R17"], "source": "tiresize.com", "notes": "needs_verification for 2026"},
+        {"name": "Trailhawk", "wheelSizes": [{"diameter": 17}], "tireSizes": ["215/65R17"], "source": "tiresize.com", "notes": "needs_verification for 2026"}
+      ]
+    }
+  ],
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

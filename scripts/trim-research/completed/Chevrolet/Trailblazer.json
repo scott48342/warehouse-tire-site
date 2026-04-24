@@ -1,0 +1,47 @@
+{
+  "make": "Chevrolet",
+  "model": "Trailblazer",
+  "years": [
+    {
+      "year": 2024,
+      "trims": [
+        {
+          "name": "L",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/60R17"],
+          "notes": "Base trim if available",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LS",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/60R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["225/60R17", "225/55R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ACTIV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/60R17"],
+          "notes": "Off-road inspired styling with unique 17-inch wheels",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RS",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["245/45R19"],
+          "notes": "Sport appearance with 19-inch standard",
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "2021-present generation. Compact crossover based on GM VSS-F platform.",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

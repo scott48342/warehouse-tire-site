@@ -1,0 +1,63 @@
+{
+  "make": "GMC",
+  "model": "Acadia",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "tiresize.com",
+  "researchDate": "2026-04-24",
+  "trims": [
+    {
+      "name": "Elevation",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7.5},
+        {"diameter": 20, "width": 8},
+        {"diameter": 22, "width": 8.5}
+      ],
+      "tireSizes": ["255/65R18", "255/55R20", "275/45R22"],
+      "notes": "Base trim for 2024+, multiple wheel options"
+    },
+    {
+      "name": "AT4",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7.5}
+      ],
+      "tireSizes": ["265/65R18"],
+      "notes": "Off-road trim with all-terrain tires, standard AWD"
+    },
+    {
+      "name": "Denali",
+      "wheelSizes": [
+        {"diameter": 20, "width": 8},
+        {"diameter": 22, "width": 8.5}
+      ],
+      "tireSizes": ["255/55R20", "275/45R22"],
+      "notes": "Luxury trim"
+    },
+    {
+      "name": "SL",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7.5}
+      ],
+      "tireSizes": ["255/65R18"],
+      "notes": "Pre-2024 base trim"
+    },
+    {
+      "name": "SLE",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7.5},
+        {"diameter": 20, "width": 8}
+      ],
+      "tireSizes": ["255/65R18", "255/55R20"],
+      "notes": "Pre-2024 value trim"
+    },
+    {
+      "name": "SLT",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7.5},
+        {"diameter": 20, "width": 8}
+      ],
+      "tireSizes": ["255/65R18", "255/55R20"],
+      "notes": "Pre-2024 mid-level trim"
+    }
+  ],
+  "verified": true
+}

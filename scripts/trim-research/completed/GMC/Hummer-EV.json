@@ -1,0 +1,48 @@
+{
+  "make": "GMC",
+  "model": "Hummer EV",
+  "years": [2022, 2023, 2024, 2025, 2026],
+  "source": "kbb.com, manufacturer specs",
+  "researchDate": "2026-04-24",
+  "trims": [
+    {
+      "name": "2X",
+      "wheelSizes": [
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["305/55R22"],
+      "notes": "Dual-motor base trim, 35-inch class tires standard"
+    },
+    {
+      "name": "3X",
+      "wheelSizes": [
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["305/55R22"],
+      "notes": "Tri-motor trim, 35-inch class tires standard"
+    },
+    {
+      "name": "Omega Edition",
+      "wheelSizes": [
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["305/55R22"],
+      "notes": "Top trim with all features included"
+    },
+    {
+      "name": "Edition 1",
+      "wheelSizes": [
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["305/55R22"],
+      "notes": "Limited first-year edition (2022 only)"
+    }
+  ],
+  "notes": [
+    "All Hummer EV trims come standard with 35-inch class tires on 22-inch wheels",
+    "Optional Extreme Off-Road Package available with additional off-road features",
+    "Hummer EV SUV is a separate model with similar wheel/tire specs"
+  ],
+  "needsVerification": true,
+  "verificationNote": "Tire size 305/55R22 is approximate - exact manufacturer spec should be verified from window sticker or official build sheet"
+}

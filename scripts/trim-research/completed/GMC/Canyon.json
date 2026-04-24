@@ -1,0 +1,52 @@
+{
+  "make": "GMC",
+  "model": "Canyon",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "tiresize.com",
+  "researchDate": "2026-04-24",
+  "trims": [
+    {
+      "name": "Elevation",
+      "wheelSizes": [
+        {"diameter": 18, "width": 8}
+      ],
+      "tireSizes": ["265/65R18"],
+      "notes": "Base trim"
+    },
+    {
+      "name": "AT4",
+      "wheelSizes": [
+        {"diameter": 18, "width": 8},
+        {"diameter": 20, "width": 8.5}
+      ],
+      "tireSizes": ["265/65R18", "275/60R20"],
+      "notes": "Off-road capable, all-terrain tires"
+    },
+    {
+      "name": "AT4X",
+      "wheelSizes": [
+        {"diameter": 17, "width": 8}
+      ],
+      "tireSizes": ["285/70R17"],
+      "notes": "Extreme off-road, larger 33-inch tires, Multimatic DSSV shocks"
+    },
+    {
+      "name": "AT4X AEV",
+      "wheelSizes": [
+        {"diameter": 17, "width": 8}
+      ],
+      "tireSizes": ["315/70R17"],
+      "notes": "AEV Edition with 35-inch tires, beadlock-capable wheels"
+    },
+    {
+      "name": "Denali",
+      "wheelSizes": [
+        {"diameter": 20, "width": 8.5},
+        {"diameter": 22, "width": 9}
+      ],
+      "tireSizes": ["275/60R20", "275/50R22"],
+      "notes": "Luxury trim"
+    }
+  ],
+  "verified": true
+}

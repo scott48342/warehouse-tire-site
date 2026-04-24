@@ -1,0 +1,231 @@
+{
+  "make": "Nissan",
+  "model": "Rogue",
+  "years": {
+    "2020": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}],
+          "tireSizes": ["225/65R17", "225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 7}],
+          "tireSizes": ["225/55R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["235/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["235/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["235/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Midnight Edition",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["235/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["235/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["235/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Rock Creek",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com",
+          "notes": "All-terrain tires"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "SV",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["235/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Rock Creek",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com",
+          "notes": "All-terrain tires"
+        },
+        {
+          "name": "SL",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Dark Armor",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "researchedBy": "subagent:trim-research-nissan-subaru"
+}

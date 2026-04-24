@@ -1,0 +1,219 @@
+{
+  "make": "Ford",
+  "model": "Ranger",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "2024 was a full redesign with larger dimensions and new powertrains. Raptor has unique 17\" wheels with 33\" all-terrain tires.",
+  "yearData": {
+    "2020": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P265/60R18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2021": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P265/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P265/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P265/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P245/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P245/70R17", "P255/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65SR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P245/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P245/70R17", "P255/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65SR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P245/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P245/70R17", "P255/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    }
+  }
+}

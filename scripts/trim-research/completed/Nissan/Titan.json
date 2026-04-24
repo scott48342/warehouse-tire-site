@@ -1,0 +1,55 @@
+{
+  "make": "Nissan",
+  "model": "Titan",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "Titan was discontinued after 2024 model year. SV trim has optional 20\" wheels.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "265/70R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "265/70R18", "notes": "Optional 20\" available" },
+        { "name": "SL", "wheelDiameter": 18, "tireSize": "265/70R18", "notes": "Optional 20\" available" },
+        { "name": "PRO-4X", "wheelDiameter": 18, "tireSize": "275/70R18" },
+        { "name": "Platinum Reserve", "wheelDiameter": 20, "tireSize": "275/60R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Titan/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "265/70R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "265/70R18", "notes": "Optional 20\" available" },
+        { "name": "PRO-4X", "wheelDiameter": 18, "tireSize": "275/70R18" },
+        { "name": "Platinum Reserve", "wheelDiameter": 20, "tireSize": "275/60R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Titan/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "265/70R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "265/70R18", "notes": "Optional 20\" available" },
+        { "name": "PRO-4X", "wheelDiameter": 18, "tireSize": "275/70R18" },
+        { "name": "Platinum Reserve", "wheelDiameter": 20, "tireSize": "275/60R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Titan/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "265/70R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "265/70R18", "notes": "Optional 20\" available" },
+        { "name": "PRO-4X", "wheelDiameter": 18, "tireSize": "275/70R18" },
+        { "name": "Platinum Reserve", "wheelDiameter": 20, "tireSize": "275/60R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Titan/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "265/70R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "265/70R18", "notes": "Optional 20\" available" },
+        { "name": "PRO-4X", "wheelDiameter": 18, "tireSize": "275/70R18" },
+        { "name": "Platinum Reserve", "wheelDiameter": 20, "tireSize": "275/60R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Titan/2024/"
+    }
+  }
+}

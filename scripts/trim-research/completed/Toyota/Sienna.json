@@ -1,0 +1,49 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "Sienna",
+  "trims": [
+    {
+      "name": "LE",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["235/65R17"],
+      "source": "caranddriver.com",
+      "notes": "Alloy wheels"
+    },
+    {
+      "name": "XLE",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["235/60R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "XSE",
+      "wheelSizes": [{"diameter": 20, "width": null}],
+      "tireSizes": ["235/50R20"],
+      "source": "needs_verification",
+      "notes": "Sport-tuned suspension"
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["235/60R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Platinum",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["235/60R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Woodland Edition",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["235/60R18"],
+      "source": "needs_verification",
+      "notes": "Raised ride height, all-weather tires"
+    }
+  ],
+  "notes": "2021+ Sienna is hybrid-only with 2.5L 4-cylinder + electric motors. FWD or AWD (e-Four).",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

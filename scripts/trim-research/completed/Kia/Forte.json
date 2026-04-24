@@ -1,0 +1,42 @@
+{
+  "year": 2026,
+  "make": "Kia",
+  "model": "Forte",
+  "trims": [
+    {
+      "name": "FE",
+      "wheelSizes": [{"diameter": 15, "width": 6}],
+      "tireSizes": ["195/65R15"],
+      "source": "caranddriver.com (2024 specs - carryover expected)",
+      "verified": true
+    },
+    {
+      "name": "LXS",
+      "wheelSizes": [{"diameter": 16, "width": 6.5}],
+      "tireSizes": ["205/55R16"],
+      "source": "estimated - typical LXS upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "GT-Line",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["225/45R17"],
+      "source": "estimated - sport appearance",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "GT",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["225/40R18"],
+      "source": "estimated - performance variant",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "FE verified from C/D 2024 specs (carryover). 2.0L I4 with IVT. GT has 1.6T (201hp). Compact sedan. Note: Forte may be discontinued after 2026.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

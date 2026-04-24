@@ -1,0 +1,114 @@
+{
+  "make": "Chevrolet",
+  "model": "Corvette",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "Stingray 1LT",
+          "wheelSizes": [
+            {"diameter": 19, "width": 8.5, "position": "front"},
+            {"diameter": 20, "width": 11, "position": "rear"}
+          ],
+          "tireSizes": ["245/35ZR19", "305/30ZR20"],
+          "frontTireSize": "245/35ZR19",
+          "rearTireSize": "305/30ZR20",
+          "isStaggered": true,
+          "notes": "Base Stingray with staggered setup",
+          "source": "chevrolet.com"
+        },
+        {
+          "name": "Stingray 2LT",
+          "wheelSizes": [
+            {"diameter": 19, "width": 8.5, "position": "front"},
+            {"diameter": 20, "width": 11, "position": "rear"}
+          ],
+          "tireSizes": ["245/35ZR19", "305/30ZR20"],
+          "frontTireSize": "245/35ZR19",
+          "rearTireSize": "305/30ZR20",
+          "isStaggered": true,
+          "source": "chevrolet.com"
+        },
+        {
+          "name": "Stingray 3LT",
+          "wheelSizes": [
+            {"diameter": 19, "width": 8.5, "position": "front"},
+            {"diameter": 20, "width": 11, "position": "rear"}
+          ],
+          "tireSizes": ["245/35ZR19", "305/30ZR20"],
+          "frontTireSize": "245/35ZR19",
+          "rearTireSize": "305/30ZR20",
+          "isStaggered": true,
+          "source": "chevrolet.com"
+        },
+        {
+          "name": "E-Ray 1LZ",
+          "wheelSizes": [
+            {"diameter": 20, "width": 9, "position": "front"},
+            {"diameter": 21, "width": 12, "position": "rear"}
+          ],
+          "tireSizes": ["275/30ZR20", "345/25ZR21"],
+          "frontTireSize": "275/30ZR20",
+          "rearTireSize": "345/25ZR21",
+          "isStaggered": true,
+          "notes": "AWD hybrid with wider tires",
+          "source": "chevrolet.com"
+        },
+        {
+          "name": "E-Ray 3LZ",
+          "wheelSizes": [
+            {"diameter": 20, "width": 9, "position": "front"},
+            {"diameter": 21, "width": 12, "position": "rear"}
+          ],
+          "tireSizes": ["275/30ZR20", "345/25ZR21"],
+          "frontTireSize": "275/30ZR20",
+          "rearTireSize": "345/25ZR21",
+          "isStaggered": true,
+          "source": "chevrolet.com"
+        },
+        {
+          "name": "Z06 1LZ",
+          "wheelSizes": [
+            {"diameter": 20, "width": 10, "position": "front"},
+            {"diameter": 21, "width": 13, "position": "rear"}
+          ],
+          "tireSizes": ["275/30ZR20", "345/25ZR21"],
+          "frontTireSize": "275/30ZR20",
+          "rearTireSize": "345/25ZR21",
+          "isStaggered": true,
+          "notes": "Track-focused with extreme staggered setup",
+          "source": "chevrolet.com"
+        },
+        {
+          "name": "Z06 3LZ",
+          "wheelSizes": [
+            {"diameter": 20, "width": 10, "position": "front"},
+            {"diameter": 21, "width": 13, "position": "rear"}
+          ],
+          "tireSizes": ["275/30ZR20", "345/25ZR21"],
+          "frontTireSize": "275/30ZR20",
+          "rearTireSize": "345/25ZR21",
+          "isStaggered": true,
+          "source": "chevrolet.com"
+        },
+        {
+          "name": "ZR1",
+          "wheelSizes": [
+            {"diameter": 20, "width": 10, "position": "front"},
+            {"diameter": 21, "width": 13, "position": "rear"}
+          ],
+          "tireSizes": ["275/30ZR20", "345/25ZR21"],
+          "frontTireSize": "275/30ZR20",
+          "rearTireSize": "345/25ZR21",
+          "isStaggered": true,
+          "notes": "Top performance model with extreme staggered setup",
+          "source": "chevrolet.com"
+        }
+      ]
+    }
+  ],
+  "notes": "ALL Corvette trims have STAGGERED tire setups (different front/rear sizes). C8 generation (2020+). Rear tires are significantly wider. Critical for fitment!",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

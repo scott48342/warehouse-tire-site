@@ -1,0 +1,98 @@
+{
+  "model": "CR-V",
+  "make": "Honda",
+  "years": {
+    "2026": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sport-L Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sport Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (2025 carryover)" }
+      ],
+      "notes": "6th generation CR-V (2023+)",
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "FCEV", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport-L Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "6th generation CR-V. Hydrogen FCEV variant added.",
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport-L Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "6th generation CR-V",
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "First year of 6th generation CR-V",
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "Special Edition", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "Final year of 5th generation CR-V",
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "Special Edition", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L Hybrid", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "5th generation CR-V",
+      "verified": true
+    },
+    "2020": {
+      "trims": [
+        { "name": "LX 2WD", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "LX AWD", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["235/65R17"], "source": "tiresize.com" },
+        { "name": "EX 2WD", "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}], "tireSizes": ["235/60R18", "235/55R19"], "source": "tiresize.com" },
+        { "name": "EX AWD", "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}], "tireSizes": ["235/60R18", "235/55R19"], "source": "tiresize.com" },
+        { "name": "EX-L 2WD", "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}], "tireSizes": ["235/60R18", "235/55R19"], "source": "tiresize.com" },
+        { "name": "EX-L AWD", "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}], "tireSizes": ["235/60R18", "235/55R19"], "source": "tiresize.com" },
+        { "name": "Touring 2WD", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Touring AWD", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "5th generation CR-V. EX and EX-L have optional 19-inch wheels.",
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "primarySource": "tiresize.com"
+}

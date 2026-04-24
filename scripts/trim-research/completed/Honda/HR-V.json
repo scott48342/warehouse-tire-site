@@ -1,0 +1,75 @@
+{
+  "model": "HR-V",
+  "make": "Honda",
+  "years": {
+    "2026": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7}], "tireSizes": ["225/55R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com (2025 carryover)" }
+      ],
+      "notes": "3rd generation HR-V (2023+)",
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7}], "tireSizes": ["225/55R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com" }
+      ],
+      "notes": "3rd generation HR-V",
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7}], "tireSizes": ["225/55R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com" }
+      ],
+      "notes": "3rd generation HR-V",
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7}], "tireSizes": ["225/55R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/60R17"], "source": "tiresize.com" }
+      ],
+      "notes": "First year of 3rd generation HR-V",
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/55R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/55R17"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/55R17"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7}], "tireSizes": ["225/50R18"], "source": "tiresize.com" }
+      ],
+      "notes": "Final year of 2nd generation HR-V",
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/55R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/55R17"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/55R17"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7}], "tireSizes": ["225/50R18"], "source": "tiresize.com" }
+      ],
+      "notes": "2nd generation HR-V",
+      "verified": true
+    },
+    "2020": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}], "tireSizes": ["215/55R17", "225/50R18"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}], "tireSizes": ["215/55R17", "225/50R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}], "tireSizes": ["215/55R17", "225/50R18"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 18, "width": 7}], "tireSizes": ["225/50R18"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7}], "tireSizes": ["215/55R17", "225/50R18"], "source": "tiresize.com" }
+      ],
+      "notes": "2nd generation HR-V. LX, EX, EX-L, Touring have optional 18-inch wheels.",
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "primarySource": "tiresize.com"
+}

@@ -1,0 +1,66 @@
+{
+  "make": "Nissan",
+  "model": "Kicks",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "2025+ is redesigned with new platform and larger wheels across all trims.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "205/55R17" },
+        { "name": "SR", "wheelDiameter": 17, "tireSize": "205/55R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Kicks/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "205/55R17" },
+        { "name": "SR", "wheelDiameter": 17, "tireSize": "205/55R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Kicks/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "205/55R17" },
+        { "name": "SR", "wheelDiameter": 17, "tireSize": "205/55R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Kicks/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "205/55R17" },
+        { "name": "SR", "wheelDiameter": 17, "tireSize": "205/55R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Kicks/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "205/60R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "205/55R17" },
+        { "name": "SR", "wheelDiameter": 17, "tireSize": "205/55R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Kicks/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "215/65R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "215/60R17" },
+        { "name": "SR", "wheelDiameter": 19, "tireSize": "225/45R19" },
+        { "name": "Play", "wheelDiameter": 16, "tireSize": "205/60R16" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Kicks/2025/"
+    },
+    "2026": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "215/65R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "215/60R17" },
+        { "name": "SR", "wheelDiameter": 19, "tireSize": "225/45R19" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Kicks/2026/"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "Prius",
+  "trims": [
+    {
+      "name": "LE",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["195/60R17"],
+      "source": "caranddriver.com",
+      "notes": "Alloy wheels with covers"
+    },
+    {
+      "name": "XLE",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["195/60R17"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "XLE AWD-e",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["195/60R17"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 19, "width": null}],
+      "tireSizes": ["195/50R19"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Limited AWD-e",
+      "wheelSizes": [{"diameter": 19, "width": null}],
+      "tireSizes": ["195/50R19"],
+      "source": "needs_verification"
+    }
+  ],
+  "notes": "2023+ Prius (5th gen) with 2.0L 4-cyl hybrid. FWD or AWD-e (electronic all-wheel drive).",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

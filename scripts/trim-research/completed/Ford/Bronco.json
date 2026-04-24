@@ -1,0 +1,294 @@
+{
+  "make": "Ford",
+  "model": "Bronco",
+  "years": [2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "Bronco returned in 2021. Available in 2-door and 4-door. Sasquatch Package adds 35\" tires on 17\" wheels. Badlands trim has unique off-road suspension. Raptor has Fox shocks and 37\" tires.",
+  "yearData": {
+    "2021": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["255/75R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Black Diamond",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P265/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Wildtrak",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Sasquatch Package",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT35X12.50R17"],
+          "source": "thecarconnection.com",
+          "notes": "Available on most trims"
+        }
+      ]
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["255/75R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Black Diamond",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P265/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Wildtrak",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT37X12.50R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["255/75R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Black Diamond",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P265/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Wildtrak",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Everglades",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Heritage Edition",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT37X12.50R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["255/75R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Black Diamond",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P265/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Wildtrak",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Heritage Edition",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT37X12.50R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["255/75R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P265/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Wildtrak",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT37X12.50R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 16, "width": 7}],
+          "tireSizes": ["P255/70R16"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Big Bend",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["255/75R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Outer Banks",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P265/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Badlands",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["LT285/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Wildtrak",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT37X12.50R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "make": "Ford",
+  "model": "Explorer",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "2020 was a full redesign to RWD-based platform. ST trim has unique 21\" wheels. Timberline has off-road tires.",
+  "yearData": {
+    "2020": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/65HR18", "P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 21, "width": 9}],
+          "tireSizes": ["P255/55R20", "P275/45R21"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2021": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/65HR18", "P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 21, "width": 9}],
+          "tireSizes": ["P255/55R20", "P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Timberline",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["265/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/65HR18", "P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 21, "width": 9}],
+          "tireSizes": ["P255/55R20", "P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Timberline",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["265/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/65HR18", "P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 21, "width": 9}],
+          "tireSizes": ["P255/55R20", "P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Timberline",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["265/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/65HR18", "P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 21, "width": 9}],
+          "tireSizes": ["P255/55R20", "P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Timberline",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["265/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65HR18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/65HR18", "P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Timberline",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["265/65R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P255/65R18"],
+          "source": "caranddriver.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/65R18", "P255/55R20"],
+          "source": "caranddriver.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "caranddriver.com"
+        },
+        {
+          "name": "ST",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "caranddriver.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 21, "width": 9}],
+          "tireSizes": ["P275/45R21"],
+          "source": "caranddriver.com"
+        },
+        {
+          "name": "Timberline",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["265/65R18"],
+          "source": "caranddriver.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P255/55R20"],
+          "source": "caranddriver.com"
+        }
+      ]
+    }
+  }
+}

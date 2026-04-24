@@ -1,0 +1,97 @@
+{
+  "model": "Accord",
+  "make": "Honda",
+  "years": {
+    "2026": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com, caranddriver.com" },
+        { "name": "SE", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "automobiles.honda.com" },
+        { "name": "EX-L Hybrid", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "automobiles.honda.com" },
+        { "name": "Sport-L Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "automobiles.honda.com" },
+        { "name": "Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "automobiles.honda.com, caranddriver.com" }
+      ],
+      "notes": "2026 MY: SE upgraded to 19-inch wheels. LX and SE are turbo trims, Sport Hybrid and above are hybrid.",
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "SE", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "EX-L Hybrid", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport-L Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" }
+      ],
+      "notes": "11th generation Accord (2023+)",
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "EX-L Hybrid", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport-L Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" }
+      ],
+      "notes": "11th generation Accord",
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "EX-L Hybrid", "wheelSizes": [{"diameter": 17, "width": 7.5}], "tireSizes": ["225/50R17"], "source": "tiresize.com" },
+        { "name": "Sport Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport-L Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Touring Hybrid", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" }
+      ],
+      "notes": "First year of 11th generation Accord",
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport Special Edition", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid Sport", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" }
+      ],
+      "notes": "10th generation Accord - last year. LX, EX-L, and base Hybrid have optional 19-inch wheels.",
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport Special Edition", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid EX", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" }
+      ],
+      "notes": "10th generation Accord",
+      "verified": true
+    },
+    "2020": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "EX", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid EX", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid EX-L", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Hybrid Touring", "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 19, "width": 8}], "tireSizes": ["225/50R17", "235/40R19"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 8}], "tireSizes": ["235/40R19"], "source": "tiresize.com" }
+      ],
+      "notes": "10th generation Accord",
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "primarySource": "tiresize.com"
+}

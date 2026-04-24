@@ -1,0 +1,39 @@
+{
+  "year": 2024,
+  "make": "Buick",
+  "model": "Encore GX",
+  "trims": [
+    {
+      "name": "Preferred",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7}
+      ],
+      "tireSizes": ["225/55R18"],
+      "source": "tiresize.com"
+    },
+    {
+      "name": "Sport Touring",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7},
+        {"diameter": 19, "width": 7.5}
+      ],
+      "tireSizes": ["225/55R18", "245/45R19"],
+      "source": "tiresize.com",
+      "notes": "18\" standard, 19\" available"
+    },
+    {
+      "name": "Avenir",
+      "wheelSizes": [
+        {"diameter": 19, "width": 7.5}
+      ],
+      "tireSizes": ["245/45R19"],
+      "source": "tiresize.com",
+      "notes": "19\" standard on Avenir"
+    }
+  ],
+  "boltPattern": "5x115",
+  "hubBore": "70.3",
+  "notes": "Subcompact SUV. Uses 5x115 bolt pattern (different from original Encore which was 5x105). For 2024, trims renamed: Select became Sport Touring, Essence became Avenir.",
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

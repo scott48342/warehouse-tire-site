@@ -1,0 +1,54 @@
+{
+  "make": "Chevrolet",
+  "model": "Colorado",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "WT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}],
+          "tireSizes": ["255/65R17", "265/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}],
+          "tireSizes": ["255/65R17", "265/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Z71",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["265/65R18", "255/55R20"],
+          "notes": "Off-road suspension with all-terrain tires",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+          "notes": "Off-road package with multiple wheel options",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ZR2",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["285/70R17"],
+          "notes": "32-inch AT tires standard, Multimatic DSSV dampers",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ZR2 Bison Edition",
+          "wheelSizes": [{"diameter": 17, "width": 8}],
+          "tireSizes": ["315/70R17"],
+          "notes": "35-inch MT tires, AEV partnership, most capable trim",
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "2023 model completely redesigned; 2015-2022 generation has different specifications",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

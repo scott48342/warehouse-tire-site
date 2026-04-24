@@ -1,0 +1,90 @@
+{
+  "model": "Wrangler",
+  "make": "Jeep",
+  "years": [
+    {
+      "year": 2020,
+      "trims": [
+        {"name": "Black and Tan", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Freedom", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2021,
+      "trims": [
+        {"name": "80th Anniversary Edition", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Freedom", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Islander", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"},
+        {"name": "Willys Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"},
+        {"name": "Willys Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {"name": "Freedom", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"},
+        {"name": "Willys Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Xtreme Tire Package", "wheelSizes": [{"diameter": 17}], "tireSizes": ["315/70R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2025,
+      "trims": [
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon 392", "wheelSizes": [{"diameter": 17}], "tireSizes": ["315/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Xtreme Tire Package", "wheelSizes": [{"diameter": 17}], "tireSizes": ["315/70R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2026,
+      "trims": [
+        {"name": "Moab 392", "wheelSizes": [{"diameter": 17}], "tireSizes": ["315/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sahara", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Willys 41", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Xtreme Tire Package", "wheelSizes": [{"diameter": 17}], "tireSizes": ["315/70R17"], "source": "tiresize.com"}
+      ]
+    }
+  ],
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

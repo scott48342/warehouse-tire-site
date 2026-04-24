@@ -1,0 +1,51 @@
+{
+  "make": "Chevrolet",
+  "model": "Suburban",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "LS",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RST",
+          "wheelSizes": [{"diameter": 22, "width": 9}, {"diameter": 24, "width": 9}],
+          "tireSizes": ["275/50R22", "285/40R24"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Z71",
+          "wheelSizes": [{"diameter": 20, "width": 9}],
+          "tireSizes": ["275/60R20"],
+          "notes": "Off-road suspension package",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premier",
+          "wheelSizes": [{"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "High Country",
+          "wheelSizes": [{"diameter": 22, "width": 9}, {"diameter": 24, "width": 9}],
+          "tireSizes": ["275/50R22", "285/40R24"],
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "2021-2024 specifications similar to 2025 for current generation",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

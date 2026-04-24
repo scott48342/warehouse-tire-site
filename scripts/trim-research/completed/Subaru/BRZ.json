@@ -1,0 +1,39 @@
+{
+  "make": "Subaru",
+  "model": "BRZ",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "BRZ had a gap year in 2021 (no production). 2nd generation started in 2022.",
+  "years": {
+    "2022": {
+      "trims": [
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "215/45R17" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "215/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/BRZ/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "215/45R17" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "215/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/BRZ/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "215/45R17" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "215/40R18" },
+        { "name": "tS", "wheelDiameter": 18, "tireSize": "215/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/BRZ/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "215/45R17" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "215/40R18" },
+        { "name": "tS", "wheelDiameter": 18, "tireSize": "215/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/BRZ/2025/"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "make": "Nissan",
+  "model": "Pathfinder",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "2022+ is new generation. 2020-2021 is previous gen (no 2021 data). SL has optional 20\" wheels.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "235/65R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "235/65R18", "notes": "Optional 255/60R18 available" },
+        { "name": "SL", "wheelDiameter": 18, "tireSize": "235/65R18", "notes": "Optional 255/60R18 available" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "235/55R20" },
+        { "name": "Rock Creek Edition", "wheelDiameter": 18, "tireSize": "255/60R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Pathfinder/2020/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SL", "wheelDiameter": 18, "tireSize": "255/60R18", "notes": "Optional 20\" available" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "255/50R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Pathfinder/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SL", "wheelDiameter": 18, "tireSize": "255/60R18", "notes": "Optional 20\" available" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "255/50R20" },
+        { "name": "Rock Creek", "wheelDiameter": 18, "tireSize": "265/60R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Pathfinder/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SL", "wheelDiameter": 18, "tireSize": "255/60R18", "notes": "Optional 20\" available" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "255/50R20" },
+        { "name": "Rock Creek", "wheelDiameter": 18, "tireSize": "265/60R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Pathfinder/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SL", "wheelDiameter": 18, "tireSize": "255/60R18", "notes": "Optional 20\" available" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "255/50R20" },
+        { "name": "Rock Creek", "wheelDiameter": 18, "tireSize": "265/60R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Pathfinder/2025/"
+    },
+    "2026": {
+      "trims": [
+        { "name": "SV", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "SL", "wheelDiameter": 18, "tireSize": "255/60R18" },
+        { "name": "Platinum", "wheelDiameter": 20, "tireSize": "255/50R20" },
+        { "name": "Rock Creek", "wheelDiameter": 18, "tireSize": "265/60R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Pathfinder/2026/"
+    }
+  }
+}

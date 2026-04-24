@@ -1,0 +1,58 @@
+{
+  "year": 2026,
+  "make": "Kia",
+  "model": "Sportage",
+  "trims": [
+    {
+      "name": "LX",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["235/65R17"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "EX",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["235/65R17"],
+      "source": "estimated from base LX spec",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/60R18"],
+      "source": "estimated - typical mid trim upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX Turbo",
+      "wheelSizes": [{"diameter": 19, "width": 7.5}],
+      "tireSizes": ["235/55R19"],
+      "source": "estimated - performance variant typically larger wheels",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "X-Line",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/60R18"],
+      "source": "estimated - rugged trim with all-terrain focus",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "X-Pro",
+      "wheelSizes": [{"diameter": 17, "width": 7.5}],
+      "tireSizes": ["245/65R17"],
+      "source": "estimated - off-road variant typically taller tires",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "LX verified from C/D specs page. 2.5L GDI 4-cyl engine. MSRP starts ~$30,285. Other trims estimated based on typical Kia wheel progressions.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

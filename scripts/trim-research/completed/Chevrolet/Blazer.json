@@ -1,0 +1,34 @@
+{
+  "make": "Chevrolet",
+  "model": "Blazer",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["235/65R18", "235/55R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RS",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 21, "width": 8.5}],
+          "tireSizes": ["235/55R20", "265/45R21"],
+          "notes": "Sport appearance with optional 21-inch wheels",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premier",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 21, "width": 8.5}],
+          "tireSizes": ["235/55R20", "265/45R21"],
+          "notes": "Top trim with optional 21-inch wheels",
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "2019-present generation. Blazer EV is a separate model with different specifications.",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

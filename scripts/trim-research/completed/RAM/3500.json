@@ -1,0 +1,115 @@
+{
+  "model": "3500",
+  "make": "RAM",
+  "years": [
+    {
+      "year": 2020,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Big Horn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie Longhorn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Longhorn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Lone Star", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Lone Star Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2021,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Big Horn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Big Horn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Big Horn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Big Horn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2025,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Big Horn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2026,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Big Horn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/70R18", "285/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 20}], "tireSizes": ["285/60R20"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman Dual Rear Wheel", "wheelSizes": [{"diameter": 17}], "tireSizes": ["235/80R17"], "source": "tiresize.com"}
+      ]
+    }
+  ],
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

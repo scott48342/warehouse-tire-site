@@ -1,0 +1,50 @@
+{
+  "year": 2026,
+  "make": "Kia",
+  "model": "Carnival",
+  "trims": [
+    {
+      "name": "LX",
+      "wheelSizes": [{"diameter": 17, "width": 6.5}],
+      "tireSizes": ["235/65R17"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "LX+",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/55R18"],
+      "source": "estimated - mid trim upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "EX",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/55R18"],
+      "source": "estimated - mid-high trim",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX",
+      "wheelSizes": [{"diameter": 19, "width": 7.5}],
+      "tireSizes": ["235/50R19"],
+      "source": "estimated - top trim typically 19\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SX Prestige",
+      "wheelSizes": [{"diameter": 19, "width": 7.5}],
+      "tireSizes": ["235/50R19"],
+      "source": "estimated - top trim",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "LX verified from C/D specs. 3.5L V6 with 8-speed auto. Minivan, 8-passenger. 6,283lb GVWR. Sliding rear doors. Navigation-based cruise control standard.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

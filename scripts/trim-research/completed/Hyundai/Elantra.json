@@ -1,0 +1,42 @@
+{
+  "year": 2026,
+  "make": "Hyundai",
+  "model": "Elantra",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 15, "width": 6}],
+      "tireSizes": ["195/65R15"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "SEL",
+      "wheelSizes": [{"diameter": 16, "width": 6.5}],
+      "tireSizes": ["205/55R16"],
+      "source": "estimated - typical SEL upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "N Line",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["225/40R18"],
+      "source": "estimated - sport variant typically 18\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["225/45R17"],
+      "source": "estimated - top non-sport trim",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "SE verified from C/D specs page. 2.0L I4 engine with IVT. MSRP starts $23,870. N Line has sport tuning, Limited is luxury focused.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

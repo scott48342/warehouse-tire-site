@@ -1,0 +1,84 @@
+{
+  "make": "Nissan",
+  "model": "Frontier",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "2022+ is redesigned with new platform. PRO-4X and PRO-X are off-road focused trims.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "King Cab S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "King Cab SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 18\" available" },
+        { "name": "Crew Cab S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "Crew Cab SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 18\" available" },
+        { "name": "Crew Cab Long Bed SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 18\" available" },
+        { "name": "Crew Cab PRO-4X", "wheelDiameter": 16, "tireSize": "265/75R16" },
+        { "name": "Midnight Edition", "wheelDiameter": 18, "tireSize": "265/60R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Frontier/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "King Cab S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "King Cab SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 18\" available" },
+        { "name": "Crew Cab S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "Crew Cab SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 18\" available" },
+        { "name": "Crew Cab Long Bed SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 18\" available" },
+        { "name": "Crew Cab PRO-4X", "wheelDiameter": 16, "tireSize": "265/75R16" },
+        { "name": "Midnight Edition", "wheelDiameter": 18, "tireSize": "265/60R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Frontier/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 17\" available" },
+        { "name": "PRO-X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "PRO-4X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "Midnight Edition", "wheelDiameter": 17, "tireSize": "265/70R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Frontier/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 17\" available" },
+        { "name": "PRO-X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "PRO-4X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "Midnight Edition", "wheelDiameter": 17, "tireSize": "265/70R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Frontier/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "SV", "wheelDiameter": 16, "tireSize": "265/70R16", "notes": "Optional 17\" available" },
+        { "name": "SL", "wheelDiameter": 17, "tireSize": "265/65R17" },
+        { "name": "PRO-X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "PRO-4X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "Hardbody Edition", "wheelDiameter": 17, "tireSize": "265/70R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Frontier/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "265/65R17" },
+        { "name": "SL", "wheelDiameter": 17, "tireSize": "265/65R17" },
+        { "name": "PRO-X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "PRO-4X", "wheelDiameter": 17, "tireSize": "265/70R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Frontier/2025/"
+    },
+    "2026": {
+      "trims": [
+        { "name": "S", "wheelDiameter": 16, "tireSize": "265/70R16" },
+        { "name": "SV", "wheelDiameter": 17, "tireSize": "265/65R17" },
+        { "name": "PRO-X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "PRO-4X", "wheelDiameter": 17, "tireSize": "265/70R17" },
+        { "name": "Dark Armor", "wheelDiameter": 17, "tireSize": "265/65R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Frontier/2026/"
+    }
+  }
+}

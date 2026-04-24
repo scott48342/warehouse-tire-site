@@ -1,0 +1,50 @@
+{
+  "year": 2026,
+  "make": "Hyundai",
+  "model": "Santa Fe",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/60R18"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "SEL",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/60R18"],
+      "source": "inferred from SE base",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "XRT",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["255/60R18"],
+      "source": "motortrend.com (XRT Pro mentioned with all-terrain 255/60R18)",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 20, "width": 8}],
+      "tireSizes": ["255/45R20"],
+      "source": "estimated from typical Santa Fe Limited specs",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Calligraphy",
+      "wheelSizes": [{"diameter": 20, "width": 8}],
+      "tireSizes": ["255/45R20"],
+      "source": "estimated from typical Calligraphy specs",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "SE verified from C/D specs. XRT Pro specs from MotorTrend (8.4\" ground clearance, 255/60R18 all-terrain). Higher trims need manufacturer verification. 2026 is second-gen Santa Fe (redesigned 2024).",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

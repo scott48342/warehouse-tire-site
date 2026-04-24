@@ -1,0 +1,46 @@
+{
+  "make": "Buick",
+  "model": "Encore",
+  "years": [2020, 2021, 2022],
+  "source": "tiresize.com",
+  "researchDate": "2026-04-24",
+  "discontinuedYear": 2022,
+  "boltPattern": "4x100",
+  "hubBore": "56.6mm",
+  "trims": [
+    {
+      "name": "Base Model",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7}
+      ],
+      "tireSizes": ["215/55R18"],
+      "notes": "Base trim"
+    },
+    {
+      "name": "Preferred",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7}
+      ],
+      "tireSizes": ["215/55R18"],
+      "notes": "Value trim"
+    },
+    {
+      "name": "Essence",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7}
+      ],
+      "tireSizes": ["215/55R18"],
+      "notes": "Upper trim (2020-2021 only)"
+    },
+    {
+      "name": "Sport Touring",
+      "wheelSizes": [
+        {"diameter": 18, "width": 7}
+      ],
+      "tireSizes": ["215/55R18"],
+      "notes": "Sport appearance (2020 only)"
+    }
+  ],
+  "differentiationNote": "Buick Encore is a DIFFERENT vehicle from Encore GX - smaller, different platform (4x100 bolt pattern vs 5x100), discontinued after 2022",
+  "verified": true
+}

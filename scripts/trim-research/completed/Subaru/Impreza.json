@@ -1,0 +1,59 @@
+{
+  "make": "Subaru",
+  "model": "Impreza",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 16, "tireSize": "225/55R16" },
+        { "name": "Premium", "wheelDiameter": 16, "tireSize": "225/55R16" },
+        { "name": "Sport", "wheelDiameter": 17, "tireSize": "225/45R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Impreza/2020/"
+    },
+    "2021": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 16, "tireSize": "225/55R16" },
+        { "name": "Premium", "wheelDiameter": 16, "tireSize": "225/55R16" },
+        { "name": "Sport", "wheelDiameter": 17, "tireSize": "225/45R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Impreza/2021/"
+    },
+    "2022": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 16, "tireSize": "225/55R16" },
+        { "name": "Premium", "wheelDiameter": 16, "tireSize": "225/55R16" },
+        { "name": "Sport", "wheelDiameter": 17, "tireSize": "225/45R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Impreza/2022/"
+    },
+    "2023": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/45R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/45R17" },
+        { "name": "RS", "wheelDiameter": 18, "tireSize": "225/40R18" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Impreza/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/45R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/45R17" },
+        { "name": "RS", "wheelDiameter": 18, "tireSize": "225/40R18" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Impreza/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/45R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/45R17" },
+        { "name": "RS", "wheelDiameter": 18, "tireSize": "225/40R18" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/40R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Impreza/2025/"
+    }
+  }
+}

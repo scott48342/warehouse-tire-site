@@ -1,0 +1,42 @@
+{
+  "year": 2026,
+  "make": "Hyundai",
+  "model": "Santa Cruz",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["245/60R18"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "SEL",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["245/60R18"],
+      "source": "estimated - same as SE base",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SEL Premium",
+      "wheelSizes": [{"diameter": 20, "width": 8}],
+      "tireSizes": ["245/45R20"],
+      "source": "estimated - higher trim typically 20\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 20, "width": 8}],
+      "tireSizes": ["245/45R20"],
+      "source": "estimated - top trim typically 20\"",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "SE verified from C/D specs. 2.5L I4 base, 2.5T turbo available. Compact pickup/SUV crossover. MSRP starts $31,350. 1411lb max payload.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

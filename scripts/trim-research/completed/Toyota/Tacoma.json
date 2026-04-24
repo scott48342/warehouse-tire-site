@@ -1,0 +1,56 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "Tacoma",
+  "trims": [
+    {
+      "name": "SR",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["245/70R17"],
+      "source": "caranddriver.com",
+      "notes": "Steel wheels with hub covers"
+    },
+    {
+      "name": "SR5",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["245/70R17"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "TRD Sport",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["265/60R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "TRD Off-Road",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["265/65R18"],
+      "source": "needs_verification",
+      "notes": "Goodyear Wrangler A/T tires"
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["265/60R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "TRD Pro",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["265/65R18"],
+      "source": "needs_verification",
+      "notes": "Goodyear Wrangler Territory M/T tires"
+    },
+    {
+      "name": "Trailhunter",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["265/70R18"],
+      "source": "needs_verification",
+      "notes": "All-terrain tires, lifted suspension"
+    }
+  ],
+  "notes": "2024+ Tacoma is 4th generation with 2.4L turbo 4-cylinder. All trims RWD or 4WD available.",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

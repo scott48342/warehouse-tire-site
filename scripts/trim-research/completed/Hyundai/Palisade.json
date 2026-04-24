@@ -1,0 +1,49 @@
+{
+  "year": 2026,
+  "make": "Hyundai",
+  "model": "Palisade",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/65R18"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "SEL",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/65R18"],
+      "source": "caranddriver.com (base spec, no upgrade listed)",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "XRT",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["255/60R18"],
+      "source": "motortrend.com (XRT Pro 8.4\" ground clearance, all-terrain 255/60R18)",
+      "verified": true
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 20, "width": 8.5}],
+      "tireSizes": ["245/50R20"],
+      "source": "estimated from typical Palisade Limited specs",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Calligraphy",
+      "wheelSizes": [{"diameter": 20, "width": 8.5}],
+      "tireSizes": ["245/50R20"],
+      "source": "estimated from typical Calligraphy specs",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "SE verified from C/D specs. XRT Pro specs from MotorTrend (18\" all-terrain). 2026 is redesigned second-gen Palisade with 3.5L V6 (287hp) and available hybrid. Higher trims likely have 20\" wheels. MSRP starts ~$40,500.",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

@@ -1,0 +1,67 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "Camry",
+  "trims": [
+    {
+      "name": "LE",
+      "wheelSizes": [{"diameter": 16, "width": null}],
+      "tireSizes": ["205/65R16"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "LE AWD",
+      "wheelSizes": [{"diameter": 16, "width": null}],
+      "tireSizes": ["205/65R16"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/45R18"],
+      "source": "edmunds.com"
+    },
+    {
+      "name": "SE AWD",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/45R18"],
+      "source": "edmunds.com"
+    },
+    {
+      "name": "XLE",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/45R18"],
+      "source": "edmunds.com",
+      "notes": "needs_verification"
+    },
+    {
+      "name": "XLE AWD",
+      "wheelSizes": [{"diameter": 18, "width": 8}],
+      "tireSizes": ["235/45R18"],
+      "source": "edmunds.com",
+      "notes": "needs_verification"
+    },
+    {
+      "name": "XSE",
+      "wheelSizes": [{"diameter": 19, "width": 8.5}],
+      "tireSizes": ["235/40R19"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "XSE AWD",
+      "wheelSizes": [{"diameter": 19, "width": 8.5}],
+      "tireSizes": ["235/40R19"],
+      "source": "caranddriver.com"
+    },
+    {
+      "name": "Nightshade",
+      "wheelSizes": [{"diameter": 19, "width": 8.5}],
+      "tireSizes": ["235/40R19"],
+      "source": "caranddriver.com",
+      "notes": "Based on SE trim, available 2026"
+    }
+  ],
+  "notes": "2025+ Camry is hybrid-only. SE/XSE have sportier suspension tune.",
+  "verified": true,
+  "researchDate": "2026-04-24"
+}

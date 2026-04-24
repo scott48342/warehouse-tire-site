@@ -1,0 +1,388 @@
+{
+  "make": "Ford",
+  "model": "F-150",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "2024 refresh brought updated styling and standardized 20\" wheels on higher trims. 2021 was a major redesign with aluminum body. Raptor has unique 17\" beadlock-capable wheels with 35\" tires.",
+  "yearData": {
+    "2020": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P265/70R17", "P265/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60SR18", "P275/55R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/55R20", "P275/45R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/45R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2021": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/70R17", "P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60SR18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/60R20", "P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}],
+          "tireSizes": ["LT295/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/70R17", "P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60SR18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/60R20", "P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}],
+          "tireSizes": ["LT295/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}, {"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/70R17", "P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60SR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/60R20", "P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}],
+          "tireSizes": ["LT295/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor R",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT37X12.50R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "STX",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60SR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/60R20", "P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum Plus",
+          "wheelSizes": [{"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}],
+          "tireSizes": ["LT295/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor R",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT37X12.50R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/70R17"],
+          "source": "thecarconnection.com",
+          "notes": "Carryover from 2024"
+        },
+        {
+          "name": "STX",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60R20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60SR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/60R20", "P275/50R22"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}],
+          "tireSizes": ["LT295/70R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "XL",
+          "wheelSizes": [{"diameter": 17, "width": 7.5}],
+          "tireSizes": ["P265/70R17"],
+          "source": "ford.com"
+        },
+        {
+          "name": "STX",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60R20"],
+          "source": "ford.com"
+        },
+        {
+          "name": "XLT",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P265/60R18", "P275/60R20"],
+          "source": "ford.com"
+        },
+        {
+          "name": "Lariat",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60R20"],
+          "source": "ford.com"
+        },
+        {
+          "name": "King Ranch",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}],
+          "tireSizes": ["P275/60R20"],
+          "source": "ford.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 20, "width": 8.5}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["P275/60R20", "P275/50R22"],
+          "source": "ford.com"
+        },
+        {
+          "name": "Tremor",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}],
+          "tireSizes": ["LT295/70R18"],
+          "source": "ford.com"
+        },
+        {
+          "name": "Raptor",
+          "wheelSizes": [{"diameter": 17, "width": 8.5}],
+          "tireSizes": ["LT315/70R17"],
+          "source": "ford.com"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "make": "Subaru",
+  "model": "Outback",
+  "years": {
+    "2020": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        }
+      ],
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Wilderness",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com",
+          "notes": "All-terrain tires"
+        }
+      ],
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Wilderness",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com",
+          "notes": "All-terrain tires"
+        }
+      ],
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Wilderness",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com",
+          "notes": "All-terrain tires"
+        }
+      ],
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Onyx Edition XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring XT",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Wilderness",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com",
+          "notes": "All-terrain tires"
+        }
+      ],
+      "verified": true
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Limited XT",
+          "wheelSizes": [{"diameter": 19, "width": 7}],
+          "tireSizes": ["225/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/60R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Touring XT",
+          "wheelSizes": [{"diameter": 19, "width": 7}],
+          "tireSizes": ["225/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Wilderness",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/65R17"],
+          "source": "tiresize.com",
+          "notes": "All-terrain tires"
+        }
+      ],
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "researchedBy": "subagent:trim-research-nissan-subaru"
+}

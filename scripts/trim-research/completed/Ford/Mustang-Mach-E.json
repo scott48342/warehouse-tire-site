@@ -1,0 +1,204 @@
+{
+  "make": "Ford",
+  "model": "Mustang Mach-E",
+  "years": [2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "Mustang Mach-E launched 2021 as Ford's first dedicated electric SUV. GT and GT Performance Edition have larger 20\" wheels with performance tires. Rally edition has unique all-terrain setup.",
+  "yearData": {
+    "2021": {
+      "trims": [
+        {
+          "name": "Select",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "California Route 1",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT Performance Edition",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "Select",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "California Route 1",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT Performance Edition",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "Select",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "California Route 1",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT Performance Edition",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Rally",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com",
+          "notes": "All-terrain tires"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "Select",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Rally",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "Select",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Rally",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "Select",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Premium",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "GT",
+          "wheelSizes": [{"diameter": 20, "width": 8}],
+          "tireSizes": ["P245/45WR20"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Rally",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    }
+  }
+}

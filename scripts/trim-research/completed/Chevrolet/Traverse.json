@@ -1,0 +1,54 @@
+{
+  "make": "Chevrolet",
+  "model": "Traverse",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "LS",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["255/65R18"],
+          "notes": "Base trim with 18-inch standard wheels",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 20, "width": 8}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["255/65R18", "255/55R20", "275/45R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RS",
+          "wheelSizes": [{"diameter": 22, "width": 9}],
+          "tireSizes": ["275/45R22"],
+          "notes": "Sport appearance package with 22-inch standard",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Z71",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["265/65R18"],
+          "notes": "Off-road package with all-terrain tires",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premier",
+          "wheelSizes": [{"diameter": 20, "width": 8}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["255/55R20", "275/45R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "High Country",
+          "wheelSizes": [{"diameter": 22, "width": 9}],
+          "tireSizes": ["275/45R22"],
+          "notes": "Top trim with 22-inch standard wheels",
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "2024 model redesigned; prior generation (2018-2023) has different specifications",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

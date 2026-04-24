@@ -1,0 +1,35 @@
+{
+  "year": 2025,
+  "make": "Toyota",
+  "model": "RAV4 Hybrid",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 17, "width": null}],
+      "tireSizes": ["235/65R17"],
+      "source": "caranddriver.com",
+      "notes": "Dark Gray Metallic Alloy wheels"
+    },
+    {
+      "name": "XLE",
+      "wheelSizes": [{"diameter": 18, "width": null}],
+      "tireSizes": ["235/60R18"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "XLE Premium",
+      "wheelSizes": [{"diameter": 19, "width": null}],
+      "tireSizes": ["235/55R19"],
+      "source": "needs_verification"
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 19, "width": null}],
+      "tireSizes": ["235/55R19"],
+      "source": "needs_verification"
+    }
+  ],
+  "notes": "RAV4 Hybrid uses e-AWD system with rear electric motor. Verified SE trim with 17-inch dark gray alloy wheels.",
+  "verified": false,
+  "researchDate": "2026-04-24"
+}

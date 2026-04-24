@@ -1,0 +1,86 @@
+{
+  "model": "1500",
+  "make": "RAM",
+  "years": [
+    {
+      "year": 2020,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/65R18", "275/55R20"], "source": "tiresize.com"},
+        {"name": "Classic Express", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Tradesman", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Warlock", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/65R18", "275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Laramie Longhorn", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Lone Star", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/65R18", "275/55R20"], "source": "tiresize.com"},
+        {"name": "Rebel", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/65R18"], "source": "tiresize.com"},
+        {"name": "Tradesman HFE", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2021,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/65R18", "275/55R20"], "source": "tiresize.com"},
+        {"name": "Classic Express", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Tradesman", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Warlock", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/65R18", "275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Rebel", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/65R18"], "source": "tiresize.com"},
+        {"name": "Tradesman HFE", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "TRX", "wheelSizes": [{"diameter": 18}], "tireSizes": ["325/65R18"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/65R18", "275/55R20"], "source": "tiresize.com"},
+        {"name": "Classic Express", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Tradesman", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Warlock", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/65R18", "275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Rebel", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/65R18"], "source": "tiresize.com"},
+        {"name": "Tradesman HFE", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "TRX", "wheelSizes": [{"diameter": 18}], "tireSizes": ["325/65R18"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/65R18", "275/55R20"], "source": "tiresize.com"},
+        {"name": "Classic Tradesman", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Warlock", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/65R18", "275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Rebel", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/65R18"], "source": "tiresize.com"},
+        {"name": "Tradesman HFE", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "TRX", "wheelSizes": [{"diameter": 18}], "tireSizes": ["325/65R18"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {"name": "Big Horn", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/65R18", "275/55R20"], "source": "tiresize.com"},
+        {"name": "Classic Tradesman", "wheelSizes": [{"diameter": 17}, {"diameter": 20}], "tireSizes": ["265/70R17", "275/60R20"], "source": "tiresize.com"},
+        {"name": "Classic Warlock", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/60R20"], "source": "tiresize.com"},
+        {"name": "Laramie", "wheelSizes": [{"diameter": 18}, {"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/65R18", "275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Limited Longhorn", "wheelSizes": [{"diameter": 20}, {"diameter": 22}], "tireSizes": ["275/55R20", "285/45R22"], "source": "tiresize.com"},
+        {"name": "Rebel", "wheelSizes": [{"diameter": 18}], "tireSizes": ["275/70R18"], "source": "tiresize.com"},
+        {"name": "Tradesman", "wheelSizes": [{"diameter": 18}, {"diameter": 20}], "tireSizes": ["275/65R18", "275/55R20"], "source": "tiresize.com"},
+        {"name": "Tradesman HFE", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "TRX", "wheelSizes": [{"diameter": 18}], "tireSizes": ["325/65R18"], "source": "tiresize.com"}
+      ]
+    }
+  ],
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

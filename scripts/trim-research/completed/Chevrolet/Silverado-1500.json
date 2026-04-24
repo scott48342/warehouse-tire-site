@@ -1,0 +1,252 @@
+{
+  "make": "Chevrolet",
+  "model": "Silverado 1500",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "WT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}],
+          "tireSizes": ["255/70R17", "265/70R17", "275/65R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom",
+          "wheelSizes": [{"diameter": 20, "width": 9}],
+          "tireSizes": ["275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RST",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LTZ",
+          "wheelSizes": [{"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "High Country",
+          "wheelSizes": [{"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ZR2",
+          "wheelSizes": [{"diameter": 18, "width": 9}],
+          "tireSizes": ["275/70R18"],
+          "notes": "33-inch MT tires, 2-inch factory lift",
+          "source": "tiresize.com"
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {
+          "name": "WT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}],
+          "tireSizes": ["255/70R17", "265/70R17", "275/65R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom",
+          "wheelSizes": [{"diameter": 20, "width": 9}],
+          "tireSizes": ["275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RST",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LTZ",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "High Country",
+          "wheelSizes": [{"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ZR2",
+          "wheelSizes": [{"diameter": 18, "width": 9}],
+          "tireSizes": ["275/70R18"],
+          "source": "tiresize.com"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {
+          "name": "WT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}],
+          "tireSizes": ["255/70R17", "265/70R17", "275/65R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom",
+          "wheelSizes": [{"diameter": 20, "width": 9}],
+          "tireSizes": ["275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RST",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LTZ",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "High Country",
+          "wheelSizes": [{"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ZR2",
+          "wheelSizes": [{"diameter": 18, "width": 9}],
+          "tireSizes": ["275/70R18"],
+          "source": "tiresize.com"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {
+          "name": "WT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}],
+          "tireSizes": ["255/70R17", "265/70R17", "275/65R18"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom",
+          "wheelSizes": [{"diameter": 20, "width": 9}],
+          "tireSizes": ["275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Custom Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LTD",
+          "wheelSizes": [{"diameter": 17, "width": 8}, {"diameter": 18, "width": 8}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["255/70R17", "265/70R17", "265/65R18", "275/65R18", "275/60R20", "275/50R22"],
+          "notes": "Limited trim - transitional model year",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RST",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT Trail Boss",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}],
+          "tireSizes": ["275/65R18", "265/60R20", "275/60R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LTZ",
+          "wheelSizes": [{"diameter": 18, "width": 8.5}, {"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["265/65R18", "275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "High Country",
+          "wheelSizes": [{"diameter": 20, "width": 9}, {"diameter": 22, "width": 9}],
+          "tireSizes": ["275/60R20", "275/50R22"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ZR2",
+          "wheelSizes": [{"diameter": 18, "width": 9}],
+          "tireSizes": ["275/70R18"],
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

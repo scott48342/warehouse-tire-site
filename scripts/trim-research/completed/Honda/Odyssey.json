@@ -1,0 +1,81 @@
+{
+  "model": "Odyssey",
+  "make": "Honda",
+  "years": {
+    "2026": {
+      "trims": [
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sport-L", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Elite", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (2025 carryover)" }
+      ],
+      "notes": "5th generation Odyssey (2018+). 2025 refresh with updated trims.",
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport-L", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Elite", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "5th generation Odyssey with 2025 refresh",
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Elite", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "5th generation Odyssey",
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com" },
+        { "name": "Sport", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" },
+        { "name": "Elite", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com" }
+      ],
+      "notes": "5th generation Odyssey",
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (inference from 2023)" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (inference from 2023)" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (inference from 2023)" },
+        { "name": "Elite", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (inference from 2023)" }
+      ],
+      "notes": "5th generation Odyssey",
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (inference from 2022)" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (inference from 2022)" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (inference from 2022)" },
+        { "name": "Elite", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (inference from 2022)" }
+      ],
+      "notes": "5th generation Odyssey",
+      "verified": true
+    },
+    "2020": {
+      "trims": [
+        { "name": "LX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "EX", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "EX-L", "wheelSizes": [{"diameter": 18, "width": 7.5}], "tireSizes": ["235/60R18"], "source": "tiresize.com (inference)" },
+        { "name": "Touring", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (inference)" },
+        { "name": "Elite", "wheelSizes": [{"diameter": 19, "width": 7.5}], "tireSizes": ["235/55R19"], "source": "tiresize.com (inference)" }
+      ],
+      "notes": "5th generation Odyssey",
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "primarySource": "tiresize.com"
+}

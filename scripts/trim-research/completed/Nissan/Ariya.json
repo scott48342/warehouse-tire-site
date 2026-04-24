@@ -1,0 +1,40 @@
+{
+  "make": "Nissan",
+  "model": "Ariya",
+  "source": "tiresize.com",
+  "researchedAt": "2026-04-24",
+  "notes": "Electric crossover. Ariya started production in 2023. Platinum+ has optional 20\" wheels.",
+  "years": {
+    "2023": {
+      "trims": [
+        { "name": "Engage", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Engage+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Venture+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Evolve+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Empower+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Platinum+", "wheelDiameter": 19, "tireSize": "235/55R19", "notes": "Optional 20\" (255/45R20) available" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Ariya/2023/"
+    },
+    "2024": {
+      "trims": [
+        { "name": "Engage", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Engage+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Venture+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Evolve+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Empower+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Platinum+", "wheelDiameter": 19, "tireSize": "235/55R19", "notes": "Optional 20\" (255/45R20) available" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Ariya/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "Engage", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Engage+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Evolve+", "wheelDiameter": 19, "tireSize": "235/55R19" },
+        { "name": "Platinum+", "wheelDiameter": 19, "tireSize": "235/55R19", "notes": "Optional 20\" (255/45R20) available" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Nissan/Ariya/2025/"
+    }
+  }
+}

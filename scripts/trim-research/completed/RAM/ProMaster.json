@@ -1,0 +1,65 @@
+{
+  "model": "ProMaster",
+  "make": "RAM",
+  "years": [
+    {
+      "year": 2020,
+      "trims": [
+        {"name": "1500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "2500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "3500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2021,
+      "trims": [
+        {"name": "1500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "2500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "3500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {"name": "1500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "2500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "3500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {"name": "1500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "2500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "3500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {"name": "1500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "2500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "3500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2025,
+      "trims": [
+        {"name": "1500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "2500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "3500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2026,
+      "trims": [
+        {"name": "1500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "2500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"},
+        {"name": "3500", "wheelSizes": [{"diameter": 16}], "tireSizes": ["225/75R16"], "source": "tiresize.com"}
+      ]
+    }
+  ],
+  "notes": "All ProMaster variants use the same 225/75R16 tire size across all trims",
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

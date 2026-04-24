@@ -1,0 +1,102 @@
+{
+  "model": "Gladiator",
+  "make": "Jeep",
+  "years": [
+    {
+      "year": 2020,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Mojave", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "North Edition", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2021,
+      "trims": [
+        {"name": "80th Anniversary Edition", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Mojave", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"},
+        {"name": "Willys Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2022,
+      "trims": [
+        {"name": "Altitude", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "Mojave", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"},
+        {"name": "Willys Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2023,
+      "trims": [
+        {"name": "Freedom", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "High Altitude", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "Mojave", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Overland", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"},
+        {"name": "Willys Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2024,
+      "trims": [
+        {"name": "Mojave", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Mojave X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Nighthawk", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2025,
+      "trims": [
+        {"name": "Mojave", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Mojave X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Nighthawk", "wheelSizes": [{"diameter": 20}], "tireSizes": ["275/55R20"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    },
+    {
+      "year": 2026,
+      "trims": [
+        {"name": "Mojave", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Mojave X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Rubicon X", "wheelSizes": [{"diameter": 17}], "tireSizes": ["285/70R17"], "source": "tiresize.com"},
+        {"name": "Sahara", "wheelSizes": [{"diameter": 18}], "tireSizes": ["255/70R18"], "source": "tiresize.com"},
+        {"name": "Sport", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Sport S", "wheelSizes": [{"diameter": 17}], "tireSizes": ["245/75R17"], "source": "tiresize.com"},
+        {"name": "Willys", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"},
+        {"name": "Willys 41", "wheelSizes": [{"diameter": 17}], "tireSizes": ["255/75R17"], "source": "tiresize.com"}
+      ]
+    }
+  ],
+  "verified": true,
+  "researchedAt": "2026-04-24"
+}

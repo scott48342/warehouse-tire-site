@@ -1,0 +1,249 @@
+{
+  "make": "Ford",
+  "model": "Escape",
+  "years": [2020, 2021, 2022, 2023, 2024, 2025, 2026],
+  "source": "thecarconnection.com",
+  "verified": true,
+  "researchedAt": "2026-04-24",
+  "notes": "2020 was a full redesign. ST-Line has sport-tuned suspension with same wheel sizes. PHEV has same wheel options as gas models.",
+  "yearData": {
+    "2020": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SE",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SEL",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/65HR17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Titanium",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2021": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SE",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SEL",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/65HR17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Titanium",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "PHEV SE",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2022": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SE",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SEL",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/65HR17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Titanium",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "PHEV SE",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2023": {
+      "trims": [
+        {
+          "name": "Base",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Active",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST-Line",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST-Line Elite",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "PHEV",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/65HR17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2024": {
+      "trims": [
+        {
+          "name": "Active",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST-Line",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST-Line Select",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "PHEV",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/65HR17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2025": {
+      "trims": [
+        {
+          "name": "Active",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65HR17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST-Line",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Platinum",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "PHEV",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    },
+    "2026": {
+      "trims": [
+        {
+          "name": "S",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SE",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["P225/65R17"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "SEL",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/65R17", "P225/60R18"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "ST-Line",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Titanium",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["P225/60R18", "P225/55R19"],
+          "source": "thecarconnection.com"
+        },
+        {
+          "name": "Plug-In Hybrid",
+          "wheelSizes": [{"diameter": 18, "width": 7.5}],
+          "tireSizes": ["P225/60R18"],
+          "source": "thecarconnection.com"
+        }
+      ]
+    }
+  }
+}

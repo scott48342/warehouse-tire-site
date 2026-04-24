@@ -1,0 +1,40 @@
+{
+  "make": "Chevrolet",
+  "model": "Trax",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "LS",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/60R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["225/60R17"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ACTIV",
+          "wheelSizes": [{"diameter": 18, "width": 7}],
+          "tireSizes": ["225/55R18"],
+          "notes": "Rugged styling with 18-inch standard",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RS",
+          "wheelSizes": [{"diameter": 18, "width": 7}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["225/55R18", "245/45R19"],
+          "notes": "Sport appearance with optional 19-inch wheels",
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "2024 model completely redesigned; 2017-2022 generation had different specs",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

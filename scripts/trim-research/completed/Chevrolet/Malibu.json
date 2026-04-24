@@ -1,0 +1,47 @@
+{
+  "make": "Chevrolet",
+  "model": "Malibu",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "LS",
+          "wheelSizes": [{"diameter": 16, "width": 6.5}],
+          "tireSizes": ["205/65R16"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 16, "width": 6.5}, {"diameter": 17, "width": 7}, {"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["205/65R16", "225/55R17", "245/45R18", "245/40R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "2LT",
+          "wheelSizes": [{"diameter": 19, "width": 8}],
+          "tireSizes": ["245/40R19"],
+          "notes": "Sport-oriented with 19-inch standard",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RS",
+          "wheelSizes": [{"diameter": 18, "width": 8}],
+          "tireSizes": ["245/45R18"],
+          "notes": "Sport appearance package",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premier",
+          "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}],
+          "tireSizes": ["245/45R18", "245/40R19"],
+          "notes": "Top trim, may include 19-inch option",
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "Malibu discontinued after 2024 model year. 2016-2024 same generation.",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}

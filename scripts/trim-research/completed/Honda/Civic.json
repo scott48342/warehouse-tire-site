@@ -1,0 +1,125 @@
+{
+  "model": "Civic",
+  "make": "Honda",
+  "years": {
+    "2026": {
+      "trims": [
+        { "name": "Sedan LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "caranddriver.com" },
+        { "name": "Sedan Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sedan Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sedan Sport Touring Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Sedan Si", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Hatchback Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Hatchback Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Hatchback Sport Touring Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com (2025 carryover)" },
+        { "name": "Type R", "wheelSizes": [{"diameter": 19, "width": 9}], "tireSizes": ["265/30R19"], "source": "tiresize.com (2025 carryover)" }
+      ],
+      "notes": "11th generation Civic (2022+). Type R uses performance summer tires.",
+      "verified": true
+    },
+    "2025": {
+      "trims": [
+        { "name": "Sedan LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "tiresize.com" },
+        { "name": "Sedan Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Sport Touring Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Si", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport Touring Hybrid", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Type R", "wheelSizes": [{"diameter": 19, "width": 9}], "tireSizes": ["265/30R19"], "source": "tiresize.com" }
+      ],
+      "notes": "11th generation Civic",
+      "verified": true
+    },
+    "2024": {
+      "trims": [
+        { "name": "Sedan LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "tiresize.com" },
+        { "name": "Sedan EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Si", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "tiresize.com" },
+        { "name": "Hatchback EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Type R", "wheelSizes": [{"diameter": 19, "width": 9}], "tireSizes": ["265/30R19"], "source": "tiresize.com" }
+      ],
+      "notes": "11th generation Civic",
+      "verified": true
+    },
+    "2023": {
+      "trims": [
+        { "name": "Sedan LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "tiresize.com" },
+        { "name": "Sedan EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Si", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "tiresize.com" },
+        { "name": "Hatchback EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Type R", "wheelSizes": [{"diameter": 19, "width": 9}], "tireSizes": ["265/30R19"], "source": "tiresize.com" }
+      ],
+      "notes": "11th generation Civic. Type R returned mid-2022 as 2023 MY.",
+      "verified": true
+    },
+    "2022": {
+      "trims": [
+        { "name": "Sedan LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "tiresize.com" },
+        { "name": "Sedan EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Si", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback LX", "wheelSizes": [{"diameter": 16, "width": 7}], "tireSizes": ["215/55R16"], "source": "tiresize.com" },
+        { "name": "Hatchback EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Type R", "wheelSizes": [{"diameter": 19, "width": 9}], "tireSizes": ["265/30R19"], "source": "tiresize.com" }
+      ],
+      "notes": "First year of 11th generation Civic. Type R carried over from 10th gen.",
+      "verified": true
+    },
+    "2021": {
+      "trims": [
+        { "name": "Sedan LX", "wheelSizes": [{"diameter": 16, "width": 7}, {"diameter": 17, "width": 7}], "tireSizes": ["215/55R16", "215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback LX", "wheelSizes": [{"diameter": 16, "width": 7}, {"diameter": 17, "width": 7}], "tireSizes": ["215/55R16", "215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport", "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}], "tireSizes": ["235/40R18", "235/35R19"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport Touring", "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}], "tireSizes": ["235/40R18", "235/35R19"], "source": "tiresize.com" },
+        { "name": "Type R", "wheelSizes": [{"diameter": 20, "width": 8.5}], "tireSizes": ["245/30R20"], "source": "tiresize.com" }
+      ],
+      "notes": "Final year of 10th generation Civic. Type R uses 20-inch wheels.",
+      "verified": true
+    },
+    "2020": {
+      "trims": [
+        { "name": "Sedan LX", "wheelSizes": [{"diameter": 16, "width": 7}, {"diameter": 17, "width": 7}], "tireSizes": ["215/55R16", "215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Sedan Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Sedan Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Coupe LX", "wheelSizes": [{"diameter": 16, "width": 7}, {"diameter": 17, "width": 7}], "tireSizes": ["215/55R16", "215/50R17"], "source": "tiresize.com" },
+        { "name": "Coupe EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Coupe Sport", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Coupe Touring", "wheelSizes": [{"diameter": 18, "width": 8}], "tireSizes": ["235/40R18"], "source": "tiresize.com" },
+        { "name": "Hatchback LX", "wheelSizes": [{"diameter": 16, "width": 7}, {"diameter": 17, "width": 7}], "tireSizes": ["215/55R16", "215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback EX", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback EX-L", "wheelSizes": [{"diameter": 17, "width": 7}], "tireSizes": ["215/50R17"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport", "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}], "tireSizes": ["235/40R18", "235/35R19"], "source": "tiresize.com" },
+        { "name": "Hatchback Sport Touring", "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}], "tireSizes": ["235/40R18", "235/35R19"], "source": "tiresize.com" },
+        { "name": "Si Coupe", "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}], "tireSizes": ["235/40R18", "235/35R19"], "source": "tiresize.com" },
+        { "name": "Si Sedan", "wheelSizes": [{"diameter": 18, "width": 8}, {"diameter": 19, "width": 8}], "tireSizes": ["235/40R18", "235/35R19"], "source": "tiresize.com" },
+        { "name": "Type R", "wheelSizes": [{"diameter": 20, "width": 8.5}], "tireSizes": ["245/30R20"], "source": "tiresize.com" }
+      ],
+      "notes": "10th generation Civic. Last year for Coupe body style. Type R uses 20-inch wheels.",
+      "verified": true
+    }
+  },
+  "researchedAt": "2026-04-24",
+  "primarySource": "tiresize.com"
+}

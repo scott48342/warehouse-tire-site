@@ -1,0 +1,50 @@
+{
+  "year": 2026,
+  "make": "Hyundai",
+  "model": "Sonata",
+  "trims": [
+    {
+      "name": "SE",
+      "wheelSizes": [{"diameter": 16, "width": 6.5}],
+      "tireSizes": ["205/65R16"],
+      "source": "caranddriver.com",
+      "verified": true
+    },
+    {
+      "name": "SEL",
+      "wheelSizes": [{"diameter": 17, "width": 7}],
+      "tireSizes": ["215/55R17"],
+      "source": "estimated - typical mid trim upgrade",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "SEL Plus",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/45R18"],
+      "source": "estimated - higher trim typically 18\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "Limited",
+      "wheelSizes": [{"diameter": 18, "width": 7.5}],
+      "tireSizes": ["235/45R18"],
+      "source": "estimated - top trim typically 18\"",
+      "verified": false,
+      "needs_verification": true
+    },
+    {
+      "name": "N Line",
+      "wheelSizes": [{"diameter": 19, "width": 8}],
+      "tireSizes": ["245/40R19"],
+      "source": "estimated - sport variant typically 19\"",
+      "verified": false,
+      "needs_verification": true
+    }
+  ],
+  "notes": "SE verified from C/D specs. 2.5L I4 (191hp) with 8-speed auto. MSRP starts $28,695. N Line has 2.5T engine (290hp).",
+  "verified": false,
+  "partial": true,
+  "researchDate": "2026-04-24"
+}

@@ -1,0 +1,47 @@
+{
+  "make": "Chevrolet",
+  "model": "Equinox",
+  "years": [
+    {
+      "year": 2025,
+      "trims": [
+        {
+          "name": "LS",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["235/65R17"],
+          "notes": "Base trim discontinued mid-cycle, may overlap with LT",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "LT",
+          "wheelSizes": [{"diameter": 17, "width": 7}, {"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/65R17", "235/55R19"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "ACTIV",
+          "wheelSizes": [{"diameter": 17, "width": 7}],
+          "tireSizes": ["235/65R17"],
+          "notes": "Off-road inspired trim with unique styling",
+          "source": "tiresize.com"
+        },
+        {
+          "name": "RS",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}, {"diameter": 20, "width": 8}],
+          "tireSizes": ["235/55R19", "235/50R20"],
+          "source": "tiresize.com"
+        },
+        {
+          "name": "Premier",
+          "wheelSizes": [{"diameter": 19, "width": 7.5}],
+          "tireSizes": ["235/55R19"],
+          "notes": "Top trim level, may include 19-inch standard",
+          "source": "tiresize.com"
+        }
+      ]
+    }
+  ],
+  "notes": "2024 model redesigned; 2022-2024 specifications may differ",
+  "verified": true,
+  "researchedDate": "2026-04-24"
+}
