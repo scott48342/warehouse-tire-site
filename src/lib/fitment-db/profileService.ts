@@ -424,66 +424,62 @@ async function getProfileByModificationIdDirect(
   
   const t0 = Date.now();
   
-  // Try each model variant
-  for (const modelName of modelVariants) {
-    // First try: exact match on modificationId
-    const [fitment] = await db
+  // First try: exact match on modificationId with normalized make/model
+  const [fitment] = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        makeCaseInsensitive(normalizedMake),
+        modelNormalizedMatch(modelVariants),
+        eq(vehicleFitments.modificationId, normalizedModId)
+      )
+    )
+    .limit(1);
+  
+  if (fitment) {
+    return { fitment, lookupMs: Date.now() - t0 };
+  }
+  
+  // Second try: match by displayTrim (for URL compatibility)
+  // Handles URLs like /ford/f-250/XLT where XLT is the trim name
+  const [trimMatch] = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        makeCaseInsensitive(normalizedMake),
+        modelNormalizedMatch(modelVariants),
+        eq(vehicleFitments.displayTrim, modificationId)  // Original case
+      )
+    )
+    .limit(1);
+  
+  if (trimMatch) {
+    return { fitment: trimMatch, lookupMs: Date.now() - t0 };
+  }
+  
+  // Third try: FUZZY TRIM MATCHING
+  // Handles partial matches like "GT Performance" → "GT Performance Pack"
+  // This is critical for performance vehicles where staggered fitment varies by trim.
+  const searchTermLower = normalizedModId.toLowerCase();
+  const searchWords = searchTermLower.split(/[\s-_]+/).filter(w => w.length >= 2);
+  
+  if (searchWords.length > 0) {
+    // Get all trims for this YMM to do fuzzy matching
+    const allFitments = await db
       .select()
       .from(vehicleFitments)
       .where(
         and(
           eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, modelName),
-          eq(vehicleFitments.modificationId, normalizedModId)
+          makeCaseInsensitive(normalizedMake),
+          modelNormalizedMatch(modelVariants)
         )
       )
-      .limit(1);
-    
-    if (fitment) {
-      return { fitment, lookupMs: Date.now() - t0 };
-    }
-    
-    // Second try: match by displayTrim (for URL compatibility)
-    // Handles URLs like /ford/f-250/XLT where XLT is the trim name
-    const [trimMatch] = await db
-      .select()
-      .from(vehicleFitments)
-      .where(
-        and(
-          eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, modelName),
-          eq(vehicleFitments.displayTrim, modificationId)  // Original case
-        )
-      )
-      .limit(1);
-    
-    if (trimMatch) {
-      return { fitment: trimMatch, lookupMs: Date.now() - t0 };
-    }
-    
-    // ─────────────────────────────────────────────────────────────────────────
-    // Third try: FUZZY TRIM MATCHING
-    // Handles partial matches like "GT Performance" → "GT Performance Pack"
-    // This is critical for performance vehicles where staggered fitment varies by trim.
-    // ─────────────────────────────────────────────────────────────────────────
-    const searchTermLower = normalizedModId.toLowerCase();
-    const searchWords = searchTermLower.split(/[\s-_]+/).filter(w => w.length >= 2);
-    
-    if (searchWords.length > 0) {
-      // Get all trims for this YMM to do fuzzy matching
-      const allFitments = await db
-        .select()
-        .from(vehicleFitments)
-        .where(
-          and(
-            eq(vehicleFitments.year, year),
-            eq(vehicleFitments.make, normalizedMake),
-            eq(vehicleFitments.model, modelName)
-          )
-        )
-        .limit(20);
+      .limit(20);
       
       if (allFitments.length > 0) {
         // Score each fitment by how well its displayTrim matches the search term
@@ -534,7 +530,6 @@ async function getProfileByModificationIdDirect(
         }
       }
     }
-  }
   
   return {
     fitment: null,
