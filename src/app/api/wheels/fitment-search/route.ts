@@ -186,9 +186,23 @@ interface StaggeredInfo {
  * Returns true if front and rear specs differ.
  */
 function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo {
-  const frontSpecs = wheelSizes.filter(s => s.axle === "front");
-  const rearSpecs = wheelSizes.filter(s => s.axle === "rear");
+  let frontSpecs = wheelSizes.filter(s => s.axle === "front");
+  let rearSpecs = wheelSizes.filter(s => s.axle === "rear");
   const bothSpecs = wheelSizes.filter(s => s.axle === "both");
+
+  // SPECIAL CASE: If we have "both" + "rear" but no "front", treat "both" as front
+  // This handles DB entries like: { 19x8.5 (no flag), 20x11 rear: true }
+  // where only rear is explicitly marked
+  if (frontSpecs.length === 0 && rearSpecs.length > 0 && bothSpecs.length > 0) {
+    console.log(`[detectStaggeredFromParsed] Treating ${bothSpecs.length} "both" specs as front (only rear is marked)`);
+    frontSpecs = bothSpecs.map(s => ({ ...s, axle: "front" as const }));
+  }
+  
+  // SPECIAL CASE: If we have "both" + "front" but no "rear", treat "both" as rear
+  if (rearSpecs.length === 0 && frontSpecs.length > 0 && bothSpecs.length > 0) {
+    console.log(`[detectStaggeredFromParsed] Treating ${bothSpecs.length} "both" specs as rear (only front is marked)`);
+    rearSpecs = bothSpecs.map(s => ({ ...s, axle: "rear" as const }));
+  }
 
   // If we have explicit front AND rear specs, compare them
   if (frontSpecs.length > 0 && rearSpecs.length > 0) {
@@ -461,9 +475,11 @@ function parseWheelSize(input: unknown): ParsedWheelSize | null {
         width,
         offset: obj.offset != null ? Number(obj.offset) : null,
         tireSize: typeof obj.tireSize === "string" ? obj.tireSize : null,
-        // Handle both "axle" (API format) and "position" (DB format)
+        // Handle multiple DB formats: "axle", "position", or "rear: true"
         axle: (obj.axle === "front" || obj.axle === "rear") ? obj.axle 
             : (obj.position === "front" || obj.position === "rear") ? (obj.position as "front" | "rear")
+            : obj.rear === true ? "rear"  // Handle { rear: true } format from some imports
+            : obj.front === true ? "front"  // Handle { front: true } format
             : "both",
         isStock: obj.isStock !== false,
       };
