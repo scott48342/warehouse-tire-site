@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useShopContext } from "@/contexts/ShopContextProvider";
 
@@ -12,8 +13,12 @@ import { useShopContext } from "@/contexts/ShopContextProvider";
 export function PremiumHero() {
   const { isLocal } = useShopContext();
   
+  // Avoid hydration mismatch: only apply local styling after mount
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  
   // Larger buttons for local site - customers are ready to buy
-  const buttonSize = isLocal 
+  const buttonSize = mounted && isLocal 
     ? "px-10 py-4 text-lg" 
     : "px-6 py-3 text-sm";
   

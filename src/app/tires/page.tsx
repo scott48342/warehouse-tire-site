@@ -49,6 +49,9 @@ import {
 } from "@/components/LiftedTireRecommendations";
 import { StickyBuildBar } from "@/components/BuildContextBar";
 import { FinancingBadge } from "@/components/FinancingBadge";
+import { TirePriceDisplay } from "@/components/TirePriceDisplay";
+import { headers } from "next/headers";
+import { detectShopContext } from "@/lib/shopContext";
 import { 
   getVehicleProfile, 
   isCategoryAllowedForVehicle,
@@ -878,6 +881,13 @@ export default async function TiresPage({
 }) {
   const sp = (await searchParams) ?? {};
   const zip = "";
+  
+  // Detect shop mode (local vs national) for pricing display
+  const headersList = await headers();
+  const shopContext = detectShopContext(headersList);
+  // Support ?mode=local query param for dev/testing (server-side check)
+  const modeOverride = Array.isArray(sp.mode) ? sp.mode[0] : sp.mode;
+  const isLocalMode = modeOverride === 'local' || shopContext.mode === 'local';
   const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
   const sort = (sortRaw ?? "price_asc").trim();
   const pageRaw = Array.isArray(sp.page) ? sp.page[0] : sp.page;
@@ -3537,6 +3547,7 @@ export default async function TiresPage({
                         hasVehicle={hasVehicle}
                         isPackageFlow={isPackageFlow}
                         popularitySignal={popularitySignalsMap.get(pick.tire.partNumber || pick.tire.mfgPartNumber || '')}
+                        isLocalMode={isLocalMode}
                       />
                     </div>
                   ))}
@@ -3590,6 +3601,7 @@ export default async function TiresPage({
                     hasVehicle={hasVehicle}
                     isPackageFlow={isPackageFlow}
                     popularitySignal={popularitySignalsMap.get(t.partNumber || t.mfgPartNumber || '')}
+                    isLocalMode={isLocalMode}
                   />
                 ))
               ) : (
@@ -3762,6 +3774,7 @@ function TireCard({
   hasVehicle,
   isPackageFlow,
   popularitySignal,
+  isLocalMode,
 }: {
   tire: Tire;
   stripSizeFromName: (name: string) => string;
@@ -3786,6 +3799,8 @@ function TireCard({
   isPackageFlow?: boolean;
   /** Real behavior-driven popularity signal (optional) */
   popularitySignal?: PopularitySignal | null;
+  /** Local mode flag for out-the-door pricing */
+  isLocalMode?: boolean;
 }) {
   // Check rebate eligibility at MODEL level, not just brand level
   const brandKey = String(t.brand || "").trim().toLowerCase();
@@ -4123,26 +4138,11 @@ function TireCard({
             {(() => {
               const unitPrice = getDisplayPrice(t);
               return unitPrice != null ? (
-                <div className="flex flex-col gap-1">
-                  {/* Per tire price - prominent */}
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-lg font-bold text-neutral-900">
-                      ${unitPrice.toFixed(2)}
-                    </span>
-                    <span className="text-sm text-neutral-600">per tire</span>
-                  </div>
-                  {/* Set of 4 total */}
-                  <div className="flex items-baseline gap-1 px-2 py-1 bg-neutral-50 rounded-lg">
-                    <span className="text-xl font-extrabold text-neutral-900">
-                      ${(unitPrice * 4).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
-                    </span>
-                    <span className="text-xs font-medium text-neutral-500">for all 4</span>
-                  </div>
-                  {/* Affirm financing - compact */}
-                  {unitPrice * 4 >= 50 && (
-                    <FinancingBadge price={unitPrice * 4} variant="compact" />
-                  )}
-                </div>
+                <TirePriceDisplay 
+                  unitPrice={unitPrice} 
+                  quantity={4} 
+                  isLocalMode={isLocalMode}
+                />
               ) : (
                 <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
               );

@@ -214,41 +214,107 @@ export function TPMSSuggestion({
   }
 
   // ──────────────────────────────────────────────────────────────────────────
-  // Package Context - Toggle style
+  // Package Context - Toggle style with quantity selector
   // ──────────────────────────────────────────────────────────────────────────
   if (context === "package") {
-    return (
-      <div className={`rounded-xl border border-neutral-200 bg-white p-4 ${className}`}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-xl">📡</span>
-            <div>
-              <p className="font-semibold text-neutral-900">TPMS Sensors</p>
-              <p className="text-xs text-neutral-500">Pre-programmed • Set of 4</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-bold text-neutral-900">${totalPrice.toFixed(2)}</span>
-            <button
-              onClick={handleAddTPMS}
-              disabled={added}
-              className={`
-                rounded-lg px-4 py-2 text-sm font-bold transition-all
-                ${added
-                  ? "bg-green-100 text-green-700"
-                  : "border border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-50"
-                }
-              `}
-            >
-              {added ? "✓ Added" : "Add"}
-            </button>
-          </div>
-        </div>
-      </div>
-    );
+    return <TPMSPackageContext 
+      vehicleYear={vehicleYear}
+      vehicleMake={vehicleMake}
+      vehicleModel={vehicleModel}
+      className={className}
+    />;
   }
 
   return null;
+}
+
+// ============================================================================
+// Package Context TPMS - With quantity selector
+// ============================================================================
+
+function TPMSPackageContext({
+  vehicleYear,
+  vehicleMake,
+  vehicleModel,
+  className = "",
+}: {
+  vehicleYear?: number | string | null;
+  vehicleMake?: string | null;
+  vehicleModel?: string | null;
+  className?: string;
+}) {
+  const { addAccessories } = useCart();
+  const [added, setAdded] = useState(false);
+  const [quantity, setQuantity] = useState(4);
+
+  const unitPrice = TPMS_PRODUCT.unitPrice;
+  const totalPrice = unitPrice * quantity;
+
+  const handleAddTPMS = () => {
+    const tpmsItem: CartAccessoryItem = {
+      ...TPMS_PRODUCT,
+      type: "accessory",
+      quantity,
+      name: quantity === 1 ? "TPMS Sensor" : `TPMS Sensors (${quantity})`,
+      vehicle: vehicleMake && vehicleModel ? {
+        year: String(vehicleYear || ""),
+        make: vehicleMake,
+        model: vehicleModel,
+      } : undefined,
+    };
+
+    addAccessories([tpmsItem]);
+    setAdded(true);
+    trackTPMSAdd("package", { year: vehicleYear, make: vehicleMake, model: vehicleModel });
+
+    // Reset after a moment
+    setTimeout(() => setAdded(false), 2000);
+  };
+
+  return (
+    <div className={`rounded-xl border border-neutral-200 bg-white p-4 ${className}`}>
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <span className="text-xl">📡</span>
+          <div>
+            <p className="font-semibold text-neutral-900">TPMS Sensors</p>
+            <p className="text-xs text-neutral-500">Pre-programmed • ${unitPrice.toFixed(2)} each</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          {/* Quantity selector */}
+          <select
+            value={quantity}
+            onChange={(e) => setQuantity(Number(e.target.value))}
+            disabled={added}
+            className="h-9 rounded-lg border border-neutral-200 bg-white px-2 text-sm font-semibold focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+          >
+            {[1, 2, 3, 4, 5, 6, 8].map((n) => (
+              <option key={n} value={n}>
+                {n}
+              </option>
+            ))}
+          </select>
+          <span className="text-sm font-bold text-neutral-900 min-w-[60px] text-right">
+            ${totalPrice.toFixed(2)}
+          </span>
+          <button
+            onClick={handleAddTPMS}
+            disabled={added}
+            className={`
+              rounded-lg px-4 py-2 text-sm font-bold transition-all
+              ${added
+                ? "bg-green-100 text-green-700"
+                : "border border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-50"
+              }
+            `}
+          >
+            {added ? "✓ Added" : "Add"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // ============================================================================

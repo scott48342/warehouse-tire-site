@@ -7,10 +7,11 @@ import { useCart, type CartAccessoryItem } from "@/lib/cart/CartContext";
  * Road Hazard Protection Component
  * 
  * Offers tire protection plan at checkout - 25% of tire price per tire.
- * Covers damage from road hazards (potholes, nails, debris) for 2 years.
+ * Covers damage from road hazards (potholes, nails, debris) for 5 years.
  * 
  * @created 2026-04-15
  * @updated 2026-04-17 - Changed to 25% of tire price per tire
+ * @updated 2026-04-24 - Changed coverage to 5 years
  */
 
 interface RoadHazardProtectionProps {
@@ -27,7 +28,7 @@ interface RoadHazardProtectionProps {
 // Road hazard product configuration
 const ROAD_HAZARD_RATE = 0.25; // 25% of tire price
 const ROAD_HAZARD_MIN_PER_TIRE = 15; // Minimum $15 per tire
-const ROAD_HAZARD_SKU = "RH-PROTECT-2YR";
+const ROAD_HAZARD_SKU = "RH-PROTECT-5YR";
 
 export function RoadHazardProtection({
   tireCount,
@@ -63,13 +64,13 @@ export function RoadHazardProtection({
         type: "accessory",
         category: "tpms", // Using tpms category for service add-ons
         sku: ROAD_HAZARD_SKU,
-        name: "2-Year Road Hazard Protection",
+        name: "5-Year Road Hazard Protection",
         unitPrice: pricePerTire,
         quantity: tireCount,
         required: false,
         reason: "Covers tire damage from potholes, nails, and road debris",
         meta: {
-          coverageYears: 2,
+          coverageYears: 5,
           totalPrice: totalPrice,
           rate: ROAD_HAZARD_RATE,
           serviceType: "road_hazard",
@@ -138,7 +139,7 @@ export function RoadHazardProtection({
         <div className="flex-1">
           <div className="flex items-center gap-2">
             <h3 className={`font-bold ${isAdded ? "text-green-900" : "text-blue-900"}`}>
-              2-Year Road Hazard Protection
+              5-Year Road Hazard Protection
             </h3>
             {isAdded && (
               <span className="px-2 py-0.5 bg-green-200 text-green-800 text-xs font-bold rounded-full">

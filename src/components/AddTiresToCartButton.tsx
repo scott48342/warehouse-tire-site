@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
+import { useShopContext } from "@/contexts/ShopContextProvider";
+import { getOutTheDoorTotal } from "@/lib/localPricing";
 
 type AddTiresToCartButtonProps = {
   sku: string;
@@ -166,6 +168,7 @@ export function QuickAddTireButton({
   source?: string;
 }) {
   const { addItem, hasWheels } = useCart();
+  const { isLocal } = useShopContext();
   const [isAdding, setIsAdding] = useState(false);
   
   // Check if this is a package flow (user has wheels in cart)
@@ -192,7 +195,8 @@ export function QuickAddTireButton({
     }, 150);
   };
 
-  const total = unitPrice * quantity;
+  // For local mode, show out-the-door price (includes install, tax, recycling)
+  const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity) : unitPrice * quantity;
 
   // Use green styling for package flow, red for standalone tire purchase
   const buttonStyles = isPackageFlow
@@ -217,14 +221,14 @@ export function QuickAddTireButton({
         <span>
           ✓ Add to Package
           {Number.isFinite(total) && total > 0 ? (
-            <span className="ml-1 text-green-600">• ${total.toFixed(0)}</span>
+            <span className="ml-1 text-green-600">• ${total.toFixed(0)}{isLocal ? ' out the door' : ''}</span>
           ) : null}
         </span>
       ) : (
         <span>
           Add to Cart
           {Number.isFinite(total) && total > 0 ? (
-            <span className="ml-1 opacity-80">• ${total.toFixed(0)}</span>
+            <span className="ml-1 opacity-80">• ${total.toFixed(0)}{isLocal ? ' out the door' : ''}</span>
           ) : null}
         </span>
       )}

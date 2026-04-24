@@ -55,16 +55,7 @@ const DEFAULT_ACCESSORIES: Omit<Accessory, "selected">[] = [
     required: false, // Optional - customer may reuse existing hardware
     quantity: 1,
   },
-  {
-    sku: "VALVE-STEMS-4PK",
-    name: "Valve Stems",
-    description: "High-quality rubber valve stems",
-    price: 12.99,
-    imageUrl: null,
-    category: "valve_stem",
-    required: false,
-    quantity: 4,
-  },
+  // Valve stems removed - included with installation
   {
     sku: "HUB-CENTRIC-RINGS",
     name: "Hub Centric Rings",
