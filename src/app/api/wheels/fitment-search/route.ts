@@ -115,7 +115,10 @@ interface InventoryPricingInput {
 
 /**
  * Calculate wheel sell price with data quality validation.
- * Only trusts MSRP if MAP is also present (corrupted data fix).
+ * 
+ * UPDATED (April 2026): Trust MSRP from inventory cache even without MAP.
+ * The inventory SFTP feed has reliable MSRP data for all products.
+ * The old "MAP required" rule filtered out budget brands like Petrol.
  */
 function getSafeWheelPrice(
   techfeed: TechfeedPricingInput,
@@ -125,9 +128,22 @@ function getSafeWheelPrice(
   const mapValue = inventory?.mapPrice ?? (Number(techfeed.map_price) || null);
   const msrpValue = inventory?.msrp ?? (Number(techfeed.msrp) || null);
   
-  // DATA QUALITY FIX: Only trust MSRP if MAP is also present.
-  // When MAP is missing, MSRP is often corrupted (shows dealer cost, not retail).
-  const trustedMsrp = mapValue ? msrpValue : null;
+  // DATA QUALITY UPDATE (April 2026):
+  // - If MAP exists, use it (most reliable)
+  // - If no MAP but inventory MSRP exists, trust it (SFTP feed is reliable)
+  // - If only techfeed MSRP (no inventory), trust if > $100 (filters out $0 garbage)
+  // This allows budget brands like Petrol that don't have MAP pricing
+  let trustedMsrp = null;
+  if (mapValue) {
+    // MAP exists - MSRP is trustworthy
+    trustedMsrp = msrpValue;
+  } else if (inventory?.msrp && inventory.msrp > 0) {
+    // No MAP, but inventory cache has MSRP - trust it (SFTP is reliable)
+    trustedMsrp = inventory.msrp;
+  } else if (msrpValue && msrpValue > 100) {
+    // Fallback: techfeed-only MSRP, trust if reasonable (> $100)
+    trustedMsrp = msrpValue;
+  }
   
   return calculateWheelSellPrice({ map: mapValue, msrp: trustedMsrp });
 }
