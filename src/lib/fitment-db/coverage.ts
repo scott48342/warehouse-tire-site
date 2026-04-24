@@ -7,9 +7,17 @@
 
 import { db } from "./db";
 import { vehicleFitments } from "./schema";
-import { sql, eq, and, or, inArray } from "drizzle-orm";
+import { sql, eq, and, or, inArray, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./keys";
 import { getModelVariants } from "./modelAliases";
+
+/**
+ * Case-insensitive make comparison.
+ * DB has mixed case (Buick, Toyota, RAM) but we normalize to lowercase.
+ */
+function makeCaseInsensitive(make: string) {
+  return sql`lower(${vehicleFitments.make}) = ${make.toLowerCase()}`;
+}
 
 // ============================================================================
 // Coverage Types
@@ -50,7 +58,7 @@ export async function getYearsWithCoverage(
     .from(vehicleFitments)
     .where(
       and(
-        eq(vehicleFitments.make, normalizedMake),
+        makeCaseInsensitive(normalizedMake),
         inArray(vehicleFitments.model, modelVariants)
       )
     )
@@ -88,7 +96,7 @@ export async function getTrimsWithCoverage(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, normalizedMake),
+        makeCaseInsensitive(normalizedMake),
         inArray(vehicleFitments.model, modelVariants)
       )
     )
@@ -121,7 +129,7 @@ export async function hasAnyCoverage(
     .from(vehicleFitments)
     .where(
       and(
-        eq(vehicleFitments.make, normalizedMake),
+        makeCaseInsensitive(normalizedMake),
         inArray(vehicleFitments.model, modelVariants)
       )
     )
@@ -144,7 +152,8 @@ export async function getModelsWithCoverage(
 ): Promise<string[]> {
   const normalizedMake = normalizeMake(make);
   
-  const whereConditions = [eq(vehicleFitments.make, normalizedMake)];
+  // Use case-insensitive comparison for make (DB has mixed case)
+  const whereConditions: any[] = [makeCaseInsensitive(normalizedMake)];
   if (year) {
     whereConditions.push(eq(vehicleFitments.year, year));
   }
@@ -180,7 +189,7 @@ export async function hasYearCoverage(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, normalizedMake),
+        makeCaseInsensitive(normalizedMake),
         inArray(vehicleFitments.model, modelVariants)
       )
     )
