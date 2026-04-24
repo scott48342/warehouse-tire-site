@@ -843,34 +843,115 @@ export default function CheckoutPage() {
             {/* Step: Payment */}
             {step === "payment" && (
               <div className="space-y-4">
-                {/* Payment Header */}
-                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-                  <h2 className="text-lg font-bold text-neutral-900 mb-2">Choose Payment Method</h2>
-                  <p className="text-sm text-neutral-600 mb-4">
-                    Pay securely with card or select a buy now, pay later option below.
-                  </p>
+                {/* Error state */}
+                {stripeError && (
+                  <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+                    <p>{stripeError}</p>
+                  </div>
+                )}
 
-                  {/* Error state */}
-                  {stripeError && (
-                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 mb-4">
-                      <p>{stripeError}</p>
+                {/* ══════════════════════════════════════════════════════════════
+                    BUY NOW PAY LATER OPTIONS - Prominent CTAs
+                    ══════════════════════════════════════════════════════════════ */}
+                {totalWithTaxAndShipping >= 50 && (
+                  <div className="space-y-3">
+                    <div className="text-center">
+                      <p className="text-sm font-semibold text-neutral-700">Pay over time — 0% APR available</p>
+                      <p className="text-xs text-neutral-500">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo</p>
                     </div>
-                  )}
+                    
+                    {/* Affirm */}
+                    <button
+                      onClick={() => startStripeCheckout({ forceAffirm: true })}
+                      disabled={processing}
+                      className={`w-full rounded-xl border-2 border-blue-300 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 text-left transition-all hover:border-blue-400 hover:shadow-md ${
+                        processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-6" />
+                          <div>
+                            <p className="font-semibold text-neutral-900">Pay with Affirm</p>
+                            <p className="text-xs text-neutral-600">3-12 monthly payments</p>
+                          </div>
+                        </div>
+                        <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full font-medium">0% APR</span>
+                      </div>
+                    </button>
+
+                    {/* Afterpay */}
+                    <button
+                      onClick={() => startStripeCheckout()}
+                      disabled={processing}
+                      className={`w-full rounded-xl border-2 border-teal-300 bg-gradient-to-r from-teal-50 to-emerald-50 p-4 text-left transition-all hover:border-teal-400 hover:shadow-md ${
+                        processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <img src="https://static.afterpay.com/app/icon-128x128.png" alt="Afterpay" className="h-6 w-6" />
+                          <div>
+                            <p className="font-semibold text-neutral-900">Pay with Afterpay</p>
+                            <p className="text-xs text-neutral-600">4 interest-free payments</p>
+                          </div>
+                        </div>
+                        <span className="text-xs bg-teal-600 text-white px-2 py-1 rounded-full font-medium">4 payments</span>
+                      </div>
+                    </button>
+
+                    {/* Klarna */}
+                    <button
+                      onClick={() => startStripeCheckout()}
+                      disabled={processing}
+                      className={`w-full rounded-xl border-2 border-pink-300 bg-gradient-to-r from-pink-50 to-rose-50 p-4 text-left transition-all hover:border-pink-400 hover:shadow-md ${
+                        processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <img src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg" alt="Klarna" className="h-6" />
+                          <div>
+                            <p className="font-semibold text-neutral-900">Pay with Klarna</p>
+                            <p className="text-xs text-neutral-600">Flexible payment options</p>
+                          </div>
+                        </div>
+                        <span className="text-xs bg-pink-600 text-white px-2 py-1 rounded-full font-medium">Pay later</span>
+                      </div>
+                    </button>
+                  </div>
+                )}
+
+                {/* Divider */}
+                <div className="flex items-center gap-4 py-2">
+                  <div className="flex-1 border-t border-neutral-200"></div>
+                  <span className="text-sm text-neutral-400 font-medium">or pay with card</span>
+                  <div className="flex-1 border-t border-neutral-200"></div>
+                </div>
+
+                {/* ══════════════════════════════════════════════════════════════
+                    CARD PAYMENT - Embedded on-site form
+                    ══════════════════════════════════════════════════════════════ */}
+                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-lg">💳</span>
+                    <h2 className="text-lg font-bold text-neutral-900">Pay with Card</h2>
+                  </div>
 
                   {/* Loading state while creating PaymentIntent */}
                   {paymentLoading && !clientSecret && (
-                    <div className="flex items-center justify-center py-12">
+                    <div className="flex items-center justify-center py-8">
                       <div className="flex items-center gap-3">
                         <svg className="animate-spin h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span className="text-neutral-600">Loading payment options...</span>
+                        <span className="text-neutral-600">Loading...</span>
                       </div>
                     </div>
                   )}
 
-                  {/* Embedded Payment Element */}
+                  {/* Embedded Payment Element - Card only */}
                   {clientSecret && (
                     <StripePaymentElement
                       clientSecret={clientSecret}
@@ -882,22 +963,12 @@ export default function CheckoutPage() {
                     />
                   )}
 
-                  {/* BNPL info banner */}
-                  {totalWithTaxAndShipping >= 35 && (
-                    <div className="mt-4 pt-4 border-t border-neutral-100">
-                      <div className="flex items-center gap-2 text-sm text-neutral-600">
-                        <span>💡</span>
-                        <span>
-                          <strong>Pay over time:</strong> Select Affirm, Afterpay, or Klarna above for flexible payments
-                        </span>
-                      </div>
-                      {totalWithTaxAndShipping >= 50 && (
-                        <p className="text-xs text-neutral-500 mt-1 ml-6">
-                          As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo with 0% APR available
-                        </p>
-                      )}
-                    </div>
-                  )}
+                  {/* Card logos */}
+                  <div className="flex items-center justify-center gap-3 mt-4 pt-4 border-t border-neutral-100">
+                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-5 object-contain opacity-60" />
+                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-5 object-contain opacity-60" />
+                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-5 object-contain opacity-60" />
+                  </div>
                 </div>
 
                 {/* Trust badges */}
@@ -910,8 +981,6 @@ export default function CheckoutPage() {
                   </div>
                   <span>•</span>
                   <span>256-bit encryption</span>
-                  <span>•</span>
-                  <span>Powered by Stripe</span>
                 </div>
 
                 {/* Back button */}

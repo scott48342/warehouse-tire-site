@@ -290,21 +290,11 @@ export async function POST(req: Request) {
     const totalCents = stripeLines.reduce((sum, l) => sum + moneyToCents(l.unitPriceUsd) * l.qty, 0);
     const totalUsd = totalCents / 100;
 
-    // Payment methods: Card + BNPL options based on amount
-    // - Affirm: $50-$30,000
-    // - Afterpay/Clearpay: $35-$4,000 (US)
-    // - Klarna: $35-$10,000
-    const paymentMethodTypes: string[] = ["card", "link"];
-    
-    // Add BNPL methods based on amount thresholds
-    if (totalUsd >= 35) {
-      paymentMethodTypes.push("afterpay_clearpay", "klarna");
-    }
-    if (totalUsd >= 50) {
-      paymentMethodTypes.push("affirm");
-    }
+    // Payment methods: Card only for embedded form
+    // BNPL options (Affirm, Afterpay, Klarna) use hosted checkout session
+    const paymentMethodTypes: string[] = ["card"];
 
-    console.log(`[checkout/payment-intent] Payment methods for $${totalUsd.toFixed(2)}:`, paymentMethodTypes);
+    console.log(`[checkout/payment-intent] Card-only PaymentIntent for $${totalUsd.toFixed(2)}`);
 
     // Build metadata for PaymentIntent
     const metadata: Record<string, string> = {
