@@ -40,7 +40,7 @@ async function getEmailSettings(): Promise<EmailSettings | null> {
 
   try {
     const { rows } = await pool.query(
-      `SELECT value FROM admin_settings WHERE key = 'email_settings' LIMIT 1`
+      `SELECT value FROM admin_settings WHERE key = 'email' LIMIT 1`
     );
     if (!rows.length) return null;
     const val = rows[0].value;
