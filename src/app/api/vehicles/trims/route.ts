@@ -147,53 +147,73 @@ export async function GET(req: Request) {
 
 /**
  * Process raw trim entries into display format
+ * 
+ * Priority:
+ * 1. Individual trim records (display_trim without commas) - preferred
+ * 2. Grouped trim records (comma-separated) - used as fallback
+ * 
+ * Dedupes by label to avoid showing "Sport" twice when we have both
+ * an individual "Sport" record and a grouped "LX, Sport, EX" record.
  */
 function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption[] {
-  const results: TrimOption[] = [];
+  const seenLabels = new Map<string, TrimOption>(); // label -> best option
   let hasOnlyBaseTrims = true;
   let firstBaseTrim: TrimEntry | null = null;
   
+  // First pass: collect individual records (no commas) - these are preferred
   for (const t of trims) {
-    const rawLabel = t.displayTrim || (premiumUxEnabled ? "" : "Base");
+    const rawLabel = t.displayTrim || "";
     
-    // Skip empty labels when premium UX is on
-    if (premiumUxEnabled && !rawLabel) {
+    // Skip grouped trims in first pass
+    if (rawLabel.includes(",")) continue;
+    
+    if (premiumUxEnabled && (!rawLabel || isBaseTrim(rawLabel))) {
+      if (!firstBaseTrim) firstBaseTrim = t;
       continue;
     }
     
-    const label = rawLabel;
+    if (rawLabel) {
+      hasOnlyBaseTrims = false;
+      const normalizedLabel = rawLabel.trim();
+      if (!seenLabels.has(normalizedLabel)) {
+        seenLabels.set(normalizedLabel, {
+          value: t.modificationId,
+          label: normalizedLabel,
+          modificationId: t.modificationId,
+        });
+      }
+    }
+  }
+  
+  // Second pass: add trims from grouped records if not already seen
+  for (const t of trims) {
+    const rawLabel = t.displayTrim || "";
     
-    // Split grouped trims (comma or slash separated)
-    if (label.includes(",") || label.includes("/")) {
-      const individualTrims = label.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
-      for (const trimName of individualTrims) {
-        if (premiumUxEnabled && isBaseTrim(trimName)) {
-          if (!firstBaseTrim) firstBaseTrim = t;
-          continue;
-        }
+    // Only process grouped trims in second pass
+    if (!rawLabel.includes(",")) continue;
+    
+    const individualTrims = rawLabel.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
+    for (const trimName of individualTrims) {
+      if (premiumUxEnabled && isBaseTrim(trimName)) {
+        if (!firstBaseTrim) firstBaseTrim = t;
+        continue;
+      }
+      
+      // Only add if we don't already have this label from an individual record
+      if (!seenLabels.has(trimName)) {
         hasOnlyBaseTrims = false;
-        results.push({
+        seenLabels.set(trimName, {
           value: t.modificationId,
           label: trimName,
           modificationId: t.modificationId,
         });
       }
-    } else {
-      if (premiumUxEnabled && isBaseTrim(label)) {
-        if (!firstBaseTrim) firstBaseTrim = t;
-        continue;
-      }
-      hasOnlyBaseTrims = false;
-      results.push({
-        value: t.modificationId,
-        label,
-        modificationId: t.modificationId,
-      });
     }
   }
   
+  const results = Array.from(seenLabels.values());
+  
   // If all trims were base trims, return a single "Standard" option
-  // This prevents returning empty results when we DO have coverage
   if (results.length === 0 && trims.length > 0 && firstBaseTrim) {
     results.push({
       value: firstBaseTrim.modificationId,
@@ -201,6 +221,9 @@ function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption
       modificationId: firstBaseTrim.modificationId,
     });
   }
+  
+  // Sort alphabetically for consistent display
+  results.sort((a, b) => a.label.localeCompare(b.label));
   
   return results;
 }
