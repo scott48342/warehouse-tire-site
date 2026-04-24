@@ -1,35 +1,68 @@
 {
-  "year": 2024,
   "make": "Subaru",
   "model": "Ascent",
   "source": "tiresize.com",
-  "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2024/",
-  "fetchedAt": "2026-04-24",
-  "trims": [
-    {
-      "name": "Base",
-      "wheelDiameters": [18],
-      "tireSizes": ["245/60R18"]
+  "researchedAt": "2026-04-24",
+  "notes": "Premium trim offers optional 20\" wheels. Onyx Edition added 2022. Bronze Edition added 2025. Base trim dropped after 2024.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/60R18", "optional": [{ "wheelDiameter": 20, "tireSize": "245/50R20" }] },
+        { "name": "Limited", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Touring", "wheelDiameter": 20, "tireSize": "245/50R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2020/"
     },
-    {
-      "name": "Limited",
-      "wheelDiameters": [20],
-      "tireSizes": ["245/50R20"]
+    "2021": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/60R18", "optional": [{ "wheelDiameter": 20, "tireSize": "245/50R20" }] },
+        { "name": "Limited", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Touring", "wheelDiameter": 20, "tireSize": "245/50R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2021/"
     },
-    {
-      "name": "Onyx Edition",
-      "wheelDiameters": [20],
-      "tireSizes": ["245/50R20"]
+    "2022": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/60R18", "optional": [{ "wheelDiameter": 20, "tireSize": "245/50R20" }] },
+        { "name": "Onyx Edition", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Limited", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Touring", "wheelDiameter": 20, "tireSize": "245/50R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2022/"
     },
-    {
-      "name": "Premium",
-      "wheelDiameters": [18],
-      "tireSizes": ["245/60R18"]
+    "2023": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Onyx Edition", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Limited", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Touring", "wheelDiameter": 20, "tireSize": "245/50R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2023/"
     },
-    {
-      "name": "Touring",
-      "wheelDiameters": [20],
-      "tireSizes": ["245/50R20"]
+    "2024": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Onyx Edition", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Limited", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Touring", "wheelDiameter": 20, "tireSize": "245/50R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "Premium", "wheelDiameter": 18, "tireSize": "245/60R18" },
+        { "name": "Onyx Edition", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Onyx Edition Touring", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Bronze Edition", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Limited", "wheelDiameter": 20, "tireSize": "245/50R20" },
+        { "name": "Touring", "wheelDiameter": 20, "tireSize": "245/50R20" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Ascent/2025/"
     }
-  ]
+  }
 }

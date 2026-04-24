@@ -19,6 +19,22 @@ function makeCaseInsensitive(make: string) {
   return sql`lower(${vehicleFitments.make}) = ${make.toLowerCase()}`;
 }
 
+/**
+ * Normalize-and-compare for model names.
+ * Handles: "Encore GX" (DB) vs "encore-gx" (URL slug)
+ * Strips non-alphanumeric, lowercases, then compares.
+ */
+function modelNormalizedMatch(modelVariants: string[]) {
+  // Convert variants to normalized form for comparison
+  const normalizedVariants = modelVariants.map(m => 
+    m.toLowerCase().replace(/[^a-z0-9]+/g, '')
+  );
+  
+  // Compare DB model (normalized) against any variant (normalized)
+  // regexp_replace removes non-alphanumeric, lower() lowercases
+  return sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ANY(ARRAY[${sql.join(normalizedVariants.map(v => sql`${v}`), sql`, `)}])`;
+}
+
 // ============================================================================
 // Coverage Types
 // ============================================================================
@@ -59,7 +75,7 @@ export async function getYearsWithCoverage(
     .where(
       and(
         makeCaseInsensitive(normalizedMake),
-        inArray(vehicleFitments.model, modelVariants)
+        modelNormalizedMatch(modelVariants)
       )
     )
     .orderBy(sql`${vehicleFitments.year} DESC`);
@@ -97,7 +113,7 @@ export async function getTrimsWithCoverage(
       and(
         eq(vehicleFitments.year, year),
         makeCaseInsensitive(normalizedMake),
-        inArray(vehicleFitments.model, modelVariants)
+        modelNormalizedMatch(modelVariants)
       )
     )
     .orderBy(vehicleFitments.displayTrim);
@@ -130,7 +146,7 @@ export async function hasAnyCoverage(
     .where(
       and(
         makeCaseInsensitive(normalizedMake),
-        inArray(vehicleFitments.model, modelVariants)
+        modelNormalizedMatch(modelVariants)
       )
     )
     .limit(1);
@@ -190,7 +206,7 @@ export async function hasYearCoverage(
       and(
         eq(vehicleFitments.year, year),
         makeCaseInsensitive(normalizedMake),
-        inArray(vehicleFitments.model, modelVariants)
+        modelNormalizedMatch(modelVariants)
       )
     )
     .limit(1);

@@ -18,7 +18,25 @@
 import { db } from "./db";
 import { vehicleFitments, fitmentSourceRecords, modificationAliases } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, or, inArray } from "drizzle-orm";
+import { eq, and, or, inArray, sql } from "drizzle-orm";
+
+/**
+ * Case-insensitive make comparison for DB queries.
+ */
+function makeCaseInsensitive(make: string) {
+  return sql`lower(${vehicleFitments.make}) = ${make.toLowerCase()}`;
+}
+
+/**
+ * Normalize-and-compare for model names.
+ * Handles: "Encore GX" (DB) vs "encore-gx" (URL slug)
+ */
+function modelNormalizedMatch(modelVariants: string[]) {
+  const normalizedVariants = modelVariants.map(m => 
+    m.toLowerCase().replace(/[^a-z0-9]+/g, '')
+  );
+  return sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ANY(ARRAY[${sql.join(normalizedVariants.map(v => sql`${v}`), sql`, `)}])`;
+}
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
@@ -542,14 +560,15 @@ async function getProfileByYMMFallback(
   // Find any fitment for this YMM - prioritize those with good data
   // Use standard select pattern for Vercel Postgres compatibility
   // Try all model variants (e.g., f-250 and f-250-super-duty)
+  // Use case-insensitive and normalized matching for make/model
   const fitments = await db
     .select()
     .from(vehicleFitments)
     .where(
       and(
         eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, normalizedMake),
-        inArray(vehicleFitments.model, modelVariants)
+        makeCaseInsensitive(normalizedMake),
+        modelNormalizedMatch(modelVariants)
       )
     )
     .limit(10);
@@ -569,8 +588,8 @@ async function getProfileByYMMFallback(
         .where(
           and(
             eq(vehicleFitments.year, adjYear),
-            eq(vehicleFitments.make, normalizedMake),
-            inArray(vehicleFitments.model, modelVariants)  // Use model aliases
+            makeCaseInsensitive(normalizedMake),
+            modelNormalizedMatch(modelVariants)  // Use model aliases + normalized match
           )
         )
         .limit(5);

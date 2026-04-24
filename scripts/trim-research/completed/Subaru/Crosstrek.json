@@ -1,35 +1,68 @@
 {
-  "year": 2024,
   "make": "Subaru",
   "model": "Crosstrek",
   "source": "tiresize.com",
-  "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2024/",
-  "fetchedAt": "2026-04-24",
-  "trims": [
-    {
-      "name": "Base",
-      "wheelDiameters": [17],
-      "tireSizes": ["225/60R17"]
+  "researchedAt": "2026-04-24",
+  "notes": "2020 used engine-based naming (2.0i). Wilderness trim debuted 2024. Hybrid discontinued after 2023.",
+  "years": {
+    "2020": {
+      "trims": [
+        { "name": "2.0i", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "2.0i Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "2.0i Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2020/"
     },
-    {
-      "name": "Limited",
-      "wheelDiameters": [18],
-      "tireSizes": ["225/55R18"]
+    "2021": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2021/"
     },
-    {
-      "name": "Premium",
-      "wheelDiameters": [17],
-      "tireSizes": ["225/60R17"]
+    "2022": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2022/"
     },
-    {
-      "name": "Sport",
-      "wheelDiameters": [18],
-      "tireSizes": ["225/55R18"]
+    "2023": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Hybrid", "wheelDiameter": 18, "tireSize": "225/55R18" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2023/"
     },
-    {
-      "name": "Wilderness",
-      "wheelDiameters": [17],
-      "tireSizes": ["225/60R17"]
+    "2024": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Wilderness", "wheelDiameter": 17, "tireSize": "225/60R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2024/"
+    },
+    "2025": {
+      "trims": [
+        { "name": "Base", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Premium", "wheelDiameter": 17, "tireSize": "225/60R17" },
+        { "name": "Sport", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Limited", "wheelDiameter": 18, "tireSize": "225/55R18" },
+        { "name": "Wilderness", "wheelDiameter": 17, "tireSize": "225/60R17" }
+      ],
+      "sourceUrl": "https://tiresize.com/tires/Subaru/Crosstrek/2025/"
     }
-  ]
+  }
 }
