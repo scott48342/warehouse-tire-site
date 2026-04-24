@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { usePOS, type POSWheel, type POSTire } from "./POSContext";
+import { usePOS, type POSWheel, type POSTire, type StaggeredFitmentInfo } from "./POSContext";
 
 // ============================================================================
 // Types
@@ -19,6 +19,17 @@ interface WheelOption {
   imageUrl?: string;
   price: number;
   fitmentClass?: string;
+}
+
+/** Staggered wheel pair - front and rear wheels for staggered vehicles */
+interface StaggeredWheelPair {
+  styleKey: string;
+  brand: string;
+  model: string;
+  finish?: string;
+  front: WheelOption;
+  rear: WheelOption;
+  totalPrice: number; // 2×front + 2×rear
 }
 
 interface TireOption {
@@ -331,9 +342,10 @@ function TireFilterBar({
 // ============================================================================
 
 export function POSPackageStep() {
-  const { state, setWheel, setTire, goToStep } = usePOS();
+  const { state, setWheel, setTire, setStaggeredInfo, goToStep } = usePOS();
   
   const [wheels, setWheels] = useState<WheelOption[]>([]);
+  const [staggeredPairs, setStaggeredPairs] = useState<StaggeredWheelPair[]>([]);
   const [tires, setTires] = useState<TireOption[]>([]);
   const [loadingWheels, setLoadingWheels] = useState(true);
   const [loadingTires, setLoadingTires] = useState(false);
@@ -343,10 +355,14 @@ export function POSPackageStep() {
   
   // Detail modal
   const [selectedWheelDetail, setSelectedWheelDetail] = useState<WheelOption | null>(null);
+  const [selectedPairDetail, setSelectedPairDetail] = useState<StaggeredWheelPair | null>(null);
   const [selectedTireDetail, setSelectedTireDetail] = useState<TireOption | null>(null);
   
   // Filters
   const [wheelFilters, setWheelFilters] = useState<WheelFilters>({ brand: "", diameter: "", priceRange: "", finish: "" });
+  
+  // Check if vehicle is staggered
+  const isStaggered = state.staggeredInfo?.isStaggered ?? false;
   const [tireFilters, setTireFilters] = useState<TireFilters>({ brand: "", size: "", priceRange: "" });
   
   // Fetch wheels when vehicle is set
@@ -358,12 +374,19 @@ export function POSPackageStep() {
       year: state.vehicle.year,
       make: state.vehicle.make,
       model: state.vehicle.model,
+      pageSize: "200", // Get more wheels for POS
     });
     if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
     
     fetch(`/api/wheels/fitment-search?${params}`)
       .then((res) => res.json())
       .then((data) => {
+        // Store staggered info from API
+        const staggeredInfo: StaggeredFitmentInfo | null = data.fitment?.staggered || null;
+        if (staggeredInfo) {
+          setStaggeredInfo(staggeredInfo);
+        }
+        
         const results = data.results || data.wheels || [];
         const normalized: WheelOption[] = results.map((w: Record<string, unknown>) => {
           const brandObj = w.brand as Record<string, string> | string | undefined;
@@ -390,13 +413,43 @@ export function POSPackageStep() {
         });
         
         setWheels(normalized);
+        
+        // Build staggered pairs if vehicle is staggered
+        if (staggeredInfo?.isStaggered) {
+          const apiPairs = data.staggeredPairs as Array<{ styleKey: string; frontSku: string; rearSku: string }> | undefined;
+          if (apiPairs && apiPairs.length > 0) {
+            // Map SKUs to wheel options
+            const wheelBySku = new Map<string, WheelOption>();
+            normalized.forEach(w => wheelBySku.set(w.sku, w));
+            
+            const pairs: StaggeredWheelPair[] = [];
+            for (const pair of apiPairs) {
+              const front = wheelBySku.get(pair.frontSku);
+              const rear = wheelBySku.get(pair.rearSku);
+              if (front && rear) {
+                pairs.push({
+                  styleKey: pair.styleKey,
+                  brand: front.brand,
+                  model: front.model,
+                  finish: front.finish,
+                  front,
+                  rear,
+                  totalPrice: (front.price * 2) + (rear.price * 2),
+                });
+              }
+            }
+            setStaggeredPairs(pairs);
+            console.log(`[POS] Built ${pairs.length} staggered pairs from API`);
+          }
+        }
       })
       .catch((err) => {
         console.error("[POS] Error fetching wheels:", err);
         setWheels([]);
+        setStaggeredPairs([]);
       })
       .finally(() => setLoadingWheels(false));
-  }, [state.vehicle]);
+  }, [state.vehicle, setStaggeredInfo]);
   
   // Fetch tires when wheel is selected
   useEffect(() => {
@@ -508,9 +561,36 @@ export function POSPackageStep() {
       setPrice: wheel.price * 4,
       quantity: 4,
       fitmentClass: wheel.fitmentClass as "extended" | "surefit" | "specfit" | undefined,
+      staggered: false,
     };
     setWheel(posWheel);
     setSelectedWheelDetail(null);
+  };
+  
+  /** Handle staggered wheel pair selection */
+  const handleSelectStaggeredPair = (pair: StaggeredWheelPair) => {
+    const posWheel: POSWheel = {
+      sku: pair.front.sku,
+      rearSku: pair.rear.sku,
+      brand: pair.brand,
+      model: pair.model,
+      finish: pair.finish,
+      diameter: pair.front.diameter,
+      width: pair.front.width,
+      rearDiameter: pair.rear.diameter,
+      rearWidth: pair.rear.width,
+      offset: pair.front.offset,
+      rearOffset: pair.rear.offset,
+      boltPattern: pair.front.boltPattern,
+      imageUrl: pair.front.imageUrl,
+      unitPrice: pair.front.price, // Front price for reference
+      setPrice: pair.totalPrice,    // 2×front + 2×rear
+      quantity: 4,
+      fitmentClass: pair.front.fitmentClass as "extended" | "surefit" | "specfit" | undefined,
+      staggered: true,
+    };
+    setWheel(posWheel);
+    setSelectedPairDetail(null);
   };
   
   const handleSelectTire = (tire: TireOption) => {
@@ -559,10 +639,147 @@ export function POSPackageStep() {
     );
   }
   
+  // Filter staggered pairs by brand
+  const filteredPairs = useMemo(() => {
+    let result = [...staggeredPairs];
+    if (wheelFilters.brand) {
+      result = result.filter(p => p.brand === wheelFilters.brand);
+    }
+    if (wheelFilters.priceRange) {
+      if (wheelFilters.priceRange === "0-1500") {
+        result = result.filter(p => p.totalPrice < 1500);
+      } else if (wheelFilters.priceRange === "1500-2000") {
+        result = result.filter(p => p.totalPrice >= 1500 && p.totalPrice < 2000);
+      } else if (wheelFilters.priceRange === "2000-2500") {
+        result = result.filter(p => p.totalPrice >= 2000 && p.totalPrice < 2500);
+      } else if (wheelFilters.priceRange === "2500+") {
+        result = result.filter(p => p.totalPrice >= 2500);
+      }
+    }
+    return result.sort((a, b) => a.totalPrice - b.totalPrice);
+  }, [staggeredPairs, wheelFilters]);
+  
   // ============================================================================
   // PHASE 1: Wheel Selection
   // ============================================================================
   if (phase === "wheels" && !state.wheel) {
+    // STAGGERED: Show wheel pairs instead of individual wheels
+    if (isStaggered && staggeredPairs.length > 0) {
+      return (
+        <div className="mx-auto max-w-7xl px-4 py-6 bg-white min-h-screen">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl font-bold text-gray-900">Step 1: Select Wheels</h2>
+            <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm font-medium">
+              <span>⚡</span> Staggered Fitment
+              <span className="text-purple-600 text-xs">
+                Front: {state.staggeredInfo?.frontSpec?.diameter}"×{state.staggeredInfo?.frontSpec?.width}" / 
+                Rear: {state.staggeredInfo?.rearSpec?.diameter}"×{state.staggeredInfo?.rearSpec?.width}"
+              </span>
+            </div>
+            <p className="text-gray-500 mt-1">
+              {filteredPairs.length} wheel pairs • 2 front + 2 rear • Sorted by total price
+            </p>
+          </div>
+          
+          <WheelFilterBar wheels={wheels} filters={wheelFilters} setFilters={setWheelFilters} />
+          
+          {/* Staggered Pairs Grid */}
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {filteredPairs.map((pair) => (
+              <div
+                key={pair.styleKey}
+                onClick={() => setSelectedPairDetail(pair)}
+                className="p-4 rounded-xl border-2 border-gray-200 bg-white hover:border-purple-500 hover:shadow-lg transition-all cursor-pointer group"
+              >
+                {/* Two wheel images side by side */}
+                <div className="flex justify-center gap-2 mb-3">
+                  <div className="text-center">
+                    <div className="text-[10px] text-gray-400 mb-1">FRONT</div>
+                    {pair.front.imageUrl ? (
+                      <img src={pair.front.imageUrl} alt="Front" className="h-20 w-20 object-contain" />
+                    ) : (
+                      <div className="h-20 w-20 bg-gray-100 rounded-full flex items-center justify-center text-2xl">🛞</div>
+                    )}
+                    <div className="text-[10px] text-gray-500">{pair.front.diameter}"×{pair.front.width}"</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-[10px] text-gray-400 mb-1">REAR</div>
+                    {pair.rear.imageUrl ? (
+                      <img src={pair.rear.imageUrl} alt="Rear" className="h-20 w-20 object-contain" />
+                    ) : (
+                      <div className="h-20 w-20 bg-gray-100 rounded-full flex items-center justify-center text-2xl">🛞</div>
+                    )}
+                    <div className="text-[10px] text-gray-500">{pair.rear.diameter}"×{pair.rear.width}"</div>
+                  </div>
+                </div>
+                
+                {/* Wheel Info */}
+                <div className="text-sm font-medium text-gray-500">{pair.brand}</div>
+                <div className="text-sm font-bold text-gray-900 truncate" title={pair.model}>{pair.model}</div>
+                {pair.finish && <div className="text-xs text-gray-400">{pair.finish}</div>}
+                <div className="text-lg font-black text-purple-600 mt-2">
+                  ${pair.totalPrice.toLocaleString()}
+                </div>
+                <div className="text-xs text-gray-400">2 front + 2 rear</div>
+              </div>
+            ))}
+          </div>
+          
+          {filteredPairs.length === 0 && (
+            <div className="text-center py-12 text-gray-500">
+              No wheel pairs match your filters. Try adjusting them.
+            </div>
+          )}
+          
+          {/* Staggered Pair Detail Modal */}
+          {selectedPairDetail && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setSelectedPairDetail(null)}>
+              <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-4 overflow-hidden" onClick={(e) => e.stopPropagation()}>
+                <div className="flex justify-between items-center p-4 border-b">
+                  <h3 className="text-xl font-bold text-gray-900">{selectedPairDetail.brand} {selectedPairDetail.model}</h3>
+                  <button onClick={() => setSelectedPairDetail(null)} className="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                <div className="p-6">
+                  <div className="flex gap-8 justify-center mb-6">
+                    <div className="text-center">
+                      <div className="text-sm font-bold text-gray-600 mb-2">FRONT (×2)</div>
+                      {selectedPairDetail.front.imageUrl && (
+                        <img src={selectedPairDetail.front.imageUrl} alt="Front" className="h-32 w-32 object-contain mx-auto" />
+                      )}
+                      <div className="mt-2 text-gray-900 font-medium">{selectedPairDetail.front.diameter}" × {selectedPairDetail.front.width}"</div>
+                      <div className="text-green-600 font-bold">${selectedPairDetail.front.price}/ea</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-sm font-bold text-gray-600 mb-2">REAR (×2)</div>
+                      {selectedPairDetail.rear.imageUrl && (
+                        <img src={selectedPairDetail.rear.imageUrl} alt="Rear" className="h-32 w-32 object-contain mx-auto" />
+                      )}
+                      <div className="mt-2 text-gray-900 font-medium">{selectedPairDetail.rear.diameter}" × {selectedPairDetail.rear.width}"</div>
+                      <div className="text-green-600 font-bold">${selectedPairDetail.rear.price}/ea</div>
+                    </div>
+                  </div>
+                  <div className="bg-purple-50 rounded-xl p-4 text-center">
+                    <div className="text-sm text-purple-600">Total for all 4 wheels</div>
+                    <div className="text-3xl font-black text-purple-700">${selectedPairDetail.totalPrice.toLocaleString()}</div>
+                    <div className="text-xs text-purple-500 mt-1">
+                      (2 × ${selectedPairDetail.front.price} front) + (2 × ${selectedPairDetail.rear.price} rear)
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => handleSelectStaggeredPair(selectedPairDetail)}
+                    className="mt-4 w-full py-3 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition"
+                  >
+                    Select This Wheel Set
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+    
+    // SQUARE: Show individual wheels (original flow)
     return (
       <div className="mx-auto max-w-7xl px-4 py-6 bg-white min-h-screen">
         <div className="text-center mb-4">
