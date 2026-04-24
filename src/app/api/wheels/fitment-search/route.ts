@@ -1409,19 +1409,10 @@ async function handleDbFirstWheelResults(opts: {
         continue;
       }
       
-      // SAFETY FLOOR: Prevent dangerously small wheels based on vehicle type
-      // This prevents showing 15" wheels on trucks that need 17"+ for brake clearance
-      const isTruckOrSuv = opts.vehicleType === "truck" || opts.vehicleType === "suv" ||
-        envelope.boltPattern.startsWith("6x") || envelope.boltPattern.startsWith("8x");
-      
-      let safetyFloor: number;
-      if (isTruckOrSuv) {
-        // Trucks/SUVs: minimum 17" or OEM-3", whichever is larger
-        safetyFloor = Math.max(17, envelope.oemMinDiameter - 3);
-      } else {
-        // Cars: minimum 15" or OEM-2", whichever is larger
-        safetyFloor = Math.max(15, envelope.oemMinDiameter - 2);
-      }
+      // SAFETY FLOOR: Never show wheels smaller than OEM minimum diameter
+      // Business rule: no downsizing from OEM, only same size or plus-sizing allowed
+      // This ensures customers only see wheels that fit without brake clearance issues
+      const safetyFloor = envelope.oemMinDiameter;
       
       // Safety ceiling: OEM + 8" or 28", whichever is smaller
       const safetyCeiling = Math.min(28, envelope.oemMaxDiameter + 8);
