@@ -85,7 +85,8 @@ export function hasValidTireSizes(oemTireSizes: unknown): boolean {
 }
 
 /**
- * Check if wheel specs have proper front/rear position data for staggered detection
+ * Check if wheel specs have proper front/rear position data for staggered detection.
+ * Also checks for `rear: true` format and significant width differences.
  */
 export function hasStaggeredPositionData(oemWheelSizes: unknown): boolean {
   if (!Array.isArray(oemWheelSizes) || oemWheelSizes.length < 2) {
@@ -94,16 +95,40 @@ export function hasStaggeredPositionData(oemWheelSizes: unknown): boolean {
   
   let hasFront = false;
   let hasRear = false;
+  const widths: number[] = [];
   
   for (const ws of oemWheelSizes) {
     if (!ws || typeof ws !== 'object') continue;
     const obj = ws as Record<string, unknown>;
     const position = obj.position || obj.axle;
-    if (position === 'front') hasFront = true;
-    if (position === 'rear') hasRear = true;
+    
+    // Check explicit position markers
+    if (position === 'front' || obj.front === true) hasFront = true;
+    if (position === 'rear' || obj.rear === true) hasRear = true;
+    
+    // Collect widths for inference
+    const width = Number(obj.width || obj.rimWidth || 0);
+    if (width > 0) widths.push(width);
   }
   
-  return hasFront && hasRear;
+  // Explicit front/rear markers found
+  if (hasFront && hasRear) return true;
+  
+  // If only rear is marked (Corvette-style), treat unmarked as front
+  if (hasRear && !hasFront) return true;
+  if (hasFront && !hasRear) return true;
+  
+  // WIDTH-BASED INFERENCE: If widths differ by 2"+, likely staggered
+  // (Mustang GT: 9" vs 10.5", Challenger Widebody: 8" vs 11")
+  if (widths.length >= 2) {
+    const minWidth = Math.min(...widths);
+    const maxWidth = Math.max(...widths);
+    if (maxWidth - minWidth >= 2) {
+      return true;
+    }
+  }
+  
+  return false;
 }
 
 /**
