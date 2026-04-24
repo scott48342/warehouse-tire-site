@@ -2665,11 +2665,46 @@ async function handleLegacyPath(
 
   // modificationId is used for lookup (e.g., "s_5b30d3b0")
   // displayTrimParam is kept separate for display (e.g., "Base")
-  const lookupKey = modificationId;
-  const displayTrim = displayTrimParam || modificationId || null;  // Prefer original trim param
+  let lookupKey = modificationId;
+  let displayTrim = displayTrimParam || modificationId || null;  // Prefer original trim param
+  let autoSelectedTrim = false;
   
   // Try to get profile from legacy database (use modificationId for lookup)
   let profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // AUTO-TRIM SELECTION (April 2026)
+  // When no trim is provided and profile lookup fails, auto-select from available trims.
+  // This prevents "Fitment Data Not Yet Available" when the vehicle HAS trim data.
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!profile && !lookupKey && year && make && model) {
+    console.log(`[fitment-search] No trim specified - checking for available trims for ${year} ${make} ${model}`);
+    try {
+      // Query available trims directly from vehicle_fitments table
+      const trimsResult = await db.query(
+        `SELECT DISTINCT modification_id, display_trim 
+         FROM vehicle_fitments 
+         WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+         ORDER BY display_trim
+         LIMIT 10`,
+        [Number(year), make, model]
+      );
+      
+      if (trimsResult.rows.length > 0) {
+        // Auto-select first available trim
+        const firstTrim = trimsResult.rows[0];
+        lookupKey = firstTrim.modification_id;
+        displayTrim = firstTrim.display_trim || lookupKey;
+        autoSelectedTrim = true;
+        console.log(`[fitment-search] AUTO-SELECTED trim: ${displayTrim} (${lookupKey}) from ${trimsResult.rows.length} available`);
+        
+        // Retry profile lookup with the selected trim
+        profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
+      }
+    } catch (e) {
+      console.error(`[fitment-search] Auto-trim lookup failed:`, e);
+    }
+  }
   
   // ═══════════════════════════════════════════════════════════════════════════
   // DB-FIRST: No external API fallback. If profile not in DB, return user-friendly error.
