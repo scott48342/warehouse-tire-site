@@ -156,11 +156,15 @@ export function detectVehicleType(
   ];
   
   // SUV model names
+  // NOTE: Be careful with short patterns like GX/LX - they must not match partial model names
+  // e.g., "Encore GX" should NOT match the Lexus GX pattern
   const suvPatterns = [
     /wrangler/i, /cherokee/i, /grand cherokee/i, /4runner/i, /sequoia/i,
     /tahoe/i, /suburban/i, /yukon/i, /expedition/i, /navigator/i,
     /explorer/i, /bronco/i, /defender/i, /range rover/i, /discovery/i,
-    /land cruiser/i, /gx/i, /lx/i, /pilot/i, /passport/i,
+    /land cruiser/i, 
+    /^gx\d*/i, /^lx\d*/i,  // Lexus GX/LX - must START with gx/lx (not "Encore GX")
+    /pilot/i, /passport/i,
     /highlander/i, /pathfinder/i, /armada/i, /telluride/i, /palisade/i,
     /escalade/i, /blazer/i, /trailblazer/i, /traverse/i,
     /durango/i, /4x4/i, /off[-\s]?road/i,
