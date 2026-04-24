@@ -22,24 +22,21 @@ function makeCaseInsensitive(make: string) {
 /**
  * Normalize-and-compare for model names.
  * Handles: "Encore GX" (DB) vs "encore-gx" (URL slug)
- * Strips non-alphanumeric, lowercases, then compares.
+ * Uses ILIKE with pattern matching to handle case and separator differences.
  */
 function modelNormalizedMatch(modelVariants: string[]) {
-  // Convert variants to normalized form for comparison
-  const normalizedVariants = modelVariants.map(m => 
-    m.toLowerCase().replace(/[^a-z0-9]+/g, '')
-  );
+  // Build ILIKE patterns that match regardless of separators
+  // e.g., "encore-gx" -> "%encore%gx%" matches "Encore GX", "encore-gx", "ENCORE_GX", etc.
+  const patterns = modelVariants.map(v => {
+    const words = v.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/);
+    return `%${words.join('%')}%`;
+  });
   
-  // Build OR conditions for each variant
-  // regexp_replace removes non-alphanumeric, lower() lowercases
-  if (normalizedVariants.length === 1) {
-    return sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ${normalizedVariants[0]}`;
+  if (patterns.length === 1) {
+    return ilike(vehicleFitments.model, patterns[0]);
   }
   
-  // Multiple variants - use OR
-  const conditions = normalizedVariants.map(v => 
-    sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ${v}`
-  );
+  const conditions = patterns.map(p => ilike(vehicleFitments.model, p));
   return or(...conditions);
 }
 
