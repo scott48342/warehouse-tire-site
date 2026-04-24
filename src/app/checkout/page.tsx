@@ -179,8 +179,9 @@ export default function CheckoutPage() {
     disposalPerTire: 5,      // Tire recycling fee ($20/set of 4)
   };
   
-  // Card processing fee (shown as flat amount, not percentage)
-  const CARD_FEE_RATE = 0.0399; // 3.99%
+  // Card processing fee - REMOVED per business decision (2025-07-22)
+  // Was 3.99% non-cash fee, now absorbed by business
+  // const CARD_FEE_RATE = 0.0399;
   
   // Calculate local service fees
   const tireCount = tires.reduce((sum, t) => sum + t.quantity, 0);
@@ -200,10 +201,9 @@ export default function CheckoutPage() {
     };
   }, [isLocal, tireCount, wheelOnlyCount]);
 
-  // Calculate card processing fee (for local store orders)
-  // Use subtotal (not total) because validation.totals.total includes default shipping which we handle separately
-  const subtotalForCardFee = validation.totals.subtotal + calculatedTax + localServiceFees.total;
-  const cardProcessingFee = isLocal ? subtotalForCardFee * CARD_FEE_RATE : 0;
+  // Card processing fee - REMOVED (absorbed by business)
+  // Previously calculated 3.99% for local orders, now $0
+  const cardProcessingFee = 0;
 
   // Use subtotal + our own shipping/tax/fees calculation (validation.totals.total has shipping baked in)
   const totalWithTaxAndShipping = validation.totals.subtotal + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
