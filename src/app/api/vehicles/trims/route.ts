@@ -150,6 +150,8 @@ export async function GET(req: Request) {
  */
 function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption[] {
   const results: TrimOption[] = [];
+  let hasOnlyBaseTrims = true;
+  let firstBaseTrim: TrimEntry | null = null;
   
   for (const t of trims) {
     const rawLabel = t.displayTrim || (premiumUxEnabled ? "" : "Base");
@@ -166,8 +168,10 @@ function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption
       const individualTrims = label.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
       for (const trimName of individualTrims) {
         if (premiumUxEnabled && isBaseTrim(trimName)) {
+          if (!firstBaseTrim) firstBaseTrim = t;
           continue;
         }
+        hasOnlyBaseTrims = false;
         results.push({
           value: t.modificationId,
           label: trimName,
@@ -176,14 +180,26 @@ function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption
       }
     } else {
       if (premiumUxEnabled && isBaseTrim(label)) {
+        if (!firstBaseTrim) firstBaseTrim = t;
         continue;
       }
+      hasOnlyBaseTrims = false;
       results.push({
         value: t.modificationId,
         label,
         modificationId: t.modificationId,
       });
     }
+  }
+  
+  // If all trims were base trims, return a single "Standard" option
+  // This prevents returning empty results when we DO have coverage
+  if (results.length === 0 && trims.length > 0 && firstBaseTrim) {
+    results.push({
+      value: firstBaseTrim.modificationId,
+      label: "Standard",
+      modificationId: firstBaseTrim.modificationId,
+    });
   }
   
   return results;
