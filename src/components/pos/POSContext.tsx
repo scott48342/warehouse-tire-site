@@ -9,6 +9,7 @@ import {
   supportsStaggeredFitment,
   getDefaultSetupMode,
 } from "@/lib/fitment/staggeredFitment";
+import { detectVehicleType } from "@/lib/aftermarketFitment";
 
 // ============================================================================
 // Types
@@ -241,11 +242,22 @@ const initialState: POSState = {
 
 function posReducer(state: POSState, action: POSAction): POSState {
   switch (action.type) {
-    case "SET_VEHICLE":
+    case "SET_VEHICLE": {
+      // Determine if vehicle can be lifted (trucks/SUVs only)
+      const vehicleType = action.payload 
+        ? detectVehicleType(action.payload.model)
+        : "car";
+      const isLiftable = vehicleType === "truck" || vehicleType === "suv";
+      
+      // Skip build-type step for cars (they can't be lifted/leveled)
+      const nextStep = action.payload 
+        ? (isLiftable ? "build-type" : "package")
+        : "vehicle";
+      
       return {
         ...state,
         vehicle: action.payload,
-        step: action.payload ? "build-type" : "vehicle",
+        step: nextStep,
         // Reset downstream when vehicle changes
         buildType: "stock",
         liftConfig: null,
@@ -254,6 +266,7 @@ function posReducer(state: POSState, action: POSAction): POSState {
         wheel: null,
         tire: null,
       };
+    }
 
     case "SET_BUILD_TYPE":
       return {
