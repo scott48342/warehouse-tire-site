@@ -88,8 +88,11 @@ function PaymentForm({ onSuccess, onError, onProcessing, totalAmount, returnUrl 
     <form onSubmit={handleSubmit} className="space-y-4">
       <PaymentElement 
         options={{
-          layout: "tabs",
-          paymentMethodOrder: ["affirm", "card", "apple_pay", "google_pay"],
+          layout: "accordion",
+          paymentMethodOrder: ["card", "affirm", "afterpay_clearpay", "klarna", "link"],
+          defaultCollapsed: false,
+          radios: true,
+          spacedAccordionItems: true,
           business: {
             name: "Warehouse Tire Direct",
           },

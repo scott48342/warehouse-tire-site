@@ -843,91 +843,75 @@ export default function CheckoutPage() {
             {/* Step: Payment */}
             {step === "payment" && (
               <div className="space-y-4">
-                {/* Affirm Pay Over Time - Info Banner */}
-                {/* Error state */}
-                {stripeError && (
-                  <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 mb-4">
-                    <p>{stripeError}</p>
-                  </div>
-                )}
+                {/* Payment Header */}
+                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+                  <h2 className="text-lg font-bold text-neutral-900 mb-2">Choose Payment Method</h2>
+                  <p className="text-sm text-neutral-600 mb-4">
+                    Pay securely with card or select a buy now, pay later option below.
+                  </p>
 
-                {/* Pay with Affirm - Prominent CTA */}
-                {totalWithTaxAndShipping >= 50 && (
-                  <button
-                    onClick={() => startStripeCheckout({ forceAffirm: true })}
-                    disabled={processing}
-                    className={`w-full rounded-2xl border-2 border-blue-400 bg-gradient-to-br from-blue-50 to-indigo-50 p-5 text-left transition-all hover:border-blue-500 hover:shadow-lg ${
-                      processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-3">
+                  {/* Error state */}
+                  {stripeError && (
+                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 mb-4">
+                      <p>{stripeError}</p>
+                    </div>
+                  )}
+
+                  {/* Loading state while creating PaymentIntent */}
+                  {paymentLoading && !clientSecret && (
+                    <div className="flex items-center justify-center py-12">
                       <div className="flex items-center gap-3">
-                        <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-8" />
-                        <div>
-                          <h2 className="text-lg font-bold text-blue-900">Pay Over Time with Affirm</h2>
-                          <p className="text-sm text-blue-700">Flexible monthly payments, 0% APR available</p>
-                        </div>
-                      </div>
-                      <span className="px-3 py-1 bg-blue-600 text-white text-sm font-bold rounded-full">0% APR</span>
-                    </div>
-                    
-                    <div className="bg-white rounded-xl p-4 border border-blue-200">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm text-neutral-600">As low as</p>
-                          <p className="text-2xl font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 12)}/mo</p>
-                          <p className="text-xs text-neutral-500">0% APR available • 3-12 month terms</p>
-                        </div>
-                        <div className="flex items-center gap-2 text-blue-600 font-bold">
-                          {processing ? "Redirecting..." : "Select Affirm →"}
-                        </div>
+                        <svg className="animate-spin h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span className="text-neutral-600">Loading payment options...</span>
                       </div>
                     </div>
-                    
-                    <p className="text-xs text-blue-600 mt-3 text-center">
-                      No credit impact to check eligibility • Instant decision
-                    </p>
-                  </button>
-                )}
+                  )}
 
-                {/* Divider */}
-                <div className="flex items-center gap-4 my-2">
-                  <div className="flex-1 border-t border-neutral-200"></div>
-                  <span className="text-sm text-neutral-400 font-medium">or</span>
-                  <div className="flex-1 border-t border-neutral-200"></div>
+                  {/* Embedded Payment Element */}
+                  {clientSecret && (
+                    <StripePaymentElement
+                      clientSecret={clientSecret}
+                      onSuccess={handlePaymentSuccess}
+                      onError={handlePaymentError}
+                      onProcessing={handlePaymentProcessing}
+                      totalAmount={totalWithTaxAndShipping}
+                      returnUrl={`${typeof window !== 'undefined' ? window.location.origin : ''}/checkout/success?quote_id=${quoteId}`}
+                    />
+                  )}
+
+                  {/* BNPL info banner */}
+                  {totalWithTaxAndShipping >= 35 && (
+                    <div className="mt-4 pt-4 border-t border-neutral-100">
+                      <div className="flex items-center gap-2 text-sm text-neutral-600">
+                        <span>💡</span>
+                        <span>
+                          <strong>Pay over time:</strong> Select Affirm, Afterpay, or Klarna above for flexible payments
+                        </span>
+                      </div>
+                      {totalWithTaxAndShipping >= 50 && (
+                        <p className="text-xs text-neutral-500 mt-1 ml-6">
+                          As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo with 0% APR available
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </div>
 
-                {/* Pay with Card */}
-                <button
-                  onClick={() => startStripeCheckout()}
-                  disabled={processing}
-                  className={`w-full h-14 rounded-xl font-extrabold text-white text-lg flex items-center justify-center gap-3 ${
-                    processing ? "bg-neutral-300 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
-                  }`}
-                >
-                  {processing ? (
-                    <>
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Redirecting to Checkout...
-                    </>
-                  ) : (
-                    <>
-                      💳 Pay with Card — ${totalWithTaxAndShipping.toFixed(2)}
-                    </>
-                  )}
-                </button>
-
-                {/* Accepted payment methods */}
-                <div className="pt-4">
-                  <div className="flex items-center justify-center gap-3">
-                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-5 object-contain opacity-60" />
-                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-5 object-contain opacity-60" />
-                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-5 object-contain opacity-60" />
+                {/* Trust badges */}
+                <div className="flex items-center justify-center gap-4 text-xs text-neutral-500">
+                  <div className="flex items-center gap-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    <span>Secure checkout</span>
                   </div>
-                  <p className="text-xs text-neutral-400 text-center mt-2">Secure checkout powered by Stripe</p>
+                  <span>•</span>
+                  <span>256-bit encryption</span>
+                  <span>•</span>
+                  <span>Powered by Stripe</span>
                 </div>
 
                 {/* Back button */}

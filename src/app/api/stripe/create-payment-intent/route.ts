@@ -290,8 +290,16 @@ export async function POST(req: Request) {
     const totalCents = stripeLines.reduce((sum, l) => sum + moneyToCents(l.unitPriceUsd) * l.qty, 0);
     const totalUsd = totalCents / 100;
 
-    // Payment methods: Card + Affirm (Affirm minimum is $50)
-    const paymentMethodTypes: string[] = ["card"];
+    // Payment methods: Card + BNPL options based on amount
+    // - Affirm: $50-$30,000
+    // - Afterpay/Clearpay: $35-$4,000 (US)
+    // - Klarna: $35-$10,000
+    const paymentMethodTypes: string[] = ["card", "link"];
+    
+    // Add BNPL methods based on amount thresholds
+    if (totalUsd >= 35) {
+      paymentMethodTypes.push("afterpay_clearpay", "klarna");
+    }
     if (totalUsd >= 50) {
       paymentMethodTypes.push("affirm");
     }
