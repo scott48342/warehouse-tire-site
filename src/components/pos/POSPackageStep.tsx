@@ -134,24 +134,9 @@ export function POSPackageStep() {
       .finally(() => setLoadingTires(false));
   }, [state.vehicle, state.wheel]);
   
-  // Sort by price for Good/Better/Best
+  // Sort by price (low to high)
   const sortedWheels = [...wheels].sort((a, b) => a.price - b.price);
   const sortedTires = [...tires].sort((a, b) => a.price - b.price);
-  
-  // Get tier items
-  const getGoodBetterBest = <T,>(items: T[]): { good?: T; better?: T; best?: T } => {
-    if (items.length === 0) return {};
-    if (items.length === 1) return { better: items[0] };
-    if (items.length === 2) return { good: items[0], best: items[1] };
-    return {
-      good: items[0],
-      better: items[Math.floor(items.length / 2)],
-      best: items[items.length - 1],
-    };
-  };
-  
-  const tierWheels = getGoodBetterBest(sortedWheels);
-  const tierTires = getGoodBetterBest(sortedTires);
   
   const handleSelectWheel = (wheel: WheelOption) => {
     const posWheel: POSWheel = {
@@ -220,97 +205,52 @@ export function POSPackageStep() {
   }
   
   // ============================================================================
-  // PHASE 1: Wheel Selection
+  // PHASE 1: Wheel Selection - Uniform Grid
   // ============================================================================
   if (phase === "wheels" && !state.wheel) {
     return (
-      <div className="mx-auto max-w-6xl px-4 py-8">
-        <div className="text-center mb-8">
+      <div className="mx-auto max-w-7xl px-4 py-6">
+        <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-white">Step 1: Select Wheels</h2>
-          <p className="text-neutral-400 mt-2">
-            Choose from Good, Better, or Best — or pick from all options
+          <p className="text-neutral-400 mt-1">
+            {wheels.length} wheels available • Sorted by price
           </p>
         </div>
         
-        {/* Good/Better/Best Wheel Cards */}
-        <div className="grid gap-6 md:grid-cols-3 mb-8">
-          {(["good", "better", "best"] as const).map((tier) => {
-            const wheel = tierWheels[tier];
-            if (!wheel) return null;
-            
-            const colors = {
-              good: { bg: "bg-green-600", text: "text-green-400", border: "border-green-500" },
-              better: { bg: "bg-blue-600", text: "text-blue-400", border: "border-blue-500" },
-              best: { bg: "bg-amber-600", text: "text-amber-400", border: "border-amber-500" },
-            };
-            const c = colors[tier];
-            
-            return (
-              <button
-                key={tier}
-                onClick={() => handleSelectWheel(wheel)}
-                className={`
-                  relative rounded-2xl border-2 p-6 text-left transition-all
-                  border-neutral-700 bg-neutral-900 hover:${c.border} hover:bg-neutral-800
-                  cursor-pointer
-                `}
-              >
-                {/* Badge */}
-                <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${c.bg} text-white text-sm font-bold mb-4`}>
-                  {tier === "good" && "💰 Good"}
-                  {tier === "better" && "⭐ Better"}
-                  {tier === "best" && "👑 Best"}
-                </div>
-                
-                {/* Wheel Image */}
-                <div className="flex justify-center mb-4">
-                  {wheel.imageUrl ? (
-                    <img src={wheel.imageUrl} alt={wheel.model} className="h-32 w-32 object-contain" />
-                  ) : (
-                    <div className="h-32 w-32 bg-neutral-800 rounded-full flex items-center justify-center text-4xl">⚙️</div>
-                  )}
-                </div>
-                
-                {/* Wheel Info */}
-                <div className="text-center">
-                  <div className="text-sm text-neutral-400">{wheel.brand}</div>
-                  <div className="text-lg font-bold text-white">{wheel.model}</div>
-                  <div className="text-sm text-neutral-500">
-                    {wheel.diameter}" × {wheel.width}"
-                    {wheel.finish && ` • ${wheel.finish}`}
-                  </div>
-                  <div className={`text-2xl font-black ${c.text} mt-3`}>
-                    ${(wheel.price * 4).toLocaleString()}
-                  </div>
-                  <div className="text-xs text-neutral-500">set of 4</div>
-                </div>
-              </button>
-            );
-          })}
-        </div>
-        
-        {/* All Wheels */}
-        <details className="bg-neutral-900 rounded-2xl border border-neutral-800 p-4">
-          <summary className="text-neutral-400 cursor-pointer font-medium">
-            View all {wheels.length} wheel options
-          </summary>
-          <div className="grid gap-3 grid-cols-2 md:grid-cols-4 mt-4 max-h-80 overflow-y-auto">
-            {sortedWheels.map((wheel) => (
-              <button
-                key={wheel.sku}
-                onClick={() => handleSelectWheel(wheel)}
-                className="p-3 rounded-xl border border-neutral-700 bg-neutral-800 hover:border-blue-500 text-left transition-all"
-              >
-                {wheel.imageUrl && (
-                  <img src={wheel.imageUrl} alt={wheel.model} className="h-16 w-16 mx-auto mb-2 object-contain" />
+        {/* Uniform Wheel Grid */}
+        <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          {sortedWheels.map((wheel) => (
+            <button
+              key={wheel.sku}
+              onClick={() => handleSelectWheel(wheel)}
+              className="p-4 rounded-xl border-2 border-neutral-700 bg-neutral-900 hover:border-blue-500 hover:bg-neutral-800 text-center transition-all group"
+            >
+              {/* Wheel Image */}
+              <div className="flex justify-center mb-3">
+                {wheel.imageUrl ? (
+                  <img 
+                    src={wheel.imageUrl} 
+                    alt={wheel.model} 
+                    className="h-24 w-24 object-contain group-hover:scale-105 transition-transform" 
+                  />
+                ) : (
+                  <div className="h-24 w-24 bg-neutral-800 rounded-full flex items-center justify-center text-3xl">🛞</div>
                 )}
-                <div className="text-xs font-medium text-white truncate">{wheel.brand}</div>
-                <div className="text-xs text-neutral-400 truncate">{wheel.model}</div>
-                <div className="text-sm font-bold text-green-400 mt-1">${(wheel.price * 4).toLocaleString()}</div>
-              </button>
-            ))}
-          </div>
-        </details>
+              </div>
+              
+              {/* Wheel Info */}
+              <div className="text-sm font-medium text-neutral-400">{wheel.brand}</div>
+              <div className="text-sm font-bold text-white truncate" title={wheel.model}>{wheel.model}</div>
+              <div className="text-xs text-neutral-500 mt-1">
+                {wheel.diameter}" × {wheel.width}"
+              </div>
+              <div className="text-lg font-black text-green-400 mt-2">
+                ${(wheel.price * 4).toLocaleString()}
+              </div>
+              <div className="text-xs text-neutral-500">set of 4</div>
+            </button>
+          ))}
+        </div>
       </div>
     );
   }
@@ -347,10 +287,10 @@ export function POSPackageStep() {
         </div>
       )}
       
-      <div className="text-center mb-8">
+      <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-white">Step 2: Select Tires</h2>
-        <p className="text-neutral-400 mt-2">
-          These tires fit your selected {state.wheel?.diameter}" wheels
+        <p className="text-neutral-400 mt-1">
+          {tires.length} tires for {state.wheel?.diameter}" wheels • Sorted by price
         </p>
       </div>
       
@@ -369,85 +309,38 @@ export function POSPackageStep() {
           No matching tires found. Try selecting different wheels.
         </div>
       ) : (
-        <>
-          {/* Good/Better/Best Tire Cards */}
-          <div className="grid gap-6 md:grid-cols-3 mb-8">
-            {(["good", "better", "best"] as const).map((tier) => {
-              const tire = tierTires[tier];
-              if (!tire) return null;
+        /* Uniform Tire Grid */
+        <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          {sortedTires.map((tire) => (
+            <button
+              key={tire.sku}
+              onClick={() => handleSelectTire(tire)}
+              className="p-4 rounded-xl border-2 border-neutral-700 bg-neutral-900 hover:border-blue-500 hover:bg-neutral-800 text-center transition-all group"
+            >
+              {/* Tire Image */}
+              <div className="flex justify-center mb-3">
+                {tire.imageUrl ? (
+                  <img 
+                    src={tire.imageUrl} 
+                    alt={tire.model} 
+                    className="h-24 w-24 object-contain group-hover:scale-105 transition-transform" 
+                  />
+                ) : (
+                  <div className="h-24 w-24 bg-neutral-800 rounded-full flex items-center justify-center text-3xl">🛞</div>
+                )}
+              </div>
               
-              const colors = {
-                good: { bg: "bg-green-600", text: "text-green-400", border: "border-green-500" },
-                better: { bg: "bg-blue-600", text: "text-blue-400", border: "border-blue-500" },
-                best: { bg: "bg-amber-600", text: "text-amber-400", border: "border-amber-500" },
-              };
-              const c = colors[tier];
-              
-              return (
-                <button
-                  key={tier}
-                  onClick={() => handleSelectTire(tire)}
-                  className={`
-                    relative rounded-2xl border-2 p-6 text-left transition-all
-                    border-neutral-700 bg-neutral-900 hover:${c.border} hover:bg-neutral-800
-                    cursor-pointer
-                  `}
-                >
-                  {/* Badge */}
-                  <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${c.bg} text-white text-sm font-bold mb-4`}>
-                    {tier === "good" && "💰 Good"}
-                    {tier === "better" && "⭐ Better"}
-                    {tier === "best" && "👑 Best"}
-                  </div>
-                  
-                  {/* Tire Image */}
-                  <div className="flex justify-center mb-4">
-                    {tire.imageUrl ? (
-                      <img src={tire.imageUrl} alt={tire.model} className="h-32 w-32 object-contain" />
-                    ) : (
-                      <div className="h-32 w-32 bg-neutral-800 rounded-full flex items-center justify-center text-4xl">🛞</div>
-                    )}
-                  </div>
-                  
-                  {/* Tire Info */}
-                  <div className="text-center">
-                    <div className="text-sm text-neutral-400">{tire.brand}</div>
-                    <div className="text-lg font-bold text-white">{tire.model}</div>
-                    <div className="text-sm text-neutral-500">{tire.size}</div>
-                    <div className={`text-2xl font-black ${c.text} mt-3`}>
-                      ${(tire.price * 4).toLocaleString()}
-                    </div>
-                    <div className="text-xs text-neutral-500">set of 4</div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-          
-          {/* All Tires */}
-          <details className="bg-neutral-900 rounded-2xl border border-neutral-800 p-4">
-            <summary className="text-neutral-400 cursor-pointer font-medium">
-              View all {tires.length} tire options
-            </summary>
-            <div className="grid gap-3 grid-cols-2 md:grid-cols-4 mt-4 max-h-80 overflow-y-auto">
-              {sortedTires.map((tire) => (
-                <button
-                  key={tire.sku}
-                  onClick={() => handleSelectTire(tire)}
-                  className="p-3 rounded-xl border border-neutral-700 bg-neutral-800 hover:border-blue-500 text-left transition-all"
-                >
-                  {tire.imageUrl && (
-                    <img src={tire.imageUrl} alt={tire.model} className="h-16 w-16 mx-auto mb-2 object-contain" />
-                  )}
-                  <div className="text-xs font-medium text-white truncate">{tire.brand}</div>
-                  <div className="text-xs text-neutral-400 truncate">{tire.model}</div>
-                  <div className="text-xs text-neutral-500">{tire.size}</div>
-                  <div className="text-sm font-bold text-green-400 mt-1">${(tire.price * 4).toLocaleString()}</div>
-                </button>
-              ))}
-            </div>
-          </details>
-        </>
+              {/* Tire Info */}
+              <div className="text-sm font-medium text-neutral-400">{tire.brand}</div>
+              <div className="text-sm font-bold text-white truncate" title={tire.model}>{tire.model}</div>
+              <div className="text-xs text-neutral-500 mt-1">{tire.size}</div>
+              <div className="text-lg font-black text-green-400 mt-2">
+                ${(tire.price * 4).toLocaleString()}
+              </div>
+              <div className="text-xs text-neutral-500">set of 4</div>
+            </button>
+          ))}
+        </div>
       )}
     </div>
   );
