@@ -35,7 +35,15 @@ function modelNormalizedMatch(modelVariants: string[]) {
   const normalizedVariants = modelVariants.map(m => 
     m.toLowerCase().replace(/[^a-z0-9]+/g, '')
   );
-  return sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ANY(ARRAY[${sql.join(normalizedVariants.map(v => sql`${v}`), sql`, `)}])`;
+  
+  if (normalizedVariants.length === 1) {
+    return sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ${normalizedVariants[0]}`;
+  }
+  
+  const conditions = normalizedVariants.map(v => 
+    sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ${v}`
+  );
+  return or(...conditions);
 }
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";

@@ -30,9 +30,17 @@ function modelNormalizedMatch(modelVariants: string[]) {
     m.toLowerCase().replace(/[^a-z0-9]+/g, '')
   );
   
-  // Compare DB model (normalized) against any variant (normalized)
+  // Build OR conditions for each variant
   // regexp_replace removes non-alphanumeric, lower() lowercases
-  return sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ANY(ARRAY[${sql.join(normalizedVariants.map(v => sql`${v}`), sql`, `)}])`;
+  if (normalizedVariants.length === 1) {
+    return sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ${normalizedVariants[0]}`;
+  }
+  
+  // Multiple variants - use OR
+  const conditions = normalizedVariants.map(v => 
+    sql`lower(regexp_replace(${vehicleFitments.model}, '[^a-zA-Z0-9]', '', 'g')) = ${v}`
+  );
+  return or(...conditions);
 }
 
 // ============================================================================
