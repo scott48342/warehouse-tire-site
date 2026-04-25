@@ -1426,12 +1426,14 @@ async function handleDbFirstWheelResults(opts: {
     // how close they are to OEM, but does NOT exclude based on diameter alone.
     // 
     // SAFETY FLOOR: We enforce a minimum based on vehicle type to prevent
-    // brake clearance issues:
-    // - Trucks (6-lug): max(17, OEM - 3) - can't go below 17" due to brake size
-    // - SUVs: max(17, OEM - 2)
-    // - Cars: max(15, OEM - 2) - smaller brakes allow smaller wheels
+    // brake clearance issues. Importantly, we allow DOWNSIZING from high-trim
+    // OEM wheels (e.g., F-150 Limited with 22" can run 17" for off-road).
     // 
-    // MAXIMUM: We allow generous upsizing (OEM + 8) but cap at 30" sanity check
+    // - Trucks (6-lug): 17" absolute floor (all full-size trucks clear 17")
+    // - SUVs: 17" absolute floor
+    // - Cars: 15" absolute floor (smaller brakes)
+    // 
+    // MAXIMUM: We allow generous upsizing (OEM + 8) but cap at 28" sanity check
     // ═══════════════════════════════════════════════════════════════════════
     if (wheelSpec.diameter !== undefined) {
       const wheelDia = Number(wheelSpec.diameter);
@@ -1441,10 +1443,20 @@ async function handleDbFirstWheelResults(opts: {
         continue;
       }
       
-      // SAFETY FLOOR: Never show wheels smaller than OEM minimum diameter
-      // Business rule: no downsizing from OEM, only same size or plus-sizing allowed
-      // This ensures customers only see wheels that fit without brake clearance issues
-      const safetyFloor = envelope.oemMinDiameter;
+      // SAFETY FLOOR: Based on vehicle type, NOT trim-specific OEM diameter
+      // This allows customers to downsize from high-trim wheels (e.g., 22" Limited → 17" off-road)
+      // while still preventing brake clearance issues
+      let safetyFloor: number;
+      if (opts.vehicleType === "truck") {
+        // Full-size trucks: 17" minimum (all clear 17" regardless of stock wheel size)
+        safetyFloor = 17;
+      } else if (opts.vehicleType === "suv") {
+        // SUVs: 17" minimum (most modern SUVs have large brakes)
+        safetyFloor = 17;
+      } else {
+        // Cars: 15" minimum (smaller brakes, but still need clearance)
+        safetyFloor = 15;
+      }
       
       // Safety ceiling: OEM + 8" or 28", whichever is smaller
       const safetyCeiling = Math.min(28, envelope.oemMaxDiameter + 8);
