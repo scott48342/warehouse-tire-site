@@ -1375,38 +1375,10 @@ export function WheelsGridWithSelection({
         />
       )}
       
-      {/* Selection Confirmation - sticky on desktop */}
-      {selectedWheel && (
-        <div 
-          ref={confirmationRef}
-          className="sticky top-20 z-40 mb-4"
-        >
-          <SelectionConfirmation
-            wheel={selectedWheel}
-            tiresHref={tiresHref}
-            onClear={handleClearSelection}
-            onAddToCart={handleAddWheelsToCart}
-            onBuildPackage={handleBuildPackage}
-            isAddingToCart={isAddingToCart}
-          />
-        </div>
-      )}
+      {/* Selection Confirmation - REMOVED per user request
+          Users will click directly into wheel detail page instead */}
       
-      {/* Package Estimate - updates dynamically based on wheel size */}
-      <div className="mb-4">
-        <PackageEstimate 
-          wheelSetPrice={selectedWheel?.setPrice ?? null}
-          isSelected={!!selectedWheel}
-          selectedDiameter={
-            selectedWheel?.diameter 
-              ? parseInt(String(selectedWheel.diameter), 10) 
-              : diameterParam 
-                ? parseInt(diameterParam, 10) 
-                : stockDiameter
-          }
-          isLiftedBuild={isLiftedBuild}
-        />
-      </div>
+      {/* Package Estimate - REMOVED with SelectionConfirmation */}
       
       {/* Fitment Diameter Chips - positioned below estimate, above Top Picks */}
       {showDiameterChips && fitmentDiameters.length > 0 && viewParams.year && viewParams.make && viewParams.model && (
