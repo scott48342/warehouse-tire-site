@@ -248,7 +248,7 @@ Respond in JSON format:
     // Add key points as text block
     if (generated.keyPoints?.length > 0) {
       contentBlocks.push({
-        type: "text",
+        type: "text_block",
         data: {
           content: generated.keyPoints.map((p: string) => `✓ ${p}`).join("\n\n"),
           alignment: "left",
