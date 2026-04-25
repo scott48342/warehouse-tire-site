@@ -51,7 +51,8 @@ export interface SubscriberStats {
   bySource: Record<EmailSource, number>;
   unsubscribed: number;
   withVehicle: number;
-  last7Days: number;
+  last24h: number;
+  last7d: number;
 }
 
 // ============================================================================
@@ -337,22 +338,33 @@ export async function getStats(includeTest: boolean = false): Promise<Subscriber
     .from(emailSubscribers)
     .where(and(...vehicleConditions));
 
-  // Last 7 days (excluding test)
-  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-  const recentConditions = [sql`${emailSubscribers.createdAt} > ${sevenDaysAgo}`];
-  if (!includeTest) recentConditions.push(eq(emailSubscribers.isTest, false));
+  // Last 24 hours (excluding test)
+  const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+  const last24hConditions = [sql`${emailSubscribers.createdAt} > ${oneDayAgo}`];
+  if (!includeTest) last24hConditions.push(eq(emailSubscribers.isTest, false));
 
-  const [recentResult] = await db
+  const [last24hResult] = await db
     .select({ count: sql<number>`COUNT(DISTINCT ${emailSubscribers.email})` })
     .from(emailSubscribers)
-    .where(and(...recentConditions));
+    .where(and(...last24hConditions));
+
+  // Last 7 days (excluding test)
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const last7dConditions = [sql`${emailSubscribers.createdAt} > ${sevenDaysAgo}`];
+  if (!includeTest) last7dConditions.push(eq(emailSubscribers.isTest, false));
+
+  const [last7dResult] = await db
+    .select({ count: sql<number>`COUNT(DISTINCT ${emailSubscribers.email})` })
+    .from(emailSubscribers)
+    .where(and(...last7dConditions));
 
   return {
     total: Number(totalResult?.count || 0),
     bySource: bySource as Record<EmailSource, number>,
     unsubscribed: Number(unsubResult?.count || 0),
     withVehicle: Number(vehicleResult?.count || 0),
-    last7Days: Number(recentResult?.count || 0),
+    last24h: Number(last24hResult?.count || 0),
+    last7d: Number(last7dResult?.count || 0),
   };
 }
 
