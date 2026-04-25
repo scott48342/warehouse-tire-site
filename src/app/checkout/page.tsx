@@ -18,6 +18,7 @@ import { useShopContext, LocalOnly } from "@/contexts/ShopContextProvider";
 import { StoreSelector, StoreInfoCard } from "@/components/local";
 import { StripePaymentElement } from "@/components/StripePaymentElement";
 import { useDiscount } from "@/lib/discounts/DiscountContext";
+import { InstallTimeIndicator } from "@/components/InstallTimeIndicator";
 
 /**
  * Checkout Page
@@ -751,6 +752,12 @@ export default function CheckoutPage() {
                       Choose where you'd like your tires and wheels installed.
                     </p>
                     <StoreSelector variant="cards" showHours={true} showPhone={true} />
+                    
+                    {/* Install time indicator */}
+                    <div className="mt-4">
+                      <InstallTimeIndicator variant="banner" />
+                    </div>
+                    
                     {!selectedStore && (
                       <p className="text-sm text-red-600 mt-3 font-medium">
                         ⚠️ Please select an installation location to continue.
@@ -1074,6 +1081,10 @@ export default function CheckoutPage() {
                     <p className="mt-1">{storeInfo.phone}</p>
                   </div>
                 )}
+                {/* Install time indicator */}
+                <div className="mt-3 pt-3 border-t border-green-200">
+                  <InstallTimeIndicator variant="badge" />
+                </div>
                 {!selectedStore && (
                   <p className="text-xs text-amber-700 mt-2">
                     ⚠️ Please select a location

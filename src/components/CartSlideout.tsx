@@ -19,6 +19,7 @@ import { CartSmartTireUpsell } from "./SmartTireUpsell";
 import { FinancingBadge } from "./FinancingBadge";
 import { useShopContext } from "@/contexts/ShopContextProvider";
 import { getOutTheDoorTotal } from "@/lib/localPricing";
+import { InstallTimeIndicator } from "./InstallTimeIndicator";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -593,6 +594,11 @@ export function CartSlideout() {
             )}
           </div>
 
+          {/* Install time indicator for local mode */}
+          {isLocal && items.length > 0 && (
+            <InstallTimeIndicator variant="banner" />
+          )}
+
           {/* Primary CTA - changes based on cart contents */}
           {hasWheels() && !hasTires() ? (
             <Link
@@ -605,31 +611,22 @@ export function CartSlideout() {
             </Link>
           ) : (
             <Link
-              href="/cart"
+              href={checkoutUrl}
               onClick={() => setIsOpen(false)}
               className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors gap-2"
             >
-              <span>Review Package</span>
+              <span>Checkout</span>
               <span className="text-red-200">→</span>
             </Link>
           )}
 
-          {/* Secondary actions */}
-          <div className="grid grid-cols-2 gap-2">
-            <Link
-              href={checkoutUrl}
-              onClick={() => setIsOpen(false)}
-              className="flex h-10 items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-bold text-neutral-900 hover:bg-neutral-50 transition-colors"
-            >
-              Checkout
-            </Link>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="flex h-10 items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-bold text-neutral-700 hover:bg-neutral-50 transition-colors"
-            >
-              Keep Shopping
-            </button>
-          </div>
+          {/* Secondary action */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="flex h-10 w-full items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-bold text-neutral-700 hover:bg-neutral-50 transition-colors"
+          >
+            Keep Shopping
+          </button>
 
           {/* Email cart link */}
           <div className="pt-3 border-t border-neutral-100 flex justify-center">
