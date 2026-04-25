@@ -40,8 +40,8 @@ const ADMIN_EMAIL = "scott@warehousetire.net";
 /** Only run from Vercel Cron or with secret */
 const CRON_SECRET = process.env.CRON_SECRET;
 
-/** Auto-approve campaigns or require manual review */
-const AUTO_APPROVE = process.env.AI_CAMPAIGN_AUTO_APPROVE === "true";
+/** Auto-approve campaigns (enabled by default - campaigns send automatically) */
+const AUTO_APPROVE = process.env.AI_CAMPAIGN_AUTO_APPROVE !== "false";
 
 // ============================================================================
 // Cron Handler
