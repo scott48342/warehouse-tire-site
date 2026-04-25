@@ -9,6 +9,7 @@ import { CartTracker } from "@/components/CartTracker";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Analytics } from "@/components/Analytics";
+import { Chatwoot } from "@/components/Chatwoot";
 import { Suspense } from "react";
 
 const inter = Inter({
@@ -81,6 +82,7 @@ export default function RootLayout({
             </DiscountProvider>
           </CartProvider>
         </ShopContextProvider>
+        <Chatwoot />
       </body>
     </html>
   );
