@@ -3,6 +3,9 @@
  * 
  * GET /api/admin/live-visitors/[sessionId]
  * Returns page history for a specific session
+ * 
+ * DELETE /api/admin/live-visitors/[sessionId]
+ * Marks session as test (removes from active visitors)
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -84,6 +87,43 @@ export async function GET(
     console.error("[Live Visitor Detail] Error:", error);
     return NextResponse.json(
       { error: "Failed to fetch session" },
+      { status: 500 }
+    );
+  }
+}
+
+/**
+ * DELETE - Mark session as test (removes from active visitors)
+ */
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: Promise<{ sessionId: string }> }
+) {
+  try {
+    const { sessionId } = await params;
+    
+    if (!sessionId) {
+      return NextResponse.json({ error: "Session ID required" }, { status: 400 });
+    }
+
+    // Mark as test instead of deleting (preserves analytics data)
+    const result = await analyticsDb
+      .update(schema.analyticsSessions)
+      .set({ 
+        isTest: true, 
+        testReason: "admin_excluded" 
+      })
+      .where(eq(schema.analyticsSessions.sessionId, sessionId));
+
+    return NextResponse.json({ 
+      success: true, 
+      message: "Session marked as test",
+      sessionId 
+    });
+  } catch (error) {
+    console.error("[Live Visitor Delete] Error:", error);
+    return NextResponse.json(
+      { error: "Failed to remove session" },
       { status: 500 }
     );
   }
