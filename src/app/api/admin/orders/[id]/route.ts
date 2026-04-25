@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import pg from "pg";
+import { sendOrderConfirmationEmail } from "@/lib/email";
 
 export const runtime = "nodejs";
 
@@ -16,6 +17,62 @@ function getPool() {
 }
 
 const VALID_STATUSES = ["received", "processing", "parts_ordered", "ready_for_install", "shipped", "delivered", "completed", "cancelled"];
+
+// POST - Resend order confirmation email
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
+  const pool = getPool();
+  
+  try {
+    const body = await request.json();
+    const { action } = body;
+    
+    if (action !== "resend_email") {
+      return NextResponse.json({ error: "Unknown action" }, { status: 400 });
+    }
+    
+    // Get order
+    const { rows } = await pool.query(
+      `SELECT * FROM orders WHERE id = $1`,
+      [id]
+    );
+    
+    if (rows.length === 0) {
+      return NextResponse.json({ error: "Order not found" }, { status: 404 });
+    }
+    
+    const order = rows[0];
+    const snapshot = order.snapshot_json;
+    const customerEmail = order.customer_email || snapshot.customer?.email;
+    
+    if (!customerEmail) {
+      return NextResponse.json({ error: "No customer email on order" }, { status: 400 });
+    }
+    
+    // Resend confirmation email
+    const result = await sendOrderConfirmationEmail(id, customerEmail, snapshot);
+    
+    if (result.success) {
+      return NextResponse.json({ 
+        success: true, 
+        message: `Order confirmation resent to ${customerEmail} + admin notification`
+      });
+    } else {
+      return NextResponse.json({ 
+        success: false, 
+        error: result.error || "Failed to send email"
+      }, { status: 500 });
+    }
+  } catch (err) {
+    console.error("[orders] POST error:", err);
+    return NextResponse.json({ error: "Failed to resend email" }, { status: 500 });
+  } finally {
+    await pool.end();
+  }
+}
 
 // GET - Fetch order details
 export async function GET(
