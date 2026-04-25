@@ -557,12 +557,17 @@ export async function processSendBatch(
         ? `${campaign.fromName} <${FROM_EMAIL}>`
         : FROM_EMAIL;
 
+      // Get BCC admin from campaign content metadata
+      const contentMeta = campaign.contentJson as any;
+      const bccAdmin = contentMeta?._bccAdmin;
+
       const { data, error } = await resend.emails.send({
         from: fromAddress,
         to: recipient.email,
         subject: campaign.subject,
         html,
         replyTo: campaign.replyTo || BRAND.email,
+        ...(bccAdmin ? { bcc: bccAdmin } : {}),
       });
 
       if (error) {
@@ -743,6 +748,137 @@ export async function findCampaignsInProgress(): Promise<EmailCampaign[]> {
 // Exports
 // ============================================================================
 
+// ============================================================================
+// Audience Building
+// ============================================================================
+
+/**
+ * Build audience for a campaign (snapshot recipients at send time)
+ */
+export async function buildAudience(
+  campaignId: string
+): Promise<{ recipientCount: number; errors: string[] }> {
+  const campaign = await getCampaign(campaignId);
+  if (!campaign) {
+    return { recipientCount: 0, errors: ["Campaign not found"] };
+  }
+
+  const rules = campaign.audienceRulesJson as AudienceRules || {};
+  
+  // Resolve audience using the audience resolver
+  const { subscribers, total } = await audienceResolver.resolveAudience(rules, MAX_RECIPIENTS_PER_CAMPAIGN);
+
+  if (subscribers.length === 0) {
+    return { recipientCount: 0, errors: ["No eligible subscribers found"] };
+  }
+
+  // Clear existing recipients (in case of rebuild)
+  await db
+    .delete(emailCampaignRecipients)
+    .where(eq(emailCampaignRecipients.campaignId, campaignId));
+
+  // Insert recipients
+  const recipientRows = subscribers.map(sub => ({
+    campaignId,
+    subscriberId: sub.id,
+    email: sub.email,
+    status: "pending" as const,
+    vehicleYear: sub.vehicleYear,
+    vehicleMake: sub.vehicleMake,
+    vehicleModel: sub.vehicleModel,
+    vehicleTrim: sub.vehicleTrim,
+  }));
+
+  // Batch insert
+  const BATCH_SIZE = 500;
+  for (let i = 0; i < recipientRows.length; i += BATCH_SIZE) {
+    const batch = recipientRows.slice(i, i + BATCH_SIZE);
+    await db.insert(emailCampaignRecipients).values(batch);
+  }
+
+  // Update campaign with recipient count
+  await db
+    .update(emailCampaigns)
+    .set({
+      totalRecipients: subscribers.length,
+      updatedAt: new Date(),
+    })
+    .where(eq(emailCampaigns.id, campaignId));
+
+  console.log(`[campaignService] Built audience for ${campaignId}: ${subscribers.length} recipients`);
+
+  return { recipientCount: subscribers.length, errors: [] };
+}
+
+/** Maximum recipients per campaign */
+const MAX_RECIPIENTS_PER_CAMPAIGN = 50000;
+
+// ============================================================================
+// Start Sending with Options
+// ============================================================================
+
+/**
+ * Start sending a campaign with options (BCC admin, etc.)
+ */
+export async function startSending(
+  campaignId: string,
+  options?: {
+    bccAdmin?: string;
+  }
+): Promise<{ sent: number; failed: number }> {
+  const campaign = await getCampaign(campaignId);
+  if (!campaign) {
+    throw new Error("Campaign not found");
+  }
+
+  // Store BCC option in campaign metadata
+  if (options?.bccAdmin) {
+    await db
+      .update(emailCampaigns)
+      .set({
+        contentJson: {
+          ...(campaign.contentJson as object),
+          _bccAdmin: options.bccAdmin,
+        } as any,
+        updatedAt: new Date(),
+      })
+      .where(eq(emailCampaigns.id, campaignId));
+  }
+
+  // Mark campaign as sending
+  await db
+    .update(emailCampaigns)
+    .set({
+      status: "sending",
+      startedAt: new Date(),
+      updatedAt: new Date(),
+    })
+    .where(eq(emailCampaigns.id, campaignId));
+
+  // Process batches until done
+  let totalSent = 0;
+  let totalFailed = 0;
+  let remaining = 1; // Start non-zero to enter loop
+
+  while (remaining > 0) {
+    const result = await processSendBatch(campaignId, SEND_BATCH_SIZE);
+    totalSent += result.sent;
+    totalFailed += result.failed;
+    remaining = result.remaining;
+
+    // Small delay between batches
+    if (remaining > 0) {
+      await new Promise(resolve => setTimeout(resolve, SEND_BATCH_DELAY_MS));
+    }
+  }
+
+  return { sent: totalSent, failed: totalFailed };
+}
+
+// ============================================================================
+// Exports
+// ============================================================================
+
 export const campaignService = {
   // CRUD
   createCampaign,
@@ -759,9 +895,13 @@ export const campaignService = {
   resumeCampaign,
   cancelCampaign,
 
+  // Audience
+  buildAudience,
+
   // Sending
   sendTestEmail,
   processSendBatch,
+  startSending,
 
   // Stats
   getCampaignStats,
