@@ -11,6 +11,7 @@ import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
+import { LocalTireAddButton } from "@/components/LocalTireAddButton";
 import { PackageSummary } from "@/components/PackageSummary";
 // PackageJourneyBar removed - not wanted
 // import { PackageJourneyBar } from "@/components/PackageJourneyBar";
@@ -4214,17 +4215,30 @@ function TireCard({
             />
           )
         ) : getDisplayPrice(t) != null ? (
-          <QuickAddTireButton
-            sku={tireSku}
-            brand={String(t.brand || "Tire")}
-            model={String(displayTitle)}
-            size={selectedSize}
-            imageUrl={t.imageUrl}
-            unitPrice={getDisplayPrice(t)!}
-            vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
-            quantity={4}
-            source={t.rawSource}
-          />
+          isLocalMode ? (
+            <LocalTireAddButton
+              sku={tireSku}
+              brand={String(t.brand || "Tire")}
+              model={String(displayTitle)}
+              size={selectedSize}
+              imageUrl={t.imageUrl}
+              unitPrice={getDisplayPrice(t)!}
+              vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+              source={t.rawSource}
+            />
+          ) : (
+            <QuickAddTireButton
+              sku={tireSku}
+              brand={String(t.brand || "Tire")}
+              model={String(displayTitle)}
+              size={selectedSize}
+              imageUrl={t.imageUrl}
+              unitPrice={getDisplayPrice(t)!}
+              vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+              quantity={4}
+              source={t.rawSource}
+            />
+          )
         ) : (
           <a href={BRAND.links.tel} className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700">
             Call for price

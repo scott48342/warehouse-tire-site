@@ -81,6 +81,26 @@ export function getOutTheDoorTotal(unitPrice: number, quantity: number = 4): num
 }
 
 /**
+ * Get simplified breakdown for UI display
+ */
+export function getOutTheDoorBreakdown(unitPrice: number, quantity: number = 4): {
+  tiresTotal: number;
+  installTotal: number;
+  taxTotal: number;
+  recyclingTotal: number;
+  outTheDoorTotal: number;
+} {
+  const breakdown = calculateLocalOutTheDoorPrice(unitPrice, quantity);
+  return {
+    tiresTotal: breakdown.tiresSubtotal,
+    installTotal: breakdown.laborFee,
+    taxTotal: breakdown.tax,
+    recyclingTotal: breakdown.recyclingFee,
+    outTheDoorTotal: breakdown.total,
+  };
+}
+
+/**
  * Format price for display
  */
 export function formatPrice(amount: number, decimals: number = 0): string {
