@@ -21,7 +21,7 @@ export interface GenerateCampaignDiscountResult {
   error?: string;
 }
 
-export interface ValidateDiscountResult {
+export interface ValidateCampaignDiscountResult {
   valid: boolean;
   discountPercent?: number;
   code?: string;
@@ -120,7 +120,7 @@ export async function generateCampaignDiscount(
 /**
  * Validate a campaign discount code.
  */
-export async function validateCampaignDiscount(code: string): Promise<ValidateDiscountResult> {
+export async function validateCampaignDiscount(code: string): Promise<ValidateCampaignDiscountResult> {
   const normalizedCode = code.trim().toUpperCase();
   
   try {
