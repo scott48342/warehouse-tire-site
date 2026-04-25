@@ -1,5 +1,6 @@
 import Link from "next/link";
 import pg from "pg";
+import { OrderStatusUpdater } from "./OrderStatusUpdater";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -122,8 +123,11 @@ function formatCents(cents: number) {
 const STATUS_CONFIG: Record<string, { color: string; label: string; description: string }> = {
   received: { color: "bg-green-500", label: "Received", description: "Order received, awaiting processing" },
   processing: { color: "bg-blue-500", label: "Processing", description: "Order is being prepared" },
-  shipped: { color: "bg-purple-500", label: "Shipped", description: "Order has been shipped" },
+  parts_ordered: { color: "bg-yellow-500", label: "Parts Ordered", description: "Parts ordered from supplier" },
+  ready_for_install: { color: "bg-purple-500", label: "Ready for Install", description: "Parts received, ready for installation" },
+  shipped: { color: "bg-indigo-500", label: "Shipped", description: "Order has been shipped" },
   delivered: { color: "bg-neutral-500", label: "Delivered", description: "Order delivered" },
+  completed: { color: "bg-emerald-500", label: "Completed", description: "Order completed" },
   cancelled: { color: "bg-red-500", label: "Cancelled", description: "Order was cancelled" },
 };
 
@@ -370,7 +374,7 @@ export default async function OrderDetailPage({
           <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
             <h3 className="text-lg font-bold text-white mb-4">Order Status</h3>
 
-            <div className="space-y-3">
+            <div className="space-y-3 mb-4">
               <StatusRow
                 label="Order Placed"
                 status="complete"
@@ -389,18 +393,11 @@ export default async function OrderDetailPage({
                   date={order.email_sent_at}
                 />
               )}
-              <StatusRow
-                label="Processing"
-                status={order.status === "processing" || order.status === "shipped" || order.status === "delivered" ? "complete" : "pending"}
-                note={statusConfig.description}
-              />
             </div>
 
-            {/* Status Update Form would go here */}
-            <div className="mt-4 pt-4 border-t border-neutral-700">
-              <div className="text-xs text-neutral-500">
-                Current Status: <span className="text-white font-medium">{statusConfig.label}</span>
-              </div>
+            {/* Status Updater */}
+            <div className="border-t border-neutral-700 pt-4">
+              <OrderStatusUpdater orderId={order.id} currentStatus={order.status} />
             </div>
           </div>
 
