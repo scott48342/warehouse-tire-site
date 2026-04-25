@@ -3,6 +3,7 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CompareProvider } from "@/context/CompareContext";
+import { DiscountProvider } from "@/lib/discounts/DiscountContext";
 import { ShopContextProvider } from "@/contexts/ShopContextProvider";
 import { CartTracker } from "@/components/CartTracker";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
@@ -67,15 +68,17 @@ export default function RootLayout({
       <body className={`${inter.variable} ${oswald.variable} antialiased flex min-h-screen flex-col`}>
         <ShopContextProvider>
           <CartProvider>
-            <CompareProvider>
-              <CartTracker />
-              <Suspense fallback={null}>
-                <Analytics />
-              </Suspense>
-              <ConditionalLayout>
-                {children}
-              </ConditionalLayout>
-            </CompareProvider>
+            <DiscountProvider>
+              <CompareProvider>
+                <CartTracker />
+                <Suspense fallback={null}>
+                  <Analytics />
+                </Suspense>
+                <ConditionalLayout>
+                  {children}
+                </ConditionalLayout>
+              </CompareProvider>
+            </DiscountProvider>
           </CartProvider>
         </ShopContextProvider>
       </body>

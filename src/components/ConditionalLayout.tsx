@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartSlideout } from "@/components/CartSlideout";
-import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { FirstOrderPopup } from "@/components/FirstOrderPopup";
 import { CompareFloatingBadge } from "@/components/CompareFloatingBadge";
 import { ComparePanel } from "@/components/ComparePanel";
 import { Suspense } from "react";
@@ -39,7 +39,7 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
         <Footer />
       </div>
       <CartSlideout />
-      <ExitIntentPopup />
+      <FirstOrderPopup />
       <CompareFloatingBadge />
       <ComparePanel />
     </>

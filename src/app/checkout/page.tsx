@@ -17,6 +17,7 @@ import { RoadHazardProtection } from "@/components/RoadHazardProtection";
 import { useShopContext, LocalOnly } from "@/contexts/ShopContextProvider";
 import { StoreSelector, StoreInfoCard } from "@/components/local";
 import { StripePaymentElement } from "@/components/StripePaymentElement";
+import { useDiscount } from "@/lib/discounts/DiscountContext";
 
 /**
  * Checkout Page
@@ -48,6 +49,9 @@ export default function CheckoutPage() {
   
   // Shop context for local mode detection
   const { isLocal, selectedStore, storeInfo } = useShopContext();
+  
+  // Discount context
+  const { activeDiscount, calculateDiscount, hasDiscount } = useDiscount();
 
   // Validate package
   const validation = validatePackage(items);
@@ -244,8 +248,12 @@ export default function CheckoutPage() {
   // Previously calculated 3.99% for local orders, now $0
   const cardProcessingFee = 0;
 
+  // Calculate discount amount (if any)
+  const discountAmount = calculateDiscount(validation.totals.subtotal);
+
   // Use subtotal + our own shipping/tax/fees calculation (validation.totals.total has shipping baked in)
-  const totalWithTaxAndShipping = validation.totals.subtotal + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
+  // Subtract discount from subtotal
+  const totalWithTaxAndShipping = validation.totals.subtotal - discountAmount + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -1098,6 +1106,18 @@ export default function CheckoutPage() {
                   <span className="text-neutral-600">Subtotal</span>
                   <span className="font-semibold">${validation.totals.subtotal.toFixed(2)}</span>
                 </div>
+                
+                {/* First Order Discount */}
+                {hasDiscount && (
+                  <div className="flex justify-between items-center bg-green-50 -mx-2 px-2 py-2 rounded-lg">
+                    <span className="flex items-center gap-1.5 text-green-700">
+                      <span>🎉</span>
+                      <span className="font-medium">First Order Savings ({activeDiscount?.discountPercent}%)</span>
+                    </span>
+                    <span className="font-bold text-green-700">-${discountAmount.toFixed(2)}</span>
+                  </div>
+                )}
+                
                 <div className="flex justify-between items-center">
                   <span className="text-neutral-600">
                     {isLocal ? "Store Delivery" : "Shipping"}

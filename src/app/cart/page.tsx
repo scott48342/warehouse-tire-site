@@ -19,6 +19,82 @@ import {
   RECYCLING_FEE_PER_SET, 
   TAX_RATE 
 } from "@/lib/localPricing";
+import { useDiscount } from "@/lib/discounts/DiscountContext";
+import { DiscountBanner, DiscountCodeInput } from "@/components/DiscountBanner";
+
+// ============================================================================
+// National Order Summary with Discount Support
+// ============================================================================
+
+function NationalOrderSummary({
+  subtotal,
+  isFreeShipping,
+  isValidZip,
+  shippingEstimate,
+  estimatedTotal,
+}: {
+  subtotal: number;
+  isFreeShipping: boolean;
+  isValidZip: boolean;
+  shippingEstimate: { displayAmount: string } | null;
+  estimatedTotal: number;
+}) {
+  const { activeDiscount, calculateDiscount, hasDiscount } = useDiscount();
+  const discountAmount = calculateDiscount(subtotal);
+  const discountedSubtotal = subtotal - discountAmount;
+  const finalTotal = isFreeShipping || !isValidZip 
+    ? discountedSubtotal 
+    : estimatedTotal - discountAmount;
+
+  return (
+    <div className="mt-4 space-y-2 text-sm">
+      <div className="flex justify-between">
+        <span className="text-neutral-600">Subtotal</span>
+        <span className="font-semibold text-neutral-900">${subtotal.toFixed(2)}</span>
+      </div>
+      
+      {/* Discount Row */}
+      {hasDiscount && (
+        <div className="flex justify-between items-center text-green-600 bg-green-50 -mx-2 px-2 py-1.5 rounded-lg">
+          <span className="flex items-center gap-1.5">
+            <span>🎉</span>
+            <span className="font-medium">First Order Discount ({activeDiscount?.discountPercent}%)</span>
+          </span>
+          <span className="font-bold">-${discountAmount.toFixed(2)}</span>
+        </div>
+      )}
+      
+      <div className="flex justify-between">
+        <span className="text-neutral-600">Shipping</span>
+        {isFreeShipping ? (
+          <span className="font-semibold text-green-700">FREE</span>
+        ) : isValidZip && shippingEstimate ? (
+          <span className="font-semibold text-neutral-900">{shippingEstimate.displayAmount} (est.)</span>
+        ) : (
+          <span className="text-neutral-500">Enter ZIP above</span>
+        )}
+      </div>
+      <div className="flex justify-between">
+        <span className="text-neutral-600">Tax</span>
+        <span className="text-neutral-500">Calculated at checkout</span>
+      </div>
+      <div className="mt-4 pt-4 border-t border-neutral-200 flex justify-between items-center">
+        <span className="text-lg font-bold text-neutral-900">Estimated Total</span>
+        <span className="text-2xl font-extrabold text-neutral-900">
+          ${finalTotal.toFixed(2)}
+        </span>
+      </div>
+      
+      {/* Discount Code Input - only show if no active discount */}
+      {!hasDiscount && (
+        <div className="mt-3 pt-3 border-t border-neutral-100">
+          <p className="text-xs text-neutral-500 mb-2">Have a discount code?</p>
+          <DiscountCodeInput />
+        </div>
+      )}
+    </div>
+  );
+}
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -586,32 +662,13 @@ export default function CartPage() {
                 })()
               ) : (
                 /* National mode: Original shipping-based pricing */
-                <div className="mt-4 space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-neutral-600">Subtotal</span>
-                    <span className="font-semibold text-neutral-900">${subtotal.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-neutral-600">Shipping</span>
-                    {isFreeShipping ? (
-                      <span className="font-semibold text-green-700">FREE</span>
-                    ) : isValidZip && shippingEstimate ? (
-                      <span className="font-semibold text-neutral-900">{shippingEstimate.displayAmount} (est.)</span>
-                    ) : (
-                      <span className="text-neutral-500">Enter ZIP above</span>
-                    )}
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-neutral-600">Tax</span>
-                    <span className="text-neutral-500">Calculated at checkout</span>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-neutral-200 flex justify-between items-center">
-                    <span className="text-lg font-bold text-neutral-900">Estimated Total</span>
-                    <span className="text-2xl font-extrabold text-neutral-900">
-                      ${(isFreeShipping || !isValidZip ? subtotal : estimatedTotal).toFixed(2)}
-                    </span>
-                  </div>
-                </div>
+                <NationalOrderSummary 
+                  subtotal={subtotal} 
+                  isFreeShipping={isFreeShipping}
+                  isValidZip={isValidZip}
+                  shippingEstimate={shippingEstimate}
+                  estimatedTotal={estimatedTotal}
+                />
               )}
 
               <div className="mt-5 space-y-3">

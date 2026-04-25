@@ -1000,3 +1000,6 @@ export type NewEmailCampaignRecipient = typeof emailCampaignRecipients.$inferIns
 
 export type EmailCampaignEvent = typeof emailCampaignEvents.$inferSelect;
 export type NewEmailCampaignEvent = typeof emailCampaignEvents.$inferInsert;
+
+// Re-export first order discounts
+export * from "./schema-first-order";
