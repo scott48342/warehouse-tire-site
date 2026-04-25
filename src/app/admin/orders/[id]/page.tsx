@@ -1,6 +1,7 @@
 import Link from "next/link";
 import pg from "pg";
 import { OrderStatusUpdater } from "./OrderStatusUpdater";
+import { ResendEmailButton } from "./ResendEmailButton";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -422,6 +423,12 @@ export default async function OrderDetailPage({
               </div>
             </div>
           )}
+
+          {/* Actions */}
+          <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
+            <h3 className="text-lg font-bold text-white mb-4">Actions</h3>
+            <ResendEmailButton orderId={order.id} />
+          </div>
 
           {/* Raw Data */}
           <details className="bg-neutral-800 rounded-xl border border-neutral-700">
