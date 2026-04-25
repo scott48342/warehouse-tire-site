@@ -5,6 +5,13 @@ import pg from "pg";
 
 const { Pool } = pg;
 
+// Team members to BCC on all order emails
+const ORDER_EMAIL_BCC = [
+  "steve@warehousetire.net",
+  "joe@warehousetire.net",
+  "spencer@warehousetire.net",
+];
+
 type EmailSettings = {
   enabled: boolean;
   smtpHost: string;
@@ -119,6 +126,7 @@ export async function sendOrderConfirmationEmail(
       const customerResult = await transporter.sendMail({
         from: fromAddress,
         to: customerEmail,
+        bcc: ORDER_EMAIL_BCC,
         subject: `Order Confirmed: ${orderId} - ${BRAND.name}`,
         html: customerHtml,
         text: customerText,
@@ -132,6 +140,7 @@ export async function sendOrderConfirmationEmail(
       const adminResult = await transporter.sendMail({
         from: fromAddress,
         to: settings.notifyEmail,
+        bcc: ORDER_EMAIL_BCC,
         subject: `🛒 New Order: ${orderId} - ${snapshot.customer.firstName} ${snapshot.customer.lastName}`,
         html: adminHtml,
         text: customerText,
