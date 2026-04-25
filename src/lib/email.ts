@@ -10,6 +10,12 @@ const ORDER_EMAIL_BCC = [
   "steve@warehousetire.net",
   "joe@warehousetire.net",
   "spencer@warehousetire.net",
+  "scott@warehousetire.net",
+];
+
+// SMS notifications via email-to-SMS gateways (plain text only)
+const ORDER_SMS_NOTIFY = [
+  "2484990359@tmomail.net", // Scott
 ];
 
 type EmailSettings = {
@@ -147,6 +153,26 @@ export async function sendOrderConfirmationEmail(
       });
       console.log("[email] Admin notification sent:", adminResult.messageId);
       results.push(adminResult.messageId);
+    }
+
+    // Send SMS notifications (plain text only, no HTML)
+    if (ORDER_SMS_NOTIFY.length > 0) {
+      const smsText = `NEW ORDER: ${orderId}\n${snapshot.customer.firstName} ${snapshot.customer.lastName}\n${snapshot.customer.phone || ""}\n$${snapshot.totals.total.toFixed(0)} total`;
+      
+      for (const smsAddr of ORDER_SMS_NOTIFY) {
+        try {
+          await transporter.sendMail({
+            from: fromAddress,
+            to: smsAddr,
+            subject: `Order ${orderId}`,
+            text: smsText,
+            // No HTML - SMS gateways need plain text only
+          });
+          console.log("[email] SMS notification sent to:", smsAddr);
+        } catch (smsErr: any) {
+          console.error("[email] SMS failed:", smsAddr, smsErr.message);
+        }
+      }
     }
 
     return { success: true, messageId: results.join(", ") };
