@@ -7,6 +7,17 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+
+  // SEO redirects - legacy/long URLs to clean paths
+  async redirects() {
+    return [
+      {
+        source: '/tire-wheel-services-in-pontiac-waterford-mi-warehouse-tire',
+        destination: '/services',
+        permanent: true,
+      },
+    ];
+  },
   
   // ssh2 has native bindings that can't be bundled by Turbopack
   // Must be external for serverless functions
