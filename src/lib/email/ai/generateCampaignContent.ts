@@ -8,9 +8,10 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
-import { db } from "@/lib/fitment-db/db";
-import { manufacturerRebates } from "@/lib/fitment-db/schema";
-import { gte, and, eq } from "drizzle-orm";
+// import { db } from "@/lib/fitment-db/db";
+// TODO: Add manufacturerRebates table to schema when ready to use rebates
+// import { manufacturerRebates } from "@/lib/fitment-db/schema";
+// import { gte, and, eq } from "drizzle-orm";
 import type { CampaignContent, ContentBlock } from "../campaigns/types";
 
 // ============================================================================
@@ -75,32 +76,12 @@ function getAnthropicClient(): Anthropic | null {
 
 /**
  * Get active rebates for campaign content
+ * TODO: Implement when manufacturerRebates table is added to schema
  */
 async function getActiveRebates(): Promise<any[]> {
-  try {
-    const now = new Date();
-    const rebates = await db
-      .select()
-      .from(manufacturerRebates)
-      .where(
-        and(
-          gte(manufacturerRebates.endDate, now),
-          eq(manufacturerRebates.isActive, true)
-        )
-      )
-      .limit(10);
-    
-    return rebates.map(r => ({
-      brand: r.brandName,
-      amount: r.rebateAmount,
-      description: r.description,
-      type: r.rebateType,
-      endDate: r.endDate,
-    }));
-  } catch (err) {
-    console.error("[AI Campaign] Failed to fetch rebates:", err);
-    return [];
-  }
+  // Rebates table not yet implemented - return empty array
+  // When ready, add manufacturerRebates table to schema and query here
+  return [];
 }
 
 /**
