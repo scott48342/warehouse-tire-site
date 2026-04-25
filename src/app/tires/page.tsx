@@ -4147,32 +4147,34 @@ function TireCard({
         );
       })()}
 
-      {/* Price block - both prices clearly visible */}
-      <div className="relative z-10 mt-4 pt-4 border-t border-neutral-100">
-        <div className="flex items-start justify-between">
-          <div>
-            {(() => {
-              const unitPrice = getDisplayPrice(t);
-              return unitPrice != null ? (
-                <TirePriceDisplay 
-                  unitPrice={unitPrice} 
-                  quantity={4} 
-                  isLocalMode={isLocalMode}
-                />
-              ) : (
-                <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
-              );
-            })()}
-          </div>
-          {/* Stock indicator */}
-          <div className="flex items-center gap-1.5 text-xs font-semibold mt-1">
-            <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
-            <span className={inStock ? "text-green-700" : "text-amber-700"}>
-              {inStock ? (maxQty >= 100 ? "100+" : `${maxQty} avail`) : "Order"}
-            </span>
+      {/* Price block - both prices clearly visible (hide for local mode - qty selector shows breakdown) */}
+      {!isLocalMode && (
+        <div className="relative z-10 mt-4 pt-4 border-t border-neutral-100">
+          <div className="flex items-start justify-between">
+            <div>
+              {(() => {
+                const unitPrice = getDisplayPrice(t);
+                return unitPrice != null ? (
+                  <TirePriceDisplay 
+                    unitPrice={unitPrice} 
+                    quantity={4} 
+                    isLocalMode={isLocalMode}
+                  />
+                ) : (
+                  <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
+                );
+              })()}
+            </div>
+            {/* Stock indicator */}
+            <div className="flex items-center gap-1.5 text-xs font-semibold mt-1">
+              <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
+              <span className={inStock ? "text-green-700" : "text-amber-700"}>
+                {inStock ? (maxQty >= 100 ? "100+" : `${maxQty} avail`) : "Order"}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       
       {/* Trust row - prominent before CTA */}
       <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">

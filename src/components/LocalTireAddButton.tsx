@@ -73,48 +73,57 @@ export function LocalTireAddButton({
     : "flex-1 rounded-xl bg-red-600 px-4 py-3 text-sm font-extrabold text-white hover:bg-red-700 active:scale-[0.98] transition-all disabled:opacity-60";
 
   return (
-    <div className="space-y-2">
-      {/* Quantity Selector */}
-      <div className="flex items-center justify-between gap-2">
-        <span className="text-xs font-semibold text-neutral-600">Qty:</span>
-        <div className="flex gap-1">
-          {QTY_OPTIONS.map((q) => (
-            <button
-              key={q}
-              onClick={() => setQuantity(q)}
-              className={`w-9 h-9 rounded-lg text-sm font-bold transition-all ${
-                quantity === q
-                  ? "bg-red-600 text-white shadow-sm"
-                  : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-              }`}
-            >
-              {q}
-            </button>
-          ))}
+    <div className="space-y-3 pt-3 border-t border-neutral-100">
+      {/* Per-tire price */}
+      <div className="flex items-baseline justify-between">
+        <div>
+          <span className="text-2xl font-extrabold text-neutral-900">${unitPrice.toFixed(2)}</span>
+          <span className="text-sm text-neutral-500 ml-1">/ea</span>
+        </div>
+        {/* Quantity Selector */}
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-semibold text-neutral-500">Qty:</span>
+          <div className="flex gap-1">
+            {QTY_OPTIONS.map((q) => (
+              <button
+                key={q}
+                onClick={() => setQuantity(q)}
+                className={`w-8 h-8 rounded-lg text-sm font-bold transition-all ${
+                  quantity === q
+                    ? "bg-red-600 text-white shadow-sm"
+                    : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+                }`}
+              >
+                {q}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Out-the-door price breakdown */}
-      <div className="bg-green-50 border border-green-200 rounded-lg p-2 text-xs">
-        <div className="flex justify-between text-neutral-600">
-          <span>Tires ({quantity})</span>
-          <span>${breakdown.tiresTotal.toFixed(2)}</span>
+      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+        <div className="space-y-1 text-xs">
+          <div className="flex justify-between text-neutral-600">
+            <span>Tires ({quantity} × ${unitPrice.toFixed(2)})</span>
+            <span>${breakdown.tiresTotal.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-neutral-600">
+            <span>Install & Mount</span>
+            <span>${breakdown.installTotal.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-neutral-600">
+            <span>Tax (6%)</span>
+            <span>${breakdown.taxTotal.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-neutral-600">
+            <span>Recycling</span>
+            <span>${breakdown.recyclingTotal.toFixed(2)}</span>
+          </div>
         </div>
-        <div className="flex justify-between text-neutral-600">
-          <span>Install & Mount</span>
-          <span>${breakdown.installTotal.toFixed(2)}</span>
-        </div>
-        <div className="flex justify-between text-neutral-600">
-          <span>Tax (6%)</span>
-          <span>${breakdown.taxTotal.toFixed(2)}</span>
-        </div>
-        <div className="flex justify-between text-neutral-600">
-          <span>Recycling</span>
-          <span>${breakdown.recyclingTotal.toFixed(2)}</span>
-        </div>
-        <div className="flex justify-between font-bold text-green-800 border-t border-green-200 pt-1 mt-1">
-          <span>Out the Door</span>
-          <span>${outTheDoorTotal.toFixed(2)}</span>
+        <div className="flex justify-between items-center font-bold text-green-800 border-t border-green-300 pt-2 mt-2">
+          <span className="text-sm">Out the Door</span>
+          <span className="text-lg">${outTheDoorTotal.toFixed(2)}</span>
         </div>
       </div>
 
