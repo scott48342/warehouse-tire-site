@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Tire & Wheel Services in Pontiac & Waterford, MI | Warehouse Tire',
-  description: 'Professional tire and wheel services in Pontiac and Waterford, Michigan. Tire installation, balancing, alignment, flat repair, lift kit installation, and more. Visit our local shops today.',
-  keywords: 'tire services pontiac mi, wheel services waterford mi, tire installation oakland county, tire balancing pontiac, wheel alignment waterford, flat tire repair, lift kit installation michigan',
+  description: 'Professional tire and wheel services in Pontiac and Waterford, Michigan. Tire installation, mounting, balancing, flat repair, TPMS service, and more. Visit our local shops today.',
+  keywords: 'tire services pontiac mi, wheel services waterford mi, tire installation oakland county, tire balancing pontiac, tire mounting waterford, flat tire repair, tpms service michigan',
   openGraph: {
     title: 'Tire & Wheel Services | Warehouse Tire - Pontiac & Waterford, MI',
-    description: 'Expert tire and wheel services in Oakland County. Installation, balancing, alignment, repairs, and lift kit installation at our Pontiac and Waterford locations.',
+    description: 'Expert tire and wheel services in Oakland County. Installation, mounting, balancing, and repairs at our Pontiac and Waterford locations.',
   },
 }
 
@@ -32,16 +32,6 @@ const services = [
       </svg>
     ),
     price: 'From $15/wheel',
-  },
-  {
-    name: 'Wheel Alignment',
-    description: 'Computer-aided alignment corrects angles for proper handling, tire longevity, and fuel efficiency.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-      </svg>
-    ),
-    price: 'From $89',
   },
   {
     name: 'Flat Tire Repair',
@@ -72,16 +62,6 @@ const services = [
       </svg>
     ),
     price: 'From $50/sensor',
-  },
-  {
-    name: 'Lift Kit Installation',
-    description: 'Professional lift kit and leveling kit installation for trucks and SUVs. We carry top brands and provide expert fitting.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-      </svg>
-    ),
-    price: 'Call for quote',
   },
   {
     name: 'Custom Wheel Packages',
@@ -127,7 +107,7 @@ export default function ServicesPage() {
             Pontiac & Waterford, Michigan
           </p>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Professional installation, balancing, alignment, and repairs from Oakland County's 
+            Professional tire installation, mounting, balancing, and repairs from Oakland County's 
             trusted tire experts. Two convenient locations to serve you.
           </p>
         </div>
@@ -136,7 +116,7 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <div className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Services</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => (
             <div 
               key={idx}
@@ -186,9 +166,9 @@ export default function ServicesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Expert Technicians</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Tire & Wheel Experts</h3>
               <p className="text-gray-600">
-                Experienced team with proper training and equipment for any wheel or tire job.
+                Decades of experience with proper training and equipment for any tire or wheel job.
               </p>
             </div>
             <div className="text-center">
@@ -294,7 +274,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="bg-blue-600 rounded-xl p-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-3">Need Tires or Service?</h2>
+          <h2 className="text-2xl font-bold mb-3">Need Tires or Wheels?</h2>
           <p className="text-blue-100 mb-6 max-w-xl mx-auto">
             Shop online or stop by one of our locations. We'll take care of you.
           </p>
@@ -327,9 +307,9 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "AutoRepair",
+            "@type": "TireShop",
             "name": "Warehouse Tire",
-            "description": "Professional tire and wheel services in Pontiac and Waterford, Michigan. Installation, balancing, alignment, repairs, and lift kit installation.",
+            "description": "Professional tire and wheel services in Pontiac and Waterford, Michigan. Installation, mounting, balancing, and repairs.",
             "url": "https://shop.warehousetire.net/services",
             "areaServed": [
               { "@type": "City", "name": "Pontiac", "addressRegion": "MI" },
@@ -341,10 +321,10 @@ export default function ServicesPage() {
               "name": "Tire & Wheel Services",
               "itemListElement": [
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tire Installation" }},
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wheel Mounting" }},
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wheel Balancing" }},
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wheel Alignment" }},
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flat Tire Repair" }},
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lift Kit Installation" }}
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "TPMS Service" }}
               ]
             },
             "location": [

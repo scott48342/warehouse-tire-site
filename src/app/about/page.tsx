@@ -136,8 +136,6 @@ export default function AboutPage() {
                     'TPMS Programming',
                     'Flat Repair',
                     'Tire Rotation',
-                    'Alignment',
-                    'Lift Kit Installation',
                     'Nationwide Shipping',
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-600">
