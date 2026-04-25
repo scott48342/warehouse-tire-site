@@ -127,11 +127,10 @@ export async function PATCH(
     const { rows } = await pool.query(
       `UPDATE orders 
        SET status = $1, 
-           updated_at = NOW(),
-           notes = COALESCE($3, notes)
+           updated_at = NOW()
        WHERE id = $2
        RETURNING *`,
-      [status, id, notes || null]
+      [status, id]
     );
     
     if (rows.length === 0) {
