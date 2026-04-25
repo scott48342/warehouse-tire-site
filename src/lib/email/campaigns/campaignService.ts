@@ -766,7 +766,7 @@ export async function buildAudience(
   const rules = campaign.audienceRulesJson as AudienceRules || {};
   
   // Resolve audience using the audience resolver
-  const { subscribers, total } = await audienceResolver.resolveAudience(rules, MAX_RECIPIENTS_PER_CAMPAIGN);
+  const { subscribers, total } = await audienceResolver.resolveAudience(rules, { limit: MAX_RECIPIENTS_PER_CAMPAIGN });
 
   if (subscribers.length === 0) {
     return { recipientCount: 0, errors: ["No eligible subscribers found"] };
