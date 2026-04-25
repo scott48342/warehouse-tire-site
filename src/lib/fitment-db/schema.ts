@@ -1003,3 +1003,6 @@ export type NewEmailCampaignEvent = typeof emailCampaignEvents.$inferInsert;
 
 // Re-export first order discounts
 export * from "./schema-first-order";
+
+// Re-export campaign discounts
+export * from "./schema-campaign-discounts";

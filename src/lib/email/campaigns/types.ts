@@ -86,7 +86,8 @@ export type ContentBlockType =
   | "text_block"
   | "cta_button"
   | "divider"
-  | "footer";
+  | "footer"
+  | "discount_code";
 
 export interface ContentBlock {
   type: ContentBlockType;

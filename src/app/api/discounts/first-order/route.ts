@@ -1,14 +1,17 @@
 /**
- * First Order Discount API
+ * Discount API
  * 
- * POST /api/discounts/first-order - Generate discount code for email
- * GET  /api/discounts/first-order?code=XXX - Validate discount code
+ * POST /api/discounts/first-order - Generate first-order discount code
+ * GET  /api/discounts/first-order?code=XXX - Validate any discount code
+ * 
+ * Supports both first-order and campaign discount codes.
  * 
  * @created 2026-04-25
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import { firstOrderService } from "@/lib/discounts/firstOrderService";
+import { campaignDiscountService } from "@/lib/discounts/campaignDiscountService";
 
 /**
  * POST - Generate a new first-order discount code
@@ -78,7 +81,7 @@ export async function POST(req: NextRequest) {
 }
 
 /**
- * GET - Validate a discount code
+ * GET - Validate a discount code (first-order or campaign)
  */
 export async function GET(req: NextRequest) {
   try {
@@ -92,17 +95,41 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const result = await firstOrderService.validateDiscount(code);
+    // Try first-order discount first
+    const firstOrderResult = await firstOrderService.validateDiscount(code);
+    
+    if (firstOrderResult.valid) {
+      return NextResponse.json({
+        valid: true,
+        discountPercent: firstOrderResult.discountPercent,
+        type: "first_order",
+      });
+    }
+    
+    // Try campaign discount
+    const campaignResult = await campaignDiscountService.validateCampaignDiscount(code);
+    
+    if (campaignResult.valid) {
+      // Track the click
+      campaignDiscountService.trackDiscountClick(code);
+      
+      return NextResponse.json({
+        valid: true,
+        discountPercent: campaignResult.discountPercent,
+        type: "campaign",
+        campaignId: campaignResult.campaignId,
+      });
+    }
 
+    // Neither valid - return the most relevant error
     return NextResponse.json({
-      valid: result.valid,
-      discountPercent: result.discountPercent,
-      error: result.error,
-      expired: result.expired,
-      alreadyRedeemed: result.alreadyRedeemed,
+      valid: false,
+      error: firstOrderResult.error || campaignResult.error || "Invalid code",
+      expired: firstOrderResult.expired || campaignResult.expired,
+      alreadyRedeemed: firstOrderResult.alreadyRedeemed || campaignResult.alreadyRedeemed,
     });
   } catch (err: any) {
-    console.error("[first-order] GET error:", err);
+    console.error("[discount] GET error:", err);
     return NextResponse.json(
       { error: "Failed to validate discount" },
       { status: 500 }
