@@ -17,6 +17,8 @@ import { CartTPMSUpsell } from "./TPMSSuggestion";
 import { CartCoAdditions } from "./CartCoAdditions";
 import { CartSmartTireUpsell } from "./SmartTireUpsell";
 import { FinancingBadge } from "./FinancingBadge";
+import { useShopContext } from "@/contexts/ShopContextProvider";
+import { getOutTheDoorTotal } from "@/lib/localPricing";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -240,8 +242,24 @@ export function CartSlideout() {
   } = useCart();
 
   const subtotal = getTotal();
+  const { isLocal } = useShopContext();
   
-  // Shipping estimation
+  // Calculate tire count for local mode out-the-door pricing
+  const tireCount = items
+    .filter((i): i is CartTireItem => i.type === "tire")
+    .reduce((sum, t) => sum + t.quantity, 0);
+  
+  // Calculate tire subtotal for out-the-door pricing
+  const tireSubtotal = items
+    .filter((i): i is CartTireItem => i.type === "tire")
+    .reduce((sum, t) => sum + t.unitPrice * t.quantity, 0);
+  
+  // For local mode, calculate out-the-door total (includes install, tax, recycling)
+  const localOutTheDoorTotal = isLocal && tireCount > 0 
+    ? getOutTheDoorTotal(tireSubtotal / tireCount, tireCount) + (subtotal - tireSubtotal)
+    : null;
+  
+  // Shipping estimation (only used for national site)
   const {
     zipCode,
     setZipCode,
@@ -496,8 +514,23 @@ export function CartSlideout() {
 
         {/* Actions */}
         <div className="border-t border-neutral-200 bg-white px-5 py-4 space-y-3">
-          {/* Shipping estimate */}
-          {items.length > 0 && (
+          {/* Local mode: Show out-the-door pricing */}
+          {isLocal && items.length > 0 && tireCount > 0 && (
+            <div className="bg-green-50 border border-green-200 rounded-lg p-3 space-y-1">
+              <div className="flex items-center gap-2 text-green-700 text-sm font-semibold">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Includes install, tax & recycling</span>
+              </div>
+              <div className="text-xs text-green-600">
+                Professional mount, balance & installation at our shop
+              </div>
+            </div>
+          )}
+
+          {/* National mode: Shipping estimate */}
+          {!isLocal && items.length > 0 && (
             <div className="space-y-2">
               {isFreeShipping ? (
                 <div className="flex items-center gap-2 text-green-700 text-sm">
@@ -534,7 +567,8 @@ export function CartSlideout() {
               <span className="text-neutral-600">Subtotal</span>
               <span className="text-neutral-900">${subtotal.toFixed(2)}</span>
             </div>
-            {isValidZip && !isFreeShipping && shippingEstimate && (
+            {/* National: Show shipping line */}
+            {!isLocal && isValidZip && !isFreeShipping && shippingEstimate && (
               <div className="flex items-center justify-between text-sm">
                 <span className="text-neutral-600">Shipping (est.)</span>
                 <span className="text-neutral-900">{shippingEstimate.displayAmount}</span>
@@ -542,10 +576,12 @@ export function CartSlideout() {
             )}
             <div className="flex items-center justify-between text-lg pt-1">
               <span className="font-semibold text-neutral-700">
-                {isValidZip ? "Est. Total" : "Subtotal"}
+                {isLocal ? "Out the Door" : (isValidZip ? "Est. Total" : "Subtotal")}
               </span>
               <span className="font-extrabold text-neutral-900">
-                ${isValidZip ? estimatedTotal.toFixed(2) : subtotal.toFixed(2)}
+                ${isLocal && localOutTheDoorTotal 
+                  ? localOutTheDoorTotal.toFixed(2) 
+                  : (isValidZip ? estimatedTotal.toFixed(2) : subtotal.toFixed(2))}
               </span>
             </div>
             
@@ -602,8 +638,17 @@ export function CartSlideout() {
 
           {/* Trust badges */}
           <div className="pt-3 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
-            <span>✓ Free shipping over {formatCurrency(FREE_SHIPPING_THRESHOLD)}</span>
-            <span>✓ Expert support</span>
+            {isLocal ? (
+              <>
+                <span>✓ Professional installation</span>
+                <span>✓ Local expert service</span>
+              </>
+            ) : (
+              <>
+                <span>✓ Free shipping over {formatCurrency(FREE_SHIPPING_THRESHOLD)}</span>
+                <span>✓ Expert support</span>
+              </>
+            )}
           </div>
         </div>
       </div>
