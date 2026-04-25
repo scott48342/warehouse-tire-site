@@ -226,22 +226,39 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
     ? [vehicle.year, vehicle.make, vehicle.model, vehicle.trim].filter(Boolean).join(" ")
     : "";
 
-  // Group lines by type
+  // Group lines by type - exclude tax from line items (tax shows in totals only)
   const wheels = lines.filter(l => l.meta?.cartType === "wheel");
   const tires = lines.filter(l => l.meta?.cartType === "tire");
   const accessories = lines.filter(l => l.meta?.cartType === "accessory");
-  const services = lines.filter(l => !["wheel", "tire", "accessory"].includes(l.meta?.cartType));
+  const services = lines.filter(l => 
+    !["wheel", "tire", "accessory"].includes(l.meta?.cartType) && 
+    l.meta?.type !== "tax" // Exclude tax - it shows in totals section
+  );
 
   const renderLineItem = (l: typeof lines[0]) => {
     const ext = (l.unitPriceUsd * l.qty * 100);
     const source = l.meta?.source;
-    // Format supplier name for display (admin only)
     const supplierLabel = source ? formatSupplierName(source) : null;
+    
+    // Build product name with tire size if available
+    let displayName = l.name;
+    const tireSize = l.meta?.tireSize || l.meta?.size;
+    if (tireSize) {
+      displayName = `${tireSize} ${l.name}`;
+    }
+    
+    // Show tire specs if available (width/aspect/diameter)
+    const tireSpecs = l.meta?.width && l.meta?.aspectRatio && l.meta?.diameter
+      ? `${l.meta.width}/${l.meta.aspectRatio}R${l.meta.diameter}`
+      : null;
+    if (tireSpecs && !tireSize) {
+      displayName = `${tireSpecs} ${l.name}`;
+    }
     
     return `
       <tr>
         <td style="padding: 8px 0; border-bottom: 1px solid #eee;">
-          <div style="font-weight: 500;">${l.name}</div>
+          <div style="font-weight: 500;">${displayName}</div>
           ${l.sku ? `<div style="font-size: 12px; color: #666;">SKU: ${l.sku}</div>` : ""}
           ${isAdmin && supplierLabel ? `<div style="font-size: 11px; color: #dc2626; font-weight: 600;">📦 Supplier: ${supplierLabel}</div>` : ""}
         </td>

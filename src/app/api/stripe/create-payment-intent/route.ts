@@ -144,7 +144,12 @@ export async function POST(req: Request) {
     const linesAll: QuoteLine[] = items
       .map((i: any) => {
         const kind: QuoteLine["kind"] = "product";
-        const name = String(i.model || i.name || i.sku || "Item").trim();
+        // Build product name - include tire size for tire items
+        let name = String(i.model || i.name || i.sku || "Item").trim();
+        if (i.type === "tire" && i.size) {
+          // Prepend tire size to name: "245/65R17 Brand Model"
+          name = `${i.size} ${i.brand || ""} ${name}`.trim().replace(/\s+/g, " ");
+        }
         const sku = String(i.sku || "").trim() || undefined;
         const unitPriceUsd = Number(i.unitPrice || 0);
         const qty = Math.max(1, Math.trunc(Number(i.quantity || 1)));
@@ -158,6 +163,13 @@ export async function POST(req: Request) {
           spec: i.spec,
           meta: i.meta,
           source: i.source,
+          // Tire-specific fields (for email/display)
+          ...(i.type === "tire" ? {
+            tireSize: i.size,
+            brand: i.brand,
+            loadIndex: i.loadIndex,
+            speedRating: i.speedRating,
+          } : {}),
         };
 
         return { kind, name, sku, unitPriceUsd, qty, taxable, meta };
