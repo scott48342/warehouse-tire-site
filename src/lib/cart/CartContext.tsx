@@ -291,7 +291,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         item.type as "wheel" | "tire", 
         cartValue,
         typedItem.vehicle ? {
-          year: typedItem.vehicle.year,
+          year: Number(typedItem.vehicle.year),
           make: typedItem.vehicle.make,
           model: typedItem.vehicle.model,
         } : undefined
