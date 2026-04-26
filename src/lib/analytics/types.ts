@@ -32,6 +32,8 @@ export interface FunnelEvent {
   cartValue?: number;
   orderId?: string;
   couponCode?: string;
+  discountAmount?: number;
+  discountType?: 'first_order' | 'promo' | 'manual';
   utmSource?: string;
   utmMedium?: string;
   utmCampaign?: string;

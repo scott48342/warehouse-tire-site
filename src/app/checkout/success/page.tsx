@@ -241,7 +241,10 @@ export default async function CheckoutSuccessPage({
       <PurchaseTracker 
         orderId={order.id}
         cartValue={totals.total}
-        // TODO: Add coupon code tracking once discount info is stored in orders
+        couponCode={snapshot.discount?.code}
+        discountAmount={snapshot.discount?.amount}
+        discountType={snapshot.discount?.type}
+        isFirstOrder={snapshot.discount?.type === 'first_order'}
       />
       
       {/* Google Ads conversion tracking */}

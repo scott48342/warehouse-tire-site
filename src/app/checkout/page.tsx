@@ -453,6 +453,14 @@ export default function CheckoutPage() {
               tireCount,
             },
           } : {}),
+          // Include discount info if active (for purchase analytics)
+          ...(hasDiscount && activeDiscount ? {
+            discount: {
+              code: activeDiscount.code,
+              amount: discountAmount,
+              type: activeDiscount.source,
+            },
+          } : {}),
         }),
       });
 

@@ -291,11 +291,22 @@ export async function POST(req: Request) {
       installStoreAddress: `${installStore.address}, ${installStore.city}, ${installStore.state} ${installStore.zip}`,
     } : undefined;
 
+    // Extract discount info from request body (if applied at checkout)
+    const discountInfo = body.discount && typeof body.discount === "object" ? {
+      code: String(body.discount.code || "").trim(),
+      amount: Number(body.discount.amount) || 0,
+      type: (body.discount.type || "manual") as "first_order" | "promo" | "manual",
+    } : undefined;
+    
+    // Only include discount if it has a valid code and amount
+    const discountData = discountInfo?.code && discountInfo.amount > 0 ? discountInfo : undefined;
+
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,
       lines: linesAll,
       localMode: localModeData,
+      discount: discountData,
     });
 
     // Calculate total in cents

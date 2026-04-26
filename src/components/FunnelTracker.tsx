@@ -117,6 +117,8 @@ interface TrackEventOptions {
   cartValue?: number;
   orderId?: string;
   couponCode?: string;
+  discountAmount?: number;
+  discountType?: "first_order" | "promo" | "manual";
   vehicle?: { year?: number; make?: string; model?: string };
   metadata?: Record<string, any>;
 }
@@ -145,6 +147,8 @@ async function sendEvent(options: TrackEventOptions): Promise<void> {
     cartValue: options.cartValue,
     orderId: options.orderId,
     couponCode: options.couponCode,
+    discountAmount: options.discountAmount,
+    discountType: options.discountType,
     utmSource: utm.source,
     utmMedium: utm.medium,
     utmCampaign: utm.campaign,
@@ -288,7 +292,9 @@ export function trackAddPaymentInfo(cartValue: number): void {
 export function trackPurchase(
   orderId: string,
   cartValue: number,
-  couponCode?: string
+  couponCode?: string,
+  discountAmount?: number,
+  discountType?: "first_order" | "promo" | "manual"
 ): void {
   // Clear checkout state so next checkout is tracked
   if (typeof window !== "undefined") {
@@ -300,6 +306,8 @@ export function trackPurchase(
     orderId,
     cartValue,
     couponCode,
+    discountAmount,
+    discountType,
   });
 }
 

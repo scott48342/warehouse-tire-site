@@ -31,6 +31,8 @@ export async function POST(request: NextRequest) {
       cartValue,
       orderId,
       couponCode,
+      discountAmount,
+      discountType,
       utmSource,
       utmMedium,
       utmCampaign,
@@ -50,6 +52,14 @@ export async function POST(request: NextRequest) {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 
                request.headers.get('x-real-ip') || '';
     const referrer = request.headers.get('referer') || '';
+    
+    // Build metadata with discount info
+    const enrichedMetadata = {
+      ...metadata,
+      // Include discount info in metadata for analysis
+      ...(discountAmount !== undefined && { discountAmount }),
+      ...(discountType && { discountType }),
+    };
     
     // Insert event
     await pool.query(`
@@ -81,7 +91,7 @@ export async function POST(request: NextRequest) {
       utmSource || null,
       utmMedium || null,
       utmCampaign || null,
-      JSON.stringify(metadata || {}),
+      JSON.stringify(enrichedMetadata),
     ]);
     
     return NextResponse.json({ ok: true });

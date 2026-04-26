@@ -93,6 +93,8 @@ export async function trackEvent(
     cartValue?: number;
     orderId?: string;
     couponCode?: string;
+    discountAmount?: number;
+    discountType?: 'first_order' | 'promo' | 'manual';
     metadata?: Record<string, any>;
   }
 ): Promise<void> {
@@ -183,8 +185,14 @@ export function trackAddPaymentInfo(cartValue: number): void {
   trackEvent('add_payment_info', { cartValue });
 }
 
-export function trackPurchase(orderId: string, cartValue: number, couponCode?: string): void {
-  trackEvent('purchase', { orderId, cartValue, couponCode });
+export function trackPurchase(
+  orderId: string, 
+  cartValue: number, 
+  couponCode?: string,
+  discountAmount?: number,
+  discountType?: 'first_order' | 'promo' | 'manual'
+): void {
+  trackEvent('purchase', { orderId, cartValue, couponCode, discountAmount, discountType });
 }
 
 /**

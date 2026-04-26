@@ -62,6 +62,12 @@ export type QuoteSnapshot = {
     installStorePhone: string;
     installStoreAddress: string;
   };
+  // Discount/coupon info (if applied at checkout)
+  discount?: {
+    code: string;
+    amount: number;
+    type: 'first_order' | 'promo' | 'manual';
+  };
 };
 
 export type QuoteRecord = {
@@ -137,11 +143,13 @@ export async function createQuote(
     vehicle,
     lines,
     localMode,
+    discount,
   }: {
     customer: QuoteSnapshot["customer"];
     vehicle?: QuoteSnapshot["vehicle"];
     lines: QuoteLine[];
     localMode?: QuoteSnapshot["localMode"];
+    discount?: QuoteSnapshot["discount"];
   }
 ) {
   await ensureQuoteSystem(db);
@@ -149,7 +157,7 @@ export async function createQuote(
   const taxRate = await getTaxRate(db);
   const totals = computeTotals(lines, taxRate);
 
-  const snap: QuoteSnapshot = { customer, vehicle, lines, taxRate, totals, localMode };
+  const snap: QuoteSnapshot = { customer, vehicle, lines, taxRate, totals, localMode, discount };
   const id = newId();
   const vlabel = vehicleLabel(vehicle) || null;
 
