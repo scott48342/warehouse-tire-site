@@ -17,6 +17,11 @@ const { Pool } = pg;
 // Minimum cart value to trigger an alert (avoid spam for small carts)
 const MIN_ALERT_VALUE = Number(process.env.ABANDONED_CART_MIN_ALERT_VALUE) || 200;
 
+// SMS notifications via email-to-SMS gateways (plain text only)
+const ABANDONED_CART_SMS_NOTIFY = [
+  "2484990359@tmomail.net", // Scott
+];
+
 type EmailSettings = {
   enabled: boolean;
   smtpHost: string;
@@ -232,6 +237,27 @@ export async function sendAbandonedCartAlert(cart: AbandonedCart): Promise<{
     });
 
     console.log(`[abandonedCartAlerts] Alert sent for cart ${cart.cartId} ($${cartValue.toFixed(2)})`);
+
+    // Send SMS notifications (plain text only, no HTML)
+    if (ABANDONED_CART_SMS_NOTIFY.length > 0) {
+      const customerName = [cart.customerFirstName, cart.customerLastName].filter(Boolean).join(" ") || "Customer";
+      const smsText = `ABANDONED CART: $${cartValue.toFixed(0)}\n${customerName}\n${cart.customerPhone || cart.customerEmail || "No contact"}\n${vehicleInfo}`;
+      
+      for (const smsAddr of ABANDONED_CART_SMS_NOTIFY) {
+        try {
+          await transporter.sendMail({
+            from: fromAddress,
+            to: smsAddr,
+            subject: `Cart $${cartValue.toFixed(0)}`,
+            text: smsText,
+            // No HTML - SMS gateways need plain text only
+          });
+          console.log("[abandonedCartAlerts] SMS notification sent to:", smsAddr);
+        } catch (smsErr: any) {
+          console.error("[abandonedCartAlerts] SMS failed:", smsAddr, smsErr.message);
+        }
+      }
+    }
 
     return { success: true };
   } catch (err: any) {
