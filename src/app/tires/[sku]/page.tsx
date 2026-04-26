@@ -5,6 +5,7 @@ import { BRAND } from "@/lib/brand";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddTiresToCartButton } from "@/components/AddTiresToCartButton";
+import { TireBuyBox } from "@/components/TireBuyBox";
 import { BackToTiresButton } from "@/components/BackToTiresButton";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
@@ -549,61 +550,19 @@ export default async function TireDetailPage({
                     )}
 
                     {/* Price + CTA Block */}
-                    <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
-                      {delivery.urgency && (
-                        <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700">
-                          <span>⚡</span>
-                          <span>{delivery.urgency}</span>
-                        </div>
-                      )}
-
-                      <div className="flex items-baseline gap-2">
-                        {displayPrice != null ? (
-                          <>
-                            <div className="text-3xl font-extrabold text-neutral-900">{fmtMoney(displayPrice)}</div>
-                            <div className="text-sm text-neutral-500">per tire</div>
-                          </>
-                        ) : (
-                          <div className="text-xl font-bold text-neutral-700">Call for pricing</div>
-                        )}
-                      </div>
-                      {displayPrice != null && (
-                        <div className="mt-1 text-sm text-neutral-600">
-                          Set of 4: <span className="font-bold text-green-700">{fmtMoney(displayPrice * 4)}</span>
-                        </div>
-                      )}
-                      
-                      {/* Financing option - shows for set of 4 ($50-$30k) */}
-                      {displayPrice != null && displayPrice * 4 >= 50 && (
-                        <FinancingBadge price={displayPrice * 4} className="mt-2" />
-                      )}
-
-                      <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
-                        <span className="text-base">{delivery.icon}</span>
-                        <span>{delivery.text}</span>
-                      </div>
-                      
-                      {displayPrice != null && (
-                        <div className="mt-4">
-                          <AddTiresToCartButton
-                            sku={tire.partNumber || safeSku}
-                            brand={tire.brand || "Tire"}
-                            model={title}
-                            size={tire.size || size}
-                            unitPrice={displayPrice}
-                            imageUrl={tire.imageUrl}
-                            source={tire.rawSource || tire.source || "tireweb"}
-                            variant="primary"
-                          />
-                        </div>
-                      )}
-                      
-                      {/* Compact trust line */}
-                      <EnhancedTrustStrip 
-                        hasVehicle={hasVehicle} 
-                        hasWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) > 0 : true} 
-                      />
-                    </div>
+                    <TireBuyBox
+                      sku={tire.partNumber || safeSku}
+                      brand={tire.brand || "Tire"}
+                      model={title}
+                      size={tire.size || size}
+                      unitPrice={displayPrice}
+                      imageUrl={tire.imageUrl}
+                      vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
+                      hasVehicle={hasVehicle}
+                      hasWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) > 0 : true}
+                      source={tire.rawSource || tire.source || "tireweb"}
+                      delivery={delivery}
+                    />
 
                     {/* Real behavior-driven popularity signal */}
                     <PopularityBadge signal={popularitySignal} />
@@ -1004,56 +963,21 @@ export default async function TireDetailPage({
             )}
 
             {/* Price + CTA Block */}
-            <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
-              {delivery.urgency && (
-                <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700">
-                  <span>⚡</span>
-                  <span>{delivery.urgency}</span>
-                </div>
-              )}
-
-              <div className="flex items-baseline gap-2">
-                {displayPrice != null ? (
-                  <>
-                    <div className="text-3xl font-extrabold text-neutral-900">{fmtMoney(displayPrice)}</div>
-                    <div className="text-sm text-neutral-500">per tire</div>
-                  </>
-                ) : (
-                  <div className="text-xl font-bold text-neutral-700">Call for pricing</div>
-                )}
-              </div>
-              {displayPrice != null && (
-                <div className="mt-1 text-sm text-neutral-600">
-                  Set of 4: <span className="font-bold text-green-700">{fmtMoney(displayPrice * 4)}</span>
-                </div>
-              )}
-
-              <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
-                <span className="text-base">{delivery.icon}</span>
-                <span>{delivery.text}</span>
-              </div>
-              
-              <div className="mt-4">
-                <AddTiresToCartButton
-                  sku={safeSku}
-                  brand={String(t.brand_desc || "Tire")}
-                  model={title}
-                  size={String(t.tire_size || t.simple_size || "")}
-                  loadIndex={t.load_index ? String(t.load_index) : undefined}
-                  speedRating={t.speed_rating ? String(t.speed_rating) : undefined}
-                  imageUrl={enrichedImageUrl || undefined}
-                  unitPrice={displayPrice ?? 0}
-                  vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
-                  quantity={4}
-                />
-              </div>
-              
-              {/* Compact trust line */}
-              <EnhancedTrustStrip 
-                hasVehicle={hasVehicle} 
-                hasWarranty={t.mileage_warranty ? Number(t.mileage_warranty) > 0 : true} 
-              />
-            </div>
+            <TireBuyBox
+              sku={safeSku}
+              brand={String(t.brand_desc || "Tire")}
+              model={title}
+              size={String(t.tire_size || t.simple_size || "")}
+              loadIndex={t.load_index ? String(t.load_index) : undefined}
+              speedRating={t.speed_rating ? String(t.speed_rating) : undefined}
+              imageUrl={enrichedImageUrl || undefined}
+              unitPrice={displayPrice}
+              vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
+              hasVehicle={hasVehicle}
+              hasWarranty={t.mileage_warranty ? Number(t.mileage_warranty) > 0 : true}
+              source="wheelpros"
+              delivery={delivery}
+            />
 
             {/* Real behavior-driven popularity signal */}
             <PopularityBadge signal={popularitySignal} />

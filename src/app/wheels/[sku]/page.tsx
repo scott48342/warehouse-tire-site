@@ -6,6 +6,7 @@ import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddToCartButton } from "@/components/AddToCartButton";
+import { WheelBuyBox } from "@/components/WheelBuyBox";
 import { BRAND } from "@/lib/brand";
 import { PDPTrustBlock } from "@/components/StoreReviews";
 import { vehicleSlug } from "@/lib/vehicleSlug";
@@ -485,57 +486,22 @@ export default async function WheelDetailPage({
             )}
 
             {/* Price + CTA Block */}
-            <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
-              <div className="flex items-baseline gap-2">
-                {typeof price === "number" && Number.isFinite(price) ? (
-                  <>
-                    <div className="text-3xl font-extrabold text-neutral-900">${price.toFixed(2)}</div>
-                    <div className="text-sm text-neutral-500">per wheel</div>
-                  </>
-                ) : (
-                  <div className="text-xl font-bold text-neutral-700">Call for price</div>
-                )}
-              </div>
-              {typeof price === "number" && Number.isFinite(price) && (
-                <div className="mt-1 text-sm text-neutral-600">
-                  Set of 4: <span className="font-bold text-green-700">${(price * 4).toFixed(2)}</span>
-                </div>
-              )}
-              
-              {/* Financing option - shows for set of 4 ($50-$30k) */}
-              {typeof price === "number" && Number.isFinite(price) && price * 4 >= 50 && (
-                <FinancingBadge price={price * 4} className="mt-2" />
-              )}
-
-              <div className="mt-3 flex items-center gap-2 text-sm text-green-700 font-semibold">
-                <span className="text-base">🚀</span>
-                <span>In stock · Ships fast</span>
-              </div>
-              
-              <div className="mt-4">
-                <AddToCartButton
-                  sku={sku}
-                  brand={brand || "Wheel"}
-                  model={String(it?.title || sku)}
-                  finish={finish || undefined}
-                  diameter={diameter || undefined}
-                  width={width || undefined}
-                  offset={offset || undefined}
-                  boltPattern={boltPattern || undefined}
-                  imageUrl={imageUrl}
-                  unitPrice={typeof price === "number" && Number.isFinite(price) ? price : 0}
-                  quantity={4}
-                  vehicle={hasVehicle ? { year, make, model, trim: trim || undefined, modification: modification || undefined } : undefined}
-                  className="w-full"
-                  showPriceInButton={typeof price === "number" && Number.isFinite(price)}
-                  dbProfile={dbProfile}
-                  wheelCenterBore={centerBore ? Number(centerBore) : undefined}
-                />
-              </div>
-              
-              {/* Trust strip */}
-              <WheelTrustStrip hasVehicle={hasVehicle} />
-            </div>
+            <WheelBuyBox
+              sku={sku}
+              brand={brand || "Wheel"}
+              model={String(it?.title || sku)}
+              finish={finish || undefined}
+              diameter={diameter || undefined}
+              width={width || undefined}
+              offset={offset || undefined}
+              boltPattern={boltPattern || undefined}
+              imageUrl={imageUrl}
+              unitPrice={typeof price === "number" && Number.isFinite(price) ? price : 0}
+              vehicle={hasVehicle ? { year, make, model, trim: trim || undefined, modification: modification || undefined } : undefined}
+              hasVehicle={hasVehicle}
+              dbProfile={dbProfile}
+              wheelCenterBore={centerBore ? Number(centerBore) : undefined}
+            />
 
             {/* Real behavior-driven popularity signal */}
             <PopularityBadge signal={popularitySignal} />
