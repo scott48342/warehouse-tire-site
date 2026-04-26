@@ -85,10 +85,12 @@ async function main() {
       console.log(`  ✅ ${idx.name}`);
     }
     
-    // Insert sample data for testing (optional)
+    // DISABLED: Sample data insertion removed - was polluting real analytics
+    // If you need test data, run scripts/insert-test-funnel-data.ts manually
+    const SKIP_SAMPLE_DATA = true;
     const { rows: countCheck } = await client.query('SELECT COUNT(*)::int as count FROM funnel_events');
     
-    if (countCheck[0].count === 0) {
+    if (countCheck[0].count === 0 && !SKIP_SAMPLE_DATA) {
       console.log('\n📝 Inserting sample data for testing...');
       
       const sampleSessions = 100;
