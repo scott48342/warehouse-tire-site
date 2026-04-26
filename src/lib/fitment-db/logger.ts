@@ -23,7 +23,8 @@ export interface FallbackEvent {
     | "year_inherit"         // Inherited data from adjacent year
     | "base_trim_fallback"   // Fell back to Base trim
     | "derived_wheel_size"   // Wheel size derived from tire
-    | "canonical_fallback";  // Used canonical key fallback
+    | "canonical_fallback"   // Used canonical key fallback
+    | "equivalence_fallback";// Used equivalence-checked fallback to certified trim
   from: string;
   to: string;
   vehicle?: string;
