@@ -49,13 +49,16 @@ export function clearCartId(): void {
 
 /**
  * Get session ID (use existing session storage or create)
+ * IMPORTANT: Must match format in src/lib/analytics/events.ts to ensure
+ * cart sessions link to analytics sessions!
  */
 function getSessionId(): string {
   if (typeof window === "undefined") return "";
   
   let sessionId = sessionStorage.getItem("wt_session_id");
   if (!sessionId) {
-    sessionId = `s-${Date.now().toString(36)}-${Math.random().toString(36).substring(2, 8)}`;
+    // Match analytics format: s_${timestamp}_${random}
+    sessionId = `s_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
     sessionStorage.setItem("wt_session_id", sessionId);
   }
   return sessionId;
