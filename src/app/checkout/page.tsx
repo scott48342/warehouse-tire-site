@@ -19,6 +19,13 @@ import { StoreSelector, StoreInfoCard } from "@/components/local";
 import { StripePaymentElement } from "@/components/StripePaymentElement";
 import { useDiscount } from "@/lib/discounts/DiscountContext";
 import { InstallTimeIndicator } from "@/components/InstallTimeIndicator";
+// Funnel analytics tracking (2026-04-26)
+import { 
+  trackBeginCheckout, 
+  trackCheckoutStep2, 
+  trackAddShippingInfo, 
+  trackAddPaymentInfo 
+} from "@/components/FunnelTracker";
 
 /**
  * Checkout Page
@@ -101,6 +108,16 @@ export default function CheckoutPage() {
   const [paymentCanceled, setPaymentCanceled] = useState(false);
   
   // ═══════════════════════════════════════════════════════════════════════════
+  // FUNNEL TRACKING
+  // Track begin_checkout when page loads (with cart value)
+  // ═══════════════════════════════════════════════════════════════════════════
+  useEffect(() => {
+    if (items.length > 0) {
+      trackBeginCheckout(cartTotal);
+    }
+  }, []); // Only on mount
+  
+  // ═══════════════════════════════════════════════════════════════════════════
   // CHECKOUT STATE PERSISTENCE
   // Restore shipping info when returning from canceled payment
   // ═══════════════════════════════════════════════════════════════════════════
@@ -144,6 +161,21 @@ export default function CheckoutPage() {
       setShipping((p) => ({ ...p, state: "MI" }));
     }
   }, [isLocal, shipping.state]);
+  
+  // Wrapper for step changes with funnel tracking
+  const goToStep = useCallback((newStep: "review" | "shipping" | "payment") => {
+    if (newStep === "shipping" && step === "review") {
+      trackCheckoutStep2(cartTotal);
+    } else if (newStep === "payment" && step === "shipping") {
+      // Track shipping info submission
+      trackAddShippingInfo(cartTotal);
+      trackAddPaymentInfo(cartTotal);
+    } else if (newStep === "payment" && step !== "payment") {
+      trackAddPaymentInfo(cartTotal);
+    }
+    setStep(newStep);
+  }, [step, cartTotal]);
+  
   const [stripeError, setStripeError] = useState<string | null>(null);
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
@@ -557,7 +589,7 @@ export default function CheckoutPage() {
               </button>
               <span className="text-neutral-300">→</span>
               <button
-                onClick={() => setStep("shipping")}
+                onClick={() => goToStep("shipping")}
                 className={`px-3 py-1 rounded-full ${
                   step === "shipping" ? "bg-green-100 text-green-800 font-bold" : "text-neutral-500"
                 }`}
@@ -719,7 +751,7 @@ export default function CheckoutPage() {
 
                 {/* Primary CTA */}
                 <button
-                  onClick={() => setStep("shipping")}
+                  onClick={() => goToStep("shipping")}
                   disabled={validation.errors.length > 0}
                   className={`w-full h-14 rounded-xl font-extrabold text-white text-lg ${
                     validation.errors.length > 0
@@ -879,7 +911,7 @@ export default function CheckoutPage() {
                     Back
                   </button>
                   <button
-                    onClick={() => setStep("payment")}
+                    onClick={() => goToStep("payment")}
                     disabled={isLocal && !selectedStore}
                     className={`flex-1 h-14 rounded-xl font-extrabold text-white text-lg ${
                       isLocal && !selectedStore

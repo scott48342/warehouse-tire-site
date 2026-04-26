@@ -39,6 +39,8 @@ import { FinancingBadge } from "@/components/FinancingBadge";
 // Rebate display (2026-04-12)
 import { RebatePDPBlockStatic } from "@/components/RebateBlock";
 import { getPool as getRebatePool, listActiveRebates, getBestMatchingRebate, type SiteRebate } from "@/lib/rebates";
+// Funnel analytics tracking (2026-04-26)
+import { ProductViewTracker } from "@/components/ProductViewTracker";
 
 export const runtime = "nodejs";
 
@@ -455,6 +457,13 @@ export default async function TireDetailPage({
           
           return (
             <main className="bg-neutral-50">
+              {/* Funnel tracking */}
+              <ProductViewTracker 
+                sku={tire.partNumber || safeSku} 
+                type="tire" 
+                vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+              />
+              
               <div className="mx-auto max-w-6xl px-4 py-8">
                 {/* Breadcrumb */}
                 <BackToTiresButton />

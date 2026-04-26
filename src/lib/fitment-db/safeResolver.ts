@@ -27,6 +27,14 @@ import { getModelVariants, wasAliasUsed } from "./modelAliases";
 import { fitmentLog } from "./logger";
 
 // ============================================================================
+// Certification Filter (2026-04-26)
+// STRICT: Only return certified records for runtime queries
+// No NULL fallback - all records are stamped as of certification pass
+// ============================================================================
+
+const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
+
+// ============================================================================
 // Types
 // ============================================================================
 
@@ -126,7 +134,8 @@ export async function safeResolveFitment(
           eq(vehicleFitments.year, year),
           ilike(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
-          eq(vehicleFitments.modificationId, normalizedModId)
+          eq(vehicleFitments.modificationId, normalizedModId),
+          CERTIFIED_FILTER
         )
       )
       .limit(1);
@@ -165,7 +174,8 @@ export async function safeResolveFitment(
           eq(vehicleFitments.year, year),
           ilike(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
-          eq(vehicleFitments.displayTrim, modificationId)
+          eq(vehicleFitments.displayTrim, modificationId),
+          CERTIFIED_FILTER
         )
       )
       .limit(1);
@@ -204,7 +214,8 @@ export async function safeResolveFitment(
           eq(vehicleFitments.year, year),
           ilike(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
-          ilike(vehicleFitments.displayTrim, modificationId)
+          ilike(vehicleFitments.displayTrim, modificationId),
+          CERTIFIED_FILTER
         )
       )
       .limit(5);
@@ -243,7 +254,8 @@ export async function safeResolveFitment(
         and(
           eq(vehicleFitments.year, year),
           ilike(vehicleFitments.make, normalizedMake),
-          ilike(vehicleFitments.model, modelName)
+          ilike(vehicleFitments.model, modelName),
+          CERTIFIED_FILTER
         )
       )
       .limit(50);

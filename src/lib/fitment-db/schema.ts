@@ -105,6 +105,15 @@ export const vehicleFitments = pgTable(
     // - "partial": has tire sizes but no wheel specs
     // - "low_confidence": missing data OR from unreliable sources
     qualityTier: varchar("quality_tier", { length: 20 }).default("unknown"),
+    
+    // Certification status (added 2026-04-26)
+    // - "certified": Verified wheel/tire compatibility, safe for package builder
+    // - "needs_review": Quarantined due to data quality issues
+    // - "wheel_safe": Core wheel specs valid, but tire data unreliable
+    certificationStatus: varchar("certification_status", { length: 50 }).default("certified"),
+    certificationErrors: jsonb("certification_errors").default([]),
+    auditOriginalData: jsonb("audit_original_data"),
+    quarantinedAt: timestamp("quarantined_at"),
   },
   (table) => ({
     // Primary lookup: year + make + model + modification

@@ -641,10 +641,46 @@ export async function GET(req: Request) {
             oemWheelSizes: dbProfile.oemWheelSizes.length,
             oemTireSizes: dbProfile.oemTireSizes.length,
             aliasUsed,
+            fallbackConfidence: profileResult.fallbackConfidence,
             timing: profileResult.timing,
           });
         } else {
           console.log(`[fitment-search] PROFILE NOT FOUND: ${year} ${make} ${model} mod=${modificationId}`);
+          
+          // Check if blocked due to needs_manual_verification
+          if (profileResult.fallbackConfidence === "needs_manual_verification" || 
+              profileResult.fallbackConfidence === "blocked") {
+            console.log(`[fitment-search] BLOCKED (${profileResult.fallbackConfidence}): No safe fallback available`);
+            console.log(`  Warnings: ${profileResult.fallbackWarnings?.join(", ") || "none"}`);
+            
+            // Return blocked response with verification messaging
+            return NextResponse.json({
+              results: [],
+              totalCount: 0,
+              blocked: true,
+              blockReason: "This trim requires manual fitment verification",
+              fitment: {
+                mode: "blocked",
+                vehicle: { year: Number(year), make, model, trim: modificationId || null },
+                resolutionPath: "invalid",
+                fallbackConfidence: profileResult.fallbackConfidence,
+                fallbackWarnings: profileResult.fallbackWarnings,
+                confidenceUI: {
+                  badge: profileResult.fallbackConfidence === "needs_manual_verification" 
+                    ? "Verification Required" 
+                    : "Fitment Unavailable",
+                  message: "This trim has unique fitment specs that need manual verification.",
+                  showGuaranteedFit: false,
+                  color: "orange",
+                },
+              },
+              suggestions: [
+                "Contact us at (248) 332-4120 for manual fitment verification",
+                "Our experts can verify the exact specs for your vehicle",
+              ],
+              timing: { totalMs: Date.now() - t0 },
+            });
+          }
         }
       } catch (profileErr: any) {
         console.error(`[fitment-search] ModificationId-first lookup failed:`, profileErr?.message || profileErr);
@@ -707,7 +743,10 @@ export async function GET(req: Request) {
       
       // Profile has good confidence - proceed with wheel search
       if (dbProfile.boltPattern) {
-        return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, aliasUsed, modeParam, debug, t0, confidenceResult);
+        return await handleDbProfilePath(
+          url, dbProfile, resolutionPath, canonicalModificationId, aliasUsed, modeParam, debug, t0, confidenceResult,
+          profileResult?.fallbackConfidence, profileResult?.fallbackWarnings
+        );
       }
     }
     
@@ -754,7 +793,8 @@ export async function GET(req: Request) {
             // Now proceed with wheel search
             const confidenceResult = calculateConfidence(dbProfile);
             if (confidenceResult.canShowWheels && dbProfile.boltPattern) {
-              return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult);
+              // Local DB fallback always returns certified records (CERTIFIED_FILTER applied in listLocalFitments)
+              return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult, "exact_certified");
             }
           }
         }
@@ -838,7 +878,8 @@ export async function GET(req: Request) {
           });
           
           // Now go through handleDbProfilePath which will apply the classic override
-          return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult);
+          // Classic vehicles use platform-based fitment, not trim-specific, so treat as exact
+          return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult, "exact_certified");
         }
       } catch (classicErr: any) {
         console.error(`[fitment-search] Classic fallback failed:`, classicErr?.message || classicErr);
@@ -876,7 +917,9 @@ async function handleDbProfilePath(
   modeParam: string | null,
   debug: boolean,
   t0: number,
-  confidenceResult?: ConfidenceResult
+  confidenceResult?: ConfidenceResult,
+  fallbackConfidence?: import("@/lib/fitment-db/fallbackEquivalence").FallbackConfidence,
+  fallbackWarnings?: string[]
 ): Promise<NextResponse> {
   const year = url.searchParams.get("year")!;
   const make = url.searchParams.get("make")!;
@@ -976,9 +1019,11 @@ async function handleDbProfilePath(
         ? `SELECT oem_tire_sizes FROM vehicle_fitments 
            WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3) 
            AND (LOWER(modification_id) = LOWER($4) OR LOWER(display_trim) = LOWER($4))
+           AND certification_status = 'certified'
            LIMIT 1`
         : `SELECT oem_tire_sizes FROM vehicle_fitments 
            WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3) 
+           AND certification_status = 'certified'
            LIMIT 10`;
       const params = modificationParam 
         ? [year, make, model, modificationParam]
@@ -1215,6 +1260,9 @@ async function handleDbProfilePath(
       oemTireSizes: dbProfile.oemTireSizes,
       source: dbProfile.source,
     },
+    // Fallback confidence (2026-04-26)
+    fallbackConfidence,
+    fallbackWarnings,
   });
 }
 
@@ -1309,6 +1357,9 @@ async function handleDbFirstWheelResults(opts: {
     oemTireSizes: string[];
     source: string;
   } | null;
+  // Fallback confidence (2026-04-26)
+  fallbackConfidence?: import("@/lib/fitment-db/fallbackEquivalence").FallbackConfidence;
+  fallbackWarnings?: string[];
 }): Promise<NextResponse> {
   const { url, envelope, debug, t0 } = opts;
   
@@ -2602,6 +2653,14 @@ async function handleDbFirstWheelResults(opts: {
         icon: confidenceUIMeta.icon,
         warningMessage: confidenceUIMeta.warningMessage,
       } : null,
+      // Fallback confidence (2026-04-26)
+      // Indicates reliability of trim-to-trim fallback
+      fallbackConfidence: opts.fallbackConfidence || "exact_certified",
+      fallbackWarnings: opts.fallbackWarnings || [],
+      // Show guaranteed fit badge only for exact_certified or equivalent_certified
+      showGuaranteedFit: opts.fallbackConfidence === "exact_certified" || 
+                         opts.fallbackConfidence === "equivalent_certified" ||
+                         !opts.fallbackConfidence,
       envelope: {
         boltPattern: envelope.boltPattern,
         centerBore: envelope.centerBore,
@@ -2701,6 +2760,32 @@ async function handleLegacyPath(
   let profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
   
   // ═══════════════════════════════════════════════════════════════════════════
+  // CERTIFICATION GATE (2026-04-26)
+  // Even if legacy profile exists, verify the vehicle is certified in vehicle_fitments.
+  // This prevents serving needs_review records through the legacy path.
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (profile) {
+    try {
+      const certCheck = await db.query(
+        `SELECT certification_status FROM vehicle_fitments 
+         WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+         AND certification_status = 'certified'
+         LIMIT 1`,
+        [Number(year), make, model]
+      );
+      
+      if (certCheck.rows.length === 0) {
+        // No certified record exists for this YMM - block the profile
+        console.log(`[fitment-search] CERTIFICATION GATE: ${year} ${make} ${model} - NO certified record found, blocking legacy profile`);
+        profile = null;
+      }
+    } catch (e) {
+      console.error(`[fitment-search] Certification check failed:`, e);
+      // On error, allow profile (fail-open for now)
+    }
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
   // AUTO-TRIM SELECTION (April 2026)
   // When no trim is provided and profile lookup fails, auto-select from available trims.
   // This prevents "Fitment Data Not Yet Available" when the vehicle HAS trim data.
@@ -2713,6 +2798,7 @@ async function handleLegacyPath(
         `SELECT DISTINCT modification_id, display_trim 
          FROM vehicle_fitments 
          WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+         AND certification_status = 'certified'
          ORDER BY display_trim
          LIMIT 10`,
         [Number(year), make, model]
@@ -2786,6 +2872,7 @@ async function handleLegacyPath(
     const tierResult = await db.query(
       `SELECT quality_tier FROM vehicle_fitments 
        WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+       AND certification_status = 'certified'
        ${lookupKey ? "AND (LOWER(modification_id) = LOWER($4) OR LOWER(display_trim) = LOWER($4))" : ""}
        LIMIT 1`,
       lookupKey ? [Number(year), make, model, lookupKey] : [Number(year), make, model]

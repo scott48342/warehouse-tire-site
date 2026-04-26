@@ -27,6 +27,18 @@ import {
   isTierAllowed,
   type QualityTierStats 
 } from "./qualityTier";
+import {
+  getCertificationFilterSQL,
+  isCertifiedFor,
+  type FlowType,
+} from "./certificationFilter";
+
+// ============================================================================
+// Certification Filter (2026-04-26)
+// STRICT: Only return certified records for runtime queries
+// ============================================================================
+
+const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
 
 // ============================================================================
 // Model Name Matching Helper
@@ -146,7 +158,8 @@ export async function listFitments(
         and(
           eq(vehicleFitments.year, year),
           ilike(vehicleFitments.make, normalizedMake),
-          ilike(vehicleFitments.model, modelName)
+          ilike(vehicleFitments.model, modelName),
+          CERTIFIED_FILTER
         )
       )
       .orderBy(asc(vehicleFitments.displayTrim));
@@ -268,7 +281,12 @@ export async function listFitmentsWithTierFilter(
     return { fitments: [], tierStats, usedFallback: false };
   }
   
-  // First, get ALL fitments to count tiers
+  // Map search type to flow type for certification filtering
+  const flowType: FlowType = searchType === "package" ? "package_builder" 
+    : searchType === "tire" ? "tire_search" 
+    : "wheel_search";
+  
+  // First, get ALL certified fitments to count tiers
   const allFitments = await db
     .select()
     .from(vehicleFitments)
@@ -276,7 +294,8 @@ export async function listFitmentsWithTierFilter(
       and(
         eq(vehicleFitments.year, year),
         ilike(vehicleFitments.make, normalizedMake),
-        modelMatch
+        modelMatch,
+        CERTIFIED_FILTER
       )
     )
     .orderBy(asc(vehicleFitments.displayTrim));
@@ -291,10 +310,20 @@ export async function listFitmentsWithTierFilter(
       else tierStats.low_confidence++;
     }
     
-    // Filter by allowed tiers
-    const filtered = allFitments.filter(f => 
-      isTierAllowed(f.qualityTier, searchType)
-    );
+    // Filter by allowed tiers AND certification status
+    const filtered = allFitments.filter(f => {
+      // Check quality tier
+      if (!isTierAllowed(f.qualityTier, searchType)) return false;
+      
+      // Check certification status
+      const certStatus = (f as any).certificationStatus as string | null;
+      if (!isCertifiedFor(certStatus as any, flowType)) {
+        console.log(`[getFitment] BLOCKED by certification: ${f.year} ${f.make} ${f.model} [${f.displayTrim}] - status=${certStatus}, flow=${flowType}`);
+        return false;
+      }
+      
+      return true;
+    });
     
     if (filtered.length > 0) {
       const withOverrides = await Promise.all(filtered.map(f => applyOverrides(f)));
@@ -377,7 +406,8 @@ async function findClosestCompleteYear(
           eq(vehicleFitments.year, tryYear),
           ilike(vehicleFitments.make, normalizedMake),
           modelMatch,
-          eq(vehicleFitments.qualityTier, "complete")
+          eq(vehicleFitments.qualityTier, "complete"),
+          CERTIFIED_FILTER
         )
       )
       .orderBy(asc(vehicleFitments.displayTrim));

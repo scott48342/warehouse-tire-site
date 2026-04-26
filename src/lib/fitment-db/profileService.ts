@@ -18,7 +18,20 @@
 import { db } from "./db";
 import { vehicleFitments, fitmentSourceRecords, modificationAliases } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, or, inArray, sql, ilike } from "drizzle-orm";
+import { eq, and, or, inArray, sql, ilike, ne } from "drizzle-orm";
+import { 
+  findBestFallback, 
+  type FallbackConfidence, 
+  type FallbackResult 
+} from "./fallbackEquivalence";
+
+// ============================================================================
+// Certification Filter (2026-04-26)
+// STRICT: Only return certified records for runtime queries
+// No NULL fallback - all records are stamped as of certification pass
+// ============================================================================
+
+const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
 
 /**
  * Case-insensitive make comparison for DB queries.
@@ -180,6 +193,11 @@ export interface ProfileLookupResult {
   };
   // Legacy compatibility
   source: "db" | "api" | "not_found" | "cache";
+  
+  // Fallback confidence (2026-04-26)
+  // Indicates how reliable the fitment data is for this specific trim
+  fallbackConfidence?: FallbackConfidence;
+  fallbackWarnings?: string[];
 }
 
 // ============================================================================
@@ -435,7 +453,8 @@ async function getProfileByModificationIdDirect(
         eq(vehicleFitments.year, year),
         makeCaseInsensitive(normalizedMake),
         modelNormalizedMatch(modelVariants),
-        eq(vehicleFitments.modificationId, normalizedModId)
+        eq(vehicleFitments.modificationId, normalizedModId),
+        CERTIFIED_FILTER
       )
     )
     .limit(1);
@@ -454,7 +473,8 @@ async function getProfileByModificationIdDirect(
         eq(vehicleFitments.year, year),
         makeCaseInsensitive(normalizedMake),
         modelNormalizedMatch(modelVariants),
-        eq(vehicleFitments.displayTrim, modificationId)  // Original case
+        eq(vehicleFitments.displayTrim, modificationId),  // Original case
+        CERTIFIED_FILTER
       )
     )
     .limit(1);
@@ -478,7 +498,8 @@ async function getProfileByModificationIdDirect(
         and(
           eq(vehicleFitments.year, year),
           makeCaseInsensitive(normalizedMake),
-          modelNormalizedMatch(modelVariants)
+          modelNormalizedMatch(modelVariants),
+          CERTIFIED_FILTER
         )
       )
       .limit(20);
@@ -573,7 +594,8 @@ async function getProfileByYMMFallback(
       and(
         eq(vehicleFitments.year, year),
         makeCaseInsensitive(normalizedMake),
-        modelNormalizedMatch(modelVariants)
+        modelNormalizedMatch(modelVariants),
+        CERTIFIED_FILTER
       )
     )
     .limit(10);
@@ -594,7 +616,8 @@ async function getProfileByYMMFallback(
           and(
             eq(vehicleFitments.year, adjYear),
             makeCaseInsensitive(normalizedMake),
-            modelNormalizedMatch(modelVariants)  // Use model aliases + normalized match
+            modelNormalizedMatch(modelVariants),  // Use model aliases + normalized match
+            CERTIFIED_FILTER
           )
         )
         .limit(5);
@@ -850,6 +873,7 @@ export async function getFitmentProfile(
           source: "db",
           apiCalled: false,
           overridesApplied: overrideResult.changed,
+          fallbackConfidence: "exact_certified", // Direct match to certified record
           timing: { dbLookupMs, totalMs: Date.now() - t0 },
         };
       }
@@ -924,12 +948,111 @@ export async function getFitmentProfile(
     console.log(`[profileService] DB MISS: ${year} ${make} ${model} mod=${modificationId} (db: ${dbLookupMs}ms, alias: ${aliasLookupMs}ms)`);
     
     // ─────────────────────────────────────────────────────────────────────────
-    // Step 2.5: YMM Fallback Lookup (for locally imported data with generated IDs)
-    // This handles cases where we imported fitment with manual_XXXX IDs
-    // but runtime requests use different modificationIds from Wheel-Size API
+    // Step 2.5: YMM Fallback with Equivalence Check (2026-04-26)
+    // 
+    // This handles cases where:
+    // - We imported fitment with manual_XXXX IDs but runtime uses different IDs
+    // - The requested trim is needs_review and we need a certified fallback
+    // 
+    // NEW: We now check fitment equivalence before allowing fallback.
+    // Only allow fallback if the trims are fitment-equivalent (same specs).
     // ─────────────────────────────────────────────────────────────────────────
     
     try {
+      // First, check if the requested modificationId exists but is needs_review
+      const [needsReviewRecord] = await db
+        .select()
+        .from(vehicleFitments)
+        .where(
+          and(
+            eq(vehicleFitments.year, year),
+            makeCaseInsensitive(normalizedMake),
+            modelNormalizedMatch(getModelVariants(model)),
+            eq(vehicleFitments.modificationId, requestedModId),
+            ne(vehicleFitments.certificationStatus, "certified")
+          )
+        )
+        .limit(1);
+      
+      // Get all certified candidates for equivalence check
+      const certifiedCandidates = await db
+        .select()
+        .from(vehicleFitments)
+        .where(
+          and(
+            eq(vehicleFitments.year, year),
+            makeCaseInsensitive(normalizedMake),
+            modelNormalizedMatch(getModelVariants(model)),
+            CERTIFIED_FILTER
+          )
+        )
+        .limit(20);
+      
+      ymmFallbackMs = Date.now() - t0 - dbLookupMs - (aliasLookupMs || 0);
+      
+      // If we have a needs_review record, use equivalence checking
+      if (needsReviewRecord) {
+        console.log(`[profileService] Found needs_review record: ${needsReviewRecord.displayTrim} (${needsReviewRecord.modificationId})`);
+        
+        const fallbackResult = findBestFallback(needsReviewRecord, certifiedCandidates);
+        
+        if (fallbackResult.allowed && fallbackResult.fallbackTrim) {
+          const overrideResult = await applyOverridesWithMeta(fallbackResult.fallbackTrim);
+          const profile = dbRecordToProfile(overrideResult.fitment, "db");
+          
+          console.log(`[profileService] FALLBACK (${fallbackResult.confidence}): ${needsReviewRecord.displayTrim} → ${fallbackResult.fallbackTrim.displayTrim}`);
+          console.log(`  Reasons: ${fallbackResult.reasons.join(", ")}`);
+          if (fallbackResult.warnings.length > 0) {
+            console.log(`  Warnings: ${fallbackResult.warnings.join(", ")}`);
+          }
+          
+          // Log fallback behavior
+          fitmentLog.fallback("equivalence_fallback", {
+            from: modificationId,
+            to: fallbackResult.fallbackTrim.modificationId,
+            vehicle: `${year} ${make} ${model}`,
+            details: { 
+              confidence: fallbackResult.confidence,
+              reasons: fallbackResult.reasons,
+            },
+          });
+          
+          return {
+            profile,
+            resolutionPath: "canonicalAlias",
+            requestedModificationId: requestedModId,
+            canonicalModificationId: fallbackResult.fallbackTrim.modificationId,
+            aliasUsed: true,
+            source: "db",
+            apiCalled: false,
+            overridesApplied: overrideResult.changed,
+            fallbackConfidence: fallbackResult.confidence,
+            fallbackWarnings: fallbackResult.warnings,
+            timing: { dbLookupMs, aliasLookupMs, ymmFallbackMs, totalMs: Date.now() - t0 },
+          };
+        } else {
+          // No safe fallback - return blocked status
+          console.log(`[profileService] NO SAFE FALLBACK: ${needsReviewRecord.displayTrim}`);
+          console.log(`  Reasons: ${fallbackResult.reasons.join(", ")}`);
+          
+          // Return null profile but with confidence info for UI
+          return {
+            profile: null,
+            resolutionPath: "not_found",
+            requestedModificationId: requestedModId,
+            canonicalModificationId: null,
+            aliasUsed: false,
+            source: "db",
+            apiCalled: false,
+            overridesApplied: false,
+            fallbackConfidence: fallbackResult.confidence,
+            fallbackWarnings: fallbackResult.warnings,
+            timing: { dbLookupMs, aliasLookupMs, ymmFallbackMs, totalMs: Date.now() - t0 },
+          };
+        }
+      }
+      
+      // No needs_review record - proceed with normal YMM fallback
       const ymmResult = await getProfileByYMMFallback(year, make, model);
       ymmFallbackMs = ymmResult.lookupMs;
       
@@ -984,6 +1107,7 @@ export async function getFitmentProfile(
             source: "db",
             apiCalled: false,
             overridesApplied: overrideResult.changed,
+            fallbackConfidence: "exact_certified", // Direct YMM match
             timing: { dbLookupMs, aliasLookupMs, ymmFallbackMs, totalMs: Date.now() - t0 },
           };
         }

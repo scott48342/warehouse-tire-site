@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState, useCallback, type ReactNode } from "react";
 import type { CartAccessoryItem, AccessoryRecommendationState } from "./accessoryTypes";
 import { getCartId } from "./useCartTracking";
+import { trackAddToCart as trackFunnelAddToCart } from "@/components/FunnelTracker";
 
 export type { CartAccessoryItem, AccessoryRecommendationState };
 
@@ -281,6 +282,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
     // Track add-to-cart event for tires/wheels (not accessories)
     if (item.type === "tire" || item.type === "wheel") {
       trackAddToCartEvent(item as CartWheelItem | CartTireItem, source);
+      
+      // Funnel analytics tracking
+      const typedItem = item as CartWheelItem | CartTireItem;
+      const cartValue = typedItem.unitPrice * typedItem.quantity;
+      trackFunnelAddToCart(
+        item.sku, 
+        item.type as "wheel" | "tire", 
+        cartValue,
+        typedItem.vehicle ? {
+          year: typedItem.vehicle.year,
+          make: typedItem.vehicle.make,
+          model: typedItem.vehicle.model,
+        } : undefined
+      );
     }
   }, []);
 

@@ -277,6 +277,7 @@ export async function clearCatalog(): Promise<void> {
 
 /**
  * Get makes from vehicle_fitments table for a specific year.
+ * STRICT: Only returns certified records.
  */
 export async function getFitmentMakesByYear(year: number): Promise<string[]> {
   try {
@@ -284,6 +285,7 @@ export async function getFitmentMakesByYear(year: number): Promise<string[]> {
       SELECT DISTINCT make
       FROM vehicle_fitments
       WHERE year = ${year}
+        AND certification_status = 'certified'
       ORDER BY make
     `);
     
@@ -298,13 +300,16 @@ export async function getFitmentMakesByYear(year: number): Promise<string[]> {
 
 /**
  * Get models from vehicle_fitments table for a specific year/make.
+ * STRICT: Only returns certified records.
  */
 export async function getFitmentModelsByYear(year: number, makeSlug: string): Promise<string[]> {
   try {
     const results = await db.execute(sql`
       SELECT DISTINCT model
       FROM vehicle_fitments
-      WHERE year = ${year} AND make = ${makeSlug.toLowerCase()}
+      WHERE year = ${year} 
+        AND make = ${makeSlug.toLowerCase()}
+        AND certification_status = 'certified'
       ORDER BY model
     `);
     

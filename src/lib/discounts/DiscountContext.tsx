@@ -10,6 +10,7 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from "react";
+import { trackFirstOrderCouponApplied } from "@/components/FunnelTracker";
 
 // ============================================================================
 // Types
@@ -114,6 +115,9 @@ export function DiscountProvider({ children }: { children: ReactNode }) {
                 source: urlCode ? "url" : "localStorage",
               });
             }
+            
+            // Funnel tracking
+            trackFirstOrderCouponApplied(code);
           } else {
             // Invalid code, clear storage
             localStorage.removeItem(STORAGE_KEYS.discountCode);

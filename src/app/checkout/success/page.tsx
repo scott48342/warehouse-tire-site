@@ -7,6 +7,8 @@ import { sendOrderConfirmationEmail } from "@/lib/email";
 import { CartRecoveryHandler } from "@/components/CartRecoveryHandler";
 import { GoogleAdsConversion } from "@/components/GoogleAdsConversion";
 import { AddYourBuildCTA } from "@/components/AddYourBuildCTA";
+// Funnel analytics tracking (2026-04-26)
+import { PurchaseTracker } from "@/components/PurchaseTracker";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -234,6 +236,13 @@ export default async function CheckoutSuccessPage({
     <main className="bg-neutral-50 min-h-screen">
       {/* Mark cart as recovered */}
       <CartRecoveryHandler orderId={order.id} />
+      
+      {/* Funnel analytics tracking */}
+      <PurchaseTracker 
+        orderId={order.id}
+        cartValue={totals.total}
+        couponCode={snapshot.discount?.code}
+      />
       
       {/* Google Ads conversion tracking */}
       <GoogleAdsConversion 

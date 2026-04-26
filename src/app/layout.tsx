@@ -9,6 +9,7 @@ import { CartTracker } from "@/components/CartTracker";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Analytics } from "@/components/Analytics";
+import { FunnelTracker } from "@/components/FunnelTracker";
 import { Chatwoot } from "@/components/Chatwoot";
 import { Suspense } from "react";
 
@@ -74,6 +75,7 @@ export default function RootLayout({
                 <CartTracker />
                 <Suspense fallback={null}>
                   <Analytics />
+                  <FunnelTracker />
                 </Suspense>
                 <ConditionalLayout>
                   {children}

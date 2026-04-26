@@ -10,6 +10,10 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { 
+  trackFirstOrderPopupShown, 
+  trackFirstOrderPopupSubmit 
+} from "./FunnelTracker";
 
 // ============================================================================
 // Storage Keys
@@ -124,6 +128,9 @@ export function FirstOrderPopup() {
       pageViews: pageViewsRef.current,
       device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
     });
+    
+    // Funnel tracking
+    trackFirstOrderPopupShown();
   }, [isEligible]);
 
   // ========== Trigger Logic ==========
@@ -256,6 +263,9 @@ export function FirstOrderPopup() {
       trackEvent("first_order_popup_submit", {
         device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
       });
+      
+      // Funnel tracking
+      trackFirstOrderPopupSubmit();
       
       // Auto-close after showing success
       setTimeout(() => {

@@ -1,134 +1,94 @@
 /**
- * Analytics Tracking API
+ * Analytics Event Tracking API
  * 
  * POST /api/analytics/track
- * Captures client-side page views and persists to database
  * 
- * @created 2026-04-23
- * @updated 2026-04-25 - Fixed: Actually write to database!
+ * Receives funnel events from client-side tracker.
  */
 
-import { NextResponse } from "next/server";
-import { headers, cookies } from "next/headers";
-import { trackPageView } from "@/lib/analytics/track";
+import { NextRequest, NextResponse } from 'next/server';
+import { Pool } from 'pg';
 
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+  ssl: { rejectUnauthorized: false },
+});
 
-// Cookie name for session tracking
-const SESSION_COOKIE = "wt_session_id";
-
-/**
- * Generate a unique session ID
- */
-function generateSessionId(): string {
-  return `s_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
-}
-
-/**
- * POST /api/analytics/track
- * 
- * Body:
- * - path: string (required)
- * - referrer: string (optional)
- */
-export async function POST(req: Request) {
+export async function POST(request: NextRequest) {
   try {
-    const body = await req.text();
-    let parsed;
+    const body = await request.json();
     
-    try {
-      parsed = JSON.parse(body);
-    } catch {
-      // Accept empty/malformed beacon requests gracefully
-      return new Response(null, { status: 204 });
-    }
-
-    const { path, referrer } = parsed;
-
-    if (!path) {
-      return new Response(null, { status: 204 });
-    }
-
-    // Skip admin and API routes
-    if (path.startsWith("/admin") || path.startsWith("/api")) {
-      return new Response(null, { status: 204 });
-    }
-
-    // Get headers for context
-    const headersList = await headers();
-    const cookieStore = await cookies();
-    
-    const ip = headersList.get("x-forwarded-for")?.split(",")[0]?.trim() || 
-               headersList.get("x-real-ip") || 
-               "unknown";
-    const userAgent = headersList.get("user-agent") || "";
-    const host = headersList.get("host") || headersList.get("x-forwarded-host") || "";
-    
-    // Geo headers (Vercel provides these)
-    const country = headersList.get("x-vercel-ip-country") || null;
-    const city = headersList.get("x-vercel-ip-city") || null;
-    const region = headersList.get("x-vercel-ip-country-region") || null;
-
-    // Get or create session ID
-    let sessionId = cookieStore.get(SESSION_COOKIE)?.value;
-    const isNewSession = !sessionId;
-    
-    if (!sessionId) {
-      sessionId = generateSessionId();
-    }
-
-    // Build full URL
-    const protocol = headersList.get("x-forwarded-proto") || "https";
-    const fullUrl = `${protocol}://${host}${path}`;
-
-    // Track the page view in the database
-    await trackPageView({
+    const {
+      eventName,
       sessionId,
-      path,
-      fullUrl,
-      referrer,
-      userAgent,
-      country,
-      city,
-      region,
-      isNewSession,
-      hostname: host,
-      // Pass cookies and headers for test detection
-      cookies: Object.fromEntries(
-        cookieStore.getAll().map(c => [c.name, c.value])
-      ),
-      headers: {
-        "user-agent": userAgent,
-        "x-forwarded-for": ip,
-      },
-    });
-
-    // Set session cookie if new
-    const response = new Response(null, { status: 204 });
+      userId,
+      trafficSource,
+      deviceType,
+      storeMode,
+      pageUrl,
+      productSku,
+      productType,
+      cartValue,
+      orderId,
+      couponCode,
+      utmSource,
+      utmMedium,
+      utmCampaign,
+      metadata,
+    } = body;
     
-    if (isNewSession) {
-      response.headers.set(
-        "Set-Cookie",
-        `${SESSION_COOKIE}=${sessionId}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 24 * 365}`
+    // Validate required fields
+    if (!eventName || !sessionId) {
+      return NextResponse.json(
+        { ok: false, error: 'Missing eventName or sessionId' },
+        { status: 400 }
       );
     }
-
-    return response;
-  } catch (err) {
-    console.error("[analytics/track] Error:", err);
-    // Still return 204 - analytics shouldn't break the site
-    return new Response(null, { status: 204 });
+    
+    // Get IP and user agent from headers
+    const userAgent = request.headers.get('user-agent') || '';
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 
+               request.headers.get('x-real-ip') || '';
+    const referrer = request.headers.get('referer') || '';
+    
+    // Insert event
+    await pool.query(`
+      INSERT INTO funnel_events (
+        event_name, session_id, user_id,
+        traffic_source, device_type, store_mode,
+        page_url, product_sku, product_type,
+        cart_value, order_id, coupon_code,
+        user_agent, ip_address, referrer,
+        utm_source, utm_medium, utm_campaign,
+        metadata
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19)
+    `, [
+      eventName,
+      sessionId,
+      userId || null,
+      trafficSource || null,
+      deviceType || null,
+      storeMode || null,
+      pageUrl || null,
+      productSku || null,
+      productType || null,
+      cartValue || null,
+      orderId || null,
+      couponCode || null,
+      userAgent,
+      ip,
+      referrer,
+      utmSource || null,
+      utmMedium || null,
+      utmCampaign || null,
+      JSON.stringify(metadata || {}),
+    ]);
+    
+    return NextResponse.json({ ok: true });
+    
+  } catch (error) {
+    console.error('[analytics/track] Error:', error);
+    // Return 200 even on error - don't break client
+    return NextResponse.json({ ok: false });
   }
-}
-
-/**
- * GET /api/analytics/track
- * Health check
- */
-export async function GET() {
-  return NextResponse.json({
-    ok: true,
-    message: "Analytics tracking endpoint",
-  });
 }

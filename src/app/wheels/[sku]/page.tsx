@@ -33,6 +33,8 @@ import { getCoAddedProductsForPDP } from "@/lib/analytics/coPurchaseServer";
 import { FinancingBadge } from "@/components/FinancingBadge";
 // Real vehicle gallery from WheelPros Canto (2026-04-20)
 import { WheelGalleryBlock } from "@/components/WheelGalleryBlock";
+// Funnel analytics tracking (2026-04-26)
+import { ProductViewTracker } from "@/components/ProductViewTracker";
 
 type WheelProsBrand = {
   code?: string;
@@ -397,6 +399,13 @@ export default async function WheelDetailPage({
 
   return (
     <main className="bg-neutral-50">
+      {/* Funnel tracking */}
+      <ProductViewTracker 
+        sku={sku} 
+        type="wheel" 
+        vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+      />
+      
       <div className="mx-auto max-w-6xl px-4 py-8">
         {/* Breadcrumb */}
         <Link href={buildBackLink()} className="text-sm font-extrabold text-neutral-900 hover:underline">← Back to wheels</Link>
