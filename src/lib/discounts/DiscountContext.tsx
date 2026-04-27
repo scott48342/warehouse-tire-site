@@ -172,6 +172,9 @@ export function DiscountProvider({ children }: { children: ReactNode }) {
         });
       }
       
+      // Funnel tracking (added 2026-04-27 - was missing for manual applies)
+      trackFirstOrderCouponApplied(code.toUpperCase());
+      
       setIsValidating(false);
       return { success: true };
     } catch (err) {

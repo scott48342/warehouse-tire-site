@@ -24,6 +24,7 @@ const SESSION_ID_KEY = "wtd_session_id";
 const SESSION_TRACKED_KEY = "wtd_session_tracked";
 const PRODUCT_VIEWS_KEY = "wtd_product_views";
 const CHECKOUT_TRACKED_KEY = "wtd_checkout_tracked";
+const COUPON_APPLIED_KEY = "wtd_coupons_applied";
 
 function getOrCreateSessionId(): string {
   if (typeof window === "undefined") return "";
@@ -128,8 +129,17 @@ async function sendEvent(options: TrackEventOptions): Promise<void> {
   
   // Skip internal/test traffic
   const hostname = window.location.hostname;
+  const pathname = window.location.pathname;
+  
+  // Skip localhost unless explicitly testing
   if (hostname === "localhost" && !window.location.search.includes("track=1")) {
     console.debug("[Funnel] Skipping localhost event:", options.eventName);
+    return;
+  }
+  
+  // Skip admin pages
+  if (pathname.startsWith("/admin")) {
+    console.debug("[Funnel] Skipping admin page event:", options.eventName);
     return;
   }
   
@@ -326,10 +336,22 @@ export function trackFirstOrderPopupSubmit(): void {
 }
 
 /**
- * Track first order coupon applied to cart
+ * Track first order coupon applied to cart (once per code per session)
  */
 export function trackFirstOrderCouponApplied(couponCode: string): void {
-  sendEvent({ eventName: "first_order_coupon_applied", couponCode });
+  if (typeof window === "undefined") return;
+  
+  // Dedupe: only track once per code per session
+  const appliedJson = sessionStorage.getItem(COUPON_APPLIED_KEY) || "[]";
+  const applied: string[] = JSON.parse(appliedJson);
+  
+  const normalizedCode = couponCode.toUpperCase();
+  if (applied.includes(normalizedCode)) return;
+  
+  applied.push(normalizedCode);
+  sessionStorage.setItem(COUPON_APPLIED_KEY, JSON.stringify(applied));
+  
+  sendEvent({ eventName: "first_order_coupon_applied", couponCode: normalizedCode });
 }
 
 /**

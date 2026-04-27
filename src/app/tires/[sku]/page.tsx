@@ -877,6 +877,13 @@ export default async function TireDetailPage({
 
   return (
     <main className="bg-neutral-50">
+      {/* Funnel tracking - WheelPros tires */}
+      <ProductViewTracker 
+        sku={safeSku} 
+        type="tire" 
+        vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+      />
+      
       <div className="mx-auto max-w-6xl px-4 py-8">
         {/* Breadcrumb */}
         <BackToTiresButton />
