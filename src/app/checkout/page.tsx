@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
@@ -44,6 +44,7 @@ export default function CheckoutPage() {
   const router = useRouter();
   const {
     items,
+    isHydrated,
     getWheels,
     getTires,
     getAccessories,
@@ -109,13 +110,20 @@ export default function CheckoutPage() {
   
   // ═══════════════════════════════════════════════════════════════════════════
   // FUNNEL TRACKING
-  // Track begin_checkout when page loads (with cart value)
+  // Track begin_checkout when cart is ready (must wait for hydration)
   // ═══════════════════════════════════════════════════════════════════════════
+  const checkoutTracked = useRef(false);
   useEffect(() => {
+    // Wait for cart to load from localStorage
+    if (!isHydrated) return;
+    // Only track once per page load
+    if (checkoutTracked.current) return;
+    // Only track if cart has items
     if (items.length > 0) {
+      checkoutTracked.current = true;
       trackBeginCheckout(cartTotal);
     }
-  }, []); // Only on mount
+  }, [isHydrated, items.length, cartTotal]);
   
   // ═══════════════════════════════════════════════════════════════════════════
   // CHECKOUT STATE PERSISTENCE

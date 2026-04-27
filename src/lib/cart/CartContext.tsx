@@ -136,6 +136,8 @@ export type CartItem = CartWheelItem | CartTireItem | CartAccessoryItem;
 
 type CartContextValue = {
   items: CartItem[];
+  /** Whether cart has loaded from localStorage (safe to check items.length) */
+  isHydrated: boolean;
   /** Add item to cart. Optional source for analytics (pdp, package, search, etc.) */
   addItem: (item: CartItem, source?: string) => void;
   addAccessory: (item: CartAccessoryItem) => void;
@@ -486,6 +488,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     <CartContext.Provider
       value={{
         items,
+        isHydrated: hydrated,
         addItem,
         addAccessory,
         addAccessories,
