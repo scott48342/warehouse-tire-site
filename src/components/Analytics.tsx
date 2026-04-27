@@ -27,7 +27,7 @@ export function Analytics() {
     // Track the page view
     const track = async () => {
       try {
-        await fetch("/api/analytics/track", {
+        await fetch("/api/analytics/pageview", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
