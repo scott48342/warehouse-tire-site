@@ -5,79 +5,76 @@
  * Returns currently active visitors on the site
  * 
  * @created 2026-04-18
- * @updated 2026-04-18 - Added cart data for visitors
+ * @updated 2026-04-27 - Switched to funnel_events table
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import { analyticsDb, schema } from "@/lib/analytics/db";
+import { Pool } from "pg";
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts } from "@/lib/fitment-db/schema";
-import { sql, gte, and, eq, desc, inArray } from "drizzle-orm";
-import { ensureAnalyticsTables } from "@/lib/analytics/track";
+import { sql, and, inArray } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+  ssl: { rejectUnauthorized: false },
+});
+
 export async function GET(request: NextRequest) {
   try {
-    await ensureAnalyticsTables();
-
     // Active = seen in last N minutes (default 5)
     const minutesParam = request.nextUrl.searchParams.get("minutes");
     const activeMinutes = Math.min(60, Math.max(1, Number(minutesParam) || 5));
     
-    const excludeBots = request.nextUrl.searchParams.get("bots") !== "include";
-    const includeTest = request.nextUrl.searchParams.get("includeTest") === "1";
     const siteFilter = request.nextUrl.searchParams.get("site");
 
-    const cutoff = new Date(Date.now() - activeMinutes * 60 * 1000);
-
-    // Build filters
-    const filters: any[] = [
-      gte(schema.analyticsSessions.lastSeenAt, cutoff),
-    ];
-    
-    if (excludeBots) {
-      filters.push(eq(schema.analyticsSessions.isBot, false));
-    }
-    if (!includeTest) {
-      filters.push(eq(schema.analyticsSessions.isTest, false));
-    }
-    if (siteFilter === "national") {
-      filters.push(eq(schema.analyticsSessions.hostname, "shop.warehousetiredirect.com"));
-    } else if (siteFilter === "local") {
-      filters.push(
-        sql`${schema.analyticsSessions.hostname} IN ('shop.warehousetire.net', 'warehousetire.net')`
-      );
-    } else if (siteFilter === "pos") {
-      filters.push(eq(schema.analyticsSessions.hostname, "pos.warehousetiredirect.com"));
+    // Build site filter condition
+    let siteCondition = "";
+    if (siteFilter === "local") {
+      siteCondition = "AND store_mode = 'local'";
+    } else if (siteFilter === "national") {
+      siteCondition = "AND store_mode = 'national'";
     }
 
-    // Get active visitors
-    const visitors = await analyticsDb
-      .select({
-        sessionId: schema.analyticsSessions.sessionId,
-        currentPage: schema.analyticsSessions.currentPage,
-        landingPage: schema.analyticsSessions.landingPage,
-        firstSeenAt: schema.analyticsSessions.firstSeenAt,
-        lastSeenAt: schema.analyticsSessions.lastSeenAt,
-        pageViewCount: schema.analyticsSessions.pageViewCount,
-        deviceType: schema.analyticsSessions.deviceType,
-        country: schema.analyticsSessions.country,
-        city: schema.analyticsSessions.city,
-        region: schema.analyticsSessions.region,
-        referrer: schema.analyticsSessions.referrer,
-        utmSource: schema.analyticsSessions.utmSource,
-        utmCampaign: schema.analyticsSessions.utmCampaign,
-        hostname: schema.analyticsSessions.hostname,
-      })
-      .from(schema.analyticsSessions)
-      .where(and(...filters))
-      .orderBy(desc(schema.analyticsSessions.lastSeenAt))
-      .limit(100);
+    // Get active visitors from funnel_events
+    const result = await pool.query(`
+      WITH recent_sessions AS (
+        SELECT DISTINCT session_id
+        FROM funnel_events
+        WHERE created_at >= NOW() - INTERVAL '${activeMinutes} minutes'
+          AND session_id IS NOT NULL
+          AND session_id != ''
+          ${siteCondition}
+      ),
+      session_summary AS (
+        SELECT 
+          fe.session_id,
+          MIN(fe.created_at) as first_seen_at,
+          MAX(fe.created_at) as last_seen_at,
+          COUNT(*) as event_count,
+          (ARRAY_AGG(fe.page_url ORDER BY fe.created_at ASC))[1] as landing_page,
+          (ARRAY_AGG(fe.page_url ORDER BY fe.created_at DESC))[1] as current_page,
+          (ARRAY_AGG(fe.traffic_source ORDER BY fe.created_at ASC))[1] as traffic_source,
+          (ARRAY_AGG(fe.device_type ORDER BY fe.created_at ASC))[1] as device_type,
+          (ARRAY_AGG(fe.store_mode ORDER BY fe.created_at ASC))[1] as store_mode,
+          (ARRAY_AGG(fe.referrer ORDER BY fe.created_at ASC))[1] as referrer,
+          (ARRAY_AGG(fe.utm_source ORDER BY fe.created_at ASC))[1] as utm_source,
+          (ARRAY_AGG(fe.utm_campaign ORDER BY fe.created_at ASC))[1] as utm_campaign
+        FROM funnel_events fe
+        WHERE fe.session_id IN (SELECT session_id FROM recent_sessions)
+        GROUP BY fe.session_id
+      )
+      SELECT * FROM session_summary
+      ORDER BY last_seen_at DESC
+      LIMIT 100
+    `);
+
+    const visitors = result.rows;
 
     // Get cart data for these sessions
-    const sessionIds = visitors.map(v => v.sessionId).filter(Boolean);
+    const sessionIds = visitors.map((v: any) => v.session_id).filter(Boolean);
     let cartsBySession: Map<string, any> = new Map();
     
     if (sessionIds.length > 0) {
@@ -99,7 +96,6 @@ export async function GET(request: NextRequest) {
           .where(
             and(
               inArray(abandonedCarts.sessionId, sessionIds),
-              // Only active/abandoned carts, not recovered
               sql`${abandonedCarts.status} IN ('active', 'abandoned')`
             )
           );
@@ -115,32 +111,38 @@ export async function GET(request: NextRequest) {
     }
 
     // Format visitors with computed fields
-    const formattedVisitors = visitors.map(v => {
-      const cart = cartsBySession.get(v.sessionId);
+    const formattedVisitors = visitors.map((v: any) => {
+      const cart = cartsBySession.get(v.session_id);
       const now = Date.now();
-      const lastSeenMs = new Date(v.lastSeenAt).getTime();
-      const firstSeenMs = new Date(v.firstSeenAt).getTime();
+      const lastSeenMs = new Date(v.last_seen_at).getTime();
+      const firstSeenMs = new Date(v.first_seen_at).getTime();
       const secondsAgo = Math.floor((now - lastSeenMs) / 1000);
       const sessionDurationSec = Math.floor((lastSeenMs - firstSeenMs) / 1000);
 
-      // Format location
-      let location = null;
-      if (v.city && v.region && v.country) {
-        location = `${v.city}, ${v.region}, ${v.country}`;
-      } else if (v.city && v.country) {
-        location = `${v.city}, ${v.country}`;
-      } else if (v.region && v.country) {
-        location = `${v.region}, ${v.country}`;
-      } else if (v.country) {
-        location = v.country;
-      }
+      // Extract paths from URLs
+      let currentPage = "/";
+      let landingPage = "/";
+      let hostname = "shop.warehousetiredirect.com";
+      try {
+        if (v.current_page) {
+          const url = new URL(v.current_page);
+          currentPage = url.pathname + url.search;
+          hostname = url.hostname;
+        }
+        if (v.landing_page) {
+          const url = new URL(v.landing_page);
+          landingPage = url.pathname + url.search;
+        }
+      } catch {}
 
       // Determine source
       let source = "Direct";
-      if (v.utmSource) {
-        source = v.utmCampaign 
-          ? `${v.utmSource} (${v.utmCampaign})`
-          : v.utmSource;
+      if (v.utm_source) {
+        source = v.utm_campaign 
+          ? `${v.utm_source} (${v.utm_campaign})`
+          : v.utm_source;
+      } else if (v.traffic_source && v.traffic_source !== "direct") {
+        source = v.traffic_source;
       } else if (v.referrer) {
         try {
           const refUrl = new URL(v.referrer);
@@ -180,21 +182,21 @@ export async function GET(request: NextRequest) {
       }
 
       return {
-        id: v.sessionId.slice(0, 8), // Short ID for display
-        sessionId: v.sessionId,
-        currentPage: v.currentPage || v.landingPage,
-        landingPage: v.landingPage,
-        pageViews: v.pageViewCount,
-        device: v.deviceType || "unknown",
-        location,
-        country: v.country,
-        city: v.city,
-        region: v.region,
+        id: v.session_id?.slice(0, 8) || "unknown",
+        sessionId: v.session_id,
+        currentPage,
+        landingPage,
+        pageViews: parseInt(v.event_count) || 1,
+        device: v.device_type || "unknown",
+        location: null, // funnel_events doesn't have geo yet
+        country: null,
+        city: null,
+        region: null,
         source,
         secondsAgo,
         lastSeenAgo: formatTimeAgo(secondsAgo),
         sessionDuration: formatDuration(sessionDurationSec),
-        hostname: v.hostname,
+        hostname,
         cart: cartData,
       };
     });
@@ -202,9 +204,9 @@ export async function GET(request: NextRequest) {
     // Summary stats
     const totalActive = formattedVisitors.length;
     const byDevice = {
-      mobile: formattedVisitors.filter(v => v.device === "mobile").length,
-      desktop: formattedVisitors.filter(v => v.device === "desktop").length,
-      tablet: formattedVisitors.filter(v => v.device === "tablet").length,
+      mobile: formattedVisitors.filter((v: any) => v.device === "mobile").length,
+      desktop: formattedVisitors.filter((v: any) => v.device === "desktop").length,
+      tablet: formattedVisitors.filter((v: any) => v.device === "tablet").length,
     };
     
     // Group by current page
@@ -231,7 +233,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error("[Live Visitors API] Error:", error);
     return NextResponse.json(
-      { error: "Failed to fetch live visitors" },
+      { error: "Failed to fetch live visitors", details: String(error) },
       { status: 500 }
     );
   }

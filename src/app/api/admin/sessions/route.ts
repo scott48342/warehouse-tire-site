@@ -2,16 +2,23 @@
  * Session History API
  * 
  * GET /api/admin/sessions
- * Returns recent sessions (including those that have left)
+ * Returns recent sessions aggregated from funnel_events
+ * 
+ * @updated 2026-04-27 - Switched to funnel_events table (was analytics_sessions)
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import { analyticsDb, schema } from "@/lib/analytics/db";
+import { Pool } from "pg";
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts } from "@/lib/fitment-db/schema";
-import { sql, gte, and, eq, desc, inArray, lte } from "drizzle-orm";
+import { inArray } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
+
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+  ssl: { rejectUnauthorized: false },
+});
 
 export async function GET(request: NextRequest) {
   try {
@@ -24,46 +31,52 @@ export async function GET(request: NextRequest) {
     const siteFilter = request.nextUrl.searchParams.get("site");
     const minPages = Number(request.nextUrl.searchParams.get("minPages")) || 1;
 
-    const cutoff = new Date(Date.now() - hours * 60 * 60 * 1000);
-
-    // Build filters
-    const filters: any[] = [
-      gte(schema.analyticsSessions.firstSeenAt, cutoff),
-      eq(schema.analyticsSessions.isBot, false),
-      eq(schema.analyticsSessions.isTest, false),
-      gte(schema.analyticsSessions.pageViewCount, minPages),
-    ];
-    
+    // Build site filter condition
+    let siteCondition = "";
     if (siteFilter === "local") {
-      filters.push(sql`${schema.analyticsSessions.hostname} LIKE '%warehousetire.net%'`);
+      siteCondition = "AND store_mode = 'local'";
     } else if (siteFilter === "national") {
-      filters.push(eq(schema.analyticsSessions.hostname, "shop.warehousetiredirect.com"));
+      siteCondition = "AND store_mode = 'national'";
     }
 
-    const sessions = await analyticsDb
-      .select({
-        sessionId: schema.analyticsSessions.sessionId,
-        firstSeenAt: schema.analyticsSessions.firstSeenAt,
-        lastSeenAt: schema.analyticsSessions.lastSeenAt,
-        landingPage: schema.analyticsSessions.landingPage,
-        currentPage: schema.analyticsSessions.currentPage,
-        pageViewCount: schema.analyticsSessions.pageViewCount,
-        deviceType: schema.analyticsSessions.deviceType,
-        country: schema.analyticsSessions.country,
-        city: schema.analyticsSessions.city,
-        region: schema.analyticsSessions.region,
-        referrer: schema.analyticsSessions.referrer,
-        utmSource: schema.analyticsSessions.utmSource,
-        utmCampaign: schema.analyticsSessions.utmCampaign,
-        hostname: schema.analyticsSessions.hostname,
-      })
-      .from(schema.analyticsSessions)
-      .where(and(...filters))
-      .orderBy(desc(schema.analyticsSessions.lastSeenAt))
-      .limit(limit);
+    // Aggregate sessions from funnel_events
+    const result = await pool.query(`
+      WITH session_summary AS (
+        SELECT 
+          session_id,
+          MIN(created_at) as first_seen_at,
+          MAX(created_at) as last_seen_at,
+          COUNT(*) as event_count,
+          -- Get first event's data
+          (ARRAY_AGG(page_url ORDER BY created_at ASC))[1] as landing_page,
+          (ARRAY_AGG(page_url ORDER BY created_at DESC))[1] as current_page,
+          (ARRAY_AGG(traffic_source ORDER BY created_at ASC))[1] as traffic_source,
+          (ARRAY_AGG(device_type ORDER BY created_at ASC))[1] as device_type,
+          (ARRAY_AGG(store_mode ORDER BY created_at ASC))[1] as store_mode,
+          (ARRAY_AGG(referrer ORDER BY created_at ASC))[1] as referrer,
+          (ARRAY_AGG(utm_source ORDER BY created_at ASC))[1] as utm_source,
+          (ARRAY_AGG(utm_campaign ORDER BY created_at ASC))[1] as utm_campaign,
+          (ARRAY_AGG(ip_address ORDER BY created_at ASC))[1] as ip_address,
+          (ARRAY_AGG(user_agent ORDER BY created_at ASC))[1] as user_agent,
+          -- Check for cart events
+          MAX(CASE WHEN event_name = 'add_to_cart' THEN 1 ELSE 0 END) as has_cart
+        FROM funnel_events
+        WHERE created_at >= NOW() - INTERVAL '${hours} hours'
+          AND session_id IS NOT NULL
+          AND session_id != ''
+          ${siteCondition}
+        GROUP BY session_id
+        HAVING COUNT(*) >= ${minPages}
+      )
+      SELECT * FROM session_summary
+      ORDER BY last_seen_at DESC
+      LIMIT ${limit}
+    `);
+
+    const sessions = result.rows;
 
     // Get cart data for these sessions
-    const sessionIds = sessions.map(s => s.sessionId).filter(Boolean);
+    const sessionIds = sessions.map((s: any) => s.session_id).filter(Boolean);
     const cartsBySession: Map<string, any> = new Map();
     
     if (sessionIds.length > 0) {
@@ -95,29 +108,45 @@ export async function GET(request: NextRequest) {
 
     // Format sessions
     const now = Date.now();
-    const formattedSessions = sessions.map(s => {
-      const firstSeenMs = new Date(s.firstSeenAt).getTime();
-      const lastSeenMs = new Date(s.lastSeenAt).getTime();
+    const formattedSessions = sessions.map((s: any) => {
+      const firstSeenMs = new Date(s.first_seen_at).getTime();
+      const lastSeenMs = new Date(s.last_seen_at).getTime();
       const durationSec = Math.floor((lastSeenMs - firstSeenMs) / 1000);
       const minutesAgo = Math.floor((now - lastSeenMs) / 60000);
       
       const isActive = minutesAgo < 5;
-      
-      let location = null;
-      if (s.city && s.region) {
-        location = `${s.city}, ${s.region}`;
-      } else if (s.city || s.region) {
-        location = s.city || s.region;
-      }
-      if (s.country && location) {
-        location += `, ${s.country}`;
-      } else if (s.country) {
-        location = s.country;
+
+      // Extract path from URL
+      let landingPath = "/";
+      let currentPath = "/";
+      try {
+        if (s.landing_page) {
+          const url = new URL(s.landing_page);
+          landingPath = url.pathname + url.search;
+        }
+        if (s.current_page) {
+          const url = new URL(s.current_page);
+          currentPath = url.pathname + url.search;
+        }
+      } catch {
+        landingPath = s.landing_page || "/";
+        currentPath = s.current_page || landingPath;
       }
 
+      // Determine hostname/site from landing page
+      let hostname = "shop.warehousetiredirect.com";
+      try {
+        if (s.landing_page) {
+          hostname = new URL(s.landing_page).hostname;
+        }
+      } catch {}
+
+      // Format source
       let source = "Direct";
-      if (s.utmSource) {
-        source = s.utmCampaign ? `${s.utmSource} (${s.utmCampaign})` : s.utmSource;
+      if (s.utm_source) {
+        source = s.utm_campaign ? `${s.utm_source} (${s.utm_campaign})` : s.utm_source;
+      } else if (s.traffic_source && s.traffic_source !== "direct") {
+        source = s.traffic_source;
       } else if (s.referrer) {
         try {
           source = new URL(s.referrer).hostname.replace("www.", "");
@@ -126,11 +155,11 @@ export async function GET(request: NextRequest) {
         }
       }
 
-      const cart = cartsBySession.get(s.sessionId);
+      const cart = cartsBySession.get(s.session_id);
       
       return {
-        sessionId: s.sessionId,
-        shortId: s.sessionId.slice(0, 8),
+        sessionId: s.session_id,
+        shortId: s.session_id?.slice(0, 8) || "unknown",
         isActive,
         minutesAgo,
         timeAgo: minutesAgo < 60 
@@ -138,20 +167,20 @@ export async function GET(request: NextRequest) {
           : minutesAgo < 1440 
             ? `${Math.floor(minutesAgo / 60)}h ago`
             : `${Math.floor(minutesAgo / 1440)}d ago`,
-        firstSeenAt: s.firstSeenAt,
-        lastSeenAt: s.lastSeenAt,
+        firstSeenAt: s.first_seen_at,
+        lastSeenAt: s.last_seen_at,
         duration: durationSec < 60 
           ? `${durationSec}s` 
           : `${Math.floor(durationSec / 60)}m ${durationSec % 60}s`,
-        landingPage: s.landingPage,
-        lastPage: s.currentPage || s.landingPage,
-        pageViews: s.pageViewCount,
-        device: s.deviceType || "unknown",
-        location,
+        landingPage: landingPath,
+        lastPage: currentPath,
+        pageViews: parseInt(s.event_count) || 1,
+        device: s.device_type || "unknown",
+        location: null, // funnel_events doesn't have geo data yet
         source,
-        hostname: s.hostname,
-        site: s.hostname?.includes("warehousetire.net") ? "local" 
-            : s.hostname?.includes("pos.") ? "pos" 
+        hostname,
+        site: s.store_mode === "local" ? "local" 
+            : hostname?.includes("pos.") ? "pos" 
             : "national",
         cart: cart ? {
           cartId: cart.cartId,
@@ -170,13 +199,13 @@ export async function GET(request: NextRequest) {
       generated: new Date().toISOString(),
       hours,
       totalSessions: formattedSessions.length,
-      activeSessions: formattedSessions.filter(s => s.isActive).length,
+      activeSessions: formattedSessions.filter((s: any) => s.isActive).length,
       sessions: formattedSessions,
     });
   } catch (error) {
     console.error("[Sessions API] Error:", error);
     return NextResponse.json(
-      { error: "Failed to fetch sessions" },
+      { error: "Failed to fetch sessions", details: String(error) },
       { status: 500 }
     );
   }
