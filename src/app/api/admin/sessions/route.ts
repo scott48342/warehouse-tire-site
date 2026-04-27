@@ -58,6 +58,16 @@ export async function GET(request: NextRequest) {
           (ARRAY_AGG(utm_campaign ORDER BY created_at ASC))[1] as utm_campaign,
           (ARRAY_AGG(ip_address ORDER BY created_at ASC))[1] as ip_address,
           (ARRAY_AGG(user_agent ORDER BY created_at ASC))[1] as user_agent,
+          -- Page history (all pages visited in order, limit to 50)
+          (ARRAY_AGG(DISTINCT page_url ORDER BY page_url))[1:50] as pages_visited,
+          -- Events list for timeline
+          ARRAY_AGG(
+            json_build_object(
+              'event', event_name,
+              'url', page_url,
+              'time', created_at
+            ) ORDER BY created_at ASC
+          ) as events,
           -- Check for cart events
           MAX(CASE WHEN event_name = 'add_to_cart' THEN 1 ELSE 0 END) as has_cart
         FROM funnel_events
@@ -157,6 +167,43 @@ export async function GET(request: NextRequest) {
 
       const cart = cartsBySession.get(s.session_id);
       
+      // Parse pages visited into paths
+      const pagesVisited: string[] = [];
+      if (Array.isArray(s.pages_visited)) {
+        for (const url of s.pages_visited) {
+          if (!url) continue;
+          try {
+            const parsed = new URL(url);
+            pagesVisited.push(parsed.pathname + parsed.search);
+          } catch {
+            pagesVisited.push(url);
+          }
+        }
+      }
+
+      // Parse events timeline
+      const events: Array<{ event: string; url: string; time: string }> = [];
+      if (Array.isArray(s.events)) {
+        for (const evt of s.events.slice(0, 50)) { // Limit to 50 events
+          if (evt && typeof evt === 'object') {
+            let path = '/';
+            try {
+              if (evt.url) {
+                const parsed = new URL(evt.url);
+                path = parsed.pathname + parsed.search;
+              }
+            } catch {
+              path = evt.url || '/';
+            }
+            events.push({
+              event: evt.event || 'unknown',
+              url: path,
+              time: evt.time,
+            });
+          }
+        }
+      }
+      
       return {
         sessionId: s.session_id,
         shortId: s.session_id?.slice(0, 8) || "unknown",
@@ -175,6 +222,8 @@ export async function GET(request: NextRequest) {
         landingPage: landingPath,
         lastPage: currentPath,
         pageViews: parseInt(s.event_count) || 1,
+        pages: pagesVisited,
+        events,
         device: s.device_type || "unknown",
         location: null, // funnel_events doesn't have geo data yet
         source,
