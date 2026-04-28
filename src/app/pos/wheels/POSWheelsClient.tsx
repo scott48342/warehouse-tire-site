@@ -6,6 +6,7 @@ import Link from "next/link";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { usePOS, type POSWheel, type SetupMode } from "@/components/pos/POSContext";
 import { createSelectedWheel, formatWheelSize, type WheelPairInfo } from "@/lib/fitment/staggeredFitment";
+import { getLiftProfile, getRecommendationForLiftHeight } from "@/lib/liftedRecommendations";
 
 // ============================================================================
 // Types
@@ -395,11 +396,22 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
         if (trim) params.set("trim", trim);
         if (sort) params.set("sort", sort);
 
-        // Add lifted configuration params
+        // Add lifted configuration params with offset filtering
         if (state.buildType !== "stock" && state.liftConfig) {
           params.set("liftInches", String(state.liftConfig.liftInches));
           if (state.liftConfig.targetTireSize) {
             params.set("targetTireSize", String(state.liftConfig.targetTireSize));
+          }
+          
+          // Get offset range from lift recommendations
+          const liftProfile = getLiftProfile(make, model);
+          if (liftProfile) {
+            const rec = getRecommendationForLiftHeight(liftProfile, state.liftConfig.liftInches);
+            if (rec) {
+              params.set("offsetMin", String(rec.offsetMin));
+              params.set("offsetMax", String(rec.offsetMax));
+              console.log(`[POSWheels] Lift ${state.liftConfig.liftInches}" → offset range [${rec.offsetMin}, ${rec.offsetMax}]`);
+            }
           }
         }
 
