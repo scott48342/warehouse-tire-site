@@ -68,12 +68,27 @@ function POSBuildTypeStepInner() {
   const router = useRouter();
   const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
   
-  // Debug logging
-  console.log("[POSBuildTypeStep] Rendering with state:", {
-    vehicle: state.vehicle,
-    buildType: state.buildType,
-    step: state.step,
-  });
+  // Debug: Check if state values are valid
+  console.log("[POSBuildTypeStep] state.vehicle:", state.vehicle);
+  console.log("[POSBuildTypeStep] state.buildType:", state.buildType);
+  console.log("[POSBuildTypeStep] typeof state.vehicle:", typeof state.vehicle);
+  
+  // Safety check - if no vehicle, show loading
+  if (!state.vehicle) {
+    return (
+      <div className="mx-auto max-w-4xl px-4 py-8 text-center text-white">
+        <p>Loading vehicle data...</p>
+      </div>
+    );
+  }
+  
+  // Defensive: ensure vehicle properties are strings
+  const safeVehicle = {
+    year: String(state.vehicle.year || ""),
+    make: String(state.vehicle.make || ""),
+    model: String(state.vehicle.model || ""),
+    trim: state.vehicle.trim ? String(state.vehicle.trim) : undefined,
+  };
 
   // Local state
   const [selectedBuildType, setSelectedBuildType] = useState<POSBuildType>(state.buildType);
@@ -130,10 +145,15 @@ function POSBuildTypeStepInner() {
     fetchStaggeredInfo();
   }, [state.vehicle, setStaggeredInfo]);
 
-  // Lift profile for vehicle
-  const liftProfile = state.vehicle
-    ? getLiftProfile(state.vehicle.make, state.vehicle.model)
-    : null;
+  // Lift profile for vehicle (with safety check)
+  let liftProfile = null;
+  try {
+    if (state.vehicle?.make && state.vehicle?.model) {
+      liftProfile = getLiftProfile(String(state.vehicle.make), String(state.vehicle.model));
+    }
+  } catch (e) {
+    console.error("[POSBuildTypeStep] Error getting lift profile:", e);
+  }
 
   // Recommendation based on current lift height
   const recommendation = liftProfile
