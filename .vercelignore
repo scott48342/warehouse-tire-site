@@ -1,0 +1,17 @@
+# Large files causing function size errors
+scripts/neon-migration/*.sql
+scripts/social-content/output/
+scripts/fitment-audit/*.json
+scripts/fitment-audit/*.csv
+scripts/verification/results-overnight/
+scripts/verification/batches-overnight/
+scripts/verification/results/
+scripts/tire-validation/results/
+scripts/tire-validation/batches/
+scripts/tire-validation/*.json
+scripts/90s-research/
+scripts/wheel-research/results/
+scripts/gallery/extracted/
+scripts/fitment-config/staging/
+public/training images/
+docs/screenshots/
