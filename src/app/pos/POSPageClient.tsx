@@ -1,6 +1,6 @@
 "use client";
 
-import { Component, type ReactNode, type ErrorInfo, Suspense, lazy } from "react";
+import { Component, type ReactNode, type ErrorInfo } from "react";
 import {
   usePOS,
   POSStepIndicator,
@@ -9,12 +9,7 @@ import {
   POSBuildTypeStep,
 } from "@/components/pos";
 
-// Lazy load other step components to isolate the issue
-const POSPackageStep = lazy(() => import("@/components/pos/POSPackageStep").then(m => ({ default: m.POSPackageStep })));
-const POSPricingStep = lazy(() => import("@/components/pos/POSPricingStep").then(m => ({ default: m.POSPricingStep })));
-const POSQuoteStep = lazy(() => import("@/components/pos/POSQuoteStep").then(m => ({ default: m.POSQuoteStep })));
-
-// Error Boundary for debugging
+// Error Boundary
 class POSErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean; error: Error | null; errorInfo: ErrorInfo | null }> {
   constructor(props: { children: ReactNode }) {
     super(props);
@@ -60,22 +55,21 @@ class POSErrorBoundary extends Component<{ children: ReactNode }, { hasError: bo
   }
 }
 
-// ============================================================================
-// Step Router
-// ============================================================================
+// Placeholder for steps we're not testing
+function PlaceholderStep({ name }: { name: string }) {
+  return (
+    <div className="mx-auto max-w-4xl px-4 py-8 text-center text-white">
+      <h1 className="text-2xl font-bold">{name}</h1>
+      <p className="mt-4 text-neutral-400">This step is disabled for testing</p>
+    </div>
+  );
+}
 
+// Step Router
 function StepRouter() {
   const { state } = usePOS();
   
-  // Debug logging
-  console.log("[StepRouter] Current step:", state.step, "Vehicle:", state.vehicle);
-  
-  // Fallback for lazy loaded components
-  const LazyFallback = () => (
-    <div className="flex items-center justify-center py-12">
-      <div className="text-neutral-400">Loading...</div>
-    </div>
-  );
+  console.log("[StepRouter] Current step:", state.step);
   
   switch (state.step) {
     case "vehicle":
@@ -83,35 +77,18 @@ function StepRouter() {
     case "build-type":
       return <POSBuildTypeStep />;
     case "package":
-      return (
-        <Suspense fallback={<LazyFallback />}>
-          <POSPackageStep />
-        </Suspense>
-      );
+      return <PlaceholderStep name="Package Step" />;
     case "pricing":
-      return (
-        <Suspense fallback={<LazyFallback />}>
-          <POSPricingStep />
-        </Suspense>
-      );
+      return <PlaceholderStep name="Pricing Step" />;
     case "quote":
-      return (
-        <Suspense fallback={<LazyFallback />}>
-          <POSQuoteStep />
-        </Suspense>
-      );
+      return <PlaceholderStep name="Quote Step" />;
     default:
       return <POSVehicleStep />;
   }
 }
 
-// ============================================================================
 // Main POS Page Client
-// ============================================================================
-
 export function POSPageClient() {
-  // POSProvider and POSHeader are in the app layout (shared across all /pos/* routes)
-  // This page has its own dark theme container
   return (
     <POSErrorBoundary>
       <div className="min-h-screen bg-neutral-950 text-white flex flex-col">
