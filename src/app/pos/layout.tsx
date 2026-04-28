@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { POSProvider, POSHeader, POSAdminPanel } from "@/components/pos";
 import { POSAuthGate } from "@/components/pos/POSAuthGate";
+import { POSLayoutErrorBoundary } from "@/components/pos/POSLayoutErrorBoundary";
 
 export const metadata: Metadata = {
   title: "Warehouse Tire Direct | In-Store Sales",
@@ -23,11 +24,13 @@ export default function POSLayout({
   // POSHeader shows vehicle badge, out-the-door price, and New Quote button on ALL POS pages
   return (
     <POSAuthGate>
-      <POSProvider>
-        <POSHeader />
-        {children}
-        <POSAdminPanel />
-      </POSProvider>
+      <POSLayoutErrorBoundary>
+        <POSProvider>
+          <POSHeader />
+          {children}
+          <POSAdminPanel />
+        </POSProvider>
+      </POSLayoutErrorBoundary>
     </POSAuthGate>
   );
 }

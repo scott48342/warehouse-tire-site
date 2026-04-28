@@ -23,3 +23,4 @@ export { POSBuildTypeStep } from "./POSBuildTypeStep";
 export { POSPricingStep } from "./POSPricingStep";
 export { POSQuoteStep } from "./POSQuoteStep";
 export { POSPackageStep } from "./POSPackageStep";
+export { POSLayoutErrorBoundary } from "./POSLayoutErrorBoundary";
