@@ -32,6 +32,9 @@ type QuickPreset = {
 // ============================================================================
 
 export function POSBuildTypeStep() {
+  // DEBUG: Minimal render to isolate error
+  return <div className="p-8 text-white">Build Type Step Loading... (debug)</div>;
+  
   // NOTE: Removed useRouter() - was causing React error #310 in useMemo
   // Using window.location for navigation instead
   const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
