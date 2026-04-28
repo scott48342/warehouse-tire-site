@@ -3,7 +3,7 @@
 import { usePOS } from "./POSContext";
 
 // ============================================================================
-// Super Minimal Component - No extra hooks
+// Super Minimal Component - No extra hooks (v2)
 // ============================================================================
 
 function POSBuildTypeStepInner() {
