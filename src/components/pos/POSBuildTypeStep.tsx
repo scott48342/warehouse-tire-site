@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Component, type ReactNode, type ErrorInfo } from "react";
 import { useRouter } from "next/navigation";
 import { usePOS, type POSBuildType, type POSLiftConfig, type SetupMode } from "./POSContext";
 import {
@@ -13,6 +13,39 @@ import {
   getRecommendationForLiftHeight,
   type LiftLevel,
 } from "@/lib/liftedRecommendations";
+
+// Error Boundary for debugging
+class BuildStepErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean; error: Error | null }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error("[POSBuildTypeStep] Error caught:", error);
+    console.error("[POSBuildTypeStep] Component stack:", errorInfo.componentStack);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="mx-auto max-w-2xl px-4 py-12 text-center">
+          <h1 className="text-xl font-bold text-red-500 mb-4">Build Type Step Error</h1>
+          <pre className="text-left text-xs text-red-300 bg-red-900/20 p-4 rounded overflow-auto">
+            {this.state.error?.message}
+            {"\n\n"}
+            {this.state.error?.stack}
+          </pre>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 // ============================================================================
 // Quick Preset Type
@@ -31,9 +64,16 @@ type QuickPreset = {
 // Component
 // ============================================================================
 
-export function POSBuildTypeStep() {
+function POSBuildTypeStepInner() {
   const router = useRouter();
   const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
+  
+  // Debug logging
+  console.log("[POSBuildTypeStep] Rendering with state:", {
+    vehicle: state.vehicle,
+    buildType: state.buildType,
+    step: state.step,
+  });
 
   // Local state
   const [selectedBuildType, setSelectedBuildType] = useState<POSBuildType>(state.buildType);
@@ -401,5 +441,14 @@ export function POSBuildTypeStep() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Exported wrapper with error boundary
+export function POSBuildTypeStep() {
+  return (
+    <BuildStepErrorBoundary>
+      <POSBuildTypeStepInner />
+    </BuildStepErrorBoundary>
   );
 }
