@@ -23,7 +23,7 @@ export function Chatwoot() {
             s.parentNode.insertBefore(g, s);
             g.onload = function() {
               window.chatwootSDK.run({
-                websiteToken: "JeutESWHf6eiJe1WayfrV6jA",
+                websiteToken: "JeutE5WhFGeJJelWgyFrV6jA",
                 baseUrl: BASE_URL
               });
             };
