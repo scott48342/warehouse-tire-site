@@ -37,7 +37,8 @@ interface Session {
 
 interface PageTimeline {
   path: string;
-  timeDisplay: string;
+  timestamp: number;
+  time?: string;
 }
 
 interface SessionsData {
@@ -351,25 +352,33 @@ export default function SessionsPage() {
                                 📍 Full Page Journey
                               </div>
                               <div className="flex flex-wrap gap-2 items-center">
-                                {timeline.map((page, idx) => (
-                                  <div key={idx} className="flex items-center gap-1">
-                                    <a
-                                      href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${page.path}`}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="bg-neutral-800 px-2 py-1 rounded text-xs hover:bg-neutral-700"
-                                      onClick={(e) => e.stopPropagation()}
-                                    >
-                                      <span className="text-neutral-400">{page.timeDisplay}</span>
-                                      <span className="text-blue-400 ml-2 hover:underline">
-                                        {page.path === "/" ? "Homepage" : page.path}
-                                      </span>
-                                    </a>
-                                    {idx < timeline.length - 1 && (
-                                      <span className="text-neutral-600">→</span>
-                                    )}
-                                  </div>
-                                ))}
+                                {timeline.map((page, idx) => {
+                                  // Format timestamp in user's local timezone
+                                  const timeDisplay = page.timestamp 
+                                    ? new Date(page.timestamp).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+                                    : page.time 
+                                      ? new Date(page.time).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+                                      : '';
+                                  return (
+                                    <div key={idx} className="flex items-center gap-1">
+                                      <a
+                                        href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${page.path}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-neutral-800 px-2 py-1 rounded text-xs hover:bg-neutral-700"
+                                        onClick={(e) => e.stopPropagation()}
+                                      >
+                                        <span className="text-neutral-400">{timeDisplay}</span>
+                                        <span className="text-blue-400 ml-2 hover:underline">
+                                          {page.path === "/" ? "Homepage" : page.path}
+                                        </span>
+                                      </a>
+                                      {idx < timeline.length - 1 && (
+                                        <span className="text-neutral-600">→</span>
+                                      )}
+                                    </div>
+                                  );
+                                })}
                               </div>
                             </div>
                           ) : (

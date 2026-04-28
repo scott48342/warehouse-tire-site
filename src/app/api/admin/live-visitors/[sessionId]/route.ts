@@ -58,7 +58,7 @@ export async function GET(
         .orderBy(desc(schema.analyticsPageviews.timestamp))
         .limit(50);
 
-      // Format timeline
+      // Format timeline - send ISO timestamp, client will format in local timezone
       timeline = pageviews.reverse().map((pv, idx) => {
         const time = new Date(pv.timestamp);
         const prevTime = idx > 0 ? new Date(pageviews[pageviews.length - idx].timestamp) : null;
@@ -69,7 +69,7 @@ export async function GET(
         return {
           path: pv.path,
           time: time.toISOString(),
-          timeDisplay: time.toLocaleTimeString(),
+          timestamp: time.getTime(), // Send raw timestamp for client-side formatting
           durationOnPage: duration,
         };
       });
@@ -133,7 +133,7 @@ export async function GET(
           hostname,
         };
 
-        // Build timeline from funnel events
+        // Build timeline from funnel events - send timestamp for client-side formatting
         timeline = events.map((evt: any) => {
           let path = "/";
           try {
@@ -150,7 +150,7 @@ export async function GET(
             path,
             event: evt.event_name,
             time: time.toISOString(),
-            timeDisplay: time.toLocaleTimeString(),
+            timestamp: time.getTime(), // Send raw timestamp for client-side formatting
           };
         });
       }
