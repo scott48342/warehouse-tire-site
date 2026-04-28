@@ -78,8 +78,11 @@ export async function sendAbandonedCartAlert(cart: AbandonedCart): Promise<{
 }> {
   const cartValue = Number(cart.estimatedTotal) || 0;
 
+  console.log(`[abandonedCartAlerts] Processing cart ${cart.cartId}: $${cartValue.toFixed(2)}, email=${cart.customerEmail}, phone=${cart.customerPhone}`);
+
   // Skip low-value carts
   if (cartValue < MIN_ALERT_VALUE) {
+    console.log(`[abandonedCartAlerts] SKIPPED ${cart.cartId}: value $${cartValue.toFixed(2)} below threshold $${MIN_ALERT_VALUE}`);
     return {
       success: true,
       skipped: true,
@@ -110,9 +113,10 @@ export async function sendAbandonedCartAlert(cart: AbandonedCart): Promise<{
   // Get owner email (notifyEmail from settings, or fallback)
   const ownerEmail = settings.notifyEmail || "scott@warehousetire.net";
 
-  // Skip test emails
-  const testPatterns = ["@test.", "@example.", "warehousetire", "scott@"];
+  // Skip test emails (but still log)
+  const testPatterns = ["@test.", "@example."];
   if (cart.customerEmail && testPatterns.some(p => cart.customerEmail?.toLowerCase().includes(p))) {
+    console.log(`[abandonedCartAlerts] SKIPPED ${cart.cartId}: test email pattern`);
     return {
       success: true,
       skipped: true,
@@ -236,10 +240,11 @@ export async function sendAbandonedCartAlert(cart: AbandonedCart): Promise<{
       html,
     });
 
-    console.log(`[abandonedCartAlerts] Alert sent for cart ${cart.cartId} ($${cartValue.toFixed(2)})`);
+    console.log(`[abandonedCartAlerts] EMAIL alert sent for cart ${cart.cartId} ($${cartValue.toFixed(2)}) to ${ownerEmail}`);
 
     // Send SMS notifications (plain text only, no HTML)
     if (ABANDONED_CART_SMS_NOTIFY.length > 0) {
+      console.log(`[abandonedCartAlerts] Sending SMS to ${ABANDONED_CART_SMS_NOTIFY.length} recipients...`);
       const customerName = [cart.customerFirstName, cart.customerLastName].filter(Boolean).join(" ") || "Customer";
       const smsText = `ABANDONED CART: $${cartValue.toFixed(0)}\n${customerName}\n${cart.customerPhone || cart.customerEmail || "No contact"}\n${vehicleInfo}`;
       
