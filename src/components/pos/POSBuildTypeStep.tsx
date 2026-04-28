@@ -65,6 +65,15 @@ type QuickPreset = {
 // ============================================================================
 
 function POSBuildTypeStepInner() {
+  // TEMP: Return simple div to test
+  return (
+    <div className="mx-auto max-w-4xl px-4 py-8 text-center text-white">
+      <h1 className="text-2xl font-bold">Build Type Step</h1>
+      <p className="mt-4">If you see this, the component renders without error.</p>
+    </div>
+  );
+  
+  /* DISABLED FOR DEBUG
   const router = useRouter();
   const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
   
@@ -89,6 +98,7 @@ function POSBuildTypeStepInner() {
     model: String(state.vehicle.model || ""),
     trim: state.vehicle.trim ? String(state.vehicle.trim) : undefined,
   };
+  */
 
   // Local state
   const [selectedBuildType, setSelectedBuildType] = useState<POSBuildType>(state.buildType);
