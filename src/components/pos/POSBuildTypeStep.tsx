@@ -34,8 +34,6 @@ type QuickPreset = {
 export function POSBuildTypeStep() {
   const router = useRouter();
   const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
-  // Using window.location for navigation instead
-  const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
 
   // Local state
   const [selectedBuildType, setSelectedBuildType] = useState<POSBuildType>(state.buildType);
