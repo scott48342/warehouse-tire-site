@@ -5,7 +5,7 @@ import { usePOS } from "./POSContext";
 import { POSAdminPanel } from "./POSAdminPanel";
 
 // ============================================================================
-// POS Header - Minimal employee header
+// POS Header - Minimal employee header (defensive string rendering v2)
 // ============================================================================
 
 export function POSHeader() {
