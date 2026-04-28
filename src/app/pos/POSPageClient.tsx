@@ -1,16 +1,18 @@
 "use client";
 
-import { Component, type ReactNode, type ErrorInfo } from "react";
+import { Component, type ReactNode, type ErrorInfo, Suspense, lazy } from "react";
 import {
   usePOS,
   POSStepIndicator,
   POSFooter,
   POSVehicleStep,
   POSBuildTypeStep,
-  POSPackageStep,
-  POSPricingStep,
-  POSQuoteStep,
 } from "@/components/pos";
+
+// Lazy load other step components to isolate the issue
+const POSPackageStep = lazy(() => import("@/components/pos/POSPackageStep").then(m => ({ default: m.POSPackageStep })));
+const POSPricingStep = lazy(() => import("@/components/pos/POSPricingStep").then(m => ({ default: m.POSPricingStep })));
+const POSQuoteStep = lazy(() => import("@/components/pos/POSQuoteStep").then(m => ({ default: m.POSQuoteStep })));
 
 // Error Boundary for debugging
 class POSErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean; error: Error | null; errorInfo: ErrorInfo | null }> {
@@ -68,17 +70,36 @@ function StepRouter() {
   // Debug logging
   console.log("[StepRouter] Current step:", state.step, "Vehicle:", state.vehicle);
   
+  // Fallback for lazy loaded components
+  const LazyFallback = () => (
+    <div className="flex items-center justify-center py-12">
+      <div className="text-neutral-400">Loading...</div>
+    </div>
+  );
+  
   switch (state.step) {
     case "vehicle":
       return <POSVehicleStep />;
     case "build-type":
       return <POSBuildTypeStep />;
     case "package":
-      return <POSPackageStep />;
+      return (
+        <Suspense fallback={<LazyFallback />}>
+          <POSPackageStep />
+        </Suspense>
+      );
     case "pricing":
-      return <POSPricingStep />;
+      return (
+        <Suspense fallback={<LazyFallback />}>
+          <POSPricingStep />
+        </Suspense>
+      );
     case "quote":
-      return <POSQuoteStep />;
+      return (
+        <Suspense fallback={<LazyFallback />}>
+          <POSQuoteStep />
+        </Suspense>
+      );
     default:
       return <POSVehicleStep />;
   }
