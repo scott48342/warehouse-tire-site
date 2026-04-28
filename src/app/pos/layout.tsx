@@ -26,9 +26,9 @@ export default function POSLayout({
     <POSAuthGate>
       <POSLayoutErrorBoundary>
         <POSProvider>
-          {/* POSHeader temporarily disabled for debugging */}
+          <POSHeader />
           {children}
-          {/* POSAdminPanel temporarily disabled */}
+          <POSAdminPanel />
         </POSProvider>
       </POSLayoutErrorBoundary>
     </POSAuthGate>
