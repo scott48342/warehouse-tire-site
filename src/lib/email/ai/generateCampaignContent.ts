@@ -163,7 +163,7 @@ BUSINESS CONTEXT:
 - We sell tires, wheels, and tire/wheel packages
 - Two locations: Pontiac and Waterford, MI
 - Online store: shop.warehousetiredirect.com
-- We offer free shipping on orders over $599
+- FREE SHIPPING on orders over $1,500 (IMPORTANT: always use $1,500, never $599)
 - Price match guarantee
 - Professional installation available
 
@@ -181,8 +181,17 @@ Generate a campaign with:
 2. Preview text (under 90 characters, complements subject)
 3. Main headline
 4. Subheadline
-5. 2-3 key selling points or offers to highlight
+5. Exactly 3 value propositions (short, punchy - each should be ONE benefit)
 6. Call to action text
+7. An expiration date for urgency (typically end of current week or month)
+8. 4 featured product suggestions (2 tires, 2 wheels - with realistic price ranges)
+
+VALUE PROPS RULES:
+- Keep each under 50 characters
+- Make them scannable - one benefit per point
+- Include the $1,500 free shipping threshold in one of them
+- Example good: "FREE shipping over $1,500"
+- Example bad: "FREE shipping on orders over $1,500 - no hidden fees"
 
 Respond in JSON format:
 {
@@ -191,8 +200,19 @@ Respond in JSON format:
   "previewText": "Preview text shown in inbox",
   "headline": "Main headline in email",
   "subheadline": "Supporting subheadline",
-  "keyPoints": ["Point 1", "Point 2", "Point 3"],
+  "valueProps": [
+    {"icon": "🚚", "text": "FREE shipping over $1,500"},
+    {"icon": "💰", "text": "Price match guarantee"},
+    {"icon": "🔧", "text": "Pro installation in Pontiac & Waterford"}
+  ],
   "ctaText": "Shop Now",
+  "urgencyText": "Offer ends Sunday, April 30",
+  "featuredProducts": [
+    {"name": "Goodyear Assurance MaxLife", "type": "tire", "priceRange": "$140-180/tire"},
+    {"name": "Cooper Discoverer AT3", "type": "tire", "priceRange": "$160-220/tire"},
+    {"name": "Fuel Vapor D569", "type": "wheel", "priceRange": "$280-350/wheel"},
+    {"name": "American Racing AR924", "type": "wheel", "priceRange": "$180-240/wheel"}
+  ],
   "tone": "excited|urgent|friendly|professional",
   "audienceHint": "all|truck_owners|car_owners|performance"
 }`;
@@ -229,6 +249,68 @@ Respond in JSON format:
       },
     ];
 
+    // Add value props as structured text (3-column layout via HTML table)
+    if (generated.valueProps?.length > 0) {
+      const propsHtml = generated.valueProps
+        .map((p: { icon: string; text: string }) => 
+          `<td style="padding: 12px; text-align: center; width: 33%;">
+            <div style="font-size: 24px; margin-bottom: 8px;">${p.icon}</div>
+            <div style="font-size: 14px; color: #374151; font-weight: 500;">${p.text}</div>
+          </td>`
+        )
+        .join("");
+      
+      contentBlocks.push({
+        type: "text_block",
+        data: {
+          content: `<table style="width: 100%; border-collapse: collapse; margin: 16px 0;"><tr>${propsHtml}</tr></table>`,
+          alignment: "center",
+        },
+      });
+    }
+
+    // Add urgency banner if provided
+    if (generated.urgencyText) {
+      contentBlocks.push({
+        type: "promo_banner",
+        data: {
+          text: generated.urgencyText,
+          backgroundColor: "#fef3c7",
+          textColor: "#92400e",
+        },
+      });
+    }
+
+    // Add CTA
+    contentBlocks.push({
+      type: "cta_button",
+      data: {
+        text: generated.ctaText || "Shop Now",
+        url: "https://shop.warehousetiredirect.com",
+        backgroundColor: "#dc2626",
+      },
+    });
+
+    // Add featured products grid if provided
+    if (generated.featuredProducts?.length > 0) {
+      contentBlocks.push({
+        type: "product_grid",
+        data: {
+          title: "Featured This Week",
+          columns: 2,
+          products: generated.featuredProducts.map((p: { name: string; type: string; priceRange: string }) => ({
+            name: p.name,
+            brand: p.type === "tire" ? "Tire" : "Wheel",
+            price: p.priceRange,
+            linkUrl: p.type === "tire" 
+              ? "https://shop.warehousetiredirect.com/tires"
+              : "https://shop.warehousetiredirect.com/wheels",
+            // Note: No imageUrl - would need to look up real product images
+          })),
+        },
+      });
+    }
+
     // Add rebate section if we have rebates and it's a deals campaign
     if (rebates.length > 0 && (campaignType === "weekly_deals" || campaignType === "flash_sale")) {
       contentBlocks.push({
@@ -244,27 +326,6 @@ Respond in JSON format:
         },
       });
     }
-
-    // Add key points as text block
-    if (generated.keyPoints?.length > 0) {
-      contentBlocks.push({
-        type: "text_block",
-        data: {
-          content: generated.keyPoints.map((p: string) => `✓ ${p}`).join("\n\n"),
-          alignment: "left",
-        },
-      });
-    }
-
-    // Add CTA
-    contentBlocks.push({
-      type: "cta_button",
-      data: {
-        text: generated.ctaText || "Shop Now",
-        url: "https://shop.warehousetiredirect.com",
-        backgroundColor: "#dc2626",
-      },
-    });
 
     // Map audience hint to rules
     const audienceRules: GeneratedCampaign["audienceRules"] = {};

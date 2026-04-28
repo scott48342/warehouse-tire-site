@@ -307,14 +307,35 @@ function renderContentPreview(content: any): string {
             ${block.data.subheadline ? `<p style="margin: 8px 0 0; opacity: 0.9;">${block.data.subheadline}</p>` : ""}
           </div>
         `;
-      case "text":
-        return `<p style="white-space: pre-wrap;">${block.data.content}</p>`;
+      case "text_block":
+        return `<div style="padding: 12px 0;">${block.data.content}</div>`;
       case "cta_button":
         return `
           <div style="text-align: center; margin: 16px 0;">
             <span style="display: inline-block; background: ${block.data.backgroundColor || '#dc2626'}; color: white; padding: 12px 24px; border-radius: 8px;">
               ${block.data.text}
             </span>
+          </div>
+        `;
+      case "promo_banner":
+        return `
+          <div style="background: ${block.data.backgroundColor || '#fef3c7'}; color: ${block.data.textColor || '#92400e'}; padding: 12px 16px; border-radius: 8px; margin: 16px 0; text-align: center; font-weight: 600;">
+            🔥 ${block.data.text}
+          </div>
+        `;
+      case "product_grid":
+        return `
+          <div style="background: #f9fafb; padding: 16px; border-radius: 8px; margin: 16px 0;">
+            <h4 style="margin: 0 0 12px;">${block.data.title || "Featured Products"}</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              ${block.data.products?.map((p: any) => `
+                <div style="background: white; padding: 12px; border-radius: 8px; border: 1px solid #e5e7eb;">
+                  <div style="font-size: 12px; color: #6b7280;">${p.brand || ""}</div>
+                  <div style="font-weight: 600;">${p.name}</div>
+                  <div style="color: #dc2626; font-weight: 700;">${p.price || ""}</div>
+                </div>
+              `).join("") || ""}
+            </div>
           </div>
         `;
       case "rebate_section":
