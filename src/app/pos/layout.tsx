@@ -26,7 +26,7 @@ export default function POSLayout({
     <POSAuthGate>
       <POSLayoutErrorBoundary>
         <POSProvider>
-          <POSHeader />
+          {/* <POSHeader /> - disabled to isolate error */}
           {children}
           <POSAdminPanel />
         </POSProvider>

@@ -43,22 +43,22 @@ export function POSHeader() {
             </button>
           </div>
           
-          {/* Vehicle + Build badge */}
-          {state.vehicle && (
+          {/* Vehicle + Build badge - fully defensive rendering */}
+          {state.vehicle && typeof state.vehicle === "object" && (
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-800 border border-neutral-700">
               <span className="text-sm text-neutral-300">
-                {String(state.vehicle.year)} {String(state.vehicle.make)} {String(state.vehicle.model)}
+                {String(state.vehicle.year || "")} {String(state.vehicle.make || "")} {String(state.vehicle.model || "")}
               </span>
-              {state.vehicle.trim && typeof state.vehicle.trim === "string" && (
-                <span className="text-xs text-neutral-500">{state.vehicle.trim}</span>
+              {state.vehicle.trim && typeof state.vehicle.trim === "string" && state.vehicle.trim.length > 0 && (
+                <span className="text-xs text-neutral-500">{String(state.vehicle.trim)}</span>
               )}
-              {state.buildType !== "stock" && state.liftConfig && typeof state.liftConfig.liftInches === "number" && (
+              {state.buildType && state.buildType !== "stock" && state.liftConfig && typeof state.liftConfig === "object" && typeof state.liftConfig.liftInches === "number" && (
                 <span className={`ml-2 px-2 py-0.5 rounded text-xs font-medium ${
                   state.buildType === "lifted" 
                     ? "bg-orange-600/20 text-orange-400" 
                     : "bg-blue-600/20 text-blue-400"
                 }`}>
-                  {state.buildType === "leveled" ? "Leveled" : `${state.liftConfig.liftInches}" Lift`}
+                  {state.buildType === "leveled" ? "Leveled" : `${Number(state.liftConfig.liftInches)}" Lift`}
                 </span>
               )}
             </div>
