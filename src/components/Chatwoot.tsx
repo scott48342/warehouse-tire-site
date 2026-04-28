@@ -15,7 +15,7 @@ export function Chatwoot() {
             launcherTitle: "Chat with us"
           };
           (function(d,t) {
-            var BASE_URL = "https://chatwoot-web.onrender.com";
+            var BASE_URL = "https://chatwoot-web-l388.onrender.com";
             var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
             g.src = BASE_URL + "/packs/js/sdk.js";
             g.defer = true;
