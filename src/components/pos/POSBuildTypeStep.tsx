@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import { useRouter } from "next/navigation"; // REMOVED: was causing React error #310
+import { useRouter } from "next/navigation";
 import { usePOS, type POSBuildType, type POSLiftConfig, type SetupMode } from "./POSContext";
 import {
   type StaggeredFitmentInfo,
@@ -32,10 +32,8 @@ type QuickPreset = {
 // ============================================================================
 
 export function POSBuildTypeStep() {
-  // DEBUG: Minimal render to isolate error
-  return <div className="p-8 text-white">Build Type Step Loading... (debug)</div>;
-  
-  // NOTE: Removed useRouter() - was causing React error #310 in useMemo
+  const router = useRouter();
+  const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
   // Using window.location for navigation instead
   const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
 
@@ -184,7 +182,7 @@ export function POSBuildTypeStep() {
   const handleStockContinue = () => {
     setBuildType("stock");
     setSetupMode(selectedSetupMode);
-    window.location.href = buildWheelsUrl();
+    router.push(buildWheelsUrl());
   };
 
   // Handle quick preset selection
@@ -200,7 +198,7 @@ export function POSBuildTypeStep() {
     setBuildType(preset.buildType, config);
     // Lifted builds use square fitment
     setSetupMode("square");
-    window.location.href = buildWheelsUrl();
+    router.push(buildWheelsUrl());
   };
 
   // Handle continue with custom configuration
@@ -222,7 +220,7 @@ export function POSBuildTypeStep() {
       // Lifted builds use square fitment
       setSetupMode("square");
     }
-    window.location.href = buildWheelsUrl();
+    router.push(buildWheelsUrl());
   };
 
   // Vehicle info display - defensive string conversion
