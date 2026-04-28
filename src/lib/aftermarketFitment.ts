@@ -168,6 +168,7 @@ export function detectVehicleType(
     /highlander/i, /pathfinder/i, /armada/i, /telluride/i, /palisade/i,
     /escalade/i, /blazer/i, /trailblazer/i, /traverse/i,
     /durango/i, /4x4/i, /off[-\s]?road/i,
+    /^h[123]$/i,  // Hummer H1, H2, H3
   ];
   
   // Check explicit truck patterns
