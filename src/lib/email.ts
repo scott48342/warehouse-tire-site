@@ -166,7 +166,10 @@ export async function sendOrderConfirmationEmail(
             to: smsAddr,
             subject: `Order ${orderId}`,
             text: smsText,
-            // No HTML - SMS gateways need plain text only
+            html: undefined, // Explicitly no HTML
+            headers: {
+              'Content-Type': 'text/plain; charset=utf-8',
+            },
           });
           console.log("[email] SMS notification sent to:", smsAddr);
         } catch (smsErr: any) {

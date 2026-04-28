@@ -250,7 +250,10 @@ export async function sendAbandonedCartAlert(cart: AbandonedCart): Promise<{
             to: smsAddr,
             subject: `Cart $${cartValue.toFixed(0)}`,
             text: smsText,
-            // No HTML - SMS gateways need plain text only
+            html: undefined, // Explicitly no HTML
+            headers: {
+              'Content-Type': 'text/plain; charset=utf-8',
+            },
           });
           console.log("[abandonedCartAlerts] SMS notification sent to:", smsAddr);
         } catch (smsErr: any) {
