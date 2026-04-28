@@ -198,9 +198,9 @@ export function POSBuildTypeStep() {
     router.push(buildWheelsUrl());
   };
 
-  // Vehicle info display
+  // Vehicle info display - defensive string conversion
   const vehicleDisplay = state.vehicle
-    ? `${state.vehicle.year} ${state.vehicle.make} ${state.vehicle.model}${state.vehicle.trim ? ` ${state.vehicle.trim}` : ""}`
+    ? `${String(state.vehicle.year || "")} ${String(state.vehicle.make || "")} ${String(state.vehicle.model || "")}${state.vehicle.trim && typeof state.vehicle.trim === "string" ? ` ${state.vehicle.trim}` : ""}`
     : "";
 
   // Check if vehicle supports staggered
