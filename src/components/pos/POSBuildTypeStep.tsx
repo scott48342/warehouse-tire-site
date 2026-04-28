@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation"; // REMOVED: was causing React error #310
 import { usePOS, type POSBuildType, type POSLiftConfig, type SetupMode } from "./POSContext";
 import {
   type StaggeredFitmentInfo,
@@ -32,7 +32,8 @@ type QuickPreset = {
 // ============================================================================
 
 export function POSBuildTypeStep() {
-  const router = useRouter();
+  // NOTE: Removed useRouter() - was causing React error #310 in useMemo
+  // Using window.location for navigation instead
   const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
 
   // Local state
@@ -180,7 +181,7 @@ export function POSBuildTypeStep() {
   const handleStockContinue = () => {
     setBuildType("stock");
     setSetupMode(selectedSetupMode);
-    router.push(buildWheelsUrl());
+    window.location.href = buildWheelsUrl();
   };
 
   // Handle quick preset selection
@@ -196,7 +197,7 @@ export function POSBuildTypeStep() {
     setBuildType(preset.buildType, config);
     // Lifted builds use square fitment
     setSetupMode("square");
-    router.push(buildWheelsUrl());
+    window.location.href = buildWheelsUrl();
   };
 
   // Handle continue with custom configuration
@@ -218,7 +219,7 @@ export function POSBuildTypeStep() {
       // Lifted builds use square fitment
       setSetupMode("square");
     }
-    router.push(buildWheelsUrl());
+    window.location.href = buildWheelsUrl();
   };
 
   // Vehicle info display - defensive string conversion
