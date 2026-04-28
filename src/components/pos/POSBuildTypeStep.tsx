@@ -90,6 +90,29 @@ export function POSBuildTypeStep() {
     fetchStaggeredInfo();
   }, [state.vehicle, setStaggeredInfo]);
 
+  // Early return if vehicle is not set (must be after all hooks)
+  if (!state.vehicle || typeof state.vehicle !== "object") {
+    return (
+      <div className="mx-auto max-w-4xl px-4 py-8 text-center">
+        <p className="text-neutral-400">Loading vehicle information...</p>
+      </div>
+    );
+  }
+
+  // Validate vehicle fields are strings
+  if (typeof state.vehicle.year !== "string" || typeof state.vehicle.make !== "string" || typeof state.vehicle.model !== "string") {
+    console.error("[POSBuildTypeStep] Invalid vehicle data:", JSON.stringify(state.vehicle));
+    return (
+      <div className="mx-auto max-w-4xl px-4 py-8 text-center">
+        <p className="text-red-400">Invalid vehicle data detected.</p>
+        <pre className="mt-2 text-xs text-neutral-500">{JSON.stringify(state.vehicle, null, 2)}</pre>
+        <button onClick={() => goToStep("vehicle")} className="mt-4 text-blue-400 hover:underline">
+          ← Back to Vehicle Selection
+        </button>
+      </div>
+    );
+  }
+
   // Lift profile for vehicle
   const liftProfile = state.vehicle
     ? getLiftProfile(state.vehicle.make, state.vehicle.model)
