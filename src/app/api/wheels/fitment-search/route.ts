@@ -1622,9 +1622,12 @@ async function handleDbFirstWheelResults(opts: {
   timing.cachedAvailabilityHits = inventoryData.size;
   timing.totalFitmentValid = fitmentValidCandidates.length;
   
-  // INVENTORY FILTER: Only include SKUs that exist in inventory and are orderable
-  // This filters out discontinued/stale products
+  // INVENTORY FILTER: Soft filter - use inventory cache for labeling, not hard filtering
   // 
+  // Why soft filter? The SFTP inventory feed may lag behind Dealerline or be incomplete.
+  // If a wheel exists in wp_wheels (techfeed), it's a current WheelPros product.
+  // We trust the techfeed for product availability, use SFTP feed for stock levels.
+  //
   // Orderable types from WheelPros:
   // - ST = Stocking (warehouse stock)
   // - BW = Buy When Sold (can order from other locations)
@@ -1632,18 +1635,23 @@ async function handleDbFirstWheelResults(opts: {
   // - SO = Special Order
   // - CS = Custom/Special
   //
-  // If orderable type, include even with low local qty - WheelPros fulfills from network
+  // Filter logic:
+  // - If in inventory cache with orderable type → include (any qty)
+  // - If in inventory cache with non-orderable type and qty < 4 → exclude
+  // - If NOT in inventory cache → include (exists in techfeed = current product)
   const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
   const MIN_INVENTORY_QTY = 4;
   const preFilterCount = fitmentValidCandidates.length;
   fitmentValidCandidates = fitmentValidCandidates.filter(item => {
     const inv = inventoryData.get(item.candidate.sku);
-    if (!inv) return false; // Not in feed = discontinued
+    
+    // Not in inventory cache? Include anyway - techfeed says it exists
+    if (!inv) return true;
     
     const isOrderable = ORDERABLE_TYPES.has(inv.inventoryType);
     const hasSufficientQty = inv.totalQty >= MIN_INVENTORY_QTY;
     
-    // Include if orderable type (regardless of qty) OR has sufficient local qty
+    // Exclude only if: in cache AND non-orderable type AND low qty
     return isOrderable || hasSufficientQty;
   });
   timing.inventoryFilteredOut = preFilterCount - fitmentValidCandidates.length;
