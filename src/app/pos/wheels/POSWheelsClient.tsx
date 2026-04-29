@@ -37,10 +37,22 @@ type FacetBucket = { value: string; count: number; label?: string; isOem?: boole
 
 type Facets = {
   brands: FacetBucket[];
+  models: FacetBucket[]; // Wheel style names (BURN, CATALYST, etc.)
   finishes: FacetBucket[];
   diameters: FacetBucket[];
   widths: FacetBucket[];
   offsets: FacetBucket[];
+};
+
+type Filters = {
+  brands: string[];
+  models: string[];
+  finishes: string[];
+  diameters: string[];
+  widths: string[];
+  offsets: string[];
+  priceMin: number | null;
+  priceMax: number | null;
 };
 
 type Props = {
@@ -70,149 +82,445 @@ function isTrulyStaggered(pair: WheelPairInfo | undefined): boolean {
 }
 
 // ============================================================================
-// Filter Sidebar Component
+// Filter Sidebar Component (Matches National Site Style)
 // ============================================================================
+
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      className={`h-3.5 w-3.5 text-neutral-400 transition-transform duration-150 ${open ? "rotate-180" : ""}`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  );
+}
+
+function AccordionSection({
+  title,
+  defaultOpen = false,
+  selectedCount = 0,
+  children,
+  hidden = false,
+}: {
+  title: string;
+  defaultOpen?: boolean;
+  selectedCount?: number;
+  children: React.ReactNode;
+  hidden?: boolean;
+}) {
+  const [open, setOpen] = useState(defaultOpen);
+  
+  if (hidden) return null;
+  
+  return (
+    <div className="border-b border-neutral-100 last:border-b-0">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between py-2 text-left"
+      >
+        <div className="flex items-center gap-1.5">
+          <span className="text-[13px] font-semibold text-neutral-800">{title}</span>
+          {selectedCount > 0 && (
+            <span className="flex h-4 min-w-[16px] items-center justify-center rounded-full bg-neutral-800 px-1 text-[9px] font-bold text-white">
+              {selectedCount}
+            </span>
+          )}
+        </div>
+        <ChevronIcon open={open} />
+      </button>
+      {open && <div className="pb-2.5">{children}</div>}
+    </div>
+  );
+}
+
+function FilterCheckbox({
+  label,
+  checked,
+  count,
+  onChange,
+}: {
+  label: string;
+  checked: boolean;
+  count?: number;
+  onChange: (checked: boolean) => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onChange(!checked)}
+      className="flex w-full cursor-pointer items-center justify-between gap-2 py-[3px] hover:bg-neutral-50 -mx-1.5 px-1.5 rounded transition-colors text-left"
+    >
+      <div className="flex items-center gap-2">
+        <div
+          className={`flex h-3.5 w-3.5 items-center justify-center rounded-sm border transition-colors ${
+            checked
+              ? "border-neutral-800 bg-neutral-800"
+              : "border-neutral-300 bg-white"
+          }`}
+        >
+          {checked && (
+            <svg className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+            </svg>
+          )}
+        </div>
+        <span className="text-[13px] text-neutral-700">{label}</span>
+      </div>
+      {typeof count === "number" && (
+        <span className="text-[11px] text-neutral-400">{count}</span>
+      )}
+    </button>
+  );
+}
+
+function RangeInput({
+  placeholder,
+  value,
+  onChange,
+}: {
+  placeholder: string;
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const [localValue, setLocalValue] = useState(value);
+  
+  useEffect(() => {
+    setLocalValue(value);
+  }, [value]);
+  
+  const handleBlur = () => {
+    onChange(localValue);
+  };
+  
+  return (
+    <input
+      type="number"
+      placeholder={placeholder}
+      value={localValue}
+      onChange={(e) => setLocalValue(e.target.value)}
+      onBlur={handleBlur}
+      onKeyDown={(e) => e.key === "Enter" && handleBlur()}
+      className="h-8 w-full rounded-lg border border-neutral-200 bg-white px-2.5 text-[13px] placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none"
+    />
+  );
+}
 
 function FilterSidebar({
   facets,
   filters,
   onFilterChange,
+  onToggleArrayFilter,
+  onClearFilters,
   setupMode,
   onSetupModeChange,
   vehicleSupportsStaggered,
   staggeredCount,
   squareCount,
+  vehicleBoltPattern,
 }: {
   facets: Facets;
-  filters: { brand?: string; finish?: string; diameter?: string };
-  onFilterChange: (key: string, value: string | undefined) => void;
+  filters: Filters;
+  onFilterChange: (key: keyof Filters, value: any) => void;
+  onToggleArrayFilter: (key: keyof Filters, value: string) => void;
+  onClearFilters: () => void;
   setupMode: SetupMode;
   onSetupModeChange: (mode: SetupMode) => void;
   vehicleSupportsStaggered: boolean;
   staggeredCount: number;
   squareCount: number;
+  vehicleBoltPattern?: string;
 }) {
+  const [modelSearch, setModelSearch] = useState("");
+
+  const activeFilterCount =
+    filters.brands.length +
+    filters.models.length +
+    filters.finishes.length +
+    filters.diameters.length +
+    filters.widths.length +
+    filters.offsets.length +
+    (filters.priceMin ? 1 : 0) +
+    (filters.priceMax ? 1 : 0);
+
   return (
-    <div className="w-64 shrink-0 space-y-6">
-      {/* Setup Mode Toggle - only for staggered-capable vehicles */}
-      {vehicleSupportsStaggered && (
-        <div className="rounded-lg border border-neutral-200 bg-white p-4">
-          <h3 className="mb-3 text-sm font-bold text-neutral-900">Setup Type</h3>
-          <div className="space-y-2">
+    <div className="w-64 shrink-0">
+      <div className="sticky top-4 rounded-xl border border-neutral-200 bg-white px-3 py-3 text-sm">
+        {/* Header */}
+        <div className="flex items-center justify-between pb-2 border-b border-neutral-200">
+          <h2 className="text-sm font-semibold text-neutral-900">Filters</h2>
+          {activeFilterCount > 0 && (
             <button
-              onClick={() => onSetupModeChange("staggered")}
-              className={`flex w-full items-center justify-between rounded-lg border-2 p-3 text-left transition-all ${
-                setupMode === "staggered"
-                  ? "border-purple-500 bg-purple-50"
-                  : "border-neutral-200 hover:border-neutral-300"
-              }`}
+              onClick={onClearFilters}
+              className="text-[11px] font-medium text-neutral-500 hover:text-neutral-800 hover:underline transition-colors"
             >
-              <div>
-                <div className="flex items-center gap-2">
-                  {setupMode === "staggered" && <span className="text-purple-600">✓</span>}
-                  <span className="font-medium text-neutral-900">🏁 Staggered</span>
-                </div>
-                <p className="mt-0.5 text-xs text-neutral-500">Wider rear wheels</p>
-              </div>
-              <span className="text-xs text-neutral-400">{staggeredCount}</span>
+              Clear ({activeFilterCount})
             </button>
-            
-            <button
-              onClick={() => onSetupModeChange("square")}
-              className={`flex w-full items-center justify-between rounded-lg border-2 p-3 text-left transition-all ${
-                setupMode === "square"
-                  ? "border-blue-500 bg-blue-50"
-                  : "border-neutral-200 hover:border-neutral-300"
-              }`}
-            >
-              <div>
-                <div className="flex items-center gap-2">
-                  {setupMode === "square" && <span className="text-blue-600">✓</span>}
-                  <span className="font-medium text-neutral-900">⬜ Square</span>
-                </div>
-                <p className="mt-0.5 text-xs text-neutral-500">Same all around</p>
-              </div>
-              <span className="text-xs text-neutral-400">{squareCount}</span>
-            </button>
+          )}
+        </div>
+
+        {/* Vehicle Bolt Pattern */}
+        {vehicleBoltPattern && (
+          <div className="py-2 border-b border-neutral-100">
+            <div className="rounded-lg bg-green-50 border border-green-100 px-2.5 py-1.5">
+              <div className="text-[11px] text-green-600">Vehicle bolt pattern</div>
+              <div className="text-[13px] font-semibold text-green-700">✓ {vehicleBoltPattern}</div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Brand Filter */}
-      {facets.brands.length > 0 && (
-        <div className="rounded-lg border border-neutral-200 bg-white p-4">
-          <h3 className="mb-3 text-sm font-bold text-neutral-900">Brand</h3>
-          <select
-            value={filters.brand || ""}
-            onChange={(e) => onFilterChange("brand", e.target.value || undefined)}
-            className="w-full rounded border border-neutral-300 p-2 text-sm"
-          >
-            <option value="">All Brands</option>
-            {facets.brands.slice(0, 15).map((b) => (
-              <option key={b.value} value={b.value}>
-                {b.value} ({b.count})
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-
-      {/* Diameter Filter */}
-      {facets.diameters.length > 0 && (
-        <div className="rounded-lg border border-neutral-200 bg-white p-4">
-          <h3 className="mb-3 text-sm font-bold text-neutral-900">Diameter</h3>
-          <div className="flex flex-wrap gap-2">
-            {facets.diameters.map((d) => (
+        {/* Setup Mode Toggle - only for staggered-capable vehicles */}
+        {vehicleSupportsStaggered && (
+          <div className="py-2 border-b border-neutral-100">
+            <div className="text-[13px] font-semibold text-neutral-800 mb-2">Setup Type</div>
+            <div className="space-y-1.5">
               <button
-                key={d.value}
-                onClick={() => onFilterChange("diameter", filters.diameter === d.value ? undefined : d.value)}
-                className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-                  filters.diameter === d.value
-                    ? "bg-blue-600 text-white"
-                    : d.isOem
-                    ? "bg-green-100 text-green-800 hover:bg-green-200"
-                    : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+                onClick={() => onSetupModeChange("staggered")}
+                className={`flex w-full items-center justify-between rounded-lg border-2 p-2 text-left transition-all ${
+                  setupMode === "staggered"
+                    ? "border-purple-500 bg-purple-50"
+                    : "border-neutral-200 hover:border-neutral-300"
                 }`}
               >
-                {d.label || `${d.value}"`}
+                <div className="flex items-center gap-2">
+                  {setupMode === "staggered" && <span className="text-purple-600">✓</span>}
+                  <span className="text-[13px] font-medium text-neutral-900">🏁 Staggered</span>
+                </div>
+                <span className="text-[11px] text-neutral-400">{staggeredCount}</span>
               </button>
+              <button
+                onClick={() => onSetupModeChange("square")}
+                className={`flex w-full items-center justify-between rounded-lg border-2 p-2 text-left transition-all ${
+                  setupMode === "square"
+                    ? "border-blue-500 bg-blue-50"
+                    : "border-neutral-200 hover:border-neutral-300"
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  {setupMode === "square" && <span className="text-blue-600">✓</span>}
+                  <span className="text-[13px] font-medium text-neutral-900">⬜ Square</span>
+                </div>
+                <span className="text-[11px] text-neutral-400">{squareCount}</span>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Brand Filter */}
+        <AccordionSection title="Brand" defaultOpen selectedCount={filters.brands.length}>
+          <div className="max-h-48 overflow-y-auto scroll-smooth">
+            {facets.brands.slice(0, 5).map((b) => (
+              <FilterCheckbox
+                key={b.value}
+                label={b.value}
+                checked={filters.brands.includes(b.value)}
+                count={b.count}
+                onChange={() => onToggleArrayFilter("brands", b.value)}
+              />
+            ))}
+            {facets.brands.length > 5 && (
+              <details className="mt-1">
+                <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
+                  +{facets.brands.length - 5} more
+                </summary>
+                <div className="mt-1">
+                  {facets.brands.slice(5).map((b) => (
+                    <FilterCheckbox
+                      key={b.value}
+                      label={b.value}
+                      checked={filters.brands.includes(b.value)}
+                      count={b.count}
+                      onChange={() => onToggleArrayFilter("brands", b.value)}
+                    />
+                  ))}
+                </div>
+              </details>
+            )}
+          </div>
+        </AccordionSection>
+
+        {/* Model Filter with Search */}
+        <AccordionSection
+          title="Model"
+          selectedCount={filters.models.length}
+          hidden={facets.models.length === 0}
+        >
+          <div className="mb-2">
+            <input
+              type="text"
+              placeholder="Search models..."
+              value={modelSearch}
+              onChange={(e) => setModelSearch(e.target.value)}
+              className="w-full h-7 rounded-md border border-neutral-200 bg-white px-2 text-[12px] placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none"
+            />
+          </div>
+          {(() => {
+            const filtered = facets.models.filter((m) =>
+              m.value.toLowerCase().includes(modelSearch.toLowerCase())
+            );
+            const showAll = modelSearch.length > 0;
+            const displayModels = showAll ? filtered : filtered.slice(0, 5);
+            const hiddenCount = filtered.length - displayModels.length;
+
+            return (
+              <div className="max-h-48 overflow-y-auto scroll-smooth">
+                {displayModels.map((m) => (
+                  <FilterCheckbox
+                    key={m.value}
+                    label={m.value}
+                    checked={filters.models.includes(m.value)}
+                    count={m.count}
+                    onChange={() => onToggleArrayFilter("models", m.value)}
+                  />
+                ))}
+                {hiddenCount > 0 && !showAll && (
+                  <details className="mt-1">
+                    <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
+                      +{hiddenCount} more
+                    </summary>
+                    <div className="mt-1">
+                      {filtered.slice(5).map((m) => (
+                        <FilterCheckbox
+                          key={m.value}
+                          label={m.value}
+                          checked={filters.models.includes(m.value)}
+                          count={m.count}
+                          onChange={() => onToggleArrayFilter("models", m.value)}
+                        />
+                      ))}
+                    </div>
+                  </details>
+                )}
+                {filtered.length === 0 && modelSearch && (
+                  <div className="py-2 text-[11px] text-neutral-400 text-center">
+                    No models match "{modelSearch}"
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+        </AccordionSection>
+
+        {/* Diameter Filter */}
+        <AccordionSection title="Diameter" defaultOpen selectedCount={filters.diameters.length}>
+          <div className="max-h-36 overflow-y-auto scroll-smooth">
+            {facets.diameters.map((d) => (
+              <FilterCheckbox
+                key={d.value}
+                label={`${d.value.replace(/\.0$/, "")}"`}
+                checked={filters.diameters.includes(d.value)}
+                count={d.count}
+                onChange={() => onToggleArrayFilter("diameters", d.value)}
+              />
             ))}
           </div>
-        </div>
-      )}
+        </AccordionSection>
 
-      {/* Finish Filter */}
-      {facets.finishes.length > 0 && (
-        <div className="rounded-lg border border-neutral-200 bg-white p-4">
-          <h3 className="mb-3 text-sm font-bold text-neutral-900">Finish</h3>
-          <select
-            value={filters.finish || ""}
-            onChange={(e) => onFilterChange("finish", e.target.value || undefined)}
-            className="w-full rounded border border-neutral-300 p-2 text-sm"
-          >
-            <option value="">All Finishes</option>
-            {facets.finishes.slice(0, 20).map((f) => (
-              <option key={f.value} value={f.value}>
-                {f.value} ({f.count})
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-
-      {/* Clear Filters */}
-      {(filters.brand || filters.finish || filters.diameter) && (
-        <button
-          onClick={() => {
-            onFilterChange("brand", undefined);
-            onFilterChange("finish", undefined);
-            onFilterChange("diameter", undefined);
-          }}
-          className="w-full rounded-lg border border-neutral-300 bg-white py-2 text-sm font-medium text-neutral-600 hover:bg-neutral-50"
+        {/* Width Filter */}
+        <AccordionSection
+          title="Width"
+          selectedCount={filters.widths.length}
+          hidden={facets.widths.length === 0}
         >
-          Clear All Filters
-        </button>
-      )}
+          <div className="max-h-36 overflow-y-auto scroll-smooth">
+            {facets.widths.map((w) => (
+              <FilterCheckbox
+                key={w.value}
+                label={`${w.value}"`}
+                checked={filters.widths.includes(w.value)}
+                count={w.count}
+                onChange={() => onToggleArrayFilter("widths", w.value)}
+              />
+            ))}
+          </div>
+        </AccordionSection>
+
+        {/* Price Filter */}
+        <AccordionSection
+          title="Price"
+          selectedCount={(filters.priceMin ? 1 : 0) + (filters.priceMax ? 1 : 0)}
+        >
+          <div className="grid grid-cols-2 gap-2">
+            <RangeInput
+              placeholder="Min"
+              value={filters.priceMin?.toString() ?? ""}
+              onChange={(v) => onFilterChange("priceMin", v ? Number(v) : null)}
+            />
+            <RangeInput
+              placeholder="Max"
+              value={filters.priceMax?.toString() ?? ""}
+              onChange={(v) => onFilterChange("priceMax", v ? Number(v) : null)}
+            />
+          </div>
+          {(filters.priceMin || filters.priceMax) && (
+            <button
+              type="button"
+              onClick={() => {
+                onFilterChange("priceMin", null);
+                onFilterChange("priceMax", null);
+              }}
+              className="mt-1.5 text-[11px] text-neutral-500 hover:text-neutral-800 hover:underline"
+            >
+              Clear
+            </button>
+          )}
+        </AccordionSection>
+
+        {/* Finish Filter */}
+        <AccordionSection title="Finish" selectedCount={filters.finishes.length}>
+          <div className="max-h-48 overflow-y-auto scroll-smooth">
+            {facets.finishes.slice(0, 5).map((f) => (
+              <FilterCheckbox
+                key={f.value}
+                label={f.value}
+                checked={filters.finishes.includes(f.value)}
+                count={f.count}
+                onChange={() => onToggleArrayFilter("finishes", f.value)}
+              />
+            ))}
+            {facets.finishes.length > 5 && (
+              <details className="mt-1">
+                <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
+                  +{facets.finishes.length - 5} more
+                </summary>
+                <div className="mt-1">
+                  {facets.finishes.slice(5).map((f) => (
+                    <FilterCheckbox
+                      key={f.value}
+                      label={f.value}
+                      checked={filters.finishes.includes(f.value)}
+                      count={f.count}
+                      onChange={() => onToggleArrayFilter("finishes", f.value)}
+                    />
+                  ))}
+                </div>
+              </details>
+            )}
+          </div>
+        </AccordionSection>
+
+        {/* Offset Filter */}
+        <AccordionSection
+          title="Offset"
+          selectedCount={filters.offsets.length}
+          hidden={facets.offsets.length === 0}
+        >
+          <div className="max-h-36 overflow-y-auto scroll-smooth">
+            {facets.offsets.map((o) => (
+              <FilterCheckbox
+                key={o.value}
+                label={`${Number(o.value) >= 0 ? "+" : ""}${o.value}mm`}
+                checked={filters.offsets.includes(o.value)}
+                count={o.count}
+                onChange={() => onToggleArrayFilter("offsets", o.value)}
+              />
+            ))}
+          </div>
+        </AccordionSection>
+      </div>
     </div>
   );
 }
@@ -334,6 +642,7 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
   const [wheels, setWheels] = useState<WheelItem[]>([]);
   const [facets, setFacets] = useState<Facets>({
     brands: [],
+    models: [],
     finishes: [],
     diameters: [],
     widths: [],
@@ -344,8 +653,17 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
   const [vehicleBoltPattern, setVehicleBoltPattern] = useState<string | undefined>();
   const [vehicleSupportsStaggered, setVehicleSupportsStaggered] = useState(false);
 
-  // Local filters
-  const [filters, setFilters] = useState<{ brand?: string; finish?: string; diameter?: string }>({});
+  // Local filters (array-based for multi-select)
+  const [filters, setFilters] = useState<Filters>({
+    brands: [],
+    models: [],
+    finishes: [],
+    diameters: [],
+    widths: [],
+    offsets: [],
+    priceMin: null,
+    priceMax: null,
+  });
 
   // Extract URL params
   const sort = safeString(searchParams.sort) || "price_asc";
@@ -364,9 +682,34 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
     setSetupMode(mode);
   }, [setSetupMode]);
 
-  // Handle filter change
-  const handleFilterChange = useCallback((key: string, value: string | undefined) => {
+  // Handle filter change (for non-array values like priceMin/priceMax)
+  const handleFilterChange = useCallback((key: keyof Filters, value: any) => {
     setFilters(prev => ({ ...prev, [key]: value }));
+  }, []);
+
+  // Toggle array filter (for multi-select filters)
+  const handleToggleArrayFilter = useCallback((key: keyof Filters, value: string) => {
+    setFilters(prev => {
+      const arr = prev[key] as string[];
+      const newArr = arr.includes(value)
+        ? arr.filter(v => v !== value)
+        : [...arr, value];
+      return { ...prev, [key]: newArr };
+    });
+  }, []);
+
+  // Clear all filters
+  const handleClearFilters = useCallback(() => {
+    setFilters({
+      brands: [],
+      models: [],
+      finishes: [],
+      diameters: [],
+      widths: [],
+      offsets: [],
+      priceMin: null,
+      priceMax: null,
+    });
   }, []);
 
   // Track if we've initialized staggered mode (to prevent infinite loop)
@@ -490,20 +833,30 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
         // Build facets from API response
         if (data.facets) {
           const brandBuckets = data.facets.brand_cd?.buckets || [];
+          const modelBuckets = data.facets.style?.buckets || [];
           const finishBuckets = data.facets.abbreviated_finish_desc?.buckets || [];
           const diameterBuckets = data.facets.wheel_diameter?.buckets || [];
+          const widthBuckets = data.facets.width?.buckets || [];
+          const offsetBuckets = data.facets.offset?.buckets || [];
           
           setFacets({
             brands: brandBuckets.map((b: any) => ({ value: b.value, count: b.count })),
+            models: modelBuckets.map((m: any) => ({ value: m.value, count: m.count })),
             finishes: finishBuckets.map((f: any) => ({ value: f.value, count: f.count })),
-            diameters: diameterBuckets.map((d: any) => ({ 
-              value: d.value, 
-              count: d.count, 
-              label: d.label || `${d.value}"`,
-              isOem: d.isOem 
-            })),
-            widths: [],
-            offsets: [],
+            diameters: diameterBuckets
+              .map((d: any) => ({ 
+                value: d.value, 
+                count: d.count, 
+                label: d.label || `${d.value}"`,
+                isOem: d.isOem 
+              }))
+              .sort((a: any, b: any) => Number(a.value) - Number(b.value)),
+            widths: widthBuckets
+              .map((w: any) => ({ value: w.value, count: w.count }))
+              .sort((a: any, b: any) => Number(a.value) - Number(b.value)),
+            offsets: offsetBuckets
+              .map((o: any) => ({ value: o.value, count: o.count }))
+              .sort((a: any, b: any) => Number(a.value) - Number(b.value)),
           });
         }
       } catch (err) {
@@ -538,15 +891,45 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
       result = result.filter(w => isTrulyStaggered(w.pair));
     }
 
-    // Apply local filters
-    if (filters.brand) {
-      result = result.filter(w => w.brandCode === filters.brand);
+    // Apply brand filter (array)
+    if (filters.brands.length > 0) {
+      result = result.filter(w => filters.brands.includes(w.brandCode || ""));
     }
-    if (filters.finish) {
-      result = result.filter(w => w.finish === filters.finish);
+    
+    // Apply model filter (array)
+    if (filters.models.length > 0) {
+      result = result.filter(w => {
+        const model = w.model || w.styleKey || "";
+        return filters.models.some(m => model.toLowerCase().includes(m.toLowerCase()));
+      });
     }
-    if (filters.diameter) {
-      result = result.filter(w => w.diameter === filters.diameter);
+    
+    // Apply finish filter (array)
+    if (filters.finishes.length > 0) {
+      result = result.filter(w => filters.finishes.includes(w.finish || ""));
+    }
+    
+    // Apply diameter filter (array)
+    if (filters.diameters.length > 0) {
+      result = result.filter(w => filters.diameters.includes(w.diameter || ""));
+    }
+    
+    // Apply width filter (array)
+    if (filters.widths.length > 0) {
+      result = result.filter(w => filters.widths.includes(w.width || ""));
+    }
+    
+    // Apply offset filter (array)
+    if (filters.offsets.length > 0) {
+      result = result.filter(w => filters.offsets.includes(w.offset || ""));
+    }
+    
+    // Apply price filter
+    if (filters.priceMin !== null) {
+      result = result.filter(w => (w.price || 0) >= filters.priceMin!);
+    }
+    if (filters.priceMax !== null) {
+      result = result.filter(w => (w.price || 0) <= filters.priceMax!);
     }
 
     return { filteredWheels: result, staggeredCount: staggered, squareCount: square };
@@ -679,11 +1062,14 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
           facets={facets}
           filters={filters}
           onFilterChange={handleFilterChange}
+          onToggleArrayFilter={handleToggleArrayFilter}
+          onClearFilters={handleClearFilters}
           setupMode={localSetupMode}
           onSetupModeChange={handleSetupModeChange}
           vehicleSupportsStaggered={vehicleSupportsStaggered}
           staggeredCount={staggeredCount}
           squareCount={squareCount}
+          vehicleBoltPattern={vehicleBoltPattern}
         />
 
         {/* Main content */}
