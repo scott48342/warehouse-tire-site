@@ -1696,8 +1696,7 @@ async function handleDbFirstWheelResults(opts: {
     modelKey: string; // brand+style for deduping
   };
   
-  // Orderable inventory types from WheelPros
-  const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
+  // ORDERABLE_TYPES already defined above in inventory filter section
   
   const scoredCandidates: ScoredCandidate[] = fitmentValidCandidates.map(({ candidate: c, validation: v }) => {
     const inv = inventoryData.get(c.sku);
