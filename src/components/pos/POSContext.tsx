@@ -179,7 +179,7 @@ const DEFAULT_SELECTED_ADDONS = {
   disposal: true,
   alignment: false,
   liftInstall: false,
-  creditCard: false,
+  creditCard: true,  // Default ON - Non Cash Fee
   customIds: [],
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { usePOS } from "./POSContext";
 
 // ============================================================================
@@ -31,6 +31,17 @@ export function POSQuoteStep() {
   const [emailError, setEmailError] = useState<string | null>(null);
   const printRef = useRef<HTMLDivElement>(null);
   
+  // Quote saving state
+  const [savedQuoteNumber, setSavedQuoteNumber] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
+  
+  // Quote lookup state
+  const [showLookup, setShowLookup] = useState(false);
+  const [lookupQuery, setLookupQuery] = useState("");
+  const [lookupResults, setLookupResults] = useState<any[]>([]);
+  const [lookupLoading, setLookupLoading] = useState(false);
+  
   if (!state.vehicle || !state.wheel || !state.tire) {
     return (
       <div className="text-center py-12 text-neutral-400">
@@ -39,8 +50,8 @@ export function POSQuoteStep() {
     );
   }
   
-  // Generate quote ID
-  const quoteId = `WTD-${Date.now().toString(36).toUpperCase()}`;
+  // Use saved quote number if available, otherwise show "unsaved"
+  const quoteId = savedQuoteNumber || "UNSAVED";
   const quoteDate = new Date().toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -114,6 +125,82 @@ export function POSQuoteStep() {
       setEmailSending(false);
     }
   };
+
+  // Save quote to database
+  const handleSaveQuote = async () => {
+    setSaving(true);
+    setSaveError(null);
+    
+    try {
+      const response = await fetch("/api/pos/quotes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          customerName: state.customerName,
+          customerPhone: state.customerPhone,
+          customerEmail: state.customerEmail,
+          vehicle: state.vehicle,
+          wheel: state.wheel,
+          tire: state.tire,
+          selectedAddOns,
+          adminSettings,
+          laborTotal,
+          addOnsTotal,
+          discountAmount,
+          discount: state.discount,
+          taxAmount,
+          creditCardFee,
+          outTheDoorPrice,
+          notes: state.notes,
+          buildType: state.buildType,
+          liftConfig: state.liftConfig,
+        }),
+      });
+      
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to save quote");
+      }
+      
+      const data = await response.json();
+      setSavedQuoteNumber(data.quoteNumber);
+    } catch (err) {
+      setSaveError(err instanceof Error ? err.message : "Failed to save quote");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  // Search for quotes
+  const handleSearchQuotes = async (query: string) => {
+    if (!query.trim()) {
+      setLookupResults([]);
+      return;
+    }
+    
+    setLookupLoading(true);
+    try {
+      const response = await fetch(`/api/pos/quotes?search=${encodeURIComponent(query)}&limit=10`);
+      const data = await response.json();
+      if (data.success) {
+        setLookupResults(data.quotes || []);
+      }
+    } catch (err) {
+      console.error("Failed to search quotes:", err);
+    } finally {
+      setLookupLoading(false);
+    }
+  };
+
+  // Debounced search
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (showLookup && lookupQuery) {
+        handleSearchQuotes(lookupQuery);
+      }
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [lookupQuery, showLookup]);
   
   return (
     <div className="mx-auto max-w-4xl px-4 py-8">
@@ -121,16 +208,42 @@ export function POSQuoteStep() {
       <div className="flex items-center justify-between mb-6 print:hidden">
         <div>
           <h2 className="text-2xl font-bold text-white">Quote Ready</h2>
-          <p className="text-neutral-400">Quote #{quoteId}</p>
+          <div className="flex items-center gap-2">
+            {savedQuoteNumber ? (
+              <span className="text-green-400 font-mono">#{savedQuoteNumber}</span>
+            ) : (
+              <span className="text-neutral-500">Unsaved</span>
+            )}
+            {!savedQuoteNumber && (
+              <button
+                onClick={handleSaveQuote}
+                disabled={saving}
+                className="text-xs px-2 py-1 rounded bg-blue-600 hover:bg-blue-500 disabled:bg-neutral-700 text-white"
+              >
+                {saving ? "Saving..." : "💾 Save"}
+              </button>
+            )}
+            {saveError && <span className="text-red-400 text-xs">{saveError}</span>}
+          </div>
         </div>
         
         <div className="flex items-center gap-3">
           <button
-            onClick={handleCopyLink}
+            onClick={() => setShowLookup(!showLookup)}
             className="px-4 py-2 rounded-lg bg-neutral-700 hover:bg-neutral-600 text-white font-medium flex items-center gap-2"
           >
-            {copied ? "✓ Copied!" : "🔗 Copy Link"}
+            🔍 Lookup
           </button>
+          
+          {!savedQuoteNumber && (
+            <button
+              onClick={handleSaveQuote}
+              disabled={saving}
+              className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 disabled:bg-neutral-700 text-white font-medium flex items-center gap-2"
+            >
+              {saving ? "Saving..." : "💾 Save Quote"}
+            </button>
+          )}
           
           <button
             onClick={handlePrint}
@@ -147,6 +260,74 @@ export function POSQuoteStep() {
           </button>
         </div>
       </div>
+
+      {/* Quote Lookup Panel */}
+      {showLookup && (
+        <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6 mb-6 print:hidden">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-bold text-white">🔍 Lookup Saved Quote</h3>
+            <button
+              onClick={() => setShowLookup(false)}
+              className="text-neutral-400 hover:text-white"
+            >
+              ✕
+            </button>
+          </div>
+          
+          <input
+            type="text"
+            value={lookupQuery}
+            onChange={(e) => setLookupQuery(e.target.value)}
+            placeholder="Search by quote #, customer name, phone, or vehicle..."
+            className="w-full h-12 rounded-lg bg-neutral-800 border border-neutral-700 text-white px-4 mb-4"
+            autoFocus
+          />
+          
+          {lookupLoading && (
+            <div className="text-center py-4 text-neutral-400">Searching...</div>
+          )}
+          
+          {!lookupLoading && lookupResults.length > 0 && (
+            <div className="space-y-2 max-h-64 overflow-y-auto">
+              {lookupResults.map((quote) => (
+                <div
+                  key={quote.id}
+                  className="flex items-center justify-between p-3 rounded-lg bg-neutral-800 hover:bg-neutral-750 cursor-pointer"
+                  onClick={() => {
+                    // For now, just copy the quote number - full restore would require more context work
+                    navigator.clipboard.writeText(quote.quote_number);
+                    alert(`Quote ${quote.quote_number} copied!\n\nVehicle: ${quote.vehicle_year} ${quote.vehicle_make} ${quote.vehicle_model}\nPrice: $${quote.out_the_door_price}\n\nNote: To fully restore a quote, this feature is coming soon.`);
+                  }}
+                >
+                  <div>
+                    <div className="font-mono text-green-400">{quote.quote_number}</div>
+                    <div className="text-sm text-neutral-400">
+                      {quote.vehicle_year} {quote.vehicle_make} {quote.vehicle_model}
+                      {quote.customer_name && ` • ${quote.customer_name}`}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-bold text-white">${parseFloat(quote.out_the_door_price).toLocaleString(undefined, { minimumFractionDigits: 2 })}</div>
+                    <div className="text-xs text-neutral-500">
+                      {new Date(quote.created_at).toLocaleDateString()}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          
+          {!lookupLoading && lookupQuery && lookupResults.length === 0 && (
+            <div className="text-center py-4 text-neutral-400">No quotes found</div>
+          )}
+          
+          {!lookupQuery && (
+            <div className="text-center py-4 text-neutral-500 text-sm">
+              Enter a quote number (e.g., WTD-0001) or search by customer name, phone, or vehicle
+            </div>
+          )}
+        </div>
+      )}
       
       {/* Customer Info (Editable) */}
       <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6 mb-6 print:hidden">
