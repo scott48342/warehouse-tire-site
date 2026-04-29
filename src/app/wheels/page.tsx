@@ -928,6 +928,8 @@ export default async function WheelsPage({
         return bPrice - aPrice;
       case "brand_asc":
         return String(a.brand || "").localeCompare(String(b.brand || ""));
+      case "name_asc":
+        return String(a.model || "").localeCompare(String(b.model || ""));
       default:
         return aPrice - bPrice;
     }
@@ -1557,6 +1559,7 @@ export default async function WheelsPage({
                 { value: "price_asc", label: "Price: Low to High" },
                 { value: "price_desc", label: "Price: High to Low" },
                 { value: "brand_asc", label: "Brand: A to Z" },
+                { value: "name_asc", label: "Name: A to Z" },
               ]}
             />
           </div>
