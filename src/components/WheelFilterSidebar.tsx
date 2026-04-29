@@ -387,7 +387,7 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
                   label={opt.value}
                   checked={data.models.includes(opt.value)}
                   count={opt.count}
-                  onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
+                  onChange={() => toggleArrayFilter("style", data.models, opt.value)}
                 />
               ))}
               {hiddenCount > 0 && !showAll && (
@@ -402,7 +402,7 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
                         label={opt.value}
                         checked={data.models.includes(opt.value)}
                         count={opt.count}
-                        onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
+                        onChange={() => toggleArrayFilter("style", data.models, opt.value)}
                       />
                     ))}
                   </div>

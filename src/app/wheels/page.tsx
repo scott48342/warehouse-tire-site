@@ -1686,7 +1686,7 @@ export default async function WheelsPage({
               data={{
                 // URL state (current selections)
                 brands: brandCd ? [brandCd] : [],
-                models: modelNameParam ? [modelNameParam] : [],
+                models: styleParam ? [styleParam] : [],
                 finishes: finish ? [finish] : [],
                 diameters: diameterParam ? [diameterParam] : [],
                 widths: widthParam ? [widthParam] : [],
