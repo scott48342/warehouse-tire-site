@@ -461,7 +461,8 @@ export function POSPackageStep() {
         setStaggeredPairs([]);
       })
       .finally(() => setLoadingWheels(false));
-  }, [state.vehicle, setStaggeredInfo]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.vehicle]); // setStaggeredInfo intentionally omitted - it's stable via dispatch
   
   // Fetch tires when wheel is selected
   useEffect(() => {
