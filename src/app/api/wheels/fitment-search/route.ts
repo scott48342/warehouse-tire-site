@@ -2331,6 +2331,18 @@ async function handleDbFirstWheelResults(opts: {
   const totalCount = rankedCandidates.length;
   const startIdx = (requestedPage - 1) * requestedPageSize;
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
+  
+  // Debug SKU tracing - after scoring/ranking
+  if (debugSku) {
+    const idx = rankedCandidates.findIndex(c => c.candidate.sku === debugSku);
+    debugTrace.push(`5. After scoring/ranking: position=${idx >= 0 ? idx + 1 : 'NOT FOUND'} of ${rankedCandidates.length}`);
+    if (idx >= 0) {
+      const item = rankedCandidates[idx];
+      debugTrace.push(`   - score=${item.score.toFixed(2)}, availability=${item.availabilityLabel}, priceTier=${item.priceTier}`);
+    }
+    const inPage = pageItems.find(c => c.candidate.sku === debugSku);
+    debugTrace.push(`6. In current page (${startIdx+1}-${startIdx+requestedPageSize}): ${!!inPage}`);
+  }
 
   // Build a lookup map for staggered pair specs (SKU → wheel specs)
   // This lets us populate BOTH front and rear specs on each paired wheel
