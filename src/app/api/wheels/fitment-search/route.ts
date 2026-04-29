@@ -3132,6 +3132,7 @@ async function handleLegacyPath(
 
 function buildFacets(wheels: any[]) {
   const brands = new Map<string, { code: string; desc: string; count: number }>();
+  const styles = new Map<string, number>(); // Model/style names (e.g., "BURN", "CATALYST")
   const finishes = new Map<string, number>();
   const diameters = new Map<string, number>();
   const widths = new Map<string, number>();
@@ -3154,6 +3155,18 @@ function buildFacets(wheels: any[]) {
       const existing = brands.get(brandCd);
       if (existing) existing.count++;
       else brands.set(brandCd, { code: brandCd, desc: brandDesc, count: 1 });
+    }
+
+    // Style/Model name (e.g., "BURN", "CATALYST", "FLAME")
+    // Try multiple sources: model property, style property, or extract from title
+    let styleName = w.properties?.model || w.style;
+    if (!styleName && w.title) {
+      // Extract model name from title: everything before the first size pattern (e.g., "20X10")
+      const sizeMatch = String(w.title).match(/^(.+?)\s+\d+[Xx]\d/);
+      styleName = sizeMatch ? sizeMatch[1].trim() : String(w.title).split(' ')[0];
+    }
+    if (styleName && !/^\d/.test(styleName)) { // Skip if starts with digit (not a model name)
+      styles.set(styleName, (styles.get(styleName) || 0) + 1);
     }
 
     // Finish
@@ -3197,6 +3210,13 @@ function buildFacets(wheels: any[]) {
       buckets: Array.from(brands.values())
         .sort((a, b) => b.count - a.count)
         .map(({ code, count }) => ({ value: code, count })),
+    },
+    // Style/Model name facet (e.g., "BURN", "CATALYST")
+    // Sorted alphabetically for easy searching
+    style: {
+      buckets: Array.from(styles.entries())
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .map(([value, count]) => ({ value, count })),
     },
     // Finish facet - page uses buckets("abbreviated_finish_desc")
     // Now uses normalized finish values with logical sorting

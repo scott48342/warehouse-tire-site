@@ -1199,9 +1199,18 @@ export default async function WheelsPage({
       .sort((a, b) => a.desc.localeCompare(b.desc));
   })();
   
-  // Model name options: derive from results (wheel style names like "BURN", "CATALYST")
-  // Model name is in w.model OR first word of title (e.g., "BURN 20X9 6X135...")
+  // Model name options: use API facet (computed from ALL matching wheels, not just paginated results)
+  // This ensures the filter dropdown shows all available models even with lazy loading
+  // The API's style facet is built from rankedCandidates (before pagination) so it's complete
   const modelOptions: Array<{ value: string; count: number }> = (() => {
+    // Prefer API facet (complete list from all matching wheels)
+    const styleBuckets = buckets("style");
+    if (styleBuckets.length > 0) {
+      return styleBuckets.map(b => ({ value: b.value, count: b.count ?? 0 }));
+    }
+    
+    // Fallback: derive from paginated results (only if API facet not available)
+    // This is for backward compat with fast browse or other code paths
     const counts = new Map<string, number>();
     for (const w of itemsUnsorted) {
       // Try w.model first, fall back to first word of title
@@ -1698,8 +1707,10 @@ export default async function WheelsPage({
                 boltPattern: boltPatternParam || "",
                 
                 // Available options with counts
+                // NOTE: modelOptions now comes from API facet (all matching wheels, not paginated)
+                // so the full list is searchable even with lazy loading
                 brandOptions: brandOptions.slice(0, 50),
-                modelOptions: modelOptions.slice(0, 100),
+                modelOptions: modelOptions, // Full list for search - API facet is complete
                 finishOptions: finishBuckets.slice(0, 50).map(b => ({ value: b.value, count: b.count ?? undefined })),
                 diameterOptions: diameterBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
                 widthOptions: widthBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
