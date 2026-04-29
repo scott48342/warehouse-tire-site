@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import { usePOS, type POSWheel, type POSTire, type StaggeredFitmentInfo } from "./POSContext";
 
 // ============================================================================
@@ -352,7 +353,22 @@ function TireFilterBar({
 // ============================================================================
 
 export function POSPackageStep() {
+  const router = useRouter();
   const { state, setWheel, setTire, setStaggeredInfo, goToStep } = usePOS();
+  
+  // Redirect to /pos/wheels for consistent UI (sidebar filters, larger cards)
+  // This applies to cars that skip the build step
+  useEffect(() => {
+    if (state.vehicle && !state.wheel) {
+      const params = new URLSearchParams({
+        year: state.vehicle.year,
+        make: state.vehicle.make,
+        model: state.vehicle.model,
+      });
+      if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
+      router.replace(`/pos/wheels?${params.toString()}`);
+    }
+  }, [state.vehicle, state.wheel, router]);
   
   const [wheels, setWheels] = useState<WheelOption[]>([]);
   const [staggeredPairs, setStaggeredPairs] = useState<StaggeredWheelPair[]>([]);
