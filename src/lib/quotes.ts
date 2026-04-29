@@ -68,6 +68,14 @@ export type QuoteSnapshot = {
     amount: number;
     type: 'first_order' | 'promo' | 'manual';
   };
+  // Shipping address (for drop-ship/direct-to-customer orders)
+  shippingAddress?: {
+    address1: string;
+    address2?: string;
+    city: string;
+    state: string;
+    zip: string;
+  };
 };
 
 export type QuoteRecord = {
@@ -144,12 +152,14 @@ export async function createQuote(
     lines,
     localMode,
     discount,
+    shippingAddress,
   }: {
     customer: QuoteSnapshot["customer"];
     vehicle?: QuoteSnapshot["vehicle"];
     lines: QuoteLine[];
     localMode?: QuoteSnapshot["localMode"];
     discount?: QuoteSnapshot["discount"];
+    shippingAddress?: QuoteSnapshot["shippingAddress"];
   }
 ) {
   await ensureQuoteSystem(db);
@@ -157,7 +167,7 @@ export async function createQuote(
   const taxRate = await getTaxRate(db);
   const totals = computeTotals(lines, taxRate);
 
-  const snap: QuoteSnapshot = { customer, vehicle, lines, taxRate, totals, localMode, discount };
+  const snap: QuoteSnapshot = { customer, vehicle, lines, taxRate, totals, localMode, discount, shippingAddress };
   const id = newId();
   const vlabel = vehicleLabel(vehicle) || null;
 

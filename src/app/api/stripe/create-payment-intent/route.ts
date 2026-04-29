@@ -301,12 +301,22 @@ export async function POST(req: Request) {
     // Only include discount if it has a valid code and amount
     const discountData = discountInfo?.code && discountInfo.amount > 0 ? discountInfo : undefined;
 
+    // Build shipping address for drop-ship orders (non-local mode)
+    const shippingAddressData = !isLocalMode && shippingInfo.address ? {
+      address1: String(shippingInfo.address || "").trim(),
+      address2: shippingInfo.address2 ? String(shippingInfo.address2).trim() : undefined,
+      city: String(shippingInfo.city || "").trim(),
+      state: String(shippingInfo.state || "").trim().toUpperCase(),
+      zip: String(shippingInfo.zip || "").trim(),
+    } : undefined;
+
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,
       lines: linesAll,
       localMode: localModeData,
       discount: discountData,
+      shippingAddress: shippingAddressData,
     });
 
     // Calculate total in cents

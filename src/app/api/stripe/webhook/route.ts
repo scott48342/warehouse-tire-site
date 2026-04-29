@@ -5,6 +5,7 @@ import { getStripeClient } from "@/lib/payments/stripeClient";
 import { createOrder, getOrderByStripeSession, getOrderByPaymentIntent, getOrderByQuote, markOrderEmailSent } from "@/lib/orders";
 import { sendOrderConfirmationEmail } from "@/lib/email";
 import { markCartEventsPurchased } from "@/lib/cart/cartAddEventService";
+import { processSupplierOrders } from "@/lib/suppliers/supplierOrderService";
 
 export const runtime = "nodejs";
 
@@ -102,6 +103,34 @@ export async function POST(req: Request) {
 
     console.log(`[stripe/webhook] Created order from PaymentIntent: ${orderId}`);
 
+    // ═══════════════════════════════════════════════════════════════════════════
+    // SUPPLIER AUTO-ORDERING
+    // Process orders with suppliers (US AutoForce, etc.) for drop-ship items
+    // ═══════════════════════════════════════════════════════════════════════════
+    if (quote.snapshot.shippingAddress && !quote.snapshot.localMode) {
+      try {
+        const shipTo = {
+          name: `${quote.snapshot.customer.firstName} ${quote.snapshot.customer.lastName}`.trim(),
+          address1: quote.snapshot.shippingAddress.address1,
+          address2: quote.snapshot.shippingAddress.address2,
+          city: quote.snapshot.shippingAddress.city,
+          state: quote.snapshot.shippingAddress.state,
+          zip: quote.snapshot.shippingAddress.zip,
+          phone: quote.snapshot.customer.phone,
+        };
+        
+        const supplierResults = await processSupplierOrders(db, orderId, quote.snapshot, shipTo);
+        console.log(`[stripe/webhook] Supplier orders processed:`, supplierResults.map(r => ({
+          supplier: r.supplier,
+          success: r.success,
+          orderNumber: r.supplierOrderNumber,
+        })));
+      } catch (supplierErr: any) {
+        // Don't fail the webhook - log and continue
+        console.error(`[stripe/webhook] Supplier order error (non-fatal):`, supplierErr.message);
+      }
+    }
+
     // Mark cart add events as purchased
     if (cartId) {
       try {
@@ -183,6 +212,34 @@ export async function POST(req: Request) {
     });
 
     console.log(`[stripe/webhook] Created order: ${orderId}`);
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // SUPPLIER AUTO-ORDERING
+    // Process orders with suppliers (US AutoForce, etc.) for drop-ship items
+    // ═══════════════════════════════════════════════════════════════════════════
+    if (quote.snapshot.shippingAddress && !quote.snapshot.localMode) {
+      try {
+        const shipTo = {
+          name: `${quote.snapshot.customer.firstName} ${quote.snapshot.customer.lastName}`.trim(),
+          address1: quote.snapshot.shippingAddress.address1,
+          address2: quote.snapshot.shippingAddress.address2,
+          city: quote.snapshot.shippingAddress.city,
+          state: quote.snapshot.shippingAddress.state,
+          zip: quote.snapshot.shippingAddress.zip,
+          phone: quote.snapshot.customer.phone,
+        };
+        
+        const supplierResults = await processSupplierOrders(db, orderId, quote.snapshot, shipTo);
+        console.log(`[stripe/webhook] Supplier orders processed:`, supplierResults.map(r => ({
+          supplier: r.supplier,
+          success: r.success,
+          orderNumber: r.supplierOrderNumber,
+        })));
+      } catch (supplierErr: any) {
+        // Don't fail the webhook - log and continue
+        console.error(`[stripe/webhook] Supplier order error (non-fatal):`, supplierErr.message);
+      }
+    }
 
     // Mark cart add events as purchased
     if (cartId) {
