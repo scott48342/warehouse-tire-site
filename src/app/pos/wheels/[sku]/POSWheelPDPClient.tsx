@@ -178,25 +178,25 @@ export function POSWheelPDPClient({ sku, year, make, model, trim }: Props) {
         const item = items[0];
 
         if (!item) {
-          // Try techfeed fallback
-          const tfRes = await fetch(`/api/wheels/techfeed?sku=${encodeURIComponent(sku)}`);
+          // Try techfeed endpoint as fallback (direct SKU lookup)
+          const tfRes = await fetch(`/api/wheels/sku/${encodeURIComponent(sku)}`);
           if (tfRes.ok) {
             const tfData = await tfRes.json();
-            if (tfData) {
+            if (tfData && !tfData.error) {
               setWheelData({
-                sku: tfData.sku,
-                title: tfData.product_desc || tfData.sku,
-                brand: tfData.brand_desc || tfData.brand_cd || "Unknown",
-                brandCode: tfData.brand_cd,
-                finish: tfData.abbreviated_finish_desc || tfData.fancy_finish_desc,
-                diameter: tfData.diameter,
-                width: tfData.width,
-                offset: tfData.offset,
-                boltPattern: tfData.bolt_pattern_metric || tfData.bolt_pattern_standard,
-                centerbore: tfData.centerbore,
-                price: tfData.msrp ? Number(tfData.msrp) : undefined,
+                sku: tfData.sku || sku,
+                title: tfData.title || tfData.model || sku,
+                brand: tfData.brand || "Unknown",
+                brandCode: tfData.brandCode,
+                finish: tfData.finish,
+                diameter: tfData.diameter ? String(tfData.diameter) : undefined,
+                width: tfData.width ? String(tfData.width) : undefined,
+                offset: tfData.offset ? String(tfData.offset) : undefined,
+                boltPattern: tfData.boltPattern,
+                centerbore: tfData.centerbore ? String(tfData.centerbore) : undefined,
+                price: tfData.price ? Number(tfData.price) : undefined,
                 images: tfData.images || [],
-                styleKey: tfData.style,
+                styleKey: tfData.styleKey,
               });
               setLoading(false);
               return;
