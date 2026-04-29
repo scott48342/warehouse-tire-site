@@ -2,12 +2,26 @@
  * Campaign Email Renderer
  * 
  * Renders campaign emails from DB-first content blocks.
- * NO live vendor/API calls during rendering - everything comes from contentJson.
+ * Uses unified professional email template system.
  * 
  * @created 2026-04-03
+ * @updated 2026-04-29 - Unified professional email template
  */
 
 import { BRAND } from "@/lib/brand";
+import {
+  emailWrapper,
+  heroSection,
+  productCard,
+  infoBox,
+  successBox,
+  urgencyBox,
+  ctaButton,
+  textSection,
+  freeShippingBanner,
+  footer,
+  formatPrice,
+} from "../templates";
 import type { 
   ContentBlock, 
   CampaignContent,
@@ -26,8 +40,8 @@ import type {
 // ============================================================================
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://shop.warehousetiredirect.com";
-const PRIMARY_COLOR = "#dc2626"; // Brand red
-const SECONDARY_COLOR = "#1f2937"; // Dark gray
+const PRIMARY_COLOR = "#dc2626";
+const DARK_BG = "#1a1a1a";
 
 // ============================================================================
 // UTM Link Helper
@@ -57,16 +71,18 @@ function renderHero(block: HeroBlock, utmCampaign?: string): string {
   const { headline, subheadline, imageUrl, backgroundColor = PRIMARY_COLOR } = block.data;
   
   return `
-    <div style="background: ${backgroundColor}; padding: 48px 32px; text-align: center;">
-      ${imageUrl ? `<img src="${imageUrl}" alt="" style="max-width: 100%; height: auto; margin-bottom: 24px;">` : ""}
-      <h1 style="margin: 0 0 12px; color: white; font-size: 32px; font-weight: 700;">${headline}</h1>
-      ${subheadline ? `<p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 18px;">${subheadline}</p>` : ""}
-    </div>
+    <tr>
+      <td style="background-color: ${backgroundColor}; padding: 48px 40px; text-align: center;">
+        ${imageUrl ? `<img src="${imageUrl}" alt="" style="max-width: 100%; height: auto; margin-bottom: 24px; border-radius: 8px;">` : ""}
+        <h1 style="margin: 0 0 12px; color: white; font-size: 32px; font-weight: 700;">${headline}</h1>
+        ${subheadline ? `<p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 18px;">${subheadline}</p>` : ""}
+      </td>
+    </tr>
   `;
 }
 
 function renderPromoBanner(block: PromoBannerBlock, utmCampaign?: string): string {
-  const { text, backgroundColor = "#fef3c7", textColor = "#92400e", expiresAt } = block.data;
+  const { text, expiresAt } = block.data;
   
   let expiresText = "";
   if (expiresAt) {
@@ -74,85 +90,102 @@ function renderPromoBanner(block: PromoBannerBlock, utmCampaign?: string): strin
     expiresText = ` • Expires ${date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}`;
   }
   
-  return `
-    <div style="background: ${backgroundColor}; border: 1px solid ${textColor}33; border-radius: 8px; padding: 16px 24px; margin: 24px 0; text-align: center;">
-      <span style="color: ${textColor}; font-weight: 600; font-size: 16px;">
-        🔥 ${text}${expiresText}
-      </span>
-    </div>
-  `;
+  return urgencyBox(`🔥 ${text}${expiresText}`);
 }
 
 function renderRebateSection(block: RebateSectionBlock, utmCampaign?: string): string {
   const { title, rebates } = block.data;
   
   const rebateCards = rebates.map(r => `
-    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 12px;">
-      <div style="font-weight: 600; color: ${PRIMARY_COLOR}; font-size: 18px;">${r.brand}</div>
-      <div style="font-size: 24px; font-weight: 700; color: ${SECONDARY_COLOR}; margin: 8px 0;">${r.amount}</div>
-      <div style="font-size: 14px; color: #6b7280;">${r.description}</div>
-      ${r.expiresAt ? `<div style="font-size: 12px; color: #9ca3af; margin-top: 8px;">Expires: ${new Date(r.expiresAt).toLocaleDateString()}</div>` : ""}
-    </div>
+    <tr>
+      <td style="padding: 0 40px 16px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-radius: 8px; overflow: hidden;">
+          <tr>
+            <td style="padding: 20px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td valign="top">
+                    <p style="margin: 0 0 4px; color: ${PRIMARY_COLOR}; font-size: 14px; font-weight: 600; text-transform: uppercase;">${r.brand}</p>
+                    <p style="margin: 0 0 4px; color: #1a1a1a; font-size: 24px; font-weight: 700;">${r.amount}</p>
+                    <p style="margin: 0; color: #555555; font-size: 14px;">${r.description}</p>
+                    ${r.expiresAt ? `<p style="margin: 8px 0 0; color: #888888; font-size: 12px;">Expires: ${new Date(r.expiresAt).toLocaleDateString()}</p>` : ""}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
   `).join("");
   
   return `
-    <div style="padding: 24px 0;">
-      <h2 style="margin: 0 0 16px; color: ${SECONDARY_COLOR}; font-size: 24px; font-weight: 600;">${title}</h2>
-      ${rebateCards}
-    </div>
+    <tr>
+      <td style="padding: 24px 40px 8px;">
+        <h2 style="margin: 0; color: #1a1a1a; font-size: 24px; font-weight: 600;">${title}</h2>
+      </td>
+    </tr>
+    ${rebateCards}
   `;
 }
 
 function renderProductGrid(block: ProductGridBlock, utmCampaign?: string): string {
   const { title, products, columns = 2 } = block.data;
-  const columnWidth = Math.floor(100 / columns) - 2;
   
-  const productCards = products.map(p => {
-    const url = addUtmParams(p.linkUrl, { campaign: utmCampaign, source: "email", medium: "campaign" });
-    return `
-      <td style="width: ${columnWidth}%; padding: 8px; vertical-align: top;">
-        <a href="${url}" style="text-decoration: none; color: inherit; display: block;">
-          ${p.imageUrl ? `<img src="${p.imageUrl}" alt="${p.name}" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 8px;">` : ""}
-          <div style="font-size: 12px; color: #6b7280;">${p.brand || ""}</div>
-          <div style="font-weight: 600; color: ${SECONDARY_COLOR}; margin: 4px 0;">${p.name}</div>
-          <div>
-            ${p.originalPrice ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: 14px;">${p.originalPrice}</span>` : ""}
-            <span style="font-weight: 700; color: ${PRIMARY_COLOR}; font-size: 18px;">${p.price || ""}</span>
-          </div>
-        </a>
-      </td>
-    `;
-  }).join("");
-  
-  // Chunk into rows
+  // Build product rows (2 per row for email compatibility)
   const rows: string[] = [];
-  for (let i = 0; i < products.length; i += columns) {
-    const rowCells = productCards.slice(i * (productCards.length / products.length), (i + columns) * (productCards.length / products.length));
-    rows.push(`<tr>${products.slice(i, i + columns).map((p, j) => {
-      const url = addUtmParams(p.linkUrl, { campaign: utmCampaign, source: "email", medium: "campaign" });
-      return `
-        <td style="width: ${columnWidth}%; padding: 8px; vertical-align: top;">
-          <a href="${url}" style="text-decoration: none; color: inherit; display: block;">
-            ${p.imageUrl ? `<img src="${p.imageUrl}" alt="${p.name}" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 8px;">` : ""}
-            <div style="font-size: 12px; color: #6b7280;">${p.brand || ""}</div>
-            <div style="font-weight: 600; color: ${SECONDARY_COLOR}; margin: 4px 0;">${p.name}</div>
-            <div>
-              ${p.originalPrice ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: 14px;">${p.originalPrice}</span>` : ""}
-              <span style="font-weight: 700; color: ${PRIMARY_COLOR}; font-size: 18px;">${p.price || ""}</span>
-            </div>
+  for (let i = 0; i < products.length; i += 2) {
+    const p1 = products[i];
+    const p2 = products[i + 1];
+    
+    const url1 = addUtmParams(p1.linkUrl, { campaign: utmCampaign, source: "email", medium: "campaign" });
+    const url2 = p2 ? addUtmParams(p2.linkUrl, { campaign: utmCampaign, source: "email", medium: "campaign" }) : "";
+    
+    rows.push(`
+      <tr>
+        <td width="48%" valign="top" style="padding: 8px;">
+          <a href="${url1}" style="text-decoration: none; color: inherit; display: block;">
+            ${p1.imageUrl ? `<img src="${p1.imageUrl}" alt="${p1.name}" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 8px;">` : ""}
+            <p style="margin: 0; color: #888888; font-size: 12px;">${p1.brand || ""}</p>
+            <p style="margin: 4px 0; color: #1a1a1a; font-size: 14px; font-weight: 600;">${p1.name}</p>
+            <p style="margin: 0;">
+              ${p1.originalPrice ? `<span style="text-decoration: line-through; color: #888888; font-size: 14px;">${p1.originalPrice}</span> ` : ""}
+              <span style="color: ${PRIMARY_COLOR}; font-size: 18px; font-weight: 700;">${p1.price || ""}</span>
+            </p>
           </a>
         </td>
-      `;
-    }).join("")}</tr>`);
+        ${p2 ? `
+        <td width="48%" valign="top" style="padding: 8px;">
+          <a href="${url2}" style="text-decoration: none; color: inherit; display: block;">
+            ${p2.imageUrl ? `<img src="${p2.imageUrl}" alt="${p2.name}" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 8px;">` : ""}
+            <p style="margin: 0; color: #888888; font-size: 12px;">${p2.brand || ""}</p>
+            <p style="margin: 4px 0; color: #1a1a1a; font-size: 14px; font-weight: 600;">${p2.name}</p>
+            <p style="margin: 0;">
+              ${p2.originalPrice ? `<span style="text-decoration: line-through; color: #888888; font-size: 14px;">${p2.originalPrice}</span> ` : ""}
+              <span style="color: ${PRIMARY_COLOR}; font-size: 18px; font-weight: 700;">${p2.price || ""}</span>
+            </p>
+          </a>
+        </td>
+        ` : `<td width="48%"></td>`}
+      </tr>
+    `);
   }
   
   return `
-    <div style="padding: 24px 0;">
-      ${title ? `<h2 style="margin: 0 0 16px; color: ${SECONDARY_COLOR}; font-size: 24px; font-weight: 600;">${title}</h2>` : ""}
-      <table style="width: 100%; border-collapse: collapse;">
-        ${rows.join("")}
-      </table>
-    </div>
+    ${title ? `
+    <tr>
+      <td style="padding: 24px 40px 8px;">
+        <h2 style="margin: 0; color: #1a1a1a; font-size: 24px; font-weight: 600;">${title}</h2>
+      </td>
+    </tr>
+    ` : ""}
+    <tr>
+      <td style="padding: 0 32px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          ${rows.join("")}
+        </table>
+      </td>
+    </tr>
   `;
 }
 
@@ -160,100 +193,59 @@ function renderPackageHighlight(block: PackageHighlightBlock, utmCampaign?: stri
   const { title, description, imageUrl, price, savings, features, ctaText, ctaUrl } = block.data;
   const url = addUtmParams(ctaUrl, { campaign: utmCampaign, source: "email", medium: "campaign" });
   
-  const featureList = features?.map(f => `<li style="margin: 4px 0;">${f}</li>`).join("") || "";
+  const featureList = features?.map(f => `<li style="margin: 4px 0; color: #555555;">${f}</li>`).join("") || "";
   
   return `
-    <div style="background: #f9fafb; border: 2px solid ${PRIMARY_COLOR}; border-radius: 12px; padding: 24px; margin: 24px 0;">
-      ${imageUrl ? `<img src="${imageUrl}" alt="${title}" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 16px; display: block;">` : ""}
-      <h2 style="margin: 0 0 8px; color: ${SECONDARY_COLOR}; font-size: 24px; font-weight: 700; text-align: center;">${title}</h2>
-      ${description ? `<p style="margin: 0 0 16px; color: #6b7280; text-align: center;">${description}</p>` : ""}
-      
-      <div style="text-align: center; margin: 16px 0;">
-        ${price ? `<span style="font-size: 36px; font-weight: 700; color: ${PRIMARY_COLOR};">${price}</span>` : ""}
-        ${savings ? `<div style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 999px; display: inline-block; font-size: 14px; font-weight: 600; margin-left: 8px;">Save ${savings}</div>` : ""}
-      </div>
-      
-      ${featureList ? `<ul style="margin: 16px 0; padding-left: 24px; color: #4b5563;">${featureList}</ul>` : ""}
-      
-      <div style="text-align: center; margin-top: 24px;">
-        <a href="${url}" style="display: inline-block; background: ${PRIMARY_COLOR}; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px;">
-          ${ctaText}
-        </a>
-      </div>
-    </div>
+    <tr>
+      <td style="padding: 24px 40px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border: 2px solid ${PRIMARY_COLOR}; border-radius: 8px; overflow: hidden;">
+          <tr>
+            <td style="padding: 24px;">
+              ${imageUrl ? `
+              <img src="${imageUrl}" alt="${title}" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 16px; display: block;">
+              ` : ""}
+              <h2 style="margin: 0 0 8px; color: #1a1a1a; font-size: 24px; font-weight: 700; text-align: center;">${title}</h2>
+              ${description ? `<p style="margin: 0 0 16px; color: #555555; text-align: center;">${description}</p>` : ""}
+              
+              <div style="text-align: center; margin: 16px 0;">
+                ${price ? `<span style="font-size: 36px; font-weight: 700; color: ${PRIMARY_COLOR};">${price}</span>` : ""}
+                ${savings ? `<span style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 999px; font-size: 14px; font-weight: 600; margin-left: 8px;">Save ${savings}</span>` : ""}
+              </div>
+              
+              ${featureList ? `<ul style="margin: 16px 0; padding-left: 24px;">${featureList}</ul>` : ""}
+              
+              <div style="text-align: center; margin-top: 24px;">
+                <a href="${url}" style="display: inline-block; background: ${PRIMARY_COLOR}; color: white; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px;">
+                  ${ctaText}
+                </a>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
   `;
 }
 
 function renderTextBlock(block: TextBlock, utmCampaign?: string): string {
   const { content, alignment = "left" } = block.data;
-  
-  return `
-    <div style="padding: 16px 0; text-align: ${alignment}; color: #4b5563; font-size: 16px; line-height: 1.6;">
-      ${content}
-    </div>
-  `;
+  return textSection(content, alignment === "center");
 }
 
 function renderCtaButton(block: CtaButtonBlock, utmCampaign?: string): string {
-  const { text, url: linkUrl, style = "primary", alignment = "center" } = block.data;
+  const { text, url: linkUrl, style = "primary" } = block.data;
   const url = addUtmParams(linkUrl, { campaign: utmCampaign, source: "email", medium: "campaign" });
-  
-  const styles: Record<string, { bg: string; color: string; border: string }> = {
-    primary: { bg: PRIMARY_COLOR, color: "white", border: PRIMARY_COLOR },
-    secondary: { bg: SECONDARY_COLOR, color: "white", border: SECONDARY_COLOR },
-    outline: { bg: "transparent", color: PRIMARY_COLOR, border: PRIMARY_COLOR },
-  };
-  
-  const s = styles[style] || styles.primary;
-  
-  return `
-    <div style="padding: 24px 0; text-align: ${alignment};">
-      <a href="${url}" style="display: inline-block; background: ${s.bg}; color: ${s.color}; border: 2px solid ${s.border}; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px;">
-        ${text}
-      </a>
-    </div>
-  `;
+  return ctaButton(text, url, style === "outline" ? "secondary" : "primary");
 }
 
 function renderDivider(block: DividerBlock, utmCampaign?: string): string {
-  const { style = "solid", color = "#e5e7eb" } = block.data;
-  return `<hr style="border: none; border-top: 1px ${style} ${color}; margin: 24px 0;">`;
-}
-
-// ============================================================================
-// Standard Sections
-// ============================================================================
-
-function renderFreeShippingBanner(): string {
+  const { style = "solid", color = "#e9ecef" } = block.data;
   return `
-    <div style="background: #dcfce7; border: 1px solid #22c55e; border-radius: 8px; padding: 12px 16px; margin: 16px 0; text-align: center;">
-      <span style="color: #166534; font-weight: 600;">🚚 FREE SHIPPING on orders over $1,500</span>
-    </div>
-  `;
-}
-
-function renderPriceMatchBanner(): string {
-  return `
-    <div style="background: #eff6ff; border: 1px solid #3b82f6; border-radius: 8px; padding: 12px 16px; margin: 16px 0; text-align: center;">
-      <span style="font-weight: 600; color: #1e40af;">💰 Price Match Guarantee</span>
-      <span style="color: #1e3a8a; font-size: 14px;"> — Found it cheaper? We'll match it.</span>
-    </div>
-  `;
-}
-
-function renderUnsubscribeFooter(unsubscribeUrl: string): string {
-  return `
-    <div style="background: #f9fafb; padding: 24px; text-align: center; border-top: 1px solid #e5e7eb;">
-      <p style="margin: 0 0 8px; color: #6b7280; font-size: 14px;">
-        Questions? Reply to this email or call ${BRAND.phone?.callDisplay || "us"}
-      </p>
-      <p style="margin: 0 0 16px; color: #9ca3af; font-size: 12px;">
-        ${BRAND.name}
-      </p>
-      <p style="margin: 0; color: #9ca3af; font-size: 11px;">
-        <a href="${unsubscribeUrl}" style="color: #9ca3af;">Unsubscribe from marketing emails</a>
-      </p>
-    </div>
+    <tr>
+      <td style="padding: 0 40px;">
+        <hr style="border: none; border-top: 1px ${style} ${color}; margin: 24px 0;">
+      </td>
+    </tr>
   `;
 }
 
@@ -269,7 +261,7 @@ export interface RenderOptions {
   includePriceMatch?: boolean;
   utmCampaign?: string;
   unsubscribeUrl: string;
-  recipientEmail?: string; // For personalization
+  recipientEmail?: string;
 }
 
 export function renderCampaignEmail(options: RenderOptions): string {
@@ -306,44 +298,24 @@ export function renderCampaignEmail(options: RenderOptions): string {
         return "";
     }
   }).join("");
-  
-  // Build full email
-  return `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${subject}</title>
-  ${previewText ? `<!--[if !mso]><!--><span style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">${previewText}</span><!--<![endif]-->` : ""}
-</head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 0; background: #f5f5f5;">
 
-  <div style="background: white; overflow: hidden;">
-    
-    <!-- Header -->
-    <div style="background: ${PRIMARY_COLOR}; padding: 16px; text-align: center;">
-      <a href="${addUtmParams(BASE_URL, { campaign: utmCampaign, source: "email", medium: "campaign", content: "header_logo" })}" style="text-decoration: none;">
-        <span style="color: white; font-size: 24px; font-weight: 700;">${BRAND.name}</span>
-      </a>
-    </div>
+  // Build content
+  const emailContent = `
+    ${blockHtml}
+    ${includeFreeShippingBanner ? freeShippingBanner() : ""}
+    ${includePriceMatch ? infoBox("💰 Price Match Guarantee", "Found it cheaper? We'll match it.") : ""}
+    ${footer({
+      showPhone: true,
+      unsubscribeUrl,
+      customText: `Questions? Reply to this email or call ${BRAND.phone?.callDisplay || "us"}.`,
+    })}
+  `;
 
-    <!-- Content -->
-    <div style="padding: 0 24px;">
-      ${blockHtml}
-      
-      ${includeFreeShippingBanner ? renderFreeShippingBanner() : ""}
-      ${includePriceMatch ? renderPriceMatchBanner() : ""}
-    </div>
-
-    <!-- Footer -->
-    ${renderUnsubscribeFooter(unsubscribeUrl)}
-
-  </div>
-
-</body>
-</html>
-  `.trim();
+  return emailWrapper({
+    title: subject,
+    previewText,
+    children: emailContent,
+  });
 }
 
 /**

@@ -2,6 +2,22 @@ import nodemailer from "nodemailer";
 import { BRAND } from "./brand";
 import type { QuoteSnapshot } from "./quotes";
 import pg from "pg";
+import {
+  emailWrapper,
+  infoBar,
+  greeting,
+  productCard,
+  servicesSection,
+  priceSummary,
+  infoBox,
+  successBox,
+  ctaButton,
+  footer,
+  adminBanner,
+  formatPrice,
+  type ServiceItem,
+  type PriceSummaryLine,
+} from "./email/templates";
 
 const { Pool } = pg;
 
@@ -205,22 +221,20 @@ export async function sendTestEmail(
     const transporter = await getTransporter(settings);
     const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
 
+    const html = emailWrapper({
+      title: "Test Email",
+      children: `
+        ${greeting(null, "This is a test email from your store. If you received this, your email settings are configured correctly.")}
+        ${successBox("✅ Configuration Working", `SMTP: ${settings.smtpHost}:${settings.smtpPort}`)}
+        ${footer({ showPhone: true, customText: "Questions? Reply to this email." })}
+      `,
+    });
+
     await transporter.sendMail({
       from: fromAddress,
       to: toEmail,
       subject: `Test Email - ${BRAND.name}`,
-      html: `
-        <div style="font-family: sans-serif; padding: 20px;">
-          <h2>✅ Email Configuration Working</h2>
-          <p>This is a test email from ${BRAND.name}.</p>
-          <p>If you received this, your email settings are configured correctly.</p>
-          <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
-          <p style="color: #666; font-size: 12px;">
-            Sent from: ${settings.fromEmail}<br>
-            SMTP: ${settings.smtpHost}:${settings.smtpPort}
-          </p>
-        </div>
-      `,
+      html,
       text: `Test Email - ${BRAND.name}\n\nThis is a test email. If you received this, your email settings are configured correctly.`,
     });
 
@@ -230,30 +244,21 @@ export async function sendTestEmail(
   }
 }
 
-function formatMoney(cents: number): string {
-  return `$${(cents / 100).toFixed(2)}`;
-}
-
 /**
  * Format supplier source code into readable name
- * e.g., "tireweb:atd" → "ATD", "km" → "K&M/Keystone", "wheelpros" → "WheelPros"
  */
 function formatSupplierName(source: string): string {
   if (!source) return "";
   
   const s = source.toLowerCase();
   
-  // TireWeb suppliers
   if (s.includes("tireweb:atd") || s === "atd") return "ATD";
   if (s.includes("tireweb:ntw") || s === "ntw") return "NTW";
   if (s.includes("tireweb:usautoforce") || s === "usautoforce" || s === "usaf") return "US AutoForce";
   if (s.includes("tireweb")) return "TireWeb";
-  
-  // Other suppliers
   if (s === "km" || s.includes("keystone") || s.includes("meyer")) return "K&M/Keystone";
   if (s === "wheelpros" || s === "wp") return "WheelPros";
   
-  // Fallback: capitalize
   return source.charAt(0).toUpperCase() + source.slice(1);
 }
 
@@ -264,181 +269,175 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
     ? [vehicle.year, vehicle.make, vehicle.model, vehicle.trim].filter(Boolean).join(" ")
     : "";
 
-  // Group lines by type - exclude tax from line items (tax shows in totals only)
+  const orderDate = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  // Group lines by type - exclude tax from line items
   const wheels = lines.filter(l => l.meta?.cartType === "wheel");
   const tires = lines.filter(l => l.meta?.cartType === "tire");
   const accessories = lines.filter(l => l.meta?.cartType === "accessory");
   const services = lines.filter(l => 
     !["wheel", "tire", "accessory"].includes(l.meta?.cartType) && 
-    l.meta?.type !== "tax" // Exclude tax - it shows in totals section
+    l.meta?.type !== "tax"
   );
 
-  const renderLineItem = (l: typeof lines[0]) => {
-    const ext = (l.unitPriceUsd * l.qty * 100);
-    const source = l.meta?.source;
-    const supplierLabel = source ? formatSupplierName(source) : null;
+  // Build wheel cards
+  let productCards = "";
+  
+  for (const w of wheels) {
+    const source = w.meta?.source;
+    const supplierLabel = isAdmin && source ? ` • 📦 ${formatSupplierName(source)}` : "";
     
-    // Build product name with tire size if available
-    let displayName = l.name;
-    const tireSize = l.meta?.tireSize || l.meta?.size;
-    if (tireSize) {
-      displayName = `${tireSize} ${l.name}`;
-    }
+    productCards += productCard({
+      emoji: "🛞",
+      sectionTitle: `Wheels${w.qty > 1 ? ` — Set of ${w.qty}` : ""}`,
+      imageUrl: w.meta?.imageUrl,
+      title: `${w.meta?.brand || ""} ${w.name}`.trim(),
+      subtitle: `${w.meta?.diameter || ""}″ × ${w.meta?.width || ""}″${w.meta?.finish ? ` • ${w.meta.finish}` : ""}${supplierLabel}`,
+      sku: w.sku,
+      totalPrice: w.unitPriceUsd * w.qty,
+      unitPrice: w.unitPriceUsd,
+      quantity: w.qty,
+    });
+  }
+
+  // Build tire cards
+  for (const t of tires) {
+    const source = t.meta?.source;
+    const supplierLabel = isAdmin && source ? ` • 📦 ${formatSupplierName(source)}` : "";
+    const tireSize = t.meta?.tireSize || t.meta?.size || 
+      (t.meta?.width && t.meta?.aspectRatio && t.meta?.diameter 
+        ? `${t.meta.width}/${t.meta.aspectRatio}R${t.meta.diameter}` 
+        : "");
     
-    // Show tire specs if available (width/aspect/diameter)
-    const tireSpecs = l.meta?.width && l.meta?.aspectRatio && l.meta?.diameter
-      ? `${l.meta.width}/${l.meta.aspectRatio}R${l.meta.diameter}`
-      : null;
-    if (tireSpecs && !tireSize) {
-      displayName = `${tireSpecs} ${l.name}`;
-    }
+    productCards += productCard({
+      emoji: "🚗",
+      sectionTitle: `Tires${t.qty > 1 ? ` — Set of ${t.qty}` : ""}`,
+      imageUrl: t.meta?.imageUrl,
+      title: `${t.meta?.brand || ""} ${t.name}`.trim(),
+      subtitle: `${tireSize}${supplierLabel}`,
+      sku: t.sku,
+      totalPrice: t.unitPriceUsd * t.qty,
+      unitPrice: t.unitPriceUsd,
+      quantity: t.qty,
+    });
+  }
+
+  // Build accessory cards
+  for (const a of accessories) {
+    const source = a.meta?.source;
+    const supplierLabel = isAdmin && source ? ` • 📦 ${formatSupplierName(source)}` : "";
     
-    return `
+    productCards += productCard({
+      emoji: "🔩",
+      sectionTitle: `Accessories${a.qty > 1 ? ` — Qty ${a.qty}` : ""}`,
+      imageUrl: a.meta?.imageUrl,
+      title: a.name,
+      subtitle: a.meta?.finish || supplierLabel || "",
+      sku: a.sku,
+      totalPrice: a.unitPriceUsd * a.qty,
+      unitPrice: a.unitPriceUsd,
+      quantity: a.qty,
+    });
+  }
+
+  // Build services section
+  const serviceItems: ServiceItem[] = services.map(s => ({
+    name: s.name,
+    price: s.unitPriceUsd * s.qty,
+    quantity: s.qty > 1 ? s.qty : undefined,
+  }));
+
+  // Build price summary
+  const summaryLines: PriceSummaryLine[] = [
+    { label: "Subtotal", amount: totals.partsSubtotal + totals.servicesSubtotal },
+  ];
+
+  // Check for discount (snapshot.discount is an object with { code, amount, type })
+  if (snapshot.discount && snapshot.discount.amount > 0) {
+    summaryLines.push({ label: "Discount", amount: snapshot.discount.amount, isDiscount: true });
+  }
+
+  // Check for shipping (if present on snapshot)
+  const shippingAmount = (snapshot as any).shippingAmount;
+  if (shippingAmount && shippingAmount > 0) {
+    summaryLines.push({ label: "Shipping", amount: shippingAmount });
+  }
+
+  summaryLines.push({ label: "Tax", amount: totals.tax });
+
+  // Build admin banner
+  let adminSection = "";
+  if (isAdmin) {
+    const details = [
+      { label: "Customer", value: `${customer.firstName} ${customer.lastName}` },
+    ];
+    if (customer.email) details.push({ label: "Email", value: customer.email });
+    if (customer.phone) details.push({ label: "Phone", value: customer.phone });
+
+    adminSection = adminBanner("New Order Notification", details);
+  }
+
+  // Local mode banner
+  let localModeSection = "";
+  if (snapshot.localMode) {
+    localModeSection = successBox(
+      "🔧 Installation Order",
+      `<strong>Install Location:</strong> ${snapshot.localMode.installStoreName}<br>
+       <strong>Address:</strong> ${snapshot.localMode.installStoreAddress}<br>
+       <strong>Phone:</strong> ${snapshot.localMode.installStorePhone}
+       ${!isAdmin ? "<br><br>We'll contact you to schedule your installation appointment." : ""}`
+    );
+  }
+
+  // Build the email
+  const content = `
+    ${adminSection}
+    ${infoBar("Order", orderId, "Date", orderDate)}
+    ${greeting(
+      isAdmin ? null : customer.firstName,
+      isAdmin 
+        ? `Order from <strong>${customer.firstName} ${customer.lastName}</strong> — $${formatPrice(totals.total)} total`
+        : "Thank you for your order! We've received your payment and will begin processing right away."
+    )}
+    ${localModeSection}
+    ${vehicleLabel ? `
       <tr>
-        <td style="padding: 8px 0; border-bottom: 1px solid #eee;">
-          <div style="font-weight: 500;">${displayName}</div>
-          ${l.sku ? `<div style="font-size: 12px; color: #666;">SKU: ${l.sku}</div>` : ""}
-          ${isAdmin && supplierLabel ? `<div style="font-size: 11px; color: #dc2626; font-weight: 600;">📦 Supplier: ${supplierLabel}</div>` : ""}
+        <td style="padding: 0 40px 24px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-radius: 8px;">
+            <tr>
+              <td style="padding: 16px 20px;">
+                <span style="color: #6c757d; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Vehicle</span>
+                <br>
+                <span style="color: #1a1a1a; font-size: 18px; font-weight: 600;">🚗 ${vehicleLabel}</span>
+              </td>
+            </tr>
+          </table>
         </td>
-        <td style="padding: 8px 0; border-bottom: 1px solid #eee; text-align: center;">${l.qty}</td>
-        <td style="padding: 8px 0; border-bottom: 1px solid #eee; text-align: right;">${formatMoney(ext)}</td>
       </tr>
-    `;
-  };
+    ` : ""}
+    ${productCards}
+    ${servicesSection("Services", "🔧", serviceItems)}
+    ${priceSummary(summaryLines, "Total Paid", totals.total)}
+    ${infoBox("💰 Price Match Guarantee", "Found it cheaper elsewhere? Reply to this email and we'll take a look.")}
+    ${isAdmin 
+      ? ctaButton("View in Admin →", "https://shop.warehousetiredirect.com/admin/orders", "secondary")
+      : ""
+    }
+    ${footer({
+      showPhone: true,
+      customText: isAdmin ? undefined : "Questions? Reply to this email.",
+    })}
+  `;
 
-  const adminBanner = isAdmin ? `
-    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 12px; margin-bottom: 20px;">
-      <strong>🔔 New Order Notification</strong><br>
-      <span style="font-size: 14px;">Customer: ${customer.firstName} ${customer.lastName}</span><br>
-      ${customer.email ? `<span style="font-size: 14px;">Email: ${customer.email}</span><br>` : ""}
-      ${customer.phone ? `<span style="font-size: 14px;">Phone: ${customer.phone}</span>` : ""}
-    </div>
-  ` : "";
-
-  // Local mode installation banner (shows for both admin and customer)
-  const localModeBanner = snapshot.localMode ? `
-    <div style="background: #dbeafe; border: 1px solid #3b82f6; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
-      <div style="font-size: 18px; font-weight: 600; color: #1e40af; margin-bottom: 8px;">🔧 Installation Order</div>
-      <div style="font-size: 14px; color: #1e3a8a;">
-        <strong>Install Location:</strong> ${snapshot.localMode.installStoreName}<br>
-        <strong>Address:</strong> ${snapshot.localMode.installStoreAddress}<br>
-        <strong>Phone:</strong> ${snapshot.localMode.installStorePhone}
-      </div>
-      ${isAdmin ? `
-        <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #93c5fd; font-size: 12px; color: #1e40af;">
-          <strong>Channel:</strong> local | <strong>Fulfillment:</strong> ${snapshot.localMode.fulfillmentMode}
-        </div>
-      ` : `
-        <div style="margin-top: 10px; font-size: 13px; color: #1e3a8a;">
-          We'll contact you to schedule your installation appointment.
-        </div>
-      `}
-    </div>
-  ` : "";
-
-  return `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Confirmation</title>
-</head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-
-  <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #dc2626;">
-    <h1 style="margin: 0; color: #dc2626; font-size: 24px;">${BRAND.name}</h1>
-  </div>
-
-  ${adminBanner}
-  ${localModeBanner}
-
-  <div style="padding: 30px 0;">
-    <h2 style="margin: 0 0 10px; color: #16a34a;">✓ Order Confirmed</h2>
-    <p style="margin: 0; font-size: 18px;">
-      ${isAdmin ? `Order from <strong>${customer.firstName} ${customer.lastName}</strong>` : `Thank you for your order, <strong>${customer.firstName}</strong>!`}
-    </p>
-  </div>
-
-  <div style="background: #f9fafb; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-    <table style="width: 100%; border-collapse: collapse;">
-      <tr>
-        <td style="padding: 4px 0;"><strong>Order ID:</strong></td>
-        <td style="padding: 4px 0; text-align: right; font-family: monospace; font-size: 16px;">${orderId}</td>
-      </tr>
-      ${vehicleLabel ? `
-      <tr>
-        <td style="padding: 4px 0;"><strong>Vehicle:</strong></td>
-        <td style="padding: 4px 0; text-align: right;">${vehicleLabel}</td>
-      </tr>
-      ` : ""}
-    </table>
-  </div>
-
-  <div style="margin-bottom: 30px;">
-    <h3 style="margin: 0 0 15px; padding-bottom: 10px; border-bottom: 2px solid #333;">Order Details</h3>
-
-    <table style="width: 100%; border-collapse: collapse;">
-      <thead>
-        <tr style="background: #f3f4f6;">
-          <th style="padding: 10px; text-align: left;">Item</th>
-          <th style="padding: 10px; text-align: center;">Qty</th>
-          <th style="padding: 10px; text-align: right;">Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${wheels.length > 0 ? `
-          <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Wheels</td></tr>
-          ${wheels.map(renderLineItem).join("")}
-        ` : ""}
-
-        ${tires.length > 0 ? `
-          <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Tires</td></tr>
-          ${tires.map(renderLineItem).join("")}
-        ` : ""}
-
-        ${accessories.length > 0 ? `
-          <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Accessories</td></tr>
-          ${accessories.map(renderLineItem).join("")}
-        ` : ""}
-
-        ${services.length > 0 ? `
-          <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Services</td></tr>
-          ${services.map(renderLineItem).join("")}
-        ` : ""}
-      </tbody>
-    </table>
-  </div>
-
-  <div style="background: #f9fafb; border-radius: 8px; padding: 20px;">
-    <table style="width: 100%; border-collapse: collapse;">
-      <tr>
-        <td style="padding: 4px 0;">Subtotal:</td>
-        <td style="padding: 4px 0; text-align: right;">${formatMoney((totals.partsSubtotal + totals.servicesSubtotal) * 100)}</td>
-      </tr>
-      <tr>
-        <td style="padding: 4px 0;">Tax:</td>
-        <td style="padding: 4px 0; text-align: right;">${formatMoney(totals.tax * 100)}</td>
-      </tr>
-      <tr style="font-size: 18px; font-weight: 600;">
-        <td style="padding: 10px 0 0; border-top: 2px solid #333;">Total:</td>
-        <td style="padding: 10px 0 0; border-top: 2px solid #333; text-align: right;">${formatMoney(totals.total * 100)}</td>
-      </tr>
-    </table>
-  </div>
-
-  <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666; font-size: 14px;">
-    ${isAdmin ? `
-      <p style="margin: 0;"><a href="https://shop.warehousetiredirect.com/admin/orders" style="color: #dc2626;">View in Admin →</a></p>
-    ` : `
-      <p style="margin: 0 0 10px;">Questions? Reply to this email or call us.</p>
-      <p style="margin: 0;"><strong>${BRAND.name}</strong></p>
-    `}
-  </div>
-
-</body>
-</html>
-  `.trim();
+  return emailWrapper({
+    title: `Order Confirmed: ${orderId}`,
+    previewText: `Your order ${orderId} has been confirmed - $${formatPrice(totals.total)} total`,
+    children: content,
+  });
 }
 
 function buildOrderConfirmationText(orderId: string, snapshot: QuoteSnapshot): string {

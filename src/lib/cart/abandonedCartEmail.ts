@@ -7,7 +7,7 @@
  * - Email 3: 48 hours after abandonment
  * 
  * @created 2026-03-25
- * @updated 2026-04-03 - Full 3-email sequence with subscriber consent check
+ * @updated 2026-04-29 - Unified professional email template
  */
 
 import nodemailer from "nodemailer";
@@ -16,6 +16,21 @@ import { BRAND } from "@/lib/brand";
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts, emailSubscribers, type AbandonedCart } from "@/lib/fitment-db/schema";
 import { eq, and, isNull, isNotNull, lt, or, sql, desc } from "drizzle-orm";
+import {
+  emailWrapper,
+  infoBar,
+  greeting,
+  productCard,
+  priceSummary,
+  urgencyBox,
+  infoBox,
+  ctaButton,
+  textSection,
+  vehicleBox,
+  footer,
+  formatPrice,
+  type PriceSummaryLine,
+} from "@/lib/email/templates";
 
 // ============================================================================
 // Configuration
@@ -154,16 +169,9 @@ async function getTransporter(settings: EmailSettings) {
 // Consent Checking
 // ============================================================================
 
-/**
- * Check if an email has marketing consent
- * Returns true if:
- * - Email exists in email_subscribers with marketing_consent=true and unsubscribed=false
- * - OR email was captured via cart_save/exit_intent (implies consent to recover cart)
- */
 async function hasEmailConsent(email: string): Promise<boolean> {
   const normalizedEmail = email.toLowerCase().trim();
 
-  // Check email_subscribers
   const [subscriber] = await db
     .select()
     .from(emailSubscribers)
@@ -173,7 +181,6 @@ async function hasEmailConsent(email: string): Promise<boolean> {
         eq(emailSubscribers.unsubscribed, false),
         or(
           eq(emailSubscribers.marketingConsent, true),
-          // Cart recovery sources imply consent for recovery emails
           eq(emailSubscribers.source, "cart_save"),
           eq(emailSubscribers.source, "exit_intent"),
           eq(emailSubscribers.source, "checkout")
@@ -189,22 +196,18 @@ async function hasEmailConsent(email: string): Promise<boolean> {
 // Tracking URLs
 // ============================================================================
 
-/** Direct recovery link (for display/fallback) */
 export function generateRecoveryLink(cartId: string): string {
   return `${BASE_URL}/cart/recover/${encodeURIComponent(cartId)}`;
 }
 
-/** Tracked click link (records click event before redirecting to recovery) */
 export function generateTrackedClickLink(cartId: string): string {
   return `${BASE_URL}/api/email/track/click/${encodeURIComponent(cartId)}`;
 }
 
-/** Tracking pixel URL (1x1 GIF that records open event) */
 export function generateTrackingPixelUrl(cartId: string): string {
   return `${BASE_URL}/api/email/track/open/${encodeURIComponent(cartId)}`;
 }
 
-/** HTML for tracking pixel (invisible 1x1 image) */
 export function generateTrackingPixelHtml(cartId: string): string {
   const url = generateTrackingPixelUrl(cartId);
   return `<img src="${url}" alt="" width="1" height="1" style="display:block;width:1px;height:1px;border:0;" />`;
@@ -259,7 +262,7 @@ function buildSubject(cart: AbandonedCart, step: EmailStep): string {
 // ============================================================================
 
 function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
-  const recoveryLink = generateTrackedClickLink(cart.cartId); // Use tracked link
+  const recoveryLink = generateTrackedClickLink(cart.cartId);
   const trackingPixel = generateTrackingPixelHtml(cart.cartId);
   const customerName = cart.customerFirstName || null;
   
@@ -271,10 +274,8 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
   const { wheels, tires, accessories } = getItemSummary(items);
   const totalValue = Number(cart.estimatedTotal) || 0;
 
-  const greeting = customerName ? `Hey ${customerName},` : "Hey there,";
-
   // Step-specific content
-  const content: Record<EmailStep, { headline: string; intro: string; urgency: string }> = {
+  const contentByStep: Record<EmailStep, { headline: string; intro: string; urgency: string }> = {
     first: {
       headline: "You left something behind",
       intro: "We noticed you didn't finish checking out. No worries — your cart is saved and ready when you are.",
@@ -292,152 +293,115 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
     },
   };
 
-  const { headline, intro, urgency } = content[step];
+  const { headline, intro, urgency } = contentByStep[step];
 
-  // Build items HTML
-  let itemsHtml = "";
-  
+  // Build product cards
+  let productCards = "";
+
   if (wheels.length > 0) {
     const w = wheels[0];
-    itemsHtml += `
-      <tr>
-        <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb;">
-          <div style="display: flex; gap: 12px;">
-            ${w.imageUrl ? `<img src="${w.imageUrl}" alt="${w.model}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: #f3f4f6;">` : ""}
-            <div>
-              <div style="font-weight: 600; color: #1f2937;">${w.brand} ${w.model}</div>
-              <div style="font-size: 14px; color: #6b7280;">${w.diameter}" × ${w.width}" • Qty: ${w.quantity}</div>
-              <div style="font-weight: 600; color: #dc2626;">${formatMoney(w.unitPrice * w.quantity)}</div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    `;
+    productCards += productCard({
+      emoji: "🛞",
+      sectionTitle: `Wheels — Qty ${w.quantity}`,
+      imageUrl: w.imageUrl,
+      title: `${w.brand || ""} ${w.model || ""}`.trim(),
+      subtitle: `${w.diameter || ""}″ × ${w.width || ""}″`,
+      totalPrice: w.unitPrice * w.quantity,
+      unitPrice: w.unitPrice,
+      quantity: w.quantity,
+    });
   }
 
   if (tires.length > 0) {
     const t = tires[0];
-    itemsHtml += `
-      <tr>
-        <td style="padding: 12px 0; border-bottom: 1px solid #e5e7eb;">
-          <div style="display: flex; gap: 12px;">
-            ${t.imageUrl ? `<img src="${t.imageUrl}" alt="${t.model}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: #f3f4f6;">` : ""}
-            <div>
-              <div style="font-weight: 600; color: #1f2937;">${t.brand} ${t.model}</div>
-              <div style="font-size: 14px; color: #6b7280;">${t.size} • Qty: ${t.quantity}</div>
-              <div style="font-weight: 600; color: #dc2626;">${formatMoney(t.unitPrice * t.quantity)}</div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    `;
+    productCards += productCard({
+      emoji: "🚗",
+      sectionTitle: `Tires — Qty ${t.quantity}`,
+      imageUrl: t.imageUrl,
+      title: `${t.brand || ""} ${t.model || ""}`.trim(),
+      subtitle: t.size || "",
+      totalPrice: t.unitPrice * t.quantity,
+      unitPrice: t.unitPrice,
+      quantity: t.quantity,
+    });
   }
 
-  if (accessories.length > 0) {
-    const accNames = accessories.map((a: any) => a.name).join(", ");
-    itemsHtml += `
+  // Price summary
+  const summaryLines: PriceSummaryLine[] = [];
+  
+  // Calculate parts total
+  let partsTotal = 0;
+  for (const w of wheels) partsTotal += (w.unitPrice || 0) * (w.quantity || 1);
+  for (const t of tires) partsTotal += (t.unitPrice || 0) * (t.quantity || 1);
+  for (const a of accessories) partsTotal += (a.unitPrice || 0) * (a.quantity || 1);
+
+  if (partsTotal > 0) {
+    summaryLines.push({ label: "Cart Subtotal", amount: partsTotal });
+  }
+
+  // Build content
+  const content = `
+    ${infoBar("Cart", cart.cartId.slice(0, 8).toUpperCase(), "Saved", new Date(cart.abandonedAt || Date.now()).toLocaleDateString("en-US", { month: "short", day: "numeric" }))}
+    ${greeting(customerName, intro)}
+    ${urgency ? urgencyBox(urgency) : ""}
+    ${vehicleLabel ? vehicleBox(vehicleLabel) : ""}
+    ${productCards}
+    ${accessories.length > 0 ? `
       <tr>
-        <td style="padding: 12px 0;">
-          <div style="font-size: 14px; color: #6b7280;">+ ${accNames}</div>
+        <td style="padding: 0 40px 16px;">
+          <p style="margin: 0; color: #6b7280; font-size: 14px;">+ ${accessories.map((a: any) => a.name).join(", ")}</p>
         </td>
       </tr>
-    `;
-  }
+    ` : ""}
+    ${priceSummary(summaryLines, "Estimated Total", totalValue)}
+    ${textSection("Ready to get rolling? Click below to restore your cart — all items saved.", true)}
+    ${ctaButton("Complete My Order", recoveryLink)}
+    ${infoBox("💰 Price Match Guarantee", "Found it cheaper elsewhere? Reply to this email with the link and we'll take a look.")}
+    ${footer({
+      showPhone: true,
+      unsubscribeUrl: `${BASE_URL}/unsubscribe?email=${encodeURIComponent(cart.customerEmail || "")}`,
+      customText: "Questions? Reply to this email.",
+    })}
+    <tr><td>${trackingPixel}</td></tr>
+  `;
+
+  return emailWrapper({
+    title: headline,
+    previewText: vehicleLabel ? `Your ${vehicleLabel} package is waiting` : "Your cart is waiting",
+    children: content,
+  });
+}
+
+function buildEmailText(cart: AbandonedCart, step: EmailStep): string {
+  const customerName = cart.customerFirstName || "there";
+  const vehicleLabel = cart.vehicleYear && cart.vehicleMake
+    ? `${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel || ""}`.trim()
+    : "";
+  const totalValue = Number(cart.estimatedTotal) || 0;
+  const recoveryLink = generateRecoveryLink(cart.cartId);
+
+  const contentByStep: Record<EmailStep, string> = {
+    first: "We noticed you didn't finish checking out. No worries — your cart is saved.",
+    second: "Just a friendly reminder that your cart is still waiting. Prices can change!",
+    third: "This is our final reminder. Your cart will expire soon.",
+  };
 
   return `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${headline} - ${BRAND.name}</title>
-</head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5;">
+${BRAND.name}
+${"=".repeat(40)}
 
-  <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    
-    <!-- Header -->
-    <div style="background: #dc2626; padding: 24px; text-align: center;">
-      <h1 style="margin: 0; color: white; font-size: 24px;">${BRAND.name}</h1>
-    </div>
+Hey ${customerName},
 
-    <!-- Content -->
-    <div style="padding: 32px;">
-      
-      <h2 style="margin: 0 0 16px; color: #1f2937; font-size: 22px;">${headline}</h2>
-      
-      <p style="margin: 0 0 24px; color: #4b5563; font-size: 16px;">
-        ${greeting}<br><br>
-        ${intro}
-      </p>
+${contentByStep[step]}
 
-      ${urgency ? `
-      <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 12px 16px; margin-bottom: 24px;">
-        <div style="font-weight: 600; color: #92400e;">${urgency}</div>
-      </div>
-      ` : ""}
+${vehicleLabel ? `Vehicle: ${vehicleLabel}\n` : ""}
+Estimated Total: ${formatMoney(totalValue)}
 
-      ${vehicleLabel ? `
-      <div style="background: #f3f4f6; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
-        <div style="font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Your Vehicle</div>
-        <div style="font-size: 18px; font-weight: 600; color: #1f2937;">🚗 ${vehicleLabel}</div>
-      </div>
-      ` : ""}
+Complete your order: ${recoveryLink}
 
-      <!-- Cart Items -->
-      <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
-        <div style="font-weight: 600; color: #1f2937; margin-bottom: 12px;">Your Package</div>
-        <table style="width: 100%; border-collapse: collapse;">
-          ${itemsHtml}
-        </table>
-        <div style="padding-top: 16px; border-top: 2px solid #e5e7eb; margin-top: 12px;">
-          <span style="color: #6b7280;">Total:</span>
-          <span style="font-size: 24px; font-weight: 700; color: #dc2626; float: right;">${formatMoney(totalValue)}</span>
-        </div>
-      </div>
+Questions? Reply to this email or call ${BRAND.phone?.callDisplay || "us"}.
 
-      <!-- CTA -->
-      <div style="text-align: center; margin: 32px 0;">
-        <a href="${recoveryLink}" 
-           style="display: inline-block; background: #dc2626; color: white; padding: 16px 48px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 18px;">
-          Complete My Order
-        </a>
-      </div>
-
-      <p style="margin: 0 0 16px; color: #6b7280; font-size: 14px; text-align: center;">
-        ✓ Click to restore your cart — all items saved
-      </p>
-
-      <!-- Price Match -->
-      <div style="background: #eff6ff; border: 1px solid #3b82f6; border-radius: 8px; padding: 16px; margin-top: 24px;">
-        <div style="font-weight: 600; color: #1e40af; margin-bottom: 4px;">💰 Price Match Guarantee</div>
-        <div style="font-size: 14px; color: #1e3a8a;">
-          Found it cheaper elsewhere? Reply to this email with the link and we'll take a look.
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Footer -->
-    <div style="background: #f9fafb; padding: 24px; text-align: center; border-top: 1px solid #e5e7eb;">
-      <p style="margin: 0 0 8px; color: #6b7280; font-size: 14px;">
-        Questions? Reply to this email or call ${BRAND.phone.callDisplay}
-      </p>
-      <p style="margin: 0 0 16px; color: #9ca3af; font-size: 12px;">
-        ${BRAND.name}
-      </p>
-      <p style="margin: 0; color: #9ca3af; font-size: 11px;">
-        <a href="${BASE_URL}/unsubscribe?email=${encodeURIComponent(cart.customerEmail || "")}" style="color: #9ca3af;">Unsubscribe</a>
-      </p>
-    </div>
-
-  </div>
-
-  <!-- Email open tracking pixel -->
-  ${trackingPixel}
-
-</body>
-</html>
+${BRAND.name}
   `.trim();
 }
 
@@ -445,21 +409,16 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
 // Email Sending
 // ============================================================================
 
-/**
- * Send recovery email for a specific cart
- */
 export async function sendRecoveryEmail(
   cart: AbandonedCart,
   step: EmailStep
 ): Promise<EmailResult> {
   const cartId = cart.cartId;
 
-  // Skip test data
   if (cart.isTest) {
     return { success: false, cartId, step, action: "skipped", reason: "test_data" };
   }
 
-  // Validation
   if (!cart.customerEmail) {
     return { success: false, cartId, step, action: "skipped", reason: "no_email" };
   }
@@ -477,13 +436,11 @@ export async function sendRecoveryEmail(
     return { success: false, cartId, step, action: "skipped", reason: "below_min_value" };
   }
 
-  // Check consent
   const hasConsent = await hasEmailConsent(cart.customerEmail);
   if (!hasConsent) {
     return { success: false, cartId, step, action: "skipped", reason: "no_consent" };
   }
 
-  // Check cooldown
   const lastEmailAt = cart.thirdEmailSentAt || cart.secondEmailSentAt || cart.firstEmailSentAt;
   if (lastEmailAt) {
     const hoursSinceLastEmail = (Date.now() - new Date(lastEmailAt).getTime()) / (1000 * 60 * 60);
@@ -494,8 +451,8 @@ export async function sendRecoveryEmail(
 
   const subject = buildSubject(cart, step);
   const html = buildEmailHtml(cart, step);
+  const text = buildEmailText(cart, step);
 
-  // Safe mode
   if (EMAIL_SAFE_MODE) {
     console.log("[abandonedCartEmail] SAFE_MODE - Would send email:");
     console.log(`  To: ${cart.customerEmail}`);
@@ -508,7 +465,6 @@ export async function sendRecoveryEmail(
     return { success: true, cartId, step, action: "logged", reason: "safe_mode" };
   }
 
-  // Get SMTP settings from admin_settings (Office 365)
   const settings = await getEmailSettings();
   if (!settings) {
     console.warn("[abandonedCartEmail] Email not configured in admin settings");
@@ -529,6 +485,7 @@ export async function sendRecoveryEmail(
       to: cart.customerEmail,
       subject,
       html,
+      text,
       replyTo: BRAND.email,
     });
 
@@ -568,17 +525,13 @@ async function findCartsForStep(step: EmailStep): Promise<AbandonedCart[]> {
   const cutoffTime = new Date(Date.now() - hours * 60 * 60 * 1000);
 
   let sentAtColumn: any;
-  let prevSentRequired = false;
 
   if (step === "first") {
     sentAtColumn = abandonedCarts.firstEmailSentAt;
-    prevSentRequired = false;
   } else if (step === "second") {
     sentAtColumn = abandonedCarts.secondEmailSentAt;
-    prevSentRequired = true;
   } else {
     sentAtColumn = abandonedCarts.thirdEmailSentAt;
-    prevSentRequired = true;
   }
 
   const conditions = [
@@ -587,7 +540,6 @@ async function findCartsForStep(step: EmailStep): Promise<AbandonedCart[]> {
     isNull(sentAtColumn),
     lt(abandonedCarts.abandonedAt, cutoffTime),
     eq(abandonedCarts.unsubscribed, false),
-    // Exclude test data from recovery emails
     eq(abandonedCarts.isTest, false),
   ];
 
@@ -617,9 +569,6 @@ export async function findCartsForThirdEmail(): Promise<AbandonedCart[]> {
   return findCartsForStep("third");
 }
 
-/**
- * Process all pending emails
- */
 export async function processAbandonedCartEmails(): Promise<ProcessEmailsResult> {
   const results: EmailResult[] = [];
   let sent = 0, logged = 0, skipped = 0, errors = 0;
@@ -646,9 +595,6 @@ export async function processAbandonedCartEmails(): Promise<ProcessEmailsResult>
 // Status & Admin
 // ============================================================================
 
-/**
- * Get email status for a cart
- */
 export async function getCartEmailStatus(cartId: string): Promise<CartEmailStatus | null> {
   const [cart] = await db
     .select()
@@ -662,7 +608,6 @@ export async function getCartEmailStatus(cartId: string): Promise<CartEmailStatu
     ? await hasEmailConsent(cart.customerEmail)
     : false;
 
-  // Determine next email
   let nextEmailStep: EmailStep | null = null;
   let nextEmailDue: Date | null = null;
 
@@ -701,9 +646,6 @@ export async function getCartEmailStatus(cartId: string): Promise<CartEmailStatu
   };
 }
 
-/**
- * Mark cart recovered after email
- */
 export async function markRecoveredAfterEmail(cartId: string): Promise<void> {
   const [cart] = await db
     .select()
