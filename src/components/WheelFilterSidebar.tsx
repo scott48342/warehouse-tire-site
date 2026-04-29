@@ -208,6 +208,7 @@ function RangeInput({
 export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [modelSearch, setModelSearch] = useState("");
   
   const buildUrl = useCallback((updates: Record<string, string | string[] | null>) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -353,41 +354,68 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Model Name - show 5 initially */}
+      {/* Model Name - with search */}
       <AccordionSection
         title="Model"
         selectedCount={data.models.length}
         hidden={!data.modelOptions || data.modelOptions.length === 0}
       >
-        <div className="max-h-48 overflow-y-auto scroll-smooth">
-          {(data.modelOptions || []).slice(0, 5).map((opt) => (
-            <FilterCheckbox
-              key={opt.value}
-              label={opt.value}
-              checked={data.models.includes(opt.value)}
-              count={opt.count}
-              onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
-            />
-          ))}
-          {(data.modelOptions || []).length > 5 && (
-            <details className="mt-1">
-              <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
-                +{(data.modelOptions || []).length - 5} more
-              </summary>
-              <div className="mt-1">
-                {(data.modelOptions || []).slice(5).map((opt) => (
-                  <FilterCheckbox
-                    key={opt.value}
-                    label={opt.value}
-                    checked={data.models.includes(opt.value)}
-                    count={opt.count}
-                    onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
-                  />
-                ))}
-              </div>
-            </details>
-          )}
+        {/* Search input */}
+        <div className="mb-2">
+          <input
+            type="text"
+            placeholder="Search models..."
+            value={modelSearch}
+            onChange={(e) => setModelSearch(e.target.value)}
+            className="w-full h-7 rounded-md border border-neutral-200 bg-white px-2 text-[12px] placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none"
+          />
         </div>
+        {(() => {
+          // Filter models based on search
+          const filtered = (data.modelOptions || []).filter((opt) =>
+            opt.value.toLowerCase().includes(modelSearch.toLowerCase())
+          );
+          const showAll = modelSearch.length > 0; // Show all when searching
+          const displayModels = showAll ? filtered : filtered.slice(0, 5);
+          const hiddenCount = filtered.length - displayModels.length;
+          
+          return (
+            <div className="max-h-48 overflow-y-auto scroll-smooth">
+              {displayModels.map((opt) => (
+                <FilterCheckbox
+                  key={opt.value}
+                  label={opt.value}
+                  checked={data.models.includes(opt.value)}
+                  count={opt.count}
+                  onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
+                />
+              ))}
+              {hiddenCount > 0 && !showAll && (
+                <details className="mt-1">
+                  <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
+                    +{hiddenCount} more
+                  </summary>
+                  <div className="mt-1">
+                    {filtered.slice(5).map((opt) => (
+                      <FilterCheckbox
+                        key={opt.value}
+                        label={opt.value}
+                        checked={data.models.includes(opt.value)}
+                        count={opt.count}
+                        onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
+                      />
+                    ))}
+                  </div>
+                </details>
+              )}
+              {filtered.length === 0 && modelSearch && (
+                <div className="py-2 text-[11px] text-neutral-400 text-center">
+                  No models match "{modelSearch}"
+                </div>
+              )}
+            </div>
+          );
+        })()}
       </AccordionSection>
       
       {/* Diameter */}
