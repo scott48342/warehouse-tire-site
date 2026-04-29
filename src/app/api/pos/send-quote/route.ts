@@ -521,7 +521,7 @@ function buildQuoteEmailHtml(data: QuoteEmailData): string {
               <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
                 <tr>
                   <td style="background-color: #dc2626; border-radius: 6px;">
-                    <a href="tel:+12489740888" style="display: inline-block; padding: 14px 32px; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;">(248) 974-0888</a>
+                    <a href="tel:${BRAND.phone?.callE164 || "+12483324120"}" style="display: inline-block; padding: 14px 32px; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;">${BRAND.phone?.callDisplay || "248-332-4120"}</a>
                   </td>
                 </tr>
               </table>
@@ -655,7 +655,7 @@ Notes: ${notes}
   text += `
 ═══════════════════════════════════════════════════════
 
-Ready to get rolling? Give us a call: (248) 974-0888
+Ready to get rolling? Give us a call: ${BRAND.phone?.callDisplay || "248-332-4120"}
 
 Quote valid for 7 days • Prices subject to change
 

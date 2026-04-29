@@ -441,7 +441,7 @@ export function footer(options: {
       <td style="background-color: ${LIGHT_BG}; padding: 24px 40px; text-align: center; border-top: 1px solid ${BORDER_COLOR};">
         ${showValidity && validityText ? `<p style="margin: 0 0 8px; color: ${TEXT_MUTED}; font-size: 12px;">${validityText}</p>` : ""}
         <p style="margin: 0; color: ${TEXT_PRIMARY}; font-size: 14px; font-weight: 600;">${BRAND.name}</p>
-        ${showPhone ? `<p style="margin: 8px 0 0; color: ${TEXT_MUTED}; font-size: 12px;">${BRAND.phone?.callDisplay || "(248) 974-0888"}</p>` : ""}
+        ${showPhone ? `<p style="margin: 8px 0 0; color: ${TEXT_MUTED}; font-size: 12px;">${BRAND.phone?.callDisplay || "248-332-4120"}</p>` : ""}
         ${customText ? `<p style="margin: 8px 0 0; color: ${TEXT_MUTED}; font-size: 12px;">${customText}</p>` : ""}
         ${unsubscribeUrl ? `<p style="margin: 12px 0 0;"><a href="${unsubscribeUrl}" style="color: #9ca3af; font-size: 11px;">Unsubscribe</a></p>` : ""}
       </td>
