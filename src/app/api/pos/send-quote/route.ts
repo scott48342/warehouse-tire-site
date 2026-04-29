@@ -6,7 +6,7 @@ import { BRAND } from "@/lib/brand";
 const { Pool } = pg;
 
 // ============================================================================
-// POS Quote Email API
+// POS Quote Email API - Professional email template
 // ============================================================================
 
 type EmailSettings = {
@@ -110,7 +110,6 @@ export async function POST(request: Request) {
     const transporter = await getTransporter(settings);
     const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
 
-    // Build email HTML
     const html = buildQuoteEmailHtml({
       customerName,
       quoteId,
@@ -148,7 +147,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: fromAddress,
       to,
-      subject: `Your Wheel & Tire Quote - ${quoteId} | ${BRAND.name}`,
+      subject: `Your Wheel & Tire Quote ${quoteId} | ${BRAND.name}`,
       html,
       text,
     });
@@ -166,7 +165,7 @@ export async function POST(request: Request) {
 }
 
 // ============================================================================
-// Email Templates
+// Email Templates - Table-based layout for email client compatibility
 // ============================================================================
 
 interface QuoteEmailData {
@@ -209,6 +208,10 @@ interface QuoteEmailData {
   notes?: string;
 }
 
+function formatPrice(amount: number): string {
+  return amount.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
 function buildQuoteEmailHtml(data: QuoteEmailData): string {
   const {
     customerName,
@@ -237,157 +240,309 @@ function buildQuoteEmailHtml(data: QuoteEmailData): string {
     day: "numeric",
   });
 
-  // Build add-ons list
-  const addOnsList: string[] = [];
-  if (selectedAddOns.labor) addOnsList.push(`Mount & Balance: $${laborTotal.toFixed(2)}`);
-  if (selectedAddOns.tpms) addOnsList.push(`TPMS Sensors: $${(adminSettings.tpmsPerSensor * 4).toFixed(2)}`);
-  if (selectedAddOns.disposal) addOnsList.push(`Tire Disposal: $${(adminSettings.disposalPerTire * 4).toFixed(2)}`);
+  const partsTotal = wheel.setPrice + tire.setPrice;
+
+  // Build services rows
+  const serviceRows: string[] = [];
+  if (selectedAddOns.labor && laborTotal > 0) {
+    serviceRows.push(`
+      <tr>
+        <td style="padding: 8px 0; color: #555; font-size: 14px;">Mount & Balance (×4)</td>
+        <td style="padding: 8px 0; text-align: right; font-size: 14px;">$${formatPrice(laborTotal)}</td>
+      </tr>
+    `);
+  }
+  if (selectedAddOns.tpms) {
+    const tpmsTotal = adminSettings.tpmsPerSensor * 4;
+    serviceRows.push(`
+      <tr>
+        <td style="padding: 8px 0; color: #555; font-size: 14px;">TPMS Sensors (×4)</td>
+        <td style="padding: 8px 0; text-align: right; font-size: 14px;">$${formatPrice(tpmsTotal)}</td>
+      </tr>
+    `);
+  }
+  if (selectedAddOns.disposal) {
+    const disposalTotal = adminSettings.disposalPerTire * 4;
+    serviceRows.push(`
+      <tr>
+        <td style="padding: 8px 0; color: #555; font-size: 14px;">Tire Disposal (×4)</td>
+        <td style="padding: 8px 0; text-align: right; font-size: 14px;">$${formatPrice(disposalTotal)}</td>
+      </tr>
+    `);
+  }
   
   // Custom add-ons
-  const customIds = selectedAddOns.customIds as string[] || [];
-  for (const addon of adminSettings.customAddOns) {
+  const customIds = (selectedAddOns.customIds as string[]) || [];
+  for (const addon of adminSettings.customAddOns || []) {
     if (customIds.includes(addon.id) && addon.name.toLowerCase() !== "valve stems") {
       const price = addon.perUnit ? addon.price * 4 : addon.price;
-      addOnsList.push(`${addon.name}: $${price.toFixed(2)}`);
+      serviceRows.push(`
+        <tr>
+          <td style="padding: 8px 0; color: #555; font-size: 14px;">${addon.name}${addon.perUnit ? " (×4)" : ""}</td>
+          <td style="padding: 8px 0; text-align: right; font-size: 14px;">$${formatPrice(price)}</td>
+        </tr>
+      `);
     }
   }
 
   return `
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Quote from ${BRAND.name}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Quote ${quoteId} - ${BRAND.name}</title>
+  <!--[if mso]>
+  <style type="text/css">
+    table { border-collapse: collapse; }
+    .fallback-font { font-family: Arial, sans-serif !important; }
+  </style>
+  <![endif]-->
 </head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5;">
-
-  <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    
-    <!-- Header -->
-    <div style="background: #111; padding: 24px; text-align: center;">
-      <h1 style="margin: 0; color: white; font-size: 24px;">${BRAND.name}</h1>
-      <p style="margin: 8px 0 0; color: #999; font-size: 14px;">Wheel & Tire Package Quote</p>
-    </div>
-
-    <!-- Quote Info -->
-    <div style="padding: 24px; border-bottom: 1px solid #eee;">
-      <p style="margin: 0 0 8px; font-size: 18px;">
-        Hi <strong>${customerName}</strong>,
-      </p>
-      <p style="margin: 0; color: #666;">
-        Here's your custom quote for your <strong>${vehicleLabel}</strong>.
-      </p>
-      <div style="margin-top: 16px; padding: 12px; background: #f9fafb; border-radius: 8px; display: inline-block;">
-        <span style="color: #666; font-size: 13px;">Quote #</span>
-        <span style="font-family: monospace; font-weight: 600;">${quoteId}</span>
-        <span style="color: #999; font-size: 13px; margin-left: 12px;">${quoteDate}</span>
-      </div>
-    </div>
-
-    <!-- Wheels -->
-    <div style="padding: 24px; border-bottom: 1px solid #eee;">
-      <h3 style="margin: 0 0 16px; color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Wheels (Set of 4)</h3>
-      <div style="display: flex; gap: 16px;">
-        ${wheel.imageUrl ? `<img src="${wheel.imageUrl}" alt="${wheel.model}" style="width: 80px; height: 80px; object-fit: contain; background: #f5f5f5; border-radius: 8px;">` : ""}
-        <div style="flex: 1;">
-          <div style="font-weight: 600; font-size: 16px;">${wheel.brand} ${wheel.model}</div>
-          <div style="color: #666; font-size: 14px;">${wheel.diameter}" × ${wheel.width}"${wheel.finish ? ` • ${wheel.finish}` : ""}</div>
-          <div style="color: #999; font-size: 12px; margin-top: 4px;">SKU: ${wheel.sku}</div>
-        </div>
-        <div style="text-align: right;">
-          <div style="font-weight: 600; font-size: 18px;">$${wheel.setPrice.toLocaleString()}</div>
-          <div style="color: #666; font-size: 12px;">$${wheel.unitPrice.toLocaleString()} each</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tires -->
-    <div style="padding: 24px; border-bottom: 1px solid #eee;">
-      <h3 style="margin: 0 0 16px; color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Tires (Set of 4)</h3>
-      <div style="display: flex; gap: 16px;">
-        ${tire.imageUrl ? `<img src="${tire.imageUrl}" alt="${tire.model}" style="width: 80px; height: 80px; object-fit: contain; background: #f5f5f5; border-radius: 8px;">` : ""}
-        <div style="flex: 1;">
-          <div style="font-weight: 600; font-size: 16px;">${tire.brand} ${tire.model}</div>
-          <div style="color: #666; font-size: 14px;">${tire.size}</div>
-          <div style="color: #999; font-size: 12px; margin-top: 4px;">SKU: ${tire.sku}</div>
-        </div>
-        <div style="text-align: right;">
-          <div style="font-weight: 600; font-size: 18px;">$${tire.setPrice.toLocaleString()}</div>
-          <div style="color: #666; font-size: 12px;">$${tire.unitPrice.toLocaleString()} each</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Services & Add-ons -->
-    ${addOnsList.length > 0 ? `
-    <div style="padding: 24px; border-bottom: 1px solid #eee;">
-      <h3 style="margin: 0 0 16px; color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Installation & Add-ons</h3>
-      ${addOnsList.map(item => `<div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px;"><span style="color: #666;">${item.split(":")[0]}</span><span>${item.split(":")[1]}</span></div>`).join("")}
-    </div>
-    ` : ""}
-
-    <!-- Totals -->
-    <div style="padding: 24px; background: #f9fafb;">
-      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px;">
-        <span style="color: #666;">Parts</span>
-        <span>$${(wheel.setPrice + tire.setPrice).toLocaleString()}</span>
-      </div>
-      ${laborTotal > 0 ? `
-      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px;">
-        <span style="color: #666;">Labor</span>
-        <span>$${laborTotal.toFixed(2)}</span>
-      </div>
-      ` : ""}
-      ${addOnsTotal > 0 ? `
-      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px;">
-        <span style="color: #666;">Add-ons</span>
-        <span>$${addOnsTotal.toFixed(2)}</span>
-      </div>
-      ` : ""}
-      ${discountAmount > 0 ? `
-      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px; color: #16a34a;">
-        <span>Discount</span>
-        <span>-$${discountAmount.toFixed(2)}</span>
-      </div>
-      ` : ""}
-      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px;">
-        <span style="color: #666;">Tax (6%)</span>
-        <span>$${taxAmount.toFixed(2)}</span>
-      </div>
-      ${creditCardFee > 0 ? `
-      <div style="display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px;">
-        <span style="color: #666;">Non Cash Fee (${adminSettings.creditCardFeePercent}%)</span>
-        <span>$${creditCardFee.toFixed(2)}</span>
-      </div>
-      ` : ""}
-      <div style="display: flex; justify-content: space-between; padding: 16px 0 0; margin-top: 12px; border-top: 2px solid #333; font-size: 20px; font-weight: 700;">
-        <span>Out The Door</span>
-        <span style="color: #16a34a;">$${outTheDoorPrice.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
-      </div>
-    </div>
-
-    ${notes ? `
-    <div style="padding: 16px 24px; background: #fffbeb; border-top: 1px solid #fef3c7;">
-      <div style="font-size: 12px; color: #92400e; font-weight: 600; margin-bottom: 4px;">Notes</div>
-      <div style="font-size: 14px; color: #78350f;">${notes}</div>
-    </div>
-    ` : ""}
-
-    <!-- Footer -->
-    <div style="padding: 24px; text-align: center; background: #111; color: #999;">
-      <p style="margin: 0 0 8px; font-size: 14px;">
-        Quote valid for 7 days • Prices subject to change
-      </p>
-      <p style="margin: 0; font-size: 12px;">
-        Questions? Just reply to this email or give us a call.
-      </p>
-      <p style="margin: 16px 0 0; font-weight: 600; color: white;">
-        ${BRAND.name}
-      </p>
-    </div>
-  </div>
-
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+  
+  <!-- Wrapper Table -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4;">
+    <tr>
+      <td align="center" style="padding: 20px 10px;">
+        
+        <!-- Main Container -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          
+          <!-- Header -->
+          <tr>
+            <td style="background-color: #1a1a1a; padding: 32px 40px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">${BRAND.name}</h1>
+              <p style="margin: 8px 0 0; color: #888888; font-size: 14px; font-weight: 400;">Wheel & Tire Package Quote</p>
+            </td>
+          </tr>
+          
+          <!-- Quote Info Bar -->
+          <tr>
+            <td style="background-color: #f8f9fa; padding: 16px 40px; border-bottom: 1px solid #e9ecef;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <span style="color: #6c757d; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Quote</span>
+                    <br>
+                    <span style="color: #1a1a1a; font-size: 18px; font-weight: 700; font-family: 'Courier New', monospace;">${quoteId}</span>
+                  </td>
+                  <td style="text-align: right;">
+                    <span style="color: #6c757d; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Date</span>
+                    <br>
+                    <span style="color: #1a1a1a; font-size: 14px;">${quoteDate}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <!-- Greeting -->
+          <tr>
+            <td style="padding: 32px 40px 24px;">
+              <p style="margin: 0; color: #1a1a1a; font-size: 16px; line-height: 1.5;">
+                Hi <strong>${customerName}</strong>,
+              </p>
+              <p style="margin: 12px 0 0; color: #555555; font-size: 15px; line-height: 1.5;">
+                Thanks for your interest! Here's your custom wheel and tire package quote for your <strong style="color: #1a1a1a;">${vehicleLabel}</strong>.
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Wheels Section -->
+          <tr>
+            <td style="padding: 0 40px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background-color: #e9ecef;">
+                    <span style="color: #495057; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">🛞 Wheels — Set of 4</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        ${wheel.imageUrl ? `
+                        <td width="80" valign="top" style="padding-right: 16px;">
+                          <img src="${wheel.imageUrl}" alt="${wheel.brand} ${wheel.model}" width="80" height="80" style="display: block; border-radius: 6px; background-color: #ffffff;">
+                        </td>
+                        ` : ""}
+                        <td valign="top">
+                          <p style="margin: 0 0 4px; color: #1a1a1a; font-size: 16px; font-weight: 600;">${wheel.brand} ${wheel.model}</p>
+                          <p style="margin: 0 0 4px; color: #555555; font-size: 14px;">${wheel.diameter}" × ${wheel.width}"${wheel.finish ? ` &bull; ${wheel.finish}` : ""}</p>
+                          <p style="margin: 0; color: #888888; font-size: 12px;">SKU: ${wheel.sku}</p>
+                        </td>
+                        <td valign="top" align="right" width="100">
+                          <p style="margin: 0; color: #1a1a1a; font-size: 20px; font-weight: 700;">$${formatPrice(wheel.setPrice)}</p>
+                          <p style="margin: 4px 0 0; color: #888888; font-size: 12px;">$${formatPrice(wheel.unitPrice)} ea</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <!-- Tires Section -->
+          <tr>
+            <td style="padding: 0 40px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background-color: #e9ecef;">
+                    <span style="color: #495057; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">🚗 Tires — Set of 4</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        ${tire.imageUrl ? `
+                        <td width="80" valign="top" style="padding-right: 16px;">
+                          <img src="${tire.imageUrl}" alt="${tire.brand} ${tire.model}" width="80" height="80" style="display: block; border-radius: 6px; background-color: #ffffff;">
+                        </td>
+                        ` : ""}
+                        <td valign="top">
+                          <p style="margin: 0 0 4px; color: #1a1a1a; font-size: 16px; font-weight: 600;">${tire.brand} ${tire.model}</p>
+                          <p style="margin: 0 0 4px; color: #555555; font-size: 14px;">${tire.size}</p>
+                          <p style="margin: 0; color: #888888; font-size: 12px;">SKU: ${tire.sku}</p>
+                        </td>
+                        <td valign="top" align="right" width="100">
+                          <p style="margin: 0; color: #1a1a1a; font-size: 20px; font-weight: 700;">$${formatPrice(tire.setPrice)}</p>
+                          <p style="margin: 4px 0 0; color: #888888; font-size: 12px;">$${formatPrice(tire.unitPrice)} ea</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          ${serviceRows.length > 0 ? `
+          <!-- Services Section -->
+          <tr>
+            <td style="padding: 0 40px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8f9fa; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 16px 20px; background-color: #e9ecef;">
+                    <span style="color: #495057; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">🔧 Installation & Services</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      ${serviceRows.join("")}
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          ` : ""}
+          
+          <!-- Price Summary -->
+          <tr>
+            <td style="padding: 0 40px 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #1a1a1a; border-radius: 8px; overflow: hidden;">
+                <tr>
+                  <td style="padding: 24px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="padding: 6px 0; color: #aaaaaa; font-size: 14px;">Parts (Wheels + Tires)</td>
+                        <td style="padding: 6px 0; text-align: right; color: #ffffff; font-size: 14px;">$${formatPrice(partsTotal)}</td>
+                      </tr>
+                      ${laborTotal > 0 ? `
+                      <tr>
+                        <td style="padding: 6px 0; color: #aaaaaa; font-size: 14px;">Labor</td>
+                        <td style="padding: 6px 0; text-align: right; color: #ffffff; font-size: 14px;">$${formatPrice(laborTotal)}</td>
+                      </tr>
+                      ` : ""}
+                      ${addOnsTotal > 0 ? `
+                      <tr>
+                        <td style="padding: 6px 0; color: #aaaaaa; font-size: 14px;">Add-ons</td>
+                        <td style="padding: 6px 0; text-align: right; color: #ffffff; font-size: 14px;">$${formatPrice(addOnsTotal)}</td>
+                      </tr>
+                      ` : ""}
+                      ${discountAmount > 0 ? `
+                      <tr>
+                        <td style="padding: 6px 0; color: #22c55e; font-size: 14px;">Discount</td>
+                        <td style="padding: 6px 0; text-align: right; color: #22c55e; font-size: 14px;">−$${formatPrice(discountAmount)}</td>
+                      </tr>
+                      ` : ""}
+                      <tr>
+                        <td style="padding: 6px 0; color: #aaaaaa; font-size: 14px;">Sales Tax (6%)</td>
+                        <td style="padding: 6px 0; text-align: right; color: #ffffff; font-size: 14px;">$${formatPrice(taxAmount)}</td>
+                      </tr>
+                      ${creditCardFee > 0 ? `
+                      <tr>
+                        <td style="padding: 6px 0; color: #aaaaaa; font-size: 14px;">Non Cash Fee (${adminSettings.creditCardFeePercent}%)</td>
+                        <td style="padding: 6px 0; text-align: right; color: #ffffff; font-size: 14px;">$${formatPrice(creditCardFee)}</td>
+                      </tr>
+                      ` : ""}
+                      <tr>
+                        <td colspan="2" style="padding-top: 16px;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top: 1px solid #333333;">
+                            <tr>
+                              <td style="padding-top: 16px; color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Out The Door</td>
+                              <td style="padding-top: 16px; text-align: right; color: #22c55e; font-size: 28px; font-weight: 700;">$${formatPrice(outTheDoorPrice)}</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          ${notes ? `
+          <!-- Notes -->
+          <tr>
+            <td style="padding: 0 40px 24px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #fffbeb; border-radius: 8px; border: 1px solid #fef3c7;">
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 4px; color: #92400e; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Notes</p>
+                    <p style="margin: 0; color: #78350f; font-size: 14px; line-height: 1.5;">${notes}</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          ` : ""}
+          
+          <!-- CTA -->
+          <tr>
+            <td style="padding: 0 40px 32px; text-align: center;">
+              <p style="margin: 0 0 16px; color: #555555; font-size: 14px;">Ready to get rolling? Give us a call or stop by!</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                <tr>
+                  <td style="background-color: #dc2626; border-radius: 6px;">
+                    <a href="tel:+12489740888" style="display: inline-block; padding: 14px 32px; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none;">(248) 974-0888</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f8f9fa; padding: 24px 40px; text-align: center; border-top: 1px solid #e9ecef;">
+              <p style="margin: 0 0 8px; color: #888888; font-size: 12px;">Quote valid for 7 days &bull; Prices subject to change &bull; Installation at our location</p>
+              <p style="margin: 0; color: #1a1a1a; font-size: 14px; font-weight: 600;">${BRAND.name}</p>
+              <p style="margin: 8px 0 0; color: #888888; font-size: 12px;">Questions? Just reply to this email.</p>
+            </td>
+          </tr>
+          
+        </table>
+        
+      </td>
+    </tr>
+  </table>
+  
 </body>
 </html>
   `.trim();
@@ -415,61 +570,97 @@ function buildQuoteEmailText(data: QuoteEmailData): string {
     .filter(Boolean)
     .join(" ");
 
+  const partsTotal = wheel.setPrice + tire.setPrice;
+
   let text = `
-${BRAND.name}
-WHEEL & TIRE PACKAGE QUOTE
-${"=".repeat(40)}
-
-Hi ${customerName},
-
-Here's your custom quote for your ${vehicleLabel}.
+═══════════════════════════════════════════════════════
+                    ${BRAND.name}
+              WHEEL & TIRE PACKAGE QUOTE
+═══════════════════════════════════════════════════════
 
 Quote #: ${quoteId}
 Date: ${new Date().toLocaleDateString()}
 
+Hi ${customerName},
+
+Thanks for your interest! Here's your custom quote for your ${vehicleLabel}.
+
+───────────────────────────────────────────────────────
 WHEELS (Set of 4)
-${"-".repeat(40)}
+───────────────────────────────────────────────────────
 ${wheel.brand} ${wheel.model}
 ${wheel.diameter}" × ${wheel.width}"${wheel.finish ? ` • ${wheel.finish}` : ""}
 SKU: ${wheel.sku}
-Price: $${wheel.setPrice.toLocaleString()} ($${wheel.unitPrice.toLocaleString()} each)
 
+                                    $${formatPrice(wheel.setPrice)}
+                                    ($${formatPrice(wheel.unitPrice)} each)
+
+───────────────────────────────────────────────────────
 TIRES (Set of 4)
-${"-".repeat(40)}
+───────────────────────────────────────────────────────
 ${tire.brand} ${tire.model}
 ${tire.size}
 SKU: ${tire.sku}
-Price: $${tire.setPrice.toLocaleString()} ($${tire.unitPrice.toLocaleString()} each)
+
+                                    $${formatPrice(tire.setPrice)}
+                                    ($${formatPrice(tire.unitPrice)} each)
 
 `;
 
-  if (selectedAddOns.labor || selectedAddOns.tpms || selectedAddOns.disposal) {
-    text += `INSTALLATION & ADD-ONS\n${"-".repeat(40)}\n`;
-    if (selectedAddOns.labor) text += `Mount & Balance: $${laborTotal.toFixed(2)}\n`;
-    if (selectedAddOns.tpms) text += `TPMS Sensors: $${(adminSettings.tpmsPerSensor * 4).toFixed(2)}\n`;
-    if (selectedAddOns.disposal) text += `Tire Disposal: $${(adminSettings.disposalPerTire * 4).toFixed(2)}\n`;
-    text += "\n";
+  const services: string[] = [];
+  if (selectedAddOns.labor && laborTotal > 0) {
+    services.push(`Mount & Balance (×4)              $${formatPrice(laborTotal)}`);
+  }
+  if (selectedAddOns.tpms) {
+    services.push(`TPMS Sensors (×4)                 $${formatPrice(adminSettings.tpmsPerSensor * 4)}`);
+  }
+  if (selectedAddOns.disposal) {
+    services.push(`Tire Disposal (×4)                $${formatPrice(adminSettings.disposalPerTire * 4)}`);
   }
 
-  text += `TOTALS\n${"-".repeat(40)}\n`;
-  text += `Parts: $${(wheel.setPrice + tire.setPrice).toLocaleString()}\n`;
-  if (laborTotal > 0) text += `Labor: $${laborTotal.toFixed(2)}\n`;
-  if (addOnsTotal > 0) text += `Add-ons: $${addOnsTotal.toFixed(2)}\n`;
-  if (discountAmount > 0) text += `Discount: -$${discountAmount.toFixed(2)}\n`;
-  text += `Tax (6%): $${taxAmount.toFixed(2)}\n`;
-  if (creditCardFee > 0) text += `Non Cash Fee: $${creditCardFee.toFixed(2)}\n`;
-  text += `\nOUT THE DOOR: $${outTheDoorPrice.toFixed(2)}\n`;
+  if (services.length > 0) {
+    text += `───────────────────────────────────────────────────────
+INSTALLATION & SERVICES
+───────────────────────────────────────────────────────
+${services.join("\n")}
+
+`;
+  }
+
+  text += `═══════════════════════════════════════════════════════
+                      PRICE SUMMARY
+═══════════════════════════════════════════════════════
+
+Parts (Wheels + Tires)            $${formatPrice(partsTotal)}
+`;
+
+  if (laborTotal > 0) text += `Labor                             $${formatPrice(laborTotal)}\n`;
+  if (addOnsTotal > 0) text += `Add-ons                           $${formatPrice(addOnsTotal)}\n`;
+  if (discountAmount > 0) text += `Discount                         -$${formatPrice(discountAmount)}\n`;
+  text += `Sales Tax (6%)                    $${formatPrice(taxAmount)}\n`;
+  if (creditCardFee > 0) text += `Non Cash Fee                      $${formatPrice(creditCardFee)}\n`;
+
+  text += `
+───────────────────────────────────────────────────────
+OUT THE DOOR                      $${formatPrice(outTheDoorPrice)}
+───────────────────────────────────────────────────────
+`;
 
   if (notes) {
-    text += `\nNotes: ${notes}\n`;
+    text += `
+Notes: ${notes}
+`;
   }
 
   text += `
-${"-".repeat(40)}
+═══════════════════════════════════════════════════════
+
+Ready to get rolling? Give us a call: (248) 974-0888
+
 Quote valid for 7 days • Prices subject to change
-Questions? Reply to this email or give us a call.
 
 ${BRAND.name}
+Questions? Reply to this email.
 `;
 
   return text.trim();
