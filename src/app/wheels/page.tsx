@@ -944,10 +944,21 @@ export default async function WheelsPage({
     // Brand filter: supports both codes (FC) and names (Fuel)
     if (brandCd && !matchesBrandFilter(w.brandCode || "", brandCd)) return false;
 
-    // Model name filter (e.g., "Flame", "Reaction")
+    // Model name filter (e.g., "BURN", "CATALYST")
     if (modelNameParam) {
-      const m = String(w.model || "").toLowerCase();
-      if (m !== String(modelNameParam).toLowerCase()) return false;
+      // Try w.model first, fall back to styleKey or first word of title
+      let model = String(w.model || "").trim();
+      if (!model && w.styleKey) {
+        model = String(w.styleKey).trim();
+      }
+      if (!model) {
+        const title = String((w as any).title || "").trim();
+        const firstWord = title.split(/\s+/)[0];
+        if (firstWord && !/^\d/.test(firstWord)) {
+          model = firstWord;
+        }
+      }
+      if (model.toLowerCase() !== String(modelNameParam).toLowerCase()) return false;
     }
 
     if (finish) {
@@ -1184,11 +1195,26 @@ export default async function WheelsPage({
       .sort((a, b) => a.desc.localeCompare(b.desc));
   })();
   
-  // Model name options: derive from results (wheel style names like "Flame", "Reaction")
+  // Model name options: derive from results (wheel style names like "BURN", "CATALYST")
+  // Model name is in w.model OR first word of title (e.g., "BURN 20X9 6X135...")
   const modelOptions: Array<{ value: string; count: number }> = (() => {
     const counts = new Map<string, number>();
     for (const w of itemsUnsorted) {
-      const model = String(w.model || "").trim();
+      // Try w.model first, fall back to first word of title
+      let model = String(w.model || "").trim();
+      if (!model && w.styleKey) {
+        // styleKey often contains the model name
+        model = String(w.styleKey).trim();
+      }
+      if (!model) {
+        // Extract first word from title (e.g., "BURN 20X9..." -> "BURN")
+        const title = String((w as any).title || "").trim();
+        const firstWord = title.split(/\s+/)[0];
+        // Only use if it looks like a model name (not a size like "20X9")
+        if (firstWord && !/^\d/.test(firstWord)) {
+          model = firstWord;
+        }
+      }
       if (!model) continue;
       counts.set(model, (counts.get(model) || 0) + 1);
     }
