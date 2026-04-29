@@ -543,8 +543,9 @@ export default async function WheelsPage({
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
   // Fetch enough results to show all valid wheels (fitment engine already filters to ~200-300 for most vehicles)
   // 2026-04-29: Increased from 500 to 1000 to include more wheel models in sidebar filter
-  // BURN wheels were at position 500+ and not showing in Model filter
-  const upstreamPageSize = 1000;
+  // Increased to 3000 to show all wheels with inventory (F-150 has ~3000 wheels)
+  // The API now supports up to 3000 results per page
+  const upstreamPageSize = 3000;
 
   const baseWheelProsParams: Record<string, string | undefined> = {
     // Vehicle info (triggers fitment-search endpoint when present)
