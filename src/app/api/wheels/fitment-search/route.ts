@@ -1405,6 +1405,16 @@ async function handleDbFirstWheelResults(opts: {
   timing.candidatesDbMs = Date.now() - tCandidates0;
   
   console.log(`[fitment-search] 📦 Found ${candidates.length} candidates with bolt pattern ${opts.boltPattern}`);
+  
+  // Debug specific SKU tracing
+  const debugSku = url.searchParams.get("debugSku");
+  if (debugSku) {
+    const debugCandidate = candidates.find(c => c.sku === debugSku);
+    console.log(`[fitment-search] DEBUG ${debugSku}: In initial candidates = ${!!debugCandidate}`);
+    if (debugCandidate) {
+      console.log(`[fitment-search] DEBUG ${debugSku}: diameter=${debugCandidate.diameter}, offset=${debugCandidate.offset}, msrp=${debugCandidate.msrp}`);
+    }
+  }
 
   // Apply basic DB-level filters (cheap, no I/O)
   const filteredCandidates = candidates.filter((c) => {
@@ -1441,6 +1451,12 @@ async function handleDbFirstWheelResults(opts: {
   const diversifiedCandidates = diversifyCandidatesByBrand(filteredCandidates);
   timing.diversifyMs = Date.now() - tDiversify0;
   timing.candidatesAfterFilter = filteredCandidates.length;
+  
+  // Debug SKU tracing - after basic filter
+  if (debugSku) {
+    const afterFilter = filteredCandidates.find(c => c.sku === debugSku);
+    console.log(`[fitment-search] DEBUG ${debugSku}: After basic filter = ${!!afterFilter}`);
+  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 2: Fitment validation (fast, no I/O)
@@ -1605,6 +1621,12 @@ async function handleDbFirstWheelResults(opts: {
   timing.fitmentValidationMs = Date.now() - tFitment0;
   timing.fitmentValidCount = fitmentValidCandidates.length;
   
+  // Debug SKU tracing - after fitment validation
+  if (debugSku) {
+    const afterFitment = fitmentValidCandidates.find(c => c.candidate.sku === debugSku);
+    console.log(`[fitment-search] DEBUG ${debugSku}: After fitment validation = ${!!afterFitment}`);
+  }
+  
   // Log DRW dead-zone exclusions if any
   if (opts.rearWheelConfig === "drw" && drwDeadZoneExcluded > 0) {
     console.log(`[fitment-search] 🚛 DRW FILTER: Excluded ${drwDeadZoneExcluded} wheels with SRW-style offsets (-65 to +65mm)`);
@@ -1646,10 +1668,19 @@ async function handleDbFirstWheelResults(opts: {
     const inv = inventoryData.get(item.candidate.sku);
     
     // Not in inventory cache? Include anyway - techfeed says it exists
-    if (!inv) return true;
+    if (!inv) {
+      if (debugSku && item.candidate.sku === debugSku) {
+        console.log(`[fitment-search] DEBUG ${debugSku}: NOT in inventory cache → INCLUDED`);
+      }
+      return true;
+    }
     
     const isOrderable = ORDERABLE_TYPES.has(inv.inventoryType);
     const hasSufficientQty = inv.totalQty >= MIN_INVENTORY_QTY;
+    
+    if (debugSku && item.candidate.sku === debugSku) {
+      console.log(`[fitment-search] DEBUG ${debugSku}: invType=${inv.inventoryType}, qty=${inv.totalQty}, orderable=${isOrderable}, sufficientQty=${hasSufficientQty}, result=${isOrderable || hasSufficientQty}`);
+    }
     
     // Exclude only if: in cache AND non-orderable type AND low qty
     return isOrderable || hasSufficientQty;
