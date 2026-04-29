@@ -1659,33 +1659,37 @@ async function handleDbFirstWheelResults(opts: {
   // - SO = Special Order
   // - CS = Custom/Special
   //
-  // Filter logic:
-  // - If in inventory cache with orderable type → include (any qty)
-  // - If in inventory cache with non-orderable type and qty < 4 → exclude
-  // - If NOT in inventory cache → include (exists in techfeed = current product)
+  // Filter logic (2026-07-19 FIX):
+  // - MUST have at least 4 units total (customers buy sets of 4)
+  // - If in inventory cache with qty >= 4 → include
+  // - If in inventory cache with qty < 4 → exclude (can't fulfill a set)
+  // - If NOT in inventory cache → exclude (can't verify availability)
+  //
+  // Previous bug: orderable types were included regardless of qty,
+  // which showed wheels with only 1-3 units nationally as "in stock"
   const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
-  const MIN_INVENTORY_QTY = 4;
+  const MIN_INVENTORY_QTY = 4; // Minimum for a set of wheels
   const preFilterCount = fitmentValidCandidates.length;
   fitmentValidCandidates = fitmentValidCandidates.filter(item => {
     const inv = inventoryData.get(item.candidate.sku);
     
-    // Not in inventory cache? Include anyway - techfeed says it exists
+    // Not in inventory cache? Exclude - can't verify we have enough stock
     if (!inv) {
       if (debugSku && item.candidate.sku === debugSku) {
-        debugTrace.push(`4. Inventory filter: NOT in cache → INCLUDED`);
+        debugTrace.push(`4. Inventory filter: NOT in cache → EXCLUDED (can't verify stock)`);
       }
-      return true;
+      return false;
     }
     
     const isOrderable = ORDERABLE_TYPES.has(inv.inventoryType);
     const hasSufficientQty = inv.totalQty >= MIN_INVENTORY_QTY;
     
     if (debugSku && item.candidate.sku === debugSku) {
-      debugTrace.push(`4. Inventory filter: invType=${inv.inventoryType}, qty=${inv.totalQty}, orderable=${isOrderable}, sufficientQty=${hasSufficientQty}, result=${isOrderable || hasSufficientQty}`);
+      debugTrace.push(`4. Inventory filter: invType=${inv.inventoryType}, qty=${inv.totalQty}, orderable=${isOrderable}, sufficientQty=${hasSufficientQty}, result=${isOrderable && hasSufficientQty}`);
     }
     
-    // Exclude only if: in cache AND non-orderable type AND low qty
-    return isOrderable || hasSufficientQty;
+    // Must be orderable type AND have at least 4 units to sell a set
+    return isOrderable && hasSufficientQty;
   });
   timing.inventoryFilteredOut = preFilterCount - fitmentValidCandidates.length;
   
