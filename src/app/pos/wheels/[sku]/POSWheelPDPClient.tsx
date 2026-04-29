@@ -166,16 +166,21 @@ export function POSWheelPDPClient({ sku, year, make, model, trim }: Props) {
       setError(null);
 
       try {
+        let item = null;
+        
         // First try WheelPros API
-        const res = await fetch(
-          `/api/wheelpros/wheels/search?fields=inventory,price,images,properties&priceType=msrp&currencyCode=USD&page=1&pageSize=1&sku=${encodeURIComponent(sku)}`
-        );
-
-        if (!res.ok) throw new Error("Failed to fetch wheel");
-
-        const data = await res.json();
-        const items = data.items || data.results || [];
-        const item = items[0];
+        try {
+          const res = await fetch(
+            `/api/wheelpros/wheels/search?fields=inventory,price,images,properties&priceType=msrp&currencyCode=USD&page=1&pageSize=1&sku=${encodeURIComponent(sku)}`
+          );
+          if (res.ok) {
+            const data = await res.json();
+            const items = data.items || data.results || [];
+            item = items[0];
+          }
+        } catch (wpErr) {
+          console.log("[POSWheelPDP] WheelPros API failed, trying techfeed fallback");
+        }
 
         if (!item) {
           // Try techfeed endpoint as fallback (direct SKU lookup)
