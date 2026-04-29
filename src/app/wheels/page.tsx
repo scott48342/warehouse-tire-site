@@ -262,6 +262,8 @@ export default async function WheelsPage({
   const brandCd = (Array.isArray(sp.brand_cd) ? sp.brand_cd[0] : sp.brand_cd) || 
                   (Array.isArray(sp.brand) ? sp.brand[0] : sp.brand) || "";
   const finish = (Array.isArray(sp.finish) ? sp.finish[0] : sp.finish) || "";
+  // Model name filter (wheel style name like "Flame", "Reaction") - from sidebar filter
+  const modelNameParam = (Array.isArray(sp.model_name) ? sp.model_name[0] : sp.model_name) || "";
   // Style filter (wheel model like "KM235") - from gallery links
   const styleParam = (Array.isArray(sp.style) ? sp.style[0] : sp.style) || "";
   
@@ -928,8 +930,6 @@ export default async function WheelsPage({
         return bPrice - aPrice;
       case "brand_asc":
         return String(a.brand || "").localeCompare(String(b.brand || ""));
-      case "name_asc":
-        return String(a.model || "").localeCompare(String(b.model || ""));
       default:
         return aPrice - bPrice;
     }
@@ -943,6 +943,12 @@ export default async function WheelsPage({
   const itemsFilteredBasic = itemsFinal0.filter((w) => {
     // Brand filter: supports both codes (FC) and names (Fuel)
     if (brandCd && !matchesBrandFilter(w.brandCode || "", brandCd)) return false;
+
+    // Model name filter (e.g., "Flame", "Reaction")
+    if (modelNameParam) {
+      const m = String(w.model || "").toLowerCase();
+      if (m !== String(modelNameParam).toLowerCase()) return false;
+    }
 
     if (finish) {
       const f = String(w.finish || "").toLowerCase();
@@ -1177,6 +1183,20 @@ export default async function WheelsPage({
       .map(([code, desc]) => ({ code, desc }))
       .sort((a, b) => a.desc.localeCompare(b.desc));
   })();
+  
+  // Model name options: derive from results (wheel style names like "Flame", "Reaction")
+  const modelOptions: Array<{ value: string; count: number }> = (() => {
+    const counts = new Map<string, number>();
+    for (const w of itemsUnsorted) {
+      const model = String(w.model || "").trim();
+      if (!model) continue;
+      counts.set(model, (counts.get(model) || 0) + 1);
+    }
+    return Array.from(counts.entries())
+      .map(([value, count]) => ({ value, count }))
+      .sort((a, b) => a.value.localeCompare(b.value));
+  })();
+  
   const finishBuckets = buckets("abbreviated_finish_desc");
   // Sort diameter buckets numerically (smallest to largest)
   const diameterBuckets = buckets("wheel_diameter").sort((a: { value: string; count?: number }, b: { value: string; count?: number }) => {
@@ -1559,7 +1579,6 @@ export default async function WheelsPage({
                 { value: "price_asc", label: "Price: Low to High" },
                 { value: "price_desc", label: "Price: High to Low" },
                 { value: "brand_asc", label: "Brand: A to Z" },
-                { value: "name_asc", label: "Name: A to Z" },
               ]}
             />
           </div>
@@ -1639,6 +1658,7 @@ export default async function WheelsPage({
               data={{
                 // URL state (current selections)
                 brands: brandCd ? [brandCd] : [],
+                models: modelNameParam ? [modelNameParam] : [],
                 finishes: finish ? [finish] : [],
                 diameters: diameterParam ? [diameterParam] : [],
                 widths: widthParam ? [widthParam] : [],
@@ -1649,6 +1669,7 @@ export default async function WheelsPage({
                 
                 // Available options with counts
                 brandOptions: brandOptions.slice(0, 50),
+                modelOptions: modelOptions.slice(0, 100),
                 finishOptions: finishBuckets.slice(0, 50).map(b => ({ value: b.value, count: b.count ?? undefined })),
                 diameterOptions: diameterBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
                 widthOptions: widthBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),

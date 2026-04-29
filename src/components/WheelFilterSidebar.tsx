@@ -10,6 +10,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 type WheelFilterData = {
   // URL state
   brands: string[];
+  models: string[];
   finishes: string[];
   diameters: string[];
   widths: string[];
@@ -20,6 +21,7 @@ type WheelFilterData = {
   
   // Available options with counts
   brandOptions: Array<{ code: string; desc: string; count?: number }>;
+  modelOptions: Array<{ value: string; count?: number }>;
   finishOptions: Array<{ value: string; count?: number }>;
   diameterOptions: Array<{ value: string; count?: number }>;
   widthOptions: Array<{ value: string; count?: number }>;
@@ -249,6 +251,7 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
   
   const clearAllUrl = buildUrl({
     brand_cd: null,
+    model_name: null,
     finish: null,
     diameter: null,
     width: null,
@@ -260,6 +263,7 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
   
   const activeFilterCount = 
     data.brands.length +
+    data.models.length +
     data.finishes.length +
     data.diameters.length +
     data.widths.length +
@@ -341,6 +345,43 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
                     checked={data.brands.includes(brand.code)}
                     count={brand.count}
                     onChange={() => toggleArrayFilter("brand_cd", data.brands, brand.code)}
+                  />
+                ))}
+              </div>
+            </details>
+          )}
+        </div>
+      </AccordionSection>
+      
+      {/* Model Name - show 5 initially */}
+      <AccordionSection
+        title="Model"
+        selectedCount={data.models.length}
+        hidden={!data.modelOptions || data.modelOptions.length === 0}
+      >
+        <div className="max-h-48 overflow-y-auto scroll-smooth">
+          {(data.modelOptions || []).slice(0, 5).map((opt) => (
+            <FilterCheckbox
+              key={opt.value}
+              label={opt.value}
+              checked={data.models.includes(opt.value)}
+              count={opt.count}
+              onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
+            />
+          ))}
+          {(data.modelOptions || []).length > 5 && (
+            <details className="mt-1">
+              <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
+                +{(data.modelOptions || []).length - 5} more
+              </summary>
+              <div className="mt-1">
+                {(data.modelOptions || []).slice(5).map((opt) => (
+                  <FilterCheckbox
+                    key={opt.value}
+                    label={opt.value}
+                    checked={data.models.includes(opt.value)}
+                    count={opt.count}
+                    onChange={() => toggleArrayFilter("model_name", data.models, opt.value)}
                   />
                 ))}
               </div>
