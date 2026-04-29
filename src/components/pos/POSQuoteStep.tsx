@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { usePOS } from "./POSContext";
 
 // ============================================================================
-// POS Quote Step
+// POS Quote Step - Printable quote with optional customer info & email
 // ============================================================================
 
 export function POSQuoteStep() {
@@ -27,6 +27,8 @@ export function POSQuoteStep() {
   const [copied, setCopied] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [emailSending, setEmailSending] = useState(false);
+  const [showCustomerOnPrint, setShowCustomerOnPrint] = useState(true);
+  const [emailError, setEmailError] = useState<string | null>(null);
   const printRef = useRef<HTMLDivElement>(null);
   
   if (!state.vehicle || !state.wheel || !state.tire) {
@@ -69,18 +71,45 @@ export function POSQuoteStep() {
   
   const handleEmail = async () => {
     if (!state.customerEmail) {
-      alert("Please enter customer email first");
+      setEmailError("Please enter customer email first");
       return;
     }
     
     setEmailSending(true);
+    setEmailError(null);
+    
     try {
-      // TODO: Implement actual email API
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch("/api/pos/send-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: state.customerEmail,
+          customerName: state.customerName || "Valued Customer",
+          quoteId,
+          vehicle: state.vehicle,
+          wheel: state.wheel,
+          tire: state.tire,
+          laborTotal,
+          addOnsTotal,
+          discountAmount,
+          taxAmount,
+          creditCardFee,
+          outTheDoorPrice,
+          selectedAddOns,
+          adminSettings,
+          notes: state.notes,
+        }),
+      });
+      
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send email");
+      }
+      
       setEmailSent(true);
-      setTimeout(() => setEmailSent(false), 3000);
+      setTimeout(() => setEmailSent(false), 5000);
     } catch (err) {
-      alert("Failed to send email. Please try again.");
+      setEmailError(err instanceof Error ? err.message : "Failed to send email");
     } finally {
       setEmailSending(false);
     }
@@ -121,7 +150,18 @@ export function POSQuoteStep() {
       
       {/* Customer Info (Editable) */}
       <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6 mb-6 print:hidden">
-        <h3 className="text-lg font-bold text-white mb-4">Customer Info (Optional)</h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-bold text-white">Customer Info (Optional)</h3>
+          <label className="flex items-center gap-2 text-sm text-neutral-400 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showCustomerOnPrint}
+              onChange={(e) => setShowCustomerOnPrint(e.target.checked)}
+              className="rounded border-neutral-600 bg-neutral-700 text-blue-600"
+            />
+            Show on printed quote
+          </label>
+        </div>
         <div className="grid gap-4 md:grid-cols-3">
           <div>
             <label className="block text-sm text-neutral-400 mb-1">Name</label>
@@ -149,18 +189,27 @@ export function POSQuoteStep() {
               <input
                 type="email"
                 value={state.customerEmail || ""}
-                onChange={(e) => setCustomer({ email: e.target.value })}
+                onChange={(e) => {
+                  setCustomer({ email: e.target.value });
+                  setEmailError(null);
+                }}
                 placeholder="email@example.com"
                 className="flex-1 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white px-3"
               />
               <button
                 onClick={handleEmail}
                 disabled={!state.customerEmail || emailSending}
-                className="px-4 h-10 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:bg-neutral-700 disabled:text-neutral-500 text-white font-medium text-sm"
+                className="px-4 h-10 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:bg-neutral-700 disabled:text-neutral-500 text-white font-medium text-sm whitespace-nowrap"
               >
-                {emailSending ? "..." : emailSent ? "✓ Sent" : "📧 Send"}
+                {emailSending ? "Sending..." : emailSent ? "✓ Sent!" : "📧 Send Quote"}
               </button>
             </div>
+            {emailError && (
+              <p className="text-red-400 text-xs mt-1">{emailError}</p>
+            )}
+            {emailSent && (
+              <p className="text-green-400 text-xs mt-1">Quote sent to {state.customerEmail}</p>
+            )}
           </div>
         </div>
         
@@ -192,8 +241,8 @@ export function POSQuoteStep() {
           </div>
         </div>
         
-        {/* Customer Info (Print version) */}
-        {(state.customerName || state.customerPhone || state.customerEmail) && (
+        {/* Customer Info (Print version) - only shows if toggle is on and info exists */}
+        {showCustomerOnPrint && (state.customerName || state.customerPhone || state.customerEmail) && (
           <div className="px-8 py-4 border-b border-neutral-200 hidden print:block">
             <div className="text-sm text-neutral-600">
               <strong>Customer:</strong>{" "}
@@ -315,11 +364,11 @@ export function POSQuoteStep() {
             <span className="text-neutral-900">${taxAmount.toFixed(2)}</span>
           </div>
           
-          {/* Credit Card Fee */}
+          {/* Non Cash Fee (Credit Card) */}
           {creditCardFee > 0 && (
-            <div className="py-2 flex justify-between text-sm text-blue-600">
-              <span>Credit Card Fee ({adminSettings.creditCardFeePercent}%)</span>
-              <span>${creditCardFee.toFixed(2)}</span>
+            <div className="py-2 flex justify-between text-sm">
+              <span className="text-neutral-600">Non Cash Fee ({adminSettings.creditCardFeePercent}%)</span>
+              <span className="text-neutral-900">${creditCardFee.toFixed(2)}</span>
             </div>
           )}
         </div>

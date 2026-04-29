@@ -457,13 +457,15 @@ export function POSProvider({ children }: { children: ReactNode }) {
     return liftInstallLabor.lift8plus;
   })();
 
-  // Computed: Add-ons total
+  // Computed: Add-ons total (alignment removed - we don't do them)
   const addOnsTotal = (() => {
     let total = 0;
     if (state.selectedAddOns.tpms) total += state.adminSettings.tpmsPerSensor * 4;
     if (state.selectedAddOns.disposal) total += state.adminSettings.disposalPerTire * 4;
-    if (state.selectedAddOns.alignment) total += state.adminSettings.alignmentPrice;
+    // Note: alignment removed - we don't offer this service
     for (const addon of state.adminSettings.customAddOns) {
+      // Filter out Valve Stems (included in installation)
+      if (addon.name.toLowerCase() === "valve stems") continue;
       if (state.selectedAddOns.customIds.includes(addon.id)) {
         total += addon.perUnit ? addon.price * 4 : addon.price;
       }

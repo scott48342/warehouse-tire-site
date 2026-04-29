@@ -162,3 +162,97 @@ body {
 .animate-pulse-green {
   animation: pulse-green 1.5s ease-in-out infinite;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PRINT STYLES
+   Optimized styles for printing POS quotes and other documents
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media print {
+  /* Reset background and colors for print */
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide non-essential elements */
+  nav,
+  footer,
+  .print\:hidden,
+  button:not(.print\:block),
+  [class*="chatwoot"],
+  [class*="chat-widget"],
+  #chatwoot_live_chat_widget,
+  [data-nextjs-toast],
+  .fixed {
+    display: none !important;
+  }
+
+  /* Show elements marked for print */
+  .hidden.print\:block {
+    display: block !important;
+  }
+
+  /* Remove shadows and borders for cleaner print */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Ensure proper page breaks */
+  .page-break-before {
+    page-break-before: always;
+  }
+  
+  .page-break-after {
+    page-break-after: always;
+  }
+  
+  .avoid-page-break {
+    page-break-inside: avoid;
+  }
+
+  /* POS Quote specific print styles */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Force background colors to print */
+  .bg-neutral-900,
+  .bg-neutral-100,
+  .bg-neutral-800,
+  [class*="bg-neutral"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Adjust text colors for print readability */
+  .text-white {
+    color: white !important;
+  }
+
+  .text-green-400 {
+    color: #22c55e !important;
+  }
+
+  /* Remove rounded corners in print */
+  .print\:rounded-none {
+    border-radius: 0 !important;
+  }
+
+  /* Adjust page margins */
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+
+  /* Quote container full width */
+  .max-w-4xl {
+    max-width: 100% !important;
+  }
+}

@@ -218,48 +218,10 @@ export function POSPricingStep() {
                 </div>
               </label>
 
-              {/* Alignment */}
-              <label className="flex cursor-pointer items-center justify-between rounded-xl bg-neutral-800 p-4 transition-colors hover:bg-neutral-750">
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked={selectedAddOns.alignment}
-                    onChange={() => toggleAddon("alignment")}
-                    className="h-5 w-5 rounded border-neutral-600 bg-neutral-700 text-blue-600"
-                  />
-                  <div>
-                    <div className="font-medium text-white">Alignment</div>
-                    <div className="text-sm text-neutral-400">Recommended for lifted vehicles</div>
-                  </div>
-                </div>
-                <div className="text-lg font-bold text-white">
-                  ${adminSettings.alignmentPrice.toFixed(2)}
-                </div>
-              </label>
-
-              {/* Credit Card Fee */}
-              <label className="flex cursor-pointer items-center justify-between rounded-xl bg-neutral-800 p-4 transition-colors hover:bg-neutral-750">
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked={selectedAddOns.creditCard}
-                    onChange={() => toggleAddon("creditCard")}
-                    className="h-5 w-5 rounded border-neutral-600 bg-neutral-700 text-blue-600"
-                  />
-                  <div>
-                    <div className="font-medium text-white">Credit Card Payment</div>
-                    <div className="text-sm text-neutral-400">
-                      {adminSettings.creditCardFeePercent}% processing fee
-                    </div>
-                  </div>
-                </div>
-                <div className="text-lg font-bold text-white">
-                  ${creditCardFee.toFixed(2)}
-                </div>
-              </label>
-
-              {/* Custom Add-ons */}
-              {adminSettings.customAddOns.map((addon) => (
+              {/* Custom Add-ons - filter out Valve Stems (included in installation) */}
+              {adminSettings.customAddOns
+                .filter((addon) => addon.name.toLowerCase() !== "valve stems")
+                .map((addon) => (
                 <label
                   key={addon.id}
                   className="flex cursor-pointer items-center justify-between rounded-xl bg-neutral-800 p-4 transition-colors hover:bg-neutral-750"
@@ -379,12 +341,23 @@ export function POSPricingStep() {
                 <span className="text-white">${taxAmount.toFixed(2)}</span>
               </div>
 
-              {creditCardFee > 0 && (
-                <div className="flex justify-between text-neutral-400">
-                  <span>CC Fee</span>
-                  <span className="text-white">${creditCardFee.toFixed(2)}</span>
+              {/* Non Cash Fee - toggleable credit card processing fee */}
+              <label className="flex cursor-pointer items-center justify-between rounded-lg bg-neutral-800/50 px-3 py-2 transition-colors hover:bg-neutral-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={selectedAddOns.creditCard}
+                    onChange={() => toggleAddon("creditCard")}
+                    className="h-4 w-4 rounded border-neutral-600 bg-neutral-700 text-blue-600"
+                  />
+                  <span className="text-sm text-neutral-400">
+                    Non Cash Fee ({adminSettings.creditCardFeePercent}%)
+                  </span>
                 </div>
-              )}
+                <span className={`text-sm ${selectedAddOns.creditCard ? "text-white" : "text-neutral-500"}`}>
+                  {selectedAddOns.creditCard ? `$${creditCardFee.toFixed(2)}` : "$0.00"}
+                </span>
+              </label>
 
               <div className="border-t border-neutral-700 pt-3">
                 <div className="flex justify-between">
