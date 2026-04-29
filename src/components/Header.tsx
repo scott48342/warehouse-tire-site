@@ -299,11 +299,11 @@ export function Header() {
                   Shop by size
                 </button>
                 <Link
-                  href={withFitmentParams("/wheels", sp)}
+                  href={withFitmentParams("/wheels/brands", sp)}
                   onClick={() => closeMenus()}
                   className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
-                  Shop wheels
+                  Shop by brand
                 </Link>
                 <div className="my-2 h-px bg-neutral-200" />
                 <Link

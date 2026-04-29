@@ -1,0 +1,178 @@
+[
+  {
+    "size": "225/60R16 - Passenger",
+    "usafCount": 39,
+    "tirewebCount": 112,
+    "onlyUSAF": [
+      "YOKOHAMA",
+      "GOODYEAR",
+      "BRIDGESTONE",
+      "KENDA",
+      "ARGUS ADVANTA",
+      "FIRESTONE",
+      "STARFIRE",
+      "KELLY"
+    ],
+    "onlyTireWeb": [
+      "HERCULES",
+      "UNIROYAL",
+      "GT RADIAL",
+      "IRONMAN",
+      "WESTLAKE",
+      "LAUFENN",
+      "MILESTAR",
+      "VOGUE",
+      "OHTSU",
+      "ARCTIC CLAW",
+      "SUMITOMO",
+      "SAILUN"
+    ],
+    "bothBrands": 14,
+    "priceComps": 25,
+    "avgPriceDiff": 2.266400000000001
+  },
+  {
+    "size": "265/70R17 - SUV",
+    "usafCount": 143,
+    "tirewebCount": 323,
+    "onlyUSAF": [
+      "GOODYEAR",
+      "KELLY",
+      "KENDA",
+      "FIRESTONE",
+      "YOKOHAMA",
+      "STARFIRE",
+      "ARGUS ADVANTA",
+      "BRIDGESTONE"
+    ],
+    "onlyTireWeb": [
+      "HERCULES",
+      "IRONMAN",
+      "VOGUE",
+      "GT RADIAL",
+      "LAUFENN",
+      "NOKIAN",
+      "DICK CEPEK",
+      "DUNLOP",
+      "WESTLAKE",
+      "SUMITOMO",
+      "SAILUN"
+    ],
+    "bothBrands": 15,
+    "priceComps": 92,
+    "avgPriceDiff": 3.8372826086956544
+  },
+  {
+    "size": "275/55R20 - Full SUV",
+    "usafCount": 122,
+    "tirewebCount": 228,
+    "onlyUSAF": [
+      "GOODYEAR",
+      "STARFIRE",
+      "FIRESTONE",
+      "YOKOHAMA",
+      "ARGUS ADVANTA",
+      "BRIDGESTONE",
+      "KELLY",
+      "KENDA"
+    ],
+    "onlyTireWeb": [
+      "NOKIAN",
+      "GT RADIAL",
+      "VOGUE",
+      "HERCULES",
+      "OHTSU",
+      "LAUFENN",
+      "IRONMAN",
+      "ARCTIC CLAW",
+      "SUMITOMO"
+    ],
+    "bothBrands": 16,
+    "priceComps": 77,
+    "avgPriceDiff": 5.384025974025979
+  },
+  {
+    "size": "275/60R20 - Truck",
+    "usafCount": 99,
+    "tirewebCount": 192,
+    "onlyUSAF": [
+      "BRIDGESTONE",
+      "KENDA",
+      "GOODYEAR",
+      "FIRESTONE",
+      "STARFIRE",
+      "ARGUS ADVANTA",
+      "YOKOHAMA",
+      "KELLY"
+    ],
+    "onlyTireWeb": [
+      "HERCULES",
+      "GT RADIAL",
+      "IRONMAN",
+      "UNIROYAL",
+      "NOKIAN",
+      "DUNLOP",
+      "LAUFENN",
+      "OHTSU",
+      "SUMITOMO",
+      "SAILUN"
+    ],
+    "bothBrands": 14,
+    "priceComps": 63,
+    "avgPriceDiff": 3.5930158730158714
+  },
+  {
+    "size": "245/45R18 - Sport sedan",
+    "usafCount": 69,
+    "tirewebCount": 197,
+    "onlyUSAF": [
+      "GOODYEAR",
+      "BRIDGESTONE",
+      "YOKOHAMA",
+      "FIRESTONE",
+      "KENDA",
+      "ARGUS ADVANTA",
+      "KELLY"
+    ],
+    "onlyTireWeb": [
+      "IRONMAN",
+      "GT RADIAL",
+      "VOGUE",
+      "UNIROYAL",
+      "HERCULES",
+      "LAUFENN",
+      "ARCTIC CLAW",
+      "SUMITOMO"
+    ],
+    "bothBrands": 15,
+    "priceComps": 46,
+    "avgPriceDiff": -4.354130434782609
+  },
+  {
+    "size": "235/65R17 - CUV",
+    "usafCount": 94,
+    "tirewebCount": 190,
+    "onlyUSAF": [
+      "YOKOHAMA",
+      "FIRESTONE",
+      "BRIDGESTONE",
+      "STARFIRE",
+      "ARGUS ADVANTA",
+      "GOODYEAR",
+      "KENDA",
+      "KELLY"
+    ],
+    "onlyTireWeb": [
+      "HERCULES",
+      "DUNLOP",
+      "GT RADIAL",
+      "IRONMAN",
+      "NITTO",
+      "LAUFENN",
+      "SUMITOMO"
+    ],
+    "bothBrands": 14,
+    "priceComps": 59,
+    "avgPriceDiff": 7.198983050847453
+  }
+]

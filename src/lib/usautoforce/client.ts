@@ -160,7 +160,7 @@ export async function serviceCheck(): Promise<ServiceCheckResult> {
     
     return {
       success: errorCode === "success",
-      dateTime,
+      dateTime: dateTime || undefined,
       errorCode: errorCode || undefined,
       errorMessage: errorMessage || undefined,
     };
@@ -195,7 +195,7 @@ export async function checkStockBySize(
 ): Promise<USAutoForceStockCheckResponse> {
   const config = getConfig();
   if (!config) {
-    return { success: false, items: [], errorMessage: "Missing credentials" };
+    return { success: false, branch: "", items: [], errorMessage: "Missing credentials" };
   }
   
   // Normalize tire size: "225/60R16" -> "2256016"
@@ -203,7 +203,7 @@ export async function checkStockBySize(
   const parts = parseSize(simpleSize);
   
   if (!parts) {
-    return { success: false, items: [], errorMessage: `Invalid tire size: ${tireSize}` };
+    return { success: false, branch: "", items: [], errorMessage: `Invalid tire size: ${tireSize}` };
   }
   
   const transactionId = Date.now().toString();
@@ -253,8 +253,9 @@ export async function checkStockBySize(
     if (errorCode !== "success") {
       return {
         success: false,
+        branch,
         items: [],
-        errorCode: errorCode ? parseInt(errorCode) : undefined,
+        errorCode: errorCode || undefined,
         errorMessage: errorMessage || "Unknown error",
       };
     }
@@ -264,12 +265,14 @@ export async function checkStockBySize(
     
     return {
       success: true,
+      branch,
       items,
     };
   } catch (error) {
     console.error("[usautoforce] StockCheck error:", error);
     return {
       success: false,
+      branch,
       items: [],
       errorMessage: String(error),
     };
@@ -289,12 +292,12 @@ export async function checkStockByPartNumber(
   } = {}
 ): Promise<USAutoForceStockCheckResponse> {
   const config = getConfig();
+  const branch = options.branch || "4101";
   if (!config) {
-    return { success: false, items: [], errorMessage: "Missing credentials" };
+    return { success: false, branch, items: [], errorMessage: "Missing credentials" };
   }
   
   const transactionId = Date.now().toString();
-  const branch = options.branch || "4101";
   const quantity = options.quantity || 1;
   
   let alternateBranchesXml = "";
@@ -334,8 +337,9 @@ export async function checkStockByPartNumber(
     if (errorCode !== "success") {
       return {
         success: false,
+        branch,
         items: [],
-        errorCode: errorCode ? parseInt(errorCode) : undefined,
+        errorCode: errorCode || undefined,
         errorMessage: errorMessage || "Unknown error",
       };
     }
@@ -343,6 +347,7 @@ export async function checkStockByPartNumber(
     // TODO: Parse part results (similar to tire but different fields)
     return {
       success: true,
+      branch,
       items: [],
       errorMessage: "Part stock check parsing not yet implemented",
     };
@@ -350,6 +355,7 @@ export async function checkStockByPartNumber(
     console.error("[usautoforce] StockCheck error:", error);
     return {
       success: false,
+      branch,
       items: [],
       errorMessage: String(error),
     };
@@ -390,9 +396,11 @@ export async function placeOrder(
   const branch = request.warehouseCode || "4101";
   
   // Build tires XML (assuming tire order for now)
+  // Note: lineCode is the brand code (e.g., "TOY", "GEN", "BFG")
   const tiresXml = request.items.map((item, idx) => `
     <TireDto>
       <lineNumber>${idx + 1}</lineNumber>
+      ${item.lineCode ? `<lineCode>${escapeXml(item.lineCode)}</lineCode>` : ""}
       <partNumber>${escapeXml(item.partNumber)}</partNumber>
       <quantityRequested>${item.quantity}</quantityRequested>
     </TireDto>
@@ -438,8 +446,8 @@ export async function placeOrder(
     return {
       success: errorCode === "success",
       orderNumber: orderNumber || undefined,
-      selectedWarehouse: branch,
-      errorCode: errorCode !== "success" ? parseInt(errorCode || "0") : undefined,
+      branch,
+      errorCode: errorCode !== "success" ? (errorCode || undefined) : undefined,
       errorMessage: errorCode !== "success" ? errorMessage || undefined : undefined,
     };
   } catch (error) {
