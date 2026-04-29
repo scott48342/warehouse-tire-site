@@ -533,10 +533,12 @@ function POSWheelCard({
   wheel,
   showAsStaggered,
   onSelect,
+  onViewDetails,
 }: {
   wheel: WheelItem;
   showAsStaggered: boolean;
   onSelect: (wheel: WheelItem) => void;
+  onViewDetails: (wheel: WheelItem) => void;
 }) {
   const currentPrice = wheel.price || 0;
   
@@ -549,7 +551,10 @@ function POSWheelCard({
   const displayStaggered = showAsStaggered && hasTrueStaggeredPair;
   
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white p-4 transition-all hover:shadow-md">
+    <div 
+      className="rounded-xl border border-neutral-200 bg-white p-4 transition-all hover:shadow-md cursor-pointer"
+      onClick={() => onViewDetails(wheel)}
+    >
       {/* Image */}
       <div className="relative mb-3 aspect-square overflow-hidden rounded-lg bg-neutral-100">
         {wheel.imageUrl ? (
@@ -616,13 +621,27 @@ function POSWheelCard({
         </div>
       </div>
       
-      {/* Select button */}
-      <button
-        onClick={() => onSelect(wheel)}
-        className="w-full rounded-lg bg-blue-600 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-      >
-        Select This Wheel
-      </button>
+      {/* Action buttons */}
+      <div className="flex gap-2">
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onViewDetails(wheel);
+          }}
+          className="flex-1 rounded-lg border border-neutral-300 bg-white py-2 text-center text-sm font-semibold text-neutral-700 transition-colors hover:bg-neutral-50"
+        >
+          View Details
+        </button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onSelect(wheel);
+          }}
+          className="flex-1 rounded-lg bg-blue-600 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+        >
+          Quick Select
+        </button>
+      </div>
     </div>
   );
 }
@@ -971,6 +990,13 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
     router.push(`/pos/tires?${params.toString()}`);
   }, [setWheel, localSetupMode, router, year, make, model, trim]);
 
+  // Handle view details (navigate to PDP)
+  const handleViewDetails = useCallback((wheel: WheelItem) => {
+    const params = new URLSearchParams({ year, make, model });
+    if (trim) params.set("trim", trim);
+    router.push(`/pos/wheels/${wheel.sku}?${params.toString()}`);
+  }, [router, year, make, model, trim]);
+
   // No vehicle
   if (!hasVehicle) {
     return (
@@ -1109,6 +1135,7 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
                     wheel={wheel}
                     showAsStaggered={localSetupMode === "staggered"}
                     onSelect={handleSelectWheel}
+                    onViewDetails={handleViewDetails}
                   />
                 ))}
               </div>
