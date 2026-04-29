@@ -1408,11 +1408,12 @@ async function handleDbFirstWheelResults(opts: {
   
   // Debug specific SKU tracing
   const debugSku = url.searchParams.get("debugSku");
+  const debugTrace: string[] = [];
   if (debugSku) {
     const debugCandidate = candidates.find(c => c.sku === debugSku);
-    console.log(`[fitment-search] DEBUG ${debugSku}: In initial candidates = ${!!debugCandidate}`);
+    debugTrace.push(`1. In initial candidates (bolt pattern ${opts.boltPattern}): ${!!debugCandidate}`);
     if (debugCandidate) {
-      console.log(`[fitment-search] DEBUG ${debugSku}: diameter=${debugCandidate.diameter}, offset=${debugCandidate.offset}, msrp=${debugCandidate.msrp}`);
+      debugTrace.push(`   - diameter=${debugCandidate.diameter}, offset=${debugCandidate.offset}, msrp=${debugCandidate.msrp}`);
     }
   }
 
@@ -1455,7 +1456,7 @@ async function handleDbFirstWheelResults(opts: {
   // Debug SKU tracing - after basic filter
   if (debugSku) {
     const afterFilter = filteredCandidates.find(c => c.sku === debugSku);
-    console.log(`[fitment-search] DEBUG ${debugSku}: After basic filter = ${!!afterFilter}`);
+    debugTrace.push(`2. After basic filter: ${!!afterFilter}`);
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -1624,7 +1625,7 @@ async function handleDbFirstWheelResults(opts: {
   // Debug SKU tracing - after fitment validation
   if (debugSku) {
     const afterFitment = fitmentValidCandidates.find(c => c.candidate.sku === debugSku);
-    console.log(`[fitment-search] DEBUG ${debugSku}: After fitment validation = ${!!afterFitment}`);
+    debugTrace.push(`3. After fitment validation: ${!!afterFitment}`);
   }
   
   // Log DRW dead-zone exclusions if any
@@ -1670,7 +1671,7 @@ async function handleDbFirstWheelResults(opts: {
     // Not in inventory cache? Include anyway - techfeed says it exists
     if (!inv) {
       if (debugSku && item.candidate.sku === debugSku) {
-        console.log(`[fitment-search] DEBUG ${debugSku}: NOT in inventory cache → INCLUDED`);
+        debugTrace.push(`4. Inventory filter: NOT in cache → INCLUDED`);
       }
       return true;
     }
@@ -1679,7 +1680,7 @@ async function handleDbFirstWheelResults(opts: {
     const hasSufficientQty = inv.totalQty >= MIN_INVENTORY_QTY;
     
     if (debugSku && item.candidate.sku === debugSku) {
-      console.log(`[fitment-search] DEBUG ${debugSku}: invType=${inv.inventoryType}, qty=${inv.totalQty}, orderable=${isOrderable}, sufficientQty=${hasSufficientQty}, result=${isOrderable || hasSufficientQty}`);
+      debugTrace.push(`4. Inventory filter: invType=${inv.inventoryType}, qty=${inv.totalQty}, orderable=${isOrderable}, sufficientQty=${hasSufficientQty}, result=${isOrderable || hasSufficientQty}`);
     }
     
     // Exclude only if: in cache AND non-orderable type AND low qty
@@ -2775,6 +2776,8 @@ async function handleDbFirstWheelResults(opts: {
     packagePriorityApplied,
     // Sort applied flag (helps debug if sorting is working)
     sortApplied: isPriceSorted ? sortParam : 'default',
+    // Debug SKU trace (only when debugSku param is provided)
+    ...(debugSku && debugTrace.length > 0 ? { debugSkuTrace: { sku: debugSku, trace: debugTrace } } : {}),
   });
 }
 
