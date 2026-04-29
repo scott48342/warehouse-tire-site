@@ -4,6 +4,7 @@ import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 import { WheelsGridWithSelection } from "@/components/WheelsGridWithSelection";
 import { WheelFilterSidebar } from "@/components/WheelFilterSidebar";
+import { WheelsLazyLoader, LoadMoreButton } from "@/components/WheelsLazyLoader";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
@@ -541,11 +542,11 @@ export default async function WheelsPage({
 
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
-  // Fetch enough results to show all valid wheels (fitment engine already filters to ~200-300 for most vehicles)
-  // 2026-04-29: Increased from 500 to 1000 to include more wheel models in sidebar filter
-  // Increased to 3000 to show all wheels with inventory (F-150 has ~3000 wheels)
-  // The API now supports up to 3000 results per page
-  const upstreamPageSize = 3000;
+  // LAZY LOADING: Initial fetch is small for fast page load
+  // User can click "Load All Wheels" to see everything with inventory
+  // Check for loadAll param to show all results
+  const loadAllParam = (Array.isArray(sp.loadAll) ? sp.loadAll[0] : sp.loadAll) === "true";
+  const upstreamPageSize = loadAllParam ? 3000 : 100;
 
   const baseWheelProsParams: Record<string, string | undefined> = {
     // Vehicle info (triggers fitment-search endpoint when present)
@@ -1955,9 +1956,27 @@ export default async function WheelsPage({
               }))}
             />
 
+            {/* LOAD ALL WHEELS BUTTON - Shows when there are more wheels to load */}
+            {!loadAllParam && totalCount > itemsFinal.length && (
+              <div className="mt-6 flex flex-col items-center gap-2 rounded-lg border border-dashed border-neutral-300 bg-neutral-50 py-6">
+                <p className="text-sm text-neutral-600">
+                  Showing {itemsFinal.length.toLocaleString()} of {totalCount.toLocaleString()} wheels with inventory
+                </p>
+                <a
+                  href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${styleParam ? `&style=${encodeURIComponent(styleParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&loadAll=true&page=1`}
+                  className="rounded-lg bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800"
+                >
+                  Load All {totalCount.toLocaleString()} Wheels
+                </a>
+                <p className="text-xs text-neutral-400">
+                  May take a moment to load
+                </p>
+              </div>
+            )}
+
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
               <div className="text-sm font-semibold text-neutral-600">
-                {itemsFinal.length} styles ({totalCount} SKUs)
+                {loadAllParam ? `${itemsFinal.length.toLocaleString()} styles (all loaded)` : `${itemsFinal.length} styles ({totalCount} SKUs)`}
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {safePage > 1 ? (
