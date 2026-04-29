@@ -33,7 +33,7 @@ type WheelItem = {
   pair?: WheelPairInfo;
 };
 
-type FacetBucket = { value: string; count: number; label?: string; isOem?: boolean };
+type FacetBucket = { value: string; count: number; label?: string; isOem?: boolean; };
 
 type Facets = {
   brands: FacetBucket[];
@@ -315,7 +315,7 @@ function FilterSidebar({
             {facets.brands.slice(0, 5).map((b) => (
               <FilterCheckbox
                 key={b.value}
-                label={b.value}
+                label={b.label || b.value}
                 checked={filters.brands.includes(b.value)}
                 count={b.count}
                 onChange={() => onToggleArrayFilter("brands", b.value)}
@@ -330,7 +330,7 @@ function FilterSidebar({
                   {facets.brands.slice(5).map((b) => (
                     <FilterCheckbox
                       key={b.value}
-                      label={b.value}
+                      label={b.label || b.value}
                       checked={filters.brands.includes(b.value)}
                       count={b.count}
                       onChange={() => onToggleArrayFilter("brands", b.value)}
@@ -858,8 +858,21 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
           const widthBuckets = data.facets.width?.buckets || [];
           const offsetBuckets = data.facets.offset?.buckets || [];
           
+          // Build brand code → full name map from wheel data
+          const brandNameMap = new Map<string, string>();
+          for (const w of normalizedWheels) {
+            if (w.brandCode && w.brand && !brandNameMap.has(w.brandCode)) {
+              brandNameMap.set(w.brandCode, w.brand);
+            }
+          }
+          
           setFacets({
-            brands: brandBuckets.map((b: any) => ({ value: b.value, count: b.count })),
+            brands: brandBuckets.map((b: any) => ({ 
+              value: b.value, 
+              count: b.count,
+              // Use full brand name if available, otherwise fall back to code
+              label: brandNameMap.get(b.value) || b.value,
+            })),
             models: modelBuckets.map((m: any) => ({ value: m.value, count: m.count })),
             finishes: finishBuckets.map((f: any) => ({ value: f.value, count: f.count })),
             diameters: diameterBuckets
