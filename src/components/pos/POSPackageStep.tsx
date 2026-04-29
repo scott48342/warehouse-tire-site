@@ -723,6 +723,33 @@ export function POSPackageStep() {
     goToStep("pricing");
   };
   
+  // ============================================================================
+  // ALL HOOKS MUST BE CALLED BEFORE ANY EARLY RETURNS (React Rules of Hooks)
+  // ============================================================================
+  
+  // Filter staggered pairs by brand
+  const filteredPairs = useMemo(() => {
+    let result = [...staggeredPairs];
+    if (wheelFilters.brand) {
+      result = result.filter(p => p.brand === wheelFilters.brand);
+    }
+    if (wheelFilters.priceRange) {
+      if (wheelFilters.priceRange === "0-1500") {
+        result = result.filter(p => p.totalPrice < 1500);
+      } else if (wheelFilters.priceRange === "1500-2000") {
+        result = result.filter(p => p.totalPrice >= 1500 && p.totalPrice < 2000);
+      } else if (wheelFilters.priceRange === "2000-2500") {
+        result = result.filter(p => p.totalPrice >= 2000 && p.totalPrice < 2500);
+      } else if (wheelFilters.priceRange === "2500+") {
+        result = result.filter(p => p.totalPrice >= 2500);
+      }
+    }
+    return result.sort((a, b) => a.totalPrice - b.totalPrice);
+  }, [staggeredPairs, wheelFilters]);
+  
+  // ============================================================================
+  // EARLY RETURNS (after all hooks)
+  // ============================================================================
   if (!state.vehicle) {
     return (
       <div className="text-center py-12 text-gray-500">
@@ -745,33 +772,13 @@ export function POSPackageStep() {
     );
   }
   
-  if (wheels.length === 0) {
+  if (wheels.length === 0 && staggeredPairs.length === 0) {
     return (
       <div className="text-center py-12 text-gray-500">
         No wheels found for this vehicle.
       </div>
     );
   }
-  
-  // Filter staggered pairs by brand
-  const filteredPairs = useMemo(() => {
-    let result = [...staggeredPairs];
-    if (wheelFilters.brand) {
-      result = result.filter(p => p.brand === wheelFilters.brand);
-    }
-    if (wheelFilters.priceRange) {
-      if (wheelFilters.priceRange === "0-1500") {
-        result = result.filter(p => p.totalPrice < 1500);
-      } else if (wheelFilters.priceRange === "1500-2000") {
-        result = result.filter(p => p.totalPrice >= 1500 && p.totalPrice < 2000);
-      } else if (wheelFilters.priceRange === "2000-2500") {
-        result = result.filter(p => p.totalPrice >= 2000 && p.totalPrice < 2500);
-      } else if (wheelFilters.priceRange === "2500+") {
-        result = result.filter(p => p.totalPrice >= 2500);
-      }
-    }
-    return result.sort((a, b) => a.totalPrice - b.totalPrice);
-  }, [staggeredPairs, wheelFilters]);
   
   // ============================================================================
   // PHASE 1: Wheel Selection
