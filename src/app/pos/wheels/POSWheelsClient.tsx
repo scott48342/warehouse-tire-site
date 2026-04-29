@@ -111,8 +111,10 @@ function AccordionSection({
   children: React.ReactNode;
   hidden?: boolean;
 }) {
+  // Hook must be called unconditionally (before any early returns)
   const [open, setOpen] = useState(defaultOpen);
   
+  // Early return AFTER hooks is safe in React
   if (hidden) return null;
   
   return (
