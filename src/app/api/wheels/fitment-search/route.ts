@@ -1622,15 +1622,29 @@ async function handleDbFirstWheelResults(opts: {
   timing.cachedAvailabilityHits = inventoryData.size;
   timing.totalFitmentValid = fitmentValidCandidates.length;
   
-  // INVENTORY FILTER: Only include SKUs that exist in inventory with sufficient qty
-  // This filters out discontinued/stale products AND low-stock items
-  // Minimum qty = 4 (need at least 4 wheels to sell a set)
+  // INVENTORY FILTER: Only include SKUs that exist in inventory and are orderable
+  // This filters out discontinued/stale products
+  // 
+  // Orderable types from WheelPros:
+  // - ST = Stocking (warehouse stock)
+  // - BW = Buy When Sold (can order from other locations)
+  // - NW = Non-Stocking Wheel (available from other warehouses)
+  // - SO = Special Order
+  // - CS = Custom/Special
+  //
+  // If orderable type, include even with low local qty - WheelPros fulfills from network
+  const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
   const MIN_INVENTORY_QTY = 4;
   const preFilterCount = fitmentValidCandidates.length;
   fitmentValidCandidates = fitmentValidCandidates.filter(item => {
     const inv = inventoryData.get(item.candidate.sku);
-    // Must exist in inventory feed AND have sufficient quantity
-    return inv !== undefined && inv.totalQty >= MIN_INVENTORY_QTY;
+    if (!inv) return false; // Not in feed = discontinued
+    
+    const isOrderable = ORDERABLE_TYPES.has(inv.inventoryType);
+    const hasSufficientQty = inv.totalQty >= MIN_INVENTORY_QTY;
+    
+    // Include if orderable type (regardless of qty) OR has sufficient local qty
+    return isOrderable || hasSufficientQty;
   });
   timing.inventoryFilteredOut = preFilterCount - fitmentValidCandidates.length;
   
