@@ -2,9 +2,9 @@
  * Session History API
  * 
  * GET /api/admin/sessions
- * Returns recent sessions aggregated from funnel_events
+ * Returns recent sessions from analytics_sessions + analytics_pageviews tables
  * 
- * @updated 2026-04-27 - Switched to funnel_events table (was analytics_sessions)
+ * @updated 2026-04-30 - Reverted to analytics tables (funnel_events is separate)
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -31,55 +31,63 @@ export async function GET(request: NextRequest) {
     const siteFilter = request.nextUrl.searchParams.get("site");
     const minPages = Number(request.nextUrl.searchParams.get("minPages")) || 1;
 
-    // Build site filter condition
+    // Build site filter condition based on hostname
     let siteCondition = "";
     if (siteFilter === "local") {
-      siteCondition = "AND store_mode = 'local'";
+      siteCondition = "AND s.hostname LIKE '%warehousetire.net%'";
     } else if (siteFilter === "national") {
-      siteCondition = "AND store_mode = 'national'";
+      siteCondition = "AND (s.hostname LIKE '%warehousetiredirect.com%' OR s.hostname IS NULL)";
     }
 
-    // Aggregate sessions from funnel_events
+    // Query analytics_sessions with pageview data
     const result = await pool.query(`
-      WITH session_summary AS (
-        SELECT 
-          session_id,
-          MIN(created_at) as first_seen_at,
-          MAX(created_at) as last_seen_at,
-          COUNT(*) as event_count,
-          -- Get first event's data
-          (ARRAY_AGG(page_url ORDER BY created_at ASC))[1] as landing_page,
-          (ARRAY_AGG(page_url ORDER BY created_at DESC))[1] as current_page,
-          (ARRAY_AGG(traffic_source ORDER BY created_at ASC))[1] as traffic_source,
-          (ARRAY_AGG(device_type ORDER BY created_at ASC))[1] as device_type,
-          (ARRAY_AGG(store_mode ORDER BY created_at ASC))[1] as store_mode,
-          (ARRAY_AGG(referrer ORDER BY created_at ASC))[1] as referrer,
-          (ARRAY_AGG(utm_source ORDER BY created_at ASC))[1] as utm_source,
-          (ARRAY_AGG(utm_campaign ORDER BY created_at ASC))[1] as utm_campaign,
-          (ARRAY_AGG(ip_address ORDER BY created_at ASC))[1] as ip_address,
-          (ARRAY_AGG(user_agent ORDER BY created_at ASC))[1] as user_agent,
-          -- Page history (all pages visited in order, limit to 50)
-          (ARRAY_AGG(DISTINCT page_url ORDER BY page_url))[1:50] as pages_visited,
-          -- Events list for timeline
-          ARRAY_AGG(
-            json_build_object(
-              'event', event_name,
-              'url', page_url,
-              'time', created_at
-            ) ORDER BY created_at ASC
-          ) as events,
-          -- Check for cart events
-          MAX(CASE WHEN event_name = 'add_to_cart' THEN 1 ELSE 0 END) as has_cart
-        FROM funnel_events
-        WHERE created_at >= NOW() - INTERVAL '${hours} hours'
-          AND session_id IS NOT NULL
-          AND session_id != ''
-          ${siteCondition}
-        GROUP BY session_id
-        HAVING COUNT(*) >= ${minPages}
-      )
-      SELECT * FROM session_summary
-      ORDER BY last_seen_at DESC
+      SELECT 
+        s.session_id,
+        s.first_seen_at,
+        s.last_seen_at,
+        s.landing_page,
+        s.current_page,
+        s.page_view_count,
+        s.referrer,
+        s.utm_source,
+        s.utm_medium,
+        s.utm_campaign,
+        s.device_type,
+        s.user_agent,
+        s.is_bot,
+        s.country,
+        s.city,
+        s.region,
+        s.hostname,
+        s.is_test,
+        -- Get page journey from pageviews table
+        (
+          SELECT ARRAY_AGG(DISTINCT path ORDER BY path)
+          FROM analytics_pageviews pv
+          WHERE pv.session_id = s.session_id
+          LIMIT 50
+        ) as pages_visited,
+        -- Get ordered page journey
+        (
+          SELECT ARRAY_AGG(
+            json_build_object('path', pv.path, 'time', pv.timestamp)
+            ORDER BY pv.timestamp ASC
+          )
+          FROM (
+            SELECT path, timestamp
+            FROM analytics_pageviews
+            WHERE session_id = s.session_id
+            ORDER BY timestamp ASC
+            LIMIT 50
+          ) pv
+        ) as page_journey
+      FROM analytics_sessions s
+      WHERE s.first_seen_at >= NOW() - INTERVAL '${hours} hours'
+        AND s.is_bot = false
+        AND s.is_test = false
+        AND s.page_view_count >= ${minPages}
+        ${siteCondition}
+      ORDER BY s.last_seen_at DESC
       LIMIT ${limit}
     `);
 
@@ -126,82 +134,74 @@ export async function GET(request: NextRequest) {
       
       const isActive = minutesAgo < 5;
 
-      // Extract path from URL
-      let landingPath = "/";
-      let currentPath = "/";
-      try {
-        if (s.landing_page) {
-          const url = new URL(s.landing_page);
-          landingPath = url.pathname + url.search;
-        }
-        if (s.current_page) {
-          const url = new URL(s.current_page);
-          currentPath = url.pathname + url.search;
-        }
-      } catch {
-        landingPath = s.landing_page || "/";
-        currentPath = s.current_page || landingPath;
-      }
-
-      // Determine hostname/site from landing page
-      let hostname = "shop.warehousetiredirect.com";
-      try {
-        if (s.landing_page) {
-          hostname = new URL(s.landing_page).hostname;
-        }
-      } catch {}
-
       // Format source
       let source = "Direct";
       if (s.utm_source) {
         source = s.utm_campaign ? `${s.utm_source} (${s.utm_campaign})` : s.utm_source;
-      } else if (s.traffic_source && s.traffic_source !== "direct") {
-        source = s.traffic_source;
       } else if (s.referrer) {
         try {
-          source = new URL(s.referrer).hostname.replace("www.", "");
+          const refUrl = new URL(s.referrer);
+          const host = refUrl.hostname.replace("www.", "");
+          // Detect ad click IDs in referrer
+          if (refUrl.searchParams.get("gclid")) {
+            source = "google_ads";
+          } else if (refUrl.searchParams.get("fbclid")) {
+            source = "facebook";
+          } else if (host.includes("google")) {
+            source = "google";
+          } else if (host.includes("facebook") || host.includes("fb.")) {
+            source = "facebook";
+          } else if (host.includes("bing")) {
+            source = "bing";
+          } else {
+            source = host;
+          }
         } catch {
           source = s.referrer.slice(0, 30);
         }
       }
+      
+      // Check landing page for ad click IDs
+      if (source === "Direct" && s.landing_page) {
+        try {
+          const landingUrl = new URL(`https://example.com${s.landing_page}`);
+          if (landingUrl.searchParams.get("gclid") || landingUrl.searchParams.get("gad_source")) {
+            source = "google_ads";
+          } else if (landingUrl.searchParams.get("fbclid")) {
+            source = "facebook";
+          } else if (landingUrl.searchParams.get("msclkid")) {
+            source = "bing_ads";
+          }
+        } catch {}
+      }
 
       const cart = cartsBySession.get(s.session_id);
       
-      // Parse pages visited into paths
-      const pagesVisited: string[] = [];
-      if (Array.isArray(s.pages_visited)) {
-        for (const url of s.pages_visited) {
-          if (!url) continue;
-          try {
-            const parsed = new URL(url);
-            pagesVisited.push(parsed.pathname + parsed.search);
-          } catch {
-            pagesVisited.push(url);
+      // Parse page journey
+      const pages: string[] = [];
+      const events: Array<{ path: string; time: string }> = [];
+      
+      if (Array.isArray(s.page_journey)) {
+        for (const item of s.page_journey) {
+          if (item && typeof item === 'object') {
+            const path = item.path || '/';
+            events.push({ path, time: item.time });
+            if (!pages.includes(path)) {
+              pages.push(path);
+            }
           }
         }
+      } else if (Array.isArray(s.pages_visited)) {
+        pages.push(...s.pages_visited.filter(Boolean));
       }
 
-      // Parse events timeline
-      const events: Array<{ event: string; url: string; time: string }> = [];
-      if (Array.isArray(s.events)) {
-        for (const evt of s.events.slice(0, 50)) { // Limit to 50 events
-          if (evt && typeof evt === 'object') {
-            let path = '/';
-            try {
-              if (evt.url) {
-                const parsed = new URL(evt.url);
-                path = parsed.pathname + parsed.search;
-              }
-            } catch {
-              path = evt.url || '/';
-            }
-            events.push({
-              event: evt.event || 'unknown',
-              url: path,
-              time: evt.time,
-            });
-          }
-        }
+      // Determine site from hostname
+      let site = "national";
+      const hostname = s.hostname || "";
+      if (hostname.includes("warehousetire.net")) {
+        site = "local";
+      } else if (hostname.includes("pos.")) {
+        site = "pos";
       }
       
       return {
@@ -219,18 +219,21 @@ export async function GET(request: NextRequest) {
         duration: durationSec < 60 
           ? `${durationSec}s` 
           : `${Math.floor(durationSec / 60)}m ${durationSec % 60}s`,
-        landingPage: landingPath,
-        lastPage: currentPath,
-        pageViews: parseInt(s.event_count) || 1,
-        pages: pagesVisited,
+        landingPage: s.landing_page || "/",
+        lastPage: s.current_page || s.landing_page || "/",
+        pageViews: parseInt(s.page_view_count) || 1,
+        pages,
         events,
         device: s.device_type || "unknown",
-        location: null, // funnel_events doesn't have geo data yet
+        location: s.city && s.region 
+          ? `${s.city}, ${s.region}` 
+          : s.city || s.region || s.country || null,
+        country: s.country,
+        city: s.city,
+        region: s.region,
         source,
-        hostname,
-        site: s.store_mode === "local" ? "local" 
-            : hostname?.includes("pos.") ? "pos" 
-            : "national",
+        hostname: s.hostname || "shop.warehousetiredirect.com",
+        site,
         cart: cart ? {
           cartId: cart.cartId,
           itemCount: cart.itemCount,
@@ -244,11 +247,19 @@ export async function GET(request: NextRequest) {
       };
     });
 
+    // Summary stats
+    const totalSessions = formattedSessions.length;
+    const activeSessions = formattedSessions.filter((s: any) => s.isActive).length;
+    const withCart = formattedSessions.filter((s: any) => s.cart !== null).length;
+    const deepSessions = formattedSessions.filter((s: any) => s.pageViews >= 5).length;
+
     return NextResponse.json({
       generated: new Date().toISOString(),
       hours,
-      totalSessions: formattedSessions.length,
-      activeSessions: formattedSessions.filter((s: any) => s.isActive).length,
+      totalSessions,
+      activeSessions,
+      withCart,
+      deepSessions,
       sessions: formattedSessions,
     });
   } catch (error) {
