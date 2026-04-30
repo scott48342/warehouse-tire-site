@@ -4161,9 +4161,11 @@ function TireCard({
         )}
       </div>
 
-      {/* Performance ratings - mini bar charts */}
+      {/* Performance ratings - mini bar charts (only show if we have UTQG data) */}
       {(() => {
         const utqg = parseUTQG(t.badges?.utqg);
+        // Don't show ratings if no UTQG data - would just show meaningless defaults
+        if (!utqg || !utqg.treadwear) return null;
         const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as any;
         const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
         if (!ratings) return null;
