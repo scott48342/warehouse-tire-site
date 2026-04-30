@@ -101,29 +101,14 @@ export function LocalTireAddButton({
         </div>
       </div>
 
-      {/* Out-the-door price breakdown */}
-      <div className="bg-green-50 border border-green-200 rounded-lg p-2 overflow-hidden">
-        <div className="space-y-0 text-[10px] leading-tight">
-          <div className="flex justify-between text-neutral-600">
-            <span>Tires ({quantity})</span>
-            <span>${breakdown.tiresTotal.toFixed(2)}</span>
+      {/* Out-the-door total */}
+      <div className="bg-green-50 border border-green-200 rounded-lg px-3 py-2">
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="text-xs font-bold text-green-800">Out the Door</div>
+            <div className="text-[10px] text-green-600">Install + tax + fees</div>
           </div>
-          <div className="flex justify-between text-neutral-600">
-            <span>Install</span>
-            <span>${breakdown.installTotal.toFixed(2)}</span>
-          </div>
-          <div className="flex justify-between text-neutral-600">
-            <span>Tax</span>
-            <span>${breakdown.taxTotal.toFixed(2)}</span>
-          </div>
-          <div className="flex justify-between text-neutral-600">
-            <span>Fees</span>
-            <span>${breakdown.recyclingTotal.toFixed(2)}</span>
-          </div>
-        </div>
-        <div className="flex justify-between items-center font-bold text-green-800 border-t border-green-300 pt-1 mt-1">
-          <span className="text-[11px]">Total</span>
-          <span className="text-sm">${outTheDoorTotal.toFixed(2)}</span>
+          <div className="text-xl font-bold text-green-800">${outTheDoorTotal.toFixed(2)}</div>
         </div>
       </div>
 
