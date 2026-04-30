@@ -197,7 +197,7 @@ export function Header() {
 
         {/* Mobile: use tap-based modals via the action bar / simple buttons below */}
         <div className="w-full md:hidden">
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-5 gap-2">
             <button
               type="button"
               onClick={() => openLauncher("tires")}
@@ -212,6 +212,12 @@ export function Header() {
             >
               Wheels
             </button>
+            <Link
+              href="/financing"
+              className="flex h-11 items-center justify-center rounded-xl border border-blue-300 bg-blue-50 px-2 text-sm font-extrabold text-blue-700"
+            >
+              💳
+            </Link>
             <Link
               href="/gallery"
               className="flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
@@ -324,6 +330,14 @@ export function Header() {
               REBATES
             </Link>
 
+            <Link
+              href="/financing"
+              className="inline-flex items-center gap-1.5 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-blue-700 hover:border-blue-200 hover:text-blue-800"
+            >
+              <span>💳</span>
+              FINANCING
+            </Link>
+
             <details className="group relative">
               <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-amber-700 hover:border-amber-200">
                 LIFTED <span className="text-xs">▾</span>
@@ -386,13 +400,6 @@ export function Header() {
                   className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Blog
-                </Link>
-                <Link
-                  href="/financing"
-                  onClick={() => closeMenus()}
-                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-                >
-                  💳 Financing Options
                 </Link>
                 <div className="my-2 h-px bg-neutral-200" />
                 <Link
