@@ -635,31 +635,33 @@ async function enrichFromTireWebCache(tires: TireResult[]): Promise<TireResult[]
       cacheMap.set(row.part_number, row);
     }
     
-    // Apply cached specs to tires
-    return tires.map(tire => {
+    // Apply cached specs to tires - use explicit typing to avoid inference issues
+    return tires.map((tire): TireResult => {
       const cached = cacheMap.get(tire.partNumber);
       if (!cached) return tire;
       
       // Merge cached data into badges and enrichment
-      return {
+      const enrichedTire: TireResult = {
         ...tire,
         imageUrl: tire.imageUrl || cached.image_url || null,
         badges: {
-          ...tire.badges,
-          utqg: tire.badges?.utqg || cached.utqg || null,
-          treadDepth: tire.badges?.treadDepth ?? (cached.tread_depth ? parseFloat(cached.tread_depth) : null),
-          warrantyMiles: tire.badges?.warrantyMiles ?? cached.mileage_warranty,
+          terrain: tire.badges?.terrain || cached.terrain || null,
+          construction: tire.badges?.construction || null,
+          warrantyMiles: tire.badges?.warrantyMiles ?? cached.mileage_warranty ?? null,
           loadIndex: tire.badges?.loadIndex || cached.load_index || null,
           speedRating: tire.badges?.speedRating || cached.speed_rating || null,
-          terrain: tire.badges?.terrain || cached.terrain || null,
+          utqg: tire.badges?.utqg || cached.utqg || null,
+          treadDepth: tire.badges?.treadDepth ?? (cached.tread_depth ? parseFloat(cached.tread_depth) : null),
+          tireWeight: tire.badges?.tireWeight,
         },
-        enrichment: {
+        enrichment: tire.enrichment ? {
           ...tire.enrichment,
-          mileage: tire.enrichment?.mileage ?? cached.mileage_warranty,
-          loadRange: tire.enrichment?.loadRange || cached.load_range || null,
-          treadCategory: tire.enrichment?.treadCategory || cached.terrain as any || null,
-        },
+          mileage: tire.enrichment.mileage ?? cached.mileage_warranty ?? null,
+          loadRange: tire.enrichment.loadRange || cached.load_range || null,
+          treadCategory: tire.enrichment.treadCategory || (cached.terrain as typeof tire.enrichment.treadCategory) || null,
+        } : undefined,
       };
+      return enrichedTire;
     });
   } catch (err) {
     console.error("[tires/search] Cache enrichment error:", err);
