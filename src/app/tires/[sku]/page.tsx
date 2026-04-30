@@ -41,6 +41,9 @@ import { RebatePDPBlockStatic } from "@/components/RebateBlock";
 import { getPool as getRebatePool, listActiveRebates, getBestMatchingRebate, type SiteRebate } from "@/lib/rebates";
 // Funnel analytics tracking (2026-04-26)
 import { ProductViewTracker } from "@/components/ProductViewTracker";
+// Shop context detection (local vs national)
+import { headers } from "next/headers";
+import { detectShopContext } from "@/lib/shopContext";
 
 export const runtime = "nodejs";
 
@@ -204,9 +207,24 @@ function getConfidenceSignal(qty: number, category: TreadCategory | null): strin
 
 // ============================================================================
 // DELIVERY MESSAGE - Confident and specific
+// Different messaging for local (pickup) vs national (shipping) sites
 // ============================================================================
 
-function getDeliveryMessage(qty: number): { text: string; color: string; icon: string; urgency: string | null } {
+function getDeliveryMessage(qty: number, isLocal: boolean = false): { text: string; color: string; icon: string; urgency: string | null } {
+  if (isLocal) {
+    // Local site: pickup-oriented messaging
+    if (qty >= 8) {
+      return { text: "In stock · Ready for install", color: "text-green-700 font-semibold", icon: "🔧", urgency: null };
+    } else if (qty >= 4) {
+      return { text: "In stock · Schedule your install", color: "text-green-700 font-semibold", icon: "📍", urgency: null };
+    } else if (qty > 0) {
+      return { text: "Available · Call to schedule", color: "text-green-700 font-semibold", icon: "📞", urgency: `Only ${qty} left` };
+    } else {
+      return { text: "Special order · Usually 1-2 days", color: "text-neutral-600", icon: "📋", urgency: null };
+    }
+  }
+  
+  // National site: shipping-oriented messaging
   if (qty >= 8) {
     return { text: "In stock · Ships tomorrow", color: "text-green-700 font-semibold", icon: "🚀", urgency: null };
   } else if (qty >= 4) {
@@ -372,6 +390,11 @@ export default async function TireDetailPage({
   const source = String((sp as any).source || "");
   const size = String((sp as any).size || "");
 
+  // Detect shop mode (local vs national) for delivery messaging
+  const headersList = await headers();
+  const shopContext = detectShopContext(headersList);
+  const isLocalSite = shopContext.mode === 'local';
+
   if (!safeSku) {
     return (
       <main className="bg-neutral-50">
@@ -417,7 +440,7 @@ export default async function TireDetailPage({
           
           const q = tire.quantity || {};
           const totalQty = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
-          const delivery = getDeliveryMessage(totalQty);
+          const delivery = getDeliveryMessage(totalQty, isLocalSite);
           
           // Fetch real popularity signal (non-blocking, cached)
           let popularitySignal: PopularitySignalData | null = null;
@@ -816,7 +839,7 @@ export default async function TireDetailPage({
   const whyPoints = getWhyThisTirePoints(category, t.mileage_warranty ? String(t.mileage_warranty) : null, isRunFlatTire, has3PMSF);
   const categoryTagline = getCategoryTagline(category);
   const totalQty = Number(t.qoh) || 0;
-  const delivery = getDeliveryMessage(totalQty);
+  const delivery = getDeliveryMessage(totalQty, isLocalSite);
 
   // Fetch real popularity signal (non-blocking, cached)
   let popularitySignal: PopularitySignalData | null = null;
