@@ -387,6 +387,13 @@ export function Header() {
                 >
                   Blog
                 </Link>
+                <Link
+                  href="/financing"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  💳 Financing Options
+                </Link>
                 <div className="my-2 h-px bg-neutral-200" />
                 <Link
                   href="/blog/how-to-read-tire-sizes"

@@ -85,6 +85,14 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               <li>
                 <Link 
+                  href="/financing" 
+                  className="text-sm text-neutral-400 hover:text-white transition-colors"
+                >
+                  Financing Options
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href="/blog" 
                   className="text-sm text-neutral-400 hover:text-white transition-colors"
                 >
