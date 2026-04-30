@@ -2,7 +2,7 @@
 
 /**
  * Session History Dashboard
- * View past visitor sessions and their page journeys
+ * Mobile-optimized view of past visitor sessions
  */
 
 import { useState, useEffect, useCallback } from "react";
@@ -35,17 +35,190 @@ interface Session {
   cart: CartData | null;
 }
 
-interface PageTimeline {
-  path: string;
-  timestamp: number;
-  time?: string;
-}
-
 interface SessionsData {
   hours: number;
   totalSessions: number;
   activeSessions: number;
+  withCart: number;
+  deepSessions: number;
   sessions: Session[];
+}
+
+function formatPath(path: string): string {
+  if (path === "/") return "Homepage";
+  // Truncate long paths
+  if (path.length > 40) {
+    // Try to show the meaningful part
+    const parts = path.split("?")[0];
+    if (parts.length > 40) {
+      return parts.substring(0, 37) + "...";
+    }
+    return parts + "?...";
+  }
+  return path;
+}
+
+function getDeviceIcon(device: string): string {
+  switch (device) {
+    case "mobile": return "📱";
+    case "tablet": return "📱";
+    case "desktop": return "💻";
+    default: return "🖥️";
+  }
+}
+
+function getSiteBadge(site: string) {
+  switch (site) {
+    case "local":
+      return <span className="text-xs px-2 py-0.5 rounded-full bg-blue-900/50 text-blue-300 border border-blue-800">Local</span>;
+    case "pos":
+      return <span className="text-xs px-2 py-0.5 rounded-full bg-purple-900/50 text-purple-300 border border-purple-800">POS</span>;
+    default:
+      return <span className="text-xs px-2 py-0.5 rounded-full bg-green-900/50 text-green-300 border border-green-800">National</span>;
+  }
+}
+
+// Mobile card view for a session
+function SessionCard({ session, onExpand }: { session: Session; onExpand: () => void }) {
+  return (
+    <div 
+      className={`bg-neutral-800 rounded-xl p-4 space-y-3 ${session.isActive ? "ring-1 ring-green-500/50" : ""}`}
+      onClick={onExpand}
+    >
+      {/* Header row */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          {session.isActive && <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />}
+          <span className="text-sm text-neutral-400">{session.timeAgo}</span>
+          <span className="text-lg">{getDeviceIcon(session.device)}</span>
+        </div>
+        {getSiteBadge(session.site)}
+      </div>
+
+      {/* Journey */}
+      <div className="space-y-1">
+        <div className="text-white font-medium truncate">
+          {formatPath(session.landingPage)}
+        </div>
+        {session.lastPage !== session.landingPage && (
+          <div className="text-sm text-neutral-400 truncate">
+            → {formatPath(session.lastPage)}
+          </div>
+        )}
+      </div>
+
+      {/* Stats row */}
+      <div className="flex items-center gap-4 text-sm">
+        <div className="flex items-center gap-1.5">
+          <span className="text-neutral-500">Pages:</span>
+          <span className="text-white font-medium">{session.pageViews}</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="text-neutral-500">Time:</span>
+          <span className="text-white">{session.duration}</span>
+        </div>
+      </div>
+
+      {/* Source */}
+      <div className="text-sm text-neutral-400 truncate">
+        via {session.source}
+      </div>
+
+      {/* Cart badge */}
+      {session.cart && (
+        <div className="flex items-center justify-between pt-2 border-t border-neutral-700">
+          <div className="flex items-center gap-2">
+            <span className="text-green-400 font-bold">
+              ${session.cart.total.toLocaleString()}
+            </span>
+            <span className="text-neutral-500">
+              ({session.cart.itemCount} items)
+            </span>
+            {session.cart.hasEmail && <span>📧</span>}
+          </div>
+          <Link
+            href={`/admin/abandoned-carts/${session.cart.cartId}`}
+            className="text-sm text-blue-400 hover:underline"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View Cart →
+          </Link>
+        </div>
+      )}
+
+      {/* Location if available */}
+      {session.location && (
+        <div className="text-xs text-neutral-500">
+          📍 {session.location}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Desktop table row
+function SessionRow({ session, onExpand, isExpanded }: { 
+  session: Session; 
+  onExpand: () => void;
+  isExpanded: boolean;
+}) {
+  return (
+    <>
+      <tr
+        className={`hover:bg-neutral-700/50 cursor-pointer ${
+          session.isActive ? "bg-green-900/20" : ""
+        }`}
+        onClick={onExpand}
+      >
+        <td className="px-4 py-3">
+          <div className="flex items-center gap-2">
+            {session.isActive && <span className="w-2 h-2 rounded-full bg-green-500" />}
+            <span className="text-sm text-white">{session.timeAgo}</span>
+            <span className="text-xs text-neutral-500">{isExpanded ? "▼" : "▶"}</span>
+          </div>
+        </td>
+        <td className="px-4 py-3">{getSiteBadge(session.site)}</td>
+        <td className="px-4 py-3">
+          <div className="text-sm text-blue-400 truncate max-w-[200px]">
+            {formatPath(session.landingPage)}
+          </div>
+          {session.lastPage !== session.landingPage && (
+            <div className="text-xs text-neutral-400 truncate max-w-[200px]">
+              → {formatPath(session.lastPage)}
+            </div>
+          )}
+        </td>
+        <td className="px-4 py-3">
+          <span className="text-sm text-neutral-300">{session.location || "—"}</span>
+        </td>
+        <td className="px-4 py-3">
+          <span className="text-sm text-neutral-300 truncate max-w-[120px] block">
+            {session.source}
+          </span>
+        </td>
+        <td className="px-4 py-3">
+          <span className="text-sm text-white">{session.pageViews}</span>
+          <span className="ml-1">{getDeviceIcon(session.device)}</span>
+        </td>
+        <td className="px-4 py-3">
+          <span className="text-sm text-neutral-300">{session.duration}</span>
+        </td>
+        <td className="px-4 py-3">
+          {session.cart ? (
+            <div className="text-sm">
+              <span className="text-green-400 font-medium">
+                ${session.cart.total.toLocaleString()}
+              </span>
+              <span className="text-neutral-500 ml-1">({session.cart.itemCount})</span>
+              {session.cart.hasEmail && <span className="ml-1">📧</span>}
+            </div>
+          ) : (
+            <span className="text-neutral-500">—</span>
+          )}
+        </td>
+      </tr>
+    </>
+  );
 }
 
 export default function SessionsPage() {
@@ -55,8 +228,6 @@ export default function SessionsPage() {
   const [minPages, setMinPages] = useState(2);
   const [siteFilter, setSiteFilter] = useState("");
   const [expandedSession, setExpandedSession] = useState<string | null>(null);
-  const [timeline, setTimeline] = useState<PageTimeline[]>([]);
-  const [loadingTimeline, setLoadingTimeline] = useState(false);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -83,88 +254,46 @@ export default function SessionsPage() {
     fetchData();
   }, [fetchData]);
 
-  const fetchTimeline = async (sessionId: string) => {
-    if (expandedSession === sessionId) {
-      setExpandedSession(null);
-      setTimeline([]);
-      return;
-    }
-    
-    setExpandedSession(sessionId);
-    setLoadingTimeline(true);
-    try {
-      const res = await fetch(`/api/admin/live-visitors/${sessionId}`);
-      if (res.ok) {
-        const detail = await res.json();
-        setTimeline(detail.timeline || []);
-      }
-    } catch (e) {
-      console.error("Failed to fetch timeline:", e);
-    } finally {
-      setLoadingTimeline(false);
-    }
-  };
-
-  const getDeviceIcon = (device: string) => {
-    switch (device) {
-      case "mobile": return "📱";
-      case "tablet": return "📱";
-      case "desktop": return "💻";
-      default: return "🖥️";
-    }
-  };
-
-  const getSiteBadge = (site: string) => {
-    switch (site) {
-      case "local":
-        return <span className="text-xs px-2 py-0.5 rounded bg-blue-900 text-blue-300">Local</span>;
-      case "pos":
-        return <span className="text-xs px-2 py-0.5 rounded bg-purple-900 text-purple-300">POS</span>;
-      default:
-        return <span className="text-xs px-2 py-0.5 rounded bg-green-900 text-green-300">National</span>;
-    }
-  };
-
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 lg:space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex flex-col gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-white">Session History</h1>
-          <p className="text-neutral-400 text-sm">
-            View past visitor sessions and their page journeys
+          <h1 className="text-xl lg:text-2xl font-bold text-white">Session History</h1>
+          <p className="text-neutral-400 text-sm mt-1">
+            Past visitor sessions and journeys
           </p>
         </div>
         
-        <div className="flex flex-wrap items-center gap-3">
+        {/* Filters */}
+        <div className="flex flex-wrap items-center gap-2">
           <select
             value={hours}
             onChange={(e) => setHours(Number(e.target.value))}
-            className="bg-neutral-800 border border-neutral-700 rounded px-3 py-1.5 text-sm text-white"
+            className="flex-1 min-w-[100px] max-w-[140px] bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-2 text-sm text-white"
           >
-            <option value={1}>Last 1 hour</option>
-            <option value={6}>Last 6 hours</option>
-            <option value={24}>Last 24 hours</option>
-            <option value={48}>Last 48 hours</option>
-            <option value={72}>Last 72 hours</option>
+            <option value={1}>1 hour</option>
+            <option value={6}>6 hours</option>
+            <option value={24}>24 hours</option>
+            <option value={48}>48 hours</option>
+            <option value={72}>72 hours</option>
           </select>
           
           <select
             value={minPages}
             onChange={(e) => setMinPages(Number(e.target.value))}
-            className="bg-neutral-800 border border-neutral-700 rounded px-3 py-1.5 text-sm text-white"
+            className="flex-1 min-w-[100px] max-w-[140px] bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-2 text-sm text-white"
           >
             <option value={1}>1+ pages</option>
             <option value={2}>2+ pages</option>
             <option value={3}>3+ pages</option>
             <option value={5}>5+ pages</option>
-            <option value={10}>10+ pages</option>
           </select>
           
           <select
             value={siteFilter}
             onChange={(e) => setSiteFilter(e.target.value)}
-            className="bg-neutral-800 border border-neutral-700 rounded px-3 py-1.5 text-sm text-white"
+            className="flex-1 min-w-[100px] max-w-[140px] bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-2 text-sm text-white"
           >
             <option value="">All sites</option>
             <option value="national">National</option>
@@ -173,34 +302,31 @@ export default function SessionsPage() {
           
           <button
             onClick={fetchData}
-            className="bg-red-600 hover:bg-red-700 px-4 py-1.5 rounded text-sm text-white"
+            disabled={loading}
+            className="bg-red-600 hover:bg-red-700 disabled:opacity-50 px-4 py-2 rounded-lg text-sm text-white font-medium"
           >
-            Refresh
+            {loading ? "..." : "↻"}
           </button>
         </div>
       </div>
 
-      {/* Stats */}
+      {/* Stats Grid */}
       {data && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-neutral-800 rounded-lg p-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="bg-neutral-800 rounded-xl p-4">
             <div className="text-2xl font-bold text-white">{data.totalSessions}</div>
-            <div className="text-neutral-400 text-sm">Total Sessions</div>
+            <div className="text-neutral-400 text-sm">Sessions</div>
           </div>
-          <div className="bg-neutral-800 rounded-lg p-4">
+          <div className="bg-neutral-800 rounded-xl p-4">
             <div className="text-2xl font-bold text-green-400">{data.activeSessions}</div>
-            <div className="text-neutral-400 text-sm">Active Now</div>
+            <div className="text-neutral-400 text-sm">Active</div>
           </div>
-          <div className="bg-neutral-800 rounded-lg p-4">
-            <div className="text-2xl font-bold text-white">
-              {data.sessions.filter(s => s.cart).length}
-            </div>
+          <div className="bg-neutral-800 rounded-xl p-4">
+            <div className="text-2xl font-bold text-white">{data.withCart}</div>
             <div className="text-neutral-400 text-sm">With Cart</div>
           </div>
-          <div className="bg-neutral-800 rounded-lg p-4">
-            <div className="text-2xl font-bold text-white">
-              {data.sessions.filter(s => s.pageViews >= 5).length}
-            </div>
+          <div className="bg-neutral-800 rounded-xl p-4">
+            <div className="text-2xl font-bold text-white">{data.deepSessions}</div>
             <div className="text-neutral-400 text-sm">5+ Pages</div>
           </div>
         </div>
@@ -208,11 +334,11 @@ export default function SessionsPage() {
 
       {/* Sessions List */}
       {loading ? (
-        <div className="bg-neutral-800 rounded-lg p-8 text-center text-neutral-400">
+        <div className="bg-neutral-800 rounded-xl p-8 text-center text-neutral-400">
           Loading sessions...
         </div>
       ) : !data || data.sessions.length === 0 ? (
-        <div className="bg-neutral-800 rounded-lg p-8 text-center">
+        <div className="bg-neutral-800 rounded-xl p-8 text-center">
           <div className="text-4xl mb-4">📭</div>
           <div className="text-xl text-neutral-400">No sessions found</div>
           <div className="text-neutral-500 text-sm mt-2">
@@ -220,185 +346,58 @@ export default function SessionsPage() {
           </div>
         </div>
       ) : (
-        <div className="bg-neutral-800 rounded-lg overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-neutral-700">
-                <tr>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Time
-                  </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Site
-                  </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Journey
-                  </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Location
-                  </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Source
-                  </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Pages
-                  </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Duration
-                  </th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">
-                    Cart
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-700">
-                {data.sessions.map((session) => (
-                  <>
-                    <tr
-                      key={session.sessionId}
-                      className={`hover:bg-neutral-700/50 cursor-pointer ${
-                        session.isActive ? "bg-green-900/20" : ""
-                      }`}
-                      onClick={() => fetchTimeline(session.sessionId)}
-                    >
-                      <td className="px-4 py-3">
-                        <div className="flex items-center gap-2">
-                          {session.isActive && (
-                            <span className="w-2 h-2 rounded-full bg-green-500" />
-                          )}
-                          <span className="text-sm text-white">{session.timeAgo}</span>
-                          <span className="text-xs text-neutral-500">
-                            {expandedSession === session.sessionId ? "▼" : "▶"}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        {getSiteBadge(session.site)}
-                      </td>
-                      <td className="px-4 py-3">
-                        <a 
-                          href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${session.landingPage}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-blue-400 hover:underline truncate max-w-[200px] block"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          {session.landingPage === "/" ? "Homepage" : session.landingPage}
-                        </a>
-                        {session.lastPage !== session.landingPage && (
-                          <a 
-                            href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${session.lastPage}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-xs text-neutral-400 hover:text-blue-400 truncate max-w-[200px] block"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            → {session.lastPage === "/" ? "Homepage" : session.lastPage}
-                          </a>
-                        )}
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="text-sm text-neutral-300">
-                          {session.location || "—"}
-                        </span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="text-sm text-neutral-300 truncate max-w-[120px] block">
-                          {session.source}
-                        </span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="text-sm text-white">{session.pageViews}</span>
-                        <span className="ml-1">{getDeviceIcon(session.device)}</span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="text-sm text-neutral-300">{session.duration}</span>
-                      </td>
-                      <td className="px-4 py-3">
-                        {session.cart ? (
-                          <div className="text-sm">
-                            <span className="text-green-400 font-medium">
-                              ${session.cart.total.toLocaleString()}
-                            </span>
-                            <span className="text-neutral-500 ml-1">
-                              ({session.cart.itemCount})
-                            </span>
-                            {session.cart.hasEmail && (
-                              <span className="ml-1">📧</span>
-                            )}
-                            <Link
-                              href={`/admin/abandoned-carts/${session.cart.cartId}`}
-                              className="text-blue-400 hover:underline ml-2 text-xs"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              View
-                            </Link>
-                          </div>
-                        ) : (
-                          <span className="text-neutral-500">—</span>
-                        )}
-                      </td>
-                    </tr>
-                    
-                    {/* Expanded timeline */}
-                    {expandedSession === session.sessionId && (
-                      <tr key={`${session.sessionId}-timeline`}>
-                        <td colSpan={8} className="px-4 py-4 bg-neutral-900">
-                          {loadingTimeline ? (
-                            <div className="text-neutral-400 text-sm">Loading journey...</div>
-                          ) : timeline.length > 0 ? (
-                            <div>
-                              <div className="text-sm font-medium text-white mb-3">
-                                📍 Full Page Journey
-                              </div>
-                              <div className="flex flex-wrap gap-2 items-center">
-                                {timeline.map((page, idx) => {
-                                  // Format timestamp in user's local timezone
-                                  const timeDisplay = page.timestamp 
-                                    ? new Date(page.timestamp).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
-                                    : page.time 
-                                      ? new Date(page.time).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
-                                      : '';
-                                  return (
-                                    <div key={idx} className="flex items-center gap-1">
-                                      <a
-                                        href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${page.path}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="bg-neutral-800 px-2 py-1 rounded text-xs hover:bg-neutral-700"
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
-                                        <span className="text-neutral-400">{timeDisplay}</span>
-                                        <span className="text-blue-400 ml-2 hover:underline">
-                                          {page.path === "/" ? "Homepage" : page.path}
-                                        </span>
-                                      </a>
-                                      {idx < timeline.length - 1 && (
-                                        <span className="text-neutral-600">→</span>
-                                      )}
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="text-neutral-500 text-sm">No page history available</div>
-                          )}
-                        </td>
-                      </tr>
-                    )}
-                  </>
-                ))}
-              </tbody>
-            </table>
+        <>
+          {/* Mobile: Card layout */}
+          <div className="lg:hidden space-y-3">
+            {data.sessions.map((session) => (
+              <SessionCard
+                key={session.sessionId}
+                session={session}
+                onExpand={() => setExpandedSession(
+                  expandedSession === session.sessionId ? null : session.sessionId
+                )}
+              />
+            ))}
           </div>
-        </div>
+
+          {/* Desktop: Table layout */}
+          <div className="hidden lg:block bg-neutral-800 rounded-xl overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-neutral-700">
+                  <tr>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Time</th>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Site</th>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Journey</th>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Location</th>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Source</th>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Pages</th>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Duration</th>
+                    <th className="px-4 py-3 text-left text-xs font-medium text-neutral-400 uppercase">Cart</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-neutral-700">
+                  {data.sessions.map((session) => (
+                    <SessionRow
+                      key={session.sessionId}
+                      session={session}
+                      isExpanded={expandedSession === session.sessionId}
+                      onExpand={() => setExpandedSession(
+                        expandedSession === session.sessionId ? null : session.sessionId
+                      )}
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </>
       )}
 
-      {/* Link to live */}
-      <div className="text-center text-neutral-500 text-sm">
+      {/* Quick nav */}
+      <div className="text-center text-neutral-500 text-sm pt-4">
         <Link href="/admin/live" className="text-blue-400 hover:underline">
-          ← Back to Live Visitors
+          ← Live Visitors
         </Link>
       </div>
     </div>
