@@ -4036,42 +4036,56 @@ function TireCard({
           </div>
         )}
         
-        {/* Badge stack - top left of image */}
-        <div className="absolute top-2 left-2 flex flex-col gap-1">
+        {/* Badge stack - top left of image (constrained to prevent overflow) */}
+        <div className="absolute top-2 left-2 right-2 flex flex-col items-start gap-1 overflow-hidden">
           {/* Category badge with icon - infer from model name if not in data */}
           {(() => {
             // Determine category from enrichment, badges, or model name inference
             // Hierarchy: enrichment.treadCategory → badges.terrain → model name patterns
             const m = (displayTitle + ' ' + (t.description || '')).toUpperCase();
-            let category = t.enrichment?.treadCategory || t.badges?.terrain || null;
+            let rawCategory = t.enrichment?.treadCategory || t.badges?.terrain || null;
             
             // Infer from model name patterns if not set (improved regex)
-            if (!category) {
+            if (!rawCategory) {
               // Winter patterns (check first - most specific)
               if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) {
-                category = 'Winter';
+                rawCategory = 'Winter';
               // Mud-Terrain patterns (M/T, MT, MUD) - before A/T
               } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
-                category = 'Mud-Terrain';
+                rawCategory = 'Mud-Terrain';
               // Rugged-Terrain patterns (R/T, RT, RUGGED)
               } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
-                category = 'Rugged-Terrain';
+                rawCategory = 'Rugged-Terrain';
               // All-Terrain: A/T, AT, AT2, ATX, AT-X, TERRA TRAC, KO2, GRAPPLER (without MUD)
               } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
-                category = 'All-Terrain';
+                rawCategory = 'All-Terrain';
               // Highway/Touring: H/T, HT, HT2, HTX, HTX2, TOURING, HIGHWAY
               } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
-                category = 'Highway/Touring';
+                rawCategory = 'Highway/Touring';
               // Performance patterns
               } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S?\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
-                category = 'Performance';
+                rawCategory = 'Performance';
               // All-Weather patterns
               } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
-                category = 'All-Weather';
+                rawCategory = 'All-Weather';
               } else {
-                category = 'All-Season'; // Default fallback
+                rawCategory = 'All-Season'; // Default fallback
               }
             }
+            
+            // Deduplicate repeated category text (e.g., "All-Season All-Season" → "All-Season")
+            // Also trim and normalize whitespace
+            const category = String(rawCategory || 'All-Season')
+              .trim()
+              .split(/\s+/)
+              .filter((word, idx, arr) => {
+                // Remove duplicate consecutive words (case-insensitive)
+                if (idx === 0) return true;
+                return word.toLowerCase() !== arr[idx - 1]?.toLowerCase();
+              })
+              .join(' ')
+              // If still too long or has repeated phrases, extract just the first valid category
+              .replace(/^(.+?)\s+\1.*$/i, '$1');
             
             const catStyle = {
               'All-Terrain': { bg: 'bg-gradient-to-r from-amber-600 to-amber-500', icon: '🏔️' },
@@ -4085,8 +4099,12 @@ function TireCard({
             }[category] || { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '🌤️' };
             
             return (
-              <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold text-white shadow-md ${catStyle.bg}`}>
-                <span className="drop-shadow-sm">{catStyle.icon}</span> {category}
+              <span 
+                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold text-white shadow-md max-w-full whitespace-nowrap overflow-hidden ${catStyle.bg}`}
+                title={category}
+              >
+                <span className="drop-shadow-sm flex-shrink-0">{catStyle.icon}</span>
+                <span className="truncate">{category}</span>
               </span>
             );
           })()}
