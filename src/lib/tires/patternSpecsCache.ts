@@ -65,13 +65,15 @@ export function buildPatternKey(brand: string, patternName: string): string {
 
 /**
  * Load all pattern specs into memory cache
+ * Keys are normalized using buildPatternKey for consistent lookups
  */
 async function loadSpecsCache(): Promise<Map<string, TirePatternSpecs>> {
   const pool = getPool();
   
   const { rows } = await pool.query(`
     SELECT 
-      pattern_key,
+      brand,
+      pattern_name,
       utqg,
       treadwear,
       traction,
@@ -81,12 +83,16 @@ async function loadSpecsCache(): Promise<Map<string, TirePatternSpecs>> {
       mileage_warranty,
       source
     FROM tire_pattern_specs
+    WHERE brand IS NOT NULL AND pattern_name IS NOT NULL
   `);
   
   const cache = new Map<string, TirePatternSpecs>();
   
   for (const row of rows) {
-    cache.set(row.pattern_key, {
+    // Build normalized key for consistent lookups
+    const key = buildPatternKey(row.brand, row.pattern_name);
+    
+    const specs: TirePatternSpecs = {
       utqg: row.utqg || null,
       treadwear: row.treadwear ? parseInt(row.treadwear) : null,
       traction: row.traction || null,
@@ -95,10 +101,20 @@ async function loadSpecsCache(): Promise<Map<string, TirePatternSpecs>> {
       terrain: row.terrain || null,
       mileageWarranty: row.mileage_warranty ? parseInt(row.mileage_warranty) : null,
       source: row.source || 'wheelpros',
-    });
+    };
+    
+    cache.set(key, specs);
+    
+    // Also add alternate keys for common variations
+    // e.g., "ALL COUNTRY HT" and "All Country H/T" should both match
+    const altKey1 = buildPatternKey(row.brand, row.pattern_name.replace(/\//g, ' '));
+    if (altKey1 !== key) cache.set(altKey1, specs);
+    
+    const altKey2 = buildPatternKey(row.brand, row.pattern_name.replace(/-/g, ' '));
+    if (altKey2 !== key && altKey2 !== altKey1) cache.set(altKey2, specs);
   }
   
-  console.log(`[pattern-specs] Loaded ${cache.size} patterns into cache`);
+  console.log(`[pattern-specs] Loaded ${rows.length} patterns (${cache.size} keys) into cache`);
   return cache;
 }
 
