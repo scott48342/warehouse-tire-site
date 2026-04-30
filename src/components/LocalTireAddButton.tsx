@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
-import { getOutTheDoorTotal } from "@/lib/localPricing";
+import { getOutTheDoorTotal, getOutTheDoorBreakdown } from "@/lib/localPricing";
 
 type LocalTireAddButtonProps = {
   sku: string;
@@ -23,7 +23,7 @@ type LocalTireAddButtonProps = {
   source?: string;
 };
 
-const QTY_OPTIONS = [1, 2, 4] as const;
+const QTY_OPTIONS = [1, 2, 3, 4] as const;
 
 export function LocalTireAddButton({
   sku,
@@ -66,35 +66,33 @@ export function LocalTireAddButton({
 
   // Calculate out-the-door total for selected quantity
   const outTheDoorTotal = getOutTheDoorTotal(unitPrice, quantity);
+  const breakdown = getOutTheDoorBreakdown(unitPrice, quantity);
 
   const buttonStyles = isPackageFlow
     ? "rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-sm font-bold text-green-800 hover:bg-green-100 transition-colors disabled:opacity-60"
     : "rounded-xl bg-red-600 px-4 py-3 text-sm font-extrabold text-white hover:bg-red-700 active:scale-[0.98] transition-all disabled:opacity-60";
 
+  // Price breakdown row component - keeps values aligned
+  const PriceRow = ({ label, value }: { label: string; value: number }) => (
+    <div className="flex justify-between text-neutral-600">
+      <span>{label}</span>
+      <span className="tabular-nums">${value.toFixed(0)}</span>
+    </div>
+  );
+
   return (
     <div className="space-y-2">
       {/* Price row - matches national layout */}
-      <div className="flex items-baseline justify-between">
-        <div>
-          <span className="text-2xl font-extrabold text-neutral-900">${unitPrice.toFixed(2)}</span>
-          <span className="text-sm text-neutral-500 ml-1">/ea</span>
-        </div>
-      </div>
-
-      {/* Total for qty - green "out the door" price */}
-      <div className="text-lg font-bold text-green-700">
-        ${outTheDoorTotal.toFixed(0)} <span className="text-sm font-medium text-green-600">out the door</span>
-      </div>
-
-      {/* Qty selector row - matches national */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-baseline gap-2">
+        <span className="text-2xl font-extrabold text-neutral-900">${unitPrice.toFixed(2)}</span>
+        <span className="text-sm text-neutral-500">/ea</span>
         <span className="text-sm text-neutral-500">Qty:</span>
         <div className="flex gap-1">
           {QTY_OPTIONS.map((q) => (
             <button
               key={q}
               onClick={() => setQuantity(q)}
-              className={`w-9 h-9 rounded-lg text-sm font-bold transition-all ${
+              className={`w-8 h-8 rounded-lg text-xs font-bold transition-all ${
                 quantity === q
                   ? "bg-green-600 text-white shadow-sm"
                   : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
@@ -103,6 +101,20 @@ export function LocalTireAddButton({
               {q}
             </button>
           ))}
+        </div>
+      </div>
+
+      {/* Green breakdown box */}
+      <div className="bg-green-50 border border-green-200 rounded-lg p-2 text-xs">
+        <div className="space-y-0.5">
+          <PriceRow label={`Tires (${quantity}×$${unitPrice.toFixed(0)})`} value={breakdown.tiresTotal} />
+          <PriceRow label="Install" value={breakdown.installTotal} />
+          <PriceRow label="Tax" value={breakdown.taxTotal} />
+          <PriceRow label="Fees" value={breakdown.recyclingTotal} />
+        </div>
+        <div className="flex justify-between font-bold text-green-800 border-t border-green-200 pt-1.5 mt-1.5">
+          <span>Out the Door</span>
+          <span className="tabular-nums">${outTheDoorTotal.toFixed(0)}</span>
         </div>
       </div>
 
