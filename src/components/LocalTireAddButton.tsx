@@ -72,21 +72,13 @@ export function LocalTireAddButton({
     ? "rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-sm font-bold text-green-800 hover:bg-green-100 transition-colors disabled:opacity-60"
     : "rounded-xl bg-red-600 px-4 py-3 text-sm font-extrabold text-white hover:bg-red-700 active:scale-[0.98] transition-all disabled:opacity-60";
 
-  // Price breakdown row component - keeps values aligned
-  const PriceRow = ({ label, value }: { label: string; value: number }) => (
-    <div className="flex justify-between text-neutral-600">
-      <span>{label}</span>
-      <span className="tabular-nums">${value.toFixed(0)}</span>
-    </div>
-  );
-
   return (
-    <div className="space-y-2">
+    <div className="w-full max-w-full overflow-hidden space-y-2">
       {/* Price row - matches national layout */}
-      <div className="flex items-baseline gap-2">
+      <div className="flex items-baseline gap-2 flex-wrap">
         <span className="text-2xl font-extrabold text-neutral-900">${unitPrice.toFixed(2)}</span>
         <span className="text-sm text-neutral-500">/ea</span>
-        <span className="text-sm text-neutral-500">Qty:</span>
+        <span className="text-sm text-neutral-500 ml-auto">Qty:</span>
         <div className="flex gap-1">
           {QTY_OPTIONS.map((q) => (
             <button
@@ -104,17 +96,17 @@ export function LocalTireAddButton({
         </div>
       </div>
 
-      {/* Green breakdown box */}
-      <div className="bg-green-50 border border-green-200 rounded-lg p-2 text-xs">
-        <div className="space-y-0.5">
-          <PriceRow label={`Tires (${quantity}×$${unitPrice.toFixed(0)})`} value={breakdown.tiresTotal} />
-          <PriceRow label="Install" value={breakdown.installTotal} />
-          <PriceRow label="Tax" value={breakdown.taxTotal} />
-          <PriceRow label="Fees" value={breakdown.recyclingTotal} />
+      {/* Green breakdown box - constrained width */}
+      <div className="w-full max-w-full box-border overflow-hidden bg-green-50 border border-green-200 rounded-lg p-2 text-xs">
+        <div className="w-full space-y-0.5">
+          <div className="flex justify-between gap-2 text-neutral-600"><span className="truncate">Tires ({quantity}×${unitPrice.toFixed(2)})</span><span className="flex-shrink-0">${breakdown.tiresTotal.toFixed(2)}</span></div>
+          <div className="flex justify-between gap-2 text-neutral-600"><span>Install</span><span className="flex-shrink-0">${breakdown.installTotal.toFixed(2)}</span></div>
+          <div className="flex justify-between gap-2 text-neutral-600"><span>Tax</span><span className="flex-shrink-0">${breakdown.taxTotal.toFixed(2)}</span></div>
+          <div className="flex justify-between gap-2 text-neutral-600"><span>Fees</span><span className="flex-shrink-0">${breakdown.recyclingTotal.toFixed(2)}</span></div>
         </div>
-        <div className="flex justify-between font-bold text-green-800 border-t border-green-200 pt-1.5 mt-1.5">
+        <div className="flex justify-between gap-2 font-bold text-green-800 border-t border-green-200 pt-1.5 mt-1.5">
           <span>Out the Door</span>
-          <span className="tabular-nums">${outTheDoorTotal.toFixed(0)}</span>
+          <span className="flex-shrink-0">${outTheDoorTotal.toFixed(2)}</span>
         </div>
       </div>
 
