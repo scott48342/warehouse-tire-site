@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
 import { getOutTheDoorTotal, getOutTheDoorBreakdown } from "@/lib/localPricing";
+import { InstallTimeIndicator } from "./InstallTimeIndicator";
 
 type LocalTireAddButtonProps = {
   sku: string;
@@ -74,6 +75,9 @@ export function LocalTireAddButton({
 
   return (
     <div className="w-full max-w-full overflow-hidden space-y-2">
+      {/* Install time indicator - same-day before 11am, next-day after */}
+      <InstallTimeIndicator variant="badge" />
+      
       {/* Price row - matches national layout */}
       <div className="flex items-baseline gap-2 flex-wrap">
         <span className="text-2xl font-extrabold text-neutral-900">${unitPrice.toFixed(2)}</span>

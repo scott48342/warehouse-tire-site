@@ -5,6 +5,8 @@ import { QuantitySelector } from "./QuantitySelector";
 import { AddTiresToCartButton } from "./AddTiresToCartButton";
 import { FinancingBadge } from "./FinancingBadge";
 import { EnhancedTrustStrip } from "./TirePDPEnhancements";
+import { InstallTimeIndicator } from "./InstallTimeIndicator";
+import { useShopContext } from "@/contexts/ShopContextProvider";
 
 type TireBuyBoxProps = {
   sku: string;
@@ -53,12 +55,20 @@ export function TireBuyBox({
   delivery,
 }: TireBuyBoxProps) {
   const [quantity, setQuantity] = useState(4);
+  const { isLocal } = useShopContext();
   const hasPrice = unitPrice != null && unitPrice > 0;
   const total = hasPrice ? unitPrice * quantity : 0;
 
   return (
     <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
-      {delivery.urgency && (
+      {/* Local mode: show dynamic same-day/next-day install indicator */}
+      {isLocal && (
+        <div className="mb-3">
+          <InstallTimeIndicator variant="badge" />
+        </div>
+      )}
+      
+      {!isLocal && delivery.urgency && (
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700">
           <span>⚡</span>
           <span>{delivery.urgency}</span>
