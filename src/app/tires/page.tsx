@@ -12,6 +12,7 @@ import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 import { LocalTireAddButton } from "@/components/LocalTireAddButton";
+import { InstallTimeIndicator } from "@/components/InstallTimeIndicator";
 import { PackageSummary } from "@/components/PackageSummary";
 // PackageJourneyBar removed - not wanted
 // import { PackageJourneyBar } from "@/components/PackageJourneyBar";
@@ -4113,25 +4114,28 @@ function TireCard({
       ) : null}
 
       {/* Availability row - concise */}
-      <div className="relative z-10 mt-3 flex items-center gap-1.5 text-[11px] font-medium">
-        {inStock ? (
-          <>
-            <span className="text-green-600">✓</span>
-            <span className="text-green-700">
-              {isLocalMode 
-                ? (maxQty >= 20 ? 'In stock • Ready at store' : `${maxQty} in stock`)
-                : (maxQty >= 20 ? 'In stock' : `${maxQty} in stock`) + ' • Ships 1–2 days'
-              }
-            </span>
-          </>
-        ) : (
-          <>
-            <span className="text-amber-500">📦</span>
-            <span className="text-amber-700">
-              {isLocalMode ? 'Available • Can order for you' : 'Available • Ships 1–2 weeks'}
-            </span>
-          </>
-        )}
+      <div className="relative z-10 mt-3 flex flex-col gap-1.5 text-[11px] font-medium">
+        <div className="flex items-center gap-1.5">
+          {inStock ? (
+            <>
+              <span className="text-green-600">✓</span>
+              <span className="text-green-700">
+                {isLocalMode 
+                  ? (maxQty >= 20 ? 'In stock • Ready at store' : `${maxQty} in stock`)
+                  : (maxQty >= 20 ? 'In stock' : `${maxQty} in stock`) + ' • Ships 1–2 days'
+                }
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="text-amber-500">📦</span>
+              <span className="text-amber-700">
+                {isLocalMode ? 'Available • Can order for you' : 'Available • Ships 1–2 weeks'}
+              </span>
+            </>
+          )}
+        </div>
+        {isLocalMode && inStock && <InstallTimeIndicator variant="inline" />}
       </div>
 
       {/* Performance ratings - mini bar charts */}
