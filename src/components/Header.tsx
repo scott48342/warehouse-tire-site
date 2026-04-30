@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 
 import { BRAND } from "@/lib/brand";
 import { AccessoriesMegaMenu } from "@/components/AccessoriesMegaMenu";
+import { useShopContext } from "@/contexts/ShopContextProvider";
 
 type LauncherMode = "vehicles" | "tires" | "wheels" | "packages";
 import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
@@ -101,6 +102,7 @@ function FitmentTabs() {
 
 export function Header() {
   const sp = useSearchParams();
+  const { isLocal } = useShopContext();
   const tiresMenuRef = useRef<HTMLDetailsElement | null>(null);
   const wheelsMenuRef = useRef<HTMLDetailsElement | null>(null);
   const [launcherOpen, setLauncherOpen] = useState(false);
@@ -351,14 +353,16 @@ export function Header() {
                   <div className="text-sm font-semibold text-neutral-900">Build Your Lifted Truck</div>
                   <div className="text-xs text-neutral-500">Pick your lift, then shop wheels & tires</div>
                 </Link>
-                <Link
-                  href="/suspension"
-                  onClick={() => closeMenus()}
-                  className="block rounded-xl px-3 py-2 text-left hover:bg-amber-50"
-                >
-                  <div className="text-sm font-semibold text-neutral-900">Shop Lift Kits</div>
-                  <div className="text-xs text-neutral-500">Browse by vehicle & lift height</div>
-                </Link>
+                {!isLocal && (
+                  <Link
+                    href="/suspension"
+                    onClick={() => closeMenus()}
+                    className="block rounded-xl px-3 py-2 text-left hover:bg-amber-50"
+                  >
+                    <div className="text-sm font-semibold text-neutral-900">Shop Lift Kits</div>
+                    <div className="text-xs text-neutral-500">Browse by vehicle & lift height</div>
+                  </Link>
+                )}
                 <div className="my-2 h-px bg-neutral-200" />
                 <Link
                   href="/lifted"
