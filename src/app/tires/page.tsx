@@ -4191,6 +4191,7 @@ function TireCard({
           hasVehicle={hasVehicle}
           inStock={inStock}
           hasWarranty={Boolean(t.enrichment?.mileage && t.enrichment.mileage > 0)}
+          isLocalMode={isLocalMode}
         />
       </div>
 

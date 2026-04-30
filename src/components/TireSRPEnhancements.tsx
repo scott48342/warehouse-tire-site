@@ -192,13 +192,18 @@ interface TrustMicroLineProps {
   hasVehicle?: boolean;
   inStock?: boolean;
   hasWarranty?: boolean;
+  isLocalMode?: boolean;
 }
 
 /**
  * Compact trust signals for product cards
  * Premium trust indicators with icons - positioned above CTA
+ * Hidden for local mode (install indicator already shows value prop)
  */
-export function TrustMicroLine({ hasVehicle = false, inStock = true, hasWarranty = true }: TrustMicroLineProps) {
+export function TrustMicroLine({ hasVehicle = false, inStock = true, hasWarranty = true, isLocalMode = false }: TrustMicroLineProps) {
+  // Local mode doesn't need this - the install time indicator is more relevant
+  if (isLocalMode) return null;
+  
   const signals: { icon: string; text: string; highlight?: boolean }[] = [];
   
   if (hasVehicle) signals.push({ icon: "✓", text: "Guaranteed Fit", highlight: true });
