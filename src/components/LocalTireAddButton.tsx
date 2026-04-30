@@ -144,7 +144,7 @@ export function LocalTireAddButton({
         ) : isPackageFlow ? (
           <span>✓ Add {quantity} to Package</span>
         ) : (
-          <span>Add {quantity} to Cart — ${outTheDoorTotal.toFixed(0)} out the door</span>
+          <span>Add {quantity} — ${outTheDoorTotal.toFixed(0)} total</span>
         )}
       </button>
     </div>
