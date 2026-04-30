@@ -76,8 +76,47 @@ function getPool() {
 }
 
 /**
- * Cache TireWeb SKUs for direct URL lookups.
- * This allows /tires/{sku} to work without source/size params.
+ * Parse UTQG string into components
+ * e.g., "700BA" → { treadwear: 700, traction: "B", temperature: "A" }
+ * e.g., "500 A A" → { treadwear: 500, traction: "A", temperature: "A" }
+ */
+function parseUtqg(utqg: string | null): { treadwear: number | null; traction: string | null; temperature: string | null } {
+  if (!utqg || utqg === "NA" || utqg === "N/A") {
+    return { treadwear: null, traction: null, temperature: null };
+  }
+  
+  // Format 1: "700BA" (compact)
+  const compact = utqg.match(/^(\d{3,4})([A-C]{1,2})([A-C])$/i);
+  if (compact) {
+    return {
+      treadwear: parseInt(compact[1], 10),
+      traction: compact[2].toUpperCase(),
+      temperature: compact[3].toUpperCase(),
+    };
+  }
+  
+  // Format 2: "500 A A" or "500/A/A" (spaced)
+  const spaced = utqg.match(/^(\d{3,4})\s*[\/\s]\s*([A-C]{1,2})\s*[\/\s]\s*([A-C])$/i);
+  if (spaced) {
+    return {
+      treadwear: parseInt(spaced[1], 10),
+      traction: spaced[2].toUpperCase(),
+      temperature: spaced[3].toUpperCase(),
+    };
+  }
+  
+  // Format 3: Just treadwear number
+  const justNumber = utqg.match(/^(\d{3,4})$/);
+  if (justNumber) {
+    return { treadwear: parseInt(justNumber[1], 10), traction: null, temperature: null };
+  }
+  
+  return { treadwear: null, traction: null, temperature: null };
+}
+
+/**
+ * Cache TireWeb SKUs with full spec data for direct URL lookups and enrichment.
+ * Stores UTQG, warranty, tread depth, pricing, and more.
  */
 async function cacheTireWebSkus(
   db: pg.Pool,
@@ -86,7 +125,8 @@ async function cacheTireWebSkus(
 ): Promise<void> {
   if (tires.length === 0) return;
   
-  // Build upsert values
+  // Build upsert values - now with 18 columns
+  const COLS = 18;
   const values: string[] = [];
   const params: any[] = [];
   let paramIndex = 1;
@@ -95,20 +135,65 @@ async function cacheTireWebSkus(
     const partNumber = tire.partNumber || tire.mfgPartNumber;
     if (!partNumber) continue;
     
-    values.push(`($${paramIndex}, $${paramIndex + 1}, $${paramIndex + 2}, $${paramIndex + 3})`);
-    params.push(partNumber, size, tire.brand || null, tire.source || "tireweb");
-    paramIndex += 4;
+    // Parse UTQG into components
+    const utqgRaw = tire.badges?.utqg || null;
+    const { treadwear, traction, temperature } = parseUtqg(utqgRaw);
+    
+    // Build placeholder string for this row
+    const placeholders = Array.from({ length: COLS }, (_, i) => `$${paramIndex + i}`).join(", ");
+    values.push(`(${placeholders})`);
+    
+    params.push(
+      partNumber,                                    // 1: part_number
+      size,                                          // 2: size
+      tire.brand || null,                            // 3: brand
+      tire.source || "tireweb",                      // 4: source
+      utqgRaw,                                       // 5: utqg
+      treadwear,                                     // 6: treadwear
+      traction,                                      // 7: traction
+      temperature,                                   // 8: temperature
+      tire.badges?.treadDepth || null,               // 9: tread_depth
+      tire.badges?.warrantyMiles || null,            // 10: mileage_warranty
+      tire.badges?.loadIndex || null,                // 11: load_index
+      tire.badges?.speedRating || null,              // 12: speed_rating
+      tire.enrichment?.loadRange || null,            // 13: load_range
+      tire.badges?.terrain || tire.enrichment?.treadCategory || null, // 14: terrain
+      tire.model || null,                            // 15: model
+      tire.description || null,                      // 16: description
+      tire.imageUrl || null,                         // 17: image_url
+      tire.cost || null,                             // 18: cost
+    );
+    paramIndex += COLS;
   }
   
   if (values.length === 0) return;
   
   const query = `
-    INSERT INTO tireweb_sku_cache (part_number, size, brand, source)
+    INSERT INTO tireweb_sku_cache (
+      part_number, size, brand, source,
+      utqg, treadwear, traction, temperature,
+      tread_depth, mileage_warranty, load_index, speed_rating,
+      load_range, terrain, model, description, image_url, cost
+    )
     VALUES ${values.join(", ")}
     ON CONFLICT (part_number) DO UPDATE SET
       size = EXCLUDED.size,
       brand = EXCLUDED.brand,
       source = EXCLUDED.source,
+      utqg = COALESCE(EXCLUDED.utqg, tireweb_sku_cache.utqg),
+      treadwear = COALESCE(EXCLUDED.treadwear, tireweb_sku_cache.treadwear),
+      traction = COALESCE(EXCLUDED.traction, tireweb_sku_cache.traction),
+      temperature = COALESCE(EXCLUDED.temperature, tireweb_sku_cache.temperature),
+      tread_depth = COALESCE(EXCLUDED.tread_depth, tireweb_sku_cache.tread_depth),
+      mileage_warranty = COALESCE(EXCLUDED.mileage_warranty, tireweb_sku_cache.mileage_warranty),
+      load_index = COALESCE(EXCLUDED.load_index, tireweb_sku_cache.load_index),
+      speed_rating = COALESCE(EXCLUDED.speed_rating, tireweb_sku_cache.speed_rating),
+      load_range = COALESCE(EXCLUDED.load_range, tireweb_sku_cache.load_range),
+      terrain = COALESCE(EXCLUDED.terrain, tireweb_sku_cache.terrain),
+      model = COALESCE(EXCLUDED.model, tireweb_sku_cache.model),
+      description = COALESCE(EXCLUDED.description, tireweb_sku_cache.description),
+      image_url = COALESCE(EXCLUDED.image_url, tireweb_sku_cache.image_url),
+      cost = COALESCE(EXCLUDED.cost, tireweb_sku_cache.cost),
       last_seen_at = NOW()
   `;
   
@@ -518,6 +603,71 @@ async function getKmImagesFromDb(partNumbers: string[]): Promise<Map<string, str
 }
 
 /**
+ * Enrich tire results with specs from tireweb_sku_cache
+ * Fills in missing UTQG, warranty, tread depth from cached data
+ */
+async function enrichFromTireWebCache(tires: TireResult[]): Promise<TireResult[]> {
+  if (tires.length === 0) return tires;
+  
+  // Only look up tires missing UTQG
+  const needsEnrichment = tires.filter(t => !t.badges?.utqg);
+  if (needsEnrichment.length === 0) return tires;
+  
+  const partNumbers = needsEnrichment.map(t => t.partNumber).filter(Boolean);
+  if (partNumbers.length === 0) return tires;
+  
+  try {
+    const db = getPool();
+    const { rows } = await db.query(`
+      SELECT part_number, utqg, treadwear, traction, temperature,
+             tread_depth, mileage_warranty, load_index, speed_rating,
+             load_range, terrain, image_url
+      FROM tireweb_sku_cache
+      WHERE part_number = ANY($1)
+        AND (utqg IS NOT NULL OR mileage_warranty IS NOT NULL OR tread_depth IS NOT NULL)
+    `, [partNumbers]);
+    
+    if (rows.length === 0) return tires;
+    
+    // Build lookup map
+    const cacheMap = new Map<string, typeof rows[0]>();
+    for (const row of rows) {
+      cacheMap.set(row.part_number, row);
+    }
+    
+    // Apply cached specs to tires
+    return tires.map(tire => {
+      const cached = cacheMap.get(tire.partNumber);
+      if (!cached) return tire;
+      
+      // Merge cached data into badges and enrichment
+      return {
+        ...tire,
+        imageUrl: tire.imageUrl || cached.image_url || null,
+        badges: {
+          ...tire.badges,
+          utqg: tire.badges?.utqg || cached.utqg || null,
+          treadDepth: tire.badges?.treadDepth ?? (cached.tread_depth ? parseFloat(cached.tread_depth) : null),
+          warrantyMiles: tire.badges?.warrantyMiles ?? cached.mileage_warranty,
+          loadIndex: tire.badges?.loadIndex || cached.load_index || null,
+          speedRating: tire.badges?.speedRating || cached.speed_rating || null,
+          terrain: tire.badges?.terrain || cached.terrain || null,
+        },
+        enrichment: {
+          ...tire.enrichment,
+          mileage: tire.enrichment?.mileage ?? cached.mileage_warranty,
+          loadRange: tire.enrichment?.loadRange || cached.load_range || null,
+          treadCategory: tire.enrichment?.treadCategory || cached.terrain as any || null,
+        },
+      };
+    });
+  } catch (err) {
+    console.error("[tires/search] Cache enrichment error:", err);
+    return tires;
+  }
+}
+
+/**
  * Look up tire name overrides by brand + model pattern
  * Returns map of "brand:pattern" → display_name
  */
@@ -888,12 +1038,16 @@ async function mergeTireResults(
   for (const tire of wpResults) addTire(tire);
   
   // Sort by PRICE ascending (lowest first), then by brand
-  return Array.from(merged.values()).sort((a, b) => {
+  const sorted = Array.from(merged.values()).sort((a, b) => {
     const priceA = a.cost ?? a.price ?? Infinity;
     const priceB = b.cost ?? b.price ?? Infinity;
     if (priceA !== priceB) return priceA - priceB;  // Lowest price first
     return (a.brand || "").localeCompare(b.brand || "");
   });
+  
+  // Enrich from tireweb_sku_cache for tires missing UTQG/specs
+  // This picks up specs from previous searches that were cached
+  return enrichFromTireWebCache(sorted);
 }
 
 function normalizeProductKey(partNumber: string, brand: string | null): string {
