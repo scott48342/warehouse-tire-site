@@ -1,0 +1,465 @@
+{
+  "timestamp": "2026-04-30T14:58:36.519Z",
+  "patternSpecs": {
+    "total": 709,
+    "hasUtqg": 561,
+    "missingUtqg": 148,
+    "coveragePercent": "79.1"
+  },
+  "wpTires": {
+    "total": 5185,
+    "hasUtqgRaw": 2719
+  },
+  "tireweb": {
+    "total": 29319,
+    "brands": 64
+  },
+  "missingPatterns": [
+    {
+      "brand": "Continental",
+      "pattern_name": "VikingContact 7",
+      "pattern_key": "continental:vikingcontact7",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Continental",
+      "pattern_name": "VikingContact 8",
+      "pattern_key": "continental:vikingcontact8",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Continental",
+      "pattern_name": "WinterContact TS850 P",
+      "pattern_key": "continental:wintercontactts850p",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Cooper",
+      "pattern_name": "Discoverer AT3 LT",
+      "pattern_key": "cooper:discovererat3lt",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Cooper",
+      "pattern_name": "Evolution Tour",
+      "pattern_key": "cooper:evolutiontour",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Cooper",
+      "pattern_name": "Discoverer ST MAXX",
+      "pattern_key": "cooper:discovererstmaxx",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Cooper",
+      "pattern_name": "Discoverer STT PRO",
+      "pattern_key": "cooper:discoverersttpro",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Lexani",
+      "pattern_name": "LX-NINE",
+      "pattern_key": "lexani:lxnine",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Lexani",
+      "pattern_name": "VOLT-EC",
+      "pattern_key": "lexani:voltec",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Mickey Thompson",
+      "pattern_name": "Mickey Thompson Baja Boss A/T",
+      "pattern_key": "mickey thompson:mickeythompsonbajabossat",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Mickey Thompson",
+      "pattern_name": "Mickey Thompson Baja Legend MTZ",
+      "pattern_key": "mickey thompson:mickeythompsonbajalegendmtz",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Mickey Thompson",
+      "pattern_name": "Mickey Thompson ET Street R",
+      "pattern_key": "mickey thompson:mickeythompsonetstreetr",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Federal",
+      "pattern_name": "FZ-201",
+      "pattern_key": "federal:fz201",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Nitto",
+      "pattern_name": "Mud Grappler",
+      "pattern_key": "nitto:mudgrappler",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Firestone",
+      "pattern_name": "Champion Fuel Fighter",
+      "pattern_key": "firestone:championfuelfighter",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Firestone",
+      "pattern_name": "Destination M/T2",
+      "pattern_key": "firestone:destinationmt2",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Firestone",
+      "pattern_name": "Firehawk AS",
+      "pattern_key": "firestone:firehawkas",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Firestone",
+      "pattern_name": "Firehawk GT",
+      "pattern_key": "firestone:firehawkgt",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Firestone",
+      "pattern_name": "Transforce AT2",
+      "pattern_key": "firestone:transforceat2",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Firestone",
+      "pattern_name": "Transforce HT2",
+      "pattern_key": "firestone:transforceht2",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Accelera",
+      "pattern_name": "IOTA ST68",
+      "pattern_key": "accelera:iotast68",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Arroyo",
+      "pattern_name": "ECO PRO PLUS",
+      "pattern_key": "arroyo:ecoproplus",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Arroyo",
+      "pattern_name": "GRAND SPORT PLUS",
+      "pattern_key": "arroyo:grandsportplus",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Arroyo",
+      "pattern_name": "ST | SPECIAL TRAILER ALL-STEEL",
+      "pattern_key": "arroyo:stspecialtrailerallsteel",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Arroyo",
+      "pattern_name": "AR 1100",
+      "pattern_key": "arroyo:ar1100",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Arroyo",
+      "pattern_name": "VAN PRO",
+      "pattern_key": "arroyo:vanpro",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Federal",
+      "pattern_name": "COURAGIA M/T",
+      "pattern_key": "federal:couragiamt",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Federal",
+      "pattern_name": "ECOVAN ER02",
+      "pattern_key": "federal:ecovaner02",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "Arroyo",
+      "pattern_name": "AR 2000",
+      "pattern_key": "arroyo:ar2000",
+      "sample_sku": null,
+      "sample_count": 1
+    },
+    {
+      "brand": "BFGoodrich",
+      "pattern_name": "BFGoodrich All-Terrain T/A KO3",
+      "pattern_key": "bfgoodrich:bfgoodrichallterraintako3",
+      "sample_sku": null,
+      "sample_count": 1
+    }
+  ],
+  "patternsByBrand": [
+    {
+      "brand": "Federal",
+      "total": "30",
+      "has_utqg": "13",
+      "missing_utqg": "17"
+    },
+    {
+      "brand": "Pirelli",
+      "total": "55",
+      "has_utqg": "44",
+      "missing_utqg": "11"
+    },
+    {
+      "brand": "Mickey Thompson",
+      "total": "12",
+      "has_utqg": "2",
+      "missing_utqg": "10"
+    },
+    {
+      "brand": "Arroyo",
+      "total": "16",
+      "has_utqg": "6",
+      "missing_utqg": "10"
+    },
+    {
+      "brand": "Lexani",
+      "total": "16",
+      "has_utqg": "6",
+      "missing_utqg": "10"
+    },
+    {
+      "brand": "BFGoodrich",
+      "total": "16",
+      "has_utqg": "9",
+      "missing_utqg": "7"
+    },
+    {
+      "brand": "Hankook",
+      "total": "43",
+      "has_utqg": "37",
+      "missing_utqg": "6"
+    },
+    {
+      "brand": "Falken",
+      "total": "32",
+      "has_utqg": "26",
+      "missing_utqg": "6"
+    },
+    {
+      "brand": "Firestone",
+      "total": "11",
+      "has_utqg": "5",
+      "missing_utqg": "6"
+    },
+    {
+      "brand": "Michelin",
+      "total": "40",
+      "has_utqg": "35",
+      "missing_utqg": "5"
+    },
+    {
+      "brand": "Delinte",
+      "total": "5",
+      "has_utqg": "0",
+      "missing_utqg": "5"
+    },
+    {
+      "brand": "Cooper",
+      "total": "12",
+      "has_utqg": "7",
+      "missing_utqg": "5"
+    },
+    {
+      "brand": "Toyo",
+      "total": "61",
+      "has_utqg": "57",
+      "missing_utqg": "4"
+    },
+    {
+      "brand": "Nexen",
+      "total": "18",
+      "has_utqg": "14",
+      "missing_utqg": "4"
+    },
+    {
+      "brand": "General",
+      "total": "15",
+      "has_utqg": "11",
+      "missing_utqg": "4"
+    },
+    {
+      "brand": "Goodyear",
+      "total": "44",
+      "has_utqg": "40",
+      "missing_utqg": "4"
+    },
+    {
+      "brand": "Bridgestone",
+      "total": "41",
+      "has_utqg": "37",
+      "missing_utqg": "4"
+    },
+    {
+      "brand": "Continental",
+      "total": "17",
+      "has_utqg": "14",
+      "missing_utqg": "3"
+    },
+    {
+      "brand": "Radar",
+      "total": "10",
+      "has_utqg": "7",
+      "missing_utqg": "3"
+    },
+    {
+      "brand": "Yokohama",
+      "total": "17",
+      "has_utqg": "14",
+      "missing_utqg": "3"
+    },
+    {
+      "brand": "Nitto",
+      "total": "30",
+      "has_utqg": "27",
+      "missing_utqg": "3"
+    },
+    {
+      "brand": "Achilles",
+      "total": "6",
+      "has_utqg": "3",
+      "missing_utqg": "3"
+    },
+    {
+      "brand": "Maxxis",
+      "total": "7",
+      "has_utqg": "4",
+      "missing_utqg": "3"
+    },
+    {
+      "brand": "Milestar",
+      "total": "16",
+      "has_utqg": "14",
+      "missing_utqg": "2"
+    },
+    {
+      "brand": "Atturo",
+      "total": "11",
+      "has_utqg": "9",
+      "missing_utqg": "2"
+    },
+    {
+      "brand": "Westlake",
+      "total": "6",
+      "has_utqg": "4",
+      "missing_utqg": "2"
+    },
+    {
+      "brand": "Accelera",
+      "total": "1",
+      "has_utqg": "0",
+      "missing_utqg": "1"
+    },
+    {
+      "brand": "Vercelli",
+      "total": "6",
+      "has_utqg": "5",
+      "missing_utqg": "1"
+    },
+    {
+      "brand": "Nankang",
+      "total": "8",
+      "has_utqg": "7",
+      "missing_utqg": "1"
+    },
+    {
+      "brand": "Sailun",
+      "total": "11",
+      "has_utqg": "10",
+      "missing_utqg": "1"
+    },
+    {
+      "brand": "Sumitomo",
+      "total": "8",
+      "has_utqg": "7",
+      "missing_utqg": "1"
+    },
+    {
+      "brand": "Kumho",
+      "total": "32",
+      "has_utqg": "31",
+      "missing_utqg": "1"
+    },
+    {
+      "brand": "Fuel Tires",
+      "total": "8",
+      "has_utqg": "8",
+      "missing_utqg": "0"
+    },
+    {
+      "brand": "OHTSU",
+      "total": "4",
+      "has_utqg": "4",
+      "missing_utqg": "0"
+    },
+    {
+      "brand": "Lionhart",
+      "total": "6",
+      "has_utqg": "6",
+      "missing_utqg": "0"
+    },
+    {
+      "brand": "Kenda",
+      "total": "15",
+      "has_utqg": "15",
+      "missing_utqg": "0"
+    },
+    {
+      "brand": "Fullway",
+      "total": "7",
+      "has_utqg": "7",
+      "missing_utqg": "0"
+    },
+    {
+      "brand": "Dunlop",
+      "total": "12",
+      "has_utqg": "12",
+      "missing_utqg": "0"
+    },
+    {
+      "brand": "Mickey Thompson Tire",
+      "total": "4",
+      "has_utqg": "4",
+      "missing_utqg": "0"
+    }
+  ]
+}
