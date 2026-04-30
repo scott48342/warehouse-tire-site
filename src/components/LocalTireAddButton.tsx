@@ -103,27 +103,27 @@ export function LocalTireAddButton({
 
       {/* Out-the-door price breakdown */}
       <div className="bg-green-50 border border-green-200 rounded-lg p-3 overflow-hidden">
-        <div className="space-y-1 text-xs">
-          <div className="flex justify-between gap-2 text-neutral-600">
-            <span className="truncate">Tires ({quantity}×${unitPrice.toFixed(0)})</span>
-            <span className="flex-shrink-0">${breakdown.tiresTotal.toFixed(2)}</span>
+        <div className="space-y-0.5 text-[11px]">
+          <div className="flex justify-between text-neutral-600">
+            <span>Tires ({quantity})</span>
+            <span>${breakdown.tiresTotal.toFixed(0)}</span>
           </div>
-          <div className="flex justify-between gap-2 text-neutral-600">
+          <div className="flex justify-between text-neutral-600">
             <span>Install</span>
-            <span className="flex-shrink-0">${breakdown.installTotal.toFixed(2)}</span>
+            <span>${breakdown.installTotal.toFixed(0)}</span>
           </div>
-          <div className="flex justify-between gap-2 text-neutral-600">
+          <div className="flex justify-between text-neutral-600">
             <span>Tax</span>
-            <span className="flex-shrink-0">${breakdown.taxTotal.toFixed(2)}</span>
+            <span>${breakdown.taxTotal.toFixed(0)}</span>
           </div>
-          <div className="flex justify-between gap-2 text-neutral-600">
+          <div className="flex justify-between text-neutral-600">
             <span>Fees</span>
-            <span className="flex-shrink-0">${breakdown.recyclingTotal.toFixed(2)}</span>
+            <span>${breakdown.recyclingTotal.toFixed(0)}</span>
           </div>
         </div>
-        <div className="flex justify-between items-center gap-2 font-bold text-green-800 border-t border-green-300 pt-2 mt-2">
-          <span className="text-sm">Out the Door</span>
-          <span className="text-lg flex-shrink-0">${outTheDoorTotal.toFixed(2)}</span>
+        <div className="flex justify-between items-center font-bold text-green-800 border-t border-green-300 pt-1.5 mt-1.5">
+          <span className="text-xs">Total</span>
+          <span className="text-base">${outTheDoorTotal.toFixed(0)}</span>
         </div>
       </div>
 
