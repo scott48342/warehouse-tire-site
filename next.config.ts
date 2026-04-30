@@ -11,10 +11,91 @@ const nextConfig: NextConfig = {
   // SEO redirects - legacy/long URLs to clean paths
   async redirects() {
     return [
+      // ========================================
+      // Local site (warehousetire.net) legacy pages
+      // ========================================
       {
         source: '/tire-wheel-services-in-pontiac-waterford-mi-warehouse-tire',
         destination: '/services',
         permanent: true,
+      },
+      {
+        source: '/tire-financing-in-pontiac-waterford-mi-snap-koalafi-warehouse-tire',
+        destination: '/financing',
+        permanent: true,
+      },
+      {
+        source: '/tire-financing-in-pontiac-waterford-mi-snap-koalafi-warehouse-tire/',
+        destination: '/financing',
+        permanent: true,
+      },
+      {
+        source: '/tire-installation-locations-in-pontiac-waterford-mi-warehouse-tire',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/tire-installation-locations-in-pontiac-waterford-mi-warehouse-tire/',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/contact-warehouse-tire-pontiac-waterford-tire-installation',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/contact-warehouse-tire-pontiac-waterford-tire-installation/',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/shop-tires-wheels-online-local-installation-in-pontiac-waterford',
+        destination: '/tires',
+        permanent: true,
+      },
+      {
+        source: '/shop-tires-wheels-online-local-installation-in-pontiac-waterford/',
+        destination: '/tires',
+        permanent: true,
+      },
+      {
+        source: '/shop-tires-wheels',
+        destination: '/tires',
+        permanent: true,
+      },
+      {
+        // Trailing slash version of tires-near-me page
+        source: '/tires-near-me-in-pontiac-waterford-same-day-installation/',
+        destination: '/tires-near-me-in-pontiac-waterford-same-day-installation',
+        permanent: true,
+      },
+      {
+        source: '/terms',
+        destination: '/fitment-api/terms',
+        permanent: true,
+      },
+
+      // ========================================
+      // National site legacy URL patterns
+      // ========================================
+      // /package (singular) -> /packages or /wheels
+      {
+        source: '/package',
+        destination: '/wheels?package=1',
+        permanent: true,
+      },
+      // /packages with vehicle params -> /wheels with package=1
+      {
+        source: '/packages',
+        destination: '/wheels?package=1',
+        permanent: true,
+      },
+      // /tires/for/:path* -> /tires (old URL structure)
+      {
+        source: '/tires/for/:path*',
+        destination: '/tires',
+        permanent: false, // 302 - these might have valid vehicles
       },
     ];
   },
