@@ -4114,28 +4114,33 @@ function TireCard({
       ) : null}
 
       {/* Availability row - concise */}
-      <div className="relative z-10 mt-3 flex flex-col gap-1.5 text-[11px] font-medium">
-        <div className="flex items-center gap-1.5">
-          {inStock ? (
+      <div className="relative z-10 mt-3 flex items-center gap-1.5 text-[11px] font-medium">
+        {isLocalMode ? (
+          // Local mode: just show install time indicator (replaces "in stock" text)
+          inStock ? (
+            <InstallTimeIndicator variant="inline" />
+          ) : (
+            <>
+              <span className="text-amber-500">📦</span>
+              <span className="text-amber-700">Available • Can order for you</span>
+            </>
+          )
+        ) : (
+          // National mode: show stock + shipping info
+          inStock ? (
             <>
               <span className="text-green-600">✓</span>
               <span className="text-green-700">
-                {isLocalMode 
-                  ? (maxQty >= 20 ? 'In stock • Ready at store' : `${maxQty} in stock`)
-                  : (maxQty >= 20 ? 'In stock' : `${maxQty} in stock`) + ' • Ships 1–2 days'
-                }
+                {maxQty >= 20 ? 'In stock' : `${maxQty} in stock`} • Ships 1–2 days
               </span>
             </>
           ) : (
             <>
               <span className="text-amber-500">📦</span>
-              <span className="text-amber-700">
-                {isLocalMode ? 'Available • Can order for you' : 'Available • Ships 1–2 weeks'}
-              </span>
+              <span className="text-amber-700">Available • Ships 1–2 weeks</span>
             </>
-          )}
-        </div>
-        {isLocalMode && inStock && <InstallTimeIndicator variant="inline" />}
+          )
+        )}
       </div>
 
       {/* Performance ratings - mini bar charts */}

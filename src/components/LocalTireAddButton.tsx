@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
 import { getOutTheDoorTotal, getOutTheDoorBreakdown } from "@/lib/localPricing";
-import { InstallTimeIndicator } from "./InstallTimeIndicator";
 
 type LocalTireAddButtonProps = {
   sku: string;
@@ -103,32 +102,28 @@ export function LocalTireAddButton({
       </div>
 
       {/* Out-the-door price breakdown */}
-      <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+      <div className="bg-green-50 border border-green-200 rounded-lg p-3 overflow-hidden">
         <div className="space-y-1 text-xs">
-          <div className="flex justify-between text-neutral-600">
-            <span>Tires ({quantity} × ${unitPrice.toFixed(2)})</span>
-            <span>${breakdown.tiresTotal.toFixed(2)}</span>
+          <div className="flex justify-between gap-2 text-neutral-600">
+            <span className="truncate">Tires ({quantity}×${unitPrice.toFixed(0)})</span>
+            <span className="flex-shrink-0">${breakdown.tiresTotal.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between text-neutral-600">
-            <span>Install & Mount</span>
-            <span>${breakdown.installTotal.toFixed(2)}</span>
+          <div className="flex justify-between gap-2 text-neutral-600">
+            <span>Install</span>
+            <span className="flex-shrink-0">${breakdown.installTotal.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between text-neutral-600">
-            <span>Tax (6%)</span>
-            <span>${breakdown.taxTotal.toFixed(2)}</span>
+          <div className="flex justify-between gap-2 text-neutral-600">
+            <span>Tax</span>
+            <span className="flex-shrink-0">${breakdown.taxTotal.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between text-neutral-600">
-            <span>Recycling</span>
-            <span>${breakdown.recyclingTotal.toFixed(2)}</span>
+          <div className="flex justify-between gap-2 text-neutral-600">
+            <span>Fees</span>
+            <span className="flex-shrink-0">${breakdown.recyclingTotal.toFixed(2)}</span>
           </div>
         </div>
-        <div className="flex justify-between items-center font-bold text-green-800 border-t border-green-300 pt-2 mt-2">
+        <div className="flex justify-between items-center gap-2 font-bold text-green-800 border-t border-green-300 pt-2 mt-2">
           <span className="text-sm">Out the Door</span>
-          <span className="text-lg">${outTheDoorTotal.toFixed(2)}</span>
-        </div>
-        {/* Install time indicator */}
-        <div className="flex justify-center pt-2 mt-1 border-t border-green-200">
-          <InstallTimeIndicator variant="inline" />
+          <span className="text-lg flex-shrink-0">${outTheDoorTotal.toFixed(2)}</span>
         </div>
       </div>
 
