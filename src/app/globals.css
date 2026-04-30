@@ -46,6 +46,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-width: 0; /* Allow card to shrink in grid */
+  max-width: 100%; /* Never exceed grid cell */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 /* Tire card content area - grows to push CTA to bottom */

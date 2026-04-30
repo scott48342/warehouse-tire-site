@@ -101,14 +101,31 @@ export function LocalTireAddButton({
         </div>
       </div>
 
-      {/* Out-the-door total */}
-      <div className="bg-green-50 border border-green-200 rounded-lg px-3 py-2">
-        <div className="flex justify-between items-center">
-          <div>
-            <div className="text-xs font-bold text-green-800">Out the Door</div>
-            <div className="text-[10px] text-green-600">Install + tax + fees</div>
+      {/* Out-the-door price breakdown - constrained to card width */}
+      <div className="w-full max-w-full box-border bg-green-50 border border-green-200 rounded-lg p-3 overflow-hidden">
+        <div className="w-full space-y-1 text-[11px]">
+          {/* Each row: flex with gap, label truncates, value stays visible */}
+          <div className="flex justify-between items-baseline gap-2 min-w-0 text-neutral-600">
+            <span className="truncate min-w-0">Tires ({quantity}×${unitPrice.toFixed(0)})</span>
+            <span className="whitespace-nowrap flex-shrink-0 text-right">${breakdown.tiresTotal.toFixed(0)}</span>
           </div>
-          <div className="text-xl font-bold text-green-800">${outTheDoorTotal.toFixed(2)}</div>
+          <div className="flex justify-between items-baseline gap-2 min-w-0 text-neutral-600">
+            <span className="truncate min-w-0">Install</span>
+            <span className="whitespace-nowrap flex-shrink-0 text-right">${breakdown.installTotal.toFixed(0)}</span>
+          </div>
+          <div className="flex justify-between items-baseline gap-2 min-w-0 text-neutral-600">
+            <span className="truncate min-w-0">Tax</span>
+            <span className="whitespace-nowrap flex-shrink-0 text-right">${breakdown.taxTotal.toFixed(0)}</span>
+          </div>
+          <div className="flex justify-between items-baseline gap-2 min-w-0 text-neutral-600">
+            <span className="truncate min-w-0">Fees</span>
+            <span className="whitespace-nowrap flex-shrink-0 text-right">${breakdown.recyclingTotal.toFixed(0)}</span>
+          </div>
+        </div>
+        {/* Total row */}
+        <div className="flex justify-between items-center gap-2 min-w-0 font-bold text-green-800 border-t border-green-300 pt-2 mt-2">
+          <span className="text-xs whitespace-nowrap">Out the Door</span>
+          <span className="text-base whitespace-nowrap flex-shrink-0">${outTheDoorTotal.toFixed(0)}</span>
         </div>
       </div>
 
