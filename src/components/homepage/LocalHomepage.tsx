@@ -147,7 +147,7 @@ function HeroSection() {
       {/* ═══════════════════════════════════════════════════════════════════════
           MOBILE HERO
           ═══════════════════════════════════════════════════════════════════════ */}
-      <div className="lg:hidden relative">
+      <div className="lg:hidden relative min-h-screen">
         {/* Background Image with STRONGER gradient */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -160,46 +160,46 @@ function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90" />
         </div>
         
-        {/* Mobile Content - LARGER TEXT */}
-        <div className="relative z-10 px-6 pt-10 pb-8">
-          {/* Eyebrow - LARGER */}
-          <p className="text-sm font-bold tracking-widest text-green-400 uppercase">
+        {/* Mobile Content - MUCH LARGER TEXT */}
+        <div className="relative z-10 px-6 pt-14 pb-10">
+          {/* Eyebrow */}
+          <p className="text-base font-bold tracking-widest text-green-400 uppercase">
             Your Local Tire Shop
           </p>
           
-          {/* Headline - MUCH LARGER */}
-          <h1 className="mt-3 text-[2.5rem] leading-[1.1] font-extrabold text-white">
+          {/* Headline - HUGE */}
+          <h1 className="mt-4 text-5xl leading-[1.05] font-extrabold text-white">
             Great Tires.<br />
             Honest Prices.<br />
             Local People.
           </h1>
           
-          {/* Subheadline - LARGER */}
-          <p className="mt-4 text-base text-white/90 max-w-sm leading-relaxed">
+          {/* Subheadline */}
+          <p className="mt-6 text-xl text-white/90 max-w-sm leading-relaxed">
             Fast local installation and honest pricing you can trust.
           </p>
           
-          {/* Trust bullets - LARGER icons and text */}
-          <div className="mt-6 grid grid-cols-2 gap-4">
+          {/* Trust bullets - BIGGER */}
+          <div className="mt-8 grid grid-cols-2 gap-5">
             {[
               "Same-Day Install",
               "Expert Install", 
               "Honest Pricing",
               "Local & Trusted"
             ].map((item) => (
-              <div key={item} className="flex items-center gap-2.5">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-sm font-medium text-white">{item}</span>
+              <div key={item} className="flex items-center gap-3">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-base font-semibold text-white">{item}</span>
               </div>
             ))}
           </div>
         </div>
         
         {/* Mobile Search Card - LARGER EVERYTHING */}
-        <div className="relative z-10 px-4 pb-6">
-          <div className="bg-white rounded-2xl shadow-2xl p-5">
+        <div className="relative z-10 px-5 pb-10">
+          <div className="bg-white rounded-2xl shadow-2xl p-6">
             {/* Tabs - LARGER */}
-            <div className="flex gap-2 mb-5">
+            <div className="flex gap-3 mb-6">
               <button
                 onClick={() => setSearchTab("vehicle")}
                 className={`flex-1 py-3.5 rounded-xl text-base font-bold transition-all ${
@@ -466,29 +466,30 @@ function WhyShopLocal() {
   ];
 
   return (
-    <section className="bg-white pt-16 pb-16 lg:pt-28 lg:pb-16">
-      <div className="mx-auto max-w-6xl px-4">
-        {/* Header - LARGER on mobile */}
-        <div className="text-center mb-8 lg:mb-12">
-          <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
+    <section className="bg-white pt-20 pb-20 lg:pt-28 lg:pb-16">
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Header - MUCH LARGER on mobile */}
+        <div className="text-center mb-12 lg:mb-12">
+          <p className="text-base font-bold tracking-wide text-green-700 uppercase">
             Why Shop Local?
           </p>
-          <h2 className="mt-2 text-3xl lg:text-4xl font-bold text-neutral-900 leading-tight">
+          <h2 className="mt-3 text-4xl lg:text-4xl font-bold text-neutral-900 leading-tight">
             Real People. Real Service.
-            <span className="block lg:inline"> Right Around the Corner.</span>
+            <span className="block"> Right Around the Corner.</span>
           </h2>
         </div>
 
-        {/* Props Grid - LARGER icons and text on mobile */}
-        <div className="grid grid-cols-2 gap-5 lg:grid-cols-4 lg:gap-8">
+        {/* Props Grid - MUCH LARGER icons and text on mobile */}
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-8">
           {props.map((prop) => {
             const Icon = prop.icon;
             return (
               <div key={prop.title} className="text-center">
-                <div className="mx-auto w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-green-100 flex items-center justify-center mb-3 lg:mb-4">
-                  <Icon className="w-7 h-7 lg:w-8 lg:h-8 text-green-700" />
+                <div className="mx-auto w-20 h-20 lg:w-16 lg:h-16 rounded-full bg-green-100 flex items-center justify-center mb-4 lg:mb-4">
+                  <Icon className="w-10 h-10 lg:w-8 lg:h-8 text-green-700" />
                 </div>
-                <h3 className="font-bold text-neutral-900 text-sm lg:text-sm uppercase tracking-wide leading-tight">{prop.title}</h3>
+                <h3 className="font-bold text-neutral-900 text-base lg:text-sm uppercase tracking-wide leading-tight">{prop.title}</h3>
+                <p className="mt-2 text-base text-neutral-600 lg:hidden">{prop.description}</p>
                 <p className="mt-1.5 text-sm text-neutral-600 hidden lg:block">{prop.description}</p>
               </div>
             );
@@ -505,18 +506,18 @@ function WhyShopLocal() {
 
 function BrandLogos() {
   return (
-    <section className="bg-white py-16 lg:py-12 border-t border-neutral-200">
+    <section className="bg-white py-20 lg:py-12 border-t border-neutral-200">
       <div className="mx-auto max-w-6xl">
-        <p className="text-center text-sm font-bold tracking-wide text-green-700 uppercase mb-5 lg:mb-8 px-4">
+        <p className="text-center text-lg font-bold tracking-wide text-green-700 uppercase mb-8 lg:mb-8 px-4">
           We Carry Top Tire Brands
         </p>
         
-        {/* Mobile: horizontal scroll - LARGER */}
+        {/* Mobile: horizontal scroll - MUCH LARGER */}
         <div className="lg:hidden overflow-x-auto scrollbar-hide">
-          <div className="flex gap-3 px-4 pb-2" style={{ width: "max-content" }}>
+          <div className="flex gap-4 px-6 pb-2" style={{ width: "max-content" }}>
             {TIRE_BRANDS.map((brand) => (
-              <div key={brand.name} className="flex-shrink-0 px-4 py-2.5 bg-neutral-100 rounded-xl">
-                <span className="text-base font-bold text-neutral-800 whitespace-nowrap">{brand.name}</span>
+              <div key={brand.name} className="flex-shrink-0 px-6 py-4 bg-neutral-100 rounded-xl">
+                <span className="text-lg font-bold text-neutral-800 whitespace-nowrap">{brand.name}</span>
               </div>
             ))}
           </div>
@@ -545,25 +546,25 @@ function BrandLogos() {
 
 function LocalStory() {
   return (
-    <section className="bg-green-50 py-16 lg:py-16">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="grid gap-8 lg:grid-cols-3 lg:gap-8">
+    <section className="bg-green-50 py-20 lg:py-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-10 lg:grid-cols-3 lg:gap-8">
           
-          {/* Story - LARGER text */}
+          {/* Story - MUCH LARGER text */}
           <div>
-            <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
+            <p className="text-base font-bold tracking-wide text-green-700 uppercase">
               Proud To Be Your
             </p>
-            <h2 className="mt-1 text-3xl lg:text-2xl font-bold text-neutral-900">
+            <h2 className="mt-2 text-4xl lg:text-2xl font-bold text-neutral-900">
               Neighborhood Tire Shop
             </h2>
-            <p className="mt-4 text-base text-neutral-700 leading-relaxed">
+            <p className="mt-5 text-xl text-neutral-700 leading-relaxed">
               Great tires, honest prices, and friendly service you can count on.
             </p>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-6 space-y-4">
               {["Top tire brands", "Competitive prices", "Fast, professional installation", "Local and proud to serve Oakland County"].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-neutral-700">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <li key={item} className="flex items-center gap-4 text-lg text-neutral-700">
+                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -582,20 +583,20 @@ function LocalStory() {
             </div>
           </div>
 
-          {/* Reviews - LARGER text */}
+          {/* Reviews - MUCH LARGER text */}
           <div>
-            <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
+            <p className="text-base font-bold tracking-wide text-green-700 uppercase">
               What Our Customers Say
             </p>
-            <div className="mt-3 flex gap-1 text-yellow-500">
+            <div className="mt-4 flex gap-1.5 text-yellow-500">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-current" />
+                <Star key={i} className="w-7 h-7 fill-current" />
               ))}
             </div>
-            <blockquote className="mt-3 text-base text-neutral-700 italic leading-relaxed">
+            <blockquote className="mt-4 text-xl text-neutral-700 italic leading-relaxed">
               "Great local shop! Fast service, honest pricing, and the staff really knows their stuff."
             </blockquote>
-            <p className="mt-2 text-sm text-neutral-500 font-medium">— Jason R., Pontiac</p>
+            <p className="mt-3 text-lg text-neutral-500 font-medium">— Jason R., Pontiac</p>
             <a
               href="https://www.google.com/search?q=Warehouse+Tire+Pontiac+MI+reviews"
               target="_blank"
