@@ -185,12 +185,9 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:gap-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image
+          <img
             src="/warehouse-tire-logo.png"
             alt={BRAND.name}
-            width={458}
-            height={165}
-            priority
             className="h-10 md:h-12 w-auto"
           />
         </Link>
