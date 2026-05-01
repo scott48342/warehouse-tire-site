@@ -466,14 +466,14 @@ function WhyShopLocal() {
   ];
 
   return (
-    <section className="bg-white pt-10 pb-10 lg:pt-28 lg:pb-16">
+    <section className="bg-white pt-16 pb-16 lg:pt-28 lg:pb-16">
       <div className="mx-auto max-w-6xl px-4">
         {/* Header - LARGER on mobile */}
         <div className="text-center mb-8 lg:mb-12">
           <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
             Why Shop Local?
           </p>
-          <h2 className="mt-2 text-2xl lg:text-4xl font-bold text-neutral-900 leading-tight">
+          <h2 className="mt-2 text-3xl lg:text-4xl font-bold text-neutral-900 leading-tight">
             Real People. Real Service.
             <span className="block lg:inline"> Right Around the Corner.</span>
           </h2>
@@ -505,7 +505,7 @@ function WhyShopLocal() {
 
 function BrandLogos() {
   return (
-    <section className="bg-white py-8 lg:py-12 border-t border-neutral-200">
+    <section className="bg-white py-16 lg:py-12 border-t border-neutral-200">
       <div className="mx-auto max-w-6xl">
         <p className="text-center text-sm font-bold tracking-wide text-green-700 uppercase mb-5 lg:mb-8 px-4">
           We Carry Top Tire Brands
@@ -545,7 +545,7 @@ function BrandLogos() {
 
 function LocalStory() {
   return (
-    <section className="bg-green-50 py-10 lg:py-16">
+    <section className="bg-green-50 py-16 lg:py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid gap-8 lg:grid-cols-3 lg:gap-8">
           
@@ -554,7 +554,7 @@ function LocalStory() {
             <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
               Proud To Be Your
             </p>
-            <h2 className="mt-1 text-2xl lg:text-2xl font-bold text-neutral-900">
+            <h2 className="mt-1 text-3xl lg:text-2xl font-bold text-neutral-900">
               Neighborhood Tire Shop
             </h2>
             <p className="mt-4 text-base text-neutral-700 leading-relaxed">
@@ -638,7 +638,7 @@ function AssuranceBar() {
   ];
 
   return (
-    <section className="bg-green-800 py-8 lg:py-10">
+    <section className="bg-green-800 py-12 lg:py-10">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4 lg:gap-6">
           {items.map((item) => {
@@ -667,7 +667,7 @@ function AssuranceBar() {
 
 function FooterContact() {
   return (
-    <section className="bg-neutral-100 py-10 lg:py-10">
+    <section className="bg-neutral-100 py-14 lg:py-10">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
           {/* Phone - LARGER */}
