@@ -163,6 +163,18 @@ export function detectShopContextFromHostPath(
 ): ShopContext {
   const normalizedHost = host.toLowerCase().replace(/:\d+$/, ''); // Remove port
   
+  // FORCE_LOCAL_MODE env var for testing local mode on any host
+  if (typeof process !== 'undefined' && process.env?.FORCE_LOCAL_MODE === 'true') {
+    return {
+      mode: 'local',
+      selectedStore: 'pontiac',
+      storeInfo: STORES.pontiac,
+      detectedFrom: 'query', // Using 'query' to indicate forced
+      host: normalizedHost,
+      path: pathname,
+    };
+  }
+  
   // Check for explicit national hosts
   if (NATIONAL_HOSTS.includes(normalizedHost)) {
     return {

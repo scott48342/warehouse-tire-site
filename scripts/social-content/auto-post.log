@@ -2917,3 +2917,116 @@ Files:
 
 Add these to .env.local
 [Thu 04/30/2026  9:00:11.87] Auto-post complete 
+[Thu 04/30/2026 18:00:03.04] Starting auto-post... 
+◇ injected env (45) from ..\..\.env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:12760) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Performance Replicas PR137
+  ⚠️ No matching vehicle for bolt pattern 5X5.0, using generic caption
+  Downloading image for Performance Replicas PR137...
+  ✅ Generated: pr137_1777586405487
+  📝 Caption preview: Transform your car with the Performance Replicas PR137 🛞
+
+📐 18x8
+🔩 5X5.0
+↔️ 3...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pr137_1777586405487.png
+  - pr137_1777586405487.json
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+Selected: br032_echo_1776895217576
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys BR032 ECHO
+Price: $400
+Image: br032_echo_1776895217576.png
+
+Caption:
+New arrival alert! 🚨
+
+Black Rhino Hard Alloys BR032 ECHO
+📐 17x8.5
+🔩 6X5.5
+↔️ 0mm offset
+✨ ECHO 17X8.5 6X5.5 106 +0 M-BLK
+
+$400/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/BR032MX17856800
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #suv #suvlife #offroad #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Wednesday, 29-Apr-26 15:00:00 PDT. The current time is Thursday, 30-Apr-26 15:00:06 PDT.
+
+✨ Done!
+◇ injected env (45) from ..\..\.env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:25004) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC FC905 ASCEND
+  Downloading image for Fuel 1PC FC905 ASCEND...
+  ✅ Generated: fc905_ascend_1777586412942
+  📝 Caption preview: New arrival alert! 🚨
+
+Fuel 1PC FC905 ASCEND
+📐 17x9
+🔩 6X5.5
+↔️ -12mm offset
+✨ ...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - fc905_ascend_1777586412942.png
+  - fc905_ascend_1777586412942.json
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Thu 04/30/2026 18:00:13.73] Auto-post complete 

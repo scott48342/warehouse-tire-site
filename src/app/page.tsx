@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import {
   HomepageBackground,
   PremiumHero,
@@ -8,28 +9,54 @@ import {
   ShopByCategory,
   WhyUs,
   FinalCTA,
+  // Local homepage (full redesign)
+  LocalHomepage,
 } from "@/components/homepage";
 
 export const runtime = "nodejs";
 
 /* =============================================================================
-   HOMEPAGE - Premium Automotive UI
-   MATCHES TEMPLATE EXACTLY
+   HOMEPAGE - Dual Experience
    
-   Structure:
-   1. Hero Section (CTAs + tagline)
-   2. Build Style Cards (Factory / Leveling Kit / Lifted)
-   3. Trust Strip (slim horizontal)
-   4. Featured Builds (gallery social proof strip)
-   5. Featured Packages (3 packages)
-   6. Shop by Category (5 circular images)
-   7. Why Us (guarantee + 3 value props)
-   8. Final CTA (conversion close)
+   NATIONAL (shop.warehousetiredirect.com):
+   - Premium enthusiast UI
+   - Build cards (Stock/Leveled/Lifted)
+   - Featured builds & packages
+   - "Build-focused" shopping
    
-   Background: Continuous dark scenic image throughout
+   LOCAL (shop.warehousetire.net):
+   - Neighborhood tire store feel
+   - Storefront hero with embedded search
+   - Store locations prominent
+   - Trust signals (local, same-day, honest pricing)
+   - Social proof (reviews, years in business)
+   
+   Design inspired by: Discount Tire, Belle Tire local storefronts
 ============================================================================= */
 
+// Server-side local detection
+async function isLocalSite(): Promise<boolean> {
+  // Force local mode via env var for testing
+  if (process.env.FORCE_LOCAL_MODE === "true") return true;
+  
+  const headersList = await headers();
+  const host = headersList.get("host") || "";
+  return host.includes("warehousetire.net") || host.includes("localhost:3001");
+}
+
 export default async function Home() {
+  const isLocal = await isLocalSite();
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LOCAL HOMEPAGE - Neighborhood Tire Store
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (isLocal) {
+    return <LocalHomepage />;
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // NATIONAL HOMEPAGE - Premium Enthusiast UI
+  // ═══════════════════════════════════════════════════════════════════════════
   return (
     <HomepageBackground>
       <main>

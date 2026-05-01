@@ -14,6 +14,7 @@ import {
   trackFirstOrderPopupShown, 
   trackFirstOrderPopupSubmit 
 } from "./FunnelTracker";
+import { useIsLocalMode } from "@/contexts/ShopContextProvider";
 
 // ============================================================================
 // Storage Keys
@@ -60,6 +61,9 @@ function trackEvent(event: string, data: Record<string, any> = {}) {
 // ============================================================================
 
 export function FirstOrderPopup() {
+  // Local mode check - don't show popup on local site
+  const isLocalMode = useIsLocalMode();
+  
   // State
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimatingIn, setIsAnimatingIn] = useState(false);
@@ -310,6 +314,7 @@ export function FirstOrderPopup() {
   // ========== Don't Render ==========
   
   if (isPOS) return null;
+  if (isLocalMode) return null; // No discount popup on local site
   if (!isVisible) return null;
 
   // ========== Render ==========
