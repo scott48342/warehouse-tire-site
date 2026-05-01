@@ -17,16 +17,15 @@ import {
   Calendar,
   Heart,
   Navigation,
-  Menu
 } from "lucide-react";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // LOCAL HOMEPAGE - Neighborhood Tire Store
 // ═══════════════════════════════════════════════════════════════════════════════
 // 
-// MOBILE-FIRST OPTIMIZED (2026-05-01)
-// - Mobile: Full-width hero image with overlay, stacked search, 2x2 trust grid
-// - Desktop: Split hero, horizontal search (unchanged)
+// MOBILE-FIRST OPTIMIZED + READABILITY POLISH (2026-05-01)
+// Typography scaled up for mobile readability
+// Larger icons, stronger shadows, better tap targets
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -61,16 +60,16 @@ const PRIMARY_STORE = STORES[0];
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const TIRE_BRANDS = [
-  { name: "Michelin", logo: "/images/brands/michelin.png" },
-  { name: "BFGoodrich", logo: "/images/brands/bfgoodrich.png" },
-  { name: "Goodyear", logo: "/images/brands/goodyear.png" },
-  { name: "Pirelli", logo: "/images/brands/pirelli.png" },
-  { name: "Continental", logo: "/images/brands/continental.png" },
-  { name: "Bridgestone", logo: "/images/brands/bridgestone.png" },
+  { name: "Michelin" },
+  { name: "BFGoodrich" },
+  { name: "Goodyear" },
+  { name: "Pirelli" },
+  { name: "Continental" },
+  { name: "Bridgestone" },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// HERO SECTION - Mobile-first with full image background
+// HERO SECTION
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const THIS_YEAR = new Date().getFullYear();
@@ -80,7 +79,6 @@ function HeroSection() {
   const router = useRouter();
   const [searchTab, setSearchTab] = useState<"vehicle" | "size">("vehicle");
   
-  // Vehicle selector state
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
   const [model, setModel] = useState("");
@@ -91,12 +89,10 @@ function HeroSection() {
   const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
   const [loading, setLoading] = useState<string | null>(null);
 
-  // Size selector state
   const [width, setWidth] = useState("");
   const [aspect, setAspect] = useState("");
   const [rim, setRim] = useState("");
 
-  // Load makes
   useEffect(() => {
     if (!year) { setMakes([]); setMake(""); return; }
     setLoading("makes");
@@ -107,7 +103,6 @@ function HeroSection() {
       .finally(() => setLoading(null));
   }, [year]);
 
-  // Load models
   useEffect(() => {
     if (!year || !make) { setModels([]); setModel(""); return; }
     setLoading("models");
@@ -118,7 +113,6 @@ function HeroSection() {
       .finally(() => setLoading(null));
   }, [year, make]);
 
-  // Load trims
   useEffect(() => {
     if (!year || !make || !model) { setTrims([]); setTrim(""); return; }
     setLoading("trims");
@@ -144,7 +138,6 @@ function HeroSection() {
     router.push(`/tires?size=${width}/${aspect}R${rim}`);
   };
 
-  // Size options
   const WIDTHS = [175, 185, 195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315];
   const ASPECTS = [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80];
   const RIMS = [14, 15, 16, 17, 18, 19, 20, 21, 22, 24];
@@ -152,10 +145,10 @@ function HeroSection() {
   return (
     <section className="relative">
       {/* ═══════════════════════════════════════════════════════════════════════
-          MOBILE HERO - Full width image with overlay
+          MOBILE HERO
           ═══════════════════════════════════════════════════════════════════════ */}
       <div className="lg:hidden relative">
-        {/* Background Image - visible on mobile */}
+        {/* Background Image with STRONGER gradient */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/homepage/storefront.jpg"
@@ -164,57 +157,52 @@ function HeroSection() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90" />
         </div>
         
-        {/* Mobile Content */}
-        <div className="relative z-10 px-5 pt-8 pb-6">
-          {/* Eyebrow */}
-          <p className="text-xs font-bold tracking-widest text-green-400 uppercase">
+        {/* Mobile Content - LARGER TEXT */}
+        <div className="relative z-10 px-6 pt-10 pb-8">
+          {/* Eyebrow - LARGER */}
+          <p className="text-sm font-bold tracking-widest text-green-400 uppercase">
             Your Local Tire Shop
           </p>
           
-          {/* Headline - tighter on mobile */}
-          <h1 className="mt-2 text-3xl font-bold text-white leading-tight">
+          {/* Headline - MUCH LARGER */}
+          <h1 className="mt-3 text-[2.5rem] leading-[1.1] font-extrabold text-white">
             Great Tires.<br />
             Honest Prices.<br />
             Local People.
           </h1>
           
-          {/* Shorter subheadline on mobile */}
-          <p className="mt-3 text-sm text-white/80 max-w-xs">
+          {/* Subheadline - LARGER */}
+          <p className="mt-4 text-base text-white/90 max-w-sm leading-relaxed">
             Fast local installation and honest pricing you can trust.
           </p>
           
-          {/* Trust bullets - 2 per row on mobile */}
-          <div className="mt-5 grid grid-cols-2 gap-3">
-            <div className="flex items-center gap-2 text-white/90 text-xs">
-              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-              <span>Same-Day Install</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/90 text-xs">
-              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-              <span>Expert Install</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/90 text-xs">
-              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-              <span>Honest Pricing</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/90 text-xs">
-              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-              <span>Local & Trusted</span>
-            </div>
+          {/* Trust bullets - LARGER icons and text */}
+          <div className="mt-6 grid grid-cols-2 gap-4">
+            {[
+              "Same-Day Install",
+              "Expert Install", 
+              "Honest Pricing",
+              "Local & Trusted"
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-2.5">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <span className="text-sm font-medium text-white">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
         
-        {/* Mobile Search Card */}
+        {/* Mobile Search Card - LARGER EVERYTHING */}
         <div className="relative z-10 px-4 pb-6">
-          <div className="bg-white rounded-xl shadow-xl p-4">
-            {/* Tabs */}
-            <div className="flex gap-2 mb-4">
+          <div className="bg-white rounded-2xl shadow-2xl p-5">
+            {/* Tabs - LARGER */}
+            <div className="flex gap-2 mb-5">
               <button
                 onClick={() => setSearchTab("vehicle")}
-                className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${
+                className={`flex-1 py-3.5 rounded-xl text-base font-bold transition-all ${
                   searchTab === "vehicle"
                     ? "bg-green-700 text-white"
                     : "bg-neutral-100 text-neutral-600"
@@ -224,7 +212,7 @@ function HeroSection() {
               </button>
               <button
                 onClick={() => setSearchTab("size")}
-                className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${
+                className={`flex-1 py-3.5 rounded-xl text-base font-bold transition-all ${
                   searchTab === "size"
                     ? "bg-green-700 text-white"
                     : "bg-neutral-100 text-neutral-600"
@@ -234,13 +222,13 @@ function HeroSection() {
               </button>
             </div>
             
-            {/* Vehicle Search - STACKED on mobile */}
+            {/* Vehicle Search - LARGER FIELDS */}
             {searchTab === "vehicle" && (
               <div className="space-y-3">
                 <select
                   value={year}
                   onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); setTrim(""); }}
-                  className="w-full h-12 rounded-lg border border-neutral-300 bg-white px-4 text-base focus:border-green-600 focus:outline-none"
+                  className="w-full h-14 rounded-xl border-2 border-neutral-200 bg-white px-4 text-base font-medium focus:border-green-600 focus:outline-none"
                 >
                   <option value="">Select Year</option>
                   {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
@@ -250,7 +238,7 @@ function HeroSection() {
                   value={make}
                   onChange={(e) => { setMake(e.target.value); setModel(""); setTrim(""); }}
                   disabled={!year || loading === "makes"}
-                  className="w-full h-12 rounded-lg border border-neutral-300 bg-white px-4 text-base focus:border-green-600 focus:outline-none disabled:bg-neutral-100"
+                  className="w-full h-14 rounded-xl border-2 border-neutral-200 bg-white px-4 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
                 >
                   <option value="">{loading === "makes" ? "Loading..." : "Select Make"}</option>
                   {makes.map(m => <option key={m} value={m}>{m}</option>)}
@@ -260,7 +248,7 @@ function HeroSection() {
                   value={model}
                   onChange={(e) => { setModel(e.target.value); setTrim(""); }}
                   disabled={!make || loading === "models"}
-                  className="w-full h-12 rounded-lg border border-neutral-300 bg-white px-4 text-base focus:border-green-600 focus:outline-none disabled:bg-neutral-100"
+                  className="w-full h-14 rounded-xl border-2 border-neutral-200 bg-white px-4 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
                 >
                   <option value="">{loading === "models" ? "Loading..." : "Select Model"}</option>
                   {models.map(m => <option key={m} value={m}>{m}</option>)}
@@ -270,7 +258,7 @@ function HeroSection() {
                   value={trim}
                   onChange={(e) => setTrim(e.target.value)}
                   disabled={!model || loading === "trims"}
-                  className="w-full h-12 rounded-lg border border-neutral-300 bg-white px-4 text-base focus:border-green-600 focus:outline-none disabled:bg-neutral-100"
+                  className="w-full h-14 rounded-xl border-2 border-neutral-200 bg-white px-4 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
                 >
                   <option value="">{loading === "trims" ? "Loading..." : "Trim (Optional)"}</option>
                   {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
@@ -279,21 +267,21 @@ function HeroSection() {
                 <button
                   onClick={handleVehicleSearch}
                   disabled={!canSearchVehicle}
-                  className="w-full h-14 rounded-lg bg-[#c41230] text-white font-bold text-lg hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors"
+                  className="w-full h-16 rounded-xl bg-[#c41230] text-white font-bold text-xl hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg"
                 >
                   FIND TIRES
                 </button>
               </div>
             )}
             
-            {/* Size Search - STACKED on mobile */}
+            {/* Size Search - LARGER FIELDS */}
             {searchTab === "size" && (
               <div className="space-y-3">
                 <div className="grid grid-cols-3 gap-2">
                   <select
                     value={width}
                     onChange={(e) => setWidth(e.target.value)}
-                    className="h-12 rounded-lg border border-neutral-300 bg-white px-2 text-base focus:border-green-600 focus:outline-none"
+                    className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
                   >
                     <option value="">Width</option>
                     {WIDTHS.map(w => <option key={w} value={w}>{w}</option>)}
@@ -302,7 +290,7 @@ function HeroSection() {
                   <select
                     value={aspect}
                     onChange={(e) => setAspect(e.target.value)}
-                    className="h-12 rounded-lg border border-neutral-300 bg-white px-2 text-base focus:border-green-600 focus:outline-none"
+                    className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
                   >
                     <option value="">Aspect</option>
                     {ASPECTS.map(a => <option key={a} value={a}>{a}</option>)}
@@ -311,7 +299,7 @@ function HeroSection() {
                   <select
                     value={rim}
                     onChange={(e) => setRim(e.target.value)}
-                    className="h-12 rounded-lg border border-neutral-300 bg-white px-2 text-base focus:border-green-600 focus:outline-none"
+                    className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
                   >
                     <option value="">Rim</option>
                     {RIMS.map(r => <option key={r} value={r}>{r}</option>)}
@@ -321,26 +309,26 @@ function HeroSection() {
                 <button
                   onClick={handleSizeSearch}
                   disabled={!canSearchSize}
-                  className="w-full h-14 rounded-lg bg-[#c41230] text-white font-bold text-lg hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors"
+                  className="w-full h-16 rounded-xl bg-[#c41230] text-white font-bold text-xl hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg"
                 >
                   FIND TIRES
                 </button>
               </div>
             )}
             
-            {/* Store info below search on mobile */}
-            <div className="mt-4 pt-4 border-t border-neutral-200">
+            {/* Store info - LARGER */}
+            <div className="mt-5 pt-4 border-t border-neutral-200">
               <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <MapPin className="w-6 h-6 text-green-600 flex-shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-bold text-neutral-900 truncate">{PRIMARY_STORE.address}</p>
-                  <p className="text-xs text-neutral-500">{PRIMARY_STORE.city}</p>
+                  <p className="text-base font-bold text-neutral-900 truncate">{PRIMARY_STORE.address}</p>
+                  <p className="text-sm text-neutral-500">{PRIMARY_STORE.city}</p>
                 </div>
                 <a
                   href={PRIMARY_STORE.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold text-green-700"
+                  className="text-sm font-bold text-green-700 hover:underline"
                 >
                   Directions
                 </a>
@@ -351,12 +339,11 @@ function HeroSection() {
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          DESKTOP HERO - Split layout (unchanged)
+          DESKTOP HERO (unchanged)
           ═══════════════════════════════════════════════════════════════════════ */}
       <div className="hidden lg:block bg-neutral-800">
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2">
-            {/* LEFT - Content */}
             <div className="px-12 py-16">
               <p className="text-sm font-bold tracking-wide text-green-500 uppercase">
                 Your Local Tire Shop
@@ -384,17 +371,9 @@ function HeroSection() {
                 </div>
               </div>
             </div>
-            
-            {/* RIGHT - Storefront Image */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-neutral-800 to-transparent z-10 w-24" />
-              <Image
-                src="/images/homepage/storefront.jpg"
-                alt="Warehouse Tire storefront"
-                fill
-                className="object-cover"
-                priority
-              />
+              <Image src="/images/homepage/storefront.jpg" alt="Warehouse Tire storefront" fill className="object-cover" priority />
               <div className="absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-900 -z-10" />
             </div>
           </div>
@@ -406,24 +385,10 @@ function HeroSection() {
             <div className="flex flex-row items-end gap-6">
               <div className="flex-1">
                 <div className="flex gap-1 mb-4">
-                  <button
-                    onClick={() => setSearchTab("vehicle")}
-                    className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${
-                      searchTab === "vehicle"
-                        ? "bg-green-700 text-white"
-                        : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-                    }`}
-                  >
+                  <button onClick={() => setSearchTab("vehicle")} className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${searchTab === "vehicle" ? "bg-green-700 text-white" : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"}`}>
                     Shop By Vehicle
                   </button>
-                  <button
-                    onClick={() => setSearchTab("size")}
-                    className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${
-                      searchTab === "size"
-                        ? "bg-green-700 text-white"
-                        : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
-                    }`}
-                  >
+                  <button onClick={() => setSearchTab("size")} className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${searchTab === "size" ? "bg-green-700 text-white" : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"}`}>
                     Shop By Size
                   </button>
                 </div>
@@ -432,55 +397,27 @@ function HeroSection() {
                   <div>
                     <p className="text-sm text-neutral-600 mb-3">Find the right tires for your vehicle</p>
                     <div className="flex flex-wrap gap-2">
-                      <select
-                        value={year}
-                        onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); setTrim(""); }}
-                        className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"
-                      >
+                      <select value={year} onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); setTrim(""); }} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none">
                         <option value="">Year</option>
                         {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
                       </select>
-                      <select
-                        value={make}
-                        onChange={(e) => { setMake(e.target.value); setModel(""); setTrim(""); }}
-                        disabled={!year || loading === "makes"}
-                        className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100"
-                      >
+                      <select value={make} onChange={(e) => { setMake(e.target.value); setModel(""); setTrim(""); }} disabled={!year || loading === "makes"} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100">
                         <option value="">{loading === "makes" ? "Loading..." : "Make"}</option>
                         {makes.map(m => <option key={m} value={m}>{m}</option>)}
                       </select>
-                      <select
-                        value={model}
-                        onChange={(e) => { setModel(e.target.value); setTrim(""); }}
-                        disabled={!make || loading === "models"}
-                        className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100"
-                      >
+                      <select value={model} onChange={(e) => { setModel(e.target.value); setTrim(""); }} disabled={!make || loading === "models"} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100">
                         <option value="">{loading === "models" ? "Loading..." : "Model"}</option>
                         {models.map(m => <option key={m} value={m}>{m}</option>)}
                       </select>
-                      <select
-                        value={trim}
-                        onChange={(e) => setTrim(e.target.value)}
-                        disabled={!model || loading === "trims"}
-                        className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100"
-                      >
+                      <select value={trim} onChange={(e) => setTrim(e.target.value)} disabled={!model || loading === "trims"} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100">
                         <option value="">{loading === "trims" ? "Loading..." : "Trim (Optional)"}</option>
                         {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                       </select>
-                      <button
-                        onClick={handleVehicleSearch}
-                        disabled={!canSearchVehicle}
-                        className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors"
-                      >
+                      <button onClick={handleVehicleSearch} disabled={!canSearchVehicle} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">
                         FIND TIRES
                       </button>
                     </div>
-                    <p className="mt-3 text-sm text-neutral-500">
-                      Don't know your vehicle?{" "}
-                      <button onClick={() => setSearchTab("size")} className="text-green-700 hover:underline font-medium">
-                        Help me find my size
-                      </button>
-                    </p>
+                    <p className="mt-3 text-sm text-neutral-500">Don't know your vehicle? <button onClick={() => setSearchTab("size")} className="text-green-700 hover:underline font-medium">Help me find my size</button></p>
                   </div>
                 )}
                 
@@ -488,27 +425,15 @@ function HeroSection() {
                   <div>
                     <p className="text-sm text-neutral-600 mb-3">Enter your tire size (found on tire sidewall)</p>
                     <div className="flex flex-wrap gap-2">
-                      <select value={width} onChange={(e) => setWidth(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none">
-                        <option value="">Width</option>
-                        {WIDTHS.map(w => <option key={w} value={w}>{w}</option>)}
-                      </select>
-                      <select value={aspect} onChange={(e) => setAspect(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none">
-                        <option value="">Aspect</option>
-                        {ASPECTS.map(a => <option key={a} value={a}>{a}</option>)}
-                      </select>
-                      <select value={rim} onChange={(e) => setRim(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none">
-                        <option value="">Rim</option>
-                        {RIMS.map(r => <option key={r} value={r}>{r}</option>)}
-                      </select>
-                      <button onClick={handleSizeSearch} disabled={!canSearchSize} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">
-                        FIND TIRES
-                      </button>
+                      <select value={width} onChange={(e) => setWidth(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Width</option>{WIDTHS.map(w => <option key={w} value={w}>{w}</option>)}</select>
+                      <select value={aspect} onChange={(e) => setAspect(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Aspect</option>{ASPECTS.map(a => <option key={a} value={a}>{a}</option>)}</select>
+                      <select value={rim} onChange={(e) => setRim(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Rim</option>{RIMS.map(r => <option key={r} value={r}>{r}</option>)}</select>
+                      <button onClick={handleSizeSearch} disabled={!canSearchSize} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">FIND TIRES</button>
                     </div>
                   </div>
                 )}
               </div>
               
-              {/* Store Card - Desktop */}
               <div className="w-64 border-l pl-6 border-neutral-200">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
@@ -516,9 +441,7 @@ function HeroSection() {
                     <p className="text-xs font-bold text-neutral-500 uppercase tracking-wide">Visit Your Local Store</p>
                     <p className="mt-1 font-bold text-neutral-900">{PRIMARY_STORE.address}</p>
                     <p className="text-sm text-neutral-600">{PRIMARY_STORE.city}</p>
-                    <a href={PRIMARY_STORE.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-semibold text-green-700 hover:underline">
-                      Get Directions
-                    </a>
+                    <a href={PRIMARY_STORE.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-semibold text-green-700 hover:underline">Get Directions</a>
                   </div>
                 </div>
               </div>
@@ -531,7 +454,7 @@ function HeroSection() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// WHY SHOP LOCAL - 2x2 grid on mobile, 4-col on desktop
+// WHY SHOP LOCAL - LARGER on mobile
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function WhyShopLocal() {
@@ -543,30 +466,30 @@ function WhyShopLocal() {
   ];
 
   return (
-    <section className="bg-white pt-8 pb-10 lg:pt-28 lg:pb-16">
+    <section className="bg-white pt-10 pb-10 lg:pt-28 lg:pb-16">
       <div className="mx-auto max-w-6xl px-4">
-        {/* Header */}
-        <div className="text-center mb-6 lg:mb-12">
-          <p className="text-xs lg:text-sm font-bold tracking-wide text-green-700 uppercase">
+        {/* Header - LARGER on mobile */}
+        <div className="text-center mb-8 lg:mb-12">
+          <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
             Why Shop Local?
           </p>
-          <h2 className="mt-1 lg:mt-2 text-xl lg:text-4xl font-bold text-neutral-900">
+          <h2 className="mt-2 text-2xl lg:text-4xl font-bold text-neutral-900 leading-tight">
             Real People. Real Service.
             <span className="block lg:inline"> Right Around the Corner.</span>
           </h2>
         </div>
 
-        {/* Props Grid - 2x2 mobile, 4-col desktop */}
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8">
+        {/* Props Grid - LARGER icons and text on mobile */}
+        <div className="grid grid-cols-2 gap-5 lg:grid-cols-4 lg:gap-8">
           {props.map((prop) => {
             const Icon = prop.icon;
             return (
-              <div key={prop.title} className="text-center p-3 lg:p-0">
-                <div className="mx-auto w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-green-100 flex items-center justify-center mb-2 lg:mb-4">
-                  <Icon className="w-6 h-6 lg:w-8 lg:h-8 text-green-700" />
+              <div key={prop.title} className="text-center">
+                <div className="mx-auto w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-green-100 flex items-center justify-center mb-3 lg:mb-4">
+                  <Icon className="w-7 h-7 lg:w-8 lg:h-8 text-green-700" />
                 </div>
-                <h3 className="font-bold text-neutral-900 text-xs lg:text-sm uppercase tracking-wide">{prop.title}</h3>
-                <p className="mt-1 text-xs lg:text-sm text-neutral-600 hidden lg:block">{prop.description}</p>
+                <h3 className="font-bold text-neutral-900 text-sm lg:text-sm uppercase tracking-wide leading-tight">{prop.title}</h3>
+                <p className="mt-1.5 text-sm text-neutral-600 hidden lg:block">{prop.description}</p>
               </div>
             );
           })}
@@ -577,39 +500,37 @@ function WhyShopLocal() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// BRAND LOGOS - Horizontal scroll on mobile, centered on desktop
+// BRAND LOGOS - LARGER on mobile
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function BrandLogos() {
   return (
-    <section className="bg-white py-6 lg:py-12 border-t border-neutral-200">
+    <section className="bg-white py-8 lg:py-12 border-t border-neutral-200">
       <div className="mx-auto max-w-6xl">
-        <p className="text-center text-xs lg:text-sm font-bold tracking-wide text-green-700 uppercase mb-4 lg:mb-8 px-4">
+        <p className="text-center text-sm font-bold tracking-wide text-green-700 uppercase mb-5 lg:mb-8 px-4">
           We Carry Top Tire Brands
         </p>
         
-        {/* Mobile: horizontal scroll */}
+        {/* Mobile: horizontal scroll - LARGER */}
         <div className="lg:hidden overflow-x-auto scrollbar-hide">
-          <div className="flex gap-6 px-4 pb-2" style={{ width: "max-content" }}>
+          <div className="flex gap-3 px-4 pb-2" style={{ width: "max-content" }}>
             {TIRE_BRANDS.map((brand) => (
-              <div key={brand.name} className="flex-shrink-0 px-3 py-2 bg-neutral-50 rounded-lg">
-                <span className="text-sm font-bold text-neutral-700 whitespace-nowrap">{brand.name}</span>
+              <div key={brand.name} className="flex-shrink-0 px-4 py-2.5 bg-neutral-100 rounded-xl">
+                <span className="text-base font-bold text-neutral-800 whitespace-nowrap">{brand.name}</span>
               </div>
             ))}
           </div>
         </div>
         
-        {/* Desktop: centered flex */}
+        {/* Desktop */}
         <div className="hidden lg:flex flex-wrap items-center justify-center gap-8 md:gap-12 px-4">
           {TIRE_BRANDS.map((brand) => (
-            <div key={brand.name} className="h-8 relative">
-              <span className="text-lg font-bold text-neutral-800 tracking-tight">{brand.name}</span>
-            </div>
+            <span key={brand.name} className="text-lg font-bold text-neutral-800 tracking-tight">{brand.name}</span>
           ))}
         </div>
         
-        <div className="text-center mt-4 lg:mt-6">
-          <Link href="/tires" className="text-xs lg:text-sm font-semibold text-green-700 hover:underline">
+        <div className="text-center mt-5 lg:mt-6">
+          <Link href="/tires" className="text-sm font-semibold text-green-700 hover:underline">
             View All Brands
           </Link>
         </div>
@@ -619,30 +540,30 @@ function BrandLogos() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// LOCAL STORY - Stacked on mobile, 3-col on desktop
+// LOCAL STORY - LARGER text on mobile
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function LocalStory() {
   return (
-    <section className="bg-green-50 py-8 lg:py-16">
+    <section className="bg-green-50 py-10 lg:py-16">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
+        <div className="grid gap-8 lg:grid-cols-3 lg:gap-8">
           
-          {/* Story */}
+          {/* Story - LARGER text */}
           <div>
-            <p className="text-xs lg:text-sm font-bold tracking-wide text-green-700 uppercase">
+            <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
               Proud To Be Your
             </p>
-            <h2 className="mt-1 text-xl lg:text-2xl font-bold text-neutral-900">
+            <h2 className="mt-1 text-2xl lg:text-2xl font-bold text-neutral-900">
               Neighborhood Tire Shop
             </h2>
-            <p className="mt-3 lg:mt-4 text-sm text-neutral-700">
+            <p className="mt-4 text-base text-neutral-700 leading-relaxed">
               Great tires, honest prices, and friendly service you can count on.
             </p>
-            <ul className="mt-4 lg:mt-6 space-y-2 lg:space-y-3">
+            <ul className="mt-5 space-y-3">
               {["Top tire brands", "Competitive prices", "Fast, professional installation", "Local and proud to serve Oakland County"].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-xs lg:text-sm text-neutral-700">
-                  <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-600 flex-shrink-0" />
+                <li key={item} className="flex items-center gap-3 text-sm text-neutral-700">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -650,53 +571,48 @@ function LocalStory() {
           </div>
 
           {/* Photo */}
-          <div className="relative rounded-xl overflow-hidden h-48 lg:h-auto bg-neutral-200">
-            <Image
-              src="/images/homepage/store-interior.jpg"
-              alt="Inside Warehouse Tire"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            <div className="absolute bottom-3 left-3 right-3 text-center">
-              <div className="inline-block bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5">
-                <p className="text-xs font-bold text-green-700 uppercase">Thank You</p>
-                <p className="text-xs font-bold text-neutral-900">For Supporting Local ❤️</p>
+          <div className="relative rounded-xl overflow-hidden h-56 lg:h-auto bg-neutral-200">
+            <Image src="/images/homepage/store-interior.jpg" alt="Inside Warehouse Tire" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 text-center">
+              <div className="inline-block bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2">
+                <p className="text-sm font-bold text-green-700 uppercase">Thank You</p>
+                <p className="text-sm font-bold text-neutral-900">For Supporting Local ❤️</p>
               </div>
             </div>
           </div>
 
-          {/* Reviews */}
+          {/* Reviews - LARGER text */}
           <div>
-            <p className="text-xs lg:text-sm font-bold tracking-wide text-green-700 uppercase">
+            <p className="text-sm font-bold tracking-wide text-green-700 uppercase">
               What Our Customers Say
             </p>
-            <div className="mt-2 lg:mt-4 flex gap-0.5 text-yellow-500">
+            <div className="mt-3 flex gap-1 text-yellow-500">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 lg:w-5 lg:h-5 fill-current" />
+                <Star key={i} className="w-5 h-5 fill-current" />
               ))}
             </div>
-            <blockquote className="mt-2 lg:mt-3 text-sm text-neutral-700 italic">
+            <blockquote className="mt-3 text-base text-neutral-700 italic leading-relaxed">
               "Great local shop! Fast service, honest pricing, and the staff really knows their stuff."
             </blockquote>
-            <p className="mt-2 text-xs text-neutral-500">— Jason R., Pontiac</p>
+            <p className="mt-2 text-sm text-neutral-500 font-medium">— Jason R., Pontiac</p>
             <a
               href="https://www.google.com/search?q=Warehouse+Tire+Pontiac+MI+reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-block text-xs lg:text-sm font-semibold text-green-700 hover:underline"
+              className="mt-4 inline-block text-sm font-semibold text-green-700 hover:underline"
             >
               Read More Reviews
             </a>
             
-            {/* Mini Store Card */}
-            <div className="mt-4 lg:mt-6 bg-white rounded-lg p-3 lg:p-4 shadow-sm border border-neutral-200">
-              <div className="flex items-start gap-2 lg:gap-3">
-                <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            {/* Mini Store Card - LARGER */}
+            <div className="mt-5 bg-white rounded-xl p-4 shadow-sm border border-neutral-200">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-neutral-900 text-xs lg:text-sm">{PRIMARY_STORE.address}</p>
-                  <p className="text-xs text-neutral-600">{PRIMARY_STORE.city}</p>
-                  <a href={PRIMARY_STORE.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-xs font-semibold text-green-700 hover:underline">
+                  <p className="font-bold text-neutral-900 text-sm">{PRIMARY_STORE.address}</p>
+                  <p className="text-sm text-neutral-600">{PRIMARY_STORE.city}</p>
+                  <a href={PRIMARY_STORE.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-sm font-semibold text-green-700 hover:underline">
                     Get Directions
                   </a>
                 </div>
@@ -710,7 +626,7 @@ function LocalStory() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// ASSURANCE BAR
+// ASSURANCE BAR - LARGER icons/text on mobile
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function AssuranceBar() {
@@ -722,19 +638,19 @@ function AssuranceBar() {
   ];
 
   return (
-    <section className="bg-green-800 py-6 lg:py-10">
+    <section className="bg-green-800 py-8 lg:py-10">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+        <div className="grid grid-cols-2 gap-5 lg:grid-cols-4 lg:gap-6">
           {items.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="flex items-start gap-2 lg:gap-3">
-                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-4 h-4 lg:w-5 lg:h-5 text-white" />
+              <div key={item.title} className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-bold text-white text-xs lg:text-sm">{item.title}</div>
-                  <div className="text-[10px] lg:text-xs text-white/70 mt-0.5 hidden lg:block">{item.description}</div>
+                  <div className="font-bold text-white text-sm">{item.title}</div>
+                  <div className="text-xs text-white/70 mt-0.5 hidden lg:block">{item.description}</div>
                 </div>
               </div>
             );
@@ -746,63 +662,63 @@ function AssuranceBar() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// FOOTER CONTACT BAR
+// FOOTER CONTACT - LARGER on mobile
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function FooterContact() {
   return (
-    <section className="bg-neutral-100 py-8 lg:py-10">
+    <section className="bg-neutral-100 py-10 lg:py-10">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
-          {/* Phone */}
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-              <Phone className="w-5 h-5 text-green-700" />
+          {/* Phone - LARGER */}
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+              <Phone className="w-6 h-6 text-green-700" />
             </div>
             <div>
-              <a href={`tel:${PRIMARY_STORE.phone.replace(/[^\d]/g, "")}`} className="text-lg lg:text-xl font-bold text-neutral-900 hover:text-green-700">
+              <a href={`tel:${PRIMARY_STORE.phone.replace(/[^\d]/g, "")}`} className="text-xl font-bold text-neutral-900 hover:text-green-700">
                 {PRIMARY_STORE.phone}
               </a>
-              <p className="text-xs lg:text-sm text-neutral-500">Call us today!</p>
+              <p className="text-sm text-neutral-500">Call us today!</p>
             </div>
           </div>
 
-          {/* Hours */}
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-              <Clock className="w-5 h-5 text-green-700" />
+          {/* Hours - LARGER */}
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+              <Clock className="w-6 h-6 text-green-700" />
             </div>
             <div>
-              <p className="font-bold text-neutral-900 text-sm lg:text-base">MON – FRI 8AM – 5PM</p>
-              <p className="text-neutral-900 text-sm">SAT 8AM – 3PM</p>
-              <p className="text-xs text-neutral-500">Sun: Closed</p>
+              <p className="font-bold text-neutral-900 text-base">MON – FRI 8AM – 5PM</p>
+              <p className="text-neutral-900 text-base">SAT 8AM – 3PM</p>
+              <p className="text-sm text-neutral-500">Sun: Closed</p>
             </div>
           </div>
 
-          {/* Address */}
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-              <MapPin className="w-5 h-5 text-green-700" />
+          {/* Address - LARGER */}
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+              <MapPin className="w-6 h-6 text-green-700" />
             </div>
             <div>
-              <p className="font-bold text-neutral-900 text-sm lg:text-base">{PRIMARY_STORE.address}</p>
-              <p className="text-neutral-900 text-sm">{PRIMARY_STORE.city}</p>
-              <a href={PRIMARY_STORE.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-xs lg:text-sm font-semibold text-green-700 hover:underline">
+              <p className="font-bold text-neutral-900 text-base">{PRIMARY_STORE.address}</p>
+              <p className="text-neutral-900 text-base">{PRIMARY_STORE.city}</p>
+              <a href={PRIMARY_STORE.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-green-700 hover:underline">
                 Get Directions
               </a>
             </div>
           </div>
         </div>
         
-        {/* Second store */}
-        <div className="mt-6 pt-4 border-t border-neutral-200">
-          <p className="text-xs text-neutral-500 mb-2">Also visit our {STORES[1].name} location:</p>
-          <div className="flex flex-wrap gap-3 lg:gap-6 text-xs lg:text-sm">
+        {/* Second store - LARGER */}
+        <div className="mt-8 pt-5 border-t border-neutral-200">
+          <p className="text-sm text-neutral-500 mb-3">Also visit our {STORES[1].name} location:</p>
+          <div className="flex flex-wrap gap-4 text-sm">
             <span className="font-medium text-neutral-900">{STORES[1].address}, {STORES[1].city}</span>
-            <a href={`tel:${STORES[1].phone.replace(/[^\d]/g, "")}`} className="font-semibold text-green-700 hover:underline">
+            <a href={`tel:${STORES[1].phone.replace(/[^\d]/g, "")}`} className="font-bold text-green-700 hover:underline">
               {STORES[1].phone}
             </a>
-            <a href={STORES[1].mapsUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-700 hover:underline">
+            <a href={STORES[1].mapsUrl} target="_blank" rel="noopener noreferrer" className="font-bold text-green-700 hover:underline">
               Get Directions
             </a>
           </div>
@@ -813,27 +729,27 @@ function FooterContact() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// STICKY MOBILE CTA BAR
+// STICKY MOBILE CTA BAR - LARGER
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function MobileStickyBar() {
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-neutral-200 shadow-lg">
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-neutral-200 shadow-2xl">
       <div className="flex">
         <a
           href={`tel:${PRIMARY_STORE.phone.replace(/[^\d]/g, "")}`}
-          className="flex-1 flex items-center justify-center gap-2 py-3 bg-green-700 text-white font-bold text-sm"
+          className="flex-1 flex items-center justify-center gap-2 py-4 bg-green-700 text-white font-bold text-base"
         >
-          <Phone className="w-4 h-4" />
+          <Phone className="w-5 h-5" />
           Call Now
         </a>
         <a
           href={PRIMARY_STORE.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 py-3 bg-neutral-900 text-white font-bold text-sm"
+          className="flex-1 flex items-center justify-center gap-2 py-4 bg-neutral-900 text-white font-bold text-base"
         >
-          <Navigation className="w-4 h-4" />
+          <Navigation className="w-5 h-5" />
           Directions
         </a>
       </div>
@@ -847,7 +763,7 @@ function MobileStickyBar() {
 
 export function LocalHomepage() {
   return (
-    <div className="min-h-screen bg-white pb-14 lg:pb-0">
+    <div className="min-h-screen bg-white pb-16 lg:pb-0">
       <HeroSection />
       <WhyShopLocal />
       <BrandLogos />
