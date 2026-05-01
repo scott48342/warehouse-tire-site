@@ -188,10 +188,10 @@ export function Header() {
           <Image
             src="/warehouse-tire-logo.jpg"
             alt={BRAND.name}
-            width={180}
-            height={90}
+            width={458}
+            height={165}
             priority
-            className="h-16 md:h-20 w-auto"
+            className="h-10 md:h-12 w-auto"
           />
         </Link>
 
