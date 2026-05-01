@@ -92,33 +92,33 @@ function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-5 pt-8 pb-24">
+      <div className="relative z-10 px-5 pt-8 pb-28">
         {/* Eyebrow */}
-        <p className="text-base font-bold tracking-wide text-green-400 uppercase">
+        <p className="text-lg font-bold tracking-wide text-green-400 uppercase">
           Your Local Tire Shop
         </p>
 
-        {/* Headline - 38px */}
-        <h1 className="mt-4 text-[38px] leading-[1.1] font-extrabold text-white">
+        {/* Headline - 46px */}
+        <h1 className="mt-4 text-[46px] leading-[1.08] font-extrabold text-white">
           Great Tires.<br />
           Installed Locally.<br />
           Today.
         </h1>
 
         {/* Subcopy */}
-        <p className="mt-5 text-lg text-white/90 leading-relaxed max-w-[320px]">
+        <p className="mt-6 text-[22px] text-white/90 leading-relaxed max-w-[340px]">
           Shop tires online and get fast local installation in Pontiac and Waterford.
         </p>
 
         {/* Trust chips - stacked, not cramped */}
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           {["Same-Day Install", "Honest Pricing", "Local Experts"].map((item) => (
             <div 
               key={item} 
-              className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2"
+              className="flex items-center gap-2.5 bg-white/15 backdrop-blur-sm rounded-full px-5 py-2.5"
             >
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span className="text-[15px] font-semibold text-white">{item}</span>
+              <CheckCircle className="w-6 h-6 text-green-400" />
+              <span className="text-[17px] font-semibold text-white">{item}</span>
             </div>
           ))}
         </div>
@@ -195,22 +195,22 @@ function SearchCard() {
     router.push(`/tires?size=${width}/${aspect}R${rim}`);
   };
 
-  const selectClass = "w-full h-14 rounded-2xl border-2 border-neutral-200 bg-white px-4 text-[16px] font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400 appearance-none";
-  const buttonClass = "w-full h-14 rounded-2xl bg-[#c41230] text-white font-bold text-lg hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg";
+  const selectClass = "w-full h-16 rounded-2xl border-2 border-neutral-200 bg-white px-5 text-[18px] font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400 appearance-none";
+  const buttonClass = "w-full h-16 rounded-2xl bg-[#c41230] text-white font-bold text-[20px] hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg";
 
   return (
-    <section className="px-4 -mt-16 relative z-20">
-      <div className="bg-white rounded-3xl shadow-2xl p-5">
+    <section className="px-4 -mt-20 relative z-20">
+      <div className="bg-white rounded-3xl shadow-2xl p-6">
         {/* Title */}
-        <h2 className="text-[22px] font-bold text-neutral-900 text-center mb-4">
+        <h2 className="text-[26px] font-bold text-neutral-900 text-center mb-5">
           Find Tires Fast
         </h2>
 
         {/* Tabs */}
-        <div className="flex gap-2 mb-5">
+        <div className="flex gap-3 mb-6">
           <button
             onClick={() => setTab("vehicle")}
-            className={`flex-1 py-3 rounded-xl text-[16px] font-bold transition-all ${
+            className={`flex-1 py-4 rounded-xl text-[18px] font-bold transition-all ${
               tab === "vehicle" ? "bg-green-700 text-white" : "bg-neutral-100 text-neutral-600"
             }`}
           >
@@ -218,7 +218,7 @@ function SearchCard() {
           </button>
           <button
             onClick={() => setTab("size")}
-            className={`flex-1 py-3 rounded-xl text-[16px] font-bold transition-all ${
+            className={`flex-1 py-4 rounded-xl text-[18px] font-bold transition-all ${
               tab === "size" ? "bg-green-700 text-white" : "bg-neutral-100 text-neutral-600"
             }`}
           >
@@ -312,25 +312,25 @@ function LocalTrustSection() {
   ];
 
   return (
-    <section className="px-4 py-10">
-      <h2 className="text-[24px] font-bold text-neutral-900 text-center mb-6">
+    <section className="px-4 py-12">
+      <h2 className="text-[30px] font-bold text-neutral-900 text-center mb-8">
         Why Shop Local?
       </h2>
 
-      <div className="space-y-4">
+      <div className="space-y-5">
         {items.map((item) => {
           const Icon = item.icon;
           return (
             <div 
               key={item.title} 
-              className="flex items-start gap-4 bg-green-50 rounded-2xl p-5"
+              className="flex items-start gap-5 bg-green-50 rounded-2xl p-6"
             >
-              <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0">
-                <Icon className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0">
+                <Icon className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="text-[17px] font-bold text-neutral-900">{item.title}</h3>
-                <p className="mt-1 text-[15px] text-neutral-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-[20px] font-bold text-neutral-900">{item.title}</h3>
+                <p className="mt-1.5 text-[17px] text-neutral-600 leading-relaxed">{item.description}</p>
               </div>
             </div>
           );
@@ -346,24 +346,24 @@ function LocalTrustSection() {
 
 function GoogleReviewCard() {
   return (
-    <section className="px-4 pb-10">
-      <div className="bg-white border-2 border-neutral-200 rounded-2xl p-6 text-center">
-        <p className="text-[15px] font-semibold text-neutral-500 uppercase tracking-wide">
+    <section className="px-4 pb-12">
+      <div className="bg-white border-2 border-neutral-200 rounded-2xl p-8 text-center">
+        <p className="text-[17px] font-semibold text-neutral-500 uppercase tracking-wide">
           Trusted by Local Drivers
         </p>
 
         {/* Stars */}
-        <div className="flex justify-center gap-1 mt-3">
+        <div className="flex justify-center gap-1.5 mt-4">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-7 h-7 text-yellow-400 fill-current" />
+            <Star key={i} className="w-9 h-9 text-yellow-400 fill-current" />
           ))}
         </div>
 
-        <p className="mt-3 text-[28px] font-bold text-neutral-900">
-          4.8 <span className="text-[18px] font-normal text-neutral-500">Google rating</span>
+        <p className="mt-4 text-[36px] font-bold text-neutral-900">
+          4.8 <span className="text-[20px] font-normal text-neutral-500">Google rating</span>
         </p>
 
-        <p className="mt-2 text-[15px] text-neutral-600">
+        <p className="mt-3 text-[18px] text-neutral-600">
           Serving Pontiac, Waterford &amp; Oakland County
         </p>
 
@@ -371,10 +371,10 @@ function GoogleReviewCard() {
           href="https://www.google.com/search?q=Warehouse+Tire+Pontiac+MI+reviews"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 text-[16px] font-bold text-green-700"
+          className="mt-5 inline-flex items-center gap-2 text-[19px] font-bold text-green-700"
         >
           Read Reviews
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-6 h-6" />
         </a>
       </div>
     </section>
@@ -387,19 +387,19 @@ function GoogleReviewCard() {
 
 function BrandsSection() {
   return (
-    <section className="pb-10">
-      <h3 className="text-[18px] font-bold text-neutral-900 text-center mb-4 px-4">
+    <section className="pb-12">
+      <h3 className="text-[24px] font-bold text-neutral-900 text-center mb-6 px-4">
         Top Tire Brands In Stock
       </h3>
 
       <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex gap-3 px-4" style={{ width: "max-content" }}>
+        <div className="flex gap-4 px-4" style={{ width: "max-content" }}>
           {TIRE_BRANDS.map((brand) => (
             <div 
               key={brand} 
-              className="flex-shrink-0 px-5 py-3 bg-neutral-100 rounded-full"
+              className="flex-shrink-0 px-6 py-4 bg-neutral-100 rounded-full"
             >
-              <span className="text-[16px] font-bold text-neutral-800 whitespace-nowrap">
+              <span className="text-[18px] font-bold text-neutral-800 whitespace-nowrap">
                 {brand}
               </span>
             </div>
@@ -407,8 +407,8 @@ function BrandsSection() {
         </div>
       </div>
 
-      <div className="text-center mt-4">
-        <Link href="/tires" className="text-[15px] font-semibold text-green-700">
+      <div className="text-center mt-5">
+        <Link href="/tires" className="text-[18px] font-semibold text-green-700">
           View All Brands →
         </Link>
       </div>
@@ -422,44 +422,44 @@ function BrandsSection() {
 
 function StoreInfoCard() {
   return (
-    <section className="px-4 pb-10">
-      <div className="bg-neutral-900 rounded-2xl p-6">
-        <h3 className="text-[20px] font-bold text-white">
+    <section className="px-4 pb-12">
+      <div className="bg-neutral-900 rounded-2xl p-7">
+        <h3 className="text-[26px] font-bold text-white">
           Warehouse Tire
         </h3>
-        <p className="mt-2 text-[16px] text-white/80">
+        <p className="mt-3 text-[19px] text-white/80">
           {PRIMARY_STORE.address}<br />
           {PRIMARY_STORE.city}
         </p>
-        <p className="mt-2 text-[15px] text-white/60">
+        <p className="mt-2 text-[17px] text-white/60">
           Mon-Fri 8AM-5PM • Sat 8AM-3PM
         </p>
 
         {/* Action buttons */}
-        <div className="mt-5 flex gap-3">
+        <div className="mt-6 flex gap-3">
           <a
             href={`tel:${PRIMARY_STORE.phoneRaw}`}
-            className="flex-1 h-12 bg-green-600 rounded-xl flex items-center justify-center gap-2 text-white font-bold text-[16px]"
+            className="flex-1 h-14 bg-green-600 rounded-xl flex items-center justify-center gap-2 text-white font-bold text-[18px]"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-6 h-6" />
             Call Now
           </a>
           <a
             href={PRIMARY_STORE.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 h-12 bg-white rounded-xl flex items-center justify-center gap-2 text-neutral-900 font-bold text-[16px]"
+            className="flex-1 h-14 bg-white rounded-xl flex items-center justify-center gap-2 text-neutral-900 font-bold text-[18px]"
           >
-            <MapPin className="w-5 h-5" />
+            <MapPin className="w-6 h-6" />
             Directions
           </a>
         </div>
 
         {/* Second location */}
-        <div className="mt-5 pt-4 border-t border-white/20">
-          <p className="text-[14px] text-white/60">Also in Waterford:</p>
-          <p className="text-[15px] text-white/80">{STORES[1].address}, {STORES[1].city}</p>
-          <a href={`tel:${STORES[1].phoneRaw}`} className="text-[15px] font-semibold text-green-400">
+        <div className="mt-6 pt-5 border-t border-white/20">
+          <p className="text-[16px] text-white/60">Also in Waterford:</p>
+          <p className="text-[18px] text-white/80">{STORES[1].address}, {STORES[1].city}</p>
+          <a href={`tel:${STORES[1].phoneRaw}`} className="text-[18px] font-semibold text-green-400">
             {STORES[1].phone}
           </a>
         </div>
@@ -474,7 +474,7 @@ function StoreInfoCard() {
 
 function InteriorImage() {
   return (
-    <section className="px-4 pb-24">
+    <section className="px-4 pb-28">
       <div className="relative rounded-2xl overflow-hidden">
         <Image
           src="/images/homepage/store-interior.jpg"
@@ -484,7 +484,7 @@ function InteriorImage() {
           className="w-full h-auto object-cover"
         />
       </div>
-      <p className="mt-3 text-[14px] text-neutral-500 text-center px-4">
+      <p className="mt-4 text-[16px] text-neutral-500 text-center px-4">
         A real local tire shop with inventory ready for installation.
       </p>
     </section>
@@ -501,18 +501,18 @@ function StickyActionBar() {
       <div className="flex gap-3">
         <a
           href={`tel:${PRIMARY_STORE.phoneRaw}`}
-          className="flex-1 h-14 bg-green-600 rounded-2xl flex items-center justify-center gap-2 text-white font-bold text-[17px] shadow-lg"
+          className="flex-1 h-16 bg-green-600 rounded-2xl flex items-center justify-center gap-2.5 text-white font-bold text-[19px] shadow-lg"
         >
-          <Phone className="w-6 h-6" />
+          <Phone className="w-7 h-7" />
           Call Now
         </a>
         <a
           href={PRIMARY_STORE.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 h-14 bg-neutral-900 rounded-2xl flex items-center justify-center gap-2 text-white font-bold text-[17px] shadow-lg"
+          className="flex-1 h-16 bg-neutral-900 rounded-2xl flex items-center justify-center gap-2.5 text-white font-bold text-[19px] shadow-lg"
         >
-          <MapPin className="w-6 h-6" />
+          <MapPin className="w-7 h-7" />
           Directions
         </a>
       </div>
