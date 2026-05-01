@@ -18,14 +18,14 @@ import {
   Heart,
   Navigation,
 } from "lucide-react";
+import LocalHomepageMobile from "./LocalHomepageMobile";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // LOCAL HOMEPAGE - Neighborhood Tire Store
 // ═══════════════════════════════════════════════════════════════════════════════
 // 
-// MOBILE-FIRST OPTIMIZED + READABILITY POLISH (2026-05-01)
-// Typography scaled up for mobile readability
-// Larger icons, stronger shadows, better tap targets
+// Desktop: Full responsive layout (hidden on mobile)
+// Mobile: Purpose-built mobile component (LocalHomepageMobile.tsx)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -764,14 +764,19 @@ function MobileStickyBar() {
 
 export function LocalHomepage() {
   return (
-    <div className="min-h-screen bg-white pb-16 lg:pb-0">
-      <HeroSection />
-      <WhyShopLocal />
-      <BrandLogos />
-      <LocalStory />
-      <AssuranceBar />
-      <FooterContact />
-      <MobileStickyBar />
-    </div>
+    <>
+      {/* Mobile: Purpose-built mobile layout */}
+      <LocalHomepageMobile />
+
+      {/* Desktop: Original desktop layout (hidden on mobile) */}
+      <div className="hidden lg:block min-h-screen bg-white">
+        <HeroSection />
+        <WhyShopLocal />
+        <BrandLogos />
+        <LocalStory />
+        <AssuranceBar />
+        <FooterContact />
+      </div>
+    </>
   );
 }
