@@ -518,14 +518,14 @@ export function CartSlideout() {
           {/* Local mode: Show out-the-door pricing */}
           {isLocal && items.length > 0 && tireCount > 0 && (
             <div className="bg-green-50 border border-green-200 rounded-lg p-3 space-y-1">
-              <div className="flex items-center gap-2 text-green-700 text-sm font-semibold">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-2 text-green-700 text-sm font-semibold">
+                <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span>Includes install, tax & recycling</span>
               </div>
-              <div className="text-xs text-green-600">
-                Professional mount, balance & installation at our shop
+              <div className="text-xs text-green-600 pl-6">
+                Professional mount, balance & installation
               </div>
             </div>
           )}
