@@ -632,24 +632,50 @@ export default function CheckoutPage() {
               {mobileOrderSummaryOpen && (
                 <div className="mt-2 rounded-xl border border-neutral-200 bg-white p-4 space-y-3">
                   {wheels.map((w) => (
-                    <div key={w.sku} className="flex justify-between text-sm">
-                      <span className="text-neutral-600">{w.brand} {w.model} × {w.quantity}</span>
-                      <span className="font-medium">${(w.unitPrice * w.quantity).toFixed(2)}</span>
+                    <div key={w.sku} className="flex gap-3">
+                      <div className="w-12 h-12 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden">
+                        {w.imageUrl ? (
+                          <img src={w.imageUrl} alt={w.model} className="w-full h-full object-contain" />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-neutral-300">🛞</div>
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-neutral-900 truncate">{w.brand} {w.model}</p>
+                        <p className="text-xs text-neutral-500">{w.size} • Qty: {w.quantity}</p>
+                      </div>
+                      <div className="text-sm font-semibold">${(w.unitPrice * w.quantity).toFixed(2)}</div>
                     </div>
                   ))}
                   {tires.map((t) => (
-                    <div key={t.sku} className="flex justify-between text-sm">
-                      <span className="text-neutral-600">{t.brand} {t.model} × {t.quantity}</span>
-                      <span className="font-medium">${(t.unitPrice * t.quantity).toFixed(2)}</span>
+                    <div key={t.sku} className="flex gap-3">
+                      <div className="w-12 h-12 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden">
+                        {t.imageUrl ? (
+                          <img src={t.imageUrl} alt={t.model} className="w-full h-full object-contain" />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-neutral-300">🔘</div>
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-neutral-900 truncate">{t.brand} {t.model}</p>
+                        <p className="text-xs text-neutral-500">{t.size} • Qty: {t.quantity}</p>
+                      </div>
+                      <div className="text-sm font-semibold">${(t.unitPrice * t.quantity).toFixed(2)}</div>
                     </div>
                   ))}
                   {accessories.map((a) => (
-                    <div key={a.sku} className="flex justify-between text-sm">
-                      <span className="text-neutral-600">{a.name} × {a.quantity}</span>
-                      <span className="font-medium">${(a.unitPrice * a.quantity).toFixed(2)}</span>
+                    <div key={a.sku} className="flex gap-3">
+                      <div className="w-12 h-12 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden flex items-center justify-center text-neutral-300">
+                        🔩
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-neutral-900 truncate">{a.name}</p>
+                        <p className="text-xs text-neutral-500">Qty: {a.quantity}</p>
+                      </div>
+                      <div className="text-sm font-semibold">${(a.unitPrice * a.quantity).toFixed(2)}</div>
                     </div>
                   ))}
-                  <div className="pt-2 border-t border-neutral-100 flex justify-between font-bold">
+                  <div className="pt-3 border-t border-neutral-100 flex justify-between font-bold text-lg">
                     <span>Total</span>
                     <span>${totalWithTaxAndShipping.toFixed(2)}</span>
                   </div>
@@ -991,6 +1017,63 @@ export default function CheckoutPage() {
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-bold text-neutral-900 mb-4">Order Summary</h2>
 
+              {/* Cart Items */}
+              <div className="space-y-3 mb-4 pb-4 border-b border-neutral-100">
+                {wheels.map((wheel) => (
+                  <div key={wheel.sku} className="flex gap-3">
+                    <div className="w-14 h-14 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden">
+                      {wheel.imageUrl ? (
+                        <img src={wheel.imageUrl} alt={wheel.model} className="w-full h-full object-contain" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-neutral-300 text-xs">🛞</div>
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-neutral-500">{wheel.brand}</p>
+                      <p className="text-sm font-semibold text-neutral-900 truncate">{wheel.model}</p>
+                      <p className="text-xs text-neutral-500">{wheel.size} • Qty: {wheel.quantity}</p>
+                    </div>
+                    <div className="text-sm font-semibold text-neutral-900">
+                      ${(wheel.unitPrice * wheel.quantity).toFixed(2)}
+                    </div>
+                  </div>
+                ))}
+                {tires.map((tire) => (
+                  <div key={tire.sku} className="flex gap-3">
+                    <div className="w-14 h-14 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden">
+                      {tire.imageUrl ? (
+                        <img src={tire.imageUrl} alt={tire.model} className="w-full h-full object-contain" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-neutral-300 text-xs">🔘</div>
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-neutral-500">{tire.brand}</p>
+                      <p className="text-sm font-semibold text-neutral-900 truncate">{tire.model}</p>
+                      <p className="text-xs text-neutral-500">{tire.size} • Qty: {tire.quantity}</p>
+                    </div>
+                    <div className="text-sm font-semibold text-neutral-900">
+                      ${(tire.unitPrice * tire.quantity).toFixed(2)}
+                    </div>
+                  </div>
+                ))}
+                {accessories.map((acc) => (
+                  <div key={acc.sku} className="flex gap-3">
+                    <div className="w-14 h-14 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden flex items-center justify-center text-neutral-300 text-xs">
+                      🔩
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-semibold text-neutral-900 truncate">{acc.name}</p>
+                      <p className="text-xs text-neutral-500">Qty: {acc.quantity}</p>
+                    </div>
+                    <div className="text-sm font-semibold text-neutral-900">
+                      ${(acc.unitPrice * acc.quantity).toFixed(2)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Totals */}
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Wheels ({wheels.reduce((s, w) => s + w.quantity, 0)})</span>
