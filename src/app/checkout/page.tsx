@@ -642,7 +642,7 @@ export default function CheckoutPage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-semibold text-neutral-900 truncate">{w.brand} {w.model}</p>
-                        <p className="text-xs text-neutral-500">{w.size} • Qty: {w.quantity}</p>
+                        <p className="text-xs text-neutral-500">{w.diameter}{w.width ? `x${w.width}` : ''} • Qty: {w.quantity}</p>
                       </div>
                       <div className="text-sm font-semibold">${(w.unitPrice * w.quantity).toFixed(2)}</div>
                     </div>
@@ -1031,7 +1031,7 @@ export default function CheckoutPage() {
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-neutral-500">{wheel.brand}</p>
                       <p className="text-sm font-semibold text-neutral-900 truncate">{wheel.model}</p>
-                      <p className="text-xs text-neutral-500">{wheel.size} • Qty: {wheel.quantity}</p>
+                      <p className="text-xs text-neutral-500">{wheel.diameter}{wheel.width ? `x${wheel.width}` : ''} • Qty: {wheel.quantity}</p>
                     </div>
                     <div className="text-sm font-semibold text-neutral-900">
                       ${(wheel.unitPrice * wheel.quantity).toFixed(2)}
