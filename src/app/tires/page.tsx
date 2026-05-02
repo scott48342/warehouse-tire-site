@@ -72,6 +72,8 @@ import {
 import { SeoContentBlock } from "@/components/SeoContentBlock";
 // Buying guides (2026-04-06)
 import { TireSizeGuide, TireTypesGuide, StaggeredGuide } from "@/components/BuyingGuides";
+// Local mode mobile SRP (2026-07-21)
+import { LocalMobileTireSRP } from "@/components/local/LocalMobileTireSRP";
 
 import { 
   type TreadCategory, 
@@ -3092,7 +3094,43 @@ export default async function TiresPage({
           </div>
         ) : null}
 
-        <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
+        {/* ═══════════════════════════════════════════════════════════════════════
+            LOCAL MOBILE SRP - Replaces desktop layout on mobile+local
+            Only renders: (1) local mode AND (2) mobile viewport (md:hidden)
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {isLocalMode && (
+          <LocalMobileTireSRP
+            tires={itemsPage.map(t => ({
+              partNumber: t.partNumber || t.mfgPartNumber || '',
+              brand: t.brand || '',
+              model: t.displayName || t.prettyName || t.description || '',
+              size: selectedSize || (t as any).size || '',
+              description: t.description,
+              imageUrl: t.imageUrl,
+              price: getDisplayPrice(t) || undefined,
+              cost: t.cost,
+              quantity: t.quantity,
+              badges: t.badges,
+              enrichment: t.enrichment,
+            }))}
+            tireSize={selectedSize}
+            totalCount={items.length}
+            basePath={basePath}
+            brandOptions={allBrands.map(b => ({ value: b, count: brandCountsDisplay.get(b) || 0 }))}
+            categoryOptions={treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 }))}
+            activeFilters={{
+              brands,
+              treadCategories,
+              priceMin,
+              priceMax,
+            }}
+            sort={sort}
+            vehicleInfo={hasVehicle ? { year, make, model, trim } : undefined}
+          />
+        )}
+
+        {/* Desktop/Tablet SRP Layout - Hidden on mobile when in local mode */}
+        <div className={`mt-5 grid gap-6 md:grid-cols-[280px_1fr] ${isLocalMode ? 'hidden md:grid' : ''}`}>
           {/* Filters Sidebar - Compact utility panel */}
           <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 md:block">
             {/* Package Summary - shows when building a package */}

@@ -7,3 +7,7 @@
  */
 
 export { StoreSelector, SelectedStoreBadge, StoreInfoCard } from './StoreSelector';
+
+// Mobile-optimized components for local mode
+export { LocalMobileTireSRP } from './LocalMobileTireSRP';
+export { LocalMobileCheckout } from './LocalMobileCheckout';
