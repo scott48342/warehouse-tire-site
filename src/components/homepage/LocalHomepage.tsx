@@ -121,13 +121,13 @@ function HeroSection() {
       .then(d => {
         const results = d.results || [];
         setTrims(results);
-        // Auto-submit if no trims available
-        if (results.length === 0 && year && make && model) {
-          setTimeout(() => {
-            const params = new URLSearchParams({ year, make, model });
-            router.push(`/tires?${params.toString()}`);
-          }, 300);
-        }
+        // Auto-submit after short delay (user can select trim to override)
+        const timer = setTimeout(() => {
+          const params = new URLSearchParams({ year, make, model });
+          router.push(`/tires?${params.toString()}`);
+        }, 800);
+        // Store timer so trim selection can cancel it
+        (window as any).__autoSubmitTimerDesktop = timer;
       })
       .catch(() => setTrims([]))
       .finally(() => setLoading(null));
@@ -148,14 +148,16 @@ function HeroSection() {
     router.push(`/tires?size=${width}/${aspect}R${rim}`);
   };
 
-  // Auto-submit after trim selection
+  // Auto-submit after trim selection (cancels the model auto-submit timer)
   const handleTrimChange = (selectedTrim: string) => {
     setTrim(selectedTrim);
+    // Cancel the auto-submit timer from model selection
+    if ((window as any).__autoSubmitTimerDesktop) {
+      clearTimeout((window as any).__autoSubmitTimerDesktop);
+    }
     if (selectedTrim && year && make && model) {
-      setTimeout(() => {
-        const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
-        router.push(`/tires?${params.toString()}`);
-      }, 300);
+      const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
+      router.push(`/tires?${params.toString()}`);
     }
   };
 

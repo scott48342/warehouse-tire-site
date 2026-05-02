@@ -185,7 +185,8 @@ function SearchCard() {
       .finally(() => setLoading(null));
   }, [year, make]);
 
-  // Fetch trims + auto-focus (or auto-submit if no trims)
+  // Fetch trims + auto-submit after model selection
+  // Auto-submits after 800ms, giving user time to optionally select trim
   useEffect(() => {
     if (!year || !make || !model) { setTrims([]); setTrim(""); return; }
     setLoading("trims");
@@ -194,16 +195,13 @@ function SearchCard() {
       .then(d => {
         const trimResults = d.results || [];
         setTrims(trimResults);
-        if (trimResults.length > 0) {
-          // Has trims - focus trim dropdown
-          setTimeout(() => trimRef.current?.focus(), 50);
-        } else {
-          // No trims available - auto-submit
-          setTimeout(() => {
-            const params = new URLSearchParams({ year, make, model });
-            router.push(`/tires?${params.toString()}`);
-          }, 100);
-        }
+        // Auto-submit after short delay (user can select trim to override)
+        const timer = setTimeout(() => {
+          const params = new URLSearchParams({ year, make, model });
+          router.push(`/tires?${params.toString()}`);
+        }, 800);
+        // Store timer so trim selection can cancel it
+        (window as any).__autoSubmitTimer = timer;
       })
       .finally(() => setLoading(null));
   }, [year, make, model, router]);
@@ -294,12 +292,13 @@ function SearchCard() {
               onChange={(e) => {
                 const selectedTrim = e.target.value;
                 setTrim(selectedTrim);
-                // Auto-submit after trim selection
+                // Cancel auto-submit timer and submit with trim
+                if ((window as any).__autoSubmitTimer) {
+                  clearTimeout((window as any).__autoSubmitTimer);
+                }
                 if (selectedTrim) {
-                  setTimeout(() => {
-                    const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
-                    router.push(`/tires?${params.toString()}`);
-                  }, 100);
+                  const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
+                  router.push(`/tires?${params.toString()}`);
                 }
               }} 
               disabled={!model || loading === "trims"} 
