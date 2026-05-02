@@ -471,7 +471,7 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
                   item={w} 
                   type="wheel" 
                   onUpdateQty={(sku, qty) => updateQuantity(sku, 'wheel', qty)}
-                  onRemove={removeItem}
+                  onRemove={(sku) => removeItem(sku, 'wheel')}
                 />
               ))}
               {tires.map((t) => (
@@ -480,7 +480,7 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
                   item={t} 
                   type="tire" 
                   onUpdateQty={(sku, qty) => updateQuantity(sku, 'tire', qty)}
-                  onRemove={removeItem}
+                  onRemove={(sku) => removeItem(sku, 'tire')}
                 />
               ))}
               {accessories.map((a) => (
@@ -489,7 +489,7 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
                   item={a} 
                   type="accessory" 
                   onUpdateQty={(sku, qty) => updateQuantity(sku, 'accessory', qty)}
-                  onRemove={removeItem}
+                  onRemove={(sku) => removeItem(sku, 'accessory')}
                 />
               ))}
             </div>
