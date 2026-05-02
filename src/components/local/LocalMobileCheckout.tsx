@@ -89,6 +89,11 @@ function MobileItemCard({
 }) {
   const icons = { wheel: '🛞', tire: '⚫', accessory: '🔩' };
   
+  // Get display name based on item type
+  const displayName = type === 'accessory' 
+    ? (item as CartAccessoryItem).name 
+    : `${(item as CartWheelItem | CartTireItem).brand} ${(item as CartWheelItem | CartTireItem).model}`;
+  
   return (
     <div className="flex gap-3 p-3 bg-neutral-50 rounded-xl">
       {/* Image or icon */}
@@ -96,7 +101,7 @@ function MobileItemCard({
         {item.imageUrl ? (
           <Image
             src={item.imageUrl}
-            alt={item.name}
+            alt={displayName}
             width={64}
             height={64}
             className="object-contain"
@@ -108,7 +113,7 @@ function MobileItemCard({
       
       {/* Info */}
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-semibold text-neutral-900 truncate">{item.name}</p>
+        <p className="text-sm font-semibold text-neutral-900 truncate">{displayName}</p>
         {'size' in item && item.size && (
           <p className="text-xs text-neutral-500">{item.size}</p>
         )}
