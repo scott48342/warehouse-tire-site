@@ -10,7 +10,7 @@ import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Analytics } from "@/components/Analytics";
 import { FunnelTracker } from "@/components/FunnelTracker";
-import { Chatwoot } from "@/components/Chatwoot";
+// import { Chatwoot } from "@/components/Chatwoot"; // Disabled temporarily
 import { Suspense } from "react";
 
 const inter = Inter({
@@ -84,7 +84,7 @@ export default function RootLayout({
             </DiscountProvider>
           </CartProvider>
         </ShopContextProvider>
-        <Chatwoot />
+        {/* <Chatwoot /> */}{/* Disabled temporarily */}
       </body>
     </html>
   );

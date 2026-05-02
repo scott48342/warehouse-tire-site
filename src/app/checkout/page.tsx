@@ -91,8 +91,8 @@ export default function CheckoutPage() {
   const fitmentMessaging = getFitmentMessaging(fitmentClass);
   const fitmentColors = getFitmentColors(fitmentClass);
 
-  // Form state
-  const [step, setStep] = useState<"review" | "shipping" | "payment">("review");
+  // Form state - single page checkout (no steps)
+  const [mobileOrderSummaryOpen, setMobileOrderSummaryOpen] = useState(false);
   const [shipping, setShipping] = useState({
     firstName: "",
     lastName: "",
@@ -141,7 +141,6 @@ export default function CheckoutPage() {
         if (saved) {
           const parsed = JSON.parse(saved);
           setShipping(parsed);
-          setStep("payment"); // Go directly to payment step
           setPaymentCanceled(true);
           // Clean up URL
           window.history.replaceState({}, "", "/checkout");
@@ -152,16 +151,16 @@ export default function CheckoutPage() {
     }
   }, []);
 
-  // Save shipping info when proceeding to payment
+  // Save shipping info when form is filled (for payment cancel recovery)
   useEffect(() => {
-    if (step === "payment" && shipping.firstName && shipping.email) {
+    if (shipping.firstName && shipping.email) {
       try {
         sessionStorage.setItem("checkout_shipping", JSON.stringify(shipping));
       } catch (e) {
         // Ignore storage errors
       }
     }
-  }, [step, shipping]);
+  }, [shipping]);
   
   // Default state to Michigan for local mode
   useEffect(() => {
@@ -170,19 +169,16 @@ export default function CheckoutPage() {
     }
   }, [isLocal, shipping.state]);
   
-  // Wrapper for step changes with funnel tracking
-  const goToStep = useCallback((newStep: "review" | "shipping" | "payment") => {
-    if (newStep === "shipping" && step === "review") {
+  // Track when shipping info is filled (for funnel analytics)
+  const shippingTracked = useRef(false);
+  useEffect(() => {
+    if (shippingTracked.current) return;
+    if (shipping.firstName && shipping.email && shipping.address && shipping.city && shipping.state && shipping.zip) {
+      shippingTracked.current = true;
       trackCheckoutStep2(cartTotal);
-    } else if (newStep === "payment" && step === "shipping") {
-      // Track shipping info submission
       trackAddShippingInfo(cartTotal);
-      trackAddPaymentInfo(cartTotal);
-    } else if (newStep === "payment" && step !== "payment") {
-      trackAddPaymentInfo(cartTotal);
     }
-    setStep(newStep);
-  }, [step, cartTotal]);
+  }, [shipping, cartTotal]);
   
   const [stripeError, setStripeError] = useState<string | null>(null);
   const [paypalError, setPaypalError] = useState<string | null>(null);
@@ -492,12 +488,26 @@ export default function CheckoutPage() {
     localServiceFees, cardProcessingFee, tireCount
   ]);
 
-  // Create PaymentIntent when entering payment step
+  // Check if shipping form is complete
+  const isShippingComplete = Boolean(
+    shipping.firstName && 
+    shipping.lastName && 
+    shipping.email && 
+    shipping.phone && 
+    shipping.address && 
+    shipping.city && 
+    shipping.state && 
+    shipping.zip &&
+    (!isLocal || selectedStore) // Local mode requires store selection
+  );
+
+  // Create PaymentIntent when shipping info is complete
   useEffect(() => {
-    if (step === "payment" && !clientSecret && !paymentLoading) {
+    if (isShippingComplete && !clientSecret && !paymentLoading) {
       createPaymentIntent();
+      trackAddPaymentInfo(cartTotal);
     }
-  }, [step, clientSecret, paymentLoading, createPaymentIntent]);
+  }, [isShippingComplete, clientSecret, paymentLoading, createPaymentIntent, cartTotal]);
 
   // Handle successful payment
   const handlePaymentSuccess = useCallback((paymentIntentId: string) => {
@@ -599,524 +609,359 @@ export default function CheckoutPage() {
         )}
 
         <div className="grid gap-6 lg:grid-cols-[1fr_400px]">
-          {/* Main Content */}
+          {/* Main Content - Single Page Checkout */}
           <div className="space-y-6">
-            {/* Step indicator */}
-            <div className="flex items-center gap-2 text-sm">
+            {/* Mobile Order Summary - Collapsible */}
+            <div className="lg:hidden">
               <button
-                onClick={() => setStep("review")}
-                className={`px-3 py-1 rounded-full ${
-                  step === "review" ? "bg-green-100 text-green-800 font-bold" : "text-neutral-500"
-                }`}
+                onClick={() => setMobileOrderSummaryOpen(!mobileOrderSummaryOpen)}
+                className="w-full flex items-center justify-between rounded-xl border border-neutral-200 bg-white p-4"
               >
-                1. Review
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">🛒</span>
+                  <span className="font-semibold text-neutral-900">
+                    Order Summary ({wheels.length + tires.length + accessories.length} items)
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="font-bold text-neutral-900">${totalWithTaxAndShipping.toFixed(2)}</span>
+                  <svg 
+                    className={`w-5 h-5 text-neutral-500 transition-transform ${mobileOrderSummaryOpen ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </button>
-              <span className="text-neutral-300">→</span>
-              <button
-                onClick={() => goToStep("shipping")}
-                className={`px-3 py-1 rounded-full ${
-                  step === "shipping" ? "bg-green-100 text-green-800 font-bold" : "text-neutral-500"
-                }`}
-              >
-                {isLocal ? "2. Details" : "2. Shipping"}
-              </button>
-              <span className="text-neutral-300">→</span>
-              <span
-                className={`px-3 py-1 rounded-full ${
-                  step === "payment" ? "bg-green-100 text-green-800 font-bold" : "text-neutral-400"
-                }`}
-              >
-                3. Payment
-              </span>
+              {mobileOrderSummaryOpen && (
+                <div className="mt-2 rounded-xl border border-neutral-200 bg-white p-4 space-y-3">
+                  {wheels.map((w) => (
+                    <div key={w.sku} className="flex justify-between text-sm">
+                      <span className="text-neutral-600">{w.brand} {w.model} × {w.quantity}</span>
+                      <span className="font-medium">${(w.unitPrice * w.quantity).toFixed(2)}</span>
+                    </div>
+                  ))}
+                  {tires.map((t) => (
+                    <div key={t.sku} className="flex justify-between text-sm">
+                      <span className="text-neutral-600">{t.brand} {t.model} × {t.quantity}</span>
+                      <span className="font-medium">${(t.unitPrice * t.quantity).toFixed(2)}</span>
+                    </div>
+                  ))}
+                  {accessories.map((a) => (
+                    <div key={a.sku} className="flex justify-between text-sm">
+                      <span className="text-neutral-600">{a.name} × {a.quantity}</span>
+                      <span className="font-medium">${(a.unitPrice * a.quantity).toFixed(2)}</span>
+                    </div>
+                  ))}
+                  <div className="pt-2 border-t border-neutral-100 flex justify-between font-bold">
+                    <span>Total</span>
+                    <span>${totalWithTaxAndShipping.toFixed(2)}</span>
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Step: Review */}
-            {step === "review" && (
-              <div className="space-y-4">
-                {/* Vehicle confirmation */}
-                {vehicle && (
-                  <div className={`rounded-xl p-4 ${fitmentColors.bg} border ${fitmentColors.border}`}>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-sm font-medium text-neutral-600">Fitment for</div>
-                        <div className="font-bold text-neutral-900">
-                          {vehicle.year} {vehicle.make} {vehicle.model}
-                          {vehicle.trim && ` ${vehicle.trim}`}
-                        </div>
-                      </div>
-                      <div className={`px-3 py-1 rounded-full text-sm font-bold ${fitmentColors.badge}`}>
-                        {fitmentMessaging.icon} {fitmentMessaging.shortLabel}
-                      </div>
+            {/* Vehicle Confirmation */}
+            {vehicle && (
+              <div className={`rounded-xl p-4 ${fitmentColors.bg} border ${fitmentColors.border}`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-sm font-medium text-neutral-600">Fitment for</div>
+                    <div className="font-bold text-neutral-900">
+                      {vehicle.year} {vehicle.make} {vehicle.model}
+                      {vehicle.trim && ` ${vehicle.trim}`}
                     </div>
-                    <p className={`mt-3 text-base font-semibold ${fitmentColors.text}`}>
-                      ✔ Guaranteed direct bolt-on fit — no modifications required
-                    </p>
                   </div>
-                )}
-
-                {/* Ownership Header */}
-                <div className="flex items-center gap-2 text-green-700 font-semibold">
-                  <span>✔</span>
-                  <span>Your Complete Setup</span>
+                  <div className={`px-3 py-1 rounded-full text-sm font-bold ${fitmentColors.badge}`}>
+                    {fitmentMessaging.icon} {fitmentMessaging.shortLabel}
+                  </div>
                 </div>
+              </div>
+            )}
 
-                {/* Package items */}
-                <div className="rounded-2xl border border-neutral-200 bg-white divide-y divide-neutral-100">
-                  {/* Wheels */}
-                  {wheels.map((wheel) => (
-                    <CheckoutItem 
-                      key={wheel.sku} 
-                      item={wheel} 
-                      type="wheel"
-                      onRemove={() => removeItem(wheel.sku, "wheel")}
-                      onQuantityChange={(qty) => updateQuantity(wheel.sku, "wheel", qty)}
-                    />
-                  ))}
-
-                  {/* Tires */}
-                  {tires.map((tire) => (
-                    <CheckoutItem 
-                      key={tire.sku} 
-                      item={tire} 
-                      type="tire"
-                      onRemove={() => removeItem(tire.sku, "tire")}
-                      onQuantityChange={(qty) => updateQuantity(tire.sku, "tire", qty)}
-                    />
-                  ))}
-
-                  {/* Accessories */}
-                  {accessories.map((acc) => (
-                    <CheckoutItem 
-                      key={acc.sku} 
-                      item={acc} 
-                      type="accessory"
-                      onRemove={() => removeItem(acc.sku, "accessory")}
-                      onQuantityChange={(qty) => updateQuantity(acc.sku, "accessory", qty)}
-                    />
-                  ))}
-                </div>
-                
-                {/* Road Hazard Protection - show if tires in cart (local store only) */}
-                {isLocal && tires.length > 0 && (
-                  <RoadHazardProtection 
-                    tireCount={tires.reduce((sum, t) => sum + t.quantity, 0)}
-                    tireSubtotal={validation.totals.tireSubtotal}
-                    context="checkout"
-                  />
-                )}
-
-                {/* TPMS Suggestion - show if applicable vehicle and not already in cart */}
-                <TPMSSuggestion 
-                  vehicleYear={vehicle?.year}
-                  vehicleMake={vehicle?.make}
-                  vehicleModel={vehicle?.model}
-                  context="package"
+            {/* Section 1: Contact Information */}
+            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+              <h2 className="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-green-100 text-green-700 text-sm font-bold">1</span>
+                Contact Information
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <input
+                  type="text"
+                  placeholder="First name *"
+                  value={shipping.firstName}
+                  onChange={(e) => setShipping((p) => ({ ...p, firstName: e.target.value }))}
+                  className="h-12 rounded-xl border border-neutral-200 px-4 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
                 />
-
-                {/* Warnings */}
-                {validation.warnings.length > 0 && (
-                  <div className="rounded-xl bg-amber-50 border border-amber-200 p-3 text-sm">
-                    <ul className="text-amber-800 space-y-1">
-                      {validation.warnings.map((w, i) => (
-                        <li key={i}>⚠️ {w}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* Affirm Pay Over Time Teaser */}
-                <div className="rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-7" />
-                      <div>
-                        <p className="font-bold text-neutral-900">Pay over time with Affirm</p>
-                        <p className="text-sm text-neutral-600">
-                          As low as <span className="font-bold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 12)}/mo</span> with 0% APR available
-                        </p>
-                      </div>
-                    </div>
-                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">3-12 months</span>
-                  </div>
-                </div>
-
-                {/* Trust Strip */}
-                <div className="rounded-xl bg-green-50 border border-green-200 p-3 space-y-1.5">
-                  <div className="flex items-center gap-2 text-sm text-green-800">
-                    <span className="text-green-600 font-bold">✔</span>
-                    <span>Guaranteed fitment or we make it right</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-green-800">
-                    <span className="text-green-600 font-bold">✔</span>
-                    <span>Free returns if anything isn't perfect</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-green-800">
-                    <span className="text-green-600 font-bold">✔</span>
-                    <span>Real support: <a href="tel:2483324120" className="font-semibold hover:underline">248-332-4120</a></span>
-                  </div>
-                </div>
-
-                {/* Urgency Line */}
-                <div className="flex items-center justify-center gap-2 text-sm text-amber-700 font-medium">
-                  <span>🔥</span>
-                  <span>This setup is in stock and ready to ship</span>
-                </div>
-
-                {/* Social Proof */}
-                <div className="flex items-center justify-center gap-2 text-sm text-neutral-600">
-                  <span>⭐</span>
-                  <span>4.8 average from 247 customers with similar setups</span>
-                </div>
-
-                {/* Help Line */}
-                <div className="text-center text-sm text-neutral-500">
-                  Need help before you continue? <a href="tel:2483324120" className="font-semibold text-green-700 hover:underline">Call or text 248-332-4120</a>
-                </div>
-
-                {/* Primary CTA */}
-                <button
-                  onClick={() => goToStep("shipping")}
-                  disabled={validation.errors.length > 0}
-                  className={`w-full h-14 rounded-xl font-extrabold text-white text-lg ${
-                    validation.errors.length > 0
-                      ? "bg-neutral-300 cursor-not-allowed"
-                      : "bg-green-600 hover:bg-green-700"
-                  }`}
-                >
-                  {isLocal ? "Secure Your Setup →" : "Secure Your Setup →"}
-                </button>
-                <p className="text-center text-xs text-neutral-500">Step 1 of 3 — you're almost done</p>
-                
-                {/* Post-CTA Reassurance */}
-                <p className="text-center text-xs text-neutral-400 mt-2">
-                  🔒 Secure checkout • No surprises at payment • You can review everything before placing your order
-                </p>
+                <input
+                  type="text"
+                  placeholder="Last name *"
+                  value={shipping.lastName}
+                  onChange={(e) => setShipping((p) => ({ ...p, lastName: e.target.value }))}
+                  className="h-12 rounded-xl border border-neutral-200 px-4 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                />
+                <input
+                  type="email"
+                  placeholder="Email *"
+                  value={shipping.email}
+                  onChange={(e) => setShipping((p) => ({ ...p, email: e.target.value }))}
+                  className="h-12 rounded-xl border border-neutral-200 px-4 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone *"
+                  value={shipping.phone}
+                  onChange={(e) => setShipping((p) => ({ ...p, phone: e.target.value }))}
+                  className="h-12 rounded-xl border border-neutral-200 px-4 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                />
               </div>
-            )}
+            </div>
 
-            {/* Step: Shipping */}
-            {step === "shipping" && (
-              <div className="space-y-4">
-                {/* Local Mode: Installation Location Selector */}
-                <LocalOnly>
-                  <div className="rounded-2xl border-2 border-blue-200 bg-blue-50 p-5">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xl">🔧</span>
-                      <h2 className="text-lg font-bold text-blue-900">Installation Location</h2>
-                    </div>
-                    <p className="text-sm text-blue-700 mb-4">
-                      Choose where you'd like your tires and wheels installed.
-                    </p>
-                    <StoreSelector variant="cards" showHours={true} showPhone={true} />
-                    
-                    {/* Install time indicator */}
-                    <div className="mt-4">
-                      <InstallTimeIndicator variant="banner" />
-                    </div>
-                    
-                    {!selectedStore && (
-                      <p className="text-sm text-red-600 mt-3 font-medium">
-                        ⚠️ Please select an installation location to continue.
-                      </p>
-                    )}
+            {/* Section 2: Shipping/Installation */}
+            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+              <h2 className="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-green-100 text-green-700 text-sm font-bold">2</span>
+                {isLocal ? "Installation Location" : "Shipping Address"}
+              </h2>
+              
+              {/* Local Mode: Store Selector */}
+              {isLocal && (
+                <div className="mb-4">
+                  <StoreSelector variant="cards" showHours={true} showPhone={true} />
+                  <div className="mt-3">
+                    <InstallTimeIndicator variant="badge" />
                   </div>
-                </LocalOnly>
-
-                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-                  <h2 className="text-lg font-bold text-neutral-900 mb-4">
-                    {isLocal ? "Contact & Billing Information" : "Shipping Information"}
-                  </h2>
-                  {isLocal && (
-                    <p className="text-sm text-neutral-600 mb-4">
-                      Your order will be delivered to <strong>{storeInfo?.name || "your selected store"}</strong> for professional installation.
+                  {!selectedStore && (
+                    <p className="text-sm text-amber-600 mt-2 font-medium">
+                      ⚠️ Please select an installation location
                     </p>
                   )}
+                </div>
+              )}
 
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <input
-                      type="text"
-                      placeholder="First name *"
-                      value={shipping.firstName}
-                      onChange={(e) => setShipping((p) => ({ ...p, firstName: e.target.value }))}
-                      className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last name *"
-                      value={shipping.lastName}
-                      onChange={(e) => setShipping((p) => ({ ...p, lastName: e.target.value }))}
-                      className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    />
-                    <input
-                      type="email"
-                      placeholder="Email *"
-                      value={shipping.email}
-                      onChange={(e) => setShipping((p) => ({ ...p, email: e.target.value }))}
-                      className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    />
-                    <input
-                      type="tel"
-                      placeholder="Phone *"
-                      value={shipping.phone}
-                      onChange={(e) => setShipping((p) => ({ ...p, phone: e.target.value }))}
-                      className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Address *"
-                      value={shipping.address}
-                      onChange={(e) => setShipping((p) => ({ ...p, address: e.target.value }))}
-                      className="h-11 rounded-xl border border-neutral-200 px-3 text-sm sm:col-span-2 focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Apt, suite, etc. (optional)"
-                      value={shipping.address2}
-                      onChange={(e) => setShipping((p) => ({ ...p, address2: e.target.value }))}
-                      className="h-11 rounded-xl border border-neutral-200 px-3 text-sm sm:col-span-2 focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    />
-                    <input
-                      type="text"
-                      placeholder="City *"
-                      value={shipping.city}
-                      onChange={(e) => setShipping((p) => ({ ...p, city: e.target.value }))}
-                      className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-                    />
-                    <div className="grid grid-cols-2 gap-3">
-                      <select
-                        value={shipping.state}
-                        onChange={(e) => setShipping((p) => ({ ...p, state: e.target.value }))}
-                        className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500"
+              {/* Address Form */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <input
+                  type="text"
+                  placeholder="Address *"
+                  value={shipping.address}
+                  onChange={(e) => setShipping((p) => ({ ...p, address: e.target.value }))}
+                  className="h-12 rounded-xl border border-neutral-200 px-4 text-sm sm:col-span-2 focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                />
+                <input
+                  type="text"
+                  placeholder="Apt, suite, etc. (optional)"
+                  value={shipping.address2}
+                  onChange={(e) => setShipping((p) => ({ ...p, address2: e.target.value }))}
+                  className="h-12 rounded-xl border border-neutral-200 px-4 text-sm sm:col-span-2 focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                />
+                <input
+                  type="text"
+                  placeholder="City *"
+                  value={shipping.city}
+                  onChange={(e) => setShipping((p) => ({ ...p, city: e.target.value }))}
+                  className="h-12 rounded-xl border border-neutral-200 px-4 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                />
+                <div className="grid grid-cols-2 gap-3">
+                  <select
+                    value={shipping.state}
+                    onChange={(e) => setShipping((p) => ({ ...p, state: e.target.value }))}
+                    className="h-12 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500"
+                  >
+                    <option value="">State *</option>
+                    {US_STATES.map((s) => (
+                      <option key={s.code} value={s.code}>
+                        {s.name}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="ZIP *"
+                    value={shipping.zip}
+                    onChange={(e) => setShipping((p) => ({ ...p, zip: e.target.value }))}
+                    className="h-12 rounded-xl border border-neutral-200 px-4 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                  />
+                </div>
+              </div>
+
+              {!isLocal && (
+                <label className="mt-4 flex items-center gap-2 text-sm text-neutral-700">
+                  <input
+                    type="checkbox"
+                    checked={sameAsBilling}
+                    onChange={(e) => setSameAsBilling(e.target.checked)}
+                    className="rounded border-neutral-300"
+                  />
+                  Billing address same as shipping
+                </label>
+              )}
+            </div>
+
+            {/* Section 3: Payment */}
+            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+              <h2 className="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-green-100 text-green-700 text-sm font-bold">3</span>
+                Payment
+              </h2>
+
+              {/* Form incomplete message */}
+              {!isShippingComplete && (
+                <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+                  <p>👆 Please complete your contact and {isLocal ? "installation" : "shipping"} information above to continue.</p>
+                </div>
+              )}
+
+              {/* Payment options - only show when form is complete */}
+              {isShippingComplete && (
+                <div className="space-y-4">
+                  {/* Canceled payment notice */}
+                  {paymentCanceled && (
+                    <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
+                      <p>👋 No problem! Choose a different payment option below.</p>
+                    </div>
+                  )}
+
+                  {/* Error state */}
+                  {stripeError && (
+                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+                      <p>{stripeError}</p>
+                    </div>
+                  )}
+
+                  {/* Buy Now Pay Later Options */}
+                  {totalWithTaxAndShipping >= 50 && (
+                    <div className="space-y-3">
+                      <div className="text-center">
+                        <p className="text-sm font-semibold text-neutral-700">Pay over time — 0% APR available</p>
+                        <p className="text-xs text-neutral-500">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo</p>
+                      </div>
+                      
+                      {/* Affirm */}
+                      <button
+                        onClick={() => startStripeCheckout({ forceAffirm: true })}
+                        disabled={processing}
+                        className={`w-full rounded-xl border-2 border-blue-300 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 text-left transition-all hover:border-blue-400 hover:shadow-md ${
+                          processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                        }`}
                       >
-                        <option value="">State *</option>
-                        {US_STATES.map((s) => (
-                          <option key={s.code} value={s.code}>
-                            {s.name}
-                          </option>
-                        ))}
-                      </select>
-                      <input
-                        type="text"
-                        placeholder="ZIP *"
-                        value={shipping.zip}
-                        onChange={(e) => setShipping((p) => ({ ...p, zip: e.target.value }))}
-                        className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-6" />
+                            <div>
+                              <p className="font-semibold text-neutral-900">Pay with Affirm</p>
+                              <p className="text-xs text-neutral-600">3-12 monthly payments</p>
+                            </div>
+                          </div>
+                          <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full font-medium">0% APR</span>
+                        </div>
+                      </button>
+
+                      {/* Afterpay */}
+                      <button
+                        onClick={() => startStripeCheckout()}
+                        disabled={processing}
+                        className={`w-full rounded-xl border-2 border-teal-300 bg-gradient-to-r from-teal-50 to-emerald-50 p-4 text-left transition-all hover:border-teal-400 hover:shadow-md ${
+                          processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <img src="https://static.afterpay.com/app/icon-128x128.png" alt="Afterpay" className="h-6 w-6" />
+                            <div>
+                              <p className="font-semibold text-neutral-900">Pay with Afterpay</p>
+                              <p className="text-xs text-neutral-600">4 interest-free payments</p>
+                            </div>
+                          </div>
+                          <span className="text-xs bg-teal-600 text-white px-2 py-1 rounded-full font-medium">4 payments</span>
+                        </div>
+                      </button>
+
+                      {/* Klarna */}
+                      <button
+                        onClick={() => startStripeCheckout()}
+                        disabled={processing}
+                        className={`w-full rounded-xl border-2 border-pink-300 bg-gradient-to-r from-pink-50 to-rose-50 p-4 text-left transition-all hover:border-pink-400 hover:shadow-md ${
+                          processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <img src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg" alt="Klarna" className="h-6" />
+                            <div>
+                              <p className="font-semibold text-neutral-900">Pay with Klarna</p>
+                              <p className="text-xs text-neutral-600">Flexible payment options</p>
+                            </div>
+                          </div>
+                          <span className="text-xs bg-pink-600 text-white px-2 py-1 rounded-full font-medium">Pay later</span>
+                        </div>
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Divider */}
+                  <div className="flex items-center gap-4 py-2">
+                    <div className="flex-1 border-t border-neutral-200"></div>
+                    <span className="text-sm text-neutral-400 font-medium">or pay with card</span>
+                    <div className="flex-1 border-t border-neutral-200"></div>
+                  </div>
+
+                  {/* Card Payment */}
+                  <div className="space-y-4">
+                    {/* Loading state */}
+                    {paymentLoading && !clientSecret && (
+                      <div className="flex items-center justify-center py-8">
+                        <div className="flex items-center gap-3">
+                          <svg className="animate-spin h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          <span className="text-neutral-600">Loading payment form...</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Stripe Payment Element */}
+                    {clientSecret && (
+                      <StripePaymentElement
+                        clientSecret={clientSecret}
+                        onSuccess={handlePaymentSuccess}
+                        onError={handlePaymentError}
+                        onProcessing={handlePaymentProcessing}
+                        totalAmount={totalWithTaxAndShipping}
+                        returnUrl={`${typeof window !== 'undefined' ? window.location.origin : ''}/checkout/success?quote_id=${quoteId}`}
                       />
+                    )}
+
+                    {/* Card logos */}
+                    <div className="flex items-center justify-center gap-3 pt-2">
+                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-5 object-contain opacity-60" />
+                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-5 object-contain opacity-60" />
+                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-5 object-contain opacity-60" />
                     </div>
                   </div>
 
-                  {!isLocal && (
-                    <label className="mt-4 flex items-center gap-2 text-sm text-neutral-700">
-                      <input
-                        type="checkbox"
-                        checked={sameAsBilling}
-                        onChange={(e) => setSameAsBilling(e.target.checked)}
-                        className="rounded border-neutral-300"
-                      />
-                      Billing address same as shipping
-                    </label>
-                  )}
-                </div>
-
-                {/* Trust Reminder */}
-                <div className="flex items-center justify-center gap-4 text-xs text-neutral-500">
-                  <span>✔ Guaranteed fitment</span>
-                  <span>•</span>
-                  <span>✔ Free returns</span>
-                  <span>•</span>
-                  <span>✔ Secure checkout</span>
-                </div>
-
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setStep("review")}
-                    className="h-12 px-6 rounded-xl border border-neutral-200 bg-white font-bold text-neutral-900 hover:bg-neutral-50"
-                  >
-                    Back
-                  </button>
-                  <button
-                    onClick={() => goToStep("payment")}
-                    disabled={isLocal && !selectedStore}
-                    className={`flex-1 h-14 rounded-xl font-extrabold text-white text-lg ${
-                      isLocal && !selectedStore
-                        ? "bg-neutral-300 cursor-not-allowed"
-                        : "bg-green-600 hover:bg-green-700"
-                    }`}
-                  >
-                    {isLocal && !selectedStore ? "Select Install Location" : "Secure Your Setup →"}
-                  </button>
-                </div>
-                <p className="text-center text-xs text-neutral-500">Step 2 of 3 — almost there!</p>
-              </div>
-            )}
-
-            {/* Step: Payment */}
-            {step === "payment" && (
-              <div className="space-y-4">
-                {/* Canceled payment notice */}
-                {paymentCanceled && (
-                  <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
-                    <p>👋 No problem! Choose a different payment option below.</p>
-                  </div>
-                )}
-
-                {/* Error state */}
-                {stripeError && (
-                  <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
-                    <p>{stripeError}</p>
-                  </div>
-                )}
-
-                {/* ══════════════════════════════════════════════════════════════
-                    BUY NOW PAY LATER OPTIONS - Prominent CTAs
-                    ══════════════════════════════════════════════════════════════ */}
-                {totalWithTaxAndShipping >= 50 && (
-                  <div className="space-y-3">
-                    <div className="text-center">
-                      <p className="text-sm font-semibold text-neutral-700">Pay over time — 0% APR available</p>
-                      <p className="text-xs text-neutral-500">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo</p>
+                  {/* Trust badges */}
+                  <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 pt-2">
+                    <div className="flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                      <span>Secure checkout</span>
                     </div>
-                    
-                    {/* Affirm */}
-                    <button
-                      onClick={() => startStripeCheckout({ forceAffirm: true })}
-                      disabled={processing}
-                      className={`w-full rounded-xl border-2 border-blue-300 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 text-left transition-all hover:border-blue-400 hover:shadow-md ${
-                        processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-6" />
-                          <div>
-                            <p className="font-semibold text-neutral-900">Pay with Affirm</p>
-                            <p className="text-xs text-neutral-600">3-12 monthly payments</p>
-                          </div>
-                        </div>
-                        <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full font-medium">0% APR</span>
-                      </div>
-                    </button>
-
-                    {/* Afterpay */}
-                    <button
-                      onClick={() => startStripeCheckout()}
-                      disabled={processing}
-                      className={`w-full rounded-xl border-2 border-teal-300 bg-gradient-to-r from-teal-50 to-emerald-50 p-4 text-left transition-all hover:border-teal-400 hover:shadow-md ${
-                        processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <img src="https://static.afterpay.com/app/icon-128x128.png" alt="Afterpay" className="h-6 w-6" />
-                          <div>
-                            <p className="font-semibold text-neutral-900">Pay with Afterpay</p>
-                            <p className="text-xs text-neutral-600">4 interest-free payments</p>
-                          </div>
-                        </div>
-                        <span className="text-xs bg-teal-600 text-white px-2 py-1 rounded-full font-medium">4 payments</span>
-                      </div>
-                    </button>
-
-                    {/* Klarna */}
-                    <button
-                      onClick={() => startStripeCheckout()}
-                      disabled={processing}
-                      className={`w-full rounded-xl border-2 border-pink-300 bg-gradient-to-r from-pink-50 to-rose-50 p-4 text-left transition-all hover:border-pink-400 hover:shadow-md ${
-                        processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <img src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg" alt="Klarna" className="h-6" />
-                          <div>
-                            <p className="font-semibold text-neutral-900">Pay with Klarna</p>
-                            <p className="text-xs text-neutral-600">Flexible payment options</p>
-                          </div>
-                        </div>
-                        <span className="text-xs bg-pink-600 text-white px-2 py-1 rounded-full font-medium">Pay later</span>
-                      </div>
-                    </button>
-                  </div>
-                )}
-
-                {/* Divider */}
-                <div className="flex items-center gap-4 py-2">
-                  <div className="flex-1 border-t border-neutral-200"></div>
-                  <span className="text-sm text-neutral-400 font-medium">or pay with card</span>
-                  <div className="flex-1 border-t border-neutral-200"></div>
-                </div>
-
-                {/* ══════════════════════════════════════════════════════════════
-                    CARD PAYMENT - Embedded on-site form
-                    ══════════════════════════════════════════════════════════════ */}
-                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-lg">💳</span>
-                    <h2 className="text-lg font-bold text-neutral-900">Pay with Card</h2>
-                  </div>
-
-                  {/* Loading state while creating PaymentIntent */}
-                  {paymentLoading && !clientSecret && (
-                    <div className="flex items-center justify-center py-8">
-                      <div className="flex items-center gap-3">
-                        <svg className="animate-spin h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        <span className="text-neutral-600">Loading...</span>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Embedded Payment Element - Card only */}
-                  {clientSecret && (
-                    <StripePaymentElement
-                      clientSecret={clientSecret}
-                      onSuccess={handlePaymentSuccess}
-                      onError={handlePaymentError}
-                      onProcessing={handlePaymentProcessing}
-                      totalAmount={totalWithTaxAndShipping}
-                      returnUrl={`${typeof window !== 'undefined' ? window.location.origin : ''}/checkout/success?quote_id=${quoteId}`}
-                    />
-                  )}
-
-                  {/* Card logos */}
-                  <div className="flex items-center justify-center gap-3 mt-4 pt-4 border-t border-neutral-100">
-                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-5 object-contain opacity-60" />
-                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-5 object-contain opacity-60" />
-                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-5 object-contain opacity-60" />
+                    <span>•</span>
+                    <span>256-bit encryption</span>
                   </div>
                 </div>
+              )}
+            </div>
 
-                {/* Trust badges */}
-                <div className="flex items-center justify-center gap-4 text-xs text-neutral-500">
-                  <div className="flex items-center gap-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                    <span>Secure checkout</span>
-                  </div>
-                  <span>•</span>
-                  <span>256-bit encryption</span>
-                </div>
-
-                {/* Back button */}
-                <button
-                  onClick={() => {
-                    setStep("shipping");
-                    // Reset payment state when going back
-                    setClientSecret(null);
-                    setPaymentIntentId(null);
-                    setQuoteId(null);
-                    setStripeError(null);
-                  }}
-                  disabled={processing}
-                  className="w-full h-12 rounded-xl border border-neutral-200 bg-white font-bold text-neutral-900 hover:bg-neutral-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  ← Back to {isLocal ? "Details" : "Shipping"}
-                </button>
-              </div>
-            )}
+            {/* Help Line */}
+            <div className="text-center text-sm text-neutral-500">
+              Need help? <a href="tel:2483324120" className="font-semibold text-green-700 hover:underline">Call or text 248-332-4120</a>
+            </div>
           </div>
 
           {/* Order Summary Sidebar */}
