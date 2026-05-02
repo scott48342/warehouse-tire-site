@@ -83,9 +83,13 @@ function StepIndicator({ currentStep }: { currentStep: CheckoutStep }) {
 function MobileItemCard({
   item,
   type,
+  onUpdateQty,
+  onRemove,
 }: {
   item: CartWheelItem | CartTireItem | CartAccessoryItem;
   type: 'wheel' | 'tire' | 'accessory';
+  onUpdateQty: (sku: string, qty: number) => void;
+  onRemove: (sku: string) => void;
 }) {
   const icons = { wheel: '🛞', tire: '⚫', accessory: '🔩' };
   
@@ -94,35 +98,59 @@ function MobileItemCard({
     ? (item as CartAccessoryItem).name 
     : `${(item as CartWheelItem | CartTireItem).brand} ${(item as CartWheelItem | CartTireItem).model}`;
   
+  const sku = item.sku;
+  const qty = item.quantity;
+  
   return (
-    <div className="flex gap-3 p-3 bg-neutral-50 rounded-xl">
-      {/* Image or icon */}
-      <div className="w-16 h-16 flex-shrink-0 rounded-lg bg-white flex items-center justify-center overflow-hidden">
-        {item.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={item.imageUrl}
-            alt={displayName}
-            loading="lazy"
-            className="w-16 h-16 object-contain"
-          />
-        ) : (
-          <span className="text-2xl">{icons[type]}</span>
-        )}
+    <div className="bg-neutral-50 rounded-xl p-3">
+      <div className="flex gap-3">
+        {/* Image or icon */}
+        <div className="w-16 h-16 flex-shrink-0 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+          {item.imageUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={item.imageUrl}
+              alt={displayName}
+              loading="lazy"
+              className="w-16 h-16 object-contain"
+            />
+          ) : (
+            <span className="text-2xl">{icons[type]}</span>
+          )}
+        </div>
+        
+        {/* Info */}
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-semibold text-neutral-900 truncate">{displayName}</p>
+          {'size' in item && item.size && (
+            <p className="text-xs text-neutral-500">{item.size}</p>
+          )}
+          <p className="text-sm font-bold text-neutral-900 mt-1">
+            ${(item.unitPrice || 0).toFixed(2)} each
+          </p>
+        </div>
       </div>
       
-      {/* Info */}
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-semibold text-neutral-900 truncate">{displayName}</p>
-        {'size' in item && item.size && (
-          <p className="text-xs text-neutral-500">{item.size}</p>
-        )}
-        <div className="flex items-center justify-between mt-1">
-          <span className="text-xs text-neutral-500">Qty: {item.quantity}</span>
-          <span className="text-sm font-bold text-neutral-900">
-            ${((item.unitPrice || 0) * item.quantity).toFixed(2)}
-          </span>
+      {/* Qty controls and total */}
+      <div className="flex items-center justify-between mt-3 pt-3 border-t border-neutral-200">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => qty > 1 ? onUpdateQty(sku, qty - 1) : onRemove(sku)}
+            className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100"
+          >
+            {qty === 1 ? '🗑️' : '−'}
+          </button>
+          <span className="w-8 text-center font-bold text-base">{qty}</span>
+          <button
+            onClick={() => onUpdateQty(sku, qty + 1)}
+            className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100"
+          >
+            +
+          </button>
         </div>
+        <span className="text-base font-bold text-neutral-900">
+          ${((item.unitPrice || 0) * qty).toFixed(2)}
+        </span>
       </div>
     </div>
   );
@@ -258,6 +286,8 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
     hasWheels,
     hasTires,
     clearCart,
+    updateQuantity,
+    removeItem,
   } = useCart();
   
   const [step, setStep] = useState<CheckoutStep>('review');
@@ -434,10 +464,34 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
             )}
             
             {/* Items */}
-            <div className="space-y-2">
-              {wheels.map((w) => <MobileItemCard key={w.sku} item={w} type="wheel" />)}
-              {tires.map((t) => <MobileItemCard key={t.sku} item={t} type="tire" />)}
-              {accessories.map((a) => <MobileItemCard key={a.sku} item={a} type="accessory" />)}
+            <div className="space-y-3">
+              {wheels.map((w) => (
+                <MobileItemCard 
+                  key={w.sku} 
+                  item={w} 
+                  type="wheel" 
+                  onUpdateQty={updateQuantity}
+                  onRemove={removeItem}
+                />
+              ))}
+              {tires.map((t) => (
+                <MobileItemCard 
+                  key={t.sku} 
+                  item={t} 
+                  type="tire" 
+                  onUpdateQty={updateQuantity}
+                  onRemove={removeItem}
+                />
+              ))}
+              {accessories.map((a) => (
+                <MobileItemCard 
+                  key={a.sku} 
+                  item={a} 
+                  type="accessory" 
+                  onUpdateQty={updateQuantity}
+                  onRemove={removeItem}
+                />
+              ))}
             </div>
             
             {/* Road hazard option */}

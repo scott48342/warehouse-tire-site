@@ -196,39 +196,37 @@ export function Header() {
 
         {/* Mobile: use tap-based modals via the action bar / simple buttons below */}
         <div className="w-full md:hidden">
-          <div className="grid grid-cols-5 gap-2">
-            <button
-              type="button"
-              onClick={() => openLauncher("tires")}
-              className="h-11 rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
-            >
-              Tires
-            </button>
-            <button
-              type="button"
-              onClick={() => openLauncher("wheels")}
-              className="h-11 rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
-            >
-              Wheels
-            </button>
-            <Link
-              href="/financing"
-              className="flex h-11 items-center justify-center rounded-xl border border-blue-300 bg-blue-50 px-2 text-sm font-extrabold text-blue-700"
-            >
-              💳
-            </Link>
-            <Link
-              href="/gallery"
-              className="flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
-            >
-              📸
-            </Link>
-            <Link
-              href="/lifted"
-              className="flex h-11 items-center justify-center rounded-xl border border-amber-300 bg-amber-50 px-2 text-sm font-extrabold text-amber-700"
-            >
-              Lifted
-            </Link>
+          <div className="flex items-center gap-2">
+            <div className="grid grid-cols-4 gap-2 flex-1">
+              <button
+                type="button"
+                onClick={() => openLauncher("tires")}
+                className="h-11 rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
+              >
+                Tires
+              </button>
+              <button
+                type="button"
+                onClick={() => openLauncher("wheels")}
+                className="h-11 rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
+              >
+                Wheels
+              </button>
+              <Link
+                href="/financing"
+                className="flex h-11 items-center justify-center rounded-xl border border-blue-300 bg-blue-50 px-2 text-sm font-extrabold text-blue-700"
+              >
+                💳
+              </Link>
+              <Link
+                href="/lifted"
+                className="flex h-11 items-center justify-center rounded-xl border border-amber-300 bg-amber-50 px-2 text-sm font-extrabold text-amber-700"
+              >
+                Lifted
+              </Link>
+            </div>
+            {/* Cart icon for mobile */}
+            <CartIcon />
           </div>
         </div>
 
