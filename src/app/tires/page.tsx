@@ -892,9 +892,6 @@ export default async function TiresPage({
   // Support ?mode=local query param for dev/testing (server-side check)
   const modeOverride = Array.isArray(sp.mode) ? sp.mode[0] : sp.mode;
   const isLocalMode = modeOverride === 'local' || shopContext.mode === 'local';
-  
-  // DEBUG: Log mode detection (remove after testing)
-  console.log('[TIRES PAGE] Host:', headersList.get('host'), 'Mode:', shopContext.mode, 'isLocal:', isLocalMode);
   const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
   const sort = (sortRaw ?? "price_asc").trim();
   const pageRaw = Array.isArray(sp.page) ? sp.page[0] : sp.page;
@@ -3096,11 +3093,6 @@ export default async function TiresPage({
             </div>
           </div>
         ) : null}
-
-        {/* DEBUG: Visible mode indicator - REMOVE AFTER TESTING */}
-        <div className="bg-yellow-400 text-black p-2 text-xs font-mono mb-2">
-          DEBUG: host={shopContext.host} | mode={shopContext.mode} | isLocal={String(isLocalMode)} | detectedFrom={shopContext.detectedFrom}
-        </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════
             LOCAL MOBILE SRP - Replaces desktop layout on mobile+local

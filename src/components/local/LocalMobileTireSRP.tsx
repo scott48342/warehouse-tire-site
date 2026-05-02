@@ -566,30 +566,9 @@ export function LocalMobileTireSRP({
   const [filterOpen, setFilterOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
   
-  // DEBUG: ALWAYS show this banner (no responsive hiding)
-  // This will confirm if the component is even mounting
-  return (
-    <div>
-      <div className="bg-purple-600 text-white p-4 text-center font-bold text-lg">
-        🟣 LocalMobileTireSRP MOUNTED | isLocal={String(isLocal)} | tires={tires.length}
-      </div>
-      {!isLocal ? (
-        <div className="bg-red-500 text-white p-4 text-center font-bold">
-          ❌ Would be blocked - isLocal is false
-        </div>
-      ) : (
-        <div className="bg-green-500 text-white p-4 text-center font-bold">
-          ✅ Would render mobile SRP - isLocal is true
-        </div>
-      )}
-    </div>
-  );
-  
-  /* ORIGINAL CODE DISABLED FOR DEBUG
   // Only render on mobile + local mode
   // Desktop/tablet and national mode should use the existing SRP
   if (!isLocal) return null;
-  */
   
   const activeFilterCount = 
     activeFilters.brands.length + 
