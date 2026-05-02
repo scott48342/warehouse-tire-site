@@ -18,7 +18,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+// Image import removed - using native img for tireweb.tirelibrary.com compatibility
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from '@/lib/cart/CartContext';
 import { useShopContext, useIsLocalMode } from '@/contexts/ShopContextProvider';
 import { STORES, type LocalStore } from '@/lib/shopContext';
@@ -99,12 +99,12 @@ function MobileItemCard({
       {/* Image or icon */}
       <div className="w-16 h-16 flex-shrink-0 rounded-lg bg-white flex items-center justify-center overflow-hidden">
         {item.imageUrl ? (
-          <Image
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
             src={item.imageUrl}
             alt={displayName}
-            width={64}
-            height={64}
-            className="object-contain"
+            loading="lazy"
+            className="w-16 h-16 object-contain"
           />
         ) : (
           <span className="text-2xl">{icons[type]}</span>
@@ -408,7 +408,7 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
   }
   
   return (
-    <div className="md:hidden min-h-screen bg-neutral-50 pb-24">
+    <div className="md:hidden min-h-screen bg-neutral-50 pb-32">
       {/* Header */}
       <div className="bg-white border-b border-neutral-200 px-4 py-4">
         <h1 className="text-2xl font-extrabold text-neutral-900 text-center">Checkout</h1>
@@ -713,7 +713,7 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
       </div>
       
       {/* Sticky bottom CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 p-4 md:hidden">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 p-4 md:hidden z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
         {step === 'review' && (
           <button
             onClick={() => setStep('details')}
