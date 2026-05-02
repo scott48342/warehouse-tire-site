@@ -566,9 +566,19 @@ export function LocalMobileTireSRP({
   const [filterOpen, setFilterOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
   
+  // DEBUG: Log client-side detection
+  console.log('[LocalMobileTireSRP] isLocal:', isLocal);
+  
   // Only render on mobile + local mode
   // Desktop/tablet and national mode should use the existing SRP
-  if (!isLocal) return null;
+  if (!isLocal) {
+    // DEBUG: Show why component isn't rendering
+    return (
+      <div className="md:hidden bg-red-500 text-white p-4 text-center font-bold">
+        ❌ LocalMobileTireSRP: isLocal={String(isLocal)} - Component blocked by client check
+      </div>
+    );
+  }
   
   const activeFilterCount = 
     activeFilters.brands.length + 
