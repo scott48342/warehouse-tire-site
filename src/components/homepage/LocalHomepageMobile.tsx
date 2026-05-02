@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -149,36 +149,64 @@ function SearchCard() {
   const [width, setWidth] = useState("");
   const [aspect, setAspect] = useState("");
   const [rim, setRim] = useState("");
+  
+  // Refs for auto-advance
+  const makeRef = useRef<HTMLSelectElement>(null);
+  const modelRef = useRef<HTMLSelectElement>(null);
+  const trimRef = useRef<HTMLSelectElement>(null);
+  const aspectRef = useRef<HTMLSelectElement>(null);
+  const rimRef = useRef<HTMLSelectElement>(null);
 
-  // Fetch makes
+  // Fetch makes + auto-focus
   useEffect(() => {
     if (!year) { setMakes([]); setMake(""); return; }
     setLoading("makes");
     fetch(`/api/vehicles/makes?year=${year}`)
       .then(r => r.json())
-      .then(d => setMakes(d.results || []))
+      .then(d => {
+        setMakes(d.results || []);
+        // Auto-focus make dropdown after data loads
+        setTimeout(() => makeRef.current?.focus(), 50);
+      })
       .finally(() => setLoading(null));
   }, [year]);
 
-  // Fetch models
+  // Fetch models + auto-focus
   useEffect(() => {
     if (!year || !make) { setModels([]); setModel(""); return; }
     setLoading("models");
     fetch(`/api/vehicles/models?year=${year}&make=${encodeURIComponent(make)}`)
       .then(r => r.json())
-      .then(d => setModels(d.results || []))
+      .then(d => {
+        setModels(d.results || []);
+        // Auto-focus model dropdown after data loads
+        setTimeout(() => modelRef.current?.focus(), 50);
+      })
       .finally(() => setLoading(null));
   }, [year, make]);
 
-  // Fetch trims
+  // Fetch trims + auto-focus (or auto-submit if no trims)
   useEffect(() => {
     if (!year || !make || !model) { setTrims([]); setTrim(""); return; }
     setLoading("trims");
     fetch(`/api/vehicles/trims?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`)
       .then(r => r.json())
-      .then(d => setTrims(d.results || []))
+      .then(d => {
+        const trimResults = d.results || [];
+        setTrims(trimResults);
+        if (trimResults.length > 0) {
+          // Has trims - focus trim dropdown
+          setTimeout(() => trimRef.current?.focus(), 50);
+        } else {
+          // No trims available - auto-submit
+          setTimeout(() => {
+            const params = new URLSearchParams({ year, make, model });
+            router.push(`/tires?${params.toString()}`);
+          }, 100);
+        }
+      })
       .finally(() => setLoading(null));
-  }, [year, make, model]);
+  }, [year, make, model, router]);
 
   const canSearchVehicle = year && make && model;
   const canSearchSize = width && aspect && rim;
@@ -229,22 +257,54 @@ function SearchCard() {
         {/* Vehicle Search */}
         {tab === "vehicle" && (
           <div className="space-y-3">
-            <select value={year} onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); setTrim(""); }} className={selectClass}>
+            <select 
+              value={year} 
+              onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); setTrim(""); }} 
+              className={selectClass}
+            >
               <option value="">Year</option>
               {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
             </select>
 
-            <select value={make} onChange={(e) => { setMake(e.target.value); setModel(""); setTrim(""); }} disabled={!year || loading === "makes"} className={selectClass}>
+            <select 
+              ref={makeRef}
+              value={make} 
+              onChange={(e) => { setMake(e.target.value); setModel(""); setTrim(""); }} 
+              disabled={!year || loading === "makes"} 
+              className={selectClass}
+            >
               <option value="">{loading === "makes" ? "Loading..." : "Make"}</option>
               {makes.map(m => <option key={m} value={m}>{m}</option>)}
             </select>
 
-            <select value={model} onChange={(e) => { setModel(e.target.value); setTrim(""); }} disabled={!make || loading === "models"} className={selectClass}>
+            <select 
+              ref={modelRef}
+              value={model} 
+              onChange={(e) => { setModel(e.target.value); setTrim(""); }} 
+              disabled={!make || loading === "models"} 
+              className={selectClass}
+            >
               <option value="">{loading === "models" ? "Loading..." : "Model"}</option>
               {models.map(m => <option key={m} value={m}>{m}</option>)}
             </select>
 
-            <select value={trim} onChange={(e) => setTrim(e.target.value)} disabled={!model || loading === "trims"} className={selectClass}>
+            <select 
+              ref={trimRef}
+              value={trim} 
+              onChange={(e) => {
+                const selectedTrim = e.target.value;
+                setTrim(selectedTrim);
+                // Auto-submit after trim selection
+                if (selectedTrim) {
+                  setTimeout(() => {
+                    const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
+                    router.push(`/tires?${params.toString()}`);
+                  }, 100);
+                }
+              }} 
+              disabled={!model || loading === "trims"} 
+              className={selectClass}
+            >
               <option value="">{loading === "trims" ? "Loading..." : "Trim (Optional)"}</option>
               {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
             </select>
@@ -258,17 +318,52 @@ function SearchCard() {
         {/* Size Search */}
         {tab === "size" && (
           <div className="space-y-3">
-            <select value={width} onChange={(e) => setWidth(e.target.value)} className={selectClass}>
+            <select 
+              value={width} 
+              onChange={(e) => {
+                setWidth(e.target.value);
+                // Auto-advance to aspect ratio
+                if (e.target.value) {
+                  setTimeout(() => aspectRef.current?.focus(), 50);
+                }
+              }} 
+              className={selectClass}
+            >
               <option value="">Width</option>
               {WIDTHS.map(w => <option key={w} value={w}>{w}</option>)}
             </select>
 
-            <select value={aspect} onChange={(e) => setAspect(e.target.value)} className={selectClass}>
+            <select 
+              ref={aspectRef}
+              value={aspect} 
+              onChange={(e) => {
+                setAspect(e.target.value);
+                // Auto-advance to rim size
+                if (e.target.value) {
+                  setTimeout(() => rimRef.current?.focus(), 50);
+                }
+              }} 
+              className={selectClass}
+            >
               <option value="">Aspect Ratio</option>
               {ASPECTS.map(a => <option key={a} value={a}>{a}</option>)}
             </select>
 
-            <select value={rim} onChange={(e) => setRim(e.target.value)} className={selectClass}>
+            <select 
+              ref={rimRef}
+              value={rim} 
+              onChange={(e) => {
+                const selectedRim = e.target.value;
+                setRim(selectedRim);
+                // Auto-submit after rim selection
+                if (selectedRim && width && aspect) {
+                  setTimeout(() => {
+                    router.push(`/tires?size=${width}/${aspect}R${selectedRim}`);
+                  }, 100);
+                }
+              }} 
+              className={selectClass}
+            >
               <option value="">Rim Size</option>
               {RIMS.map(r => <option key={r} value={r}>{r}</option>)}
             </select>
