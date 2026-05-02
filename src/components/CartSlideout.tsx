@@ -18,7 +18,7 @@ import { CartCoAdditions } from "./CartCoAdditions";
 import { CartSmartTireUpsell } from "./SmartTireUpsell";
 import { FinancingBadge } from "./FinancingBadge";
 import { useShopContext } from "@/contexts/ShopContextProvider";
-import { getOutTheDoorTotal } from "@/lib/localPricing";
+import { getOutTheDoorBreakdown } from "@/lib/localPricing";
 import { InstallTimeIndicator } from "./InstallTimeIndicator";
 
 const FITMENT_LABELS = {
@@ -255,9 +255,19 @@ export function CartSlideout() {
     .filter((i): i is CartTireItem => i.type === "tire")
     .reduce((sum, t) => sum + t.unitPrice * t.quantity, 0);
   
-  // For local mode, calculate out-the-door total (includes install, tax, recycling)
-  const localOutTheDoorTotal = isLocal && tireCount > 0 
-    ? getOutTheDoorTotal(tireSubtotal / tireCount, tireCount) + (subtotal - tireSubtotal)
+  // Calculate wheel subtotal (no install fees for wheel-only)
+  const wheelSubtotal = items
+    .filter((i): i is CartWheelItem => i.type === "wheel")
+    .reduce((sum, w) => sum + w.unitPrice * w.quantity, 0);
+  
+  // For local mode, get full price breakdown
+  const localBreakdown = isLocal && tireCount > 0 
+    ? getOutTheDoorBreakdown(tireSubtotal / tireCount, tireCount)
+    : null;
+  
+  // Total for local: tire OTD + wheels (taxed but no install fee)
+  const localOutTheDoorTotal = localBreakdown 
+    ? localBreakdown.outTheDoorTotal + wheelSubtotal * 1.06 // wheels taxed at 6%
     : null;
   
   // Shipping estimation (only used for national site)
@@ -515,21 +525,6 @@ export function CartSlideout() {
 
         {/* Actions */}
         <div className="border-t border-neutral-200 bg-white px-5 py-4 space-y-3">
-          {/* Local mode: Show out-the-door pricing */}
-          {isLocal && items.length > 0 && tireCount > 0 && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-3 space-y-1">
-              <div className="flex items-start gap-2 text-green-700 text-sm font-semibold">
-                <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Includes install, tax & recycling</span>
-              </div>
-              <div className="text-xs text-green-600 pl-6">
-                Professional mount, balance & installation
-              </div>
-            </div>
-          )}
-
           {/* National mode: Shipping estimate */}
           {!isLocal && items.length > 0 && (
             <div className="space-y-2">
@@ -564,32 +559,84 @@ export function CartSlideout() {
 
           {/* Totals */}
           <div className="space-y-1 pt-2 border-t border-neutral-100">
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-neutral-600">Subtotal</span>
-              <span className="text-neutral-900">${subtotal.toFixed(2)}</span>
-            </div>
-            {/* National: Show shipping line */}
-            {!isLocal && isValidZip && !isFreeShipping && shippingEstimate && (
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-neutral-600">Shipping (est.)</span>
-                <span className="text-neutral-900">{shippingEstimate.displayAmount}</span>
-              </div>
+            {/* Local mode: Full breakdown */}
+            {isLocal && localBreakdown ? (
+              <>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-neutral-600">Tires</span>
+                  <span className="text-neutral-900">${localBreakdown.tiresTotal.toFixed(2)}</span>
+                </div>
+                {wheelSubtotal > 0 && (
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-neutral-600">Wheels</span>
+                    <span className="text-neutral-900">${wheelSubtotal.toFixed(2)}</span>
+                  </div>
+                )}
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-neutral-600">Installation ({tireCount} tires)</span>
+                  <span className="text-neutral-900">${localBreakdown.installTotal.toFixed(2)}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-neutral-600">Tire Recycling</span>
+                  <span className="text-neutral-900">${localBreakdown.recyclingTotal.toFixed(2)}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-neutral-600">Tax (6%)</span>
+                  <span className="text-neutral-900">${(localBreakdown.taxTotal + (wheelSubtotal * 0.06)).toFixed(2)}</span>
+                </div>
+                <div className="flex items-center justify-between text-lg pt-2 border-t border-neutral-100 mt-2">
+                  <span className="font-bold text-green-700">Out the Door</span>
+                  <span className="font-extrabold text-green-700 text-xl">
+                    ${localOutTheDoorTotal?.toFixed(2)}
+                  </span>
+                </div>
+              </>
+            ) : isLocal ? (
+              // Local mode but no tires (wheels only or empty)
+              <>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-neutral-600">Subtotal</span>
+                  <span className="text-neutral-900">${subtotal.toFixed(2)}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-neutral-600">Tax (6%)</span>
+                  <span className="text-neutral-900">${(subtotal * 0.06).toFixed(2)}</span>
+                </div>
+                <div className="flex items-center justify-between text-lg pt-2 border-t border-neutral-100 mt-2">
+                  <span className="font-bold text-green-700">Total</span>
+                  <span className="font-extrabold text-green-700 text-xl">
+                    ${(subtotal * 1.06).toFixed(2)}
+                  </span>
+                </div>
+              </>
+            ) : (
+              // National mode
+              <>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-neutral-600">Subtotal</span>
+                  <span className="text-neutral-900">${subtotal.toFixed(2)}</span>
+                </div>
+                {isValidZip && !isFreeShipping && shippingEstimate && (
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-neutral-600">Shipping (est.)</span>
+                    <span className="text-neutral-900">{shippingEstimate.displayAmount}</span>
+                  </div>
+                )}
+                <div className="flex items-center justify-between text-lg pt-1">
+                  <span className="font-semibold text-neutral-700">
+                    {isValidZip ? "Est. Total" : "Subtotal"}
+                  </span>
+                  <span className="font-extrabold text-neutral-900">
+                    ${isValidZip ? estimatedTotal.toFixed(2) : subtotal.toFixed(2)}
+                  </span>
+                </div>
+              </>
             )}
-            <div className="flex items-center justify-between text-lg pt-1">
-              <span className="font-semibold text-neutral-700">
-                {isLocal ? "Out the Door" : (isValidZip ? "Est. Total" : "Subtotal")}
-              </span>
-              <span className="font-extrabold text-neutral-900">
-                ${isLocal && localOutTheDoorTotal 
-                  ? localOutTheDoorTotal.toFixed(2) 
-                  : (isValidZip ? estimatedTotal.toFixed(2) : subtotal.toFixed(2))}
-              </span>
-            </div>
             
             {/* Affirm financing messaging */}
             {subtotal >= 50 && (
               <div className="pt-2">
-                <FinancingBadge price={subtotal} variant="inline" />
+                <FinancingBadge price={isLocal && localOutTheDoorTotal ? localOutTheDoorTotal : subtotal} variant="inline" />
               </div>
             )}
           </div>
