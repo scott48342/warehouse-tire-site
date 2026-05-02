@@ -4058,7 +4058,7 @@ function TireCard({
       ) : null}
 
       {/* Product image with badge stack overlay */}
-      <div className="tire-card-image-container relative z-10 mt-4 overflow-hidden rounded-lg">
+      <div className="tire-card-image-container relative z-10 mt-4 overflow-hidden rounded-lg pointer-events-none">
         {t.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
