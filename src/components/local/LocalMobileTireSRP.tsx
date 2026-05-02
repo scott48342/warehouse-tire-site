@@ -143,8 +143,11 @@ function MobileTireCard({
         <p className="text-sm text-neutral-600 mt-0.5">{formatTireSize(tire.size)}</p>
       </div>
       
-      {/* Image */}
-      <div className="flex justify-center">
+      {/* Image - clickable to PDP */}
+      <Link
+        href={`/tires/${encodeURIComponent(tire.partNumber)}?source=tireweb&size=${encodeURIComponent(tire.size)}`}
+        className="flex justify-center"
+      >
         {tire.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -158,7 +161,7 @@ function MobileTireCard({
             <span className="text-4xl">🛞</span>
           </div>
         )}
-      </div>
+      </Link>
       
       {/* Badges Row */}
       <div className="flex flex-wrap gap-2">
@@ -254,7 +257,7 @@ function MobileTireCard({
           unitPrice={price || 0}
         />
         <Link
-          href={`/tires/${tire.partNumber}`}
+          href={`/tires/${encodeURIComponent(tire.partNumber)}?source=tireweb&size=${encodeURIComponent(tire.size)}`}
           className="block w-full h-[52px] rounded-xl border-2 border-neutral-200 bg-white hover:bg-neutral-50 text-neutral-900 font-semibold text-base text-center leading-[48px] transition-colors"
         >
           View Details
