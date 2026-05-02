@@ -385,12 +385,12 @@ export function CartSlideout() {
   return (
     <>
       {/* Backdrop */}
-      <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm" />
+      <div className="fixed inset-0 z-[9998] bg-black/40 backdrop-blur-sm" />
 
       {/* Slideout Panel */}
       <div
         ref={slideoutRef}
-        className="fixed right-0 top-0 z-50 h-full w-full max-w-md bg-neutral-50 shadow-2xl flex flex-col"
+        className="fixed inset-y-0 right-0 z-[9999] w-full max-w-md bg-neutral-50 shadow-2xl flex flex-col"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-200 bg-white px-5 py-4">

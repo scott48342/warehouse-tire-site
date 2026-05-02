@@ -15,7 +15,7 @@ import { CheckoutTrustStrip } from "@/components/StoreReviews";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 import { RoadHazardProtection } from "@/components/RoadHazardProtection";
 import { useShopContext, LocalOnly } from "@/contexts/ShopContextProvider";
-import { StoreSelector, StoreInfoCard, LocalMobileCheckout } from "@/components/local";
+import { StoreSelector, StoreInfoCard } from "@/components/local";
 import { StripePaymentElement } from "@/components/StripePaymentElement";
 import { useDiscount } from "@/lib/discounts/DiscountContext";
 import { InstallTimeIndicator } from "@/components/InstallTimeIndicator";
@@ -555,20 +555,14 @@ export default function CheckoutPage() {
 
   return (
     <>
-      {/* ═══════════════════════════════════════════════════════════════════════
-          LOCAL MOBILE CHECKOUT - Replaces desktop layout on mobile+local
-          Only renders: (1) local mode AND (2) mobile viewport (md:hidden)
-          ═══════════════════════════════════════════════════════════════════════ */}
-      {isLocal && <LocalMobileCheckout />}
-
-      {/* Desktop/Tablet Checkout Layout - Hidden on mobile when in local mode */}
-      <main className={`bg-neutral-50 min-h-screen ${isLocal ? 'hidden md:block' : ''}`}>
+      {/* Single-page checkout for all devices */}
+      <main className="bg-neutral-50 min-h-screen">
         <div className="mx-auto max-w-6xl px-4 py-8">
           {/* Header */}
           <div className="flex items-center justify-between mb-4">
           <div>
             <h1 className="text-3xl font-extrabold text-neutral-900">Checkout</h1>
-            <p className="text-sm text-neutral-500 mt-1">Only 2 steps left to complete your order</p>
+            <p className="text-sm text-neutral-500 mt-1">Complete your order below</p>
           </div>
           <Link href="/cart" className="text-sm text-neutral-600 hover:text-neutral-900 underline">
             Edit cart
