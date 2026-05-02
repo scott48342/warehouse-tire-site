@@ -578,6 +578,10 @@ export function LocalMobileTireSRP({
   
   return (
     <div className="md:hidden">
+      {/* DEBUG: Remove after testing */}
+      <div className="bg-green-500 text-white p-4 text-center font-bold text-lg">
+        ✅ MOBILE SRP ACTIVE - If you see this, component is working
+      </div>
       {/* Sticky top bar */}
       <div className="sticky top-0 z-30 bg-white border-b border-neutral-200 px-4 py-3">
         {/* Size + count */}
