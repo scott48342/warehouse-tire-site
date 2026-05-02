@@ -17,7 +17,7 @@
 
 import { useState, useCallback, useEffect, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import Image from 'next/image';
+// Image import removed - using native img for tireweb.tirelibrary.com compatibility
 import Link from 'next/link';
 import { useIsLocalMode } from '@/contexts/ShopContextProvider';
 import { TirePriceDisplay } from '@/components/TirePriceDisplay';
@@ -145,12 +145,12 @@ function MobileTireCard({
       {/* Image */}
       <div className="flex justify-center">
         {tire.imageUrl ? (
-          <Image
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
             src={tire.imageUrl}
             alt={`${tire.brand} ${tire.model}`}
-            width={180}
-            height={180}
-            className="object-contain"
+            loading="lazy"
+            className="h-[180px] w-[180px] object-contain"
           />
         ) : (
           <div className="w-[180px] h-[180px] bg-neutral-100 rounded-xl flex items-center justify-center">
