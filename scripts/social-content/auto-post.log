@@ -3255,3 +3255,229 @@ Files:
 
 Add these to .env.local
 [Fri 05/01/2026 18:00:14.04] Auto-post complete 
+[Sat 05/02/2026  9:00:02.10] Starting auto-post... 
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ override existing { override: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:15180) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Niche 1PC M223 DFS
+  Downloading image for Niche 1PC M223 DFS...
+  ✅ Generated: m223_dfs_1777726802646
+  📝 Caption preview: Transform your muscle with the Niche 1PC M223 DFS 🛞
+
+📐 20x10.5
+🔩 5X115
+↔️ 20m...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - m223_dfs_1777726802646.png
+  - m223_dfs_1777726802646.json
+◇ injected env (45) from ..\..\.env.local // tip: ⌁ auth for agents [www.vestauth.com]
+
+📱 Facebook/Instagram Poster
+
+Selected: br032_echo_1776895217576
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys BR032 ECHO
+Price: $400
+Image: br032_echo_1776895217576.png
+
+Caption:
+New arrival alert! 🚨
+
+Black Rhino Hard Alloys BR032 ECHO
+📐 17x8.5
+🔩 6X5.5
+↔️ 0mm offset
+✨ ECHO 17X8.5 6X5.5 106 +0 M-BLK
+
+$400/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/BR032MX17856800
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #suv #suvlife #offroad #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Wednesday, 29-Apr-26 15:00:00 PDT. The current time is Saturday, 02-May-26 06:00:02 PDT.
+
+✨ Done!
+◇ injected env (45) from ..\..\.env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:2012) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Petrol P5C
+  Downloading image for Petrol P5C...
+  ✅ Generated: p5c_1777726809583
+  📝 Caption preview: Weekend project? ✅
+
+Petrol P5C
+📐 18x8
+🔩 5X120
+↔️ 35mm offset
+✨ PE P5C 18X8 5X1...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - p5c_1777726809583.png
+  - p5c_1777726809583.json
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Sat 05/02/2026  9:00:10.23] Auto-post complete 
+[Sat 05/02/2026 18:00:01.81] Starting auto-post... 
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:7580) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] MSA Offroad Wheels M55 COMMANDER UTV
+  ⚠️ No matching vehicle for bolt pattern 4X110, using generic caption
+  Downloading image for MSA Offroad Wheels M55 COMMANDER UTV...
+  ✅ Generated: m55_commander_utv_1777759203561
+  📝 Caption preview: 🔥 MSA Offroad Wheels M55 COMMANDER UTV - Now in stock!
+
+📐 20x7
+🔩 4X110
+↔️ 0mm...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - m55_commander_utv_1777759203561.png
+  - m55_commander_utv_1777759203561.json
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+Selected: br032_echo_1776895217576
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys BR032 ECHO
+Price: $400
+Image: br032_echo_1776895217576.png
+
+Caption:
+New arrival alert! 🚨
+
+Black Rhino Hard Alloys BR032 ECHO
+📐 17x8.5
+🔩 6X5.5
+↔️ 0mm offset
+✨ ECHO 17X8.5 6X5.5 106 +0 M-BLK
+
+$400/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/BR032MX17856800
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #suv #suvlife #offroad #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Wednesday, 29-Apr-26 15:00:00 PDT. The current time is Saturday, 02-May-26 15:00:02 PDT.
+
+✨ Done!
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:1840) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] US Mag 1PC U107 STANDARD
+  ⚠️ No matching vehicle for bolt pattern 5X4.75, using generic caption
+  Downloading image for US Mag 1PC U107 STANDARD...
+  ✅ Generated: u107_standard_1777759209557
+  📝 Caption preview: Weekend project? ✅
+
+US Mag 1PC U107 STANDARD
+📐 18x9
+🔩 5X4.75
+↔️ 7mm offset
+✨ S...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - u107_standard_1777759209557.png
+  - u107_standard_1777759209557.json
+◇ injected env (45) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Sat 05/02/2026 18:00:10.27] Auto-post complete 
