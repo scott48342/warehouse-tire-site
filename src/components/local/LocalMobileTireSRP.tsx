@@ -22,6 +22,7 @@ import Link from 'next/link';
 import { useIsLocalMode } from '@/contexts/ShopContextProvider';
 import { TirePriceDisplay } from '@/components/TirePriceDisplay';
 import { InstallTimeIndicator } from '@/components/InstallTimeIndicator';
+import { LocalTireAddButton } from '@/components/LocalTireAddButton';
 
 // ============================================================================
 // TYPES
@@ -243,14 +244,15 @@ function MobileTireCard({
       </div>
       
       {/* Action buttons */}
-      <div className="space-y-2">
-        <button
-          onClick={() => onAddToCart?.(tire, qty)}
-          disabled={stock < 1}
-          className="w-full h-[52px] rounded-xl bg-red-600 hover:bg-red-700 disabled:bg-neutral-300 text-white font-bold text-base transition-colors"
-        >
-          Add {qty} to Cart
-        </button>
+      <div className="space-y-3">
+        <LocalTireAddButton
+          sku={tire.partNumber}
+          brand={tire.brand}
+          model={tire.model || 'Tire'}
+          size={tire.size}
+          imageUrl={tire.imageUrl}
+          unitPrice={price || 0}
+        />
         <Link
           href={`/tires/${tire.partNumber}`}
           className="block w-full h-[52px] rounded-xl border-2 border-neutral-200 bg-white hover:bg-neutral-50 text-neutral-900 font-semibold text-base text-center leading-[48px] transition-colors"
