@@ -1945,11 +1945,14 @@ export default async function TiresPage({
   const km: { items?: any[]; error?: string } | null = { items: [] };
   const wp: { items?: any[]; error?: string } | null = { items: [] };
 
-  const rebatesByBrand = new Map<string, any>();
+  // Store ALL rebates per brand (multiple rebates per brand supported)
+  const rebatesByBrand = new Map<string, any[]>();
   for (const r of (rebates as any)?.items || []) {
     const b = String(r?.brand || "").trim().toLowerCase();
     if (!b) continue;
-    if (!rebatesByBrand.has(b)) rebatesByBrand.set(b, r);
+    const arr = rebatesByBrand.get(b) || [];
+    arr.push(r);
+    rebatesByBrand.set(b, arr);
   }
 
   // Map TireWeb results to our Tire format
@@ -3828,7 +3831,7 @@ function TireCard({
 }: {
   tire: Tire;
   stripSizeFromName: (name: string) => string;
-  rebatesByBrand: Map<string, any>;
+  rebatesByBrand: Map<string, any[]>;
   year: string;
   make: string;
   model: string;
@@ -3852,25 +3855,40 @@ function TireCard({
   /** Local mode flag for out-the-door pricing */
   isLocalMode?: boolean;
 }) {
-  // Check rebate eligibility at MODEL level, not just brand level
+  // Check rebate eligibility at MODEL level - find best matching rebate from array
   const brandKey = String(t.brand || "").trim().toLowerCase();
-  const reb = brandKey ? rebatesByBrand.get(brandKey) : null;
+  const brandRebates = brandKey ? rebatesByBrand.get(brandKey) : null;
   const tireModel = String(t.displayName || t.prettyName || t.description || "").toLowerCase();
   
-  // Only show rebate if: (1) brand_wide is true, OR (2) tire model matches eligible_models
-  const isRebateEligible = reb && (
-    reb.brand_wide === true || 
-    (Array.isArray(reb.eligible_models) && reb.eligible_models.length > 0 
-      ? reb.eligible_models.some((pattern: string) => 
+  // Find the best matching rebate: model-specific > brand-wide
+  let matchedRebate: any = null;
+  if (brandRebates && Array.isArray(brandRebates)) {
+    // First pass: look for model-specific match
+    for (const reb of brandRebates) {
+      if (Array.isArray(reb.eligible_models) && reb.eligible_models.length > 0) {
+        const modelMatch = reb.eligible_models.some((pattern: string) => 
           tireModel.includes(String(pattern).toLowerCase().trim())
-        )
-      : reb.brand_wide !== false // Legacy: if no eligible_models and brand_wide not explicitly false
-    )
-  );
+        );
+        if (modelMatch) {
+          matchedRebate = reb;
+          break; // Found specific match, stop looking
+        }
+      }
+    }
+    // Second pass: if no model match, look for brand-wide
+    if (!matchedRebate) {
+      for (const reb of brandRebates) {
+        if (reb.brand_wide === true && (!reb.eligible_models || reb.eligible_models.length === 0)) {
+          matchedRebate = reb;
+          break;
+        }
+      }
+    }
+  }
   
-  const headline = isRebateEligible && reb?.headline ? String(reb.headline) : "";
+  const headline = matchedRebate?.headline ? String(matchedRebate.headline) : "";
   const amt = headline.match(/\$(\d{2,4})/);
-  const rebateLabel = amt ? `$${amt[1]} rebate` : (isRebateEligible ? "Rebate" : "");
+  const rebateLabel = matchedRebate ? (amt ? `$${amt[1]} rebate` : "Rebate") : "";
 
   const q = t.quantity || {};
   const primary = typeof q.primary === "number" ? q.primary : 0;
