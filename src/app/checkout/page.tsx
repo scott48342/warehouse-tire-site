@@ -1073,6 +1073,17 @@ export default function CheckoutPage() {
                 ))}
               </div>
 
+              {/* Road Hazard Protection - Local mode only, when tires in cart */}
+              {isLocal && tires.length > 0 && (
+                <div className="pt-3 border-t border-neutral-100">
+                  <RoadHazardProtection 
+                    tireCount={tireCount}
+                    tireSubtotal={validation.totals.tireSubtotal}
+                    context="checkout"
+                  />
+                </div>
+              )}
+
               {/* Totals */}
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
