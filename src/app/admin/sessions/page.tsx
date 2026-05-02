@@ -17,6 +17,11 @@ interface CartData {
   hasEmail: boolean;
 }
 
+interface PageEvent {
+  path: string;
+  time: string;
+}
+
 interface Session {
   sessionId: string;
   shortId: string;
@@ -27,6 +32,8 @@ interface Session {
   landingPage: string;
   lastPage: string;
   pageViews: number;
+  pages: string[];
+  events: PageEvent[];
   device: string;
   location: string | null;
   source: string;
@@ -78,8 +85,18 @@ function getSiteBadge(site: string) {
   }
 }
 
+// Format time from ISO string to local time
+function formatEventTime(isoTime: string): string {
+  try {
+    const date = new Date(isoTime);
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  } catch {
+    return "";
+  }
+}
+
 // Mobile card view for a session
-function SessionCard({ session, onExpand }: { session: Session; onExpand: () => void }) {
+function SessionCard({ session, onExpand, isExpanded }: { session: Session; onExpand: () => void; isExpanded: boolean }) {
   return (
     <div 
       className={`bg-neutral-800 rounded-xl p-4 space-y-3 ${session.isActive ? "ring-1 ring-green-500/50" : ""}`}
@@ -91,6 +108,7 @@ function SessionCard({ session, onExpand }: { session: Session; onExpand: () => 
           {session.isActive && <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />}
           <span className="text-sm text-neutral-400">{session.timeAgo}</span>
           <span className="text-lg">{getDeviceIcon(session.device)}</span>
+          <span className="text-xs text-neutral-500">{isExpanded ? "▼" : "▶"}</span>
         </div>
         {getSiteBadge(session.site)}
       </div>
@@ -123,6 +141,25 @@ function SessionCard({ session, onExpand }: { session: Session; onExpand: () => 
       <div className="text-sm text-neutral-400 truncate">
         via {session.source}
       </div>
+
+      {/* Expanded: Page journey */}
+      {isExpanded && session.events && session.events.length > 0 && (
+        <div className="pt-3 border-t border-neutral-700 space-y-2" onClick={(e) => e.stopPropagation()}>
+          <div className="text-xs font-medium text-neutral-400 uppercase">Pages Visited</div>
+          <div className="space-y-1 max-h-48 overflow-y-auto">
+            {session.events.map((event, idx) => (
+              <div key={idx} className="flex items-center gap-2 text-sm">
+                <span className="text-neutral-500 text-xs w-12 flex-shrink-0">
+                  {formatEventTime(event.time)}
+                </span>
+                <span className="text-blue-400 truncate">
+                  {formatPath(event.path)}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Cart badge */}
       {session.cart && (
@@ -217,6 +254,42 @@ function SessionRow({ session, onExpand, isExpanded }: {
           )}
         </td>
       </tr>
+      {/* Expanded row showing page journey */}
+      {isExpanded && (
+        <tr className="bg-neutral-900/50">
+          <td colSpan={8} className="px-4 py-3">
+            <div className="pl-4 border-l-2 border-neutral-700">
+              <div className="text-xs font-medium text-neutral-400 uppercase mb-2">
+                Page Journey ({session.events?.length || session.pages?.length || 0} pages)
+              </div>
+              {session.events && session.events.length > 0 ? (
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-1 max-h-40 overflow-y-auto">
+                  {session.events.map((event, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm">
+                      <span className="text-neutral-500 text-xs w-12 flex-shrink-0">
+                        {formatEventTime(event.time)}
+                      </span>
+                      <span className="text-blue-400 truncate" title={event.path}>
+                        {formatPath(event.path)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ) : session.pages && session.pages.length > 0 ? (
+                <div className="flex flex-wrap gap-2">
+                  {session.pages.map((page, idx) => (
+                    <span key={idx} className="text-sm text-blue-400 bg-neutral-800 px-2 py-0.5 rounded" title={page}>
+                      {formatPath(page)}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-sm text-neutral-500">No page data available</div>
+              )}
+            </div>
+          </td>
+        </tr>
+      )}
     </>
   );
 }
@@ -353,6 +426,7 @@ export default function SessionsPage() {
               <SessionCard
                 key={session.sessionId}
                 session={session}
+                isExpanded={expandedSession === session.sessionId}
                 onExpand={() => setExpandedSession(
                   expandedSession === session.sessionId ? null : session.sessionId
                 )}
