@@ -118,10 +118,20 @@ function HeroSection() {
     setLoading("trims");
     fetch(`/api/vehicles/trims?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`)
       .then(r => r.json())
-      .then(d => setTrims(d.results || []))
+      .then(d => {
+        const results = d.results || [];
+        setTrims(results);
+        // Auto-submit if no trims available
+        if (results.length === 0 && year && make && model) {
+          setTimeout(() => {
+            const params = new URLSearchParams({ year, make, model });
+            router.push(`/tires?${params.toString()}`);
+          }, 300);
+        }
+      })
       .catch(() => setTrims([]))
       .finally(() => setLoading(null));
-  }, [year, make, model]);
+  }, [year, make, model, router]);
 
   const canSearchVehicle = year && make && model;
   const canSearchSize = width && aspect && rim;
@@ -136,6 +146,27 @@ function HeroSection() {
   const handleSizeSearch = () => {
     if (!canSearchSize) return;
     router.push(`/tires?size=${width}/${aspect}R${rim}`);
+  };
+
+  // Auto-submit after trim selection
+  const handleTrimChange = (selectedTrim: string) => {
+    setTrim(selectedTrim);
+    if (selectedTrim && year && make && model) {
+      setTimeout(() => {
+        const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
+        router.push(`/tires?${params.toString()}`);
+      }, 300);
+    }
+  };
+
+  // Auto-submit after rim selection (size search)
+  const handleRimChange = (selectedRim: string) => {
+    setRim(selectedRim);
+    if (selectedRim && width && aspect) {
+      setTimeout(() => {
+        router.push(`/tires?size=${width}/${aspect}R${selectedRim}`);
+      }, 300);
+    }
   };
 
   const WIDTHS = [175, 185, 195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315];
@@ -256,7 +287,7 @@ function HeroSection() {
                 
                 <select
                   value={trim}
-                  onChange={(e) => setTrim(e.target.value)}
+                  onChange={(e) => handleTrimChange(e.target.value)}
                   disabled={!model || loading === "trims"}
                   className="w-full h-14 rounded-xl border-2 border-neutral-200 bg-white px-4 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
                 >
@@ -298,7 +329,7 @@ function HeroSection() {
                   
                   <select
                     value={rim}
-                    onChange={(e) => setRim(e.target.value)}
+                    onChange={(e) => handleRimChange(e.target.value)}
                     className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
                   >
                     <option value="">Rim</option>
@@ -409,7 +440,7 @@ function HeroSection() {
                         <option value="">{loading === "models" ? "Loading..." : "Model"}</option>
                         {models.map(m => <option key={m} value={m}>{m}</option>)}
                       </select>
-                      <select value={trim} onChange={(e) => setTrim(e.target.value)} disabled={!model || loading === "trims"} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100">
+                      <select value={trim} onChange={(e) => handleTrimChange(e.target.value)} disabled={!model || loading === "trims"} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100">
                         <option value="">{loading === "trims" ? "Loading..." : "Trim (Optional)"}</option>
                         {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                       </select>
@@ -427,7 +458,7 @@ function HeroSection() {
                     <div className="flex flex-wrap gap-2">
                       <select value={width} onChange={(e) => setWidth(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Width</option>{WIDTHS.map(w => <option key={w} value={w}>{w}</option>)}</select>
                       <select value={aspect} onChange={(e) => setAspect(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Aspect</option>{ASPECTS.map(a => <option key={a} value={a}>{a}</option>)}</select>
-                      <select value={rim} onChange={(e) => setRim(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Rim</option>{RIMS.map(r => <option key={r} value={r}>{r}</option>)}</select>
+                      <select value={rim} onChange={(e) => handleRimChange(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Rim</option>{RIMS.map(r => <option key={r} value={r}>{r}</option>)}</select>
                       <button onClick={handleSizeSearch} disabled={!canSearchSize} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">FIND TIRES</button>
                     </div>
                   </div>
