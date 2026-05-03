@@ -97,7 +97,7 @@ function HeroSection() {
           className="object-cover object-center"
           sizes="60vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/40 to-transparent" />
       </div>
 
       {/* Content */}
