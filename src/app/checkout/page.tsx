@@ -986,9 +986,9 @@ export default function CheckoutPage() {
 
           {/* Order Summary Sidebar */}
           <div className="lg:sticky lg:top-24 h-fit space-y-4">
-            {/* Local Mode: Store Selector */}
+            {/* Local Mode: Store Selector - DESKTOP ONLY (mobile has it in Section 2) */}
             {isLocal && (
-              <div className="rounded-2xl border-2 border-green-200 bg-green-50 p-4">
+              <div className="hidden lg:block rounded-2xl border-2 border-green-200 bg-green-50 p-4">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-lg">🔧</span>
                   <h3 className="font-bold text-green-900">Installation Location</h3>
@@ -1015,10 +1015,11 @@ export default function CheckoutPage() {
             )}
 
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-              <h2 className="text-lg font-bold text-neutral-900 mb-4">Order Summary</h2>
+              {/* Order Summary header - DESKTOP ONLY (mobile has collapsible at top) */}
+              <h2 className="hidden lg:block text-lg font-bold text-neutral-900 mb-4">Order Summary</h2>
 
-              {/* Cart Items */}
-              <div className="space-y-3 mb-4 pb-4 border-b border-neutral-100">
+              {/* Cart Items - DESKTOP ONLY (mobile shows in collapsible dropdown) */}
+              <div className="hidden lg:block space-y-3 mb-4 pb-4 border-b border-neutral-100">
                 {wheels.map((wheel) => (
                   <div key={wheel.sku} className="flex gap-3">
                     <div className="w-14 h-14 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden">
