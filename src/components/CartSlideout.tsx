@@ -400,7 +400,7 @@ export function CartSlideout() {
       {/* Slideout Panel */}
       <div
         ref={slideoutRef}
-        className="fixed inset-y-0 right-0 z-[9999] w-screen max-w-md bg-neutral-50 shadow-2xl flex flex-col overflow-x-hidden"
+        className="fixed inset-y-0 left-0 right-0 z-[9999] md:left-auto md:w-[420px] bg-neutral-50 shadow-2xl flex flex-col overflow-hidden"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-200 bg-white px-4 py-4 min-w-0">
