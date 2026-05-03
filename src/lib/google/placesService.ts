@@ -164,7 +164,7 @@ export async function getStoreReviews(
   store: "pontiac" | "waterford"
 ): Promise<PlaceDetails | null> {
   // Try to find the place ID if we don't have it cached
-  let placeId = STORE_PLACE_IDS[store];
+  let placeId: string | null = STORE_PLACE_IDS[store] || null;
   
   if (!placeId) {
     const query = STORE_SEARCH_QUERIES[store];
