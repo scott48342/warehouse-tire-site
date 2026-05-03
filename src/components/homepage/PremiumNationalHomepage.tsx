@@ -453,10 +453,10 @@ function TrustBadgeStrip() {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const CATEGORY_PROMOS = [
-  { title: "Wheels That Make a Statement", subtitle: "Hundreds of styles. Built for your look.", image: "/images/homepage/tile-shop-wheels.jpg", href: "/wheels", cta: "Shop Wheels" },
-  { title: "Tires That Perform", subtitle: "All conditions. All year long.", image: "/images/homepage/tile-shop-tires.jpg", href: "/tires", cta: "Shop Tires" },
-  { title: "Complete Packages", subtitle: "Tires, wheels & suspension delivered ready to install.", image: "/images/homepage/tile-shop-packages.jpg", href: "/wheels?package=1", cta: "Shop Packages" },
-  { title: "Suspension & Accessories", subtitle: "Lift kits, suspension, & off-road gear.", image: "/images/homepage/tile-shop-accessories.jpg", href: "/accessories", cta: "Shop Accessories" },
+  { title: "Wheels That Make a Statement", subtitle: "Hundreds of styles. Built for your look.", image: "/images/homepage/cat-street-wheels.png", href: "/wheels", cta: "Shop Wheels" },
+  { title: "Tires That Perform", subtitle: "All conditions. All year long.", image: "/images/homepage/cat-all-terrain.png", href: "/tires", cta: "Shop Tires" },
+  { title: "Complete Packages", subtitle: "Tires, wheels & suspension delivered ready to install.", image: "/images/homepage/package-lifted-35.png", href: "/wheels?package=1", cta: "Shop Packages" },
+  { title: "Suspension & Accessories", subtitle: "Lift kits, suspension, & off-road gear.", image: "/images/homepage/cat-lifted.png", href: "/accessories", cta: "Shop Accessories" },
 ];
 
 function CategoryPromoCards() {
@@ -466,14 +466,10 @@ function CategoryPromoCards() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CATEGORY_PROMOS.map((promo) => (
             <Link key={promo.title} href={promo.href} className="group relative block overflow-hidden bg-neutral-900 rounded">
-              {/* Image with curved clip */}
-              <div className="aspect-[4/5] relative overflow-hidden">
-                <Image src={promo.image} alt={promo.title} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 25vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                {/* Curved clip overlay */}
-                <div className="absolute top-0 right-0 w-24 h-24">
-                  <div className="absolute top-0 right-0 w-full h-full bg-[#0a0a0a]" style={{ clipPath: 'ellipse(100% 100% at 100% 0%)' }} />
-                </div>
+              {/* Image */}
+              <div className="aspect-[4/5] relative overflow-hidden rounded">
+                <Image src={promo.image} alt={promo.title} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 25vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20" />
               </div>
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -604,7 +600,7 @@ function FitmentPromiseBanner() {
             </Link>
           </div>
           <div className="relative w-[280px] h-[180px] lg:w-[350px] lg:h-[220px]">
-            <Image src="/images/homepage/tile-shop-tires.jpg" alt="Premium tire" fill className="object-cover object-center opacity-50 rounded" sizes="350px" />
+            <Image src="/images/homepage/cat-all-terrain.png" alt="Premium tire" fill className="object-cover object-center opacity-60 rounded" sizes="350px" />
           </div>
         </div>
       </div>
