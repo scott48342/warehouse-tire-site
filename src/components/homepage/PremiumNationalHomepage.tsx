@@ -453,10 +453,10 @@ function TrustBadgeStrip() {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const CATEGORY_PROMOS = [
-  { title: "Wheels That Make a Statement", subtitle: "Hundreds of styles. Built for your look.", image: "/images/homepage/cat-street-wheels.png", href: "/wheels", cta: "Shop Wheels" },
-  { title: "Tires That Perform", subtitle: "All conditions. All year long.", image: "/images/homepage/cat-all-terrain.png", href: "/tires", cta: "Shop Tires" },
-  { title: "Complete Packages", subtitle: "Tires, wheels & suspension delivered ready to install.", image: "/images/homepage/package-lifted-35.png", href: "/wheels?package=1", cta: "Shop Packages" },
-  { title: "Suspension & Accessories", subtitle: "Lift kits, suspension, & off-road gear.", image: "/images/homepage/cat-lifted.png", href: "/accessories", cta: "Shop Accessories" },
+  { image: "/images/homepage/tile-shop-wheels.jpg", href: "/wheels", alt: "Shop Wheels" },
+  { image: "/images/homepage/tile-shop-tires.jpg", href: "/tires", alt: "Shop Tires" },
+  { image: "/images/homepage/tile-shop-packages.jpg", href: "/wheels?package=1", alt: "Shop Packages" },
+  { image: "/images/homepage/tile-shop-accessories.jpg", href: "/accessories", alt: "Shop Accessories" },
 ];
 
 function CategoryPromoCards() {
@@ -465,19 +465,16 @@ function CategoryPromoCards() {
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CATEGORY_PROMOS.map((promo) => (
-            <Link key={promo.title} href={promo.href} className="group relative block overflow-hidden bg-neutral-900 rounded">
-              {/* Image */}
-              <div className="aspect-[4/5] relative overflow-hidden rounded">
-                <Image src={promo.image} alt={promo.title} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 25vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20" />
-              </div>
-              {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <p className="text-white font-bold text-sm uppercase tracking-wide">{promo.title}</p>
-                <p className="text-white/50 text-xs mt-1">{promo.subtitle}</p>
-                <button className="mt-3 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wide transition-colors rounded">
-                  {promo.cta}
-                </button>
+            <Link key={promo.alt} href={promo.href} className="group relative block overflow-hidden rounded">
+              {/* Full promo tile image - already has text/design baked in */}
+              <div className="aspect-square relative overflow-hidden rounded">
+                <Image 
+                  src={promo.image} 
+                  alt={promo.alt} 
+                  fill 
+                  className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                  sizes="(max-width: 640px) 100vw, 25vw" 
+                />
               </div>
             </Link>
           ))}
