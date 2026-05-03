@@ -1,94 +1,143 @@
 {
   "meta": {
-    "lastUpdated": "2026-04-05",
-    "totalReviews": 247,
+    "lastUpdated": "2026-05-03",
+    "totalReviews": 1493,
     "averageRating": 4.8,
-    "source": "Google Reviews via Trustindex",
+    "source": "Google Places API",
+    "stores": {
+      "pontiac": {
+        "placeId": "ChIJP-orsxu-JIgRBaf2g7SRzgs",
+        "rating": 4.8,
+        "reviewCount": 1007
+      },
+      "waterford": {
+        "placeId": "ChIJv_WMSJ-9JIgRzO__lDN9qzQ",
+        "rating": 4.7,
+        "reviewCount": 486
+      }
+    },
     "locations": [
-      { "id": "pontiac", "name": "Warehouse Tire Pontiac", "address": "1100 Cesar E Chavez Ave" },
-      { "id": "waterford", "name": "Warehouse Tire Waterford", "address": "4459 Pontiac Lake Rd" }
+      {
+        "id": "pontiac",
+        "name": "Warehouse Tire Pontiac",
+        "address": "1100 Cesar E Chavez Ave"
+      },
+      {
+        "id": "waterford",
+        "name": "Warehouse Tire Waterford",
+        "address": "4459 Pontiac Lake Rd"
+      }
     ]
   },
   "featured": [
     {
       "id": "g1",
-      "author": "Customer",
+      "author": "Roni Foster",
       "rating": 5,
-      "text": "Big shout out to the guys here! Very wholesome and respectable business guys. Big shout out to Will for being a good businessman! 10 out of 10 recommend coming here for tires.",
+      "text": "Scott and his team are excellent service  fast, efficient and affordable. I went there to get some tires and they didn't have the right size I needed and within an hour they must have got a shipment in they called me back and had the tires I needed\nScott and his team excellent and very friendly stuff very fast and very affordable. Thank you everyone for taking such good care of me. I wouldn't go any other place been going there for years. It's nice to feel comfortable with the people that you know. Great job Scott and his team\nAnd thank you,",
       "source": "google",
-      "tags": ["service", "staff"]
+      "tags": [
+        "fast",
+        "price",
+        "staff"
+      ]
     },
     {
       "id": "g2",
-      "author": "Customer",
+      "author": "niki Hoadley",
       "rating": 5,
-      "text": "Always quick, polite, helpful and about getting you back rolling asap! I've been purchasing from them since 2010. And if they don't have what you need they will find somewhere that does for you.",
+      "text": "I recently had an outstanding experience at Wearhouse Tire that I just have to share! From start to finish, the service was exceptional- far surpassing what I encountered at Discount Tire and Bell Tire (who were unwilling to solve my problem).\n\nScott, in particular, was amazing. He really took the time to understand my frustrations and went above and beyond to resolve my issue. It was clear that he genuinely cared about getting me back on the road as quickly as possible, and he did just that.\n\nThe level of customer service I received was truly impressive. If you’re looking for a tire shop that prioritizes its customers and delivers results, I can't recommend Wearhouse Tire enough, it was the best experience after a string of frustrating experiences 👏☺️",
       "source": "google",
-      "tags": ["quick", "helpful", "loyal"]
+      "tags": [
+        "fast",
+        "service",
+        "scott"
+      ]
     },
     {
       "id": "g3",
-      "author": "Customer",
+      "author": "HELPING HANDS",
       "rating": 5,
-      "text": "I recently had an outstanding experience at Warehouse Tire that I just have to share! Scott, in particular, was amazing. He really took the time to understand my frustrations and went above and beyond to resolve my issue. The level of customer service I received was truly impressive.",
+      "text": "Always quick, polite, helpful and about getting you back rolling asap!  I've been purchasing from them since 2010.  And if they don't have what you need they will find somewhere that does for you. Today, I needed a 5th rim for my '03 expedition XLT which they didn't have, but they found one in Warren for me.",
       "source": "google",
-      "tags": ["service", "scott", "problem-solving"]
+      "tags": [
+        "fast",
+        "helpful"
+      ]
     },
     {
       "id": "g4",
-      "author": "Customer",
+      "author": "tanya sierra",
       "rating": 5,
-      "text": "My tire was on the brink of popping due to baldness. They were fast, efficient and affordable. Thank you for the help today!",
+      "text": "Big shout out to the guys here! Very wholesome and respectable business guys. Big shout out to Will For being a good businessman! 10 out of 10 recommend coming here for tires",
       "source": "google",
-      "tags": ["fast", "affordable", "emergency"]
+      "tags": [
+        "staff",
+        "recommended"
+      ]
     },
     {
       "id": "g5",
-      "author": "Customer",
+      "author": "TYLA JADE",
       "rating": 5,
-      "text": "Love this place!! Always willing to offer a better deal than other places. Best deals, best prices, best staff.",
+      "text": "I appreciate the people here they always take care of me and look out!",
       "source": "google",
-      "tags": ["price", "deals", "staff"]
+      "tags": []
     },
     {
       "id": "g6",
-      "author": "Customer",
+      "author": "Meshia Gurl",
       "rating": 5,
-      "text": "Best service around. Went above and beyond for me.",
+      "text": "Great staff at both locations. I went the Pontiac location first, and we told them that we needed to get two tires replaced quickly for my son to drive back to college. They did not have the size tires we needed in stock, but did a check at their Waterford location and sent us there. I did not get names here, but they we prompt and really wanted to ensure we were taken care of.\n\nUpon arriving at the Waterford location, they knew we were coming (the Pontiac location informed them, showing great communication between locations, for the customer). An awesome young man named Spencer, checked both tires and informed us that we only needed to replace one of the tires…he did not want to sell us something we didn’t need! 🤯\nThe team replaced the tire quickly at a reasonable price. What a wonderful and HONEST establishment with such integrity. I highly recommend Warehouse Tire and will not go anywhere else from now on! Thank you Spencer and Warehouse Tire team, you’re all amazing!",
       "source": "google",
-      "tags": ["service"]
+      "tags": [
+        "fast",
+        "price",
+        "staff"
+      ]
     },
     {
       "id": "g7",
-      "author": "Customer",
+      "author": "Queen Afrodite",
       "rating": 5,
-      "text": "I appreciate the people here, they always take care of me and look out!",
+      "text": "I have been here a couple of times in the last few years. The vibe is always the same. All of the guys are super sweet and helpful.\n\nIt’s always a pleasant experience rather I’m buying a tire or having one repaired. They take care of me so well.\n\nI highly recommend patronizing this business. Excellent service and sweet vibes.",
       "source": "google",
-      "tags": ["service", "loyal"]
+      "tags": [
+        "staff",
+        "service",
+        "helpful"
+      ]
     },
     {
       "id": "g8",
-      "author": "Customer",
+      "author": "Asif Hossain",
       "rating": 5,
-      "text": "Second set of tires I've purchased there. Awesome people.",
+      "text": "Last month I had a big nail on my Cadillac SRX rear tire. Discount tire told me that I need to buy a new tire because the nail was very close to sidewall. Took the car to this Warehouse Tire. Gentleman named Spencer was very helpful. He fixed the tire in less than 30 minutes. When I tried to pay Spencer refused to take the money and said it's on the house. What a great service!!!",
       "source": "google",
-      "tags": ["repeat", "staff"]
+      "tags": [
+        "service",
+        "helpful"
+      ]
     },
     {
       "id": "g9",
-      "author": "Customer",
+      "author": "Cheryl Thoma",
       "rating": 5,
-      "text": "Staff always very nice and helpful.",
+      "text": "Very impressed with how knowledgeable and prompt this store was. They had my tire repaired and had me out the door in under 15 minutes. They have earned a customer!",
       "source": "google",
-      "tags": ["staff", "helpful"]
+      "tags": []
     },
     {
       "id": "g10",
-      "author": "Customer",
+      "author": "Eric Drewry",
       "rating": 5,
-      "text": "Good deal.",
+      "text": "Needed new tires and found their prices to be the best. Tires were in the very next day. Went in on a busy Saturday morning and they had me back on the road within an hour - insane speed or service. Everyone was helpful and engaging. Couldn’t be happier with the process from start to finish.",
       "source": "google",
-      "tags": ["price"]
+      "tags": [
+        "price",
+        "service",
+        "helpful"
+      ]
     }
   ]
 }
