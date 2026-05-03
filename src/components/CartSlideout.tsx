@@ -400,10 +400,10 @@ export function CartSlideout() {
       {/* Slideout Panel */}
       <div
         ref={slideoutRef}
-        className="fixed inset-y-0 right-0 z-[9999] w-full max-w-md bg-neutral-50 shadow-2xl flex flex-col"
+        className="fixed inset-y-0 right-0 z-[9999] w-screen max-w-md bg-neutral-50 shadow-2xl flex flex-col overflow-x-hidden"
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-neutral-200 bg-white px-5 py-4">
+        <div className="flex items-center justify-between border-b border-neutral-200 bg-white px-4 py-4 min-w-0">
           <div>
             <div className="flex items-center gap-2">
               <span className="text-xl">📦</span>
@@ -428,7 +428,7 @@ export function CartSlideout() {
 
         {/* Vehicle Confirmation */}
         {vehicle ? (
-          <div className="mx-5 mt-4 rounded-xl bg-green-50 border border-green-200 p-3">
+          <div className="mx-4 mt-4 rounded-xl bg-green-50 border border-green-200 p-3">
             <div className="flex items-center gap-2">
               <span className="text-green-600 text-lg">✓</span>
               <div>
@@ -442,7 +442,7 @@ export function CartSlideout() {
         ) : null}
 
         {/* Cart Items */}
-        <div className="flex-1 overflow-y-auto px-5 py-4 space-y-3">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4 space-y-3">
           {/* Wheels */}
           {items.filter(i => i.type === "wheel").map((item) => (
             <div key={`wheel-${item.sku}`} className="relative">
@@ -518,13 +518,13 @@ export function CartSlideout() {
 
         {/* Smart Tire Upsell - intelligent recommendation when wheels added but no tires */}
         {hasWheels() && !hasTires() ? (
-          <div className="mx-5 mb-4">
+          <div className="mx-4 mb-4">
             <CartSmartTireUpsell />
           </div>
         ) : null}
 
         {/* Actions */}
-        <div className="border-t border-neutral-200 bg-white px-5 py-4 space-y-3">
+        <div className="border-t border-neutral-200 bg-white px-4 py-4 space-y-3 min-w-0">
           {/* National mode: Shipping estimate */}
           {!isLocal && items.length > 0 && (
             <div className="space-y-2">
