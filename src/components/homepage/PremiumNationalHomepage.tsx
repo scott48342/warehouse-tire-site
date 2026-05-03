@@ -465,14 +465,14 @@ function CategoryPromoCards() {
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CATEGORY_PROMOS.map((promo) => (
-            <Link key={promo.alt} href={promo.href} className="group relative block overflow-hidden rounded">
+            <Link key={promo.alt} href={promo.href} className="group relative block overflow-hidden rounded bg-black">
               {/* Full promo tile image - already has text/design baked in */}
-              <div className="aspect-square relative overflow-hidden rounded">
+              <div className="aspect-[4/5] relative overflow-hidden rounded">
                 <Image 
                   src={promo.image} 
                   alt={promo.alt} 
                   fill 
-                  className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                  className="object-contain transition-transform duration-500 group-hover:scale-105" 
                   sizes="(max-width: 640px) 100vw, 25vw" 
                 />
               </div>
