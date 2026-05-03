@@ -4,6 +4,12 @@
  * File: src/app/api/vehicles/tire-sizes/route.ts
  * 
  * Returns OEM tire sizes from database. No external API fallback.
+ * 
+ * 2026-05-03: Added trim-aware resolution with debug fields
+ * - selectedTrim, normalizedTrim, modificationId passed to response
+ * - fitmentSource tracks where data came from
+ * - exactTrimMatch indicates if specific trim was found
+ * - reasonMultipleSizesShown explains why gate is shown
  */
 
 import { NextResponse } from "next/server";
@@ -25,12 +31,33 @@ export const runtime = "nodejs";
 export const maxDuration = 30;
 
 // ═══════════════════════════════════════════════════════════════════════════
-// DB-FIRST FITMENT LOOKUP
+// DEBUG RESPONSE TYPES
+// ═══════════════════════════════════════════════════════════════════════════
+
+interface TireSizeDebugInfo {
+  selectedTrim: string | null;
+  normalizedTrim: string | null;
+  modificationId: string | null;
+  fitmentSource: "config" | "db-exact" | "db-fallback" | "static" | "cache" | "none";
+  exactTrimMatch: boolean;
+  sizeCount: number;
+  reasonMultipleSizesShown: string | null;
+  resolutionMethod?: string;
+  candidateCount?: number;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// DB-FIRST FITMENT LOOKUP (with trim-aware resolution)
 // ═══════════════════════════════════════════════════════════════════════════
 
 /**
  * Look up OEM tire sizes from the fitment database.
  * This is the PRIMARY source for imported fitment data.
+ * 
+ * 2026-05-03: Uses safeResolver for trim-specific matching
+ * - Returns exact trim match when possible
+ * - Falls back to model-level only when no specific trim data exists
+ * - Returns debug info for tracking resolution path
  */
 interface StaggeredTireInfo {
   isStaggered: boolean;
@@ -46,6 +73,14 @@ interface DbFitmentResult {
   centerBore?: number;
   source: string;
   staggered?: StaggeredTireInfo;
+  // Debug info for 2026-05-03 fix
+  debug: {
+    exactTrimMatch: boolean;
+    resolutionMethod: string;
+    candidateCount: number;
+    selectedModificationId: string | null;
+    selectedDisplayTrim: string | null;
+  };
 }
 
 async function getDbFitmentSizes(
@@ -55,31 +90,69 @@ async function getDbFitmentSizes(
   modification?: string
 ): Promise<DbFitmentResult | null> {
   try {
+    const { safeResolveFitment } = await import("@/lib/fitment-db/safeResolver");
     const { listFitmentsWithTierFilter } = await import("@/lib/fitment-db/getFitment");
     const { canDetectStaggered } = await import("@/lib/fitment-db/qualityTier");
     
-    // PHASE 2: Use tier-filtered query - tire search allows "complete" + "partial"
-    const result = await listFitmentsWithTierFilter(
-      parseInt(year, 10),
-      make,
-      model,
-      "tire" // allows complete + partial tiers
-    );
+    let selectedFitment = null;
+    let debugInfo = {
+      exactTrimMatch: false,
+      resolutionMethod: "none",
+      candidateCount: 0,
+      selectedModificationId: null as string | null,
+      selectedDisplayTrim: null as string | null,
+    };
     
-    const fitments = result.fitments;
-    
-    if (!fitments || fitments.length === 0) {
-      return null;
+    // STEP 1: If modification provided, use safeResolver for exact match
+    if (modification) {
+      const resolveResult = await safeResolveFitment(
+        parseInt(year, 10),
+        make,
+        model,
+        modification
+      );
+      
+      if (resolveResult.fitment) {
+        selectedFitment = resolveResult.fitment;
+        debugInfo = {
+          exactTrimMatch: resolveResult.method === "exact_modification" || 
+                          resolveResult.method === "exact_display_trim",
+          resolutionMethod: resolveResult.method,
+          candidateCount: resolveResult.candidateCount,
+          selectedModificationId: resolveResult.resolvedModificationId,
+          selectedDisplayTrim: resolveResult.fitment.displayTrim,
+        };
+        
+        console.log(`[tire-sizes] SAFE RESOLVER HIT: ${year} ${make} ${model} mod=${modification} → method=${resolveResult.method}, exactMatch=${debugInfo.exactTrimMatch}`);
+      }
     }
     
-    // Find matching modification or use first
-    let selectedFitment = fitments[0];
-    if (modification) {
-      const match = fitments.find(f => 
-        f.modificationId === modification ||
-        f.displayTrim?.toLowerCase().includes(modification.toLowerCase())
+    // STEP 2: If no modification or safeResolver failed, try model-level lookup
+    if (!selectedFitment) {
+      const result = await listFitmentsWithTierFilter(
+        parseInt(year, 10),
+        make,
+        model,
+        "tire" // allows complete + partial tiers
       );
-      if (match) selectedFitment = match;
+      
+      const fitments = result.fitments;
+      
+      if (!fitments || fitments.length === 0) {
+        return null;
+      }
+      
+      // Mark as model-level fallback
+      selectedFitment = fitments[0];
+      debugInfo = {
+        exactTrimMatch: false,
+        resolutionMethod: modification ? "model_fallback" : "model_level",
+        candidateCount: fitments.length,
+        selectedModificationId: selectedFitment.modificationId,
+        selectedDisplayTrim: selectedFitment.displayTrim,
+      };
+      
+      console.log(`[tire-sizes] MODEL-LEVEL FALLBACK: ${year} ${make} ${model} → using first of ${fitments.length} fitments (${selectedFitment.displayTrim})`);
     }
     
     // Check wheel sizes for staggered configuration
@@ -155,8 +228,9 @@ async function getDbFitmentSizes(
             tireSizes: Array.from(extractedSizes),
             boltPattern: selectedFitment.boltPattern ?? undefined,
             centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
-            source: "db-first",
+            source: debugInfo.exactTrimMatch ? "db-exact" : "db-fallback",
             staggered: staggeredInfo,
+            debug: debugInfo,
           };
         }
       }
@@ -167,8 +241,9 @@ async function getDbFitmentSizes(
       tireSizes: oemTireSizes,
       boltPattern: selectedFitment.boltPattern ?? undefined,
       centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
-      source: "db-first",
+      source: debugInfo.exactTrimMatch ? "db-exact" : "db-fallback",
       staggered: staggeredInfo,
+      debug: debugInfo,
     };
     
   } catch (err) {
@@ -287,6 +362,19 @@ export async function GET(req: Request) {
           };
         });
         
+        // Debug info for multiple-size prompt tracking
+        const debugInfo: TireSizeDebugInfo = {
+          selectedTrim: trimParam || null,
+          normalizedTrim: modification || null,
+          modificationId: modification || null,
+          fitmentSource: "config",
+          exactTrimMatch: true, // Config table = exact trim match
+          sizeCount: tireSizes.length,
+          reasonMultipleSizesShown: configResult.hasMultipleDiameters 
+            ? `Trim ${modification || 'selected'} has ${diameters.length} OEM wheel options: ${diameters.join('", "')}"`
+            : null,
+        };
+        
         return NextResponse.json({
           tireSizes,
           tireSizesStrict: tireSizes,
@@ -304,6 +392,7 @@ export async function GET(req: Request) {
           },
           source: "config",
           confidence: configResult.confidence,
+          debug: debugInfo,
           cacheStats: getCacheStats(),
         });
       }
@@ -318,7 +407,7 @@ export async function GET(req: Request) {
   if (!forceRefresh) {
     const dbFitment = await getDbFitmentSizes(year, make, model, modification);
     if (dbFitment && dbFitment.tireSizes.length > 0) {
-      console.log(`[tire-sizes] DB-FIRST HIT: ${year} ${make} ${model} → ${dbFitment.tireSizes.join(", ")}`);
+      console.log(`[tire-sizes] DB-FIRST HIT: ${year} ${make} ${model} → ${dbFitment.tireSizes.join(", ")} (exact=${dbFitment.debug.exactTrimMatch})`);
       
       const { searchSizes } = convertTireSizesForSearch(dbFitment.tireSizes);
       const dbConversions = dbFitment.tireSizes.map(size => {
@@ -337,6 +426,32 @@ export async function GET(req: Request) {
       
       // For staggered vehicles, we don't need diameter selection - use both sizes
       const isStaggered = dbFitment.staggered?.isStaggered ?? false;
+      
+      // Build the reasonMultipleSizesShown based on the resolution
+      let reasonMultipleSizesShown: string | null = null;
+      if (wheelDiameterAnalysis.needsSelection && !isStaggered) {
+        if (dbFitment.debug.exactTrimMatch) {
+          // Legitimate multiple sizes for this specific trim
+          reasonMultipleSizesShown = `Trim "${dbFitment.debug.selectedDisplayTrim}" has ${wheelDiameterAnalysis.availableDiameters.length} OEM wheel options: ${wheelDiameterAnalysis.availableDiameters.map(d => `${d}"`).join(', ')}`;
+        } else {
+          // Fallback to model-level data - this is the problem case!
+          reasonMultipleSizesShown = `⚠️ FALLBACK: Using model-level data (${dbFitment.debug.resolutionMethod}). ${dbFitment.debug.candidateCount} trims available. Multiple sizes may not all apply to selected trim.`;
+          console.warn(`[tire-sizes] ⚠️ MULTIPLE SIZES FROM FALLBACK: ${year} ${make} ${model} mod=${modification} → showing ${wheelDiameterAnalysis.availableDiameters.length} diameters from ${dbFitment.debug.resolutionMethod}`);
+        }
+      }
+      
+      // Debug info for tracking
+      const debugInfo: TireSizeDebugInfo = {
+        selectedTrim: trimParam || null,
+        normalizedTrim: modification || null,
+        modificationId: dbFitment.debug.selectedModificationId,
+        fitmentSource: dbFitment.debug.exactTrimMatch ? "db-exact" : "db-fallback",
+        exactTrimMatch: dbFitment.debug.exactTrimMatch,
+        sizeCount: dbFitment.tireSizes.length,
+        reasonMultipleSizesShown,
+        resolutionMethod: dbFitment.debug.resolutionMethod,
+        candidateCount: dbFitment.debug.candidateCount,
+      };
       
       return NextResponse.json({
         tireSizes: dbFitment.tireSizes,
@@ -359,6 +474,7 @@ export async function GET(req: Request) {
         // Staggered fitment info (for vehicles like Crossfire, Mustang GT, etc.)
         staggered: dbFitment.staggered,
         source: dbFitment.source,
+        debug: debugInfo,
         cacheStats: getCacheStats(),
       });
     }

@@ -1,0 +1,61 @@
+{
+  "description": "QA test vehicles for tire-size-gate audit (2026-05-03)",
+  "testCases": [
+    {
+      "id": "mustang-gt",
+      "vehicle": { "year": 2024, "make": "Ford", "model": "Mustang", "trim": "GT" },
+      "expectedBehavior": "Should show single tire size (likely 255/40R19 or 265/40R19)",
+      "issue": "If showing multiple sizes (18/19/20), likely fell back to model-level data"
+    },
+    {
+      "id": "f150-xlt",
+      "vehicle": { "year": 2024, "make": "Ford", "model": "F-150", "trim": "XLT" },
+      "expectedBehavior": "Should show XLT-specific tire sizes only",
+      "issue": "If showing all F-150 sizes (17-22), likely model-level fallback"
+    },
+    {
+      "id": "camry-se",
+      "vehicle": { "year": 2024, "make": "Toyota", "model": "Camry", "trim": "SE" },
+      "expectedBehavior": "SE has specific wheel size, should not show LE/XLE sizes",
+      "issue": "Camry LE is 17, SE is 19 - if both shown, fallback issue"
+    },
+    {
+      "id": "highlander-xle",
+      "vehicle": { "year": 2024, "make": "Toyota", "model": "Highlander", "trim": "XLE" },
+      "expectedBehavior": "XLE has specific 18 or 20 depending on package",
+      "issue": "If showing 18/19/20/21, likely model-level data"
+    },
+    {
+      "id": "silverado-lt",
+      "vehicle": { "year": 2024, "make": "Chevrolet", "model": "Silverado 1500", "trim": "LT" },
+      "expectedBehavior": "LT has specific OEM sizes",
+      "issue": "If showing all Silverado sizes, model-level fallback"
+    },
+    {
+      "id": "accord-sport",
+      "vehicle": { "year": 2024, "make": "Honda", "model": "Accord", "trim": "Sport" },
+      "expectedBehavior": "Sport has 19 wheels, should not show LX 17 sizes",
+      "issue": "If 17 and 19 both shown, fallback issue"
+    },
+    {
+      "id": "rav4-le",
+      "vehicle": { "year": 2024, "make": "Toyota", "model": "RAV4", "trim": "LE" },
+      "expectedBehavior": "LE has 17 wheels",
+      "issue": "If showing 17/18/19, model-level fallback"
+    },
+    {
+      "id": "explorer-st",
+      "vehicle": { "year": 2024, "make": "Ford", "model": "Explorer", "trim": "ST" },
+      "expectedBehavior": "ST has 21 wheels specifically",
+      "issue": "If showing 18/20/21, fallback issue"
+    }
+  ],
+  "verificationSteps": [
+    "1. Start dev server: npm run dev",
+    "2. For each test case, navigate to /tires?year=X&make=Y&model=Z&modification=TRIM",
+    "3. Check the API response: /api/vehicles/tire-sizes?year=X&make=Y&model=Z&modification=TRIM",
+    "4. Verify debug.exactTrimMatch is true for trim-specific data",
+    "5. If debug.exactTrimMatch is false, the wheel size gate may be shown incorrectly",
+    "6. Check debug.reasonMultipleSizesShown for explanation"
+  ]
+}
