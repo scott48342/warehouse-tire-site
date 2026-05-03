@@ -177,7 +177,7 @@ function VehicleSelectorSection() {
     setLoading("makes");
     fetch(`/api/vehicles/makes?year=${year}`)
       .then(r => r.json())
-      .then(data => setMakes(data.makes || []))
+      .then(data => setMakes(data.results || data.makes || []))
       .catch(() => setMakes([]))
       .finally(() => setLoading(null));
   }, [year]);
@@ -187,7 +187,7 @@ function VehicleSelectorSection() {
     setLoading("models");
     fetch(`/api/vehicles/models?year=${year}&make=${make}`)
       .then(r => r.json())
-      .then(data => setModels(data.models || []))
+      .then(data => setModels(data.results || data.models || []))
       .catch(() => setModels([]))
       .finally(() => setLoading(null));
   }, [year, make]);
@@ -198,7 +198,8 @@ function VehicleSelectorSection() {
     fetch(`/api/vehicles/trims?year=${year}&make=${make}&model=${model}`)
       .then(r => r.json())
       .then(data => {
-        const trimList = (data.trims || []).map((t: any) => ({
+        const rawTrims = data.results || data.trims || [];
+        const trimList = rawTrims.map((t: any) => ({
           value: typeof t === "string" ? t : t.trim || t.value,
           label: typeof t === "string" ? t : t.trimDisplay || t.label || t.trim,
         }));
