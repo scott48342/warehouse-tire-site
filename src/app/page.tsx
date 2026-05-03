@@ -26,11 +26,15 @@ export const runtime = "nodejs";
 
 // Server-side local detection
 async function isLocalSite(): Promise<boolean> {
-  // Force local mode via env var for testing
+  // Force modes via env var for testing
   if (process.env.FORCE_LOCAL_MODE === "true") return true;
+  if (process.env.FORCE_NATIONAL_MODE === "true") return false;
   
   const headersList = await headers();
   const host = headersList.get("host") || "";
+  
+  // Production: warehousetire.net = local, warehousetiredirect.com = national
+  // Local dev: port 3001 = local, port 3000 = national
   return host.includes("warehousetire.net") || host.includes("localhost:3001");
 }
 
