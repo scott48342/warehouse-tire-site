@@ -187,19 +187,17 @@ export function TPMSSuggestion({
   if (context === "cart") {
     return (
       <div className={`rounded-xl border border-amber-200 bg-amber-50 p-4 ${className}`}>
-        <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <span className="text-xl">📡</span>
-            <div>
-              <p className="font-semibold text-neutral-900 text-sm">Complete your setup</p>
-              <p className="text-xs text-neutral-600">Add TPMS sensors for tire pressure monitoring</p>
-            </div>
+        <div className="flex items-center gap-3">
+          <span className="text-xl flex-shrink-0">📡</span>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-neutral-900 text-sm">Complete your setup</p>
+            <p className="text-xs text-neutral-600">Add TPMS sensors for tire pressure monitoring</p>
           </div>
           <button
             onClick={handleAddTPMS}
             disabled={added}
             className={`
-              flex-shrink-0 rounded-lg px-3 py-2 text-sm font-bold transition-all
+              flex-shrink-0 rounded-lg px-3 py-2 text-sm font-bold transition-all whitespace-nowrap
               ${added
                 ? "bg-green-100 text-green-700"
                 : "bg-amber-600 text-white hover:bg-amber-700"

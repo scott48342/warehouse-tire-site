@@ -400,7 +400,7 @@ export function CartSlideout() {
       {/* Slideout Panel */}
       <div
         ref={slideoutRef}
-        className="fixed inset-y-0 left-0 right-0 z-[9999] md:left-auto md:w-[420px] bg-neutral-50 shadow-2xl flex flex-col overflow-hidden"
+        className="fixed inset-y-0 left-0 right-0 z-[9999] md:left-auto md:w-[420px] bg-neutral-50 shadow-2xl flex flex-col overflow-hidden max-w-full"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-200 bg-white px-4 py-4 min-w-0">
@@ -442,7 +442,7 @@ export function CartSlideout() {
         ) : null}
 
         {/* Cart Items */}
-        <div className="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4 space-y-3">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4 space-y-3 max-w-full">
           {/* Wheels */}
           {items.filter(i => i.type === "wheel").map((item) => (
             <div key={`wheel-${item.sku}`} className="relative">
@@ -524,7 +524,7 @@ export function CartSlideout() {
         ) : null}
 
         {/* Actions */}
-        <div className="border-t border-neutral-200 bg-white px-4 py-4 space-y-3 min-w-0">
+        <div className="border-t border-neutral-200 bg-white px-4 py-4 space-y-3 min-w-0 overflow-x-hidden">
           {/* National mode: Shipping estimate */}
           {!isLocal && items.length > 0 && (
             <div className="space-y-2">
@@ -558,7 +558,7 @@ export function CartSlideout() {
           )}
 
           {/* Totals */}
-          <div className="space-y-1 pt-2 border-t border-neutral-100">
+          <div className="space-y-1 pt-2 border-t border-neutral-100 overflow-hidden">
             {/* Local mode: Full breakdown */}
             {isLocal && localBreakdown ? (
               <>
