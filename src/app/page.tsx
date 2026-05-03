@@ -1,15 +1,6 @@
 import { headers } from "next/headers";
 import {
-  HomepageBackground,
-  PremiumHero,
-  BuildStyleCards,
-  TrustStrip,
-  FeaturedBuilds,
-  FeaturedPackages,
-  ShopByCategory,
-  WhyUs,
-  FinalCTA,
-  // Local homepage (full redesign)
+  PremiumNationalHomepage,
   LocalHomepage,
 } from "@/components/homepage";
 
@@ -19,10 +10,11 @@ export const runtime = "nodejs";
    HOMEPAGE - Dual Experience
    
    NATIONAL (shop.warehousetiredirect.com):
-   - Premium enthusiast UI
-   - Build cards (Stock/Leveled/Lifted)
-   - Featured builds & packages
-   - "Build-focused" shopping
+   - NEW: Premium flagship homepage
+   - Bold dark design, cinematic imagery
+   - Broader appeal (daily drivers, SUVs, trucks, performance, lifted)
+   - Six category lanes + promo tiles + trust strip
+   - Premium automotive authority feel
    
    LOCAL (shop.warehousetire.net):
    - Neighborhood tire store feel
@@ -30,8 +22,6 @@ export const runtime = "nodejs";
    - Store locations prominent
    - Trust signals (local, same-day, honest pricing)
    - Social proof (reviews, years in business)
-   
-   Design inspired by: Discount Tire, Belle Tire local storefronts
 ============================================================================= */
 
 // Server-side local detection
@@ -55,35 +45,7 @@ export default async function Home() {
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // NATIONAL HOMEPAGE - Premium Enthusiast UI
+  // NATIONAL HOMEPAGE - Premium Flagship Design
   // ═══════════════════════════════════════════════════════════════════════════
-  return (
-    <HomepageBackground>
-      <main>
-        {/* 1. HERO SECTION - CTAs */}
-        <PremiumHero />
-
-        {/* 2. BUILD STYLE CARDS */}
-        <BuildStyleCards />
-
-        {/* 3. TRUST STRIP */}
-        <TrustStrip />
-
-        {/* 4. FEATURED BUILDS - Gallery social proof */}
-        <FeaturedBuilds />
-
-        {/* 5. FEATURED PACKAGES */}
-        <FeaturedPackages />
-
-        {/* 6. SHOP BY CATEGORY */}
-        <ShopByCategory />
-
-        {/* 7. WHY US */}
-        <WhyUs />
-
-        {/* 8. FINAL CTA */}
-        <FinalCTA />
-      </main>
-    </HomepageBackground>
-  );
+  return <PremiumNationalHomepage />;
 }

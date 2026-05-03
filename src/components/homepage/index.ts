@@ -1,9 +1,12 @@
 /**
  * Homepage Components
- * Premium automotive UI components - MATCHES TEMPLATE EXACTLY
+ * Premium automotive UI components
  */
 
-// National homepage (enthusiast-focused)
+// NEW: Premium National Homepage (flagship redesign)
+export { PremiumNationalHomepage } from "./PremiumNationalHomepage";
+
+// Legacy National homepage components (kept for reference)
 export { HomepageBackground } from "./HomepageBackground";
 export { PremiumHero } from "./PremiumHero";
 export { BuildStyleCards } from "./BuildStyleCards";
