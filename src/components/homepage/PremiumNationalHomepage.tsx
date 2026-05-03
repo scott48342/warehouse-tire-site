@@ -171,6 +171,37 @@ function VehicleSelectorSection() {
   const [width, setWidth] = useState("");
   const [aspect, setAspect] = useState("");
   const [rim, setRim] = useState("");
+  
+  // Size dropdown options (cascading)
+  const [widthOptions, setWidthOptions] = useState<string[]>([]);
+  const [aspectOptions, setAspectOptions] = useState<string[]>([]);
+  const [rimOptions, setRimOptions] = useState<string[]>([]);
+
+  // Fetch initial widths on mount
+  useEffect(() => {
+    fetch("/api/tires/sizes")
+      .then(r => r.json())
+      .then(data => setWidthOptions(data.widths || []))
+      .catch(() => setWidthOptions([]));
+  }, []);
+
+  // Fetch aspects when width changes
+  useEffect(() => {
+    if (!width) { setAspectOptions([]); setAspect(""); setRimOptions([]); setRim(""); return; }
+    fetch(`/api/tires/sizes?width=${width}`)
+      .then(r => r.json())
+      .then(data => setAspectOptions(data.aspects || []))
+      .catch(() => setAspectOptions([]));
+  }, [width]);
+
+  // Fetch rims when aspect changes
+  useEffect(() => {
+    if (!width || !aspect) { setRimOptions([]); setRim(""); return; }
+    fetch(`/api/tires/sizes?width=${width}&aspect=${aspect}`)
+      .then(r => r.json())
+      .then(data => setRimOptions(data.rims || []))
+      .catch(() => setRimOptions([]));
+  }, [width, aspect]);
 
   useEffect(() => {
     if (!year) { setMakes([]); setMake(""); return; }
@@ -310,21 +341,21 @@ function VehicleSelectorSection() {
                   <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Width</label>
                   <select value={width} onChange={(e) => setWidth(e.target.value)} className={`${selectClass} w-full`}>
                     <option value="">Width</option>
-                    {["175","185","195","205","215","225","235","245","255","265","275","285","295","305","315","325","335","345"].map(w => <option key={w} value={w}>{w}</option>)}
+                    {widthOptions.map(w => <option key={w} value={w}>{w}</option>)}
                   </select>
                 </div>
                 <div className="flex-1 min-w-[100px]">
                   <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Aspect Ratio</label>
-                  <select value={aspect} onChange={(e) => setAspect(e.target.value)} className={`${selectClass} w-full`}>
+                  <select value={aspect} onChange={(e) => setAspect(e.target.value)} disabled={!width} className={`${selectClass} w-full disabled:opacity-40`}>
                     <option value="">Aspect</option>
-                    {["25","30","35","40","45","50","55","60","65","70","75","80","85"].map(a => <option key={a} value={a}>{a}</option>)}
+                    {aspectOptions.map(a => <option key={a} value={a}>{a}</option>)}
                   </select>
                 </div>
                 <div className="flex-1 min-w-[100px]">
                   <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Rim Diameter</label>
-                  <select value={rim} onChange={(e) => setRim(e.target.value)} className={`${selectClass} w-full`}>
+                  <select value={rim} onChange={(e) => setRim(e.target.value)} disabled={!aspect} className={`${selectClass} w-full disabled:opacity-40`}>
                     <option value="">Rim</option>
-                    {["14","15","16","17","18","19","20","21","22","24","26","28","30"].map(r => <option key={r} value={r}>{r}</option>)}
+                    {rimOptions.map(r => <option key={r} value={r}>{r}</option>)}
                   </select>
                 </div>
                 <button
