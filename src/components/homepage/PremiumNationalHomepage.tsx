@@ -581,8 +581,6 @@ function TrustBadgeStrip() {
 
 const CATEGORY_PROMOS = [
   {
-    shopText: "SHOP",
-    categoryText: "WHEELS",
     title: "Wheels That Make a Statement",
     subtitle: "Hundreds of styles. Built for your look.",
     image: "/images/homepage/tile-shop-wheels.jpg",
@@ -590,8 +588,6 @@ const CATEGORY_PROMOS = [
     cta: "Shop Wheels",
   },
   {
-    shopText: "SHOP",
-    categoryText: "TIRES",
     title: "Tires That Perform",
     subtitle: "All conditions. All year long.",
     image: "/images/homepage/tile-shop-tires.jpg",
@@ -599,8 +595,6 @@ const CATEGORY_PROMOS = [
     cta: "Shop Tires",
   },
   {
-    shopText: "SHOP",
-    categoryText: "PACKAGES",
     title: "Complete Packages",
     subtitle: "Tires, wheels & suspension delivered ready to install.",
     image: "/images/homepage/tile-shop-packages.jpg",
@@ -608,8 +602,6 @@ const CATEGORY_PROMOS = [
     cta: "Shop Packages",
   },
   {
-    shopText: "SHOP",
-    categoryText: "ACCESSORIES",
     title: "Suspension & Accessories",
     subtitle: "Lift kits, suspension, & off-road gear.",
     image: "/images/homepage/tile-shop-accessories.jpg",
@@ -625,47 +617,34 @@ function CategoryPromoCards() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {CATEGORY_PROMOS.map((promo) => (
             <Link
-              key={promo.categoryText}
+              key={promo.title}
               href={promo.href}
               className="group relative block overflow-hidden bg-neutral-900 rounded-sm"
             >
-              {/* Image */}
+              {/* Image - already has SHOP WHEELS/TIRES/etc text baked in */}
               <div className="aspect-[3/4] relative overflow-hidden">
                 <Image
                   src={promo.image}
                   alt={promo.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                {/* Dark gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30" />
+                {/* Subtle gradient at bottom only */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
               </div>
               
-              {/* Content - Large stylized text */}
-              <div className="absolute inset-0 flex flex-col justify-between p-5">
-                {/* Top: SHOP + Category */}
-                <div>
-                  <span className="text-white/70 text-sm italic font-light tracking-wider">
-                    {promo.shopText}
-                  </span>
-                  <h3 className="text-white text-3xl lg:text-4xl font-black uppercase tracking-tight leading-none mt-1" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-                    {promo.categoryText}
-                  </h3>
-                </div>
-                
-                {/* Bottom: Title, subtitle, CTA */}
-                <div>
-                  <p className="text-white font-bold text-sm uppercase tracking-wide">
-                    {promo.title}
-                  </p>
-                  <p className="text-white/50 text-xs mt-1 leading-relaxed">
-                    {promo.subtitle}
-                  </p>
-                  <button className="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wide transition-colors">
-                    {promo.cta}
-                  </button>
-                </div>
+              {/* Bottom content only - title, subtitle, CTA */}
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <p className="text-white font-bold text-sm uppercase tracking-wide">
+                  {promo.title}
+                </p>
+                <p className="text-white/50 text-xs mt-1 leading-relaxed">
+                  {promo.subtitle}
+                </p>
+                <button className="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wide transition-colors">
+                  {promo.cta}
+                </button>
               </div>
             </Link>
           ))}
