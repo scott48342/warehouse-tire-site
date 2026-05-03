@@ -119,7 +119,7 @@ function HeroSection() {
           </p>
 
           {/* Subcopy */}
-          <div className="mt-6 text-white/70 text-base leading-relaxed">
+          <div className="mt-6 text-white/70 text-lg lg:text-xl leading-relaxed">
             <p>The right fit for your vehicle.</p>
             <p>The style for your build.</p>
             <p>The performance you can trust.</p>
