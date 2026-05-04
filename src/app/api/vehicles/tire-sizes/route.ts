@@ -35,15 +35,23 @@ export const maxDuration = 30;
 // ═══════════════════════════════════════════════════════════════════════════
 
 interface TireSizeDebugInfo {
-  selectedTrim: string | null;
-  normalizedTrim: string | null;
-  modificationId: string | null;
+  // === Scott's Required Audit Fields (2026-05-04) ===
+  requestedTrim: string | null;           // What UI sent
+  normalizedRequestedTrim: string | null; // After normalization
+  candidateTrims: string[];               // All trims considered
+  matchedTrim: string | null;             // Which trim was matched (displayTrim)
+  matchedBy: string | null;               // Resolution method (exact_modification, normalized_trim, etc.)
+  modificationId: string | null;          // Resolved modificationId
+  tireSizesFound: string[];               // The actual tire sizes returned
+  fallbackBlockedReason: string | null;   // Why fallback was blocked (if applicable)
+  
+  // === Additional Context ===
   fitmentSource: "config" | "db-exact" | "db-fallback" | "static" | "cache" | "none";
   exactTrimMatch: boolean;
   sizeCount: number;
+  wheelDiametersAvailable: number[];
+  needsWheelSelection: boolean;
   reasonMultipleSizesShown: string | null;
-  resolutionMethod?: string;
-  candidateCount?: number;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -83,12 +91,24 @@ interface DbFitmentResult {
   };
 }
 
+// 2026-05-04: Enhanced result type for trim-blocked fallback
+interface TrimBlockedResult {
+  blocked: true;
+  reason: "inconsistent_sizes";
+  availableTrims: Array<{
+    modificationId: string;
+    displayTrim: string;
+    tireSizes: string[];
+  }>;
+  requestedTrim: string;
+}
+
 async function getDbFitmentSizes(
   year: string, 
   make: string, 
   model: string, 
   modification?: string
-): Promise<DbFitmentResult | null> {
+): Promise<DbFitmentResult | TrimBlockedResult | null> {
   try {
     const { safeResolveFitment } = await import("@/lib/fitment-db/safeResolver");
     const { listFitmentsWithTierFilter } = await import("@/lib/fitment-db/getFitment");
@@ -142,11 +162,81 @@ async function getDbFitmentSizes(
         return null;
       }
       
+      // ═══════════════════════════════════════════════════════════════════════
+      // 2026-05-04 FIX: SMART FALLBACK - Only fall back if tire sizes are consistent
+      // When trim was requested but not found, check if ALL trims have same sizes.
+      // If sizes differ across trims, DON'T fall back - return null to prevent
+      // showing incorrect/ambiguous tire size options.
+      // ═══════════════════════════════════════════════════════════════════════
+      if (modification && fitments.length > 1) {
+        // Extract tire sizes from each fitment and compare
+        const sizesByTrim = new Map<string, Set<string>>();
+        let hasConsistentSizes = true;
+        let referenceSizesKey: string | null = null;
+        
+        for (const fitment of fitments) {
+          const oemTireSizes = fitment.oemTireSizes as string[] | null;
+          const oemWheelSizes = fitment.oemWheelSizes as Array<{
+            diameter?: number;
+            width?: number;
+            tires?: string[];
+          }> | null;
+          
+          // Collect all tire sizes for this fitment
+          const tireSizes = new Set<string>();
+          if (oemTireSizes) {
+            oemTireSizes.forEach(s => tireSizes.add(s));
+          }
+          if (oemWheelSizes) {
+            for (const ws of oemWheelSizes) {
+              if (ws.tires) {
+                ws.tires.forEach(t => tireSizes.add(t));
+              }
+            }
+          }
+          
+          // Create a sorted key for comparison
+          const sizesKey = Array.from(tireSizes).sort().join(",");
+          sizesByTrim.set(fitment.modificationId, tireSizes);
+          
+          // Compare with reference
+          if (referenceSizesKey === null) {
+            referenceSizesKey = sizesKey;
+          } else if (sizesKey !== referenceSizesKey && tireSizes.size > 0) {
+            hasConsistentSizes = false;
+          }
+        }
+        
+        if (!hasConsistentSizes) {
+          // Trims have DIFFERENT tire sizes - don't blindly fall back
+          // This prevents showing all model-level sizes when user selected a specific trim
+          console.warn(`[tire-sizes] ⚠️ BLOCKED FALLBACK: ${year} ${make} ${model} mod=${modification} → ${fitments.length} trims have DIFFERENT tire sizes`);
+          console.warn(`[tire-sizes]   Trims: ${Array.from(sizesByTrim.entries()).map(([mod, sizes]) => `${mod}:[${Array.from(sizes).join(',')}]`).join(', ')}`);
+          
+          // Return blocked result with available trims for UI to help user
+          const availableTrims = fitments.map(f => ({
+            modificationId: f.modificationId,
+            displayTrim: f.displayTrim,
+            tireSizes: Array.from(sizesByTrim.get(f.modificationId) || []),
+          }));
+          
+          return {
+            blocked: true,
+            reason: "inconsistent_sizes",
+            availableTrims,
+            requestedTrim: modification,
+          };
+        }
+        
+        // Sizes are consistent across trims - safe to use any fitment
+        console.log(`[tire-sizes] SAFE FALLBACK: ${year} ${make} ${model} → all ${fitments.length} trims have consistent tire sizes`);
+      }
+      
       // Mark as model-level fallback
       selectedFitment = fitments[0];
       debugInfo = {
         exactTrimMatch: false,
-        resolutionMethod: modification ? "model_fallback" : "model_level",
+        resolutionMethod: modification ? "model_fallback_consistent" : "model_level",
         candidateCount: fitments.length,
         selectedModificationId: selectedFitment.modificationId,
         selectedDisplayTrim: selectedFitment.displayTrim,
@@ -364,12 +454,21 @@ export async function GET(req: Request) {
         
         // Debug info for multiple-size prompt tracking
         const debugInfo: TireSizeDebugInfo = {
-          selectedTrim: trimParam || null,
-          normalizedTrim: modification || null,
+          // Scott's required audit fields
+          requestedTrim: trimParam || null,
+          normalizedRequestedTrim: modification || null,
+          candidateTrims: [], // Config table = direct match, no candidates
+          matchedTrim: modification || null,
+          matchedBy: "config_table",
           modificationId: modification || null,
+          tireSizesFound: tireSizes,
+          fallbackBlockedReason: null,
+          // Additional context
           fitmentSource: "config",
           exactTrimMatch: true, // Config table = exact trim match
           sizeCount: tireSizes.length,
+          wheelDiametersAvailable: diameters,
+          needsWheelSelection: configResult.hasMultipleDiameters,
           reasonMultipleSizesShown: configResult.hasMultipleDiameters 
             ? `Trim ${modification || 'selected'} has ${diameters.length} OEM wheel options: ${diameters.join('", "')}"`
             : null,
@@ -406,7 +505,55 @@ export async function GET(req: Request) {
   // ═══════════════════════════════════════════════════════════════════════════
   if (!forceRefresh) {
     const dbFitment = await getDbFitmentSizes(year, make, model, modification);
-    if (dbFitment && dbFitment.tireSizes.length > 0) {
+    
+    // Check if fallback was BLOCKED due to inconsistent tire sizes across trims
+    if (dbFitment && 'blocked' in dbFitment && dbFitment.blocked) {
+      console.log(`[tire-sizes] BLOCKED RESPONSE: ${year} ${make} ${model} mod=${modification} → ${dbFitment.availableTrims.length} trims available`);
+      
+      // Return a response that tells the UI:
+      // 1. We couldn't find the exact trim requested
+      // 2. Different trims have different tire sizes
+      // 3. Here are the available trims to choose from
+      const debugInfo: TireSizeDebugInfo = {
+        // Scott's required audit fields
+        requestedTrim: trimParam || null,
+        normalizedRequestedTrim: modification || null,
+        candidateTrims: dbFitment.availableTrims.map(t => t.displayTrim),
+        matchedTrim: null, // Not matched - fallback blocked
+        matchedBy: null,
+        modificationId: null,
+        tireSizesFound: [],
+        fallbackBlockedReason: `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes.`,
+        // Additional context
+        fitmentSource: "none",
+        exactTrimMatch: false,
+        sizeCount: 0,
+        wheelDiametersAvailable: [],
+        needsWheelSelection: false,
+        reasonMultipleSizesShown: `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes - please select your exact trim.`,
+      };
+      
+      return NextResponse.json({
+        tireSizes: [],
+        tireSizesStrict: [],
+        tireSizesAgg: [],
+        searchableSizes: [],
+        sizeConversions: [],
+        hasLegacySizes: false,
+        source: "trim_not_found",
+        
+        // NEW: Inform UI that trim selection is required
+        trimResolutionRequired: true,
+        trimNotFound: dbFitment.requestedTrim,
+        availableTrims: dbFitment.availableTrims,
+        
+        message: `The selected trim "${modification}" was not found. Different trims for this vehicle have different tire sizes. Please select your exact trim.`,
+        debug: debugInfo,
+        cacheStats: getCacheStats(),
+      });
+    }
+    
+    if (dbFitment && !('blocked' in dbFitment) && dbFitment.tireSizes.length > 0) {
       console.log(`[tire-sizes] DB-FIRST HIT: ${year} ${make} ${model} → ${dbFitment.tireSizes.join(", ")} (exact=${dbFitment.debug.exactTrimMatch})`);
       
       const { searchSizes } = convertTireSizesForSearch(dbFitment.tireSizes);
@@ -442,15 +589,22 @@ export async function GET(req: Request) {
       
       // Debug info for tracking
       const debugInfo: TireSizeDebugInfo = {
-        selectedTrim: trimParam || null,
-        normalizedTrim: modification || null,
+        // Scott's required audit fields
+        requestedTrim: trimParam || null,
+        normalizedRequestedTrim: modification || null,
+        candidateTrims: [], // Would need to fetch from safeResolver for full list
+        matchedTrim: dbFitment.debug.selectedDisplayTrim,
+        matchedBy: dbFitment.debug.resolutionMethod,
         modificationId: dbFitment.debug.selectedModificationId,
+        tireSizesFound: dbFitment.tireSizes,
+        fallbackBlockedReason: null,
+        // Additional context
         fitmentSource: dbFitment.debug.exactTrimMatch ? "db-exact" : "db-fallback",
         exactTrimMatch: dbFitment.debug.exactTrimMatch,
         sizeCount: dbFitment.tireSizes.length,
+        wheelDiametersAvailable: wheelDiameterAnalysis.availableDiameters,
+        needsWheelSelection: isStaggered ? false : wheelDiameterAnalysis.needsSelection,
         reasonMultipleSizesShown,
-        resolutionMethod: dbFitment.debug.resolutionMethod,
-        candidateCount: dbFitment.debug.candidateCount,
       };
       
       return NextResponse.json({

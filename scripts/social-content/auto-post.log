@@ -3498,3 +3498,115 @@ To prepare for this change:
 
 See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
 (Use `node --trace-warnings ...` to show where the warning was created)
+[Sun 05/03/2026 18:00:05.26] Starting auto-post... 
+◇ injected env (47) from ..\..\.env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:11684) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Rotiform R133 FLG
+  Downloading image for Rotiform R133 FLG...
+  ✅ Generated: r133_flg_1777845613852
+  📝 Caption preview: Weekend project? ✅
+
+Rotiform R133 FLG
+📐 18x8.5
+🔩 5X112
+↔️ 45mm offset
+✨ FLG 18...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - r133_flg_1777845613852.png
+  - r133_flg_1777845613852.json
+◇ injected env (47) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+Selected: br032_echo_1776895217576
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys BR032 ECHO
+Price: $400
+Image: br032_echo_1776895217576.png
+
+Caption:
+New arrival alert! 🚨
+
+Black Rhino Hard Alloys BR032 ECHO
+📐 17x8.5
+🔩 6X5.5
+↔️ 0mm offset
+✨ ECHO 17X8.5 6X5.5 106 +0 M-BLK
+
+$400/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/BR032MX17856800
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #suv #suvlife #offroad #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Wednesday, 29-Apr-26 15:00:00 PDT. The current time is Sunday, 03-May-26 15:00:15 PDT.
+
+✨ Done!
+◇ injected env (47) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:5960) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] US Mag 1PC U121 RAMBLER
+  Downloading image for US Mag 1PC U121 RAMBLER...
+  ✅ Generated: u121_rambler_1777845621864
+  📝 Caption preview: Transform your muscle with the US Mag 1PC U121 RAMBLER 🛞
+
+📐 18x8
+🔩 5X4.5
+↔️ 1...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - u121_rambler_1777845621864.png
+  - u121_rambler_1777845621864.json
+◇ injected env (47) from ..\..\.env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Sun 05/03/2026 18:00:23.15] Auto-post complete 
