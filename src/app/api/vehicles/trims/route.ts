@@ -5,6 +5,11 @@
  * 
  * Returns ONLY trims that have actual fitment data in the database.
  * Uses Redis cache to reduce DB load.
+ * 
+ * 2026-05-04: CANONICAL FITMENT FIX
+ * - Explodes grouped trims into atomic options
+ * - Each atomic trim gets a unique canonical ID
+ * - Resolves the "LX, Sport, EX" → shared modificationId problem
  */
 
 import { NextResponse } from "next/server";
@@ -15,6 +20,7 @@ import {
   setCachedTrims,
   type TrimEntry,
 } from "@/lib/fitment-db/ymmCache";
+import { getAtomicTrimOptions } from "@/lib/fitment/canonicalResolver";
 
 export const runtime = "nodejs";
 
@@ -23,9 +29,11 @@ export const runtime = "nodejs";
 // ============================================================================
 
 type TrimOption = {
-  value: string;
-  label: string;
-  modificationId: string;
+  value: string;              // Canonical fitment ID (unique per atomic trim)
+  label: string;              // Display name (atomic, not grouped)
+  modificationId: string;     // DB modificationId (may be shared by grouped record)
+  canonicalFitmentId?: string; // Unique ID for this specific trim
+  isFromGroupedRecord?: boolean; // True if exploded from grouped record
 };
 
 interface TrimResponse {
@@ -95,12 +103,56 @@ export async function GET(req: Request) {
     }
   }
 
-  // 2. Try DB
+  // 2. Try DB with canonical resolver (2026-05-04 fix)
   try {
+    // Use canonical resolver to get atomic trim options
+    // This explodes grouped trims and assigns unique canonical IDs
+    const atomicOptions = await getAtomicTrimOptions(year, make, model);
+    
+    if (atomicOptions.length > 0) {
+      console.log(`[trims] CANONICAL: ${atomicOptions.length} atomic trims for ${year} ${make} ${model}`);
+      
+      // Convert to TrimOption format
+      let results: TrimOption[] = atomicOptions.map(opt => ({
+        value: opt.canonicalFitmentId, // Use canonical ID as value (unique per trim)
+        label: opt.label,
+        modificationId: opt.modificationId,
+        canonicalFitmentId: opt.canonicalFitmentId,
+        isFromGroupedRecord: opt.isFromGroupedRecord,
+      }));
+      
+      // Apply premium UX filtering if enabled
+      if (premiumUxEnabled) {
+        const filtered = results.filter(t => !isBaseTrim(t.label));
+        if (filtered.length > 0) {
+          results = filtered;
+        } else if (results.length > 0) {
+          // All are base trims - return single "Standard" option
+          results = [{
+            value: results[0].value,
+            label: "Standard",
+            modificationId: results[0].modificationId,
+            canonicalFitmentId: results[0].canonicalFitmentId,
+          }];
+        }
+      }
+      
+      return NextResponse.json<TrimResponse>({
+        results,
+        source: "fitment_db",
+        count: results.length,
+        hasCoverage: true,
+        premiumUx: premiumUxEnabled,
+      }, {
+        headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
+      });
+    }
+    
+    // Fallback to legacy coverage check
     const coverage = await getTrimsWithCoverage(year, make, model);
     
     if (coverage.hasCoverage) {
-      console.log(`[trims] DB: ${coverage.trims.length} trims for ${year} ${make} ${model}`);
+      console.log(`[trims] LEGACY DB: ${coverage.trims.length} trims for ${year} ${make} ${model}`);
       
       // Cache the raw trims (fire and forget)
       setCachedTrims(coverage.trims, year, make, model).catch(() => {});
