@@ -19,7 +19,8 @@ export interface POSVehicle {
   year: string;
   make: string;
   model: string;
-  trim?: string;
+  trim?: string;           // Display label (e.g., "Sport")
+  modificationId?: string; // Canonical ID from trims API (2026-05-04: Required for proper fitment resolution)
 }
 
 // Build type for lifted/leveled/stock configurations

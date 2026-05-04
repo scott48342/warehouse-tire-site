@@ -365,6 +365,8 @@ export function POSPackageStep() {
         make: state.vehicle.make,
         model: state.vehicle.model,
       });
+      // 2026-05-04: Pass modificationId for canonical fitment identity
+      if (state.vehicle.modificationId) params.set("modification", state.vehicle.modificationId);
       if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
       router.replace(`/pos/wheels?${params.toString()}`);
     }
@@ -404,6 +406,8 @@ export function POSPackageStep() {
       model: state.vehicle.model,
       pageSize: "200", // Get more wheels for POS
     });
+    // 2026-05-04: Pass modificationId for canonical fitment identity (not just trim label)
+    if (state.vehicle.modificationId) params.set("modification", state.vehicle.modificationId);
     if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
     
     fetch(`/api/wheels/fitment-search?${params}`)
@@ -506,6 +510,11 @@ export function POSPackageStep() {
         wheelDiameter: state.wheel.rearDiameter,
         rearWheelDiameter: state.wheel.rearDiameter, // Signal this is rear
       });
+      // 2026-05-04: Pass modificationId for canonical fitment identity
+      if (state.vehicle.modificationId) {
+        frontParams.set("modification", state.vehicle.modificationId);
+        rearParams.set("modification", state.vehicle.modificationId);
+      }
       if (state.vehicle.trim) {
         frontParams.set("trim", state.vehicle.trim);
         rearParams.set("trim", state.vehicle.trim);
@@ -577,6 +586,8 @@ export function POSPackageStep() {
       model: state.vehicle.model,
       wheelDiameter: state.wheel.diameter,
     });
+    // 2026-05-04: Pass modificationId for canonical fitment identity
+    if (state.vehicle.modificationId) params.set("modification", state.vehicle.modificationId);
     if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
     
     fetch(`/api/tires/search?${params}`)

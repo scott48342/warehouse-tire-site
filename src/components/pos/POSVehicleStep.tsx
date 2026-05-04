@@ -11,9 +11,10 @@ const CURRENT_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 50 }, (_, i) => String(CURRENT_YEAR + 1 - i));
 
 interface TrimOption {
-  value: string;
-  label: string;
-  modificationId?: string;
+  value: string;              // canonicalFitmentId or modificationId (from trims API)
+  label: string;              // Display label (e.g., "Sport")
+  modificationId?: string;    // DB modificationId (may differ from value for grouped records)
+  canonicalFitmentId?: string; // Unique canonical ID per atomic trim (2026-05-04)
 }
 
 type Step = "year" | "make" | "model" | "trim";
@@ -130,7 +131,8 @@ export function POSVehicleStep() {
       .finally(() => setLoadingTrims(false));
   }, [year, make, model]);
 
-  const handleComplete = (selectedTrim?: string) => {
+  // 2026-05-04: Pass modificationId for proper fitment resolution
+  const handleComplete = (selectedTrim?: string, selectedModificationId?: string) => {
     if (!year || !make || !model) return;
     
     setVehicle({
@@ -138,6 +140,7 @@ export function POSVehicleStep() {
       make,
       model,
       trim: selectedTrim || trim || undefined,
+      modificationId: selectedModificationId || undefined, // Critical for canonical fitment identity
     });
   };
 
@@ -333,7 +336,9 @@ export function POSVehicleStep() {
                     type="button"
                     onClick={() => {
                       setTrim(t.label);
-                      handleComplete(t.label);
+                      // 2026-05-04: Pass modificationId for canonical fitment identity
+                      // value contains canonicalFitmentId, fall back to modificationId
+                      handleComplete(t.label, t.modificationId || t.value);
                     }}
                     className={
                       "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +

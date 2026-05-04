@@ -78,6 +78,10 @@ import { logUnresolvedFitment } from "@/lib/fitment-db/unresolvedFitmentTracker"
 
 import { calculateWheelSellPrice } from "@/lib/pricing";
 
+// 2026-05-04: CANONICAL IDENTITY - Use same resolver as tire-sizes API
+// This ensures grouped trim fallbacks are blocked consistently across all endpoints
+import { resolveVehicleFitment, type ResolutionMethod } from "@/lib/fitment/canonicalResolver";
+
 import {
   shouldApplyPackagePriority,
   getPackagePriorityTier,
@@ -612,6 +616,58 @@ export async function GET(req: Request) {
   }
 
   try {
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 0: CANONICAL IDENTITY CHECK (2026-05-04)
+    // Use the same resolver as tire-sizes API to ensure consistent trim resolution.
+    // This prevents grouped trim fallbacks that could show wheels for wrong trim.
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    if (modificationId || trimParam) {
+      const canonicalCheck = await resolveVehicleFitment({
+        year: Number(year),
+        make,
+        model,
+        trim: trimParam || undefined,
+        modificationId: modificationId || undefined,
+      });
+      
+      // If canonical resolver says BLOCKED, respect it - don't allow profileService fallback
+      if (canonicalCheck.matchedBy === "blocked") {
+        console.warn(`[fitment-search] 🚫 CANONICAL BLOCKED: ${year} ${make} ${model} → ${canonicalCheck.debug.fallbackBlockedReason}`);
+        
+        return NextResponse.json({
+          results: [],
+          totalCount: 0,
+          blocked: true,
+          blockReason: "Different trims have different wheel fitment specs. Please select your exact trim.",
+          trimResolutionRequired: true,
+          trimNotFound: modificationId || trimParam,
+          availableTrims: canonicalCheck.debug.candidateTrims.map(c => ({
+            modificationId: c.modificationId,
+            displayTrim: c.atomicTrims[0],
+            tireSizes: c.tireSizes,
+          })),
+          fitment: {
+            mode: "blocked",
+            vehicle: { year: Number(year), make, model, trim: modificationId || trimParam || null },
+            resolutionPath: "blocked" as FitmentResolutionPath,
+            canonicalMatchedBy: canonicalCheck.matchedBy,
+          },
+          suggestions: [
+            "Select your specific trim from the options above",
+            "Different trims may have different bolt patterns and wheel sizes",
+            "Contact us at (248) 332-4120 if you need help identifying your trim",
+          ],
+          timing: { totalMs: Date.now() - t0 },
+        });
+      }
+      
+      // Log canonical resolution for debugging
+      if (canonicalCheck.matchedBy !== "not_found") {
+        console.log(`[fitment-search] ✅ CANONICAL RESOLVED: ${year} ${make} ${model} → method=${canonicalCheck.matchedBy}, confidence=${canonicalCheck.confidence}, trim="${canonicalCheck.displayTrim}"`);
+      }
+    }
+    
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 1: ModificationId-First Profile Resolution (with Alias Support)
     // ═══════════════════════════════════════════════════════════════════════════
