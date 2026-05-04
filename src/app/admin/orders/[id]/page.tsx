@@ -48,6 +48,23 @@ type QuoteSnapshot = {
     tax: number;
     total: number;
   };
+  // Customer/shipping address (present for all orders)
+  shippingAddress?: {
+    address1: string;
+    address2?: string;
+    city: string;
+    state: string;
+    zip: string;
+  };
+  // Local mode metadata (install orders only)
+  localMode?: {
+    channel: string;
+    fulfillmentMode: string;
+    installStore: string;
+    installStoreName: string;
+    installStorePhone: string;
+    installStoreAddress: string;
+  };
 };
 
 type OrderRow = {
@@ -160,7 +177,7 @@ export default async function OrderDetailPage({
   const snapshot = order.snapshot_json;
   const customer = snapshot.customer;
   const vehicle = snapshot.vehicle;
-  const localMode = (snapshot as any).localMode;
+  const localMode = snapshot.localMode;
   const lines = snapshot.lines || [];
   const totals = snapshot.totals;
   const statusConfig = STATUS_CONFIG[order.status] || STATUS_CONFIG.received;
@@ -217,6 +234,21 @@ export default async function OrderDetailPage({
               <InfoRow label="Name" value={`${customer.firstName} ${customer.lastName}`} />
               <InfoRow label="Email" value={order.customer_email || customer.email || "—"} />
               <InfoRow label="Phone" value={order.customer_phone || customer.phone || "—"} />
+              {snapshot.shippingAddress && (
+                <div className="col-span-2">
+                  <div className="text-xs text-neutral-500 uppercase tracking-wide mb-1">
+                    {localMode ? "Customer Address" : "Shipping Address"}
+                  </div>
+                  <div className="text-white">
+                    {snapshot.shippingAddress.address1}
+                    {snapshot.shippingAddress.address2 && (
+                      <>, {snapshot.shippingAddress.address2}</>
+                    )}
+                    <br />
+                    {snapshot.shippingAddress.city}, {snapshot.shippingAddress.state} {snapshot.shippingAddress.zip}
+                  </div>
+                </div>
+              )}
             </div>
           </Section>
 

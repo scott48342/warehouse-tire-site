@@ -301,8 +301,8 @@ export async function POST(req: Request) {
     // Only include discount if it has a valid code and amount
     const discountData = discountInfo?.code && discountInfo.amount > 0 ? discountInfo : undefined;
 
-    // Build shipping address for drop-ship orders (non-local mode)
-    const shippingAddressData = !isLocalMode && shippingInfo.address ? {
+    // Build customer address (saved for ALL orders - shipping for national, billing/contact for local)
+    const shippingAddressData = shippingInfo.address ? {
       address1: String(shippingInfo.address || "").trim(),
       address2: shippingInfo.address2 ? String(shippingInfo.address2).trim() : undefined,
       city: String(shippingInfo.city || "").trim(),

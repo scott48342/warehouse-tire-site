@@ -288,11 +288,21 @@ export async function POST(req: Request) {
       installStoreAddress: `${installStore.address}, ${installStore.city}, ${installStore.state} ${installStore.zip}`,
     } : undefined;
 
+    // Build customer address (saved for ALL orders - shipping for national, billing/contact for local)
+    const shippingAddressData = shippingInfo.address ? {
+      address1: String(shippingInfo.address || "").trim(),
+      address2: shippingInfo.address2 ? String(shippingInfo.address2).trim() : undefined,
+      city: String(shippingInfo.city || "").trim(),
+      state: String(shippingInfo.state || "").trim().toUpperCase(),
+      zip: String(shippingInfo.zip || "").trim(),
+    } : undefined;
+
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,
       lines: linesAll,
       localMode: localModeData,
+      shippingAddress: shippingAddressData,
     });
 
     const origin = new URL(req.url).origin;
