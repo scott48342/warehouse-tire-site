@@ -60,12 +60,95 @@ const CHOOSER_TITLE = "Select your factory wheel package";
 const CHOOSER_HELPER = "Some trims came with more than one factory wheel setup. Choose the one that matches your vehicle.";
 
 // =============================================================================
+// Trim Normalization
+// =============================================================================
+
+/**
+ * Extract display trim from a canonical fitment ID or slug.
+ * 
+ * Examples:
+ * - "2020-ram-1500-big-horn-148347" → "Big Horn"
+ * - "ram-1500-big-horn-8b33058e" → "Big Horn"
+ * - "Big Horn" → "Big Horn"
+ * - "big-horn" → "Big Horn"
+ */
+function normalizeDisplayTrim(trim: string): string {
+  if (!trim) return "";
+  
+  // If it's already a clean display trim (no hyphens, not a slug), return as-is
+  if (!trim.includes("-") || /^[A-Z][a-z]/.test(trim)) {
+    return trim;
+  }
+  
+  // Try to extract trim from canonical fitment ID format: year-make-model-trim-hash
+  // e.g., "2020-ram-1500-big-horn-148347" → "big-horn"
+  const canonicalMatch = trim.match(/^\d{4}-[a-z]+-[a-z0-9]+-(.+)-[a-f0-9]{6,}$/i);
+  if (canonicalMatch) {
+    return slugToTitle(canonicalMatch[1]);
+  }
+  
+  // Try to extract trim from modification slug format: make-model-trim-hash
+  // e.g., "ram-1500-big-horn-8b33058e" → "big-horn"
+  const modMatch = trim.match(/^[a-z]+-[a-z0-9]+-(.+)-[a-f0-9]{6,}$/i);
+  if (modMatch) {
+    return slugToTitle(modMatch[1]);
+  }
+  
+  // If it looks like a simple slug (all lowercase, has hyphens), convert to title case
+  if (/^[a-z0-9-]+$/.test(trim)) {
+    return slugToTitle(trim);
+  }
+  
+  return trim;
+}
+
+/**
+ * Convert a slug to title case.
+ * e.g., "big-horn" → "Big Horn", "at4" → "AT4"
+ */
+function slugToTitle(slug: string): string {
+  // Special cases for known trims that should stay uppercase
+  const uppercaseTrims: Record<string, string> = {
+    "at4": "AT4",
+    "srt": "SRT",
+    "rt": "R/T",
+    "zr2": "ZR2",
+    "trd": "TRD",
+    "sr5": "SR5",
+    "xlt": "XLT",
+    "sel": "SEL",
+    "wt": "WT",
+    "lt": "LT",
+    "ltz": "LTZ",
+    "sle": "SLE",
+    "slt": "SLT",
+    "z71": "Z71",
+  };
+  
+  const lower = slug.toLowerCase();
+  if (uppercaseTrims[lower]) {
+    return uppercaseTrims[lower];
+  }
+  
+  // Convert hyphenated slug to title case
+  return slug
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
+// =============================================================================
 // Database Queries
 // =============================================================================
 
 /**
  * Get approved package choices for a specific YMM/trim.
  * Only returns approved choices - pending/rejected are excluded from runtime.
+ * 
+ * Normalizes trim input to handle:
+ * - Display trims: "Big Horn"
+ * - Slugs: "big-horn"
+ * - Canonical IDs: "2020-ram-1500-big-horn-148347"
  */
 export async function getApprovedPackageChoices(
   year: number,
@@ -73,6 +156,10 @@ export async function getApprovedPackageChoices(
   model: string,
   trim: string
 ): Promise<OemPackageChoice[]> {
+  // Normalize the trim to extract display name from slugs/canonical IDs
+  const normalizedTrim = normalizeDisplayTrim(trim);
+  console.log(`[oemPackageChoices] Normalized trim: "${trim}" → "${normalizedTrim}"`);
+  
   const pool = getDbPool();
   if (!pool) return [];
 
@@ -107,7 +194,7 @@ export async function getApprovedPackageChoices(
         AND LOWER(trim) = LOWER($4)
         AND status = 'approved'
       ORDER BY display_order ASC, wheel_diameter ASC
-    `, [year, make, model, trim]);
+    `, [year, make, model, normalizedTrim]);
 
     return result.rows.map(row => ({
       id: row.id,
