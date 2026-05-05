@@ -36,11 +36,34 @@ function detectShopMode(host: string, pathname: string): 'national' | 'local' {
 }
 
 export async function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+  const { pathname, searchParams } = req.nextUrl;
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
              req.headers.get("x-real-ip") || 
              "unknown";
   const userAgent = req.headers.get("user-agent") || "";
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LEGACY PACKAGE URL REDIRECTS
+  // Handle /package?year=X&make=Y&model=Z and /packages?year=X&make=Y&model=Z
+  // ═══════════════════════════════════════════════════════════════════════════
+  if ((pathname === "/package" || pathname === "/packages") && searchParams.has("year")) {
+    const year = searchParams.get("year");
+    const make = searchParams.get("make");
+    const model = searchParams.get("model");
+    
+    if (year && make && model) {
+      // Build new URL: /wheels?year=X&make=Y&model=Z&package=1
+      const url = req.nextUrl.clone();
+      url.pathname = "/wheels";
+      url.searchParams.set("year", year);
+      url.searchParams.set("make", make);
+      url.searchParams.set("model", model);
+      url.searchParams.set("package", "1");
+      // Remove any other params that were on the old URL
+      url.searchParams.delete("trim"); // trim may have old format
+      return NextResponse.redirect(url, { status: 301 });
+    }
+  }
 
   // 1. Honeypot detection (catch bots ignoring robots.txt)
   if (isHoneypotPath(pathname)) {
@@ -90,6 +113,9 @@ export const config = {
     "/tires/:path*",
     "/wheels/:path*",
     "/packages/:path*",
+    "/package/:path*",
+    "/package",
+    "/packages",
     // Vehicle selectors
     "/api/vehicles/:path*",
     // Honeypot paths
