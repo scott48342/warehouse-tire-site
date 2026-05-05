@@ -12,6 +12,7 @@ import { RebateSRPBadge } from "@/components/RebateBlock";
 import { useRebateMatches, type RebateMatchData } from "@/hooks/useRebateMatch";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { parseUTQG, derivePerformanceRatings } from "@/lib/tires/tireSpecs";
+import { FinancingBadge } from "@/components/FinancingBadge";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -531,6 +532,13 @@ function TireCard({
               </div>
             )}
           </div>
+          
+          {/* Affirm financing - match regular tire cards */}
+          {setPrice !== null && setPrice >= 50 && (
+            <div className="mt-2">
+              <FinancingBadge price={setPrice} variant="compact" />
+            </div>
+          )}
         </div>
         
         {/* ══════════════════════════════════════════════════════════════════════
