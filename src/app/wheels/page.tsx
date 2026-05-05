@@ -47,6 +47,85 @@ import {
 import { matchesBrandFilter } from "@/lib/brandCodes";
 import type { Metadata } from "next";
 
+// ═══════════════════════════════════════════════════════════════════════════
+// METADATA - SEO canonical tags to prevent duplicate content issues
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Build canonical URL for wheels pages.
+ * Strips filter params (sort, page, diameter, width, offset, etc.) 
+ * Keeps only essential vehicle identity params.
+ */
+function buildCanonicalUrl(sp: Record<string, string | string[] | undefined>): string {
+  const getParam = (key: string) => {
+    const val = sp[key];
+    return Array.isArray(val) ? val[0] : val;
+  };
+  
+  const year = getParam("year");
+  const make = getParam("make");
+  const model = getParam("model");
+  const modification = getParam("modification");
+  const rearWheelConfig = getParam("rearWheelConfig");
+  
+  // No vehicle = no canonical (homepage/browse state)
+  if (!year || !make || !model) {
+    return "https://shop.warehousetiredirect.com/wheels";
+  }
+  
+  // Build canonical with only essential params
+  const params = new URLSearchParams();
+  params.set("year", year);
+  params.set("make", make);
+  params.set("model", model);
+  if (modification) params.set("modification", modification);
+  if (rearWheelConfig) params.set("rearWheelConfig", rearWheelConfig);
+  
+  return `https://shop.warehousetiredirect.com/wheels?${params.toString()}`;
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const sp = (await searchParams) ?? {};
+  
+  const getParam = (key: string) => {
+    const val = sp[key];
+    return Array.isArray(val) ? val[0] : val;
+  };
+  
+  const year = getParam("year");
+  const make = getParam("make");
+  const model = getParam("model");
+  
+  // Build page title
+  const vehiclePart = year && make && model ? `${year} ${make} ${model}` : "";
+  const title = vehiclePart 
+    ? `Wheels for ${vehiclePart} | Warehouse Tire Direct`
+    : "Wheels | Warehouse Tire Direct";
+  
+  const description = vehiclePart
+    ? `Shop aftermarket wheels for your ${vehiclePart}. Guaranteed fitment, free shipping on orders over $99.`
+    : "Shop aftermarket wheels with guaranteed fitment. Browse by vehicle for perfect fit.";
+  
+  const canonicalUrl = buildCanonicalUrl(sp);
+  
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+    },
+  };
+}
+
 type Wheel = {
   sku?: string;
   brand?: string;

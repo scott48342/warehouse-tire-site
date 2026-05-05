@@ -102,6 +102,100 @@ import {
   getEffectiveRearWheelConfig,
   parseRearWheelConfigParam,
 } from "@/lib/fitment/rearWheelConfig";
+import type { Metadata } from "next";
+
+// ═══════════════════════════════════════════════════════════════════════════
+// METADATA - SEO canonical tags to prevent duplicate content issues
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Build canonical URL for tires pages.
+ * Strips filter params (sort, page, wheelDia, wheelWidth, etc.) 
+ * Keeps only essential vehicle identity params.
+ */
+function buildCanonicalUrl(sp: Record<string, string | string[] | undefined>): string {
+  const getParam = (key: string) => {
+    const val = sp[key];
+    return Array.isArray(val) ? val[0] : val;
+  };
+  
+  const year = getParam("year");
+  const make = getParam("make");
+  const model = getParam("model");
+  const modification = getParam("modification");
+  const rearWheelConfig = getParam("rearWheelConfig");
+  // Size-only search mode
+  const size = getParam("size");
+  
+  // Size-only mode (no vehicle)
+  if (size && (!year || !make || !model)) {
+    return `https://shop.warehousetiredirect.com/tires?size=${encodeURIComponent(size)}`;
+  }
+  
+  // No vehicle and no size = browse
+  if (!year || !make || !model) {
+    return "https://shop.warehousetiredirect.com/tires";
+  }
+  
+  // Build canonical with only essential params
+  const params = new URLSearchParams();
+  params.set("year", year);
+  params.set("make", make);
+  params.set("model", model);
+  if (modification) params.set("modification", modification);
+  if (rearWheelConfig) params.set("rearWheelConfig", rearWheelConfig);
+  
+  return `https://shop.warehousetiredirect.com/tires?${params.toString()}`;
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const sp = (await searchParams) ?? {};
+  
+  const getParam = (key: string) => {
+    const val = sp[key];
+    return Array.isArray(val) ? val[0] : val;
+  };
+  
+  const year = getParam("year");
+  const make = getParam("make");
+  const model = getParam("model");
+  const size = getParam("size");
+  
+  // Build page title
+  let title: string;
+  let description: string;
+  
+  if (year && make && model) {
+    const vehiclePart = `${year} ${make} ${model}`;
+    title = `Tires for ${vehiclePart} | Warehouse Tire Direct`;
+    description = `Shop tires for your ${vehiclePart}. Guaranteed fitment, free shipping on orders over $99.`;
+  } else if (size) {
+    title = `${size} Tires | Warehouse Tire Direct`;
+    description = `Shop ${size} tires. Wide selection, competitive prices, free shipping on orders over $99.`;
+  } else {
+    title = "Tires | Warehouse Tire Direct";
+    description = "Shop tires with guaranteed fitment. Browse by vehicle or tire size for the perfect match.";
+  }
+  
+  const canonicalUrl = buildCanonicalUrl(sp);
+  
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+    },
+  };
+}
 
 type Tire = {
   source?: "wp" | "km" | "tw";
