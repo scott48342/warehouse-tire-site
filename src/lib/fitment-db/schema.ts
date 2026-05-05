@@ -385,6 +385,91 @@ export const modificationAliases = pgTable(
 );
 
 // ============================================================================
+// wheel_size_trim_mappings - Maps our trims to Wheel-Size modifications
+// ============================================================================
+
+/**
+ * Maps our vehicle trim labels to Wheel-Size modification identifiers.
+ * Used to auto-select the correct OEM configuration when a trim has exactly 
+ * one factory package. Only shows the wheel/tire size chooser when multiple 
+ * valid configurations exist.
+ */
+export const wheelSizeTrimMappings = pgTable(
+  "wheel_size_trim_mappings",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Our vehicle identity (from vehicle_fitments)
+    year: integer("year").notNull(),
+    make: varchar("make", { length: 100 }).notNull(),
+    model: varchar("model", { length: 100 }).notNull(),
+    ourTrim: varchar("our_trim", { length: 255 }).notNull(),
+    ourModificationId: varchar("our_modification_id", { length: 255 }),
+    vehicleFitmentId: uuid("vehicle_fitment_id").references(() => vehicleFitments.id),
+    
+    // Wheel-Size identity (from cached source data)
+    wsSlug: varchar("ws_slug", { length: 255 }).notNull(),
+    wsGeneration: varchar("ws_generation", { length: 100 }),
+    wsModificationName: varchar("ws_modification_name", { length: 255 }),
+    wsSubmodel: varchar("ws_submodel", { length: 255 }),
+    wsTrim: varchar("ws_trim", { length: 255 }),
+    wsEngine: varchar("ws_engine", { length: 255 }),
+    wsBody: varchar("ws_body", { length: 100 }),
+    
+    // Match metadata
+    matchMethod: varchar("match_method", { length: 50 }).notNull().default("unknown"),
+    // Values: exact, exact_normalized, fuzzy_high, fuzzy_medium, inferred, manual
+    
+    matchConfidence: varchar("match_confidence", { length: 20 }).notNull().default("low"),
+    // Values: high, medium, low
+    
+    matchScore: decimal("match_score", { precision: 5, scale: 4 }), // 0.0000 to 1.0000
+    
+    // Configuration resolution
+    configCount: integer("config_count").notNull().default(0),
+    hasSingleConfig: boolean("has_single_config").notNull().default(false),
+    defaultConfigId: uuid("default_config_id").references(() => vehicleFitmentConfigurations.id),
+    
+    // OEM package info (denormalized for quick access)
+    defaultWheelDiameter: integer("default_wheel_diameter"),
+    defaultTireSize: varchar("default_tire_size", { length: 50 }),
+    allWheelDiameters: jsonb("all_wheel_diameters").default([]), // integer[]
+    allTireSizes: jsonb("all_tire_sizes").default([]), // string[]
+    
+    // Admin review
+    needsReview: boolean("needs_review").notNull().default(false),
+    reviewReason: varchar("review_reason", { length: 255 }),
+    reviewPriority: integer("review_priority").default(0),
+    reviewedBy: varchar("reviewed_by", { length: 100 }),
+    reviewedAt: timestamp("reviewed_at"),
+    reviewNotes: text("review_notes"),
+    
+    // Approval status: pending, approved, rejected, needs_manual
+    status: varchar("status", { length: 20 }).notNull().default("pending"),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary lookup by vehicle
+    ymmIdx: index("ws_trim_mappings_ymm_idx").on(table.year, table.make, table.model),
+    // Unique constraint
+    uniqueMapping: uniqueIndex("ws_trim_mappings_unique_idx").on(
+      table.year, table.make, table.model, table.ourTrim
+    ),
+    // Admin review queries
+    needsReviewIdx: index("ws_trim_mappings_needs_review_idx").on(table.needsReview),
+    statusIdx: index("ws_trim_mappings_status_idx").on(table.status),
+    // Single config lookup
+    singleConfigIdx: index("ws_trim_mappings_single_config_idx").on(table.hasSingleConfig),
+  })
+);
+
+export type WheelSizeTrimMapping = typeof wheelSizeTrimMappings.$inferSelect;
+export type NewWheelSizeTrimMapping = typeof wheelSizeTrimMappings.$inferInsert;
+
+// ============================================================================
 // km_image_mappings - Cache for K&M tire image URL mappings
 // ============================================================================
 
