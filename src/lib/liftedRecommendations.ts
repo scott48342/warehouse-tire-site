@@ -225,10 +225,10 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
         tireDiameterMin: 35,
         tireDiameterMax: 37,
         commonTireSizes: [
-          "35x12.50R17", "37x12.50R17", "37x13.50R17",            // 17" wheels
-          "35x12.50R18", "33x12.50R18",                            // 18" wheels
-          "35x12.50R20", "37x12.50R20", "33x12.50R20",            // 20" wheels
-          "35x12.50R22", "33x12.50R22",                            // 22" wheels
+          "35x12.50R17", "37x12.50R17", "37x13.50R17",  // 17" wheels
+          "35x12.50R18", "37x12.50R18",                  // 18" wheels (removed 33")
+          "35x12.50R20", "37x12.50R20",                  // 20" wheels (removed 33")
+          "35x12.50R22", "37x12.50R22",                  // 22" wheels (removed 33")
         ],
         wheelDiameterMin: 17,
         wheelDiameterMax: 22,
@@ -581,12 +581,12 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
       extreme: {
         tireDiameterMin: 35,
         tireDiameterMax: 37,
-        // Sizes for each popular wheel diameter: R17, R18, R20, R22
+        // Sizes for each popular wheel diameter: R17, R18, R20, R22 (removed 33" - too small for 6" lift)
         commonTireSizes: [
           "35x12.50R17", "37x12.50R17", "37x13.50R17",  // 17" wheels
-          "35x12.50R18", "33x12.50R18",                  // 18" wheels
-          "35x12.50R20", "33x12.50R20", "37x12.50R20",  // 20" wheels
-          "35x12.50R22", "33x12.50R22",                  // 22" wheels
+          "35x12.50R18", "37x12.50R18",                  // 18" wheels
+          "35x12.50R20", "37x12.50R20",                  // 20" wheels
+          "35x12.50R22", "37x12.50R22",                  // 22" wheels
         ],
         wheelDiameterMin: 17,
         wheelDiameterMax: 22,
@@ -938,11 +938,12 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
       extreme: {
         tireDiameterMin: 35,
         tireDiameterMax: 37,
+        // Removed 33" - too small for 6" lift on half-ton
         commonTireSizes: [
           "35x12.50R17", "37x12.50R17", "37x13.50R17",  // 17" wheels
-          "35x12.50R18", "33x12.50R18",                  // 18" wheels
-          "35x12.50R20", "37x12.50R20", "33x12.50R20",  // 20" wheels
-          "35x12.50R22", "33x12.50R22",                  // 22" wheels
+          "35x12.50R18", "37x12.50R18",                  // 18" wheels
+          "35x12.50R20", "37x12.50R20",                  // 20" wheels
+          "35x12.50R22", "37x12.50R22",                  // 22" wheels
         ],
         wheelDiameterMin: 17,
         wheelDiameterMax: 22,
@@ -1885,4 +1886,201 @@ export function getTireSizesForLift(
     }
     return false;
   });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MINIMUM TIRE DIAMETER ENFORCEMENT (2026-05-05)
+// Safety net to prevent undersized tire recommendations for lifted builds
+// ═══════════════════════════════════════════════════════════════════════════
+
+export type VehicleClass = "half-ton" | "midsize" | "hd" | "jeep-wrangler" | "suv" | "unknown";
+
+/**
+ * Determine vehicle class for lift-aware tire sizing
+ */
+export function getVehicleClass(make: string, model: string): VehicleClass {
+  const m = make.toLowerCase().trim();
+  const mod = model.toLowerCase().trim();
+  
+  // Jeep Wrangler - special case
+  if (m === "jeep" && mod.includes("wrangler")) {
+    return "jeep-wrangler";
+  }
+  
+  // HD trucks (3/4 ton and 1 ton)
+  if (
+    mod.includes("2500") || mod.includes("3500") ||
+    mod.includes("f-250") || mod.includes("f-350") ||
+    mod.includes("f250") || mod.includes("f350") ||
+    mod.includes("super duty") ||
+    mod.includes("titan xd")
+  ) {
+    return "hd";
+  }
+  
+  // Half-ton trucks
+  if (
+    mod.includes("f-150") || mod.includes("f150") ||
+    mod === "1500" || mod.includes("silverado 1500") || mod.includes("sierra 1500") ||
+    mod.includes("ram 1500") ||
+    mod.includes("tundra") ||
+    mod.includes("titan") // Non-XD Titan
+  ) {
+    return "half-ton";
+  }
+  
+  // Midsize trucks
+  if (
+    mod.includes("tacoma") || mod.includes("colorado") || mod.includes("canyon") ||
+    mod.includes("ranger") || mod.includes("frontier") || mod.includes("gladiator")
+  ) {
+    return "midsize";
+  }
+  
+  // Full-size SUVs (treat like half-ton for tire sizing)
+  if (
+    mod.includes("tahoe") || mod.includes("yukon") ||
+    mod.includes("suburban") || mod.includes("expedition") ||
+    mod.includes("sequoia") || mod.includes("4runner") ||
+    mod.includes("bronco")
+  ) {
+    return "suv";
+  }
+  
+  return "unknown";
+}
+
+/**
+ * Get minimum tire diameter (inches) based on vehicle class and lift height
+ * 
+ * Rules:
+ * - Half-ton/SUV 2"/leveled: 33" min
+ * - Half-ton/SUV 4": 34" min
+ * - Half-ton/SUV 6"+: 35" min
+ * - Midsize 2": 32" min
+ * - Midsize 4": 33" min
+ * - Midsize 6"+: 34" min (Tacoma/Colorado can't always fit 35")
+ * - Jeep Wrangler 2": 33" min (Rubicon comes with 33s)
+ * - Jeep Wrangler 4": 35" min
+ * - Jeep Wrangler 6"+: 37" min
+ * - HD 2": 35" min
+ * - HD 4": 35" min
+ * - HD 6"+: 37" min
+ */
+export function getMinTireDiameterForLift(
+  vehicleClass: VehicleClass,
+  liftInches: number
+): number {
+  const isLeveled = liftInches <= 2.5;
+  const is4Inch = liftInches > 2.5 && liftInches <= 4.5;
+  const is6Inch = liftInches > 4.5;
+  
+  switch (vehicleClass) {
+    case "half-ton":
+    case "suv":
+      if (isLeveled) return 33;
+      if (is4Inch) return 34;
+      return 35; // 6"+
+      
+    case "midsize":
+      if (isLeveled) return 32;
+      if (is4Inch) return 33;
+      return 34; // 6"+ (34" is more realistic for midsize)
+      
+    case "jeep-wrangler":
+      if (isLeveled) return 33;
+      if (is4Inch) return 35;
+      return 37; // 6"+
+      
+    case "hd":
+      if (isLeveled) return 35;
+      if (is4Inch) return 35;
+      return 37; // 6"+
+      
+    default:
+      // Unknown vehicle - use conservative half-ton rules
+      if (isLeveled) return 32;
+      if (is4Inch) return 33;
+      return 35;
+  }
+}
+
+/**
+ * Parse tire diameter from a tire size string
+ * Handles both flotation (35x12.50R20) and P-metric (305/55R20) formats
+ */
+export function parseTireDiameter(tireSize: string): number | null {
+  if (!tireSize) return null;
+  
+  const size = tireSize.trim().toUpperCase();
+  
+  // Flotation format: "35x12.50R20", "33X12.50R20LT"
+  const flotationMatch = size.match(/^(\d+(?:\.\d+)?)[xX][\d.]+R\d+/);
+  if (flotationMatch) {
+    return parseFloat(flotationMatch[1]);
+  }
+  
+  // P-metric format: "305/55R20", "285/70R17"
+  // Diameter = (width * aspect / 100 * 2 / 25.4) + rim
+  const pMetricMatch = size.match(/^(\d+)\/(\d+)R(\d+)/);
+  if (pMetricMatch) {
+    const width = parseInt(pMetricMatch[1], 10);
+    const aspect = parseInt(pMetricMatch[2], 10);
+    const rim = parseInt(pMetricMatch[3], 10);
+    const sidewallInches = (width * aspect / 100) / 25.4;
+    const diameter = sidewallInches * 2 + rim;
+    return Math.round(diameter * 10) / 10;
+  }
+  
+  return null;
+}
+
+export interface LiftedTireFilterResult {
+  /** Tire sizes meeting minimum diameter */
+  validSizes: string[];
+  /** Tire sizes below minimum (kept for fallback) */
+  belowMinSizes: string[];
+  /** Minimum diameter enforced */
+  minDiameter: number;
+  /** Vehicle class used */
+  vehicleClass: VehicleClass;
+  /** Whether we had to use below-min sizes as fallback */
+  usedFallback: boolean;
+}
+
+/**
+ * Filter tire sizes by minimum diameter for lifted builds
+ * Returns sizes meeting the minimum, with fallback tracking
+ */
+export function filterTiresByMinDiameter(
+  tireSizes: string[],
+  make: string,
+  model: string,
+  liftInches: number
+): LiftedTireFilterResult {
+  const vehicleClass = getVehicleClass(make, model);
+  const minDiameter = getMinTireDiameterForLift(vehicleClass, liftInches);
+  
+  const validSizes: string[] = [];
+  const belowMinSizes: string[] = [];
+  
+  for (const size of tireSizes) {
+    const diameter = parseTireDiameter(size);
+    if (diameter !== null && diameter >= minDiameter) {
+      validSizes.push(size);
+    } else {
+      belowMinSizes.push(size);
+    }
+  }
+  
+  // If no valid sizes, use below-min as fallback
+  const usedFallback = validSizes.length === 0 && belowMinSizes.length > 0;
+  
+  return {
+    validSizes: usedFallback ? belowMinSizes : validSizes,
+    belowMinSizes,
+    minDiameter,
+    vehicleClass,
+    usedFallback,
+  };
 }

@@ -1,0 +1,434 @@
+[
+  {
+    "vehicle": "2024 Ram 1500 Big Horn",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Big Horn",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Big Horn",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 XLT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 XLT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 XLT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 LT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 LT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 LT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 Elevation",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 Elevation",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 Elevation",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma SR5",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma SR5",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma SR5",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra SR5",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra SR5",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra SR5",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Rubicon",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Rubicon",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Rubicon",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2020 Chevrolet Silverado 2500 HD LT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2020 Chevrolet Silverado 2500 HD LT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  },
+  {
+    "vehicle": "2020 Chevrolet Silverado 2500 HD LT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": null,
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 0,
+    "tireResultCount": 0,
+    "stockSize": false,
+    "status": "FAIL",
+    "failureReason": "Wheels API error: fetch failed",
+    "wheelDiameter": 20,
+    "wheelWidth": null,
+    "warnings": [],
+    "debug": {
+      "modification": null
+    }
+  }
+]
