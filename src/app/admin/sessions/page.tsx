@@ -114,14 +114,24 @@ function SessionCard({ session, onExpand, isExpanded }: { session: Session; onEx
       </div>
 
       {/* Journey */}
-      <div className="space-y-1">
-        <div className="text-white font-medium truncate">
+      <div className="space-y-1" onClick={(e) => e.stopPropagation()}>
+        <a 
+          href={session.landingPage} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-white font-medium truncate block hover:underline"
+        >
           {formatPath(session.landingPage)}
-        </div>
+        </a>
         {session.lastPage !== session.landingPage && (
-          <div className="text-sm text-neutral-400 truncate">
+          <a 
+            href={session.lastPage} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-sm text-neutral-400 truncate block hover:underline"
+          >
             → {formatPath(session.lastPage)}
-          </div>
+          </a>
         )}
       </div>
 
@@ -152,9 +162,14 @@ function SessionCard({ session, onExpand, isExpanded }: { session: Session; onEx
                 <span className="text-neutral-500 text-xs w-12 flex-shrink-0">
                   {formatEventTime(event.time)}
                 </span>
-                <span className="text-blue-400 truncate">
+                <a 
+                  href={event.path} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline truncate"
+                >
                   {formatPath(event.path)}
-                </span>
+                </a>
               </div>
             ))}
           </div>
@@ -216,13 +231,25 @@ function SessionRow({ session, onExpand, isExpanded }: {
         </td>
         <td className="px-4 py-3">{getSiteBadge(session.site)}</td>
         <td className="px-4 py-3">
-          <div className="text-sm text-blue-400 truncate max-w-[200px]">
+          <a 
+            href={session.landingPage} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-sm text-blue-400 hover:underline truncate max-w-[200px] block"
+            onClick={(e) => e.stopPropagation()}
+          >
             {formatPath(session.landingPage)}
-          </div>
+          </a>
           {session.lastPage !== session.landingPage && (
-            <div className="text-xs text-neutral-400 truncate max-w-[200px]">
+            <a 
+              href={session.lastPage} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xs text-neutral-400 hover:underline truncate max-w-[200px] block"
+              onClick={(e) => e.stopPropagation()}
+            >
               → {formatPath(session.lastPage)}
-            </div>
+            </a>
           )}
         </td>
         <td className="px-4 py-3">
@@ -269,18 +296,33 @@ function SessionRow({ session, onExpand, isExpanded }: {
                       <span className="text-neutral-500 text-xs w-12 flex-shrink-0">
                         {formatEventTime(event.time)}
                       </span>
-                      <span className="text-blue-400 truncate" title={event.path}>
+                      <a 
+                        href={event.path} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:underline truncate" 
+                        title={event.path}
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         {formatPath(event.path)}
-                      </span>
+                      </a>
                     </div>
                   ))}
                 </div>
               ) : session.pages && session.pages.length > 0 ? (
                 <div className="flex flex-wrap gap-2">
                   {session.pages.map((page, idx) => (
-                    <span key={idx} className="text-sm text-blue-400 bg-neutral-800 px-2 py-0.5 rounded" title={page}>
+                    <a 
+                      key={idx} 
+                      href={page} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm text-blue-400 hover:underline bg-neutral-800 px-2 py-0.5 rounded" 
+                      title={page}
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       {formatPath(page)}
-                    </span>
+                    </a>
                   ))}
                 </div>
               ) : (
