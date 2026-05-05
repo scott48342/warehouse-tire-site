@@ -1375,10 +1375,22 @@ export function WheelsGridWithSelection({
         />
       )}
       
-      {/* Selection Confirmation - REMOVED per user request
-          Users will click directly into wheel detail page instead */}
-      
-      {/* Package Estimate - REMOVED with SelectionConfirmation */}
+      {/* Selection Confirmation - sticky on desktop */}
+      {selectedWheel && (
+        <div 
+          ref={confirmationRef}
+          className="sticky top-20 z-40 mb-4"
+        >
+          <SelectionConfirmation
+            wheel={selectedWheel}
+            tiresHref={tiresHref}
+            onClear={handleClearSelection}
+            onAddToCart={handleAddWheelsToCart}
+            onBuildPackage={handleBuildPackage}
+            isAddingToCart={isAddingToCart}
+          />
+        </div>
+      )}
       
       {/* Fitment Diameter Chips - positioned below estimate, above Top Picks */}
       {showDiameterChips && fitmentDiameters.length > 0 && viewParams.year && viewParams.make && viewParams.model && (
