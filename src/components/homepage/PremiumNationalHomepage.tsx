@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -151,11 +151,61 @@ function HeroSection() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 3: VEHICLE SELECTOR (Find the Perfect Fit)
+// SECTION 3: VEHICLE SELECTOR (Shop by Vehicle with Intent)
 // ═══════════════════════════════════════════════════════════════════════════════
+
+type ShoppingIntent = "tires" | "wheels" | "package";
+
+const INTENT_CONFIG: Record<ShoppingIntent, { 
+  label: string; 
+  icon: React.ReactNode;
+  buttonText: string;
+  description: string;
+}> = {
+  tires: {
+    label: "Tires",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
+        <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
+      </svg>
+    ),
+    buttonText: "Shop Tires",
+    description: "Find tires that fit your vehicle",
+  },
+  wheels: {
+    label: "Wheels",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
+        <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
+        <line x1="12" y1="3" x2="12" y2="8" strokeWidth={1.5} />
+        <line x1="12" y1="16" x2="12" y2="21" strokeWidth={1.5} />
+        <line x1="3" y1="12" x2="8" y2="12" strokeWidth={1.5} />
+        <line x1="16" y1="12" x2="21" y2="12" strokeWidth={1.5} />
+      </svg>
+    ),
+    buttonText: "Shop Wheels",
+    description: "Browse aftermarket wheels",
+  },
+  package: {
+    label: "Wheel & Tire Package",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="14" y="3" width="7" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="3" y="14" width="7" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="14" y="14" width="7" height="7" rx="1" strokeWidth={1.5} />
+      </svg>
+    ),
+    buttonText: "Build Package",
+    description: "Wheels + tires mounted & balanced",
+  },
+};
 
 function VehicleSelectorSection() {
   const router = useRouter();
+  const [intent, setIntent] = useState<ShoppingIntent>("tires");
   const [tab, setTab] = useState<"vehicle" | "size">("vehicle");
   
   const [year, setYear] = useState("");
@@ -244,32 +294,78 @@ function VehicleSelectorSection() {
     if (!year || !make || !model) return;
     const params = new URLSearchParams({ year, make, model });
     if (trim) params.set("trim", trim);
-    router.push(`/tires?${params.toString()}`);
+    
+    // Route based on intent
+    if (intent === "tires") {
+      router.push(`/tires?${params.toString()}`);
+    } else if (intent === "wheels") {
+      router.push(`/wheels?${params.toString()}`);
+    } else {
+      // package flow
+      params.set("package", "1");
+      router.push(`/wheels?${params.toString()}`);
+    }
   };
 
   const handleSizeSearch = () => {
     if (!width || !aspect || !rim) return;
     const size = `${width}/${aspect}R${rim}`;
+    
+    // Size search only makes sense for tires
     router.push(`/tires?size=${encodeURIComponent(size)}`);
   };
 
+  const currentIntent = INTENT_CONFIG[intent];
   const selectClass = `h-11 px-3 bg-[#1a1a1a] border border-white/20 rounded text-white text-sm focus:border-white/40 focus:outline-none appearance-none cursor-pointer ${loading ? "opacity-50" : ""}`;
 
   return (
     <section id="find-your-fit" className="bg-[#111] py-8">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
         <div className="bg-[#0d0d0d] border border-white/10 rounded overflow-hidden">
-          {/* Header row: Title on left, tabs on right */}
-          <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-            <h2 className="text-white font-bold text-xl uppercase tracking-wide">
-              Find the Perfect Fit
+          
+          {/* NEW: Intent Header */}
+          <div className="px-5 pt-5 pb-4 border-b border-white/10">
+            <h2 className="text-white font-bold text-xl lg:text-2xl tracking-tight mb-1">
+              Shop Wheels, Tires, or Complete Packages
             </h2>
+            <p className="text-white/50 text-sm">
+              Choose what you&apos;re shopping for, enter your vehicle, and we&apos;ll show verified fitment.
+            </p>
+            
+            {/* Intent Selector - 3 equally visible options */}
+            <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+              {(Object.keys(INTENT_CONFIG) as ShoppingIntent[]).map((key) => {
+                const config = INTENT_CONFIG[key];
+                const isActive = intent === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setIntent(key)}
+                    className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 px-3 py-3 sm:py-2.5 rounded-lg transition-all text-center sm:text-left ${
+                      isActive
+                        ? "bg-red-600 text-white ring-2 ring-red-500 ring-offset-2 ring-offset-[#0d0d0d]"
+                        : "bg-[#1a1a1a] text-white/70 hover:bg-[#252525] hover:text-white border border-white/10"
+                    }`}
+                  >
+                    <span className={isActive ? "text-white" : "text-white/50"}>{config.icon}</span>
+                    <span className="font-semibold text-xs sm:text-sm uppercase tracking-wide">{config.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Vehicle/Size tabs - only show size tab for tires */}
+          <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-[#0a0a0a]">
+            <span className="text-white/40 text-xs uppercase tracking-wider">
+              {currentIntent.description}
+            </span>
             <div className="flex gap-2">
               <button
                 onClick={() => setTab("vehicle")}
                 className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wide rounded transition-colors ${
                   tab === "vehicle" 
-                    ? "bg-red-600 text-white" 
+                    ? "bg-white/10 text-white" 
                     : "bg-transparent text-white/50 hover:text-white"
                 }`}
               >
@@ -278,20 +374,22 @@ function VehicleSelectorSection() {
                 </svg>
                 By Vehicle
               </button>
-              <button
-                onClick={() => setTab("size")}
-                className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wide rounded transition-colors ${
-                  tab === "size" 
-                    ? "bg-red-600 text-white" 
-                    : "bg-transparent text-white/50 hover:text-white"
-                }`}
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                By Tire Size
-              </button>
+              {intent === "tires" && (
+                <button
+                  onClick={() => setTab("size")}
+                  className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wide rounded transition-colors ${
+                    tab === "size" 
+                      ? "bg-white/10 text-white" 
+                      : "bg-transparent text-white/50 hover:text-white"
+                  }`}
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  By Tire Size
+                </button>
+              )}
             </div>
           </div>
 
@@ -332,7 +430,7 @@ function VehicleSelectorSection() {
                   disabled={!year || !make || !model}
                   className="h-11 px-8 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-colors rounded"
                 >
-                  Shop Tires
+                  {currentIntent.buttonText}
                 </button>
               </div>
             ) : (
