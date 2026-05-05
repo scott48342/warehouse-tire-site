@@ -12,19 +12,21 @@
  * 
  * Resolution Order:
  * 1. Exact modificationId match (highest priority)
- * 2. Exact canonical displayTrim match (atomic, not grouped)
- * 3. Normalized alias match (case-insensitive, slug comparison)
- * 4. Same generation + submodel match
- * 5. Safe fallback only if ALL candidate trims have identical fitment
+ * 2. APPROVED Wheel-Size trim mapping (Phase 2 - beats grouped fallback)
+ * 3. Exact canonical displayTrim match (atomic, not grouped)
+ * 4. Normalized alias match (case-insensitive, slug comparison)
+ * 5. Same generation + submodel match
+ * 6. Safe fallback only if ALL candidate trims have identical fitment
  */
 
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
-import type { VehicleFitment } from "@/lib/fitment-db/schema";
+import type { VehicleFitment, VehicleFitmentConfiguration, WheelSizeTrimMapping } from "@/lib/fitment-db/schema";
 import { eq, and, ilike, sql } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "@/lib/fitment-db/keys";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { getModelVariants } from "@/lib/fitment-db/modelAliases";
+import { getTrimMapping, type TrimMappingResult } from "@/lib/fitment-db/wheelSizeTrimMapping";
 
 // ============================================================================
 // Types
@@ -32,12 +34,23 @@ import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 
 export type ResolutionMethod = 
   | "exact_modification_id"     // Exact modificationId match
+  | "wheel_size_trim_mapping"   // Approved Wheel-Size trim mapping (Phase 2)
   | "exact_canonical_trim"      // Exact atomic displayTrim match
   | "normalized_trim"           // Normalized/slugified trim match
   | "generation_submodel"       // Same generation + submodel
   | "identical_fallback"        // All candidates have identical fitment
   | "blocked"                   // Candidates differ, cannot safely resolve
   | "not_found";                // No match at all
+
+/**
+ * Auto-selected configuration from trim mapping
+ */
+export interface AutoSelectedConfig {
+  configId: string;
+  wheelDiameter: number;
+  tireSize: string;
+  isDefault: boolean;
+}
 
 export interface CanonicalFitmentResult {
   // Core identity
@@ -51,6 +64,21 @@ export interface CanonicalFitmentResult {
   
   // Fitment data (when resolved)
   fitment: VehicleFitment | null;
+  
+  // Trim mapping resolution (Phase 2)
+  trimMapping: {
+    found: boolean;
+    mappingId: string | null;
+    showSizeChooser: boolean;
+    autoSelectedConfig: AutoSelectedConfig | null;
+    configurations: Array<{
+      configId: string;
+      wheelDiameter: number;
+      tireSize: string;
+      isDefault: boolean;
+    }>;
+    chooserReason: 'multiple_configs' | 'no_mapping' | 'low_confidence' | 'needs_review' | null;
+  };
   
   // Debug info
   debug: {
@@ -66,6 +94,14 @@ export interface CanonicalFitmentResult {
     fallbackBlockedReason: string | null;
     wasGroupedRecord: boolean;
     matchedAtomicTrim: string | null;
+    // Phase 2: Trim mapping debug info
+    trimMappingDebug: {
+      resolutionSource: string | null;
+      mappingId: string | null;
+      mappingStatus: string | null;
+      matchConfidence: string | null;
+      matchMethod: string | null;
+    };
   };
 }
 
@@ -162,6 +198,14 @@ export async function resolveVehicleFitment(
     matchedBy: "not_found",
     confidence: "low",
     fitment: null,
+    trimMapping: {
+      found: false,
+      mappingId: null,
+      showSizeChooser: true,
+      autoSelectedConfig: null,
+      configurations: [],
+      chooserReason: 'no_mapping',
+    },
     debug: {
       requestedTrim,
       normalizedRequestedTrim,
@@ -169,6 +213,13 @@ export async function resolveVehicleFitment(
       fallbackBlockedReason: null,
       wasGroupedRecord: false,
       matchedAtomicTrim: null,
+      trimMappingDebug: {
+        resolutionSource: null,
+        mappingId: null,
+        mappingStatus: null,
+        matchConfidence: null,
+        matchMethod: null,
+      },
     },
   };
 
@@ -239,6 +290,107 @@ export async function resolveVehicleFitment(
             ...result.debug,
             wasGroupedRecord: isGrouped,
           },
+        };
+      }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // STEP 1.5: Approved Wheel-Size trim mapping (Phase 2)
+    // Only use APPROVED mappings with high/medium confidence.
+    // This prevents grouped/generic fallback from showing unnecessary choices.
+    // ─────────────────────────────────────────────────────────────────────────
+    if (requestedTrim) {
+      const mappingResult = await getTrimMapping(year, make, model, requestedTrim);
+      
+      // Update debug info regardless of result
+      result.debug.trimMappingDebug = {
+        resolutionSource: mappingResult.found ? "wheel_size_trim_mapping" : null,
+        mappingId: mappingResult.mapping?.id || null,
+        mappingStatus: mappingResult.mapping?.status || null,
+        matchConfidence: mappingResult.mapping?.matchConfidence || null,
+        matchMethod: mappingResult.mapping?.matchMethod || null,
+      };
+      
+      // Only use approved mappings with sufficient confidence
+      if (
+        mappingResult.found && 
+        mappingResult.mapping && 
+        mappingResult.mapping.status === 'approved' &&
+        (mappingResult.mapping.matchConfidence === 'high' || mappingResult.mapping.matchConfidence === 'medium')
+      ) {
+        // Build configurations array from the mapping result
+        const configsForResult = mappingResult.configurations.map(c => ({
+          configId: c.id,
+          wheelDiameter: c.wheelDiameter,
+          tireSize: c.tireSize,
+          isDefault: c.isDefault,
+        }));
+        
+        // Build autoSelectedConfig if available
+        const autoSelected = mappingResult.autoSelectConfig ? {
+          configId: mappingResult.autoSelectConfig.id,
+          wheelDiameter: mappingResult.autoSelectConfig.wheelDiameter,
+          tireSize: mappingResult.autoSelectConfig.tireSize,
+          isDefault: mappingResult.autoSelectConfig.isDefault,
+        } : null;
+        
+        // Try to get the fitment record for this mapping
+        const fitmentRecord = mappingResult.mapping.vehicleFitmentId 
+          ? await db
+              .select()
+              .from(vehicleFitments)
+              .where(eq(vehicleFitments.id, mappingResult.mapping.vehicleFitmentId))
+              .limit(1)
+              .then(rows => rows[0] || null)
+          : null;
+        
+        const withOverrides = fitmentRecord ? await applyOverrides(fitmentRecord) : null;
+        
+        return {
+          ...result,
+          canonicalFitmentId: generateCanonicalId(year, make, model, requestedTrim),
+          modificationId: mappingResult.mapping.ourModificationId || null,
+          displayTrim: requestedTrim,
+          matchedBy: "wheel_size_trim_mapping",
+          confidence: mappingResult.mapping.matchConfidence === 'high' ? 'high' : 'medium',
+          fitment: withOverrides,
+          trimMapping: {
+            found: true,
+            mappingId: mappingResult.mapping.id,
+            showSizeChooser: mappingResult.showSizeChooser,
+            autoSelectedConfig: autoSelected,
+            configurations: configsForResult,
+            chooserReason: mappingResult.chooserReason,
+          },
+          debug: {
+            ...result.debug,
+            wasGroupedRecord: false,
+            matchedAtomicTrim: requestedTrim,
+            trimMappingDebug: {
+              resolutionSource: "wheel_size_trim_mapping",
+              mappingId: mappingResult.mapping.id,
+              mappingStatus: mappingResult.mapping.status,
+              matchConfidence: mappingResult.mapping.matchConfidence,
+              matchMethod: mappingResult.mapping.matchMethod,
+            },
+          },
+        };
+      }
+      
+      // Mapping exists but not approved or low confidence - update trimMapping info but continue to other resolution methods
+      if (mappingResult.found && mappingResult.mapping) {
+        result.trimMapping = {
+          found: true,
+          mappingId: mappingResult.mapping.id,
+          showSizeChooser: true, // Force chooser for non-approved mappings
+          autoSelectedConfig: null,
+          configurations: mappingResult.configurations.map(c => ({
+            configId: c.id,
+            wheelDiameter: c.wheelDiameter,
+            tireSize: c.tireSize,
+            isDefault: c.isDefault,
+          })),
+          chooserReason: mappingResult.chooserReason || 'needs_review',
         };
       }
     }
