@@ -289,25 +289,26 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
   
   for (const w of wheels) {
     const source = w.meta?.source;
-    const supplierLabel = isAdmin && source ? ` • 📦 ${formatSupplierName(source)}` : "";
+    const supplierName = isAdmin && source ? formatSupplierName(source) : undefined;
     
     productCards += productCard({
       emoji: "🛞",
       sectionTitle: `Wheels${w.qty > 1 ? ` — Set of ${w.qty}` : ""}`,
       imageUrl: w.meta?.imageUrl,
       title: `${w.meta?.brand || ""} ${w.name}`.trim(),
-      subtitle: `${w.meta?.diameter || ""}″ × ${w.meta?.width || ""}″${w.meta?.finish ? ` • ${w.meta.finish}` : ""}${supplierLabel}`,
+      subtitle: `${w.meta?.diameter || ""}″ × ${w.meta?.width || ""}″${w.meta?.finish ? ` • ${w.meta.finish}` : ""}`,
       sku: w.sku,
       totalPrice: w.unitPriceUsd * w.qty,
       unitPrice: w.unitPriceUsd,
       quantity: w.qty,
+      supplier: supplierName,
     });
   }
 
   // Build tire cards
   for (const t of tires) {
     const source = t.meta?.source;
-    const supplierLabel = isAdmin && source ? ` • 📦 ${formatSupplierName(source)}` : "";
+    const supplierName = isAdmin && source ? formatSupplierName(source) : undefined;
     const tireSize = t.meta?.tireSize || t.meta?.size || 
       (t.meta?.width && t.meta?.aspectRatio && t.meta?.diameter 
         ? `${t.meta.width}/${t.meta.aspectRatio}R${t.meta.diameter}` 
@@ -318,29 +319,31 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
       sectionTitle: `Tires${t.qty > 1 ? ` — Set of ${t.qty}` : ""}`,
       imageUrl: t.meta?.imageUrl,
       title: `${t.meta?.brand || ""} ${t.name}`.trim(),
-      subtitle: `${tireSize}${supplierLabel}`,
+      subtitle: tireSize,
       sku: t.sku,
       totalPrice: t.unitPriceUsd * t.qty,
       unitPrice: t.unitPriceUsd,
       quantity: t.qty,
+      supplier: supplierName,
     });
   }
 
   // Build accessory cards
   for (const a of accessories) {
     const source = a.meta?.source;
-    const supplierLabel = isAdmin && source ? ` • 📦 ${formatSupplierName(source)}` : "";
+    const supplierName = isAdmin && source ? formatSupplierName(source) : undefined;
     
     productCards += productCard({
       emoji: "🔩",
       sectionTitle: `Accessories${a.qty > 1 ? ` — Qty ${a.qty}` : ""}`,
       imageUrl: a.meta?.imageUrl,
       title: a.name,
-      subtitle: a.meta?.finish || supplierLabel || "",
+      subtitle: a.meta?.finish || "",
       sku: a.sku,
       totalPrice: a.unitPriceUsd * a.qty,
       unitPrice: a.unitPriceUsd,
       quantity: a.qty,
+      supplier: supplierName,
     });
   }
 
@@ -369,8 +372,9 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
 
   summaryLines.push({ label: "Tax", amount: totals.tax });
 
-  // Build admin banner
+  // Build admin banner and supplier summary
   let adminSection = "";
+  let supplierSummarySection = "";
   if (isAdmin) {
     const details = [
       { label: "Customer", value: `${customer.firstName} ${customer.lastName}` },
@@ -379,6 +383,58 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
     if (customer.phone) details.push({ label: "Phone", value: customer.phone });
 
     adminSection = adminBanner("New Order Notification", details);
+    
+    // Collect unique suppliers for quick reference
+    const allItems = [...wheels, ...tires, ...accessories];
+    const supplierMap = new Map<string, string[]>();
+    
+    for (const item of allItems) {
+      const source = item.meta?.source;
+      if (source) {
+        const supplierName = formatSupplierName(source);
+        const itemDesc = item.meta?.cartType === "wheel" 
+          ? `${item.meta?.brand || ""} ${item.name}`.trim()
+          : item.meta?.cartType === "tire"
+          ? `${item.meta?.brand || ""} ${item.name}`.trim()
+          : item.name;
+        
+        if (!supplierMap.has(supplierName)) {
+          supplierMap.set(supplierName, []);
+        }
+        supplierMap.get(supplierName)!.push(`${itemDesc} (×${item.qty})`);
+      }
+    }
+    
+    if (supplierMap.size > 0) {
+      const supplierRows = Array.from(supplierMap.entries()).map(([supplier, items]) => `
+        <tr>
+          <td style="padding: 8px 12px; background-color: #fef3c7; border-bottom: 1px solid #fcd34d;">
+            <span style="font-weight: 700; color: #92400e; font-size: 14px;">📦 ${supplier}</span>
+            <span style="color: #a16207; font-size: 12px; margin-left: 8px;">${items.length} item${items.length > 1 ? 's' : ''}</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 12px 12px; background-color: #fffbeb;">
+            <span style="color: #78350f; font-size: 12px;">${items.join(', ')}</span>
+          </td>
+        </tr>
+      `).join('');
+      
+      supplierSummarySection = `
+        <tr>
+          <td style="padding: 0 40px 24px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius: 8px; overflow: hidden; border: 2px solid #f59e0b;">
+              <tr>
+                <td style="padding: 12px 16px; background-color: #f59e0b;">
+                  <span style="color: #ffffff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">⚡ ORDER FROM THESE SUPPLIERS</span>
+                </td>
+              </tr>
+              ${supplierRows}
+            </table>
+          </td>
+        </tr>
+      `;
+    }
   }
 
   // Local mode banner
@@ -403,6 +459,7 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
         ? `Order from <strong>${customer.firstName} ${customer.lastName}</strong> — $${formatPrice(totals.total)} total`
         : "Thank you for your order! We've received your payment and will begin processing right away."
     )}
+    ${supplierSummarySection}
     ${localModeSection}
     ${vehicleLabel ? `
       <tr>

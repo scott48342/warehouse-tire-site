@@ -156,10 +156,17 @@ export interface ProductCardOptions {
   totalPrice: number;
   unitPrice?: number;
   quantity?: number;
+  /** Supplier name for admin emails - displayed prominently */
+  supplier?: string;
 }
 
 export function productCard(options: ProductCardOptions): string {
-  const { emoji, sectionTitle, imageUrl, title, subtitle, sku, totalPrice, unitPrice, quantity } = options;
+  const { emoji, sectionTitle, imageUrl, title, subtitle, sku, totalPrice, unitPrice, quantity, supplier } = options;
+
+  // Supplier badge - prominent orange/yellow badge for admin visibility
+  const supplierBadge = supplier ? `
+    <span style="display: inline-block; background-color: #f59e0b; color: #ffffff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">📦 ORDER FROM: ${supplier}</span>
+  ` : "";
 
   return `
     <tr>
@@ -182,7 +189,8 @@ export function productCard(options: ProductCardOptions): string {
                   <td valign="top">
                     <p style="margin: 0 0 4px; color: ${TEXT_PRIMARY}; font-size: 16px; font-weight: 600;">${title}</p>
                     <p style="margin: 0 0 4px; color: ${TEXT_SECONDARY}; font-size: 14px;">${subtitle}</p>
-                    ${sku ? `<p style="margin: 0; color: ${TEXT_MUTED}; font-size: 12px;">SKU: ${sku}</p>` : ""}
+                    ${sku ? `<p style="margin: 0 0 6px; color: ${TEXT_MUTED}; font-size: 12px;">SKU: ${sku}</p>` : ""}
+                    ${supplierBadge}
                   </td>
                   <td valign="top" align="right" width="100">
                     <p style="margin: 0; color: ${TEXT_PRIMARY}; font-size: 20px; font-weight: 700;">$${formatPrice(totalPrice)}</p>
