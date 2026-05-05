@@ -889,17 +889,17 @@ export function WheelsStyleCard({
               )}
             </div>
           ) : (
-            /* Standard square setup - Line 2: Size + Offset (if showOffset) + Finish */
+            /* Standard square setup - Line 2: Size + Offset + Finish */
             <div className="mt-1 text-sm text-neutral-600">
               {(currentDiameter || currentWidth) && (
                 <span className="font-medium">
                   {currentDiameter && `${fmtSizePart(currentDiameter)}"`}
                   {currentDiameter && currentWidth && " × "}
                   {currentWidth && `${fmtSizePart(currentWidth)}"`}
-                  {/* Show offset for lifted homepage intent builds */}
-                  {showOffset && specLabel?.offset && (
-                    <span className="ml-1 text-amber-700 font-bold">
-                      {Number(specLabel.offset) >= 0 ? `+${specLabel.offset}` : specLabel.offset}
+                  {/* Always show offset after size */}
+                  {currentOffset && (
+                    <span className="ml-1 text-neutral-500">
+                      ET{Number(currentOffset) >= 0 ? `+${currentOffset}` : currentOffset}
                     </span>
                   )}
                 </span>
