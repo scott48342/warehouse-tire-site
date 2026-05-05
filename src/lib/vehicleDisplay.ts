@@ -182,6 +182,13 @@ export function isModificationId(text: string): boolean {
   // Generic hex strings (8+ chars, all hex)
   if (/^[a-f0-9]{8,}$/i.test(trimmed)) return true;
   
+  // Full slug format: year-make-model-trim-hexhash (e.g., "2021-chevrolet-silverado-2500-hd-high-country-1e5f8b")
+  // Starts with year, contains multiple dashes, ends with hex suffix
+  if (/^\d{4}-[a-z0-9-]+-[a-f0-9]{4,}$/i.test(trimmed)) return true;
+  
+  // Slug with hex suffix at end (e.g., "trim-name-abc123")
+  if (trimmed.includes("-") && /[a-f0-9]{4,}$/i.test(trimmed)) return true;
+  
   return false;
 }
 

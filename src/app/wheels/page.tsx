@@ -236,12 +236,27 @@ export default async function WheelsPage({
   let modification = modificationRaw;
   let trimLabel = trimRaw;
 
+  // Helper to detect if a string looks like a modification slug (not a display label)
+  // Modification slugs look like: "2021-chevrolet-silverado-2500-hd-high-country-1e5f8b"
+  // Display labels look like: "High Country", "LTZ", "Big Horn"
+  function looksLikeModificationSlug(s: string): boolean {
+    if (!s) return false;
+    // Short hash formats
+    if (/^s_[a-f0-9]{8}$/.test(s)) return true;
+    if (/^[a-f0-9]{10}$/.test(s)) return true;
+    // Full slug format: starts with year, contains dashes, ends with hex suffix
+    if (/^\d{4}-[a-z0-9-]+-[a-f0-9]{4,}$/i.test(s)) return true;
+    // Contains multiple dashes and a hex-ish suffix (e.g., "trim-name-abc123")
+    if (s.includes("-") && /[a-f0-9]{4,}$/i.test(s)) return true;
+    return false;
+  }
+
   if (!modification && trimRaw) {
-    // Check if trim looks like a modificationId (hash or hex slug)
-    if (/^s_[a-f0-9]{8}$/.test(trimRaw) || /^[a-f0-9]{10}$/.test(trimRaw)) {
+    // Check if trim looks like a modificationId
+    if (looksLikeModificationSlug(trimRaw)) {
       // Legacy URL using trim as modificationId - migrate it
       modification = trimRaw;
-      trimLabel = ""; // Will be resolved below
+      trimLabel = ""; // Clear so it's not displayed as-is
       console.warn(`[wheels] DEPRECATION: Using 'trim' as modificationId. Migrate to 'modification=${trimRaw}'`);
     }
   }
@@ -250,6 +265,10 @@ export default async function WheelsPage({
   // but only if modification is not set
   if (!modification && trimRaw && !trimRaw.includes(" ")) {
     modification = trimRaw;
+    // If this looks like a slug (not a clean label), don't display it
+    if (looksLikeModificationSlug(trimRaw)) {
+      trimLabel = "";
+    }
   }
 
   // Alias for places still using 'trim' variable
