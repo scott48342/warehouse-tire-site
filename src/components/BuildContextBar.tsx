@@ -191,18 +191,26 @@ export function PackageBridgeCTA({
     inches <= 6 ? "Trail Ready" : "Show Truck";
   
   // Build tire search URL
+  // CRITICAL: Must include liftedSource, liftedPreset, liftedTireSizes for tires page to recognize lifted build
   const buildTireUrl = () => {
     const params = new URLSearchParams();
     params.set("year", vehicleYear);
     params.set("make", vehicleMake);
     params.set("model", vehicleModel);
     if (modification) params.set("modification", modification);
-    if (wheelDiameter) params.set("wheelDiameter", String(wheelDiameter));
+    // Use wheelDia (not wheelDiameter) - that's what tires page reads
+    if (wheelDiameter) params.set("wheelDia", String(wheelDiameter));
     if (liftLevel) params.set("liftLevel", liftLevel);
     if (liftedInches) params.set("liftedInches", liftedInches);
     if (buildType) params.set("buildType", buildType);
+    // Lifted build context - required for tires page to activate lifted mode
+    if (buildType === "lifted" || buildType === "leveled") {
+      params.set("liftedSource", "lifted");
+      params.set("liftedPreset", liftLevel || "custom");
+    }
     if (tireSizes.length > 0) {
-      params.set("targetTireSizes", tireSizes.join(","));
+      // Use liftedTireSizes (not targetTireSizes) - that's what tires page reads
+      params.set("liftedTireSizes", tireSizes.join(","));
     }
     return `/tires?${params.toString()}`;
   };
@@ -335,12 +343,19 @@ export function PackageBridgeCompact({
     params.set("make", vehicleMake);
     params.set("model", vehicleModel);
     if (modification) params.set("modification", modification);
-    if (wheelDiameter) params.set("wheelDiameter", String(wheelDiameter));
+    // Use wheelDia (not wheelDiameter) - that's what tires page reads
+    if (wheelDiameter) params.set("wheelDia", String(wheelDiameter));
     if (liftLevel) params.set("liftLevel", liftLevel);
     if (liftedInches) params.set("liftedInches", liftedInches);
     if (buildType) params.set("buildType", buildType);
+    // Lifted build context - required for tires page to activate lifted mode
+    if (buildType === "lifted" || buildType === "leveled") {
+      params.set("liftedSource", "lifted");
+      params.set("liftedPreset", liftLevel || "custom");
+    }
     if (tireSizes.length > 0) {
-      params.set("targetTireSizes", tireSizes.join(","));
+      // Use liftedTireSizes (not targetTireSizes) - that's what tires page reads
+      params.set("liftedTireSizes", tireSizes.join(","));
     }
     return `/tires?${params.toString()}`;
   };
