@@ -4,9 +4,9 @@
  * Automatically places orders with suppliers when customers purchase products.
  * 
  * Supported suppliers:
- * - US AutoForce (tireweb:usautoforce, usautoforce)
+ * - US AutoForce (tireweb:usautoforce, usautoforce) - TIRES
+ * - WheelPros (wheelpros) - WHEELS + TIRES
  * - TireWeb suppliers (tireweb:atd, tireweb:ntw, tireweb:km) - manual for now
- * - WheelPros - separate flow
  * 
  * Flow:
  * 1. Order created in our system (Stripe webhook)
@@ -18,6 +18,7 @@
 import pg from "pg";
 import type { QuoteSnapshot, QuoteLine } from "@/lib/quotes";
 import { placeOrder as placeUSAutoForceOrder, getOrderStatus } from "@/lib/usautoforce/client";
+import { placeWheelProsOrder, trackWheelProsOrder } from "@/lib/wheelpros/orderClient";
 
 // ============================================================================
 // TYPES
@@ -88,14 +89,16 @@ export async function ensureSupplierOrdersTable(db: pg.Pool): Promise<void> {
 // ============================================================================
 
 /**
- * Extract tire items from order snapshot, grouped by supplier
+ * Extract ALL items (wheels + tires) from order snapshot, grouped by supplier
  */
-export function extractTireItemsBySupplier(snapshot: QuoteSnapshot): Map<string, SupplierOrderItem[]> {
+export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, SupplierOrderItem[]> {
   const bySupplier = new Map<string, SupplierOrderItem[]>();
   
   for (const line of snapshot.lines) {
-    // Only process tire items
-    if (line.meta?.cartType !== "tire") continue;
+    const cartType = line.meta?.cartType;
+    
+    // Only process tire and wheel items
+    if (cartType !== "tire" && cartType !== "wheel") continue;
     
     const source = line.meta?.source || "unknown";
     const partNumber = line.sku;
@@ -120,6 +123,13 @@ export function extractTireItemsBySupplier(snapshot: QuoteSnapshot): Map<string,
   }
   
   return bySupplier;
+}
+
+/**
+ * @deprecated Use extractItemsBySupplier instead
+ */
+export function extractTireItemsBySupplier(snapshot: QuoteSnapshot): Map<string, SupplierOrderItem[]> {
+  return extractItemsBySupplier(snapshot);
 }
 
 /**
@@ -151,14 +161,74 @@ function normalizeSupplier(source: string): string {
  * Check if supplier supports automatic ordering
  */
 export function isAutoOrderSupplier(supplier: string): boolean {
-  // Currently only US AutoForce supports auto-ordering
-  // TireWeb suppliers require manual ordering through their portal
-  return supplier === "usautoforce";
+  // US AutoForce: tires via SOAP API
+  // WheelPros: wheels + tires via REST API
+  return supplier === "usautoforce" || supplier === "wheelpros";
 }
 
 // ============================================================================
 // ORDER PLACEMENT
 // ============================================================================
+
+/**
+ * Place order with WheelPros
+ */
+async function placeWheelProsSupplierOrder(
+  request: SupplierOrderRequest
+): Promise<SupplierOrderResult> {
+  try {
+    console.log(`[supplier-order] Placing WheelPros order for ${request.orderId}:`, {
+      items: request.items.length,
+      shipTo: `${request.shipTo.city}, ${request.shipTo.state}`,
+    });
+    
+    const result = await placeWheelProsOrder({
+      purchaseOrderNumber: `WTD-${request.orderId}`,
+      items: request.items.map(i => ({
+        partNumber: i.partNumber,
+        quantity: i.quantity,
+      })),
+      shipping: {
+        shipToName: request.shipTo.name,
+        address1: request.shipTo.address1,
+        address2: request.shipTo.address2,
+        city: request.shipTo.city,
+        stateOrProvinceCode: request.shipTo.state,
+        postalCode: request.shipTo.zip,
+        countryCode: "US",
+        phone: request.shipTo.phone || "5555555555",
+      },
+      orderNotes: `Warehouse Tire Direct Order ${request.orderId}`,
+    });
+    
+    if (result.success) {
+      console.log(`[supplier-order] WheelPros order placed: ${result.orderNumber}`);
+      return {
+        success: true,
+        supplier: "wheelpros",
+        supplierOrderNumber: result.orderNumber,
+        supplierPO: `WTD-${request.orderId}`,
+        items: request.items,
+      };
+    } else {
+      console.error(`[supplier-order] WheelPros order failed:`, result.errorMessage);
+      return {
+        success: false,
+        supplier: "wheelpros",
+        errorMessage: result.errorMessage,
+        items: request.items,
+      };
+    }
+  } catch (err: any) {
+    console.error(`[supplier-order] WheelPros order error:`, err);
+    return {
+      success: false,
+      supplier: "wheelpros",
+      errorMessage: String(err.message || err),
+      items: request.items,
+    };
+  }
+}
 
 /**
  * Place order with US AutoForce
@@ -223,7 +293,7 @@ export async function processSupplierOrders(
   await ensureSupplierOrdersTable(db);
   
   const results: SupplierOrderResult[] = [];
-  const itemsBySupplier = extractTireItemsBySupplier(snapshot);
+  const itemsBySupplier = extractItemsBySupplier(snapshot);
   
   for (const [supplier, items] of itemsBySupplier) {
     console.log(`[supplier-order] Processing ${items.length} items for supplier: ${supplier}`);
@@ -241,6 +311,8 @@ export async function processSupplierOrders(
       // Auto-order supported - place order via API
       if (supplier === "usautoforce") {
         result = await placeUSAutoForceSupplierOrder(request);
+      } else if (supplier === "wheelpros") {
+        result = await placeWheelProsSupplierOrder(request);
       } else {
         // Shouldn't happen, but handle gracefully
         result = {
@@ -287,6 +359,46 @@ export async function processSupplierOrders(
 // ============================================================================
 // ORDER STATUS SYNC
 // ============================================================================
+
+/**
+ * Sync order status from WheelPros
+ */
+export async function syncWheelProsOrderStatus(
+  db: pg.Pool,
+  supplierOrderNumber: string
+): Promise<{
+  status: string;
+  trackingNumbers: string[];
+}> {
+  try {
+    const result = await trackWheelProsOrder({ supplierOrderNumber });
+    
+    if (result.success) {
+      // Update our record
+      await db.query(`
+        UPDATE supplier_orders
+        SET status = $1,
+            tracking_numbers = $2,
+            updated_at = NOW()
+        WHERE supplier_order_number = $3 AND supplier = 'wheelpros'
+      `, [
+        result.status || "unknown",
+        result.trackingNumbers || [],
+        supplierOrderNumber,
+      ]);
+      
+      return {
+        status: result.status || "unknown",
+        trackingNumbers: result.trackingNumbers || [],
+      };
+    }
+    
+    return { status: "unknown", trackingNumbers: [] };
+  } catch (err) {
+    console.error(`[supplier-order] WheelPros status sync error for ${supplierOrderNumber}:`, err);
+    return { status: "error", trackingNumbers: [] };
+  }
+}
 
 /**
  * Sync order status from US AutoForce
