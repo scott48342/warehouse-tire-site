@@ -67,11 +67,24 @@ export const MODEL_ALIASES: Record<string, string[]> = {
 };
 
 /**
+ * GM HD TRUCK RICH MODEL PRIORITY
+ * 
+ * The "hd" variants (no hyphen) have richer trim data than "-hd" variants.
+ * Always prioritize these in query order to get better trim options.
+ */
+const HD_RICH_PRIORITY: Record<string, string> = {
+  "silverado-2500-hd": "silverado-2500hd",
+  "silverado-3500-hd": "silverado-3500hd",
+  "sierra-2500-hd": "sierra-2500hd",
+  "sierra-3500-hd": "sierra-3500hd",
+};
+
+/**
  * Get all model names to search (input + aliases)
  * Returns array suitable for SQL IN clause or iteration.
  * 
  * @param model - User input model name
- * @returns Array of model names to try (input first, then aliases)
+ * @returns Array of model names to try (prioritized for data richness)
  */
 export function getModelVariants(model: string): string[] {
   // Slugify the input (lowercase, hyphens for non-alphanumeric)
@@ -79,6 +92,14 @@ export function getModelVariants(model: string): string[] {
   
   // Get aliases (these are RAW DB names, not normalized)
   const aliases = MODEL_ALIASES[slugified] || [];
+  
+  // Check if this is an HD truck with sparse data - prioritize rich variant
+  const richVariant = HD_RICH_PRIORITY[slugified];
+  if (richVariant) {
+    // Put rich variant FIRST, then input, then other aliases
+    const others = aliases.filter(a => a !== richVariant);
+    return [richVariant, slugified, ...others];
+  }
   
   // Return input first (exact match wins), then aliases
   return [slugified, ...aliases];
