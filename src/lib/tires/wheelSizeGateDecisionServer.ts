@@ -18,6 +18,10 @@ import {
   type WheelSizeGateReason,
 } from "./wheelSizeGateDecision";
 import type { CanonicalFitmentResult } from "@/lib/fitment/canonicalResolver";
+import { 
+  getPackageChoicesForVehicle, 
+  type PackageChoiceOption,
+} from "@/lib/fitment/oemPackageChoices";
 
 // ============================================================================
 // Types for trim mapping integration
@@ -43,6 +47,13 @@ export interface TrimMappingGateDecision extends Omit<WheelSizeGateDecision, 're
     tireSize: string;
     isDefault: boolean;
   }>;
+  /** OEM Package Choices (customer-friendly labels for multi-config trims) */
+  packageChoices: {
+    available: boolean;
+    choices: PackageChoiceOption[];
+    title: string;
+    helperText: string;
+  };
   /** Debug info for troubleshooting */
   debug: {
     chooserReason: string | null;
@@ -88,7 +99,15 @@ export async function getWheelSizeGateDecisionWithTrimMapping(params: {
   /** Trim mapping result from canonicalResolver (Phase 2) */
   trimMapping?: CanonicalFitmentResult['trimMapping'];
 }): Promise<TrimMappingGateDecision> {
-  const { trimMapping, ...baseParams } = params;
+  const { year, make, model, trim, trimMapping, ...baseParams } = params;
+  
+  // Default empty package choices
+  const emptyPackageChoices = {
+    available: false,
+    choices: [] as PackageChoiceOption[],
+    title: "",
+    helperText: "",
+  };
   
   // ═══════════════════════════════════════════════════════════════════════════
   // PRIORITY 1: Check approved trim mapping (Phase 3)
@@ -105,6 +124,7 @@ export async function getWheelSizeGateDecisionWithTrimMapping(params: {
         trimMappingApplied: true,
         autoSelectedConfig: trimMapping.autoSelectedConfig,
         mappedConfigurations: trimMapping.configurations,
+        packageChoices: emptyPackageChoices,
         debug: {
           chooserReason: trimMapping.chooserReason,
           mappingId: trimMapping.mappingId,
@@ -120,6 +140,13 @@ export async function getWheelSizeGateDecisionWithTrimMapping(params: {
         trimMapping.configurations.map(c => c.wheelDiameter)
       )].sort((a, b) => a - b);
       
+      // ═══════════════════════════════════════════════════════════════════════
+      // OEM PACKAGE CHOICES: Fetch customer-friendly labels if available
+      // ═══════════════════════════════════════════════════════════════════════
+      const packageChoices = trim 
+        ? await getPackageChoicesForVehicle(year, make, model, trim)
+        : emptyPackageChoices;
+      
       return {
         show: true,
         reason: 'trim_mapping_multi_config',
@@ -128,6 +155,7 @@ export async function getWheelSizeGateDecisionWithTrimMapping(params: {
         trimMappingApplied: true,
         autoSelectedConfig: trimMapping.autoSelectedConfig,
         mappedConfigurations: trimMapping.configurations,
+        packageChoices,
         debug: {
           chooserReason: trimMapping.chooserReason,
           mappingId: trimMapping.mappingId,
@@ -141,13 +169,26 @@ export async function getWheelSizeGateDecisionWithTrimMapping(params: {
   // ═══════════════════════════════════════════════════════════════════════════
   // FALLBACK: Use existing async decision logic (config table + patterns)
   // ═══════════════════════════════════════════════════════════════════════════
-  const baseDecision = await getWheelSizeGateDecisionAsync(baseParams);
+  const baseDecision = await getWheelSizeGateDecisionAsync({
+    year,
+    make,
+    model,
+    trim,
+    ...baseParams,
+  });
+  
+  // If showing chooser in fallback mode, still check for package choices
+  let packageChoices = emptyPackageChoices;
+  if (baseDecision.show && trim) {
+    packageChoices = await getPackageChoicesForVehicle(year, make, model, trim);
+  }
   
   return {
     ...baseDecision,
     trimMappingApplied: false,
     autoSelectedConfig: null,
     mappedConfigurations: [],
+    packageChoices,
     debug: {
       chooserReason: trimMapping?.chooserReason ?? null,
       mappingId: trimMapping?.mappingId ?? null,
