@@ -44,6 +44,7 @@ import { ProductViewTracker } from "@/components/ProductViewTracker";
 // Shop context detection (local vs national)
 import { headers } from "next/headers";
 import { detectShopContext } from "@/lib/shopContext";
+import { notFound } from "next/navigation";
 
 export const runtime = "nodejs";
 
@@ -695,16 +696,8 @@ export default async function TireDetailPage({
       console.error("[tire-detail] TireWeb lookup failed:", err);
     }
     
-    return (
-      <main className="bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 py-10">
-          <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">Tire not found.</div>
-          <div className="mt-4">
-            <BackToTiresButton className="text-sm font-semibold text-neutral-900 hover:underline" />
-          </div>
-        </div>
-      </main>
-    );
+    // TireWeb tire not found - return proper 404
+    notFound();
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -791,33 +784,8 @@ export default async function TireDetailPage({
     : { rows: [] as any[] };
 
   if (!t) {
-    return (
-      <main className="bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 py-10">
-          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">🔍</span>
-              <div>
-                <div className="font-bold text-amber-900">Tire not found</div>
-                <div className="mt-1 text-sm text-amber-800">
-                  SKU <code className="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-xs">{safeSku}</code> wasn&apos;t found in our database.
-                  This may be an outdated link or the product is no longer available.
-                </div>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <Link 
-                    href="/tires" 
-                    className="inline-flex items-center gap-2 rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700 transition-colors"
-                  >
-                    Browse All Tires
-                  </Link>
-                  <BackToTiresButton className="inline-flex items-center gap-2 rounded-lg border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-50 transition-colors" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    );
+    // Return proper 404 status for missing tires (fixes soft 404 issue)
+    notFound();
   }
 
   const displayPrice = priceFromRow(t);
