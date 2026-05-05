@@ -1522,7 +1522,8 @@ export default async function TiresPage({
   // 1. We have a vehicle selected (year/make/model)
   // 2. No modification is specified
   // 3. AND we don't have static tire data available (not a classic vehicle)
-  if (year && make && model && !modification && !hasStaticTireData) {
+  // 4. AND not a lifted build (lifted builds have their own tire size recommendations)
+  if (year && make && model && !modification && !hasStaticTireData && !isLiftedBuild) {
     return (
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-screen-2xl px-4 py-8">
