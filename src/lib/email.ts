@@ -309,17 +309,34 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
   for (const t of tires) {
     const source = t.meta?.source;
     const supplierName = isAdmin && source ? formatSupplierName(source) : undefined;
-    const tireSize = t.meta?.tireSize || t.meta?.size || 
-      (t.meta?.width && t.meta?.aspectRatio && t.meta?.diameter 
-        ? `${t.meta.width}/${t.meta.aspectRatio}R${t.meta.diameter}` 
-        : "");
+    
+    // Extract tire size from meta or from name if embedded
+    const tireSize = t.meta?.tireSize || t.meta?.size || "";
+    
+    // Build clean title: Brand + Model (without size prefix)
+    // Note: t.name may already include "245/65R17 Brand Model" format from checkout
+    // We want to show: Title = "Brand Model", Subtitle = "245/65R17"
+    let tireTitle = t.name || "";
+    let displaySize = tireSize;
+    
+    // If name starts with a tire size pattern, extract it
+    const sizeMatch = tireTitle.match(/^(\d{3}\/\d{2}[A-Z]?\d{2})\s*/i);
+    if (sizeMatch) {
+      displaySize = displaySize || sizeMatch[1]; // Use extracted size if not in meta
+      tireTitle = tireTitle.slice(sizeMatch[0].length).trim(); // Remove size from title
+    }
+    
+    // If title is just a SKU or empty, try to build from meta
+    if (!tireTitle || tireTitle === t.sku) {
+      tireTitle = `${t.meta?.brand || ""} ${t.meta?.model || t.name || "Tire"}`.trim();
+    }
     
     productCards += productCard({
       emoji: "🚗",
       sectionTitle: `Tires${t.qty > 1 ? ` — Set of ${t.qty}` : ""}`,
       imageUrl: t.meta?.imageUrl,
-      title: `${t.meta?.brand || ""} ${t.name}`.trim(),
-      subtitle: tireSize,
+      title: tireTitle,
+      subtitle: displaySize ? `Size: ${displaySize}` : "",
       sku: t.sku,
       totalPrice: t.unitPriceUsd * t.qty,
       unitPrice: t.unitPriceUsd,
