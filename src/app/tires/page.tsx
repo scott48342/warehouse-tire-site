@@ -92,6 +92,8 @@ import { WheelConfigAutoSelectTracker } from "@/components/WheelConfigAutoSelect
 import { FitmentCoverageTracker } from "@/components/FitmentCoverageTracker";
 import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
 import { getFitmentConfigurations } from "@/lib/fitment-db/getFitmentConfigurations";
+import { resolveVehicleFitment } from "@/lib/fitment/canonicalResolver";
+import { getWheelSizeGateDecisionWithTrimMapping } from "@/lib/tires/wheelSizeGateDecisionServer";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
 import {
   type RearWheelConfig,
@@ -1612,6 +1614,50 @@ export default async function TiresPage({
   // Use auto-selected wheelDia for filtering when no URL param provided
   const wheelDiaFromConfigOrUrl = configAutoWheelDia || wheelDia;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 3: CANONICAL TRIM MAPPING RESOLUTION
+  // Check if we have an approved trim mapping that can skip the wheel size gate.
+  // This prevents unnecessary chooser screens for trims with confirmed single configs.
+  // NO REGRESSION: Customer-facing trim labels remain unchanged.
+  // ═══════════════════════════════════════════════════════════════════════════
+  let trimMappingResult: Awaited<ReturnType<typeof resolveVehicleFitment>> | null = null;
+  let trimMappingAppliedAutoSelect = false;
+  
+  if (hasVehicle && trim && !wheelDia && !isLiftedBuild && !isPackageFlow) {
+    try {
+      trimMappingResult = await resolveVehicleFitment({
+        year: parseInt(year, 10),
+        make,
+        model,
+        trim,
+        modificationId: modification || undefined,
+      });
+      
+      // Check if trim mapping can auto-select for us
+      if (
+        trimMappingResult.trimMapping.found &&
+        !trimMappingResult.trimMapping.showSizeChooser &&
+        trimMappingResult.trimMapping.autoSelectedConfig
+      ) {
+        // AUTO-SELECT from trim mapping (higher priority than config table)
+        const autoConfig = trimMappingResult.trimMapping.autoSelectedConfig;
+        configAutoWheelDia = String(autoConfig.wheelDiameter);
+        trimMappingAppliedAutoSelect = true;
+        wheelDiaWasAutoSelected = true;
+        console.log(
+          '[tires/page] ✅ AUTO-SELECTED from TRIM MAPPING:',
+          configAutoWheelDia,
+          `(mapping: ${trimMappingResult.trimMapping.mappingId}, reason: ${trimMappingResult.trimMapping.chooserReason || 'single_config'})`
+        );
+      }
+    } catch (err) {
+      console.warn('[tires/page] Trim mapping lookup failed:', err);
+    }
+  }
+  
+  // Update wheelDiaFromConfigOrUrl after potential trim mapping auto-select
+  const wheelDiaFromConfigOrUrlFinal = configAutoWheelDia || wheelDia;
+
   // Resolve modificationId to display label if trim looks like a hash ID
   let resolvedTrimLabel: string | undefined;
   if (trim && /^s_[a-f0-9]{8}$/.test(trim) && year && make && model) {
@@ -1661,10 +1707,10 @@ export default async function TiresPage({
 
   // For staggered vehicles, use effective wheel specs that consider fitment data
   // This handles the case where URL only has one wheel but fitment tells us about both axles
-  // Also handles auto-selected diameter from HIGH CONFIDENCE config table
+  // Also handles auto-selected diameter from HIGH CONFIDENCE config table or TRIM MAPPING
   const wheelDiaForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelDia
     ? effectiveWheelDia
-    : (wheelDiaFromConfigOrUrl || wheelDiaActive); // Include auto-selected from config
+    : (wheelDiaFromConfigOrUrlFinal || wheelDiaActive); // Include auto-selected from config/trim mapping
   const wheelWidthForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelWidth
     ? effectiveWheelWidth
     : wheelWidthActive;
@@ -2671,16 +2717,25 @@ export default async function TiresPage({
   // - Package flow (wheel selection already determines diameter via wheelDia param)
   // - Vehicles without multiple wheel diameters
   // - Config-backed vehicles (uses inline switcher instead)
+  // - PHASE 3: Trim mapping says showSizeChooser=false (auto-selected)
   // Accept 'high' OR 'medium' confidence - both indicate verified config data
   const hasConfigBackedData = configurationData?.usedConfigTable && 
     (configurationData?.confidence === "high" || configurationData?.confidence === "medium") &&
     configurationData?.hasMultipleDiameters;
   
+  // PHASE 3: Check if trim mapping already handled auto-selection
+  const trimMappingSkipsGate = trimMappingAppliedAutoSelect || (
+    trimMappingResult?.trimMapping.found &&
+    !trimMappingResult?.trimMapping.showSizeChooser &&
+    trimMappingResult?.trimMapping.autoSelectedConfig
+  );
+  
   const requiresWheelSizeGate = hasVehicle 
     && !isLiftedBuild 
     && !isPackageFlow  // Package flow already has wheelDia from wheel selection
     && !hasConfigBackedData  // Config-backed vehicles use inline switcher, not blocking gate
-    && needsWheelSizeSelection(oemWheelDiameters, wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : null);
+    && !trimMappingSkipsGate  // PHASE 3: Trim mapping auto-selected
+    && needsWheelSizeSelection(oemWheelDiameters, wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : null);
   
   // Show inline switcher when:
   // - HIGH CONFIDENCE config data exists
@@ -2708,9 +2763,14 @@ export default async function TiresPage({
             </div>
             
             {/* Wheel Size Gate Selector */}
+            {/* PHASE 3: When trimMapping.showSizeChooser=true, use only mapped configurations */}
             <WheelSizeGateSelector
-              availableDiameters={oemWheelDiameters}
-              selectedDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : null}
+              availableDiameters={
+                trimMappingResult?.trimMapping.found && trimMappingResult.trimMapping.showSizeChooser
+                  ? [...new Set(trimMappingResult.trimMapping.configurations.map(c => c.wheelDiameter))].sort((a, b) => a - b)
+                  : oemWheelDiameters
+              }
+              selectedDiameter={wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : null}
               basePath={basePath}
               vehicle={{ year, make, model, trim: displayTrim }}
             />
@@ -2816,9 +2876,9 @@ export default async function TiresPage({
             trim={displayTrim}
             modification={modification}
             hasConfig={configurationData?.usedConfigTable ?? false}
-            source={configurationData?.usedConfigTable ? "config" : (configurationData ? "legacy" : "none")}
-            confidence={(configurationData?.confidence as "low" | "medium" | "high") ?? "low"}
-            wheelDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : undefined}
+            source={trimMappingAppliedAutoSelect ? "trim_mapping" : (configurationData?.usedConfigTable ? "config" : (configurationData ? "legacy" : "none"))}
+            confidence={trimMappingAppliedAutoSelect ? "high" : ((configurationData?.confidence as "low" | "medium" | "high") ?? "low")}
+            wheelDiameter={wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : undefined}
             autoSelected={wheelDiaWasAutoSelected}
             productType="tires"
           />
@@ -2837,7 +2897,7 @@ export default async function TiresPage({
               configurationLabel: c.configurationLabel,
               tireSize: c.tireSize,
             }))}
-            activeDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : (configurationData.defaultDiameter || oemWheelDiameters[0])}
+            activeDiameter={wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : (configurationData.defaultDiameter || oemWheelDiameters[0])}
             vehicle={{ year, make, model, trim: displayTrim }}
           />
         ) : null}

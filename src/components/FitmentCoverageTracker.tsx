@@ -10,7 +10,14 @@ interface FitmentCoverageTrackerProps {
   trim?: string;
   modification?: string;
   hasConfig: boolean;
-  source: "config" | "legacy" | "none";
+  /** 
+   * Source of fitment data:
+   * - "config": From vehicle_fitment_configurations table (high confidence)
+   * - "legacy": From legacy oemWheelSizes/oemTireSizes arrays (low confidence)
+   * - "trim_mapping": From approved wheel-size trim mapping (Phase 3) 
+   * - "none": No data found
+   */
+  source: "config" | "legacy" | "trim_mapping" | "none";
   confidence: "high" | "medium" | "low";
   wheelDiameter?: number;
   autoSelected: boolean;

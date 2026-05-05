@@ -109,7 +109,7 @@ export async function getTrimMapping(
   if (mapping.matchConfidence === 'low') {
     const configs = await getConfigurationsForVehicle(year, make, model, mapping.ourModificationId);
     const defaultConfig = mapping.defaultConfigId 
-      ? configs.find(c => c.id === mapping.defaultConfigId) 
+      ? configs.find(c => c.id === mapping.defaultConfigId) ?? null
       : null;
     
     return {
@@ -142,8 +142,8 @@ export async function getTrimMapping(
   // Multiple configs - show chooser
   const configs = await getConfigurationsForVehicle(year, make, model, mapping.ourModificationId);
   const defaultConfig = mapping.defaultConfigId 
-    ? configs.find(c => c.id === mapping.defaultConfigId) 
-    : configs.find(c => c.isDefault);
+    ? configs.find(c => c.id === mapping.defaultConfigId) ?? null
+    : configs.find(c => c.isDefault) ?? null;
   
   return {
     found: true,

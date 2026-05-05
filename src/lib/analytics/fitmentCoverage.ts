@@ -18,7 +18,14 @@ export interface FitmentCoverageEvent {
   trim?: string;
   modification?: string;
   hasConfig: boolean;
-  source: "config" | "legacy" | "none";
+  /** 
+   * Source of fitment data:
+   * - "config": From vehicle_fitment_configurations table (high confidence)
+   * - "legacy": From legacy oemWheelSizes/oemTireSizes arrays (low confidence)
+   * - "trim_mapping": From approved wheel-size trim mapping (Phase 3) 
+   * - "none": No data found
+   */
+  source: "config" | "legacy" | "trim_mapping" | "none";
   confidence: "high" | "medium" | "low";
   wheelDiameter?: number;
   autoSelected: boolean;
@@ -172,7 +179,8 @@ export function calculateCoverageStats(
   
   for (const event of events) {
     // Count by source
-    if (event.source === "config") {
+    // "config" and "trim_mapping" are both high-confidence config-backed sources
+    if (event.source === "config" || event.source === "trim_mapping") {
       stats.configBacked++;
     } else if (event.source === "legacy") {
       stats.legacyFallback++;
@@ -186,7 +194,7 @@ export function calculateCoverageStats(
       stats.byMake[make] = { total: 0, config: 0, fallback: 0 };
     }
     stats.byMake[make].total++;
-    if (event.source === "config") {
+    if (event.source === "config" || event.source === "trim_mapping") {
       stats.byMake[make].config++;
     } else {
       stats.byMake[make].fallback++;
