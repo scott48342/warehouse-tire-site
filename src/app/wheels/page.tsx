@@ -12,6 +12,8 @@ import { PackageSummary } from "@/components/PackageSummary";
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
 import { type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { VehicleEntryGate } from "@/components/VehicleEntryGate";
+import { WheelPackageChooser, type PackageChoiceOption } from "@/components/WheelPackageChooser";
+import { getPackageChoicesForVehicle } from "@/lib/fitment/oemPackageChoices";
 import { ClassicFitmentCard, type ClassicFitmentData } from "@/components/ClassicFitmentCard";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
@@ -684,6 +686,58 @@ export default async function WheelsPage({
     ? data.fitment.confidenceReasons
     : [];
   const confidenceWarningMessage = data?.fitment?.ui?.warningMessage || null;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // OEM PACKAGE CHOICES (For multi-config trims like Ram Big Horn)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // When blocked due to ambiguous fitment (multiple OEM configs for same trim),
+  // check if we have approved package choices to show a chooser instead of blocker.
+  // This allows legitimate multi-package trims to work by letting user select their config.
+  let packageChoicesResult: { available: boolean; choices: PackageChoiceOption[]; title: string; helperText: string } | null = null;
+  
+  // Fetch package choices when blocked (regardless of diameter selection)
+  // This is needed to validate that a selected diameter matches a valid package
+  if (isBlocked && hasVehicle && year && make && model && (trim || displayTrim)) {
+    try {
+      packageChoicesResult = await getPackageChoicesForVehicle(
+        Number(year),
+        make,
+        model,
+        trim || displayTrim || ""
+      );
+      
+      if (packageChoicesResult.available) {
+        console.log(`[wheels/page] 📦 PACKAGE CHOICES AVAILABLE for ${year} ${make} ${model} ${trim || displayTrim}:`, {
+          choiceCount: packageChoicesResult.choices.length,
+          diameters: packageChoicesResult.choices.map(c => c.wheelDiameter),
+          userSelectedDia: diameterParam || null,
+        });
+      }
+    } catch (err) {
+      console.error("[wheels/page] Failed to fetch package choices:", err);
+    }
+  }
+  
+  // Check if package choices are available
+  const hasPackageChoices = packageChoicesResult?.available && packageChoicesResult.choices.length > 0;
+  
+  // Check if user has selected a diameter that matches a valid package choice
+  const userSelectedValidPackage = hasPackageChoices && diameterParam && 
+    packageChoicesResult!.choices.some(c => String(c.wheelDiameter) === String(diameterParam));
+  
+  // EFFECTIVE BLOCKED STATE:
+  // - If blocked but user selected a valid package → NOT effectively blocked (show results)
+  // - If blocked and no package choices → effectively blocked (show blocker)
+  // - If blocked and package choices but no selection yet → effectively blocked (show chooser)
+  const effectivelyBlocked = isBlocked && !userSelectedValidPackage;
+  
+  // Should we show the package chooser?
+  // Yes if: blocked + has package choices + user hasn't selected yet
+  const showPackageChooser = isBlocked && hasPackageChoices && !userSelectedValidPackage;
+  
+  if (userSelectedValidPackage) {
+    console.log(`[wheels/page] ✅ USER SELECTED VALID PACKAGE: ${diameterParam}" wheels - bypassing block`);
+  }
 
   // Capture bolt pattern from fitment-search response (more reliable than separate fitment call)
   const fitmentSearchBp = data?.fitment?.envelope?.boltPattern;
@@ -1568,13 +1622,17 @@ export default async function WheelsPage({
                 </div>
                 {/* Fitment badges - combined */}
                 <div className="flex items-center gap-2">
-                  {hasVehicle && !isBlocked && !data?.error && fitmentConfidence === "high" ? (
+                  {hasVehicle && !effectivelyBlocked && !data?.error && fitmentConfidence === "high" ? (
                     <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-bold text-green-700">
                       Verified Fit
                     </span>
-                  ) : hasVehicle && !isBlocked && !data?.error && fitmentConfidence === "medium" ? (
+                  ) : hasVehicle && !effectivelyBlocked && !data?.error && fitmentConfidence === "medium" ? (
                     <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-bold text-amber-700">
                       Good Fit
+                    </span>
+                  ) : userSelectedValidPackage ? (
+                    <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-bold text-amber-700">
+                      {diameterParam}&quot; Package
                     </span>
                   ) : null}
                   {vehicleCallsForStaggered ? (
@@ -1649,9 +1707,24 @@ export default async function WheelsPage({
         ) : null}
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            BLOCKED STATE: Show FitmentUnavailable when confidence too low OR vehicle not found
+            BLOCKED STATE: Show Package Chooser OR FitmentUnavailable
             ═══════════════════════════════════════════════════════════════════════ */}
-        {isBlocked && hasVehicle && !data?.error ? (
+        {/* When package choices are available and user hasn't selected, show chooser */}
+        {showPackageChooser && packageChoicesResult && !data?.error ? (
+          <div className="mt-5">
+            <WheelPackageChooser
+              choices={packageChoicesResult.choices}
+              title={packageChoicesResult.title}
+              helperText={packageChoicesResult.helperText}
+              selectedDiameter={diameterParam ? Number(diameterParam) : null}
+              basePath="/wheels"
+              vehicle={{ year, make, model, trim: displayTrim }}
+            />
+          </div>
+        ) : null}
+        
+        {/* When no package choices AND blocked, show regular blocker */}
+        {effectivelyBlocked && hasVehicle && !data?.error && !showPackageChooser ? (
           <div className="mt-5">
             <FitmentUnavailable
               vehicle={{ year, make, model, trim: displayTrim }}
@@ -1671,14 +1744,14 @@ export default async function WheelsPage({
         {/* ═══════════════════════════════════════════════════════════════════════
             MEDIUM CONFIDENCE WARNING: Show warning banner but still display results
             ═══════════════════════════════════════════════════════════════════════ */}
-        {!isBlocked && fitmentConfidence === "medium" && hasVehicle && confidenceWarningMessage ? (
+        {!effectivelyBlocked && fitmentConfidence === "medium" && hasVehicle && confidenceWarningMessage ? (
           <div className="mt-5">
             <FitmentMediumConfidenceWarning message={confidenceWarningMessage} />
           </div>
         ) : null}
 
-        {/* Main content grid - only show if NOT blocked */}
-        {!isBlocked ? (
+        {/* Main content grid - only show if NOT effectively blocked */}
+        {!effectivelyBlocked ? (
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
           <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 md:block">
             {/* Package Summary - shows when building a package */}
