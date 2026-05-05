@@ -308,7 +308,13 @@ async function logAuditEntry(entry: AuditLogEntry): Promise<void> {
 export async function getAuditLog(limit = 100): Promise<AuditLogEntry[]> {
   const r = getRedis();
   const entries = await r.lrange(AUDIT_LOG_KEY, 0, limit - 1);
-  return entries.map(e => JSON.parse(e as string) as AuditLogEntry);
+  // Upstash Redis auto-deserializes JSON, so entries may already be objects
+  return entries.map(e => {
+    if (typeof e === "string") {
+      return JSON.parse(e) as AuditLogEntry;
+    }
+    return e as AuditLogEntry;
+  });
 }
 
 // =============================================================================
