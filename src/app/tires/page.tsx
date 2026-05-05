@@ -1250,19 +1250,34 @@ export default async function TiresPage({
   // LIFTED BUILD CONTEXT
   // ═══════════════════════════════════════════════════════════════════════════
   // When user comes from /lifted page, use lifted tire recommendations instead of OEM
-  const liftedSource = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
-  const liftedPreset = safeString(Array.isArray(sp.liftedPreset) ? sp.liftedPreset[0] : sp.liftedPreset);
+  // Also read legacy param names (targetTireSizes, buildType, liftLevel) for backwards compatibility
+  const liftedSourceRaw = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
+  const liftedPresetRaw = safeString(Array.isArray(sp.liftedPreset) ? sp.liftedPreset[0] : sp.liftedPreset);
   const liftedInchesRaw = safeString(Array.isArray(sp.liftedInches) ? sp.liftedInches[0] : sp.liftedInches);
   const liftedInches = liftedInchesRaw ? parseInt(liftedInchesRaw, 10) : 0;
   const liftedTireSizesRaw = safeString(Array.isArray(sp.liftedTireSizes) ? sp.liftedTireSizes[0] : sp.liftedTireSizes);
-  const liftedTireSizes = liftedTireSizesRaw ? liftedTireSizesRaw.split(",").filter(Boolean) : [];
+  
+  // Fallback params for backwards compatibility with old URLs
+  const buildTypeParam = safeString(Array.isArray(sp.buildType) ? sp.buildType[0] : sp.buildType);
+  const liftLevelParam = safeString(Array.isArray(sp.liftLevel) ? sp.liftLevel[0] : sp.liftLevel);
+  const targetTireSizesRaw = safeString(Array.isArray(sp.targetTireSizes) ? sp.targetTireSizes[0] : sp.targetTireSizes);
+  
+  // Use explicit params or fall back to legacy params when buildType=lifted
+  const isLiftedFromBuildType = buildTypeParam === "lifted" || buildTypeParam === "leveled";
+  const liftedSource = liftedSourceRaw || (isLiftedFromBuildType ? "lifted" : "");
+  const liftedPreset = liftedPresetRaw || (isLiftedFromBuildType ? (liftLevelParam || "custom") : "");
+  
+  // Fall back liftedTireSizes to targetTireSizes for old URLs
+  const effectiveTireSizesRaw = liftedTireSizesRaw || targetTireSizesRaw;
+  const liftedTireSizes = effectiveTireSizesRaw ? effectiveTireSizesRaw.split(",").filter(Boolean) : [];
+  
   const liftedTireDiaMinRaw = safeString(Array.isArray(sp.liftedTireDiaMin) ? sp.liftedTireDiaMin[0] : sp.liftedTireDiaMin);
   const liftedTireDiaMin = liftedTireDiaMinRaw ? parseInt(liftedTireDiaMinRaw, 10) : 0;
   const liftedTireDiaMaxRaw = safeString(Array.isArray(sp.liftedTireDiaMax) ? sp.liftedTireDiaMax[0] : sp.liftedTireDiaMax);
   const liftedTireDiaMax = liftedTireDiaMaxRaw ? parseInt(liftedTireDiaMaxRaw, 10) : 0;
   
   // Lifted build is active when we have valid lifted context from URL params
-  // liftedSource can be "lifted" (from /lifted page), "manual" (user-selected), or any truthy value
+  // liftedSource can be "lifted" (from /lifted page), "manual" (user-selected), or inferred from buildType
   const isLiftedBuild = Boolean(liftedSource) && Boolean(liftedPreset) && liftedInches > 0;
   
   if (isLiftedBuild) {
@@ -2946,7 +2961,7 @@ export default async function TiresPage({
             liftedInches={liftedInches}
             liftedPreset={liftedPresetLabel}
             trim={trim}
-            liftedParams={isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(liftedTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : ""}
+            liftedParams={isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(effectiveTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : ""}
           />
         ) : (
           <div className="mb-4">
@@ -3059,8 +3074,8 @@ export default async function TiresPage({
                     // Check if this is a legacy size with conversion
                     const isLegacy = sizeConversionMap.has(s);
                     const modernEquivalent = isLegacy ? sizeConversionMap.get(s) : null;
-                    // Preserve lifted context in size links
-                    const liftedParams = isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(liftedTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : "";
+                    // Preserve lifted context in size links (use effectiveTireSizesRaw for backwards compat)
+                    const liftedParams = isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(effectiveTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : "";
                     const href = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(s)}${liftedParams}`;
                     return (
                       <Link
