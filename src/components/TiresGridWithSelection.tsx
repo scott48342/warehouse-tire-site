@@ -199,6 +199,13 @@ function getMileageBadgeStyle(miles: number): { label: string; bg: string } {
   return { label: '', bg: '' };
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// SHIPPING BADGE HELPER - Shows mount/balance benefit for WheelPros in package flow
+// ═══════════════════════════════════════════════════════════════════════════════
+function isWheelProsSource(source?: string, rawSource?: string): boolean {
+  return rawSource === "wheelpros" || source === "wp";
+}
+
 function TireCard({
   tire,
   size,
@@ -527,7 +534,33 @@ function TireCard({
         </div>
         
         {/* ══════════════════════════════════════════════════════════════════════
-            6. TRUST ROW
+            6. SHIPPING/INSTALL BADGE (Package Flow Only)
+            Shows value prop for WheelPros vs other suppliers when buying wheels+tires
+            ══════════════════════════════════════════════════════════════════════ */}
+        {isPackageFlow && (
+          <div className="mt-2">
+            {isWheelProsSource(tire.source, tire.rawSource) ? (
+              <div className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 px-2.5 py-1.5">
+                <span className="text-base">🚀</span>
+                <div>
+                  <div className="text-[11px] font-bold text-green-800">Ships Mounted & Balanced</div>
+                  <div className="text-[9px] text-green-600">Ready to install on arrival</div>
+                </div>
+              </div>
+            ) : (
+              <div className="inline-flex items-center gap-1.5 rounded-lg bg-neutral-50 border border-neutral-200 px-2.5 py-1.5">
+                <span className="text-base">📦</span>
+                <div>
+                  <div className="text-[11px] font-medium text-neutral-600">Separate Shipment</div>
+                  <div className="text-[9px] text-neutral-500">Installation needed</div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+        
+        {/* ══════════════════════════════════════════════════════════════════════
+            7. TRUST ROW
             ══════════════════════════════════════════════════════════════════════ */}
         <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-neutral-500">
           <span className="inline-flex items-center gap-0.5">
@@ -829,14 +862,29 @@ export function TiresGridWithSelection({
   // Fetch rebate matches for displayed tires
   const { matches: rebateMatches } = useRebateMatches(tiresForRebateMatch);
   
+  // Are we in package flow? (buying wheels + tires together)
+  const isPackageFlow = !!selectedWheel;
+  
   // Categorize tires with minimum population enforcement
   // Each visible category should have at least MIN_PER_CATEGORY items to avoid
   // sparse rows that look incomplete (e.g., "Best Value" with only 1 tire)
+  // 
+  // In package flow: WheelPros tires sort first (ships mounted & balanced)
   const categorized = useMemo(() => {
     const MIN_PER_CATEGORY = 4; // Minimum tires to populate a category row
     
-    const sortByPrice = (a: TireItem, b: TireItem) => 
-      (getDisplayPrice(a) || 999) - (getDisplayPrice(b) || 999);
+    // Sort function: WheelPros first in package flow, then by price
+    const sortTires = (a: TireItem, b: TireItem) => {
+      // In package flow, prioritize WheelPros tires (ships mounted & balanced)
+      if (isPackageFlow) {
+        const aIsWP = isWheelProsSource(a.source, a.rawSource);
+        const bIsWP = isWheelProsSource(b.source, b.rawSource);
+        if (aIsWP && !bIsWP) return -1; // WheelPros first
+        if (!aIsWP && bIsWP) return 1;
+      }
+      // Then sort by price
+      return (getDisplayPrice(a) || 999) - (getDisplayPrice(b) || 999);
+    };
     
     // Step 1: Initial categorization
     const bestValue: TireItem[] = [];
@@ -850,28 +898,27 @@ export function TiresGridWithSelection({
       else premium.push(tire);
     }
     
-    // Sort all by price (cheapest first)
-    bestValue.sort(sortByPrice);
-    mostPopular.sort(sortByPrice);
-    premium.sort(sortByPrice);
+    // Sort all categories (WheelPros first in package flow, then by price)
+    bestValue.sort(sortTires);
+    mostPopular.sort(sortTires);
+    premium.sort(sortTires);
     
     // Step 2: Ensure minimum population for Best Value
-    // If Best Value has fewer than MIN items, pull cheapest from Most Popular
+    // If Best Value has fewer than MIN items, pull from Most Popular
     if (bestValue.length > 0 && bestValue.length < MIN_PER_CATEGORY) {
       const needed = MIN_PER_CATEGORY - bestValue.length;
-      // Take cheapest from mostPopular (they're adjacent in price)
       const toMove = mostPopular.splice(0, needed);
       bestValue.push(...toMove);
-      bestValue.sort(sortByPrice);
+      bestValue.sort(sortTires);
     }
     
     // Step 3: Ensure minimum population for Most Popular  
-    // If Most Popular has fewer than MIN items, pull cheapest from Premium
+    // If Most Popular has fewer than MIN items, pull from Premium
     if (mostPopular.length > 0 && mostPopular.length < MIN_PER_CATEGORY) {
       const needed = MIN_PER_CATEGORY - mostPopular.length;
       const toMove = premium.splice(0, needed);
       mostPopular.push(...toMove);
-      mostPopular.sort(sortByPrice);
+      mostPopular.sort(sortTires);
     }
     
     // Note: We don't fill Premium from below since it represents top-tier brands
@@ -882,7 +929,7 @@ export function TiresGridWithSelection({
       mostPopular,
       premium,
     };
-  }, [tires]);
+  }, [tires, isPackageFlow]);
   
   // Handle tire selection
   const handleSelectTire = useCallback((tire: TireItem) => {
