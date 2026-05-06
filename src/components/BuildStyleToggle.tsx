@@ -64,14 +64,34 @@ export function BuildStyleToggle({
     if (buildType) {
       params.set("buildType", buildType);
       
-      // If selecting lifted and no lift level set, default to 4in
-      if (buildType === "lifted" && !params.get("liftLevel")) {
-        params.set("liftLevel", "4in");
-        const liftConfig = getLiftLevelConfig("4in");
-        if (liftConfig) {
-          params.set("offsetMin", String(liftConfig.offsetMin));
-          params.set("offsetMax", String(liftConfig.offsetMax));
-          params.set("liftedInches", String(liftConfig.inches));
+      // Set appropriate offset ranges based on build type
+      if (buildType === "stock") {
+        // Stock mode: strict OEM-friendly range
+        // Most trucks/SUVs have OEM offsets between 0 and +50mm
+        // No negative offsets - those require modifications
+        params.set("offsetMin", "0");
+        params.set("offsetMax", "50");
+        // Clear lifted params
+        params.delete("liftLevel");
+        params.delete("liftedInches");
+      } else if (buildType === "level") {
+        // Leveled mode: allows slightly wider wheels
+        // -12mm to +35mm range works for most leveled trucks
+        params.set("offsetMin", "-12");
+        params.set("offsetMax", "35");
+        // Clear lifted params
+        params.delete("liftLevel");
+        params.delete("liftedInches");
+      } else if (buildType === "lifted") {
+        // If selecting lifted and no lift level set, default to 4in
+        if (!params.get("liftLevel")) {
+          params.set("liftLevel", "4in");
+          const liftConfig = getLiftLevelConfig("4in");
+          if (liftConfig) {
+            params.set("offsetMin", String(liftConfig.offsetMin));
+            params.set("offsetMax", String(liftConfig.offsetMax));
+            params.set("liftedInches", String(liftConfig.inches));
+          }
         }
       }
     } else {

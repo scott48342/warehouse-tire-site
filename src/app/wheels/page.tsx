@@ -423,6 +423,14 @@ export default async function WheelsPage({
     ? liftedPopularWheelSizesRaw.split(",").map(s => parseInt(s, 10)).filter(n => Number.isFinite(n))
     : [];
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LIFT LEVEL - Read from URL params (set by BuildStyleToggle lift level buttons)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const liftLevelRaw = safeString(Array.isArray(sp.liftLevel) ? sp.liftLevel[0] : sp.liftLevel);
+  const liftLevelParam = (liftLevelRaw === "leveled" || liftLevelRaw === "4in" || liftLevelRaw === "6in" || liftLevelRaw === "8in")
+    ? liftLevelRaw as "leveled" | "4in" | "6in" | "8in"
+    : null;
+
   // Lifted build is active when we have valid lifted context from URL params
   const isLiftedBuild = Boolean(liftedSource === "lifted" && liftedPreset && liftedInches > 0);
 
@@ -1962,7 +1970,7 @@ export default async function WheelsPage({
                 <BuildStyleToggle 
                   currentBuildType={isLiftedBuild || isHomepageIntentLiftedBuild ? "lifted" : buildTypeParam} 
                   vehicleType={fitmentVehicleType}
-                  currentLiftLevel={homepageIntentState.resolved?.liftLevel || (isLiftedBuild ? "4in" : null)}
+                  currentLiftLevel={liftLevelParam || homepageIntentState.resolved?.liftLevel || (isLiftedBuild ? "4in" : null)}
                   showLiftLevels={true}
                 />
               </div>
