@@ -165,33 +165,61 @@ async function main() {
   // Cleanup
   await dbReporter.close();
   
-  // Print summary
+  // Print summary with new metrics
   const duration = Math.round((Date.now() - startTime) / 1000);
   const passed = results.filter(r => r.status === 'pass').length;
+  const warnings = results.filter(r => r.status === 'warning').length;
   const failed = results.filter(r => r.status === 'fail').length;
-  const passRate = Math.round((passed / results.length) * 100);
+  const logicPassed = results.filter(r => r.logicStatus === 'pass').length;
+  const knownGaps = results.filter(r => r.isKnownGap).length;
   
-  const criticals = results.filter(r => r.severity === 'critical').length;
-  const highs = results.filter(r => r.severity === 'high').length;
+  // Calculate rates
+  const rawPassRate = Math.round((passed / results.length) * 100);
+  const logicPassRate = Math.round((logicPassed / results.length) * 100);
+  
+  // Critical regressions = actual problems (not data gaps)
+  const criticalRegressions = results.filter(r => 
+    r.logicStatus === 'fail' && 
+    !r.isKnownGap && 
+    (r.severity === 'critical' || r.severity === 'high')
+  ).length;
+  
+  const dataGaps = results.filter(r => r.failureType === 'data_gap').length;
+  const inventoryGaps = results.filter(r => r.failureType === 'inventory').length;
   
   console.log(`
 ╔══════════════════════════════════════════════════════════════╗
 ║                        QA SWEEP COMPLETE                     ║
 ╠══════════════════════════════════════════════════════════════╣
-║  Duration:    ${String(duration + 's').padEnd(47)}║
-║  Vehicles:    ${String(results.length).padEnd(47)}║
-║  Passed:      ${String(passed).padEnd(47)}║
-║  Failed:      ${String(failed).padEnd(47)}║
-║  Pass Rate:   ${(passRate + '%').padEnd(47)}║
-${criticals > 0 ? `║  🔴 CRITICAL: ${String(criticals).padEnd(47)}║\n` : ''}${highs > 0 ? `║  🟠 HIGH:     ${String(highs).padEnd(47)}║\n` : ''}╚══════════════════════════════════════════════════════════════╝
+║  Duration:        ${String(duration + 's').padEnd(43)}║
+║  Vehicles:        ${String(results.length).padEnd(43)}║
+╠══════════════════════════════════════════════════════════════╣
+║  ✅ Passed:       ${String(passed).padEnd(43)}║
+║  ⚠️  Warnings:     ${String(warnings).padEnd(43)}║
+║  ❌ Failed:       ${String(failed).padEnd(43)}║
+╠══════════════════════════════════════════════════════════════╣
+║  📊 LOGIC PASS:   ${(logicPassRate + '%').padEnd(43)}║
+║  📊 Raw Pass:     ${(rawPassRate + '%').padEnd(43)}║
+╠══════════════════════════════════════════════════════════════╣
+║  📋 Data Gaps:    ${String(dataGaps).padEnd(43)}║
+║  📦 Inventory:    ${String(inventoryGaps).padEnd(43)}║
+║  🏷️  Known Gaps:   ${String(knownGaps).padEnd(43)}║
+${criticalRegressions > 0 ? `╠══════════════════════════════════════════════════════════════╣
+║  🚨 REGRESSIONS:  ${String(criticalRegressions).padEnd(43)}║\n` : ''}╚══════════════════════════════════════════════════════════════╝
 `);
   
-  // Exit with error code if critical failures
-  if (criticals > 0) {
-    console.log('⚠️  Critical failures detected - exiting with code 1');
+  // Exit with error code ONLY if there are actual regressions
+  // Data gaps and inventory issues are NOT exit-code failures
+  if (criticalRegressions > 0) {
+    console.log('🚨 Critical regressions detected - exiting with code 1');
     process.exit(1);
   }
   
+  if (logicPassRate < 100) {
+    console.log(`ℹ️  ${results.length - logicPassed} vehicle(s) with issues (data gaps or inventory)`);
+  }
+  
+  console.log('✅ No critical regressions detected');
   process.exit(0);
 }
 

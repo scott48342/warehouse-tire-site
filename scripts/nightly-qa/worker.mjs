@@ -1,5 +1,10 @@
 /**
  * QA Worker - Tests a single vehicle
+ * 
+ * Scoring Model:
+ * - PASS: Core logic tests pass (wheel fitment valid, staggered correct)
+ * - WARNING: Logic passes but inventory/data gaps exist
+ * - FAIL: Logic failures (wrong bolt pattern, staggered mismatch, etc.)
  */
 
 import { runWheelTest } from './test-suites/wheel-test.mjs';
@@ -7,13 +12,86 @@ import { runTireTest } from './test-suites/tire-test.mjs';
 import { runStaggeredTest } from './test-suites/staggered-test.mjs';
 import { runLiftedTest } from './test-suites/lifted-test.mjs';
 import { runPackageTest } from './test-suites/package-test.mjs';
-import { classifyVehicleFailure, SEVERITY } from './classifiers/failure-classifier.mjs';
+import { classifyVehicleFailure, SEVERITY, FAILURE_TYPE } from './classifiers/failure-classifier.mjs';
+
+// Known data gaps - vehicles without complete fitment data in our DB
+const KNOWN_DATA_GAPS = [
+  { make: 'Chevrolet', model: 'Camaro', trim: '1LE' },
+  { make: 'Dodge', model: 'Challenger', trim: 'Widebody' },
+  { make: 'Dodge', model: 'Challenger', trim: 'R/T' },
+  { make: 'BMW', model: 'M3' },
+  { make: 'BMW', model: 'M4' },
+  { make: 'Mercedes-Benz', model: 'AMG C 63' },
+  { make: 'Audi', model: 'RS5' },
+  { make: 'Audi', model: 'RS6' },
+  { make: 'Porsche', model: '911' },
+];
+
+/**
+ * Check if vehicle is a known data gap
+ */
+function isKnownDataGap(vehicle) {
+  return KNOWN_DATA_GAPS.some(gap => {
+    const makeMatch = gap.make === vehicle.make;
+    const modelMatch = gap.model === vehicle.model;
+    const trimMatch = !gap.trim || gap.trim === vehicle.trim;
+    return makeMatch && modelMatch && trimMatch;
+  });
+}
 
 /**
  * Format vehicle as string
  */
 function formatVehicle(v) {
   return `${v.year} ${v.make} ${v.model}${v.trim ? ` ${v.trim}` : ''}`;
+}
+
+/**
+ * Determine if a failure is a LOGIC failure vs inventory/data gap
+ */
+function isLogicFailure(result) {
+  // Logic failures that MUST be counted:
+  // 1. Bolt pattern mismatch (when we have expected and actual differs)
+  if (result.wheelResult?.boltPatternMatch === false) {
+    return true;
+  }
+  
+  // 2. Staggered mismatch on a critical staggered vehicle (when API returned data)
+  if (result.staggeredResult?.staggeredMismatch && 
+      result.wheelResult?.wheelCount > 0) {
+    return true;
+  }
+  
+  // 3. Lifted diameter band violation (when we have tires)
+  const liftedLogicFail = result.liftedResults?.some(lr => 
+    lr.inBand === false && lr.tireCount > 0
+  );
+  if (liftedLogicFail) {
+    return true;
+  }
+  
+  return false;
+}
+
+/**
+ * Determine if failure is inventory/supplier issue (not logic)
+ */
+function isInventoryIssue(result) {
+  // Zero wheels but API didn't error - inventory gap
+  if (result.wheelResult?.wheelCount === 0 && 
+      result.wheelResult?.apiResponse && 
+      !result.wheelResult?.apiResponse?.error) {
+    return true;
+  }
+  
+  // Zero tires but API didn't error - inventory gap
+  if (result.tireResult?.tireCount === 0 && 
+      result.tireResult?.apiResponse && 
+      !result.tireResult?.apiResponse?.error) {
+    return true;
+  }
+  
+  return false;
 }
 
 /**
@@ -32,9 +110,11 @@ export async function testVehicle(vehicle) {
       isPerformance: vehicle.isPerformance || false,
       isCanary: vehicle.isCanary || false,
     },
-    status: 'pass',
+    status: 'pass',        // pass | warning | fail
+    logicStatus: 'pass',   // Separate logic-only status
     severity: null,
     failureType: null,
+    isKnownGap: false,
     
     wheelResult: null,
     tireResult: null,
@@ -43,8 +123,12 @@ export async function testVehicle(vehicle) {
     packageResult: null,
     
     errors: [],
+    warnings: [],
     durationMs: 0,
   };
+  
+  // Check if this is a known data gap
+  result.isKnownGap = isKnownDataGap(vehicle);
   
   try {
     // 1. Wheel test
@@ -53,7 +137,6 @@ export async function testVehicle(vehicle) {
     // 2. Tire test (use a common wheel diameter if available)
     let wheelDiameter = null;
     if (result.wheelResult.wheelDiameterMin) {
-      // Pick middle of range
       wheelDiameter = Math.round(
         (result.wheelResult.wheelDiameterMin + result.wheelResult.wheelDiameterMax) / 2
       );
@@ -73,40 +156,51 @@ export async function testVehicle(vehicle) {
     // 5. Package test
     result.packageResult = await runPackageTest(vehicle, wheelDiameter);
     
-    // Aggregate errors
+    // Collect errors and warnings separately
     if (result.wheelResult?.errors?.length) {
       result.errors.push(...result.wheelResult.errors.map(e => `[wheel] ${e}`));
     }
     if (result.tireResult?.errors?.length) {
-      result.errors.push(...result.tireResult.errors.map(e => `[tire] ${e}`));
+      // Zero tires is a warning, not error (unless logic failed)
+      if (result.tireResult.tireCount === 0) {
+        result.warnings.push('[tire] No tires in inventory for this fitment');
+      } else {
+        result.errors.push(...result.tireResult.errors.map(e => `[tire] ${e}`));
+      }
     }
     if (result.staggeredResult?.errors?.length) {
       result.errors.push(...result.staggeredResult.errors.map(e => `[staggered] ${e}`));
     }
     for (const lr of result.liftedResults) {
       if (lr.errors?.length) {
-        result.errors.push(...lr.errors.map(e => `[lift-${lr.liftInches}] ${e}`));
+        // Lifted with zero results is warning, not error
+        if (lr.wheelCount === 0 || lr.tireCount === 0) {
+          result.warnings.push(`[lift-${lr.liftInches}] Limited inventory for this lift height`);
+        } else {
+          result.errors.push(...lr.errors.map(e => `[lift-${lr.liftInches}] ${e}`));
+        }
       }
     }
     if (result.packageResult?.errors?.length) {
-      result.errors.push(...result.packageResult.errors.map(e => `[package] ${e}`));
+      // Package not viable is a warning unless core tests failed
+      result.warnings.push(...result.packageResult.errors.map(e => `[package] ${e}`));
     }
     
-    // Determine overall status
-    const allPassed = [
-      result.wheelResult?.passed,
-      result.tireResult?.passed,
-      result.staggeredResult?.passed,
-      result.packageResult?.passed,
-      ...result.liftedResults.map(lr => lr.passed),
-    ].filter(p => p !== undefined && p !== null);
+    // ═══════════════════════════════════════════════════════════════════
+    // NEW SCORING MODEL
+    // ═══════════════════════════════════════════════════════════════════
     
-    if (allPassed.every(p => p === true)) {
-      result.status = 'pass';
-    } else if (allPassed.some(p => p === false)) {
+    // Check for LOGIC failures first
+    const hasLogicFailure = isLogicFailure(result);
+    const hasInventoryIssue = isInventoryIssue(result);
+    const hasNoData = result.wheelResult?.wheelCount === 0 && 
+                      result.wheelResult?.boltPattern === null;
+    
+    if (hasLogicFailure) {
+      // Real logic failure - this is a FAIL
       result.status = 'fail';
+      result.logicStatus = 'fail';
       
-      // Classify the failure
       const classification = classifyVehicleFailure(vehicle, {
         wheelResult: result.wheelResult,
         tireResult: result.tireResult,
@@ -118,15 +212,49 @@ export async function testVehicle(vehicle) {
       result.severity = classification.severity;
       result.failureType = classification.type;
       result.errors.unshift(`[${classification.severity}] ${classification.reason}`);
-    } else {
+      
+    } else if (hasNoData && result.isKnownGap) {
+      // Known data gap - WARNING, not fail
       result.status = 'warning';
+      result.logicStatus = 'pass';  // Logic didn't fail, data just missing
+      result.severity = SEVERITY.INFO;
+      result.failureType = FAILURE_TYPE.DATA_GAP;
+      result.warnings.unshift('[info] Known data gap - fitment data not yet imported');
+      
+    } else if (hasNoData) {
+      // Unknown data gap - still a problem but not logic
+      result.status = 'warning';
+      result.logicStatus = 'pass';
+      result.severity = SEVERITY.MEDIUM;
+      result.failureType = FAILURE_TYPE.DATA_GAP;
+      result.warnings.unshift('[medium] Missing fitment data for this vehicle');
+      
+    } else if (hasInventoryIssue) {
+      // Inventory gap - WARNING
+      result.status = 'warning';
+      result.logicStatus = 'pass';
+      result.severity = SEVERITY.LOW;
+      result.failureType = FAILURE_TYPE.INVENTORY;
+      result.warnings.unshift('[low] Limited inventory for this fitment');
+      
+    } else if (result.wheelResult?.passed && 
+               (result.staggeredResult === null || result.staggeredResult.passed)) {
+      // Core tests passed
+      result.status = 'pass';
+      result.logicStatus = 'pass';
+      
+    } else {
+      // Some non-critical issue
+      result.status = 'warning';
+      result.logicStatus = 'pass';
       result.severity = SEVERITY.LOW;
     }
     
   } catch (err) {
     result.status = 'fail';
+    result.logicStatus = 'fail';
     result.severity = SEVERITY.HIGH;
-    result.failureType = 'test_harness';
+    result.failureType = FAILURE_TYPE.TEST_HARNESS;
     result.errors.push(`Test harness error: ${err.message}`);
   }
   

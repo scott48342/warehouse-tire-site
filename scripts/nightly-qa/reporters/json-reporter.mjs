@@ -94,11 +94,24 @@ export function createJsonReporter(runId, outputDir = config.outputDir) {
       const warnings = results.filter(r => r.status === 'warning').length;
       const skipped = results.filter(r => r.status === 'skip').length;
       
+      // Logic-only metrics (the important ones)
+      const logicPassed = results.filter(r => r.logicStatus === 'pass').length;
+      const logicFailed = results.filter(r => r.logicStatus === 'fail').length;
+      const knownGaps = results.filter(r => r.isKnownGap).length;
+      
+      // Critical regressions = logic failures that are NOT known gaps
+      const criticalRegressions = results.filter(r => 
+        r.logicStatus === 'fail' && 
+        !r.isKnownGap && 
+        (r.severity === 'critical' || r.severity === 'high')
+      ).length;
+      
       const bySeverity = {
         critical: results.filter(r => r.severity === 'critical').length,
         high: results.filter(r => r.severity === 'high').length,
         medium: results.filter(r => r.severity === 'medium').length,
         low: results.filter(r => r.severity === 'low').length,
+        info: results.filter(r => r.severity === 'info').length,
       };
       
       const byFailureType = {
@@ -114,18 +127,29 @@ export function createJsonReporter(runId, outputDir = config.outputDir) {
       for (const r of results) {
         const cat = r.vehicle?.category || 'unknown';
         if (!byCategory[cat]) {
-          byCategory[cat] = { total: 0, passed: 0, failed: 0, passRate: 0 };
+          byCategory[cat] = { total: 0, passed: 0, failed: 0, warnings: 0, logicPassed: 0, passRate: 0, logicPassRate: 0 };
         }
         byCategory[cat].total++;
         if (r.status === 'pass') byCategory[cat].passed++;
         if (r.status === 'fail') byCategory[cat].failed++;
+        if (r.status === 'warning') byCategory[cat].warnings++;
+        if (r.logicStatus === 'pass') byCategory[cat].logicPassed++;
       }
       for (const cat of Object.keys(byCategory)) {
         const c = byCategory[cat];
         c.passRate = c.total > 0 ? Math.round((c.passed / c.total) * 100) : 0;
+        c.logicPassRate = c.total > 0 ? Math.round((c.logicPassed / c.total) * 100) : 0;
       }
       
       const totalDuration = results.reduce((sum, r) => sum + (r.durationMs || 0), 0);
+      
+      // Calculate multiple pass rates
+      const rawPassRate = total > 0 ? Math.round((passed / total) * 100) : 0;
+      const logicPassRate = total > 0 ? Math.round((logicPassed / total) * 100) : 0;
+      const adjustedTotal = total - knownGaps;
+      const inventoryAdjustedPassRate = adjustedTotal > 0 
+        ? Math.round(((passed + warnings) / adjustedTotal) * 100) 
+        : 0;
       
       return {
         total_vehicles: total,
@@ -133,7 +157,18 @@ export function createJsonReporter(runId, outputDir = config.outputDir) {
         failed,
         warnings,
         skipped,
-        pass_rate: total > 0 ? Math.round((passed / total) * 100) : 0,
+        
+        // Multiple pass rate metrics
+        pass_rate: rawPassRate,                        // Raw: only 'pass' status
+        logic_pass_rate: logicPassRate,                // Logic: core fitment logic passed
+        inventory_adjusted_pass_rate: inventoryAdjustedPassRate,  // Excludes known gaps
+        
+        // Regression tracking
+        logic_passed: logicPassed,
+        logic_failed: logicFailed,
+        known_gaps: knownGaps,
+        critical_regressions: criticalRegressions,     // Real problems to fix
+        
         duration_ms: totalDuration,
         by_severity: bySeverity,
         by_failure_type: byFailureType,

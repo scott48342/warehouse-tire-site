@@ -113,29 +113,49 @@ export async function completeRun(pool, runId, results) {
     dataGap: results.filter(r => r.failureType === 'data_gap').length,
     testHarness: results.filter(r => r.failureType === 'test_harness').length,
     regression: results.filter(r => r.failureType === 'regression').length,
+    // New metrics
+    logicPassed: results.filter(r => r.logicStatus === 'pass').length,
+    knownGaps: results.filter(r => r.isKnownGap).length,
   };
   
-  const passRate = summary.total > 0 
+  // Multiple pass rates
+  const rawPassRate = summary.total > 0 
     ? Math.round((summary.passed / summary.total) * 10000) / 100 
     : 0;
+  const logicPassRate = summary.total > 0 
+    ? Math.round((summary.logicPassed / summary.total) * 10000) / 100 
+    : 0;
   
-  // Category breakdown
+  // Critical regressions = real issues to fix (not data gaps)
+  const criticalRegressions = results.filter(r => 
+    r.logicStatus === 'fail' && 
+    !r.isKnownGap && 
+    (r.severity === 'critical' || r.severity === 'high')
+  ).length;
+  
+  // Category breakdown with logic pass rate
   const categoryStats = {};
   for (const r of results) {
     const cat = r.vehicle?.category || 'unknown';
     if (!categoryStats[cat]) {
-      categoryStats[cat] = { total: 0, passed: 0, failed: 0, passRate: 0 };
+      categoryStats[cat] = { total: 0, passed: 0, failed: 0, warnings: 0, logicPassed: 0, passRate: 0, logicPassRate: 0 };
     }
     categoryStats[cat].total++;
     if (r.status === 'pass') categoryStats[cat].passed++;
     if (r.status === 'fail') categoryStats[cat].failed++;
+    if (r.status === 'warning') categoryStats[cat].warnings++;
+    if (r.logicStatus === 'pass') categoryStats[cat].logicPassed++;
   }
   for (const cat of Object.keys(categoryStats)) {
     const c = categoryStats[cat];
     c.passRate = c.total > 0 ? Math.round((c.passed / c.total) * 10000) / 100 : 0;
+    c.logicPassRate = c.total > 0 ? Math.round((c.logicPassed / c.total) * 10000) / 100 : 0;
   }
   
   const totalDuration = results.reduce((sum, r) => sum + (r.durationMs || 0), 0);
+  
+  // Include logic pass rate in notes for easy reference
+  const notes = `Logic: ${logicPassRate}%, Raw: ${rawPassRate}%, Regressions: ${criticalRegressions}`;
   
   await pool.query(`
     UPDATE qa_runs SET
@@ -158,7 +178,8 @@ export async function completeRun(pool, runId, results) {
       regression_failures = $16,
       category_stats = $17,
       pass_rate = $18,
-      duration_ms = $19
+      duration_ms = $19,
+      notes = $20
     WHERE run_id = $1
   `, [
     runId,
@@ -167,11 +188,18 @@ export async function completeRun(pool, runId, results) {
     summary.logic, summary.inventory, summary.supplier, 
     summary.dataGap, summary.testHarness, summary.regression,
     JSON.stringify(categoryStats),
-    passRate,
+    rawPassRate,  // Keep raw pass rate in the main column
     totalDuration,
+    notes,
   ]);
   
-  return { ...summary, passRate, categoryStats };
+  return { 
+    ...summary, 
+    passRate: rawPassRate, 
+    logicPassRate, 
+    criticalRegressions,
+    categoryStats 
+  };
 }
 
 /**
