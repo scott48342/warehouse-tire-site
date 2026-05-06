@@ -1,9 +1,11 @@
 # Issue: Trim Normalization / Fuzzy Lookup Mismatch
 
-**Status:** 🟡 LOGGED — DO NOT FIX WITHOUT SCOPED PLAN  
+**Status:** ✅ RESOLVED  
 **Priority:** Medium  
 **Created:** 2026-05-06  
-**Regression Risk:** HIGH — affects canonical resolver  
+**Resolved:** 2026-05-06  
+**Commit:** `8a3de86`  
+**Regression Risk:** HIGH — affects canonical resolver (VERIFIED NO REGRESSION)  
 
 ---
 
@@ -104,6 +106,35 @@ src/app/api/wheels/fitment-search/route.ts  # API entry point
 3. [ ] Propose normalization rules for review
 4. [ ] Write test cases (without implementation)
 5. [ ] Review plan with Scott before any code changes
+
+---
+
+## ✅ Resolution (2026-05-06)
+
+### Root Cause
+`isGroupedTrim()` and `splitGroupedTrim()` in `canonicalResolver.ts` were treating ALL `/` as delimiters, splitting `R/T` into `['R', 'T']`.
+
+### Fix Applied
+Changed to only split on ` / ` (slash with spaces):
+```typescript
+// BEFORE (broken)
+function isGroupedTrim(displayTrim: string): boolean {
+  return /[,\/]/.test(displayTrim);  // Matches R/T!
+}
+
+// AFTER (fixed)
+function isGroupedTrim(displayTrim: string): boolean {
+  if (displayTrim.includes(',')) return true;
+  if (/ \/ /.test(displayTrim)) return true;  // Only spaced slash
+  return false;
+}
+```
+
+### Validation
+- 17/17 unit tests pass
+- Production trims API: R/T displays correctly
+- Production fitment-search: R/T resolves to `directCanonical`
+- No regression on grouped trims like `SXT / SXT Plus`
 
 ---
 
