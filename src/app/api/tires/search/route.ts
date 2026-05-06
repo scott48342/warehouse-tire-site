@@ -1822,7 +1822,41 @@ export async function GET(req: Request) {
           // Apply DIAMETER BAND enforcement (min AND max) - NOT just minimum!
           // This prevents showing 37" tires for a 4" lift HD truck
           liftedBandFilter = filterTiresByDiameterBand(profileSizes, make, model, liftInches, false);
-          liftedSizes = liftedBandFilter.validSizes;
+          
+          // If profile has no sizes within the band, generate proper flotation sizes
+          if (liftedBandFilter.validSizes.length === 0) {
+            console.log(`[tires/search] LIFTED: Profile has no sizes within band, generating flotation sizes`);
+            const minDia = diameterBand.minDiameter;
+            const maxDia = diameterBand.maxDiameter;
+            const prefDia = diameterBand.preferredDiameter;
+            
+            // Generate flotation sizes within the band
+            const sizesToGen = new Set<number>();
+            sizesToGen.add(prefDia);
+            if (minDia !== prefDia) sizesToGen.add(minDia);
+            if (maxDia !== prefDia && maxDia !== minDia) sizesToGen.add(maxDia);
+            
+            liftedSizes = [];
+            for (const dia of sizesToGen) {
+              liftedSizes.push(`${dia}x12.50R${wheelDiameter}`);
+              liftedSizes.push(`${dia}x13.50R${wheelDiameter}`);
+            }
+            
+            // Update filter result with generated sizes
+            liftedBandFilter = {
+              validSizes: liftedSizes,
+              belowMinSizes: liftedBandFilter.belowMinSizes,
+              aboveMaxSizes: liftedBandFilter.aboveMaxSizes,
+              minDiameter: minDia,
+              maxDiameter: maxDia,
+              preferredDiameter: prefDia,
+              vehicleClass: liftedBandFilter.vehicleClass,
+              usedBelowMinFallback: false,
+              usedAboveMaxFallback: false,
+            };
+          } else {
+            liftedSizes = liftedBandFilter.validSizes;
+          }
           
           // Also create legacy filter result for backward compat
           liftedTireFilter = {

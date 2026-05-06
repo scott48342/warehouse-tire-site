@@ -2234,14 +2234,15 @@ export function filterTiresByDiameterBand(
     }
   }
   
-  // Fallback logic
-  const usedBelowMinFallback = validSizes.length === 0 && belowMinSizes.length > 0;
+  // Fallback logic - DO NOT use undersized tires
+  // If no valid sizes, we DON'T fall back to belowMin - that would recommend undersized tires
+  // Instead, return empty and let the caller generate proper flotation sizes
+  const usedBelowMinFallback = false; // NEVER use undersized tires
   const usedAboveMaxFallback = validSizes.length === 0 && !usedBelowMinFallback && aboveMaxSizes.length > 0;
   
   let finalSizes = validSizes;
-  if (usedBelowMinFallback) {
-    finalSizes = belowMinSizes;
-  } else if (usedAboveMaxFallback) {
+  // Only fall back to above-max if aggressive mode is eventually enabled by user
+  if (usedAboveMaxFallback) {
     finalSizes = aboveMaxSizes;
   }
   
