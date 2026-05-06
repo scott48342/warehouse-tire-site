@@ -452,18 +452,25 @@ export function generateAftermarketTireSizes(
   }
   
   // Sort: primary first, then by width
-  // For cars: prefer wider tires (performance vehicles run wider)
-  // For trucks/SUVs: prefer narrower tires (better off-road)
+  // Sort by how close the tire width is to the ideal width for the wheel
+  // For trucks/SUVs: ideal is wheel width × 28-30mm (slightly wider for stability)
+  // For cars: ideal is wheel width × 26-28mm (moderate width for performance)
+  const idealWidthMm = wheelWidth && wheelWidth > 0
+    ? (vehicleClass === 'truck' || vehicleClass === 'suv')
+      ? wheelWidth * 29  // Trucks: prefer 265-285mm on 9-10" wheels
+      : wheelWidth * 27  // Cars: prefer 245-265mm on 9-10" wheels
+    : 255; // Default fallback
+  
   candidates.sort((a, b) => {
     if (a.isPrimary !== b.isPrimary) return a.isPrimary ? -1 : 1;
     // Prefer common widths (divisible by 5)
     const aCommon = a.widthMm % 5 === 0 ? 0 : 1;
     const bCommon = b.widthMm % 5 === 0 ? 0 : 1;
     if (aCommon !== bCommon) return aCommon - bCommon;
-    // For cars: wider is better (descending), for trucks: narrower (ascending)
-    return vehicleClass === 'car' 
-      ? b.widthMm - a.widthMm  // Cars: wider first
-      : a.widthMm - b.widthMm; // Trucks/SUVs: narrower first
+    // Sort by distance from ideal width (closest to ideal first)
+    const aDistFromIdeal = Math.abs(a.widthMm - idealWidthMm);
+    const bDistFromIdeal = Math.abs(b.widthMm - idealWidthMm);
+    return aDistFromIdeal - bDistFromIdeal;
   });
   
   // Limit to reasonable number of suggestions
