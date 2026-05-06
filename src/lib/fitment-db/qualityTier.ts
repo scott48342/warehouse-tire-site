@@ -85,14 +85,105 @@ export function hasValidTireSizes(oemTireSizes: unknown): boolean {
 }
 
 /**
+ * Known staggered-capable vehicle patterns.
+ * These vehicles commonly have staggered front/rear wheel widths.
+ */
+const STAGGERED_CAPABLE_PATTERNS: Array<{ make: RegExp; model: RegExp }> = [
+  // American Muscle
+  { make: /^ford$/i, model: /mustang/i },
+  { make: /^chevrolet$/i, model: /camaro|corvette/i },
+  { make: /^dodge$/i, model: /challenger|charger|viper/i },
+  // German Performance
+  { make: /^bmw$/i, model: /m[2-8]|z[1-8]|[1-8]\s*series/i },
+  { make: /^mercedes-?benz$/i, model: /amg|sl|cls|gt/i },
+  { make: /^audi$/i, model: /rs|r8|tt|s[3-8]/i },
+  { make: /^porsche$/i, model: /911|cayman|boxster|panamera|taycan/i },
+  // Japanese Sports
+  { make: /^nissan$/i, model: /gt-?r|370z|350z|z$/i },
+  { make: /^lexus$/i, model: /rc|lc|is-?f|gs-?f|lfa/i },
+  { make: /^infiniti$/i, model: /q60|g37|q50.*(red\s*sport|sport)/i },
+  { make: /^toyota$/i, model: /supra|gr86/i },
+  { make: /^subaru$/i, model: /brz/i },
+  { make: /^mazda$/i, model: /mx-?5|miata|rx-?[78]/i },
+  // Italian/British
+  { make: /^ferrari$/i, model: /.+/i },
+  { make: /^lamborghini$/i, model: /.+/i },
+  { make: /^maserati$/i, model: /.+/i },
+  { make: /^jaguar$/i, model: /f-?type|xk/i },
+  { make: /^aston\s*martin$/i, model: /.+/i },
+  { make: /^mclaren$/i, model: /.+/i },
+  { make: /^lotus$/i, model: /.+/i },
+];
+
+/**
+ * Check if a vehicle is known to commonly have staggered wheel setups.
+ */
+export function isStaggeredCapableVehicle(make: string, model: string): boolean {
+  const normalizedMake = (make || '').trim();
+  const normalizedModel = (model || '').trim();
+  
+  return STAGGERED_CAPABLE_PATTERNS.some(
+    p => p.make.test(normalizedMake) && p.model.test(normalizedModel)
+  );
+}
+
+/**
+ * Detailed staggered detection result for debugging
+ */
+export interface StaggeredDetectionResult {
+  hasStaggeredData: boolean;
+  reason: string;
+  debug: {
+    hasExplicitPositions: boolean;
+    hasFront: boolean;
+    hasRear: boolean;
+    widths: number[];
+    widthDelta: number;
+    minWidth: number;
+    maxWidth: number;
+    specCount: number;
+  };
+}
+
+/**
  * Check if wheel specs have proper front/rear position data for staggered detection.
- * Also checks for `rear: true` format and significant width differences.
+ * 
+ * Detection logic (v2 - 2026-05-06):
+ * 1. Explicit position markers (front/rear) → always trust
+ * 2. Width difference >= 0.5" with 2+ specs → staggered data exists
+ * 3. For staggered-capable vehicles, lower threshold applies
+ * 
+ * This function determines IF staggered data exists, not IF the vehicle IS staggered.
+ * The actual staggered determination uses the wheel specs directly.
  */
 export function hasStaggeredPositionData(oemWheelSizes: unknown): boolean {
-  if (!Array.isArray(oemWheelSizes) || oemWheelSizes.length < 2) {
-    return false;
+  return analyzeStaggeredData(oemWheelSizes).hasStaggeredData;
+}
+
+/**
+ * Detailed analysis of staggered wheel data.
+ * Returns debug info for logging and troubleshooting.
+ */
+export function analyzeStaggeredData(oemWheelSizes: unknown): StaggeredDetectionResult {
+  const defaultResult: StaggeredDetectionResult = {
+    hasStaggeredData: false,
+    reason: "No wheel specs provided",
+    debug: {
+      hasExplicitPositions: false,
+      hasFront: false,
+      hasRear: false,
+      widths: [],
+      widthDelta: 0,
+      minWidth: 0,
+      maxWidth: 0,
+      specCount: 0,
+    },
+  };
+
+  if (!Array.isArray(oemWheelSizes) || oemWheelSizes.length === 0) {
+    return defaultResult;
   }
-  
+
   let hasFront = false;
   let hasRear = false;
   const widths: number[] = [];
@@ -111,24 +202,84 @@ export function hasStaggeredPositionData(oemWheelSizes: unknown): boolean {
     if (width > 0) widths.push(width);
   }
   
-  // Explicit front/rear markers found
-  if (hasFront && hasRear) return true;
+  const uniqueWidths = [...new Set(widths)];
+  const minWidth = uniqueWidths.length > 0 ? Math.min(...uniqueWidths) : 0;
+  const maxWidth = uniqueWidths.length > 0 ? Math.max(...uniqueWidths) : 0;
+  const widthDelta = maxWidth - minWidth;
+  const hasExplicitPositions = hasFront || hasRear;
   
-  // If only rear is marked (Corvette-style), treat unmarked as front
-  if (hasRear && !hasFront) return true;
-  if (hasFront && !hasRear) return true;
-  
-  // WIDTH-BASED INFERENCE: If widths differ by 2"+, likely staggered
-  // (Mustang GT: 9" vs 10.5", Challenger Widebody: 8" vs 11")
-  if (widths.length >= 2) {
-    const minWidth = Math.min(...widths);
-    const maxWidth = Math.max(...widths);
-    if (maxWidth - minWidth >= 2) {
-      return true;
-    }
+  const debug = {
+    hasExplicitPositions,
+    hasFront,
+    hasRear,
+    widths: uniqueWidths,
+    widthDelta,
+    minWidth,
+    maxWidth,
+    specCount: oemWheelSizes.length,
+  };
+
+  // CASE 1: Explicit front/rear markers found
+  if (hasFront && hasRear) {
+    return {
+      hasStaggeredData: true,
+      reason: "Explicit front AND rear position markers found",
+      debug,
+    };
   }
   
-  return false;
+  // CASE 2: Only rear is marked (Corvette-style) - treat unmarked as front
+  if (hasRear && !hasFront && uniqueWidths.length >= 1) {
+    return {
+      hasStaggeredData: true,
+      reason: "Explicit rear marker found (unmarked specs treated as front)",
+      debug,
+    };
+  }
+  
+  // CASE 3: Only front is marked - treat unmarked as rear
+  if (hasFront && !hasRear && uniqueWidths.length >= 1) {
+    return {
+      hasStaggeredData: true,
+      reason: "Explicit front marker found (unmarked specs treated as rear)",
+      debug,
+    };
+  }
+
+  // CASE 4: No explicit positions - infer from width difference
+  // Must have 2+ specs with different widths
+  if (uniqueWidths.length >= 2) {
+    // v2 FIX: Lower threshold to 0.5" to catch Mustang GT Perf Pack (9" vs 9.5"), 
+    // Camaro SS (10" vs 11"), etc.
+    // 
+    // Safety: This only enables detection. The actual staggered decision
+    // happens in detectStaggeredFromParsed() which also validates the vehicle.
+    // False positives are prevented by:
+    // - Trucks/SUVs rarely have multiple wheel widths in OEM data
+    // - Square sedans have same width for all options
+    // - True staggered is confirmed by different tire sizes too
+    if (widthDelta >= 0.5) {
+      return {
+        hasStaggeredData: true,
+        reason: `Width difference of ${widthDelta}" detected (${minWidth}" vs ${maxWidth}")`,
+        debug,
+      };
+    }
+    
+    return {
+      hasStaggeredData: false,
+      reason: `Multiple widths but delta (${widthDelta}") < 0.5"`,
+      debug,
+    };
+  }
+  
+  return {
+    hasStaggeredData: false,
+    reason: uniqueWidths.length === 1 
+      ? "Single wheel width (square fitment)" 
+      : "No valid wheel widths found",
+    debug,
+  };
 }
 
 /**
@@ -175,20 +326,39 @@ export function determineQualityTier(
 }
 
 /**
- * PHASE 3: Stagger detection rules
+ * Extended staggered detection result with debug info
+ */
+export interface CanDetectStaggeredResult {
+  canDetect: boolean;
+  reason: string;
+  debug?: StaggeredDetectionResult["debug"];
+  isStaggeredCapable?: boolean;
+}
+
+/**
+ * PHASE 3: Stagger detection rules (v2 - 2026-05-06)
  * 
- * Only mark as staggered if:
+ * Detection is enabled if:
  * 1. Has quality_tier = "complete"
- * 2. Has wheel specs with EXPLICIT front/rear position data
+ * 2. Has wheel specs with:
+ *    - Explicit front/rear position markers, OR
+ *    - Width difference >= 0.5" (lowered from 2" to catch real staggered vehicles)
  * 
- * Do NOT assume staggered from:
- * - Multiple tire sizes (could be trim options)
- * - Multiple wheel diameters without position data
+ * The actual staggered DECISION is made by detectStaggeredFromParsed() in the route,
+ * which validates that front/rear specs actually differ.
+ * 
+ * @param qualityTier - The quality tier of the fitment record
+ * @param oemWheelSizes - Array of wheel size objects
+ * @param make - Vehicle make (optional, for staggered-capable check)
+ * @param model - Vehicle model (optional, for staggered-capable check)
  */
 export function canDetectStaggered(
   qualityTier: QualityTier | string | null,
-  oemWheelSizes: unknown
-): { canDetect: boolean; reason: string } {
+  oemWheelSizes: unknown,
+  make?: string,
+  model?: string
+): CanDetectStaggeredResult {
+  // Check quality tier first
   if (qualityTier !== "complete") {
     return {
       canDetect: false,
@@ -196,15 +366,27 @@ export function canDetectStaggered(
     };
   }
   
-  if (!hasStaggeredPositionData(oemWheelSizes)) {
+  // Analyze the wheel data
+  const analysis = analyzeStaggeredData(oemWheelSizes);
+  
+  // Check if vehicle is known staggered-capable (for logging)
+  const isStaggeredCapable = make && model 
+    ? isStaggeredCapableVehicle(make, model) 
+    : undefined;
+  
+  if (!analysis.hasStaggeredData) {
     return {
       canDetect: false,
-      reason: "No explicit front/rear position data in wheel specs"
+      reason: analysis.reason,
+      debug: analysis.debug,
+      isStaggeredCapable,
     };
   }
   
   return {
     canDetect: true,
-    reason: "Has complete wheel specs with front/rear positions"
+    reason: analysis.reason,
+    debug: analysis.debug,
+    isStaggeredCapable,
   };
 }

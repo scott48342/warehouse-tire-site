@@ -19,7 +19,7 @@ import {
   needsRearWheelConfigSelection,
 } from "@/lib/fitment/hdFitmentResolver";
 import { listLocalFitments, listFitmentsWithTierFilter } from "@/lib/fitment-db/getFitment";
-import { canDetectStaggered, type QualityTier } from "@/lib/fitment-db/qualityTier";
+import { canDetectStaggered, isStaggeredCapableVehicle, analyzeStaggeredData, type QualityTier } from "@/lib/fitment-db/qualityTier";
 import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 import {
   buildFitmentEnvelope,
@@ -274,24 +274,32 @@ function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo
   // IMPORTANT FIX (2026-04-06): Removed diameterDiff check that was causing false positives
   // on trucks like Silverado 2500HD where 17"/18" are just trim options with same 8" width.
   //
-  // IMPORTANT FIX (2026-04-07): Increased threshold from 1" to 2" to avoid false positives
-  // on sedans like Buick LaCrosse where 6.5"/7.5" widths are just different OEM options.
-  // True staggered vehicles (Corvette C8: 8.5" vs 11") have much larger width differences.
-  // Vehicles with smaller staggered differences should have explicit front/rear axle labels.
+  // IMPORTANT FIX (2026-05-06): LOWERED threshold from 2" to 0.5" to catch real staggered vehicles
+  // Real staggered vehicles with smaller width differences:
+  // - Mustang GT Performance Pack: 9" vs 9.5" (0.5" diff)
+  // - Camaro SS: 10" vs 11" (1" diff)
+  // - Shelby GT500: 11" vs 11.5" (0.5" diff)
+  //
+  // False positive prevention:
+  // - Detection is gated by canDetectStaggered() which checks quality tier
+  // - Trucks/SUVs rarely have multiple widths in OEM data (they have diff diameters for trim options)
+  // - True square sedans have same width across all options (Camry: 8" for 16/17/18/19" wheels)
+  // - Different DIAMETERS alone are NOT staggered (they're OEM trim options)
   if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
-    // Check for implicit staggered: significant WIDTH difference indicates staggered
+    // Check for implicit staggered: WIDTH difference indicates staggered
     // We check all pairs to catch cases where >2 specs exist but 2 of them are staggered
     const sortedByWidth = [...bothSpecs].sort((a, b) => a.width - b.width);
     const narrowest = sortedByWidth[0];
     const widest = sortedByWidth[sortedByWidth.length - 1];
-    const widthDiff = Math.abs(widest.width - narrowest.width) >= 2; // 2" or more width difference
+    const widthDelta = Math.abs(widest.width - narrowest.width);
+    const widthDiff = widthDelta >= 0.5; // v2: 0.5" threshold to catch Mustang/Camaro/Challenger
     
     if (widthDiff) {
       // Width difference indicates staggered - narrower = front, wider = rear
       const frontInferred = narrowest;
       const rearInferred = widest;
       
-      console.log(`[detectStaggeredFromParsed] INFERRED STAGGERED: width difference ${narrowest.width}" vs ${widest.width}" (axles marked as "both")`);
+      console.log(`[detectStaggeredFromParsed] INFERRED STAGGERED: width ${narrowest.width}" vs ${widest.width}" (delta=${widthDelta.toFixed(1)}", axles marked as "both")`);
       
       return {
         isStaggered: true,
@@ -1018,7 +1026,18 @@ async function handleDbProfilePath(
   // PHASE 3: Quality tier check for staggered detection
   // Only detect staggered if we have "complete" quality tier with explicit position data
   const qualityTier = (dbProfile as any).qualityTier as QualityTier | undefined;
-  const staggeredCheck = canDetectStaggered(qualityTier || "unknown", dbProfile.oemWheelSizes);
+  const staggeredCheck = canDetectStaggered(qualityTier || "unknown", dbProfile.oemWheelSizes, make, model);
+  
+  // Log staggered detection analysis for debugging
+  if (staggeredCheck.debug) {
+    console.log(`[fitment-search] Staggered analysis: ${make} ${model}`, {
+      canDetect: staggeredCheck.canDetect,
+      isStaggeredCapable: staggeredCheck.isStaggeredCapable,
+      widthDelta: staggeredCheck.debug.widthDelta,
+      widths: staggeredCheck.debug.widths,
+      reason: staggeredCheck.reason,
+    });
+  }
   
   let staggeredInfo: StaggeredInfo;
   if (staggeredCheck.canDetect) {

@@ -103,6 +103,7 @@ export interface FitmentProfile {
   source: "db" | "api";
   apiCalled: boolean;
   overridesApplied: boolean;
+  qualityTier?: "complete" | "partial" | "low_confidence" | "unknown";
 }
 
 export interface WheelSize {
@@ -804,6 +805,7 @@ export async function getFitmentProfile(
             source: (cached.source as "db" | "api") || "db",
             apiCalled: false,
             overridesApplied: false,
+            qualityTier: cached.qualityTier || "unknown",
           },
           resolutionPath: "directCanonical",
           requestedModificationId: requestedModId,
@@ -862,6 +864,7 @@ export async function getFitmentProfile(
           oemWheelSizes: profile.oemWheelSizes,
           displayTrim: profile.displayTrim,
           source: "db",
+          qualityTier: profile.qualityTier,
         }).catch(() => {}); // Ignore cache write errors
         
         return {
@@ -928,6 +931,7 @@ export async function getFitmentProfile(
             oemWheelSizes: profile.oemWheelSizes,
             displayTrim: profile.displayTrim,
             source: "db",
+            qualityTier: profile.qualityTier,
           }).catch(() => {});
           
           return {
@@ -1096,6 +1100,7 @@ export async function getFitmentProfile(
             oemWheelSizes: profile.oemWheelSizes,
             displayTrim: profile.displayTrim,
             source: "db",
+            qualityTier: profile.qualityTier,
           }).catch(() => {});
           
           return {
@@ -1620,6 +1625,7 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     source,
     apiCalled: source === "api",
     overridesApplied: rulesApplied,
+    qualityTier: (record.qualityTier as FitmentProfile["qualityTier"]) || "unknown",
   };
 }
 

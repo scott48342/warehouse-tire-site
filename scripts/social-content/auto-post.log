@@ -4054,3 +4054,116 @@ Files:
 
 Add these to .env.local
 [Tue 05/05/2026 18:00:10.81] Auto-post complete 
+[Wed 05/06/2026  9:00:02.14] Starting auto-post... 
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ enable debugging { debug: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:15680) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Petrol P4C
+  Downloading image for Petrol P4C...
+  ✅ Generated: p4c_1778072403796
+  📝 Caption preview: 🔥 Petrol P4C - Now in stock!
+
+📐 18x8
+🔩 5X115
+↔️ 40mm offset
+✨ PE P4C 18X8 5X1...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - p4c_1778072403796.png
+  - p4c_1778072403796.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌁ auth for agents [www.vestauth.com]
+
+📱 Facebook/Instagram Poster
+
+Selected: br020_diamondback_1777899614579
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys BR020 DIAMONDBACK
+Price: $434
+Image: br020_diamondback_1777899614579.png
+
+Caption:
+Weekend project? ✅
+
+Black Rhino Hard Alloys BR020 DIAMONDBACK
+📐 20x9
+🔩 6X5.5
+↔️ 12mm offset
+✨ DIAMONDBACK 20X9 6X5.5 106 +12 B-BRNZ
+
+Only $434/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/BR020ZX20906812
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Wednesday, 29-Apr-26 15:00:00 PDT. The current time is Wednesday, 06-May-26 06:00:04 PDT.
+
+✨ Done!
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:6952) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Rotiform R189 SGN
+  Downloading image for Rotiform R189 SGN...
+  ✅ Generated: r189_sgn_1778072410578
+  📝 Caption preview: New arrival alert! 🚨
+
+Rotiform R189 SGN
+📐 20x10.5
+🔩 5X112
+↔️ 40mm offset
+✨ SG...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - r189_sgn_1778072410578.png
+  - r189_sgn_1778072410578.json
+◇ injected env (48) from ..\..\.env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Wed 05/06/2026  9:00:11.43] Auto-post complete 

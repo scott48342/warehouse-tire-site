@@ -25,6 +25,7 @@ export type CachedFitmentProfile = {
   displayTrim: string | null;
   source: string;
   cachedAt: string;
+  qualityTier?: "complete" | "partial" | "low_confidence" | "unknown";
 };
 
 export type FitmentCacheStats = {
