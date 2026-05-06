@@ -10,7 +10,10 @@
  * - data_gap: Missing fitment data in database
  * - test_harness: Test expectation incorrect
  * - regression: Previously passing, now failing
+ * - known_gap: Documented data gap (suppressed from regression alerts)
  */
+
+import { isKnownDataGap } from '../known-data-gaps.mjs';
 
 export const FAILURE_TYPE = {
   LOGIC: 'logic',
@@ -19,6 +22,7 @@ export const FAILURE_TYPE = {
   DATA_GAP: 'data_gap',
   TEST_HARNESS: 'test_harness',
   REGRESSION: 'regression',
+  KNOWN_GAP: 'known_gap', // Documented data gap, suppressed from regression alerts
 };
 
 export const SEVERITY = {
@@ -209,9 +213,35 @@ export function classifyPackageFailure(vehicle, packageResult) {
 
 /**
  * Classify overall vehicle result
+ * 
+ * NOTE: Known data gaps are checked FIRST and returned as 'known_gap' type.
+ * These should NOT be counted as regressions or block deployments.
  */
 export function classifyVehicleFailure(vehicle, results) {
   const { wheelResult, tireResult, staggeredResult, liftedResults, packageResult } = results;
+  
+  // FIRST: Check if this is a known data gap
+  // Known gaps are tracked separately and don't count as regressions
+  const knownGap = isKnownDataGap(vehicle);
+  if (knownGap) {
+    // Determine if the actual failure matches expected gap type
+    const hasZeroWheels = wheelResult && wheelResult.wheelCount === 0;
+    const hasStaggeredMismatch = staggeredResult && staggeredResult.staggeredMismatch;
+    const hasZeroTires = tireResult && tireResult.tireCount === 0;
+    
+    // If the failure matches what we expect for this known gap, classify as known_gap
+    if (hasZeroWheels || hasStaggeredMismatch || hasZeroTires) {
+      return {
+        type: FAILURE_TYPE.KNOWN_GAP,
+        severity: SEVERITY.INFO, // Suppressed severity
+        originalSeverity: knownGap.severity,
+        reason: `Known data gap: ${knownGap.reason}`,
+        priority: knownGap.priority,
+        matchedKey: knownGap.matchedKey,
+        suppressed: true,
+      };
+    }
+  }
   
   // Priority order for failure classification
   // 1. Staggered mismatch (if critical)
