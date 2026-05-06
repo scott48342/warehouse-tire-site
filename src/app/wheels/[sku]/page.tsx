@@ -329,7 +329,7 @@ export default async function WheelDetailPage({
   const diameter = it?.properties?.diameter != null ? String(it.properties.diameter) : "";
   const width = it?.properties?.width != null ? String(it.properties.width) : "";
   wheelDiaN = (() => { const n = Number(String(diameter || "").replace(/[^0-9.]/g, "")); return Number.isFinite(n) ? n : null; })();
-  oemTireSizes = wheelDiaN ? oemTireSizesAll.filter((s) => { const m = String(s).toUpperCase().match(/R(\d{2})\b/); const rim = m ? Number(m[1]) : NaN; return Number.isFinite(rim) && rim === wheelDiaN; }) : oemTireSizesAll;
+  oemTireSizes = wheelDiaN ? oemTireSizesAll.filter((s) => { const m = String(s).toUpperCase().match(/R(\d{2})(?:\D|$)/); const rim = m ? Number(m[1]) : NaN; return Number.isFinite(rim) && rim === wheelDiaN; }) : oemTireSizesAll;
 
   const boltPattern = it?.properties?.boltPatternMetric != null ? String(it.properties.boltPatternMetric) : (it?.properties?.boltPattern != null ? String(it.properties.boltPattern) : "");
   const offset = it?.properties?.offset != null ? String(it.properties.offset) : "";
@@ -611,7 +611,7 @@ export default async function WheelDetailPage({
                   }
                   
                   const effectiveTireSizes = isLiftedBuild
-                    ? liftedTireSizes.filter((s) => { const m = String(s).toUpperCase().match(/R(\d{2})\b/); const rim = m ? Number(m[1]) : NaN; return !wheelDiaN || (Number.isFinite(rim) && rim === wheelDiaN); })
+                    ? liftedTireSizes.filter((s) => { const m = String(s).toUpperCase().match(/R(\d{2})(?:\D|$)/); const rim = m ? Number(m[1]) : NaN; return !wheelDiaN || (Number.isFinite(rim) && rim === wheelDiaN); })
                     : oemTireSizes;
                   
                   const buildParams = (params: Record<string, string | number | null | undefined>) => {

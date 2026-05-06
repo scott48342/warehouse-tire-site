@@ -1886,7 +1886,9 @@ export default async function TiresPage({
     const str = String(s || "").toUpperCase();
     
     // Modern P-metric: 205/75R14, 275/65R18 → extract R## part
-    const modernMatch = str.match(/R(\d{2})\b/);
+    // Also handles flotation sizes: 35X12.50R20LT, 37x12.50R20
+    // Use (?:\D|$) instead of \b to handle load range suffixes (LT, C, E, etc.)
+    const modernMatch = str.match(/R(\d{2})(?:\D|$)/);
     if (modernMatch) return Number(modernMatch[1]);
     
     // Legacy alphanumeric: E70-14, F60-15, G78-14 → extract trailing ##
@@ -4501,7 +4503,8 @@ function TireCard({
             const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
             const tireRimDia = (() => {
               const desc = String(t.description || selectedSize || "").toUpperCase();
-              const m = desc.match(/R(\d{2})\b/);
+              // Use (?:\D|$) instead of \b to handle flotation sizes with LT suffix
+              const m = desc.match(/R(\d{2})(?:\D|$)/);
               return m ? Number(m[1]) : NaN;
             })();
             const wheelMatches = isPackageFlow && Number.isFinite(wheelDiaN) && Number.isFinite(tireRimDia)

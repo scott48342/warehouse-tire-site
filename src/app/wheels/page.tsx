@@ -573,7 +573,8 @@ export default async function WheelsPage({
   }, { skipBase: premiumTrimUxEnabled });
 
   function rimDiaFromTireSize(s: string) {
-    const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
+    // Use (?:\D|$) instead of \b to handle flotation sizes with LT suffix (e.g., 35X12.50R20LT)
+    const m = String(s || "").toUpperCase().match(/R(\d{2})(?:\D|$)/);
     return m ? Number(m[1]) : NaN;
   }
 
