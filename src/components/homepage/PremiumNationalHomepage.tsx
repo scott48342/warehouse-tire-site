@@ -207,6 +207,7 @@ function VehicleSelectorSection() {
   const router = useRouter();
   const [intent, setIntent] = useState<ShoppingIntent>("tires");
   const [tab, setTab] = useState<"vehicle" | "size">("vehicle");
+  const [sizeFormat, setSizeFormat] = useState<"metric" | "flotation">("metric");
   
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
@@ -218,18 +219,33 @@ function VehicleSelectorSection() {
   const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
   const [loading, setLoading] = useState<string | null>(null);
 
+  // Metric size state
   const [width, setWidth] = useState("");
   const [aspect, setAspect] = useState("");
   const [rim, setRim] = useState("");
   
-  // Size dropdown options (cascading)
+  // Metric dropdown options (cascading)
   const [widthOptions, setWidthOptions] = useState<string[]>([]);
   const [aspectOptions, setAspectOptions] = useState<string[]>([]);
   const [rimOptions, setRimOptions] = useState<string[]>([]);
 
-  // Fetch initial widths on mount
+  // Flotation size state
+  const [floatDia, setFloatDia] = useState("");
+  const [floatWidth, setFloatWidth] = useState("");
+  const [floatRim, setFloatRim] = useState("");
+
+  // Flotation dropdown options (cascading)
+  const [floatDiaOptions, setFloatDiaOptions] = useState<string[]>([]);
+  const [floatWidthOptions, setFloatWidthOptions] = useState<string[]>([]);
+  const [floatRimOptions, setFloatRimOptions] = useState<string[]>([]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // METRIC SIZE EFFECTS
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Fetch initial metric widths on mount
   useEffect(() => {
-    fetch("/api/tires/sizes")
+    fetch("/api/tires/sizes?type=metric")
       .then(r => r.json())
       .then(data => setWidthOptions(data.widths || []))
       .catch(() => setWidthOptions([]));
@@ -238,7 +254,7 @@ function VehicleSelectorSection() {
   // Fetch aspects when width changes
   useEffect(() => {
     if (!width) { setAspectOptions([]); setAspect(""); setRimOptions([]); setRim(""); return; }
-    fetch(`/api/tires/sizes?width=${width}`)
+    fetch(`/api/tires/sizes?type=metric&width=${width}`)
       .then(r => r.json())
       .then(data => setAspectOptions(data.aspects || []))
       .catch(() => setAspectOptions([]));
@@ -247,11 +263,45 @@ function VehicleSelectorSection() {
   // Fetch rims when aspect changes
   useEffect(() => {
     if (!width || !aspect) { setRimOptions([]); setRim(""); return; }
-    fetch(`/api/tires/sizes?width=${width}&aspect=${aspect}`)
+    fetch(`/api/tires/sizes?type=metric&width=${width}&aspect=${aspect}`)
       .then(r => r.json())
       .then(data => setRimOptions(data.rims || []))
       .catch(() => setRimOptions([]));
   }, [width, aspect]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FLOTATION SIZE EFFECTS
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Fetch initial flotation diameters on mount
+  useEffect(() => {
+    fetch("/api/tires/sizes?type=flotation")
+      .then(r => r.json())
+      .then(data => setFloatDiaOptions(data.diameters || []))
+      .catch(() => setFloatDiaOptions([]));
+  }, []);
+
+  // Fetch widths when diameter changes
+  useEffect(() => {
+    if (!floatDia) { setFloatWidthOptions([]); setFloatWidth(""); setFloatRimOptions([]); setFloatRim(""); return; }
+    fetch(`/api/tires/sizes?type=flotation&dia=${floatDia}`)
+      .then(r => r.json())
+      .then(data => setFloatWidthOptions(data.widths || []))
+      .catch(() => setFloatWidthOptions([]));
+  }, [floatDia]);
+
+  // Fetch rims when width changes
+  useEffect(() => {
+    if (!floatDia || !floatWidth) { setFloatRimOptions([]); setFloatRim(""); return; }
+    fetch(`/api/tires/sizes?type=flotation&dia=${floatDia}&width=${floatWidth}`)
+      .then(r => r.json())
+      .then(data => setFloatRimOptions(data.rims || []))
+      .catch(() => setFloatRimOptions([]));
+  }, [floatDia, floatWidth]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // VEHICLE EFFECTS
+  // ═══════════════════════════════════════════════════════════════════════════
 
   useEffect(() => {
     if (!year) { setMakes([]); setMake(""); return; }
@@ -290,6 +340,10 @@ function VehicleSelectorSection() {
       .finally(() => setLoading(null));
   }, [year, make, model]);
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEARCH HANDLERS
+  // ═══════════════════════════════════════════════════════════════════════════
+
   const handleVehicleSearch = () => {
     if (!year || !make || !model) return;
     const params = new URLSearchParams({ year, make, model });
@@ -307,12 +361,22 @@ function VehicleSelectorSection() {
     }
   };
 
-  const handleSizeSearch = () => {
+  const handleMetricSizeSearch = () => {
     if (!width || !aspect || !rim) return;
     const size = `${width}/${aspect}R${rim}`;
-    
-    // Size search only makes sense for tires
     router.push(`/tires?size=${encodeURIComponent(size)}`);
+  };
+
+  const handleFlotationSizeSearch = () => {
+    if (!floatDia || !floatWidth || !floatRim) return;
+    // Format: 35x12.50R17
+    const flotation = `${floatDia}x${Number(floatWidth).toFixed(2)}R${floatRim}`;
+    // Also build rawSize for TireConnect-style lookup (35x12.50R17 -> 35125017)
+    const rawSize = `${floatDia}${floatWidth.replace(".", "")}${floatRim}`;
+    const params = new URLSearchParams();
+    params.set("flotation", flotation);
+    params.set("size", rawSize);
+    router.push(`/tires?${params.toString()}`);
   };
 
   const currentIntent = INTENT_CONFIG[intent];
@@ -323,7 +387,7 @@ function VehicleSelectorSection() {
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
         <div className="bg-[#0d0d0d] border border-white/10 rounded overflow-hidden">
           
-          {/* NEW: Intent Header */}
+          {/* Intent Header */}
           <div className="px-5 pt-5 pb-4 border-b border-white/10">
             <h2 className="text-white font-bold text-xl lg:text-2xl tracking-tight mb-1">
               Shop Wheels, Tires, or Complete Packages
@@ -434,35 +498,94 @@ function VehicleSelectorSection() {
                 </button>
               </div>
             ) : (
-              <div className="flex flex-wrap items-end gap-3">
-                <div className="flex-1 min-w-[100px]">
-                  <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Width</label>
-                  <select value={width} onChange={(e) => setWidth(e.target.value)} className={`${selectClass} w-full`}>
-                    <option value="">Width</option>
-                    {widthOptions.map(w => <option key={w} value={w}>{w}</option>)}
-                  </select>
+              <div>
+                {/* Size Format Toggle */}
+                <div className="flex gap-2 mb-4">
+                  <button
+                    onClick={() => setSizeFormat("metric")}
+                    className={`px-4 py-2 text-sm font-semibold rounded transition-colors ${
+                      sizeFormat === "metric"
+                        ? "bg-red-600 text-white"
+                        : "bg-[#1a1a1a] text-white/60 hover:text-white border border-white/10"
+                    }`}
+                  >
+                    Metric (225/65R17)
+                  </button>
+                  <button
+                    onClick={() => setSizeFormat("flotation")}
+                    className={`px-4 py-2 text-sm font-semibold rounded transition-colors ${
+                      sizeFormat === "flotation"
+                        ? "bg-red-600 text-white"
+                        : "bg-[#1a1a1a] text-white/60 hover:text-white border border-white/10"
+                    }`}
+                  >
+                    Flotation (35x12.50R17)
+                  </button>
                 </div>
-                <div className="flex-1 min-w-[100px]">
-                  <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Aspect Ratio</label>
-                  <select value={aspect} onChange={(e) => setAspect(e.target.value)} disabled={!width} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Aspect</option>
-                    {aspectOptions.map(a => <option key={a} value={a}>{a}</option>)}
-                  </select>
-                </div>
-                <div className="flex-1 min-w-[100px]">
-                  <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Rim Diameter</label>
-                  <select value={rim} onChange={(e) => setRim(e.target.value)} disabled={!aspect} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Rim</option>
-                    {rimOptions.map(r => <option key={r} value={r}>{r}</option>)}
-                  </select>
-                </div>
-                <button
-                  onClick={handleSizeSearch}
-                  disabled={!width || !aspect || !rim}
-                  className="h-11 px-8 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-colors rounded"
-                >
-                  Shop Tires
-                </button>
+
+                {sizeFormat === "metric" ? (
+                  <div className="flex flex-wrap items-end gap-3">
+                    <div className="flex-1 min-w-[100px]">
+                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Width</label>
+                      <select value={width} onChange={(e) => setWidth(e.target.value)} className={`${selectClass} w-full`}>
+                        <option value="">Width</option>
+                        {widthOptions.map(w => <option key={w} value={w}>{w}</option>)}
+                      </select>
+                    </div>
+                    <div className="flex-1 min-w-[100px]">
+                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Aspect Ratio</label>
+                      <select value={aspect} onChange={(e) => setAspect(e.target.value)} disabled={!width} className={`${selectClass} w-full disabled:opacity-40`}>
+                        <option value="">Aspect</option>
+                        {aspectOptions.map(a => <option key={a} value={a}>{a}</option>)}
+                      </select>
+                    </div>
+                    <div className="flex-1 min-w-[100px]">
+                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Rim Diameter</label>
+                      <select value={rim} onChange={(e) => setRim(e.target.value)} disabled={!aspect} className={`${selectClass} w-full disabled:opacity-40`}>
+                        <option value="">Rim</option>
+                        {rimOptions.map(r => <option key={r} value={r}>{r}</option>)}
+                      </select>
+                    </div>
+                    <button
+                      onClick={handleMetricSizeSearch}
+                      disabled={!width || !aspect || !rim}
+                      className="h-11 px-8 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-colors rounded"
+                    >
+                      Shop Tires
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap items-end gap-3">
+                    <div className="flex-1 min-w-[100px]">
+                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Diameter</label>
+                      <select value={floatDia} onChange={(e) => setFloatDia(e.target.value)} className={`${selectClass} w-full`}>
+                        <option value="">Diameter</option>
+                        {floatDiaOptions.map(d => <option key={d} value={d}>{d}&quot;</option>)}
+                      </select>
+                    </div>
+                    <div className="flex-1 min-w-[100px]">
+                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Width</label>
+                      <select value={floatWidth} onChange={(e) => setFloatWidth(e.target.value)} disabled={!floatDia} className={`${selectClass} w-full disabled:opacity-40`}>
+                        <option value="">Width</option>
+                        {floatWidthOptions.map(w => <option key={w} value={w}>{Number(w).toFixed(2)}</option>)}
+                      </select>
+                    </div>
+                    <div className="flex-1 min-w-[100px]">
+                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Rim Diameter</label>
+                      <select value={floatRim} onChange={(e) => setFloatRim(e.target.value)} disabled={!floatWidth} className={`${selectClass} w-full disabled:opacity-40`}>
+                        <option value="">Rim</option>
+                        {floatRimOptions.map(r => <option key={r} value={r}>{r}&quot;</option>)}
+                      </select>
+                    </div>
+                    <button
+                      onClick={handleFlotationSizeSearch}
+                      disabled={!floatDia || !floatWidth || !floatRim}
+                      className="h-11 px-8 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-colors rounded"
+                    >
+                      Shop Tires
+                    </button>
+                  </div>
+                )}
               </div>
             )}
 

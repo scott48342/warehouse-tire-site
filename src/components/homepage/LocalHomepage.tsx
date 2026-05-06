@@ -78,6 +78,7 @@ const YEARS = Array.from({ length: 35 }, (_, i) => String(THIS_YEAR - i));
 function HeroSection() {
   const router = useRouter();
   const [searchTab, setSearchTab] = useState<"vehicle" | "size">("vehicle");
+  const [sizeFormat, setSizeFormat] = useState<"metric" | "flotation">("metric");
   
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
@@ -89,9 +90,89 @@ function HeroSection() {
   const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
   const [loading, setLoading] = useState<string | null>(null);
 
+  // Metric size state
   const [width, setWidth] = useState("");
   const [aspect, setAspect] = useState("");
   const [rim, setRim] = useState("");
+  
+  // Metric dropdown options (cascading)
+  const [widthOptions, setWidthOptions] = useState<string[]>([]);
+  const [aspectOptions, setAspectOptions] = useState<string[]>([]);
+  const [rimOptions, setRimOptions] = useState<string[]>([]);
+
+  // Flotation size state
+  const [floatDia, setFloatDia] = useState("");
+  const [floatWidth, setFloatWidth] = useState("");
+  const [floatRim, setFloatRim] = useState("");
+
+  // Flotation dropdown options (cascading)
+  const [floatDiaOptions, setFloatDiaOptions] = useState<string[]>([]);
+  const [floatWidthOptions, setFloatWidthOptions] = useState<string[]>([]);
+  const [floatRimOptions, setFloatRimOptions] = useState<string[]>([]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // METRIC SIZE EFFECTS
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Fetch initial metric widths on mount
+  useEffect(() => {
+    fetch("/api/tires/sizes?type=metric")
+      .then(r => r.json())
+      .then(data => setWidthOptions(data.widths || []))
+      .catch(() => setWidthOptions([]));
+  }, []);
+
+  // Fetch aspects when width changes
+  useEffect(() => {
+    if (!width) { setAspectOptions([]); setAspect(""); setRimOptions([]); setRim(""); return; }
+    fetch(`/api/tires/sizes?type=metric&width=${width}`)
+      .then(r => r.json())
+      .then(data => setAspectOptions(data.aspects || []))
+      .catch(() => setAspectOptions([]));
+  }, [width]);
+
+  // Fetch rims when aspect changes
+  useEffect(() => {
+    if (!width || !aspect) { setRimOptions([]); setRim(""); return; }
+    fetch(`/api/tires/sizes?type=metric&width=${width}&aspect=${aspect}`)
+      .then(r => r.json())
+      .then(data => setRimOptions(data.rims || []))
+      .catch(() => setRimOptions([]));
+  }, [width, aspect]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FLOTATION SIZE EFFECTS
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Fetch initial flotation diameters on mount
+  useEffect(() => {
+    fetch("/api/tires/sizes?type=flotation")
+      .then(r => r.json())
+      .then(data => setFloatDiaOptions(data.diameters || []))
+      .catch(() => setFloatDiaOptions([]));
+  }, []);
+
+  // Fetch widths when diameter changes
+  useEffect(() => {
+    if (!floatDia) { setFloatWidthOptions([]); setFloatWidth(""); setFloatRimOptions([]); setFloatRim(""); return; }
+    fetch(`/api/tires/sizes?type=flotation&dia=${floatDia}`)
+      .then(r => r.json())
+      .then(data => setFloatWidthOptions(data.widths || []))
+      .catch(() => setFloatWidthOptions([]));
+  }, [floatDia]);
+
+  // Fetch rims when width changes
+  useEffect(() => {
+    if (!floatDia || !floatWidth) { setFloatRimOptions([]); setFloatRim(""); return; }
+    fetch(`/api/tires/sizes?type=flotation&dia=${floatDia}&width=${floatWidth}`)
+      .then(r => r.json())
+      .then(data => setFloatRimOptions(data.rims || []))
+      .catch(() => setFloatRimOptions([]));
+  }, [floatDia, floatWidth]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // VEHICLE EFFECTS
+  // ═══════════════════════════════════════════════════════════════════════════
 
   useEffect(() => {
     if (!year) { setMakes([]); setMake(""); return; }
@@ -133,8 +214,13 @@ function HeroSection() {
       .finally(() => setLoading(null));
   }, [year, make, model, router]);
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEARCH HANDLERS
+  // ═══════════════════════════════════════════════════════════════════════════
+
   const canSearchVehicle = year && make && model;
-  const canSearchSize = width && aspect && rim;
+  const canSearchMetricSize = width && aspect && rim;
+  const canSearchFlotationSize = floatDia && floatWidth && floatRim;
 
   const handleVehicleSearch = () => {
     if (!canSearchVehicle) return;
@@ -143,9 +229,21 @@ function HeroSection() {
     router.push(`/tires?${params.toString()}`);
   };
 
-  const handleSizeSearch = () => {
-    if (!canSearchSize) return;
+  const handleMetricSizeSearch = () => {
+    if (!canSearchMetricSize) return;
     router.push(`/tires?size=${width}/${aspect}R${rim}`);
+  };
+
+  const handleFlotationSizeSearch = () => {
+    if (!canSearchFlotationSize) return;
+    // Format: 35x12.50R17
+    const flotation = `${floatDia}x${Number(floatWidth).toFixed(2)}R${floatRim}`;
+    // Also build rawSize for TireConnect-style lookup (35x12.50R17 -> 35125017)
+    const rawSize = `${floatDia}${floatWidth.replace(".", "")}${floatRim}`;
+    const params = new URLSearchParams();
+    params.set("flotation", flotation);
+    params.set("size", rawSize);
+    router.push(`/tires?${params.toString()}`);
   };
 
   // Auto-submit after trim selection (cancels the model auto-submit timer)
@@ -161,8 +259,8 @@ function HeroSection() {
     }
   };
 
-  // Auto-submit after rim selection (size search)
-  const handleRimChange = (selectedRim: string) => {
+  // Auto-submit after rim selection (metric size search)
+  const handleMetricRimChange = (selectedRim: string) => {
     setRim(selectedRim);
     if (selectedRim && width && aspect) {
       setTimeout(() => {
@@ -171,9 +269,20 @@ function HeroSection() {
     }
   };
 
-  const WIDTHS = [175, 185, 195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315];
-  const ASPECTS = [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80];
-  const RIMS = [14, 15, 16, 17, 18, 19, 20, 21, 22, 24];
+  // Auto-submit after rim selection (flotation size search)
+  const handleFlotationRimChange = (selectedRim: string) => {
+    setFloatRim(selectedRim);
+    if (selectedRim && floatDia && floatWidth) {
+      setTimeout(() => {
+        const flotation = `${floatDia}x${Number(floatWidth).toFixed(2)}R${selectedRim}`;
+        const rawSize = `${floatDia}${floatWidth.replace(".", "")}${selectedRim}`;
+        const params = new URLSearchParams();
+        params.set("flotation", flotation);
+        params.set("size", rawSize);
+        router.push(`/tires?${params.toString()}`);
+      }, 300);
+    }
+  };
 
   return (
     <section className="relative">
@@ -310,42 +419,113 @@ function HeroSection() {
             {/* Size Search - LARGER FIELDS */}
             {searchTab === "size" && (
               <div className="space-y-3">
-                <div className="grid grid-cols-3 gap-2">
-                  <select
-                    value={width}
-                    onChange={(e) => setWidth(e.target.value)}
-                    className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
+                {/* Size Format Toggle */}
+                <div className="flex gap-2 mb-2">
+                  <button
+                    onClick={() => setSizeFormat("metric")}
+                    className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${
+                      sizeFormat === "metric"
+                        ? "bg-green-700 text-white"
+                        : "bg-neutral-100 text-neutral-600"
+                    }`}
                   >
-                    <option value="">Width</option>
-                    {WIDTHS.map(w => <option key={w} value={w}>{w}</option>)}
-                  </select>
-                  
-                  <select
-                    value={aspect}
-                    onChange={(e) => setAspect(e.target.value)}
-                    className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
+                    Metric
+                  </button>
+                  <button
+                    onClick={() => setSizeFormat("flotation")}
+                    className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${
+                      sizeFormat === "flotation"
+                        ? "bg-green-700 text-white"
+                        : "bg-neutral-100 text-neutral-600"
+                    }`}
                   >
-                    <option value="">Aspect</option>
-                    {ASPECTS.map(a => <option key={a} value={a}>{a}</option>)}
-                  </select>
-                  
-                  <select
-                    value={rim}
-                    onChange={(e) => handleRimChange(e.target.value)}
-                    className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
-                  >
-                    <option value="">Rim</option>
-                    {RIMS.map(r => <option key={r} value={r}>{r}</option>)}
-                  </select>
+                    Flotation
+                  </button>
                 </div>
-                
-                <button
-                  onClick={handleSizeSearch}
-                  disabled={!canSearchSize}
-                  className="w-full h-16 rounded-xl bg-[#c41230] text-white font-bold text-xl hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg"
-                >
-                  FIND TIRES
-                </button>
+
+                {sizeFormat === "metric" ? (
+                  <>
+                    <div className="grid grid-cols-3 gap-2">
+                      <select
+                        value={width}
+                        onChange={(e) => setWidth(e.target.value)}
+                        className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
+                      >
+                        <option value="">Width</option>
+                        {widthOptions.map(w => <option key={w} value={w}>{w}</option>)}
+                      </select>
+                      
+                      <select
+                        value={aspect}
+                        onChange={(e) => setAspect(e.target.value)}
+                        disabled={!width}
+                        className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
+                      >
+                        <option value="">Aspect</option>
+                        {aspectOptions.map(a => <option key={a} value={a}>{a}</option>)}
+                      </select>
+                      
+                      <select
+                        value={rim}
+                        onChange={(e) => handleMetricRimChange(e.target.value)}
+                        disabled={!aspect}
+                        className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
+                      >
+                        <option value="">Rim</option>
+                        {rimOptions.map(r => <option key={r} value={r}>{r}</option>)}
+                      </select>
+                    </div>
+                    
+                    <button
+                      onClick={handleMetricSizeSearch}
+                      disabled={!canSearchMetricSize}
+                      className="w-full h-16 rounded-xl bg-[#c41230] text-white font-bold text-xl hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg"
+                    >
+                      FIND TIRES
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <div className="grid grid-cols-3 gap-2">
+                      <select
+                        value={floatDia}
+                        onChange={(e) => setFloatDia(e.target.value)}
+                        className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none"
+                      >
+                        <option value="">Dia</option>
+                        {floatDiaOptions.map(d => <option key={d} value={d}>{d}&quot;</option>)}
+                      </select>
+                      
+                      <select
+                        value={floatWidth}
+                        onChange={(e) => setFloatWidth(e.target.value)}
+                        disabled={!floatDia}
+                        className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
+                      >
+                        <option value="">Width</option>
+                        {floatWidthOptions.map(w => <option key={w} value={w}>{Number(w).toFixed(2)}</option>)}
+                      </select>
+                      
+                      <select
+                        value={floatRim}
+                        onChange={(e) => handleFlotationRimChange(e.target.value)}
+                        disabled={!floatWidth}
+                        className="h-14 rounded-xl border-2 border-neutral-200 bg-white px-3 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
+                      >
+                        <option value="">Rim</option>
+                        {floatRimOptions.map(r => <option key={r} value={r}>{r}&quot;</option>)}
+                      </select>
+                    </div>
+                    
+                    <button
+                      onClick={handleFlotationSizeSearch}
+                      disabled={!canSearchFlotationSize}
+                      className="w-full h-16 rounded-xl bg-[#c41230] text-white font-bold text-xl hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg"
+                    >
+                      FIND TIRES
+                    </button>
+                  </>
+                )}
               </div>
             )}
             
@@ -456,13 +636,46 @@ function HeroSection() {
                 
                 {searchTab === "size" && (
                   <div>
-                    <p className="text-sm text-neutral-600 mb-3">Enter your tire size (found on tire sidewall)</p>
-                    <div className="flex flex-wrap gap-2">
-                      <select value={width} onChange={(e) => setWidth(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Width</option>{WIDTHS.map(w => <option key={w} value={w}>{w}</option>)}</select>
-                      <select value={aspect} onChange={(e) => setAspect(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Aspect</option>{ASPECTS.map(a => <option key={a} value={a}>{a}</option>)}</select>
-                      <select value={rim} onChange={(e) => handleRimChange(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Rim</option>{RIMS.map(r => <option key={r} value={r}>{r}</option>)}</select>
-                      <button onClick={handleSizeSearch} disabled={!canSearchSize} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">FIND TIRES</button>
+                    <div className="flex items-center gap-4 mb-3">
+                      <p className="text-sm text-neutral-600">Enter your tire size</p>
+                      <div className="flex gap-1">
+                        <button
+                          onClick={() => setSizeFormat("metric")}
+                          className={`px-3 py-1 rounded text-xs font-bold transition-all ${
+                            sizeFormat === "metric"
+                              ? "bg-green-700 text-white"
+                              : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                          }`}
+                        >
+                          Metric
+                        </button>
+                        <button
+                          onClick={() => setSizeFormat("flotation")}
+                          className={`px-3 py-1 rounded text-xs font-bold transition-all ${
+                            sizeFormat === "flotation"
+                              ? "bg-green-700 text-white"
+                              : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+                          }`}
+                        >
+                          Flotation
+                        </button>
+                      </div>
                     </div>
+                    {sizeFormat === "metric" ? (
+                      <div className="flex flex-wrap gap-2">
+                        <select value={width} onChange={(e) => setWidth(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Width</option>{widthOptions.map(w => <option key={w} value={w}>{w}</option>)}</select>
+                        <select value={aspect} onChange={(e) => setAspect(e.target.value)} disabled={!width} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100"><option value="">Aspect</option>{aspectOptions.map(a => <option key={a} value={a}>{a}</option>)}</select>
+                        <select value={rim} onChange={(e) => handleMetricRimChange(e.target.value)} disabled={!aspect} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100"><option value="">Rim</option>{rimOptions.map(r => <option key={r} value={r}>{r}</option>)}</select>
+                        <button onClick={handleMetricSizeSearch} disabled={!canSearchMetricSize} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">FIND TIRES</button>
+                      </div>
+                    ) : (
+                      <div className="flex flex-wrap gap-2">
+                        <select value={floatDia} onChange={(e) => setFloatDia(e.target.value)} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none"><option value="">Diameter</option>{floatDiaOptions.map(d => <option key={d} value={d}>{d}&quot;</option>)}</select>
+                        <select value={floatWidth} onChange={(e) => setFloatWidth(e.target.value)} disabled={!floatDia} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100"><option value="">Width</option>{floatWidthOptions.map(w => <option key={w} value={w}>{Number(w).toFixed(2)}</option>)}</select>
+                        <select value={floatRim} onChange={(e) => handleFlotationRimChange(e.target.value)} disabled={!floatWidth} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100"><option value="">Rim</option>{floatRimOptions.map(r => <option key={r} value={r}>{r}&quot;</option>)}</select>
+                        <button onClick={handleFlotationSizeSearch} disabled={!canSearchFlotationSize} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">FIND TIRES</button>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
