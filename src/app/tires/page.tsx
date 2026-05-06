@@ -92,6 +92,7 @@ import { WheelConfigAutoSelectTracker } from "@/components/WheelConfigAutoSelect
 import { FitmentCoverageTracker } from "@/components/FitmentCoverageTracker";
 import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
 import { getFitmentConfigurations } from "@/lib/fitment-db/getFitmentConfigurations";
+import { getOemTireSizesByFamily } from "@/lib/fitment-db/getOemTireSizesByFamily";
 import { resolveVehicleFitment } from "@/lib/fitment/canonicalResolver";
 import { getWheelSizeGateDecisionWithTrimMapping } from "@/lib/tires/wheelSizeGateDecisionServer";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
@@ -1613,6 +1614,29 @@ export default async function TiresPage({
     : null);
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // OEM FAMILY TIRE SIZE LOOKUP (for aftermarket wheel builds)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // When customer selects aftermarket wheels that weren't an OEM option for their
+  // specific year, look up what OEM tire sizes exist for that wheel diameter on
+  // ANY year of their make/model. This is MUCH more accurate than calculating.
+  // Example: 2004 Silverado with 22" wheels → find 275/50R22, 285/45R22 from 2019+ Silverados
+  const wheelDiaForFamilyLookup = Number(wheelDia) || 0;
+  const oemFamilySizes = (hasVehicle && wheelDiaForFamilyLookup > 0 && make && model)
+    ? await getOemTireSizesByFamily(make, model, wheelDiaForFamilyLookup)
+    : null;
+  
+  if (oemFamilySizes && oemFamilySizes.sizes.length > 0) {
+    console.log('[tires/page] 🔍 OEM FAMILY LOOKUP:', {
+      make,
+      model,
+      wheelDiameter: wheelDiaForFamilyLookup,
+      sizes: oemFamilySizes.sizes,
+      yearsWithThisSize: oemFamilySizes.yearsWithThisSize,
+      confidence: oemFamilySizes.confidence,
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // TIRE SIZE RESOLUTION
   // ═══════════════════════════════════════════════════════════════════════════
   // Priority:
@@ -1950,21 +1974,50 @@ export default async function TiresPage({
     return null; // Will be handled by aftermarketFallback below
   })();
   
-  // AFTERMARKET FALLBACK: When NO OEM data exists at all,
-  // suggest tire sizes based purely on wheel specs and vehicle class.
-  // This is critical for aftermarket wheel builds on vehicles without fitment data.
+  // AFTERMARKET FALLBACK: When NO OEM data exists for this wheel diameter,
+  // first check if we have OEM data from the vehicle family (same make/model, different year),
+  // then fall back to calculated sizes only if no family data exists.
   const aftermarketFallback = (() => {
     // Only use fallback when:
     // 1. We have a wheel diameter
-    // 2. No OEM sizes available at all (not just no match for this diameter)
+    // 2. No OEM sizes available for THIS vehicle at this diameter
     // 3. Plus-sizing couldn't help (no reference)
     // 4. NOT a lifted build (lifted builds use specific sizes)
     if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return null;
-    if (oemWheelMatchedSizes.length > 0) return null; // Have OEM match
+    if (oemWheelMatchedSizes.length > 0) return null; // Have OEM match for this exact vehicle
     if (plusSizeResult && plusSizeResult.acceptableCandidates.length > 0) return null; // Plus-sizing worked
     if (isLiftedBuild) return null; // Lifted builds don't use aftermarket fallback
     
-    // Detect vehicle class from model name for better suggestions
+    // ✨ PREFER OEM FAMILY DATA: If we have OEM sizes from same make/model (any year), use those!
+    // This is far more accurate than calculating - these are proven sizes for this vehicle family.
+    if (oemFamilySizes && oemFamilySizes.sizes.length > 0) {
+      console.log('[tires/page] ✅ Using OEM family sizes instead of calculation:', oemFamilySizes.sizes);
+      return {
+        sizes: oemFamilySizes.sizes,
+        candidates: oemFamilySizes.sizes.map((size) => ({
+          size,
+          rimDiameter: Math.round(wheelDiaNum),
+          overallDiameter: 0, // Not calculated for OEM sizes
+          odDiffPercent: 0,
+          odDiffInches: 0,
+          isPrimary: true, // All OEM sizes are primary
+          isAcceptable: true,
+          widthMm: parseInt(size.match(/^(\d+)/)?.[1] || "0", 10),
+          aspectRatio: parseInt(size.match(/\/(\d+)/)?.[1] || "0", 10),
+        })),
+        method: 'oem-family-lookup' as const,
+        debug: {
+          wheelDiameter: Math.round(wheelDiaNum),
+          wheelWidth: Number.isFinite(wheelWidthNum) ? wheelWidthNum : null,
+          vehicleClass: null,
+          sizesMatchingRim: oemFamilySizes.sizes.length,
+          sizesMatchingWidth: oemFamilySizes.sizes.length,
+        },
+      };
+    }
+    
+    // LAST RESORT: Calculate sizes based on wheel specs and vehicle class
+    // This only runs if no OEM family data exists for this wheel diameter
     const modelLower = String(model || "").toLowerCase();
     let vehicleClass: 'truck' | 'suv' | 'car' = 'car';
     if (/f-\d{3}|silverado|sierra|ram|tundra|titan|tacoma|ranger|frontier|colorado|canyon|ridgeline|maverick/i.test(modelLower)) {
@@ -1973,7 +2026,7 @@ export default async function TiresPage({
       vehicleClass = 'suv';
     }
     
-    // Use aftermarket sizing function for wheel-based suggestions
+    console.log('[tires/page] ⚠️ No OEM family data, falling back to calculated sizes');
     return generateAftermarketTireSizes(
       Math.round(wheelDiaNum),
       Number.isFinite(wheelWidthNum) ? wheelWidthNum : undefined,
