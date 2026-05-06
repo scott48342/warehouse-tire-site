@@ -250,9 +250,6 @@ export function VehicleSelector() {
           <span className="text-green-500">✓</span> Guaranteed Fit
         </span>
         <span className="flex items-center gap-1">
-          <span className="text-green-500">✓</span> Free Shipping
-        </span>
-        <span className="flex items-center gap-1">
           <span className="text-green-500">✓</span> Easy Returns
         </span>
       </div>

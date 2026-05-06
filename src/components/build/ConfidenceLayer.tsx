@@ -175,9 +175,6 @@ export function ConfidenceLayer() {
             <span className="flex items-center gap-1.5">
               <span className="text-green-500">✓</span> Hardware Kit
             </span>
-            <span className="flex items-center gap-1.5">
-              <span className="text-green-500">✓</span> Free Shipping
-            </span>
           </div>
         </div>
         

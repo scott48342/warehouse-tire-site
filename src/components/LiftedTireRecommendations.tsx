@@ -195,10 +195,6 @@ export function LiftedTireRecommendations({
               <span className="text-green-500">✓</span>
               <strong>Fitment guaranteed</strong> — no guesswork
             </span>
-            <span className="flex items-center gap-1">
-              <span className="text-green-500">✓</span>
-              Free shipping over $1,500
-            </span>
           </div>
         </div>
       </div>
@@ -319,10 +315,6 @@ export function TireTrustBar({ className = "" }: { className?: string }) {
           <strong>Fitment Guarantee</strong>
           <span className="text-green-600">—</span>
           Everything shown will fit
-        </span>
-        <span className="flex items-center gap-2 text-green-800">
-          <span className="text-green-600">✓</span>
-          Free Shipping over $1,500
         </span>
       </div>
     </div>

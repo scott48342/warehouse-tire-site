@@ -107,7 +107,7 @@ export async function generateMetadata({
     : "Wheels | Warehouse Tire Direct";
   
   const description = vehiclePart
-    ? `Shop aftermarket wheels for your ${vehiclePart}. Guaranteed fitment, free shipping on orders over $99.`
+    ? `Shop aftermarket wheels for your ${vehiclePart}. Guaranteed fitment, competitive prices, expert support.`
     : "Shop aftermarket wheels with guaranteed fitment. Browse by vehicle for perfect fit.";
   
   const canonicalUrl = buildCanonicalUrl(sp);

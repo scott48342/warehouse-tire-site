@@ -229,10 +229,6 @@ export function BuildSummary() {
           </div>
           <div className="flex items-center gap-2 text-xs text-neutral-600">
             <span className="text-green-500">✓</span>
-            <span>Free Shipping</span>
-          </div>
-          <div className="flex items-center gap-2 text-xs text-neutral-600">
-            <span className="text-green-500">✓</span>
             <span>Easy Returns</span>
           </div>
         </div>

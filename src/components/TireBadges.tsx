@@ -247,9 +247,10 @@ export function TireBadges({
     badges.push(<RunFlatBadge key="rf" compact={compact} />);
   }
   
-  if (freeShipping) {
-    badges.push(<FreeShippingBadge key="ship" compact={compact} />);
-  }
+  // NOTE: Free shipping only applies on orders over $1500 - don't show badge on individual products
+  // if (freeShipping) {
+  //   badges.push(<FreeShippingBadge key="ship" compact={compact} />);
+  // }
   
   // Limit badges shown
   const visibleBadges = badges.slice(0, maxBadges);

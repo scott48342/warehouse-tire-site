@@ -140,12 +140,7 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
             </div>
             
             {/* Trust badges */}
-            <div className="grid grid-cols-3 gap-3">
-              <div className="rounded-xl border border-neutral-200 bg-white p-3 text-center">
-                <div className="text-lg">🚚</div>
-                <div className="text-xs font-semibold text-neutral-700">Free Shipping</div>
-                <div className="text-xs text-neutral-500">Over $1,500</div>
-              </div>
+            <div className="grid grid-cols-2 gap-3">
               <div className="rounded-xl border border-neutral-200 bg-white p-3 text-center">
                 <div className="text-lg">✅</div>
                 <div className="text-xs font-semibold text-neutral-700">Guaranteed Fit</div>

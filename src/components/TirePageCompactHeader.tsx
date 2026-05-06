@@ -176,10 +176,7 @@ export function TirePageCompactHeader({
             Verified Fit
           </span>
           
-          {/* Trust signals - compact */}
-          <div className="hidden md:flex items-center gap-3 text-[11px] text-neutral-500 border-l border-neutral-200 pl-3">
-            <span>✓ Free shipping</span>
-          </div>
+          {/* Trust signals removed - free shipping only on orders over $1500 */}
         </div>
         
         {/* Right: Garage + Sort */}

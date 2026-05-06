@@ -236,10 +236,10 @@ export function TrustBadgesStack({
 // ============================================================================
 
 export function TrustBar({ className = "" }: { className?: string }) {
+  // NOTE: Removed free_shipping - only applies on orders over $1500
   return (
     <div className={`flex items-center justify-center gap-4 py-3 bg-neutral-50 border-y border-neutral-100 ${className}`}>
       <TrustBadge type="fitment_guaranteed" size="sm" variant="subtle" />
-      <TrustBadge type="free_shipping" size="sm" variant="subtle" />
       <TrustBadge type="expert_support" size="sm" variant="subtle" />
     </div>
   );

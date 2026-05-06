@@ -575,9 +575,6 @@ function TireCard({
             <span className="text-green-600">✓</span> Fitment Confirmed
           </span>
           <span className="inline-flex items-center gap-0.5">
-            <span className="text-green-600">✓</span> Free Shipping
-          </span>
-          <span className="inline-flex items-center gap-0.5 hidden sm:inline-flex">
             <span className="text-green-600">✓</span> Price Match
           </span>
         </div>

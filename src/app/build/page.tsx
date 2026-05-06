@@ -3,7 +3,7 @@ import { BuildPageClient } from "./BuildPageClient";
 
 export const metadata: Metadata = {
   title: "Build Your Wheel & Tire Package | Warehouse Tire Direct",
-  description: "Build a custom wheel and tire package for your vehicle. Guaranteed fitment, free shipping, and expert guidance.",
+  description: "Build a custom wheel and tire package for your vehicle. Guaranteed fitment, competitive prices, and expert guidance.",
 };
 
 export default function BuildPage({

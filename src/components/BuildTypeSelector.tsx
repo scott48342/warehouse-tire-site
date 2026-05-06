@@ -704,10 +704,7 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
                   {selectedLiftKit ? "Lift kit + wheels + tires" : "Wheels + tires (lift kit not included)"}
                 </div>
               </div>
-              <div className="text-right">
-                <div className="text-xs text-green-600 font-semibold">Free Shipping</div>
-                <div className="text-xs text-neutral-500">Orders over $1,500</div>
-              </div>
+              {/* Free shipping messaging removed - only shown in cart when over $1500 */}
             </div>
           </div>
 
@@ -735,12 +732,6 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
               Guaranteed Fit
-            </span>
-            <span className="flex items-center gap-1">
-              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              Free Shipping over $1,500
             </span>
             <span className="flex items-center gap-1">
               <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
