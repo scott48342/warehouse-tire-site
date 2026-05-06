@@ -1,24 +1,16 @@
 import pg from 'pg';
 const { Pool } = pg;
+const pool = new Pool({ connectionString: process.env.POSTGRES_URL });
 
-const pool = new Pool({ 
-  connectionString: 'postgresql://neondb_owner:npg_c0FpKTmNB3qR@ep-aged-dust-an7vnet1-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require'
-});
+const r = await pool.query(`SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'vehicle_fitments' ORDER BY ordinal_position`);
+console.log('vehicle_fitments columns:');
+r.rows.forEach(row => console.log('  ' + row.column_name + ' (' + row.data_type + ')'));
 
-async function check() {
-  // Check catalog_models schema
-  const cols = await pool.query(`
-    SELECT column_name FROM information_schema.columns 
-    WHERE table_name = 'catalog_models'
-  `);
-  console.log('catalog_models columns:', cols.rows.map(x => x.column_name).join(', '));
-  
-  // Sample row
-  const sample = await pool.query('SELECT * FROM catalog_models LIMIT 3');
-  console.log('\nSample rows:');
-  console.log(sample.rows);
-  
-  await pool.end();
+// Also check a sample row
+const sample = await pool.query(`SELECT * FROM vehicle_fitments WHERE make = 'Chevrolet' AND model = 'Camaro' LIMIT 1`);
+if (sample.rows.length > 0) {
+  console.log('\nSample Camaro row:');
+  console.log(JSON.stringify(sample.rows[0], null, 2));
 }
 
-check().catch(console.error);
+await pool.end();
