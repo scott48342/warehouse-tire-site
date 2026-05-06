@@ -462,12 +462,15 @@ export function generateAftermarketTireSizes(
     : 255; // Default fallback
   
   candidates.sort((a, b) => {
+    // 1. Primary first (best aspect ratio for vehicle class)
     if (a.isPrimary !== b.isPrimary) return a.isPrimary ? -1 : 1;
-    // Prefer common widths (divisible by 5)
+    // 2. Acceptable second (good aspect ratio) - don't show 40-series on trucks!
+    if (a.isAcceptable !== b.isAcceptable) return a.isAcceptable ? -1 : 1;
+    // 3. Prefer common widths (divisible by 5)
     const aCommon = a.widthMm % 5 === 0 ? 0 : 1;
     const bCommon = b.widthMm % 5 === 0 ? 0 : 1;
     if (aCommon !== bCommon) return aCommon - bCommon;
-    // Sort by distance from ideal width (closest to ideal first)
+    // 4. Sort by distance from ideal width (closest to ideal first)
     const aDistFromIdeal = Math.abs(a.widthMm - idealWidthMm);
     const bDistFromIdeal = Math.abs(b.widthMm - idealWidthMm);
     return aDistFromIdeal - bDistFromIdeal;
