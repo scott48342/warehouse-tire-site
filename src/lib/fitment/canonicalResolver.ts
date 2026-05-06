@@ -118,17 +118,51 @@ export interface ResolverInput {
 // ============================================================================
 
 /**
- * Check if a displayTrim is grouped (contains comma or slash)
+ * Check if a displayTrim is grouped (contains comma or spaced slash).
+ * 
+ * IMPORTANT: Only treat "/" as a delimiter when surrounded by spaces (" / ").
+ * This preserves legitimate slash-containing trim names:
+ *   - "R/T" → NOT grouped (single trim)
+ *   - "GT/CS" → NOT grouped (single trim)
+ *   - "4x4/2x4" → NOT grouped (single trim)
+ *   - "SXT / SXT Plus" → GROUPED (two trims)
+ *   - "Base, Premium" → GROUPED (two trims)
+ * 
+ * Fix for: TRIM_NORMALIZATION_FUZZY_LOOKUP issue (2026-05-06)
  */
 function isGroupedTrim(displayTrim: string): boolean {
-  return /[,\/]/.test(displayTrim);
+  // Comma always indicates grouping
+  if (displayTrim.includes(',')) return true;
+  // Slash only indicates grouping when surrounded by spaces
+  if (/ \/ /.test(displayTrim)) return true;
+  return false;
 }
 
 /**
- * Split a grouped displayTrim into atomic trims
+ * Split a grouped displayTrim into atomic trims.
+ * 
+ * Only splits on:
+ *   - Comma (with optional spaces): "Base, Premium" → ["Base", "Premium"]
+ *   - Spaced slash: "SXT / SXT Plus" → ["SXT", "SXT Plus"]
+ * 
+ * Does NOT split compact slash tokens like "R/T", "GT/CS", "4x4/2x4".
  */
 function splitGroupedTrim(displayTrim: string): string[] {
-  return displayTrim.split(/[,\/]/).map(t => t.trim()).filter(Boolean);
+  // First split on comma
+  let parts = displayTrim.split(',').map(t => t.trim()).filter(Boolean);
+  
+  // Then split each part on spaced slash (" / ")
+  const result: string[] = [];
+  for (const part of parts) {
+    if (/ \/ /.test(part)) {
+      const subParts = part.split(' / ').map(t => t.trim()).filter(Boolean);
+      result.push(...subParts);
+    } else {
+      result.push(part);
+    }
+  }
+  
+  return result;
 }
 
 /**
