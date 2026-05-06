@@ -201,10 +201,10 @@ export function QuickAddTireButton({
   // For local mode, show out-the-door price (includes install, tax, recycling)
   const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity) : unitPrice * quantity;
 
-  // Use green styling for package flow, red for standalone tire purchase
+  // Use wheel card style: red gradient CTA with price inline (matches WheelsStyleCard)
   const buttonStyles = isPackageFlow
-    ? "w-full rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-sm font-bold text-green-800 hover:bg-green-100 transition-colors disabled:opacity-60"
-    : "w-full rounded-xl bg-red-600 px-4 py-3 text-sm font-extrabold text-white hover:bg-red-700 active:scale-[0.98] transition-all disabled:opacity-60";
+    ? "flex h-13 w-full items-center justify-center gap-2 rounded-xl text-sm font-bold transition-all duration-250 bg-gradient-to-r from-emerald-500 to-green-500 text-white hover:from-emerald-600 hover:to-green-600 active:scale-[0.99] shadow-md shadow-emerald-500/20 hover:shadow-lg hover:shadow-emerald-500/25 disabled:opacity-60"
+    : "flex h-13 w-full items-center justify-center gap-2 rounded-xl text-sm font-bold transition-all duration-250 bg-gradient-to-r from-red-600 to-red-500 text-white hover:from-red-500 hover:to-red-600 active:scale-[0.99] shadow-md shadow-red-500/20 hover:shadow-lg hover:shadow-red-500/25 disabled:opacity-60";
 
   return (
     <div className="space-y-2">
@@ -229,34 +229,38 @@ export function QuickAddTireButton({
         </div>
       </div>
       
-      {/* Add to Cart Button */}
+      {/* Add to Cart Button - Wheel card style CTA */}
       <button
         onClick={handleAdd}
         disabled={isAdding}
         className={buttonStyles}
       >
         {isAdding ? (
-          <span className="flex items-center justify-center gap-1.5">
-            <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+          <>
+            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
             </svg>
             Adding...
-          </span>
+          </>
         ) : isPackageFlow ? (
-          <span>
+          <>
             ✓ Add {quantity} to Package
-            {Number.isFinite(total) && total > 0 ? (
-              <span className="ml-1 text-green-600">• ${total.toFixed(0)}{isLocal ? ' out the door' : ''}</span>
-            ) : null}
-          </span>
+            {Number.isFinite(total) && total > 0 && (
+              <span className="opacity-90 font-bold">
+                • ${total.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+              </span>
+            )}
+          </>
         ) : (
-          <span>
-            Add {quantity} to Cart
-            {Number.isFinite(total) && total > 0 ? (
-              <span className="ml-1 opacity-80">• ${total.toFixed(0)}{isLocal ? ' out the door' : ''}</span>
-            ) : null}
-          </span>
+          <>
+            Add Set of {quantity}
+            {Number.isFinite(total) && total > 0 && (
+              <span className="opacity-90 font-bold">
+                – ${total.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+              </span>
+            )}
+          </>
         )}
       </button>
     </div>

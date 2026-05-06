@@ -28,7 +28,7 @@ import { filterWheelsForBuildType, type BuildType as BuildTypeEnum } from "@/lib
 import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { HomepageIntentBar } from "@/components/HomepageIntentBar";
-import { LiftLevelSelector } from "@/components/LiftLevelSelector";
+// LiftLevelSelector now integrated into BuildStyleToggle - no longer needed as standalone
 import { PackageBridgeCTA, StickyBuildBar } from "@/components/BuildContextBar";
 import { RearWheelConfigSelector, trackRearWheelConfigPromptShown } from "@/components/RearWheelConfigSelector";
 // Vehicle inspiration galleries (2026-04-20)
@@ -1653,8 +1653,9 @@ export default async function WheelsPage({
       {/* ═══════════════════════════════════════════════════════════════════════
           HOMEPAGE INTENT BAR - Shows intent-specific chips/toggles
           Only renders when entry=homepage + valid intent is in URL
+          HIDDEN for lifted intents - lift levels now shown in BuildStyleToggle
           ═══════════════════════════════════════════════════════════════════════ */}
-      {hasVehicle && homepageIntentState.isActive ? (
+      {hasVehicle && homepageIntentState.isActive && !isHomepageIntentLiftedBuild ? (
         <HomepageIntentBar
           intentState={homepageIntentState}
           basePath={basePath}
@@ -1951,22 +1952,18 @@ export default async function WheelsPage({
                 BUILD STYLE TOGGLE - Guides users to stock/level/lifted results
                 Only shown for trucks/SUVs where leveling/lifting makes sense
                 Hidden for: sedans, coupes, performance cars, EVs, etc.
+                
+                Lift level selector is now INTEGRATED into BuildStyleToggle
+                - Shows below build style buttons when "Lifted" is selected
+                - No longer using separate LiftLevelSelector or HomepageIntentBar for lift levels
                 ═══════════════════════════════════════════════════════════════════════ */}
-            {/* Homepage Intent Lifted Build: Show lift level selector instead of build style toggle */}
-            {hasVehicle && isHomepageIntentLiftedBuild && (
-              <div className="mt-3 rounded-xl border-2 border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
-                <LiftLevelSelector 
-                  currentLiftLevel={homepageIntentState.resolved.liftLevel || "6in"} 
-                />
-              </div>
-            )}
-            
-            {/* Normal Build Style Toggle: Only show when NOT in lifted intent mode */}
-            {hasVehicle && !isLiftedBuild && !isHomepageIntentLiftedBuild && vehicleSupportsBuildStyles && (
+            {hasVehicle && vehicleSupportsBuildStyles && (
               <div className="mt-3 rounded-xl border border-neutral-200 bg-white p-4">
                 <BuildStyleToggle 
-                  currentBuildType={buildTypeParam} 
+                  currentBuildType={isLiftedBuild || isHomepageIntentLiftedBuild ? "lifted" : buildTypeParam} 
                   vehicleType={fitmentVehicleType}
+                  currentLiftLevel={homepageIntentState.resolved?.liftLevel || (isLiftedBuild ? "4in" : null)}
+                  showLiftLevels={true}
                 />
               </div>
             )}

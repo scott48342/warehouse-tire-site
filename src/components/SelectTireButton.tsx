@@ -110,13 +110,29 @@ export function SelectTireButton({
         router.replace(`/tires?${next.toString()}`);
       }}
       className={
-        "rounded-xl px-4 py-3 text-center text-sm font-extrabold transition " +
+        "flex h-13 w-full items-center justify-center gap-2 rounded-xl text-sm font-bold transition-all duration-250 " +
         (active && tireInCart
-          ? "bg-neutral-900 text-white"
-          : "bg-red-600 text-white hover:bg-red-700")
+          ? "bg-gradient-to-r from-emerald-500 to-green-500 text-white cursor-default shadow-md shadow-emerald-500/25"
+          : "bg-gradient-to-r from-red-600 to-red-500 text-white hover:from-red-500 hover:to-red-600 active:scale-[0.99] shadow-md shadow-red-500/20 hover:shadow-lg hover:shadow-red-500/25")
       }
     >
-      {active && tireInCart ? "✓ Selected" : "Select tire"}
+      {active && tireInCart ? (
+        <>
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+          </svg>
+          Added to Package
+        </>
+      ) : (
+        <>
+          ✓ Add 4 to Package
+          {tire.price != null && (
+            <span className="opacity-90 font-bold">
+              • ${(tire.price * 4).toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+            </span>
+          )}
+        </>
+      )}
     </button>
   );
 }

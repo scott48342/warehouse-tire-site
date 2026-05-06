@@ -2,6 +2,8 @@
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useCallback } from "react";
+import { LIFT_LEVELS, getLiftLevelConfig } from "@/lib/homepage-intent/config";
+import type { LiftLevel } from "@/lib/homepage-intent/types";
 
 export type BuildType = "stock" | "level" | "lifted" | null;
 
@@ -9,6 +11,10 @@ interface BuildStyleToggleProps {
   currentBuildType: BuildType;
   vehicleType?: "truck" | "suv" | "car";
   className?: string;
+  /** Current lift level when in lifted mode */
+  currentLiftLevel?: LiftLevel | null;
+  /** Show lift level selector when lifted is active */
+  showLiftLevels?: boolean;
 }
 
 const BUILD_STYLES = [
@@ -41,7 +47,13 @@ const BUILD_STYLES = [
   },
 ];
 
-export function BuildStyleToggle({ currentBuildType, vehicleType, className = "" }: BuildStyleToggleProps) {
+export function BuildStyleToggle({ 
+  currentBuildType, 
+  vehicleType, 
+  className = "",
+  currentLiftLevel,
+  showLiftLevels = true,
+}: BuildStyleToggleProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -51,8 +63,24 @@ export function BuildStyleToggle({ currentBuildType, vehicleType, className = ""
     
     if (buildType) {
       params.set("buildType", buildType);
+      
+      // If selecting lifted and no lift level set, default to 4in
+      if (buildType === "lifted" && !params.get("liftLevel")) {
+        params.set("liftLevel", "4in");
+        const liftConfig = getLiftLevelConfig("4in");
+        if (liftConfig) {
+          params.set("offsetMin", String(liftConfig.offsetMin));
+          params.set("offsetMax", String(liftConfig.offsetMax));
+          params.set("liftedInches", String(liftConfig.inches));
+        }
+      }
     } else {
       params.delete("buildType");
+      // Clear lifted params when deselecting
+      params.delete("liftLevel");
+      params.delete("liftedInches");
+      params.delete("offsetMin");
+      params.delete("offsetMax");
     }
     
     // Reset to page 1 when changing build type
@@ -61,10 +89,36 @@ export function BuildStyleToggle({ currentBuildType, vehicleType, className = ""
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   }, [router, searchParams, pathname]);
 
+  const handleLiftLevelSelect = useCallback((liftLevel: LiftLevel) => {
+    const params = new URLSearchParams(searchParams.toString());
+    
+    // Ensure we're in lifted mode
+    params.set("buildType", "lifted");
+    params.set("liftLevel", liftLevel);
+    
+    // Get offset range for this lift level and update
+    const liftConfig = getLiftLevelConfig(liftLevel);
+    if (liftConfig) {
+      params.set("offsetMin", String(liftConfig.offsetMin));
+      params.set("offsetMax", String(liftConfig.offsetMax));
+      params.set("liftedInches", String(liftConfig.inches));
+    }
+    
+    // Reset to page 1 when changing lift level
+    params.set("page", "1");
+    
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+  }, [router, searchParams, pathname]);
+
   // Don't show leveled option for cars (they don't have leveling kits)
   const filteredStyles = vehicleType === "car" 
-    ? BUILD_STYLES.filter(s => s.value !== "level")
+    ? BUILD_STYLES.filter(s => s.value !== "level" && s.value !== "lifted")
     : BUILD_STYLES;
+
+  const isLifted = currentBuildType === "lifted";
+  const liftLevels = Object.values(LIFT_LEVELS);
+  const activeLiftLevel = currentLiftLevel || "4in";
+  const currentConfig = getLiftLevelConfig(activeLiftLevel);
 
   return (
     <div className={`${className}`}>
@@ -104,9 +158,56 @@ export function BuildStyleToggle({ currentBuildType, vehicleType, className = ""
       </div>
       
       {/* Description for selected style */}
-      {currentBuildType && (
+      {currentBuildType && !isLifted && (
         <div className="mt-2 text-xs text-neutral-500">
           {BUILD_STYLES.find(s => s.value === currentBuildType)?.description}
+        </div>
+      )}
+
+      {/* ═══════════════════════════════════════════════════════════════════════
+          LIFT LEVEL SELECTOR - Shows when Lifted is selected
+          Allows customer to pick their lift height (Leveled, 4", 6", 8")
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {isLifted && showLiftLevels && vehicleType !== "car" && (
+        <div className="mt-4 rounded-xl border-2 border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
+          <div className="mb-2 text-xs font-semibold text-amber-700 uppercase tracking-wide">
+            Select Your Lift Height
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {liftLevels.map((level) => {
+              const isLevelActive = activeLiftLevel === level.id;
+              return (
+                <button
+                  key={level.id}
+                  onClick={() => handleLiftLevelSelect(level.id)}
+                  className={`
+                    inline-flex items-center gap-1.5 rounded-xl border px-3 py-2 text-sm font-semibold transition-all
+                    ${isLevelActive 
+                      ? "bg-amber-600 text-white border-amber-600 shadow-md" 
+                      : "bg-white text-amber-800 border-amber-300 hover:bg-amber-100 hover:border-amber-400"
+                    }
+                  `}
+                >
+                  <span>⬆</span>
+                  <span>{level.label}</span>
+                  {isLevelActive && (
+                    <svg className="h-3.5 w-3.5 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+          
+          {/* Current selection info */}
+          {currentConfig && (
+            <div className="mt-3 text-xs text-amber-700">
+              <span className="font-semibold">{currentConfig.label}:</span>{" "}
+              Offset {currentConfig.offsetMin}mm to {currentConfig.offsetMax}mm • 
+              Fits {currentConfig.targetTireSizes.map(s => `${s}"`).join("-")} tires
+            </div>
+          )}
         </div>
       )}
     </div>

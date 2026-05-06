@@ -2027,7 +2027,8 @@ export async function GET(req: Request) {
       
       // Detect vehicle class from model name
       const modelLower = (model || "").toLowerCase();
-      const isTruckOrSUV = /hummer|h1|h2|h3|f-\d{3}|silverado|sierra|ram|tundra|titan|tacoma|ranger|frontier|colorado|canyon|ridgeline|maverick|wrangler|bronco|4runner|tahoe|suburban|expedition|explorer|highlander|pilot|pathfinder|telluride|palisade|defender|grand cherokee|durango|sequoia|armada|escalade|yukon|land cruiser|xterra|xj|cj|tj|jk|jl/i.test(modelLower);
+      // SUVs and crossovers need appropriate tire sizes - 65/60/55 aspect ratio, not 35/40
+      const isTruckOrSUV = /hummer|h1|h2|h3|f-\d{3}|silverado|sierra|ram|tundra|titan|tacoma|ranger|frontier|colorado|canyon|ridgeline|maverick|wrangler|bronco|4runner|tahoe|suburban|expedition|explorer|highlander|pilot|pathfinder|telluride|palisade|defender|grand cherokee|durango|sequoia|armada|escalade|yukon|land cruiser|xterra|xj|cj|tj|jk|jl|traverse|acadia|enclave|atlas|cx-9|cx-90|sorento|santa fe|passport|murano|outback|ascent|blazer|equinox|terrain|envision|nautilus|aviator|envoy|trailblazer/i.test(modelLower);
       
       // Choose appropriate tire sizes based on vehicle type and lift configuration
       let commonSizes: string[];
@@ -2078,25 +2079,28 @@ export async function GET(req: Request) {
           console.log(`  Sizes: ${commonSizes.join(", ")}`);
         }
       } else if (isTruckOrSUV) {
-        // Stock truck/SUV: Use wider, higher-profile tires
+        // Stock truck/SUV/crossover: Use appropriate high-profile tires
+        // NOTE: These should only be used when OEM sizes are not available for this wheel diameter
         commonSizes = [
-          `285/45R${wheelDiameter}`,
-          `275/55R${wheelDiameter}`,
-          `305/40R${wheelDiameter}`,
-          `265/50R${wheelDiameter}`,
-          `295/45R${wheelDiameter}`,
+          `255/65R${wheelDiameter}`,  // Common crossover size
+          `265/60R${wheelDiameter}`,  // Common SUV size
+          `255/60R${wheelDiameter}`,  // Another common crossover size
+          `245/65R${wheelDiameter}`,  // Smaller crossover size
+          `275/55R${wheelDiameter}`,  // Larger SUV size
+          `265/65R${wheelDiameter}`,  // Truck/large SUV size
         ];
-        console.log(`[tires/search] Direct search for TRUCK/SUV (${model}): ${commonSizes.join(", ")}`);
+        console.log(`[tires/search] ⚠️ Direct search fallback for TRUCK/SUV/CROSSOVER (${model}): ${commonSizes.join(", ")}`);
       } else {
-        // Car: Use typical car sizes
+        // Car: Use typical car sizes with reasonable aspect ratios
         commonSizes = [
-          `245/40R${wheelDiameter}`,
-          `225/45R${wheelDiameter}`,
-          `255/35R${wheelDiameter}`,
-          `235/40R${wheelDiameter}`,
-          `205/55R${wheelDiameter}`,
+          `225/55R${wheelDiameter}`,  // Common sedan size
+          `215/55R${wheelDiameter}`,  // Smaller sedan
+          `225/50R${wheelDiameter}`,  // Sportier sedan
+          `235/55R${wheelDiameter}`,  // Larger sedan
+          `205/55R${wheelDiameter}`,  // Economy car
+          `245/45R${wheelDiameter}`,  // Sport sedan
         ];
-        console.log(`[tires/search] Direct search for CAR (${model}): ${commonSizes.join(", ")}`);
+        console.log(`[tires/search] ⚠️ Direct search fallback for CAR (${model}): ${commonSizes.join(", ")}`);
       }
       
       const directCacheKey = buildVehicleCacheKey(commonSizes, wheelDiameter);

@@ -467,6 +467,7 @@ function StyleTagsDisplay({ tags }: { tags: WheelStyleTag[] }) {
 // TRUST STRIP - Near CTA for conversion confidence (refined colors)
 // ═══════════════════════════════════════════════════════════════════════════════
 function TrustStrip({ showHardware = true }: { showHardware?: boolean }) {
+  // NOTE: Free shipping only over $1500 on national site - don't show it on individual cards
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 font-medium">
       <span className="inline-flex items-center gap-1">
@@ -479,10 +480,6 @@ function TrustStrip({ showHardware = true }: { showHardware?: boolean }) {
           <span>Hardware Included</span>
         </span>
       )}
-      <span className="inline-flex items-center gap-1">
-        <span className="text-neutral-400">🚚</span>
-        <span>Free Shipping</span>
-      </span>
     </div>
   );
 }

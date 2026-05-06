@@ -69,29 +69,40 @@ export function TirePriceDisplay({
     );
   }
   
-  // NATIONAL MODE: Standard per-tire + set pricing
+  // NATIONAL MODE: Standard per-tire + set pricing (wheel card style)
   return (
     <div className="flex flex-col gap-1">
-      {/* Per tire price - prominent */}
-      <div className="flex items-baseline gap-1">
-        <span className={compact ? "text-base font-bold text-neutral-900" : "text-lg font-bold text-neutral-900"}>
+      {/* Per tire price - secondary */}
+      <div className="flex items-baseline gap-1 text-neutral-500">
+        <span className="text-sm font-semibold">
           ${unitPrice.toFixed(2)}
         </span>
-        <span className="text-sm text-neutral-600">per tire</span>
+        <span className="text-xs">per tire</span>
       </div>
       
-      {/* Set of 4 total */}
-      <div className="flex items-baseline gap-1 px-2 py-1 bg-neutral-50 rounded-lg">
-        <span className={compact ? "text-lg font-extrabold text-neutral-900" : "text-xl font-extrabold text-neutral-900"}>
-          ${formatPrice(setPrice)}
+      {/* Set of 4 total - PRIMARY (matches wheel card styling) */}
+      <div className="flex items-baseline gap-2 px-3 py-2 bg-gradient-to-r from-neutral-50 to-neutral-100 rounded-xl">
+        <span className={compact ? "text-xl font-black text-neutral-900" : "text-2xl font-black text-neutral-900"}>
+          ${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
         </span>
-        <span className="text-xs font-medium text-neutral-500">for all {quantity}</span>
+        <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">
+          for all {quantity}
+        </span>
       </div>
       
       {/* Affirm financing */}
       {showFinancing && setPrice >= 50 && (
         <FinancingBadge price={setPrice} variant="compact" />
       )}
+      
+      {/* Price anchoring - "Your Price" highlight (matches wheel card) */}
+      <div className="mt-1 flex items-baseline gap-1.5">
+        <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wide">Your Price:</span>
+        <span className="text-base font-extrabold text-emerald-800">
+          ${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+        </span>
+        <span className="text-[10px] text-neutral-400 font-medium">tires only</span>
+      </div>
     </div>
   );
 }

@@ -204,21 +204,20 @@ export function TrustMicroLine({ hasVehicle = false, inStock = true, hasWarranty
   // Local mode doesn't need this - the install time indicator is more relevant
   if (isLocalMode) return null;
   
-  const signals: { icon: string; text: string; highlight?: boolean }[] = [];
-  
-  if (hasVehicle) signals.push({ icon: "✓", text: "Guaranteed Fit", highlight: true });
-  signals.push({ icon: "🚚", text: "Free Shipping" });
-  signals.push({ icon: "↩️", text: "Easy Returns" });
-  
+  // Wheel card style trust strip (centered, neutral-400 text, emerald checkmarks)
+  // NOTE: Free shipping only over $1500 on national site - don't show it on individual cards
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[10px] text-neutral-600">
-      {signals.map((signal, i) => (
-        <span key={signal.text} className="inline-flex items-center gap-1">
-          {i > 0 && <span className="text-neutral-300 mx-0.5">•</span>}
-          <span className={signal.highlight ? "text-green-600 font-medium" : "opacity-80"}>{signal.icon}</span>
-          <span className={signal.highlight ? "font-medium" : ""}>{signal.text}</span>
+    <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 font-medium">
+      {hasVehicle && (
+        <span className="inline-flex items-center gap-1">
+          <span className="text-emerald-500">✓</span>
+          <span>Guaranteed Fit</span>
         </span>
-      ))}
+      )}
+      <span className="inline-flex items-center gap-1">
+        <span className="text-neutral-400">↩️</span>
+        <span>Easy Returns</span>
+      </span>
     </div>
   );
 }
