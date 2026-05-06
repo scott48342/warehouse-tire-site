@@ -1986,19 +1986,46 @@ export default async function TiresPage({
   // BUG FIX: Check if plusSizeResult has actual candidates, not just if it exists
   const plusSizeHasResults = plusSizeResult && plusSizeResult.acceptableCandidates.length > 0;
   
-  const plusSizeSuggestions: string[] = plusSizeHasResults
-    ? plusSizeResult.acceptableCandidates.map((c) => c.size)
-    : (aftermarketFallback ? aftermarketFallback.sizes : []);
-
-  // Plus-size candidates with full metadata (for display)
-  const plusSizeCandidates: PlusSizeCandidate[] = plusSizeHasResults
-    ? plusSizeResult.acceptableCandidates
-    : (aftermarketFallback ? aftermarketFallback.candidates : []);
-
-  // Primary plus-sizes (±2% OD) - recommended
+  // Primary plus-sizes (±2% OD) - these are the BEST matches, prioritize these
   const primaryPlusSizes: string[] = plusSizeHasResults
     ? plusSizeResult.primaryCandidates.map((c) => c.size)
     : (aftermarketFallback ? aftermarketFallback.candidates.filter((c: any) => c.isPrimary).map((c: any) => c.size) : []);
+
+  // STRICT TIRE SIZE LIMIT: Only show 3 best tire size options for stock builds
+  // This prevents overwhelming users with 20+ size options that are technically "acceptable"
+  // Priority: Primary candidates (±2% OD) first, then acceptable (±3%) to fill up to 3
+  const MAX_TIRE_SIZE_OPTIONS = 3;
+  const plusSizeSuggestions: string[] = (() => {
+    if (!plusSizeHasResults && !aftermarketFallback) return [];
+    
+    // Start with primary candidates (best matches)
+    const primary = plusSizeHasResults
+      ? plusSizeResult.primaryCandidates.map((c) => c.size)
+      : (aftermarketFallback?.candidates.filter((c: any) => c.isPrimary).map((c: any) => c.size) || []);
+    
+    // If we have enough primary, use just those
+    if (primary.length >= MAX_TIRE_SIZE_OPTIONS) {
+      return primary.slice(0, MAX_TIRE_SIZE_OPTIONS);
+    }
+    
+    // Otherwise, fill with acceptable candidates (excluding duplicates)
+    const acceptable = plusSizeHasResults
+      ? plusSizeResult.acceptableCandidates.map((c) => c.size)
+      : (aftermarketFallback?.sizes || []);
+    
+    const combined = [...primary];
+    for (const size of acceptable) {
+      if (!combined.includes(size) && combined.length < MAX_TIRE_SIZE_OPTIONS) {
+        combined.push(size);
+      }
+    }
+    return combined;
+  })();
+
+  // Plus-size candidates with full metadata (for display) - also limited
+  const plusSizeCandidates: PlusSizeCandidate[] = plusSizeHasResults
+    ? plusSizeResult.acceptableCandidates.filter((c) => plusSizeSuggestions.includes(c.size))
+    : (aftermarketFallback ? aftermarketFallback.candidates.filter((c: any) => plusSizeSuggestions.includes(c.size)) : []);
 
   // Track sizing method for display/logging (computed later after lockedSizes)
   const sizingMethod = oemWheelMatchedSizes.length > 0 
