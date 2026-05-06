@@ -1672,38 +1672,7 @@ export default async function WheelsPage({
       ) : null}
 
       <div className="mx-auto max-w-screen-2xl px-4 py-8">
-        {/* Lifted Build Context Banner */}
-        {isLiftedBuild && hasVehicle ? (
-          <div className="mb-4 rounded-2xl border-2 border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
-            <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-xl">🚀</div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-amber-900">Lifted Build Mode</span>
-                  <span className="rounded-full bg-amber-200 px-2 py-0.5 text-xs font-bold text-amber-800">
-                    {liftedInches}" {liftedPresetLabel}
-                  </span>
-                </div>
-                <p className="mt-1 text-sm text-amber-800">
-                  Showing wheels with offset range for your {liftedInches}" lift ({offsetMinUser ?? -20}mm to {offsetMaxUser ?? 0}mm).
-                </p>
-                {liftedTireSizes.length > 0 ? (
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <span className="text-xs text-amber-700">Recommended tires:</span>
-                    {liftedTireSizes.slice(0, 3).map((size) => (
-                      <span key={size} className="rounded-lg bg-white/80 border border-amber-200 px-2 py-1 text-xs font-semibold text-amber-900">
-                        {size}
-                      </span>
-                    ))}
-                    {liftedTireSizes.length > 3 ? (
-                      <span className="text-xs text-amber-700">+{liftedTireSizes.length - 3} more</span>
-                    ) : null}
-                  </div>
-                ) : null}
-              </div>
-            </div>
-          </div>
-        ) : null}
+        {/* NOTE: Lifted Build Context Banner REMOVED - lift level info now shown in BuildStyleToggle */}
 
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
