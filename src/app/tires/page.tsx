@@ -542,6 +542,49 @@ async function fetchTireWebTires(tireSize: string, brand?: string) {
 }
 
 /**
+ * Fetch tires for LIFTED builds
+ * Uses the API's lifted tire search logic which generates proper flotation sizes
+ * like "37x12.50R20" based on lift height and wheel diameter
+ */
+async function fetchLiftedTires(opts: {
+  make: string;
+  model: string;
+  wheelDiameter: number;
+  liftInches: number;
+  buildType: string;
+  brand?: string;
+}) {
+  try {
+    const params = new URLSearchParams({
+      make: opts.make,
+      model: opts.model,
+      wheelDiameter: String(opts.wheelDiameter),
+      liftInches: String(opts.liftInches),
+      buildType: opts.buildType,
+      minQty: "4",
+      pageSize: "500",
+    });
+    if (opts.brand) {
+      params.set("brand", opts.brand);
+    }
+    console.log(`[fetchLiftedTires] Fetching lifted tires: ${opts.make} ${opts.model}, ${opts.liftInches}" lift, ${opts.wheelDiameter}" wheels`);
+    const res = await fetch(`${getBaseUrl()}/api/tires/search?${params.toString()}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      console.error(`[fetchLiftedTires] API error: ${res.status}`);
+      return { results: [] };
+    }
+    const data = await res.json();
+    console.log(`[fetchLiftedTires] Got ${data.results?.length || 0} results`);
+    return data;
+  } catch (err) {
+    console.error("[fetchLiftedTires] Error:", err);
+    return { results: [] };
+  }
+}
+
+/**
  * Fetch tires by brand only (no size required)
  * Used for brand browsing mode
  */
@@ -2090,18 +2133,32 @@ export default async function TiresPage({
   const shouldFetchStaggeredPairs = isStaggeredVehicle && isPackageFlow && staggeredFrontTireSize && staggeredRearTireSize;
   
   // Determine fetch strategy based on search mode
+  // - LIFTED: use lifted tire search (generates flotation sizes from lift height + wheel diameter)
   // - Brand search: fetch by brand (no size needed)
   // - Size search: fetch by size
   // - Vehicle search: fetch by resolved size
   // Fetch strategy:
+  // - If lifted build with wheel diameter, use lifted search
   // - If we have a size, always use size search (with optional brand filter)
   // - If no size but have brand, use brand-only search
+  const wheelDiaNum = wheelDia ? Number(wheelDia) : null;
+  const canFetchLifted = isLiftedBuild && wheelDiaNum && wheelDiaNum > 0 && make && model && liftedInches > 0;
+  
   const [unifiedTires, staggeredPairsData, rebates] = await Promise.all([
-    (wpSize || selectedSize) 
-      ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined) 
-      : hasBrandSearch 
-        ? fetchTiresByBrand(brandParam) 
-        : null,
+    canFetchLifted
+      ? fetchLiftedTires({
+          make,
+          model,
+          wheelDiameter: wheelDiaNum!,
+          liftInches: liftedInches,
+          buildType: "lifted",
+          brand: brandParam || undefined,
+        })
+      : (wpSize || selectedSize) 
+        ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined) 
+        : hasBrandSearch 
+          ? fetchTiresByBrand(brandParam) 
+          : null,
     shouldFetchStaggeredPairs 
       ? fetchStaggeredTirePairs(staggeredFrontTireSize!, staggeredRearTireSize!)
       : Promise.resolve({ pairs: [], pairCount: 0 }),
