@@ -548,6 +548,7 @@ async function fetchTireWebTires(tireSize: string, brand?: string) {
  * like "37x12.50R20" based on lift height and wheel diameter
  */
 async function fetchLiftedTires(opts: {
+  year: string;
   make: string;
   model: string;
   wheelDiameter: number;
@@ -557,6 +558,7 @@ async function fetchLiftedTires(opts: {
 }) {
   try {
     const params = new URLSearchParams({
+      year: opts.year,
       make: opts.make,
       model: opts.model,
       wheelDiameter: String(opts.wheelDiameter),
@@ -2229,6 +2231,7 @@ export default async function TiresPage({
   const [unifiedTires, staggeredPairsData, rebates] = await Promise.all([
     canFetchLifted
       ? fetchLiftedTires({
+          year,
           make,
           model,
           wheelDiameter: wheelDiaNum!,
