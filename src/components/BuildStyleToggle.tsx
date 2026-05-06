@@ -71,34 +71,47 @@ export function BuildStyleToggle({
         // No negative offsets - those require modifications
         params.set("offsetMin", "0");
         params.set("offsetMax", "50");
-        // Clear lifted params
+        // Clear ALL lifted params
         params.delete("liftLevel");
         params.delete("liftedInches");
+        params.delete("liftedSource");
+        params.delete("liftedPreset");
+        params.delete("liftedTireSizes");
       } else if (buildType === "level") {
         // Leveled mode: allows slightly wider wheels
         // -12mm to +35mm range works for most leveled trucks
         params.set("offsetMin", "-12");
         params.set("offsetMax", "35");
-        // Clear lifted params
+        // Clear ALL lifted params
         params.delete("liftLevel");
         params.delete("liftedInches");
+        params.delete("liftedSource");
+        params.delete("liftedPreset");
+        params.delete("liftedTireSizes");
       } else if (buildType === "lifted") {
         // If selecting lifted and no lift level set, default to 4in
-        if (!params.get("liftLevel")) {
-          params.set("liftLevel", "4in");
-          const liftConfig = getLiftLevelConfig("4in");
-          if (liftConfig) {
-            params.set("offsetMin", String(liftConfig.offsetMin));
-            params.set("offsetMax", String(liftConfig.offsetMax));
-            params.set("liftedInches", String(liftConfig.inches));
-          }
+        const currentLiftLevel = params.get("liftLevel") || "4in";
+        params.set("liftLevel", currentLiftLevel);
+        const liftConfig = getLiftLevelConfig(currentLiftLevel as LiftLevel);
+        if (liftConfig) {
+          params.set("offsetMin", String(liftConfig.offsetMin));
+          params.set("offsetMax", String(liftConfig.offsetMax));
+          params.set("liftedInches", String(liftConfig.inches));
+          // CRITICAL: Set liftedSource and liftedPreset for tire page context
+          params.set("liftedSource", "lifted");
+          params.set("liftedPreset", currentLiftLevel);
+          // Set recommended tire sizes for this lift level
+          params.set("liftedTireSizes", liftConfig.targetTireSizes.join(","));
         }
       }
     } else {
       params.delete("buildType");
-      // Clear lifted params when deselecting
+      // Clear ALL lifted params when deselecting
       params.delete("liftLevel");
       params.delete("liftedInches");
+      params.delete("liftedSource");
+      params.delete("liftedPreset");
+      params.delete("liftedTireSizes");
       params.delete("offsetMin");
       params.delete("offsetMax");
     }
@@ -122,6 +135,11 @@ export function BuildStyleToggle({
       params.set("offsetMin", String(liftConfig.offsetMin));
       params.set("offsetMax", String(liftConfig.offsetMax));
       params.set("liftedInches", String(liftConfig.inches));
+      // CRITICAL: Set liftedSource and liftedPreset for tire page context
+      params.set("liftedSource", "lifted");
+      params.set("liftedPreset", liftLevel);
+      // Set recommended tire sizes for this lift level
+      params.set("liftedTireSizes", liftConfig.targetTireSizes.join(","));
     }
     
     // Reset to page 1 when changing lift level
