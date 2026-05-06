@@ -2168,8 +2168,8 @@ export default async function TiresPage({
   // - If lifted build with wheel diameter, use lifted search
   // - If we have a size, always use size search (with optional brand filter)
   // - If no size but have brand, use brand-only search
-  const wheelDiaNum = wheelDia ? Number(wheelDia) : null;
-  const canFetchLifted = isLiftedBuild && wheelDiaNum && wheelDiaNum > 0 && make && model && liftedInches > 0;
+  // Note: wheelDiaNum is already defined above from wheelDiaForTireSearch
+  const canFetchLifted = isLiftedBuild && Number.isFinite(wheelDiaNum) && wheelDiaNum > 0 && make && model && liftedInches > 0;
   
   const [unifiedTires, staggeredPairsData, rebates] = await Promise.all([
     canFetchLifted
