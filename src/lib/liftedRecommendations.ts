@@ -2084,3 +2084,176 @@ export function filterTiresByMinDiameter(
     usedFallback,
   };
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TIRE DIAMETER BAND ENFORCEMENT
+// For lifted package recommendations, we need both min AND max enforcement
+// to prevent showing oversized tires (e.g., 37" on a 4" lift HD truck)
+// ═══════════════════════════════════════════════════════════════════════════
+
+export interface TireDiameterBand {
+  minDiameter: number;
+  maxDiameter: number;
+  preferredDiameter: number;
+}
+
+/**
+ * Get tire diameter band (min, max, preferred) for lifted builds
+ * 
+ * Rules (per user requirements):
+ * - half-ton 2": 33"
+ * - half-ton 4": 34–35"
+ * - half-ton 6": 35–37"
+ * - midsize 2": 32–33"
+ * - midsize 4": 33–34"
+ * - midsize 6": 35"
+ * - Jeep Wrangler 2": 33"
+ * - Jeep Wrangler 4": 35"
+ * - Jeep Wrangler 6": 37"
+ * - HD truck 2": 35"
+ * - HD truck 4": 35" (NO 37" in primary results!)
+ * - HD truck 6": 37"
+ */
+export function getTireDiameterBandForLift(
+  vehicleClass: VehicleClass,
+  liftInches: number
+): TireDiameterBand {
+  const isLeveled = liftInches <= 2.5;
+  const is4Inch = liftInches > 2.5 && liftInches <= 4.5;
+  const is6Inch = liftInches > 4.5;
+  
+  switch (vehicleClass) {
+    case "half-ton":
+    case "suv":
+      if (isLeveled) return { minDiameter: 33, maxDiameter: 33, preferredDiameter: 33 };
+      if (is4Inch) return { minDiameter: 34, maxDiameter: 35, preferredDiameter: 35 };
+      return { minDiameter: 35, maxDiameter: 37, preferredDiameter: 35 }; // 6"+
+      
+    case "midsize":
+      if (isLeveled) return { minDiameter: 32, maxDiameter: 33, preferredDiameter: 33 };
+      if (is4Inch) return { minDiameter: 33, maxDiameter: 34, preferredDiameter: 33 };
+      return { minDiameter: 35, maxDiameter: 35, preferredDiameter: 35 }; // 6"+
+      
+    case "jeep-wrangler":
+      if (isLeveled) return { minDiameter: 33, maxDiameter: 33, preferredDiameter: 33 };
+      if (is4Inch) return { minDiameter: 35, maxDiameter: 35, preferredDiameter: 35 };
+      return { minDiameter: 37, maxDiameter: 37, preferredDiameter: 37 }; // 6"+
+      
+    case "hd":
+      // CRITICAL: HD truck 4" should show 35", NOT 37"
+      if (isLeveled) return { minDiameter: 35, maxDiameter: 35, preferredDiameter: 35 };
+      if (is4Inch) return { minDiameter: 35, maxDiameter: 35, preferredDiameter: 35 }; // NOT 37!
+      return { minDiameter: 37, maxDiameter: 37, preferredDiameter: 37 }; // 6"+
+      
+    default:
+      // Unknown vehicle - use conservative rules
+      if (isLeveled) return { minDiameter: 32, maxDiameter: 33, preferredDiameter: 33 };
+      if (is4Inch) return { minDiameter: 33, maxDiameter: 35, preferredDiameter: 35 };
+      return { minDiameter: 35, maxDiameter: 37, preferredDiameter: 35 };
+  }
+}
+
+/**
+ * Get maximum tire diameter for lifted builds
+ * Used to filter out oversized tires from primary package results
+ */
+export function getMaxTireDiameterForLift(
+  vehicleClass: VehicleClass,
+  liftInches: number
+): number {
+  const band = getTireDiameterBandForLift(vehicleClass, liftInches);
+  return band.maxDiameter;
+}
+
+/**
+ * Get preferred tire diameter for lifted builds
+ * Used to prioritize certain sizes in search results
+ */
+export function getPreferredTireDiameterForLift(
+  vehicleClass: VehicleClass,
+  liftInches: number
+): number {
+  const band = getTireDiameterBandForLift(vehicleClass, liftInches);
+  return band.preferredDiameter;
+}
+
+export interface LiftedTireFilterWithBandResult {
+  /** Tire sizes within the diameter band */
+  validSizes: string[];
+  /** Tire sizes below minimum (kept for fallback) */
+  belowMinSizes: string[];
+  /** Tire sizes above maximum (aggressive/may require trimming) */
+  aboveMaxSizes: string[];
+  /** Minimum diameter enforced */
+  minDiameter: number;
+  /** Maximum diameter enforced */
+  maxDiameter: number;
+  /** Preferred diameter for this setup */
+  preferredDiameter: number;
+  /** Vehicle class used */
+  vehicleClass: VehicleClass;
+  /** Whether we had to use below-min sizes as fallback */
+  usedBelowMinFallback: boolean;
+  /** Whether we had to use above-max sizes as fallback */
+  usedAboveMaxFallback: boolean;
+}
+
+/**
+ * Filter tire sizes by diameter band (min AND max) for lifted builds
+ * Returns sizes within the band, with fallback tracking for both ends
+ */
+export function filterTiresByDiameterBand(
+  tireSizes: string[],
+  make: string,
+  model: string,
+  liftInches: number,
+  aggressiveMode: boolean = false
+): LiftedTireFilterWithBandResult {
+  const vehicleClass = getVehicleClass(make, model);
+  const band = getTireDiameterBandForLift(vehicleClass, liftInches);
+  
+  const validSizes: string[] = [];
+  const belowMinSizes: string[] = [];
+  const aboveMaxSizes: string[] = [];
+  
+  for (const size of tireSizes) {
+    const diameter = parseTireDiameter(size);
+    if (diameter === null) {
+      // Can't parse - include in valid to be safe
+      validSizes.push(size);
+      continue;
+    }
+    
+    if (diameter < band.minDiameter) {
+      belowMinSizes.push(size);
+    } else if (diameter > band.maxDiameter && !aggressiveMode) {
+      // Above max - only include if aggressiveMode is enabled
+      aboveMaxSizes.push(size);
+    } else {
+      validSizes.push(size);
+    }
+  }
+  
+  // Fallback logic
+  const usedBelowMinFallback = validSizes.length === 0 && belowMinSizes.length > 0;
+  const usedAboveMaxFallback = validSizes.length === 0 && !usedBelowMinFallback && aboveMaxSizes.length > 0;
+  
+  let finalSizes = validSizes;
+  if (usedBelowMinFallback) {
+    finalSizes = belowMinSizes;
+  } else if (usedAboveMaxFallback) {
+    finalSizes = aboveMaxSizes;
+  }
+  
+  return {
+    validSizes: finalSizes,
+    belowMinSizes,
+    aboveMaxSizes,
+    minDiameter: band.minDiameter,
+    maxDiameter: band.maxDiameter,
+    preferredDiameter: band.preferredDiameter,
+    vehicleClass,
+    usedBelowMinFallback,
+    usedAboveMaxFallback,
+  };
+}

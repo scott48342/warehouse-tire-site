@@ -55,9 +55,13 @@ import {
   getRecommendationForLiftHeight, 
   getTireSizesForLift,
   filterTiresByMinDiameter,
+  filterTiresByDiameterBand,
   getVehicleClass,
   getMinTireDiameterForLift,
+  getMaxTireDiameterForLift,
+  getTireDiameterBandForLift,
   type LiftedTireFilterResult,
+  type LiftedTireFilterWithBandResult,
 } from "@/lib/liftedRecommendations";
 
 export const runtime = "nodejs";
@@ -1651,6 +1655,7 @@ export async function GET(req: Request) {
     
     // Track lifted tire filtering for response metadata (populated in lifted code path)
     let liftedTireFilter: LiftedTireFilterResult | null = null;
+    let liftedBandFilter: LiftedTireFilterWithBandResult | null = null;
     
     if (isLiftedBuild && wheelDiameter && make && model) {
       // Force lifted search mode - do NOT use OEM sizes
@@ -1803,85 +1808,129 @@ export async function GET(req: Request) {
       let liftedSizes: string[];
       const liftProfile = getLiftProfile(make, model);
       
+      // Get the diameter band for this vehicle/lift combo
+      // Note: liftInches is guaranteed non-null here due to isLiftedBuild check above
+      const vehicleClass = getVehicleClass(make, model);
+      const diameterBand = getTireDiameterBandForLift(vehicleClass, liftInches!);
+      
       if (liftProfile && liftInches) {
         // Get recommended tire sizes for this lift height
         const profileSizes = getTireSizesForLift(liftProfile, liftInches, wheelDiameter);
         const rec = getRecommendationForLiftHeight(liftProfile, liftInches);
         
         if (profileSizes.length > 0) {
-          // Apply minimum diameter enforcement (safety net)
-          liftedTireFilter = filterTiresByMinDiameter(profileSizes, make, model, liftInches);
-          liftedSizes = liftedTireFilter.validSizes;
+          // Apply DIAMETER BAND enforcement (min AND max) - NOT just minimum!
+          // This prevents showing 37" tires for a 4" lift HD truck
+          liftedBandFilter = filterTiresByDiameterBand(profileSizes, make, model, liftInches, false);
+          liftedSizes = liftedBandFilter.validSizes;
+          
+          // Also create legacy filter result for backward compat
+          liftedTireFilter = {
+            validSizes: liftedBandFilter.validSizes,
+            belowMinSizes: liftedBandFilter.belowMinSizes,
+            minDiameter: liftedBandFilter.minDiameter,
+            vehicleClass: liftedBandFilter.vehicleClass,
+            usedFallback: liftedBandFilter.usedBelowMinFallback,
+          };
           
           console.log(`[tires/search] LIFTED: Using profile sizes for ${make} ${model}`);
-          console.log(`  Vehicle class: ${liftedTireFilter.vehicleClass}`);
-          console.log(`  Min diameter enforced: ${liftedTireFilter.minDiameter}"`);
+          console.log(`  Vehicle class: ${liftedBandFilter.vehicleClass}`);
+          console.log(`  Diameter band: ${liftedBandFilter.minDiameter}" - ${liftedBandFilter.maxDiameter}" (preferred: ${liftedBandFilter.preferredDiameter}")`);
           console.log(`  Valid sizes: ${liftedSizes.join(", ")}`);
-          if (liftedTireFilter.belowMinSizes.length > 0) {
-            console.log(`  Below min (filtered out): ${liftedTireFilter.belowMinSizes.join(", ")}`);
+          if (liftedBandFilter.belowMinSizes.length > 0) {
+            console.log(`  Below min (filtered out): ${liftedBandFilter.belowMinSizes.join(", ")}`);
           }
-          if (liftedTireFilter.usedFallback) {
+          if (liftedBandFilter.aboveMaxSizes.length > 0) {
+            console.log(`  Above max (filtered out): ${liftedBandFilter.aboveMaxSizes.join(", ")}`);
+          }
+          if (liftedBandFilter.usedBelowMinFallback) {
             console.log(`  ⚠️ WARNING: Using below-min sizes as fallback (no valid sizes)`);
           }
+          if (liftedBandFilter.usedAboveMaxFallback) {
+            console.log(`  ⚠️ WARNING: Using above-max sizes as fallback (aggressive mode)`);
+          }
         } else {
-          // Generate flotation sizes for this wheel diameter from the recommended tire diameter range
-          // Use enforced minimum diameter instead of profile's tireDiameterMin
-          const vehicleClass = getVehicleClass(make, model);
-          const enforcedMinDia = getMinTireDiameterForLift(vehicleClass, liftInches);
-          const minDia = Math.max(rec.tireDiameterMin, enforcedMinDia);
-          const maxDia = Math.max(rec.tireDiameterMax, enforcedMinDia);
-          const midDia = Math.round((minDia + maxDia) / 2);
+          // Generate flotation sizes WITHIN the diameter band (not just above min)
+          const minDia = diameterBand.minDiameter;
+          const maxDia = diameterBand.maxDiameter;
+          const prefDia = diameterBand.preferredDiameter;
           
-          liftedSizes = [
-            `${midDia}x12.50R${wheelDiameter}`,
-            `${midDia}x13.50R${wheelDiameter}`,
-            `${minDia}x12.50R${wheelDiameter}`,
-            `${maxDia}x12.50R${wheelDiameter}`,
-            `${maxDia}x13.50R${wheelDiameter}`,
-            `${minDia}x13.50R${wheelDiameter}`,
-          ];
-          console.log(`[tires/search] LIFTED: Generated sizes for ${make} ${model} (${minDia}-${maxDia}" range, enforced min: ${enforcedMinDia}")`);
+          // Generate sizes prioritizing preferred diameter
+          const sizesToGen = new Set<number>();
+          sizesToGen.add(prefDia);
+          if (minDia !== prefDia) sizesToGen.add(minDia);
+          if (maxDia !== prefDia && maxDia !== minDia) sizesToGen.add(maxDia);
+          
+          liftedSizes = [];
+          for (const dia of sizesToGen) {
+            liftedSizes.push(`${dia}x12.50R${wheelDiameter}`);
+            liftedSizes.push(`${dia}x13.50R${wheelDiameter}`);
+          }
+          
+          console.log(`[tires/search] LIFTED: Generated sizes for ${make} ${model} (band: ${minDia}-${maxDia}", preferred: ${prefDia}")`);
           console.log(`  Sizes: ${liftedSizes.join(", ")}`);
           
-          // Create a filter result for response metadata
+          // Create filter results for response metadata
+          liftedBandFilter = {
+            validSizes: liftedSizes,
+            belowMinSizes: [],
+            aboveMaxSizes: [],
+            minDiameter: minDia,
+            maxDiameter: maxDia,
+            preferredDiameter: prefDia,
+            vehicleClass,
+            usedBelowMinFallback: false,
+            usedAboveMaxFallback: false,
+          };
           liftedTireFilter = {
             validSizes: liftedSizes,
             belowMinSizes: [],
-            minDiameter: enforcedMinDia,
+            minDiameter: minDia,
             vehicleClass,
             usedFallback: false,
           };
         }
       } else {
-        // No lift profile - use targetTireSize or estimate from liftInches with enforced minimums
-        const vehicleClass = getVehicleClass(make, model);
-        const enforcedMinDia = liftInches ? getMinTireDiameterForLift(vehicleClass, liftInches) : 33;
-        const targetDia = targetTireSize 
-          ? Math.max(targetTireSize, enforcedMinDia)
-          : Math.max(
-              liftInches && liftInches <= 2.5 ? 33 : liftInches && liftInches <= 4 ? 35 : 37,
-              enforcedMinDia
-            );
-        liftedSizes = [
-          `${targetDia}x12.50R${wheelDiameter}`,
-          `${targetDia}x13.50R${wheelDiameter}`,
-          `${targetDia - 2}x12.50R${wheelDiameter}`,
-          `${targetDia + 2}x12.50R${wheelDiameter}`,
-          `${targetDia - 2}x13.50R${wheelDiameter}`,
-          `${targetDia + 2}x13.50R${wheelDiameter}`,
-        ].filter(s => {
-          // Filter out any sizes below enforced minimum
-          const match = s.match(/^(\d+)/);
-          return match ? parseInt(match[1], 10) >= enforcedMinDia : true;
-        });
+        // No lift profile - use diameter band from vehicle class
+        const minDia = diameterBand.minDiameter;
+        const maxDia = diameterBand.maxDiameter;
+        const prefDia = diameterBand.preferredDiameter;
         
-        console.log(`[tires/search] LIFTED: No profile for ${make} ${model}, using ${targetDia}" generic sizes (enforced min: ${enforcedMinDia}")`);
+        // Override with targetTireSize if provided (but clamp to band)
+        const targetDia = targetTireSize 
+          ? Math.min(Math.max(targetTireSize, minDia), maxDia)
+          : prefDia;
+        
+        // Generate sizes within the band
+        const sizesToGen = new Set<number>();
+        sizesToGen.add(targetDia);
+        if (minDia !== targetDia) sizesToGen.add(minDia);
+        if (maxDia !== targetDia && maxDia !== minDia) sizesToGen.add(maxDia);
+        
+        liftedSizes = [];
+        for (const dia of sizesToGen) {
+          liftedSizes.push(`${dia}x12.50R${wheelDiameter}`);
+          liftedSizes.push(`${dia}x13.50R${wheelDiameter}`);
+        }
+        
+        console.log(`[tires/search] LIFTED: No profile for ${make} ${model}, using band ${minDia}-${maxDia}" (preferred: ${prefDia}")`);
         console.log(`  Sizes: ${liftedSizes.join(", ")}`);
         
+        liftedBandFilter = {
+          validSizes: liftedSizes,
+          belowMinSizes: [],
+          aboveMaxSizes: [],
+          minDiameter: minDia,
+          maxDiameter: maxDia,
+          preferredDiameter: prefDia,
+          vehicleClass,
+          usedBelowMinFallback: false,
+          usedAboveMaxFallback: false,
+        };
         liftedTireFilter = {
           validSizes: liftedSizes,
           belowMinSizes: [],
-          minDiameter: enforcedMinDia,
+          minDiameter: minDia,
           vehicleClass,
           usedFallback: false,
         };
@@ -2385,15 +2434,21 @@ export async function GET(req: Request) {
       matchMode,
       fitmentSource,
       
-      // Lifted build tire filtering metadata (2026-05-05)
+      // Lifted build tire filtering metadata (2026-05-06 - now with diameter BAND enforcement)
       ...(liftedTireFilter && {
         liftedBuildInfo: {
           vehicleClass: liftedTireFilter.vehicleClass,
           liftInches: liftInches || 0,
           minDiameterEnforced: liftedTireFilter.minDiameter,
+          // NEW: Max diameter enforcement to prevent oversized tires
+          maxDiameterEnforced: liftedBandFilter?.maxDiameter ?? liftedTireFilter.minDiameter + 2,
+          preferredDiameter: liftedBandFilter?.preferredDiameter ?? liftedTireFilter.minDiameter,
           validSizesCount: liftedTireFilter.validSizes.length,
           belowMinFilteredCount: liftedTireFilter.belowMinSizes.length,
+          // NEW: Track above-max filtered sizes
+          aboveMaxFilteredCount: liftedBandFilter?.aboveMaxSizes.length ?? 0,
           usedBelowMinFallback: liftedTireFilter.usedFallback,
+          usedAboveMaxFallback: liftedBandFilter?.usedAboveMaxFallback ?? false,
           sizesSearched: liftedTireFilter.validSizes,
         },
       }),
