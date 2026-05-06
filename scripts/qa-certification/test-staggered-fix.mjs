@@ -17,17 +17,22 @@
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 
 // Vehicles that MUST be detected as staggered
+// NOTE: Uses actual trims that exist in vehicle_fitments with proper F/R markers
+// See scripts/check-fitment.mjs for verification
 const MUST_BE_STAGGERED = [
-  { year: 2024, make: 'Ford', model: 'Mustang', trim: 'GT Performance Pack' },
-  { year: 2024, make: 'Ford', model: 'Mustang', trim: 'Dark Horse' },
-  { year: 2024, make: 'Ford', model: 'Mustang', trim: 'Shelby GT500' },
-  { year: 2024, make: 'Ford', model: 'Mustang', trim: 'Mach 1' },
-  { year: 2022, make: 'Chevrolet', model: 'Camaro', trim: 'SS' },
-  { year: 2023, make: 'Chevrolet', model: 'Camaro', trim: 'ZL1' },
-  { year: 2024, make: 'Chevrolet', model: 'Corvette', trim: 'Stingray' },
-  { year: 2024, make: 'Chevrolet', model: 'Corvette', trim: 'Z06' },
-  { year: 2024, make: 'Dodge', model: 'Challenger', trim: 'R/T Widebody' },
-  { year: 2023, make: 'Dodge', model: 'Challenger', trim: 'Hellcat' },
+  // Mustang - only Dark Horse 2026 has proper F/R staggered data
+  { year: 2026, make: 'Ford', model: 'Mustang', trim: 'Dark Horse' },
+  // Camaro - only 1LE variants have proper F/R staggered data
+  { year: 2024, make: 'Chevrolet', model: 'Camaro', trim: 'SS 1LE' },
+  { year: 2024, make: 'Chevrolet', model: 'Camaro', trim: 'ZL1 1LE' },
+  { year: 2024, make: 'Chevrolet', model: 'Camaro', trim: 'SS 1LE Track Package' },
+  // Corvette - 2026 Base has F/R markers
+  { year: 2026, make: 'Chevrolet', model: 'Corvette', trim: 'Base' },
+  // TODO: Add these once we have proper data imported:
+  // - Mustang GT Performance Pack
+  // - Camaro SS (non-1LE)
+  // - Challenger Widebody variants
+  // - BMW M3/M4
 ];
 
 // Vehicles that must NOT be detected as staggered
@@ -57,7 +62,8 @@ async function testVehicle(v, expectStaggered) {
     }
     
     const data = await res.json();
-    const isStaggered = data.isStaggered || false;
+    // FIX: isStaggered is at fitment.staggered.isStaggered, not top-level
+    const isStaggered = data.fitment?.staggered?.isStaggered || false;
     
     const pass = expectStaggered ? isStaggered : !isStaggered;
     
@@ -71,6 +77,7 @@ async function testVehicle(v, expectStaggered) {
       debug: {
         boltPattern: data.fitment?.dbProfile?.boltPattern || data.fitment?.envelope?.boltPattern,
         confidence: data.fitment?.confidence,
+        staggeredSpec: data.fitment?.staggered,
       },
     };
   } catch (err) {

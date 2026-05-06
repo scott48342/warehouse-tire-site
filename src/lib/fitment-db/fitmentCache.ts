@@ -40,8 +40,18 @@ export type FitmentCacheStats = {
 // CONFIGURATION
 // ═══════════════════════════════════════════════════════════════════════════════
 
+/**
+ * CACHE VERSION: Bump this when the cache data shape changes
+ * This ensures old cached data with different shapes is automatically invalidated.
+ * 
+ * Version history:
+ * - v1: Initial version
+ * - v2: Added qualityTier to cache shape (2026-05-06)
+ */
+const CACHE_VERSION = "v2";
+
 const CONFIG = {
-  KEY_PREFIX: "wt:fit:",
+  KEY_PREFIX: `wt:fit:${CACHE_VERSION}:`,  // Version included in key prefix
   TTL_SECONDS: 15 * 60,  // 15 minutes
   LOCAL_MAX_SIZE: 2_000,
   TIMEOUT_MS: 500,
