@@ -2815,11 +2815,12 @@ export default async function TiresPage({
   // Legacy array for backwards compatibility (used by some card logic)
   const topPicks: Tire[] = roleBasedPicks.map(p => p.tire);
 
-  // Pagination
-  const tiresPerPage = 24;
-  const totalPages = Math.max(1, Math.ceil(items.length / tiresPerPage));
-  const safePage = Math.min(page, totalPages);
-  const itemsPage = items.slice((safePage - 1) * tiresPerPage, safePage * tiresPerPage);
+  // Pagination - disabled, show all results
+  // TODO: Add lazy loading / infinite scroll if performance becomes an issue
+  const tiresPerPage = 9999; // Show all tires
+  const totalPages = 1;
+  const safePage = 1;
+  const itemsPage = items; // Show all items
 
   // Build query base for pagination
   const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}`;
@@ -3063,9 +3064,10 @@ export default async function TiresPage({
   return (
     <main className="bg-neutral-50">
       {/* ═══════════════════════════════════════════════════════════════════════
-          STICKY BUILD BAR - Shows lift/tire/offset context (lifted builds only)
+          STICKY BUILD BAR - REMOVED (regression fix)
+          Was showing for all vehicles, now disabled entirely
           ═══════════════════════════════════════════════════════════════════════ */}
-      {hasVehicle && <StickyBuildBar />}
+      {/* {hasVehicle && <StickyBuildBar />} */}
 
       <div className="mx-auto max-w-screen-2xl px-4 py-4">
         {/* ═══════════════════════════════════════════════════════════════════════
