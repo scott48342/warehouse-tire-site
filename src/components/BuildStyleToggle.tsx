@@ -243,7 +243,27 @@ export function BuildStyleToggle({
             <div className="mt-3 text-xs text-amber-700">
               <span className="font-semibold">{currentConfig.label}:</span>{" "}
               Offset {currentConfig.offsetMin}mm to {currentConfig.offsetMax}mm • 
-              Fits {currentConfig.targetTireSizes.map(s => `${s}"`).join("-")} tires
+              Fits {(() => {
+                // Extract unique overall diameters from tire sizes (e.g., "37x12.50R22" → "37", "285/70R17" → ~33)
+                const diameters = new Set<number>();
+                currentConfig.targetTireSizes.forEach(s => {
+                  const flotation = s.match(/^(\d+)x/);
+                  if (flotation) {
+                    diameters.add(parseInt(flotation[1], 10));
+                  } else {
+                    const metric = s.match(/^(\d+)\/(\d+)R(\d+)/);
+                    if (metric) {
+                      const width = parseInt(metric[1], 10);
+                      const aspect = parseInt(metric[2], 10);
+                      const rim = parseInt(metric[3], 10);
+                      const od = Math.round((width * aspect / 100 * 2 / 25.4) + rim);
+                      diameters.add(od);
+                    }
+                  }
+                });
+                const sorted = [...diameters].sort((a, b) => a - b);
+                return sorted.length > 1 ? `${sorted[0]}"-${sorted[sorted.length - 1]}"` : `${sorted[0]}"`;
+              })()} tires
             </div>
           )}
         </div>

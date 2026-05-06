@@ -23,7 +23,11 @@ export const LIFT_LEVELS: Record<LiftLevel, LiftLevelConfig> = {
     inches: 2,
     offsetMin: -12,
     offsetMax: 0,
-    targetTireSizes: ["32", "33"],
+    // Actual tire sizes for leveled trucks (33" overall diameter range)
+    targetTireSizes: [
+      "275/70R18", "285/65R20", "275/60R20", "285/55R20",
+      "33x12.50R17", "33x12.50R18", "33x12.50R20",
+    ],
   },
   "4in": {
     id: "4in",
@@ -31,7 +35,12 @@ export const LIFT_LEVELS: Record<LiftLevel, LiftLevelConfig> = {
     inches: 4,
     offsetMin: -24,
     offsetMax: -12,
-    targetTireSizes: ["33", "35"],
+    // Actual tire sizes for 4" lift (33-35" overall diameter range)
+    targetTireSizes: [
+      "285/70R17", "285/75R17", "295/70R18", "305/55R20", "295/65R20",
+      "33x12.50R17", "33x12.50R18", "33x12.50R20", "33x12.50R22",
+      "35x12.50R17", "35x12.50R18", "35x12.50R20", "35x12.50R22",
+    ],
   },
   "6in": {
     id: "6in",
@@ -39,7 +48,11 @@ export const LIFT_LEVELS: Record<LiftLevel, LiftLevelConfig> = {
     inches: 6,
     offsetMin: -44,
     offsetMax: -18,
-    targetTireSizes: ["35", "37"],
+    // Actual tire sizes for 6" lift (35-37" overall diameter range)
+    targetTireSizes: [
+      "315/70R17", "35x12.50R17", "35x12.50R18", "35x12.50R20", "35x12.50R22",
+      "37x12.50R17", "37x12.50R18", "37x12.50R20", "37x12.50R22",
+    ],
   },
   "8in": {
     id: "8in",
@@ -47,7 +60,12 @@ export const LIFT_LEVELS: Record<LiftLevel, LiftLevelConfig> = {
     inches: 8,
     offsetMin: -54,
     offsetMax: -24,
-    targetTireSizes: ["37", "40"],
+    // Actual tire sizes for 8" lift (37-40" overall diameter range)
+    targetTireSizes: [
+      "37x12.50R17", "37x12.50R18", "37x12.50R20", "37x12.50R22",
+      "37x13.50R17", "37x13.50R20", "37x13.50R22",
+      "40x13.50R17", "40x13.50R20", "40x13.50R22",
+    ],
   },
 };
 
