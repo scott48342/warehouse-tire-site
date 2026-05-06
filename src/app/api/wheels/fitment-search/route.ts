@@ -1039,18 +1039,24 @@ async function handleDbProfilePath(
     });
   }
   
+  // CRITICAL FIX (2026-05-06): Block staggered detection for trucks/SUVs
+  // Trucks often have multiple wheel width OPTIONS (not staggered setups).
+  // Only allow staggered detection for known staggered-capable vehicles.
+  const vehicleIsStaggeredCapable = isStaggeredCapableVehicle(make, model);
+  
   let staggeredInfo: StaggeredInfo;
-  if (staggeredCheck.canDetect) {
-    // Safe to detect staggered - has complete data with position info
-    staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
-  } else {
-    // Cannot reliably detect staggered - treat as square
+  
+  // Logic:
+  // 1. Trucks/SUVs (NOT staggered-capable): ALWAYS return isStaggered: false
+  // 2. Sports cars (staggered-capable): Detect staggered from data, regardless of quality tier
+  //    - Quality tier check is for data confidence, but sports cars should still try
+  if (!vehicleIsStaggeredCapable) {
+    // BLOCK: Trucks and SUVs should NEVER show as staggered
     staggeredInfo = {
       isStaggered: false,
-      reason: staggeredCheck.reason,
+      reason: `Vehicle ${make} ${model} is not in staggered-capable list (trucks/SUVs use width OPTIONS, not staggered setups)`,
     };
     if (parsedWheelSizes.length > 0) {
-      // Still provide specs for reference even if not staggered
       const sample = parsedWheelSizes[0];
       staggeredInfo.frontSpec = {
         diameter: sample.diameter,
@@ -1059,7 +1065,31 @@ async function handleDbProfilePath(
         tireSize: sample.tireSize,
       };
     }
-    console.log(`[fitment-search] Staggered detection BLOCKED: ${staggeredCheck.reason}`);
+    console.log(`[fitment-search] Staggered detection BLOCKED: not staggered-capable vehicle`);
+  } else {
+    // ALLOW: Sports cars - try to detect staggered from data
+    // Even without "complete" quality tier, if the data has front/rear markers or width differences, detect it
+    const dataAnalysis = analyzeStaggeredData(dbProfile.oemWheelSizes);
+    if (dataAnalysis.hasStaggeredData) {
+      staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
+      console.log(`[fitment-search] Staggered detection ALLOWED for ${make} ${model}: ${staggeredInfo.reason}`);
+    } else {
+      // No staggered data found - treat as square
+      staggeredInfo = {
+        isStaggered: false,
+        reason: dataAnalysis.reason,
+      };
+      if (parsedWheelSizes.length > 0) {
+        const sample = parsedWheelSizes[0];
+        staggeredInfo.frontSpec = {
+          diameter: sample.diameter,
+          width: sample.width,
+          offset: sample.offset,
+          tireSize: sample.tireSize,
+        };
+      }
+      console.log(`[fitment-search] Staggered detection: ${make} ${model} has no staggered data`);
+    }
   }
   
   // NOTE: Tire-size-based staggered inference DISABLED (2025-07-27)

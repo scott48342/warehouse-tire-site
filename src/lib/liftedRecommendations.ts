@@ -2258,3 +2258,54 @@ export function filterTiresByDiameterBand(
     usedAboveMaxFallback,
   };
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// UI HELPER: Get recommended tire diameter label for lifted builds
+// Use this in merchandising/UI instead of hardcoded LIFT_LEVELS.targetTireSizes
+// ═══════════════════════════════════════════════════════════════════════════
+
+export interface LiftedTireRecommendation {
+  /** Display label for "Most customers choose" UI (e.g., "35-37") */
+  displayLabel: string;
+  /** Preferred tire diameter (for primary recommendation) */
+  preferredDiameter: number;
+  /** Min diameter for this setup */
+  minDiameter: number;
+  /** Max diameter for this setup */
+  maxDiameter: number;
+  /** Vehicle class used */
+  vehicleClass: VehicleClass;
+}
+
+/**
+ * Get recommended tire diameter for UI merchandising.
+ * 
+ * CRITICAL: Use this instead of hardcoded LIFT_LEVELS.targetTireSizes
+ * to ensure vehicle-class-aware recommendations.
+ * 
+ * @param make Vehicle make
+ * @param model Vehicle model
+ * @param liftInches Lift height in inches
+ * @returns Recommendation with display label and diameter band
+ */
+export function getLiftedTireRecommendation(
+  make: string,
+  model: string,
+  liftInches: number
+): LiftedTireRecommendation {
+  const vehicleClass = getVehicleClass(make, model);
+  const band = getTireDiameterBandForLift(vehicleClass, liftInches);
+  
+  // Build display label (e.g., "35-37" or just "35")
+  const displayLabel = band.minDiameter === band.maxDiameter
+    ? String(band.preferredDiameter)
+    : `${band.minDiameter}-${band.maxDiameter}`;
+  
+  return {
+    displayLabel,
+    preferredDiameter: band.preferredDiameter,
+    minDiameter: band.minDiameter,
+    maxDiameter: band.maxDiameter,
+    vehicleClass,
+  };
+}

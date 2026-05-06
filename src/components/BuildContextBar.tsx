@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { LIFT_LEVELS } from "@/lib/homepage-intent/config";
 import type { LiftLevel } from "@/lib/homepage-intent/types";
+import { getLiftedTireRecommendation } from "@/lib/liftedRecommendations";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // VISUAL: Truck stance graphic for visual reinforcement
@@ -60,6 +61,8 @@ export function StickyBuildBar() {
   const offsetMin = searchParams.get("offsetMin");
   const offsetMax = searchParams.get("offsetMax");
   const liftKitSku = searchParams.get("liftKitSku");
+  const make = searchParams.get("make");
+  const model = searchParams.get("model");
   
   // Only show if we have lifted build context
   if (!buildType || buildType === "stock") {
@@ -68,7 +71,12 @@ export function StickyBuildBar() {
   
   const liftConfig = liftLevel ? LIFT_LEVELS[liftLevel] : null;
   const inches = liftedInches ? parseInt(liftedInches) : liftConfig?.inches || 0;
-  const tireSizes = liftConfig?.targetTireSizes || [];
+  
+  // CRITICAL FIX (2026-05-06): Use vehicle-class-aware tire recommendations
+  const tireRecommendation = make && model && inches > 0
+    ? getLiftedTireRecommendation(make, model, inches)
+    : null;
+  const tireDisplayLabel = tireRecommendation?.displayLabel || "";
   
   return (
     <div className="sticky top-0 z-40 bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg">
@@ -77,14 +85,14 @@ export function StickyBuildBar() {
           {/* Left: Visual + Build Info */}
           <div className="flex items-center gap-4">
             <div className="hidden sm:block">
-              <TruckStancePreview liftInches={inches} tireSize={tireSizes[tireSizes.length - 1]} />
+              <TruckStancePreview liftInches={inches} tireSize={tireRecommendation ? String(tireRecommendation.preferredDiameter) : undefined} />
             </div>
             
             <div className="flex items-center gap-3 text-sm">
               <div className="flex items-center gap-2">
                 <span className="font-bold">{liftConfig?.label || `${inches}" Lift`}</span>
                 <span className="text-amber-200">•</span>
-                <span>{tireSizes.join("-")}" Tires</span>
+                <span>{tireDisplayLabel}" Tires</span>
                 <span className="text-amber-200">•</span>
                 <span>{offsetMin} to {offsetMax}mm</span>
               </div>
@@ -182,8 +190,22 @@ export function PackageBridgeCTA({
   const buildType = searchParams.get("buildType");
   
   const liftConfig = liftLevel ? LIFT_LEVELS[liftLevel] : null;
-  const tireSizes = liftConfig?.targetTireSizes || [];
   const inches = liftedInches ? parseInt(liftedInches) : liftConfig?.inches || 0;
+  
+  // CRITICAL FIX (2026-05-06): Use vehicle-class-aware tire recommendations
+  // instead of hardcoded LIFT_LEVELS.targetTireSizes
+  const tireRecommendation = vehicleMake && vehicleModel && inches > 0
+    ? getLiftedTireRecommendation(vehicleMake, vehicleModel, inches)
+    : null;
+  
+  // Display label from vehicle-aware recommendation, or fallback to static config
+  const tireDisplayLabel = tireRecommendation?.displayLabel || 
+    (liftConfig?.targetTireSizes?.length ? `${liftConfig.targetTireSizes[0].match(/^\d+/)?.[0] || "33"}-${liftConfig.targetTireSizes[liftConfig.targetTireSizes.length - 1].match(/^\d+/)?.[0] || "35"}` : "");
+  
+  // For tire search URL, use the diameter band from vehicle-aware recommendation
+  const tireSizes = tireRecommendation 
+    ? [`${tireRecommendation.preferredDiameter}"`] // Simplified for URL - tires page will apply full filtering
+    : (liftConfig?.targetTireSizes || []);
   
   // Get use-case label based on build
   const useCaseLabel = inches <= 2 ? "Daily Driver" : 
@@ -226,7 +248,7 @@ export function PackageBridgeCTA({
         {hasLiftedBuildContext && inches > 0 && (
           <div className="flex-shrink-0 flex flex-col items-center">
             <div className="rounded-xl bg-white border border-green-200 p-4">
-              <TruckStancePreview liftInches={inches} tireSize={tireSizes[tireSizes.length - 1]} />
+              <TruckStancePreview liftInches={inches} tireSize={tireRecommendation ? String(tireRecommendation.preferredDiameter) : undefined} />
             </div>
             <div className="mt-2 text-center">
               <div className="text-xs font-semibold text-green-700">{useCaseLabel}</div>
@@ -255,15 +277,16 @@ export function PackageBridgeCTA({
           )}
           
           <p className="mt-2 text-sm text-neutral-600">
-            {hasLiftedBuildContext && tireSizes.length > 0 ? (
-              <>We'll show you <strong>{tireSizes.join("-")}" tires</strong> that match your {liftConfig?.label.toLowerCase() || "lifted"} setup.</>
+            {hasLiftedBuildContext && tireDisplayLabel ? (
+              <>We'll show you <strong>{tireDisplayLabel}" tires</strong> that match your {liftConfig?.label.toLowerCase() || "lifted"} setup.</>
             ) : (
               <>Find the perfect tires to complete your wheel and tire package.</>
             )}
           </p>
           
           {/* "Most Customers Choose" Block - Only for lifted builds with real data */}
-          {hasLiftedBuildContext && (
+          {/* CRITICAL FIX (2026-05-06): Use vehicle-class-aware recommendation, not hardcoded sizes */}
+          {hasLiftedBuildContext && tireRecommendation && (
             <div className="mt-4 inline-flex items-center gap-6 rounded-xl bg-white border border-neutral-200 px-4 py-3">
               <div className="flex items-center gap-2 text-amber-600">
                 <span className="text-base">⭐</span>
@@ -272,7 +295,7 @@ export function PackageBridgeCTA({
               <div className="flex items-center gap-6 text-sm">
                 <div>
                   <span className="text-neutral-500">Tire: </span>
-                  <span className="font-bold text-neutral-900">{tireSizes[tireSizes.length - 1]}"</span>
+                  <span className="font-bold text-neutral-900">{tireRecommendation.preferredDiameter}"</span>
                 </div>
                 <div>
                   <span className="text-neutral-500">Offset: </span>
@@ -332,7 +355,13 @@ export function PackageBridgeCompact({
   const buildType = searchParams.get("buildType");
   
   const liftConfig = liftLevel ? LIFT_LEVELS[liftLevel] : null;
-  const tireSizes = liftConfig?.targetTireSizes || [];
+  const inches = liftedInches ? parseInt(liftedInches) : liftConfig?.inches || 0;
+  
+  // CRITICAL FIX (2026-05-06): Use vehicle-class-aware tire recommendations
+  const tireRecommendation = vehicleMake && vehicleModel && inches > 0
+    ? getLiftedTireRecommendation(vehicleMake, vehicleModel, inches)
+    : null;
+  const tireDisplayLabel = tireRecommendation?.displayLabel || "";
   
   const buildTireUrl = () => {
     const params = new URLSearchParams();
@@ -350,9 +379,9 @@ export function PackageBridgeCompact({
       params.set("liftedSource", "lifted");
       params.set("liftedPreset", liftLevel || "custom");
     }
-    if (tireSizes.length > 0) {
-      // Use liftedTireSizes (not targetTireSizes) - that's what tires page reads
-      params.set("liftedTireSizes", tireSizes.join(","));
+    // Use vehicle-aware preferred diameter for tire search
+    if (tireRecommendation) {
+      params.set("liftedTireSizes", `${tireRecommendation.preferredDiameter}"`);
     }
     return `/tires?${params.toString()}`;
   };
@@ -368,8 +397,8 @@ export function PackageBridgeCompact({
           <div className="text-sm font-bold text-neutral-900 group-hover:text-green-700">
             Complete My Build
           </div>
-          {tireSizes.length > 0 && (
-            <div className="text-xs text-neutral-600">{tireSizes.join("-")}" tires recommended</div>
+          {tireDisplayLabel && (
+            <div className="text-xs text-neutral-600">{tireDisplayLabel}" tires recommended</div>
           )}
         </div>
       </div>
@@ -394,6 +423,8 @@ export function BuildContextBar() {
   const offsetMin = searchParams.get("offsetMin");
   const offsetMax = searchParams.get("offsetMax");
   const liftKitSku = searchParams.get("liftKitSku");
+  const make = searchParams.get("make");
+  const model = searchParams.get("model");
   
   if (!buildType && !liftLevel && !liftedSource) {
     return null;
@@ -401,7 +432,13 @@ export function BuildContextBar() {
   
   const liftConfig = liftLevel ? LIFT_LEVELS[liftLevel] : null;
   const inches = liftedInches ? parseInt(liftedInches) : liftConfig?.inches || 0;
-  const tireSizes = liftConfig?.targetTireSizes || [];
+  
+  // CRITICAL FIX (2026-05-06): Use vehicle-class-aware tire recommendations
+  const tireRecommendation = make && model && inches > 0
+    ? getLiftedTireRecommendation(make, model, inches)
+    : null;
+  const tireDisplayLabel = tireRecommendation?.displayLabel || "";
+  
   const offsetRange = offsetMin && offsetMax ? `${offsetMin} to ${offsetMax}mm` : null;
   
   const buildLabel = buildType === "stock" ? "Stock Fit" :
@@ -423,10 +460,10 @@ export function BuildContextBar() {
               </span>
             </div>
             
-            {tireSizes.length > 0 && (
+            {tireDisplayLabel && (
               <div className="hidden sm:flex items-center gap-1">
                 <span className="text-amber-200">•</span>
-                <span>{tireSizes.join("-")}" Tires</span>
+                <span>{tireDisplayLabel}" Tires</span>
               </div>
             )}
             
