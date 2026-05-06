@@ -1,0 +1,510 @@
+{
+  "run_id": "56eb9dfe",
+  "started_at": "2026-05-06T15:17:32.933Z",
+  "completed_at": "2026-05-06T15:17:49.132Z",
+  "environment": {
+    "base_url": "https://shop.warehousetiredirect.com",
+    "commit_hash": null,
+    "deployment_version": null
+  },
+  "summary": {
+    "total_vehicles": 15,
+    "passed": 0,
+    "failed": 15,
+    "warnings": 0,
+    "skipped": 0,
+    "pass_rate": 0,
+    "duration_ms": 21942,
+    "by_severity": {
+      "critical": 8,
+      "high": 4,
+      "medium": 1,
+      "low": 2
+    },
+    "by_failure_type": {
+      "logic": 12,
+      "inventory": 2,
+      "supplier": 1,
+      "data_gap": 0,
+      "test_harness": 0,
+      "regression": 0
+    },
+    "by_category": {
+      "half-ton": {
+        "total": 4,
+        "passed": 0,
+        "failed": 4,
+        "passRate": 0
+      },
+      "staggered": {
+        "total": 9,
+        "passed": 0,
+        "failed": 9,
+        "passRate": 0
+      },
+      "jeep": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "passRate": 0
+      },
+      "hd": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "passRate": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F-150",
+        "trim": "XLT",
+        "category": "half-ton",
+        "isPerformance": false,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "low",
+      "failureType": "inventory",
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "6x135",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 3,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[low] Package not viable - missing wheel or tire options",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 2895
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 1500",
+        "trim": "LT",
+        "category": "half-ton",
+        "isPerformance": false,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "high",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "6x139.7",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 2,
+      "liftedFailed": 1,
+      "packageViable": false,
+      "errors": [
+        "[high] Lifted tire diameter 32\" outside band 33-40\" for 6\" lift",
+        "[lift-6] Tire diameter 32\" outside expected band 33-40\" for 6\" lift",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 2538
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ram",
+        "model": "1500",
+        "trim": "Big Horn",
+        "category": "half-ton",
+        "isPerformance": false,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "high",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "6x139.7",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 2,
+      "liftedFailed": 1,
+      "packageViable": false,
+      "errors": [
+        "[high] Lifted tire diameter 32\" outside band 33-40\" for 6\" lift",
+        "[lift-6] Tire diameter 32\" outside expected band 33-40\" for 6\" lift",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 2688
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "GMC",
+        "model": "Sierra 1500",
+        "trim": "SLT",
+        "category": "half-ton",
+        "isPerformance": false,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "low",
+      "failureType": "inventory",
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "6x139.7",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 3,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[low] Package not viable - missing wheel or tire options",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 2772
+    },
+    {
+      "vehicle": {
+        "year": 2023,
+        "make": "Ford",
+        "model": "Mustang",
+        "trim": "GT Performance Pack",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x114.3",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
+        "[tire] Zero tires returned",
+        "[staggered] Staggered mismatch: expected=true, detected=false",
+        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 825
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "trim": "SS",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x120",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
+        "[tire] Zero tires returned",
+        "[staggered] Staggered mismatch: expected=true, detected=false",
+        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 1119
+    },
+    {
+      "vehicle": {
+        "year": 2023,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "trim": "ZL1",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x120",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
+        "[tire] Zero tires returned",
+        "[staggered] Staggered mismatch: expected=true, detected=false",
+        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 672
+    },
+    {
+      "vehicle": {
+        "year": 2023,
+        "make": "Chevrolet",
+        "model": "Corvette",
+        "trim": "Stingray",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x120",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
+        "[tire] Zero tires returned",
+        "[staggered] Staggered mismatch: expected=true, detected=false",
+        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 578
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Mustang",
+        "trim": "GT",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "medium",
+      "failureType": "supplier",
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x114.3",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[medium] Tire search returned no results",
+        "[tire] Zero tires returned",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 767
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Dodge",
+        "model": "Challenger",
+        "trim": "R/T",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 0,
+      "tireCount": 0,
+      "boltPattern": null,
+      "boltPatternMatch": false,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Bolt pattern mismatch: expected 5x115, got null",
+        "[wheel] Zero wheels returned",
+        "[tire] Zero tires returned",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 468
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Mustang",
+        "trim": "Dark Horse",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x114.3",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
+        "[tire] Zero tires returned",
+        "[staggered] Staggered mismatch: expected=true, detected=false",
+        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 1197
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "trim": "1LE",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 0,
+      "tireCount": 0,
+      "boltPattern": null,
+      "boltPatternMatch": false,
+      "staggeredDetected": false,
+      "staggeredMismatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
+        "[wheel] Zero wheels returned",
+        "[tire] Zero tires returned",
+        "[staggered] Staggered mismatch: expected=true, detected=false",
+        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly"
+      ],
+      "durationMs": 736
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Dodge",
+        "model": "Challenger",
+        "trim": "Widebody",
+        "category": "staggered",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 0,
+      "tireCount": 0,
+      "boltPattern": null,
+      "boltPatternMatch": false,
+      "staggeredDetected": false,
+      "staggeredMismatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [
+        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
+        "[wheel] Zero wheels returned",
+        "[tire] Zero tires returned",
+        "[staggered] Staggered mismatch: expected=true, detected=false",
+        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly"
+      ],
+      "durationMs": 582
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wrangler",
+        "trim": "Rubicon",
+        "category": "jeep",
+        "isPerformance": true,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "high",
+      "failureType": "logic",
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "5x127",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 1,
+      "liftedFailed": 2,
+      "packageViable": false,
+      "errors": [
+        "[high] Lifted tire diameter 32\" outside band 33-38\" for 4\" lift",
+        "[lift-4] Tire diameter 32\" outside expected band 33-38\" for 4\" lift",
+        "[lift-6] Tire diameter 32\" outside expected band 35-40\" for 6\" lift",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 2393
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F-250",
+        "trim": "XLT",
+        "category": "hd",
+        "isPerformance": false,
+        "isCanary": true
+      },
+      "status": "fail",
+      "severity": "high",
+      "failureType": "logic",
+      "wheelCount": 415,
+      "tireCount": 100,
+      "boltPattern": "8x170",
+      "boltPatternMatch": true,
+      "staggeredDetected": false,
+      "staggeredMismatch": false,
+      "liftedPassed": 2,
+      "liftedFailed": 1,
+      "packageViable": false,
+      "errors": [
+        "[high] Lifted tire diameter 34\" outside band 35-42\" for 6\" lift",
+        "[lift-6] Tire diameter 34\" outside expected band 35-42\" for 6\" lift",
+        "[package] Package flow not viable: missing wheels or tires"
+      ],
+      "durationMs": 1712
+    }
+  ]
+}

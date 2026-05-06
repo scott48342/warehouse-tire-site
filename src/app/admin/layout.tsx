@@ -63,6 +63,7 @@ const NAV_ITEMS = [
   { href: "/admin/email-automation", label: "Automation", icon: "🤖" },
   { href: "/admin/subscribers", label: "Subscribers", icon: "📬" },
   { href: "/admin/email-campaigns", label: "Campaigns", icon: "📧" },
+  { href: "/admin/qa", label: "QA", icon: "✅" },
   { href: "/admin/fitment-api", label: "API Keys", icon: "🔑" },
   { href: "/admin/fitment", label: "Fitment", icon: "🔧" },
   { href: "/admin/fitment-coverage", label: "Coverage", icon: "📈" },

@@ -1,0 +1,85 @@
+{
+  "run_id": "30b384b9",
+  "timestamp": "2026-05-06T15:15:52.056Z",
+  "environment": {
+    "base_url": "https://shop.warehousetiredirect.com",
+    "commit_hash": null
+  },
+  "total_vehicles": 50,
+  "passed": 0,
+  "failed": 50,
+  "warnings": 0,
+  "skipped": 0,
+  "pass_rate": 0,
+  "duration_ms": 137952,
+  "by_severity": {
+    "critical": 11,
+    "high": 17,
+    "medium": 19,
+    "low": 3
+  },
+  "by_failure_type": {
+    "logic": 28,
+    "inventory": 3,
+    "supplier": 19,
+    "data_gap": 0,
+    "test_harness": 0,
+    "regression": 0
+  },
+  "by_category": {
+    "half-ton": {
+      "total": 7,
+      "passed": 0,
+      "failed": 7,
+      "passRate": 0
+    },
+    "staggered": {
+      "total": 9,
+      "passed": 0,
+      "failed": 9,
+      "passRate": 0
+    },
+    "hd": {
+      "total": 6,
+      "passed": 0,
+      "failed": 6,
+      "passRate": 0
+    },
+    "jeep": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "passRate": 0
+    },
+    "bronco": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "passRate": 0
+    },
+    "midsize": {
+      "total": 7,
+      "passed": 0,
+      "failed": 7,
+      "passRate": 0
+    },
+    "car": {
+      "total": 8,
+      "passed": 0,
+      "failed": 8,
+      "passRate": 0
+    },
+    "suv": {
+      "total": 5,
+      "passed": 0,
+      "failed": 5,
+      "passRate": 0
+    },
+    "ev": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "passRate": 0
+    }
+  }
+}

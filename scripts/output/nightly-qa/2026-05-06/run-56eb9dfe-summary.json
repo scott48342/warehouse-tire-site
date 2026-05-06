@@ -1,0 +1,55 @@
+{
+  "run_id": "56eb9dfe",
+  "timestamp": "2026-05-06T15:17:49.136Z",
+  "environment": {
+    "base_url": "https://shop.warehousetiredirect.com",
+    "commit_hash": null
+  },
+  "total_vehicles": 15,
+  "passed": 0,
+  "failed": 15,
+  "warnings": 0,
+  "skipped": 0,
+  "pass_rate": 0,
+  "duration_ms": 21942,
+  "by_severity": {
+    "critical": 8,
+    "high": 4,
+    "medium": 1,
+    "low": 2
+  },
+  "by_failure_type": {
+    "logic": 12,
+    "inventory": 2,
+    "supplier": 1,
+    "data_gap": 0,
+    "test_harness": 0,
+    "regression": 0
+  },
+  "by_category": {
+    "half-ton": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "passRate": 0
+    },
+    "staggered": {
+      "total": 9,
+      "passed": 0,
+      "failed": 9,
+      "passRate": 0
+    },
+    "jeep": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "passRate": 0
+    },
+    "hd": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "passRate": 0
+    }
+  }
+}
