@@ -2,10 +2,27 @@
  * Lifted Package QA Sweep
  * 
  * Tests the lifted build flow for multiple vehicles across lift heights.
- * NO CHANGES - audit only.
+ * Saves results to database for admin/qa dashboard.
+ * 
+ * Usage:
+ *   node scripts/qa-sweep/lifted-package-qa.mjs [options]
+ * 
+ * Options:
+ *   --dry-run    Don't write to database
+ * 
+ * Environment:
+ *   BASE_URL      Target environment URL
+ *   POSTGRES_URL  Database connection string
  */
 
+import pg from 'pg';
+import { randomUUID } from 'crypto';
+
+const { Pool } = pg;
+
 const BASE_URL = process.env.BASE_URL || "https://shop.warehousetiredirect.com";
+const DATABASE_URL = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+const DRY_RUN = process.argv.includes('--dry-run');
 
 // Test vehicles
 const VEHICLES = [
@@ -399,6 +416,113 @@ async function runQASweep() {
   const fs = await import("fs/promises");
   await fs.writeFile(outputPath, JSON.stringify(results, null, 2));
   console.log(`\nDetailed results written to: ${outputPath}`);
+  
+  // Save to database
+  if (!DRY_RUN && DATABASE_URL) {
+    console.log("\n📊 Saving to database...");
+    try {
+      await saveResultsToDatabase(results);
+      console.log("✅ Results saved to database - view at /admin/qa");
+    } catch (err) {
+      console.error(`❌ Database error: ${err.message}`);
+    }
+  } else if (DRY_RUN) {
+    console.log("\n⏭️  Skipping database save (--dry-run)");
+  } else {
+    console.log("\n⚠️  No POSTGRES_URL configured, skipping database save");
+  }
+}
+
+/**
+ * Save lifted QA results to database
+ */
+async function saveResultsToDatabase(results) {
+  const pool = new Pool({
+    connectionString: DATABASE_URL,
+    max: 5,
+    ssl: { rejectUnauthorized: false },
+  });
+  
+  try {
+    const runId = randomUUID();
+    const passed = results.filter(r => r.status === "PASS").length;
+    const failed = results.filter(r => r.status === "FAIL").length;
+    const passRate = results.length > 0 ? Math.round((passed / results.length) * 10000) / 100 : 0;
+    
+    // Create run record
+    await pool.query(`
+      INSERT INTO qa_runs (
+        run_id, started_at, completed_at, status, 
+        vehicle_count, passed_count, failed_count, pass_rate,
+        category_stats, base_url, trigger_source, notes
+      ) VALUES (
+        $1, NOW() - INTERVAL '1 minute', NOW(), 'completed',
+        $2, $3, $4, $5,
+        $6, $7, 'manual', 'Lifted Package QA'
+      )
+    `, [
+      runId,
+      results.length,
+      passed,
+      failed,
+      passRate,
+      JSON.stringify({ lifted: { total: results.length, passed, failed, passRate } }),
+      BASE_URL,
+    ]);
+    
+    console.log(`  Created run: ${runId}`);
+    
+    // Save individual results
+    for (const r of results) {
+      // Parse vehicle from string
+      const vehicleMatch = r.vehicle.match(/^(\d{4})\s+(.+?)\s+(.+?)\s+(.+?)$/);
+      const [, year, make, model, trim] = vehicleMatch || ['', '', '', '', ''];
+      const liftInches = parseInt(r.liftHeight, 10);
+      
+      await pool.query(`
+        INSERT INTO qa_results (
+          run_id, year, make, model, trim, category,
+          status, severity, failure_type, error_message,
+          wheel_test_passed, wheel_count,
+          tire_test_passed, tire_count,
+          lifted_tests
+        ) VALUES (
+          $1, $2, $3, $4, $5, 'lifted',
+          $6, $7, $8, $9,
+          $10, $11,
+          $12, $13,
+          $14
+        )
+      `, [
+        runId,
+        parseInt(year, 10),
+        make,
+        model,
+        trim,
+        r.status === "PASS" ? "pass" : "fail",
+        r.status === "FAIL" ? "high" : null,
+        r.status === "FAIL" ? "lifted_config" : null,
+        r.failureReason,
+        r.wheelResultCount > 0,
+        r.wheelResultCount,
+        r.tireResultCount > 0,
+        r.tireResultCount,
+        JSON.stringify({
+          liftHeight: liftInches,
+          recommendedTireSize: r.recommendedTireSize,
+          outerDiameter: r.outerDiameter,
+          offsetRange: r.offsetRange,
+          stockSize: r.stockSize,
+          warnings: r.warnings,
+          debug: r.debug,
+        }),
+      ]);
+    }
+    
+    console.log(`  Saved ${results.length} results`);
+  } finally {
+    await pool.end();
+  }
 }
 
 runQASweep().catch(console.error);

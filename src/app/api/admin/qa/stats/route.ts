@@ -34,7 +34,8 @@ export async function GET(req: NextRequest) {
         pass_rate,
         category_stats,
         commit_hash,
-        duration_ms
+        duration_ms,
+        notes
       FROM qa_runs
       WHERE started_at > NOW() - INTERVAL '${days} days'
       ORDER BY started_at DESC
