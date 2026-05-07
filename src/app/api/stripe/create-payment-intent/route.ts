@@ -163,10 +163,11 @@ export async function POST(req: Request) {
           spec: i.spec,
           meta: i.meta,
           source: i.source,
+          // Brand name for supplier order placement (needed for USAF lineCode)
+          brand: i.brand,
           // Tire-specific fields (for email/display)
           ...(i.type === "tire" ? {
             tireSize: i.size,
-            brand: i.brand,
             loadIndex: i.loadIndex,
             speedRating: i.speedRating,
           } : {}),

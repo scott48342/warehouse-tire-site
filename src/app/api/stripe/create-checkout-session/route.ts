@@ -166,6 +166,8 @@ export async function POST(req: Request) {
           meta: i.meta,
           // Supplier source for internal tracking (shown in admin email)
           source: i.source,
+          // Brand name for supplier order placement (needed for USAF lineCode)
+          brand: i.brand,
         };
 
         return { kind, name, sku, unitPriceUsd, qty, taxable, meta };

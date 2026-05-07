@@ -19,6 +19,7 @@ import pg from "pg";
 import type { QuoteSnapshot, QuoteLine } from "@/lib/quotes";
 import { placeOrder as placeUSAutoForceOrder, getOrderStatus } from "@/lib/usautoforce/client";
 import { placeWheelProsOrder, trackWheelProsOrder } from "@/lib/wheelpros/orderClient";
+import { getUSAFBrandCode } from "@/lib/usautoforce/brandCodes";
 
 // ============================================================================
 // TYPES
@@ -30,6 +31,10 @@ export interface SupplierOrderItem {
   cost?: number;
   source: string;
   lineName: string;
+  /** Brand name (e.g., "General", "BF Goodrich") */
+  brand?: string;
+  /** USAF brand code (e.g., "GEN", "BFG") - required for USAF orders */
+  lineCode?: string;
 }
 
 export interface SupplierOrderRequest {
@@ -105,12 +110,21 @@ export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, Sup
     
     if (!partNumber) continue;
     
+    // Extract brand from meta or from line name
+    // Brand can be stored as meta.brand, meta.brandName, or parsed from name
+    const brand = line.meta?.brand || line.meta?.brandName || extractBrandFromName(line.name);
+    
+    // Get USAF brand code if we have a brand
+    const lineCode = brand ? getUSAFBrandCode(brand) : undefined;
+    
     const item: SupplierOrderItem = {
       partNumber,
       quantity: line.qty,
       cost: line.meta?.cost,
       source,
       lineName: line.name,
+      brand: brand || undefined,
+      lineCode: lineCode || undefined,
     };
     
     // Normalize supplier name
@@ -123,6 +137,48 @@ export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, Sup
   }
   
   return bySupplier;
+}
+
+/**
+ * Try to extract brand name from product line name
+ * e.g., "General Altimax Arctic 12 225/60R16" → "General"
+ * e.g., "BF Goodrich Advantage Control 225/60R16" → "BF Goodrich"
+ */
+function extractBrandFromName(name: string): string | null {
+  if (!name) return null;
+  
+  // Known multi-word brand patterns
+  const multiWordBrands = [
+    "BF Goodrich",
+    "BFGoodrich", 
+    "Mickey Thompson",
+    "Dick Cepek",
+    "GT Radial",
+    "Multi-Mile",
+    "Multi Mile",
+    "Trail Guide",
+    "Wild Country",
+    "Road One",
+    "Le Mans",
+    "Lion Sport",
+    "Toyo Open Country",
+    "Toyo Proxes",
+  ];
+  
+  const upper = name.toUpperCase();
+  for (const brand of multiWordBrands) {
+    if (upper.startsWith(brand.toUpperCase())) {
+      return brand;
+    }
+  }
+  
+  // Default: first word is brand
+  const firstWord = name.split(/\s+/)[0];
+  if (firstWord && firstWord.length > 2) {
+    return firstWord;
+  }
+  
+  return null;
 }
 
 /**
@@ -232,13 +288,30 @@ async function placeWheelProsSupplierOrder(
 
 /**
  * Place order with US AutoForce
+ * 
+ * IMPORTANT: USAF Order API requires lineCode (brand code) for all items.
+ * Items without lineCode will cause the order to fail with "No part found!"
  */
 async function placeUSAutoForceSupplierOrder(
   request: SupplierOrderRequest
 ): Promise<SupplierOrderResult> {
   try {
+    // Check that all items have lineCode
+    const itemsWithoutCode = request.items.filter(i => !i.lineCode);
+    if (itemsWithoutCode.length > 0) {
+      const missingBrands = itemsWithoutCode.map(i => `${i.partNumber} (brand: ${i.brand || "unknown"})`);
+      console.error(`[supplier-order] USAF order blocked - missing lineCode for:`, missingBrands);
+      return {
+        success: false,
+        supplier: "usautoforce",
+        errorMessage: `Cannot place USAF order: lineCode (brand code) missing for ${itemsWithoutCode.length} item(s). Brands not mapped: ${missingBrands.join(", ")}`,
+        items: request.items,
+      };
+    }
+    
     console.log(`[supplier-order] Placing US AutoForce order for ${request.orderId}:`, {
       items: request.items.length,
+      itemDetails: request.items.map(i => ({ partNumber: i.partNumber, lineCode: i.lineCode, qty: i.quantity })),
       shipTo: `${request.shipTo.city}, ${request.shipTo.state}`,
     });
     
@@ -247,6 +320,7 @@ async function placeUSAutoForceSupplierOrder(
       items: request.items.map(i => ({
         partNumber: i.partNumber,
         quantity: i.quantity,
+        lineCode: i.lineCode!, // We verified above that all items have lineCode
       })),
       shipTo: request.shipTo,
       notes: `Warehouse Tire Direct Order ${request.orderId}`,

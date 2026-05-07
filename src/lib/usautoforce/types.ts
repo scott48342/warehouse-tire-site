@@ -104,7 +104,12 @@ export interface USAutoForceStockCheckResponse {
 export interface USAutoForceOrderItem {
   partNumber: string;
   quantity: number;
-  lineCode?: string;        // Brand code for parts
+  /** 
+   * Brand code (e.g., "GEN", "BFG", "TOY") - REQUIRED!
+   * The USAF Order API requires lineCode for all items.
+   * Get this from the StockCheck response's lineCodes field.
+   */
+  lineCode: string;
 }
 
 export interface USAutoForceShipToAddress {

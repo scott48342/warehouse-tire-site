@@ -12,6 +12,7 @@
 export * from "./types";
 export * from "./warehouses";
 export * from "./client";
+export * from "./brandCodes";
 
 // Default export for convenience
 import * as client from "./client";

@@ -369,12 +369,17 @@ export async function checkStockByPartNumber(
 /**
  * Place an order with US AutoForce
  * 
+ * IMPORTANT: Uses <parts> element with <PartDto>, NOT <tires>/<TireDto>!
+ * The Order API requires the generic parts format, even for tires.
+ * 
  * Delivery methods:
  * - "FedEx-Grou" - FedEx Ground
  * - "UPS-Grou" - UPS Ground
  * - "USPS-Mail" - USPS
  * 
  * Ship-to code 99999 = US AutoForce generates shipping label
+ * 
+ * lineCode (brand code) is REQUIRED for each item (e.g., "GEN", "BFG", "TOY")
  */
 export async function placeOrder(
   request: USAutoForceOrderRequest
@@ -392,19 +397,29 @@ export async function placeOrder(
     return { success: false, errorMessage: "Ship-to address required" };
   }
   
+  // Validate that all items have lineCode (required by USAF Order API)
+  const missingLineCode = request.items.filter(item => !item.lineCode);
+  if (missingLineCode.length > 0) {
+    console.error("[usautoforce] Items missing lineCode:", missingLineCode.map(i => i.partNumber));
+    return { 
+      success: false, 
+      errorMessage: `lineCode (brand code) required for all items. Missing for: ${missingLineCode.map(i => i.partNumber).join(", ")}` 
+    };
+  }
+  
   const transactionId = Date.now().toString();
   const branch = request.warehouseCode || "4101";
   
-  // Build tires XML (assuming tire order for now)
-  // Note: lineCode is the brand code (e.g., "TOY", "GEN", "BFG")
-  const tiresXml = request.items.map((item, idx) => `
-    <TireDto>
-      <lineNumber>${idx + 1}</lineNumber>
-      ${item.lineCode ? `<lineCode>${escapeXml(item.lineCode)}</lineCode>` : ""}
-      <partNumber>${escapeXml(item.partNumber)}</partNumber>
-      <quantityRequested>${item.quantity}</quantityRequested>
-    </TireDto>
-  `).join("");
+  // Build parts XML using <parts>/<PartDto> (NOT <tires>/<TireDto>!)
+  // The Order API requires this format - using <tires> returns "No part found!"
+  // lineCode is the brand code (e.g., "GEN", "BFG", "TOY") - REQUIRED
+  const partsXml = request.items.map((item, idx) => `
+      <PartDto>
+        <lineNumber>${idx + 1}</lineNumber>
+        <lineCode>${escapeXml(item.lineCode!)}</lineCode>
+        <partNumber>${escapeXml(item.partNumber)}</partNumber>
+        <quantityRequested>${item.quantity}</quantityRequested>
+      </PartDto>`).join("");
   
   const body = `<request>
     <revision>1.0</revision>
@@ -426,9 +441,8 @@ export async function placeOrder(
     <billTo>
       <billToCode>${escapeXml(config.api.accountNumber)}</billToCode>
     </billTo>
-    <tires>
-      ${tiresXml}
-    </tires>
+    <parts>${partsXml}
+    </parts>
     ${request.notes ? `<comments><CommentDto><type>vehicle</type><text>${escapeXml(request.notes)}</text></CommentDto></comments>` : ""}
   </request>`;
   

@@ -59,11 +59,24 @@ const result = await checkStockBySize("225/60R16", { branch: "4101" });
 - `availability[]` (per-warehouse with qty, address)
 
 ### Order
+
+**IMPORTANT**: The Order API uses `<parts>`/`<PartDto>`, NOT `<tires>`/`<TireDto>`!
+The `lineCode` (brand code) is REQUIRED for all items.
+
 ```typescript
 import { placeOrder } from "@/lib/usautoforce";
+import { getUSAFBrandCode } from "@/lib/usautoforce/brandCodes";
+
+// lineCode is REQUIRED - use brand code mapping
+const lineCode = getUSAFBrandCode("General"); // Returns "GEN"
+
 const result = await placeOrder({
   purchaseOrderNumber: "PO-12345",
-  items: [{ partNumber: "15502840000", quantity: 4 }],
+  items: [{ 
+    partNumber: "15502840000", 
+    quantity: 4,
+    lineCode: "GEN",  // REQUIRED! Brand code from StockCheck or mapping
+  }],
   shipTo: {
     name: "John Doe",
     address1: "123 Main St",
@@ -73,6 +86,23 @@ const result = await placeOrder({
   }
 });
 ```
+
+#### Brand Code Mapping
+The `lineCode` is a 2-4 character brand code (e.g., "GEN", "BFG", "TOY").
+Use `getUSAFBrandCode(brandName)` to convert full brand names to codes.
+
+Common codes:
+| Brand | Code |
+|-------|------|
+| General | GEN |
+| BF Goodrich | BFG |
+| Toyo | TOY |
+| Michelin | MIC |
+| Goodyear | GDY |
+| Continental | CON |
+| Cooper | COP |
+| Firestone | FIR |
+| Nokian | NOK |
 
 ### OrderStatusDetail
 ```typescript
