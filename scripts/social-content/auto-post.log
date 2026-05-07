@@ -4278,3 +4278,115 @@ Files:
 
 Add these to .env.local
 [Wed 05/06/2026 18:00:13.43] Auto-post complete 
+[Thu 05/07/2026  9:00:01.98] Starting auto-post... 
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:11728) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] American Racing AR605 TORQ THRUST M
+  Downloading image for American Racing AR605 TORQ THRUST M...
+  ✅ Generated: ar605_torq_thrust_m_1778158802483
+  📝 Caption preview: Weekend project? ✅
+
+American Racing AR605 TORQ THRUST M
+📐 17x8
+🔩 5X4.5
+↔️ 30mm...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - ar605_torq_thrust_m_1778158802483.png
+  - ar605_torq_thrust_m_1778158802483.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+📱 Facebook/Instagram Poster
+
+Selected: ar605_torq_thrust_m_1778158802483
+
+--- Content Preview ---
+Wheel: American Racing AR605 TORQ THRUST M
+Price: $410
+Image: ar605_torq_thrust_m_1778158802483.png
+
+Caption:
+Weekend project? ✅
+
+American Racing AR605 TORQ THRUST M
+📐 17x8
+🔩 5X4.5
+↔️ 30mm offset
+✨ AR605M TT-M 17X8 5X4.5 CHR +30MM
+
+Only $410/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/AR605M7866C
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #carsofinstagram #carlife #dailydriver #americanracing #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Wednesday, 29-Apr-26 15:00:00 PDT. The current time is Thursday, 07-May-26 06:00:03 PDT.
+
+✨ Done!
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:6876) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC D850 REBAR
+  ⚠️ No matching vehicle for bolt pattern 6X120, using generic caption
+  Downloading image for Fuel 1PC D850 REBAR...
+  ✅ Generated: d850_rebar_1778158808595
+  📝 Caption preview: Transform your truck with the Fuel 1PC D850 REBAR 🛞
+
+📐 17x9
+🔩 6X120
+↔️ 1mm of...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - d850_rebar_1778158808595.png
+  - d850_rebar_1778158808595.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Thu 05/07/2026  9:00:09.44] Auto-post complete 

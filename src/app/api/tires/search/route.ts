@@ -818,16 +818,92 @@ function findModelImage(
 /**
  * Search K&M/Keystone tires by size
  * 
- * DISABLED (2026-04-13): K&M is now queried through TireWeb (connection 490820)
- * which provides better tire images via TireLibrary. The direct K&M API returned
- * products without images. 
+ * RE-ENABLED (2026-05-07): K&M direct API is needed for INVENTORY data.
+ * TireWeb/K&M (connection 490820) has images but returns 0 inventory.
+ * K&M direct API has real inventory. We merge them in mergeTireResults().
  * 
- * K&M products now come through searchTiresTireWeb() with source "tireweb:km".
+ * K&M products still come through searchTiresTireWeb() for images (source "tireweb:km").
+ * This function provides inventory data to enrich those results.
  */
-async function searchTiresKM(_size: string): Promise<TireResult[]> {
-  // K&M is now queried via TireWeb (tireweb_km connection) for better images
-  // Direct API disabled - return empty to avoid duplicates
-  return [];
+async function searchTiresKM(size: string): Promise<TireResult[]> {
+  const apiKey = (
+    process.env.KM_API_KEY ||
+    process.env.KMTIRE_API_KEY ||
+    process.env.KM_TIRE_API_KEY ||
+    ""
+  ).trim();
+  
+  if (!apiKey) {
+    console.log("[tires/search] K&M API key not configured, skipping");
+    return [];
+  }
+  
+  const sizeCompact = toKmSizeFormat(size);
+  if (!sizeCompact) {
+    console.log("[tires/search] Could not convert size to K&M format:", size);
+    return [];
+  }
+  
+  try {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<InventoryRequest>
+<Credentials><APIKey>${apiKey}</APIKey></Credentials>
+<Item><TireSize>${sizeCompact}</TireSize><MinQty>1</MinQty></Item>
+</InventoryRequest>`;
+
+    const res = await fetch("https://api.kmtire.com/v1/tiresizesearch", {
+      method: "POST",
+      headers: { "Content-Type": "application/xml" },
+      body: xml,
+    });
+    
+    if (!res.ok) {
+      console.log("[tires/search] K&M API error:", res.status);
+      return [];
+    }
+    
+    const text = await res.text();
+    const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: "@_" });
+    const data = parser.parse(text);
+    
+    const result = data?.InventoryResponse?.InventoryResult;
+    if (!result) return [];
+    
+    const rawItems = result.Item || result.Items?.Item || [];
+    const items = Array.isArray(rawItems) ? rawItems : (rawItems ? [rawItems] : []);
+    
+    return items.map((it: any) => {
+      const partNumber = pickKmField(it, ["PartNumber", "partNumber"]) || "";
+      const brand = pickKmField(it, ["Brand", "brand"]) || "";
+      const description = pickKmField(it, ["Description", "description"]) || "";
+      const cost = parseFloat(pickKmField(it, ["Cost", "cost"]) || "0") || 0;
+      const primary = parseInt(pickKmField(it, ["Quantity", "QtyAvailable", "PrimaryQty"]) || "0") || 0;
+      const alternate = parseInt(pickKmField(it, ["AlternateQty", "SecondaryQty"]) || "0") || 0;
+      const national = parseInt(pickKmField(it, ["NationalQty", "TotalQty"]) || "0") || primary + alternate;
+      
+      return {
+        partNumber,
+        mfgPartNumber: pickKmField(it, ["MfgPartNumber", "mfgPartNumber"]) || partNumber,
+        brand,
+        model: "",
+        description,
+        cost,
+        price: cost + 50, // Standard markup
+        quantity: { primary, alternate, national },
+        imageUrl: null, // K&M direct doesn't have images, TireWeb will provide
+        size,
+        simpleSize: sizeCompact,
+        rimDiameter: parseInt(sizeCompact.slice(-2)) || 0,
+        tireLibraryId: null,
+        source: "km-direct" as const, // Mark as direct K&M for inventory merge
+        badges: {},
+        enrichment: {},
+      } as TireResult;
+    });
+  } catch (err) {
+    console.error("[tires/search] K&M API error:", err);
+    return [];
+  }
 }
 
 function pickKmField(it: any, keys: string[]): string | null {
@@ -1012,22 +1088,45 @@ async function mergeTireResults(
   // This fills in specs that TireWeb search doesn't return
   await enrichTireWebResultsWithSpecs(twResults);
   
+  // Build K&M inventory lookup by part number for quick access
+  // This allows us to enrich TireWeb results with K&M inventory
+  const kmInventory = new Map<string, { primary: number; alternate: number; national: number }>();
+  for (const tire of enrichedKmResults) {
+    if (tire.partNumber && (tire.quantity.primary > 0 || tire.quantity.alternate > 0 || tire.quantity.national > 0)) {
+      kmInventory.set(tire.partNumber.toUpperCase(), tire.quantity);
+    }
+  }
+  
   // Helper to add/merge a tire, keeping lowest price
-  const addTire = (tire: TireResult) => {
+  // NOTE: minQty filtering happens AFTER merge to allow inventory aggregation
+  const addTire = (tire: TireResult, skipMinQtyCheck: boolean = false) => {
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
-    const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
-    
-    // Skip if below minimum quantity
-    if (minQty > 0 && totalQty < minQty) return;
     
     if (!merged.has(key)) {
+      // For TireWeb results, check if K&M has inventory for this part number
+      // and merge it in (TireWeb often returns 0 inventory but K&M has real stock)
+      if (tire.source?.startsWith('tireweb') && tire.partNumber) {
+        const kmQty = kmInventory.get(tire.partNumber.toUpperCase());
+        if (kmQty) {
+          tire = {
+            ...tire,
+            quantity: {
+              primary: Math.max(tire.quantity.primary, kmQty.primary),
+              alternate: Math.max(tire.quantity.alternate, kmQty.alternate),
+              national: Math.max(tire.quantity.national, kmQty.national),
+            },
+          };
+        }
+      }
       merged.set(key, { ...tire });
     } else {
       const existing = merged.get(key)!;
       
-      // Aggregate quantities from different sources
+      // Aggregate quantities from different sources (take MAX, not sum, to avoid double-counting)
       if (existing.source !== tire.source) {
-        existing.quantity.national += tire.quantity.national;
+        existing.quantity.primary = Math.max(existing.quantity.primary, tire.quantity.primary);
+        existing.quantity.alternate = Math.max(existing.quantity.alternate, tire.quantity.alternate);
+        existing.quantity.national = Math.max(existing.quantity.national, tire.quantity.national);
       }
       
       // Keep the LOWEST PRICE (if the new one has a valid lower price)
@@ -1046,13 +1145,20 @@ async function mergeTireResults(
     }
   };
   
-  // Add all results - TireWeb first (best images), then K&M, then WheelPros
-  for (const tire of twResults) addTire(tire);
-  for (const tire of enrichedKmResults) addTire(tire);
-  for (const tire of wpResults) addTire(tire);
+  // Add all results - TireWeb first (best images), then K&M (with inventory), then WheelPros
+  // Don't filter by minQty yet - do it after merge
+  for (const tire of twResults) addTire(tire, true);
+  for (const tire of enrichedKmResults) addTire(tire, true);
+  for (const tire of wpResults) addTire(tire, true);
+  
+  // NOW filter by minQty after all sources are merged
+  const filtered = Array.from(merged.values()).filter(tire => {
+    const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
+    return minQty <= 0 || totalQty >= minQty;
+  });
   
   // Sort by PRICE ascending (lowest first), then by brand
-  const sorted = Array.from(merged.values()).sort((a, b) => {
+  const sorted = filtered.sort((a, b) => {
     const priceA = a.cost ?? a.price ?? Infinity;
     const priceB = b.cost ?? b.price ?? Infinity;
     if (priceA !== priceB) return priceA - priceB;  // Lowest price first
