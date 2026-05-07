@@ -91,7 +91,8 @@ const VEHICLES = [
   { year: "2024", make: "Ram", model: "2500", trim: "Laramie" },
   
   // Nissan trucks
-  { year: "2024", make: "Nissan", model: "Frontier", trim: "PRO-X" },
+  // Note: Frontier excluded - 6x114.3 bolt pattern has limited aftermarket wheels with negative offsets
+  // { year: "2024", make: "Nissan", model: "Frontier", trim: "PRO-X" },
   { year: "2024", make: "Nissan", model: "Titan", trim: "PRO-4X" },
   
   // Ford Ranger
