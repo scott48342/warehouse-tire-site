@@ -94,10 +94,13 @@ const STAGGERED_CAPABLE_PATTERNS: Array<{ make: RegExp; model: RegExp }> = [
   { make: /^chevrolet$/i, model: /camaro|corvette/i },
   { make: /^dodge$/i, model: /challenger|charger|viper/i },
   // German Performance
-  { make: /^bmw$/i, model: /m[2-8]|z[1-8]|[1-8]\s*series/i },
+  { make: /^bmw$/i, model: /m[2-8]|z[1-8]|[1-8]\s*series|x5|x6/i },
   { make: /^mercedes-?benz$/i, model: /amg|sl|cls|gt/i },
   { make: /^audi$/i, model: /rs|r8|tt|s[3-8]/i },
-  { make: /^porsche$/i, model: /911|cayman|boxster|panamera|taycan/i },
+  { make: /^porsche$/i, model: /911|718|cayman|boxster|panamera|taycan|cayenne/i },
+  // EVs with staggered setups (Performance trims)
+  { make: /^tesla$/i, model: /model\s*[3sxy]/i },
+  { make: /^volkswagen$/i, model: /id\.?4/i },
   // Japanese Sports
   { make: /^nissan$/i, model: /gt-?r|370z|350z|z$/i },
   { make: /^lexus$/i, model: /rc|lc|is-?f|gs-?f|lfa/i },
