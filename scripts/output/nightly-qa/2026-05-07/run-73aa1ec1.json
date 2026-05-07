@@ -1,7 +1,7 @@
 {
-  "run_id": "3bf8f01c",
-  "started_at": "2026-05-07T13:32:15.047Z",
-  "completed_at": "2026-05-07T13:32:39.717Z",
+  "run_id": "73aa1ec1",
+  "started_at": "2026-05-07T13:15:48.409Z",
+  "completed_at": "2026-05-07T13:16:42.834Z",
   "environment": {
     "base_url": "https://shop.warehousetiredirect.com",
     "commit_hash": null,
@@ -9,27 +9,27 @@
   },
   "summary": {
     "total_vehicles": 25,
-    "passed": 21,
-    "failed": 4,
+    "passed": 20,
+    "failed": 5,
     "warnings": 0,
     "skipped": 0,
-    "pass_rate": 84,
-    "logic_pass_rate": 84,
-    "inventory_adjusted_pass_rate": 84,
-    "logic_passed": 21,
-    "logic_failed": 4,
+    "pass_rate": 80,
+    "logic_pass_rate": 80,
+    "inventory_adjusted_pass_rate": 80,
+    "logic_passed": 20,
+    "logic_failed": 5,
     "known_gaps": 0,
-    "critical_regressions": 2,
-    "duration_ms": 77993,
+    "critical_regressions": 3,
+    "duration_ms": 145611,
     "by_severity": {
-      "critical": 2,
+      "critical": 3,
       "high": 0,
       "medium": 2,
       "low": 0,
       "info": 0
     },
     "by_failure_type": {
-      "logic": 2,
+      "logic": 3,
       "inventory": 0,
       "supplier": 2,
       "data_gap": 0,
@@ -37,25 +37,34 @@
       "regression": 0
     },
     "by_category": {
-      "midsize": {
-        "total": 5,
+      "staggered": {
+        "total": 4,
         "passed": 4,
-        "failed": 1,
-        "warnings": 0,
-        "logicPassed": 4,
-        "passRate": 80,
-        "logicPassRate": 80
-      },
-      "car": {
-        "total": 2,
-        "passed": 2,
         "failed": 0,
         "warnings": 0,
-        "logicPassed": 2,
+        "logicPassed": 4,
         "passRate": 100,
         "logicPassRate": 100
       },
-      "staggered": {
+      "midsize": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1,
+        "warnings": 0,
+        "logicPassed": 2,
+        "passRate": 67,
+        "logicPassRate": 67
+      },
+      "suv": {
+        "total": 4,
+        "passed": 2,
+        "failed": 2,
+        "warnings": 0,
+        "logicPassed": 2,
+        "passRate": 50,
+        "logicPassRate": 50
+      },
+      "half-ton": {
         "total": 4,
         "passed": 3,
         "failed": 1,
@@ -63,33 +72,6 @@
         "logicPassed": 3,
         "passRate": 75,
         "logicPassRate": 75
-      },
-      "half-ton": {
-        "total": 6,
-        "passed": 6,
-        "failed": 0,
-        "warnings": 0,
-        "logicPassed": 6,
-        "passRate": 100,
-        "logicPassRate": 100
-      },
-      "ev": {
-        "total": 2,
-        "passed": 1,
-        "failed": 1,
-        "warnings": 0,
-        "logicPassed": 1,
-        "passRate": 50,
-        "logicPassRate": 50
-      },
-      "jeep": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0,
-        "warnings": 0,
-        "logicPassed": 2,
-        "passRate": 100,
-        "logicPassRate": 100
       },
       "hd": {
         "total": 3,
@@ -100,90 +82,36 @@
         "passRate": 100,
         "logicPassRate": 100
       },
-      "suv": {
-        "total": 1,
-        "passed": 0,
+      "jeep": {
+        "total": 3,
+        "passed": 2,
         "failed": 1,
         "warnings": 0,
-        "logicPassed": 0,
-        "passRate": 0,
-        "logicPassRate": 0
+        "logicPassed": 2,
+        "passRate": 67,
+        "logicPassRate": 67
+      },
+      "car": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "warnings": 0,
+        "logicPassed": 3,
+        "passRate": 100,
+        "logicPassRate": 100
+      },
+      "ev": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "warnings": 0,
+        "logicPassed": 1,
+        "passRate": 100,
+        "logicPassRate": 100
       }
     }
   },
   "results": [
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "GMC",
-        "model": "Canyon",
-        "trim": "AT4",
-        "category": "midsize",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 50,
-      "tireCount": 0,
-      "boltPattern": "6x120",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 4918
-    },
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "Toyota",
-        "model": "Camry",
-        "trim": "XLE",
-        "category": "car",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 0,
-      "boltPattern": "5x114.3",
-      "boltPatternMatch": true,
-      "liftedPassed": 0,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 1507
-    },
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "Jeep",
-        "model": "Gladiator",
-        "trim": "Sport",
-        "category": "midsize",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "fail",
-      "severity": "medium",
-      "failureType": "supplier",
-      "wheelCount": 500,
-      "tireCount": 0,
-      "boltPattern": "5x127",
-      "boltPatternMatch": true,
-      "liftedPassed": 3,
-      "liftedFailed": 1,
-      "packageViable": false,
-      "errors": [
-        "[medium] Tire search returned no results",
-        "[lift-8] Tire diameter 29\" outside expected band 30-42\" for 8\" lift"
-      ],
-      "durationMs": 6045
-    },
     {
       "vehicle": {
         "year": 2024,
@@ -207,15 +135,15 @@
       "liftedFailed": 0,
       "packageViable": false,
       "errors": [],
-      "durationMs": 3471
+      "durationMs": 5072
     },
     {
       "vehicle": {
         "year": 2024,
-        "make": "Ford",
-        "model": "F-150",
-        "trim": "XLT",
-        "category": "half-ton",
+        "make": "Toyota",
+        "model": "Tacoma",
+        "trim": "TRD Sport",
+        "category": "midsize",
         "isPerformance": false,
         "isCanary": false
       },
@@ -224,43 +152,20 @@
       "failureType": null,
       "wheelCount": 500,
       "tireCount": 100,
-      "boltPattern": "6x135",
+      "boltPattern": "6x139.7",
       "boltPatternMatch": true,
       "liftedPassed": 4,
       "liftedFailed": 0,
       "packageViable": false,
       "errors": [],
-      "durationMs": 7223
+      "durationMs": 20812
     },
     {
       "vehicle": {
         "year": 2023,
         "make": "Chevrolet",
-        "model": "Colorado",
-        "trim": "ZR2",
-        "category": "midsize",
-        "isPerformance": true,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 50,
-      "tireCount": 0,
-      "boltPattern": "6x120",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 2423
-    },
-    {
-      "vehicle": {
-        "year": 2023,
-        "make": "Chevrolet",
-        "model": "Camaro",
-        "trim": "ZL1",
+        "model": "Corvette",
+        "trim": "Stingray",
         "category": "staggered",
         "isPerformance": false,
         "isCanary": false
@@ -278,158 +183,15 @@
       "liftedFailed": 0,
       "packageViable": false,
       "errors": [],
-      "durationMs": 820
-    },
-    {
-      "vehicle": {
-        "year": 2023,
-        "make": "Ford",
-        "model": "Mustang",
-        "trim": "GT Performance Pack",
-        "category": "staggered",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 0,
-      "boltPattern": "5x114.3",
-      "boltPatternMatch": true,
-      "staggeredDetected": true,
-      "staggeredMismatch": false,
-      "liftedPassed": 0,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 1997
+      "durationMs": 6846
     },
     {
       "vehicle": {
         "year": 2024,
-        "make": "Mercedes-Benz",
-        "model": "EQS",
-        "trim": "450+",
-        "category": "ev",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "fail",
-      "severity": "critical",
-      "failureType": "logic",
-      "wheelCount": 500,
-      "tireCount": 100,
-      "boltPattern": "5x114.3",
-      "boltPatternMatch": false,
-      "liftedPassed": 0,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [
-        "[critical] Bolt pattern mismatch: expected 5x112, got 5x114.3",
-        "[wheel] Bolt pattern mismatch: expected 5x112, got 5x114.3"
-      ],
-      "durationMs": 2731
-    },
-    {
-      "vehicle": {
-        "year": 2022,
-        "make": "Ford",
-        "model": "Bronco",
-        "trim": "Raptor",
-        "category": "jeep",
-        "isPerformance": true,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 0,
-      "boltPattern": "6x139.7",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 2860
-    },
-    {
-      "vehicle": {
-        "year": 2020,
-        "make": "Ford",
-        "model": "F-150",
-        "trim": "XL",
-        "category": "half-ton",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 100,
-      "boltPattern": "6x135",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 4930
-    },
-    {
-      "vehicle": {
-        "year": 2023,
-        "make": "Toyota",
-        "model": "4Runner",
-        "trim": "TRD Pro",
-        "category": "midsize",
-        "isPerformance": true,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 100,
-      "boltPattern": "6x139.7",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 6052
-    },
-    {
-      "vehicle": {
-        "year": 2023,
         "make": "Chevrolet",
-        "model": "Silverado 3500 HD",
-        "trim": "LTZ",
-        "category": "hd",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 376,
-      "tireCount": 0,
-      "boltPattern": "8x180",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 2520
-    },
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "Ford",
-        "model": "F-150",
-        "trim": "Lariat",
-        "category": "half-ton",
+        "model": "Tahoe",
+        "trim": "LT",
+        "category": "suv",
         "isPerformance": false,
         "isCanary": false
       },
@@ -438,95 +200,20 @@
       "failureType": null,
       "wheelCount": 500,
       "tireCount": 100,
-      "boltPattern": "6x135",
+      "boltPattern": "6x139.7",
       "boltPatternMatch": true,
       "liftedPassed": 4,
       "liftedFailed": 0,
       "packageViable": false,
       "errors": [],
-      "durationMs": 2344
-    },
-    {
-      "vehicle": {
-        "year": 2023,
-        "make": "Dodge",
-        "model": "Challenger",
-        "trim": "SRT Hellcat",
-        "category": "staggered",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "fail",
-      "severity": "critical",
-      "failureType": "logic",
-      "wheelCount": 124,
-      "tireCount": 100,
-      "boltPattern": "5x115",
-      "boltPatternMatch": true,
-      "staggeredDetected": false,
-      "staggeredMismatch": true,
-      "liftedPassed": 0,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [
-        "[critical] Staggered vehicle not detected as staggered (expected=true, detected=false)",
-        "[staggered] Staggered mismatch: expected=true, detected=false",
-        "[staggered] CRITICAL: This is a Tier A staggered vehicle that MUST be detected correctly"
-      ],
-      "durationMs": 2258
-    },
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "Subaru",
-        "model": "Outback",
-        "trim": "Premium",
-        "category": "car",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 0,
-      "boltPattern": "5x114.3",
-      "boltPatternMatch": true,
-      "liftedPassed": 0,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 656
+      "durationMs": 11807
     },
     {
       "vehicle": {
         "year": 2024,
         "make": "Chevrolet",
         "model": "Silverado 1500",
-        "trim": "High Country",
-        "category": "half-ton",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 94,
-      "boltPattern": "6x139.7",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 4574
-    },
-    {
-      "vehicle": {
-        "year": 2023,
-        "make": "Ram",
-        "model": "1500",
-        "trim": "Rebel",
+        "trim": "LT",
         "category": "half-ton",
         "isPerformance": false,
         "isCanary": false
@@ -542,53 +229,7 @@
       "liftedFailed": 0,
       "packageViable": false,
       "errors": [],
-      "durationMs": 3689
-    },
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "Ram",
-        "model": "1500",
-        "trim": "Big Horn",
-        "category": "half-ton",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 100,
-      "boltPattern": "6x139.7",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 2954
-    },
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "Jeep",
-        "model": "Wrangler",
-        "trim": "Rubicon 392",
-        "category": "jeep",
-        "isPerformance": true,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 500,
-      "tireCount": 100,
-      "boltPattern": "5x127",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 2888
+      "durationMs": 13246
     },
     {
       "vehicle": {
@@ -615,15 +256,15 @@
         "[lift-6] Tire diameter 29\" outside expected band 30-42\" for 6\" lift",
         "[lift-8] Tire diameter 29\" outside expected band 30-44\" for 8\" lift"
       ],
-      "durationMs": 2341
+      "durationMs": 17403
     },
     {
       "vehicle": {
-        "year": 2024,
-        "make": "Kia",
-        "model": "EV6",
-        "trim": "GT-Line",
-        "category": "ev",
+        "year": 2023,
+        "make": "Ford",
+        "model": "Mustang",
+        "trim": "GT Performance Pack",
+        "category": "staggered",
         "isPerformance": false,
         "isCanary": false
       },
@@ -634,64 +275,20 @@
       "tireCount": 0,
       "boltPattern": "5x114.3",
       "boltPatternMatch": true,
+      "staggeredDetected": true,
+      "staggeredMismatch": false,
       "liftedPassed": 0,
       "liftedFailed": 0,
       "packageViable": false,
       "errors": [],
-      "durationMs": 750
-    },
-    {
-      "vehicle": {
-        "year": 2024,
-        "make": "Chevrolet",
-        "model": "Colorado",
-        "trim": "LT",
-        "category": "midsize",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 50,
-      "tireCount": 0,
-      "boltPattern": "6x120",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 1953
-    },
-    {
-      "vehicle": {
-        "year": 2023,
-        "make": "Ford",
-        "model": "F-350",
-        "trim": "King Ranch",
-        "category": "hd",
-        "isPerformance": false,
-        "isCanary": false
-      },
-      "status": "pass",
-      "severity": null,
-      "failureType": null,
-      "wheelCount": 420,
-      "tireCount": 100,
-      "boltPattern": "8x170",
-      "boltPatternMatch": true,
-      "liftedPassed": 4,
-      "liftedFailed": 0,
-      "packageViable": false,
-      "errors": [],
-      "durationMs": 3898
+      "durationMs": 1773
     },
     {
       "vehicle": {
         "year": 2024,
         "make": "Chevrolet",
         "model": "Silverado 2500 HD",
-        "trim": "High Country",
+        "trim": "LT",
         "category": "hd",
         "isPerformance": false,
         "isCanary": false
@@ -707,7 +304,414 @@
       "liftedFailed": 0,
       "packageViable": false,
       "errors": [],
-      "durationMs": 2191
+      "durationMs": 8068
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Bronco",
+        "trim": "Wildtrak",
+        "category": "jeep",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "6x139.7",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 9696
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Hyundai",
+        "model": "Sonata",
+        "trim": "SEL",
+        "category": "car",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x114.3",
+      "boltPatternMatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 2023
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Bolt EUV",
+        "trim": "Premier",
+        "category": "ev",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 20,
+      "tireCount": 0,
+      "boltPattern": "5x105",
+      "boltPatternMatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 731
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F-150",
+        "trim": "Lariat",
+        "category": "half-ton",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "6x135",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 7191
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Lexus",
+        "model": "LX",
+        "trim": "600",
+        "category": "suv",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 142,
+      "tireCount": 0,
+      "boltPattern": "5x150",
+      "boltPatternMatch": false,
+      "liftedPassed": 2,
+      "liftedFailed": 2,
+      "packageViable": false,
+      "errors": [
+        "[critical] Bolt pattern mismatch: expected 6x139.7, got 5x150",
+        "[wheel] Bolt pattern mismatch: expected 6x139.7, got 5x150",
+        "[lift-6] Tire diameter 29\" outside expected band 30-42\" for 6\" lift",
+        "[lift-8] Tire diameter 29\" outside expected band 30-44\" for 8\" lift"
+      ],
+      "durationMs": 6716
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ram",
+        "model": "1500",
+        "trim": "Laramie",
+        "category": "half-ton",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 100,
+      "boltPattern": "6x139.7",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 4425
+    },
+    {
+      "vehicle": {
+        "year": 2022,
+        "make": "Ford",
+        "model": "Bronco",
+        "trim": "Raptor",
+        "category": "jeep",
+        "isPerformance": true,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "6x139.7",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 2876
+    },
+    {
+      "vehicle": {
+        "year": 2022,
+        "make": "Ram",
+        "model": "3500",
+        "trim": "Limited",
+        "category": "hd",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 442,
+      "tireCount": 100,
+      "boltPattern": "8x165.1",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 4966
+    },
+    {
+      "vehicle": {
+        "year": 2023,
+        "make": "Chevrolet",
+        "model": "Silverado 1500",
+        "trim": "Trail Boss",
+        "category": "half-ton",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 0,
+      "tireCount": 100,
+      "boltPattern": null,
+      "boltPatternMatch": false,
+      "liftedPassed": 0,
+      "liftedFailed": 4,
+      "packageViable": false,
+      "errors": [
+        "[critical] Bolt pattern mismatch: expected 6x139.7, got null",
+        "[wheel] Zero wheels returned"
+      ],
+      "durationMs": 2755
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Accord",
+        "trim": "Sport",
+        "category": "car",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x114.3",
+      "boltPatternMatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 1272
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Civic",
+        "trim": "Touring",
+        "category": "car",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x114.3",
+      "boltPatternMatch": true,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 1543
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Gladiator",
+        "trim": "Sport",
+        "category": "midsize",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "fail",
+      "severity": "medium",
+      "failureType": "supplier",
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x127",
+      "boltPatternMatch": true,
+      "liftedPassed": 3,
+      "liftedFailed": 1,
+      "packageViable": false,
+      "errors": [
+        "[medium] Tire search returned no results",
+        "[lift-8] Tire diameter 29\" outside expected band 30-42\" for 8\" lift"
+      ],
+      "durationMs": 2873
+    },
+    {
+      "vehicle": {
+        "year": 2023,
+        "make": "Chevrolet",
+        "model": "Camaro",
+        "trim": "ZL1",
+        "category": "staggered",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "5x120",
+      "boltPatternMatch": true,
+      "staggeredDetected": true,
+      "staggeredMismatch": false,
+      "liftedPassed": 0,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 798
+    },
+    {
+      "vehicle": {
+        "year": 2023,
+        "make": "GMC",
+        "model": "Sierra 3500 HD",
+        "trim": "Denali",
+        "category": "hd",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 376,
+      "tireCount": 0,
+      "boltPattern": "8x180",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 3603
+    },
+    {
+      "vehicle": {
+        "year": 2023,
+        "make": "Chevrolet",
+        "model": "Colorado",
+        "trim": "ZR2",
+        "category": "midsize",
+        "isPerformance": true,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 50,
+      "tireCount": 0,
+      "boltPattern": "6x120",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 2820
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wrangler",
+        "trim": "392",
+        "category": "jeep",
+        "isPerformance": true,
+        "isCanary": false
+      },
+      "status": "fail",
+      "severity": "critical",
+      "failureType": "logic",
+      "wheelCount": 0,
+      "tireCount": 100,
+      "boltPattern": null,
+      "boltPatternMatch": false,
+      "liftedPassed": 0,
+      "liftedFailed": 4,
+      "packageViable": false,
+      "errors": [
+        "[critical] Bolt pattern mismatch: expected 5x127, got null",
+        "[wheel] Zero wheels returned"
+      ],
+      "durationMs": 3872
+    },
+    {
+      "vehicle": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Expedition",
+        "trim": "XLT",
+        "category": "suv",
+        "isPerformance": false,
+        "isCanary": false
+      },
+      "status": "pass",
+      "severity": null,
+      "failureType": null,
+      "wheelCount": 500,
+      "tireCount": 0,
+      "boltPattern": "6x135",
+      "boltPatternMatch": true,
+      "liftedPassed": 4,
+      "liftedFailed": 0,
+      "packageViable": false,
+      "errors": [],
+      "durationMs": 2424
     }
   ]
 }

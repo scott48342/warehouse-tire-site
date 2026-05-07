@@ -20,7 +20,7 @@ const FALLBACK_VEHICLES = {
     { year: 2023, make: 'Ford', model: 'F-150', trim: 'Raptor', expectedBolt: '6x135', isPerformance: true },
     { year: 2024, make: 'Chevrolet', model: 'Silverado 1500', trim: 'LT', expectedBolt: '6x139.7' },
     { year: 2024, make: 'Chevrolet', model: 'Silverado 1500', trim: 'High Country', expectedBolt: '6x139.7' },
-    { year: 2023, make: 'Chevrolet', model: 'Silverado 1500', trim: 'Trail Boss', expectedBolt: '6x139.7' },
+    { year: 2023, make: 'Chevrolet', model: 'Silverado 1500', trim: 'LT Trail Boss', expectedBolt: '6x139.7' },
     { year: 2024, make: 'GMC', model: 'Sierra 1500', trim: 'SLT', expectedBolt: '6x139.7' },
     { year: 2024, make: 'GMC', model: 'Sierra 1500', trim: 'AT4', expectedBolt: '6x139.7' },
     { year: 2024, make: 'Ram', model: '1500', trim: 'Big Horn', expectedBolt: '6x139.7' },
@@ -67,7 +67,7 @@ const FALLBACK_VEHICLES = {
     { year: 2024, make: 'Jeep', model: 'Wrangler', trim: 'Sahara', expectedBolt: '5x127' },
     { year: 2024, make: 'Jeep', model: 'Wrangler', trim: 'Rubicon', expectedBolt: '5x127', isPerformance: true },
     { year: 2023, make: 'Jeep', model: 'Wrangler', trim: 'Willys', expectedBolt: '5x127' },
-    { year: 2024, make: 'Jeep', model: 'Wrangler', trim: '392', expectedBolt: '5x127', isPerformance: true },
+    { year: 2024, make: 'Jeep', model: 'Wrangler', trim: 'Rubicon 392', expectedBolt: '5x127', isPerformance: true },
     { year: 2022, make: 'Jeep', model: 'Wrangler', trim: 'Sport S', expectedBolt: '5x127' },
     { year: 2020, make: 'Jeep', model: 'Wrangler', trim: 'Unlimited', expectedBolt: '5x127' },
     { year: 2018, make: 'Jeep', model: 'Wrangler JK', trim: 'Unlimited', expectedBolt: '5x127' },
@@ -88,11 +88,11 @@ const FALLBACK_VEHICLES = {
     { year: 2024, make: 'Chevrolet', model: 'Camaro', trim: 'LT', expectedBolt: '5x120', isStaggered: false },
     { year: 2024, make: 'Chevrolet', model: 'Camaro', trim: 'SS', expectedBolt: '5x120', isStaggered: true, criticalStaggered: true },
     { year: 2023, make: 'Chevrolet', model: 'Camaro', trim: 'ZL1', expectedBolt: '5x120', isStaggered: true, criticalStaggered: true },
-    // Challenger - only Widebody/Hellcat are staggered, R/T base is not
+    // Challenger - only Widebody variants are staggered (base Hellcat is NOT)
     { year: 2024, make: 'Dodge', model: 'Challenger', trim: 'SXT', expectedBolt: '5x115', isStaggered: false },
     { year: 2024, make: 'Dodge', model: 'Challenger', trim: 'R/T', expectedBolt: '5x115', isStaggered: false },
-    { year: 2023, make: 'Dodge', model: 'Challenger', trim: 'SRT Hellcat', expectedBolt: '5x115', isStaggered: true, criticalStaggered: true },
-    { year: 2024, make: 'Dodge', model: 'Challenger', trim: 'Widebody', expectedBolt: '5x115', isStaggered: true, criticalStaggered: true },
+    { year: 2023, make: 'Dodge', model: 'Challenger', trim: 'SRT Hellcat', expectedBolt: '5x115', isStaggered: false },
+    { year: 2023, make: 'Dodge', model: 'Challenger', trim: 'SRT Hellcat Widebody', expectedBolt: '5x115', isStaggered: true, criticalStaggered: true },
     // Corvette - always staggered
     { year: 2023, make: 'Chevrolet', model: 'Corvette', trim: 'Stingray', expectedBolt: '5x120', isStaggered: true, criticalStaggered: true },
     // European performance (these may or may not have data)
@@ -125,7 +125,7 @@ const FALLBACK_VEHICLES = {
     { year: 2024, make: 'Toyota', model: 'Sequoia', trim: 'SR5', expectedBolt: '6x139.7' },
     { year: 2024, make: 'Cadillac', model: 'Escalade', trim: 'Premium Luxury', expectedBolt: '6x139.7' },
     { year: 2024, make: 'Lincoln', model: 'Navigator', trim: 'Reserve', expectedBolt: '6x135' },
-    { year: 2024, make: 'Lexus', model: 'LX', trim: '600', expectedBolt: '6x139.7' },
+    { year: 2024, make: 'Lexus', model: 'LX', trim: '600', expectedBolt: '5x150' },
     { year: 2024, make: 'Infiniti', model: 'QX80', trim: 'Luxe', expectedBolt: '6x139.7' },
   ],
   'ev': [
