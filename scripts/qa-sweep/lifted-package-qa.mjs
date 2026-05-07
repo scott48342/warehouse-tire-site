@@ -24,16 +24,78 @@ const BASE_URL = process.env.BASE_URL || "https://shop.warehousetiredirect.com";
 const DATABASE_URL = process.env.POSTGRES_URL || process.env.DATABASE_URL;
 const DRY_RUN = process.argv.includes('--dry-run');
 
-// Test vehicles
+// Test vehicles - 50 popular trucks/SUVs that customers lift
 const VEHICLES = [
+  // Ram 1500 variants
   { year: "2024", make: "Ram", model: "1500", trim: "Big Horn" },
+  { year: "2024", make: "Ram", model: "1500", trim: "Laramie" },
+  { year: "2024", make: "Ram", model: "1500", trim: "Rebel" },
+  { year: "2023", make: "Ram", model: "1500", trim: "Limited" },
+  { year: "2022", make: "Ram", model: "1500", trim: "Tradesman" },
+  { year: "2021", make: "Ram", model: "1500", trim: "Sport" },
+  
+  // Ford F-150 variants
   { year: "2024", make: "Ford", model: "F-150", trim: "XLT" },
+  { year: "2024", make: "Ford", model: "F-150", trim: "Lariat" },
+  { year: "2023", make: "Ford", model: "F-150", trim: "Platinum" },
+  { year: "2023", make: "Ford", model: "F-150", trim: "Tremor" },
+  { year: "2022", make: "Ford", model: "F-150", trim: "STX" },
+  { year: "2021", make: "Ford", model: "F-150", trim: "King Ranch" },
+  
+  // Chevy Silverado 1500 variants
   { year: "2024", make: "Chevrolet", model: "Silverado 1500", trim: "LT" },
+  { year: "2024", make: "Chevrolet", model: "Silverado 1500", trim: "RST" },
+  { year: "2024", make: "Chevrolet", model: "Silverado 1500", trim: "Trail Boss" },
+  { year: "2023", make: "Chevrolet", model: "Silverado 1500", trim: "High Country" },
+  { year: "2022", make: "Chevrolet", model: "Silverado 1500", trim: "Custom" },
+  { year: "2021", make: "Chevrolet", model: "Silverado 1500", trim: "WT" },
+  
+  // GMC Sierra 1500 variants
   { year: "2024", make: "GMC", model: "Sierra 1500", trim: "Elevation" },
+  { year: "2024", make: "GMC", model: "Sierra 1500", trim: "SLT" },
+  { year: "2023", make: "GMC", model: "Sierra 1500", trim: "AT4" },
+  { year: "2023", make: "GMC", model: "Sierra 1500", trim: "Denali" },
+  { year: "2022", make: "GMC", model: "Sierra 1500", trim: "Pro" },
+  
+  // Toyota Tacoma variants
   { year: "2024", make: "Toyota", model: "Tacoma", trim: "SR5" },
+  { year: "2024", make: "Toyota", model: "Tacoma", trim: "TRD Off-Road" },
+  { year: "2023", make: "Toyota", model: "Tacoma", trim: "TRD Pro" },
+  { year: "2022", make: "Toyota", model: "Tacoma", trim: "Limited" },
+  { year: "2021", make: "Toyota", model: "Tacoma", trim: "Trail" },
+  
+  // Toyota Tundra variants
   { year: "2024", make: "Toyota", model: "Tundra", trim: "SR5" },
+  { year: "2024", make: "Toyota", model: "Tundra", trim: "Limited" },
+  { year: "2023", make: "Toyota", model: "Tundra", trim: "TRD Pro" },
+  { year: "2022", make: "Toyota", model: "Tundra", trim: "Platinum" },
+  
+  // Jeep Wrangler variants
   { year: "2024", make: "Jeep", model: "Wrangler", trim: "Rubicon" },
-  { year: "2020", make: "Chevrolet", model: "Silverado 2500 HD", trim: "LT" },
+  { year: "2024", make: "Jeep", model: "Wrangler", trim: "Sport" },
+  { year: "2024", make: "Jeep", model: "Wrangler", trim: "Sahara" },
+  { year: "2023", make: "Jeep", model: "Wrangler", trim: "Willys" },
+  { year: "2022", make: "Jeep", model: "Wrangler", trim: "Rubicon 392" },
+  
+  // Jeep Gladiator variants
+  { year: "2024", make: "Jeep", model: "Gladiator", trim: "Rubicon" },
+  { year: "2024", make: "Jeep", model: "Gladiator", trim: "Sport" },
+  { year: "2023", make: "Jeep", model: "Gladiator", trim: "Mojave" },
+  
+  // HD Trucks
+  { year: "2024", make: "Chevrolet", model: "Silverado 2500 HD", trim: "LT" },
+  { year: "2024", make: "Chevrolet", model: "Silverado 2500 HD", trim: "High Country" },
+  { year: "2024", make: "GMC", model: "Sierra 2500 HD", trim: "AT4" },
+  { year: "2024", make: "Ford", model: "F-250", trim: "XLT" },
+  { year: "2024", make: "Ford", model: "F-250", trim: "Lariat" },
+  { year: "2024", make: "Ram", model: "2500", trim: "Laramie" },
+  
+  // Nissan trucks
+  { year: "2024", make: "Nissan", model: "Frontier", trim: "PRO-X" },
+  { year: "2024", make: "Nissan", model: "Titan", trim: "PRO-4X" },
+  
+  // Ford Ranger
+  { year: "2024", make: "Ford", model: "Ranger", trim: "Lariat" },
 ];
 
 // Lift heights to test (maps to presets: 2"=daily, 4"=offroad, 6"=extreme)
@@ -48,14 +110,28 @@ const EXPECTED_MIN_TIRE_DIA = {
 
 // Stock tire diameter approximations for common trucks
 const STOCK_TIRE_DIAMETERS = {
+  // Half-ton trucks
   "ram|1500": 32,
   "ford|f-150": 32,
   "chevrolet|silverado 1500": 32,
   "gmc|sierra 1500": 32,
-  "toyota|tacoma": 31,
   "toyota|tundra": 32,
+  "nissan|titan": 32,
+  
+  // Mid-size trucks
+  "toyota|tacoma": 31,
+  "nissan|frontier": 31,
+  "ford|ranger": 31,
+  "jeep|gladiator": 32,
+  
+  // SUVs
   "jeep|wrangler": 32, // Rubicon comes with 33s stock
+  
+  // HD trucks
   "chevrolet|silverado 2500 hd": 33,
+  "gmc|sierra 2500 hd": 33,
+  "ford|f-250": 33,
+  "ram|2500": 33,
 };
 
 async function fetchJson(url) {
