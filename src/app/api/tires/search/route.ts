@@ -1097,10 +1097,15 @@ async function mergeTireResults(
     }
   }
   
-  // Helper to add/merge a tire, keeping lowest price
+  // Helper to add/merge a tire, keeping lowest price FROM SOURCES WITH SUFFICIENT INVENTORY
   // NOTE: minQty filtering happens AFTER merge to allow inventory aggregation
+  // FIX (2026-05-07): Only use a supplier's price if they have >= minQty inventory
+  // This prevents showing ATD's $104 price when ATD only has 2 but customer needs 4
   const addTire = (tire: TireResult, skipMinQtyCheck: boolean = false) => {
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
+    
+    // Calculate this source's available quantity
+    const tireSourceQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
     
     if (!merged.has(key)) {
       // For TireWeb results, check if K&M has inventory for this part number
@@ -1118,7 +1123,13 @@ async function mergeTireResults(
           };
         }
       }
-      merged.set(key, { ...tire });
+      // Track which source the price came from and their inventory
+      const enrichedTire = { 
+        ...tire, 
+        priceSource: tire.source,
+        priceSourceQty: tireSourceQty,
+      };
+      merged.set(key, enrichedTire);
     } else {
       const existing = merged.get(key)!;
       
@@ -1129,14 +1140,33 @@ async function mergeTireResults(
         existing.quantity.national = Math.max(existing.quantity.national, tire.quantity.national);
       }
       
-      // Keep the LOWEST PRICE (if the new one has a valid lower price)
+      // Keep the LOWEST PRICE only if that source has enough inventory
+      // This is the critical fix: don't show ATD's low price if ATD can't fulfill the order
       const existingPrice = existing.cost ?? existing.price ?? Infinity;
       const newPrice = tire.cost ?? tire.price ?? Infinity;
+      const existingPriceSourceQty = (existing as any).priceSourceQty ?? 0;
       
-      if (newPrice < existingPrice && newPrice > 0) {
-        // New source has lower price - update price but keep best image
+      // Use the new price if:
+      // 1. New price is lower AND new source has enough inventory (>= minQty), OR
+      // 2. Existing price source doesn't have enough inventory but new source does
+      const newSourceHasEnough = tireSourceQty >= (minQty || 4);
+      const existingSourceHasEnough = existingPriceSourceQty >= (minQty || 4);
+      
+      const shouldUpdatePrice = 
+        (newPrice < existingPrice && newPrice > 0 && newSourceHasEnough) ||
+        (!existingSourceHasEnough && newSourceHasEnough && newPrice > 0);
+      
+      // Log when we REJECT a lower price due to insufficient inventory
+      if (newPrice < existingPrice && newPrice > 0 && !newSourceHasEnough) {
+        console.log(`[pricing] Rejecting lower price from ${tire.source}: $${newPrice} (only ${tireSourceQty} in stock, need ${minQty || 4}). Keeping $${existingPrice} from ${(existing as any).priceSource}`);
+      }
+      
+      if (shouldUpdatePrice) {
+        // Update to this source's price
         existing.cost = tire.cost;
         existing.price = tire.price;
+        (existing as any).priceSource = tire.source;
+        (existing as any).priceSourceQty = tireSourceQty;
         // Keep TireLibrary image if existing has one
         if (!existing.imageUrl?.includes('tirelibrary') && tire.imageUrl) {
           existing.imageUrl = tire.imageUrl;

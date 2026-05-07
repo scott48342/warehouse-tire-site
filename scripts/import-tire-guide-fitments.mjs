@@ -17,8 +17,12 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false },
 });
 
-// Load extracted data
-const data = JSON.parse(fs.readFileSync("g:/clawd/fitment/extracted-fitment-data.json", "utf-8"));
+// Load extracted data - check for batch2 first, then batch1
+const batch2Path = "g:/clawd/fitment/extracted-fitment-batch2.json";
+const batch1Path = "g:/clawd/fitment/extracted-fitment-data.json";
+const dataPath = process.argv[2] || (fs.existsSync(batch2Path) ? batch2Path : batch1Path);
+const data = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+console.log(`Loading from: ${dataPath}`);
 
 function slug(s) {
   return s.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
