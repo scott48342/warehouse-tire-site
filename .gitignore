@@ -55,3 +55,6 @@ scripts/neon-migration/*.sql
 src/backup-*
 *.backup
 .env*.local
+
+# Lifted QA results
+scripts/qa-sweep/results-*.json
