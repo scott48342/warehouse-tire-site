@@ -91,7 +91,7 @@ const FALLBACK_VEHICLES = {
     // Challenger - only Widebody/Hellcat are staggered, R/T base is not
     { year: 2024, make: 'Dodge', model: 'Challenger', trim: 'SXT', expectedBolt: '5x115', isStaggered: false },
     { year: 2024, make: 'Dodge', model: 'Challenger', trim: 'R/T', expectedBolt: '5x115', isStaggered: false },
-    { year: 2023, make: 'Dodge', model: 'Challenger', trim: 'Hellcat', expectedBolt: '5x115', isStaggered: true, criticalStaggered: true },
+    { year: 2023, make: 'Dodge', model: 'Challenger', trim: 'SRT Hellcat', expectedBolt: '5x115', isStaggered: true, criticalStaggered: true },
     { year: 2024, make: 'Dodge', model: 'Challenger', trim: 'Widebody', expectedBolt: '5x115', isStaggered: true, criticalStaggered: true },
     // Corvette - always staggered
     { year: 2023, make: 'Chevrolet', model: 'Corvette', trim: 'Stingray', expectedBolt: '5x120', isStaggered: true, criticalStaggered: true },
@@ -129,6 +129,8 @@ const FALLBACK_VEHICLES = {
     { year: 2024, make: 'Infiniti', model: 'QX80', trim: 'Luxe', expectedBolt: '6x139.7' },
   ],
   'ev': [
+    { year: 2024, make: 'Ford', model: 'F-150 Lightning', trim: 'Lariat', expectedBolt: '6x135' },
+    { year: 2024, make: 'Ford', model: 'F-150 Lightning', trim: 'XLT', expectedBolt: '6x135' },
     { year: 2024, make: 'Tesla', model: 'Model 3', trim: 'Long Range', expectedBolt: '5x114.3' },
     { year: 2024, make: 'Tesla', model: 'Model Y', trim: 'Long Range', expectedBolt: '5x114.3' },
     { year: 2024, make: 'Tesla', model: 'Model S', trim: 'Plaid', expectedBolt: '5x120', isStaggered: true },
