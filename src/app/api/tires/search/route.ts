@@ -487,17 +487,14 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
     for (const tire of result.tires) {
       const unified = tireWebTireToUnified(tire, result.provider);
       
-      // CRITICAL: Ensure price has margin over cost
-      // If sellPrice <= cost (or missing), apply $50 margin
+      // CRITICAL: Always use cost + $50 for TireWeb tires
+      // Don't trust supplier sellPrice - they may have different margins
       const cost = unified.cost;
-      const rawPrice = unified.price;
-      let displayPrice: number | null = rawPrice;
+      let displayPrice: number | null = null;
       
       if (cost && cost > 0) {
-        if (!rawPrice || rawPrice <= cost) {
-          // No profitable sell price - apply $50 margin
-          displayPrice = cost + 50;
-        }
+        // Always apply our $50 margin over cost
+        displayPrice = cost + 50;
       }
       
       tires.push({
