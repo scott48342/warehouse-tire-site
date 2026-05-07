@@ -480,12 +480,15 @@ export async function sendRecoveryEmail(
     const transporter = await getTransporter(settings);
     const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
 
+    // Debug: log the first 200 chars of HTML to verify it's proper HTML
+    console.log(`[abandonedCartEmail] HTML preview: ${html.slice(0, 200)}`);
+    
     const result = await transporter.sendMail({
       from: fromAddress,
       to: cart.customerEmail,
       subject,
+      // Send HTML-only (no text fallback) to avoid SMTP servers that mangle multipart messages
       html,
-      text,
       replyTo: BRAND.email,
     });
 
