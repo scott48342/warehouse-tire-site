@@ -1,0 +1,2738 @@
+[
+  {
+    "vehicle": "2024 Ram 1500 Big Horn",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-big-horn-b2e542d0",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Big Horn",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-big-horn-b2e542d0",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Big Horn",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 22,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-big-horn-b2e542d0",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Laramie",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-laramie-d6ff4976",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Laramie",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-laramie-d6ff4976",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Laramie",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-laramie-d6ff4976",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Rebel",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-rebel-fa8c2d06",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Rebel",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-rebel-fa8c2d06",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 1500 Rebel",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-rebel-fa8c2d06",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ram 1500 Limited",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-limited-1bb4a3dd",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ram 1500 Limited",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-limited-1bb4a3dd",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ram 1500 Limited",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-limited-1bb4a3dd",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Ram 1500 Tradesman",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 13,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-classic-tradesman-7e9764d3",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Ram 1500 Tradesman",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-classic-tradesman-7e9764d3",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Ram 1500 Tradesman",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 11,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-1500-classic-tradesman-7e9764d3",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Ram 1500 Sport",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "f4c5202312",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Ram 1500 Sport",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "f4c5202312",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Ram 1500 Sport",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "f4c5202312",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 XLT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 28,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "89e8c94729",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 XLT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "89e8c94729",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 XLT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 19,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "89e8c94729",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 Lariat",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 28,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-lariat-67e66a5d",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 Lariat",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-lariat-67e66a5d",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-150 Lariat",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 19,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-lariat-67e66a5d",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ford F-150 Platinum",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 28,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-platinum-6d6b783e",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ford F-150 Platinum",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-platinum-6d6b783e",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ford F-150 Platinum",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 19,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-platinum-6d6b783e",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ford F-150 Tremor",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 28,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-tremor-f830c5b5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ford F-150 Tremor",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-tremor-f830c5b5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Ford F-150 Tremor",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 19,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-tremor-f830c5b5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Ford F-150 STX",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 28,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "b0d9cd418e",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Ford F-150 STX",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "b0d9cd418e",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Ford F-150 STX",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 19,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "b0d9cd418e",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Ford F-150 King Ranch",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 28,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-king-ranch-bf8ceab3",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Ford F-150 King Ranch",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-king-ranch-bf8ceab3",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Ford F-150 King Ranch",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 19,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-150-king-ranch-bf8ceab3",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 LT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-lt-3ed92bbb",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 LT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-lt-3ed92bbb",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 LT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-lt-3ed92bbb",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 RST",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-rst-d9356190",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 RST",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-rst-d9356190",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 RST",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-rst-d9356190",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 Trail Boss",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-lt-trail-boss-a8b70859",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 Trail Boss",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-lt-trail-boss-a8b70859",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 1500 Trail Boss",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-lt-trail-boss-a8b70859",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Chevrolet Silverado 1500 High Country",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-high-country-26cf41ad",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Chevrolet Silverado 1500 High Country",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-high-country-26cf41ad",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Chevrolet Silverado 1500 High Country",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-high-country-26cf41ad",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Chevrolet Silverado 1500 Custom",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-custom-ce365fc8",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Chevrolet Silverado 1500 Custom",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-custom-ce365fc8",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Chevrolet Silverado 1500 Custom",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-custom-ce365fc8",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Chevrolet Silverado 1500 WT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-wt-2e6adb63",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Chevrolet Silverado 1500 WT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-wt-2e6adb63",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Chevrolet Silverado 1500 WT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "chevrolet-silverado-1500-wt-2e6adb63",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 Elevation",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-elevation-78042046",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 Elevation",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-elevation-78042046",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 Elevation",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-elevation-78042046",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 SLT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-slt-a503472b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 SLT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-slt-a503472b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 1500 SLT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-slt-a503472b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 GMC Sierra 1500 AT4",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-at4-9603a5b1",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 GMC Sierra 1500 AT4",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-at4-9603a5b1",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 GMC Sierra 1500 AT4",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-at4-9603a5b1",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 GMC Sierra 1500 Denali",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-denali-210a9f69",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 GMC Sierra 1500 Denali",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-denali-210a9f69",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 GMC Sierra 1500 Denali",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-denali-210a9f69",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 GMC Sierra 1500 Pro",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-at4-5f0c9a02",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 GMC Sierra 1500 Pro",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-at4-5f0c9a02",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 GMC Sierra 1500 Pro",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "gmc-sierra-1500-at4-5f0c9a02",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma SR5",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_de7778062cb6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma SR5",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_de7778062cb6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma SR5",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_de7778062cb6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma TRD Off-Road",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_6b9b31fbfca9",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma TRD Off-Road",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_6b9b31fbfca9",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tacoma TRD Off-Road",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_6b9b31fbfca9",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Toyota Tacoma TRD Pro",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_8312836c1a8c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Toyota Tacoma TRD Pro",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_8312836c1a8c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Toyota Tacoma TRD Pro",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_8312836c1a8c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Toyota Tacoma Limited",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_98c7baddaea5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Toyota Tacoma Limited",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_98c7baddaea5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Toyota Tacoma Limited",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_98c7baddaea5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Toyota Tacoma Trail",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_08d24eb6737b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Toyota Tacoma Trail",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_08d24eb6737b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2021 Toyota Tacoma Trail",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_08d24eb6737b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra SR5",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_1a27a5d5a88f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra SR5",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_1a27a5d5a88f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra SR5",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_1a27a5d5a88f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra Limited",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_2305286f99de",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra Limited",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_2305286f99de",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Toyota Tundra Limited",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_2305286f99de",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Toyota Tundra TRD Pro",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_ee526f73e5aa",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Toyota Tundra TRD Pro",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_ee526f73e5aa",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Toyota Tundra TRD Pro",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_ee526f73e5aa",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Toyota Tundra Platinum",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_5d645cc6b651",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Toyota Tundra Platinum",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_5d645cc6b651",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Toyota Tundra Platinum",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_5d645cc6b651",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Rubicon",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-rubicon-0ce5a87c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Rubicon",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-rubicon-0ce5a87c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Rubicon",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-rubicon-0ce5a87c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Sport",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-sport-674fabe6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Sport",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-sport-674fabe6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Sport",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-sport-674fabe6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Sahara",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-sahara-c2bb79c0",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Sahara",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-sahara-c2bb79c0",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Wrangler Sahara",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-sahara-c2bb79c0",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Jeep Wrangler Willys",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-willys-d6e6ac1f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Jeep Wrangler Willys",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-willys-d6e6ac1f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Jeep Wrangler Willys",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-willys-d6e6ac1f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Jeep Wrangler Rubicon 392",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-rubicon-343637cb",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Jeep Wrangler Rubicon 392",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-rubicon-343637cb",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2022 Jeep Wrangler Rubicon 392",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-wrangler-rubicon-343637cb",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Gladiator Rubicon",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-rubicon-df98ad9a",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Gladiator Rubicon",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-rubicon-df98ad9a",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Gladiator Rubicon",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-rubicon-df98ad9a",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Gladiator Sport",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-sport-b8961571",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Gladiator Sport",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-sport-b8961571",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Jeep Gladiator Sport",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-sport-b8961571",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Jeep Gladiator Mojave",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 40,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-mojave-6eecc0fc",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Jeep Gladiator Mojave",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-mojave-6eecc0fc",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2023 Jeep Gladiator Mojave",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 20,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "jeep-gladiator-mojave-6eecc0fc",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 2500 HD LT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 8,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_71365ceaa6c5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 2500 HD LT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_71365ceaa6c5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 2500 HD LT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 2,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_71365ceaa6c5",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 2500 HD High Country",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 8,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_a406b6a1519a",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 2500 HD High Country",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_a406b6a1519a",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Chevrolet Silverado 2500 HD High Country",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 2,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_a406b6a1519a",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 2500 HD AT4",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 8,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_3f147f9e04c2",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 2500 HD AT4",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_3f147f9e04c2",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 GMC Sierra 2500 HD AT4",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 2,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "manual_3f147f9e04c2",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-250 XLT",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 14,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-250-xl-729d15f6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-250 XLT",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-250-xl-729d15f6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-250 XLT",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 9,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-250-xl-729d15f6",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-250 Lariat",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 14,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-250-lariat-4eb9e18b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-250 Lariat",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-250-lariat-4eb9e18b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford F-250 Lariat",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 9,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-f-250-lariat-4eb9e18b",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 2500 Laramie",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "295/65R20",
+    "outerDiameter": 35.1,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 14,
+    "tireResultCount": 58,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-2500-laramie-ed7c8e03",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 2500 Laramie",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-2500-laramie-ed7c8e03",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ram 2500 Laramie",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "37X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 15,
+    "tireResultCount": 17,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ram-2500-laramie-ed7c8e03",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Nissan Titan PRO-4X",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "275/60R20",
+    "outerDiameter": 33,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 49,
+    "tireResultCount": 100,
+    "stockSize": true,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "nissan-titan-pro-4x-c5452b4c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Nissan Titan PRO-4X",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 29,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "nissan-titan-pro-4x-c5452b4c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Nissan Titan PRO-4X",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 34,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "nissan-titan-pro-4x-c5452b4c",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford Ranger Lariat",
+    "liftHeight": "2\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-12 to 0",
+    "wheelResultCount": 46,
+    "tireResultCount": 21,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-ranger-lariat-72cd826f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford Ranger Lariat",
+    "liftHeight": "4\"",
+    "recommendedTireSize": "33X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-18 to 0",
+    "wheelResultCount": 50,
+    "tireResultCount": 22,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-ranger-lariat-72cd826f",
+      "tiresMatchMode": "lifted"
+    }
+  },
+  {
+    "vehicle": "2024 Ford Ranger Lariat",
+    "liftHeight": "6\"",
+    "recommendedTireSize": "35X12.50R20LT",
+    "outerDiameter": null,
+    "offsetRange": "-50 to -24",
+    "wheelResultCount": 21,
+    "tireResultCount": 28,
+    "stockSize": false,
+    "status": "PASS",
+    "failureReason": null,
+    "wheelDiameter": 20,
+    "wheelWidth": "N/A",
+    "warnings": [],
+    "debug": {
+      "modification": "ford-ranger-lariat-72cd826f",
+      "tiresMatchMode": "lifted"
+    }
+  }
+]

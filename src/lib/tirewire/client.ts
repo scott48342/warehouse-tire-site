@@ -436,10 +436,26 @@ export const searchTiresTirewire = searchTiresTireWeb;
 
 function toSimpleSize(s: string): string {
   const v = String(s || "").trim().toUpperCase();
+  
+  // Metric sizes: 245/50R18 → 2455018
   const m = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})/i);
   if (m) return `${m[1]}${m[2]}${m[3]}`;
-  const m2 = v.match(/^(\d{7})$/);
+  
+  // Flotation/LT sizes: 37x12.50R22 → 37125022, 35x12.50R20 → 35125020
+  // Format: {diameter}x{width}.{decimal}R{rim}
+  const f = v.match(/^(\d{2,3})\s*[X\/\-]\s*(\d{1,2})\.?(\d{0,2})\s*R?\s*(\d{2})/i);
+  if (f) {
+    const dia = f[1];
+    const widthWhole = f[2];
+    const widthDecimal = f[3] || "00";
+    const rim = f[4];
+    return `${dia}${widthWhole}${widthDecimal.padEnd(2, "0")}${rim}`;
+  }
+  
+  // Already in simple format (7 or 8 digits)
+  const m2 = v.match(/^(\d{7,8})$/);
   if (m2) return m2[1];
+  
   return "";
 }
 
