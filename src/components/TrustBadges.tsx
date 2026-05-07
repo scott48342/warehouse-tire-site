@@ -12,7 +12,6 @@ export type TrustBadgeType =
   | "verified_vehicle"
   | "no_rubbing"
   | "free_shipping"
-  | "price_match"
   | "expert_support";
 
 export type TrustBadgeSize = "sm" | "md" | "lg";
@@ -87,15 +86,6 @@ const BADGE_CONFIG: Record<TrustBadgeType, {
     color: "text-amber-700",
     bgColor: "bg-amber-50",
     borderColor: "border-amber-200",
-  },
-  price_match: {
-    icon: "💰",
-    label: "Price Match Guarantee",
-    shortLabel: "Price Match",
-    description: "We'll match any competitor's price on identical products",
-    color: "text-emerald-700",
-    bgColor: "bg-emerald-50",
-    borderColor: "border-emerald-200",
   },
   expert_support: {
     icon: "👨‍🔧",

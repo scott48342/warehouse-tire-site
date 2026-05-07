@@ -19,10 +19,6 @@ const faqs = [
         a: 'Yes! During checkout, select "Store Pickup" and choose either our Pontiac or Waterford location. We\'ll notify you when your order is ready for pickup.'
       },
       {
-        q: 'Do you price match?',
-        a: 'We strive to offer competitive pricing. If you find a lower price from an authorized dealer, contact us with the details and we\'ll do our best to match or beat it.'
-      },
-      {
         q: 'Can I order just one tire or wheel?',
         a: 'Yes, you can order any quantity you need. However, we recommend replacing tires in pairs (both front or both rear) for optimal safety and performance.'
       },

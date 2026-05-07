@@ -878,7 +878,7 @@ function LocalStory() {
 
 function AssuranceBar() {
   const items = [
-    { icon: DollarSign, title: "PRICE MATCH", description: "We'll match competitor prices." },
+    { icon: DollarSign, title: "FAIR PRICES", description: "Competitive everyday pricing." },
     { icon: Shield, title: "QUALITY TIRES", description: "Only brands we trust." },
     { icon: Calendar, title: "FLEXIBLE", description: "Walk-ins welcome." },
     { icon: Heart, title: "HERE FOR YOU", description: "Experts ready to help." },

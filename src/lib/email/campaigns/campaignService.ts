@@ -92,7 +92,7 @@ export async function createCampaign(data: {
       contentJson: data.contentJson || { blocks: [] },
       audienceRulesJson: data.audienceRulesJson || {},
       includeFreeShippingBanner: data.includeFreeShippingBanner ?? true,
-      includePriceMatch: data.includePriceMatch ?? true,
+      includePriceMatch: data.includePriceMatch ?? false,
       utmCampaign: data.utmCampaign,
       isTest: data.isTest ?? false,
       createdBy: data.createdBy,

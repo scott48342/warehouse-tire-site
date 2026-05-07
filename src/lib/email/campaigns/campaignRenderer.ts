@@ -270,7 +270,7 @@ export function renderCampaignEmail(options: RenderOptions): string {
     previewText,
     content,
     includeFreeShippingBanner = true,
-    includePriceMatch = true,
+    includePriceMatch = false,
     utmCampaign,
     unsubscribeUrl,
   } = options;

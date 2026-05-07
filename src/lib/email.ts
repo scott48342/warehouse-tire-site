@@ -496,7 +496,6 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
     ${productCards}
     ${servicesSection("Services", "🔧", serviceItems)}
     ${priceSummary(summaryLines, "Total Paid", totals.total)}
-    ${infoBox("💰 Price Match Guarantee", "Found it cheaper elsewhere? Reply to this email and we'll take a look.")}
     ${isAdmin 
       ? ctaButton("View in Admin →", "https://shop.warehousetiredirect.com/admin/orders", "secondary")
       : ""

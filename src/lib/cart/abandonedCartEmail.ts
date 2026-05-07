@@ -356,7 +356,6 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
     ${priceSummary(summaryLines, "Estimated Total", totalValue)}
     ${textSection("Ready to get rolling? Click below to restore your cart — all items saved.", true)}
     ${ctaButton("Complete My Order", recoveryLink)}
-    ${infoBox("💰 Price Match Guarantee", "Found it cheaper elsewhere? Reply to this email with the link and we'll take a look.")}
     ${footer({
       showPhone: true,
       unsubscribeUrl: `${BASE_URL}/unsubscribe?email=${encodeURIComponent(cart.customerEmail || "")}`,

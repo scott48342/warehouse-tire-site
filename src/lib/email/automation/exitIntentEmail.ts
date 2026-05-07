@@ -217,10 +217,6 @@ function buildImmediateEmailHtml(subscriber: {
           <span style="color: #10b981;">✓</span>
           <span style="color: #4b5563;">Guaranteed fitment for your vehicle</span>
         </div>
-        <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-          <span style="color: #10b981;">✓</span>
-          <span style="color: #4b5563;">Price match guarantee</span>
-        </div>
         <div style="display: flex; gap: 12px;">
           <span style="color: #10b981;">✓</span>
           <span style="color: #4b5563;">Free shipping on orders over $199</span>
@@ -307,14 +303,6 @@ function buildFollowupEmailHtml(subscriber: {
            style="display: inline-block; background: #dc2626; color: white; padding: 16px 48px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 18px;">
           Resume Shopping
         </a>
-      </div>
-
-      <!-- Price Match -->
-      <div style="background: #eff6ff; border: 1px solid #3b82f6; border-radius: 8px; padding: 16px; margin-top: 24px;">
-        <div style="font-weight: 600; color: #1e40af; margin-bottom: 4px;">💰 Price Match Guarantee</div>
-        <div style="font-size: 14px; color: #1e3a8a;">
-          Found a better price? Reply to this email with the link and we'll match it.
-        </div>
       </div>
 
     </div>

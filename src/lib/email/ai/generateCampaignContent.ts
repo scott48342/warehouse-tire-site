@@ -164,7 +164,6 @@ BUSINESS CONTEXT:
 - Two locations: Pontiac and Waterford, MI
 - Online store: shop.warehousetiredirect.com
 - FREE SHIPPING on orders over $1,500 (IMPORTANT: always use $1,500, never $599)
-- Price match guarantee
 - Professional installation available
 
 ${rebateContext}
@@ -202,7 +201,6 @@ Respond in JSON format:
   "subheadline": "Supporting subheadline",
   "valueProps": [
     {"icon": "🚚", "text": "FREE shipping over $1,500"},
-    {"icon": "💰", "text": "Price match guarantee"},
     {"icon": "🔧", "text": "Pro installation in Pontiac & Waterford"}
   ],
   "ctaText": "Shop Now",

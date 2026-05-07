@@ -134,7 +134,7 @@ export default function TiresNearMePage() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-green-600" />
-              <span>Price Match Guarantee</span>
+              <span>Quality Brands</span>
             </div>
           </div>
         </div>
@@ -330,15 +330,6 @@ export default function TiresNearMePage() {
               </p>
             </div>
             
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Do you price match?
-              </h3>
-              <p className="text-gray-600">
-                Yes! If you find a lower advertised price on the same tire from a local competitor, 
-                let us know and we&apos;ll do our best to match or beat it. We want to earn your business.
-              </p>
-            </div>
           </div>
         </div>
       </section>

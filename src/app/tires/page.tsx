@@ -2891,10 +2891,10 @@ export default async function TiresPage({
                   )}
                 </div>
                 <div className="text-sm font-extrabold text-neutral-900">
-                  {isLocalMode ? "Professional Install" : "Price Match"}
+                  {isLocalMode ? "Professional Install" : "Fast Shipping"}
                 </div>
                 <div className="mt-1 text-xs text-neutral-500">
-                  {isLocalMode ? "Mount, balance & install included" : "We match competitor prices"}
+                  {isLocalMode ? "Mount, balance & install included" : "Most orders ship same day"}
                 </div>
               </div>
               <div className="flex flex-col items-center text-center p-4">
