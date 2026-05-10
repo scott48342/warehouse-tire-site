@@ -25,6 +25,7 @@ import { NextResponse } from "next/server";
 import pg from "pg";
 import { XMLParser } from "fast-xml-parser";
 import { searchTiresTireWeb, tireWebTireToUnified, type UnifiedTire, type TireWebSearchResult } from "@/lib/tirewire/client";
+import { checkStockBySize as checkStockUSAF, getStatus as getUSAFStatus, type USAutoForceStockItem } from "@/lib/usautoforce";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
@@ -326,7 +327,7 @@ interface TireResult {
   simpleSize: string;
   rimDiameter: number | null;
   tireLibraryId?: number | null;
-  source?: string; // "wheelpros", "tireweb:atd", "tireweb:ntw", etc.
+  source?: string; // "wheelpros", "tireweb:atd", "tireweb:ntw", "usautoforce", etc.
   badges: {
     terrain: string | null;
     construction: string | null;
@@ -336,6 +337,7 @@ interface TireResult {
     utqg?: string | null;
     treadDepth?: number | null;
     tireWeight?: number | null;
+    loadRange?: string | null;
   };
   // Enriched fields for filtering and display
   enrichment?: {
@@ -347,6 +349,17 @@ interface TireResult {
     isXL: boolean;
     is3PMSF: boolean;
     isAllWeather: boolean;
+  };
+  // USAF direct API enrichment (2026-05-09)
+  // These fields come from US AutoForce direct API - richer data than TireWeb
+  usafEnrichment?: {
+    map: number | null;          // Minimum advertised price
+    fet: number | null;          // Federal excise tax
+    specUrl: string | null;      // PDF spec sheet URL
+    sidewall: string | null;     // e.g., "BLK", "WW"
+    oeFit: string | null;        // OE fitment info
+    onSpecial: boolean;          // Currently on special pricing
+    brandCode: string | null;    // e.g., "GEN", "BFG" - needed for orders
   };
 }
 
@@ -584,6 +597,176 @@ async function searchTiresTireWebFormatted(size: string): Promise<TireResult[]> 
   }
   
   return convertTireWebResults(result.data);
+}
+
+// ============================================================================
+// US AUTOFORCE DIRECT SEARCH (2026-05-09)
+// Better data than TireWeb: MAP, FET, warranty, tread depth, spec URLs
+// ============================================================================
+
+/** Brand code to brand name mapping */
+const USAF_BRAND_NAMES: Record<string, string> = {
+  'GEN': 'General',
+  'BFG': 'BF Goodrich',
+  'MIC': 'Michelin',
+  'GOO': 'Goodyear',
+  'PIR': 'Pirelli',
+  'CON': 'Continental',
+  'TOY': 'Toyo',
+  'YOK': 'Yokohama',
+  'BRI': 'Bridgestone',
+  'FIR': 'Firestone',
+  'HAN': 'Hankook',
+  'FAL': 'Falken',
+  'KUM': 'Kumho',
+  'NEX': 'Nexen',
+  'NIT': 'Nitto',
+  'DUN': 'Dunlop',
+  'UNI': 'Uniroyal',
+  'COO': 'Cooper',
+  'KLE': 'Kletcher',
+  'MAS': 'Mastercraft',
+  'ACH': 'Achilles',
+  'MUL': 'Multi-Mile',
+};
+
+function usafBrandName(brandCode: string): string {
+  return USAF_BRAND_NAMES[brandCode?.toUpperCase()] || brandCode;
+}
+
+/**
+ * Convert USAF tire size format to display format
+ * e.g., "2256016" → "225/60R16"
+ */
+function usafSizeToDisplay(tireSize: string, width: number, aspectRatio: number, rimDiameter: number): string {
+  if (width && aspectRatio && rimDiameter) {
+    return `${width}/${aspectRatio}R${rimDiameter}`;
+  }
+  // Fallback: parse from tireSize string
+  if (tireSize && tireSize.length === 7) {
+    const w = tireSize.slice(0, 3);
+    const a = tireSize.slice(3, 5);
+    const r = tireSize.slice(5, 7);
+    return `${w}/${a}R${r}`;
+  }
+  return tireSize;
+}
+
+/**
+ * Convert US AutoForce StockItem to TireResult format
+ */
+function convertUSAFToTireResult(item: USAutoForceStockItem): TireResult {
+  // Calculate total quantity from availability
+  const totalQty = item.availability.reduce((sum, a) => sum + a.quantityAvailable, 0);
+  const primaryQty = item.availability.length > 0 ? item.availability[0].quantityAvailable : 0;
+  const alternateQty = totalQty - primaryQty;
+  
+  // Parse UTQG for treadwear/traction/temp (USAF returns clean format like "700BA")
+  const parsedUtqg = parseUtqg(item.utqg);
+  
+  // Normalize terrain from tireType (e.g., "PASSENGER/CUV/SUV" → category)
+  const terrain = normalizeTreadCategory(item.tireType, item.description);
+  
+  // Calculate sell price: cost + $50 margin (same as TireWeb)
+  const sellPrice = item.cost > 0 ? item.cost + 50 : null;
+  
+  return {
+    partNumber: item.partNumber,
+    mfgPartNumber: item.partNumber, // USAF uses same number
+    brand: usafBrandName(item.brandCode),
+    model: item.model,
+    description: item.description || item.salesClass,
+    cost: item.cost > 0 ? item.cost : null,
+    price: sellPrice,
+    quantity: {
+      primary: primaryQty,
+      alternate: alternateQty,
+      national: 0, // USAF doesn't have "national" concept
+    },
+    imageUrl: item.imageUrl || null,
+    size: usafSizeToDisplay(item.tireSize, item.width, item.aspectRatio, item.rimDiameter),
+    simpleSize: item.tireSize,
+    rimDiameter: item.rimDiameter || null,
+    source: "usautoforce",
+    badges: {
+      terrain: terrain || item.tireType,
+      construction: null, // Not provided by USAF
+      warrantyMiles: item.warranty > 0 ? item.warranty : null,
+      loadIndex: item.loadIndex || null,
+      speedRating: item.speedRating || null,
+      utqg: item.utqg || null,
+      treadDepth: item.treadDepth > 0 ? item.treadDepth : null,
+      tireWeight: item.weight > 0 ? item.weight : null,
+      loadRange: item.loadRange || null,
+    },
+    enrichment: {
+      mileage: item.warranty > 0 ? item.warranty : (parsedUtqg.treadwear ? parsedUtqg.treadwear * 100 : null),
+      treadCategory: terrain,
+      mileageBadge: getMileageBadge(item.warranty > 0 ? item.warranty : null),
+      loadRange: item.loadRange || null,
+      isRunFlat: isRunFlat(null, item.description, item.sidewall),
+      isXL: item.loadRange === 'XL',
+      is3PMSF: /3PMSF|M\+S|SNOW/i.test(item.description || ''),
+      isAllWeather: /ALL.?WEATHER|ALL.?SEASON/i.test(item.description || '') && /3PMSF|SEVERE/i.test(item.description || ''),
+    },
+    // USAF-specific enrichment data
+    usafEnrichment: {
+      map: item.map > 0 ? item.map : null,
+      fet: item.fet > 0 ? item.fet : null,
+      specUrl: item.specUrl || null,
+      sidewall: item.sidewall || null,
+      oeFit: item.oeFit || null,
+      onSpecial: item.onSpecial || false,
+      brandCode: item.brandCode || null,
+    },
+  };
+}
+
+/**
+ * Search tires via US AutoForce Direct API
+ * 
+ * This provides richer data than TireWeb:
+ * - MAP pricing for price floor enforcement
+ * - FET (federal excise tax) for accurate total
+ * - Warranty miles (not parsed from description)
+ * - Tread depth, weight, spec sheet URLs
+ * - Order placement capability
+ */
+async function searchTiresUSAF(size: string): Promise<TireResult[]> {
+  // Check if USAF is configured
+  const status = getUSAFStatus();
+  if (!status.configured) {
+    console.log('[tires/search] USAF not configured, skipping');
+    return [];
+  }
+  
+  try {
+    const startTime = Date.now();
+    
+    // Query USAF with default branch (Appleton) + alternate branches for better coverage
+    // Use quantity=1 to get all available tires (we'll filter by minQty later)
+    const result = await checkStockUSAF(size, {
+      quantity: 1,
+      // Add major warehouse branches for wider inventory
+      alternateBranches: ['4862', '4101', '4501', '4701'],
+    });
+    
+    const duration = Date.now() - startTime;
+    
+    if (!result.success) {
+      console.error(`[tires/search] USAF search failed: ${result.errorMessage}`);
+      return [];
+    }
+    
+    const tires = result.items.map(convertUSAFToTireResult);
+    
+    console.log(`[tires/search] USAF: ${tires.length} tires for ${size} (${duration}ms)`);
+    
+    return tires;
+  } catch (err) {
+    console.error('[tires/search] USAF search error:', err);
+    return [];
+  }
 }
 
 /**
@@ -1038,16 +1221,34 @@ function enrichKmWithTireLibraryImages(
 }
 
 /**
- * Merge results from WheelPros, TireWeb, and K&M, deduplicating by product code.
- * TireWeb results are preferred when duplicates exist (better images).
+ * Merge results from WheelPros, TireWeb, K&M, and US AutoForce, deduplicating by product code.
+ * 
+ * Priority for data quality (when duplicates exist):
+ * 1. USAF direct (best data: MAP, FET, warranty, specs from API)
+ * 2. TireWeb (good images, parsed specs)
+ * 3. WheelPros (local DB)
+ * 4. K&M (backup inventory)
+ * 
+ * For pricing: use lowest cost from source with sufficient inventory (minQty)
+ * For specs: prefer USAF enrichment data when available
  */
 async function mergeTireResults(
   wpResults: TireResult[],
   twResults: TireResult[],
   kmResults: TireResult[],
+  usafResults: TireResult[] = [],
   minQty: number
 ): Promise<TireResult[]> {
   const merged = new Map<string, TireResult>();
+  
+  // Build USAF lookup for enrichment - keyed by part number
+  // When we see the same tire from TireWeb, we'll add USAF's richer data
+  const usafLookup = new Map<string, TireResult>();
+  for (const tire of usafResults) {
+    if (tire.partNumber) {
+      usafLookup.set(tire.partNumber.toUpperCase(), tire);
+    }
+  }
   
   // First, look up K&M images from our database (by part number)
   const kmPartNumbers = kmResults.map(t => t.partNumber).filter(Boolean);
@@ -1172,11 +1373,62 @@ async function mergeTireResults(
     }
   };
   
-  // Add all results - TireWeb first (best images), then K&M (with inventory), then WheelPros
+  // Add all results in priority order:
+  // 1. TireWeb first (best images from TireLibrary)
+  // 2. K&M (with inventory)
+  // 3. WheelPros
+  // 4. USAF direct (may have unique inventory + always has best specs)
   // Don't filter by minQty yet - do it after merge
   for (const tire of twResults) addTire(tire, true);
   for (const tire of enrichedKmResults) addTire(tire, true);
   for (const tire of wpResults) addTire(tire, true);
+  for (const tire of usafResults) addTire(tire, true);
+  
+  // USAF Enrichment Pass (2026-05-09)
+  // For any tire that has USAF data available, add the richer usafEnrichment fields
+  // This gives us MAP, FET, warranty, tread depth, spec URLs even if we're showing TireWeb's image
+  for (const [key, tire] of merged) {
+    if (!tire.partNumber) continue;
+    
+    const usafTire = usafLookup.get(tire.partNumber.toUpperCase());
+    if (!usafTire) continue;
+    
+    // Add USAF enrichment data (even if tire came from TireWeb)
+    tire.usafEnrichment = usafTire.usafEnrichment;
+    
+    // Also fill in missing badge data from USAF
+    if (!tire.badges.utqg && usafTire.badges.utqg) {
+      tire.badges.utqg = usafTire.badges.utqg;
+    }
+    if (!tire.badges.warrantyMiles && usafTire.badges.warrantyMiles) {
+      tire.badges.warrantyMiles = usafTire.badges.warrantyMiles;
+    }
+    if (!tire.badges.treadDepth && usafTire.badges.treadDepth) {
+      tire.badges.treadDepth = usafTire.badges.treadDepth;
+    }
+    if (!tire.badges.tireWeight && usafTire.badges.tireWeight) {
+      tire.badges.tireWeight = usafTire.badges.tireWeight;
+    }
+    if (!tire.badges.loadRange && usafTire.badges.loadRange) {
+      tire.badges.loadRange = usafTire.badges.loadRange;
+    }
+    if (!tire.badges.speedRating && usafTire.badges.speedRating) {
+      tire.badges.speedRating = usafTire.badges.speedRating;
+    }
+    if (!tire.badges.loadIndex && usafTire.badges.loadIndex) {
+      tire.badges.loadIndex = usafTire.badges.loadIndex;
+    }
+    
+    // Fill in missing enrichment data
+    if (tire.enrichment && usafTire.enrichment) {
+      if (!tire.enrichment.mileage && usafTire.enrichment.mileage) {
+        tire.enrichment.mileage = usafTire.enrichment.mileage;
+      }
+      if (!tire.enrichment.loadRange && usafTire.enrichment.loadRange) {
+        tire.enrichment.loadRange = usafTire.enrichment.loadRange;
+      }
+    }
+  }
   
   // NOW filter by minQty after all sources are merged
   const filtered = Array.from(merged.values()).filter(tire => {
@@ -1448,14 +1700,17 @@ export async function GET(req: Request) {
         searchFn: async () => {
           // Query all sources in parallel
           // TireWeb may be rate-limited (ErrorCode 127), K&M provides backup inventory
-          const [wpResults, twResults, kmResults] = await Promise.all([
+          // USAF direct provides richer data than TireWeb (MAP, FET, warranty, specs)
+          const [wpResults, twResults, kmResults, usafResults] = await Promise.all([
             searchTiresBySize(db, sizeRaw, minQty, pageSize * 2), // Fetch extra for filtering
             searchTiresTireWebFormatted(sizeRaw),
             searchTiresKM(sizeRaw), // K&M/Keystone for additional inventory
+            searchTiresUSAF(sizeRaw), // US AutoForce direct (better data than TireWeb)
           ]);
           
-          // Merge and dedupe by partNumber (prefer TireWeb for images)
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          // Merge and dedupe by partNumber
+          // Priority: USAF direct > TireWeb (USAF has richer data) > WheelPros > K&M
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, usafResults, minQty);
           
           // Apply cached TireLibrary images (from Vercel Blob)
           const withCachedImages = await applyCachedImages(merged);
@@ -1469,6 +1724,7 @@ export async function GET(req: Request) {
               wheelpros: wpResults.length,
               tireweb: twResults.length,
               km: kmResults.length,
+              usautoforce: usafResults.length,
             },
           };
         },
