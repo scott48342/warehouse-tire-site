@@ -2162,7 +2162,7 @@ export async function GET(req: Request) {
           await Promise.all(searchPromises);
           
           // Merge results from all sources
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
           
           // Apply cached TireLibrary images
           const withCachedImages = await applyCachedImages(merged);
@@ -2381,7 +2381,7 @@ export async function GET(req: Request) {
           }
           await Promise.all(searchPromises);
           
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
           const withCachedImages = await applyCachedImages(merged);
           const withOverrides = await applyImageOverrides(db, withCachedImages);
           
@@ -2467,7 +2467,7 @@ export async function GET(req: Request) {
           }
           await Promise.all(searchPromises);
           
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
           const withCachedImages = await applyCachedImages(merged);
           const withOverrides = await applyImageOverrides(db, withCachedImages);
           
@@ -2597,7 +2597,7 @@ export async function GET(req: Request) {
           }
           await Promise.all(searchPromises);
           
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
           const withCachedImages = await applyCachedImages(merged);
           const withOverrides = await applyImageOverrides(db, withCachedImages);
           
