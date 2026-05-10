@@ -185,10 +185,12 @@ export async function getTireWebCredentials(): Promise<TireWebCredentials | null
 export const getTirewireCredentials = getTireWebCredentials;
 
 // Default connections when using env var credentials (avoids DB query)
+// NOTE (2026-05-09): USAF disabled here - we use USAF direct API instead
+// USAF direct gives better data: MAP, FET, warranty, specs, order placement
 const DEFAULT_CONNECTIONS: TireWebConnection[] = [
   { provider: "tireweb_atd", connectionId: 488677, enabled: true },
   { provider: "tireweb_ntw", connectionId: 488546, enabled: true },
-  { provider: "tireweb_usautoforce", connectionId: 488548, enabled: true },
+  { provider: "tireweb_usautoforce", connectionId: 488548, enabled: false }, // Disabled - using USAF direct
   { provider: "tireweb_km", connectionId: 490820, enabled: true }, // K&M via TireWeb (images!)
 ];
 
