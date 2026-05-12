@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { 
   getPool, 
-  buildFitmentProfile, 
+  buildFitmentProfile,
+  buildFitmentProfileFromNewTable,
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
 // DB-FIRST: External API imports blocked. Use admin/fitment for manual import.
@@ -2933,40 +2934,14 @@ async function handleLegacyPath(
   let displayTrim = displayTrimParam || modificationId || null;  // Prefer original trim param
   let autoSelectedTrim = false;
   
-  // Try to get profile from legacy database (use modificationId for lookup)
-  let profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
+  // ═══════════════════════════════════════════════════════════════════════════
+  // 2026-05-12: PRIMARY PATH - Query vehicle_fitments table directly
+  // This is the source of truth with 37,000+ certified vehicles.
+  // Legacy tables are nearly empty - only use as fallback.
+  // ═══════════════════════════════════════════════════════════════════════════
+  let profile = await buildFitmentProfileFromNewTable(db, Number(year), make, model, lookupKey || undefined);
   
-  // ═══════════════════════════════════════════════════════════════════════════
-  // CERTIFICATION GATE (2026-04-26)
-  // Even if legacy profile exists, verify the vehicle is certified in vehicle_fitments.
-  // This prevents serving needs_review records through the legacy path.
-  // ═══════════════════════════════════════════════════════════════════════════
-  if (profile) {
-    try {
-      const certCheck = await db.query(
-        `SELECT certification_status FROM vehicle_fitments 
-         WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
-         AND certification_status = 'certified'
-         LIMIT 1`,
-        [Number(year), make, model]
-      );
-      
-      if (certCheck.rows.length === 0) {
-        // No certified record exists for this YMM - block the profile
-        console.log(`[fitment-search] CERTIFICATION GATE: ${year} ${make} ${model} - NO certified record found, blocking legacy profile`);
-        profile = null;
-      }
-    } catch (e) {
-      console.error(`[fitment-search] Certification check failed:`, e);
-      // On error, allow profile (fail-open for now)
-    }
-  }
-  
-  // ═══════════════════════════════════════════════════════════════════════════
-  // AUTO-TRIM SELECTION (April 2026)
-  // When no trim is provided and profile lookup fails, auto-select from available trims.
-  // This prevents "Fitment Data Not Yet Available" when the vehicle HAS trim data.
-  // ═══════════════════════════════════════════════════════════════════════════
+  // If no profile yet and no trim specified, try auto-selecting a trim
   if (!profile && !lookupKey && year && make && model) {
     console.log(`[fitment-search] No trim specified - checking for available trims for ${year} ${make} ${model}`);
     try {
@@ -2974,7 +2949,8 @@ async function handleLegacyPath(
       const trimsResult = await db.query(
         `SELECT DISTINCT modification_id, display_trim 
          FROM vehicle_fitments 
-         WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+         WHERE year = $1 AND LOWER(make) = LOWER($2) 
+         AND (LOWER(model) = LOWER($3) OR LOWER(REPLACE(model, '-', ' ')) = LOWER(REPLACE($3, '-', ' ')))
          AND certification_status = 'certified'
          ORDER BY display_trim
          LIMIT 10`,
@@ -2990,10 +2966,39 @@ async function handleLegacyPath(
         console.log(`[fitment-search] AUTO-SELECTED trim: ${displayTrim} (${lookupKey}) from ${trimsResult.rows.length} available`);
         
         // Retry profile lookup with the selected trim
-        profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
+        profile = await buildFitmentProfileFromNewTable(db, Number(year), make, model, lookupKey);
       }
     } catch (e) {
       console.error(`[fitment-search] Auto-trim lookup failed:`, e);
+    }
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FALLBACK: Try legacy tables if new table didn't have the vehicle
+  // (kept for backwards compatibility but should rarely be used)
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!profile) {
+    console.log(`[fitment-search] New table miss - trying legacy tables for ${year} ${make} ${model}`);
+    profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
+    
+    // If legacy profile found, verify it's certified in vehicle_fitments
+    if (profile) {
+      try {
+        const certCheck = await db.query(
+          `SELECT certification_status FROM vehicle_fitments 
+           WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+           AND certification_status = 'certified'
+           LIMIT 1`,
+          [Number(year), make, model]
+        );
+        
+        if (certCheck.rows.length === 0) {
+          console.log(`[fitment-search] CERTIFICATION GATE: Legacy profile blocked - no certified record in vehicle_fitments`);
+          profile = null;
+        }
+      } catch (e) {
+        console.error(`[fitment-search] Certification check failed:`, e);
+      }
     }
   }
   

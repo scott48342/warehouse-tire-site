@@ -641,6 +641,132 @@ export function detectStaggeredFitment(wheelSpecs: VehicleWheelSpec[]): Staggere
 // STEP 3: BUILD FITMENT PROFILE (RUNTIME)
 // ─────────────────────────────────────────────────────────────────────────────
 
+/**
+ * Build FitmentProfile directly from vehicle_fitments table (NEW - 2026-05-12)
+ * This is the primary source of truth - use this instead of legacy tables.
+ * Falls back to legacy buildFitmentProfile if no match found.
+ */
+export async function buildFitmentProfileFromNewTable(
+  db: pg.Pool,
+  year: number,
+  make: string,
+  model: string,
+  trim?: string
+): Promise<FitmentProfile | null> {
+  // Query vehicle_fitments directly
+  const query = trim
+    ? `SELECT * FROM vehicle_fitments 
+       WHERE year = $1 
+       AND LOWER(make) = LOWER($2) 
+       AND (LOWER(model) = LOWER($3) OR LOWER(REPLACE(model, '-', ' ')) = LOWER(REPLACE($3, '-', ' ')))
+       AND (LOWER(display_trim) = LOWER($4) OR modification_id = $4)
+       AND certification_status = 'certified'
+       ORDER BY quality_tier DESC NULLS LAST
+       LIMIT 1`
+    : `SELECT * FROM vehicle_fitments 
+       WHERE year = $1 
+       AND LOWER(make) = LOWER($2) 
+       AND (LOWER(model) = LOWER($3) OR LOWER(REPLACE(model, '-', ' ')) = LOWER(REPLACE($3, '-', ' ')))
+       AND certification_status = 'certified'
+       ORDER BY quality_tier DESC NULLS LAST
+       LIMIT 1`;
+
+  const params = trim ? [year, make, model, trim] : [year, make, model];
+  const result = await db.query(query, params);
+
+  if (result.rows.length === 0) {
+    console.log(`[buildFitmentProfileFromNewTable] No match for ${year} ${make} ${model} ${trim || '(no trim)'}`);
+    return null;
+  }
+
+  const row = result.rows[0];
+  
+  // Parse oem_wheel_sizes JSON
+  const oemWheelSizes = row.oem_wheel_sizes || [];
+  
+  // Build wheel specs from oem_wheel_sizes
+  const wheelSpecs: VehicleWheelSpec[] = oemWheelSizes.map((ws: any, idx: number) => ({
+    id: idx,
+    vehicleId: 0, // Not used
+    rimDiameter: ws.diameter || 0,
+    rimWidth: ws.width || 0,
+    offset: ws.offset ?? null,
+    tireSize: null,
+    axle: ws.axle || 'both',
+    isStock: ws.isStock ?? true,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }));
+
+  // Match tire sizes to wheel specs if available
+  const oemTireSizes = row.oem_tire_sizes || [];
+  if (oemTireSizes.length > 0 && wheelSpecs.length > 0) {
+    // Simple mapping: assign tire sizes to wheel specs by diameter match
+    for (const spec of wheelSpecs) {
+      const matchingTire = oemTireSizes.find((ts: string) => {
+        const match = ts.match(/R(\d+)/);
+        return match && parseInt(match[1]) === spec.rimDiameter;
+      });
+      if (matchingTire) {
+        spec.tireSize = matchingTire;
+      }
+    }
+  }
+
+  // Derive allowed values
+  const allowedDiameters = [...new Set(wheelSpecs.map(s => s.rimDiameter))].filter(d => d > 0).sort((a, b) => a - b);
+  const allowedWidths = [...new Set(wheelSpecs.map(s => s.rimWidth))].filter(w => w > 0).sort((a, b) => a - b);
+  const allowedOffsets = [...new Set(wheelSpecs.map(s => s.offset).filter((o): o is number => o !== null))].sort((a, b) => a - b);
+
+  // Detect staggered fitment
+  const staggered = detectStaggeredFitment(wheelSpecs);
+
+  // Build synthetic Vehicle object
+  const vehicle: Vehicle = {
+    id: 0,
+    year: row.year,
+    make: row.make,
+    model: row.model,
+    trim: row.display_trim || null,
+    slug: row.modification_id || null,
+    createdAt: row.created_at || new Date(),
+    updatedAt: row.updated_at || new Date(),
+  };
+
+  // Build synthetic VehicleFitment object
+  const fitment: VehicleFitment = {
+    id: 0,
+    vehicleId: 0,
+    boltPattern: row.bolt_pattern || '',
+    centerBore: parseFloat(row.center_bore_mm) || 0,
+    studHoles: row.bolt_pattern ? parseInt(row.bolt_pattern.split('x')[0]) : 0,
+    pcd: row.bolt_pattern ? parseFloat(row.bolt_pattern.split('x')[1]) : 0,
+    threadSize: row.lug_thread || null,
+    fastenerType: row.lug_seat_type || null,
+    torqueNm: null,
+    createdAt: row.created_at || new Date(),
+    updatedAt: row.updated_at || new Date(),
+  };
+
+  console.log(`[buildFitmentProfileFromNewTable] ✓ Built profile for ${year} ${make} ${model}: bolt=${fitment.boltPattern}, hub=${fitment.centerBore}mm, ${wheelSpecs.length} wheel specs`);
+
+  return {
+    vehicle,
+    fitment,
+    wheelSpecs,
+    allowedDiameters,
+    allowedWidths,
+    allowedOffsets,
+    boltPattern: fitment.boltPattern,
+    centerBore: fitment.centerBore,
+    staggered,
+  };
+}
+
+/**
+ * LEGACY: Build FitmentProfile from old vehicles/vehicle_fitment/vehicle_wheel_specs tables
+ * @deprecated Use buildFitmentProfileFromNewTable instead
+ */
 export async function buildFitmentProfile(
   db: pg.Pool,
   year: number,
