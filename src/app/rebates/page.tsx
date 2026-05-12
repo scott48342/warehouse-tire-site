@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getPool, listActiveRebates, type SiteRebate } from "@/lib/rebates";
 import { BRAND } from "@/lib/brand";
+import { getBrandLogoWithFallback } from "@/lib/brandLogos";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic"; // Requires DB - can't prerender
@@ -11,17 +13,31 @@ export const metadata = {
 };
 
 function RebateCard({ rebate }: { rebate: SiteRebate }) {
+  const logoUrl = rebate.brand ? getBrandLogoWithFallback(rebate.brand) : null;
+  
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
-      {/* Brand + Amount */}
+      {/* Brand Logo + Amount */}
       <div className="flex items-start justify-between gap-3">
-        <div>
-          <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">
-            {rebate.brand || "Manufacturer"} Rebate
+        <div className="flex items-start gap-3">
+          {/* Brand Logo */}
+          {logoUrl && (
+            <div className="shrink-0 w-16 h-16 rounded-xl bg-neutral-100 flex items-center justify-center p-2 overflow-hidden">
+              <img
+                src={logoUrl}
+                alt={`${rebate.brand} logo`}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+          )}
+          <div>
+            <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">
+              {rebate.brand || "Manufacturer"} Rebate
+            </div>
+            <h3 className="mt-1 text-lg font-extrabold text-neutral-900 leading-tight">
+              {rebate.headline}
+            </h3>
           </div>
-          <h3 className="mt-1 text-lg font-extrabold text-neutral-900 leading-tight">
-            {rebate.headline}
-          </h3>
         </div>
         {rebate.rebate_amount && (
           <span className="shrink-0 rounded-full bg-emerald-600 px-4 py-2 text-lg font-extrabold text-white shadow">
