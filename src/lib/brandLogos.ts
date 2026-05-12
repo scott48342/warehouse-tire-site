@@ -1,47 +1,77 @@
 /**
- * Tire Brand Logo URLs
- * Uses manufacturer official logos where available
+ * Tire Brand Logo/Badge utilities
+ * Uses brand colors for nice looking badges
  */
 
-// Logo URLs from various CDNs and manufacturer sites
-export const BRAND_LOGOS: Record<string, string> = {
-  // Major tire brands
-  michelin: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Michelin_logo.svg/200px-Michelin_logo.svg.png",
-  goodyear: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Goodyear_Tire_%26_Rubber_Company_logo.svg/200px-Goodyear_Tire_%26_Rubber_Company_logo.svg.png",
-  bridgestone: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bridgestone_logo.svg/200px-Bridgestone_logo.svg.png",
-  continental: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Continental_AG_logo.svg/200px-Continental_AG_logo.svg.png",
-  pirelli: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Pirelli_logo.svg/200px-Pirelli_logo.svg.png",
-  cooper: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Cooper_Tire_%26_Rubber_Company_Logo.svg/200px-Cooper_Tire_%26_Rubber_Company_Logo.svg.png",
-  toyo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Toyo_Tires_logo.svg/200px-Toyo_Tires_logo.svg.png",
-  yokohama: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Yokohama_Rubber_Company_Logo.svg/200px-Yokohama_Rubber_Company_Logo.svg.png",
-  general: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/General_Tire_Logo.svg/200px-General_Tire_Logo.svg.png",
-  firestone: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Firestone_Tire_and_Rubber_Company_logo.svg/200px-Firestone_Tire_and_Rubber_Company_logo.svg.png",
-  bfgoodrich: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/BFGoodrich_logo.svg/200px-BFGoodrich_logo.svg.png",
-  hankook: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Hankook_logo.svg/200px-Hankook_logo.svg.png",
-  falken: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Falken_Tire_logo.svg/200px-Falken_Tire_logo.svg.png",
-  nitto: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Nitto_Tire_logo.svg/200px-Nitto_Tire_logo.svg.png",
-  kumho: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Kumho_Tire_logo.svg/200px-Kumho_Tire_logo.svg.png",
-  dunlop: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Dunlop_Tyres_logo.svg/200px-Dunlop_Tyres_logo.svg.png",
-  nexen: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Nexen_Tire_logo.svg/200px-Nexen_Tire_logo.svg.png",
-  uniroyal: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Uniroyal_logo.svg/200px-Uniroyal_logo.svg.png",
+// Brand colors for styled badges
+const BRAND_COLORS: Record<string, { bg: string; text: string }> = {
+  michelin: { bg: "0033A0", text: "FFD100" },  // Blue + Yellow
+  goodyear: { bg: "004B8D", text: "FFFFFF" },  // Blue
+  bridgestone: { bg: "E60012", text: "FFFFFF" }, // Red
+  continental: { bg: "F7941D", text: "000000" }, // Orange
+  pirelli: { bg: "000000", text: "FFD100" },   // Black + Yellow
+  cooper: { bg: "000000", text: "FFFFFF" },    // Black
+  toyo: { bg: "E60012", text: "FFFFFF" },      // Red
+  yokohama: { bg: "ED1C24", text: "FFFFFF" },  // Red
+  general: { bg: "000000", text: "FFFFFF" },   // Black
+  firestone: { bg: "CF202E", text: "FFFFFF" }, // Red
+  bfgoodrich: { bg: "E31837", text: "FFFFFF" }, // Red
+  hankook: { bg: "FF6600", text: "FFFFFF" },   // Orange
+  falken: { bg: "003DA5", text: "FFFFFF" },    // Blue
+  nitto: { bg: "000000", text: "FF0000" },     // Black + Red
+  kumho: { bg: "E4002B", text: "FFFFFF" },     // Red
+  dunlop: { bg: "FFD100", text: "000000" },    // Yellow
+  nexen: { bg: "E30613", text: "FFFFFF" },     // Red
+  uniroyal: { bg: "E4002B", text: "FFFFFF" },  // Red
+  mastercraft: { bg: "1C1C1C", text: "FFFFFF" },
+  sumitomo: { bg: "003366", text: "FFFFFF" },
+  kenda: { bg: "E31937", text: "FFFFFF" },
+  maxxis: { bg: "004B87", text: "FFFFFF" },
+  achilles: { bg: "1B1B1B", text: "FFFFFF" },
+  sailun: { bg: "E30613", text: "FFFFFF" },
+  westlake: { bg: "004B8D", text: "FFFFFF" },
+  kelly: { bg: "00843D", text: "FFFFFF" },     // Green
+  fuzion: { bg: "5C068C", text: "FFFFFF" },    // Purple
+  atturo: { bg: "E4002B", text: "FFFFFF" },
+  milestar: { bg: "003DA5", text: "FFFFFF" },
+  lexani: { bg: "C8A85C", text: "000000" },    // Gold
+  lionhart: { bg: "C9A227", text: "000000" },  // Gold
 };
 
+// Default colors for unknown brands
+const DEFAULT_COLORS = { bg: "525252", text: "FFFFFF" };
+
 /**
- * Get logo URL for a brand name (case-insensitive)
+ * Get brand colors (background and text)
  */
-export function getBrandLogoUrl(brand: string): string | null {
+export function getBrandColors(brand: string): { bg: string; text: string } {
   const key = brand.toLowerCase().replace(/[^a-z0-9]/g, '');
-  return BRAND_LOGOS[key] || null;
+  return BRAND_COLORS[key] || DEFAULT_COLORS;
 }
 
 /**
- * Get brand logo with fallback placeholder
+ * Get logo URL for a brand name
+ * Returns null - we use text badges instead
+ */
+export function getBrandLogoUrl(brand: string): string | null {
+  return null; // We use styled text badges
+}
+
+/**
+ * Get brand badge URL using UI Avatars with brand colors
  */
 export function getBrandLogoWithFallback(brand: string): string {
-  const logo = getBrandLogoUrl(brand);
-  if (logo) return logo;
+  const colors = getBrandColors(brand);
+  // Use first 1-2 letters as initials
+  const initials = brand.replace(/[^A-Za-z0-9 ]/g, '').split(' ')[0].slice(0, 2).toUpperCase();
   
-  // Generate a simple text-based placeholder using UI Avatars
-  const initials = brand.slice(0, 2).toUpperCase();
-  return `https://ui-avatars.com/api/?name=${encodeURIComponent(brand)}&background=random&color=fff&size=128&bold=true`;
+  return `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=${colors.bg}&color=${colors.text}&size=128&bold=true&font-size=0.5&format=svg`;
+}
+
+/**
+ * Check if we have brand colors defined
+ */
+export function hasBrandLogo(brand: string): boolean {
+  const key = brand.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return key in BRAND_COLORS;
 }
