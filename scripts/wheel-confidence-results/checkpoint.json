@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-05-13T15:35:48.823Z",
-  "batchName": "02",
-  "processed": 400,
+  "timestamp": "2026-05-13T15:42:00.695Z",
+  "batchName": "07",
+  "processed": 500,
   "stats": {
     "total": 500,
     "byCategory": {
-      "HIGH": 397,
-      "MEDIUM": 2,
+      "HIGH": 494,
+      "MEDIUM": 4,
       "LOW": 0,
-      "NEEDS_REVIEW": 1
+      "NEEDS_REVIEW": 2
     },
     "byPriority": {
-      "ev": 8,
-      "truck": 29,
-      "staggered": 57,
-      "offroad": 16,
-      "other": 290
+      "ev": 57,
+      "truck": 31,
+      "staggered": 50,
+      "offroad": 25,
+      "other": 337
     },
     "avgScore": 0
   }

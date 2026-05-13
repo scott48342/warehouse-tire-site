@@ -46,8 +46,8 @@ const pool = new Pool({
 const BATCH_SIZE = 500;
 const CHECKPOINT_INTERVAL = 100;
 const WHEELPROS_RATE_LIMIT_MS = 150;
-const OUTPUT_DIR = 'scripts/wheel-confidence-results';
-const CHECKPOINT_FILE = `${OUTPUT_DIR}/checkpoint.json`;
+const OUTPUT_DIR = join(__dirname, 'wheel-confidence-results');
+const CHECKPOINT_FILE = join(OUTPUT_DIR, 'checkpoint.json');
 
 // ============================================================================
 // HELPERS
