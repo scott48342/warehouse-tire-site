@@ -127,6 +127,9 @@ export const emailCampaignRecipients = pgTable(
     clickCount: integer("click_count").default(0),
     unsubscribedAt: timestamp("unsubscribed_at", { withTimezone: true }),
     
+    // External message tracking
+    messageId: varchar("message_id", { length: 255 }),
+    
     // External reference (e.g., Resend message ID)
     externalId: varchar("external_id", { length: 255 }),
     
@@ -169,6 +172,7 @@ export const emailCampaignEvents = pgTable(
     
     // External reference
     externalId: varchar("external_id", { length: 255 }),
+    providerEventId: varchar("provider_event_id", { length: 255 }),
     
     // Timestamp
     occurredAt: timestamp("occurred_at", { withTimezone: true }).notNull().defaultNow(),
@@ -178,6 +182,7 @@ export const emailCampaignEvents = pgTable(
     campaignIdx: index("email_campaign_events_campaign_idx").on(table.campaignId),
     eventTypeIdx: index("email_campaign_events_type_idx").on(table.eventType),
     occurredIdx: index("email_campaign_events_occurred_idx").on(table.occurredAt),
+    providerEventIdx: index("email_campaign_events_provider_event_idx").on(table.providerEventId),
   })
 );
 

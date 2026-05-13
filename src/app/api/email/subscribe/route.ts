@@ -149,7 +149,7 @@ export async function POST(req: Request) {
       sendExitIntentImmediateEmail({
         id: subscriber.id,
         email: subscriber.email,
-        vehicleYear: subscriber.vehicleYear,
+        vehicleYear: subscriber.vehicleYear?.toString() ?? null,
         vehicleMake: subscriber.vehicleMake,
         vehicleModel: subscriber.vehicleModel,
         vehicleTrim: subscriber.vehicleTrim,
