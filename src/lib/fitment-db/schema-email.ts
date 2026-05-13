@@ -364,16 +364,20 @@ export const cartAddEvents = pgTable(
     productType: varchar("product_type", { length: 50 }), // tire, wheel, accessory
     productSku: varchar("product_sku", { length: 100 }),
     sku: varchar("sku", { length: 100 }), // alias
+    rearSku: varchar("rear_sku", { length: 100 }), // for staggered setups
     productBrand: varchar("product_brand", { length: 100 }),
     brand: varchar("brand", { length: 100 }), // alias
     productModel: varchar("product_model", { length: 200 }),
     productName: varchar("product_name", { length: 300 }), // alias
     productSize: varchar("product_size", { length: 50 }),
+    size: varchar("size", { length: 50 }), // alias
+    specs: json("specs"), // Additional product specs
     
     // Pricing
     quantity: integer("quantity").default(1),
     unitPrice: decimal("unit_price", { precision: 10, scale: 2 }),
     totalPrice: decimal("total_price", { precision: 10, scale: 2 }),
+    priceAtTime: decimal("price_at_time", { precision: 10, scale: 2 }),
     
     // Purchase tracking
     purchased: boolean("purchased").default(false),
@@ -388,12 +392,18 @@ export const cartAddEvents = pgTable(
     // Analytics context
     pageUrl: varchar("page_url", { length: 500 }),
     referrer: varchar("referrer", { length: 500 }),
+    source: varchar("source", { length: 100 }),
     utmSource: varchar("utm_source", { length: 100 }),
     utmMedium: varchar("utm_medium", { length: 100 }),
     utmCampaign: varchar("utm_campaign", { length: 255 }),
     
+    // Request context
+    ipAddress: varchar("ip_address", { length: 45 }),
+    userAgent: text("user_agent"),
+    
     // Test data exclusion
     isTest: boolean("is_test").notNull().default(false),
+    testReason: varchar("test_reason", { length: 100 }),
     
     // Site context
     hostname: varchar("hostname", { length: 100 }),

@@ -305,7 +305,7 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
       customerLastName: customer?.lastName,
       customerEmail: customer?.email,
       customerPhone: customer?.phone,
-      vehicleYear: vehicle?.year,
+      vehicleYear: vehicle?.year ? Number(vehicle.year) : null,
       vehicleMake: vehicle?.make,
       vehicleModel: vehicle?.model,
       vehicleTrim: vehicle?.trim,
