@@ -31,6 +31,60 @@ export const runtime = "nodejs";
 export const maxDuration = 30;
 
 // ═══════════════════════════════════════════════════════════════════════════
+// OEM TIRE SIZES NORMALIZATION (2026-05-13)
+// Handles both string arrays and object arrays from DB
+// ═══════════════════════════════════════════════════════════════════════════
+
+type OemTireSizeObject = { size?: string; tireSize?: string };
+type OemTireSizeRaw = string | OemTireSizeObject;
+
+/**
+ * Normalize oem_tire_sizes from DB to string array.
+ * 
+ * Handles:
+ * - string arrays: ["275/65R18", "275/60R20"]
+ * - object arrays with size: [{ size: "275/65R18" }]
+ * - object arrays with tireSize: [{ tireSize: "275/65R18" }]
+ * - mixed arrays (defensive)
+ * 
+ * @param raw - Raw value from DB (unknown type)
+ * @returns Normalized string array of tire sizes
+ */
+function normalizeOemTireSizes(raw: unknown): string[] {
+  if (!raw) return [];
+  if (!Array.isArray(raw)) {
+    console.warn("[tire-sizes] oem_tire_sizes is not an array:", typeof raw);
+    return [];
+  }
+  
+  const result: string[] = [];
+  let malformedCount = 0;
+  
+  for (const item of raw as OemTireSizeRaw[]) {
+    if (typeof item === "string") {
+      // Already a string
+      if (item.trim()) result.push(item.trim());
+    } else if (item && typeof item === "object") {
+      // Object with size or tireSize property
+      const sizeValue = (item as OemTireSizeObject).size || (item as OemTireSizeObject).tireSize;
+      if (typeof sizeValue === "string" && sizeValue.trim()) {
+        result.push(sizeValue.trim());
+      } else {
+        malformedCount++;
+      }
+    } else {
+      malformedCount++;
+    }
+  }
+  
+  if (malformedCount > 0) {
+    console.warn(`[tire-sizes] Skipped ${malformedCount} malformed oem_tire_sizes entries`);
+  }
+  
+  return result;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // DEBUG RESPONSE TYPES
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -187,12 +241,12 @@ async function getDbFitmentSizes(
       const rearWheel = oemWheelSizes.find(ws => ws.position === 'rear' || ws.axle === 'rear');
       
       if (frontWheel && rearWheel) {
-        // Extract tire sizes for front and rear
-        const oemTireSizes = selectedFitment.oemTireSizes as string[] | null;
+        // Extract tire sizes for front and rear (with normalization for object arrays)
+        const oemTireSizes = normalizeOemTireSizes(selectedFitment.oemTireSizes);
         let frontTire: string | undefined;
         let rearTire: string | undefined;
         
-        if (oemTireSizes && oemTireSizes.length >= 2) {
+        if (oemTireSizes.length >= 2) {
           // Match tire sizes by rim diameter
           for (const size of oemTireSizes) {
             const rimMatch = size.match(/R(\d+)$/);
@@ -221,9 +275,9 @@ async function getDbFitmentSizes(
       console.log(`[tire-sizes] Staggered detection BLOCKED: ${staggeredCheck.reason}`);
     }
     
-    // Extract tire sizes from oem_tire_sizes JSON field
-    const oemTireSizes = selectedFitment.oemTireSizes as string[] | null;
-    if (!oemTireSizes || oemTireSizes.length === 0) {
+    // Extract tire sizes from oem_tire_sizes JSON field (with normalization for object arrays)
+    const oemTireSizes = normalizeOemTireSizes(selectedFitment.oemTireSizes);
+    if (oemTireSizes.length === 0) {
       // Also check oemWheelSizes for tire info
       if (oemWheelSizes) {
         const extractedSizes = new Set<string>();
