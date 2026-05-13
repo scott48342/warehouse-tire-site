@@ -1,20 +1,52 @@
-import pg from "pg";
-import fs from "fs";
+#!/usr/bin/env node
+import pg from 'pg';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 
-const envContent = fs.readFileSync(".env.local", "utf-8");
-const dbMatch = envContent.match(/POSTGRES_URL="?([^"\s]+)/);
-const dbUrl = dbMatch ? dbMatch[1].trim() : null;
+const pool = new pg.Pool({ connectionString: process.env.POSTGRES_URL });
 
-const { Pool } = pg;
-const pool = new Pool({ connectionString: dbUrl });
+async function main() {
+  // Check exact model values for F-150 Lightning
+  const lightning = await pool.query(`
+    SELECT DISTINCT model FROM vehicle_fitments WHERE model ILIKE '%lightning%'
+  `);
+  console.log('Models with "lightning":', lightning.rows.map(r => r.model));
+  
+  // Check if getModelVariants would find it
+  // Slugify: F-150 Lightning -> f-150-lightning
+  const slugified = 'f-150-lightning';
+  
+  // Query with slugified name
+  const result = await pool.query(`
+    SELECT DISTINCT model FROM vehicle_fitments WHERE model ILIKE $1
+  `, [slugified]);
+  console.log('ILIKE with "f-150-lightning":', result.rows);
+  
+  // Query with wildcard
+  const result2 = await pool.query(`
+    SELECT DISTINCT model FROM vehicle_fitments WHERE model ILIKE $1
+  `, ['%f-150%lightning%']);
+  console.log('ILIKE with "%f-150%lightning%":', result2.rows);
+  
+  // Check exact models for our problem vehicles
+  const vehicles = [
+    '%F-150 Lightning%',
+    '%Silverado 2500%',
+    '%Tacoma%',
+    '%Bronco%',
+    '%Corvette%',
+    '%M3%',
+    '%3500%',
+  ];
+  
+  for (const v of vehicles) {
+    const r = await pool.query(`
+      SELECT DISTINCT model FROM vehicle_fitments WHERE model ILIKE $1
+    `, [v]);
+    console.log(`Models matching ${v}:`, r.rows.map(r => r.model));
+  }
+  
+  await pool.end();
+}
 
-const r = await pool.query(`
-  SELECT DISTINCT model 
-  FROM vehicle_fitments 
-  WHERE LOWER(make) = 'buick' AND LOWER(model) LIKE '%encore%'
-`);
-
-console.log("Buick Encore model names:");
-r.rows.forEach(row => console.log(`  "${row.model}"`));
-
-await pool.end();
+main();
