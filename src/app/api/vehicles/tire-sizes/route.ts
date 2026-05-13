@@ -35,7 +35,13 @@ export const maxDuration = 30;
 // Handles both string arrays and object arrays from DB
 // ═══════════════════════════════════════════════════════════════════════════
 
-type OemTireSizeObject = { size?: string; tireSize?: string };
+type OemTireSizeObject = { 
+  size?: string; 
+  tireSize?: string;
+  width?: number;
+  aspectRatio?: number;
+  diameter?: number;
+};
 type OemTireSizeRaw = string | OemTireSizeObject;
 
 /**
@@ -45,6 +51,9 @@ type OemTireSizeRaw = string | OemTireSizeObject;
  * - string arrays: ["275/65R18", "275/60R20"]
  * - object arrays with size: [{ size: "275/65R18" }]
  * - object arrays with tireSize: [{ tireSize: "275/65R18" }]
+ * - object arrays with width/aspectRatio/diameter: [{ width: 255, aspectRatio: 55, diameter: 18 }]
+ * - stringified JSON: "[\"275/65R18\"]" (parses and recurses)
+ * - staggered objects: { front: ["245/40R19"], rear: ["275/35R19"] } (flattens)
  * - mixed arrays (defensive)
  * 
  * @param raw - Raw value from DB (unknown type)
@@ -52,6 +61,35 @@ type OemTireSizeRaw = string | OemTireSizeObject;
  */
 function normalizeOemTireSizes(raw: unknown): string[] {
   if (!raw) return [];
+  
+  // Handle stringified JSON (e.g., "[\"275/65R18\"]")
+  if (typeof raw === "string") {
+    try {
+      const parsed = JSON.parse(raw);
+      return normalizeOemTireSizes(parsed);
+    } catch {
+      // Not valid JSON - might be a single tire size
+      const trimmed = raw.trim();
+      if (trimmed.match(/^\d{3}\/\d{2}R\d{2}/)) {
+        return [trimmed];
+      }
+      console.warn("[tire-sizes] oem_tire_sizes is unparseable string:", raw);
+      return [];
+    }
+  }
+  
+  // Handle staggered objects: { front: [...], rear: [...] }
+  if (raw && typeof raw === "object" && !Array.isArray(raw)) {
+    const obj = raw as { front?: unknown; rear?: unknown };
+    if (obj.front || obj.rear) {
+      const frontSizes = normalizeOemTireSizes(obj.front);
+      const rearSizes = normalizeOemTireSizes(obj.rear);
+      return [...frontSizes, ...rearSizes];
+    }
+    console.warn("[tire-sizes] oem_tire_sizes is non-array object without front/rear:", raw);
+    return [];
+  }
+  
   if (!Array.isArray(raw)) {
     console.warn("[tire-sizes] oem_tire_sizes is not an array:", typeof raw);
     return [];
@@ -69,9 +107,21 @@ function normalizeOemTireSizes(raw: unknown): string[] {
       const sizeValue = (item as OemTireSizeObject).size || (item as OemTireSizeObject).tireSize;
       if (typeof sizeValue === "string" && sizeValue.trim()) {
         result.push(sizeValue.trim());
-      } else {
-        malformedCount++;
+        continue;
       }
+      
+      // Object with width/aspectRatio/diameter (GMC Envoy format)
+      const typedItem = item as OemTireSizeObject;
+      if (typedItem.width && typedItem.aspectRatio && typedItem.diameter) {
+        const reconstructed = `${typedItem.width}/${typedItem.aspectRatio}R${typedItem.diameter}`;
+        result.push(reconstructed);
+        continue;
+      }
+      
+      malformedCount++;
+    } else if (item === null || item === undefined) {
+      // Skip null/undefined entries silently
+      continue;
     } else {
       malformedCount++;
     }
