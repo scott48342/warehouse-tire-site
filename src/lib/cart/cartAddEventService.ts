@@ -383,10 +383,12 @@ export async function getCartEventStats(options?: {
     purchasedEvents: Number(stats?.purchasedEvents) || 0,
     uniqueProducts: Number(stats?.uniqueProducts) || 0,
     uniqueCarts: Number(stats?.uniqueCarts) || 0,
-    topBrands: brandResults.map((r) => ({
-      brand: r.brand,
-      count: Number(r.count),
-    })),
+    topBrands: brandResults
+      .filter((r) => r.brand != null)
+      .map((r) => ({
+        brand: r.brand!,
+        count: Number(r.count),
+      })),
   };
 }
 
@@ -405,7 +407,7 @@ export async function getBrands(productType: ProductType): Promise<string[]> {
     )
     .orderBy(cartAddEvents.brand);
 
-  return results.map((r) => r.brand);
+  return results.map((r) => r.brand).filter((b): b is string => b != null);
 }
 
 // ============================================================================
