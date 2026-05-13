@@ -35,10 +35,13 @@ export const emailCampaigns = pgTable(
     // Campaign identity
     name: varchar("name", { length: 255 }).notNull(),
     description: text("description"),
+    campaignType: varchar("campaign_type", { length: 50 }), // marketing, transactional, etc.
     
     // Content
     subject: varchar("subject", { length: 500 }),
     previewText: varchar("preview_text", { length: 255 }),
+    fromName: varchar("from_name", { length: 100 }),
+    fromEmail: varchar("from_email", { length: 255 }),
     templateId: varchar("template_id", { length: 100 }),
     content: json("content"), // CampaignContent JSON
     
@@ -49,6 +52,8 @@ export const emailCampaigns = pgTable(
     
     // Scheduling
     status: varchar("status", { length: 50 }).notNull().default("draft"),
+    sendMode: varchar("send_mode", { length: 50 }), // one_time, recurring_monthly
+    monthlyRuleJson: json("monthly_rule_json"), // Recurring campaign rules
     scheduledAt: timestamp("scheduled_at", { withTimezone: true }),
     startedAt: timestamp("started_at", { withTimezone: true }),
     completedAt: timestamp("completed_at", { withTimezone: true }),
