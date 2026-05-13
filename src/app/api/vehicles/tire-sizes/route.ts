@@ -528,7 +528,14 @@ export async function GET(req: Request) {
   // ═══════════════════════════════════════════════════════════════════════════
   if (!forceRefresh) {
     // Pass both modificationId and trim label for best resolution
-    const dbFitment = await getDbFitmentSizes(year, make, model, modification, trimParam || undefined);
+    // 2026-05-13 FIX: When no explicit trim param, use modification as trim fallback
+    // This handles frontend passing display labels (e.g., "LE") in modification param
+    // Resolution order in resolver:
+    //   1. Exact modification_id match (if modification matches a real ID like "manual_xxx")
+    //   2. Exact displayTrim match using trim param
+    //   3. Falls back to trying modification as displayTrim
+    const trimForResolver = trimParam || modification || undefined;
+    const dbFitment = await getDbFitmentSizes(year, make, model, modification, trimForResolver);
     
     // Check if fallback was BLOCKED due to inconsistent tire sizes across trims
     if (dbFitment && 'blocked' in dbFitment && dbFitment.blocked) {
