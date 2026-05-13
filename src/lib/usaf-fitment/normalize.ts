@@ -1,316 +1,310 @@
 /**
- * USAF Fitment Normalization Utilities
+ * USAF Tire Size Normalization
  * 
- * Normalizes USAF tire size data into canonical formats.
- * Handles LT sizes, flotation sizes, staggered sets, duplicates.
+ * Handles various tire size formats and extracts metadata:
+ * - P-prefix: P235/55R19 → 235/55R19
+ * - RF/runflat: P235/55RF19 → 235/55R19 + runFlat=true
+ * - ZR notation: 245/35ZR19 → 245/35R19 + speedCategory="ZR"
+ * - LT suffix: LT275/70R18/E → LT275/70R18 + loadRange="E"
+ * - Flotation: 37x12.50R17LT/C → flotation format + loadRange="C"
  */
 
-import type { 
-  NormalizedTireSize, 
-  NormalizedFitment,
-  UsafVehicleOption 
-} from './types';
-
-// ============================================================================
-// TIRE SIZE NORMALIZATION
-// ============================================================================
+export interface NormalizedTireSize {
+  /** Normalized size string for comparison (e.g., "235/55R19") */
+  normalized: string;
+  /** Original size string */
+  original: string;
+  /** Width in mm */
+  width: number;
+  /** Aspect ratio */
+  aspect: number;
+  /** Rim diameter in inches */
+  rim: number;
+  /** Is LT (light truck) */
+  isLT: boolean;
+  /** Is P (passenger) - stripped for comparison */
+  isP: boolean;
+  /** Is runflat (RF suffix) */
+  runFlat: boolean;
+  /** Speed category (ZR, Y, W, etc.) */
+  speedCategory: string | null;
+  /** Load range (C, D, E, etc.) */
+  loadRange: string | null;
+  /** Load index */
+  loadIndex: string | null;
+  /** Is flotation format (e.g., 37x12.50R17) */
+  isFlotation: boolean;
+  /** Flotation diameter (if flotation) */
+  flotationDiameter: number | null;
+  /** Flotation width (if flotation) */
+  flotationWidth: number | null;
+}
 
 /**
- * Normalize a raw tire size string from USAF
- * 
- * Examples:
- * - "P275/65R18" -> { width: 275, aspectRatio: 65, rimDiameter: 18, prefix: 'P' }
- * - "LT275/65R18" -> { width: 275, aspectRatio: 65, rimDiameter: 18, prefix: 'LT' }
- * - "35X12.50R17LT" -> flotation format
- * - "275/65R18 116T" -> includes load index and speed rating
+ * Parse and normalize a tire size string
  */
-export function normalizeUsafTireSize(raw: string): NormalizedTireSize | null {
-  if (!raw || typeof raw !== 'string') return null;
+export function normalizeTireSize(size: string): NormalizedTireSize | null {
+  if (!size || typeof size !== "string") return null;
   
-  const input = raw.trim().toUpperCase();
+  const original = size.trim();
+  const s = original.toUpperCase();
   
-  // Try standard metric format: P275/65R18, LT275/65R18, 275/65R18
-  const metricMatch = input.match(
-    /^(P|LT|ST|T)?(\d{3})\/(\d{2,3})(ZR|R)(\d{2})(\s*(\d{2,3})([A-Z]))?(\s*(XL|RF|C|D|E|F|G|H|J|L|M|N))?$/i
-  );
-  
-  if (metricMatch) {
-    const [, prefix, width, aspect, , rim, , loadIdx, speedRating, , loadRange] = metricMatch;
+  // Try flotation format first: 37x12.50R17LT/C
+  const flotMatch = s.match(/^(\d{2,3})x(\d{1,2}\.?\d*)R?(\d{2})(LT)?(?:\/([A-Z]))?$/i);
+  if (flotMatch) {
+    const [, diameter, width, rim, lt, loadRange] = flotMatch;
     return {
-      raw,
-      width: parseInt(width),
-      aspectRatio: parseInt(aspect),
-      rimDiameter: parseInt(rim),
-      prefix: prefix as 'P' | 'LT' | 'ST' | 'T' | undefined,
-      loadIndex: loadIdx ? parseInt(loadIdx) : undefined,
-      speedRating: speedRating || undefined,
-      loadRange: loadRange || undefined,
-      isFlotation: false,
-      normalized: `${prefix || ''}${width}/${aspect}R${rim}`,
+      original,
+      normalized: `${diameter}x${width}R${rim}`,
+      width: 0, // Not applicable for flotation
+      aspect: 0,
+      rim: parseInt(rim),
+      isLT: !!lt,
+      isP: false,
+      runFlat: false,
+      speedCategory: null,
+      loadRange: loadRange || null,
+      loadIndex: null,
+      isFlotation: true,
+      flotationDiameter: parseFloat(diameter),
+      flotationWidth: parseFloat(width),
     };
   }
   
-  // Try flotation format: 35X12.50R17LT
-  const flotationMatch = input.match(
-    /^(\d{2,3})[Xx](\d{1,2}(?:\.\d{1,2})?)[Rr](\d{2})(LT)?$/
+  // Standard format: P?LT?(\d{3})/(\d{2,3})(ZR|R|RF)?(\d{2})(?:/([A-Z]))?
+  // Examples: P235/55R19, LT275/70R18/E, 245/35ZR19, P235/55RF19
+  const stdMatch = s.match(
+    /^(P)?(LT)?(\d{3})\/(\d{2,3})(ZR|RF|R)?(\d{2})(?:\/([A-Z]))?(?:\s*(\d{2,3})([A-Z])?)?$/i
   );
   
-  if (flotationMatch) {
-    const [, diameter, width, rim, ltSuffix] = flotationMatch;
-    // Convert flotation to approximate metric
-    // Flotation: diameter x width R rim
-    const widthMm = Math.round(parseFloat(width) * 25.4);
-    const diameterIn = parseFloat(diameter);
-    const rimIn = parseInt(rim);
-    // Aspect ratio approximation: ((diameter - rim) / 2) / width * 100
-    const sidewallHeight = (diameterIn - rimIn) / 2;
-    const aspectRatio = Math.round((sidewallHeight / parseFloat(width)) * 100);
+  if (stdMatch) {
+    const [, pPrefix, ltPrefix, width, aspect, construction, rim, loadRange, loadIndex, speedRating] = stdMatch;
+    
+    const isRunFlat = construction === "RF";
+    const isZR = construction === "ZR";
+    
+    // Normalize: remove P prefix, convert RF/ZR to R, keep LT
+    const ltStr = ltPrefix || "";
+    const normalized = `${ltStr}${width}/${aspect}R${rim}`;
     
     return {
-      raw,
-      width: widthMm,
-      aspectRatio,
-      rimDiameter: rimIn,
-      prefix: ltSuffix ? 'LT' : undefined,
-      isFlotation: true,
-      normalized: `${diameter}x${width}R${rim}${ltSuffix || ''}`,
-    };
-  }
-  
-  // Try simple format without slash: 2756518
-  const simpleMatch = input.match(/^(\d{3})(\d{2})(\d{2})$/);
-  if (simpleMatch) {
-    const [, width, aspect, rim] = simpleMatch;
-    return {
-      raw,
+      original,
+      normalized,
       width: parseInt(width),
-      aspectRatio: parseInt(aspect),
-      rimDiameter: parseInt(rim),
+      aspect: parseInt(aspect),
+      rim: parseInt(rim),
+      isLT: !!ltPrefix,
+      isP: !!pPrefix,
+      runFlat: isRunFlat,
+      speedCategory: isZR ? "ZR" : (speedRating || null),
+      loadRange: loadRange || null,
+      loadIndex: loadIndex || null,
       isFlotation: false,
-      normalized: `${width}/${aspect}R${rim}`,
+      flotationDiameter: null,
+      flotationWidth: null,
     };
   }
   
-  console.warn(`[usaf-fitment] Could not parse tire size: ${raw}`);
+  // Fallback: try simpler patterns
+  const simpleMatch = s.match(/^(P)?(LT)?(\d{3})\/(\d{2,3})R?(\d{2})/i);
+  if (simpleMatch) {
+    const [, pPrefix, ltPrefix, width, aspect, rim] = simpleMatch;
+    const ltStr = ltPrefix || "";
+    return {
+      original,
+      normalized: `${ltStr}${width}/${aspect}R${rim}`,
+      width: parseInt(width),
+      aspect: parseInt(aspect),
+      rim: parseInt(rim),
+      isLT: !!ltPrefix,
+      isP: !!pPrefix,
+      runFlat: false,
+      speedCategory: null,
+      loadRange: null,
+      loadIndex: null,
+      isFlotation: false,
+      flotationDiameter: null,
+      flotationWidth: null,
+    };
+  }
+  
   return null;
 }
 
 /**
- * Normalize load range from various formats
+ * Compare two tire sizes for equivalence
+ * Returns true if they represent the same tire (ignoring P prefix, RF notation, etc.)
  */
-export function normalizeLoadRange(raw: string | undefined): string | undefined {
-  if (!raw) return undefined;
+export function sizesAreEquivalent(size1: string, size2: string): boolean {
+  const n1 = normalizeTireSize(size1);
+  const n2 = normalizeTireSize(size2);
   
-  const input = raw.trim().toUpperCase();
+  if (!n1 || !n2) return false;
   
-  // Standard load ranges
-  const validRanges = ['SL', 'XL', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'L', 'M', 'N'];
-  
-  // Direct match
-  if (validRanges.includes(input)) return input;
-  
-  // Numeric ply rating to load range
-  const plyMap: Record<string, string> = {
-    '4': 'B',
-    '6': 'C',
-    '8': 'D',
-    '10': 'E',
-    '12': 'F',
-    '14': 'G',
-  };
-  
-  if (plyMap[input]) return plyMap[input];
-  
-  // Extract from descriptions like "Load Range E"
-  const rangeMatch = input.match(/LOAD\s*RANGE\s*([A-Z])/i);
-  if (rangeMatch) return rangeMatch[1];
-  
-  return input;
+  return n1.normalized === n2.normalized;
 }
 
 /**
- * Normalize speed rating
+ * Find equivalent sizes between two arrays
  */
-export function normalizeSpeedRating(raw: string | undefined): string | undefined {
-  if (!raw) return undefined;
+export function findEquivalentSizes(
+  wtdSizes: string[],
+  usafSizes: string[]
+): {
+  common: Array<{ wtd: string; usaf: string; normalized: string }>;
+  wtdOnly: string[];
+  usafOnly: string[];
+} {
+  const wtdNormalized = wtdSizes.map(s => ({ original: s, parsed: normalizeTireSize(s) }));
+  const usafNormalized = usafSizes.map(s => ({ original: s, parsed: normalizeTireSize(s) }));
   
-  const input = raw.trim().toUpperCase();
+  const common: Array<{ wtd: string; usaf: string; normalized: string }> = [];
+  const matchedWtd = new Set<number>();
+  const matchedUsaf = new Set<number>();
   
-  // Valid speed ratings (in order of increasing speed)
-  const validRatings = ['L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'H', 'V', 'W', 'Y', 'Z', 'ZR'];
-  
-  // Direct match
-  if (validRatings.includes(input)) return input;
-  
-  // Extract from combined load/speed like "116T"
-  const combinedMatch = input.match(/\d{2,3}([A-Z]{1,2})$/);
-  if (combinedMatch && validRatings.includes(combinedMatch[1])) {
-    return combinedMatch[1];
-  }
-  
-  return input;
-}
-
-// ============================================================================
-// STAGGERED DETECTION
-// ============================================================================
-
-/**
- * Parse USAF vehicle options to detect staggered configurations
- */
-export function parseUsafStaggeredGroups(
-  options: UsafVehicleOption[]
-): { isStaggered: boolean; frontSize?: NormalizedTireSize; rearSize?: NormalizedTireSize } {
-  
-  if (!options || options.length === 0) {
-    return { isStaggered: false };
-  }
-  
-  // Group by position
-  const frontOptions = options.filter(o => o.position === 'front');
-  const rearOptions = options.filter(o => o.position === 'rear');
-  
-  // If we have explicit front/rear positions, check for different sizes
-  if (frontOptions.length > 0 && rearOptions.length > 0) {
-    const frontSize = normalizeUsafTireSize(frontOptions[0].tireSize);
-    const rearSize = normalizeUsafTireSize(rearOptions[0].tireSize);
+  for (let i = 0; i < wtdNormalized.length; i++) {
+    const wtd = wtdNormalized[i];
+    if (!wtd.parsed) continue;
     
-    if (frontSize && rearSize) {
-      const isStaggered = 
-        frontSize.width !== rearSize.width ||
-        frontSize.aspectRatio !== rearSize.aspectRatio ||
-        frontSize.rimDiameter !== rearSize.rimDiameter;
+    for (let j = 0; j < usafNormalized.length; j++) {
+      if (matchedUsaf.has(j)) continue;
+      const usaf = usafNormalized[j];
+      if (!usaf.parsed) continue;
       
-      return { isStaggered, frontSize, rearSize };
+      if (wtd.parsed.normalized === usaf.parsed.normalized) {
+        common.push({
+          wtd: wtd.original,
+          usaf: usaf.original,
+          normalized: wtd.parsed.normalized,
+        });
+        matchedWtd.add(i);
+        matchedUsaf.add(j);
+        break;
+      }
     }
   }
   
-  // Check for different rim widths even with same tire size
-  const uniqueRimWidths = [...new Set(options.map(o => o.rimWidth))];
-  if (uniqueRimWidths.length > 1) {
-    // Different rim widths suggest staggered
-    const sortedOptions = [...options].sort((a, b) => a.rimWidth - b.rimWidth);
+  const wtdOnly = wtdNormalized
+    .filter((_, i) => !matchedWtd.has(i))
+    .map(w => w.original);
+  
+  const usafOnly = usafNormalized
+    .filter((_, j) => !matchedUsaf.has(j))
+    .map(u => u.original);
+  
+  return { common, wtdOnly, usafOnly };
+}
+
+/**
+ * Detect potential staggered fitment from tire sizes
+ * Returns groups of front/rear pairs
+ */
+export function detectStaggeredPairs(
+  sizes: string[]
+): Array<{ front: string; rear: string; confidence: number }> {
+  const pairs: Array<{ front: string; rear: string; confidence: number }> = [];
+  const parsed = sizes.map(s => ({ original: s, parsed: normalizeTireSize(s) })).filter(x => x.parsed);
+  
+  // Group by rim size
+  const byRim = new Map<number, typeof parsed>();
+  for (const p of parsed) {
+    if (!p.parsed) continue;
+    const rim = p.parsed.rim;
+    if (!byRim.has(rim)) byRim.set(rim, []);
+    byRim.get(rim)!.push(p);
+  }
+  
+  // For each rim size, look for front/rear pairs (narrower front, wider rear)
+  for (const [rim, group] of byRim) {
+    if (group.length < 2) continue;
+    
+    // Sort by width
+    const sorted = [...group].sort((a, b) => {
+      if (!a.parsed || !b.parsed) return 0;
+      return a.parsed.width - b.parsed.width;
+    });
+    
+    // Check for typical staggered patterns
+    for (let i = 0; i < sorted.length - 1; i++) {
+      for (let j = i + 1; j < sorted.length; j++) {
+        const front = sorted[i];
+        const rear = sorted[j];
+        if (!front.parsed || !rear.parsed) continue;
+        
+        const widthDiff = rear.parsed.width - front.parsed.width;
+        
+        // Typical staggered: 20-60mm wider rear
+        if (widthDiff >= 20 && widthDiff <= 60) {
+          // Higher confidence if aspect ratios also differ appropriately
+          const aspectDiff = front.parsed.aspect - rear.parsed.aspect;
+          const confidence = aspectDiff > 0 && aspectDiff <= 15 ? 0.9 : 0.7;
+          
+          pairs.push({
+            front: front.original,
+            rear: rear.original,
+            confidence,
+          });
+        }
+      }
+    }
+  }
+  
+  return pairs;
+}
+
+/**
+ * Calculate confidence score for a size mismatch
+ */
+export function calculateMismatchConfidence(
+  wtdSizes: string[],
+  usafSizes: string[]
+): {
+  confidence: number;
+  reason: string;
+  category: "exact" | "partial" | "wtd_only" | "usaf_only" | "notation_diff" | "staggered_issue";
+} {
+  const comparison = findEquivalentSizes(wtdSizes, usafSizes);
+  
+  if (comparison.wtdOnly.length === 0 && comparison.usafOnly.length === 0) {
+    return { confidence: 1.0, reason: "Exact match after normalization", category: "exact" };
+  }
+  
+  // Check if differences are just notation (RF, P, ZR)
+  const wtdParsed = comparison.wtdOnly.map(normalizeTireSize).filter(Boolean);
+  const usafParsed = comparison.usafOnly.map(normalizeTireSize).filter(Boolean);
+  
+  const notationDiffs = wtdParsed.filter(w => 
+    usafParsed.some(u => w && u && w.normalized === u.normalized)
+  );
+  
+  if (notationDiffs.length > 0 && notationDiffs.length === comparison.wtdOnly.length) {
+    return { confidence: 0.95, reason: "Notation difference only (P/RF/ZR)", category: "notation_diff" };
+  }
+  
+  // Check for staggered issues
+  const usafStaggered = detectStaggeredPairs(usafSizes);
+  const wtdStaggered = detectStaggeredPairs(wtdSizes);
+  
+  if (usafStaggered.length > 0 && wtdStaggered.length === 0) {
+    return { confidence: 0.8, reason: "USAF shows staggered, WTD may be missing rear sizes", category: "staggered_issue" };
+  }
+  
+  if (comparison.common.length > 0) {
+    const matchRate = comparison.common.length / (comparison.common.length + comparison.usafOnly.length);
     return {
-      isStaggered: true,
-      frontSize: normalizeUsafTireSize(sortedOptions[0].tireSize) || undefined,
-      rearSize: normalizeUsafTireSize(sortedOptions[sortedOptions.length - 1].tireSize) || undefined,
+      confidence: matchRate,
+      reason: `Partial match: ${comparison.common.length} common, ${comparison.usafOnly.length} USAF-only`,
+      category: "partial",
     };
   }
   
-  // Check for multiple different tire sizes
-  const uniqueSizes = [...new Set(options.map(o => o.tireSize))];
-  if (uniqueSizes.length === 2) {
-    const size1 = normalizeUsafTireSize(uniqueSizes[0]);
-    const size2 = normalizeUsafTireSize(uniqueSizes[1]);
-    
-    if (size1 && size2 && size1.rimDiameter === size2.rimDiameter) {
-      // Same diameter, different width/aspect = likely staggered
-      if (size1.width !== size2.width || size1.aspectRatio !== size2.aspectRatio) {
-        // Smaller width is typically front
-        const [front, rear] = size1.width < size2.width ? [size1, size2] : [size2, size1];
-        return { isStaggered: true, frontSize: front, rearSize: rear };
-      }
-    }
+  if (usafSizes.length === 0) {
+    return { confidence: 0.5, reason: "Vehicle not in USAF database", category: "wtd_only" };
   }
   
-  return { isStaggered: false };
-}
-
-/**
- * Infer all valid configurations from USAF options
- */
-export function inferUsafConfigurations(options: UsafVehicleOption[]): NormalizedFitment {
-  const allSizes: NormalizedTireSize[] = [];
-  const wheelDiameters = new Set<number>();
-  const loadRanges = new Set<string>();
-  const speedRatings = new Set<string>();
-  
-  for (const opt of options) {
-    const normalized = normalizeUsafTireSize(opt.tireSize);
-    if (normalized) {
-      // Deduplicate by normalized string
-      if (!allSizes.some(s => s.normalized === normalized.normalized)) {
-        allSizes.push(normalized);
-      }
-      wheelDiameters.add(normalized.rimDiameter);
-    }
-    
-    if (opt.loadRange) {
-      const lr = normalizeLoadRange(opt.loadRange);
-      if (lr) loadRanges.add(lr);
-    }
-    
-    if (opt.speedRating) {
-      const sr = normalizeSpeedRating(opt.speedRating);
-      if (sr) speedRatings.add(sr);
-    }
+  if (wtdSizes.length === 0) {
+    return { confidence: 0.9, reason: "WTD missing all sizes, USAF has data", category: "usaf_only" };
   }
   
-  const staggeredInfo = parseUsafStaggeredGroups(options);
-  
-  return {
-    tireSizes: allSizes,
-    isStaggered: staggeredInfo.isStaggered,
-    frontSize: staggeredInfo.frontSize,
-    rearSize: staggeredInfo.rearSize,
-    wheelDiameters: [...wheelDiameters].sort((a, b) => a - b),
-    loadRanges: [...loadRanges],
-    speedRatings: [...speedRatings],
-  };
-}
-
-// ============================================================================
-// DEDUPLICATION
-// ============================================================================
-
-/**
- * Deduplicate noisy USAF records
- * USAF often returns the same size multiple times with slight variations
- */
-export function deduplicateUsafOptions(options: UsafVehicleOption[]): UsafVehicleOption[] {
-  const seen = new Map<string, UsafVehicleOption>();
-  
-  for (const opt of options) {
-    const normalized = normalizeUsafTireSize(opt.tireSize);
-    if (!normalized) continue;
-    
-    // Create a key that captures the essential uniqueness
-    const key = `${normalized.normalized}|${opt.rimWidth || ''}|${opt.position || 'all'}`;
-    
-    // Keep the first occurrence, or prefer OE fitments
-    if (!seen.has(key) || (opt.isOE && !seen.get(key)!.isOE)) {
-      seen.set(key, opt);
-    }
-  }
-  
-  return [...seen.values()];
-}
-
-// ============================================================================
-// COMPARISON HELPERS
-// ============================================================================
-
-/**
- * Compare two tire sizes for equality
- */
-export function tireSizesMatch(a: string, b: string): boolean {
-  const normA = normalizeUsafTireSize(a);
-  const normB = normalizeUsafTireSize(b);
-  
-  if (!normA || !normB) return false;
-  
-  return normA.normalized === normB.normalized;
-}
-
-/**
- * Check if a tire size exists in a list (normalized comparison)
- */
-export function tireSizeInList(size: string, list: string[]): boolean {
-  const normalized = normalizeUsafTireSize(size);
-  if (!normalized) return false;
-  
-  return list.some(s => {
-    const norm = normalizeUsafTireSize(s);
-    return norm && norm.normalized === normalized.normalized;
-  });
+  return { confidence: 0.3, reason: "Complete mismatch - needs review", category: "partial" };
 }
