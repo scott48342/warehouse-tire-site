@@ -219,6 +219,12 @@ export const emailSubscribers = pgTable(
     customFields: json("custom_fields"), // Arbitrary extra data
     tags: json("tags"), // Array of tags
     
+    // Cart link
+    cartId: varchar("cart_id", { length: 100 }),
+    
+    // Marketing preferences
+    marketingConsent: boolean("marketing_consent").default(true),
+    
     // Test data exclusion
     isTest: boolean("is_test").notNull().default(false),
     testReason: varchar("test_reason", { length: 100 }),

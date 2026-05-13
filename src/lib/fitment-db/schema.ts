@@ -191,11 +191,13 @@ export const wheelSizeTrimMappings = pgTable(
     wheelSizeTrimName: text("wheel_size_trim_name"),
     wsTrim: text("ws_trim"), // alias for code compatibility
     wsEngine: text("ws_engine"), // alias for code compatibility
+    configCount: integer("config_count"), // alias for code compatibility
     wheelSizeModificationId: text("wheel_size_modification_id"),
     matchMethod: varchar("match_method", { length: 50 }),
     matchConfidence: varchar("match_confidence", { length: 20 }),
     status: varchar("status", { length: 20 }).default("pending"),
     needsReview: boolean("needs_review").default(false),
+    reviewReason: text("review_reason"),
     reviewNotes: text("review_notes"),
     reviewedBy: varchar("reviewed_by", { length: 100 }),
     reviewedAt: timestamp("reviewed_at", { mode: "date" }),
