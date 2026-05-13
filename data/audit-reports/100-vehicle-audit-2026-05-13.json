@@ -1,0 +1,6249 @@
+{
+  "timestamp": "2026-05-13T18:09:00.965Z",
+  "baseUrl": "https://shop.warehousetiredirect.com",
+  "vehicles": [
+    {
+      "id": "d44d7a0f-861b-41e4-817b-e0dd11bd4568",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Sonic",
+      "trim": "LS",
+      "category": "normal",
+      "boltPattern": "5x105",
+      "centerBore": "56.6",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "P195/65R15"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x105",
+          "centerBore": 56.6,
+          "wheelCount": 20,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "P195/65R15",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "45022b51-89e5-428b-abf7-a6110cbf17b7",
+      "year": 2024,
+      "make": "Ford",
+      "model": "expedition",
+      "trim": "Timberline",
+      "category": "normal",
+      "boltPattern": "6x135",
+      "centerBore": "87.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 5,
+          "sizes": [
+            "265/70R18",
+            "275/65R18",
+            "275/55R20",
+            "285/55R20",
+            "285/45R22"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x135",
+          "centerBore": 87.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "265/70R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "3a038672-d75c-4e3d-b81f-cc5b4f6ed10d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Traverse",
+      "trim": "Premier",
+      "category": "normal",
+      "boltPattern": "6x120",
+      "centerBore": "66.9",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "255/55R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x120",
+          "centerBore": 66.9,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/55R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "957fddef-036d-450b-9d9f-f0367ff32ba6",
+      "year": 2018,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "trim": "SEL",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 11,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "215/55R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/55R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "88c7cbb6-db45-495e-84c3-61b67f2f0db9",
+      "year": 2024,
+      "make": "Kia",
+      "model": "sorento",
+      "trim": "SX",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "235/65R17",
+            "235/60R18",
+            "235/55R19",
+            "255/45R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/65R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "a0836782-8179-4e3c-94b8-180a172e13e7",
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Prius Prime",
+      "trim": "Base",
+      "category": "normal",
+      "boltPattern": "5x100",
+      "centerBore": "54.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "215/50R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 60.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/50R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "da2ae835-c790-42b2-a843-41dadbb12131",
+      "year": 2021,
+      "make": "Toyota",
+      "model": "camry",
+      "trim": "Hybrid XLE",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 10,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "215/55R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 60.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/55R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "144aa738-85b3-40f8-8f35-9067b71c9c52",
+      "year": 2021,
+      "make": "Ford",
+      "model": "Mustang Mach 1",
+      "trim": "Base",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5",
+      "confidenceTag": "MEDIUM",
+      "source": "verified-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "255/40R19",
+            "275/40R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/40R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "verified-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "d20295e9-6c1a-4a72-a9fe-2846723c52a6",
+      "year": 2021,
+      "make": "Hyundai",
+      "model": "kona",
+      "trim": "Limited",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "manual_seed_spec [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 4,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "215/55R17",
+            "235/45R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/55R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "manual_seed_spec [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "2a51ef00-708d-49f4-8f17-0dba6955e1a8",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "Custom",
+      "category": "normal",
+      "boltPattern": "8x180",
+      "centerBore": "124.1",
+      "confidenceTag": "HIGH",
+      "source": "api_import [template:gm_hd_gen4_2020_plus]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 4,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "LT245/70R17",
+            "LT265/70R18",
+            "LT275/70R18",
+            "LT275/65R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x180",
+          "centerBore": 124.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [template:gm_hd_gen4_2020_plus]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "e0f5a6d3-8247-46e3-be76-4cfcd05ba369",
+      "year": 2017,
+      "make": "Ford",
+      "model": "f-250",
+      "trim": "King Ranch",
+      "category": "normal",
+      "boltPattern": "8x170",
+      "centerBore": "124.9",
+      "confidenceTag": "MEDIUM",
+      "source": "generation_inherit",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "LT275/65R20",
+            "275/65R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x170",
+          "centerBore": 124.9,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT275/65R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_inherit"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "28ac55bd-b63b-40db-b654-aa5aac51b13a",
+      "year": 2015,
+      "make": "Chevrolet",
+      "model": "impala",
+      "trim": "LS",
+      "category": "normal",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "confidenceTag": "HIGH",
+      "source": "generation_template [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 3,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "P235/55R18",
+            "P245/45R19",
+            "P245/40R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "P235/55R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_template [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "fe3b820c-fd57-4ca8-bc3d-078aa5c10500",
+      "year": 2019,
+      "make": "Volkswagen",
+      "model": "tiguan",
+      "trim": "SE R-Line",
+      "category": "normal",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 6,
+          "sizes": [
+            "215/65R17",
+            "235/55R18",
+            "255/45R19",
+            "255/40R20",
+            "235/50R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x112",
+          "centerBore": 57.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/65R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "703e18ca-c591-4938-955a-f0d006435c32",
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Camry",
+      "trim": "Hybrid LE",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 8,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "205/65R16"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 60.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "205/65R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "93928f76-c1ee-47af-8d3e-13016d3fd6f7",
+      "year": 2024,
+      "make": "Nissan",
+      "model": "maxima",
+      "trim": "SV",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "66.1",
+      "confidenceTag": "MEDIUM",
+      "source": "generation_inherit_2023 [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "245/45R18",
+            "245/40R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 66.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/45R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_inherit_2023 [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "f913b9ce-7519-4c31-9c29-9522d36607c7",
+      "year": 2020,
+      "make": "Hyundai",
+      "model": "santa-fe",
+      "trim": "SE",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "235/65R17",
+            "235/60R18",
+            "235/55R19",
+            "255/45R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/65R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "7eb83fb6-4640-4536-b48a-2e3a56334654",
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "tahoe",
+      "trim": "High Country",
+      "category": "normal",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "HIGH",
+      "source": "generation_template [filled from 2020  [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 9,
+          "sizes": [
+            "255/70R17",
+            "265/60R17",
+            "265/65R18",
+            "265/70R17",
+            "275/55R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_template [filled from 2020  [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "18346f4f-50af-421b-a619-a7364a4471ff",
+      "year": 2019,
+      "make": "Honda",
+      "model": "pilot",
+      "trim": "Elite",
+      "category": "normal",
+      "boltPattern": "5x120",
+      "centerBore": "64.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/50R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 64.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/50R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "5e1a47c3-0c26-4d6a-97a3-43345ca1aa57",
+      "year": 2015,
+      "make": "Ford",
+      "model": "transit",
+      "trim": "Base",
+      "category": "normal",
+      "boltPattern": "5x160",
+      "centerBore": "65.1",
+      "confidenceTag": "MEDIUM",
+      "source": "google-ai-overview",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "215/65R16",
+            "235/65R16",
+            "235/55R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x160",
+          "centerBore": 65.1,
+          "wheelCount": 6,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/65R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "google-ai-overview"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "5bf0ae03-1d5d-4616-8058-79af8d6c43bc",
+      "year": 2023,
+      "make": "Toyota",
+      "model": "4runner",
+      "trim": "SR5 Premium",
+      "category": "normal",
+      "boltPattern": "6x139.7",
+      "centerBore": "106.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 8,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "265/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 106.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "265/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "523805bc-5843-4af0-b878-8a6c52cb8e62",
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "silverado-3500hd",
+      "trim": "LTZ",
+      "category": "normal",
+      "boltPattern": "8x180",
+      "centerBore": "124.1",
+      "confidenceTag": "HIGH",
+      "source": "api_import [template:gm_hd_gen4_2020_plus]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "LT245/70R17",
+            "LT265/70R18",
+            "LT275/70R18",
+            "LT275/65R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x180",
+          "centerBore": 124.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [template:gm_hd_gen4_2020_plus]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "a8d30c4a-fc46-4216-ae52-7edf2dd7ab81",
+      "year": 2016,
+      "make": "Hyundai",
+      "model": "santa-fe",
+      "trim": "Calligraphy",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "235/65R17",
+            "235/60R18",
+            "235/55R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/65R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "ae14c6ca-9feb-41af-b074-3d848124a554",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Kicks",
+      "trim": "SV",
+      "category": "normal",
+      "boltPattern": "4x100",
+      "centerBore": "60.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 3,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "205/55R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "4x100",
+          "centerBore": 60.1,
+          "wheelCount": 23,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "205/55R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "204463eb-77ca-487c-af95-b8ab2527a120",
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "caprice",
+      "trim": "Base",
+      "category": "normal",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "catalog-gap-fill",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "235/50R18",
+            "245/45R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/50R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "catalog-gap-fill"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "cf6adf63-a82c-44c4-849c-5b45b57a49dd",
+      "year": 2016,
+      "make": "Honda",
+      "model": "accord",
+      "trim": "LX",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "215/60R16"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 64.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/60R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "e867769a-5898-4578-90c1-57835c9271f8",
+      "year": 2020,
+      "make": "Ford",
+      "model": "ranger",
+      "trim": "Tremor",
+      "category": "normal",
+      "boltPattern": "6x139.7",
+      "centerBore": "93.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 8,
+          "sizes": [
+            "255/70R16",
+            "265/65R17",
+            "265/60R18",
+            "LT265/65R17",
+            "255/65R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 93.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/70R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "c4195884-83df-4457-97b4-09b194ae91f2",
+      "year": 2015,
+      "make": "Toyota",
+      "model": "Prius Plug-in",
+      "trim": "Base",
+      "category": "normal",
+      "boltPattern": "5x100",
+      "centerBore": "54.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "195/65R15"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 60.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "195/65R15",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "20fc06ea-0091-4c40-aaa5-5d648defb62d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "trim": "Z06 Front Z06",
+      "category": "normal",
+      "boltPattern": "5x120.7",
+      "centerBore": "70.3",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "P285/30ZR19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120.7",
+          "centerBore": 70.3,
+          "wheelCount": 0,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": false
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "15d5280f-b314-4b9b-add8-3d113dfe892e",
+      "year": 2019,
+      "make": "Subaru",
+      "model": "WRX STI",
+      "trim": "Series.Gray",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "56.1",
+      "confidenceTag": "MEDIUM",
+      "source": "google-ai-overview",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 2,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/35R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 56.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/35R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "google-ai-overview"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "3dff997b-d852-42bd-9120-303f13d8f7f5",
+      "year": 2021,
+      "make": "Toyota",
+      "model": "RAV4",
+      "trim": "Prime XSE",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 16,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "235/55R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 60.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/55R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "6546485b-4474-4e08-a62e-2bd86b234391",
+      "year": 2019,
+      "make": "Toyota",
+      "model": "gt-86",
+      "trim": "Base",
+      "category": "normal",
+      "boltPattern": "5x100",
+      "centerBore": "56.1",
+      "confidenceTag": "MEDIUM",
+      "source": "catalog-gap-fill [web_research]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "205/55R16",
+            "215/45R17",
+            "215/40R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x100",
+          "centerBore": 56.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "205/55R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "catalog-gap-fill [web_research]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "c5449935-59d0-43be-8916-1e326628a9ed",
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "category": "normal",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cleanup_wheelsize",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "275/55R20",
+            "285/45R22"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/55R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cleanup_wheelsize"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "0ad0e871-e011-4960-bf53-85cd6a0a2389",
+      "year": 2017,
+      "make": "Toyota",
+      "model": "Highlander",
+      "trim": "Hybrid Platinum",
+      "category": "normal",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 11,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/55R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 60.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/55R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "99271a98-12b8-4c0b-b1aa-d5a1d5e8865a",
+      "year": 2022,
+      "make": "Honda",
+      "model": "ridgeline",
+      "trim": "RTL",
+      "category": "normal",
+      "boltPattern": "5x120",
+      "centerBore": "64.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/60R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 64.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/60R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "123ad062-18f3-41c6-b193-35d1c59d4005",
+      "year": 2015,
+      "make": "Honda",
+      "model": "pilot",
+      "trim": "EX-L",
+      "category": "normal",
+      "boltPattern": "5x120",
+      "centerBore": "64.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/60R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 64.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/60R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "6a7ef3d7-01d8-4f47-9e91-ce360764f613",
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "trim": "WT",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 9,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 6,
+          "sizes": [
+            "255/70R17",
+            "265/70R17",
+            "LT265/60R20",
+            "LT265/70R17",
+            "LT275/65R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "7c165031-fb83-4472-9c0f-e9d5f2cd80ef",
+      "year": 2023,
+      "make": "Ford",
+      "model": "f-150",
+      "trim": "Lightning",
+      "category": "truck_suv",
+      "boltPattern": "6x135",
+      "centerBore": "87.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 10,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 5,
+          "sizes": [
+            "245/70R17",
+            "265/70R17",
+            "275/65R18",
+            "LT265/70R18",
+            "LT315/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x135",
+          "centerBore": 87.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "167c24a0-2636-4c0d-8128-57da16dd10b8",
+      "year": 2021,
+      "make": "Jeep",
+      "model": "grand-cherokee",
+      "trim": "Laredo",
+      "category": "truck_suv",
+      "boltPattern": "5x127",
+      "centerBore": "71.5",
+      "confidenceTag": "MEDIUM",
+      "source": "google-ai-overview",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 9,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x127",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "google-ai-overview"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "2955efaf-d109-4835-8a92-6dcf8ec0bc1e",
+      "year": 2026,
+      "make": "GMC",
+      "model": "sierra-1500",
+      "trim": "Denali Ultimate",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "HIGH",
+      "source": "cleanup_generation_template",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "275/50R22"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/50R22",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cleanup_generation_template"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "912fdde9-9181-4e58-9b85-852f72848f11",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "silverado-1500",
+      "trim": "LT",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cleanup_wheelsize",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 9,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "265/65R18",
+            "LT275/65R18",
+            "265/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "265/65R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cleanup_wheelsize"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "3249d98c-aa24-4d9d-96a2-b2845d5dc937",
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "colorado",
+      "trim": "ZR2",
+      "category": "truck_suv",
+      "boltPattern": "6x120",
+      "centerBore": "67.1",
+      "confidenceTag": "HIGH",
+      "source": "generation_template [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 11,
+          "sizes": [
+            "245/75R16",
+            "255/65R17",
+            "265/60R18",
+            "265/70R17",
+            "265/65R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x120",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/75R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_template [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "154aa7e8-1f73-4e4e-9002-4adc90f2c27f",
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "tahoe",
+      "trim": "LT",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "255/70R17",
+            "265/60R17",
+            "265/65R18",
+            "265/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "fad962fc-3c49-44ab-a983-3a44d9c2b67b",
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150 lightning",
+      "trim": "Pro",
+      "category": "truck_suv",
+      "boltPattern": "6x135",
+      "centerBore": "87.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tire-guide-pro-import",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "275/65R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x135",
+          "centerBore": 87.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/65R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tire-guide-pro-import"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "9bf6c2b0-ae1f-4227-ac1a-6bc34ab0ca9d",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cleanup_wheelsize",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 9,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "275/60R20",
+            "265/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/60R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cleanup_wheelsize"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "2b7847d2-153e-499a-80b7-051fdb7a181e",
+      "year": 2026,
+      "make": "Ford",
+      "model": "ranger",
+      "trim": "XLT",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "93.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 5,
+          "sizes": [
+            "255/65R18",
+            "255/70R16",
+            "255/70R17",
+            "265/60R18",
+            "265/65R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 93.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/65R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "bfb53882-d226-4353-b769-572883231057",
+      "year": 2021,
+      "make": "Jeep",
+      "model": "Cherokee",
+      "trim": "Freedom FWD",
+      "category": "truck_suv",
+      "boltPattern": "5x110",
+      "centerBore": "65.1",
+      "confidenceTag": "HIGH",
+      "source": "verified-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 15,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "225/55R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x110",
+          "centerBore": 65.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "225/55R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "verified-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "a49f166e-cc69-423c-b848-168033382653",
+      "year": 2026,
+      "make": "Ford",
+      "model": "explorer",
+      "trim": "XLT",
+      "category": "truck_suv",
+      "boltPattern": "5x114.3",
+      "centerBore": "63.4",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "255/65R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 63.4,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/65R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "4d99907d-b3d9-4336-abbc-93186f5d7430",
+      "year": 2021,
+      "make": "Jeep",
+      "model": "wrangler",
+      "trim": "Sahara",
+      "category": "truck_suv",
+      "boltPattern": "5x127",
+      "centerBore": "71.5",
+      "confidenceTag": "MEDIUM",
+      "source": "cleanup_wheelsize",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 26,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "255/70R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x127",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/70R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cleanup_wheelsize"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "20038eae-6767-4ca3-9aa1-005d6c1f9e51",
+      "year": 2022,
+      "make": "GMC",
+      "model": "sierra-1500",
+      "trim": "SLE",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "MEDIUM",
+      "source": "final-gap-fill [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "255/70R17",
+            "265/65R18",
+            "275/60R20",
+            "275/50R22"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "final-gap-fill [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "810c2be7-7636-4444-9281-c4d874dc1c75",
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "tahoe",
+      "trim": "LS",
+      "category": "truck_suv",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "265/65R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 78.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "265/65R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "11b2c2f1-a6d8-4dcc-b263-90d062db0c48",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "trim": "Sport",
+      "category": "lifted",
+      "boltPattern": "5x127",
+      "centerBore": "71.5",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 8,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/75R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x127",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/75R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "11970075-c7d7-4d74-b158-782f156327a8",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "trim": "Outer Banks",
+      "category": "lifted",
+      "boltPattern": "6x139.7",
+      "centerBore": "93.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "255/70R18",
+            "LT315/70R17",
+            "LT285/70R17",
+            "LT265/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 93.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/70R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "d67fca19-ed6c-4b39-83cf-84671e22d36d",
+      "year": 2022,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "trim": "Laredo",
+      "category": "lifted",
+      "boltPattern": "5x127",
+      "centerBore": "71.5",
+      "confidenceTag": "MEDIUM",
+      "source": "verified-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "245/70R17",
+            "265/60R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x127",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "verified-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "ce1cb2c2-deae-47e0-8fbe-b7dfb8669595",
+      "year": 2021,
+      "make": "Toyota",
+      "model": "tacoma",
+      "trim": "TRD Sport",
+      "category": "lifted",
+      "boltPattern": "6x139.7",
+      "centerBore": "106.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "265/65R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 106.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "265/65R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "50196446-7380-4b40-9ea7-60b629743eb0",
+      "year": 2024,
+      "make": "Jeep",
+      "model": "wrangler",
+      "trim": "Rubicon 392",
+      "category": "lifted",
+      "boltPattern": "5x127",
+      "centerBore": "71.5",
+      "confidenceTag": "MEDIUM",
+      "source": "cleanup_wheelsize",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 10,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "245/75R17",
+            "LT255/75R17",
+            "LT285/70R17",
+            "LT315/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x127",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/75R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cleanup_wheelsize"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "9b29dd9f-ad57-4b1d-9c48-ef72016cfdd7",
+      "year": 2026,
+      "make": "Chevrolet",
+      "model": "trailblazer",
+      "trim": "LT",
+      "category": "lifted",
+      "boltPattern": "5x100",
+      "centerBore": "56.6",
+      "confidenceTag": "MEDIUM",
+      "source": "google-ai-overview",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "225/60R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x100",
+          "centerBore": 56.6,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "225/60R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "google-ai-overview"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "93858620-b45a-4aaa-a9ce-e2b442bd3903",
+      "year": 2021,
+      "make": "Jeep",
+      "model": "cherokee",
+      "trim": "Base",
+      "category": "lifted",
+      "boltPattern": "5x110",
+      "centerBore": "65.1",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 15,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 7,
+          "sizes": [
+            "225/65R17",
+            "225/60R17",
+            "225/55R18",
+            "245/55R18",
+            "245/45R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x127",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "225/65R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dc62a415-722c-4b04-b2bf-0986b6960801",
+      "year": 2021,
+      "make": "Ford",
+      "model": "bronco",
+      "trim": "Big Bend",
+      "category": "lifted",
+      "boltPattern": "6x139.7",
+      "centerBore": "93.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "255/75R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 93.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/75R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "cb7af77c-ad50-4d9c-a041-509af541b1ab",
+      "year": 2023,
+      "make": "Ford",
+      "model": "bronco",
+      "trim": "Black Diamond",
+      "category": "lifted",
+      "boltPattern": "6x139.7",
+      "centerBore": "93.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "265/70R17",
+            "LT265/70R17",
+            "LT285/70R17",
+            "LT315/70R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x139.7",
+          "centerBore": 93.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "265/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "07a68463-c9a9-400c-95c1-dbebc83dfc9d",
+      "year": 2022,
+      "make": "jeep",
+      "model": "wrangler",
+      "trim": "Sport S V6",
+      "category": "lifted",
+      "boltPattern": "5x127",
+      "centerBore": "71.5",
+      "confidenceTag": "MEDIUM",
+      "source": "tire-guide-pro-import",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 28,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/75R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x127",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/75R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tire-guide-pro-import"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "3077bce9-47c1-4de2-ac93-d45db06abbaa",
+      "year": 2024,
+      "make": "McLaren",
+      "model": "artura",
+      "trim": "Artura/Artura Spider",
+      "category": "staggered",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "confidenceTag": "MEDIUM",
+      "source": "generation",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "235/35ZR19",
+            "295/35ZR20"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x112",
+          "centerBore": 57.1,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/35ZR19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING"
+      ]
+    },
+    {
+      "id": "4b1f1197-02c6-400d-ba43-2088b5317f2b",
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "trim": "LS, LT, RS, Premier, High Country",
+      "category": "staggered",
+      "boltPattern": "6x120",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": false,
+          "count": 0,
+          "sizes": [],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": false,
+          "wheelCount": 0,
+          "resolutionPath": "blocked",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/45R22",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": false,
+      "failures": [
+        "NO_TIRE_SIZES",
+        "STAGGERED_METADATA_MISSING",
+        "NO_BOLT_PATTERN",
+        "NO_CENTER_BORE",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "c3901208-7033-4f05-a845-0ed1d59c27a5",
+      "year": 2015,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Carrera, Carrera S, Carrera 4S, Turbo, Turbo S, GT3, GT3 RS",
+      "category": "staggered",
+      "boltPattern": "5x130",
+      "centerBore": "71.6",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 7,
+          "sizes": [
+            "235/40R19",
+            "245/30R21",
+            "245/35R20",
+            "295/30R20",
+            "295/35R19"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x130",
+          "centerBore": 71.6,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/40R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING"
+      ]
+    },
+    {
+      "id": "66b1fb87-d001-44c8-a80d-d74f55b554d9",
+      "year": 2019,
+      "make": "Ferrari",
+      "model": "portofino",
+      "trim": "Portofino/Portofino M",
+      "category": "staggered",
+      "boltPattern": "5x108",
+      "centerBore": "67.0",
+      "confidenceTag": "MEDIUM",
+      "source": "generation",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "245/40ZR19",
+            "285/35ZR19",
+            "245/35ZR20",
+            "285/35ZR20"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x108",
+          "centerBore": 67,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "245/40ZR19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING"
+      ]
+    },
+    {
+      "id": "d880f242-631f-473f-8b45-c26e6cced0bc",
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "trim": "LS",
+      "category": "staggered",
+      "boltPattern": "6x120",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "255/65R18"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x120",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/65R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "ed0b2c45-8725-49da-9f0b-f502a6e6bca6",
+      "year": 2021,
+      "make": "Mercedes",
+      "model": "cls-class-amg",
+      "trim": "Base",
+      "category": "staggered",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "catalog-gap-fill",
+      "tests": {
+        "ymmVisibility": {
+          "pass": false,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "255/35R19",
+            "275/30R20",
+            "285/30R21"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/35R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "catalog-gap-fill"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": false,
+      "failures": [
+        "YMM_MAKE_NOT_FOUND",
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "880c0cfe-2709-4a4f-adfe-39a849c3a9bb",
+      "year": 2017,
+      "make": "BMW",
+      "model": "M3",
+      "trim": "M3 Competition",
+      "category": "staggered",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "confidenceTag": "MEDIUM",
+      "source": "generation_inherit",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 2,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "255/35R19",
+            "275/35R19"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 72.6,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/35R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_inherit"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING"
+      ]
+    },
+    {
+      "id": "f4c7d68b-ae90-4104-a6c7-3ee124292a00",
+      "year": 2025,
+      "make": "BMW",
+      "model": "M5",
+      "trim": "M5 Competition",
+      "category": "staggered",
+      "boltPattern": "5x112",
+      "centerBore": "66.6",
+      "confidenceTag": "MEDIUM",
+      "source": "generation_inherit",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 3,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "285/35R20",
+            "275/35R20"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x112",
+          "centerBore": 66.6,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "285/35R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_inherit"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING"
+      ]
+    },
+    {
+      "id": "66df2aa8-bfa3-4601-9413-06de49e89a4c",
+      "year": 2020,
+      "make": "Mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT C",
+      "category": "staggered",
+      "boltPattern": "5x112",
+      "centerBore": "66.6",
+      "confidenceTag": "MEDIUM",
+      "source": "generation_inherit",
+      "tests": {
+        "ymmVisibility": {
+          "pass": false,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "255/35R19",
+            "295/30R20",
+            "265/35R19",
+            "305/30R20"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x112",
+          "centerBore": 66.6,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/35R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_inherit"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": false,
+      "failures": [
+        "YMM_MAKE_NOT_FOUND",
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "a157d2aa-acb7-4014-8279-8247fdc86cec",
+      "year": 2015,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Turbo S",
+      "category": "staggered",
+      "boltPattern": "5x130",
+      "centerBore": "71.6",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 7,
+          "sizes": [
+            "235/40R19",
+            "245/30R21",
+            "245/35R20",
+            "295/30R20",
+            "295/35R19"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x130",
+          "centerBore": 71.6,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/40R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING"
+      ]
+    },
+    {
+      "id": "afb493ea-d3aa-4d73-86a9-ca027003e348",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Carrera T Front Carrera T",
+      "category": "staggered",
+      "boltPattern": "5x130",
+      "centerBore": "71.5",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 42,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "245/35ZR20"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x130",
+          "centerBore": 71.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": false
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "612bbfc7-3768-4c03-9e8f-84e773b19420",
+      "year": 2024,
+      "make": "Ford",
+      "model": "mustang",
+      "trim": "GT",
+      "category": "staggered",
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5",
+      "confidenceTag": "MEDIUM",
+      "source": "trim-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 8,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "255/45R18",
+            "265/35R20"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 70.5,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/45R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "trim-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "708b0c9b-e5c9-4126-8559-b48ffa01ca26",
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "AMG GT S",
+      "trim": "Base Front Base",
+      "category": "staggered",
+      "boltPattern": "5x112",
+      "centerBore": "66.6",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": false,
+          "count": 0,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": false,
+          "count": 0,
+          "sizes": [],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x112",
+          "centerBore": 66.6,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "legacyFallback",
+          "confidence": "high",
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": false
+        }
+      },
+      "passed": false,
+      "failures": [
+        "NO_TRIMS_RETURNED",
+        "NO_TIRE_SIZES",
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "0f58818b-8202-4666-b8df-919b81051c8b",
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "amg-gt",
+      "trim": "AMG GT S",
+      "category": "staggered",
+      "boltPattern": "5x112",
+      "centerBore": "66.6",
+      "confidenceTag": "MEDIUM",
+      "source": "generation_inherit",
+      "tests": {
+        "ymmVisibility": {
+          "pass": false,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "255/35R19",
+            "295/30R20",
+            "265/35R19",
+            "305/30R20"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x112",
+          "centerBore": 66.6,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/35R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation_inherit"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": false,
+      "failures": [
+        "YMM_MAKE_NOT_FOUND",
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "c4b0cb83-cd8d-4874-8c53-5bbf7f4cc27b",
+      "year": 2025,
+      "make": "Porsche",
+      "model": "boxster",
+      "trim": "Spyder",
+      "category": "staggered",
+      "boltPattern": "5x130",
+      "centerBore": "71.6",
+      "confidenceTag": "MEDIUM",
+      "source": "cache-import [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 3,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 6,
+          "sizes": [
+            "235/45R17",
+            "255/40R17",
+            "235/40R18",
+            "265/40R18",
+            "235/35R19"
+          ],
+          "status": 200
+        },
+        "staggeredMetadata": {
+          "pass": false
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x130",
+          "centerBore": 71.6,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/45R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "cache-import [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": [
+        "STAGGERED_METADATA_MISSING",
+        "STAGGERED_FLAG_MISSING"
+      ]
+    },
+    {
+      "id": "086f4822-b093-4831-bcdc-96e21bc4ed69",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "Base",
+      "category": "hd",
+      "boltPattern": "8x180",
+      "centerBore": "124.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 3,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "LT245/75R17/E",
+            "LT265/70R18/E"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x180",
+          "centerBore": 124.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT245/75R17/E",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "0b34f534-2e10-46e1-94a1-75cc18388780",
+      "year": 2026,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Laramie Longhorn",
+      "category": "hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "121.3",
+      "confidenceTag": "MEDIUM",
+      "source": "merge_consolidation",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 13,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "LT285/60R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x165.1",
+          "centerBore": 121.3,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT285/60R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "merge_consolidation"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "57020764-6aed-4907-9281-e6389e94442f",
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "silverado-2500hd",
+      "trim": "Custom",
+      "category": "hd",
+      "boltPattern": "8x180",
+      "centerBore": "124.1",
+      "confidenceTag": "HIGH",
+      "source": "api_import [template:gm_hd_gen4_2020_plus]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 5,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "LT245/70R17",
+            "LT265/70R18",
+            "LT275/70R18",
+            "LT275/65R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x180",
+          "centerBore": 124.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [template:gm_hd_gen4_2020_plus]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "e297e490-7257-4949-b1cc-edddbdef5f0e",
+      "year": 2024,
+      "make": "Ford",
+      "model": "F-450 Super Duty",
+      "trim": "DRW",
+      "category": "hd",
+      "boltPattern": "8x200",
+      "centerBore": "142.0",
+      "confidenceTag": "MEDIUM",
+      "source": "google-ai-overview",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "LT225/70R19.5"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x200",
+          "centerBore": 142,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT225/70R19.5",
+          "count": 0,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "google-ai-overview"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "8c999125-eb24-4dea-aee4-f8405231bda4",
+      "year": 2019,
+      "make": "GMC",
+      "model": "sierra-2500hd",
+      "trim": "SLT",
+      "category": "hd",
+      "boltPattern": "8x180",
+      "centerBore": "124.1",
+      "confidenceTag": "HIGH",
+      "source": "api_import [filled from 2019 sierra-2500hd]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 4,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "LT265/70R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x180",
+          "centerBore": 124.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT265/70R18",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [filled from 2019 sierra-2500hd]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "e7c508ad-f1b4-487d-9e61-1e54acfd684e",
+      "year": 2023,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Tradesman",
+      "category": "hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "121.3",
+      "confidenceTag": "HIGH",
+      "source": "api_import [template:ram_hd_gen5_2019_ [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 13,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "275/70R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x165.1",
+          "centerBore": 121.3,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [template:ram_hd_gen5_2019_ [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "e836a355-02f9-4a4a-a2d3-4ef5d9ef5a0d",
+      "year": 2019,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Longhorn",
+      "category": "hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "121.3",
+      "confidenceTag": "HIGH",
+      "source": "api_import [filled from 2019 3500] [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 2,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "LT285/60R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x165.1",
+          "centerBore": 121.3,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT285/60R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [filled from 2019 3500] [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "c976e3f6-90c6-495f-a34c-67c9ab524e76",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500XD",
+      "trim": "Super Single (C-Type Tires) Front Super Single (C-Type Tires)",
+      "category": "hd",
+      "boltPattern": "6x130",
+      "centerBore": "84.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": false,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": false,
+          "count": 0,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": false,
+          "count": 0,
+          "sizes": [],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x130",
+          "centerBore": 84.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "legacyFallback",
+          "confidence": "high",
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": false
+        }
+      },
+      "passed": false,
+      "failures": [
+        "YMM_MAKE_NOT_FOUND",
+        "NO_TRIMS_RETURNED",
+        "NO_TIRE_SIZES"
+      ]
+    },
+    {
+      "id": "401f0463-b4a3-4715-b4b6-06497c722602",
+      "year": 2023,
+      "make": "RAM",
+      "model": "2500",
+      "trim": "Longhorn",
+      "category": "hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "121.3",
+      "confidenceTag": "HIGH",
+      "source": "api_import [template:ram_hd_gen5_2019_ [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 9,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "LT245/70R17",
+            "LT275/70R18",
+            "LT285/60R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x165.1",
+          "centerBore": 121.3,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT245/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [template:ram_hd_gen5_2019_ [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "31c2630a-e360-494f-8a36-32b97058e6a2",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT Snow Plow Prep Pkg. (DRW)",
+      "category": "hd",
+      "boltPattern": "8x210",
+      "centerBore": "154.2",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 16,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "LT235/80R17/E"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "8x210",
+          "centerBore": 154.2,
+          "wheelCount": 0,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "medium",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT235/80R17/E",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "684d0e9f-80b9-4f69-ab79-69433143dc59",
+      "year": 2025,
+      "make": "Toyota",
+      "model": "prius",
+      "trim": "L Eco, LE, XLE, Limited",
+      "category": "ev",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "confidenceTag": "MEDIUM",
+      "source": "manual_seed_spec",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 6,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": false,
+          "count": 0,
+          "sizes": [],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": false,
+          "wheelCount": 0,
+          "resolutionPath": "blocked",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "195/60R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "manual_seed_spec"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": false,
+      "failures": [
+        "NO_TIRE_SIZES",
+        "NO_BOLT_PATTERN",
+        "NO_CENTER_BORE"
+      ]
+    },
+    {
+      "id": "ab6cbb69-9ffd-4773-b78c-ddab62fb272d",
+      "year": 2024,
+      "make": "Audi",
+      "model": "q6-e-tron",
+      "trim": "Base",
+      "category": "ev",
+      "boltPattern": "5x112",
+      "centerBore": "66.5",
+      "confidenceTag": "MEDIUM",
+      "source": "catalog-gap-fill [web_research]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 4,
+          "sizes": [
+            "235/55R19",
+            "255/50R19",
+            "255/45R20",
+            "285/40R21"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x130",
+          "centerBore": 71.6,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "235/55R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "catalog-gap-fill [web_research]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "2211e203-a3b5-49e1-8b9e-6ce9bee35441",
+      "year": 2024,
+      "make": "Toyota",
+      "model": "prius",
+      "trim": "LE",
+      "category": "ev",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "confidenceTag": "MEDIUM",
+      "source": "manual_seed_spec [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 4,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "195/60R17",
+            "195/50R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 60.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "195/60R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "manual_seed_spec [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "3656736a-c1df-4814-847a-e446bcd03da9",
+      "year": 2018,
+      "make": "Maserati",
+      "model": "Levante",
+      "trim": "S (21 Inch Option) Rear S (21 Inch Option)",
+      "category": "ev",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 8,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "295/35R21"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": false
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "569bf90e-d992-4701-a484-71d33fda2390",
+      "year": 2024,
+      "make": "Nissan",
+      "model": "leaf",
+      "trim": "SV",
+      "category": "ev",
+      "boltPattern": "5x114.3",
+      "centerBore": "66.1",
+      "confidenceTag": "MEDIUM",
+      "source": "manual_seed_spec [trim-expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 3,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 2,
+          "sizes": [
+            "205/55R16",
+            "215/50R17"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 66.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "205/55R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "manual_seed_spec [trim-expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "6599da59-9752-4b09-bd77-0f0d72a047c1",
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Prius",
+      "trim": "Three",
+      "category": "ev",
+      "boltPattern": "5x100",
+      "centerBore": "54.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "P195/65R15"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "4x100",
+          "centerBore": 54.1,
+          "wheelCount": 23,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "P195/65R15",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "d00902eb-4090-4db0-972c-732d9af205a2",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-150 lightning",
+      "trim": "Pro",
+      "category": "ev",
+      "boltPattern": "6x135",
+      "centerBore": "87.1",
+      "confidenceTag": "MEDIUM",
+      "source": "manual-qa-fix",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 4,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "275/50R22",
+            "275/60R20",
+            "275/65R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x135",
+          "centerBore": 87.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/50R22",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "manual-qa-fix"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "9e1ca6d9-5dfd-4715-94b2-ddf9402f4334",
+      "year": 2023,
+      "make": "ford",
+      "model": "f-150 lightning",
+      "trim": "Lariat",
+      "category": "ev",
+      "boltPattern": "6x135",
+      "centerBore": "87.1",
+      "confidenceTag": "MEDIUM",
+      "source": "manual-qa-fix",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 4,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "275/50R22",
+            "275/60R20",
+            "275/65R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x135",
+          "centerBore": 87.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/50R22",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "manual-qa-fix"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "d126a4f8-cb3b-4838-8905-0b475689ef7d",
+      "year": 2018,
+      "make": "Hyundai",
+      "model": "Ioniq",
+      "trim": "Plug-In Hybrid Limited",
+      "category": "ev",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "205/55R16"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x114.3",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "205/55R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "db4c97b6-be08-4ea3-8a9d-2f55e9a17903",
+      "year": 2018,
+      "make": "Toyota",
+      "model": "Prius",
+      "trim": "One",
+      "category": "ev",
+      "boltPattern": "5x100",
+      "centerBore": "54.1",
+      "confidenceTag": "MEDIUM",
+      "source": "tgp_solutions",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 7,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "P195/65R15"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "4x100",
+          "centerBore": 54.1,
+          "wheelCount": 23,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "P195/65R15",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "tgp_solutions"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "707178b4-aca4-42d5-97bb-93df23215ed7",
+      "year": 2002,
+      "make": "Chevrolet",
+      "model": "Silverado 3500",
+      "trim": "Base",
+      "category": "older",
+      "boltPattern": "8x165.1",
+      "centerBore": "124.1",
+      "confidenceTag": "MEDIUM",
+      "source": "verified-research",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "LT265/70R17",
+            "LT275/70R18",
+            "LT275/65R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 67.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "LT265/70R17",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "verified-research"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": false,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "002a1094-58d1-4e1b-bcda-f347eae4dd3e",
+      "year": 2007,
+      "make": "Lincoln",
+      "model": "navigator",
+      "trim": "Reserve",
+      "category": "older",
+      "boltPattern": "6x135",
+      "centerBore": "87.1",
+      "confidenceTag": "MEDIUM",
+      "source": "generation-baseline [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 2,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "275/55R20"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "6x135",
+          "centerBore": 87.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/55R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "generation-baseline [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "15f68aa5-6ec6-4ee0-addb-0d3ecf01c4e2",
+      "year": 2007,
+      "make": "Mercedes",
+      "model": "s-class",
+      "trim": "S63 AMG",
+      "category": "older",
+      "boltPattern": "5x112",
+      "centerBore": "66.6",
+      "confidenceTag": "MEDIUM",
+      "source": "fix_cross_gen",
+      "tests": {
+        "ymmVisibility": {
+          "pass": false,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 4,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 1,
+          "sizes": [
+            "255/40R19"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x112",
+          "centerBore": 66.6,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "255/40R19",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "fix_cross_gen"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": false,
+      "failures": [
+        "YMM_MAKE_NOT_FOUND"
+      ]
+    },
+    {
+      "id": "728c977f-fbcf-4341-9e41-898688e71b0b",
+      "year": 2003,
+      "make": "Saab",
+      "model": "9-5",
+      "trim": "Base",
+      "category": "older",
+      "boltPattern": "5x110",
+      "centerBore": "65.1",
+      "confidenceTag": "HIGH",
+      "source": "api_import",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": true,
+          "count": 1,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": true,
+          "count": 3,
+          "sizes": [
+            "215/55R16",
+            "225/50R17",
+            "235/45R18"
+          ],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x110",
+          "centerBore": 65.1,
+          "wheelCount": 24,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "directCanonical",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "215/55R16",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "c6edcbc9-3355-4051-acd8-ff05ffaeed54",
+      "year": 2008,
+      "make": "Land Rover",
+      "model": "range-rover",
+      "trim": "HSE",
+      "category": "older",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "confidenceTag": "HIGH",
+      "source": "api_import [expanded]",
+      "tests": {
+        "ymmVisibility": {
+          "pass": true,
+          "status": 200
+        },
+        "trimsEndpoint": {
+          "pass": false,
+          "count": 0,
+          "status": 200
+        },
+        "tireSizesEndpoint": {
+          "pass": false,
+          "count": 0,
+          "sizes": [],
+          "status": 200
+        },
+        "wheelFitmentSearch": {
+          "pass": true,
+          "boltPattern": "5x120",
+          "centerBore": 72.6,
+          "wheelCount": 24,
+          "isStaggered": true,
+          "fitmentSource": "dbFirst",
+          "resolutionPath": "legacyFallback",
+          "confidence": "high",
+          "status": 200
+        },
+        "tireResults": {
+          "pass": true,
+          "size": "275/45R20",
+          "count": 5,
+          "status": 200
+        },
+        "dbSource": {
+          "pass": true,
+          "source": "api_import [expanded]"
+        },
+        "specCompleteness": {
+          "hasBoltPattern": true,
+          "hasCenterBore": true,
+          "hasOffsetRange": true,
+          "hasWheelSizes": true,
+          "hasTireSizes": true
+        }
+      },
+      "passed": false,
+      "failures": [
+        "NO_TRIMS_RETURNED",
+        "NO_TIRE_SIZES"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 100,
+    "passed": 91,
+    "failed": 9,
+    "byCategory": {
+      "normal": {
+        "total": 35,
+        "passed": 35,
+        "failed": 0
+      },
+      "truck_suv": {
+        "total": 15,
+        "passed": 15,
+        "failed": 0
+      },
+      "lifted": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "staggered": {
+        "total": 15,
+        "passed": 10,
+        "failed": 5
+      },
+      "hd": {
+        "total": 10,
+        "passed": 9,
+        "failed": 1
+      },
+      "ev": {
+        "total": 10,
+        "passed": 9,
+        "failed": 1
+      },
+      "older": {
+        "total": 5,
+        "passed": 3,
+        "failed": 2
+      }
+    },
+    "byFailureType": {
+      "STAGGERED_METADATA_MISSING": 15,
+      "NO_TIRE_SIZES": 5,
+      "NO_BOLT_PATTERN": 2,
+      "NO_CENTER_BORE": 2,
+      "STAGGERED_FLAG_MISSING": 9,
+      "YMM_MAKE_NOT_FOUND": 5,
+      "NO_TRIMS_RETURNED": 3
+    }
+  }
+}
