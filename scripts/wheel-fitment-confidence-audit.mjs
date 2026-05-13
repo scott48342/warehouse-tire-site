@@ -22,7 +22,12 @@
  */
 
 import { config } from 'dotenv';
-config({ path: '.env.local' });
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+config({ path: join(__dirname, '..', '.env.local') });
 
 import pg from 'pg';
 const { Pool } = pg;
@@ -31,7 +36,7 @@ import path from 'path';
 
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
-  ssl: true,
+  // SSL is handled by sslmode in connection string
 });
 
 // ============================================================================
