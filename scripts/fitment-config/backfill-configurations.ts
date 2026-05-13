@@ -1,5 +1,13 @@
 /**
- * Backfill Fitment Configurations
+ * @deprecated 2026-05-13 - DO NOT USE
+ * 
+ * This script writes to vehicle_fitment_configurations which is DEPRECATED.
+ * The canonical source is now vehicle_fitments table.
+ * See docs/FITMENT_DATA_ARCHITECTURE.md
+ * 
+ * ============================================================================
+ * 
+ * Backfill Fitment Configurations (DEPRECATED)
  * 
  * Populates vehicle_fitment_configurations table from existing fitment data.
  * 
