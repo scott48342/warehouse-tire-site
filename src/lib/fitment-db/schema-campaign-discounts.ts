@@ -7,8 +7,7 @@
  */
 
 import { pgTable, varchar, timestamp, boolean, decimal, uuid, index } from "drizzle-orm/pg-core";
-import { emailCampaigns } from "./schema";
-import { emailCampaignRecipients } from "./schema";
+import { emailCampaigns, emailCampaignRecipients } from "./schema-email";
 
 // ============================================================================
 // Campaign Discounts Table

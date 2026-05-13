@@ -267,3 +267,41 @@ export const fitmentOverrides = pgTable(
 
 export type FitmentOverride = typeof fitmentOverrides.$inferSelect;
 export type NewFitmentOverride = typeof fitmentOverrides.$inferInsert;
+
+// ════════════════════════════════════════════════════════════════════════════════
+// EMAIL CAMPAIGN TABLES (re-exported from schema-email.ts)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export {
+  emailCampaigns,
+  emailCampaignRecipients,
+  emailCampaignEvents,
+  emailSubscribers,
+  abandonedCarts,
+  cartAddEvents,
+  type EmailCampaign,
+  type NewEmailCampaign,
+  type EmailCampaignRecipient,
+  type NewEmailCampaignRecipient,
+  type EmailCampaignEvent,
+  type NewEmailCampaignEvent,
+  type EmailSubscriber,
+  type NewEmailSubscriber,
+  type AbandonedCart,
+  type NewAbandonedCart,
+  type CartAddEvent,
+  type NewCartAddEvent,
+} from "./schema-email";
+
+// ════════════════════════════════════════════════════════════════════════════════
+// IMAGE CACHE TABLES (re-exported from schema-images.ts)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export {
+  tireImages,
+  kmImageMappings,
+  type TireImage,
+  type NewTireImage,
+  type KmImageMapping,
+  type NewKmImageMapping,
+} from "./schema-images";
