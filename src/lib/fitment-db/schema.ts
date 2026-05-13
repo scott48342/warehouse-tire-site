@@ -180,16 +180,22 @@ export const wheelSizeTrimMappings = pgTable(
     id: uuid("id").primaryKey().defaultRandom(),
     year: integer("year").notNull(),
     makeKey: varchar("make_key", { length: 100 }).notNull(),
+    make: varchar("make", { length: 100 }), // alias for code compatibility
     modelKey: varchar("model_key", { length: 200 }).notNull(),
+    model: varchar("model", { length: 200 }), // alias for code compatibility
     ourDisplayTrim: text("our_display_trim").notNull(),
+    ourTrim: text("our_trim"), // alias for code compatibility
     ourModificationId: text("our_modification_id"),
     vehicleFitmentId: uuid("vehicle_fitment_id"),
     wheelSizeGeneration: varchar("wheel_size_generation", { length: 200 }),
     wheelSizeTrimName: text("wheel_size_trim_name"),
+    wsTrim: text("ws_trim"), // alias for code compatibility
+    wsEngine: text("ws_engine"), // alias for code compatibility
     wheelSizeModificationId: text("wheel_size_modification_id"),
     matchMethod: varchar("match_method", { length: 50 }),
     matchConfidence: varchar("match_confidence", { length: 20 }),
     status: varchar("status", { length: 20 }).default("pending"),
+    needsReview: boolean("needs_review").default(false),
     reviewNotes: text("review_notes"),
     reviewedBy: varchar("reviewed_by", { length: 100 }),
     reviewedAt: timestamp("reviewed_at", { mode: "date" }),
