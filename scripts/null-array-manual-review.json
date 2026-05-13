@@ -1,0 +1,156 @@
+{
+  "generatedAt": "2026-05-13T17:01:56.506Z",
+  "count": 12,
+  "records": [
+    {
+      "id": "acb16617-ceef-41f5-983b-bcbd6eb1c0eb",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "wheelDiameter": 17,
+      "reason": "Wheel diameter 17\" doesn't match any sibling tire sizes",
+      "siblingTrims": [
+        "Base"
+      ],
+      "siblingTireSizes": [
+        "265/65R18"
+      ]
+    },
+    {
+      "id": "d0b259e2-d300-4c6f-b645-7ac574abf2ae",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "wheelDiameter": 17,
+      "reason": "Wheel diameter 17\" doesn't match any sibling tire sizes",
+      "siblingTrims": [
+        "Base"
+      ],
+      "siblingTireSizes": [
+        "265/65R18"
+      ]
+    },
+    {
+      "id": "3e2b9929-6b2f-4ba2-a496-48cca19d0387",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "wheelDiameter": 17,
+      "reason": "Wheel diameter 17\" doesn't match any sibling tire sizes",
+      "siblingTrims": [
+        "Base"
+      ],
+      "siblingTireSizes": [
+        "265/65R18"
+      ]
+    },
+    {
+      "id": "9e798349-53d1-4c7e-b557-6d2058802a28",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "wheelDiameter": 17,
+      "reason": "Wheel diameter 17\" doesn't match any sibling tire sizes",
+      "siblingTrims": [
+        "Base"
+      ],
+      "siblingTireSizes": [
+        "265/65R18"
+      ]
+    },
+    {
+      "id": "8add9882-3997-4739-8678-44a13c4b171f",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "wheelDiameter": 17,
+      "reason": "Wheel diameter 17\" doesn't match any sibling tire sizes",
+      "siblingTrims": [
+        "Base"
+      ],
+      "siblingTireSizes": [
+        "265/65R18"
+      ]
+    },
+    {
+      "id": "27c74ed9-f607-45af-804a-e9c20aecd7a1",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "wheelDiameter": 17,
+      "reason": "Wheel diameter 17\" doesn't match any sibling tire sizes",
+      "siblingTrims": [
+        "Base"
+      ],
+      "siblingTireSizes": [
+        "265/65R18"
+      ]
+    },
+    {
+      "id": "e60141ae-463f-4b05-9476-f2c2b9beb962",
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Base",
+      "wheelDiameter": 17,
+      "reason": "No sibling trims with valid tire sizes",
+      "siblingTireSizes": null
+    },
+    {
+      "id": "48425e5d-acc1-4f72-abf3-66193fc2399e",
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Base",
+      "wheelDiameter": 17,
+      "reason": "No sibling trims with valid tire sizes",
+      "siblingTireSizes": null
+    },
+    {
+      "id": "8bc34909-5178-4677-ac8c-58068f739310",
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Base",
+      "wheelDiameter": 17,
+      "reason": "No sibling trims with valid tire sizes",
+      "siblingTireSizes": null
+    },
+    {
+      "id": "31fe610e-86fc-47ad-9fce-1afa8cefcbdd",
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Base",
+      "wheelDiameter": 17,
+      "reason": "No sibling trims with valid tire sizes",
+      "siblingTireSizes": null
+    },
+    {
+      "id": "3969b3a0-3759-491d-b37c-7608e285a60e",
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Base",
+      "wheelDiameter": 17,
+      "reason": "No sibling trims with valid tire sizes",
+      "siblingTireSizes": null
+    },
+    {
+      "id": "92ea27aa-342c-44d3-93e7-1b7efe9e13ca",
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "wheelDiameter": 17,
+      "reason": "No sibling trims with valid tire sizes",
+      "siblingTireSizes": null
+    }
+  ]
+}

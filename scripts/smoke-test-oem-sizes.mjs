@@ -16,9 +16,15 @@ const testCases = [
   // F-150 Lightning
   { year: 2022, make: "Ford", model: "F-150 Lightning" },
   { year: 2023, make: "Ford", model: "F-150 Lightning" },
-  // GMC Envoy (just fixed)
+  // GMC Envoy (fixed earlier)
   { year: 2006, make: "GMC", model: "Envoy" },
   { year: 2007, make: "GMC", model: "Envoy" },
+  // Pontiac Firebird (just fixed)
+  { year: 1997, make: "Pontiac", model: "Firebird" },
+  { year: 1998, make: "Pontiac", model: "Firebird" },
+  // Cadillac Escalade (manual review - check still has [null])
+  { year: 2007, make: "Cadillac", model: "Escalade" },
+  { year: 2008, make: "Cadillac", model: "Escalade" },
   // Regular vehicles
   { year: 2024, make: "Ford", model: "F-150" },
   { year: 2024, make: "Toyota", model: "Tacoma" },
