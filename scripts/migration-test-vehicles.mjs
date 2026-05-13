@@ -79,37 +79,44 @@ async function analyzeVehicle(client, vehicle) {
   // Query vehicle_fitments table
   const fitmentResult = await client.query(`
     SELECT 
-      id, year, make, model, trim, modification,
-      bolt_pattern, center_bore, front_wheel_size, rear_wheel_size,
-      front_tire_size, rear_tire_size, offset_range,
+      id, year, make, model, modification_id,
+      raw_trim, display_trim, submodel,
+      bolt_pattern, center_bore_mm, thread_size, seat_type,
+      offset_min_mm, offset_max_mm,
+      oem_wheel_sizes, oem_tire_sizes,
+      source, quality_tier, certification_status,
       created_at, updated_at
     FROM vehicle_fitments
     WHERE year = $1 AND make ILIKE $2 AND model ILIKE $3
-    ORDER BY trim, modification
+    ORDER BY display_trim, submodel
   `, [year, make, model]);
 
-  // Query vehicle_fitment_configurations table
+  // Query vehicle_fitment_configurations table (uses make_key/model_key)
   const configResult = await client.query(`
     SELECT 
-      id, year, make, model, trim, modification,
-      bolt_pattern, center_bore, front_wheel_size, rear_wheel_size,
-      front_tire_size, rear_tire_size, offset_range,
-      source, created_at, updated_at
+      id, vehicle_fitment_id, year, make_key, model_key,
+      modification_id, display_trim,
+      configuration_key, configuration_label,
+      wheel_diameter, wheel_width, wheel_offset_mm,
+      tire_size, axle_position,
+      is_default, is_optional,
+      source, source_confidence, source_notes,
+      created_at, updated_at
     FROM vehicle_fitment_configurations
-    WHERE year = $1 AND make ILIKE $2 AND model ILIKE $3
-    ORDER BY trim, modification
-  `, [year, make, model]);
+    WHERE year = $1 AND (make_key ILIKE $2 OR make_key ILIKE $4) AND (model_key ILIKE $3 OR model_key ILIKE $5)
+    ORDER BY display_trim, configuration_key
+  `, [year, make, model, make.toLowerCase(), model.toLowerCase().replace(/ /g, '-')]);
 
-  // Find duplicates in fitments (same trim + modification)
-  const fitmentDuplicates = findDuplicates(fitmentResult.rows);
-  const configDuplicates = findDuplicates(configResult.rows);
-
-  // Check for conflicting tire sizes between tables
-  const conflictingTireSizes = findConflictingTireSizes(fitmentResult.rows, configResult.rows);
+  // Find duplicates in fitments (same display_trim + submodel)
+  const fitmentDuplicates = findFitmentDuplicates(fitmentResult.rows);
+  const configDuplicates = findConfigDuplicates(configResult.rows);
 
   // Extract unique trims/modifications
-  const fitmentTrims = extractTrimsModifications(fitmentResult.rows);
-  const configTrims = extractTrimsModifications(configResult.rows);
+  const fitmentTrims = extractFitmentTrims(fitmentResult.rows);
+  const configTrims = extractConfigTrims(configResult.rows);
+
+  // Find conflicting tire sizes (between fitments oem_tire_sizes and config tire_size)
+  const conflictingTireSizes = findConflictingTireSizes(fitmentResult.rows, configResult.rows);
 
   return {
     vehicle,
@@ -126,20 +133,42 @@ async function analyzeVehicle(client, vehicle) {
       duplicates: configDuplicates,
     },
     conflictingTireSizes,
-    dataMatches: compareData(fitmentResult.rows, configResult.rows),
+    linkageStatus: checkLinkage(fitmentResult.rows, configResult.rows),
   };
 }
 
-function findDuplicates(rows) {
+function findFitmentDuplicates(rows) {
   const seen = new Map();
   const duplicates = [];
   
   for (const row of rows) {
-    const key = `${row.trim || 'null'}|${row.modification || 'null'}`;
+    const key = `${row.display_trim || 'null'}|${row.submodel || 'null'}|${row.modification_id || 'null'}`;
     if (seen.has(key)) {
       duplicates.push({
-        trim: row.trim,
-        modification: row.modification,
+        display_trim: row.display_trim,
+        submodel: row.submodel,
+        modification_id: row.modification_id,
+        ids: [seen.get(key).id, row.id],
+      });
+    } else {
+      seen.set(key, row);
+    }
+  }
+  
+  return duplicates;
+}
+
+function findConfigDuplicates(rows) {
+  const seen = new Map();
+  const duplicates = [];
+  
+  for (const row of rows) {
+    const key = `${row.display_trim || 'null'}|${row.configuration_key || 'null'}|${row.axle_position || 'null'}`;
+    if (seen.has(key)) {
+      duplicates.push({
+        display_trim: row.display_trim,
+        configuration_key: row.configuration_key,
+        axle_position: row.axle_position,
         ids: [seen.get(key).id, row.id],
       });
     } else {
@@ -153,25 +182,31 @@ function findDuplicates(rows) {
 function findConflictingTireSizes(fitmentRows, configRows) {
   const conflicts = [];
   
+  // Group config rows by vehicle_fitment_id
+  const configByFitmentId = new Map();
+  for (const cfg of configRows) {
+    if (cfg.vehicle_fitment_id) {
+      if (!configByFitmentId.has(cfg.vehicle_fitment_id)) {
+        configByFitmentId.set(cfg.vehicle_fitment_id, []);
+      }
+      configByFitmentId.get(cfg.vehicle_fitment_id).push(cfg);
+    }
+  }
+  
+  // Check each fitment's OEM sizes against linked configs
   for (const fit of fitmentRows) {
-    const trimMod = `${fit.trim || 'null'}|${fit.modification || 'null'}`;
+    const linkedConfigs = configByFitmentId.get(fit.id) || [];
+    const oemSizes = fit.oem_tire_sizes || [];
     
-    for (const cfg of configRows) {
-      const cfgTrimMod = `${cfg.trim || 'null'}|${cfg.modification || 'null'}`;
-      
-      if (trimMod === cfgTrimMod) {
-        // Same trim/modification - check tire sizes
-        if (fit.front_tire_size !== cfg.front_tire_size || 
-            fit.rear_tire_size !== cfg.rear_tire_size) {
-          conflicts.push({
-            trim: fit.trim,
-            modification: fit.modification,
-            fitmentFront: fit.front_tire_size,
-            fitmentRear: fit.rear_tire_size,
-            configFront: cfg.front_tire_size,
-            configRear: cfg.rear_tire_size,
-          });
-        }
+    for (const cfg of linkedConfigs) {
+      if (cfg.tire_size && oemSizes.length > 0 && !oemSizes.includes(cfg.tire_size)) {
+        conflicts.push({
+          fitment_id: fit.id,
+          display_trim: fit.display_trim,
+          oem_tire_sizes: oemSizes,
+          config_tire_size: cfg.tire_size,
+          config_key: cfg.configuration_key,
+        });
       }
     }
   }
@@ -179,79 +214,67 @@ function findConflictingTireSizes(fitmentRows, configRows) {
   return conflicts;
 }
 
-function extractTrimsModifications(rows) {
+function extractFitmentTrims(rows) {
   const trims = new Map();
   
   for (const row of rows) {
-    const trim = row.trim || '(base)';
+    const trim = row.display_trim || '(base)';
     if (!trims.has(trim)) {
-      trims.set(trim, new Set());
+      trims.set(trim, { submodels: new Set(), modificationIds: new Set() });
     }
-    if (row.modification) {
-      trims.get(trim).add(row.modification);
-    }
+    if (row.submodel) trims.get(trim).submodels.add(row.submodel);
+    if (row.modification_id) trims.get(trim).modificationIds.add(row.modification_id);
   }
   
-  return Array.from(trims.entries()).map(([trim, mods]) => ({
+  return Array.from(trims.entries()).map(([trim, data]) => ({
     trim,
-    modifications: Array.from(mods),
+    submodels: Array.from(data.submodels),
+    modificationIds: Array.from(data.modificationIds),
   }));
 }
 
-function compareData(fitmentRows, configRows) {
-  if (fitmentRows.length === 0 || configRows.length === 0) {
-    return { comparable: false, matches: 0, mismatches: 0, details: [] };
-  }
+function extractConfigTrims(rows) {
+  const trims = new Map();
   
-  let matches = 0;
-  let mismatches = 0;
-  const details = [];
-  
-  for (const fit of fitmentRows) {
-    const trimMod = `${fit.trim || 'null'}|${fit.modification || 'null'}`;
-    const matching = configRows.find(cfg => 
-      `${cfg.trim || 'null'}|${cfg.modification || 'null'}` === trimMod
-    );
-    
-    if (matching) {
-      const fieldsMatch = 
-        fit.bolt_pattern === matching.bolt_pattern &&
-        fit.front_wheel_size === matching.front_wheel_size &&
-        fit.rear_wheel_size === matching.rear_wheel_size &&
-        fit.front_tire_size === matching.front_tire_size &&
-        fit.rear_tire_size === matching.rear_tire_size;
-      
-      if (fieldsMatch) {
-        matches++;
-      } else {
-        mismatches++;
-        details.push({
-          trim: fit.trim,
-          modification: fit.modification,
-          differences: getDifferences(fit, matching),
-        });
-      }
+  for (const row of rows) {
+    const trim = row.display_trim || '(base)';
+    if (!trims.has(trim)) {
+      trims.set(trim, new Set());
+    }
+    if (row.configuration_key) {
+      trims.get(trim).add(row.configuration_key);
     }
   }
   
-  return { comparable: true, matches, mismatches, details };
+  return Array.from(trims.entries()).map(([trim, configs]) => ({
+    trim,
+    configurations: Array.from(configs),
+  }));
 }
 
-function getDifferences(a, b) {
-  const diffs = [];
-  const fields = ['bolt_pattern', 'front_wheel_size', 'rear_wheel_size', 'front_tire_size', 'rear_tire_size', 'center_bore', 'offset_range'];
+function checkLinkage(fitmentRows, configRows) {
+  const fitmentIds = new Set(fitmentRows.map(r => r.id));
+  const linkedFitmentIds = new Set(configRows.filter(r => r.vehicle_fitment_id).map(r => r.vehicle_fitment_id));
   
-  for (const field of fields) {
-    if (a[field] !== b[field]) {
-      diffs.push({ field, fitment: a[field], config: b[field] });
-    }
-  }
+  // Configs linked to fitments that exist
+  const validLinks = [...linkedFitmentIds].filter(id => fitmentIds.has(id)).length;
+  // Configs linked to non-existent fitments
+  const brokenLinks = [...linkedFitmentIds].filter(id => !fitmentIds.has(id)).length;
+  // Configs with no linkage
+  const unlinked = configRows.filter(r => !r.vehicle_fitment_id).length;
   
-  return diffs;
+  return {
+    totalConfigs: configRows.length,
+    validLinks,
+    brokenLinks,
+    unlinked,
+    fitmentsCovered: [...fitmentIds].filter(id => linkedFitmentIds.has(id)).length,
+    fitmentsUncovered: fitmentRows.length - [...fitmentIds].filter(id => linkedFitmentIds.has(id)).length,
+  };
 }
 
 function printVehicleReport(report) {
-  const { vehicle, fitments, configurations, conflictingTireSizes, dataMatches } = report;
+  const { vehicle, fitments, configurations, conflictingTireSizes, linkageStatus } = report;
   
   console.log(`## ${vehicle.year} ${vehicle.make} ${vehicle.model}\n`);
   
@@ -270,8 +293,11 @@ function printVehicleReport(report) {
     if (fitments.trims.length > 0) {
       console.log(`**vehicle_fitments:**`);
       for (const t of fitments.trims) {
-        const mods = t.modifications.length > 0 ? ` → [${t.modifications.join(', ')}]` : '';
-        console.log(`- ${t.trim}${mods}`);
+        let details = [];
+        if (t.submodels.length > 0) details.push(`submodels: ${t.submodels.join(', ')}`);
+        if (t.modificationIds.length > 0) details.push(`mods: ${t.modificationIds.length}`);
+        const extra = details.length > 0 ? ` (${details.join('; ')})` : '';
+        console.log(`- ${t.trim}${extra}`);
       }
       console.log('');
     }
@@ -279,11 +305,24 @@ function printVehicleReport(report) {
     if (configurations.trims.length > 0) {
       console.log(`**vehicle_fitment_configurations:**`);
       for (const t of configurations.trims) {
-        const mods = t.modifications.length > 0 ? ` → [${t.modifications.join(', ')}]` : '';
-        console.log(`- ${t.trim}${mods}`);
+        const configs = t.configurations.length > 0 ? ` → configs: ${t.configurations.join(', ')}` : '';
+        console.log(`- ${t.trim}${configs}`);
       }
       console.log('');
     }
+  }
+  
+  // Linkage status between tables
+  if (configurations.count > 0 || fitments.count > 0) {
+    console.log(`### Linkage Status\n`);
+    console.log(`| Metric | Count |`);
+    console.log(`|--------|-------|`);
+    console.log(`| Configs with valid fitment link | ${linkageStatus.validLinks} |`);
+    console.log(`| Configs with broken link | ${linkageStatus.brokenLinks} |`);
+    console.log(`| Configs with no link | ${linkageStatus.unlinked} |`);
+    console.log(`| Fitments covered by configs | ${linkageStatus.fitmentsCovered} |`);
+    console.log(`| Fitments without configs | ${linkageStatus.fitmentsUncovered} |`);
+    console.log('');
   }
   
   // Duplicates
@@ -293,7 +332,7 @@ function printVehicleReport(report) {
     if (fitments.duplicates.length > 0) {
       console.log(`**vehicle_fitments duplicates:**`);
       for (const d of fitments.duplicates) {
-        console.log(`- Trim: "${d.trim || '(null)'}", Mod: "${d.modification || '(null)'}" - IDs: ${d.ids.join(', ')}`);
+        console.log(`- Trim: "${d.display_trim || '(null)'}", Submodel: "${d.submodel || '(null)'}" - IDs: ${d.ids.join(', ')}`);
       }
       console.log('');
     }
@@ -301,7 +340,7 @@ function printVehicleReport(report) {
     if (configurations.duplicates.length > 0) {
       console.log(`**vehicle_fitment_configurations duplicates:**`);
       for (const d of configurations.duplicates) {
-        console.log(`- Trim: "${d.trim || '(null)'}", Mod: "${d.modification || '(null)'}" - IDs: ${d.ids.join(', ')}`);
+        console.log(`- Trim: "${d.display_trim || '(null)'}", Config: "${d.configuration_key || '(null)'}" - IDs: ${d.ids.join(', ')}`);
       }
       console.log('');
     }
@@ -309,29 +348,10 @@ function printVehicleReport(report) {
   
   // Conflicting tire sizes
   if (conflictingTireSizes.length > 0) {
-    console.log(`### ⚠️ Conflicting Tire Sizes Between Tables\n`);
-    console.log(`| Trim | Modification | Fitments Front | Fitments Rear | Config Front | Config Rear |`);
-    console.log(`|------|--------------|----------------|---------------|--------------|-------------|`);
+    console.log(`### ⚠️ Conflicting Tire Sizes\n`);
+    console.log(`Config tire_size not in fitment's oem_tire_sizes:\n`);
     for (const c of conflictingTireSizes) {
-      console.log(`| ${c.trim || '(null)'} | ${c.modification || '(null)'} | ${c.fitmentFront || '-'} | ${c.fitmentRear || '-'} | ${c.configFront || '-'} | ${c.configRear || '-'} |`);
-    }
-    console.log('');
-  }
-  
-  // Data matching summary
-  if (dataMatches.comparable) {
-    console.log(`### Data Comparison (Both Tables)\n`);
-    console.log(`- Matching records: ${dataMatches.matches}`);
-    console.log(`- Mismatched records: ${dataMatches.mismatches}`);
-    
-    if (dataMatches.details.length > 0) {
-      console.log('\n**Field differences:**');
-      for (const d of dataMatches.details) {
-        console.log(`\n*${d.trim || '(null)'} / ${d.modification || '(null)'}:*`);
-        for (const diff of d.differences) {
-          console.log(`  - ${diff.field}: fitment="${diff.fitment}" vs config="${diff.config}"`);
-        }
-      }
+      console.log(`- **${c.display_trim || '(base)'}** [${c.config_key}]: Config has "${c.config_tire_size}", OEM sizes: [${c.oem_tire_sizes.join(', ')}]`);
     }
     console.log('');
   }
@@ -343,16 +363,54 @@ function printVehicleReport(report) {
     console.log(`| Field | Value |`);
     console.log(`|-------|-------|`);
     console.log(`| Bolt Pattern | ${sample.bolt_pattern || '-'} |`);
-    console.log(`| Center Bore | ${sample.center_bore || '-'} |`);
-    console.log(`| Front Wheel | ${sample.front_wheel_size || '-'} |`);
-    console.log(`| Rear Wheel | ${sample.rear_wheel_size || '-'} |`);
-    console.log(`| Front Tire | ${sample.front_tire_size || '-'} |`);
-    console.log(`| Rear Tire | ${sample.rear_tire_size || '-'} |`);
-    console.log(`| Offset Range | ${sample.offset_range || '-'} |`);
+    console.log(`| Center Bore | ${sample.center_bore_mm || '-'} mm |`);
+    console.log(`| Thread Size | ${sample.thread_size || '-'} |`);
+    console.log(`| Offset Range | ${sample.offset_min_mm || '?'} - ${sample.offset_max_mm || '?'} mm |`);
+    console.log(`| OEM Wheel Sizes | ${formatWheelSizes(sample.oem_wheel_sizes)} |`);
+    console.log(`| OEM Tire Sizes | ${formatTireSizes(sample.oem_tire_sizes)} |`);
+    console.log(`| Quality Tier | ${sample.quality_tier || '-'} |`);
+    console.log(`| Certification | ${sample.certification_status || '-'} |`);
+    console.log('');
+  }
+  
+  // Sample config data
+  if (configurations.rows.length > 0) {
+    console.log(`### Sample Data (vehicle_fitment_configurations)\n`);
+    const sample = configurations.rows[0];
+    console.log(`| Field | Value |`);
+    console.log(`|-------|-------|`);
+    console.log(`| Configuration | ${sample.configuration_label || sample.configuration_key || '-'} |`);
+    console.log(`| Wheel Diameter | ${sample.wheel_diameter || '-'}" |`);
+    console.log(`| Wheel Width | ${sample.wheel_width || '-'}" |`);
+    console.log(`| Wheel Offset | ${sample.wheel_offset_mm || '-'} mm |`);
+    console.log(`| Tire Size | ${sample.tire_size || '-'} |`);
+    console.log(`| Axle Position | ${sample.axle_position || '-'} |`);
+    console.log(`| Source | ${sample.source || '-'} (${sample.source_confidence || '-'}) |`);
     console.log('');
   }
   
   console.log('---\n');
+}
+
+function formatWheelSizes(wheelSizes) {
+  if (!wheelSizes || !Array.isArray(wheelSizes) || wheelSizes.length === 0) return '-';
+  return wheelSizes.map(w => `${w.width}x${w.diameter}`).join(', ');
+}
+
+function formatTireSizes(tireSizes) {
+  if (!tireSizes) return '-';
+  if (typeof tireSizes === 'string') return tireSizes;
+  if (Array.isArray(tireSizes)) {
+    return tireSizes.map(t => {
+      if (typeof t === 'string') return t;
+      if (typeof t === 'object' && t !== null) {
+        // Handle object format like {size: "275/70R18", axle: "front"}
+        return t.size || t.tire_size || JSON.stringify(t);
+      }
+      return String(t);
+    }).join(', ');
+  }
+  return String(tireSizes);
 }
 
 main().catch(console.error);
