@@ -1,0 +1,392 @@
+{
+  "snapshotId": "2025-Hyundai-tucson-1778681442311",
+  "timestamp": "2026-05-13T14:10:42.311Z",
+  "candidate": {
+    "year": 2025,
+    "make": "Hyundai",
+    "model": "tucson",
+    "addSizes": [
+      "235/55R19",
+      "235/60R18"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "1 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      17,
+      18,
+      19
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "da896c54-8889-4876-bfc0-971ff964a57b",
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "tucson",
+      "display_trim": "XRT",
+      "oem_tire_sizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": 48.5,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "235/65R17"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "235/60R18"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "235/55R19"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 51,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "235/50R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 54,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "255/45R20"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "45.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:41.193Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "03cfdb3e-df5a-4ca2-9cf6-2d3cfe6033c6",
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "tucson",
+      "display_trim": "SE",
+      "oem_tire_sizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": 48.5,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "235/65R17"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "235/60R18"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "235/55R19"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 51,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "235/50R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 54,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "255/45R20"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "45.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:41.103Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "6ae7ea4e-dc68-4da2-85c8-7f8fad4898c8",
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "tucson",
+      "display_trim": "SEL",
+      "oem_tire_sizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": 48.5,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "235/65R17"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "235/60R18"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "235/55R19"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 51,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "235/50R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 54,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "255/45R20"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "45.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:41.139Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "28309da1-8df7-4dc9-b067-3b850267a011",
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "tucson",
+      "display_trim": "Limited",
+      "oem_tire_sizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": 48.5,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "235/65R17"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "235/60R18"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "235/55R19"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 51,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "235/50R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 54,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "255/45R20"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "45.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:41.234Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "8401f921-be94-46d1-8373-b6d4479c9ea6",
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "tucson",
+      "display_trim": "N Line",
+      "oem_tire_sizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": 48.5,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "235/65R17"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "235/60R18"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "235/55R19"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 51,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "235/50R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 54,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "255/45R20"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "45.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:41.270Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "cd3a50f7-7448-45e1-837c-332707166351",
+      "year": 2025,
+      "make": "Hyundai",
+      "model": "tucson",
+      "display_trim": "SE, SEL, XRT, Limited, N Line",
+      "oem_tire_sizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": 48.5,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "235/65R17"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "235/60R18"
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": 51,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "235/55R19"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 51,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "235/50R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 54,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "255/45R20"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "45.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-03-29T16:49:43.607Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

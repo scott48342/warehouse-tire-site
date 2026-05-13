@@ -1,0 +1,319 @@
+{
+  "snapshotId": "2024-Volkswagen-atlas-1778681441182",
+  "timestamp": "2026-05-13T14:10:41.182Z",
+  "candidate": {
+    "year": 2024,
+    "make": "Volkswagen",
+    "model": "atlas",
+    "addSizes": [
+      "255/60R18"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "3 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      18,
+      20,
+      21
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "645a3769-2ba7-47c7-99b1-0370a071d516",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "display_trim": "S",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "33.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:10:14.934Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "16594e5b-0dc6-4a99-9c32-18d9c975c324",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "display_trim": "SE",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "33.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:10:14.970Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "252c6023-2cd9-4401-83e3-cca533aac3cc",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "display_trim": "SE w/Tech",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "33.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:10:15.006Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "08ed6a96-c087-4bf6-a44d-41b538200738",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "display_trim": "SEL",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "33.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:10:15.042Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "aa54d4c2-2916-459d-a0eb-0dc34f2d5cc6",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "display_trim": "SEL Premium",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "33.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:10:15.078Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "1a70a7ea-bc21-4874-b3b0-8f37bf1b243b",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "display_trim": "Cross Sport",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "33.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:10:15.114Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "621c6787-e51b-4816-8ef0-c03e956554a8",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "display_trim": "S, SE, SE w/Tech, SEL, SEL Premium, Cross Sport",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "33.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-03-29T19:10:39.802Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

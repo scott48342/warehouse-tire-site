@@ -1,0 +1,233 @@
+{
+  "snapshotId": "2026-Toyota-Tacoma-1778681446672",
+  "timestamp": "2026-05-13T14:10:46.672Z",
+  "candidate": {
+    "year": 2026,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "addSizes": [
+      "265/65R18",
+      "265/70R17"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "2 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      17,
+      18
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "3c07a3cf-29e8-4f13-8305-34f4f3754309",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "Trailhunter",
+      "oem_tire_sizes": [
+        "265/60R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "-10.00",
+      "offset_max_mm": "35.00",
+      "created_at": "2026-03-29T06:08:18.239Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "b11e01cd-dd70-4c73-abed-7fc48726c9be",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "TRD Sport",
+      "oem_tire_sizes": [
+        "265/70R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "-10.00",
+      "offset_max_mm": "35.00",
+      "created_at": "2026-03-29T06:08:17.982Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "37d98f2d-3527-4882-bc9e-1bdee48ccb4d",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "oem_tire_sizes": [
+        "245/70R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "-10.00",
+      "offset_max_mm": "35.00",
+      "created_at": "2026-03-29T06:08:17.907Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "de5ea9fe-e096-4c7f-8adf-655b12a742c8",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "TRD Off-Road",
+      "oem_tire_sizes": [
+        "265/70R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "-10.00",
+      "offset_max_mm": "35.00",
+      "created_at": "2026-03-29T06:08:18.039Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "973907e4-25ef-40f2-90e1-daa31b2fab88",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "TRD Pro",
+      "oem_tire_sizes": [
+        "265/70R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "-10.00",
+      "offset_max_mm": "35.00",
+      "created_at": "2026-03-29T06:08:18.174Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "28c23306-910f-435a-b444-d37e1f713cc9",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "display_trim": "TRD PreRunner",
+      "oem_tire_sizes": [
+        "245/70R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": null,
+      "offset_min_mm": null,
+      "offset_max_mm": null,
+      "created_at": "2026-04-26T16:08:31.758Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "f76b2a4d-238b-477f-90f1-f7c862ef82e2",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "Limited",
+      "oem_tire_sizes": [
+        "265/60R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "-10.00",
+      "offset_max_mm": "35.00",
+      "created_at": "2026-03-29T06:08:18.119Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "dbf52ca6-4f6f-42a2-a243-8222255f9bde",
+      "year": 2026,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR",
+      "oem_tire_sizes": [
+        "245/70R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "106.1",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": "-10.00",
+      "offset_max_mm": "35.00",
+      "created_at": "2026-03-29T06:08:17.849Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}
