@@ -204,6 +204,53 @@ export interface USAutoForceFTPInventoryRow {
 }
 
 // ============================================================================
+// VEHICLE LOOKUP (GetVehicleOptions)
+// ============================================================================
+
+export interface USAutoForceVehicleOption {
+  /** OE tire size (e.g., "245/70R17", "LT315/70R17/C") */
+  tireSize: string;
+  /** Optional: year, make, model echoed back */
+  year?: number;
+  make?: string;
+  model?: string;
+}
+
+export interface USAutoForceVehicleOptionsResponse {
+  success: boolean;
+  year: number;
+  make: string;
+  model: string;
+  options: USAutoForceVehicleOption[];
+  errorCode?: string;
+  errorMessage?: string;
+}
+
+export interface USAutoForceVehicleYearsResponse {
+  success: boolean;
+  years: number[];
+  errorCode?: string;
+  errorMessage?: string;
+}
+
+export interface USAutoForceVehicleMakesResponse {
+  success: boolean;
+  year: number;
+  makes: string[];
+  errorCode?: string;
+  errorMessage?: string;
+}
+
+export interface USAutoForceVehicleModelsResponse {
+  success: boolean;
+  year: number;
+  make: string;
+  models: string[];
+  errorCode?: string;
+  errorMessage?: string;
+}
+
+// ============================================================================
 // CREDENTIALS
 // ============================================================================
 

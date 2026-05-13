@@ -1,43 +1,38 @@
-import pg from 'pg';
 import { config } from 'dotenv';
 config({ path: '.env.local' });
 
-const pool = new pg.Pool({ connectionString: process.env.POSTGRES_URL });
+import pg from 'pg';
+const { Pool } = pg;
 
-async function check() {
-  // Check specific known staggered vehicles
-  const vehicles = [
-    { make: 'Chevrolet', model: 'Camaro', searchTrim: '%1le%' },
-    { make: 'Chevrolet', model: 'Corvette', searchTrim: '%' },
-    { make: 'Ford', model: 'Mustang', searchTrim: '%' },
-    { make: 'Dodge', model: 'Challenger', searchTrim: '%' },
-    { make: 'BMW', model: 'M3', searchTrim: '%' },
-    { make: 'BMW', model: 'M4', searchTrim: '%' },
-  ];
-  
-  for (const v of vehicles) {
-    const { rows } = await pool.query(`
-      SELECT year, make, model, modification_id, display_trim, quality_tier, oem_wheel_sizes
-      FROM vehicle_fitments 
-      WHERE make ILIKE $1 AND model ILIKE $2
-      AND modification_id ILIKE $3
-      AND certification_status = 'certified'
-      ORDER BY year DESC
-      LIMIT 5
-    `, [v.make, v.model, v.searchTrim]);
-    
-    console.log(`\n${v.make} ${v.model} (${v.searchTrim}):`);
-    for (const r of rows) {
-      const wheels = r.oem_wheel_sizes || [];
-      const widths = [...new Set(wheels.map(w => w?.width).filter(Boolean))];
-      const hasFront = wheels.some(w => w?.axle === 'front');
-      const hasRear = wheels.some(w => w?.axle === 'rear');
-      console.log(`  ${r.year} ${r.display_trim}: widths=${widths.join(', ')}" F=${hasFront} R=${hasRear}`);
-    }
-    if (rows.length === 0) console.log('  (no records)');
-  }
-  
-  await pool.end();
+const connString = process.env.POSTGRES_URL;
+if (!connString) {
+  console.error("No POSTGRES_URL found");
+  process.exit(1);
 }
 
-check().catch(console.error);
+console.log("Connecting to:", connString.substring(0, 50) + "...");
+
+const pool = new Pool({
+  connectionString: connString,
+  ssl: true,
+});
+
+async function main() {
+  const client = await pool.connect();
+  try {
+    const result = await client.query(`
+      SELECT display_trim, oem_tire_sizes 
+      FROM vehicle_fitments 
+      WHERE year = 2024 
+        AND LOWER(make) = 'ford' 
+        AND LOWER(model) = 'f-150'
+      LIMIT 3
+    `);
+    console.log(JSON.stringify(result.rows, null, 2));
+  } finally {
+    client.release();
+    await pool.end();
+  }
+}
+
+main();

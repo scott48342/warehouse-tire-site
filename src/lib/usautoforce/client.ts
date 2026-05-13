@@ -19,6 +19,11 @@ import type {
   USAutoForceOrderRequest,
   USAutoForceOrderResponse,
   USAutoForceFTPCredentials,
+  USAutoForceVehicleOptionsResponse,
+  USAutoForceVehicleYearsResponse,
+  USAutoForceVehicleMakesResponse,
+  USAutoForceVehicleModelsResponse,
+  USAutoForceVehicleOption,
 } from "./types";
 
 // ============================================================================
@@ -540,6 +545,177 @@ export async function getOrderStatus(orderNumber: string): Promise<OrderStatusRe
     console.error("[usautoforce] OrderStatusDetail error:", error);
     return {
       success: false,
+      errorMessage: String(error),
+    };
+  }
+}
+
+// ============================================================================
+// VEHICLE LOOKUP (GetVehicleYears, GetVehicleMakes, GetVehicleModels, GetVehicleOptions)
+// ============================================================================
+
+/**
+ * Get all supported vehicle years
+ */
+export async function getVehicleYears(): Promise<USAutoForceVehicleYearsResponse> {
+  const config = getConfig();
+  if (!config) {
+    return { success: false, years: [], errorMessage: "Missing credentials" };
+  }
+  
+  const envelope = buildSoapEnvelope("GetVehicleYears", "", config.api);
+  
+  try {
+    console.log(`[usautoforce] GetVehicleYears`);
+    const response = await callSoapApi(config.apiBaseUrl!, "GetVehicleYears", envelope);
+    
+    // Parse years from response
+    const yearMatches = response.matchAll(/<int>(\d{4})<\/int>/g);
+    const years = Array.from(yearMatches, m => parseInt(m[1])).sort((a, b) => b - a);
+    
+    return {
+      success: years.length > 0,
+      years,
+    };
+  } catch (error) {
+    console.error("[usautoforce] GetVehicleYears error:", error);
+    return {
+      success: false,
+      years: [],
+      errorMessage: String(error),
+    };
+  }
+}
+
+/**
+ * Get vehicle makes for a given year
+ */
+export async function getVehicleMakes(year: number): Promise<USAutoForceVehicleMakesResponse> {
+  const config = getConfig();
+  if (!config) {
+    return { success: false, year, makes: [], errorMessage: "Missing credentials" };
+  }
+  
+  const body = `<year>${year}</year>`;
+  const envelope = buildSoapEnvelope("GetVehicleMakes", body, config.api);
+  
+  try {
+    console.log(`[usautoforce] GetVehicleMakes for ${year}`);
+    const response = await callSoapApi(config.apiBaseUrl!, "GetVehicleMakes", envelope);
+    
+    // Parse makes from response
+    const makeMatches = response.matchAll(/<string>([^<]+)<\/string>/g);
+    const makes = Array.from(makeMatches, m => m[1]).sort();
+    
+    return {
+      success: makes.length > 0,
+      year,
+      makes,
+    };
+  } catch (error) {
+    console.error("[usautoforce] GetVehicleMakes error:", error);
+    return {
+      success: false,
+      year,
+      makes: [],
+      errorMessage: String(error),
+    };
+  }
+}
+
+/**
+ * Get vehicle models for a given year/make
+ */
+export async function getVehicleModels(year: number, make: string): Promise<USAutoForceVehicleModelsResponse> {
+  const config = getConfig();
+  if (!config) {
+    return { success: false, year, make, models: [], errorMessage: "Missing credentials" };
+  }
+  
+  const body = `<year>${year}</year>
+    <make>${escapeXml(make)}</make>`;
+  const envelope = buildSoapEnvelope("GetVehicleModels", body, config.api);
+  
+  try {
+    console.log(`[usautoforce] GetVehicleModels for ${year} ${make}`);
+    const response = await callSoapApi(config.apiBaseUrl!, "GetVehicleModels", envelope);
+    
+    // Parse models from response
+    const modelMatches = response.matchAll(/<string>([^<]+)<\/string>/g);
+    const models = Array.from(modelMatches, m => m[1]).sort();
+    
+    return {
+      success: models.length > 0,
+      year,
+      make,
+      models,
+    };
+  } catch (error) {
+    console.error("[usautoforce] GetVehicleModels error:", error);
+    return {
+      success: false,
+      year,
+      make,
+      models: [],
+      errorMessage: String(error),
+    };
+  }
+}
+
+/**
+ * Get OE tire sizes for a vehicle (year/make/model)
+ * 
+ * Returns all OE-approved tire sizes for the vehicle, which may include
+ * different sizes for different trims/packages.
+ */
+export async function getVehicleOptions(
+  year: number,
+  make: string,
+  model: string
+): Promise<USAutoForceVehicleOptionsResponse> {
+  const config = getConfig();
+  if (!config) {
+    return { success: false, year, make, model, options: [], errorMessage: "Missing credentials" };
+  }
+  
+  const body = `<year>${year}</year>
+    <make>${escapeXml(make)}</make>
+    <model>${escapeXml(model)}</model>`;
+  const envelope = buildSoapEnvelope("GetVehicleOptions", body, config.api);
+  
+  try {
+    console.log(`[usautoforce] GetVehicleOptions for ${year} ${make} ${model}`);
+    const response = await callSoapApi(config.apiBaseUrl!, "GetVehicleOptions", envelope);
+    
+    // Parse tire sizes from response
+    // USAF returns OE tire sizes as <string> elements
+    const sizeMatches = response.matchAll(/<string>([^<]+)<\/string>/g);
+    const sizes = Array.from(sizeMatches, m => m[1]);
+    
+    // Dedupe and convert to options
+    const uniqueSizes = [...new Set(sizes)];
+    const options: USAutoForceVehicleOption[] = uniqueSizes.map(size => ({
+      tireSize: size,
+      year,
+      make,
+      model,
+    }));
+    
+    return {
+      success: options.length > 0,
+      year,
+      make,
+      model,
+      options,
+    };
+  } catch (error) {
+    console.error("[usautoforce] GetVehicleOptions error:", error);
+    return {
+      success: false,
+      year,
+      make,
+      model,
+      options: [],
       errorMessage: String(error),
     };
   }
