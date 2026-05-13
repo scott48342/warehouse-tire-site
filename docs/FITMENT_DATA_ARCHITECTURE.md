@@ -44,32 +44,93 @@ WHERE year = $1
 
 **Important:** Model names vary in format (spaces vs hyphens). Use `getModelVariants()` from `modelAliases.ts` to generate variants for matching.
 
+---
+
+## Consolidation Guard (2026-05-13)
+
+A multi-layer protection ensures `vehicle_fitments` remains the single runtime source:
+
+### 1. Pre-Deploy Static Analysis
+
+**Script:** `scripts/test-fitment-consolidation.mjs`
+
+Scans customer-facing code paths and **fails build** if any import `vehicleFitmentConfigurations`:
+
+```bash
+node scripts/test-fitment-consolidation.mjs
+```
+
+**Checked paths:**
+- `src/app/api/vehicles/*`
+- `src/app/api/wheels/*`
+- `src/app/api/tires/*`
+- `src/lib/fitment/*`
+- `src/lib/fitment-db/canonicalResolver.ts`
+- `src/lib/fitment-db/coverage.ts`
+
+**Admin exceptions** (allowed to use deprecated table):
+- `src/app/api/admin/*`
+- `scripts/*`
+
+### 2. Runtime Health Check
+
+**Endpoint:** `GET /api/admin/fitment/health`
+
+Verifies sentinel vehicles resolve correctly through all customer-facing paths:
+- Trims API
+- Tire Sizes API
+- Wheel fitment resolution
+
+**Returns:**
+- `200` with `"status": "healthy"` — all vehicles pass
+- `500` with `"status": "unhealthy"` — failures detected
+
+**Use for:** Post-deploy verification, monitoring dashboards, CI smoke tests.
+
+### 3. Schema Documentation
+
+`src/lib/fitment-db/schema.ts` includes:
+- Prominent deprecation notice on `vehicleFitmentConfigurations`
+- Architecture comments explaining the consolidation
+- Guidance on correct table usage
+
+---
+
+## Data Sources
+
+### Runtime (Customer-Facing)
+
+| Source | Table | Used For |
+|--------|-------|----------|
+| **CANONICAL** | `vehicle_fitments` | All YMM/fitment resolution |
+
+### Audit/Enrichment Only
+
+| Source | Purpose |
+|--------|---------|
+| US AutoForce API | Tire size enrichment (write to `oem_tire_sizes`) |
+| WheelPros Techfeed | Product data (wheels, tires) — NOT fitment |
+| Wheel-Size.com API | Historical trim mapping data (no new queries) |
+
+---
+
 ## Deprecated Tables
 
 ### ~~`vehicle_fitment_configurations`~~
 
-**Status:** DEPRECATED (2026-05-13)
+**Status:** DEPRECATED (2026-05-13) — **DO NOT USE IN RUNTIME**
 
-This table was an attempt to store wheel/tire configurations separately but created data duplication and source-of-truth confusion.
+This table stores wheel/tire configurations separately. It was an architectural experiment that created data duplication and source-of-truth confusion.
 
-**DO NOT:**
-- Write new data to this table
-- Use this table in runtime queries
-- Reference this table in new code
+**Current usage:**
+- ✅ Admin data review (`/api/admin/fitment/config-enrichment`)
+- ✅ Historical reference
+- ❌ Customer-facing APIs
+- ❌ Runtime fitment resolution
 
-**Migration path:** Data can remain for historical reference. Will be dropped in a future cleanup.
+**Future:** Will be dropped after all useful data migrated to `vehicle_fitments`.
 
-## Deprecated Fallbacks
-
-### ~~Static JSON fitment files~~
-
-**Status:** DEPRECATED (2026-05-13)
-
-Historical fallback for when DB was unavailable. No longer used.
-
-**Files affected:**
-- Any `fitment-*.json` files in `src/data/`
-- Static fallback code in `getFallbackFitment()` functions
+---
 
 ## USAF Enrichment Pipeline
 
@@ -81,15 +142,15 @@ USAF API → Audit Script → Approved Enrichments → vehicle_fitments.oem_tire
 
 See `/scripts/usaf-import-enrichments.mjs` for the enrichment process.
 
-## Pre-Deploy Audit
+---
 
-The CI/CD pipeline includes a fitment source audit that fails if:
+## Deprecated Fallbacks
 
-1. Any runtime code reads from `vehicle_fitment_configurations`
-2. Any runtime code uses static JSON fitment fallback
-3. Any write operation targets the deprecated config table
+### ~~Static JSON fitment files~~
 
-See `/scripts/audit-fitment-sources.mjs` for the audit script.
+**Status:** DEPRECATED (2026-05-13)
+
+Historical fallback for when DB was unavailable. No longer used.
 
 ---
 
@@ -97,6 +158,7 @@ See `/scripts/audit-fitment-sources.mjs` for the audit script.
 
 | Date | Change |
 |------|--------|
+| 2026-05-13 | Added consolidation guard (pre-deploy test + health check endpoint) |
 | 2026-05-13 | `vehicle_fitments` declared canonical. Config table deprecated. |
 | 2026-05-04 | Canonical resolver introduced for trim handling. |
 | 2026-04-02 | External wheel-size.com references removed. |
