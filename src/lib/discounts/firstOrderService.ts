@@ -99,8 +99,8 @@ export async function generateDiscount(
       // Return existing valid code
       return {
         success: true,
-        code: existing[0].code,
-        expiresAt: existing[0].expiresAt,
+        code: existing[0].code ?? undefined,
+        expiresAt: existing[0].expiresAt ?? undefined,
         alreadyExists: true,
       };
     }
@@ -182,7 +182,7 @@ export async function validateDiscount(code: string): Promise<ValidateDiscountRe
       };
     }
     
-    if (new Date() > discount.expiresAt) {
+    if (discount.expiresAt && new Date() > discount.expiresAt) {
       return { 
         valid: false, 
         error: "This discount has expired",
@@ -192,9 +192,9 @@ export async function validateDiscount(code: string): Promise<ValidateDiscountRe
     
     return {
       valid: true,
-      discountPercent: parseFloat(discount.discountPercent),
-      code: discount.code,
-      email: discount.email,
+      discountPercent: discount.discountPercent ? parseFloat(discount.discountPercent) : DISCOUNT_PERCENT,
+      code: discount.code ?? undefined,
+      email: discount.email ?? undefined,
     };
   } catch (err) {
     console.error("[firstOrderService] validateDiscount error:", err);

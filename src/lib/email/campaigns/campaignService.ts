@@ -91,6 +91,7 @@ export async function createCampaign(data: {
       replyTo: data.replyTo || BRAND.email,
       contentJson: data.contentJson || { blocks: [] },
       audienceRulesJson: data.audienceRulesJson || {},
+      sendMode: "manual", // Required field - default to manual send
       includeFreeShippingBanner: data.includeFreeShippingBanner ?? true,
       includePriceMatch: data.includePriceMatch ?? false,
       utmCampaign: data.utmCampaign,

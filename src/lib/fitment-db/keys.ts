@@ -11,6 +11,7 @@
  */
 
 import crypto from "crypto";
+import { normalizeMake } from "./normalization";
 
 /**
  * Slugify a string for use in canonical keys

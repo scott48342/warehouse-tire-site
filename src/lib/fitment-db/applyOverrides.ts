@@ -92,8 +92,8 @@ export async function findApplicableOverrides(
   
   // Sort by scope priority (most specific first)
   return overrides.sort((a, b) => {
-    const priorityA = SCOPE_PRIORITY[a.scope] || 0;
-    const priorityB = SCOPE_PRIORITY[b.scope] || 0;
+    const priorityA = a.scope ? (SCOPE_PRIORITY[a.scope] ?? 0) : 0;
+    const priorityB = b.scope ? (SCOPE_PRIORITY[b.scope] ?? 0) : 0;
     return priorityB - priorityA;
   });
 }
@@ -178,29 +178,17 @@ export async function applyOverridesWithMeta(fitment: VehicleFitment): Promise<A
       applied = true;
     }
     if (override.offsetMinMm !== null) {
-      result.offsetMinMm = override.offsetMinMm;
+      result.offsetMinMm = Number(override.offsetMinMm);
       applied = true;
     }
     if (override.offsetMaxMm !== null) {
-      result.offsetMaxMm = override.offsetMaxMm;
+      result.offsetMaxMm = Number(override.offsetMaxMm);
       applied = true;
     }
     
-    // Apply OEM sizes (replace entire array if provided)
-    if (override.oemWheelSizes !== null && Array.isArray(override.oemWheelSizes)) {
-      result.oemWheelSizes = override.oemWheelSizes as any;
-      applied = true;
-    }
-    if (override.oemTireSizes !== null && Array.isArray(override.oemTireSizes)) {
-      result.oemTireSizes = override.oemTireSizes as any;
-      applied = true;
-    }
-    
-    // Force quality level (most specific wins)
-    if (override.forceQuality === "valid" || override.forceQuality === "partial") {
-      forceQuality = override.forceQuality;
-      applied = true;
-    }
+    // Note: oemWheelSizes, oemTireSizes, forceQuality are NOT in the fitment_overrides DB table.
+    // These features were designed but not implemented in the DB schema.
+    // If needed, add migrations to add these columns to fitment_overrides.
     
     if (applied) {
       appliedOverrides.push(override);
@@ -241,10 +229,7 @@ export interface CreateOverrideInput {
   seatType?: string;
   offsetMinMm?: number | null;  // null = clear override
   offsetMaxMm?: number | null;  // null = clear override
-  oemWheelSizes?: OEMWheelSizeOverride[];
-  oemTireSizes?: string[];
-  forceQuality?: "valid" | "partial";
-  notes?: string;
+  // NOTE: oemWheelSizes, oemTireSizes, forceQuality not in DB - add migration if needed
   reason: string;
   createdBy: string;
 }
@@ -268,10 +253,6 @@ export async function createOverride(input: CreateOverrideInput): Promise<string
       seatType: input.seatType ?? null,
       offsetMinMm: input.offsetMinMm !== undefined && input.offsetMinMm !== null ? String(input.offsetMinMm) : null,
       offsetMaxMm: input.offsetMaxMm !== undefined && input.offsetMaxMm !== null ? String(input.offsetMaxMm) : null,
-      oemWheelSizes: input.oemWheelSizes ? (input.oemWheelSizes as any) : null,
-      oemTireSizes: input.oemTireSizes ? (input.oemTireSizes as any) : null,
-      forceQuality: input.forceQuality ?? null,
-      notes: input.notes ?? null,
       reason: input.reason,
       createdBy: input.createdBy,
       active: true,
@@ -301,10 +282,7 @@ export async function updateOverride(
   if (input.seatType !== undefined) updates.seatType = input.seatType;
   if (input.offsetMinMm !== undefined) updates.offsetMinMm = input.offsetMinMm !== null ? String(input.offsetMinMm) : null;
   if (input.offsetMaxMm !== undefined) updates.offsetMaxMm = input.offsetMaxMm !== null ? String(input.offsetMaxMm) : null;
-  if (input.oemWheelSizes !== undefined) updates.oemWheelSizes = input.oemWheelSizes;
-  if (input.oemTireSizes !== undefined) updates.oemTireSizes = input.oemTireSizes;
-  if (input.forceQuality !== undefined) updates.forceQuality = input.forceQuality;
-  if (input.notes !== undefined) updates.notes = input.notes;
+  // NOTE: oemWheelSizes, oemTireSizes, forceQuality not in DB
   if (input.reason !== undefined) updates.reason = input.reason;
   
   await db

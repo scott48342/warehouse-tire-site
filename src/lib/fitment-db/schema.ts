@@ -128,30 +128,28 @@ export type NewVehicleFitment = typeof vehicleFitments.$inferInsert;
 export const vehicleFitmentConfigurations = pgTable(
   "vehicle_fitment_configurations",
   {
+    // SCHEMA MATCHES ACTUAL DB (2026-05-13 introspection)
     id: uuid("id").primaryKey().defaultRandom(),
+    vehicleFitmentId: uuid("vehicle_fitment_id"),
     year: integer("year").notNull(),
     makeKey: varchar("make_key", { length: 100 }).notNull(),
-    makeDisplay: varchar("make_display", { length: 100 }).notNull(),
     modelKey: varchar("model_key", { length: 200 }).notNull(),
-    modelDisplay: varchar("model_display", { length: 200 }).notNull(),
-    displayTrim: text("display_trim").notNull(),
-    generation: varchar("generation", { length: 100 }),
-    boltPattern: varchar("bolt_pattern", { length: 50 }),
-    centerBoreMm: decimal("center_bore_mm", { precision: 5, scale: 2 }),
-    threadSize: varchar("thread_size", { length: 50 }),
-    seatType: varchar("seat_type", { length: 50 }),
-    offsetMinMm: integer("offset_min_mm"),
-    offsetMaxMm: integer("offset_max_mm"),
+    modificationId: varchar("modification_id", { length: 255 }),
+    displayTrim: varchar("display_trim", { length: 200 }),
+    configurationKey: varchar("configuration_key", { length: 100 }).notNull(),
+    configurationLabel: varchar("configuration_label", { length: 200 }),
     wheelDiameter: integer("wheel_diameter").notNull(),
     wheelWidth: decimal("wheel_width", { precision: 4, scale: 1 }),
+    wheelOffsetMm: decimal("wheel_offset_mm", { precision: 5, scale: 1 }),
     tireSize: varchar("tire_size", { length: 50 }).notNull(),
-    isOem: boolean("is_oem").default(true),
-    isFrontAxle: boolean("is_front_axle").default(true),
-    axlePosition: varchar("axle_position", { length: 20 }), // front, rear, square
-    source: varchar("source", { length: 100 }),
-    notes: text("notes"),
-    createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
-    updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
+    axlePosition: varchar("axle_position", { length: 20 }).notNull(),
+    isDefault: boolean("is_default").notNull().default(false),
+    isOptional: boolean("is_optional").notNull().default(false),
+    source: varchar("source", { length: 100 }).notNull(),
+    sourceConfidence: varchar("source_confidence", { length: 50 }).notNull(),
+    sourceNotes: text("source_notes"),
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).notNull().defaultNow(),
   },
   (table) => ({
     ymmIdx: index("vfc_ymm_idx").on(
@@ -177,42 +175,47 @@ export type NewVehicleFitmentConfiguration = typeof vehicleFitmentConfigurations
 export const wheelSizeTrimMappings = pgTable(
   "wheel_size_trim_mappings",
   {
+    // SCHEMA MATCHES ACTUAL DB (2026-05-13 introspection)
     id: uuid("id").primaryKey().defaultRandom(),
     year: integer("year").notNull(),
-    makeKey: varchar("make_key", { length: 100 }).notNull(),
-    make: varchar("make", { length: 100 }), // alias for code compatibility
-    modelKey: varchar("model_key", { length: 200 }).notNull(),
-    model: varchar("model", { length: 200 }), // alias for code compatibility
-    ourDisplayTrim: text("our_display_trim").notNull(),
-    ourTrim: text("our_trim"), // alias for code compatibility
-    trim: text("trim"), // alias for code compatibility  
-    ourModificationId: text("our_modification_id"),
+    make: varchar("make", { length: 100 }).notNull(),
+    model: varchar("model", { length: 200 }).notNull(),
+    ourTrim: varchar("our_trim", { length: 200 }).notNull(),
+    ourModificationId: varchar("our_modification_id", { length: 255 }),
     vehicleFitmentId: uuid("vehicle_fitment_id"),
-    wheelSizeGeneration: varchar("wheel_size_generation", { length: 200 }),
-    wheelSizeTrimName: text("wheel_size_trim_name"),
-    wsTrim: text("ws_trim"), // alias for code compatibility
-    wsEngine: text("ws_engine"), // alias for code compatibility
-    configCount: integer("config_count"), // alias for code compatibility
-    hasSingleConfig: boolean("has_single_config"),
+    wsSlug: varchar("ws_slug", { length: 200 }).notNull(),
+    wsGeneration: varchar("ws_generation", { length: 200 }),
+    wsModificationName: varchar("ws_modification_name", { length: 200 }),
+    wsSubmodel: varchar("ws_submodel", { length: 200 }),
+    wsTrim: varchar("ws_trim", { length: 200 }),
+    wsEngine: text("ws_engine"),
+    wsBody: varchar("ws_body", { length: 100 }),
+    matchMethod: varchar("match_method", { length: 50 }).notNull(),
+    matchConfidence: varchar("match_confidence", { length: 20 }).notNull(),
+    matchScore: decimal("match_score", { precision: 5, scale: 2 }),
+    configCount: integer("config_count").notNull(),
+    hasSingleConfig: boolean("has_single_config").notNull(),
+    defaultConfigId: uuid("default_config_id"),
     defaultWheelDiameter: integer("default_wheel_diameter"),
-    wheelSizeModificationId: text("wheel_size_modification_id"),
-    matchMethod: varchar("match_method", { length: 50 }),
-    matchConfidence: varchar("match_confidence", { length: 20 }),
-    status: varchar("status", { length: 20 }).default("pending"),
-    needsReview: boolean("needs_review").default(false),
-    reviewReason: text("review_reason"),
-    reviewNotes: text("review_notes"),
+    defaultTireSize: varchar("default_tire_size", { length: 50 }),
+    allWheelDiameters: json("all_wheel_diameters").$type<number[]>(),
+    allTireSizes: json("all_tire_sizes").$type<string[]>(),
+    needsReview: boolean("needs_review").notNull().default(false),
+    reviewReason: varchar("review_reason", { length: 200 }),
+    reviewPriority: integer("review_priority"),
     reviewedBy: varchar("reviewed_by", { length: 100 }),
-    reviewedAt: timestamp("reviewed_at", { mode: "date" }),
-    createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
-    updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
+    reviewedAt: timestamp("reviewed_at", { withTimezone: true }),
+    reviewNotes: text("review_notes"),
+    status: varchar("status", { length: 20 }).notNull().default("pending"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => ({
     ymmTrimIdx: uniqueIndex("wstm_ymm_trim_idx").on(
       table.year,
-      table.makeKey,
-      table.modelKey,
-      table.ourDisplayTrim
+      table.make,
+      table.model,
+      table.ourTrim
     ),
     statusIdx: index("wstm_status_idx").on(table.status),
   })
@@ -255,25 +258,30 @@ export type NewWheelSizeConfiguration = typeof wheelSizeConfigurations.$inferIns
 export const fitmentOverrides = pgTable(
   "fitment_overrides",
   {
+    // SCHEMA MATCHES ACTUAL DB (2026-05-13 introspection)
     id: uuid("id").primaryKey().defaultRandom(),
+    scope: varchar("scope", { length: 50 }),
     year: integer("year"),
     make: varchar("make", { length: 100 }),
     model: varchar("model", { length: 200 }),
-    trim: text("trim"),
-    modificationId: text("modification_id"),
-    field: varchar("field", { length: 50 }).notNull(),
-    value: json("value").notNull(),
+    modificationId: varchar("modification_id", { length: 255 }),
+    displayTrim: varchar("display_trim", { length: 200 }),
+    boltPattern: varchar("bolt_pattern", { length: 50 }),
+    centerBoreMm: decimal("center_bore_mm", { precision: 5, scale: 2 }),
+    threadSize: varchar("thread_size", { length: 50 }),
+    seatType: varchar("seat_type", { length: 50 }),
+    offsetMinMm: decimal("offset_min_mm", { precision: 5, scale: 1 }),
+    offsetMaxMm: decimal("offset_max_mm", { precision: 5, scale: 1 }),
     reason: text("reason"),
-    source: varchar("source", { length: 100 }),
-    expiresAt: timestamp("expires_at", { mode: "date" }),
-    isActive: boolean("is_active").default(true),
+    createdBy: varchar("created_by", { length: 100 }),
+    active: boolean("active").default(true),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
   },
   (table) => ({
     ymmIdx: index("fo_ymm_idx").on(table.year, table.make, table.model),
     modIdIdx: index("fo_mod_id_idx").on(table.modificationId),
-    activeIdx: index("fo_active_idx").on(table.isActive),
+    activeIdx: index("fo_active_idx").on(table.active),
   })
 );
 
@@ -287,9 +295,12 @@ export type NewFitmentOverride = typeof fitmentOverrides.$inferInsert;
 export const modificationAliases = pgTable(
   "modification_aliases",
   {
+    // NOTE: Table may not exist in DB - created for future use
     id: uuid("id").primaryKey().defaultRandom(),
-    requestedId: text("requested_id").notNull(),
-    canonicalId: text("canonical_id").notNull(),
+    requestedModificationId: text("requested_modification_id").notNull(),
+    canonicalModificationId: text("canonical_modification_id").notNull(),
+    vehicleFitmentId: uuid("vehicle_fitment_id"),
+    displayTrim: varchar("display_trim", { length: 200 }),
     year: integer("year"),
     make: varchar("make", { length: 100 }),
     model: varchar("model", { length: 200 }),
@@ -297,8 +308,8 @@ export const modificationAliases = pgTable(
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
   },
   (table) => ({
-    requestedIdx: index("ma_requested_idx").on(table.requestedId),
-    canonicalIdx: index("ma_canonical_idx").on(table.canonicalId),
+    requestedIdx: index("ma_requested_idx").on(table.requestedModificationId),
+    canonicalIdx: index("ma_canonical_idx").on(table.canonicalModificationId),
   })
 );
 
@@ -312,16 +323,18 @@ export type NewModificationAlias = typeof modificationAliases.$inferInsert;
 export const fitmentSourceRecords = pgTable(
   "fitment_source_records",
   {
+    // SCHEMA MATCHES ACTUAL DB (2026-05-13 introspection)
     id: uuid("id").primaryKey().defaultRandom(),
-    vehicleFitmentId: uuid("vehicle_fitment_id").references(() => vehicleFitments.id),
     source: varchar("source", { length: 100 }).notNull(),
     sourceId: varchar("source_id", { length: 255 }),
+    year: integer("year"),
+    make: varchar("make", { length: 100 }),
+    model: varchar("model", { length: 200 }),
     rawPayload: json("raw_payload"),
-    importedAt: timestamp("imported_at", { mode: "date" }).defaultNow(),
+    fetchedAt: timestamp("fetched_at", { mode: "date" }).defaultNow(),
     checksum: varchar("checksum", { length: 64 }),
   },
   (table) => ({
-    fitmentIdx: index("fsr_fitment_idx").on(table.vehicleFitmentId),
     sourceIdx: index("fsr_source_idx").on(table.source),
   })
 );
@@ -336,16 +349,22 @@ export type NewFitmentSourceRecord = typeof fitmentSourceRecords.$inferInsert;
 export const fitmentImportJobs = pgTable(
   "fitment_import_jobs",
   {
+    // SCHEMA MATCHES ACTUAL DB (2026-05-13 introspection)
     id: uuid("id").primaryKey().defaultRandom(),
     source: varchar("source", { length: 100 }).notNull(),
-    status: varchar("status", { length: 50 }).notNull().default("pending"), // pending, running, completed, failed
+    yearStart: integer("year_start"),
+    yearEnd: integer("year_end"),
+    makes: json("makes"),
+    status: varchar("status", { length: 50 }).notNull().default("pending"),
     totalRecords: integer("total_records").default(0),
     processedRecords: integer("processed_records").default(0),
-    successCount: integer("success_count").default(0),
+    importedRecords: integer("imported_records").default(0),
+    skippedRecords: integer("skipped_records").default(0),
     errorCount: integer("error_count").default(0),
-    errors: json("errors"),
     startedAt: timestamp("started_at", { mode: "date" }),
     completedAt: timestamp("completed_at", { mode: "date" }),
+    lastError: text("last_error"),
+    errorLog: json("error_log"),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
   },
   (table) => ({
@@ -410,8 +429,8 @@ export {
   type NewCatalogMake,
   type CatalogModel,
   type NewCatalogModel,
-  type CatalogSyncLogEntry,
-  type NewCatalogSyncLogEntry,
+  type CatalogSyncLog,
+  type NewCatalogSyncLog,
   type ManufacturerRebate,
   type NewManufacturerRebate,
   type FirstOrderDiscount,

@@ -3,13 +3,14 @@
  * 
  * Tables for cached product images:
  * - tireImages - Cached tire product images from TireLibrary
+ * - kmImageMappings - K&M supplier image mappings
  * 
  * @created 2026-05-13 (migrated from inline definitions)
+ * @updated 2026-05-13 (fixed to match actual DB)
  */
 
 import {
   pgTable,
-  uuid,
   varchar,
   text,
   integer,
@@ -18,42 +19,38 @@ import {
 } from "drizzle-orm/pg-core";
 
 // ============================================================================
-// Tire Images Cache
+// Tire Images Cache (matches actual DB: 11 columns)
 // ============================================================================
 
 export const tireImages = pgTable(
   "tire_images",
   {
-    id: uuid("id").defaultRandom().primaryKey(),
+    // pattern_id is the primary key (integer, not uuid)
+    patternId: integer("pattern_id").primaryKey(),
     
-    // TireLibrary pattern ID (from TireWeb/USAF data)
-    patternId: integer("pattern_id").notNull().unique(),
+    // Brand and pattern name
+    brand: varchar("brand", { length: 100 }),
+    pattern: varchar("pattern", { length: 200 }),
     
-    // Our cached URL (Vercel Blob)
-    cachedUrl: varchar("cached_url", { length: 1000 }),
-    
-    // Original source URL
-    sourceUrl: varchar("source_url", { length: 1000 }),
-    
-    // Image metadata
-    width: integer("width"),
-    height: integer("height"),
-    fileSize: integer("file_size"),
-    mimeType: varchar("mime_type", { length: 50 }),
+    // URLs
+    sourceUrl: text("source_url").notNull(),
+    blobUrl: text("blob_url"),
     
     // Status
-    status: varchar("status", { length: 50 }).notNull().default("pending"), // pending, cached, failed, missing
+    status: varchar("status", { length: 50 }).notNull().default("pending"),
     errorMessage: text("error_message"),
     
+    // File metadata
+    contentType: varchar("content_type", { length: 100 }),
+    fileSize: integer("file_size"),
+    
     // Timestamps
-    cachedAt: timestamp("cached_at", { withTimezone: true }),
-    lastCheckedAt: timestamp("last_checked_at", { withTimezone: true }),
-    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+    createdAt: timestamp("created_at", { withTimezone: false }).notNull().defaultNow(),
+    uploadedAt: timestamp("uploaded_at", { withTimezone: false }),
   },
   (table) => ({
-    patternIdIdx: index("tire_images_pattern_id_idx").on(table.patternId),
     statusIdx: index("tire_images_status_idx").on(table.status),
+    brandIdx: index("tire_images_brand_idx").on(table.brand),
   })
 );
 
@@ -61,38 +58,28 @@ export type TireImage = typeof tireImages.$inferSelect;
 export type NewTireImage = typeof tireImages.$inferInsert;
 
 // ============================================================================
-// K&M Image Mappings (TireWeb/K&M supplier images)
+// K&M Image Mappings (matches actual DB: 5 columns)
+// Note: part_number is the primary key, not a uuid
 // ============================================================================
 
 export const kmImageMappings = pgTable(
   "km_image_mappings",
   {
-    id: uuid("id").defaultRandom().primaryKey(),
-    
-    // Product identifier
-    partNumber: varchar("part_number", { length: 100 }).notNull(),
-    brand: varchar("brand", { length: 100 }),
-    model: varchar("model", { length: 200 }),
-    
-    // Image URLs
-    imageUrl: varchar("image_url", { length: 1000 }),
-    thumbnailUrl: varchar("thumbnail_url", { length: 1000 }),
+    // part_number is the primary key
+    partNumber: varchar("part_number", { length: 100 }).primaryKey(),
     
     // K&M specific fields
     prodline: varchar("prodline", { length: 200 }),
     folderId: varchar("folder_id", { length: 100 }),
     
-    // Source
-    supplier: varchar("supplier", { length: 50 }).default("km"),
+    // Image URL
+    imageUrl: text("image_url"),
     
-    // Timestamps
-    fetchedAt: timestamp("fetched_at", { withTimezone: true }),
-    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+    // Timestamp
+    fetchedAt: timestamp("fetched_at", { withTimezone: false }).notNull().defaultNow(),
   },
   (table) => ({
-    partNumberIdx: index("km_image_mappings_part_number_idx").on(table.partNumber),
-    brandIdx: index("km_image_mappings_brand_idx").on(table.brand),
+    prodlineIdx: index("km_image_mappings_prodline_idx").on(table.prodline),
   })
 );
 

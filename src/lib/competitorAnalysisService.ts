@@ -500,7 +500,9 @@ export async function getSummaryStats(): Promise<{
     totalAnalyses: Number(stats?.totalAnalyses || 0),
     srpCount: Number(stats?.srpCount || 0),
     pdpCount: Number(stats?.pdpCount || 0),
-    competitorCounts: competitorCounts.map(c => ({ name: c.name, count: Number(c.count) })),
+    competitorCounts: competitorCounts
+      .filter(c => c.name != null)
+      .map(c => ({ name: c.name!, count: Number(c.count) })),
     avgOurScore: 0, // Would need to calculate across all analyses
     avgCompetitorScore: 0,
   };
@@ -516,7 +518,7 @@ export async function getCompetitorNames(): Promise<string[]> {
     .where(eq(competitorPageAnalysis.status, "active"))
     .orderBy(asc(competitorPageAnalysis.competitorName));
   
-  return results.map(r => r.name);
+  return results.map(r => r.name).filter((name): name is string => name != null);
 }
 
 // ============================================================================

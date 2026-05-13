@@ -216,12 +216,11 @@ export function normalizeWheelSizeData(
     centerBoreMm: centerBore ? String(centerBore) : null,
     threadSize,
     seatType: null, // Wheel-Size doesn't provide this
-    offsetMinMm: offsetMin !== null ? String(offsetMin) : null,
-    offsetMaxMm: offsetMax !== null ? String(offsetMax) : null,
+    offsetMinMm: offsetMin,
+    offsetMaxMm: offsetMax,
     oemWheelSizes,
     oemTireSizes,
     source: "wheelsize",
-    lastVerifiedAt: null,
   };
 }
 
@@ -277,7 +276,6 @@ export function normalizeWheelProsData(
     oemWheelSizes: [],
     oemTireSizes: [],
     source: "wheelpros",
-    lastVerifiedAt: null,
   };
 }
 
@@ -318,11 +316,10 @@ export function normalizeManualFitment(
     centerBoreMm: input.centerBoreMm ? String(input.centerBoreMm) : null,
     threadSize: input.threadSize ?? null,
     seatType: input.seatType ?? null,
-    offsetMinMm: input.offsetMinMm !== undefined && input.offsetMinMm !== null ? String(input.offsetMinMm) : null,
-    offsetMaxMm: input.offsetMaxMm !== undefined && input.offsetMaxMm !== null ? String(input.offsetMaxMm) : null,
+    offsetMinMm: input.offsetMinMm ?? null,
+    offsetMaxMm: input.offsetMaxMm ?? null,
     oemWheelSizes: input.oemWheelSizes ?? [],
     oemTireSizes: input.oemTireSizes ?? [],
     source: "manual",
-    lastVerifiedAt: new Date(),
   };
 }

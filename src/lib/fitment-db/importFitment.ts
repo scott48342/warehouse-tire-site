@@ -115,7 +115,7 @@ export async function importStaticFitment(
       oemTireSizes: fitmentData.oemTireSizes || [],
       oemWheelSizes: fitmentData.oemWheelSizes || [],
       source: "static",
-      sourceRecordId,
+      // NOTE: sourceRecordId not in vehicleFitments schema - link is tracked via fitmentSourceRecords.year/make/model
     };
     
     // Check if fitment exists

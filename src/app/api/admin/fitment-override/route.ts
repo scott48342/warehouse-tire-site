@@ -7,7 +7,6 @@ import {
   getOverride,
   findOverrideByVehicle,
   type CreateOverrideInput,
-  type OEMWheelSizeOverride,
 } from "@/lib/fitment-db/applyOverrides";
 
 /**
@@ -150,10 +149,7 @@ export async function POST(req: NextRequest) {
       seatType: body.seatType,
       offsetMinMm: body.offsetMinMm != null ? Number(body.offsetMinMm) : undefined,
       offsetMaxMm: body.offsetMaxMm != null ? Number(body.offsetMaxMm) : undefined,
-      oemWheelSizes: body.oemWheelSizes as OEMWheelSizeOverride[] | undefined,
-      oemTireSizes: body.oemTireSizes,
-      forceQuality: body.forceQuality,
-      notes: body.notes,
+      // NOTE: oemWheelSizes, oemTireSizes, forceQuality not in DB - add migration if needed
       reason: body.reason,
       createdBy: body.createdBy || "admin-api",
     };
@@ -166,7 +162,6 @@ export async function POST(req: NextRequest) {
       make: body.make,
       model: body.model,
       modificationId: body.modificationId,
-      forceQuality: body.forceQuality,
     });
     
     return NextResponse.json({ id, success: true });
@@ -216,10 +211,7 @@ export async function PATCH(req: NextRequest) {
       seatType: body.seatType,
       offsetMinMm: body.offsetMinMm !== undefined ? (body.offsetMinMm != null ? Number(body.offsetMinMm) : null) : undefined,
       offsetMaxMm: body.offsetMaxMm !== undefined ? (body.offsetMaxMm != null ? Number(body.offsetMaxMm) : null) : undefined,
-      oemWheelSizes: body.oemWheelSizes,
-      oemTireSizes: body.oemTireSizes,
-      forceQuality: body.forceQuality,
-      notes: body.notes,
+      // NOTE: oemWheelSizes, oemTireSizes, forceQuality not in DB
       reason: body.reason,
     });
     
