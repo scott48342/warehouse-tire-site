@@ -21,6 +21,8 @@ import {
   type TrimEntry,
 } from "@/lib/fitment-db/ymmCache";
 import { getAtomicTrimOptions } from "@/lib/fitment/canonicalResolver";
+import { isGroupedTrim, explodeTrim } from "@/lib/fitment/trimExplosion";
+import { canonicalMake, displayMake } from "@/lib/fitment/makeAliases";
 
 export const runtime = "nodejs";
 
@@ -200,24 +202,28 @@ export async function GET(req: Request) {
 /**
  * Process raw trim entries into display format
  * 
+ * Uses centralized trim explosion utilities for consistent handling of:
+ * - Grouped trims: "LX, Sport, EX" → individual options
+ * - Slash trims: "SXT / SXT Plus" → individual options (spaced slash only)
+ * - Preserved trims: "R/T", "GT/CS" → stay as single option (compact slash)
+ * 
  * Priority:
- * 1. Individual trim records (display_trim without commas) - preferred
- * 2. Grouped trim records (comma-separated) - used as fallback
+ * 1. Individual trim records (non-grouped) - preferred
+ * 2. Grouped trim records (exploded) - used as fallback
  * 
  * Dedupes by label to avoid showing "Sport" twice when we have both
  * an individual "Sport" record and a grouped "LX, Sport, EX" record.
  */
 function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption[] {
   const seenLabels = new Map<string, TrimOption>(); // label -> best option
-  let hasOnlyBaseTrims = true;
   let firstBaseTrim: TrimEntry | null = null;
   
-  // First pass: collect individual records (no commas) - these are preferred
+  // First pass: collect individual records (non-grouped) - these are preferred
   for (const t of trims) {
     const rawLabel = t.displayTrim || "";
     
-    // Skip grouped trims in first pass
-    if (rawLabel.includes(",")) continue;
+    // Skip grouped trims in first pass (use centralized check)
+    if (isGroupedTrim(rawLabel)) continue;
     
     if (premiumUxEnabled && (!rawLabel || isBaseTrim(rawLabel))) {
       if (!firstBaseTrim) firstBaseTrim = t;
@@ -225,10 +231,10 @@ function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption
     }
     
     if (rawLabel) {
-      hasOnlyBaseTrims = false;
       const normalizedLabel = rawLabel.trim();
-      if (!seenLabels.has(normalizedLabel)) {
-        seenLabels.set(normalizedLabel, {
+      const key = normalizedLabel.toLowerCase();
+      if (!seenLabels.has(key)) {
+        seenLabels.set(key, {
           value: t.modificationId,
           label: normalizedLabel,
           modificationId: t.modificationId,
@@ -237,24 +243,27 @@ function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption
     }
   }
   
-  // Second pass: add trims from grouped records if not already seen
+  // Second pass: explode grouped records and add if not already seen
   for (const t of trims) {
     const rawLabel = t.displayTrim || "";
     
     // Only process grouped trims in second pass
-    if (!rawLabel.includes(",")) continue;
+    if (!isGroupedTrim(rawLabel)) continue;
     
-    const individualTrims = rawLabel.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
+    // Use centralized explodeTrim - handles comma AND spaced slash correctly
+    // Does NOT split "R/T" or "GT/CS" (compact slashes)
+    const individualTrims = explodeTrim(rawLabel);
+    
     for (const trimName of individualTrims) {
       if (premiumUxEnabled && isBaseTrim(trimName)) {
         if (!firstBaseTrim) firstBaseTrim = t;
         continue;
       }
       
+      const key = trimName.toLowerCase();
       // Only add if we don't already have this label from an individual record
-      if (!seenLabels.has(trimName)) {
-        hasOnlyBaseTrims = false;
-        seenLabels.set(trimName, {
+      if (!seenLabels.has(key)) {
+        seenLabels.set(key, {
           value: t.modificationId,
           label: trimName,
           modificationId: t.modificationId,

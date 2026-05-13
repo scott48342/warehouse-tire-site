@@ -26,31 +26,11 @@ export function slugify(str: string): string {
 
 /**
  * Normalize make name for consistent lookups
+ * 
+ * UPDATED: Now uses centralized makeAliases module for consistency
+ * across all endpoints. See src/lib/fitment/makeAliases.ts
  */
-export function normalizeMake(make: string): string {
-  // Handle common variations
-  const normalized = make.trim().toLowerCase();
-  
-  // Wheel-Size API uses "mercedes" not "mercedes-benz"
-  const makeAliases: Record<string, string> = {
-    "chevrolet": "chevrolet",
-    "chevy": "chevrolet",
-    "mercedes-benz": "mercedes",
-    "mercedes benz": "mercedes",
-    "mercedes": "mercedes",
-    "bmw": "bmw",
-    "volkswagen": "volkswagen",
-    "vw": "volkswagen",
-    "land rover": "land-rover",
-    "landrover": "land-rover",
-    "alfa romeo": "alfa-romeo",
-    "alfaromeo": "alfa-romeo",
-    "aston martin": "aston-martin",
-    "astonmartin": "aston-martin",
-  };
-  
-  return makeAliases[normalized] || slugify(normalized);
-}
+export { canonicalMake as normalizeMake, displayMake, makeMatches } from "@/lib/fitment/makeAliases";
 
 /**
  * Model aliases for Wheel-Size API compatibility

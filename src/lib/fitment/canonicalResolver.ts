@@ -23,10 +23,12 @@ import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import type { VehicleFitment, VehicleFitmentConfiguration, WheelSizeTrimMapping } from "@/lib/fitment-db/schema";
 import { eq, and, ilike, sql } from "drizzle-orm";
-import { normalizeMake, normalizeModel, slugify } from "@/lib/fitment-db/keys";
+import { normalizeModel, slugify } from "@/lib/fitment-db/keys";
+import { canonicalMake } from "@/lib/fitment/makeAliases";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 import { getTrimMapping, type TrimMappingResult } from "@/lib/fitment-db/wheelSizeTrimMapping";
+import { isGroupedTrim, explodeTrim } from "@/lib/fitment/trimExplosion";
 
 // ============================================================================
 // Types
@@ -117,53 +119,8 @@ export interface ResolverInput {
 // Helpers
 // ============================================================================
 
-/**
- * Check if a displayTrim is grouped (contains comma or spaced slash).
- * 
- * IMPORTANT: Only treat "/" as a delimiter when surrounded by spaces (" / ").
- * This preserves legitimate slash-containing trim names:
- *   - "R/T" → NOT grouped (single trim)
- *   - "GT/CS" → NOT grouped (single trim)
- *   - "4x4/2x4" → NOT grouped (single trim)
- *   - "SXT / SXT Plus" → GROUPED (two trims)
- *   - "Base, Premium" → GROUPED (two trims)
- * 
- * Fix for: TRIM_NORMALIZATION_FUZZY_LOOKUP issue (2026-05-06)
- */
-function isGroupedTrim(displayTrim: string): boolean {
-  // Comma always indicates grouping
-  if (displayTrim.includes(',')) return true;
-  // Slash only indicates grouping when surrounded by spaces
-  if (/ \/ /.test(displayTrim)) return true;
-  return false;
-}
-
-/**
- * Split a grouped displayTrim into atomic trims.
- * 
- * Only splits on:
- *   - Comma (with optional spaces): "Base, Premium" → ["Base", "Premium"]
- *   - Spaced slash: "SXT / SXT Plus" → ["SXT", "SXT Plus"]
- * 
- * Does NOT split compact slash tokens like "R/T", "GT/CS", "4x4/2x4".
- */
-function splitGroupedTrim(displayTrim: string): string[] {
-  // First split on comma
-  let parts = displayTrim.split(',').map(t => t.trim()).filter(Boolean);
-  
-  // Then split each part on spaced slash (" / ")
-  const result: string[] = [];
-  for (const part of parts) {
-    if (/ \/ /.test(part)) {
-      const subParts = part.split(' / ').map(t => t.trim()).filter(Boolean);
-      result.push(...subParts);
-    } else {
-      result.push(part);
-    }
-  }
-  
-  return result;
-}
+// NOTE: isGroupedTrim and explodeTrim (explodeTrim) are now imported from
+// @/lib/fitment/trimExplosion for consistency across all fitment endpoints.
 
 /**
  * Normalize trim for comparison
@@ -219,7 +176,7 @@ export async function resolveVehicleFitment(
 ): Promise<CanonicalFitmentResult> {
   const { year, make, model, trim, modificationId } = input;
   
-  const normalizedMake = normalizeMake(make);
+  const normalizedMake = canonicalMake(make);
   const modelVariants = getModelVariants(model);
   const requestedTrim = trim || null;
   const normalizedRequestedTrim = requestedTrim ? normalizeTrim(requestedTrim) : null;
@@ -285,7 +242,7 @@ export async function resolveVehicleFitment(
         // If this is a grouped record and we have a specific trim requested,
         // check if the requested trim is one of the atomic trims in the group
         if (isGrouped && requestedTrim) {
-          const atomicTrims = splitGroupedTrim(exactMatch.displayTrim);
+          const atomicTrims = explodeTrim(exactMatch.displayTrim);
           const matchedAtomic = atomicTrims.find(t => 
             normalizeTrim(t) === normalizedRequestedTrim
           );
@@ -316,7 +273,7 @@ export async function resolveVehicleFitment(
           ...result,
           canonicalFitmentId: generateCanonicalId(year, make, model, exactMatch.displayTrim),
           modificationId: exactMatch.modificationId,
-          displayTrim: isGrouped ? splitGroupedTrim(exactMatch.displayTrim)[0] : exactMatch.displayTrim,
+          displayTrim: isGrouped ? explodeTrim(exactMatch.displayTrim)[0] : exactMatch.displayTrim,
           matchedBy: "exact_modification_id",
           confidence: isGrouped ? "medium" : "high",
           fitment: withOverrides,
@@ -483,7 +440,7 @@ export async function resolveVehicleFitment(
     // Build candidate list with atomic trim info
     const candidates = allRecords.map(rec => {
       const isGrouped = isGroupedTrim(rec.displayTrim);
-      const atomicTrims = isGrouped ? splitGroupedTrim(rec.displayTrim) : [rec.displayTrim];
+      const atomicTrims = isGrouped ? explodeTrim(rec.displayTrim) : [rec.displayTrim];
       return {
         record: rec,
         modificationId: rec.modificationId,
@@ -646,7 +603,7 @@ export async function getAtomicTrimOptions(
   make: string,
   model: string
 ): Promise<AtomicTrimOption[]> {
-  const normalizedMake = normalizeMake(make);
+  const normalizedMake = canonicalMake(make);
   const modelVariants = getModelVariants(model);
   
   const options: AtomicTrimOption[] = [];
@@ -668,7 +625,7 @@ export async function getAtomicTrimOptions(
     
     for (const rec of records) {
       const isGrouped = isGroupedTrim(rec.displayTrim);
-      const atomicTrims = isGrouped ? splitGroupedTrim(rec.displayTrim) : [rec.displayTrim];
+      const atomicTrims = isGrouped ? explodeTrim(rec.displayTrim) : [rec.displayTrim];
       const tireSizes = (rec.oemTireSizes as string[]) || [];
       
       for (const atomicTrim of atomicTrims) {
@@ -697,3 +654,4 @@ export async function getAtomicTrimOptions(
   
   return options;
 }
+

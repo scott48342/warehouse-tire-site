@@ -16,35 +16,9 @@ import {
   setCachedMakes,
   getFallbackMakes,
 } from "@/lib/fitment-db/ymmCache";
+import { displayMake } from "@/lib/fitment/makeAliases";
 
 export const runtime = "nodejs";
-
-/**
- * Normalize make slug to display name
- */
-function slugToDisplayName(slug: string): string {
-  const specialCases: Record<string, string> = {
-    "mercedes": "Mercedes-Benz",
-    "mercedes-benz": "Mercedes-Benz",
-    "land-rover": "Land Rover",
-    "alfa-romeo": "Alfa Romeo",
-    "aston-martin": "Aston Martin",
-    "rolls-royce": "Rolls-Royce",
-    "gmc": "GMC",
-    "bmw": "BMW",
-    "amg": "AMG",
-    "amc": "AMC",
-  };
-  
-  if (specialCases[slug.toLowerCase()]) {
-    return specialCases[slug.toLowerCase()];
-  }
-  
-  return slug
-    .split("-")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(" ");
-}
 
 /**
  * GET /api/vehicles/makes?year=2005
@@ -86,7 +60,7 @@ export async function GET(req: Request) {
         .where(eq(vehicleFitments.year, year))
         .orderBy(vehicleFitments.make);
       
-      makes = results.map(r => slugToDisplayName(r.make));
+      makes = results.map(r => displayMake(r.make));
       console.log(`[makes] DB: ${makes.length} makes for year ${year}`);
     } else {
       const results = await db
@@ -94,7 +68,7 @@ export async function GET(req: Request) {
         .from(vehicleFitments)
         .orderBy(vehicleFitments.make);
       
-      makes = results.map(r => slugToDisplayName(r.make));
+      makes = results.map(r => displayMake(r.make));
       console.log(`[makes] DB: ${makes.length} makes (all years)`);
     }
     
