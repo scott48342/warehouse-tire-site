@@ -1,0 +1,1075 @@
+{
+  "timestamp": "2026-05-13T15:24:52.253Z",
+  "batch": "test",
+  "parameters": {
+    "yearMin": 2018,
+    "yearMax": 2026,
+    "offset": 0,
+    "limit": 20,
+    "priorityFirst": false
+  },
+  "summary": {
+    "total": 20,
+    "byCategory": {
+      "HIGH": 16,
+      "MEDIUM": 4,
+      "LOW": 0,
+      "NEEDS_REVIEW": 0
+    },
+    "byPriority": {
+      "ev": 1,
+      "truck": 0,
+      "staggered": 0,
+      "offroad": 0,
+      "other": 19
+    },
+    "avgScore": 81
+  },
+  "vehicles": [
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Acura",
+        "model": "ILX",
+        "displayTrim": "Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBoreMm": 64.1,
+        "offsetMinMm": 45,
+        "offsetMaxMm": 45,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 7370,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 64.1mm",
+          "Clean offset range: 45 to 45mm",
+          "100% WheelPros hub-safe (7370 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Acura",
+        "model": "MDX",
+        "displayTrim": "Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBoreMm": 64.1,
+        "offsetMinMm": 45,
+        "offsetMaxMm": 45,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5101,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 64.1mm",
+          "Clean offset range: 45 to 45mm",
+          "100% WheelPros hub-safe (5101 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Acura",
+        "model": "NSX",
+        "displayTrim": "Base Front Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBoreMm": 70,
+        "offsetMinMm": 55,
+        "offsetMaxMm": 55,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5101,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 70mm",
+          "Clean offset range: 55 to 55mm",
+          "96% WheelPros hub-safe (5101 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Acura",
+        "model": "RDX",
+        "displayTrim": "Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBoreMm": 64.1,
+        "offsetMinMm": 55,
+        "offsetMaxMm": 55,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 7370,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 64.1mm",
+          "Clean offset range: 55 to 55mm",
+          "100% WheelPros hub-safe (7370 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Acura",
+        "model": "RLX",
+        "displayTrim": "Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x120",
+        "centerBoreMm": 64.1,
+        "offsetMinMm": 55,
+        "offsetMaxMm": 55,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5101,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 64.1mm",
+          "Clean offset range: 55 to 55mm",
+          "100% WheelPros hub-safe (5101 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Acura",
+        "model": "TLX",
+        "displayTrim": "4 Cyl."
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x114.3",
+        "centerBoreMm": 64.1,
+        "offsetMinMm": 50,
+        "offsetMaxMm": 50,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 7370,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 64.1mm",
+          "Clean offset range: 50 to 50mm",
+          "100% WheelPros hub-safe (7370 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Alfa Romeo",
+        "model": "4C",
+        "displayTrim": "Base Front Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x98",
+        "centerBoreMm": 58.1,
+        "offsetMinMm": 33,
+        "offsetMaxMm": 33,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 0,
+        "sampleSize": 0,
+        "error": null
+      },
+      "confidence": {
+        "total": 65,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 0
+        },
+        "category": "MEDIUM",
+        "issues": [
+          "Missing wheel sizes",
+          "No WheelPros wheels found for bolt pattern"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 58.1mm",
+          "Clean offset range: 33 to 33mm"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Alfa Romeo",
+        "model": "Giulia",
+        "displayTrim": "Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBoreMm": 65.1,
+        "offsetMinMm": 40,
+        "offsetMaxMm": 40,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 306,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 65.1mm",
+          "Clean offset range: 40 to 40mm",
+          "100% WheelPros hub-safe (306 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Alfa Romeo",
+        "model": "Stelvio",
+        "displayTrim": "Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x110",
+        "centerBoreMm": 65.1,
+        "offsetMinMm": 40,
+        "offsetMaxMm": 40,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 306,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 65.1mm",
+          "Clean offset range: 40 to 40mm",
+          "100% WheelPros hub-safe (306 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Aston Martin",
+        "model": "DB11",
+        "displayTrim": "Base Front Base"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x128",
+        "centerBoreMm": 75.1,
+        "offsetMinMm": 50,
+        "offsetMaxMm": 50,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 0,
+        "sampleSize": 0,
+        "error": null
+      },
+      "confidence": {
+        "total": 65,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 0
+        },
+        "category": "MEDIUM",
+        "issues": [
+          "Missing wheel sizes",
+          "No WheelPros wheels found for bolt pattern"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 75.1mm",
+          "Clean offset range: 50 to 50mm"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Aston Martin",
+        "model": "Rapide",
+        "displayTrim": "S Front S"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x128",
+        "centerBoreMm": 75.1,
+        "offsetMinMm": 42,
+        "offsetMaxMm": 42,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 0,
+        "sampleSize": 0,
+        "error": null
+      },
+      "confidence": {
+        "total": 65,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 0
+        },
+        "category": "MEDIUM",
+        "issues": [
+          "Missing wheel sizes",
+          "No WheelPros wheels found for bolt pattern"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 75.1mm",
+          "Clean offset range: 42 to 42mm"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Aston Martin",
+        "model": "Vanquish",
+        "displayTrim": "S Front S"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x128",
+        "centerBoreMm": 75.1,
+        "offsetMinMm": 50,
+        "offsetMaxMm": 50,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 0,
+        "sampleSize": 0,
+        "error": null
+      },
+      "confidence": {
+        "total": 65,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 0
+        },
+        "category": "MEDIUM",
+        "issues": [
+          "Missing wheel sizes",
+          "No WheelPros wheels found for bolt pattern"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 75.1mm",
+          "Clean offset range: 50 to 50mm"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A3",
+        "displayTrim": "Premium Cabriolet"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 57.1,
+        "offsetMinMm": 45,
+        "offsetMaxMm": 45,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 57.1mm",
+          "Clean offset range: 45 to 45mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A3 Quattro",
+        "displayTrim": "Premium Cabriolet"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 57.1,
+        "offsetMinMm": 45,
+        "offsetMaxMm": 45,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 57.1mm",
+          "Clean offset range: 45 to 45mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A3 Sportback e-tron",
+        "displayTrim": "Premium"
+      },
+      "priority": {
+        "isEV": true,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": true
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 57.1,
+        "offsetMinMm": 45,
+        "offsetMaxMm": 45,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 57.1mm",
+          "Clean offset range: 45 to 45mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A4",
+        "displayTrim": "Premium"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 66.5,
+        "offsetMinMm": 45,
+        "offsetMaxMm": 45,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 66.5mm",
+          "Clean offset range: 45 to 45mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A4 Quattro",
+        "displayTrim": "Premium"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 66.5,
+        "offsetMinMm": 45,
+        "offsetMaxMm": 45,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 66.5mm",
+          "Clean offset range: 45 to 45mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A4 allroad",
+        "displayTrim": "Premium"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 66.5,
+        "offsetMinMm": 42,
+        "offsetMaxMm": 42,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 66.5mm",
+          "Clean offset range: 42 to 42mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A5 Quattro",
+        "displayTrim": "Premium Cabriolet"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 66.5,
+        "offsetMinMm": 30,
+        "offsetMaxMm": 30,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 66.5mm",
+          "Clean offset range: 30 to 30mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    },
+    {
+      "vehicle": {
+        "year": 2018,
+        "make": "Audi",
+        "model": "A5 Sportback",
+        "displayTrim": "Premium"
+      },
+      "priority": {
+        "isEV": false,
+        "isTruck": false,
+        "isStaggered": false,
+        "isOffroad": false,
+        "isPriority": false
+      },
+      "specs": {
+        "boltPattern": "5x112",
+        "centerBoreMm": 66.5,
+        "offsetMinMm": 30,
+        "offsetMaxMm": 30,
+        "wheelDiameters": [],
+        "wheelWidths": []
+      },
+      "wpCoverage": {
+        "totalWheels": 5348,
+        "sampleSize": 50,
+        "error": null
+      },
+      "confidence": {
+        "total": 85,
+        "scores": {
+          "boltPattern": 25,
+          "centerBore": 20,
+          "offsetRange": 20,
+          "wheelSizes": 0,
+          "wpCompatibility": 20
+        },
+        "category": "HIGH",
+        "issues": [
+          "Missing wheel sizes"
+        ],
+        "strengths": [
+          "Valid bolt pattern format",
+          "Valid center bore: 66.5mm",
+          "Clean offset range: 30 to 30mm",
+          "100% WheelPros hub-safe (5348 wheels)"
+        ]
+      }
+    }
+  ],
+  "weakAreas": [],
+  "incompleteRanges": [],
+  "importArtifacts": [],
+  "expansionCandidates": [
+    {
+      "vehicle": "2018 Acura ILX",
+      "score": 85,
+      "wpWheels": 7370
+    },
+    {
+      "vehicle": "2018 Acura RDX",
+      "score": 85,
+      "wpWheels": 7370
+    },
+    {
+      "vehicle": "2018 Acura TLX",
+      "score": 85,
+      "wpWheels": 7370
+    },
+    {
+      "vehicle": "2018 Audi A3",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Audi A3 Quattro",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Audi A3 Sportback e-tron",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Audi A4",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Audi A4 Quattro",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Audi A4 allroad",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Audi A5 Quattro",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Audi A5 Sportback",
+      "score": 85,
+      "wpWheels": 5348
+    },
+    {
+      "vehicle": "2018 Acura MDX",
+      "score": 85,
+      "wpWheels": 5101
+    },
+    {
+      "vehicle": "2018 Acura NSX",
+      "score": 85,
+      "wpWheels": 5101
+    },
+    {
+      "vehicle": "2018 Acura RLX",
+      "score": 85,
+      "wpWheels": 5101
+    },
+    {
+      "vehicle": "2018 Alfa Romeo Giulia",
+      "score": 85,
+      "wpWheels": 306
+    },
+    {
+      "vehicle": "2018 Alfa Romeo Stelvio",
+      "score": 85,
+      "wpWheels": 306
+    }
+  ]
+}

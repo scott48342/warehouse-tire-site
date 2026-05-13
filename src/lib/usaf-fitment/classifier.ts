@@ -23,8 +23,8 @@ const COMPLEX_STAGGERED_PATTERNS = [
   { make: /ford/i, model: /mustang/i },
   { make: /chevrolet|chevy/i, model: /corvette|camaro/i },
   { make: /dodge/i, model: /challenger|charger/i },
-  // Exotic
-  { make: /lamborghini|ferrari|mclaren|aston martin|bentley|rolls-royce/i },
+  // Exotic - all models are staggered
+  { make: /lamborghini|ferrari|mclaren|aston martin|bentley|rolls-royce/i, model: /./i },
 ];
 
 /**

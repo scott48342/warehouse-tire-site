@@ -1,0 +1,566 @@
+{
+  "timestamp": "2026-05-13T15:15:21.830Z",
+  "type": "usaf_full_audit_2000_current",
+  "parameters": {
+    "yearStart": 2000,
+    "yearEnd": 2026,
+    "makeFilter": null,
+    "sampleSize": 25
+  },
+  "summary": {
+    "totalVehicles": 25,
+    "exactMatch": 2,
+    "partialMatch": 8,
+    "wtdOnly": 14,
+    "usafOnly": 1,
+    "safeAutoFixCount": 0,
+    "legacyFallbackCount": 2,
+    "configCandidateCount": 3,
+    "manualReviewCount": 4,
+    "errorCount": 0
+  },
+  "safeAutoFixes": [],
+  "legacyFallbackEnrichments": [
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "q3",
+      "tireSize": "255/45R19",
+      "wheelDiameter": 19,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "215/65R17",
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ],
+      "existingUsafSizes": [
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "q3",
+      "tireSize": "255/40R20",
+      "wheelDiameter": 20,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 20\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "215/65R17",
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ],
+      "existingUsafSizes": [
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "category": "legacy_fallback"
+    }
+  ],
+  "configTableCandidates": [
+    {
+      "year": 2026,
+      "make": "Acura",
+      "model": "integra",
+      "tireSize": "235/40R18",
+      "wheelDiameter": 18,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": true,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/50R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "category": "config_candidate"
+    },
+    {
+      "year": 2026,
+      "make": "Acura",
+      "model": "integra",
+      "tireSize": "265/30R19",
+      "wheelDiameter": 19,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": true,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/50R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "category": "config_candidate"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "q5",
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": true,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "existingWtdSizes": [
+        "235/60R18",
+        "255/45R19",
+        "255/45R20",
+        "255/40R20",
+        "255/35R21"
+      ],
+      "existingUsafSizes": [
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ],
+      "category": "config_candidate"
+    }
+  ],
+  "manualReviewRequired": [
+    {
+      "year": 2026,
+      "make": "Aston Martin",
+      "model": "dbx",
+      "tireSize": "285/35R23",
+      "wheelDiameter": 23,
+      "confidence": 100,
+      "reasons": [
+        "Uses existing 23\" wheel diameter",
+        "3 common sizes (good alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        22,
+        23
+      ],
+      "existingWtdSizes": [
+        "285/40R22",
+        "325/35R22",
+        "295/35R23",
+        "325/30R23"
+      ],
+      "existingUsafSizes": [
+        "285/40R22",
+        "325/35R22",
+        "285/35R23",
+        "325/30R23"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "q8",
+      "tireSize": "285/35R23",
+      "wheelDiameter": 23,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 23\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 23\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        20,
+        21,
+        22
+      ],
+      "existingWtdSizes": [
+        "255/55R20",
+        "285/45R21",
+        "285/40R22"
+      ],
+      "existingUsafSizes": [
+        "285/45R21",
+        "285/40R22",
+        "285/35R23"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "rs3",
+      "tireSize": "265/30R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": true,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "235/40R18",
+        "255/30R19",
+        "255/25R20"
+      ],
+      "existingUsafSizes": [
+        "265/30R19",
+        "245/35R19"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "rs3",
+      "tireSize": "245/35R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": true,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "235/40R18",
+        "255/30R19",
+        "255/25R20"
+      ],
+      "existingUsafSizes": [
+        "265/30R19",
+        "245/35R19"
+      ],
+      "category": "manual_review"
+    }
+  ],
+  "errors": [],
+  "topProposedFixes": [
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "q3",
+      "tireSize": "255/45R19",
+      "wheelDiameter": 19,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "215/65R17",
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ],
+      "existingUsafSizes": [
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "q3",
+      "tireSize": "255/40R20",
+      "wheelDiameter": 20,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 20\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "215/65R17",
+        "235/55R18",
+        "235/50R19",
+        "235/45R20"
+      ],
+      "existingUsafSizes": [
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2026,
+      "make": "Acura",
+      "model": "integra",
+      "tireSize": "235/40R18",
+      "wheelDiameter": 18,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": true,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/50R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "category": "config_candidate"
+    },
+    {
+      "year": 2026,
+      "make": "Acura",
+      "model": "integra",
+      "tireSize": "265/30R19",
+      "wheelDiameter": 19,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": true,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/50R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "category": "config_candidate"
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "q5",
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": true,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "existingWtdSizes": [
+        "235/60R18",
+        "255/45R19",
+        "255/45R20",
+        "255/40R20",
+        "255/35R21"
+      ],
+      "existingUsafSizes": [
+        "235/60R18",
+        "235/55R19",
+        "255/45R20"
+      ],
+      "category": "config_candidate"
+    }
+  ]
+}

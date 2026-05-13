@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-05-13T15:35:48.823Z",
+  "batchName": "02",
+  "processed": 400,
+  "stats": {
+    "total": 500,
+    "byCategory": {
+      "HIGH": 397,
+      "MEDIUM": 2,
+      "LOW": 0,
+      "NEEDS_REVIEW": 1
+    },
+    "byPriority": {
+      "ev": 8,
+      "truck": 29,
+      "staggered": 57,
+      "offroad": 16,
+      "other": 290
+    },
+    "avgScore": 0
+  }
+}

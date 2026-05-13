@@ -1,0 +1,6538 @@
+{
+  "timestamp": "2026-05-13T15:25:57.424Z",
+  "type": "usaf_full_audit_2000_current",
+  "parameters": {
+    "yearStart": 2000,
+    "yearEnd": 2026,
+    "makeFilter": null,
+    "sampleSize": null
+  },
+  "summary": {
+    "totalVehicles": 226,
+    "exactMatch": 20,
+    "partialMatch": 64,
+    "wtdOnly": 106,
+    "usafOnly": 36,
+    "safeAutoFixCount": 2,
+    "legacyFallbackCount": 33,
+    "configCandidateCount": 0,
+    "manualReviewCount": 107,
+    "errorCount": 0
+  },
+  "safeAutoFixes": [
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "X5",
+      "tireSize": "285/45R19",
+      "wheelDiameter": 19,
+      "confidence": 100,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "3 common sizes (good alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "255/55R18",
+        "255/50R19",
+        "275/40R20"
+      ],
+      "existingUsafSizes": [
+        "235/65R17",
+        "255/55R18",
+        "255/50R19",
+        "285/45R19"
+      ],
+      "category": "safe_auto_fix"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "ranger",
+      "tireSize": "215/75R15",
+      "wheelDiameter": 15,
+      "confidence": 100,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "3 common sizes (good alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "225/70R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "existingUsafSizes": [
+        "225/70R15",
+        "215/75R15",
+        "245/75R16",
+        "235/75R15"
+      ],
+      "category": "safe_auto_fix"
+    }
+  ],
+  "legacyFallbackEnrichments": [
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "a4",
+      "tireSize": "205/60R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "195/65R15",
+        "225/45R17"
+      ],
+      "existingUsafSizes": [
+        "205/60R15",
+        "205/55R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Buick",
+      "model": "lesabre",
+      "tireSize": "215/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "225/60R16",
+        "235/55R17"
+      ],
+      "existingUsafSizes": [
+        "225/60R16",
+        "215/70R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "blazer",
+      "tireSize": "235/75R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "235/65R16",
+        "215/70R16"
+      ],
+      "existingUsafSizes": [
+        "235/70R15",
+        "31x10.50R15",
+        "235/75R15",
+        "205/75R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "blazer",
+      "tireSize": "205/75R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "235/65R16",
+        "215/70R16"
+      ],
+      "existingUsafSizes": [
+        "235/70R15",
+        "31x10.50R15",
+        "235/75R15",
+        "205/75R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "tahoe",
+      "tireSize": "265/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "265/70R17",
+        "245/75R16",
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "245/75R16",
+        "265/70R16",
+        "265/75R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "tireSize": "215/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "215/65R15",
+        "215/65R16",
+        "225/60R16",
+        "225/55R17"
+      ],
+      "existingUsafSizes": [
+        "215/70R15",
+        "215/65R15",
+        "215/65R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "durango",
+      "tireSize": "275/60R17",
+      "wheelDiameter": 17,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "235/75R15",
+        "245/70R16",
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "235/75R15",
+        "31x10.50R15",
+        "275/60R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "tireSize": "LT245/75R16",
+      "wheelDiameter": 16,
+      "confidence": 80,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "LT format (light truck)"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "LT225/75R16"
+      ],
+      "existingUsafSizes": [
+        "LT225/75R16",
+        "LT245/75R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "expedition",
+      "tireSize": "275/60R17",
+      "wheelDiameter": 17,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "255/70R16",
+        "265/70R16",
+        "255/65R17",
+        "265/70R17"
+      ],
+      "existingUsafSizes": [
+        "255/70R16",
+        "275/60R17",
+        "265/70R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "explorer",
+      "tireSize": "225/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/75R15",
+        "255/70R16",
+        "245/70R16"
+      ],
+      "existingUsafSizes": [
+        "225/70R15",
+        "255/70R16",
+        "235/75R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "yukon",
+      "tireSize": "265/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        20
+      ],
+      "existingWtdSizes": [
+        "265/70R17",
+        "245/75R16",
+        "265/70R16",
+        "265/65R17",
+        "275/55R20"
+      ],
+      "existingUsafSizes": [
+        "245/75R16",
+        "265/70R16",
+        "265/75R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "accord",
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "195/70R14",
+        "205/60R16",
+        "195/65R15",
+        "205/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "accord",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "195/70R14",
+        "205/60R16",
+        "195/65R15",
+        "205/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "civic",
+      "tireSize": "185/70R14",
+      "wheelDiameter": 14,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 14\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15
+      ],
+      "existingWtdSizes": [
+        "185/65R14",
+        "195/55R15",
+        "195/60R15"
+      ],
+      "existingUsafSizes": [
+        "185/65R14",
+        "195/55R15",
+        "185/70R14"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "passport",
+      "tireSize": "225/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "245/70R16"
+      ],
+      "existingUsafSizes": [
+        "245/70R16",
+        "225/75R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Isuzu",
+      "model": "rodeo",
+      "tireSize": "225/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "245/70R16",
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "225/75R16",
+        "245/70R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "tireSize": "225/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "245/65R17",
+        "245/70R16"
+      ],
+      "existingUsafSizes": [
+        "225/75R16",
+        "245/70R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "wrangler",
+      "tireSize": "205/75R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ],
+      "existingUsafSizes": [
+        "205/75R15",
+        "225/75R15",
+        "215/75R15",
+        "225/70R15",
+        "30x9.50R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "wrangler",
+      "tireSize": "225/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ],
+      "existingUsafSizes": [
+        "205/75R15",
+        "225/75R15",
+        "215/75R15",
+        "225/70R15",
+        "30x9.50R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "eclipse",
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "215/60R16",
+        "215/50R17",
+        "225/50R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "215/50R17",
+        "195/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "maxima",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/55R16"
+      ],
+      "existingUsafSizes": [
+        "215/55R16",
+        "205/65R15",
+        "225/50R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "tireSize": "245/70R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "255/65R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "255/65R16",
+        "245/70R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "sentra",
+      "tireSize": "195/55R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "195/55R16",
+        "185/65R14"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "xterra",
+      "tireSize": "265/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "265/70R16"
+      ],
+      "existingUsafSizes": [
+        "265/70R15",
+        "235/70R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Oldsmobile",
+      "model": "alero",
+      "tireSize": "225/50R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/60R15",
+        "215/55R16"
+      ],
+      "existingUsafSizes": [
+        "215/60R15",
+        "225/50R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "firebird",
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "235/55R16",
+        "245/50R16"
+      ],
+      "existingUsafSizes": [
+        "215/60R16",
+        "245/50R16",
+        "275/40R17",
+        "235/55R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-3",
+      "tireSize": "205/50R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/45R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-5",
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "215/55R16",
+        "225/50R17",
+        "235/45R18"
+      ],
+      "existingUsafSizes": [
+        "215/55R16",
+        "225/45R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "tireSize": "205/50R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "185/55R15"
+      ],
+      "existingUsafSizes": [
+        "185/55R15",
+        "205/50R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "corolla",
+      "tireSize": "175/65R14",
+      "wheelDiameter": 14,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 14\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14
+      ],
+      "existingWtdSizes": [
+        "185/65R14"
+      ],
+      "existingUsafSizes": [
+        "185/65R14",
+        "175/65R14"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "rav4",
+      "tireSize": "195/80R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "215/70R16",
+        "235/60R16"
+      ],
+      "existingUsafSizes": [
+        "215/70R16",
+        "235/60R16",
+        "195/80R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "sienna",
+      "tireSize": "215/65R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "205/70R15"
+      ],
+      "existingUsafSizes": [
+        "205/70R15",
+        "215/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "tundra",
+      "tireSize": "245/70R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "245/70R16",
+        "265/70R16"
+      ],
+      "category": "legacy_fallback"
+    }
+  ],
+  "configTableCandidates": [],
+  "manualReviewRequired": [
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "s40",
+      "tireSize": "195/60R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "195/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "s60",
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "225/45R17",
+        "235/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/55R16",
+        "235/45R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "s60",
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "225/45R17",
+        "235/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/55R16",
+        "235/45R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "s60",
+      "tireSize": "215/55R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "225/45R17",
+        "235/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/55R16",
+        "235/45R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "s60",
+      "tireSize": "235/45R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "225/45R17",
+        "235/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/65R15",
+        "205/55R16",
+        "215/55R16",
+        "235/45R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "s80",
+      "tireSize": "225/55R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "225/50R17"
+      ],
+      "existingUsafSizes": [
+        "225/55R16",
+        "225/50R17",
+        "215/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2001,
+      "make": "Volvo",
+      "model": "s80",
+      "tireSize": "215/55R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "225/50R17"
+      ],
+      "existingUsafSizes": [
+        "225/55R16",
+        "225/50R17",
+        "215/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "nsx",
+      "tireSize": "215/45R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "215/40R17",
+        "255/40R17"
+      ],
+      "existingUsafSizes": [
+        "215/45R16",
+        "245/40R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "nsx",
+      "tireSize": "245/40R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "215/40R17",
+        "255/40R17"
+      ],
+      "existingUsafSizes": [
+        "215/45R16",
+        "245/40R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "rl",
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "225/55R17",
+        "245/45R18"
+      ],
+      "existingUsafSizes": [
+        "215/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "tt",
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "225/45R17"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "225/45R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M5",
+      "tireSize": "245/40R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": true,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ],
+      "existingUsafSizes": [
+        "245/40R18",
+        "275/35R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M5",
+      "tireSize": "275/35R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": true,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "275/40R19",
+        "285/35R20",
+        "275/35R20",
+        "285/40R19"
+      ],
+      "existingUsafSizes": [
+        "245/40R18",
+        "275/35R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z3",
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "225/50R16"
+      ],
+      "existingUsafSizes": [
+        "225/45R17",
+        "245/40R17",
+        "225/50R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z3",
+      "tireSize": "245/40R17",
+      "wheelDiameter": 17,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "225/50R16"
+      ],
+      "existingUsafSizes": [
+        "225/45R17",
+        "245/40R17",
+        "225/50R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Buick",
+      "model": "regal",
+      "tireSize": "225/60R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "205/70R15"
+      ],
+      "existingUsafSizes": [
+        "225/60R16",
+        "215/70R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Buick",
+      "model": "regal",
+      "tireSize": "215/70R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "205/70R15"
+      ],
+      "existingUsafSizes": [
+        "225/60R16",
+        "215/70R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "tireSize": "LT245/75R16",
+      "wheelDiameter": 16,
+      "confidence": 20,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "LT format (light truck)"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config",
+        "HD truck - SRW/DRW ambiguity"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": true,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        17,
+        18,
+        20
+      ],
+      "existingWtdSizes": [
+        "LT265/70R17",
+        "LT275/70R18",
+        "LT275/65R20"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "LT245/75R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "tireSize": "235/75R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        20
+      ],
+      "existingWtdSizes": [
+        "265/70R17",
+        "265/65R18",
+        "275/55R20"
+      ],
+      "existingUsafSizes": [
+        "235/75R15",
+        "LT245/75R16",
+        "245/75R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "tireSize": "LT245/75R16",
+      "wheelDiameter": 16,
+      "confidence": 20,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "LT format (light truck)"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        20
+      ],
+      "existingWtdSizes": [
+        "265/70R17",
+        "265/65R18",
+        "275/55R20"
+      ],
+      "existingUsafSizes": [
+        "235/75R15",
+        "LT245/75R16",
+        "245/75R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Suburban 1500",
+      "tireSize": "245/75R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        20
+      ],
+      "existingWtdSizes": [
+        "265/70R17",
+        "265/65R18",
+        "275/55R20"
+      ],
+      "existingUsafSizes": [
+        "235/75R15",
+        "LT245/75R16",
+        "245/75R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "astro",
+      "tireSize": "215/75R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/70R15",
+        "215/65R16"
+      ],
+      "existingUsafSizes": [
+        "215/75R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "blazer",
+      "tireSize": "31x10.50R15",
+      "wheelDiameter": 15,
+      "confidence": 75,
+      "reasons": [
+        "Uses existing 15\" wheel diameter"
+      ],
+      "autoReject": [
+        "Flotation tire format requires manual review"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "235/65R16",
+        "215/70R16"
+      ],
+      "existingUsafSizes": [
+        "235/70R15",
+        "31x10.50R15",
+        "235/75R15",
+        "205/75R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "camaro",
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "confidence": 100,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "3 common sizes (good alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": true,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "275/40R17",
+        "245/50R16",
+        "235/55R16"
+      ],
+      "existingUsafSizes": [
+        "215/60R16",
+        "235/55R16",
+        "245/50R16",
+        "275/40R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "malibu",
+      "tireSize": "215/60R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "205/70R15",
+        "215/60R16"
+      ],
+      "existingUsafSizes": [
+        "215/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "sebring",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/60R16"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "215/55R16",
+        "205/55R16",
+        "215/50R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "sebring",
+      "tireSize": "215/55R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/60R16"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "215/55R16",
+        "205/55R16",
+        "215/50R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "sebring",
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/60R16"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "215/55R16",
+        "205/55R16",
+        "215/50R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "sebring",
+      "tireSize": "215/50R17",
+      "wheelDiameter": 17,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/60R16"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "215/55R16",
+        "205/55R16",
+        "215/50R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Daewoo",
+      "model": "leganza",
+      "tireSize": "205/60R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "205/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "durango",
+      "tireSize": "31x10.50R15",
+      "wheelDiameter": 15,
+      "confidence": 75,
+      "reasons": [
+        "Uses existing 15\" wheel diameter"
+      ],
+      "autoReject": [
+        "Flotation tire format requires manual review"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "235/75R15",
+        "245/70R16",
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "235/75R15",
+        "31x10.50R15",
+        "275/60R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "viper",
+      "tireSize": "275/35R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "275/40R17",
+        "335/35R17"
+      ],
+      "existingUsafSizes": [
+        "275/35R18",
+        "335/30R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "viper",
+      "tireSize": "335/30R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "275/40R17",
+        "335/35R17"
+      ],
+      "existingUsafSizes": [
+        "275/35R18",
+        "335/30R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "tireSize": "LT245/75R16",
+      "wheelDiameter": 16,
+      "confidence": 20,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "LT format (light truck)"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "235/70R16",
+        "255/70R16",
+        "275/60R17",
+        "265/70R17",
+        "295/45R18",
+        "275/45R20"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "tireSize": "235/70R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "235/70R16",
+        "255/70R16",
+        "275/60R17",
+        "265/70R17",
+        "295/45R18",
+        "275/45R20"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "tireSize": "255/70R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "235/70R16",
+        "255/70R16",
+        "275/60R17",
+        "265/70R17",
+        "295/45R18",
+        "275/45R20"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "tireSize": "275/60R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "235/70R16",
+        "255/70R16",
+        "275/60R17",
+        "265/70R17",
+        "295/45R18",
+        "275/45R20"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "tireSize": "265/70R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "235/70R16",
+        "255/70R16",
+        "275/60R17",
+        "265/70R17",
+        "295/45R18",
+        "275/45R20"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "tireSize": "295/45R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "235/70R16",
+        "255/70R16",
+        "275/60R17",
+        "265/70R17",
+        "295/45R18",
+        "275/45R20"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "tireSize": "275/45R20",
+      "wheelDiameter": 20,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "LT245/75R16",
+        "235/70R16",
+        "255/70R16",
+        "275/60R17",
+        "265/70R17",
+        "295/45R18",
+        "275/45R20"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "mustang",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": true,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "225/55R16",
+        "245/45R17"
+      ],
+      "existingUsafSizes": [
+        "245/45R17",
+        "225/55R16",
+        "205/65R15",
+        "225/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "accord",
+      "tireSize": "195/70R14",
+      "wheelDiameter": 14,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 14\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 14\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "195/70R14",
+        "205/60R16",
+        "195/65R15",
+        "205/65R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "elantra",
+      "tireSize": "195/60R14",
+      "wheelDiameter": 14,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 14\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 14\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "195/60R15"
+      ],
+      "existingUsafSizes": [
+        "195/60R14"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "tiburon",
+      "tireSize": "195/60R14",
+      "wheelDiameter": 14,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 14\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 14\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "195/55R15"
+      ],
+      "existingUsafSizes": [
+        "195/60R14",
+        "195/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "tiburon",
+      "tireSize": "195/55R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "195/55R15"
+      ],
+      "existingUsafSizes": [
+        "195/60R14",
+        "195/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "wrangler",
+      "tireSize": "30x9.50R15",
+      "wheelDiameter": 15,
+      "confidence": 75,
+      "reasons": [
+        "Uses existing 15\" wheel diameter"
+      ],
+      "autoReject": [
+        "Flotation tire format requires manual review"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ],
+      "existingUsafSizes": [
+        "205/75R15",
+        "225/75R15",
+        "215/75R15",
+        "225/70R15",
+        "30x9.50R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "continental",
+      "tireSize": "225/60R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/45R19"
+      ],
+      "existingUsafSizes": [
+        "225/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "ls",
+      "tireSize": "235/50R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "225/55R17",
+        "235/50R18"
+      ],
+      "existingUsafSizes": [
+        "235/50R17",
+        "215/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "ls",
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "225/55R17",
+        "235/50R18"
+      ],
+      "existingUsafSizes": [
+        "235/50R17",
+        "215/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "navigator",
+      "tireSize": "275/60R17",
+      "wheelDiameter": 17,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "215/60R16"
+      ],
+      "existingUsafSizes": [
+        "275/60R17",
+        "255/75R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "navigator",
+      "tireSize": "255/75R17",
+      "wheelDiameter": 17,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "215/60R16"
+      ],
+      "existingUsafSizes": [
+        "275/60R17",
+        "255/75R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "cougar",
+      "tireSize": "215/50R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "215/65R15",
+        "225/55R16",
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/50R16",
+        "205/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "cougar",
+      "tireSize": "205/60R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "215/65R15",
+        "225/55R16",
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/50R16",
+        "205/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "mountaineer",
+      "tireSize": "225/70R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "235/70R16",
+        "235/65R17",
+        "245/60R18"
+      ],
+      "existingUsafSizes": [
+        "225/70R15",
+        "235/75R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "mountaineer",
+      "tireSize": "235/75R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "235/70R16",
+        "235/65R17",
+        "245/60R18"
+      ],
+      "existingUsafSizes": [
+        "225/70R15",
+        "235/75R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "diamante",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "215/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "diamante",
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "215/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "eclipse",
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "215/60R16",
+        "215/50R17",
+        "225/50R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "215/50R17",
+        "195/65R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "galant",
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "205/65R15",
+        "215/55R16",
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "galant",
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "205/65R15",
+        "215/55R16",
+        "215/50R17"
+      ],
+      "existingUsafSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "mirage",
+      "tireSize": "175/65R14",
+      "wheelDiameter": 14,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 14\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15
+      ],
+      "existingWtdSizes": [
+        "165/65R14",
+        "175/55R15"
+      ],
+      "existingUsafSizes": [
+        "175/65R14",
+        "175/70R13",
+        "185/65R14"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "mirage",
+      "tireSize": "175/70R13",
+      "wheelDiameter": 13,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 13\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 13\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15
+      ],
+      "existingWtdSizes": [
+        "165/65R14",
+        "175/55R15"
+      ],
+      "existingUsafSizes": [
+        "175/65R14",
+        "175/70R13",
+        "185/65R14"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "mirage",
+      "tireSize": "185/65R14",
+      "wheelDiameter": 14,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 14\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15
+      ],
+      "existingWtdSizes": [
+        "165/65R14",
+        "175/55R15"
+      ],
+      "existingUsafSizes": [
+        "175/65R14",
+        "175/70R13",
+        "185/65R14"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "montero",
+      "tireSize": "265/70R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        20
+      ],
+      "existingWtdSizes": [
+        "265/70R16",
+        "275/55R20"
+      ],
+      "existingUsafSizes": [
+        "265/70R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "maxima",
+      "tireSize": "225/50R17",
+      "wheelDiameter": 17,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/55R16"
+      ],
+      "existingUsafSizes": [
+        "215/55R16",
+        "205/65R15",
+        "225/50R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "quest",
+      "tireSize": "215/65R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "225/65R16",
+        "225/60R17",
+        "235/55R18"
+      ],
+      "existingUsafSizes": [
+        "215/65R16",
+        "225/60R16",
+        "215/70R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "quest",
+      "tireSize": "225/60R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "225/65R16",
+        "225/60R17",
+        "235/55R18"
+      ],
+      "existingUsafSizes": [
+        "215/65R16",
+        "225/60R16",
+        "215/70R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "quest",
+      "tireSize": "215/70R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "225/65R16",
+        "225/60R17",
+        "235/55R18"
+      ],
+      "existingUsafSizes": [
+        "215/65R16",
+        "225/60R16",
+        "215/70R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Oldsmobile",
+      "model": "bravada",
+      "tireSize": "235/70R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R16"
+      ],
+      "existingUsafSizes": [
+        "235/70R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Plymouth",
+      "model": "voyager",
+      "tireSize": "205/75R14",
+      "wheelDiameter": 14,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 14\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 14\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "205/70R15",
+        "215/65R16",
+        "215/70R15"
+      ],
+      "existingUsafSizes": [
+        "205/75R14",
+        "215/65R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Plymouth",
+      "model": "voyager",
+      "tireSize": "215/65R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "205/70R15",
+        "215/65R16",
+        "215/70R15"
+      ],
+      "existingUsafSizes": [
+        "205/75R14",
+        "215/65R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "firebird",
+      "tireSize": "275/40R17",
+      "wheelDiameter": 17,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "235/55R16",
+        "245/50R16"
+      ],
+      "existingUsafSizes": [
+        "215/60R16",
+        "245/50R16",
+        "275/40R17",
+        "235/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "911",
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "235/40R19",
+        "295/35R19"
+      ],
+      "existingUsafSizes": [
+        "225/40R18",
+        "265/35R18",
+        "205/50R17",
+        "255/40R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "911",
+      "tireSize": "265/35R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "235/40R19",
+        "295/35R19"
+      ],
+      "existingUsafSizes": [
+        "225/40R18",
+        "265/35R18",
+        "205/50R17",
+        "255/40R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "911",
+      "tireSize": "205/50R17",
+      "wheelDiameter": 17,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "235/40R19",
+        "295/35R19"
+      ],
+      "existingUsafSizes": [
+        "225/40R18",
+        "265/35R18",
+        "205/50R17",
+        "255/40R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "911",
+      "tireSize": "255/40R17",
+      "wheelDiameter": 17,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 17\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 17\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "235/40R19",
+        "295/35R19"
+      ],
+      "existingUsafSizes": [
+        "225/40R18",
+        "265/35R18",
+        "205/50R17",
+        "255/40R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "boxster",
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/45R17",
+        "255/40R17",
+        "235/40R18",
+        "265/40R18",
+        "235/35R19",
+        "265/35R19"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "225/50R16",
+        "205/50R17",
+        "255/40R17",
+        "225/40R18",
+        "265/35R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "boxster",
+      "tireSize": "225/50R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config",
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/45R17",
+        "255/40R17",
+        "235/40R18",
+        "265/40R18",
+        "235/35R19",
+        "265/35R19"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "225/50R16",
+        "205/50R17",
+        "255/40R17",
+        "225/40R18",
+        "265/35R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "boxster",
+      "tireSize": "205/50R17",
+      "wheelDiameter": 17,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/45R17",
+        "255/40R17",
+        "235/40R18",
+        "265/40R18",
+        "235/35R19",
+        "265/35R19"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "225/50R16",
+        "205/50R17",
+        "255/40R17",
+        "225/40R18",
+        "265/35R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "boxster",
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/45R17",
+        "255/40R17",
+        "235/40R18",
+        "265/40R18",
+        "235/35R19",
+        "265/35R19"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "225/50R16",
+        "205/50R17",
+        "255/40R17",
+        "225/40R18",
+        "265/35R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "boxster",
+      "tireSize": "265/35R18",
+      "wheelDiameter": 18,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "Staggered vehicle - unclear axle assignment"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": true,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": true
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/45R17",
+        "255/40R17",
+        "235/40R18",
+        "265/40R18",
+        "235/35R19",
+        "265/35R19"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "225/50R16",
+        "205/50R17",
+        "255/40R17",
+        "225/40R18",
+        "265/35R18"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-3",
+      "tireSize": "195/60R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/45R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "impreza",
+      "tireSize": "195/60R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "205/50R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "205/55R16",
+        "205/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "impreza",
+      "tireSize": "205/60R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "205/50R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "205/55R16",
+        "205/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "legacy",
+      "tireSize": "195/60R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "215/45R17"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "205/55R16",
+        "205/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "legacy",
+      "tireSize": "205/60R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "215/45R17"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "205/55R16",
+        "205/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "outback",
+      "tireSize": "225/60R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "215/60R16",
+        "225/55R17"
+      ],
+      "existingUsafSizes": [
+        "225/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "4runner",
+      "tireSize": "225/75R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "225/75R15",
+        "265/70R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "avalon",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "215/55R17"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "205/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "avalon",
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "215/55R17"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "205/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "camry",
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "205/65R15"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "205/60R16",
+        "195/70R14"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "camry",
+      "tireSize": "195/70R14",
+      "wheelDiameter": 14,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 14\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 14\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "205/65R15"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "205/60R16",
+        "195/70R14"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "celica",
+      "tireSize": "205/55R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "195/65R15"
+      ],
+      "existingUsafSizes": [
+        "205/55R15",
+        "205/50R16",
+        "195/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "celica",
+      "tireSize": "205/50R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "195/65R15"
+      ],
+      "existingUsafSizes": [
+        "205/55R15",
+        "205/50R16",
+        "195/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "celica",
+      "tireSize": "195/60R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "195/65R15"
+      ],
+      "existingUsafSizes": [
+        "205/55R15",
+        "205/50R16",
+        "195/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "echo",
+      "tireSize": "175/65R14",
+      "wheelDiameter": 14,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 14\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14
+      ],
+      "existingWtdSizes": [
+        "185/65R14"
+      ],
+      "existingUsafSizes": [
+        "175/65R14"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "solara",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "215/60R16"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "205/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "solara",
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "215/60R16"
+      ],
+      "existingUsafSizes": [
+        "205/65R15",
+        "205/60R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "tacoma",
+      "tireSize": "215/70R14",
+      "wheelDiameter": 14,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 14\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 14\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "225/75R15",
+        "265/75R15"
+      ],
+      "existingUsafSizes": [
+        "265/75R15",
+        "215/70R14",
+        "195/75R14",
+        "225/75R15",
+        "31x10.50R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "tacoma",
+      "tireSize": "195/75R14",
+      "wheelDiameter": 14,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 14\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 14\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "225/75R15",
+        "265/75R15"
+      ],
+      "existingUsafSizes": [
+        "265/75R15",
+        "215/70R14",
+        "195/75R14",
+        "225/75R15",
+        "31x10.50R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "tacoma",
+      "tireSize": "31x10.50R15",
+      "wheelDiameter": 15,
+      "confidence": 75,
+      "reasons": [
+        "Uses existing 15\" wheel diameter"
+      ],
+      "autoReject": [
+        "Flotation tire format requires manual review"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "225/75R15",
+        "265/75R15"
+      ],
+      "existingUsafSizes": [
+        "265/75R15",
+        "215/70R14",
+        "195/75R14",
+        "225/75R15",
+        "31x10.50R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Volkswagen",
+      "model": "eurovan",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "185/65R14"
+      ],
+      "existingUsafSizes": [
+        "205/65R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "s40",
+      "tireSize": "195/60R15",
+      "wheelDiameter": 15,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "195/60R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "s70",
+      "tireSize": "195/60R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "195/60R15",
+        "195/65R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "s70",
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 15\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 15\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "195/60R15",
+        "195/65R15"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "s80",
+      "tireSize": "215/55R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "225/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/55R16",
+        "225/50R17",
+        "225/55R16"
+      ],
+      "category": "manual_review"
+    },
+    {
+      "year": 2000,
+      "make": "Volvo",
+      "model": "s80",
+      "tireSize": "225/55R16",
+      "wheelDiameter": 16,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 16\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 16\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17
+      ],
+      "existingWtdSizes": [
+        "225/50R17"
+      ],
+      "existingUsafSizes": [
+        "215/55R16",
+        "225/50R17",
+        "225/55R16"
+      ],
+      "category": "manual_review"
+    }
+  ],
+  "errors": [],
+  "topProposedFixes": [
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "X5",
+      "tireSize": "285/45R19",
+      "wheelDiameter": 19,
+      "confidence": 100,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "3 common sizes (good alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "255/55R18",
+        "255/50R19",
+        "275/40R20"
+      ],
+      "existingUsafSizes": [
+        "235/65R17",
+        "255/55R18",
+        "255/50R19",
+        "285/45R19"
+      ],
+      "category": "safe_auto_fix"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "ranger",
+      "tireSize": "215/75R15",
+      "wheelDiameter": 15,
+      "confidence": 100,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "3 common sizes (good alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "225/70R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "existingUsafSizes": [
+        "225/70R15",
+        "215/75R15",
+        "245/75R16",
+        "235/75R15"
+      ],
+      "category": "safe_auto_fix"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "a4",
+      "tireSize": "205/60R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "195/65R15",
+        "225/45R17"
+      ],
+      "existingUsafSizes": [
+        "205/60R15",
+        "205/55R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Buick",
+      "model": "lesabre",
+      "tireSize": "215/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "225/60R16",
+        "235/55R17"
+      ],
+      "existingUsafSizes": [
+        "225/60R16",
+        "215/70R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "blazer",
+      "tireSize": "235/75R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "235/65R16",
+        "215/70R16"
+      ],
+      "existingUsafSizes": [
+        "235/70R15",
+        "31x10.50R15",
+        "235/75R15",
+        "205/75R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "blazer",
+      "tireSize": "205/75R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "235/65R16",
+        "215/70R16"
+      ],
+      "existingUsafSizes": [
+        "235/70R15",
+        "31x10.50R15",
+        "235/75R15",
+        "205/75R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "tahoe",
+      "tireSize": "265/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "265/70R17",
+        "245/75R16",
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "245/75R16",
+        "265/70R16",
+        "265/75R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Town & Country",
+      "tireSize": "215/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "215/65R15",
+        "215/65R16",
+        "225/60R16",
+        "225/55R17"
+      ],
+      "existingUsafSizes": [
+        "215/70R15",
+        "215/65R15",
+        "215/65R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "durango",
+      "tireSize": "275/60R17",
+      "wheelDiameter": 17,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "235/75R15",
+        "245/70R16",
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "235/75R15",
+        "31x10.50R15",
+        "275/60R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "expedition",
+      "tireSize": "275/60R17",
+      "wheelDiameter": 17,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "255/70R16",
+        "265/70R16",
+        "255/65R17",
+        "265/70R17"
+      ],
+      "existingUsafSizes": [
+        "255/70R16",
+        "275/60R17",
+        "265/70R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "explorer",
+      "tireSize": "225/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/75R15",
+        "255/70R16",
+        "245/70R16"
+      ],
+      "existingUsafSizes": [
+        "225/70R15",
+        "255/70R16",
+        "235/75R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "yukon",
+      "tireSize": "265/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        20
+      ],
+      "existingWtdSizes": [
+        "265/70R17",
+        "245/75R16",
+        "265/70R16",
+        "265/65R17",
+        "275/55R20"
+      ],
+      "existingUsafSizes": [
+        "245/75R16",
+        "265/70R16",
+        "265/75R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "accord",
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "195/70R14",
+        "205/60R16",
+        "195/65R15",
+        "205/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "accord",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "195/65R15",
+        "205/55R16"
+      ],
+      "existingUsafSizes": [
+        "195/70R14",
+        "205/60R16",
+        "195/65R15",
+        "205/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "civic",
+      "tireSize": "185/70R14",
+      "wheelDiameter": 14,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 14\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15
+      ],
+      "existingWtdSizes": [
+        "185/65R14",
+        "195/55R15",
+        "195/60R15"
+      ],
+      "existingUsafSizes": [
+        "185/65R14",
+        "195/55R15",
+        "185/70R14"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "passport",
+      "tireSize": "225/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "245/70R16"
+      ],
+      "existingUsafSizes": [
+        "245/70R16",
+        "225/75R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Isuzu",
+      "model": "rodeo",
+      "tireSize": "225/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "245/70R16",
+        "255/65R17"
+      ],
+      "existingUsafSizes": [
+        "225/75R16",
+        "245/70R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "tireSize": "225/75R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "245/65R17",
+        "245/70R16"
+      ],
+      "existingUsafSizes": [
+        "225/75R16",
+        "245/70R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "wrangler",
+      "tireSize": "205/75R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ],
+      "existingUsafSizes": [
+        "205/75R15",
+        "225/75R15",
+        "215/75R15",
+        "225/70R15",
+        "30x9.50R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "wrangler",
+      "tireSize": "225/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/75R15",
+        "225/75R15",
+        "30x9.5R15",
+        "225/75R16",
+        "245/75R16",
+        "LT245/75R16"
+      ],
+      "existingUsafSizes": [
+        "205/75R15",
+        "225/75R15",
+        "215/75R15",
+        "225/70R15",
+        "30x9.50R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "eclipse",
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "215/60R16",
+        "215/50R17",
+        "225/50R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "205/55R16",
+        "215/50R17",
+        "195/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "maxima",
+      "tireSize": "205/65R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/55R16"
+      ],
+      "existingUsafSizes": [
+        "215/55R16",
+        "205/65R15",
+        "225/50R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "tireSize": "245/70R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "255/65R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "255/65R16",
+        "245/70R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "sentra",
+      "tireSize": "195/55R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "185/65R14",
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "195/55R16",
+        "185/65R14"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "xterra",
+      "tireSize": "265/70R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "235/70R15",
+        "265/70R16"
+      ],
+      "existingUsafSizes": [
+        "265/70R15",
+        "235/70R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Oldsmobile",
+      "model": "alero",
+      "tireSize": "225/50R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15,
+        16
+      ],
+      "existingWtdSizes": [
+        "215/60R15",
+        "215/55R16"
+      ],
+      "existingUsafSizes": [
+        "215/60R15",
+        "225/50R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "firebird",
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "235/55R16",
+        "245/50R16"
+      ],
+      "existingUsafSizes": [
+        "215/60R16",
+        "245/50R16",
+        "275/40R17",
+        "235/55R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-3",
+      "tireSize": "205/50R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/45R17",
+        "225/40R18"
+      ],
+      "existingUsafSizes": [
+        "195/60R15",
+        "205/50R16",
+        "215/45R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-5",
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17,
+        18
+      ],
+      "existingWtdSizes": [
+        "215/55R16",
+        "225/50R17",
+        "235/45R18"
+      ],
+      "existingUsafSizes": [
+        "215/55R16",
+        "225/45R17"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "MR2 Spyder",
+      "tireSize": "205/50R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "185/55R15"
+      ],
+      "existingUsafSizes": [
+        "185/55R15",
+        "205/50R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "corolla",
+      "tireSize": "175/65R14",
+      "wheelDiameter": 14,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 14\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        14
+      ],
+      "existingWtdSizes": [
+        "185/65R14"
+      ],
+      "existingUsafSizes": [
+        "185/65R14",
+        "175/65R14"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "rav4",
+      "tireSize": "195/80R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "215/70R16",
+        "235/60R16"
+      ],
+      "existingUsafSizes": [
+        "215/70R16",
+        "235/60R16",
+        "195/80R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "sienna",
+      "tireSize": "215/65R15",
+      "wheelDiameter": 15,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 15\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        15
+      ],
+      "existingWtdSizes": [
+        "205/70R15"
+      ],
+      "existingUsafSizes": [
+        "205/70R15",
+        "215/65R15"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "tundra",
+      "tireSize": "245/70R16",
+      "wheelDiameter": 16,
+      "confidence": 85,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16,
+        17
+      ],
+      "existingWtdSizes": [
+        "265/70R16",
+        "265/65R17"
+      ],
+      "existingUsafSizes": [
+        "245/70R16",
+        "265/70R16"
+      ],
+      "category": "legacy_fallback"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-250 Econoline",
+      "tireSize": "LT245/75R16",
+      "wheelDiameter": 16,
+      "confidence": 80,
+      "reasons": [
+        "Uses existing 16\" wheel diameter",
+        "LT format (light truck)"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        16
+      ],
+      "existingWtdSizes": [
+        "LT225/75R16"
+      ],
+      "existingUsafSizes": [
+        "LT225/75R16",
+        "LT245/75R16"
+      ],
+      "category": "legacy_fallback"
+    }
+  ]
+}

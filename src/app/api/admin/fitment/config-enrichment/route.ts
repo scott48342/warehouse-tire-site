@@ -572,7 +572,7 @@ export async function POST(req: NextRequest) {
       candidates.includes(c.tireSize) && !c.autoRejectReason
     );
     
-    const invalidCandidates = candidates.filter(c => 
+    const invalidCandidates = candidates.filter((c: string) => 
       !validCandidates.some(v => v.tireSize === c)
     );
     

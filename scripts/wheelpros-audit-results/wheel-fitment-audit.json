@@ -1,0 +1,850 @@
+{
+  "auditDate": "2026-05-13T14:48:21.568Z",
+  "summary": {
+    "total": 6,
+    "goodMatch": 6,
+    "minorDifferences": 0,
+    "significantMismatch": 0,
+    "insufficientData": 0
+  },
+  "assessment": {
+    "conclusion": "WheelPros API provides HIGHLY COMPATIBLE fitment data",
+    "canReplaceWTD": true,
+    "recommendations": [
+      "WheelPros can serve as primary fitment data source for wheels",
+      "Use WheelPros bolt patterns as authoritative source",
+      "WheelPros provides comprehensive offset ranges (includes aftermarket options)",
+      "WheelPros centerbore data is reliable for hub-centric verification",
+      "Consider enriching WTD with WheelPros offset/width ranges"
+    ],
+    "keyFindings": [
+      "Bolt pattern match rate: 6/6 vehicles",
+      "Center bore match rate: 6/6 vehicles",
+      "WheelPros centerbore data available: 6/6 vehicles",
+      "WheelPros offset data available: 6/6 vehicles"
+    ]
+  },
+  "rawSample": {
+    "vehicle": "2024 Ford F-150",
+    "searchedBoltPattern": "6x135",
+    "sampleWheels": [
+      {
+        "sku": "XD13821067718N",
+        "brand": "XD",
+        "title": "XD138 20X10 6X135/5.5 S-BLK -18MM",
+        "model": "",
+        "offset": "-18.0",
+        "boltPattern": "6X135/6X139.7",
+        "finishCode": "BLACK",
+        "finish": "SATIN BLACK",
+        "width": "10.00",
+        "diameter": "20.0",
+        "centerbore": "106.10",
+        "msrp": "354.00"
+      },
+      {
+        "sku": "AB045AD24106D30",
+        "brand": "Asanti Black",
+        "title": "ARISTOCRAT 24X10 6X135/5.5 +30 PLT-MCH",
+        "model": "AB045 ARISTOCRAT",
+        "offset": "30.0",
+        "boltPattern": "6X135/6X139.7",
+        "finishCode": "SILVER",
+        "finish": "GLOSS PLATINUM W/ BRIGHT MACHINED FACE",
+        "width": "10.00",
+        "diameter": "24.0",
+        "centerbore": "87.10",
+        "msrp": "744.00"
+      },
+      {
+        "sku": "AB045BT24106D30",
+        "brand": "Asanti Black",
+        "title": "ARISTOCRAT 24X10 6X135/5.5 +30 GBLK-MCH",
+        "model": "AB045 ARISTOCRAT",
+        "offset": "30.0",
+        "boltPattern": "6X135/6X139.7",
+        "finishCode": "BLACK",
+        "finish": "GLOSS BLACK MACHINED FC W/ DDT",
+        "width": "10.00",
+        "diameter": "24.0",
+        "centerbore": "87.10",
+        "msrp": "744.00"
+      }
+    ],
+    "facets": {
+      "boltPatterns": [
+        {
+          "value": "6X135",
+          "count": 4413
+        },
+        {
+          "value": "6X135/6X139.7",
+          "count": 1841
+        },
+        {
+          "value": "6X127/6X135",
+          "count": 6
+        }
+      ],
+      "centerbores": [
+        {
+          "value": "87.10",
+          "count": 4041
+        },
+        {
+          "value": "106.10",
+          "count": 1638
+        },
+        {
+          "value": "87.00",
+          "count": 403
+        },
+        {
+          "value": "100.30",
+          "count": 128
+        },
+        {
+          "value": "999.00",
+          "count": 11
+        },
+        {
+          "value": "106.25",
+          "count": 10
+        },
+        {
+          "value": "108.00",
+          "count": 8
+        },
+        {
+          "value": "95.10",
+          "count": 8
+        },
+        {
+          "value": "72.60",
+          "count": 6
+        },
+        {
+          "value": "100.50",
+          "count": 2
+        }
+      ],
+      "diameters": [
+        {
+          "value": "20.0",
+          "count": 1866
+        },
+        {
+          "value": "17.0",
+          "count": 1030
+        },
+        {
+          "value": "22.0",
+          "count": 905
+        },
+        {
+          "value": "18.0",
+          "count": 669
+        },
+        {
+          "value": "24.0",
+          "count": 369
+        },
+        {
+          "value": "26.0",
+          "count": 167
+        }
+      ],
+      "widths": [
+        {
+          "value": "9.00",
+          "count": 2632
+        },
+        {
+          "value": "10.00",
+          "count": 1382
+        },
+        {
+          "value": "12.00",
+          "count": 655
+        },
+        {
+          "value": "8.50",
+          "count": 595
+        },
+        {
+          "value": "9.50",
+          "count": 536
+        },
+        {
+          "value": "14.00",
+          "count": 233
+        },
+        {
+          "value": "8.00",
+          "count": 108
+        },
+        {
+          "value": "11.00",
+          "count": 78
+        },
+        {
+          "value": "16.00",
+          "count": 37
+        },
+        {
+          "value": "10.50",
+          "count": 3
+        }
+      ],
+      "offsets": [
+        {
+          "value": "1.0",
+          "count": 707
+        },
+        {
+          "value": "0.0",
+          "count": 703
+        },
+        {
+          "value": "-18.0",
+          "count": 683
+        },
+        {
+          "value": "30.0",
+          "count": 540
+        },
+        {
+          "value": "20.0",
+          "count": 412
+        },
+        {
+          "value": "-12.0",
+          "count": 410
+        },
+        {
+          "value": "18.0",
+          "count": 385
+        },
+        {
+          "value": "-44.0",
+          "count": 377
+        },
+        {
+          "value": "12.0",
+          "count": 375
+        },
+        {
+          "value": "25.0",
+          "count": 199
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "vehicle": "2024 Ford F-150",
+      "searchedBoltPattern": "6x135",
+      "overallAssessment": "✅ Good Match",
+      "wheelProsTotalWheels": 6260,
+      "wheelProsApiMs": 1630,
+      "wheelProsError": null,
+      "wheelProsSpecs": {
+        "boltPatterns": [
+          "6X127/6X135",
+          "6X135",
+          "6X135/6X139.7"
+        ],
+        "centerbores": [
+          72.6,
+          78.3,
+          87,
+          87.1,
+          95.1,
+          100.3,
+          100.5,
+          106.1,
+          106.25,
+          108
+        ],
+        "diameters": [
+          17,
+          18,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12,
+          14,
+          16
+        ],
+        "offsetRange": {
+          "min": -44,
+          "max": 40
+        }
+      },
+      "wtdSpecs": {
+        "modificationId": "ford-f-150-lightning-1955c114",
+        "displayTrim": "Lightning",
+        "boltPattern": "6x135",
+        "centerBoreMm": 87.1,
+        "offsetRange": {
+          "min": 25,
+          "max": 46
+        },
+        "oemWheelSizes": [
+          {
+            "diameter": 17,
+            "width": 7.5,
+            "offset": null
+          }
+        ],
+        "oemTireSizes": [
+          "265/70R17"
+        ]
+      },
+      "comparison": {
+        "boltPattern": {
+          "status": "match",
+          "detail": "WTD (6x135) found in WheelPros: 6X127/6X135, 6X135, 6X135/6X139.7"
+        },
+        "centerBore": {
+          "status": "match",
+          "detail": "Both have: 87.1mm"
+        },
+        "offsetRange": {
+          "status": "overlap",
+          "detail": "Partial overlap: WTD (25 to 46mm), WheelPros (-44 to 40mm)"
+        },
+        "diameter": {
+          "status": "match",
+          "detail": "All WTD diameters (17\") in WheelPros"
+        },
+        "width": {
+          "status": "mismatch",
+          "detail": "WTD: 7.5\" vs WheelPros: 8, 8.5, 9, 9.5, 10, 10.5, 11, 12, 14, 16\""
+        }
+      }
+    },
+    {
+      "vehicle": "2024 Chevrolet Corvette",
+      "searchedBoltPattern": "5x120",
+      "overallAssessment": "✅ Good Match",
+      "wheelProsTotalWheels": 5101,
+      "wheelProsApiMs": 1081,
+      "wheelProsError": null,
+      "wheelProsSpecs": {
+        "boltPatterns": [
+          "5X100/5X120",
+          "5X105/5X120",
+          "5X108/5X120",
+          "5X112/5X120",
+          "5X114.3/5X120",
+          "5X115/5X120",
+          "5X120",
+          "5X120/5X127",
+          "5X120/5X130"
+        ],
+        "centerbores": [
+          64.15,
+          65.07,
+          66.9,
+          67.06,
+          70.7,
+          72.56,
+          72.6,
+          74.1,
+          76.1
+        ],
+        "diameters": [
+          17,
+          18,
+          19,
+          20,
+          22
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ],
+        "offsetRange": {
+          "min": 15,
+          "max": 45
+        }
+      },
+      "wtdSpecs": {
+        "modificationId": "manual_2269e84542bb",
+        "displayTrim": "Base",
+        "boltPattern": "5x120",
+        "centerBoreMm": 66.9,
+        "offsetRange": {
+          "min": 30,
+          "max": 55
+        },
+        "oemWheelSizes": [
+          {
+            "diameter": 19,
+            "width": 9,
+            "offset": null
+          },
+          {
+            "diameter": 21,
+            "width": 13.5,
+            "offset": null
+          }
+        ],
+        "oemTireSizes": [
+          "P245/35ZR19",
+          "P345/25ZR21"
+        ]
+      },
+      "comparison": {
+        "boltPattern": {
+          "status": "match",
+          "detail": "WTD (5x120) found in WheelPros: 5X100/5X120, 5X105/5X120, 5X108/5X120, 5X112/5X120, 5X114.3/5X120, 5X115/5X120, 5X120, 5X120/5X127, 5X120/5X130"
+        },
+        "centerBore": {
+          "status": "match",
+          "detail": "Both have: 66.9mm"
+        },
+        "offsetRange": {
+          "status": "overlap",
+          "detail": "Partial overlap: WTD (30 to 55mm), WheelPros (15 to 45mm)"
+        },
+        "diameter": {
+          "status": "partial",
+          "detail": "Overlap: 19\". WTD-only: 21"
+        },
+        "width": {
+          "status": "partial",
+          "detail": "Overlap: 9\". WTD-only: 13.5"
+        }
+      }
+    },
+    {
+      "vehicle": "2024 BMW M3",
+      "searchedBoltPattern": "5x112",
+      "overallAssessment": "✅ Good Match",
+      "wheelProsTotalWheels": 5348,
+      "wheelProsApiMs": 1062,
+      "wheelProsError": null,
+      "wheelProsSpecs": {
+        "boltPatterns": [
+          "5X100/5X112",
+          "5X108/5X112",
+          "5X112",
+          "5X112/5X114.3",
+          "5X112/5X120",
+          "5X112/5X127"
+        ],
+        "centerbores": [
+          57.1,
+          66.5,
+          66.56,
+          66.6,
+          72.1,
+          72.56,
+          72.6,
+          74.1
+        ],
+        "diameters": [
+          17,
+          18,
+          19,
+          20,
+          22
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ],
+        "offsetRange": {
+          "min": 0,
+          "max": 50
+        }
+      },
+      "wtdSpecs": {
+        "modificationId": "bmw-m3-m3-competition-aed51cc0",
+        "displayTrim": "M3 Competition",
+        "boltPattern": "5x112",
+        "centerBoreMm": 66.6,
+        "offsetRange": {
+          "min": 21,
+          "max": 52
+        },
+        "oemWheelSizes": [
+          {
+            "diameter": 19,
+            "width": 9.5
+          },
+          {
+            "diameter": 19,
+            "width": 10.5
+          }
+        ],
+        "oemTireSizes": [
+          "255/35R19",
+          "275/35R19"
+        ]
+      },
+      "comparison": {
+        "boltPattern": {
+          "status": "match",
+          "detail": "WTD (5x112) found in WheelPros: 5X100/5X112, 5X108/5X112, 5X112, 5X112/5X114.3, 5X112/5X120, 5X112/5X127"
+        },
+        "centerBore": {
+          "status": "match",
+          "detail": "Both have: 66.6mm"
+        },
+        "offsetRange": {
+          "status": "overlap",
+          "detail": "Partial overlap: WTD (21 to 52mm), WheelPros (0 to 50mm)"
+        },
+        "diameter": {
+          "status": "match",
+          "detail": "All WTD diameters (19, 19\") in WheelPros"
+        },
+        "width": {
+          "status": "match",
+          "detail": "All WTD widths (9.5, 10.5\") in WheelPros"
+        }
+      }
+    },
+    {
+      "vehicle": "2024 Ram 3500",
+      "searchedBoltPattern": "8x165.1",
+      "overallAssessment": "✅ Good Match",
+      "wheelProsTotalWheels": 4478,
+      "wheelProsApiMs": 739,
+      "wheelProsError": null,
+      "wheelProsSpecs": {
+        "boltPatterns": [
+          "8X165.1"
+        ],
+        "centerbores": [
+          78.3,
+          117,
+          121.5,
+          122,
+          122.4,
+          125,
+          125.1,
+          125.2,
+          130.81
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          8,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          11,
+          12,
+          14,
+          16
+        ],
+        "offsetRange": {
+          "min": -90,
+          "max": 20
+        }
+      },
+      "wtdSpecs": {
+        "modificationId": "manual_097c14922f1e",
+        "displayTrim": "Laramie",
+        "boltPattern": "8x165.1",
+        "centerBoreMm": 121.3,
+        "offsetRange": {
+          "min": 35,
+          "max": 60
+        },
+        "oemWheelSizes": [
+          {
+            "diameter": 17,
+            "width": 8
+          }
+        ],
+        "oemTireSizes": [
+          "LT245/70R17"
+        ]
+      },
+      "comparison": {
+        "boltPattern": {
+          "status": "match",
+          "detail": "WTD (8x165.1) found in WheelPros: 8X165.1"
+        },
+        "centerBore": {
+          "status": "close",
+          "detail": "WTD: 121.3mm, WheelPros closest: 121.5mm (within 1mm)"
+        },
+        "offsetRange": {
+          "status": "mismatch",
+          "detail": "No overlap: WTD (35 to 60mm) vs WheelPros (-90 to 20mm)"
+        },
+        "diameter": {
+          "status": "match",
+          "detail": "All WTD diameters (17\") in WheelPros"
+        },
+        "width": {
+          "status": "match",
+          "detail": "All WTD widths (8\") in WheelPros"
+        }
+      }
+    },
+    {
+      "vehicle": "2024 Jeep Wrangler",
+      "searchedBoltPattern": "5x127",
+      "overallAssessment": "✅ Good Match",
+      "wheelProsTotalWheels": 6849,
+      "wheelProsApiMs": 1059,
+      "wheelProsError": null,
+      "wheelProsSpecs": {
+        "boltPatterns": [
+          "5X108/5X127",
+          "5X110/5X127",
+          "5X112/5X127",
+          "5X114.3/5X127",
+          "5X120.65/5X127",
+          "5X120/5X127",
+          "5X127",
+          "5X127/5X135",
+          "5X127/5X139.7"
+        ],
+        "centerbores": [
+          71.5,
+          72.56,
+          72.6,
+          74.1,
+          76.1,
+          78.1,
+          78.3,
+          83.06,
+          87.1
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12,
+          14
+        ],
+        "offsetRange": {
+          "min": -44,
+          "max": 30
+        }
+      },
+      "wtdSpecs": {
+        "modificationId": "e99f18c25e",
+        "displayTrim": "3.6 Pentastar",
+        "boltPattern": "5x127",
+        "centerBoreMm": 71.6,
+        "offsetRange": {
+          "min": 37.17,
+          "max": 44.45
+        },
+        "oemWheelSizes": [
+          {
+            "diameter": 17,
+            "width": 7.5,
+            "offset": 44.45
+          },
+          {
+            "diameter": 17,
+            "width": 7.5,
+            "offset": 44.45
+          },
+          {
+            "diameter": 18,
+            "width": 7.5,
+            "offset": 44.45
+          },
+          {
+            "diameter": 20,
+            "width": 8,
+            "offset": 44.45
+          },
+          {
+            "diameter": 17,
+            "width": 7.5,
+            "offset": 37.17
+          }
+        ],
+        "oemTireSizes": [
+          "245/75R17",
+          "LT255/75R17",
+          "255/70R18",
+          "275/55R20",
+          "LT285/70R17"
+        ]
+      },
+      "comparison": {
+        "boltPattern": {
+          "status": "match",
+          "detail": "WTD (5x127) found in WheelPros: 5X108/5X127, 5X110/5X127, 5X112/5X127, 5X114.3/5X127, 5X120.65/5X127, 5X120/5X127, 5X127, 5X127/5X135, 5X127/5X139.7"
+        },
+        "centerBore": {
+          "status": "match",
+          "detail": "Both have: 71.6mm"
+        },
+        "offsetRange": {
+          "status": "mismatch",
+          "detail": "No overlap: WTD (37.17 to 44.45mm) vs WheelPros (-44 to 30mm)"
+        },
+        "diameter": {
+          "status": "match",
+          "detail": "All WTD diameters (17, 17, 18, 20, 17\") in WheelPros"
+        },
+        "width": {
+          "status": "partial",
+          "detail": "Overlap: 8\". WTD-only: 7.5, 7.5, 7.5, 7.5"
+        }
+      }
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "searchedBoltPattern": "6x139.7",
+      "overallAssessment": "✅ Good Match",
+      "wheelProsTotalWheels": 10000,
+      "wheelProsApiMs": 1028,
+      "wheelProsError": null,
+      "wheelProsSpecs": {
+        "boltPatterns": [
+          "6X114.3/6X139.7",
+          "6X120/6X139.7",
+          "6X127/6X139.7",
+          "6X132/6X139.7",
+          "6X135/6X139.7",
+          "6X139.7"
+        ],
+        "centerbores": [
+          77.8,
+          78.1,
+          87.1,
+          93.1,
+          95,
+          100.3,
+          106,
+          106.1,
+          108,
+          112.1,
+          999
+        ],
+        "diameters": [
+          17,
+          18,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          11,
+          12,
+          14,
+          16
+        ],
+        "offsetRange": {
+          "min": -44,
+          "max": 40
+        }
+      },
+      "wtdSpecs": {
+        "modificationId": "manual_f94ac608beec",
+        "displayTrim": "SR5",
+        "boltPattern": "6x139.7",
+        "centerBoreMm": 106.1,
+        "offsetRange": {
+          "min": -10,
+          "max": 35
+        },
+        "oemWheelSizes": [
+          {
+            "diameter": 17,
+            "width": 7,
+            "offset": null
+          }
+        ],
+        "oemTireSizes": [
+          "245/70R17",
+          "265/65R18",
+          "265/70R17"
+        ]
+      },
+      "comparison": {
+        "boltPattern": {
+          "status": "match",
+          "detail": "WTD (6x139.7) found in WheelPros: 6X114.3/6X139.7, 6X120/6X139.7, 6X127/6X139.7, 6X132/6X139.7, 6X135/6X139.7, 6X139.7"
+        },
+        "centerBore": {
+          "status": "match",
+          "detail": "Both have: 106.1mm"
+        },
+        "offsetRange": {
+          "status": "overlap",
+          "detail": "Partial overlap: WTD (-10 to 35mm), WheelPros (-44 to 40mm)"
+        },
+        "diameter": {
+          "status": "match",
+          "detail": "All WTD diameters (17\") in WheelPros"
+        },
+        "width": {
+          "status": "match",
+          "detail": "All WTD widths (7\") in WheelPros"
+        }
+      }
+    }
+  ]
+}
