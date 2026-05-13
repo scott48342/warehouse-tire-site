@@ -83,10 +83,22 @@ const HD_RICH_PRIORITY: Record<string, string> = {
  * Get all model names to search (input + aliases)
  * Returns array suitable for SQL IN clause or iteration.
  * 
- * @param model - User input model name
+ * IMPORTANT (2026-05-13 fix): DB stores model names in various formats:
+ * - "f-150 lightning" (spaces)
+ * - "Silverado 2500 HD" (title case with spaces)
+ * - "tacoma" (lowercase)
+ * 
+ * The models API returns display names like "F-150 Lightning" which users
+ * then send to trims API. We need to match both the original (with spaces)
+ * and slugified (with hyphens) versions.
+ * 
+ * @param model - User input model name (e.g., "F-150 Lightning")
  * @returns Array of model names to try (prioritized for data richness)
  */
 export function getModelVariants(model: string): string[] {
+  // Preserve the original input (just lowercase) - this matches DB format with spaces
+  const lowercased = model.toLowerCase().trim();
+  
   // Slugify the input (lowercase, hyphens for non-alphanumeric)
   const slugified = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   
@@ -96,13 +108,17 @@ export function getModelVariants(model: string): string[] {
   // Check if this is an HD truck with sparse data - prioritize rich variant
   const richVariant = HD_RICH_PRIORITY[slugified];
   if (richVariant) {
-    // Put rich variant FIRST, then input, then other aliases
+    // Put rich variant FIRST, then original (with spaces), then slugified, then other aliases
     const others = aliases.filter(a => a !== richVariant);
-    return [richVariant, slugified, ...others];
+    const variants = [richVariant, lowercased, slugified, ...others];
+    // Dedupe while preserving order
+    return [...new Set(variants)];
   }
   
-  // Return input first (exact match wins), then aliases
-  return [slugified, ...aliases];
+  // Try original first (with spaces), then slugified, then aliases
+  const variants = [lowercased, slugified, ...aliases];
+  // Dedupe while preserving order
+  return [...new Set(variants)];
 }
 
 /**
