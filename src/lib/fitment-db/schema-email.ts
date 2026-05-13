@@ -66,6 +66,9 @@ export const emailCampaigns = pgTable(
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
     
+    // Test data exclusion
+    isTest: boolean("is_test").notNull().default(false),
+    
     // Site context (national vs local)
     hostname: varchar("hostname", { length: 100 }),
   },
@@ -73,6 +76,7 @@ export const emailCampaigns = pgTable(
     statusIdx: index("email_campaigns_status_idx").on(table.status),
     scheduledIdx: index("email_campaigns_scheduled_idx").on(table.scheduledAt),
     createdIdx: index("email_campaigns_created_idx").on(table.createdAt),
+    isTestIdx: index("email_campaigns_is_test_idx").on(table.isTest),
   })
 );
 
@@ -191,19 +195,31 @@ export const emailSubscribers = pgTable(
     
     // Engagement tracking
     lastEmailAt: timestamp("last_email_at", { withTimezone: true }),
+    lastCampaignSentAt: timestamp("last_campaign_sent_at", { withTimezone: true }),
     lastOpenAt: timestamp("last_open_at", { withTimezone: true }),
     lastClickAt: timestamp("last_click_at", { withTimezone: true }),
     totalEmails: integer("total_emails").default(0),
     totalOpens: integer("total_opens").default(0),
     totalClicks: integer("total_clicks").default(0),
     
+    // Vehicle context (from abandoned cart or signup)
+    vehicleYear: integer("vehicle_year"),
+    vehicleMake: varchar("vehicle_make", { length: 100 }),
+    vehicleModel: varchar("vehicle_model", { length: 200 }),
+    vehicleTrim: varchar("vehicle_trim", { length: 200 }),
+    
     // Unsubscribe tracking
+    unsubscribed: boolean("unsubscribed").default(false),
     unsubscribedAt: timestamp("unsubscribed_at", { withTimezone: true }),
     unsubscribeReason: text("unsubscribe_reason"),
     
     // Metadata
     customFields: json("custom_fields"), // Arbitrary extra data
     tags: json("tags"), // Array of tags
+    
+    // Test data exclusion
+    isTest: boolean("is_test").notNull().default(false),
+    testReason: varchar("test_reason", { length: 100 }),
     
     // Site context
     hostname: varchar("hostname", { length: 100 }),
@@ -216,6 +232,7 @@ export const emailSubscribers = pgTable(
     emailIdx: index("email_subscribers_email_idx").on(table.email),
     statusIdx: index("email_subscribers_status_idx").on(table.status),
     hostnameIdx: index("email_subscribers_hostname_idx").on(table.hostname),
+    isTestIdx: index("email_subscribers_is_test_idx").on(table.isTest),
   })
 );
 
@@ -244,7 +261,7 @@ export const abandonedCarts = pgTable(
     // Cart contents
     items: json("items"), // Cart items JSON
     itemCount: integer("item_count").default(0),
-    totalValue: decimal("total_value", { precision: 10, scale: 2 }),
+    estimatedTotal: decimal("estimated_total", { precision: 10, scale: 2 }),
     
     // Vehicle context
     vehicleYear: integer("vehicle_year"),
@@ -259,11 +276,19 @@ export const abandonedCarts = pgTable(
     recoveredAt: timestamp("recovered_at", { withTimezone: true }),
     recoveredOrderId: varchar("recovered_order_id", { length: 100 }),
     
-    // Email tracking
-    emailSentAt: timestamp("email_sent_at", { withTimezone: true }),
+    // Email tracking (multi-email sequence)
+    emailCount: integer("email_count").default(0),
+    emailSentCount: integer("email_sent_count").default(0),
+    firstEmailSentAt: timestamp("first_email_sent_at", { withTimezone: true }),
+    secondEmailSentAt: timestamp("second_email_sent_at", { withTimezone: true }),
+    thirdEmailSentAt: timestamp("third_email_sent_at", { withTimezone: true }),
+    lastEmailStatus: varchar("last_email_status", { length: 50 }),
     emailOpenedAt: timestamp("email_opened_at", { withTimezone: true }),
     emailClickedAt: timestamp("email_clicked_at", { withTimezone: true }),
-    emailCount: integer("email_count").default(0),
+    emailOpenCount: integer("email_open_count").default(0),
+    emailClickCount: integer("email_click_count").default(0),
+    recoveredAfterEmail: boolean("recovered_after_email").default(false),
+    unsubscribed: boolean("unsubscribed").default(false),
     
     // Test data exclusion
     isTest: boolean("is_test").notNull().default(false),

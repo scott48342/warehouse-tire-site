@@ -269,6 +269,83 @@ export type FitmentOverride = typeof fitmentOverrides.$inferSelect;
 export type NewFitmentOverride = typeof fitmentOverrides.$inferInsert;
 
 // ════════════════════════════════════════════════════════════════════════════════
+// MODIFICATION ALIASES (maps requested modificationId to canonical modificationId)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export const modificationAliases = pgTable(
+  "modification_aliases",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    requestedId: text("requested_id").notNull(),
+    canonicalId: text("canonical_id").notNull(),
+    year: integer("year"),
+    make: varchar("make", { length: 100 }),
+    model: varchar("model", { length: 200 }),
+    source: varchar("source", { length: 100 }),
+    createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
+  },
+  (table) => ({
+    requestedIdx: index("ma_requested_idx").on(table.requestedId),
+    canonicalIdx: index("ma_canonical_idx").on(table.canonicalId),
+  })
+);
+
+export type ModificationAlias = typeof modificationAliases.$inferSelect;
+export type NewModificationAlias = typeof modificationAliases.$inferInsert;
+
+// ════════════════════════════════════════════════════════════════════════════════
+// FITMENT SOURCE RECORDS (tracks where fitment data came from)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export const fitmentSourceRecords = pgTable(
+  "fitment_source_records",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    vehicleFitmentId: uuid("vehicle_fitment_id").references(() => vehicleFitments.id),
+    source: varchar("source", { length: 100 }).notNull(),
+    sourceId: varchar("source_id", { length: 255 }),
+    rawPayload: json("raw_payload"),
+    importedAt: timestamp("imported_at", { mode: "date" }).defaultNow(),
+    checksum: varchar("checksum", { length: 64 }),
+  },
+  (table) => ({
+    fitmentIdx: index("fsr_fitment_idx").on(table.vehicleFitmentId),
+    sourceIdx: index("fsr_source_idx").on(table.source),
+  })
+);
+
+export type FitmentSourceRecord = typeof fitmentSourceRecords.$inferSelect;
+export type NewFitmentSourceRecord = typeof fitmentSourceRecords.$inferInsert;
+
+// ════════════════════════════════════════════════════════════════════════════════
+// FITMENT IMPORT JOBS (tracks bulk import job status)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export const fitmentImportJobs = pgTable(
+  "fitment_import_jobs",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    source: varchar("source", { length: 100 }).notNull(),
+    status: varchar("status", { length: 50 }).notNull().default("pending"), // pending, running, completed, failed
+    totalRecords: integer("total_records").default(0),
+    processedRecords: integer("processed_records").default(0),
+    successCount: integer("success_count").default(0),
+    errorCount: integer("error_count").default(0),
+    errors: json("errors"),
+    startedAt: timestamp("started_at", { mode: "date" }),
+    completedAt: timestamp("completed_at", { mode: "date" }),
+    createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
+  },
+  (table) => ({
+    statusIdx: index("fij_status_idx").on(table.status),
+    sourceIdx: index("fij_source_idx").on(table.source),
+  })
+);
+
+export type FitmentImportJob = typeof fitmentImportJobs.$inferSelect;
+export type NewFitmentImportJob = typeof fitmentImportJobs.$inferInsert;
+
+// ════════════════════════════════════════════════════════════════════════════════
 // EMAIL CAMPAIGN TABLES (re-exported from schema-email.ts)
 // ════════════════════════════════════════════════════════════════════════════════
 
@@ -305,3 +382,38 @@ export {
   type KmImageMapping,
   type NewKmImageMapping,
 } from "./schema-images";
+
+// ════════════════════════════════════════════════════════════════════════════════
+// CATALOG TABLES (re-exported from schema-catalog.ts)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export {
+  catalogMakes,
+  catalogModels,
+  catalogSyncLog,
+  manufacturerRebates,
+  firstOrderDiscounts,
+  competitorPageAnalysis,
+  type CatalogMake,
+  type NewCatalogMake,
+  type CatalogModel,
+  type NewCatalogModel,
+  type CatalogSyncLogEntry,
+  type NewCatalogSyncLogEntry,
+  type ManufacturerRebate,
+  type NewManufacturerRebate,
+  type FirstOrderDiscount,
+  type NewFirstOrderDiscount,
+  type CompetitorPageAnalysis,
+  type NewCompetitorPageAnalysis,
+} from "./schema-catalog";
+
+// ════════════════════════════════════════════════════════════════════════════════
+// CAMPAIGN DISCOUNTS (re-exported from schema-campaign-discounts.ts)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export {
+  campaignDiscounts,
+  type CampaignDiscount,
+  type NewCampaignDiscount,
+} from "./schema-campaign-discounts";
