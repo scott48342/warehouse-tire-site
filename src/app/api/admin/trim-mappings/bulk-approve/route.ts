@@ -105,9 +105,9 @@ async function checkEligibility(): Promise<EligibilityResult> {
       excluded.push({
         id: mapping.id,
         year: mapping.year,
-        make: mapping.make,
-        model: mapping.model,
-        trim: mapping.trim,
+        make: mapping.make || "",
+        model: mapping.model || "",
+        trim: mapping.trim || "",
         reason: exclusionReason,
       });
       byExclusionReason[exclusionReason] = (byExclusionReason[exclusionReason] || 0) + 1;
@@ -115,9 +115,9 @@ async function checkEligibility(): Promise<EligibilityResult> {
       eligible.push({
         id: mapping.id,
         year: mapping.year,
-        make: mapping.make,
-        model: mapping.model,
-        trim: mapping.trim,
+        make: mapping.make || "",
+        model: mapping.model || "",
+        trim: mapping.trim || "",
         diameter: mapping.defaultWheelDiameter,
         confidence: mapping.confidence || "unknown",
       });

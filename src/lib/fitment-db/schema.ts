@@ -185,6 +185,7 @@ export const wheelSizeTrimMappings = pgTable(
     model: varchar("model", { length: 200 }), // alias for code compatibility
     ourDisplayTrim: text("our_display_trim").notNull(),
     ourTrim: text("our_trim"), // alias for code compatibility
+    trim: text("trim"), // alias for code compatibility  
     ourModificationId: text("our_modification_id"),
     vehicleFitmentId: uuid("vehicle_fitment_id"),
     wheelSizeGeneration: varchar("wheel_size_generation", { length: 200 }),
