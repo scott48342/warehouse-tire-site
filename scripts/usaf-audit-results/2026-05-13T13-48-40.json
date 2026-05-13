@@ -1,0 +1,1940 @@
+{
+  "timestamp": "2026-05-13T13:48:25.412Z",
+  "filters": {
+    "sample": "50"
+  },
+  "summary": {
+    "total": 50,
+    "matched": 7,
+    "partial": 20,
+    "wtdOnly": 18,
+    "usafOnly": 5,
+    "errors": 0
+  },
+  "vehicles": [
+    {
+      "year": 1998,
+      "make": "Chevrolet",
+      "model": "Express 2500",
+      "wtd": {
+        "sizes": [
+          "LT225/75R16",
+          "LT245/75R16"
+        ],
+        "trims": [
+          "Cargo/Passenger"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "LT225/75R16",
+          "LT225/75R16"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "LT245/75R16"
+        ],
+        "usafOnly": [],
+        "common": [
+          "LT225/75R16"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2019,
+      "make": "Audi",
+      "model": "s8",
+      "wtd": {
+        "sizes": [
+          "265/45R19",
+          "275/35R21",
+          "285/30R22"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "265/45R19",
+          "275/35R21",
+          "285/30R22"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "i4",
+      "wtd": {
+        "sizes": [
+          "245/45R18"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "245/40R19",
+          "255/40R19",
+          "255/35R20",
+          "285/30R20",
+          "225/50R18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/45R18"
+        ],
+        "usafOnly": [
+          "245/40R19",
+          "255/40R19",
+          "255/35R20",
+          "285/30R20",
+          "225/50R18"
+        ],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2024,
+      "make": "McLaren",
+      "model": "artura",
+      "wtd": {
+        "sizes": [
+          "235/35ZR19",
+          "295/35ZR20"
+        ],
+        "trims": [
+          "Artura/Artura Spider"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "235/35ZR19",
+          "295/35ZR20"
+        ]
+      },
+      "comparison": {
+        "match": true,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": [
+          "235/35ZR19",
+          "295/35ZR20"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2025,
+      "make": "Infiniti",
+      "model": "qx50",
+      "wtd": {
+        "sizes": [
+          "235/55R19",
+          "255/45R20"
+        ],
+        "trims": [
+          "Pure",
+          "Luxe",
+          "Essential",
+          "Sensory",
+          "Autograph",
+          "Pure, Luxe, Essential, Sensory, Autograph"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "P235/55RF19",
+          "P255/45RF20"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/55R19",
+          "255/45R20"
+        ],
+        "usafOnly": [
+          "P235/55RF19",
+          "P255/45RF20"
+        ],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2020,
+      "make": "Cadillac",
+      "model": "ct5-v",
+      "wtd": {
+        "sizes": [
+          "235/40R19"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/40R19"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X6",
+      "wtd": {
+        "sizes": [
+          "255/50R19",
+          "285/45R19",
+          "275/40R20",
+          "315/35R20"
+        ],
+        "trims": [
+          "xDrive35i, xDrive50i",
+          "xDrive35i",
+          "xDrive50i"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "255/50R19",
+          "275/40R20",
+          "315/35R20",
+          "285/35ZR21",
+          "325/30ZR21",
+          "285/40R20",
+          "325/35R20"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "285/45R19"
+        ],
+        "usafOnly": [
+          "285/35ZR21",
+          "325/30ZR21",
+          "285/40R20",
+          "325/35R20"
+        ],
+        "common": [
+          "255/50R19",
+          "275/40R20",
+          "315/35R20"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "e-class-amg",
+      "wtd": {
+        "sizes": [
+          "245/40R18",
+          "255/35R19",
+          "265/35R19",
+          "275/30R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/40R18",
+          "255/35R19",
+          "265/35R19",
+          "275/30R20"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2016,
+      "make": "GMC",
+      "model": "canyon",
+      "wtd": {
+        "sizes": [
+          "255/65R17",
+          "265/60R18",
+          "245/75R16"
+        ],
+        "trims": [
+          "Elevation, AT4, AT4X, Denali",
+          "AT4",
+          "AT4X",
+          "Denali",
+          "Elevation"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "265/60R18",
+          "255/65R17",
+          "265/70R16"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/75R16"
+        ],
+        "usafOnly": [
+          "265/70R16"
+        ],
+        "common": [
+          "255/65R17",
+          "265/60R18"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2014,
+      "make": "Hyundai",
+      "model": "santa-fe-sport",
+      "wtd": {
+        "sizes": [
+          "215/55R17"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "215/55R17"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "ranger",
+      "wtd": {
+        "sizes": [
+          "265/65R17",
+          "265/60R18",
+          "255/70R16"
+        ],
+        "trims": [
+          "2.0 TDCi"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "265/65R17",
+          "265/60R18",
+          "255/70R16"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2019,
+      "make": "Hyundai",
+      "model": "tucson",
+      "wtd": {
+        "sizes": [
+          "225/60R17",
+          "225/55R18",
+          "245/45R19",
+          "225/50R19"
+        ],
+        "trims": [
+          "SE",
+          "Limited",
+          "N Line",
+          "SEL",
+          "XRT",
+          "SE, SEL, XRT, Limited, N Line"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "225/60R17",
+          "245/45R19",
+          "225/55R18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "225/50R19"
+        ],
+        "usafOnly": [],
+        "common": [
+          "225/60R17",
+          "225/55R18",
+          "245/45R19"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "silverado-1500",
+      "wtd": {
+        "sizes": [
+          "275/60R20",
+          "265/65R18",
+          "LT275/65R18",
+          "275/50R22",
+          "255/70R17",
+          "265/70R17",
+          "LT265/70R17"
+        ],
+        "trims": [
+          "Custom",
+          "LT Trail Boss",
+          "RST",
+          "2.7T",
+          "LTZ",
+          "WT",
+          "LT",
+          "High Country",
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "275/60R20",
+          "265/65R18",
+          "LT275/65R18",
+          "275/50R22",
+          "255/70R17",
+          "265/70R17",
+          "LT265/70R17"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "wtd": {
+        "sizes": [
+          "275/50R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "275/50R20"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "passport",
+      "wtd": {
+        "sizes": [
+          "245/50R20",
+          "265/60R18"
+        ],
+        "trims": [
+          "Base",
+          "TrailSport",
+          "EX-L",
+          "Black Edition"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "265/60R18",
+          "275/60R18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/50R20"
+        ],
+        "usafOnly": [
+          "275/60R18"
+        ],
+        "common": [
+          "265/60R18"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2025,
+      "make": "Toyota",
+      "model": "camry",
+      "wtd": {
+        "sizes": [
+          "205/65R16",
+          "235/40R19",
+          "235/45R18"
+        ],
+        "trims": [
+          "LE AWD",
+          "TRD",
+          "Hybrid SE",
+          "SE Nightshade",
+          "SE AWD",
+          "XLE AWD",
+          "Hybrid XSE",
+          "Standard",
+          "SE",
+          "XLE",
+          "LE",
+          "XSE",
+          "Nightshade",
+          "Hybrid XLE",
+          "Hybrid LE",
+          "XSE AWD"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "205/65R16",
+          "235/45R18",
+          "235/40R19"
+        ]
+      },
+      "comparison": {
+        "match": true,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": [
+          "205/65R16",
+          "235/40R19",
+          "235/45R18"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "GMC",
+      "model": "acadia",
+      "wtd": {
+        "sizes": [
+          "235/65R17",
+          "245/60R18",
+          "255/55R20",
+          "275/45R21"
+        ],
+        "trims": [
+          "SL, SLE, SLT, AT4, Denali",
+          "AT4",
+          "SL",
+          "SLE",
+          "SLT",
+          "Denali"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "235/55R20",
+          "235/65R18",
+          "245/65R17"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/65R17",
+          "245/60R18",
+          "255/55R20",
+          "275/45R21"
+        ],
+        "usafOnly": [
+          "235/55R20",
+          "235/65R18",
+          "245/65R17"
+        ],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "Mercedes",
+      "model": "amg-gt",
+      "wtd": {
+        "sizes": [
+          "255/35R19",
+          "295/30R20",
+          "265/35R19",
+          "305/30R20"
+        ],
+        "trims": [
+          "AMG GT R Pro",
+          "AMG GT Black Series",
+          "Base",
+          "AMG GT",
+          "AMG GT S",
+          "AMG GT C",
+          "AMG GT R"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "255/35R19",
+          "295/30R20",
+          "265/35R19",
+          "305/30R20"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2010,
+      "make": "Dodge",
+      "model": "Viper",
+      "wtd": {
+        "sizes": [
+          "275/35R18",
+          "345/30R19",
+          "275/35ZR18",
+          "345/30ZR19"
+        ],
+        "trims": [
+          "Base",
+          "SRT-10 ACR",
+          "SRT-10"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "295/30ZR18",
+          "345/30ZR19",
+          "275/35ZR18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "275/35R18",
+          "345/30R19"
+        ],
+        "usafOnly": [
+          "295/30ZR18"
+        ],
+        "common": [
+          "275/35ZR18",
+          "345/30ZR19"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2024,
+      "make": "RAM",
+      "model": "1500",
+      "wtd": {
+        "sizes": [
+          "275/60R20",
+          "275/70R18",
+          "275/65R18",
+          "275/55R20",
+          "325/65R18",
+          "285/45R22",
+          "305/45R22",
+          "LT275/65R18",
+          "LT275/70R18",
+          "265/70R17"
+        ],
+        "trims": [
+          "Longhorn",
+          "Rebel",
+          "Big Horn",
+          "TRX",
+          "Limited",
+          "Limited Longhorn",
+          "TRX",
+          "Tradesman",
+          "Base",
+          "Tradesman",
+          "Limited",
+          "Rebel",
+          "Big Horn",
+          "Laramie",
+          "Classic Tradesman",
+          "Classic Warlock",
+          "Tradesman HFE",
+          "Laramie"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "275/65R18",
+          "275/55R20",
+          "285/45R22",
+          "LT275/65R18",
+          "LT275/70R18",
+          "LT325/65R18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "275/60R20",
+          "275/70R18",
+          "325/65R18",
+          "305/45R22",
+          "265/70R17"
+        ],
+        "usafOnly": [
+          "LT325/65R18"
+        ],
+        "common": [
+          "275/65R18",
+          "275/55R20",
+          "285/45R22",
+          "LT275/65R18",
+          "LT275/70R18"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "silverado",
+      "wtd": {
+        "sizes": [
+          "255/70R17"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "255/70R17"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2011,
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "wtd": {
+        "sizes": [
+          "245/45R18",
+          "275/40R18"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/45R18",
+          "275/40R18"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "corvette",
+      "wtd": {
+        "sizes": [
+          "P245/35ZR19",
+          "P345/25ZR21",
+          "245/35ZR19",
+          "305/30ZR20",
+          "P305/30ZR20",
+          "P275/30ZR20"
+        ],
+        "trims": [
+          "Base",
+          "Stingray 1LT",
+          "Stingray 3LT",
+          "Stingray",
+          "Stingray Z51",
+          "Stingray 2LT"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "245/35ZR19",
+          "305/30ZR20"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "P245/35ZR19",
+          "P345/25ZR21",
+          "P305/30ZR20",
+          "P275/30ZR20"
+        ],
+        "usafOnly": [],
+        "common": [
+          "245/35ZR19",
+          "305/30ZR20"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "RAV4",
+      "wtd": {
+        "sizes": [
+          "225/60R18",
+          "245/45R20",
+          "225/65R17",
+          "235/55R19"
+        ],
+        "trims": [
+          "TRD Off-Road",
+          "Limited",
+          "SE",
+          "XLE",
+          "LE",
+          "LE Hybrid",
+          "XLE Hybrid",
+          "XLE Premium Hybrid",
+          "XSE Hybrid",
+          "Limited Hybrid",
+          "Prime XSE",
+          "Woodland Edition Hybrid",
+          "Adventure",
+          "XSE",
+          "XLE Premium",
+          "Prime SE"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "235/65R17",
+          "235/60R18",
+          "235/50R20",
+          "235/65R18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "225/60R18",
+          "245/45R20",
+          "225/65R17",
+          "235/55R19"
+        ],
+        "usafOnly": [
+          "235/65R17",
+          "235/60R18",
+          "235/50R20",
+          "235/65R18"
+        ],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2024,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "wtd": {
+        "sizes": [
+          "LT255/75R17",
+          "LT285/70R17",
+          "275/65R20",
+          "245/75R17",
+          "LT285/75R17",
+          "275/55R20",
+          "255/70R18",
+          "255/70R17",
+          "LT285/65R18"
+        ],
+        "trims": [
+          "Texas Trail",
+          "High Tide",
+          "High Tide",
+          "Mojave",
+          "Mojave X",
+          "Nighthawk",
+          "Rubicon",
+          "Rubicon X",
+          "Sport",
+          "Sport S",
+          "Texas Trail",
+          "Willys",
+          "Nighthawk",
+          "3.6 Pentastar",
+          "Mojave",
+          "Mojave X",
+          "Rubicon",
+          "Rubicon X",
+          "Sport",
+          "Sport S",
+          "Willys",
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "LT285/70R17",
+          "245/75R17",
+          "LT255/75R17",
+          "275/55R20"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "275/65R20",
+          "LT285/75R17",
+          "255/70R18",
+          "255/70R17",
+          "LT285/65R18"
+        ],
+        "usafOnly": [],
+        "common": [
+          "LT255/75R17",
+          "LT285/70R17",
+          "245/75R17",
+          "275/55R20"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "impala",
+      "wtd": {
+        "sizes": [
+          "235/55R18",
+          "245/45R19",
+          "245/40R20"
+        ],
+        "trims": [
+          "Premier",
+          "LS, LT, Premier",
+          "LS",
+          "LT"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "235/50R18",
+          "245/45R19"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/55R18",
+          "245/40R20"
+        ],
+        "usafOnly": [
+          "235/50R18"
+        ],
+        "common": [
+          "245/45R19"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2021,
+      "make": "Buick",
+      "model": "envision",
+      "wtd": {
+        "sizes": [
+          "245/45R20",
+          "225/60R18",
+          "235/50R19",
+          "235/60R18",
+          "235/55R19",
+          "245/50R19"
+        ],
+        "trims": [
+          "Essence",
+          "Avenir",
+          "Preferred, Essence, Avenir",
+          "Preferred"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "245/45R20",
+          "235/60R18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "225/60R18",
+          "235/50R19",
+          "235/55R19",
+          "245/50R19"
+        ],
+        "usafOnly": [],
+        "common": [
+          "245/45R20",
+          "235/60R18"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "silverado-1500",
+      "wtd": {
+        "sizes": [
+          "265/65R18",
+          "LT275/65R18",
+          "275/60R20",
+          "255/70R17",
+          "265/70R17",
+          "LT265/70R17",
+          "275/50R22"
+        ],
+        "trims": [
+          "LT",
+          "Custom",
+          "WT",
+          "LTZ",
+          "RST",
+          "LT Trail Boss",
+          "ZR2",
+          "High Country",
+          "2.7 TurboMax",
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "265/65R18",
+          "LT275/65R18",
+          "275/60R20",
+          "255/70R17",
+          "265/70R17",
+          "LT265/70R17",
+          "275/50R22"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2014,
+      "make": "Kia",
+      "model": "optima",
+      "wtd": {
+        "sizes": [
+          "215/55R17",
+          "225/45R18",
+          "205/65R16"
+        ],
+        "trims": [
+          "EX/SX",
+          "LX/Hybrid"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "215/55R17",
+          "205/65R16",
+          "225/45R18",
+          "205/65R16"
+        ]
+      },
+      "comparison": {
+        "match": true,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": [
+          "215/55R17",
+          "225/45R18",
+          "205/65R16"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2024,
+      "make": "Ferrari",
+      "model": "sf90",
+      "wtd": {
+        "sizes": [
+          "255/35ZR20",
+          "315/30ZR20"
+        ],
+        "trims": [
+          "SF90 Stradale/Spider"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "255/35ZR20",
+          "315/30ZR20"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "4runner",
+      "wtd": {
+        "sizes": [
+          "265/70R17",
+          "245/60R20"
+        ],
+        "trims": [
+          "SR5",
+          "SR5 Premium",
+          "Trail",
+          "Limited",
+          "Nightshade",
+          "SR5",
+          "SR5",
+          "SR5"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "265/70R17",
+          "245/60R20"
+        ]
+      },
+      "comparison": {
+        "match": true,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": [
+          "265/70R17",
+          "245/60R20"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2024,
+      "make": "Buick",
+      "model": "enclave",
+      "wtd": {
+        "sizes": [
+          "245/60R18",
+          "255/55R20",
+          "275/45R21",
+          "255/65R18",
+          "265/50R21"
+        ],
+        "trims": [
+          "Preferred, Essence, Avenir",
+          "Essence",
+          "Premium",
+          "Preferred",
+          "Avenir"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "255/55R20",
+          "255/65R18"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/60R18",
+          "275/45R21",
+          "265/50R21"
+        ],
+        "usafOnly": [],
+        "common": [
+          "255/55R20",
+          "255/65R18"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "wtd": {
+        "sizes": [
+          "235/55R18"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/55R18"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "mustang",
+      "wtd": {
+        "sizes": [
+          "255/45R18",
+          "235/50R18",
+          "255/40R19",
+          "275/40R19"
+        ],
+        "trims": [
+          "GT",
+          "EcoBoost",
+          "Dark Horse"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "255/40R19",
+          "275/40R19",
+          "305/30ZR19",
+          "315/30ZR19",
+          "235/50R18",
+          "265/35R20",
+          "255/45R18",
+          "325/30ZR20",
+          "345/30ZR20"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [
+          "305/30ZR19",
+          "315/30ZR19",
+          "265/35R20",
+          "325/30ZR20",
+          "345/30ZR20"
+        ],
+        "common": [
+          "255/45R18",
+          "235/50R18",
+          "255/40R19",
+          "275/40R19"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2022,
+      "make": "Porsche",
+      "model": "macan",
+      "wtd": {
+        "sizes": [
+          "235/60R18",
+          "235/55R19",
+          "255/50R19",
+          "265/45R20",
+          "295/40R20",
+          "265/40R21",
+          "295/35R21",
+          "265/45ZR20",
+          "295/40ZR20",
+          "235/55ZR19",
+          "255/50ZR19",
+          "265/40ZR21",
+          "295/35ZR21",
+          "235/60ZR18",
+          "255/55ZR18"
+        ],
+        "trims": [
+          "S",
+          "GTS",
+          "Base",
+          "Turbo",
+          "Base, S, GTS, Turbo"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "235/55R19",
+          "255/50R19",
+          "265/45R20",
+          "295/40R20",
+          "265/40R21",
+          "295/35R21"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/60R18",
+          "265/45ZR20",
+          "295/40ZR20",
+          "235/55ZR19",
+          "255/50ZR19",
+          "265/40ZR21",
+          "295/35ZR21",
+          "235/60ZR18",
+          "255/55ZR18"
+        ],
+        "usafOnly": [],
+        "common": [
+          "235/55R19",
+          "255/50R19",
+          "265/45R20",
+          "295/40R20",
+          "265/40R21",
+          "295/35R21"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "mustang-shelby-gt350",
+      "wtd": {
+        "sizes": [
+          "255/40R19",
+          "295/35R19"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "255/40R19",
+          "295/35R19"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "xterra",
+      "wtd": {
+        "sizes": [
+          "265/70R16",
+          "265/65R17"
+        ],
+        "trims": [
+          "X, S, SE, Off-Road, PRO-4X",
+          "X",
+          "S",
+          "SE",
+          "Off-Road",
+          "PRO-4X"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "265/70R16",
+          "265/75R16"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "265/65R17"
+        ],
+        "usafOnly": [
+          "265/75R16"
+        ],
+        "common": [
+          "265/70R16"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "wtd": {
+        "sizes": [
+          "195/65R15",
+          "205/55R16",
+          "225/45R17",
+          "225/40R18"
+        ],
+        "trims": [
+          "SEL",
+          "GLI",
+          "S, Sport, SE, SEL, GLI",
+          "S",
+          "Sport",
+          "SE"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "205/55R16",
+          "225/45R17",
+          "195/65R15",
+          "225/40R18",
+          "205/50R17"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [
+          "205/50R17"
+        ],
+        "common": [
+          "195/65R15",
+          "205/55R16",
+          "225/45R17",
+          "225/40R18"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2026,
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "wtd": {
+        "sizes": [
+          "235/35R19",
+          "225/45R18"
+        ],
+        "trims": [
+          "AMG CLA45",
+          "CLA 250",
+          "CLA250",
+          "CLA250 4MATIC",
+          "AMG CLA35",
+          "CLA 250, CLA 35 AMG, CLA 45 AMG",
+          "CLA 35 AMG",
+          "CLA 45 AMG"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/35R19",
+          "225/45R18"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2014,
+      "make": "Honda",
+      "model": "insight",
+      "wtd": {
+        "sizes": [
+          "185/60R15",
+          "175/65R15",
+          "195/55R16"
+        ],
+        "trims": [
+          "EX",
+          "LX, EX",
+          "LX"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "185/60R15"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "175/65R15",
+          "195/55R16"
+        ],
+        "usafOnly": [],
+        "common": [
+          "185/60R15"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "camry",
+      "wtd": {
+        "sizes": [
+          "215/55R17",
+          "235/45R18",
+          "235/40R19"
+        ],
+        "trims": [
+          "Hybrid XLE",
+          "SE Nightshade",
+          "XSE",
+          "Hybrid LE",
+          "LE",
+          "SE",
+          "XLE",
+          "TRD",
+          "Hybrid XSE",
+          "Hybrid SE"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "205/65R16",
+          "235/45R18",
+          "215/55R17",
+          "235/40R19"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [
+          "205/65R16"
+        ],
+        "common": [
+          "215/55R17",
+          "235/45R18",
+          "235/40R19"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "discovery",
+      "wtd": {
+        "sizes": [
+          "255/55R19",
+          "275/45R20"
+        ],
+        "trims": [
+          "HSE Luxury",
+          "S",
+          "SE",
+          "HSE",
+          "S, SE, HSE, HSE Luxury"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "255/55R19",
+          "275/45R20"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "Cadillac",
+      "model": "escalade",
+      "wtd": {
+        "sizes": [
+          "275/55R20",
+          "285/45R22"
+        ],
+        "trims": [
+          "Luxury, Premium Luxury, Sport, Platinum, V",
+          "Luxury",
+          "Premium Luxury",
+          "Premium Luxury",
+          "Platinum",
+          "Premium Luxury"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "275/55R20",
+          "285/45R22"
+        ]
+      },
+      "comparison": {
+        "match": true,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": [
+          "275/55R20",
+          "285/45R22"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "Land Rover",
+      "model": "discovery-sport",
+      "wtd": {
+        "sizes": [
+          "235/60R18",
+          "235/55R19",
+          "245/45R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/60R18",
+          "235/55R19",
+          "245/45R20"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2022,
+      "make": "Cadillac",
+      "model": "ct6",
+      "wtd": {
+        "sizes": [
+          "235/55R18",
+          "245/45R19",
+          "265/35R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "235/55R18",
+          "245/45R19",
+          "265/35R20"
+        ],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2017,
+      "make": "Maserati",
+      "model": "ghibli",
+      "wtd": {
+        "sizes": [
+          "245/45R18",
+          "275/45R18",
+          "245/35R21",
+          "285/30R21"
+        ],
+        "trims": [
+          "M157 (3rd Gen)"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "245/45R19",
+          "275/40R19",
+          "245/45ZR19",
+          "275/40ZR19",
+          "245/40R20",
+          "285/35R20",
+          "245/40ZR20",
+          "285/35ZR20",
+          "245/35ZR21",
+          "285/30ZR21"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/45R18",
+          "275/45R18",
+          "245/35R21",
+          "285/30R21"
+        ],
+        "usafOnly": [
+          "245/45R19",
+          "275/40R19",
+          "245/45ZR19",
+          "275/40ZR19",
+          "245/40R20",
+          "285/35R20",
+          "245/40ZR20",
+          "285/35ZR20",
+          "245/35ZR21",
+          "285/30ZR21"
+        ],
+        "common": []
+      },
+      "error": null
+    },
+    {
+      "year": 2020,
+      "make": "Ferrari",
+      "model": "portofino",
+      "wtd": {
+        "sizes": [
+          "245/40ZR19",
+          "285/35ZR19",
+          "245/35ZR20",
+          "285/35ZR20"
+        ],
+        "trims": [
+          "Portofino/Portofino M"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "245/35ZR20",
+          "285/35ZR20"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/40ZR19",
+          "285/35ZR19"
+        ],
+        "usafOnly": [],
+        "common": [
+          "245/35ZR20",
+          "285/35ZR20"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2020,
+      "make": "Lincoln",
+      "model": "continental",
+      "wtd": {
+        "sizes": [
+          "245/45R19",
+          "245/40R20",
+          "265/35R21"
+        ],
+        "trims": [
+          "Premiere, Select, Reserve, Black Label",
+          "Premiere",
+          "Select",
+          "Reserve",
+          "Black Label"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "235/50R18",
+          "245/40R20",
+          "255/45R19"
+        ]
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [
+          "245/45R19",
+          "265/35R21"
+        ],
+        "usafOnly": [
+          "235/50R18",
+          "255/45R19"
+        ],
+        "common": [
+          "245/40R20"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2011,
+      "make": "BMW",
+      "model": "Z4",
+      "wtd": {
+        "sizes": [
+          "225/45R17",
+          "255/40R17",
+          "225/40R18",
+          "255/35R18",
+          "225/35R19",
+          "255/30R19"
+        ],
+        "trims": [
+          "sDrive28i",
+          "Base",
+          "sDrive35i",
+          "sDrive35is"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "225/45R17",
+          "225/40R18",
+          "255/35R18",
+          "255/40R17",
+          "225/35R19",
+          "255/30R19"
+        ]
+      },
+      "comparison": {
+        "match": true,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": [
+          "225/45R17",
+          "255/40R17",
+          "225/40R18",
+          "255/35R18",
+          "225/35R19",
+          "255/30R19"
+        ]
+      },
+      "error": null
+    },
+    {
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Tiguan Limited",
+      "wtd": {
+        "sizes": [
+          "215/65R16",
+          "235/55R17"
+        ],
+        "trims": [
+          "Base",
+          "4Motion"
+        ]
+      },
+      "usaf": {
+        "sizes": [
+          "215/65R16",
+          "235/55R17"
+        ]
+      },
+      "comparison": {
+        "match": true,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": [
+          "215/65R16",
+          "235/55R17"
+        ]
+      },
+      "error": null
+    }
+  ]
+}

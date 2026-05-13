@@ -1,0 +1,1363 @@
+{
+  "timestamp": "2026-05-13T13:47:12.586Z",
+  "filters": {
+    "sample": "50"
+  },
+  "summary": {
+    "total": 50,
+    "matched": 0,
+    "partial": 0,
+    "wtdOnly": 0,
+    "usafOnly": 0,
+    "errors": 50
+  },
+  "vehicles": [
+    {
+      "year": 1981,
+      "make": "Chevrolet",
+      "model": "C20",
+      "wtd": {
+        "sizes": [
+          "195/75R14"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "sportage",
+      "wtd": {
+        "sizes": [
+          "215/70R16",
+          "225/60R17",
+          "225/55R18"
+        ],
+        "trims": [
+          "LX, EX, SX, SX Turbo, X-Line, X-Pro",
+          "LX",
+          "EX",
+          "SX",
+          "SX Turbo",
+          "X-Line",
+          "X-Pro"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "ls",
+      "wtd": {
+        "sizes": [
+          "235/50R18",
+          "245/45R19",
+          "235/50ZR18",
+          "245/45ZR19",
+          "245/40ZR20"
+        ],
+        "trims": [
+          "LS 500, LS 500h, F Sport",
+          "LS 460",
+          "LS 500",
+          "LS 500h"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2025,
+      "make": "Ford",
+      "model": "transit",
+      "wtd": {
+        "sizes": [
+          "215/65R16",
+          "235/65R16",
+          "235/55R17"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Lotus",
+      "model": "emira",
+      "wtd": {
+        "sizes": [
+          "245/35R20",
+          "295/30R20"
+        ],
+        "trims": [
+          "Emira"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "Jeep",
+      "model": "Grand Wagoneer",
+      "wtd": {
+        "sizes": [
+          "275/50R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "wtd": {
+        "sizes": [
+          "285/70R17",
+          "245/75R17",
+          "255/70R17",
+          "LT285/70R17",
+          "315/70R17",
+          "255/70R18",
+          "LT285/65R18",
+          "275/55R20"
+        ],
+        "trims": [
+          "Willys",
+          "Rubicon",
+          "Rubicon 392",
+          "Moab 392",
+          "Rubicon X",
+          "Sahara",
+          "Sport",
+          "Willys 41",
+          "Xtreme Tire Package",
+          "Base",
+          "Sport S",
+          "4xe"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "k5",
+      "wtd": {
+        "sizes": [
+          "215/55R17",
+          "235/45R18",
+          "245/40R19"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2017,
+      "make": "Chevrolet",
+      "model": "silverado-3500hd",
+      "wtd": {
+        "sizes": [
+          "LT245/70R17",
+          "LT265/70R18",
+          "LT265/60R20"
+        ],
+        "trims": [
+          "LT",
+          "Base",
+          "LTZ",
+          "Custom",
+          "WT",
+          "High Country"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2025,
+      "make": "GMC",
+      "model": "sierra-3500-hd",
+      "wtd": {
+        "sizes": [
+          "LT265/70R17",
+          "LT265/60R18",
+          "LT275/65R18",
+          "LT275/60R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2014,
+      "make": "GMC",
+      "model": "sierra-3500hd",
+      "wtd": {
+        "sizes": [
+          "LT245/70R17",
+          "LT265/70R18",
+          "LT265/60R20"
+        ],
+        "trims": [
+          "Denali",
+          "Base",
+          "SLT",
+          "SLE"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "wtd": {
+        "sizes": [
+          "255/75R17",
+          "285/70R17",
+          "255/70R18",
+          "245/75R17",
+          "255/70R17",
+          "LT255/75R17",
+          "LT285/65R18",
+          "275/55R20"
+        ],
+        "trims": [
+          "Willys",
+          "Mojave",
+          "Mojave X",
+          "Rubicon",
+          "Rubicon X",
+          "Sahara",
+          "Sport S",
+          "Willys 41",
+          "Base",
+          "Sport"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2013,
+      "make": "Jaguar",
+      "model": "xk",
+      "wtd": {
+        "sizes": [
+          "245/45R18",
+          "245/40R19",
+          "275/35R20",
+          "285/35R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2010,
+      "make": "Pontiac",
+      "model": "solstice",
+      "wtd": {
+        "sizes": [
+          "245/45R18"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Volt",
+      "wtd": {
+        "sizes": [
+          "215/50R17"
+        ],
+        "trims": [
+          "LT",
+          "Premier"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2018,
+      "make": "Ferrari",
+      "model": "488 Spider",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "tireSizes is not iterable"
+    },
+    {
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "S450",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "tireSizes is not iterable"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "corolla-cross",
+      "wtd": {
+        "sizes": [
+          "195/65R15"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2014,
+      "make": "Dodge",
+      "model": "Journey",
+      "wtd": {
+        "sizes": [
+          "225/65R17"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Explorer",
+      "wtd": {
+        "sizes": [
+          "245/60R18",
+          "255/50R20"
+        ],
+        "trims": [
+          "Base",
+          "Limited",
+          "Platinum",
+          "Sport",
+          "XLT"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "wtd": {
+        "sizes": [
+          "215/55R17"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "suburban-1500",
+      "wtd": {
+        "sizes": [
+          "265/70R17",
+          "275/55R20",
+          "285/45R22"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2020,
+      "make": "Honda",
+      "model": "cr-v",
+      "wtd": {
+        "sizes": [
+          "235/65R17",
+          "235/60R18"
+        ],
+        "trims": [
+          "LX",
+          "EX",
+          "EX-L",
+          "Touring",
+          "LX 2WD",
+          "LX AWD",
+          "EX 2WD",
+          "EX AWD",
+          "EX-L 2WD",
+          "EX-L AWD",
+          "Touring 2WD",
+          "Touring AWD",
+          "LX, EX, EX-L, Touring"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2014,
+      "make": "Cadillac",
+      "model": "escalade",
+      "wtd": {
+        "sizes": [
+          "265/65R18",
+          "275/55R20",
+          "285/45R22"
+        ],
+        "trims": [
+          "Base",
+          "Base",
+          "Luxury, Premium Luxury, Sport, Platinum, V",
+          "Luxury",
+          "Base",
+          "Platinum"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2010,
+      "make": "Porsche",
+      "model": "panamera",
+      "wtd": {
+        "sizes": [
+          "245/50R18",
+          "275/35R21",
+          "315/30R21"
+        ],
+        "trims": [
+          "Turbo",
+          "Turbo S",
+          "Base, 4, 4S, GTS, Turbo, Turbo S",
+          "GTS",
+          "Base",
+          "4",
+          "4S"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "mazda3",
+      "wtd": {
+        "sizes": [
+          "205/60R16",
+          "215/45R18"
+        ],
+        "trims": [
+          "Premium"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "HR-V",
+      "wtd": {
+        "sizes": [
+          "215/55R17"
+        ],
+        "trims": [
+          "EX",
+          "EX-L",
+          "LX"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2013,
+      "make": "Chrysler",
+      "model": "200",
+      "wtd": {
+        "sizes": [
+          "225/55R17"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "wtd": {
+        "sizes": [
+          "275/50R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2010,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "wtd": {
+        "sizes": [
+          "255/40R20",
+          "285/35R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "rs3",
+      "wtd": {
+        "sizes": [
+          "255/30R19"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2010,
+      "make": "Jeep",
+      "model": "cherokee",
+      "wtd": {
+        "sizes": [
+          "225/75R16",
+          "235/65R17",
+          "235/60R18",
+          "235/70R16",
+          "245/50R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "8 Series",
+      "wtd": {
+        "sizes": [
+          "225/45R18",
+          "245/40R19",
+          "275/35R19"
+        ],
+        "trims": [
+          "Base",
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2009,
+      "make": "Acura",
+      "model": "tl",
+      "wtd": {
+        "sizes": [
+          "245/50R17",
+          "245/45R18",
+          "245/40R19"
+        ],
+        "trims": [
+          "Base",
+          "SH-AWD",
+          "Base, Technology, SH-AWD, Advance",
+          "Technology",
+          "Advance"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2014,
+      "make": "Mercedes",
+      "model": "m-class",
+      "wtd": {
+        "sizes": [
+          "255/55R18",
+          "265/45R20",
+          "295/35R21"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "silverado",
+      "wtd": {
+        "sizes": [
+          "255/70R17"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2021,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "wtd": {
+        "sizes": [
+          "245/60R18",
+          "255/50R20",
+          "265/45R21",
+          "245/65R17",
+          "255/55R19"
+        ],
+        "trims": [
+          "S, SE, SE w/Tech, SEL, SEL Premium, Cross Sport",
+          "SE",
+          "SE w/Tech",
+          "S",
+          "SEL",
+          "SEL Premium",
+          "Cross Sport"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2013,
+      "make": "Lincoln",
+      "model": "navigator",
+      "wtd": {
+        "sizes": [
+          "275/55R20",
+          "285/45R22"
+        ],
+        "trims": [
+          "Standard",
+          "Reserve",
+          "Black Label",
+          "Standard, Reserve, Black Label"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "gladiator",
+      "wtd": {
+        "sizes": [
+          "255/75R17",
+          "285/70R17",
+          "255/70R18",
+          "245/75R17",
+          "255/70R17",
+          "LT255/75R17",
+          "LT285/65R18",
+          "275/55R20"
+        ],
+        "trims": [
+          "Willys",
+          "Mojave",
+          "Mojave X",
+          "Rubicon",
+          "Rubicon X",
+          "Sahara",
+          "Sport S",
+          "Willys 41",
+          "Base",
+          "Sport"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2018,
+      "make": "Fiat",
+      "model": "500",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "tireSizes is not iterable"
+    },
+    {
+      "year": 2025,
+      "make": "Chevrolet",
+      "model": "malibu",
+      "wtd": {
+        "sizes": [
+          "245/45R18",
+          "205/65R16",
+          "225/55R17",
+          "245/40R19"
+        ],
+        "trims": [
+          "RS",
+          "LT",
+          "LS, RS, LT, Premier",
+          "Premier",
+          "LS",
+          "2LT"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2021,
+      "make": "Genesis",
+      "model": "g80",
+      "wtd": {
+        "sizes": [
+          "245/45R18",
+          "245/40R19",
+          "255/40R20",
+          "275/35R20",
+          "245/45ZR19",
+          "275/40ZR19",
+          "245/50ZR18",
+          "245/40ZR20",
+          "275/35ZR20"
+        ],
+        "trims": [
+          "3.5T",
+          "2.5T, 3.5T, Sport, Electrified",
+          "Electrified",
+          "2.5T",
+          "Sport"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2018,
+      "make": "GMC",
+      "model": "Terrain",
+      "wtd": {
+        "sizes": [
+          "225/65R17",
+          "225/60R18",
+          "235/50R19"
+        ],
+        "trims": [
+          "SL",
+          "SLE",
+          "SLT",
+          "Denali",
+          "SLE Diesel",
+          "SLT Diesel"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2020,
+      "make": "Mitsubishi",
+      "model": "montero",
+      "wtd": {
+        "sizes": [
+          "265/70R16",
+          "275/55R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "Volvo",
+      "model": "ex30",
+      "wtd": {
+        "sizes": [
+          "225/45R18"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "navigator",
+      "wtd": {
+        "sizes": [
+          "275/55R20",
+          "285/45R22",
+          "285/40R24"
+        ],
+        "trims": [
+          "Standard, Reserve, Black Label",
+          "Standard",
+          "Reserve",
+          "Black Label"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2018,
+      "make": "Audi",
+      "model": "Q3",
+      "wtd": {
+        "sizes": [
+          "235/50R18",
+          "255/40R19"
+        ],
+        "trims": [
+          "Premium",
+          "Premium Plus"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2012,
+      "make": "Chevrolet",
+      "model": "silverado-1500",
+      "wtd": {
+        "sizes": [
+          "245/70R17",
+          "265/65R18",
+          "275/55R20",
+          "265/70R17",
+          "265/65R17",
+          "265/60R19"
+        ],
+        "trims": [
+          "LS",
+          "LTZ",
+          "Base",
+          "LT",
+          "WT",
+          "Z71",
+          "WT"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2021,
+      "make": "Audi",
+      "model": "s8l",
+      "wtd": {
+        "sizes": [
+          "245/45R20"
+        ],
+        "trims": [
+          "Base"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2021,
+      "make": "Volkswagen",
+      "model": "passat",
+      "wtd": {
+        "sizes": [
+          "215/55R17",
+          "235/45R18",
+          "235/40R19"
+        ],
+        "trims": [
+          "S, SE, R-Line, SEL Premium",
+          "S",
+          "SE",
+          "R-Line",
+          "SEL Premium"
+        ]
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "SOAP API error: 401 Authentication Failed"
+    }
+  ]
+}

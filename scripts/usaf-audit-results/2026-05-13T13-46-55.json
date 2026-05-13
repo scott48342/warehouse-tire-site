@@ -1,0 +1,966 @@
+{
+  "timestamp": "2026-05-13T13:46:43.639Z",
+  "filters": {
+    "sample": "50"
+  },
+  "summary": {
+    "total": 50,
+    "matched": 0,
+    "partial": 0,
+    "wtdOnly": 0,
+    "usafOnly": 0,
+    "errors": 50
+  },
+  "vehicles": [
+    {
+      "year": 2026,
+      "make": "MINI",
+      "model": "cooper",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Grand Highlander",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2023,
+      "make": "Mercedes",
+      "model": "c-class",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "3 Series",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 1992,
+      "make": "Ford",
+      "model": "Escort",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2012,
+      "make": "Lincoln",
+      "model": "navigator",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "Z4",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2016,
+      "make": "Chevrolet",
+      "model": "caprice",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2016,
+      "make": "Lincoln",
+      "model": "mkx",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "r8",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2020,
+      "make": "GMC",
+      "model": "sierra-2500-hd",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2023,
+      "make": "McLaren",
+      "model": "artura",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2013,
+      "make": "Acura",
+      "model": "tsx",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2016,
+      "make": "Subaru",
+      "model": "wrx-sti",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2025,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2012,
+      "make": "Audi",
+      "model": "tt",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2025,
+      "make": "Honda",
+      "model": "cr-v",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2022,
+      "make": "Audi",
+      "model": "sq7",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "X3 M",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2014,
+      "make": "Land Rover",
+      "model": "discovery-sport",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "3",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "prius",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2025,
+      "make": "Buick",
+      "model": "encore-gx",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "mx-5-miata",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2016,
+      "make": "Volvo",
+      "model": "v60",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "cla",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "Honda",
+      "model": "ridgeline",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2025,
+      "make": "Aston Martin",
+      "model": "dbx",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2012,
+      "make": "BMW",
+      "model": "5 Series",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2020,
+      "make": "Ford",
+      "model": "ranger",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "mx-5-miata",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2016,
+      "make": "Toyota",
+      "model": "4runner",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "grand-caravan",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "rav4",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "Kia",
+      "model": "sedona",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "Tesla",
+      "model": "model-x",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2024,
+      "make": "Honda",
+      "model": "passport",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2020,
+      "make": "Infiniti",
+      "model": "q50",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2012,
+      "make": "Hyundai",
+      "model": "tucson",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "venza",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X6",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2015,
+      "make": "Mercedes",
+      "model": "amg-gt",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2026,
+      "make": "Kia",
+      "model": "forte",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "BMW",
+      "model": "i4",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2019,
+      "make": "Ford",
+      "model": "f-350",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2021,
+      "make": "Chevrolet",
+      "model": "suburban",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    },
+    {
+      "year": 2025,
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "wtd": {
+        "sizes": [],
+        "trims": []
+      },
+      "usaf": {
+        "sizes": []
+      },
+      "comparison": {
+        "match": false,
+        "wtdOnly": [],
+        "usafOnly": [],
+        "common": []
+      },
+      "error": "fitments is not defined"
+    }
+  ]
+}

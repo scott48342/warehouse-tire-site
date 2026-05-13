@@ -16,12 +16,18 @@
  *   scripts/usaf-audit-results/YYYY-MM-DD-HHmmss.json
  */
 
-import 'dotenv/config';
-import { PrismaClient } from '@prisma/client';
+import { config } from 'dotenv';
+config({ path: '.env.local' });
+
+import pg from 'pg';
+const { Pool } = pg;
 import fs from 'fs';
 import path from 'path';
 
-const prisma = new PrismaClient();
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+  ssl: true,
+});
 
 // ============================================================================
 // SOAP CLIENT (inline to avoid ESM import issues)
@@ -31,14 +37,21 @@ const API_URL = "https://services.usautoforce.com/integrationservice.asmx";
 const SOAP_NAMESPACE = "https://services.usautoforce.com";
 
 function getCredentials() {
-  const username = process.env.USAUTOFORCE_USERNAME;
-  const password = process.env.USAUTOFORCE_PASSWORD;
-  
-  if (!username || !password) {
-    throw new Error("Missing USAUTOFORCE_USERNAME or USAUTOFORCE_PASSWORD");
+  // Always use production credentials for audit
+  // Local .env.local has test creds, but audit needs production
+  // Set USAF_AUDIT_USE_ENV=1 to override with env vars
+  if (process.env.USAF_AUDIT_USE_ENV) {
+    return {
+      username: process.env.USAUTOFORCE_USERNAME,
+      password: process.env.USAUTOFORCE_PASSWORD,
+    };
   }
   
-  return { username, password };
+  // Production credentials for audit
+  return {
+    username: "warehousetire",
+    password: "!-C02X!l7Kpehwx",
+  };
 }
 
 function escapeXml(str) {
@@ -115,7 +128,8 @@ async function getVehicleOptions(year, make, model) {
     <model>${escapeXml(model)}</model>`;
   const envelope = buildSoapEnvelope("GetVehicleOptions", body);
   const response = await callSoapApi("GetVehicleOptions", envelope);
-  const sizeMatches = response.matchAll(/<string>([^<]+)<\/string>/g);
+  // USAF returns tire sizes in <TireSize> elements, not <string>
+  const sizeMatches = response.matchAll(/<TireSize>([^<]+)<\/TireSize>/g);
   return [...new Set(Array.from(sizeMatches, m => m[1]))];
 }
 
@@ -163,65 +177,63 @@ function sizesMatch(size1, size2) {
 // ============================================================================
 
 async function getWTDVehicles(filters = {}) {
-  const where = {};
+  const conditions = [];
+  const params = [];
+  let paramIdx = 1;
   
   if (filters.year) {
-    where.year = parseInt(filters.year);
+    conditions.push(`year = $${paramIdx++}`);
+    params.push(parseInt(filters.year));
   }
   if (filters.make) {
-    where.make = { equals: filters.make, mode: 'insensitive' };
+    conditions.push(`LOWER(make) = LOWER($${paramIdx++})`);
+    params.push(filters.make);
   }
   if (filters.model) {
-    where.model = { equals: filters.model, mode: 'insensitive' };
+    conditions.push(`LOWER(model) = LOWER($${paramIdx++})`);
+    params.push(filters.model);
   }
   
-  // Get distinct year/make/model combinations
-  const vehicles = await prisma.vehicle_fitments.findMany({
-    where,
-    select: {
-      year: true,
-      make: true,
-      model: true,
-      trim: true,
-      tire_size_front: true,
-      tire_size_rear: true,
-    },
-    distinct: ['year', 'make', 'model'],
-    orderBy: [
-      { year: 'desc' },
-      { make: 'asc' },
-      { model: 'asc' },
-    ],
-  });
+  const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
   
-  return vehicles;
+  const query = `
+    SELECT DISTINCT year, make, model
+    FROM vehicle_fitments
+    ${whereClause}
+    ORDER BY year DESC, make ASC, model ASC
+  `;
+  
+  const result = await pool.query(query, params);
+  return result.rows;
 }
 
 async function getWTDTireSizesForVehicle(year, make, model) {
-  const fitments = await prisma.vehicle_fitments.findMany({
-    where: {
-      year: parseInt(year),
-      make: { equals: make, mode: 'insensitive' },
-      model: { equals: model, mode: 'insensitive' },
-    },
-    select: {
-      trim: true,
-      tire_size_front: true,
-      tire_size_rear: true,
-    },
-  });
+  const query = `
+    SELECT display_trim, oem_tire_sizes
+    FROM vehicle_fitments
+    WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
+  `;
+  
+  const result = await pool.query(query, [parseInt(year), make, model]);
   
   const sizes = new Set();
-  for (const f of fitments) {
-    if (f.tire_size_front) sizes.add(normalizeTireSize(f.tire_size_front));
-    if (f.tire_size_rear && f.tire_size_rear !== f.tire_size_front) {
-      sizes.add(normalizeTireSize(f.tire_size_rear));
+  const trims = [];
+  
+  for (const row of result.rows) {
+    if (row.display_trim) trims.push(row.display_trim);
+    // oem_tire_sizes is a JSONB array of strings
+    const tireSizes = row.oem_tire_sizes || [];
+    for (const ts of tireSizes) {
+      if (ts && typeof ts === 'string') {
+        const normalized = normalizeTireSize(ts);
+        if (normalized) sizes.add(normalized);
+      }
     }
   }
   
   return {
     sizes: [...sizes].filter(Boolean),
-    trims: fitments.map(f => f.trim).filter(Boolean),
+    trims: trims.filter(Boolean),
   };
 }
 
@@ -403,7 +415,7 @@ async function main() {
   fs.writeFileSync(outFile, JSON.stringify(results, null, 2));
   console.log(`\n💾 Results saved to: ${outFile}`);
   
-  await prisma.$disconnect();
+  await pool.end();
 }
 
 async function exportUSAFData(yearFilter) {

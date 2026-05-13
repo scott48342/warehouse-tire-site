@@ -688,8 +688,8 @@ export async function getVehicleOptions(
     const response = await callSoapApi(config.apiBaseUrl!, "GetVehicleOptions", envelope);
     
     // Parse tire sizes from response
-    // USAF returns OE tire sizes as <string> elements
-    const sizeMatches = response.matchAll(/<string>([^<]+)<\/string>/g);
+    // USAF returns OE tire sizes in <TireSize> elements
+    const sizeMatches = response.matchAll(/<TireSize>([^<]+)<\/TireSize>/g);
     const sizes = Array.from(sizeMatches, m => m[1]);
     
     // Dedupe and convert to options
