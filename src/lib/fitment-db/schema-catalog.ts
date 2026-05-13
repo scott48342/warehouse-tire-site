@@ -33,6 +33,7 @@ export const catalogMakes = pgTable(
   {
     id: uuid("id").defaultRandom().primaryKey(),
     make: varchar("make", { length: 100 }).notNull(),
+    name: varchar("name", { length: 100 }), // alias for make
     displayName: varchar("display_name", { length: 100 }),
     slug: varchar("slug", { length: 100 }),
     supplier: varchar("supplier", { length: 50 }),

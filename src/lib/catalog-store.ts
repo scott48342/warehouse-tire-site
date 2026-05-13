@@ -45,7 +45,7 @@ export async function getMakes(): Promise<CatalogMake[]> {
     
     if (dbMakes.length > 0) {
       console.log(`[catalog-store] DB: ${dbMakes.length} makes`);
-      return dbMakes.map(m => ({ slug: m.slug, name: m.name }));
+      return dbMakes.map(m => ({ slug: m.slug || "", name: m.name || m.make }));
     }
     
     console.log(`[catalog-store] No makes in catalog`);
