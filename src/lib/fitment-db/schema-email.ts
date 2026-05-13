@@ -326,6 +326,11 @@ export const abandonedCarts = pgTable(
     // Site context
     hostname: varchar("hostname", { length: 100 }),
     
+    // Request context
+    source: varchar("source", { length: 100 }),
+    userAgent: text("user_agent"),
+    ipAddress: varchar("ip_address", { length: 45 }),
+    
     // Timestamps
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),

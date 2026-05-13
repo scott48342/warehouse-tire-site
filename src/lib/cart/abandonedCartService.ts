@@ -268,7 +268,7 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
         customerLastName: customer?.lastName || existing.customerLastName,
         customerEmail: customer?.email || existing.customerEmail,
         customerPhone: customer?.phone || existing.customerPhone,
-        vehicleYear: vehicle?.year || existing.vehicleYear,
+        vehicleYear: vehicle?.year ? Number(vehicle.year) : existing.vehicleYear,
         vehicleMake: vehicle?.make || existing.vehicleMake,
         vehicleModel: vehicle?.model || existing.vehicleModel,
         vehicleTrim: vehicle?.trim || existing.vehicleTrim,
