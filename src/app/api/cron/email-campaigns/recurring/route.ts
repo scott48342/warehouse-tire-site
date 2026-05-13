@@ -91,15 +91,15 @@ export async function GET(req: NextRequest) {
         // Create the instance campaign
         const instance = await campaignService.createCampaign({
           name: instanceName,
-          campaignType: template.campaignType,
-          subject: template.subject,
+          campaignType: template.campaignType || "marketing",
+          subject: template.subject || "",
           previewText: template.previewText || undefined,
           fromName: template.fromName || undefined,
           replyTo: template.replyTo || undefined,
           contentJson: template.contentJson as CampaignContent,
           audienceRulesJson: audienceRules,
-          includeFreeShippingBanner: template.includeFreeShippingBanner,
-          includePriceMatch: template.includePriceMatch,
+          includeFreeShippingBanner: template.includeFreeShippingBanner ?? undefined,
+          includePriceMatch: template.includePriceMatch ?? undefined,
           utmCampaign: `${template.utmCampaign || template.name.toLowerCase().replace(/\s+/g, "-")}-${thisMonth + 1}-${thisYear}`,
           notes: `Auto-created from recurring template ${template.id}`,
         });

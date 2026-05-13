@@ -42,8 +42,14 @@ export const emailCampaigns = pgTable(
     previewText: varchar("preview_text", { length: 255 }),
     fromName: varchar("from_name", { length: 100 }),
     fromEmail: varchar("from_email", { length: 255 }),
+    replyTo: varchar("reply_to", { length: 255 }),
     templateId: varchar("template_id", { length: 100 }),
     content: json("content"), // CampaignContent JSON
+    contentJson: json("content_json"), // CampaignContent JSON (alias)
+    includeFreeShippingBanner: boolean("include_free_shipping_banner").default(false),
+    includePriceMatch: boolean("include_price_match").default(false),
+    utmCampaign: varchar("utm_campaign", { length: 255 }),
+    notes: text("notes"),
     
     // Audience targeting
     audienceRules: json("audience_rules"), // AudienceRules JSON
