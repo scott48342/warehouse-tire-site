@@ -78,6 +78,13 @@ export const vehicleFitments = pgTable(
     source: varchar("source", { length: 100 }),
     qualityTier: varchar("quality_tier", { length: 20 }),
     certificationStatus: varchar("certification_status", { length: 50 }).default("certified"),
+    /**
+     * Data quality indicator for admin/audit (no runtime behavior change)
+     * - HIGH: Complete OEM specs from verified sources
+     * - MEDIUM: Partial data, some fields inferred
+     * - LOW: Needs manual review
+     */
+    confidenceTag: varchar("confidence_tag", { length: 20 }).default("MEDIUM"),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
   },
@@ -91,6 +98,7 @@ export const vehicleFitments = pgTable(
     makeIdx: index("vehicle_fitments_make_idx").on(table.make),
     modificationIdIdx: index("vehicle_fitments_mod_id_idx").on(table.modificationId),
     boltPatternIdx: index("vehicle_fitments_bolt_pattern_idx").on(table.boltPattern),
+    confidenceIdx: index("vehicle_fitments_confidence_idx").on(table.confidenceTag),
   })
 );
 

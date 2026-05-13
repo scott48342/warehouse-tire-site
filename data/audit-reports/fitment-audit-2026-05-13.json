@@ -1,0 +1,287 @@
+{
+  "timestamp": "2026-05-13T18:01:55.206Z",
+  "status": "PASS",
+  "checks": {
+    "sentinels": {
+      "total": 12,
+      "passed": 12,
+      "results": [
+        {
+          "vehicle": "2024 Ford F-150",
+          "expected": "6x135",
+          "actual": "6x135",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Chevrolet Silverado 1500",
+          "expected": "6x139.7",
+          "actual": "6x139.7",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Toyota Camry",
+          "expected": "5x114.3",
+          "actual": "5x114.3",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Honda Civic",
+          "expected": "5x114.3",
+          "actual": "5x114.3",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Ford Mustang",
+          "expected": "5x114.3",
+          "actual": "5x114.3",
+          "pass": true
+        },
+        {
+          "vehicle": "2023 BMW 3 Series",
+          "expected": "5x112",
+          "actual": "5x112",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Tesla model-y",
+          "expected": "5x114.3",
+          "actual": "5x114.3",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 RAM 1500",
+          "expected": "6x139.7",
+          "actual": "6x139.7",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Ford f-250",
+          "expected": "8x170",
+          "actual": "8x170",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Chevrolet silverado-3500hd",
+          "expected": "8x180",
+          "actual": "8x180",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Chevrolet Corvette",
+          "expected": "5x120",
+          "actual": "5x120",
+          "pass": true
+        },
+        {
+          "vehicle": "2024 Porsche 911",
+          "expected": "5x130",
+          "actual": "5x130",
+          "pass": true
+        }
+      ]
+    },
+    "missingSpecs": {
+      "missingBoltPattern": 32,
+      "missingCenterBore": 58,
+      "missingOffset": 5599,
+      "total": 37180
+    },
+    "missingSizes": {
+      "missingWheelSizes": 0,
+      "missingTireSizes": 0
+    },
+    "confidenceDistribution": {
+      "HIGH": 6392,
+      "LOW": 60,
+      "MEDIUM": 30728
+    },
+    "duplicates": {
+      "count": 20,
+      "samples": [
+        {
+          "vehicle": "2026 BMW 7 Series",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2026 BMW M4",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2026 BMW X6",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2026 BMW X6 M",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2026 BMW Z4",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2026 Chevrolet equinox",
+          "boltPatterns": [
+            "5x112",
+            "5x115"
+          ]
+        },
+        {
+          "vehicle": "2026 Chevrolet traverse",
+          "boltPatterns": [
+            "5x120",
+            "6x120"
+          ]
+        },
+        {
+          "vehicle": "2026 Ford F-450 Super Duty",
+          "boltPatterns": [
+            "8x170",
+            "8x200"
+          ]
+        },
+        {
+          "vehicle": "2026 RAM 1500",
+          "boltPatterns": [
+            "5x139.7",
+            "6x139.7"
+          ]
+        },
+        {
+          "vehicle": "2025 BMW M4",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2025 BMW X6",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2025 BMW X6 M",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2025 BMW Z4",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2025 Chevrolet equinox",
+          "boltPatterns": [
+            "5x112",
+            "5x115"
+          ]
+        },
+        {
+          "vehicle": "2025 Chevrolet traverse",
+          "boltPatterns": [
+            "5x120",
+            "6x120"
+          ]
+        },
+        {
+          "vehicle": "2025 Ford F-450 Super Duty",
+          "boltPatterns": [
+            "8x170",
+            "8x200"
+          ]
+        },
+        {
+          "vehicle": "2025 Mercedes-Benz G-Class",
+          "boltPatterns": [
+            "5x112",
+            "5x130"
+          ]
+        },
+        {
+          "vehicle": "2025 RAM 1500",
+          "boltPatterns": [
+            "5x139.7",
+            "6x139.7"
+          ]
+        },
+        {
+          "vehicle": "2024 BMW M4",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        },
+        {
+          "vehicle": "2024 BMW X6",
+          "boltPatterns": [
+            "5x112",
+            "5x120"
+          ]
+        }
+      ]
+    },
+    "lowConfidenceSources": [
+      {
+        "source": "tgp_solutions",
+        "count": 50
+      },
+      {
+        "source": "google-ai-overview",
+        "count": 8
+      },
+      {
+        "source": "80s-research-batch",
+        "count": 2
+      }
+    ],
+    "apiHealth": {
+      "/api/vehicles/years": {
+        "status": "ERROR",
+        "error": "fetch failed",
+        "pass": false
+      },
+      "/api/vehicles/makes?year=2024": {
+        "status": "ERROR",
+        "error": "fetch failed",
+        "pass": false
+      },
+      "/api/vehicles/models?year=2024&make=Ford": {
+        "status": "ERROR",
+        "error": "fetch failed",
+        "pass": false
+      },
+      "/api/vehicles/trims?year=2024&make=Ford&model=F-150": {
+        "status": "ERROR",
+        "error": "fetch failed",
+        "pass": false
+      }
+    },
+    "yearCoverage": {
+      "minYear": 1950,
+      "maxYear": 2026,
+      "totalYears": "77"
+    }
+  },
+  "issues": [],
+  "stats": {}
+}

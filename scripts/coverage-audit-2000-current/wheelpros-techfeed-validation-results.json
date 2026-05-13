@@ -1,0 +1,9560 @@
+{
+  "timestamp": "2026-05-13T17:52:47.707Z",
+  "summary": {
+    "total": 8918,
+    "byConfidence": {
+      "HIGH": 6567,
+      "MEDIUM": 2143,
+      "LOW": 208,
+      "NEEDS_REVIEW": 0
+    },
+    "byIssueType": {
+      "OFFSET_RANGE_TOO_STRICT": 8692,
+      "CB_TOO_SMALL": 578,
+      "DIAMETER_NOT_IN_TECHFEED": 1933,
+      "No techfeed wheels found for bolt pattern": 15
+    },
+    "hubRiskCount": 0,
+    "offsetIssueCount": 7517,
+    "noBoltPatternMatchCount": 15
+  },
+  "needsReview": [],
+  "hubRiskVehicles": [],
+  "offsetIssues": [
+    {
+      "vehicle": "2000 Acura cl",
+      "year": 2000,
+      "make": "Acura",
+      "model": "cl",
+      "boltPattern": "4x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -13"
+      ],
+      "techfeedWheelCount": 50,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.06,
+          999
+        ],
+        "offsetRange": [
+          -13,
+          45
+        ],
+        "diameters": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Acura Integra Type-R",
+      "year": 2000,
+      "make": "Acura",
+      "model": "Integra Type-R",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "45.00-55.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Acura integra-type-r",
+      "year": 2000,
+      "make": "Acura",
+      "model": "integra-type-r",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Acura nsx",
+      "year": 2000,
+      "make": "Acura",
+      "model": "nsx",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "50.00-65.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 50.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Acura rl",
+      "year": 2000,
+      "make": "Acura",
+      "model": "rl",
+      "boltPattern": "5x120",
+      "centerBore": "64.1",
+      "offsetRange": "45.00-55.00",
+      "diameters": [
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Acura tl",
+      "year": 2000,
+      "make": "Acura",
+      "model": "tl",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "45.00-55.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi a3",
+      "year": 2000,
+      "make": "Audi",
+      "model": "a3",
+      "boltPattern": "5x100",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-43.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 10"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          56.15,
+          999
+        ],
+        "offsetRange": [
+          10,
+          45
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          22,
+          24
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi a4",
+      "year": 2000,
+      "make": "Audi",
+      "model": "a4",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi a8",
+      "year": 2000,
+      "make": "Audi",
+      "model": "a8",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        18
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi cabriolet",
+      "year": 2000,
+      "make": "Audi",
+      "model": "cabriolet",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi s6",
+      "year": 2000,
+      "make": "Audi",
+      "model": "s6",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi s8",
+      "year": 2000,
+      "make": "Audi",
+      "model": "s8",
+      "boltPattern": "5x112",
+      "centerBore": "66.5",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi tt",
+      "year": 2000,
+      "make": "Audi",
+      "model": "tt",
+      "boltPattern": "5x100",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 10"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          56.15,
+          999
+        ],
+        "offsetRange": [
+          10,
+          45
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          22,
+          24
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 BMW 3 Series",
+      "year": 2000,
+      "make": "BMW",
+      "model": "3 Series",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "35.00-47.00",
+      "diameters": [
+        16,
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 47.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 BMW 5 Series",
+      "year": 2000,
+      "make": "BMW",
+      "model": "5 Series",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "12.00-51.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD max 51.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 BMW M Coupe",
+      "year": 2000,
+      "make": "BMW",
+      "model": "M Coupe",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "30.00-50.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 30.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 50.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 BMW M5",
+      "year": 2000,
+      "make": "BMW",
+      "model": "M5",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "12.00-51.00",
+      "diameters": [
+        19,
+        20
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD max 51.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 BMW X5",
+      "year": 2000,
+      "make": "BMW",
+      "model": "X5",
+      "boltPattern": "5x120",
+      "centerBore": "74.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 50.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 BMW Z3",
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z3",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "30.00-50.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 30.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 50.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 BMW Z8",
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z8",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "30.00-50.00",
+      "diameters": [
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 30.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 50.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Buick lesabre",
+      "year": 2000,
+      "make": "Buick",
+      "model": "lesabre",
+      "boltPattern": "5x115",
+      "centerBore": "70.3",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        6,
+        7,
+        15
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -6",
+        "DIAMETER_NOT_IN_TECHFEED: 6, 7, 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71.5,
+          999
+        ],
+        "offsetRange": [
+          -6,
+          40
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Buick regal",
+      "year": 2000,
+      "make": "Buick",
+      "model": "regal",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "offsetRange": "38.00-50.00",
+      "diameters": [
+        15
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 38.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 50.00 vs TF max 79",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Cadillac escalade",
+      "year": 2000,
+      "make": "Cadillac",
+      "model": "escalade",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "offsetRange": "25.00-45.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 25.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet astro",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "astro",
+      "boltPattern": "5x127",
+      "centerBore": "78.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71,
+          999
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          22
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet blazer",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "blazer",
+      "boltPattern": "5x120.65",
+      "centerBore": "70.3",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          70.3,
+          999
+        ],
+        "offsetRange": [
+          -38,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          11.5,
+          12,
+          12.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet camaro",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "camaro",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "offsetRange": "0.00-59.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD max 59.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet corvette",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "corvette",
+      "boltPattern": "5x120.65",
+      "centerBore": "70.3",
+      "offsetRange": "0.00-59.00",
+      "diameters": [
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 0.00 vs TF min -38",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 59.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          70.3,
+          999
+        ],
+        "offsetRange": [
+          -38,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          11.5,
+          12,
+          12.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet express-1500",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "express-1500",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet impala",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "impala",
+      "boltPattern": "5x115",
+      "centerBore": "70.3",
+      "offsetRange": "38.00-50.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 38.00 vs TF min -6"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71.5,
+          999
+        ],
+        "offsetRange": [
+          -6,
+          40
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet lumina",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "lumina",
+      "boltPattern": "5x115",
+      "centerBore": "70.3",
+      "offsetRange": "38.00-50.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 38.00 vs TF min -6",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71.5,
+          999
+        ],
+        "offsetRange": [
+          -6,
+          40
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet malibu",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "malibu",
+      "boltPattern": "5x115",
+      "centerBore": "70.3",
+      "offsetRange": "38.00-48.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 38.00 vs TF min -6",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71.5,
+          999
+        ],
+        "offsetRange": [
+          -6,
+          40
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet monte-carlo",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "monte-carlo",
+      "boltPattern": "5x115",
+      "centerBore": "70.3",
+      "offsetRange": "38.00-50.00",
+      "diameters": [
+        16,
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 38.00 vs TF min -6"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71.5,
+          999
+        ],
+        "offsetRange": [
+          -6,
+          40
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet silverado-1500",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-1500",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "offsetRange": "0.00-46.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 0.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet silverado-2500",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-2500",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16,
+        17,
+        18,
+        20
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet silverado-2500-hd",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-2500-hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "116.7",
+      "offsetRange": "-12.00-44.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -12.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 44.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet silverado-2500hd",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-2500hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "116.7",
+      "offsetRange": "-12.00-44.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -12.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 44.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet silverado-3500hd",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-3500hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "116.7",
+      "offsetRange": "-12.00-44.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -12.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 44.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet suburban",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "suburban",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "offsetRange": "25.00-46.00",
+      "diameters": [
+        7,
+        8,
+        16
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 25.00 vs TF min -38",
+        "DIAMETER_NOT_IN_TECHFEED: 7, 8"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet suburban-1500",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "suburban-1500",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet suburban-2500",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "suburban-2500",
+      "boltPattern": "5x120",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chevrolet tahoe",
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "tahoe",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "offsetRange": "25.00-46.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 25.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chrysler pt-cruiser",
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "pt-cruiser",
+      "boltPattern": "5x115",
+      "centerBore": "71.5",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -6",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71.5,
+          999
+        ],
+        "offsetRange": [
+          -6,
+          40
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chrysler sebring",
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "sebring",
+      "boltPattern": "5x100",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 10"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          56.15,
+          999
+        ],
+        "offsetRange": [
+          10,
+          45
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          22,
+          24
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chrysler town-and-country",
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "town-and-country",
+      "boltPattern": "5x114.3",
+      "centerBore": "71.5",
+      "offsetRange": "35.00-50.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Chrysler town-country",
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "town-country",
+      "boltPattern": "5x115",
+      "centerBore": "71.5",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -6"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71.5,
+          999
+        ],
+        "offsetRange": [
+          -6,
+          40
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24
+        ],
+        "widths": [
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Daewoo leganza",
+      "year": 2000,
+      "make": "Daewoo",
+      "model": "leganza",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Dodge durango",
+      "year": 2000,
+      "make": "Dodge",
+      "model": "durango",
+      "boltPattern": "6x114.3",
+      "centerBore": "71.5",
+      "offsetRange": "15.00-35.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 15.00 vs TF min -12"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.06,
+          999
+        ],
+        "offsetRange": [
+          -12,
+          38
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          13
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Dodge grand-caravan",
+      "year": 2000,
+      "make": "Dodge",
+      "model": "grand-caravan",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-50.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Dodge ram-1500",
+      "year": 2000,
+      "make": "Dodge",
+      "model": "ram-1500",
+      "boltPattern": "5x139.7",
+      "centerBore": "77.8",
+      "offsetRange": "-12.00-45.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -12.00 vs TF min -90"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          999
+        ],
+        "offsetRange": [
+          -90,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          34
+        ],
+        "widths": [
+          5.5,
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Dodge ram-2500",
+      "year": 2000,
+      "make": "Dodge",
+      "model": "ram-2500",
+      "boltPattern": "8x165.1",
+      "centerBore": "121.3",
+      "offsetRange": "-50.00-60.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -50.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 60.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Dodge ram-3500",
+      "year": 2000,
+      "make": "Dodge",
+      "model": "ram-3500",
+      "boltPattern": "8x165.1",
+      "centerBore": "121.3",
+      "offsetRange": "-50.00-60.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -50.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 60.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Dodge viper",
+      "year": 2000,
+      "make": "Dodge",
+      "model": "viper",
+      "boltPattern": "6x114.3",
+      "centerBore": "71.5",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -12"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.06,
+          999
+        ],
+        "offsetRange": [
+          -12,
+          38
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          13
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford crown-victoria",
+      "year": 2000,
+      "make": "Ford",
+      "model": "crown-victoria",
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16,
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford e-150-econoline",
+      "year": 2000,
+      "make": "Ford",
+      "model": "e-150-econoline",
+      "boltPattern": "5x139.7",
+      "centerBore": "87.0",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -90"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          999
+        ],
+        "offsetRange": [
+          -90,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          34
+        ],
+        "widths": [
+          5.5,
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford e-250-econoline",
+      "year": 2000,
+      "make": "Ford",
+      "model": "e-250-econoline",
+      "boltPattern": "8x165.1",
+      "centerBore": "123.9",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford e-350-econoline",
+      "year": 2000,
+      "make": "Ford",
+      "model": "e-350-econoline",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford escape",
+      "year": 2000,
+      "make": "Ford",
+      "model": "escape",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford escort-zx2",
+      "year": 2000,
+      "make": "Ford",
+      "model": "escort-zx2",
+      "boltPattern": "4x100",
+      "centerBore": "54.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        14,
+        15
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -89",
+        "DIAMETER_NOT_IN_TECHFEED: 14"
+      ],
+      "techfeedWheelCount": 72,
+      "techfeedStats": {
+        "centerBoreRange": [
+          57.1,
+          999
+        ],
+        "offsetRange": [
+          -89,
+          48
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford excursion",
+      "year": 2000,
+      "make": "Ford",
+      "model": "excursion",
+      "boltPattern": "8x170",
+      "centerBore": "124.9",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -72",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 145",
+        "DIAMETER_NOT_IN_TECHFEED: 16"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          125,
+          999
+        ],
+        "offsetRange": [
+          -72,
+          145
+        ],
+        "diameters": [
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          195
+        ],
+        "widths": [
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          11.5,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford expedition",
+      "year": 2000,
+      "make": "Ford",
+      "model": "expedition",
+      "boltPattern": "5x135",
+      "centerBore": "87.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 10.00 vs TF min -69"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          87,
+          999
+        ],
+        "offsetRange": [
+          -69,
+          20
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford explorer",
+      "year": 2000,
+      "make": "Ford",
+      "model": "explorer",
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5",
+      "offsetRange": "35.00-50.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford f-150",
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150",
+      "boltPattern": "6x135",
+      "centerBore": "87.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 10.00 vs TF min -72"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          87.1,
+          106.1
+        ],
+        "offsetRange": [
+          -72,
+          44
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          11.5,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford f-250",
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-250",
+      "boltPattern": "8x170",
+      "centerBore": "124.9",
+      "offsetRange": "25.00-60.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 25.00 vs TF min -72",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 60.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          125,
+          999
+        ],
+        "offsetRange": [
+          -72,
+          145
+        ],
+        "diameters": [
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          195
+        ],
+        "widths": [
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          11.5,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford f-350",
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-350",
+      "boltPattern": "8x170",
+      "centerBore": "124.9",
+      "offsetRange": "25.00-60.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 25.00 vs TF min -72",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 60.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          125,
+          999
+        ],
+        "offsetRange": [
+          -72,
+          145
+        ],
+        "diameters": [
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          195
+        ],
+        "widths": [
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          11.5,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford f-450-super-duty",
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford fiesta",
+      "year": 2000,
+      "make": "Ford",
+      "model": "fiesta",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford focus",
+      "year": 2000,
+      "make": "Ford",
+      "model": "focus",
+      "boltPattern": "4x108",
+      "centerBore": "63.4",
+      "offsetRange": "40.00-52.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -13"
+      ],
+      "techfeedWheelCount": 35,
+      "techfeedStats": {
+        "centerBoreRange": [
+          62.3,
+          999
+        ],
+        "offsetRange": [
+          -13,
+          60
+        ],
+        "diameters": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          20
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford mustang",
+      "year": 2000,
+      "make": "Ford",
+      "model": "mustang",
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5",
+      "offsetRange": "24.00-45.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 24.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford ranger",
+      "year": 2000,
+      "make": "Ford",
+      "model": "ranger",
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford taurus",
+      "year": 2000,
+      "make": "Ford",
+      "model": "taurus",
+      "boltPattern": "5x108",
+      "centerBore": "63.4",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -51"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          63.36,
+          999
+        ],
+        "offsetRange": [
+          -51,
+          45
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Geo metro",
+      "year": 2000,
+      "make": "Geo",
+      "model": "metro",
+      "boltPattern": "4x100",
+      "centerBore": "54.0",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        13,
+        14
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -89",
+        "DIAMETER_NOT_IN_TECHFEED: 13, 14"
+      ],
+      "techfeedWheelCount": 72,
+      "techfeedStats": {
+        "centerBoreRange": [
+          57.1,
+          999
+        ],
+        "offsetRange": [
+          -89,
+          48
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Geo prizm",
+      "year": 2000,
+      "make": "Geo",
+      "model": "prizm",
+      "boltPattern": "4x100",
+      "centerBore": "54.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        14,
+        15
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -89",
+        "DIAMETER_NOT_IN_TECHFEED: 14"
+      ],
+      "techfeedWheelCount": 72,
+      "techfeedStats": {
+        "centerBoreRange": [
+          57.1,
+          999
+        ],
+        "offsetRange": [
+          -89,
+          48
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 GMC sierra-1500",
+      "year": 2000,
+      "make": "GMC",
+      "model": "sierra-1500",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "offsetRange": "0.00-46.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 0.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 GMC sierra-2500hd",
+      "year": 2000,
+      "make": "GMC",
+      "model": "sierra-2500hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "116.7",
+      "offsetRange": "-12.00-44.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -12.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 44.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 GMC sierra-3500hd",
+      "year": 2000,
+      "make": "GMC",
+      "model": "sierra-3500hd",
+      "boltPattern": "8x165.1",
+      "centerBore": "116.7",
+      "offsetRange": "-12.00-44.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -12.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 44.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 GMC yukon",
+      "year": 2000,
+      "make": "GMC",
+      "model": "yukon",
+      "boltPattern": "6x139.7",
+      "centerBore": "78.1",
+      "offsetRange": "25.00-46.00",
+      "diameters": [
+        7,
+        8,
+        16
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 25.00 vs TF min -38",
+        "DIAMETER_NOT_IN_TECHFEED: 7, 8"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda accord",
+      "year": 2000,
+      "make": "Honda",
+      "model": "accord",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "40.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda civic",
+      "year": 2000,
+      "make": "Honda",
+      "model": "civic",
+      "boltPattern": "4x100",
+      "centerBore": "56.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        14
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -89",
+        "DIAMETER_NOT_IN_TECHFEED: 14"
+      ],
+      "techfeedWheelCount": 72,
+      "techfeedStats": {
+        "centerBoreRange": [
+          57.1,
+          999
+        ],
+        "offsetRange": [
+          -89,
+          48
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda cr-v",
+      "year": 2000,
+      "make": "Honda",
+      "model": "cr-v",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "40.00-55.00",
+      "diameters": [
+        15
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda insight",
+      "year": 2000,
+      "make": "Honda",
+      "model": "insight",
+      "boltPattern": "4x100",
+      "centerBore": "56.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        14
+      ],
+      "confidence": "MEDIUM",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -89",
+        "DIAMETER_NOT_IN_TECHFEED: 14"
+      ],
+      "techfeedWheelCount": 72,
+      "techfeedStats": {
+        "centerBoreRange": [
+          57.1,
+          999
+        ],
+        "offsetRange": [
+          -89,
+          48
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda odyssey",
+      "year": 2000,
+      "make": "Honda",
+      "model": "odyssey",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "45.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda passport",
+      "year": 2000,
+      "make": "Honda",
+      "model": "passport",
+      "boltPattern": "6x139.7",
+      "centerBore": "100.1",
+      "offsetRange": "25.00-45.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 25.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda prelude",
+      "year": 2000,
+      "make": "Honda",
+      "model": "prelude",
+      "boltPattern": "5x114.3",
+      "centerBore": "64.1",
+      "offsetRange": "50.00-60.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 50.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Honda s2000",
+      "year": 2000,
+      "make": "Honda",
+      "model": "s2000",
+      "boltPattern": "5x114.3",
+      "centerBore": "70.1",
+      "offsetRange": "40.00-70.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Hummer H1",
+      "year": 2000,
+      "make": "Hummer",
+      "model": "H1",
+      "boltPattern": "8x165.1",
+      "centerBore": "117.0",
+      "offsetRange": "-50.00--30.00",
+      "diameters": [
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -50.00 vs TF min -76",
+        "OFFSET_RANGE_TOO_STRICT: WTD max -30.00 vs TF max 145"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          117,
+          999
+        ],
+        "offsetRange": [
+          -76,
+          145
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          195,
+          225
+        ],
+        "widths": [
+          6.5,
+          6.75,
+          8.25,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Hyundai elantra",
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "elantra",
+      "boltPattern": "4x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "38.00-48.00",
+      "diameters": [
+        15
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 38.00 vs TF min -13"
+      ],
+      "techfeedWheelCount": 50,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.06,
+          999
+        ],
+        "offsetRange": [
+          -13,
+          45
+        ],
+        "diameters": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Hyundai santa-fe",
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "santa-fe",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Hyundai sonata",
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "sonata",
+      "boltPattern": "4x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-46.00",
+      "diameters": [
+        14,
+        15
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -13"
+      ],
+      "techfeedWheelCount": 50,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.06,
+          999
+        ],
+        "offsetRange": [
+          -13,
+          45
+        ],
+        "diameters": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Hyundai tiburon",
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "tiburon",
+      "boltPattern": "4x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -13"
+      ],
+      "techfeedWheelCount": 50,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.06,
+          999
+        ],
+        "offsetRange": [
+          -13,
+          45
+        ],
+        "diameters": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Hyundai tiburon-turbulence",
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "tiburon-turbulence",
+      "boltPattern": "4x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        14,
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -13"
+      ],
+      "techfeedWheelCount": 50,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.06,
+          999
+        ],
+        "offsetRange": [
+          -13,
+          45
+        ],
+        "diameters": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Isuzu rodeo",
+      "year": 2000,
+      "make": "Isuzu",
+      "model": "rodeo",
+      "boltPattern": "6x139.7",
+      "centerBore": "106.0",
+      "offsetRange": "15.00-35.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 15.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Isuzu trooper",
+      "year": 2000,
+      "make": "Isuzu",
+      "model": "trooper",
+      "boltPattern": "6x139.7",
+      "centerBore": "106.0",
+      "offsetRange": "10.00-30.00",
+      "diameters": [
+        16,
+        17
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 10.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          78.1,
+          112.1
+        ],
+        "offsetRange": [
+          -38,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26
+        ],
+        "widths": [
+          6,
+          7.5,
+          8,
+          8.5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Jaguar s-type",
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "s-type",
+      "boltPattern": "5x108",
+      "centerBore": "63.4",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        16,
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -51"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          63.36,
+          999
+        ],
+        "offsetRange": [
+          -51,
+          45
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Jaguar xj",
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "xj",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17,
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Jeep cherokee",
+      "year": 2000,
+      "make": "Jeep",
+      "model": "cherokee",
+      "boltPattern": "5x114.3",
+      "centerBore": "71.5",
+      "offsetRange": "0.00-35.00",
+      "diameters": [
+        15
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 0.00 vs TF min -38",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 35.00 vs TF max 50"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Jeep grand-cherokee",
+      "year": 2000,
+      "make": "Jeep",
+      "model": "grand-cherokee",
+      "boltPattern": "5x127",
+      "centerBore": "71.5",
+      "offsetRange": "-25.00-56.40",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -25.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          71,
+          999
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          22
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Jeep wrangler",
+      "year": 2000,
+      "make": "Jeep",
+      "model": "wrangler",
+      "boltPattern": "5x114.3",
+      "centerBore": "71.5",
+      "offsetRange": "-25.00-55.00",
+      "diameters": [
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min -25.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Kia sportage",
+      "year": 2000,
+      "make": "Kia",
+      "model": "sportage",
+      "boltPattern": "5x139.7",
+      "centerBore": "95.3",
+      "offsetRange": "0.00-30.00",
+      "diameters": [
+        15
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 0.00 vs TF min -90"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          999
+        ],
+        "offsetRange": [
+          -90,
+          35
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          20,
+          22,
+          24,
+          26,
+          34
+        ],
+        "widths": [
+          5.5,
+          7,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Land Rover defender",
+      "year": 2000,
+      "make": "Land Rover",
+      "model": "defender",
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        18
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 15",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 55.00 vs TF max 79"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          78.1
+        ],
+        "offsetRange": [
+          15,
+          79
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5,
+          11
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Lexus es",
+      "year": 2000,
+      "make": "Lexus",
+      "model": "es",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "offsetRange": "35.00-50.00",
+      "diameters": [
+        15,
+        16
+      ],
+      "confidence": "HIGH",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    }
+  ],
+  "lowConfidence": [
+    {
+      "vehicle": "2000 Audi a4",
+      "year": 2000,
+      "make": "Audi",
+      "model": "a4",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Audi cabriolet",
+      "year": 2000,
+      "make": "Audi",
+      "model": "cabriolet",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Ford f-450-super-duty",
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Volkswagen eurovan",
+      "year": 2000,
+      "make": "Volkswagen",
+      "model": "eurovan",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        14,
+        15,
+        16
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 14, 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2000 Volkswagen passat",
+      "year": 2000,
+      "make": "Volkswagen",
+      "model": "passat",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2001 Audi a4",
+      "year": 2001,
+      "make": "Audi",
+      "model": "a4",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2001 Ford f-450-super-duty",
+      "year": 2001,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2001 Volkswagen eurovan",
+      "year": 2001,
+      "make": "Volkswagen",
+      "model": "eurovan",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        14,
+        15,
+        16
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 14, 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2001 Volkswagen passat",
+      "year": 2001,
+      "make": "Volkswagen",
+      "model": "passat",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2002 Ford f-450-super-duty",
+      "year": 2002,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2002 Volkswagen eurovan",
+      "year": 2002,
+      "make": "Volkswagen",
+      "model": "eurovan",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        14,
+        15,
+        16
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 14, 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2002 Volkswagen passat",
+      "year": 2002,
+      "make": "Volkswagen",
+      "model": "passat",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2003 Ford f-450-super-duty",
+      "year": 2003,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2003 Ford mustang-mach-1",
+      "year": 2003,
+      "make": "Ford",
+      "model": "mustang-mach-1",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2003 Volkswagen eurovan",
+      "year": 2003,
+      "make": "Volkswagen",
+      "model": "eurovan",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        14,
+        15,
+        16
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 14, 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2003 Volkswagen passat",
+      "year": 2003,
+      "make": "Volkswagen",
+      "model": "passat",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2004 Ford f-450-super-duty",
+      "year": 2004,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2004 Ford mustang-mach-1",
+      "year": 2004,
+      "make": "Ford",
+      "model": "mustang-mach-1",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2004 Volkswagen eurovan",
+      "year": 2004,
+      "make": "Volkswagen",
+      "model": "eurovan",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        14,
+        15,
+        16
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 14, 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2004 Volkswagen passat",
+      "year": 2004,
+      "make": "Volkswagen",
+      "model": "passat",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2005 Ford f-450-super-duty",
+      "year": 2005,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2005 Volkswagen passat",
+      "year": 2005,
+      "make": "Volkswagen",
+      "model": "passat",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-45.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2005 Volkswagen touareg",
+      "year": 2005,
+      "make": "Volkswagen",
+      "model": "touareg",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 21"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2006 Audi s6",
+      "year": 2006,
+      "make": "Audi",
+      "model": "s6",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        18,
+        19,
+        21
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 21"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2006 Ford f-450-super-duty",
+      "year": 2006,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2006 Volkswagen golf",
+      "year": 2006,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2006 Volkswagen jetta",
+      "year": 2006,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2006 Volkswagen rabbit",
+      "year": 2006,
+      "make": "Volkswagen",
+      "model": "rabbit",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2006 Volkswagen touareg",
+      "year": 2006,
+      "make": "Volkswagen",
+      "model": "touareg",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 21"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2007 Ford f-450-super-duty",
+      "year": 2007,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2007 Volkswagen golf",
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2007 Volkswagen jetta",
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2007 Volkswagen rabbit",
+      "year": 2007,
+      "make": "Volkswagen",
+      "model": "rabbit",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2008 Ford f-450-super-duty",
+      "year": 2008,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2008 Ford mustang-shelby-gt500",
+      "year": 2008,
+      "make": "Ford",
+      "model": "mustang-shelby-gt500",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2008 Volkswagen golf",
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2008 Volkswagen jetta",
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2008 Volkswagen rabbit",
+      "year": 2008,
+      "make": "Volkswagen",
+      "model": "rabbit",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2009 Ford f-450-super-duty",
+      "year": 2009,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2009 Ford mustang-shelby-gt500",
+      "year": 2009,
+      "make": "Ford",
+      "model": "mustang-shelby-gt500",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2009 Volkswagen golf",
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-50.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2009 Volkswagen jetta",
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2009 Volkswagen rabbit",
+      "year": 2009,
+      "make": "Volkswagen",
+      "model": "rabbit",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2010 Ford f-450-super-duty",
+      "year": 2010,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2010 Ford mustang-shelby-gt500",
+      "year": 2010,
+      "make": "Ford",
+      "model": "mustang-shelby-gt500",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2010 Volkswagen golf",
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2010 Volkswagen jetta",
+      "year": 2010,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2011 Audi s8",
+      "year": 2011,
+      "make": "Audi",
+      "model": "s8",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        19,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 21, 22"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2011 Ford f-450-super-duty",
+      "year": 2011,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2011 Ford mustang-shelby-gt350",
+      "year": 2011,
+      "make": "Ford",
+      "model": "mustang-shelby-gt350",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2011 Ford mustang-shelby-gt500",
+      "year": 2011,
+      "make": "Ford",
+      "model": "mustang-shelby-gt500",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2011 Volkswagen golf",
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2011 Volkswagen jetta",
+      "year": 2011,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2012 Audi s6",
+      "year": 2012,
+      "make": "Audi",
+      "model": "s6",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        18,
+        19,
+        21
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 21"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2012 Audi s8",
+      "year": 2012,
+      "make": "Audi",
+      "model": "s8",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [
+        19,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 21, 22"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2012 Ford f-450-super-duty",
+      "year": 2012,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2012 Ford mustang-shelby-gt350",
+      "year": 2012,
+      "make": "Ford",
+      "model": "mustang-shelby-gt350",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2012 Ford mustang-shelby-gt500",
+      "year": 2012,
+      "make": "Ford",
+      "model": "mustang-shelby-gt500",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2012 Volkswagen golf",
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2012 Volkswagen jetta",
+      "year": 2012,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2013 Ford f-450-super-duty",
+      "year": 2013,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2013 Ford mustang-shelby-gt350",
+      "year": 2013,
+      "make": "Ford",
+      "model": "mustang-shelby-gt350",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2013 Ford mustang-shelby-gt500",
+      "year": 2013,
+      "make": "Ford",
+      "model": "mustang-shelby-gt500",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2013 Infiniti q60",
+      "year": 2013,
+      "make": "Infiniti",
+      "model": "q60",
+      "boltPattern": "5x114.3",
+      "centerBore": "66.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2013 Volkswagen golf",
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2013 Volkswagen jetta",
+      "year": 2013,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2014 Ford f-450-super-duty",
+      "year": 2014,
+      "make": "Ford",
+      "model": "f-450-super-duty",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2014 Ford mustang-shelby-gt500",
+      "year": 2014,
+      "make": "Ford",
+      "model": "mustang-shelby-gt500",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2014 Subaru wrx-sti",
+      "year": 2014,
+      "make": "Subaru",
+      "model": "wrx-sti",
+      "boltPattern": "5x114.3",
+      "centerBore": "56.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 56.1mm < min techfeed CB 64.15mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2014 Volkswagen golf",
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2014 Volkswagen jetta",
+      "year": 2014,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2015 Lexus rc-f",
+      "year": 2015,
+      "make": "Lexus",
+      "model": "rc-f",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2015 Volkswagen golf",
+      "year": 2015,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "43.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 43.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2015 Volkswagen jetta",
+      "year": 2015,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2016 Ford mustang-shelby-gt350",
+      "year": 2016,
+      "make": "Ford",
+      "model": "mustang-shelby-gt350",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2016 Lexus rc-f",
+      "year": 2016,
+      "make": "Lexus",
+      "model": "rc-f",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2016 Volkswagen golf",
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "43.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 43.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2016 Volkswagen jetta",
+      "year": 2016,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2017 Ford mustang-shelby-gt350",
+      "year": 2017,
+      "make": "Ford",
+      "model": "mustang-shelby-gt350",
+      "boltPattern": "5x114.3",
+      "centerBore": "67.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2017 Lexus rc-f",
+      "year": 2017,
+      "make": "Lexus",
+      "model": "rc-f",
+      "boltPattern": "5x114.3",
+      "centerBore": "60.1",
+      "offsetRange": "35.00-55.00",
+      "diameters": [],
+      "confidence": "LOW",
+      "issues": [
+        "OFFSET_RANGE_TOO_STRICT: WTD min 35.00 vs TF min -38"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          64.15,
+          83.7
+        ],
+        "offsetRange": [
+          -38,
+          50
+        ],
+        "diameters": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2017 Volkswagen golf",
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "golf",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "43.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 43.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2017 Volkswagen jetta",
+      "year": 2017,
+      "make": "Volkswagen",
+      "model": "jetta",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "40.00-51.00",
+      "diameters": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 40.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 15"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Alfa Romeo 4C",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "boltPattern": "5x98",
+      "centerBore": "58.1",
+      "offsetRange": "33.00-33.00",
+      "diameters": [
+        7
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Aston Martin DB11",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "boltPattern": "5x128",
+      "centerBore": "75.1",
+      "offsetRange": "50.00-50.00",
+      "diameters": [
+        9
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Aston Martin Rapide",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Rapide",
+      "boltPattern": "5x128",
+      "centerBore": "75.1",
+      "offsetRange": "50.00-50.00",
+      "diameters": [
+        11
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Aston Martin Vanquish",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "boltPattern": "5x128",
+      "centerBore": "75.1",
+      "offsetRange": "62.00-62.00",
+      "diameters": [
+        11
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Audi A3",
+      "year": 2018,
+      "make": "Audi",
+      "model": "A3",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "45.00-45.00",
+      "diameters": [
+        7
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 7"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi A3 Quattro",
+      "year": 2018,
+      "make": "Audi",
+      "model": "A3 Quattro",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "45.00-45.00",
+      "diameters": [
+        7
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 7"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi A3 Sportback e-tron",
+      "year": 2018,
+      "make": "Audi",
+      "model": "A3 Sportback e-tron",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "45.00-45.00",
+      "diameters": [
+        7
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 7"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi Q3",
+      "year": 2018,
+      "make": "Audi",
+      "model": "Q3",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "43.00-43.00",
+      "diameters": [
+        7,
+        8
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 43.00 vs TF min 20",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 43.00 vs TF max 54",
+        "DIAMETER_NOT_IN_TECHFEED: 7, 8"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi Q3 Quattro",
+      "year": 2018,
+      "make": "Audi",
+      "model": "Q3 Quattro",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "43.00-43.00",
+      "diameters": [
+        7,
+        8
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 43.00 vs TF min 20",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 43.00 vs TF max 54",
+        "DIAMETER_NOT_IN_TECHFEED: 7, 8"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi R8",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "42.00-42.00",
+      "diameters": [
+        8
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 42.00 vs TF min 20",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 42.00 vs TF max 54",
+        "DIAMETER_NOT_IN_TECHFEED: 8"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi RS3",
+      "year": 2018,
+      "make": "Audi",
+      "model": "RS3",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "45.00-45.00",
+      "diameters": [
+        8
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 8"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi S3",
+      "year": 2018,
+      "make": "Audi",
+      "model": "S3",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "45.00-45.00",
+      "diameters": [
+        7,
+        8
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 45.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 7, 8"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi TT Quattro",
+      "year": 2018,
+      "make": "Audi",
+      "model": "TT Quattro",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "50.00-50.00",
+      "diameters": [
+        8,
+        9
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 50.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 8, 9"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi TT RS Quattro",
+      "year": 2018,
+      "make": "Audi",
+      "model": "TT RS Quattro",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "50.00-50.00",
+      "diameters": [
+        9
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 50.00 vs TF min 20",
+        "DIAMETER_NOT_IN_TECHFEED: 9"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Audi TTS Quattro",
+      "year": 2018,
+      "make": "Audi",
+      "model": "TTS Quattro",
+      "boltPattern": "5x112",
+      "centerBore": "57.1",
+      "offsetRange": "32.00-32.00",
+      "diameters": [
+        9
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.1mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 32.00 vs TF min 20",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 32.00 vs TF max 54",
+        "DIAMETER_NOT_IN_TECHFEED: 9"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Bentley Continental",
+      "year": 2018,
+      "make": "Bentley",
+      "model": "Continental",
+      "boltPattern": "5x112",
+      "centerBore": "57.0",
+      "offsetRange": "41.00-41.00",
+      "diameters": [
+        9
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.0mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 41.00 vs TF min 20",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 41.00 vs TF max 54",
+        "DIAMETER_NOT_IN_TECHFEED: 9"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Bentley Flying Spur",
+      "year": 2018,
+      "make": "Bentley",
+      "model": "Flying Spur",
+      "boltPattern": "5x112",
+      "centerBore": "57.0",
+      "offsetRange": "41.00-41.00",
+      "diameters": [
+        9
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "CB_TOO_SMALL: WTD CB 57.0mm < min techfeed CB 66.56mm",
+        "OFFSET_RANGE_TOO_STRICT: WTD min 41.00 vs TF min 20",
+        "OFFSET_RANGE_TOO_STRICT: WTD max 41.00 vs TF max 54",
+        "DIAMETER_NOT_IN_TECHFEED: 9"
+      ],
+      "techfeedWheelCount": 200,
+      "techfeedStats": {
+        "centerBoreRange": [
+          66.56,
+          72.56
+        ],
+        "offsetRange": [
+          20,
+          54
+        ],
+        "diameters": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "widths": [
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10,
+          10.5
+        ]
+      }
+    },
+    {
+      "vehicle": "2018 Chevrolet Corvette",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "boltPattern": "5x120.7",
+      "centerBore": "70.3",
+      "offsetRange": "55.00-55.00",
+      "diameters": [
+        10
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    }
+  ],
+  "noBoltPatternMatch": [
+    {
+      "vehicle": "2018 Alfa Romeo 4C",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "boltPattern": "5x98",
+      "centerBore": "58.1",
+      "offsetRange": "33.00-33.00",
+      "diameters": [
+        7
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Aston Martin DB11",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "boltPattern": "5x128",
+      "centerBore": "75.1",
+      "offsetRange": "50.00-50.00",
+      "diameters": [
+        9
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Aston Martin Rapide",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Rapide",
+      "boltPattern": "5x128",
+      "centerBore": "75.1",
+      "offsetRange": "50.00-50.00",
+      "diameters": [
+        11
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Aston Martin Vanquish",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "boltPattern": "5x128",
+      "centerBore": "75.1",
+      "offsetRange": "62.00-62.00",
+      "diameters": [
+        11
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Chevrolet Corvette",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "boltPattern": "5x120.7",
+      "centerBore": "70.3",
+      "offsetRange": "55.00-55.00",
+      "diameters": [
+        10
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 Fiat 500L",
+      "year": 2018,
+      "make": "Fiat",
+      "model": "500L",
+      "boltPattern": "5x98",
+      "centerBore": "58.1",
+      "offsetRange": "35.00-35.00",
+      "diameters": [
+        6
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2018 RAM Minivans ProMaster City",
+      "year": 2018,
+      "make": "RAM Minivans",
+      "model": "ProMaster City",
+      "boltPattern": "5x98",
+      "centerBore": "58.1",
+      "offsetRange": "35.00-35.00",
+      "diameters": [
+        6
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2022 Rivian r1s",
+      "year": 2022,
+      "make": "Rivian",
+      "model": "r1s",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2022 Rivian r1t",
+      "year": 2022,
+      "make": "Rivian",
+      "model": "r1t",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2023 Rivian r1s",
+      "year": 2023,
+      "make": "Rivian",
+      "model": "r1s",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2023 Rivian r1t",
+      "year": 2023,
+      "make": "Rivian",
+      "model": "r1t",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2025 Rivian r1s",
+      "year": 2025,
+      "make": "Rivian",
+      "model": "r1s",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2025 Rivian r1t",
+      "year": 2025,
+      "make": "Rivian",
+      "model": "r1t",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2026 Rivian r1s",
+      "year": 2026,
+      "make": "Rivian",
+      "model": "r1s",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    },
+    {
+      "vehicle": "2026 Rivian r1t",
+      "year": 2026,
+      "make": "Rivian",
+      "model": "r1t",
+      "boltPattern": "5x135.5",
+      "centerBore": "84.1",
+      "offsetRange": "10.00-35.00",
+      "diameters": [
+        20,
+        21,
+        22
+      ],
+      "confidence": "LOW",
+      "issues": [
+        "No techfeed wheels found for bolt pattern"
+      ],
+      "techfeedWheelCount": 0
+    }
+  ]
+}

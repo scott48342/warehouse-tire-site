@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-05-13T17:50:12.054Z",
+  "summary": {
+    "wtdTotal": 8918,
+    "usafWithEnrichmentData": 2430,
+    "exactMatch": 0,
+    "partialMatch": 2416,
+    "usafOnlyWithSiblings": 0,
+    "usafOnlyNoSiblings": 0,
+    "wheelSpecHigh": 2429,
+    "wheelSpecMedium": 0,
+    "wheelSpecLow": 1,
+    "wheelSpecMissing": 0
+  },
+  "candidateMissingVehicles": [],
+  "usafOnlyNoSiblings": [],
+  "lowestConfidenceVehicles": [
+    {
+      "vehicle": "2011 Chevrolet Silverado 3500 HD",
+      "boltPattern": "8x180",
+      "centerBore": null,
+      "issue": "Incomplete wheel specs"
+    }
+  ]
+}

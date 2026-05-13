@@ -1,0 +1,3539 @@
+{
+  "timestamp": "2026-05-13T17:36:26.486Z",
+  "batchId": "batch1",
+  "vehicleCount": 25,
+  "snapshots": [
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "canyon",
+      "fitments": [
+        {
+          "id": "ce51d610-c2c2-42a4-aa62-cb5dbddfe622",
+          "display_trim": "Denali",
+          "raw_trim": "Denali",
+          "oem_tire_sizes": [
+            "245/75R16",
+            "255/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            "7Jx16",
+            "7Jx17",
+            "8Jx18",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 24,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 26,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": false,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x120",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "22.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "6f4dd6d2-a86e-43d3-a191-b58035568301",
+          "display_trim": "Elevation, AT4, AT4X, Denali",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "245/75R16",
+            "255/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            "7Jx16",
+            "7Jx17",
+            "8Jx18",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 24,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 26,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": false,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x120",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "22.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "cef3b579-9d76-41d5-bbe7-0cc5176c6ba3",
+          "display_trim": "Elevation",
+          "raw_trim": "Elevation",
+          "oem_tire_sizes": [
+            "245/75R16",
+            "255/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            "7Jx16",
+            "7Jx17",
+            "8Jx18",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 24,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 26,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": false,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x120",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "22.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "5c083d21-af6e-4e57-895c-7b579c6311a5",
+          "display_trim": "AT4",
+          "raw_trim": "AT4",
+          "oem_tire_sizes": [
+            "245/75R16",
+            "255/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            "7Jx16",
+            "7Jx17",
+            "8Jx18",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 24,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 26,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": false,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x120",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "22.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "3f9eb375-a716-4ad0-ac1e-bf8408259a26",
+          "display_trim": "AT4X",
+          "raw_trim": "AT4X",
+          "oem_tire_sizes": [
+            "245/75R16",
+            "255/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            "7Jx16",
+            "7Jx17",
+            "8Jx18",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 24,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 26,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 28,
+              "isStock": false,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x120",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "22.00",
+          "offset_max_mm": "45.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Genesis",
+      "model": "g90",
+      "fitments": [
+        {
+          "id": "ec33c128-92bf-47c8-83ab-499065024705",
+          "display_trim": "3.3T",
+          "raw_trim": "3.3T",
+          "oem_tire_sizes": [
+            "245/45R19",
+            "265/40R20",
+            "295/35R20",
+            "265/35R21",
+            "295/30R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 19
+            },
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "5da40044-01a8-40e3-b27f-b5f73e36d2ae",
+          "display_trim": "Ultimate",
+          "raw_trim": "Ultimate",
+          "oem_tire_sizes": [
+            "245/45R19",
+            "265/40R20",
+            "295/35R20",
+            "265/35R21",
+            "295/30R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 19
+            },
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "efdccb4a-c634-4bc0-b610-3a7fe3ed4803",
+          "display_trim": "5.0",
+          "raw_trim": "5.0",
+          "oem_tire_sizes": [
+            "245/45R19",
+            "265/40R20",
+            "295/35R20",
+            "265/35R21",
+            "295/30R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 19
+            },
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "53270091-374d-4d98-9a83-bdca5e59f29c",
+          "display_trim": "3.3T, 5.0, Ultimate",
+          "raw_trim": null,
+          "oem_tire_sizes": [
+            "245/45R19",
+            "265/40R20",
+            "295/35R20",
+            "265/35R21",
+            "295/30R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 19
+            },
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Cadillac",
+      "model": "vistiq",
+      "fitments": [
+        {
+          "id": "bc793cbf-c83e-475d-a1d2-a5730d8414c1",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "265/40R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9.5,
+              "offset": 40,
+              "diameter": 21,
+              "position": "both"
+            },
+            {
+              "width": 9.5,
+              "offset": 40,
+              "diameter": 22,
+              "position": "both"
+            },
+            {
+              "width": 9.5,
+              "offset": 40,
+              "diameter": 23,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "6x132",
+          "center_bore_mm": "66.9",
+          "offset_min_mm": "35.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "f-150",
+      "fitments": [
+        {
+          "id": "e9356a9d-5be3-4825-9be4-e5d6c6ec4321",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "265/70R17",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "32.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "73033caf-3f0c-4a03-9b6f-71421eb9861d",
+          "display_trim": "Lightning",
+          "raw_trim": "Lightning",
+          "oem_tire_sizes": [
+            "265/70R17",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "1c33f0d7-8356-4a33-a8fd-b1c6ba0d265d",
+          "display_trim": "Platinum",
+          "raw_trim": "Platinum",
+          "oem_tire_sizes": [
+            "275/60R20",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "8c444aca-0eef-4523-9a6c-425f53c1c6e5",
+          "display_trim": "Raptor R",
+          "raw_trim": "Raptor R",
+          "oem_tire_sizes": [
+            "315/70R17",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "8f2d4d7f-2114-4ba9-ad71-07cad4e58e91",
+          "display_trim": "King Ranch",
+          "raw_trim": "King Ranch",
+          "oem_tire_sizes": [
+            "275/60R20",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "f92371fa-890d-40ec-a6d0-1e98a094e1b4",
+          "display_trim": "XL",
+          "raw_trim": "XL",
+          "oem_tire_sizes": [
+            "265/70R17",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "03d0621f-c808-447e-9f2a-4b269c083cec",
+          "display_trim": "Lariat",
+          "raw_trim": "Lariat",
+          "oem_tire_sizes": [
+            "275/60R20",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "775b2e9b-1ce0-4a0f-a37b-d31e240cb783",
+          "display_trim": "XLT",
+          "raw_trim": "XLT",
+          "oem_tire_sizes": [
+            "265/60R18",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "5d00f95a-c3f8-482f-957a-b40ad8c6d213",
+          "display_trim": "Raptor",
+          "raw_trim": "Raptor",
+          "oem_tire_sizes": [
+            "315/70R17",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "4f1b1f80-5ff3-455f-a810-c720286ee72d",
+          "display_trim": "Tremor",
+          "raw_trim": "Tremor",
+          "oem_tire_sizes": [
+            "275/70R18",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        },
+        {
+          "id": "50f0a96a-0cf8-468a-8302-f93ccb64f878",
+          "display_trim": "Limited",
+          "raw_trim": "Limited",
+          "oem_tire_sizes": [
+            "275/50R22",
+            "275/65R18",
+            "245/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x135",
+          "center_bore_mm": "87.1",
+          "offset_min_mm": "25.00",
+          "offset_max_mm": "46.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Ford",
+      "model": "ranger",
+      "fitments": [
+        {
+          "id": "a90001aa-6102-492f-82a1-5c24584ff918",
+          "display_trim": "Lariat",
+          "raw_trim": "Lariat",
+          "oem_tire_sizes": [
+            "255/70R16",
+            "265/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "93.1",
+          "offset_min_mm": "20.00",
+          "offset_max_mm": "50.00"
+        },
+        {
+          "id": "31ac24b0-42f7-4cd8-bcd6-bea45f920504",
+          "display_trim": "XL",
+          "raw_trim": "XL",
+          "oem_tire_sizes": [
+            "255/70R16",
+            "265/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "93.1",
+          "offset_min_mm": "20.00",
+          "offset_max_mm": "50.00"
+        },
+        {
+          "id": "79e929f6-a545-476c-9a22-ec784d813653",
+          "display_trim": "Raptor",
+          "raw_trim": "Raptor",
+          "oem_tire_sizes": [
+            "255/70R16",
+            "265/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "93.1",
+          "offset_min_mm": "20.00",
+          "offset_max_mm": "50.00"
+        },
+        {
+          "id": "b94fddbc-9b60-4abc-9d43-e1425f6a8189",
+          "display_trim": "Tremor",
+          "raw_trim": "Tremor",
+          "oem_tire_sizes": [
+            "255/70R16",
+            "265/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "93.1",
+          "offset_min_mm": "20.00",
+          "offset_max_mm": "50.00"
+        },
+        {
+          "id": "a13af37c-fcbd-407a-97f0-85b1838ff7f5",
+          "display_trim": "XL, XLT, Lariat, Tremor, Raptor",
+          "raw_trim": null,
+          "oem_tire_sizes": [
+            "255/70R16",
+            "265/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "93.1",
+          "offset_min_mm": "20.00",
+          "offset_max_mm": "50.00"
+        },
+        {
+          "id": "2b7847d2-153e-499a-80b7-051fdb7a181e",
+          "display_trim": "XLT",
+          "raw_trim": "XLT",
+          "oem_tire_sizes": [
+            "255/70R16",
+            "265/65R17",
+            "265/60R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "93.1",
+          "offset_min_mm": "20.00",
+          "offset_max_mm": "50.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "GMC",
+      "model": "terrain",
+      "fitments": [
+        {
+          "id": "34639c5b-a9ce-4ef5-a469-42cd2f12ca89",
+          "display_trim": "SL",
+          "raw_trim": "SL",
+          "oem_tire_sizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/50R19"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "square",
+              "width": 7.5,
+              "isStock": true,
+              "diameter": 19
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.5",
+          "offset_min_mm": "38.00",
+          "offset_max_mm": "47.00"
+        },
+        {
+          "id": "4d8cf8ad-9109-4539-9518-dbdc47dd68fc",
+          "display_trim": "SLE",
+          "raw_trim": "SLE",
+          "oem_tire_sizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/50R19"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "square",
+              "width": 7.5,
+              "isStock": true,
+              "diameter": 19
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.5",
+          "offset_min_mm": "38.00",
+          "offset_max_mm": "47.00"
+        },
+        {
+          "id": "68e47d7a-9bdc-406c-9a16-94cbb6d85eea",
+          "display_trim": "SL, SLE, SLT, AT4, Denali",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/50R19"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "square",
+              "width": 7.5,
+              "isStock": true,
+              "diameter": 19
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.5",
+          "offset_min_mm": "38.00",
+          "offset_max_mm": "47.00"
+        },
+        {
+          "id": "fca411d2-6613-4e79-bc13-41a46389dc8b",
+          "display_trim": "SLT",
+          "raw_trim": "SLT",
+          "oem_tire_sizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/50R19"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "square",
+              "width": 7.5,
+              "isStock": true,
+              "diameter": 19
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.5",
+          "offset_min_mm": "38.00",
+          "offset_max_mm": "47.00"
+        },
+        {
+          "id": "491c8d09-e88f-492f-8105-af813eefeb59",
+          "display_trim": "AT4",
+          "raw_trim": "AT4",
+          "oem_tire_sizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/50R19"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "square",
+              "width": 7.5,
+              "isStock": true,
+              "diameter": 19
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.5",
+          "offset_min_mm": "38.00",
+          "offset_max_mm": "47.00"
+        },
+        {
+          "id": "b9ccebc9-1f4e-437b-b2cf-3db68acba75f",
+          "display_trim": "Denali",
+          "raw_trim": "Denali",
+          "oem_tire_sizes": [
+            "225/65R17",
+            "225/60R18",
+            "235/50R19"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "square",
+              "width": 7,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "square",
+              "width": 7.5,
+              "isStock": true,
+              "diameter": 19
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.5",
+          "offset_min_mm": "38.00",
+          "offset_max_mm": "47.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Genesis",
+      "model": "gv80",
+      "fitments": [
+        {
+          "id": "16ee9bb3-8dab-4d36-962d-6b1d3f5bc118",
+          "display_trim": "3.5T",
+          "raw_trim": "3.5T",
+          "oem_tire_sizes": [
+            "265/45R20",
+            "265/40R21",
+            "265/35R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            },
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "82bc4275-c1ea-44c5-9a83-9547614e5172",
+          "display_trim": "2.5T",
+          "raw_trim": "2.5T",
+          "oem_tire_sizes": [
+            "265/45R20",
+            "265/40R21",
+            "265/35R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            },
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "4763559e-7c92-4d4e-9416-807fb22d01b3",
+          "display_trim": "2.5T, 3.5T",
+          "raw_trim": null,
+          "oem_tire_sizes": [
+            "265/45R20",
+            "265/40R21",
+            "265/35R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            },
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "MINI",
+      "model": "cooper",
+      "fitments": [
+        {
+          "id": "51a5a72b-73f8-444e-b02e-920573801b8b",
+          "display_trim": "Classic, Signature, Iconic, S, John Cooper Works",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "175/65R15",
+            "195/55R16",
+            "205/45R17",
+            "205/40R18",
+            "225/35R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 6,
+              "offset": null,
+              "isStock": true,
+              "diameter": 15
+            },
+            {
+              "axle": "front",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "front",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "4x100",
+          "center_bore_mm": "56.1",
+          "offset_min_mm": "42.00",
+          "offset_max_mm": "56.00"
+        },
+        {
+          "id": "f754fccd-fbfc-4b0c-82f1-048cd3f66621",
+          "display_trim": "John Cooper Works",
+          "raw_trim": "John Cooper Works",
+          "oem_tire_sizes": [
+            "175/65R15",
+            "195/55R16",
+            "205/45R17",
+            "205/40R18",
+            "225/35R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 6,
+              "offset": null,
+              "isStock": true,
+              "diameter": 15
+            },
+            {
+              "axle": "front",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "front",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "4x100",
+          "center_bore_mm": "56.1",
+          "offset_min_mm": "42.00",
+          "offset_max_mm": "56.00"
+        },
+        {
+          "id": "d51391bb-ec30-49b0-b31b-5f957fbcae0b",
+          "display_trim": "Classic",
+          "raw_trim": "Classic",
+          "oem_tire_sizes": [
+            "175/65R15",
+            "195/55R16",
+            "205/45R17",
+            "205/40R18",
+            "225/35R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 6,
+              "offset": null,
+              "isStock": true,
+              "diameter": 15
+            },
+            {
+              "axle": "front",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "front",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "4x100",
+          "center_bore_mm": "56.1",
+          "offset_min_mm": "42.00",
+          "offset_max_mm": "56.00"
+        },
+        {
+          "id": "6070a1bf-e536-4da6-ade6-6dbc8dfc959e",
+          "display_trim": "Signature",
+          "raw_trim": "Signature",
+          "oem_tire_sizes": [
+            "175/65R15",
+            "195/55R16",
+            "205/45R17",
+            "205/40R18",
+            "225/35R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 6,
+              "offset": null,
+              "isStock": true,
+              "diameter": 15
+            },
+            {
+              "axle": "front",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "front",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "4x100",
+          "center_bore_mm": "56.1",
+          "offset_min_mm": "42.00",
+          "offset_max_mm": "56.00"
+        },
+        {
+          "id": "d70f86a8-b435-417b-9dfc-3b649c250bb1",
+          "display_trim": "Iconic",
+          "raw_trim": "Iconic",
+          "oem_tire_sizes": [
+            "175/65R15",
+            "195/55R16",
+            "205/45R17",
+            "205/40R18",
+            "225/35R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 6,
+              "offset": null,
+              "isStock": true,
+              "diameter": 15
+            },
+            {
+              "axle": "front",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "front",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "4x100",
+          "center_bore_mm": "56.1",
+          "offset_min_mm": "42.00",
+          "offset_max_mm": "56.00"
+        },
+        {
+          "id": "2fe71f6e-9074-4d54-96b8-c5af8cc9e09e",
+          "display_trim": "S",
+          "raw_trim": "S",
+          "oem_tire_sizes": [
+            "175/65R15",
+            "195/55R16",
+            "205/45R17",
+            "205/40R18",
+            "225/35R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 6,
+              "offset": null,
+              "isStock": true,
+              "diameter": 15
+            },
+            {
+              "axle": "front",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "front",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "4x100",
+          "center_bore_mm": "56.1",
+          "offset_min_mm": "42.00",
+          "offset_max_mm": "56.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "cx-70",
+      "fitments": [
+        {
+          "id": "52075f6f-b20c-4c8e-9ba7-5f976e5bfe7b",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "255/55R19",
+            "265/45R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8.5,
+              "diameter": 19
+            },
+            {
+              "width": 9,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.6",
+          "offset_min_mm": "35.00",
+          "offset_max_mm": "50.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Mazda",
+      "model": "cx-90",
+      "fitments": [
+        {
+          "id": "b552c6f7-840b-4c63-9f2c-97fbf28a004b",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "255/55R19",
+            "265/45R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 19
+            },
+            {
+              "axle": "front",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "67.1",
+          "offset_min_mm": "35.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Nissan",
+      "model": "kicks",
+      "fitments": [
+        {
+          "id": "a28950e9-c1f2-46d1-a9c1-96d6ee2fac1b",
+          "display_trim": "Base",
+          "raw_trim": null,
+          "oem_tire_sizes": [
+            "205/60R16",
+            "205/55R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "66.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "50.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "s5",
+      "fitments": [
+        {
+          "id": "e9268c59-1eb7-4711-9aa8-6714a69b8fec",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "255/35R19"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 8.5,
+              "offset": 32,
+              "diameter": 19,
+              "position": "both"
+            },
+            {
+              "axle": "rear",
+              "width": 9,
+              "offset": 32,
+              "diameter": 20,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.6",
+          "offset_min_mm": "35.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Audi",
+      "model": "s8",
+      "fitments": [
+        {
+          "id": "97d767c0-ee5b-4e27-a714-3668022f2b0c",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "275/35R21",
+            "295/30R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 9.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            },
+            {
+              "axle": "rear",
+              "width": 10.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.5",
+          "offset_min_mm": "35.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "BMW",
+      "model": "iX",
+      "fitments": [
+        {
+          "id": "d84644bb-724b-4b1d-982b-a20217f25101",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "275/40R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9.5,
+              "offset": 30,
+              "diameter": 21,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x112",
+          "center_bore_mm": "66.6",
+          "offset_min_mm": "30.00",
+          "offset_max_mm": "50.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "hr-v",
+      "fitments": [
+        {
+          "id": "02e5d3ea-877f-42bd-9894-96704cfff083",
+          "display_trim": "EX",
+          "raw_trim": "EX",
+          "oem_tire_sizes": [
+            "225/55R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "64.1",
+          "offset_min_mm": "45.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "022cfb23-80c4-44c1-a884-641746a8c580",
+          "display_trim": "LX",
+          "raw_trim": "LX",
+          "oem_tire_sizes": [
+            "225/55R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "64.1",
+          "offset_min_mm": "45.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "18dc1654-a313-45ac-9182-d31adda5e097",
+          "display_trim": "EX-L",
+          "raw_trim": "EX-L",
+          "oem_tire_sizes": [
+            "225/55R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "64.1",
+          "offset_min_mm": "45.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "97aac052-ddb7-4a75-83ee-285626e2edea",
+          "display_trim": "Sport",
+          "raw_trim": "Sport",
+          "oem_tire_sizes": [
+            "225/55R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "64.1",
+          "offset_min_mm": "45.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "094ca529-9daa-4660-9e6c-4474d9956b48",
+          "display_trim": "LX, Sport, EX, EX-L",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "225/55R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "64.1",
+          "offset_min_mm": "45.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Honda",
+      "model": "prologue",
+      "fitments": [
+        {
+          "id": "436b6c76-fe30-4f98-a2fc-8f1cd3eeda29",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "265/45R21"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "diameter": 21
+            }
+          ],
+          "bolt_pattern": "5x120",
+          "center_bore_mm": "64.1",
+          "offset_min_mm": "35.00",
+          "offset_max_mm": "50.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Gladiator",
+      "fitments": [
+        {
+          "id": "e1bd6765-953c-4cf9-95c2-f1692fdce968",
+          "display_trim": "Willys",
+          "raw_trim": "Willys",
+          "oem_tire_sizes": [
+            "255/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "d30c366d-f4de-44fd-ab3d-d6046c36bfda",
+          "display_trim": "Mojave",
+          "raw_trim": "Mojave",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "ba5b021d-aa4c-478e-b774-02301b7d91d9",
+          "display_trim": "Mojave X",
+          "raw_trim": "Mojave X",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "6d96896c-b9fd-4f06-90c6-6ba3647afb23",
+          "display_trim": "Rubicon",
+          "raw_trim": "Rubicon",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "aea5561d-2e95-4349-8071-8a32835ba17a",
+          "display_trim": "Rubicon X",
+          "raw_trim": "Rubicon X",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "77db8309-31cb-4b00-a751-02271ad05331",
+          "display_trim": "Sahara",
+          "raw_trim": "Sahara",
+          "oem_tire_sizes": [
+            "255/70R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "6764a23f-5808-434e-9eeb-9416f7e8b11e",
+          "display_trim": "Sport S",
+          "raw_trim": "Sport S",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "128f1507-52fb-4cf6-9fc0-7c7dcf957cec",
+          "display_trim": "Willys 41",
+          "raw_trim": "Willys 41",
+          "oem_tire_sizes": [
+            "255/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "ba1aa762-727b-4407-9bfe-b13a46dd8052",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT255/75R17",
+            "255/70R18",
+            "LT285/65R18",
+            "275/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "245/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 18,
+              "tireSize": "255/70R18"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 37.17,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT285/70R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT255/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 20,
+              "tireSize": "275/55R20"
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "4f08f36b-5653-4614-ae7c-9538f290aa9e",
+          "display_trim": "Sport",
+          "raw_trim": "Sport",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "fitments": [
+        {
+          "id": "4be3c904-429c-4773-9eec-54a204212a63",
+          "display_trim": "Willys",
+          "raw_trim": "Willys",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "63809925-839a-46a4-94b6-64364d343d55",
+          "display_trim": "Rubicon",
+          "raw_trim": "Rubicon",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "587367ca-8908-476e-812c-9775175881e3",
+          "display_trim": "Rubicon 392",
+          "raw_trim": "Rubicon 392",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "84a0674e-6be0-4dce-9fc3-e57bb2f2a12b",
+          "display_trim": "Moab 392",
+          "raw_trim": "Moab 392",
+          "oem_tire_sizes": [
+            "315/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "b08c4060-0a83-4e94-9c4b-cbf53d6bfbf9",
+          "display_trim": "Rubicon X",
+          "raw_trim": "Rubicon X",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "6cd03083-81d7-4b33-b7c1-a7fb68392b4e",
+          "display_trim": "Sahara",
+          "raw_trim": "Sahara",
+          "oem_tire_sizes": [
+            "255/70R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "5af0323e-7aa9-41e6-8350-2420b3ee106e",
+          "display_trim": "Sport",
+          "raw_trim": "Sport",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "bbbbcc30-cd64-4c15-aa7e-c2447bb48421",
+          "display_trim": "Willys 41",
+          "raw_trim": "Willys 41",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "448a96e5-8725-4c5b-b38b-c266ad8c76ea",
+          "display_trim": "Xtreme Tire Package",
+          "raw_trim": "Xtreme Tire Package",
+          "oem_tire_sizes": [
+            "315/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "561d4cf8-3bf6-4bb3-9f96-94ae6ecbe254",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT285/70R17",
+            "255/70R18",
+            "LT285/65R18",
+            "275/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "245/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT255/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 18,
+              "tireSize": "255/70R18"
+            },
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 20,
+              "tireSize": "275/55R20"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 37.17,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT285/70R17"
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "aee66fd3-e5f6-4c35-b613-69a51b958ea5",
+          "display_trim": "Sport S",
+          "raw_trim": "Sport S",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "73eb1376-5609-4290-b3a1-0bb706485f90",
+          "display_trim": "4xe",
+          "raw_trim": "4xe",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 7.5,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "gladiator",
+      "fitments": [
+        {
+          "id": "e1bd6765-953c-4cf9-95c2-f1692fdce968",
+          "display_trim": "Willys",
+          "raw_trim": "Willys",
+          "oem_tire_sizes": [
+            "255/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "d30c366d-f4de-44fd-ab3d-d6046c36bfda",
+          "display_trim": "Mojave",
+          "raw_trim": "Mojave",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "ba5b021d-aa4c-478e-b774-02301b7d91d9",
+          "display_trim": "Mojave X",
+          "raw_trim": "Mojave X",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "6d96896c-b9fd-4f06-90c6-6ba3647afb23",
+          "display_trim": "Rubicon",
+          "raw_trim": "Rubicon",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "aea5561d-2e95-4349-8071-8a32835ba17a",
+          "display_trim": "Rubicon X",
+          "raw_trim": "Rubicon X",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "77db8309-31cb-4b00-a751-02271ad05331",
+          "display_trim": "Sahara",
+          "raw_trim": "Sahara",
+          "oem_tire_sizes": [
+            "255/70R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "6764a23f-5808-434e-9eeb-9416f7e8b11e",
+          "display_trim": "Sport S",
+          "raw_trim": "Sport S",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "128f1507-52fb-4cf6-9fc0-7c7dcf957cec",
+          "display_trim": "Willys 41",
+          "raw_trim": "Willys 41",
+          "oem_tire_sizes": [
+            "255/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "ba1aa762-727b-4407-9bfe-b13a46dd8052",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT255/75R17",
+            "255/70R18",
+            "LT285/65R18",
+            "275/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "245/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 18,
+              "tireSize": "255/70R18"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 37.17,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT285/70R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT255/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 20,
+              "tireSize": "275/55R20"
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "4f08f36b-5653-4614-ae7c-9538f290aa9e",
+          "display_trim": "Sport",
+          "raw_trim": "Sport",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Jeep",
+      "model": "wrangler",
+      "fitments": [
+        {
+          "id": "4be3c904-429c-4773-9eec-54a204212a63",
+          "display_trim": "Willys",
+          "raw_trim": "Willys",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "63809925-839a-46a4-94b6-64364d343d55",
+          "display_trim": "Rubicon",
+          "raw_trim": "Rubicon",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "587367ca-8908-476e-812c-9775175881e3",
+          "display_trim": "Rubicon 392",
+          "raw_trim": "Rubicon 392",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "84a0674e-6be0-4dce-9fc3-e57bb2f2a12b",
+          "display_trim": "Moab 392",
+          "raw_trim": "Moab 392",
+          "oem_tire_sizes": [
+            "315/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "b08c4060-0a83-4e94-9c4b-cbf53d6bfbf9",
+          "display_trim": "Rubicon X",
+          "raw_trim": "Rubicon X",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "6cd03083-81d7-4b33-b7c1-a7fb68392b4e",
+          "display_trim": "Sahara",
+          "raw_trim": "Sahara",
+          "oem_tire_sizes": [
+            "255/70R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 18
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "5af0323e-7aa9-41e6-8350-2420b3ee106e",
+          "display_trim": "Sport",
+          "raw_trim": "Sport",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "bbbbcc30-cd64-4c15-aa7e-c2447bb48421",
+          "display_trim": "Willys 41",
+          "raw_trim": "Willys 41",
+          "oem_tire_sizes": [
+            "285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "448a96e5-8725-4c5b-b38b-c266ad8c76ea",
+          "display_trim": "Xtreme Tire Package",
+          "raw_trim": "Xtreme Tire Package",
+          "oem_tire_sizes": [
+            "315/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "561d4cf8-3bf6-4bb3-9f96-94ae6ecbe254",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT285/70R17",
+            "255/70R18",
+            "LT285/65R18",
+            "275/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "245/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT255/75R17"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 18,
+              "tireSize": "255/70R18"
+            },
+            {
+              "axle": "front",
+              "width": 8,
+              "offset": 44.45,
+              "isStock": true,
+              "diameter": 20,
+              "tireSize": "275/55R20"
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": 37.17,
+              "isStock": true,
+              "diameter": 17,
+              "tireSize": "LT285/70R17"
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "45.00"
+        },
+        {
+          "id": "aee66fd3-e5f6-4c35-b613-69a51b958ea5",
+          "display_trim": "Sport S",
+          "raw_trim": "Sport S",
+          "oem_tire_sizes": [
+            "245/75R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": null,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        },
+        {
+          "id": "73eb1376-5609-4290-b3a1-0bb706485f90",
+          "display_trim": "4xe",
+          "raw_trim": "4xe",
+          "oem_tire_sizes": [
+            "245/75R17",
+            "255/70R17",
+            "LT285/70R17"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 7.5,
+              "diameter": 17
+            }
+          ],
+          "bolt_pattern": "5x127",
+          "center_bore_mm": "71.5",
+          "offset_min_mm": "-25.00",
+          "offset_max_mm": "56.40"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Nissan",
+      "model": "murano",
+      "fitments": [
+        {
+          "id": "bd9a476a-7959-4d02-a6e1-f284dd9071e5",
+          "display_trim": "S, SV, SL, Platinum",
+          "raw_trim": null,
+          "oem_tire_sizes": [
+            "235/65R18",
+            "235/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "66.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "27031587-2770-4349-815e-b24e24aa7b19",
+          "display_trim": "S",
+          "raw_trim": "S",
+          "oem_tire_sizes": [
+            "235/65R18",
+            "235/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "66.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "7125c619-30d7-4d2c-bab3-b2acb7e27a35",
+          "display_trim": "SV",
+          "raw_trim": "SV",
+          "oem_tire_sizes": [
+            "235/65R18",
+            "235/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "66.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "d78e912e-b131-4a98-99fc-39a2f5e60197",
+          "display_trim": "Platinum",
+          "raw_trim": "Platinum",
+          "oem_tire_sizes": [
+            "235/65R18",
+            "235/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "66.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        },
+        {
+          "id": "fa93b746-b70a-453c-b9f6-12d00a99ca7d",
+          "display_trim": "SL",
+          "raw_trim": "SL",
+          "oem_tire_sizes": [
+            "235/65R18",
+            "235/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "66.1",
+          "offset_min_mm": "40.00",
+          "offset_max_mm": "55.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "RAM",
+      "model": "1500",
+      "fitments": [
+        {
+          "id": "59db899b-fd0e-4b2d-a3f0-201ba5816b31",
+          "display_trim": "Big Horn",
+          "raw_trim": "Big Horn",
+          "oem_tire_sizes": [
+            "275/65R18",
+            "275/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            },
+            {
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "746899cb-1c72-43ba-9c63-6436008e9301",
+          "display_trim": "Rebel",
+          "raw_trim": "Rebel",
+          "oem_tire_sizes": [
+            "275/70R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "3075433a-51b5-46fc-8427-52591c785d3c",
+          "display_trim": "Rebel",
+          "raw_trim": "Rebel",
+          "oem_tire_sizes": [
+            "275/70R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "6b2b2880-1192-4253-ae76-51b2af025d5c",
+          "display_trim": "Limited",
+          "raw_trim": "Limited",
+          "oem_tire_sizes": [
+            "285/45R22",
+            "305/45R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "741bac15-e39c-49d7-8677-aab4a6065dbd",
+          "display_trim": "3.6 Pentastar",
+          "raw_trim": "3.6 Pentastar",
+          "oem_tire_sizes": [
+            "275/65R18",
+            "275/55R20",
+            "LT275/65R18",
+            "285/45R22",
+            "LT275/70R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 19.05,
+              "isStock": true,
+              "diameter": 18,
+              "tireSize": "275/65R18"
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 19.05,
+              "isStock": false,
+              "diameter": 20,
+              "tireSize": "275/55R20"
+            },
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 19.05,
+              "isStock": false,
+              "diameter": 18,
+              "tireSize": "LT275/65R18"
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 19.1,
+              "isStock": false,
+              "diameter": 22,
+              "tireSize": "285/45R22"
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "92981dd3-521b-46cd-868b-04867e600e6c",
+          "display_trim": "Laramie",
+          "raw_trim": "Laramie",
+          "oem_tire_sizes": [
+            "275/60R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "4b9a897a-a56c-4a61-9dcc-e2c773616dca",
+          "display_trim": "Limited Longhorn",
+          "raw_trim": "Limited Longhorn",
+          "oem_tire_sizes": [
+            "285/45R22",
+            "305/45R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "7f17790f-89d5-487e-85be-cd04f4ec777d",
+          "display_trim": "TRX",
+          "raw_trim": "TRX",
+          "oem_tire_sizes": [
+            "325/65R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "51a9aac0-c937-45e7-a2d1-13305b93e0d4",
+          "display_trim": "Big Horn",
+          "raw_trim": "Big Horn",
+          "oem_tire_sizes": [
+            "275/65R18",
+            "275/55R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            },
+            {
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "da3d32a2-f960-4a29-b6df-8d6c2e367fa0",
+          "display_trim": "Laramie",
+          "raw_trim": "Laramie",
+          "oem_tire_sizes": [
+            "275/60R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "8d745940-aa53-4bc7-8ac3-d834ce5b904a",
+          "display_trim": "Tradesman",
+          "raw_trim": "Tradesman",
+          "oem_tire_sizes": [
+            "275/65R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "b3b63d0e-3b94-47bc-88c6-49dbbc530d35",
+          "display_trim": "Limited",
+          "raw_trim": "Limited",
+          "oem_tire_sizes": [
+            "285/45R22",
+            "305/45R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "609ea4f8-7683-4d6d-b581-eaeb24876008",
+          "display_trim": "TRX",
+          "raw_trim": "TRX",
+          "oem_tire_sizes": [
+            "325/65R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "3d2acf88-c342-447e-8ea3-1224a0d0591a",
+          "display_trim": "Longhorn",
+          "raw_trim": "Longhorn",
+          "oem_tire_sizes": [
+            "275/60R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "c839cd4a-16b2-4c13-b7c7-b2076b01b9ae",
+          "display_trim": "Base",
+          "raw_trim": "Base",
+          "oem_tire_sizes": [
+            "285/45R22",
+            "275/60R20",
+            "305/45R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "both",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "6x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        },
+        {
+          "id": "ee919d34-04dd-4848-bfd7-e2ad6c706ace",
+          "display_trim": "Tradesman",
+          "raw_trim": "Tradesman",
+          "oem_tire_sizes": [
+            "275/65R18"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18,
+              "position": "both"
+            }
+          ],
+          "bolt_pattern": "5x139.7",
+          "center_bore_mm": "77.8",
+          "offset_min_mm": "19.05",
+          "offset_max_mm": "19.10"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Rivian",
+      "model": "r1s",
+      "fitments": [
+        {
+          "id": "2821d9db-b724-44db-ab7f-6d89bc4a9d9d",
+          "display_trim": "1st Gen",
+          "raw_trim": "1st Gen",
+          "oem_tire_sizes": [
+            "275/65R20",
+            "275/55R21",
+            "275/50R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 9,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9.5,
+              "diameter": 21
+            },
+            {
+              "axle": "both",
+              "width": 10,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "5x135.5",
+          "center_bore_mm": "84.1",
+          "offset_min_mm": "10.00",
+          "offset_max_mm": "35.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Rivian",
+      "model": "r1t",
+      "fitments": [
+        {
+          "id": "720bbb0b-edde-4fee-bccd-a244a39212e6",
+          "display_trim": "1st Gen",
+          "raw_trim": "1st Gen",
+          "oem_tire_sizes": [
+            "275/65R20",
+            "275/55R21",
+            "275/50R22"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": null,
+              "isStock": true,
+              "diameter": 21
+            },
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": null,
+              "isStock": true,
+              "diameter": 22
+            }
+          ],
+          "bolt_pattern": "5x135.5",
+          "center_bore_mm": "84.1",
+          "offset_min_mm": "10.00",
+          "offset_max_mm": "35.00"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "Toyota",
+      "model": "Grand Highlander",
+      "fitments": [
+        {
+          "id": "a7edd4fa-fa9a-4cb5-8023-fecf50928a6a",
+          "display_trim": "Base",
+          "raw_trim": null,
+          "oem_tire_sizes": [
+            "255/50R20"
+          ],
+          "oem_wheel_sizes": [
+            {
+              "axle": "square",
+              "width": 8,
+              "offset": 35,
+              "isStock": true,
+              "diameter": 20
+            }
+          ],
+          "bolt_pattern": "5x114.3",
+          "center_bore_mm": "60.1",
+          "offset_min_mm": null,
+          "offset_max_mm": null
+        }
+      ]
+    }
+  ]
+}

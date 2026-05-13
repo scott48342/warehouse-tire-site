@@ -1,0 +1,1021 @@
+{
+  "summary": {
+    "wtdTotal": 9226,
+    "usafTotal": 0,
+    "existsInBoth": 0,
+    "wtdOnly": 8702,
+    "usafOnly": 0,
+    "aliasMismatches": 0,
+    "trimMismatches": 0,
+    "likelyAliases": 0,
+    "candidateMissingVehicles": 0,
+    "needsManualReview": 0,
+    "apiErrors": 0
+  },
+  "candidateMissingVehicles": [],
+  "likelyAliases": [],
+  "trimMismatches": [],
+  "usafOnlySample": [],
+  "wtdOnlySample": [
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "Integra Type-R"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "cl"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "integra-type-r"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "nsx"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "rl"
+    },
+    {
+      "year": 2000,
+      "make": "Acura",
+      "model": "tl"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "a3"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "a4"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "a6"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "a8"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "cabriolet"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "s4"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "s6"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "s8"
+    },
+    {
+      "year": 2000,
+      "make": "Audi",
+      "model": "tt"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "3 Series"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "5 Series"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "7 Series"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M Coupe"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M Roadster"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M3"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "M5"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "X5"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z3"
+    },
+    {
+      "year": 2000,
+      "make": "BMW",
+      "model": "Z8"
+    },
+    {
+      "year": 2000,
+      "make": "Buick",
+      "model": "lesabre"
+    },
+    {
+      "year": 2000,
+      "make": "Buick",
+      "model": "regal"
+    },
+    {
+      "year": 2000,
+      "make": "Cadillac",
+      "model": "escalade"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Express 1500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Silverado 2500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Suburban 1500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "Suburban 2500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "astro"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "blazer"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "camaro"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "corvette"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "express-1500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "impala"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "lumina"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "malibu"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "monte-carlo"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-1500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-2500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-2500-hd"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-2500hd"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "silverado-3500hd"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "suburban"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "suburban-1500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "suburban-2500"
+    },
+    {
+      "year": 2000,
+      "make": "Chevrolet",
+      "model": "tahoe"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "Town & Country"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "pt-cruiser"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "sebring"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "town-and-country"
+    },
+    {
+      "year": 2000,
+      "make": "Chrysler",
+      "model": "town-country"
+    },
+    {
+      "year": 2000,
+      "make": "Daewoo",
+      "model": "leganza"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "durango"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "grand-caravan"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "ram-1500"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "ram-2500"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "ram-3500"
+    },
+    {
+      "year": 2000,
+      "make": "Dodge",
+      "model": "viper"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Crown Victoria"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-150 Econoline"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-250 Econoline"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "E-350 Econoline"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "Escort ZX2"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "F-450 Super Duty"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "crown-victoria"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "e-150-econoline"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "e-250-econoline"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "e-350-econoline"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "escape"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "escort-zx2"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "excursion"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "expedition"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "explorer"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-150"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-250"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-350"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "f-450-super-duty"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "fiesta"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "focus"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "mustang"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "ranger"
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "taurus"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "sierra-1500"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "sierra-2500hd"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "sierra-3500hd"
+    },
+    {
+      "year": 2000,
+      "make": "GMC",
+      "model": "yukon"
+    },
+    {
+      "year": 2000,
+      "make": "Geo",
+      "model": "metro"
+    },
+    {
+      "year": 2000,
+      "make": "Geo",
+      "model": "prizm"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "accord"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "civic"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "cr-v"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "insight"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "odyssey"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "passport"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "prelude"
+    },
+    {
+      "year": 2000,
+      "make": "Honda",
+      "model": "s2000"
+    },
+    {
+      "year": 2000,
+      "make": "Hummer",
+      "model": "H1"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "Santa Fe"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "Tiburon Turbulence"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "elantra"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "santa-fe"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "sonata"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "tiburon"
+    },
+    {
+      "year": 2000,
+      "make": "Hyundai",
+      "model": "tiburon-turbulence"
+    },
+    {
+      "year": 2000,
+      "make": "Isuzu",
+      "model": "rodeo"
+    },
+    {
+      "year": 2000,
+      "make": "Isuzu",
+      "model": "trooper"
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "s-type"
+    },
+    {
+      "year": 2000,
+      "make": "Jaguar",
+      "model": "xj"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "Grand Cherokee"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "cherokee"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "grand-cherokee"
+    },
+    {
+      "year": 2000,
+      "make": "Jeep",
+      "model": "wrangler"
+    },
+    {
+      "year": 2000,
+      "make": "Kia",
+      "model": "sportage"
+    },
+    {
+      "year": 2000,
+      "make": "Land Rover",
+      "model": "defender"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "es"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "gs"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "is"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "ls"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "lx"
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "rx"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "continental"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "ls"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "navigator"
+    },
+    {
+      "year": 2000,
+      "make": "Lincoln",
+      "model": "town-car"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "mx-5"
+    },
+    {
+      "year": 2000,
+      "make": "Mazda",
+      "model": "mx-5-miata"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "C-Class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "cl-class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "E-Class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "g-class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "g-class-amg"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "m-class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "m-class-amg"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "S-Class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "s-class-amg"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "SL-Class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes",
+      "model": "slk-class-amg"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG"
+    },
+    {
+      "year": 2000,
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "cougar"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "grand-marquis"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "mountaineer"
+    },
+    {
+      "year": 2000,
+      "make": "Mercury",
+      "model": "sable"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "3000-gt"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "chariot-grandis"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "diamante"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "eclipse"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "galant"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "l400"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "mirage"
+    },
+    {
+      "year": 2000,
+      "make": "Mitsubishi",
+      "model": "montero"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "altima"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "maxima"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "pathfinder"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "quest"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "sentra"
+    },
+    {
+      "year": 2000,
+      "make": "Nissan",
+      "model": "xterra"
+    },
+    {
+      "year": 2000,
+      "make": "Oldsmobile",
+      "model": "alero"
+    },
+    {
+      "year": 2000,
+      "make": "Oldsmobile",
+      "model": "bravada"
+    },
+    {
+      "year": 2000,
+      "make": "Oldsmobile",
+      "model": "intrigue"
+    },
+    {
+      "year": 2000,
+      "make": "Plymouth",
+      "model": "prowler"
+    },
+    {
+      "year": 2000,
+      "make": "Plymouth",
+      "model": "voyager"
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "bonneville"
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "firebird"
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "grand-am"
+    },
+    {
+      "year": 2000,
+      "make": "Pontiac",
+      "model": "grand-prix"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "911"
+    },
+    {
+      "year": 2000,
+      "make": "Porsche",
+      "model": "boxster"
+    },
+    {
+      "year": 2000,
+      "make": "RAM",
+      "model": "1500"
+    },
+    {
+      "year": 2000,
+      "make": "RAM",
+      "model": "2500"
+    },
+    {
+      "year": 2000,
+      "make": "RAM",
+      "model": "3500"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-3"
+    },
+    {
+      "year": 2000,
+      "make": "Saab",
+      "model": "9-5"
+    },
+    {
+      "year": 2000,
+      "make": "Saturn",
+      "model": "l-series"
+    },
+    {
+      "year": 2000,
+      "make": "Saturn",
+      "model": "s-series"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "forester"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "impreza"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "legacy"
+    },
+    {
+      "year": 2000,
+      "make": "Subaru",
+      "model": "outback"
+    },
+    {
+      "year": 2000,
+      "make": "Suzuki",
+      "model": "grand-vitara"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "4runner"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "Land Cruiser"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "MR2 Spyder"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "avalon"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "camry"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "celica"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "corolla"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "echo"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "grand-hiace"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "land-cruiser"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "mr2"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "mr2-roadster"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "mr2-spyder"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "prius"
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "rav4"
+    }
+  ]
+}

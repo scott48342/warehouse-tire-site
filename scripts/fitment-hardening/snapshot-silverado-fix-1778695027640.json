@@ -1,0 +1,113 @@
+[
+  {
+    "id": "bfb19683-a4a0-452c-b873-a75b4a275a67",
+    "year": 2011,
+    "make": "Chevrolet",
+    "model": "Silverado 3500 HD",
+    "modification_id": "2011-chevrolet-silverado 3500 hd-base",
+    "raw_trim": null,
+    "display_trim": "Base",
+    "submodel": "WT",
+    "bolt_pattern": "8x180",
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "axle": "both",
+        "width": 7.5,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "diameter": 18
+      },
+      {
+        "axle": "both",
+        "width": 8.5,
+        "diameter": 20
+      }
+    ],
+    "oem_tire_sizes": [
+      "LT265/70R17",
+      "LT275/70R18",
+      "LT275/65R20"
+    ],
+    "source": "verified-research",
+    "source_record_id": null,
+    "created_at": "2026-04-23T05:01:15.147Z",
+    "updated_at": "2026-05-06T18:33:38.849Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T14:22:28.282Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null
+  },
+  {
+    "id": "d9a404e3-b04b-425f-8e41-26bed80f04ad",
+    "year": 2011,
+    "make": "Chevrolet",
+    "model": "silverado-3500",
+    "modification_id": "base",
+    "raw_trim": "Base",
+    "display_trim": "Base",
+    "submodel": "LS",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "67.1",
+    "thread_size": "M12x1.5",
+    "seat_type": "conical",
+    "offset_min_mm": "35.00",
+    "offset_max_mm": "55.00",
+    "oem_wheel_sizes": [
+      {
+        "axle": "both",
+        "width": 7,
+        "isStock": true,
+        "diameter": 16
+      },
+      {
+        "axle": "both",
+        "width": 7.5,
+        "isStock": true,
+        "diameter": 17
+      },
+      {
+        "axle": "both",
+        "width": 8,
+        "isStock": true,
+        "diameter": 18
+      }
+    ],
+    "oem_tire_sizes": [
+      "LT245/75R16",
+      "LT265/70R17",
+      "LT275/70R18"
+    ],
+    "source": "catalog-gap-fill",
+    "source_record_id": null,
+    "created_at": "2026-04-21T21:22:11.493Z",
+    "updated_at": "2026-05-06T18:42:39.098Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T14:34:52.600Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null
+  }
+]

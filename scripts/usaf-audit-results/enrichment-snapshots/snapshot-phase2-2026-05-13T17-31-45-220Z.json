@@ -1,0 +1,4238 @@
+{
+  "timestamp": "2026-05-13T17:31:45.221Z",
+  "batchId": "phase2",
+  "itemCount": 86,
+  "items": [
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2025,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2023,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2022,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "255/45R20",
+        "265/45R20",
+        "255/40R21",
+        "265/40R21",
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2020,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "265/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21",
+        "255/40R21",
+        "265/40R21",
+        "255/45R20",
+        "265/45R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2019,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R21",
+      "wheelDiameter": 21,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 21\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 21\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R19",
+        "245/45R20",
+        "275/40R20",
+        "245/40R21",
+        "275/35R21"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/45R19",
+        "275/40R19"
+      ],
+      "existingUsafSizes": [
+        "245/40R20",
+        "275/35R20",
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R20",
+      "wheelDiameter": 20,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/45R19",
+        "275/40R19"
+      ],
+      "existingUsafSizes": [
+        "245/40R20",
+        "275/35R20",
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2017,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/50R18",
+      "wheelDiameter": 18,
+      "confidence": 40,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/45R19",
+        "275/40R19"
+      ],
+      "existingUsafSizes": [
+        "245/40R20",
+        "275/35R20",
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/50R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R20",
+      "wheelDiameter": 20,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2016,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R20",
+      "wheelDiameter": 20,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/50R18",
+        "245/45R19",
+        "275/40R19",
+        "245/40R20",
+        "275/35R20",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/45R19",
+        "245/40R20",
+        "275/35R20",
+        "275/40R19",
+        "245/50R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/40R20",
+      "wheelDiameter": 20,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/45R19",
+        "245/40R20",
+        "275/35R20",
+        "275/40R19",
+        "245/50R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/35R20",
+      "wheelDiameter": 20,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 20\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 20\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/45R19",
+        "245/40R20",
+        "275/35R20",
+        "275/40R19",
+        "245/50R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "275/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/45R19",
+        "245/40R20",
+        "275/35R20",
+        "275/40R19",
+        "245/50R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2015,
+      "make": "BMW",
+      "model": "X4",
+      "tireSize": "245/50R18",
+      "wheelDiameter": 18,
+      "confidence": 25,
+      "reasons": [
+        "New wheel diameter: 18\"",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [
+        "New wheel diameter 18\" not in existing config"
+      ],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        19
+      ],
+      "existingWtdSizes": [
+        "245/50R19"
+      ],
+      "existingUsafSizes": [
+        "245/45R19",
+        "245/40R20",
+        "275/35R20",
+        "275/40R19",
+        "245/50R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X4 consistency (11 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2010,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2009,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2008,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2007,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/45R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/45R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 17\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/45R18",
+      "wheelDiameter": 18,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 18\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "235/45R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    },
+    {
+      "year": 2004,
+      "make": "BMW",
+      "model": "X3",
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19,
+      "confidence": 70,
+      "reasons": [
+        "Uses existing 19\" wheel diameter",
+        "No common sizes (poor alignment)",
+        "Standard P-metric format"
+      ],
+      "autoReject": [],
+      "hasConfigTable": false,
+      "vehicleFlags": {
+        "isStaggered": false,
+        "isHDTruck": false,
+        "isEV": false,
+        "isPerformanceVariant": false,
+        "needsManualReview": false
+      },
+      "existingDiameters": [
+        17,
+        18,
+        19
+      ],
+      "existingWtdSizes": [
+        "235/65R17",
+        "235/55R18",
+        "255/50R18",
+        "255/45R19"
+      ],
+      "existingUsafSizes": [
+        "235/55R17",
+        "235/50R18",
+        "255/45R18",
+        "235/45R19",
+        "255/40R19"
+      ],
+      "category": "manual_review",
+      "approvedBy": "PLATFORM_CONSISTENCY_RULE",
+      "approvalReason": "Platform BMW|X3 consistency (7 year span)",
+      "regressionChecks": {
+        "wheelSpecsUnchanged": true,
+        "boltPatternUnchanged": true,
+        "centerBoreUnchanged": true,
+        "offsetUnchanged": true,
+        "noDeprecatedTables": true
+      }
+    }
+  ]
+}
