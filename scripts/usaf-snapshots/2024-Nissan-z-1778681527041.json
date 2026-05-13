@@ -1,0 +1,176 @@
+{
+  "snapshotId": "2024-Nissan-z-1778681527041",
+  "timestamp": "2026-05-13T14:12:07.041Z",
+  "candidate": {
+    "year": 2024,
+    "make": "Nissan",
+    "model": "z",
+    "addSizes": [
+      "285/35R19"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "3 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      18,
+      19
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "820923d3-98c5-4aee-b4a9-4c69b7b6201d",
+      "year": 2024,
+      "make": "Nissan",
+      "model": "z",
+      "display_trim": "Sport",
+      "oem_tire_sizes": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "225/50R18"
+        },
+        {
+          "axle": "rear",
+          "width": 10,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "275/35R19"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "30.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:10:11.555Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "a8173418-d762-4581-bb44-663a79c00330",
+      "year": 2024,
+      "make": "Nissan",
+      "model": "z",
+      "display_trim": "Performance",
+      "oem_tire_sizes": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "225/50R18"
+        },
+        {
+          "axle": "rear",
+          "width": 10,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "275/35R19"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "30.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:10:11.590Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "e08ac285-7810-4f74-9f70-42dd7be5199a",
+      "year": 2024,
+      "make": "Nissan",
+      "model": "z",
+      "display_trim": "NISMO",
+      "oem_tire_sizes": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "225/50R18"
+        },
+        {
+          "axle": "rear",
+          "width": 10,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "275/35R19"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "30.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:10:11.624Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "54f9acc4-a549-4fa1-9deb-b37db3be6a4c",
+      "year": 2024,
+      "make": "Nissan",
+      "model": "z",
+      "display_trim": "Sport, Performance, NISMO",
+      "oem_tire_sizes": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "225/50R18"
+        },
+        {
+          "axle": "rear",
+          "width": 10,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19,
+          "tireSize": "275/35R19"
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "30.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-03-29T07:08:38.694Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

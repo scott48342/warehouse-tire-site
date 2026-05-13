@@ -1,0 +1,199 @@
+{
+  "snapshotId": "2026-Nissan-pathfinder-1778681532325",
+  "timestamp": "2026-05-13T14:12:12.325Z",
+  "candidate": {
+    "year": 2026,
+    "make": "Nissan",
+    "model": "pathfinder",
+    "addSizes": [
+      "265/60R18"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "2 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      18,
+      20
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "2bd9c4d1-ee2e-42a8-b978-23de25c8633c",
+      "year": 2026,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "display_trim": "SL",
+      "oem_tire_sizes": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "35.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:29.143Z",
+      "updated_at": "2026-05-06T18:32:43.646Z"
+    },
+    {
+      "id": "5c57e030-e07c-4c36-a717-ae622dec996e",
+      "year": 2026,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "display_trim": "S",
+      "oem_tire_sizes": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "35.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:29.062Z",
+      "updated_at": "2026-05-06T18:34:06.641Z"
+    },
+    {
+      "id": "70ad2c47-1dc7-41a2-a272-c3d8e78d8645",
+      "year": 2026,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "display_trim": "SV",
+      "oem_tire_sizes": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "35.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:29.103Z",
+      "updated_at": "2026-05-06T18:34:06.913Z"
+    },
+    {
+      "id": "d9b681fa-f797-42fc-b4d6-b785b2a91466",
+      "year": 2026,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "display_trim": "Platinum",
+      "oem_tire_sizes": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "35.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:29.183Z",
+      "updated_at": "2026-05-06T18:34:08.645Z"
+    },
+    {
+      "id": "312cf8b3-ea76-4fcd-8de2-29e62e1ba915",
+      "year": 2026,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "display_trim": "S, SV, SL, Platinum",
+      "oem_tire_sizes": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "offset_min_mm": "35.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-03-29T07:08:27.662Z",
+      "updated_at": "2026-05-06T18:43:18.026Z"
+    }
+  ]
+}

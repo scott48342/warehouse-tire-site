@@ -1,0 +1,181 @@
+{
+  "snapshotId": "2026-Acura-mdx-1778681554424",
+  "timestamp": "2026-05-13T14:12:34.424Z",
+  "candidate": {
+    "year": 2026,
+    "make": "Acura",
+    "model": "mdx",
+    "addSizes": [
+      "255/50R20"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "2 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      19,
+      20,
+      21
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "1b8834c7-ea66-446a-afd5-60d7852b9f3b",
+      "year": 2026,
+      "make": "Acura",
+      "model": "mdx",
+      "display_trim": "A-Spec",
+      "oem_tire_sizes": [
+        "265/45R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:15.611Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "c125d56f-946d-4409-976a-a0e62ee764d3",
+      "year": 2026,
+      "make": "Acura",
+      "model": "mdx",
+      "display_trim": "Advance",
+      "oem_tire_sizes": [
+        "265/45R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:15.651Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "7f639b95-b736-4d4f-9f9d-e88fa5e2304c",
+      "year": 2026,
+      "make": "Acura",
+      "model": "mdx",
+      "display_trim": "Type S",
+      "oem_tire_sizes": [
+        "275/40R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:15.687Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "2b81f045-2147-400f-b606-6bdb0b12ebf4",
+      "year": 2026,
+      "make": "Acura",
+      "model": "mdx",
+      "display_trim": "Technology",
+      "oem_tire_sizes": [
+        "255/55R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        }
+      ],
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:15.571Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "6d391993-ac90-4ffb-94db-1e24c3b39369",
+      "year": 2026,
+      "make": "Acura",
+      "model": "mdx",
+      "display_trim": "Base",
+      "oem_tire_sizes": [
+        "255/55R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        }
+      ],
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-24T19:09:15.535Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "a9ef2b6a-6a85-4504-9594-5ceb43d3aa08",
+      "year": 2026,
+      "make": "Acura",
+      "model": "mdx",
+      "display_trim": "Base, Technology, A-Spec, Advance, Type S",
+      "oem_tire_sizes": [
+        "255/55R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        }
+      ],
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-03-29T19:05:44.553Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

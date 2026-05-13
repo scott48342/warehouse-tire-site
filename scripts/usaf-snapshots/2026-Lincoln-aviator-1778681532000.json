@@ -1,0 +1,235 @@
+{
+  "snapshotId": "2026-Lincoln-aviator-1778681532000",
+  "timestamp": "2026-05-13T14:12:12.000Z",
+  "candidate": {
+    "year": 2026,
+    "make": "Lincoln",
+    "model": "aviator",
+    "addSizes": [
+      "275/40R22"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "2 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      20,
+      21,
+      22
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "b20e2d27-879e-4cf1-b159-ca95b6b62b8b",
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "aviator",
+      "display_trim": "Reserve",
+      "oem_tire_sizes": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "63.4",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "37.50",
+      "offset_max_mm": "44.00",
+      "created_at": "2026-04-24T19:09:25.754Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "47bf595b-b193-4515-a0c8-db4ef9f9ea54",
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "aviator",
+      "display_trim": "Grand Touring",
+      "oem_tire_sizes": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "63.4",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "37.50",
+      "offset_max_mm": "44.00",
+      "created_at": "2026-04-24T19:09:25.791Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "29435a78-0261-484e-8f28-5d56e1cb9494",
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "aviator",
+      "display_trim": "Standard, Reserve, Grand Touring, Black Label",
+      "oem_tire_sizes": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "63.4",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "37.50",
+      "offset_max_mm": "44.00",
+      "created_at": "2026-04-01T23:19:35.635Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "1c0b7dec-4bf5-4e2e-8927-22be0ff045b8",
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "aviator",
+      "display_trim": "Standard",
+      "oem_tire_sizes": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "63.4",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "37.50",
+      "offset_max_mm": "44.00",
+      "created_at": "2026-04-24T19:09:25.718Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "77bb8c70-bf62-49c4-a3ab-d7ef9775b8b5",
+      "year": 2026,
+      "make": "Lincoln",
+      "model": "aviator",
+      "display_trim": "Black Label",
+      "oem_tire_sizes": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "63.4",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "37.50",
+      "offset_max_mm": "44.00",
+      "created_at": "2026-04-24T19:09:25.829Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "snapshotId": "2025-Ford-Bronco_Sport-1778681548850",
+  "timestamp": "2026-05-13T14:12:28.850Z",
+  "candidate": {
+    "year": 2025,
+    "make": "Ford",
+    "model": "Bronco Sport",
+    "addSizes": [
+      "235/65R17"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "2 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      17,
+      18
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "8fbf4f43-5f79-4f4f-8300-67905ceef51f",
+      "year": 2025,
+      "make": "Ford",
+      "model": "Bronco Sport",
+      "display_trim": "Base",
+      "oem_tire_sizes": [
+        "225/65R17",
+        "225/60R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 7,
+          "offset": 46,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "both",
+          "width": 7.5,
+          "offset": 46,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "5x108",
+      "center_bore_mm": "63.4",
+      "thread_size": "M12x1.5",
+      "offset_min_mm": null,
+      "offset_max_mm": null,
+      "created_at": "2026-04-23T05:01:23.534Z",
+      "updated_at": "2026-05-06T18:42:55.786Z"
+    }
+  ]
+}

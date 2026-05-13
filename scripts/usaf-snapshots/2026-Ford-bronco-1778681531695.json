@@ -1,0 +1,209 @@
+{
+  "snapshotId": "2026-Ford-bronco-1778681531695",
+  "timestamp": "2026-05-13T14:12:11.695Z",
+  "candidate": {
+    "year": 2026,
+    "make": "Ford",
+    "model": "bronco",
+    "addSizes": [
+      "LT315/70R17",
+      "LT285/70R17",
+      "LT265/70R17"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "4 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      16,
+      17,
+      18
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "4a4d5004-e952-40d2-be94-fed108012b13",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "display_trim": "Black Diamond",
+      "oem_tire_sizes": [
+        "265/70R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "93.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "15.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-02T05:36:31.814Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "f0de4c70-e4f0-4d32-a508-48ae9c9d1330",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "display_trim": "Base",
+      "oem_tire_sizes": [
+        "255/70R16"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 16
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "93.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "15.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-02T05:36:31.756Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "952fcf5b-73f7-45db-98fe-41472b27bde6",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "display_trim": "Wildtrak",
+      "oem_tire_sizes": [
+        "315/70R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "93.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "15.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-02T05:36:31.925Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "6ddc0dae-2e6a-429b-b9c9-a158863c1efa",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "display_trim": "Raptor",
+      "oem_tire_sizes": [
+        "37X12.50R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "93.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "15.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-02T05:36:31.954Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "3a778c70-ef1b-4c53-bb48-94d1a85a9bc4",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "display_trim": "Badlands",
+      "oem_tire_sizes": [
+        "285/70R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "93.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "15.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-02T05:36:31.886Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "11970075-c7d7-4d74-b158-782f156327a8",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "display_trim": "Outer Banks",
+      "oem_tire_sizes": [
+        "255/70R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "93.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "15.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-02T05:36:31.850Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "dd3f5768-b288-4b6e-8a29-e94bc76596de",
+      "year": 2026,
+      "make": "Ford",
+      "model": "bronco",
+      "display_trim": "Big Bend",
+      "oem_tire_sizes": [
+        "255/75R17"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "bolt_pattern": "6x139.7",
+      "center_bore_mm": "93.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "15.00",
+      "offset_max_mm": "55.00",
+      "created_at": "2026-04-02T05:36:31.786Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

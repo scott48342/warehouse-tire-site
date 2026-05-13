@@ -1,0 +1,326 @@
+{
+  "snapshotId": "2026-Volkswagen-tiguan-1778681559297",
+  "timestamp": "2026-05-13T14:12:39.297Z",
+  "candidate": {
+    "year": 2026,
+    "make": "Volkswagen",
+    "model": "tiguan",
+    "addSizes": [
+      "235/50R19"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "3 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "9a0ca193-6bdb-4f59-8a25-3712327424c2",
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "tiguan",
+      "display_trim": "S",
+      "oem_tire_sizes": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:09:33.800Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "c1e6cca7-840b-4a71-96de-294eca39b319",
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "tiguan",
+      "display_trim": "SE",
+      "oem_tire_sizes": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:09:33.840Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "2cc8a2dc-b3cf-430b-a54c-cde8e54c261e",
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "tiguan",
+      "display_trim": "SE R-Line",
+      "oem_tire_sizes": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:09:33.878Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "c7848994-bed2-42a0-95d4-c9e0755245a9",
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "tiguan",
+      "display_trim": "SEL",
+      "oem_tire_sizes": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:09:33.914Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "2e770f12-9440-4c53-ba34-e822b7cef85d",
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "tiguan",
+      "display_trim": "SEL R-Line",
+      "oem_tire_sizes": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-04-24T19:09:33.951Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "560e1257-cc70-47b4-b61c-4cfc431d336a",
+      "year": 2026,
+      "make": "Volkswagen",
+      "model": "tiguan",
+      "display_trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+      "oem_tire_sizes": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        }
+      ],
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "52.00",
+      "created_at": "2026-03-29T19:10:49.546Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

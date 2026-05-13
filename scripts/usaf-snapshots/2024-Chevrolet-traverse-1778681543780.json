@@ -1,0 +1,186 @@
+{
+  "snapshotId": "2024-Chevrolet-traverse-1778681543780",
+  "timestamp": "2026-05-13T14:12:23.781Z",
+  "candidate": {
+    "year": 2024,
+    "make": "Chevrolet",
+    "model": "traverse",
+    "addSizes": [
+      "265/65R18"
+    ],
+    "confidence": 95,
+    "reasons": [
+      "3 common sizes",
+      "New sizes use existing wheel diameters",
+      "USAF has multiple OEM options"
+    ],
+    "existingDiameters": [
+      18,
+      20,
+      22
+    ]
+  },
+  "originalFitments": [
+    {
+      "id": "a3de5ff6-cac3-4d02-9bb8-f56740dd1a07",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "display_trim": "High Country",
+      "oem_tire_sizes": [
+        "275/45R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "6x120",
+      "center_bore_mm": "67.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "50.00",
+      "created_at": "2026-04-24T19:13:05.557Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "103c450f-4d89-498d-9543-6cbb56727beb",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "display_trim": "LS",
+      "oem_tire_sizes": [
+        "255/65R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x120",
+      "center_bore_mm": "67.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "50.00",
+      "created_at": "2026-04-24T19:13:05.557Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "766ac9ba-f5c8-41c1-9059-28d2330d4d23",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "display_trim": "LT",
+      "oem_tire_sizes": [
+        "255/65R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "bolt_pattern": "6x120",
+      "center_bore_mm": "67.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "50.00",
+      "created_at": "2026-04-24T19:13:05.557Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "51ab920c-4de4-4b0f-af54-7daf4f857c2a",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "display_trim": "RS",
+      "oem_tire_sizes": [
+        "275/45R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "6x120",
+      "center_bore_mm": "67.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "50.00",
+      "created_at": "2026-04-24T19:13:05.557Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "df99783d-3de5-47d9-b0a5-6c09192f5ed2",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "display_trim": "LS, LT, RS, Premier, High Country",
+      "oem_tire_sizes": [
+        "275/45R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "bolt_pattern": "6x120",
+      "center_bore_mm": "67.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "50.00",
+      "created_at": "2026-03-29T01:20:17.535Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    },
+    {
+      "id": "cd1d8ad6-954f-41c2-81fe-7ba3f3bb706e",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "display_trim": "Premier",
+      "oem_tire_sizes": [
+        "245/60R18",
+        "255/55R20",
+        "275/45R22"
+      ],
+      "oem_wheel_sizes": [
+        "7.5Jx18",
+        "8Jx20",
+        "8.5Jx22",
+        {
+          "axle": "both",
+          "width": 8,
+          "offset": 50,
+          "isStock": false,
+          "diameter": 19
+        }
+      ],
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "67.1",
+      "thread_size": "M14x1.5",
+      "offset_min_mm": "40.00",
+      "offset_max_mm": "50.00",
+      "created_at": "2026-04-24T19:13:05.557Z",
+      "updated_at": "2026-04-26T21:23:15.974Z"
+    }
+  ]
+}

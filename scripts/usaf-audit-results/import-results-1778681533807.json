@@ -1,0 +1,3644 @@
+{
+  "timestamp": "2026-05-13T14:12:13.807Z",
+  "mode": "dry-run",
+  "sourceFile": "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-audit-results\\dry-run-export-1778681170028.json",
+  "stats": {
+    "processed": 36,
+    "skipped": 6,
+    "errors": 6,
+    "wouldUpdate": 195,
+    "updated": 0
+  },
+  "wouldUpdate": [
+    {
+      "vehicle": "2024 Acura mdx",
+      "trim": "Base, Technology, A-Spec, Advance, Type S",
+      "fitmentId": "257d5e50-47b6-47e8-b898-7e7f2998b0a3",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Acura mdx",
+      "trim": "Base",
+      "fitmentId": "24398350-edb5-4668-86bb-bac4297aaa00",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Acura mdx",
+      "trim": "Advance",
+      "fitmentId": "7faf9c0e-7634-4e57-ba6a-53c6a8e25101",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "265/45R20"
+      ],
+      "after": [
+        "265/45R20",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Acura mdx",
+      "trim": "Type S",
+      "fitmentId": "25742ae7-15bf-4081-aa7e-bee7072839f1",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "275/40R21"
+      ],
+      "after": [
+        "275/40R21",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Acura mdx",
+      "trim": "Technology",
+      "fitmentId": "d1e42e56-66dc-4323-9821-24e1f1c9d311",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Acura mdx",
+      "trim": "A-Spec",
+      "fitmentId": "2f43fca6-82dc-4632-97ac-6410523f055f",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "265/45R20"
+      ],
+      "after": [
+        "265/45R20",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "trim": "LT",
+      "fitmentId": "d6e15c3f-44df-4fbc-9712-e5047951dfc7",
+      "wouldAdd": [
+        "275/55R20"
+      ],
+      "before": [
+        "265/65R18"
+      ],
+      "after": [
+        "265/65R18",
+        "275/55R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "trim": "RST",
+      "fitmentId": "a55b86ab-c199-41df-8b78-e0216457823a",
+      "wouldAdd": [
+        "275/55R20"
+      ],
+      "before": [
+        "275/60R20"
+      ],
+      "after": [
+        "275/60R20",
+        "275/55R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "trim": "Z71",
+      "fitmentId": "1549d8d2-6e72-4b6d-944c-92911c7ee6a9",
+      "wouldAdd": [
+        "275/55R20"
+      ],
+      "before": [
+        "275/60R20"
+      ],
+      "after": [
+        "275/60R20",
+        "275/55R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "fitmentId": "3a5450ab-b3cc-4b07-ac3f-e0a54f3901ba",
+      "wouldAdd": [
+        "275/55R20"
+      ],
+      "before": [
+        "275/50R22"
+      ],
+      "after": [
+        "275/50R22",
+        "275/55R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "trim": "Premier",
+      "fitmentId": "d650bc2d-1289-4b9d-8cf8-ede2990a2c3b",
+      "wouldAdd": [
+        "275/55R20"
+      ],
+      "before": [
+        "275/60R20"
+      ],
+      "after": [
+        "275/60R20",
+        "275/55R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "trim": "High Country",
+      "fitmentId": "7ec57ffa-342c-4f56-8f8b-3e60dfc01a46",
+      "wouldAdd": [
+        "275/55R20"
+      ],
+      "before": [
+        "275/50R22"
+      ],
+      "after": [
+        "275/50R22",
+        "275/55R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "trim": "LS",
+      "fitmentId": "ac079fad-9f37-4903-aba8-d254c5e7ca5c",
+      "wouldAdd": [
+        "275/55R20"
+      ],
+      "before": [
+        "265/65R18"
+      ],
+      "after": [
+        "265/65R18",
+        "275/55R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet traverse",
+      "trim": "High Country",
+      "fitmentId": "a3de5ff6-cac3-4d02-9bb8-f56740dd1a07",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "275/45R22"
+      ],
+      "after": [
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet traverse",
+      "trim": "LS",
+      "fitmentId": "103c450f-4d89-498d-9543-6cbb56727beb",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "255/65R18"
+      ],
+      "after": [
+        "255/65R18",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet traverse",
+      "trim": "LT",
+      "fitmentId": "766ac9ba-f5c8-41c1-9059-28d2330d4d23",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "255/65R18"
+      ],
+      "after": [
+        "255/65R18",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet traverse",
+      "trim": "RS",
+      "fitmentId": "51ab920c-4de4-4b0f-af54-7daf4f857c2a",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "275/45R22"
+      ],
+      "after": [
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet traverse",
+      "trim": "LS, LT, RS, Premier, High Country",
+      "fitmentId": "df99783d-3de5-47d9-b0a5-6c09192f5ed2",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "275/45R22"
+      ],
+      "after": [
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Chevrolet traverse",
+      "trim": "Premier",
+      "fitmentId": "cd1d8ad6-954f-41c2-81fe-7ba3f3bb706e",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/55R20",
+        "275/45R22"
+      ],
+      "after": [
+        "245/60R18",
+        "255/55R20",
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Dodge hornet",
+      "trim": "Base",
+      "fitmentId": "b1192013-768c-4052-81cc-57322750c848",
+      "wouldAdd": [
+        "225/55R18",
+        "215/60R17"
+      ],
+      "before": [
+        "225/55R17",
+        "235/50R18",
+        "235/40R20"
+      ],
+      "after": [
+        "225/55R17",
+        "235/50R18",
+        "235/40R20",
+        "225/55R18",
+        "215/60R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "Pro",
+      "fitmentId": "f80a6a91-8810-4453-8edb-5a0f7538bdf8",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/70R17",
+        "265/70R17",
+        "275/60R20"
+      ],
+      "after": [
+        "255/70R17",
+        "265/70R17",
+        "275/60R20",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "SLT",
+      "fitmentId": "3de65e77-994f-438f-9b93-a1461dd7060a",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "265/65R18",
+        "275/60R20",
+        "275/50R22"
+      ],
+      "after": [
+        "265/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "AT4",
+      "fitmentId": "a5e46e0c-f99d-4cfb-840b-987421efef49",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "275/65R18",
+        "265/60R20",
+        "275/60R20"
+      ],
+      "after": [
+        "275/65R18",
+        "265/60R20",
+        "275/60R20",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "AT4X",
+      "fitmentId": "74c94a60-b1ff-45aa-87fb-0ec2c3a6c323",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "275/70R18"
+      ],
+      "after": [
+        "275/70R18",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "Denali",
+      "fitmentId": "4c357615-73df-4313-adb2-54a7689d7ccc",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "275/60R20",
+        "275/50R22"
+      ],
+      "after": [
+        "275/60R20",
+        "275/50R22",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "Denali Ultimate",
+      "fitmentId": "b0347dbd-cc95-41a4-b403-d63ff0167808",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "275/50R22"
+      ],
+      "after": [
+        "275/50R22",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "SLE",
+      "fitmentId": "89831325-5dc9-4f6e-ab85-1462e1685fec",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20"
+      ],
+      "after": [
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "trim": "Elevation",
+      "fitmentId": "9d3b45d3-ac9a-4b4f-92da-e4de55421c3d",
+      "wouldAdd": [
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ],
+      "before": [
+        "275/60R20"
+      ],
+      "after": [
+        "275/60R20",
+        "LT275/65R18",
+        "LT265/60R20",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "trim": "X-Line",
+      "fitmentId": "74f935b1-8f07-4ba4-9808-79392a08d1d0",
+      "wouldAdd": [
+        "235/60R18",
+        "235/55R19"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "trim": "X-Pro",
+      "fitmentId": "280fde5d-6d04-47eb-8a98-695c208a861d",
+      "wouldAdd": [
+        "235/60R18",
+        "235/55R19"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "trim": "LX, EX, SX, SX Turbo, X-Line, X-Pro",
+      "fitmentId": "94aa8d93-f77a-440b-b972-680ba09c5730",
+      "wouldAdd": [
+        "235/60R18",
+        "235/55R19"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "trim": "LX",
+      "fitmentId": "2beaa00a-1905-49a5-b8af-7caaafa431d6",
+      "wouldAdd": [
+        "235/60R18",
+        "235/55R19"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "trim": "EX",
+      "fitmentId": "a6b73b7f-9b70-4660-85bd-d2ce97f9e840",
+      "wouldAdd": [
+        "235/60R18",
+        "235/55R19"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "trim": "SX",
+      "fitmentId": "1dbad0fa-0918-4dfb-b821-0876df94e6d5",
+      "wouldAdd": [
+        "235/60R18",
+        "235/55R19"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "trim": "SX Turbo",
+      "fitmentId": "d8f0c4c6-94c6-446b-9199-8200e8590846",
+      "wouldAdd": [
+        "235/60R18",
+        "235/55R19"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/60R18",
+        "235/55R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Maserati granturismo",
+      "trim": "M175 (2nd Gen)",
+      "fitmentId": "3f707f5a-1445-4e91-afe8-420e88d86506",
+      "wouldAdd": [
+        "265/30ZR20",
+        "265/35ZR20"
+      ],
+      "before": [
+        "255/35R20",
+        "295/30R20",
+        "295/30R21"
+      ],
+      "after": [
+        "255/35R20",
+        "295/30R20",
+        "295/30R21",
+        "265/30ZR20",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan pathfinder",
+      "trim": "S",
+      "fitmentId": "672acd2b-89d3-43f5-9b3d-eb805a19474c",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan pathfinder",
+      "trim": "SV",
+      "fitmentId": "282ef605-fdc1-4551-babd-ffbde595c6c7",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan pathfinder",
+      "trim": "SL",
+      "fitmentId": "4d1e6cbe-0890-4ec0-bf29-f122c8ebf934",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan pathfinder",
+      "trim": "Platinum",
+      "fitmentId": "82a63f1b-f718-4320-9fff-32142f4129d9",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan pathfinder",
+      "trim": "S, SV, SL, Platinum",
+      "fitmentId": "5f6e4720-43ca-4b39-a1db-d99013718212",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan z",
+      "trim": "Sport",
+      "fitmentId": "820923d3-98c5-4aee-b4a9-4c69b7b6201d",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan z",
+      "trim": "Performance",
+      "fitmentId": "a8173418-d762-4581-bb44-663a79c00330",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan z",
+      "trim": "NISMO",
+      "fitmentId": "e08ac285-7810-4f74-9f70-42dd7be5199a",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Nissan z",
+      "trim": "Sport, Performance, NISMO",
+      "fitmentId": "54f9acc4-a549-4fa1-9deb-b37db3be6a4c",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "SR5",
+      "fitmentId": "2d97228e-3bbf-454e-907f-fdac9cd457a4",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "TRD Sport",
+      "fitmentId": "893ec59b-6701-4983-a32f-cc8d4e1cf51b",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "Limited",
+      "fitmentId": "e19b482d-1d33-4991-bfdf-31bbba8c9837",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/60R18"
+      ],
+      "after": [
+        "265/60R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "Trailhunter",
+      "fitmentId": "05fd2fa0-dcb1-4d49-b151-115af9e78035",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/60R18"
+      ],
+      "after": [
+        "265/60R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "SR",
+      "fitmentId": "0430b037-6537-4ced-bba7-42fff51d6297",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "TRD Off-Road",
+      "fitmentId": "c41ec03b-03b1-4b81-b412-e98514d1d67a",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "TRD Pro",
+      "fitmentId": "2ae76db5-98fb-4c96-9a5f-37945d019f46",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "trim": "TRD PreRunner",
+      "fitmentId": "4d36571a-830f-4441-92b1-60a938e50a70",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "trim": "S",
+      "fitmentId": "645a3769-2ba7-47c7-99b1-0370a071d516",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "trim": "SE",
+      "fitmentId": "16594e5b-0dc6-4a99-9c32-18d9c975c324",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "trim": "SE w/Tech",
+      "fitmentId": "252c6023-2cd9-4401-83e3-cca533aac3cc",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "trim": "SEL",
+      "fitmentId": "08ed6a96-c087-4bf6-a44d-41b538200738",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "trim": "SEL Premium",
+      "fitmentId": "aa54d4c2-2916-459d-a0eb-0dc34f2d5cc6",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "trim": "Cross Sport",
+      "fitmentId": "1a70a7ea-bc21-4874-b3b0-8f37bf1b243b",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "trim": "S, SE, SE w/Tech, SEL, SEL Premium, Cross Sport",
+      "fitmentId": "621c6787-e51b-4816-8ef0-c03e956554a8",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2024 Volvo s90",
+      "trim": "Momentum",
+      "fitmentId": "6f923777-9440-4e8b-b38d-93e3392a9bf9",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Volvo s90",
+      "trim": "R-Design",
+      "fitmentId": "e010f878-bd8d-4711-8fed-0d6b7fc432e6",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Volvo s90",
+      "trim": "Inscription",
+      "fitmentId": "67e6ce27-28dc-4a76-8fa3-e0747b26dfe6",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2024 Volvo s90",
+      "trim": "Momentum, R-Design, Inscription",
+      "fitmentId": "35bc6ed8-6ddd-484d-a70c-fbe3be372403",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Acura mdx",
+      "trim": "Base, Technology, A-Spec, Advance, Type S",
+      "fitmentId": "a3722a72-4048-4e6e-b119-51c9ad426948",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Acura mdx",
+      "trim": "Technology",
+      "fitmentId": "4de5d319-4f0b-4578-8c46-9cc9f3925d33",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Acura mdx",
+      "trim": "Base",
+      "fitmentId": "e5b67bdd-89f4-4585-ba1f-525dc0dda251",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Acura mdx",
+      "trim": "A-Spec",
+      "fitmentId": "be07ba67-ec26-40a0-8476-119eb55ea788",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "265/45R20"
+      ],
+      "after": [
+        "265/45R20",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Acura mdx",
+      "trim": "Advance",
+      "fitmentId": "90b89a25-4d74-40bb-baaa-224a7af9682b",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "265/45R20"
+      ],
+      "after": [
+        "265/45R20",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Acura mdx",
+      "trim": "Type S",
+      "fitmentId": "0af094ae-bc31-470a-9093-c01c95441344",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "275/40R21"
+      ],
+      "after": [
+        "275/40R21",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford Bronco Sport",
+      "trim": "Base",
+      "fitmentId": "8fbf4f43-5f79-4f4f-8300-67905ceef51f",
+      "wouldAdd": [
+        "235/65R17"
+      ],
+      "before": [
+        "225/65R17",
+        "225/60R18"
+      ],
+      "after": [
+        "225/65R17",
+        "225/60R18",
+        "235/65R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford bronco",
+      "trim": "Wildtrak",
+      "fitmentId": "072a595a-035e-4777-829b-56747bfb0604",
+      "wouldAdd": [
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "315/70R17"
+      ],
+      "after": [
+        "315/70R17",
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford bronco",
+      "trim": "Big Bend",
+      "fitmentId": "cfa45cd5-2b0c-41bf-92e0-4cd74b44bcb4",
+      "wouldAdd": [
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/75R17"
+      ],
+      "after": [
+        "255/75R17",
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford bronco",
+      "trim": "Black Diamond",
+      "fitmentId": "727f6979-638b-4f8f-86aa-34d012c0ce41",
+      "wouldAdd": [
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford bronco",
+      "trim": "Badlands",
+      "fitmentId": "5a0eabae-18cf-4a47-8121-7387f585e87e",
+      "wouldAdd": [
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "285/70R17"
+      ],
+      "after": [
+        "285/70R17",
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford bronco",
+      "trim": "Raptor",
+      "fitmentId": "adaaf1f7-9812-48c3-bc07-23ccd9e2b28f",
+      "wouldAdd": [
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "37X12.50R17"
+      ],
+      "after": [
+        "37X12.50R17",
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford bronco",
+      "trim": "Base",
+      "fitmentId": "df4a1641-867d-451d-886e-186219da558a",
+      "wouldAdd": [
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/70R16"
+      ],
+      "after": [
+        "255/70R16",
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Ford bronco",
+      "trim": "Outer Banks",
+      "fitmentId": "7aa013ab-feb7-47db-9c10-3cbd26d06eb6",
+      "wouldAdd": [
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/70R18"
+      ],
+      "after": [
+        "255/70R18",
+        "LT285/70R17",
+        "LT315/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Hyundai tucson",
+      "trim": "XRT",
+      "fitmentId": "da896c54-8889-4876-bfc0-971ff964a57b",
+      "wouldAdd": [
+        "235/55R19",
+        "235/60R18"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/55R19",
+        "235/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Hyundai tucson",
+      "trim": "SE",
+      "fitmentId": "03cfdb3e-df5a-4ca2-9cf6-2d3cfe6033c6",
+      "wouldAdd": [
+        "235/55R19",
+        "235/60R18"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/55R19",
+        "235/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Hyundai tucson",
+      "trim": "SEL",
+      "fitmentId": "6ae7ea4e-dc68-4da2-85c8-7f8fad4898c8",
+      "wouldAdd": [
+        "235/55R19",
+        "235/60R18"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/55R19",
+        "235/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Hyundai tucson",
+      "trim": "Limited",
+      "fitmentId": "28309da1-8df7-4dc9-b067-3b850267a011",
+      "wouldAdd": [
+        "235/55R19",
+        "235/60R18"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/55R19",
+        "235/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Hyundai tucson",
+      "trim": "N Line",
+      "fitmentId": "8401f921-be94-46d1-8373-b6d4479c9ea6",
+      "wouldAdd": [
+        "235/55R19",
+        "235/60R18"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/55R19",
+        "235/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Hyundai tucson",
+      "trim": "SE, SEL, XRT, Limited, N Line",
+      "fitmentId": "cd3a50f7-7448-45e1-837c-332707166351",
+      "wouldAdd": [
+        "235/55R19",
+        "235/60R18"
+      ],
+      "before": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19"
+      ],
+      "after": [
+        "235/65R17",
+        "235/55R18",
+        "255/45R19",
+        "235/55R19",
+        "235/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Lincoln aviator",
+      "trim": "Standard, Reserve, Grand Touring, Black Label",
+      "fitmentId": "f6e1fc9a-3d50-4ce1-aec4-06de0029ba72",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2025 Lincoln aviator",
+      "trim": "Reserve",
+      "fitmentId": "577e52fd-a361-4436-9b9a-7adb04629cdf",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2025 Lincoln aviator",
+      "trim": "Grand Touring",
+      "fitmentId": "0fe7601e-6bfc-4e20-882c-f01937cbd969",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2025 Lincoln aviator",
+      "trim": "Black Label",
+      "fitmentId": "5646e6ef-3c47-4d38-87c0-e84ca168c581",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2025 Lincoln aviator",
+      "trim": "Standard",
+      "fitmentId": "81c486a4-aad8-4bba-9724-561bc98afdae",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2025 Maserati granturismo",
+      "trim": "M175 (2nd Gen)",
+      "fitmentId": "f8d6f4be-fba0-40f1-8ceb-5e718eb92950",
+      "wouldAdd": [
+        "265/35ZR20",
+        "265/30ZR20"
+      ],
+      "before": [
+        "255/35R20",
+        "295/30R20",
+        "295/30R21"
+      ],
+      "after": [
+        "255/35R20",
+        "295/30R20",
+        "295/30R21",
+        "265/35ZR20",
+        "265/30ZR20"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan pathfinder",
+      "trim": "SL",
+      "fitmentId": "3f7faf6c-3a2d-4118-8612-46fde7502769",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan pathfinder",
+      "trim": "Platinum",
+      "fitmentId": "bdccd493-6b6a-43bf-b679-095d9f383fa9",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan pathfinder",
+      "trim": "S",
+      "fitmentId": "4829333b-3557-48c5-b063-02162e4e4d47",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan pathfinder",
+      "trim": "SV",
+      "fitmentId": "77dd3ce9-a167-4b1e-883a-92f580fd0235",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan pathfinder",
+      "trim": "S, SV, SL, Platinum",
+      "fitmentId": "7ccd6707-b262-4d96-a6f7-14fe1301bbb9",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan z",
+      "trim": "NISMO",
+      "fitmentId": "42f85fc0-57f4-479f-b61b-27d553f288ad",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan z",
+      "trim": "Sport",
+      "fitmentId": "50674472-d2c6-4e5c-b94a-ecb47afd2909",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan z",
+      "trim": "Performance",
+      "fitmentId": "f1f016f6-2a2f-4bd1-bb4b-0ab3c346683f",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Nissan z",
+      "trim": "Sport, Performance, NISMO",
+      "fitmentId": "e384e760-065b-4d41-b4a1-0600a7d8510c",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "TRD Pro",
+      "fitmentId": "70f6004d-4552-4943-b7d1-73946c0df7d3",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "TRD Off-Road Premium",
+      "fitmentId": "d574d819-e669-41eb-ae86-8e9b062e868d",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "Trailhunter",
+      "fitmentId": "afd8ddd7-1e5b-48e9-b413-0946cda579b4",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "Platinum",
+      "fitmentId": "a452dda8-7047-465a-b639-e20eac7ebc12",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/55R20"
+      ],
+      "after": [
+        "265/55R20",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "SR5",
+      "fitmentId": "614b6f72-5fda-4388-9cc6-8b29c0e227ca",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "TRD Off-Road",
+      "fitmentId": "be133f08-06e8-4509-b1a1-8c63f51c3e0d",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "Limited",
+      "fitmentId": "312ff6e3-6edf-4153-bbff-ea76244eefd8",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/55R20"
+      ],
+      "after": [
+        "265/55R20",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "SR5 Premium",
+      "fitmentId": "5f615a0e-1b6b-4a1e-ab21-7b5210a2644f",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota 4Runner",
+      "trim": "TRD Sport",
+      "fitmentId": "bc8cf781-f2b3-4fb6-af01-9fd44bc39c00",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "Limited",
+      "fitmentId": "00dbae32-0a27-472d-87fd-cbfdebde3584",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/60R18"
+      ],
+      "after": [
+        "265/60R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "Trailhunter",
+      "fitmentId": "37c434eb-e49f-4bf0-8f63-b85b6f36cf42",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/60R18"
+      ],
+      "after": [
+        "265/60R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "TRD Sport",
+      "fitmentId": "fc67178a-71ae-49d4-a47d-672ec809ffd5",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "TRD Off-Road",
+      "fitmentId": "94f450cd-5b8f-4535-9560-97582fc237b2",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "TRD Pro",
+      "fitmentId": "f7418b48-8634-4d83-aa28-b779be562463",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "SR",
+      "fitmentId": "09782526-dcd7-4f12-8f7d-c4c10496e92b",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "SR5",
+      "fitmentId": "4c6040a3-69d6-499f-92db-14f3732fb9f4",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Toyota Tacoma",
+      "trim": "TRD PreRunner",
+      "fitmentId": "028fe70d-b580-4b31-80f8-7c7f6985d358",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen atlas",
+      "trim": "S",
+      "fitmentId": "92302856-e0ad-4256-b3ae-e6e64005ed1e",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen atlas",
+      "trim": "SE",
+      "fitmentId": "ddc2c189-b374-4152-8964-07ff1afc08c5",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen atlas",
+      "trim": "SE w/Tech",
+      "fitmentId": "7f0f6c1b-f072-47db-a9d0-9d5c79b0274d",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen atlas",
+      "trim": "SEL",
+      "fitmentId": "09ed01e9-037f-4930-9b72-126a64e0276d",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen atlas",
+      "trim": "SEL Premium",
+      "fitmentId": "db38f0a0-abe2-4f79-aea4-02589d85d0ab",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen atlas",
+      "trim": "Cross Sport",
+      "fitmentId": "40342109-7388-40f4-9794-e65896df9ff4",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen atlas",
+      "trim": "S, SE, SE w/Tech, SEL, SEL Premium, Cross Sport",
+      "fitmentId": "1f7e13a3-afcf-4214-8942-c2760d3e8aa0",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen tiguan",
+      "trim": "S",
+      "fitmentId": "ca861753-1ed9-4bf8-9389-fab7903f80d3",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen tiguan",
+      "trim": "SE",
+      "fitmentId": "b7548098-ebcc-48cf-b547-7b227479d395",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen tiguan",
+      "trim": "SE R-Line",
+      "fitmentId": "54c4f262-b67c-450f-81b1-fffe49aecffe",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen tiguan",
+      "trim": "SEL",
+      "fitmentId": "de70df10-2ce8-42b4-82d7-530d867b5d3b",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen tiguan",
+      "trim": "SEL R-Line",
+      "fitmentId": "de1da040-7b6a-4d43-aa81-893d288d212d",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Volkswagen tiguan",
+      "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+      "fitmentId": "f38c2366-8042-4f15-9f25-e6c684a5cbf5",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2025 Volvo s90",
+      "trim": "Momentum",
+      "fitmentId": "c597ad18-78ec-4fc5-a404-1ac2a0ff2ebb",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Volvo s90",
+      "trim": "R-Design",
+      "fitmentId": "cc93335f-83f6-4734-8232-c5405dbbd9e0",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Volvo s90",
+      "trim": "Inscription",
+      "fitmentId": "d4538c8a-f86e-4b1b-9463-f10c5a621c14",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2025 Volvo s90",
+      "trim": "Momentum, R-Design, Inscription",
+      "fitmentId": "8c10d739-6b51-444d-b329-0dd5a635fd3c",
+      "wouldAdd": [
+        "245/40R20"
+      ],
+      "before": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20"
+      ],
+      "after": [
+        "245/45R18",
+        "255/40R19",
+        "255/35R20",
+        "245/40R20"
+      ]
+    },
+    {
+      "vehicle": "2026 Acura mdx",
+      "trim": "A-Spec",
+      "fitmentId": "1b8834c7-ea66-446a-afd5-60d7852b9f3b",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "265/45R20"
+      ],
+      "after": [
+        "265/45R20",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2026 Acura mdx",
+      "trim": "Advance",
+      "fitmentId": "c125d56f-946d-4409-976a-a0e62ee764d3",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "265/45R20"
+      ],
+      "after": [
+        "265/45R20",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2026 Acura mdx",
+      "trim": "Type S",
+      "fitmentId": "7f639b95-b736-4d4f-9f9d-e88fa5e2304c",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "275/40R21"
+      ],
+      "after": [
+        "275/40R21",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2026 Acura mdx",
+      "trim": "Technology",
+      "fitmentId": "2b81f045-2147-400f-b606-6bdb0b12ebf4",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2026 Acura mdx",
+      "trim": "Base",
+      "fitmentId": "6d391993-ac90-4ffb-94db-1e24c3b39369",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2026 Acura mdx",
+      "trim": "Base, Technology, A-Spec, Advance, Type S",
+      "fitmentId": "a9ef2b6a-6a85-4504-9594-5ceb43d3aa08",
+      "wouldAdd": [
+        "255/50R20"
+      ],
+      "before": [
+        "255/55R19"
+      ],
+      "after": [
+        "255/55R19",
+        "255/50R20"
+      ]
+    },
+    {
+      "vehicle": "2026 Chevrolet traverse",
+      "trim": "LS",
+      "fitmentId": "47cbfd65-2e5f-401b-b036-b77b8475f2cd",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "255/65R18"
+      ],
+      "after": [
+        "255/65R18",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Chevrolet traverse",
+      "trim": "LT",
+      "fitmentId": "ee2a3b9f-31bb-465f-9ae5-81d1321f4727",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "255/65R18"
+      ],
+      "after": [
+        "255/65R18",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Chevrolet traverse",
+      "trim": "RS",
+      "fitmentId": "74682f82-c138-4e64-8d9d-02590df5c22e",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "275/45R22"
+      ],
+      "after": [
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Chevrolet traverse",
+      "trim": "High Country",
+      "fitmentId": "e4d6b2bb-1bcf-409c-afa6-48eeec482178",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "275/45R22"
+      ],
+      "after": [
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Chevrolet traverse",
+      "trim": "LS, LT, RS, Premier, High Country",
+      "fitmentId": "697360cc-6e1f-4553-9892-3dd9e1dddb6e",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "275/45R22"
+      ],
+      "after": [
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Chevrolet traverse",
+      "trim": "Premier",
+      "fitmentId": "02e2d943-256e-4841-8e20-e5515f20b455",
+      "wouldAdd": [
+        "265/65R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/55R20",
+        "275/45R22"
+      ],
+      "after": [
+        "245/60R18",
+        "255/55R20",
+        "275/45R22",
+        "265/65R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Ford bronco",
+      "trim": "Black Diamond",
+      "fitmentId": "4a4d5004-e952-40d2-be94-fed108012b13",
+      "wouldAdd": [
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Ford bronco",
+      "trim": "Base",
+      "fitmentId": "f0de4c70-e4f0-4d32-a508-48ae9c9d1330",
+      "wouldAdd": [
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/70R16"
+      ],
+      "after": [
+        "255/70R16",
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Ford bronco",
+      "trim": "Wildtrak",
+      "fitmentId": "952fcf5b-73f7-45db-98fe-41472b27bde6",
+      "wouldAdd": [
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "315/70R17"
+      ],
+      "after": [
+        "315/70R17",
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Ford bronco",
+      "trim": "Raptor",
+      "fitmentId": "6ddc0dae-2e6a-429b-b9c9-a158863c1efa",
+      "wouldAdd": [
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "37X12.50R17"
+      ],
+      "after": [
+        "37X12.50R17",
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Ford bronco",
+      "trim": "Badlands",
+      "fitmentId": "3a778c70-ef1b-4c53-bb48-94d1a85a9bc4",
+      "wouldAdd": [
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "285/70R17"
+      ],
+      "after": [
+        "285/70R17",
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Ford bronco",
+      "trim": "Outer Banks",
+      "fitmentId": "11970075-c7d7-4d74-b158-782f156327a8",
+      "wouldAdd": [
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/70R18"
+      ],
+      "after": [
+        "255/70R18",
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Ford bronco",
+      "trim": "Big Bend",
+      "fitmentId": "dd3f5768-b288-4b6e-8a29-e94bc76596de",
+      "wouldAdd": [
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ],
+      "before": [
+        "255/75R17"
+      ],
+      "after": [
+        "255/75R17",
+        "LT315/70R17",
+        "LT285/70R17",
+        "LT265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Lincoln aviator",
+      "trim": "Reserve",
+      "fitmentId": "b20e2d27-879e-4cf1-b159-ca95b6b62b8b",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2026 Lincoln aviator",
+      "trim": "Grand Touring",
+      "fitmentId": "47bf595b-b193-4515-a0c8-db4ef9f9ea54",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2026 Lincoln aviator",
+      "trim": "Standard, Reserve, Grand Touring, Black Label",
+      "fitmentId": "29435a78-0261-484e-8f28-5d56e1cb9494",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2026 Lincoln aviator",
+      "trim": "Standard",
+      "fitmentId": "1c0b7dec-4bf5-4e2e-8927-22be0ff045b8",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2026 Lincoln aviator",
+      "trim": "Black Label",
+      "fitmentId": "77bb8c70-bf62-49c4-a3ab-d7ef9775b8b5",
+      "wouldAdd": [
+        "275/40R22"
+      ],
+      "before": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22"
+      ],
+      "after": [
+        "255/55R20",
+        "275/45R21",
+        "285/40R22",
+        "275/40R22"
+      ]
+    },
+    {
+      "vehicle": "2026 Maserati granturismo",
+      "trim": "M175 (2nd Gen)",
+      "fitmentId": "0696c9c5-40c3-48dd-8f0f-64ad26bba9e0",
+      "wouldAdd": [
+        "265/30ZR20",
+        "265/35ZR20"
+      ],
+      "before": [
+        "255/35R20",
+        "295/30R20",
+        "295/30R21"
+      ],
+      "after": [
+        "255/35R20",
+        "295/30R20",
+        "295/30R21",
+        "265/30ZR20",
+        "265/35ZR20"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan pathfinder",
+      "trim": "SL",
+      "fitmentId": "2bd9c4d1-ee2e-42a8-b978-23de25c8633c",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan pathfinder",
+      "trim": "S",
+      "fitmentId": "5c57e030-e07c-4c36-a717-ae622dec996e",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan pathfinder",
+      "trim": "SV",
+      "fitmentId": "70ad2c47-1dc7-41a2-a272-c3d8e78d8645",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan pathfinder",
+      "trim": "Platinum",
+      "fitmentId": "d9b681fa-f797-42fc-b4d6-b785b2a91466",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan pathfinder",
+      "trim": "S, SV, SL, Platinum",
+      "fitmentId": "312cf8b3-ea76-4fcd-8de2-29e62e1ba915",
+      "wouldAdd": [
+        "265/60R18"
+      ],
+      "before": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20"
+      ],
+      "after": [
+        "255/60R18",
+        "255/50R20",
+        "255/55R20",
+        "265/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan z",
+      "trim": "Sport",
+      "fitmentId": "ced29aaa-3402-428b-8bb6-682943a7a1e0",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan z",
+      "trim": "Performance",
+      "fitmentId": "f941d126-37ac-4951-b1ed-a2d3a75d8c40",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan z",
+      "trim": "NISMO",
+      "fitmentId": "56f77645-f4c6-448b-840b-ae29c73a18fe",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Nissan z",
+      "trim": "Sport, Performance, NISMO",
+      "fitmentId": "1e23d15a-f343-4a06-b9f9-c5ab6da47cdf",
+      "wouldAdd": [
+        "285/35R19"
+      ],
+      "before": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19"
+      ],
+      "after": [
+        "245/45R18",
+        "275/40R18",
+        "255/40R19",
+        "275/35R19",
+        "285/35R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota 4runner",
+      "trim": "SR5",
+      "fitmentId": "84cf5903-d5a9-4383-b172-ffc8adce239e",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota 4runner",
+      "trim": "Limited",
+      "fitmentId": "03d3638e-5af0-4934-b2b2-0aa49211718c",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/55R20"
+      ],
+      "after": [
+        "265/55R20",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota 4runner",
+      "trim": "TRD Off-Road",
+      "fitmentId": "a73108ea-4e92-49af-855a-109399daa9fc",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota 4runner",
+      "trim": "TRD Off-Road Premium",
+      "fitmentId": "d96bffb9-4575-4eac-8d83-3cabb6e74391",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota 4runner",
+      "trim": "TRD Pro",
+      "fitmentId": "13112139-e8bc-4a5e-9803-793e77869b8a",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota 4runner",
+      "trim": "Trailhunter",
+      "fitmentId": "83facaa5-a2b4-4c90-8264-09b6cd4c8a2b",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/70R17"
+      ],
+      "after": [
+        "265/70R17",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota 4runner",
+      "trim": "Platinum",
+      "fitmentId": "5b36928d-a885-439a-9026-cd80502163b6",
+      "wouldAdd": [
+        "245/70R17"
+      ],
+      "before": [
+        "265/55R20"
+      ],
+      "after": [
+        "265/55R20",
+        "245/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "Trailhunter",
+      "fitmentId": "3c07a3cf-29e8-4f13-8305-34f4f3754309",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/60R18"
+      ],
+      "after": [
+        "265/60R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "TRD Sport",
+      "fitmentId": "b11e01cd-dd70-4c73-abed-7fc48726c9be",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "SR5",
+      "fitmentId": "37d98f2d-3527-4882-bc9e-1bdee48ccb4d",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "TRD Off-Road",
+      "fitmentId": "de5ea9fe-e096-4c7f-8adf-655b12a742c8",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "TRD Pro",
+      "fitmentId": "973907e4-25ef-40f2-90e1-daa31b2fab88",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/70R18"
+      ],
+      "after": [
+        "265/70R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "TRD PreRunner",
+      "fitmentId": "28c23306-910f-435a-b444-d37e1f713cc9",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "Limited",
+      "fitmentId": "f76b2a4d-238b-477f-90f1-f7c862ef82e2",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "265/60R18"
+      ],
+      "after": [
+        "265/60R18",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Toyota Tacoma",
+      "trim": "SR",
+      "fitmentId": "dbf52ca6-4f6f-42a2-a243-8222255f9bde",
+      "wouldAdd": [
+        "265/65R18",
+        "265/70R17"
+      ],
+      "before": [
+        "245/70R17"
+      ],
+      "after": [
+        "245/70R17",
+        "265/65R18",
+        "265/70R17"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen atlas",
+      "trim": "S",
+      "fitmentId": "16759d5f-2a28-484d-a1a6-f12eae311a23",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen atlas",
+      "trim": "SE",
+      "fitmentId": "62de8bb0-d77d-41be-94cf-079e9b90f5ae",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen atlas",
+      "trim": "SE w/Tech",
+      "fitmentId": "c6bd2c41-7b95-410b-8edc-e213c7e69e76",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen atlas",
+      "trim": "SEL",
+      "fitmentId": "5380319c-db50-4645-8f68-d9aa4a1ac6ff",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen atlas",
+      "trim": "SEL Premium",
+      "fitmentId": "e6d2c9f1-e663-4243-9551-1a35af73b1ec",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen atlas",
+      "trim": "Cross Sport",
+      "fitmentId": "c5375fbb-dc3f-4686-abb7-88f426a8d73c",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen atlas",
+      "trim": "S, SE, SE w/Tech, SEL, SEL Premium, Cross Sport",
+      "fitmentId": "c6d9c03c-9959-4947-8d3c-5c56797da80a",
+      "wouldAdd": [
+        "255/60R18"
+      ],
+      "before": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21"
+      ],
+      "after": [
+        "245/60R18",
+        "255/50R20",
+        "265/45R21",
+        "255/60R18"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen tiguan",
+      "trim": "S",
+      "fitmentId": "9a0ca193-6bdb-4f59-8a25-3712327424c2",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen tiguan",
+      "trim": "SE",
+      "fitmentId": "c1e6cca7-840b-4a71-96de-294eca39b319",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen tiguan",
+      "trim": "SE R-Line",
+      "fitmentId": "2cc8a2dc-b3cf-430b-a54c-cde8e54c261e",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen tiguan",
+      "trim": "SEL",
+      "fitmentId": "c7848994-bed2-42a0-95d4-c9e0755245a9",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen tiguan",
+      "trim": "SEL R-Line",
+      "fitmentId": "2e770f12-9440-4c53-ba34-e822b7cef85d",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    },
+    {
+      "vehicle": "2026 Volkswagen tiguan",
+      "trim": "S, SE, SE R-Line, SEL, SEL R-Line",
+      "fitmentId": "560e1257-cc70-47b4-b61c-4cfc431d336a",
+      "wouldAdd": [
+        "235/50R19"
+      ],
+      "before": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20"
+      ],
+      "after": [
+        "215/65R17",
+        "235/55R18",
+        "255/45R19",
+        "255/40R20",
+        "235/50R19"
+      ]
+    }
+  ],
+  "updated": [],
+  "errors": [
+    {
+      "vehicle": "2024 Land Rover Range Rover Sport",
+      "errors": [
+        "Invalid tire size format: HL305/35R23"
+      ]
+    },
+    {
+      "vehicle": "2024 Rivian r1s",
+      "errors": [
+        "Invalid tire size format: HL275/50R22"
+      ]
+    },
+    {
+      "vehicle": "2025 Rivian r1s",
+      "errors": [
+        "Invalid tire size format: HL275/50R22"
+      ]
+    },
+    {
+      "vehicle": "2025 Rivian r1t",
+      "errors": [
+        "Invalid tire size format: HL275/50R22"
+      ]
+    },
+    {
+      "vehicle": "2026 Rivian r1s",
+      "errors": [
+        "Invalid tire size format: HL275/50R22"
+      ]
+    },
+    {
+      "vehicle": "2026 Rivian r1t",
+      "errors": [
+        "Invalid tire size format: HL275/50R22"
+      ]
+    }
+  ],
+  "snapshots": [
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Acura-mdx-1778681525232.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Chevrolet-tahoe-1778681525491.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Chevrolet-traverse-1778681525773.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Dodge-hornet-1778681526035.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-GMC-Sierra_1500-1778681526137.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Kia-sportage-1778681526470.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Maserati-granturismo-1778681526753.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Nissan-pathfinder-1778681526821.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Nissan-z-1778681527041.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Toyota-Tacoma-1778681527217.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Volkswagen-atlas-1778681527547.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2024-Volvo-s90-1778681527879.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Acura-mdx-1778681528067.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Ford-Bronco_Sport-1778681528341.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Ford-bronco-1778681528423.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Hyundai-tucson-1778681528716.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Lincoln-aviator-1778681528972.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Maserati-granturismo-1778681529203.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Nissan-pathfinder-1778681529275.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Nissan-z-1778681529497.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Toyota-4Runner-1778681529678.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Toyota-Tacoma-1778681530057.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Volkswagen-atlas-1778681530399.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Volkswagen-tiguan-1778681530694.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2025-Volvo-s90-1778681530982.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Acura-mdx-1778681531169.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Chevrolet-traverse-1778681531437.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Ford-bronco-1778681531695.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Lincoln-aviator-1778681532000.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Maserati-granturismo-1778681532213.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Nissan-pathfinder-1778681532325.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Nissan-z-1778681532529.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Toyota-4runner-1778681532705.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Toyota-Tacoma-1778681532988.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Volkswagen-atlas-1778681533309.json",
+    "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\usaf-snapshots\\2026-Volkswagen-tiguan-1778681533596.json"
+  ]
+}
