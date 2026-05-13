@@ -80,8 +80,8 @@ export type DiscrepancyType =
 export interface FitmentDiscrepancy {
   type: DiscrepancyType;
   field: string;
-  ourValue: string | number | null;
-  usafValue: string | number | null;
+  ourValue: string | number | boolean | null;
+  usafValue: string | number | boolean | null;
   confidence: number;  // 0-100
   recommendation: 'approve' | 'review' | 'ignore';
   notes?: string;
