@@ -78,10 +78,15 @@ export const kmImageMappings = pgTable(
     imageUrl: varchar("image_url", { length: 1000 }),
     thumbnailUrl: varchar("thumbnail_url", { length: 1000 }),
     
+    // K&M specific fields
+    prodline: varchar("prodline", { length: 200 }),
+    folderId: varchar("folder_id", { length: 100 }),
+    
     // Source
     supplier: varchar("supplier", { length: 50 }).default("km"),
     
     // Timestamps
+    fetchedAt: timestamp("fetched_at", { withTimezone: true }),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   },

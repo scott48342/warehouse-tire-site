@@ -192,6 +192,8 @@ export const wheelSizeTrimMappings = pgTable(
     wsTrim: text("ws_trim"), // alias for code compatibility
     wsEngine: text("ws_engine"), // alias for code compatibility
     configCount: integer("config_count"), // alias for code compatibility
+    hasSingleConfig: boolean("has_single_config"),
+    defaultWheelDiameter: integer("default_wheel_diameter"),
     wheelSizeModificationId: text("wheel_size_modification_id"),
     matchMethod: varchar("match_method", { length: 50 }),
     matchConfidence: varchar("match_confidence", { length: 20 }),
