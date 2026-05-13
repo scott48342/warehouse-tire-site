@@ -406,5 +406,3 @@ export const cartAddEvents = pgTable(
 
 export type CartAddEvent = typeof cartAddEvents.$inferSelect;
 export type NewCartAddEvent = typeof cartAddEvents.$inferInsert;
-/ /   B u i l d   t r i g g e r   2 0 2 6 - 0 5 - 1 3   1 5 : 5 0 : 2 0  
- 
