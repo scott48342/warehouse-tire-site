@@ -1,0 +1,743 @@
+{
+  "summary": {
+    "totalVehicles": 10,
+    "eligibleForAutoPromotion": 1,
+    "needsManualReview": 9,
+    "noAction": 0,
+    "totalPromotableSizes": 3,
+    "totalNeedsReviewSizes": 15,
+    "totalRejectedSizes": 1
+  },
+  "results": [
+    {
+      "vehicle": "2024 Acura mdx",
+      "year": 2024,
+      "make": "Acura",
+      "model": "mdx",
+      "currentConfigSizes": [
+        {
+          "size": "255/55R19",
+          "diameter": 19,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "275/40R21",
+          "diameter": 21,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "19\", 20\", 21\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "265/45R20",
+          "diameter": 20,
+          "confidence": 95,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 20\" already in config; Standard tire size format"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 1,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Staggered setup with 3 diameter options",
+      "proposedChooser": "Staggered setup with 3 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2024 Chevrolet tahoe",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "tahoe",
+      "currentConfigSizes": [
+        {
+          "size": "265/70R18",
+          "diameter": 18,
+          "axle": "square"
+        },
+        {
+          "size": "265/70R18",
+          "diameter": 18,
+          "axle": "square"
+        },
+        {
+          "size": "275/65R18",
+          "diameter": 18,
+          "axle": "square"
+        },
+        {
+          "size": "P275/60R20",
+          "diameter": 20,
+          "axle": "square"
+        },
+        {
+          "size": "275/60R20",
+          "diameter": 20,
+          "axle": "square"
+        },
+        {
+          "size": "P275/50R22",
+          "diameter": 22,
+          "axle": "square"
+        },
+        {
+          "size": "275/50R22",
+          "diameter": 22,
+          "axle": "square"
+        },
+        {
+          "size": "P285/45R22",
+          "diameter": 22,
+          "axle": "square"
+        },
+        {
+          "size": "285/45R22",
+          "diameter": 22,
+          "axle": "square"
+        },
+        {
+          "size": "275/50R22",
+          "diameter": 22,
+          "axle": "square"
+        },
+        {
+          "size": "285/45R22",
+          "diameter": 22,
+          "axle": "square"
+        },
+        {
+          "size": "285/45R22",
+          "diameter": 22,
+          "axle": "square"
+        },
+        {
+          "size": "P285/40R24",
+          "diameter": 24,
+          "axle": "square"
+        },
+        {
+          "size": "285/40R24",
+          "diameter": 24,
+          "axle": "square"
+        }
+      ],
+      "currentDiameters": "18\", 20\", 22\", 24\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "265/65R18",
+          "diameter": 18,
+          "confidence": 85,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 18\" already in config; Standard tire size format; Many diameter options (4)"
+        },
+        {
+          "size": "275/55R20",
+          "diameter": 20,
+          "confidence": 85,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 20\" already in config; Standard tire size format; Many diameter options (4)"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 2,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Chooser with 4 options: 18\", 20\", 22\", 24\"",
+      "proposedChooser": "Chooser with 4 options: 18\", 20\", 22\", 24\"",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2024 Chevrolet traverse",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "traverse",
+      "currentConfigSizes": [
+        {
+          "size": "275/45R22",
+          "diameter": 22,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "22\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "265/65R18",
+          "diameter": 18,
+          "confidence": 80,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; New diameter: 18\"; Standard tire size format"
+        },
+        {
+          "size": "255/65R18",
+          "diameter": 18,
+          "confidence": 80,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; New diameter: 18\"; Standard tire size format"
+        },
+        {
+          "size": "245/60R18",
+          "diameter": 18,
+          "confidence": 85,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; New diameter: 18\"; Standard tire size format; Common OEM size pattern"
+        },
+        {
+          "size": "255/55R20",
+          "diameter": 20,
+          "confidence": 80,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; New diameter: 20\"; Standard tire size format"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 4,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Single option: 22\"",
+      "proposedChooser": "Staggered setup with 3 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2024 GMC Sierra 1500",
+      "year": 2024,
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "currentConfigSizes": [
+        {
+          "size": "275/70R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "305/70R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "275/60R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "275/65R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "275/50R22",
+          "diameter": 22,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "18\", 20\", 22\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "265/65R18",
+          "diameter": 18,
+          "confidence": 95,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 18\" already in config; Standard tire size format"
+        },
+        {
+          "size": "LT275/65R18",
+          "diameter": 18,
+          "confidence": 90,
+          "status": "REJECTED",
+          "reason": "HD SRW/DRW ambiguity: LT size LT275/65R18 mixed with non-LT at same diameter"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 1,
+      "rejectedCount": 1,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Staggered setup with 3 diameter options",
+      "proposedChooser": "Staggered setup with 3 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": true,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2024 Kia sportage",
+      "year": 2024,
+      "make": "Kia",
+      "model": "sportage",
+      "currentConfigSizes": [
+        {
+          "size": "235/65R17",
+          "diameter": 17,
+          "axle": "all"
+        },
+        {
+          "size": "235/65R17",
+          "diameter": 17,
+          "axle": "all"
+        },
+        {
+          "size": "235/65R17",
+          "diameter": 17,
+          "axle": "all"
+        },
+        {
+          "size": "235/65R17",
+          "diameter": 17,
+          "axle": "all"
+        },
+        {
+          "size": "235/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "235/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "235/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "235/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "235/55R19",
+          "diameter": 19,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "17\", 18\", 19\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "235/55R18",
+          "diameter": 18,
+          "confidence": 95,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 18\" already in config; Standard tire size format"
+        },
+        {
+          "size": "255/45R19",
+          "diameter": 19,
+          "confidence": 95,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 19\" already in config; Standard tire size format"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 2,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Staggered setup with 3 diameter options",
+      "proposedChooser": "Staggered setup with 3 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2024 Nissan pathfinder",
+      "year": 2024,
+      "make": "Nissan",
+      "model": "pathfinder",
+      "currentConfigSizes": [
+        {
+          "size": "265/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "255/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "255/60R18",
+          "diameter": 18,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "18\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "confidence": 85,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; New diameter: 20\"; Standard tire size format; Common OEM size pattern"
+        },
+        {
+          "size": "255/55R20",
+          "diameter": 20,
+          "confidence": 80,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; New diameter: 20\"; Standard tire size format"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 2,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Single option: 18\"",
+      "proposedChooser": "Staggered setup with 2 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2024 Toyota Tacoma",
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "currentConfigSizes": [
+        {
+          "size": "245/70R17",
+          "diameter": 17,
+          "axle": "all"
+        },
+        {
+          "size": "245/70R17",
+          "diameter": 17,
+          "axle": "all"
+        },
+        {
+          "size": "265/65R18",
+          "diameter": 18,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "17\", 18\"",
+      "proposedNewSizes": [
+        {
+          "size": "265/70R17",
+          "diameter": 17,
+          "confidence": 100,
+          "reasons": [
+            "Confirmed by both legacy DB and USAF",
+            "17\" already in config",
+            "Standard tire size format",
+            "Common OEM size pattern"
+          ]
+        },
+        {
+          "size": "265/70R18",
+          "diameter": 18,
+          "confidence": 100,
+          "reasons": [
+            "Confirmed by both legacy DB and USAF",
+            "18\" already in config",
+            "Standard tire size format",
+            "Common OEM size pattern"
+          ]
+        },
+        {
+          "size": "265/60R18",
+          "diameter": 18,
+          "confidence": 100,
+          "reasons": [
+            "Confirmed by both legacy DB and USAF",
+            "18\" already in config",
+            "Standard tire size format",
+            "Common OEM size pattern"
+          ]
+        }
+      ],
+      "allCandidates": [
+        {
+          "size": "265/70R17",
+          "diameter": 17,
+          "confidence": 100,
+          "status": "PROMOTABLE",
+          "reason": "Confirmed by both legacy DB and USAF; 17\" already in config; Standard tire size format; Common OEM size pattern"
+        },
+        {
+          "size": "265/70R18",
+          "diameter": 18,
+          "confidence": 100,
+          "status": "PROMOTABLE",
+          "reason": "Confirmed by both legacy DB and USAF; 18\" already in config; Standard tire size format; Common OEM size pattern"
+        },
+        {
+          "size": "265/60R18",
+          "diameter": 18,
+          "confidence": 100,
+          "status": "PROMOTABLE",
+          "reason": "Confirmed by both legacy DB and USAF; 18\" already in config; Standard tire size format; Common OEM size pattern"
+        }
+      ],
+      "promotableCount": 3,
+      "needsReviewCount": 0,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Staggered setup with 2 diameter options",
+      "proposedChooser": "Staggered setup with 2 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [
+        "vehicle_fitment_configurations.tire_size",
+        "vehicle_fitment_configurations.wheel_diameter"
+      ],
+      "rowsToInsert": 3,
+      "eligibleForAutoPromotion": true
+    },
+    {
+      "vehicle": "2024 Volkswagen atlas",
+      "year": 2024,
+      "make": "Volkswagen",
+      "model": "atlas",
+      "currentConfigSizes": [
+        {
+          "size": "255/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "245/60R18",
+          "diameter": 18,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "18\", 20\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "265/45R21",
+          "diameter": 21,
+          "confidence": 80,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; New diameter: 21\"; Standard tire size format"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 1,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Staggered setup with 2 diameter options",
+      "proposedChooser": "Staggered setup with 3 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2025 Acura mdx",
+      "year": 2025,
+      "make": "Acura",
+      "model": "mdx",
+      "currentConfigSizes": [
+        {
+          "size": "255/55R19",
+          "diameter": 19,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "275/40R21",
+          "diameter": 21,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "19\", 20\", 21\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "265/45R20",
+          "diameter": 20,
+          "confidence": 95,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 20\" already in config; Standard tire size format"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 1,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Staggered setup with 3 diameter options",
+      "proposedChooser": "Staggered setup with 3 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    },
+    {
+      "vehicle": "2026 Acura mdx",
+      "year": 2026,
+      "make": "Acura",
+      "model": "mdx",
+      "currentConfigSizes": [
+        {
+          "size": "255/55R19",
+          "diameter": 19,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "255/50R20",
+          "diameter": 20,
+          "axle": "all"
+        },
+        {
+          "size": "275/40R21",
+          "diameter": 21,
+          "axle": "all"
+        }
+      ],
+      "currentDiameters": "19\", 20\", 21\"",
+      "proposedNewSizes": [],
+      "allCandidates": [
+        {
+          "size": "265/45R20",
+          "diameter": 20,
+          "confidence": 95,
+          "status": "NEEDS_REVIEW",
+          "reason": "Confirmed by both legacy DB and USAF; 20\" already in config; Standard tire size format"
+        }
+      ],
+      "promotableCount": 0,
+      "needsReviewCount": 1,
+      "rejectedCount": 0,
+      "regressionRisk": "none",
+      "regressionDetails": [
+        "No regressions detected"
+      ],
+      "chooserChanges": false,
+      "addedDiameters": [],
+      "currentChooser": "Staggered setup with 3 diameter options",
+      "proposedChooser": "Staggered setup with 3 diameter options",
+      "hasStaggeredSetup": false,
+      "hdAmbiguity": false,
+      "trimGroupingChanges": false,
+      "dbFieldsUpdated": [],
+      "rowsToInsert": 0,
+      "eligibleForAutoPromotion": false
+    }
+  ]
+}
