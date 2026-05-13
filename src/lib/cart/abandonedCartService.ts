@@ -210,6 +210,21 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
       source: null,
       userAgent: null,
       ipAddress: null,
+      isTest: false,
+      testReason: null,
+      hostname: null,
+      emailCount: 0,
+      emailSentCount: 0,
+      firstEmailSentAt: null,
+      secondEmailSentAt: null,
+      thirdEmailSentAt: null,
+      lastEmailStatus: null,
+      emailOpenedAt: null,
+      emailClickedAt: null,
+      emailOpenCount: 0,
+      emailClickCount: 0,
+      recoveredAfterEmail: false,
+      unsubscribed: false,
     } as AbandonedCart;
   }
 

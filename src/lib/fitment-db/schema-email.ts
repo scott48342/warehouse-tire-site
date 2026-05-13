@@ -289,6 +289,7 @@ export const abandonedCarts = pgTable(
     // Cart contents
     items: json("items"), // Cart items JSON
     itemCount: integer("item_count").default(0),
+    subtotal: decimal("subtotal", { precision: 10, scale: 2 }),
     estimatedTotal: decimal("estimated_total", { precision: 10, scale: 2 }),
     
     // Vehicle context
