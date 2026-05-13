@@ -382,6 +382,7 @@ export const cartAddEvents = pgTable(
     // Purchase tracking
     purchased: boolean("purchased").default(false),
     purchasedAt: timestamp("purchased_at", { withTimezone: true }),
+    orderId: varchar("order_id", { length: 100 }),
     
     // Vehicle context
     vehicleYear: integer("vehicle_year"),

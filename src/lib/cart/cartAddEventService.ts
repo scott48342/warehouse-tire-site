@@ -301,20 +301,22 @@ export async function getTopProducts(options: {
     .from(cartAddEvents)
     .where(and(...conditions));
 
-  const products: ProductPopularityRow[] = results.map((row) => ({
-    sku: row.sku,
-    productName: row.productName,
-    brand: row.brand,
-    latestPrice: Number(row.latestPrice) || 0,
-    addToCartCount: Number(row.addToCartCount) || 0,
-    uniqueCarts: Number(row.uniqueCarts) || 0,
-    purchasedCount: Number(row.purchasedCount) || 0,
-    conversionRate:
-      row.addToCartCount > 0
-        ? Math.round((Number(row.purchasedCount) / Number(row.addToCartCount)) * 100)
-        : 0,
-    lastAddedAt: row.lastAddedAt,
-  }));
+  const products: ProductPopularityRow[] = results
+    .filter((row) => row.sku != null)
+    .map((row) => ({
+      sku: row.sku!,
+      productName: row.productName || "",
+      brand: row.brand || "",
+      latestPrice: Number(row.latestPrice) || 0,
+      addToCartCount: Number(row.addToCartCount) || 0,
+      uniqueCarts: Number(row.uniqueCarts) || 0,
+      purchasedCount: Number(row.purchasedCount) || 0,
+      conversionRate:
+        row.addToCartCount > 0
+          ? Math.round((Number(row.purchasedCount) / Number(row.addToCartCount)) * 100)
+          : 0,
+      lastAddedAt: row.lastAddedAt,
+    }));
 
   return {
     productType,
