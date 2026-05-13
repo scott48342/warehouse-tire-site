@@ -20,7 +20,7 @@ export async function GET(req: NextRequest, { params }: Params) {
     }
 
     const preview = await audienceResolver.getAudiencePreview(
-      campaign.audienceRulesJson as AudienceRules
+      campaign.audienceRules as AudienceRules
     );
 
     return NextResponse.json({ preview });

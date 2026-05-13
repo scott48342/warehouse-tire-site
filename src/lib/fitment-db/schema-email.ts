@@ -44,6 +44,7 @@ export const emailCampaigns = pgTable(
     
     // Audience targeting
     audienceRules: json("audience_rules"), // AudienceRules JSON
+    audienceRulesJson: json("audience_rules_json"), // AudienceRules JSON (alias for code compatibility)
     audienceCount: integer("audience_count").default(0),
     
     // Scheduling
@@ -150,6 +151,7 @@ export const emailCampaignEvents = pgTable(
     
     // Event details
     metadata: json("metadata"), // Raw webhook payload
+    rawData: json("raw_data"), // Raw webhook payload (alias)
     linkUrl: varchar("link_url", { length: 1000 }), // For click events
     userAgent: text("user_agent"),
     ipAddress: varchar("ip_address", { length: 45 }),

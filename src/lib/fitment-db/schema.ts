@@ -147,6 +147,7 @@ export const vehicleFitmentConfigurations = pgTable(
     tireSize: varchar("tire_size", { length: 50 }).notNull(),
     isOem: boolean("is_oem").default(true),
     isFrontAxle: boolean("is_front_axle").default(true),
+    axlePosition: varchar("axle_position", { length: 20 }), // front, rear, square
     source: varchar("source", { length: 100 }),
     notes: text("notes"),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),

@@ -22,7 +22,8 @@ import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, sql, ilike } from "drizzle-orm";
 import { getTrimsWithCoverage, hasYearCoverage } from "@/lib/fitment-db/coverage";
 import { resolveVehicleFitment } from "@/lib/fitment/canonicalResolver";
-import { getModelVariants, normalizeMake } from "@/lib/fitment-db/modelAliases";
+import { getModelVariants } from "@/lib/fitment-db/modelAliases";
+import { normalizeMake } from "@/lib/fitment-db/normalization";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;

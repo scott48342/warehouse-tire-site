@@ -384,7 +384,7 @@ export async function GET() {
       recentActivity.push({
         id: sub.id,
         email: sub.email,
-        source: sub.source,
+        source: sub.source || "unknown",
         vehicle,
         eventType: "subscriber",
         sentStatus: sub.source === "exit_intent" ? "sent" : "none",
