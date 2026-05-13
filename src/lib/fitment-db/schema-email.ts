@@ -245,6 +245,10 @@ export const emailSubscribers = pgTable(
     isTest: boolean("is_test").notNull().default(false),
     testReason: varchar("test_reason", { length: 100 }),
     
+    // Suppression tracking
+    suppressionReason: varchar("suppression_reason", { length: 100 }),
+    suppressedAt: timestamp("suppressed_at", { withTimezone: true }),
+    
     // Site context
     hostname: varchar("hostname", { length: 100 }),
     
@@ -353,14 +357,21 @@ export const cartAddEvents = pgTable(
     // Product info
     productType: varchar("product_type", { length: 50 }), // tire, wheel, accessory
     productSku: varchar("product_sku", { length: 100 }),
+    sku: varchar("sku", { length: 100 }), // alias
     productBrand: varchar("product_brand", { length: 100 }),
+    brand: varchar("brand", { length: 100 }), // alias
     productModel: varchar("product_model", { length: 200 }),
+    productName: varchar("product_name", { length: 300 }), // alias
     productSize: varchar("product_size", { length: 50 }),
     
     // Pricing
     quantity: integer("quantity").default(1),
     unitPrice: decimal("unit_price", { precision: 10, scale: 2 }),
     totalPrice: decimal("total_price", { precision: 10, scale: 2 }),
+    
+    // Purchase tracking
+    purchased: boolean("purchased").default(false),
+    purchasedAt: timestamp("purchased_at", { withTimezone: true }),
     
     // Vehicle context
     vehicleYear: integer("vehicle_year"),

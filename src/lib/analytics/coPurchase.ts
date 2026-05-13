@@ -154,12 +154,13 @@ async function refreshCache(): Promise<CachedCoAddData> {
     }>>();
 
     for (const row of cartContents) {
+      if (!row.cartId) continue;
       const existing = cartMap.get(row.cartId) || [];
       existing.push({
-        sku: row.sku,
-        productType: row.productType,
-        productName: row.productName,
-        brand: row.brand,
+        sku: row.sku || "",
+        productType: row.productType || "",
+        productName: row.productName || "",
+        brand: row.brand || "",
         purchased: row.purchased,
       });
       cartMap.set(row.cartId, existing);

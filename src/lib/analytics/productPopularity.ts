@@ -158,6 +158,7 @@ async function refreshCache(productType: ProductType): Promise<CachedPopularityI
     const addToCartCounts: number[] = [];
 
     for (const row of results) {
+      if (!row.sku) continue;
       const addToCartCount = Number(row.addToCartCount) || 0;
       const purchases = Number(row.purchases) || 0;
       
