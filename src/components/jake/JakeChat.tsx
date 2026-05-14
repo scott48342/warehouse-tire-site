@@ -5,6 +5,7 @@ import Link from "next/link";
 import { JakeProductCard, JakePackageCard } from "./JakeProductCards";
 import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
 import { trackJakeEvent } from "./JakeAnalytics";
+import { JakeAvatar } from "./JakeAvatar";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -357,9 +358,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
             </Link>
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">J</span>
-            </div>
+            <JakeAvatar size="md" />
             <div>
               <h1 className="text-white font-bold text-lg">Jake</h1>
               <p className="text-white/50 text-xs">Your Fitment Expert</p>
@@ -376,9 +375,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
 
         {/* Welcome Content */}
         <div className="flex-1 min-h-0 overflow-y-auto flex flex-col items-center justify-center px-6 py-12">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center mb-6 shadow-lg shadow-red-500/20">
-            <span className="text-white font-black text-3xl">J</span>
-          </div>
+          <JakeAvatar size="xl" showGlow className="mb-6 shadow-lg shadow-red-500/20" />
           <h2 className="text-white font-bold text-2xl mb-2">Hey, I'm Jake</h2>
           <p className="text-white/60 text-center max-w-md mb-8">
             Your wheel and tire expert. Tell me about your vehicle and what you're looking for — 
@@ -447,9 +444,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
             </Link>
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">J</span>
-            </div>
+            <JakeAvatar size="md" />
             <div>
               <h1 className="text-white font-bold text-lg">Jake</h1>
               <p className="text-white/50 text-xs">

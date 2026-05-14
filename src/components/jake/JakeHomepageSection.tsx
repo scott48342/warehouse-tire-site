@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { trackJakeEvent } from "./JakeAnalytics";
+import { JakeAvatar } from "./JakeAvatar";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SUGGESTED PROMPTS FOR HOMEPAGE
@@ -35,18 +36,12 @@ export function JakeHomepageSection() {
           
           {/* Left: Jake Avatar & Intro */}
           <div className="flex-shrink-0 text-center lg:text-left">
-            <div className="relative inline-block">
-              {/* Glow Effect */}
-              <div className="absolute inset-0 blur-2xl opacity-30 bg-red-500 rounded-full scale-150" />
-              
-              {/* Avatar */}
-              <div className="relative w-24 h-24 lg:w-28 lg:h-28 rounded-full bg-gradient-to-br from-red-500 via-red-600 to-red-700 flex items-center justify-center shadow-2xl shadow-red-500/30">
-                <span className="text-white font-black text-4xl lg:text-5xl">J</span>
-              </div>
-              
-              {/* Online Indicator */}
-              <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 rounded-full border-4 border-[#0a0a0a]" />
-            </div>
+            <JakeAvatar 
+              size="homepage" 
+              showGlow 
+              showOnlineIndicator 
+              className="shadow-2xl shadow-red-500/30 mx-auto lg:mx-0"
+            />
             
             <div className="mt-4">
               <h3 className="text-white font-bold text-xl">Meet Jake</h3>
@@ -127,9 +122,7 @@ export function JakeHomepageSection() {
 export function JakeCompactBanner() {
   return (
     <div className="bg-gradient-to-r from-[#1a1a1a] to-[#111] border border-white/10 rounded-xl p-4 flex items-center gap-4">
-      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center flex-shrink-0">
-        <span className="text-white font-bold text-xl">J</span>
-      </div>
+      <JakeAvatar size="lg" />
       <div className="flex-1 min-w-0">
         <p className="text-white font-semibold text-sm">Need help choosing?</p>
         <p className="text-white/50 text-xs">Ask Jake for personalized recommendations</p>
@@ -161,9 +154,7 @@ export function JakeFloatingButton() {
         onMouseLeave={() => setIsHovered(false)}
         className="flex items-center gap-3 px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full shadow-lg shadow-red-500/30 transition-all hover:scale-105"
       >
-        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-          <span className="font-bold">J</span>
-        </div>
+        <JakeAvatar size="sm" />
         <span className={`transition-all duration-300 ${isHovered ? "max-w-[200px] opacity-100" : "max-w-0 opacity-0"} overflow-hidden whitespace-nowrap`}>
           Ask Jake
         </span>
@@ -186,9 +177,7 @@ export function JakeHeaderLink() {
       onClick={() => trackJakeEvent("jake_opened", { source: "header" })}
       className="flex items-center gap-2 px-3 py-1.5 bg-red-600/20 hover:bg-red-600/30 border border-red-500/30 rounded-full text-red-400 hover:text-red-300 text-sm font-medium transition-all"
     >
-      <div className="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
-        <span className="text-white text-xs font-bold">J</span>
-      </div>
+      <JakeAvatar size="xs" />
       <span>Ask Jake</span>
     </Link>
   );

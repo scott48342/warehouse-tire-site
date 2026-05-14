@@ -1,5 +1,6 @@
 // Jake Components - Conversational Fitment Assistant
 export { JakeChat, default as JakeChatDefault } from "./JakeChat";
+export { JakeAvatar } from "./JakeAvatar";
 export { JakeProductCard, JakePackageCard, JakeWheelCard, JakeTireGrid } from "./JakeProductCards";
 export { 
   JakeHomepageSection, 
