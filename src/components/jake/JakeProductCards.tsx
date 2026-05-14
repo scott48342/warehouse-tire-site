@@ -37,9 +37,20 @@ interface PackageSummary {
 interface JakeProductCardProps {
   product: ParsedProduct;
   onClick?: () => void;
+  showCompare?: boolean;
+  isComparing?: boolean;
+  onCompareToggle?: () => void;
+  compareDisabled?: boolean;
 }
 
-export function JakeProductCard({ product, onClick }: JakeProductCardProps) {
+export function JakeProductCard({ 
+  product, 
+  onClick, 
+  showCompare = false,
+  isComparing = false,
+  onCompareToggle,
+  compareDisabled = false,
+}: JakeProductCardProps) {
   const isTire = product.type === "tire";
   const [imgError, setImgError] = useState(false);
 
@@ -134,6 +145,26 @@ export function JakeProductCard({ product, onClick }: JakeProductCardProps) {
             )}
             {product.inStock && (
               <span className="text-xs text-green-500">In Stock</span>
+            )}
+            {/* Compare Button */}
+            {showCompare && onCompareToggle && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onCompareToggle();
+                }}
+                disabled={compareDisabled && !isComparing}
+                className={`px-2 py-0.5 text-xs rounded transition-all ${
+                  isComparing
+                    ? "bg-blue-600 text-white"
+                    : compareDisabled
+                      ? "bg-white/5 text-white/30 cursor-not-allowed"
+                      : "bg-white/10 hover:bg-blue-600/50 text-white/70 hover:text-white"
+                }`}
+              >
+                {isComparing ? "✓ Compare" : "+ Compare"}
+              </button>
             )}
           </div>
         </div>

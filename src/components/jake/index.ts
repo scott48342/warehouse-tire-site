@@ -7,4 +7,5 @@ export {
   JakeFloatingButton,
   JakeHeaderLink 
 } from "./JakeHomepageSection";
+export { JakeComparePanel, CompareButton, CompareFloatingBar } from "./JakeComparePanel";
 export { trackJakeEvent, useJakeAnalytics, type JakeEventType } from "./JakeAnalytics";

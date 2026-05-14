@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { JakeProductCard, JakePackageCard } from "./JakeProductCards";
+import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
 import { trackJakeEvent } from "./JakeAnalytics";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -136,8 +137,31 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
   const [isLoading, setIsLoading] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const [headerPrompts] = useState(() => getRandomHeaderPrompts(3));
+  const [compareProducts, setCompareProducts] = useState<ParsedProduct[]>([]);
+  const [showCompare, setShowCompare] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Compare functions
+  const toggleCompare = useCallback((product: ParsedProduct) => {
+    setCompareProducts(prev => {
+      const exists = prev.some(p => p.name === product.name);
+      if (exists) {
+        return prev.filter(p => p.name !== product.name);
+      }
+      if (prev.length >= 4) return prev; // Max 4 products
+      return [...prev, product];
+    });
+  }, []);
+
+  const isInCompare = useCallback((product: ParsedProduct) => {
+    return compareProducts.some(p => p.name === product.name);
+  }, [compareProducts]);
+
+  const clearCompare = useCallback(() => {
+    setCompareProducts([]);
+    setShowCompare(false);
+  }, []);
 
   // Auto-scroll to latest message (not the very bottom)
   const scrollToBottom = useCallback(() => {
@@ -483,10 +507,14 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
                 {/* Product Cards */}
                 {message.products && message.products.length > 0 && (
                   <div className="mt-4 space-y-3">
-                    {message.products.slice(0, 4).map((product, idx) => (
+                    {message.products.slice(0, 6).map((product, idx) => (
                       <JakeProductCard
                         key={idx}
                         product={product}
+                        showCompare={true}
+                        isComparing={isInCompare(product)}
+                        onCompareToggle={() => toggleCompare(product)}
+                        compareDisabled={compareProducts.length >= 4}
                         onClick={() => {
                           trackJakeEvent("product_clicked", { 
                             name: product.name,
@@ -536,6 +564,23 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
           <div ref={messagesEndRef} />
         </div>
       </div>
+
+      {/* Compare Floating Bar */}
+      <CompareFloatingBar
+        count={compareProducts.length}
+        onCompare={() => setShowCompare(true)}
+        onClear={clearCompare}
+      />
+
+      {/* Compare Panel Modal */}
+      {showCompare && (
+        <JakeComparePanel
+          products={compareProducts}
+          onRemove={(idx) => setCompareProducts(prev => prev.filter((_, i) => i !== idx))}
+          onClear={clearCompare}
+          onClose={() => setShowCompare(false)}
+        />
+      )}
 
       {/* Input Bar - Fixed at bottom */}
       <div className="flex-shrink-0 p-4 border-t border-white/10 bg-[#0d0d0d]">
