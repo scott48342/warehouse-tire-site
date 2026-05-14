@@ -41,6 +41,8 @@ interface JakeProductCardProps {
   isComparing?: boolean;
   onCompareToggle?: () => void;
   compareDisabled?: boolean;
+  isLocal?: boolean; // Local site shows out-the-door pricing
+  installCostPerTire?: number; // Installation cost per tire (default $25)
 }
 
 export function JakeProductCard({ 
@@ -50,9 +52,18 @@ export function JakeProductCard({
   isComparing = false,
   onCompareToggle,
   compareDisabled = false,
+  isLocal = false,
+  installCostPerTire = 25,
 }: JakeProductCardProps) {
   const isTire = product.type === "tire";
   const [imgError, setImgError] = useState(false);
+
+  // Calculate out-the-door pricing for local site (tires only)
+  const priceNum = product.priceNum || parseFloat(String(product.price || "0").replace(/[$,]/g, ""));
+  const tireSetPrice = priceNum * 4;
+  const installTotal = installCostPerTire * 4;
+  const outTheDoorPrice = tireSetPrice + installTotal;
+  const showOutTheDoor = isLocal && isTire && priceNum > 0;
 
   const PlaceholderIcon = () => (
     <div className="text-white/20">
@@ -118,9 +129,18 @@ export function JakeProductCard({
               </div>
             </div>
             <div className="text-right flex-shrink-0">
-              <p className="text-white font-bold text-sm">{product.price}</p>
-              {product.setPrice && (
-                <p className="text-white/40 text-xs">{product.setPrice}/set</p>
+              {showOutTheDoor ? (
+                <>
+                  <p className="text-white font-bold text-sm">${outTheDoorPrice.toFixed(0)} installed</p>
+                  <p className="text-white/40 text-xs">set of 4, out the door</p>
+                </>
+              ) : (
+                <>
+                  <p className="text-white font-bold text-sm">{product.price}</p>
+                  {product.setPrice && (
+                    <p className="text-white/40 text-xs">{product.setPrice}/set</p>
+                  )}
+                </>
               )}
             </div>
           </div>

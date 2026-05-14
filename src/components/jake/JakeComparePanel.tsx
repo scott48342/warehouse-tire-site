@@ -32,21 +32,43 @@ interface JakeComparePanelProps {
   onRemove: (index: number) => void;
   onClear: () => void;
   onClose: () => void;
+  isLocal?: boolean;
+  installCostPerTire?: number;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // COMPARE PANEL
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export function JakeComparePanel({ products, onRemove, onClear, onClose }: JakeComparePanelProps) {
+export function JakeComparePanel({ 
+  products, 
+  onRemove, 
+  onClear, 
+  onClose,
+  isLocal = false,
+  installCostPerTire = 25,
+}: JakeComparePanelProps) {
   if (products.length === 0) return null;
 
   const isTire = products[0]?.type === "tire";
+  const installTotal = installCostPerTire * 4;
 
   // Spec rows to compare
   const specs = isTire ? [
     { label: "Price (each)", key: "price" },
-    { label: "Set of 4", key: "setPrice", format: (p: CompareProduct) => p.setPrice || (p.priceNum ? `$${(p.priceNum * 4).toFixed(2)}` : "—") },
+    ...(isLocal ? [
+      { 
+        label: "Out the Door (set of 4)", 
+        key: "outTheDoor", 
+        format: (p: CompareProduct) => {
+          const setPrice = (p.priceNum || 0) * 4;
+          const total = setPrice + installTotal;
+          return total > 0 ? `$${total.toFixed(0)} installed` : "—";
+        }
+      },
+    ] : [
+      { label: "Set of 4", key: "setPrice", format: (p: CompareProduct) => p.setPrice || (p.priceNum ? `$${(p.priceNum * 4).toFixed(2)}` : "—") },
+    ]),
     { label: "Size", key: "size" },
     { label: "Terrain", key: "terrain" },
     { label: "Warranty", key: "warranty" },

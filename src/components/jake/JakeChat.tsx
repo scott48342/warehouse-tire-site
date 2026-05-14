@@ -125,13 +125,17 @@ function generateId(): string {
 // JAKE CHAT COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
 
+// Installation cost per tire for local site (out-the-door pricing)
+const LOCAL_INSTALL_PER_TIRE = 25; // $25/tire = $100 for set of 4
+
 interface JakeChatProps {
   embedded?: boolean;
   initialPrompt?: string;
   onClose?: () => void;
+  isLocal?: boolean; // Local site shows out-the-door pricing with installation
 }
 
-export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatProps) {
+export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = false }: JakeChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -515,6 +519,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
                         isComparing={isInCompare(product)}
                         onCompareToggle={() => toggleCompare(product)}
                         compareDisabled={compareProducts.length >= 4}
+                        isLocal={isLocal}
+                        installCostPerTire={LOCAL_INSTALL_PER_TIRE}
                         onClick={() => {
                           trackJakeEvent("product_clicked", { 
                             name: product.name,
@@ -579,6 +585,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
           onRemove={(idx) => setCompareProducts(prev => prev.filter((_, i) => i !== idx))}
           onClear={clearCompare}
           onClose={() => setShowCompare(false)}
+          isLocal={isLocal}
+          installCostPerTire={LOCAL_INSTALL_PER_TIRE}
         />
       )}
 
