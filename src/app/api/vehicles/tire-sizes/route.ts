@@ -1,9 +1,14 @@
 /**
- * Tire Sizes API (DB-First, No External API)
+ * Tire Sizes API (DB-First, Canonical Only)
  * 
  * File: src/app/api/vehicles/tire-sizes/route.ts
  * 
- * Returns OEM tire sizes from database. No external API fallback.
+ * Returns OEM tire sizes from database ONLY via canonical resolver.
+ * 
+ * 2026-05-14: CANONICAL SOURCE ENFORCEMENT
+ * - REMOVED: vehicle_fitment_configurations (deprecated config table)
+ * - REMOVED: Static JSON fallback (oem-tire-sizes.json)
+ * - ONLY SOURCE: vehicle_fitments via canonicalResolver
  * 
  * 2026-05-03: Added trim-aware resolution with debug fields
  * - selectedTrim, normalizedTrim, modificationId passed to response
@@ -20,7 +25,8 @@ import {
   getCacheStats,
   type CachedFitment,
 } from "@/lib/fitmentCache";
-import oemSizesData from "@/data/oem-tire-sizes.json";
+// 2026-05-14: REMOVED - Static JSON fallback disabled for canonical enforcement
+// import oemSizesData from "@/data/oem-tire-sizes.json";
 import { 
   convertLegacyTireSize, 
   convertTireSizesForSearch,
@@ -366,45 +372,15 @@ async function getDbFitmentSizes(
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// STATIC FALLBACK
+// STATIC FALLBACK - DISABLED (2026-05-14)
 // ═══════════════════════════════════════════════════════════════════════════
-
-/**
- * Look up static OEM tire sizes from local data file.
- * Used as fallback when database has no data.
- */
-function getStaticOemSizes(year: string, make: string, model: string, modification?: string): string[] {
-  const vehicles = (oemSizesData as any).vehicles;
-  
-  const makeKey = make.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  const modelKey = model.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  const trimKey = modification?.toLowerCase().replace(/[^a-z0-9]+/g, "-") || "";
-  
-  const makeData = vehicles[makeKey];
-  if (!makeData) return [];
-  
-  const modelData = makeData[modelKey];
-  if (!modelData) return [];
-  
-  const yearData = modelData[year];
-  if (!yearData) {
-    const nearYear = modelData[String(Number(year) - 1)] || modelData[String(Number(year) + 1)];
-    if (!nearYear) return [];
-    return nearYear.default || [];
-  }
-  
-  if (trimKey && yearData[trimKey]) {
-    return yearData[trimKey];
-  }
-  
-  for (const key of Object.keys(yearData)) {
-    if (key !== "default" && trimKey.includes(key)) {
-      return yearData[key];
-    }
-  }
-  
-  return yearData.default || [];
-}
+// 
+// Static JSON fallback has been REMOVED for canonical source enforcement.
+// All tire size lookups must go through vehicle_fitments via canonicalResolver.
+// 
+// If a vehicle is not in the database, we return an empty result and log it
+// for gap tracking. This is intentional - we do not serve stale static data.
+//
 
 // ═══════════════════════════════════════════════════════════════════════════
 // MAIN ROUTE HANDLER
@@ -441,90 +417,16 @@ export async function GET(req: Request) {
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // STEP 0: CONFIG TABLE - Check new fitment configurations table first
-  // This provides trim-specific tire sizes with high confidence
+  // STEP 0: DISABLED (2026-05-14) - Config table removed for canonical enforcement
   // ═══════════════════════════════════════════════════════════════════════════
-  if (!forceRefresh) {
-    try {
-      const { getFitmentConfigurations } = await import("@/lib/fitment-db/getFitmentConfigurations");
-      // Pass trimParam to help prioritize matching when vehicle_fitments has comma-separated trims
-      const configResult = await getFitmentConfigurations(
-        parseInt(year, 10),
-        make,
-        model,
-        modification,
-        trimParam || undefined // requestedTrim from URL
-      );
-      
-      if (configResult.usedConfigTable && configResult.configurations.length > 0) {
-        // Use config table data - this is trim-specific and verified
-        const tireSizes = [...new Set(configResult.configurations.map(c => c.tireSize))];
-        const diameters = configResult.uniqueDiameters;
-        
-        console.log(`[tire-sizes] CONFIG TABLE HIT: ${year} ${make} ${model} ${modification} → ${tireSizes.join(", ")} (${configResult.confidence})`);
-        
-        const { searchSizes } = convertTireSizesForSearch(tireSizes);
-        const configConversions = tireSizes.map(size => {
-          const conv = convertLegacyTireSize(size);
-          return {
-            originalSize: conv.original,
-            recommendedSize: conv.recommended,
-            alternatives: conv.alternatives,
-            conversionMethod: conv.conversionMethod,
-            isLegacy: conv.isLegacy,
-          };
-        });
-        
-        // Debug info for multiple-size prompt tracking
-        const debugInfo: TireSizeDebugInfo = {
-          // Scott's required audit fields
-          requestedTrim: trimParam || null,
-          normalizedRequestedTrim: modification || null,
-          candidateTrims: [], // Config table = direct match, no candidates
-          matchedTrim: modification || null,
-          matchedBy: "config_table",
-          modificationId: modification || null,
-          tireSizesFound: tireSizes,
-          fallbackBlockedReason: null,
-          // Additional context
-          fitmentSource: "config",
-          exactTrimMatch: true, // Config table = exact trim match
-          sizeCount: tireSizes.length,
-          wheelDiametersAvailable: diameters,
-          needsWheelSelection: configResult.hasMultipleDiameters,
-          reasonMultipleSizesShown: configResult.hasMultipleDiameters 
-            ? `Trim ${modification || 'selected'} has ${diameters.length} OEM wheel options: ${diameters.join('", "')}"`
-            : null,
-        };
-        
-        return NextResponse.json({
-          tireSizes,
-          tireSizesStrict: tireSizes,
-          tireSizesAgg: [],
-          searchableSizes: searchSizes.length > 0 ? searchSizes : tireSizes,
-          sizeConversions: configConversions,
-          hasLegacySizes: false,
-          fitment: {
-            // Config table doesn't store bolt pattern yet, could add later
-          },
-          wheelDiameters: {
-            needsSelection: configResult.hasMultipleDiameters,
-            available: diameters,
-            default: diameters[0] || null,
-          },
-          source: "config",
-          confidence: configResult.confidence,
-          debug: debugInfo,
-          cacheStats: getCacheStats(),
-        });
-      }
-    } catch (err) {
-      console.warn("[tire-sizes] Config table lookup failed, using legacy:", err);
-    }
-  }
+  // The vehicle_fitment_configurations table is DEPRECATED and no longer used
+  // in customer-facing runtime. All fitment resolution goes through vehicle_fitments
+  // via the canonical resolver.
+  //
+  // If you need config table data for admin/audit purposes, use /api/admin/* endpoints.
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // STEP 1: DB-FIRST - Check imported fitment database (legacy)
+  // STEP 1: CANONICAL DB LOOKUP - vehicle_fitments via canonicalResolver
   // ═══════════════════════════════════════════════════════════════════════════
   if (!forceRefresh) {
     // Pass both modificationId and trim label for best resolution
@@ -703,47 +605,11 @@ export async function GET(req: Request) {
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // STEP 3: Static fallback (no external API)
+  // STEP 3: DISABLED (2026-05-14) - Static fallback removed for canonical enforcement
   // ═══════════════════════════════════════════════════════════════════════════
-  const staticSizes = getStaticOemSizes(year, make, model, modification);
-  
-  if (staticSizes.length > 0) {
-    console.log(`[tire-sizes] STATIC fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
-    
-    const { searchSizes } = convertTireSizesForSearch(staticSizes);
-    const staticConversions = staticSizes.map(size => {
-      const conv = convertLegacyTireSize(size);
-      return {
-        originalSize: conv.original,
-        recommendedSize: conv.recommended,
-        alternatives: conv.alternatives,
-        conversionMethod: conv.conversionMethod,
-        isLegacy: conv.isLegacy,
-      };
-    });
-    
-    // Cache the static data
-    setCache(cacheKey, {
-      tireSizes: staticSizes,
-      boltPattern: undefined,
-      centerBore: undefined,
-      vehicle: { year: Number(year), make, model, submodel: modification || "" },
-      source: "fallback",
-      cachedAt: Date.now(),
-      expiresAt: Date.now() + 3600000,
-    });
-    
-    return NextResponse.json({
-      tireSizes: staticSizes,
-      tireSizesStrict: staticSizes,
-      tireSizesAgg: [],
-      searchableSizes: searchSizes.length > 0 ? searchSizes : staticSizes,
-      sizeConversions: staticConversions,
-      hasLegacySizes: staticConversions.some(c => c.isLegacy),
-      source: "static-fallback",
-      cacheStats: getCacheStats(),
-    });
-  }
+  // Static JSON fallback has been removed. If a vehicle is not in vehicle_fitments,
+  // we return an empty result and log it for gap tracking.
+  // This is intentional - we do not serve stale static data to customers.
   
   // No data available - log for gap tracking
   console.warn(`[tire-sizes] NO DATA for ${year} ${make} ${model}`);
@@ -759,7 +625,7 @@ export async function GET(req: Request) {
       source: "api",
       path: `/api/vehicles/tire-sizes?year=${year}&make=${make}&model=${model}`,
       modificationId: modification || undefined,
-      resolutionAttempts: ["db-first", "static-fallback"],
+      resolutionAttempts: ["canonical-resolver"],
     }).catch(() => {});
   }).catch(() => {});
   

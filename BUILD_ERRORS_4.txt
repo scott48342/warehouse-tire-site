@@ -1,0 +1,40 @@
+﻿
+> warehouse-tire-site@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.production.local, .env.local
+
+node.exe : ΓÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá The "middle...leware-to-proxy:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 21.6s
+  Running TypeScript ...
+Failed to compile.
+
+./src/lib/cart/abandonedCartService.ts:271:9
+Type error: Type 'string | number | null' is not assignable to type 'string | SQL<unknown> | 
+PgColumn<ColumnBaseConfig<ColumnDataType, string>, {}, {}> | null | undefined'.
+  Type 'number' is not assignable to type 'string | SQL<unknown> | PgColumn<ColumnBaseConfig<ColumnDataType, string>, 
+{}, {}> | null | undefined'.
+
+[0m [90m 269 |[39m         customerEmail[33m:[39m customer[33m?[39m[33m.[39memail [33m||[39m 
+existing[33m.[39mcustomerEmail[33m,[39m
+ [90m 270 |[39m         customerPhone[33m:[39m customer[33m?[39m[33m.[39mphone [33m||[39m 
+existing[33m.[39mcustomerPhone[33m,[39m
+[31m[1m>[22m[39m[90m 271 |[39m         vehicleYear[33m:[39m vehicle[33m?[39m[33m.[39myear [33m?[39m 
+[33mNumber[39m(vehicle[33m.[39myear) [33m:[39m existing[33m.[39mvehicleYear[33m,[39m
+ [90m     |[39m         [31m[1m^[22m[39m
+ [90m 272 |[39m         vehicleMake[33m:[39m vehicle[33m?[39m[33m.[39mmake [33m||[39m 
+existing[33m.[39mvehicleMake[33m,[39m
+ [90m 273 |[39m         vehicleModel[33m:[39m vehicle[33m?[39m[33m.[39mmodel [33m||[39m 
+existing[33m.[39mvehicleModel[33m,[39m
+ [90m 274 |[39m         vehicleTrim[33m:[39m vehicle[33m?[39m[33m.[39mtrim [33m||[39m 
+existing[33m.[39mvehicleTrim[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null

@@ -18,6 +18,7 @@ import type { VehicleFitment } from "@/lib/fitment-db/schema";
 import { getTechfeedCandidatesByBoltPattern, type TechfeedWheel } from "@/lib/techfeed/wheels";
 import { getCachedBulk } from "@/lib/availabilityCache";
 import { calculateWheelSellPrice } from "@/lib/pricing";
+import { normalizeToStringArray } from "@/lib/tires/tireSizeUtils";
 
 // ============================================================================
 // Types
@@ -284,10 +285,8 @@ async function getVehicleFitment(
     .map((ws) => ws.width)
     .filter((w) => w > 0);
 
-  // Parse OEM tire sizes
-  const oemTireSizes = Array.isArray(bestFitment.oemTireSizes)
-    ? bestFitment.oemTireSizes.filter((s: any) => typeof s === "string" && s.length > 0)
-    : [];
+  // Parse OEM tire sizes (supports string arrays and {front, rear} staggered format)
+  const oemTireSizes = normalizeToStringArray(bestFitment.oemTireSizes);
 
   // Calculate OEM overall diameter (from first tire size)
   let oemOverallDiameter = 28; // fallback

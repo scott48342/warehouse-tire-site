@@ -1,0 +1,35 @@
+﻿
+> warehouse-tire-site@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.production.local, .env.local
+
+node.exe : ΓÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá The "middle...leware-to-proxy:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 22.1s
+  Running TypeScript ...
+Failed to compile.
+
+./src/app/api/admin/competitor-analysis/route.ts:202:46
+Type error: Property 'pageType' does not exist on type '{ url: string; model: string | null; id: string; brand: string 
+| null; createdAt: Date; productType: string | null; sku: string | null; size: string | null; competitor: string | 
+null; ... 7 more ...; analyzedAt: Date; }'.
+
+[0m [90m 200 |[39m
+ [90m 201 |[39m     [36mconst[39m input[33m:[39m 
+[33mPartial[39m[33m<[39m[33mCompetitorAnalysisInput[39m[33m>[39m [33m=[39m {
+[31m[1m>[22m[39m[90m 202 |[39m       pageType[33m:[39m updates[33m.[39mpageType [33m||[39m 
+existing[33m.[39mpageType [36mas[39m [33mPageType[39m[33m,[39m
+ [90m     |[39m                                              [31m[1m^[22m[39m
+ [90m 203 |[39m       [33m...[39mupdates[33m,[39m
+ [90m 204 |[39m     }[33m;[39m
+ [90m 205 |[39m[0m
+Next.js build worker exited with code: 1 and signal: null

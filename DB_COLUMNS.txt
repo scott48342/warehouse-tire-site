@@ -1,0 +1,317 @@
+﻿Γùç injected env (48) from .env.local // tip: Γùê secrets for agents [www.dotenvx.com]
+=== TABLES IN DATABASE ===
+abandoned_carts
+accessories
+accessory_wheel_compat
+admin_fitment_overrides
+admin_logs
+admin_payment_gateways
+admin_product_flags
+admin_settings
+admin_suppliers
+analytics_pageviews
+analytics_sessions
+api_access_requests
+api_keys
+api_usage_logs
+approved_customer_builds
+campaign_discounts
+cart_add_events
+catalog_makes
+catalog_models
+catalog_sync_log
+certified_vehicle_fitments
+classic_fitments
+competitor_page_analysis
+customer_build_images
+customer_builds
+email_campaign_events
+email_campaign_recipients
+email_campaigns
+email_subscribers
+first_order_discounts
+fitment_change_log
+fitment_dataset_versions
+fitment_gap_alerts
+fitment_import_jobs
+fitment_overrides
+fitment_source_records
+funnel_events
+gallery_assets
+km_image_mappings
+manufacturer_warranties
+oem_package_choices
+orders
+pg_stat_statements
+pg_stat_statements_info
+qa_anomalies
+qa_baselines
+qa_canary_vehicles
+qa_results
+qa_runs
+qa_test_vehicles
+quote_catalog_items
+quotes
+site_rebates
+site_settings
+state_tax_rates
+suspension_fitments
+tire_images
+tire_model_images
+tire_pattern_specs
+tireweb_config
+tireweb_connections
+tireweb_sku_cache
+trim_fitments
+unresolved_fitment_searches
+vehicle_fitment
+vehicle_fitment_configurations
+vehicle_fitments
+vehicle_fitments_staging
+vehicle_wheel_specs
+vehicles
+visualizer_configs
+wheel_size_trim_mappings
+wp_inventory
+wp_tires
+wp_wheels
+
+=== COLUMNS FOR KEY TABLES ===
+
+[email_campaigns] 39 columns:
+  - id: uuid (nullable: NO)
+  - name: character varying (nullable: NO)
+  - campaign_type: character varying (nullable: NO)
+  - status: character varying (nullable: NO)
+  - subject: character varying (nullable: NO)
+  - preview_text: character varying (nullable: YES)
+  - from_name: character varying (nullable: YES)
+  - reply_to: character varying (nullable: YES)
+  - template_key: character varying (nullable: YES)
+  - content_json: jsonb (nullable: YES)
+  - audience_rules_json: jsonb (nullable: NO)
+  - scheduled_for: timestamp with time zone (nullable: YES)
+  - send_mode: character varying (nullable: NO)
+  - monthly_rule_json: jsonb (nullable: YES)
+  - include_free_shipping_banner: boolean (nullable: NO)
+  - include_price_match: boolean (nullable: NO)
+  - utm_campaign: character varying (nullable: YES)
+  - total_recipients: integer (nullable: NO)
+  - sent_count: integer (nullable: NO)
+  - delivered_count: integer (nullable: NO)
+  - open_count: integer (nullable: NO)
+  - click_count: integer (nullable: NO)
+  - bounce_count: integer (nullable: NO)
+  - complaint_count: integer (nullable: NO)
+  - unsubscribe_count: integer (nullable: NO)
+  - is_test: boolean (nullable: NO)
+  - created_at: timestamp with time zone (nullable: NO)
+  - updated_at: timestamp with time zone (nullable: NO)
+  - started_at: timestamp with time zone (nullable: YES)
+  - completed_at: timestamp with time zone (nullable: YES)
+  - created_by: character varying (nullable: YES)
+  - notes: text (nullable: YES)
+  - discount_enabled: boolean (nullable: NO)
+  - discount_percent: numeric (nullable: YES)
+  - discount_expiry_hours: integer (nullable: YES)
+  - discount_single_use: boolean (nullable: NO)
+  - discount_issued_count: integer (nullable: NO)
+  - discount_redeemed_count: integer (nullable: NO)
+  - discount_revenue: numeric (nullable: NO)
+
+[email_subscribers] 24 columns:
+  - id: uuid (nullable: NO)
+  - email: character varying (nullable: NO)
+  - source: character varying (nullable: NO)
+  - vehicle_year: character varying (nullable: YES)
+  - vehicle_make: character varying (nullable: YES)
+  - vehicle_model: character varying (nullable: YES)
+  - vehicle_trim: character varying (nullable: YES)
+  - cart_id: character varying (nullable: YES)
+  - marketing_consent: boolean (nullable: NO)
+  - unsubscribed: boolean (nullable: NO)
+  - unsubscribed_at: timestamp without time zone (nullable: YES)
+  - created_at: timestamp without time zone (nullable: NO)
+  - updated_at: timestamp without time zone (nullable: NO)
+  - ip_address: character varying (nullable: YES)
+  - user_agent: text (nullable: YES)
+  - is_test: boolean (nullable: NO)
+  - test_reason: character varying (nullable: YES)
+  - unsubscribe_token: character varying (nullable: YES)
+  - suppression_reason: character varying (nullable: YES)
+  - suppressed_at: timestamp with time zone (nullable: YES)
+  - last_active_at: timestamp with time zone (nullable: YES)
+  - last_cart_at: timestamp with time zone (nullable: YES)
+  - last_order_at: timestamp with time zone (nullable: YES)
+  - last_campaign_sent_at: timestamp with time zone (nullable: YES)
+
+[email_campaign_recipients] 15 columns:
+  - id: uuid (nullable: NO)
+  - campaign_id: uuid (nullable: NO)
+  - subscriber_id: uuid (nullable: YES)
+  - email: character varying (nullable: NO)
+  - status: character varying (nullable: NO)
+  - sent_at: timestamp with time zone (nullable: YES)
+  - delivered_at: timestamp with time zone (nullable: YES)
+  - opened_at: timestamp with time zone (nullable: YES)
+  - clicked_at: timestamp with time zone (nullable: YES)
+  - bounced_at: timestamp with time zone (nullable: YES)
+  - complained_at: timestamp with time zone (nullable: YES)
+  - unsubscribed_at: timestamp with time zone (nullable: YES)
+  - message_id: character varying (nullable: YES)
+  - error_message: text (nullable: YES)
+  - created_at: timestamp with time zone (nullable: NO)
+
+[email_campaign_events] 11 columns:
+  - id: uuid (nullable: NO)
+  - campaign_id: uuid (nullable: NO)
+  - recipient_id: uuid (nullable: YES)
+  - event_type: character varying (nullable: NO)
+  - email: character varying (nullable: YES)
+  - link_url: text (nullable: YES)
+  - user_agent: text (nullable: YES)
+  - ip_address: character varying (nullable: YES)
+  - provider_event_id: character varying (nullable: YES)
+  - raw_data: jsonb (nullable: YES)
+  - occurred_at: timestamp with time zone (nullable: NO)
+
+[abandoned_carts] 39 columns:
+  - id: uuid (nullable: NO)
+  - cart_id: character varying (nullable: NO)
+  - session_id: character varying (nullable: YES)
+  - customer_first_name: character varying (nullable: YES)
+  - customer_last_name: character varying (nullable: YES)
+  - customer_email: character varying (nullable: YES)
+  - customer_phone: character varying (nullable: YES)
+  - vehicle_year: character varying (nullable: YES)
+  - vehicle_make: character varying (nullable: YES)
+  - vehicle_model: character varying (nullable: YES)
+  - vehicle_trim: character varying (nullable: YES)
+  - items: jsonb (nullable: NO)
+  - item_count: integer (nullable: NO)
+  - subtotal: numeric (nullable: NO)
+  - estimated_total: numeric (nullable: NO)
+  - status: character varying (nullable: NO)
+  - recovered_order_id: character varying (nullable: YES)
+  - recovered_at: timestamp with time zone (nullable: YES)
+  - created_at: timestamp with time zone (nullable: NO)
+  - updated_at: timestamp with time zone (nullable: NO)
+  - last_activity_at: timestamp with time zone (nullable: NO)
+  - abandoned_at: timestamp with time zone (nullable: YES)
+  - source: character varying (nullable: YES)
+  - user_agent: text (nullable: YES)
+  - ip_address: character varying (nullable: YES)
+  - first_email_sent_at: timestamp with time zone (nullable: YES)
+  - second_email_sent_at: timestamp with time zone (nullable: YES)
+  - email_sent_count: integer (nullable: NO)
+  - recovered_after_email: boolean (nullable: YES)
+  - unsubscribed: boolean (nullable: YES)
+  - third_email_sent_at: timestamp without time zone (nullable: YES)
+  - last_email_status: character varying (nullable: YES)
+  - is_test: boolean (nullable: NO)
+  - test_reason: character varying (nullable: YES)
+  - email_opened_at: timestamp without time zone (nullable: YES)
+  - email_clicked_at: timestamp without time zone (nullable: YES)
+  - email_open_count: integer (nullable: NO)
+  - email_click_count: integer (nullable: NO)
+  - hostname: character varying (nullable: YES)
+
+[cart_add_events] 26 columns:
+  - id: uuid (nullable: NO)
+  - product_type: character varying (nullable: NO)
+  - sku: character varying (nullable: NO)
+  - rear_sku: character varying (nullable: YES)
+  - product_name: character varying (nullable: NO)
+  - brand: character varying (nullable: NO)
+  - price_at_time: numeric (nullable: NO)
+  - quantity: integer (nullable: NO)
+  - size: character varying (nullable: YES)
+  - specs: jsonb (nullable: YES)
+  - cart_id: character varying (nullable: NO)
+  - session_id: character varying (nullable: YES)
+  - vehicle_year: character varying (nullable: YES)
+  - vehicle_make: character varying (nullable: YES)
+  - vehicle_model: character varying (nullable: YES)
+  - vehicle_trim: character varying (nullable: YES)
+  - source: character varying (nullable: YES)
+  - referrer: text (nullable: YES)
+  - purchased: boolean (nullable: NO)
+  - order_id: character varying (nullable: YES)
+  - purchased_at: timestamp with time zone (nullable: YES)
+  - is_test: boolean (nullable: NO)
+  - test_reason: character varying (nullable: YES)
+  - created_at: timestamp with time zone (nullable: NO)
+  - ip_address: character varying (nullable: YES)
+  - user_agent: text (nullable: YES)
+
+[catalog_makes] 5 columns:
+  - id: uuid (nullable: NO)
+  - slug: character varying (nullable: NO)
+  - name: character varying (nullable: NO)
+  - created_at: timestamp without time zone (nullable: NO)
+  - updated_at: timestamp without time zone (nullable: NO)
+
+[catalog_models] 7 columns:
+  - id: uuid (nullable: NO)
+  - make_slug: character varying (nullable: NO)
+  - slug: character varying (nullable: NO)
+  - name: character varying (nullable: NO)
+  - years: ARRAY (nullable: NO)
+  - created_at: timestamp without time zone (nullable: NO)
+  - updated_at: timestamp without time zone (nullable: NO)
+
+[wheel_size_trim_mappings] 33 columns:
+  - id: uuid (nullable: NO)
+  - year: integer (nullable: NO)
+  - make: character varying (nullable: NO)
+  - model: character varying (nullable: NO)
+  - our_trim: character varying (nullable: NO)
+  - our_modification_id: character varying (nullable: YES)
+  - vehicle_fitment_id: uuid (nullable: YES)
+  - ws_slug: character varying (nullable: NO)
+  - ws_generation: character varying (nullable: YES)
+  - ws_modification_name: character varying (nullable: YES)
+  - ws_submodel: character varying (nullable: YES)
+  - ws_trim: character varying (nullable: YES)
+  - ws_engine: character varying (nullable: YES)
+  - ws_body: character varying (nullable: YES)
+  - match_method: character varying (nullable: NO)
+  - match_confidence: character varying (nullable: NO)
+  - match_score: numeric (nullable: YES)
+  - config_count: integer (nullable: NO)
+  - has_single_config: boolean (nullable: NO)
+  - default_config_id: uuid (nullable: YES)
+  - default_wheel_diameter: integer (nullable: YES)
+  - default_tire_size: character varying (nullable: YES)
+  - all_wheel_diameters: ARRAY (nullable: YES)
+  - all_tire_sizes: ARRAY (nullable: YES)
+  - needs_review: boolean (nullable: NO)
+  - review_reason: character varying (nullable: YES)
+  - review_priority: integer (nullable: YES)
+  - reviewed_by: character varying (nullable: YES)
+  - reviewed_at: timestamp with time zone (nullable: YES)
+  - review_notes: text (nullable: YES)
+  - status: character varying (nullable: NO)
+  - created_at: timestamp with time zone (nullable: NO)
+  - updated_at: timestamp with time zone (nullable: NO)
+
+[km_image_mappings] 5 columns:
+  - part_number: character varying (nullable: NO)
+  - prodline: character varying (nullable: YES)
+  - folder_id: character varying (nullable: YES)
+  - image_url: text (nullable: YES)
+  - fetched_at: timestamp without time zone (nullable: NO)
+
+[tire_images] 11 columns:
+  - pattern_id: integer (nullable: NO)
+  - brand: character varying (nullable: YES)
+  - pattern: character varying (nullable: YES)
+  - source_url: text (nullable: NO)
+  - blob_url: text (nullable: YES)
+  - status: character varying (nullable: NO)
+  - error_message: text (nullable: YES)
+  - content_type: character varying (nullable: YES)
+  - file_size: integer (nullable: YES)
+  - created_at: timestamp without time zone (nullable: NO)
+  - uploaded_at: timestamp without time zone (nullable: YES)
+

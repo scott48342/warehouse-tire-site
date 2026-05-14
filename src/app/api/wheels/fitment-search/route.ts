@@ -94,6 +94,8 @@ import {
   sortFinishes,
 } from "@/lib/finishNormalization";
 
+import { normalizeToStringArray } from "@/lib/tires/tireSizeUtils";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -827,7 +829,8 @@ export async function GET(req: Request) {
         
         if (localFitments.length > 0) {
           // Pick best fitment (one with bolt pattern and tire sizes)
-          const bestFitment = localFitments.find(f => f.boltPattern && Array.isArray(f.oemTireSizes) && f.oemTireSizes.length > 0) || localFitments[0];
+          // Supports string arrays and {front, rear} staggered format
+          const bestFitment = localFitments.find(f => f.boltPattern && normalizeToStringArray(f.oemTireSizes).length > 0) || localFitments[0];
           
           if (bestFitment && bestFitment.boltPattern) {
             console.log(`[fitment-search] LOCAL DB HIT: ${year} ${make} ${model} → ${bestFitment.modificationId} (boltPattern: ${bestFitment.boltPattern})`);
@@ -847,7 +850,7 @@ export async function GET(req: Request) {
               offsetMinMm: bestFitment.offsetMinMm ? Number(bestFitment.offsetMinMm) : null,
               offsetMaxMm: bestFitment.offsetMaxMm ? Number(bestFitment.offsetMaxMm) : null,
               oemWheelSizes: parseWheelSizes(bestFitment.oemWheelSizes),
-              oemTireSizes: Array.isArray(bestFitment.oemTireSizes) ? bestFitment.oemTireSizes : [],
+              oemTireSizes: normalizeToStringArray(bestFitment.oemTireSizes),
               source: "db",
               apiCalled: false,
               overridesApplied: false,
@@ -1113,7 +1116,8 @@ async function handleDbProfilePath(
   // Populate missing tireSize in staggered specs from OEM tire sizes
   // This handles cases like Corvette where wheel specs exist but tireSize is null
   // Try dbProfile first, then fetch from tire-sizes API if needed
-  let tireSizesForStagger = dbProfile.oemTireSizes || [];
+  // Supports string arrays and {front, rear} staggered format
+  let tireSizesForStagger = normalizeToStringArray(dbProfile.oemTireSizes);
   
   // If no tire sizes in profile, look up from vehicle_fitments table directly
   // (Avoids HTTP self-call which can timeout in dev)
@@ -1138,12 +1142,11 @@ async function handleDbProfilePath(
       const tireSizesResult = await db.query(tireSizesQuery, params);
       
       // Collect all tire sizes from matching records
+      // Supports string arrays and {front, rear} staggered format
       const allTireSizes = new Set<string>();
       for (const row of tireSizesResult.rows) {
-        const sizes = row.oem_tire_sizes as string[] | null;
-        if (sizes && Array.isArray(sizes)) {
-          sizes.forEach(s => allTireSizes.add(s));
-        }
+        const sizes = normalizeToStringArray(row.oem_tire_sizes);
+        sizes.forEach(s => allTireSizes.add(s));
       }
       
       if (allTireSizes.size > 0) {

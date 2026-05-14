@@ -5722,3 +5722,113 @@ Files:
 
 Add these to .env.local
 [Wed 05/13/2026  9:00:13.50] Auto-post complete 
+[Wed 05/13/2026 18:00:03.06] Starting auto-post... 
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ override existing { override: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:36416) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Performance Replicas PR176
+  Downloading image for Performance Replicas PR176...
+  ✅ Generated: pr176_1778709604731
+  📝 Caption preview: Transform your suv with the Performance Replicas PR176 🛞
+
+📐 22x9
+🔩 6X5.5
+↔️ 2...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pr176_1778709604731.png
+  - pr176_1778709604731.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+Selected: ar172_baja_1778277603693
+
+--- Content Preview ---
+Wheel: American Racing AR172 BAJA
+Price: $310
+Image: ar172_baja_1778277603693.png
+
+Caption:
+Your 2024 RAM 1500 deserves these American Racing AR172 BAJA wheels 💯
+
+📐 17x8
+🔩 5X5.5
+↔️ 0mm offset
+✨ AR172 BAJA 17X8 5X5.5 POL 00MM
+
+Starting at $310
+
+🛒 https://shop.warehousetiredirect.com/wheels/AR1727885
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #americanracing #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Wednesday, 13-May-26 15:00:05 PDT.
+
+✨ Done!
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ enable debugging { debug: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:25720) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Pro Comp Alloys PA41 PHASER
+  Downloading image for Pro Comp Alloys PA41 PHASER...
+  ✅ Generated: pa41_phaser_1778709611670
+  📝 Caption preview: New arrival alert! 🚨
+
+Pro Comp Alloys PA41 PHASER
+📐 20x9
+🔩 5X150
+↔️ 6mm offse...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pa41_phaser_1778709611670.png
+  - pa41_phaser_1778709611670.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ override existing { override: true }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Wed 05/13/2026 18:00:12.05] Auto-post complete 

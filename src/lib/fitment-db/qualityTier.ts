@@ -12,6 +12,8 @@
  * - PACKAGE BUILDS: only "complete" records
  */
 
+import { hasValidTireSizesEnhanced } from "@/lib/tires/tireSizeUtils";
+
 export type QualityTier = "complete" | "partial" | "low_confidence" | "unknown";
 
 export interface QualityTierStats {
@@ -71,17 +73,17 @@ export function hasCompleteWheelSpecs(oemWheelSizes: unknown): boolean {
 }
 
 /**
- * Validate that a fitment record has valid tire sizes
+ * Validate that a fitment record has valid tire sizes.
+ * 
+ * Supports:
+ * - String arrays: ["275/65R18"]
+ * - Object arrays: [{ size: "275/65R18" }]
+ * - Staggered objects: { front: "245/40R19", rear: "275/35R19" }
+ * 
+ * @see hasValidTireSizesEnhanced in tireSizeUtils.ts for implementation
  */
 export function hasValidTireSizes(oemTireSizes: unknown): boolean {
-  if (!Array.isArray(oemTireSizes) || oemTireSizes.length === 0) {
-    return false;
-  }
-  
-  // Must have at least one valid tire size format
-  return oemTireSizes.some(ts => 
-    typeof ts === 'string' && /^\d{3}\/\d{2}R\d{2}/.test(ts)
-  );
+  return hasValidTireSizesEnhanced(oemTireSizes);
 }
 
 /**

@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-05-14T01:08:03.235Z",
+  "summary": {
+    "checked": 25,
+    "hasStaggeredData": 0,
+    "noStaggeredData": 0,
+    "errors": 25
+  },
+  "results": [],
+  "errors": [
+    {
+      "year": 2024,
+      "make": "Porsche",
+      "model": "911",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Porsche",
+      "model": "Boxster",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Porsche",
+      "model": "718 Boxster",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Porsche",
+      "model": "Cayman",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Porsche",
+      "model": "718 Cayman",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "GT-R",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Z",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "M3",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "M4",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "BMW",
+      "model": "M5",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Mustang",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Dodge",
+      "model": "Challenger",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Dodge",
+      "model": "Charger",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Supra",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "GR Supra",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Audi",
+      "model": "R8",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2024,
+      "make": "Mercedes-Benz",
+      "model": "AMG GT",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "370Z",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2020,
+      "make": "Nissan",
+      "model": "370Z",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "Ferrari",
+      "model": "296",
+      "error": "USAF API error: 401 Authentication Failed"
+    },
+    {
+      "year": 2023,
+      "make": "McLaren",
+      "model": "Artura",
+      "error": "USAF API error: 401 Authentication Failed"
+    }
+  ]
+}

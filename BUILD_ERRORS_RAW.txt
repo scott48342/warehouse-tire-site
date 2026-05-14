@@ -1,0 +1,37 @@
+﻿
+> warehouse-tire-site@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.production.local, .env.local
+
+node.exe : ΓÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá The "middle...leware-to-proxy:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 20.6s
+  Running TypeScript ...
+Failed to compile.
+
+./src/lib/catalog-store.ts:74:7
+Type error: Type '{ slug: string | null; name: string | null; years: number[]; }[]' is not assignable to type 
+'CatalogModel[]'.
+  Type '{ slug: string | null; name: string | null; years: number[]; }' is not assignable to type 'CatalogModel'.
+    Types of property 'slug' are incompatible.
+      Type 'string | null' is not assignable to type 'string'.
+        Type 'null' is not assignable to type 'string'.
+
+[0m [90m 72 |[39m     [36mif[39m (dbModels[33m.[39mlength [33m>[39m [35m0[39m) {
+ [90m 73 |[39m       console[33m.[39mlog([32m`[catalog-store] DB: ${dbModels.length} models for 
+${makeSlug}`[39m)[33m;[39m
+[31m[1m>[22m[39m[90m 74 |[39m       [36mreturn[39m dbModels[33m.[39mmap(m [33m=>[39m ({ 
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 75 |[39m         slug[33m:[39m m[33m.[39mslug[33m,[39m 
+ [90m 76 |[39m         name[33m:[39m m[33m.[39mname[33m,[39m 
+ [90m 77 |[39m         years[33m:[39m (m[33m.[39myears [33m||[39m []) [36mas[39m number[] [0m
+Next.js build worker exited with code: 1 and signal: null

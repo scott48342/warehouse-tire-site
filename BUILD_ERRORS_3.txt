@@ -1,0 +1,33 @@
+﻿
+> warehouse-tire-site@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.production.local, .env.local
+
+node.exe : ΓÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá The "middle...leware-to-proxy:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 21.9s
+  Running TypeScript ...
+Failed to compile.
+
+./src/app/api/admin/email-campaigns/[id]/audience-preview/route.ts:23:16
+Type error: Property 'audienceRules' does not exist on type '{ name: string; status: string; id: string; campaignType: 
+string; subject: string; previewText: string | null; fromName: string | null; replyTo: string | null; templateKey: 
+string | null; ... 29 more ...; discountRevenue: string; }'. Did you mean 'audienceRulesJson'?
+
+[0m [90m 21 |[39m
+ [90m 22 |[39m     [36mconst[39m preview [33m=[39m [36mawait[39m audienceResolver[33m.[39mgetAudiencePreview(
+[31m[1m>[22m[39m[90m 23 |[39m       campaign[33m.[39maudienceRules [36mas[39m [33mAudienceRules[39m
+ [90m    |[39m                [31m[1m^[22m[39m
+ [90m 24 |[39m     )[33m;[39m
+ [90m 25 |[39m
+ [90m 26 |[39m     [36mreturn[39m [33mNextResponse[39m[33m.[39mjson({ preview })[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null

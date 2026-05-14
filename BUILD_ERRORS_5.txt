@@ -1,0 +1,34 @@
+﻿
+> warehouse-tire-site@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.production.local, .env.local
+
+node.exe : ΓÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá The "middle...leware-to-proxy:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 28.3s
+  Running TypeScript ...
+Failed to compile.
+
+./src/lib/catalog-store.ts:48:72
+Type error: Property 'make' does not exist on type '{ id: string; slug: string; name: string; createdAt: Date; 
+updatedAt: Date; }'.
+
+[0m [90m 46 |[39m     [36mif[39m (dbMakes[33m.[39mlength [33m>[39m [35m0[39m) {
+ [90m 47 |[39m       console[33m.[39mlog([32m`[catalog-store] DB: ${dbMakes.length} makes`[39m)[33m;[39m
+[31m[1m>[22m[39m[90m 48 |[39m       [36mreturn[39m dbMakes[33m.[39mmap(m [33m=>[39m ({ slug[33m:[39m 
+m[33m.[39mslug [33m||[39m [32m""[39m[33m,[39m name[33m:[39m m[33m.[39mname [33m||[39m m[33m.[39mmake 
+}))[33m;[39m
+ [90m    |[39m                                                                        [31m[1m^[22m[39m
+ [90m 49 |[39m     }
+ [90m 50 |[39m     
+ [90m 51 |[39m     console[33m.[39mlog([32m`[catalog-store] No makes in catalog`[39m)[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null

@@ -8,6 +8,7 @@
  */
 
 import type { VehicleFitment } from "./schema";
+import { normalizeToStringArray } from "@/lib/tires/tireSizeUtils";
 
 // ============================================================================
 // Types
@@ -264,8 +265,9 @@ export function checkFitmentEquivalence(
   }
   
   // 5. Tire Rim Diameter Range - SHOULD MATCH
-  const sourceTires = Array.isArray(source.oemTireSizes) ? source.oemTireSizes : [];
-  const targetTires = Array.isArray(target.oemTireSizes) ? target.oemTireSizes : [];
+  // Supports string arrays and {front, rear} staggered format
+  const sourceTires = normalizeToStringArray(source.oemTireSizes);
+  const targetTires = normalizeToStringArray(target.oemTireSizes);
   const sourceTireRange = getTireRimDiameterRange(sourceTires);
   const targetTireRange = getTireRimDiameterRange(targetTires);
   
