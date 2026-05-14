@@ -76,7 +76,8 @@ function normalizeOemTireSizes(raw: unknown): string[] {
     } catch {
       // Not valid JSON - might be a single tire size
       const trimmed = raw.trim();
-      if (trimmed.match(/^\d{3}\/\d{2}R\d{2}/)) {
+      // Match standard tire sizes including ZR (e.g., 275/35ZR19, 275/35R19, P275/35R19)
+      if (trimmed.match(/^P?\d{2,3}\/\d{2}Z?R\d{2}/i)) {
         return [trimmed];
       }
       console.warn("[tire-sizes] oem_tire_sizes is unparseable string:", raw);
