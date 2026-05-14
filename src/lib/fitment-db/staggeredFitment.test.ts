@@ -13,7 +13,8 @@
  * - Camaro ZL1 1LE: 19" front, 20" rear (staggered)
  */
 
-import { buildDiameterOptions, type DiameterOption } from '@/lib/fitment/diameterOptions';
+import { describe, it, expect } from 'vitest';
+import { buildDiameterOptions, type DiameterOption } from '../fitment/diameterOptions';
 
 describe('Staggered Fitment Tests', () => {
   describe('C8 Corvette Stingray (19" front / 20" rear)', () => {

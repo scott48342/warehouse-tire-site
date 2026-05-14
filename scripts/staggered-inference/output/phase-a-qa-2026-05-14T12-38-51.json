@@ -1,0 +1,359 @@
+{
+  "timestamp": "2026-05-14T12:38:50.755Z",
+  "tests": {
+    "staggeredFormat": {
+      "passed": 0,
+      "failed": 10,
+      "details": [
+        {
+          "id": "a1a7fe0f-356b-439d-9286-5d71fa33a11b",
+          "year": 2026,
+          "make": "BMW",
+          "model": "M3",
+          "trim": "M3 CS",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "255/35R19",
+            "275/35R19",
+            "275/30R20",
+            "285/30R20"
+          ]
+        },
+        {
+          "id": "e89979a5-64f0-40dc-85f1-f5fa712c9b7e",
+          "year": 2026,
+          "make": "BMW",
+          "model": "M5",
+          "trim": "Base",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "275/40R19",
+            "285/35R20",
+            "275/35R20",
+            "285/40R19"
+          ]
+        },
+        {
+          "id": "71e3b1e2-a75b-43f3-a833-adc78a083763",
+          "year": 2026,
+          "make": "Chevrolet",
+          "model": "Corvette",
+          "trim": "E-Ray 3LZ",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "275/30ZR20",
+            "345/25ZR21"
+          ]
+        },
+        {
+          "id": "1c313d4b-33c8-4e6a-a46e-6e01aeede04a",
+          "year": 2026,
+          "make": "Chevrolet",
+          "model": "Corvette",
+          "trim": "E-Ray 1LZ",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "275/30ZR20",
+            "345/25ZR21"
+          ]
+        },
+        {
+          "id": "25ef93d9-006c-4117-9474-1b6ef5b80359",
+          "year": 2025,
+          "make": "BMW",
+          "model": "M3",
+          "trim": "M3 CS",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "255/35R19",
+            "275/35R19",
+            "275/30R20",
+            "285/30R20"
+          ]
+        },
+        {
+          "id": "eb9b0abd-1f77-47cf-92fe-51fba9a0e0ae",
+          "year": 2025,
+          "make": "BMW",
+          "model": "M5",
+          "trim": "Base",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "275/40R19",
+            "285/35R20",
+            "275/35R20",
+            "285/40R19"
+          ]
+        },
+        {
+          "id": "7d0f440d-63f3-4579-a268-b87b51de3cb9",
+          "year": 2025,
+          "make": "Chevrolet",
+          "model": "Corvette",
+          "trim": "E-Ray 1LZ",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "275/30ZR20",
+            "345/25ZR21"
+          ]
+        },
+        {
+          "id": "caa30bba-a6df-4585-b66e-7ec438727968",
+          "year": 2025,
+          "make": "Chevrolet",
+          "model": "Corvette",
+          "trim": "E-Ray 3LZ",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "275/30ZR20",
+            "345/25ZR21"
+          ]
+        },
+        {
+          "id": "2eba2775-10b3-4e3c-934b-db7e08c3f1e4",
+          "year": 2024,
+          "make": "BMW",
+          "model": "M3",
+          "trim": "M3 CS",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "255/35R19",
+            "275/35R19",
+            "275/30R20",
+            "285/30R20"
+          ]
+        },
+        {
+          "id": "dd82f555-b4b1-4929-b685-345de0558bc5",
+          "year": 2024,
+          "make": "BMW",
+          "model": "M5",
+          "trim": "Base",
+          "issue": "Missing axle annotations: front=false, rear=false",
+          "data": [
+            "275/40R19",
+            "285/35R20",
+            "275/35R20",
+            "285/40R19"
+          ]
+        }
+      ]
+    },
+    "expectedSizes": {
+      "passed": 0,
+      "failed": 12,
+      "details": [
+        {
+          "testCase": {
+            "year": 2024,
+            "make": "Chevrolet",
+            "model": "Camaro",
+            "trimPattern": "SS 1LE",
+            "expectedFront": "285/30R20",
+            "expectedRear": "305/30R20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "305/30R20",
+            "front": "285/30R20"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2024,
+            "make": "Chevrolet",
+            "model": "Camaro",
+            "trimPattern": "ZL1 1LE",
+            "expectedFront": "305/30R19",
+            "expectedRear": "325/30R19"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "325/30R19",
+            "front": "305/30R19"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2023,
+            "make": "Chevrolet",
+            "model": "Camaro",
+            "trimPattern": "SS 1LE",
+            "expectedFront": "285/30R20",
+            "expectedRear": "305/30R20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "305/30R20",
+            "front": "285/30R20"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2024,
+            "make": "Chevrolet",
+            "model": "Corvette",
+            "trimPattern": "Stingray",
+            "expectedFront": "245/35ZR19",
+            "expectedRear": "305/30ZR20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "305/30ZR20",
+            "front": "245/35ZR19"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2024,
+            "make": "Chevrolet",
+            "model": "Corvette",
+            "trimPattern": "Z06",
+            "expectedFront": "275/30ZR20",
+            "expectedRear": "345/25ZR21"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "345/25ZR21",
+            "front": "275/30ZR20"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2023,
+            "make": "Chevrolet",
+            "model": "Corvette",
+            "trimPattern": "Stingray",
+            "expectedFront": "245/35ZR19",
+            "expectedRear": "305/30ZR20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "305/30ZR20",
+            "front": "245/35ZR19"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2024,
+            "make": "BMW",
+            "model": "M3",
+            "trimPattern": "Competition",
+            "expectedFront": "255/35R19",
+            "expectedRear": "275/35R19"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "275/35R19",
+            "front": "255/35R19"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2023,
+            "make": "BMW",
+            "model": "M3",
+            "trimPattern": "Competition",
+            "expectedFront": "255/35R19",
+            "expectedRear": "275/35R19"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "275/35R19",
+            "front": "255/35R19"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2024,
+            "make": "BMW",
+            "model": "M4",
+            "trimPattern": "Competition",
+            "expectedFront": "275/35R19",
+            "expectedRear": "285/30R20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "285/30R20",
+            "front": "275/35R19"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2023,
+            "make": "BMW",
+            "model": "M4",
+            "trimPattern": "CS",
+            "expectedFront": "275/35R19",
+            "expectedRear": "285/30R20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "285/30R20",
+            "front": "275/35R19"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2024,
+            "make": "BMW",
+            "model": "M5",
+            "trimPattern": "Competition",
+            "expectedFront": "275/35R20",
+            "expectedRear": "285/35R20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "285/35R20",
+            "front": "275/35R20"
+          }
+        },
+        {
+          "testCase": {
+            "year": 2023,
+            "make": "BMW",
+            "model": "M5",
+            "trimPattern": "CS",
+            "expectedFront": "275/35R20",
+            "expectedRear": "285/35R20"
+          },
+          "issue": "oem_tire_sizes is not an array",
+          "actual": {
+            "rear": "285/35R20",
+            "front": "275/35R20"
+          }
+        }
+      ]
+    },
+    "preservedFields": {
+      "passed": 10,
+      "failed": 0,
+      "details": []
+    },
+    "apiSmoke": {
+      "passed": 0,
+      "failed": 3,
+      "details": [
+        {
+          "test": "2024 Camaro SS 1LE tire sizes",
+          "error": "fetch failed"
+        },
+        {
+          "test": "2024 Corvette trims",
+          "error": "fetch failed"
+        },
+        {
+          "test": "2024 BMW M4 wheel fitment",
+          "error": "fetch failed"
+        }
+      ]
+    }
+  },
+  "regressions": [],
+  "summary": {
+    "totalTests": 35,
+    "totalPassed": 10,
+    "totalFailed": 25,
+    "regressionCount": 0
+  }
+}

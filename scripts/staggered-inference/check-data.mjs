@@ -31,10 +31,11 @@ const corvettes = await sql`
   FROM vehicle_fitments
   WHERE make = 'Chevrolet' AND model = 'Corvette' 
     AND year = 2024
-  LIMIT 3
+    AND display_trim LIKE '%Stingray%'
+  LIMIT 5
 `;
 
-console.log('\n\nCorvette samples:');
+console.log('\n\nCorvette Stingray samples:');
 for (const row of corvettes) {
   console.log(`\n${row.year} ${row.make} ${row.model} ${row.display_trim}`);
   console.log('  oem_tire_sizes:', JSON.stringify(row.oem_tire_sizes, null, 2));
