@@ -213,10 +213,10 @@ export function Header() {
                 Wheels
               </button>
               <Link
-                href="/financing"
-                className="flex h-11 items-center justify-center rounded-xl border border-blue-300 bg-blue-50 px-2 text-sm font-extrabold text-blue-700"
+                href="/jake"
+                className="flex h-11 items-center justify-center rounded-xl border border-red-300 bg-red-600 px-2 text-sm font-bold text-white"
               >
-                💳
+                <span className="mr-1">J</span>Ask
               </Link>
               <Link
                 href="/lifted"
@@ -379,6 +379,15 @@ export function Header() {
             >
               <span>📸</span>
               GALLERY
+            </Link>
+
+            {/* Jake - AI Fitment Assistant */}
+            <Link
+              href="/jake"
+              className="inline-flex items-center gap-1.5 rounded-full bg-red-600 hover:bg-red-700 px-3 py-1.5 text-sm font-bold text-white transition-colors"
+            >
+              <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">J</span>
+              Ask Jake
             </Link>
 
             <details className="group relative">
