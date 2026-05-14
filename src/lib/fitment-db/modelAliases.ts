@@ -64,6 +64,90 @@ export const MODEL_ALIASES: Record<string, string[]> = {
   "ram": ["ram-1500"],
   "ram-2500": ["2500"],
   "ram-3500": ["3500"],
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // MAZDA NAMING VARIATIONS
+  // DB stores "Mazda6" and "Mazda3" (no space)
+  // Users might search "Mazda 6" or "Mazda 3" (with space)
+  // ═══════════════════════════════════════════════════════════════════════════
+  "mazda-6": ["mazda6"],
+  "mazda6": ["mazda-6"],  // Reverse alias
+  "mazda-3": ["mazda3"],
+  "mazda3": ["mazda-3"],  // Reverse alias
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CHEVROLET BOLT VARIATIONS
+  // DB stores "Bolt Ev" and "Bolt Euv"
+  // Users might search just "Bolt"
+  // ═══════════════════════════════════════════════════════════════════════════
+  "bolt": ["bolt-ev", "bolt-euv"],
+  "bolt-ev": ["bolt", "bolt ev"],
+  "bolt-euv": ["bolt", "bolt euv"],
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // HYUNDAI IONIQ VARIATIONS
+  // DB stores "Ioniq 5" and "Ioniq 6" (with space)
+  // Users might search "IONIQ5", "Ioniq-5", or "IONIQ 5"
+  // ═══════════════════════════════════════════════════════════════════════════
+  "ioniq5": ["ioniq-5", "ioniq 5"],
+  "ioniq-5": ["ioniq5", "ioniq 5"],
+  "ioniq6": ["ioniq-6", "ioniq 6"],
+  "ioniq-6": ["ioniq6", "ioniq 6"],
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // MERCEDES-BENZ AMG VARIATIONS
+  // DB stores "C Class Amg", "E Class Amg", "S Class Amg", etc.
+  // Users might search "AMG C 43", "C43 AMG", "AMG C-Class", etc.
+  // ═══════════════════════════════════════════════════════════════════════════
+  // C-Class AMG variations
+  "c-class-amg": ["c class amg"],
+  "c-class": ["c class"],
+  "amg-c-43": ["c-class-amg", "c class amg", "c43-amg"],
+  "amg-c-63": ["c-class-amg", "c class amg", "c63-amg"],
+  "c43-amg": ["c-class-amg", "c class amg", "amg-c-43"],
+  "c63-amg": ["c-class-amg", "c class amg", "amg-c-63"],
+  "amg-c43": ["c-class-amg", "c class amg"],
+  "amg-c63": ["c-class-amg", "c class amg"],
+  
+  // E-Class AMG variations  
+  "e-class-amg": ["e class amg"],
+  "e-class": ["e class"],
+  "amg-e-53": ["e-class-amg", "e class amg"],
+  "amg-e-63": ["e-class-amg", "e class amg"],
+  "e53-amg": ["e-class-amg", "e class amg"],
+  "e63-amg": ["e-class-amg", "e class amg"],
+  
+  // S-Class AMG variations
+  "s-class-amg": ["s class amg"],
+  "s-class": ["s class"],
+  "amg-s-63": ["s-class-amg", "s class amg"],
+  "s63-amg": ["s-class-amg", "s class amg"],
+  
+  // GLA/GLB/GLC/GLE/GLS AMG variations
+  "gla-class-amg": ["gla class amg"],
+  "glc-class-coupe": ["glc class coupe"],
+  "gle-class-coupe": ["gle class coupe"],
+  
+  // CLA/CLS variations
+  "cla-class": ["cla class", "cla"],
+  "cla-class-amg": ["cla class amg"],
+  "cls-class": ["cls class"],
+  "cls-class-amg": ["cls class amg"],
+  
+  // AMG GT (standalone model)
+  "amg-gt": ["amg gt"],
+  
+  // A-Class AMG
+  "a-class-amg": ["a class amg"],
+  
+  // G-Class variations
+  "g-class": ["g class"],
+  "g-class-amg": ["g class amg"],
+  "amg-g-63": ["g-class-amg", "g class amg"],
+  "g63-amg": ["g-class-amg", "g class amg"],
+  
+  // SL-Class AMG
+  "sl-class-amg": ["sl class amg"],
 };
 
 /**

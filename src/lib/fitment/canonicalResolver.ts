@@ -137,6 +137,32 @@ function normalizeTrim(trim: string): string {
 }
 
 /**
+ * Normalize tire sizes to a flat array.
+ * Handles both array format (square fitment) and object format (staggered fitment).
+ * 
+ * Array format: ["245/40R20", "275/35R20"]
+ * Object format: { front: ["245/40R20"], rear: ["275/35R20"] }
+ */
+function normalizeTireSizes(tireSizes: unknown): string[] {
+  if (!tireSizes) return [];
+  
+  // Already an array - use as-is
+  if (Array.isArray(tireSizes)) {
+    return tireSizes.filter(s => typeof s === 'string');
+  }
+  
+  // Object format (staggered fitment) - flatten front + rear
+  if (typeof tireSizes === 'object') {
+    const obj = tireSizes as { front?: string[]; rear?: string[] };
+    const front = Array.isArray(obj.front) ? obj.front : [];
+    const rear = Array.isArray(obj.rear) ? obj.rear : [];
+    return [...front, ...rear].filter(s => typeof s === 'string');
+  }
+  
+  return [];
+}
+
+/**
  * Check if two sets of tire sizes are identical
  */
 function tireSizesMatch(sizes1: string[] | null, sizes2: string[] | null): boolean {
@@ -436,7 +462,7 @@ export async function resolveVehicleFitment(
       .limit(50);
     
     if (allRecords.length === 0) continue;
-
+    
     // Build candidate list with atomic trim info
     const candidates = allRecords.map(rec => {
       const isGrouped = isGroupedTrim(rec.displayTrim);
@@ -447,7 +473,7 @@ export async function resolveVehicleFitment(
         displayTrim: rec.displayTrim,
         isGrouped,
         atomicTrims,
-        tireSizes: (rec.oemTireSizes as string[]) || [],
+        tireSizes: normalizeTireSizes(rec.oemTireSizes),
       };
     });
 
@@ -626,7 +652,7 @@ export async function getAtomicTrimOptions(
     for (const rec of records) {
       const isGrouped = isGroupedTrim(rec.displayTrim);
       const atomicTrims = isGrouped ? explodeTrim(rec.displayTrim) : [rec.displayTrim];
-      const tireSizes = (rec.oemTireSizes as string[]) || [];
+      const tireSizes = normalizeTireSizes(rec.oemTireSizes);
       
       for (const atomicTrim of atomicTrims) {
         const normalizedLabel = atomicTrim.trim();

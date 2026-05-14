@@ -224,6 +224,109 @@ describe("Model Alias Resolution", () => {
       expect(MODEL_ALIASES["300c"]).toBeDefined();
     });
 
+    test("Mazda model aliases exist", () => {
+      expect(MODEL_ALIASES["mazda-6"]).toBeDefined();
+      expect(MODEL_ALIASES["mazda6"]).toBeDefined();
+      expect(MODEL_ALIASES["mazda-3"]).toBeDefined();
+      expect(MODEL_ALIASES["mazda3"]).toBeDefined();
+    });
+
+    test("Chevrolet Bolt variants have aliases", () => {
+      expect(MODEL_ALIASES["bolt"]).toBeDefined();
+      expect(MODEL_ALIASES["bolt-ev"]).toBeDefined();
+      expect(MODEL_ALIASES["bolt-euv"]).toBeDefined();
+    });
+
+    test("Hyundai Ioniq variants have aliases", () => {
+      expect(MODEL_ALIASES["ioniq5"]).toBeDefined();
+      expect(MODEL_ALIASES["ioniq-5"]).toBeDefined();
+      expect(MODEL_ALIASES["ioniq6"]).toBeDefined();
+      expect(MODEL_ALIASES["ioniq-6"]).toBeDefined();
+    });
+
+    test("Mercedes AMG model aliases exist", () => {
+      expect(MODEL_ALIASES["c-class-amg"]).toBeDefined();
+      expect(MODEL_ALIASES["amg-c-43"]).toBeDefined();
+      expect(MODEL_ALIASES["c43-amg"]).toBeDefined();
+      expect(MODEL_ALIASES["e-class-amg"]).toBeDefined();
+      expect(MODEL_ALIASES["g-class-amg"]).toBeDefined();
+    });
+
+  });
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // New Model Alias Resolution Tests (QA-identified mismatches)
+  // ══════════════════════════════════════════════════════════════════════════
+
+  describe("QA Mismatch Fixes", () => {
+
+    test("Mazda 6 (with space) resolves to Mazda6 (DB format)", () => {
+      const variants = getModelVariants("Mazda 6");
+      expect(variants).toContain("mazda 6"); // original lowercased
+      expect(variants).toContain("mazda-6"); // slugified
+      expect(variants).toContain("mazda6");  // alias to DB format
+    });
+
+    test("Mazda6 (no space) also works", () => {
+      const variants = getModelVariants("Mazda6");
+      expect(variants).toContain("mazda6");
+      expect(variants).toContain("mazda-6");
+    });
+
+    test("Bolt resolves to Bolt EV variants", () => {
+      const variants = getModelVariants("Bolt");
+      expect(variants).toContain("bolt");
+      expect(variants).toContain("bolt-ev");
+      expect(variants).toContain("bolt-euv");
+    });
+
+    test("Bolt EV also resolves to Bolt", () => {
+      const variants = getModelVariants("Bolt EV");
+      expect(variants).toContain("bolt-ev");
+      expect(variants).toContain("bolt");
+    });
+
+    test("IONIQ 5 (caps, space) resolves to Ioniq 5 (DB format)", () => {
+      const variants = getModelVariants("IONIQ 5");
+      expect(variants).toContain("ioniq 5"); // original lowercased - matches DB!
+      expect(variants).toContain("ioniq-5"); // slugified
+      expect(variants).toContain("ioniq5");  // no-space variant
+    });
+
+    test("Ioniq5 (no space) resolves to Ioniq 5 (DB format)", () => {
+      const variants = getModelVariants("Ioniq5");
+      expect(variants).toContain("ioniq5");
+      expect(variants).toContain("ioniq-5");
+      expect(variants).toContain("ioniq 5"); // alias to DB format
+    });
+
+    test("AMG C 43 resolves to C Class Amg (DB format)", () => {
+      const variants = getModelVariants("AMG C 43");
+      expect(variants).toContain("amg-c-43");
+      expect(variants).toContain("c-class-amg");
+      expect(variants).toContain("c class amg"); // DB format
+    });
+
+    test("C43 AMG resolves to C Class Amg (DB format)", () => {
+      const variants = getModelVariants("C43 AMG");
+      expect(variants).toContain("c43-amg");
+      expect(variants).toContain("c-class-amg");
+      expect(variants).toContain("c class amg");
+    });
+
+    test("C-Class resolves to C Class (DB format)", () => {
+      const variants = getModelVariants("C-Class");
+      expect(variants).toContain("c-class");
+      expect(variants).toContain("c class");
+    });
+
+    test("G63 AMG resolves to G Class Amg", () => {
+      const variants = getModelVariants("G63 AMG");
+      expect(variants).toContain("g63-amg");
+      expect(variants).toContain("g-class-amg");
+      expect(variants).toContain("g class amg");
+    });
+
   });
 
 });
