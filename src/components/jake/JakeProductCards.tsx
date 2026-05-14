@@ -118,11 +118,11 @@ export function JakeProductCard({
         {/* Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
-            <div className="min-w-0">
-              <p className="text-white font-semibold text-sm truncate group-hover:text-red-400 transition-colors">
+            <div className="min-w-0 flex-1">
+              <p className="text-white font-semibold text-sm leading-tight group-hover:text-red-400 transition-colors line-clamp-2">
                 {product.brand} {product.model}
               </p>
-              <div className="flex items-center gap-2 mt-0.5">
+              <div className="flex items-center gap-2 mt-0.5 flex-wrap">
                 {product.size && (
                   <span className="text-white/50 text-xs">{product.size}</span>
                 )}
@@ -354,7 +354,7 @@ export function JakeWheelCard({ wheel, onClick }: JakeWheelCardProps) {
         )}
       </div>
       <div className="p-3">
-        <p className="text-white font-semibold text-sm group-hover:text-red-400 transition-colors">
+        <p className="text-white font-semibold text-sm leading-tight group-hover:text-red-400 transition-colors line-clamp-2 min-h-[2.5rem]">
           {wheel.brand} {wheel.model}
         </p>
         <p className="text-white/50 text-xs mt-0.5">{wheel.size} • {wheel.finish || "Custom"}</p>
