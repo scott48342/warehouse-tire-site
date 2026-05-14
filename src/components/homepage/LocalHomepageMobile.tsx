@@ -12,6 +12,7 @@ import {
   Star,
   ChevronRight,
 } from "lucide-react";
+import { JakeHomepageSection } from "@/components/jake";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // MOBILE-ONLY LOCAL HOMEPAGE
@@ -62,6 +63,7 @@ export default function LocalHomepageMobile() {
     <div className="lg:hidden bg-white">
       <HeroSection />
       <SearchCard />
+      <JakeHomepageSection />
       <LocalTrustSection />
       <GoogleReviewCard />
       <BrandsSection />

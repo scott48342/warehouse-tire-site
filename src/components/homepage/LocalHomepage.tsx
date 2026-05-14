@@ -19,6 +19,7 @@ import {
   Navigation,
 } from "lucide-react";
 import LocalHomepageMobile from "./LocalHomepageMobile";
+import { JakeHomepageSection } from "@/components/jake";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // LOCAL HOMEPAGE - Neighborhood Tire Store
@@ -1017,6 +1018,7 @@ export function LocalHomepage() {
       {/* Desktop: Original desktop layout (hidden on mobile) */}
       <div className="hidden lg:block min-h-screen bg-white">
         <HeroSection />
+        <JakeHomepageSection />
         <WhyShopLocal />
         <BrandLogos />
         <LocalStory />
