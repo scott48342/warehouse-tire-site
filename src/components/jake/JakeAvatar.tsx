@@ -7,6 +7,7 @@ interface JakeAvatarProps {
   className?: string;
   showGlow?: boolean;
   showOnlineIndicator?: boolean;
+  animated?: boolean; // Enable pulse/glow animations
 }
 
 const sizeClasses = {
@@ -32,16 +33,46 @@ export function JakeAvatar({
   className = "",
   showGlow = false,
   showOnlineIndicator = false,
+  animated = true,
 }: JakeAvatarProps) {
+  const isLarge = size === "xl" || size === "homepage";
+  
   return (
     <div className={`relative inline-block flex-shrink-0 ${className}`}>
-      {/* Glow Effect */}
+      {/* Animated Glow Effect */}
       {showGlow && (
-        <div className="absolute inset-0 blur-2xl opacity-30 bg-red-500 rounded-full scale-150" />
+        <div 
+          className={`absolute inset-0 bg-red-500 rounded-full scale-150 ${
+            animated 
+              ? "animate-[glow-pulse_3s_ease-in-out_infinite] blur-2xl" 
+              : "blur-2xl opacity-30"
+          }`}
+          style={animated ? {
+            animation: "glow-pulse 3s ease-in-out infinite",
+          } : undefined}
+        />
+      )}
+      
+      {/* Pulsing Ring */}
+      {animated && isLarge && (
+        <>
+          <div 
+            className="absolute inset-0 rounded-full border-2 border-red-500/40"
+            style={{
+              animation: "ring-pulse 2.5s ease-out infinite",
+            }}
+          />
+          <div 
+            className="absolute inset-0 rounded-full border border-red-500/20"
+            style={{
+              animation: "ring-pulse 2.5s ease-out infinite 0.5s",
+            }}
+          />
+        </>
       )}
       
       {/* Avatar Image */}
-      <div className={`relative ${sizeClasses[size]} rounded-full overflow-hidden`}>
+      <div className={`relative ${sizeClasses[size]} rounded-full overflow-hidden ring-2 ring-red-500/30`}>
         <Image
           src="/jake-avatar.png"
           alt="Jake - Your Fitment Expert"
@@ -52,12 +83,62 @@ export function JakeAvatar({
         />
       </div>
       
-      {/* Online Indicator */}
+      {/* Online Indicator with Pulse */}
       {showOnlineIndicator && (
-        <div className={`absolute bottom-0 right-0 bg-green-500 rounded-full border-2 border-[#0a0a0a] ${
-          size === "xl" || size === "homepage" ? "w-5 h-5 border-4" : size === "lg" ? "w-4 h-4" : "w-3 h-3"
-        }`} />
+        <div className={`absolute bottom-0 right-0 ${
+          isLarge ? "w-5 h-5" : size === "lg" ? "w-4 h-4" : "w-3 h-3"
+        }`}>
+          {/* Pulse ring */}
+          {animated && (
+            <div 
+              className="absolute inset-0 bg-green-500 rounded-full"
+              style={{
+                animation: "online-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite",
+              }}
+            />
+          )}
+          {/* Solid dot */}
+          <div className={`relative w-full h-full bg-green-500 rounded-full border-2 ${
+            isLarge ? "border-4" : "border-2"
+          } border-[#0a0a0a]`} />
+        </div>
       )}
+      
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes glow-pulse {
+          0%, 100% {
+            opacity: 0.2;
+            transform: scale(1.4);
+          }
+          50% {
+            opacity: 0.35;
+            transform: scale(1.6);
+          }
+        }
+        
+        @keyframes ring-pulse {
+          0% {
+            transform: scale(1);
+            opacity: 0.6;
+          }
+          100% {
+            transform: scale(1.3);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes online-ping {
+          0% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
