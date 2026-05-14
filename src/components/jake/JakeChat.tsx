@@ -55,6 +55,24 @@ const SUGGESTED_PROMPTS = [
   { text: "Best tires for towing", icon: "🚛" },
 ];
 
+// Quick prompts for header (shorter versions)
+const HEADER_PROMPTS = [
+  "Best tires for my truck",
+  "Build me a wheel package",
+  "Will bigger tires fit?",
+  "Quiet highway tires",
+  "Show me black wheels",
+  "Budget tire options",
+  "Tires for towing",
+  "Off-road tire setup",
+];
+
+// Get 3 random prompts for header
+function getRandomHeaderPrompts(count: number = 3): string[] {
+  const shuffled = [...HEADER_PROMPTS].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -117,6 +135,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
+  const [headerPrompts] = useState(() => getRandomHeaderPrompts(3));
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -332,37 +351,53 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
   return (
     <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden`}>
       {/* Header */}
-      <div className="flex-shrink-0 flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0d0d0d]">
-        <div className="flex items-center gap-3">
-          <Link href="/" className="mr-2 text-white/50 hover:text-white transition-colors">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-          </Link>
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-            <span className="text-white font-bold text-lg">J</span>
+      <div className="flex-shrink-0 border-b border-white/10 bg-[#0d0d0d]">
+        <div className="flex items-center justify-between px-6 py-3">
+          <div className="flex items-center gap-3">
+            <Link href="/" className="mr-2 text-white/50 hover:text-white transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+            </Link>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+              <span className="text-white font-bold text-lg">J</span>
+            </div>
+            <div>
+              <h1 className="text-white font-bold text-lg">Jake</h1>
+              <p className="text-white/50 text-xs">
+                {isLoading ? "Thinking..." : "Your Fitment Expert"}
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-white font-bold text-lg">Jake</h1>
-            <p className="text-white/50 text-xs">
-              {isLoading ? "Thinking..." : "Your Fitment Expert"}
-            </p>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => { setMessages([]); setHasStarted(false); }}
+              className="text-white/50 hover:text-white text-sm px-3 py-1.5 rounded hover:bg-white/5 transition-colors"
+            >
+              New Chat
+            </button>
+            {onClose && (
+              <button onClick={onClose} className="text-white/50 hover:text-white p-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => { setMessages([]); setHasStarted(false); }}
-            className="text-white/50 hover:text-white text-sm px-3 py-1.5 rounded hover:bg-white/5 transition-colors"
-          >
-            New Chat
-          </button>
-          {onClose && (
-            <button onClick={onClose} className="text-white/50 hover:text-white p-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+        {/* Quick Prompts Row */}
+        <div className="px-6 pb-3 flex items-center gap-2 overflow-x-auto">
+          <span className="text-white/40 text-xs whitespace-nowrap">Try:</span>
+          {headerPrompts.map((prompt) => (
+            <button
+              key={prompt}
+              onClick={() => handleSend(prompt)}
+              disabled={isLoading}
+              className="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full text-white/70 hover:text-white text-xs whitespace-nowrap transition-all disabled:opacity-50"
+            >
+              {prompt}
             </button>
-          )}
+          ))}
         </div>
       </div>
 
