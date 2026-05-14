@@ -1,12 +1,28 @@
 # Fitment Database Green State Marker
 
+> ## 🔒 FITMENT FREEZE IN EFFECT
+> 
+> **NO CHANGES TO FITMENT CODE OR DATA WITHOUT EXPLICIT APPROVAL**
+> 
+> See [FITMENT_CHANGE_CONTROL.md](./FITMENT_CHANGE_CONTROL.md) for approval process.
+> 
+> | Requirement | Status |
+> |-------------|--------|
+> | Approval marker required | `APPROVED_FITMENT_CHANGE=true` |
+> | CI guard active | `.github/workflows/fitment-guard.yml` |
+> | CODEOWNERS active | `.github/CODEOWNERS` |
+> | Smoke tests | 26/26 passing |
+
+---
+
 **Date**: 2026-05-14
-**Commit**: a204c28
+**Commit**: `590966c` (includes Mercedes make variant fix)
 **Status**: ✅ GREEN
 
 ## Summary
 
 Full database completeness audit completed with HIGH severity remediation.
+Mercedes make variant resolution fixed (2026-05-14 10:25 AM).
 
 ## Metrics
 
@@ -25,13 +41,13 @@ Full database completeness audit completed with HIGH severity remediation.
 |------------|--------|--------|
 | Staggered Vehicles | 6/6 | 0 |
 | HD Truck LT Sizes | 3/3 | 0 |
-| Mercedes Alias | 1/2 | 1* |
+| Mercedes Alias | 2/2 | 0 |
 | Sedan Resolver | 3/3 | 0 |
 | Package Flow (Wheels) | 2/2 | 0 |
 | Runtime Spot-Check | 10/10 | 0 |
-| **Total** | **25/26** | **1** |
+| **Total** | **26/26** | **0** |
 
-*Mercedes E350 failure is a data alias issue ("E350" vs "E 350 4MATIC"), not runtime.
+✅ **ALL TESTS PASSING** (as of 590966c)
 
 ## Key Vehicles Verified
 
@@ -75,7 +91,7 @@ Full database completeness audit completed with HIGH severity remediation.
 See: `scripts/high-severity-fix/MANUAL-REVIEW-EXOTICS.md`
 
 ### Data Gaps
-- Mercedes E-Class "E350" vs "E 350 4MATIC" alias conflict
+- ~~Mercedes E-Class "E350" vs "E 350 4MATIC" alias conflict~~ **FIXED** (590966c)
 
 ## Files
 

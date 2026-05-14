@@ -1,0 +1,38 @@
+# CODEOWNERS - Require review for protected files
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FITMENT CHANGE CONTROL
+# These files require explicit approval before merge.
+# See docs/FITMENT_CHANGE_CONTROL.md for full policy.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Core fitment logic
+/src/lib/fitment/ @scott48342
+/src/lib/fitment-db/ @scott48342
+
+# Fitment APIs
+/src/app/api/vehicles/ @scott48342
+/src/app/api/wheels/fitment-search/ @scott48342
+/src/app/api/tires/search/ @scott48342
+
+# Fitment scripts
+/scripts/*fitment* @scott48342
+/scripts/*usaf* @scott48342
+/scripts/*wheelpros* @scott48342
+/scripts/*staggered* @scott48342
+/scripts/*audit* @scott48342
+/scripts/*merge* @scott48342
+/scripts/*import* @scott48342
+
+# Schema files
+/src/db/schema* @scott48342
+/drizzle/ @scott48342
+/prisma/schema.prisma @scott48342
+
+# This file itself
+/.github/CODEOWNERS @scott48342
+
+# Change control documentation
+/docs/FITMENT_CHANGE_CONTROL.md @scott48342
+/docs/FITMENT-GREEN-STATE*.md @scott48342

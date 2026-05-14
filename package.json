@@ -18,7 +18,11 @@
         "pre-deploy": "tsx scripts/pre-deploy.ts",
         "audit": "tsx scripts/full-database-audit.ts",
         "mod-audit": "tsx scripts/modification-integrity-audit.ts",
-        "ymm-audit": "tsx scripts/ymm-result-guarantee-audit.ts"
+        "ymm-audit": "tsx scripts/ymm-result-guarantee-audit.ts",
+        "fitment:check": "node scripts/fitment-checks/run-all-checks.mjs",
+        "fitment:canonical-check": "node scripts/fitment-checks/canonical-source-check.mjs",
+        "fitment:deprecated-check": "node scripts/fitment-checks/deprecated-usage-check.mjs",
+        "fitment:smoke-test": "node scripts/production-smoke-test.mjs"
     },
     "dependencies": {
         "@stripe/react-stripe-js": "^6.2.0",
