@@ -61,8 +61,8 @@ export function JakeHomepageSection() {
               <span className="text-red-500">Ask Jake.</span>
             </h2>
             <p className="text-white/60 max-w-lg mb-6">
-              Jake is our AI fitment expert. Tell him your vehicle and what you're looking for — 
-              he'll recommend the right tires, wheels, or complete packages.
+              Jake is our fitment expert, available 24/7 to help you. Tell him your vehicle and 
+              what you're looking for — he'll recommend the right tires, wheels, or complete packages.
             </p>
 
             {/* Quick Prompts */}

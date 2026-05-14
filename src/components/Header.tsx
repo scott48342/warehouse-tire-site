@@ -381,7 +381,7 @@ export function Header() {
               GALLERY
             </Link>
 
-            {/* Jake - AI Fitment Assistant */}
+            {/* Jake - Fitment Expert */}
             <Link
               href="/jake"
               className="inline-flex items-center gap-1.5 rounded-full bg-red-600 hover:bg-red-700 px-3 py-1.5 text-sm font-bold text-white transition-colors"

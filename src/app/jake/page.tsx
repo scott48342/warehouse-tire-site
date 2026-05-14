@@ -3,11 +3,11 @@ import { headers } from "next/headers";
 import { JakeChat } from "@/components/jake";
 
 export const metadata: Metadata = {
-  title: "Ask Jake - AI Fitment Expert | Warehouse Tire Direct",
-  description: "Get personalized tire and wheel recommendations from Jake, your AI fitment expert. Tell him your vehicle and he'll help you find the perfect setup.",
+  title: "Ask Jake - Your Fitment Expert | Warehouse Tire Direct",
+  description: "Get personalized tire and wheel recommendations from Jake, your fitment expert available 24/7. Tell him your vehicle and he'll help you find the perfect setup.",
   openGraph: {
-    title: "Ask Jake - AI Fitment Expert",
-    description: "Get personalized tire and wheel recommendations from Jake, your AI fitment expert.",
+    title: "Ask Jake - Your Fitment Expert",
+    description: "Get personalized tire and wheel recommendations from Jake, your fitment expert available 24/7.",
   },
 };
 
