@@ -24,7 +24,7 @@ import { vehicleFitments } from "@/lib/fitment-db/schema";
 import type { VehicleFitment, VehicleFitmentConfiguration, WheelSizeTrimMapping } from "@/lib/fitment-db/schema";
 import { eq, and, ilike, sql } from "drizzle-orm";
 import { normalizeModel, slugify } from "@/lib/fitment-db/keys";
-import { canonicalMake } from "@/lib/fitment/makeAliases";
+import { canonicalMake, getMakeVariantsForQuery } from "@/lib/fitment/makeAliases";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 import { getTrimMapping, type TrimMappingResult } from "@/lib/fitment-db/wheelSizeTrimMapping";
@@ -122,6 +122,20 @@ export interface ResolverInput {
 
 // NOTE: isGroupedTrim and explodeTrim (explodeTrim) are now imported from
 // @/lib/fitment/trimExplosion for consistency across all fitment endpoints.
+
+/**
+ * Build SQL condition to match any make variant.
+ * Uses ILIKE ANY(ARRAY[...]) for case-insensitive matching.
+ * 
+ * This handles the case where DB has inconsistent make storage:
+ * - "Mercedes-Benz" vs "Mercedes" vs "mercedes"
+ * All should match when user searches for any variant.
+ */
+function makeLikeAny(makeColumn: typeof vehicleFitments.make, make: string) {
+  const variants = getMakeVariantsForQuery(make);
+  // Use SQL ILIKE ANY for PostgreSQL
+  return sql`${makeColumn} ILIKE ANY(ARRAY[${sql.join(variants.map(v => sql`${v}`), sql`, `)}])`;
+}
 
 /**
  * Normalize trim for comparison
@@ -292,7 +306,7 @@ export async function resolveVehicleFitment(
         .where(
           and(
             eq(vehicleFitments.year, year),
-            ilike(vehicleFitments.make, normalizedMake),
+            makeLikeAny(vehicleFitments.make, make),
             ilike(vehicleFitments.model, modelName),
             eq(vehicleFitments.modificationId, normalizedModId),
             eq(vehicleFitments.certificationStatus, "certified")
@@ -461,7 +475,7 @@ export async function resolveVehicleFitment(
         .where(
           and(
             eq(vehicleFitments.year, year),
-            ilike(vehicleFitments.make, normalizedMake),
+            makeLikeAny(vehicleFitments.make, make),
             ilike(vehicleFitments.model, modelName),
             eq(vehicleFitments.displayTrim, requestedTrim),
             eq(vehicleFitments.certificationStatus, "certified")
@@ -492,7 +506,7 @@ export async function resolveVehicleFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeLikeAny(vehicleFitments.make, make),
           ilike(vehicleFitments.model, modelName),
           eq(vehicleFitments.certificationStatus, "certified")
         )
@@ -680,7 +694,7 @@ export async function getAtomicTrimOptions(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeLikeAny(vehicleFitments.make, make),
           ilike(vehicleFitments.model, modelName),
           eq(vehicleFitments.certificationStatus, "certified")
         )

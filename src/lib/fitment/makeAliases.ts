@@ -228,6 +228,34 @@ export function getMakeAliases(make: string): string[] {
 }
 
 /**
+ * Get all make variants for database querying.
+ * Includes canonical, display name, and all known aliases.
+ * 
+ * Use this for: Database queries to match all possible DB make values
+ * 
+ * @param make - Any make input
+ * @returns Array of all known variations for querying (deduplicated)
+ * 
+ * @example
+ * getMakeVariantsForQuery("Mercedes-Benz") 
+ * // → ["mercedes", "mercedes-benz", "Mercedes-Benz", "mb"]
+ */
+export function getMakeVariantsForQuery(make: string): string[] {
+  const canonical = canonicalMake(make);
+  const display = displayMake(make);
+  const aliases = getMakeAliases(make);
+  
+  // Combine all: canonical, display, and aliases (case variations)
+  const variants = new Set<string>([
+    canonical,           // e.g., "mercedes"
+    display,             // e.g., "Mercedes-Benz"
+    ...aliases,          // e.g., ["mercedes-benz", "mb", ...]
+  ]);
+  
+  return [...variants];
+}
+
+/**
  * Check if a make requires special handling (luxury/european brands).
  * 
  * Useful for:
