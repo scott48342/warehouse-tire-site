@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import { JakeProductCard, JakePackageCard } from "./JakeProductCards";
 import { trackJakeEvent } from "./JakeAnalytics";
 
@@ -245,6 +245,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
         {/* Header */}
         <div className="flex-shrink-0 flex items-center justify-between px-6 py-4 border-b border-white/10">
           <div className="flex items-center gap-3">
+            <Link href="/" className="mr-2 text-white/50 hover:text-white transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+            </Link>
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
               <span className="text-white font-bold text-lg">J</span>
             </div>
@@ -329,6 +334,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
       {/* Header */}
       <div className="flex-shrink-0 flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0d0d0d]">
         <div className="flex items-center gap-3">
+          <Link href="/" className="mr-2 text-white/50 hover:text-white transition-colors">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+          </Link>
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
             <span className="text-white font-bold text-lg">J</span>
           </div>
