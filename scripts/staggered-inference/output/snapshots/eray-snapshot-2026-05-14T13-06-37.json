@@ -1,0 +1,178 @@
+{
+  "timestamp": "2026-05-14T13-06-37",
+  "recordCount": 6,
+  "records": [
+    {
+      "id": "1c313d4b-33c8-4e6a-a46e-6e01aeede04a",
+      "year": 2026,
+      "display_trim": "E-Ray 1LZ",
+      "oem_tire_sizes": [
+        "275/30ZR20",
+        "345/25ZR21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 10,
+          "offset": 35,
+          "diameter": 20,
+          "position": "front",
+          "boltPattern": "5x120"
+        },
+        {
+          "axle": "rear",
+          "width": 13,
+          "offset": 40,
+          "diameter": 21,
+          "position": "rear",
+          "boltPattern": "5x120"
+        }
+      ],
+      "source": "google-ai-overview"
+    },
+    {
+      "id": "71e3b1e2-a75b-43f3-a833-adc78a083763",
+      "year": 2026,
+      "display_trim": "E-Ray 3LZ",
+      "oem_tire_sizes": [
+        "275/30ZR20",
+        "345/25ZR21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 10,
+          "offset": 35,
+          "diameter": 20,
+          "position": "front",
+          "boltPattern": "5x120"
+        },
+        {
+          "axle": "rear",
+          "width": 13,
+          "offset": 40,
+          "diameter": 21,
+          "position": "rear",
+          "boltPattern": "5x120"
+        }
+      ],
+      "source": "google-ai-overview"
+    },
+    {
+      "id": "7d0f440d-63f3-4579-a268-b87b51de3cb9",
+      "year": 2025,
+      "display_trim": "E-Ray 1LZ",
+      "oem_tire_sizes": [
+        "275/30ZR20",
+        "345/25ZR21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 10,
+          "offset": 35,
+          "diameter": 20,
+          "position": "front",
+          "boltPattern": "5x120"
+        },
+        {
+          "axle": "rear",
+          "width": 13,
+          "offset": 40,
+          "diameter": 21,
+          "position": "rear",
+          "boltPattern": "5x120"
+        }
+      ],
+      "source": "google-ai-overview"
+    },
+    {
+      "id": "caa30bba-a6df-4585-b66e-7ec438727968",
+      "year": 2025,
+      "display_trim": "E-Ray 3LZ",
+      "oem_tire_sizes": [
+        "275/30ZR20",
+        "345/25ZR21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 10,
+          "offset": 35,
+          "diameter": 20,
+          "position": "front",
+          "boltPattern": "5x120"
+        },
+        {
+          "axle": "rear",
+          "width": 13,
+          "offset": 40,
+          "diameter": 21,
+          "position": "rear",
+          "boltPattern": "5x120"
+        }
+      ],
+      "source": "google-ai-overview"
+    },
+    {
+      "id": "3f2bb9e9-c19f-4893-acbf-bde912e8e6f9",
+      "year": 2024,
+      "display_trim": "E-Ray 1LZ",
+      "oem_tire_sizes": [
+        "275/30ZR20",
+        "345/25ZR21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 10,
+          "offset": 35,
+          "diameter": 20,
+          "position": "front",
+          "boltPattern": "5x120"
+        },
+        {
+          "axle": "rear",
+          "width": 13,
+          "offset": 40,
+          "diameter": 21,
+          "position": "rear",
+          "boltPattern": "5x120"
+        }
+      ],
+      "source": "google-ai-overview"
+    },
+    {
+      "id": "5a72a57a-e5fa-4df0-9662-588945c0eb75",
+      "year": 2024,
+      "display_trim": "E-Ray 3LZ",
+      "oem_tire_sizes": [
+        "275/30ZR20",
+        "345/25ZR21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 10,
+          "offset": 35,
+          "diameter": 20,
+          "position": "front",
+          "boltPattern": "5x120"
+        },
+        {
+          "axle": "rear",
+          "width": 13,
+          "offset": 40,
+          "diameter": 21,
+          "position": "rear",
+          "boltPattern": "5x120"
+        }
+      ],
+      "source": "google-ai-overview"
+    }
+  ],
+  "canonicalFormat": {
+    "front": "275/30ZR20",
+    "rear": "345/25ZR21"
+  }
+}
