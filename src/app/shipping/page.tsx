@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Shipping Information | Warehouse Tire Direct',
-  description: 'Shipping policies and delivery information for Warehouse Tire Direct. Free shipping on orders over $599, fast nationwide delivery.',
+  description: 'Fast nationwide shipping on tires and wheels. Most in-stock tire orders arrive in 1-3 business days from our nationwide distribution network.',
 }
 
 export default function ShippingPage() {
@@ -13,7 +13,7 @@ export default function ShippingPage() {
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Shipping Information</h1>
 
         {/* Free Shipping Banner */}
-        <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-10 text-center">
+        <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8 text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -22,45 +22,101 @@ export default function ShippingPage() {
             <span className="text-xl font-bold text-green-800">Free Shipping on Orders Over $1,500</span>
           </div>
           <p className="text-green-700">
-            Most orders ship within 1-2 business days
+            Most in-stock tire orders arrive in 1-3 business days
           </p>
         </div>
+
+        {/* Fast Nationwide Fulfillment - NEW CONVERSION SECTION */}
+        <section className="bg-blue-50 border border-blue-200 rounded-xl p-8 mb-10">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0">
+              <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-blue-900 mb-2">Fast Nationwide Fulfillment</h2>
+              <p className="text-blue-800 mb-3">
+                Most in-stock tire orders are shipped from the nearest available supplier warehouse. 
+                With distribution points across the country, many customers receive tires in as little 
+                as <strong>1 business day</strong>, and most qualifying orders arrive within <strong>1-3 business days</strong>.
+              </p>
+              <p className="text-blue-700 text-sm">
+                Delivery times depend on inventory availability, your location, and carrier schedules. 
+                You'll receive tracking information via email as soon as your order ships.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <div className="space-y-8">
           {/* Shipping Methods */}
           <section className="bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Shipping Methods & Timeframes</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Shipping Methods & Estimated Delivery</h2>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 font-semibold text-gray-900">Method</th>
+                    <th className="text-left py-3 font-semibold text-gray-900">Product Type</th>
                     <th className="text-left py-3 font-semibold text-gray-900">Estimated Delivery</th>
                     <th className="text-left py-3 font-semibold text-gray-900">Cost</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
                   <tr>
-                    <td className="py-3 text-gray-700">Standard Ground</td>
-                    <td className="py-3 text-gray-600">3-7 business days</td>
-                    <td className="py-3 text-gray-600">Free over $1,500 / Calculated at checkout</td>
+                    <td className="py-4">
+                      <div className="font-medium text-gray-900">Standard Tire Shipping</div>
+                      <div className="text-sm text-gray-500">Individual tires, sets of 4</div>
+                    </td>
+                    <td className="py-4">
+                      <div className="text-gray-700 font-medium">Usually 1-3 business days</div>
+                      <div className="text-sm text-gray-500">Many in-stock orders arrive next business day*</div>
+                    </td>
+                    <td className="py-4 text-gray-600">Free over $1,500 / Calculated at checkout</td>
                   </tr>
                   <tr>
-                    <td className="py-3 text-gray-700">Expedited</td>
-                    <td className="py-3 text-gray-600">2-3 business days</td>
-                    <td className="py-3 text-gray-600">Calculated at checkout</td>
+                    <td className="py-4">
+                      <div className="font-medium text-gray-900">Wheel Shipping</div>
+                      <div className="text-sm text-gray-500">Individual wheels, sets of 4</div>
+                    </td>
+                    <td className="py-4">
+                      <div className="text-gray-700 font-medium">Usually 2-5 business days</div>
+                      <div className="text-sm text-gray-500">Varies by brand, finish, and availability</div>
+                    </td>
+                    <td className="py-4 text-gray-600">Free over $1,500 / Calculated at checkout</td>
                   </tr>
                   <tr>
-                    <td className="py-3 text-gray-700">Store Pickup</td>
-                    <td className="py-3 text-gray-600">Usually same or next day</td>
-                    <td className="py-3 text-gray-600">Free</td>
+                    <td className="py-4">
+                      <div className="font-medium text-gray-900">Wheel & Tire Packages</div>
+                      <div className="text-sm text-gray-500">Complete mounted assemblies</div>
+                    </td>
+                    <td className="py-4">
+                      <div className="text-gray-700 font-medium">Usually 2-5 business days</div>
+                      <div className="text-sm text-gray-500">Extra processing for matching & safe handling</div>
+                    </td>
+                    <td className="py-4 text-gray-600">Free over $1,500 / Calculated at checkout</td>
+                  </tr>
+                  <tr>
+                    <td className="py-4">
+                      <div className="font-medium text-gray-900">Store Pickup</div>
+                      <div className="text-sm text-gray-500">Michigan locations only</div>
+                    </td>
+                    <td className="py-4">
+                      <div className="text-gray-700 font-medium">Usually same or next day</div>
+                      <div className="text-sm text-gray-500">We'll notify you when ready</div>
+                    </td>
+                    <td className="py-4 text-gray-600">Free</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p className="text-sm text-gray-500 mt-4">
-              * Delivery times are estimates and may vary based on your location and product availability.
-            </p>
+            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+              <p className="text-sm text-gray-600">
+                <strong>*Important:</strong> Delivery times are estimates. Actual delivery depends on 
+                product availability, order cutoff time, carrier pickup schedules, product type, and 
+                your destination. Tracking is emailed once your order ships.
+              </p>
+            </div>
           </section>
 
           {/* Processing Time */}
@@ -68,11 +124,12 @@ export default function ShippingPage() {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Processing Time</h2>
             <p className="text-gray-600 mb-4">
               Most in-stock orders are processed and shipped within <strong>1-2 business days</strong>. 
-              Orders placed before 12:00 PM EST on business days typically ship the same day.
+              Orders placed before 12:00 PM EST on business days are often processed the same day, 
+              depending on inventory location.
             </p>
             <p className="text-gray-600">
-              Some items may ship directly from the manufacturer or distributor, which may affect 
-              processing time. You'll receive tracking information via email once your order ships.
+              Orders ship from the warehouse closest to you with available inventory. You'll receive 
+              tracking information via email once your order ships, typically within 24-48 hours.
             </p>
           </section>
 
