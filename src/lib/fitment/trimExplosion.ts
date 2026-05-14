@@ -58,16 +58,109 @@ export interface ExplodedTrim {
 // ═══════════════════════════════════════════════════════════════════════════
 
 /**
+ * Known single-trim patterns that contain slashes but should NOT be split.
+ * These are legitimate trim names, not grouped records.
+ */
+const SINGLE_TRIM_PATTERNS = [
+  // Classic performance trims
+  /^R\/T/i,           // R/T, R/T Scat Pack, R/T Classic, etc.
+  /^T\/A$/i,          // Trans Am
+  /^Z\/28$/i,         // Camaro Z/28
+  /^GT\/CS$/i,        // California Special
+  
+  // Drive type notations (not trims)
+  /\b2WD\/4WD\b/i,
+  /\b4x4\/2x4\b/i,
+  /\bAWD\/FWD\b/i,
+  /\bFWD\/AWD\b/i,
+  
+  // "with" abbreviations
+  /\bw\//i,           // w/Tech, w/All-Terrain Pkg, etc.
+  
+  // Fractional notations
+  /\b3\/4\s+Ton\b/i,  // 3/4 Ton trucks
+  /\b1\/2\s+Ton\b/i,  // 1/2 Ton trucks
+  
+  // Engine/variant notations (not separate trims)
+  /\bV8\/V12\b/i,     // Aston Martin V8/V12 notation
+  /\b570S\/570GT\b/i, // McLaren variants
+  
+  // Short alphanumeric patterns (likely single trims)
+  /^[A-Z]\d?\/[A-Z]\d?$/i,  // B3/B4, S2/S4, etc.
+  
+  // Same-model variants (DBX/DBX707, Artura/Artura Spider)
+  /^(\w+)\/\1\s/i,    // Same word repeated: DBX/DBX707, Evora/Evora S
+];
+
+/**
+ * Check if a compact slash represents a GROUPED trim (should be exploded).
+ * Returns true if BOTH parts look like distinct trim names.
+ * 
+ * Criteria for grouped compact slash:
+ * 1. Both parts are 2+ characters
+ * 2. Both parts look like trim names (capitalized or uppercase)
+ * 3. NOT a known single-trim pattern
+ * 
+ * @example
+ * isGroupedCompactSlash("Titanium/Sport")  // → true (two distinct trims)
+ * isGroupedCompactSlash("LT/Premier")      // → true
+ * isGroupedCompactSlash("R/T")             // → false (known single trim)
+ * isGroupedCompactSlash("DBX/DBX707")      // → false (same-model variant)
+ */
+function isGroupedCompactSlash(displayTrim: string): boolean {
+  // Must contain a compact slash (no spaces around it)
+  if (!displayTrim.includes('/')) return false;
+  if (/ \/ /.test(displayTrim)) return false; // Handled by spaced slash logic
+  
+  // Check against known single-trim patterns
+  for (const pattern of SINGLE_TRIM_PATTERNS) {
+    if (pattern.test(displayTrim)) return false;
+  }
+  
+  // Extract parts around the slash
+  // Handle multi-slash cases: "LX/Sport/EX" should split on first slash
+  const slashIndex = displayTrim.indexOf('/');
+  const left = displayTrim.slice(0, slashIndex).trim();
+  const right = displayTrim.slice(slashIndex + 1).split('/')[0].trim();
+  
+  // Both parts must be 2+ characters
+  if (left.length < 2 || right.length < 2) return false;
+  
+  // Both parts should look like trim names:
+  // - Starts with uppercase letter
+  // - Or is all uppercase (abbreviation like "LT", "XL")
+  const looksLikeTrim = (s: string) => {
+    const firstWord = s.split(/\s+/)[0];
+    // Capitalized word: "Titanium", "Sport", "Touring"
+    if (/^[A-Z][a-z]+/.test(firstWord)) return true;
+    // Uppercase abbreviation: "LT", "XL", "SE", "EX"
+    if (/^[A-Z]{2,}$/.test(firstWord)) return true;
+    // Mixed like "XLE", "GLS"
+    if (/^[A-Z][A-Z0-9]+$/.test(firstWord)) return true;
+    return false;
+  };
+  
+  return looksLikeTrim(left) && looksLikeTrim(right);
+}
+
+/**
  * Check if a displayTrim contains multiple grouped values.
  * 
  * RULES:
  * - Comma always indicates grouping: "LX, Sport, EX" → true
  * - Spaced slash indicates grouping: "SXT / SXT Plus" → true
- * - Compact slash is NOT grouping: "R/T" → false, "GT/CS" → false
+ * - Compact slash indicates grouping IF both sides look like distinct trims:
+ *   - "Titanium/Sport" → true (two distinct trims)
+ *   - "LT/Premier" → true
+ * - Compact slash is NOT grouping for known patterns:
+ *   - "R/T" → false (known single trim)
+ *   - "Z/28" → false (known single trim)
+ *   - "w/Tech" → false ("with" notation)
  * 
  * @example
  * isGroupedTrim("LX, Sport, EX")    // → true
  * isGroupedTrim("SXT / SXT Plus")   // → true
+ * isGroupedTrim("Titanium/Sport")   // → true (NEW!)
  * isGroupedTrim("R/T")              // → false
  * isGroupedTrim("GT Performance Pack") // → false
  */
@@ -80,6 +173,9 @@ export function isGroupedTrim(displayTrim: string): boolean {
   // Spaced slash indicates grouping: " / "
   if (/ \/ /.test(displayTrim)) return true;
   
+  // Check for grouped compact slash (e.g., "Titanium/Sport")
+  if (isGroupedCompactSlash(displayTrim)) return true;
+  
   return false;
 }
 
@@ -89,11 +185,13 @@ export function isGroupedTrim(displayTrim: string): boolean {
  * Handles:
  * - Comma separation: "LX, Sport, EX" → ["LX", "Sport", "EX"]
  * - Spaced slash: "SXT / SXT Plus" → ["SXT", "SXT Plus"]
+ * - Compact slash (when grouped): "Titanium/Sport" → ["Titanium", "Sport"]
  * - Combined: "LX, Sport / Sport S" → ["LX", "Sport", "Sport S"]
  * 
  * Does NOT split:
  * - "R/T" → ["R/T"] (single trim with slash in name)
  * - "GT/CS" → ["GT/CS"] (single trim)
+ * - "Z/28" → ["Z/28"] (single trim)
  * 
  * @param displayTrim - Grouped or single trim
  * @returns Array of atomic trim names
@@ -109,11 +207,16 @@ export function explodeTrim(displayTrim: string): string[] {
   // First split on comma
   let parts = displayTrim.split(',').map(t => t.trim()).filter(Boolean);
   
-  // Then split each part on spaced slash (" / ")
+  // Then split each part on spaced slash (" / ") or compact slash (if grouped)
   const result: string[] = [];
   for (const part of parts) {
     if (/ \/ /.test(part)) {
+      // Spaced slash: always split
       const subParts = part.split(' / ').map(t => t.trim()).filter(Boolean);
+      result.push(...subParts);
+    } else if (isGroupedCompactSlash(part)) {
+      // Compact slash that's identified as grouped: split on all slashes
+      const subParts = part.split('/').map(t => t.trim()).filter(Boolean);
       result.push(...subParts);
     } else {
       result.push(part);
