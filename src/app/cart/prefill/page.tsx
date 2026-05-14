@@ -14,7 +14,7 @@ import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
 export default function CartPrefillPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { addTire } = useCart();
+  const { addItem } = useCart();
   const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
   const [message, setMessage] = useState("Loading your cart...");
 
@@ -52,7 +52,7 @@ export default function CartPrefillPage() {
             quantity: item.quantity || 4,
             vehicle: decoded.vehicle,
           };
-          addTire(cartItem);
+          addItem(cartItem, "ai-assistant");
           addedCount++;
         }
         // TODO: Add wheel support if needed
@@ -71,7 +71,7 @@ export default function CartPrefillPage() {
       setStatus("error");
       setMessage("Failed to load cart. Please try again.");
     }
-  }, [searchParams, addTire, router]);
+  }, [searchParams, addItem, router]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
