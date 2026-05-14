@@ -34,6 +34,7 @@ interface JakeComparePanelProps {
   onClose: () => void;
   isLocal?: boolean;
   installCostPerTire?: number;
+  taxRate?: number;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -47,6 +48,7 @@ export function JakeComparePanel({
   onClose,
   isLocal = false,
   installCostPerTire = 25,
+  taxRate = 0.06,
 }: JakeComparePanelProps) {
   if (products.length === 0) return null;
 
@@ -62,8 +64,10 @@ export function JakeComparePanel({
         key: "outTheDoor", 
         format: (p: CompareProduct) => {
           const setPrice = (p.priceNum || 0) * 4;
-          const total = setPrice + installTotal;
-          return total > 0 ? `$${total.toFixed(0)} installed` : "—";
+          const subtotal = setPrice + installTotal;
+          const tax = subtotal * taxRate;
+          const total = subtotal + tax;
+          return total > 0 ? `$${total.toFixed(0)}` : "—";
         }
       },
     ] : [

@@ -125,8 +125,9 @@ function generateId(): string {
 // JAKE CHAT COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
 
-// Installation cost per tire for local site (out-the-door pricing)
+// Local site out-the-door pricing
 const LOCAL_INSTALL_PER_TIRE = 25; // $25/tire = $100 for set of 4
+const LOCAL_TAX_RATE = 0.06; // Michigan 6% sales tax
 
 interface JakeChatProps {
   embedded?: boolean;
@@ -521,6 +522,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                         compareDisabled={compareProducts.length >= 4}
                         isLocal={isLocal}
                         installCostPerTire={LOCAL_INSTALL_PER_TIRE}
+                        taxRate={LOCAL_TAX_RATE}
                         onClick={() => {
                           trackJakeEvent("product_clicked", { 
                             name: product.name,
@@ -587,6 +589,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
           onClose={() => setShowCompare(false)}
           isLocal={isLocal}
           installCostPerTire={LOCAL_INSTALL_PER_TIRE}
+          taxRate={LOCAL_TAX_RATE}
         />
       )}
 

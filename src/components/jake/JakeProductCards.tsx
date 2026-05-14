@@ -43,6 +43,7 @@ interface JakeProductCardProps {
   compareDisabled?: boolean;
   isLocal?: boolean; // Local site shows out-the-door pricing
   installCostPerTire?: number; // Installation cost per tire (default $25)
+  taxRate?: number; // Sales tax rate (default 6% for Michigan)
 }
 
 export function JakeProductCard({ 
@@ -54,15 +55,19 @@ export function JakeProductCard({
   compareDisabled = false,
   isLocal = false,
   installCostPerTire = 25,
+  taxRate = 0.06,
 }: JakeProductCardProps) {
   const isTire = product.type === "tire";
   const [imgError, setImgError] = useState(false);
 
   // Calculate out-the-door pricing for local site (tires only)
+  // Includes: tires + installation + tax
   const priceNum = product.priceNum || parseFloat(String(product.price || "0").replace(/[$,]/g, ""));
   const tireSetPrice = priceNum * 4;
   const installTotal = installCostPerTire * 4;
-  const outTheDoorPrice = tireSetPrice + installTotal;
+  const subtotal = tireSetPrice + installTotal;
+  const taxAmount = subtotal * taxRate;
+  const outTheDoorPrice = subtotal + taxAmount;
   const showOutTheDoor = isLocal && isTire && priceNum > 0;
 
   const PlaceholderIcon = () => (
