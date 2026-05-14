@@ -1,0 +1,157 @@
+╔════════════════════════════════════════════════════════════════════╗
+║   FULL DATABASE COMPLETENESS AUDIT - FINAL REPORT                  ║
+╚════════════════════════════════════════════════════════════════════╝
+
+Generated: 2026-05-14T13:47:14.817Z
+Batches processed: 4
+
+═══════════════════════════════════════════════════════════════════════
+SUMMARY
+═══════════════════════════════════════════════════════════════════════
+1.  Total records checked:        31,308
+2.  Total complete records:       30,442
+3.  Completion percentage:        97.23%
+4.  Missing tire spec count:      160
+5.  Missing wheel spec count:     34
+6.  Malformed tire spec count:    180
+7.  Malformed wheel spec count:   0
+8.  Staggered incomplete count:   0
+9.  Fake/grouped trim count:      696
+10. High severity failures:       890
+11. Medium severity failures:     2,792
+12. Low severity failures:        9,443
+
+═══════════════════════════════════════════════════════════════════════
+ISSUES BY CODE (Top 20)
+═══════════════════════════════════════════════════════════════════════
+  NO_OFFSET_RANGE                     3,376
+  NO_SEAT_TYPE                        3,284
+  NO_THREAD_SIZE                      2,783
+  WHEEL_SIZES_EMPTY                   2,456
+  FAKE_FRONT_REAR_TRIM                696
+  TIRE_INVALID_ELEMENT                249
+  TIRE_NO_VALID                       154
+  NO_CENTER_BORE                      64
+  NO_BOLT_PATTERN                     34
+  STAGGERED_FRONT_ARRAY_INVALID       8
+  STAGGERED_REAR_ARRAY_INVALID        8
+  TIRE_HAS_NULL                       6
+  TIRE_NULL_ARRAY                     6
+  NO_WHEEL_SIZES                      1
+
+═══════════════════════════════════════════════════════════════════════
+BY YEAR RANGE
+═══════════════════════════════════════════════════════════════════════
+  2000-2012: 10,984/10,990 (99.95%) - 6 HIGH
+  2013-2018: 7,643/8,467 (90.27%) - 848 HIGH
+  2019-2022: 6,022/6,038 (99.74%) - 16 HIGH
+  2023-2026: 5,793/5,813 (99.66%) - 20 HIGH
+
+═══════════════════════════════════════════════════════════════════════
+TOP 100 CUSTOMER-IMPACTING GAPS
+═══════════════════════════════════════════════════════════════════════
+  1. 2007 Cadillac escalade "Luxury" - null-array
+  2. 2007 Cadillac escalade "Luxury, Premium Luxury, Sport, Platinum, V" - null-array
+  3. 2007 Cadillac escalade "Platinum" - null-array
+  4. 2008 Cadillac escalade "Luxury" - null-array
+  5. 2008 Cadillac escalade "Luxury, Premium Luxury, Sport, Platinum, V" - null-array
+  6. 2008 Cadillac escalade "Platinum" - null-array
+  7. 2018 Chevrolet Silverado 2500 HD "High Country" - array-no-valid
+  8. 2018 Chevrolet Silverado 2500 HD "High Country Snow Plow Prep Pkg." - array-no-valid
+  9. 2018 Chevrolet Silverado 2500 HD "LT" - array-no-valid
+  10. 2018 Chevrolet Silverado 2500 HD "LT Snow Plow Prep Pkg." - array-no-valid
+  11. 2018 Chevrolet Silverado 2500 HD "LTZ" - array-no-valid
+  12. 2018 Chevrolet Silverado 2500 HD "LTZ Snow Plow Prep Pkg." - array-no-valid
+  13. 2018 Chevrolet Silverado 2500 HD "WT" - array-no-valid
+  14. 2018 Chevrolet Silverado 2500 HD "WT Snow Plow Prep Pkg." - array-no-valid
+  15. 2018 Chevrolet Silverado 3500 HD "High Country" - array-no-valid
+  16. 2018 Chevrolet Silverado 3500 HD "High Country (DRW)" - array-no-valid
+  17. 2018 Chevrolet Silverado 3500 HD "High Country Snow Plow Prep Pkg." - array-no-valid
+  18. 2018 Chevrolet Silverado 3500 HD "High Country Snow Plow Prep Pkg. (DRW)" - array-no-valid
+  19. 2018 Chevrolet Silverado 3500 HD "LT" - array-no-valid
+  20. 2018 Chevrolet Silverado 3500 HD "LT (DRW)" - array-no-valid
+  21. 2018 Chevrolet Silverado 3500 HD "LT Snow Plow Prep Pkg." - array-no-valid
+  22. 2018 Chevrolet Silverado 3500 HD "LT Snow Plow Prep Pkg. (DRW)" - array-no-valid
+  23. 2018 Chevrolet Silverado 3500 HD "LTZ" - array-no-valid
+  24. 2018 Chevrolet Silverado 3500 HD "LTZ (DRW)" - array-no-valid
+  25. 2018 Chevrolet Silverado 3500 HD "LTZ Snow Plow Prep Pkg." - array-no-valid
+  26. 2018 Chevrolet Silverado 3500 HD "LTZ Snow Plow Prep Pkg. (DRW)" - array-no-valid
+  27. 2018 Chevrolet Silverado 3500 HD "WT" - array-no-valid
+  28. 2018 Chevrolet Silverado 3500 HD "WT (DRW)" - array-no-valid
+  29. 2018 Chevrolet Silverado 3500 HD "WT Snow Plow Prep Pkg." - array-no-valid
+  30. 2018 Chevrolet Silverado 3500 HD "WT Snow Plow Prep Pkg. (DRW)" - array-no-valid
+  31. 2018 Chevrolet Vans Express 2500 "Base" - array-no-valid
+  32. 2018 Chevrolet Vans Express 2500 "LS" - array-no-valid
+  33. 2018 Chevrolet Vans Express 2500 "LT" - array-no-valid
+  34. 2018 Chevrolet Vans Express 3500 "Base" - array-no-valid
+  35. 2018 Chevrolet Vans Express 3500 "LS" - array-no-valid
+  36. 2018 Chevrolet Vans Express 3500 "LT" - array-no-valid
+  37. 2018 Ford F-150 "Raptor" - array-no-valid
+  38. 2018 Ford F-250 Super Duty "King Ranch 4x2" - array-no-valid
+  39. 2018 Ford F-250 Super Duty "King Ranch 4x4" - array-no-valid
+  40. 2018 Ford F-250 Super Duty "Lariat 4x2" - array-no-valid
+  41. 2018 Ford F-250 Super Duty "Lariat 4x4" - array-no-valid
+  42. 2018 Ford F-250 Super Duty "Lariat 4x4 w/Snow Plow Pkg." - array-no-valid
+  43. 2018 Ford F-250 Super Duty "Limited" - array-no-valid
+  44. 2018 Ford F-250 Super Duty "Platinum" - array-no-valid
+  45. 2018 Ford F-250 Super Duty "XL 4x2" - array-no-valid
+  46. 2018 Ford F-250 Super Duty "XL 4x4" - array-no-valid
+  47. 2018 Ford F-250 Super Duty "XL 4x4 w/Snow Plow Pkg." - array-no-valid
+  48. 2018 Ford F-250 Super Duty "XLT 4x2" - array-no-valid
+  49. 2018 Ford F-250 Super Duty "XLT 4x4" - array-no-valid
+  50. 2018 Ford F-250 Super Duty "XLT 4x4 w/Snow Plow Pkg." - array-no-valid
+  51. 2018 Ford F-350 Super Duty "King Ranch 4x2" - array-no-valid
+  52. 2018 Ford F-350 Super Duty "King Ranch 4x2 (DRW)" - array-no-valid
+  53. 2018 Ford F-350 Super Duty "King Ranch 4x4" - array-no-valid
+  54. 2018 Ford F-350 Super Duty "King Ranch 4x4 (DRW)" - array-no-valid
+  55. 2018 Ford F-350 Super Duty "King Ranch 4x4 (DRW) w/Snow Plow Pkg." - array-no-valid
+  56. 2018 Ford F-350 Super Duty "King Ranch 4x4 w/Snow Plow Pkg." - array-no-valid
+  57. 2018 Ford F-350 Super Duty "Lariat 4x2" - array-no-valid
+  58. 2018 Ford F-350 Super Duty "Lariat 4x2 (DRW)" - array-no-valid
+  59. 2018 Ford F-350 Super Duty "Lariat 4x4" - array-no-valid
+  60. 2018 Ford F-350 Super Duty "Lariat 4x4 (DRW)" - array-no-valid
+  61. 2018 Ford F-350 Super Duty "Lariat 4x4 (DRW) w/Snow Plow Pkg." - array-no-valid
+  62. 2018 Ford F-350 Super Duty "Lariat 4x4 w/Snow Plow Pkg." - array-no-valid
+  63. 2018 Ford F-350 Super Duty "Limited" - array-no-valid
+  64. 2018 Ford F-350 Super Duty "Platinum" - array-no-valid
+  65. 2018 Ford F-350 Super Duty "Platinum (DRW)" - array-no-valid
+  66. 2018 Ford F-350 Super Duty "XL 4x2" - array-no-valid
+  67. 2018 Ford F-350 Super Duty "XL 4x2 (DRW)" - array-no-valid
+  68. 2018 Ford F-350 Super Duty "XL 4x4" - array-no-valid
+  69. 2018 Ford F-350 Super Duty "XL 4x4 (DRW)" - array-no-valid
+  70. 2018 Ford F-350 Super Duty "XL 4x4 (DRW) w/Snow Plow Pkg." - array-no-valid
+  71. 2018 Ford F-350 Super Duty "XL 4x4 w/Snow Plow Pkg." - array-no-valid
+  72. 2018 Ford F-350 Super Duty "XLT 4x2" - array-no-valid
+  73. 2018 Ford F-350 Super Duty "XLT 4x2 (DRW)" - array-no-valid
+  74. 2018 Ford F-350 Super Duty "XLT 4x4" - array-no-valid
+  75. 2018 Ford F-350 Super Duty "XLT 4x4 (DRW)" - array-no-valid
+  76. 2018 Ford F-350 Super Duty "XLT 4x4 (DRW) w/Snow Plow Pkg." - array-no-valid
+  77. 2018 Ford F-350 Super Duty "XLT 4x4 w/Snow Plow Pkg." - array-no-valid
+  78. 2018 GMC Sierra 2500 HD "Base" - array-no-valid
+  79. 2018 GMC Sierra 2500 HD "Denali" - array-no-valid
+  80. 2018 GMC Sierra 2500 HD "SLE" - array-no-valid
+  81. 2018 GMC Sierra 2500 HD "SLT" - array-no-valid
+  82. 2018 GMC Sierra 3500 HD "(DRW)" - array-no-valid
+  83. 2018 GMC Sierra 3500 HD "Base" - array-no-valid
+  84. 2018 GMC Sierra 3500 HD "Denali" - array-no-valid
+  85. 2018 GMC Sierra 3500 HD "SLE" - array-no-valid
+  86. 2018 GMC Sierra 3500 HD "SLE (DRW)" - array-no-valid
+  87. 2018 GMC Sierra 3500 HD "SLE Snow Plow Prep Pkg." - array-no-valid
+  88. 2018 GMC Sierra 3500 HD "SLE Snow Plow Prep Pkg. (DRW)" - array-no-valid
+  89. 2018 GMC Sierra 3500 HD "SLT" - array-no-valid
+  90. 2018 GMC Sierra 3500 HD "SLT (DRW)" - array-no-valid
+  91. 2018 GMC Sierra 3500 HD "SLT Snow Plow Prep Pkg." - array-no-valid
+  92. 2018 GMC Sierra 3500 HD "SLT Snow Plow Prep Pkg. (DRW)" - array-no-valid
+  93. 2018 GMC Sierra 3500 HD "Snow Plow Prep Pkg." - array-no-valid
+  94. 2018 GMC Sierra 3500 HD "Snow Plow Prep Pkg. (DRW)" - array-no-valid
+  95. 2018 GMC Vans Savana 2500 "Base" - array-no-valid
+  96. 2018 GMC Vans Savana 2500 "LS" - array-no-valid
+  97. 2018 GMC Vans Savana 2500 "LT" - array-no-valid
+  98. 2018 GMC Vans Savana 3500 "Base" - array-no-valid
+  99. 2018 GMC Vans Savana 3500 "LS" - array-no-valid
+  100. 2018 GMC Vans Savana 3500 "LT" - array-no-valid
+
+═══════════════════════════════════════════════════════════════════════
+FULL JSON REPORT PATH
+═══════════════════════════════════════════════════════════════════════
+  C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\full-db-audit\output\full-audit-report.json

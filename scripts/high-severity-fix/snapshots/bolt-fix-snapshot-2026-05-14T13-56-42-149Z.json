@@ -1,0 +1,618 @@
+[
+  {
+    "id": "c0df0c75-a4e7-4c8d-8c2f-b85e8752b548",
+    "year": 1997,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1997-chevrolet-express-1500-cargo",
+    "raw_trim": null,
+    "display_trim": "Cargo",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:10.801Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:10.801Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "c596426e-b88b-45e0-a36f-241c9da9d850",
+    "year": 1999,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1999-chevrolet-express-1500-passenger",
+    "raw_trim": null,
+    "display_trim": "Passenger",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:11.318Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:11.318Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "e38b60c0-5f79-4638-aed9-ce4a69c6e159",
+    "year": 1996,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1996-chevrolet-express-1500-passenger",
+    "raw_trim": null,
+    "display_trim": "Passenger",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:10.662Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:10.662Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "dbb151b9-0526-438c-a7d5-f8887cb1ac69",
+    "year": 1996,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1996-chevrolet-express-1500-cargo",
+    "raw_trim": null,
+    "display_trim": "Cargo",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:10.591Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:10.591Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "5b22b333-7a43-46b4-a618-11c15927541e",
+    "year": 1997,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1997-chevrolet-express-1500-passenger",
+    "raw_trim": null,
+    "display_trim": "Passenger",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:10.871Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:10.871Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "76753e1c-814a-4c5c-91f0-d971ee9e4a59",
+    "year": 1999,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1999-chevrolet-express-1500-cargo",
+    "raw_trim": null,
+    "display_trim": "Cargo",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:11.242Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:11.242Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "2354e4de-cfd6-4a28-84a8-8fbdd2976c64",
+    "year": 1998,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1998-chevrolet-express-1500-passenger",
+    "raw_trim": null,
+    "display_trim": "Passenger",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:11.090Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:11.090Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "a1491a26-72d4-4a5a-b8c3-3e9ce1d1cdd6",
+    "year": 1998,
+    "make": "Chevrolet",
+    "model": "Express 1500",
+    "modification_id": "1998-chevrolet-express-1500-cargo",
+    "raw_trim": null,
+    "display_trim": "Cargo",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "front",
+        "boltPattern": "6x139.7"
+      },
+      {
+        "width": 7,
+        "offset": 13,
+        "diameter": 15,
+        "position": "rear",
+        "boltPattern": "6x139.7"
+      }
+    ],
+    "oem_tire_sizes": [
+      "235/75R15",
+      "235/75R15"
+    ],
+    "source": "google-ai-overview",
+    "source_record_id": null,
+    "created_at": "2026-04-26T16:09:11.015Z",
+    "updated_at": "2026-05-13T21:59:57.361Z",
+    "last_verified_at": null,
+    "quality_tier": "complete",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": "2026-04-26T12:09:11.015Z",
+    "certified_by_script_version": "v1.0.0-initial",
+    "is_locked": true,
+    "dataset_version": "v1.0.0-initial",
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "LOW"
+  },
+  {
+    "id": "1e032569-83be-4633-861f-2ba43857b42a",
+    "year": 2018,
+    "make": "Lotus",
+    "model": "Evora",
+    "modification_id": "2018-sport-410",
+    "raw_trim": "Sport 410",
+    "display_trim": "Sport 410",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [],
+    "oem_tire_sizes": {
+      "rear": [
+        "285/30ZR20"
+      ],
+      "front": [
+        "235/35ZR19"
+      ]
+    },
+    "source": "merged-staggered",
+    "source_record_id": null,
+    "created_at": "2026-05-14T04:37:16.286Z",
+    "updated_at": "2026-05-14T04:37:16.286Z",
+    "last_verified_at": null,
+    "quality_tier": "unknown",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": null,
+    "certified_by_script_version": null,
+    "is_locked": true,
+    "dataset_version": null,
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "MEDIUM"
+  },
+  {
+    "id": "254b5505-51b6-42c8-8800-c6025ceb5a63",
+    "year": 2018,
+    "make": "Porsche",
+    "model": "911",
+    "modification_id": "2018-gt2-rs",
+    "raw_trim": "GT2 RS",
+    "display_trim": "GT2 RS",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "diameter": 20,
+        "front_width": 9.5
+      },
+      {
+        "diameter": 21,
+        "rear_width": 12.5
+      }
+    ],
+    "oem_tire_sizes": {
+      "rear": [
+        "325/30ZR21"
+      ],
+      "front": [
+        "265/35ZR20"
+      ]
+    },
+    "source": "merged-staggered",
+    "source_record_id": null,
+    "created_at": "2026-05-14T04:37:23.358Z",
+    "updated_at": "2026-05-14T04:37:23.358Z",
+    "last_verified_at": null,
+    "quality_tier": "unknown",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": null,
+    "certified_by_script_version": null,
+    "is_locked": true,
+    "dataset_version": null,
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "MEDIUM"
+  },
+  {
+    "id": "37b4764a-8c8b-4626-a3fe-ca38916a1599",
+    "year": 2018,
+    "make": "Porsche",
+    "model": "911",
+    "modification_id": "2018-gt3",
+    "raw_trim": "GT3",
+    "display_trim": "GT3",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "diameter": 20,
+        "rear_width": 12,
+        "front_width": 9
+      }
+    ],
+    "oem_tire_sizes": {
+      "rear": [
+        "305/30ZR20"
+      ],
+      "front": [
+        "245/35ZR20"
+      ]
+    },
+    "source": "merged-staggered",
+    "source_record_id": null,
+    "created_at": "2026-05-14T04:37:23.431Z",
+    "updated_at": "2026-05-14T04:37:23.431Z",
+    "last_verified_at": null,
+    "quality_tier": "unknown",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": null,
+    "certified_by_script_version": null,
+    "is_locked": true,
+    "dataset_version": null,
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "MEDIUM"
+  },
+  {
+    "id": "c5d96c40-c847-4a32-8dd4-414acfd6dbce",
+    "year": 2018,
+    "make": "Porsche",
+    "model": "911",
+    "modification_id": "2018-gt3-rs",
+    "raw_trim": "GT3 RS",
+    "display_trim": "GT3 RS",
+    "submodel": null,
+    "bolt_pattern": null,
+    "center_bore_mm": null,
+    "thread_size": null,
+    "seat_type": null,
+    "offset_min_mm": null,
+    "offset_max_mm": null,
+    "oem_wheel_sizes": [
+      {
+        "diameter": 20,
+        "front_width": 9.5
+      },
+      {
+        "diameter": 21,
+        "rear_width": 12.5
+      }
+    ],
+    "oem_tire_sizes": {
+      "rear": [
+        "325/30ZR21"
+      ],
+      "front": [
+        "265/35ZR20"
+      ]
+    },
+    "source": "merged-staggered",
+    "source_record_id": null,
+    "created_at": "2026-05-14T04:37:23.508Z",
+    "updated_at": "2026-05-14T04:37:23.508Z",
+    "last_verified_at": null,
+    "quality_tier": "unknown",
+    "certification_status": "certified",
+    "certification_errors": [],
+    "audit_original_data": null,
+    "quarantined_at": null,
+    "certified_at": null,
+    "certified_by_script_version": null,
+    "is_locked": true,
+    "dataset_version": null,
+    "last_modified_by": null,
+    "last_modified_reason": null,
+    "confidence_tag": "MEDIUM"
+  }
+]

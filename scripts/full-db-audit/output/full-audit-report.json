@@ -1,0 +1,5446 @@
+{
+  "timestamp": "2026-05-14T13:47:14.817Z",
+  "batchCount": 4,
+  "summary": {
+    "totalRecords": 31308,
+    "completeRecords": 30442,
+    "completionPct": "97.23",
+    "missingTireSpec": 160,
+    "missingWheelSpec": 34,
+    "malformedTireSpec": 180,
+    "malformedWheelSpec": 0,
+    "staggeredIncomplete": 0,
+    "fakeGroupedTrim": 696,
+    "highSeverity": 890,
+    "mediumSeverity": 2792,
+    "lowSeverity": 9443
+  },
+  "issuesByCode": {
+    "NO_OFFSET_RANGE": 3376,
+    "NO_THREAD_SIZE": 2783,
+    "NO_SEAT_TYPE": 3284,
+    "WHEEL_SIZES_EMPTY": 2456,
+    "TIRE_HAS_NULL": 6,
+    "TIRE_NULL_ARRAY": 6,
+    "FAKE_FRONT_REAR_TRIM": 696,
+    "TIRE_INVALID_ELEMENT": 249,
+    "TIRE_NO_VALID": 154,
+    "NO_CENTER_BORE": 64,
+    "NO_BOLT_PATTERN": 34,
+    "NO_WHEEL_SIZES": 1,
+    "STAGGERED_FRONT_ARRAY_INVALID": 8,
+    "STAGGERED_REAR_ARRAY_INVALID": 8
+  },
+  "highSeverityRecords": [
+    {
+      "id": "9e798349-53d1-4c7e-b557-6d2058802a28",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "8add9882-3997-4739-8678-44a13c4b171f",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "27c74ed9-f607-45af-804a-e9c20aecd7a1",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "acb16617-ceef-41f5-983b-bcbd6eb1c0eb",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "d0b259e2-d300-4c6f-b645-7ac574abf2ae",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "3e2b9929-6b2f-4ba2-a496-48cca19d0387",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "0f842ac9-45c0-4187-b1dc-fc7ef4f58d7f",
+      "year": 2018,
+      "make": "Acura",
+      "model": "NSX",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "dc3ce80f-5435-4d1a-bb93-84ed7e831cf2",
+      "year": 2018,
+      "make": "Acura",
+      "model": "NSX",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "4e035628-8f15-420f-b3fb-338deac20503",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "5625e847-7479-47ef-a4bd-d474494e58d7",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "e3e6891a-4a7f-42a3-a9e9-239c23fc9139",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trim": "Spider Front Spider",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Spider Front Spider"
+        }
+      ]
+    },
+    {
+      "id": "62bd94e2-e81a-4cf8-81da-0da389f58c3d",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "trim": "Spider Rear Spider",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Spider Rear Spider"
+        }
+      ]
+    },
+    {
+      "id": "56845fbd-3bde-4f7d-bc33-761928a51d13",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trim": "Quadrifoglio Front Quadrifoglio",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Quadrifoglio Front Quadrifoglio"
+        }
+      ]
+    },
+    {
+      "id": "1ed2d1a5-8cfe-4e69-baf0-b4c28d1570df",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trim": "Quadrifoglio Rear Quadrifoglio",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Quadrifoglio Rear Quadrifoglio"
+        }
+      ]
+    },
+    {
+      "id": "45f416ad-178f-4190-97d6-7dd95ab12f25",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trim": "Ti w/Sport Pkg. Front Ti w/Sport Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Ti w/Sport Pkg. Front Ti w/Sport Pkg."
+        }
+      ]
+    },
+    {
+      "id": "869654ef-9803-487b-9299-0ae528a368e4",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "trim": "Ti w/Sport Pkg. Rear Ti w/Sport Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Ti w/Sport Pkg. Rear Ti w/Sport Pkg."
+        }
+      ]
+    },
+    {
+      "id": "2db3bc9f-6cfc-4641-8639-791b642f7d1f",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trim": "Quadrifoglio Front Quadrifoglio",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Quadrifoglio Front Quadrifoglio"
+        }
+      ]
+    },
+    {
+      "id": "bf074b0b-9a1d-4a46-a90d-1c7ccddc342c",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "trim": "Quadrifoglio Rear Quadrifoglio",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Quadrifoglio Rear Quadrifoglio"
+        }
+      ]
+    },
+    {
+      "id": "dbd1e26b-6bf0-4e7d-a0d3-d6796fc7c7bc",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "0eb76e22-31d2-41e0-8098-f0acc78e233c",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "DB11",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "9928e6b3-94fd-406c-83bd-26d16231fe91",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Rapide",
+      "trim": "S Front S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: S Front S"
+        }
+      ]
+    },
+    {
+      "id": "ebf2bd85-fd17-44fb-8100-1363f6a01d60",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Rapide",
+      "trim": "S Rear S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: S Rear S"
+        }
+      ]
+    },
+    {
+      "id": "d1c4fe22-402f-41ac-bd54-92ceb80e9497",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "trim": "S Front S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: S Front S"
+        }
+      ]
+    },
+    {
+      "id": "a34f306a-eeea-44bc-a336-81f9dc4e2cac",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "trim": "S Rear S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: S Rear S"
+        }
+      ]
+    },
+    {
+      "id": "b13e47f7-b329-4e52-ad85-30698472193f",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "trim": "S Volante Front S Volante",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: S Volante Front S Volante"
+        }
+      ]
+    },
+    {
+      "id": "fd75a5aa-2eb2-43c7-bf0a-6bb7d61c5765",
+      "year": 2018,
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "trim": "S Volante Rear S Volante",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: S Volante Rear S Volante"
+        }
+      ]
+    },
+    {
+      "id": "e27e4100-a7cd-4c12-999c-1c3aa542dbd7",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "15a7d40b-d698-4b00-8db3-384732957b2a",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "868008dc-54ba-49b6-a6bb-443833058e85",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Front Plus",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Front Plus"
+        }
+      ]
+    },
+    {
+      "id": "7e183814-9943-4f20-88bb-af509d5d37ad",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Rear Plus",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Rear Plus"
+        }
+      ]
+    },
+    {
+      "id": "66ef5cc6-6af6-466e-ab2f-a133116fad51",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Spyder Front Plus Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Spyder Front Plus Spyder"
+        }
+      ]
+    },
+    {
+      "id": "23ab2cfe-2e12-4009-803c-42fee4ad9b7e",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Spyder Rear Plus Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Spyder Rear Plus Spyder"
+        }
+      ]
+    },
+    {
+      "id": "ded6763d-87b7-4dc8-9a1b-edec990f6de1",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "RWS Front RWS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: RWS Front RWS"
+        }
+      ]
+    },
+    {
+      "id": "7e5057fa-231c-4acf-8f9c-28f036af8ade",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "RWS Rear RWS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: RWS Rear RWS"
+        }
+      ]
+    },
+    {
+      "id": "f59356d7-ed8d-4df4-b2be-5bea8ffe8116",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Spyder Front Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Spyder Front Spyder"
+        }
+      ]
+    },
+    {
+      "id": "4abdd811-d5b9-4048-a607-269d1efa33bc",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Spyder Rear Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Spyder Rear Spyder"
+        }
+      ]
+    },
+    {
+      "id": "7fb5901a-81af-4aea-98c8-1a2946aa834a",
+      "year": 2018,
+      "make": "Audi",
+      "model": "RS3",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "ba3d5d15-a9ac-4498-a44b-ae31ac556090",
+      "year": 2018,
+      "make": "Audi",
+      "model": "RS3",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "662eddcd-111d-4e12-93ee-c1d0d3b71c79",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i",
+      "trim": "Convertible Front Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Front Convertible"
+        }
+      ]
+    },
+    {
+      "id": "a194b207-a18a-4b34-84d5-3c5f0ac20645",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i",
+      "trim": "Convertible Rear Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Rear Convertible"
+        }
+      ]
+    },
+    {
+      "id": "3728d253-8471-43fb-9450-f3048ab9777b",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i",
+      "trim": "Coupe Front Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Front Coupe"
+        }
+      ]
+    },
+    {
+      "id": "00cc1c14-adcb-436a-8414-2db724f03410",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i",
+      "trim": "Coupe Rear Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Rear Coupe"
+        }
+      ]
+    },
+    {
+      "id": "48b19f14-f3d9-4bdd-9861-4aac8476ffae",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i xDrive",
+      "trim": "Convertible Front Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Front Convertible"
+        }
+      ]
+    },
+    {
+      "id": "523a4213-427d-423a-8774-6eee5237ae3a",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i xDrive",
+      "trim": "Convertible Rear Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Rear Convertible"
+        }
+      ]
+    },
+    {
+      "id": "36268336-9c17-41d2-a142-ac4f9fda7005",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i xDrive",
+      "trim": "Coupe Front Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Front Coupe"
+        }
+      ]
+    },
+    {
+      "id": "5c59f96c-4429-4e9e-b687-4d9f749c4961",
+      "year": 2018,
+      "make": "BMW",
+      "model": "230i xDrive",
+      "trim": "Coupe Rear Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Rear Coupe"
+        }
+      ]
+    },
+    {
+      "id": "3d53ad51-decf-42e0-8890-bc862f5dfd1d",
+      "year": 2018,
+      "make": "BMW",
+      "model": "320i",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "b25cfa5a-e487-4101-bb65-3786366d3fdb",
+      "year": 2018,
+      "make": "BMW",
+      "model": "320i",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "2ad74cf2-7721-4cf3-ba55-8382c7473139",
+      "year": 2018,
+      "make": "BMW",
+      "model": "320i xDrive",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "a1987c30-2e74-422c-a185-24c306215081",
+      "year": 2018,
+      "make": "BMW",
+      "model": "320i xDrive",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "03f331de-ae7b-43c2-a49e-f3a7524eb1f9",
+      "year": 2018,
+      "make": "BMW",
+      "model": "328d",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "612677fd-d21d-4e8b-ab4a-748224d7eda0",
+      "year": 2018,
+      "make": "BMW",
+      "model": "328d",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "75332511-4e07-4118-ba43-11de031604e9",
+      "year": 2018,
+      "make": "BMW",
+      "model": "328d xDrive",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "38ae7f9f-b0c5-47b7-8139-cea1b5e7aef5",
+      "year": 2018,
+      "make": "BMW",
+      "model": "328d xDrive",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "f9404a18-d9bd-46ad-be1d-20fe0d674f55",
+      "year": 2018,
+      "make": "BMW",
+      "model": "328d xDrive",
+      "trim": "Sports Wagon Front Sports Wagon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Sports Wagon Front Sports Wagon"
+        }
+      ]
+    },
+    {
+      "id": "b7711aa2-7785-4046-ae5d-54602ccff76a",
+      "year": 2018,
+      "make": "BMW",
+      "model": "328d xDrive",
+      "trim": "Sports Wagon Rear Sports Wagon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Sports Wagon Rear Sports Wagon"
+        }
+      ]
+    },
+    {
+      "id": "cdf53bbe-72ac-4f95-a4d3-807ff94edb56",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330e",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "587f8b11-170d-4d8f-b43d-431d31278456",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330e",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "901354c0-cded-496b-9b4b-e0f4e74784de",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "72534f20-a7ff-4869-bae6-3c7d8f9cbdb7",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "6e3941af-29a1-4255-951a-dcf86e5eae19",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i GT xDrive",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "ecc1783c-3a48-4f11-9130-8368808c24fc",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i GT xDrive",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "6d08c8f2-61f3-4ea2-8e66-3fe85cd248e5",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i xDrive",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "a097f22b-1e88-457d-b42a-3149d1574eab",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i xDrive",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "b93cec93-0a8c-494f-ad6f-b8c3a160fd3e",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i xDrive",
+      "trim": "Sports Wagon Front Sports Wagon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Sports Wagon Front Sports Wagon"
+        }
+      ]
+    },
+    {
+      "id": "effd95aa-f3d4-4baf-9388-0ca3b94ba805",
+      "year": 2018,
+      "make": "BMW",
+      "model": "330i xDrive",
+      "trim": "Sports Wagon Rear Sports Wagon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Sports Wagon Rear Sports Wagon"
+        }
+      ]
+    },
+    {
+      "id": "2be4d6f5-f0b6-4de8-90ed-643635ecba84",
+      "year": 2018,
+      "make": "BMW",
+      "model": "340i",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "389113ab-9339-476c-ad8e-041187a1ae26",
+      "year": 2018,
+      "make": "BMW",
+      "model": "340i",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "3d39d50b-9f84-4238-8b52-7e3c78f3462e",
+      "year": 2018,
+      "make": "BMW",
+      "model": "340i GT xDrive",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "a8ff34ac-6d78-477c-9bc2-10f05f1cba2d",
+      "year": 2018,
+      "make": "BMW",
+      "model": "340i GT xDrive",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "88a9830d-933c-4027-a307-9a9a4d74e4df",
+      "year": 2018,
+      "make": "BMW",
+      "model": "340i xDrive",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "6fe0e2b1-e3a1-4956-9d6f-85e8629b8927",
+      "year": 2018,
+      "make": "BMW",
+      "model": "340i xDrive",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "ae5728e9-7612-4bad-8777-f7c9a089f255",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i",
+      "trim": "Convertible Front Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Front Convertible"
+        }
+      ]
+    },
+    {
+      "id": "14190d8d-aa66-4284-9eb1-8f6279720510",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i",
+      "trim": "Convertible Rear Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Rear Convertible"
+        }
+      ]
+    },
+    {
+      "id": "927136d7-874f-4a08-aa14-094d7c3405a4",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i",
+      "trim": "Coupe Front Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Front Coupe"
+        }
+      ]
+    },
+    {
+      "id": "a242321b-bbe7-4582-ad3f-84b2a557f58e",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i",
+      "trim": "Coupe Rear Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Rear Coupe"
+        }
+      ]
+    },
+    {
+      "id": "655445bd-9d68-406b-aaad-efdd157eed6c",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i Gran Coupe",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "847092f0-0b17-48c3-ac2c-58bfb431a7c9",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i Gran Coupe",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "f935b6c6-7b83-4cb2-9c27-ec8cda362d05",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i xDrive",
+      "trim": "Convertible Front Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Front Convertible"
+        }
+      ]
+    },
+    {
+      "id": "3d4dc91e-78aa-4dd8-a2bc-7b54aca6b2f7",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i xDrive",
+      "trim": "Convertible Rear Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Rear Convertible"
+        }
+      ]
+    },
+    {
+      "id": "7d69b907-0b16-4792-ac9b-3442114e90db",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i xDrive",
+      "trim": "Coupe Front Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Front Coupe"
+        }
+      ]
+    },
+    {
+      "id": "4874f283-46ca-463c-a7b7-1e62da245fe1",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i xDrive",
+      "trim": "Coupe Rear Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Rear Coupe"
+        }
+      ]
+    },
+    {
+      "id": "ff5e8c75-263c-402e-88fa-ae4798eea7b8",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i xDrive Gran Coupe",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "0b19a915-ff67-4013-8873-03f8f8ff07dd",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i xDrive Gran Coupe",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "5415fb17-055b-42dd-bc57-29fa0576f511",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i",
+      "trim": "Convertible Front Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Front Convertible"
+        }
+      ]
+    },
+    {
+      "id": "02baf73c-f9f3-4aba-aed9-2cf1ef3ddd02",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i",
+      "trim": "Convertible Rear Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Rear Convertible"
+        }
+      ]
+    },
+    {
+      "id": "218122b3-4786-4151-8812-95fd01941b44",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i",
+      "trim": "Coupe Front Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Front Coupe"
+        }
+      ]
+    },
+    {
+      "id": "591c2982-3bff-4abd-b9e5-bd4703ac173d",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i",
+      "trim": "Coupe Rear Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Rear Coupe"
+        }
+      ]
+    },
+    {
+      "id": "43170f48-82e7-43c8-b220-db579b800ce9",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i Gran Coupe",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "e4d9403c-9319-4c5e-b25a-03a0509496e4",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i Gran Coupe",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "fd352b85-58bb-4933-9bc0-54a8f2549f8b",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i xDrive",
+      "trim": "Convertible Front Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Front Convertible"
+        }
+      ]
+    },
+    {
+      "id": "ffacdfe6-0aa4-407e-97f4-93fc9797415f",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i xDrive",
+      "trim": "Convertible Rear Convertible",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Convertible Rear Convertible"
+        }
+      ]
+    },
+    {
+      "id": "898bba01-ae4a-4a78-872b-ceb6229f94e9",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i xDrive",
+      "trim": "Coupe Front Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Front Coupe"
+        }
+      ]
+    },
+    {
+      "id": "18973371-a5e8-4c73-a7e1-cfaaaf50d0a3",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i xDrive",
+      "trim": "Coupe Rear Coupe",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Coupe Rear Coupe"
+        }
+      ]
+    },
+    {
+      "id": "0db9184d-75ed-4c18-9699-bae8ae147575",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i xDrive Gran Coupe",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "24d383d9-bfd2-4034-a51a-c927856270f7",
+      "year": 2018,
+      "make": "BMW",
+      "model": "440i xDrive Gran Coupe",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "2f61689a-1bc3-4da9-b079-180258491b80",
+      "year": 2018,
+      "make": "BMW",
+      "model": "530e",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "3fb0e043-a38c-44db-89fd-6c82237ad874",
+      "year": 2018,
+      "make": "BMW",
+      "model": "530e",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "e45c0990-c4df-40ce-aff2-71e034cdd2fb",
+      "year": 2018,
+      "make": "BMW",
+      "model": "530e xDrive",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "46846880-7bb1-4de8-babd-a55fdb63a3ea",
+      "year": 2018,
+      "make": "BMW",
+      "model": "530e xDrive",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    }
+  ],
+  "customerImpactingGaps": [
+    {
+      "id": "9e798349-53d1-4c7e-b557-6d2058802a28",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "8add9882-3997-4739-8678-44a13c4b171f",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "27c74ed9-f607-45af-804a-e9c20aecd7a1",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "acb16617-ceef-41f5-983b-bcbd6eb1c0eb",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "d0b259e2-d300-4c6f-b645-7ac574abf2ae",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "3e2b9929-6b2f-4ba2-a496-48cca19d0387",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "9042db8b-79b1-482f-a8d8-16a421676d74",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "High Country",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2561cbaf-a89a-49e1-9b06-6056c144c47d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "High Country Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0c07bba0-e6a9-4ca8-9f4f-13319e928f2b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6bfac73a-d0ef-4a6d-a207-bc376d4ddacb",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "49a22f78-cf28-4200-89c8-f9af943f59ac",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LTZ",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "83c1d7f4-c86c-41c7-918e-15efa9a67df6",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1c454c72-3576-4c2b-8539-54f2b21e434b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "WT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "05021728-fd78-446d-81ae-4e078fe6220d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "WT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dea805e9-7cc2-4e02-9c3b-7aa90c5106b7",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "30bb91fc-a806-4e66-8920-a27e52fc1086",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0961adc9-81c7-4b61-8e34-8ab78ecc361d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1a98a3d6-9f9e-4c3d-9546-c1672dbd6351",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d3bca2e0-81a7-4547-9d93-6fdb7d4b3cd1",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6ad19098-1014-49f3-8c27-5b80ee9ff586",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a9044757-b719-4980-9968-fd784f35cfb1",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "31c2630a-e360-494f-8a36-32b97058e6a2",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d599138-97ba-41c5-97bc-f4560e610600",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "786dca0e-e8e9-4899-99bd-f59a6f9cad7e",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d979c5a5-19e5-4cf4-92e8-9d5a3da51451",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8ba5843e-1859-48e8-907f-cb808ee8bf8b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bd2f393b-63eb-402a-8cca-4f00e889dad0",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "e7581504-3d4b-4ca0-91e0-b566fe1633a2",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "748fe293-b14a-4c92-8d80-f55bdcdd9f68",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "294c7f04-d400-46b6-85ad-668a461aa038",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "adf38854-ca57-4a57-b9e7-3fbd58bb032b",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3152bef9-c0e2-452f-91a6-d19a962141e6",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5d1972f0-04c3-4aa6-8e01-2a60365ac4b0",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "483c64c8-3fe5-44be-9145-bd23bf661483",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "62cf333a-66c5-42c3-af00-cae91203ac28",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c8ed4070-78ca-4b99-94c0-02c371301b17",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fa30e7fa-f05d-4cd8-82cd-7694c010a240",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Raptor",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT315/70R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "e50ed5e0-cf50-4d82-8602-10eeb874c853",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "King Ranch 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "441b4c74-fd66-49c7-a193-0f41d0f50509",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "King Ranch 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8fb3c948-5a34-42c9-b845-db69f1f50214",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5f72ccf3-45c5-481f-ad78-2f2c31ed7a00",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "43e5729f-22f1-4a98-892e-676260d92f9d",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "290d26c4-7a5e-4528-aaa1-ef3cb5c39db2",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Limited",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d8f9f2bb-2e9e-46d7-8599-404ec450d0e9",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Platinum",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d59904c-9047-4e91-82b8-9e33bfd45675",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7552995d-6533-422a-8bab-2a9ddc1f44e2",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "55a010b0-6b87-41e5-ae6c-2072991b6c93",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "05bfbd79-1ff4-4a63-ab7c-c13b302b692b",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "099761eb-6f8e-4a8f-ab44-c6f94d65ecce",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bb76f726-2d5f-4015-a08e-4fff989c4075",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "174d21ac-801f-49e0-b6bd-0af06e22493e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b046f423-aae7-4d4d-8f8e-d3034a531a9d",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f44ca388-434f-461b-b77d-52f8cd67dc50",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b8e56c3c-a5f5-456c-b9d5-61426f16f711",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "480f6649-4f78-4128-a2b1-fb1c71956c28",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "40f00414-e527-4f1d-9916-00179e04f408",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fe8b2022-f679-4e5d-9af0-7908ddd2f2e7",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "16374ad1-6f0a-4779-9a8a-937e1932d404",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3c086551-6712-4117-9a82-d8d5da4064b7",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a4445559-3fdb-48a2-89a7-2c184a40a0f1",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "81c39b8b-3d26-41d7-9374-b35349a743bf",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7afbeb17-d394-40f1-a034-19ba171d1c8c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8356b00d-9138-438e-9fe5-9e368cb88213",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Limited",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "817f0f7f-576e-4607-9aa4-c38b87492b3b",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Platinum",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2b45e3db-5125-4a4e-bbae-c366fca2c34e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Platinum (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a38682bc-51dc-422a-ae8a-f2964f745e2e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ff312564-1692-4982-a4d8-30eceee9c2d5",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3fca8c54-9027-4582-aeed-f998b2a4bbc1",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "374dc1bc-c203-424e-9205-f4a20b4c5d0c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d0ef0093-0549-4dee-b095-5685bc172ef4",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fae19cc4-188b-4f61-bdae-8e1c80968b6a",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dd9fb7c1-db1b-4977-9a83-a05db22c89c4",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3a107432-c386-4cc0-a7cd-2bcd8bf06df6",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "72062ec0-1cb9-4e69-8e3d-47595361dc71",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f1570e85-99ec-4b62-978e-71a86d93056c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "88f730bb-fa2c-4ded-8600-212cfb5f4649",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bd218ef0-616e-41f3-9c31-81f5c1dff155",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "086f4822-b093-4831-bcdc-96e21bc4ed69",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "04818ad4-119c-4684-905b-3384d2a3916e",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "Denali",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2e3e4ebf-db4b-4e21-935c-5dc6b30335bf",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "SLE",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f55c0b68-21bc-4653-a9c3-6d853a25f291",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "SLT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dbea3f16-7246-4727-b03b-790d94700b7d",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "(DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ecfa05dc-92fe-4f1b-a3c7-013ea259de1f",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a4544e36-6249-4560-aab7-2ef7cabe62f1",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Denali",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "4c0e1731-f0eb-42e9-8a3c-b6d69ef86331",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a0d83f88-126f-468e-af40-040488b0294c",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b238e5df-fdc6-468b-b5f9-de4af5f896ba",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "07ec64fc-fbd4-4942-9dad-b5de97e39359",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "13d0a8e8-8ba8-4b99-835a-f8f470e81ee7",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "593e9788-9895-49d8-80c2-e8469c0ce81f",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "22790533-e716-4442-911e-84d0ff21b5ca",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "acfb18a6-0489-4995-8cd5-b5dbf75293fd",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "00ec029c-471b-4942-af86-80e2c1313ed9",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ca185575-2c89-4d5c-bb7f-8562eec3c468",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "46043d38-d0e3-469c-9705-ec2ef51ea271",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3e011dde-b45c-4afc-b5ae-c0fca568fef1",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ec5b9044-4a77-4f6e-b327-d81079681c49",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d6f2df9-021e-4004-89db-1e87171a2d14",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0248e761-7c1e-4bb5-9d27-f9b8eb0f88d5",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d5d303fc-afca-4315-ba3a-7cd0f1505bd3",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    }
+  ],
+  "byYearRange": [
+    {
+      "range": "2000-2012",
+      "totalRecords": 10990,
+      "completeRecords": 10984,
+      "completionPct": "99.95",
+      "highSeverity": 6
+    },
+    {
+      "range": "2013-2018",
+      "totalRecords": 8467,
+      "completeRecords": 7643,
+      "completionPct": "90.27",
+      "highSeverity": 848
+    },
+    {
+      "range": "2019-2022",
+      "totalRecords": 6038,
+      "completeRecords": 6022,
+      "completionPct": "99.74",
+      "highSeverity": 16
+    },
+    {
+      "range": "2023-2026",
+      "totalRecords": 5813,
+      "completeRecords": 5793,
+      "completionPct": "99.66",
+      "highSeverity": 20
+    }
+  ],
+  "byMake": {
+    "acura": {
+      "make": "Acura",
+      "totalRecords": 571,
+      "completeRecords": 571,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Integra Type-R",
+        "trim": "Base"
+      }
+    },
+    "audi": {
+      "make": "Audi",
+      "totalRecords": 999,
+      "completeRecords": 999,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "a3",
+        "trim": "Base"
+      }
+    },
+    "bmw": {
+      "make": "BMW",
+      "totalRecords": 1606,
+      "completeRecords": 1606,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3 Series",
+        "trim": "330i xDrive"
+      }
+    },
+    "buick": {
+      "make": "Buick",
+      "totalRecords": 549,
+      "completeRecords": 549,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "lesabre",
+        "trim": "Custom"
+      }
+    },
+    "cadillac": {
+      "make": "Cadillac",
+      "totalRecords": 576,
+      "completeRecords": 570,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "escalade",
+        "trim": "Base"
+      }
+    },
+    "chevrolet": {
+      "make": "Chevrolet",
+      "totalRecords": 2260,
+      "completeRecords": 2236,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Express 1500",
+        "trim": "Base"
+      }
+    },
+    "chrysler": {
+      "make": "Chrysler",
+      "totalRecords": 377,
+      "completeRecords": 377,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Town & Country",
+        "trim": "Base"
+      }
+    },
+    "daewoo": {
+      "make": "Daewoo",
+      "totalRecords": 3,
+      "completeRecords": 3,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "leganza",
+        "trim": "Base"
+      }
+    },
+    "dodge": {
+      "make": "Dodge",
+      "totalRecords": 601,
+      "completeRecords": 601,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "durango",
+        "trim": "Base"
+      }
+    },
+    "ford": {
+      "make": "Ford",
+      "totalRecords": 2035,
+      "completeRecords": 1994,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Crown Victoria",
+        "trim": "Base"
+      }
+    },
+    "gmc": {
+      "make": "GMC",
+      "totalRecords": 1069,
+      "completeRecords": 1052,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sierra-1500",
+        "trim": "Base"
+      }
+    },
+    "geo": {
+      "make": "Geo",
+      "totalRecords": 5,
+      "completeRecords": 5,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "metro",
+        "trim": "Base"
+      }
+    },
+    "honda": {
+      "make": "Honda",
+      "totalRecords": 1185,
+      "completeRecords": 1185,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "accord",
+        "trim": "EX"
+      }
+    },
+    "hummer": {
+      "make": "Hummer",
+      "totalRecords": 19,
+      "completeRecords": 19,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "H1",
+        "trim": "Base"
+      }
+    },
+    "hyundai": {
+      "make": "Hyundai",
+      "totalRecords": 764,
+      "completeRecords": 764,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Santa Fe",
+        "trim": "Base"
+      }
+    },
+    "isuzu": {
+      "make": "Isuzu",
+      "totalRecords": 11,
+      "completeRecords": 11,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "rodeo",
+        "trim": "Base"
+      }
+    },
+    "jaguar": {
+      "make": "Jaguar",
+      "totalRecords": 515,
+      "completeRecords": 515,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s-type",
+        "trim": "Base"
+      }
+    },
+    "jeep": {
+      "make": "Jeep",
+      "totalRecords": 1030,
+      "completeRecords": 1019,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Grand Cherokee",
+        "trim": "Base"
+      }
+    },
+    "kia": {
+      "make": "Kia",
+      "totalRecords": 761,
+      "completeRecords": 761,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sportage",
+        "trim": "Base/LX/EX"
+      }
+    },
+    "land rover": {
+      "make": "Land Rover",
+      "totalRecords": 606,
+      "completeRecords": 606,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "defender",
+        "trim": "Base"
+      }
+    },
+    "lexus": {
+      "make": "Lexus",
+      "totalRecords": 1097,
+      "completeRecords": 1097,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "es",
+        "trim": "ES 250"
+      }
+    },
+    "lincoln": {
+      "make": "Lincoln",
+      "totalRecords": 470,
+      "completeRecords": 470,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "continental",
+        "trim": "Black Label"
+      }
+    },
+    "mazda": {
+      "make": "Mazda",
+      "totalRecords": 522,
+      "completeRecords": 522,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "mx-5",
+        "trim": "Base"
+      }
+    },
+    "mercedes": {
+      "make": "Mercedes",
+      "totalRecords": 1191,
+      "completeRecords": 1191,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "c-class",
+        "trim": "Base"
+      }
+    },
+    "mercedes-benz": {
+      "make": "Mercedes-Benz",
+      "totalRecords": 1653,
+      "completeRecords": 1653,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "C-Class",
+        "trim": "C300"
+      }
+    },
+    "mercury": {
+      "make": "Mercury",
+      "totalRecords": 47,
+      "completeRecords": 47,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "cougar",
+        "trim": "Base"
+      }
+    },
+    "mitsubishi": {
+      "make": "Mitsubishi",
+      "totalRecords": 529,
+      "completeRecords": 529,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3000-gt",
+        "trim": "Base"
+      }
+    },
+    "nissan": {
+      "make": "Nissan",
+      "totalRecords": 1659,
+      "completeRecords": 1654,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "altima",
+        "trim": "Platinum"
+      }
+    },
+    "oldsmobile": {
+      "make": "Oldsmobile",
+      "totalRecords": 13,
+      "completeRecords": 13,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "alero",
+        "trim": "Base"
+      }
+    },
+    "plymouth": {
+      "make": "Plymouth",
+      "totalRecords": 4,
+      "completeRecords": 4,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "prowler",
+        "trim": "Base"
+      }
+    },
+    "pontiac": {
+      "make": "Pontiac",
+      "totalRecords": 40,
+      "completeRecords": 40,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "bonneville",
+        "trim": "Base"
+      }
+    },
+    "porsche": {
+      "make": "Porsche",
+      "totalRecords": 853,
+      "completeRecords": 826,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "911",
+        "trim": "Carrera"
+      }
+    },
+    "ram": {
+      "make": "RAM",
+      "totalRecords": 923,
+      "completeRecords": 897,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "1500",
+        "trim": "Laramie"
+      }
+    },
+    "saab": {
+      "make": "Saab",
+      "totalRecords": 26,
+      "completeRecords": 26,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "9-3",
+        "trim": "Base"
+      }
+    },
+    "saturn": {
+      "make": "Saturn",
+      "totalRecords": 27,
+      "completeRecords": 27,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "l-series",
+        "trim": "Base"
+      }
+    },
+    "subaru": {
+      "make": "Subaru",
+      "totalRecords": 1136,
+      "completeRecords": 1136,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "forester",
+        "trim": "Base"
+      }
+    },
+    "suzuki": {
+      "make": "Suzuki",
+      "totalRecords": 25,
+      "completeRecords": 25,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "grand-vitara",
+        "trim": "Base"
+      }
+    },
+    "toyota": {
+      "make": "Toyota",
+      "totalRecords": 2385,
+      "completeRecords": 2385,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "4runner",
+        "trim": "Limited"
+      }
+    },
+    "volkswagen": {
+      "make": "Volkswagen",
+      "totalRecords": 813,
+      "completeRecords": 813,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "beetle",
+        "trim": "Base"
+      }
+    },
+    "volvo": {
+      "make": "Volvo",
+      "totalRecords": 466,
+      "completeRecords": 466,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s40",
+        "trim": "Base"
+      }
+    },
+    "mini": {
+      "make": "MINI",
+      "totalRecords": 363,
+      "completeRecords": 363,
+      "sampleRecord": {
+        "year": 2002,
+        "model": "cooper",
+        "trim": "Classic"
+      }
+    },
+    "infiniti": {
+      "make": "Infiniti",
+      "totalRecords": 411,
+      "completeRecords": 411,
+      "sampleRecord": {
+        "year": 2004,
+        "model": "qx80",
+        "trim": "Luxe"
+      }
+    },
+    "scion": {
+      "make": "Scion",
+      "totalRecords": 82,
+      "completeRecords": 82,
+      "sampleRecord": {
+        "year": 2004,
+        "model": "xb",
+        "trim": "Base"
+      }
+    },
+    "aston martin": {
+      "make": "Aston Martin",
+      "totalRecords": 48,
+      "completeRecords": 48,
+      "sampleRecord": {
+        "year": 2005,
+        "model": "vantage",
+        "trim": "V8/V12 Vantage (2nd Gen)"
+      }
+    },
+    "maserati": {
+      "make": "Maserati",
+      "totalRecords": 88,
+      "completeRecords": 88,
+      "sampleRecord": {
+        "year": 2007,
+        "model": "granturismo",
+        "trim": "M145 (1st Gen Modern)"
+      }
+    },
+    "lotus": {
+      "make": "Lotus",
+      "totalRecords": 34,
+      "completeRecords": 31,
+      "sampleRecord": {
+        "year": 2009,
+        "model": "evora",
+        "trim": "Evora/Evora S/Evora 400/Evora GT"
+      }
+    },
+    "lamborghini": {
+      "make": "Lamborghini",
+      "totalRecords": 45,
+      "completeRecords": 41,
+      "sampleRecord": {
+        "year": 2011,
+        "model": "aventador",
+        "trim": "Aventador (All Variants)"
+      }
+    },
+    "fiat": {
+      "make": "Fiat",
+      "totalRecords": 55,
+      "completeRecords": 55,
+      "sampleRecord": {
+        "year": 2012,
+        "model": "500",
+        "trim": "Base"
+      }
+    },
+    "tesla": {
+      "make": "Tesla",
+      "totalRecords": 134,
+      "completeRecords": 134,
+      "sampleRecord": {
+        "year": 2012,
+        "model": "model-s",
+        "trim": "1st Gen"
+      }
+    },
+    "alfa romeo": {
+      "make": "Alfa Romeo",
+      "totalRecords": 129,
+      "completeRecords": 129,
+      "sampleRecord": {
+        "year": 2014,
+        "model": "4c",
+        "trim": "Base"
+      }
+    },
+    "ferrari": {
+      "make": "Ferrari",
+      "totalRecords": 55,
+      "completeRecords": 55,
+      "sampleRecord": {
+        "year": 2015,
+        "model": "488",
+        "trim": "488 GTB/Spider"
+      }
+    },
+    "mclaren": {
+      "make": "McLaren",
+      "totalRecords": 37,
+      "completeRecords": 37,
+      "sampleRecord": {
+        "year": 2015,
+        "model": "570s",
+        "trim": "570S/570GT/570S Spider"
+      }
+    },
+    "bentley": {
+      "make": "Bentley",
+      "totalRecords": 41,
+      "completeRecords": 41,
+      "sampleRecord": {
+        "year": 2016,
+        "model": "bentayga",
+        "trim": "1st Gen (2020 Facelift)"
+      }
+    },
+    "genesis": {
+      "make": "Genesis",
+      "totalRecords": 169,
+      "completeRecords": 169,
+      "sampleRecord": {
+        "year": 2017,
+        "model": "g80",
+        "trim": "2.5T"
+      }
+    },
+    "rolls-royce": {
+      "make": "Rolls-Royce",
+      "totalRecords": 44,
+      "completeRecords": 44,
+      "sampleRecord": {
+        "year": 2017,
+        "model": "phantom",
+        "trim": "8th Gen (VIII)"
+      }
+    },
+    "chevrolet minivans": {
+      "make": "Chevrolet Minivans",
+      "totalRecords": 2,
+      "completeRecords": 2,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "City Express",
+        "trim": "LS (C-Type Tires)"
+      }
+    },
+    "chevrolet vans": {
+      "make": "Chevrolet Vans",
+      "totalRecords": 6,
+      "completeRecords": 0,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Express 2500",
+        "trim": "Base"
+      }
+    },
+    "chrysler minivans": {
+      "make": "Chrysler Minivans",
+      "totalRecords": 9,
+      "completeRecords": 9,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Pacifica Minivan",
+        "trim": "Hybrid Limited"
+      }
+    },
+    "dodge minivans": {
+      "make": "Dodge Minivans",
+      "totalRecords": 4,
+      "completeRecords": 4,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Grand Caravan",
+        "trim": "GT"
+      }
+    },
+    "ford minivans": {
+      "make": "Ford Minivans",
+      "totalRecords": 9,
+      "completeRecords": 9,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Transit Connect",
+        "trim": "Titanium"
+      }
+    },
+    "ford vans": {
+      "make": "Ford Vans",
+      "totalRecords": 10,
+      "completeRecords": 10,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Transit-150",
+        "trim": "(C-Type Tires)"
+      }
+    },
+    "gmc vans": {
+      "make": "GMC Vans",
+      "totalRecords": 6,
+      "completeRecords": 0,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Savana 2500",
+        "trim": "Base"
+      }
+    },
+    "honda minivans": {
+      "make": "Honda Minivans",
+      "totalRecords": 5,
+      "completeRecords": 5,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Odyssey",
+        "trim": "EX"
+      }
+    },
+    "karma": {
+      "make": "Karma",
+      "totalRecords": 6,
+      "completeRecords": 6,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Revero",
+        "trim": "(Optional Tire Pkg.)"
+      }
+    },
+    "kia minivans": {
+      "make": "Kia Minivans",
+      "totalRecords": 5,
+      "completeRecords": 5,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sedona",
+        "trim": "EX"
+      }
+    },
+    "mercedes-benz minivans": {
+      "make": "Mercedes-Benz Minivans",
+      "totalRecords": 2,
+      "completeRecords": 2,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Metris",
+        "trim": "(Alloy Wheels)"
+      }
+    },
+    "mercedes-benz vans": {
+      "make": "Mercedes-Benz Vans",
+      "totalRecords": 7,
+      "completeRecords": 3,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sprinter 2500",
+        "trim": "(Alloy Wheels)"
+      }
+    },
+    "nissan minivans": {
+      "make": "Nissan Minivans",
+      "totalRecords": 3,
+      "completeRecords": 3,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "NV200",
+        "trim": "S (C-Type Tires)"
+      }
+    },
+    "nissan vans": {
+      "make": "Nissan Vans",
+      "totalRecords": 11,
+      "completeRecords": 0,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "NV1500",
+        "trim": "S"
+      }
+    },
+    "ram minivans": {
+      "make": "RAM Minivans",
+      "totalRecords": 6,
+      "completeRecords": 6,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "ProMaster City",
+        "trim": "Base"
+      }
+    },
+    "ram vans": {
+      "make": "RAM Vans",
+      "totalRecords": 5,
+      "completeRecords": 2,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "ProMaster 1500",
+        "trim": "(118 inch wheelbase)(C-Type Tires)"
+      }
+    },
+    "smart": {
+      "make": "Smart",
+      "totalRecords": 6,
+      "completeRecords": 6,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Fortwo",
+        "trim": "Electric Drive"
+      }
+    },
+    "toyota minivans": {
+      "make": "Toyota Minivans",
+      "totalRecords": 13,
+      "completeRecords": 13,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sienna",
+        "trim": "L"
+      }
+    },
+    "polestar": {
+      "make": "Polestar",
+      "totalRecords": 9,
+      "completeRecords": 9,
+      "sampleRecord": {
+        "year": 2020,
+        "model": "polestar-1",
+        "trim": "Base"
+      }
+    },
+    "rivian": {
+      "make": "Rivian",
+      "totalRecords": 17,
+      "completeRecords": 17,
+      "sampleRecord": {
+        "year": 2021,
+        "model": "r1t",
+        "trim": "Quad"
+      }
+    },
+    "lucid": {
+      "make": "Lucid",
+      "totalRecords": 11,
+      "completeRecords": 11,
+      "sampleRecord": {
+        "year": 2022,
+        "model": "air",
+        "trim": "EV"
+      }
+    }
+  },
+  "issuesByCodeSorted": [
+    {
+      "code": "NO_OFFSET_RANGE",
+      "count": 3376
+    },
+    {
+      "code": "NO_SEAT_TYPE",
+      "count": 3284
+    },
+    {
+      "code": "NO_THREAD_SIZE",
+      "count": 2783
+    },
+    {
+      "code": "WHEEL_SIZES_EMPTY",
+      "count": 2456
+    },
+    {
+      "code": "FAKE_FRONT_REAR_TRIM",
+      "count": 696
+    },
+    {
+      "code": "TIRE_INVALID_ELEMENT",
+      "count": 249
+    },
+    {
+      "code": "TIRE_NO_VALID",
+      "count": 154
+    },
+    {
+      "code": "NO_CENTER_BORE",
+      "count": 64
+    },
+    {
+      "code": "NO_BOLT_PATTERN",
+      "count": 34
+    },
+    {
+      "code": "STAGGERED_FRONT_ARRAY_INVALID",
+      "count": 8
+    },
+    {
+      "code": "STAGGERED_REAR_ARRAY_INVALID",
+      "count": 8
+    },
+    {
+      "code": "TIRE_HAS_NULL",
+      "count": 6
+    },
+    {
+      "code": "TIRE_NULL_ARRAY",
+      "count": 6
+    },
+    {
+      "code": "NO_WHEEL_SIZES",
+      "count": 1
+    }
+  ],
+  "byMakeSorted": [
+    {
+      "make": "Toyota",
+      "totalRecords": 2385,
+      "completeRecords": 2385,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "4runner",
+        "trim": "Limited"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Chevrolet",
+      "totalRecords": 2260,
+      "completeRecords": 2236,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Express 1500",
+        "trim": "Base"
+      },
+      "completionPct": "98.9"
+    },
+    {
+      "make": "Ford",
+      "totalRecords": 2035,
+      "completeRecords": 1994,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Crown Victoria",
+        "trim": "Base"
+      },
+      "completionPct": "98.0"
+    },
+    {
+      "make": "Nissan",
+      "totalRecords": 1659,
+      "completeRecords": 1654,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "altima",
+        "trim": "Platinum"
+      },
+      "completionPct": "99.7"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "totalRecords": 1653,
+      "completeRecords": 1653,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "C-Class",
+        "trim": "C300"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "BMW",
+      "totalRecords": 1606,
+      "completeRecords": 1606,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3 Series",
+        "trim": "330i xDrive"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Mercedes",
+      "totalRecords": 1191,
+      "completeRecords": 1191,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "c-class",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Honda",
+      "totalRecords": 1185,
+      "completeRecords": 1185,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "accord",
+        "trim": "EX"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Subaru",
+      "totalRecords": 1136,
+      "completeRecords": 1136,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "forester",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Lexus",
+      "totalRecords": 1097,
+      "completeRecords": 1097,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "es",
+        "trim": "ES 250"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "GMC",
+      "totalRecords": 1069,
+      "completeRecords": 1052,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sierra-1500",
+        "trim": "Base"
+      },
+      "completionPct": "98.4"
+    },
+    {
+      "make": "Jeep",
+      "totalRecords": 1030,
+      "completeRecords": 1019,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Grand Cherokee",
+        "trim": "Base"
+      },
+      "completionPct": "98.9"
+    },
+    {
+      "make": "Audi",
+      "totalRecords": 999,
+      "completeRecords": 999,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "a3",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "RAM",
+      "totalRecords": 923,
+      "completeRecords": 897,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "1500",
+        "trim": "Laramie"
+      },
+      "completionPct": "97.2"
+    },
+    {
+      "make": "Porsche",
+      "totalRecords": 853,
+      "completeRecords": 826,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "911",
+        "trim": "Carrera"
+      },
+      "completionPct": "96.8"
+    },
+    {
+      "make": "Volkswagen",
+      "totalRecords": 813,
+      "completeRecords": 813,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "beetle",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Hyundai",
+      "totalRecords": 764,
+      "completeRecords": 764,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Santa Fe",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Kia",
+      "totalRecords": 761,
+      "completeRecords": 761,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sportage",
+        "trim": "Base/LX/EX"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Land Rover",
+      "totalRecords": 606,
+      "completeRecords": 606,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "defender",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Dodge",
+      "totalRecords": 601,
+      "completeRecords": 601,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "durango",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Cadillac",
+      "totalRecords": 576,
+      "completeRecords": 570,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "escalade",
+        "trim": "Base"
+      },
+      "completionPct": "99.0"
+    },
+    {
+      "make": "Acura",
+      "totalRecords": 571,
+      "completeRecords": 571,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Integra Type-R",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Buick",
+      "totalRecords": 549,
+      "completeRecords": 549,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "lesabre",
+        "trim": "Custom"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Mitsubishi",
+      "totalRecords": 529,
+      "completeRecords": 529,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3000-gt",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Mazda",
+      "totalRecords": 522,
+      "completeRecords": 522,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "mx-5",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Jaguar",
+      "totalRecords": 515,
+      "completeRecords": 515,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s-type",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Lincoln",
+      "totalRecords": 470,
+      "completeRecords": 470,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "continental",
+        "trim": "Black Label"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Volvo",
+      "totalRecords": 466,
+      "completeRecords": 466,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s40",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Infiniti",
+      "totalRecords": 411,
+      "completeRecords": 411,
+      "sampleRecord": {
+        "year": 2004,
+        "model": "qx80",
+        "trim": "Luxe"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Chrysler",
+      "totalRecords": 377,
+      "completeRecords": 377,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Town & Country",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "MINI",
+      "totalRecords": 363,
+      "completeRecords": 363,
+      "sampleRecord": {
+        "year": 2002,
+        "model": "cooper",
+        "trim": "Classic"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Genesis",
+      "totalRecords": 169,
+      "completeRecords": 169,
+      "sampleRecord": {
+        "year": 2017,
+        "model": "g80",
+        "trim": "2.5T"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Tesla",
+      "totalRecords": 134,
+      "completeRecords": 134,
+      "sampleRecord": {
+        "year": 2012,
+        "model": "model-s",
+        "trim": "1st Gen"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Alfa Romeo",
+      "totalRecords": 129,
+      "completeRecords": 129,
+      "sampleRecord": {
+        "year": 2014,
+        "model": "4c",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Maserati",
+      "totalRecords": 88,
+      "completeRecords": 88,
+      "sampleRecord": {
+        "year": 2007,
+        "model": "granturismo",
+        "trim": "M145 (1st Gen Modern)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Scion",
+      "totalRecords": 82,
+      "completeRecords": 82,
+      "sampleRecord": {
+        "year": 2004,
+        "model": "xb",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Fiat",
+      "totalRecords": 55,
+      "completeRecords": 55,
+      "sampleRecord": {
+        "year": 2012,
+        "model": "500",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Ferrari",
+      "totalRecords": 55,
+      "completeRecords": 55,
+      "sampleRecord": {
+        "year": 2015,
+        "model": "488",
+        "trim": "488 GTB/Spider"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Aston Martin",
+      "totalRecords": 48,
+      "completeRecords": 48,
+      "sampleRecord": {
+        "year": 2005,
+        "model": "vantage",
+        "trim": "V8/V12 Vantage (2nd Gen)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Mercury",
+      "totalRecords": 47,
+      "completeRecords": 47,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "cougar",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Lamborghini",
+      "totalRecords": 45,
+      "completeRecords": 41,
+      "sampleRecord": {
+        "year": 2011,
+        "model": "aventador",
+        "trim": "Aventador (All Variants)"
+      },
+      "completionPct": "91.1"
+    },
+    {
+      "make": "Rolls-Royce",
+      "totalRecords": 44,
+      "completeRecords": 44,
+      "sampleRecord": {
+        "year": 2017,
+        "model": "phantom",
+        "trim": "8th Gen (VIII)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Bentley",
+      "totalRecords": 41,
+      "completeRecords": 41,
+      "sampleRecord": {
+        "year": 2016,
+        "model": "bentayga",
+        "trim": "1st Gen (2020 Facelift)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Pontiac",
+      "totalRecords": 40,
+      "completeRecords": 40,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "bonneville",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "McLaren",
+      "totalRecords": 37,
+      "completeRecords": 37,
+      "sampleRecord": {
+        "year": 2015,
+        "model": "570s",
+        "trim": "570S/570GT/570S Spider"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Lotus",
+      "totalRecords": 34,
+      "completeRecords": 31,
+      "sampleRecord": {
+        "year": 2009,
+        "model": "evora",
+        "trim": "Evora/Evora S/Evora 400/Evora GT"
+      },
+      "completionPct": "91.2"
+    },
+    {
+      "make": "Saturn",
+      "totalRecords": 27,
+      "completeRecords": 27,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "l-series",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Saab",
+      "totalRecords": 26,
+      "completeRecords": 26,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "9-3",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Suzuki",
+      "totalRecords": 25,
+      "completeRecords": 25,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "grand-vitara",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Hummer",
+      "totalRecords": 19,
+      "completeRecords": 19,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "H1",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Rivian",
+      "totalRecords": 17,
+      "completeRecords": 17,
+      "sampleRecord": {
+        "year": 2021,
+        "model": "r1t",
+        "trim": "Quad"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Oldsmobile",
+      "totalRecords": 13,
+      "completeRecords": 13,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "alero",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Toyota Minivans",
+      "totalRecords": 13,
+      "completeRecords": 13,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sienna",
+        "trim": "L"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Isuzu",
+      "totalRecords": 11,
+      "completeRecords": 11,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "rodeo",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Nissan Vans",
+      "totalRecords": 11,
+      "completeRecords": 0,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "NV1500",
+        "trim": "S"
+      },
+      "completionPct": "0.0"
+    },
+    {
+      "make": "Lucid",
+      "totalRecords": 11,
+      "completeRecords": 11,
+      "sampleRecord": {
+        "year": 2022,
+        "model": "air",
+        "trim": "EV"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Ford Vans",
+      "totalRecords": 10,
+      "completeRecords": 10,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Transit-150",
+        "trim": "(C-Type Tires)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Chrysler Minivans",
+      "totalRecords": 9,
+      "completeRecords": 9,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Pacifica Minivan",
+        "trim": "Hybrid Limited"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Ford Minivans",
+      "totalRecords": 9,
+      "completeRecords": 9,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Transit Connect",
+        "trim": "Titanium"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Polestar",
+      "totalRecords": 9,
+      "completeRecords": 9,
+      "sampleRecord": {
+        "year": 2020,
+        "model": "polestar-1",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Mercedes-Benz Vans",
+      "totalRecords": 7,
+      "completeRecords": 3,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sprinter 2500",
+        "trim": "(Alloy Wheels)"
+      },
+      "completionPct": "42.9"
+    },
+    {
+      "make": "Chevrolet Vans",
+      "totalRecords": 6,
+      "completeRecords": 0,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Express 2500",
+        "trim": "Base"
+      },
+      "completionPct": "0.0"
+    },
+    {
+      "make": "GMC Vans",
+      "totalRecords": 6,
+      "completeRecords": 0,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Savana 2500",
+        "trim": "Base"
+      },
+      "completionPct": "0.0"
+    },
+    {
+      "make": "Karma",
+      "totalRecords": 6,
+      "completeRecords": 6,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Revero",
+        "trim": "(Optional Tire Pkg.)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "RAM Minivans",
+      "totalRecords": 6,
+      "completeRecords": 6,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "ProMaster City",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Smart",
+      "totalRecords": 6,
+      "completeRecords": 6,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Fortwo",
+        "trim": "Electric Drive"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Geo",
+      "totalRecords": 5,
+      "completeRecords": 5,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "metro",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Honda Minivans",
+      "totalRecords": 5,
+      "completeRecords": 5,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Odyssey",
+        "trim": "EX"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Kia Minivans",
+      "totalRecords": 5,
+      "completeRecords": 5,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sedona",
+        "trim": "EX"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "RAM Vans",
+      "totalRecords": 5,
+      "completeRecords": 2,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "ProMaster 1500",
+        "trim": "(118 inch wheelbase)(C-Type Tires)"
+      },
+      "completionPct": "40.0"
+    },
+    {
+      "make": "Plymouth",
+      "totalRecords": 4,
+      "completeRecords": 4,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "prowler",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Dodge Minivans",
+      "totalRecords": 4,
+      "completeRecords": 4,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Grand Caravan",
+        "trim": "GT"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Daewoo",
+      "totalRecords": 3,
+      "completeRecords": 3,
+      "sampleRecord": {
+        "year": 2000,
+        "model": "leganza",
+        "trim": "Base"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Nissan Minivans",
+      "totalRecords": 3,
+      "completeRecords": 3,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "NV200",
+        "trim": "S (C-Type Tires)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Chevrolet Minivans",
+      "totalRecords": 2,
+      "completeRecords": 2,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "City Express",
+        "trim": "LS (C-Type Tires)"
+      },
+      "completionPct": "100.0"
+    },
+    {
+      "make": "Mercedes-Benz Minivans",
+      "totalRecords": 2,
+      "completeRecords": 2,
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Metris",
+        "trim": "(Alloy Wheels)"
+      },
+      "completionPct": "100.0"
+    }
+  ]
+}

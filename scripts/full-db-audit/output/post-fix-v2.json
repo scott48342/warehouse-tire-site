@@ -1,0 +1,7077 @@
+{
+  "batchName": "post-fix-v2",
+  "yearRange": {
+    "start": 2000,
+    "end": 2026
+  },
+  "timestamp": "2026-05-14T13:57:51.288Z",
+  "summary": {
+    "totalRecords": 30656,
+    "completeRecords": 30464,
+    "completionPct": "99.37",
+    "missingTireSpec": 160,
+    "missingWheelSpec": 10,
+    "malformedTireSpec": 172,
+    "malformedWheelSpec": 0,
+    "staggeredIncomplete": 0,
+    "fakeGroupedTrim": 26,
+    "highSeverity": 196,
+    "mediumSeverity": 2100,
+    "lowSeverity": 9373
+  },
+  "issuesByCode": {
+    "NO_OFFSET_RANGE": 3336,
+    "NO_THREAD_SIZE": 2753,
+    "NO_SEAT_TYPE": 3284,
+    "WHEEL_SIZES_EMPTY": 1804,
+    "TIRE_HAS_NULL": 6,
+    "TIRE_NULL_ARRAY": 6,
+    "FAKE_FRONT_REAR_TRIM": 26,
+    "TIRE_INVALID_ELEMENT": 249,
+    "TIRE_NO_VALID": 154,
+    "NO_CENTER_BORE": 32,
+    "NO_BOLT_PATTERN": 10,
+    "NO_WHEEL_SIZES": 1,
+    "STAGGERED_FRONT_ARRAY_INVALID": 4,
+    "STAGGERED_REAR_ARRAY_INVALID": 4
+  },
+  "highSeverityRecords": [
+    {
+      "id": "9e798349-53d1-4c7e-b557-6d2058802a28",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "8add9882-3997-4739-8678-44a13c4b171f",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "27c74ed9-f607-45af-804a-e9c20aecd7a1",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "acb16617-ceef-41f5-983b-bcbd6eb1c0eb",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "d0b259e2-d300-4c6f-b645-7ac574abf2ae",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "3e2b9929-6b2f-4ba2-a496-48cca19d0387",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "e27e4100-a7cd-4c12-999c-1c3aa542dbd7",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Base Front Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Front Base"
+        }
+      ]
+    },
+    {
+      "id": "15a7d40b-d698-4b00-8db3-384732957b2a",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Base Rear Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Base Rear Base"
+        }
+      ]
+    },
+    {
+      "id": "868008dc-54ba-49b6-a6bb-443833058e85",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Front Plus",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Front Plus"
+        }
+      ]
+    },
+    {
+      "id": "7e183814-9943-4f20-88bb-af509d5d37ad",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Rear Plus",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Rear Plus"
+        }
+      ]
+    },
+    {
+      "id": "66ef5cc6-6af6-466e-ab2f-a133116fad51",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Spyder Front Plus Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Spyder Front Plus Spyder"
+        }
+      ]
+    },
+    {
+      "id": "23ab2cfe-2e12-4009-803c-42fee4ad9b7e",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Plus Spyder Rear Plus Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Plus Spyder Rear Plus Spyder"
+        }
+      ]
+    },
+    {
+      "id": "ded6763d-87b7-4dc8-9a1b-edec990f6de1",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "RWS Front RWS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: RWS Front RWS"
+        }
+      ]
+    },
+    {
+      "id": "7e5057fa-231c-4acf-8f9c-28f036af8ade",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "RWS Rear RWS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: RWS Rear RWS"
+        }
+      ]
+    },
+    {
+      "id": "f59356d7-ed8d-4df4-b2be-5bea8ffe8116",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Spyder Front Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Spyder Front Spyder"
+        }
+      ]
+    },
+    {
+      "id": "4abdd811-d5b9-4048-a607-269d1efa33bc",
+      "year": 2018,
+      "make": "Audi",
+      "model": "R8",
+      "trim": "Spyder Rear Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Spyder Rear Spyder"
+        }
+      ]
+    },
+    {
+      "id": "9042db8b-79b1-482f-a8d8-16a421676d74",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "High Country",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2561cbaf-a89a-49e1-9b06-6056c144c47d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "High Country Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0c07bba0-e6a9-4ca8-9f4f-13319e928f2b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6bfac73a-d0ef-4a6d-a207-bc376d4ddacb",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LT Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "49a22f78-cf28-4200-89c8-f9af943f59ac",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LTZ",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "83c1d7f4-c86c-41c7-918e-15efa9a67df6",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1c454c72-3576-4c2b-8539-54f2b21e434b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "WT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "05021728-fd78-446d-81ae-4e078fe6220d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "WT Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dea805e9-7cc2-4e02-9c3b-7aa90c5106b7",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "30bb91fc-a806-4e66-8920-a27e52fc1086",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0961adc9-81c7-4b61-8e34-8ab78ecc361d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1a98a3d6-9f9e-4c3d-9546-c1672dbd6351",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country Snow Plow Prep Pkg. (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d3bca2e0-81a7-4547-9d93-6fdb7d4b3cd1",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6ad19098-1014-49f3-8c27-5b80ee9ff586",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a9044757-b719-4980-9968-fd784f35cfb1",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "31c2630a-e360-494f-8a36-32b97058e6a2",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT Snow Plow Prep Pkg. (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d599138-97ba-41c5-97bc-f4560e610600",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "786dca0e-e8e9-4899-99bd-f59a6f9cad7e",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d979c5a5-19e5-4cf4-92e8-9d5a3da51451",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8ba5843e-1859-48e8-907f-cb808ee8bf8b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg. (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bd2f393b-63eb-402a-8cca-4f00e889dad0",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "e7581504-3d4b-4ca0-91e0-b566fe1633a2",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "748fe293-b14a-4c92-8d80-f55bdcdd9f68",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "294c7f04-d400-46b6-85ad-668a461aa038",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT Snow Plow Prep Pkg. (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "adf38854-ca57-4a57-b9e7-3fbd58bb032b",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3152bef9-c0e2-452f-91a6-d19a962141e6",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "LS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5d1972f0-04c3-4aa6-8e01-2a60365ac4b0",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "LT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "483c64c8-3fe5-44be-9145-bd23bf661483",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "62cf333a-66c5-42c3-af00-cae91203ac28",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "LS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c8ed4070-78ca-4b99-94c0-02c371301b17",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "LT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fa30e7fa-f05d-4cd8-82cd-7694c010a240",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Raptor",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "e50ed5e0-cf50-4d82-8602-10eeb874c853",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "King Ranch 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "441b4c74-fd66-49c7-a193-0f41d0f50509",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "King Ranch 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8fb3c948-5a34-42c9-b845-db69f1f50214",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5f72ccf3-45c5-481f-ad78-2f2c31ed7a00",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "43e5729f-22f1-4a98-892e-676260d92f9d",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x4 w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "290d26c4-7a5e-4528-aaa1-ef3cb5c39db2",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Limited",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d8f9f2bb-2e9e-46d7-8599-404ec450d0e9",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d59904c-9047-4e91-82b8-9e33bfd45675",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7552995d-6533-422a-8bab-2a9ddc1f44e2",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "55a010b0-6b87-41e5-ae6c-2072991b6c93",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x4 w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "05bfbd79-1ff4-4a63-ab7c-c13b302b692b",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "099761eb-6f8e-4a8f-ab44-c6f94d65ecce",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bb76f726-2d5f-4015-a08e-4fff989c4075",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x4 w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "174d21ac-801f-49e0-b6bd-0af06e22493e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b046f423-aae7-4d4d-8f8e-d3034a531a9d",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f44ca388-434f-461b-b77d-52f8cd67dc50",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b8e56c3c-a5f5-456c-b9d5-61426f16f711",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "480f6649-4f78-4128-a2b1-fb1c71956c28",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 (DRW) w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "40f00414-e527-4f1d-9916-00179e04f408",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fe8b2022-f679-4e5d-9af0-7908ddd2f2e7",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "16374ad1-6f0a-4779-9a8a-937e1932d404",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3c086551-6712-4117-9a82-d8d5da4064b7",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a4445559-3fdb-48a2-89a7-2c184a40a0f1",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "81c39b8b-3d26-41d7-9374-b35349a743bf",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 (DRW) w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7afbeb17-d394-40f1-a034-19ba171d1c8c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8356b00d-9138-438e-9fe5-9e368cb88213",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Limited",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "817f0f7f-576e-4607-9aa4-c38b87492b3b",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2b45e3db-5125-4a4e-bbae-c366fca2c34e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Platinum (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a38682bc-51dc-422a-ae8a-f2964f745e2e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ff312564-1692-4982-a4d8-30eceee9c2d5",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3fca8c54-9027-4582-aeed-f998b2a4bbc1",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "374dc1bc-c203-424e-9205-f4a20b4c5d0c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d0ef0093-0549-4dee-b095-5685bc172ef4",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 (DRW) w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fae19cc4-188b-4f61-bdae-8e1c80968b6a",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dd9fb7c1-db1b-4977-9a83-a05db22c89c4",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3a107432-c386-4cc0-a7cd-2bcd8bf06df6",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "72062ec0-1cb9-4e69-8e3d-47595361dc71",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f1570e85-99ec-4b62-978e-71a86d93056c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "88f730bb-fa2c-4ded-8600-212cfb5f4649",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 (DRW) w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bd218ef0-616e-41f3-9c31-81f5c1dff155",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 w/Snow Plow Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "086f4822-b093-4831-bcdc-96e21bc4ed69",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "04818ad4-119c-4684-905b-3384d2a3916e",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "Denali",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2e3e4ebf-db4b-4e21-935c-5dc6b30335bf",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "SLE",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f55c0b68-21bc-4653-a9c3-6d853a25f291",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "SLT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dbea3f16-7246-4727-b03b-790d94700b7d",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "(DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ecfa05dc-92fe-4f1b-a3c7-013ea259de1f",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a4544e36-6249-4560-aab7-2ef7cabe62f1",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Denali",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "4c0e1731-f0eb-42e9-8a3c-b6d69ef86331",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a0d83f88-126f-468e-af40-040488b0294c",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b238e5df-fdc6-468b-b5f9-de4af5f896ba",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "07ec64fc-fbd4-4942-9dad-b5de97e39359",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE Snow Plow Prep Pkg. (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "13d0a8e8-8ba8-4b99-835a-f8f470e81ee7",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "593e9788-9895-49d8-80c2-e8469c0ce81f",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "22790533-e716-4442-911e-84d0ff21b5ca",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "acfb18a6-0489-4995-8cd5-b5dbf75293fd",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT Snow Plow Prep Pkg. (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "00ec029c-471b-4942-af86-80e2c1313ed9",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Snow Plow Prep Pkg.",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ca185575-2c89-4d5c-bb7f-8562eec3c468",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Snow Plow Prep Pkg. (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "46043d38-d0e3-469c-9705-ec2ef51ea271",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3e011dde-b45c-4afc-b5ae-c0fca568fef1",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "LS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ec5b9044-4a77-4f6e-b327-d81079681c49",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "LT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d6f2df9-021e-4004-89db-1e87171a2d14",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0248e761-7c1e-4bb5-9d27-f9b8eb0f88d5",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "LS",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d5d303fc-afca-4315-ba3a-7cd0f1505bd3",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "LT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "15eeeff0-154e-4ffd-a02e-fe079ae2aea7",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "trim": "Rubicon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d6833bfe-d2cc-43d4-a77b-407e4256091a",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "trim": "Unlimited Moab",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6c19feb8-2022-487c-97b4-8aa4dbfe5e3e",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "trim": "Unlimited Rubicon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0c180060-5e55-417a-b3ec-976ae7d2b072",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Rubicon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7e38f300-9e4f-43c0-87e1-fc09601f5464",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Rubicon Recon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3d36041f-55bd-4fd5-8ed9-167208aa615b",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Rubicon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1f33afc3-7e31-480a-ae54-1f9dae6a046e",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Rubicon Recon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a82b96c1-e1ef-4ff0-8513-5fd363e1b4e8",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Willys Wheeler",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "18b20271-1cdf-4113-95fb-ca1550be302c",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Willys Wheeler W",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "833f919a-13f8-403e-a858-4b9adaac8865",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Willys Wheeler",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5a5f5d01-658f-47f7-bcc6-3fbd80add0ac",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Willys Wheeler W",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d22815ac-e792-4195-b034-a97963ef7214",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "trim": "LP740-4 S (Center Lock) Front LP740-4 S (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        },
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP740-4 S (Center Lock) Front LP740-4 S (Center Lock)"
+        }
+      ]
+    },
+    {
+      "id": "ce56838b-717d-49eb-b97f-d3860a4c468f",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "trim": "LP740-4 S (Center Lock) Rear LP740-4 S (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        },
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP740-4 S (Center Lock) Rear LP740-4 S (Center Lock)"
+        }
+      ]
+    },
+    {
+      "id": "490edabd-4be2-4a4a-9058-e89676dc8ac2",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "trim": "LP740-4 S Front LP740-4 S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP740-4 S Front LP740-4 S"
+        }
+      ]
+    },
+    {
+      "id": "86d4aa8d-2368-4af4-8dec-b9b7187ea5fc",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "trim": "LP740-4 S Rear LP740-4 S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP740-4 S Rear LP740-4 S"
+        }
+      ]
+    },
+    {
+      "id": "c0a98adb-3520-4b91-805d-e9687e44cbc3",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP580-2 Front LP580-2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP580-2 Front LP580-2"
+        }
+      ]
+    },
+    {
+      "id": "ab8ea3ed-0538-4a14-bfd7-c3ee4b435839",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP580-2 Rear LP580-2",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP580-2 Rear LP580-2"
+        }
+      ]
+    },
+    {
+      "id": "af86d92d-fca3-4626-8046-c8c8433ce032",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP580-2 Spyder Front LP580-2 Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP580-2 Spyder Front LP580-2 Spyder"
+        }
+      ]
+    },
+    {
+      "id": "3c4304c0-2b0a-44fb-a61e-7001e2f8f5c9",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP580-2 Spyder Rear LP580-2 Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP580-2 Spyder Rear LP580-2 Spyder"
+        }
+      ]
+    },
+    {
+      "id": "8ef82f11-559c-42ae-8c24-9af6779e3504",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP610-4 Front LP610-4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP610-4 Front LP610-4"
+        }
+      ]
+    },
+    {
+      "id": "7b6c8f99-2c2a-4477-a70c-da6b0c32a304",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP610-4 Rear LP610-4",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP610-4 Rear LP610-4"
+        }
+      ]
+    },
+    {
+      "id": "89670997-70fa-42c8-8117-a273d30bfaa8",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP610-4 Spyder Front LP610-4 Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP610-4 Spyder Front LP610-4 Spyder"
+        }
+      ]
+    },
+    {
+      "id": "039c42f4-0bf9-4956-872a-988887e7d499",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "LP610-4 Spyder Rear LP610-4 Spyder",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: LP610-4 Spyder Rear LP610-4 Spyder"
+        }
+      ]
+    },
+    {
+      "id": "9f17faae-f31c-4b2e-9d3e-3b76339ba1f0",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "Performante (Center Lock) Front Performante (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        },
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Performante (Center Lock) Front Performante (Center Lock)"
+        }
+      ]
+    },
+    {
+      "id": "17f9a270-df97-46b5-b045-a2858db4ff4e",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "Performante (Center Lock) Rear Performante (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        },
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Performante (Center Lock) Rear Performante (Center Lock)"
+        }
+      ]
+    },
+    {
+      "id": "b5a727b2-3f9b-4b35-bc30-9b50d54e3e98",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "Performante Front Performante",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Performante Front Performante"
+        }
+      ]
+    },
+    {
+      "id": "548b6710-b6f2-4021-a6f1-67b369389cc7",
+      "year": 2018,
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "trim": "Performante Rear Performante",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Performante Rear Performante"
+        }
+      ]
+    },
+    {
+      "id": "bee2dc21-5563-443b-a0d3-c1ae0703305e",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 2500",
+      "trim": "(Alloy Wheels)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "279a992f-193a-44ca-9800-b1d720bd9a36",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 2500",
+      "trim": "(Steel Wheels)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dddcedeb-6089-4f60-a608-6563df3913ff",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500",
+      "trim": "(DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "cc9cacda-b587-4a31-a193-bc286fa9acde",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500XD",
+      "trim": "(DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "965fd389-35ca-4af4-8e06-8ada77638d04",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "PRO-4X",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "eb07bb23-688d-4c61-8312-697323261304",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "Platinum Reserve",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c15395b2-7a37-4c3c-b433-8b6cdfa89ecc",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3a57a754-cd76-432a-923d-1f85d74ae402",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "SL",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "24ce9157-a839-435f-9ffc-40cfd26fc8b2",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "SV",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "cd51b97e-4424-4ab9-b9f0-02d88426e228",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV1500",
+      "trim": "S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8196826a-2596-4693-8d99-f68b7789a9aa",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV1500",
+      "trim": "SV",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3fbb48b2-d7b6-44ee-b197-af1fe550555a",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV2500",
+      "trim": "S",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c1f4a165-546b-42ad-9e5f-adb64c6ce3ce",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV2500",
+      "trim": "SL",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "60521e9c-143b-4d88-bf6c-6b8f0e372292",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV2500",
+      "trim": "SV",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "18b17303-e28a-4ba2-b1e0-ebb0cc4990d6",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "S Cargo Van",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f92806ad-a501-4417-98dc-296e5472f9fc",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "S Passenger Van",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fa31154d-4e49-4b3a-9788-3442d990968b",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SL Cargo Van",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "19a2383e-7b45-41d2-9bb8-d6fdfc9968f5",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SL Passenger Van",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5e23e319-d2ff-41a8-8ea9-4349e778f6a6",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SV Cargo Van",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1a857ebc-46e1-4154-a9a4-cdead23e5129",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SV Passenger Van",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2696ecd6-5fde-4593-8955-e765ca4b3241",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Carrera 4 GTS (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        }
+      ]
+    },
+    {
+      "id": "8709c186-7bdf-4357-9d41-2ee2ade8ee91",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Carrera GTS (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        }
+      ]
+    },
+    {
+      "id": "73022cd3-57c6-4bfc-8a71-249928d45027",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Targa 4 GTS (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        }
+      ]
+    },
+    {
+      "id": "957e5a9f-2ed1-4e79-b4d7-7dd90986bcb0",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Turbo (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        }
+      ]
+    },
+    {
+      "id": "46db1ced-eb14-4db3-bd72-0b31f39466d6",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Turbo S (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        }
+      ]
+    },
+    {
+      "id": "3a8f5a0a-5f14-4a4c-b65a-20ecb037abdc",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "trim": "Turbo S Exclusive Series (Center Lock)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "NO_BOLT_PATTERN",
+          "message": "Missing bolt pattern"
+        }
+      ]
+    },
+    {
+      "id": "f24becf3-4003-4aa2-bcdb-9386f9b7e77e",
+      "year": 2018,
+      "make": "RAM Vans",
+      "model": "ProMaster 1500",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "4a042a0d-9bfe-4484-9048-a7178a950c92",
+      "year": 2018,
+      "make": "RAM Vans",
+      "model": "ProMaster 2500",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "9042e2a3-a67f-4ac2-ba71-5cf46f73ac4a",
+      "year": 2018,
+      "make": "RAM Vans",
+      "model": "ProMaster 3500",
+      "trim": "Base",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "daaee1ec-58eb-4dfa-bcb1-85a69480588c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "1500",
+      "trim": "Rebel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "927eb786-e925-4af2-a9d1-4127755f7f9e",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Big Horn",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0eca199b-bb2b-4ed6-b2e1-5f67efc21d08",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Laramie",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5bba5b9f-0f90-458f-9a36-ff6914cd364c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Laramie Longhorn",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0c4c60af-8f2e-41ad-adfe-9cce972fa87c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Limited",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a980c488-ab06-413e-a7e3-cc748cd5f7b6",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Power Wagon",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "315746ec-0db2-43c0-b34b-209cfc73229c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "SLT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "4b1a0bc0-6c67-41e6-b5af-ca260b4f685f",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Tradesman",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "25a1f990-6cdc-40bf-8297-74f239221dea",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Big Horn",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "86ad4cf2-17dd-42dd-bad6-c362939706ea",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Big Horn 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "86a646d4-f0dc-4139-b897-1302b2308aba",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Big Horn 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2b31506c-8ee0-47d1-8a51-838daa746d32",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0e3569f5-ad81-4601-8a81-476f5a2de181",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bccdf57e-d58b-4695-94cf-2b13e00a6bd5",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "23c6e65a-93b6-405c-8af2-f65a48374cdd",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie Longhorn",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "26790f35-6225-405f-afb1-ff9c1eed1b63",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie Longhorn 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fac9c8cc-ff19-4bb4-a85f-1e5f594c6374",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie Longhorn 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "50ece135-cc67-408e-8aac-607161a2e359",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Limited",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "500a3fab-e2a8-48f6-a182-c2b96404b6a4",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Limited 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a363d01c-c2ed-4a2e-bc1e-42766210523f",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Limited 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "9881eeed-da08-410e-b4e2-434503572164",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "SLT",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3cb8f909-6b56-483a-82ee-3d1cde877dce",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "SLT 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c531529c-40d1-4fe6-a6c3-a37a3ff82caf",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "SLT 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ba1dcf45-201c-4743-bc9f-a0e87078db3f",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Tradesman",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "943a671b-5608-4d42-ae98-142f8da61d34",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Tradesman 4x2 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dbb97362-7b39-45f1-a0ab-2f3e41e6181e",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Tradesman 4x4 (DRW)",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    }
+  ],
+  "customerImpactingGaps": [
+    {
+      "id": "9e798349-53d1-4c7e-b557-6d2058802a28",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "8add9882-3997-4739-8678-44a13c4b171f",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "27c74ed9-f607-45af-804a-e9c20aecd7a1",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "acb16617-ceef-41f5-983b-bcbd6eb1c0eb",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "d0b259e2-d300-4c6f-b645-7ac574abf2ae",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "3e2b9929-6b2f-4ba2-a496-48cca19d0387",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "9042db8b-79b1-482f-a8d8-16a421676d74",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "High Country",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2561cbaf-a89a-49e1-9b06-6056c144c47d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "High Country Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0c07bba0-e6a9-4ca8-9f4f-13319e928f2b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6bfac73a-d0ef-4a6d-a207-bc376d4ddacb",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "49a22f78-cf28-4200-89c8-f9af943f59ac",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LTZ",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "83c1d7f4-c86c-41c7-918e-15efa9a67df6",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1c454c72-3576-4c2b-8539-54f2b21e434b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "WT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "05021728-fd78-446d-81ae-4e078fe6220d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "trim": "WT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dea805e9-7cc2-4e02-9c3b-7aa90c5106b7",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "30bb91fc-a806-4e66-8920-a27e52fc1086",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0961adc9-81c7-4b61-8e34-8ab78ecc361d",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1a98a3d6-9f9e-4c3d-9546-c1672dbd6351",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "High Country Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d3bca2e0-81a7-4547-9d93-6fdb7d4b3cd1",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6ad19098-1014-49f3-8c27-5b80ee9ff586",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a9044757-b719-4980-9968-fd784f35cfb1",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "31c2630a-e360-494f-8a36-32b97058e6a2",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LT Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d599138-97ba-41c5-97bc-f4560e610600",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "786dca0e-e8e9-4899-99bd-f59a6f9cad7e",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d979c5a5-19e5-4cf4-92e8-9d5a3da51451",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8ba5843e-1859-48e8-907f-cb808ee8bf8b",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "LTZ Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bd2f393b-63eb-402a-8cca-4f00e889dad0",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "e7581504-3d4b-4ca0-91e0-b566fe1633a2",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "748fe293-b14a-4c92-8d80-f55bdcdd9f68",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "294c7f04-d400-46b6-85ad-668a461aa038",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "trim": "WT Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "adf38854-ca57-4a57-b9e7-3fbd58bb032b",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3152bef9-c0e2-452f-91a6-d19a962141e6",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5d1972f0-04c3-4aa6-8e01-2a60365ac4b0",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 2500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "483c64c8-3fe5-44be-9145-bd23bf661483",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "62cf333a-66c5-42c3-af00-cae91203ac28",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c8ed4070-78ca-4b99-94c0-02c371301b17",
+      "year": 2018,
+      "make": "Chevrolet Vans",
+      "model": "Express 3500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fa30e7fa-f05d-4cd8-82cd-7694c010a240",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-150",
+      "trim": "Raptor",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT315/70R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "e50ed5e0-cf50-4d82-8602-10eeb874c853",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "King Ranch 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "441b4c74-fd66-49c7-a193-0f41d0f50509",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "King Ranch 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8fb3c948-5a34-42c9-b845-db69f1f50214",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5f72ccf3-45c5-481f-ad78-2f2c31ed7a00",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "43e5729f-22f1-4a98-892e-676260d92f9d",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Lariat 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "290d26c4-7a5e-4528-aaa1-ef3cb5c39db2",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Limited",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d8f9f2bb-2e9e-46d7-8599-404ec450d0e9",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "Platinum",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d59904c-9047-4e91-82b8-9e33bfd45675",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7552995d-6533-422a-8bab-2a9ddc1f44e2",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "55a010b0-6b87-41e5-ae6c-2072991b6c93",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XL 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "05bfbd79-1ff4-4a63-ab7c-c13b302b692b",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "099761eb-6f8e-4a8f-ab44-c6f94d65ecce",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bb76f726-2d5f-4015-a08e-4fff989c4075",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-250 Super Duty",
+      "trim": "XLT 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "174d21ac-801f-49e0-b6bd-0af06e22493e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b046f423-aae7-4d4d-8f8e-d3034a531a9d",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f44ca388-434f-461b-b77d-52f8cd67dc50",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b8e56c3c-a5f5-456c-b9d5-61426f16f711",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "480f6649-4f78-4128-a2b1-fb1c71956c28",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "40f00414-e527-4f1d-9916-00179e04f408",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "King Ranch 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fe8b2022-f679-4e5d-9af0-7908ddd2f2e7",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "16374ad1-6f0a-4779-9a8a-937e1932d404",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3c086551-6712-4117-9a82-d8d5da4064b7",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a4445559-3fdb-48a2-89a7-2c184a40a0f1",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "81c39b8b-3d26-41d7-9374-b35349a743bf",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7afbeb17-d394-40f1-a034-19ba171d1c8c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Lariat 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8356b00d-9138-438e-9fe5-9e368cb88213",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Limited",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "817f0f7f-576e-4607-9aa4-c38b87492b3b",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Platinum",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2b45e3db-5125-4a4e-bbae-c366fca2c34e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "Platinum (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a38682bc-51dc-422a-ae8a-f2964f745e2e",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ff312564-1692-4982-a4d8-30eceee9c2d5",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3fca8c54-9027-4582-aeed-f998b2a4bbc1",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "374dc1bc-c203-424e-9205-f4a20b4c5d0c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d0ef0093-0549-4dee-b095-5685bc172ef4",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fae19cc4-188b-4f61-bdae-8e1c80968b6a",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XL 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dd9fb7c1-db1b-4977-9a83-a05db22c89c4",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x2",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3a107432-c386-4cc0-a7cd-2bcd8bf06df6",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "72062ec0-1cb9-4e69-8e3d-47595361dc71",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f1570e85-99ec-4b62-978e-71a86d93056c",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "88f730bb-fa2c-4ded-8600-212cfb5f4649",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 (DRW) w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bd218ef0-616e-41f3-9c31-81f5c1dff155",
+      "year": 2018,
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "trim": "XLT 4x4 w/Snow Plow Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "086f4822-b093-4831-bcdc-96e21bc4ed69",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "04818ad4-119c-4684-905b-3384d2a3916e",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "Denali",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2e3e4ebf-db4b-4e21-935c-5dc6b30335bf",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "SLE",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f55c0b68-21bc-4653-a9c3-6d853a25f291",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 2500 HD",
+      "trim": "SLT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dbea3f16-7246-4727-b03b-790d94700b7d",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "(DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ecfa05dc-92fe-4f1b-a3c7-013ea259de1f",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a4544e36-6249-4560-aab7-2ef7cabe62f1",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Denali",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "4c0e1731-f0eb-42e9-8a3c-b6d69ef86331",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a0d83f88-126f-468e-af40-040488b0294c",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "b238e5df-fdc6-468b-b5f9-de4af5f896ba",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "07ec64fc-fbd4-4942-9dad-b5de97e39359",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLE Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "13d0a8e8-8ba8-4b99-835a-f8f470e81ee7",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "593e9788-9895-49d8-80c2-e8469c0ce81f",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "22790533-e716-4442-911e-84d0ff21b5ca",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "acfb18a6-0489-4995-8cd5-b5dbf75293fd",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "SLT Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "00ec029c-471b-4942-af86-80e2c1313ed9",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Snow Plow Prep Pkg.",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ca185575-2c89-4d5c-bb7f-8562eec3c468",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Sierra 3500 HD",
+      "trim": "Snow Plow Prep Pkg. (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "46043d38-d0e3-469c-9705-ec2ef51ea271",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3e011dde-b45c-4afc-b5ae-c0fca568fef1",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ec5b9044-4a77-4f6e-b327-d81079681c49",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 2500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8d6f2df9-021e-4004-89db-1e87171a2d14",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0248e761-7c1e-4bb5-9d27-f9b8eb0f88d5",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "LS",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d5d303fc-afca-4315-ba3a-7cd0f1505bd3",
+      "year": 2018,
+      "make": "GMC Vans",
+      "model": "Savana 3500",
+      "trim": "LT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "15eeeff0-154e-4ffd-a02e-fe079ae2aea7",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "trim": "Rubicon",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/70R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "d6833bfe-d2cc-43d4-a77b-407e4256091a",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "trim": "Unlimited Moab",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "6c19feb8-2022-487c-97b4-8aa4dbfe5e3e",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "trim": "Unlimited Rubicon",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/70R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0c180060-5e55-417a-b3ec-976ae7d2b072",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Rubicon",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "7e38f300-9e4f-43c0-87e1-fc09601f5464",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Rubicon Recon",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3d36041f-55bd-4fd5-8ed9-167208aa615b",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Rubicon",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1f33afc3-7e31-480a-ae54-1f9dae6a046e",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Rubicon Recon",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a82b96c1-e1ef-4ff0-8513-5fd363e1b4e8",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Willys Wheeler",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "18b20271-1cdf-4113-95fb-ca1550be302c",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Unlimited Willys Wheeler W",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "833f919a-13f8-403e-a858-4b9adaac8865",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Willys Wheeler",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5a5f5d01-658f-47f7-bcc6-3fbd80add0ac",
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler JK",
+      "trim": "Willys Wheeler W",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT255/75R17/C\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bee2dc21-5563-443b-a0d3-c1ae0703305e",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 2500",
+      "trim": "(Alloy Wheels)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "279a992f-193a-44ca-9800-b1d720bd9a36",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 2500",
+      "trim": "(Steel Wheels)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dddcedeb-6089-4f60-a608-6563df3913ff",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500",
+      "trim": "(DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT215/85R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "cc9cacda-b587-4a31-a193-bc286fa9acde",
+      "year": 2018,
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500XD",
+      "trim": "(DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT215/85R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "965fd389-35ca-4af4-8e06-8ada77638d04",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "PRO-4X",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/65R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "eb07bb23-688d-4c61-8312-697323261304",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "Platinum Reserve",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c15395b2-7a37-4c3c-b433-8b6cdfa89ecc",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "S",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3a57a754-cd76-432a-923d-1f85d74ae402",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "SL",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT265/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "24ce9157-a839-435f-9ffc-40cfd26fc8b2",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Titan XD",
+      "trim": "SV",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "cd51b97e-4424-4ab9-b9f0-02d88426e228",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV1500",
+      "trim": "S",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "8196826a-2596-4693-8d99-f68b7789a9aa",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV1500",
+      "trim": "SV",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3fbb48b2-d7b6-44ee-b197-af1fe550555a",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV2500",
+      "trim": "S",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c1f4a165-546b-42ad-9e5f-adb64c6ce3ce",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV2500",
+      "trim": "SL",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "60521e9c-143b-4d88-bf6c-6b8f0e372292",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV2500",
+      "trim": "SV",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "18b17303-e28a-4ba2-b1e0-ebb0cc4990d6",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "S Cargo Van",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f92806ad-a501-4417-98dc-296e5472f9fc",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "S Passenger Van",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fa31154d-4e49-4b3a-9788-3442d990968b",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SL Cargo Van",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "19a2383e-7b45-41d2-9bb8-d6fdfc9968f5",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SL Passenger Van",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5e23e319-d2ff-41a8-8ea9-4349e778f6a6",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SV Cargo Van",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/75R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "1a857ebc-46e1-4154-a9a4-cdead23e5129",
+      "year": 2018,
+      "make": "Nissan Vans",
+      "model": "NV3500",
+      "trim": "SV Passenger Van",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "f24becf3-4003-4aa2-bcdb-9386f9b7e77e",
+      "year": 2018,
+      "make": "RAM Vans",
+      "model": "ProMaster 1500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT225/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "4a042a0d-9bfe-4484-9048-a7178a950c92",
+      "year": 2018,
+      "make": "RAM Vans",
+      "model": "ProMaster 2500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT225/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "9042e2a3-a67f-4ac2-ba71-5cf46f73ac4a",
+      "year": 2018,
+      "make": "RAM Vans",
+      "model": "ProMaster 3500",
+      "trim": "Base",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT225/75R16/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "daaee1ec-58eb-4dfa-bcb1-85a69480588c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "1500",
+      "trim": "Rebel",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/70R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "927eb786-e925-4af2-a9d1-4127755f7f9e",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Big Horn",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0eca199b-bb2b-4ed6-b2e1-5f67efc21d08",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Laramie",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "5bba5b9f-0f90-458f-9a36-ff6914cd364c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Laramie Longhorn",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0c4c60af-8f2e-41ad-adfe-9cce972fa87c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Limited",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a980c488-ab06-413e-a7e3-cc748cd5f7b6",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Power Wagon",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/70R17/D\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "315746ec-0db2-43c0-b34b-209cfc73229c",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "SLT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "4b1a0bc0-6c67-41e6-b5af-ca260b4f685f",
+      "year": 2018,
+      "make": "Ram",
+      "model": "2500",
+      "trim": "Tradesman",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT245/70R17/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "25a1f990-6cdc-40bf-8297-74f239221dea",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Big Horn",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "86ad4cf2-17dd-42dd-bad6-c362939706ea",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Big Horn 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "86a646d4-f0dc-4139-b897-1302b2308aba",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Big Horn 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "2b31506c-8ee0-47d1-8a51-838daa746d32",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "0e3569f5-ad81-4601-8a81-476f5a2de181",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "bccdf57e-d58b-4695-94cf-2b13e00a6bd5",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "23c6e65a-93b6-405c-8af2-f65a48374cdd",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie Longhorn",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "26790f35-6225-405f-afb1-ff9c1eed1b63",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie Longhorn 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "fac9c8cc-ff19-4bb4-a85f-1e5f594c6374",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Laramie Longhorn 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "50ece135-cc67-408e-8aac-607161a2e359",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Limited",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "500a3fab-e2a8-48f6-a182-c2b96404b6a4",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Limited 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "a363d01c-c2ed-4a2e-bc1e-42766210523f",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Limited 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "9881eeed-da08-410e-b4e2-434503572164",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "SLT",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT285/60R20/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "3cb8f909-6b56-483a-82ee-3d1cde877dce",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "SLT 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "c531529c-40d1-4fe6-a6c3-a37a3ff82caf",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "SLT 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "ba1dcf45-201c-4743-bc9f-a0e87078db3f",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Tradesman",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT275/70R18/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "943a671b-5608-4d42-ae98-142f8da61d34",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Tradesman 4x2 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    },
+    {
+      "id": "dbb97362-7b39-45f1-a0ab-2f3e41e6181e",
+      "year": 2018,
+      "make": "Ram",
+      "model": "3500",
+      "trim": "Tradesman 4x4 (DRW)",
+      "tireFormat": "array-no-valid",
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "code": "TIRE_INVALID_ELEMENT",
+          "message": "Invalid tire element: \"LT235/80R17/E\""
+        },
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NO_VALID",
+          "message": "No valid tire sizes in array"
+        }
+      ]
+    }
+  ],
+  "sampleByMake": {
+    "acura": {
+      "make": "Acura",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Integra Type-R",
+        "trim": "Base"
+      },
+      "totalRecords": 569,
+      "completeRecords": 569
+    },
+    "audi": {
+      "make": "Audi",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "a3",
+        "trim": "Base"
+      },
+      "totalRecords": 997,
+      "completeRecords": 997
+    },
+    "bmw": {
+      "make": "BMW",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3 Series",
+        "trim": "330i xDrive"
+      },
+      "totalRecords": 1438,
+      "completeRecords": 1438
+    },
+    "buick": {
+      "make": "Buick",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "lesabre",
+        "trim": "Custom"
+      },
+      "totalRecords": 549,
+      "completeRecords": 549
+    },
+    "cadillac": {
+      "make": "Cadillac",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "escalade",
+        "trim": "Base"
+      },
+      "totalRecords": 556,
+      "completeRecords": 550
+    },
+    "chevrolet": {
+      "make": "Chevrolet",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Express 1500",
+        "trim": "Base"
+      },
+      "totalRecords": 2242,
+      "completeRecords": 2218
+    },
+    "chrysler": {
+      "make": "Chrysler",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Town & Country",
+        "trim": "Base"
+      },
+      "totalRecords": 377,
+      "completeRecords": 377
+    },
+    "daewoo": {
+      "make": "Daewoo",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "leganza",
+        "trim": "Base"
+      },
+      "totalRecords": 3,
+      "completeRecords": 3
+    },
+    "dodge": {
+      "make": "Dodge",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "durango",
+        "trim": "Base"
+      },
+      "totalRecords": 601,
+      "completeRecords": 601
+    },
+    "ford": {
+      "make": "Ford",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Crown Victoria",
+        "trim": "Base"
+      },
+      "totalRecords": 2025,
+      "completeRecords": 1984
+    },
+    "gmc": {
+      "make": "GMC",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sierra-1500",
+        "trim": "Base"
+      },
+      "totalRecords": 1069,
+      "completeRecords": 1052
+    },
+    "geo": {
+      "make": "Geo",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "metro",
+        "trim": "Base"
+      },
+      "totalRecords": 5,
+      "completeRecords": 5
+    },
+    "honda": {
+      "make": "Honda",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "accord",
+        "trim": "EX"
+      },
+      "totalRecords": 1185,
+      "completeRecords": 1185
+    },
+    "hummer": {
+      "make": "Hummer",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "H1",
+        "trim": "Base"
+      },
+      "totalRecords": 19,
+      "completeRecords": 19
+    },
+    "hyundai": {
+      "make": "Hyundai",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Santa Fe",
+        "trim": "Base"
+      },
+      "totalRecords": 764,
+      "completeRecords": 764
+    },
+    "isuzu": {
+      "make": "Isuzu",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "rodeo",
+        "trim": "Base"
+      },
+      "totalRecords": 11,
+      "completeRecords": 11
+    },
+    "jaguar": {
+      "make": "Jaguar",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s-type",
+        "trim": "Base"
+      },
+      "totalRecords": 471,
+      "completeRecords": 471
+    },
+    "jeep": {
+      "make": "Jeep",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Grand Cherokee",
+        "trim": "Base"
+      },
+      "totalRecords": 1030,
+      "completeRecords": 1019
+    },
+    "kia": {
+      "make": "Kia",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sportage",
+        "trim": "Base/LX/EX"
+      },
+      "totalRecords": 749,
+      "completeRecords": 749
+    },
+    "land rover": {
+      "make": "Land Rover",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "defender",
+        "trim": "Base"
+      },
+      "totalRecords": 606,
+      "completeRecords": 606
+    },
+    "lexus": {
+      "make": "Lexus",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "es",
+        "trim": "ES 250"
+      },
+      "totalRecords": 1061,
+      "completeRecords": 1061
+    },
+    "lincoln": {
+      "make": "Lincoln",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "continental",
+        "trim": "Black Label"
+      },
+      "totalRecords": 470,
+      "completeRecords": 470
+    },
+    "mazda": {
+      "make": "Mazda",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "mx-5",
+        "trim": "Base"
+      },
+      "totalRecords": 522,
+      "completeRecords": 522
+    },
+    "mercedes": {
+      "make": "Mercedes",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "c-class",
+        "trim": "Base"
+      },
+      "totalRecords": 1191,
+      "completeRecords": 1191
+    },
+    "mercedes-benz": {
+      "make": "Mercedes-Benz",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "C-Class",
+        "trim": "C300"
+      },
+      "totalRecords": 1553,
+      "completeRecords": 1553
+    },
+    "mercury": {
+      "make": "Mercury",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "cougar",
+        "trim": "Base"
+      },
+      "totalRecords": 47,
+      "completeRecords": 47
+    },
+    "mitsubishi": {
+      "make": "Mitsubishi",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3000-gt",
+        "trim": "Base"
+      },
+      "totalRecords": 529,
+      "completeRecords": 529
+    },
+    "nissan": {
+      "make": "Nissan",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "altima",
+        "trim": "Platinum"
+      },
+      "totalRecords": 1633,
+      "completeRecords": 1628
+    },
+    "oldsmobile": {
+      "make": "Oldsmobile",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "alero",
+        "trim": "Base"
+      },
+      "totalRecords": 13,
+      "completeRecords": 13
+    },
+    "plymouth": {
+      "make": "Plymouth",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "prowler",
+        "trim": "Base"
+      },
+      "totalRecords": 4,
+      "completeRecords": 4
+    },
+    "pontiac": {
+      "make": "Pontiac",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "bonneville",
+        "trim": "Base"
+      },
+      "totalRecords": 40,
+      "completeRecords": 40
+    },
+    "porsche": {
+      "make": "Porsche",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "911",
+        "trim": "Carrera"
+      },
+      "totalRecords": 759,
+      "completeRecords": 753
+    },
+    "ram": {
+      "make": "RAM",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "1500",
+        "trim": "Laramie"
+      },
+      "totalRecords": 923,
+      "completeRecords": 897
+    },
+    "saab": {
+      "make": "Saab",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "9-3",
+        "trim": "Base"
+      },
+      "totalRecords": 26,
+      "completeRecords": 26
+    },
+    "saturn": {
+      "make": "Saturn",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "l-series",
+        "trim": "Base"
+      },
+      "totalRecords": 27,
+      "completeRecords": 27
+    },
+    "subaru": {
+      "make": "Subaru",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "forester",
+        "trim": "Base"
+      },
+      "totalRecords": 1136,
+      "completeRecords": 1136
+    },
+    "suzuki": {
+      "make": "Suzuki",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "grand-vitara",
+        "trim": "Base"
+      },
+      "totalRecords": 25,
+      "completeRecords": 25
+    },
+    "toyota": {
+      "make": "Toyota",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "4runner",
+        "trim": "Limited"
+      },
+      "totalRecords": 2385,
+      "completeRecords": 2385
+    },
+    "volkswagen": {
+      "make": "Volkswagen",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "beetle",
+        "trim": "Base"
+      },
+      "totalRecords": 813,
+      "completeRecords": 813
+    },
+    "volvo": {
+      "make": "Volvo",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s40",
+        "trim": "Base"
+      },
+      "totalRecords": 466,
+      "completeRecords": 466
+    },
+    "mini": {
+      "make": "MINI",
+      "sampleRecord": {
+        "year": 2002,
+        "model": "cooper",
+        "trim": "Classic"
+      },
+      "totalRecords": 363,
+      "completeRecords": 363
+    },
+    "infiniti": {
+      "make": "Infiniti",
+      "sampleRecord": {
+        "year": 2004,
+        "model": "qx80",
+        "trim": "Luxe"
+      },
+      "totalRecords": 407,
+      "completeRecords": 407
+    },
+    "scion": {
+      "make": "Scion",
+      "sampleRecord": {
+        "year": 2004,
+        "model": "xb",
+        "trim": "Base"
+      },
+      "totalRecords": 82,
+      "completeRecords": 82
+    },
+    "aston martin": {
+      "make": "Aston Martin",
+      "sampleRecord": {
+        "year": 2005,
+        "model": "vantage",
+        "trim": "V8/V12 Vantage (2nd Gen)"
+      },
+      "totalRecords": 40,
+      "completeRecords": 40
+    },
+    "maserati": {
+      "make": "Maserati",
+      "sampleRecord": {
+        "year": 2007,
+        "model": "granturismo",
+        "trim": "M145 (1st Gen Modern)"
+      },
+      "totalRecords": 66,
+      "completeRecords": 66
+    },
+    "lotus": {
+      "make": "Lotus",
+      "sampleRecord": {
+        "year": 2009,
+        "model": "evora",
+        "trim": "Evora/Evora S/Evora 400/Evora GT"
+      },
+      "totalRecords": 30,
+      "completeRecords": 30
+    },
+    "lamborghini": {
+      "make": "Lamborghini",
+      "sampleRecord": {
+        "year": 2011,
+        "model": "aventador",
+        "trim": "Aventador (All Variants)"
+      },
+      "totalRecords": 45,
+      "completeRecords": 41
+    },
+    "fiat": {
+      "make": "Fiat",
+      "sampleRecord": {
+        "year": 2012,
+        "model": "500",
+        "trim": "Base"
+      },
+      "totalRecords": 51,
+      "completeRecords": 51
+    },
+    "tesla": {
+      "make": "Tesla",
+      "sampleRecord": {
+        "year": 2012,
+        "model": "model-s",
+        "trim": "1st Gen"
+      },
+      "totalRecords": 122,
+      "completeRecords": 122
+    },
+    "alfa romeo": {
+      "make": "Alfa Romeo",
+      "sampleRecord": {
+        "year": 2014,
+        "model": "4c",
+        "trim": "Base"
+      },
+      "totalRecords": 119,
+      "completeRecords": 119
+    },
+    "ferrari": {
+      "make": "Ferrari",
+      "sampleRecord": {
+        "year": 2015,
+        "model": "488",
+        "trim": "488 GTB/Spider"
+      },
+      "totalRecords": 37,
+      "completeRecords": 37
+    },
+    "mclaren": {
+      "make": "McLaren",
+      "sampleRecord": {
+        "year": 2015,
+        "model": "570s",
+        "trim": "570S/570GT/570S Spider"
+      },
+      "totalRecords": 29,
+      "completeRecords": 29
+    },
+    "bentley": {
+      "make": "Bentley",
+      "sampleRecord": {
+        "year": 2016,
+        "model": "bentayga",
+        "trim": "1st Gen (2020 Facelift)"
+      },
+      "totalRecords": 41,
+      "completeRecords": 41
+    },
+    "genesis": {
+      "make": "Genesis",
+      "sampleRecord": {
+        "year": 2017,
+        "model": "g80",
+        "trim": "2.5T"
+      },
+      "totalRecords": 161,
+      "completeRecords": 161
+    },
+    "rolls-royce": {
+      "make": "Rolls-Royce",
+      "sampleRecord": {
+        "year": 2017,
+        "model": "phantom",
+        "trim": "8th Gen (VIII)"
+      },
+      "totalRecords": 32,
+      "completeRecords": 32
+    },
+    "chevrolet minivans": {
+      "make": "Chevrolet Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "City Express",
+        "trim": "LS (C-Type Tires)"
+      },
+      "totalRecords": 2,
+      "completeRecords": 2
+    },
+    "chevrolet vans": {
+      "make": "Chevrolet Vans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Express 2500",
+        "trim": "Base"
+      },
+      "totalRecords": 6,
+      "completeRecords": 0
+    },
+    "chrysler minivans": {
+      "make": "Chrysler Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Pacifica Minivan",
+        "trim": "Hybrid Limited"
+      },
+      "totalRecords": 9,
+      "completeRecords": 9
+    },
+    "dodge minivans": {
+      "make": "Dodge Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Grand Caravan",
+        "trim": "GT"
+      },
+      "totalRecords": 4,
+      "completeRecords": 4
+    },
+    "ford minivans": {
+      "make": "Ford Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Transit Connect",
+        "trim": "Titanium"
+      },
+      "totalRecords": 9,
+      "completeRecords": 9
+    },
+    "ford vans": {
+      "make": "Ford Vans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Transit-150",
+        "trim": "(C-Type Tires)"
+      },
+      "totalRecords": 10,
+      "completeRecords": 10
+    },
+    "gmc vans": {
+      "make": "GMC Vans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Savana 2500",
+        "trim": "Base"
+      },
+      "totalRecords": 6,
+      "completeRecords": 0
+    },
+    "honda minivans": {
+      "make": "Honda Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Odyssey",
+        "trim": "EX"
+      },
+      "totalRecords": 5,
+      "completeRecords": 5
+    },
+    "karma": {
+      "make": "Karma",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Revero",
+        "trim": "(Optional Tire Pkg.)"
+      },
+      "totalRecords": 2,
+      "completeRecords": 2
+    },
+    "kia minivans": {
+      "make": "Kia Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sedona",
+        "trim": "EX"
+      },
+      "totalRecords": 5,
+      "completeRecords": 5
+    },
+    "mercedes-benz minivans": {
+      "make": "Mercedes-Benz Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Metris",
+        "trim": "(Alloy Wheels)"
+      },
+      "totalRecords": 2,
+      "completeRecords": 2
+    },
+    "mercedes-benz vans": {
+      "make": "Mercedes-Benz Vans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sprinter 2500",
+        "trim": "(Alloy Wheels)"
+      },
+      "totalRecords": 5,
+      "completeRecords": 1
+    },
+    "nissan minivans": {
+      "make": "Nissan Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "NV200",
+        "trim": "S (C-Type Tires)"
+      },
+      "totalRecords": 3,
+      "completeRecords": 3
+    },
+    "nissan vans": {
+      "make": "Nissan Vans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "NV1500",
+        "trim": "S"
+      },
+      "totalRecords": 11,
+      "completeRecords": 0
+    },
+    "ram minivans": {
+      "make": "RAM Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "ProMaster City",
+        "trim": "Base"
+      },
+      "totalRecords": 6,
+      "completeRecords": 6
+    },
+    "ram vans": {
+      "make": "RAM Vans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "ProMaster 1500",
+        "trim": "(118 inch wheelbase)(C-Type Tires)"
+      },
+      "totalRecords": 5,
+      "completeRecords": 2
+    },
+    "smart": {
+      "make": "Smart",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Fortwo",
+        "trim": "Electric Drive"
+      },
+      "totalRecords": 2,
+      "completeRecords": 2
+    },
+    "toyota minivans": {
+      "make": "Toyota Minivans",
+      "sampleRecord": {
+        "year": 2018,
+        "model": "Sienna",
+        "trim": "L"
+      },
+      "totalRecords": 13,
+      "completeRecords": 13
+    },
+    "polestar": {
+      "make": "Polestar",
+      "sampleRecord": {
+        "year": 2020,
+        "model": "polestar-1",
+        "trim": "Base"
+      },
+      "totalRecords": 9,
+      "completeRecords": 9
+    },
+    "rivian": {
+      "make": "Rivian",
+      "sampleRecord": {
+        "year": 2021,
+        "model": "r1t",
+        "trim": "Quad"
+      },
+      "totalRecords": 17,
+      "completeRecords": 17
+    },
+    "lucid": {
+      "make": "Lucid",
+      "sampleRecord": {
+        "year": 2022,
+        "model": "air",
+        "trim": "EV"
+      },
+      "totalRecords": 11,
+      "completeRecords": 11
+    }
+  }
+}

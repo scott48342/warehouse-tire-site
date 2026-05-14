@@ -1,0 +1,700 @@
+{
+  "batchName": "batch-01-2000-2012",
+  "yearRange": {
+    "start": 2000,
+    "end": 2012
+  },
+  "timestamp": "2026-05-14T13:46:58.565Z",
+  "summary": {
+    "totalRecords": 10990,
+    "completeRecords": 10984,
+    "completionPct": "99.95",
+    "missingTireSpec": 6,
+    "missingWheelSpec": 0,
+    "malformedTireSpec": 0,
+    "malformedWheelSpec": 0,
+    "staggeredIncomplete": 0,
+    "fakeGroupedTrim": 0,
+    "highSeverity": 6,
+    "mediumSeverity": 161,
+    "lowSeverity": 2589
+  },
+  "issuesByCode": {
+    "NO_OFFSET_RANGE": 889,
+    "NO_THREAD_SIZE": 824,
+    "NO_SEAT_TYPE": 876,
+    "WHEEL_SIZES_EMPTY": 155,
+    "TIRE_HAS_NULL": 6,
+    "TIRE_NULL_ARRAY": 6
+  },
+  "highSeverityRecords": [
+    {
+      "id": "9e798349-53d1-4c7e-b557-6d2058802a28",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "8add9882-3997-4739-8678-44a13c4b171f",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "27c74ed9-f607-45af-804a-e9c20aecd7a1",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "acb16617-ceef-41f5-983b-bcbd6eb1c0eb",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "d0b259e2-d300-4c6f-b645-7ac574abf2ae",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "3e2b9929-6b2f-4ba2-a496-48cca19d0387",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    }
+  ],
+  "customerImpactingGaps": [
+    {
+      "id": "9e798349-53d1-4c7e-b557-6d2058802a28",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "8add9882-3997-4739-8678-44a13c4b171f",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "27c74ed9-f607-45af-804a-e9c20aecd7a1",
+      "year": 2007,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "acb16617-ceef-41f5-983b-bcbd6eb1c0eb",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "d0b259e2-d300-4c6f-b645-7ac574abf2ae",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    },
+    {
+      "id": "3e2b9929-6b2f-4ba2-a496-48cca19d0387",
+      "year": 2008,
+      "make": "Cadillac",
+      "model": "escalade",
+      "trim": "Platinum",
+      "tireFormat": "null-array",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "TIRE_NULL_ARRAY",
+          "message": "oem_tire_sizes contains only nulls"
+        }
+      ]
+    }
+  ],
+  "sampleByMake": {
+    "acura": {
+      "make": "Acura",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Integra Type-R",
+        "trim": "Base"
+      },
+      "totalRecords": 259,
+      "completeRecords": 259
+    },
+    "audi": {
+      "make": "Audi",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "a3",
+        "trim": "Base"
+      },
+      "totalRecords": 280,
+      "completeRecords": 280
+    },
+    "bmw": {
+      "make": "BMW",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3 Series",
+        "trim": "330i xDrive"
+      },
+      "totalRecords": 371,
+      "completeRecords": 371
+    },
+    "buick": {
+      "make": "Buick",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "lesabre",
+        "trim": "Custom"
+      },
+      "totalRecords": 196,
+      "completeRecords": 196
+    },
+    "cadillac": {
+      "make": "Cadillac",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "escalade",
+        "trim": "Base"
+      },
+      "totalRecords": 208,
+      "completeRecords": 202
+    },
+    "chevrolet": {
+      "make": "Chevrolet",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Express 1500",
+        "trim": "Base"
+      },
+      "totalRecords": 883,
+      "completeRecords": 883
+    },
+    "chrysler": {
+      "make": "Chrysler",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Town & Country",
+        "trim": "Base"
+      },
+      "totalRecords": 198,
+      "completeRecords": 198
+    },
+    "daewoo": {
+      "make": "Daewoo",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "leganza",
+        "trim": "Base"
+      },
+      "totalRecords": 3,
+      "completeRecords": 3
+    },
+    "dodge": {
+      "make": "Dodge",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "durango",
+        "trim": "Base"
+      },
+      "totalRecords": 278,
+      "completeRecords": 278
+    },
+    "ford": {
+      "make": "Ford",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Crown Victoria",
+        "trim": "Base"
+      },
+      "totalRecords": 902,
+      "completeRecords": 902
+    },
+    "gmc": {
+      "make": "GMC",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sierra-1500",
+        "trim": "Base"
+      },
+      "totalRecords": 413,
+      "completeRecords": 413
+    },
+    "geo": {
+      "make": "Geo",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "metro",
+        "trim": "Base"
+      },
+      "totalRecords": 5,
+      "completeRecords": 5
+    },
+    "honda": {
+      "make": "Honda",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "accord",
+        "trim": "EX"
+      },
+      "totalRecords": 425,
+      "completeRecords": 425
+    },
+    "hummer": {
+      "make": "Hummer",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "H1",
+        "trim": "Base"
+      },
+      "totalRecords": 19,
+      "completeRecords": 19
+    },
+    "hyundai": {
+      "make": "Hyundai",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Santa Fe",
+        "trim": "Base"
+      },
+      "totalRecords": 258,
+      "completeRecords": 258
+    },
+    "isuzu": {
+      "make": "Isuzu",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "rodeo",
+        "trim": "Base"
+      },
+      "totalRecords": 11,
+      "completeRecords": 11
+    },
+    "jaguar": {
+      "make": "Jaguar",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s-type",
+        "trim": "Base"
+      },
+      "totalRecords": 137,
+      "completeRecords": 137
+    },
+    "jeep": {
+      "make": "Jeep",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "Grand Cherokee",
+        "trim": "Base"
+      },
+      "totalRecords": 313,
+      "completeRecords": 313
+    },
+    "kia": {
+      "make": "Kia",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "sportage",
+        "trim": "Base/LX/EX"
+      },
+      "totalRecords": 181,
+      "completeRecords": 181
+    },
+    "land rover": {
+      "make": "Land Rover",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "defender",
+        "trim": "Base"
+      },
+      "totalRecords": 170,
+      "completeRecords": 170
+    },
+    "lexus": {
+      "make": "Lexus",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "es",
+        "trim": "ES 250"
+      },
+      "totalRecords": 451,
+      "completeRecords": 451
+    },
+    "lincoln": {
+      "make": "Lincoln",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "continental",
+        "trim": "Black Label"
+      },
+      "totalRecords": 219,
+      "completeRecords": 219
+    },
+    "mazda": {
+      "make": "Mazda",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "mx-5",
+        "trim": "Base"
+      },
+      "totalRecords": 147,
+      "completeRecords": 147
+    },
+    "mercedes": {
+      "make": "Mercedes",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "c-class",
+        "trim": "Base"
+      },
+      "totalRecords": 393,
+      "completeRecords": 393
+    },
+    "mercedes-benz": {
+      "make": "Mercedes-Benz",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "C-Class",
+        "trim": "C300"
+      },
+      "totalRecords": 426,
+      "completeRecords": 426
+    },
+    "mercury": {
+      "make": "Mercury",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "cougar",
+        "trim": "Base"
+      },
+      "totalRecords": 47,
+      "completeRecords": 47
+    },
+    "mitsubishi": {
+      "make": "Mitsubishi",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "3000-gt",
+        "trim": "Base"
+      },
+      "totalRecords": 364,
+      "completeRecords": 364
+    },
+    "nissan": {
+      "make": "Nissan",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "altima",
+        "trim": "Platinum"
+      },
+      "totalRecords": 646,
+      "completeRecords": 646
+    },
+    "oldsmobile": {
+      "make": "Oldsmobile",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "alero",
+        "trim": "Base"
+      },
+      "totalRecords": 13,
+      "completeRecords": 13
+    },
+    "plymouth": {
+      "make": "Plymouth",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "prowler",
+        "trim": "Base"
+      },
+      "totalRecords": 4,
+      "completeRecords": 4
+    },
+    "pontiac": {
+      "make": "Pontiac",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "bonneville",
+        "trim": "Base"
+      },
+      "totalRecords": 40,
+      "completeRecords": 40
+    },
+    "porsche": {
+      "make": "Porsche",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "911",
+        "trim": "Carrera"
+      },
+      "totalRecords": 269,
+      "completeRecords": 269
+    },
+    "ram": {
+      "make": "RAM",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "1500",
+        "trim": "Laramie"
+      },
+      "totalRecords": 327,
+      "completeRecords": 327
+    },
+    "saab": {
+      "make": "Saab",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "9-3",
+        "trim": "Base"
+      },
+      "totalRecords": 26,
+      "completeRecords": 26
+    },
+    "saturn": {
+      "make": "Saturn",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "l-series",
+        "trim": "Base"
+      },
+      "totalRecords": 27,
+      "completeRecords": 27
+    },
+    "subaru": {
+      "make": "Subaru",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "forester",
+        "trim": "Base"
+      },
+      "totalRecords": 432,
+      "completeRecords": 432
+    },
+    "suzuki": {
+      "make": "Suzuki",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "grand-vitara",
+        "trim": "Base"
+      },
+      "totalRecords": 22,
+      "completeRecords": 22
+    },
+    "toyota": {
+      "make": "Toyota",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "4runner",
+        "trim": "Limited"
+      },
+      "totalRecords": 915,
+      "completeRecords": 915
+    },
+    "volkswagen": {
+      "make": "Volkswagen",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "beetle",
+        "trim": "Base"
+      },
+      "totalRecords": 307,
+      "completeRecords": 307
+    },
+    "volvo": {
+      "make": "Volvo",
+      "sampleRecord": {
+        "year": 2000,
+        "model": "s40",
+        "trim": "Base"
+      },
+      "totalRecords": 156,
+      "completeRecords": 156
+    },
+    "mini": {
+      "make": "MINI",
+      "sampleRecord": {
+        "year": 2002,
+        "model": "cooper",
+        "trim": "Classic"
+      },
+      "totalRecords": 109,
+      "completeRecords": 109
+    },
+    "infiniti": {
+      "make": "Infiniti",
+      "sampleRecord": {
+        "year": 2004,
+        "model": "qx80",
+        "trim": "Luxe"
+      },
+      "totalRecords": 66,
+      "completeRecords": 66
+    },
+    "scion": {
+      "make": "Scion",
+      "sampleRecord": {
+        "year": 2004,
+        "model": "xb",
+        "trim": "Base"
+      },
+      "totalRecords": 48,
+      "completeRecords": 48
+    },
+    "aston martin": {
+      "make": "Aston Martin",
+      "sampleRecord": {
+        "year": 2005,
+        "model": "vantage",
+        "trim": "V8/V12 Vantage (2nd Gen)"
+      },
+      "totalRecords": 8,
+      "completeRecords": 8
+    },
+    "maserati": {
+      "make": "Maserati",
+      "sampleRecord": {
+        "year": 2007,
+        "model": "granturismo",
+        "trim": "M145 (1st Gen Modern)"
+      },
+      "totalRecords": 6,
+      "completeRecords": 6
+    },
+    "lotus": {
+      "make": "Lotus",
+      "sampleRecord": {
+        "year": 2009,
+        "model": "evora",
+        "trim": "Evora/Evora S/Evora 400/Evora GT"
+      },
+      "totalRecords": 7,
+      "completeRecords": 7
+    },
+    "lamborghini": {
+      "make": "Lamborghini",
+      "sampleRecord": {
+        "year": 2011,
+        "model": "aventador",
+        "trim": "Aventador (All Variants)"
+      },
+      "totalRecords": 2,
+      "completeRecords": 2
+    },
+    "fiat": {
+      "make": "Fiat",
+      "sampleRecord": {
+        "year": 2012,
+        "model": "500",
+        "trim": "Base"
+      },
+      "totalRecords": 1,
+      "completeRecords": 1
+    },
+    "tesla": {
+      "make": "Tesla",
+      "sampleRecord": {
+        "year": 2012,
+        "model": "model-s",
+        "trim": "1st Gen"
+      },
+      "totalRecords": 2,
+      "completeRecords": 2
+    }
+  }
+}

@@ -1,0 +1,775 @@
+{
+  "batchName": "batch-04-2023-2026",
+  "yearRange": {
+    "start": 2023,
+    "end": 2026
+  },
+  "timestamp": "2026-05-14T13:46:53.740Z",
+  "summary": {
+    "totalRecords": 5813,
+    "completeRecords": 5793,
+    "completionPct": "99.66",
+    "missingTireSpec": 0,
+    "missingWheelSpec": 0,
+    "malformedTireSpec": 1,
+    "malformedWheelSpec": 0,
+    "staggeredIncomplete": 0,
+    "fakeGroupedTrim": 20,
+    "highSeverity": 20,
+    "mediumSeverity": 14,
+    "lowSeverity": 2158
+  },
+  "issuesByCode": {
+    "NO_THREAD_SIZE": 641,
+    "NO_SEAT_TYPE": 764,
+    "NO_OFFSET_RANGE": 753,
+    "WHEEL_SIZES_EMPTY": 13,
+    "FAKE_FRONT_REAR_TRIM": 20,
+    "TIRE_INVALID_ELEMENT": 1
+  },
+  "highSeverityRecords": [
+    {
+      "id": "7d47fc84-f09f-46d3-9e29-486c02f7c74f",
+      "year": 2023,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Big Horn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Big Horn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "411fb5cf-2768-41d7-9be2-95420ae6f3bf",
+      "year": 2023,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Laramie Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Laramie Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "484f9020-e041-474e-9a37-0b1a7650b782",
+      "year": 2023,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "773889a3-a1df-4a34-930f-549d406a3417",
+      "year": 2023,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Longhorn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Longhorn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "f4465027-984a-4ef8-811a-af1f8531c4a8",
+      "year": 2023,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Tradesman Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Tradesman Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "85ab1b5e-a13b-458d-a0f7-716c09b4e5c2",
+      "year": 2024,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Big Horn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Big Horn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "128bc51a-24e8-4eb4-88a2-a876137b933a",
+      "year": 2024,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Laramie Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Laramie Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "09de67bd-2dc9-496e-b813-b0e67ca3588a",
+      "year": 2024,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "d7a0cd2f-b95c-42ea-8202-36396b9271a3",
+      "year": 2024,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Longhorn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Longhorn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "c7d8c98b-8f53-418e-b98d-533547c51085",
+      "year": 2024,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Tradesman Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Tradesman Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "dc07a2e2-d7e4-45eb-a87e-ae66f9921152",
+      "year": 2025,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Big Horn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Big Horn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "89f9e7da-9014-4238-b124-c1fd02e00f0c",
+      "year": 2025,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Laramie Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Laramie Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "92cbd0e4-df37-43e1-89e4-178370ed3b73",
+      "year": 2025,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "86a962b7-3b39-453c-a9e7-99afff21f440",
+      "year": 2025,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Longhorn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Longhorn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "5aadfa05-9692-431c-a6a2-9d4ab5d01be2",
+      "year": 2025,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Tradesman Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Tradesman Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "d361e7c8-d505-452f-bb1d-cba646bb1054",
+      "year": 2026,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Big Horn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Big Horn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "bae1b56a-d4e4-484b-82f3-2724785458be",
+      "year": 2026,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Laramie Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Laramie Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "9f97a3f5-4316-430d-bb78-b5552449d46f",
+      "year": 2026,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "bffa5718-901a-487e-98b7-f9098b76df6c",
+      "year": 2026,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Limited Longhorn Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Limited Longhorn Dual Rear Wheel"
+        }
+      ]
+    },
+    {
+      "id": "d493f637-a374-479f-a8c3-896662a5300d",
+      "year": 2026,
+      "make": "RAM",
+      "model": "3500",
+      "trim": "Tradesman Dual Rear Wheel",
+      "issues": [
+        {
+          "severity": "HIGH",
+          "code": "FAKE_FRONT_REAR_TRIM",
+          "message": "Fake Front/Rear trim label: Tradesman Dual Rear Wheel"
+        }
+      ]
+    }
+  ],
+  "customerImpactingGaps": [],
+  "sampleByMake": {
+    "acura": {
+      "make": "Acura",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "integra",
+        "trim": "Base"
+      },
+      "totalRecords": 78,
+      "completeRecords": 78
+    },
+    "alfa romeo": {
+      "make": "Alfa Romeo",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "giulia",
+        "trim": "Quadrifoglio"
+      },
+      "totalRecords": 36,
+      "completeRecords": 36
+    },
+    "aston martin": {
+      "make": "Aston Martin",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "db11",
+        "trim": "DB11 V8/V12"
+      },
+      "totalRecords": 10,
+      "completeRecords": 10
+    },
+    "audi": {
+      "make": "Audi",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "a3",
+        "trim": "Base"
+      },
+      "totalRecords": 210,
+      "completeRecords": 210
+    },
+    "bmw": {
+      "make": "BMW",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "2 Series",
+        "trim": "Base"
+      },
+      "totalRecords": 294,
+      "completeRecords": 294
+    },
+    "bentley": {
+      "make": "Bentley",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "bentayga",
+        "trim": "1st Gen (2020 Facelift)"
+      },
+      "totalRecords": 12,
+      "completeRecords": 12
+    },
+    "buick": {
+      "make": "Buick",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Enclave",
+        "trim": "Premium"
+      },
+      "totalRecords": 80,
+      "completeRecords": 80
+    },
+    "cadillac": {
+      "make": "Cadillac",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "ct4",
+        "trim": "Luxury"
+      },
+      "totalRecords": 105,
+      "completeRecords": 105
+    },
+    "chevrolet": {
+      "make": "Chevrolet",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Blazer",
+        "trim": "LS"
+      },
+      "totalRecords": 429,
+      "completeRecords": 429
+    },
+    "chrysler": {
+      "make": "Chrysler",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "300",
+        "trim": "300C AWD"
+      },
+      "totalRecords": 33,
+      "completeRecords": 33
+    },
+    "dodge": {
+      "make": "Dodge",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Challenger",
+        "trim": "GT"
+      },
+      "totalRecords": 55,
+      "completeRecords": 55
+    },
+    "ferrari": {
+      "make": "Ferrari",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "f8",
+        "trim": "F8 Tributo/Spider"
+      },
+      "totalRecords": 10,
+      "completeRecords": 10
+    },
+    "fiat": {
+      "make": "Fiat",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "500",
+        "trim": "Base"
+      },
+      "totalRecords": 6,
+      "completeRecords": 6
+    },
+    "ford": {
+      "make": "Ford",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "F-450 Super Duty",
+        "trim": "Base"
+      },
+      "totalRecords": 314,
+      "completeRecords": 314
+    },
+    "gmc": {
+      "make": "GMC",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "acadia",
+        "trim": "AT4"
+      },
+      "totalRecords": 203,
+      "completeRecords": 203
+    },
+    "genesis": {
+      "make": "Genesis",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "g70",
+        "trim": "2.0T"
+      },
+      "totalRecords": 84,
+      "completeRecords": 84
+    },
+    "honda": {
+      "make": "Honda",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Accord",
+        "trim": "EX-L Hybrid"
+      },
+      "totalRecords": 263,
+      "completeRecords": 263
+    },
+    "hyundai": {
+      "make": "Hyundai",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "elantra",
+        "trim": "Limited"
+      },
+      "totalRecords": 158,
+      "completeRecords": 158
+    },
+    "infiniti": {
+      "make": "Infiniti",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "q50",
+        "trim": "Luxe"
+      },
+      "totalRecords": 87,
+      "completeRecords": 87
+    },
+    "jaguar": {
+      "make": "Jaguar",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "e-pace",
+        "trim": "P250"
+      },
+      "totalRecords": 57,
+      "completeRecords": 57
+    },
+    "jeep": {
+      "make": "Jeep",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Compass",
+        "trim": "Altitude"
+      },
+      "totalRecords": 220,
+      "completeRecords": 220
+    },
+    "kia": {
+      "make": "Kia",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "ev6",
+        "trim": "GT"
+      },
+      "totalRecords": 208,
+      "completeRecords": 208
+    },
+    "lamborghini": {
+      "make": "Lamborghini",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "huracan",
+        "trim": "Huracan (All Variants)"
+      },
+      "totalRecords": 6,
+      "completeRecords": 6
+    },
+    "land rover": {
+      "make": "Land Rover",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Discovery Sport",
+        "trim": "Base"
+      },
+      "totalRecords": 119,
+      "completeRecords": 119
+    },
+    "lexus": {
+      "make": "Lexus",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "RC F",
+        "trim": "Base"
+      },
+      "totalRecords": 167,
+      "completeRecords": 167
+    },
+    "lincoln": {
+      "make": "Lincoln",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "aviator",
+        "trim": "Black Label"
+      },
+      "totalRecords": 61,
+      "completeRecords": 61
+    },
+    "lotus": {
+      "make": "Lotus",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "emira",
+        "trim": "Emira"
+      },
+      "totalRecords": 4,
+      "completeRecords": 4
+    },
+    "lucid": {
+      "make": "Lucid",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "air",
+        "trim": "Grand Touring"
+      },
+      "totalRecords": 10,
+      "completeRecords": 10
+    },
+    "mini": {
+      "make": "MINI",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "clubman",
+        "trim": "Classic"
+      },
+      "totalRecords": 72,
+      "completeRecords": 72
+    },
+    "maserati": {
+      "make": "Maserati",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "ghibli",
+        "trim": "M157 (3rd Gen)"
+      },
+      "totalRecords": 7,
+      "completeRecords": 7
+    },
+    "mazda": {
+      "make": "Mazda",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "3",
+        "trim": "Carbon Edition"
+      },
+      "totalRecords": 102,
+      "completeRecords": 102
+    },
+    "mclaren": {
+      "make": "McLaren",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "720s",
+        "trim": "720S Coupe/Spider"
+      },
+      "totalRecords": 9,
+      "completeRecords": 9
+    },
+    "mercedes": {
+      "make": "Mercedes",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "a-class-amg",
+        "trim": "Base"
+      },
+      "totalRecords": 232,
+      "completeRecords": 232
+    },
+    "mercedes-benz": {
+      "make": "Mercedes-Benz",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "C-Class",
+        "trim": "AMG C43"
+      },
+      "totalRecords": 361,
+      "completeRecords": 361
+    },
+    "mitsubishi": {
+      "make": "Mitsubishi",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "eclipse-cross",
+        "trim": "1.5T"
+      },
+      "totalRecords": 30,
+      "completeRecords": 30
+    },
+    "nissan": {
+      "make": "Nissan",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Rogue",
+        "trim": "Midnight Edition"
+      },
+      "totalRecords": 288,
+      "completeRecords": 288
+    },
+    "polestar": {
+      "make": "Polestar",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "polestar-2",
+        "trim": "Base"
+      },
+      "totalRecords": 4,
+      "completeRecords": 4
+    },
+    "porsche": {
+      "make": "Porsche",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "718",
+        "trim": "Base"
+      },
+      "totalRecords": 142,
+      "completeRecords": 142
+    },
+    "ram": {
+      "make": "RAM",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "1500",
+        "trim": "3.6 Pentastar"
+      },
+      "totalRecords": 227,
+      "completeRecords": 227
+    },
+    "rivian": {
+      "make": "Rivian",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "r1s",
+        "trim": "1st Gen"
+      },
+      "totalRecords": 14,
+      "completeRecords": 14
+    },
+    "rolls-royce": {
+      "make": "Rolls-Royce",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "cullinan",
+        "trim": "1st Gen"
+      },
+      "totalRecords": 12,
+      "completeRecords": 12
+    },
+    "subaru": {
+      "make": "Subaru",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "Outback",
+        "trim": "Limited XT"
+      },
+      "totalRecords": 210,
+      "completeRecords": 210
+    },
+    "tesla": {
+      "make": "Tesla",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "model-3",
+        "trim": "1st Gen"
+      },
+      "totalRecords": 49,
+      "completeRecords": 49
+    },
+    "toyota": {
+      "make": "Toyota",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "4runner",
+        "trim": "Limited"
+      },
+      "totalRecords": 492,
+      "completeRecords": 492
+    },
+    "volkswagen": {
+      "make": "Volkswagen",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "arteon",
+        "trim": "Base"
+      },
+      "totalRecords": 156,
+      "completeRecords": 156
+    },
+    "volvo": {
+      "make": "Volvo",
+      "sampleRecord": {
+        "year": 2023,
+        "model": "c40",
+        "trim": "Base"
+      },
+      "totalRecords": 87,
+      "completeRecords": 87
+    }
+  }
+}
