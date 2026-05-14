@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
 
@@ -11,7 +11,7 @@ import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
  * 
  * Decodes the cart data, adds items to cart, and redirects to /cart
  */
-export default function CartPrefillPage() {
+function CartPrefillContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { addItem } = useCart();
@@ -105,5 +105,21 @@ export default function CartPrefillPage() {
         )}
       </div>
     </div>
+  );
+}
+
+// Wrap in Suspense for useSearchParams during static export
+export default function CartPrefillPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center p-8">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4" />
+          <p className="text-lg text-gray-600">Loading your cart...</p>
+        </div>
+      </div>
+    }>
+      <CartPrefillContent />
+    </Suspense>
   );
 }
