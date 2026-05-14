@@ -1,8 +1,8 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
+import { useCart, type CartTireItem, type CartWheelItem } from "@/lib/cart/CartContext";
 
 /**
  * Cart prefill page for AI-assisted sales.
@@ -10,6 +10,7 @@ import { useCart, type CartTireItem } from "@/lib/cart/CartContext";
  * URL: /cart/prefill?data=<base64url-encoded-cart-data>
  * 
  * Decodes the cart data, adds items to cart, and redirects to /cart
+ * Supports both tire and wheel items for package builds.
  */
 function CartPrefillContent() {
   const router = useRouter();
@@ -17,8 +18,12 @@ function CartPrefillContent() {
   const { addItem } = useCart();
   const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
   const [message, setMessage] = useState("Loading your cart...");
+  const hasProcessedRef = useRef(false);
 
   useEffect(() => {
+    // Guard against double execution in StrictMode
+    if (hasProcessedRef.current) return;
+    
     const data = searchParams.get("data");
     
     if (!data) {
@@ -37,10 +42,35 @@ function CartPrefillContent() {
         throw new Error("Invalid cart data format");
       }
 
+      // Mark as processed before adding items
+      hasProcessedRef.current = true;
+
       // Add each item to cart
-      let addedCount = 0;
+      let tireCount = 0;
+      let wheelCount = 0;
+      
       for (const item of decoded.items) {
-        if (item.type === "tire" || !item.type) {
+        if (item.type === "wheel") {
+          // Handle wheel items
+          const cartItem: CartWheelItem = {
+            type: "wheel",
+            sku: item.sku,
+            brand: item.brand || "Unknown",
+            model: item.model || "Wheel",
+            finish: item.finish,
+            diameter: item.diameter || item.size?.split("x")?.[0],
+            width: item.width || item.size?.split("x")?.[1]?.replace(/[^0-9.]/g, ""),
+            boltPattern: item.boltPattern,
+            offset: item.offset,
+            imageUrl: item.imageUrl,
+            unitPrice: typeof item.price === "number" ? item.price : parseFloat(String(item.price || "0").replace("$", "")) || 0,
+            quantity: item.quantity || 4,
+            vehicle: decoded.vehicle,
+          };
+          addItem(cartItem, "ai-assistant");
+          wheelCount++;
+        } else if (item.type === "tire" || !item.type) {
+          // Handle tire items (default type)
           const cartItem: CartTireItem = {
             type: "tire",
             sku: item.sku,
@@ -48,18 +78,27 @@ function CartPrefillContent() {
             model: item.model || "Tire",
             size: item.size || "",
             imageUrl: item.imageUrl,
-            unitPrice: typeof item.price === "number" ? item.price : parseFloat(item.price) || 0,
+            unitPrice: typeof item.price === "number" ? item.price : parseFloat(String(item.price || "0").replace("$", "")) || 0,
             quantity: item.quantity || 4,
             vehicle: decoded.vehicle,
           };
           addItem(cartItem, "ai-assistant");
-          addedCount++;
+          tireCount++;
         }
-        // TODO: Add wheel support if needed
+        // Future: Add accessory support here if needed
       }
 
+      // Build success message
+      const parts: string[] = [];
+      if (tireCount > 0) parts.push(`${tireCount} tire${tireCount !== 1 ? "s" : ""}`);
+      if (wheelCount > 0) parts.push(`${wheelCount} wheel${wheelCount !== 1 ? "s" : ""}`);
+      const totalItems = tireCount + wheelCount;
+
       setStatus("success");
-      setMessage(`Added ${addedCount} item${addedCount !== 1 ? "s" : ""} to your cart!`);
+      setMessage(totalItems > 0 
+        ? `Added ${parts.join(" and ")} to your cart!`
+        : "No items to add"
+      );
       
       // Redirect to cart after brief delay to show success
       setTimeout(() => {

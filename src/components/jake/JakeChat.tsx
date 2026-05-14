@@ -147,6 +147,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const [showCompare, setShowCompare] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  // Guard against double execution in React StrictMode
+  const hasProcessedInitialPromptRef = useRef(false);
 
   // Compare functions
   const toggleCompare = useCallback((product: ParsedProduct) => {
@@ -193,9 +195,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     }
   }, [hasStarted]);
 
-  // Handle initial prompt
+  // Handle initial prompt - use ref guard to prevent double execution in StrictMode
   useEffect(() => {
-    if (initialPrompt && !hasStarted) {
+    if (initialPrompt && !hasProcessedInitialPromptRef.current) {
+      hasProcessedInitialPromptRef.current = true;
       handleSend(initialPrompt);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
