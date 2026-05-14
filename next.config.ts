@@ -159,6 +159,21 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '**.public.blob.vercel-storage.com',
       },
+      {
+        // TireWeb tire images
+        protocol: 'https',
+        hostname: 'tireweb.tirelibrary.com',
+      },
+      {
+        // TireLibrary tire images (alternate domain)
+        protocol: 'https',
+        hostname: 'www.tirelibrary.com',
+      },
+      {
+        // TireLibrary alternate
+        protocol: 'https',
+        hostname: 'tirelibrary.com',
+      },
     ],
   },
 };

@@ -120,14 +120,22 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-scroll to bottom
+  // Auto-scroll to latest message (not the very bottom)
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    // Small delay to let DOM update
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, 100);
   }, []);
 
+  // Only auto-scroll when new messages are added, not on every render
+  const prevMessageCount = useRef(0);
   useEffect(() => {
-    scrollToBottom();
-  }, [messages, scrollToBottom]);
+    if (messages.length > prevMessageCount.current) {
+      scrollToBottom();
+    }
+    prevMessageCount.current = messages.length;
+  }, [messages.length, scrollToBottom]);
 
   // Focus input on mount
   useEffect(() => {
@@ -233,9 +241,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
 
   if (!hasStarted && !initialPrompt) {
     return (
-      <div className={`flex flex-col ${embedded ? "h-full" : "min-h-screen"} bg-[#0a0a0a]`}>
+      <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden`}>
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
+        <div className="flex-shrink-0 flex items-center justify-between px-6 py-4 border-b border-white/10">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
               <span className="text-white font-bold text-lg">J</span>
@@ -255,7 +263,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
         </div>
 
         {/* Welcome Content */}
-        <div className="flex-1 flex flex-col items-center justify-center px-6 py-12">
+        <div className="flex-1 min-h-0 overflow-y-auto flex flex-col items-center justify-center px-6 py-12">
           <div className="w-20 h-20 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center mb-6 shadow-lg shadow-red-500/20">
             <span className="text-white font-black text-3xl">J</span>
           </div>
@@ -287,8 +295,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
           </div>
         </div>
 
-        {/* Input Bar */}
-        <div className="p-4 border-t border-white/10 bg-[#0d0d0d]">
+        {/* Input Bar - Fixed at bottom */}
+        <div className="flex-shrink-0 p-4 border-t border-white/10 bg-[#0d0d0d]">
           <div className="max-w-3xl mx-auto flex gap-2">
             <input
               ref={inputRef}
@@ -302,7 +310,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
             <button
               onClick={() => handleSend()}
               disabled={!input.trim()}
-              className="px-6 py-3 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
+              className="px-6 py-3 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors flex-shrink-0"
             >
               Send
             </button>
@@ -317,9 +325,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
   // ═══════════════════════════════════════════════════════════════════════════
 
   return (
-    <div className={`flex flex-col ${embedded ? "h-full" : "min-h-screen"} bg-[#0a0a0a]`}>
+    <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden`}>
       {/* Header */}
-      <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0d0d0d]">
+      <div className="flex-shrink-0 flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0d0d0d]">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
             <span className="text-white font-bold text-lg">J</span>
@@ -349,8 +357,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-4 py-6">
-        <div className="max-w-3xl mx-auto space-y-6">
+      <div className="flex-1 min-h-0 overflow-y-auto px-4 py-6">
+        <div className="max-w-3xl mx-auto space-y-6 pb-4">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -425,8 +433,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
         </div>
       </div>
 
-      {/* Input Bar */}
-      <div className="p-4 border-t border-white/10 bg-[#0d0d0d]">
+      {/* Input Bar - Fixed at bottom */}
+      <div className="flex-shrink-0 p-4 border-t border-white/10 bg-[#0d0d0d]">
         <div className="max-w-3xl mx-auto flex gap-2">
           <input
             ref={inputRef}
@@ -441,7 +449,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
           <button
             onClick={() => handleSend()}
             disabled={!input.trim() || isLoading}
-            className="px-6 py-3 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
+            className="px-6 py-3 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors flex-shrink-0"
           >
             {isLoading ? "..." : "Send"}
           </button>

@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -42,6 +41,27 @@ interface JakeProductCardProps {
 
 export function JakeProductCard({ product, onClick }: JakeProductCardProps) {
   const isTire = product.type === "tire";
+  const [imgError, setImgError] = useState(false);
+
+  const PlaceholderIcon = () => (
+    <div className="text-white/20">
+      {isTire ? (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
+          <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
+        </svg>
+      ) : (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
+          <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
+          <line x1="12" y1="3" x2="12" y2="8" strokeWidth={1.5} />
+          <line x1="12" y1="16" x2="12" y2="21" strokeWidth={1.5} />
+          <line x1="3" y1="12" x2="8" y2="12" strokeWidth={1.5} />
+          <line x1="16" y1="12" x2="21" y2="12" strokeWidth={1.5} />
+        </svg>
+      )}
+    </div>
+  );
   
   return (
     <a
@@ -54,32 +74,17 @@ export function JakeProductCard({ product, onClick }: JakeProductCardProps) {
       <div className="flex gap-3 p-3">
         {/* Image */}
         <div className="w-16 h-16 bg-white/5 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
-          {product.imageUrl ? (
-            <Image
+          {product.imageUrl && !imgError ? (
+            <img
               src={product.imageUrl}
               alt={product.name}
               width={64}
               height={64}
-              className="object-contain"
+              className="object-contain w-full h-full"
+              onError={() => setImgError(true)}
             />
           ) : (
-            <div className="text-white/20">
-              {isTire ? (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
-                  <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
-                </svg>
-              ) : (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
-                  <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
-                  <line x1="12" y1="3" x2="12" y2="8" strokeWidth={1.5} />
-                  <line x1="12" y1="16" x2="12" y2="21" strokeWidth={1.5} />
-                  <line x1="3" y1="12" x2="8" y2="12" strokeWidth={1.5} />
-                  <line x1="16" y1="12" x2="21" y2="12" strokeWidth={1.5} />
-                </svg>
-              )}
-            </div>
+            <PlaceholderIcon />
           )}
         </div>
 
@@ -258,6 +263,8 @@ interface JakeWheelCardProps {
 }
 
 export function JakeWheelCard({ wheel, onClick }: JakeWheelCardProps) {
+  const [imgError, setImgError] = useState(false);
+  
   return (
     <a
       href={wheel.productUrl}
@@ -267,12 +274,12 @@ export function JakeWheelCard({ wheel, onClick }: JakeWheelCardProps) {
       className="block bg-[#1a1a1a] hover:bg-[#222] border border-white/10 hover:border-white/20 rounded-lg overflow-hidden transition-all group"
     >
       <div className="aspect-square relative bg-gradient-to-br from-white/5 to-white/0">
-        {wheel.imageUrl ? (
-          <Image
+        {wheel.imageUrl && !imgError ? (
+          <img
             src={wheel.imageUrl}
             alt={`${wheel.brand} ${wheel.model}`}
-            fill
-            className="object-contain p-4"
+            className="absolute inset-0 w-full h-full object-contain p-4"
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
