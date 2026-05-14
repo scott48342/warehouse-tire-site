@@ -206,9 +206,68 @@ export function JakeChat({ embedded = false, initialPrompt, onClose }: JakeChatP
       const data = await response.json();
       const responseText = data.response || "Sorry, I had trouble processing that. Can you try again?";
 
-      // Parse products and cart URL from response
-      const products = parseProductsFromResponse(responseText);
-      const cartUrl = parseCartUrl(responseText);
+      // Use structured products from backend if available, fallback to parsing markdown
+      let products: ParsedProduct[] = [];
+      
+      // Check for structured tire data
+      if (data.products?.tires && data.products.tires.length > 0) {
+        products = data.products.tires.map((t: any) => ({
+          type: "tire" as const,
+          name: `${t.brand} ${t.model}`,
+          brand: t.brand,
+          model: t.model,
+          price: t.price || t.priceEach,
+          priceNum: t.priceNum || parseFloat(String(t.price || t.priceEach || "0").replace("$", "")),
+          warranty: t.warranty,
+          size: t.size,
+          terrain: t.terrain,
+          imageUrl: t.imageUrl,
+          productUrl: t.productUrl,
+          inStock: t.inStock !== false,
+          setPrice: t.priceSet,
+        }));
+      }
+      // Check for structured wheel data
+      else if (data.products?.wheels && data.products.wheels.length > 0) {
+        products = data.products.wheels.map((w: any) => ({
+          type: "wheel" as const,
+          name: `${w.brand} ${w.model || w.name}`,
+          brand: w.brand,
+          model: w.model || w.name,
+          price: w.price || w.priceEach,
+          priceNum: w.priceNum || parseFloat(String(w.price || w.priceEach || "0").replace("$", "")),
+          size: w.size,
+          finish: w.finish,
+          fitmentLabel: w.fitmentConfidence,
+          imageUrl: w.imageUrl,
+          productUrl: w.productUrl,
+          inStock: w.inStock !== false,
+          setPrice: w.priceSet,
+        }));
+      }
+      // Check for staggered pairs
+      else if (data.products?.staggeredPairs && data.products.staggeredPairs.length > 0) {
+        products = data.products.staggeredPairs.map((p: any) => ({
+          type: "tire" as const,
+          name: p.name || `${p.brand} ${p.model}`,
+          brand: p.brand,
+          model: p.model,
+          price: p.setOfFourFormatted || `$${p.setOfFourPrice}`,
+          priceNum: p.setOfFourPrice,
+          size: `F: ${p.frontSize} / R: ${p.rearSize}`,
+          terrain: p.terrain,
+          imageUrl: p.imageUrl,
+          productUrl: p.productUrl,
+          inStock: true,
+        }));
+      }
+      // Fallback to parsing markdown if no structured data
+      else {
+        products = parseProductsFromResponse(responseText);
+      }
+      
+      // Get cart URL from structured data or parse from text
+      const cartUrl = data.cartUrl || parseCartUrl(responseText);
 
       // Track events
       if (products.length > 0) {
