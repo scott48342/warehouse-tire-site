@@ -287,6 +287,52 @@ export const TRIM_ALIASES: Record<string, Record<string, Record<string, string[]
       "Raptor": ["raptor"],
       "Lightning": ["lightning"],
     },
+    // QA Fix: 2024 Ford Escape "Base" → "S"
+    "escape": {
+      "S": ["s", "base"],
+      "SE": ["se"],
+      "SEL": ["sel"],
+      "ST-Line": ["st-line", "st line", "stline"],
+      "Titanium": ["titanium"],
+      "Plug-In Hybrid": ["plug-in hybrid", "phev", "hybrid"],
+    },
+  },
+  // QA Fix: 2024 Audi S4 "Premium" → "S4 Premium Plus"
+  "audi": {
+    "s4": {
+      "S4 Premium Plus": ["premium plus", "premium", "s4 premium plus"],
+      "S4 Prestige": ["prestige", "s4 prestige"],
+      "S4": ["s4", "base"],
+    },
+  },
+  // QA Fix: Mercedes "AMG C 43" → "AMG C43"
+  "mercedes-benz": {
+    "c-class": {
+      "AMG C43": ["amg c43", "amg c 43", "c43 amg", "c43amg", "c 43 amg"],
+      "AMG C63": ["amg c63", "amg c 63", "c63 amg", "c63amg", "c 63 amg"],
+      "AMG C63 S": ["amg c63 s", "c63 amg s", "c63s amg"],
+      "C300": ["c300", "c 300"],
+      "C300 4MATIC": ["c300 4matic", "c 300 4matic"],
+    },
+  },
+  // QA Fix: Honda Accord "Hybrid" → "Sport Hybrid" (most common base hybrid)
+  "honda": {
+    "accord": {
+      "Sport Hybrid": ["sport hybrid", "hybrid"],
+      "EX-L Hybrid": ["ex-l hybrid", "exl hybrid"],
+      "Touring Hybrid": ["touring hybrid"],
+      "LX": ["lx", "base"],
+      "Sport": ["sport"],
+      "EX": ["ex"],
+      "EX-L": ["ex-l", "exl"],
+      "Touring": ["touring"],
+    },
+  },
+  // QA Fix: Nissan Frontier "SV" → "Base" (only trim in DB)
+  "nissan": {
+    "frontier": {
+      "Base": ["base", "s", "sv", "pro-4x", "pro-x"],
+    },
   },
   "chevrolet": {
     "silverado-1500": {

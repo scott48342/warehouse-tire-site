@@ -29,6 +29,7 @@ import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 import { getTrimMapping, type TrimMappingResult } from "@/lib/fitment-db/wheelSizeTrimMapping";
 import { isGroupedTrim, explodeTrim } from "@/lib/fitment/trimExplosion";
+import { TRIM_ALIASES } from "@/lib/fitment-db/normalization";
 
 // ============================================================================
 // Types
@@ -137,6 +138,40 @@ function normalizeTrim(trim: string): string {
 }
 
 /**
+ * Resolve trim alias to canonical DB trim name.
+ * Returns the canonical trim if found, otherwise returns the original.
+ * 
+ * @example
+ * resolveTrimAlias("audi", "s4", "Premium") → "S4 Premium Plus"
+ * resolveTrimAlias("ford", "escape", "Base") → "S"
+ */
+function resolveTrimAlias(make: string, model: string, trim: string): string {
+  if (!trim) return trim;
+  
+  const normalizedMake = canonicalMake(make).toLowerCase();
+  const normalizedModel = slugify(model);
+  const trimLower = trim.toLowerCase().trim();
+  
+  const makeAliases = TRIM_ALIASES[normalizedMake];
+  if (!makeAliases) return trim;
+  
+  const modelAliases = makeAliases[normalizedModel];
+  if (!modelAliases) return trim;
+  
+  // Look for a canonical trim that includes this alias
+  for (const [canonical, aliases] of Object.entries(modelAliases)) {
+    for (const alias of aliases) {
+      if (alias === trimLower) {
+        console.log(`[canonicalResolver] Trim alias resolved: "${trim}" → "${canonical}" (${make} ${model})`);
+        return canonical;
+      }
+    }
+  }
+  
+  return trim;
+}
+
+/**
  * Normalize tire sizes to a flat array.
  * Handles both array format (square fitment) and object format (staggered fitment).
  * 
@@ -204,7 +239,10 @@ export async function resolveVehicleFitment(
   
   const normalizedMake = canonicalMake(make);
   const modelVariants = getModelVariants(model);
-  const requestedTrim = trim || null;
+  
+  // Resolve trim aliases before matching (e.g., "Premium" → "S4 Premium Plus")
+  const resolvedTrim = trim ? resolveTrimAlias(make, model, trim) : null;
+  const requestedTrim = resolvedTrim || null;
   const normalizedRequestedTrim = requestedTrim ? normalizeTrim(requestedTrim) : null;
   
   // Initialize result
