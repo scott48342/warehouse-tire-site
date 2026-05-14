@@ -16,11 +16,21 @@ interface ConditionalLayoutProps {
 export function ConditionalLayout({ children }: ConditionalLayoutProps) {
   const pathname = usePathname();
   const isPOS = pathname?.startsWith("/pos");
+  const isJake = pathname === "/jake";
 
   if (isPOS) {
     // POS mode: minimal layout, no header/footer/popups
     return (
       <main className="flex-1 bg-gray-50">
+        {children}
+      </main>
+    );
+  }
+
+  if (isJake) {
+    // Jake AI assistant: fullscreen chat, no header/footer
+    return (
+      <main className="flex-1 flex flex-col">
         {children}
       </main>
     );
