@@ -28,8 +28,10 @@ export default function CartPrefillPage() {
     }
 
     try {
-      // Decode base64url
-      const decoded = JSON.parse(Buffer.from(data, "base64url").toString("utf-8"));
+      // Decode base64url (browser-compatible)
+      // Convert base64url to standard base64
+      const base64 = data.replace(/-/g, '+').replace(/_/g, '/');
+      const decoded = JSON.parse(atob(base64));
       
       if (!decoded.items || !Array.isArray(decoded.items)) {
         throw new Error("Invalid cart data format");
