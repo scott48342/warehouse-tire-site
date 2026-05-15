@@ -36,6 +36,9 @@ interface ParsedProduct {
   productUrl?: string;
   inStock?: boolean;
   setPrice?: string;
+  terrain?: string;
+  loadRange?: string;
+  speedRating?: string;
 }
 
 interface PackageSummary {
@@ -434,10 +437,15 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
           brand: t.brand,
           model: t.model,
           price: t.price || t.priceEach,
-          priceNum: t.priceNum || parseFloat(String(t.price || t.priceEach || "0").replace("$", "")),
-          warranty: t.warranty,
+          priceNum: t.priceNum || parseFloat(String(t.price || t.priceEach || "0").replace(/[$,]/g, "")),
+          // Format warranty miles as string
+          warranty: t.warrantyMiles 
+            ? `${Number(t.warrantyMiles).toLocaleString()} miles` 
+            : (t.warranty || undefined),
           size: t.size,
           terrain: t.terrain,
+          loadRange: t.loadRange,
+          speedRating: t.speedRating,
           imageUrl: t.imageUrl,
           productUrl: t.productUrl,
           inStock: t.inStock !== false,
