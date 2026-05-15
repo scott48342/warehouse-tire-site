@@ -90,13 +90,31 @@ async function fetchExpandedTires(size: string): Promise<RailProduct[]> {
 
 async function fetchExpandedWheels(size: string, vehicle?: string): Promise<RailProduct[]> {
   try {
-    // Extract diameter from size string (e.g., "20x9" -> 20)
-    const diameterMatch = size.match(/^(\d+)/);
-    const diameter = diameterMatch ? diameterMatch[1] : "20";
+    // Parse wheel size: "20x12" -> diameter=20, width=12
+    // Also handle: "20X12", "20x9", "18X8.5"
+    const sizeMatch = size.match(/(\d+)\s*[xX]\s*(\d+(?:\.\d+)?)/);
+    const diameter = sizeMatch ? sizeMatch[1] : "20";
+    const width = sizeMatch ? sizeMatch[2] : undefined;
     
-    const params = new URLSearchParams({ diameter, limit: "20" });
+    const params = new URLSearchParams({ diameter, pageSize: "24" });
+    
+    // Add width filter if specified
+    if (width) {
+      params.set("width", width);
+    }
+    
+    // For wide wheels (10"+) or large diameter (20"+), include lifted truck options
+    const numWidth = width ? parseFloat(width) : 0;
+    const numDiameter = parseFloat(diameter);
+    if (numWidth >= 10 || numDiameter >= 20) {
+      params.set("includeLifted", "true");
+      // For lifted trucks, use aggressive offset range
+      params.set("offsetMin", "-76");
+      params.set("offsetMax", "0");
+    }
+    
+    // Add vehicle fitment if available
     if (vehicle) {
-      // Try to parse vehicle for fitment
       const parts = vehicle.split(" ");
       if (parts.length >= 2) {
         params.set("year", parts[0]);
@@ -105,23 +123,30 @@ async function fetchExpandedWheels(size: string, vehicle?: string): Promise<Rail
       }
     }
     
+    console.log("[Garage] fetchExpandedWheels:", params.toString());
     const response = await fetch(`/api/wheels/search?${params.toString()}`);
-    if (!response.ok) return [];
+    if (!response.ok) {
+      console.error("[Garage] Wheel search failed:", response.status);
+      return [];
+    }
     
     const data = await response.json();
-    const wheels = data.wheels || data.results || [];
+    console.log("[Garage] Wheel search returned:", data.wheels?.length || data.styles?.length || 0, "results");
     
-    return wheels.slice(0, 20).map((w: any) => ({
-      id: w.sku || w.partNumber || `wheel-${Math.random()}`,
+    // Handle different response formats
+    const wheels = data.wheels || data.styles || data.results || [];
+    
+    return wheels.slice(0, 24).map((w: any) => ({
+      id: w.sku || w.styleKey || w.partNumber || `wheel-${Math.random()}`,
       type: "wheel" as const,
       brand: w.brand || "",
-      model: w.model || w.name || "",
-      size: w.size || size,
-      price: w.sellPrice ? `$${w.sellPrice.toFixed(2)}` : (w.price || ""),
+      model: w.model || w.styleName || w.name || "",
+      size: w.size || `${w.diameter || diameter}x${w.width || width || "?"}`,
+      price: w.sellPrice ? `$${w.sellPrice.toFixed(2)}` : (w.price ? `$${w.price}` : ""),
       priceSet: w.setPrice ? `$${(w.setPrice).toFixed(2)}` : "",
-      imageUrl: w.imageUrl || w.image,
-      productUrl: w.productUrl || `/wheels/${w.sku || w.partNumber}`,
-      badge: w.finish,
+      imageUrl: w.imageUrl || w.image || w.finishes?.[0]?.imageUrl,
+      productUrl: w.productUrl || `/wheels/${w.sku || w.styleKey || w.partNumber}`,
+      badge: w.finish || w.finishes?.[0]?.finish,
       fitmentBadge: w.fitmentConfidence,
     }));
   } catch (err) {
@@ -694,7 +719,9 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
                             <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-white/[0.08] via-transparent to-transparent pointer-events-none" />
                             {/* Left edge accent */}
                             <div className="absolute left-0 top-4 bottom-4 w-px bg-gradient-to-b from-red-500/30 via-red-500/10 to-transparent" />
-                            <p className="relative text-white/90 whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                            <div className="relative text-white/90 whitespace-pre-wrap leading-relaxed">
+                              <MessageContent content={message.content} />
+                            </div>
                           </div>
                         </div>
                         
@@ -990,5 +1017,48 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
         }
       `}</style>
     </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// MESSAGE CONTENT RENDERER - Parses markdown for links, bold, etc.
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function MessageContent({ content }: { content: string }) {
+  // Convert markdown links to clickable links
+  // Convert **bold** to bold
+  
+  const parts = content.split(/(\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*)/g);
+  
+  return (
+    <>
+      {parts.map((part, idx) => {
+        if (!part) return null;
+        
+        // Check if it's a markdown link
+        const linkMatch = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+        if (linkMatch) {
+          return (
+            <a
+              key={idx}
+              href={linkMatch[2]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-400 hover:text-red-300 underline underline-offset-2"
+            >
+              {linkMatch[1]}
+            </a>
+          );
+        }
+        
+        // Check if it's bold
+        const boldMatch = part.match(/\*\*([^*]+)\*\*/);
+        if (boldMatch) {
+          return <strong key={idx} className="font-semibold text-white">{boldMatch[1]}</strong>;
+        }
+        
+        return <span key={idx}>{part}</span>;
+      })}
+    </>
   );
 }
