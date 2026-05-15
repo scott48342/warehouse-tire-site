@@ -728,7 +728,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             <div>
               <h1 className="text-white font-bold text-lg">Jake</h1>
               <p className="text-white/50 text-xs">
-                {isLoading ? "Thinking..." : "Your Fitment Expert"}
+                {isLoading ? "Typing..." : "Your Fitment Expert"}
               </p>
             </div>
           </div>
@@ -844,7 +844,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                     <span className="w-2 h-2 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
                     <span className="w-2 h-2 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
                   </div>
-                  <span className="text-white/50 text-sm">Jake is thinking...</span>
+                  <span className="text-white/50 text-sm">Jake is typing...</span>
                 </div>
               </div>
             </div>
