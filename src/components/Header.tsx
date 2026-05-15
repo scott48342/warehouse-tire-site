@@ -13,6 +13,7 @@ type LauncherMode = "vehicles" | "tires" | "wheels" | "packages";
 import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
 import { SearchModal } from "@/components/SearchModal";
 import { CartIcon } from "@/components/CartIcon";
+import { JakeAvatar } from "@/components/jake/JakeAvatar";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -214,9 +215,10 @@ export function Header() {
               </button>
               <Link
                 href="/jake"
-                className="flex h-11 items-center justify-center rounded-xl border border-red-300 bg-red-600 px-2 text-sm font-bold text-white"
+                className="flex h-11 items-center justify-center gap-1 rounded-xl border border-red-300 bg-red-600 px-2 text-sm font-bold text-white"
               >
-                <span className="mr-1">J</span>Ask
+                <JakeAvatar size="xs" animated={false} />
+                Ask
               </Link>
               <Link
                 href="/lifted"
@@ -386,7 +388,7 @@ export function Header() {
               href="/jake"
               className="inline-flex items-center gap-1.5 rounded-full bg-red-600 hover:bg-red-700 px-3 py-1.5 text-sm font-bold text-white transition-colors"
             >
-              <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">J</span>
+              <JakeAvatar size="xs" animated={false} />
               Ask Jake
             </Link>
 
