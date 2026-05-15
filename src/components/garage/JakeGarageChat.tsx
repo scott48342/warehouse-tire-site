@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { JakeProductCard, JakeWheelCard, JakePackageCard } from "@/components/jake/JakeProductCards";
+import { JakeProductCard, JakeWheelCard, JakePackageCard, ParsedProduct, RecommendationBadge } from "@/components/jake/JakeProductCards";
 import { trackGarageEvent } from "./GarageAnalytics";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -19,25 +19,7 @@ interface Message {
   packageSummary?: PackageSummary;
 }
 
-interface ParsedProduct {
-  type: "tire" | "wheel";
-  name: string;
-  brand?: string;
-  model?: string;
-  price?: string;
-  priceNum?: number;
-  warranty?: string;
-  size?: string;
-  finish?: string;
-  fitmentLabel?: string;
-  imageUrl?: string;
-  productUrl?: string;
-  inStock?: boolean;
-  setPrice?: string;
-  terrain?: string;
-  loadRange?: string;
-  recommendationBadge?: string;
-}
+// ParsedProduct imported from JakeProductCards
 
 interface ParsedWheel {
   brand: string;

@@ -6,7 +6,7 @@ import React, { useState } from "react";
 // TYPES
 // ═══════════════════════════════════════════════════════════════════════════════
 
-interface ParsedProduct {
+export interface ParsedProduct {
   type: "tire" | "wheel";
   name: string;
   brand?: string;
@@ -47,7 +47,7 @@ interface PackageSummary {
 // RECOMMENDATION BADGES
 // ═══════════════════════════════════════════════════════════════════════════════
 
-type RecommendationBadge = 
+export type RecommendationBadge = 
   | "jakes-pick"
   | "best-value"
   | "quietest"

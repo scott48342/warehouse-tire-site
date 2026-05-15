@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { JakeProductCard, JakePackageCard } from "./JakeProductCards";
+import { JakeProductCard, JakePackageCard, ParsedProduct } from "./JakeProductCards";
 import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
 import { trackJakeEvent, trackJakeMessage, getJakeSessionId, setJakeSessionId, resetJakeSessionId } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
@@ -21,25 +21,7 @@ interface Message {
   packageSummary?: PackageSummary;
 }
 
-interface ParsedProduct {
-  type: "tire" | "wheel";
-  name: string;
-  brand?: string;
-  model?: string;
-  price?: string;
-  priceNum?: number;
-  warranty?: string;
-  size?: string;
-  finish?: string;
-  fitmentLabel?: string;
-  imageUrl?: string;
-  productUrl?: string;
-  inStock?: boolean;
-  setPrice?: string;
-  terrain?: string;
-  loadRange?: string;
-  speedRating?: string;
-}
+// ParsedProduct imported from JakeProductCards
 
 interface PackageSummary {
   tire?: ParsedProduct;
