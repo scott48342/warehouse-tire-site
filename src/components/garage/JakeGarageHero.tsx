@@ -17,60 +17,60 @@ interface JakeGarageHeroProps {
   onStart: (prompt: string) => void;
 }
 
-// Build category cards - matching reference exactly
+// Build category cards - using new asset images
 const BUILD_CATEGORIES = [
   {
     id: "aggressive",
     title: "AGGRESSIVE STREET",
     desc: "Bold stance. Head turning.",
-    icon: "🔥",
+    icon: "/icons/icon-fitment.svg",
     iconBg: "bg-red-500",
-    image: "/garage/cat-lifted-builds.jpg",
+    image: "/garage/card-aggressive-street.jpg",
     prompt: "Build an aggressive street setup",
   },
   {
     id: "quiet",
     title: "QUIET & COMFORT",
     desc: "Smooth ride. Low road noise.",
-    icon: "🔇",
+    icon: "/icons/icon-support.svg",
     iconBg: "bg-red-500",
-    image: "/garage/cat-suv-crossovers.jpg",
+    image: "/garage/card-quiet-comfort.jpg",
     prompt: "I need quiet comfortable tires for my SUV",
   },
   {
     id: "blackout",
     title: "BLACKOUT BUILDS",
     desc: "Sleek, clean, and mean.",
-    icon: "⚫",
-    iconBg: "bg-neutral-800",
-    image: "/garage/cat-wheels-only.jpg",
+    icon: null, // Black circle
+    iconBg: "bg-neutral-900",
+    image: "/garage/card-blackout-builds.jpg",
     prompt: "I want a full blackout wheel setup",
   },
   {
     id: "towing",
     title: "TOWING & HAULING",
     desc: "Built strong. Tow with confidence.",
-    icon: "🚛",
+    icon: "/icons/icon-shipping.svg",
     iconBg: "bg-red-500",
-    image: "/garage/cat-trucks-jeeps.jpg",
+    image: "/garage/card-towing-hauling.jpg",
     prompt: "I need wheels and tires for towing",
   },
   {
     id: "offroad",
     title: "OFF-ROAD & OVERLAND",
     desc: "Go farther. Explore more.",
-    icon: "🏔️",
+    icon: "/icons/icon-brands.svg",
     iconBg: "bg-green-600",
-    image: "/garage/cat-lifted-builds.jpg",
+    image: "/garage/card-offroad-overland.jpg",
     prompt: "Build an off-road overland setup",
   },
   {
     id: "stance",
     title: "SHOW & STANCE",
     desc: "For the weekend warriors.",
-    icon: "⭐",
+    icon: "/icons/icon-fitment.svg",
     iconBg: "bg-purple-500",
-    image: "/garage/cat-performance-street.jpg",
+    image: "/garage/card-show-stance.jpg",
     prompt: "Build a show stance setup",
   },
 ];
@@ -143,12 +143,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             </div>
             <p className="text-xs text-white/50">Ready to build your setup</p>
           </div>
-          <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-red-500/50">
+          <div className="relative w-14 h-14">
             <Image
-              src="/jake/jake-avatar.png"
+              src="/jake/jake-avatar-online.png"
               alt="Jake"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         </div>
@@ -252,12 +252,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
           {/* Jake Avatar with Glow */}
           <div className="relative mb-4">
             <div className="absolute inset-0 -m-4 rounded-full bg-red-600/30 blur-2xl" />
-            <div className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-red-500/50">
+            <div className="relative w-36 h-36">
               <Image
-                src="/jake/jake-avatar.png"
+                src="/jake/jake-avatar-online.png"
                 alt="Jake"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
           </div>
@@ -310,8 +310,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                 <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/20 transition-colors duration-300" />
                 
                 {/* Icon Badge */}
-                <div className={`absolute top-3 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full ${cat.iconBg} flex items-center justify-center text-lg shadow-lg`}>
-                  {cat.icon}
+                <div className={`absolute top-3 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full ${cat.iconBg} flex items-center justify-center shadow-lg`}>
+                  {cat.icon ? (
+                    <Image src={cat.icon} alt="" width={20} height={20} className="invert" />
+                  ) : (
+                    <div className="w-5 h-5 rounded-full bg-black" />
+                  )}
                 </div>
                 
                 {/* Card Content */}
