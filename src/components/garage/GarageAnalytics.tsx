@@ -10,9 +10,12 @@ type GarageEvent =
   | "conversation_started"
   | "vehicle_identified"
   | "recommendation_shown"
+  | "product_injected"
   | "package_built"
   | "cart_created"
   | "checkout_started"
+  | "build_saved"
+  | "build_resumed"
   | "abandoned_stage";
 
 interface EventData {

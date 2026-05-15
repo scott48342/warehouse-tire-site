@@ -35,6 +35,7 @@ interface ProductRailProps {
   title?: string; // Custom title for the rail
   onProductClick: (product: RailProduct) => void;
   paused?: boolean;
+  highlightedId?: string | null; // Highlight a product when clicked
 }
 
 // Mock data for Phase 1 (no images - use placeholders)
@@ -183,10 +184,12 @@ const FITMENT_STYLES: Record<string, { bg: string; text: string; label: string }
 // Product Card Component
 function ProductCard({ 
   product, 
-  onClick 
+  onClick,
+  isHighlighted = false,
 }: { 
   product: RailProduct; 
   onClick: () => void;
+  isHighlighted?: boolean;
 }) {
   const badge = product.badge ? BADGE_STYLES[product.badge] : null;
   const fitment = product.fitmentConfidence ? FITMENT_STYLES[product.fitmentConfidence] : null;
@@ -194,10 +197,18 @@ function ProductCard({
   return (
     <button
       onClick={onClick}
-      className="group relative w-full bg-white/[0.03] hover:bg-white/[0.08] backdrop-blur-xl border border-white/[0.08] hover:border-red-500/30 rounded-xl p-3 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-red-500/10 text-left"
+      className={`group relative w-full backdrop-blur-xl rounded-xl p-3 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl text-left ${
+        isHighlighted 
+          ? "bg-red-500/20 border-2 border-red-500 scale-[1.03] shadow-xl shadow-red-500/30 animate-pulse" 
+          : "bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-red-500/30 hover:shadow-red-500/10"
+      }`}
     >
-      {/* Glow effect on hover */}
-      <div className="absolute -inset-px bg-gradient-to-br from-red-500/0 via-red-500/0 to-red-500/0 group-hover:from-red-500/10 group-hover:via-transparent group-hover:to-red-500/5 rounded-xl transition-all duration-500 pointer-events-none" />
+      {/* Glow effect on hover or highlight */}
+      <div className={`absolute -inset-px rounded-xl transition-all duration-500 pointer-events-none ${
+        isHighlighted 
+          ? "bg-gradient-to-br from-red-500/30 via-red-500/10 to-amber-500/20" 
+          : "bg-gradient-to-br from-red-500/0 via-red-500/0 to-red-500/0 group-hover:from-red-500/10 group-hover:via-transparent group-hover:to-red-500/5"
+      }`} />
       
       {/* Top edge highlight */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-t-xl" />
@@ -280,7 +291,7 @@ function ProductCard({
 }
 
 // Main Rail Component
-export function ProductRail({ products, side, title, onProductClick, paused = false }: ProductRailProps) {
+export function ProductRail({ products, side, title, onProductClick, paused = false, highlightedId }: ProductRailProps) {
   // Default title based on product type if not provided
   const railTitle = title || (products[0]?.type === "tire" ? "MATCHING TIRES" : "MATCHING WHEELS");
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -359,6 +370,7 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
               key={`${product.id}-${idx}`}
               product={product}
               onClick={() => onProductClick(product)}
+              isHighlighted={highlightedId === product.id}
             />
           ))}
         </div>
