@@ -816,17 +816,24 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             </div>
           ))}
 
-          {/* Loading Indicator */}
+          {/* Loading Indicator with Jake Thinking */}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-white/5 border border-white/10 rounded-2xl px-4 py-3">
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-1">
-                    <span className="w-2 h-2 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <span className="w-2 h-2 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                    <span className="w-2 h-2 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 max-w-xs">
+                <div className="flex items-start gap-3">
+                  <img 
+                    src="/images/jake/jake-thinking.png" 
+                    alt="Jake thinking"
+                    className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                  />
+                  <div className="flex flex-col justify-center min-h-[64px]">
+                    <span className="text-white/70 text-sm font-medium">Finding your perfect setup...</span>
+                    <div className="flex gap-1 mt-2">
+                      <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                      <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                      <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                    </div>
                   </div>
-                  <span className="text-white/50 text-sm">Jake is typing...</span>
                 </div>
               </div>
             </div>
