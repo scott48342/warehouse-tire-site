@@ -260,157 +260,58 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
   return (
     <div className="flex h-screen overflow-hidden bg-[#030303]">
       {/* ═══════════════════════════════════════════════════════════════════════
-          CINEMATIC BACKGROUND - Real Garage Environment
-          Recognizable imagery with heavy blur for subconscious environmental depth
+          CINEMATIC BACKGROUND - Visible Garage Environment
       ═══════════════════════════════════════════════════════════════════════ */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         
-        {/* ─────────────────────────────────────────────────────────────────────
-            LAYER GROUP 1: Real Garage Imagery (Heavy Blur)
-        ───────────────────────────────────────────────────────────────────── */}
-        
-        {/* Main wheel wall - center/left (wheel racks visible) */}
-        <div className="absolute inset-0">
-          <Image
-            src="/garage/misc-wheel-wall.jpg"
-            alt=""
-            fill
-            className="object-cover scale-110 blur-[25px]"
-            style={{ objectPosition: '30% center', opacity: 0.22 }}
-          />
-        </div>
-        
-        {/* Garage environment - right side framing */}
-        <div className="absolute -right-20 top-0 bottom-0 w-[60%]">
-          <Image
-            src="/garage/hero-garage-04.jpg"
-            alt=""
-            fill
-            className="object-cover scale-110 blur-[30px]"
-            style={{ objectPosition: 'right center', opacity: 0.18 }}
-          />
-        </div>
-        
-        {/* Toolbox/workbench - bottom left corner framing */}
-        <div className="absolute -left-10 bottom-0 w-[40%] h-[50%]">
-          <Image
-            src="/garage/misc-toolbox.jpg"
-            alt=""
-            fill
-            className="object-cover scale-125 blur-[35px]"
-            style={{ objectPosition: 'left bottom', opacity: 0.15 }}
-          />
-        </div>
-        
-        {/* Secondary garage layer - upper area for ceiling/lights feel */}
-        <div className="absolute inset-x-0 top-0 h-[40%]">
-          <Image
-            src="/garage/hero-garage-02.jpg"
-            alt=""
-            fill
-            className="object-cover scale-110 blur-[40px]"
-            style={{ objectPosition: 'center top', opacity: 0.12 }}
-          />
-        </div>
-
-        {/* ─────────────────────────────────────────────────────────────────────
-            LAYER GROUP 2: Darkening & Edge Fading
-        ───────────────────────────────────────────────────────────────────── */}
-        
-        {/* Base darkening - reduced to let imagery show */}
-        <div className="absolute inset-0 bg-black/40" />
-        
-        {/* Left edge fade (environmental framing) */}
-        <div className="absolute left-0 top-0 bottom-0 w-[25%] bg-gradient-to-r from-black via-black/80 to-transparent" />
-        
-        {/* Right edge fade (environmental framing) */}
-        <div className="absolute right-0 top-0 bottom-0 w-[30%] bg-gradient-to-l from-black via-black/70 to-transparent" />
-        
-        {/* Top edge fade */}
-        <div className="absolute top-0 left-0 right-0 h-[20%] bg-gradient-to-b from-black via-black/70 to-transparent" />
-        
-        {/* Bottom edge fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-[25%] bg-gradient-to-t from-black via-black/80 to-transparent" />
-
-        {/* ─────────────────────────────────────────────────────────────────────
-            LAYER GROUP 3: Center Spotlight / Interaction Zone
-        ───────────────────────────────────────────────────────────────────── */}
-        
-        {/* Center spotlight - brightens conversation area */}
-        <div 
-          className="absolute top-1/2 left-[40%] -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 30%, transparent 60%)',
-          }}
-        />
-        
-        {/* Red accent glow - centered */}
-        <div 
-          className="absolute top-1/2 left-[40%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse, rgba(220,38,38,0.06) 0%, rgba(220,38,38,0.02) 40%, transparent 65%)',
-          }}
-        />
-
-        {/* ─────────────────────────────────────────────────────────────────────
-            LAYER GROUP 4: Top-Down Light Shafts
-        ───────────────────────────────────────────────────────────────────── */}
-        
-        {/* Main overhead light shaft - center left */}
-        <div 
-          className="absolute top-0 left-[30%] w-[200px] h-[60%] opacity-[0.04]"
-          style={{
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 30%, transparent 100%)',
-            transform: 'perspective(500px) rotateX(10deg)',
-          }}
-        />
-        
-        {/* Secondary light shaft - center */}
-        <div 
-          className="absolute top-0 left-[45%] w-[150px] h-[50%] opacity-[0.03]"
-          style={{
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 40%, transparent 100%)',
-            transform: 'perspective(500px) rotateX(8deg)',
-          }}
-        />
-        
-        {/* Subtle red light accent from above */}
-        <div 
-          className="absolute top-0 left-[35%] w-[100px] h-[40%] opacity-[0.06]"
-          style={{
-            background: 'linear-gradient(180deg, rgba(220,38,38,0.3) 0%, rgba(220,38,38,0.1) 30%, transparent 100%)',
-          }}
-        />
-
-        {/* ─────────────────────────────────────────────────────────────────────
-            LAYER GROUP 5: Floor Reflections
-        ───────────────────────────────────────────────────────────────────── */}
-        
-        {/* Floor reflection glow */}
-        <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-red-950/10 via-red-950/03 to-transparent" />
-        
-        {/* Floor reflection line */}
-        <div 
-          className="absolute bottom-[15%] left-[10%] right-[10%] h-px opacity-[0.06]"
-          style={{
-            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4) 30%, rgba(255,255,255,0.4) 70%, transparent)',
-          }}
-        />
-
-        {/* ─────────────────────────────────────────────────────────────────────
-            LAYER GROUP 6: Final Polish
-        ───────────────────────────────────────────────────────────────────── */}
-        
-        {/* Soft vignette */}
+        {/* Main garage background - VISIBLE */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at 40% 50%, transparent 30%, rgba(0,0,0,0.5) 100%)',
+            backgroundImage: 'url(/garage/misc-wheel-wall.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(20px) brightness(0.4)',
+            transform: 'scale(1.1)',
+          }}
+        />
+        
+        {/* Right side garage overlay */}
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-[50%]"
+          style={{
+            backgroundImage: 'url(/garage/hero-garage-04.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'right center',
+            filter: 'blur(25px) brightness(0.35)',
+            opacity: 0.7,
+          }}
+        />
+
+        {/* Center darkening for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50" />
+        
+        {/* Edge vignette */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at 40% 50%, transparent 20%, rgba(0,0,0,0.6) 80%)',
+          }}
+        />
+
+        {/* Red accent glow - bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-red-900/20 to-transparent" />
+        
+        {/* Red accent glow - center */}
+        <div 
+          className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] rounded-full"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(220,38,38,0.12) 0%, transparent 60%)',
           }}
         />
         
         {/* Header blend */}
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black/60 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/70 to-transparent" />
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════════
