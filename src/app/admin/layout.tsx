@@ -58,6 +58,7 @@ const NAV_ITEMS = [
   { href: "/admin/live", label: "Live", icon: "🟢" },
   { href: "/admin/sessions", label: "Sessions", icon: "🕐" },
   { href: "/admin/analytics", label: "Funnel", icon: "📈" },
+  { href: "/admin/jake-analytics", label: "Jake", icon: "🤖" },
   { href: "/admin/orders", label: "Orders", icon: "📦" },
   { href: "/admin/abandoned-carts", label: "Carts", icon: "🛒" },
   { href: "/admin/email-automation", label: "Automation", icon: "🤖" },

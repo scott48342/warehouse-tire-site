@@ -19,6 +19,8 @@ export type JakeEventType =
 
 interface JakeEventData {
   prompt?: string;
+  sessionId?: string;
+  requestId?: string;
   vehicle?: {
     year?: string;
     make?: string;
@@ -29,13 +31,40 @@ interface JakeEventData {
     type?: string;
     name?: string;
     brand?: string;
+    model?: string;
     sku?: string;
-    price?: string;
+    price?: number;
   };
+  products?: Array<{
+    type?: string;
+    brand?: string;
+    model?: string;
+    sku?: string;
+  }>;
+  cartId?: string;
+  cartUrl?: string;
+  cartValue?: number; // Total cart value in dollars
   count?: number;
   name?: string;
   type?: string;
   source?: "homepage" | "header" | "page" | "floating";
+  error?: {
+    type?: string;
+    message?: string;
+  };
+}
+
+// Generate a session ID for tracking conversations
+let jakeSessionId: string | null = null;
+function getJakeSessionId(): string {
+  if (!jakeSessionId && typeof window !== "undefined") {
+    jakeSessionId = sessionStorage.getItem("jake_session_id");
+    if (!jakeSessionId) {
+      jakeSessionId = `jake_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+      sessionStorage.setItem("jake_session_id", jakeSessionId);
+    }
+  }
+  return jakeSessionId || "unknown";
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -60,7 +89,10 @@ export function trackJakeEvent(event: JakeEventType, data?: JakeEventData) {
   try {
     const payload = {
       event,
-      data,
+      data: {
+        ...data,
+        sessionId: getJakeSessionId(),
+      },
       timestamp: new Date().toISOString(),
       url: typeof window !== "undefined" ? window.location.href : "",
       userAgent: typeof navigator !== "undefined" ? navigator.userAgent : "",

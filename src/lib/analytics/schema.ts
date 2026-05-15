@@ -69,5 +69,60 @@ export const analyticsPageviews = pgTable(
   })
 );
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// JAKE ANALYTICS EVENTS (added 2026-05-14)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export const jakeAnalyticsEvents = pgTable(
+  "jake_analytics_events",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    eventName: varchar("event_name", { length: 50 }).notNull(),
+    sessionId: varchar("session_id", { length: 64 }),
+    requestId: varchar("request_id", { length: 64 }),
+    source: varchar("source", { length: 50 }), // homepage, header, direct
+    // Vehicle info
+    vehicleYear: varchar("vehicle_year", { length: 10 }),
+    vehicleMake: varchar("vehicle_make", { length: 50 }),
+    vehicleModel: varchar("vehicle_model", { length: 50 }),
+    vehicleTrim: varchar("vehicle_trim", { length: 100 }),
+    // Prompt/intent
+    prompt: text("prompt"),
+    intent: varchar("intent", { length: 100 }), // cheap_tires, all_terrain, etc.
+    // Product info
+    productSku: varchar("product_sku", { length: 50 }),
+    productType: varchar("product_type", { length: 20 }), // tire, wheel, package
+    productBrand: varchar("product_brand", { length: 50 }),
+    productModel: varchar("product_model", { length: 100 }),
+    // Cart/order info
+    cartId: varchar("cart_id", { length: 64 }),
+    cartUrl: text("cart_url"),
+    cartValue: integer("cart_value"), // cents
+    orderId: varchar("order_id", { length: 50 }),
+    orderValue: integer("order_value"), // cents
+    // Error tracking
+    errorType: varchar("error_type", { length: 50 }),
+    errorMessage: text("error_message"),
+    // Metadata
+    metadata: text("metadata"), // JSON for flexible data
+    userAgent: text("user_agent"),
+    hostname: varchar("hostname", { length: 100 }),
+    url: varchar("url", { length: 500 }),
+    // Test exclusion
+    isTest: boolean("is_test").notNull().default(false),
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    eventNameIdx: index("jake_events_event_name_idx").on(table.eventName),
+    sessionIdx: index("jake_events_session_idx").on(table.sessionId),
+    createdAtIdx: index("jake_events_created_at_idx").on(table.createdAt),
+    productSkuIdx: index("jake_events_product_sku_idx").on(table.productSku),
+    isTestIdx: index("jake_events_is_test_idx").on(table.isTest),
+    hostnameIdx: index("jake_events_hostname_idx").on(table.hostname),
+  })
+);
+
 export type AnalyticsSession = typeof analyticsSessions.$inferSelect;
 export type AnalyticsPageview = typeof analyticsPageviews.$inferSelect;
+export type JakeAnalyticsEvent = typeof jakeAnalyticsEvents.$inferSelect;

@@ -210,7 +210,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
 
     if (!hasStarted) {
       setHasStarted(true);
-      trackJakeEvent("conversation_started");
+      trackJakeEvent("conversation_started", { prompt: text });
     }
 
     setInput("");
@@ -302,12 +302,41 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       // Get cart URL from structured data or parse from text
       const cartUrl = data.cartUrl || parseCartUrl(responseText);
 
-      // Track events
+      // Track events with rich data
       if (products.length > 0) {
-        trackJakeEvent("product_recommended", { count: products.length });
+        trackJakeEvent("product_recommended", { 
+          count: products.length,
+          products: products.slice(0, 5).map(p => ({
+            type: p.type,
+            brand: p.brand,
+            model: p.model,
+            sku: p.productUrl?.match(/\/(tires|wheels)\/([^?/]+)/)?.[2],
+          })),
+          vehicle: data.vehicle || undefined,
+        });
       }
       if (cartUrl) {
-        trackJakeEvent("cart_created");
+        // Try to parse cart value from URL
+        let cartValue: number | undefined;
+        try {
+          const match = cartUrl.match(/data=([^&]+)/);
+          if (match) {
+            const decoded = JSON.parse(atob(match[1].replace(/-/g, '+').replace(/_/g, '/')));
+            cartValue = decoded.items?.reduce((sum: number, item: any) => 
+              sum + (item.price || 0) * (item.quantity || 1), 0);
+          }
+        } catch {}
+        
+        trackJakeEvent("cart_created", {
+          cartUrl,
+          cartValue,
+          vehicle: data.vehicle || undefined,
+          products: products.slice(0, 5).map(p => ({
+            type: p.type,
+            brand: p.brand,
+            model: p.model,
+          })),
+        });
       }
 
       const assistantMessage: Message = {
@@ -523,8 +552,14 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                         taxRate={LOCAL_TAX_RATE}
                         onClick={() => {
                           trackJakeEvent("product_clicked", { 
-                            name: product.name,
-                            type: product.type 
+                            product: {
+                              type: product.type,
+                              brand: product.brand,
+                              model: product.model,
+                              name: product.name,
+                              sku: product.productUrl?.match(/\/(tires|wheels)\/([^?/]+)/)?.[2],
+                              price: product.priceNum,
+                            }
                           });
                         }}
                       />
