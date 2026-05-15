@@ -270,46 +270,46 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
         ───────────────────────────────────────────────────────────────────── */}
         
         {/* Main wheel wall - center/left (wheel racks visible) */}
-        <div className="absolute inset-0" style={{ filter: 'blur(25px)' }}>
+        <div className="absolute inset-0">
           <Image
             src="/garage/misc-wheel-wall.jpg"
             alt=""
             fill
-            className="object-cover opacity-[0.15] scale-110"
-            style={{ objectPosition: '30% center' }}
+            className="object-cover scale-110 blur-[25px]"
+            style={{ objectPosition: '30% center', opacity: 0.22 }}
           />
         </div>
         
         {/* Garage environment - right side framing */}
-        <div className="absolute -right-20 top-0 bottom-0 w-[60%]" style={{ filter: 'blur(30px)' }}>
+        <div className="absolute -right-20 top-0 bottom-0 w-[60%]">
           <Image
             src="/garage/hero-garage-04.jpg"
             alt=""
             fill
-            className="object-cover opacity-[0.12] scale-110"
-            style={{ objectPosition: 'right center' }}
+            className="object-cover scale-110 blur-[30px]"
+            style={{ objectPosition: 'right center', opacity: 0.18 }}
           />
         </div>
         
         {/* Toolbox/workbench - bottom left corner framing */}
-        <div className="absolute -left-10 bottom-0 w-[40%] h-[50%]" style={{ filter: 'blur(35px)' }}>
+        <div className="absolute -left-10 bottom-0 w-[40%] h-[50%]">
           <Image
             src="/garage/misc-toolbox.jpg"
             alt=""
             fill
-            className="object-cover opacity-[0.10] scale-125"
-            style={{ objectPosition: 'left bottom' }}
+            className="object-cover scale-125 blur-[35px]"
+            style={{ objectPosition: 'left bottom', opacity: 0.15 }}
           />
         </div>
         
         {/* Secondary garage layer - upper area for ceiling/lights feel */}
-        <div className="absolute inset-x-0 top-0 h-[40%]" style={{ filter: 'blur(40px)' }}>
+        <div className="absolute inset-x-0 top-0 h-[40%]">
           <Image
             src="/garage/hero-garage-02.jpg"
             alt=""
             fill
-            className="object-cover opacity-[0.08] scale-110"
-            style={{ objectPosition: 'center top' }}
+            className="object-cover scale-110 blur-[40px]"
+            style={{ objectPosition: 'center top', opacity: 0.12 }}
           />
         </div>
 
@@ -317,8 +317,8 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
             LAYER GROUP 2: Darkening & Edge Fading
         ───────────────────────────────────────────────────────────────────── */}
         
-        {/* Base darkening */}
-        <div className="absolute inset-0 bg-black/60" />
+        {/* Base darkening - reduced to let imagery show */}
+        <div className="absolute inset-0 bg-black/40" />
         
         {/* Left edge fade (environmental framing) */}
         <div className="absolute left-0 top-0 bottom-0 w-[25%] bg-gradient-to-r from-black via-black/80 to-transparent" />
