@@ -737,7 +737,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     const productDesc = `${product.brand} ${product.model}${product.size ? ` (${product.size})` : ""}`;
     setInput(`Tell me about the ${productDesc}`);
     inputRef.current?.focus();
-    trackJakeEvent("rail_product_clicked", { product: product.id, type: product.type });
+    trackJakeEvent("rail_product_clicked", { product: { type: product.type, brand: product.brand, model: product.model, sku: product.id } });
   };
 
   return (

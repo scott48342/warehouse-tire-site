@@ -7,6 +7,7 @@
 export type JakeEventType =
   | "jake_opened"
   | "jake_closed"
+  | "jake_garage_opened"
   | "conversation_started"
   | "message_sent"
   | "message_received"
@@ -14,6 +15,8 @@ export type JakeEventType =
   | "vehicle_identified"
   | "product_recommended"
   | "product_clicked"
+  | "rail_product_clicked"
+  | "recommendation_shown"
   | "package_built"
   | "cart_created"
   | "checkout_started";
