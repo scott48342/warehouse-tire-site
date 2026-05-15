@@ -5,13 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// JAKE GARAGE HERO - Commerce-First Premium Experience
+// JAKE GARAGE HERO - Cinematic Commerce Experience
 // 
-// Goals:
-// - Premium wheel & tire ecommerce platform identity
-// - Products visible, Jake assists
-// - Cinematic but commerce-focused
-// - User understands "this is where I shop" in 2-3 seconds
+// Identity:
+// - Premium, immersive, emotionally engaging
+// - Jake is the central figure - your build expert
+// - Cinematic atmosphere with commerce integrated naturally
+// - NOT a generic ecommerce template
+// - Hero DOMINATES the page
 // ═══════════════════════════════════════════════════════════════════════════════
 
 interface JakeGarageHeroProps {
@@ -19,66 +20,42 @@ interface JakeGarageHeroProps {
   onStart: (prompt: string) => void;
 }
 
-// Product-focused backgrounds (trucks, wheels, fitment - NOT landscapes)
+// Cinematic backgrounds - dramatic vehicle shots
 const HERO_BACKGROUNDS = [
   "/images/homepage/vehicle-ram-aggressive.jpg",
   "/images/homepage/vehicle-silverado-lifted.jpg",
   "/garage/misc-wheel-wall.jpg",
 ];
 
-// Product-focused category cards
-const SHOP_CATEGORIES = [
-  {
-    id: "wheels",
-    title: "SHOP WHEELS",
-    desc: "2,000+ styles from top brands",
-    image: "/images/homepage/vehicle-camaro-street.jpg",
-    prompt: "Show me wheels for my vehicle",
-    href: "/wheels",
-  },
-  {
-    id: "tires",
-    title: "SHOP TIRES",
-    desc: "All-terrain, performance, touring",
-    image: "/images/homepage/vehicle-tacoma-overland.jpg",
-    prompt: "Find tires for my vehicle",
-    href: "/tires",
-  },
-  {
-    id: "packages",
-    title: "WHEEL & TIRE PACKAGES",
-    desc: "Mounted, balanced, ready to bolt on",
-    image: "/images/homepage/vehicle-silverado-lifted.jpg",
-    prompt: "Build me a wheel and tire package",
-    href: "/wheels?package=1",
-  },
+// Build paths - NOT shopping categories, but lifestyle/build directions
+const BUILD_PATHS = [
   {
     id: "lifted",
-    title: "LIFTED TRUCK BUILDS",
-    desc: "Bigger tires, aggressive stance",
+    title: "LIFTED BUILDS",
+    subtitle: "Go bigger. Stand out.",
     image: "/garage/card-bg-offroad-overland.jpg",
-    prompt: "Build a lifted truck setup",
+    prompt: "Build me a lifted truck setup",
     href: "/lifted",
   },
   {
-    id: "offroad",
-    title: "OFF-ROAD & A/T TIRES",
-    desc: "BFG, Nitto, Toyo & more",
-    image: "/images/homepage/vehicle-tacoma-overland.jpg",
-    prompt: "Show me off-road tires",
-    href: "/tires?terrain=all-terrain",
-  },
-  {
-    id: "performance",
-    title: "PERFORMANCE & STREET",
-    desc: "Staggered fitments available",
-    image: "/images/homepage/vehicle-corvette-track.jpg",
+    id: "street",
+    title: "STREET PERFORMANCE",
+    subtitle: "Low. Fast. Clean.",
+    image: "/images/homepage/vehicle-camaro-street.jpg",
     prompt: "Build a performance street setup",
     href: "/wheels?intent=performance",
   },
+  {
+    id: "overland",
+    title: "OVERLAND & OFF-ROAD",
+    subtitle: "Built for adventure.",
+    image: "/images/homepage/vehicle-tacoma-overland.jpg",
+    prompt: "Build an overland setup",
+    href: "/tires?terrain=all-terrain",
+  },
 ];
 
-// Popular brands
+// Popular brands (shown lower on page)
 const WHEEL_BRANDS = [
   { name: "Fuel", href: "/wheels?brand=fuel" },
   { name: "Method", href: "/wheels?brand=method" },
@@ -114,88 +91,112 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#050505]">
+    <div className="min-h-screen flex flex-col bg-[#030303]">
       
       {/* ═══════════════════════════════════════════════════════════════════════
-          HERO SECTION - Product-Focused Background
+          CINEMATIC HERO - Full viewport, immersive, Jake-centered
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[600px] lg:min-h-[650px] flex flex-col">
+      <section className="relative min-h-screen flex flex-col">
         
-        {/* Background - Trucks/Wheels/Fitment */}
+        {/* Cinematic Background */}
         <div className="absolute inset-0">
           <Image
             src={bgImage}
             alt="Premium wheel and tire setup"
             fill
-            className="object-cover"
+            className="object-cover scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/30" />
+          {/* Dramatic gradient overlays */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#030303]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/70" />
+          {/* Vignette effect */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
         </div>
 
-        {/* Header */}
-        <header className="relative z-20 flex items-center justify-between px-6 lg:px-12 py-4">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
-              </svg>
+        {/* Subtle atmospheric particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/5 rounded-full blur-[100px] animate-pulse" />
+          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-600/5 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+
+        {/* Header - Minimal, floating */}
+        <header className="relative z-20 flex items-center justify-between px-8 lg:px-16 py-6">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-red-500/50 group-hover:ring-red-500 transition-all shadow-lg shadow-red-900/30">
+              <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white">Jake <span className="text-red-500">Garage</span></h1>
-              <p className="text-xs text-white/50">by Warehouse Tire Direct</p>
+              <h1 className="text-2xl font-black text-white tracking-tight">Jake <span className="text-red-500">Garage</span></h1>
+              <p className="text-xs text-white/40 tracking-wide">by Warehouse Tire Direct</p>
             </div>
           </Link>
 
-          {/* Quick Shop Links - Desktop */}
-          <nav className="hidden lg:flex items-center gap-6">
-            <Link href="/wheels" className="text-sm text-white/70 hover:text-white transition-colors">Wheels</Link>
-            <Link href="/tires" className="text-sm text-white/70 hover:text-white transition-colors">Tires</Link>
-            <Link href="/wheels?package=1" className="text-sm text-white/70 hover:text-white transition-colors">Packages</Link>
-            <Link href="/lifted" className="text-sm text-white/70 hover:text-white transition-colors">Lifted Builds</Link>
+          {/* Navigation - Desktop only, subtle */}
+          <nav className="hidden lg:flex items-center gap-8">
+            <Link href="/wheels" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Wheels</Link>
+            <Link href="/tires" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Tires</Link>
+            <Link href="/wheels?package=1" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Packages</Link>
+            <Link href="/lifted" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Lifted</Link>
           </nav>
 
-          {/* Jake Status */}
-          <div className="flex items-center gap-2 bg-white/5 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10">
-            <div className="relative w-8 h-8 rounded-full overflow-hidden">
+          {/* Jake Status - Prominent */}
+          <div className="flex items-center gap-3 bg-black/40 backdrop-blur-xl rounded-full px-4 py-2 border border-white/10">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-green-500/50">
               <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
             </div>
-            <span className="hidden sm:block text-sm text-white/70">Jake Online</span>
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
+            <div className="hidden sm:block">
+              <p className="text-sm font-semibold text-white">Jake</p>
+              <p className="text-xs text-green-400 flex items-center gap-1">
+                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                Online
+              </p>
+            </div>
           </div>
         </header>
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex items-center px-6 lg:px-12">
-          <div className="max-w-2xl">
-            
-            {/* Commerce Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-red-600/20 border border-red-500/30 rounded-full mb-6">
-              <span className="text-red-400 text-sm font-semibold">WHEELS • TIRES • PACKAGES</span>
+        {/* Hero Content - Centered, dominant */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 lg:px-16 pb-24">
+          
+          {/* Jake Avatar - Central figure */}
+          <div className="relative mb-8">
+            <div className="absolute -inset-8 bg-red-500/20 rounded-full blur-3xl" />
+            <div className="absolute -inset-4 bg-red-600/10 rounded-full blur-xl animate-pulse" />
+            <div className="relative w-32 h-32 lg:w-40 lg:h-40">
+              <Image 
+                src="/jake/jake-explaining.png" 
+                alt="Jake - Your Build Expert" 
+                fill 
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
+          </div>
 
-            {/* Main Headline */}
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[0.95] tracking-tight mb-4">
-              BUILD YOUR<br />
-              <span className="text-red-500">PERFECT SETUP</span>
+          {/* Main Headline */}
+          <div className="text-center max-w-4xl">
+            <p className="text-red-500 text-sm lg:text-base font-semibold uppercase tracking-[0.2em] mb-4">
+              Your Build Expert
+            </p>
+            
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] tracking-tight mb-6">
+              LET'S BUILD<br />
+              <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
+                SOMETHING SICK
+              </span>
             </h2>
 
-            {/* Commerce-Focused Subtext */}
-            <p className="text-lg lg:text-xl text-white/70 mb-6 max-w-lg">
-              Shop wheels, tires, and complete packages with <strong className="text-white">AI-powered fitment guidance</strong>. 
-              Tell Jake your vehicle — he'll find what fits.
+            <p className="text-lg lg:text-xl text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Tell me what you drive. I'll help you find the perfect wheels, tires, or complete package — 
+              <span className="text-white/80"> guaranteed to fit.</span>
             </p>
 
-            {/* Search Input */}
-            <form onSubmit={handleSubmit} className="mb-6">
-              <div className={`relative flex items-center bg-white/5 backdrop-blur-xl border-2 rounded-xl overflow-hidden transition-all ${isFocused ? "border-red-500/60 bg-white/10" : "border-white/15"}`}>
-                <div className="pl-4 pr-2 text-white/40">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            {/* Search Input - Premium styled */}
+            <form onSubmit={handleSubmit} className="mb-8 max-w-2xl mx-auto">
+              <div className={`relative flex items-center bg-black/50 backdrop-blur-xl border-2 rounded-2xl overflow-hidden transition-all duration-300 ${isFocused ? "border-red-500/80 bg-black/70 shadow-lg shadow-red-500/20" : "border-white/10 hover:border-white/20"}`}>
+                <div className="pl-6 pr-3 text-white/30">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
                 <input
@@ -204,133 +205,169 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                   onChange={(e) => setInput(e.target.value)}
                   onFocus={() => setIsFocused(true)}
                   onBlur={() => setIsFocused(false)}
-                  placeholder="Enter your vehicle or what you're looking for..."
-                  className="flex-1 bg-transparent py-4 text-white placeholder-white/40 focus:outline-none"
+                  placeholder="Tell Jake your vehicle or what you're building..."
+                  className="flex-1 bg-transparent py-5 text-lg text-white placeholder-white/30 focus:outline-none"
                 />
-                <button type="submit" disabled={!input.trim()} className="m-1.5 px-6 py-2.5 bg-red-600 hover:bg-red-500 disabled:bg-neutral-700 text-white font-bold rounded-lg transition-all">
-                  Search
+                <button 
+                  type="submit" 
+                  disabled={!input.trim()} 
+                  className="m-2 px-8 py-3 bg-red-600 hover:bg-red-500 disabled:bg-white/10 disabled:text-white/30 text-white font-bold rounded-xl transition-all duration-200 shadow-lg shadow-red-900/30 hover:shadow-red-500/40"
+                >
+                  Start Build
                 </button>
               </div>
             </form>
 
-            {/* Quick Actions */}
-            <div className="flex flex-wrap gap-2">
-              <span className="text-white/40 text-sm py-2">Popular:</span>
-              {["Lifted truck wheels", "Quiet SUV tires", "Staggered package"].map((q) => (
-                <button key={q} onClick={() => onStart(q)} className="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white/70 hover:text-white text-sm transition-all">
-                  {q}
+            {/* Quick prompts */}
+            <div className="flex flex-wrap gap-3 justify-center">
+              {["2024 F-150 wheel package", "Lifted Silverado tires", "Mustang staggered setup"].map((q) => (
+                <button 
+                  key={q} 
+                  onClick={() => onStart(q)} 
+                  className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full text-white/60 hover:text-white text-sm transition-all duration-200"
+                >
+                  "{q}"
                 </button>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Trust Bar */}
-        <div className="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex flex-wrap items-center justify-center gap-8 text-sm">
-              <div className="flex items-center gap-2 text-white/60"><span className="text-green-500">✓</span> Fitment Guaranteed</div>
-              <div className="flex items-center gap-2 text-white/60"><span className="text-green-500">✓</span> Free Shipping $199+</div>
-              <div className="flex items-center gap-2 text-white/60"><span className="text-green-500">✓</span> Expert Support 7 Days</div>
-              <div className="flex items-center gap-2 text-white/60"><span className="text-green-500">✓</span> Top Brands Only</div>
-            </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+          <div className="flex flex-col items-center gap-2 text-white/30">
+            <span className="text-xs uppercase tracking-widest">Explore</span>
+            <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          SHOP BY CATEGORY - Product Cards
+          BUILD PATHS - Immersive lifestyle cards, NOT ecommerce grid
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0a0a0a] py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-bold text-white">Shop by Category</h3>
-            <Link href="/wheels" className="text-red-500 hover:text-red-400 text-sm font-semibold">View All →</Link>
+      <section className="relative bg-[#030303] py-24 overflow-hidden">
+        {/* Background atmosphere */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-[#080808] to-[#030303]" />
+        
+        <div className="relative max-w-7xl mx-auto px-8 lg:px-16">
+          <div className="text-center mb-16">
+            <p className="text-red-500/80 text-sm font-semibold uppercase tracking-[0.2em] mb-3">Choose Your Path</p>
+            <h3 className="text-3xl lg:text-4xl font-black text-white">What Are You Building?</h3>
           </div>
           
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {SHOP_CATEGORIES.map((cat) => (
-              <Link
-                key={cat.id}
-                href={cat.href}
-                className="group relative block overflow-hidden rounded-xl bg-neutral-900 aspect-[4/3]"
+          {/* Immersive cards - larger, more cinematic */}
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+            {BUILD_PATHS.map((path) => (
+              <button
+                key={path.id}
+                onClick={() => onStart(path.prompt)}
+                className="group relative block overflow-hidden rounded-2xl bg-neutral-900 aspect-[3/4] text-left"
               >
-                <Image src={cat.image} alt={cat.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" sizes="(max-width: 768px) 50vw, 33vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/10 transition-colors" />
+                <Image 
+                  src={path.image} 
+                  alt={path.title} 
+                  fill 
+                  className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" 
+                  sizes="(max-width: 768px) 100vw, 33vw" 
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
+                {/* Red accent on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-red-600/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="text-white font-bold text-lg uppercase tracking-wide">{cat.title}</h4>
-                  <p className="text-white/60 text-sm">{cat.desc}</p>
-                  <div className="mt-2 text-red-500 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Shop Now →</div>
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-8">
+                  <h4 className="text-2xl lg:text-3xl font-black text-white uppercase tracking-wide mb-2 group-hover:text-red-400 transition-colors">
+                    {path.title}
+                  </h4>
+                  <p className="text-white/60 text-lg mb-4">{path.subtitle}</p>
+                  <div className="flex items-center gap-2 text-red-500 font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <span>Start this build</span>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
-              </Link>
+              </button>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          ASK JAKE SECTION - Positioned as Assistant
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0f0f0f] py-12 border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            
-            {/* Jake Card */}
-            <div className="relative flex-shrink-0">
-              <div className="absolute -inset-4 bg-red-500/10 rounded-full blur-2xl" />
-              <div className="relative w-28 h-28 lg:w-32 lg:h-32">
-                <Image src="/jake/jake-explaining.png" alt="Jake" fill className="object-contain" />
-              </div>
-            </div>
-            
-            {/* Content */}
-            <div className="flex-1 text-center lg:text-left">
-              <p className="text-red-500 text-sm font-semibold uppercase tracking-wider mb-1">Need Help Choosing?</p>
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">Ask Jake — Your Fitment Expert</h3>
-              <p className="text-white/60 mb-4 max-w-lg">
-                Not sure what fits? Jake knows every bolt pattern, offset, and tire size. 
-                Tell him your vehicle and he'll recommend the perfect wheels, tires, or packages.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <button onClick={() => onStart("Help me find wheels for my truck")} className="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-semibold rounded-lg transition-all">
-                  Ask Jake Now
-                </button>
-                <button onClick={() => onStart("What tires do you recommend?")} className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all border border-white/10">
-                  Get Recommendations
-                </button>
-              </div>
-            </div>
+          {/* Secondary options */}
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Link href="/wheels" className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white/70 hover:text-white font-medium transition-all">
+              Browse All Wheels
+            </Link>
+            <Link href="/tires" className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white/70 hover:text-white font-medium transition-all">
+              Browse All Tires
+            </Link>
+            <Link href="/wheels?package=1" className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white/70 hover:text-white font-medium transition-all">
+              Complete Packages
+            </Link>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          POPULAR BRANDS
+          TRUST & COMMERCE - Lower on page, integrated
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0a0a0a] py-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8">
-            
-            {/* Wheel Brands */}
+      <section className="bg-[#0a0a0a] py-16 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-8 lg:px-16">
+          
+          {/* Trust bar */}
+          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16 mb-16">
+            <div className="flex items-center gap-3 text-white/50">
+              <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span>Fitment Guaranteed</span>
+            </div>
+            <div className="flex items-center gap-3 text-white/50">
+              <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                </svg>
+              </div>
+              <span>Free Shipping $199+</span>
+            </div>
+            <div className="flex items-center gap-3 text-white/50">
+              <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center">
+                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <span>Expert Support</span>
+            </div>
+          </div>
+
+          {/* Brands */}
+          <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h4 className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-4">Popular Wheel Brands</h4>
-              <div className="flex flex-wrap gap-2">
+              <h4 className="text-white/30 text-xs font-semibold uppercase tracking-[0.2em] mb-6">Popular Wheel Brands</h4>
+              <div className="flex flex-wrap gap-3">
                 {WHEEL_BRANDS.map((brand) => (
-                  <Link key={brand.name} href={brand.href} className="px-4 py-2 bg-white/5 hover:bg-red-600/20 border border-white/10 hover:border-red-500/30 rounded-lg text-white/80 hover:text-white text-sm font-medium transition-all">
+                  <Link 
+                    key={brand.name} 
+                    href={brand.href} 
+                    className="px-5 py-2.5 bg-white/5 hover:bg-red-600/20 border border-white/10 hover:border-red-500/30 rounded-lg text-white/70 hover:text-white text-sm font-medium transition-all"
+                  >
                     {brand.name}
                   </Link>
                 ))}
               </div>
             </div>
-            
-            {/* Tire Brands */}
             <div>
-              <h4 className="text-white/40 text-xs font-semibold uppercase tracking-wider mb-4">Popular Tire Brands</h4>
-              <div className="flex flex-wrap gap-2">
+              <h4 className="text-white/30 text-xs font-semibold uppercase tracking-[0.2em] mb-6">Popular Tire Brands</h4>
+              <div className="flex flex-wrap gap-3">
                 {TIRE_BRANDS.map((brand) => (
-                  <Link key={brand.name} href={brand.href} className="px-4 py-2 bg-white/5 hover:bg-red-600/20 border border-white/10 hover:border-red-500/30 rounded-lg text-white/80 hover:text-white text-sm font-medium transition-all">
+                  <Link 
+                    key={brand.name} 
+                    href={brand.href} 
+                    className="px-5 py-2.5 bg-white/5 hover:bg-red-600/20 border border-white/10 hover:border-red-500/30 rounded-lg text-white/70 hover:text-white text-sm font-medium transition-all"
+                  >
                     {brand.name}
                   </Link>
                 ))}
@@ -341,18 +378,18 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          FOOTER
+          FOOTER - Minimal
       ═══════════════════════════════════════════════════════════════════════ */}
-      <footer className="bg-neutral-950 py-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Warehouse Tire Direct. All rights reserved.
+      <footer className="bg-[#030303] py-8 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-8 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white/30 text-sm">
+            © {new Date().getFullYear()} Warehouse Tire Direct
           </p>
-          <div className="flex items-center gap-6 text-sm">
-            <Link href="/about" className="text-white/40 hover:text-white/70">About</Link>
-            <Link href="/contact" className="text-white/40 hover:text-white/70">Contact</Link>
-            <Link href="/shipping" className="text-white/40 hover:text-white/70">Shipping</Link>
-            <Link href="/returns" className="text-white/40 hover:text-white/70">Returns</Link>
+          <div className="flex items-center gap-8 text-sm">
+            <Link href="/about" className="text-white/30 hover:text-white/60 transition-colors">About</Link>
+            <Link href="/contact" className="text-white/30 hover:text-white/60 transition-colors">Contact</Link>
+            <Link href="/shipping" className="text-white/30 hover:text-white/60 transition-colors">Shipping</Link>
+            <Link href="/returns" className="text-white/30 hover:text-white/60 transition-colors">Returns</Link>
           </div>
         </div>
       </footer>

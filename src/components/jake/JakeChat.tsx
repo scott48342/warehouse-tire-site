@@ -644,6 +644,32 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
 
   return (
     <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden relative`}>
+      {/* Cinematic Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/garage/misc-wheel-wall.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(8px) brightness(0.6)',
+            transform: 'scale(1.05)',
+          }}
+        />
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-[50%]"
+          style={{
+            backgroundImage: 'url(/garage/hero-garage-04.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'right center',
+            filter: 'blur(6px) brightness(0.55)',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-black/30" />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(0,0,0,0.5) 100%)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-[150px] bg-gradient-to-t from-red-900/10 to-transparent" />
+      </div>
+
       {/* Resume Conversation Dialog */}
       {showResumeDialog && (
         <div className="absolute inset-0 z-50 bg-black/80 flex items-center justify-center p-6">
@@ -698,7 +724,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       )}
 
       {/* Header */}
-      <div className="flex-shrink-0 border-b border-white/10 bg-[#0d0d0d]">
+      <div className="relative z-10 flex-shrink-0 border-b border-white/10 bg-black/60 backdrop-blur-xl">
         <div className="flex items-center justify-between px-6 py-3">
           <div className="flex items-center gap-3">
             <Link href="/" className="mr-2 text-white/50 hover:text-white transition-colors">
@@ -747,7 +773,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       </div>
 
       {/* Messages */}
-      <div className="flex-1 min-h-0 overflow-y-auto px-4 py-6">
+      <div className="relative z-10 flex-1 min-h-0 overflow-y-auto px-4 py-6">
         <div className="max-w-3xl mx-auto space-y-6 pb-4">
           {messages.map((message) => (
             <div
@@ -864,7 +890,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       )}
 
       {/* Input Bar - Fixed at bottom */}
-      <div className="flex-shrink-0 p-4 border-t border-white/10 bg-[#0d0d0d]">
+      <div className="relative z-10 flex-shrink-0 p-4 border-t border-white/10 bg-black/60 backdrop-blur-xl">
         <div className="max-w-3xl mx-auto flex gap-2">
           <input
             ref={inputRef}

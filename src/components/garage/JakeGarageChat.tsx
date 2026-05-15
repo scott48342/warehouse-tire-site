@@ -271,47 +271,38 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
             backgroundImage: 'url(/garage/misc-wheel-wall.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'blur(20px) brightness(0.4)',
-            transform: 'scale(1.1)',
+            filter: 'blur(8px) brightness(0.7)',
+            transform: 'scale(1.05)',
           }}
         />
         
         {/* Right side garage overlay */}
         <div 
-          className="absolute right-0 top-0 bottom-0 w-[50%]"
+          className="absolute right-0 top-0 bottom-0 w-[60%]"
           style={{
             backgroundImage: 'url(/garage/hero-garage-04.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'right center',
-            filter: 'blur(25px) brightness(0.35)',
-            opacity: 0.7,
+            filter: 'blur(6px) brightness(0.65)',
           }}
         />
 
-        {/* Center darkening for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50" />
+        {/* Light center darkening for readability - minimal */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/30" />
         
-        {/* Edge vignette */}
+        {/* Subtle edge vignette */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at 40% 50%, transparent 20%, rgba(0,0,0,0.6) 80%)',
+            background: 'radial-gradient(ellipse at 40% 50%, transparent 40%, rgba(0,0,0,0.4) 100%)',
           }}
         />
 
         {/* Red accent glow - bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-red-900/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-red-900/15 to-transparent" />
         
-        {/* Red accent glow - center */}
-        <div 
-          className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse, rgba(220,38,38,0.12) 0%, transparent 60%)',
-          }}
-        />
-        
-        {/* Header blend */}
-        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/70 to-transparent" />
+        {/* Header blend - lighter */}
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/50 to-transparent" />
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════════
