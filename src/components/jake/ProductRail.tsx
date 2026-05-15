@@ -291,7 +291,7 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
   useEffect(() => {
     if (paused || isHovered || !scrollRef.current) return;
 
-    const scrollSpeed = 0.5; // pixels per frame
+    const scrollSpeed = 0.8; // pixels per frame
     let animationId: number;
 
     const animate = () => {
