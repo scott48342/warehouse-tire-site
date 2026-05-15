@@ -17,6 +17,7 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
   const pathname = usePathname();
   const isPOS = pathname?.startsWith("/pos");
   const isJake = pathname === "/jake";
+  const isGarage = pathname?.startsWith("/garage");
 
   if (isPOS) {
     // POS mode: minimal layout, no header/footer/popups
@@ -27,8 +28,8 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
     );
   }
 
-  if (isJake) {
-    // Jake AI assistant: fullscreen chat, no header/footer
+  if (isJake || isGarage) {
+    // Jake AI / Garage: fullscreen immersive, no header/footer
     return (
       <main className="flex-1 flex flex-col">
         {children}
