@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { JakeAvatar } from "@/components/jake/JakeAvatar";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // JAKE GARAGE HERO - Landing Experience
@@ -50,17 +51,12 @@ export function JakeGarageHero({ examplePrompts, onStart }: JakeGarageHeroProps)
         
         {/* Jake Avatar with Glow */}
         <div className="relative mb-8">
-          {/* Pulsing Glow Ring */}
-          <div className="absolute inset-0 -m-4 rounded-full bg-red-600/20 blur-2xl animate-pulse" />
-          <div className="absolute inset-0 -m-2 rounded-full bg-red-600/10 blur-xl" />
-          
-          {/* Avatar */}
-          <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center shadow-2xl shadow-red-900/50 ring-2 ring-red-500/30">
-            <span className="text-4xl md:text-5xl">🔧</span>
-          </div>
-          
-          {/* Online Indicator */}
-          <div className="absolute bottom-1 right-1 w-5 h-5 md:w-6 md:h-6 bg-green-500 rounded-full border-4 border-[#0a0a0a] shadow-lg shadow-green-500/50" />
+          <JakeAvatar 
+            size="homepage" 
+            showGlow={true} 
+            showOnlineIndicator={true} 
+            animated={true}
+          />
         </div>
 
         {/* Branding */}
