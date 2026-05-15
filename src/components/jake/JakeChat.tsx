@@ -6,6 +6,7 @@ import { JakeProductCard, JakePackageCard, ParsedProduct } from "./JakeProductCa
 import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
 import { trackJakeEvent, trackJakeMessage, getJakeSessionId, setJakeSessionId, resetJakeSessionId } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
+import { ProductRail, ProductCarousel, MOCK_TIRES, MOCK_WHEELS, RailProduct } from "./ProductRail";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -207,6 +208,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const [headerPrompts] = useState(() => getRandomHeaderPrompts(3));
   const [compareProducts, setCompareProducts] = useState<ParsedProduct[]>([]);
   const [showCompare, setShowCompare] = useState(false);
+  
+  // Product rail state - populated based on detected intent
+  const [railTires, setRailTires] = useState<RailProduct[]>([]);
+  const [railWheels, setRailWheels] = useState<RailProduct[]>([]);
+  const [railsMessage, setRailsMessage] = useState<string | null>(null);
   
   // Persistence state
   const [showResumeDialog, setShowResumeDialog] = useState(false);
@@ -513,6 +519,68 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         });
       }
 
+      // ═══════════════════════════════════════════════════════════════════════
+      // POPULATE PRODUCT RAILS BASED ON DETECTED INTENT
+      // ═══════════════════════════════════════════════════════════════════════
+      
+      // Convert ParsedProducts to RailProducts for the rails
+      const tireProducts = products.filter(p => p.type === "tire");
+      const wheelProducts = products.filter(p => p.type === "wheel");
+      
+      console.log("[Jake Rails] Products:", products.length, "Tires:", tireProducts.length, "Wheels:", wheelProducts.length);
+      
+      // Also check structured data from backend
+      const hasTireData = tireProducts.length > 0 || 
+        (data.products?.tires?.length > 0) || 
+        (data.products?.staggeredPairs?.length > 0);
+      const hasWheelData = wheelProducts.length > 0 || 
+        (data.products?.wheels?.length > 0);
+      
+      // Populate rails with actual product data
+      console.log("[Jake Rails] hasTireData:", hasTireData, "hasWheelData:", hasWheelData);
+      if (hasTireData) {
+        console.log("[Jake Rails] Setting tire rail data...");
+        const railTireData: RailProduct[] = (data.products?.tires || data.products?.staggeredPairs || tireProducts).slice(0, 6).map((t: any) => ({
+          id: t.sku || t.productUrl || `tire-${Math.random()}`,
+          type: "tire" as const,
+          brand: t.brand || "",
+          model: t.model || t.name || "",
+          size: t.size || "",
+          price: typeof t.price === "string" ? t.price : (t.priceEach ? `$${t.priceEach}` : ""),
+          priceSet: typeof t.setPrice === "string" ? t.setPrice : (t.priceSet ? `$${t.priceSet}` : ""),
+          imageUrl: t.imageUrl,
+          badge: t.terrain || t.badge || (t.warrantyMiles > 60000 ? "Long Life" : undefined),
+          fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
+        }));
+        console.log("[Jake Rails] Setting railTires:", railTireData.length, "items");
+        setRailTires(railTireData);
+      }
+      
+      if (hasWheelData) {
+        const railWheelData: RailProduct[] = (data.products?.wheels || wheelProducts).slice(0, 6).map((w: any) => ({
+          id: w.sku || w.productUrl || `wheel-${Math.random()}`,
+          type: "wheel" as const,
+          brand: w.brand || "",
+          model: w.model || w.name || "",
+          size: w.size || "",
+          price: typeof w.price === "string" ? w.price : (w.priceEach ? `$${w.priceEach}` : ""),
+          priceSet: typeof w.setPrice === "string" ? w.setPrice : (w.priceSet ? `$${w.priceSet}` : ""),
+          imageUrl: w.imageUrl,
+          badge: w.finish || w.badge,
+          fitmentBadge: w.fitmentConfidence || w.fitmentLabel,
+        }));
+        setRailWheels(railWheelData);
+      }
+      
+      // Set Jake's message about the rails
+      if (hasTireData && hasWheelData) {
+        setRailsMessage("I've got some options for you! If anything catches your eye, just click it and I'll tell you more.");
+      } else if (hasTireData) {
+        setRailsMessage("Here are some tire options that might work. Click any one to learn more about it!");
+      } else if (hasWheelData) {
+        setRailsMessage("Check out these wheels! Click any one that catches your eye and I'll give you the details.");
+      }
+
       const assistantMessage: Message = {
         id: generateId(),
         role: "assistant",
@@ -556,9 +624,16 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // RENDER WELCOME STATE
   // ═══════════════════════════════════════════════════════════════════════════
 
+  // Handle rail product click - inject into chat
+  const handleRailClick = (product: RailProduct) => {
+    const productDesc = `Tell me about the ${product.brand} ${product.model}`;
+    handlePromptClick(productDesc);
+  };
+
+  // WELCOME STATE - No rails until Jake knows what customer wants
   if (!hasStarted && !initialPrompt) {
     return (
-      <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden`}>
+      <div className={`${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden flex flex-col`}>
         {/* Header */}
         <div className="flex-shrink-0 flex items-center justify-between px-6 py-4 border-b border-white/10">
           <div className="flex items-center gap-3">
@@ -582,7 +657,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
           )}
         </div>
 
-        {/* Welcome Content */}
+        {/* Welcome Content - Centered, no rails */}
         <div className="flex-1 min-h-0 overflow-y-auto flex flex-col items-center justify-center px-6 py-12">
           <JakeAvatar size="xl" showGlow className="mb-6 shadow-lg shadow-red-500/20" />
           <h2 className="text-white font-bold text-2xl mb-2">Hey, I'm Jake</h2>
@@ -642,6 +717,29 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // RENDER CONVERSATION STATE
   // ═══════════════════════════════════════════════════════════════════════════
 
+  // Rails now use state-populated products from Jake's responses
+  // Left rail = tires (if any), Right rail = wheels (if any)
+  // If only one type, show it on left rail
+  const showTireRail = railTires.length > 0;
+  const showWheelRail = railWheels.length > 0;
+  
+  // Determine which rails to show and where
+  // If both: tires left, wheels right
+  // If only tires: tires left
+  // If only wheels: wheels left
+  const leftRailProducts = showTireRail ? railTires : railWheels;
+  const rightRailProducts = (showTireRail && showWheelRail) ? railWheels : [];
+  const showLeftRail = showTireRail || showWheelRail;
+  const showRightRail = showTireRail && showWheelRail;
+  const leftRailTitle = showTireRail ? "MATCHING TIRES" : "MATCHING WHEELS";
+
+  const handleRailProductClick = (product: RailProduct) => {
+    const productDesc = `${product.brand} ${product.model}${product.size ? ` (${product.size})` : ""}`;
+    setInput(`Tell me about the ${productDesc}`);
+    inputRef.current?.focus();
+    trackJakeEvent("rail_product_clicked", { product: product.id, type: product.type });
+  };
+
   return (
     <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden relative`}>
       {/* Cinematic Background */}
@@ -670,7 +768,31 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         <div className="absolute bottom-0 left-0 right-0 h-[150px] bg-gradient-to-t from-red-900/10 to-transparent" />
       </div>
 
-      {/* Resume Conversation Dialog */}
+      {/* Main Container - Centered with rails inside */}
+      <div className="flex-1 flex justify-center relative z-10">
+        <div className="flex w-full max-w-6xl">
+          {/* Left Product Rail - Desktop (only when we have products) */}
+          {showLeftRail && (
+            <ProductRail
+              products={leftRailProducts}
+              side="left"
+              title={leftRailTitle}
+              onProductClick={handleRailProductClick}
+              paused={isLoading}
+            />
+          )}
+
+          {/* Main Chat Area */}
+          <div className="flex-1 flex flex-col min-w-0 relative">
+        {/* Mobile Product Carousel (only when we have products) */}
+        {showLeftRail && (
+          <ProductCarousel
+            products={leftRailProducts}
+            onProductClick={handleRailProductClick}
+          />
+        )}
+
+        {/* Resume Conversation Dialog */}
       {showResumeDialog && (
         <div className="absolute inset-0 z-50 bg-black/80 flex items-center justify-center p-6">
           <div className="bg-[#1a1a1a] border border-white/10 rounded-xl max-w-md w-full p-6 shadow-2xl">
@@ -771,6 +893,24 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
           ))}
         </div>
       </div>
+
+      {/* Jake's hint about product rails - shown when rails appear */}
+      {showLeftRail && railsMessage && (
+        <div className="relative z-10 px-4 py-3 bg-gradient-to-r from-red-900/20 via-red-900/10 to-red-900/20 border-b border-red-500/20">
+          <div className="max-w-3xl mx-auto flex items-center gap-3">
+            <JakeAvatar size="sm" />
+            <p className="text-white/80 text-sm">
+              {railsMessage}
+            </p>
+            <button 
+              onClick={() => setRailsMessage(null)}
+              className="ml-auto text-white/40 hover:text-white/60 text-xs"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Messages */}
       <div className="relative z-10 flex-1 min-h-0 overflow-y-auto px-4 py-6">
@@ -889,26 +1029,40 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         />
       )}
 
-      {/* Input Bar - Fixed at bottom */}
-      <div className="relative z-10 flex-shrink-0 p-4 border-t border-white/10 bg-black/60 backdrop-blur-xl">
-        <div className="max-w-3xl mx-auto flex gap-2">
-          <input
-            ref={inputRef}
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Ask a follow-up question..."
-            className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10"
-            disabled={isLoading}
-          />
-          <button
-            onClick={() => handleSend()}
-            disabled={!input.trim() || isLoading}
-            className="px-6 py-3 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors flex-shrink-0"
-          >
-            {isLoading ? "..." : "Send"}
-          </button>
+        {/* Input Bar - Fixed at bottom */}
+        <div className="relative z-10 flex-shrink-0 p-4 border-t border-white/10 bg-black/60 backdrop-blur-xl">
+          <div className="max-w-3xl mx-auto flex gap-2">
+            <input
+              ref={inputRef}
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Ask a follow-up question..."
+              className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10"
+              disabled={isLoading}
+            />
+            <button
+              onClick={() => handleSend()}
+              disabled={!input.trim() || isLoading}
+              className="px-6 py-3 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors flex-shrink-0"
+            >
+              {isLoading ? "..." : "Send"}
+            </button>
+          </div>
+          </div>
+        </div>
+
+          {/* Right Product Rail - Desktop (only when we have both tires AND wheels) */}
+          {showRightRail && (
+            <ProductRail
+              products={rightRailProducts}
+              side="right"
+              title="MATCHING WHEELS"
+              onProductClick={handleRailProductClick}
+              paused={isLoading}
+            />
+          )}
         </div>
       </div>
     </div>

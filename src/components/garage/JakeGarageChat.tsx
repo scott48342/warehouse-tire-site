@@ -3,6 +3,8 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { JakeProductCard, JakeWheelCard, ParsedProduct } from "@/components/jake/JakeProductCards";
+import { ProductRail, ProductCarousel, RailProduct } from "@/components/jake/ProductRail";
+import { JakeAvatar } from "@/components/jake/JakeAvatar";
 import { trackGarageEvent } from "./GarageAnalytics";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -76,6 +78,12 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
   const [loadingMessage, setLoadingMessage] = useState(LOADING_MESSAGES[0]);
   const [buildContext, setBuildContext] = useState<BuildContext>({ status: "exploring" });
   const [showSidePanel, setShowSidePanel] = useState(true);
+  
+  // Product rail state - populated based on detected intent
+  const [railTires, setRailTires] = useState<RailProduct[]>([]);
+  const [railWheels, setRailWheels] = useState<RailProduct[]>([]);
+  const [railsMessage, setRailsMessage] = useState<string | null>(null);
+  
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const hasProcessedInitial = useRef(false);
@@ -215,6 +223,58 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
         trackGarageEvent("cart_created", { cartUrl: cartUrl.slice(0, 100) });
       }
 
+      // ═══════════════════════════════════════════════════════════════════════
+      // POPULATE PRODUCT RAILS BASED ON DETECTED INTENT
+      // ═══════════════════════════════════════════════════════════════════════
+      
+      const hasTireData = products.length > 0 || data.products?.tires?.length > 0 || data.products?.staggeredPairs?.length > 0;
+      const hasWheelData = wheels.length > 0 || data.products?.wheels?.length > 0;
+      
+      // Populate tire rails with actual product data
+      if (hasTireData) {
+        const tireSource = data.products?.tires || data.products?.staggeredPairs || products;
+        const railTireData: RailProduct[] = tireSource.slice(0, 6).map((t: any) => ({
+          id: t.sku || t.productUrl || `tire-${Math.random()}`,
+          type: "tire" as const,
+          brand: t.brand || "",
+          model: t.model || t.name || "",
+          size: t.size || "",
+          price: typeof t.price === "string" ? t.price : (t.priceEach ? `$${t.priceEach}` : ""),
+          priceSet: typeof t.setPrice === "string" ? t.setPrice : (t.priceSet ? `$${t.priceSet}` : ""),
+          imageUrl: t.imageUrl,
+          badge: t.terrain || t.badge || (t.warrantyMiles > 60000 ? "Long Life" : undefined),
+          fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
+        }));
+        setRailTires(railTireData);
+      }
+      
+      // Populate wheel rails with actual product data
+      if (hasWheelData) {
+        const wheelSource = data.products?.wheels || wheels;
+        const railWheelData: RailProduct[] = wheelSource.slice(0, 6).map((w: any) => ({
+          id: w.sku || w.productUrl || `wheel-${Math.random()}`,
+          type: "wheel" as const,
+          brand: w.brand || "",
+          model: w.model || w.name || "",
+          size: w.size || "",
+          price: typeof w.price === "string" ? w.price : (w.priceEach ? `$${w.priceEach}` : ""),
+          priceSet: typeof w.setPrice === "string" ? w.setPrice : (w.priceSet ? `$${w.priceSet}` : ""),
+          imageUrl: w.imageUrl,
+          badge: w.finish || w.badge,
+          fitmentBadge: w.fitmentConfidence || w.fitmentLabel,
+        }));
+        setRailWheels(railWheelData);
+      }
+      
+      // Set Jake's message about the rails
+      if (hasTireData && hasWheelData) {
+        setRailsMessage("I've got some options for you! Click any product to learn more.");
+      } else if (hasTireData) {
+        setRailsMessage("Here are some tire options. Click any one to learn more!");
+      } else if (hasWheelData) {
+        setRailsMessage("Check out these wheels! Click any one for details.");
+      }
+
       const assistantMessage: Message = {
         id: generateId(),
         role: "assistant",
@@ -256,6 +316,24 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
     setBuildContext(prev => ({ ...prev, goal: category.label, category: category.id }));
     handleSend(`I'm looking for ${category.label.toLowerCase()} options`);
   };
+
+  // Handle rail product click - inject into chat
+  const handleRailClick = (product: RailProduct) => {
+    const productDesc = `Tell me about the ${product.brand} ${product.model}`;
+    handleSend(productDesc);
+  };
+
+  // Determine which rails to show
+  const showLeftRail = railTires.length > 0 || railWheels.length > 0;
+  const showRightRail = railTires.length > 0 && railWheels.length > 0;
+  
+  // Left rail shows tires (or wheels if no tires)
+  const leftRailProducts = railTires.length > 0 ? railTires : railWheels;
+  const leftRailTitle = railTires.length > 0 ? "Tire Options" : "Wheel Options";
+  
+  // Right rail shows wheels (only if we have both)
+  const rightRailProducts = railTires.length > 0 && railWheels.length > 0 ? railWheels : [];
+  const rightRailTitle = "Wheel Options";
 
   return (
     <div className="flex h-screen overflow-hidden bg-[#030303]">
@@ -306,10 +384,32 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          MAIN CHAT AREA (Left Side)
+          MAIN CONTENT AREA WITH PRODUCT RAILS
       ═══════════════════════════════════════════════════════════════════════ */}
-      <div className={`relative flex flex-col flex-1 ${showSidePanel ? 'lg:mr-[340px]' : ''}`}>
+      <div className={`relative flex flex-1 ${showSidePanel ? 'lg:mr-[340px]' : ''}`}>
         
+        {/* Left Product Rail - Desktop (only when we have products) */}
+        {showLeftRail && (
+          <ProductRail
+            products={leftRailProducts}
+            side="left"
+            title={leftRailTitle}
+            onProductClick={handleRailClick}
+            paused={isLoading}
+          />
+        )}
+
+        {/* Main Chat Column */}
+        <div className="flex-1 flex flex-col min-w-0 relative">
+        
+        {/* Mobile Product Carousel (only when we have products) */}
+        {showLeftRail && (
+          <ProductCarousel
+            products={leftRailProducts}
+            onProductClick={handleRailClick}
+          />
+        )}
+
         {/* Header */}
         <header className="relative z-20 flex-shrink-0 flex items-center justify-between px-4 md:px-6 py-4 border-b border-white/10 bg-black/60 backdrop-blur-xl">
           <div className="flex items-center gap-3">
@@ -353,6 +453,24 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
             </button>
           </div>
         </header>
+
+        {/* Jake's hint about product rails - shown when rails appear */}
+        {showLeftRail && railsMessage && (
+          <div className="relative z-10 px-4 py-3 bg-gradient-to-r from-red-900/20 via-red-900/10 to-red-900/20 border-b border-red-500/20">
+            <div className="max-w-3xl mx-auto flex items-center gap-3">
+              <JakeAvatar size="sm" />
+              <p className="text-white/80 text-sm">
+                {railsMessage}
+              </p>
+              <button 
+                onClick={() => setRailsMessage(null)}
+                className="ml-auto text-white/40 hover:text-white/60 text-xs"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Messages Area with Environmental Depth */}
         <div className="relative flex-1 overflow-y-auto px-4 md:px-6 py-6">
@@ -571,7 +689,19 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
             </div>
           </div>
         </div>
-      </div>
+        </div> {/* End Main Chat Column */}
+
+        {/* Right Product Rail - Desktop (only when we have both tires AND wheels) */}
+        {showRightRail && (
+          <ProductRail
+            products={rightRailProducts}
+            side="right"
+            title={rightRailTitle}
+            onProductClick={handleRailClick}
+            paused={isLoading}
+          />
+        )}
+      </div> {/* End Main Content Area with Rails */}
 
       {/* ═══════════════════════════════════════════════════════════════════════
           RIGHT SIDE PANEL - Jake's Build Workspace (Desktop Only)
