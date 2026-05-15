@@ -104,7 +104,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
       ═══════════════════════════════════════════════════════════════════════ */}
       <div className="absolute inset-0">
         <Image
-          src="/garage/hero-garage-bg.png"
+          src="/garage/hero-garage-01.jpg"
           alt="Jake's Garage"
           fill
           className="object-cover object-center"
