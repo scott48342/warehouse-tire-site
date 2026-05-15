@@ -56,6 +56,80 @@ const LOADING_MESSAGES = [
   "Reviewing compatibility...",
 ];
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// FETCH EXPANDED PRODUCT SELECTIONS FOR RAILS
+// Get more options beyond Jake's recommendations
+// ═══════════════════════════════════════════════════════════════════════════════
+
+async function fetchExpandedTires(size: string): Promise<RailProduct[]> {
+  try {
+    const response = await fetch(`/api/tires/search?size=${encodeURIComponent(size)}&limit=20`);
+    if (!response.ok) return [];
+    
+    const data = await response.json();
+    const tires = data.tires || data.results || [];
+    
+    return tires.slice(0, 20).map((t: any) => ({
+      id: t.sku || t.partNumber || `tire-${Math.random()}`,
+      type: "tire" as const,
+      brand: t.brand || "",
+      model: t.model || t.name || "",
+      size: t.size || size,
+      price: t.sellPrice ? `$${t.sellPrice.toFixed(2)}` : (t.price || ""),
+      priceSet: t.setPrice ? `$${(t.setPrice).toFixed(2)}` : "",
+      imageUrl: t.imageUrl || t.image,
+      productUrl: t.productUrl || `/tires/${t.sku || t.partNumber}`,
+      badge: t.terrain || t.category,
+      fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
+    }));
+  } catch (err) {
+    console.error("[Garage] fetchExpandedTires error:", err);
+    return [];
+  }
+}
+
+async function fetchExpandedWheels(size: string, vehicle?: string): Promise<RailProduct[]> {
+  try {
+    // Extract diameter from size string (e.g., "20x9" -> 20)
+    const diameterMatch = size.match(/^(\d+)/);
+    const diameter = diameterMatch ? diameterMatch[1] : "20";
+    
+    const params = new URLSearchParams({ diameter, limit: "20" });
+    if (vehicle) {
+      // Try to parse vehicle for fitment
+      const parts = vehicle.split(" ");
+      if (parts.length >= 2) {
+        params.set("year", parts[0]);
+        params.set("make", parts[1]);
+        if (parts[2]) params.set("model", parts.slice(2).join(" "));
+      }
+    }
+    
+    const response = await fetch(`/api/wheels/search?${params.toString()}`);
+    if (!response.ok) return [];
+    
+    const data = await response.json();
+    const wheels = data.wheels || data.results || [];
+    
+    return wheels.slice(0, 20).map((w: any) => ({
+      id: w.sku || w.partNumber || `wheel-${Math.random()}`,
+      type: "wheel" as const,
+      brand: w.brand || "",
+      model: w.model || w.name || "",
+      size: w.size || size,
+      price: w.sellPrice ? `$${w.sellPrice.toFixed(2)}` : (w.price || ""),
+      priceSet: w.setPrice ? `$${(w.setPrice).toFixed(2)}` : "",
+      imageUrl: w.imageUrl || w.image,
+      productUrl: w.productUrl || `/wheels/${w.sku || w.partNumber}`,
+      badge: w.finish,
+      fitmentBadge: w.fitmentConfidence,
+    }));
+  } catch (err) {
+    console.error("[Garage] fetchExpandedWheels error:", err);
+    return [];
+  }
+}
+
 // Quick action categories
 const QUICK_CATEGORIES = [
   { id: "quiet", label: "Quiet & Comfort", icon: "🔇" },
@@ -224,46 +298,103 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
       }
 
       // ═══════════════════════════════════════════════════════════════════════
-      // POPULATE PRODUCT RAILS BASED ON DETECTED INTENT
+      // POPULATE PRODUCT RAILS WITH EXPANDED SELECTION
+      // Fetch MORE products beyond Jake's recommendations for the rails
       // ═══════════════════════════════════════════════════════════════════════
       
       const hasTireData = products.length > 0 || data.products?.tires?.length > 0 || data.products?.staggeredPairs?.length > 0;
       const hasWheelData = wheels.length > 0 || data.products?.wheels?.length > 0;
       
-      // Populate tire rails with actual product data
+      // Extract tire size from Jake's response to fetch more options
       if (hasTireData) {
         const tireSource = data.products?.tires || data.products?.staggeredPairs || products;
-        const railTireData: RailProduct[] = tireSource.slice(0, 6).map((t: any) => ({
-          id: t.sku || t.productUrl || `tire-${Math.random()}`,
-          type: "tire" as const,
-          brand: t.brand || "",
-          model: t.model || t.name || "",
-          size: t.size || "",
-          price: typeof t.price === "string" ? t.price : (t.priceEach ? `$${t.priceEach}` : ""),
-          priceSet: typeof t.setPrice === "string" ? t.setPrice : (t.priceSet ? `$${t.priceSet}` : ""),
-          imageUrl: t.imageUrl,
-          badge: t.terrain || t.badge || (t.warrantyMiles > 60000 ? "Long Life" : undefined),
-          fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
-        }));
-        setRailTires(railTireData);
+        const detectedSize = tireSource[0]?.size || data.searchParams?.size;
+        
+        if (detectedSize) {
+          // Fetch expanded tire selection for the rail (don't await - let it load async)
+          fetchExpandedTires(detectedSize).then(expandedTires => {
+            if (expandedTires.length > 0) {
+              setRailTires(expandedTires);
+            }
+          }).catch(err => {
+            console.error("[Garage] Failed to fetch expanded tires:", err);
+            // Fall back to Jake's recommendations
+            const railTireData: RailProduct[] = tireSource.slice(0, 12).map((t: any) => ({
+              id: t.sku || t.productUrl || `tire-${Math.random()}`,
+              type: "tire" as const,
+              brand: t.brand || "",
+              model: t.model || t.name || "",
+              size: t.size || "",
+              price: typeof t.price === "string" ? t.price : (t.priceEach ? `$${t.priceEach}` : ""),
+              priceSet: typeof t.setPrice === "string" ? t.setPrice : (t.priceSet ? `$${t.priceSet}` : ""),
+              imageUrl: t.imageUrl,
+              badge: t.terrain || t.badge,
+              fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
+            }));
+            setRailTires(railTireData);
+          });
+          
+          // Set initial rails with Jake's picks while expanded loads
+          const initialRailData: RailProduct[] = tireSource.slice(0, 6).map((t: any) => ({
+            id: t.sku || t.productUrl || `tire-${Math.random()}`,
+            type: "tire" as const,
+            brand: t.brand || "",
+            model: t.model || t.name || "",
+            size: t.size || "",
+            price: typeof t.price === "string" ? t.price : (t.priceEach ? `$${t.priceEach}` : ""),
+            priceSet: typeof t.setPrice === "string" ? t.setPrice : (t.priceSet ? `$${t.priceSet}` : ""),
+            imageUrl: t.imageUrl,
+            badge: t.terrain || t.badge,
+            fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
+          }));
+          setRailTires(initialRailData);
+        }
       }
       
-      // Populate wheel rails with actual product data
+      // Extract wheel size/specs to fetch more wheel options
       if (hasWheelData) {
         const wheelSource = data.products?.wheels || wheels;
-        const railWheelData: RailProduct[] = wheelSource.slice(0, 6).map((w: any) => ({
-          id: w.sku || w.productUrl || `wheel-${Math.random()}`,
-          type: "wheel" as const,
-          brand: w.brand || "",
-          model: w.model || w.name || "",
-          size: w.size || "",
-          price: typeof w.price === "string" ? w.price : (w.priceEach ? `$${w.priceEach}` : ""),
-          priceSet: typeof w.setPrice === "string" ? w.setPrice : (w.priceSet ? `$${w.priceSet}` : ""),
-          imageUrl: w.imageUrl,
-          badge: w.finish || w.badge,
-          fitmentBadge: w.fitmentConfidence || w.fitmentLabel,
-        }));
-        setRailWheels(railWheelData);
+        const detectedWheelSize = wheelSource[0]?.size || data.searchParams?.wheelSize;
+        
+        if (detectedWheelSize) {
+          // Fetch expanded wheel selection for the rail
+          fetchExpandedWheels(detectedWheelSize, data.vehicle).then(expandedWheels => {
+            if (expandedWheels.length > 0) {
+              setRailWheels(expandedWheels);
+            }
+          }).catch(err => {
+            console.error("[Garage] Failed to fetch expanded wheels:", err);
+            // Fall back to Jake's recommendations
+            const railWheelData: RailProduct[] = wheelSource.slice(0, 12).map((w: any) => ({
+              id: w.sku || w.productUrl || `wheel-${Math.random()}`,
+              type: "wheel" as const,
+              brand: w.brand || "",
+              model: w.model || w.name || "",
+              size: w.size || "",
+              price: typeof w.price === "string" ? w.price : (w.priceEach ? `$${w.priceEach}` : ""),
+              priceSet: typeof w.setPrice === "string" ? w.setPrice : (w.priceSet ? `$${w.priceSet}` : ""),
+              imageUrl: w.imageUrl,
+              badge: w.finish || w.badge,
+              fitmentBadge: w.fitmentConfidence || w.fitmentLabel,
+            }));
+            setRailWheels(railWheelData);
+          });
+          
+          // Set initial rails with Jake's picks while expanded loads
+          const initialWheelData: RailProduct[] = wheelSource.slice(0, 6).map((w: any) => ({
+            id: w.sku || w.productUrl || `wheel-${Math.random()}`,
+            type: "wheel" as const,
+            brand: w.brand || "",
+            model: w.model || w.name || "",
+            size: w.size || "",
+            price: typeof w.price === "string" ? w.price : (w.priceEach ? `$${w.priceEach}` : ""),
+            priceSet: typeof w.setPrice === "string" ? w.setPrice : (w.priceSet ? `$${w.priceSet}` : ""),
+            imageUrl: w.imageUrl,
+            badge: w.finish || w.badge,
+            fitmentBadge: w.fitmentConfidence || w.fitmentLabel,
+          }));
+          setRailWheels(initialWheelData);
+        }
       }
       
       // Set Jake's message about the rails
