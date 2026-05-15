@@ -17,7 +17,7 @@ interface JakeGarageHeroProps {
   onStart: (prompt: string) => void;
 }
 
-// Build category cards - using new asset images
+// Build category cards - using cinematic background images
 const BUILD_CATEGORIES = [
   {
     id: "aggressive",
@@ -25,7 +25,7 @@ const BUILD_CATEGORIES = [
     desc: "Bold stance. Head turning.",
     icon: "/icons/icon-fitment.svg",
     iconBg: "bg-red-500",
-    image: "/garage/card-aggressive-street.jpg",
+    image: "/garage/card-bg-aggressive-street.jpg",
     prompt: "Build an aggressive street setup",
   },
   {
@@ -34,7 +34,7 @@ const BUILD_CATEGORIES = [
     desc: "Smooth ride. Low road noise.",
     icon: "/icons/icon-support.svg",
     iconBg: "bg-red-500",
-    image: "/garage/card-quiet-comfort.jpg",
+    image: "/garage/card-bg-quiet-comfort.jpg",
     prompt: "I need quiet comfortable tires for my SUV",
   },
   {
@@ -43,7 +43,7 @@ const BUILD_CATEGORIES = [
     desc: "Sleek, clean, and mean.",
     icon: null, // Black circle
     iconBg: "bg-neutral-900",
-    image: "/garage/card-blackout-builds.jpg",
+    image: "/garage/card-bg-blackout-builds.jpg",
     prompt: "I want a full blackout wheel setup",
   },
   {
@@ -52,7 +52,7 @@ const BUILD_CATEGORIES = [
     desc: "Built strong. Tow with confidence.",
     icon: "/icons/icon-shipping.svg",
     iconBg: "bg-red-500",
-    image: "/garage/card-towing-hauling.jpg",
+    image: "/garage/card-bg-towing-hauling.jpg",
     prompt: "I need wheels and tires for towing",
   },
   {
@@ -61,7 +61,7 @@ const BUILD_CATEGORIES = [
     desc: "Go farther. Explore more.",
     icon: "/icons/icon-brands.svg",
     iconBg: "bg-green-600",
-    image: "/garage/card-offroad-overland.jpg",
+    image: "/garage/card-bg-offroad-overland.jpg",
     prompt: "Build an off-road overland setup",
   },
   {
@@ -70,7 +70,7 @@ const BUILD_CATEGORIES = [
     desc: "For the weekend warriors.",
     icon: "/icons/icon-fitment.svg",
     iconBg: "bg-purple-500",
-    image: "/garage/card-show-stance.jpg",
+    image: "/garage/card-bg-show-stance.jpg",
     prompt: "Build a show stance setup",
   },
 ];
