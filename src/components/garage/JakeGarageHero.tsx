@@ -309,15 +309,6 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                 {/* Red Hover Glow */}
                 <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/20 transition-colors duration-300" />
                 
-                {/* Icon Badge */}
-                <div className={`absolute top-3 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full ${cat.iconBg} flex items-center justify-center shadow-lg`}>
-                  {cat.icon ? (
-                    <Image src={cat.icon} alt="" width={20} height={20} className="invert" />
-                  ) : (
-                    <div className="w-5 h-5 rounded-full bg-black" />
-                  )}
-                </div>
-                
                 {/* Card Content */}
                 <div className="absolute inset-0 p-3 flex flex-col justify-end text-center">
                   <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wide mb-0.5">
