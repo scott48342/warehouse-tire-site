@@ -168,28 +168,45 @@ export async function searchWheels(params: WheelSearchParams): Promise<WheelSear
     totalElements,
     totalPages: Math.ceil(totalElements / pageSize),
     facets: raw.facets ? {
-      brands: extractFacetBuckets(raw.facets.brand_desc || raw.facets.brand_cd),
-      finishes: extractFacetBuckets(raw.facets.abbreviated_finish_desc),
-      diameters: extractFacetBuckets(raw.facets.wheel_diameter),
-      widths: extractFacetBuckets(raw.facets.width),
-      boltPatterns: extractFacetBuckets(raw.facets.bolt_pattern_metric),
+      brands: extractStringFacets(raw.facets.brand_desc || raw.facets.brand_cd),
+      finishes: extractStringFacets(raw.facets.abbreviated_finish_desc),
+      diameters: extractNumberFacets(raw.facets.wheel_diameter),
+      widths: extractNumberFacets(raw.facets.width),
+      boltPatterns: extractStringFacets(raw.facets.bolt_pattern_metric),
     } : undefined,
   };
 }
 
-// Helper to extract facet buckets from the API response
-function extractFacetBuckets(facet: any): Array<{ key: string; count: number }> | undefined {
+// Helper to extract string-keyed facet buckets
+function extractStringFacets(facet: any): Array<{ key: string; count: number }> | undefined {
   if (!facet?.buckets) return undefined;
   if (Array.isArray(facet.buckets)) {
     return facet.buckets.map((b: any) => ({
-      key: b.key ?? b.value ?? String(b),
+      key: String(b.key ?? b.value ?? b),
       count: b.doc_count ?? b.count ?? 0,
     }));
   }
-  // Handle object format
   if (typeof facet.buckets === "object") {
     return Object.entries(facet.buckets).map(([key, val]: [string, any]) => ({
       key,
+      count: typeof val === "number" ? val : (val?.doc_count ?? val?.count ?? 0),
+    }));
+  }
+  return undefined;
+}
+
+// Helper to extract number-keyed facet buckets (for diameters, widths)
+function extractNumberFacets(facet: any): Array<{ key: number; count: number }> | undefined {
+  if (!facet?.buckets) return undefined;
+  if (Array.isArray(facet.buckets)) {
+    return facet.buckets.map((b: any) => ({
+      key: Number(b.key ?? b.value ?? b),
+      count: b.doc_count ?? b.count ?? 0,
+    }));
+  }
+  if (typeof facet.buckets === "object") {
+    return Object.entries(facet.buckets).map(([key, val]: [string, any]) => ({
+      key: Number(key),
       count: typeof val === "number" ? val : (val?.doc_count ?? val?.count ?? 0),
     }));
   }
