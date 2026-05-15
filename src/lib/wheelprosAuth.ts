@@ -1,15 +1,22 @@
 /**
  * Shared Wheel Pros auth token helper.
- * Used by Product + Accessory API clients.
+ * Used by Product, Accessory, and Order API clients.
  * 
  * Credentials are loaded from:
  * 1. admin_suppliers.credentials (encrypted, admin-managed)
  * 2. Environment variables (fallback)
+ * 
+ * NOTE: WheelPros unified their auth - all APIs now use /auth/v1/authorize
+ * (the old /auth/token endpoint was deprecated ~2026-05)
  */
 
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
 let tokenCache: { token: string; expiresAt: number } | null = null;
+
+// WheelPros unified auth endpoint (both Product and Order APIs use this now)
+// The old /auth/token endpoint has been deprecated
+const WHEELPROS_AUTH_URL = "https://api.wheelpros.com/auth/v1/authorize";
 
 export async function getWheelProsToken(): Promise<string> {
   const now = Date.now();
@@ -24,7 +31,8 @@ export async function getWheelProsToken(): Promise<string> {
     throw new Error("Missing WheelPros credentials. Configure in Admin → Settings → Suppliers.");
   }
 
-  const authUrl = creds.authUrl || "https://api.wheelpros.com/auth/token";
+  // Use unified WheelPros auth endpoint
+  const authUrl = WHEELPROS_AUTH_URL;
   
   const res = await fetch(authUrl, {
     method: "POST",
