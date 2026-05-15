@@ -788,7 +788,7 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
           <div className="bg-gradient-to-br from-zinc-900 to-black border border-white/10 rounded-2xl p-8 max-w-md mx-4 shadow-2xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="relative w-16 h-16">
-                <Image src="/jake/jake-waving.png" alt="Jake" fill className="object-contain" />
+                <Image src="/jake/jake-explaining.png" alt="Jake" fill className="object-contain" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Welcome Back!</h3>

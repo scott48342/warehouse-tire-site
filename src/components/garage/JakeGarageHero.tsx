@@ -182,7 +182,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             
             {/* Build this button */}
             <button
-              onClick={() => onStart(featured.prompt)}
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onStart(featured.prompt);
+              }}
               className="inline-flex items-center gap-3 px-6 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition-all w-fit group"
             >
               <span>Build This Setup</span>
@@ -196,7 +201,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
               {FEATURED_BUILDS.map((_, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setCurrentBuild(idx)}
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setCurrentBuild(idx);
+                  }}
                   className={`w-2 h-2 rounded-full transition-all ${
                     idx === currentBuild 
                       ? "bg-red-500 w-8" 
@@ -249,7 +259,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                 {["Lifted truck", "Staggered setup", "Off-road build"].map((q) => (
                   <button
                     key={q}
-                    onClick={() => onStart(q)}
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      onStart(q);
+                    }}
                     className="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white/60 hover:text-white text-sm transition-all"
                   >
                     {q}
@@ -377,7 +392,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             {/* CTA */}
             <div className="mt-8 text-center">
               <button
-                onClick={() => onStart("Build me a lifted truck package")}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onStart("Build me a lifted truck package");
+                }}
                 className="inline-flex items-center gap-3 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition-all text-lg"
               >
                 Build Your Transformation
@@ -437,7 +457,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             ].map((style) => (
               <button
                 key={style.id}
-                onClick={() => onStart(style.prompt)}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onStart(style.prompt);
+                }}
                 className="group relative aspect-[4/5] rounded-2xl overflow-hidden"
               >
                 <Image
@@ -493,7 +518,12 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
               </p>
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <button 
-                  onClick={() => onStart("Help me find the right setup for my truck")} 
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    onStart("Help me find the right setup for my truck");
+                  }}
                   className="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-semibold rounded-lg transition-all"
                 >
                   Ask Jake
