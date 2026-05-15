@@ -258,22 +258,97 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#0a0a0a]">
+    <div className="flex h-screen overflow-hidden bg-[#050505]">
       {/* ═══════════════════════════════════════════════════════════════════════
-          CINEMATIC BACKGROUND
+          CINEMATIC BACKGROUND - Premium Garage Environment
+          Layered for depth: base → silhouettes → glow → smoke → vignette
       ═══════════════════════════════════════════════════════════════════════ */}
       <div className="fixed inset-0 pointer-events-none">
+        
+        {/* Layer 1: Blurred Wheel Wall Base */}
         <Image
           src="/garage/misc-wheel-wall.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.07] blur-sm"
+          className="object-cover opacity-[0.08] blur-md scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/90" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
-        {/* Red ambient glow */}
-        <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-red-950/20 to-transparent" />
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[400px] rounded-full bg-red-900/10 blur-[150px]" />
+        
+        {/* Layer 2: Secondary garage texture for depth */}
+        <Image
+          src="/garage/hero-garage-02.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.05] blur-lg"
+          style={{ mixBlendMode: 'screen' }}
+        />
+        
+        {/* Layer 3: Base darkening gradients */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/85" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/60" />
+        
+        {/* Layer 4: Garage silhouette overlay (faint vertical lines suggesting racks) */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              90deg,
+              transparent,
+              transparent 80px,
+              rgba(255,255,255,0.1) 80px,
+              rgba(255,255,255,0.1) 82px
+            )`,
+          }}
+        />
+        
+        {/* Layer 5: Radial red glow - centered on conversation area */}
+        <div 
+          className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(220,38,38,0.08) 0%, rgba(220,38,38,0.03) 40%, transparent 70%)',
+          }}
+        />
+        
+        {/* Layer 6: Secondary ambient glow (upper right) */}
+        <div 
+          className="absolute top-0 right-0 w-[600px] h-[400px] rounded-full"
+          style={{
+            background: 'radial-gradient(ellipse at top right, rgba(220,38,38,0.06) 0%, transparent 60%)',
+          }}
+        />
+        
+        {/* Layer 7: Bottom red glow (floor reflection) */}
+        <div className="absolute bottom-0 left-0 right-0 h-[350px] bg-gradient-to-t from-red-950/15 via-red-950/05 to-transparent" />
+        
+        {/* Layer 8: Floor reflection line */}
+        <div 
+          className="absolute bottom-0 left-0 right-0 h-px opacity-10"
+          style={{
+            background: 'linear-gradient(90deg, transparent 10%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.3) 70%, transparent 90%)',
+          }}
+        />
+        
+        {/* Layer 9: Smoke/fog overlay */}
+        <div 
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            background: `
+              radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%),
+              radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 60%)
+            `,
+          }}
+        />
+        
+        {/* Layer 10: Soft vignette */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.4) 100%)',
+          }}
+        />
+        
+        {/* Layer 11: Top fade for header blend */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/50 to-transparent" />
       </div>
 
       {/* ═══════════════════════════════════════════════════════════════════════
@@ -325,9 +400,18 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
           </div>
         </header>
 
-        {/* Messages Area */}
+        {/* Messages Area with Environmental Depth */}
         <div className="relative flex-1 overflow-y-auto px-4 md:px-6 py-6">
-          <div className="max-w-2xl mx-auto space-y-6">
+          {/* Conversation area glow - follows scroll */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div 
+              className="sticky top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[300px] rounded-full opacity-30"
+              style={{
+                background: 'radial-gradient(ellipse, rgba(220,38,38,0.1) 0%, transparent 70%)',
+              }}
+            />
+          </div>
+          <div className="relative max-w-2xl mx-auto space-y-6">
             
             {/* Welcome state if no messages */}
             {messages.length === 0 && !isLoading && (
@@ -369,30 +453,46 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
                 className={`flex ${message.role === "user" ? "justify-end" : "justify-start"} animate-fade-in-up`}
                 style={{ animationDelay: `${idx * 50}ms` }}
               >
-                {/* User Message */}
+                {/* User Message - Premium with glow */}
                 {message.role === "user" && (
                   <div className="max-w-[85%] md:max-w-[70%]">
-                    <div className="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-2xl rounded-br-md px-5 py-3 shadow-lg shadow-red-500/10">
-                      <p className="whitespace-pre-wrap">{message.content}</p>
+                    <div className="relative">
+                      {/* Subtle glow behind */}
+                      <div className="absolute -inset-1 bg-red-500/20 rounded-2xl blur-xl" />
+                      <div className="relative bg-gradient-to-br from-red-600 to-red-700 text-white rounded-2xl rounded-br-md px-5 py-3.5 shadow-2xl shadow-red-900/30 border border-red-500/20">
+                        <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                      </div>
                     </div>
                   </div>
                 )}
                 
-                {/* Assistant Message */}
+                {/* Assistant Message - Premium Glassmorphism */}
                 {message.role === "assistant" && (
                   <div className="max-w-[90%] md:max-w-[80%]">
                     <div className="flex items-start gap-3">
-                      {/* Jake Avatar */}
-                      <div className="flex-shrink-0 relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-white/10">
-                        <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
+                      {/* Jake Avatar with glow */}
+                      <div className="flex-shrink-0 relative">
+                        <div className="absolute -inset-1 bg-red-500/20 rounded-full blur-md" />
+                        <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-white/20 shadow-lg">
+                          <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
+                        </div>
                       </div>
                       
                       <div className="flex-1 min-w-0">
-                        {/* Message Bubble - Glassmorphism */}
-                        <div className="relative bg-white/[0.05] backdrop-blur-xl rounded-2xl rounded-tl-md px-5 py-4 border border-white/10 shadow-xl">
-                          {/* Subtle glow effect */}
-                          <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-                          <p className="relative text-white/90 whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                        {/* Message Bubble - Enhanced Glassmorphism */}
+                        <div className="relative group">
+                          {/* Outer glow on hover */}
+                          <div className="absolute -inset-1 bg-white/[0.02] rounded-2xl blur-lg group-hover:bg-white/[0.04] transition-all duration-500" />
+                          {/* Main bubble */}
+                          <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl rounded-tl-md px-5 py-4 border border-white/[0.08] shadow-2xl shadow-black/40">
+                            {/* Top edge highlight */}
+                            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-t-2xl" />
+                            {/* Inner glow gradient */}
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-white/[0.08] via-transparent to-transparent pointer-events-none" />
+                            {/* Left edge accent */}
+                            <div className="absolute left-0 top-4 bottom-4 w-px bg-gradient-to-b from-red-500/30 via-red-500/10 to-transparent" />
+                            <p className="relative text-white/90 whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                          </div>
                         </div>
                         
                         {/* Product Cards */}
@@ -437,21 +537,30 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
               </div>
             ))}
             
-            {/* Loading Indicator - Jake Thinking */}
+            {/* Loading Indicator - Jake Thinking with Premium Styling */}
             {isLoading && (
               <div className="flex justify-start animate-fade-in">
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-red-500/30">
-                    <Image src="/jake/jake-thinking.png" alt="Jake thinking" fill className="object-cover" />
+                  {/* Jake Avatar with active glow */}
+                  <div className="flex-shrink-0 relative">
+                    <div className="absolute -inset-1.5 bg-red-500/30 rounded-full blur-md animate-pulse" />
+                    <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-red-500/40 shadow-lg shadow-red-500/20">
+                      <Image src="/jake/jake-thinking.png" alt="Jake thinking" fill className="object-cover" />
+                    </div>
                   </div>
-                  <div className="bg-white/[0.05] backdrop-blur-xl rounded-2xl rounded-tl-md px-5 py-4 border border-white/10">
-                    <div className="flex items-center gap-3">
-                      <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                        <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                        <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                  {/* Loading bubble */}
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-red-500/10 rounded-2xl blur-lg animate-pulse" />
+                    <div className="relative bg-white/[0.06] backdrop-blur-2xl rounded-2xl rounded-tl-md px-5 py-4 border border-white/[0.08] shadow-2xl shadow-black/40">
+                      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-t-2xl" />
+                      <div className="flex items-center gap-3">
+                        <div className="flex gap-1.5">
+                          <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce shadow-sm shadow-red-500/50" style={{ animationDelay: "0ms" }} />
+                          <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce shadow-sm shadow-red-500/50" style={{ animationDelay: "150ms" }} />
+                          <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce shadow-sm shadow-red-500/50" style={{ animationDelay: "300ms" }} />
+                        </div>
+                        <span className="text-white/60 text-sm">{loadingMessage}</span>
                       </div>
-                      <span className="text-white/50 text-sm">{loadingMessage}</span>
                     </div>
                   </div>
                 </div>
