@@ -103,7 +103,6 @@ export function TirePageCompactHeader({
   liftedParams = "",
 }: CompactHeaderProps) {
   const [showSizeSelector, setShowSizeSelector] = useState(false);
-  const [showGarage, setShowGarage] = useState(false);
   
   const wheelDiaNum = wheelDia ? parseFloat(wheelDia) : NaN;
   const wheelWidthNum = wheelWidth ? parseFloat(wheelWidth) : NaN;
@@ -179,18 +178,8 @@ export function TirePageCompactHeader({
           {/* Trust signals removed - free shipping only on orders over $1500 */}
         </div>
         
-        {/* Right: Garage + Sort */}
+        {/* Right: Sort */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => setShowGarage(!showGarage)}
-            className="text-xs font-medium text-neutral-500 hover:text-neutral-700 flex items-center gap-1"
-          >
-            My Garage
-            <svg className={`h-3 w-3 transition-transform ${showGarage ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
           <AutoSubmitSelect
             name="sort"
             defaultValue={sort}
@@ -204,17 +193,6 @@ export function TirePageCompactHeader({
           />
         </div>
       </div>
-      
-      {/* Collapsible Garage (hidden by default) */}
-      {showGarage && (
-        <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-3 text-sm">
-          <div className="text-xs font-semibold text-neutral-500 mb-2">Saved Vehicles</div>
-          <div className="text-neutral-600">
-            {/* Garage content would go here */}
-            <span className="text-neutral-400 italic">No saved vehicles yet</span>
-          </div>
-        </div>
-      )}
       
       {/* ═══════════════════════════════════════════════════════════════════════
           ROW 2: Your Wheel Summary (package flow only) - Rich card with image

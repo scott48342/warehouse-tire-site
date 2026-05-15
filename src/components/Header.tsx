@@ -431,19 +431,6 @@ export function Header() {
 
           </div>
 
-          <button
-            type="button"
-            onClick={() => {
-              // Detect current page to open launcher in correct mode
-              const path = typeof window !== "undefined" ? window.location.pathname : "";
-              const mode = path.startsWith("/tires") ? "tires" : "wheels";
-              openLauncher(mode);
-            }}
-            className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-          >
-            My Garage
-          </button>
-
           <CartIcon />
         </nav>
       </div>
