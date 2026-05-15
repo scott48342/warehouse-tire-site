@@ -13,31 +13,31 @@ import Image from "next/image";
 const CATEGORIES = [
   {
     title: "All-Terrain Tires",
-    image: "/images/homepage/cat-all-terrain.png",
+    image: "/images/homepage/vehicle-tacoma-overland.jpg",
     // Homepage Intent: all_terrain_tires (A/T focused results)
     href: "/tires?entry=homepage&intent=all_terrain_tires",
   },
   {
     title: "Performance Tires",
-    image: "/images/homepage/cat-performance.png",
+    image: "/images/homepage/vehicle-corvette-track.jpg",
     // Homepage Intent: performance_tires (UHP, summer, staggered-aware)
     href: "/tires?entry=homepage&intent=performance_tires",
   },
   {
     title: "Truck Wheels",
-    image: "/images/homepage/cat-truck-wheels.png",
+    image: "/images/homepage/vehicle-ram-aggressive.jpg",
     // Homepage Intent: truck_wheels (truck-friendly styles and fitments)
     href: "/wheels?entry=homepage&intent=truck_wheels",
   },
   {
     title: "Street Wheels",
-    image: "/images/homepage/cat-street-wheels.png",
+    image: "/images/homepage/vehicle-camaro-street.jpg",
     // Homepage Intent: street_wheels (street style, staggered-aware)
     href: "/wheels?entry=homepage&intent=street_wheels",
   },
   {
     title: "Lifted Packages",
-    image: "/images/homepage/cat-lifted.png",
+    image: "/images/homepage/vehicle-silverado-lifted.jpg",
     // Homepage Intent: lifted_packages (package-oriented lifted results)
     href: "/wheels?entry=homepage&intent=lifted_packages",
   },
