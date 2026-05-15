@@ -1,80 +1,205 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { JakeHomepageSection } from "@/components/jake";
+import { JakeAvatar } from "@/components/jake";
 
 /**
- * PREMIUM NATIONAL HOMEPAGE
+ * PREMIUM NATIONAL HOMEPAGE - CINEMATIC REBUILD
  * 
- * Exact match to mockup: g:\clawd\homepage\homepage layout.png
+ * Goals:
+ * - Cinematic, alive, premium, immersive
+ * - Emotional engagement + conversion focused
+ * - Modern automotive brand feel
+ * - NOT flat, static, or template-like
  */
 
 const THIS_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 35 }, (_, i) => String(THIS_YEAR + 1 - i));
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 1: TRUST BAR (below header)
+// HERO BACKGROUNDS (rotate randomly)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const HERO_BACKGROUNDS = [
+  "/images/homepage/hero-garage-02.jpg",
+  "/images/homepage/hero-garage-04.jpg",
+  "/images/homepage/misc-wheel-wall.jpg",
+];
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CINEMATIC HERO SECTION
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function CinematicHero() {
+  const [bgImage, setBgImage] = useState(HERO_BACKGROUNDS[0]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const randomBg = HERO_BACKGROUNDS[Math.floor(Math.random() * HERO_BACKGROUNDS.length)];
+    setBgImage(randomBg);
+  }, []);
+
+  return (
+    <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
+      {/* Background Image Layer */}
+      <div className="absolute inset-0">
+        <Image
+          src={bgImage}
+          alt="Premium garage showroom"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
+
+      {/* Gradient Overlays - Lifted shadows for visibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
+      
+      {/* Red Glow Accent - Bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-red-900/20 to-transparent pointer-events-none" />
+      
+      {/* Radial Glow Behind Content */}
+      <div 
+        className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(220,38,38,0.08) 0%, transparent 70%)",
+        }}
+      />
+
+      {/* Floating Particles (subtle) */}
+      {mounted && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white/20 rounded-full"
+              style={{
+                left: `${15 + i * 15}%`,
+                top: `${20 + (i % 3) * 25}%`,
+                animation: `float-particle ${8 + i * 2}s ease-in-out infinite`,
+                animationDelay: `${i * 0.5}s`,
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Soft Vignette */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.4) 100%)",
+      }} />
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-8 py-16">
+        <div className="max-w-2xl">
+          {/* Tagline */}
+          <p className="text-red-500 text-lg lg:text-xl font-semibold tracking-wide mb-2 animate-fade-in-up">
+            AMERICA'S FITMENT-FIRST
+          </p>
+
+          {/* Main Headline */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tight uppercase animate-fade-in-up animation-delay-100">
+            TIRE & WHEEL
+            <br />
+            <span className="text-red-500">DESTINATION</span>
+          </h1>
+
+          {/* Subcopy */}
+          <p className="mt-6 text-white/70 text-xl lg:text-2xl leading-relaxed max-w-lg animate-fade-in-up animation-delay-200">
+            The right fit for your vehicle.
+            <br />
+            The style for your build.
+          </p>
+
+          {/* CTAs */}
+          <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up animation-delay-300">
+            <Link
+              href="#find-your-fit"
+              className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-bold text-base uppercase tracking-wide px-8 py-4 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(220,38,38,0.4)] rounded-lg"
+            >
+              Find Your Fit
+              <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+            <Link
+              href="/jake"
+              className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40 text-white font-bold text-base uppercase tracking-wide px-8 py-4 transition-all duration-300 hover:scale-105 rounded-lg"
+            >
+              <JakeAvatar size="xs" />
+              Ask Jake
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes float-particle {
+          0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+          25% { transform: translateY(-20px) translateX(10px); opacity: 0.4; }
+          50% { transform: translateY(-10px) translateX(-5px); opacity: 0.3; }
+          75% { transform: translateY(-30px) translateX(5px); opacity: 0.2; }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        .animation-delay-100 { animation-delay: 0.1s; }
+        .animation-delay-200 { animation-delay: 0.2s; }
+        .animation-delay-300 { animation-delay: 0.3s; }
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// TRUST BAR (Enhanced with subtle glow)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function TrustBar() {
+  const items = [
+    { icon: "shipping", title: "Fast Shipping", sub: "Orders over $199", color: "text-white/60" },
+    { icon: "fitment", title: "Fitment Guaranteed", sub: "The right fit or we fix it", color: "text-red-500" },
+    { icon: "support", title: "Expert Support", sub: "7 days a week", color: "text-white/60" },
+    { icon: "brands", title: "Top Brands", sub: "Built to perform", color: "text-amber-500" },
+  ];
+
+  const getIcon = (type: string) => {
+    switch(type) {
+      case "shipping": return <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>;
+      case "fitment": return <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>;
+      case "support": return <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /></svg>;
+      case "brands": return <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>;
+      default: return null;
+    }
+  };
+
   return (
-    <div className="bg-[#1a1a1a] border-b border-white/10">
+    <div className="bg-[#0f0f0f] border-b border-white/5">
       <div className="max-w-[1400px] mx-auto px-4">
-        <div className="flex items-center justify-between py-3 gap-6 overflow-x-auto">
-          {/* Fast Reliable Shipping */}
-          <div className="flex items-center gap-3 text-sm whitespace-nowrap">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <svg className="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-              </svg>
+        <div className="flex items-center justify-between py-4 gap-6 overflow-x-auto">
+          {items.map((item) => (
+            <div key={item.title} className="flex items-center gap-3 text-sm whitespace-nowrap group">
+              <div className={`${item.color} transition-all duration-300 group-hover:scale-110`}>
+                {getIcon(item.icon)}
+              </div>
+              <div>
+                <p className="text-white font-semibold">{item.title}</p>
+                <p className="text-white/40 text-xs">{item.sub}</p>
+              </div>
             </div>
-            <div>
-              <p className="text-white font-semibold">Fast, Reliable Shipping</p>
-              <p className="text-white/40 text-xs">On orders over $199</p>
-            </div>
-          </div>
-
-          {/* Fitment Guaranteed */}
-          <div className="flex items-center gap-3 text-sm whitespace-nowrap">
-            <div className="w-8 h-8 flex items-center justify-center text-red-500">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>
-            </div>
-            <div>
-              <p className="text-white font-semibold">Fitment Guaranteed</p>
-              <p className="text-white/40 text-xs">The right fit or we make it right</p>
-            </div>
-          </div>
-
-          {/* Expert Support */}
-          <div className="flex items-center gap-3 text-sm whitespace-nowrap">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <svg className="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-white font-semibold">Expert Support</p>
-              <p className="text-white/40 text-xs">7 days a week</p>
-            </div>
-          </div>
-
-          {/* Curated Top Brands */}
-          <div className="flex items-center gap-3 text-sm whitespace-nowrap">
-            <div className="w-8 h-8 flex items-center justify-center text-yellow-500">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-            </div>
-            <div>
-              <p className="text-white font-semibold">Curated Top Brands</p>
-              <p className="text-white/40 text-xs">Built to perform. Built to last.</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
@@ -82,133 +207,21 @@ function TrustBar() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 2: HERO
-// ═══════════════════════════════════════════════════════════════════════════════
-
-function HeroSection() {
-  return (
-    <section className="relative min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden bg-[#0a0a0a]">
-      {/* Vehicle Image - right side */}
-      <div className="absolute right-0 top-0 bottom-0 w-[60%] lg:w-[55%]">
-        <Image
-          src="/images/homepage/hero-vehicles.jpg"
-          alt="Premium Ford truck with aftermarket wheels"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="60vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/40 to-transparent" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-8 py-12">
-        <div className="max-w-lg">
-          {/* AMERICA'S */}
-          <p className="text-red-500 text-lg lg:text-xl font-medium italic mb-1">
-            AMERICA'S
-          </p>
-
-          {/* FITMENT-FIRST */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.0] tracking-tight uppercase">
-            FITMENT-FIRST
-          </h1>
-          
-          {/* TIRE & WHEEL STORE */}
-          <p className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.0] tracking-tight uppercase mt-1">
-            TIRE & WHEEL STORE
-          </p>
-
-          {/* Subcopy */}
-          <div className="mt-6 text-white/70 text-lg lg:text-xl leading-relaxed">
-            <p>The right fit for your vehicle.</p>
-            <p>The style for your build.</p>
-            <p>The performance you can trust.</p>
-          </div>
-
-          {/* CTAs */}
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="#find-your-fit"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-sm uppercase tracking-wide px-6 py-3 transition-all"
-            >
-              Find Your Fit
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link
-              href="/wheels"
-              className="inline-flex flex-col items-start bg-transparent border border-white/30 hover:border-white/50 text-white font-bold text-sm uppercase tracking-wide px-6 py-2.5 transition-all"
-            >
-              <span>Shop Wheels</span>
-              <span className="text-white/50 text-xs normal-case font-normal">Shop Styles</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 3: VEHICLE SELECTOR (Shop by Vehicle with Intent)
+// PREMIUM VEHICLE SELECTOR
 // ═══════════════════════════════════════════════════════════════════════════════
 
 type ShoppingIntent = "tires" | "wheels" | "package";
 
-const INTENT_CONFIG: Record<ShoppingIntent, { 
-  label: string; 
-  icon: React.ReactNode;
-  buttonText: string;
-  description: string;
-}> = {
-  tires: {
-    label: "Tires",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
-        <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
-      </svg>
-    ),
-    buttonText: "Shop Tires",
-    description: "Find tires that fit your vehicle",
-  },
-  wheels: {
-    label: "Wheels",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
-        <circle cx="12" cy="12" r="4" strokeWidth={1.5} />
-        <line x1="12" y1="3" x2="12" y2="8" strokeWidth={1.5} />
-        <line x1="12" y1="16" x2="12" y2="21" strokeWidth={1.5} />
-        <line x1="3" y1="12" x2="8" y2="12" strokeWidth={1.5} />
-        <line x1="16" y1="12" x2="21" y2="12" strokeWidth={1.5} />
-      </svg>
-    ),
-    buttonText: "Shop Wheels",
-    description: "Browse aftermarket wheels",
-  },
-  package: {
-    label: "Wheel & Tire Package",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <rect x="3" y="3" width="7" height="7" rx="1" strokeWidth={1.5} />
-        <rect x="14" y="3" width="7" height="7" rx="1" strokeWidth={1.5} />
-        <rect x="3" y="14" width="7" height="7" rx="1" strokeWidth={1.5} />
-        <rect x="14" y="14" width="7" height="7" rx="1" strokeWidth={1.5} />
-      </svg>
-    ),
-    buttonText: "Build Package",
-    description: "Wheels + tires mounted & balanced",
-  },
+const INTENT_CONFIG: Record<ShoppingIntent, { label: string; buttonText: string; }> = {
+  tires: { label: "Tires", buttonText: "Shop Tires" },
+  wheels: { label: "Wheels", buttonText: "Shop Wheels" },
+  package: { label: "Package", buttonText: "Build Package" },
 };
 
 function VehicleSelectorSection() {
   const router = useRouter();
   const [intent, setIntent] = useState<ShoppingIntent>("tires");
-  const [tab, setTab] = useState<"vehicle" | "size">("vehicle");
-  const [sizeFormat, setSizeFormat] = useState<"metric" | "flotation">("metric");
+  const [focused, setFocused] = useState(false);
   
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
@@ -220,90 +233,7 @@ function VehicleSelectorSection() {
   const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
   const [loading, setLoading] = useState<string | null>(null);
 
-  // Metric size state
-  const [width, setWidth] = useState("");
-  const [aspect, setAspect] = useState("");
-  const [rim, setRim] = useState("");
-  
-  // Metric dropdown options (cascading)
-  const [widthOptions, setWidthOptions] = useState<string[]>([]);
-  const [aspectOptions, setAspectOptions] = useState<string[]>([]);
-  const [rimOptions, setRimOptions] = useState<string[]>([]);
-
-  // Flotation size state
-  const [floatDia, setFloatDia] = useState("");
-  const [floatWidth, setFloatWidth] = useState("");
-  const [floatRim, setFloatRim] = useState("");
-
-  // Flotation dropdown options (cascading)
-  const [floatDiaOptions, setFloatDiaOptions] = useState<string[]>([]);
-  const [floatWidthOptions, setFloatWidthOptions] = useState<string[]>([]);
-  const [floatRimOptions, setFloatRimOptions] = useState<string[]>([]);
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // METRIC SIZE EFFECTS
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  // Fetch initial metric widths on mount
-  useEffect(() => {
-    fetch("/api/tires/sizes?type=metric")
-      .then(r => r.json())
-      .then(data => setWidthOptions(data.widths || []))
-      .catch(() => setWidthOptions([]));
-  }, []);
-
-  // Fetch aspects when width changes
-  useEffect(() => {
-    if (!width) { setAspectOptions([]); setAspect(""); setRimOptions([]); setRim(""); return; }
-    fetch(`/api/tires/sizes?type=metric&width=${width}`)
-      .then(r => r.json())
-      .then(data => setAspectOptions(data.aspects || []))
-      .catch(() => setAspectOptions([]));
-  }, [width]);
-
-  // Fetch rims when aspect changes
-  useEffect(() => {
-    if (!width || !aspect) { setRimOptions([]); setRim(""); return; }
-    fetch(`/api/tires/sizes?type=metric&width=${width}&aspect=${aspect}`)
-      .then(r => r.json())
-      .then(data => setRimOptions(data.rims || []))
-      .catch(() => setRimOptions([]));
-  }, [width, aspect]);
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // FLOTATION SIZE EFFECTS
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  // Fetch initial flotation diameters on mount
-  useEffect(() => {
-    fetch("/api/tires/sizes?type=flotation")
-      .then(r => r.json())
-      .then(data => setFloatDiaOptions(data.diameters || []))
-      .catch(() => setFloatDiaOptions([]));
-  }, []);
-
-  // Fetch widths when diameter changes
-  useEffect(() => {
-    if (!floatDia) { setFloatWidthOptions([]); setFloatWidth(""); setFloatRimOptions([]); setFloatRim(""); return; }
-    fetch(`/api/tires/sizes?type=flotation&dia=${floatDia}`)
-      .then(r => r.json())
-      .then(data => setFloatWidthOptions(data.widths || []))
-      .catch(() => setFloatWidthOptions([]));
-  }, [floatDia]);
-
-  // Fetch rims when width changes
-  useEffect(() => {
-    if (!floatDia || !floatWidth) { setFloatRimOptions([]); setFloatRim(""); return; }
-    fetch(`/api/tires/sizes?type=flotation&dia=${floatDia}&width=${floatWidth}`)
-      .then(r => r.json())
-      .then(data => setFloatRimOptions(data.rims || []))
-      .catch(() => setFloatRimOptions([]));
-  }, [floatDia, floatWidth]);
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // VEHICLE EFFECTS
-  // ═══════════════════════════════════════════════════════════════════════════
-
+  // Vehicle cascading effects
   useEffect(() => {
     if (!year) { setMakes([]); setMake(""); return; }
     setLoading("makes");
@@ -341,266 +271,124 @@ function VehicleSelectorSection() {
       .finally(() => setLoading(null));
   }, [year, make, model]);
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // SEARCH HANDLERS
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  const handleVehicleSearch = () => {
+  const handleSearch = () => {
     if (!year || !make || !model) return;
     const params = new URLSearchParams({ year, make, model });
     if (trim) params.set("trim", trim);
     
-    // Route based on intent
     if (intent === "tires") {
       router.push(`/tires?${params.toString()}`);
     } else if (intent === "wheels") {
       router.push(`/wheels?${params.toString()}`);
     } else {
-      // package flow
       params.set("package", "1");
       router.push(`/wheels?${params.toString()}`);
     }
   };
 
-  const handleMetricSizeSearch = () => {
-    if (!width || !aspect || !rim) return;
-    const size = `${width}/${aspect}R${rim}`;
-    router.push(`/tires?size=${encodeURIComponent(size)}`);
-  };
-
-  const handleFlotationSizeSearch = () => {
-    if (!floatDia || !floatWidth || !floatRim) return;
-    // Format: 35x12.50R17
-    const flotation = `${floatDia}x${Number(floatWidth).toFixed(2)}R${floatRim}`;
-    // Also build rawSize for TireConnect-style lookup (35x12.50R17 -> 35125017)
-    const rawSize = `${floatDia}${floatWidth.replace(".", "")}${floatRim}`;
-    const params = new URLSearchParams();
-    params.set("flotation", flotation);
-    params.set("size", rawSize);
-    router.push(`/tires?${params.toString()}`);
-  };
-
-  const currentIntent = INTENT_CONFIG[intent];
-  const selectClass = `h-11 px-3 bg-[#1a1a1a] border border-white/20 rounded text-white text-sm focus:border-white/40 focus:outline-none appearance-none cursor-pointer ${loading ? "opacity-50" : ""}`;
+  const selectClass = `h-12 px-4 bg-[#1a1a1a] border border-white/10 rounded-lg text-white text-sm focus:border-red-500/50 focus:outline-none focus:ring-2 focus:ring-red-500/20 appearance-none cursor-pointer transition-all duration-300 ${loading ? "opacity-50" : ""}`;
 
   return (
-    <section id="find-your-fit" className="bg-[#111] py-8">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-        <div className="bg-[#0d0d0d] border border-white/10 rounded overflow-hidden">
-          
-          {/* Intent Header */}
-          <div className="px-5 pt-5 pb-4 border-b border-white/10">
-            <h2 className="text-white font-bold text-xl lg:text-2xl tracking-tight mb-1">
-              Shop Wheels, Tires, or Complete Packages
-            </h2>
-            <p className="text-white/50 text-sm">
-              Choose what you&apos;re shopping for, enter your vehicle, and we&apos;ll show verified fitment.
-            </p>
-            
-            {/* Intent Selector - 3 equally visible options */}
-            <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
-              {(Object.keys(INTENT_CONFIG) as ShoppingIntent[]).map((key) => {
-                const config = INTENT_CONFIG[key];
-                const isActive = intent === key;
-                return (
-                  <button
-                    key={key}
-                    onClick={() => setIntent(key)}
-                    className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 px-3 py-3 sm:py-2.5 rounded-lg transition-all text-center sm:text-left ${
-                      isActive
-                        ? "bg-red-600 text-white ring-2 ring-red-500 ring-offset-2 ring-offset-[#0d0d0d]"
-                        : "bg-[#1a1a1a] text-white/70 hover:bg-[#252525] hover:text-white border border-white/10"
-                    }`}
-                  >
-                    <span className={isActive ? "text-white" : "text-white/50"}>{config.icon}</span>
-                    <span className="font-semibold text-xs sm:text-sm uppercase tracking-wide">{config.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
+    <section id="find-your-fit" className="relative bg-[#0a0a0a] py-12 overflow-hidden">
+      {/* Atmospheric gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent pointer-events-none" />
+      
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-black text-white uppercase tracking-tight">
+            Find Your <span className="text-red-500">Perfect Fit</span>
+          </h2>
+          <p className="mt-2 text-white/50">
+            Enter your vehicle and we'll show guaranteed fitment options
+          </p>
+        </div>
 
-          {/* Vehicle/Size tabs - only show size tab for tires */}
-          <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-[#0a0a0a]">
-            <span className="text-white/40 text-xs uppercase tracking-wider">
-              {currentIntent.description}
-            </span>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setTab("vehicle")}
-                className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wide rounded transition-colors ${
-                  tab === "vehicle" 
-                    ? "bg-white/10 text-white" 
-                    : "bg-transparent text-white/50 hover:text-white"
-                }`}
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                </svg>
-                By Vehicle
-              </button>
-              {intent === "tires" && (
+        {/* Selector Card with Glow */}
+        <div 
+          className={`relative max-w-4xl mx-auto transition-all duration-500 ${focused ? "scale-[1.01]" : ""}`}
+        >
+          {/* Glow Effect */}
+          <div 
+            className={`absolute -inset-1 bg-gradient-to-r from-red-600/20 via-red-500/10 to-red-600/20 rounded-2xl blur-xl transition-opacity duration-500 ${focused ? "opacity-100" : "opacity-0"}`}
+          />
+          
+          <div className="relative bg-[#111] border border-white/10 rounded-xl overflow-hidden backdrop-blur-xl">
+            {/* Intent Selector */}
+            <div className="flex border-b border-white/10">
+              {(Object.keys(INTENT_CONFIG) as ShoppingIntent[]).map((key) => (
                 <button
-                  onClick={() => setTab("size")}
-                  className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold uppercase tracking-wide rounded transition-colors ${
-                    tab === "size" 
-                      ? "bg-white/10 text-white" 
-                      : "bg-transparent text-white/50 hover:text-white"
+                  key={key}
+                  onClick={() => setIntent(key)}
+                  className={`flex-1 py-4 text-sm font-bold uppercase tracking-wide transition-all duration-300 ${
+                    intent === key
+                      ? "bg-red-600 text-white"
+                      : "bg-transparent text-white/50 hover:text-white hover:bg-white/5"
                   }`}
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  By Tire Size
+                  {INTENT_CONFIG[key].label}
                 </button>
-              )}
+              ))}
             </div>
-          </div>
 
-          {/* Form */}
-          <div className="p-5">
-            {tab === "vehicle" ? (
-              <div className="flex flex-wrap items-end gap-3">
-                <div className="flex-1 min-w-[130px]">
-                  <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Year</label>
+            {/* Form */}
+            <div 
+              className="p-6"
+              onFocus={() => setFocused(true)}
+              onBlur={() => setFocused(false)}
+            >
+              <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+                <div>
+                  <label className="block text-xs text-white/40 uppercase tracking-wide mb-2">Year</label>
                   <select value={year} onChange={(e) => setYear(e.target.value)} className={`${selectClass} w-full`}>
-                    <option value="">Select Year</option>
+                    <option value="">Select</option>
                     {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
                   </select>
                 </div>
-                <div className="flex-1 min-w-[130px]">
-                  <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Make</label>
+                <div>
+                  <label className="block text-xs text-white/40 uppercase tracking-wide mb-2">Make</label>
                   <select value={make} onChange={(e) => setMake(e.target.value)} disabled={!year} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Select Make</option>
+                    <option value="">Select</option>
                     {makes.map(m => <option key={m} value={m}>{m}</option>)}
                   </select>
                 </div>
-                <div className="flex-1 min-w-[130px]">
-                  <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Model</label>
+                <div>
+                  <label className="block text-xs text-white/40 uppercase tracking-wide mb-2">Model</label>
                   <select value={model} onChange={(e) => setModel(e.target.value)} disabled={!make} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Select Model</option>
+                    <option value="">Select</option>
                     {models.map(m => <option key={m} value={m}>{m}</option>)}
                   </select>
                 </div>
-                <div className="flex-1 min-w-[130px]">
-                  <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Trim (Optional)</label>
+                <div>
+                  <label className="block text-xs text-white/40 uppercase tracking-wide mb-2">Trim</label>
                   <select value={trim} onChange={(e) => setTrim(e.target.value)} disabled={!model} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Select Trim</option>
+                    <option value="">Optional</option>
                     {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                   </select>
                 </div>
-                <button
-                  onClick={handleVehicleSearch}
-                  disabled={!year || !make || !model}
-                  className="h-11 px-8 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-colors rounded"
-                >
-                  {currentIntent.buttonText}
-                </button>
-              </div>
-            ) : (
-              <div>
-                {/* Size Format Toggle */}
-                <div className="flex gap-2 mb-4">
+                <div className="flex items-end">
                   <button
-                    onClick={() => setSizeFormat("metric")}
-                    className={`px-4 py-2 text-sm font-semibold rounded transition-colors ${
-                      sizeFormat === "metric"
-                        ? "bg-red-600 text-white"
-                        : "bg-[#1a1a1a] text-white/60 hover:text-white border border-white/10"
-                    }`}
+                    onClick={handleSearch}
+                    disabled={!year || !make || !model}
+                    className="w-full h-12 bg-red-600 hover:bg-red-500 disabled:bg-red-600/30 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 rounded-lg hover:shadow-[0_0_30px_rgba(220,38,38,0.3)]"
                   >
-                    Metric (225/65R17)
-                  </button>
-                  <button
-                    onClick={() => setSizeFormat("flotation")}
-                    className={`px-4 py-2 text-sm font-semibold rounded transition-colors ${
-                      sizeFormat === "flotation"
-                        ? "bg-red-600 text-white"
-                        : "bg-[#1a1a1a] text-white/60 hover:text-white border border-white/10"
-                    }`}
-                  >
-                    Flotation (35x12.50R17)
+                    {INTENT_CONFIG[intent].buttonText}
                   </button>
                 </div>
-
-                {sizeFormat === "metric" ? (
-                  <div className="flex flex-wrap items-end gap-3">
-                    <div className="flex-1 min-w-[100px]">
-                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Width</label>
-                      <select value={width} onChange={(e) => setWidth(e.target.value)} className={`${selectClass} w-full`}>
-                        <option value="">Width</option>
-                        {widthOptions.map(w => <option key={w} value={w}>{w}</option>)}
-                      </select>
-                    </div>
-                    <div className="flex-1 min-w-[100px]">
-                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Aspect Ratio</label>
-                      <select value={aspect} onChange={(e) => setAspect(e.target.value)} disabled={!width} className={`${selectClass} w-full disabled:opacity-40`}>
-                        <option value="">Aspect</option>
-                        {aspectOptions.map(a => <option key={a} value={a}>{a}</option>)}
-                      </select>
-                    </div>
-                    <div className="flex-1 min-w-[100px]">
-                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Rim Diameter</label>
-                      <select value={rim} onChange={(e) => setRim(e.target.value)} disabled={!aspect} className={`${selectClass} w-full disabled:opacity-40`}>
-                        <option value="">Rim</option>
-                        {rimOptions.map(r => <option key={r} value={r}>{r}</option>)}
-                      </select>
-                    </div>
-                    <button
-                      onClick={handleMetricSizeSearch}
-                      disabled={!width || !aspect || !rim}
-                      className="h-11 px-8 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-colors rounded"
-                    >
-                      Shop Tires
-                    </button>
-                  </div>
-                ) : (
-                  <div className="flex flex-wrap items-end gap-3">
-                    <div className="flex-1 min-w-[100px]">
-                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Diameter</label>
-                      <select value={floatDia} onChange={(e) => setFloatDia(e.target.value)} className={`${selectClass} w-full`}>
-                        <option value="">Diameter</option>
-                        {floatDiaOptions.map(d => <option key={d} value={d}>{d}&quot;</option>)}
-                      </select>
-                    </div>
-                    <div className="flex-1 min-w-[100px]">
-                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Width</label>
-                      <select value={floatWidth} onChange={(e) => setFloatWidth(e.target.value)} disabled={!floatDia} className={`${selectClass} w-full disabled:opacity-40`}>
-                        <option value="">Width</option>
-                        {floatWidthOptions.map(w => <option key={w} value={w}>{Number(w).toFixed(2)}</option>)}
-                      </select>
-                    </div>
-                    <div className="flex-1 min-w-[100px]">
-                      <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Rim Diameter</label>
-                      <select value={floatRim} onChange={(e) => setFloatRim(e.target.value)} disabled={!floatWidth} className={`${selectClass} w-full disabled:opacity-40`}>
-                        <option value="">Rim</option>
-                        {floatRimOptions.map(r => <option key={r} value={r}>{r}&quot;</option>)}
-                      </select>
-                    </div>
-                    <button
-                      onClick={handleFlotationSizeSearch}
-                      disabled={!floatDia || !floatWidth || !floatRim}
-                      className="h-11 px-8 bg-red-600 hover:bg-red-700 disabled:bg-red-600/40 disabled:cursor-not-allowed text-white font-bold text-sm uppercase tracking-wide transition-colors rounded"
-                    >
-                      Shop Tires
-                    </button>
-                  </div>
-                )}
               </div>
-            )}
 
-            {/* Bottom info */}
-            <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-white/50">
-              <span className="flex items-center gap-1.5">
-                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                Guaranteed to fit your vehicle
-              </span>
-              <span>
-                Save your vehicle in <Link href="/garage" className="text-red-500 hover:underline">My Garage</Link>
-              </span>
+              {/* Bottom info */}
+              <div className="mt-4 flex items-center justify-center gap-6 text-xs text-white/40">
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Guaranteed fitment
+                </span>
+                <span>
+                  or <Link href="/jake" className="text-red-500 hover:text-red-400">ask Jake</Link> for help
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -610,41 +398,215 @@ function VehicleSelectorSection() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 4: SHOP BY VEHICLE TYPE (6 cards)
+// JAKE AI ADVISOR SECTION (Premium Rebuild)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const VEHICLE_TYPES = [
-  { title: "Daily Drivers", subtitle: "Cars, Sedans & Coupes", image: "/images/homepage/cat-daily-drivers.jpg", href: "/tires?intent=daily" },
-  { title: "SUVs & Crossovers", subtitle: "Family, Crossover & 4x4", image: "/images/homepage/cat-suv-crossovers.jpg", href: "/tires?intent=suv" },
-  { title: "Trucks & Jeeps", subtitle: "Half Ton, 3/4 Ton & Jeeps", image: "/images/homepage/cat-trucks-jeeps.jpg", href: "/wheels?intent=truck" },
-  { title: "Lifted Builds", subtitle: "Lift Kits, Bigger Tires & Aggressive Stance", image: "/images/homepage/cat-lifted-builds.jpg", href: "/lifted" },
-  { title: "Performance & Street", subtitle: "Performance Tires & Wheels", image: "/images/homepage/cat-performance-street.jpg", href: "/wheels?intent=performance" },
-  { title: "Wheels Only", subtitle: "Shop All Styles & Brands", image: "/images/homepage/cat-wheels-only.jpg", href: "/wheels" },
+function JakeAdvisorSection() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <section className="relative bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] py-16 overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-red-900/10 blur-[100px] pointer-events-none" />
+      
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 lg:px-8">
+        <div 
+          className="relative max-w-4xl mx-auto"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* Glassmorphism Card */}
+          <div className={`relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-all duration-500 ${isHovered ? "border-red-500/30 shadow-[0_0_60px_rgba(220,38,38,0.15)]" : ""}`}>
+            {/* Animated Border Shimmer */}
+            <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+              <div 
+                className="absolute inset-0 opacity-0 transition-opacity duration-500"
+                style={{
+                  opacity: isHovered ? 0.5 : 0,
+                  background: "linear-gradient(90deg, transparent, rgba(220,38,38,0.3), transparent)",
+                  animation: isHovered ? "shimmer 2s infinite" : "none",
+                }}
+              />
+            </div>
+
+            <div className="relative flex flex-col lg:flex-row items-center gap-8 p-8 lg:p-12">
+              {/* Jake Image */}
+              <div className="relative flex-shrink-0">
+                <div className={`relative transition-transform duration-500 ${isHovered ? "scale-105" : ""}`}>
+                  {/* Glow behind image */}
+                  <div className="absolute -inset-4 bg-red-500/20 rounded-full blur-2xl opacity-60" />
+                  <Image
+                    src="/images/jake/jake-explaining.png"
+                    alt="Jake - Your AI Fitment Advisor"
+                    width={200}
+                    height={200}
+                    className="relative rounded-xl object-cover shadow-2xl"
+                  />
+                  {/* Online indicator */}
+                  <div className="absolute -bottom-2 -right-2 flex items-center gap-2 bg-[#111] border border-white/10 rounded-full px-3 py-1.5">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                    </span>
+                    <span className="text-xs text-white/70 font-medium">Online</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 text-center lg:text-left">
+                <p className="text-red-500 text-sm font-semibold uppercase tracking-wider mb-2">
+                  AI Build Advisor
+                </p>
+                <h2 className="text-3xl lg:text-4xl font-black text-white uppercase tracking-tight">
+                  Meet <span className="text-red-500">Jake</span>
+                </h2>
+                <p className="mt-4 text-white/60 text-lg leading-relaxed max-w-lg">
+                  Not sure what fits? Jake knows every bolt pattern, offset, and tire size. 
+                  Tell him your vehicle and build style — he'll recommend the perfect setup.
+                </p>
+
+                {/* Quick prompts */}
+                <div className="mt-6 flex flex-wrap gap-2 justify-center lg:justify-start">
+                  {["Best tires for my truck", "Build me a package", "Will 35s fit?"].map((prompt) => (
+                    <Link
+                      key={prompt}
+                      href={`/jake?q=${encodeURIComponent(prompt)}`}
+                      className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full text-white/70 hover:text-white text-sm transition-all"
+                    >
+                      "{prompt}"
+                    </Link>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <Link
+                  href="/jake"
+                  className="inline-flex items-center gap-3 mt-8 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold text-base uppercase tracking-wide rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(220,38,38,0.4)]"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                  Ask Jake Now
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+      `}</style>
+    </section>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// BUILD CATEGORY CARDS (Cinematic Rebuild)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const BUILD_CATEGORIES = [
+  { 
+    title: "Trucks & Jeeps", 
+    subtitle: "Half-ton, 3/4-ton, Jeeps", 
+    image: "/images/homepage/vehicle-ram-aggressive.jpg", 
+    href: "/wheels?intent=truck",
+    accent: "from-red-600/40"
+  },
+  { 
+    title: "Lifted Builds", 
+    subtitle: "Lift kits, bigger tires, aggressive stance", 
+    image: "/images/homepage/vehicle-silverado-lifted.jpg", 
+    href: "/lifted",
+    accent: "from-orange-600/40"
+  },
+  { 
+    title: "Performance", 
+    subtitle: "Street, track, staggered setups", 
+    image: "/images/homepage/vehicle-corvette-track.jpg", 
+    href: "/wheels?intent=performance",
+    accent: "from-blue-600/40"
+  },
+  { 
+    title: "Daily Drivers", 
+    subtitle: "Cars, sedans, crossovers", 
+    image: "/images/homepage/vehicle-camaro-street.jpg", 
+    href: "/tires?intent=daily",
+    accent: "from-purple-600/40"
+  },
+  { 
+    title: "Off-Road", 
+    subtitle: "All-terrain, mud-terrain, overland", 
+    image: "/images/homepage/vehicle-tacoma-overland.jpg", 
+    href: "/tires?intent=offroad",
+    accent: "from-green-600/40"
+  },
+  { 
+    title: "SUVs", 
+    subtitle: "Family haulers, luxury SUVs", 
+    image: "/images/homepage/vehicle-tahoe-blackout.jpg", 
+    href: "/tires?intent=suv",
+    accent: "from-cyan-600/40"
+  },
 ];
 
-function ShopByVehicleType() {
+function BuildCategoryCards() {
   return (
-    <section className="bg-[#0a0a0a] py-10">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-        <h2 className="text-white font-bold text-sm uppercase tracking-widest mb-6">
-          Shop by Vehicle Type
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          {VEHICLE_TYPES.map((type) => (
-            <Link key={type.title} href={type.href} className="group relative block overflow-hidden bg-neutral-900 rounded">
-              <div className="aspect-[4/3] relative">
-                <Image src={type.image} alt={type.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" sizes="(max-width: 640px) 50vw, 16vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-3">
-                <h3 className="text-white font-bold text-sm uppercase">{type.title}</h3>
-                <p className="text-white/50 text-xs mt-0.5 leading-tight">{type.subtitle}</p>
-                <div className="mt-2 text-red-500">
+    <section className="relative bg-[#0a0a0a] py-16">
+      {/* Section divider gradient */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#0d0d0d] to-transparent pointer-events-none" />
+      
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 lg:px-8">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl lg:text-4xl font-black text-white uppercase tracking-tight">
+            Shop Your <span className="text-red-500">Build Style</span>
+          </h2>
+          <p className="mt-2 text-white/50">Find the perfect setup for how you drive</p>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          {BUILD_CATEGORIES.map((cat) => (
+            <Link 
+              key={cat.title} 
+              href={cat.href}
+              className="group relative block overflow-hidden rounded-xl bg-neutral-900 aspect-[4/3] lg:aspect-[16/10]"
+            >
+              {/* Image */}
+              <Image 
+                src={cat.image} 
+                alt={cat.title} 
+                fill 
+                className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" 
+                sizes="(max-width: 768px) 50vw, 33vw" 
+              />
+              
+              {/* Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-t ${cat.accent} via-black/50 to-black/30 transition-opacity duration-500 group-hover:opacity-80`} />
+              
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col justify-end p-5 lg:p-6">
+                <h3 className="text-white font-black text-xl lg:text-2xl uppercase tracking-tight group-hover:text-red-400 transition-colors">
+                  {cat.title}
+                </h3>
+                <p className="text-white/60 text-sm mt-1 group-hover:text-white/80 transition-colors">
+                  {cat.subtitle}
+                </p>
+                
+                {/* Arrow */}
+                <div className="mt-3 flex items-center gap-2 text-red-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                  <span className="text-sm font-semibold uppercase">Shop Now</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </div>
               </div>
+
+              {/* Hover glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl ring-2 ring-red-500/30" />
             </Link>
           ))}
         </div>
@@ -654,166 +616,104 @@ function ShopByVehicleType() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 5: TRUST BADGE STRIP (4 items - NO Installation Partners)
+// FEATURE PANELS (Cinematic Storytelling)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const TRUST_BADGES = [
-  { icon: "people", title: "Real People. Real Experts.", subtitle: "We're here to help." },
-  { icon: "shipping", title: "Fast Shipping Nationwide", subtitle: "On orders over $199." },
-  { icon: "returns", title: "Easy Returns. No Hassle.", subtitle: "30-day returns." },
-  { icon: "built", title: "Built for What Drives You", subtitle: "On every road. Every day." },
-];
-
-function TrustBadgeStrip() {
-  const getIcon = (type: string) => {
-    switch(type) {
-      case "people": return <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
-      case "shipping": return <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>;
-      case "returns": return <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>;
-      case "built": return <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>;
-      default: return null;
-    }
-  };
+function FeaturePanels() {
+  const panels = [
+    {
+      title: "Fitment Guaranteed",
+      subtitle: "The right fit or we make it right",
+      description: "Every wheel and tire we sell is verified to fit your exact vehicle. No guessing, no returns, no hassle.",
+      image: "/images/homepage/misc-wheel-wall.jpg",
+      cta: "Learn More",
+      href: "/about/fitment-guarantee",
+      align: "left" as const,
+    },
+    {
+      title: "Built by Experts",
+      subtitle: "30+ years in the business",
+      description: "We're not just another online retailer. We're enthusiasts who know these builds inside and out.",
+      image: "/images/homepage/misc-neon-wtd.jpg",
+      cta: "About Us",
+      href: "/about",
+      align: "right" as const,
+    },
+  ];
 
   return (
-    <section className="bg-[#111] border-y border-white/10 py-6">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-6">
-          {TRUST_BADGES.map((badge) => (
-            <div key={badge.title} className="flex items-center gap-3">
-              <div className="text-white/40">{getIcon(badge.icon)}</div>
-              <div>
-                <p className="text-white font-semibold text-sm">{badge.title}</p>
-                <p className="text-white/40 text-xs">{badge.subtitle}</p>
-              </div>
+    <section className="bg-[#0a0a0a]">
+      {panels.map((panel, idx) => (
+        <div key={panel.title} className="relative min-h-[400px] lg:min-h-[500px] overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src={panel.image}
+              alt={panel.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+            <div className={`absolute inset-0 bg-gradient-to-${panel.align === "left" ? "r" : "l"} from-black/90 via-black/60 to-transparent`} />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 max-w-[1400px] mx-auto px-4 lg:px-8 h-full min-h-[400px] lg:min-h-[500px] flex items-center">
+            <div className={`max-w-lg ${panel.align === "right" ? "ml-auto text-right" : ""}`}>
+              <p className="text-red-500 text-sm font-semibold uppercase tracking-wider mb-2">
+                {panel.subtitle}
+              </p>
+              <h2 className="text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-tight">
+                {panel.title}
+              </h2>
+              <p className="mt-4 text-white/60 text-lg leading-relaxed">
+                {panel.description}
+              </p>
+              <Link
+                href={panel.href}
+                className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-lg transition-all"
+              >
+                {panel.cta}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      ))}
     </section>
   );
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 6: CATEGORY PROMO CARDS (4 cards with curved clip)
+// REVIEWS SECTION (Enhanced)
 // ═══════════════════════════════════════════════════════════════════════════════
-
-const CATEGORY_PROMOS = [
-  { image: "/images/homepage/tile-shop-wheels.jpg", href: "/wheels", alt: "Shop Wheels" },
-  { image: "/images/homepage/tile-shop-tires.jpg", href: "/tires", alt: "Shop Tires" },
-  { image: "/images/homepage/tile-shop-packages.jpg", href: "/wheels?package=1", alt: "Shop Packages" },
-  { image: "/images/homepage/tile-shop-accessories.jpg", href: "/accessories", alt: "Shop Accessories" },
-];
-
-function CategoryPromoCards() {
-  return (
-    <section className="bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f] py-10">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {CATEGORY_PROMOS.map((promo) => (
-            <Link key={promo.alt} href={promo.href} className="group relative block overflow-hidden rounded bg-black">
-              {/* Full promo tile image - already has text/design baked in */}
-              <div className="aspect-[4/5] relative overflow-hidden rounded">
-                <Image 
-                  src={promo.image} 
-                  alt={promo.alt} 
-                  fill 
-                  className="object-contain transition-transform duration-500 group-hover:scale-105" 
-                  sizes="(max-width: 640px) 100vw, 25vw" 
-                />
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 7: BRAND LOGO ROW
-// ═══════════════════════════════════════════════════════════════════════════════
-
-const BRAND_LOGOS = [
-  { name: "Michelin", href: "/tires?brand=michelin" },
-  { name: "BFGoodrich", href: "/tires?brand=bfgoodrich" },
-  { name: "Goodyear", href: "/tires?brand=goodyear" },
-  { name: "Toyo Tires", href: "/tires?brand=toyo" },
-  { name: "Falken", href: "/tires?brand=falken" },
-  { name: "Nitto", href: "/tires?brand=nitto" },
-  { name: "Fuel", href: "/wheels?brand=fuel" },
-  { name: "Method", href: "/wheels?brand=method" },
-];
-
-function BrandLogoRow() {
-  return (
-    <section className="bg-white py-6">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-        <p className="text-center text-neutral-500 text-xs font-bold uppercase tracking-widest mb-5">
-          Top Tire & Wheel Brands
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-10">
-          {BRAND_LOGOS.map((brand) => (
-            <Link key={brand.name} href={brand.href} className="text-neutral-400 hover:text-neutral-700 font-bold text-sm uppercase tracking-wide transition-colors">
-              {brand.name}
-            </Link>
-          ))}
-        </div>
-        <div className="text-center mt-4">
-          <Link href="/brands" className="text-red-600 hover:text-red-700 text-xs font-bold uppercase tracking-wide">
-            View All Brands →
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 8: REVIEWS SECTION
-// ═══════════════════════════════════════════════════════════════════════════════
-
-const REVIEWS = [
-  { text: '"Best selection and fast shipping." "Exactly what I needed."', author: "Mike D." },
-  { text: '"Fitment was perfect." "Great communication."', author: "Jason T." },
-  { text: '"Awesome prices and top notch support." "10/10."', author: "Sarah K." },
-];
 
 function ReviewsSection() {
   return (
-    <section className="bg-[#f5f5f5] py-8">
+    <section className="bg-[#111] py-12 border-y border-white/5">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-8">
-          {/* Google rating */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* Rating */}
           <div className="flex items-center gap-4">
-            <div className="text-4xl font-bold" style={{ color: '#4285F4' }}>G</div>
+            <div className="text-5xl font-black text-white">4.8</div>
             <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-2xl font-bold text-neutral-900">4.8</span>
-                <div className="flex text-yellow-400">
-                  {[1,2,3,4,5].map(s => <svg key={s} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                </div>
+              <div className="flex text-yellow-400 mb-1">
+                {[1,2,3,4,5].map(s => (
+                  <svg key={s} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
               </div>
-              <p className="text-sm text-neutral-500">24,000+ Google Reviews</p>
-              <p className="text-xs text-neutral-400">Real customers. Real results.</p>
+              <p className="text-white font-semibold">24,000+ Reviews</p>
+              <p className="text-white/40 text-sm">Real customers. Real results.</p>
             </div>
           </div>
 
-          {/* Review quotes */}
-          <div className="flex flex-wrap gap-8">
-            {REVIEWS.map((review, i) => (
-              <div key={i} className="max-w-[180px]">
-                <div className="flex text-red-500 mb-1">
-                  {[1,2,3,4,5].map(s => <svg key={s} className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                </div>
-                <p className="text-sm text-neutral-600 italic leading-relaxed">{review.text}</p>
-                <p className="text-xs text-neutral-500 mt-1">— {review.author}</p>
-              </div>
-            ))}
-          </div>
-
-          <Link href="/reviews" className="text-red-600 hover:text-red-700 text-sm font-bold uppercase tracking-wide whitespace-nowrap">
-            View All Reviews →
+          {/* CTA */}
+          <Link href="/reviews" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-semibold rounded-lg transition-all">
+            Read All Reviews →
           </Link>
         </div>
       </div>
@@ -822,29 +722,35 @@ function ReviewsSection() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 9: FITMENT PROMISE BANNER
+// FINAL CTA SECTION
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function FitmentPromiseBanner() {
+function FinalCTA() {
   return (
-    <section className="relative bg-[#0a0a0a] overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8 py-12">
-        <div className="flex flex-wrap items-center justify-between gap-8">
-          <div className="max-w-md">
-            <h2 className="text-3xl lg:text-4xl font-black uppercase tracking-tight leading-tight">
-              <span className="text-white">Fitment First.</span><br />
-              <span className="text-red-600">Every Time.</span>
-            </h2>
-            <p className="mt-4 text-white/50 text-sm leading-relaxed">
-              Our fitment-first approach means you get the right products, the right way, every time. That's <span className="text-red-500">our promise</span>.
-            </p>
-            <Link href="/about" className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm uppercase tracking-wide transition-all rounded">
-              Learn More
-            </Link>
-          </div>
-          <div className="relative w-[280px] h-[180px] lg:w-[350px] lg:h-[220px]">
-            <Image src="/images/homepage/cat-all-terrain.png" alt="Premium tire" fill className="object-cover object-center opacity-60 rounded" sizes="350px" />
-          </div>
+    <section className="relative bg-[#0a0a0a] py-20 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-900/20 blur-[150px] pointer-events-none" />
+      
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 lg:px-8 text-center">
+        <h2 className="text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+          Ready to Build?
+        </h2>
+        <p className="mt-4 text-white/60 text-lg max-w-lg mx-auto">
+          Find your perfect setup in minutes. Fitment guaranteed.
+        </p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            href="#find-your-fit"
+            className="px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold text-base uppercase tracking-wide rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(220,38,38,0.4)]"
+          >
+            Find Your Fit
+          </Link>
+          <Link
+            href="/jake"
+            className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-base uppercase tracking-wide rounded-xl transition-all"
+          >
+            Ask Jake
+          </Link>
         </div>
       </div>
     </section>
@@ -852,12 +758,12 @@ function FitmentPromiseBanner() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SECTION 10: FOOTER TRUST BAR (NO Installation Partners)
+// FOOTER TRUST BAR
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function FooterTrustBar() {
   return (
-    <section className="bg-[#050505] border-t border-white/10 py-5">
+    <section className="bg-[#050505] border-t border-white/10 py-6">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <div className="flex flex-wrap items-center gap-8 text-sm">
@@ -870,16 +776,15 @@ function FooterTrustBar() {
             </div>
             <div className="flex items-center gap-2 text-white/60">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-medium text-white">Expert Support</span>
-              <span>7 Days a Week</span>
+              <span>Expert Support 7 Days a Week</span>
             </div>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-white/50 text-xs mr-2">Secure Checkout</span>
             <div className="flex items-center gap-2">
-              {["Visa", "MC", "Amex", "Disc", "PayPal"].map((card) => (
+              {["Visa", "MC", "Amex", "PayPal"].map((card) => (
                 <div key={card} className="w-10 h-6 bg-white/10 rounded flex items-center justify-center text-[10px] text-white/50 font-bold">
                   {card}
                 </div>
@@ -899,16 +804,14 @@ function FooterTrustBar() {
 export function PremiumNationalHomepage() {
   return (
     <div className="bg-[#050505] min-h-screen">
+      <CinematicHero />
       <TrustBar />
-      <HeroSection />
       <VehicleSelectorSection />
-      <JakeHomepageSection />
-      <ShopByVehicleType />
-      <TrustBadgeStrip />
-      <CategoryPromoCards />
-      <BrandLogoRow />
+      <JakeAdvisorSection />
+      <BuildCategoryCards />
+      <FeaturePanels />
       <ReviewsSection />
-      <FitmentPromiseBanner />
+      <FinalCTA />
       <FooterTrustBar />
     </div>
   );
