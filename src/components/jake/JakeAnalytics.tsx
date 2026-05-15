@@ -60,6 +60,7 @@ interface JakeEventData {
 
 // Generate a session ID for tracking conversations
 let jakeSessionId: string | null = null;
+
 export function getJakeSessionId(): string {
   if (!jakeSessionId && typeof window !== "undefined") {
     jakeSessionId = sessionStorage.getItem("jake_session_id");
@@ -67,6 +68,23 @@ export function getJakeSessionId(): string {
       jakeSessionId = `jake_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
       sessionStorage.setItem("jake_session_id", jakeSessionId);
     }
+  }
+  return jakeSessionId || "unknown";
+}
+
+// Restore a specific sessionId (for conversation persistence)
+export function setJakeSessionId(sessionId: string): void {
+  if (typeof window !== "undefined") {
+    jakeSessionId = sessionId;
+    sessionStorage.setItem("jake_session_id", sessionId);
+  }
+}
+
+// Create a fresh sessionId (for "Start New Conversation")
+export function resetJakeSessionId(): string {
+  if (typeof window !== "undefined") {
+    jakeSessionId = `jake_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+    sessionStorage.setItem("jake_session_id", jakeSessionId);
   }
   return jakeSessionId || "unknown";
 }

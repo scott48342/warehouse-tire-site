@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { JakeProductCard, JakePackageCard } from "./JakeProductCards";
 import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
-import { trackJakeEvent, trackJakeMessage } from "./JakeAnalytics";
+import { trackJakeEvent, trackJakeMessage, getJakeSessionId, setJakeSessionId, resetJakeSessionId } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -42,6 +42,83 @@ interface PackageSummary {
   tire?: ParsedProduct;
   wheel?: ParsedProduct;
   totalPrice?: string;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CONVERSATION PERSISTENCE
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const JAKE_STORAGE_KEY = "jake_conversation";
+const CONVERSATION_EXPIRY_HOURS = 48;
+
+interface PersistedConversation {
+  sessionId: string;
+  messages: Message[];
+  savedAt: number; // timestamp
+}
+
+// Sanitize messages before saving (remove sensitive data)
+function sanitizeForStorage(messages: Message[]): Message[] {
+  return messages.map(msg => ({
+    ...msg,
+    // Remove cart URLs that might contain payment-related data
+    cartUrl: msg.cartUrl?.includes("checkout") ? undefined : msg.cartUrl,
+    // Keep product info but strip anything sensitive
+    products: msg.products?.map(p => ({
+      ...p,
+      // Keep only display info, no payment details
+    })),
+  }));
+}
+
+function saveConversation(sessionId: string, messages: Message[]): void {
+  if (typeof window === "undefined") return;
+  try {
+    const data: PersistedConversation = {
+      sessionId,
+      messages: sanitizeForStorage(messages),
+      savedAt: Date.now(),
+    };
+    localStorage.setItem(JAKE_STORAGE_KEY, JSON.stringify(data));
+  } catch (e) {
+    console.error("[Jake] Failed to save conversation:", e);
+  }
+}
+
+function loadConversation(): PersistedConversation | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(JAKE_STORAGE_KEY);
+    if (!raw) return null;
+    
+    const data: PersistedConversation = JSON.parse(raw);
+    
+    // Restore Date objects for timestamps
+    data.messages = data.messages.map(msg => ({
+      ...msg,
+      timestamp: new Date(msg.timestamp),
+    }));
+    
+    return data;
+  } catch (e) {
+    console.error("[Jake] Failed to load conversation:", e);
+    return null;
+  }
+}
+
+function clearConversation(): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.removeItem(JAKE_STORAGE_KEY);
+  } catch (e) {
+    console.error("[Jake] Failed to clear conversation:", e);
+  }
+}
+
+function isConversationStale(savedAt: number): boolean {
+  const ageMs = Date.now() - savedAt;
+  const ageHours = ageMs / (1000 * 60 * 60);
+  return ageHours > CONVERSATION_EXPIRY_HOURS;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -145,6 +222,12 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const [headerPrompts] = useState(() => getRandomHeaderPrompts(3));
   const [compareProducts, setCompareProducts] = useState<ParsedProduct[]>([]);
   const [showCompare, setShowCompare] = useState(false);
+  
+  // Persistence state
+  const [showResumeDialog, setShowResumeDialog] = useState(false);
+  const [pendingInitialPrompt, setPendingInitialPrompt] = useState<string | null>(null);
+  const [isRestored, setIsRestored] = useState(false);
+  const persistenceInitialized = useRef(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   // Guard against double execution in React StrictMode
@@ -195,14 +278,114 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     }
   }, [hasStarted]);
 
-  // Handle initial prompt - use ref guard to prevent double execution in StrictMode
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CONVERSATION PERSISTENCE
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  // Load persisted conversation on mount
   useEffect(() => {
-    if (initialPrompt && !hasProcessedInitialPromptRef.current) {
+    if (persistenceInitialized.current) return;
+    persistenceInitialized.current = true;
+    
+    const saved = loadConversation();
+    
+    if (saved && saved.messages.length > 0) {
+      const isStale = isConversationStale(saved.savedAt);
+      
+      // If there's an initial prompt (from ?q=), we need to ask what to do
+      if (initialPrompt) {
+        setPendingInitialPrompt(initialPrompt);
+        setShowResumeDialog(true);
+        // Temporarily restore for display
+        setMessages(saved.messages);
+        setHasStarted(true);
+        setIsRestored(true);
+        setJakeSessionId(saved.sessionId);
+        return;
+      }
+      
+      // If conversation is stale, ask to resume or start fresh
+      if (isStale) {
+        setShowResumeDialog(true);
+        // Temporarily restore for display
+        setMessages(saved.messages);
+        setHasStarted(true);
+        setIsRestored(true);
+        setJakeSessionId(saved.sessionId);
+        return;
+      }
+      
+      // Fresh conversation - restore it
+      setMessages(saved.messages);
+      setHasStarted(true);
+      setIsRestored(true);
+      setJakeSessionId(saved.sessionId);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  
+  // Save conversation whenever messages change
+  useEffect(() => {
+    if (messages.length > 0 && !showResumeDialog) {
+      const sessionId = getJakeSessionId();
+      saveConversation(sessionId, messages);
+    }
+  }, [messages, showResumeDialog]);
+  
+  // Handle "Continue Conversation" from resume dialog
+  const handleContinueConversation = useCallback(() => {
+    setShowResumeDialog(false);
+    // If there was a pending initial prompt, send it now
+    if (pendingInitialPrompt) {
+      handleSend(pendingInitialPrompt);
+      setPendingInitialPrompt(null);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pendingInitialPrompt]);
+  
+  // Handle "Start Fresh" from resume dialog
+  const handleStartFresh = useCallback(() => {
+    setShowResumeDialog(false);
+    setMessages([]);
+    setHasStarted(false);
+    setIsRestored(false);
+    clearConversation();
+    resetJakeSessionId();
+    hasProcessedInitialPromptRef.current = false;
+    
+    // If there was a pending initial prompt, send it
+    if (pendingInitialPrompt) {
+      // Small delay to let state clear
+      setTimeout(() => {
+        handleSend(pendingInitialPrompt);
+        setPendingInitialPrompt(null);
+      }, 100);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pendingInitialPrompt]);
+  
+  // Handle "Start New Conversation" button click
+  const handleNewConversation = useCallback(() => {
+    setMessages([]);
+    setHasStarted(false);
+    setIsRestored(false);
+    setCompareProducts([]);
+    setShowCompare(false);
+    clearConversation();
+    resetJakeSessionId();
+    hasProcessedInitialPromptRef.current = false;
+    trackJakeEvent("jake_closed"); // Track as session end
+  }, []);
+
+  // Handle initial prompt - use ref guard to prevent double execution in StrictMode
+  // Only process if no persisted conversation to restore
+  useEffect(() => {
+    if (initialPrompt && !hasProcessedInitialPromptRef.current && !isRestored && !showResumeDialog) {
       hasProcessedInitialPromptRef.current = true;
       handleSend(initialPrompt);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialPrompt]);
+  }, [initialPrompt, isRestored, showResumeDialog]);
 
   const handleSend = async (messageText?: string) => {
     const text = messageText || input.trim();
@@ -470,7 +653,60 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // ═══════════════════════════════════════════════════════════════════════════
 
   return (
-    <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden`}>
+    <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden relative`}>
+      {/* Resume Conversation Dialog */}
+      {showResumeDialog && (
+        <div className="absolute inset-0 z-50 bg-black/80 flex items-center justify-center p-6">
+          <div className="bg-[#1a1a1a] border border-white/10 rounded-xl max-w-md w-full p-6 shadow-2xl">
+            <div className="flex items-center gap-3 mb-4">
+              <JakeAvatar size="md" />
+              <div>
+                <h3 className="text-white font-bold text-lg">Welcome back!</h3>
+                <p className="text-white/50 text-sm">
+                  {pendingInitialPrompt 
+                    ? "You have an existing conversation"
+                    : "You have a previous conversation"
+                  }
+                </p>
+              </div>
+            </div>
+            
+            {/* Preview of last message */}
+            {messages.length > 0 && (
+              <div className="bg-white/5 rounded-lg p-3 mb-4 border border-white/10">
+                <p className="text-white/40 text-xs mb-1">Last message:</p>
+                <p className="text-white/80 text-sm line-clamp-2">
+                  {messages[messages.length - 1].content.slice(0, 150)}
+                  {messages[messages.length - 1].content.length > 150 ? "..." : ""}
+                </p>
+              </div>
+            )}
+            
+            <p className="text-white/60 text-sm mb-6">
+              {pendingInitialPrompt 
+                ? "Would you like to continue your previous conversation or start fresh with your new question?"
+                : "Would you like to continue where you left off or start a new conversation?"
+              }
+            </p>
+            
+            <div className="flex gap-3">
+              <button
+                onClick={handleContinueConversation}
+                className="flex-1 px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
+              >
+                {pendingInitialPrompt ? "Continue & Ask" : "Continue"}
+              </button>
+              <button
+                onClick={handleStartFresh}
+                className="flex-1 px-4 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors border border-white/10"
+              >
+                Start Fresh
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex-shrink-0 border-b border-white/10 bg-[#0d0d0d]">
         <div className="flex items-center justify-between px-6 py-3">
@@ -490,7 +726,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
           </div>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => { setMessages([]); setHasStarted(false); }}
+              onClick={handleNewConversation}
               className="text-white/50 hover:text-white text-sm px-3 py-1.5 rounded hover:bg-white/5 transition-colors"
             >
               New Chat
