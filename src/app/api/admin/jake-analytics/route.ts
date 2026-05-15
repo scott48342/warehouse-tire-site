@@ -148,6 +148,7 @@ export async function GET(request: NextRequest) {
         prompt: schema.jakeAnalyticsEvents.prompt,
         intent: schema.jakeAnalyticsEvents.intent,
         createdAt: schema.jakeAnalyticsEvents.createdAt,
+        sessionId: schema.jakeAnalyticsEvents.sessionId,
       })
       .from(schema.jakeAnalyticsEvents)
       .where(and(

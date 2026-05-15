@@ -32,7 +32,7 @@ interface JakeAnalytics {
   };
   intents: {
     top: Array<{ intent: string; count: number }>;
-    recentPrompts: Array<{ prompt: string; intent: string | null; createdAt: string }>;
+    recentPrompts: Array<{ prompt: string; intent: string | null; createdAt: string; sessionId: string | null }>;
   };
   vehicles: Array<{ year: string; make: string; model: string; count: number }>;
   products: Array<{
@@ -159,7 +159,13 @@ function FunnelChart({ funnel }: { funnel: JakeAnalytics["funnel"] }) {
   );
 }
 
-function IntentsTable({ intents }: { intents: JakeAnalytics["intents"] }) {
+function IntentsTable({ 
+  intents, 
+  onSelectSession 
+}: { 
+  intents: JakeAnalytics["intents"];
+  onSelectSession?: (sessionId: string) => void;
+}) {
   const intentLabels: Record<string, string> = {
     budget: "💰 Budget/Cheap",
     all_terrain: "🏔️ All-Terrain",
@@ -194,13 +200,27 @@ function IntentsTable({ intents }: { intents: JakeAnalytics["intents"] }) {
       {intents.recentPrompts.length > 0 && (
         <div className="mt-6 pt-4 border-t border-gray-200">
           <h4 className="text-sm font-semibold text-gray-700 mb-3">Recent Prompts</h4>
+          <p className="text-xs text-gray-400 mb-2">Click to view full conversation</p>
           <div className="space-y-2 max-h-48 overflow-y-auto">
             {intents.recentPrompts.map((item, idx) => (
-              <div key={idx} className="text-xs text-gray-600 py-1 border-b border-gray-50">
+              <div 
+                key={idx} 
+                className={`text-xs text-gray-600 py-2 px-2 border-b border-gray-50 rounded ${
+                  item.sessionId && onSelectSession 
+                    ? "cursor-pointer hover:bg-gray-50 transition-colors" 
+                    : ""
+                }`}
+                onClick={() => item.sessionId && onSelectSession?.(item.sessionId)}
+              >
                 <p className="truncate">{item.prompt}</p>
-                <p className="text-gray-400 text-[10px]">
-                  {new Date(item.createdAt).toLocaleString()}
-                </p>
+                <div className="flex items-center justify-between mt-1">
+                  <span className="text-gray-400 text-[10px]">
+                    {new Date(item.createdAt).toLocaleString()}
+                  </span>
+                  {item.sessionId && onSelectSession && (
+                    <span className="text-red-500 text-[10px]">View chat →</span>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -409,6 +429,177 @@ function DailyTrendChart({ trend }: { trend: JakeAnalytics["dailyTrend"] }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// CONVERSATION MODAL
+// ═══════════════════════════════════════════════════════════════════════════════
+
+interface ConversationMessage {
+  id: string;
+  role: string;
+  content: string;
+  createdAt: string;
+}
+
+interface ConversationSession {
+  sessionId: string;
+  source: string;
+  hostname: string | null;
+  startedAt: string | null;
+  vehicle: {
+    year: string | null;
+    make: string | null;
+    model: string | null;
+    trim: string | null;
+  } | null;
+  outcome: string;
+  cartUrl: string | null;
+  cartValue: number | null;
+  events: string[];
+}
+
+function ConversationModal({ 
+  sessionId, 
+  onClose 
+}: { 
+  sessionId: string;
+  onClose: () => void;
+}) {
+  const [loading, setLoading] = useState(true);
+  const [messages, setMessages] = useState<ConversationMessage[]>([]);
+  const [session, setSession] = useState<ConversationSession | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchConversation() {
+      try {
+        const res = await fetch(`/api/admin/jake-analytics/conversation?sessionId=${sessionId}`);
+        if (!res.ok) throw new Error("Failed to fetch conversation");
+        const data = await res.json();
+        setMessages(data.messages);
+        setSession(data.session);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchConversation();
+  }, [sessionId]);
+
+  const outcomeStyles: Record<string, string> = {
+    checkout_started: "bg-green-100 text-green-700",
+    cart_created: "bg-blue-100 text-blue-700",
+    conversation: "bg-gray-100 text-gray-700",
+    abandoned: "bg-red-100 text-red-700",
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] flex flex-col shadow-2xl">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+          <div>
+            <h2 className="text-lg font-semibold text-gray-900">Conversation Replay</h2>
+            {session && (
+              <p className="text-xs text-gray-500 mt-1">
+                {session.startedAt && new Date(session.startedAt).toLocaleString()}
+                {session.source && ` • via ${session.source}`}
+              </p>
+            )}
+          </div>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 text-2xl leading-none"
+          >
+            ×
+          </button>
+        </div>
+
+        {/* Session Info */}
+        {session && (
+          <div className="px-6 py-3 bg-gray-50 border-b border-gray-200 flex flex-wrap gap-3 text-xs">
+            {session.vehicle && session.vehicle.make && (
+              <span className="px-2 py-1 bg-white rounded border border-gray-200">
+                🚗 {session.vehicle.year} {session.vehicle.make} {session.vehicle.model}
+                {session.vehicle.trim && ` ${session.vehicle.trim}`}
+              </span>
+            )}
+            <span className={`px-2 py-1 rounded ${outcomeStyles[session.outcome] || "bg-gray-100"}`}>
+              {session.outcome === "checkout_started" && "✅ Started Checkout"}
+              {session.outcome === "cart_created" && "🛒 Created Cart"}
+              {session.outcome === "conversation" && "💬 Conversation Only"}
+              {session.outcome === "abandoned" && "❌ Abandoned"}
+            </span>
+            {session.cartValue && (
+              <span className="px-2 py-1 bg-green-50 text-green-700 rounded">
+                💰 ${session.cartValue.toLocaleString()}
+              </span>
+            )}
+          </div>
+        )}
+
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto p-6 space-y-4">
+          {loading && (
+            <div className="flex items-center justify-center py-8">
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-red-600" />
+            </div>
+          )}
+          
+          {error && (
+            <div className="text-center py-8 text-red-600">{error}</div>
+          )}
+          
+          {!loading && messages.length === 0 && (
+            <div className="text-center py-8 text-gray-500">
+              <p>No messages recorded for this conversation.</p>
+              <p className="text-xs mt-2">
+                Message tracking starts from new conversations after this feature was deployed.
+              </p>
+            </div>
+          )}
+          
+          {messages.map((msg) => (
+            <div
+              key={msg.id}
+              className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+            >
+              <div
+                className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                  msg.role === "user"
+                    ? "bg-red-600 text-white"
+                    : "bg-gray-100 text-gray-800"
+                }`}
+              >
+                <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                <p className={`text-[10px] mt-1 ${
+                  msg.role === "user" ? "text-red-200" : "text-gray-400"
+                }`}>
+                  {new Date(msg.createdAt).toLocaleTimeString()}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Footer */}
+        {session?.cartUrl && (
+          <div className="px-6 py-3 border-t border-gray-200 bg-gray-50">
+            <a
+              href={session.cartUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-red-600 hover:text-red-700"
+            >
+              View Cart Link →
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // MAIN COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -418,6 +609,7 @@ export default function JakeAnalyticsPage() {
   const [error, setError] = useState<string | null>(null);
   const [range, setRange] = useState("7d");
   const [includeTest, setIncludeTest] = useState(false);
+  const [selectedSessionId, setSelectedSessionId] = useState<string | null>(null);
   
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -553,7 +745,10 @@ export default function JakeAnalyticsPage() {
           
           {/* Intents + Vehicles */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <IntentsTable intents={data.intents} />
+            <IntentsTable 
+              intents={data.intents} 
+              onSelectSession={setSelectedSessionId}
+            />
             <VehiclesTable vehicles={data.vehicles} />
           </div>
           
@@ -573,6 +768,14 @@ export default function JakeAnalyticsPage() {
             {data.meta.includeTest && " • Including test data"}
           </div>
         </div>
+      )}
+
+      {/* Conversation Replay Modal */}
+      {selectedSessionId && (
+        <ConversationModal
+          sessionId={selectedSessionId}
+          onClose={() => setSelectedSessionId(null)}
+        />
       )}
     </div>
   );

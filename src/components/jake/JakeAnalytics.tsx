@@ -9,6 +9,7 @@ export type JakeEventType =
   | "jake_closed"
   | "conversation_started"
   | "message_sent"
+  | "message_received"
   | "suggested_prompt_clicked"
   | "vehicle_identified"
   | "product_recommended"
@@ -21,6 +22,9 @@ interface JakeEventData {
   prompt?: string;
   sessionId?: string;
   requestId?: string;
+  // Message tracking for conversation replay
+  role?: "user" | "assistant";
+  content?: string;
   vehicle?: {
     year?: string;
     make?: string;
@@ -56,7 +60,7 @@ interface JakeEventData {
 
 // Generate a session ID for tracking conversations
 let jakeSessionId: string | null = null;
-function getJakeSessionId(): string {
+export function getJakeSessionId(): string {
   if (!jakeSessionId && typeof window !== "undefined") {
     jakeSessionId = sessionStorage.getItem("jake_session_id");
     if (!jakeSessionId) {
@@ -65,6 +69,11 @@ function getJakeSessionId(): string {
     }
   }
   return jakeSessionId || "unknown";
+}
+
+// Track a conversation message (for replay in admin)
+export function trackJakeMessage(role: "user" | "assistant", content: string) {
+  trackJakeEvent("message_sent", { role, content });
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════

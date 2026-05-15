@@ -123,6 +123,31 @@ export const jakeAnalyticsEvents = pgTable(
   })
 );
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// JAKE CONVERSATION MESSAGES (added 2026-05-15)
+// Full message history for conversation replay
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export const jakeConversationMessages = pgTable(
+  "jake_conversation_messages",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    sessionId: varchar("session_id", { length: 64 }).notNull(),
+    role: varchar("role", { length: 20 }).notNull(), // user, assistant
+    content: text("content").notNull(),
+    // Metadata
+    hostname: varchar("hostname", { length: 100 }),
+    isTest: boolean("is_test").notNull().default(false),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    sessionIdx: index("jake_messages_session_idx").on(table.sessionId),
+    createdAtIdx: index("jake_messages_created_at_idx").on(table.createdAt),
+    isTestIdx: index("jake_messages_is_test_idx").on(table.isTest),
+  })
+);
+
 export type AnalyticsSession = typeof analyticsSessions.$inferSelect;
 export type AnalyticsPageview = typeof analyticsPageviews.$inferSelect;
 export type JakeAnalyticsEvent = typeof jakeAnalyticsEvents.$inferSelect;
+export type JakeConversationMessage = typeof jakeConversationMessages.$inferSelect;

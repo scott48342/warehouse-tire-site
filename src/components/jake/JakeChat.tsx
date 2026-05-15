@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { JakeProductCard, JakePackageCard } from "./JakeProductCards";
 import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
-import { trackJakeEvent } from "./JakeAnalytics";
+import { trackJakeEvent, trackJakeMessage } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -221,6 +221,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       timestamp: new Date(),
     };
     setMessages(prev => [...prev, userMessage]);
+    trackJakeMessage("user", text); // Track for conversation replay
     setIsLoading(true);
 
     try {
@@ -348,16 +349,19 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         cartUrl,
       };
       setMessages(prev => [...prev, assistantMessage]);
+      trackJakeMessage("assistant", responseText); // Track for conversation replay
 
     } catch (error) {
       console.error("Jake error:", error);
+      const errorContent = "I'm having trouble connecting right now. Please try again in a moment.";
       const errorMessage: Message = {
         id: generateId(),
         role: "assistant",
-        content: "I'm having trouble connecting right now. Please try again in a moment.",
+        content: errorContent,
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, errorMessage]);
+      trackJakeMessage("assistant", errorContent); // Track error responses too
     } finally {
       setIsLoading(false);
     }

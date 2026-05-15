@@ -19,6 +19,9 @@ interface JakeAnalyticsEvent {
     requestId?: string;
     prompt?: string;
     intent?: string;
+    // Message tracking (for conversation replay)
+    role?: "user" | "assistant";
+    content?: string;
     vehicle?: {
       year?: string;
       make?: string;
@@ -126,9 +129,10 @@ function extractIntent(prompt: string): string | null {
   return null;
 }
 
-// Ensure table exists
-async function ensureJakeTable() {
+// Ensure tables exist
+async function ensureJakeTables() {
   try {
+    // Events table
     await analyticsDb.execute(sql`
       CREATE TABLE IF NOT EXISTS jake_analytics_events (
         id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -168,8 +172,25 @@ async function ensureJakeTable() {
       CREATE INDEX IF NOT EXISTS jake_events_is_test_idx ON jake_analytics_events(is_test);
       CREATE INDEX IF NOT EXISTS jake_events_hostname_idx ON jake_analytics_events(hostname);
     `);
+    
+    // Conversation messages table (for full conversation replay)
+    await analyticsDb.execute(sql`
+      CREATE TABLE IF NOT EXISTS jake_conversation_messages (
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        session_id VARCHAR(64) NOT NULL,
+        role VARCHAR(20) NOT NULL,
+        content TEXT NOT NULL,
+        hostname VARCHAR(100),
+        is_test BOOLEAN NOT NULL DEFAULT FALSE,
+        created_at TIMESTAMP NOT NULL DEFAULT NOW()
+      );
+      
+      CREATE INDEX IF NOT EXISTS jake_messages_session_idx ON jake_conversation_messages(session_id);
+      CREATE INDEX IF NOT EXISTS jake_messages_created_at_idx ON jake_conversation_messages(created_at);
+      CREATE INDEX IF NOT EXISTS jake_messages_is_test_idx ON jake_conversation_messages(is_test);
+    `);
   } catch (err) {
-    console.error("[Jake Analytics] Failed to ensure table:", err);
+    console.error("[Jake Analytics] Failed to ensure tables:", err);
   }
 }
 
@@ -190,9 +211,9 @@ export async function POST(request: NextRequest) {
       timestamp: event.timestamp,
     });
 
-    // Ensure table exists
+    // Ensure tables exist
     if (!tableEnsured) {
-      await ensureJakeTable();
+      await ensureJakeTables();
       tableEnsured = true;
     }
 
@@ -250,6 +271,22 @@ export async function POST(request: NextRequest) {
       url: event.url || null,
       isTest,
     });
+
+    // Store conversation messages for replay
+    if (event.event === "message_sent" && event.data?.role && event.data?.content && event.data?.sessionId) {
+      try {
+        await analyticsDb.insert(schema.jakeConversationMessages).values({
+          sessionId: event.data.sessionId,
+          role: event.data.role,
+          content: event.data.content,
+          hostname,
+          isTest,
+        });
+      } catch (msgErr) {
+        console.error("[Jake Analytics] Failed to store message:", msgErr);
+        // Don't fail the whole request
+      }
+    }
 
     // Track key conversion events specially
     if (event.event === "checkout_started") {
