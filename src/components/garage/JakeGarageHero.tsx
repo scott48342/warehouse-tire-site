@@ -415,7 +415,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
         {/* Main Hero Content */}
         <div className="relative z-10 flex-1 flex">
           
-          {/* Left Trust Column - EVEN LARGER TEXT */}
+          {/* Left Trust Column - Bebas Neue headings */}
           <div className="hidden xl:flex flex-col justify-center w-80 pl-8 pr-4 py-12">
             <div className="space-y-8">
               {LEFT_TRUST.map((item, idx) => (
@@ -425,10 +425,13 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                       {item.icon}
                     </div>
                     <div>
-                      <h4 className="text-white text-lg font-black tracking-wide leading-tight whitespace-pre-line uppercase">
+                      <h4 
+                        className="text-white text-xl tracking-[0.03em] leading-tight whitespace-pre-line uppercase"
+                        style={{ fontFamily: 'var(--font-bebas), Bebas Neue, sans-serif' }}
+                      >
                         {item.title}
                       </h4>
-                      <p className="text-white/70 text-base mt-2 leading-relaxed whitespace-pre-line">
+                      <p className="text-white/60 text-sm mt-2 leading-relaxed whitespace-pre-line font-light">
                         {item.desc}
                       </p>
                     </div>
@@ -517,17 +520,20 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             </div>
           </div>
 
-          {/* Right Trust Column - EVEN LARGER TEXT */}
+          {/* Right Trust Column - Bebas Neue headings */}
           <div className="hidden xl:flex flex-col justify-center w-80 pr-8 pl-4 py-12">
             <div className="space-y-8">
               {RIGHT_TRUST.map((item, idx) => (
                 <div key={idx} className="group text-right">
                   <div className="flex items-start gap-4 justify-end">
                     <div>
-                      <h4 className="text-white text-lg font-black tracking-wide leading-tight whitespace-pre-line uppercase">
+                      <h4 
+                        className="text-white text-xl tracking-[0.03em] leading-tight whitespace-pre-line uppercase"
+                        style={{ fontFamily: 'var(--font-bebas), Bebas Neue, sans-serif' }}
+                      >
                         {item.title}
                       </h4>
-                      <p className="text-white/70 text-base mt-2 leading-relaxed whitespace-pre-line">
+                      <p className="text-white/60 text-sm mt-2 leading-relaxed whitespace-pre-line font-light">
                         {item.desc}
                       </p>
                     </div>

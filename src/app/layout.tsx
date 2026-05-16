@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Inter, Oswald, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CompareProvider } from "@/context/CompareContext";
@@ -21,6 +21,12 @@ const inter = Inter({
 const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas",
 });
 
 export const metadata: Metadata = {
@@ -67,7 +73,7 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
       </head>
-      <body className={`${inter.variable} ${oswald.variable} antialiased flex min-h-screen flex-col`}>
+      <body className={`${inter.variable} ${oswald.variable} ${bebasNeue.variable} antialiased flex min-h-screen flex-col`}>
         <ShopContextProvider>
           <CartProvider>
             <DiscountProvider>
