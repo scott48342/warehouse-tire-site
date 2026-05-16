@@ -30,6 +30,30 @@ interface JakeGarageHeroProps {
 // DATA
 // ═══════════════════════════════════════════════════════════════════════════════
 
+// Navigation modes - these trigger contextual Jake experiences, NOT page navigation
+const NAV_MODES = [
+  {
+    id: "wheels",
+    label: "Wheels",
+    prompt: "I'm looking at wheels — are we going for aggressive street wheels, off-road, or something clean for daily driving?",
+  },
+  {
+    id: "tires",
+    label: "Tires",
+    prompt: "Let's talk tires — what matters most: quiet ride, winter grip, off-road traction, or performance?",
+  },
+  {
+    id: "packages",
+    label: "Packages",
+    prompt: "I want to build a complete wheel and tire package that's guaranteed to fit my vehicle.",
+  },
+  {
+    id: "lifted",
+    label: "Lifted",
+    prompt: "I'm interested in a lifted setup — are we building a leveled daily driver or a full aggressive lifted build?",
+  },
+];
+
 const BUILD_CATEGORIES = [
   {
     id: "aggressive",
@@ -305,6 +329,13 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
   const [isFocused, setIsFocused] = useState(false);
   const [finalInput, setFinalInput] = useState("");
   const [finalFocused, setFinalFocused] = useState(false);
+  const [activeMode, setActiveMode] = useState<string | null>(null);
+
+  // Handle nav mode clicks - triggers contextual Jake experience instead of navigation
+  const handleNavMode = (mode: typeof NAV_MODES[0]) => {
+    setActiveMode(mode.id);
+    onStart(mode.prompt);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -391,11 +422,23 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-12">
-            <Link href="/wheels" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Wheels</Link>
-            <Link href="/tires" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Tires</Link>
-            <Link href="/wheels?package=1" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Packages</Link>
-            <Link href="/lifted" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Lifted</Link>
+          <nav className="hidden lg:flex items-center gap-10">
+            {NAV_MODES.map((mode) => (
+              <button
+                key={mode.id}
+                onClick={() => handleNavMode(mode)}
+                className={`relative text-base font-semibold transition-all duration-300 ${
+                  activeMode === mode.id 
+                    ? "text-red-400" 
+                    : "text-white hover:text-red-400"
+                }`}
+              >
+                {mode.label}
+                {activeMode === mode.id && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-red-500 rounded-full" />
+                )}
+              </button>
+            ))}
           </nav>
 
           <div className="flex items-center gap-3 bg-black/60 backdrop-blur-md rounded-full px-6 py-3 border border-white/10">
