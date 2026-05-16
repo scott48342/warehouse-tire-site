@@ -426,8 +426,8 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                     </div>
                     <div>
                       <h4 
-                        className="text-white text-xl tracking-[0.03em] leading-tight whitespace-pre-line uppercase"
-                        style={{ fontFamily: 'var(--font-bebas), Bebas Neue, sans-serif' }}
+                        className="text-white text-3xl tracking-[0.03em] leading-tight whitespace-pre-line uppercase"
+                        style={{ fontFamily: 'var(--font-bebas), Bebas Neue, sans-serif', fontWeight: 400 }}
                       >
                         {item.title}
                       </h4>
@@ -528,8 +528,8 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                   <div className="flex items-start gap-4 justify-end">
                     <div>
                       <h4 
-                        className="text-white text-xl tracking-[0.03em] leading-tight whitespace-pre-line uppercase"
-                        style={{ fontFamily: 'var(--font-bebas), Bebas Neue, sans-serif' }}
+                        className="text-white text-3xl tracking-[0.03em] leading-tight whitespace-pre-line uppercase"
+                        style={{ fontFamily: 'var(--font-bebas), Bebas Neue, sans-serif', fontWeight: 400 }}
                       >
                         {item.title}
                       </h4>
