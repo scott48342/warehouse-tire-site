@@ -486,8 +486,8 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
           </div>
 
           {/* Center Command Zone */}
-          <div className="flex-1 flex flex-col items-center justify-center px-6 lg:px-8 py-8">
-            <div className="relative max-w-3xl w-full text-center">
+          <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-8">
+            <div className="relative w-full max-w-[calc(100vw-2rem)] sm:max-w-xl lg:max-w-3xl text-center mx-auto">
               
               <div className="inline-block mb-4">
                 <div className="relative px-6 py-2 rounded border-2 border-red-500/80 bg-red-500/15">
@@ -511,7 +511,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                 He'll handle the rest.
               </p>
               
-              <form onSubmit={handleSubmit} className="relative mb-6">
+              <form onSubmit={handleSubmit} className="relative mb-6 max-w-full mx-auto">
                 <div className={`absolute -inset-3 rounded-3xl transition-all duration-500 ${
                   isFocused ? "bg-red-500/40 blur-2xl" : "bg-red-500/20 blur-xl"
                 }`} />
@@ -538,7 +538,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                     onChange={(e) => setInput(e.target.value)}
                     onFocus={() => setIsFocused(true)}
                     onBlur={() => setIsFocused(false)}
-                    placeholder="Tell Jake what you drive or what look you want..."
+                    placeholder="What are you building?"
                     className="flex-1 bg-transparent px-4 py-6 lg:py-7 text-lg lg:text-xl text-white placeholder-white/35 focus:outline-none"
                   />
                   
