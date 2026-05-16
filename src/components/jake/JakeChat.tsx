@@ -572,13 +572,13 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         setRailWheels(railWheelData);
       }
       
-      // Set Jake's message about the rails
+      // Set Jake's message about the rails - commerce-focused
       if (hasTireData && hasWheelData) {
-        setRailsMessage("I've got some options for you! If anything catches your eye, just click it and I'll tell you more.");
+        setRailsMessage("I've got some options for you! Click any product to learn more — I can add anything you like to your build.");
       } else if (hasTireData) {
-        setRailsMessage("Here are some tire options that might work. Click any one to learn more about it!");
+        setRailsMessage("Here are some tire options. Click any to get details — I can put together your checkout when you're ready.");
       } else if (hasWheelData) {
-        setRailsMessage("Check out these wheels! Click any one that catches your eye and I'll give you the details.");
+        setRailsMessage("Check out these wheels! Click any you like and I'll give you the details. Ready to build your setup.");
       }
 
       const assistantMessage: Message = {
@@ -661,9 +661,12 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         <div className="flex-1 min-h-0 overflow-y-auto flex flex-col items-center justify-center px-6 py-12">
           <JakeAvatar size="xl" showGlow className="mb-6 shadow-lg shadow-red-500/20" />
           <h2 className="text-white font-bold text-2xl mb-2">Hey, I'm Jake</h2>
-          <p className="text-white/60 text-center max-w-md mb-8">
+          <p className="text-white/60 text-center max-w-md mb-4">
             Your wheel and tire expert. Tell me about your vehicle and what you're looking for — 
-            I'll help you find the perfect setup.
+            I'll help you build the perfect setup.
+          </p>
+          <p className="text-white/40 text-center text-sm max-w-sm mb-8">
+            💡 I can recommend products, build packages, and create your checkout when you're ready.
           </p>
 
           {/* Suggested Prompts */}
@@ -963,19 +966,22 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                   </div>
                 )}
 
-                {/* Cart CTA */}
+                {/* Cart CTA - Premium Checkout Link */}
                 {message.cartUrl && (
-                  <div className="mt-4">
+                  <div className="mt-4 space-y-2">
                     <a
                       href={message.cartUrl}
                       onClick={() => trackJakeEvent("checkout_started")}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-500/20"
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
-                      Proceed to Checkout
+                      Your Cart is Ready →
                     </a>
+                    <p className="text-white/40 text-xs">
+                      ✓ Built by Jake • Click to complete your order
+                    </p>
                   </div>
                 )}
               </div>

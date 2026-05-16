@@ -278,12 +278,13 @@ function ProductCard({
         )}
       </div>
 
-      {/* Click hint */}
+      {/* Click hint - Add to Build */}
       <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-        <div className="p-1.5 bg-red-600 rounded-full">
+        <div className="flex items-center gap-1 px-2 py-1 bg-red-600 rounded-full">
           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
+          <span className="text-white text-[9px] font-bold uppercase tracking-wide">Add</span>
         </div>
       </div>
     </button>
@@ -384,6 +385,13 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
             <rect x="14" y="4" width="4" height="16" />
           </svg>
           <span>Paused</span>
+        </div>
+      )}
+      
+      {/* Build Hint - shown when hovering */}
+      {isHovered && (
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 px-3 py-1.5 bg-red-600/90 backdrop-blur-sm rounded-lg text-white text-[10px] font-medium whitespace-nowrap shadow-lg animate-pulse">
+          👆 Click to add to your build
         </div>
       )}
     </div>
