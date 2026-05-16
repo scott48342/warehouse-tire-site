@@ -544,68 +544,44 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 2: BUILD CATEGORY ROW - Large Cinematic Build Portals
+          SECTION 2: BUILD CATEGORY ROW - 6 cards in ONE row
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#050505] pb-16 -mt-8 pt-8">
-        {/* Section background glow */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[1400px] h-[400px] bg-red-600/5 rounded-full blur-[150px]" />
-        </div>
-        
-        <div className="relative max-w-[1600px] mx-auto px-4 lg:px-8">
-          {/* 3 columns on large screens, 2 on medium, 1 on small */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+      <section className="relative bg-[#050505] pb-8 -mt-4 pt-4">
+        <div className="relative max-w-[1600px] mx-auto px-4 lg:px-6">
+          {/* 6 columns on XL, 3 on lg, 2 on md */}
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
             {BUILD_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 type="button"
                 onClick={() => onStart(cat.prompt)}
-                className="group relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 hover:border-red-500/50 transition-all duration-500 shadow-2xl shadow-black/50 hover:shadow-red-500/10"
+                className="group relative rounded-xl overflow-hidden bg-neutral-900 border border-white/10 hover:border-red-500/40 transition-all duration-300"
               >
-                {/* Image - BRIGHTER, more dominant */}
-                <Image
-                  src={cat.image}
-                  alt={cat.title}
-                  fill
-                  className="object-cover opacity-70 group-hover:opacity-90 transition-all duration-700 group-hover:scale-110 brightness-110"
-                  style={{ objectPosition: "center 40%" }}
-                />
-                
-                {/* Gradient overlay - lighter to show more vehicle */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
-                
-                {/* Red accent glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-red-600/20 via-transparent to-transparent" />
-                
-                {/* Top accent line */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-red-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                
-                {/* Icon badge - larger */}
-                <div className={`absolute top-5 left-5 w-14 h-14 rounded-2xl bg-black/60 backdrop-blur-md flex items-center justify-center text-2xl border border-white/20 shadow-xl ${cat.iconColor} group-hover:scale-110 group-hover:border-red-500/50 transition-all duration-300`}>
-                  {cat.icon}
-                </div>
-                
-                {/* Content - LARGER typography */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h4 className="text-xl lg:text-2xl font-black text-white mb-2 group-hover:text-red-400 transition-colors leading-tight tracking-wide drop-shadow-lg">
-                    {cat.title}
-                  </h4>
-                  <p className="text-white/70 text-sm lg:text-base whitespace-pre-line leading-relaxed drop-shadow-md">
-                    {cat.desc.replace('\n', ' ')}
-                  </p>
+                {/* Image area - portrait aspect */}
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src={cat.image}
+                    alt={cat.title}
+                    fill
+                    className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
-                  {/* CTA hint on hover */}
-                  <div className="mt-4 flex items-center gap-2 text-red-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                    <span>Start This Build</span>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                  {/* Centered icon */}
+                  <div className={`absolute bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl bg-black/70 backdrop-blur-sm flex items-center justify-center text-xl border border-white/20 ${cat.iconColor} group-hover:scale-110 group-hover:border-red-500/50 transition-all duration-300`}>
+                    {cat.icon}
                   </div>
                 </div>
                 
-                {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Text below image */}
+                <div className="p-4 text-center bg-gradient-to-b from-neutral-900 to-black">
+                  <h4 className="text-sm lg:text-base font-black text-white mb-1 group-hover:text-red-400 transition-colors leading-tight tracking-wide">
+                    {cat.title}
+                  </h4>
+                  <p className="text-white/50 text-xs lg:text-sm leading-snug">
+                    {cat.desc.split('.').slice(0, 2).join('.')}
+                  </p>
+                </div>
               </button>
             ))}
           </div>
@@ -639,388 +615,15 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 4: FEATURED BUILD SHOWCASE
+          SECTION 4: TAGLINE
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#050505] py-20 overflow-hidden">
-        {/* Background glow */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[1200px] h-[400px] bg-red-600/5 rounded-full blur-[150px]" />
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl lg:text-4xl font-black text-white mb-3">
-              REAL <span className="text-red-500">BUILDS</span>
-            </h3>
-            <p className="text-white/50 text-lg">Inspiration for your next setup</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {FEATURED_BUILDS.map((build) => (
-              <button
-                key={build.id}
-                onClick={() => onStart(build.prompt)}
-                className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 hover:border-red-500/30 transition-all text-left"
-              >
-                <Image
-                  src={build.image}
-                  alt={build.title}
-                  fill
-                  className="object-cover opacity-50 group-hover:opacity-70 transition-all duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                
-                {/* Style badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-red-500/20 backdrop-blur-sm border border-red-500/30 rounded-full text-red-400 text-[10px] font-bold uppercase tracking-wide">
-                    {build.style}
-                  </span>
-                </div>
-                
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <h4 className="text-lg font-black text-white mb-1 group-hover:text-red-400 transition-colors">
-                    {build.title}
-                  </h4>
-                  <p className="text-white/50 text-xs mb-3">{build.vehicle}</p>
-                  
-                  <div className="space-y-1 text-[10px]">
-                    <p className="text-white/40"><span className="text-white/60">Wheels:</span> {build.wheels}</p>
-                    <p className="text-white/40"><span className="text-white/60">Tires:</span> {build.tires}</p>
-                  </div>
-                  
-                  <div className="mt-4 flex items-center gap-2 text-red-400 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span>Build Something Similar</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
-                </div>
-                
-                {/* Built by badge */}
-                <div className="absolute top-4 right-4 opacity-60">
-                  <span className="text-[8px] text-white/50 uppercase tracking-wider">Built by Jake Garage</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 5: SHOP BY CATEGORY
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#030303] py-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl lg:text-4xl font-black text-white mb-3">
-              SHOP BY <span className="text-red-500">CATEGORY</span>
-            </h3>
-            <p className="text-white/50 text-lg">Find exactly what you need</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {SHOP_CATEGORIES.map((cat) => (
-              <Link
-                key={cat.id}
-                href={cat.href}
-                className="group relative p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-red-500/30 hover:bg-white/[0.04] transition-all"
-              >
-                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-red-500/5 to-transparent" />
-                
-                <div className="relative">
-                  <span className="text-3xl mb-3 block">{cat.icon}</span>
-                  <h4 className="text-white font-black text-sm tracking-wide mb-1 group-hover:text-red-400 transition-colors">
-                    {cat.title}
-                  </h4>
-                  <p className="text-white/40 text-xs">{cat.desc}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 6: REAL BUILD PHILOSOPHY
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#050505] py-24 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-[0.03]"
-            style={{ backgroundImage: "url('/images/homepage/store-interior.jpg')" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505]" />
-        </div>
-        
-        {/* Red accent glow */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-red-600/10 rounded-full blur-[150px]" />
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-red-600/10 rounded-full blur-[150px]" />
-        
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <h3 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-8">
-            <span className="text-red-500">REAL</span> <span className="text-white">PEOPLE.</span><br />
-            <span className="text-red-500">REAL</span> <span className="text-white">EXPERTS.</span><br />
+      <section className="bg-[#050505] py-10 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h3 className="text-2xl lg:text-3xl font-black tracking-wide">
+            <span className="text-red-500">REAL</span> <span className="text-white">PEOPLE.</span>{" "}
+            <span className="text-red-500">REAL</span> <span className="text-white">EXPERTS.</span>{" "}
             <span className="text-red-500">REAL</span> <span className="text-white">RESULTS.</span>
           </h3>
-          
-          <p className="text-white/60 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
-            No pressure. No guesswork. Just honest guidance from people who actually build what they recommend. 
-            40+ years of real-world fitment experience, now available to you.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <div className="flex items-center gap-2 text-white/50">
-              <span className="text-red-500">✓</span> Fitment First
-            </div>
-            <div className="flex items-center gap-2 text-white/50">
-              <span className="text-red-500">✓</span> No Pushy Sales
-            </div>
-            <div className="flex items-center gap-2 text-white/50">
-              <span className="text-red-500">✓</span> Real-World Setups
-            </div>
-            <div className="flex items-center gap-2 text-white/50">
-              <span className="text-red-500">✓</span> Enthusiast Guidance
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 7: JAKE GUIDANCE SECTION
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#030303] py-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Jake Image */}
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[400px] h-[400px] bg-red-600/10 rounded-full blur-[100px]" />
-              </div>
-              <div className="relative w-full max-w-md mx-auto aspect-square">
-                <Image
-                  src="/jake/jake-explaining.png"
-                  alt="Jake - Your Build Guide"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            
-            {/* Content */}
-            <div>
-              <div className="inline-block mb-4">
-                <span className="px-4 py-1.5 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-xs font-bold uppercase tracking-wide">
-                  Guided Experience
-                </span>
-              </div>
-              
-              <h3 className="text-3xl lg:text-4xl font-black text-white mb-6">
-                YOUR BUILD.<br />
-                <span className="text-red-500">YOUR WAY.</span>
-              </h3>
-              
-              <p className="text-white/60 text-lg mb-8 leading-relaxed">
-                Jake helps you build the perfect wheel and tire setup. Tell him what you drive, 
-                what look you want, or what you need — and he'll guide you through every step.
-              </p>
-              
-              <div className="space-y-4">
-                {[
-                  "Get personalized recommendations for your exact vehicle",
-                  "Compare options and understand the tradeoffs",
-                  "Build complete packages with verified fitment",
-                  "Save your build and come back anytime",
-                  "Generate ready-to-checkout carts instantly",
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <p className="text-white/70 text-sm">{item}</p>
-                  </div>
-                ))}
-              </div>
-              
-              <button
-                onClick={() => onStart("Help me build my setup")}
-                className="mt-8 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-600/30 flex items-center gap-3"
-              >
-                <span>Start Building</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 8: FEATURED PACKAGES
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#050505] py-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl lg:text-4xl font-black text-white mb-3">
-              POPULAR <span className="text-red-500">PACKAGES</span>
-            </h3>
-            <p className="text-white/50 text-lg">Pre-built setups with verified fitment</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {FEATURED_PACKAGES.map((pkg) => (
-              <button
-                key={pkg.id}
-                onClick={() => onStart(pkg.prompt)}
-                className="group relative rounded-2xl overflow-hidden bg-neutral-900/50 border border-white/5 hover:border-red-500/30 transition-all text-left"
-              >
-                {/* Image */}
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={pkg.image}
-                    alt={pkg.title}
-                    fill
-                    className="object-cover opacity-40 group-hover:opacity-60 transition-all duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent" />
-                  
-                  {/* Fitment badge */}
-                  <div className="absolute top-3 right-3">
-                    <span className="px-2 py-1 bg-green-500/20 backdrop-blur-sm border border-green-500/30 rounded text-green-400 text-[9px] font-bold uppercase">
-                      ✓ Fitment Verified
-                    </span>
-                  </div>
-                </div>
-                
-                {/* Content */}
-                <div className="p-5">
-                  <h4 className="text-white font-bold mb-1 group-hover:text-red-400 transition-colors">
-                    {pkg.title}
-                  </h4>
-                  <p className="text-white/40 text-xs mb-4">{pkg.desc}</p>
-                  
-                  <div className="space-y-1.5 text-[10px] mb-4">
-                    <p className="text-white/50">
-                      <span className="text-white/30">Wheels:</span> {pkg.wheelBrand}
-                    </p>
-                    <p className="text-white/50">
-                      <span className="text-white/30">Tires:</span> {pkg.tireBrand}
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-red-400 font-bold text-sm">{pkg.priceRange}</span>
-                    <span className="text-white/40 text-xs group-hover:text-red-400 transition-colors">
-                      Start Build →
-                    </span>
-                  </div>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 9: WHY JAKE GARAGE WORKS
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#030303] py-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl lg:text-4xl font-black text-white mb-3">
-              WHY <span className="text-red-500">JAKE GARAGE</span>
-            </h3>
-            <p className="text-white/50 text-lg">The smarter way to build your setup</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {WHY_JAKE_WORKS.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all"
-              >
-                <span className="text-3xl mb-4 block">{item.icon}</span>
-                <h4 className="text-white font-bold mb-2">{item.title}</h4>
-                <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 10: FINAL CTA
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#050505] py-24 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
-            style={{ backgroundImage: "url('/images/homepage/misc-wheel-wall.jpg')" }}
-          />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#050505_70%)]" />
-        </div>
-        
-        {/* Red glows */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-600/10 rounded-full blur-[150px]" />
-        
-        <div className="relative max-w-3xl mx-auto px-6 text-center">
-          <h3 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-6">
-            READY TO BUILD<br />
-            <span className="text-red-500 drop-shadow-[0_0_40px_rgba(239,68,68,0.4)]">YOUR SETUP?</span>
-          </h3>
-          
-          <p className="text-white/50 text-lg mb-10 max-w-lg mx-auto">
-            Tell Jake what you drive and what you're looking for. 
-            He'll guide you to the perfect wheels and tires.
-          </p>
-          
-          {/* Final Input */}
-          <form onSubmit={handleFinalSubmit} className="relative mb-8 max-w-2xl mx-auto">
-            <div className={`absolute -inset-2 rounded-2xl transition-all duration-500 ${
-              finalFocused ? "bg-red-500/30 blur-xl" : "bg-red-500/15 blur-lg"
-            }`} />
-            
-            <div className={`relative flex items-center bg-black/80 backdrop-blur-xl border-2 rounded-2xl overflow-hidden transition-all duration-300 ${
-              finalFocused 
-                ? "border-red-500 shadow-[0_0_60px_rgba(239,68,68,0.4)]" 
-                : "border-red-500/40 hover:border-red-500/60"
-            }`}>
-              <input
-                type="text"
-                value={finalInput}
-                onChange={(e) => setFinalInput(e.target.value)}
-                onFocus={() => setFinalFocused(true)}
-                onBlur={() => setFinalFocused(false)}
-                placeholder="What are you building?"
-                className="flex-1 bg-transparent px-6 py-5 text-lg text-white placeholder-white/40 focus:outline-none"
-              />
-              
-              <button 
-                type="submit" 
-                disabled={!finalInput.trim()} 
-                className="m-2 px-8 py-3.5 bg-red-600 hover:bg-red-500 disabled:bg-white/10 disabled:text-white/30 text-white font-bold rounded-xl transition-all flex items-center gap-2"
-              >
-                <span>Start Building</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
-            </div>
-          </form>
-          
-          {/* Jake presence */}
-          <div className="flex items-center justify-center gap-3 text-white/50 text-sm">
-            <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-red-500/30">
-              <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
-            </div>
-            <span>Jake is ready to help</span>
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          </div>
         </div>
       </section>
 
