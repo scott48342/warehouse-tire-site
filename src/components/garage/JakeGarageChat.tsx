@@ -44,7 +44,7 @@ interface ParsedWheel {
 // Selected product for build tracking
 interface SelectedProduct {
   id: string;
-  type: "tire" | "wheel";
+  type: "tire" | "wheel" | "package";
   brand: string;
   model: string;
   size: string;
