@@ -282,17 +282,15 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
   const hasCheckedSavedBuild = useRef(false);
 
   // Check for saved build on mount
-  // TODO: Re-enable after QA testing
   useEffect(() => {
     if (hasCheckedSavedBuild.current) return;
     hasCheckedSavedBuild.current = true;
     
-    // DISABLED FOR QA - uncomment to restore resume prompt
-    // const saved = loadBuild();
-    // if (saved && saved.messages.length > 0) {
-    //   setSavedBuildData(saved);
-    //   setShowResumePrompt(true);
-    // }
+    const saved = loadBuild();
+    if (saved && saved.messages.length > 0) {
+      setSavedBuildData(saved);
+      setShowResumePrompt(true);
+    }
   }, []);
 
   // Rotate loading messages
