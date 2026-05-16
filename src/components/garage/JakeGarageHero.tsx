@@ -34,7 +34,7 @@ const BUILD_CATEGORIES = [
   {
     id: "aggressive",
     title: "AGGRESSIVE STREET",
-    desc: "Bold stance.\nHead turning style.",
+    desc: "Bold stance. Head-turning presence. Make a statement.",
     image: "/images/homepage/vehicle-ram-aggressive.jpg",
     icon: "🔥",
     iconColor: "text-red-500",
@@ -43,34 +43,34 @@ const BUILD_CATEGORIES = [
   {
     id: "quiet",
     title: "QUIET & COMFORT",
-    desc: "Smooth ride.\nLow road noise.",
+    desc: "Smooth ride. Low road noise. Premium daily driving.",
     image: "/images/homepage/vehicle-tahoe-blackout.jpg",
     icon: "🔇",
-    iconColor: "text-gray-400",
+    iconColor: "text-blue-400",
     prompt: "Build me a quiet comfortable setup",
   },
   {
     id: "blackout",
     title: "BLACKOUT BUILDS",
-    desc: "Sleek, clean,\nand mean.",
+    desc: "Sleek, clean, and mean. Murdered-out perfection.",
     image: "/images/homepage/vehicle-camaro-street.jpg",
     icon: "⚫",
-    iconColor: "text-gray-300",
+    iconColor: "text-white",
     prompt: "Build me a blackout package",
   },
   {
     id: "towing",
     title: "TOWING & HAULING",
-    desc: "Built strong.\nTow with confidence.",
+    desc: "Built strong. Tow with confidence. Heavy duty ready.",
     image: "/images/homepage/vehicle-silverado-lifted.jpg",
-    icon: "📦",
-    iconColor: "text-red-400",
+    icon: "🚛",
+    iconColor: "text-amber-500",
     prompt: "Build me a towing setup",
   },
   {
     id: "offroad",
     title: "OFF-ROAD & OVERLAND",
-    desc: "Go farther.\nExplore more.",
+    desc: "Go farther. Explore more. Adventure awaits.",
     image: "/images/homepage/vehicle-tacoma-overland.jpg",
     icon: "🏔️",
     iconColor: "text-green-500",
@@ -79,10 +79,10 @@ const BUILD_CATEGORIES = [
   {
     id: "show",
     title: "SHOW & STANCE",
-    desc: "For the weekend\nwarriors.",
+    desc: "Weekend warriors. Car meets. All eyes on you.",
     image: "/images/homepage/vehicle-corvette-track.jpg",
     icon: "⭐",
-    iconColor: "text-purple-500",
+    iconColor: "text-purple-400",
     prompt: "Build me a show truck setup",
   },
 ];
@@ -544,36 +544,68 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 2: BUILD CATEGORY ROW
+          SECTION 2: BUILD CATEGORY ROW - Large Cinematic Build Portals
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#050505] pb-12 -mt-12 pt-4">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
+      <section className="relative bg-[#050505] pb-16 -mt-8 pt-8">
+        {/* Section background glow */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-[1400px] h-[400px] bg-red-600/5 rounded-full blur-[150px]" />
+        </div>
+        
+        <div className="relative max-w-[1600px] mx-auto px-4 lg:px-8">
+          {/* 3 columns on large screens, 2 on medium, 1 on small */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {BUILD_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 type="button"
                 onClick={() => onStart(cat.prompt)}
-                className="group relative aspect-[4/5] rounded-xl overflow-hidden bg-neutral-900 border border-white/5 hover:border-red-500/30 transition-all"
+                className="group relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 hover:border-red-500/50 transition-all duration-500 shadow-2xl shadow-black/50 hover:shadow-red-500/10"
               >
+                {/* Image - BRIGHTER, more dominant */}
                 <Image
                   src={cat.image}
                   alt={cat.title}
                   fill
-                  className="object-cover opacity-40 group-hover:opacity-60 transition-all duration-500 group-hover:scale-105"
+                  className="object-cover opacity-70 group-hover:opacity-90 transition-all duration-700 group-hover:scale-110 brightness-110"
+                  style={{ objectPosition: "center 40%" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
                 
-                <div className={`absolute bottom-14 left-1/2 -translate-x-1/2 w-10 h-10 rounded-xl bg-black/80 backdrop-blur-sm flex items-center justify-center text-lg border border-white/10 ${cat.iconColor}`}>
+                {/* Gradient overlay - lighter to show more vehicle */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+                
+                {/* Red accent glow on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-red-600/20 via-transparent to-transparent" />
+                
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-red-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                {/* Icon badge - larger */}
+                <div className={`absolute top-5 left-5 w-14 h-14 rounded-2xl bg-black/60 backdrop-blur-md flex items-center justify-center text-2xl border border-white/20 shadow-xl ${cat.iconColor} group-hover:scale-110 group-hover:border-red-500/50 transition-all duration-300`}>
                   {cat.icon}
                 </div>
                 
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-center">
-                  <h4 className="text-[11px] lg:text-xs font-black text-white mb-0.5 group-hover:text-red-400 transition-colors leading-tight tracking-wide">
+                {/* Content - LARGER typography */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h4 className="text-xl lg:text-2xl font-black text-white mb-2 group-hover:text-red-400 transition-colors leading-tight tracking-wide drop-shadow-lg">
                     {cat.title}
                   </h4>
-                  <p className="text-white/40 text-[9px] lg:text-[10px] whitespace-pre-line leading-snug">{cat.desc}</p>
+                  <p className="text-white/70 text-sm lg:text-base whitespace-pre-line leading-relaxed drop-shadow-md">
+                    {cat.desc.replace('\n', ' ')}
+                  </p>
+                  
+                  {/* CTA hint on hover */}
+                  <div className="mt-4 flex items-center gap-2 text-red-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <span>Start This Build</span>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
+                
+                {/* Corner accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             ))}
           </div>
