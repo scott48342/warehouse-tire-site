@@ -283,7 +283,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                 <span className="text-green-500">✓</span> Fitment Guaranteed
               </div>
               <div className="flex items-center gap-2 text-white/50">
-                <span className="text-green-500">✓</span> Free Shipping $199+
+                <span className="text-green-500">✓</span> Free Shipping $1500+
               </div>
               <div className="flex items-center gap-2 text-white/50">
                 <span className="text-green-500">✓</span> Expert Support
