@@ -8,6 +8,7 @@
 type GarageEvent =
   | "jake_garage_opened"
   | "conversation_started"
+  | "profile_detected"
   | "vehicle_identified"
   | "recommendation_shown"
   | "product_injected"
