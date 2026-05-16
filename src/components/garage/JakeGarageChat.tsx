@@ -467,8 +467,8 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
       priceNum: product.price ? parseFloat(product.price.replace(/[$,]/g, "")) || undefined : undefined,
       imageUrl: product.imageUrl,
       productUrl: product.productUrl,
-      finish: product.badge,
-      category: product.fitmentBadge,
+      finish: product.finish || product.badge,
+      category: product.terrain,
     };
     
     // Update build context - track what they're considering
