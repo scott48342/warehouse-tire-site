@@ -5,14 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// JAKE GARAGE HERO - Build-First Cinematic Experience
+// JAKE GARAGE HERO - Cinematic AI Build Command Center
 // 
 // Philosophy:
-// - BUILD-FIRST with AI guidance (not AI-first)
-// - Vehicle spectacle is the centerpiece
-// - Wheels/tires MUST be highly visible
-// - Jake guides, doesn't dominate
-// - "I want MY vehicle to look like THAT" reaction
+// - Jake interaction is THE CENTERPIECE
+// - Large, immersive command-center feel
+// - Cinematic depth with glows and layering
+// - Vehicle imagery flanks the center
+// - "Walk into Jake's garage" experience
 // ═══════════════════════════════════════════════════════════════════════════════
 
 interface JakeGarageHeroProps {
@@ -20,127 +20,122 @@ interface JakeGarageHeroProps {
   onStart: (prompt: string) => void;
 }
 
-// Featured builds - rotating showcase
-const FEATURED_BUILDS = [
+// Build categories for quick-start grid
+const BUILD_CATEGORIES = [
   {
-    id: "ram-aggressive",
+    id: "aggressive",
+    title: "AGGRESSIVE STREET",
+    desc: "Bold stance. Head turning.",
     image: "/images/homepage/vehicle-ram-aggressive.jpg",
-    title: "AGGRESSIVE RAM",
-    subtitle: "35\" Nitto Ridge Grapplers • 20\" Fuel Rebels • 3\" Lift",
-    category: "lifted",
-    prompt: "Build me an aggressive RAM setup like this",
+    icon: "🔥",
+    prompt: "Build me an aggressive street setup",
   },
   {
-    id: "silverado-lifted",
-    image: "/images/homepage/vehicle-silverado-lifted.jpg",
-    title: "LIFTED SILVERADO",
-    subtitle: "37\" BFG KO2s • 22\" American Force • 6\" Suspension",
-    category: "lifted",
-    prompt: "Build me a lifted Silverado package",
+    id: "quiet",
+    title: "QUIET & COMFORT",
+    desc: "Smooth ride. Low road noise.",
+    image: "/images/homepage/vehicle-tahoe-blackout.jpg",
+    icon: "🔇",
+    prompt: "Build me a quiet comfortable setup",
   },
   {
-    id: "camaro-street",
+    id: "blackout",
+    title: "BLACKOUT BUILDS",
+    desc: "Sleek, clean, and mean.",
     image: "/images/homepage/vehicle-camaro-street.jpg",
-    title: "STREET CAMARO",
-    subtitle: "Staggered 20/21\" • Michelin PS4S • Lowered Stance",
-    category: "street",
-    prompt: "Build me a staggered Camaro setup",
+    icon: "⚫",
+    prompt: "Build me a blackout package",
   },
   {
-    id: "tacoma-overland",
-    image: "/images/homepage/vehicle-tacoma-overland.jpg",
-    title: "OVERLAND TACOMA",
-    subtitle: "33\" Falken Wildpeak • 17\" Method 703 • 2.5\" Lift",
-    category: "offroad",
-    prompt: "Build me an overland Tacoma setup",
+    id: "towing",
+    title: "TOWING & HAULING",
+    desc: "Built strong. Tow with confidence.",
+    image: "/images/homepage/vehicle-silverado-lifted.jpg",
+    icon: "🚛",
+    prompt: "Build me a towing setup",
   },
-];
-
-// Build style categories for interactive showcase
-const BUILD_STYLES = [
-  { id: "lifted", label: "Lifted", icon: "🔺", color: "red" },
-  { id: "street", label: "Street", icon: "🏎️", color: "blue" },
-  { id: "offroad", label: "Off-Road", icon: "🏔️", color: "amber" },
-  { id: "blackout", label: "Blackout", icon: "⚫", color: "neutral" },
-];
-
-// Transformation showcase data
-const TRANSFORMATIONS = [
-  { 
-    before: "/images/homepage/truck-stock.png",
-    after: "/images/homepage/truck-lifted.png",
-    label: "Stock → Lifted",
-    desc: "+6\" lift • 35\" tires • 20\" wheels",
+  {
+    id: "offroad",
+    title: "OFF-ROAD & OVERLAND",
+    desc: "Go farther. Explore more.",
+    image: "/images/homepage/vehicle-tacoma-overland.jpg",
+    icon: "🏔️",
+    prompt: "Build me an off-road overland setup",
+  },
+  {
+    id: "show",
+    title: "SHOW & STANCE",
+    desc: "For the weekend warriors.",
+    image: "/images/homepage/vehicle-camaro-street.jpg",
+    icon: "⭐",
+    prompt: "Build me a show truck setup",
   },
 ];
 
 export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
   const [input, setInput] = useState("");
   const [isFocused, setIsFocused] = useState(false);
-  const [currentBuild, setCurrentBuild] = useState(0);
-  const [showTransform, setShowTransform] = useState(false);
-  const [transformProgress, setTransformProgress] = useState(0);
-
-  // Rotate featured builds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBuild((prev) => (prev + 1) % FEATURED_BUILDS.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim()) onStart(input.trim());
   };
 
-  const featured = FEATURED_BUILDS[currentBuild];
-
   return (
     <div className="min-h-screen flex flex-col bg-[#030303]">
       
       {/* ═══════════════════════════════════════════════════════════════════════
-          HERO - Vehicle Spectacle as Centerpiece
+          HERO - Cinematic Command Center
       ═══════════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex flex-col overflow-hidden">
         
-        {/* Featured Build - MASSIVE, Dominant */}
+        {/* Background - Dark garage atmosphere */}
         <div className="absolute inset-0">
-          {FEATURED_BUILDS.map((build, idx) => (
-            <div
-              key={build.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                idx === currentBuild ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <Image
-                src={build.image}
-                alt={build.title}
-                fill
-                className="object-cover object-center"
-                priority={idx === 0}
-                sizes="100vw"
-              />
+          {/* Base garage image */}
+          <div className="absolute inset-0 bg-[url('/images/homepage/garage-dark-bg.jpg')] bg-cover bg-center opacity-40" />
+          
+          {/* Vehicle on left */}
+          <div className="absolute left-0 top-0 bottom-0 w-1/3 lg:w-2/5">
+            <Image
+              src="/images/homepage/vehicle-ram-aggressive.jpg"
+              alt="Featured Vehicle"
+              fill
+              className="object-cover object-right opacity-60"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#030303]/80 to-[#030303]" />
+          </div>
+          
+          {/* Jake on right */}
+          <div className="absolute right-0 top-0 bottom-0 w-1/4 lg:w-1/3 hidden lg:block">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative w-[400px] h-[500px]">
+                <Image
+                  src="/jake/jake-explaining.png"
+                  alt="Jake"
+                  fill
+                  className="object-contain object-bottom"
+                  priority
+                />
+              </div>
             </div>
-          ))}
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#030303]/60 to-[#030303]" />
+          </div>
           
-          {/* Gradient overlays - minimal to show build detail */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-black/40" />
-          
-          {/* Bottom fade for content */}
-          <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-[#030303] to-transparent" />
+          {/* Center gradient vignette */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#030303]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#030303_80%)]" />
         </div>
 
         {/* Header */}
         <header className="relative z-20 flex items-center justify-between px-6 lg:px-12 py-5">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 rounded-full overflow-hidden ring-2 ring-red-500/50 group-hover:ring-red-500 transition-all">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-red-500/50 group-hover:ring-red-500 transition-all shadow-lg shadow-red-500/20">
               <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
             </div>
             <div>
               <h1 className="text-xl font-black text-white tracking-tight">Jake <span className="text-red-500">Garage</span></h1>
-              <p className="text-[10px] text-white/40 uppercase tracking-widest">Build Studio</p>
+              <p className="text-[10px] text-white/40 uppercase tracking-widest">Powered by Warehouse Tire Direct</p>
             </div>
           </Link>
 
@@ -151,340 +146,180 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             <Link href="/lifted" className="text-sm text-white/60 hover:text-white transition-colors">Lifted</Link>
           </nav>
 
-          {/* Jake Status - Smaller, supporting */}
-          <div className="flex items-center gap-2 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/10">
-            <span className="text-xs text-white/60">Jake Online</span>
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+          {/* Jake Status - Top right */}
+          <div className="flex items-center gap-3 bg-black/60 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
+            <div className="relative w-8 h-8 rounded-full overflow-hidden">
+              <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
+            </div>
+            <div className="hidden sm:block">
+              <p className="text-white text-sm font-semibold">Jake is online</p>
+              <p className="text-white/50 text-[10px]">Ready to build your setup</p>
+            </div>
+            <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50" />
           </div>
         </header>
 
-        {/* Main Content - Build Info Left, Search Center-Right */}
-        <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center lg:items-end px-6 lg:px-12 pb-8 lg:pb-16 gap-8">
+        {/* ═══════════════════════════════════════════════════════════════════
+            CENTRAL COMMAND - The Focal Point
+        ═══════════════════════════════════════════════════════════════════ */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 lg:px-12 py-12">
           
-          {/* Left: Featured Build Info */}
-          <div className="flex-1 flex flex-col justify-end">
-            {/* Build badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-600/30 border border-red-500/40 rounded-full mb-4 w-fit">
-              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-              <span className="text-red-400 text-xs font-bold uppercase tracking-wider">Featured Build</span>
+          {/* Glow effects behind center */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-[600px] h-[400px] bg-red-600/10 rounded-full blur-[120px]" />
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-[400px] h-[200px] bg-red-500/15 rounded-full blur-[80px] translate-y-10" />
+          </div>
+          
+          {/* Central Content */}
+          <div className="relative max-w-4xl w-full text-center">
+            
+            {/* Neon "BUILT DIFFERENT" badge */}
+            <div className="inline-block mb-6">
+              <div className="relative px-6 py-2 rounded-lg border-2 border-red-500/60 bg-black/60 backdrop-blur-sm">
+                {/* Neon glow */}
+                <div className="absolute inset-0 rounded-lg bg-red-500/20 blur-md" />
+                <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(239,68,68,0.4)]" />
+                <span className="relative text-red-500 text-sm lg:text-base font-black tracking-[0.3em] uppercase">
+                  Built Different
+                </span>
+              </div>
             </div>
             
-            {/* Build title - MASSIVE */}
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-[0.9] tracking-tight mb-3">
-              {featured.title.split(" ")[0]}<br />
-              <span className="text-red-500">{featured.title.split(" ").slice(1).join(" ")}</span>
+            {/* Main headline - MASSIVE */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tight mb-6">
+              WHAT ARE WE<br />
+              <span className="text-red-500 drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">BUILDING TODAY?</span>
             </h2>
             
-            {/* Build specs */}
-            <p className="text-lg lg:text-xl text-white/70 mb-6 max-w-md">
-              {featured.subtitle}
+            {/* Subheadline */}
+            <p className="text-lg lg:text-xl text-white/60 mb-10 max-w-xl mx-auto">
+              Tell Jake what you drive or what look you want.<br className="hidden sm:block" />
+              He'll handle the rest.
             </p>
             
-            {/* Build this button */}
-            <button
-              type="button"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                onStart(featured.prompt);
-              }}
-              className="inline-flex items-center gap-3 px-6 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition-all w-fit group"
-            >
-              <span>Build This Setup</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
+            {/* ═══════════════════════════════════════════════════════════════
+                LARGE CENTERED INPUT - The Primary Action
+            ═══════════════════════════════════════════════════════════════ */}
+            <form onSubmit={handleSubmit} className="relative mb-8">
+              {/* Glow behind input */}
+              <div className={`absolute -inset-2 rounded-2xl transition-all duration-500 ${
+                isFocused 
+                  ? "bg-red-500/20 blur-xl" 
+                  : "bg-white/5 blur-lg"
+              }`} />
+              
+              <div className={`relative flex items-center bg-black/70 backdrop-blur-xl border-2 rounded-2xl overflow-hidden transition-all duration-300 ${
+                isFocused 
+                  ? "border-red-500/80 shadow-[0_0_40px_rgba(239,68,68,0.3)]" 
+                  : "border-white/20 hover:border-white/30"
+              }`}>
+                {/* Chat icon */}
+                <div className="pl-5 pr-2">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </div>
+                </div>
+                
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onFocus={() => setIsFocused(true)}
+                  onBlur={() => setIsFocused(false)}
+                  placeholder="Tell Jake what you drive or what look you want..."
+                  className="flex-1 bg-transparent px-4 py-5 lg:py-6 text-lg lg:text-xl text-white placeholder-white/40 focus:outline-none"
+                />
+                
+                <button 
+                  type="submit" 
+                  disabled={!input.trim()} 
+                  className="m-2 px-8 py-4 bg-red-600 hover:bg-red-500 disabled:bg-white/10 disabled:text-white/30 text-white font-bold text-lg rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-red-600/30 hover:shadow-red-500/40"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                </button>
+              </div>
+            </form>
             
-            {/* Build selector dots */}
-            <div className="flex gap-2 mt-6">
-              {FEATURED_BUILDS.map((_, idx) => (
+            {/* Helper text */}
+            <p className="text-white/40 text-sm mb-4">Not sure where to start? Try one of these:</p>
+            
+            {/* Quick prompts - chevron below */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              {[
+                { text: "2024 Ford F-150", icon: "🚙" },
+                { text: "Lifted truck build", icon: "🔺" },
+                { text: "Quiet highway tires", icon: "🔇" },
+                { text: "Aggressive street look", icon: "🔥" },
+              ].map((q) => (
                 <button
-                  key={idx}
+                  key={q.text}
                   type="button"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    setCurrentBuild(idx);
+                    onStart(q.text);
                   }}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    idx === currentBuild 
-                      ? "bg-red-500 w-8" 
-                      : "bg-white/30 hover:bg-white/50"
-                  }`}
-                />
+                  className="px-4 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-xl text-white/70 hover:text-white transition-all flex items-center gap-2"
+                >
+                  <span>{q.icon}</span>
+                  <span>{q.text}</span>
+                </button>
               ))}
             </div>
-          </div>
-
-          {/* Right: Search & Quick Start */}
-          <div className="w-full lg:w-[420px] flex-shrink-0">
-            {/* Search Card */}
-            <div className="bg-black/60 backdrop-blur-xl rounded-2xl border border-white/10 p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-red-500/30">
-                  <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
-                </div>
-                <div>
-                  <p className="text-white font-bold">Start Your Build</p>
-                  <p className="text-white/50 text-xs">Jake will guide your fitment</p>
-                </div>
-              </div>
-              
-              <form onSubmit={handleSubmit}>
-                <div className={`relative flex items-center bg-white/5 border-2 rounded-xl overflow-hidden transition-all mb-4 ${
-                  isFocused ? "border-red-500/60 bg-white/10" : "border-white/10"
-                }`}>
-                  <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onFocus={() => setIsFocused(true)}
-                    onBlur={() => setIsFocused(false)}
-                    placeholder="What do you drive?"
-                    className="flex-1 bg-transparent px-4 py-3.5 text-white placeholder-white/40 focus:outline-none"
-                  />
-                  <button 
-                    type="submit" 
-                    disabled={!input.trim()} 
-                    className="m-1.5 px-5 py-2 bg-red-600 hover:bg-red-500 disabled:bg-white/10 text-white font-bold rounded-lg transition-all"
-                  >
-                    Go
-                  </button>
-                </div>
-              </form>
-
-              {/* Quick prompts */}
-              <div className="flex flex-wrap gap-2">
-                {["Lifted truck", "Staggered setup", "Off-road build"].map((q) => (
-                  <button
-                    key={q}
-                    type="button"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      onStart(q);
-                    }}
-                    className="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white/60 hover:text-white text-sm transition-all"
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Trust Bar */}
-        <div className="relative z-10 border-t border-white/10 bg-black/60 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-6 py-3">
-            <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12 text-xs lg:text-sm">
-              <div className="flex items-center gap-2 text-white/50">
-                <span className="text-green-500">✓</span> Fitment Guaranteed
-              </div>
-              <div className="flex items-center gap-2 text-white/50">
-                <span className="text-green-500">✓</span> Free Shipping $1500+
-              </div>
-              <div className="flex items-center gap-2 text-white/50">
-                <span className="text-green-500">✓</span> Expert Support
-              </div>
-              <div className="flex items-center gap-2 text-white/50">
-                <span className="text-green-500">✓</span> Top Brands Only
-              </div>
+            
+            {/* Scroll indicator */}
+            <div className="animate-bounce">
+              <svg className="w-6 h-6 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
             </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          BUILD TRANSFORMATION SHOWCASE - Interactive WOW Moment
+          BUILD CATEGORIES GRID - Quick Start Options
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#050505] py-20 overflow-hidden">
+      <section className="relative bg-[#030303] py-20 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           
-          <div className="text-center mb-12">
-            <p className="text-red-500 text-sm font-bold uppercase tracking-[0.2em] mb-3">Transform Your Ride</p>
-            <h3 className="text-3xl lg:text-5xl font-black text-white mb-4">
-              See The <span className="text-red-500">Difference</span>
-            </h3>
-            <p className="text-white/50 max-w-xl mx-auto">
-              Drag to see how a wheel and tire package transforms an ordinary truck into something extraordinary.
-            </p>
-          </div>
-
-          {/* Before/After Slider */}
-          <div className="relative max-w-4xl mx-auto">
-            <div 
-              className="relative aspect-[16/9] rounded-2xl overflow-hidden cursor-ew-resize group"
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                setTransformProgress(Math.max(0, Math.min(100, (x / rect.width) * 100)));
-              }}
-              onMouseEnter={() => setShowTransform(true)}
-              onMouseLeave={() => setShowTransform(false)}
-            >
-              {/* After (bottom layer) */}
-              <Image
-                src="/images/homepage/truck-lifted.png"
-                alt="After: Lifted Package"
-                fill
-                className="object-contain bg-gradient-to-br from-neutral-900 to-black"
-              />
-              
-              {/* Before (top layer, clipped) */}
-              <div 
-                className="absolute inset-0 overflow-hidden"
-                style={{ clipPath: `inset(0 ${100 - transformProgress}% 0 0)` }}
-              >
-                <Image
-                  src="/images/homepage/truck-stock.png"
-                  alt="Before: Stock"
-                  fill
-                  className="object-contain bg-gradient-to-br from-neutral-800 to-neutral-900"
-                />
-              </div>
-              
-              {/* Slider line */}
-              <div 
-                className="absolute top-0 bottom-0 w-1 bg-red-500 shadow-lg shadow-red-500/50"
-                style={{ left: `${transformProgress}%` }}
-              >
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-xl">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
-                  </svg>
-                </div>
-              </div>
-              
-              {/* Labels */}
-              <div className="absolute top-4 left-4 px-3 py-1 bg-black/70 backdrop-blur-sm rounded-full text-white text-sm font-bold">
-                STOCK
-              </div>
-              <div className="absolute top-4 right-4 px-3 py-1 bg-red-600/90 backdrop-blur-sm rounded-full text-white text-sm font-bold">
-                LIFTED PACKAGE
-              </div>
-            </div>
-            
-            {/* Package details */}
-            <div className="mt-6 flex flex-wrap justify-center gap-6 text-center">
-              <div>
-                <p className="text-2xl font-black text-white">+6"</p>
-                <p className="text-white/50 text-sm">Lift Height</p>
-              </div>
-              <div className="w-px h-12 bg-white/10" />
-              <div>
-                <p className="text-2xl font-black text-white">35"</p>
-                <p className="text-white/50 text-sm">Tire Size</p>
-              </div>
-              <div className="w-px h-12 bg-white/10" />
-              <div>
-                <p className="text-2xl font-black text-white">20"</p>
-                <p className="text-white/50 text-sm">Wheel Diameter</p>
-              </div>
-              <div className="w-px h-12 bg-white/10" />
-              <div>
-                <p className="text-2xl font-black text-red-500">WOW</p>
-                <p className="text-white/50 text-sm">Factor</p>
-              </div>
-            </div>
-            
-            {/* CTA */}
-            <div className="mt-8 text-center">
+          {/* Grid of category cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+            {BUILD_CATEGORIES.map((cat) => (
               <button
+                key={cat.id}
                 type="button"
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  onStart("Build me a lifted truck package");
+                  onStart(cat.prompt);
                 }}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl transition-all text-lg"
-              >
-                Build Your Transformation
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          BUILD STYLE GALLERY - Inspiration Grid
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#030303] py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          
-          <div className="text-center mb-12">
-            <p className="text-red-500 text-sm font-bold uppercase tracking-[0.2em] mb-3">Find Your Style</p>
-            <h3 className="text-3xl lg:text-4xl font-black text-white">
-              What's Your <span className="text-red-500">Build?</span>
-            </h3>
-          </div>
-
-          {/* Style cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { 
-                id: "lifted",
-                title: "LIFTED", 
-                desc: "Go bigger. Stand taller.", 
-                image: "/images/homepage/vehicle-silverado-lifted.jpg",
-                prompt: "Build me a lifted truck setup"
-              },
-              { 
-                id: "street",
-                title: "STREET", 
-                desc: "Low. Fast. Clean.", 
-                image: "/images/homepage/vehicle-camaro-street.jpg",
-                prompt: "Build me a street performance setup"
-              },
-              { 
-                id: "offroad",
-                title: "OFF-ROAD", 
-                desc: "Built for adventure.", 
-                image: "/images/homepage/vehicle-tacoma-overland.jpg",
-                prompt: "Build me an off-road setup"
-              },
-              { 
-                id: "blackout",
-                title: "BLACKOUT", 
-                desc: "Murdered out perfection.", 
-                image: "/images/homepage/vehicle-tahoe-blackout.jpg",
-                prompt: "Build me a blackout package"
-              },
-            ].map((style) => (
-              <button
-                key={style.id}
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  onStart(style.prompt);
-                }}
-                className="group relative aspect-[4/5] rounded-2xl overflow-hidden"
+                className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-900"
               >
                 <Image
-                  src={style.image}
-                  alt={style.title}
+                  src={cat.image}
+                  alt={cat.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover opacity-60 group-hover:opacity-80 transition-all duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-                <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/20 transition-colors" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                 
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h4 className="text-2xl font-black text-white mb-1 group-hover:text-red-400 transition-colors">
-                    {style.title}
+                {/* Icon badge */}
+                <div className="absolute top-4 left-4 w-10 h-10 rounded-xl bg-black/60 backdrop-blur-sm flex items-center justify-center text-lg border border-white/10">
+                  {cat.icon}
+                </div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 className="text-sm lg:text-base font-black text-white mb-1 group-hover:text-red-400 transition-colors leading-tight">
+                    {cat.title}
                   </h4>
-                  <p className="text-white/60 text-sm mb-3">{style.desc}</p>
-                  <div className="flex items-center gap-2 text-red-500 text-sm font-bold opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
-                    <span>Start Build</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
+                  <p className="text-white/50 text-xs">{cat.desc}</p>
                 </div>
               </button>
             ))}
@@ -493,50 +328,75 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          JAKE SECTION - Supporting Guide Role
+          TRUST BAR
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#080808] py-16 border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            
-            {/* Jake */}
-            <div className="relative flex-shrink-0">
-              <div className="absolute -inset-4 bg-red-500/10 rounded-full blur-2xl" />
-              <div className="relative w-24 h-24 lg:w-28 lg:h-28">
-                <Image src="/jake/jake-explaining.png" alt="Jake" fill className="object-contain" />
+      <section className="bg-[#050505] py-8 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm">100% FITMENT GUARANTEE</p>
+                <p className="text-white/40 text-xs">We double check everything</p>
               </div>
             </div>
             
-            <div className="flex-1 text-center lg:text-left">
-              <p className="text-red-500 text-xs font-bold uppercase tracking-wider mb-2">Your Build Expert</p>
-              <h3 className="text-2xl lg:text-3xl font-black text-white mb-3">
-                Not Sure Where to Start?
-              </h3>
-              <p className="text-white/60 mb-6 max-w-lg">
-                Jake knows fitment inside and out. Tell him your vehicle and budget — 
-                he'll recommend the perfect wheels, tires, and packages guaranteed to fit.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <button 
-                  type="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    onStart("Help me find the right setup for my truck");
-                  }}
-                  className="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-semibold rounded-lg transition-all"
-                >
-                  Ask Jake
-                </button>
-                <Link 
-                  href="/wheels" 
-                  className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all border border-white/10"
-                >
-                  Browse Wheels
-                </Link>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm">FAST, FREE SHIPPING</p>
+                <p className="text-white/40 text-xs">To your door or local shop</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm">TOP BRANDS ONLY</p>
+                <p className="text-white/40 text-xs">Quality you can trust</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm">EXPERT SUPPORT</p>
+                <p className="text-white/40 text-xs">Jake's got your back</p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════════
+          TAGLINE BAR
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <section className="bg-[#030303] py-10 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h3 className="text-2xl lg:text-3xl font-black">
+            <span className="text-red-500">REAL</span> <span className="text-white">PEOPLE.</span>{" "}
+            <span className="text-red-500">REAL</span> <span className="text-white">EXPERTS.</span>{" "}
+            <span className="text-red-500">REAL</span> <span className="text-white">RESULTS.</span>
+          </h3>
+          <p className="text-white/40 text-sm mt-3">
+            Secure checkout powered by <span className="text-white font-semibold">WAREHOUSE TIRE DIRECT</span>
+          </p>
         </div>
       </section>
 
