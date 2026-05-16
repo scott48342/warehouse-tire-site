@@ -332,35 +332,35 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             style={{ backgroundImage: "url('/images/homepage/misc-wheel-wall.jpg')" }}
           />
           
-          {/* Left Vehicle - BRIGHTER */}
+          {/* Left Vehicle - FULL BRIGHTNESS, no opacity */}
           <div className="absolute left-0 top-0 bottom-0 w-[50%] hidden lg:block">
             <Image
               src="/images/homepage/vehicle-ram-aggressive.jpg"
               alt="Featured Vehicle"
               fill
-              className="object-cover object-right opacity-80 scale-110"
+              className="object-cover object-right scale-110"
               style={{ objectPosition: "70% center" }}
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#030303]/60 to-[#030303]" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/50 via-transparent to-[#030303]/70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#030303]/50 to-[#030303]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/40 via-transparent to-[#030303]/60" />
           </div>
           
-          {/* Right Jake - LARGER, BRIGHTER, moved left so not covered by text */}
+          {/* Right Jake - FULL BRIGHTNESS, moved up more */}
           <div className="absolute right-[180px] top-0 bottom-0 w-[40%] hidden lg:block">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-[600px] h-[780px] -translate-y-4">
+              <div className="relative w-[620px] h-[800px] -translate-y-16">
                 <Image
                   src="/jake/jake-explaining.png"
                   alt="Jake"
                   fill
-                  className="object-contain object-bottom brightness-110 drop-shadow-[0_0_80px_rgba(239,68,68,0.2)]"
+                  className="object-contain object-bottom drop-shadow-[0_0_100px_rgba(239,68,68,0.25)]"
                   priority
                 />
               </div>
             </div>
-            {/* Lighter fade so Jake is more visible */}
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#030303]/40 to-[#030303]" />
+            {/* Very light fade */}
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#030303]/30 to-[#030303]" />
           </div>
           
           {/* Center Glows */}
@@ -415,25 +415,25 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
         {/* Main Hero Content */}
         <div className="relative z-10 flex-1 flex">
           
-          {/* Left Trust Column - LARGER TEXT */}
-          <div className="hidden xl:flex flex-col justify-center w-72 pl-8 pr-4 py-16">
-            <div className="space-y-10">
+          {/* Left Trust Column - EVEN LARGER TEXT */}
+          <div className="hidden xl:flex flex-col justify-center w-80 pl-8 pr-4 py-12">
+            <div className="space-y-8">
               {LEFT_TRUST.map((item, idx) => (
                 <div key={idx} className="group">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-red-500/20 border border-red-500/40 flex items-center justify-center text-red-500 flex-shrink-0 shadow-lg shadow-red-500/20">
+                    <div className="w-14 h-14 rounded-xl bg-red-500/25 border border-red-500/50 flex items-center justify-center text-red-500 flex-shrink-0 shadow-xl shadow-red-500/30">
                       {item.icon}
                     </div>
                     <div>
-                      <h4 className="text-white text-base font-black tracking-wide leading-tight whitespace-pre-line uppercase">
+                      <h4 className="text-white text-lg font-black tracking-wide leading-tight whitespace-pre-line uppercase">
                         {item.title}
                       </h4>
-                      <p className="text-white/60 text-sm mt-1.5 leading-relaxed whitespace-pre-line">
+                      <p className="text-white/70 text-base mt-2 leading-relaxed whitespace-pre-line">
                         {item.desc}
                       </p>
                     </div>
                   </div>
-                  <div className="mt-4 ml-16 w-12 h-[2px] bg-gradient-to-r from-red-500/60 to-transparent" />
+                  <div className="mt-4 ml-[72px] w-14 h-[2px] bg-gradient-to-r from-red-500/70 to-transparent" />
                 </div>
               ))}
             </div>
@@ -517,25 +517,25 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
             </div>
           </div>
 
-          {/* Right Trust Column - LARGER TEXT */}
-          <div className="hidden xl:flex flex-col justify-center w-72 pr-8 pl-4 py-16">
-            <div className="space-y-10">
+          {/* Right Trust Column - EVEN LARGER TEXT */}
+          <div className="hidden xl:flex flex-col justify-center w-80 pr-8 pl-4 py-12">
+            <div className="space-y-8">
               {RIGHT_TRUST.map((item, idx) => (
                 <div key={idx} className="group text-right">
                   <div className="flex items-start gap-4 justify-end">
                     <div>
-                      <h4 className="text-white text-base font-black tracking-wide leading-tight whitespace-pre-line uppercase">
+                      <h4 className="text-white text-lg font-black tracking-wide leading-tight whitespace-pre-line uppercase">
                         {item.title}
                       </h4>
-                      <p className="text-white/60 text-sm mt-1.5 leading-relaxed whitespace-pre-line">
+                      <p className="text-white/70 text-base mt-2 leading-relaxed whitespace-pre-line">
                         {item.desc}
                       </p>
                     </div>
-                    <div className="w-12 h-12 rounded-xl bg-red-500/20 border border-red-500/40 flex items-center justify-center text-red-500 flex-shrink-0 shadow-lg shadow-red-500/20">
+                    <div className="w-14 h-14 rounded-xl bg-red-500/25 border border-red-500/50 flex items-center justify-center text-red-500 flex-shrink-0 shadow-xl shadow-red-500/30">
                       {item.icon}
                     </div>
                   </div>
-                  <div className="mt-4 mr-16 ml-auto w-12 h-[2px] bg-gradient-to-l from-red-500/60 to-transparent" />
+                  <div className="mt-4 mr-[72px] ml-auto w-14 h-[2px] bg-gradient-to-l from-red-500/70 to-transparent" />
                 </div>
               ))}
             </div>
