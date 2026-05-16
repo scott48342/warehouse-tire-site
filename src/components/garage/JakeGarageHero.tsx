@@ -392,22 +392,22 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-12">
-            <Link href="/wheels" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Wheels</Link>
-            <Link href="/tires" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Tires</Link>
-            <Link href="/wheels?package=1" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Packages</Link>
-            <Link href="/lifted" className="text-sm text-white/50 hover:text-white transition-colors font-medium">Lifted</Link>
+            <Link href="/wheels" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Wheels</Link>
+            <Link href="/tires" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Tires</Link>
+            <Link href="/wheels?package=1" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Packages</Link>
+            <Link href="/lifted" className="text-base text-white hover:text-red-400 transition-colors font-semibold">Lifted</Link>
           </nav>
 
-          <div className="flex items-center gap-3 bg-black/60 backdrop-blur-md rounded-full px-5 py-2.5 border border-white/10">
-            <div className="relative w-9 h-9 rounded-full overflow-hidden ring-1 ring-white/20">
+          <div className="flex items-center gap-3 bg-black/60 backdrop-blur-md rounded-full px-6 py-3 border border-white/10">
+            <div className="relative w-11 h-11 rounded-full overflow-hidden ring-2 ring-white/30">
               <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
             </div>
             <div className="hidden sm:block">
               <div className="flex items-center gap-2">
-                <p className="text-white text-sm font-bold">Jake is online</p>
-                <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50" />
+                <p className="text-white text-base font-bold">Jake is online</p>
+                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50" />
               </div>
-              <p className="text-white/40 text-[10px]">Ready to build your setup</p>
+              <p className="text-white/50 text-sm">Ready to build your setup</p>
             </div>
           </div>
         </header>
@@ -591,22 +591,22 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 3: TRUST + COMMERCE BAR
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#030303] py-6 border-t border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-14">
+      <section className="bg-[#030303] py-8 border-t border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-16">
             {[
               { icon: "✓", title: "100% FITMENT GUARANTEE", desc: "We double check everything" },
-              { icon: "📦", title: "FAST, FREE SHIPPING $199+", desc: "To your door or local shop" },
+              { icon: "📦", title: "FAST, FREE SHIPPING $1500+", desc: "To your door or local shop" },
               { icon: "⭐", title: "TOP BRANDS ONLY", desc: "Quality you can trust" },
               { icon: "❤️", title: "EXPERT SUPPORT", desc: "Jake's got your back" },
             ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-500">
+              <div key={idx} className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-red-500/15 flex items-center justify-center text-red-500 text-xl">
                   {item.icon}
                 </div>
                 <div>
-                  <p className="text-white font-bold text-xs tracking-wide">{item.title}</p>
-                  <p className="text-white/40 text-[10px]">{item.desc}</p>
+                  <p className="text-white font-bold text-sm tracking-wide">{item.title}</p>
+                  <p className="text-white/50 text-xs">{item.desc}</p>
                 </div>
               </div>
             ))}
