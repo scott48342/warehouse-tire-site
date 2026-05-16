@@ -499,14 +499,14 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                 </div>
               </div>
               
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.85] tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.85] tracking-tight mb-4">
                 WHAT ARE WE<br />
                 <span className="text-red-500 drop-shadow-[0_0_60px_rgba(239,68,68,0.6)] drop-shadow-[0_0_120px_rgba(239,68,68,0.3)]">
                   BUILDING TODAY?
                 </span>
               </h2>
               
-              <p className="text-lg lg:text-xl text-white/50 mb-8 max-w-lg mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-white/50 mb-8 max-w-xs sm:max-w-lg mx-auto leading-relaxed px-2">
                 Tell Jake what you drive or what look you want.<br className="hidden sm:block" />
                 He'll handle the rest.
               </p>
