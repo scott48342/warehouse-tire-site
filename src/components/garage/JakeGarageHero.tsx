@@ -566,11 +566,6 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                     className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  
-                  {/* Centered icon */}
-                  <div className={`absolute bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl bg-black/70 backdrop-blur-sm flex items-center justify-center text-xl border border-white/20 ${cat.iconColor} group-hover:scale-110 group-hover:border-red-500/50 transition-all duration-300`}>
-                    {cat.icon}
-                  </div>
                 </div>
                 
                 {/* Text below image */}
