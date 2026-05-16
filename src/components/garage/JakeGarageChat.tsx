@@ -63,6 +63,82 @@ interface SelectedProduct {
   };
 }
 
+// Build profile types
+type BuildProfile = 
+  | "budget"      // Budget-focused
+  | "daily"       // Quiet daily driver
+  | "aggressive"  // Aggressive street/stance
+  | "offroad"     // Off-road/lifted
+  | "towing"      // Towing/hauling
+  | "performance" // Performance/track
+  | "luxury"      // Luxury/blackout
+  | "winter"      // Winter/all-weather
+  | "unsure";     // Unsure/overwhelmed
+
+const PROFILE_LABELS: Record<BuildProfile, string> = {
+  budget: "💰 Budget-Focused",
+  daily: "🔇 Daily Driver",
+  aggressive: "🔥 Aggressive Street",
+  offroad: "🏔️ Off-Road Build",
+  towing: "🚛 Towing/Hauling",
+  performance: "🏎️ Performance",
+  luxury: "✨ Luxury/Blackout",
+  winter: "❄️ Winter-Ready",
+  unsure: "🤔 Exploring Options",
+};
+
+// Detect build profile from conversation text
+function detectBuildProfile(text: string): BuildProfile | null {
+  const lower = text.toLowerCase();
+  
+  // Budget signals
+  if (/cheap|affordable|budget|tight budget|save money|don't want to spend|low cost|inexpensive/.test(lower)) {
+    return "budget";
+  }
+  
+  // Towing signals (check before daily since towing is more specific)
+  if (/tow|towing|haul|hauling|camper|trailer|boat|5th wheel|heavy load|work truck|payload/.test(lower)) {
+    return "towing";
+  }
+  
+  // Off-road signals
+  if (/off-?road|trail|mud|lift|lifted|35s|37s|wheeling|overland|crawl/.test(lower)) {
+    return "offroad";
+  }
+  
+  // Performance signals
+  if (/track|grip|handling|autocross|performance|corner|summer tire|racing|fast/.test(lower)) {
+    return "performance";
+  }
+  
+  // Aggressive/stance signals
+  if (/aggressive|stance|poke|flush|tucked|concave|fitment|wheel game|mean|sick/.test(lower)) {
+    return "aggressive";
+  }
+  
+  // Winter signals
+  if (/snow|winter|ice|michigan|minnesota|3-peak|all-weather|cold|blizzard/.test(lower)) {
+    return "winter";
+  }
+  
+  // Luxury signals
+  if (/blackout|murdered|clean look|luxury|classy|oem\+|subtle|sophisticated|elegant/.test(lower)) {
+    return "luxury";
+  }
+  
+  // Daily driver signals
+  if (/quiet|smooth ride|daily|highway|commute|comfort|road noise|long drive/.test(lower)) {
+    return "daily";
+  }
+  
+  // Unsure signals
+  if (/don't know|confused|overwhelm|help me|not sure|what do you recommend|just need/.test(lower)) {
+    return "unsure";
+  }
+  
+  return null;
+}
+
 // Enhanced build context with full state tracking
 interface BuildContext {
   vehicle?: {
@@ -74,6 +150,7 @@ interface BuildContext {
   };
   goal?: string;
   category?: string;
+  buildProfile?: BuildProfile; // Detected customer profile
   status: "exploring" | "browsing" | "tires_selected" | "wheels_selected" | "package_ready";
   selectedTires?: SelectedProduct[];
   selectedWheels?: SelectedProduct[];
@@ -561,6 +638,14 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
       timestamp: new Date(),
     };
     setMessages(prev => [...prev, userMessage]);
+    
+    // Detect build profile from user message
+    const detectedProfile = detectBuildProfile(text);
+    if (detectedProfile && !buildContext.buildProfile) {
+      setBuildContext(prev => ({ ...prev, buildProfile: detectedProfile }));
+      trackGarageEvent("profile_detected", { profile: detectedProfile });
+    }
+    
     setIsLoading(true);
     setLoadingMessage(LOADING_MESSAGES[0]);
 
@@ -580,6 +665,7 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
           buildContext: {
             vehicle: buildContext.vehicle,
             goal: buildContext.goal,
+            buildProfile: detectedProfile || buildContext.buildProfile,
             selectedTires: buildContext.selectedTires,
             selectedWheels: buildContext.selectedWheels,
           },
@@ -1256,6 +1342,18 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
                     )}
                   </div>
                 </div>
+                
+                {/* Build Profile - Only show when detected */}
+                {buildContext.buildProfile && (
+                  <div className="bg-gradient-to-br from-amber-900/20 to-transparent rounded-xl p-4 border border-amber-500/20">
+                    <div className="flex items-center justify-between">
+                      <span className="text-amber-400/70 text-sm">Build Style</span>
+                      <span className="text-amber-400 font-medium text-sm">
+                        {PROFILE_LABELS[buildContext.buildProfile]}
+                      </span>
+                    </div>
+                  </div>
+                )}
                 
                 {/* Considering */}
                 {buildContext.consideringProduct && (
