@@ -133,7 +133,7 @@ function WheelTireRenderer({
       className="absolute pointer-events-none"
       style={{
         left: centerX - finalTireRadius,
-        top: centerY - finalTireRadius + config.bodyLift * scaleY,
+        top: centerY - finalTireRadius, // Wheels stay FIXED - don't move with body lift
         width: finalTireRadius * 2,
         height: finalTireRadius * 2,
         zIndex: 20, // Above vehicle image (z-index: 10)
@@ -144,17 +144,17 @@ function WheelTireRenderer({
         <div
           className="absolute rounded-full"
           style={{
-            left: 4,
-            top: 6,
+            left: 6,
+            top: 8,
             width: finalTireRadius * 2,
             height: finalTireRadius * 2,
-            background: `rgba(0,0,0,${config.shadowOpacity})`,
-            filter: `blur(${config.shadowBlur}px)`,
+            background: `rgba(0,0,0,${config.shadowOpacity + 0.2})`,
+            filter: `blur(${config.shadowBlur + 4}px)`,
           }}
         />
       )}
       
-      {/* Tire (black ring behind wheel) */}
+      {/* Tire (black ring behind wheel) - MORE VISIBLE */}
       <div
         className="absolute rounded-full"
         style={{
@@ -162,8 +162,22 @@ function WheelTireRenderer({
           top: 0,
           width: finalTireRadius * 2,
           height: finalTireRadius * 2,
-          background: "radial-gradient(circle, #1a1a1a 0%, #0d0d0d 70%, #000 100%)",
-          boxShadow: "inset 0 0 20px rgba(0,0,0,0.8), inset 0 0 40px rgba(0,0,0,0.4)",
+          background: "radial-gradient(circle, #222 0%, #111 50%, #000 100%)",
+          boxShadow: "inset 0 0 15px rgba(0,0,0,0.9), inset 0 0 30px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.8)",
+          border: "3px solid #1a1a1a",
+        }}
+      />
+      
+      {/* Tire sidewall detail - visible ring */}
+      <div
+        className="absolute rounded-full"
+        style={{
+          left: 4,
+          top: 4,
+          width: finalTireRadius * 2 - 8,
+          height: finalTireRadius * 2 - 8,
+          border: "2px solid #333",
+          boxShadow: "inset 0 0 10px rgba(50,50,50,0.5)",
         }}
       />
       
