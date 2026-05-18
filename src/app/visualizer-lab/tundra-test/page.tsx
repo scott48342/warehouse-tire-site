@@ -291,15 +291,29 @@ export default function TundraTestPage() {
     }
   }, []);
 
-  // Handle already-cached images (onLoad fires before React attaches handler)
+  // Handle already-cached images - check periodically until ref is available
   useEffect(() => {
-    const img = imageRef.current;
-    if (img && img.complete && img.naturalWidth > 0) {
-      setNaturalSize({ width: img.naturalWidth, height: img.naturalHeight });
-      setRenderedSize({ width: img.clientWidth, height: img.clientHeight });
-      setImageLoaded(true);
-    }
-  }, [config.vehicleImage]);
+    const checkImage = () => {
+      const img = imageRef.current;
+      if (img && img.complete && img.naturalWidth > 0 && !imageLoaded) {
+        setNaturalSize({ width: img.naturalWidth, height: img.naturalHeight });
+        setRenderedSize({ width: img.clientWidth, height: img.clientHeight });
+        setImageLoaded(true);
+        return true;
+      }
+      return false;
+    };
+    
+    // Check immediately
+    if (checkImage()) return;
+    
+    // Also check after a short delay (for SSR hydration)
+    const timeouts = [50, 150, 300, 500].map(ms => 
+      setTimeout(checkImage, ms)
+    );
+    
+    return () => timeouts.forEach(clearTimeout);
+  }, [config.vehicleImage, imageLoaded]);
 
   // Update rendered size on resize
   useEffect(() => {
