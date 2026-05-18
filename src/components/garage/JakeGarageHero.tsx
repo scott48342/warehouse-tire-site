@@ -417,7 +417,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
               <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
             </div>
             <div>
-              <h1 className="text-xl font-black text-white tracking-tight">Jake <span className="text-red-500">Garage</span></h1>
+              <h1 className="text-xl font-black text-white tracking-tight">Jake's <span className="text-red-500">Garage</span></h1>
               <p className="text-[10px] text-white/40 uppercase tracking-[0.2em]">Powered by Warehouse Tire Direct</p>
             </div>
           </Link>
@@ -685,7 +685,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
                   <Image src="/jake/jake-avatar-online.png" alt="Jake" fill className="object-cover" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold">Jake Garage</h4>
+                  <h4 className="text-white font-bold">Jake's Garage</h4>
                   <p className="text-white/30 text-[10px] uppercase tracking-wider">By Warehouse Tire Direct</p>
                 </div>
               </Link>
