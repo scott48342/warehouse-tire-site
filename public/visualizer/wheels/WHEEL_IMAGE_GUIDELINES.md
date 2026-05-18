@@ -11,15 +11,29 @@ All wheel images used in the visualizer must follow these specifications:
 | **Dimensions** | 500×500 pixels |
 | **Format** | PNG with transparency |
 | **Content** | Wheel ONLY (no tire) |
-| **Fill** | Wheel should fill 85-95% of canvas |
+| **Fill** | Wheel MUST fill exactly ~85% of canvas (critical for plus-sizing!) |
 | **Background** | Transparent |
 | **Shape** | Circular (use circular mask if needed) |
+
+### ⚠️ CRITICAL: 85% Fill Rule
+
+**All wheels MUST fill ~85% of the canvas with padding around edges.**
+
+If a wheel fills 100% of its canvas (edge-to-edge), it will appear LARGER than other wheels when plus-sizing. This breaks the visual consistency.
+
+To fix an edge-to-edge wheel image:
+```javascript
+sharp('wheel-too-big.png')
+  .resize(425, 425)  // Shrink to 85% of 500
+  .extend({ top: 38, bottom: 37, left: 38, right: 37, background: { r: 0, g: 0, b: 0, alpha: 0 } })
+  .toFile('wheel-fixed.png');
+```
 
 ### Why These Standards?
 
 1. **Wheel only (no tire)**: The visualizer renders the tire separately as a black ring behind the wheel. This allows independent control of tire size and sidewall thickness.
 
-2. **Consistent sizing**: All wheel images fill the same percentage of their canvas. The visualizer then scales based on actual wheel diameter (17", 18", 20", 22", 24").
+2. **Consistent 85% sizing**: All wheel images MUST fill the same percentage of their canvas (~85%). This is critical for plus-sizing - when you select 22" vs 18", all wheels must scale identically.
 
 3. **500×500 canvas**: Large enough for quality but small enough for fast loading. Square format ensures consistent scaling.
 
