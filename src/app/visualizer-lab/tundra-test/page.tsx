@@ -46,6 +46,7 @@ interface VisualizerConfig {
   tire: TireSettings;
   bodyLift: number;
   wheelScale: number;
+  wheelDiameter: number;  // Wheel size in inches (17, 18, 20, 22, 24)
   // Visual effects
   showTireShadow: boolean;
   showWheelShadow: boolean;
@@ -71,6 +72,17 @@ const WHEEL_ASSETS = [
   { name: "Basic Wheel", path: "/visualizer/wheels/wheel-basic.png" },
 ];
 
+// Reference diameter for wheel scaling (18" is our baseline)
+const REFERENCE_WHEEL_DIAMETER = 18;
+
+const WHEEL_DIAMETERS = [
+  { size: 17, label: '17"' },
+  { size: 18, label: '18"' },
+  { size: 20, label: '20"' },
+  { size: 22, label: '22"' },
+  { size: 24, label: '24"' },
+];
+
 const DEFAULT_CONFIG: VisualizerConfig = {
   vehicleImage: "/visualizer/vehicles/visualizer-tundra-2010-sr5-white-side.png",
   wheelImage: "/visualizer/wheels/test-wheel.png",
@@ -83,6 +95,7 @@ const DEFAULT_CONFIG: VisualizerConfig = {
   },
   bodyLift: 0,
   wheelScale: 1.0,
+  wheelDiameter: 18,  // Default 18" wheel
   showTireShadow: true,
   showWheelShadow: true,
   shadowOpacity: 0.4,
@@ -116,7 +129,10 @@ function WheelTireRenderer({
   // Calculate rendered positions
   const centerX = position.x * scaleX;
   const centerY = position.y * scaleY;
-  const wheelRadius = position.radius * scale * config.wheelScale;
+  
+  // Wheel diameter scaling (relative to 18" reference)
+  const diameterScale = config.wheelDiameter / REFERENCE_WHEEL_DIAMETER;
+  const wheelRadius = position.radius * scale * config.wheelScale * diameterScale;
   
   // Tire dimensions
   const tireOuterRadius = wheelRadius * config.tire.outerDiameterScale;
@@ -601,14 +617,38 @@ export default function TundraTestPage() {
                     ))}
                   </select>
                   
+                  {/* Wheel Diameter Selector */}
+                  <div className="mt-4">
+                    <label className="text-sm text-neutral-400 block mb-2">
+                      Wheel Diameter: {config.wheelDiameter}"
+                    </label>
+                    <div className="flex gap-2">
+                      {WHEEL_DIAMETERS.map((d) => (
+                        <button
+                          key={d.size}
+                          onClick={() =>
+                            setConfig((prev) => ({ ...prev, wheelDiameter: d.size }))
+                          }
+                          className={`flex-1 px-2 py-1.5 rounded text-sm font-medium transition-colors ${
+                            config.wheelDiameter === d.size
+                              ? "bg-red-600 text-white"
+                              : "bg-neutral-700 hover:bg-neutral-600 text-neutral-300"
+                          }`}
+                        >
+                          {d.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  
                   <div className="mt-3">
                     <label className="text-sm text-neutral-400">
-                      Wheel Scale: {config.wheelScale.toFixed(2)}
+                      Fine Tune Scale: {config.wheelScale.toFixed(2)}
                     </label>
                     <input
                       type="range"
-                      min={0.7}
-                      max={1.5}
+                      min={0.8}
+                      max={1.2}
                       step={0.01}
                       value={config.wheelScale}
                       onChange={(e) =>
@@ -616,6 +656,9 @@ export default function TundraTestPage() {
                       }
                       className="w-full accent-red-500"
                     />
+                    <p className="text-xs text-neutral-500 mt-1">
+                      Adjust if wheel looks too big/small after selecting diameter
+                    </p>
                   </div>
                 </div>
 
