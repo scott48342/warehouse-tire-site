@@ -148,6 +148,72 @@ export const MODEL_ALIASES: Record<string, string[]> = {
   
   // SL-Class AMG
   "sl-class-amg": ["sl class amg"],
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BMW MODEL NUMBER → SERIES MAPPINGS
+  // Users commonly search "328i" but DB stores "3 Series" with trim "328i"
+  // ═══════════════════════════════════════════════════════════════════════════
+  // 2-Series (includes M2)
+  "228i": ["2 series"],
+  "230i": ["2 series"],
+  "m240i": ["2 series"],
+  
+  // 3-Series - most common confusion
+  "318i": ["3 series"],
+  "320i": ["3 series"],
+  "323i": ["3 series"],
+  "325i": ["3 series"],
+  "328i": ["3 series"],
+  "330i": ["3 series"],
+  "335i": ["3 series"],
+  "340i": ["3 series"],
+  "m340i": ["3 series"],
+  "328xi": ["3 series"],
+  "330xi": ["3 series"],
+  "335xi": ["3 series"],
+  "328i-xdrive": ["3 series"],
+  "330i-xdrive": ["3 series"],
+  "335i-xdrive": ["3 series"],
+  
+  // 4-Series
+  "428i": ["4 series"],
+  "430i": ["4 series"],
+  "435i": ["4 series"],
+  "440i": ["4 series"],
+  "m440i": ["4 series"],
+  
+  // 5-Series
+  "525i": ["5 series"],
+  "528i": ["5 series"],
+  "530i": ["5 series"],
+  "535i": ["5 series"],
+  "540i": ["5 series"],
+  "545i": ["5 series"],
+  "550i": ["5 series"],
+  "m550i": ["5 series"],
+  
+  // 6-Series
+  "640i": ["6 series"],
+  "650i": ["6 series"],
+  
+  // 7-Series
+  "740i": ["7 series"],
+  "745i": ["7 series"],
+  "750i": ["7 series"],
+  "760i": ["7 series"],
+  
+  // 8-Series
+  "840i": ["8 series"],
+  "850i": ["8 series"],
+  
+  // X-Series (SUVs) - often searched without "X"
+  "x1": ["x1"],
+  "x2": ["x2"],
+  "x3": ["x3"],
+  "x4": ["x4"],
+  "x5": ["x5"],
+  "x6": ["x6"],
+  "x7": ["x7"],
 };
 
 /**
