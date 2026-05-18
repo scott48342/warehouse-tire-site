@@ -105,6 +105,16 @@ export interface CanonicalFitmentResult {
       matchConfidence: string | null;
       matchMethod: string | null;
     };
+    // 2026-05-18: BMW variant clarification
+    bmwVariantClarification?: {
+      requestedTrim: string;
+      variants: Array<{
+        trim: string;
+        tireSizes: string[];
+        isStaggered: boolean;
+        description: string;
+      }>;
+    };
   };
 }
 
