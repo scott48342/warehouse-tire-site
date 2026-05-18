@@ -136,6 +136,7 @@ function WheelTireRenderer({
         top: centerY - finalTireRadius + config.bodyLift * scaleY,
         width: finalTireRadius * 2,
         height: finalTireRadius * 2,
+        zIndex: 20, // Above vehicle image (z-index: 10)
       }}
     >
       {/* Tire Shadow (bottom layer) */}
