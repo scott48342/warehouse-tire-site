@@ -867,7 +867,7 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
   // ═══════════════════════════════════════════════════════════════════════════
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#030303]">
+    <div className="flex h-screen overflow-x-hidden overflow-y-hidden bg-[#030303]">
       {/* Resume Build Prompt */}
       {showResumePrompt && savedBuildData && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
@@ -974,14 +974,16 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
         )}
 
         {/* Main Chat Column */}
-        <div className="flex-1 flex flex-col min-w-0 relative">
+        <div className="flex-1 flex flex-col min-w-0 relative overflow-x-visible">
         
-        {/* Mobile Product Carousel */}
+        {/* Mobile Product Carousel - needs overflow-x for horizontal scrolling */}
         {showLeftRail && (
-          <ProductCarousel
-            products={leftRailProducts}
-            onProductClick={handleRailClick}
-          />
+          <div className="flex-shrink-0 overflow-x-auto">
+            <ProductCarousel
+              products={leftRailProducts}
+              onProductClick={handleRailClick}
+            />
+          </div>
         )}
 
         {/* Header */}

@@ -407,7 +407,7 @@ export function ProductCarousel({
   onProductClick: (product: RailProduct) => void;
 }) {
   return (
-    <div className="lg:hidden border-b border-white/5">
+    <div className="lg:hidden border-b border-white/5 overflow-visible">
       <div className="px-3 py-2 flex items-center justify-between">
         <p className="text-white/40 text-[10px] uppercase tracking-wider font-medium">
           {products[0]?.type === "tire" ? "Matching Tires" : "Matching Wheels"}
@@ -415,9 +415,23 @@ export function ProductCarousel({
         <button className="text-red-500 text-xs">View All →</button>
       </div>
       
-      <div className="flex overflow-x-auto gap-3 px-3 pb-3 scrollbar-hide">
+      {/* Mobile-optimized horizontal scroll container */}
+      <div 
+        className="flex gap-3 px-3 pb-3 overflow-x-auto overscroll-x-contain"
+        style={{ 
+          WebkitOverflowScrolling: 'touch',
+          touchAction: 'pan-x',
+          scrollSnapType: 'x mandatory',
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
+        }}
+      >
         {products.map((product) => (
-          <div key={product.id} className="flex-shrink-0 w-[140px]">
+          <div 
+            key={product.id} 
+            className="flex-shrink-0 w-[140px]"
+            style={{ scrollSnapAlign: 'start' }}
+          >
             <ProductCard product={product} onClick={() => onProductClick(product)} />
           </div>
         ))}
