@@ -150,33 +150,52 @@ function WheelTireRenderer({
   // Ensure tire is at least as big as wheel (sanity check)
   const finalTireRadius = Math.max(tireRadius, wheelRadius + 5);
   
+  // OEM wheel mask - covers the original wheel in the image
+  // This mask MOVES with the body lift to cover the OEM wheels
+  const oemWheelRadius = position.radius * scale * 1.15; // Slightly larger to fully cover OEM
+  
   return (
-    <div
-      className="absolute pointer-events-none"
-      style={{
-        left: centerX - finalTireRadius,
-        top: centerY - finalTireRadius, // Wheels stay FIXED - don't move with body lift
-        width: finalTireRadius * 2,
-        height: finalTireRadius * 2,
-        zIndex: 20, // Above vehicle image (z-index: 10)
-      }}
-    >
-      {/* Tire Shadow (bottom layer) */}
-      {config.showTireShadow && (
-        <div
-          className="absolute rounded-full"
-          style={{
-            left: 6,
-            top: 8,
-            width: finalTireRadius * 2,
-            height: finalTireRadius * 2,
-            background: `rgba(0,0,0,${config.shadowOpacity + 0.2})`,
-            filter: `blur(${config.shadowBlur + 4}px)`,
-          }}
-        />
-      )}
+    <>
+      {/* OEM Wheel Mask - moves WITH body to cover original wheels */}
+      <div
+        className="absolute pointer-events-none rounded-full"
+        style={{
+          left: centerX - oemWheelRadius,
+          top: centerY - oemWheelRadius + config.bodyLift * scaleY, // Moves with body
+          width: oemWheelRadius * 2,
+          height: oemWheelRadius * 2,
+          background: "radial-gradient(circle, #1a1a1a 0%, #0a0a0a 70%, #000 100%)",
+          zIndex: 15, // Above vehicle (10) but below our wheel overlay (20)
+        }}
+      />
       
-      {/* Tire (black ring behind wheel) - MORE VISIBLE */}
+      {/* Main wheel/tire overlay - stays FIXED */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          left: centerX - finalTireRadius,
+          top: centerY - finalTireRadius, // Wheels stay FIXED
+          width: finalTireRadius * 2,
+          height: finalTireRadius * 2,
+          zIndex: 20, // Above vehicle and mask
+        }}
+      >
+        {/* Tire Shadow (bottom layer) */}
+        {config.showTireShadow && (
+          <div
+            className="absolute rounded-full"
+            style={{
+              left: 6,
+              top: 8,
+              width: finalTireRadius * 2,
+              height: finalTireRadius * 2,
+              background: `rgba(0,0,0,${config.shadowOpacity + 0.2})`,
+              filter: `blur(${config.shadowBlur + 4}px)`,
+            }}
+          />
+        )}
+        
+        {/* Tire (black ring behind wheel) - MORE VISIBLE */}
       <div
         className="absolute rounded-full"
         style={{
@@ -295,7 +314,8 @@ function WheelTireRenderer({
           />
         </>
       )}
-    </div>
+      </div>
+    </>
   );
 }
 
