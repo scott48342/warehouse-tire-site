@@ -71,13 +71,18 @@ const WHEEL_ASSETS = [
   { name: "Basic Wheel", path: "/visualizer/wheels/wheel-basic.png" },
 ];
 
+// ============================================================================
+// STOCK BASELINE - LOCKED (2026-05-18)
+// These values represent perfect stock fitment for 2010 Tundra SR5
+// Do not modify without re-calibrating wheel positions
+// ============================================================================
 const DEFAULT_CONFIG: VisualizerConfig = {
   vehicleImage: "/visualizer/vehicles/visualizer-tundra-2010-sr5-white-side.png",
   wheelImage: "/visualizer/wheels/test-wheel.png",
-  frontWheel: { x: 305, y: 595, radius: 100 },
-  rearWheel: { x: 1355, y: 600, radius: 100 },
+  frontWheel: { x: 255, y: 595, radius: 100 },
+  rearWheel: { x: 1334, y: 600, radius: 100 },
   tire: {
-    outerDiameterScale: 1.35,
+    outerDiameterScale: 1.30,
     sidewallThickness: 30,
     profileRatio: 1.0,
   },
