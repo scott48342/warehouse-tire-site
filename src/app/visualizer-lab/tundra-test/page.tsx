@@ -26,14 +26,16 @@ interface WheelPosition {
 }
 
 interface TireSettings {
-  diameter: number;            // Overall tire diameter in inches (32, 33, 35, 37)
-  // sidewall is calculated: (tireDiameter - wheelDiameter) / 2
+  outerDiameterScale: number;  // Overall tire size (1.0 = same as wheel)
+  sidewallThickness: number;   // Sidewall height in pixels (natural coords)
+  profileRatio: number;        // Visual aspect ratio simulation
 }
 
 interface LiftPreset {
   name: string;
   bodyOffset: number;
-  tireDiameter: number;  // Typical tire size for this lift level
+  tireScale: number;
+  sidewallBoost: number;
 }
 
 interface VisualizerConfig {
@@ -44,7 +46,6 @@ interface VisualizerConfig {
   tire: TireSettings;
   bodyLift: number;
   wheelScale: number;
-  wheelDiameter: number;  // Wheel size in inches (17, 18, 20, 22, 24)
   // Visual effects
   showTireShadow: boolean;
   showWheelShadow: boolean;
@@ -59,36 +60,15 @@ interface VisualizerConfig {
 // ============================================================================
 
 const LIFT_PRESETS: LiftPreset[] = [
-  { name: "Stock", bodyOffset: 0, tireDiameter: 32 },
-  { name: "Leveling Kit", bodyOffset: -15, tireDiameter: 33 },
-  { name: "4\" Lift", bodyOffset: -35, tireDiameter: 35 },
-  { name: "6\" Lift", bodyOffset: -55, tireDiameter: 37 },
-];
-
-// Tire diameter options
-const TIRE_DIAMETERS = [
-  { size: 30, label: '30"' },
-  { size: 32, label: '32"' },
-  { size: 33, label: '33"' },
-  { size: 35, label: '35"' },
-  { size: 37, label: '37"' },
-  { size: 40, label: '40"' },
+  { name: "Stock", bodyOffset: 0, tireScale: 1.0, sidewallBoost: 0 },
+  { name: "Leveling Kit", bodyOffset: -15, tireScale: 1.05, sidewallBoost: 5 },
+  { name: "4\" Lift", bodyOffset: -35, tireScale: 1.15, sidewallBoost: 15 },
+  { name: "6\" Lift", bodyOffset: -55, tireScale: 1.25, sidewallBoost: 25 },
 ];
 
 const WHEEL_ASSETS = [
   { name: "Test Wheel", path: "/visualizer/wheels/test-wheel.png" },
   { name: "Basic Wheel", path: "/visualizer/wheels/wheel-basic.png" },
-];
-
-// Reference diameter for wheel scaling (18" is our baseline)
-const REFERENCE_WHEEL_DIAMETER = 18;
-
-const WHEEL_DIAMETERS = [
-  { size: 17, label: '17"' },
-  { size: 18, label: '18"' },
-  { size: 20, label: '20"' },
-  { size: 22, label: '22"' },
-  { size: 24, label: '24"' },
 ];
 
 const DEFAULT_CONFIG: VisualizerConfig = {
@@ -97,11 +77,12 @@ const DEFAULT_CONFIG: VisualizerConfig = {
   frontWheel: { x: 260, y: 622, radius: 92 },
   rearWheel: { x: 1385, y: 627, radius: 92 },
   tire: {
-    diameter: 32,  // 32" overall tire diameter (stock)
+    outerDiameterScale: 1.35,
+    sidewallThickness: 30,
+    profileRatio: 1.0,
   },
   bodyLift: 0,
   wheelScale: 1.0,
-  wheelDiameter: 18,  // Default 18" wheel
   showTireShadow: true,
   showWheelShadow: true,
   shadowOpacity: 0.4,
@@ -135,67 +116,64 @@ function WheelTireRenderer({
   // Calculate rendered positions
   const centerX = position.x * scaleX;
   const centerY = position.y * scaleY;
+  const wheelRadius = position.radius * scale * config.wheelScale;
   
-  // Convert inches to pixels
-  // position.radius (92px) represents an 18" wheel radius in pixels
-  // So: pixelsPerInchRadius = 92 / 9 (since 18" diameter = 9" radius)
-  const pixelsPerInchRadius = position.radius / (REFERENCE_WHEEL_DIAMETER / 2);
+  // Tire dimensions
+  const tireOuterRadius = wheelRadius * config.tire.outerDiameterScale;
+  const sidewallRendered = config.tire.sidewallThickness * scale;
   
-  // Wheel radius in pixels (based on selected wheel diameter)
-  const wheelRadius = (config.wheelDiameter / 2) * pixelsPerInchRadius * scale * config.wheelScale;
+  // Actual tire outer radius (wheel + sidewall)
+  const actualTireRadius = wheelRadius + sidewallRendered;
   
-  // Tire outer radius in pixels (based on tire diameter - INDEPENDENT of wheel)
-  const tireRadius = (config.tire.diameter / 2) * pixelsPerInchRadius * scale;
+  // Use the larger of calculated or scaled outer radius
+  const finalTireRadius = Math.max(tireOuterRadius, actualTireRadius);
   
-  // Ensure tire is at least as big as wheel (sanity check)
-  const finalTireRadius = Math.max(tireRadius, wheelRadius + 5);
-  
-  // OEM wheel mask - covers the original wheel in the image
-  // This mask MOVES with the body lift to cover the OEM wheels
-  const oemWheelRadius = position.radius * scale * 1.15; // Slightly larger to fully cover OEM
+  // OEM wheel mask radius - slightly larger to fully cover original wheel
+  const oemMaskRadius = position.radius * scale * 1.1;
   
   return (
     <>
-      {/* OEM Wheel Mask - moves WITH body to cover original wheels */}
+      {/* OEM Wheel Mask - covers original wheels as body lifts */}
+      {/* This mask moves WITH the body to hide the OEM wheels */}
       <div
         className="absolute pointer-events-none rounded-full"
         style={{
-          left: centerX - oemWheelRadius,
-          top: centerY - oemWheelRadius + config.bodyLift * scaleY, // Moves with body
-          width: oemWheelRadius * 2,
-          height: oemWheelRadius * 2,
-          background: "radial-gradient(circle, #1a1a1a 0%, #0a0a0a 70%, #000 100%)",
-          zIndex: 15, // Above vehicle (10) but below our wheel overlay (20)
+          left: centerX - oemMaskRadius,
+          top: centerY - oemMaskRadius + config.bodyLift * scaleY, // Moves with body
+          width: oemMaskRadius * 2,
+          height: oemMaskRadius * 2,
+          background: "radial-gradient(circle, #1a1a1a 0%, #0a0a0a 60%, #000 100%)",
+          zIndex: 15, // Above vehicle (10) but below our overlay (20)
         }}
       />
       
-      {/* Main wheel/tire overlay - stays FIXED */}
+      {/* Main wheel/tire overlay - stays FIXED at ground level */}
       <div
         className="absolute pointer-events-none"
         style={{
           left: centerX - finalTireRadius,
-          top: centerY - finalTireRadius, // Wheels stay FIXED
+          top: centerY - finalTireRadius, // NO bodyLift - wheels stay at ground
           width: finalTireRadius * 2,
           height: finalTireRadius * 2,
-          zIndex: 20, // Above vehicle and mask
+          zIndex: 20,
         }}
       >
-        {/* Tire Shadow (bottom layer) */}
-        {config.showTireShadow && (
-          <div
-            className="absolute rounded-full"
-            style={{
-              left: 6,
-              top: 8,
-              width: finalTireRadius * 2,
-              height: finalTireRadius * 2,
-              background: `rgba(0,0,0,${config.shadowOpacity + 0.2})`,
-              filter: `blur(${config.shadowBlur + 4}px)`,
-            }}
-          />
-        )}
-        
-        {/* Tire (black ring behind wheel) - MORE VISIBLE */}
+      {/* Tire Shadow (bottom layer) */}
+      {config.showTireShadow && (
+        <div
+          className="absolute rounded-full"
+          style={{
+            left: 4,
+            top: 6,
+            width: finalTireRadius * 2,
+            height: finalTireRadius * 2,
+            background: `rgba(0,0,0,${config.shadowOpacity})`,
+            filter: `blur(${config.shadowBlur}px)`,
+          }}
+        />
+      )}
+      
+      {/* Tire (black ring behind wheel) */}
       <div
         className="absolute rounded-full"
         style={{
@@ -203,22 +181,8 @@ function WheelTireRenderer({
           top: 0,
           width: finalTireRadius * 2,
           height: finalTireRadius * 2,
-          background: "radial-gradient(circle, #222 0%, #111 50%, #000 100%)",
-          boxShadow: "inset 0 0 15px rgba(0,0,0,0.9), inset 0 0 30px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.8)",
-          border: "3px solid #1a1a1a",
-        }}
-      />
-      
-      {/* Tire sidewall detail - visible ring */}
-      <div
-        className="absolute rounded-full"
-        style={{
-          left: 4,
-          top: 4,
-          width: finalTireRadius * 2 - 8,
-          height: finalTireRadius * 2 - 8,
-          border: "2px solid #333",
-          boxShadow: "inset 0 0 10px rgba(50,50,50,0.5)",
+          background: "radial-gradient(circle, #1a1a1a 0%, #0d0d0d 70%, #000 100%)",
+          boxShadow: "inset 0 0 20px rgba(0,0,0,0.8), inset 0 0 40px rgba(0,0,0,0.4)",
         }}
       />
       
@@ -348,30 +312,6 @@ export default function TundraTestPage() {
     }
   }, []);
 
-  // Handle already-cached images - check periodically until ref is available
-  useEffect(() => {
-    const checkImage = () => {
-      const img = imageRef.current;
-      if (img && img.complete && img.naturalWidth > 0 && !imageLoaded) {
-        setNaturalSize({ width: img.naturalWidth, height: img.naturalHeight });
-        setRenderedSize({ width: img.clientWidth, height: img.clientHeight });
-        setImageLoaded(true);
-        return true;
-      }
-      return false;
-    };
-    
-    // Check immediately
-    if (checkImage()) return;
-    
-    // Also check after a short delay (for SSR hydration)
-    const timeouts = [50, 150, 300, 500].map(ms => 
-      setTimeout(checkImage, ms)
-    );
-    
-    return () => timeouts.forEach(clearTimeout);
-  }, [config.vehicleImage, imageLoaded]);
-
   // Update rendered size on resize
   useEffect(() => {
     const updateSize = () => {
@@ -430,9 +370,10 @@ export default function TundraTestPage() {
     setConfig((prev) => ({
       ...prev,
       bodyLift: preset.bodyOffset,
+      wheelScale: preset.tireScale,
       tire: {
         ...prev.tire,
-        diameter: preset.tireDiameter,
+        sidewallThickness: DEFAULT_CONFIG.tire.sidewallThickness + preset.sidewallBoost,
       },
     }));
   };
@@ -642,38 +583,14 @@ export default function TundraTestPage() {
                     ))}
                   </select>
                   
-                  {/* Wheel Diameter Selector */}
-                  <div className="mt-4">
-                    <label className="text-sm text-neutral-400 block mb-2">
-                      Wheel Diameter: {config.wheelDiameter}"
-                    </label>
-                    <div className="flex gap-2">
-                      {WHEEL_DIAMETERS.map((d) => (
-                        <button
-                          key={d.size}
-                          onClick={() =>
-                            setConfig((prev) => ({ ...prev, wheelDiameter: d.size }))
-                          }
-                          className={`flex-1 px-2 py-1.5 rounded text-sm font-medium transition-colors ${
-                            config.wheelDiameter === d.size
-                              ? "bg-red-600 text-white"
-                              : "bg-neutral-700 hover:bg-neutral-600 text-neutral-300"
-                          }`}
-                        >
-                          {d.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  
                   <div className="mt-3">
                     <label className="text-sm text-neutral-400">
-                      Fine Tune Scale: {config.wheelScale.toFixed(2)}
+                      Wheel Scale: {config.wheelScale.toFixed(2)}
                     </label>
                     <input
                       type="range"
-                      min={0.8}
-                      max={1.2}
+                      min={0.7}
+                      max={1.5}
                       step={0.01}
                       value={config.wheelScale}
                       onChange={(e) =>
@@ -681,9 +598,6 @@ export default function TundraTestPage() {
                       }
                       className="w-full accent-red-500"
                     />
-                    <p className="text-xs text-neutral-500 mt-1">
-                      Adjust if wheel looks too big/small after selecting diameter
-                    </p>
                   </div>
                 </div>
 
@@ -772,46 +686,83 @@ export default function TundraTestPage() {
             {/* Tires Tab */}
             {activeTab === "tires" && (
               <div className="bg-neutral-800 rounded-lg p-4">
-                <h3 className="font-semibold text-neutral-300 mb-3">🛞 Tire Diameter</h3>
-                <div className="space-y-4">
-                  {/* Tire Diameter Display */}
-                  <div className="text-center">
-                    <span className="text-4xl font-bold text-white">{config.tire.diameter}"</span>
-                    <p className="text-sm text-neutral-400 mt-1">Overall Tire Diameter</p>
-                  </div>
-                  
-                  {/* Tire Diameter Buttons */}
-                  <div className="grid grid-cols-3 gap-2">
-                    {TIRE_DIAMETERS.map((t) => (
-                      <button
-                        key={t.size}
-                        onClick={() => updateTire("diameter", t.size)}
-                        className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
-                          config.tire.diameter === t.size
-                            ? "bg-red-600 text-white"
-                            : "bg-neutral-700 hover:bg-neutral-600 text-neutral-300"
-                        }`}
-                      >
-                        {t.label}
-                      </button>
-                    ))}
-                  </div>
-                  
-                  {/* Calculated Sidewall Info */}
-                  <div className="pt-3 border-t border-neutral-700">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-neutral-400">Wheel:</span>
-                      <span className="text-white">{config.wheelDiameter}"</span>
-                    </div>
-                    <div className="flex justify-between text-sm mt-1">
-                      <span className="text-neutral-400">Sidewall:</span>
-                      <span className="text-white">
-                        {((config.tire.diameter - config.wheelDiameter) / 2).toFixed(1)}"
-                      </span>
-                    </div>
-                    <p className="text-xs text-neutral-500 mt-2">
-                      Sidewall = (Tire - Wheel) / 2
+                <h3 className="font-semibold text-neutral-300 mb-3">🛞 Tire Settings</h3>
+                <div className="space-y-3">
+                  <div>
+                    <label className="text-sm text-neutral-400">
+                      Outer Diameter Scale: {config.tire.outerDiameterScale.toFixed(2)}
+                    </label>
+                    <input
+                      type="range"
+                      min={1.0}
+                      max={2.0}
+                      step={0.01}
+                      value={config.tire.outerDiameterScale}
+                      onChange={(e) => updateTire("outerDiameterScale", Number(e.target.value))}
+                      className="w-full accent-red-500"
+                    />
+                    <p className="text-xs text-neutral-500 mt-1">
+                      1.0 = same as wheel, 1.5 = 50% larger tire
                     </p>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm text-neutral-400">
+                      Sidewall Thickness: {config.tire.sidewallThickness}px
+                    </label>
+                    <input
+                      type="range"
+                      min={10}
+                      max={80}
+                      value={config.tire.sidewallThickness}
+                      onChange={(e) => updateTire("sidewallThickness", Number(e.target.value))}
+                      className="w-full accent-red-500"
+                    />
+                    <p className="text-xs text-neutral-500 mt-1">
+                      Low = low-profile, High = meaty truck tire
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-neutral-700">
+                    <p className="text-sm text-neutral-300 mb-2">Quick Tire Sizes:</p>
+                    <div className="flex gap-2 flex-wrap">
+                      <button
+                        onClick={() => {
+                          updateTire("outerDiameterScale", 1.2);
+                          updateTire("sidewallThickness", 20);
+                        }}
+                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
+                      >
+                        20" + Low Profile
+                      </button>
+                      <button
+                        onClick={() => {
+                          updateTire("outerDiameterScale", 1.35);
+                          updateTire("sidewallThickness", 35);
+                        }}
+                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
+                      >
+                        20" + 33" Tire
+                      </button>
+                      <button
+                        onClick={() => {
+                          updateTire("outerDiameterScale", 1.5);
+                          updateTire("sidewallThickness", 50);
+                        }}
+                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
+                      >
+                        17" + 35" Tire
+                      </button>
+                      <button
+                        onClick={() => {
+                          updateTire("outerDiameterScale", 1.6);
+                          updateTire("sidewallThickness", 60);
+                        }}
+                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
+                      >
+                        17" + 37" Tire
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
