@@ -26,16 +26,14 @@ interface WheelPosition {
 }
 
 interface TireSettings {
-  outerDiameterScale: number;  // Overall tire size (1.0 = same as wheel)
-  sidewallThickness: number;   // Sidewall height in pixels (natural coords)
-  profileRatio: number;        // Visual aspect ratio simulation
+  diameter: number;            // Overall tire diameter in inches (32, 33, 35, 37)
+  // sidewall is calculated: (tireDiameter - wheelDiameter) / 2
 }
 
 interface LiftPreset {
   name: string;
   bodyOffset: number;
-  tireScale: number;
-  sidewallBoost: number;
+  tireDiameter: number;  // Typical tire size for this lift level
 }
 
 interface VisualizerConfig {
@@ -61,10 +59,20 @@ interface VisualizerConfig {
 // ============================================================================
 
 const LIFT_PRESETS: LiftPreset[] = [
-  { name: "Stock", bodyOffset: 0, tireScale: 1.0, sidewallBoost: 0 },
-  { name: "Leveling Kit", bodyOffset: -15, tireScale: 1.05, sidewallBoost: 5 },
-  { name: "4\" Lift", bodyOffset: -35, tireScale: 1.15, sidewallBoost: 15 },
-  { name: "6\" Lift", bodyOffset: -55, tireScale: 1.25, sidewallBoost: 25 },
+  { name: "Stock", bodyOffset: 0, tireDiameter: 32 },
+  { name: "Leveling Kit", bodyOffset: -15, tireDiameter: 33 },
+  { name: "4\" Lift", bodyOffset: -35, tireDiameter: 35 },
+  { name: "6\" Lift", bodyOffset: -55, tireDiameter: 37 },
+];
+
+// Tire diameter options
+const TIRE_DIAMETERS = [
+  { size: 30, label: '30"' },
+  { size: 32, label: '32"' },
+  { size: 33, label: '33"' },
+  { size: 35, label: '35"' },
+  { size: 37, label: '37"' },
+  { size: 40, label: '40"' },
 ];
 
 const WHEEL_ASSETS = [
@@ -89,9 +97,7 @@ const DEFAULT_CONFIG: VisualizerConfig = {
   frontWheel: { x: 260, y: 622, radius: 92 },
   rearWheel: { x: 1385, y: 627, radius: 92 },
   tire: {
-    outerDiameterScale: 1.35,
-    sidewallThickness: 30,
-    profileRatio: 1.0,
+    diameter: 32,  // 32" overall tire diameter (stock)
   },
   bodyLift: 0,
   wheelScale: 1.0,
@@ -130,19 +136,19 @@ function WheelTireRenderer({
   const centerX = position.x * scaleX;
   const centerY = position.y * scaleY;
   
-  // Wheel diameter scaling (relative to 18" reference)
-  const diameterScale = config.wheelDiameter / REFERENCE_WHEEL_DIAMETER;
-  const wheelRadius = position.radius * scale * config.wheelScale * diameterScale;
+  // Convert inches to pixels
+  // position.radius (92px) represents an 18" wheel radius in pixels
+  // So: pixelsPerInchRadius = 92 / 9 (since 18" diameter = 9" radius)
+  const pixelsPerInchRadius = position.radius / (REFERENCE_WHEEL_DIAMETER / 2);
   
-  // Tire dimensions
-  const tireOuterRadius = wheelRadius * config.tire.outerDiameterScale;
-  const sidewallRendered = config.tire.sidewallThickness * scale;
+  // Wheel radius in pixels (based on selected wheel diameter)
+  const wheelRadius = (config.wheelDiameter / 2) * pixelsPerInchRadius * scale * config.wheelScale;
   
-  // Actual tire outer radius (wheel + sidewall)
-  const actualTireRadius = wheelRadius + sidewallRendered;
+  // Tire outer radius in pixels (based on tire diameter - INDEPENDENT of wheel)
+  const tireRadius = (config.tire.diameter / 2) * pixelsPerInchRadius * scale;
   
-  // Use the larger of calculated or scaled outer radius
-  const finalTireRadius = Math.max(tireOuterRadius, actualTireRadius);
+  // Ensure tire is at least as big as wheel (sanity check)
+  const finalTireRadius = Math.max(tireRadius, wheelRadius + 5);
   
   return (
     <div
@@ -404,10 +410,9 @@ export default function TundraTestPage() {
     setConfig((prev) => ({
       ...prev,
       bodyLift: preset.bodyOffset,
-      wheelScale: preset.tireScale,
       tire: {
         ...prev.tire,
-        sidewallThickness: DEFAULT_CONFIG.tire.sidewallThickness + preset.sidewallBoost,
+        diameter: preset.tireDiameter,
       },
     }));
   };
@@ -747,83 +752,46 @@ export default function TundraTestPage() {
             {/* Tires Tab */}
             {activeTab === "tires" && (
               <div className="bg-neutral-800 rounded-lg p-4">
-                <h3 className="font-semibold text-neutral-300 mb-3">🛞 Tire Settings</h3>
-                <div className="space-y-3">
-                  <div>
-                    <label className="text-sm text-neutral-400">
-                      Outer Diameter Scale: {config.tire.outerDiameterScale.toFixed(2)}
-                    </label>
-                    <input
-                      type="range"
-                      min={1.0}
-                      max={2.0}
-                      step={0.01}
-                      value={config.tire.outerDiameterScale}
-                      onChange={(e) => updateTire("outerDiameterScale", Number(e.target.value))}
-                      className="w-full accent-red-500"
-                    />
-                    <p className="text-xs text-neutral-500 mt-1">
-                      1.0 = same as wheel, 1.5 = 50% larger tire
-                    </p>
+                <h3 className="font-semibold text-neutral-300 mb-3">🛞 Tire Diameter</h3>
+                <div className="space-y-4">
+                  {/* Tire Diameter Display */}
+                  <div className="text-center">
+                    <span className="text-4xl font-bold text-white">{config.tire.diameter}"</span>
+                    <p className="text-sm text-neutral-400 mt-1">Overall Tire Diameter</p>
                   </div>
                   
-                  <div>
-                    <label className="text-sm text-neutral-400">
-                      Sidewall Thickness: {config.tire.sidewallThickness}px
-                    </label>
-                    <input
-                      type="range"
-                      min={10}
-                      max={80}
-                      value={config.tire.sidewallThickness}
-                      onChange={(e) => updateTire("sidewallThickness", Number(e.target.value))}
-                      className="w-full accent-red-500"
-                    />
-                    <p className="text-xs text-neutral-500 mt-1">
-                      Low = low-profile, High = meaty truck tire
-                    </p>
+                  {/* Tire Diameter Buttons */}
+                  <div className="grid grid-cols-3 gap-2">
+                    {TIRE_DIAMETERS.map((t) => (
+                      <button
+                        key={t.size}
+                        onClick={() => updateTire("diameter", t.size)}
+                        className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
+                          config.tire.diameter === t.size
+                            ? "bg-red-600 text-white"
+                            : "bg-neutral-700 hover:bg-neutral-600 text-neutral-300"
+                        }`}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
                   </div>
-
+                  
+                  {/* Calculated Sidewall Info */}
                   <div className="pt-3 border-t border-neutral-700">
-                    <p className="text-sm text-neutral-300 mb-2">Quick Tire Sizes:</p>
-                    <div className="flex gap-2 flex-wrap">
-                      <button
-                        onClick={() => {
-                          updateTire("outerDiameterScale", 1.2);
-                          updateTire("sidewallThickness", 20);
-                        }}
-                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
-                      >
-                        20" + Low Profile
-                      </button>
-                      <button
-                        onClick={() => {
-                          updateTire("outerDiameterScale", 1.35);
-                          updateTire("sidewallThickness", 35);
-                        }}
-                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
-                      >
-                        20" + 33" Tire
-                      </button>
-                      <button
-                        onClick={() => {
-                          updateTire("outerDiameterScale", 1.5);
-                          updateTire("sidewallThickness", 50);
-                        }}
-                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
-                      >
-                        17" + 35" Tire
-                      </button>
-                      <button
-                        onClick={() => {
-                          updateTire("outerDiameterScale", 1.6);
-                          updateTire("sidewallThickness", 60);
-                        }}
-                        className="px-3 py-1 bg-neutral-700 hover:bg-neutral-600 rounded text-sm"
-                      >
-                        17" + 37" Tire
-                      </button>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-neutral-400">Wheel:</span>
+                      <span className="text-white">{config.wheelDiameter}"</span>
                     </div>
+                    <div className="flex justify-between text-sm mt-1">
+                      <span className="text-neutral-400">Sidewall:</span>
+                      <span className="text-white">
+                        {((config.tire.diameter - config.wheelDiameter) / 2).toFixed(1)}"
+                      </span>
+                    </div>
+                    <p className="text-xs text-neutral-500 mt-2">
+                      Sidewall = (Tire - Wheel) / 2
+                    </p>
                   </div>
                 </div>
               </div>
