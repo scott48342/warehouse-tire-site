@@ -74,8 +74,8 @@ const WHEEL_ASSETS = [
 const DEFAULT_CONFIG: VisualizerConfig = {
   vehicleImage: "/visualizer/vehicles/visualizer-tundra-2010-sr5-white-side.png",
   wheelImage: "/visualizer/wheels/test-wheel.png",
-  frontWheel: { x: 260, y: 622, radius: 92 },
-  rearWheel: { x: 1385, y: 627, radius: 92 },
+  frontWheel: { x: 305, y: 595, radius: 100 },
+  rearWheel: { x: 1355, y: 600, radius: 100 },
   tire: {
     outerDiameterScale: 1.35,
     sidewallThickness: 30,
@@ -311,6 +311,16 @@ export default function TundraTestPage() {
       }
     }
   }, []);
+
+  // Handle already-cached images (onLoad fires before React attaches handler)
+  useEffect(() => {
+    const img = imageRef.current;
+    if (img && img.complete && img.naturalWidth > 0) {
+      setNaturalSize({ width: img.naturalWidth, height: img.naturalHeight });
+      setRenderedSize({ width: img.clientWidth, height: img.clientHeight });
+      setImageLoaded(true);
+    }
+  }, [config.vehicleImage]);
 
   // Update rendered size on resize
   useEffect(() => {
