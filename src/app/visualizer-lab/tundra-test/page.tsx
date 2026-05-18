@@ -46,6 +46,7 @@ interface VisualizerConfig {
   tire: TireSettings;
   bodyLift: number;
   wheelScale: number;
+  wheelDiameter: number;  // Wheel size in inches (17, 18, 20, 22, 24)
   // Visual effects
   showTireShadow: boolean;
   showWheelShadow: boolean;
@@ -65,6 +66,10 @@ const LIFT_PRESETS: LiftPreset[] = [
   { name: "4\" Lift", bodyOffset: -35, tireScale: 1.15, sidewallBoost: 15 },
   { name: "6\" Lift", bodyOffset: -55, tireScale: 1.25, sidewallBoost: 25 },
 ];
+
+// Wheel diameter options - 18" is the stock baseline
+const WHEEL_DIAMETERS = [17, 18, 20, 22, 24];
+const STOCK_WHEEL_DIAMETER = 18;
 
 const WHEEL_ASSETS = [
   { name: "Test Wheel", path: "/visualizer/wheels/test-wheel.png" },
@@ -88,6 +93,7 @@ const DEFAULT_CONFIG: VisualizerConfig = {
   },
   bodyLift: 0,
   wheelScale: 1.0,
+  wheelDiameter: 18,  // Stock 18" wheel
   showTireShadow: true,
   showWheelShadow: true,
   shadowOpacity: 0.4,
@@ -121,17 +127,24 @@ function WheelTireRenderer({
   // Calculate rendered positions
   const centerX = position.x * scaleX;
   const centerY = position.y * scaleY;
-  const wheelRadius = position.radius * scale * config.wheelScale;
   
-  // Tire dimensions
-  const tireOuterRadius = wheelRadius * config.tire.outerDiameterScale;
-  const sidewallRendered = config.tire.sidewallThickness * scale;
+  // PLUS-SIZING LOGIC:
+  // - Tire outer diameter stays FIXED (stock baseline)
+  // - Wheel diameter changes based on selection
+  // - Sidewall automatically adjusts (bigger wheel = thinner sidewall)
   
-  // Actual tire outer radius (wheel + sidewall)
-  const actualTireRadius = wheelRadius + sidewallRendered;
+  // Stock wheel radius (18" baseline)
+  const stockWheelRadius = position.radius * scale * config.wheelScale;
   
-  // Use the larger of calculated or scaled outer radius
-  const finalTireRadius = Math.max(tireOuterRadius, actualTireRadius);
+  // Tire outer radius - FIXED based on stock setup
+  const finalTireRadius = stockWheelRadius * config.tire.outerDiameterScale;
+  
+  // Wheel radius scales with diameter selection (18" = 1.0x, 20" = 1.11x, 22" = 1.22x, etc.)
+  const wheelDiameterScale = config.wheelDiameter / STOCK_WHEEL_DIAMETER;
+  const wheelRadius = stockWheelRadius * wheelDiameterScale;
+  
+  // Sidewall is the visual difference (auto-calculated)
+  // Bigger wheel = smaller sidewall, but tire outer stays same
   
   // OEM wheel mask radius - slightly larger to fully cover original wheel
   const oemMaskRadius = position.radius * scale * 1.1;
@@ -598,21 +611,29 @@ export default function TundraTestPage() {
                     ))}
                   </select>
                   
-                  <div className="mt-3">
-                    <label className="text-sm text-neutral-400">
-                      Wheel Scale: {config.wheelScale.toFixed(2)}
+                  {/* Wheel Diameter Selector */}
+                  <div className="mt-4">
+                    <label className="text-sm text-neutral-400 block mb-2">
+                      Wheel Diameter: {config.wheelDiameter}"
                     </label>
-                    <input
-                      type="range"
-                      min={0.7}
-                      max={1.5}
-                      step={0.01}
-                      value={config.wheelScale}
-                      onChange={(e) =>
-                        setConfig((prev) => ({ ...prev, wheelScale: Number(e.target.value) }))
-                      }
-                      className="w-full accent-red-500"
-                    />
+                    <div className="flex flex-wrap gap-2">
+                      {WHEEL_DIAMETERS.map((diameter) => (
+                        <button
+                          key={diameter}
+                          onClick={() => setConfig((prev) => ({ ...prev, wheelDiameter: diameter }))}
+                          className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
+                            config.wheelDiameter === diameter
+                              ? "bg-red-600 text-white"
+                              : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                          }`}
+                        >
+                          {diameter}"
+                        </button>
+                      ))}
+                    </div>
+                    <p className="text-xs text-neutral-500 mt-2">
+                      18" = Stock • Tire diameter stays the same
+                    </p>
                   </div>
                 </div>
 
