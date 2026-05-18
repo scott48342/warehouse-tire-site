@@ -1,0 +1,17 @@
+{
+  "vehicle": "2010 Toyota Tundra SR5",
+  "slug": "2010-toyota-tundra-sr5",
+  "image": "/visualizer/vehicles/visualizer-tundra-2010-sr5-white-side.png",
+  "frontWheel": {
+    "x": 260,
+    "y": 622,
+    "radius": 92
+  },
+  "rearWheel": {
+    "x": 1385,
+    "y": 627,
+    "radius": 92
+  },
+  "vehicleVerticalOffset": 0,
+  "tireScale": 1
+}
