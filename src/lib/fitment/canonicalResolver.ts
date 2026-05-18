@@ -488,9 +488,16 @@ export async function resolveVehicleFitment(
 
     // ─────────────────────────────────────────────────────────────────────────
     // STEP 2: Exact canonical displayTrim match (atomic trims only)
+    // 
+    // 2026-05-18: For BMW model numbers, we skip the fast-path exact match
+    // and always go through STEP 3 to check for related variants with
+    // different fitments (e.g., "328i" vs "328i Sport Package").
     // ─────────────────────────────────────────────────────────────────────────
-    if (requestedTrim) {
-      // First try exact match on non-grouped records
+    const isBmwModelNumber = normalizedMake.toLowerCase() === "bmw" && 
+                              /^\d{3}[a-z]*$/i.test(requestedTrim || "");
+    
+    if (requestedTrim && !isBmwModelNumber) {
+      // First try exact match on non-grouped records (fast path for non-BMW)
       const [exactTrimMatch] = await db
         .select()
         .from(vehicleFitments)
@@ -517,6 +524,11 @@ export async function resolveVehicleFitment(
           fitment: withOverrides,
         };
       }
+    }
+    
+    // For BMW model numbers, log that we're checking for variants
+    if (isBmwModelNumber) {
+      console.log(`[canonicalResolver] BMW model number "${requestedTrim}" - checking for related variants before resolving`);
     }
 
     // ─────────────────────────────────────────────────────────────────────────
@@ -569,6 +581,79 @@ export async function resolveVehicleFitment(
         );
         
         if (matchedAtomic) {
+          // ─────────────────────────────────────────────────────────────────────
+          // BMW VARIANT CHECK (2026-05-18)
+          // 
+          // Before returning exact match, check if there are related variants
+          // (e.g., "328i Sport Package" when user asked for "328i") that have
+          // DIFFERENT fitments. If so, ask for clarification.
+          // 
+          // This prevents giving square fitment to a Sport Package customer.
+          // ─────────────────────────────────────────────────────────────────────
+          const matchedLower = matchedAtomic.toLowerCase();
+          const relatedVariants: Array<{ trim: string; tireSizes: string[]; isStaggered: boolean }> = [];
+          
+          // Find other trims that start with the same root
+          for (const otherCandidate of candidates) {
+            for (const otherTrim of otherCandidate.atomicTrims) {
+              const otherLower = otherTrim.toLowerCase();
+              // Related if: other trim starts with matched trim + space/hyphen
+              // e.g., "328i sport package" starts with "328i "
+              if (otherLower !== matchedLower && 
+                  (otherLower.startsWith(matchedLower + " ") || 
+                   otherLower.startsWith(matchedLower + "-"))) {
+                // Check if it's staggered (different front/rear sizes or position markers)
+                const sizes = otherCandidate.tireSizes;
+                const isStaggered = sizes.length === 2 && sizes[0] !== sizes[1];
+                relatedVariants.push({ 
+                  trim: otherTrim, 
+                  tireSizes: sizes,
+                  isStaggered 
+                });
+              }
+            }
+          }
+          
+          // If related variants exist with DIFFERENT fitments, require clarification
+          if (relatedVariants.length > 0) {
+            const matchedSizes = JSON.stringify(candidate.tireSizes.sort());
+            const hasDifferentFitment = relatedVariants.some(v => 
+              JSON.stringify(v.tireSizes.sort()) !== matchedSizes
+            );
+            
+            if (hasDifferentFitment) {
+              // Build list of all variants including the matched one
+              const allVariants = [
+                { trim: matchedAtomic, tireSizes: candidate.tireSizes, isStaggered: candidate.tireSizes.length === 2 && candidate.tireSizes[0] !== candidate.tireSizes[1] },
+                ...relatedVariants
+              ];
+              
+              console.log(`[canonicalResolver] BMW variant clarification needed: "${matchedAtomic}" has ${relatedVariants.length} related variant(s) with different fitment`);
+              
+              return {
+                ...result,
+                matchedBy: "blocked",
+                confidence: "low",
+                debug: {
+                  ...result.debug,
+                  fallbackBlockedReason: `Multiple "${matchedAtomic}" variants exist with different fitments. Please specify which version.`,
+                  bmwVariantClarification: {
+                    requestedTrim: matchedAtomic,
+                    variants: allVariants.map(v => ({
+                      trim: v.trim,
+                      tireSizes: v.tireSizes,
+                      isStaggered: v.isStaggered,
+                      description: v.isStaggered 
+                        ? `Staggered: F:${v.tireSizes[0]} R:${v.tireSizes[1]}`
+                        : `Square: ${v.tireSizes.join(", ")}`
+                    }))
+                  }
+                },
+              };
+            }
+          }
+          
+          // No conflicting variants - safe to return exact match
           const withOverrides = await applyOverrides(candidate.record);
           return {
             ...result,

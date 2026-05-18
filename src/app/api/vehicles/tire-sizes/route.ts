@@ -205,13 +205,23 @@ interface DbFitmentResult {
 // 2026-05-04: Enhanced result type for trim-blocked fallback
 interface TrimBlockedResult {
   blocked: true;
-  reason: "inconsistent_sizes";
+  reason: "inconsistent_sizes" | "bmw_variant_clarification";
   availableTrims: Array<{
     modificationId: string;
     displayTrim: string;
     tireSizes: string[];
   }>;
   requestedTrim: string;
+  // 2026-05-18: BMW variant clarification
+  bmwVariantClarification?: {
+    requestedTrim: string;
+    variants: Array<{
+      trim: string;
+      tireSizes: string[];
+      isStaggered: boolean;
+      description: string;
+    }>;
+  };
 }
 
 async function getDbFitmentSizes(
@@ -242,15 +252,19 @@ async function getDbFitmentSizes(
     if (resolveResult.matchedBy === "blocked") {
       console.warn(`[tire-sizes] ⚠️ CANONICAL BLOCKED: ${year} ${make} ${model} → ${resolveResult.debug.fallbackBlockedReason}`);
       
+      // Check for BMW variant clarification (2026-05-18)
+      const bmwVariantInfo = (resolveResult.debug as any).bmwVariantClarification;
+      
       return {
         blocked: true,
-        reason: "inconsistent_sizes",
+        reason: bmwVariantInfo ? "bmw_variant_clarification" : "inconsistent_sizes",
         availableTrims: resolveResult.debug.candidateTrims.map(c => ({
           modificationId: c.modificationId,
           displayTrim: c.atomicTrims[0], // Use first atomic trim for display
           tireSizes: c.tireSizes,
         })),
         requestedTrim: modification || trim || "",
+        bmwVariantClarification: bmwVariantInfo,
       };
     }
     
@@ -448,24 +462,42 @@ export async function GET(req: Request) {
       // 1. We couldn't find the exact trim requested
       // 2. Different trims have different tire sizes
       // 3. Here are the available trims to choose from
+      
+      // 2026-05-18: Check for BMW variant clarification
+      const isBmwVariantClarification = dbFitment.reason === "bmw_variant_clarification";
+      const bmwVariants = dbFitment.bmwVariantClarification;
+      
       const debugInfo: TireSizeDebugInfo = {
         // Scott's required audit fields
         requestedTrim: trimParam || null,
         normalizedRequestedTrim: modification || null,
-        candidateTrims: dbFitment.availableTrims.map(t => t.displayTrim),
+        candidateTrims: isBmwVariantClarification && bmwVariants
+          ? bmwVariants.variants.map(v => v.trim)
+          : dbFitment.availableTrims.map(t => t.displayTrim),
         matchedTrim: null, // Not matched - fallback blocked
         matchedBy: null,
         modificationId: null,
         tireSizesFound: [],
-        fallbackBlockedReason: `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes.`,
+        fallbackBlockedReason: isBmwVariantClarification
+          ? `Multiple "${bmwVariants?.requestedTrim}" variants exist with different fitments.`
+          : `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes.`,
         // Additional context
         fitmentSource: "none",
         exactTrimMatch: false,
         sizeCount: 0,
         wheelDiametersAvailable: [],
         needsWheelSelection: false,
-        reasonMultipleSizesShown: `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes - please select your exact trim.`,
+        reasonMultipleSizesShown: isBmwVariantClarification
+          ? `Multiple "${bmwVariants?.requestedTrim}" variants exist - please specify which version.`
+          : `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes - please select your exact trim.`,
       };
+      
+      // Build clarification message for BMW variants
+      let message = `The selected trim "${modification}" was not found. Different trims for this vehicle have different tire sizes. Please select your exact trim.`;
+      if (isBmwVariantClarification && bmwVariants) {
+        const variantDescriptions = bmwVariants.variants.map(v => `• ${v.trim}: ${v.description}`).join("\n");
+        message = `I found multiple ${bmwVariants.requestedTrim} versions with different tire setups:\n${variantDescriptions}\nWhich one do you have?`;
+      }
       
       return NextResponse.json({
         tireSizes: [],
@@ -474,14 +506,24 @@ export async function GET(req: Request) {
         searchableSizes: [],
         sizeConversions: [],
         hasLegacySizes: false,
-        source: "trim_not_found",
+        source: isBmwVariantClarification ? "bmw_variant_clarification" : "trim_not_found",
         
         // NEW: Inform UI that trim selection is required
         trimResolutionRequired: true,
         trimNotFound: dbFitment.requestedTrim,
-        availableTrims: dbFitment.availableTrims,
+        availableTrims: isBmwVariantClarification && bmwVariants
+          ? bmwVariants.variants.map(v => ({
+              displayTrim: v.trim,
+              tireSizes: v.tireSizes,
+              isStaggered: v.isStaggered,
+              description: v.description,
+            }))
+          : dbFitment.availableTrims,
         
-        message: `The selected trim "${modification}" was not found. Different trims for this vehicle have different tire sizes. Please select your exact trim.`,
+        // 2026-05-18: BMW-specific variant clarification
+        bmwVariantClarification: isBmwVariantClarification ? bmwVariants : undefined,
+        
+        message,
         debug: debugInfo,
         cacheStats: getCacheStats(),
       });
