@@ -287,3 +287,134 @@ export function wasAliasUsed(requestedModel: string, foundModel: string): boolea
 export function getAllAliases(): Record<string, string[]> {
   return { ...MODEL_ALIASES };
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// BMW MODEL NUMBER EXTRACTION (2026-05-18)
+// 
+// BMW uses model numbers like "328i", "535i", "750Li" that are actually:
+// - Model: X Series (where X is the first digit)
+// - Trim: The full number (328i, 535i, etc.)
+//
+// This function extracts both when the input appears to be a BMW model number.
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * BMW model number patterns:
+ * - 3-digit number followed by optional suffix: 328, 328i, 328xi, 328d, M340i
+ * - First digit indicates series: 3xx = 3 Series, 5xx = 5 Series, etc.
+ * - Suffixes: i (injection), d (diesel), e (electric/PHEV), xi/xDrive (AWD)
+ * - M variants: M3, M4, M5, M340i, M550i (performance)
+ * - X variants: X1, X3, X5, etc. (SUVs) - NOT handled here, they're direct models
+ */
+const BMW_MODEL_NUMBER_PATTERN = /^([mM]?)(\d)(\d{2})([a-zA-Z]*)$/;
+const BMW_M_SERIES_PATTERN = /^[mM](\d)$/;  // M3, M4, M5, etc.
+
+export interface BmwModelExtraction {
+  /** Whether the input was recognized as a BMW model number */
+  isBmwModelNumber: boolean;
+  /** The series model name (e.g., "3 Series", "5 Series") */
+  modelName: string | null;
+  /** The trim to search for (e.g., "328i", "M340i") */
+  trimName: string | null;
+  /** Original input, normalized */
+  originalInput: string;
+}
+
+/**
+ * Extract BMW model and trim from a model number input.
+ * 
+ * Examples:
+ * - "328i" → model: "3 Series", trim: "328i"
+ * - "328xi" → model: "3 Series", trim: "328xi"
+ * - "335i" → model: "3 Series", trim: "335i"
+ * - "535i" → model: "5 Series", trim: "535i"
+ * - "750Li" → model: "7 Series", trim: "750Li"
+ * - "M340i" → model: "3 Series", trim: "M340i"
+ * - "M3" → model: "M3", trim: null (M3 is its own model)
+ * - "X5" → not handled (X5 is a direct model name)
+ * - "3 Series" → not a model number, return as-is
+ * 
+ * @param make - Vehicle make (only applies to BMW)
+ * @param model - User input model (e.g., "328i")
+ * @returns Extraction result with model and trim
+ */
+export function extractBmwModelAndTrim(make: string, model: string): BmwModelExtraction {
+  const normalizedMake = make.toLowerCase().trim();
+  const normalizedModel = model.trim();
+  
+  // Only applies to BMW
+  if (normalizedMake !== "bmw") {
+    return {
+      isBmwModelNumber: false,
+      modelName: null,
+      trimName: null,
+      originalInput: normalizedModel,
+    };
+  }
+  
+  // Check for M-series standalone models (M3, M4, M5, M6, M8)
+  // These are their own models in the DB, not trims
+  const mSeriesMatch = normalizedModel.match(BMW_M_SERIES_PATTERN);
+  if (mSeriesMatch) {
+    return {
+      isBmwModelNumber: false,  // M3/M4/etc are direct models, not model numbers
+      modelName: null,
+      trimName: null,
+      originalInput: normalizedModel,
+    };
+  }
+  
+  // Check for standard BMW model number pattern
+  // Examples: 328i, 335i, 528i, 750Li, M340i, 330e
+  const modelMatch = normalizedModel.match(BMW_MODEL_NUMBER_PATTERN);
+  if (modelMatch) {
+    const [, mPrefix, seriesDigit, , suffix] = modelMatch;
+    const series = parseInt(seriesDigit, 10);
+    
+    // Valid series: 1, 2, 3, 4, 5, 6, 7, 8
+    if (series >= 1 && series <= 8) {
+      const seriesName = `${series} Series`;
+      // Preserve original casing for the trim name
+      const trimName = normalizedModel;
+      
+      console.log(`[modelAliases] BMW model number extracted: "${model}" → model="${seriesName}", trim="${trimName}"`);
+      
+      return {
+        isBmwModelNumber: true,
+        modelName: seriesName,
+        trimName: trimName,
+        originalInput: normalizedModel,
+      };
+    }
+  }
+  
+  // Also handle variants with xDrive suffix: "328i xDrive", "330i xDrive"
+  const xDriveMatch = normalizedModel.match(/^([mM]?)(\d)(\d{2})([a-zA-Z]*)\s*[xX][Dd]rive$/i);
+  if (xDriveMatch) {
+    const [, , seriesDigit] = xDriveMatch;
+    const series = parseInt(seriesDigit, 10);
+    
+    if (series >= 1 && series <= 8) {
+      const seriesName = `${series} Series`;
+      // Normalize xDrive casing
+      const trimName = normalizedModel.replace(/[xX][Dd]rive/i, "xDrive");
+      
+      console.log(`[modelAliases] BMW xDrive model extracted: "${model}" → model="${seriesName}", trim="${trimName}"`);
+      
+      return {
+        isBmwModelNumber: true,
+        modelName: seriesName,
+        trimName: trimName,
+        originalInput: normalizedModel,
+      };
+    }
+  }
+  
+  // Not a recognized BMW model number pattern
+  return {
+    isBmwModelNumber: false,
+    modelName: null,
+    trimName: null,
+    originalInput: normalizedModel,
+  };
+}

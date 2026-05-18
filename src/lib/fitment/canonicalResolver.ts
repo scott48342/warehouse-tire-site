@@ -26,7 +26,7 @@ import { eq, and, ilike, sql } from "drizzle-orm";
 import { normalizeModel, slugify } from "@/lib/fitment-db/keys";
 import { canonicalMake, getMakeVariantsForQuery } from "@/lib/fitment/makeAliases";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
-import { getModelVariants } from "@/lib/fitment-db/modelAliases";
+import { getModelVariants, extractBmwModelAndTrim } from "@/lib/fitment-db/modelAliases";
 import { getTrimMapping, type TrimMappingResult } from "@/lib/fitment-db/wheelSizeTrimMapping";
 import { isGroupedTrim, explodeTrim } from "@/lib/fitment/trimExplosion";
 import { TRIM_ALIASES } from "@/lib/fitment-db/normalization";
@@ -249,9 +249,31 @@ function generateCanonicalId(year: number, make: string, model: string, trim: st
 export async function resolveVehicleFitment(
   input: ResolverInput
 ): Promise<CanonicalFitmentResult> {
-  const { year, make, model, trim, modificationId } = input;
+  let { year, make, model, trim, modificationId } = input;
   
   const normalizedMake = canonicalMake(make);
+  
+  // ─────────────────────────────────────────────────────────────────────────
+  // BMW MODEL NUMBER EXTRACTION (2026-05-18)
+  // 
+  // BMW uses model numbers like "328i" that are actually:
+  //   - Model: 3 Series
+  //   - Trim: 328i
+  // 
+  // Extract these BEFORE looking up model variants so the resolver
+  // can find the correct data.
+  // ─────────────────────────────────────────────────────────────────────────
+  const bmwExtraction = extractBmwModelAndTrim(make, model);
+  if (bmwExtraction.isBmwModelNumber && bmwExtraction.modelName) {
+    console.log(`[canonicalResolver] BMW model number detected: "${model}" → model="${bmwExtraction.modelName}", trim="${bmwExtraction.trimName}"`);
+    // Override model with the series name
+    model = bmwExtraction.modelName;
+    // If no trim was explicitly provided, use the extracted trim
+    if (!trim && bmwExtraction.trimName) {
+      trim = bmwExtraction.trimName;
+    }
+  }
+  
   const modelVariants = getModelVariants(model);
   
   // Resolve trim aliases before matching (e.g., "Premium" → "S4 Premium Plus")
@@ -588,6 +610,80 @@ export async function resolveVehicleFitment(
             },
           };
         }
+      }
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // STEP 3.5: Partial trim match (2026-05-18)
+      // 
+      // Handles cases where user says "330i" but DB has "330i xDrive"
+      // Also handles "328i" when DB has "328i Sedan", "328i Coupe", etc.
+      // 
+      // Rules:
+      // 1. If requested trim is a prefix of exactly ONE atomic trim, use it
+      // 2. If multiple partial matches, continue to blocking/selection
+      // ─────────────────────────────────────────────────────────────────────────
+      const partialMatches: Array<{ candidate: typeof candidates[0]; matchedTrim: string }> = [];
+      const requestedLower = requestedTrim.toLowerCase();
+      
+      for (const candidate of candidates) {
+        for (const atomicTrim of candidate.atomicTrims) {
+          const atomicLower = atomicTrim.toLowerCase();
+          // Check if requested is a prefix of atomic (e.g., "330i" → "330i xDrive")
+          // Or if atomic starts with requested + space/hyphen
+          if (atomicLower.startsWith(requestedLower + " ") || 
+              atomicLower.startsWith(requestedLower + "-") ||
+              atomicLower === requestedLower) {
+            partialMatches.push({ candidate, matchedTrim: atomicTrim });
+          }
+        }
+      }
+      
+      // If exactly one partial match, use it
+      if (partialMatches.length === 1) {
+        const { candidate, matchedTrim } = partialMatches[0];
+        console.log(`[canonicalResolver] Partial trim match: "${requestedTrim}" → "${matchedTrim}"`);
+        const withOverrides = await applyOverrides(candidate.record);
+        return {
+          ...result,
+          canonicalFitmentId: generateCanonicalId(year, make, model, matchedTrim),
+          modificationId: candidate.modificationId,
+          displayTrim: matchedTrim,
+          matchedBy: "normalized_trim",
+          confidence: "medium",
+          fitment: withOverrides,
+          debug: {
+            ...result.debug,
+            wasGroupedRecord: candidate.isGrouped,
+            matchedAtomicTrim: matchedTrim,
+          },
+        };
+      } else if (partialMatches.length > 1) {
+        // Multiple partial matches with same tire sizes? Use first one.
+        const uniqueFitments = new Set(partialMatches.map(pm => 
+          JSON.stringify(pm.candidate.tireSizes.sort())
+        ));
+        
+        if (uniqueFitments.size === 1) {
+          const { candidate, matchedTrim } = partialMatches[0];
+          console.log(`[canonicalResolver] Multiple partial matches with identical fitment, using first: "${matchedTrim}"`);
+          const withOverrides = await applyOverrides(candidate.record);
+          return {
+            ...result,
+            canonicalFitmentId: generateCanonicalId(year, make, model, matchedTrim),
+            modificationId: candidate.modificationId,
+            displayTrim: matchedTrim,
+            matchedBy: "identical_fallback",
+            confidence: "low",
+            fitment: withOverrides,
+            debug: {
+              ...result.debug,
+              wasGroupedRecord: candidate.isGrouped,
+              matchedAtomicTrim: matchedTrim,
+            },
+          };
+        }
+        // Multiple partial matches with different fitments - continue to blocking
+        console.log(`[canonicalResolver] Multiple partial matches with different fitments for "${requestedTrim}": ${partialMatches.map(pm => pm.matchedTrim).join(", ")}`);
       }
 
       // Trim requested but not found - check if safe fallback is possible
