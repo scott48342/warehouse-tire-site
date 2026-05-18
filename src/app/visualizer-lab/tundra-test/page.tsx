@@ -71,8 +71,14 @@ export default function TundraTestPage() {
   };
 
   // Scale factor from natural to rendered coordinates
-  const scaleX = renderedSize.width / (naturalSize.width || 1);
-  const scaleY = renderedSize.height / (naturalSize.height || 1);
+  // Use default dimensions (1400x800) if image not loaded for debugging
+  const effectiveNaturalWidth = naturalSize.width || 1400;
+  const effectiveNaturalHeight = naturalSize.height || 800;
+  const effectiveRenderedWidth = renderedSize.width || 1400;
+  const effectiveRenderedHeight = renderedSize.height || 800;
+  
+  const scaleX = effectiveRenderedWidth / effectiveNaturalWidth;
+  const scaleY = effectiveRenderedHeight / effectiveNaturalHeight;
 
   // Convert natural coordinates to rendered coordinates
   const toRendered = useCallback(
@@ -140,7 +146,7 @@ export default function TundraTestPage() {
               <div
                 ref={containerRef}
                 className="relative bg-neutral-700 rounded-lg overflow-hidden"
-                style={{ minHeight: 400 }}
+                style={{ minHeight: 500, height: imageLoaded ? 'auto' : 500 }}
               >
                 {/* Vehicle Image */}
                 <img
@@ -155,8 +161,8 @@ export default function TundraTestPage() {
                   onError={() => setImageLoaded(false)}
                 />
 
-                {/* Wheel Overlays - only show when image is loaded */}
-                {imageLoaded && (
+                {/* Wheel Overlays - always show for debugging */}
+                {(
                   <>
                     {/* Front Wheel */}
                     <div
