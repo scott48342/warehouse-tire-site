@@ -25,6 +25,40 @@ interface WheelPosition {
   radius: number;
 }
 
+// Wheel well clipping - makes tire tuck behind fender
+interface WheelWellClip {
+  clipTop: number;      // How much to clip from top (0-100, percentage of tire radius)
+  clipLeft: number;     // Clip from left side
+  clipRight: number;    // Clip from right side
+  clipBottom: number;   // Clip from bottom (usually 0)
+  archRadius: number;   // Roundness of the arch clip (0 = square, 100 = fully round)
+}
+
+// Tire texture/realism settings
+interface TireTexture {
+  darkness: number;           // 0-1, how dark the tire rubber is
+  textureStrength: number;    // 0-1, visibility of tread/sidewall texture
+  sidewallHighlight: number;  // 0-1, highlight on outer sidewall edge
+  treadRingStrength: number;  // 0-1, visibility of tread pattern rings
+  innerShadow: number;        // 0-1, shadow on inner edge of tire
+}
+
+// Wheel depth/offset feel
+interface WheelDepth {
+  insetShadow: number;    // 0-1, shadow behind wheel face
+  dropShadow: number;     // 0-1, shadow below wheel
+  offsetVisual: number;   // -20 to +20, visual offset simulation (negative = aggressive)
+  faceScale: number;      // 0.8-1.2, wheel face scale relative to tire
+}
+
+// Ground shadow per wheel
+interface GroundShadow {
+  opacity: number;    // 0-1
+  blur: number;       // px
+  yOffset: number;    // px below tire
+  scale: number;      // 0.5-2, relative to tire width
+}
+
 interface TireSettings {
   outerDiameterScale: number;  // Overall tire size (1.0 = same as wheel)
   sidewallThickness: number;   // Sidewall height in pixels (natural coords)
@@ -36,6 +70,10 @@ interface LiftPreset {
   bodyOffset: number;
   tireScale: number;
   sidewallBoost: number;
+  // New realism defaults per preset
+  groundShadowOpacity: number;
+  groundShadowBlur: number;
+  wheelWellClipTop: number;
 }
 
 interface VisualizerConfig {
@@ -47,13 +85,29 @@ interface VisualizerConfig {
   bodyLift: number;
   wheelScale: number;
   wheelDiameter: number;  // Wheel size in inches (17, 18, 20, 22, 24)
-  // Visual effects
+  
+  // Wheel well clipping (per wheel)
+  frontWheelClip: WheelWellClip;
+  rearWheelClip: WheelWellClip;
+  
+  // Tire texture/realism
+  tireTexture: TireTexture;
+  
+  // Wheel depth/offset
+  wheelDepth: WheelDepth;
+  
+  // Ground shadows
+  groundShadow: GroundShadow;
+  
+  // Visual effects (legacy)
   showTireShadow: boolean;
   showWheelShadow: boolean;
   shadowOpacity: number;
   shadowBlur: number;
+  
   // Debug
   showDebugOutlines: boolean;
+  showClipMask: boolean;  // New: debug mask visibility
 }
 
 // ============================================================================
@@ -61,10 +115,10 @@ interface VisualizerConfig {
 // ============================================================================
 
 const LIFT_PRESETS: LiftPreset[] = [
-  { name: "Stock", bodyOffset: 0, tireScale: 1.0, sidewallBoost: 0 },
-  { name: "Leveling Kit", bodyOffset: -15, tireScale: 1.05, sidewallBoost: 5 },
-  { name: "4\" Lift", bodyOffset: -35, tireScale: 1.15, sidewallBoost: 15 },
-  { name: "6\" Lift", bodyOffset: -55, tireScale: 1.25, sidewallBoost: 25 },
+  { name: "Stock", bodyOffset: 0, tireScale: 1.0, sidewallBoost: 0, groundShadowOpacity: 0.4, groundShadowBlur: 8, wheelWellClipTop: 15 },
+  { name: "Leveling Kit", bodyOffset: -15, tireScale: 1.05, sidewallBoost: 5, groundShadowOpacity: 0.35, groundShadowBlur: 10, wheelWellClipTop: 12 },
+  { name: "4\" Lift", bodyOffset: -35, tireScale: 1.15, sidewallBoost: 15, groundShadowOpacity: 0.3, groundShadowBlur: 12, wheelWellClipTop: 8 },
+  { name: "6\" Lift", bodyOffset: -55, tireScale: 1.25, sidewallBoost: 25, groundShadowOpacity: 0.25, groundShadowBlur: 15, wheelWellClipTop: 5 },
 ];
 
 // Wheel diameter options - 18" is the stock baseline
@@ -94,11 +148,45 @@ const DEFAULT_CONFIG: VisualizerConfig = {
   bodyLift: 0,
   wheelScale: 1.0,
   wheelDiameter: 18,  // Stock 18" wheel
+  
+  // Wheel well clipping - tuck tire behind fender
+  frontWheelClip: { clipTop: 15, clipLeft: 5, clipRight: 5, clipBottom: 0, archRadius: 50 },
+  rearWheelClip: { clipTop: 15, clipLeft: 5, clipRight: 5, clipBottom: 0, archRadius: 50 },
+  
+  // Tire texture/realism
+  tireTexture: {
+    darkness: 0.85,
+    textureStrength: 0.4,
+    sidewallHighlight: 0.15,
+    treadRingStrength: 0.3,
+    innerShadow: 0.3,
+  },
+  
+  // Wheel depth/offset
+  wheelDepth: {
+    insetShadow: 0.3,
+    dropShadow: 0.2,
+    offsetVisual: 0,  // 0 = neutral, negative = aggressive
+    faceScale: 1.0,
+  },
+  
+  // Ground shadow
+  groundShadow: {
+    opacity: 0.4,
+    blur: 8,
+    yOffset: 5,
+    scale: 1.1,
+  },
+  
+  // Legacy visual effects
   showTireShadow: true,
   showWheelShadow: true,
   shadowOpacity: 0.4,
   shadowBlur: 8,
+  
+  // Debug
   showDebugOutlines: false,
+  showClipMask: false,
 };
 
 // ============================================================================
@@ -108,6 +196,7 @@ const DEFAULT_CONFIG: VisualizerConfig = {
 interface WheelTireRendererProps {
   position: WheelPosition;
   config: VisualizerConfig;
+  wheelClip: WheelWellClip;
   scaleX: number;
   scaleY: number;
   label: string;
@@ -117,6 +206,7 @@ interface WheelTireRendererProps {
 function WheelTireRenderer({
   position,
   config,
+  wheelClip,
   scaleX,
   scaleY,
   label,
@@ -141,38 +231,90 @@ function WheelTireRenderer({
   
   // Wheel radius scales with diameter selection (18" = 1.0x, 20" = 1.11x, 22" = 1.22x, etc.)
   const wheelDiameterScale = config.wheelDiameter / STOCK_WHEEL_DIAMETER;
-  const wheelRadius = stockWheelRadius * wheelDiameterScale;
+  const baseWheelRadius = stockWheelRadius * wheelDiameterScale;
+  
+  // Apply wheel face scale from depth settings
+  const wheelRadius = baseWheelRadius * config.wheelDepth.faceScale;
   
   // Sidewall is the visual difference (auto-calculated)
-  // Bigger wheel = smaller sidewall, but tire outer stays same
+  const sidewallWidth = finalTireRadius - wheelRadius;
   
   // OEM wheel mask radius - slightly larger to fully cover original wheel
   const oemMaskRadius = position.radius * scale * 1.1;
   
+  // WHEEL WELL CLIPPING - Create clip path to tuck tire behind fender
+  // Clip values are percentages of tire radius
+  const clipTop = (wheelClip.clipTop / 100) * finalTireRadius;
+  const clipLeft = (wheelClip.clipLeft / 100) * finalTireRadius;
+  const clipRight = (wheelClip.clipRight / 100) * finalTireRadius;
+  const clipBottom = (wheelClip.clipBottom / 100) * finalTireRadius;
+  
+  // Generate clip path - inset from edges with optional arch roundness
+  const archRound = (wheelClip.archRadius / 100) * Math.min(clipTop, finalTireRadius * 0.3);
+  const clipPath = `inset(${clipTop}px ${clipRight}px ${clipBottom}px ${clipLeft}px round ${archRound}px ${archRound}px 0px 0px)`;
+  
+  // Tire texture settings
+  const { darkness, textureStrength, sidewallHighlight, treadRingStrength, innerShadow } = config.tireTexture;
+  
+  // Ground shadow settings
+  const gs = config.groundShadow;
+  const groundShadowWidth = finalTireRadius * 2 * gs.scale;
+  const groundShadowHeight = finalTireRadius * 0.3 * gs.scale;
+  
   return (
     <>
+      {/* GROUND SHADOW - Ellipse below tire for planted feel */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          left: centerX - groundShadowWidth / 2,
+          top: centerY + finalTireRadius + gs.yOffset * scale,
+          width: groundShadowWidth,
+          height: groundShadowHeight,
+          background: `radial-gradient(ellipse, rgba(0,0,0,${gs.opacity}) 0%, transparent 70%)`,
+          filter: `blur(${gs.blur}px)`,
+          zIndex: 5,
+        }}
+      />
+      
       {/* OEM Wheel Mask - covers original wheels as body lifts */}
-      {/* This mask moves WITH the body to hide the OEM wheels */}
       <div
         className="absolute pointer-events-none rounded-full"
         style={{
           left: centerX - oemMaskRadius,
-          top: centerY - oemMaskRadius + config.bodyLift * scaleY, // Moves with body
+          top: centerY - oemMaskRadius + config.bodyLift * scaleY,
           width: oemMaskRadius * 2,
           height: oemMaskRadius * 2,
           background: "radial-gradient(circle, #1a1a1a 0%, #0a0a0a 60%, #000 100%)",
-          zIndex: 15, // Above vehicle (10) but below our overlay (20)
+          zIndex: 15,
         }}
       />
       
-      {/* Main wheel/tire overlay - stays FIXED at ground level */}
+      {/* CLIPPING DEBUG MASK - Shows where clipping will occur */}
+      {config.showClipMask && (
+        <div
+          className="absolute pointer-events-none border-2 border-dashed border-yellow-400"
+          style={{
+            left: centerX - finalTireRadius + clipLeft,
+            top: centerY - finalTireRadius + clipTop,
+            width: finalTireRadius * 2 - clipLeft - clipRight,
+            height: finalTireRadius * 2 - clipTop - clipBottom,
+            borderRadius: `${archRound}px ${archRound}px 0 0`,
+            zIndex: 100,
+            background: 'rgba(255, 255, 0, 0.1)',
+          }}
+        />
+      )}
+      
+      {/* Main wheel/tire overlay - CLIPPED to tuck behind fender */}
       <div
         className="absolute pointer-events-none"
         style={{
           left: centerX - finalTireRadius,
-          top: centerY - finalTireRadius, // NO bodyLift - wheels stay at ground
+          top: centerY - finalTireRadius,
           width: finalTireRadius * 2,
           height: finalTireRadius * 2,
+          clipPath: clipPath,
           zIndex: 20,
         }}
       >
@@ -191,7 +333,7 @@ function WheelTireRenderer({
         />
       )}
       
-      {/* Tire (black ring behind wheel) */}
+      {/* TIRE BASE - Main rubber color */}
       <div
         className="absolute rounded-full"
         style={{
@@ -199,12 +341,15 @@ function WheelTireRenderer({
           top: 0,
           width: finalTireRadius * 2,
           height: finalTireRadius * 2,
-          background: "radial-gradient(circle, #1a1a1a 0%, #0d0d0d 70%, #000 100%)",
-          boxShadow: "inset 0 0 20px rgba(0,0,0,0.8), inset 0 0 40px rgba(0,0,0,0.4)",
+          background: `radial-gradient(circle, 
+            rgb(${Math.floor(30 * darkness)}, ${Math.floor(30 * darkness)}, ${Math.floor(32 * darkness)}) 0%, 
+            rgb(${Math.floor(15 * darkness)}, ${Math.floor(15 * darkness)}, ${Math.floor(17 * darkness)}) 70%, 
+            rgb(${Math.floor(5 * darkness)}, ${Math.floor(5 * darkness)}, ${Math.floor(5 * darkness)}) 100%)`,
+          boxShadow: `inset 0 0 ${20 * innerShadow}px rgba(0,0,0,0.8), inset 0 0 ${40 * innerShadow}px rgba(0,0,0,0.4)`,
         }}
       />
       
-      {/* Tire tread texture overlay */}
+      {/* TIRE SIDEWALL RINGS - Subtle depth rings */}
       <div
         className="absolute rounded-full"
         style={{
@@ -215,25 +360,76 @@ function WheelTireRenderer({
           background: `repeating-radial-gradient(
             circle at center,
             transparent 0px,
-            transparent 2px,
-            rgba(30,30,30,0.3) 2px,
-            rgba(30,30,30,0.3) 4px
+            transparent ${3 + sidewallWidth * 0.1}px,
+            rgba(40,40,42,${0.2 * treadRingStrength}) ${3 + sidewallWidth * 0.1}px,
+            rgba(40,40,42,${0.2 * treadRingStrength}) ${6 + sidewallWidth * 0.15}px
           )`,
-          opacity: 0.5,
+          opacity: textureStrength,
         }}
       />
       
-      {/* Wheel Shadow */}
-      {config.showWheelShadow && (
+      {/* TIRE SIDEWALL HIGHLIGHT - Outer edge catch light */}
+      <div
+        className="absolute rounded-full"
+        style={{
+          left: 0,
+          top: 0,
+          width: finalTireRadius * 2,
+          height: finalTireRadius * 2,
+          background: `radial-gradient(circle at 30% 30%, 
+            rgba(255,255,255,${0.08 * sidewallHighlight}) 0%, 
+            transparent 40%,
+            transparent 85%,
+            rgba(255,255,255,${0.03 * sidewallHighlight}) 95%,
+            transparent 100%)`,
+        }}
+      />
+      
+      {/* TIRE INNER SHADOW - Where tire meets wheel */}
+      <div
+        className="absolute rounded-full"
+        style={{
+          left: finalTireRadius - wheelRadius - sidewallWidth * 0.3,
+          top: finalTireRadius - wheelRadius - sidewallWidth * 0.3,
+          width: (wheelRadius + sidewallWidth * 0.3) * 2,
+          height: (wheelRadius + sidewallWidth * 0.3) * 2,
+          background: `radial-gradient(circle, 
+            rgba(0,0,0,${0.5 * innerShadow}) 0%, 
+            rgba(0,0,0,${0.3 * innerShadow}) 60%,
+            transparent 100%)`,
+          filter: `blur(${3}px)`,
+        }}
+      />
+      
+      {/* WHEEL INSET SHADOW - Behind wheel face for depth */}
+      {config.wheelDepth.insetShadow > 0 && (
         <div
           className="absolute rounded-full"
           style={{
-            left: finalTireRadius - wheelRadius + 2,
-            top: finalTireRadius - wheelRadius + 3,
+            left: finalTireRadius - wheelRadius - 2,
+            top: finalTireRadius - wheelRadius - 2,
+            width: wheelRadius * 2 + 4,
+            height: wheelRadius * 2 + 4,
+            background: `radial-gradient(circle, 
+              rgba(0,0,0,${0.6 * config.wheelDepth.insetShadow}) 70%,
+              rgba(0,0,0,${0.3 * config.wheelDepth.insetShadow}) 85%,
+              transparent 100%)`,
+            filter: `blur(${4}px)`,
+          }}
+        />
+      )}
+      
+      {/* WHEEL DROP SHADOW - Below wheel for depth */}
+      {config.wheelDepth.dropShadow > 0 && (
+        <div
+          className="absolute rounded-full"
+          style={{
+            left: finalTireRadius - wheelRadius + 3,
+            top: finalTireRadius - wheelRadius + 5,
             width: wheelRadius * 2,
             height: wheelRadius * 2,
-            background: `rgba(0,0,0,${config.shadowOpacity * 0.5})`,
-            filter: `blur(${config.shadowBlur * 0.5}px)`,
+            background: `rgba(0,0,0,${0.4 * config.wheelDepth.dropShadow})`,
+            filter: `blur(${6}px)`,
           }}
         />
       )}
@@ -516,6 +712,7 @@ export default function TundraTestPage() {
                     <WheelTireRenderer
                       position={config.frontWheel}
                       config={config}
+                      wheelClip={config.frontWheelClip}
                       scaleX={scaleX}
                       scaleY={scaleY}
                       label="Front"
@@ -524,6 +721,7 @@ export default function TundraTestPage() {
                     <WheelTireRenderer
                       position={config.rearWheel}
                       config={config}
+                      wheelClip={config.rearWheelClip}
                       scaleX={scaleX}
                       scaleY={scaleY}
                       label="Rear"
@@ -850,66 +1048,102 @@ export default function TundraTestPage() {
               </div>
             )}
 
-            {/* Effects Tab */}
+            {/* Effects Tab - Realism Controls */}
             {activeTab === "effects" && (
-              <div className="bg-neutral-800 rounded-lg p-4">
-                <h3 className="font-semibold text-neutral-300 mb-3">✨ Visual Effects</h3>
-                <div className="space-y-3">
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      checked={config.showTireShadow}
-                      onChange={(e) =>
-                        setConfig((prev) => ({ ...prev, showTireShadow: e.target.checked }))
-                      }
-                      className="accent-red-500"
-                    />
-                    <span className="text-sm">Tire Shadow</span>
+              <div className="space-y-3 max-h-[500px] overflow-y-auto pr-1">
+                {/* WHEEL WELL CLIPPING */}
+                <div className="bg-neutral-800 rounded-lg p-3">
+                  <h3 className="font-semibold text-yellow-400 mb-2 text-sm">✂️ Wheel Well Clipping</h3>
+                  <label className="flex items-center gap-2 mb-2">
+                    <input type="checkbox" checked={config.showClipMask}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, showClipMask: e.target.checked }))}
+                      className="accent-yellow-500" />
+                    <span className="text-xs text-yellow-400">Show Clip Debug</span>
                   </label>
-                  
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      checked={config.showWheelShadow}
-                      onChange={(e) =>
-                        setConfig((prev) => ({ ...prev, showWheelShadow: e.target.checked }))
-                      }
-                      className="accent-red-500"
-                    />
-                    <span className="text-sm">Wheel Shadow</span>
-                  </label>
-
-                  <div>
-                    <label className="text-sm text-neutral-400">
-                      Shadow Opacity: {config.shadowOpacity.toFixed(2)}
-                    </label>
-                    <input
-                      type="range"
-                      min={0}
-                      max={1}
-                      step={0.05}
-                      value={config.shadowOpacity}
-                      onChange={(e) =>
-                        setConfig((prev) => ({ ...prev, shadowOpacity: Number(e.target.value) }))
-                      }
-                      className="w-full accent-red-500"
-                    />
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <p className="text-xs text-green-400 mb-1">Front</p>
+                      <label className="text-xs text-neutral-500">Top: {config.frontWheelClip.clipTop}%</label>
+                      <input type="range" min={0} max={40} value={config.frontWheelClip.clipTop}
+                        onChange={(e) => setConfig((prev) => ({ ...prev, frontWheelClip: { ...prev.frontWheelClip, clipTop: Number(e.target.value) } }))}
+                        className="w-full accent-green-500 h-1" />
+                      <label className="text-xs text-neutral-500">Arch: {config.frontWheelClip.archRadius}%</label>
+                      <input type="range" min={0} max={100} value={config.frontWheelClip.archRadius}
+                        onChange={(e) => setConfig((prev) => ({ ...prev, frontWheelClip: { ...prev.frontWheelClip, archRadius: Number(e.target.value) } }))}
+                        className="w-full accent-green-500 h-1" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-blue-400 mb-1">Rear</p>
+                      <label className="text-xs text-neutral-500">Top: {config.rearWheelClip.clipTop}%</label>
+                      <input type="range" min={0} max={40} value={config.rearWheelClip.clipTop}
+                        onChange={(e) => setConfig((prev) => ({ ...prev, rearWheelClip: { ...prev.rearWheelClip, clipTop: Number(e.target.value) } }))}
+                        className="w-full accent-blue-500 h-1" />
+                      <label className="text-xs text-neutral-500">Arch: {config.rearWheelClip.archRadius}%</label>
+                      <input type="range" min={0} max={100} value={config.rearWheelClip.archRadius}
+                        onChange={(e) => setConfig((prev) => ({ ...prev, rearWheelClip: { ...prev.rearWheelClip, archRadius: Number(e.target.value) } }))}
+                        className="w-full accent-blue-500 h-1" />
+                    </div>
                   </div>
-
-                  <div>
-                    <label className="text-sm text-neutral-400">
-                      Shadow Blur: {config.shadowBlur}px
-                    </label>
-                    <input
-                      type="range"
-                      min={0}
-                      max={20}
-                      value={config.shadowBlur}
-                      onChange={(e) =>
-                        setConfig((prev) => ({ ...prev, shadowBlur: Number(e.target.value) }))
-                      }
-                      className="w-full accent-red-500"
-                    />
+                </div>
+                
+                {/* TIRE TEXTURE */}
+                <div className="bg-neutral-800 rounded-lg p-3">
+                  <h3 className="font-semibold text-neutral-300 mb-2 text-sm">🛞 Tire Texture</h3>
+                  <div className="space-y-1">
+                    <label className="text-xs text-neutral-500">Darkness: {config.tireTexture.darkness.toFixed(2)}</label>
+                    <input type="range" min={0.5} max={1} step={0.05} value={config.tireTexture.darkness}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, tireTexture: { ...prev.tireTexture, darkness: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                    <label className="text-xs text-neutral-500">Texture: {config.tireTexture.textureStrength.toFixed(2)}</label>
+                    <input type="range" min={0} max={1} step={0.05} value={config.tireTexture.textureStrength}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, tireTexture: { ...prev.tireTexture, textureStrength: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                    <label className="text-xs text-neutral-500">Highlight: {config.tireTexture.sidewallHighlight.toFixed(2)}</label>
+                    <input type="range" min={0} max={0.5} step={0.02} value={config.tireTexture.sidewallHighlight}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, tireTexture: { ...prev.tireTexture, sidewallHighlight: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                  </div>
+                </div>
+                
+                {/* WHEEL DEPTH */}
+                <div className="bg-neutral-800 rounded-lg p-3">
+                  <h3 className="font-semibold text-neutral-300 mb-2 text-sm">🎯 Wheel Depth</h3>
+                  <div className="space-y-1">
+                    <label className="text-xs text-neutral-500">Inset Shadow: {config.wheelDepth.insetShadow.toFixed(2)}</label>
+                    <input type="range" min={0} max={1} step={0.05} value={config.wheelDepth.insetShadow}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, wheelDepth: { ...prev.wheelDepth, insetShadow: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                    <label className="text-xs text-neutral-500">Drop Shadow: {config.wheelDepth.dropShadow.toFixed(2)}</label>
+                    <input type="range" min={0} max={1} step={0.05} value={config.wheelDepth.dropShadow}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, wheelDepth: { ...prev.wheelDepth, dropShadow: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                    <label className="text-xs text-neutral-500">Face Scale: {config.wheelDepth.faceScale.toFixed(2)}</label>
+                    <input type="range" min={0.8} max={1.2} step={0.02} value={config.wheelDepth.faceScale}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, wheelDepth: { ...prev.wheelDepth, faceScale: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                  </div>
+                </div>
+                
+                {/* GROUND SHADOW */}
+                <div className="bg-neutral-800 rounded-lg p-3">
+                  <h3 className="font-semibold text-neutral-300 mb-2 text-sm">🌑 Ground Shadow</h3>
+                  <div className="space-y-1">
+                    <label className="text-xs text-neutral-500">Opacity: {config.groundShadow.opacity.toFixed(2)}</label>
+                    <input type="range" min={0} max={0.8} step={0.05} value={config.groundShadow.opacity}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, groundShadow: { ...prev.groundShadow, opacity: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                    <label className="text-xs text-neutral-500">Blur: {config.groundShadow.blur}px</label>
+                    <input type="range" min={0} max={30} value={config.groundShadow.blur}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, groundShadow: { ...prev.groundShadow, blur: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                    <label className="text-xs text-neutral-500">Y Offset: {config.groundShadow.yOffset}px</label>
+                    <input type="range" min={0} max={30} value={config.groundShadow.yOffset}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, groundShadow: { ...prev.groundShadow, yOffset: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
+                    <label className="text-xs text-neutral-500">Scale: {config.groundShadow.scale.toFixed(2)}</label>
+                    <input type="range" min={0.5} max={2} step={0.1} value={config.groundShadow.scale}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, groundShadow: { ...prev.groundShadow, scale: Number(e.target.value) } }))}
+                      className="w-full accent-red-500 h-1" />
                   </div>
                 </div>
               </div>
