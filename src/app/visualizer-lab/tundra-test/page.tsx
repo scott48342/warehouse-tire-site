@@ -291,6 +291,16 @@ export default function TundraTestPage() {
     }
   }, []);
 
+  // Handle already-cached images (onLoad fires before React attaches handler)
+  useEffect(() => {
+    const img = imageRef.current;
+    if (img && img.complete && img.naturalWidth > 0) {
+      setNaturalSize({ width: img.naturalWidth, height: img.naturalHeight });
+      setRenderedSize({ width: img.clientWidth, height: img.clientHeight });
+      setImageLoaded(true);
+    }
+  }, [config.vehicleImage]);
+
   // Update rendered size on resize
   useEffect(() => {
     const updateSize = () => {
