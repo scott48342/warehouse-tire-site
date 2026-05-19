@@ -4,9 +4,10 @@
  * POST: Sync wheel styles from techfeed to database
  * 
  * Actions:
- * - sync: Import/update all styles from techfeed (no classification)
- * - classify: Run AI classification on unclassified styles
+ * - sync: Import/update all styles from techfeed (with URL-based classification)
+ * - classify: Run URL-based classification on unclassified styles
  * - classify-batch: Classify a batch of styles
+ * - classify-ai: Run AI classification (expensive, use sparingly)
  * 
  * NO REGRESSION: Admin/lab API only
  */
@@ -18,6 +19,7 @@ import { eq, isNull, and, count } from "drizzle-orm";
 import fs from "node:fs/promises";
 import path from "node:path";
 import zlib from "node:zlib";
+import { detectImageType } from "@/lib/visualizer-lab/wheelImageAnalysis";
 
 interface TechfeedWheel {
   sku: string;
@@ -143,9 +145,13 @@ export async function POST(request: NextRequest) {
     
     if (action === "sync") {
       // Sync all styles from techfeed to database
+      // Now includes URL-based classification on insert!
       const styles = await loadStylesFromTechfeed();
       let inserted = 0;
       let updated = 0;
+      let classifiedFace = 0;
+      let classifiedAngled = 0;
+      let classifiedUnknown = 0;
       
       for (const style of styles.values()) {
         try {
@@ -157,22 +163,46 @@ export async function POST(request: NextRequest) {
             .limit(1);
           
           if (existing.length === 0) {
+            // NEW: Classify on insert using URL pattern
+            const imageType = detectImageType(style.imageUrl);
+            const isFrontFacing = imageType === "face";
+            const confidence = imageType === "unknown" ? 50 : 95;
+            
+            if (isFrontFacing) classifiedFace++;
+            else if (imageType === "angled") classifiedAngled++;
+            else classifiedUnknown++;
+            
             await visualizerDb.insert(wheelStyleAssets).values({
               styleKey: style.styleKey,
               brandCode: style.brandCode,
               brand: style.brand,
               model: style.model,
               imageUrl: style.imageUrl,
-              visualizerStatus: "pending",
+              isFrontFacing,
+              classificationConfidence: confidence,
+              visualizerStatus: isFrontFacing ? "usable" : "needs_normalization",
+              classifiedAt: new Date(),
+              classifiedBy: "url-pattern",
+              notes: `URL pattern: ${imageType}`,
             });
             inserted++;
           } else {
-            // Update image URL if it changed
+            // Update image URL if it changed (and reclassify if needed)
             if (existing[0].imageUrl !== style.imageUrl && style.imageUrl) {
+              const imageType = detectImageType(style.imageUrl);
+              const isFrontFacing = imageType === "face";
+              const confidence = imageType === "unknown" ? 50 : 95;
+              
               await visualizerDb
                 .update(wheelStyleAssets)
                 .set({ 
                   imageUrl: style.imageUrl,
+                  isFrontFacing,
+                  classificationConfidence: confidence,
+                  visualizerStatus: isFrontFacing ? "usable" : "needs_normalization",
+                  classifiedAt: new Date(),
+                  classifiedBy: "url-pattern",
+                  notes: `URL pattern: ${imageType}`,
                   updatedAt: new Date(),
                 })
                 .where(eq(wheelStyleAssets.styleKey, style.styleKey));
@@ -190,11 +220,17 @@ export async function POST(request: NextRequest) {
         totalStyles: styles.size,
         inserted,
         updated,
+        classification: {
+          frontFacing: classifiedFace,
+          angled: classifiedAngled,
+          unknown: classifiedUnknown,
+        },
       });
     }
     
     if (action === "classify" || action === "classify-batch") {
-      // Get next batch of unclassified styles
+      // URL-based classification - fast and free!
+      // Looks for "-FACE-" in the URL to determine front-facing
       const stylesToClassify = await visualizerDb
         .select()
         .from(wheelStyleAssets)
@@ -206,6 +242,146 @@ export async function POST(request: NextRequest) {
           success: true,
           action,
           message: "No unclassified styles found",
+          classified: 0,
+        });
+      }
+      
+      const results = [];
+      let frontFacingCount = 0;
+      let angledCount = 0;
+      let unknownCount = 0;
+      
+      for (const style of stylesToClassify) {
+        if (!style.imageUrl) {
+          results.push({ styleKey: style.styleKey, error: "No image URL" });
+          continue;
+        }
+        
+        // Use URL pattern detection (from wheelImageAnalysis.ts)
+        const imageType = detectImageType(style.imageUrl);
+        const isFrontFacing = imageType === "face";
+        
+        // Confidence based on detection type
+        // "face" and "angled" have high confidence (URL is definitive)
+        // "unknown" has low confidence (might need manual review)
+        const confidence = imageType === "unknown" ? 50 : 95;
+        
+        await visualizerDb
+          .update(wheelStyleAssets)
+          .set({
+            isFrontFacing,
+            classificationConfidence: confidence,
+            visualizerStatus: isFrontFacing ? "usable" : "needs_normalization",
+            classifiedAt: new Date(),
+            classifiedBy: "url-pattern",
+            notes: `URL pattern: ${imageType}`,
+            updatedAt: new Date(),
+          })
+          .where(eq(wheelStyleAssets.styleKey, style.styleKey));
+        
+        if (isFrontFacing) frontFacingCount++;
+        else if (imageType === "angled") angledCount++;
+        else unknownCount++;
+        
+        results.push({
+          styleKey: style.styleKey,
+          isFrontFacing,
+          imageType,
+          confidence,
+        });
+      }
+      
+      // Get remaining count
+      const [remaining] = await visualizerDb
+        .select({ count: count() })
+        .from(wheelStyleAssets)
+        .where(isNull(wheelStyleAssets.isFrontFacing));
+      
+      return NextResponse.json({
+        success: true,
+        action,
+        method: "url-pattern",
+        classified: results.length,
+        frontFacing: frontFacingCount,
+        angled: angledCount,
+        unknown: unknownCount,
+        remaining: Number(remaining?.count || 0),
+        results: results.slice(0, 20), // Limit response size
+      });
+    }
+    
+    if (action === "reclassify-all") {
+      // Reclassify ALL wheels using URL patterns (fixes AI misclassifications)
+      const allStyles = await visualizerDb
+        .select()
+        .from(wheelStyleAssets);
+      
+      let frontFacingCount = 0;
+      let angledCount = 0;
+      let unknownCount = 0;
+      let changed = 0;
+      
+      for (const style of allStyles) {
+        if (!style.imageUrl) continue;
+        
+        const imageType = detectImageType(style.imageUrl);
+        const isFrontFacing = imageType === "face";
+        const confidence = imageType === "unknown" ? 50 : 95;
+        
+        // Check if classification changed
+        if (style.isFrontFacing !== isFrontFacing) {
+          changed++;
+        }
+        
+        await visualizerDb
+          .update(wheelStyleAssets)
+          .set({
+            isFrontFacing,
+            classificationConfidence: confidence,
+            visualizerStatus: isFrontFacing ? "usable" : "needs_normalization",
+            classifiedAt: new Date(),
+            classifiedBy: "url-pattern",
+            notes: `URL pattern: ${imageType}`,
+            updatedAt: new Date(),
+          })
+          .where(eq(wheelStyleAssets.styleKey, style.styleKey));
+        
+        if (isFrontFacing) frontFacingCount++;
+        else if (imageType === "angled") angledCount++;
+        else unknownCount++;
+      }
+      
+      return NextResponse.json({
+        success: true,
+        action: "reclassify-all",
+        method: "url-pattern",
+        total: allStyles.length,
+        changed,
+        frontFacing: frontFacingCount,
+        angled: angledCount,
+        unknown: unknownCount,
+      });
+    }
+    
+    if (action === "classify-ai") {
+      // AI-based classification - expensive, use sparingly!
+      // Only use for "unknown" type wheels where URL doesn't tell us
+      const stylesToClassify = await visualizerDb
+        .select()
+        .from(wheelStyleAssets)
+        .where(
+          and(
+            eq(wheelStyleAssets.classifiedBy, "url-pattern"),
+            eq(wheelStyleAssets.classificationConfidence, 50) // Only unknowns
+          )
+        )
+        .limit(batchSize);
+      
+      if (stylesToClassify.length === 0) {
+        return NextResponse.json({
+          success: true,
+          action,
+          message: "No styles need AI classification",
           classified: 0,
         });
       }
@@ -248,7 +424,7 @@ export async function POST(request: NextRequest) {
           await new Promise(resolve => setTimeout(resolve, 200));
           
         } catch (err) {
-          console.error(`[classify] Error for ${style.styleKey}:`, err);
+          console.error(`[classify-ai] Error for ${style.styleKey}:`, err);
           results.push({ 
             styleKey: style.styleKey, 
             error: err instanceof Error ? err.message : "Classification failed" 
@@ -256,19 +432,13 @@ export async function POST(request: NextRequest) {
         }
       }
       
-      // Get remaining count
-      const [remaining] = await visualizerDb
-        .select({ count: count() })
-        .from(wheelStyleAssets)
-        .where(isNull(wheelStyleAssets.isFrontFacing));
-      
       return NextResponse.json({
         success: true,
         action,
+        method: "ai",
         classified: results.filter(r => !("error" in r)).length,
         frontFacing: frontFacingCount,
         errors: results.filter(r => "error" in r).length,
-        remaining: Number(remaining?.count || 0),
         results,
       });
     }
@@ -291,10 +461,20 @@ export async function GET() {
       .select({ count: count() })
       .from(wheelStyleAssets);
     
-    const [classified] = await visualizerDb
+    const [classifiedByUrl] = await visualizerDb
+      .select({ count: count() })
+      .from(wheelStyleAssets)
+      .where(eq(wheelStyleAssets.classifiedBy, "url-pattern"));
+    
+    const [classifiedByAi] = await visualizerDb
       .select({ count: count() })
       .from(wheelStyleAssets)
       .where(eq(wheelStyleAssets.classifiedBy, "ai"));
+    
+    const [unclassified] = await visualizerDb
+      .select({ count: count() })
+      .from(wheelStyleAssets)
+      .where(isNull(wheelStyleAssets.classifiedBy));
     
     const [frontFacing] = await visualizerDb
       .select({ count: count() })
@@ -313,8 +493,11 @@ export async function GET() {
     
     return NextResponse.json({
       total: Number(total?.count || 0),
-      classified: Number(classified?.count || 0),
-      pending: Number(total?.count || 0) - Number(classified?.count || 0),
+      classification: {
+        byUrlPattern: Number(classifiedByUrl?.count || 0),
+        byAi: Number(classifiedByAi?.count || 0),
+        unclassified: Number(unclassified?.count || 0),
+      },
       frontFacing: Number(frontFacing?.count || 0),
       usable: Number(usable?.count || 0),
     });
