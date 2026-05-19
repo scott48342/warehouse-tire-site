@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 
 // Lift presets with their visual descriptions
@@ -59,11 +59,73 @@ export default function AIPreviewTestPage() {
     renderStyle: 'catalog',
   });
 
+  // YMM dropdown data
+  const [years, setYears] = useState<number[]>([]);
+  const [makes, setMakes] = useState<string[]>([]);
+  const [models, setModels] = useState<string[]>([]);
+  const [trims, setTrims] = useState<string[]>([]);
+  const [loadingYMM, setLoadingYMM] = useState({ years: false, makes: false, models: false, trims: false });
+
   const [generating, setGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [revisedPrompt, setRevisedPrompt] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState<'prompt' | 'config' | 'key' | null>(null);
+
+  // Fetch years on mount
+  useEffect(() => {
+    setLoadingYMM(prev => ({ ...prev, years: true }));
+    fetch('/api/vehicles/years')
+      .then(res => res.json())
+      .then(data => {
+        const yearList = Array.isArray(data) ? data : data.years || [];
+        setYears(yearList.sort((a: number, b: number) => b - a));
+      })
+      .catch(console.error)
+      .finally(() => setLoadingYMM(prev => ({ ...prev, years: false })));
+  }, []);
+
+  // Fetch makes when year changes
+  useEffect(() => {
+    if (!form.year) return;
+    setLoadingYMM(prev => ({ ...prev, makes: true }));
+    fetch(`/api/vehicles/makes?year=${form.year}`)
+      .then(res => res.json())
+      .then(data => {
+        const makeList = Array.isArray(data) ? data : data.makes || [];
+        setMakes(makeList.sort());
+      })
+      .catch(console.error)
+      .finally(() => setLoadingYMM(prev => ({ ...prev, makes: false })));
+  }, [form.year]);
+
+  // Fetch models when year+make change
+  useEffect(() => {
+    if (!form.year || !form.make) return;
+    setLoadingYMM(prev => ({ ...prev, models: true }));
+    fetch(`/api/vehicles/models?year=${form.year}&make=${encodeURIComponent(form.make)}`)
+      .then(res => res.json())
+      .then(data => {
+        const modelList = Array.isArray(data) ? data : data.models || [];
+        setModels(modelList.sort());
+      })
+      .catch(console.error)
+      .finally(() => setLoadingYMM(prev => ({ ...prev, models: false })));
+  }, [form.year, form.make]);
+
+  // Fetch trims when year+make+model change
+  useEffect(() => {
+    if (!form.year || !form.make || !form.model) return;
+    setLoadingYMM(prev => ({ ...prev, trims: true }));
+    fetch(`/api/vehicles/trims?year=${form.year}&make=${encodeURIComponent(form.make)}&model=${encodeURIComponent(form.model)}`)
+      .then(res => res.json())
+      .then(data => {
+        const trimList = Array.isArray(data) ? data : data.trims || [];
+        setTrims(trimList.sort());
+      })
+      .catch(console.error)
+      .finally(() => setLoadingYMM(prev => ({ ...prev, trims: false })));
+  }, [form.year, form.make, form.model]);
 
   // Generate cache key
   const cacheKey = useMemo(() => {
@@ -133,7 +195,27 @@ Requirements:
   }), [form, cacheKey, generatedPrompt]);
 
   const handleChange = (field: keyof FormState, value: string) => {
-    setForm(prev => ({ ...prev, [field]: value }));
+    setForm(prev => {
+      const updated = { ...prev, [field]: value };
+      // Cascade resets for YMM
+      if (field === 'year') {
+        updated.make = '';
+        updated.model = '';
+        updated.trim = '';
+        setMakes([]);
+        setModels([]);
+        setTrims([]);
+      } else if (field === 'make') {
+        updated.model = '';
+        updated.trim = '';
+        setModels([]);
+        setTrims([]);
+      } else if (field === 'model') {
+        updated.trim = '';
+        setTrims([]);
+      }
+      return updated;
+    });
     setGeneratedImage(null); // Clear result on change
     setRevisedPrompt(null);
     setError(null);
@@ -218,43 +300,59 @@ Requirements:
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Year</label>
-                  <input
-                    type="text"
+                  <select
                     value={form.year}
                     onChange={(e) => handleChange('year', e.target.value)}
                     className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none"
-                    placeholder="2024"
-                  />
+                    disabled={loadingYMM.years}
+                  >
+                    <option value="">Select Year</option>
+                    {years.map(year => (
+                      <option key={year} value={year}>{year}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Make</label>
-                  <input
-                    type="text"
+                  <select
                     value={form.make}
                     onChange={(e) => handleChange('make', e.target.value)}
-                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none"
-                    placeholder="Toyota"
-                  />
+                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none disabled:opacity-50"
+                    disabled={!form.year || loadingYMM.makes}
+                  >
+                    <option value="">{loadingYMM.makes ? 'Loading...' : 'Select Make'}</option>
+                    {makes.map(make => (
+                      <option key={make} value={make}>{make}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Model</label>
-                  <input
-                    type="text"
+                  <select
                     value={form.model}
                     onChange={(e) => handleChange('model', e.target.value)}
-                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none"
-                    placeholder="Tundra"
-                  />
+                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none disabled:opacity-50"
+                    disabled={!form.make || loadingYMM.models}
+                  >
+                    <option value="">{loadingYMM.models ? 'Loading...' : 'Select Model'}</option>
+                    {models.map(model => (
+                      <option key={model} value={model}>{model}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Trim</label>
-                  <input
-                    type="text"
+                  <select
                     value={form.trim}
                     onChange={(e) => handleChange('trim', e.target.value)}
-                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none"
-                    placeholder="TRD Pro"
-                  />
+                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none disabled:opacity-50"
+                    disabled={!form.model || loadingYMM.trims}
+                  >
+                    <option value="">{loadingYMM.trims ? 'Loading...' : 'Select Trim'}</option>
+                    {trims.map(trim => (
+                      <option key={trim} value={trim}>{trim}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
