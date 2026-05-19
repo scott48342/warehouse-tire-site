@@ -149,9 +149,9 @@ const DEFAULT_CONFIG: VisualizerConfig = {
   wheelScale: 1.0,
   wheelDiameter: 18,  // Stock 18" wheel
   
-  // Wheel well clipping - tuck tire behind fender
-  frontWheelClip: { clipTop: 15, clipLeft: 5, clipRight: 5, clipBottom: 0, archRadius: 50 },
-  rearWheelClip: { clipTop: 15, clipLeft: 5, clipRight: 5, clipBottom: 0, archRadius: 50 },
+  // Wheel well clipping - tuck tire behind fender (sides set to 0 to prevent cutoff on lifted)
+  frontWheelClip: { clipTop: 15, clipLeft: 0, clipRight: 0, clipBottom: 0, archRadius: 50 },
+  rearWheelClip: { clipTop: 15, clipLeft: 0, clipRight: 0, clipBottom: 0, archRadius: 50 },
   
   // Tire texture/realism
   tireTexture: {
@@ -162,10 +162,10 @@ const DEFAULT_CONFIG: VisualizerConfig = {
     innerShadow: 0.3,
   },
   
-  // Wheel depth/offset
+  // Wheel depth/offset (shadows disabled - look fake when clipped)
   wheelDepth: {
-    insetShadow: 0.3,
-    dropShadow: 0.2,
+    insetShadow: 0,
+    dropShadow: 0,
     offsetVisual: 0,  // 0 = neutral, negative = aggressive
     faceScale: 1.0,
   },
@@ -178,9 +178,9 @@ const DEFAULT_CONFIG: VisualizerConfig = {
     scale: 1.1,
   },
   
-  // Legacy visual effects
-  showTireShadow: true,
-  showWheelShadow: true,
+  // Legacy visual effects (disabled - shadows look fake when clipped)
+  showTireShadow: false,
+  showWheelShadow: false,
   shadowOpacity: 0.4,
   shadowBlur: 8,
   
@@ -511,6 +511,12 @@ export default function TundraTestPage() {
   const [activeTab, setActiveTab] = useState<"wheels" | "tires" | "lift" | "effects" | "save">("wheels");
   const imageRef = useRef<HTMLImageElement>(null);
 
+  // Custom wheel URL/SKU input state
+  const [customWheelUrl, setCustomWheelUrl] = useState("");
+  const [wheelLoading, setWheelLoading] = useState(false);
+  const [wheelError, setWheelError] = useState("");
+  const [loadedWheelName, setLoadedWheelName] = useState("");
+
   // Track rendered image dimensions for coordinate scaling
   const [renderedSize, setRenderedSize] = useState({ width: 0, height: 0 });
 
@@ -602,6 +608,45 @@ export default function TundraTestPage() {
     }));
   };
 
+  // Load custom wheel from URL or SKU
+  const loadCustomWheel = async () => {
+    const input = customWheelUrl.trim();
+    if (!input) return;
+    
+    setWheelLoading(true);
+    setWheelError("");
+    setLoadedWheelName("");
+    
+    try {
+      // Check if it's a URL (starts with http)
+      if (input.startsWith("http")) {
+        // Direct URL - just use it
+        setConfig((prev) => ({ ...prev, wheelImage: input }));
+        setLoadedWheelName("Custom URL");
+      } else {
+        // Assume it's a SKU - fetch from our wheels API
+        const res = await fetch(`/api/wheels/sku/${encodeURIComponent(input)}`);
+        if (!res.ok) {
+          throw new Error(`Wheel not found: ${input}`);
+        }
+        const wheel = await res.json();
+        
+        // Get the wheel image URL from the images array
+        const imageUrl = wheel.images?.[0];
+        if (!imageUrl) {
+          throw new Error("No image found for this wheel");
+        }
+        
+        setConfig((prev) => ({ ...prev, wheelImage: imageUrl }));
+        setLoadedWheelName(`${wheel.brand || ""} ${wheel.model || wheel.title || input}`.trim());
+      }
+    } catch (err) {
+      setWheelError(err instanceof Error ? err.message : "Failed to load wheel");
+    } finally {
+      setWheelLoading(false);
+    }
+  };
+
   const copyConfig = async () => {
     await navigator.clipboard.writeText(JSON.stringify(config, null, 2));
     setCopied(true);
@@ -689,8 +734,8 @@ export default function TundraTestPage() {
               
               {/* Vehicle + Wheels Container */}
               <div
-                className="relative bg-gradient-to-b from-neutral-600 to-neutral-800 rounded-lg overflow-hidden"
-                style={{ minHeight: 400 }}
+                className="relative bg-gradient-to-b from-neutral-600 to-neutral-800 rounded-lg"
+                style={{ minHeight: 400, overflow: 'visible' }}
               >
                 {/* Vehicle Image */}
                 <img
@@ -795,11 +840,16 @@ export default function TundraTestPage() {
                 {/* Wheel Asset Selector */}
                 <div className="bg-neutral-800 rounded-lg p-4">
                   <h3 className="font-semibold text-neutral-300 mb-3">🎡 Wheel Asset</h3>
+                  
+                  {/* Preset wheels dropdown */}
                   <select
-                    value={config.wheelImage}
-                    onChange={(e) =>
-                      setConfig((prev) => ({ ...prev, wheelImage: e.target.value }))
-                    }
+                    value={WHEEL_ASSETS.find(a => a.path === config.wheelImage)?.path || "custom"}
+                    onChange={(e) => {
+                      if (e.target.value !== "custom") {
+                        setConfig((prev) => ({ ...prev, wheelImage: e.target.value }));
+                        setCustomWheelUrl("");
+                      }
+                    }}
                     className="w-full bg-neutral-700 text-white rounded px-3 py-2"
                   >
                     {WHEEL_ASSETS.map((asset) => (
@@ -807,7 +857,37 @@ export default function TundraTestPage() {
                         {asset.name}
                       </option>
                     ))}
+                    <option value="custom">— Custom URL/SKU —</option>
                   </select>
+                  
+                  {/* Custom wheel URL/SKU input */}
+                  <div className="mt-3">
+                    <label className="text-xs text-neutral-400 block mb-1">
+                      Paste wheel image URL or SKU:
+                    </label>
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={customWheelUrl}
+                        onChange={(e) => setCustomWheelUrl(e.target.value)}
+                        placeholder="https://... or SKU like KM54220050512"
+                        className="flex-1 bg-neutral-700 text-white rounded px-3 py-2 text-sm"
+                      />
+                      <button
+                        onClick={loadCustomWheel}
+                        disabled={!customWheelUrl.trim() || wheelLoading}
+                        className="px-3 py-2 bg-red-600 hover:bg-red-700 disabled:bg-neutral-600 rounded font-medium text-sm"
+                      >
+                        {wheelLoading ? "..." : "Load"}
+                      </button>
+                    </div>
+                    {wheelError && (
+                      <p className="text-xs text-red-400 mt-1">{wheelError}</p>
+                    )}
+                    {loadedWheelName && (
+                      <p className="text-xs text-green-400 mt-1">✓ {loadedWheelName}</p>
+                    )}
+                  </div>
                   
                   {/* Wheel Diameter Selector */}
                   <div className="mt-4">
