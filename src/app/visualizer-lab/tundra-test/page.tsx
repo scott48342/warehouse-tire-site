@@ -532,6 +532,17 @@ export default function TundraTestPage() {
     }
   }, []);
 
+  // Check for wheel from normalizer (sessionStorage)
+  useEffect(() => {
+    const normalizerWheel = sessionStorage.getItem("normalizer-preview-wheel");
+    if (normalizerWheel) {
+      setConfig(prev => ({ ...prev, wheelImage: normalizerWheel }));
+      setLoadedWheelName("From Normalizer");
+      // Clear it so it doesn't persist on refresh
+      sessionStorage.removeItem("normalizer-preview-wheel");
+    }
+  }, []);
+
   // Handle already-cached images (onLoad fires before React attaches handler)
   useEffect(() => {
     const img = imageRef.current;
