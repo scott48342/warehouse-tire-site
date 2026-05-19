@@ -102,7 +102,8 @@ async function generateWithOpenAI(
   if (!apiKey) throw new Error("OPENAI_API_KEY not configured");
   
   // DALL-E 3 doesn't support img2img, so we use the prompt only
-  // For true img2img, would need to use DALL-E 2 edit endpoint
+  // For true img2img, would need to use DALL-E 2 edit endpoint or GPT-4o image generation
+  // DALL-E 3 only supports 1024x1024, 1792x1024, or 1024x1792
   const response = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
     headers: {
@@ -111,10 +112,10 @@ async function generateWithOpenAI(
     },
     body: JSON.stringify({
       model: "dall-e-3",
-      prompt: `${prompt}. Create a photorealistic front-facing automotive wheel render, perfectly centered, transparent background, studio product photography, high detail.`,
+      prompt: `${prompt}. Create a photorealistic front-facing automotive wheel render, perfectly centered, pure white background, studio product photography, high detail, isolated wheel only, no tire.`,
       n: 1,
-      size: outputSize >= 1024 ? "1024x1024" : "512x512",
-      response_format: "url",
+      size: "1024x1024",  // DALL-E 3 only supports these fixed sizes
+      quality: "hd",
     }),
   });
   
