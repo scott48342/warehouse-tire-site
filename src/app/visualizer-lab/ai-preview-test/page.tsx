@@ -180,6 +180,49 @@ export default function AIPreviewTestPage() {
     return parts.join('_');
   }, [form]);
 
+  // Detect vehicle type for tire appearance
+  const vehicleType = useMemo(() => {
+    const model = form.model.toLowerCase();
+    const make = form.make.toLowerCase();
+    
+    // Sports cars / muscle cars - low profile tires
+    const sportsCars = ['camaro', 'mustang', 'corvette', 'challenger', 'charger', 'supra', '370z', '350z', 'gt-r', 'gtr', 'wrx', 'sti', 'miata', 'mx-5', '86', 'brz', 'genesis coupe', 'm3', 'm4', 'm5', 'amg', 'rs3', 'rs5', 'rs7', 'civic type r', 'type-r'];
+    if (sportsCars.some(car => model.includes(car))) return 'sports';
+    
+    // Trucks - all-terrain or highway tires
+    const trucks = ['f-150', 'f150', 'f-250', 'f250', 'f-350', 'silverado', 'sierra', 'ram', 'tundra', 'titan', 'tacoma', 'ranger', 'colorado', 'canyon', 'gladiator', 'frontier', 'ridgeline'];
+    if (trucks.some(truck => model.includes(truck))) return 'truck';
+    
+    // Off-road SUVs
+    const offroad = ['wrangler', 'bronco', '4runner', 'land cruiser', 'defender', 'g-wagon', 'g wagon'];
+    if (offroad.some(or => model.includes(or))) return 'offroad';
+    
+    // SUVs/Crossovers
+    const suvs = ['tahoe', 'suburban', 'yukon', 'expedition', 'sequoia', 'armada', 'durango', 'explorer', 'highlander', 'pilot', 'pathfinder', 'telluride', 'palisade'];
+    if (suvs.some(suv => model.includes(suv))) return 'suv';
+    
+    // Default to sedan/car
+    return 'car';
+  }, [form.model, form.make]);
+
+  // Get tire style description based on vehicle type
+  const tireStyleDescription = useMemo(() => {
+    switch (vehicleType) {
+      case 'sports':
+        return 'low-profile performance tires with thin sidewalls, sporty appearance';
+      case 'truck':
+        return form.liftPreset !== 'stock' 
+          ? 'aggressive all-terrain tires with bold sidewall lettering'
+          : 'highway truck tires with appropriate sidewall height';
+      case 'offroad':
+        return 'rugged all-terrain or mud-terrain tires with aggressive tread pattern';
+      case 'suv':
+        return 'SUV touring tires with moderate sidewall height';
+      default:
+        return 'passenger car tires with standard sidewall profile';
+    }
+  }, [vehicleType, form.liftPreset]);
+
   // Generate structured prompt
   const generatedPrompt = useMemo(() => {
     const liftInfo = LIFT_PRESETS.find(l => l.value === form.liftPreset);
@@ -189,6 +232,8 @@ export default function AIPreviewTestPage() {
 
 Vehicle is equipped with ${form.wheelBrand} ${form.wheelModel} wheels (${form.wheelDiameter}" diameter) wrapped in ${form.tireSize} tires. The wheel design matches the reference product image exactly.
 
+Tire appearance: ${tireStyleDescription}.
+
 Suspension: ${liftInfo?.description || 'stock height'}.
 
 Photography style: ${styleInfo?.description || 'clean catalog style'}.
@@ -197,10 +242,11 @@ Requirements:
 - Realistic ecommerce product preview quality
 - Wheels and tires are the focal point
 - Accurate wheel fitment appearance for this vehicle
+- Tire sidewall height must match the specified tire size (${form.tireSize})
 - No text, logos, or watermarks
 - No visible license plates
 - Clean, professional composition`;
-  }, [form]);
+  }, [form, tireStyleDescription]);
 
   // Generate config object for API
   const configObject = useMemo(() => ({
