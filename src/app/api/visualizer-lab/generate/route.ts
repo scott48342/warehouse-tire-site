@@ -35,8 +35,8 @@ export async function POST(request: NextRequest) {
       style: 'natural', // More photorealistic
     });
 
-    const imageUrl = response.data[0]?.url;
-    const revisedPrompt = response.data[0]?.revised_prompt;
+    const imageUrl = response.data?.[0]?.url;
+    const revisedPrompt = response.data?.[0]?.revised_prompt;
 
     if (!imageUrl) {
       return NextResponse.json({ error: 'No image generated' }, { status: 500 });
