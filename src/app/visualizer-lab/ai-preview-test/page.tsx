@@ -66,6 +66,11 @@ export default function AIPreviewTestPage() {
   const [trims, setTrims] = useState<string[]>([]);
   const [loadingYMM, setLoadingYMM] = useState({ years: false, makes: false, models: false, trims: false });
 
+  // Wheel dropdown data
+  const [wheelBrands, setWheelBrands] = useState<{ name: string; count: number }[]>([]);
+  const [wheelStyles, setWheelStyles] = useState<{ name: string; imageUrl?: string; brand: string; skuExample: string }[]>([]);
+  const [loadingWheels, setLoadingWheels] = useState({ brands: false, styles: false });
+
   const [generating, setGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [revisedPrompt, setRevisedPrompt] = useState<string | null>(null);
@@ -126,6 +131,34 @@ export default function AIPreviewTestPage() {
       .catch(console.error)
       .finally(() => setLoadingYMM(prev => ({ ...prev, trims: false })));
   }, [form.year, form.make, form.model]);
+
+  // Fetch wheel brands on mount
+  useEffect(() => {
+    setLoadingWheels(prev => ({ ...prev, brands: true }));
+    fetch('/api/wheels/brands')
+      .then(res => res.json())
+      .then(data => {
+        setWheelBrands(data.brands || []);
+      })
+      .catch(console.error)
+      .finally(() => setLoadingWheels(prev => ({ ...prev, brands: false })));
+  }, []);
+
+  // Fetch wheel styles when brand changes
+  useEffect(() => {
+    if (!form.wheelBrand) {
+      setWheelStyles([]);
+      return;
+    }
+    setLoadingWheels(prev => ({ ...prev, styles: true }));
+    fetch(`/api/wheels/styles?brand=${encodeURIComponent(form.wheelBrand)}`)
+      .then(res => res.json())
+      .then(data => {
+        setWheelStyles(data.styles || []);
+      })
+      .catch(console.error)
+      .finally(() => setLoadingWheels(prev => ({ ...prev, styles: false })));
+  }, [form.wheelBrand]);
 
   // Generate cache key
   const cacheKey = useMemo(() => {
@@ -214,9 +247,30 @@ Requirements:
         updated.trim = '';
         setTrims([]);
       }
+      // Cascade resets for wheel brand/model
+      if (field === 'wheelBrand') {
+        updated.wheelModel = '';
+        updated.wheelImageUrl = '';
+        updated.wheelSku = '';
+        setWheelStyles([]);
+      }
       return updated;
     });
     setGeneratedImage(null); // Clear result on change
+    setRevisedPrompt(null);
+    setError(null);
+  };
+
+  // Handle wheel style selection - auto-fill image URL and SKU
+  const handleWheelStyleChange = (styleName: string) => {
+    const style = wheelStyles.find(s => s.name === styleName);
+    setForm(prev => ({
+      ...prev,
+      wheelModel: styleName,
+      wheelImageUrl: style?.imageUrl || '',
+      wheelSku: style?.skuExample || '',
+    }));
+    setGeneratedImage(null);
     setRevisedPrompt(null);
     setError(null);
   };
@@ -379,23 +433,31 @@ Requirements:
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Brand</label>
-                  <input
-                    type="text"
+                  <select
                     value={form.wheelBrand}
                     onChange={(e) => handleChange('wheelBrand', e.target.value)}
                     className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none"
-                    placeholder="Fuel"
-                  />
+                    disabled={loadingWheels.brands}
+                  >
+                    <option value="">{loadingWheels.brands ? 'Loading...' : 'Select Brand'}</option>
+                    {wheelBrands.map(brand => (
+                      <option key={brand.name} value={brand.name}>{brand.name}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Model</label>
-                  <input
-                    type="text"
+                  <select
                     value={form.wheelModel}
-                    onChange={(e) => handleChange('wheelModel', e.target.value)}
-                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none"
-                    placeholder="Reaction"
-                  />
+                    onChange={(e) => handleWheelStyleChange(e.target.value)}
+                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none disabled:opacity-50"
+                    disabled={!form.wheelBrand || loadingWheels.styles}
+                  >
+                    <option value="">{loadingWheels.styles ? 'Loading...' : 'Select Model'}</option>
+                    {wheelStyles.map(style => (
+                      <option key={style.name} value={style.name}>{style.name}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">SKU</label>
@@ -403,8 +465,9 @@ Requirements:
                     type="text"
                     value={form.wheelSku}
                     onChange={(e) => handleChange('wheelSku', e.target.value)}
-                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none"
-                    placeholder="D75320907050"
+                    className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none text-sm"
+                    placeholder="Auto-filled from model"
+                    readOnly
                   />
                 </div>
                 <div>
@@ -421,6 +484,7 @@ Requirements:
                 </div>
               </div>
 
+              {/* Wheel Image URL - auto-filled but editable */}
               <div className="mt-4">
                 <label className="block text-sm text-gray-400 mb-1">Wheel Image URL</label>
                 <input
@@ -428,7 +492,7 @@ Requirements:
                   value={form.wheelImageUrl}
                   onChange={(e) => handleChange('wheelImageUrl', e.target.value)}
                   className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:border-blue-500 focus:outline-none text-sm"
-                  placeholder="https://..."
+                  placeholder="Auto-filled from model selection"
                 />
               </div>
 
