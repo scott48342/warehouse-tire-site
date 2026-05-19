@@ -289,28 +289,61 @@ export default function AIPreviewTestPage() {
     }
   }, [vehicleType, form.liftPreset]);
 
+  // Get wheel style description based on brand/model name
+  const wheelStyleDescription = useMemo(() => {
+    const model = form.wheelModel.toLowerCase();
+    const brand = form.wheelBrand.toLowerCase();
+    
+    // Try to infer wheel style from name
+    if (model.includes('forged') || model.includes('forge')) return 'premium forged aluminum multi-spoke design';
+    if (model.includes('mesh')) return 'intricate mesh spoke pattern';
+    if (model.includes('split')) return 'split 5-spoke design';
+    if (model.includes('flow') || model.includes('rotary')) return 'flow-formed lightweight design';
+    if (model.includes('beadlock') || model.includes('bead')) return 'aggressive beadlock-style ring design';
+    if (model.includes('stealth') || model.includes('matte')) return 'stealthy matte black finish';
+    if (model.includes('chrome') || model.includes('polished')) return 'polished chrome finish';
+    if (model.includes('bronze') || model.includes('copper')) return 'bronze/copper tinted finish';
+    
+    // Brand-specific defaults
+    if (brand === 'fuel') return 'aggressive off-road style with bold spoke design';
+    if (brand === 'method') return 'rugged off-road racing inspired design';
+    if (brand === 'kmc') return 'modern street/off-road crossover design';
+    if (brand === 'american force') return 'bold American-style forged design';
+    if (brand === 'hostile') return 'aggressive lifted truck style';
+    if (brand === 'vision') return 'classic multi-spoke design';
+    
+    return 'aftermarket alloy wheel design';
+  }, [form.wheelBrand, form.wheelModel]);
+
   const generatedPrompt = useMemo(() => {
     const liftInfo = LIFT_PRESETS.find(l => l.value === form.liftPreset);
     const styleInfo = RENDER_STYLES.find(s => s.value === form.renderStyle);
-    return `Professional automotive product photograph of a ${form.year} ${form.make} ${form.model} ${form.trim} in ${form.color} color, 3/4 front angle view.
+    
+    // Emphasize color more clearly
+    const colorEmphasis = form.color.toLowerCase().includes('rock') ? `distinctive ${form.color}` 
+      : form.color.toLowerCase().includes('gray') || form.color.toLowerCase().includes('grey') ? `${form.color} metallic`
+      : form.color;
+    
+    return `Professional automotive product photograph of a ${form.year} ${form.make} ${form.model} ${form.trim}.
 
-Vehicle is equipped with ${form.wheelBrand} ${form.wheelModel} wheels (${form.wheelDiameter}" diameter) wrapped in ${form.tireSize} tires. The wheel design matches the reference product image exactly.
+IMPORTANT: The vehicle body color is ${colorEmphasis}. The entire vehicle exterior must be this exact color.
 
-Tire appearance: ${tireStyleDescription}.
+The vehicle is equipped with ${form.wheelBrand} ${form.wheelModel} aftermarket wheels - ${wheelStyleDescription}. Wheel diameter is ${form.wheelDiameter} inches. Tires are ${form.tireSize} - ${tireStyleDescription}.
 
 Suspension: ${liftInfo?.description || 'stock height'}.
 
+Camera angle: 3/4 front view showing the vehicle's front and driver side.
+
 Photography style: ${styleInfo?.description || 'clean catalog style'}.
 
-Requirements:
+Critical requirements:
+- Vehicle body MUST be ${form.color} color - this is essential
+- Aftermarket wheels must look premium and realistic
+- ${tireStyleDescription}
 - Realistic ecommerce product preview quality
-- Wheels and tires are the focal point
-- Accurate wheel fitment appearance for this vehicle
-- Tire sidewall height must match the specified tire size (${form.tireSize})
-- No text, logos, or watermarks
-- No visible license plates
-- Clean, professional composition`;
-  }, [form, tireStyleDescription]);
+- No text, logos, watermarks, or license plates
+- Clean, professional automotive photography`;
+  }, [form, tireStyleDescription, wheelStyleDescription]);
 
   const configObject = useMemo(() => ({
     vehicle: { year: parseInt(form.year) || 0, make: form.make, model: form.model, trim: form.trim, color: form.color },
