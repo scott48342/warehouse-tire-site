@@ -50,7 +50,16 @@ interface QualityChecklist {
   approved: boolean;
 }
 
-type WheelStatus = "usable_direct" | "needs_manual_cleanup" | "needs_ai_cleanup" | "rejected" | "pending";
+type WheelStatus = "usable_direct" | "ai_normalized" | "needs_manual_cleanup" | "needs_ai_cleanup" | "rejected" | "pending";
+
+interface AINormalizationResult {
+  imageUrl: string;
+  prompt: string;
+  model: string;
+  timestamp: string;
+  status: "pending" | "processing" | "complete" | "error";
+  error?: string;
+}
 
 // ============================================================================
 // CONSTANTS
@@ -117,6 +126,7 @@ function getWheelStatus(checklist: QualityChecklist): WheelStatus {
 function getStatusColor(status: WheelStatus): string {
   switch (status) {
     case "usable_direct": return "text-green-400";
+    case "ai_normalized": return "text-cyan-400";
     case "needs_manual_cleanup": return "text-yellow-400";
     case "needs_ai_cleanup": return "text-orange-400";
     case "rejected": return "text-red-400";
@@ -127,6 +137,7 @@ function getStatusColor(status: WheelStatus): string {
 function getStatusLabel(status: WheelStatus): string {
   switch (status) {
     case "usable_direct": return "✅ Usable Direct";
+    case "ai_normalized": return "🤖 AI Normalized";
     case "needs_manual_cleanup": return "🔧 Needs Manual Cleanup";
     case "needs_ai_cleanup": return "🤖 Needs AI Cleanup";
     case "rejected": return "❌ Rejected";
@@ -149,6 +160,14 @@ export default function WheelNormalizerPage() {
   
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
+  
+  // AI Normalization state
+  const [aiExpanded, setAiExpanded] = useState(false);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState("");
+  const [aiResult, setAiResult] = useState<AINormalizationResult | null>(null);
+  const [aiPromptOverride, setAiPromptOverride] = useState("");
+  const [aiApproved, setAiApproved] = useState(false);
   
   // Load image from URL
   const loadImage = useCallback(async () => {
@@ -332,7 +351,91 @@ export default function WheelNormalizerPage() {
     window.open(tundraUrl, "_blank");
   }, []);
   
-  const status = getWheelStatus(checklist);
+  // AI Normalize wheel
+  const runAiNormalization = useCallback(async () => {
+    if (!originalImage) return;
+    
+    setAiLoading(true);
+    setAiError("");
+    setAiResult(null);
+    setAiApproved(false);
+    
+    try {
+      // Get the source image as base64
+      const tempCanvas = document.createElement("canvas");
+      tempCanvas.width = originalImage.naturalWidth;
+      tempCanvas.height = originalImage.naturalHeight;
+      const tempCtx = tempCanvas.getContext("2d");
+      if (!tempCtx) throw new Error("Failed to create canvas context");
+      tempCtx.drawImage(originalImage, 0, 0);
+      const sourceBase64 = tempCanvas.toDataURL("image/png");
+      
+      // Build the prompt
+      const defaultPrompt = `Front-facing automotive wheel, studio product photography, centered on white background, professional lighting, no tire, clean isolated wheel face view, high detail, ${config.name || "alloy wheel"}`;
+      const prompt = aiPromptOverride.trim() || defaultPrompt;
+      
+      // Call the AI normalization API
+      const response = await fetch("/api/admin/visualizer-lab/ai-normalize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sourceImage: sourceBase64,
+          prompt,
+          sku: config.sku,
+          name: config.name,
+          outputSize: config.outputSize,
+        }),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `API error: ${response.status}`);
+      }
+      
+      const result = await response.json();
+      
+      setAiResult({
+        imageUrl: result.imageUrl,
+        prompt: result.prompt || prompt,
+        model: result.model || "unknown",
+        timestamp: new Date().toISOString(),
+        status: "complete",
+      });
+      
+    } catch (err) {
+      setAiError(err instanceof Error ? err.message : "AI normalization failed");
+      setAiResult({
+        imageUrl: "",
+        prompt: "",
+        model: "",
+        timestamp: new Date().toISOString(),
+        status: "error",
+        error: err instanceof Error ? err.message : "Unknown error",
+      });
+    } finally {
+      setAiLoading(false);
+    }
+  }, [originalImage, config.sku, config.name, config.outputSize, aiPromptOverride]);
+  
+  // Preview AI result on Tundra
+  const previewAiOnTundra = useCallback(() => {
+    if (!aiResult?.imageUrl) return;
+    
+    sessionStorage.setItem("normalizer-preview-wheel", aiResult.imageUrl);
+    window.open("/visualizer-lab/tundra-test", "_blank");
+  }, [aiResult]);
+  
+  // Export AI normalized PNG
+  const exportAiPng = useCallback(() => {
+    if (!aiResult?.imageUrl) return;
+    
+    const link = document.createElement("a");
+    link.download = `wheel-ai-normalized-${config.sku || "export"}.png`;
+    link.href = aiResult.imageUrl;
+    link.click();
+  }, [aiResult, config.sku]);
+  
+  const status = aiApproved ? "ai_normalized" : getWheelStatus(checklist);
   
   return (
     <div className="min-h-screen bg-zinc-900 text-white p-6">
@@ -733,6 +836,205 @@ export default function WheelNormalizerPage() {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* AI Normalization Section */}
+        <div className="mt-8 bg-gradient-to-r from-purple-900/30 to-cyan-900/30 border border-purple-700/50 rounded-lg overflow-hidden">
+          <button
+            onClick={() => setAiExpanded(!aiExpanded)}
+            className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/5 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">🤖</span>
+              <div className="text-left">
+                <h2 className="text-xl font-bold">AI Wheel Normalization</h2>
+                <p className="text-sm text-zinc-400">
+                  Convert angled/3-quarter view wheels to front-facing assets using AI regeneration
+                </p>
+              </div>
+            </div>
+            <span className="text-2xl">{aiExpanded ? "▼" : "▶"}</span>
+          </button>
+          
+          {aiExpanded && (
+            <div className="px-6 pb-6 border-t border-purple-700/30">
+              {/* Explanation */}
+              <div className="mt-4 p-4 bg-zinc-800/50 rounded-lg text-sm">
+                <h3 className="font-semibold text-purple-300 mb-2">💡 How AI Normalization Works</h3>
+                <p className="text-zinc-400 mb-2">
+                  Instead of trying to mathematically rotate angled wheel images (which doesn&apos;t work well),
+                  we use AI to <strong className="text-white">regenerate</strong> the wheel as a clean front-facing render.
+                </p>
+                <p className="text-zinc-400">
+                  The AI preserves: spoke design, finish/material, center cap, lip/barrel style.
+                  Output is a visualizer-ready asset: front-facing, centered, transparent background, square canvas.
+                </p>
+              </div>
+              
+              {/* Requirements check */}
+              {!originalImage && (
+                <div className="mt-4 p-4 bg-yellow-900/30 border border-yellow-700 rounded-lg">
+                  <p className="text-yellow-300">⚠️ Load a wheel image first to use AI normalization.</p>
+                </div>
+              )}
+              
+              {originalImage && (
+                <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {/* Left: Controls */}
+                  <div className="space-y-4">
+                    <h3 className="font-semibold text-lg">Configuration</h3>
+                    
+                    {/* Prompt override */}
+                    <div>
+                      <label className="block text-sm text-zinc-400 mb-1">
+                        Prompt Override (optional)
+                      </label>
+                      <textarea
+                        value={aiPromptOverride}
+                        onChange={(e) => setAiPromptOverride(e.target.value)}
+                        placeholder="Leave empty for auto-generated prompt. Or describe the wheel for better results..."
+                        className="w-full h-24 bg-zinc-700 rounded px-3 py-2 text-sm resize-none"
+                      />
+                      <p className="text-xs text-zinc-500 mt-1">
+                        Default prompt emphasizes: front-facing, centered, no tire, studio lighting
+                      </p>
+                    </div>
+                    
+                    {/* Run button */}
+                    <button
+                      onClick={runAiNormalization}
+                      disabled={aiLoading || !originalImage}
+                      className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 disabled:from-zinc-600 disabled:to-zinc-600 px-4 py-3 rounded-lg font-semibold text-lg transition-all"
+                    >
+                      {aiLoading ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <span className="animate-spin">⚙️</span> Generating...
+                        </span>
+                      ) : (
+                        "🚀 Generate Front-Facing Wheel"
+                      )}
+                    </button>
+                    
+                    {aiError && (
+                      <div className="p-3 bg-red-900/30 border border-red-700 rounded-lg text-red-300 text-sm">
+                        ❌ {aiError}
+                      </div>
+                    )}
+                    
+                    {/* Status notes */}
+                    <div className="p-3 bg-zinc-800 rounded-lg text-sm">
+                      <h4 className="font-semibold mb-2">Asset Status Legend:</h4>
+                      <ul className="space-y-1 text-zinc-400">
+                        <li><span className="text-green-400">✅ usable_direct</span> — Front-facing, ready to use</li>
+                        <li><span className="text-cyan-400">🤖 ai_normalized</span> — AI-generated front-facing version</li>
+                        <li><span className="text-yellow-400">🔧 needs_manual_cleanup</span> — Minor fixes needed</li>
+                        <li><span className="text-orange-400">🤖 needs_ai_cleanup</span> — Angled, needs AI conversion</li>
+                        <li><span className="text-red-400">❌ rejected</span> — Not usable</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  {/* Right: Results */}
+                  <div className="space-y-4">
+                    <h3 className="font-semibold text-lg">Side-by-Side Comparison</h3>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      {/* Original */}
+                      <div>
+                        <p className="text-sm text-zinc-400 mb-2 text-center">Original (Angled)</p>
+                        <div className="aspect-square bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center">
+                          <img
+                            src={originalImage.src}
+                            alt="Original"
+                            className="max-w-full max-h-full object-contain"
+                          />
+                        </div>
+                      </div>
+                      
+                      {/* AI Result */}
+                      <div>
+                        <p className="text-sm text-zinc-400 mb-2 text-center">AI Normalized (Front)</p>
+                        <div 
+                          className="aspect-square rounded-lg overflow-hidden flex items-center justify-center"
+                          style={{ 
+                            backgroundImage: "linear-gradient(45deg, #333 25%, transparent 25%), linear-gradient(-45deg, #333 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #333 75%), linear-gradient(-45deg, transparent 75%, #333 75%)",
+                            backgroundSize: "20px 20px",
+                            backgroundPosition: "0 0, 0 10px, 10px -10px, -10px 0px"
+                          }}
+                        >
+                          {aiLoading ? (
+                            <div className="text-center">
+                              <div className="text-4xl animate-pulse">🤖</div>
+                              <p className="text-sm text-zinc-400 mt-2">Generating...</p>
+                            </div>
+                          ) : aiResult?.imageUrl ? (
+                            <img
+                              src={aiResult.imageUrl}
+                              alt="AI Normalized"
+                              className="max-w-full max-h-full object-contain"
+                            />
+                          ) : (
+                            <span className="text-zinc-500 text-sm">Run AI to see result</span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Result actions */}
+                    {aiResult?.imageUrl && aiResult.status === "complete" && (
+                      <div className="space-y-3">
+                        {/* Approve/Reject */}
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => setAiApproved(true)}
+                            className={`flex-1 px-4 py-2 rounded font-medium transition-colors ${
+                              aiApproved 
+                                ? "bg-green-600 text-white" 
+                                : "bg-zinc-700 hover:bg-green-700 text-zinc-300"
+                            }`}
+                          >
+                            ✅ Approve
+                          </button>
+                          <button
+                            onClick={() => {
+                              setAiApproved(false);
+                              setAiResult(null);
+                            }}
+                            className="flex-1 bg-zinc-700 hover:bg-red-700 px-4 py-2 rounded font-medium transition-colors"
+                          >
+                            ❌ Reject
+                          </button>
+                        </div>
+                        
+                        {/* Export/Preview buttons */}
+                        <div className="flex gap-2">
+                          <button
+                            onClick={exportAiPng}
+                            className="flex-1 bg-green-600 hover:bg-green-500 px-3 py-2 rounded text-sm font-medium"
+                          >
+                            💾 Export PNG
+                          </button>
+                          <button
+                            onClick={previewAiOnTundra}
+                            className="flex-1 bg-purple-600 hover:bg-purple-500 px-3 py-2 rounded text-sm font-medium"
+                          >
+                            🚗 Preview on Tundra
+                          </button>
+                        </div>
+                        
+                        {/* Generation info */}
+                        <div className="p-3 bg-zinc-800 rounded text-xs text-zinc-500">
+                          <p><strong>Model:</strong> {aiResult.model}</p>
+                          <p><strong>Prompt:</strong> {aiResult.prompt}</p>
+                          <p><strong>Generated:</strong> {new Date(aiResult.timestamp).toLocaleString()}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
         
         {/* Hidden canvas for processing */}
