@@ -105,8 +105,7 @@ const LIFT_PRESETS: LiftPreset[] = [
 
 // Default config optimized for 3/4 angle view
 const DEFAULT_CONFIG: VisualizerConfig = {
-  // Placeholder - will need actual 3/4 angle truck image
-  vehicleImage: "/visualizer/vehicles/tundra-34-angle-white.png",
+  vehicleImage: "/visualizer/vehicles/visualizer-tundra-2010-sr5-white-3q-front-v1.png",
   wheelImage: "",
   renderMode: "angled_masked",
   
