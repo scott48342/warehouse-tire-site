@@ -27,11 +27,11 @@ export async function POST(request: NextRequest) {
     console.log('[visualizer-lab] Prompt:', prompt.substring(0, 100) + '...');
 
     const response = await openai.images.generate({
-      model: 'dall-e-3',
+      model: 'gpt-image-1',
       prompt: prompt,
       n: 1,
-      size: '1792x1024', // Wide format for vehicle shots
-      quality: 'hd',
+      size: '1536x1024', // Wide format for vehicle shots
+      quality: 'high',
     });
 
     const imageUrl = response.data?.[0]?.url;
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
       imageUrl,
       revisedPrompt,
       cacheKey,
-      model: 'dall-e-3',
+      model: 'gpt-image-1',
     });
 
   } catch (error: unknown) {
