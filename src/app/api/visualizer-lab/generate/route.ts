@@ -32,7 +32,6 @@ export async function POST(request: NextRequest) {
       n: 1,
       size: '1792x1024', // Wide format for vehicle shots
       quality: 'hd',
-      style: 'natural', // More photorealistic
     });
 
     const imageUrl = response.data?.[0]?.url;
