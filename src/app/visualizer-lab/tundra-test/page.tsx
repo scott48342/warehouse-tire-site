@@ -9,11 +9,22 @@
  * - Real wheel asset support
  * - Shadow and depth effects
  * - Save/Load configuration
+ * - Angled wheel compatibility mode (NEW)
  * 
  * NO REGRESSION: This page does not affect any existing ecommerce flows.
  */
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import {
+  AngledWheelRenderer,
+  AngledSettingsControls,
+  AngledWheelPreview,
+  DEFAULT_ANGLED_SETTINGS,
+  type AngledWheelSettings,
+} from "@/components/visualizer-lab/AngledWheelRenderer";
+
+// Wheel render mode
+type WheelRenderMode = "front_face" | "angled_compat";
 
 // ============================================================================
 // TYPES
@@ -498,6 +509,109 @@ function WheelTireRenderer({
 }
 
 // ============================================================================
+// ANGLED WHEEL ON VEHICLE RENDERER
+// ============================================================================
+
+interface AngledWheelOnVehicleProps {
+  position: WheelPosition;
+  config: VisualizerConfig;
+  wheelClip: WheelWellClip;
+  angledSettings: AngledWheelSettings;
+  scaleX: number;
+  scaleY: number;
+  showDebug?: boolean;
+}
+
+function AngledWheelOnVehicle({
+  position,
+  config,
+  wheelClip,
+  angledSettings,
+  scaleX,
+  scaleY,
+  showDebug = false,
+}: AngledWheelOnVehicleProps) {
+  const scale = Math.min(scaleX, scaleY);
+  
+  // Calculate positions (same as WheelTireRenderer)
+  const centerX = position.x * scaleX;
+  const centerY = position.y * scaleY;
+  
+  const stockWheelRadius = position.radius * scale * config.wheelScale;
+  const finalTireRadius = stockWheelRadius * config.tire.outerDiameterScale;
+  const wheelDiameterScale = config.wheelDiameter / STOCK_WHEEL_DIAMETER;
+  const baseWheelRadius = stockWheelRadius * wheelDiameterScale;
+  const wheelRadius = baseWheelRadius * config.wheelDepth.faceScale;
+  
+  // OEM wheel mask radius
+  const oemMaskRadius = position.radius * scale * 1.1;
+  
+  // Clipping calculations
+  const clipTop = (wheelClip.clipTop / 100) * finalTireRadius;
+  const clipRight = (wheelClip.clipRight / 100) * finalTireRadius;
+  const clipBottom = (wheelClip.clipBottom / 100) * finalTireRadius;
+  const clipLeft = (wheelClip.clipLeft / 100) * finalTireRadius;
+  const archRound = (wheelClip.archRadius / 100) * Math.min(clipTop, finalTireRadius * 0.3);
+  const clipPath = `inset(${clipTop}px ${clipRight}px ${clipBottom}px ${clipLeft}px round ${archRound}px ${archRound}px 0px 0px)`;
+  
+  // Ground shadow
+  const gs = config.groundShadow;
+  const groundShadowWidth = finalTireRadius * 2 * gs.scale;
+  const groundShadowHeight = finalTireRadius * 0.3 * gs.scale;
+  
+  return (
+    <>
+      {/* Ground shadow */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          left: centerX - groundShadowWidth / 2,
+          top: centerY + finalTireRadius + gs.yOffset * scale,
+          width: groundShadowWidth,
+          height: groundShadowHeight,
+          background: `radial-gradient(ellipse, rgba(0,0,0,${gs.opacity}) 0%, transparent 70%)`,
+          filter: `blur(${gs.blur}px)`,
+          zIndex: 5,
+        }}
+      />
+      
+      {/* OEM Wheel Mask */}
+      <div
+        className="absolute pointer-events-none rounded-full"
+        style={{
+          left: centerX - oemMaskRadius,
+          top: centerY - oemMaskRadius + config.bodyLift * scaleY,
+          width: oemMaskRadius * 2,
+          height: oemMaskRadius * 2,
+          background: "radial-gradient(circle, #1a1a1a 0%, #0a0a0a 60%, #000 100%)",
+          zIndex: 15,
+        }}
+      />
+      
+      {/* Angled wheel with tire overlay - CLIPPED */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          left: centerX - finalTireRadius,
+          top: centerY - finalTireRadius,
+          width: finalTireRadius * 2,
+          height: finalTireRadius * 2,
+          clipPath: clipPath,
+          zIndex: 20,
+        }}
+      >
+        <AngledWheelRenderer
+          imageUrl={config.wheelImage}
+          settings={angledSettings}
+          size={finalTireRadius * 2}
+          showDebug={showDebug}
+        />
+      </div>
+    </>
+  );
+}
+
+// ============================================================================
 // MAIN PAGE COMPONENT
 // ============================================================================
 
@@ -508,7 +622,7 @@ export default function TundraTestPage() {
   const [copied, setCopied] = useState(false);
   const [savedConfigs, setSavedConfigs] = useState<{ name: string; config: VisualizerConfig }[]>([]);
   const [saveName, setSaveName] = useState("");
-  const [activeTab, setActiveTab] = useState<"wheels" | "tires" | "lift" | "effects" | "save">("wheels");
+  const [activeTab, setActiveTab] = useState<"wheels" | "tires" | "lift" | "effects" | "angled" | "save">("wheels");
   const imageRef = useRef<HTMLImageElement>(null);
 
   // Custom wheel URL/SKU input state
@@ -531,6 +645,10 @@ export default function TundraTestPage() {
 
   // Track rendered image dimensions for coordinate scaling
   const [renderedSize, setRenderedSize] = useState({ width: 0, height: 0 });
+
+  // NEW: Wheel render mode and angled compatibility settings
+  const [wheelRenderMode, setWheelRenderMode] = useState<WheelRenderMode>("front_face");
+  const [angledSettings, setAngledSettings] = useState<AngledWheelSettings>(DEFAULT_ANGLED_SETTINGS);
 
   // Load saved configs from localStorage
   useEffect(() => {
@@ -769,17 +887,31 @@ export default function TundraTestPage() {
             <div className="bg-neutral-800 rounded-lg p-4">
               <div className="flex justify-between items-center mb-3">
                 <h2 className="text-lg font-semibold">Preview</h2>
-                <label className="flex items-center gap-2 text-sm">
-                  <input
-                    type="checkbox"
-                    checked={config.showDebugOutlines}
-                    onChange={(e) =>
-                      setConfig((prev) => ({ ...prev, showDebugOutlines: e.target.checked }))
-                    }
-                    className="accent-red-500"
-                  />
-                  Debug Outlines
-                </label>
+                <div className="flex items-center gap-4">
+                  {/* Render Mode Toggle */}
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-neutral-400">Mode:</span>
+                    <select
+                      value={wheelRenderMode}
+                      onChange={(e) => setWheelRenderMode(e.target.value as WheelRenderMode)}
+                      className="bg-neutral-700 text-white rounded px-2 py-1 text-sm"
+                    >
+                      <option value="front_face">Front Face</option>
+                      <option value="angled_compat">Angled Compat</option>
+                    </select>
+                  </div>
+                  <label className="flex items-center gap-2 text-sm">
+                    <input
+                      type="checkbox"
+                      checked={config.showDebugOutlines}
+                      onChange={(e) =>
+                        setConfig((prev) => ({ ...prev, showDebugOutlines: e.target.checked }))
+                      }
+                      className="accent-red-500"
+                    />
+                    Debug Outlines
+                  </label>
+                </div>
               </div>
               
               {/* Vehicle + Wheels Container */}
@@ -802,7 +934,7 @@ export default function TundraTestPage() {
                 />
 
                 {/* Wheel/Tire Overlays */}
-                {imageLoaded && (
+                {imageLoaded && wheelRenderMode === "front_face" && (
                   <>
                     <WheelTireRenderer
                       position={config.frontWheel}
@@ -821,6 +953,30 @@ export default function TundraTestPage() {
                       scaleY={scaleY}
                       label="Rear"
                       color="#3b82f6"
+                    />
+                  </>
+                )}
+                
+                {/* Angled Compatibility Mode */}
+                {imageLoaded && wheelRenderMode === "angled_compat" && (
+                  <>
+                    <AngledWheelOnVehicle
+                      position={config.frontWheel}
+                      config={config}
+                      wheelClip={config.frontWheelClip}
+                      angledSettings={angledSettings}
+                      scaleX={scaleX}
+                      scaleY={scaleY}
+                      showDebug={config.showDebugOutlines}
+                    />
+                    <AngledWheelOnVehicle
+                      position={config.rearWheel}
+                      config={config}
+                      wheelClip={config.rearWheelClip}
+                      angledSettings={angledSettings}
+                      scaleX={scaleX}
+                      scaleY={scaleY}
+                      showDebug={config.showDebugOutlines}
                     />
                   </>
                 )}
@@ -869,7 +1025,7 @@ export default function TundraTestPage() {
           <div className="space-y-4">
             {/* Tab Navigation */}
             <div className="flex gap-1 bg-neutral-800 rounded-lg p-1">
-              {(["wheels", "tires", "lift", "effects", "save"] as const).map((tab) => (
+              {(["wheels", "tires", "lift", "effects", "angled", "save"] as const).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -1312,6 +1468,41 @@ export default function TundraTestPage() {
                       className="w-full accent-red-500 h-1" />
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* Angled Compatibility Tab */}
+            {activeTab === "angled" && (
+              <div className="space-y-4">
+                <div className="bg-neutral-800 rounded-lg p-4">
+                  <h3 className="font-semibold text-orange-400 mb-3">🔧 Angled Wheel Compatibility</h3>
+                  <p className="text-xs text-neutral-400 mb-4">
+                    Make angled wheel images (-A1-, -A2-) usable by hiding barrel/perspective issues with tire overlays and masks.
+                  </p>
+                  
+                  {/* Mode indicator */}
+                  <div className={`p-2 rounded-lg mb-4 text-sm ${
+                    wheelRenderMode === "angled_compat" 
+                      ? "bg-green-900/50 text-green-400 border border-green-700" 
+                      : "bg-neutral-700 text-neutral-400"
+                  }`}>
+                    {wheelRenderMode === "angled_compat" 
+                      ? "✅ Angled Compat mode ACTIVE" 
+                      : "⚠️ Switch to 'Angled Compat' mode in Preview header to see changes"}
+                  </div>
+                  
+                  <AngledSettingsControls
+                    settings={angledSettings}
+                    onChange={setAngledSettings}
+                  />
+                </div>
+                
+                {/* Side-by-side preview */}
+                <AngledWheelPreview
+                  imageUrl={config.wheelImage}
+                  settings={angledSettings}
+                  wheelName={loadedWheelName}
+                />
               </div>
             )}
 
