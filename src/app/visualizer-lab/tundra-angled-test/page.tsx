@@ -377,7 +377,7 @@ function WheelRenderer({
           />
         )}
         
-        {/* WHEEL IMAGE */}
+        {/* WHEEL IMAGE - with barrel masking */}
         {config.wheelImage && (
           <div
             className="absolute rounded-full overflow-hidden"
@@ -387,6 +387,9 @@ function WheelRenderer({
               width: wheelRadius * 2,
               height: wheelRadius * 2,
               zIndex: 4,
+              // Circular mask to hide outer barrel - shrinks visible area
+              maskImage: `radial-gradient(circle at center, black 0%, black ${Math.max(0, 100 - config.tire.barrelHideAmount)}%, transparent ${Math.max(0, 100 - config.tire.barrelHideAmount + 5)}%)`,
+              WebkitMaskImage: `radial-gradient(circle at center, black 0%, black ${Math.max(0, 100 - config.tire.barrelHideAmount)}%, transparent ${Math.max(0, 100 - config.tire.barrelHideAmount + 5)}%)`,
             }}
           >
             <img
@@ -550,6 +553,7 @@ export default function TundraAngledTestPage() {
   // Handle image load
   const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
     const img = e.currentTarget;
+    console.log("Image loaded successfully!", img.naturalWidth, "x", img.naturalHeight);
     setNaturalSize({ width: img.naturalWidth, height: img.naturalHeight });
     setRenderedSize({ width: img.clientWidth, height: img.clientHeight });
     setImageLoaded(true);
@@ -695,10 +699,18 @@ export default function TundraAngledTestPage() {
                       <p className="text-4xl mb-2">🚗</p>
                       <p className="text-lg">3/4 Angle Truck Template</p>
                       <p className="text-sm mt-2 text-neutral-500">
-                        Place image at: /public/visualizer/vehicles/tundra-34-angle-white.png
+                        Loading: {config.vehicleImage}
                       </p>
+                      <a 
+                        href={config.vehicleImage} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-xs mt-2 text-blue-400 underline block"
+                      >
+                        Test direct image link
+                      </a>
                       <p className="text-xs mt-4 text-orange-400">
-                        Using placeholder layout for testing
+                        If image doesn&apos;t load, check browser console for errors
                       </p>
                     </div>
                   </div>
@@ -713,10 +725,13 @@ export default function TundraAngledTestPage() {
                   style={{
                     transform: `translateY(${config.lift.bodyOffset}px)`,
                     zIndex: 10,
-                    opacity: imageLoaded ? 1 : 0,
+                    opacity: 1, // Always show image for debugging
                   }}
                   onLoad={handleImageLoad}
-                  onError={() => setImageLoaded(false)}
+                  onError={(e) => {
+                    console.error("Failed to load vehicle image:", config.vehicleImage, e);
+                    setImageLoaded(false);
+                  }}
                 />
                 
                 {/* Wheel Overlays - Always render for testing */}
