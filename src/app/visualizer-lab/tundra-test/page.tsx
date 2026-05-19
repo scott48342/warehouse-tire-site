@@ -516,6 +516,18 @@ export default function TundraTestPage() {
   const [wheelLoading, setWheelLoading] = useState(false);
   const [wheelError, setWheelError] = useState("");
   const [loadedWheelName, setLoadedWheelName] = useState("");
+  
+  // Wheel catalog state (from DB)
+  const [wheelCatalog, setWheelCatalog] = useState<Array<{
+    styleKey: string;
+    brand: string;
+    model: string;
+    displayImageUrl: string;
+  }>>([]);
+  const [wheelCatalogLoading, setWheelCatalogLoading] = useState(false);
+  const [wheelBrands, setWheelBrands] = useState<string[]>([]);
+  const [selectedBrand, setSelectedBrand] = useState<string>("");
+  const [wheelSearch, setWheelSearch] = useState("");
 
   // Track rendered image dimensions for coordinate scaling
   const [renderedSize, setRenderedSize] = useState({ width: 0, height: 0 });
@@ -542,6 +554,33 @@ export default function TundraTestPage() {
       sessionStorage.removeItem("normalizer-preview-wheel");
     }
   }, []);
+
+  // Load wheel catalog from API
+  useEffect(() => {
+    async function loadWheelCatalog() {
+      setWheelCatalogLoading(true);
+      try {
+        const params = new URLSearchParams({ limit: "100" });
+        if (selectedBrand) params.set("brand", selectedBrand);
+        if (wheelSearch) params.set("search", wheelSearch);
+        
+        const res = await fetch(`/api/visualizer/wheels?${params}`);
+        if (!res.ok) throw new Error("Failed to load wheels");
+        
+        const data = await res.json();
+        setWheelCatalog(data.wheels || []);
+        if (!selectedBrand && !wheelSearch) {
+          setWheelBrands(data.brands || []);
+        }
+      } catch (err) {
+        console.error("Failed to load wheel catalog:", err);
+      } finally {
+        setWheelCatalogLoading(false);
+      }
+    }
+    
+    loadWheelCatalog();
+  }, [selectedBrand, wheelSearch]);
 
   // Handle already-cached images (onLoad fires before React attaches handler)
   useEffect(() => {
@@ -848,82 +887,118 @@ export default function TundraTestPage() {
             {/* Wheels Tab */}
             {activeTab === "wheels" && (
               <>
-                {/* Wheel Asset Selector */}
+                {/* Wheel Catalog Browser */}
                 <div className="bg-neutral-800 rounded-lg p-4">
-                  <h3 className="font-semibold text-neutral-300 mb-3">🎡 Wheel Asset</h3>
+                  <h3 className="font-semibold text-neutral-300 mb-3">🎡 Wheel Catalog ({wheelCatalog.length} available)</h3>
                   
-                  {/* Preset wheels dropdown */}
-                  <select
-                    value={WHEEL_ASSETS.find(a => a.path === config.wheelImage)?.path || "custom"}
-                    onChange={(e) => {
-                      if (e.target.value !== "custom") {
-                        setConfig((prev) => ({ ...prev, wheelImage: e.target.value }));
-                        setCustomWheelUrl("");
-                      }
-                    }}
-                    className="w-full bg-neutral-700 text-white rounded px-3 py-2"
-                  >
-                    {WHEEL_ASSETS.map((asset) => (
-                      <option key={asset.path} value={asset.path}>
-                        {asset.name}
-                      </option>
-                    ))}
-                    <option value="custom">— Custom URL/SKU —</option>
-                  </select>
-                  
-                  {/* Custom wheel URL/SKU input */}
-                  <div className="mt-3">
-                    <label className="text-xs text-neutral-400 block mb-1">
-                      Paste wheel image URL or SKU:
-                    </label>
-                    <div className="flex gap-2">
-                      <input
-                        type="text"
-                        value={customWheelUrl}
-                        onChange={(e) => setCustomWheelUrl(e.target.value)}
-                        placeholder="https://... or SKU like KM54220050512"
-                        className="flex-1 bg-neutral-700 text-white rounded px-3 py-2 text-sm"
-                      />
-                      <button
-                        onClick={loadCustomWheel}
-                        disabled={!customWheelUrl.trim() || wheelLoading}
-                        className="px-3 py-2 bg-red-600 hover:bg-red-700 disabled:bg-neutral-600 rounded font-medium text-sm"
-                      >
-                        {wheelLoading ? "..." : "Load"}
-                      </button>
-                    </div>
-                    {wheelError && (
-                      <p className="text-xs text-red-400 mt-1">{wheelError}</p>
-                    )}
-                    {loadedWheelName && (
-                      <p className="text-xs text-green-400 mt-1">✓ {loadedWheelName}</p>
-                    )}
-                  </div>
-                  
-                  {/* Wheel Diameter Selector */}
-                  <div className="mt-4">
-                    <label className="text-sm text-neutral-400 block mb-2">
-                      Wheel Diameter: {config.wheelDiameter}"
-                    </label>
-                    <div className="flex flex-wrap gap-2">
-                      {WHEEL_DIAMETERS.map((diameter) => (
-                        <button
-                          key={diameter}
-                          onClick={() => setConfig((prev) => ({ ...prev, wheelDiameter: diameter }))}
-                          className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
-                            config.wheelDiameter === diameter
-                              ? "bg-red-600 text-white"
-                              : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
-                          }`}
-                        >
-                          {diameter}"
-                        </button>
+                  {/* Filters */}
+                  <div className="flex gap-2 mb-3">
+                    <select
+                      value={selectedBrand}
+                      onChange={(e) => setSelectedBrand(e.target.value)}
+                      className="flex-1 bg-neutral-700 text-white rounded px-3 py-2 text-sm"
+                    >
+                      <option value="">All Brands</option>
+                      {wheelBrands.map((brand) => (
+                        <option key={brand} value={brand}>{brand}</option>
                       ))}
-                    </div>
-                    <p className="text-xs text-neutral-500 mt-2">
-                      18" = Stock • Tire diameter stays the same
-                    </p>
+                    </select>
+                    <input
+                      type="text"
+                      value={wheelSearch}
+                      onChange={(e) => setWheelSearch(e.target.value)}
+                      placeholder="Search..."
+                      className="flex-1 bg-neutral-700 text-white rounded px-3 py-2 text-sm"
+                    />
                   </div>
+                  
+                  {/* Wheel Grid */}
+                  <div className="max-h-64 overflow-y-auto">
+                    {wheelCatalogLoading ? (
+                      <div className="text-center py-4 text-neutral-400">Loading wheels...</div>
+                    ) : wheelCatalog.length === 0 ? (
+                      <div className="text-center py-4 text-neutral-400">No wheels found</div>
+                    ) : (
+                      <div className="grid grid-cols-4 gap-2">
+                        {wheelCatalog.map((wheel) => (
+                          <button
+                            key={wheel.styleKey}
+                            onClick={() => {
+                              setConfig(prev => ({ ...prev, wheelImage: wheel.displayImageUrl }));
+                              setLoadedWheelName(`${wheel.brand} ${wheel.model}`);
+                            }}
+                            className={`p-1 rounded border-2 transition-all hover:border-red-500 ${
+                              config.wheelImage === wheel.displayImageUrl
+                                ? "border-red-500 bg-red-500/20"
+                                : "border-transparent bg-neutral-700/50"
+                            }`}
+                            title={`${wheel.brand} ${wheel.model}`}
+                          >
+                            <img
+                              src={wheel.displayImageUrl}
+                              alt={wheel.model}
+                              className="w-full aspect-square object-contain"
+                              loading="lazy"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  
+                  {loadedWheelName && (
+                    <p className="text-xs text-green-400 mt-2">✓ Selected: {loadedWheelName}</p>
+                  )}
+                </div>
+                
+                {/* Custom wheel URL/SKU input */}
+                <div className="bg-neutral-800 rounded-lg p-4">
+                  <h3 className="font-semibold text-neutral-300 mb-3">📎 Custom Wheel</h3>
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={customWheelUrl}
+                      onChange={(e) => setCustomWheelUrl(e.target.value)}
+                      placeholder="https://... or SKU"
+                      className="flex-1 bg-neutral-700 text-white rounded px-3 py-2 text-sm"
+                    />
+                    <button
+                      onClick={loadCustomWheel}
+                      disabled={!customWheelUrl.trim() || wheelLoading}
+                      className="px-3 py-2 bg-red-600 hover:bg-red-700 disabled:bg-neutral-600 rounded font-medium text-sm"
+                    >
+                      {wheelLoading ? "..." : "Load"}
+                    </button>
+                  </div>
+                  {wheelError && (
+                    <p className="text-xs text-red-400 mt-1">{wheelError}</p>
+                  )}
+                </div>
+                  
+                {/* Wheel Diameter Selector */}
+                <div className="bg-neutral-800 rounded-lg p-4">
+                  <h3 className="font-semibold text-neutral-300 mb-3">📏 Wheel Size</h3>
+                  <label className="text-sm text-neutral-400 block mb-2">
+                    Wheel Diameter: {config.wheelDiameter}"
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    {WHEEL_DIAMETERS.map((diameter) => (
+                      <button
+                        key={diameter}
+                        onClick={() => setConfig((prev) => ({ ...prev, wheelDiameter: diameter }))}
+                        className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
+                          config.wheelDiameter === diameter
+                            ? "bg-red-600 text-white"
+                            : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                        }`}
+                      >
+                        {diameter}"
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-xs text-neutral-500 mt-2">
+                    18" = Stock • Tire diameter stays the same
+                  </p>
                 </div>
 
                 {/* Front Wheel Position */}
