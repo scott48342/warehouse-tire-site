@@ -60,7 +60,9 @@ export default function AIPreviewTestPage() {
   });
 
   const [generating, setGenerating] = useState(false);
-  const [mockResult, setMockResult] = useState<string | null>(null);
+  const [generatedImage, setGeneratedImage] = useState<string | null>(null);
+  const [revisedPrompt, setRevisedPrompt] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState<'prompt' | 'config' | 'key' | null>(null);
 
   // Generate cache key
@@ -132,7 +134,9 @@ Requirements:
 
   const handleChange = (field: keyof FormState, value: string) => {
     setForm(prev => ({ ...prev, [field]: value }));
-    setMockResult(null); // Clear mock result on change
+    setGeneratedImage(null); // Clear result on change
+    setRevisedPrompt(null);
+    setError(null);
   };
 
   const handleCopy = async (type: 'prompt' | 'config' | 'key') => {
@@ -146,10 +150,40 @@ Requirements:
 
   const handleGenerate = async () => {
     setGenerating(true);
-    // Mock generation - in future this calls real AI API
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setMockResult('MOCK_GENERATED');
-    setGenerating(false);
+    setError(null);
+    setGeneratedImage(null);
+    setRevisedPrompt(null);
+
+    try {
+      const response = await fetch('/api/visualizer-lab/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          prompt: generatedPrompt,
+          cacheKey,
+          config: configObject,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Generation failed');
+      }
+
+      if (data.imageUrl) {
+        setGeneratedImage(data.imageUrl);
+        setRevisedPrompt(data.revisedPrompt || null);
+      } else {
+        throw new Error('No image URL returned');
+      }
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      setError(message);
+      console.error('Generation error:', err);
+    } finally {
+      setGenerating(false);
+    }
   };
 
   return (
@@ -379,23 +413,28 @@ Requirements:
             <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
               <h2 className="text-lg font-semibold mb-4">Preview Area</h2>
               
-              <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-700">
+              <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-700 overflow-hidden relative">
                 {generating ? (
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-                    <p className="text-gray-400">Generating preview...</p>
-                    <p className="text-xs text-gray-500 mt-1">This would call AI API in production</p>
+                    <p className="text-gray-400">Generating with DALL-E 3...</p>
+                    <p className="text-xs text-gray-500 mt-1">This may take 10-20 seconds</p>
                   </div>
-                ) : mockResult ? (
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">✅</div>
-                    <p className="text-green-400 font-semibold">Mock Generation Complete</p>
-                    <p className="text-xs text-gray-500 mt-1">
-                      In production, AI-generated image would appear here
-                    </p>
-                    <p className="text-xs text-gray-600 mt-2 font-mono">
-                      Cache key: {cacheKey.substring(0, 30)}...
-                    </p>
+                ) : error ? (
+                  <div className="text-center p-4">
+                    <div className="text-6xl mb-4">❌</div>
+                    <p className="text-red-400 font-semibold">Generation Failed</p>
+                    <p className="text-xs text-red-300 mt-2 max-w-sm">{error}</p>
+                  </div>
+                ) : generatedImage ? (
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={generatedImage}
+                      alt="AI Generated Vehicle Preview"
+                      fill
+                      className="object-contain"
+                      unoptimized
+                    />
                   </div>
                 ) : (
                   <div className="text-center text-gray-500">
@@ -418,9 +457,34 @@ Requirements:
                 {generating ? 'Generating...' : '🎨 Generate AI Preview'}
               </button>
 
-              <p className="text-xs text-gray-500 text-center mt-2">
-                ⚠️ No AI API configured - will show mock state
-              </p>
+              {generatedImage && (
+                <div className="mt-4 flex gap-2">
+                  <a
+                    href={generatedImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2 px-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-center text-sm"
+                  >
+                    🔗 Open Full Size
+                  </a>
+                  <button
+                    onClick={() => {
+                      setGeneratedImage(null);
+                      setRevisedPrompt(null);
+                    }}
+                    className="py-2 px-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm"
+                  >
+                    Clear
+                  </button>
+                </div>
+              )}
+
+              {revisedPrompt && (
+                <div className="mt-4 p-3 bg-gray-800/50 rounded-lg">
+                  <p className="text-xs text-gray-400 mb-1">DALL-E revised prompt:</p>
+                  <p className="text-xs text-gray-500 italic">{revisedPrompt}</p>
+                </div>
+              )}
             </div>
 
             {/* Cache Key */}
