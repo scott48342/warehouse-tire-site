@@ -80,11 +80,11 @@ export default function AIPreviewTestPage() {
   // Fetch years on mount
   useEffect(() => {
     setLoadingYMM(prev => ({ ...prev, years: true }));
-    fetch('/api/vehicles/years')
+    fetch('/api/vehicles/all-years')
       .then(res => res.json())
       .then(data => {
-        const yearList = Array.isArray(data) ? data : data.years || [];
-        setYears(yearList.sort((a: number, b: number) => b - a));
+        const yearList = data.years || [];
+        setYears(yearList);
       })
       .catch(console.error)
       .finally(() => setLoadingYMM(prev => ({ ...prev, years: false })));
@@ -97,8 +97,8 @@ export default function AIPreviewTestPage() {
     fetch(`/api/vehicles/makes?year=${form.year}`)
       .then(res => res.json())
       .then(data => {
-        const makeList = Array.isArray(data) ? data : data.makes || [];
-        setMakes(makeList.sort());
+        const makeList = data.results || [];
+        setMakes(makeList);
       })
       .catch(console.error)
       .finally(() => setLoadingYMM(prev => ({ ...prev, makes: false })));
@@ -111,8 +111,8 @@ export default function AIPreviewTestPage() {
     fetch(`/api/vehicles/models?year=${form.year}&make=${encodeURIComponent(form.make)}`)
       .then(res => res.json())
       .then(data => {
-        const modelList = Array.isArray(data) ? data : data.models || [];
-        setModels(modelList.sort());
+        const modelList = data.results || [];
+        setModels(modelList);
       })
       .catch(console.error)
       .finally(() => setLoadingYMM(prev => ({ ...prev, models: false })));
@@ -125,8 +125,11 @@ export default function AIPreviewTestPage() {
     fetch(`/api/vehicles/trims?year=${form.year}&make=${encodeURIComponent(form.make)}&model=${encodeURIComponent(form.model)}`)
       .then(res => res.json())
       .then(data => {
-        const trimList = Array.isArray(data) ? data : data.trims || [];
-        setTrims(trimList.sort());
+        // Trims API returns objects with label/value, extract labels for display
+        const trimList = (data.results || []).map((t: { label?: string; value?: string } | string) => 
+          typeof t === 'string' ? t : t.label || t.value || ''
+        ).filter(Boolean);
+        setTrims(trimList);
       })
       .catch(console.error)
       .finally(() => setLoadingYMM(prev => ({ ...prev, trims: false })));
