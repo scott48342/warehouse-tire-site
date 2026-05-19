@@ -52,14 +52,24 @@ export async function POST(request: NextRequest) {
       model: 'dall-e-3',
     });
 
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('[visualizer-lab] Generation error:', error);
     
-    const message = error instanceof Error ? error.message : 'Unknown error';
+    // Extract detailed error info
+    let message = 'Unknown error';
+    let code = '';
+    
+    if (error instanceof Error) {
+      message = error.message;
+      // OpenAI errors have additional properties
+      const openAIError = error as Error & { code?: string; status?: number };
+      code = openAIError.code || '';
+    }
     
     return NextResponse.json({ 
       error: 'Failed to generate image',
-      details: message 
+      details: message,
+      code,
     }, { status: 500 });
   }
 }

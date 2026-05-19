@@ -168,7 +168,10 @@ Requirements:
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Generation failed');
+        const errorMsg = data.details 
+          ? `${data.error}: ${data.details}${data.code ? ` (${data.code})` : ''}`
+          : data.error || 'Generation failed';
+        throw new Error(errorMsg);
       }
 
       if (data.imageUrl) {
