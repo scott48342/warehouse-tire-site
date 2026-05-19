@@ -34,18 +34,28 @@ export async function POST(request: NextRequest) {
       quality: 'high',
     });
 
-    const imageUrl = response.data?.[0]?.url;
     const revisedPrompt = response.data?.[0]?.revised_prompt;
 
-    if (!imageUrl) {
-      return NextResponse.json({ error: 'No image generated' }, { status: 500 });
+    console.log('[visualizer-lab] Response data:', JSON.stringify(response.data, null, 2));
+
+    // gpt-image-1 returns b64_json by default, need to check structure
+    const imageData = response.data?.[0];
+    const finalImageUrl = imageData?.url || (imageData?.b64_json ? `data:image/png;base64,${imageData.b64_json}` : null);
+
+    if (!finalImageUrl) {
+      console.error('[visualizer-lab] No image in response:', response);
+      return NextResponse.json({ 
+        error: 'No image generated',
+        details: 'Response received but no image URL or data found',
+        responseKeys: Object.keys(response || {}),
+      }, { status: 500 });
     }
 
     console.log('[visualizer-lab] Generated image successfully');
 
     return NextResponse.json({
       success: true,
-      imageUrl,
+      imageUrl: finalImageUrl,
       revisedPrompt,
       cacheKey,
       model: 'gpt-image-1',
