@@ -1,267 +1,104 @@
 /**
- * Admin API: Fitment Gap Report
+ * Admin Fitment Gaps API
+ * 
+ * Provides visibility into missing fitment requests for database enrichment
+ * prioritization and lost opportunity tracking.
  * 
  * GET /api/admin/fitment-gaps
+ *   - Query: ?days=30&limit=50
+ *   - Returns: Top missing vehicles, stats, and trends
  * 
- * Returns comprehensive reports on unresolved fitment searches.
- * Helps prioritize which vehicles to add to the fitment database.
+ * GET /api/admin/fitment-gaps?vehicle=Cadillac|DTS|2009
+ *   - Returns: Detailed history for a specific vehicle
  * 
- * Query params:
- * - report: "summary" | "top" | "recent" | "makes" | "models" | "daily" | "priority" (default: "summary")
- * - limit: number (default: 50)
- * - searchType: "wheel" | "tire" | "fitment" | "unknown"
- * - make: string (for models report)
- * - days: number (for filtering by recency)
- * - minCount: number (minimum occurrence count)
+ * @created 2026-05-20
  */
 
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import {
-  getTopUnresolvedVehicles,
-  getRecentUnresolvedVehicles,
-  getUnresolvedCountsByMake,
-  getUnresolvedCountsByModel,
-  getUnresolvedDailyCounts,
-  getHighValueGaps,
-  getUnresolvedSummary,
-  markVehicleResolved,
-} from "@/lib/fitment-db/unresolvedFitmentTracker";
-import { getAlertConfig, getAlertHistory } from "@/lib/fitment-db/gapAlerts";
+  getTopMissingVehicles,
+  getGapStats,
+  getVehicleGapHistory,
+} from "@/lib/analytics/fitmentGapTracker";
+import { verifyAdminAuth } from "@/lib/adminAuth";
 
-export async function GET(req: Request) {
+export const dynamic = "force-dynamic";
+
+export async function GET(request: NextRequest) {
+  // Verify admin access
+  const authResult = await verifyAdminAuth(request);
+  if (!authResult.authorized) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  
+  const { searchParams } = new URL(request.url);
+  const vehicle = searchParams.get("vehicle"); // "Make|Model|Year"
+  const days = parseInt(searchParams.get("days") || "30", 10);
+  const limit = parseInt(searchParams.get("limit") || "50", 10);
+  
   try {
-    const url = new URL(req.url);
-    const report = url.searchParams.get("report") || "summary";
-    const limit = Math.min(200, Math.max(1, Number(url.searchParams.get("limit") || "50")));
-    const searchType = url.searchParams.get("searchType") as "wheel" | "tire" | "fitment" | "unknown" | null;
-    const make = url.searchParams.get("make");
-    const days = url.searchParams.get("days") ? Number(url.searchParams.get("days")) : undefined;
-    const minCount = url.searchParams.get("minCount") ? Number(url.searchParams.get("minCount")) : undefined;
-
-    switch (report) {
-      case "summary": {
-        const summary = await getUnresolvedSummary();
-        const topVehicles = await getTopUnresolvedVehicles({ limit: 10 });
-        const topMakes = await getUnresolvedCountsByMake({ limit: 10 });
-        const priority = await getHighValueGaps({ limit: 5 });
-        const alertConfig = getAlertConfig();
-        
-        return NextResponse.json({
-          success: true,
-          report: "summary",
-          data: {
-            summary,
-            topVehicles: topVehicles.map(v => ({
-              vehicle: `${v.year} ${v.make} ${v.model}${v.trim ? ` ${v.trim}` : ""}`,
-              searches: v.occurrenceCount,
-              type: v.searchType,
-              lastSeen: v.lastSeen,
-            })),
-            topMakes: topMakes.map(m => ({
-              make: m.make,
-              vehicles: m.vehicleCount,
-              searches: m.totalSearches,
-            })),
-            highPriority: priority.map(v => ({
-              vehicle: `${v.year} ${v.make} ${v.model}${v.trim ? ` ${v.trim}` : ""}`,
-              searches: v.occurrenceCount,
-              priorityScore: v.priorityScore,
-              daysAgo: v.daysSinceLastSeen,
-            })),
-          },
-          alerting: {
-            enabled: alertConfig.enabled,
-            threshold: alertConfig.threshold,
-            cooldownHours: alertConfig.cooldownHours,
-            highPriorityScore: alertConfig.highPriorityScore,
-            recipientConfigured: !!alertConfig.recipientEmail,
-          },
-          description: "Overview of unresolved fitment searches",
-        });
-      }
-
-      case "top": {
-        const vehicles = await getTopUnresolvedVehicles({
-          limit,
-          searchType: searchType || undefined,
-          minCount,
-          sinceDays: days,
-        });
-        
-        return NextResponse.json({
-          success: true,
-          report: "top",
-          count: vehicles.length,
-          vehicles: vehicles.map(v => ({
-            year: v.year,
-            make: v.make,
-            model: v.model,
-            trim: v.trim,
-            searchType: v.searchType,
-            occurrenceCount: v.occurrenceCount,
-            firstSeen: v.firstSeen,
-            lastSeen: v.lastSeen,
-            daysSinceLastSeen: v.daysSinceLastSeen,
-            samplePaths: v.metadata?.samplePaths,
-          })),
-          description: "Top unresolved vehicles by search count",
-        });
-      }
-
-      case "recent": {
-        const vehicles = await getRecentUnresolvedVehicles({
-          limit,
-          sinceDays: days || 7,
-        });
-        
-        return NextResponse.json({
-          success: true,
-          report: "recent",
-          count: vehicles.length,
-          vehicles: vehicles.map(v => ({
-            year: v.year,
-            make: v.make,
-            model: v.model,
-            trim: v.trim,
-            searchType: v.searchType,
-            occurrenceCount: v.occurrenceCount,
-            firstSeen: v.firstSeen,
-            lastSeen: v.lastSeen,
-          })),
-          description: `Recently searched unresolved vehicles (last ${days || 7} days)`,
-        });
-      }
-
-      case "makes": {
-        const makes = await getUnresolvedCountsByMake({
-          limit,
-          sinceDays: days,
-        });
-        
-        return NextResponse.json({
-          success: true,
-          report: "makes",
-          count: makes.length,
-          makes,
-          description: "Unresolved searches grouped by make",
-        });
-      }
-
-      case "models": {
-        if (!make) {
-          return NextResponse.json(
-            { success: false, error: "Missing required param: make" },
-            { status: 400 }
-          );
-        }
-        
-        const models = await getUnresolvedCountsByModel(make, {
-          limit,
-          sinceDays: days,
-        });
-        
-        return NextResponse.json({
-          success: true,
-          report: "models",
-          make,
-          count: models.length,
-          models,
-          description: `Unresolved searches for ${make} grouped by model`,
-        });
-      }
-
-      case "daily": {
-        const dailyCounts = await getUnresolvedDailyCounts({
-          days: days || 30,
-        });
-        
-        return NextResponse.json({
-          success: true,
-          report: "daily",
-          days: days || 30,
-          counts: dailyCounts,
-          description: "Daily counts of new unresolved vehicles",
-        });
-      }
-
-      case "priority": {
-        const priority = await getHighValueGaps({
-          limit,
-          minCount: minCount || 3,
-          recentDays: days || 14,
-        });
-        
-        return NextResponse.json({
-          success: true,
-          report: "priority",
-          count: priority.length,
-          vehicles: priority.map(v => ({
-            year: v.year,
-            make: v.make,
-            model: v.model,
-            trim: v.trim,
-            searchType: v.searchType,
-            occurrenceCount: v.occurrenceCount,
-            priorityScore: v.priorityScore,
-            daysSinceLastSeen: v.daysSinceLastSeen,
-            firstSeen: v.firstSeen,
-            lastSeen: v.lastSeen,
-          })),
-          description: "High-priority gaps (frequent + recent)",
-        });
-      }
-
-      default:
+    // Single vehicle detail view
+    if (vehicle) {
+      const parts = vehicle.split("|");
+      if (parts.length < 2) {
         return NextResponse.json(
-          { 
-            success: false, 
-            error: `Unknown report type: ${report}`,
-            validReports: ["summary", "top", "recent", "makes", "models", "daily", "priority"],
-          },
+          { error: "Invalid vehicle format. Use: Make|Model or Make|Model|Year" },
           { status: 400 }
         );
+      }
+      
+      const [make, model, yearStr] = parts;
+      const year = yearStr ? parseInt(yearStr, 10) : undefined;
+      
+      const history = await getVehicleGapHistory(make, model, year);
+      
+      return NextResponse.json({
+        vehicle: { make, model, year },
+        ...history,
+      });
     }
-  } catch (err: any) {
-    console.error("[admin/fitment-gaps] Error:", err);
+    
+    // Dashboard view - stats and top missing vehicles
+    const [stats, topMissing] = await Promise.all([
+      getGapStats(days),
+      getTopMissingVehicles(limit, days),
+    ]);
+    
+    return NextResponse.json({
+      period: {
+        days,
+        startDate: new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString(),
+        endDate: new Date().toISOString(),
+      },
+      stats,
+      topMissingVehicles: topMissing,
+      enrichmentPriority: topMissing.slice(0, 10).map(v => ({
+        vehicle: `${v.year} ${v.make} ${v.model}`,
+        requests: v.requestCount,
+        potential: v.searchAttempts > 0 
+          ? `${Math.round(v.cartCreated / v.searchAttempts * 100)}% cart conversion on searches`
+          : "No search data yet",
+        recommendation: getEnrichmentRecommendation(v),
+      })),
+    });
+  } catch (error) {
+    console.error("[admin/fitment-gaps] Error:", error);
     return NextResponse.json(
-      { success: false, error: err?.message || String(err) },
+      { error: "Failed to fetch fitment gap data" },
       { status: 500 }
     );
   }
 }
 
-/**
- * DELETE /api/admin/fitment-gaps
- * 
- * Marks a vehicle as resolved (removes from tracking).
- * Call this after adding fitment data for a vehicle.
- * 
- * Body: { year: number, make: string, model: string, trim?: string }
- */
-export async function DELETE(req: Request) {
-  try {
-    const body = await req.json();
-    const { year, make, model, trim } = body;
-    
-    if (!year || !make || !model) {
-      return NextResponse.json(
-        { success: false, error: "Missing required fields: year, make, model" },
-        { status: 400 }
-      );
-    }
-    
-    const deleted = await markVehicleResolved(Number(year), make, model, trim);
-    
-    return NextResponse.json({
-      success: true,
-      message: `Marked ${year} ${make} ${model}${trim ? ` ${trim}` : ""} as resolved`,
-      recordsDeleted: deleted,
-    });
-  } catch (err: any) {
-    console.error("[admin/fitment-gaps] DELETE error:", err);
-    return NextResponse.json(
-      { success: false, error: err?.message || String(err) },
-      { status: 500 }
-    );
+function getEnrichmentRecommendation(summary: any): string {
+  if (summary.requestCount >= 10 && summary.fallbackSuccessRate < 50) {
+    return "🔴 HIGH PRIORITY - High demand, low fallback success";
   }
+  if (summary.requestCount >= 5 && summary.cartCreated > 0) {
+    return "🟠 MEDIUM PRIORITY - Proven conversion potential";
+  }
+  if (summary.requestCount >= 3) {
+    return "🟡 LOW PRIORITY - Moderate demand";
+  }
+  return "⚪ MONITOR - Low volume, keep watching";
 }

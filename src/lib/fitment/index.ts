@@ -1,26 +1,15 @@
 /**
- * Fitment Module
- * 
- * Provides fitment-related utilities for wheels, tires, and accessories.
+ * Fitment Module Exports
  */
 
-// Accessory fitment (lug nuts, hub rings)
+// Fallback fitment service
 export {
-  getAccessoryFitment,
-  extractVehicleFitmentData,
-  parseThreadSize,
-  formatThreadSize,
-  normalizeSeatType,
-  getLugCount,
-  calculateHubRingSpec,
-  formatHubRingSpec,
-  formatAccessoryForUI,
-  type VehicleFitmentData,
-  type WheelData,
-  type LugNutSpec,
-  type HubRingSpec,
-  type AccessoryMatch,
-  type AccessoryRecommendation,
-  type AccessoryFitmentResult,
-  type GetAccessoryFitmentOptions,
-} from "./accessories";
+  lookupFallbackFitment,
+  formatFallbackForJake,
+  canSearchWithFallback,
+  getPrimaryTireSize,
+  type FallbackFitmentResult,
+  type FallbackConfidence,
+  type FallbackSource,
+  type FallbackLookupRequest,
+} from "./fallbackFitmentService";
