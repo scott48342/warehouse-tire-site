@@ -83,10 +83,11 @@ const CACHE_PREFIX = "ws_cache:";
 const AUDIT_LOG_KEY = `${REDIS_PREFIX}audit_log`;
 const STATE_KEY = `${REDIS_PREFIX}state`;
 
-// Default limits
-const DEFAULT_DAILY_CAP = 100;
-const DEFAULT_HOURLY_CAP = 20;
-const DEFAULT_MIN_DELAY_MS = 5000;
+// Default limits (Business plan: 30,000/day)
+// These are conservative defaults - can be increased via env vars
+const DEFAULT_DAILY_CAP = 5000;    // Was 100 - increased for fallback lookups
+const DEFAULT_HOURLY_CAP = 500;    // Was 20 - increased for fallback lookups  
+const DEFAULT_MIN_DELAY_MS = 100;  // Was 5000 - reduced for better UX
 
 // Cache TTL: 24 hours for successful responses
 const CACHE_TTL_SUCCESS = 60 * 60 * 24;

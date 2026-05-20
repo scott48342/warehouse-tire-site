@@ -5,13 +5,23 @@
  * fitment database doesn't have a vehicle.
  * 
  * v2.0 - Extended with FULL aftermarket search profiles for wheel/tire searches
+ * v2.1 - Added external Wheel-Size API lookup as last resort
+ * 
+ * LOOKUP PRIORITY:
+ * 1. WTD verified fitment DB (handled upstream)
+ * 2. Curated fallback profiles (this service - sync)
+ * 3. External Wheel-Size API lookup (this service - async)
+ * 4. Ask customer to verify
  * 
  * IMPORTANT: This is NOT a replacement for verified fitment data.
  * All fallback results are clearly labeled with confidence levels.
  * 
  * @created 2026-05-20
  * @updated 2026-05-20 - Added aftermarket search profiles
+ * @updated 2026-05-20 - Added external Wheel-Size API lookup
  */
+
+import { lookupExternalFitment, type ExternalLookupResult } from "./externalFitmentLookup";
 
 // ============================================================================
 // TYPES
@@ -1634,6 +1644,139 @@ export function lookupFallbackFitment(
     vehicleKey,
     lookupTimestamp: Date.now(),
   };
+}
+
+// ============================================================================
+// ASYNC LOOKUP WITH EXTERNAL API
+// ============================================================================
+
+/**
+ * Extended result type that includes external lookup metadata
+ */
+export interface FallbackFitmentResultWithExternal extends FallbackFitmentResult {
+  externalLookupAttempted?: boolean;
+  externalLookupSucceeded?: boolean;
+  externalLookupSource?: string;
+  externalLookupCached?: boolean;
+  externalLookupDurationMs?: number;
+}
+
+/**
+ * Async version that tries curated fallback first, then external API lookup
+ * 
+ * Use this when you need the full lookup chain including external API.
+ * The sync `lookupFallbackFitment` is still available for fast curated-only lookups.
+ */
+export async function lookupFallbackFitmentWithExternal(
+  request: FallbackLookupRequest
+): Promise<FallbackFitmentResultWithExternal> {
+  const { year, make, model, trim } = request;
+  const vehicleKey = `${year}|${make}|${model}`;
+  
+  // STEP 1: Try curated fallback (sync, fast)
+  const curatedResult = lookupFallbackFitment(request);
+  
+  // If curated fallback succeeded (has data), return it
+  if (curatedResult.success && curatedResult.confidence !== "unknown") {
+    return {
+      ...curatedResult,
+      externalLookupAttempted: false,
+    };
+  }
+  
+  // STEP 2: Curated failed - try external Wheel-Size API lookup
+  console.log(`[fallback-service] Curated fallback failed for ${year} ${make} ${model}, trying external lookup...`);
+  
+  let externalResult: ExternalLookupResult;
+  try {
+    externalResult = await lookupExternalFitment({ year, make, model, trim });
+  } catch (err) {
+    console.error(`[fallback-service] External lookup error:`, err);
+    // Return the original curated result (which asks customer to verify)
+    return {
+      ...curatedResult,
+      externalLookupAttempted: true,
+      externalLookupSucceeded: false,
+    };
+  }
+  
+  // If external lookup failed, return the original curated result
+  if (!externalResult.success || !externalResult.fitment) {
+    console.log(`[fallback-service] External lookup failed: ${externalResult.messaging.confidenceNote}`);
+    return {
+      ...curatedResult,
+      externalLookupAttempted: true,
+      externalLookupSucceeded: false,
+      externalLookupSource: externalResult.sourceName,
+      externalLookupCached: externalResult.cached,
+      externalLookupDurationMs: externalResult.lookupDurationMs,
+    };
+  }
+  
+  // STEP 3: External lookup succeeded - build result
+  console.log(`[fallback-service] External lookup succeeded for ${year} ${make} ${model}`);
+  
+  const fitment = externalResult.fitment;
+  
+  // Map external confidence to our confidence type
+  const confidence: FallbackConfidence = externalResult.confidence === "high" 
+    ? "high" 
+    : externalResult.confidence === "medium"
+    ? "medium"
+    : "low";
+  
+  // Build tire sizes array
+  const tireSizes = fitment.tireSizes.map(size => ({
+    size,
+    isOem: true, // From external OEM data
+  }));
+  
+  // Build the result
+  const result: FallbackFitmentResultWithExternal = {
+    success: true,
+    confidence,
+    source: "curated_oem", // Label as OEM since it's from Wheel-Size
+    
+    // Core fitment data
+    boltPattern: fitment.boltPattern,
+    boltPatternMetric: fitment.boltPatternMetric,
+    centerBore: fitment.centerBore,
+    threadSize: fitment.threadSize,
+    tireSizes,
+    wheelDiameters: fitment.wheelDiameters,
+    wheelWidths: fitment.wheelWidths,
+    offsetRange: fitment.offsetRange,
+    
+    // No aftermarket profile from external lookup (would need to be curated)
+    hasAftermarketProfile: false,
+    
+    // Messaging
+    confidenceMessage: externalResult.confidence === "high"
+      ? `I don't have the ${year} ${make} ${model} in my verified database yet, but I found OEM reference data from Wheel-Size.com:`
+      : `I found some reference data for the ${year} ${make} ${model}:`,
+    warningMessage: externalResult.requiresCustomerVerification
+      ? "This is reference data - I'd recommend verifying your tire size on the door sticker."
+      : undefined,
+    verifyPrompt: externalResult.requiresCustomerVerification
+      ? "Can you confirm the tire size from your door jamb sticker? It helps me give you the best recommendations."
+      : undefined,
+    safetyNotes: externalResult.requiresCustomerVerification
+      ? ["External reference data - verify before purchase"]
+      : [],
+    
+    // Metadata
+    vehicleKey,
+    lookupTimestamp: Date.now(),
+    
+    // External lookup metadata
+    externalLookupAttempted: true,
+    externalLookupSucceeded: true,
+    externalLookupSource: externalResult.sourceName,
+    externalLookupCached: externalResult.cached,
+    externalLookupDurationMs: externalResult.lookupDurationMs,
+  };
+  
+  return result;
 }
 
 // ============================================================================

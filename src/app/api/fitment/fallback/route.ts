@@ -4,24 +4,40 @@
  * Provides inferred/common OEM fitment data + aftermarket search profiles
  * for vehicles not yet in the WTD database.
  * 
+ * LOOKUP PRIORITY:
+ * 1. Curated fallback profiles (fast, sync)
+ * 2. External Wheel-Size API lookup (slower, async)
+ * 3. Ask customer to verify
+ * 
  * GET /api/fitment/fallback?year=2009&make=Cadillac&model=DTS
+ * GET /api/fitment/fallback?year=1998&make=Pontiac&model=Transport&external=true
+ * 
+ * Query params:
+ * - year, make, model (required)
+ * - trim (optional)
+ * - diameter (optional) - get hints for specific wheel diameter
+ * - external (optional) - if "true" or "1", try external lookup for unknown vehicles
  * 
  * @created 2026-05-20
  * @updated 2026-05-20 - Added aftermarket search profile support
+ * @updated 2026-05-20 - Added external Wheel-Size API lookup support
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import {
   lookupFallbackFitment,
+  lookupFallbackFitmentWithExternal,
   formatFallbackForJake,
   canSearchWithFallback,
   getWheelSearchHintForDiameter,
   getPlusSizeTiresForDiameter,
   isDiameterSafeForUpgrade,
   type FallbackFitmentResult,
+  type FallbackFitmentResultWithExternal,
 } from "@/lib/fitment/fallbackFitmentService";
 
-export const runtime = "edge";
+// Can't use edge runtime due to external API calls that need Node.js fetch
+export const runtime = "nodejs";
 
 interface FallbackAPIResponse {
   success: boolean;
@@ -103,6 +119,7 @@ export async function GET(request: NextRequest) {
   const model = searchParams.get("model");
   const trim = searchParams.get("trim") || undefined;
   const diameterParam = searchParams.get("diameter"); // Optional: get hints for specific diameter
+  const externalParam = searchParams.get("external"); // Optional: try external lookup
   
   // Validate required params
   if (!yearParam || !make || !model) {
@@ -126,8 +143,19 @@ export async function GET(request: NextRequest) {
     );
   }
   
+  // Default: try external lookup for unknown vehicles (can be disabled with external=false)
+  const tryExternal = externalParam !== "false" && externalParam !== "0";
+  
   // Look up fallback fitment
-  const result = lookupFallbackFitment({ year, make, model, trim });
+  let result: FallbackFitmentResultWithExternal;
+  
+  if (tryExternal) {
+    // Use async version that tries external API for unknown vehicles
+    result = await lookupFallbackFitmentWithExternal({ year, make, model, trim });
+  } else {
+    // Fast path: curated-only lookup
+    result = lookupFallbackFitment({ year, make, model, trim });
+  }
   
   // Check search capabilities
   const capabilities = canSearchWithFallback(result);
@@ -184,6 +212,14 @@ export async function GET(request: NextRequest) {
     meta: {
       timestamp: result.lookupTimestamp,
       requestedVehicle: { year, make, model, trim },
+      // External lookup metadata (if attempted)
+      externalLookup: result.externalLookupAttempted ? {
+        attempted: true,
+        succeeded: result.externalLookupSucceeded || false,
+        source: result.externalLookupSource,
+        cached: result.externalLookupCached,
+        durationMs: result.externalLookupDurationMs,
+      } : undefined,
     },
   };
   
