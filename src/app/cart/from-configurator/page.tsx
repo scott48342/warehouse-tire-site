@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useEffect, useState, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useCart, type CartWheelItem } from '@/lib/cart/CartContext';
@@ -30,7 +31,7 @@ interface CartData {
   timestamp: number;
 }
 
-export default function FromConfiguratorPage() {
+function FromConfiguratorContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { addItem, isHydrated, setIsOpen } = useCart();
@@ -228,5 +229,28 @@ export default function FromConfiguratorPage() {
         )}
       </div>
     </div>
+  );
+}
+
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen bg-gray-950 text-white flex items-center justify-center p-6">
+      <div className="max-w-md w-full bg-gray-900 rounded-xl p-8 border border-gray-800 text-center">
+        <div className="text-6xl mb-6">⏳</div>
+        <h1 className="text-2xl font-bold mb-2">Processing...</h1>
+        <p className="text-gray-400 mb-6">Loading your selection...</p>
+        <div className="flex justify-center mb-6">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function FromConfiguratorPage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <FromConfiguratorContent />
+    </Suspense>
   );
 }

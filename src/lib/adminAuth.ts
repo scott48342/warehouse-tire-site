@@ -53,3 +53,23 @@ export async function verifyAdminToken(token: string | null | undefined) {
   // 7 days
   return ageMs >= 0 && ageMs < 7 * 24 * 60 * 60 * 1000;
 }
+
+/**
+ * Verify admin auth from a NextRequest
+ * Returns { authorized: true, user: string } or { authorized: false, error: string }
+ */
+export async function verifyAdminAuth(request: { cookies: { get: (name: string) => { value: string } | undefined } }) {
+  const cookie = request.cookies.get(COOKIE_NAME);
+  const token = cookie?.value;
+  
+  if (!token) {
+    return { authorized: false as const, error: "Not authenticated" };
+  }
+  
+  const valid = await verifyAdminToken(token);
+  if (!valid) {
+    return { authorized: false as const, error: "Invalid or expired token" };
+  }
+  
+  return { authorized: true as const, user: "admin" };
+}
