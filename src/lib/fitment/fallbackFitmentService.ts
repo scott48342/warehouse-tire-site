@@ -850,6 +850,83 @@ const CURATED_FITMENTS: Record<string, {
       },
     },
   ],
+  // GM U-body minivans (Transport, Montana)
+  "pontiac|transport": [
+    {
+      yearRange: [1997, 1998],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["SE"] },
+          { size: "225/60R16", trims: ["SE", "GT"] },
+        ],
+        wheelDiameters: [15, 16],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 40, max: 50 },
+        platform: "GM U-body",
+        sharedWith: ["Chevrolet Venture", "Oldsmobile Silhouette"],
+        notes: "GM minivan, replaced by Montana",
+        aftermarket: {
+          safeDiameters: [17, 18],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 38, max: 48 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 }, notes: "Max recommended for minivan" },
+          ],
+          plusSizeTires: [
+            { size: "225/55R17", wheelDiameter: 17 },
+            { size: "225/50R18", wheelDiameter: 18 },
+            { size: "235/50R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "pontiac|montana": [
+    {
+      yearRange: [1999, 2005],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["Base"] },
+          { size: "225/60R16", trims: ["Base", "Thunder"] },
+        ],
+        wheelDiameters: [15, 16],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 40, max: 50 },
+        platform: "GM U-body",
+        sharedWith: ["Chevrolet Venture", "Oldsmobile Silhouette", "Pontiac Transport"],
+        notes: "GM minivan, successor to Transport",
+        aftermarket: {
+          safeDiameters: [17, 18],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 38, max: 48 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 }, notes: "Max recommended for minivan" },
+          ],
+          plusSizeTires: [
+            { size: "225/55R17", wheelDiameter: 17 },
+            { size: "225/50R18", wheelDiameter: 18 },
+            { size: "235/50R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
   
   // ═══════════════════════════════════════════════════════════════════════════
   // CHEVROLET (common 5x115 vehicles)
@@ -921,6 +998,87 @@ const CURATED_FITMENTS: Record<string, {
             make: "Chevrolet",
             model: "Impala",
             reason: "Same W-body platform, 5x115 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  // GM U-body minivan
+  "chevrolet|venture": [
+    {
+      yearRange: [1997, 2005],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["Base", "LS"] },
+          { size: "225/60R16", trims: ["LT", "Warner Bros"] },
+        ],
+        wheelDiameters: [15, 16],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 40, max: 50 },
+        platform: "GM U-body",
+        sharedWith: ["Pontiac Montana", "Pontiac Transport", "Oldsmobile Silhouette"],
+        notes: "GM minivan, replaced by Uplander",
+        aftermarket: {
+          safeDiameters: [17, 18],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 38, max: 48 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 }, notes: "Max recommended for minivan" },
+          ],
+          plusSizeTires: [
+            { size: "225/55R17", wheelDiameter: 17 },
+            { size: "225/50R18", wheelDiameter: 18 },
+            { size: "235/50R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // OLDSMOBILE (discontinued brand)
+  // ═══════════════════════════════════════════════════════════════════════════
+  "oldsmobile|silhouette": [
+    {
+      yearRange: [1997, 2004],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["GL", "GLS"] },
+          { size: "225/60R16", trims: ["GLS", "Premiere"] },
+        ],
+        wheelDiameters: [15, 16],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 40, max: 50 },
+        platform: "GM U-body",
+        sharedWith: ["Chevrolet Venture", "Pontiac Montana", "Pontiac Transport"],
+        notes: "GM minivan, discontinued with Oldsmobile brand",
+        aftermarket: {
+          safeDiameters: [17, 18],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 38, max: 48 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 }, notes: "Max recommended for minivan" },
+          ],
+          plusSizeTires: [
+            { size: "225/55R17", wheelDiameter: 17 },
+            { size: "225/50R18", wheelDiameter: 18 },
+            { size: "235/50R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
           },
         },
       },
