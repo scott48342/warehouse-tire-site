@@ -21,7 +21,7 @@
  * @created 2026-05-20
  */
 
-import { db } from "../db";
+import { db } from "../fitment-db/db";
 import { researchedFitmentCache } from "../fitment-db/schema";
 import { eq, and, sql, desc, lt, gt } from "drizzle-orm";
 import type { TrustedResearchResult, ResearchedFitment } from "./trustedFitmentResearch";
