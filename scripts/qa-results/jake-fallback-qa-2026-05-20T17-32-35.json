@@ -1,0 +1,189 @@
+[
+  {
+    "id": "dts-2008-20s",
+    "name": "2008 Cadillac DTS wanting 20s",
+    "prompt": "I have a 2008 Cadillac DTS and want modern 20 inch wheels and tires.",
+    "expected": {
+      "shouldSucceed": true,
+      "expectedBoltPattern": "5x115",
+      "expectedDiameter": 20,
+      "expectFallback": true,
+      "expectCuratedFallback": true,
+      "expectPlatformKnowledge": false,
+      "expectDeadEnd": false,
+      "notes": "Should use curated GM W-body fallback"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 323
+  },
+  {
+    "id": "firebird-1998-20s",
+    "name": "1998 Pontiac Firebird Formula wanting 20s",
+    "prompt": "I have a 1998 Pontiac Firebird Formula and want 20 inch wheels.",
+    "expected": {
+      "shouldSucceed": true,
+      "expectedBoltPattern": "5x120.65",
+      "expectedDiameter": 20,
+      "expectFallback": true,
+      "expectPlatformKnowledge": true,
+      "expectStaggeredMention": true,
+      "expectDeadEnd": false,
+      "notes": "Should use platform knowledge, mention staggered/F-body culture"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 164
+  },
+  {
+    "id": "camry-1995-tires",
+    "name": "1995 Toyota Camry tire size",
+    "prompt": "What tire size does a 1995 Toyota Camry take?",
+    "expected": {
+      "shouldSucceed": true,
+      "expectFallback": true,
+      "expectTrustedResearch": true,
+      "expectTrimQuestion": true,
+      "expectDeadEnd": false,
+      "notes": "Should use trusted research or cache, may ask trim"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 88
+  },
+  {
+    "id": "camry-2015-se",
+    "name": "2015 Toyota Camry SE wheels and tires",
+    "prompt": "I need wheels and tires for a 2015 Toyota Camry SE.",
+    "expected": {
+      "shouldSucceed": true,
+      "expectedBoltPattern": "5x114.3",
+      "expectFallback": true,
+      "expectTrustedResearch": true,
+      "expectDeadEnd": false,
+      "notes": "Should have tire sizes from research/cache"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 87
+  },
+  {
+    "id": "transport-1998-tires",
+    "name": "1998 Pontiac Transport tires",
+    "prompt": "I need tires for a 1998 Pontiac Transport.",
+    "expected": {
+      "shouldSucceed": true,
+      "expectedBoltPattern": "5x115",
+      "expectFallback": true,
+      "expectCuratedFallback": true,
+      "expectDeadEnd": false,
+      "notes": "Should use curated GM U-body fallback"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 82
+  },
+  {
+    "id": "silhouette-2001-wheels",
+    "name": "2001 Oldsmobile Silhouette wheels",
+    "prompt": "I need wheels for a 2001 Oldsmobile Silhouette.",
+    "expected": {
+      "shouldSucceed": true,
+      "expectedBoltPattern": "5x115",
+      "expectFallback": true,
+      "expectCuratedFallback": true,
+      "expectDeadEnd": false,
+      "notes": "Should use curated GM U-body fallback"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 91
+  },
+  {
+    "id": "avalon-1999-tires",
+    "name": "1999 Toyota Avalon tires",
+    "prompt": "What tires fit a 1999 Toyota Avalon?",
+    "expected": {
+      "shouldSucceed": true,
+      "expectFallback": true,
+      "expectTrustedResearch": true,
+      "expectDeadEnd": false,
+      "notes": "Should use trusted research if not in DB"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 94
+  },
+  {
+    "id": "f150-2024-control",
+    "name": "2024 Ford F-150 XLT (verified control)",
+    "prompt": "What wheels fit a 2024 Ford F-150 XLT?",
+    "expected": {
+      "shouldSucceed": true,
+      "expectedBoltPattern": "6x135",
+      "expectFallback": false,
+      "expectVerifiedDB": true,
+      "expectDeadEnd": false,
+      "notes": "Control test - should use verified DB, no fallback language"
+    },
+    "actual": {
+      "httpStatus": 400,
+      "error": "HTTP 400"
+    },
+    "analysis": {},
+    "passed": false,
+    "failures": [
+      "API returned HTTP 400"
+    ],
+    "duration": 89
+  }
+]
