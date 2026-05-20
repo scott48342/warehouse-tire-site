@@ -1703,22 +1703,19 @@ export async function lookupFallbackFitmentWithExternal(
   // STEP 2: Curated failed - try external Wheel-Size API lookup
   console.log(`[fallback-service] Curated fallback failed for ${year} ${make} ${model}, trying external lookup...`);
   
-  let externalResult: ExternalLookupResult;
+  let externalResult: ExternalLookupResult | null = null;
   try {
     externalResult = await lookupExternalFitment({ year, make, model, trim });
   } catch (err) {
     console.error(`[fallback-service] External lookup error:`, err);
-    // Return the original curated result (which asks customer to verify)
-    return {
-      ...curatedResult,
-      externalLookupAttempted: true,
-      externalLookupSucceeded: false,
-    };
+    // Don't return early - try trusted research instead
+    externalResult = null;
   }
   
-  // If external lookup failed, try trusted research
-  if (!externalResult.success || !externalResult.fitment) {
-    console.log(`[fallback-service] External lookup failed: ${externalResult.messaging.confidenceNote}`);
+  // If external lookup failed or errored, try trusted research
+  if (!externalResult || !externalResult.success || !externalResult.fitment) {
+    const failReason = externalResult?.messaging?.confidenceNote || "External lookup threw an error";
+    console.log(`[fallback-service] External lookup failed: ${failReason}`);
     console.log(`[fallback-service] Trying trusted research for ${year} ${make} ${model}...`);
     
     // STEP 3: Try AI-assisted trusted research
@@ -1732,7 +1729,7 @@ export async function lookupFallbackFitmentWithExternal(
         ...curatedResult,
         externalLookupAttempted: true,
         externalLookupSucceeded: false,
-        externalLookupSource: externalResult.sourceName,
+        externalLookupSource: externalResult?.sourceName,
         trustedResearchAttempted: true,
         trustedResearchSucceeded: false,
       };

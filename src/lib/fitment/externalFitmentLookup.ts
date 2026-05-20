@@ -254,6 +254,11 @@ function extractFitmentData(
   const offsets: number[] = [];
   
   for (const mod of modifications) {
+    // Skip modifications with no wheel data (wheels might be 0, undefined, or empty array)
+    if (!mod.wheels || !Array.isArray(mod.wheels) || mod.wheels.length === 0) {
+      continue;
+    }
+    
     for (const wheelSet of mod.wheels) {
       // Prefer stock wheels for OEM data
       const wheel = wheelSet.front;
