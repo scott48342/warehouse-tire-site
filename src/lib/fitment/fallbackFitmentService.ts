@@ -1898,6 +1898,157 @@ const CURATED_FITMENTS: Record<string, {
       },
     },
   ],
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC CHRYSLER / MOPAR (1960s-1980s full-size cars)
+  // ═══════════════════════════════════════════════════════════════════════════
+  "chrysler|new yorker": [
+    {
+      yearRange: [1969, 1978],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 71.5,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base", "Brougham"] },
+          { size: "235/75R15", trims: ["Brougham"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Chrysler C-body",
+        sharedWith: ["Chrysler Newport", "Chrysler Town & Country", "Dodge Monaco"],
+        notes: "Classic Mopar C-body. 5x4.5 bolt pattern. Huge aftermarket support for classic Mopar.",
+        aftermarket: {
+          safeDiameters: [15, 16, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic look, lots of options" },
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 }, notes: "Modern pro-touring" },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 }, notes: "Aggressive stance" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 1970,
+            make: "Dodge",
+            model: "Challenger",
+            reason: "Same 5x114.3 bolt pattern, classic Mopar",
+          },
+        },
+      },
+    },
+    {
+      yearRange: [1979, 1993],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 71.5,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "205/75R14", trims: ["Base"] },
+          { size: "215/65R15", trims: ["Fifth Avenue"] },
+          { size: "225/60R16", trims: ["Fifth Avenue"] },
+        ],
+        wheelDiameters: [14, 15, 16],
+        wheelWidths: [6, 6.5, 7],
+        offsetRange: { min: 15, max: 40 },
+        platform: "Chrysler M-body",
+        sharedWith: ["Chrysler Fifth Avenue", "Dodge Diplomat", "Plymouth Gran Fury"],
+        notes: "Chrysler M-body platform. 5x4.5 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [16, 17, 18],
+          wheelHints: [
+            { diameter: 16, widths: [7, 7.5], offsetRange: { min: 20, max: 40 }, notes: "Direct fit" },
+            { diameter: 17, widths: [7, 8], offsetRange: { min: 15, max: 38 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 15, max: 35 }, notes: "Modern look" },
+          ],
+          plusSizeTires: [
+            { size: "225/55R16", wheelDiameter: 16 },
+            { size: "235/50R17", wheelDiameter: 17 },
+            { size: "235/45R18", wheelDiameter: 18 },
+          ],
+        },
+      },
+    },
+  ],
+  "chrysler|newport": [
+    {
+      yearRange: [1965, 1978],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 71.5,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base", "Custom"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Chrysler C-body",
+        sharedWith: ["Chrysler New Yorker", "Dodge Monaco"],
+        notes: "Classic Mopar C-body. 5x4.5 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [15, 16, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic look" },
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 }, notes: "Modern look" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 1970,
+            make: "Dodge",
+            model: "Challenger",
+            reason: "Same 5x114.3 bolt pattern, classic Mopar",
+          },
+        },
+      },
+    },
+  ],
+  "dodge|monaco": [
+    {
+      yearRange: [1965, 1978],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 71.5,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base", "Brougham"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Chrysler C-body",
+        sharedWith: ["Chrysler New Yorker", "Chrysler Newport", "Plymouth Fury"],
+        notes: "Classic Mopar C-body. 5x4.5 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [15, 16, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic look" },
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular upgrade" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "245/45R17", wheelDiameter: 17 },
+          ],
+          surrogateVehicle: {
+            year: 1970,
+            make: "Dodge",
+            model: "Challenger",
+            reason: "Same 5x114.3 bolt pattern, classic Mopar",
+          },
+        },
+      },
+    },
+  ],
 };
 
 // ============================================================================
