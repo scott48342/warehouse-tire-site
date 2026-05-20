@@ -1,12 +1,13 @@
 /**
  * Fallback Fitment API
  * 
- * Provides inferred fitment data when primary WTD database doesn't have
- * the requested vehicle. Used by Jake to continue helping customers.
+ * Provides inferred/common OEM fitment data + aftermarket search profiles
+ * for vehicles not yet in the WTD database.
  * 
  * GET /api/fitment/fallback?year=2009&make=Cadillac&model=DTS
  * 
  * @created 2026-05-20
+ * @updated 2026-05-20 - Added aftermarket search profile support
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -14,180 +15,199 @@ import {
   lookupFallbackFitment,
   formatFallbackForJake,
   canSearchWithFallback,
-  getPrimaryTireSize,
+  getWheelSearchHintForDiameter,
+  getPlusSizeTiresForDiameter,
+  isDiameterSafeForUpgrade,
   type FallbackFitmentResult,
 } from "@/lib/fitment/fallbackFitmentService";
-import { trackFitmentGap } from "@/lib/analytics/fitmentGapTracker";
-import { logMissingFitment } from "@/lib/fitment/missingFitmentService";
 
-export const dynamic = "force-dynamic";
+export const runtime = "edge";
+
+interface FallbackAPIResponse {
+  success: boolean;
+  confidence: string;
+  source: string;
+  vehicleKey: string;
+  
+  // OEM specs
+  specs: {
+    boltPattern?: string;
+    centerBore?: number;
+    threadSize?: string;
+    tireSizes?: { size: string; isOem: boolean; trimLevel?: string }[];
+    wheelDiameters?: number[];
+    wheelWidths?: number[];
+    offsetRange?: { min: number; max: number };
+    platform?: string;
+    sharedWith?: string[];
+  };
+  
+  // Aftermarket search profile (NEW)
+  aftermarket?: {
+    available: boolean;
+    safeDiameters?: number[];
+    wheelSearchHints?: {
+      diameter: number;
+      widths: number[];
+      offsetRange: { min: number; max: number };
+      notes?: string;
+    }[];
+    plusSizeTires?: {
+      size: string;
+      wheelDiameter: number;
+      notes?: string;
+    }[];
+    surrogateVehicle?: {
+      year: number;
+      make: string;
+      model: string;
+      trim?: string;
+      reason: string;
+    };
+  };
+  
+  // Search capabilities
+  capabilities: {
+    canSearchTires: boolean;
+    canSearchWheels: boolean;
+    canSearchAftermarketWheels: boolean;
+    reason?: string;
+  };
+  
+  // Messaging for Jake
+  messaging: {
+    confidenceMessage: string;
+    warningMessage?: string;
+    verifyPrompt?: string;
+    formattedResponse: string;
+    safetyNotes?: string[];
+  };
+  
+  // For analytics/logging
+  meta: {
+    timestamp: number;
+    requestedVehicle: {
+      year: number;
+      make: string;
+      model: string;
+      trim?: string;
+    };
+  };
+}
 
 export async function GET(request: NextRequest) {
-  const startTime = Date.now();
   const { searchParams } = new URL(request.url);
   
-  const year = parseInt(searchParams.get("year") || "0", 10);
-  const make = searchParams.get("make") || "";
-  const model = searchParams.get("model") || "";
+  const yearParam = searchParams.get("year");
+  const make = searchParams.get("make");
+  const model = searchParams.get("model");
   const trim = searchParams.get("trim") || undefined;
-  const sessionId = searchParams.get("sessionId") || undefined;
-  const source = searchParams.get("source") || "api"; // "jake" | "api" | "widget"
+  const diameterParam = searchParams.get("diameter"); // Optional: get hints for specific diameter
   
   // Validate required params
-  if (!year || !make || !model) {
+  if (!yearParam || !make || !model) {
     return NextResponse.json(
-      { error: "Missing required parameters: year, make, model" },
+      {
+        success: false,
+        error: "Missing required parameters: year, make, model",
+      },
       { status: 400 }
     );
   }
   
-  // Perform fallback lookup
+  const year = parseInt(yearParam, 10);
+  if (isNaN(year) || year < 1950 || year > 2030) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: "Invalid year parameter",
+      },
+      { status: 400 }
+    );
+  }
+  
+  // Look up fallback fitment
   const result = lookupFallbackFitment({ year, make, model, trim });
   
-  // Track this as a fitment gap request (async, don't await)
-  trackFitmentGap({
-    year,
-    make,
-    model,
-    trim,
-    sessionId,
-    source,
-    fallbackResult: {
-      success: result.success,
-      confidence: result.confidence,
-      source: result.source,
-      hasBoltPattern: !!result.boltPattern,
-      hasTireSizes: !!(result.tireSizes && result.tireSizes.length > 0),
-    },
-  }).catch(err => console.error("[fallback-fitment] Failed to track gap:", err));
+  // Check search capabilities
+  const capabilities = canSearchWithFallback(result);
   
-  // Log to missing fitment requests table for admin management
-  logMissingFitment({
-    year,
-    make,
-    model,
-    trim,
-    source: source as any,
-    sessionId,
-    hostname: request.headers.get("host") || undefined,
-    fallbackUsed: result.success,
-    fallbackConfidence: result.confidence,
-    fallbackTireSize: getPrimaryTireSize(result) || undefined,
-    fallbackBoltPattern: result.boltPattern,
-  }).catch(err => console.error("[fallback-fitment] Failed to log missing:", err));
+  // Format for Jake
+  const formattedResponse = formatFallbackForJake(result);
   
   // Build response
-  const searchCapabilities = canSearchWithFallback(result);
-  const primaryTireSize = getPrimaryTireSize(result);
-  
-  return NextResponse.json({
+  const response: FallbackAPIResponse = {
     success: result.success,
     confidence: result.confidence,
     source: result.source,
-    vehicle: {
-      year,
-      make,
-      model,
-      trim,
-    },
+    vehicleKey: result.vehicleKey,
     
-    // Fitment data
-    fitment: result.success ? {
+    specs: {
       boltPattern: result.boltPattern,
       centerBore: result.centerBore,
+      threadSize: result.threadSize,
       tireSizes: result.tireSizes,
       wheelDiameters: result.wheelDiameters,
       wheelWidths: result.wheelWidths,
       offsetRange: result.offsetRange,
       platform: result.platform,
       sharedWith: result.sharedWith,
-    } : null,
-    
-    // Search capabilities
-    searchCapabilities: {
-      canSearchTires: searchCapabilities.canSearchTires,
-      canSearchWheels: searchCapabilities.canSearchWheels,
-      primaryTireSize,
-      reason: searchCapabilities.reason,
     },
     
-    // Jake-friendly messaging
+    aftermarket: {
+      available: result.hasAftermarketProfile,
+      safeDiameters: result.safeAftermarketDiameters,
+      wheelSearchHints: result.wheelSearchHints?.map(hint => ({
+        diameter: hint.diameter,
+        widths: hint.widths,
+        offsetRange: hint.offsetRange,
+        notes: hint.notes,
+      })),
+      plusSizeTires: result.plusSizeTires?.map(tire => ({
+        size: tire.size,
+        wheelDiameter: tire.wheelDiameter,
+        notes: tire.notes,
+      })),
+      surrogateVehicle: result.surrogateVehicle,
+    },
+    
+    capabilities,
+    
     messaging: {
-      confidence: result.confidenceMessage,
-      warning: result.warningMessage,
+      confidenceMessage: result.confidenceMessage,
+      warningMessage: result.warningMessage,
       verifyPrompt: result.verifyPrompt,
-      formatted: formatFallbackForJake(result),
+      formattedResponse,
+      safetyNotes: result.safetyNotes,
     },
     
-    // Meta
     meta: {
-      vehicleKey: result.vehicleKey,
-      lookupMs: Date.now() - startTime,
-      timestamp: new Date().toISOString(),
+      timestamp: result.lookupTimestamp,
+      requestedVehicle: { year, make, model, trim },
+    },
+  };
+  
+  // If a specific diameter was requested, include focused data
+  if (diameterParam) {
+    const diameter = parseInt(diameterParam, 10);
+    if (!isNaN(diameter)) {
+      const wheelHint = getWheelSearchHintForDiameter(result, diameter);
+      const plusTires = getPlusSizeTiresForDiameter(result, diameter);
+      const isSafe = isDiameterSafeForUpgrade(result, diameter);
+      
+      (response as any).focusedDiameter = {
+        diameter,
+        isSafeUpgrade: isSafe,
+        wheelHint,
+        plusSizeTires: plusTires,
+      };
+    }
+  }
+  
+  // Cache for 1 hour (static data)
+  return NextResponse.json(response, {
+    headers: {
+      "Cache-Control": "public, max-age=3600, s-maxage=3600",
     },
   });
-}
-
-/**
- * POST endpoint for Jake to report fallback events with more context
- */
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { year, make, model, trim, sessionId, conversationId, action } = body;
-    
-    if (!year || !make || !model) {
-      return NextResponse.json(
-        { error: "Missing required fields: year, make, model" },
-        { status: 400 }
-      );
-    }
-    
-    // Perform lookup
-    const result = lookupFallbackFitment({ year, make, model, trim });
-    
-    // Track with additional context
-    await trackFitmentGap({
-      year,
-      make,
-      model,
-      trim,
-      sessionId,
-      conversationId,
-      source: "jake",
-      action, // "lookup" | "search_tires" | "search_wheels" | "cart_created"
-      fallbackResult: {
-        success: result.success,
-        confidence: result.confidence,
-        source: result.source,
-        hasBoltPattern: !!result.boltPattern,
-        hasTireSizes: !!(result.tireSizes && result.tireSizes.length > 0),
-      },
-    });
-    
-    const searchCapabilities = canSearchWithFallback(result);
-    
-    return NextResponse.json({
-      success: result.success,
-      confidence: result.confidence,
-      source: result.source,
-      fitment: result.success ? {
-        boltPattern: result.boltPattern,
-        centerBore: result.centerBore,
-        tireSizes: result.tireSizes,
-        wheelDiameters: result.wheelDiameters,
-      } : null,
-      searchCapabilities,
-      messaging: {
-        formatted: formatFallbackForJake(result),
-        verifyPrompt: result.verifyPrompt,
-      },
-    });
-  } catch (error) {
-    console.error("[fallback-fitment] POST error:", error);
-    return NextResponse.json(
-      { error: "Failed to process request" },
-      { status: 500 }
-    );
-  }
 }

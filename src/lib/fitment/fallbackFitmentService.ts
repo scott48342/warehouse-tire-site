@@ -4,10 +4,13 @@
  * Provides inferred/common OEM fitment data when the primary WTD
  * fitment database doesn't have a vehicle.
  * 
+ * v2.0 - Extended with FULL aftermarket search profiles for wheel/tire searches
+ * 
  * IMPORTANT: This is NOT a replacement for verified fitment data.
  * All fallback results are clearly labeled with confidence levels.
  * 
  * @created 2026-05-20
+ * @updated 2026-05-20 - Added aftermarket search profiles
  */
 
 // ============================================================================
@@ -26,15 +29,49 @@ export type FallbackSource =
   | "era_common"        // Common specs for vehicle era/class
   | "customer_verify";  // Need customer to verify
 
+export type FitmentLabel = 
+  | "common_oem"              // Known OEM spec
+  | "fallback_upgrade"        // Fallback upgrade guidance
+  | "verify_clearance";       // Final clearance should be verified
+
+// Aftermarket wheel search hint
+export interface AftermarketWheelHint {
+  diameter: number;
+  widths: number[];              // Safe widths for this diameter
+  offsetRange: { min: number; max: number };
+  label: FitmentLabel;
+  notes?: string;
+}
+
+// Plus-size tire option
+export interface PlusSizeTireOption {
+  size: string;
+  wheelDiameter: number;
+  label: FitmentLabel;
+  notes?: string;
+}
+
+// Surrogate vehicle for fitment API search
+export interface SurrogateVehicle {
+  year: number;
+  make: string;
+  model: string;
+  trim?: string;
+  reason: string;  // Why this vehicle is used as surrogate
+}
+
 export interface FallbackFitmentResult {
   success: boolean;
   confidence: FallbackConfidence;
   source: FallbackSource;
   
-  // Core fitment data
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CORE FITMENT DATA (OEM)
+  // ═══════════════════════════════════════════════════════════════════════════
   boltPattern?: string;       // e.g., "5x115"
-  boltPatternMetric?: string; // e.g., "5x114.3"
+  boltPatternMetric?: string; // e.g., "5x114.3" (same or converted)
   centerBore?: number;        // e.g., 70.3
+  threadSize?: string;        // e.g., "12x1.5" (lug thread)
   
   // OEM tire sizes (most common)
   tireSizes?: {
@@ -54,15 +91,43 @@ export interface FallbackFitmentResult {
   };
   
   // Platform info
-  platform?: string;          // e.g., "GM Epsilon II"
+  platform?: string;          // e.g., "GM Sigma platform"
   sharedWith?: string[];      // e.g., ["Buick Lucerne", "Cadillac STS"]
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // AFTERMARKET SEARCH PROFILE (NEW in v2.0)
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  // Safe aftermarket upgrade diameters
+  safeAftermarketDiameters?: number[];  // e.g., [19, 20, 22]
+  
+  // Detailed wheel search hints by diameter
+  wheelSearchHints?: AftermarketWheelHint[];
+  
+  // Plus-size tire options for upgrades
+  plusSizeTires?: PlusSizeTireOption[];
+  
+  // Surrogate vehicle for fitment API (shares bolt pattern/offset)
+  surrogateVehicle?: SurrogateVehicle;
+  
+  // Whether we have aftermarket search profile
+  hasAftermarketProfile: boolean;
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // MESSAGING
+  // ═══════════════════════════════════════════════════════════════════════════
   
   // Messaging for Jake
   confidenceMessage: string;
   warningMessage?: string;
   verifyPrompt?: string;      // What to ask customer to verify
   
-  // Tracking
+  // Safety labels
+  safetyNotes?: string[];     // e.g., ["Final clearance should be verified"]
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TRACKING
+  // ═══════════════════════════════════════════════════════════════════════════
   vehicleKey: string;         // "2009|Cadillac|DTS" for logging
   lookupTimestamp: number;
 }
@@ -75,13 +140,15 @@ export interface FallbackLookupRequest {
 }
 
 // ============================================================================
-// CURATED OEM REFERENCE DATA
+// CURATED OEM + AFTERMARKET REFERENCE DATA
 // This is hand-curated data for common vehicles missing from our DB
 // ============================================================================
 
 interface CuratedVehicleData {
+  // OEM specs
   boltPattern: string;
   centerBore: number;
+  threadSize?: string;
   tireSizes: { size: string; trims?: string[] }[];
   wheelDiameters: number[];
   wheelWidths: number[];
@@ -89,6 +156,33 @@ interface CuratedVehicleData {
   platform?: string;
   sharedWith?: string[];
   notes?: string;
+  
+  // AFTERMARKET PROFILE (new)
+  aftermarket?: {
+    // Safe upgrade diameters
+    safeDiameters: number[];
+    // Detailed hints per diameter
+    wheelHints: {
+      diameter: number;
+      widths: number[];
+      offsetRange: { min: number; max: number };
+      notes?: string;
+    }[];
+    // Plus-size tire options
+    plusSizeTires: {
+      size: string;
+      wheelDiameter: number;
+      notes?: string;
+    }[];
+    // Surrogate vehicle for API searches
+    surrogateVehicle?: {
+      year: number;
+      make: string;
+      model: string;
+      trim?: string;
+      reason: string;
+    };
+  };
 }
 
 // Key format: "make|model" (year ranges handled separately)
@@ -105,6 +199,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "235/55R17", trims: ["Base", "Luxury", "Performance"] },
           { size: "245/50R18", trims: ["Platinum", "Performance"] },
@@ -115,6 +210,43 @@ const CURATED_FITMENTS: Record<string, {
         platform: "GM G-body (Sigma platform)",
         sharedWith: ["Buick Lucerne"],
         notes: "FWD luxury sedan, succeeded the DeVille",
+        // FULL AFTERMARKET PROFILE
+        aftermarket: {
+          safeDiameters: [19, 20, 22],
+          wheelHints: [
+            {
+              diameter: 19,
+              widths: [8, 8.5],
+              offsetRange: { min: 35, max: 45 },
+              notes: "Direct fit, no modifications needed",
+            },
+            {
+              diameter: 20,
+              widths: [8, 8.5, 9],
+              offsetRange: { min: 35, max: 45 },
+              notes: "Popular upgrade size, may need minor trimming on some widths",
+            },
+            {
+              diameter: 22,
+              widths: [8.5, 9],
+              offsetRange: { min: 30, max: 42 },
+              notes: "Aggressive upgrade, verify fender clearance",
+            },
+          ],
+          plusSizeTires: [
+            { size: "245/40R19", wheelDiameter: 19, notes: "Direct plus-size, no speedo change" },
+            { size: "245/40R20", wheelDiameter: 20, notes: "Common 20\" upgrade size" },
+            { size: "255/35R20", wheelDiameter: 20, notes: "Wider option for aggressive stance" },
+            { size: "255/40R20", wheelDiameter: 20, notes: "More sidewall for comfort" },
+            { size: "265/30R22", wheelDiameter: 22, notes: "22\" stretch fit" },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern, similar offset range",
+          },
+        },
       },
     },
   ],
@@ -124,6 +256,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["Base", "DHS"] },
           { size: "235/55R17", trims: ["DTS"] },
@@ -133,6 +266,26 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 50 },
         platform: "GM G-body",
         sharedWith: ["Buick Park Avenue", "Oldsmobile Aurora"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5, 9], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+            { size: "255/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -142,6 +295,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["SLS"] },
           { size: "235/55R17", trims: ["STS"] },
@@ -150,6 +304,25 @@ const CURATED_FITMENTS: Record<string, {
         wheelWidths: [7, 7.5],
         offsetRange: { min: 40, max: 48 },
         platform: "GM G-body",
+        aftermarket: {
+          safeDiameters: [18, 19, 20],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -159,6 +332,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["Base", "ESC"] },
           { size: "235/60R16", trims: ["ETC"] },
@@ -168,6 +342,27 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 38, max: 46 },
         platform: "GM E-body",
         sharedWith: ["Oldsmobile Toronado"],
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 38, max: 48 } },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/55R17", wheelDiameter: 17 },
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -181,6 +376,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["CX"] },
           { size: "235/55R17", trims: ["CXL", "CXS"] },
@@ -191,6 +387,26 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 50 },
         platform: "GM G-body (Sigma platform)",
         sharedWith: ["Cadillac DTS"],
+        aftermarket: {
+          safeDiameters: [19, 20, 22],
+          wheelHints: [
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5, 9], offsetRange: { min: 35, max: 45 } },
+            { diameter: 22, widths: [8.5, 9], offsetRange: { min: 30, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+            { size: "255/35R20", wheelDiameter: 20 },
+            { size: "265/30R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -200,6 +416,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["Custom", "Limited"] },
         ],
@@ -208,6 +425,27 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 48 },
         platform: "GM H-body",
         sharedWith: ["Pontiac Bonneville", "Oldsmobile 88"],
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 38, max: 48 } },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/55R17", wheelDiameter: 17 },
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -217,6 +455,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["Base"] },
           { size: "235/55R17", trims: ["Ultra"] },
@@ -226,6 +465,25 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 50 },
         platform: "GM G-body",
         sharedWith: ["Cadillac DeVille"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -239,6 +497,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x114.3",
         centerBore: 70.5,
+        threadSize: "1/2x20",
         tireSizes: [
           { size: "225/60R17", trims: ["Executive", "Signature"] },
           { size: "235/55R17", trims: ["Signature L", "Designer"] },
@@ -248,6 +507,28 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 50 },
         platform: "Ford Panther",
         sharedWith: ["Ford Crown Victoria", "Mercury Grand Marquis"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5, 9], offsetRange: { min: 35, max: 45 } },
+            { diameter: 22, widths: [8.5, 9], offsetRange: { min: 30, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+            { size: "255/35R20", wheelDiameter: 20 },
+            { size: "265/30R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Ford",
+            model: "Crown Victoria",
+            reason: "Same Panther platform, 5x114.3 bolt pattern",
+          },
+        },
       },
     },
     {
@@ -255,6 +536,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x114.3",
         centerBore: 70.5,
+        threadSize: "1/2x20",
         tireSizes: [
           { size: "225/60R16", trims: ["Executive", "Signature"] },
           { size: "225/60R17", trims: ["Cartier"] },
@@ -264,6 +546,27 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 38, max: 48 },
         platform: "Ford Panther",
         sharedWith: ["Ford Crown Victoria", "Mercury Grand Marquis"],
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 38, max: 48 } },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/55R17", wheelDiameter: 17 },
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Ford",
+            model: "Crown Victoria",
+            reason: "Same Panther platform, 5x114.3 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -273,6 +576,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x114.3",
         centerBore: 63.4,
+        threadSize: "14x1.5",
         tireSizes: [
           { size: "245/45R19", trims: ["Premiere", "Select"] },
           { size: "245/40R20", trims: ["Reserve", "Black Label"] },
@@ -282,6 +586,25 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 50 },
         platform: "Ford CD4",
         sharedWith: ["Ford Fusion", "Lincoln MKZ"],
+        aftermarket: {
+          safeDiameters: [20, 21, 22],
+          wheelHints: [
+            { diameter: 20, widths: [8.5, 9], offsetRange: { min: 38, max: 48 } },
+            { diameter: 21, widths: [8.5, 9, 9.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 22, widths: [9, 9.5], offsetRange: { min: 32, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "255/35R20", wheelDiameter: 20 },
+            { size: "255/30R21", wheelDiameter: 21 },
+            { size: "265/30R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 2019,
+            make: "Ford",
+            model: "Fusion",
+            reason: "Same CD4 platform, 5x114.3 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -295,6 +618,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x114.3",
         centerBore: 70.5,
+        threadSize: "1/2x20",
         tireSizes: [
           { size: "225/60R16", trims: ["GS"] },
           { size: "225/60R17", trims: ["LS"] },
@@ -304,6 +628,27 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 38, max: 48 },
         platform: "Ford Panther",
         sharedWith: ["Ford Crown Victoria", "Lincoln Town Car"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5, 9], offsetRange: { min: 35, max: 45 } },
+            { diameter: 22, widths: [8.5, 9], offsetRange: { min: 30, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+            { size: "265/30R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Ford",
+            model: "Crown Victoria",
+            reason: "Same Panther platform, 5x114.3 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -317,6 +662,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["3.5"] },
           { size: "235/55R17", trims: ["4.0"] },
@@ -326,6 +672,25 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 50 },
         platform: "GM G-body",
         sharedWith: ["Buick Park Avenue", "Cadillac DeVille"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -335,6 +700,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "215/60R15", trims: ["GX"] },
           { size: "225/50R16", trims: ["GL", "GLS"] },
@@ -344,6 +710,23 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 35, max: 45 },
         platform: "GM N-body",
         sharedWith: ["Pontiac Grand Am", "Chevrolet Malibu"],
+        aftermarket: {
+          safeDiameters: [17, 18],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/45R17", wheelDiameter: 17 },
+            { size: "225/40R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -357,6 +740,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x120",
         centerBore: 67.1,
+        threadSize: "14x1.5",
         tireSizes: [
           { size: "245/45R18", trims: ["Base"] },
           { size: "245/40R19", trims: ["GT", "GXP"] },
@@ -366,6 +750,26 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 35, max: 45 },
         platform: "GM Zeta",
         sharedWith: ["Chevrolet SS", "Holden Commodore"],
+        aftermarket: {
+          safeDiameters: [19, 20, 22],
+          wheelHints: [
+            { diameter: 19, widths: [8.5, 9, 9.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [9, 9.5, 10], offsetRange: { min: 30, max: 42 } },
+            { diameter: 22, widths: [9, 9.5, 10], offsetRange: { min: 25, max: 38 } },
+          ],
+          plusSizeTires: [
+            { size: "275/35R19", wheelDiameter: 19 },
+            { size: "275/30R20", wheelDiameter: 20 },
+            { size: "285/30R20", wheelDiameter: 20 },
+            { size: "285/25R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 2017,
+            make: "Chevrolet",
+            model: "SS",
+            reason: "Same Zeta platform, 5x120 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -375,6 +779,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["Base"] },
           { size: "225/55R17", trims: ["GT", "GTP"] },
@@ -385,6 +790,25 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 35, max: 48 },
         platform: "GM W-body",
         sharedWith: ["Buick Regal", "Chevrolet Impala"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5, 9], offsetRange: { min: 32, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "235/45R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -394,6 +818,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x115",
         centerBore: 70.3,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/60R16", trims: ["SE"] },
           { size: "235/55R17", trims: ["SLE", "GXP"] },
@@ -403,6 +828,101 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 50 },
         platform: "GM H-body",
         sharedWith: ["Buick LeSabre"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CHEVROLET (common 5x115 vehicles)
+  // ═══════════════════════════════════════════════════════════════════════════
+  "chevrolet|impala": [
+    {
+      yearRange: [2006, 2013],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "225/60R16", trims: ["LS", "LT"] },
+          { size: "235/55R17", trims: ["LT", "LTZ"] },
+          { size: "235/50R18", trims: ["LTZ", "SS"] },
+        ],
+        wheelDiameters: [16, 17, 18],
+        wheelWidths: [6.5, 7, 7.5],
+        offsetRange: { min: 40, max: 50 },
+        platform: "GM W-body",
+        sharedWith: ["Pontiac Grand Prix", "Buick LaCrosse"],
+        aftermarket: {
+          safeDiameters: [19, 20, 22],
+          wheelHints: [
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5, 9], offsetRange: { min: 35, max: 45 } },
+            { diameter: 22, widths: [8.5, 9], offsetRange: { min: 30, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+            { size: "255/35R20", wheelDiameter: 20 },
+            { size: "265/30R22", wheelDiameter: 22 },
+          ],
+        },
+      },
+    },
+  ],
+  "chevrolet|monte carlo": [
+    {
+      yearRange: [2000, 2007],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "225/60R16", trims: ["LS"] },
+          { size: "225/55R17", trims: ["LT"] },
+          { size: "235/50R18", trims: ["SS"] },
+        ],
+        wheelDiameters: [16, 17, 18],
+        wheelWidths: [6.5, 7, 7.5],
+        offsetRange: { min: 40, max: 50 },
+        platform: "GM W-body",
+        sharedWith: ["Chevrolet Impala"],
+        aftermarket: {
+          safeDiameters: [19, 20],
+          wheelHints: [
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5, 9], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/40R20", wheelDiameter: 20 },
+            { size: "255/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same W-body platform, 5x115 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -416,6 +936,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x110",
         centerBore: 65.1,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "225/50R17", trims: ["XE", "XR"] },
           { size: "235/50R18", trims: ["XR"] },
@@ -425,6 +946,25 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 40, max: 48 },
         platform: "GM Epsilon II",
         sharedWith: ["Chevrolet Malibu", "Pontiac G6"],
+        aftermarket: {
+          safeDiameters: [18, 19, 20],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "235/45R18", wheelDiameter: 18 },
+            { size: "245/40R19", wheelDiameter: 19 },
+            { size: "245/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2012,
+            make: "Chevrolet",
+            model: "Malibu",
+            reason: "Same Epsilon II platform, 5x110 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -434,6 +974,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "6x132",
         centerBore: 74.5,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "255/65R18", trims: ["XE", "XR"] },
           { size: "255/60R19", trims: ["XR"] },
@@ -443,6 +984,23 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 45, max: 55 },
         platform: "GM Lambda",
         sharedWith: ["GMC Acadia", "Buick Enclave", "Chevrolet Traverse"],
+        aftermarket: {
+          safeDiameters: [20, 22],
+          wheelHints: [
+            { diameter: 20, widths: [8, 8.5], offsetRange: { min: 40, max: 52 } },
+            { diameter: 22, widths: [8.5, 9], offsetRange: { min: 38, max: 50 } },
+          ],
+          plusSizeTires: [
+            { size: "255/50R20", wheelDiameter: 20 },
+            { size: "285/40R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 2015,
+            make: "GMC",
+            model: "Acadia",
+            reason: "Same Lambda platform, 6x132 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -456,6 +1014,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "6x139.7",
         centerBore: 78.1,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "265/75R16", trims: ["Base"] },
           { size: "285/75R16", trims: ["H3T", "Adventure"] },
@@ -465,6 +1024,25 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 30, max: 40 },
         platform: "GM GMT355",
         sharedWith: ["Chevrolet Colorado", "GMC Canyon"],
+        aftermarket: {
+          safeDiameters: [17, 18, 20],
+          wheelHints: [
+            { diameter: 17, widths: [8, 8.5, 9], offsetRange: { min: 10, max: 30 } },
+            { diameter: 18, widths: [8.5, 9], offsetRange: { min: 10, max: 25 } },
+            { diameter: 20, widths: [9, 10], offsetRange: { min: 0, max: 20 } },
+          ],
+          plusSizeTires: [
+            { size: "285/70R17", wheelDiameter: 17 },
+            { size: "285/65R18", wheelDiameter: 18 },
+            { size: "305/55R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Colorado",
+            reason: "Same GMT355 platform, 6x139.7 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -474,6 +1052,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "8x165.1",
         centerBore: 121,
+        threadSize: "14x1.5",
         tireSizes: [
           { size: "315/70R17", trims: ["Base", "Luxury"] },
         ],
@@ -482,6 +1061,25 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 20, max: 35 },
         platform: "GM GMT820",
         sharedWith: ["Chevrolet Silverado 2500", "GMC Sierra 2500"],
+        aftermarket: {
+          safeDiameters: [20, 22, 24],
+          wheelHints: [
+            { diameter: 20, widths: [9, 10, 12], offsetRange: { min: -12, max: 25 } },
+            { diameter: 22, widths: [10, 12], offsetRange: { min: -25, max: 15 } },
+            { diameter: 24, widths: [10, 12, 14], offsetRange: { min: -40, max: 0 } },
+          ],
+          plusSizeTires: [
+            { size: "305/55R20", wheelDiameter: 20 },
+            { size: "305/45R22", wheelDiameter: 22 },
+            { size: "305/35R24", wheelDiameter: 24 },
+          ],
+          surrogateVehicle: {
+            year: 2007,
+            make: "Chevrolet",
+            model: "Silverado 2500HD",
+            reason: "Same 8x165.1 bolt pattern, similar offset",
+          },
+        },
       },
     },
   ],
@@ -495,6 +1093,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x110",
         centerBore: 65.1,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "215/55R16", trims: ["Linear"] },
           { size: "225/45R17", trims: ["Arc", "Vector"] },
@@ -505,6 +1104,23 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 38, max: 45 },
         platform: "GM Epsilon",
         sharedWith: ["Chevrolet Malibu", "Opel Vectra"],
+        aftermarket: {
+          safeDiameters: [18, 19],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "235/40R18", wheelDiameter: 18 },
+            { size: "235/35R19", wheelDiameter: 19 },
+          ],
+          surrogateVehicle: {
+            year: 2012,
+            make: "Chevrolet",
+            model: "Malibu",
+            reason: "Same Epsilon platform, 5x110 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -514,6 +1130,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x110",
         centerBore: 65.1,
+        threadSize: "12x1.5",
         tireSizes: [
           { size: "215/55R16", trims: ["Linear"] },
           { size: "225/50R17", trims: ["Arc"] },
@@ -524,6 +1141,23 @@ const CURATED_FITMENTS: Record<string, {
         offsetRange: { min: 38, max: 45 },
         platform: "GM2900",
         sharedWith: ["Opel Vectra"],
+        aftermarket: {
+          safeDiameters: [18, 19],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 42 } },
+          ],
+          plusSizeTires: [
+            { size: "235/40R18", wheelDiameter: 18 },
+            { size: "245/35R19", wheelDiameter: 19 },
+          ],
+          surrogateVehicle: {
+            year: 2012,
+            make: "Chevrolet",
+            model: "Malibu",
+            reason: "Similar 5x110 bolt pattern",
+          },
+        },
       },
     },
   ],
@@ -537,6 +1171,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x114.3",
         centerBore: 60.1,
+        threadSize: "12x1.25",
         tireSizes: [
           { size: "225/70R16", trims: ["Base"] },
           { size: "225/65R17", trims: ["Premium", "Luxury"] },
@@ -545,6 +1180,19 @@ const CURATED_FITMENTS: Record<string, {
         wheelDiameters: [16, 17, 18],
         wheelWidths: [6.5, 7],
         offsetRange: { min: 40, max: 50 },
+        aftermarket: {
+          safeDiameters: [17, 18, 19],
+          wheelHints: [
+            { diameter: 17, widths: [7, 7.5], offsetRange: { min: 40, max: 50 } },
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/60R17", wheelDiameter: 17 },
+            { size: "235/55R18", wheelDiameter: 18 },
+            { size: "245/50R19", wheelDiameter: 19 },
+          ],
+        },
       },
     },
   ],
@@ -554,6 +1202,7 @@ const CURATED_FITMENTS: Record<string, {
       data: {
         boltPattern: "5x114.3",
         centerBore: 60.1,
+        threadSize: "12x1.25",
         tireSizes: [
           { size: "215/55R17", trims: ["S", "SE"] },
           { size: "225/50R18", trims: ["GTS", "SLS"] },
@@ -561,59 +1210,24 @@ const CURATED_FITMENTS: Record<string, {
         wheelDiameters: [17, 18],
         wheelWidths: [7, 7.5],
         offsetRange: { min: 40, max: 50 },
+        aftermarket: {
+          safeDiameters: [18, 19],
+          wheelHints: [
+            { diameter: 18, widths: [7.5, 8], offsetRange: { min: 38, max: 48 } },
+            { diameter: 19, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/45R18", wheelDiameter: 18 },
+            { size: "235/40R19", wheelDiameter: 19 },
+          ],
+        },
       },
     },
   ],
 };
 
 // ============================================================================
-// PLATFORM-BASED INFERENCE
-// When we don't have exact vehicle data, we can infer from shared platforms
-// ============================================================================
-
-interface PlatformData {
-  boltPattern: string;
-  centerBore: number;
-  commonTireSizes: string[];
-  wheelDiameterRange: [number, number];
-}
-
-const GM_PLATFORMS: Record<string, PlatformData> = {
-  "epsilon": {
-    boltPattern: "5x110",
-    centerBore: 65.1,
-    commonTireSizes: ["225/50R17", "235/45R18"],
-    wheelDiameterRange: [16, 19],
-  },
-  "epsilon-ii": {
-    boltPattern: "5x120",
-    centerBore: 67.1,
-    commonTireSizes: ["225/50R17", "245/45R18", "245/40R19"],
-    wheelDiameterRange: [17, 20],
-  },
-  "theta": {
-    boltPattern: "5x115",
-    centerBore: 70.3,
-    commonTireSizes: ["235/65R17", "255/55R18", "255/50R19"],
-    wheelDiameterRange: [17, 20],
-  },
-  "lambda": {
-    boltPattern: "6x132",
-    centerBore: 74.5,
-    commonTireSizes: ["255/65R18", "255/60R19", "255/55R20"],
-    wheelDiameterRange: [18, 22],
-  },
-  "zeta": {
-    boltPattern: "5x120",
-    centerBore: 67.1,
-    commonTireSizes: ["245/45R18", "245/40R19", "275/35R20"],
-    wheelDiameterRange: [18, 21],
-  },
-};
-
-// ============================================================================
-// ERA-BASED COMMON SPECS
-// Fallback for when we have nothing else - based on vehicle class and era
+// ERA-BASED COMMON SPECS (fallback for unknown vehicles)
 // ============================================================================
 
 type VehicleClass = 
@@ -745,19 +1359,71 @@ export function lookupFallbackFitment(
           trimLevel: ts.trims?.join(", "),
         }));
         
+        // Build aftermarket profile if available
+        const hasAftermarket = !!data.aftermarket;
+        
+        let wheelSearchHints: AftermarketWheelHint[] | undefined;
+        let plusSizeTires: PlusSizeTireOption[] | undefined;
+        let surrogateVehicle: SurrogateVehicle | undefined;
+        let safeAftermarketDiameters: number[] | undefined;
+        
+        if (data.aftermarket) {
+          safeAftermarketDiameters = data.aftermarket.safeDiameters;
+          
+          wheelSearchHints = data.aftermarket.wheelHints.map(hint => ({
+            diameter: hint.diameter,
+            widths: hint.widths,
+            offsetRange: hint.offsetRange,
+            label: "fallback_upgrade" as FitmentLabel,
+            notes: hint.notes,
+          }));
+          
+          plusSizeTires = data.aftermarket.plusSizeTires.map(tire => ({
+            size: tire.size,
+            wheelDiameter: tire.wheelDiameter,
+            label: "fallback_upgrade" as FitmentLabel,
+            notes: tire.notes,
+          }));
+          
+          if (data.aftermarket.surrogateVehicle) {
+            surrogateVehicle = {
+              ...data.aftermarket.surrogateVehicle,
+            };
+          }
+        }
+        
+        // Build safety notes
+        const safetyNotes: string[] = [];
+        if (hasAftermarket) {
+          safetyNotes.push("Upgrade specs are common aftermarket guidance, not verified OEM");
+          safetyNotes.push("Final clearance should be verified before installation");
+        }
+        
         return {
           success: true,
           confidence: "high",
           source: "curated_oem",
           boltPattern: data.boltPattern,
+          boltPatternMetric: data.boltPattern,
           centerBore: data.centerBore,
+          threadSize: data.threadSize,
           tireSizes,
           wheelDiameters: data.wheelDiameters,
           wheelWidths: data.wheelWidths,
           offsetRange: data.offsetRange,
           platform: data.platform,
           sharedWith: data.sharedWith,
+          
+          // Aftermarket profile
+          hasAftermarketProfile: hasAftermarket,
+          safeAftermarketDiameters,
+          wheelSearchHints,
+          plusSizeTires,
+          surrogateVehicle,
+          
+          // Messaging
           confidenceMessage: `I don't have this exact vehicle in my verified database yet, but the ${year} ${make} ${model} commonly uses:`,
+          safetyNotes,
           vehicleKey,
           lookupTimestamp: Date.now(),
         };
@@ -766,12 +1432,7 @@ export function lookupFallbackFitment(
   }
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // TIER 2: Platform inference for GM vehicles
-  // ═══════════════════════════════════════════════════════════════════════════
-  // (Could expand this for Ford/Chrysler platforms too)
-  
-  // ═══════════════════════════════════════════════════════════════════════════
-  // TIER 3: Era-based inference
+  // TIER 2: Era-based inference
   // ═══════════════════════════════════════════════════════════════════════════
   const vehicleClass = inferVehicleClass(make, model);
   
@@ -790,24 +1451,28 @@ export function lookupFallbackFitment(
         { length: eraSpecs.wheelDiameterRange[1] - eraSpecs.wheelDiameterRange[0] + 1 },
         (_, i) => eraSpecs.wheelDiameterRange[0] + i
       ),
+      hasAftermarketProfile: false,
       confidenceMessage: `I don't have specific data for the ${year} ${make} ${model}, but based on similar vehicles from that era, common sizes are:`,
       warningMessage: "These are estimates. I'd recommend checking your door sticker or current tires for the exact size.",
       verifyPrompt: "Could you check the tire size on your door jamb sticker or the sidewall of your current tires? It'll look something like 235/55R17.",
+      safetyNotes: ["These are general estimates only - verify your specific vehicle specs"],
       vehicleKey,
       lookupTimestamp: Date.now(),
     };
   }
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // TIER 4: Can't determine - ask customer
+  // TIER 3: Can't determine - ask customer
   // ═══════════════════════════════════════════════════════════════════════════
   return {
     success: false,
     confidence: "unknown",
     source: "customer_verify",
+    hasAftermarketProfile: false,
     confidenceMessage: `I don't have specific fitment data for the ${year} ${make} ${model} in my system yet.`,
     warningMessage: "But I can definitely still help you!",
     verifyPrompt: "If you can tell me the tire size from your door jamb sticker (something like 235/55R17), I can find great options for you. Or if you know your wheel bolt pattern, I can help with wheels too!",
+    safetyNotes: [],
     vehicleKey,
     lookupTimestamp: Date.now(),
   };
@@ -881,16 +1546,52 @@ export function getPrimaryTireSize(result: FallbackFitmentResult): string | null
 export function canSearchWithFallback(result: FallbackFitmentResult): {
   canSearchTires: boolean;
   canSearchWheels: boolean;
+  canSearchAftermarketWheels: boolean;
   reason?: string;
 } {
   const canSearchTires = !!(result.tireSizes && result.tireSizes.length > 0);
   const canSearchWheels = !!(result.boltPattern && result.wheelDiameters?.length);
+  const canSearchAftermarketWheels = !!(result.hasAftermarketProfile && result.wheelSearchHints?.length);
   
   return {
     canSearchTires,
     canSearchWheels,
+    canSearchAftermarketWheels,
     reason: !canSearchTires && !canSearchWheels 
       ? "Need tire size or bolt pattern from customer" 
       : undefined,
   };
+}
+
+/**
+ * Get wheel search hints for a specific diameter
+ */
+export function getWheelSearchHintForDiameter(
+  result: FallbackFitmentResult,
+  diameter: number
+): AftermarketWheelHint | null {
+  if (!result.wheelSearchHints) return null;
+  return result.wheelSearchHints.find(h => h.diameter === diameter) || null;
+}
+
+/**
+ * Get plus-size tire options for a specific wheel diameter
+ */
+export function getPlusSizeTiresForDiameter(
+  result: FallbackFitmentResult,
+  diameter: number
+): PlusSizeTireOption[] {
+  if (!result.plusSizeTires) return [];
+  return result.plusSizeTires.filter(t => t.wheelDiameter === diameter);
+}
+
+/**
+ * Check if a specific diameter is safe for aftermarket upgrade
+ */
+export function isDiameterSafeForUpgrade(
+  result: FallbackFitmentResult,
+  diameter: number
+): boolean {
+  if (!result.safeAftermarketDiameters) return false;
+  return result.safeAftermarketDiameters.includes(diameter);
 }
