@@ -96,6 +96,12 @@ import {
 
 import { normalizeToStringArray } from "@/lib/tires/tireSizeUtils";
 
+import {
+  filterOutUTVProducts,
+  logUTVFilterAnalytics,
+  type UTVFilterInput,
+} from "@/lib/filters/utvFilter";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -1557,11 +1563,43 @@ async function handleDbFirstWheelResults(opts: {
     return true;
   });
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // P0 FIX: UTV/POWERSPORTS FILTER (2026-05-20)
+  // CRITICAL: Filter out UTV/ATV/SxS wheels from automotive searches
+  // These share 5x4.5 bolt pattern with classic muscle but are NOT automotive wheels
+  // ═══════════════════════════════════════════════════════════════════════════
+  const tUtvFilter0 = Date.now();
+  const utvFilterInput = filteredCandidates.map(c => ({
+    ...c,
+    productDesc: c.product_desc,
+    brandCode: c.brand_cd,
+    brandDesc: c.brand_desc,
+  }));
+  
+  const utvFilterResult = filterOutUTVProducts(utvFilterInput, {
+    logRejections: debug,
+    vehicleType: 'automotive', // Always automotive for this endpoint
+  });
+  
+  // Replace filteredCandidates with UTV-filtered results
+  const utvFilteredCandidates = utvFilterResult.filtered as typeof filteredCandidates;
+  timing.utvFilterMs = Date.now() - tUtvFilter0;
+  timing.utvRejectedCount = utvFilterResult.analytics.totalRejected;
+  
+  // Log UTV filter analytics if any were rejected
+  if (utvFilterResult.analytics.totalRejected > 0) {
+    logUTVFilterAnalytics(utvFilterResult.analytics, {
+      vehicle: `${year} ${make} ${model}`,
+      boltPattern: opts.boltPattern,
+    });
+  }
+
   // Diversify by brand (round-robin) to avoid brand clustering
   const tDiversify0 = Date.now();
-  const diversifiedCandidates = diversifyCandidatesByBrand(filteredCandidates);
+  const diversifiedCandidates = diversifyCandidatesByBrand(utvFilteredCandidates);
   timing.diversifyMs = Date.now() - tDiversify0;
-  timing.candidatesAfterFilter = filteredCandidates.length;
+  timing.candidatesAfterFilter = utvFilteredCandidates.length;
+  timing.candidatesAfterUtvFilter = utvFilteredCandidates.length;
   
   // Debug SKU tracing - after basic filter
   if (debugSku) {

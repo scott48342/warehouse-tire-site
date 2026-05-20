@@ -2049,6 +2049,637 @@ const CURATED_FITMENTS: Record<string, {
       },
     },
   ],
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // P2: CLASSIC FORD/LINCOLN LUXURY (1965-1980s)
+  // Land yachts with 5x4.5 (5x114.3) bolt pattern
+  // Strong donk/big wheel culture, chrome wheel builds
+  // ═══════════════════════════════════════════════════════════════════════════
+  "lincoln|continental": [
+    {
+      yearRange: [1961, 1979],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base"] },
+          { size: "235/75R15", trims: ["Town Car"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Ford full-size (Y-block/FE)",
+        sharedWith: ["Lincoln Mark III", "Lincoln Mark IV", "Lincoln Mark V", "Ford Thunderbird"],
+        notes: "Classic American luxury. 5x4.5 bolt pattern with huge aftermarket support. Popular for donk/big wheel builds.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20, 22, 24],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic chrome look" },
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 }, notes: "Modern pro-touring" },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 }, notes: "Chrome wire look" },
+            { diameter: 22, widths: [9, 10], offsetRange: { min: -35, max: 0 }, notes: "Big wheel/donk builds" },
+            { diameter: 24, widths: [9, 10, 12], offsetRange: { min: -40, max: -5 }, notes: "Full donk setup" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "255/40R20", wheelDiameter: 20 },
+            { size: "265/35R22", wheelDiameter: 22 },
+            { size: "275/25R24", wheelDiameter: 24 },
+          ],
+          surrogateVehicle: {
+            year: 1969,
+            make: "Ford",
+            model: "Mustang",
+            reason: "Same 5x114.3 bolt pattern, tons of classic wheel options",
+          },
+        },
+      },
+    },
+  ],
+  "lincoln|mark iii": [
+    {
+      yearRange: [1969, 1971],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Ford Thunderbird platform",
+        sharedWith: ["Lincoln Continental", "Ford Thunderbird"],
+        notes: "Personal luxury coupe. Same 5x4.5 as other Ford/Lincoln full-size.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Period-correct options" },
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular modernization" },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 } },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 }, notes: "Show car builds" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 1969,
+            make: "Ford",
+            model: "Mustang",
+            reason: "Same 5x114.3 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "lincoln|mark iv": [
+    {
+      yearRange: [1972, 1976],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base"] },
+          { size: "235/75R15", trims: ["Designer Series"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Ford Thunderbird platform",
+        sharedWith: ["Lincoln Continental", "Ford Thunderbird"],
+        notes: "Personal luxury coupe. Iconic 70s land yacht. 5x4.5 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20, 22],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic wire wheel look" },
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 } },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 }, notes: "Modern luxury look" },
+            { diameter: 22, widths: [9, 10], offsetRange: { min: -35, max: 0 }, notes: "Big wheel builds" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+            { size: "265/35R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 1969,
+            make: "Ford",
+            model: "Mustang",
+            reason: "Same 5x114.3 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "lincoln|mark v": [
+    {
+      yearRange: [1977, 1979],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base"] },
+          { size: "235/75R15", trims: ["Designer Series", "Collector Series"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Ford Thunderbird platform",
+        sharedWith: ["Lincoln Continental", "Ford Thunderbird"],
+        notes: "Last of the big personal luxury coupes. 5x4.5 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20, 22],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Period-correct wire wheels" },
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -20, max: 15 } },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 } },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 } },
+            { diameter: 22, widths: [9, 10], offsetRange: { min: -35, max: 0 } },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+            { size: "265/35R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 1969,
+            make: "Ford",
+            model: "Mustang",
+            reason: "Same 5x114.3 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "lincoln|town car": [
+    {
+      yearRange: [1981, 2011],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/70R15", trims: ["Base", "Executive"] },
+          { size: "225/60R16", trims: ["Signature", "Cartier"] },
+          { size: "235/55R17", trims: ["Ultimate"] },
+        ],
+        wheelDiameters: [15, 16, 17],
+        wheelWidths: [6, 7],
+        offsetRange: { min: 30, max: 50 },
+        platform: "Ford Panther platform",
+        sharedWith: ["Ford Crown Victoria", "Mercury Grand Marquis"],
+        notes: "Panther platform. Last true body-on-frame American sedan. Popular for big wheel builds.",
+        aftermarket: {
+          safeDiameters: [17, 18, 20, 22, 24],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8], offsetRange: { min: 30, max: 45 }, notes: "OEM+ upgrade" },
+            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 25, max: 42 } },
+            { diameter: 20, widths: [8, 9], offsetRange: { min: 20, max: 38 }, notes: "Very popular upgrade" },
+            { diameter: 22, widths: [9, 10], offsetRange: { min: 15, max: 35 }, notes: "Popular donk size" },
+            { diameter: 24, widths: [9, 10], offsetRange: { min: 10, max: 30 }, notes: "Full donk build" },
+          ],
+          plusSizeTires: [
+            { size: "235/50R17", wheelDiameter: 17 },
+            { size: "245/45R18", wheelDiameter: 18 },
+            { size: "255/40R20", wheelDiameter: 20 },
+            { size: "265/35R22", wheelDiameter: 22 },
+            { size: "275/25R24", wheelDiameter: 24 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Ford",
+            model: "Crown Victoria",
+            reason: "Same Panther platform, identical fitment",
+          },
+        },
+      },
+    },
+  ],
+  "ford|thunderbird": [
+    {
+      yearRange: [1967, 1976],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base", "Landau"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Ford full-size",
+        sharedWith: ["Lincoln Continental", "Lincoln Mark III", "Lincoln Mark IV"],
+        notes: "Classic personal luxury. 5x4.5 bolt pattern shared with Lincoln.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic styling" },
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -20, max: 15 } },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 } },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 } },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 1969,
+            make: "Ford",
+            model: "Mustang",
+            reason: "Same 5x114.3 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "ford|ltd": [
+    {
+      yearRange: [1965, 1982],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "215/75R15", trims: ["Base"] },
+          { size: "225/75R15", trims: ["Brougham", "Country Squire"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Ford full-size",
+        sharedWith: ["Mercury Marquis", "Mercury Grand Marquis"],
+        notes: "Full-size Ford sedan. 5x4.5 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 } },
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -20, max: 15 } },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 } },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 } },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 1969,
+            make: "Ford",
+            model: "Mustang",
+            reason: "Same 5x114.3 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "mercury|grand marquis": [
+    {
+      yearRange: [1979, 2011],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/70R15", trims: ["Base", "GS"] },
+          { size: "225/60R16", trims: ["LS"] },
+          { size: "235/55R17", trims: ["LS Ultimate"] },
+        ],
+        wheelDiameters: [15, 16, 17],
+        wheelWidths: [6, 7],
+        offsetRange: { min: 30, max: 50 },
+        platform: "Ford Panther platform",
+        sharedWith: ["Ford Crown Victoria", "Lincoln Town Car"],
+        notes: "Panther platform. Same fitment as Crown Vic and Town Car.",
+        aftermarket: {
+          safeDiameters: [17, 18, 20, 22],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8], offsetRange: { min: 30, max: 45 } },
+            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 25, max: 42 } },
+            { diameter: 20, widths: [8, 9], offsetRange: { min: 20, max: 38 } },
+            { diameter: 22, widths: [9, 10], offsetRange: { min: 15, max: 35 } },
+          ],
+          plusSizeTires: [
+            { size: "235/50R17", wheelDiameter: 17 },
+            { size: "245/45R18", wheelDiameter: 18 },
+            { size: "255/40R20", wheelDiameter: 20 },
+            { size: "265/35R22", wheelDiameter: 22 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Ford",
+            model: "Crown Victoria",
+            reason: "Same Panther platform, identical fitment",
+          },
+        },
+      },
+    },
+  ],
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // P3: CLASSIC GM FWD LUXURY (5x5/5x127 bolt pattern)
+  // Front-wheel drive oddballs - Toronado, Riviera, Eldorado (FWD years)
+  // ═══════════════════════════════════════════════════════════════════════════
+  "oldsmobile|toronado": [
+    {
+      yearRange: [1966, 1978],
+      data: {
+        boltPattern: "5x127",
+        centerBore: 77.8,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base", "Custom", "Brougham"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -5, max: 25 },
+        platform: "GM E-body (FWD)",
+        sharedWith: ["Buick Riviera (1966-1978)", "Cadillac Eldorado (1967-1978)"],
+        notes: "First American FWD muscle car. 5x5 (5x127) bolt pattern - unique to GM E-body. Strong enthusiast following.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -10, max: 25 }, notes: "Classic wire wheels, Cragar SS" },
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -15, max: 20 }, notes: "Popular modern upgrade" },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -20, max: 15 }, notes: "Pro-touring builds" },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -25, max: 10 }, notes: "Show car builds" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 1972,
+            make: "Buick",
+            model: "Riviera",
+            reason: "Same GM E-body platform, 5x127 bolt pattern",
+          },
+        },
+      },
+    },
+    {
+      yearRange: [1979, 1992],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "205/75R14", trims: ["Base"] },
+          { size: "215/65R15", trims: ["Brougham", "Trofeo"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 38, max: 48 },
+        platform: "GM E-body (downsized)",
+        sharedWith: ["Buick Riviera (1979-1993)", "Cadillac Eldorado (1979-1985)"],
+        notes: "Downsized E-body. Now uses 5x115 like other GM FWD.",
+        aftermarket: {
+          safeDiameters: [16, 17, 18],
+          wheelHints: [
+            { diameter: 16, widths: [7, 7.5], offsetRange: { min: 38, max: 48 } },
+            { diameter: 17, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/55R16", wheelDiameter: 16 },
+            { size: "225/50R17", wheelDiameter: 17 },
+            { size: "235/45R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "buick|riviera": [
+    {
+      yearRange: [1966, 1978],
+      data: {
+        boltPattern: "5x127",
+        centerBore: 77.8,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base", "Custom"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -5, max: 25 },
+        platform: "GM E-body (FWD)",
+        sharedWith: ["Oldsmobile Toronado (1966-1978)", "Cadillac Eldorado (1967-1978)"],
+        notes: "Personal luxury coupe. 5x5 (5x127) bolt pattern. Strong boattail enthusiast culture.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -10, max: 25 }, notes: "Classic rally wheels" },
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -15, max: 20 } },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -20, max: 15 } },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -25, max: 10 } },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "275/40R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 1972,
+            make: "Oldsmobile",
+            model: "Toronado",
+            reason: "Same GM E-body platform, 5x127 bolt pattern",
+          },
+        },
+      },
+    },
+    {
+      yearRange: [1979, 1993],
+      data: {
+        boltPattern: "5x115",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "205/75R14", trims: ["Base"] },
+          { size: "215/65R15", trims: ["T-Type", "Luxury"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 38, max: 48 },
+        platform: "GM E-body (downsized)",
+        sharedWith: ["Oldsmobile Toronado (1979-1992)", "Cadillac Eldorado (1979-1985)"],
+        notes: "Downsized personal luxury. Now uses 5x115.",
+        aftermarket: {
+          safeDiameters: [16, 17, 18],
+          wheelHints: [
+            { diameter: 16, widths: [7, 7.5], offsetRange: { min: 38, max: 48 } },
+            { diameter: 17, widths: [7.5, 8], offsetRange: { min: 35, max: 45 } },
+            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 35, max: 45 } },
+          ],
+          plusSizeTires: [
+            { size: "225/55R16", wheelDiameter: 16 },
+            { size: "225/50R17", wheelDiameter: 17 },
+            { size: "235/45R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2010,
+            make: "Chevrolet",
+            model: "Impala",
+            reason: "Same 5x115 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // P4: EUROPEAN 5x108 ENTHUSIAST PLATFORMS
+  // "Turbo brick" culture, Swedish boxes, mesh wheel aesthetic
+  // ═══════════════════════════════════════════════════════════════════════════
+  "volvo|240": [
+    {
+      yearRange: [1975, 1993],
+      data: {
+        boltPattern: "5x108",
+        centerBore: 65.0,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "185/75R14", trims: ["DL", "GL"] },
+          { size: "195/60R15", trims: ["GLT", "Turbo"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [5.5, 6],
+        offsetRange: { min: 20, max: 35 },
+        platform: "Volvo 200 series",
+        sharedWith: ["Volvo 260"],
+        notes: "The 'turbo brick'. Strong enthusiast culture. 5x108 bolt pattern shared with Ford/Jaguar.",
+        aftermarket: {
+          safeDiameters: [15, 16, 17, 18],
+          wheelHints: [
+            { diameter: 15, widths: [6, 7], offsetRange: { min: 20, max: 35 }, notes: "Classic Virgo, Titan wheels" },
+            { diameter: 16, widths: [7, 7.5], offsetRange: { min: 20, max: 35 }, notes: "Popular OEM+ size" },
+            { diameter: 17, widths: [7, 8], offsetRange: { min: 18, max: 32 }, notes: "Modern mesh wheels" },
+            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 15, max: 30 }, notes: "Aggressive stance" },
+          ],
+          plusSizeTires: [
+            { size: "205/55R15", wheelDiameter: 15 },
+            { size: "205/50R16", wheelDiameter: 16 },
+            { size: "215/45R17", wheelDiameter: 17 },
+            { size: "225/40R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2015,
+            make: "Ford",
+            model: "Focus",
+            reason: "Same 5x108 bolt pattern (Euro Ford/Volvo shared)",
+          },
+        },
+      },
+    },
+  ],
+  "volvo|740": [
+    {
+      yearRange: [1985, 1992],
+      data: {
+        boltPattern: "5x108",
+        centerBore: 65.0,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "195/65R15", trims: ["Base", "GL", "GLE"] },
+          { size: "205/55R16", trims: ["Turbo", "Turbo Wagon"] },
+        ],
+        wheelDiameters: [15, 16],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 20, max: 35 },
+        platform: "Volvo 700 series",
+        sharedWith: ["Volvo 760", "Volvo 780"],
+        notes: "Turbo wagon legend. 5x108 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [15, 16, 17, 18],
+          wheelHints: [
+            { diameter: 15, widths: [6, 7], offsetRange: { min: 20, max: 35 } },
+            { diameter: 16, widths: [7, 7.5], offsetRange: { min: 20, max: 35 } },
+            { diameter: 17, widths: [7, 8], offsetRange: { min: 18, max: 32 } },
+            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 15, max: 30 } },
+          ],
+          plusSizeTires: [
+            { size: "205/55R15", wheelDiameter: 15 },
+            { size: "205/50R16", wheelDiameter: 16 },
+            { size: "215/45R17", wheelDiameter: 17 },
+            { size: "225/40R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2015,
+            make: "Ford",
+            model: "Focus",
+            reason: "Same 5x108 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "volvo|940": [
+    {
+      yearRange: [1991, 1998],
+      data: {
+        boltPattern: "5x108",
+        centerBore: 65.0,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "195/65R15", trims: ["Base", "GL"] },
+          { size: "205/55R16", trims: ["Turbo", "SE"] },
+        ],
+        wheelDiameters: [15, 16],
+        wheelWidths: [6, 6.5],
+        offsetRange: { min: 20, max: 35 },
+        platform: "Volvo 900 series",
+        sharedWith: ["Volvo 960"],
+        notes: "Last of the RWD Swedish bricks. 5x108 bolt pattern.",
+        aftermarket: {
+          safeDiameters: [15, 16, 17, 18],
+          wheelHints: [
+            { diameter: 15, widths: [6, 7], offsetRange: { min: 20, max: 35 } },
+            { diameter: 16, widths: [7, 7.5], offsetRange: { min: 20, max: 35 } },
+            { diameter: 17, widths: [7, 8], offsetRange: { min: 18, max: 32 } },
+            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 15, max: 30 } },
+          ],
+          plusSizeTires: [
+            { size: "205/55R15", wheelDiameter: 15 },
+            { size: "205/50R16", wheelDiameter: 16 },
+            { size: "215/45R17", wheelDiameter: 17 },
+            { size: "225/40R18", wheelDiameter: 18 },
+          ],
+          surrogateVehicle: {
+            year: 2015,
+            make: "Ford",
+            model: "Focus",
+            reason: "Same 5x108 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
 };
 
 // ============================================================================
