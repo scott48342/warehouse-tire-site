@@ -932,6 +932,537 @@ const PLATFORM_PROFILES: PlatformProfile[] = [
     requiresOffsetCalculation: true,
     adapterFriendly: false,
   },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC GM MUSCLE - A-BODY (1964-1972 Nova, Chevelle, Skylark, GTO, etc.)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-a-body-classic",
+    name: "Classic GM A-Body",
+    aliases: ["A-body", "GM A", "Classic Muscle"],
+    
+    years: { start: 1964, end: 1977 },
+    makes: ["chevrolet", "chevy", "pontiac", "buick", "oldsmobile", "olds"],
+    models: ["nova", "chevelle", "malibu", "el camino", "gto", "lemans", "tempest", "skylark", "gs", "cutlass", "442", "monte carlo"],
+    
+    oemBoltPattern: "5x4.75",
+    oemBoltPatternMetric: "5x120.65",
+    commonBoltPatterns: ["5x120.65", "5x120", "5x127"],
+    oemCenterBore: 70.3,
+    compatibleCenterBores: [70.3, 70.5, 71.5, 72.56],
+    
+    enthusiastDiameters: {
+      conservative: [17, 18],
+      sweetSpot: [18, 19, 20],
+      aggressive: [20, 22],
+      extreme: [22, 24],
+    },
+    
+    staggeredCommon: true,
+    typicalStaggeredSetup: {
+      frontWidth: 8,
+      rearWidth: 10,
+      frontOffset: { min: 0, max: 15 },
+      rearOffset: { min: -25, max: 0 },
+    },
+    
+    offsetRange: {
+      safe: { min: -25, max: 20 },
+      aggressive: { min: -40, max: 25 },
+    },
+    
+    relatedPlatforms: ["gm-x-body-classic", "gm-f-body-1st", "gm-f-body-2nd"],
+    wheelDonorPlatforms: [],
+    sharedComponents: ["Small block Chevy", "Big block", "Muncie trans"],
+    
+    culturalNotes: [
+      "5x4.75 is THE classic GM muscle pattern - HUGE aftermarket support",
+      "20s are super common on pro touring builds - fills the wheel wells perfectly",
+      "Staggered setups are the way to go - wide rear tires put down the power",
+      "US Mags, American Racing, Ridler, and Foose dominate this market",
+      "Deep dish rear wheels are part of the culture - embrace it",
+      "Backspacing matters more than offset on these - old school thinking",
+      "Mini-tub conversions are common for wide rear tire fitment",
+      "Pro touring culture: 18-20\" front, 20-22\" rear is the sweet spot",
+    ],
+    commonMistakes: [
+      "Using modern offset numbers without understanding backspacing",
+      "Going too narrow on rear wheels - defeats the muscle car look",
+      "Forgetting about brake clearance on big brake conversions",
+    ],
+    popularWheelStyles: ["US Mags", "American Racing", "Ridler", "Foose", "Intro", "Billet Specialties", "Weld", "Cragar"],
+    
+    commonTireBrands: ["Mickey Thompson", "Nitto", "BFGoodrich", "Toyo"],
+    tireNotes: [
+      "275/35R20 front, 315/35R20 rear is a classic pro touring setup",
+      "Wide rear tires are expected - 285+ rear is normal",
+      "Drag radials fit great on the rear for strip duty",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC GM X-BODY (1968-1979 Nova, Ventura, Omega, Apollo)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-x-body-classic",
+    name: "Classic GM X-Body",
+    aliases: ["X-body", "GM X", "2nd gen Nova"],
+    
+    years: { start: 1968, end: 1979 },
+    makes: ["chevrolet", "chevy", "pontiac", "buick", "oldsmobile", "olds"],
+    models: ["nova", "ventura", "omega", "apollo", "chevy ii"],
+    
+    oemBoltPattern: "5x4.75",
+    oemBoltPatternMetric: "5x120.65",
+    commonBoltPatterns: ["5x120.65", "5x120"],
+    oemCenterBore: 70.3,
+    compatibleCenterBores: [70.3, 70.5, 71.5],
+    
+    enthusiastDiameters: {
+      conservative: [17, 18],
+      sweetSpot: [18, 19, 20],
+      aggressive: [20, 22],
+      extreme: [22],
+    },
+    
+    staggeredCommon: true,
+    typicalStaggeredSetup: {
+      frontWidth: 8,
+      rearWidth: 9.5,
+      frontOffset: { min: 0, max: 20 },
+      rearOffset: { min: -20, max: 5 },
+    },
+    
+    offsetRange: {
+      safe: { min: -20, max: 25 },
+      aggressive: { min: -35, max: 30 },
+    },
+    
+    relatedPlatforms: ["gm-a-body-classic", "gm-f-body-2nd"],
+    wheelDonorPlatforms: [],
+    sharedComponents: ["Small block Chevy", "Turbo 350/400"],
+    
+    culturalNotes: [
+      "Nova is one of the most popular pro touring platforms ever",
+      "5x4.75 bolt pattern = endless wheel choices",
+      "20s look incredible on these - fills the wheel arch perfectly",
+      "Staggered is the move - wide rear for that muscle stance",
+      "Compact body + big engine + big wheels = the formula",
+      "Mini-tubbed Novas with 335 rear tires are out there",
+    ],
+    commonMistakes: [
+      "Undersizing the rear wheels/tires",
+      "Forgetting drum vs disc brake differences",
+    ],
+    popularWheelStyles: ["US Mags", "American Racing", "Ridler", "Foose", "Cragar", "Weld"],
+    
+    commonTireBrands: ["Mickey Thompson", "Nitto", "BFGoodrich"],
+    tireNotes: [
+      "245/45R20 front, 295/40R20 rear is common",
+      "Deep dish rears are part of the aesthetic",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GM G-BODY (1978-1988 Monte Carlo, Grand National, Cutlass, El Camino, etc.)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-g-body",
+    name: "GM G-Body",
+    aliases: ["G-body", "80s GM", "Aero coupe"],
+    
+    years: { start: 1978, end: 1988 },
+    makes: ["chevrolet", "chevy", "pontiac", "buick", "oldsmobile", "olds"],
+    models: ["monte carlo", "grand national", "regal", "cutlass", "cutlass supreme", "el camino", "malibu", "grand prix", "442"],
+    
+    oemBoltPattern: "5x4.75",
+    oemBoltPatternMetric: "5x120.65",
+    commonBoltPatterns: ["5x120.65", "5x120"],
+    oemCenterBore: 70.3,
+    compatibleCenterBores: [70.3, 70.5, 71.5, 72.56],
+    
+    enthusiastDiameters: {
+      conservative: [17, 18],
+      sweetSpot: [18, 19, 20],
+      aggressive: [20, 22],
+      extreme: [22, 24],
+    },
+    
+    staggeredCommon: true,
+    typicalStaggeredSetup: {
+      frontWidth: 8,
+      rearWidth: 10,
+      frontOffset: { min: 0, max: 20 },
+      rearOffset: { min: -20, max: 5 },
+    },
+    
+    offsetRange: {
+      safe: { min: -20, max: 25 },
+      aggressive: { min: -35, max: 30 },
+    },
+    
+    relatedPlatforms: ["gm-a-body-classic", "gm-f-body-3rd"],
+    wheelDonorPlatforms: [],
+    sharedComponents: ["350/305 small block", "Turbo 350/700R4"],
+    
+    culturalNotes: [
+      "Grand National is the king of G-bodies - turbo V6 legend",
+      "Monte Carlo SS has a huge following",
+      "5x4.75 pattern means tons of wheel options",
+      "20s are super common on these - pro touring staple",
+      "LS swaps are everywhere in the G-body world",
+      "Same bolt pattern as classic muscle - wheel choice is unlimited",
+    ],
+    commonMistakes: [
+      "Forgetting the GN has bigger brakes than standard G-body",
+    ],
+    popularWheelStyles: ["US Mags", "American Racing", "Ridler", "Intro", "Weld", "Billet Specialties"],
+    
+    commonTireBrands: ["Nitto", "Mickey Thompson", "BFGoodrich", "Toyo"],
+    tireNotes: [
+      "255/45R20 front, 295/40R20 rear is a popular setup",
+      "GN guys love meaty rear tires for traction",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GM B-BODY (1965-1996 Impala, Caprice, Roadmaster, etc.)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-b-body",
+    name: "GM B-Body",
+    aliases: ["B-body", "Full size GM", "Box Chevy"],
+    
+    years: { start: 1965, end: 1996 },
+    makes: ["chevrolet", "chevy", "buick", "oldsmobile", "olds", "pontiac"],
+    models: ["impala", "caprice", "bel air", "biscayne", "roadmaster", "delta 88", "98", "bonneville", "catalina", "lesabre"],
+    
+    oemBoltPattern: "5x4.75",
+    oemBoltPatternMetric: "5x120.65",
+    commonBoltPatterns: ["5x120.65", "5x127", "5x120"],
+    oemCenterBore: 70.3,
+    compatibleCenterBores: [70.3, 70.5, 71.5],
+    
+    enthusiastDiameters: {
+      conservative: [17, 18, 20],
+      sweetSpot: [20, 22],
+      aggressive: [22, 24],
+      extreme: [24, 26],
+    },
+    
+    staggeredCommon: false,
+    
+    offsetRange: {
+      safe: { min: -10, max: 20 },
+      aggressive: { min: -25, max: 25 },
+    },
+    
+    relatedPlatforms: ["gm-g-body"],
+    wheelDonorPlatforms: [],
+    sharedComponents: ["LT1 (94-96)", "Small block"],
+    
+    culturalNotes: [
+      "Box Chevy culture - big wheels are expected",
+      "Impala SS (94-96) has a massive following",
+      "22s are basically stock on these in some communities",
+      "5x4.75 (94+) or 5x5 (older) - verify your pattern",
+      "24s and 26s are common on the lowrider/donk scene",
+      "90s Caprice with LT1 is a sleeper platform",
+    ],
+    commonMistakes: [
+      "Bolt pattern changed over the years - verify first",
+      "Wide wheels can hit sway bar without mods",
+    ],
+    popularWheelStyles: ["Intro", "Forgiato", "Asanti", "US Mags", "Dub"],
+    
+    commonTireBrands: ["Lexani", "Nitto", "Toyo"],
+    tireNotes: [
+      "Low profile tires are part of the aesthetic on big wheels",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GM 1st Gen F-BODY (1967-1969 Camaro/Firebird)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-f-body-1st",
+    name: "1st Gen F-Body",
+    aliases: ["1st gen Camaro", "1st gen Firebird", "67-69 Camaro"],
+    
+    years: { start: 1967, end: 1969 },
+    makes: ["chevrolet", "chevy", "pontiac"],
+    models: ["camaro", "firebird"],
+    
+    oemBoltPattern: "5x4.75",
+    oemBoltPatternMetric: "5x120.65",
+    commonBoltPatterns: ["5x120.65", "5x120"],
+    oemCenterBore: 70.3,
+    compatibleCenterBores: [70.3, 70.5, 71.5, 72.56],
+    
+    enthusiastDiameters: {
+      conservative: [17, 18],
+      sweetSpot: [18, 19, 20],
+      aggressive: [20],
+      extreme: [22],
+    },
+    
+    staggeredCommon: true,
+    typicalStaggeredSetup: {
+      frontWidth: 8,
+      rearWidth: 10,
+      frontOffset: { min: 0, max: 15 },
+      rearOffset: { min: -25, max: 0 },
+    },
+    
+    offsetRange: {
+      safe: { min: -25, max: 20 },
+      aggressive: { min: -40, max: 25 },
+    },
+    
+    relatedPlatforms: ["gm-f-body-2nd", "gm-a-body-classic"],
+    wheelDonorPlatforms: [],
+    sharedComponents: ["Small block Chevy", "Big block 396/427"],
+    
+    culturalNotes: [
+      "The most iconic muscle car generation - 1969 Camaro is legendary",
+      "5x4.75 bolt pattern = massive wheel selection",
+      "18-20\" is the pro touring sweet spot",
+      "Staggered with deep dish rears is the classic look",
+      "Z28, SS, and RS packages all run same bolt pattern",
+      "These cars deserve nice wheels - the aftermarket delivers",
+    ],
+    commonMistakes: [
+      "Forgetting about mini-tub requirements for wide rear tires",
+      "Brake clearance on big brake kits",
+    ],
+    popularWheelStyles: ["American Racing", "Cragar", "US Mags", "Ridler", "Foose", "Billet Specialties"],
+    
+    commonTireBrands: ["BFGoodrich", "Mickey Thompson", "Nitto"],
+    tireNotes: [
+      "275/40R18 front, 315/35R18 rear is a solid combo",
+      "Pro street builds run massive rear rubber",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GM 2nd Gen F-BODY (1970-1981 Camaro/Firebird/Trans Am)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-f-body-2nd",
+    name: "2nd Gen F-Body",
+    aliases: ["2nd gen Camaro", "2nd gen Firebird", "70-81 Trans Am"],
+    
+    years: { start: 1970, end: 1981 },
+    makes: ["chevrolet", "chevy", "pontiac"],
+    models: ["camaro", "firebird", "trans am", "formula"],
+    
+    oemBoltPattern: "5x4.75",
+    oemBoltPatternMetric: "5x120.65",
+    commonBoltPatterns: ["5x120.65", "5x120"],
+    oemCenterBore: 70.3,
+    compatibleCenterBores: [70.3, 70.5, 71.5, 72.56],
+    
+    enthusiastDiameters: {
+      conservative: [17, 18],
+      sweetSpot: [18, 19, 20],
+      aggressive: [20, 22],
+      extreme: [22],
+    },
+    
+    staggeredCommon: true,
+    typicalStaggeredSetup: {
+      frontWidth: 8,
+      rearWidth: 10,
+      frontOffset: { min: 0, max: 20 },
+      rearOffset: { min: -20, max: 5 },
+    },
+    
+    offsetRange: {
+      safe: { min: -20, max: 25 },
+      aggressive: { min: -35, max: 30 },
+    },
+    
+    relatedPlatforms: ["gm-f-body-1st", "gm-f-body-3rd", "gm-a-body-classic"],
+    wheelDonorPlatforms: [],
+    sharedComponents: ["350/400 small block", "455 Pontiac", "Turbo 350/400"],
+    
+    culturalNotes: [
+      "Trans Am with the screaming chicken - iconic",
+      "Bandit car culture keeps these alive",
+      "5x4.75 = same pattern as all classic GM muscle",
+      "20s look absolutely perfect on these cars",
+      "Pro touring builds are everywhere",
+      "Snowflake wheels have a cult following for period builds",
+    ],
+    commonMistakes: [
+      "Forgetting that late 2nd gen has rear disc option",
+    ],
+    popularWheelStyles: ["US Mags", "American Racing", "Ridler", "Foose", "Weld", "Cragar"],
+    
+    commonTireBrands: ["Mickey Thompson", "Nitto", "BFGoodrich", "Toyo"],
+    tireNotes: [
+      "275/40R20 front, 305/35R20 rear is common",
+      "Wide rear rubber puts down V8 power",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GM 3rd Gen F-BODY (1982-1992 Camaro/Firebird/Trans Am)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-f-body-3rd",
+    name: "3rd Gen F-Body",
+    aliases: ["3rd gen Camaro", "3rd gen Firebird", "IROC", "GTA"],
+    
+    years: { start: 1982, end: 1992 },
+    makes: ["chevrolet", "chevy", "pontiac"],
+    models: ["camaro", "firebird", "trans am", "iroc-z", "iroc", "gta", "formula"],
+    
+    oemBoltPattern: "5x4.75",
+    oemBoltPatternMetric: "5x120.65",
+    commonBoltPatterns: ["5x120.65", "5x120"],
+    oemCenterBore: 70.3,
+    compatibleCenterBores: [70.3, 70.5, 71.5, 72.56],
+    
+    enthusiastDiameters: {
+      conservative: [16, 17],
+      sweetSpot: [17, 18],
+      aggressive: [18, 19],
+      extreme: [20],
+    },
+    
+    staggeredCommon: true,
+    typicalStaggeredSetup: {
+      frontWidth: 8,
+      rearWidth: 9.5,
+      frontOffset: { min: 15, max: 35 },
+      rearOffset: { min: 10, max: 30 },
+    },
+    
+    offsetRange: {
+      safe: { min: 10, max: 40 },
+      aggressive: { min: 0, max: 45 },
+    },
+    
+    relatedPlatforms: ["gm-f-body-2nd", "gm-f-body-4th", "gm-g-body"],
+    wheelDonorPlatforms: ["gm-f-body-4th", "gm-corvette-c4"],
+    sharedComponents: ["305/350 TPI", "L98", "700R4"],
+    
+    culturalNotes: [
+      "IROC-Z and GTA are the sought-after trims",
+      "Same bolt pattern as all classic GM - tons of options",
+      "18s are the modern upgrade sweet spot",
+      "C4 Corvette wheels are a popular swap",
+      "Staggered still works great on these",
+      "The 1LE cars have a cult following",
+    ],
+    commonMistakes: [
+      "Some early 3rd gens have smaller brakes",
+    ],
+    popularWheelStyles: ["IROC replicas", "C4 Corvette", "American Racing", "Weld"],
+    
+    commonTireBrands: ["Nitto", "BFGoodrich", "Toyo"],
+    tireNotes: [
+      "245/45R17 front, 275/40R17 rear is a clean setup",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GM C10/C/K CLASSIC TRUCKS (1960-1987)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    platformId: "gm-c10-classic",
+    name: "Classic C10/C/K Trucks",
+    aliases: ["C10", "C/K", "Action Line", "Square Body", "Rounded Line"],
+    
+    years: { start: 1960, end: 1987 },
+    makes: ["chevrolet", "chevy", "gmc"],
+    models: ["c10", "c-10", "c20", "c-20", "k10", "k-10", "k20", "k-20", "c/k", "ck", "pickup", "suburban", "blazer", "jimmy"],
+    
+    oemBoltPattern: "5x5",
+    oemBoltPatternMetric: "5x127",
+    commonBoltPatterns: ["5x127", "6x139.7"],
+    oemCenterBore: 78.1,
+    compatibleCenterBores: [78.1, 78.3],
+    
+    enthusiastDiameters: {
+      conservative: [17, 18],
+      sweetSpot: [18, 20],
+      aggressive: [20, 22],
+      extreme: [22, 24],
+    },
+    
+    staggeredCommon: false,
+    
+    offsetRange: {
+      safe: { min: -10, max: 10 },
+      aggressive: { min: -25, max: 15 },
+    },
+    
+    relatedPlatforms: ["gm-obs-truck"],
+    wheelDonorPlatforms: [],
+    sharedComponents: ["Small block Chevy", "Big block 454"],
+    
+    adapterPaths: [
+      {
+        targetPattern: "6x139.7",
+        adapterThickness: [1.5],
+        notes: "Converts to modern 6-lug pattern - very popular swap",
+      },
+    ],
+    
+    culturalNotes: [
+      "Square Body (73-87) is absolutely HOT right now",
+      "5x5 is the original pattern - tons of wheel choices",
+      "6-lug swaps are super common for modern wheel options",
+      "Lowered C10 with 20s is the classic restomod look",
+      "Intro and Billet Specialties dominate this market",
+      "LS swaps are everywhere",
+    ],
+    commonMistakes: [
+      "Not checking if it's 2WD or 4WD - different spindles",
+      "Cheap adapters are dangerous",
+    ],
+    popularWheelStyles: ["Intro", "Billet Specialties", "US Mags", "American Racing", "Weld"],
+    
+    commonTireBrands: ["Nitto", "Mickey Thompson", "Toyo"],
+    tireNotes: [
+      "Low profile on lowered trucks",
+      "295/35R22 is common on slammed builds",
+    ],
+    
+    requiresClearanceCheck: true,
+    requiresOffsetCalculation: true,
+    adapterFriendly: true,
+  },
 ];
 
 // =============================================================================

@@ -769,6 +769,342 @@ const CURATED_FITMENTS: Record<string, {
   ],
   
   // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC GM MUSCLE - 5x4.75 (5x120.65) BOLT PATTERN
+  // Nova, Chevelle, El Camino, Monte Carlo, etc.
+  // HUGE aftermarket support - one of the best patterns for wheel selection
+  // ═══════════════════════════════════════════════════════════════════════════
+  "chevrolet|nova": [
+    {
+      yearRange: [1962, 1979],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R14", trims: ["Base"] },
+          { size: "225/70R15", trims: ["SS", "L79"] },
+          { size: "235/60R15", trims: ["Pro Touring"] },
+        ],
+        wheelDiameters: [14, 15, 17],
+        wheelWidths: [6, 7, 8],
+        offsetRange: { min: -20, max: 20 },
+        platform: "GM X-body / A-body",
+        sharedWith: ["Chevrolet Chevelle", "Pontiac Ventura", "Buick Skylark"],
+        notes: "Classic GM muscle - 5x4.75 is one of the BEST supported patterns in existence. Pro touring builds commonly run 18-20\".",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -10, max: 20 }, notes: "Classic pro-touring look" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -15, max: 15 }, notes: "Sweet spot for most builds" },
+            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -25, max: 10 }, notes: "Popular pro-touring, fills wheel wells perfectly" },
+            { diameter: 22, widths: [9, 10, 11], offsetRange: { min: -30, max: 5 }, notes: "Aggressive - may need mini-tub" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "275/40R17", wheelDiameter: 17, notes: "Rear stagger option" },
+            { size: "245/40R18", wheelDiameter: 18 },
+            { size: "295/35R18", wheelDiameter: 18, notes: "Rear stagger option" },
+            { size: "245/35R20", wheelDiameter: 20 },
+            { size: "295/30R20", wheelDiameter: 20, notes: "Rear stagger option" },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern - HUGE aftermarket selection",
+          },
+        },
+      },
+    },
+  ],
+  "chevrolet|chevelle": [
+    {
+      yearRange: [1964, 1977],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "225/70R15", trims: ["Base", "Malibu"] },
+          { size: "255/60R15", trims: ["SS", "396", "454"] },
+          { size: "275/60R15", trims: ["SS 454"] },
+        ],
+        wheelDiameters: [14, 15, 17],
+        wheelWidths: [7, 8, 9],
+        offsetRange: { min: -25, max: 15 },
+        platform: "GM A-body",
+        sharedWith: ["Chevrolet El Camino", "Buick Skylark GS", "Oldsmobile 442"],
+        notes: "Classic A-body muscle. Pro-touring legend. 5x4.75 = MASSIVE wheel selection. Deep dish rears are part of the culture.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -15, max: 20 }, notes: "Period-correct upgrade" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -20, max: 15 }, notes: "Popular pro-touring" },
+            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -30, max: 10 }, notes: "Modern pro-touring sweet spot" },
+            { diameter: 22, widths: [9, 10, 11, 12], offsetRange: { min: -35, max: 5 }, notes: "Aggressive - needs wide rear tires" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "295/40R17", wheelDiameter: 17, notes: "Rear stagger option" },
+            { size: "245/40R18", wheelDiameter: 18 },
+            { size: "315/35R18", wheelDiameter: 18, notes: "Rear stagger option" },
+            { size: "275/35R20", wheelDiameter: 20 },
+            { size: "315/30R20", wheelDiameter: 20, notes: "Rear stagger option" },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "chevrolet|el camino": [
+    {
+      yearRange: [1964, 1987],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["Base"] },
+          { size: "235/60R15", trims: ["SS"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [7, 8],
+        offsetRange: { min: -20, max: 15 },
+        platform: "GM A-body / G-body",
+        sharedWith: ["Chevrolet Chevelle", "Chevrolet Malibu", "Chevrolet Monte Carlo"],
+        notes: "Shares platform with Chevelle (64-72) and G-body (78-87). Same bolt pattern, same huge wheel selection.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -15, max: 20 }, notes: "Classic upgrade" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -20, max: 15 }, notes: "Popular choice" },
+            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -30, max: 10 }, notes: "Pro-touring sweet spot" },
+            { diameter: 22, widths: [9, 10, 11], offsetRange: { min: -35, max: 5 }, notes: "Aggressive - may need work" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "275/40R17", wheelDiameter: 17, notes: "Rear option" },
+            { size: "245/40R18", wheelDiameter: 18 },
+            { size: "285/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "chevrolet|monte carlo": [
+    {
+      yearRange: [1970, 1988],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["Base", "Landau"] },
+          { size: "225/60R15", trims: ["SS"] },
+          { size: "235/60R15", trims: ["SS Aerocoupe"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [7, 8],
+        offsetRange: { min: -20, max: 20 },
+        platform: "GM A-body / G-body",
+        sharedWith: ["Buick Regal", "Pontiac Grand Prix", "Oldsmobile Cutlass"],
+        notes: "G-body Monte Carlo SS has a MASSIVE following. Same bolt pattern as all classic GM muscle.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -15, max: 20 }, notes: "Clean upgrade" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -20, max: 15 }, notes: "Popular on G-body" },
+            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -25, max: 10 }, notes: "Modern look, fills wells" },
+            { diameter: 22, widths: [9, 10, 11], offsetRange: { min: -30, max: 5 }, notes: "Aggressive stance" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "275/40R17", wheelDiameter: 17, notes: "Rear option" },
+            { size: "245/40R18", wheelDiameter: 18 },
+            { size: "275/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "buick|grand national": [
+    {
+      yearRange: [1982, 1987],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/65R15", trims: ["Base"] },
+          { size: "245/50R16", trims: ["GNX"] },
+        ],
+        wheelDiameters: [15, 16],
+        wheelWidths: [7, 8],
+        offsetRange: { min: -15, max: 25 },
+        platform: "GM G-body",
+        sharedWith: ["Buick Regal", "Chevrolet Monte Carlo SS", "Pontiac Grand Prix"],
+        notes: "The king of G-bodies. Turbo V6 legend. 5x4.75 pattern = endless wheel options.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [8, 9], offsetRange: { min: -10, max: 25 }, notes: "Clean upgrade" },
+            { diameter: 18, widths: [8.5, 9, 10], offsetRange: { min: -15, max: 20 }, notes: "Popular choice" },
+            { diameter: 20, widths: [9, 10, 11], offsetRange: { min: -25, max: 15 }, notes: "Pro-touring look" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "275/40R17", wheelDiameter: 17, notes: "Rear option" },
+            { size: "255/40R18", wheelDiameter: 18 },
+            { size: "275/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "buick|regal": [
+    {
+      yearRange: [1978, 1987],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "205/75R14", trims: ["Base"] },
+          { size: "215/65R15", trims: ["Limited", "T-Type"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -15, max: 25 },
+        platform: "GM G-body",
+        sharedWith: ["Buick Grand National", "Chevrolet Monte Carlo", "Oldsmobile Cutlass"],
+        notes: "G-body platform. T-Type and Grand National are the hot trims. Same pattern as all classic GM.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -10, max: 25 }, notes: "Clean upgrade" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -15, max: 20 }, notes: "Popular" },
+            { diameter: 20, widths: [8.5, 9, 10], offsetRange: { min: -25, max: 15 }, notes: "Pro-touring" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "255/40R18", wheelDiameter: 18 },
+            { size: "275/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "oldsmobile|cutlass": [
+    {
+      yearRange: [1964, 1988],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["Base", "Supreme"] },
+          { size: "225/60R15", trims: ["442", "Hurst"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [7, 8],
+        offsetRange: { min: -20, max: 20 },
+        platform: "GM A-body / G-body",
+        sharedWith: ["Chevrolet Chevelle", "Pontiac GTO", "Buick Skylark"],
+        notes: "Cutlass and 442 are iconic. Same bolt pattern as all classic GM muscle - huge wheel selection.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -15, max: 20 }, notes: "Classic upgrade" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -20, max: 15 }, notes: "Popular choice" },
+            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -30, max: 10 }, notes: "Pro-touring" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "275/40R17", wheelDiameter: 17, notes: "Rear" },
+            { size: "245/40R18", wheelDiameter: 18 },
+            { size: "275/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+  "pontiac|gto": [
+    {
+      yearRange: [1964, 1974],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "G70-14", trims: ["Base"] },
+          { size: "F60-15", trims: ["Judge", "Ram Air"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [7, 8],
+        offsetRange: { min: -25, max: 15 },
+        platform: "GM A-body",
+        sharedWith: ["Chevrolet Chevelle", "Oldsmobile 442", "Buick GS"],
+        notes: "The original muscle car. 5x4.75 = MASSIVE aftermarket. Pro touring builds run 18-20\" all the time.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -15, max: 15 }, notes: "Classic look" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -20, max: 10 }, notes: "Popular pro-touring" },
+            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -30, max: 5 }, notes: "Modern look, fills wells" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "295/40R17", wheelDiameter: 17, notes: "Rear" },
+            { size: "275/35R18", wheelDiameter: 18 },
+            { size: "295/30R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // GM F-BODY (4th Gen: 1993-2002 Camaro/Firebird)
   // ═══════════════════════════════════════════════════════════════════════════
   "chevrolet|camaro": [

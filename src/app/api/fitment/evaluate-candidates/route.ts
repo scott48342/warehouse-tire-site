@@ -14,6 +14,7 @@ import {
   evaluateWheelCandidates,
   shouldAttemptSearch,
   buildAnalytics,
+  isClassicMusclePlatform,
   type CandidateEvaluationRequest,
   type CandidateEvaluationAnalytics,
 } from "@/lib/fitment/candidateEvaluationService";
@@ -136,7 +137,12 @@ export async function POST(request: NextRequest) {
     }
     
     // Check if we should attempt search
-    const searchCheck = shouldAttemptSearch(requestedDiameter, knownProfile, platformKnowledge);
+    const searchCheck = shouldAttemptSearch(
+      requestedDiameter, 
+      knownProfile, 
+      platformKnowledge,
+      { year, make, model }  // Pass vehicleInfo for classic muscle detection
+    );
     
     // If no wheel results provided, return just the search check
     if (!body.wheelResults || body.wheelResults.length === 0) {
@@ -145,6 +151,8 @@ export async function POST(request: NextRequest) {
         shouldSearch: searchCheck.shouldSearch,
         searchReason: searchCheck.reason,
         diameterCategory: searchCheck.category,
+        isClassicMuscle: searchCheck.isClassicMuscle,
+        enthusiastNote: searchCheck.enthusiastNote,
         profileSource,
         platformUsed,
         evaluation: null,
@@ -237,7 +245,12 @@ export async function GET(request: NextRequest) {
     culturalNotes: platformResult.platform.culturalNotes,
   } : undefined;
   
-  const searchCheck = shouldAttemptSearch(diameter, knownProfile, platformKnowledge);
+  const searchCheck = shouldAttemptSearch(
+    diameter, 
+    knownProfile, 
+    platformKnowledge,
+    { year, make, model }  // Pass vehicleInfo for classic muscle detection
+  );
   
   return NextResponse.json({
     year,
@@ -247,6 +260,8 @@ export async function GET(request: NextRequest) {
     shouldSearch: searchCheck.shouldSearch,
     reason: searchCheck.reason,
     category: searchCheck.category,
+    isClassicMuscle: searchCheck.isClassicMuscle,
+    enthusiastNote: searchCheck.enthusiastNote,
     profileSource: fallbackResult.source,
     platformUsed: platformResult.platform?.name,
   });

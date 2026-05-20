@@ -150,6 +150,121 @@ const SCORING_WEIGHTS = {
 };
 
 // =============================================================================
+// CLASSIC MUSCLE CONFIDENCE MODE
+// =============================================================================
+
+/**
+ * Classic GM muscle platforms with HUGE aftermarket support.
+ * These platforms should have HIGH confidence for wheel searches
+ * because 5x4.75 is one of the best-supported patterns in existence.
+ */
+const CLASSIC_MUSCLE_MODELS = [
+  // A-body
+  "nova", "chevelle", "malibu", "el camino", "monte carlo",
+  "gto", "lemans", "tempest", "skylark", "gs", "cutlass", "442",
+  // F-body (all generations)
+  "camaro", "firebird", "trans am", "formula", "iroc", "gta",
+  // B-body
+  "impala", "caprice", "bel air", "biscayne",
+  // G-body
+  "grand national", "regal", "grand prix",
+  // C10 trucks
+  "c10", "c-10", "c20", "c-20", "k10", "k-10",
+];
+
+const CLASSIC_MUSCLE_BOLT_PATTERNS = [
+  "5x120.65", "5x4.75",  // Classic GM muscle
+  "5x127", "5x5",        // Classic GM trucks
+  "5x120",               // Close enough (modern GM)
+];
+
+/**
+ * Check if a vehicle is a classic GM muscle platform
+ */
+export function isClassicMusclePlatform(
+  year: number,
+  make: string,
+  model: string,
+  boltPattern?: string
+): { isClassicMuscle: boolean; reason?: string; enthusiastNote?: string } {
+  const normalizedMake = make.toLowerCase();
+  const normalizedModel = model.toLowerCase();
+  
+  // Check make
+  const gmMakes = ["chevrolet", "chevy", "pontiac", "buick", "oldsmobile", "olds", "gmc"];
+  if (!gmMakes.some(m => normalizedMake.includes(m))) {
+    return { isClassicMuscle: false };
+  }
+  
+  // Check model
+  const modelMatch = CLASSIC_MUSCLE_MODELS.some(m => 
+    normalizedModel.includes(m) || normalizedModel.replace(/[^a-z0-9]/g, "").includes(m.replace(/[^a-z0-9]/g, ""))
+  );
+  
+  if (!modelMatch) {
+    return { isClassicMuscle: false };
+  }
+  
+  // Check bolt pattern if provided
+  if (boltPattern) {
+    const normalizedPattern = boltPattern.toLowerCase();
+    const patternMatch = CLASSIC_MUSCLE_BOLT_PATTERNS.some(p => 
+      normalizedPattern.includes(p) || p.includes(normalizedPattern)
+    );
+    
+    if (!patternMatch) {
+      return { isClassicMuscle: false };
+    }
+  }
+  
+  // Determine specific note based on model
+  let enthusiastNote = "Classic GM muscle platform - huge aftermarket support";
+  
+  if (normalizedModel.includes("nova")) {
+    enthusiastNote = "Nova is one of the most popular pro-touring platforms ever - tons of wheel options";
+  } else if (normalizedModel.includes("chevelle")) {
+    enthusiastNote = "Chevelle is a pro-touring legend - 5x4.75 = endless wheel choices";
+  } else if (normalizedModel.includes("camaro")) {
+    enthusiastNote = "Camaro platform shares wheels with Corvettes and all classic GM muscle";
+  } else if (normalizedModel.includes("firebird") || normalizedModel.includes("trans am")) {
+    enthusiastNote = "Firebird/Trans Am shares the same bolt pattern as Corvettes and Camaros - huge selection";
+  } else if (normalizedModel.includes("c10") || normalizedModel.includes("c-10")) {
+    enthusiastNote = "C10 is the hottest classic truck platform - 5x5 has amazing aftermarket support";
+  } else if (normalizedModel.includes("monte carlo")) {
+    enthusiastNote = "Monte Carlo has a massive following - pro touring and street builds everywhere";
+  } else if (normalizedModel.includes("el camino")) {
+    enthusiastNote = "El Camino shares the A-body platform - 5x4.75 = tons of options";
+  } else if (normalizedModel.includes("grand national")) {
+    enthusiastNote = "Grand National is a G-body legend - same pattern as all classic GM muscle";
+  } else if (normalizedModel.includes("impala")) {
+    enthusiastNote = "Impala is iconic - huge aftermarket from pro-touring to donk builds";
+  }
+  
+  return {
+    isClassicMuscle: true,
+    reason: `${year} ${make} ${model} is a classic GM muscle platform with 5x4.75 bolt pattern`,
+    enthusiastNote,
+  };
+}
+
+/**
+ * Get realistic pro-touring diameter range for classic muscle
+ */
+export function getClassicMuscleDiameterRange(): {
+  conservative: number[];
+  sweetSpot: number[];
+  aggressive: number[];
+  extreme: number[];
+} {
+  return {
+    conservative: [17, 18],
+    sweetSpot: [18, 19, 20],
+    aggressive: [20, 22],
+    extreme: [22, 24],
+  };
+}
+
+// =============================================================================
 // EVALUATION LOGIC
 // =============================================================================
 
@@ -708,8 +823,15 @@ export function evaluateWheelCandidates(
 export function shouldAttemptSearch(
   diameter: number,
   profile?: CandidateEvaluationRequest["knownProfile"],
-  platform?: CandidateEvaluationRequest["platformKnowledge"]
-): { shouldSearch: boolean; reason: string; category: DiameterCategory } {
+  platform?: CandidateEvaluationRequest["platformKnowledge"],
+  vehicleInfo?: { year: number; make: string; model: string }
+): { 
+  shouldSearch: boolean; 
+  reason: string; 
+  category: DiameterCategory;
+  isClassicMuscle?: boolean;
+  enthusiastNote?: string;
+} {
   const blockCheck = isDiameterBlocked(diameter, profile, platform);
   
   if (blockCheck.blocked) {
@@ -717,6 +839,39 @@ export function shouldAttemptSearch(
       shouldSearch: false,
       reason: blockCheck.reason || "Diameter blocked",
       category: "blocked",
+    };
+  }
+  
+  // Check for Classic Muscle Confidence Mode
+  let classicMuscleCheck: ReturnType<typeof isClassicMusclePlatform> | null = null;
+  if (vehicleInfo) {
+    classicMuscleCheck = isClassicMusclePlatform(
+      vehicleInfo.year, 
+      vehicleInfo.make, 
+      vehicleInfo.model,
+      profile?.boltPattern
+    );
+  }
+  
+  // If it's classic muscle in pro-touring range (17-22), search with HIGH confidence
+  if (classicMuscleCheck?.isClassicMuscle && diameter >= 17 && diameter <= 22) {
+    const muscleRange = getClassicMuscleDiameterRange();
+    
+    let category: DiameterCategory = "common";
+    if (muscleRange.sweetSpot.includes(diameter)) {
+      category = "safe"; // Boost to "safe" for classic muscle sweet spots
+    } else if (muscleRange.aggressive.includes(diameter)) {
+      category = "common"; // Treat aggressive as common for these platforms
+    } else if (muscleRange.extreme.includes(diameter)) {
+      category = "aggressive"; // Treat extreme as just aggressive
+    }
+    
+    return {
+      shouldSearch: true,
+      reason: `${diameter}" is a realistic pro-touring size for classic GM muscle - HUGE aftermarket support`,
+      category,
+      isClassicMuscle: true,
+      enthusiastNote: classicMuscleCheck.enthusiastNote,
     };
   }
   
@@ -728,6 +883,8 @@ export function shouldAttemptSearch(
       shouldSearch: true,
       reason: `Diameter ${diameter}" is in the ${category} category for this platform`,
       category,
+      isClassicMuscle: classicMuscleCheck?.isClassicMuscle,
+      enthusiastNote: classicMuscleCheck?.enthusiastNote,
     };
   }
   
@@ -737,6 +894,8 @@ export function shouldAttemptSearch(
       shouldSearch: true,
       reason: `Diameter ${diameter}" is not in profile, but bolt pattern ${profile.boltPattern} is known - evaluating candidates`,
       category: "unknown",
+      isClassicMuscle: classicMuscleCheck?.isClassicMuscle,
+      enthusiastNote: classicMuscleCheck?.enthusiastNote,
     };
   }
   
@@ -746,6 +905,8 @@ export function shouldAttemptSearch(
       shouldSearch: true,
       reason: `Diameter ${diameter}" is not in profile, but platform ${platform.platformName} is known - evaluating candidates`,
       category: "unknown",
+      isClassicMuscle: classicMuscleCheck?.isClassicMuscle,
+      enthusiastNote: classicMuscleCheck?.enthusiastNote,
     };
   }
   
@@ -754,6 +915,8 @@ export function shouldAttemptSearch(
     shouldSearch: true,
     reason: `Limited fitment data available - searching with basic compatibility checks`,
     category: "unknown",
+    isClassicMuscle: classicMuscleCheck?.isClassicMuscle,
+    enthusiastNote: classicMuscleCheck?.enthusiastNote,
   };
 }
 
