@@ -388,6 +388,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     }
 
     setInput("");
+    // Keep focus on input after sending
+    inputRef.current?.focus();
+    
     const userMessage: Message = {
       id: generateId(),
       role: "user",
@@ -605,6 +608,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       trackJakeMessage("assistant", errorContent); // Track error responses too
     } finally {
       setIsLoading(false);
+      // Restore focus to input after response
+      inputRef.current?.focus();
     }
   };
 
