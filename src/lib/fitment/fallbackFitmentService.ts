@@ -769,6 +769,148 @@ const CURATED_FITMENTS: Record<string, {
   ],
   
   // ═══════════════════════════════════════════════════════════════════════════
+  // GM F-BODY (4th Gen: 1993-2002 Camaro/Firebird)
+  // ═══════════════════════════════════════════════════════════════════════════
+  "chevrolet|camaro": [
+    {
+      yearRange: [1993, 2002],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/60R16", trims: ["Base"] },
+          { size: "235/55R16", trims: ["Z28", "RS"] },
+          { size: "245/50ZR16", trims: ["Z28", "SS"] },
+          { size: "275/40ZR17", trims: ["SS", "Z28"] },
+          { size: "305/35ZR17", trims: ["SS"] },
+        ],
+        wheelDiameters: [16, 17],
+        wheelWidths: [8, 9],
+        offsetRange: { min: 43, max: 56 },
+        platform: "GM F-body (4th gen)",
+        sharedWith: ["Pontiac Firebird", "Pontiac Trans Am"],
+        notes: "F-body shares bolt pattern with C4/C5 Corvette - huge wheel selection",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [8, 9, 10], offsetRange: { min: 25, max: 50 }, notes: "Direct fit, stock clearance" },
+            { diameter: 18, widths: [8.5, 9, 10], offsetRange: { min: 20, max: 48 }, notes: "Popular upgrade, great fitment" },
+            { diameter: 19, widths: [8.5, 9.5, 10], offsetRange: { min: 20, max: 45 }, notes: "Modern look, may need minor trimming" },
+            { diameter: 20, widths: [8.5, 9, 10], offsetRange: { min: 0, max: 45 }, notes: "Aggressive upgrade, fills wheel wells nicely" },
+          ],
+          plusSizeTires: [
+            { size: "255/45ZR17", wheelDiameter: 17 },
+            { size: "275/40ZR17", wheelDiameter: 17, notes: "Rear stagger option" },
+            { size: "245/45ZR18", wheelDiameter: 18 },
+            { size: "275/35ZR18", wheelDiameter: 18, notes: "Rear stagger option" },
+            { size: "245/40ZR19", wheelDiameter: 19 },
+            { size: "275/35ZR19", wheelDiameter: 19, notes: "Rear stagger option" },
+            { size: "245/35ZR20", wheelDiameter: 20 },
+            { size: "275/30ZR20", wheelDiameter: 20, notes: "Rear stagger option" },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern, many wheels fit both",
+          },
+        },
+      },
+    },
+  ],
+  "pontiac|firebird": [
+    {
+      yearRange: [1993, 2002],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/60R16", trims: ["Base"] },
+          { size: "235/55R16", trims: ["Formula"] },
+          { size: "245/50ZR16", trims: ["Formula", "Trans Am"] },
+          { size: "275/40ZR17", trims: ["Trans Am", "Firehawk"] },
+          { size: "305/35ZR17", trims: ["Trans Am WS6", "Firehawk"] },
+        ],
+        wheelDiameters: [16, 17],
+        wheelWidths: [8, 9],
+        offsetRange: { min: 43, max: 56 },
+        platform: "GM F-body (4th gen)",
+        sharedWith: ["Chevrolet Camaro", "Pontiac Trans Am"],
+        notes: "F-body shares bolt pattern with C4/C5 Corvette - huge wheel selection",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [8, 9, 10], offsetRange: { min: 25, max: 50 }, notes: "Direct fit, stock clearance" },
+            { diameter: 18, widths: [8.5, 9, 10], offsetRange: { min: 20, max: 48 }, notes: "Popular upgrade, great fitment" },
+            { diameter: 19, widths: [8.5, 9.5, 10], offsetRange: { min: 20, max: 45 }, notes: "Modern look, may need minor trimming" },
+            { diameter: 20, widths: [8.5, 9, 10], offsetRange: { min: 0, max: 45 }, notes: "Aggressive upgrade, fills wheel wells nicely" },
+          ],
+          plusSizeTires: [
+            { size: "255/45ZR17", wheelDiameter: 17 },
+            { size: "275/40ZR17", wheelDiameter: 17, notes: "Rear stagger option" },
+            { size: "245/45ZR18", wheelDiameter: 18 },
+            { size: "275/35ZR18", wheelDiameter: 18, notes: "Rear stagger option" },
+            { size: "245/40ZR19", wheelDiameter: 19 },
+            { size: "275/35ZR19", wheelDiameter: 19, notes: "Rear stagger option" },
+            { size: "245/35ZR20", wheelDiameter: 20 },
+            { size: "275/30ZR20", wheelDiameter: 20, notes: "Rear stagger option" },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern, many wheels fit both",
+          },
+        },
+      },
+    },
+  ],
+  "pontiac|trans am": [
+    {
+      yearRange: [1993, 2002],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "245/50ZR16", trims: ["Base", "Formula"] },
+          { size: "275/40ZR17", trims: ["WS6", "Ram Air"] },
+          { size: "305/35ZR17", trims: ["WS6"] },
+        ],
+        wheelDiameters: [16, 17],
+        wheelWidths: [8, 9],
+        offsetRange: { min: 43, max: 56 },
+        platform: "GM F-body (4th gen)",
+        sharedWith: ["Chevrolet Camaro", "Pontiac Firebird"],
+        notes: "High-performance F-body, staggered setups are common",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20],
+          wheelHints: [
+            { diameter: 17, widths: [8, 9, 10], offsetRange: { min: 25, max: 50 }, notes: "Direct fit" },
+            { diameter: 18, widths: [8.5, 9, 10], offsetRange: { min: 20, max: 48 }, notes: "Popular upgrade" },
+            { diameter: 19, widths: [8.5, 9.5, 10], offsetRange: { min: 20, max: 45 } },
+            { diameter: 20, widths: [8.5, 9, 10], offsetRange: { min: 0, max: 45 }, notes: "Aggressive upgrade" },
+          ],
+          plusSizeTires: [
+            { size: "275/40ZR17", wheelDiameter: 17 },
+            { size: "275/35ZR18", wheelDiameter: 18 },
+            { size: "275/35ZR19", wheelDiameter: 19 },
+            { size: "275/30ZR20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+  ],
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // PONTIAC (discontinued brand)
   // ═══════════════════════════════════════════════════════════════════════════
   "pontiac|g8": [
