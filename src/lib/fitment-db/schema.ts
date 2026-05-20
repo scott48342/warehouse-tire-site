@@ -377,6 +377,62 @@ export type FitmentImportJob = typeof fitmentImportJobs.$inferSelect;
 export type NewFitmentImportJob = typeof fitmentImportJobs.$inferInsert;
 
 // ════════════════════════════════════════════════════════════════════════════════
+// RESEARCHED FITMENT CACHE (caches AI-researched fitment data)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export const researchedFitmentCache = pgTable(
+  "researched_fitment_cache",
+  {
+    id: serial("id").primaryKey(),
+    
+    // Vehicle key: year|make|model|trim (normalized lowercase)
+    vehicleKey: varchar("vehicle_key", { length: 255 }).notNull().unique(),
+    
+    // Parsed components for querying
+    year: integer("year").notNull(),
+    make: varchar("make", { length: 100 }).notNull(),
+    model: varchar("model", { length: 100 }).notNull(),
+    trim: varchar("trim", { length: 100 }),
+    
+    // The researched fitment data (JSON)
+    fitment: json("fitment").notNull(),
+    
+    // Research metadata
+    confidence: varchar("confidence", { length: 20 }).notNull(), // high, medium, low
+    sourcesUsed: json("sources_used").notNull(), // string[]
+    
+    // Timestamps
+    createdAt: timestamp("created_at", { mode: "date" }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).notNull().defaultNow(),
+    lastUsedAt: timestamp("last_used_at", { mode: "date" }).notNull().defaultNow(),
+    
+    // Usage tracking
+    useCount: integer("use_count").notNull().default(1),
+    
+    // Status: active, stale, promoted, rejected
+    status: varchar("status", { length: 20 }).notNull().default("active"),
+    staleAt: timestamp("stale_at", { mode: "date" }), // When this cache entry becomes stale
+    
+    // Admin workflow
+    promotedAt: timestamp("promoted_at", { mode: "date" }),
+    promotedBy: varchar("promoted_by", { length: 100 }),
+    rejectedAt: timestamp("rejected_at", { mode: "date" }),
+    rejectedBy: varchar("rejected_by", { length: 100 }),
+    rejectionReason: text("rejection_reason"),
+  },
+  (table) => ({
+    vehicleKeyIdx: index("rfc_vehicle_key_idx").on(table.vehicleKey),
+    statusIdx: index("rfc_status_idx").on(table.status),
+    yearMakeModelIdx: index("rfc_ymm_idx").on(table.year, table.make, table.model),
+    useCountIdx: index("rfc_use_count_idx").on(table.useCount),
+    staleAtIdx: index("rfc_stale_at_idx").on(table.staleAt),
+  })
+);
+
+export type ResearchedFitmentCacheRecord = typeof researchedFitmentCache.$inferSelect;
+export type NewResearchedFitmentCacheRecord = typeof researchedFitmentCache.$inferInsert;
+
+// ════════════════════════════════════════════════════════════════════════════════
 // EMAIL CAMPAIGN TABLES (re-exported from schema-email.ts)
 // ════════════════════════════════════════════════════════════════════════════════
 

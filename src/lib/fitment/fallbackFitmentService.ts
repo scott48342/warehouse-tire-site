@@ -7,13 +7,15 @@
  * v2.0 - Extended with FULL aftermarket search profiles for wheel/tire searches
  * v2.1 - Added external Wheel-Size API lookup as last resort
  * v2.2 - Reordered: Brave search before Wheel-Size (faster, no rate limits)
+ * v2.3 - Added researched fitment cache layer
  * 
  * LOOKUP PRIORITY:
- * 1. WTD verified fitment DB (handled upstream)
+ * 1. WTD verified fitment DB (handled upstream, always wins)
  * 2. Curated fallback profiles (this service - sync)
- * 3. Brave search + AI extraction (fast, free) ← NEW ORDER
- * 4. External Wheel-Size API lookup (rate limited) ← FALLBACK
- * 5. Ask customer to verify
+ * 3. Researched fitment cache (previously successful research) ← NEW
+ * 4. Live Brave search + AI extraction (fast, free)
+ * 5. External Wheel-Size API lookup (rate limited)
+ * 6. Ask customer to verify
  * 
  * IMPORTANT: This is NOT a replacement for verified fitment data.
  * All fallback results are clearly labeled with confidence levels.
@@ -22,10 +24,16 @@
  * @updated 2026-05-20 - Added aftermarket search profiles
  * @updated 2026-05-20 - Added external Wheel-Size API lookup
  * @updated 2026-05-20 - Reordered Brave search before Wheel-Size API
+ * @updated 2026-05-20 - Added researched fitment cache layer
  */
 
 import { lookupExternalFitment, type ExternalLookupResult } from "./externalFitmentLookup";
 import { researchTrustedFitment, type TrustedResearchResult } from "./trustedFitmentResearch";
+import { 
+  getCachedResearchedFitment, 
+  cacheResearchedFitment,
+  type CachedResearchedFitment 
+} from "./researchedFitmentCache";
 
 // ============================================================================
 // TYPES
@@ -1658,6 +1666,11 @@ export function lookupFallbackFitment(
  * Extended result type that includes external lookup and research metadata
  */
 export interface FallbackFitmentResultWithExternal extends FallbackFitmentResult {
+  // Researched fitment cache metadata (NEW)
+  researchedCacheHit?: boolean;
+  researchedCacheId?: number;
+  researchedCacheStale?: boolean;
+  
   // External API lookup metadata
   externalLookupAttempted?: boolean;
   externalLookupSucceeded?: boolean;
@@ -1665,7 +1678,7 @@ export interface FallbackFitmentResultWithExternal extends FallbackFitmentResult
   externalLookupCached?: boolean;
   externalLookupDurationMs?: number;
   
-  // Trusted research metadata (NEW)
+  // Trusted research metadata
   trustedResearchAttempted?: boolean;
   trustedResearchSucceeded?: boolean;
   trustedResearchConfidence?: string;
@@ -1700,12 +1713,101 @@ export async function lookupFallbackFitmentWithExternal(
     return {
       ...curatedResult,
       externalLookupAttempted: false,
+      researchedCacheHit: false,
     };
   }
   
-  // STEP 2: Curated failed - try Brave search first (fast, free, no rate limits)
-  console.log(`[fallback-service] Curated fallback failed for ${year} ${make} ${model}, trying Brave research...`);
+  // STEP 2: Check researched fitment cache (previously successful research)
+  console.log(`[fallback-service] Curated fallback failed for ${year} ${make} ${model}, checking research cache...`);
   
+  const cacheResult = await getCachedResearchedFitment(year, make, model, trim);
+  
+  if (cacheResult.found && cacheResult.cached) {
+    const cached = cacheResult.cached;
+    console.log(`[fallback-service] Cache HIT for ${year} ${make} ${model}, useCount=${cached.useCount}, stale=${cacheResult.isStale}`);
+    
+    // Use cached research (even if stale - still better than nothing)
+    const cachedFitment = cached.fitment;
+    const cachedConfidence: FallbackConfidence = cached.confidence === "high" 
+      ? "high" 
+      : cached.confidence === "medium"
+      ? "medium"
+      : "low";
+    
+    // Build tire sizes from cached research
+    const tireSizes = cachedFitment.commonTireSizes?.map(size => ({
+      size,
+      isOem: true,
+    })) || cachedFitment.trims?.map(t => ({
+      size: t.tireSize,
+      isOem: true,
+      trimLevel: t.trim,
+    })) || [];
+    
+    return {
+      success: true,
+      confidence: cachedConfidence,
+      source: "curated_oem", // Label as reference data
+      
+      // Core fitment
+      boltPattern: cachedFitment.boltPattern,
+      centerBore: cachedFitment.centerBore,
+      threadSize: cachedFitment.threadSize,
+      tireSizes,
+      wheelDiameters: cachedFitment.commonWheelDiameters,
+      wheelWidths: cachedFitment.trims?.map(t => t.wheelWidth).filter((v, i, a) => a.indexOf(v) === i),
+      offsetRange: cachedFitment.offsetRange,
+      
+      // Aftermarket profile if available
+      hasAftermarketProfile: !!cachedFitment.aftermarketSearchProfile,
+      safeAftermarketDiameters: cachedFitment.aftermarketSearchProfile?.safeUpgradeDiameters,
+      wheelSearchHints: cachedFitment.aftermarketSearchProfile?.wheelHintsByDiameter?.map(h => ({
+        diameter: h.diameter,
+        widths: h.widths,
+        offsetRange: h.offsetRange,
+        label: "fallback_upgrade" as FitmentLabel,
+      })),
+      plusSizeTires: cachedFitment.aftermarketSearchProfile?.plusSizeTireOptions?.map(t => ({
+        size: t.size,
+        wheelDiameter: t.wheelDiameter,
+        label: "fallback_upgrade" as FitmentLabel,
+      })),
+      
+      // Messaging
+      confidenceMessage: `I found previously researched specs for the ${year} ${make} ${model}:`,
+      warningMessage: cacheResult.isStale 
+        ? "This data may be outdated - verify your tire size for best results."
+        : (cachedConfidence !== "high" ? "This is researched data - verify your tire size for best results." : undefined),
+      verifyPrompt: cachedConfidence !== "high"
+        ? "Can you confirm the tire size from your door jamb sticker?"
+        : undefined,
+      safetyNotes: ["Researched reference data - verify before purchase"],
+      
+      vehicleKey,
+      lookupTimestamp: Date.now(),
+      
+      // Cache metadata
+      researchedCacheHit: true,
+      researchedCacheId: cached.id,
+      researchedCacheStale: cacheResult.isStale,
+      
+      // No live research attempted
+      trustedResearchAttempted: false,
+      trustedResearchSucceeded: false,
+      trustedResearchConfidence: cached.confidence,
+      trustedResearchSources: cached.sourcesUsed,
+      externalLookupAttempted: false,
+      externalLookupSucceeded: false,
+      
+      // Trim clarification (cached data may have multiple trims)
+      requiresTrimClarification: cachedFitment.trims && cachedFitment.trims.length > 1 && !trim,
+      availableTrims: cachedFitment.trims?.map(t => t.trim),
+    };
+  }
+  
+  console.log(`[fallback-service] Cache MISS for ${year} ${make} ${model}, trying live Brave research...`);
+  
+  // STEP 3: Live Brave search (fast, free, no rate limits)
   let researchResult: TrustedResearchResult | null = null;
   try {
     researchResult = await researchTrustedFitment({ year, make, model, trim });
@@ -1714,9 +1816,14 @@ export async function lookupFallbackFitmentWithExternal(
     researchResult = null;
   }
   
-  // If Brave research succeeded, use it
+  // If Brave research succeeded, cache it and use it
   if (researchResult?.success && researchResult.fitment) {
     console.log(`[fallback-service] Trusted research succeeded for ${year} ${make} ${model}, confidence: ${researchResult.confidence}`);
+    
+    // Cache the successful research (fire and forget)
+    cacheResearchedFitment(year, make, model, trim, researchResult).catch(err => {
+      console.warn(`[fallback-service] Failed to cache research result:`, err);
+    });
     
     const researchFitment = researchResult.fitment;
     const researchConfidence: FallbackConfidence = researchResult.confidence === "high" 
@@ -1780,6 +1887,7 @@ export async function lookupFallbackFitmentWithExternal(
       lookupTimestamp: Date.now(),
       
       // Metadata
+      researchedCacheHit: false, // Fresh research, not cached
       trustedResearchAttempted: true,
       trustedResearchSucceeded: true,
       trustedResearchConfidence: researchResult.confidence,
@@ -1795,7 +1903,7 @@ export async function lookupFallbackFitmentWithExternal(
     };
   }
   
-  // STEP 3: Brave research failed - try Wheel-Size API as last resort
+  // STEP 4: Brave research failed - try Wheel-Size API as last resort
   const researchFailReason = researchResult?.messaging?.confidenceNote || "Research threw an error";
   console.log(`[fallback-service] Brave research failed: ${researchFailReason}`);
   console.log(`[fallback-service] Trying Wheel-Size API for ${year} ${make} ${model}...`);
@@ -1813,6 +1921,7 @@ export async function lookupFallbackFitmentWithExternal(
     console.log(`[fallback-service] Wheel-Size API also failed, returning curated result`);
     return {
       ...curatedResult,
+      researchedCacheHit: false,
       trustedResearchAttempted: true,
       trustedResearchSucceeded: false,
       trustedResearchDurationMs: researchResult?.researchDurationMs,
@@ -1822,7 +1931,7 @@ export async function lookupFallbackFitmentWithExternal(
     };
   }
   
-  // STEP 4: Wheel-Size API succeeded - build result
+  // STEP 5: Wheel-Size API succeeded - build result
   console.log(`[fallback-service] Wheel-Size API succeeded for ${year} ${make} ${model}`);
   
   const fitment = externalResult.fitment;
@@ -1876,6 +1985,9 @@ export async function lookupFallbackFitmentWithExternal(
     // Metadata
     vehicleKey,
     lookupTimestamp: Date.now(),
+    
+    // Cache metadata
+    researchedCacheHit: false,
     
     // Trusted research metadata (attempted but failed)
     trustedResearchAttempted: true,
