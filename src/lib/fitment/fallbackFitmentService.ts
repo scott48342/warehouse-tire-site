@@ -8,14 +8,22 @@
  * v2.1 - Added external Wheel-Size API lookup as last resort
  * v2.2 - Reordered: Brave search before Wheel-Size (faster, no rate limits)
  * v2.3 - Added researched fitment cache layer
+ * v2.4 - Added enthusiast platform knowledge for better guidance
  * 
  * LOOKUP PRIORITY:
  * 1. WTD verified fitment DB (handled upstream, always wins)
  * 2. Curated fallback profiles (this service - sync)
- * 3. Researched fitment cache (previously successful research) ← NEW
+ * 3. Researched fitment cache (previously successful research)
  * 4. Live Brave search + AI extraction (fast, free)
  * 5. External Wheel-Size API lookup (rate limited)
- * 6. Ask customer to verify
+ * 6. Platform knowledge fallback (enthusiast guidance) ← NEW
+ * 7. Ask customer to verify
+ * 
+ * PLATFORM KNOWLEDGE (v2.4):
+ * - Always looked up for known enthusiast platforms (F-body, Mustang, trucks, etc.)
+ * - Provides search hints, staggered recommendations, cultural notes
+ * - Prevents Jake from saying "we probably don't have options" for known platforms
+ * - Enriches all results with enthusiast guidance
  * 
  * IMPORTANT: This is NOT a replacement for verified fitment data.
  * All fallback results are clearly labeled with confidence levels.
@@ -34,6 +42,13 @@ import {
   cacheResearchedFitment,
   type CachedResearchedFitment 
 } from "./researchedFitmentCache";
+import {
+  lookupPlatform,
+  getEnthusiastGuidance,
+  formatPlatformGuidanceForJake,
+  type PlatformProfile,
+  type PlatformSearchHints,
+} from "./platformKnowledgeService";
 
 // ============================================================================
 // TYPES
@@ -1666,7 +1681,7 @@ export function lookupFallbackFitment(
  * Extended result type that includes external lookup and research metadata
  */
 export interface FallbackFitmentResultWithExternal extends FallbackFitmentResult {
-  // Researched fitment cache metadata (NEW)
+  // Researched fitment cache metadata
   researchedCacheHit?: boolean;
   researchedCacheId?: number;
   researchedCacheStale?: boolean;
@@ -1689,6 +1704,15 @@ export interface FallbackFitmentResultWithExternal extends FallbackFitmentResult
   requiresTrimClarification?: boolean;
   availableTrims?: string[];
   trimQuestion?: string;
+  
+  // Platform knowledge metadata (enthusiast guidance)
+  platformKnowledgeUsed?: boolean;
+  platformId?: string;
+  platformName?: string;
+  enthusiastGuidance?: string[];
+  platformSearchHints?: PlatformSearchHints;
+  staggeredRecommended?: boolean;
+  relatedPlatforms?: Array<{ id: string; name: string; reason: string }>;
 }
 
 /**
@@ -1706,14 +1730,34 @@ export async function lookupFallbackFitmentWithExternal(
   // STEP 1: Try curated fallback (sync, fast)
   const curatedResult = lookupFallbackFitment(request);
   
+  // ALWAYS check platform knowledge (for enthusiast guidance enrichment)
+  const platformResult = lookupPlatform(year, make, model, trim);
+  const hasPlatformKnowledge = !!(platformResult.found && platformResult.platform);
+  
+  if (hasPlatformKnowledge) {
+    console.log(`[fallback-service] Platform knowledge found: ${platformResult.platform?.name}`);
+  }
+  
   // If curated fallback succeeded with HIGH or MEDIUM confidence, return it
   // (Don't return low confidence "era_common" guesses - try external first)
   if (curatedResult.success && 
       (curatedResult.confidence === "high" || curatedResult.confidence === "medium")) {
+    // Enrich with platform knowledge if available
     return {
       ...curatedResult,
       externalLookupAttempted: false,
       researchedCacheHit: false,
+      platformKnowledgeUsed: hasPlatformKnowledge,
+      platformId: platformResult.platform?.platformId,
+      platformName: platformResult.platform?.name,
+      enthusiastGuidance: platformResult.platform?.culturalNotes,
+      platformSearchHints: platformResult.searchHints,
+      staggeredRecommended: platformResult.platform?.staggeredCommon,
+      relatedPlatforms: platformResult.searchHints?.surrogatePlatforms?.map(s => ({
+        id: s.platformId,
+        name: s.name,
+        reason: s.reason,
+      })),
     };
   }
   
@@ -1802,6 +1846,19 @@ export async function lookupFallbackFitmentWithExternal(
       // Trim clarification (cached data may have multiple trims)
       requiresTrimClarification: cachedFitment.trims && cachedFitment.trims.length > 1 && !trim,
       availableTrims: cachedFitment.trims?.map(t => t.trim),
+      
+      // Platform knowledge enrichment
+      platformKnowledgeUsed: hasPlatformKnowledge,
+      platformId: platformResult.platform?.platformId,
+      platformName: platformResult.platform?.name,
+      enthusiastGuidance: platformResult.platform?.culturalNotes,
+      platformSearchHints: platformResult.searchHints,
+      staggeredRecommended: platformResult.platform?.staggeredCommon,
+      relatedPlatforms: platformResult.searchHints?.surrogatePlatforms?.map(s => ({
+        id: s.platformId,
+        name: s.name,
+        reason: s.reason,
+      })),
     };
   }
   
@@ -1900,6 +1957,19 @@ export async function lookupFallbackFitmentWithExternal(
       requiresTrimClarification: researchResult.requiresTrimClarification,
       availableTrims: researchResult.availableTrims,
       trimQuestion: researchResult.messaging.trimQuestion,
+      
+      // Platform knowledge enrichment
+      platformKnowledgeUsed: hasPlatformKnowledge,
+      platformId: platformResult.platform?.platformId,
+      platformName: platformResult.platform?.name,
+      enthusiastGuidance: platformResult.platform?.culturalNotes,
+      platformSearchHints: platformResult.searchHints,
+      staggeredRecommended: platformResult.platform?.staggeredCommon,
+      relatedPlatforms: platformResult.searchHints?.surrogatePlatforms?.map(s => ({
+        id: s.platformId,
+        name: s.name,
+        reason: s.reason,
+      })),
     };
   }
   
@@ -1916,11 +1986,44 @@ export async function lookupFallbackFitmentWithExternal(
     externalResult = null;
   }
   
-  // If Wheel-Size API also failed, return curated result
+  // If Wheel-Size API also failed, return curated result WITH platform knowledge
   if (!externalResult || !externalResult.success || !externalResult.fitment) {
-    console.log(`[fallback-service] Wheel-Size API also failed, returning curated result`);
+    console.log(`[fallback-service] Wheel-Size API also failed, returning curated result with platform knowledge`);
+    
+    // CRITICAL: If we have platform knowledge, enrich the failure result
+    // This prevents Jake from saying "we probably don't have options" for known enthusiast platforms
+    const platformEnrichment = hasPlatformKnowledge && platformResult.platform ? {
+      // Use platform knowledge for bolt pattern and search hints
+      boltPattern: curatedResult.boltPattern || platformResult.platform.oemBoltPatternMetric,
+      centerBore: curatedResult.centerBore || platformResult.platform.oemCenterBore,
+      
+      // Provide enthusiast wheel diameter guidance
+      wheelDiameters: curatedResult.wheelDiameters?.length 
+        ? curatedResult.wheelDiameters 
+        : platformResult.platform.enthusiastDiameters.sweetSpot,
+      
+      // Enhanced messaging from platform knowledge
+      confidenceMessage: `I found enthusiast guidance for the ${year} ${make} ${model}:`,
+      
+      // Platform knowledge metadata
+      platformKnowledgeUsed: true,
+      platformId: platformResult.platform.platformId,
+      platformName: platformResult.platform.name,
+      enthusiastGuidance: platformResult.platform.culturalNotes,
+      platformSearchHints: platformResult.searchHints,
+      staggeredRecommended: platformResult.platform.staggeredCommon,
+      relatedPlatforms: platformResult.searchHints?.surrogatePlatforms?.map(s => ({
+        id: s.platformId,
+        name: s.name,
+        reason: s.reason,
+      })),
+    } : {
+      platformKnowledgeUsed: false,
+    };
+    
     return {
       ...curatedResult,
+      ...platformEnrichment,
       researchedCacheHit: false,
       trustedResearchAttempted: true,
       trustedResearchSucceeded: false,
@@ -2000,6 +2103,19 @@ export async function lookupFallbackFitmentWithExternal(
     externalLookupSource: externalResult.sourceName,
     externalLookupCached: externalResult.cached,
     externalLookupDurationMs: externalResult.lookupDurationMs,
+    
+    // Platform knowledge enrichment
+    platformKnowledgeUsed: hasPlatformKnowledge,
+    platformId: platformResult.platform?.platformId,
+    platformName: platformResult.platform?.name,
+    enthusiastGuidance: platformResult.platform?.culturalNotes,
+    platformSearchHints: platformResult.searchHints,
+    staggeredRecommended: platformResult.platform?.staggeredCommon,
+    relatedPlatforms: platformResult.searchHints?.surrogatePlatforms?.map(s => ({
+      id: s.platformId,
+      name: s.name,
+      reason: s.reason,
+    })),
   };
   
   return result;
