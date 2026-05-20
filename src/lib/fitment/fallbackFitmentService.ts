@@ -1676,8 +1676,10 @@ export async function lookupFallbackFitmentWithExternal(
   // STEP 1: Try curated fallback (sync, fast)
   const curatedResult = lookupFallbackFitment(request);
   
-  // If curated fallback succeeded (has data), return it
-  if (curatedResult.success && curatedResult.confidence !== "unknown") {
+  // If curated fallback succeeded with HIGH or MEDIUM confidence, return it
+  // (Don't return low confidence "era_common" guesses - try external first)
+  if (curatedResult.success && 
+      (curatedResult.confidence === "high" || curatedResult.confidence === "medium")) {
     return {
       ...curatedResult,
       externalLookupAttempted: false,
