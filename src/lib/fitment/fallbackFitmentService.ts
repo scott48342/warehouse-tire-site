@@ -6,12 +6,14 @@
  * 
  * v2.0 - Extended with FULL aftermarket search profiles for wheel/tire searches
  * v2.1 - Added external Wheel-Size API lookup as last resort
+ * v2.2 - Reordered: Brave search before Wheel-Size (faster, no rate limits)
  * 
  * LOOKUP PRIORITY:
  * 1. WTD verified fitment DB (handled upstream)
  * 2. Curated fallback profiles (this service - sync)
- * 3. External Wheel-Size API lookup (this service - async)
- * 4. Ask customer to verify
+ * 3. Brave search + AI extraction (fast, free) ← NEW ORDER
+ * 4. External Wheel-Size API lookup (rate limited) ← FALLBACK
+ * 5. Ask customer to verify
  * 
  * IMPORTANT: This is NOT a replacement for verified fitment data.
  * All fallback results are clearly labeled with confidence levels.
@@ -19,6 +21,7 @@
  * @created 2026-05-20
  * @updated 2026-05-20 - Added aftermarket search profiles
  * @updated 2026-05-20 - Added external Wheel-Size API lookup
+ * @updated 2026-05-20 - Reordered Brave search before Wheel-Size API
  */
 
 import { lookupExternalFitment, type ExternalLookupResult } from "./externalFitmentLookup";
@@ -1700,55 +1703,19 @@ export async function lookupFallbackFitmentWithExternal(
     };
   }
   
-  // STEP 2: Curated failed - try external Wheel-Size API lookup
-  console.log(`[fallback-service] Curated fallback failed for ${year} ${make} ${model}, trying external lookup...`);
+  // STEP 2: Curated failed - try Brave search first (fast, free, no rate limits)
+  console.log(`[fallback-service] Curated fallback failed for ${year} ${make} ${model}, trying Brave research...`);
   
-  let externalResult: ExternalLookupResult | null = null;
+  let researchResult: TrustedResearchResult | null = null;
   try {
-    externalResult = await lookupExternalFitment({ year, make, model, trim });
+    researchResult = await researchTrustedFitment({ year, make, model, trim });
   } catch (err) {
-    console.error(`[fallback-service] External lookup error:`, err);
-    // Don't return early - try trusted research instead
-    externalResult = null;
+    console.error(`[fallback-service] Trusted research error:`, err);
+    researchResult = null;
   }
   
-  // If external lookup failed or errored, try trusted research
-  if (!externalResult || !externalResult.success || !externalResult.fitment) {
-    const failReason = externalResult?.messaging?.confidenceNote || "External lookup threw an error";
-    console.log(`[fallback-service] External lookup failed: ${failReason}`);
-    console.log(`[fallback-service] Trying trusted research for ${year} ${make} ${model}...`);
-    
-    // STEP 3: Try AI-assisted trusted research
-    let researchResult: TrustedResearchResult;
-    try {
-      researchResult = await researchTrustedFitment({ year, make, model, trim });
-    } catch (err) {
-      console.error(`[fallback-service] Trusted research error:`, err);
-      // Return the original curated result
-      return {
-        ...curatedResult,
-        externalLookupAttempted: true,
-        externalLookupSucceeded: false,
-        externalLookupSource: externalResult?.sourceName,
-        trustedResearchAttempted: true,
-        trustedResearchSucceeded: false,
-      };
-    }
-    
-    // If research failed, return the curated result
-    if (!researchResult.success || !researchResult.fitment) {
-      console.log(`[fallback-service] Trusted research failed: ${researchResult.messaging.confidenceNote}`);
-      return {
-        ...curatedResult,
-        externalLookupAttempted: true,
-        externalLookupSucceeded: false,
-        trustedResearchAttempted: true,
-        trustedResearchSucceeded: false,
-        trustedResearchDurationMs: researchResult.researchDurationMs,
-      };
-    }
-    
-    // STEP 4: Research succeeded - build result
+  // If Brave research succeeded, use it
+  if (researchResult?.success && researchResult.fitment) {
     console.log(`[fallback-service] Trusted research succeeded for ${year} ${make} ${model}, confidence: ${researchResult.confidence}`);
     
     const researchFitment = researchResult.fitment;
@@ -1813,13 +1780,13 @@ export async function lookupFallbackFitmentWithExternal(
       lookupTimestamp: Date.now(),
       
       // Metadata
-      externalLookupAttempted: true,
-      externalLookupSucceeded: false,
       trustedResearchAttempted: true,
       trustedResearchSucceeded: true,
       trustedResearchConfidence: researchResult.confidence,
       trustedResearchSources: researchResult.sourcesUsed,
       trustedResearchDurationMs: researchResult.researchDurationMs,
+      externalLookupAttempted: false, // Didn't need Wheel-Size, Brave succeeded
+      externalLookupSucceeded: false,
       
       // Trim clarification
       requiresTrimClarification: researchResult.requiresTrimClarification,
@@ -1828,8 +1795,35 @@ export async function lookupFallbackFitmentWithExternal(
     };
   }
   
-  // STEP 3 (alt): External lookup succeeded - build result
-  console.log(`[fallback-service] External lookup succeeded for ${year} ${make} ${model}`);
+  // STEP 3: Brave research failed - try Wheel-Size API as last resort
+  const researchFailReason = researchResult?.messaging?.confidenceNote || "Research threw an error";
+  console.log(`[fallback-service] Brave research failed: ${researchFailReason}`);
+  console.log(`[fallback-service] Trying Wheel-Size API for ${year} ${make} ${model}...`);
+  
+  let externalResult: ExternalLookupResult | null = null;
+  try {
+    externalResult = await lookupExternalFitment({ year, make, model, trim });
+  } catch (err) {
+    console.error(`[fallback-service] External lookup error:`, err);
+    externalResult = null;
+  }
+  
+  // If Wheel-Size API also failed, return curated result
+  if (!externalResult || !externalResult.success || !externalResult.fitment) {
+    console.log(`[fallback-service] Wheel-Size API also failed, returning curated result`);
+    return {
+      ...curatedResult,
+      trustedResearchAttempted: true,
+      trustedResearchSucceeded: false,
+      trustedResearchDurationMs: researchResult?.researchDurationMs,
+      externalLookupAttempted: true,
+      externalLookupSucceeded: false,
+      externalLookupSource: externalResult?.sourceName,
+    };
+  }
+  
+  // STEP 4: Wheel-Size API succeeded - build result
+  console.log(`[fallback-service] Wheel-Size API succeeded for ${year} ${make} ${model}`);
   
   const fitment = externalResult.fitment;
   
@@ -1882,6 +1876,11 @@ export async function lookupFallbackFitmentWithExternal(
     // Metadata
     vehicleKey,
     lookupTimestamp: Date.now(),
+    
+    // Trusted research metadata (attempted but failed)
+    trustedResearchAttempted: true,
+    trustedResearchSucceeded: false,
+    trustedResearchDurationMs: researchResult?.researchDurationMs,
     
     // External lookup metadata
     externalLookupAttempted: true,
