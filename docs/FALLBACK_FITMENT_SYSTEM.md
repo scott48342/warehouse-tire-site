@@ -274,6 +274,7 @@ Add to `CURATED_FITMENTS` object:
 
 ## Database Tables
 
+### Fitment Gap Tables (Analytics)
 ```sql
 -- Main event log
 CREATE TABLE fitment_gaps (
@@ -309,6 +310,59 @@ CREATE TABLE fitment_gap_summary (
 );
 ```
 
+### Missing Fitment Alert Tables (Admin Management)
+```sql
+-- Main tracking table with status workflow
+CREATE TABLE missing_fitment_requests (
+  id SERIAL PRIMARY KEY,
+  vehicle_key VARCHAR(200) NOT NULL UNIQUE,  -- "year|make|model|trim"
+  year INTEGER NOT NULL,
+  make VARCHAR(100) NOT NULL,
+  model VARCHAR(100) NOT NULL,
+  trim VARCHAR(100),
+  normalized_vehicle VARCHAR(200) NOT NULL,  -- "2009 Cadillac DTS"
+  
+  -- Source context
+  source VARCHAR(50) NOT NULL DEFAULT 'jake',
+  session_id VARCHAR(100),
+  conversation_url VARCHAR(500),
+  
+  -- Fallback information
+  fallback_used BOOLEAN DEFAULT false,
+  fallback_confidence VARCHAR(20),
+  fallback_tire_size VARCHAR(50),
+  fallback_bolt_pattern VARCHAR(20),
+  
+  -- Outcome tracking
+  cart_created BOOLEAN DEFAULT false,
+  checkout_started BOOLEAN DEFAULT false,
+  order_completed BOOLEAN DEFAULT false,
+  order_value DECIMAL(10, 2),
+  
+  -- Management workflow
+  status VARCHAR(20) DEFAULT 'new',  -- new → reviewed → added_to_db | ignored
+  request_count INTEGER DEFAULT 1,
+  last_requested_at TIMESTAMP DEFAULT NOW(),
+  notes TEXT,
+  reviewed_by VARCHAR(100),
+  reviewed_at TIMESTAMP,
+  
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Admin alerts
+CREATE TABLE missing_fitment_alerts (
+  id SERIAL PRIMARY KEY,
+  type VARCHAR(50) NOT NULL,  -- new_vehicle, repeat_request, cart_created, checkout_started
+  vehicle_key VARCHAR(200) NOT NULL,
+  normalized_vehicle VARCHAR(200) NOT NULL,
+  message TEXT NOT NULL,
+  dismissed BOOLEAN DEFAULT false,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
+
 ## Test Cases
 
 | Vehicle | Expected Confidence | Expected Source |
@@ -319,12 +373,53 @@ CREATE TABLE fitment_gap_summary (
 | 2015 Honda Accord | LOW | era_common |
 | 1985 AMC Eagle | UNKNOWN | customer_verify |
 
+## Admin Panel
+
+### Adding to Jake Analytics Page
+
+Import the component:
+```tsx
+import { MissingFitmentPanel } from "@/components/admin/MissingFitmentPanel";
+```
+
+Add to your admin page:
+```tsx
+<MissingFitmentPanel />
+```
+
+### Features
+
+1. **Stats Overview** - Total, new, reviewed, added to DB, ignored, with cart, with checkout
+2. **Alert Badges** - New vehicle alerts, repeat request alerts (3+, 5+, 10+), cart/checkout alerts
+3. **Filterable Table** - Filter by status, sort by request count/date, search by make/model
+4. **Status Management** - Mark as reviewed, added to DB, or ignored
+5. **Bulk Actions** - Select multiple and bulk update status
+6. **Conversation Replay** - Click to view the Jake conversation
+7. **Top Makes** - See which makes are most requested
+
+### Admin API Endpoints
+
+```
+GET  /api/admin/missing-fitment               - List requests
+GET  /api/admin/missing-fitment?endpoint=stats - Get stats
+GET  /api/admin/missing-fitment?endpoint=alerts - Get alerts
+PATCH /api/admin/missing-fitment              - Update single status
+POST /api/admin/missing-fitment               - Bulk actions
+  { action: "bulk-status", ids: [...], status: "reviewed" }
+  { action: "dismiss-alert", alertId: 123 }
+  { action: "dismiss-all-alerts" }
+```
+
 ## Files
 
 | File | Purpose |
 |------|---------|
 | `src/lib/fitment/fallbackFitmentService.ts` | Core fallback logic + curated data |
-| `src/app/api/fitment/fallback/route.ts` | API endpoint |
+| `src/lib/fitment/missingFitmentService.ts` | Missing fitment tracking + alerts |
+| `src/app/api/fitment/fallback/route.ts` | Fallback API endpoint |
+| `src/app/api/admin/missing-fitment/route.ts` | Admin management API |
+| `src/components/admin/MissingFitmentPanel.tsx` | Admin UI component |
 | `src/lib/analytics/fitmentGapTracker.ts` | Analytics tracking |
-| `src/app/api/admin/fitment-gaps/route.ts` | Admin API |
-| `prisma/migrations/20260520_fitment_gaps/migration.sql` | Database schema |
+| `src/app/api/admin/fitment-gaps/route.ts` | Analytics API |
+| `prisma/migrations/20260520_fitment_gaps/migration.sql` | Analytics tables |
+| `prisma/migrations/20260520_missing_fitment_alerts/migration.sql` | Alert tables |

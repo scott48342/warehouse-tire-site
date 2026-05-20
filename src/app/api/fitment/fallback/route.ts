@@ -18,6 +18,7 @@ import {
   type FallbackFitmentResult,
 } from "@/lib/fitment/fallbackFitmentService";
 import { trackFitmentGap } from "@/lib/analytics/fitmentGapTracker";
+import { logMissingFitment } from "@/lib/fitment/missingFitmentService";
 
 export const dynamic = "force-dynamic";
 
@@ -59,6 +60,21 @@ export async function GET(request: NextRequest) {
       hasTireSizes: !!(result.tireSizes && result.tireSizes.length > 0),
     },
   }).catch(err => console.error("[fallback-fitment] Failed to track gap:", err));
+  
+  // Log to missing fitment requests table for admin management
+  logMissingFitment({
+    year,
+    make,
+    model,
+    trim,
+    source: source as any,
+    sessionId,
+    hostname: request.headers.get("host") || undefined,
+    fallbackUsed: result.success,
+    fallbackConfidence: result.confidence,
+    fallbackTireSize: getPrimaryTireSize(result) || undefined,
+    fallbackBoltPattern: result.boltPattern,
+  }).catch(err => console.error("[fallback-fitment] Failed to log missing:", err));
   
   // Build response
   const searchCapabilities = canSearchWithFallback(result);
