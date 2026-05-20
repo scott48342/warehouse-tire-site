@@ -902,48 +902,7 @@ const CURATED_FITMENTS: Record<string, {
       },
     },
   ],
-  "chevrolet|monte carlo": [
-    {
-      yearRange: [1970, 1988],
-      data: {
-        boltPattern: "5x120.65",
-        centerBore: 70.3,
-        threadSize: "12x1.5",
-        tireSizes: [
-          { size: "215/70R15", trims: ["Base", "Landau"] },
-          { size: "225/60R15", trims: ["SS"] },
-          { size: "235/60R15", trims: ["SS Aerocoupe"] },
-        ],
-        wheelDiameters: [14, 15],
-        wheelWidths: [7, 8],
-        offsetRange: { min: -20, max: 20 },
-        platform: "GM A-body / G-body",
-        sharedWith: ["Buick Regal", "Pontiac Grand Prix", "Oldsmobile Cutlass"],
-        notes: "G-body Monte Carlo SS has a MASSIVE following. Same bolt pattern as all classic GM muscle.",
-        aftermarket: {
-          safeDiameters: [17, 18, 19, 20, 22],
-          wheelHints: [
-            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -15, max: 20 }, notes: "Clean upgrade" },
-            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -20, max: 15 }, notes: "Popular on G-body" },
-            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -25, max: 10 }, notes: "Modern look, fills wells" },
-            { diameter: 22, widths: [9, 10, 11], offsetRange: { min: -30, max: 5 }, notes: "Aggressive stance" },
-          ],
-          plusSizeTires: [
-            { size: "245/45R17", wheelDiameter: 17 },
-            { size: "275/40R17", wheelDiameter: 17, notes: "Rear option" },
-            { size: "245/40R18", wheelDiameter: 18 },
-            { size: "275/35R20", wheelDiameter: 20 },
-          ],
-          surrogateVehicle: {
-            year: 2002,
-            make: "Chevrolet",
-            model: "Corvette",
-            reason: "Same 5x120.65 bolt pattern",
-          },
-        },
-      },
-    },
-  ],
+  // chevrolet|monte carlo is defined below with all year ranges merged
   "buick|grand national": [
     {
       yearRange: [1982, 1987],
@@ -1481,6 +1440,48 @@ const CURATED_FITMENTS: Record<string, {
     },
   ],
   "chevrolet|monte carlo": [
+    // Classic G-body Monte Carlo (1970-1988) - 5x4.75 bolt pattern
+    {
+      yearRange: [1970, 1988],
+      data: {
+        boltPattern: "5x120.65",
+        centerBore: 70.3,
+        threadSize: "12x1.5",
+        tireSizes: [
+          { size: "215/70R15", trims: ["Base", "Landau"] },
+          { size: "225/60R15", trims: ["SS"] },
+          { size: "235/60R15", trims: ["SS Aerocoupe"] },
+        ],
+        wheelDiameters: [14, 15],
+        wheelWidths: [7, 8],
+        offsetRange: { min: -20, max: 20 },
+        platform: "GM A-body / G-body",
+        sharedWith: ["Buick Regal", "Pontiac Grand Prix", "Oldsmobile Cutlass"],
+        notes: "G-body Monte Carlo SS has a MASSIVE following. Same bolt pattern as all classic GM muscle.",
+        aftermarket: {
+          safeDiameters: [17, 18, 19, 20, 22],
+          wheelHints: [
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -15, max: 20 }, notes: "Clean upgrade" },
+            { diameter: 18, widths: [8, 9, 10], offsetRange: { min: -20, max: 15 }, notes: "Popular on G-body" },
+            { diameter: 20, widths: [8, 9, 10, 11], offsetRange: { min: -25, max: 10 }, notes: "Modern look, fills wells" },
+            { diameter: 22, widths: [9, 10, 11], offsetRange: { min: -30, max: 5 }, notes: "Aggressive stance" },
+          ],
+          plusSizeTires: [
+            { size: "245/45R17", wheelDiameter: 17 },
+            { size: "275/40R17", wheelDiameter: 17, notes: "Rear option" },
+            { size: "245/40R18", wheelDiameter: 18 },
+            { size: "275/35R20", wheelDiameter: 20 },
+          ],
+          surrogateVehicle: {
+            year: 2002,
+            make: "Chevrolet",
+            model: "Corvette",
+            reason: "Same 5x120.65 bolt pattern",
+          },
+        },
+      },
+    },
+    // 2000-2007 W-body Monte Carlo - 5x115 bolt pattern
     {
       yearRange: [2000, 2007],
       data: {
