@@ -22,6 +22,7 @@
  */
 
 import { lookupExternalFitment, type ExternalLookupResult } from "./externalFitmentLookup";
+import { researchTrustedFitment, type TrustedResearchResult } from "./trustedFitmentResearch";
 
 // ============================================================================
 // TYPES
@@ -1651,14 +1652,27 @@ export function lookupFallbackFitment(
 // ============================================================================
 
 /**
- * Extended result type that includes external lookup metadata
+ * Extended result type that includes external lookup and research metadata
  */
 export interface FallbackFitmentResultWithExternal extends FallbackFitmentResult {
+  // External API lookup metadata
   externalLookupAttempted?: boolean;
   externalLookupSucceeded?: boolean;
   externalLookupSource?: string;
   externalLookupCached?: boolean;
   externalLookupDurationMs?: number;
+  
+  // Trusted research metadata (NEW)
+  trustedResearchAttempted?: boolean;
+  trustedResearchSucceeded?: boolean;
+  trustedResearchConfidence?: string;
+  trustedResearchSources?: string[];
+  trustedResearchDurationMs?: number;
+  
+  // Trim clarification (for research results)
+  requiresTrimClarification?: boolean;
+  availableTrims?: string[];
+  trimQuestion?: string;
 }
 
 /**
@@ -1702,20 +1716,122 @@ export async function lookupFallbackFitmentWithExternal(
     };
   }
   
-  // If external lookup failed, return the original curated result
+  // If external lookup failed, try trusted research
   if (!externalResult.success || !externalResult.fitment) {
     console.log(`[fallback-service] External lookup failed: ${externalResult.messaging.confidenceNote}`);
+    console.log(`[fallback-service] Trying trusted research for ${year} ${make} ${model}...`);
+    
+    // STEP 3: Try AI-assisted trusted research
+    let researchResult: TrustedResearchResult;
+    try {
+      researchResult = await researchTrustedFitment({ year, make, model, trim });
+    } catch (err) {
+      console.error(`[fallback-service] Trusted research error:`, err);
+      // Return the original curated result
+      return {
+        ...curatedResult,
+        externalLookupAttempted: true,
+        externalLookupSucceeded: false,
+        externalLookupSource: externalResult.sourceName,
+        trustedResearchAttempted: true,
+        trustedResearchSucceeded: false,
+      };
+    }
+    
+    // If research failed, return the curated result
+    if (!researchResult.success || !researchResult.fitment) {
+      console.log(`[fallback-service] Trusted research failed: ${researchResult.messaging.confidenceNote}`);
+      return {
+        ...curatedResult,
+        externalLookupAttempted: true,
+        externalLookupSucceeded: false,
+        trustedResearchAttempted: true,
+        trustedResearchSucceeded: false,
+        trustedResearchDurationMs: researchResult.researchDurationMs,
+      };
+    }
+    
+    // STEP 4: Research succeeded - build result
+    console.log(`[fallback-service] Trusted research succeeded for ${year} ${make} ${model}, confidence: ${researchResult.confidence}`);
+    
+    const researchFitment = researchResult.fitment;
+    const researchConfidence: FallbackConfidence = researchResult.confidence === "high" 
+      ? "high" 
+      : researchResult.confidence === "medium"
+      ? "medium"
+      : "low";
+    
+    // Build tire sizes from research
+    const tireSizes = researchFitment.commonTireSizes?.map(size => ({
+      size,
+      isOem: true,
+    })) || researchFitment.trims?.map(t => ({
+      size: t.tireSize,
+      isOem: true,
+      trimLevel: t.trim,
+    })) || [];
+    
     return {
-      ...curatedResult,
+      success: true,
+      confidence: researchConfidence,
+      source: "curated_oem", // Label as reference data
+      
+      // Core fitment
+      boltPattern: researchFitment.boltPattern,
+      centerBore: researchFitment.centerBore,
+      threadSize: researchFitment.threadSize,
+      tireSizes,
+      wheelDiameters: researchFitment.commonWheelDiameters,
+      wheelWidths: researchFitment.trims?.map(t => t.wheelWidth).filter((v, i, a) => a.indexOf(v) === i),
+      offsetRange: researchFitment.offsetRange,
+      
+      // Aftermarket profile if available
+      hasAftermarketProfile: !!researchFitment.aftermarketSearchProfile,
+      safeAftermarketDiameters: researchFitment.aftermarketSearchProfile?.safeUpgradeDiameters,
+      wheelSearchHints: researchFitment.aftermarketSearchProfile?.wheelHintsByDiameter?.map(h => ({
+        diameter: h.diameter,
+        widths: h.widths,
+        offsetRange: h.offsetRange,
+        label: "fallback_upgrade" as FitmentLabel,
+      })),
+      plusSizeTires: researchFitment.aftermarketSearchProfile?.plusSizeTireOptions?.map(t => ({
+        size: t.size,
+        wheelDiameter: t.wheelDiameter,
+        label: "fallback_upgrade" as FitmentLabel,
+      })),
+      
+      // Messaging
+      confidenceMessage: researchResult.messaging.formatted,
+      warningMessage: researchResult.requiresCustomerVerification 
+        ? "This is researched data - verify your tire size for best results."
+        : undefined,
+      verifyPrompt: researchResult.messaging.trimQuestion || (
+        researchResult.requiresCustomerVerification
+          ? "Can you confirm the tire size from your door jamb sticker?"
+          : undefined
+      ),
+      safetyNotes: ["Researched reference data - verify before purchase"],
+      
+      vehicleKey,
+      lookupTimestamp: Date.now(),
+      
+      // Metadata
       externalLookupAttempted: true,
       externalLookupSucceeded: false,
-      externalLookupSource: externalResult.sourceName,
-      externalLookupCached: externalResult.cached,
-      externalLookupDurationMs: externalResult.lookupDurationMs,
+      trustedResearchAttempted: true,
+      trustedResearchSucceeded: true,
+      trustedResearchConfidence: researchResult.confidence,
+      trustedResearchSources: researchResult.sourcesUsed,
+      trustedResearchDurationMs: researchResult.researchDurationMs,
+      
+      // Trim clarification
+      requiresTrimClarification: researchResult.requiresTrimClarification,
+      availableTrims: researchResult.availableTrims,
+      trimQuestion: researchResult.messaging.trimQuestion,
     };
   }
   
-  // STEP 3: External lookup succeeded - build result
+  // STEP 3 (alt): External lookup succeeded - build result
   console.log(`[fallback-service] External lookup succeeded for ${year} ${make} ${model}`);
   
   const fitment = externalResult.fitment;

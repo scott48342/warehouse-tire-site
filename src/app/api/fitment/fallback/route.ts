@@ -116,6 +116,20 @@ interface FallbackAPIResponse {
       cached?: boolean;
       durationMs?: number;
     };
+    // Trusted research metadata (if attempted)
+    trustedResearch?: {
+      attempted: boolean;
+      succeeded: boolean;
+      confidence?: string;
+      sources?: string[];
+      durationMs?: number;
+    };
+    // Trim clarification (if needed)
+    trimClarification?: {
+      required: boolean;
+      availableTrims?: string[];
+      question?: string;
+    };
   };
 }
 
@@ -227,6 +241,20 @@ export async function GET(request: NextRequest) {
         source: result.externalLookupSource,
         cached: result.externalLookupCached,
         durationMs: result.externalLookupDurationMs,
+      } : undefined,
+      // Trusted research metadata (if attempted)
+      trustedResearch: result.trustedResearchAttempted ? {
+        attempted: true,
+        succeeded: result.trustedResearchSucceeded || false,
+        confidence: result.trustedResearchConfidence,
+        sources: result.trustedResearchSources,
+        durationMs: result.trustedResearchDurationMs,
+      } : undefined,
+      // Trim clarification (if needed)
+      trimClarification: result.requiresTrimClarification ? {
+        required: true,
+        availableTrims: result.availableTrims,
+        question: result.trimQuestion,
       } : undefined,
     },
   };
