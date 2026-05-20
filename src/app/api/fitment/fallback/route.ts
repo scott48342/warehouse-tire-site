@@ -108,6 +108,14 @@ interface FallbackAPIResponse {
       model: string;
       trim?: string;
     };
+    // External lookup metadata (if attempted)
+    externalLookup?: {
+      attempted: boolean;
+      succeeded: boolean;
+      source?: string;
+      cached?: boolean;
+      durationMs?: number;
+    };
   };
 }
 
