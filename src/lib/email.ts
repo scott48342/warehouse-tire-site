@@ -202,6 +202,103 @@ export async function sendOrderConfirmationEmail(
 }
 
 /**
+ * Send shipping/tracking confirmation email to customer
+ */
+export async function sendTrackingConfirmationEmail(
+  orderId: string,
+  customerEmail: string,
+  customerName: string,
+  trackingNumbers: string[],
+  supplierName: string = "our supplier"
+): Promise<{ success: boolean; messageId?: string; error?: string }> {
+  const settings = await getEmailSettings();
+
+  if (!settings) {
+    console.log("[email] Email not configured in admin settings, skipping tracking email");
+    return { success: false, error: "email_not_configured" };
+  }
+
+  if (!settings.smtpHost || !settings.smtpUser || !settings.smtpPass) {
+    console.log("[email] SMTP settings incomplete, skipping tracking email");
+    return { success: false, error: "smtp_incomplete" };
+  }
+
+  try {
+    const transporter = await getTransporter(settings);
+    const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
+
+    // Build tracking links
+    const trackingLinksHtml = trackingNumbers.map(t => 
+      `<a href="https://www.fedex.com/fedextrack/?trknbr=${t}" style="color: #dc2626; font-weight: 600; font-size: 18px; font-family: monospace;">${t}</a>`
+    ).join("<br>");
+    
+    const trackingLinksText = trackingNumbers.map(t => 
+      `${t} - https://www.fedex.com/fedextrack/?trknbr=${t}`
+    ).join("\n");
+
+    const html = emailWrapper({
+      title: `Your Order Has Shipped: ${orderId}`,
+      previewText: `Great news! Your order ${orderId} is on its way.`,
+      children: `
+        ${greeting(customerName.split(" ")[0], "Great news! Your order has shipped and is on its way to you.")}
+        ${successBox("📦 Your Order Has Shipped!", `
+          <strong>Order:</strong> ${orderId}<br><br>
+          <strong>Tracking Number${trackingNumbers.length > 1 ? "s" : ""}:</strong><br>
+          ${trackingLinksHtml}<br><br>
+          <em>Click the tracking number to view delivery status on FedEx.com</em>
+        `)}
+        ${infoBox("What's Next?", `
+          Your package is being shipped via FedEx from ${supplierName}. You'll receive updates as your package makes its way to you.
+          <br><br>
+          <strong>Typical delivery:</strong> 2-5 business days depending on your location.
+        `)}
+        ${ctaButton("Track Your Package →", `https://www.fedex.com/fedextrack/?trknbr=${trackingNumbers[0]}`, "primary")}
+        ${footer({
+          showPhone: true,
+          customText: "Questions about your order? Reply to this email.",
+        })}
+      `,
+    });
+
+    const text = `
+${BRAND.name}
+${"=".repeat(40)}
+
+YOUR ORDER HAS SHIPPED!
+
+Great news, ${customerName.split(" ")[0]}! Your order is on its way.
+
+Order: ${orderId}
+
+Tracking Number${trackingNumbers.length > 1 ? "s" : ""}:
+${trackingLinksText}
+
+Your package is being shipped via FedEx. Typical delivery is 2-5 business days.
+
+Questions? Reply to this email or call us.
+
+${BRAND.name}
+    `.trim();
+
+    // Send to customer with BCC to Scott
+    const result = await transporter.sendMail({
+      from: fromAddress,
+      to: customerEmail,
+      bcc: ["scott@warehousetire.net"],
+      subject: `📦 Your Order Has Shipped: ${orderId}`,
+      html,
+      text,
+    });
+
+    console.log("[email] Tracking confirmation sent:", result.messageId, "to:", customerEmail);
+    return { success: true, messageId: result.messageId };
+  } catch (err: any) {
+    console.error("[email] Failed to send tracking email:", err.message);
+    return { success: false, error: err.message };
+  }
+}
+
+/**
  * Test email configuration by sending a test message
  */
 export async function sendTestEmail(

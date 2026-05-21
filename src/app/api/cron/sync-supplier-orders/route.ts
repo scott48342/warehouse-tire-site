@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import pg from "pg";
 import { getOrderStatus } from "@/lib/usautoforce";
+import { sendTrackingConfirmationEmail } from "@/lib/email";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -95,7 +96,7 @@ export async function GET(request: NextRequest) {
             order.id
           ]);
 
-          // If we got new tracking, also update the main order status
+          // If we got new tracking, update order status and send email
           if (hasNewTracking && newTracking.length > 0) {
             await pool.query(`
               UPDATE orders
@@ -104,6 +105,31 @@ export async function GET(request: NextRequest) {
             `, [order.order_id]);
             
             console.log(`[sync-supplier-orders] Order ${order.order_id} now has tracking: ${newTracking.join(', ')}`);
+            
+            // Get customer info for email
+            const { rows: orderRows } = await pool.query(`
+              SELECT customer_email, snapshot_json FROM orders WHERE id = $1
+            `, [order.order_id]);
+            
+            if (orderRows.length > 0 && orderRows[0].customer_email) {
+              const snapshot = orderRows[0].snapshot_json;
+              const customerName = `${snapshot.customer?.firstName || ''} ${snapshot.customer?.lastName || ''}`.trim() || 'Customer';
+              
+              // Send tracking confirmation email
+              const emailResult = await sendTrackingConfirmationEmail(
+                order.order_id,
+                orderRows[0].customer_email,
+                customerName,
+                newTracking,
+                order.supplier === 'usautoforce' ? 'US AutoForce' : order.supplier
+              );
+              
+              if (emailResult.success) {
+                console.log(`[sync-supplier-orders] Tracking email sent for ${order.order_id}`);
+              } else {
+                console.error(`[sync-supplier-orders] Failed to send tracking email for ${order.order_id}:`, emailResult.error);
+              }
+            }
           }
 
           results.push({
