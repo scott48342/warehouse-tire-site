@@ -608,6 +608,7 @@ const CURATED_FITMENTS: Record<string, {
     },
   ],
   "lincoln|continental": [
+    // Modern Continental (2017-2020) - CD4 platform
     {
       yearRange: [2017, 2020],
       data: {
@@ -640,6 +641,50 @@ const CURATED_FITMENTS: Record<string, {
             make: "Ford",
             model: "Fusion",
             reason: "Same CD4 platform, 5x114.3 bolt pattern",
+          },
+        },
+      },
+    },
+    // Classic Continental (1961-1979) - Full-size luxury land yacht
+    {
+      yearRange: [1961, 1979],
+      data: {
+        boltPattern: "5x114.3",
+        centerBore: 70.0,
+        threadSize: "1/2x20",
+        tireSizes: [
+          { size: "225/75R15", trims: ["Base"] },
+          { size: "235/75R15", trims: ["Town Car"] },
+        ],
+        wheelDiameters: [15],
+        wheelWidths: [6, 7],
+        offsetRange: { min: -10, max: 20 },
+        platform: "Ford full-size (Y-block/FE)",
+        sharedWith: ["Lincoln Mark III", "Lincoln Mark IV", "Lincoln Mark V", "Ford Thunderbird"],
+        notes: "Classic American luxury. 5x4.5 bolt pattern with huge aftermarket support. Popular for donk/big wheel builds.",
+        aftermarket: {
+          safeDiameters: [15, 17, 18, 20, 22, 24],
+          wheelHints: [
+            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic chrome look" },
+            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular upgrade" },
+            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 }, notes: "Modern pro-touring" },
+            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 }, notes: "Chrome wire look" },
+            { diameter: 22, widths: [9, 10], offsetRange: { min: -35, max: 0 }, notes: "Big wheel/donk builds" },
+            { diameter: 24, widths: [9, 10, 12], offsetRange: { min: -40, max: -5 }, notes: "Full donk setup" },
+          ],
+          plusSizeTires: [
+            { size: "235/70R15", wheelDiameter: 15 },
+            { size: "255/50R17", wheelDiameter: 17 },
+            { size: "255/45R18", wheelDiameter: 18 },
+            { size: "255/40R20", wheelDiameter: 20 },
+            { size: "265/35R22", wheelDiameter: 22 },
+            { size: "275/25R24", wheelDiameter: 24 },
+          ],
+          surrogateVehicle: {
+            year: 1969,
+            make: "Ford",
+            model: "Mustang",
+            reason: "Same 5x114.3 bolt pattern, tons of classic wheel options",
           },
         },
       },
@@ -2051,55 +2096,8 @@ const CURATED_FITMENTS: Record<string, {
   ],
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // P2: CLASSIC FORD/LINCOLN LUXURY (1965-1980s)
-  // Land yachts with 5x4.5 (5x114.3) bolt pattern
-  // Strong donk/big wheel culture, chrome wheel builds
+  // LINCOLN MARK SERIES (personal luxury coupes)
   // ═══════════════════════════════════════════════════════════════════════════
-  "lincoln|continental": [
-    {
-      yearRange: [1961, 1979],
-      data: {
-        boltPattern: "5x114.3",
-        centerBore: 70.0,
-        threadSize: "1/2x20",
-        tireSizes: [
-          { size: "225/75R15", trims: ["Base"] },
-          { size: "235/75R15", trims: ["Town Car"] },
-        ],
-        wheelDiameters: [15],
-        wheelWidths: [6, 7],
-        offsetRange: { min: -10, max: 20 },
-        platform: "Ford full-size (Y-block/FE)",
-        sharedWith: ["Lincoln Mark III", "Lincoln Mark IV", "Lincoln Mark V", "Ford Thunderbird"],
-        notes: "Classic American luxury. 5x4.5 bolt pattern with huge aftermarket support. Popular for donk/big wheel builds.",
-        aftermarket: {
-          safeDiameters: [15, 17, 18, 20, 22, 24],
-          wheelHints: [
-            { diameter: 15, widths: [7, 8], offsetRange: { min: -15, max: 20 }, notes: "Classic chrome look" },
-            { diameter: 17, widths: [7, 8, 9], offsetRange: { min: -20, max: 15 }, notes: "Popular upgrade" },
-            { diameter: 18, widths: [8, 9], offsetRange: { min: -25, max: 10 }, notes: "Modern pro-touring" },
-            { diameter: 20, widths: [8, 9, 10], offsetRange: { min: -30, max: 5 }, notes: "Chrome wire look" },
-            { diameter: 22, widths: [9, 10], offsetRange: { min: -35, max: 0 }, notes: "Big wheel/donk builds" },
-            { diameter: 24, widths: [9, 10, 12], offsetRange: { min: -40, max: -5 }, notes: "Full donk setup" },
-          ],
-          plusSizeTires: [
-            { size: "235/70R15", wheelDiameter: 15 },
-            { size: "255/50R17", wheelDiameter: 17 },
-            { size: "255/45R18", wheelDiameter: 18 },
-            { size: "255/40R20", wheelDiameter: 20 },
-            { size: "265/35R22", wheelDiameter: 22 },
-            { size: "275/25R24", wheelDiameter: 24 },
-          ],
-          surrogateVehicle: {
-            year: 1969,
-            make: "Ford",
-            model: "Mustang",
-            reason: "Same 5x114.3 bolt pattern, tons of classic wheel options",
-          },
-        },
-      },
-    },
-  ],
   "lincoln|mark iii": [
     {
       yearRange: [1969, 1971],
@@ -2226,50 +2224,10 @@ const CURATED_FITMENTS: Record<string, {
       },
     },
   ],
-  "lincoln|town car": [
-    {
-      yearRange: [1981, 2011],
-      data: {
-        boltPattern: "5x114.3",
-        centerBore: 70.0,
-        threadSize: "1/2x20",
-        tireSizes: [
-          { size: "225/70R15", trims: ["Base", "Executive"] },
-          { size: "225/60R16", trims: ["Signature", "Cartier"] },
-          { size: "235/55R17", trims: ["Ultimate"] },
-        ],
-        wheelDiameters: [15, 16, 17],
-        wheelWidths: [6, 7],
-        offsetRange: { min: 30, max: 50 },
-        platform: "Ford Panther platform",
-        sharedWith: ["Ford Crown Victoria", "Mercury Grand Marquis"],
-        notes: "Panther platform. Last true body-on-frame American sedan. Popular for big wheel builds.",
-        aftermarket: {
-          safeDiameters: [17, 18, 20, 22, 24],
-          wheelHints: [
-            { diameter: 17, widths: [7, 8], offsetRange: { min: 30, max: 45 }, notes: "OEM+ upgrade" },
-            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 25, max: 42 } },
-            { diameter: 20, widths: [8, 9], offsetRange: { min: 20, max: 38 }, notes: "Very popular upgrade" },
-            { diameter: 22, widths: [9, 10], offsetRange: { min: 15, max: 35 }, notes: "Popular donk size" },
-            { diameter: 24, widths: [9, 10], offsetRange: { min: 10, max: 30 }, notes: "Full donk build" },
-          ],
-          plusSizeTires: [
-            { size: "235/50R17", wheelDiameter: 17 },
-            { size: "245/45R18", wheelDiameter: 18 },
-            { size: "255/40R20", wheelDiameter: 20 },
-            { size: "265/35R22", wheelDiameter: 22 },
-            { size: "275/25R24", wheelDiameter: 24 },
-          ],
-          surrogateVehicle: {
-            year: 2010,
-            make: "Ford",
-            model: "Crown Victoria",
-            reason: "Same Panther platform, identical fitment",
-          },
-        },
-      },
-    },
-  ],
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC FORD (5x114.3 bolt pattern)
+  // ═══════════════════════════════════════════════════════════════════════════
   "ford|thunderbird": [
     {
       yearRange: [1967, 1976],

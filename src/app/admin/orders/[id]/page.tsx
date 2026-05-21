@@ -434,6 +434,65 @@ export default async function OrderDetailPage({
             </div>
           </div>
 
+          {/* Supplier Summary */}
+          {(() => {
+            const supplierMap = new Map<string, { items: typeof lines; total: number }>();
+            for (const line of lines) {
+              const source = line.meta?.source;
+              if (source && (line.meta?.cartType === "tire" || line.meta?.cartType === "wheel")) {
+                const existing = supplierMap.get(source) || { items: [], total: 0 };
+                existing.items.push(line);
+                existing.total += (line.unitPriceUsd || 0) * (line.qty || 0);
+                supplierMap.set(source, existing);
+              }
+            }
+            
+            if (supplierMap.size === 0) return null;
+            
+            const supplierInfo = (source: string) => {
+              const suppliers: Record<string, { name: string; color: string; autoOrder: boolean }> = {
+                "tireweb:atd": { name: "ATD", color: "bg-orange-600", autoOrder: false },
+                "tireweb:ntw": { name: "NTW", color: "bg-blue-600", autoOrder: false },
+                "tireweb:usautoforce": { name: "USAF (TireWeb)", color: "bg-green-600", autoOrder: false },
+                "tireweb:km": { name: "K&M", color: "bg-purple-600", autoOrder: false },
+                "usautoforce": { name: "US AutoForce", color: "bg-green-500", autoOrder: true },
+                "wheelpros": { name: "WheelPros", color: "bg-red-600", autoOrder: true },
+              };
+              return suppliers[source] || { name: source, color: "bg-neutral-600", autoOrder: false };
+            };
+            
+            return (
+              <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
+                <h3 className="text-lg font-bold text-white mb-4">Supplier Summary</h3>
+                <div className="space-y-3">
+                  {Array.from(supplierMap.entries()).map(([source, data]) => {
+                    const info = supplierInfo(source);
+                    return (
+                      <div key={source} className="p-3 bg-neutral-700/50 rounded-lg">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className={`text-sm px-2 py-1 rounded-full text-white font-medium ${info.color}`}>
+                            {info.name}
+                          </span>
+                          {info.autoOrder ? (
+                            <span className="text-xs text-green-400 font-medium">✓ Auto-order</span>
+                          ) : (
+                            <span className="text-xs text-amber-400 font-medium">⚠ Manual order</span>
+                          )}
+                        </div>
+                        <div className="text-xs text-neutral-400">
+                          {data.items.length} item{data.items.length > 1 ? "s" : ""} · {formatMoney(data.total)}
+                        </div>
+                        <div className="text-xs text-neutral-500 mt-1">
+                          {data.items.map(item => item.sku).filter(Boolean).join(", ")}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })()}
+
           {/* Payment Details */}
           {(order.stripe_session_id || order.stripe_payment_intent_id) && (
             <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
@@ -509,6 +568,22 @@ function InfoRow({
   );
 }
 
+// Format supplier source for display
+function formatSupplier(source?: string): { name: string; color: string } | null {
+  if (!source) return null;
+  
+  const suppliers: Record<string, { name: string; color: string }> = {
+    "tireweb:atd": { name: "ATD", color: "bg-orange-600" },
+    "tireweb:ntw": { name: "NTW", color: "bg-blue-600" },
+    "tireweb:usautoforce": { name: "USAF (TireWeb)", color: "bg-green-600" },
+    "tireweb:km": { name: "K&M", color: "bg-purple-600" },
+    "usautoforce": { name: "US AutoForce", color: "bg-green-500" },
+    "wheelpros": { name: "WheelPros", color: "bg-red-600" },
+  };
+  
+  return suppliers[source] || { name: source, color: "bg-neutral-600" };
+}
+
 function LineItem({
   line,
 }: {
@@ -522,16 +597,36 @@ function LineItem({
 }) {
   const ext = (line.unitPriceUsd || 0) * (line.qty || 0);
   const isIncluded = line.unitPriceUsd === 0 && line.meta?.required;
+  const supplier = formatSupplier(line.meta?.source);
 
   return (
     <div className="flex items-start justify-between gap-4 p-3 bg-neutral-700/50 rounded-lg">
       <div className="flex-1 min-w-0">
-        <div className="text-white font-medium">{line.name}</div>
-        {line.sku && (
-          <div className="text-xs text-neutral-400 mt-0.5">
-            SKU: <code className="bg-neutral-700 px-1 rounded">{line.sku}</code>
-          </div>
-        )}
+        <div className="flex items-center gap-2">
+          <span className="text-white font-medium">{line.name}</span>
+          {supplier && (
+            <span className={`text-xs px-2 py-0.5 rounded-full text-white font-medium ${supplier.color}`}>
+              {supplier.name}
+            </span>
+          )}
+        </div>
+        <div className="flex items-center gap-3 mt-1">
+          {line.sku && (
+            <span className="text-xs text-neutral-400">
+              SKU: <code className="bg-neutral-700 px-1 rounded">{line.sku}</code>
+            </span>
+          )}
+          {line.meta?.brand && (
+            <span className="text-xs text-neutral-400">
+              Brand: <span className="text-neutral-300">{line.meta.brand}</span>
+            </span>
+          )}
+          {line.meta?.tireSize && (
+            <span className="text-xs text-neutral-400">
+              Size: <span className="text-neutral-300">{line.meta.tireSize}</span>
+            </span>
+          )}
+        </div>
         {line.meta?.spec?.threadSize && (
           <div className="text-xs text-neutral-400 mt-0.5">
             Thread: {line.meta.spec.threadSize}

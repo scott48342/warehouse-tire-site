@@ -1344,15 +1344,34 @@ async function mergeTireResults(
       const newPrice = tire.cost ?? tire.price ?? Infinity;
       const existingPriceSourceQty = (existing as any).priceSourceQty ?? 0;
       
+      // Supplier priority: prefer auto-orderable suppliers when prices are close
+      // This saves staff time and ensures reliable order placement
+      const AUTO_ORDER_SOURCES = ['usautoforce', 'wheelpros'];
+      const MANUAL_SOURCES = ['tireweb:atd', 'tireweb:ntw', 'tireweb:km', 'tireweb:usautoforce'];
+      const PRICE_THRESHOLD = 2.00; // Switch to auto-order source if within $2
+      
+      const newIsAutoOrder = AUTO_ORDER_SOURCES.includes(tire.source || '');
+      const existingIsAutoOrder = AUTO_ORDER_SOURCES.includes((existing as any).priceSource || '');
+      const existingIsManual = MANUAL_SOURCES.some(s => ((existing as any).priceSource || '').startsWith(s));
+      
       // Use the new price if:
       // 1. New price is lower AND new source has enough inventory (>= minQty), OR
-      // 2. Existing price source doesn't have enough inventory but new source does
+      // 2. Existing price source doesn't have enough inventory but new source does, OR
+      // 3. NEW: Prices within threshold AND new source is auto-order AND existing is manual
       const newSourceHasEnough = tireSourceQty >= (minQty || 4);
       const existingSourceHasEnough = existingPriceSourceQty >= (minQty || 4);
+      const pricesAreClose = Math.abs(newPrice - existingPrice) <= PRICE_THRESHOLD;
+      const preferAutoOrder = pricesAreClose && newIsAutoOrder && existingIsManual && newSourceHasEnough;
       
       const shouldUpdatePrice = 
         (newPrice < existingPrice && newPrice > 0 && newSourceHasEnough) ||
-        (!existingSourceHasEnough && newSourceHasEnough && newPrice > 0);
+        (!existingSourceHasEnough && newSourceHasEnough && newPrice > 0) ||
+        preferAutoOrder;
+      
+      // Log when we prefer auto-order source
+      if (preferAutoOrder) {
+        console.log(`[pricing] Preferring auto-order source ${tire.source} ($${newPrice}) over manual ${(existing as any).priceSource} ($${existingPrice}) for ${tire.partNumber}`);
+      }
       
       // Log when we REJECT a lower price due to insufficient inventory
       if (newPrice < existingPrice && newPrice > 0 && !newSourceHasEnough) {
