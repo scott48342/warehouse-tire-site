@@ -105,14 +105,14 @@ async function ensureOrdersTable(pool: pg.Pool) {
 }
 
 type SupplierOrderRow = {
-  id: string;
+  id: number;
   supplier: string;
   supplier_order_number: string;
   status: string;
   tracking_numbers: string[] | null;
   error_message: string | null;
   created_at: string;
-  last_synced_at: string | null;
+  updated_at: string;
 };
 
 async function getOrder(id: string): Promise<{ order: OrderRow | null; supplierOrders: SupplierOrderRow[] }> {
@@ -127,7 +127,7 @@ async function getOrder(id: string): Promise<{ order: OrderRow | null; supplierO
     
     // Also fetch supplier orders
     const { rows: supplierOrders } = await pool.query<SupplierOrderRow>(`
-      SELECT id, supplier, supplier_order_number, status, tracking_numbers, error_message, created_at, last_synced_at
+      SELECT id, supplier, supplier_order_number, status, tracking_numbers, error_message, created_at, updated_at
       FROM supplier_orders
       WHERE order_id = $1
       ORDER BY created_at DESC
@@ -501,9 +501,9 @@ export default async function OrderDetailPage({
                         <div className="text-xs text-red-400">{so.error_message}</div>
                       </div>
                     )}
-                    {so.last_synced_at && (
+                    {so.updated_at && (
                       <div className="text-xs text-neutral-500 mt-2">
-                        Last synced: {new Date(so.last_synced_at).toLocaleString()}
+                        Updated: {new Date(so.updated_at).toLocaleString()}
                       </div>
                     )}
                   </div>

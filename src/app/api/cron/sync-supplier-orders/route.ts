@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
   
   try {
     // Find supplier orders that need tracking updates
-    // (status is not 'delivered' or 'cancelled', and no tracking yet or last sync > 1 hour ago)
+    // (status is not 'delivered' or 'cancelled', and no tracking yet or updated > 1 hour ago)
     const { rows: pendingOrders } = await pool.query(`
       SELECT 
         so.id,
@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
         so.supplier_order_number,
         so.status,
         so.tracking_numbers,
-        so.last_synced_at,
+        so.updated_at,
         o.customer_email
       FROM supplier_orders so
       JOIN orders o ON o.id = so.order_id
@@ -50,9 +50,8 @@ export async function GET(request: NextRequest) {
         AND so.status NOT IN ('delivered', 'cancelled', 'error')
         AND (
           so.tracking_numbers IS NULL 
-          OR so.tracking_numbers = '[]'::jsonb
-          OR so.last_synced_at IS NULL
-          OR so.last_synced_at < NOW() - INTERVAL '1 hour'
+          OR array_length(so.tracking_numbers, 1) IS NULL
+          OR so.updated_at < NOW() - INTERVAL '1 hour'
         )
       ORDER BY so.created_at DESC
       LIMIT 20
@@ -88,12 +87,11 @@ export async function GET(request: NextRequest) {
             SET 
               status = $1,
               tracking_numbers = $2,
-              last_synced_at = NOW(),
               updated_at = NOW()
             WHERE id = $3
           `, [
             newStatus,
-            JSON.stringify(newTracking),
+            newTracking,
             order.id
           ]);
 
