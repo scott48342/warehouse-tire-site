@@ -52,11 +52,11 @@ const UTV_EXCLUSIVE_BRANDS = new Set([
 /**
  * Brand + model combinations that are UTV despite brand making automotive wheels
  */
-const UTV_MODEL_PATTERNS = [
+const UTV_MODEL_PATTERNS: Array<{ brand: string; patterns: string[] }> = [
   { brand: 'MSA', patterns: ['THUNDERLIPS', 'SPARK', 'CLUTCH', 'CANNON', 'DIESEL'] },
   { brand: 'ITP', patterns: ['*'] }, // ITP is all powersports
   { brand: 'STI', patterns: ['*'] }, // STI is all powersports
-] as const;
+];
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // UTV DETECTION LOGIC
