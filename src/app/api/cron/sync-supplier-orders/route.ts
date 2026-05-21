@@ -116,7 +116,7 @@ export async function GET(request: NextRequest) {
             updated: hasNewTracking,
           });
         } else {
-          console.error(`[sync-supplier-orders] Failed to get status for ${order.supplier_order_number}:`, statusResult.error);
+          console.error(`[sync-supplier-orders] Failed to get status for ${order.supplier_order_number}:`, statusResult.errorMessage);
         }
 
         // Small delay to avoid rate limiting
