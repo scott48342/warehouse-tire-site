@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import pg from "pg";
 import { checkStockBySize as checkStockUSAF } from "@/lib/usautoforce";
-import { searchTiresTireWeb } from "@/lib/tirewire/client";
 
 export const runtime = "nodejs";
 
@@ -100,30 +99,8 @@ export async function GET(
         console.error("[resource] USAF check failed:", e);
       }
       
-      // Check TireWeb (ATD, NTW, etc.)
-      try {
-        const twResults = await searchTiresTireWeb(size);
-        if (Array.isArray(twResults)) {
-          for (const twItem of twResults) {
-            if (twItem.partNumber === sku || twItem.mfgPartNumber === sku) {
-              const totalQty = (twItem.primaryQty || 0) + (twItem.alternateQty || 0);
-              if (totalQty >= item.qty && twItem.source !== item.meta?.source) {
-                options.push({
-                  source: twItem.source || "tireweb",
-                  name: formatSupplierName(twItem.source),
-                  cost: twItem.cost || twItem.sellPrice,
-                  sellPrice: twItem.sellPrice || (twItem.cost ? twItem.cost + 50 : 0),
-                  quantity: totalQty,
-                  autoOrder: isAutoOrderSource(twItem.source),
-                  partNumber: twItem.partNumber || twItem.mfgPartNumber,
-                });
-              }
-            }
-          }
-        }
-      } catch (e) {
-        console.error("[resource] TireWeb check failed:", e);
-      }
+      // Note: TireWeb alternatives not shown - focus on auto-order sources (USAF)
+      // TireWeb requires manual ordering anyway, so no benefit to switching TO TireWeb
       
       // Dedupe by source
       const uniqueOptions = options.filter((opt, idx, arr) => 
