@@ -72,6 +72,10 @@
     {
       "path": "/api/cron/nightly-qa",
       "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron/sync-supplier-orders",
+      "schedule": "0 */2 * * *"
     }
   ]
 }

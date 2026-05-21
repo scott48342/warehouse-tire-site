@@ -104,7 +104,18 @@ async function ensureOrdersTable(pool: pg.Pool) {
   `);
 }
 
-async function getOrder(id: string): Promise<OrderRow | null> {
+type SupplierOrderRow = {
+  id: string;
+  supplier: string;
+  supplier_order_number: string;
+  status: string;
+  tracking_numbers: string[] | null;
+  error_message: string | null;
+  created_at: string;
+  last_synced_at: string | null;
+};
+
+async function getOrder(id: string): Promise<{ order: OrderRow | null; supplierOrders: SupplierOrderRow[] }> {
   const pool = getPool();
   try {
     await ensureOrdersTable(pool);
@@ -113,7 +124,16 @@ async function getOrder(id: string): Promise<OrderRow | null> {
       `SELECT * FROM orders WHERE id = $1`,
       [id]
     );
-    return rows[0] || null;
+    
+    // Also fetch supplier orders
+    const { rows: supplierOrders } = await pool.query<SupplierOrderRow>(`
+      SELECT id, supplier, supplier_order_number, status, tracking_numbers, error_message, created_at, last_synced_at
+      FROM supplier_orders
+      WHERE order_id = $1
+      ORDER BY created_at DESC
+    `, [id]);
+    
+    return { order: rows[0] || null, supplierOrders };
   } finally {
     await pool.end();
   }
@@ -156,7 +176,7 @@ export default async function OrderDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const order = await getOrder(id);
+  const { order, supplierOrders } = await getOrder(id);
 
   if (!order) {
     return (
@@ -434,6 +454,63 @@ export default async function OrderDetailPage({
               <OrderStatusUpdater orderId={order.id} currentStatus={order.status} />
             </div>
           </div>
+
+          {/* Supplier Orders & Tracking */}
+          {supplierOrders.length > 0 && (
+            <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
+              <h3 className="text-lg font-bold text-white mb-4">Supplier Orders</h3>
+              <div className="space-y-3">
+                {supplierOrders.map((so) => (
+                  <div key={so.id} className="p-3 bg-neutral-700/50 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                        so.supplier === 'usautoforce' ? 'bg-green-600' : 
+                        so.supplier === 'wheelpros' ? 'bg-red-600' : 'bg-neutral-600'
+                      } text-white`}>
+                        {so.supplier === 'usautoforce' ? 'US AutoForce' : 
+                         so.supplier === 'wheelpros' ? 'WheelPros' : so.supplier}
+                      </span>
+                      <span className={`text-xs font-medium ${
+                        so.status === 'shipped' || so.status === 'delivered' ? 'text-green-400' :
+                        so.status === 'error' ? 'text-red-400' : 'text-amber-400'
+                      }`}>
+                        {so.status}
+                      </span>
+                    </div>
+                    <div className="text-xs text-neutral-400 mb-2">
+                      Order #: <code className="bg-neutral-700 px-1 rounded">{so.supplier_order_number}</code>
+                    </div>
+                    {so.tracking_numbers && so.tracking_numbers.length > 0 && (
+                      <div className="mt-2 p-2 bg-green-900/30 border border-green-700 rounded">
+                        <div className="text-xs text-green-400 font-medium mb-1">📦 Tracking</div>
+                        {so.tracking_numbers.map((tracking, idx) => (
+                          <a
+                            key={idx}
+                            href={`https://www.fedex.com/fedextrack/?trknbr=${tracking}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-sm text-green-300 hover:text-green-200 font-mono"
+                          >
+                            {tracking} ↗
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                    {so.error_message && (
+                      <div className="mt-2 p-2 bg-red-900/30 border border-red-700 rounded">
+                        <div className="text-xs text-red-400">{so.error_message}</div>
+                      </div>
+                    )}
+                    {so.last_synced_at && (
+                      <div className="text-xs text-neutral-500 mt-2">
+                        Last synced: {new Date(so.last_synced_at).toLocaleString()}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Supplier Summary */}
           {(() => {
