@@ -2309,48 +2309,7 @@ const CURATED_FITMENTS: Record<string, {
       },
     },
   ],
-  "mercury|grand marquis": [
-    {
-      yearRange: [1979, 2011],
-      data: {
-        boltPattern: "5x114.3",
-        centerBore: 70.0,
-        threadSize: "1/2x20",
-        tireSizes: [
-          { size: "225/70R15", trims: ["Base", "GS"] },
-          { size: "225/60R16", trims: ["LS"] },
-          { size: "235/55R17", trims: ["LS Ultimate"] },
-        ],
-        wheelDiameters: [15, 16, 17],
-        wheelWidths: [6, 7],
-        offsetRange: { min: 30, max: 50 },
-        platform: "Ford Panther platform",
-        sharedWith: ["Ford Crown Victoria", "Lincoln Town Car"],
-        notes: "Panther platform. Same fitment as Crown Vic and Town Car.",
-        aftermarket: {
-          safeDiameters: [17, 18, 20, 22],
-          wheelHints: [
-            { diameter: 17, widths: [7, 8], offsetRange: { min: 30, max: 45 } },
-            { diameter: 18, widths: [8, 8.5], offsetRange: { min: 25, max: 42 } },
-            { diameter: 20, widths: [8, 9], offsetRange: { min: 20, max: 38 } },
-            { diameter: 22, widths: [9, 10], offsetRange: { min: 15, max: 35 } },
-          ],
-          plusSizeTires: [
-            { size: "235/50R17", wheelDiameter: 17 },
-            { size: "245/45R18", wheelDiameter: 18 },
-            { size: "255/40R20", wheelDiameter: 20 },
-            { size: "265/35R22", wheelDiameter: 22 },
-          ],
-          surrogateVehicle: {
-            year: 2010,
-            make: "Ford",
-            model: "Crown Victoria",
-            reason: "Same Panther platform, identical fitment",
-          },
-        },
-      },
-    },
-  ],
+  // mercury|grand marquis - defined earlier in file (line ~697)
   
   // ═══════════════════════════════════════════════════════════════════════════
   // P3: CLASSIC GM FWD LUXURY (5x5/5x127 bolt pattern)
