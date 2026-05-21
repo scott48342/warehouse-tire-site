@@ -2,6 +2,7 @@ import Link from "next/link";
 import pg from "pg";
 import { OrderStatusUpdater } from "./OrderStatusUpdater";
 import { ResendEmailButton } from "./ResendEmailButton";
+import { ResourceSupplier } from "./ResourceSupplier";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -317,7 +318,7 @@ export default async function OrderDetailPage({
             <Section title="Wheels">
               <div className="space-y-3">
                 {wheelLines.map((line, i) => (
-                  <LineItem key={i} line={line} />
+                  <LineItem key={i} line={line} orderId={order.id} showResource={true} />
                 ))}
               </div>
             </Section>
@@ -328,7 +329,7 @@ export default async function OrderDetailPage({
             <Section title="Tires">
               <div className="space-y-3">
                 {tireLines.map((line, i) => (
-                  <LineItem key={i} line={line} />
+                  <LineItem key={i} line={line} orderId={order.id} showResource={true} />
                 ))}
               </div>
             </Section>
@@ -586,6 +587,8 @@ function formatSupplier(source?: string): { name: string; color: string } | null
 
 function LineItem({
   line,
+  orderId,
+  showResource = false,
 }: {
   line: {
     name: string;
@@ -594,57 +597,80 @@ function LineItem({
     qty: number;
     meta?: Record<string, any>;
   };
+  orderId?: string;
+  showResource?: boolean;
 }) {
   const ext = (line.unitPriceUsd || 0) * (line.qty || 0);
   const isIncluded = line.unitPriceUsd === 0 && line.meta?.required;
   const supplier = formatSupplier(line.meta?.source);
+  const isManualOrder = line.meta?.source?.startsWith('tireweb');
+  const canResource = showResource && orderId && line.sku && (line.meta?.cartType === 'tire' || line.meta?.cartType === 'wheel');
 
   return (
-    <div className="flex items-start justify-between gap-4 p-3 bg-neutral-700/50 rounded-lg">
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2">
-          <span className="text-white font-medium">{line.name}</span>
-          {supplier && (
-            <span className={`text-xs px-2 py-0.5 rounded-full text-white font-medium ${supplier.color}`}>
-              {supplier.name}
-            </span>
-          )}
-        </div>
-        <div className="flex items-center gap-3 mt-1">
-          {line.sku && (
-            <span className="text-xs text-neutral-400">
-              SKU: <code className="bg-neutral-700 px-1 rounded">{line.sku}</code>
-            </span>
-          )}
-          {line.meta?.brand && (
-            <span className="text-xs text-neutral-400">
-              Brand: <span className="text-neutral-300">{line.meta.brand}</span>
-            </span>
-          )}
-          {line.meta?.tireSize && (
-            <span className="text-xs text-neutral-400">
-              Size: <span className="text-neutral-300">{line.meta.tireSize}</span>
-            </span>
-          )}
-        </div>
-        {line.meta?.spec?.threadSize && (
-          <div className="text-xs text-neutral-400 mt-0.5">
-            Thread: {line.meta.spec.threadSize}
+    <div className="p-3 bg-neutral-700/50 rounded-lg">
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <span className="text-white font-medium">{line.name}</span>
+            {supplier && (
+              <span className={`text-xs px-2 py-0.5 rounded-full text-white font-medium ${supplier.color}`}>
+                {supplier.name}
+              </span>
+            )}
+            {isManualOrder && (
+              <span className="text-xs text-amber-400">⚠ Manual</span>
+            )}
           </div>
-        )}
-      </div>
-      <div className="text-right">
-        <div className="text-white font-medium">
-          {isIncluded ? (
-            <span className="text-green-400">Included</span>
-          ) : (
-            formatMoney(ext)
+          <div className="flex items-center gap-3 mt-1">
+            {line.sku && (
+              <span className="text-xs text-neutral-400">
+                SKU: <code className="bg-neutral-700 px-1 rounded">{line.sku}</code>
+              </span>
+            )}
+            {line.meta?.brand && (
+              <span className="text-xs text-neutral-400">
+                Brand: <span className="text-neutral-300">{line.meta.brand}</span>
+              </span>
+            )}
+            {line.meta?.tireSize && (
+              <span className="text-xs text-neutral-400">
+                Size: <span className="text-neutral-300">{line.meta.tireSize}</span>
+              </span>
+            )}
+          </div>
+          {line.meta?.spec?.threadSize && (
+            <div className="text-xs text-neutral-400 mt-0.5">
+              Thread: {line.meta.spec.threadSize}
+            </div>
+          )}
+          {line.meta?.resourcedAt && (
+            <div className="text-xs text-green-400 mt-1">
+              ✓ Re-sourced from {line.meta.originalSource} on {new Date(line.meta.resourcedAt).toLocaleDateString()}
+            </div>
           )}
         </div>
-        <div className="text-xs text-neutral-400">
-          {line.qty}× {formatMoney(line.unitPriceUsd)}
+        <div className="text-right">
+          <div className="text-white font-medium">
+            {isIncluded ? (
+              <span className="text-green-400">Included</span>
+            ) : (
+              formatMoney(ext)
+            )}
+          </div>
+          <div className="text-xs text-neutral-400">
+            {line.qty}× {formatMoney(line.unitPriceUsd)}
+          </div>
         </div>
       </div>
+      {canResource && (
+        <ResourceSupplier 
+          orderId={orderId}
+          sku={line.sku!}
+          currentSource={line.meta?.source || 'unknown'}
+          itemName={line.name}
+          tireSize={line.meta?.tireSize}
+        />
+      )}
     </div>
   );
 }

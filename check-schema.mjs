@@ -1,8 +1,4 @@
 import pg from 'pg';
-import dotenv from 'dotenv';
-
-dotenv.config({ path: '.env.local' });
-
 const { Pool } = pg;
 
 const pool = new Pool({
@@ -10,22 +6,27 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-try {
-  // Check orders table columns
-  const result = await pool.query(`
-    SELECT column_name, data_type 
-    FROM information_schema.columns 
-    WHERE table_name = 'orders'
-    ORDER BY ordinal_position
-  `);
-  
-  console.log('\n=== Orders table columns ===\n');
-  result.rows.forEach(r => {
-    console.log(`${r.column_name}: ${r.data_type}`);
-  });
+// Get orders table columns
+const { rows } = await pool.query(`
+  SELECT column_name, data_type 
+  FROM information_schema.columns 
+  WHERE table_name = 'orders'
+  ORDER BY ordinal_position
+`);
 
-} catch (err) {
-  console.error('Error:', err.message);
-} finally {
-  await pool.end();
+console.log('Orders table columns:');
+for (const row of rows) {
+  console.log(`  ${row.column_name}: ${row.data_type}`);
 }
+
+// Get recent orders
+const { rows: orders } = await pool.query(`
+  SELECT * FROM orders ORDER BY created_at DESC LIMIT 3
+`);
+
+console.log('\nRecent orders:');
+for (const order of orders) {
+  console.log(JSON.stringify(order, null, 2));
+}
+
+await pool.end();
