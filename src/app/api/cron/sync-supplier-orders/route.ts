@@ -17,10 +17,8 @@ function getPool() {
   });
 }
 
-/**
- * Cron job to sync tracking info from USAF for open orders
- * Run every 2 hours: 0 */2 * * *
- */
+// Cron job to sync tracking info from USAF for open orders
+// Run every 2 hours (see vercel.json)
 export async function GET(request: NextRequest) {
   // Verify cron secret (Vercel cron or manual trigger)
   const authHeader = request.headers.get("authorization");
