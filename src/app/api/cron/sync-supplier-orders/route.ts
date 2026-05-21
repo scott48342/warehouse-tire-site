@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import pg from "pg";
 import { getOrderStatus } from "@/lib/usautoforce";
 import { sendTrackingConfirmationEmail } from "@/lib/email";
+import { trackPackage, isFedExTrackingNumber } from "@/lib/fedex";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -152,10 +153,85 @@ export async function GET(request: NextRequest) {
 
     const withTracking = results.filter(r => r.tracking && r.tracking.length > 0);
     
+    // === PART 2: Check FedEx for delivery status ===
+    // Find orders that have tracking but aren't yet marked delivered
+    const { rows: shippedOrders } = await pool.query(`
+      SELECT 
+        so.id,
+        so.order_id,
+        so.tracking_numbers,
+        so.status as supplier_status,
+        o.status as order_status
+      FROM supplier_orders so
+      JOIN orders o ON o.id = so.order_id
+      WHERE so.tracking_numbers IS NOT NULL
+        AND array_length(so.tracking_numbers, 1) > 0
+        AND o.status = 'shipped'
+      LIMIT 20
+    `);
+    
+    console.log(`[sync-supplier-orders] Checking delivery status for ${shippedOrders.length} shipped orders`);
+    
+    let deliveredCount = 0;
+    
+    for (const order of shippedOrders) {
+      try {
+        const trackingNumbers: string[] = order.tracking_numbers || [];
+        let allDelivered = true;
+        let anyDelivered = false;
+        
+        for (const trackingNumber of trackingNumbers) {
+          // Only check FedEx tracking numbers
+          if (!isFedExTrackingNumber(trackingNumber)) {
+            console.log(`[sync-supplier-orders] Skipping non-FedEx tracking: ${trackingNumber}`);
+            continue;
+          }
+          
+          const trackResult = await trackPackage(trackingNumber);
+          console.log(`[sync-supplier-orders] FedEx ${trackingNumber}: ${trackResult.status} - ${trackResult.statusDescription}`);
+          
+          if (trackResult.status === 'delivered') {
+            anyDelivered = true;
+          } else if (trackResult.status !== 'unknown') {
+            allDelivered = false;
+          }
+          
+          // Small delay between FedEx API calls
+          await new Promise(r => setTimeout(r, 200));
+        }
+        
+        // If all packages are delivered (or at least one is delivered and none are in transit)
+        if (anyDelivered && allDelivered) {
+          console.log(`[sync-supplier-orders] Order ${order.order_id} is DELIVERED!`);
+          
+          // Update order status to delivered
+          await pool.query(`
+            UPDATE orders
+            SET status = 'delivered', updated_at = NOW()
+            WHERE id = $1
+          `, [order.order_id]);
+          
+          // Update supplier order status
+          await pool.query(`
+            UPDATE supplier_orders
+            SET status = 'delivered', updated_at = NOW()
+            WHERE id = $1
+          `, [order.id]);
+          
+          deliveredCount++;
+        }
+      } catch (err) {
+        console.error(`[sync-supplier-orders] Error checking delivery for ${order.order_id}:`, err);
+      }
+    }
+    
+    console.log(`[sync-supplier-orders] Marked ${deliveredCount} orders as delivered`);
+    
     return NextResponse.json({
       ok: true,
       synced: results.length,
       withTracking: withTracking.length,
+      deliveredCount,
       results,
     });
   } catch (err) {
