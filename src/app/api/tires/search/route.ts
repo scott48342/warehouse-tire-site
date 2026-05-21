@@ -1350,20 +1350,34 @@ async function mergeTireResults(
       const MANUAL_SOURCES = ['tireweb:atd', 'tireweb:ntw', 'tireweb:km', 'tireweb:usautoforce'];
       
       const newIsAutoOrder = AUTO_ORDER_SOURCES.includes(tire.source || '');
+      const newIsManual = !newIsAutoOrder && MANUAL_SOURCES.some(s => (tire.source || '').startsWith(s));
+      const existingIsAutoOrder = AUTO_ORDER_SOURCES.includes((existing as any).priceSource || '');
       const existingIsManual = MANUAL_SOURCES.some(s => ((existing as any).priceSource || '').startsWith(s));
       
-      // Use the new price if:
-      // 1. New price is lower AND new source has enough inventory (>= minQty), OR
-      // 2. Existing price source doesn't have enough inventory but new source does, OR
-      // 3. ALWAYS prefer auto-order source over manual source (saves workload)
       const newSourceHasEnough = tireSourceQty >= (minQty || 4);
       const existingSourceHasEnough = existingPriceSourceQty >= (minQty || 4);
+      
+      // NEVER let manual source replace auto-order source (even if cheaper)
+      // This ensures we always use auto-order pricing when available
+      const blockManualReplacingAutoOrder = newIsManual && existingIsAutoOrder && existingSourceHasEnough;
+      
+      // Use the new price if:
+      // 1. New price is lower AND new source has enough inventory, OR
+      // 2. Existing price source doesn't have enough inventory but new source does, OR
+      // 3. New source is auto-order and existing is manual (upgrade to auto-order)
+      // BUT NEVER if manual is trying to replace auto-order
       const preferAutoOrder = newIsAutoOrder && existingIsManual && newSourceHasEnough && newPrice > 0;
       
-      const shouldUpdatePrice = 
+      const shouldUpdatePrice = !blockManualReplacingAutoOrder && (
         (newPrice < existingPrice && newPrice > 0 && newSourceHasEnough) ||
         (!existingSourceHasEnough && newSourceHasEnough && newPrice > 0) ||
-        preferAutoOrder;
+        preferAutoOrder
+      );
+      
+      // Log when we block manual from replacing auto-order
+      if (blockManualReplacingAutoOrder && newPrice < existingPrice) {
+        console.log(`[pricing] Blocking ${tire.source} ($${newPrice}) from replacing auto-order ${(existing as any).priceSource} ($${existingPrice}) for ${tire.partNumber}`);
+      }
       
       // Log when we prefer auto-order source
       if (preferAutoOrder && newPrice >= existingPrice) {
@@ -1390,15 +1404,19 @@ async function mergeTireResults(
   };
   
   // Add all results in priority order:
-  // 1. TireWeb first (best images from TireLibrary)
-  // 2. K&M (with inventory)
-  // 3. WheelPros
-  // 4. USAF direct (may have unique inventory + always has best specs)
+  // AUTO-ORDER SUPPLIERS FIRST (sets pricing baseline)
+  // 1. USAF direct (auto-order, best specs, sets price)
+  // 2. WheelPros (auto-order)
+  // THEN MANUAL SUPPLIERS (add images/inventory, don't override price)
+  // 3. TireWeb (best images from TireLibrary, manual order)
+  // 4. K&M (with inventory, manual order)
+  // 
+  // This ensures pricing always comes from auto-orderable sources when available
   // Don't filter by minQty yet - do it after merge
+  for (const tire of usafResults) addTire(tire, true);
+  for (const tire of wpResults) addTire(tire, true);
   for (const tire of twResults) addTire(tire, true);
   for (const tire of enrichedKmResults) addTire(tire, true);
-  for (const tire of wpResults) addTire(tire, true);
-  for (const tire of usafResults) addTire(tire, true);
   
   // USAF Enrichment Pass (2026-05-09)
   // For any tire that has USAF data available, add the richer usafEnrichment fields
