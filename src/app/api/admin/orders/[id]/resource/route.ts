@@ -102,9 +102,9 @@ export async function GET(
       
       // Check TireWeb (ATD, NTW, etc.)
       try {
-        const twResult = await searchTiresTireWeb(size);
-        if (twResult.success && twResult.data) {
-          for (const twItem of twResult.data) {
+        const twResults = await searchTiresTireWeb(size);
+        if (Array.isArray(twResults)) {
+          for (const twItem of twResults) {
             if (twItem.partNumber === sku || twItem.mfgPartNumber === sku) {
               const totalQty = (twItem.primaryQty || 0) + (twItem.alternateQty || 0);
               if (totalQty >= item.qty && twItem.source !== item.meta?.source) {
