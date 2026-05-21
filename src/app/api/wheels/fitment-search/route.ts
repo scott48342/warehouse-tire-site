@@ -1589,7 +1589,7 @@ async function handleDbFirstWheelResults(opts: {
   // Log UTV filter analytics if any were rejected
   if (utvFilterResult.analytics.totalRejected > 0) {
     logUTVFilterAnalytics(utvFilterResult.analytics, {
-      vehicle: `${year} ${make} ${model}`,
+      vehicle: opts.displayTrim || "Unknown Vehicle",
       boltPattern: opts.boltPattern,
     });
   }
