@@ -100,7 +100,7 @@ export async function POST(
         }
 
         // If all packages delivered, update status
-        if (allDelivered && trackingNumbers.some(t => isFedExTrackingNumber(t))) {
+        if (allDelivered && trackingNumbers.some((t: string) => isFedExTrackingNumber(t))) {
           await pool.query(`
             UPDATE orders SET status = 'delivered', updated_at = NOW() WHERE id = $1
           `, [orderId]);
