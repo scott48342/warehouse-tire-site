@@ -106,6 +106,11 @@ import {
 import type { Metadata } from "next";
 
 // ═══════════════════════════════════════════════════════════════════════════
+// ROUTE CONFIG - Force dynamic rendering to ensure sort/filter params work
+// ═══════════════════════════════════════════════════════════════════════════
+export const dynamic = 'force-dynamic';
+
+// ═══════════════════════════════════════════════════════════════════════════
 // METADATA - SEO canonical tags to prevent duplicate content issues
 // ═══════════════════════════════════════════════════════════════════════════
 
