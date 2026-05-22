@@ -910,7 +910,7 @@ export default function CheckoutPage() {
                 <div className="space-y-3">
                   {/* Affirm */}
                   <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
-                    <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-5" />
+                    <span className="text-lg font-black tracking-tight" style={{ color: '#4a4af4' }}>affirm</span>
                     <div className="flex-1">
                       <p className="font-bold text-blue-900">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo with Affirm</p>
                       <p className="text-sm text-blue-700">0% APR available • 3-36 month terms</p>
@@ -923,15 +923,6 @@ export default function CheckoutPage() {
                     >
                       Pre-qualify
                     </a>
-                  </div>
-                  
-                  {/* Afterpay */}
-                  <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
-                    <img src="https://static.afterpay.com/app/icon-128x128.png" alt="Afterpay" className="h-5 w-5" />
-                    <div>
-                      <p className="font-bold text-blue-900">Pay in 4 interest-free payments</p>
-                      <p className="text-sm text-blue-700">Split your purchase • No late fees</p>
-                    </div>
                   </div>
                 </div>
                 
@@ -990,53 +981,13 @@ export default function CheckoutPage() {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
-                            <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-6" />
+                            <span className="text-xl font-black tracking-tight" style={{ color: '#4a4af4' }}>affirm</span>
                             <div>
                               <p className="font-semibold text-neutral-900">Pay with Affirm</p>
                               <p className="text-xs text-neutral-600">3-12 monthly payments</p>
                             </div>
                           </div>
                           <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full font-medium">0% APR</span>
-                        </div>
-                      </button>
-
-                      {/* Afterpay */}
-                      <button
-                        onClick={() => startStripeCheckout()}
-                        disabled={processing}
-                        className={`w-full rounded-xl border-2 border-teal-300 bg-gradient-to-r from-teal-50 to-emerald-50 p-4 text-left transition-all hover:border-teal-400 hover:shadow-md ${
-                          processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <img src="https://static.afterpay.com/app/icon-128x128.png" alt="Afterpay" className="h-6 w-6" />
-                            <div>
-                              <p className="font-semibold text-neutral-900">Pay with Afterpay</p>
-                              <p className="text-xs text-neutral-600">4 interest-free payments</p>
-                            </div>
-                          </div>
-                          <span className="text-xs bg-teal-600 text-white px-2 py-1 rounded-full font-medium">4 payments</span>
-                        </div>
-                      </button>
-
-                      {/* Klarna */}
-                      <button
-                        onClick={() => startStripeCheckout()}
-                        disabled={processing}
-                        className={`w-full rounded-xl border-2 border-pink-300 bg-gradient-to-r from-pink-50 to-rose-50 p-4 text-left transition-all hover:border-pink-400 hover:shadow-md ${
-                          processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <img src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg" alt="Klarna" className="h-6" />
-                            <div>
-                              <p className="font-semibold text-neutral-900">Pay with Klarna</p>
-                              <p className="text-xs text-neutral-600">Flexible payment options</p>
-                            </div>
-                          </div>
-                          <span className="text-xs bg-pink-600 text-white px-2 py-1 rounded-full font-medium">Pay later</span>
                         </div>
                       </button>
                     </div>

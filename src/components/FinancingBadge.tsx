@@ -50,11 +50,7 @@ export function FinancingBadge({ price, className = "", variant = "inline" }: Fi
   if (variant === "compact") {
     return (
       <div className={`flex items-center gap-1.5 mt-1 ${className}`}>
-        <img 
-          src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" 
-          alt="Affirm" 
-          className="h-4" 
-        />
+        <span className="text-xs font-black tracking-tight" style={{ color: '#4a4af4' }}>affirm</span>
         <span className="text-xs text-neutral-600">
           as low as <span className="font-bold text-blue-700">${monthlyPayment}/mo</span>
         </span>
@@ -87,16 +83,8 @@ export function PaymentMethodBadges({ className = "" }: { className?: string }) 
           <span className="text-xs font-medium text-neutral-700">G Pay</span>
         </div>
         {/* Affirm */}
-        <div className="flex h-6 items-center rounded bg-white border border-neutral-200 px-1">
-          <img 
-            src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" 
-            alt="Affirm" 
-            className="h-4" 
-          />
-        </div>
-        {/* Afterpay */}
-        <div className="flex h-6 items-center rounded bg-[#b2fce4] px-2">
-          <span className="text-xs font-bold text-black">afterpay</span>
+        <div className="flex h-6 items-center rounded bg-white border border-neutral-200 px-2">
+          <span className="text-xs font-black tracking-tight" style={{ color: '#4a4af4' }}>affirm</span>
         </div>
       </div>
     </div>
