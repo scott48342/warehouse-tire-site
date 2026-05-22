@@ -820,6 +820,57 @@ export default function CheckoutPage() {
               )}
             </div>
 
+            {/* LOCAL ONLY: Why Local Customers Choose Us - Conversion Section */}
+            {isLocal && (
+              <div className="rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50/50 p-5">
+                <h3 className="text-lg font-bold text-green-900 mb-4">Why Local Customers Choose Us</h3>
+                
+                {/* Key Differentiators */}
+                <div className="grid sm:grid-cols-2 gap-3 mb-4">
+                  <div className="flex items-center gap-2.5 bg-white/60 rounded-lg px-3 py-2.5">
+                    <span className="text-green-600 text-lg">✓</span>
+                    <span className="text-sm font-medium text-green-900">Same-day installation available</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 bg-white/60 rounded-lg px-3 py-2.5">
+                    <span className="text-green-600 text-lg">✓</span>
+                    <span className="text-sm font-medium text-green-900">No appointment needed</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 bg-white/60 rounded-lg px-3 py-2.5">
+                    <span className="text-green-600 text-lg">✓</span>
+                    <span className="text-sm font-medium text-green-900">Walk-ins welcome</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 bg-white/60 rounded-lg px-3 py-2.5">
+                    <span className="text-green-600 text-lg">✓</span>
+                    <span className="text-sm font-medium text-green-900">Real installed pricing upfront</span>
+                  </div>
+                </div>
+                
+                {/* Contact */}
+                <div className="flex items-center gap-2 bg-white/80 rounded-lg px-4 py-3 mb-4">
+                  <span className="text-xl">📞</span>
+                  <div>
+                    <span className="text-sm text-green-800">Questions before checkout?</span>{" "}
+                    <a 
+                      href={storeInfo ? `tel:${storeInfo.phone.replace(/\D/g, '')}` : BRAND.links.tel} 
+                      className="font-bold text-green-700 hover:underline"
+                    >
+                      Call or text {storeInfo?.phone || BRAND.phone.callDisplay}
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Included Services */}
+                <div className="border-t border-green-200/60 pt-3">
+                  <p className="text-xs font-semibold text-green-800 mb-2">Included Local Services:</p>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-green-700">
+                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Free air checks</span>
+                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Fitment verification</span>
+                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Local support after the sale</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Section 3: Payment */}
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
@@ -1252,49 +1303,11 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            {/* CONSOLIDATED LOCAL TRUST & VALUE SECTION */}
+            {/* Minimal trust line - LOCAL (conversion content moved to left column) */}
             {isLocal ? (
-              <div className="rounded-xl border border-green-200 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 space-y-3">
-                {/* Key Local Differentiators - HIGHEST PRIORITY */}
-                <div className="space-y-1.5 text-xs">
-                  <p className="text-green-800 font-semibold flex items-center gap-1.5">
-                    <span className="text-green-600">✓</span> Same-day installation available
-                  </p>
-                  <p className="text-green-800 font-semibold flex items-center gap-1.5">
-                    <span className="text-green-600">✓</span> No appointment needed
-                  </p>
-                  <p className="text-green-700 flex items-center gap-1.5">
-                    <span className="text-green-600">✓</span> Walk-ins welcome
-                  </p>
-                  <p className="text-green-700 flex items-center gap-1.5">
-                    <span className="text-green-600">✓</span> Real installed pricing shown upfront
-                  </p>
-                </div>
-                
-                {/* Contact before checkout */}
-                <div className="pt-2 border-t border-green-200/60">
-                  <p className="text-xs text-green-800">
-                    <span className="font-medium">Questions before checkout?</span>{" "}
-                    <a 
-                      href={storeInfo ? `tel:${storeInfo.phone.replace(/\D/g, '')}` : BRAND.links.tel} 
-                      className="font-bold text-green-700 hover:underline"
-                    >
-                      📞 {storeInfo?.phone || BRAND.phone.callDisplay}
-                    </a>
-                  </p>
-                </div>
-                
-                {/* Included services - compact */}
-                <div className="pt-2 border-t border-green-200/60 text-[11px] text-green-700">
-                  <span className="font-semibold text-green-800">Also included:</span>{" "}
-                  Free air checks • Fitment verification • Local support
-                </div>
-                
-                {/* Trust badges - compact */}
-                <div className="pt-2 border-t border-green-200/60 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-green-700">
-                  <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Secure checkout</span>
-                  <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Guaranteed fitment</span>
-                </div>
+              <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-neutral-500 py-2">
+                <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Secure checkout</span>
+                <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Guaranteed fitment</span>
               </div>
             ) : (
               <>
@@ -1324,20 +1337,18 @@ export default function CheckoutPage() {
                     <span>Guaranteed fitment</span>
                   </div>
                 </div>
+                
+                {/* Need help - National mode only */}
+                <div className="text-center text-sm text-neutral-600">
+                  Need help?{" "}
+                  <a 
+                    href={BRAND.links.tel} 
+                    className="font-bold text-green-700 hover:underline"
+                  >
+                    {BRAND.phone.callDisplay}
+                  </a>
+                </div>
               </>
-            )}
-
-            {/* Need help - National mode only (local has it in the consolidated box) */}
-            {!isLocal && (
-              <div className="text-center text-sm text-neutral-600">
-                Need help?{" "}
-                <a 
-                  href={BRAND.links.tel} 
-                  className="font-bold text-green-700 hover:underline"
-                >
-                  {BRAND.phone.callDisplay}
-                </a>
-              </div>
             )}
           </div>
         </div>
