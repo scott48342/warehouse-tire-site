@@ -1290,20 +1290,6 @@ export default function CheckoutPage() {
                   Free air checks • Fitment verification • Local support
                 </div>
                 
-                {/* Appreciation Discount */}
-                <div className="pt-3 border-t border-green-200/60">
-                  <div className="flex items-start gap-2">
-                    <span className="text-base">🎖️</span>
-                    <div>
-                      <p className="text-xs font-bold text-green-900">10% Appreciation Discount</p>
-                      <p className="text-[11px] text-green-700">
-                        Military • Nurses • Medical • First Responders • Teachers • Students
-                      </p>
-                      <p className="text-[10px] text-green-600 mt-0.5">Verification available in-store</p>
-                    </div>
-                  </div>
-                </div>
-                
                 {/* Trust badges - compact */}
                 <div className="pt-2 border-t border-green-200/60 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-green-700">
                   <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Secure checkout</span>
