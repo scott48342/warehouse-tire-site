@@ -1052,6 +1052,10 @@ export default function CheckoutPage() {
                       <p className="text-xs text-neutral-500">{tire.brand}</p>
                       <p className="text-sm font-semibold text-neutral-900 truncate">{tire.model}</p>
                       <p className="text-xs text-neutral-500">{tire.size} • Qty: {tire.quantity}</p>
+                      {/* Per-tire price visibility for local checkout */}
+                      {isLocal && tire.quantity > 1 && (
+                        <p className="text-[10px] text-neutral-400">${tire.unitPrice.toFixed(2)} per tire × {tire.quantity}</p>
+                      )}
                     </div>
                     <div className="text-sm font-semibold text-neutral-900">
                       ${(tire.unitPrice * tire.quantity).toFixed(2)}
@@ -1138,21 +1142,31 @@ export default function CheckoutPage() {
                     <span className="font-semibold">${shippingAmount.toFixed(2)}</span>
                   )}
                 </div>
-                {/* Local Service Fees */}
-                {isLocal && localServiceFees.install > 0 && (
-                  <div className="flex justify-between">
-                    <span className="text-neutral-600">
-                      Installation ({tireCount > 0 ? `${tireCount} tires` : `${wheelOnlyCount} wheels`})
-                    </span>
-                    <span className="font-semibold">${localServiceFees.install.toFixed(2)}</span>
-                  </div>
-                )}
-                {isLocal && localServiceFees.disposal > 0 && (
-                  <div className="flex justify-between">
-                    <span className="text-neutral-600">
-                      Tire Recycling ({tireCount})
-                    </span>
-                    <span className="font-semibold">${localServiceFees.disposal.toFixed(2)}</span>
+                {/* Local Professional Installation Package */}
+                {isLocal && (localServiceFees.install > 0 || localServiceFees.disposal > 0) && (
+                  <div className="rounded-lg border border-green-100 bg-green-50/50 p-3 -mx-1">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <span className="font-semibold text-neutral-800">Professional Installation Package</span>
+                        <div className="mt-1.5 space-y-0.5">
+                          <p className="text-[11px] text-green-700 flex items-center gap-1">
+                            <span className="text-green-600">✓</span> Mounting & balancing
+                          </p>
+                          <p className="text-[11px] text-green-700 flex items-center gap-1">
+                            <span className="text-green-600">✓</span> Tire recycling & disposal included
+                          </p>
+                          <p className="text-[11px] text-green-700 flex items-center gap-1">
+                            <span className="text-green-600">✓</span> Same-day installation available
+                          </p>
+                          <p className="text-[11px] text-green-700 flex items-center gap-1">
+                            <span className="text-green-600">✓</span> No appointment needed
+                          </p>
+                        </div>
+                      </div>
+                      <span className="font-semibold text-neutral-900">
+                        ${(localServiceFees.install + localServiceFees.disposal).toFixed(2)}
+                      </span>
+                    </div>
                   </div>
                 )}
                 {isLocal && cardProcessingFee > 0 && (
@@ -1191,6 +1205,22 @@ export default function CheckoutPage() {
                     Includes ${calculatedTax.toFixed(2)} tax ({(taxRate * 100).toFixed(2)}%)
                   </p>
                 )}
+                
+                {/* Local: No Surprise Fees messaging */}
+                {isLocal && (
+                  <p className="text-xs text-green-700 font-medium mt-2 flex items-center gap-1">
+                    <span>✓</span> No surprise fees — your local installed total is shown before payment
+                  </p>
+                )}
+                
+                {/* Local: Financing reminder */}
+                {isLocal && totalWithTaxAndShipping > 300 && (
+                  <p className="text-xs text-blue-600 mt-2 flex items-center gap-1.5">
+                    <span>💳</span> 
+                    <span>Financing available — ask about easy payment options</span>
+                  </p>
+                )}
+                
                 {/* Value Framing */}
                 <div className="mt-3 pt-3 border-t border-neutral-100 space-y-1">
                   <p className="text-xs text-green-600 font-medium">
@@ -1215,6 +1245,56 @@ export default function CheckoutPage() {
 
             {/* Store Reviews Trust Strip */}
             <CheckoutTrustStrip />
+            
+            {/* Local Installation Benefits Box - LOCAL ONLY */}
+            {isLocal && (
+              <div className="rounded-xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-4">
+                <h3 className="font-bold text-green-800 text-sm mb-2">Local Installation Benefits</h3>
+                <div className="grid grid-cols-1 gap-1.5 text-xs">
+                  <p className="text-green-700 flex items-center gap-1.5">
+                    <span className="text-green-600 font-bold">✓</span> No appointment needed
+                  </p>
+                  <p className="text-green-700 flex items-center gap-1.5">
+                    <span className="text-green-600 font-bold">✓</span> Walk-ins welcome
+                  </p>
+                  <p className="text-green-700 flex items-center gap-1.5">
+                    <span className="text-green-600 font-bold">✓</span> Same-day installation available
+                  </p>
+                  <p className="text-green-700 flex items-center gap-1.5">
+                    <span className="text-green-600 font-bold">✓</span> Installed by local Warehouse Tire technicians
+                  </p>
+                  <p className="text-green-700 flex items-center gap-1.5">
+                    <span className="text-green-600 font-bold">✓</span> Real installed pricing shown upfront
+                  </p>
+                </div>
+                {/* Local promo placeholder */}
+                <div className="mt-3 pt-3 border-t border-green-200">
+                  <p className="text-xs font-semibold text-green-800">🏷️ Local Customer Special</p>
+                  <p className="text-[11px] text-green-700">Same-day installation available — no appointment needed</p>
+                </div>
+              </div>
+            )}
+            
+            {/* Local Included Services Box - LOCAL ONLY */}
+            {isLocal && (
+              <div className="rounded-xl bg-blue-50 border border-blue-100 p-4">
+                <h3 className="font-bold text-blue-800 text-sm mb-2">Included Local Services</h3>
+                <div className="grid grid-cols-1 gap-1.5 text-xs">
+                  <p className="text-blue-700 flex items-center gap-1.5">
+                    <span className="text-blue-600 font-bold">✓</span> Free air checks
+                  </p>
+                  <p className="text-blue-700 flex items-center gap-1.5">
+                    <span className="text-blue-600 font-bold">✓</span> Free tire rotation recommendations
+                  </p>
+                  <p className="text-blue-700 flex items-center gap-1.5">
+                    <span className="text-blue-600 font-bold">✓</span> Free fitment verification
+                  </p>
+                  <p className="text-blue-700 flex items-center gap-1.5">
+                    <span className="text-blue-600 font-bold">✓</span> Local support after the sale
+                  </p>
+                </div>
+              </div>
+            )}
             
             {/* Trust badges - different for local vs national */}
             <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
