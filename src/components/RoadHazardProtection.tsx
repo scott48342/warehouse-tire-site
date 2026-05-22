@@ -12,7 +12,7 @@ import { useCart, type CartAccessoryItem } from "@/lib/cart/CartContext";
  * @created 2026-04-15
  * @updated 2026-04-17 - Changed to 25% of tire price per tire
  * @updated 2026-04-24 - Changed coverage to 2 years
- * @updated 2026-05-22 - Changed to 10% to match competition
+ * @updated 2026-05-22 - Changed to 20% of tire price
  */
 
 interface RoadHazardProtectionProps {
@@ -27,7 +27,7 @@ interface RoadHazardProtectionProps {
 }
 
 // Road hazard product configuration
-const ROAD_HAZARD_RATE = 0.10; // 10% of tire price (competitive with market)
+const ROAD_HAZARD_RATE = 0.20; // 20% of tire price
 const ROAD_HAZARD_MIN_PER_TIRE = 15; // Minimum $15 per tire
 const ROAD_HAZARD_SKU = "RH-PROTECT-2YR";
 

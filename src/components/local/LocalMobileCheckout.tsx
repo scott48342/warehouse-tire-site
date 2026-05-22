@@ -323,7 +323,15 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
   // Calculate totals
   const subtotal = getTotal();
   const tireCount = tires.reduce((sum, t) => sum + t.quantity, 0);
+  const tireSubtotal = tires.reduce((sum, t) => sum + (t.unitPrice * t.quantity), 0);
   const wheelOnlyCount = hasWheels() && !hasTires() ? wheels.reduce((sum, w) => sum + w.quantity, 0) : 0;
+  
+  // Road hazard: 20% of tire price, min $15/tire
+  const roadHazardRate = 0.20;
+  const roadHazardMinPerTire = 15;
+  const avgTirePrice = tireCount > 0 ? tireSubtotal / tireCount : 0;
+  const roadHazardPerTire = Math.max(roadHazardMinPerTire, avgTirePrice * roadHazardRate);
+  const roadHazardTotal = Math.round(roadHazardPerTire * tireCount * 100) / 100;
   
   const installFees = (tireCount * LOCAL_FEES.installPerTire) + (wheelOnlyCount * LOCAL_FEES.installPerWheel);
   const disposalFees = tireCount * LOCAL_FEES.disposalPerTire;
@@ -505,7 +513,7 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
                       Cover damage from potholes, nails, and road debris
                     </p>
                     <p className="text-sm font-bold text-blue-900 mt-2">
-                      ${(tireCount * 15).toFixed(2)} for {tireCount} tires
+                      ${roadHazardTotal.toFixed(2)} for {tireCount} tires
                     </p>
                   </div>
                   <button className="text-xs text-blue-600 font-medium underline">
