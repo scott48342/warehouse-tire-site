@@ -908,27 +908,27 @@ export default function CheckoutPage() {
                 <h3 className="text-lg font-bold text-blue-900 mb-3">Flexible Financing Options</h3>
                 
                 <div className="space-y-3">
-                  {/* Monthly payment estimate */}
+                  {/* Affirm */}
                   <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
-                    <span className="text-2xl">💳</span>
+                    <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-5" />
                     <div>
-                      <p className="font-bold text-blue-900">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo</p>
-                      <p className="text-sm text-blue-700">Easy monthly payment options available</p>
+                      <p className="font-bold text-blue-900">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo with Affirm</p>
+                      <p className="text-sm text-blue-700">0% APR available • Pre-qualify without affecting credit</p>
                     </div>
                   </div>
                   
-                  {/* Interest-free financing */}
+                  {/* Afterpay */}
                   <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
-                    <span className="text-2xl">💰</span>
+                    <img src="https://static.afterpay.com/app/icon-128x128.png" alt="Afterpay" className="h-5 w-5" />
                     <div>
-                      <p className="font-bold text-blue-900">6 Months Interest-Free</p>
-                      <p className="text-sm text-blue-700">Available through Car Care One (subject to approval)</p>
+                      <p className="font-bold text-blue-900">Pay in 4 interest-free payments</p>
+                      <p className="text-sm text-blue-700">Split your purchase • No late fees</p>
                     </div>
                   </div>
                 </div>
                 
                 <p className="text-xs text-blue-600 mt-3 text-center">
-                  Ask about financing options at checkout or in-store
+                  Select a financing option in the Payment section below ↓
                 </p>
               </div>
             )}
