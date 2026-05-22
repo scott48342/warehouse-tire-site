@@ -711,7 +711,7 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
               {total >= 50 && (
                 <div className="bg-blue-50 rounded-xl p-4 mb-4">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-base font-black tracking-tight" style={{ color: '#4a4af4' }}>affirm</span>
+                    <img src="/images/affirm-logo.png" alt="Affirm" className="h-5" />
                     <span className="text-sm font-semibold text-blue-900">Pay over time</span>
                   </div>
                   <p className="text-xs text-blue-700">

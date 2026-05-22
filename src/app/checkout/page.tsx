@@ -910,7 +910,7 @@ export default function CheckoutPage() {
                 <div className="space-y-3">
                   {/* Affirm */}
                   <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
-                    <span className="text-lg font-black tracking-tight" style={{ color: '#4a4af4' }}>affirm</span>
+                    <img src="/images/affirm-logo.png" alt="Affirm" className="h-6" />
                     <div className="flex-1">
                       <p className="font-bold text-blue-900">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo with Affirm</p>
                       <p className="text-sm text-blue-700">0% APR available • 3-36 month terms</p>
@@ -981,7 +981,7 @@ export default function CheckoutPage() {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
-                            <span className="text-xl font-black tracking-tight" style={{ color: '#4a4af4' }}>affirm</span>
+                            <img src="/images/affirm-logo.png" alt="Affirm" className="h-7" />
                             <div>
                               <p className="font-semibold text-neutral-900">Pay with Affirm</p>
                               <p className="text-xs text-neutral-600">3-12 monthly payments</p>
