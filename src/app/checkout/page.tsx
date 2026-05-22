@@ -107,6 +107,7 @@ export default function CheckoutPage() {
   const [sameAsBilling, setSameAsBilling] = useState(true);
   const [processing, setProcessing] = useState(false);
   const [paymentCanceled, setPaymentCanceled] = useState(false);
+  const [installSelectorExpanded, setInstallSelectorExpanded] = useState(false);
   
   // ═══════════════════════════════════════════════════════════════════════════
   // FUNNEL TRACKING
@@ -743,20 +744,50 @@ export default function CheckoutPage() {
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
                 <span className="flex items-center justify-center w-7 h-7 rounded-full bg-green-100 text-green-700 text-sm font-bold">2</span>
-                {isLocal ? "Installation Location" : "Shipping Address"}
+                {isLocal ? "Installation Details" : "Shipping Address"}
               </h2>
               
-              {/* Local Mode: Store Selector */}
+              {/* Local Mode: Compact Install Summary OR Expanded Selector */}
               {isLocal && (
                 <div className="mb-4">
-                  <StoreSelector variant="cards" showHours={true} showPhone={true} />
-                  <div className="mt-3">
-                    <InstallTimeIndicator variant="badge" />
-                  </div>
-                  {!selectedStore && (
-                    <p className="text-sm text-amber-600 mt-2 font-medium">
-                      ⚠️ Please select an installation location
-                    </p>
+                  {selectedStore && !installSelectorExpanded ? (
+                    /* Compact summary when store selected */
+                    <div className="rounded-xl border border-green-200 bg-green-50/50 p-4">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1">
+                          <p className="text-xs text-neutral-500 mb-1">Installing at:</p>
+                          <p className="font-bold text-neutral-900">{storeInfo?.name || "Warehouse Tire"}</p>
+                          <p className="text-sm text-neutral-600">{storeInfo?.address}</p>
+                          <div className="mt-2">
+                            <InstallTimeIndicator variant="badge" />
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => setInstallSelectorExpanded(true)}
+                          className="text-sm text-green-700 hover:text-green-800 font-medium hover:underline whitespace-nowrap"
+                        >
+                          Change Location
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    /* Expanded selector or no store selected */
+                    <div>
+                      <StoreSelector variant="cards" showHours={true} showPhone={true} />
+                      {selectedStore && (
+                        <button
+                          onClick={() => setInstallSelectorExpanded(false)}
+                          className="mt-3 text-sm text-neutral-600 hover:text-neutral-800 font-medium"
+                        >
+                          ← Collapse
+                        </button>
+                      )}
+                      {!selectedStore && (
+                        <p className="text-sm text-amber-600 mt-2 font-medium">
+                          ⚠️ Please select an installation location
+                        </p>
+                      )}
+                    </div>
                   )}
                 </div>
               )}
@@ -868,6 +899,37 @@ export default function CheckoutPage() {
                     <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Local support after the sale</span>
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* LOCAL ONLY: Financing Section */}
+            {isLocal && totalWithTaxAndShipping > 200 && (
+              <div className="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50/50 p-5">
+                <h3 className="text-lg font-bold text-blue-900 mb-3">Flexible Financing Options</h3>
+                
+                <div className="space-y-3">
+                  {/* Monthly payment estimate */}
+                  <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
+                    <span className="text-2xl">💳</span>
+                    <div>
+                      <p className="font-bold text-blue-900">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo</p>
+                      <p className="text-sm text-blue-700">Easy monthly payment options available</p>
+                    </div>
+                  </div>
+                  
+                  {/* Interest-free financing */}
+                  <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
+                    <span className="text-2xl">💰</span>
+                    <div>
+                      <p className="font-bold text-blue-900">6 Months Interest-Free</p>
+                      <p className="text-sm text-blue-700">Available through Car Care One (subject to approval)</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <p className="text-xs text-blue-600 mt-3 text-center">
+                  Ask about financing options at checkout or in-store
+                </p>
               </div>
             )}
 
@@ -1037,31 +1099,6 @@ export default function CheckoutPage() {
 
           {/* Order Summary Sidebar */}
           <div className="lg:sticky lg:top-24 h-fit space-y-4">
-            {/* Local Mode: Store Selector - DESKTOP ONLY (mobile has it in Section 2) */}
-            {isLocal && (
-              <div className="hidden lg:block rounded-xl border border-green-200 bg-green-50/80 p-3">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-sm">🔧</span>
-                    <span className="font-semibold text-green-900 text-sm">Install at:</span>
-                  </div>
-                  <InstallTimeIndicator variant="badge" />
-                </div>
-                <StoreSelector variant="minimal" className="mb-0" />
-                {storeInfo && (
-                  <div className="text-xs text-green-800 mt-2 pt-2 border-t border-green-200/60">
-                    <p className="font-medium">{storeInfo.name}</p>
-                    <p className="text-green-700">{storeInfo.address}, {storeInfo.city}</p>
-                  </div>
-                )}
-                {!selectedStore && (
-                  <p className="text-xs text-amber-700 mt-2">
-                    ⚠️ Select a location
-                  </p>
-                )}
-              </div>
-            )}
-
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               {/* Order Summary header - DESKTOP ONLY (mobile has collapsible at top) */}
               <h2 className="hidden lg:block text-lg font-bold text-neutral-900 mb-4">Order Summary</h2>
@@ -1254,31 +1291,13 @@ export default function CheckoutPage() {
                   </p>
                 )}
                 
-                {/* Local: Urgency & Install Today */}
+                {/* Local: Drive out installed today */}
                 {isLocal && (
-                  <div className="mt-3 py-2 px-3 -mx-1 bg-amber-50 border border-amber-200 rounded-lg">
-                    <p className="text-xs font-bold text-amber-800 flex items-center gap-1.5">
-                      <span>⚡</span> Most in-stock tires installed today
-                    </p>
-                    <p className="text-[11px] text-amber-700 mt-0.5">
-                      Order now for same-day installation • Walk-ins welcome
+                  <div className="mt-3 py-2.5 px-3 -mx-1 bg-green-50 border border-green-200 rounded-lg text-center">
+                    <p className="text-sm font-bold text-green-800">
+                      🚗 Drive out installed today for ${totalWithTaxAndShipping.toFixed(2)}
                     </p>
                   </div>
-                )}
-                
-                {/* Local: No Surprise Fees messaging */}
-                {isLocal && (
-                  <p className="text-xs text-green-700 font-medium mt-2 flex items-center gap-1">
-                    <span>✓</span> No surprise fees — installed total shown before payment
-                  </p>
-                )}
-                
-                {/* Local: Financing reminder */}
-                {isLocal && totalWithTaxAndShipping > 300 && (
-                  <p className="text-xs text-blue-600 mt-2 flex items-center gap-1.5">
-                    <span>💳</span> 
-                    <span>Flexible financing — as low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo</span>
-                  </p>
                 )}
                 
                 {/* Value Framing */}
