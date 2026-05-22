@@ -710,10 +710,15 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
               {/* BNPL teaser */}
               {total >= 50 && (
                 <div className="bg-blue-50 rounded-xl p-4 mb-4">
-                  <p className="text-sm font-semibold text-blue-900">
-                    Pay over time with Affirm, Klarna, or Afterpay
-                  </p>
-                  <p className="text-xs text-blue-700 mt-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <img 
+                      src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" 
+                      alt="Affirm" 
+                      className="h-5" 
+                    />
+                    <span className="text-sm font-semibold text-blue-900">Pay over time</span>
+                  </div>
+                  <p className="text-xs text-blue-700">
                     As low as ${Math.ceil(total / 12)}/mo • 0% APR available
                   </p>
                 </div>
