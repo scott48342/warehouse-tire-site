@@ -911,10 +911,18 @@ export default function CheckoutPage() {
                   {/* Affirm */}
                   <div className="flex items-center gap-3 bg-white/70 rounded-lg px-4 py-3">
                     <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-5" />
-                    <div>
+                    <div className="flex-1">
                       <p className="font-bold text-blue-900">As low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo with Affirm</p>
-                      <p className="text-sm text-blue-700">0% APR available • Pre-qualify without affecting credit</p>
+                      <p className="text-sm text-blue-700">0% APR available • 3-36 month terms</p>
                     </div>
+                    <a
+                      href="https://www.affirm.com/apps/prequal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap"
+                    >
+                      Pre-qualify
+                    </a>
                   </div>
                   
                   {/* Afterpay */}
@@ -928,7 +936,7 @@ export default function CheckoutPage() {
                 </div>
                 
                 <p className="text-xs text-blue-600 mt-3 text-center">
-                  Select a financing option in the Payment section below ↓
+                  Pre-qualify with no impact to your credit score • Select financing in Payment below ↓
                 </p>
               </div>
             )}
