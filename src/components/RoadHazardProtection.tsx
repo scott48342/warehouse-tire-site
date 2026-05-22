@@ -6,12 +6,13 @@ import { useCart, type CartAccessoryItem } from "@/lib/cart/CartContext";
 /**
  * Road Hazard Protection Component
  * 
- * Offers tire protection plan at checkout - 25% of tire price per tire.
+ * Offers tire protection plan at checkout - 10% of tire price per tire.
  * Covers damage from road hazards (potholes, nails, debris) for 2 years.
  * 
  * @created 2026-04-15
  * @updated 2026-04-17 - Changed to 25% of tire price per tire
  * @updated 2026-04-24 - Changed coverage to 2 years
+ * @updated 2026-05-22 - Changed to 10% to match competition
  */
 
 interface RoadHazardProtectionProps {
@@ -26,7 +27,7 @@ interface RoadHazardProtectionProps {
 }
 
 // Road hazard product configuration
-const ROAD_HAZARD_RATE = 0.25; // 25% of tire price
+const ROAD_HAZARD_RATE = 0.10; // 10% of tire price (competitive with market)
 const ROAD_HAZARD_MIN_PER_TIRE = 15; // Minimum $15 per tire
 const ROAD_HAZARD_SKU = "RH-PROTECT-2YR";
 
@@ -46,7 +47,7 @@ export function RoadHazardProtection({
 
   const isAdded = !!existingRH;
   
-  // Calculate price: 25% of tire price per tire, minimum $15/tire
+  // Calculate price: 10% of tire price per tire, minimum $15/tire
   const avgTirePrice = tireCount > 0 ? tireSubtotal / tireCount : 0;
   const calculatedPerTire = avgTirePrice * ROAD_HAZARD_RATE;
   const pricePerTire = Math.round(Math.max(ROAD_HAZARD_MIN_PER_TIRE, calculatedPerTire) * 100) / 100;
