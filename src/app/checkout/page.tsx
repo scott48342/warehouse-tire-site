@@ -988,27 +988,24 @@ export default function CheckoutPage() {
           <div className="lg:sticky lg:top-24 h-fit space-y-4">
             {/* Local Mode: Store Selector - DESKTOP ONLY (mobile has it in Section 2) */}
             {isLocal && (
-              <div className="hidden lg:block rounded-2xl border-2 border-green-200 bg-green-50 p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-lg">🔧</span>
-                  <h3 className="font-bold text-green-900">Installation Location</h3>
-                </div>
-                <StoreSelector variant="minimal" className="mb-3" />
-                {storeInfo && (
-                  <div className="text-sm text-green-800 mt-3 pt-3 border-t border-green-200">
-                    <p className="font-medium">{storeInfo.name}</p>
-                    <p>{storeInfo.address}</p>
-                    <p>{storeInfo.city}, {storeInfo.state} {storeInfo.zip}</p>
-                    <p className="mt-1">{storeInfo.phone}</p>
+              <div className="hidden lg:block rounded-xl border border-green-200 bg-green-50/80 p-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-sm">🔧</span>
+                    <span className="font-semibold text-green-900 text-sm">Install at:</span>
                   </div>
-                )}
-                {/* Install time indicator */}
-                <div className="mt-3 pt-3 border-t border-green-200">
                   <InstallTimeIndicator variant="badge" />
                 </div>
+                <StoreSelector variant="minimal" className="mb-0" />
+                {storeInfo && (
+                  <div className="text-xs text-green-800 mt-2 pt-2 border-t border-green-200/60">
+                    <p className="font-medium">{storeInfo.name}</p>
+                    <p className="text-green-700">{storeInfo.address}, {storeInfo.city}</p>
+                  </div>
+                )}
                 {!selectedStore && (
                   <p className="text-xs text-amber-700 mt-2">
-                    ⚠️ Please select a location
+                    ⚠️ Select a location
                   </p>
                 )}
               </div>
@@ -1153,7 +1150,7 @@ export default function CheckoutPage() {
                             <span className="text-green-600">✓</span> Mounting & balancing
                           </p>
                           <p className="text-[11px] text-green-700 flex items-center gap-1">
-                            <span className="text-green-600">✓</span> Tire recycling & disposal included
+                            <span className="text-green-600">✓</span> Tire recycling & disposal bundled
                           </p>
                           <p className="text-[11px] text-green-700 flex items-center gap-1">
                             <span className="text-green-600">✓</span> Same-day installation available
@@ -1206,10 +1203,22 @@ export default function CheckoutPage() {
                   </p>
                 )}
                 
+                {/* Local: Urgency & Install Today */}
+                {isLocal && (
+                  <div className="mt-3 py-2 px-3 -mx-1 bg-amber-50 border border-amber-200 rounded-lg">
+                    <p className="text-xs font-bold text-amber-800 flex items-center gap-1.5">
+                      <span>⚡</span> Most in-stock tires installed today
+                    </p>
+                    <p className="text-[11px] text-amber-700 mt-0.5">
+                      Order now for same-day installation • Walk-ins welcome
+                    </p>
+                  </div>
+                )}
+                
                 {/* Local: No Surprise Fees messaging */}
                 {isLocal && (
                   <p className="text-xs text-green-700 font-medium mt-2 flex items-center gap-1">
-                    <span>✓</span> No surprise fees — your local installed total is shown before payment
+                    <span>✓</span> No surprise fees — installed total shown before payment
                   </p>
                 )}
                 
@@ -1217,7 +1226,7 @@ export default function CheckoutPage() {
                 {isLocal && totalWithTaxAndShipping > 300 && (
                   <p className="text-xs text-blue-600 mt-2 flex items-center gap-1.5">
                     <span>💳</span> 
-                    <span>Financing available — ask about easy payment options</span>
+                    <span>Flexible financing — as low as ${Math.ceil(totalWithTaxAndShipping / 12)}/mo</span>
                   </p>
                 )}
                 
@@ -1243,78 +1252,75 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            {/* Store Reviews Trust Strip */}
-            <CheckoutTrustStrip />
-            
-            {/* Local Installation Benefits Box - LOCAL ONLY */}
-            {isLocal && (
-              <div className="rounded-xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-4">
-                <h3 className="font-bold text-green-800 text-sm mb-2">Local Installation Benefits</h3>
-                <div className="grid grid-cols-1 gap-1.5 text-xs">
-                  <p className="text-green-700 flex items-center gap-1.5">
-                    <span className="text-green-600 font-bold">✓</span> No appointment needed
+            {/* CONSOLIDATED LOCAL TRUST & VALUE SECTION */}
+            {isLocal ? (
+              <div className="rounded-xl border border-green-200 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 space-y-3">
+                {/* Key Local Differentiators - HIGHEST PRIORITY */}
+                <div className="space-y-1.5 text-xs">
+                  <p className="text-green-800 font-semibold flex items-center gap-1.5">
+                    <span className="text-green-600">✓</span> Same-day installation available
+                  </p>
+                  <p className="text-green-800 font-semibold flex items-center gap-1.5">
+                    <span className="text-green-600">✓</span> No appointment needed
                   </p>
                   <p className="text-green-700 flex items-center gap-1.5">
-                    <span className="text-green-600 font-bold">✓</span> Walk-ins welcome
+                    <span className="text-green-600">✓</span> Walk-ins welcome
                   </p>
                   <p className="text-green-700 flex items-center gap-1.5">
-                    <span className="text-green-600 font-bold">✓</span> Same-day installation available
-                  </p>
-                  <p className="text-green-700 flex items-center gap-1.5">
-                    <span className="text-green-600 font-bold">✓</span> Installed by local Warehouse Tire technicians
-                  </p>
-                  <p className="text-green-700 flex items-center gap-1.5">
-                    <span className="text-green-600 font-bold">✓</span> Real installed pricing shown upfront
+                    <span className="text-green-600">✓</span> Real installed pricing shown upfront
                   </p>
                 </div>
-                {/* Local promo placeholder */}
-                <div className="mt-3 pt-3 border-t border-green-200">
-                  <p className="text-xs font-semibold text-green-800">🏷️ Local Customer Special</p>
-                  <p className="text-[11px] text-green-700">Same-day installation available — no appointment needed</p>
-                </div>
-              </div>
-            )}
-            
-            {/* Local Included Services Box - LOCAL ONLY */}
-            {isLocal && (
-              <div className="rounded-xl bg-blue-50 border border-blue-100 p-4">
-                <h3 className="font-bold text-blue-800 text-sm mb-2">Included Local Services</h3>
-                <div className="grid grid-cols-1 gap-1.5 text-xs">
-                  <p className="text-blue-700 flex items-center gap-1.5">
-                    <span className="text-blue-600 font-bold">✓</span> Free air checks
-                  </p>
-                  <p className="text-blue-700 flex items-center gap-1.5">
-                    <span className="text-blue-600 font-bold">✓</span> Free tire rotation recommendations
-                  </p>
-                  <p className="text-blue-700 flex items-center gap-1.5">
-                    <span className="text-blue-600 font-bold">✓</span> Free fitment verification
-                  </p>
-                  <p className="text-blue-700 flex items-center gap-1.5">
-                    <span className="text-blue-600 font-bold">✓</span> Local support after the sale
+                
+                {/* Contact before checkout */}
+                <div className="pt-2 border-t border-green-200/60">
+                  <p className="text-xs text-green-800">
+                    <span className="font-medium">Questions before checkout?</span>{" "}
+                    <a 
+                      href={storeInfo ? `tel:${storeInfo.phone.replace(/\D/g, '')}` : BRAND.links.tel} 
+                      className="font-bold text-green-700 hover:underline"
+                    >
+                      📞 {storeInfo?.phone || BRAND.phone.callDisplay}
+                    </a>
                   </p>
                 </div>
+                
+                {/* Included services - compact */}
+                <div className="pt-2 border-t border-green-200/60 text-[11px] text-green-700">
+                  <span className="font-semibold text-green-800">Also included:</span>{" "}
+                  Free air checks • Fitment verification • Local support
+                </div>
+                
+                {/* Appreciation Discount */}
+                <div className="pt-3 border-t border-green-200/60">
+                  <div className="flex items-start gap-2">
+                    <span className="text-base">🎖️</span>
+                    <div>
+                      <p className="text-xs font-bold text-green-900">10% Appreciation Discount</p>
+                      <p className="text-[11px] text-green-700">
+                        Military • Nurses • Medical • First Responders • Teachers • Students
+                      </p>
+                      <p className="text-[10px] text-green-600 mt-0.5">Verification available in-store</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Trust badges - compact */}
+                <div className="pt-2 border-t border-green-200/60 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-green-700">
+                  <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Secure checkout</span>
+                  <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Guaranteed fitment</span>
+                </div>
               </div>
-            )}
-            
-            {/* Trust badges - different for local vs national */}
-            <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
-              <div className="flex items-center gap-2 text-neutral-700">
-                <span className="text-green-600">✓</span>
-                <span>Secure checkout</span>
-              </div>
-              {isLocal ? (
-                <>
+            ) : (
+              <>
+                {/* National Mode: Keep existing trust strip */}
+                <CheckoutTrustStrip />
+                
+                {/* National trust badges */}
+                <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
                   <div className="flex items-center gap-2 text-neutral-700">
                     <span className="text-green-600">✓</span>
-                    <span>Professional installation included</span>
+                    <span>Secure checkout</span>
                   </div>
-                  <div className="flex items-center gap-2 text-neutral-700">
-                    <span className="text-green-600">✓</span>
-                    <span>Mount, balance & install at {storeInfo?.displayName || "store"}</span>
-                  </div>
-                </>
-              ) : (
-                <>
                   <div className="flex items-center gap-2 text-neutral-700">
                     <span className="text-green-600">✓</span>
                     <span>Free shipping over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
@@ -1327,24 +1333,26 @@ export default function CheckoutPage() {
                     <span className="text-green-600">✓</span>
                     <span>We can connect you with a trusted installer near you</span>
                   </div>
-                </>
-              )}
-              <div className="flex items-center gap-2 text-neutral-700">
-                <span className="text-green-600">✓</span>
-                <span>Guaranteed fitment</span>
-              </div>
-            </div>
+                  <div className="flex items-center gap-2 text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>Guaranteed fitment</span>
+                  </div>
+                </div>
+              </>
+            )}
 
-            {/* Need help */}
-            <div className="text-center text-sm text-neutral-600">
-              Need help?{" "}
-              <a 
-                href={isLocal && storeInfo ? `tel:${storeInfo.phone.replace(/\D/g, '')}` : BRAND.links.tel} 
-                className="font-bold text-green-700 hover:underline"
-              >
-                {isLocal && storeInfo ? storeInfo.phone : BRAND.phone.callDisplay}
-              </a>
-            </div>
+            {/* Need help - National mode only (local has it in the consolidated box) */}
+            {!isLocal && (
+              <div className="text-center text-sm text-neutral-600">
+                Need help?{" "}
+                <a 
+                  href={BRAND.links.tel} 
+                  className="font-bold text-green-700 hover:underline"
+                >
+                  {BRAND.phone.callDisplay}
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>
