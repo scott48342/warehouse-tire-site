@@ -178,12 +178,16 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
       const price = extractXmlValue(tireXml, "cost") || extractXmlValue(tireXml, "price");
       
       if (partNumber) {
+        // Apply $50 markup to cost for sell price
+        const costNum = price ? parseFloat(price) : 0;
+        const sellPrice = costNum > 0 ? costNum + 50 : undefined;
+        
         results.push({
           type: "tire",
           sku: partNumber,
           name: [brand, model, size].filter(Boolean).join(" ").trim() || partNumber,
           brand: brand || "Unknown",
-          price: price ? parseFloat(price) : undefined,
+          price: sellPrice,
           url: `/tires/${partNumber}`,
         });
       }
@@ -275,12 +279,16 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
       const cost = extractXmlValue(itemXml, "Cost");
       
       if (partNumber) {
+        // Apply $50 markup to cost for sell price
+        const costNum = cost ? parseFloat(cost) : 0;
+        const sellPrice = costNum > 0 ? costNum + 50 : undefined;
+        
         results.push({
           type: "tire",
           sku: partNumber,
           name: description || `${vendorName || ""} ${partNumber}`.trim(),
           brand: vendorName || "K&M",
-          price: cost ? parseFloat(cost) : undefined,
+          price: sellPrice,
           url: `/tires/${partNumber}`,
         });
       }
