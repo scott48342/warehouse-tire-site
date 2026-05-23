@@ -289,7 +289,7 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
           name: description || `${vendorName || ""} ${partNumber}`.trim(),
           brand: vendorName || "K&M",
           price: sellPrice,
-          url: `/tires/${partNumber}`,
+          url: `/tires/km/${partNumber}`, // K&M tires use /tires/km/ route
         });
       }
     }
