@@ -13,8 +13,6 @@ async function check() {
     where: { order_number: 'WTD-T5JT8F' }
   });
   console.log('Main order:', JSON.stringify(mainOrder, null, 2));
-  
-  await prisma.$disconnect();
 }
 
-check().catch(console.error);
+check().catch(console.error).finally(() => prisma.$disconnect());

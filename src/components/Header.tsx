@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { AccessoriesMegaMenu } from "@/components/AccessoriesMegaMenu";
 import { useShopContext } from "@/contexts/ShopContextProvider";
+import { PartNumberSearch } from "@/components/PartNumberSearch";
 
 type LauncherMode = "vehicles" | "tires" | "wheels" | "packages";
 import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
@@ -230,6 +231,10 @@ export function Header() {
             {/* Cart icon for mobile */}
             <CartIcon />
           </div>
+          {/* Mobile Part Number Search */}
+          <div className="mt-2">
+            <PartNumberSearch className="w-full" />
+          </div>
         </div>
 
         <nav className="hidden items-center gap-4 md:flex">
@@ -430,6 +435,9 @@ export function Header() {
             </details>
 
           </div>
+
+          {/* Part Number Search */}
+          <PartNumberSearch className="w-44" />
 
           <CartIcon />
         </nav>
