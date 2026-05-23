@@ -188,7 +188,7 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
           name: [brand, model, size].filter(Boolean).join(" ").trim() || partNumber,
           brand: brand || "Unknown",
           price: sellPrice,
-          url: `/tires/${partNumber}`,
+          url: `/tires/${partNumber}?source=usautoforce${size ? `&size=${encodeURIComponent(size)}` : ""}`,
         });
       }
     }
