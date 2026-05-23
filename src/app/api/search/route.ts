@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "edge";
+export const runtime = "nodejs"; // Need nodejs for XML parsing
 
 interface SearchResult {
   type: "wheel" | "tire" | "accessory";
@@ -14,13 +14,13 @@ interface SearchResult {
 
 /**
  * Universal part number / SKU search
- * GET /api/search?q=KM54989063518
+ * GET /api/search?q=LXST2071755030
  */
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get("q")?.trim();
   
-  if (!query || query.length < 2) {
+  if (!query || query.length < 3) {
     return NextResponse.json({ results: [], query: query || "" });
   }
   
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
   // Search in parallel
   const [wheelResults, tireResults] = await Promise.all([
     searchWheels(upperQuery),
-    searchTires(query),
+    searchTiresUSAF(upperQuery),
   ]);
   
   results.push(...wheelResults, ...tireResults);
@@ -51,7 +51,6 @@ export async function GET(request: NextRequest) {
 
 async function searchWheels(query: string): Promise<SearchResult[]> {
   try {
-    // Try WheelPros product lookup by SKU
     const wpApiKey = process.env.WHEELPROS_API_KEY;
     const wpApiSecret = process.env.WHEELPROS_API_SECRET;
     
@@ -71,23 +70,18 @@ async function searchWheels(query: string): Promise<SearchResult[]> {
     if (!authRes.ok) return [];
     const { access_token } = await authRes.json();
     
-    // Search by part number
+    // Search by UPC/part number
     const searchRes = await fetch(
       `https://api.wheelpros.com/products/v1/search/wheel?upc=${encodeURIComponent(query)}&limit=5`,
-      {
-        headers: { Authorization: `Bearer ${access_token}` },
-      }
+      { headers: { Authorization: `Bearer ${access_token}` } }
     );
     
     if (!searchRes.ok) {
-      // Try searching by style name if UPC lookup fails
+      // Try style name search as fallback
       const styleRes = await fetch(
         `https://api.wheelpros.com/products/v1/search/wheel?style_description=${encodeURIComponent(query)}&limit=5`,
-        {
-          headers: { Authorization: `Bearer ${access_token}` },
-        }
+        { headers: { Authorization: `Bearer ${access_token}` } }
       );
-      
       if (!styleRes.ok) return [];
       const styleData = await styleRes.json();
       return mapWheelResults(styleData.data || []);
@@ -113,36 +107,113 @@ function mapWheelResults(wheels: any[]): SearchResult[] {
   }));
 }
 
-async function searchTires(query: string): Promise<SearchResult[]> {
+/**
+ * Search tires via US AutoForce StockCheck API
+ * Uses part number search with wildcard matching
+ */
+async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
   try {
-    // Try TireWeb search by part number
-    const accessKey = process.env.TIREWEB_ACCESS_KEY || process.env.TIREWIRE_ACCESS_KEY;
-    const groupToken = process.env.TIREWEB_GROUP_TOKEN || process.env.TIREWIRE_GROUP_TOKEN;
+    const username = process.env.USAUTOFORCE_USERNAME;
+    const password = process.env.USAUTOFORCE_PASSWORD;
+    const account = process.env.USAUTOFORCE_ACCOUNT;
     
-    if (!accessKey || !groupToken) return [];
+    if (!username || !password || !account) {
+      console.log("[search] USAF credentials not configured");
+      return [];
+    }
     
-    const res = await fetch(
-      `https://ws.tirewire.com/webservice/PartLookup?` +
-      `accessKey=${accessKey}&groupToken=${groupToken}&partNumber=${encodeURIComponent(query)}`,
-      { headers: { Accept: "application/json" } }
-    );
+    const isTest = username.toLowerCase().includes("test");
+    const apiUrl = isTest 
+      ? "https://servicesstage.usautoforce.com/integrationservice.asmx"
+      : "https://services.usautoforce.com/integrationservice.asmx";
     
-    if (!res.ok) return [];
+    // Build SOAP request for StockCheck with part number
+    const soapBody = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="https://services.usautoforce.com">
+  <soap:Body>
+    <ns:StockCheck>
+      <ns:request>
+        <ns:username>${escapeXml(username)}</ns:username>
+        <ns:password>${escapeXml(password)}</ns:password>
+        <ns:accountNumber>${escapeXml(account)}</ns:accountNumber>
+        <ns:tires>
+          <ns:TireDto>
+            <ns:partNumber>${escapeXml(query)}</ns:partNumber>
+          </ns:TireDto>
+        </ns:tires>
+      </ns:request>
+    </ns:StockCheck>
+  </soap:Body>
+</soap:Envelope>`;
+
+    const res = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/xml; charset=utf-8",
+        "SOAPAction": "https://services.usautoforce.com/StockCheck",
+      },
+      body: soapBody,
+    });
     
-    const data = await res.json();
-    const items = data.Items || data.items || [];
+    if (!res.ok) {
+      console.error("[search] USAF API error:", res.status);
+      return [];
+    }
     
-    return items.slice(0, 5).map((t: any) => ({
-      type: "tire" as const,
-      sku: t.PartNumber || t.partNumber || "",
-      name: `${t.Brand || t.brand || ""} ${t.Model || t.model || ""} ${t.Size || t.size || ""}`.trim(),
-      brand: t.Brand || t.brand || "",
-      image: t.ImageUrl || t.imageUrl,
-      price: t.SellPrice || t.sellPrice || t.Price || t.price,
-      url: `/tires/${t.PartNumber || t.partNumber}`,
-    }));
+    const xml = await res.text();
+    
+    // Parse response - extract tire data
+    const results: SearchResult[] = [];
+    
+    // Extract individual tire results using regex (simple parsing)
+    const tireMatches = xml.matchAll(/<TireResultDto>([\s\S]*?)<\/TireResultDto>/g);
+    
+    for (const match of tireMatches) {
+      const tireXml = match[1];
+      const partNumber = extractXmlValue(tireXml, "partNumber") || extractXmlValue(tireXml, "PartNumber");
+      const brand = extractXmlValue(tireXml, "brand") || extractXmlValue(tireXml, "Brand");
+      const model = extractXmlValue(tireXml, "model") || extractXmlValue(tireXml, "Model") || extractXmlValue(tireXml, "description");
+      const size = extractXmlValue(tireXml, "size") || extractXmlValue(tireXml, "Size");
+      const price = extractXmlValue(tireXml, "cost") || extractXmlValue(tireXml, "price");
+      
+      if (partNumber) {
+        results.push({
+          type: "tire",
+          sku: partNumber,
+          name: [brand, model, size].filter(Boolean).join(" ").trim() || partNumber,
+          brand: brand || "Unknown",
+          price: price ? parseFloat(price) : undefined,
+          url: `/tires/${partNumber}`,
+        });
+      }
+    }
+    
+    return results.slice(0, 5);
   } catch (err) {
     console.error("[search] Tire search error:", err);
     return [];
   }
+}
+
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function extractXmlValue(xml: string, tag: string): string | null {
+  // Try both with and without namespace prefix
+  const patterns = [
+    new RegExp(`<(?:ns:)?${tag}>([^<]*)<\/(?:ns:)?${tag}>`, "i"),
+    new RegExp(`<${tag}>([^<]*)<\/${tag}>`, "i"),
+  ];
+  
+  for (const pattern of patterns) {
+    const match = xml.match(pattern);
+    if (match && match[1]) return match[1].trim();
+  }
+  return null;
 }
