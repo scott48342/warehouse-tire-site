@@ -323,14 +323,6 @@ export function Header() {
             </details>
 
             <Link
-              href="/rebates"
-              className="inline-flex items-center gap-1.5 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-emerald-700 hover:border-emerald-200 hover:text-emerald-800"
-            >
-              <span>💰</span>
-              REBATES
-            </Link>
-
-            <Link
               href="/financing"
               className="inline-flex items-center gap-1.5 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-blue-700 hover:border-blue-200 hover:text-blue-800"
             >
@@ -375,14 +367,6 @@ export function Header() {
 
             {/* Accessories Mega Menu with subcategory hover */}
             <AccessoriesMegaMenu />
-
-            <Link
-              href="/gallery"
-              className="inline-flex items-center gap-1.5 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200"
-            >
-              <span>📸</span>
-              GALLERY
-            </Link>
 
             {/* Jake - Fitment Expert */}
             <Link
