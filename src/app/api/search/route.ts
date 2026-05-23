@@ -198,6 +198,7 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
 
 /**
  * Search tires via K&M Tire Inventory API
+ * K&M often requires VendorName or it 500s, so we detect vendor from part number prefix
  */
 async function searchTiresKM(query: string): Promise<SearchResult[]> {
   try {
@@ -208,15 +209,19 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
       return [];
     }
     
+    // Detect vendor from part number prefix
+    const vendor = detectVendorFromPartNumber(query);
+    
     const xmlBody = `<?xml version="1.0" encoding="UTF-8"?>
 <InventoryRequest>
   <Credentials><APIKey>${escapeXml(apiKey)}</APIKey></Credentials>
   <Item>
     <PartNumber>${escapeXml(query)}</PartNumber>
+    ${vendor ? `<VendorName>${escapeXml(vendor)}</VendorName>` : ""}
   </Item>
 </InventoryRequest>`;
 
-    const res = await fetch("https://api.kmtire.com/v1/inventory", {
+    let res = await fetch("https://api.kmtire.com/v1/inventory", {
       method: "POST",
       headers: {
         "Content-Type": "application/xml",
@@ -224,6 +229,27 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
       },
       body: xmlBody,
     });
+    
+    // If 500 without vendor, retry with common vendors
+    if (res.status === 500 && !vendor) {
+      const fallbackVendors = ["Lexani", "Lionhart", "Delinte", "Landgolden", "Thunderer"];
+      for (const v of fallbackVendors) {
+        const retryBody = `<?xml version="1.0" encoding="UTF-8"?>
+<InventoryRequest>
+  <Credentials><APIKey>${escapeXml(apiKey)}</APIKey></Credentials>
+  <Item>
+    <PartNumber>${escapeXml(query)}</PartNumber>
+    <VendorName>${escapeXml(v)}</VendorName>
+  </Item>
+</InventoryRequest>`;
+        res = await fetch("https://api.kmtire.com/v1/inventory", {
+          method: "POST",
+          headers: { "Content-Type": "application/xml", "Accept": "application/xml, text/xml, */*" },
+          body: retryBody,
+        });
+        if (res.ok) break;
+      }
+    }
     
     if (!res.ok) {
       console.error("[search] K&M API error:", res.status);
@@ -233,25 +259,28 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
     const xml = await res.text();
     const results: SearchResult[] = [];
     
+    // Check for successful result
+    if (!xml.includes("<ResultCode>0</ResultCode>")) {
+      return [];
+    }
+    
     // Parse K&M response - look for Item elements
     const itemMatches = xml.matchAll(/<Item>([\s\S]*?)<\/Item>/g);
     
     for (const match of itemMatches) {
       const itemXml = match[1];
       const partNumber = extractXmlValue(itemXml, "PartNumber");
-      const brand = extractXmlValue(itemXml, "Brand") || extractXmlValue(itemXml, "Manufacturer");
-      const description = extractXmlValue(itemXml, "Description") || extractXmlValue(itemXml, "ProductName");
-      const price = extractXmlValue(itemXml, "Price") || extractXmlValue(itemXml, "Cost");
-      const imageUrl = extractXmlValue(itemXml, "ImageURL") || extractXmlValue(itemXml, "Image");
+      const vendorName = extractCdataValue(itemXml, "VendorName");
+      const description = extractCdataValue(itemXml, "Description");
+      const cost = extractXmlValue(itemXml, "Cost");
       
       if (partNumber) {
         results.push({
           type: "tire",
           sku: partNumber,
-          name: description || `${brand || ""} ${partNumber}`.trim(),
-          brand: brand || "K&M",
-          image: imageUrl || undefined,
-          price: price ? parseFloat(price) : undefined,
+          name: description || `${vendorName || ""} ${partNumber}`.trim(),
+          brand: vendorName || "K&M",
+          price: cost ? parseFloat(cost) : undefined,
           url: `/tires/${partNumber}`,
         });
       }
@@ -262,6 +291,40 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
     console.error("[search] K&M search error:", err);
     return [];
   }
+}
+
+/**
+ * Detect tire vendor from part number prefix
+ */
+function detectVendorFromPartNumber(partNumber: string): string | null {
+  const upper = partNumber.toUpperCase();
+  const prefixMap: Record<string, string> = {
+    "LXST": "Lexani",
+    "LXTR": "Lexani", 
+    "LXM": "Lexani",
+    "LHS": "Lionhart",
+    "LH": "Lionhart",
+    "DX": "Delinte",
+    "DS": "Delinte",
+    "LGD": "Landgolden",
+    "TH": "Thunderer",
+  };
+  
+  for (const [prefix, vendor] of Object.entries(prefixMap)) {
+    if (upper.startsWith(prefix)) return vendor;
+  }
+  return null;
+}
+
+/**
+ * Extract CDATA value from XML
+ */
+function extractCdataValue(xml: string, tag: string): string | null {
+  const pattern = new RegExp(`<${tag}><!\\[CDATA\\[([^\\]]+)\\]\\]><\\/${tag}>`, "i");
+  const match = xml.match(pattern);
+  if (match && match[1]) return match[1].trim();
+  // Fallback to regular extraction
+  return extractXmlValue(xml, tag);
 }
 
 function escapeXml(str: string): string {
