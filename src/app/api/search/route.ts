@@ -52,24 +52,27 @@ export async function GET(request: NextRequest) {
 
 async function searchWheels(query: string): Promise<SearchResult[]> {
   try {
-    const wpApiKey = process.env.WHEELPROS_API_KEY;
-    const wpApiSecret = process.env.WHEELPROS_API_SECRET;
+    const userName = process.env.WHEELPROS_USERNAME;
+    const password = process.env.WHEELPROS_PASSWORD;
     
-    if (!wpApiKey || !wpApiSecret) return [];
+    if (!userName || !password) {
+      console.log("[search] WheelPros credentials not configured");
+      return [];
+    }
     
-    // Get auth token
+    // Get auth token (username/password auth)
     const authRes = await fetch("https://api.wheelpros.com/auth/v1/authorize", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        grant_type: "client_credentials",
-        client_id: wpApiKey,
-        client_secret: wpApiSecret,
-      }),
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ userName, password }),
     });
     
-    if (!authRes.ok) return [];
-    const { access_token } = await authRes.json();
+    if (!authRes.ok) {
+      console.error("[search] WheelPros auth failed:", authRes.status);
+      return [];
+    }
+    const authData = await authRes.json();
+    const access_token = authData.accessToken || authData.token;
     
     // Search by UPC/part number
     const searchRes = await fetch(
