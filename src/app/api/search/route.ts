@@ -27,13 +27,14 @@ export async function GET(request: NextRequest) {
   const results: SearchResult[] = [];
   const upperQuery = query.toUpperCase();
   
-  // Search in parallel
-  const [wheelResults, tireResults] = await Promise.all([
+  // Search in parallel across all suppliers
+  const [wheelResults, usafResults, kmResults] = await Promise.all([
     searchWheels(upperQuery),
     searchTiresUSAF(upperQuery),
+    searchTiresKM(upperQuery),
   ]);
   
-  results.push(...wheelResults, ...tireResults);
+  results.push(...wheelResults, ...usafResults, ...kmResults);
   
   // Sort: exact matches first, then by relevance
   results.sort((a, b) => {
@@ -191,6 +192,74 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
     return results.slice(0, 5);
   } catch (err) {
     console.error("[search] Tire search error:", err);
+    return [];
+  }
+}
+
+/**
+ * Search tires via K&M Tire Inventory API
+ */
+async function searchTiresKM(query: string): Promise<SearchResult[]> {
+  try {
+    const apiKey = process.env.KM_API_KEY || process.env.KMTIRE_API_KEY || process.env.KM_TIRE_API_KEY;
+    
+    if (!apiKey) {
+      console.log("[search] K&M API key not configured");
+      return [];
+    }
+    
+    const xmlBody = `<?xml version="1.0" encoding="UTF-8"?>
+<InventoryRequest>
+  <Credentials><APIKey>${escapeXml(apiKey)}</APIKey></Credentials>
+  <Item>
+    <PartNumber>${escapeXml(query)}</PartNumber>
+  </Item>
+</InventoryRequest>`;
+
+    const res = await fetch("https://api.kmtire.com/v1/inventory", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/xml",
+        "Accept": "application/xml, text/xml, */*",
+      },
+      body: xmlBody,
+    });
+    
+    if (!res.ok) {
+      console.error("[search] K&M API error:", res.status);
+      return [];
+    }
+    
+    const xml = await res.text();
+    const results: SearchResult[] = [];
+    
+    // Parse K&M response - look for Item elements
+    const itemMatches = xml.matchAll(/<Item>([\s\S]*?)<\/Item>/g);
+    
+    for (const match of itemMatches) {
+      const itemXml = match[1];
+      const partNumber = extractXmlValue(itemXml, "PartNumber");
+      const brand = extractXmlValue(itemXml, "Brand") || extractXmlValue(itemXml, "Manufacturer");
+      const description = extractXmlValue(itemXml, "Description") || extractXmlValue(itemXml, "ProductName");
+      const price = extractXmlValue(itemXml, "Price") || extractXmlValue(itemXml, "Cost");
+      const imageUrl = extractXmlValue(itemXml, "ImageURL") || extractXmlValue(itemXml, "Image");
+      
+      if (partNumber) {
+        results.push({
+          type: "tire",
+          sku: partNumber,
+          name: description || `${brand || ""} ${partNumber}`.trim(),
+          brand: brand || "K&M",
+          image: imageUrl || undefined,
+          price: price ? parseFloat(price) : undefined,
+          url: `/tires/${partNumber}`,
+        });
+      }
+    }
+    
+    return results.slice(0, 5);
+  } catch (err) {
+    console.error("[search] K&M search error:", err);
     return [];
   }
 }
