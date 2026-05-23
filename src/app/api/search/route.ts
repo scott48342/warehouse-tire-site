@@ -283,13 +283,17 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
         const costNum = cost ? parseFloat(cost) : 0;
         const sellPrice = costNum > 0 ? costNum + 50 : undefined;
         
+        // Extract size from description (e.g., "LX 235/55R17 LXUHP-207 99W")
+        const sizeMatch = description?.match(/(\d{3}\/\d{2}R\d{2})/);
+        const size = sizeMatch ? sizeMatch[1] : "";
+        
         results.push({
           type: "tire",
           sku: partNumber,
           name: description || `${vendorName || ""} ${partNumber}`.trim(),
           brand: vendorName || "K&M",
           price: sellPrice,
-          url: `/tires/km/${partNumber}`, // K&M tires use /tires/km/ route
+          url: `/tires/${partNumber}?source=tireweb${size ? `&size=${encodeURIComponent(size)}` : ""}`,
         });
       }
     }
