@@ -32,6 +32,7 @@ import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { isPremiumTrimUxEnabled } from "@/lib/features/premiumTrimUx";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
 import { TireFilterSidebar } from "@/components/TireFilterSidebar";
+import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
 import { MiniRatings, PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { derivePerformanceRatings, parseUTQG, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { 
@@ -3471,9 +3472,9 @@ export default async function TiresPage({
         )}
 
         {/* Desktop/Tablet SRP Layout - Hidden on mobile when in local mode */}
-        <div className={`mt-5 grid gap-6 md:grid-cols-[280px_1fr] ${isLocalMode ? 'hidden md:grid' : ''}`}>
+        <div className={`mt-5 grid gap-6 lg:grid-cols-[280px_1fr] ${isLocalMode ? 'hidden lg:grid' : ''}`}>
           {/* Filters Sidebar - Compact utility panel */}
-          <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 md:block">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 lg:block">
             {/* Package Summary - shows when building a package */}
             <div className="mb-4">
               <PackageSummary variant="sidebar" showCheckout={true} />
@@ -3549,6 +3550,91 @@ export default async function TiresPage({
             />
 
           </aside>
+
+          {/* Mobile/Tablet Filter Drawer - floating button + slide-out panel */}
+          <MobileFilterDrawer
+            activeFilterCount={
+              brands.length +
+              treadCategories.length +
+              speeds.length +
+              loadRanges.length +
+              (selectedMileageBand ? 1 : 0) +
+              (runFlat ? 1 : 0) +
+              (snowRated ? 1 : 0) +
+              (allWeather ? 1 : 0) +
+              (xlOnly ? 1 : 0) +
+              (studdable ? 1 : 0) +
+              treadwearRanges.length +
+              rimDiameters.length +
+              overallDiameters.length +
+              (priceMin ? 1 : 0) +
+              (priceMax ? 1 : 0)
+            }
+          >
+            <div className="mb-4">
+              <PackageSummary variant="sidebar" showCheckout={true} />
+            </div>
+
+            {hasVehicle ? (
+              <div className="mb-4">
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
+              </div>
+            ) : null}
+
+            <TireFilterSidebar
+              data={{
+                brands,
+                priceMin,
+                priceMax,
+                treadCategories,
+                speeds,
+                loadRanges,
+                mileageBand: selectedMileageBand,
+                runFlat,
+                snowRated,
+                allWeather,
+                xlOnly,
+                studdable,
+                treadwearRanges,
+                rimDiameters,
+                overallDiameters,
+                brandOptions: allBrands.map(b => ({ value: b, count: brandCountsDisplay.get(b) || 0 })),
+                treadCategoryOptions: treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 })),
+                speedOptions: speedsAvailable.map(s => ({ value: s, count: speedCounts.get(s) || 0 })),
+                loadRangeOptions: loadRangesAvailable.map(lr => ({ value: lr.value, count: loadRangeCounts.get(lr.value) || 0 })),
+                mileageOptions: [
+                  { value: "40K+" as const, count: mileage40kCount },
+                  { value: "60K+" as const, count: mileage60kCount },
+                  { value: "80K+" as const, count: mileage80kCount },
+                ],
+                treadwearOptions: [
+                  { value: "300-400" as const, label: "300-400 (Performance)", count: treadwear300to400Count },
+                  { value: "400-500" as const, label: "400-500 (Standard)", count: treadwear400to500Count },
+                  { value: "500-600" as const, label: "500-600 (Long-wearing)", count: treadwear500to600Count },
+                  { value: "600+" as const, label: "600+ (Ultra long-wearing)", count: treadwear600plusCount },
+                ],
+                rimDiameterOptions: rimDiametersAvailable.map(rim => ({ value: rim, count: rimDiameterCounts.get(rim) || 0 })),
+                overallDiameterOptions: overallDiametersAvailable.map(dia => ({ value: dia, count: overallDiameterCounts.get(dia) || 0 })),
+                runFlatCount,
+                snowRatedCount,
+                allWeatherCount,
+                xlCount,
+                studdableCount,
+                basePath,
+                year,
+                make,
+                model,
+                trim,
+                modification,
+                selectedSize,
+                sort,
+                wheelSku,
+                wheelDia,
+                inStockCount: items.length,
+                totalCount: itemsEnriched.length,
+              }}
+            />
+          </MobileFilterDrawer>
 
           <section>
             {/* ═══════════════════════════════════════════════════════════════════════

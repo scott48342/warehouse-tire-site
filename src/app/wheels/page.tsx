@@ -4,6 +4,7 @@ import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 import { WheelsGridWithSelection } from "@/components/WheelsGridWithSelection";
 import { WheelFilterSidebar } from "@/components/WheelFilterSidebar";
+import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
 import { WheelsLazyLoader, LoadMoreButton } from "@/components/WheelsLazyLoader";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
@@ -1829,8 +1830,8 @@ export default async function WheelsPage({
 
         {/* Main content grid - only show if NOT effectively blocked */}
         {!effectivelyBlocked ? (
-        <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
-          <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 md:block">
+        <div className="mt-5 grid gap-6 lg:grid-cols-[280px_1fr]">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 lg:block">
             {/* Package Summary - shows when building a package */}
             <div className="mb-4">
               <PackageSummary variant="sidebar" showCheckout={true} />
@@ -1885,6 +1886,63 @@ export default async function WheelsPage({
               }}
             />
           </aside>
+
+          {/* Mobile/Tablet Filter Drawer - floating button + slide-out panel */}
+          <MobileFilterDrawer
+            activeFilterCount={
+              (brandCd ? 1 : 0) +
+              (styleParam ? 1 : 0) +
+              (finish ? 1 : 0) +
+              (diameterParam ? 1 : 0) +
+              (widthParam ? 1 : 0) +
+              offsetParams.length +
+              (priceMin ? 1 : 0) +
+              (priceMax ? 1 : 0) +
+              (boltPatternParam ? 1 : 0)
+            }
+          >
+            {/* Package Summary - shows when building a package */}
+            <div className="mb-4">
+              <PackageSummary variant="sidebar" showCheckout={true} />
+            </div>
+
+            {year && make && model ? (
+              <div className="mb-4">
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} productType="wheels" setupMode={initialSetupMode || "staggered"} />
+              </div>
+            ) : null}
+
+            <WheelFilterSidebar
+              data={{
+                brands: brandCd ? [brandCd] : [],
+                models: styleParam ? [styleParam] : [],
+                finishes: finish ? [finish] : [],
+                diameters: diameterParam ? [diameterParam] : [],
+                widths: widthParam ? [widthParam] : [],
+                offsets: offsetParams,
+                priceMin: priceMin,
+                priceMax: priceMax,
+                boltPattern: boltPatternParam || "",
+                brandOptions: brandOptions.slice(0, 50),
+                modelOptions: modelOptions,
+                finishOptions: finishBuckets.slice(0, 50).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                diameterOptions: diameterBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                widthOptions: widthBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                offsetOptions: offsetBuckets.slice(0, 50).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                boltPatternOptions: boltPatternBuckets.map(b => ({ value: b.value, count: b.count ?? undefined })),
+                basePath: basePath,
+                year: year,
+                make: make,
+                model: model,
+                trim: trim,
+                modification: modification,
+                sort: sort,
+                fitLevel: fitLevel,
+                vehicleBoltPattern: fitmentSearchBp || bp || undefined,
+                totalCount: itemsFinal.length,
+              }}
+            />
+          </MobileFilterDrawer>
 
           <section>
             {/* Desktop Step 1/Step 2 package flow boxes REMOVED per user request */}
