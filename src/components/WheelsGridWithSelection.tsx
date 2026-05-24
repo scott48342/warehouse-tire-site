@@ -1444,7 +1444,7 @@ export function WheelsGridWithSelection({
           
           {/* Cards - increased spacing */}
           <div className="p-5 pt-6">
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-5 grid-cols-2 md:grid-cols-4">
               {filteredRecommended.slice(0, 4).map((w, idx) => renderWheelCard(w, idx, true))}
             </div>
             
@@ -1499,7 +1499,7 @@ export function WheelsGridWithSelection({
       )}
       
       {/* Main Grid */}
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
         {displayWheels.length ? (
           displayWheels.map((w, idx) => renderWheelCard(w, idx))
         ) : (
