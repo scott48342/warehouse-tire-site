@@ -521,22 +521,38 @@ export async function getOrderStatus(orderNumber: string): Promise<OrderStatusRe
     const errorCode = extractXmlValue(response, "errorCode");
     const errorMessage = extractXmlValue(response, "errorMessage");
     
-    if (errorCode !== "success") {
+    // USAF returns no errorCode on success, only on failure
+    // Check for explicit failure codes
+    if (errorCode && errorCode !== "success") {
       return {
         success: false,
+        errorCode,
         errorMessage: errorMessage || "Unknown error",
       };
     }
     
-    // Extract tracking numbers
+    // Extract order status - presence indicates success
+    const status = extractXmlValue(response, "status");
+    const invoiceNumber = extractXmlValue(response, "invoiceNumber");
+    
+    // If no status and no invoice, it's likely an error
+    if (!status && !invoiceNumber && errorMessage) {
+      return {
+        success: false,
+        errorMessage,
+      };
+    }
+    
+    // Extract tracking numbers from <trackingNumbers><string>xxx</string></trackingNumbers>
     const trackingMatches = response.matchAll(/<string>([^<]+)<\/string>/g);
-    const trackingNumbers = Array.from(trackingMatches, m => m[1]);
+    const trackingNumbers = Array.from(trackingMatches, m => m[1])
+      .filter(t => /^\d{10,}$/.test(t)); // Only keep numeric tracking numbers (10+ digits)
     
     return {
       success: true,
-      status: extractXmlValue(response, "status") || undefined,
+      status: status || undefined,
       orderNumber: extractXmlValue(response, "orderNumber") || undefined,
-      invoiceNumber: extractXmlValue(response, "invoiceNumber") || undefined,
+      invoiceNumber: invoiceNumber || undefined,
       poNumber: extractXmlValue(response, "poNumber") || undefined,
       trackingNumbers: trackingNumbers.length > 0 ? trackingNumbers : undefined,
       totalCost: extractXmlNumber(response, "totalCost") || undefined,
