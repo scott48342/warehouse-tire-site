@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 
 /**
- * Calculate tire diameter in inches
+ * Calculate tire diameter in inches from metric size
  * Formula: (2 * (width * aspect / 2540)) + rim
  */
 function calculateDiameter(width: number, aspect: number, rim: number): number {
@@ -29,24 +29,77 @@ function calculateError(originalDiameter: number, newDiameter: number): number {
   return ((newDiameter - originalDiameter) / originalDiameter) * 100;
 }
 
+// Metric sizes
 const COMMON_WIDTHS = [195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325, 335];
 const COMMON_ASPECTS = [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85];
 const COMMON_RIMS = [15, 16, 17, 18, 19, 20, 22, 24];
 
-export function SpeedometerCalculator() {
-  // Original tire
-  const [origWidth, setOrigWidth] = useState(265);
-  const [origAspect, setOrigAspect] = useState(70);
-  const [origRim, setOrigRim] = useState(17);
+// Flotation sizes - format: { diameter, width, display }
+const FLOTATION_SIZES = [
+  { diameter: 29, width: 9.50, display: "29x9.50" },
+  { diameter: 30, width: 9.50, display: "30x9.50" },
+  { diameter: 31, width: 10.50, display: "31x10.50" },
+  { diameter: 32, width: 11.50, display: "32x11.50" },
+  { diameter: 33, width: 10.50, display: "33x10.50" },
+  { diameter: 33, width: 12.50, display: "33x12.50" },
+  { diameter: 33, width: 13.50, display: "33x13.50" },
+  { diameter: 34, width: 10.50, display: "34x10.50" },
+  { diameter: 35, width: 10.50, display: "35x10.50" },
+  { diameter: 35, width: 11.50, display: "35x11.50" },
+  { diameter: 35, width: 12.50, display: "35x12.50" },
+  { diameter: 35, width: 13.50, display: "35x13.50" },
+  { diameter: 36, width: 13.50, display: "36x13.50" },
+  { diameter: 37, width: 12.50, display: "37x12.50" },
+  { diameter: 37, width: 13.50, display: "37x13.50" },
+  { diameter: 38, width: 13.50, display: "38x13.50" },
+  { diameter: 38, width: 15.50, display: "38x15.50" },
+  { diameter: 39, width: 13.50, display: "39x13.50" },
+  { diameter: 40, width: 13.50, display: "40x13.50" },
+  { diameter: 40, width: 15.50, display: "40x15.50" },
+  { diameter: 42, width: 14.50, display: "42x14.50" },
+  { diameter: 42, width: 15.50, display: "42x15.50" },
+  { diameter: 44, width: 19.50, display: "44x19.50" },
+  { diameter: 46, width: 19.50, display: "46x19.50" },
+];
 
-  // New tire
+const FLOTATION_RIMS = [15, 16, 17, 18, 20, 22, 24];
+
+type SizeMode = "metric" | "flotation";
+
+export function SpeedometerCalculator() {
+  // Mode toggle
+  const [origMode, setOrigMode] = useState<SizeMode>("metric");
+  const [newMode, setNewMode] = useState<SizeMode>("metric");
+
+  // Original tire - metric
+  const [origWidth, setOrigWidth] = useState(265);
+  const [origAspect, setOrigAspect] = useState(65);
+  const [origRim, setOrigRim] = useState(18);
+
+  // Original tire - flotation
+  const [origFlotation, setOrigFlotation] = useState(0); // index into FLOTATION_SIZES
+  const [origFlotationRim, setOrigFlotationRim] = useState(15);
+
+  // New tire - metric
   const [newWidth, setNewWidth] = useState(285);
   const [newAspect, setNewAspect] = useState(70);
-  const [newRim, setNewRim] = useState(17);
+  const [newRim, setNewRim] = useState(18);
+
+  // New tire - flotation
+  const [newFlotation, setNewFlotation] = useState(4); // 33x12.50
+  const [newFlotationRim, setNewFlotationRim] = useState(17);
 
   const results = useMemo(() => {
-    const origDiameter = calculateDiameter(origWidth, origAspect, origRim);
-    const newDiameter = calculateDiameter(newWidth, newAspect, newRim);
+    // Calculate original diameter based on mode
+    const origDiameter = origMode === "metric"
+      ? calculateDiameter(origWidth, origAspect, origRim)
+      : FLOTATION_SIZES[origFlotation].diameter;
+
+    // Calculate new diameter based on mode
+    const newDiameter = newMode === "metric"
+      ? calculateDiameter(newWidth, newAspect, newRim)
+      : FLOTATION_SIZES[newFlotation].diameter;
+
     const error = calculateError(origDiameter, newDiameter);
 
     // Calculate actual speeds at common displayed speeds
@@ -56,9 +109,20 @@ export function SpeedometerCalculator() {
       actual: calculateActualSpeed(displayed, origDiameter, newDiameter),
     }));
 
+    // Build display strings
+    const origDisplay = origMode === "metric"
+      ? `${origWidth}/${origAspect}R${origRim}`
+      : `${FLOTATION_SIZES[origFlotation].display}R${origFlotationRim}`;
+    
+    const newDisplay = newMode === "metric"
+      ? `${newWidth}/${newAspect}R${newRim}`
+      : `${FLOTATION_SIZES[newFlotation].display}R${newFlotationRim}`;
+
     return {
       origDiameter,
       newDiameter,
+      origDisplay,
+      newDisplay,
       diameterDiff: newDiameter - origDiameter,
       error,
       speedComparisons,
@@ -71,7 +135,8 @@ export function SpeedometerCalculator() {
         new: 63360 / (newDiameter * Math.PI),
       },
     };
-  }, [origWidth, origAspect, origRim, newWidth, newAspect, newRim]);
+  }, [origMode, origWidth, origAspect, origRim, origFlotation, origFlotationRim,
+      newMode, newWidth, newAspect, newRim, newFlotation, newFlotationRim]);
 
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-6">
@@ -83,47 +148,98 @@ export function SpeedometerCalculator() {
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         {/* Original Tire */}
         <div className="rounded-xl bg-neutral-50 p-4">
-          <h4 className="font-bold text-neutral-900">Original Tire Size</h4>
-          <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
-            <div>
-              <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Width</label>
-              <select
-                value={origWidth}
-                onChange={(e) => setOrigWidth(Number(e.target.value))}
-                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+          <div className="flex items-center justify-between">
+            <h4 className="font-bold text-neutral-900">Original Tire Size</h4>
+            <div className="flex rounded-lg bg-neutral-200 p-0.5 text-xs">
+              <button
+                onClick={() => setOrigMode("metric")}
+                className={`px-2 py-1 rounded-md transition-colors ${
+                  origMode === "metric" ? "bg-white shadow-sm font-medium" : "text-neutral-600"
+                }`}
               >
-                {COMMON_WIDTHS.map((w) => (
-                  <option key={w} value={w}>{w}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Aspect</label>
-              <select
-                value={origAspect}
-                onChange={(e) => setOrigAspect(Number(e.target.value))}
-                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                Metric
+              </button>
+              <button
+                onClick={() => setOrigMode("flotation")}
+                className={`px-2 py-1 rounded-md transition-colors ${
+                  origMode === "flotation" ? "bg-white shadow-sm font-medium" : "text-neutral-600"
+                }`}
               >
-                {COMMON_ASPECTS.map((a) => (
-                  <option key={a} value={a}>{a}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Rim</label>
-              <select
-                value={origRim}
-                onChange={(e) => setOrigRim(Number(e.target.value))}
-                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
-              >
-                {COMMON_RIMS.map((r) => (
-                  <option key={r} value={r}>{r}</option>
-                ))}
-              </select>
+                Flotation
+              </button>
             </div>
           </div>
+
+          {origMode === "metric" ? (
+            <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Width</label>
+                <select
+                  value={origWidth}
+                  onChange={(e) => setOrigWidth(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {COMMON_WIDTHS.map((w) => (
+                    <option key={w} value={w}>{w}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Aspect</label>
+                <select
+                  value={origAspect}
+                  onChange={(e) => setOrigAspect(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {COMMON_ASPECTS.map((a) => (
+                    <option key={a} value={a}>{a}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Rim</label>
+                <select
+                  value={origRim}
+                  onChange={(e) => setOrigRim(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {COMMON_RIMS.map((r) => (
+                    <option key={r} value={r}>{r}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Size</label>
+                <select
+                  value={origFlotation}
+                  onChange={(e) => setOrigFlotation(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {FLOTATION_SIZES.map((s, i) => (
+                    <option key={i} value={i}>{s.display}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Rim</label>
+                <select
+                  value={origFlotationRim}
+                  onChange={(e) => setOrigFlotationRim(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {FLOTATION_RIMS.map((r) => (
+                    <option key={r} value={r}>{r}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          )}
+
           <p className="mt-3 text-center text-lg font-bold text-neutral-700">
-            {origWidth}/{origAspect}R{origRim}
+            {results.origDisplay}
           </p>
           <p className="text-center text-sm text-neutral-500">
             {results.origDiameter.toFixed(2)}" diameter
@@ -132,47 +248,98 @@ export function SpeedometerCalculator() {
 
         {/* New Tire */}
         <div className="rounded-xl bg-blue-50 p-4">
-          <h4 className="font-bold text-neutral-900">New Tire Size</h4>
-          <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
-            <div>
-              <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Width</label>
-              <select
-                value={newWidth}
-                onChange={(e) => setNewWidth(Number(e.target.value))}
-                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+          <div className="flex items-center justify-between">
+            <h4 className="font-bold text-neutral-900">New Tire Size</h4>
+            <div className="flex rounded-lg bg-blue-100 p-0.5 text-xs">
+              <button
+                onClick={() => setNewMode("metric")}
+                className={`px-2 py-1 rounded-md transition-colors ${
+                  newMode === "metric" ? "bg-white shadow-sm font-medium" : "text-neutral-600"
+                }`}
               >
-                {COMMON_WIDTHS.map((w) => (
-                  <option key={w} value={w}>{w}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Aspect</label>
-              <select
-                value={newAspect}
-                onChange={(e) => setNewAspect(Number(e.target.value))}
-                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                Metric
+              </button>
+              <button
+                onClick={() => setNewMode("flotation")}
+                className={`px-2 py-1 rounded-md transition-colors ${
+                  newMode === "flotation" ? "bg-white shadow-sm font-medium" : "text-neutral-600"
+                }`}
               >
-                {COMMON_ASPECTS.map((a) => (
-                  <option key={a} value={a}>{a}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Rim</label>
-              <select
-                value={newRim}
-                onChange={(e) => setNewRim(Number(e.target.value))}
-                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
-              >
-                {COMMON_RIMS.map((r) => (
-                  <option key={r} value={r}>{r}</option>
-                ))}
-              </select>
+                Flotation
+              </button>
             </div>
           </div>
+
+          {newMode === "metric" ? (
+            <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Width</label>
+                <select
+                  value={newWidth}
+                  onChange={(e) => setNewWidth(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {COMMON_WIDTHS.map((w) => (
+                    <option key={w} value={w}>{w}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Aspect</label>
+                <select
+                  value={newAspect}
+                  onChange={(e) => setNewAspect(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {COMMON_ASPECTS.map((a) => (
+                    <option key={a} value={a}>{a}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Rim</label>
+                <select
+                  value={newRim}
+                  onChange={(e) => setNewRim(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {COMMON_RIMS.map((r) => (
+                    <option key={r} value={r}>{r}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-3 grid grid-cols-2 gap-2 sm:gap-3">
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Size</label>
+                <select
+                  value={newFlotation}
+                  onChange={(e) => setNewFlotation(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {FLOTATION_SIZES.map((s, i) => (
+                    <option key={i} value={i}>{s.display}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Rim</label>
+                <select
+                  value={newFlotationRim}
+                  onChange={(e) => setNewFlotationRim(Number(e.target.value))}
+                  className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
+                >
+                  {FLOTATION_RIMS.map((r) => (
+                    <option key={r} value={r}>{r}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          )}
+
           <p className="mt-3 text-center text-lg font-bold text-blue-700">
-            {newWidth}/{newAspect}R{newRim}
+            {results.newDisplay}
           </p>
           <p className="text-center text-sm text-blue-600">
             {results.newDiameter.toFixed(2)}" diameter
