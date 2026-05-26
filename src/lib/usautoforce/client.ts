@@ -526,8 +526,7 @@ export async function getOrderStatus(orderNumber: string): Promise<OrderStatusRe
     if (errorCode && errorCode !== "success") {
       return {
         success: false,
-        errorCode,
-        errorMessage: errorMessage || "Unknown error",
+        errorMessage: errorMessage || `Error: ${errorCode}`,
       };
     }
     
