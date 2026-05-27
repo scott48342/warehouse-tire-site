@@ -408,7 +408,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         content: m.content,
       }));
 
-      const response = await fetch("https://tire-fitment-ai.onrender.com/api/ai/fitment", {
+      const response = await fetch("/api/jake/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: text, history, isLocal }),
