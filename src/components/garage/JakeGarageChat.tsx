@@ -515,7 +515,7 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
       // Build a rich context prompt for Jake
       const contextPrompt = buildProductContextPrompt(product, buildContext);
       
-      const response = await fetch("https://tire-fitment-ai.onrender.com/api/ai/fitment", {
+      const response = await fetch("/api/jake/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -654,7 +654,7 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
         .filter(m => m.role !== "product-injection")
         .map(m => ({ role: m.role, content: m.content }));
 
-      const response = await fetch("https://tire-fitment-ai.onrender.com/api/ai/fitment", {
+      const response = await fetch("/api/jake/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -1587,3 +1587,4 @@ function MessageContent({ content }: { content: string }) {
     </>
   );
 }
+
