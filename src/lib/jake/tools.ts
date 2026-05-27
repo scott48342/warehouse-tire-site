@@ -351,20 +351,35 @@ export async function executeTool(
         if (!res.ok) return { error: `API error: ${res.status}`, wheels: [] };
         const data = await res.json() as any;
         
-        const wheels = (data.wheels || []).slice(0, Number(limit)).map((w: any) => ({
-          name: `${w.brand} ${w.style} ${w.diameter}X${w.width}`,
-          brand: w.brand,
-          model: w.style,
-          sku: w.sku,
-          price: w.price ? `$${w.price}` : "Call for price",
-          priceNum: w.price,
-          size: `${w.diameter}x${w.width}`,
-          finish: w.finish,
-          productUrl: `${baseUrl}/wheels/${w.sku}`,
-          imageUrl: w.imageUrl,
-        }));
+        // Map the wheel API response to Jake's expected format
+        const wheels = (data.wheels || []).slice(0, Number(limit)).map((w: any) => {
+          const brandName = w.brand?.description || w.brand || "Unknown";
+          const diam = w.properties?.diameter || w.diameter || "";
+          const width = w.properties?.width || w.width || "";
+          const finish = w.properties?.abbreviated_finish_desc || w.properties?.fancy_finish_desc || w.finish || "";
+          const msrp = w.prices?.msrp?.[0]?.currencyAmount;
+          const price = msrp ? parseFloat(msrp) : null;
+          const imageUrl = w.images?.[0]?.imageUrlLarge || w.imageUrl || null;
+          // Extract style/model from title (e.g., "GRS 17X9 6X5.5 106 +0 S-BLK" -> "GRS")
+          const style = w.title?.split(" ")?.[0] || w.style || "";
+          
+          return {
+            name: `${brandName} ${style} ${diam}x${width}`,
+            brand: brandName,
+            model: style,
+            sku: w.sku,
+            price: price ? `$${price}` : "Call for price",
+            priceNum: price,
+            size: `${diam}x${width}`,
+            finish,
+            productUrl: `${baseUrl}/wheels/${w.sku}`,
+            imageUrl,
+            fitmentLabel: w.fitmentGuidance?.levelLabel || null,
+            inStock: w.availability?.confirmed || false,
+          };
+        });
         
-        return { wheels, count: wheels.length };
+        return { wheels, count: wheels.length, totalAvailable: data.totalCount || wheels.length };
       } catch (err) {
         return { error: `Fetch error: ${err}`, wheels: [] };
       }
