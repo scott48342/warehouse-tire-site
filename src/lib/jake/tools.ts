@@ -352,7 +352,9 @@ export async function executeTool(
         const data = await res.json() as any;
         
         // Map the wheel API response to Jake's expected format
-        const wheels = (data.wheels || []).slice(0, Number(limit)).map((w: any) => {
+        // API returns wheels in 'results' array, not 'wheels'
+        const wheelData = data.results || data.wheels || [];
+        const wheels = wheelData.slice(0, Number(limit)).map((w: any) => {
           const brandName = w.brand?.description || w.brand || "Unknown";
           const diam = w.properties?.diameter || w.diameter || "";
           const width = w.properties?.width || w.width || "";
