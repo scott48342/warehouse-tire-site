@@ -404,18 +404,42 @@ export async function executeTool(
         if (!res.ok) return { error: `API error: ${res.status}`, tires: [] };
         const data = await res.json() as any;
         
-        const tires = (data.tires || []).slice(0, Number(limit)).map((t: any) => ({
-          name: `${t.brand} ${t.model}`,
-          brand: t.brand,
-          model: t.model,
-          sku: t.sku,
-          price: t.sellPrice ? `$${t.sellPrice}` : "Call for price",
-          priceNum: t.sellPrice,
-          size: t.size,
-          productUrl: `${baseUrl}/tires/${t.sku}`,
-          imageUrl: t.imageUrl,
-          warranty: t.warrantyMiles ? `${Number(t.warrantyMiles).toLocaleString()} miles` : undefined,
-        }));
+        // API returns tires in 'results' array, not 'tires'
+        const tireData = data.results || data.tires || [];
+        
+        // Check for no results with reason
+        if (tireData.length === 0 && data.noResultsReason) {
+          return { 
+            tires: [], 
+            count: 0, 
+            noResults: true,
+            reason: data.noResultsReason,
+            oemSizes: data.oemTireSizes || [],
+          };
+        }
+        
+        const tires = tireData.slice(0, Number(limit)).map((t: any) => {
+          // API uses 'price' for sell price, 'cost' for cost
+          const sellPrice = t.price || t.sellPrice;
+          const warrantyMiles = t.badges?.warrantyMiles || t.warrantyMiles;
+          const terrain = t.badges?.terrain || t.enrichment?.treadCategory;
+          
+          return {
+            name: `${t.brand} ${t.model}`,
+            brand: t.brand,
+            model: t.model,
+            sku: t.partNumber || t.sku,
+            price: sellPrice ? `$${sellPrice.toFixed(2)}` : "Call for price",
+            priceNum: sellPrice,
+            size: t.size,
+            productUrl: `${baseUrl}/tires/${t.partNumber || t.sku}?source=${t.source?.includes('tireweb') ? 'tireweb' : 'usautoforce'}`,
+            imageUrl: t.imageUrl,
+            warranty: warrantyMiles ? `${Number(warrantyMiles).toLocaleString()} miles` : undefined,
+            terrain,
+            loadRange: t.enrichment?.loadRange || t.badges?.construction,
+            inStock: (t.quantity?.primary || 0) >= 4,
+          };
+        });
         
         return { tires, count: tires.length };
       } catch (err) {
