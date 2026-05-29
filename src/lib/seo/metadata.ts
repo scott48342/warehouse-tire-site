@@ -144,13 +144,9 @@ export function buildSEOMetadata(data: SEOPageData): Metadata {
     },
   };
   
-  // noindex pages with no results or invalid fitment
-  if (!hasResults || !fitment?.boltPattern) {
-    metadata.robots = {
-      index: false,
-      follow: true,
-    };
-  }
+  // Valid vehicle pages are always indexed (even with 0 results)
+  // Only the page-level generateMetadata handles true 404 / not-found cases
+  // Removed: noindex for low results - these pages still have value for SEO
   
   return metadata;
 }

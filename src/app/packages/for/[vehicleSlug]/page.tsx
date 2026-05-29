@@ -76,13 +76,14 @@ export async function generateMetadata({
   const hasResults = counts.hasFitment && counts.packages > 0;
   const ogImageUrl = `/api/og?year=${vehicle.year}&make=${encodeURIComponent(vehicle.make)}&model=${encodeURIComponent(vehicle.model)}&type=packages`;
   
+  // Valid vehicle pages are always indexed (even with 0 results)
+  // Only noindex for true 404 / vehicle-not-found cases (handled above)
   return {
     title: hasResults
       ? `${vehicleName} Wheel & Tire Packages | Warehouse Tire Direct`
       : `${vehicleName} Packages | Warehouse Tire Direct`,
     description: `Complete wheel and tire packages for your ${vehicleName}. Mounted, balanced, and ready to install. Save time and money with our package deals.`,
     alternates: { canonical: canonicalUrl },
-    robots: hasResults ? undefined : { index: false, follow: true },
     openGraph: {
       title: `Wheel & Tire Packages for ${vehicleName}`,
       description: `Save on wheel and tire packages for your ${vehicleName}. Mounted, balanced, and ready to install.`,

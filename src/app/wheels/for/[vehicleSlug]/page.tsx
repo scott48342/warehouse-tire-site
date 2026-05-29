@@ -87,6 +87,8 @@ export async function generateMetadata({
   
   const ogImageUrl = `/api/og?year=${vehicle.year}&make=${encodeURIComponent(vehicle.make)}&model=${encodeURIComponent(vehicle.model)}&type=wheels`;
   
+  // Valid vehicle pages are always indexed (even with 0 results)
+  // Only noindex for true 404 / vehicle-not-found cases (handled above)
   return {
     title: hasResults
       ? `${vehicleName} Wheels - ${formatCount(counts.wheels)} Options | Warehouse Tire Direct`
@@ -95,7 +97,6 @@ export async function generateMetadata({
       ? `Shop ${formatCount(counts.wheels)} wheels that fit your ${vehicleName}. Browse custom and OEM-style options with verified fitment. Professional installation in Southeast Michigan.`
       : `Find wheels for your ${vehicleName}. Contact us for fitment verification and professional installation.`,
     alternates: { canonical: canonicalUrl },
-    robots: hasResults ? undefined : { index: false, follow: true },
     openGraph: {
       title: `Wheels for ${vehicleName}`,
       description: `Find the perfect wheels for your ${vehicleName}. Fitment-verified options.`,
