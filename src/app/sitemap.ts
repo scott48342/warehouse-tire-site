@@ -5,9 +5,15 @@
  * Queries the database to include only vehicles with actual fitment data.
  * 
  * @updated 2026-04-11 - Switched from static vehicle list to DB-backed
+ * @updated 2026-05-29 - Force dynamic to ensure DB query runs (not build-time only)
  */
 
 import { MetadataRoute } from "next";
+
+// Force dynamic generation so the sitemap queries the DB at runtime
+// Revalidate every 24 hours (86400 seconds)
+export const dynamic = "force-dynamic";
+export const revalidate = 86400;
 
 // Use NEXT_PUBLIC_SITE_URL env var, fallback to national site
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shop.warehousetiredirect.com";
@@ -76,17 +82,8 @@ function slugify(year: number, make: string, model: string): string {
  * Get vehicles from database that have actual fitment data
  */
 async function getIndexableVehicles(): Promise<VehicleRow[]> {
-  // Skip DB during Vercel build to avoid connection issues
-  const isBuildTime = process.env.VERCEL_ENV === "production" && 
-                      process.env.NEXT_PHASE === "phase-production-build";
-  
-  if (isBuildTime) {
-    console.log("[sitemap] Build time - using fallback vehicles");
-    return FALLBACK_VEHICLES.map(v => ({ ...v, trim_count: 1 }));
-  }
-  
   try {
-    // Dynamic import to avoid build-time DB connection
+    // Dynamic import for cleaner module resolution
     const { db } = await import("@/lib/fitment-db/db");
     const { sql } = await import("drizzle-orm");
     
