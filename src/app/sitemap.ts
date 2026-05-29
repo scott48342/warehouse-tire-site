@@ -9,7 +9,8 @@
 
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://shop.warehousetiredirect.com";
+// Use NEXT_PUBLIC_SITE_URL env var, fallback to national site
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shop.warehousetiredirect.com";
 
 // Product types with their priorities
 const PRODUCT_TYPES = [

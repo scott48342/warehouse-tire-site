@@ -8816,3 +8816,445 @@ Files:
 
 Add these to .env.local
 [Wed 05/27/2026  9:00:10.60] Auto-post complete 
+[Wed 05/27/2026 18:00:02.34] Starting auto-post... 
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ override existing { override: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:34124) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Petrol P5C
+  Downloading image for Petrol P5C...
+  ✅ Generated: p5c_1779919206222
+  📝 Caption preview: Weekend project? ✅
+
+Petrol P5C
+📐 17x8
+🔩 5X112
+↔️ 40mm offset
+✨ PE P5C 17X8 5X1...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - p5c_1779919206222.png
+  - p5c_1779919206222.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+📱 Facebook/Instagram Poster
+
+Selected: ar172_baja_1778277603693
+
+--- Content Preview ---
+Wheel: American Racing AR172 BAJA
+Price: $310
+Image: ar172_baja_1778277603693.png
+
+Caption:
+Your 2024 RAM 1500 deserves these American Racing AR172 BAJA wheels 💯
+
+📐 17x8
+🔩 5X5.5
+↔️ 0mm offset
+✨ AR172 BAJA 17X8 5X5.5 POL 00MM
+
+Starting at $310
+
+🛒 https://shop.warehousetiredirect.com/wheels/AR1727885
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #americanracing #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Wednesday, 27-May-26 15:00:08 PDT.
+
+✨ Done!
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:48292) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Pro Comp Alloys PA69 VINTAGE
+  Downloading image for Pro Comp Alloys PA69 VINTAGE...
+  ✅ Generated: pa69_vintage_1779919213649
+  📝 Caption preview: Weekend project? ✅
+
+Pro Comp Alloys PA69 VINTAGE
+📐 17x9
+🔩 5X4.5
+↔️ -6mm offset...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pa69_vintage_1779919213649.png
+  - pa69_vintage_1779919213649.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Wed 05/27/2026 18:00:14.38] Auto-post complete 
+[Thu 05/28/2026  9:00:02.86] Starting auto-post... 
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:38832) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Motegi MR160 BATTLE VI
+  Downloading image for Motegi MR160 BATTLE VI...
+  ✅ Generated: mr160_battle_vi_1779973205580
+  📝 Caption preview: Your 2024 Ford Mustang deserves these Motegi MR160 BATTLE VI wheels 💯
+
+📐 18x9....
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - mr160_battle_vi_1779973205580.png
+  - mr160_battle_vi_1779973205580.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+📱 Facebook/Instagram Poster
+
+Selected: ar172_baja_1778277603693
+
+--- Content Preview ---
+Wheel: American Racing AR172 BAJA
+Price: $310
+Image: ar172_baja_1778277603693.png
+
+Caption:
+Your 2024 RAM 1500 deserves these American Racing AR172 BAJA wheels 💯
+
+📐 17x8
+🔩 5X5.5
+↔️ 0mm offset
+✨ AR172 BAJA 17X8 5X5.5 POL 00MM
+
+Starting at $310
+
+🛒 https://shop.warehousetiredirect.com/wheels/AR1727885
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #americanracing #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Thursday, 28-May-26 06:00:08 PDT.
+
+✨ Done!
+◇ injected env (48) from ..\..\.env.local // tip: ⌁ auth for agents [www.vestauth.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:41468) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] KMC KM555 ATTACK
+  Downloading image for KMC KM555 ATTACK...
+  ✅ Generated: km555_attack_1779973214952
+  📝 Caption preview: Transform your suv with the KMC KM555 ATTACK 🛞
+
+📐 17x8.5
+🔩 6X5.5
+↔️ 25mm offs...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - km555_attack_1779973214952.png
+  - km555_attack_1779973214952.json
+◇ injected env (48) from ..\..\.env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Thu 05/28/2026  9:00:16.57] Auto-post complete 
+[Thu 05/28/2026 18:00:02.42] Starting auto-post... 
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:25304) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] TSW TW005 GOODWOOD
+  Downloading image for TSW TW005 GOODWOOD...
+  ✅ Generated: tw005_goodwood_1780005605595
+  📝 Caption preview: Weekend project? ✅
+
+TSW TW005 GOODWOOD
+📐 20x9
+🔩 5X112
+↔️ 27mm offset
+✨ GOODWOO...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - tw005_goodwood_1780005605595.png
+  - tw005_goodwood_1780005605595.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ override existing { override: true }
+
+📱 Facebook/Instagram Poster
+
+Selected: ar172_baja_1778277603693
+
+--- Content Preview ---
+Wheel: American Racing AR172 BAJA
+Price: $310
+Image: ar172_baja_1778277603693.png
+
+Caption:
+Your 2024 RAM 1500 deserves these American Racing AR172 BAJA wheels 💯
+
+📐 17x8
+🔩 5X5.5
+↔️ 0mm offset
+✨ AR172 BAJA 17X8 5X5.5 POL 00MM
+
+Starting at $310
+
+🛒 https://shop.warehousetiredirect.com/wheels/AR1727885
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #americanracing #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Thursday, 28-May-26 15:00:08 PDT.
+
+✨ Done!
+◇ injected env (48) from ..\..\.env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:14272) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC FC857 RINCON
+  Downloading image for Fuel 1PC FC857 RINCON...
+  ✅ Generated: fc857_rincon_1780005614612
+  📝 Caption preview: Transform your truck with the Fuel 1PC FC857 RINCON 🛞
+
+📐 18x9
+🔩 6X135
+↔️ 1mm ...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - fc857_rincon_1780005614612.png
+  - fc857_rincon_1780005614612.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ override existing { override: true }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Thu 05/28/2026 18:00:15.31] Auto-post complete 
+[Fri 05/29/2026  9:00:02.63] Starting auto-post... 
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ suppress logs { quiet: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:25080) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC D675 BLITZ
+  Downloading image for Fuel 1PC D675 BLITZ...
+  ✅ Generated: d675_blitz_1780059607269
+  📝 Caption preview: Weekend project? ✅
+
+Fuel 1PC D675 BLITZ
+📐 20x9
+🔩 6X5.5
+↔️ 1mm offset
+✨ BLITZ 2...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - d675_blitz_1780059607269.png
+  - d675_blitz_1780059607269.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+Selected: ar172_baja_1778277603693
+
+--- Content Preview ---
+Wheel: American Racing AR172 BAJA
+Price: $310
+Image: ar172_baja_1778277603693.png
+
+Caption:
+Your 2024 RAM 1500 deserves these American Racing AR172 BAJA wheels 💯
+
+📐 17x8
+🔩 5X5.5
+↔️ 0mm offset
+✨ AR172 BAJA 17X8 5X5.5 POL 00MM
+
+Starting at $310
+
+🛒 https://shop.warehousetiredirect.com/wheels/AR1727885
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #americanracing #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Friday, 29-May-26 06:00:07 PDT.
+
+✨ Done!
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:22704) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Motegi MR154 BATTLE
+  ⚠️ No matching vehicle for bolt pattern 5X100, using generic caption
+  Downloading image for Motegi MR154 BATTLE...
+  ✅ Generated: mr154_battle_1780059614576
+  📝 Caption preview: Your ride deserves these Motegi MR154 BATTLE wheels 💯
+
+📐 18x9.5
+🔩 5X100
+↔️ 38...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - mr154_battle_1780059614576.png
+  - mr154_battle_1780059614576.json
+◇ injected env (48) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Fri 05/29/2026  9:00:17.43] Auto-post complete 
