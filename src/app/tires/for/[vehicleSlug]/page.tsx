@@ -12,7 +12,7 @@ import {
   slugifyVehicle,
 } from '@/lib/seo'
 
-const BASE_URL = 'https://shop.warehousetiredirect.com'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://shop.warehousetiredirect.com'
 
 // ISR: Regenerate pages daily (trims loaded client-side)
 export const revalidate = 86400

@@ -6,7 +6,7 @@ import Script from 'next/script'
 import { getPostBySlug, getAllPosts } from '@/lib/blog'
 import ReactMarkdown from 'react-markdown'
 
-const BASE_URL = 'https://shop.warehousetiredirect.com'
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://shop.warehousetiredirect.com'
 
 // Regenerate every 24 hours
 export const revalidate = 86400

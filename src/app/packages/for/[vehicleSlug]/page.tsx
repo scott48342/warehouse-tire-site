@@ -26,7 +26,7 @@ import { VehicleTrimSelector } from "@/components/VehicleTrimSelector";
 import { RecommendedPackages } from "@/components/packages/RecommendedPackages";
 import { SeoContentBlock } from "@/components/SeoContentBlock";
 
-const BASE_URL = "https://shop.warehousetiredirect.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shop.warehousetiredirect.com";
 
 export const revalidate = 86400;
 

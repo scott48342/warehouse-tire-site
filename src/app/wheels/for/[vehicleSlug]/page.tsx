@@ -32,7 +32,7 @@ import { getFitmentFacts } from "@/lib/seo/fitment";
 import { VehicleTrimSelector } from "@/components/VehicleTrimSelector";
 import { RecommendedPackages } from "@/components/packages/RecommendedPackages";
 
-const BASE_URL = "https://shop.warehousetiredirect.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shop.warehousetiredirect.com";
 
 export const revalidate = 86400; // Daily ISR
 
