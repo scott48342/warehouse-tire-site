@@ -91,12 +91,8 @@ const nextConfig: NextConfig = {
         destination: '/wheels?package=1',
         permanent: true,
       },
-      // /tires/for/:path* -> /tires (old URL structure)
-      {
-        source: '/tires/for/:path*',
-        destination: '/tires',
-        permanent: false, // 302 - these might have valid vehicles
-      },
+      // NOTE: /tires/for/:path* rewrite REMOVED 2026-05-29
+      // These are now valid SEO landing pages in sitemap
     ];
   },
   
