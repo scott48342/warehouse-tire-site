@@ -181,9 +181,9 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
       const price = extractXmlValue(tireXml, "cost") || extractXmlValue(tireXml, "price");
       
       if (partNumber) {
-        // Apply $50 markup to cost for sell price
+        // Apply $40 markup to cost for sell price
         const costNum = price ? parseFloat(price) : 0;
-        const sellPrice = costNum > 0 ? costNum + 50 : undefined;
+        const sellPrice = costNum > 0 ? costNum + 40 : undefined;
         
         results.push({
           type: "tire",
@@ -282,9 +282,9 @@ async function searchTiresKM(query: string): Promise<SearchResult[]> {
       const cost = extractXmlValue(itemXml, "Cost");
       
       if (partNumber) {
-        // Apply $50 markup to cost for sell price
+        // Apply $40 markup to cost for sell price
         const costNum = cost ? parseFloat(cost) : 0;
-        const sellPrice = costNum > 0 ? costNum + 50 : undefined;
+        const sellPrice = costNum > 0 ? costNum + 40 : undefined;
         
         // Extract size from description (e.g., "LX 235/55R17 LXUHP-207 99W")
         const sizeMatch = description?.match(/(\d{3}\/\d{2}R\d{2})/);

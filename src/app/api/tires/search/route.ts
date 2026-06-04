@@ -433,8 +433,8 @@ async function searchTiresBySize(
     const mapUsd0 = n(r.map_usd);
     const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
     const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
-    // Sell price = (MSRP × 0.85) + $50, fall back to MAP
-    const price = msrpUsd ? (msrpUsd * 0.85) + 50 : mapUsd;
+    // Sell price = (MSRP × 0.85) + $40, fall back to MAP
+    const price = msrpUsd ? (msrpUsd * 0.85) + 40 : mapUsd;
     const tireSize = r.tire_size || r.simple_size || "";
     const description = r.tire_description || tireSize || r.sku;
 
@@ -500,14 +500,14 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
     for (const tire of result.tires) {
       const unified = tireWebTireToUnified(tire, result.provider);
       
-      // CRITICAL: Always use cost + $50 for TireWeb tires
+      // CRITICAL: Always use cost + $40 for TireWeb tires
       // Don't trust supplier sellPrice - they may have different margins
       const cost = unified.cost;
       let displayPrice: number | null = null;
       
       if (cost && cost > 0) {
-        // Always apply our $50 margin over cost
-        displayPrice = cost + 50;
+        // Always apply our $40 margin over cost
+        displayPrice = cost + 40;
       }
       
       tires.push({
@@ -667,8 +667,8 @@ function convertUSAFToTireResult(item: USAutoForceStockItem): TireResult {
   // Normalize terrain from tireType (e.g., "PASSENGER/CUV/SUV" → category)
   const terrain = normalizeTreadCategory(item.tireType, item.description);
   
-  // Calculate sell price: cost + $50 margin (same as TireWeb)
-  const sellPrice = item.cost > 0 ? item.cost + 50 : null;
+  // Calculate sell price: cost + $40 margin (same as TireWeb)
+  const sellPrice = item.cost > 0 ? item.cost + 40 : null;
   
   return {
     partNumber: item.partNumber,
@@ -1068,7 +1068,7 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
         model: "",
         description,
         cost,
-        price: cost + 50, // Standard markup
+        price: cost + 40, // Standard markup
         quantity: { primary, alternate, national },
         imageUrl: null, // K&M direct doesn't have images, TireWeb will provide
         size,
