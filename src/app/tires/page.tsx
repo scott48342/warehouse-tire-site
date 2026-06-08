@@ -2267,6 +2267,11 @@ export default async function TiresPage({
   // K&M and WP are now part of unified search - set to empty for backward compat
   const km: { items?: any[]; error?: string } | null = { items: [] };
   const wp: { items?: any[]; error?: string } | null = { items: [] };
+  
+  // Extract trim selection data (when multiple trims have different tire sizes)
+  const trimResolutionRequired = tw?.trimResolutionRequired === true;
+  const availableTrims: Array<{ modificationId: string; displayTrim: string; tireSizes: string[] }> = 
+    tw?.availableTrims || [];
 
   // Store ALL rebates per brand (multiple rebates per brand supported)
   const rebatesByBrand = new Map<string, any[]>();
@@ -4141,6 +4146,31 @@ export default async function TiresPage({
                         <a href="tel:+12483324120" className="inline-flex h-10 items-center rounded-xl border border-amber-600 px-4 text-sm font-extrabold text-amber-700 hover:bg-amber-50">
                           📞 Call us
                         </a>
+                      </div>
+                    </div>
+                  ) : trimResolutionRequired && availableTrims.length > 0 ? (
+                    /* Multiple trims with different tire sizes - show trim selector */
+                    <div>
+                      <div className="font-extrabold text-amber-900 text-base">
+                        Select Your Trim
+                      </div>
+                      <div className="mt-2 text-amber-800">
+                        This {year} {make} {model} has multiple trims with different tire sizes. 
+                        Please select your exact trim to see matching tires.
+                      </div>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {availableTrims.map((trim) => (
+                          <a
+                            key={trim.modificationId}
+                            href={`/tires?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&modification=${encodeURIComponent(trim.modificationId)}`}
+                            className="inline-flex flex-col items-start rounded-xl border-2 border-amber-300 bg-white px-4 py-3 text-sm hover:border-amber-500 hover:bg-amber-50 transition-colors"
+                          >
+                            <span className="font-extrabold text-neutral-900">{trim.displayTrim}</span>
+                            <span className="text-xs text-neutral-500 mt-1">
+                              {trim.tireSizes.join(", ")}
+                            </span>
+                          </a>
+                        ))}
                       </div>
                     </div>
                   ) : hasVehicle ? (
