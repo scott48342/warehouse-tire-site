@@ -836,13 +836,36 @@ export async function resolveVehicleFitment(
       };
     }
 
-    // Multiple candidates without trim selection - need user input
+    // Multiple candidates without trim selection - check if safe fallback possible
+    const uniqueTireSizesNoTrim = new Set(candidates.map(c => JSON.stringify(c.tireSizes.sort())));
+    
+    if (uniqueTireSizesNoTrim.size === 1 && candidates.length > 0) {
+      // All candidates have identical tire sizes - safe to use any
+      const firstCandidate = candidates[0];
+      const withOverrides = await applyOverrides(firstCandidate.record);
+      console.log(`[canonicalResolver] No trim specified, but all ${candidates.length} trims have identical tire sizes - using first`);
+      return {
+        ...result,
+        canonicalFitmentId: null, // Can't generate canonical ID without specific trim
+        modificationId: firstCandidate.modificationId,
+        displayTrim: firstCandidate.atomicTrims[0],
+        matchedBy: "identical_fallback",
+        confidence: "low",
+        fitment: withOverrides,
+        debug: {
+          ...result.debug,
+          fallbackBlockedReason: null,
+        },
+      };
+    }
+    
+    // Different tire sizes across trims - BLOCK and require trim selection
     return {
       ...result,
-      matchedBy: "not_found",
+      matchedBy: "blocked",
       debug: {
         ...result.debug,
-        fallbackBlockedReason: `Multiple trims exist for ${year} ${make} ${model}. Please select a specific trim.`,
+        fallbackBlockedReason: `Multiple trims exist for ${year} ${make} ${model} with different tire sizes. Please select a specific trim.`,
       },
     };
   }
