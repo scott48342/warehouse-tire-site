@@ -1576,20 +1576,54 @@ export default async function TiresPage({
   // 3. AND we don't have static tire data available (not a classic vehicle)
   // 4. AND not a lifted build (lifted builds have their own tire size recommendations)
   if (year && make && model && !modification && !hasStaticTireData && !isLiftedBuild) {
+    // Fetch available trims to show inline selector
+    let availableTrimsForGate: Array<{ value: string; label: string; modificationId: string; tireSizes?: string[] }> = [];
+    try {
+      const trimsRes = await fetch(`${getBaseUrl()}/api/vehicles/trims?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`, { cache: "no-store" });
+      if (trimsRes.ok) {
+        const trimsData = await trimsRes.json();
+        availableTrimsForGate = trimsData.results || [];
+      }
+    } catch (e) {
+      console.warn("[tires/page] Failed to fetch trims for gate:", e);
+    }
+    
+    // If we have trims, show them; otherwise show the generic message
     return (
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-screen-2xl px-4 py-8">
-          <div className="rounded-3xl border border-red-100 bg-gradient-to-r from-red-50 via-white to-white p-6">
-            <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Tires</h1>
-            <p className="mt-2 text-sm text-neutral-700">
-              Select your vehicle <span className="font-semibold">trim / option</span> to show tires that fit.
-            </p>
-            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
-              Current selection: <span className="font-semibold">{year} {make} {model}</span>
-              <div className="mt-2 text-xs text-neutral-500">
-                Tip: Open the vehicle picker and choose a trim (it will auto-search).
-              </div>
-            </div>
+          <div className="rounded-3xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-white p-6">
+            <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Tires for {year} {make} {model}</h1>
+            {availableTrimsForGate.length > 0 ? (
+              <>
+                <p className="mt-2 text-sm text-neutral-700">
+                  This vehicle has multiple trims with different tire sizes. Select your trim to see matching tires:
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {availableTrimsForGate.map((trim) => (
+                    <a
+                      key={trim.value}
+                      href={`/tires?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&modification=${encodeURIComponent(trim.modificationId || trim.value)}`}
+                      className="inline-flex flex-col items-start rounded-xl border-2 border-amber-300 bg-white px-5 py-4 text-sm hover:border-amber-500 hover:bg-amber-50 transition-colors shadow-sm"
+                    >
+                      <span className="font-extrabold text-neutral-900 text-base">{trim.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="mt-2 text-sm text-neutral-700">
+                  Select your vehicle <span className="font-semibold">trim / option</span> to show tires that fit.
+                </p>
+                <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+                  Current selection: <span className="font-semibold">{year} {make} {model}</span>
+                  <div className="mt-2 text-xs text-neutral-500">
+                    Tip: Open the vehicle picker and choose a trim (it will auto-search).
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </main>
