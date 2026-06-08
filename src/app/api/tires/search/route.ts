@@ -1998,6 +1998,29 @@ export async function GET(req: Request) {
       if (tsRes.ok) {
         const tsData = await tsRes.json();
         
+        // ═══════════════════════════════════════════════════════════════════════
+        // TRIM SELECTION REQUIRED (2026-06-08)
+        // When multiple trims exist with different tire sizes and no trim is
+        // specified, return early with the available trims for UI selection.
+        // ═══════════════════════════════════════════════════════════════════════
+        if (tsData.trimResolutionRequired && tsData.availableTrims?.length > 0) {
+          console.log(`[tires/search] TRIM SELECTION REQUIRED: ${year} ${make} ${model} has ${tsData.availableTrims.length} trims with different sizes`);
+          return NextResponse.json({
+            results: [],
+            mode: "vehicle",
+            vehicle: { year, make, model, modification },
+            wheelDiameter: wheelDiameter || null,
+            oemTireSizes: [],
+            hasLegacySizes: false,
+            trimResolutionRequired: true,
+            availableTrims: tsData.availableTrims,
+            error: tsData.message || "Please select your vehicle trim to see available tires.",
+            fallbackMessage: `This vehicle has ${tsData.availableTrims.length} trims with different tire sizes. Please select your exact trim above to see matching tires.`,
+            noResultsReason: "trim_selection_required",
+            cache: { hit: false, stale: false },
+          });
+        }
+        
         // Get original OEM sizes (may include legacy formats like E70-14)
         tireSizes = (tsData.tireSizes || tsData.sizes || tsData.results || []).map((s: any) => 
           typeof s === "string" ? s : s.size || s.front || ""
