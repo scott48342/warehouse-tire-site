@@ -27,15 +27,14 @@ export async function GET(request: NextRequest) {
   const results: SearchResult[] = [];
   const upperQuery = query.toUpperCase();
   
-  // Search in parallel across all suppliers
-  // Note: TireWeb doesn't support part number search (only tire sizes)
-  // K&M direct API was disabled 2026-04-13 (SQL errors)
-  const [wheelResults, usafResults] = await Promise.all([
-    searchWheels(upperQuery),
-    searchTiresUSAF(upperQuery),
-  ]);
+  // Search wheels via WheelPros (supports SKU and UPC lookup)
+  const wheelResults = await searchWheels(upperQuery);
+  results.push(...wheelResults);
   
-  results.push(...wheelResults, ...usafResults);
+  // Note: Tire part number search is not currently supported.
+  // USAF requires brand code (lineCode) which we don't have from just a part number.
+  // TireWeb/K&M don't support part number search (only tire sizes).
+  // Future: Index USAF FTP inventory to enable tire part number search.
   
   // Sort: exact matches first, then by relevance
   results.sort((a, b) => {
@@ -44,10 +43,17 @@ export async function GET(request: NextRequest) {
     return aExact - bExact;
   });
   
+  // If no results and query looks like a tire part number (all digits), add a hint
+  const looksLikeTirePartNumber = /^\d{6,10}$/.test(query);
+  const hint = results.length === 0 && looksLikeTirePartNumber
+    ? "Tire part number lookup requires brand info. Try searching by tire size (e.g., 245/50R16) or use the vehicle selector."
+    : undefined;
+  
   return NextResponse.json({ 
     results: results.slice(0, 10), 
     query,
-    total: results.length 
+    total: results.length,
+    ...(hint && { hint })
   });
 }
 
@@ -135,111 +141,9 @@ function mapWheelResults(wheels: any[]): SearchResult[] {
   });
 }
 
-/**
- * Search tires via US AutoForce StockCheck API
- * 
- * USAF requires <parts>/<PartDto> with lineCode (brand code) for part number search.
- * Since we don't know the brand, we try common codes until we find a match.
- */
-async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
-  try {
-    const username = process.env.USAUTOFORCE_USERNAME;
-    const password = process.env.USAUTOFORCE_PASSWORD;
-    const account = process.env.USAUTOFORCE_ACCOUNT;
-    
-    if (!username || !password || !account) {
-      console.log("[search] USAF credentials not configured");
-      return [];
-    }
-    
-    const isTest = username.toLowerCase().includes("test");
-    const apiUrl = isTest 
-      ? "https://servicesstage.usautoforce.com/integrationservice.asmx"
-      : "https://services.usautoforce.com/integrationservice.asmx";
-    
-    // Common brand codes to try (in order of popularity)
-    const brandCodesToTry = ["GEN", "FAL", "CON", "COP", "TOY", "BFG", "MIC", "GDY", "HAN", "YOK"];
-    
-    for (const lineCode of brandCodesToTry) {
-      // Build SOAP request with parts/PartDto (required for part number search)
-      const soapBody = `<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="https://services.usautoforce.com">
-  <soap:Body>
-    <ns:StockCheck>
-      <ns:request>
-        <ns:username>${escapeXml(username)}</ns:username>
-        <ns:password>${escapeXml(password)}</ns:password>
-        <ns:accountNumber>${escapeXml(account)}</ns:accountNumber>
-        <ns:parts>
-          <ns:PartDto>
-            <ns:lineNumber>1</ns:lineNumber>
-            <ns:lineCode>${escapeXml(lineCode)}</ns:lineCode>
-            <ns:partNumber>${escapeXml(query)}</ns:partNumber>
-            <ns:quantityRequested>4</ns:quantityRequested>
-          </ns:PartDto>
-        </ns:parts>
-      </ns:request>
-    </ns:StockCheck>
-  </soap:Body>
-</soap:Envelope>`;
-
-      const res = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "text/xml; charset=utf-8",
-          "SOAPAction": "https://services.usautoforce.com/StockCheck",
-        },
-        body: soapBody,
-      });
-      
-      if (!res.ok) continue;
-      
-      const xml = await res.text();
-      
-      // Check for success and results
-      const errorCode = extractXmlValue(xml, "errorCode");
-      if (errorCode && errorCode !== "success") continue;
-      
-      // Extract part result
-      const partMatches = xml.matchAll(/<PartResultDto>([\s\S]*?)<\/PartResultDto>/g);
-      const results: SearchResult[] = [];
-      
-      for (const match of partMatches) {
-        const partXml = match[1];
-        const partNumber = extractXmlValue(partXml, "partNumber");
-        const brand = extractXmlValue(partXml, "brand") || extractXmlValue(partXml, "brandName");
-        const description = extractXmlValue(partXml, "description") || extractXmlValue(partXml, "model");
-        const size = extractXmlValue(partXml, "tireSize") || extractXmlValue(partXml, "size");
-        const cost = extractXmlValue(partXml, "cost");
-        
-        if (partNumber) {
-          const costNum = cost ? parseFloat(cost) : 0;
-          const sellPrice = costNum > 0 ? costNum + 40 : undefined;
-          
-          results.push({
-            type: "tire",
-            sku: partNumber,
-            name: [brand, description, size].filter(Boolean).join(" ").trim() || partNumber,
-            brand: brand || "Unknown",
-            price: sellPrice,
-            url: `/tires/${partNumber}?source=usautoforce${size ? `&size=${encodeURIComponent(size)}` : ""}`,
-          });
-        }
-      }
-      
-      if (results.length > 0) {
-        console.log(`[search] USAF found ${results.length} results with lineCode=${lineCode}`);
-        return results.slice(0, 5);
-      }
-    }
-    
-    console.log("[search] USAF: no results found for part number");
-    return [];
-  } catch (err) {
-    console.error("[search] Tire search error:", err);
-    return [];
-  }
-}
+// Note: USAF tire part number search requires brand code (lineCode) which we don't have.
+// Tire part number search is not supported until we index USAF FTP inventory.
+// See backlog: USAF FTP Inventory Indexing
 
 // Note: TireWeb doesn't support part number search (only tire size queries via GetTires SOAP API)
 // K&M direct API was disabled 2026-04-13 (SQL errors from their server)
