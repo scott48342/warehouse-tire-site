@@ -28,13 +28,14 @@ export async function GET(request: NextRequest) {
   const upperQuery = query.toUpperCase();
   
   // Search in parallel across all suppliers
-  const [wheelResults, usafResults, kmResults] = await Promise.all([
+  // Note: TireWeb doesn't support part number search (only tire sizes)
+  // K&M direct API was disabled 2026-04-13 (SQL errors)
+  const [wheelResults, usafResults] = await Promise.all([
     searchWheels(upperQuery),
     searchTiresUSAF(upperQuery),
-    searchTiresKM(upperQuery),
   ]);
   
-  results.push(...wheelResults, ...usafResults, ...kmResults);
+  results.push(...wheelResults, ...usafResults);
   
   // Sort: exact matches first, then by relevance
   results.sort((a, b) => {
@@ -74,25 +75,38 @@ async function searchWheels(query: string): Promise<SearchResult[]> {
     const authData = await authRes.json();
     const access_token = authData.accessToken || authData.token;
     
-    // Search by UPC/part number
+    // Search by SKU first (most common for part number search)
     const searchRes = await fetch(
-      `https://api.wheelpros.com/products/v1/search/wheel?upc=${encodeURIComponent(query)}&limit=5`,
+      `https://api.wheelpros.com/products/v1/search/wheel?sku=${encodeURIComponent(query)}&limit=5`,
       { headers: { Authorization: `Bearer ${access_token}` } }
     );
     
-    if (!searchRes.ok) {
-      // Try style name search as fallback
-      const styleRes = await fetch(
-        `https://api.wheelpros.com/products/v1/search/wheel?style_description=${encodeURIComponent(query)}&limit=5`,
-        { headers: { Authorization: `Bearer ${access_token}` } }
-      );
-      if (!styleRes.ok) return [];
-      const styleData = await styleRes.json();
-      return mapWheelResults(styleData.data || []);
+    if (searchRes.ok) {
+      const data = await searchRes.json();
+      if (data.results?.length > 0) {
+        return mapWheelResults(data.results || []);
+      }
     }
     
-    const data = await searchRes.json();
-    return mapWheelResults(data.data || []);
+    // UPC search - but only return exact matches
+    // WheelPros API does fuzzy search, so we need to filter client-side
+    const upcRes = await fetch(
+      `https://api.wheelpros.com/products/v1/search/wheel?upc=${encodeURIComponent(query)}&limit=10`,
+      { headers: { Authorization: `Bearer ${access_token}` } }
+    );
+    
+    if (upcRes.ok) {
+      const upcData = await upcRes.json();
+      if (upcData.results?.length > 0) {
+        // Filter to only wheels where UPC matches exactly
+        const exactMatches = upcData.results.filter((w: any) => 
+          w.upc?.toUpperCase() === query || w.sku?.toUpperCase() === query
+        );
+        return mapWheelResults(exactMatches);
+      }
+    }
+    
+    return [];
   } catch (err) {
     console.error("[search] Wheel search error:", err);
     return [];
@@ -100,15 +114,25 @@ async function searchWheels(query: string): Promise<SearchResult[]> {
 }
 
 function mapWheelResults(wheels: any[]): SearchResult[] {
-  return wheels.map((w: any) => ({
-    type: "wheel" as const,
-    sku: w.upc || w.part_number || "",
-    name: `${w.brand_name || ""} ${w.style_description || ""}`.trim(),
-    brand: w.brand_name || "",
-    image: w.image_url_main,
-    price: w.msrp ? parseFloat(w.msrp) : undefined,
-    url: `/wheels/${w.upc || w.part_number}`,
-  }));
+  return wheels.map((w: any) => {
+    // Extract fields from WheelPros API response format
+    const sku = w.sku || w.upc || "";
+    const brandName = w.brand?.description || w.brand?.parent || w.brand_name || "";
+    const modelName = w.properties?.model || w.title || w.style_description || "";
+    const displayName = modelName || `${brandName} ${sku}`;
+    const imageUrl = w.images?.[0]?.imageUrlMedium || w.images?.[0]?.imageUrlOriginal || w.image_url_main;
+    const msrp = w.prices?.msrp?.[0]?.currencyAmount || w.msrp;
+    
+    return {
+      type: "wheel" as const,
+      sku,
+      name: displayName,
+      brand: brandName,
+      image: imageUrl,
+      price: msrp ? parseFloat(msrp) : undefined,
+      url: `/wheels/${sku}`,
+    };
+  });
 }
 
 /**
@@ -203,144 +227,8 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
   }
 }
 
-/**
- * Search tires via K&M Tire Inventory API
- * K&M often requires VendorName or it 500s, so we detect vendor from part number prefix
- */
-async function searchTiresKM(query: string): Promise<SearchResult[]> {
-  try {
-    const apiKey = process.env.KM_API_KEY || process.env.KMTIRE_API_KEY || process.env.KM_TIRE_API_KEY;
-    
-    if (!apiKey) {
-      console.log("[search] K&M API key not configured");
-      return [];
-    }
-    
-    // Detect vendor from part number prefix
-    const vendor = detectVendorFromPartNumber(query);
-    
-    const xmlBody = `<?xml version="1.0" encoding="UTF-8"?>
-<InventoryRequest>
-  <Credentials><APIKey>${escapeXml(apiKey)}</APIKey></Credentials>
-  <Item>
-    <PartNumber>${escapeXml(query)}</PartNumber>
-    ${vendor ? `<VendorName>${escapeXml(vendor)}</VendorName>` : ""}
-  </Item>
-</InventoryRequest>`;
-
-    let res = await fetch("https://api.kmtire.com/v1/inventory", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/xml",
-        "Accept": "application/xml, text/xml, */*",
-      },
-      body: xmlBody,
-    });
-    
-    // If 500 without vendor, retry with common vendors
-    if (res.status === 500 && !vendor) {
-      const fallbackVendors = ["Lexani", "Lionhart", "Delinte", "Landgolden", "Thunderer"];
-      for (const v of fallbackVendors) {
-        const retryBody = `<?xml version="1.0" encoding="UTF-8"?>
-<InventoryRequest>
-  <Credentials><APIKey>${escapeXml(apiKey)}</APIKey></Credentials>
-  <Item>
-    <PartNumber>${escapeXml(query)}</PartNumber>
-    <VendorName>${escapeXml(v)}</VendorName>
-  </Item>
-</InventoryRequest>`;
-        res = await fetch("https://api.kmtire.com/v1/inventory", {
-          method: "POST",
-          headers: { "Content-Type": "application/xml", "Accept": "application/xml, text/xml, */*" },
-          body: retryBody,
-        });
-        if (res.ok) break;
-      }
-    }
-    
-    if (!res.ok) {
-      console.error("[search] K&M API error:", res.status);
-      return [];
-    }
-    
-    const xml = await res.text();
-    const results: SearchResult[] = [];
-    
-    // Check for successful result
-    if (!xml.includes("<ResultCode>0</ResultCode>")) {
-      return [];
-    }
-    
-    // Parse K&M response - look for Item elements
-    const itemMatches = xml.matchAll(/<Item>([\s\S]*?)<\/Item>/g);
-    
-    for (const match of itemMatches) {
-      const itemXml = match[1];
-      const partNumber = extractXmlValue(itemXml, "PartNumber");
-      const vendorName = extractCdataValue(itemXml, "VendorName");
-      const description = extractCdataValue(itemXml, "Description");
-      const cost = extractXmlValue(itemXml, "Cost");
-      
-      if (partNumber) {
-        // Apply $40 markup to cost for sell price
-        const costNum = cost ? parseFloat(cost) : 0;
-        const sellPrice = costNum > 0 ? costNum + 40 : undefined;
-        
-        // Extract size from description (e.g., "LX 235/55R17 LXUHP-207 99W")
-        const sizeMatch = description?.match(/(\d{3}\/\d{2}R\d{2})/);
-        const size = sizeMatch ? sizeMatch[1] : "";
-        
-        results.push({
-          type: "tire",
-          sku: partNumber,
-          name: description || `${vendorName || ""} ${partNumber}`.trim(),
-          brand: vendorName || "K&M",
-          price: sellPrice,
-          url: `/tires/${partNumber}?source=tireweb${size ? `&size=${encodeURIComponent(size)}` : ""}`,
-        });
-      }
-    }
-    
-    return results.slice(0, 5);
-  } catch (err) {
-    console.error("[search] K&M search error:", err);
-    return [];
-  }
-}
-
-/**
- * Detect tire vendor from part number prefix
- */
-function detectVendorFromPartNumber(partNumber: string): string | null {
-  const upper = partNumber.toUpperCase();
-  const prefixMap: Record<string, string> = {
-    "LXST": "Lexani",
-    "LXTR": "Lexani", 
-    "LXM": "Lexani",
-    "LHS": "Lionhart",
-    "LH": "Lionhart",
-    "DX": "Delinte",
-    "DS": "Delinte",
-    "LGD": "Landgolden",
-    "TH": "Thunderer",
-  };
-  
-  for (const [prefix, vendor] of Object.entries(prefixMap)) {
-    if (upper.startsWith(prefix)) return vendor;
-  }
-  return null;
-}
-
-/**
- * Extract CDATA value from XML
- */
-function extractCdataValue(xml: string, tag: string): string | null {
-  const pattern = new RegExp(`<${tag}><!\\[CDATA\\[([^\\]]+)\\]\\]><\\/${tag}>`, "i");
-  const match = xml.match(pattern);
-  if (match && match[1]) return match[1].trim();
-  // Fallback to regular extraction
-  return extractXmlValue(xml, tag);
-}
+// Note: TireWeb doesn't support part number search (only tire size queries via GetTires SOAP API)
+// K&M direct API was disabled 2026-04-13 (SQL errors from their server)
 
 function escapeXml(str: string): string {
   return str

@@ -1,4 +1,15 @@
-export { FitmentFactsCard } from "./FitmentFactsCard";
-export { RelatedLinks } from "./RelatedLinks";
-export { FAQSection } from "./FAQSection";
-export { VehicleLandingPage } from "./VehicleLandingPage";
+/**
+ * SEO Components
+ * 
+ * Structured data and metadata helpers for product pages.
+ */
+
+export {
+  ProductSchema,
+  BreadcrumbSchema,
+  ProductPageSchema,
+  buildBreadcrumbSchema,
+  type ProductSchemaProps,
+  type ProductType,
+  type BreadcrumbItem,
+} from "./ProductSchema";

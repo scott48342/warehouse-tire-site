@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { SuspensionAddToCart } from "./SuspensionAddToCart";
+// SEO structured data (2026-06-09)
+import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
 
 // ============================================================================
 // Types
@@ -60,20 +62,38 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { sku } = await params;
+  const canonicalUrl = `https://shop.warehousetiredirect.com/suspension/${encodeURIComponent(sku)}`;
   const product = await fetchSuspensionBySku(sku);
   
   if (!product) {
-    return { title: "Product Not Found" };
+    return { 
+      title: "Product Not Found",
+      alternates: { canonical: canonicalUrl },
+    };
   }
 
+  const yearRange = product.yearStart === product.yearEnd
+    ? String(product.yearStart)
+    : `${product.yearStart}-${product.yearEnd}`;
+  
   const title = `${product.productDesc} | ${BRAND.name}`;
-  const description = `${product.brand} ${product.productDesc}. ${product.liftHeight ? `${product.liftHeight}" lift` : "Suspension upgrade"} for ${product.yearStart}-${product.yearEnd} ${product.make} ${product.model}.`;
+  const description = `${product.brand} ${product.productDesc}. ${product.liftHeight ? `${product.liftHeight}" lift` : "Suspension upgrade"} for ${yearRange} ${product.make} ${product.model}. Free shipping, expert support.`;
 
   return {
     title,
     description,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
-      title,
+      title: product.productDesc,
+      description,
+      url: canonicalUrl,
+      siteName: BRAND.name,
+      images: product.imageUrl ? [{ url: product.imageUrl, width: 800, height: 800, alt: product.productDesc }] : undefined,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.productDesc,
       description,
       images: product.imageUrl ? [product.imageUrl] : undefined,
     },
@@ -104,10 +124,49 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
     ? { year: String(sp.year), make: String(sp.make), model: String(sp.model) }
     : null;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEO: Build structured data for Product and Breadcrumb schemas
+  // ═══════════════════════════════════════════════════════════════════════════
+  const canonicalUrl = `https://shop.warehousetiredirect.com/suspension/${encodeURIComponent(sku)}`;
+  const breadcrumbs: BreadcrumbItem[] = [
+    { name: "Home", url: "https://shop.warehousetiredirect.com" },
+    { name: "Lift Kits", url: "https://shop.warehousetiredirect.com/suspension" },
+    { name: product.brand, url: `https://shop.warehousetiredirect.com/suspension?brand=${encodeURIComponent(product.brand)}` },
+    { name: product.productDesc, url: canonicalUrl },
+  ];
+  
+  const schemaDesc = [
+    `${product.brand} ${product.productDesc}`,
+    product.liftHeight ? `${product.liftHeight}" lift kit` : "suspension upgrade",
+    `for ${yearRange} ${product.make} ${product.model}`,
+    "Direct bolt-on installation. Free shipping.",
+  ].join(". ");
+
   return (
-    <main className="bg-neutral-50 min-h-screen">
-      {/* Breadcrumbs */}
-      <nav className="mx-auto max-w-6xl px-4 py-4">
+    <>
+      {/* SEO Structured Data */}
+      <ProductPageSchema
+        product={{
+          type: "suspension",
+          sku,
+          name: product.productDesc,
+          description: schemaDesc,
+          brand: product.brand,
+          imageUrl: product.imageUrl || undefined,
+          price: price || undefined,
+          inStock: product.inStock,
+          url: canonicalUrl,
+          attributes: {
+            liftHeight: product.liftHeight || undefined,
+            vehicleFitment: `${yearRange} ${product.make} ${product.model}`,
+          },
+        }}
+        breadcrumbs={breadcrumbs}
+      />
+      
+      <main className="bg-neutral-50 min-h-screen">
+        {/* Breadcrumbs */}
+        <nav className="mx-auto max-w-6xl px-4 py-4">
         <ol className="flex items-center gap-2 text-sm text-neutral-500">
           <li>
             <Link href="/" className="hover:text-neutral-900">Home</Link>
@@ -397,5 +456,6 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
         </div>
       </div>
     </main>
+    </>
   );
 }

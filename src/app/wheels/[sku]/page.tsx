@@ -35,6 +35,8 @@ import { FinancingBadge } from "@/components/FinancingBadge";
 import { WheelGalleryBlock } from "@/components/WheelGalleryBlock";
 // Funnel analytics tracking (2026-04-26)
 import { ProductViewTracker } from "@/components/ProductViewTracker";
+// SEO structured data (2026-06-09)
+import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
 
 type WheelProsBrand = {
   code?: string;
@@ -207,9 +209,68 @@ function safeString(val: unknown): string {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// CANONICAL URL - Always points to national site for SEO safety
-// Local mode pages get noindex header + canonical to prevent duplicate content
+// SEO METADATA - Dynamic title, description, and canonical
 // ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Fetch wheel data for metadata generation (lightweight, cached)
+ */
+async function fetchWheelForMetadata(sku: string): Promise<{
+  title: string;
+  brand: string;
+  finish: string;
+  diameter: string;
+  width: string;
+  boltPattern: string;
+  imageUrl: string | null;
+} | null> {
+  try {
+    // Try TechFeed first (faster, local DB)
+    const tf = await getTechfeedWheelBySku(sku);
+    if (tf) {
+      return {
+        title: tf.product_desc || tf.sku,
+        brand: tf.brand_desc || tf.brand_cd || "Wheel",
+        finish: tf.abbreviated_finish_desc || tf.fancy_finish_desc || "",
+        diameter: tf.diameter || "",
+        width: tf.width || "",
+        boltPattern: tf.bolt_pattern_metric || tf.bolt_pattern_standard || "",
+        imageUrl: Array.isArray(tf.images) && tf.images.length ? tf.images[0] : null,
+      };
+    }
+
+    // Fallback to WheelPros API
+    const res = await fetch(
+      `${getBaseUrl()}/api/wheelpros/wheels/search?fields=images,properties&page=1&pageSize=1&sku=${encodeURIComponent(sku)}`,
+      { cache: "force-cache", next: { revalidate: 3600 } } // Cache for 1 hour
+    );
+    if (!res.ok) return null;
+    
+    const data = await res.json();
+    const items = Array.isArray(data?.items) ? data.items : Array.isArray(data?.results) ? data.results : [];
+    const it = items[0] as WheelProsItem | undefined;
+    if (!it) return null;
+
+    const brandObj = it?.brand && typeof it.brand === "object" ? (it.brand as WheelProsBrand) : null;
+    const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : "Wheel");
+    const images = Array.isArray(it?.images) ? it.images : [];
+    const imageUrl = images[0]?.imageUrlLarge || images[0]?.imageUrlMedium || null;
+
+    return {
+      title: it?.title || sku,
+      brand: brand || "Wheel",
+      finish: it?.properties?.finish || "",
+      diameter: it?.properties?.diameter || "",
+      width: it?.properties?.width || "",
+      boltPattern: it?.properties?.boltPatternMetric || it?.properties?.boltPattern || "",
+      imageUrl,
+    };
+  } catch (err) {
+    console.error("[wheel-metadata] Error fetching wheel:", err);
+    return null;
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -217,10 +278,52 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { sku } = await params;
   const decodedSku = decodeURIComponent(sku);
+  const canonicalUrl = `https://shop.warehousetiredirect.com/wheels/${decodedSku}`;
   
+  // Fetch product data for dynamic metadata
+  const wheel = await fetchWheelForMetadata(decodedSku);
+  
+  if (!wheel) {
+    // Fallback for missing products
+    return {
+      title: `Wheel ${decodedSku} | ${BRAND.name}`,
+      description: `Shop custom wheels at ${BRAND.name}. Free shipping, guaranteed fitment, expert support.`,
+      alternates: { canonical: canonicalUrl },
+    };
+  }
+
+  // Build dynamic title: "Brand Model Size | Finish | Warehouse Tire Direct"
+  const sizeStr = wheel.diameter && wheel.width ? `${wheel.diameter}x${wheel.width}` : "";
+  const titleParts = [wheel.brand, wheel.title !== wheel.brand ? wheel.title : null, sizeStr]
+    .filter(Boolean)
+    .join(" ");
+  const title = `${titleParts} | ${BRAND.name}`;
+
+  // Build dynamic description
+  const descParts = [`Shop the ${wheel.brand} ${wheel.title}`];
+  if (wheel.finish) descParts.push(`in ${wheel.finish} finish`);
+  if (wheel.diameter) descParts.push(`${wheel.diameter}" diameter`);
+  if (wheel.boltPattern) descParts.push(`${wheel.boltPattern} bolt pattern`);
+  descParts.push("Free shipping on all orders. Guaranteed fitment. Expert support.");
+  const description = descParts.join(". ").slice(0, 160);
+
   return {
-    alternates: {
-      canonical: `https://shop.warehousetiredirect.com/wheels/${decodedSku}`,
+    title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: titleParts,
+      description,
+      url: canonicalUrl,
+      siteName: BRAND.name,
+      images: wheel.imageUrl ? [{ url: wheel.imageUrl, width: 800, height: 800, alt: titleParts }] : undefined,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titleParts,
+      description,
+      images: wheel.imageUrl ? [wheel.imageUrl] : undefined,
     },
   };
 }
@@ -397,14 +500,64 @@ export default async function WheelDetailPage({
   // Fetch co-add recommendations (non-blocking, cached)
   const coAddedProducts = await getCoAddedProductsForPDP(sku, "wheel");
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEO: Build structured data for Product and Breadcrumb schemas
+  // ═══════════════════════════════════════════════════════════════════════════
+  const canonicalUrl = `https://shop.warehousetiredirect.com/wheels/${sku}`;
+  const productTitle = String(it?.title || sku);
+  
+  // Calculate sell price (30% margin on cost, capped at MSRP)
+  const sellPrice = typeof price === "number" && Number.isFinite(price) ? price : undefined;
+  
+  const breadcrumbs: BreadcrumbItem[] = [
+    { name: "Home", url: "https://shop.warehousetiredirect.com" },
+    { name: "Wheels", url: "https://shop.warehousetiredirect.com/wheels" },
+    ...(brand ? [{ name: brand, url: `https://shop.warehousetiredirect.com/wheels?brand=${encodeURIComponent(brand)}` }] : []),
+    { name: productTitle, url: canonicalUrl },
+  ];
+
+  // Build product description for schema
+  const schemaDescription = [
+    `${brand || "Premium"} ${productTitle}`,
+    finish ? `${finish} finish` : null,
+    diameter && width ? `${diameter}" x ${width}" size` : null,
+    boltPattern ? `${boltPattern} bolt pattern` : null,
+    offset ? `${offset}mm offset` : null,
+    "Free shipping. Guaranteed fitment.",
+  ].filter(Boolean).join(". ");
+
   return (
-    <main className="bg-neutral-50">
-      {/* Funnel tracking */}
-      <ProductViewTracker 
-        sku={sku} 
-        type="wheel" 
-        vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+    <>
+      {/* SEO Structured Data */}
+      <ProductPageSchema
+        product={{
+          type: "wheel",
+          sku,
+          name: productTitle,
+          description: schemaDescription,
+          brand: brand || "Wheel",
+          imageUrl: imageUrl || undefined,
+          price: sellPrice,
+          inStock: true, // Wheels are generally available
+          url: canonicalUrl,
+          attributes: {
+            diameter: diameter || undefined,
+            width: width || undefined,
+            boltPattern: boltPattern || undefined,
+            offset: offset || undefined,
+            finish: finish || undefined,
+          },
+        }}
+        breadcrumbs={breadcrumbs}
       />
+      
+      <main className="bg-neutral-50">
+        {/* Funnel tracking */}
+        <ProductViewTracker 
+          sku={sku} 
+          type="wheel" 
+          vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+        />
       
       <div className="mx-auto max-w-6xl px-4 py-8">
         {/* Breadcrumb */}
@@ -696,5 +849,6 @@ export default async function WheelDetailPage({
         </div>
       </div>
     </main>
+    </>
   );
 }

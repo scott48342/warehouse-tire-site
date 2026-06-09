@@ -14,6 +14,8 @@ import { getDbPool } from "@/lib/db/pool";
 import { AccessoryAddToCartButton } from "@/components/AccessoryAddToCartButton";
 import { FinancingBadge } from "@/components/FinancingBadge";
 import type { AccessoryCategory } from "@/lib/cart/accessoryTypes";
+// SEO structured data (2026-06-09)
+import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
 
 // Placeholder images by category
 const CATEGORY_IMAGES: Record<string, string> = {
@@ -253,19 +255,34 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { sku } = await params;
   const acc = await getAccessory(sku);
+  const canonicalUrl = `https://shop.warehousetiredirect.com/accessories/${encodeURIComponent(sku)}`;
 
   if (!acc) {
-    return { title: "Accessory Not Found" };
+    return { 
+      title: "Accessory Not Found",
+      alternates: { canonical: canonicalUrl },
+    };
   }
 
   const categoryName = CATEGORY_NAMES[acc.category] || "Accessories";
+  const description = generateDescription(acc).slice(0, 160);
 
   return {
     title: `${acc.title} | ${categoryName} | Warehouse Tire Direct`,
-    description: generateDescription(acc).slice(0, 160),
+    description,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: acc.title,
-      description: generateDescription(acc).slice(0, 160),
+      description,
+      url: canonicalUrl,
+      siteName: "Warehouse Tire Direct",
+      images: acc.image_url ? [{ url: acc.image_url, width: 800, height: 800, alt: acc.title }] : undefined,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: acc.title,
+      description,
       images: acc.image_url ? [acc.image_url] : undefined,
     },
   };
@@ -316,10 +333,45 @@ export default async function AccessoryPage({
   // Collect all available images
   const images = [acc.image_url, acc.image_url_2, acc.image_url_3].filter(Boolean) as string[];
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEO: Build structured data for Product and Breadcrumb schemas
+  // ═══════════════════════════════════════════════════════════════════════════
+  const canonicalUrl = `https://shop.warehousetiredirect.com/accessories/${encodeURIComponent(acc.sku)}`;
+  const breadcrumbs: BreadcrumbItem[] = [
+    { name: "Home", url: "https://shop.warehousetiredirect.com" },
+    { name: "Accessories", url: "https://shop.warehousetiredirect.com/accessories" },
+    { name: categoryName, url: `https://shop.warehousetiredirect.com/accessories?category=${acc.category}` },
+    { name: acc.title, url: canonicalUrl },
+  ];
+
   return (
-    <main className="container mx-auto px-4 py-8">
-      {/* Breadcrumbs */}
-      <nav className="text-sm text-gray-500 mb-6">
+    <>
+      {/* SEO Structured Data */}
+      <ProductPageSchema
+        product={{
+          type: "accessory",
+          sku: acc.sku,
+          name: acc.title,
+          description: description.slice(0, 300),
+          brand: acc.brand || "Accessory",
+          imageUrl: acc.image_url || undefined,
+          price: price > 0 ? price : undefined,
+          inStock: acc.in_stock,
+          url: canonicalUrl,
+          attributes: {
+            // Accessory-specific attributes where applicable
+            ...(acc.thread_size ? { finish: `Thread: ${acc.thread_size}` } : {}),
+            ...(acc.outer_diameter && acc.inner_diameter 
+              ? { diameter: `${acc.outer_diameter}mm to ${acc.inner_diameter}mm` } 
+              : {}),
+          },
+        }}
+        breadcrumbs={breadcrumbs}
+      />
+      
+      <main className="container mx-auto px-4 py-8">
+        {/* Breadcrumbs */}
+        <nav className="text-sm text-gray-500 mb-6">
         <Link href="/" className="hover:text-orange-600">
           Home
         </Link>
@@ -518,5 +570,6 @@ export default async function AccessoryPage({
         </div>
       </div>
     </main>
+    </>
   );
 }

@@ -45,6 +45,8 @@ import { ProductViewTracker } from "@/components/ProductViewTracker";
 import { headers } from "next/headers";
 import { detectShopContext } from "@/lib/shopContext";
 import { notFound } from "next/navigation";
+// SEO structured data (2026-06-09)
+import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
 
 export const runtime = "nodejs";
 
@@ -346,9 +348,57 @@ function PerformanceSection({
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// CANONICAL URL - Always points to national site for SEO safety
-// Local mode pages get noindex header + canonical to prevent duplicate content
+// SEO METADATA - Dynamic title, description, and canonical
 // ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Fetch tire data for metadata generation (lightweight, cached)
+ */
+async function fetchTireForMetadata(sku: string): Promise<{
+  brand: string;
+  model: string;
+  size: string;
+  category: string | null;
+  mileageWarranty: number | null;
+  imageUrl: string | null;
+} | null> {
+  try {
+    const db = getPool();
+    const { rows } = await db.query({
+      text: `
+        SELECT
+          brand_desc,
+          tire_description,
+          tire_size,
+          simple_size,
+          terrain,
+          mileage_warranty,
+          image_url
+        FROM wp_tires
+        WHERE sku = $1
+        LIMIT 1
+      `,
+      values: [sku],
+    });
+    
+    const t = rows[0];
+    if (t) {
+      return {
+        brand: t.brand_desc || "Tire",
+        model: cleanTireDisplayTitle(t.tire_description || t.tire_size || sku, t.brand_desc),
+        size: normalizeTireSize(t.tire_size || t.simple_size || ""),
+        category: normalizeTreadCategory(t.terrain, t.tire_description),
+        mileageWarranty: t.mileage_warranty ? Number(t.mileage_warranty) : null,
+        imageUrl: t.image_url || null,
+      };
+    }
+    return null;
+  } catch (err) {
+    console.error("[tire-metadata] Error fetching tire:", err);
+    return null;
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -356,10 +406,52 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { sku } = await params;
   const decodedSku = decodeURIComponent(sku);
+  const canonicalUrl = `https://shop.warehousetiredirect.com/tires/${decodedSku}`;
   
+  // Fetch product data for dynamic metadata
+  const tire = await fetchTireForMetadata(decodedSku);
+  
+  if (!tire) {
+    // Fallback for missing products (or TireWeb tires without DB entry)
+    return {
+      title: `Tire ${decodedSku} | ${BRAND.name}`,
+      description: `Shop quality tires at ${BRAND.name}. Free shipping, guaranteed fitment, expert support.`,
+      alternates: { canonical: canonicalUrl },
+    };
+  }
+
+  // Build dynamic title: "Brand Model Size | Category | Warehouse Tire Direct"
+  const titleParts = [tire.brand, tire.model, tire.size].filter(Boolean).join(" ");
+  const title = tire.category
+    ? `${titleParts} ${tire.category} Tire | ${BRAND.name}`
+    : `${titleParts} | ${BRAND.name}`;
+
+  // Build dynamic description
+  const descParts = [`Shop the ${tire.brand} ${tire.model} ${tire.size}`];
+  if (tire.category) descParts.push(`${tire.category} tire`);
+  if (tire.mileageWarranty && tire.mileageWarranty >= 40000) {
+    descParts.push(`${Math.round(tire.mileageWarranty / 1000)}K mile warranty`);
+  }
+  descParts.push("Free shipping. Guaranteed fitment. Expert support.");
+  const description = descParts.join(". ").slice(0, 160);
+
   return {
-    alternates: {
-      canonical: `https://shop.warehousetiredirect.com/tires/${decodedSku}`,
+    title,
+    description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: titleParts,
+      description,
+      url: canonicalUrl,
+      siteName: BRAND.name,
+      images: tire.imageUrl ? [{ url: tire.imageUrl, width: 800, height: 800, alt: titleParts }] : undefined,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titleParts,
+      description,
+      images: tire.imageUrl ? [tire.imageUrl] : undefined,
     },
   };
 }
@@ -478,15 +570,57 @@ export default async function TireDetailPage({
             // Silent fail - no rebate is fine
             console.error("[tire-pdp] Rebate fetch error:", err);
           }
+
+          // ═══════════════════════════════════════════════════════════════════
+          // SEO: Build structured data for Product and Breadcrumb schemas
+          // ═══════════════════════════════════════════════════════════════════
+          const canonicalUrl = `https://shop.warehousetiredirect.com/tires/${encodeURIComponent(tire.partNumber || safeSku)}?source=tireweb&size=${encodeURIComponent(tire.size || size)}`;
+          const tirewebBreadcrumbs: BreadcrumbItem[] = [
+            { name: "Home", url: "https://shop.warehousetiredirect.com" },
+            { name: "Tires", url: "https://shop.warehousetiredirect.com/tires" },
+            ...(tire.brand ? [{ name: tire.brand, url: `https://shop.warehousetiredirect.com/tires?brand=${encodeURIComponent(tire.brand)}` }] : []),
+            { name: title, url: canonicalUrl },
+          ];
+          const tirewebSchemaDesc = [
+            `${tire.brand || "Premium"} ${title}`,
+            tire.size || size ? `Size: ${normalizeTireSize(tire.size || size)}` : null,
+            category ? `${category} tire` : null,
+            tire.badges?.warrantyMiles ? `${Math.round(Number(tire.badges.warrantyMiles) / 1000)}K mile warranty` : null,
+            "Free shipping. Guaranteed fitment.",
+          ].filter(Boolean).join(". ");
           
           return (
-            <main className="bg-neutral-50">
-              {/* Funnel tracking */}
-              <ProductViewTracker 
-                sku={tire.partNumber || safeSku} 
-                type="tire" 
-                vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+            <>
+              {/* SEO Structured Data */}
+              <ProductPageSchema
+                product={{
+                  type: "tire",
+                  sku: tire.partNumber || safeSku,
+                  name: title,
+                  description: tirewebSchemaDesc,
+                  brand: tire.brand || "Tire",
+                  imageUrl: tire.imageUrl || undefined,
+                  price: displayPrice || undefined,
+                  inStock: totalQty > 0,
+                  url: canonicalUrl,
+                  attributes: {
+                    tireSize: normalizeTireSize(tire.size || size),
+                    loadIndex: tire.badges?.loadIndex ? String(tire.badges.loadIndex) : undefined,
+                    speedRating: tire.badges?.speedRating ? String(tire.badges.speedRating) : undefined,
+                    treadPattern: category || undefined,
+                    mileageWarranty: tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : undefined,
+                  },
+                }}
+                breadcrumbs={tirewebBreadcrumbs}
               />
+              
+              <main className="bg-neutral-50">
+                {/* Funnel tracking */}
+                <ProductViewTracker 
+                  sku={tire.partNumber || safeSku} 
+                  type="tire" 
+                  vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+                />
               
               <div className="mx-auto max-w-6xl px-4 py-8">
                 {/* Breadcrumb */}
@@ -689,6 +823,7 @@ export default async function TireDetailPage({
                 </div>
               </div>
             </main>
+            </>
           );
         }
       }
@@ -866,14 +1001,56 @@ export default async function TireDetailPage({
   const rawTitle = String(t.tire_description || t.tire_size || t.simple_size || t.sku);
   const title = cleanTireDisplayTitle(rawTitle, t.brand_desc);
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEO: Build structured data for Product and Breadcrumb schemas (WheelPros)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const wpCanonicalUrl = `https://shop.warehousetiredirect.com/tires/${safeSku}`;
+  const wpBreadcrumbs: BreadcrumbItem[] = [
+    { name: "Home", url: "https://shop.warehousetiredirect.com" },
+    { name: "Tires", url: "https://shop.warehousetiredirect.com/tires" },
+    ...(t.brand_desc ? [{ name: String(t.brand_desc), url: `https://shop.warehousetiredirect.com/tires?brand=${encodeURIComponent(t.brand_desc)}` }] : []),
+    { name: title, url: wpCanonicalUrl },
+  ];
+  const wpSchemaDesc = [
+    `${t.brand_desc || "Premium"} ${title}`,
+    t.tire_size ? `Size: ${normalizeTireSize(t.tire_size)}` : null,
+    category ? `${category} tire` : null,
+    t.mileage_warranty ? `${Math.round(Number(t.mileage_warranty) / 1000)}K mile warranty` : null,
+    "Free shipping. Guaranteed fitment.",
+  ].filter(Boolean).join(". ");
+
   return (
-    <main className="bg-neutral-50">
-      {/* Funnel tracking - WheelPros tires */}
-      <ProductViewTracker 
-        sku={safeSku} 
-        type="tire" 
-        vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+    <>
+      {/* SEO Structured Data - WheelPros tires */}
+      <ProductPageSchema
+        product={{
+          type: "tire",
+          sku: safeSku,
+          name: title,
+          description: wpSchemaDesc,
+          brand: String(t.brand_desc || "Tire"),
+          imageUrl: enrichedImageUrl || undefined,
+          price: displayPrice || undefined,
+          inStock: totalQty > 0,
+          url: wpCanonicalUrl,
+          attributes: {
+            tireSize: t.tire_size ? normalizeTireSize(t.tire_size) : undefined,
+            loadIndex: t.load_index ? String(t.load_index) : undefined,
+            speedRating: t.speed_rating ? String(t.speed_rating) : undefined,
+            treadPattern: category || undefined,
+            mileageWarranty: t.mileage_warranty ? Number(t.mileage_warranty) : undefined,
+          },
+        }}
+        breadcrumbs={wpBreadcrumbs}
       />
+      
+      <main className="bg-neutral-50">
+        {/* Funnel tracking - WheelPros tires */}
+        <ProductViewTracker 
+          sku={safeSku} 
+          type="tire" 
+          vehicle={hasVehicle ? { year: parseInt(year), make, model } : undefined} 
+        />
       
       <div className="mx-auto max-w-6xl px-4 py-8">
         {/* Breadcrumb */}
@@ -1101,5 +1278,6 @@ export default async function TireDetailPage({
         </div>
       </div>
     </main>
+    </>
   );
 }
