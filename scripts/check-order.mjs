@@ -1,18 +1,22 @@
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+import pg from 'pg';
+const { Pool } = pg;
 
-async function check() {
-  // Check supplier order
-  const supplierOrder = await prisma.supplier_orders.findFirst({
-    where: { supplier_order_number: 'HDS26692934' }
-  });
-  console.log('Supplier order:', JSON.stringify(supplierOrder, null, 2));
+const pool = new Pool({ 
+  connectionString: process.env.POSTGRES_URL
+});
+
+async function main() {
+  const orderRes = await pool.query(`SELECT * FROM orders WHERE id LIKE '%T5JT8F%'`);
+  console.log('Order:', JSON.stringify(orderRes.rows[0], null, 2));
   
-  // Also check the main order
-  const mainOrder = await prisma.orders.findFirst({
-    where: { order_number: 'WTD-T5JT8F' }
-  });
-  console.log('Main order:', JSON.stringify(mainOrder, null, 2));
+  if (orderRes.rows[0]) {
+    const supplierRes = await pool.query(`SELECT * FROM supplier_orders WHERE order_id = $1`, [orderRes.rows[0].id]);
+    console.log('Supplier Orders:', JSON.stringify(supplierRes.rows, null, 2));
+  }
+  
+  await pool.end();
 }
 
-check().catch(console.error).finally(() => prisma.$disconnect());
+main().catch(console.error);

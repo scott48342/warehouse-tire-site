@@ -137,7 +137,9 @@ function mapWheelResults(wheels: any[]): SearchResult[] {
 
 /**
  * Search tires via US AutoForce StockCheck API
- * Uses part number search with wildcard matching
+ * 
+ * USAF requires <parts>/<PartDto> with lineCode (brand code) for part number search.
+ * Since we don't know the brand, we try common codes until we find a match.
  */
 async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
   try {
@@ -155,8 +157,12 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
       ? "https://servicesstage.usautoforce.com/integrationservice.asmx"
       : "https://services.usautoforce.com/integrationservice.asmx";
     
-    // Build SOAP request for StockCheck with part number
-    const soapBody = `<?xml version="1.0" encoding="utf-8"?>
+    // Common brand codes to try (in order of popularity)
+    const brandCodesToTry = ["GEN", "FAL", "CON", "COP", "TOY", "BFG", "MIC", "GDY", "HAN", "YOK"];
+    
+    for (const lineCode of brandCodesToTry) {
+      // Build SOAP request with parts/PartDto (required for part number search)
+      const soapBody = `<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="https://services.usautoforce.com">
   <soap:Body>
     <ns:StockCheck>
@@ -164,63 +170,71 @@ async function searchTiresUSAF(query: string): Promise<SearchResult[]> {
         <ns:username>${escapeXml(username)}</ns:username>
         <ns:password>${escapeXml(password)}</ns:password>
         <ns:accountNumber>${escapeXml(account)}</ns:accountNumber>
-        <ns:tires>
-          <ns:TireDto>
+        <ns:parts>
+          <ns:PartDto>
+            <ns:lineNumber>1</ns:lineNumber>
+            <ns:lineCode>${escapeXml(lineCode)}</ns:lineCode>
             <ns:partNumber>${escapeXml(query)}</ns:partNumber>
-          </ns:TireDto>
-        </ns:tires>
+            <ns:quantityRequested>4</ns:quantityRequested>
+          </ns:PartDto>
+        </ns:parts>
       </ns:request>
     </ns:StockCheck>
   </soap:Body>
 </soap:Envelope>`;
 
-    const res = await fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "text/xml; charset=utf-8",
-        "SOAPAction": "https://services.usautoforce.com/StockCheck",
-      },
-      body: soapBody,
-    });
-    
-    if (!res.ok) {
-      console.error("[search] USAF API error:", res.status);
-      return [];
-    }
-    
-    const xml = await res.text();
-    
-    // Parse response - extract tire data
-    const results: SearchResult[] = [];
-    
-    // Extract individual tire results using regex (simple parsing)
-    const tireMatches = xml.matchAll(/<TireResultDto>([\s\S]*?)<\/TireResultDto>/g);
-    
-    for (const match of tireMatches) {
-      const tireXml = match[1];
-      const partNumber = extractXmlValue(tireXml, "partNumber") || extractXmlValue(tireXml, "PartNumber");
-      const brand = extractXmlValue(tireXml, "brand") || extractXmlValue(tireXml, "Brand");
-      const model = extractXmlValue(tireXml, "model") || extractXmlValue(tireXml, "Model") || extractXmlValue(tireXml, "description");
-      const size = extractXmlValue(tireXml, "size") || extractXmlValue(tireXml, "Size");
-      const price = extractXmlValue(tireXml, "cost") || extractXmlValue(tireXml, "price");
+      const res = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/xml; charset=utf-8",
+          "SOAPAction": "https://services.usautoforce.com/StockCheck",
+        },
+        body: soapBody,
+      });
       
-      if (partNumber) {
-        // Apply $40 markup to cost for sell price
-        const costNum = price ? parseFloat(price) : 0;
-        const sellPrice = costNum > 0 ? costNum + 40 : undefined;
+      if (!res.ok) continue;
+      
+      const xml = await res.text();
+      
+      // Check for success and results
+      const errorCode = extractXmlValue(xml, "errorCode");
+      if (errorCode && errorCode !== "success") continue;
+      
+      // Extract part result
+      const partMatches = xml.matchAll(/<PartResultDto>([\s\S]*?)<\/PartResultDto>/g);
+      const results: SearchResult[] = [];
+      
+      for (const match of partMatches) {
+        const partXml = match[1];
+        const partNumber = extractXmlValue(partXml, "partNumber");
+        const brand = extractXmlValue(partXml, "brand") || extractXmlValue(partXml, "brandName");
+        const description = extractXmlValue(partXml, "description") || extractXmlValue(partXml, "model");
+        const size = extractXmlValue(partXml, "tireSize") || extractXmlValue(partXml, "size");
+        const cost = extractXmlValue(partXml, "cost");
         
-        results.push({
-          type: "tire",
-          sku: partNumber,
-          name: [brand, model, size].filter(Boolean).join(" ").trim() || partNumber,
-          brand: brand || "Unknown",
-          price: sellPrice,
-          url: `/tires/${partNumber}?source=usautoforce${size ? `&size=${encodeURIComponent(size)}` : ""}`,
-        });
+        if (partNumber) {
+          const costNum = cost ? parseFloat(cost) : 0;
+          const sellPrice = costNum > 0 ? costNum + 40 : undefined;
+          
+          results.push({
+            type: "tire",
+            sku: partNumber,
+            name: [brand, description, size].filter(Boolean).join(" ").trim() || partNumber,
+            brand: brand || "Unknown",
+            price: sellPrice,
+            url: `/tires/${partNumber}?source=usautoforce${size ? `&size=${encodeURIComponent(size)}` : ""}`,
+          });
+        }
+      }
+      
+      if (results.length > 0) {
+        console.log(`[search] USAF found ${results.length} results with lineCode=${lineCode}`);
+        return results.slice(0, 5);
       }
     }
     
-    return results.slice(0, 5);
+    console.log("[search] USAF: no results found for part number");
+    return [];
   } catch (err) {
     console.error("[search] Tire search error:", err);
     return [];
