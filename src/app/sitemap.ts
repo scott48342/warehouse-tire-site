@@ -11,7 +11,6 @@
  */
 
 import { MetadataRoute } from "next";
-import { headers } from "next/headers";
 
 // Force dynamic generation so the sitemap queries the DB at runtime
 // Revalidate every 24 hours (86400 seconds)
@@ -26,19 +25,10 @@ const DOMAIN_MAP: Record<string, string> = {
 const DEFAULT_BASE_URL = "https://shop.warehousetiredirect.com";
 
 /**
- * Get base URL from request host header
- * Falls back to env var or default national site
+ * Get base URL for sitemap
+ * Uses env var (set per-deployment) since sitemap is generated at build/revalidate time
  */
 function getBaseUrl(): string {
-  try {
-    const headersList = headers();
-    const host = headersList.get("host") || headersList.get("x-forwarded-host");
-    if (host && DOMAIN_MAP[host]) {
-      return DOMAIN_MAP[host];
-    }
-  } catch {
-    // headers() may throw in some contexts, fall back gracefully
-  }
   return process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_BASE_URL;
 }
 
