@@ -241,6 +241,13 @@ interface ParsedFitment {
   oemWidths: number[];
   oemTireSizes: string[];
   oemOverallDiameter: number;
+  /**
+   * OEM overall diameter per rim diameter (e.g., {17: 24.3, 18: 24.5, 19: 25.5}).
+   * Vehicles with multiple OEM sizes (staggered, optional wheels) have different
+   * overall diameters per rim — validating every candidate against a single
+   * baseline falsely rejects valid OEM-equivalent setups.
+   */
+  oemOverallDiameterByRim: Record<number, number>;
 }
 
 async function getVehicleFitment(
@@ -288,8 +295,25 @@ async function getVehicleFitment(
   // Parse OEM tire sizes (supports string arrays and {front, rear} staggered format)
   const oemTireSizes = normalizeToStringArray(bestFitment.oemTireSizes);
 
-  // Calculate OEM overall diameter (from first tire size)
+  // Calculate OEM overall diameter (from first tire size) and per-rim map
   let oemOverallDiameter = 28; // fallback
+  const oemOverallDiameterByRim: Record<number, number> = {};
+  for (const size of oemTireSizes) {
+    const parsed = parseTireSize(size);
+    if (!parsed) continue;
+    const od = calculateOverallDiameter(
+      parsed.width,
+      parsed.aspectRatio,
+      parsed.rimDiameter
+    );
+    // Keep the largest OD per rim (covers staggered rears / optional sizes)
+    if (
+      oemOverallDiameterByRim[parsed.rimDiameter] == null ||
+      od > oemOverallDiameterByRim[parsed.rimDiameter]
+    ) {
+      oemOverallDiameterByRim[parsed.rimDiameter] = od;
+    }
+  }
   if (oemTireSizes.length > 0) {
     const parsed = parseTireSize(oemTireSizes[0]);
     if (parsed) {
@@ -313,6 +337,7 @@ async function getVehicleFitment(
     oemWidths: oemWidths.length > 0 ? oemWidths : [7.5],
     oemTireSizes,
     oemOverallDiameter,
+    oemOverallDiameterByRim,
   };
 }
 
@@ -340,6 +365,13 @@ async function generatePackages(opts: {
   // Get baseline OEM diameter
   const baseOemDiameter = Math.max(...fitment.oemDiameters, 17);
 
+  // Diameters actually available in inventory for this bolt pattern —
+  // used as a fallback when a category's strict plus-size targets don't exist
+  // (e.g., HD trucks with OEM 18" where inventory jumps 18" → 20").
+  const availableDiameters = [...new Set(
+    wheels.map(w => Number(w.diameter || 0)).filter(d => d > 0)
+  )].sort((a, b) => a - b);
+
   for (const category of categories) {
     const config = PACKAGE_CONFIGS[category];
     
@@ -347,13 +379,33 @@ async function generatePackages(opts: {
     const targetDiameters = config.diameterOffset.map(off => baseOemDiameter + off);
 
     // Find best wheel for this category
-    const bestWheel = findBestWheel(wheels, {
+    let bestWheel = findBestWheel(wheels, {
       targetDiameters,
       preferredBrands: config.preferredBrands,
       offsetRange: fitment.offsetRange,
       offsetPreference: config.offsetPreference,
       priceRange: config.priceRange,
     });
+
+    // Fallback: strict targets missing from inventory — try the nearest
+    // available diameters within a safe window (OEM-1 .. OEM+3). The ±3%
+    // overall-diameter validation below still guards every package.
+    if (!bestWheel) {
+      const fallbackDiameters = availableDiameters.filter(
+        d => d >= baseOemDiameter - 1 &&
+             d <= baseOemDiameter + 3 &&
+             !targetDiameters.includes(d)
+      );
+      if (fallbackDiameters.length > 0) {
+        bestWheel = findBestWheel(wheels, {
+          targetDiameters: fallbackDiameters,
+          preferredBrands: config.preferredBrands,
+          offsetRange: fitment.offsetRange,
+          offsetPreference: config.offsetPreference,
+          priceRange: config.priceRange,
+        });
+      }
+    }
 
     if (!bestWheel) continue;
 
@@ -368,10 +420,19 @@ async function generatePackages(opts: {
       tire.rimDiameter
     );
 
+    // Pick the OEM baseline for THIS rim diameter when known (staggered /
+    // multi-size vehicles), falling back to the closest known rim, then the
+    // single-size baseline. Prevents false ±3% rejections when a vehicle's
+    // OEM sizes legitimately differ in overall diameter per wheel size.
+    const oemBaseline = resolveOemBaseline(
+      fitment,
+      tire.rimDiameter
+    );
+
     // Validate fitment
     const validation = validateFitment(
       overallDiameter,
-      fitment.oemOverallDiameter,
+      oemBaseline,
       Number(bestWheel.offset || 0),
       fitment.offsetRange
     );
@@ -412,7 +473,7 @@ async function generatePackages(opts: {
       totalPrice: Math.round(totalPrice * 100) / 100,
       fitmentValidation: validation,
       overallDiameter: Math.round(overallDiameter * 10) / 10,
-      oemOverallDiameter: Math.round(fitment.oemOverallDiameter * 10) / 10,
+      oemOverallDiameter: Math.round(oemBaseline * 10) / 10,
       offsetRange: fitment.offsetRange,
       sizeSpec: `${bestWheel.diameter}x${bestWheel.width} / ${tire.size}`,
       availability: "check_availability", // Will be updated with cached availability
@@ -479,8 +540,11 @@ function findBestWheel(
     // Skip if diameter doesn't match targets
     if (!criteria.targetDiameters.includes(diameter)) continue;
 
-    // Skip if offset is unsafe
-    if (offset < criteria.offsetRange.min || offset > criteria.offsetRange.max) continue;
+    // Skip if offset is unsafe.
+    // Allow ±5mm beyond the OEM range — identical to the hard bounds
+    // validateFitment() enforces. Some records have degenerate ranges
+    // (min === max) that would otherwise reject every wheel in inventory.
+    if (offset < criteria.offsetRange.min - 5 || offset > criteria.offsetRange.max + 5) continue;
 
     // Calculate score
     let score = 50;
@@ -627,6 +691,26 @@ function parseTireSize(size: string): { width: number; aspectRatio: number; rimD
   return null;
 }
 
+/**
+ * Resolve the OEM overall-diameter baseline for a candidate rim diameter.
+ * Order: exact rim match → closest known rim → single-size fallback.
+ */
+function resolveOemBaseline(
+  fitment: ParsedFitment,
+  rimDiameter: number
+): number {
+  const byRim = fitment.oemOverallDiameterByRim;
+  if (byRim && byRim[rimDiameter] != null) return byRim[rimDiameter];
+  const rims = byRim ? Object.keys(byRim).map(Number) : [];
+  if (rims.length > 0) {
+    const closest = rims.reduce((prev, curr) =>
+      Math.abs(curr - rimDiameter) < Math.abs(prev - rimDiameter) ? curr : prev
+    );
+    return byRim[closest];
+  }
+  return fitment.oemOverallDiameter;
+}
+
 function calculateOverallDiameter(
   tireWidth: number,      // mm
   aspectRatio: number,    // percent
@@ -729,3 +813,13 @@ function scorePackage(opts: {
 // ============================================================================
 
 export { PACKAGE_CONFIGS };
+
+// Exported for unit tests (pure functions, no side effects)
+export {
+  parseTireSize,
+  calculateOverallDiameter,
+  resolveOemBaseline,
+  validateFitment,
+  findBestWheel,
+};
+export type { ParsedFitment };

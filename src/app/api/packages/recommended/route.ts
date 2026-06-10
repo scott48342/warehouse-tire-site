@@ -41,8 +41,10 @@ export async function GET(req: Request) {
       );
     }
     
+    // Fitment DB contains certified vehicles back to the 1940s (classics).
+    // The old `year < 1990` gate silently blocked ~925 package-capable vehicles.
     const year = parseInt(yearStr, 10);
-    if (isNaN(year) || year < 1990 || year > 2030) {
+    if (isNaN(year) || year < 1940 || year > 2030) {
       return NextResponse.json(
         { error: "Invalid year" },
         { status: 400 }
