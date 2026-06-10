@@ -5,6 +5,7 @@ import { CartProvider } from "@/lib/cart/CartContext";
 import { CompareProvider } from "@/context/CompareContext";
 import { DiscountProvider } from "@/lib/discounts/DiscountContext";
 import { ShopContextProvider } from "@/contexts/ShopContextProvider";
+import { VehicleMemoryProvider } from "@/contexts/VehicleMemoryContext";
 import { CartTracker } from "@/components/CartTracker";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -75,10 +76,11 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${oswald.variable} ${bebasNeue.variable} antialiased flex min-h-screen flex-col`}>
         <ShopContextProvider>
-          <CartProvider>
-            <DiscountProvider>
-              <CompareProvider>
-                <CartTracker />
+          <VehicleMemoryProvider>
+            <CartProvider>
+              <DiscountProvider>
+                <CompareProvider>
+                  <CartTracker />
                 <Suspense fallback={null}>
                   <Analytics />
                   <FunnelTracker />
@@ -86,9 +88,10 @@ export default function RootLayout({
                 <ConditionalLayout>
                   {children}
                 </ConditionalLayout>
-              </CompareProvider>
-            </DiscountProvider>
-          </CartProvider>
+                </CompareProvider>
+              </DiscountProvider>
+            </CartProvider>
+          </VehicleMemoryProvider>
         </ShopContextProvider>
         {/* <Chatwoot /> */}{/* Disabled temporarily */}
       </body>

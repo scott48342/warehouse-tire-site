@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { SteppedVehicleSelector, type VehicleSelection } from "@/components/SteppedVehicleSelector";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { useVehicleMemory } from "@/contexts/VehicleMemoryContext";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import tireSizes from "@/data/tire-sizes.json";
 
@@ -176,6 +177,7 @@ export function SearchModal({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const { setActiveVehicle } = useVehicleMemory();
 
   const [mode, setMode] = useState<Mode>("vehicle");
 
@@ -302,6 +304,16 @@ export function SearchModal({
                 <div className="mt-2">
                   <SteppedVehicleSelector
                     onComplete={(selection: VehicleSelection) => {
+                      // Save vehicle to memory for returning visitors
+                      setActiveVehicle({
+                        year: selection.year,
+                        make: selection.make,
+                        model: selection.model,
+                        trim: selection.trim,
+                        modification: selection.modification,
+                        wheelDia: selection.wheelDia,
+                      });
+
                       // After trim is selected, navigate and close.
                       const next = new URLSearchParams(currentSp);
                       next.set("year", selection.year);

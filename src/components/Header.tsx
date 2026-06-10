@@ -15,6 +15,7 @@ import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
 import { SearchModal } from "@/components/SearchModal";
 import { CartIcon } from "@/components/CartIcon";
 import { JakeAvatar } from "@/components/jake/JakeAvatar";
+import { VehicleIndicator, VehicleIndicatorCompact } from "@/components/VehicleIndicator";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -228,6 +229,8 @@ export function Header() {
                 Lifted
               </Link>
             </div>
+            {/* Saved Vehicle - compact */}
+            <VehicleIndicatorCompact />
             {/* Cart icon for mobile */}
             <CartIcon />
           </div>
@@ -418,6 +421,9 @@ export function Header() {
 
           {/* Part Number Search - collapsible icon */}
           <CollapsiblePartNumberSearch />
+
+          {/* Saved Vehicle Indicator */}
+          <VehicleIndicator />
 
           <CartIcon />
         </nav>

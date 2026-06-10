@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { SteppedVehicleSelector, type VehicleSelection } from "./SteppedVehicleSelector";
 import { BuildTypeSelector, type BuildTypeSelection } from "./BuildTypeSelector";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { useVehicleMemory } from "@/contexts/VehicleMemoryContext";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { useCart } from "@/lib/cart/CartContext";
 import { detectVehicleType } from "@/lib/aftermarketFitment";
@@ -38,6 +39,7 @@ export function VehicleEntryGate({ productType, packageFlow, showBuildTypeStep }
   const router = useRouter();
   const searchParams = useSearchParams();
   const { addAccessory, setIsOpen } = useCart();
+  const { setActiveVehicle } = useVehicleMemory();
   
   // Step tracking for build type flow
   const [step, setStep] = useState<"vehicle" | "buildType">("vehicle");
@@ -111,6 +113,16 @@ export function VehicleEntryGate({ productType, packageFlow, showBuildTypeStep }
   function navigateToResults(selection: VehicleSelection, buildSelection?: BuildTypeSelection) {
     const { year, make, model, modification, trim, wheelDia } = selection;
     const slug = vehicleSlug(year, make, model);
+    
+    // Save vehicle to memory for returning visitors
+    setActiveVehicle({
+      year,
+      make,
+      model,
+      trim,
+      modification,
+      wheelDia,
+    });
     
     // Build URL with vehicle context
     const params = new URLSearchParams();
