@@ -326,8 +326,14 @@ async function getVehicleFitment(
   }
 
   // Offset range
-  const offsetMin = bestFitment.offsetMinMm != null ? Number(bestFitment.offsetMinMm) : 20;
-  const offsetMax = bestFitment.offsetMaxMm != null ? Number(bestFitment.offsetMaxMm) : 50;
+  // FIX (2026-06-10): Default offset range expanded to cover classic to modern vehicles.
+  // Classic wheels often have -10 to +15 offset, modern is typically +30 to +50.
+  // Old defaults (20-50) rejected ALL classic wheels with negative/low offsets,
+  // causing ~3,100 vehicles to fail package generation despite having inventory.
+  // New defaults (-15 to 55) allow a permissive range while the ±3% overall-diameter
+  // safety check remains the primary fitment guard.
+  const offsetMin = bestFitment.offsetMinMm != null ? Number(bestFitment.offsetMinMm) : -15;
+  const offsetMax = bestFitment.offsetMaxMm != null ? Number(bestFitment.offsetMaxMm) : 55;
 
   return {
     boltPattern: bestFitment.boltPattern,
