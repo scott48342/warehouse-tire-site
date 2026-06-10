@@ -296,9 +296,18 @@ async function getVehicleFitment(
   const oemTireSizes = normalizeToStringArray(bestFitment.oemTireSizes);
 
   // Calculate OEM overall diameter (from first tire size) and per-rim map
+  // FIX (2026-06-10): Exclude LT (Light Truck) sizes from baseline calculation.
+  // LT tires like LT315/70R17 are oversized optional fitments (off-road packages)
+  // and inflate the baseline diameter, causing standard packages to fail ±3% validation.
+  // Use only standard (non-LT) tire sizes for baseline; fall back to all sizes if none exist.
   let oemOverallDiameter = 28; // fallback
   const oemOverallDiameterByRim: Record<number, number> = {};
-  for (const size of oemTireSizes) {
+  
+  // First pass: collect standard (non-LT) sizes only
+  const standardSizes = oemTireSizes.filter(s => !s.toUpperCase().startsWith('LT'));
+  const sizesForBaseline = standardSizes.length > 0 ? standardSizes : oemTireSizes;
+  
+  for (const size of sizesForBaseline) {
     const parsed = parseTireSize(size);
     if (!parsed) continue;
     const od = calculateOverallDiameter(
@@ -306,11 +315,11 @@ async function getVehicleFitment(
       parsed.aspectRatio,
       parsed.rimDiameter
     );
-    // Keep the largest OD per rim (covers staggered rears / optional sizes)
-    if (
-      oemOverallDiameterByRim[parsed.rimDiameter] == null ||
-      od > oemOverallDiameterByRim[parsed.rimDiameter]
-    ) {
+    // Use FIRST OEM size per rim as baseline (not MAX).
+    // Vehicles like F-150 have multiple OEM options (245/70R17, 265/70R17).
+    // Using MAX would set baseline to the larger option, causing standard-size
+    // packages to fail ±3% validation. First size = primary/standard option.
+    if (oemOverallDiameterByRim[parsed.rimDiameter] == null) {
       oemOverallDiameterByRim[parsed.rimDiameter] = od;
     }
   }
