@@ -10,13 +10,16 @@ import { vehicleFitments } from "./schema";
 import { sql, eq, and, or, inArray, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./keys";
 import { getModelVariants } from "./modelAliases";
+import { makeSlugMatch } from "./makeMatch";
 
 /**
- * Case-insensitive make comparison.
- * DB has mixed case (Buick, Toyota, RAM) but we normalize to lowercase.
+ * Slug-normalized make comparison (P0 fix 2026-06-10).
+ * DB has mixed case AND mixed separators ("Land Rover", "Mercedes-Benz", "RAM").
+ * Old version compared lower(make) = 'land-rover' which never matched "land rover".
+ * makeSlugMatch normalizes BOTH sides to slugs.
  */
 function makeCaseInsensitive(make: string) {
-  return sql`lower(${vehicleFitments.make}) = ${make.toLowerCase()}`;
+  return makeSlugMatch(vehicleFitments.make, make);
 }
 
 /**

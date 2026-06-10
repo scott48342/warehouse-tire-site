@@ -34,10 +34,11 @@ import {
 const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
 
 /**
- * Case-insensitive make comparison for DB queries.
+ * Slug-normalized make comparison for DB queries (P0 fix 2026-06-10).
+ * Normalizes BOTH sides so "land-rover" (canonical) matches "Land Rover" (DB).
  */
 function makeCaseInsensitive(make: string) {
-  return sql`lower(${vehicleFitments.make}) = ${make.toLowerCase()}`;
+  return makeSlugMatch(vehicleFitments.make, make);
 }
 
 /**
@@ -61,6 +62,7 @@ function modelNormalizedMatch(modelVariants: string[]) {
   return or(...conditions);
 }
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
+import { makeSlugMatch } from "./makeMatch";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import crypto from "crypto";

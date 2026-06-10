@@ -6,7 +6,8 @@
 
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
-import { eq, and, sql } from "drizzle-orm";
+import { eq, and, sql, ilike } from "drizzle-orm";
+import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 import type { FitmentFacts, ResolvedVehicle, VehicleParams, TopVehicle } from "./types";
 import { toSlug, getMakeDisplay, getModelDisplay } from "./slugs";
 
@@ -60,8 +61,8 @@ export async function getFitmentFacts(
       .where(
         and(
           eq(vehicleFitments.year, vehicle.year),
-          eq(vehicleFitments.make, vehicle.make),
-          eq(vehicleFitments.model, vehicle.model)
+          makeSlugMatch(vehicleFitments.make, vehicle.make),
+          ilike(vehicleFitments.model, vehicle.model)
         )
       )
       .limit(10);

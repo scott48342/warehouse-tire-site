@@ -13,6 +13,7 @@ import { db } from "@/lib/fitment-db/db";
 import { vehicleFitmentConfigurations, vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "@/lib/fitment-db/keys";
+import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -340,7 +341,7 @@ async function analyzeConfigEnrichment(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        ilike(vehicleFitments.make, makeKey),
+        makeSlugMatch(vehicleFitments.make, makeKey),
         ilike(vehicleFitments.model, modelKey)
       )
     )

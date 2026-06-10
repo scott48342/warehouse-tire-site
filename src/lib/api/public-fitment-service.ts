@@ -12,6 +12,7 @@ import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, sql, inArray } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "@/lib/fitment-db/keys";
+import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 import { getFitmentProfile, type FitmentProfile } from "@/lib/fitment-db/profileService";
 
@@ -98,7 +99,7 @@ export async function getPublicMakes(year?: number): Promise<PublicMake[]> {
  */
 export async function getPublicModels(make: string, year?: number): Promise<PublicModel[]> {
   const normalizedMake = normalizeMake(make);
-  const whereConditions = [eq(vehicleFitments.make, normalizedMake)];
+  const whereConditions = [makeSlugMatch(vehicleFitments.make, normalizedMake)];
   
   if (year) {
     whereConditions.push(eq(vehicleFitments.year, year));
@@ -128,7 +129,7 @@ export async function getPublicYearsForModel(make: string, model: string): Promi
     .from(vehicleFitments)
     .where(
       and(
-        eq(vehicleFitments.make, normalizedMake),
+        makeSlugMatch(vehicleFitments.make, normalizedMake),
         inArray(vehicleFitments.model, modelVariants)
       )
     )
@@ -157,7 +158,7 @@ export async function getPublicTrims(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, normalizedMake),
+        makeSlugMatch(vehicleFitments.make, normalizedMake),
         inArray(vehicleFitments.model, modelVariants)
       )
     )

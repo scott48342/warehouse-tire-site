@@ -17,6 +17,7 @@ import { vehicleFitmentConfigurations, vehicleFitments } from "./schema";
 import type { VehicleFitmentConfiguration } from "./schema";
 import { eq, and, asc } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./keys";
+import { makeSlugMatch } from "./makeMatch";
 import { extractRimDiameter } from "@/lib/tires/wheelDiameterFilter";
 import { normalizeTrimForFitmentConfig } from "@/lib/fitment/trimNormalization";
 
@@ -113,7 +114,7 @@ export async function getFitmentConfigurations(
         .where(
           and(
             eq(vehicleFitments.year, year),
-            eq(vehicleFitments.make, makeKey),
+            makeSlugMatch(vehicleFitments.make, makeKey),
             eq(vehicleFitments.model, modelKey),
             eq(vehicleFitments.modificationId, modificationId)
           )
@@ -348,13 +349,13 @@ async function getLegacyFallback(
         modificationId
           ? and(
               eq(vehicleFitments.year, year),
-              eq(vehicleFitments.make, makeKey),
+              makeSlugMatch(vehicleFitments.make, makeKey),
               eq(vehicleFitments.model, modelKey),
               eq(vehicleFitments.modificationId, modificationId)
             )
           : and(
               eq(vehicleFitments.year, year),
-              eq(vehicleFitments.make, makeKey),
+              makeSlugMatch(vehicleFitments.make, makeKey),
               eq(vehicleFitments.model, modelKey)
             )
       )

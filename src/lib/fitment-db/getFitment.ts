@@ -18,6 +18,7 @@ import { vehicleFitments } from "./schema";
 import type { VehicleFitment } from "./schema";
 import { eq, and, asc, or, ilike, inArray, desc, sql, SQL } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
+import { makeSlugMatch } from "./makeMatch";
 import { applyOverrides } from "./applyOverrides";
 import { getModelVariants } from "./modelAliases";
 import { safeResolveFitment } from "./safeResolver";
@@ -157,7 +158,7 @@ export async function listFitments(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeSlugMatch(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
           CERTIFIED_FILTER
         )
@@ -293,7 +294,7 @@ export async function listFitmentsWithTierFilter(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        ilike(vehicleFitments.make, normalizedMake),
+        makeSlugMatch(vehicleFitments.make, normalizedMake),
         modelMatch,
         CERTIFIED_FILTER
       )
@@ -404,7 +405,7 @@ async function findClosestCompleteYear(
       .where(
         and(
           eq(vehicleFitments.year, tryYear),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeSlugMatch(vehicleFitments.make, normalizedMake),
           modelMatch,
           eq(vehicleFitments.qualityTier, "complete"),
           CERTIFIED_FILTER

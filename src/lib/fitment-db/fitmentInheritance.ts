@@ -17,6 +17,7 @@
 import { db, schema } from "./db";
 import { eq, and, sql, desc } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./normalization";
+import { makeSlugMatch } from "./makeMatch";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // GENERATION DEFINITIONS
@@ -232,7 +233,7 @@ export async function findExistingFitment(
       .from(schema.vehicleFitments)
       .where(
         and(
-          eq(schema.vehicleFitments.make, normalizedMake),
+          makeSlugMatch(schema.vehicleFitments.make, normalizedMake),
           eq(schema.vehicleFitments.model, normalizedModel),
           eq(schema.vehicleFitments.year, preferredYear)
         )
@@ -248,7 +249,7 @@ export async function findExistingFitment(
     .from(schema.vehicleFitments)
     .where(
       and(
-        eq(schema.vehicleFitments.make, normalizedMake),
+        makeSlugMatch(schema.vehicleFitments.make, normalizedMake),
         eq(schema.vehicleFitments.model, normalizedModel)
       )
     )
@@ -281,7 +282,7 @@ export async function inheritFitment(
     .where(
       and(
         eq(schema.vehicleFitments.year, fromYear),
-        eq(schema.vehicleFitments.make, normalizedMake),
+        makeSlugMatch(schema.vehicleFitments.make, normalizedMake),
         eq(schema.vehicleFitments.model, normalizedModel)
       )
     );
@@ -298,7 +299,7 @@ export async function inheritFitment(
       .where(
         and(
           eq(schema.vehicleFitments.year, toYear),
-          eq(schema.vehicleFitments.make, normalizedMake),
+          makeSlugMatch(schema.vehicleFitments.make, normalizedMake),
           eq(schema.vehicleFitments.model, normalizedModel)
         )
       )
@@ -419,7 +420,7 @@ export async function getMissingYears(
     .from(schema.vehicleFitments)
     .where(
       and(
-        eq(schema.vehicleFitments.make, normalizedMake),
+        makeSlugMatch(schema.vehicleFitments.make, normalizedMake),
         eq(schema.vehicleFitments.model, normalizedModel)
       )
     )

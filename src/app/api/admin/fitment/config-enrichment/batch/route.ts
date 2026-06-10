@@ -10,6 +10,7 @@ import { db } from "@/lib/fitment-db/db";
 import { vehicleFitmentConfigurations, vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, ilike, sql } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "@/lib/fitment-db/keys";
+import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 
 export const runtime = "nodejs";
 export const maxDuration = 120;
@@ -119,7 +120,7 @@ async function analyzeVehicle(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        ilike(vehicleFitments.make, makeKey),
+        makeSlugMatch(vehicleFitments.make, makeKey),
         ilike(vehicleFitments.model, modelKey)
       )
     );
@@ -132,7 +133,7 @@ async function analyzeVehicle(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        ilike(vehicleFitments.make, makeKey),
+        makeSlugMatch(vehicleFitments.make, makeKey),
         ilike(vehicleFitments.model, modelKey)
       )
     )

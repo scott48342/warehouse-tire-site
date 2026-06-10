@@ -23,6 +23,7 @@ import {
 } from "./schema";
 import { eq, and, ilike, sql, inArray, isNull, desc } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
+import { makeSlugMatch } from "./makeMatch";
 
 // ============================================================================
 // TYPES
@@ -438,7 +439,7 @@ export async function buildMappingsForVehicle(
     .where(
       and(
         eq(vehicleFitments.year, year),
-        ilike(vehicleFitments.make, normalizedMake),
+        makeSlugMatch(vehicleFitments.make, normalizedMake),
         ilike(vehicleFitments.model, normalizedModel),
         eq(vehicleFitments.certificationStatus, 'certified')
       )

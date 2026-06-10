@@ -7,7 +7,8 @@
 
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
-import { sql, eq, and } from "drizzle-orm";
+import { sql, eq, and, ilike } from "drizzle-orm";
+import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 import { toSlug, getMakeDisplay, getModelDisplay } from "./slugs";
 
 // ============================================================================
@@ -114,8 +115,8 @@ export async function getVehicleBySlug(slug: string): Promise<LegacyVehicle | nu
       .where(
         and(
           eq(vehicleFitments.year, parsed.year),
-          eq(vehicleFitments.make, parsed.make.toLowerCase()),
-          eq(vehicleFitments.model, parsed.model.toLowerCase())
+          makeSlugMatch(vehicleFitments.make, parsed.make),
+          ilike(vehicleFitments.model, parsed.model)
         )
       )
       .limit(1);

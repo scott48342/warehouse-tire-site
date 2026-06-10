@@ -22,6 +22,7 @@ import { vehicleFitments } from "./schema";
 import type { VehicleFitment } from "./schema";
 import { eq, and, sql, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
+import { makeSlugMatch } from "./makeMatch";
 import { applyOverrides } from "./applyOverrides";
 import { getModelVariants, wasAliasUsed } from "./modelAliases";
 import { fitmentLog } from "./logger";
@@ -132,7 +133,7 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeSlugMatch(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
           eq(vehicleFitments.modificationId, normalizedModId),
           CERTIFIED_FILTER
@@ -172,7 +173,7 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeSlugMatch(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
           eq(vehicleFitments.displayTrim, modificationId),
           CERTIFIED_FILTER
@@ -212,7 +213,7 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeSlugMatch(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
           ilike(vehicleFitments.displayTrim, modificationId),
           CERTIFIED_FILTER
@@ -253,7 +254,7 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          ilike(vehicleFitments.make, normalizedMake),
+          makeSlugMatch(vehicleFitments.make, normalizedMake),
           ilike(vehicleFitments.model, modelName),
           CERTIFIED_FILTER
         )

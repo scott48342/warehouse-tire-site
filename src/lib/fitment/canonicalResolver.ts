@@ -25,6 +25,7 @@ import type { VehicleFitment, VehicleFitmentConfiguration, WheelSizeTrimMapping 
 import { eq, and, ilike, sql } from "drizzle-orm";
 import { normalizeModel, slugify } from "@/lib/fitment-db/keys";
 import { canonicalMake, getMakeVariantsForQuery } from "@/lib/fitment/makeAliases";
+import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { getModelVariants, extractBmwModelAndTrim } from "@/lib/fitment-db/modelAliases";
 import { getTrimMapping, type TrimMappingResult } from "@/lib/fitment-db/wheelSizeTrimMapping";
@@ -142,9 +143,10 @@ export interface ResolverInput {
  * All should match when user searches for any variant.
  */
 function makeLikeAny(makeColumn: typeof vehicleFitments.make, make: string) {
-  const variants = getMakeVariantsForQuery(make);
-  // Use SQL ILIKE ANY for PostgreSQL
-  return sql`${makeColumn} ILIKE ANY(ARRAY[${sql.join(variants.map(v => sql`${v}`), sql`, `)}])`;
+  // P0 fix 2026-06-10: slug-normalize BOTH sides instead of ILIKE ANY over
+  // nickname variants. Handles "Land Rover" (DB) vs "land-rover" (canonical)
+  // and avoids column-side nickname matches ("rover", "mb").
+  return makeSlugMatch(makeColumn, make);
 }
 
 /**
