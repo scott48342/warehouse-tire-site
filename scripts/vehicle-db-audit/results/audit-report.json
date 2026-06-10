@@ -1,0 +1,823 @@
+{
+  "timestamp": "2026-06-10T13:16:59.696Z",
+  "summary": {
+    "baseline": {
+      "total_records": 37495,
+      "records_2000_plus": 31309,
+      "min_year": 1950,
+      "max_year": 2026,
+      "unique_makes": 98,
+      "unique_models": 1419
+    }
+  },
+  "issues": {
+    "spike2018": {
+      "count2017": 1291,
+      "count2018": 2480,
+      "count2019": 1380,
+      "expectedFor2018": 1336,
+      "excessRecords": 1144,
+      "isAnomaly": true,
+      "importDates": [
+        {
+          "import_date": "2026-05-07T04:00:00.000Z",
+          "count": 2154
+        },
+        {
+          "import_date": "2026-05-14T04:00:00.000Z",
+          "count": 326
+        }
+      ]
+    },
+    "qualityTiers": [
+      {
+        "tier": "complete",
+        "count": 28239,
+        "count_2018": 0,
+        "lowercase_makes": 34
+      },
+      {
+        "tier": "unknown",
+        "count": 2664,
+        "count_2018": 2480,
+        "lowercase_makes": 147
+      },
+      {
+        "tier": "partial",
+        "count": 241,
+        "count_2018": 0,
+        "lowercase_makes": 0
+      },
+      {
+        "tier": "high",
+        "count": 165,
+        "count_2018": 0,
+        "lowercase_makes": 0
+      }
+    ],
+    "makeNormalization": {
+      "caseDuplicates": [
+        {
+          "canonical": "Jeep",
+          "duplicate": "jeep",
+          "canonicalCount": 979,
+          "duplicateCount": 51
+        },
+        {
+          "canonical": "RAM",
+          "duplicate": "Ram",
+          "canonicalCount": 886,
+          "duplicateCount": 37
+        },
+        {
+          "canonical": "Chevrolet",
+          "duplicate": "chevrolet",
+          "canonicalCount": 2232,
+          "duplicateCount": 28
+        },
+        {
+          "canonical": "MINI",
+          "duplicate": "Mini",
+          "canonicalCount": 344,
+          "duplicateCount": 19
+        },
+        {
+          "canonical": "Ford",
+          "duplicate": "ford",
+          "canonicalCount": 2018,
+          "duplicateCount": 17
+        },
+        {
+          "canonical": "Land Rover",
+          "duplicate": "land rover",
+          "canonicalCount": 591,
+          "duplicateCount": 15
+        },
+        {
+          "canonical": "Cadillac",
+          "duplicate": "cadillac",
+          "canonicalCount": 564,
+          "duplicateCount": 12
+        },
+        {
+          "canonical": "Tesla",
+          "duplicate": "tesla",
+          "canonicalCount": 124,
+          "duplicateCount": 10
+        },
+        {
+          "canonical": "Audi",
+          "duplicate": "audi",
+          "canonicalCount": 991,
+          "duplicateCount": 8
+        },
+        {
+          "canonical": "Porsche",
+          "duplicate": "porsche",
+          "canonicalCount": 845,
+          "duplicateCount": 8
+        },
+        {
+          "canonical": "Volkswagen",
+          "duplicate": "volkswagen",
+          "canonicalCount": 807,
+          "duplicateCount": 6
+        },
+        {
+          "canonical": "Rivian",
+          "duplicate": "rivian",
+          "canonicalCount": 11,
+          "duplicateCount": 6
+        },
+        {
+          "canonical": "Lincoln",
+          "duplicate": "lincoln",
+          "canonicalCount": 465,
+          "duplicateCount": 5
+        },
+        {
+          "canonical": "BMW",
+          "duplicate": "bmw",
+          "canonicalCount": 1602,
+          "duplicateCount": 5
+        },
+        {
+          "canonical": "Kia",
+          "duplicate": "kia",
+          "canonicalCount": 756,
+          "duplicateCount": 5
+        },
+        {
+          "canonical": "Hyundai",
+          "duplicate": "hyundai",
+          "canonicalCount": 760,
+          "duplicateCount": 4
+        },
+        {
+          "canonical": "Dodge",
+          "duplicate": "dodge",
+          "canonicalCount": 600,
+          "duplicateCount": 1
+        }
+      ],
+      "lowercaseMakes": [
+        {
+          "make": "jeep",
+          "count": 51
+        },
+        {
+          "make": "chevrolet",
+          "count": 28
+        },
+        {
+          "make": "ford",
+          "count": 17
+        },
+        {
+          "make": "land rover",
+          "count": 15
+        },
+        {
+          "make": "cadillac",
+          "count": 12
+        },
+        {
+          "make": "tesla",
+          "count": 10
+        },
+        {
+          "make": "audi",
+          "count": 8
+        },
+        {
+          "make": "porsche",
+          "count": 8
+        },
+        {
+          "make": "volkswagen",
+          "count": 6
+        },
+        {
+          "make": "rivian",
+          "count": 6
+        },
+        {
+          "make": "lincoln",
+          "count": 5
+        },
+        {
+          "make": "kia",
+          "count": 5
+        },
+        {
+          "make": "hyundai",
+          "count": 4
+        },
+        {
+          "make": "dodge",
+          "count": 1
+        }
+      ],
+      "phantomMakes": [
+        {
+          "make": "Toyota Minivans",
+          "count": 13
+        },
+        {
+          "make": "Nissan Vans",
+          "count": 11
+        },
+        {
+          "make": "Ford Vans",
+          "count": 10
+        },
+        {
+          "make": "Ford Minivans",
+          "count": 9
+        },
+        {
+          "make": "Chrysler Minivans",
+          "count": 9
+        },
+        {
+          "make": "Mercedes-Benz Vans",
+          "count": 7
+        },
+        {
+          "make": "RAM Minivans",
+          "count": 6
+        },
+        {
+          "make": "GMC Vans",
+          "count": 6
+        },
+        {
+          "make": "Chevrolet Vans",
+          "count": 6
+        },
+        {
+          "make": "Kia Minivans",
+          "count": 5
+        },
+        {
+          "make": "Honda Minivans",
+          "count": 5
+        },
+        {
+          "make": "RAM Vans",
+          "count": 5
+        },
+        {
+          "make": "Dodge Minivans",
+          "count": 4
+        },
+        {
+          "make": "Nissan Minivans",
+          "count": 3
+        },
+        {
+          "make": "Mercedes-Benz Minivans",
+          "count": 2
+        },
+        {
+          "make": "Chevrolet Minivans",
+          "count": 2
+        }
+      ],
+      "invalidMakes": [
+        {
+          "make": "Mercedes",
+          "count": 1191
+        },
+        {
+          "make": "RAM",
+          "count": 886
+        },
+        {
+          "make": "Toyota Minivans",
+          "count": 13
+        },
+        {
+          "make": "Nissan Vans",
+          "count": 11
+        },
+        {
+          "make": "Ford Vans",
+          "count": 10
+        },
+        {
+          "make": "Polestar",
+          "count": 9
+        },
+        {
+          "make": "Ford Minivans",
+          "count": 9
+        },
+        {
+          "make": "Chrysler Minivans",
+          "count": 9
+        },
+        {
+          "make": "Mercedes-Benz Vans",
+          "count": 7
+        },
+        {
+          "make": "RAM Minivans",
+          "count": 6
+        },
+        {
+          "make": "Smart",
+          "count": 6
+        },
+        {
+          "make": "GMC Vans",
+          "count": 6
+        },
+        {
+          "make": "Chevrolet Vans",
+          "count": 6
+        },
+        {
+          "make": "Karma",
+          "count": 6
+        },
+        {
+          "make": "Kia Minivans",
+          "count": 5
+        },
+        {
+          "make": "Geo",
+          "count": 5
+        },
+        {
+          "make": "Honda Minivans",
+          "count": 5
+        },
+        {
+          "make": "RAM Vans",
+          "count": 5
+        },
+        {
+          "make": "Dodge Minivans",
+          "count": 4
+        },
+        {
+          "make": "Nissan Minivans",
+          "count": 3
+        }
+      ]
+    },
+    "duplicates": {
+      "unique_duplicate_groups": 951,
+      "total_duplicate_records": 2334,
+      "excess_records": 1383
+    },
+    "sampleDuplicates": [
+      {
+        "year": 2011,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2007,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2006,
+        "make": "BMW",
+        "model": "3 Series",
+        "display_trim": "330i xDrive",
+        "count": 6
+      },
+      {
+        "year": 2010,
+        "make": "RAM",
+        "model": "3500",
+        "display_trim": "SLT",
+        "count": 6
+      },
+      {
+        "year": 2008,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2013,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2005,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2014,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2010,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2012,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2009,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2006,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 6
+      },
+      {
+        "year": 2005,
+        "make": "Lexus",
+        "model": "lx",
+        "display_trim": "LX 470",
+        "count": 5
+      },
+      {
+        "year": 2009,
+        "make": "Lexus",
+        "model": "lx",
+        "display_trim": "LX 570",
+        "count": 5
+      },
+      {
+        "year": 2000,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 5
+      },
+      {
+        "year": 2016,
+        "make": "Lexus",
+        "model": "lx",
+        "display_trim": "LX 570",
+        "count": 5
+      },
+      {
+        "year": 2002,
+        "make": "Toyota",
+        "model": "tacoma",
+        "display_trim": "SR5",
+        "count": 5
+      },
+      {
+        "year": 2003,
+        "make": "Lexus",
+        "model": "lx",
+        "display_trim": "LX 470",
+        "count": 5
+      },
+      {
+        "year": 2007,
+        "make": "Lexus",
+        "model": "lx",
+        "display_trim": "LX 470",
+        "count": 5
+      },
+      {
+        "year": 2002,
+        "make": "Lexus",
+        "model": "lx",
+        "display_trim": "LX 470",
+        "count": 5
+      }
+    ],
+    "missingFields": {
+      "missing_bolt_pattern": 30,
+      "missing_center_bore": 64,
+      "missing_any_wheel_field": 68,
+      "empty_wheel_sizes": 1,
+      "empty_tire_sizes": 0
+    }
+  },
+  "correlations": {
+    "rogueSummary": {
+      "total_suspect_records": 2698,
+      "is_2018": 2480,
+      "is_unknown_tier": 2664,
+      "is_lowercase_make": 181,
+      "missing_wheel_fields": 68
+    },
+    "flagOverlap": [
+      {
+        "is_2018": 0,
+        "is_unknown": 0,
+        "is_lowercase": 0,
+        "count": 28611
+      },
+      {
+        "is_2018": 1,
+        "is_unknown": 1,
+        "is_lowercase": 0,
+        "count": 2480
+      },
+      {
+        "is_2018": 0,
+        "is_unknown": 1,
+        "is_lowercase": 1,
+        "count": 147
+      },
+      {
+        "is_2018": 0,
+        "is_unknown": 1,
+        "is_lowercase": 0,
+        "count": 37
+      },
+      {
+        "is_2018": 0,
+        "is_unknown": 0,
+        "is_lowercase": 1,
+        "count": 34
+      }
+    ],
+    "suspectImportDates": [
+      {
+        "import_date": "2026-05-07T04:00:00.000Z",
+        "count": 2348,
+        "makes": 75,
+        "models": 475
+      },
+      {
+        "import_date": "2026-05-14T04:00:00.000Z",
+        "count": 326,
+        "makes": 26,
+        "models": 161
+      },
+      {
+        "import_date": "2026-04-27T04:00:00.000Z",
+        "count": 24,
+        "makes": 1,
+        "models": 1
+      }
+    ]
+  },
+  "proposedMigration": [
+    {
+      "step": 1,
+      "action": "MAKE_CANONICALIZATION",
+      "description": "Merge case-duplicate makes into canonical form",
+      "queries": [
+        {
+          "description": "Merge \"jeep\" into \"Jeep\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Jeep' WHERE make = 'jeep';",
+          "affectedRows": 51
+        },
+        {
+          "description": "Merge \"Ram\" into \"RAM\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'RAM' WHERE make = 'Ram';",
+          "affectedRows": 37
+        },
+        {
+          "description": "Merge \"chevrolet\" into \"Chevrolet\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Chevrolet' WHERE make = 'chevrolet';",
+          "affectedRows": 28
+        },
+        {
+          "description": "Merge \"Mini\" into \"MINI\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'MINI' WHERE make = 'Mini';",
+          "affectedRows": 19
+        },
+        {
+          "description": "Merge \"ford\" into \"Ford\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Ford' WHERE make = 'ford';",
+          "affectedRows": 17
+        },
+        {
+          "description": "Merge \"land rover\" into \"Land Rover\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Land Rover' WHERE make = 'land rover';",
+          "affectedRows": 15
+        },
+        {
+          "description": "Merge \"cadillac\" into \"Cadillac\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Cadillac' WHERE make = 'cadillac';",
+          "affectedRows": 12
+        },
+        {
+          "description": "Merge \"tesla\" into \"Tesla\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Tesla' WHERE make = 'tesla';",
+          "affectedRows": 10
+        },
+        {
+          "description": "Merge \"audi\" into \"Audi\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Audi' WHERE make = 'audi';",
+          "affectedRows": 8
+        },
+        {
+          "description": "Merge \"porsche\" into \"Porsche\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Porsche' WHERE make = 'porsche';",
+          "affectedRows": 8
+        },
+        {
+          "description": "Merge \"volkswagen\" into \"Volkswagen\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Volkswagen' WHERE make = 'volkswagen';",
+          "affectedRows": 6
+        },
+        {
+          "description": "Merge \"rivian\" into \"Rivian\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Rivian' WHERE make = 'rivian';",
+          "affectedRows": 6
+        },
+        {
+          "description": "Merge \"lincoln\" into \"Lincoln\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Lincoln' WHERE make = 'lincoln';",
+          "affectedRows": 5
+        },
+        {
+          "description": "Merge \"bmw\" into \"BMW\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'BMW' WHERE make = 'bmw';",
+          "affectedRows": 5
+        },
+        {
+          "description": "Merge \"kia\" into \"Kia\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Kia' WHERE make = 'kia';",
+          "affectedRows": 5
+        },
+        {
+          "description": "Merge \"hyundai\" into \"Hyundai\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Hyundai' WHERE make = 'hyundai';",
+          "affectedRows": 4
+        },
+        {
+          "description": "Merge \"dodge\" into \"Dodge\"",
+          "sql": "UPDATE vehicle_fitments SET make = 'Dodge' WHERE make = 'dodge';",
+          "affectedRows": 1
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "action": "DELETE_PHANTOM_MAKES",
+      "description": "Re-home or delete records with phantom makes (Toyota Minivans, Nissan Vans)",
+      "queries": [
+        {
+          "description": "Review and re-home \"Toyota Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Toyota Minivans';",
+          "affectedRows": 13
+        },
+        {
+          "description": "Review and re-home \"Nissan Vans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Nissan Vans';",
+          "affectedRows": 11
+        },
+        {
+          "description": "Review and re-home \"Ford Vans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Ford Vans';",
+          "affectedRows": 10
+        },
+        {
+          "description": "Review and re-home \"Ford Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Ford Minivans';",
+          "affectedRows": 9
+        },
+        {
+          "description": "Review and re-home \"Chrysler Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Chrysler Minivans';",
+          "affectedRows": 9
+        },
+        {
+          "description": "Review and re-home \"Mercedes-Benz Vans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Mercedes-Benz Vans';",
+          "affectedRows": 7
+        },
+        {
+          "description": "Review and re-home \"RAM Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'RAM Minivans';",
+          "affectedRows": 6
+        },
+        {
+          "description": "Review and re-home \"GMC Vans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'GMC Vans';",
+          "affectedRows": 6
+        },
+        {
+          "description": "Review and re-home \"Chevrolet Vans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Chevrolet Vans';",
+          "affectedRows": 6
+        },
+        {
+          "description": "Review and re-home \"Kia Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Kia Minivans';",
+          "affectedRows": 5
+        },
+        {
+          "description": "Review and re-home \"Honda Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Honda Minivans';",
+          "affectedRows": 5
+        },
+        {
+          "description": "Review and re-home \"RAM Vans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'RAM Vans';",
+          "affectedRows": 5
+        },
+        {
+          "description": "Review and re-home \"Dodge Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Dodge Minivans';",
+          "affectedRows": 4
+        },
+        {
+          "description": "Review and re-home \"Nissan Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Nissan Minivans';",
+          "affectedRows": 3
+        },
+        {
+          "description": "Review and re-home \"Mercedes-Benz Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Mercedes-Benz Minivans';",
+          "affectedRows": 2
+        },
+        {
+          "description": "Review and re-home \"Chevrolet Minivans\" records",
+          "sql": "-- Review these records first, then either re-home or delete\nSELECT * FROM vehicle_fitments WHERE make = 'Chevrolet Minivans';",
+          "affectedRows": 2
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "action": "DEDUPLICATE_2018",
+      "description": "Remove duplicate YMMT records, keeping highest quality",
+      "queries": [
+        {
+          "description": "Deduplicate by YMMT, keeping best quality_tier",
+          "sql": "-- Preview duplicates first\nWITH ranked AS (\n  SELECT id, \n    ROW_NUMBER() OVER (\n      PARTITION BY year, make, model, display_trim \n      ORDER BY \n        CASE quality_tier \n          WHEN 'complete' THEN 1 \n          WHEN 'high' THEN 2 \n          WHEN 'partial' THEN 3 \n          ELSE 4 \n        END,\n        created_at DESC\n    ) as rn\n  FROM vehicle_fitments\n  WHERE year = 2018\n)\nSELECT COUNT(*) FROM ranked WHERE rn > 1;",
+          "affectedRows": 1144
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "action": "BACKFILL_OR_QUARANTINE_MISSING_FIELDS",
+      "description": "Quarantine records missing bolt_pattern or center_bore_mm",
+      "queries": [
+        {
+          "description": "Mark records with missing wheel fields",
+          "sql": "UPDATE vehicle_fitments \nSET quality_tier = 'quarantined', \n    quarantined_at = NOW(),\n    last_modified_reason = 'Missing bolt_pattern or center_bore_mm - needs backfill'\nWHERE (bolt_pattern IS NULL OR center_bore_mm IS NULL)\n  AND quality_tier != 'quarantined';",
+          "affectedRows": 68
+        }
+      ]
+    }
+  ],
+  "integrityChecks": [
+    {
+      "name": "no_lowercase_makes",
+      "description": "Reject imports with lowercase makes",
+      "check": "SELECT COUNT(*) FROM vehicle_fitments WHERE LOWER(make) = make AND make ~ '[a-z]'",
+      "threshold": 0
+    },
+    {
+      "name": "no_phantom_makes",
+      "description": "Reject imports with phantom makes (Toyota Minivans, etc.)",
+      "check": "SELECT COUNT(*) FROM vehicle_fitments WHERE make IN ('Toyota Minivans', 'Nissan Vans')",
+      "threshold": 0
+    },
+    {
+      "name": "no_missing_wheel_fields",
+      "description": "Warn if records missing bolt_pattern or center_bore_mm",
+      "check": "SELECT COUNT(*) FROM vehicle_fitments WHERE bolt_pattern IS NULL OR center_bore_mm IS NULL",
+      "threshold": 100
+    },
+    {
+      "name": "no_year_spikes",
+      "description": "Alert if any year has >1.5x records of neighboring years",
+      "check": "WITH yc AS (\n  SELECT year, COUNT(*) as c FROM vehicle_fitments GROUP BY year\n)\nSELECT year FROM yc y1\nWHERE y1.c > 1.5 * (\n  SELECT AVG(c) FROM yc y2 WHERE y2.year BETWEEN y1.year - 1 AND y1.year + 1 AND y2.year != y1.year\n)",
+      "threshold": 0
+    },
+    {
+      "name": "no_duplicate_ymmt",
+      "description": "Reject imports that create YMMT duplicates",
+      "check": "SELECT COUNT(*) FROM (\n  SELECT year, make, model, display_trim FROM vehicle_fitments GROUP BY 1,2,3,4 HAVING COUNT(*) > 1\n) d",
+      "threshold": 0
+    }
+  ]
+}
