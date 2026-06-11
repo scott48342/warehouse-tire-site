@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { JakeHomepageSection } from "@/components/jake";
+import { PersonalizedVehicleSection } from "./PersonalizedVehicleSection";
 
 /**
  * PREMIUM NATIONAL HOMEPAGE
@@ -900,6 +901,8 @@ export function PremiumNationalHomepage() {
   return (
     <div className="bg-[#050505] min-h-screen">
       <TrustBar />
+      {/* Personalized section for returning customers with saved vehicle */}
+      <PersonalizedVehicleSection />
       <HeroSection />
       <VehicleSelectorSection />
       <JakeHomepageSection />

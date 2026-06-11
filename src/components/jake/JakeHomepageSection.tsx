@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { trackJakeEvent } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
+import { useVehicleMemory, formatVehicleDisplay } from "@/contexts/VehicleMemoryContext";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SUGGESTED PROMPTS FOR HOMEPAGE
@@ -16,18 +17,75 @@ const QUICK_PROMPTS = [
   { text: "Quiet highway tires", category: "tires" },
 ];
 
+// Vehicle-aware prompts
+function getVehiclePrompts(model: string): typeof QUICK_PROMPTS {
+  const isTruck = /f-?150|silverado|sierra|ram|tundra|tacoma|colorado|ranger/i.test(model);
+  const isMuscle = /mustang|camaro|challenger|charger|corvette/i.test(model);
+  const isSUV = /tahoe|suburban|escalade|yukon|explorer|expedition|4runner|highlander/i.test(model);
+  
+  if (isTruck) {
+    return [
+      { text: `Best all-terrain tires for my ${model}`, category: "tires" },
+      { text: "Will 35s fit?", category: "fitment" },
+      { text: "Build me a wheel package", category: "packages" },
+      { text: "Quiet highway tires", category: "tires" },
+    ];
+  }
+  
+  if (isMuscle) {
+    return [
+      { text: `Best performance tires for my ${model}`, category: "tires" },
+      { text: "Staggered wheel setup", category: "fitment" },
+      { text: "Build me an aggressive setup", category: "packages" },
+      { text: "Track day tires", category: "tires" },
+    ];
+  }
+  
+  if (isSUV) {
+    return [
+      { text: `Best all-season tires for my ${model}`, category: "tires" },
+      { text: "22 inch wheel options", category: "wheels" },
+      { text: "Build me a package", category: "packages" },
+      { text: "Quiet highway tires", category: "tires" },
+    ];
+  }
+  
+  return [
+    { text: `Best tires for my ${model}`, category: "tires" },
+    { text: "Wheel options", category: "wheels" },
+    { text: "Build me a package", category: "packages" },
+    { text: "Budget tire options", category: "tires" },
+  ];
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // JAKE HOMEPAGE SECTION - Premium Prominent Placement
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export function JakeHomepageSection() {
+  const { activeVehicle, isLoaded } = useVehicleMemory();
+  
   const handleAskJake = () => {
-    trackJakeEvent("jake_opened", { source: "homepage" });
+    trackJakeEvent("jake_opened", { 
+      source: "homepage",
+      hasVehicle: !!activeVehicle,
+      vehicle: activeVehicle ? formatVehicleDisplay(activeVehicle) : undefined,
+    });
   };
 
   const handlePromptClick = (prompt: string) => {
-    trackJakeEvent("suggested_prompt_clicked", { prompt });
+    trackJakeEvent("suggested_prompt_clicked", { 
+      prompt,
+      hasVehicle: !!activeVehicle,
+    });
   };
+  
+  // Use vehicle-aware prompts if vehicle is saved
+  const prompts = isLoaded && activeVehicle 
+    ? getVehiclePrompts(activeVehicle.model)
+    : QUICK_PROMPTS;
+  
+  const vehicleDisplay = activeVehicle ? formatVehicleDisplay(activeVehicle) : null;
 
   return (
     <section className="bg-gradient-to-b from-[#0a0a0a] to-[#111] py-12 border-y border-white/10">
@@ -49,20 +107,37 @@ export function JakeHomepageSection() {
             </div>
           </div>
 
-          {/* Center: Main CTA */}
+          {/* Center: Main CTA - Personalized when vehicle exists */}
           <div className="flex-1 text-center lg:text-left">
-            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
-              Not sure what fits?{" "}
-              <span className="text-red-500">Ask Jake.</span>
-            </h2>
-            <p className="text-white/60 max-w-lg mb-6">
-              Jake is our fitment expert, available 24/7 to help you. Tell him your vehicle and 
-              what you're looking for — he'll recommend the right tires, wheels, or complete packages.
-            </p>
+            {isLoaded && activeVehicle ? (
+              // Personalized messaging
+              <>
+                <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                  Questions about your{" "}
+                  <span className="text-red-500">{activeVehicle.model}</span>?
+                </h2>
+                <p className="text-white/60 max-w-lg mb-6">
+                  Jake already knows you drive a {vehicleDisplay}. Ask him anything — 
+                  tire recommendations, wheel fitment, or help building the perfect setup.
+                </p>
+              </>
+            ) : (
+              // Default messaging
+              <>
+                <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                  Not sure what fits?{" "}
+                  <span className="text-red-500">Ask Jake.</span>
+                </h2>
+                <p className="text-white/60 max-w-lg mb-6">
+                  Jake is our fitment expert, available 24/7 to help you. Tell him your vehicle and 
+                  what you're looking for — he'll recommend the right tires, wheels, or complete packages.
+                </p>
+              </>
+            )}
 
-            {/* Quick Prompts */}
+            {/* Quick Prompts - Vehicle-aware */}
             <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
-              {QUICK_PROMPTS.map((prompt) => (
+              {prompts.map((prompt) => (
                 <Link
                   key={prompt.text}
                   href={`/jake?q=${encodeURIComponent(prompt.text)}`}
@@ -83,7 +158,7 @@ export function JakeHomepageSection() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
-              Ask Jake Now
+              {activeVehicle ? `Ask About My ${activeVehicle.model}` : "Ask Jake Now"}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
