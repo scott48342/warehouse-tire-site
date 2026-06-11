@@ -14,7 +14,12 @@ export type FunnelEventName =
   | 'first_order_popup_shown'
   | 'first_order_popup_submit'
   | 'first_order_coupon_applied'
-  | 'first_order_coupon_redeemed';
+  | 'first_order_coupon_redeemed'
+  // Engagement events
+  | 'garage_vehicle_save'
+  | 'garage_vehicle_restore'
+  | 'quick_view_open'
+  | 'package_builder_enter';
 
 export type DeviceType = 'mobile' | 'desktop' | 'tablet';
 export type StoreMode = 'local' | 'national';

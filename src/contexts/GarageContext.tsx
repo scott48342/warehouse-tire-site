@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from "react";
+import { trackGarageVehicleSave, trackGarageVehicleRestore } from "@/lib/analytics/tracker";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // MULTI-VEHICLE GARAGE
@@ -284,6 +285,9 @@ export function GarageProvider({ children }: { children: ReactNode }) {
       garage_size: updated.length,
       set_active: setActive,
     });
+    
+    // Track in funnel events for conversion dashboard
+    trackGarageVehicleSave(newVehicle);
 
     return newVehicle;
   }, [garage]);
@@ -337,6 +341,9 @@ export function GarageProvider({ children }: { children: ReactNode }) {
       from: previousActive ? `${previousActive.year} ${previousActive.make} ${previousActive.model}` : null,
       to: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
     });
+    
+    // Track in funnel events for conversion dashboard
+    trackGarageVehicleRestore(vehicle);
 
     return true;
   }, [garage, activeVehicle]);

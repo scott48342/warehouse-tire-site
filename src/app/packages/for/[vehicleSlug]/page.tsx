@@ -25,6 +25,7 @@ import { getFitmentFacts } from "@/lib/seo/fitment";
 import { VehicleTrimSelector } from "@/components/VehicleTrimSelector";
 import { RecommendedPackages } from "@/components/packages/RecommendedPackages";
 import { SeoContentBlock } from "@/components/SeoContentBlock";
+import { PackageBuilderTracker } from "@/components/PageTracker";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shop.warehousetiredirect.com";
 
@@ -144,6 +145,7 @@ export default async function PackagesForVehiclePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <PackageBuilderTracker vehicle={{ year: String(year), make, model }} />
       
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <nav className="mb-6 text-sm text-neutral-500">

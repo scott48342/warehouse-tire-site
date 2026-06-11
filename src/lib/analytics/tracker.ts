@@ -213,3 +213,40 @@ export function trackFirstOrderCouponApplied(couponCode: string): void {
 export function trackFirstOrderCouponRedeemed(couponCode: string, cartValue: number): void {
   trackEvent('first_order_coupon_redeemed', { couponCode, cartValue });
 }
+
+/**
+ * Track garage events
+ */
+export function trackGarageVehicleSave(vehicle: { year: string; make: string; model: string; trim?: string }): void {
+  trackEvent('garage_vehicle_save', { 
+    metadata: { 
+      vehicle: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
+      trim: vehicle.trim,
+    } 
+  });
+}
+
+export function trackGarageVehicleRestore(vehicle: { year: string; make: string; model: string; trim?: string }): void {
+  trackEvent('garage_vehicle_restore', { 
+    metadata: { 
+      vehicle: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
+      trim: vehicle.trim,
+    } 
+  });
+}
+
+/**
+ * Track quick view opens
+ */
+export function trackQuickViewOpen(productType: 'wheel' | 'tire' | 'package', sku?: string): void {
+  trackEvent('quick_view_open', { productType, productSku: sku });
+}
+
+/**
+ * Track package builder entry
+ */
+export function trackPackageBuilderEnter(vehicle?: { year: string; make: string; model: string }): void {
+  trackEvent('package_builder_enter', { 
+    metadata: vehicle ? { vehicle: `${vehicle.year} ${vehicle.make} ${vehicle.model}` } : undefined
+  });
+}

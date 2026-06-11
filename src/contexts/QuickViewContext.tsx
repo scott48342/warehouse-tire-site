@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useCallback, type ReactNode } from "react";
 import { QuickViewModal, type QuickViewData, type QuickViewTireData, type QuickViewWheelData, type QuickViewPackageData } from "@/components/QuickViewModal";
+import { trackQuickViewOpen } from "@/lib/analytics/tracker";
 
 // Re-export types for convenience
 export type { QuickViewData, QuickViewTireData, QuickViewWheelData, QuickViewPackageData };
@@ -41,6 +42,11 @@ export function QuickViewProvider({ children }: { children: ReactNode }) {
   const openQuickView = useCallback((newData: QuickViewData) => {
     setData(newData);
     setIsOpen(true);
+    
+    // Track for conversion dashboard
+    const type = newData.type as 'wheel' | 'tire' | 'package';
+    const sku = (newData as any).sku || (newData as any).wheel?.sku;
+    trackQuickViewOpen(type, sku);
   }, []);
 
   const closeQuickView = useCallback(() => {

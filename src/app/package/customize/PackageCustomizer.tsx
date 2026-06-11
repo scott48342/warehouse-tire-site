@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart/CartContext";
 import { TrustBadgesRow, TrustBadge } from "@/components/TrustBadges";
 import { CompleteYourSetup } from "@/components/CompleteYourSetup";
+import { trackPackageBuilderEnter } from "@/lib/analytics/tracker";
 
 // ============================================================================
 // Types
@@ -81,6 +82,15 @@ export default function PackageCustomizer() {
 
   const [selectedTire, setSelectedTire] = useState<TireOption | null>(null);
   const [quantity, setQuantity] = useState(4);
+
+  // Track package builder entry
+  useEffect(() => {
+    if (year && make && model) {
+      trackPackageBuilderEnter({ year, make, model });
+    } else {
+      trackPackageBuilderEnter();
+    }
+  }, [year, make, model]);
 
   // Fetch package data
   useEffect(() => {
