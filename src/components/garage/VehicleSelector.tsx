@@ -107,9 +107,16 @@ export function VehicleSelector({ onSelect, onClose }: VehicleSelectorProps) {
       );
       if (!res.ok) throw new Error("Failed to fetch trims");
       const data = await res.json();
-      // Trims API returns array of { trim, modification } or array of strings
+      // Trims API returns array of { value, label, modificationId } or legacy { trim, modification }
       const trimData = data.results || data.trims || [];
-      setTrims(trimData.map((t: any) => typeof t === 'string' ? { trim: t } : t));
+      setTrims(trimData.map((t: any) => {
+        if (typeof t === 'string') return { trim: t };
+        // Normalize API response - it uses 'label' but we need 'trim'
+        return {
+          trim: t.label || t.trim || t.value,
+          modification: t.modificationId || t.modification || t.value,
+        };
+      }));
     } catch (err) {
       setError("Failed to load trims");
     } finally {
@@ -278,21 +285,33 @@ export function VehicleSelector({ onSelect, onClose }: VehicleSelectorProps) {
 
               {step === "trim" && (
                 <>
-                  <button
-                    onClick={handleSkipTrim}
-                    className="col-span-2 sm:col-span-3 px-4 py-3 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 hover:border-red-500/50 rounded-lg text-red-400 font-medium text-center transition-all"
-                  >
-                    Skip - All Trims
-                  </button>
-                  {trims.map((t) => (
+                  {/* If only one trim (Standard/Base), show clearer messaging */}
+                  {trims.length === 1 && trims[0].trim?.toLowerCase().includes("standard") ? (
                     <button
-                      key={t.modification || t.trim}
-                      onClick={() => handleTrimSelect(t.trim, t.modification)}
-                      className="px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-500/30 rounded-lg text-white font-medium text-center transition-all text-sm"
+                      onClick={() => handleTrimSelect(trims[0].trim, trims[0].modification)}
+                      className="col-span-2 sm:col-span-3 px-4 py-4 bg-red-500/20 hover:bg-red-500/30 border border-red-500/50 hover:border-red-500 rounded-lg text-white font-semibold text-center transition-all"
                     >
-                      {t.trim}
+                      Continue with {year} {make} {model}
                     </button>
-                  ))}
+                  ) : (
+                    <>
+                      <button
+                        onClick={handleSkipTrim}
+                        className="col-span-2 sm:col-span-3 px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-lg text-white/70 font-medium text-center transition-all text-sm"
+                      >
+                        Skip Trim Selection
+                      </button>
+                      {trims.map((t) => (
+                        <button
+                          key={t.modification || t.trim}
+                          onClick={() => handleTrimSelect(t.trim, t.modification)}
+                          className="px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-500/30 rounded-lg text-white font-medium text-center transition-all text-sm"
+                        >
+                          {t.trim}
+                        </button>
+                      ))}
+                    </>
+                  )}
                 </>
               )}
             </div>
