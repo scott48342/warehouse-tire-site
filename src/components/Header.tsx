@@ -16,6 +16,7 @@ import { SearchModal } from "@/components/SearchModal";
 import { CartIcon } from "@/components/CartIcon";
 import { JakeAvatar } from "@/components/jake/JakeAvatar";
 import { VehicleIndicator, VehicleIndicatorCompact } from "@/components/VehicleIndicator";
+import { VehicleMemorySync } from "@/components/VehicleMemorySync";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -186,6 +187,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
+      {/* Sync URL vehicle params to VehicleMemoryContext for returning visitors */}
+      <VehicleMemorySync />
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:gap-6">
         <Link href="/" className="flex-shrink-0">
           <img

@@ -125,6 +125,21 @@ export function VehicleMemoryProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setActiveVehicle = useCallback((vehicle: Omit<SavedVehicle, "savedAt" | "version">) => {
+    // ═══════════════════════════════════════════════════════════════════════════
+    // DUPLICATE PREVENTION: Don't save/track if vehicle is the same
+    // This prevents duplicate analytics events from VehicleMemorySync
+    // ═══════════════════════════════════════════════════════════════════════════
+    const isSameVehicle = activeVehicle !== null &&
+      activeVehicle.year === vehicle.year &&
+      activeVehicle.make === vehicle.make &&
+      activeVehicle.model === vehicle.model &&
+      activeVehicle.modification === vehicle.modification;
+    
+    if (isSameVehicle) {
+      // Skip save if same vehicle (prevents duplicate events)
+      return;
+    }
+    
     const saved: SavedVehicle = {
       ...vehicle,
       savedAt: Date.now(),

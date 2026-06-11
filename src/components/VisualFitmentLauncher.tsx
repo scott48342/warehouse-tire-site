@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { fitmentLabel, type Fitment } from "@/lib/fitment";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { isBaseTrim } from "@/lib/features/premiumTrimUx";
+import { useVehicleMemory } from "@/contexts/VehicleMemoryContext";
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { cache: "no-store" });
@@ -112,6 +113,7 @@ export function VisualFitmentLauncher({
   onNavigateToWheels?: (fitment: Fitment) => void;
 }) {
   const router = useRouter();
+  const { setActiveVehicle } = useVehicleMemory();
 
   const [openInternal, setOpenInternal] = useState(initialOpen);
   const isOpen = open ?? openInternal;
@@ -282,6 +284,18 @@ export function VisualFitmentLauncher({
       localStorage.setItem("wt_fitment", JSON.stringify(next));
       localStorage.setItem("wt_fitment_draft", JSON.stringify(next));
     } catch {}
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // VEHICLE MEMORY: Save to unified vehicle memory context
+    // This ensures the header indicator updates and vehicle persists across sessions
+    // ═══════════════════════════════════════════════════════════════════════════
+    setActiveVehicle({
+      year: next.year || "",
+      make: next.make || "",
+      model: next.model || "",
+      trim: next.trim,
+      modification: next.modification,
+    });
 
     // Close the modal before navigating so the user doesn't see the entry tiles again.
     close();
