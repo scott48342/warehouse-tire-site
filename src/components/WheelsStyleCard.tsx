@@ -6,6 +6,7 @@ import { FavoritesButton } from "@/components/FavoritesButton";
 import { AddToCompareButton } from "@/components/AddToCompareButton";
 import { normalizeWheelForCompare } from "@/context/CompareContext";
 import { useCart } from "@/lib/cart/CartContext";
+import { QuickViewButton, buildWheelQuickViewData } from "@/components/QuickViewButton";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { FinancingBadge } from "@/components/FinancingBadge";
 import { 
@@ -800,8 +801,32 @@ export function WheelsStyleCard({
           )}
         </div>
         
-        {/* Action buttons overlay (Favorites + Compare) */}
+        {/* Action buttons overlay (Favorites + Compare + Quick View) */}
         <div className="absolute top-3 right-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <QuickViewButton
+            data={buildWheelQuickViewData({
+              sku: selectedSku || baseSku,
+              brand,
+              model: title,
+              finish: selectedFinish,
+              imageUrl: selectedImage,
+              price: selectedPrice,
+              diameter: selectedPair?.front?.diameter ?? sizeLabel?.diameter,
+              width: selectedPair?.front?.width ?? sizeLabel?.width,
+              offset: selectedPair?.front?.offset ?? specLabel?.offset,
+              boltPattern: specLabel?.boltPattern,
+              centerbore: String(wheelCenterBore || ""),
+              stockQty: selectedStockQty,
+              inventoryType: selectedInventoryType,
+              fitmentClass,
+              year: viewParams?.year,
+              make: viewParams?.make,
+              vehicleModel: viewParams?.model,
+              trim: viewParams?.trim,
+              modification: viewParams?.modification,
+            })}
+            size="sm"
+          />
           <AddToCompareButton
             item={normalizeWheelForCompare({
               sku: selectedSku || baseSku,
