@@ -28,8 +28,29 @@ function parseTireSizes(raw) {
   if (!raw) return [];
   try {
     const j = JSON.parse(raw);
-    if (!Array.isArray(j)) return [];
-    return [...new Set(j.filter(s => typeof s === 'string' && s.trim()))].sort();
+    const sizes = new Set();
+    
+    // Handle array format: ["225/45R17", "235/50R18"]
+    if (Array.isArray(j)) {
+      for (const s of j) {
+        if (typeof s === 'string' && s.trim()) sizes.add(s.trim());
+      }
+    }
+    // Handle object format: {front: [...], rear: [...]} or {front: "...", rear: "..."}
+    else if (j && typeof j === 'object') {
+      for (const key of ['front', 'rear']) {
+        const val = j[key];
+        if (typeof val === 'string' && val.trim()) {
+          sizes.add(val.trim());
+        } else if (Array.isArray(val)) {
+          for (const s of val) {
+            if (typeof s === 'string' && s.trim()) sizes.add(s.trim());
+          }
+        }
+      }
+    }
+    
+    return [...sizes].sort();
   } catch { return []; }
 }
 function parseWheelDiameters(raw) {

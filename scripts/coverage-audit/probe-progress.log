@@ -71,3 +71,27 @@
 [2026-06-10T16:48:17.084Z]   packages 450/460
 [2026-06-10T16:48:31.445Z] Phase P complete. classes with packages: 380/460
 [2026-06-10T16:48:31.446Z] PROBE DONE
+[2026-06-11T18:00:59.965Z] Phase T: 817 tire sizes (done: 595)
+[2026-06-11T18:01:11.496Z]   tires 600/817
+[2026-06-11T18:01:47.883Z]   tires 625/817
+[2026-06-11T18:02:24.971Z]   tires 650/817
+[2026-06-11T18:03:41.451Z]   tires 675/817
+[2026-06-11T18:04:28.709Z]   tires 700/817
+[2026-06-11T18:05:01.249Z]   tires 725/817
+[2026-06-11T18:05:35.334Z]   tires 750/817
+[2026-06-11T18:06:08.019Z]   tires 775/817
+[2026-06-11T18:06:41.321Z]   tires 800/817
+[2026-06-11T18:07:14.349Z] Phase T complete. sizes with results: 761/817
+[2026-06-11T18:07:14.349Z] Phase W: 532 wheel classes (done: 532)
+[2026-06-11T18:07:14.351Z] Phase W complete. classes with wheels: 460/532
+[2026-06-11T18:07:14.352Z] Phase P: 460 package probes (done: 460)
+[2026-06-11T18:07:14.354Z] Phase P complete. classes with packages: 380/460
+[2026-06-11T18:07:14.355Z] PROBE DONE
+[2026-06-11T18:15:18.277Z] Phase T: 839 tire sizes (done: 817)
+[2026-06-11T18:15:47.146Z]   tires 825/839
+[2026-06-11T18:16:08.939Z] Phase T complete. sizes with results: 783/839
+[2026-06-11T18:16:08.940Z] Phase W: 532 wheel classes (done: 532)
+[2026-06-11T18:16:08.941Z] Phase W complete. classes with wheels: 460/532
+[2026-06-11T18:16:08.942Z] Phase P: 460 package probes (done: 460)
+[2026-06-11T18:16:08.943Z] Phase P complete. classes with packages: 380/460
+[2026-06-11T18:16:08.944Z] PROBE DONE
