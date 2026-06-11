@@ -1,29 +1,29 @@
 id,year,make,model,trim,tire_count,wheel_count,package_count,category,failure_reason,root_cause,tire_sizes,bolt_pattern,wheel_diams
-f0ff4bf5-1c16-471c-83af-1db37d756d99,1968,AMC,AMX,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-be2553b0-96f0-42d1-a712-3be68c7d5b9e,1970,AMC,Hornet,Base,0,344,0,C,only vintage/non-standard sizes: C78-14 D70-14 D78-14,vintage_tire_size,C78-14|D70-14|D78-14,5x114.3,14
-ca79914a-5fcf-4a9e-8ea0-bf65ee6cd822,1971,AMC,Hornet,Base,0,344,0,C,only vintage/non-standard sizes: 185R14 C78-14 D78-14,vintage_tire_size,185R14|C78-14|D78-14,5x114.3,14
-1294c760-556f-4253-b583-23d4cdd99beb,1972,AMC,Hornet,Base,0,344,0,C,only vintage/non-standard sizes: 185R14 C78-14 D78-14,vintage_tire_size,185R14|C78-14|D78-14,5x114.3,14
-69b8b377-4124-4fde-b664-539604f75b43,1971,AMC,Hornet SC/360,Base,0,344,0,C,only vintage/non-standard sizes: D70-14,vintage_tire_size,D70-14,5x114.3,14
-f5948fa5-01ce-4d22-9ccc-5a41d7d41a6b,1967,AMC,Rebel,Base,0,344,0,C,only vintage/non-standard sizes: 7.75-14 8.25-14,vintage_tire_size,7.75-14|8.25-14,5x114.3,14
-421b5aa2-be15-49a0-af97-e1354e7eec55,1968,AMC,Rebel,Base,0,344,0,C,only vintage/non-standard sizes: 7.75-14 8.25-14 E78-14,vintage_tire_size,7.75-14|8.25-14|E78-14,5x114.3,14
-f68d5d98-fa2c-490e-b8a5-7b562ac702ac,1969,AMC,Rebel,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F78-14,vintage_tire_size,E78-14|F78-14,5x114.3,14
-f466c87d-9931-49c0-8424-9baf2616827d,1970,AMC,Rebel,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F78-14,vintage_tire_size,E78-14|F78-14,5x114.3,14
-1a6a1f87-dda3-4995-b91b-15166ed0a256,1970,AMC,Rebel Machine,Base,0,1048,0,C,only vintage/non-standard sizes: E60-15,vintage_tire_size,E60-15,5x114.3,15
-2d44ee7a-c13a-4998-87dd-3e3377086439,1969,AMC,SC/Rambler,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-2a8f7c6a-f9e6-40dd-a865-25881542ee53,2023,BMW,XM,Base,0,669,2,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
-21985271-bdb9-4864-a899-82da4da45afd,2024,BMW,XM,Base,0,669,2,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
-913b1ad0-fd76-4384-96b7-384d599fe99e,2025,BMW,XM,Base,0,669,2,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
-fe1cc47a-b284-4d09-856c-56f94819da1f,2026,BMW,XM,Base,0,669,2,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
-8da53b54-aa6e-4095-931e-3f7bd6bec00a,1968,Buick,GS,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-530e622a-047f-424e-9437-607cca955466,1969,Buick,GS,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-d64fc280-9512-41ce-97cf-5e2d7991768b,1970,Buick,GS,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-998f0445-fbef-410a-bb31-c626a2874558,1971,Buick,GS,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-f8b35b61-b3c7-419c-a8d6-bcbc0b83e34a,1972,Buick,GS,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-ec6294d0-7ddf-4fdf-9efd-805e41e2672b,1970,Buick,GSX,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-ea271aec-633a-4208-8bb3-127fe762b977,1971,Buick,GSX,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-9f990fac-2fc8-4fc9-866b-6a523d0df348,1965,Buick,Gran Sport,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-d03c920a-f04b-4814-9983-190aaed0c403,1966,Buick,Gran Sport,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
-8f1ee83d-e19c-4a3b-8431-0aa7c661852a,1967,Buick,Gran Sport,Base,0,266,0,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+f0ff4bf5-1c16-471c-83af-1db37d756d99,1968,AMC,AMX,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+be2553b0-96f0-42d1-a712-3be68c7d5b9e,1970,AMC,Hornet,Base,0,344,3,C,only vintage/non-standard sizes: C78-14 D70-14 D78-14,vintage_tire_size,C78-14|D70-14|D78-14,5x114.3,14
+ca79914a-5fcf-4a9e-8ea0-bf65ee6cd822,1971,AMC,Hornet,Base,0,344,3,C,only vintage/non-standard sizes: 185R14 C78-14 D78-14,vintage_tire_size,185R14|C78-14|D78-14,5x114.3,14
+1294c760-556f-4253-b583-23d4cdd99beb,1972,AMC,Hornet,Base,0,344,3,C,only vintage/non-standard sizes: 185R14 C78-14 D78-14,vintage_tire_size,185R14|C78-14|D78-14,5x114.3,14
+69b8b377-4124-4fde-b664-539604f75b43,1971,AMC,Hornet SC/360,Base,0,344,3,C,only vintage/non-standard sizes: D70-14,vintage_tire_size,D70-14,5x114.3,14
+f5948fa5-01ce-4d22-9ccc-5a41d7d41a6b,1967,AMC,Rebel,Base,0,344,3,C,only vintage/non-standard sizes: 7.75-14 8.25-14,vintage_tire_size,7.75-14|8.25-14,5x114.3,14
+421b5aa2-be15-49a0-af97-e1354e7eec55,1968,AMC,Rebel,Base,0,344,3,C,only vintage/non-standard sizes: 7.75-14 8.25-14 E78-14,vintage_tire_size,7.75-14|8.25-14|E78-14,5x114.3,14
+f68d5d98-fa2c-490e-b8a5-7b562ac702ac,1969,AMC,Rebel,Base,0,344,3,C,only vintage/non-standard sizes: E78-14 F78-14,vintage_tire_size,E78-14|F78-14,5x114.3,14
+f466c87d-9931-49c0-8424-9baf2616827d,1970,AMC,Rebel,Base,0,344,3,C,only vintage/non-standard sizes: E78-14 F78-14,vintage_tire_size,E78-14|F78-14,5x114.3,14
+1a6a1f87-dda3-4995-b91b-15166ed0a256,1970,AMC,Rebel Machine,Base,0,1048,3,C,only vintage/non-standard sizes: E60-15,vintage_tire_size,E60-15,5x114.3,15
+2d44ee7a-c13a-4998-87dd-3e3377086439,1969,AMC,SC/Rambler,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+2a8f7c6a-f9e6-40dd-a865-25881542ee53,2023,BMW,XM,Base,0,669,3,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
+21985271-bdb9-4864-a899-82da4da45afd,2024,BMW,XM,Base,0,669,3,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
+913b1ad0-fd76-4384-96b7-384d599fe99e,2025,BMW,XM,Base,0,669,3,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
+fe1cc47a-b284-4d09-856c-56f94819da1f,2026,BMW,XM,Base,0,669,3,C,no tire inventory for size(s),missing_inventory_tires,275/40R23|315/35R23,5x112,23
+8da53b54-aa6e-4095-931e-3f7bd6bec00a,1968,Buick,GS,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+530e622a-047f-424e-9437-607cca955466,1969,Buick,GS,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+d64fc280-9512-41ce-97cf-5e2d7991768b,1970,Buick,GS,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+998f0445-fbef-410a-bb31-c626a2874558,1971,Buick,GS,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+f8b35b61-b3c7-419c-a8d6-bcbc0b83e34a,1972,Buick,GS,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+ec6294d0-7ddf-4fdf-9efd-805e41e2672b,1970,Buick,GSX,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+ea271aec-633a-4208-8bb3-127fe762b977,1971,Buick,GSX,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+9f990fac-2fc8-4fc9-866b-6a523d0df348,1965,Buick,Gran Sport,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+d03c920a-f04b-4814-9983-190aaed0c403,1966,Buick,Gran Sport,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
+8f1ee83d-e19c-4a3b-8431-0aa7c661852a,1967,Buick,Gran Sport,Base,0,266,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x120.65,14
 2d5515f1-9600-40f3-9e7b-c0039f6372fc,1965,Buick,Skylark,Base,0,74,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x100,14
 d9ddc9f2-3782-4bd6-9096-04c54988c894,1966,Buick,Skylark,Base,0,74,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x100,14
 774d1a84-7888-4d27-ae68-77c49fbde3d3,1967,Buick,Skylark,Base,0,74,3,C,only vintage/non-standard sizes: G70-14,vintage_tire_size,G70-14,5x100,14
@@ -42,7 +42,7 @@ c4e4ceef-9d30-44ad-af84-79acaf24cb82,1972,Buick,Skylark,Base,0,74,3,C,only vinta
 79230211-80af-4b12-a2f9-58652d236e05,2026,Buick,enclave,Avenir,0,618,3,C,no tire inventory for size(s),missing_inventory_tires,265/50R21,5x120,21
 914e7580-bb76-43b3-84f8-ed4e449eaff3,2018,Cadillac,ATS,Premium Performance Sedan,0,180,3,C,only vintage/non-standard sizes: 225/40RF18 255/35RF18,vintage_tire_size,225/40RF18|255/35RF18,5x115,18
 5f68931f-906d-4e10-bb4e-56091c742884,2018,Cadillac,ATS,Premium Performance Coupe,0,180,3,C,only vintage/non-standard sizes: 225/40RF18 255/35RF18,vintage_tire_size,225/40RF18|255/35RF18,5x115,18
-8b536788-72e3-435d-be70-d1be9f1cdc43,2018,Cadillac,CTS,Base,0,618,2,C,only vintage/non-standard sizes: P245/45RF17,vintage_tire_size,P245/45RF17,5x120,
+8b536788-72e3-435d-be70-d1be9f1cdc43,2018,Cadillac,CTS,Base,0,618,3,C,only vintage/non-standard sizes: P245/45RF17,vintage_tire_size,P245/45RF17,5x120,
 444791f3-2039-4c83-887f-a060ce6db003,1955,Cadillac,DeVille,Base,0,140,3,C,only vintage/non-standard sizes: 8.00-15,vintage_tire_size,8.00-15,5x115,15
 d0d4f595-2941-49d7-a8c6-2a88827b65b2,1956,Cadillac,DeVille,Base,0,140,3,C,only vintage/non-standard sizes: 8.00-15,vintage_tire_size,8.00-15,5x115,15
 53acfd6a-bccc-415d-8c19-6a6d11b2f756,1957,Cadillac,DeVille,Base,0,140,3,C,only vintage/non-standard sizes: 8.00-15,vintage_tire_size,8.00-15,5x115,15
@@ -87,163 +87,163 @@ b3eb7610-33bb-46ff-80e4-daeecdfd0dc9,1967,Cadillac,Fleetwood,Base,0,102,3,C,only
 3e2b9929-6b2f-4ba2-a496-48cca19d0387,2008,Cadillac,escalade,Platinum,0,2000,3,C,no OEM tire sizes in record,missing_oem_tire_size,,6x139.7,17
 d0b259e2-d300-4c6f-b645-7ac574abf2ae,2008,Cadillac,escalade,"Luxury, Premium Luxury, Sport, Platinum, V",0,2000,3,C,no OEM tire sizes in record,missing_oem_tire_size,,6x139.7,17
 acb16617-ceef-41f5-983b-bcbd6eb1c0eb,2008,Cadillac,escalade,Luxury,0,2000,3,C,no OEM tire sizes in record,missing_oem_tire_size,,6x139.7,17
-6089832c-1d71-4966-8e66-d769a106be09,1953,Chevrolet,150,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-49b5581f-38ba-45f4-81fe-231c497b6051,1954,Chevrolet,150,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-3d3df5fc-4709-45b7-99a1-6837f22816a4,1955,Chevrolet,150,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-a5d21f5d-1987-4c3c-8a0c-8326f0f0c6e4,1956,Chevrolet,150,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-70c9ced0-4402-4a72-93fd-20ae58edbd9e,1957,Chevrolet,150,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-9f8d0348-e51e-4e50-8c49-e95e9229a0de,1953,Chevrolet,210,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-c0e2f57c-5193-48df-8e17-b08a8142f219,1954,Chevrolet,210,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-5363ff24-75b6-4e47-8100-ab1b41cc88a1,1955,Chevrolet,210,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-aa91e30f-620c-472c-b95a-8873c1d424e3,1956,Chevrolet,210,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-0314776d-1a35-4622-bba4-4a20b164404a,1957,Chevrolet,210,Base,0,266,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
-eb3166aa-01d4-4a27-8139-dfa4bdaa8161,1953,Chevrolet,Bel Air,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-b7c2d046-3338-4488-9169-33e27cc8c8c7,1954,Chevrolet,Bel Air,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-679345d7-cd97-43d8-8be2-4001381f5962,1955,Chevrolet,Bel Air,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-220c7462-a6f7-490b-897b-d801068ea3b2,1956,Chevrolet,Bel Air,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-ee3bf01d-11e1-4028-bee9-a81a659dae0e,1957,Chevrolet,Bel Air,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-6e66e95c-efef-40f9-b8ad-010fa378cd5a,1950,Chevrolet,Deluxe,Base,0,266,0,C,only vintage/non-standard sizes: 6.00-16,vintage_tire_size,6.00-16,5x120.65,15
-4f2415af-c675-42f6-a6f1-c13efec2e791,1951,Chevrolet,Deluxe,Base,0,266,0,C,only vintage/non-standard sizes: 6.00-16,vintage_tire_size,6.00-16,5x120.65,15
-64076043-1e48-45b4-99ed-c8610b07d79a,1952,Chevrolet,Deluxe,Base,0,266,0,C,only vintage/non-standard sizes: 6.00-16,vintage_tire_size,6.00-16,5x120.65,15
-95c2a870-c2bd-47f5-9066-0847e50697a1,1955,Chevrolet,Nomad,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-94c52749-c82e-49f2-9259-4a2575981918,1956,Chevrolet,Nomad,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-de70e659-d2f9-4c95-ab02-b8cc7a7e5047,1957,Chevrolet,Nomad,Base,0,266,0,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
-d438a0c6-bfa5-4ead-b182-441da4ddd7b6,1953,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-1fd120df-ec4f-47f3-a1bf-4d66d5146170,1954,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-607c4906-9f2b-4f6d-aaa2-7027fd7aea0d,1955,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-4504eda1-8ae3-415d-9adc-a617b3b6d638,1956,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-63d4a307-9dec-4356-b8b0-cc47465ef256,1957,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-f24aa205-ffec-438e-b711-72a4043d86bd,1958,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-bb33bf06-1982-4e2f-9c77-b664d04eb104,1959,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-20a6777c-14da-4804-be85-bd9fe1ba3d57,1960,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-99d018c6-7131-42ed-8dd3-9f1eac24ea28,1961,Chevrolet,corvette,Base,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-b846ee50-48e0-448c-9c8e-74421aff13db,1962,Chevrolet,corvette,Fuel Injection,0,266,0,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
-da12c413-2d8f-49a3-98bd-6e39e0033234,1981,Delorean,dmc-12,DMC-12 Original,0,74,3,C,only vintage/non-standard sizes: 195/60HR14 235/60HR15,vintage_tire_size,195/60HR14|235/60HR15,5x100,14|15
-99af46bd-51db-4ae5-8367-857461837333,1982,Delorean,dmc-12,DMC-12 Original,0,74,3,C,only vintage/non-standard sizes: 195/60HR14 235/60HR15,vintage_tire_size,195/60HR14|235/60HR15,5x100,14|15
-6fd36e6e-b30f-459e-90b4-b7fb6b4e088a,1983,Delorean,dmc-12,DMC-12 Original,0,74,3,C,only vintage/non-standard sizes: 195/60HR14 235/60HR15,vintage_tire_size,195/60HR14|235/60HR15,5x100,14|15
-7dfb6f58-d2f5-4605-98f2-8682d9c3a37a,1966,Dodge,Coronet,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-1b08b459-0672-4a6a-a60b-f059a402ba72,1967,Dodge,Coronet,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-2f3dc532-c284-4426-a6f6-e8804d1218b7,1968,Dodge,Coronet,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-99535065-09d0-49d9-9a13-6541db4f91a2,1969,Dodge,Coronet,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-1daa3fd2-eb0f-4c7d-9e50-f5b65ac9c4a0,1970,Dodge,Coronet,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-60aaa90c-5130-4e91-b3c9-53fb59321581,1964,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-6ad5a66c-95a4-40f4-8963-21e6f6f078aa,1965,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-639b302c-3609-4d6c-8fa6-054ccd242411,1966,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-588dc73f-677b-4f5f-ae99-20541a1861a2,1967,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-651bb05c-fa57-4d70-9ecf-159d264efc85,1968,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-7f8726e4-423a-4da9-ad03-e74fb98731d0,1969,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-6bab77f4-d2fd-4f0c-a9c2-7a841888580e,1970,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-d7adaee2-0291-4f6a-9ab4-8b7d86f7547a,1971,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-7c14a8f7-cba4-4bd8-acbe-5c5a48da74eb,1972,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-a794e4a3-89c9-4f2f-b5d2-23ebe1dd42fb,1973,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-13403d4f-ac17-4cfd-a879-487c8f2cc172,1974,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-2e73b640-ad7c-4a2b-983f-de6a0620fa53,1975,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-e3be8a6a-ed56-42ff-a549-ad1a1fb52c08,1976,Dodge,Dart,Base,0,61,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
-40190d34-9cae-492b-9c4a-2528663cd5ff,1971,Dodge,Demon,Base,0,175,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
-f2cc086e-e865-4cb2-b631-7a17c612fb52,1972,Dodge,Demon,Base,0,175,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
-3407c19b-087b-4b46-b80e-5c87f11ecceb,1968,Dodge,Super Bee,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-30d76c98-c116-4358-a5f9-717909e379ff,1969,Dodge,Super Bee,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-bcef8c7f-8e75-4673-aff8-aa0c558f6ddf,1970,Dodge,Super Bee,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-1459a459-fbf2-4224-918b-ebb144df380e,1970,Dodge,challenger,R/T,0,175,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
-878b5d18-32f3-4700-8ca2-3c47cad8f97c,1971,Dodge,challenger,R/T,0,175,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
-6cc0b800-7a3a-42dc-866c-4eb5f11d0b47,1972,Dodge,challenger,T/A,0,175,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
-a133f7c9-6d81-4764-b304-106fa53fcdd9,1973,Dodge,challenger,Base,0,175,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
-988361b5-3261-4185-bd24-a404075e9c0b,1974,Dodge,challenger,SE,0,175,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
-3c2f2a9e-1146-4bf7-9fde-6c8389f905fc,1966,Dodge,charger,Base,0,175,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
-fa992ac5-4aad-4694-bbca-b4e0c1976d45,1967,Dodge,charger,426 Hemi,0,175,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
-7857e1f5-c498-4d94-8a0a-a05c20af94fa,1968,Dodge,charger,Base,0,175,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
-75cb52b6-f6a5-46ea-85e0-982b121f8581,1969,Dodge,charger,Base,0,175,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
-ee37326f-6823-4ff1-a7e5-b9776aa02ad8,1970,Dodge,charger,Base,0,175,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
-2e7b9dfe-3137-4b02-bb84-e6b6c90bffd9,1971,Dodge,charger,Base,0,175,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
-07929b29-91f5-4280-a9bd-a018f6b9b595,1953,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-78e0743c-949a-4490-bea4-10886aae60f6,1954,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-257a418a-867d-43a6-9bf2-9681cf1687f9,1955,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-fbf83403-5439-4830-b41e-d217356a5881,1956,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-da30cfd9-d859-4804-b92c-57517cf5f950,1957,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-a9978af9-1050-46bf-9c75-c4f40cc5c4fb,1958,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-3896807f-cec1-41fa-81d4-a263902bb9d9,1959,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-de03b756-ec72-4196-a73e-be7693cd1438,1960,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-8bb3d944-8a87-478d-b4d8-14675db529c0,1961,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-24425204-39a3-4a64-a53e-060e304a85f5,1962,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-01aeaf22-e566-4f6c-b126-337142986de0,1963,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-23a6ca39-7816-454c-a1a5-bbe63c65f89e,1964,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-6cd95bed-1de6-4df2-8d9f-aad531562cfc,1965,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-c3636c63-c3fa-4aa6-b793-79cc522f4524,1966,Ford,F-100,Base,0,156,0,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
-08fe73c2-8c75-4853-8769-e19aa988b8ef,1977,Ford,F-150,Base,0,156,0,C,only vintage/non-standard sizes: L78-15,vintage_tire_size,L78-15,5x139.7,15
-2c27e168-1304-43ee-88f2-05b3c70e047d,1978,Ford,F-150,Base,0,156,0,C,only vintage/non-standard sizes: L78-15,vintage_tire_size,L78-15,5x139.7,15
-f902b904-2870-4d8a-8208-e339051f2341,1979,Ford,F-150,Base,0,156,0,C,only vintage/non-standard sizes: L78-15,vintage_tire_size,L78-15,5x139.7,15
-81ea9a79-cffb-41e8-8455-25c27cbceede,2008,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-f8e6079b-fd26-4663-ac4d-21a501e8d54b,2009,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-f9fffe7b-153b-475e-86df-bb493e0bff29,2010,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-ac4f965f-a970-4f98-838b-2c5c40db03a4,2011,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-9f44f519-816d-4c0f-a333-f73ee4230f70,2012,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-8d2327c1-9723-45af-99ff-878cfe12a14e,2013,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-ff7e4dd8-5ac6-4abb-99bd-c4a6705e2abb,2014,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-2d2cb9ec-350d-48cb-95a7-1321ddcde54e,2015,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-6fe11119-0a69-488d-a960-c7f1724ddac8,2016,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-efe0e0e6-d91a-483f-bc70-8872a0d98bbd,2017,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-98390c66-642d-42f6-a2c3-93703dfd9b81,2019,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-78a1057f-2b8c-48b2-93e2-4ec0ba9b6650,2020,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-8cfdc438-3b33-4aa0-9184-9b3757776062,2021,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-2de71a3d-797f-44f2-b48f-a2281744b193,2022,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-e81c30a1-3c45-441f-9b6f-605b11f295e7,2023,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-e297e490-7257-4949-b1cc-edddbdef5f0e,2024,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-fcd36cd4-1013-4199-8576-7ccd600b1e17,2025,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-a641f6d0-970d-4258-902f-08176cdf3fc5,2026,Ford,F-450 Super Duty,DRW,0,38,0,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
-28dd5625-cdeb-465f-bf0c-0c30a5a7e80b,1966,Ford,Fairlane,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-fbfbd4b5-6559-4ac2-b25a-b1053eb82be2,1967,Ford,Fairlane,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-5d6bb47f-9a3b-4738-ac63-0a8729efc1b0,1968,Ford,Fairlane,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-40ca16c2-cf89-4138-b875-3f525b1a636f,1969,Ford,Fairlane,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-9f15886a-dd73-4ba2-89b9-02cae14f55d9,1970,Ford,Fairlane,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-e4108c74-4d71-45e9-9e0b-55a019446346,1964,Ford,Falcon,Base,0,988,0,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
-9e130237-2adb-49f9-a850-850815efabc2,1965,Ford,Falcon,Base,0,988,0,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
-d0eae626-d759-43dd-8789-e5c3c67eb113,1966,Ford,Falcon,Base,0,988,0,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
-954c6ff3-2902-44ae-825e-741ff35a93a3,1967,Ford,Falcon,Base,0,988,0,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
-bb95c2e4-23da-4252-8d5f-0a398f2958dc,1968,Ford,Falcon,Base,0,344,0,C,only vintage/non-standard sizes: 6.95-14 C78-14,vintage_tire_size,6.95-14|C78-14,5x114.3,14
-556ff155-5459-4f59-8eca-76ea88f996c6,1969,Ford,Falcon,Base,0,344,0,C,only vintage/non-standard sizes: C78-14 E78-14,vintage_tire_size,C78-14|E78-14,5x114.3,14
-75da4d29-878e-4274-ab3d-5c2cd35a3c5a,1970,Ford,Falcon,Base,0,344,0,C,only vintage/non-standard sizes: C78-14 E78-14,vintage_tire_size,C78-14|E78-14,5x114.3,14
-55b3b4f7-0e86-42fd-a1db-831355f89101,1965,Ford,Galaxie,Base,0,1048,0,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
-7f11b0fe-5ea0-4ad6-ae79-3c50fe1c2fcc,1966,Ford,Galaxie,Base,0,1048,0,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
-ad5cd786-1a4b-4ab4-b97b-3b5ab29b10ce,1967,Ford,Galaxie,Base,0,1048,0,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
-6ea80f6f-752a-49ef-83bf-c7db633fd717,1968,Ford,Galaxie,Base,0,1048,0,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
-ad2f62ae-6eae-4d80-9984-d1f0568c61ff,1969,Ford,Galaxie,Base,0,1048,0,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
-967db7d9-7838-45c1-b5c5-641290fa6def,1970,Ford,Galaxie,Base,0,1048,0,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
-90582f12-7dcc-4d2b-8026-517dc3962864,1971,Ford,Galaxie,Base,0,1048,0,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
-5f0a60bc-4388-4283-b6c2-e9ce34f90d37,1970,Ford,Maverick,Base,0,344,0,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
-f5a95653-4de7-4f42-8caf-20ce1ef2578c,1971,Ford,Maverick,Base,0,344,0,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
-e82416c9-74fa-43b3-bebf-5f3d46c5a483,1972,Ford,Maverick,Base,0,344,0,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
-30b30d54-ed33-4a19-8e9c-873a9c558ff9,1973,Ford,Maverick,Base,0,344,0,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
-55d45379-4007-4138-a8f7-dd889f469670,1974,Ford,Maverick,Base,0,344,0,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
-ed2297ec-2c12-47eb-803f-3c176f60b387,1955,Ford,Thunderbird,Base,0,1048,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x114.3,15
-f0cdeb12-c33a-4b0d-b4c5-73bdb7ae68bf,1956,Ford,Thunderbird,Base,0,1048,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x114.3,15
-bc0d7bb9-7944-4538-a21c-3f78905fd1d4,1957,Ford,Thunderbird,Base,0,1048,0,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x114.3,15
-a6b3bfdd-984a-4477-9b2e-32c42a229bf2,1958,Ford,Thunderbird,Base,0,344,0,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
-e28ca8b6-2be3-40e4-b0fe-03dfc8e73a14,1959,Ford,Thunderbird,Base,0,344,0,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
-17bbbd1b-28af-47af-aba9-2157f651797d,1960,Ford,Thunderbird,Base,0,344,0,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
-af5326a2-63ce-4682-875d-bb26d7920a9b,1961,Ford,Thunderbird,Base,0,344,0,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
-e78174f9-20f9-4f64-ba58-c5eb28c64f20,1962,Ford,Thunderbird,Base,0,344,0,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
-89788eb4-0356-4daa-b16c-55053d8048d1,1963,Ford,Thunderbird,Base,0,344,0,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
-2b6b3e3a-58f2-4807-9c3b-77c74e8d601a,1964,Ford,Thunderbird,Base,0,1048,0,C,only vintage/non-standard sizes: 8.15-15,vintage_tire_size,8.15-15,5x114.3,15
-0cb1a20f-7ce8-444c-9a70-994894ae62fa,1965,Ford,Thunderbird,Base,0,1048,0,C,only vintage/non-standard sizes: 8.15-15,vintage_tire_size,8.15-15,5x114.3,15
-d1409f91-49e1-40ad-b202-fb10f0df9dcd,1966,Ford,Thunderbird,Base,0,1048,0,C,only vintage/non-standard sizes: 8.15-15,vintage_tire_size,8.15-15,5x114.3,15
-6fc61a3a-a3de-436a-a5bc-bb3560ebbf1e,1968,Ford,Torino,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-c388f18d-89c9-4d25-bd30-fc573e998b87,1969,Ford,Torino,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-9ef40224-8c43-4930-8253-083f9f48fc2a,1970,Ford,Torino,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-835422cc-b25e-426a-b9a8-dfa9c59b126b,1971,Ford,Torino,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-eba08394-d437-4155-866e-df1fbd635327,1972,Ford,Torino,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-30f0525f-7fee-4d14-a362-af9449331b05,1965,Ford,mustang,Base,0,344,0,C,only vintage/non-standard sizes: 6.95-14,vintage_tire_size,6.95-14,5x114.3,14
-9dfe7456-d6ee-47b9-a441-07c6f833ffc3,1966,Ford,mustang,Base,0,344,0,C,only vintage/non-standard sizes: 6.95-14,vintage_tire_size,6.95-14,5x114.3,14
-944a729c-a7a0-43d9-b70c-666725d34cb6,1967,Ford,mustang,Shelby GT350,0,1048,0,C,only vintage/non-standard sizes: E70-15,vintage_tire_size,E70-15,5x114.3,15
-ba1e20b8-a0ce-449d-b04a-bf8483b19d4b,1968,Ford,mustang,Shelby GT500,0,1048,0,C,only vintage/non-standard sizes: E70-15,vintage_tire_size,E70-15,5x114.3,15
-07fc1a68-3384-4ee0-8f2a-a04dbd8ba532,1969,Ford,mustang,Shelby GT500,0,1048,0,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x114.3,15
-73f5e379-bcad-4ca3-bff0-97b6d9e4adb2,1970,Ford,mustang,Base,0,344,0,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
-fd8b30dd-f68a-4e66-8ed5-d3001a8912eb,1971,Ford,mustang,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-7c27a8e5-61f8-432e-8f75-b6dff122fff6,1972,Ford,mustang,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-7c41f0c1-b883-426f-aa7c-e58ef85947a3,1973,Ford,mustang,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-ec69236b-c9de-4489-b003-59874b38f4d0,1992,Hummer,H1,Base,0,421,1,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
-2f3b1052-de5e-49f4-b1ac-15ed3db40361,1993,Hummer,H1,Base,0,421,1,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
-ef376ca0-bbe8-4449-96d8-008d0c7dc52e,1994,Hummer,H1,Base,0,421,1,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
-7f9cdc82-9ebc-4f12-bdc7-a159fa21e99d,1995,Hummer,H1,Base,0,421,1,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
+6089832c-1d71-4966-8e66-d769a106be09,1953,Chevrolet,150,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+49b5581f-38ba-45f4-81fe-231c497b6051,1954,Chevrolet,150,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+3d3df5fc-4709-45b7-99a1-6837f22816a4,1955,Chevrolet,150,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+a5d21f5d-1987-4c3c-8a0c-8326f0f0c6e4,1956,Chevrolet,150,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+70c9ced0-4402-4a72-93fd-20ae58edbd9e,1957,Chevrolet,150,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+9f8d0348-e51e-4e50-8c49-e95e9229a0de,1953,Chevrolet,210,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+c0e2f57c-5193-48df-8e17-b08a8142f219,1954,Chevrolet,210,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+5363ff24-75b6-4e47-8100-ab1b41cc88a1,1955,Chevrolet,210,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+aa91e30f-620c-472c-b95a-8873c1d424e3,1956,Chevrolet,210,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+0314776d-1a35-4622-bba4-4a20b164404a,1957,Chevrolet,210,Base,0,266,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x120.65,15
+eb3166aa-01d4-4a27-8139-dfa4bdaa8161,1953,Chevrolet,Bel Air,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+b7c2d046-3338-4488-9169-33e27cc8c8c7,1954,Chevrolet,Bel Air,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+679345d7-cd97-43d8-8be2-4001381f5962,1955,Chevrolet,Bel Air,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+220c7462-a6f7-490b-897b-d801068ea3b2,1956,Chevrolet,Bel Air,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+ee3bf01d-11e1-4028-bee9-a81a659dae0e,1957,Chevrolet,Bel Air,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+6e66e95c-efef-40f9-b8ad-010fa378cd5a,1950,Chevrolet,Deluxe,Base,0,266,3,C,only vintage/non-standard sizes: 6.00-16,vintage_tire_size,6.00-16,5x120.65,15
+4f2415af-c675-42f6-a6f1-c13efec2e791,1951,Chevrolet,Deluxe,Base,0,266,3,C,only vintage/non-standard sizes: 6.00-16,vintage_tire_size,6.00-16,5x120.65,15
+64076043-1e48-45b4-99ed-c8610b07d79a,1952,Chevrolet,Deluxe,Base,0,266,3,C,only vintage/non-standard sizes: 6.00-16,vintage_tire_size,6.00-16,5x120.65,15
+95c2a870-c2bd-47f5-9066-0847e50697a1,1955,Chevrolet,Nomad,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+94c52749-c82e-49f2-9259-4a2575981918,1956,Chevrolet,Nomad,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+de70e659-d2f9-4c95-ab02-b8cc7a7e5047,1957,Chevrolet,Nomad,Base,0,266,3,C,only vintage/non-standard sizes: 7.50-15,vintage_tire_size,7.50-15,5x120.65,15
+d438a0c6-bfa5-4ead-b182-441da4ddd7b6,1953,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+1fd120df-ec4f-47f3-a1bf-4d66d5146170,1954,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+607c4906-9f2b-4f6d-aaa2-7027fd7aea0d,1955,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+4504eda1-8ae3-415d-9adc-a617b3b6d638,1956,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+63d4a307-9dec-4356-b8b0-cc47465ef256,1957,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+f24aa205-ffec-438e-b711-72a4043d86bd,1958,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+bb33bf06-1982-4e2f-9c77-b664d04eb104,1959,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+20a6777c-14da-4804-be85-bd9fe1ba3d57,1960,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+99d018c6-7131-42ed-8dd3-9f1eac24ea28,1961,Chevrolet,corvette,Base,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+b846ee50-48e0-448c-9c8e-74421aff13db,1962,Chevrolet,corvette,Fuel Injection,0,266,3,C,no tire inventory for size(s),missing_inventory_tires,185/80R15,5x120.65,15
+da12c413-2d8f-49a3-98bd-6e39e0033234,1981,Delorean,dmc-12,DMC-12 Original,0,74,1,C,only vintage/non-standard sizes: 195/60HR14 235/60HR15,vintage_tire_size,195/60HR14|235/60HR15,5x100,14|15
+99af46bd-51db-4ae5-8367-857461837333,1982,Delorean,dmc-12,DMC-12 Original,0,74,1,C,only vintage/non-standard sizes: 195/60HR14 235/60HR15,vintage_tire_size,195/60HR14|235/60HR15,5x100,14|15
+6fd36e6e-b30f-459e-90b4-b7fb6b4e088a,1983,Delorean,dmc-12,DMC-12 Original,0,74,1,C,only vintage/non-standard sizes: 195/60HR14 235/60HR15,vintage_tire_size,195/60HR14|235/60HR15,5x100,14|15
+7dfb6f58-d2f5-4605-98f2-8682d9c3a37a,1966,Dodge,Coronet,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+1b08b459-0672-4a6a-a60b-f059a402ba72,1967,Dodge,Coronet,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+2f3dc532-c284-4426-a6f6-e8804d1218b7,1968,Dodge,Coronet,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+99535065-09d0-49d9-9a13-6541db4f91a2,1969,Dodge,Coronet,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+1daa3fd2-eb0f-4c7d-9e50-f5b65ac9c4a0,1970,Dodge,Coronet,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+60aaa90c-5130-4e91-b3c9-53fb59321581,1964,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+6ad5a66c-95a4-40f4-8963-21e6f6f078aa,1965,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+639b302c-3609-4d6c-8fa6-054ccd242411,1966,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+588dc73f-677b-4f5f-ae99-20541a1861a2,1967,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+651bb05c-fa57-4d70-9ecf-159d264efc85,1968,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+7f8726e4-423a-4da9-ad03-e74fb98731d0,1969,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+6bab77f4-d2fd-4f0c-a9c2-7a841888580e,1970,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+d7adaee2-0291-4f6a-9ab4-8b7d86f7547a,1971,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+7c14a8f7-cba4-4bd8-acbe-5c5a48da74eb,1972,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+a794e4a3-89c9-4f2f-b5d2-23ebe1dd42fb,1973,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+13403d4f-ac17-4cfd-a879-487c8f2cc172,1974,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+2e73b640-ad7c-4a2b-983f-de6a0620fa53,1975,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+e3be8a6a-ed56-42ff-a549-ad1a1fb52c08,1976,Dodge,Dart,Base,0,61,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x110,14
+40190d34-9cae-492b-9c4a-2528663cd5ff,1971,Dodge,Demon,Base,0,175,2,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
+f2cc086e-e865-4cb2-b631-7a17c612fb52,1972,Dodge,Demon,Base,0,175,2,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
+3407c19b-087b-4b46-b80e-5c87f11ecceb,1968,Dodge,Super Bee,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+30d76c98-c116-4358-a5f9-717909e379ff,1969,Dodge,Super Bee,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+bcef8c7f-8e75-4673-aff8-aa0c558f6ddf,1970,Dodge,Super Bee,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+1459a459-fbf2-4224-918b-ebb144df380e,1970,Dodge,challenger,R/T,0,175,2,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
+878b5d18-32f3-4700-8ca2-3c47cad8f97c,1971,Dodge,challenger,R/T,0,175,2,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
+6cc0b800-7a3a-42dc-866c-4eb5f11d0b47,1972,Dodge,challenger,T/A,0,175,2,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
+a133f7c9-6d81-4764-b304-106fa53fcdd9,1973,Dodge,challenger,Base,0,175,2,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
+988361b5-3261-4185-bd24-a404075e9c0b,1974,Dodge,challenger,SE,0,175,2,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x115,14
+3c2f2a9e-1146-4bf7-9fde-6c8389f905fc,1966,Dodge,charger,Base,0,175,2,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
+fa992ac5-4aad-4694-bbca-b4e0c1976d45,1967,Dodge,charger,426 Hemi,0,175,2,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
+7857e1f5-c498-4d94-8a0a-a05c20af94fa,1968,Dodge,charger,Base,0,175,2,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
+75cb52b6-f6a5-46ea-85e0-982b121f8581,1969,Dodge,charger,Base,0,175,2,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
+ee37326f-6823-4ff1-a7e5-b9776aa02ad8,1970,Dodge,charger,Base,0,175,2,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
+2e7b9dfe-3137-4b02-bb84-e6b6c90bffd9,1971,Dodge,charger,Base,0,175,2,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x115,14
+07929b29-91f5-4280-a9bd-a018f6b9b595,1953,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+78e0743c-949a-4490-bea4-10886aae60f6,1954,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+257a418a-867d-43a6-9bf2-9681cf1687f9,1955,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+fbf83403-5439-4830-b41e-d217356a5881,1956,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+da30cfd9-d859-4804-b92c-57517cf5f950,1957,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+a9978af9-1050-46bf-9c75-c4f40cc5c4fb,1958,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+3896807f-cec1-41fa-81d4-a263902bb9d9,1959,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+de03b756-ec72-4196-a73e-be7693cd1438,1960,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+8bb3d944-8a87-478d-b4d8-14675db529c0,1961,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+24425204-39a3-4a64-a53e-060e304a85f5,1962,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+01aeaf22-e566-4f6c-b126-337142986de0,1963,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+23a6ca39-7816-454c-a1a5-bbe63c65f89e,1964,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+6cd95bed-1de6-4df2-8d9f-aad531562cfc,1965,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+c3636c63-c3fa-4aa6-b793-79cc522f4524,1966,Ford,F-100,Base,0,156,3,C,only vintage/non-standard sizes: 7.50-16,vintage_tire_size,7.50-16,5x139.7,15
+08fe73c2-8c75-4853-8769-e19aa988b8ef,1977,Ford,F-150,Base,0,156,3,C,only vintage/non-standard sizes: L78-15,vintage_tire_size,L78-15,5x139.7,15
+2c27e168-1304-43ee-88f2-05b3c70e047d,1978,Ford,F-150,Base,0,156,3,C,only vintage/non-standard sizes: L78-15,vintage_tire_size,L78-15,5x139.7,15
+f902b904-2870-4d8a-8208-e339051f2341,1979,Ford,F-150,Base,0,156,3,C,only vintage/non-standard sizes: L78-15,vintage_tire_size,L78-15,5x139.7,15
+81ea9a79-cffb-41e8-8455-25c27cbceede,2008,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+f8e6079b-fd26-4663-ac4d-21a501e8d54b,2009,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+f9fffe7b-153b-475e-86df-bb493e0bff29,2010,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+ac4f965f-a970-4f98-838b-2c5c40db03a4,2011,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+9f44f519-816d-4c0f-a333-f73ee4230f70,2012,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+8d2327c1-9723-45af-99ff-878cfe12a14e,2013,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+ff7e4dd8-5ac6-4abb-99bd-c4a6705e2abb,2014,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+2d2cb9ec-350d-48cb-95a7-1321ddcde54e,2015,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+6fe11119-0a69-488d-a960-c7f1724ddac8,2016,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+efe0e0e6-d91a-483f-bc70-8872a0d98bbd,2017,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+98390c66-642d-42f6-a2c3-93703dfd9b81,2019,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+78a1057f-2b8c-48b2-93e2-4ec0ba9b6650,2020,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+8cfdc438-3b33-4aa0-9184-9b3757776062,2021,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+2de71a3d-797f-44f2-b48f-a2281744b193,2022,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+e81c30a1-3c45-441f-9b6f-605b11f295e7,2023,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+e297e490-7257-4949-b1cc-edddbdef5f0e,2024,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+fcd36cd4-1013-4199-8576-7ccd600b1e17,2025,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+a641f6d0-970d-4258-902f-08176cdf3fc5,2026,Ford,F-450 Super Duty,DRW,0,38,3,C,no tire inventory for size(s),missing_inventory_tires,LT225/70R19.5,8x200,20
+28dd5625-cdeb-465f-bf0c-0c30a5a7e80b,1966,Ford,Fairlane,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+fbfbd4b5-6559-4ac2-b25a-b1053eb82be2,1967,Ford,Fairlane,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+5d6bb47f-9a3b-4738-ac63-0a8729efc1b0,1968,Ford,Fairlane,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+40ca16c2-cf89-4138-b875-3f525b1a636f,1969,Ford,Fairlane,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+9f15886a-dd73-4ba2-89b9-02cae14f55d9,1970,Ford,Fairlane,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+e4108c74-4d71-45e9-9e0b-55a019446346,1964,Ford,Falcon,Base,0,988,3,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
+9e130237-2adb-49f9-a850-850815efabc2,1965,Ford,Falcon,Base,0,988,3,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
+d0eae626-d759-43dd-8789-e5c3c67eb113,1966,Ford,Falcon,Base,0,988,3,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
+954c6ff3-2902-44ae-825e-741ff35a93a3,1967,Ford,Falcon,Base,0,988,3,C,only vintage/non-standard sizes: 6.50-13,vintage_tire_size,6.50-13,5x114.3,13
+bb95c2e4-23da-4252-8d5f-0a398f2958dc,1968,Ford,Falcon,Base,0,344,3,C,only vintage/non-standard sizes: 6.95-14 C78-14,vintage_tire_size,6.95-14|C78-14,5x114.3,14
+556ff155-5459-4f59-8eca-76ea88f996c6,1969,Ford,Falcon,Base,0,344,3,C,only vintage/non-standard sizes: C78-14 E78-14,vintage_tire_size,C78-14|E78-14,5x114.3,14
+75da4d29-878e-4274-ab3d-5c2cd35a3c5a,1970,Ford,Falcon,Base,0,344,3,C,only vintage/non-standard sizes: C78-14 E78-14,vintage_tire_size,C78-14|E78-14,5x114.3,14
+55b3b4f7-0e86-42fd-a1db-831355f89101,1965,Ford,Galaxie,Base,0,1048,3,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
+7f11b0fe-5ea0-4ad6-ae79-3c50fe1c2fcc,1966,Ford,Galaxie,Base,0,1048,3,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
+ad5cd786-1a4b-4ab4-b97b-3b5ab29b10ce,1967,Ford,Galaxie,Base,0,1048,3,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
+6ea80f6f-752a-49ef-83bf-c7db633fd717,1968,Ford,Galaxie,Base,0,1048,3,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
+ad2f62ae-6eae-4d80-9984-d1f0568c61ff,1969,Ford,Galaxie,Base,0,1048,3,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
+967db7d9-7838-45c1-b5c5-641290fa6def,1970,Ford,Galaxie,Base,0,1048,3,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
+90582f12-7dcc-4d2b-8026-517dc3962864,1971,Ford,Galaxie,Base,0,1048,3,C,only vintage/non-standard sizes: F70-15,vintage_tire_size,F70-15,5x114.3,15
+5f0a60bc-4388-4283-b6c2-e9ce34f90d37,1970,Ford,Maverick,Base,0,344,3,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
+f5a95653-4de7-4f42-8caf-20ce1ef2578c,1971,Ford,Maverick,Base,0,344,3,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
+e82416c9-74fa-43b3-bebf-5f3d46c5a483,1972,Ford,Maverick,Base,0,344,3,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
+30b30d54-ed33-4a19-8e9c-873a9c558ff9,1973,Ford,Maverick,Base,0,344,3,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
+55d45379-4007-4138-a8f7-dd889f469670,1974,Ford,Maverick,Base,0,344,3,C,only vintage/non-standard sizes: E78-14,vintage_tire_size,E78-14,5x114.3,14
+ed2297ec-2c12-47eb-803f-3c176f60b387,1955,Ford,Thunderbird,Base,0,1048,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x114.3,15
+f0cdeb12-c33a-4b0d-b4c5-73bdb7ae68bf,1956,Ford,Thunderbird,Base,0,1048,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x114.3,15
+bc0d7bb9-7944-4538-a21c-3f78905fd1d4,1957,Ford,Thunderbird,Base,0,1048,3,C,only vintage/non-standard sizes: 6.70-15,vintage_tire_size,6.70-15,5x114.3,15
+a6b3bfdd-984a-4477-9b2e-32c42a229bf2,1958,Ford,Thunderbird,Base,0,344,3,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
+e28ca8b6-2be3-40e4-b0fe-03dfc8e73a14,1959,Ford,Thunderbird,Base,0,344,3,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
+17bbbd1b-28af-47af-aba9-2157f651797d,1960,Ford,Thunderbird,Base,0,344,3,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
+af5326a2-63ce-4682-875d-bb26d7920a9b,1961,Ford,Thunderbird,Base,0,344,3,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
+e78174f9-20f9-4f64-ba58-c5eb28c64f20,1962,Ford,Thunderbird,Base,0,344,3,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
+89788eb4-0356-4daa-b16c-55053d8048d1,1963,Ford,Thunderbird,Base,0,344,3,C,only vintage/non-standard sizes: 8.00-14,vintage_tire_size,8.00-14,5x114.3,14
+2b6b3e3a-58f2-4807-9c3b-77c74e8d601a,1964,Ford,Thunderbird,Base,0,1048,3,C,only vintage/non-standard sizes: 8.15-15,vintage_tire_size,8.15-15,5x114.3,15
+0cb1a20f-7ce8-444c-9a70-994894ae62fa,1965,Ford,Thunderbird,Base,0,1048,3,C,only vintage/non-standard sizes: 8.15-15,vintage_tire_size,8.15-15,5x114.3,15
+d1409f91-49e1-40ad-b202-fb10f0df9dcd,1966,Ford,Thunderbird,Base,0,1048,3,C,only vintage/non-standard sizes: 8.15-15,vintage_tire_size,8.15-15,5x114.3,15
+6fc61a3a-a3de-436a-a5bc-bb3560ebbf1e,1968,Ford,Torino,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+c388f18d-89c9-4d25-bd30-fc573e998b87,1969,Ford,Torino,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+9ef40224-8c43-4930-8253-083f9f48fc2a,1970,Ford,Torino,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+835422cc-b25e-426a-b9a8-dfa9c59b126b,1971,Ford,Torino,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+eba08394-d437-4155-866e-df1fbd635327,1972,Ford,Torino,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+30f0525f-7fee-4d14-a362-af9449331b05,1965,Ford,mustang,Base,0,344,3,C,only vintage/non-standard sizes: 6.95-14,vintage_tire_size,6.95-14,5x114.3,14
+9dfe7456-d6ee-47b9-a441-07c6f833ffc3,1966,Ford,mustang,Base,0,344,3,C,only vintage/non-standard sizes: 6.95-14,vintage_tire_size,6.95-14,5x114.3,14
+944a729c-a7a0-43d9-b70c-666725d34cb6,1967,Ford,mustang,Shelby GT350,0,1048,3,C,only vintage/non-standard sizes: E70-15,vintage_tire_size,E70-15,5x114.3,15
+ba1e20b8-a0ce-449d-b04a-bf8483b19d4b,1968,Ford,mustang,Shelby GT500,0,1048,3,C,only vintage/non-standard sizes: E70-15,vintage_tire_size,E70-15,5x114.3,15
+07fc1a68-3384-4ee0-8f2a-a04dbd8ba532,1969,Ford,mustang,Shelby GT500,0,1048,3,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x114.3,15
+73f5e379-bcad-4ca3-bff0-97b6d9e4adb2,1970,Ford,mustang,Base,0,344,3,C,only vintage/non-standard sizes: E70-14,vintage_tire_size,E70-14,5x114.3,14
+fd8b30dd-f68a-4e66-8ed5-d3001a8912eb,1971,Ford,mustang,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+7c27a8e5-61f8-432e-8f75-b6dff122fff6,1972,Ford,mustang,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+7c41f0c1-b883-426f-aa7c-e58ef85947a3,1973,Ford,mustang,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+ec69236b-c9de-4489-b003-59874b38f4d0,1992,Hummer,H1,Base,0,421,3,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
+2f3b1052-de5e-49f4-b1ac-15ed3db40361,1993,Hummer,H1,Base,0,421,3,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
+ef376ca0-bbe8-4449-96d8-008d0c7dc52e,1994,Hummer,H1,Base,0,421,3,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
+7f9cdc82-9ebc-4f12-bdc7-a159fa21e99d,1995,Hummer,H1,Base,0,421,3,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,
 b06330a8-5d7c-4f37-9157-f983880f9cc9,1996,Hummer,H1,Base,0,421,4,C,only vintage/non-standard sizes: 37x12.50R16.5,vintage_tire_size,37x12.50R16.5,8x165.1,17
 09ce8d31-725c-45ae-9883-ebc3676d18bc,1997,Hummer,H1,Base,0,421,4,C,only vintage/non-standard sizes: 37x12.50R16.5,vintage_tire_size,37x12.50R16.5,8x165.1,17
 9dd09296-ca78-42eb-b736-9deb451e40be,1998,Hummer,H1,Base,0,421,4,C,only vintage/non-standard sizes: 37x12.50R16.5,vintage_tire_size,37x12.50R16.5,8x165.1,17
@@ -255,140 +255,140 @@ b06330a8-5d7c-4f37-9157-f983880f9cc9,1996,Hummer,H1,Base,0,421,4,C,only vintage/
 b97735aa-b9bc-4684-a430-d089cf5b832b,2004,Hummer,H1,Base,0,421,4,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,17
 db32832f-0c5e-4d50-aec1-62011d61d801,2005,Hummer,H1,Base,0,421,4,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,17
 b4dad97f-53bf-4379-af6e-0044ff03356b,2006,Hummer,H1,Base,0,421,4,C,only vintage/non-standard sizes: 37x12.50R17,vintage_tire_size,37x12.50R17,8x165.1,17
-d2b8ed72-327b-4f37-930e-09a9b16d51dd,2018,Infiniti,Q50,Hybrid Luxe (RWD),0,1053,3,C,only vintage/non-standard sizes: 245/40RF19,vintage_tire_size,245/40RF19,5x114.3,
-24ce5156-2e42-4bf8-99ef-bf42dca0e1cb,2018,Infiniti,Q50,Sport (AWD),0,1053,3,C,only vintage/non-standard sizes: P245/40RF19,vintage_tire_size,P245/40RF19,5x114.3,
-44ee4e03-9550-4854-b543-d0e5def8f7c6,2018,Infiniti,Q50,Pure (RWD),0,1053,3,C,only vintage/non-standard sizes: P225/55RF17,vintage_tire_size,P225/55RF17,5x114.3,
-74a5b943-0a0d-47e8-8589-cebfb0c53152,2018,Infiniti,Q50,Sport (RWD),0,1053,3,C,only vintage/non-standard sizes: 245/40RF19,vintage_tire_size,245/40RF19,5x114.3,
-85d61016-139a-4bc5-a1ec-3fdfde8c36af,2018,Infiniti,Q50,Pure (AWD),0,1053,3,C,only vintage/non-standard sizes: P225/55RF17,vintage_tire_size,P225/55RF17,5x114.3,
-d7ca4e15-2ef4-4884-9bb8-f810d79613c3,2018,Infiniti,Q50,Hybrid Luxe (AWD),0,1053,3,C,only vintage/non-standard sizes: P245/40RF19,vintage_tire_size,P245/40RF19,5x114.3,
-560c906e-976d-40c0-85b8-39a16e2b5435,2018,Infiniti,Q50,Red Sport 400 (AWD),0,1053,3,C,only vintage/non-standard sizes: P245/40RF19,vintage_tire_size,P245/40RF19,5x114.3,
-50b1446b-1501-4edf-b536-b1b4d07a29a9,2018,Infiniti,Q60,Sport (AWD),0,1053,3,C,only vintage/non-standard sizes: P255/40RF19,vintage_tire_size,P255/40RF19,5x114.3,
-802e1dff-c2e5-4aba-9b92-0e982cb4fa9b,2018,Infiniti,Q60,Luxe,0,1053,3,C,only vintage/non-standard sizes: P255/40RF19,vintage_tire_size,P255/40RF19,5x114.3,
-9891750e-df69-4ce7-a2e7-ef4867e7711e,2018,Infiniti,Q60,Sport (RWD),0,1053,3,C,only vintage/non-standard sizes: 255/40RF19,vintage_tire_size,255/40RF19,5x114.3,
-dc10420a-0faf-4b29-b75a-e5e54ba13a39,2018,Infiniti,Q60,Pure,0,1053,3,C,only vintage/non-standard sizes: P255/40RF19,vintage_tire_size,P255/40RF19,5x114.3,
+d2b8ed72-327b-4f37-930e-09a9b16d51dd,2018,Infiniti,Q50,Hybrid Luxe (RWD),0,1053,2,C,only vintage/non-standard sizes: 245/40RF19,vintage_tire_size,245/40RF19,5x114.3,
+24ce5156-2e42-4bf8-99ef-bf42dca0e1cb,2018,Infiniti,Q50,Sport (AWD),0,1053,2,C,only vintage/non-standard sizes: P245/40RF19,vintage_tire_size,P245/40RF19,5x114.3,
+44ee4e03-9550-4854-b543-d0e5def8f7c6,2018,Infiniti,Q50,Pure (RWD),0,1053,2,C,only vintage/non-standard sizes: P225/55RF17,vintage_tire_size,P225/55RF17,5x114.3,
+74a5b943-0a0d-47e8-8589-cebfb0c53152,2018,Infiniti,Q50,Sport (RWD),0,1053,2,C,only vintage/non-standard sizes: 245/40RF19,vintage_tire_size,245/40RF19,5x114.3,
+85d61016-139a-4bc5-a1ec-3fdfde8c36af,2018,Infiniti,Q50,Pure (AWD),0,1053,2,C,only vintage/non-standard sizes: P225/55RF17,vintage_tire_size,P225/55RF17,5x114.3,
+d7ca4e15-2ef4-4884-9bb8-f810d79613c3,2018,Infiniti,Q50,Hybrid Luxe (AWD),0,1053,2,C,only vintage/non-standard sizes: P245/40RF19,vintage_tire_size,P245/40RF19,5x114.3,
+560c906e-976d-40c0-85b8-39a16e2b5435,2018,Infiniti,Q50,Red Sport 400 (AWD),0,1053,2,C,only vintage/non-standard sizes: P245/40RF19,vintage_tire_size,P245/40RF19,5x114.3,
+50b1446b-1501-4edf-b536-b1b4d07a29a9,2018,Infiniti,Q60,Sport (AWD),0,1053,2,C,only vintage/non-standard sizes: P255/40RF19,vintage_tire_size,P255/40RF19,5x114.3,
+802e1dff-c2e5-4aba-9b92-0e982cb4fa9b,2018,Infiniti,Q60,Luxe,0,1053,2,C,only vintage/non-standard sizes: P255/40RF19,vintage_tire_size,P255/40RF19,5x114.3,
+9891750e-df69-4ce7-a2e7-ef4867e7711e,2018,Infiniti,Q60,Sport (RWD),0,1053,2,C,only vintage/non-standard sizes: 255/40RF19,vintage_tire_size,255/40RF19,5x114.3,
+dc10420a-0faf-4b29-b75a-e5e54ba13a39,2018,Infiniti,Q60,Pure,0,1053,2,C,only vintage/non-standard sizes: P255/40RF19,vintage_tire_size,P255/40RF19,5x114.3,
 90a64f27-2d16-4409-afb8-7a43520a8243,2018,Lexus,LC500,Base,0,359,3,C,only vintage/non-standard sizes: 245/40RF21 245/45RF20 275/35RF21,vintage_tire_size,245/40RF21|245/45RF20|275/35RF21|275/40RF20,5x120,20|21
 3c056c0b-bd51-4093-bd7e-c899f349d1c8,2018,Lexus,LC500h,Base,0,359,3,C,only vintage/non-standard sizes: 245/40RF21 245/45RF20 275/35RF21,vintage_tire_size,245/40RF21|245/45RF20|275/35RF21|275/40RF20,5x120,20|21
-9127b668-bcb0-4f92-adaf-fe428e73e5ae,2018,Lexus,LS500,Base,0,618,2,C,only vintage/non-standard sizes: 245/45RF20 245/50RF19,vintage_tire_size,245/45RF20|245/50RF19,5x120,
+9127b668-bcb0-4f92-adaf-fe428e73e5ae,2018,Lexus,LS500,Base,0,618,3,C,only vintage/non-standard sizes: 245/45RF20 245/50RF19,vintage_tire_size,245/45RF20|245/50RF19,5x120,
 351f10a9-3c6e-413a-b602-7c0513b9b14e,2018,Lexus,LS500,F Sport,0,555,3,C,only vintage/non-standard sizes: 245/45RF20 275/40RF20,vintage_tire_size,245/45RF20|275/40RF20,5x120,20
-f99af573-0e83-4c3f-a393-f32dea764408,2018,Lexus,LS500h,Base,0,618,2,C,only vintage/non-standard sizes: 245/45RF20 245/50RF19,vintage_tire_size,245/45RF20|245/50RF19,5x120,
+f99af573-0e83-4c3f-a393-f32dea764408,2018,Lexus,LS500h,Base,0,618,3,C,only vintage/non-standard sizes: 245/45RF20 245/50RF19,vintage_tire_size,245/45RF20|245/50RF19,5x120,
 e39181b7-d615-456c-9be6-c038e16d0c34,2019,Lexus,lc,LC 500h,0,1053,3,C,only vintage/non-standard sizes: 245/45RF20 275/40RF20,vintage_tire_size,245/45RF20|275/40RF20,5x114.3,20
-ccd4a1e3-caa6-4bba-a43d-462c55b665f2,2018,Mercedes-Benz,G550 4x4,Base,0,69,0,C,no tire inventory for size(s),missing_inventory_tires,325/55R22,5x130,
+ccd4a1e3-caa6-4bba-a43d-462c55b665f2,2018,Mercedes-Benz,G550 4x4,Base,0,69,3,C,no tire inventory for size(s),missing_inventory_tires,325/55R22,5x130,
 b67a979a-d67a-44e5-b855-1978b0cdbe53,1964,Mercury,Comet,Base,0,15,1,C,only vintage/non-standard sizes: 6.50-13 6.95-14,vintage_tire_size,6.50-13|6.95-14,4x114.3,13|14
 a990e2a8-65e7-49c4-8418-2ea23d086367,1965,Mercury,Comet,Base,0,15,1,C,only vintage/non-standard sizes: 6.50-13 6.95-14,vintage_tire_size,6.50-13|6.95-14,4x114.3,13|14
-4fe91b94-eb38-4b9f-8810-415a7acb0472,1966,Mercury,Comet,Base,0,344,0,C,only vintage/non-standard sizes: 7.35-14 7.75-14,vintage_tire_size,7.35-14|7.75-14,5x114.3,14
-9972457b-3011-41a4-8025-0d1358a3d1b0,1967,Mercury,Comet,Base,0,344,0,C,only vintage/non-standard sizes: 7.35-14 7.75-14 E70-14,vintage_tire_size,7.35-14|7.75-14|E70-14,5x114.3,14
-1b6e9d02-7c79-49e0-a66d-841dbbcbbcd7,1968,Mercury,Cyclone,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F70-14 F78-14,vintage_tire_size,E78-14|F70-14|F78-14,5x114.3,14
-a693e0c9-c571-4d89-b2ae-ba2c9bc80e64,1969,Mercury,Cyclone,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F70-14 F78-14,vintage_tire_size,E78-14|F70-14|F78-14,5x114.3,14
-30d3b69c-539e-40b4-a1cd-60425da9c9ea,1970,Mercury,Cyclone,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F70-14 G70-14,vintage_tire_size,E78-14|F70-14|G70-14,5x114.3,14
-60aea393-2da6-41f9-8207-ee340bc83ff1,1971,Mercury,Cyclone,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F70-14 G70-14,vintage_tire_size,E78-14|F70-14|G70-14,5x114.3,14
+4fe91b94-eb38-4b9f-8810-415a7acb0472,1966,Mercury,Comet,Base,0,344,3,C,only vintage/non-standard sizes: 7.35-14 7.75-14,vintage_tire_size,7.35-14|7.75-14,5x114.3,14
+9972457b-3011-41a4-8025-0d1358a3d1b0,1967,Mercury,Comet,Base,0,344,3,C,only vintage/non-standard sizes: 7.35-14 7.75-14 E70-14,vintage_tire_size,7.35-14|7.75-14|E70-14,5x114.3,14
+1b6e9d02-7c79-49e0-a66d-841dbbcbbcd7,1968,Mercury,Cyclone,Base,0,344,3,C,only vintage/non-standard sizes: E78-14 F70-14 F78-14,vintage_tire_size,E78-14|F70-14|F78-14,5x114.3,14
+a693e0c9-c571-4d89-b2ae-ba2c9bc80e64,1969,Mercury,Cyclone,Base,0,344,3,C,only vintage/non-standard sizes: E78-14 F70-14 F78-14,vintage_tire_size,E78-14|F70-14|F78-14,5x114.3,14
+30d3b69c-539e-40b4-a1cd-60425da9c9ea,1970,Mercury,Cyclone,Base,0,344,3,C,only vintage/non-standard sizes: E78-14 F70-14 G70-14,vintage_tire_size,E78-14|F70-14|G70-14,5x114.3,14
+60aea393-2da6-41f9-8207-ee340bc83ff1,1971,Mercury,Cyclone,Base,0,344,3,C,only vintage/non-standard sizes: E78-14 F70-14 G70-14,vintage_tire_size,E78-14|F70-14|G70-14,5x114.3,14
 03e5d610-37c4-4e91-b803-326819794924,2018,Nissan,GT-R,Premium,0,1053,3,C,only vintage/non-standard sizes: 255/40RF20 255/40ZRF20 285/35RF20,vintage_tire_size,255/40RF20|255/40ZRF20|285/35RF20|285/35ZRF20,5x114.3,20
 caeb2964-1286-4c66-a310-3b281c90cc36,2018,Nissan,GT-R,Nismo,0,1053,3,C,only vintage/non-standard sizes: 255/40ZRF20 285/35ZRF20,vintage_tire_size,255/40ZRF20|285/35ZRF20,5x114.3,20
 802dab9f-ab01-456c-806d-b9d2e7d32710,2018,Nissan,GT-R,Track Edition,0,1053,3,C,only vintage/non-standard sizes: 255/40ZRF20 285/35ZRF20,vintage_tire_size,255/40ZRF20|285/35ZRF20,5x114.3,20
 26a6b12c-a7bc-4303-ada7-20196205f8cd,2018,Nissan,GT-R,Pure,0,1053,3,C,only vintage/non-standard sizes: 255/40RF20 255/40ZRF20 285/35RF20,vintage_tire_size,255/40RF20|255/40ZRF20|285/35RF20|285/35ZRF20,5x114.3,20
-e7faea80-0639-48f2-91ff-5b1532979340,1965,Plymouth,Belvedere,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
-fe5857da-c4f5-4493-867f-00105c78e72f,1966,Plymouth,Belvedere,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
-241d38d1-1e03-4357-ad52-538cb7eb7f2f,1967,Plymouth,Belvedere,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
-9fc6c8c5-c988-4d23-8d6b-02b991fc34bf,1968,Plymouth,Belvedere,Base,0,344,0,C,only vintage/non-standard sizes: 775-14 825-14 F70-15,vintage_tire_size,775-14|825-14|F70-15,5x114.3,14|15
-474228dd-9d15-4334-a13e-6c0f087510d8,1969,Plymouth,Belvedere,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14 F70-15,vintage_tire_size,735-14|775-14|F70-15,5x114.3,14|15
-fca8374b-587a-4fe9-babd-9b92e916e0a3,1970,Plymouth,Belvedere,Base,0,344,0,C,only vintage/non-standard sizes: F78-14 G78-14,vintage_tire_size,F78-14|G78-14,5x114.3,14
-7b46a0d4-d6e7-480a-aa22-9fc555d7a907,1970,Plymouth,Cuda,Base,0,344,0,C,only vintage/non-standard sizes: E60-15 F60-15 F70-14,vintage_tire_size,E60-15|F60-15|F70-14|G60-15,5x114.3,14|15
-3aadcb87-e62a-427c-8c80-aae8e3abdee2,1971,Plymouth,Cuda,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 F78-14,vintage_tire_size,F60-15|F70-14|F78-14,5x114.3,14|15
-674881a3-fb35-4a46-a482-2f76d68ce620,1967,Plymouth,GTX,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-af4f2f4c-3030-4bd9-b38e-f9b84e69f46f,1968,Plymouth,GTX,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-54ae3ca9-7e72-4819-b280-f586e6997cc2,1969,Plymouth,GTX,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-29786992-0343-442e-8f60-19e6ca9ea4f7,1970,Plymouth,GTX,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-c2288cc1-1419-4117-a314-5b5d3ea9f0ca,1971,Plymouth,GTX,Base,0,344,0,C,only vintage/non-standard sizes: G70-14 G78-14,vintage_tire_size,G70-14|G78-14,5x114.3,14
-58085a44-6a10-4400-b84c-dc08155d7cbf,1982,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-927cd093-fed3-411a-8e43-095fcce737ab,1983,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-aeabfa7d-214c-42e0-96d6-533fc861202c,1984,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-eacf5b79-b978-458f-a8e2-8554c6101d50,1985,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-f476e693-c4c7-47d3-bb5d-e17e09b4bed8,1986,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-21453fdb-5a83-417c-9010-0ed641a9be3a,1987,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-0e4ba94f-37ec-4bf3-aa3c-a766f88ba91d,1988,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-a254a57a-5e13-46b1-850e-fbf3b1556bd3,1989,Plymouth,Gran Fury,Base,0,1048,0,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
-7e7c919e-3230-42e7-9890-a79fb59d439c,1968,Plymouth,Road Runner,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-3afe4d99-2ac0-4985-8a38-d5bfe88d35ee,1969,Plymouth,Road Runner,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-5bee2787-faf5-45a4-8da8-b9554c22a9f7,1970,Plymouth,Road Runner,Base,0,344,0,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
-f9372c78-f0c1-4c8d-9339-756038bbd835,1971,Plymouth,Road Runner,Base,0,344,0,C,only vintage/non-standard sizes: F70-14 F78-14,vintage_tire_size,F70-14|F78-14,5x114.3,14
-c73f2458-cdf3-4871-a40e-21153675b22a,1965,Plymouth,Satellite,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
-8179c818-312d-4597-86f2-5306ade5a83b,1966,Plymouth,Satellite,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
-059ebf84-d042-4557-b3ea-68a98d055f0f,1967,Plymouth,Satellite,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
-c8acad29-b1c0-4e5d-8477-4874ae189e95,1968,Plymouth,Satellite,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14 F70-15,vintage_tire_size,735-14|775-14|F70-15,5x114.3,14|15
-65000701-ace2-4708-9cd9-203d118b2699,1969,Plymouth,Satellite,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 775-14 F70-15,vintage_tire_size,735-14|775-14|F70-15,5x114.3,14|15
-43942724-064d-486d-aee3-f514d0d6fa96,1970,Plymouth,Satellite,Base,0,344,0,C,only vintage/non-standard sizes: F78-14 G78-14,vintage_tire_size,F78-14|G78-14,5x114.3,14
-b0a2132c-32d8-4292-b232-fe07121b41c4,1971,Plymouth,Satellite,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F78-14 G78-14,vintage_tire_size,E78-14|F78-14|G78-14,5x114.3,14
-1497e3cc-658e-422d-9e64-35fe5cfe800f,1973,Plymouth,Valiant,Base,0,344,0,C,only vintage/non-standard sizes: 6.95-14 D78-14 E70-14,vintage_tire_size,6.95-14|D78-14|E70-14|E78-14,5x114.3,14
-a11708f6-9a1a-4974-916e-2bafcb9e3984,1970,Plymouth,barracuda,Base,0,344,0,C,only vintage/non-standard sizes: E70-14 E78-14 F60-15,vintage_tire_size,E70-14|E78-14|F60-15|F70-14,5x114.3,14|15
-a298eb9c-032b-408e-b17e-3e376f0bce92,1971,Plymouth,barracuda,Base,0,344,0,C,only vintage/non-standard sizes: E78-14 F60-15 F70-14,vintage_tire_size,E78-14|F60-15|F70-14|F78-14,5x114.3,14|15
-f2150d61-7e6d-4fbb-8846-0d521fcbdd4b,1972,Plymouth,barracuda,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 F70-14 F78-14,vintage_tire_size,735-14|F70-14|F78-14,5x114.3,14
-cebea997-0083-4c73-a08f-be6a399bd69e,1973,Plymouth,barracuda,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 F78-14,vintage_tire_size,735-14|F78-14,5x114.3,14
-9af0c1b6-4743-48cc-bd6f-aef1d7e04bf2,1974,Plymouth,barracuda,Base,0,344,0,C,only vintage/non-standard sizes: 735-14 F70-14 F78-14,vintage_tire_size,735-14|F70-14|F78-14,5x114.3,14
-96759677-58b3-41e5-884b-db7902e45b62,1973,Plymouth,duster,Base,0,344,0,C,only vintage/non-standard sizes: D78-14 E70-14 E78-14,vintage_tire_size,D78-14|E70-14|E78-14,5x114.3,14
-ee38b49f-32da-4a29-b851-dcf11b62eff9,1968,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-680af013-ffd2-4188-804c-48348ef20787,1969,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-f2b571e5-6e4f-479c-a7f4-288e796ee408,1970,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-3b97469e-e806-4554-b970-86c0689e9cf2,1971,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-52d9480a-089b-4b31-9dcf-7d7e7ded3d35,1972,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-0a923b27-9628-405e-b4de-7df8f67f902f,1973,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-91dbddb9-cceb-4ccb-aa2c-17c4c508b530,1974,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-07420121-f294-42b7-9488-a48b58ce2148,1975,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-6371f051-a671-4942-a31c-722d00b6ca12,1976,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-16c9f153-69c1-4618-99c2-abdc8d918376,1977,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-06dd581c-365b-4c3d-8704-394fbdb49283,1978,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-88378d50-e721-4efe-b807-2c939bc145bf,1979,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-8274e98c-305e-412e-84bd-dfa396362aec,1980,Plymouth,road-runner,Base,0,344,0,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
-930af18d-cca5-4259-9b70-6286bd07bf03,1968,Pontiac,Catalina,Base,0,59,0,C,no tire inventory for size(s),missing_inventory_tires,225/75R14,5x127,14
-34425266-8617-4bfd-a626-f3b7febb8538,1968,Pontiac,Grand Prix,Base,0,266,0,C,only vintage/non-standard sizes: G78-14 H78-14,vintage_tire_size,G78-14|H78-14,5x120.65,14
-e1fbc3da-cabc-4355-a56a-4993e41addfd,1969,Pontiac,Grand Prix,Base,0,268,0,C,only vintage/non-standard sizes: G78-14 G78-15 H78-15,vintage_tire_size,G78-14|G78-15|H78-15,5x120.65,14|15
-6a61e231-0f35-4262-bc2e-abd2a14c2c56,1970,Pontiac,Grand Prix,Base,0,268,0,C,only vintage/non-standard sizes: G78-14 G78-15 H78-15,vintage_tire_size,G78-14|G78-15|H78-15,5x120.65,14|15
-60639e47-57e4-401a-bf04-642633c83b7d,1971,Pontiac,Grand Prix,Base,0,268,0,C,only vintage/non-standard sizes: G78-14 G78-15 H78-15,vintage_tire_size,G78-14|G78-15|H78-15,5x120.65,14|15
-531facfa-13f6-4426-8434-e659ee94f937,1969,Pontiac,Trans Am,Base,0,266,0,C,only vintage/non-standard sizes: F60-14,vintage_tire_size,F60-14,5x120.65,14
-b0d79419-4775-44fc-bb4c-17a04d064668,1970,Pontiac,Trans Am,Base,0,266,0,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
-5cb282ec-bacd-4217-aec5-d3b51b51b7b0,1971,Pontiac,Trans Am,Base,0,266,0,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
-ad7f9105-4834-4be8-a76b-7d8eb5b28d9f,1972,Pontiac,Trans Am,Base,0,266,0,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
-505daae5-582b-49ff-9120-f99fc2cf605f,1973,Pontiac,Trans Am,Base,0,266,0,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
-a4ecda1b-476d-4eb5-a193-822efbd777b5,1974,Pontiac,Trans Am,Base,0,266,0,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
-d637dd1d-2576-4efb-9300-73cb5a1a7ea3,1967,Pontiac,firebird,Base,0,266,0,C,only vintage/non-standard sizes: E70-14 F70-14,vintage_tire_size,E70-14|F70-14,5x120.65,14
-447e3f67-4b57-4453-bdf8-9d5f99c2ba97,1968,Pontiac,firebird,Base,0,266,0,C,only vintage/non-standard sizes: E70-14 F70-14,vintage_tire_size,E70-14|F70-14,5x120.65,14
-6cdf012b-8c7e-48b6-9cfe-17df58166287,1969,Pontiac,firebird,Base,0,266,0,C,only vintage/non-standard sizes: E70-14 F70-14,vintage_tire_size,E70-14|F70-14,5x120.65,14
-ecc8ddd3-1032-40fc-9b8a-1126e3c89b63,1970,Pontiac,firebird,Base,0,266,0,C,only vintage/non-standard sizes: E78-14 F70-14,vintage_tire_size,E78-14|F70-14,5x120.65,14
-a20cc7e9-e2ba-4a44-942a-e5fecc6cca0b,1971,Pontiac,firebird,Base,0,266,0,C,only vintage/non-standard sizes: E78-14 F70-14,vintage_tire_size,E78-14|F70-14,5x120.65,14
-85ff05a3-a8cf-4352-a653-1e5f7f609734,1972,Pontiac,firebird,Base,0,266,0,C,only vintage/non-standard sizes: E78-14 F70-14,vintage_tire_size,E78-14|F70-14,5x120.65,14
-0389ae07-5d71-48e0-a8f1-a8fcf4505c73,1973,Pontiac,firebird,Base,0,268,0,C,only vintage/non-standard sizes: E78-14 F60-15 F70-14,vintage_tire_size,E78-14|F60-15|F70-14,5x120.65,14|15
-fbcc233c-f368-46d8-bc9f-2b8e4d6f4b81,1964,Pontiac,gto,Tri-Power,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-dd985450-d5b9-4498-a5c5-03d58c0c3abc,1965,Pontiac,gto,Tri-Power,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-1be7f073-8e28-4ba8-b00d-be1dc9e16703,1966,Pontiac,gto,Tri-Power,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-a8a20ec1-c9cd-4977-a6c8-6a77eeef74e3,1967,Pontiac,gto,Tri-Power,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-55fee075-9c70-45bb-a850-ad2cba538830,1968,Pontiac,gto,Ram Air IV,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-e878daa0-b206-4323-ae4c-21cb4e0c066d,1968,Pontiac,gto,Judge,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-3b62f3a7-2a46-467e-b14f-bc49391272c7,1968,Pontiac,gto,Ram Air III,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-3fafa01f-1f77-47de-964e-e2b57c8bda73,1968,Pontiac,gto,Ram Air,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-68f46174-7cd5-4563-b1e9-424746fa1db4,1969,Pontiac,gto,Ram Air,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-602c1fed-dea2-494f-8369-a021f682d01b,1969,Pontiac,gto,Ram Air IV,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-0ab8d2fc-0989-4be4-bb60-3cdea3cda4ac,1969,Pontiac,gto,Judge,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-75f5fa7d-8398-4e40-bf42-83ccae95f7b2,1969,Pontiac,gto,Ram Air III,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-4a4c294a-4e2f-4ab6-9e89-cccf661ca7e5,1970,Pontiac,gto,Judge,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-8fdc47d0-1dd8-4f25-98c7-afc0af449eab,1970,Pontiac,gto,Ram Air III,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-6ff15e89-0e81-48c0-bec5-37bcbed08ad3,1970,Pontiac,gto,Ram Air,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-e1bb04f3-7ea8-402a-8f89-3f4ee36a86bf,1970,Pontiac,gto,Ram Air IV,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-5941a148-8005-465b-8b80-ff121d962373,1971,Pontiac,gto,Ram Air III,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-01776ab9-438e-46a7-87b8-1b0e33d28f88,1971,Pontiac,gto,Ram Air,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-240a3c30-943b-4010-a372-696afc48e7eb,1971,Pontiac,gto,Judge,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-3957285b-1f5c-4ccc-b708-24ce4d27a6e4,1971,Pontiac,gto,Ram Air IV,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-766c87ef-53a0-43ab-958f-f3f274272ffa,1972,Pontiac,gto,Ram Air,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-0ed3c9cc-b735-437f-873f-1a0bcf6836f1,1972,Pontiac,gto,Ram Air IV,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-148a9a1a-cc6d-41c8-ba89-9f579c95ebfb,1972,Pontiac,gto,Ram Air III,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
-35c86c83-ea4f-4f88-b9b3-9a16165a1e41,1972,Pontiac,gto,Judge,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
-3edf27f7-6819-4505-9e6c-5d228de8cd7f,1973,Pontiac,gto,Base,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,
-0f5584c5-0088-4f6d-8bdd-b181c1cabdb7,1974,Pontiac,gto,Base,0,266,0,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,
-690404f1-43d9-43bb-bdad-baeef7caa068,1990,Toyota,4runner,SR5,0,1944,0,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
-884a1996-3c96-4361-9071-327d1df0e0ed,1991,Toyota,4runner,SR5,0,1944,0,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
-e0eb65c2-6fd2-4c01-ae7e-a301fd0f15ce,1992,Toyota,4runner,SR5,0,1944,0,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
-0a91115e-7542-4f7d-8286-e4b6c6922cd4,1993,Toyota,4runner,SR5,0,1944,0,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
-a49d5be6-46f5-4178-9ace-ef0f11087694,1994,Toyota,4runner,SR5,0,1944,0,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
-a8a7f848-ff55-4743-95ec-6ac45173b97c,1995,Toyota,4runner,SR5,0,1944,0,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
-d93947cd-32f9-4b2e-b728-623536f3ef54,2018,Toyota Minivans,Sienna,Limited (AWD),0,1053,3,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
-c9720a0d-21e0-44a7-a15b-1f108fa2f5af,2018,Toyota Minivans,Sienna,XLE Premium (AWD),0,1053,3,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
-1745bdbb-fa1e-4977-ba67-5b7302b93c7f,2018,Toyota Minivans,Sienna,XLE (AWD),0,1053,3,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
-2e2ad941-f086-4cb9-967d-53d996c5ec96,2018,Toyota Minivans,Sienna,Limited Premium (AWD),0,1053,3,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
-474d095a-655f-43a7-aab0-1af93e10de6d,2018,Toyota Minivans,Sienna,LE (AWD),0,1053,3,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
+e7faea80-0639-48f2-91ff-5b1532979340,1965,Plymouth,Belvedere,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
+fe5857da-c4f5-4493-867f-00105c78e72f,1966,Plymouth,Belvedere,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
+241d38d1-1e03-4357-ad52-538cb7eb7f2f,1967,Plymouth,Belvedere,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
+9fc6c8c5-c988-4d23-8d6b-02b991fc34bf,1968,Plymouth,Belvedere,Base,0,344,2,C,only vintage/non-standard sizes: 775-14 825-14 F70-15,vintage_tire_size,775-14|825-14|F70-15,5x114.3,14|15
+474228dd-9d15-4334-a13e-6c0f087510d8,1969,Plymouth,Belvedere,Base,0,344,2,C,only vintage/non-standard sizes: 735-14 775-14 F70-15,vintage_tire_size,735-14|775-14|F70-15,5x114.3,14|15
+fca8374b-587a-4fe9-babd-9b92e916e0a3,1970,Plymouth,Belvedere,Base,0,344,3,C,only vintage/non-standard sizes: F78-14 G78-14,vintage_tire_size,F78-14|G78-14,5x114.3,14
+7b46a0d4-d6e7-480a-aa22-9fc555d7a907,1970,Plymouth,Cuda,Base,0,344,2,C,only vintage/non-standard sizes: E60-15 F60-15 F70-14,vintage_tire_size,E60-15|F60-15|F70-14|G60-15,5x114.3,14|15
+3aadcb87-e62a-427c-8c80-aae8e3abdee2,1971,Plymouth,Cuda,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 F78-14,vintage_tire_size,F60-15|F70-14|F78-14,5x114.3,14|15
+674881a3-fb35-4a46-a482-2f76d68ce620,1967,Plymouth,GTX,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+af4f2f4c-3030-4bd9-b38e-f9b84e69f46f,1968,Plymouth,GTX,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+54ae3ca9-7e72-4819-b280-f586e6997cc2,1969,Plymouth,GTX,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+29786992-0343-442e-8f60-19e6ca9ea4f7,1970,Plymouth,GTX,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+c2288cc1-1419-4117-a314-5b5d3ea9f0ca,1971,Plymouth,GTX,Base,0,344,3,C,only vintage/non-standard sizes: G70-14 G78-14,vintage_tire_size,G70-14|G78-14,5x114.3,14
+58085a44-6a10-4400-b84c-dc08155d7cbf,1982,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+927cd093-fed3-411a-8e43-095fcce737ab,1983,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+aeabfa7d-214c-42e0-96d6-533fc861202c,1984,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+eacf5b79-b978-458f-a8e2-8554c6101d50,1985,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+f476e693-c4c7-47d3-bb5d-e17e09b4bed8,1986,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+21453fdb-5a83-417c-9010-0ed641a9be3a,1987,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+0e4ba94f-37ec-4bf3-aa3c-a766f88ba91d,1988,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+a254a57a-5e13-46b1-850e-fbf3b1556bd3,1989,Plymouth,Gran Fury,Base,0,1048,3,C,no tire inventory for size(s),missing_inventory_tires,P195/75R15,5x114.3,15
+7e7c919e-3230-42e7-9890-a79fb59d439c,1968,Plymouth,Road Runner,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+3afe4d99-2ac0-4985-8a38-d5bfe88d35ee,1969,Plymouth,Road Runner,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+5bee2787-faf5-45a4-8da8-b9554c22a9f7,1970,Plymouth,Road Runner,Base,0,344,3,C,only vintage/non-standard sizes: F70-14,vintage_tire_size,F70-14,5x114.3,14
+f9372c78-f0c1-4c8d-9339-756038bbd835,1971,Plymouth,Road Runner,Base,0,344,3,C,only vintage/non-standard sizes: F70-14 F78-14,vintage_tire_size,F70-14|F78-14,5x114.3,14
+c73f2458-cdf3-4871-a40e-21153675b22a,1965,Plymouth,Satellite,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
+8179c818-312d-4597-86f2-5306ade5a83b,1966,Plymouth,Satellite,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
+059ebf84-d042-4557-b3ea-68a98d055f0f,1967,Plymouth,Satellite,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 775-14,vintage_tire_size,735-14|775-14,5x114.3,14
+c8acad29-b1c0-4e5d-8477-4874ae189e95,1968,Plymouth,Satellite,Base,0,344,2,C,only vintage/non-standard sizes: 735-14 775-14 F70-15,vintage_tire_size,735-14|775-14|F70-15,5x114.3,14|15
+65000701-ace2-4708-9cd9-203d118b2699,1969,Plymouth,Satellite,Base,0,344,2,C,only vintage/non-standard sizes: 735-14 775-14 F70-15,vintage_tire_size,735-14|775-14|F70-15,5x114.3,14|15
+43942724-064d-486d-aee3-f514d0d6fa96,1970,Plymouth,Satellite,Base,0,344,3,C,only vintage/non-standard sizes: F78-14 G78-14,vintage_tire_size,F78-14|G78-14,5x114.3,14
+b0a2132c-32d8-4292-b232-fe07121b41c4,1971,Plymouth,Satellite,Base,0,344,3,C,only vintage/non-standard sizes: E78-14 F78-14 G78-14,vintage_tire_size,E78-14|F78-14|G78-14,5x114.3,14
+1497e3cc-658e-422d-9e64-35fe5cfe800f,1973,Plymouth,Valiant,Base,0,344,3,C,only vintage/non-standard sizes: 6.95-14 D78-14 E70-14,vintage_tire_size,6.95-14|D78-14|E70-14|E78-14,5x114.3,14
+a11708f6-9a1a-4974-916e-2bafcb9e3984,1970,Plymouth,barracuda,Base,0,344,2,C,only vintage/non-standard sizes: E70-14 E78-14 F60-15,vintage_tire_size,E70-14|E78-14|F60-15|F70-14,5x114.3,14|15
+a298eb9c-032b-408e-b17e-3e376f0bce92,1971,Plymouth,barracuda,Base,0,344,2,C,only vintage/non-standard sizes: E78-14 F60-15 F70-14,vintage_tire_size,E78-14|F60-15|F70-14|F78-14,5x114.3,14|15
+f2150d61-7e6d-4fbb-8846-0d521fcbdd4b,1972,Plymouth,barracuda,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 F70-14 F78-14,vintage_tire_size,735-14|F70-14|F78-14,5x114.3,14
+cebea997-0083-4c73-a08f-be6a399bd69e,1973,Plymouth,barracuda,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 F78-14,vintage_tire_size,735-14|F78-14,5x114.3,14
+9af0c1b6-4743-48cc-bd6f-aef1d7e04bf2,1974,Plymouth,barracuda,Base,0,344,3,C,only vintage/non-standard sizes: 735-14 F70-14 F78-14,vintage_tire_size,735-14|F70-14|F78-14,5x114.3,14
+96759677-58b3-41e5-884b-db7902e45b62,1973,Plymouth,duster,Base,0,344,3,C,only vintage/non-standard sizes: D78-14 E70-14 E78-14,vintage_tire_size,D78-14|E70-14|E78-14,5x114.3,14
+ee38b49f-32da-4a29-b851-dcf11b62eff9,1968,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+680af013-ffd2-4188-804c-48348ef20787,1969,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+f2b571e5-6e4f-479c-a7f4-288e796ee408,1970,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+3b97469e-e806-4554-b970-86c0689e9cf2,1971,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+52d9480a-089b-4b31-9dcf-7d7e7ded3d35,1972,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+0a923b27-9628-405e-b4de-7df8f67f902f,1973,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+91dbddb9-cceb-4ccb-aa2c-17c4c508b530,1974,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+07420121-f294-42b7-9488-a48b58ce2148,1975,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+6371f051-a671-4942-a31c-722d00b6ca12,1976,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+16c9f153-69c1-4618-99c2-abdc8d918376,1977,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+06dd581c-365b-4c3d-8704-394fbdb49283,1978,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+88378d50-e721-4efe-b807-2c939bc145bf,1979,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+8274e98c-305e-412e-84bd-dfa396362aec,1980,Plymouth,road-runner,Base,0,344,2,C,only vintage/non-standard sizes: F60-15 F70-14 G70-14,vintage_tire_size,F60-15|F70-14|G70-14,5x114.3,14|15
+930af18d-cca5-4259-9b70-6286bd07bf03,1968,Pontiac,Catalina,Base,0,59,3,C,no tire inventory for size(s),missing_inventory_tires,225/75R14,5x127,14
+34425266-8617-4bfd-a626-f3b7febb8538,1968,Pontiac,Grand Prix,Base,0,266,3,C,only vintage/non-standard sizes: G78-14 H78-14,vintage_tire_size,G78-14|H78-14,5x120.65,14
+e1fbc3da-cabc-4355-a56a-4993e41addfd,1969,Pontiac,Grand Prix,Base,0,268,1,C,only vintage/non-standard sizes: G78-14 G78-15 H78-15,vintage_tire_size,G78-14|G78-15|H78-15,5x120.65,14|15
+6a61e231-0f35-4262-bc2e-abd2a14c2c56,1970,Pontiac,Grand Prix,Base,0,268,1,C,only vintage/non-standard sizes: G78-14 G78-15 H78-15,vintage_tire_size,G78-14|G78-15|H78-15,5x120.65,14|15
+60639e47-57e4-401a-bf04-642633c83b7d,1971,Pontiac,Grand Prix,Base,0,268,1,C,only vintage/non-standard sizes: G78-14 G78-15 H78-15,vintage_tire_size,G78-14|G78-15|H78-15,5x120.65,14|15
+531facfa-13f6-4426-8434-e659ee94f937,1969,Pontiac,Trans Am,Base,0,266,3,C,only vintage/non-standard sizes: F60-14,vintage_tire_size,F60-14,5x120.65,14
+b0d79419-4775-44fc-bb4c-17a04d064668,1970,Pontiac,Trans Am,Base,0,266,3,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
+5cb282ec-bacd-4217-aec5-d3b51b51b7b0,1971,Pontiac,Trans Am,Base,0,266,3,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
+ad7f9105-4834-4be8-a76b-7d8eb5b28d9f,1972,Pontiac,Trans Am,Base,0,266,3,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
+505daae5-582b-49ff-9120-f99fc2cf605f,1973,Pontiac,Trans Am,Base,0,266,3,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
+a4ecda1b-476d-4eb5-a193-822efbd777b5,1974,Pontiac,Trans Am,Base,0,266,3,C,only vintage/non-standard sizes: F60-15,vintage_tire_size,F60-15,5x120.65,15
+d637dd1d-2576-4efb-9300-73cb5a1a7ea3,1967,Pontiac,firebird,Base,0,266,3,C,only vintage/non-standard sizes: E70-14 F70-14,vintage_tire_size,E70-14|F70-14,5x120.65,14
+447e3f67-4b57-4453-bdf8-9d5f99c2ba97,1968,Pontiac,firebird,Base,0,266,3,C,only vintage/non-standard sizes: E70-14 F70-14,vintage_tire_size,E70-14|F70-14,5x120.65,14
+6cdf012b-8c7e-48b6-9cfe-17df58166287,1969,Pontiac,firebird,Base,0,266,3,C,only vintage/non-standard sizes: E70-14 F70-14,vintage_tire_size,E70-14|F70-14,5x120.65,14
+ecc8ddd3-1032-40fc-9b8a-1126e3c89b63,1970,Pontiac,firebird,Base,0,266,3,C,only vintage/non-standard sizes: E78-14 F70-14,vintage_tire_size,E78-14|F70-14,5x120.65,14
+a20cc7e9-e2ba-4a44-942a-e5fecc6cca0b,1971,Pontiac,firebird,Base,0,266,3,C,only vintage/non-standard sizes: E78-14 F70-14,vintage_tire_size,E78-14|F70-14,5x120.65,14
+85ff05a3-a8cf-4352-a653-1e5f7f609734,1972,Pontiac,firebird,Base,0,266,3,C,only vintage/non-standard sizes: E78-14 F70-14,vintage_tire_size,E78-14|F70-14,5x120.65,14
+0389ae07-5d71-48e0-a8f1-a8fcf4505c73,1973,Pontiac,firebird,Base,0,268,1,C,only vintage/non-standard sizes: E78-14 F60-15 F70-14,vintage_tire_size,E78-14|F60-15|F70-14,5x120.65,14|15
+fbcc233c-f368-46d8-bc9f-2b8e4d6f4b81,1964,Pontiac,gto,Tri-Power,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+dd985450-d5b9-4498-a5c5-03d58c0c3abc,1965,Pontiac,gto,Tri-Power,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+1be7f073-8e28-4ba8-b00d-be1dc9e16703,1966,Pontiac,gto,Tri-Power,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+a8a20ec1-c9cd-4977-a6c8-6a77eeef74e3,1967,Pontiac,gto,Tri-Power,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+55fee075-9c70-45bb-a850-ad2cba538830,1968,Pontiac,gto,Ram Air IV,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+e878daa0-b206-4323-ae4c-21cb4e0c066d,1968,Pontiac,gto,Judge,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+3b62f3a7-2a46-467e-b14f-bc49391272c7,1968,Pontiac,gto,Ram Air III,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+3fafa01f-1f77-47de-964e-e2b57c8bda73,1968,Pontiac,gto,Ram Air,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+68f46174-7cd5-4563-b1e9-424746fa1db4,1969,Pontiac,gto,Ram Air,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+602c1fed-dea2-494f-8369-a021f682d01b,1969,Pontiac,gto,Ram Air IV,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+0ab8d2fc-0989-4be4-bb60-3cdea3cda4ac,1969,Pontiac,gto,Judge,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+75f5fa7d-8398-4e40-bf42-83ccae95f7b2,1969,Pontiac,gto,Ram Air III,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+4a4c294a-4e2f-4ab6-9e89-cccf661ca7e5,1970,Pontiac,gto,Judge,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+8fdc47d0-1dd8-4f25-98c7-afc0af449eab,1970,Pontiac,gto,Ram Air III,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+6ff15e89-0e81-48c0-bec5-37bcbed08ad3,1970,Pontiac,gto,Ram Air,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+e1bb04f3-7ea8-402a-8f89-3f4ee36a86bf,1970,Pontiac,gto,Ram Air IV,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+5941a148-8005-465b-8b80-ff121d962373,1971,Pontiac,gto,Ram Air III,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+01776ab9-438e-46a7-87b8-1b0e33d28f88,1971,Pontiac,gto,Ram Air,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+240a3c30-943b-4010-a372-696afc48e7eb,1971,Pontiac,gto,Judge,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+3957285b-1f5c-4ccc-b708-24ce4d27a6e4,1971,Pontiac,gto,Ram Air IV,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+766c87ef-53a0-43ab-958f-f3f274272ffa,1972,Pontiac,gto,Ram Air,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+0ed3c9cc-b735-437f-873f-1a0bcf6836f1,1972,Pontiac,gto,Ram Air IV,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+148a9a1a-cc6d-41c8-ba89-9f579c95ebfb,1972,Pontiac,gto,Ram Air III,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,15
+35c86c83-ea4f-4f88-b9b3-9a16165a1e41,1972,Pontiac,gto,Judge,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,14
+3edf27f7-6819-4505-9e6c-5d228de8cd7f,1973,Pontiac,gto,Base,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,
+0f5584c5-0088-4f6d-8bdd-b181c1cabdb7,1974,Pontiac,gto,Base,0,266,3,C,only vintage/non-standard sizes: G60-14 G60-15 G70-14,vintage_tire_size,G60-14|G60-15|G70-14,5x120.65,
+690404f1-43d9-43bb-bdad-baeef7caa068,1990,Toyota,4runner,SR5,0,1944,3,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
+884a1996-3c96-4361-9071-327d1df0e0ed,1991,Toyota,4runner,SR5,0,1944,3,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
+e0eb65c2-6fd2-4c01-ae7e-a301fd0f15ce,1992,Toyota,4runner,SR5,0,1944,3,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
+0a91115e-7542-4f7d-8286-e4b6c6922cd4,1993,Toyota,4runner,SR5,0,1944,3,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
+a49d5be6-46f5-4178-9ace-ef0f11087694,1994,Toyota,4runner,SR5,0,1944,3,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
+a8a7f848-ff55-4743-95ec-6ac45173b97c,1995,Toyota,4runner,SR5,0,1944,3,C,only vintage/non-standard sizes: 31X10.50R15,vintage_tire_size,31X10.50R15,6x139.7,15
+d93947cd-32f9-4b2e-b728-623536f3ef54,2018,Toyota Minivans,Sienna,Limited (AWD),0,1053,2,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
+c9720a0d-21e0-44a7-a15b-1f108fa2f5af,2018,Toyota Minivans,Sienna,XLE Premium (AWD),0,1053,2,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
+1745bdbb-fa1e-4977-ba67-5b7302b93c7f,2018,Toyota Minivans,Sienna,XLE (AWD),0,1053,2,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
+2e2ad941-f086-4cb9-967d-53d996c5ec96,2018,Toyota Minivans,Sienna,Limited Premium (AWD),0,1053,2,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,
+474d095a-655f-43a7-aab0-1af93e10de6d,2018,Toyota Minivans,Sienna,LE (AWD),0,1053,2,C,only vintage/non-standard sizes: 235/55RF18,vintage_tire_size,235/55RF18,5x114.3,

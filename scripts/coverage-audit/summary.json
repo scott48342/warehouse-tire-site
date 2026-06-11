@@ -1,5 +1,5 @@
 {
-  "auditDate": "2026-06-11T18:16:12.593Z",
+  "auditDate": "2026-06-11T18:44:28.337Z",
   "totalVehicles": 36674,
   "categories": {
     "A_full_coverage": {
@@ -24,9 +24,9 @@
     }
   },
   "rootCauses": {
-    "package_generation_gap": 4144,
     "missing_inventory_wheels": 2625,
     "vintage_tire_size": 362,
+    "package_generation_gap": 328,
     "missing_wheel_sizes": 63,
     "missing_inventory_tires": 50,
     "missing_oem_tire_size": 6
@@ -303,6 +303,6 @@
     "wheelClassesProbed": 532,
     "wheelClassesWithResults": 460,
     "packageClassesProbed": 460,
-    "packageClassesWithResults": 380
+    "packageClassesWithResults": 443
   }
 }

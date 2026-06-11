@@ -16,6 +16,7 @@ import { SearchModal } from "@/components/SearchModal";
 import { CartIcon } from "@/components/CartIcon";
 import { JakeAvatar } from "@/components/jake/JakeAvatar";
 import { VehicleIndicator, VehicleIndicatorCompact } from "@/components/VehicleIndicator";
+import { GarageSwitcher, GarageSwitcherCompact } from "@/components/garage";
 import { VehicleMemorySync } from "@/components/VehicleMemorySync";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -232,8 +233,8 @@ export function Header() {
                 Lifted
               </Link>
             </div>
-            {/* Saved Vehicle - compact */}
-            <VehicleIndicatorCompact />
+            {/* Garage Switcher - compact */}
+            <GarageSwitcherCompact />
             {/* Cart icon for mobile */}
             <CartIcon />
           </div>
@@ -425,8 +426,8 @@ export function Header() {
           {/* Part Number Search - collapsible icon */}
           <CollapsiblePartNumberSearch />
 
-          {/* Saved Vehicle Indicator */}
-          <VehicleIndicator />
+          {/* Garage Switcher */}
+          <GarageSwitcher />
 
           <CartIcon />
         </nav>

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useVehicleMemory, formatVehicleDisplay } from "@/contexts/VehicleMemoryContext";
+import { useGarage, formatGarageVehicle } from "@/contexts/GarageContext";
 import { JakeAvatar } from "@/components/jake";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -94,28 +95,37 @@ function getCategoryIcon(category: VehicleCategory): React.ReactNode {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export function PersonalizedVehicleSection() {
+  const { activeVehicle: garageVehicle, isLoaded: garageLoaded, clearActiveVehicle: garageClear, vehicleCount } = useGarage();
   const { activeVehicle, isLoaded, clearActiveVehicle } = useVehicleMemory();
+  
+  // Use garage vehicle if available, fall back to legacy vehicle memory
+  const currentVehicle = garageVehicle || activeVehicle;
+  const currentLoaded = garageLoaded && isLoaded;
   
   // Track when personalized homepage is shown
   useEffect(() => {
-    if (isLoaded && activeVehicle) {
+    if (currentLoaded && currentVehicle) {
       trackHomepageEvent("homepage_vehicle_detected", {
-        year: activeVehicle.year,
-        make: activeVehicle.make,
-        model: activeVehicle.model,
-        days_since_saved: Math.floor((Date.now() - activeVehicle.savedAt) / (1000 * 60 * 60 * 24)),
+        year: currentVehicle.year,
+        make: currentVehicle.make,
+        model: currentVehicle.model,
+        days_since_saved: 'addedAt' in currentVehicle 
+          ? Math.floor((Date.now() - (currentVehicle as any).addedAt) / (1000 * 60 * 60 * 24))
+          : Math.floor((Date.now() - (currentVehicle as any).savedAt) / (1000 * 60 * 60 * 24)),
       });
     }
-  }, [isLoaded, activeVehicle]);
+  }, [currentLoaded, currentVehicle]);
   
   // Don't render if no vehicle or not loaded
-  if (!isLoaded || !activeVehicle) {
+  if (!currentLoaded || !currentVehicle) {
     return null;
   }
   
-  const displayName = formatVehicleDisplay(activeVehicle);
-  const category = detectVehicleCategory(activeVehicle.model);
-  const vehicleSlug = `${activeVehicle.year}-${activeVehicle.make}-${activeVehicle.model}`.toLowerCase().replace(/\s+/g, "-");
+  const displayName = 'nickname' in currentVehicle && currentVehicle.nickname 
+    ? currentVehicle.nickname 
+    : formatVehicleDisplay(currentVehicle as any);
+  const category = detectVehicleCategory(currentVehicle.model);
+  const vehicleSlug = `${currentVehicle.year}-${currentVehicle.make}-${currentVehicle.model}`.toLowerCase().replace(/\s+/g, "-");
   
   // Build URLs
   const tiresUrl = `/tires/for/${vehicleSlug}`;
@@ -141,15 +151,13 @@ export function PersonalizedVehicleSection() {
             <p className="text-red-500 text-xs font-bold uppercase tracking-wider">
               Continue Shopping
             </p>
-            <button
-              onClick={() => {
-                clearActiveVehicle();
-                trackHomepageEvent("homepage_vehicle_cleared");
-              }}
+            <Link
+              href="/garage"
+              onClick={() => trackHomepageEvent("homepage_garage_clicked")}
               className="text-white/40 hover:text-white/60 text-xs transition-colors"
             >
-              Change Vehicle
-            </button>
+              {vehicleCount > 1 ? `My Garage (${vehicleCount})` : "Change Vehicle"}
+            </Link>
           </div>
           
           {/* Vehicle Card */}
@@ -241,15 +249,13 @@ export function PersonalizedVehicleSection() {
                 <p className="text-red-500 text-xs font-bold uppercase tracking-wider">
                   Your Vehicle
                 </p>
-                <button
-                  onClick={() => {
-                    clearActiveVehicle();
-                    trackHomepageEvent("homepage_vehicle_cleared");
-                  }}
+                <Link
+                  href="/garage"
+                  onClick={() => trackHomepageEvent("homepage_garage_clicked")}
                   className="text-white/40 hover:text-white/60 text-xs transition-colors"
                 >
-                  Change
-                </button>
+                  {vehicleCount > 1 ? `Garage (${vehicleCount})` : "Change"}
+                </Link>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 bg-red-600/20 rounded-xl flex items-center justify-center text-red-500">
@@ -258,7 +264,7 @@ export function PersonalizedVehicleSection() {
                 <div>
                   <h3 className="text-white font-bold text-xl">{displayName}</h3>
                   <p className="text-white/50 text-sm">
-                    {activeVehicle.trim && activeVehicle.trim !== "Base" ? activeVehicle.trim : "Ready to shop"}
+                    {currentVehicle.trim && currentVehicle.trim !== "Base" ? currentVehicle.trim : "Ready to shop"}
                   </p>
                 </div>
               </div>
