@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { AddToCompareButton } from "@/components/AddToCompareButton";
 import { FinancingBadge } from "@/components/FinancingBadge";
+import { QuickViewButton, buildTireQuickViewData } from "@/components/QuickViewButton";
 import {
   BestForLine,
   TrustMicroLine,
@@ -309,6 +310,31 @@ export function TireStyleCard({
         
         {/* Action buttons overlay */}
         <div className="absolute top-3 right-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <QuickViewButton
+            data={buildTireQuickViewData({
+              sku,
+              brand,
+              model,
+              size,
+              imageUrl,
+              price,
+              loadIndex,
+              speedRating,
+              category,
+              mileageWarranty,
+              is3PMSF,
+              isRunFlat,
+              stockQty,
+              inStock,
+              source,
+              year,
+              make,
+              vehicleModel: model_,
+              trim,
+              modification,
+            })}
+            size="sm"
+          />
           {compareItem && (
             <AddToCompareButton
               item={compareItem}

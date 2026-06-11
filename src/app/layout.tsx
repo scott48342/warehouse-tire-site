@@ -6,6 +6,7 @@ import { CompareProvider } from "@/context/CompareContext";
 import { DiscountProvider } from "@/lib/discounts/DiscountContext";
 import { ShopContextProvider } from "@/contexts/ShopContextProvider";
 import { VehicleMemoryProvider } from "@/contexts/VehicleMemoryContext";
+import { QuickViewProvider } from "@/contexts/QuickViewContext";
 import { CartTracker } from "@/components/CartTracker";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -80,14 +81,16 @@ export default function RootLayout({
             <CartProvider>
               <DiscountProvider>
                 <CompareProvider>
-                  <CartTracker />
-                <Suspense fallback={null}>
-                  <Analytics />
-                  <FunnelTracker />
-                </Suspense>
-                <ConditionalLayout>
-                  {children}
-                </ConditionalLayout>
+                  <QuickViewProvider>
+                    <CartTracker />
+                    <Suspense fallback={null}>
+                      <Analytics />
+                      <FunnelTracker />
+                    </Suspense>
+                    <ConditionalLayout>
+                      {children}
+                    </ConditionalLayout>
+                  </QuickViewProvider>
                 </CompareProvider>
               </DiscountProvider>
             </CartProvider>
