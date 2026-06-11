@@ -51,7 +51,8 @@ function parseWheelDiameters(raw) {
   } catch { return []; }
 }
 // Modern tire size → usable for product search (vintage like F70-14 won't match suppliers)
-const MODERN = /^\d{3}\/\d{2,3}Z?R\d{2}/i;
+// FIX 2026-06-11: Added P|LT prefix support - P215/45R17 and LT265/70R17 are MODERN sizes!
+const MODERN = /^(?:P|LT)?\d{3}\/\d{2,3}Z?R\d{2}/i;
 
 const vehicles = [];
 for (const r of res.rows) {
