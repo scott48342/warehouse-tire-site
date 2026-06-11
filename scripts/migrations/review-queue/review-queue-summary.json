@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-06-10T13:59:05.111Z",
+  "queues": {
+    "missing_center_bore": {
+      "count": 74,
+      "byMake": {
+        "Chevrolet": 8,
+        "Ferrari": 15,
+        "Ford": 16,
+        "Lincoln": 2,
+        "Lotus": 3,
+        "Mercedes-Benz Minivans": 2,
+        "Mercedes-Benz Vans": 1,
+        "Porsche": 27
+      }
+    },
+    "missing_bolt_pattern": {
+      "count": 30,
+      "byMake": {
+        "Lamborghini": 4,
+        "Lotus": 2,
+        "Porsche": 24
+      }
+    },
+    "missing_wheel_sizes": {
+      "count": 1,
+      "byMake": {
+        "Lotus": 1
+      }
+    },
+    "missing_tire_sizes": {
+      "count": 0,
+      "byMake": {}
+    }
+  }
+}

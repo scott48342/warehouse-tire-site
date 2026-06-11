@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   
   try {
     const body = await req.json();
-    const { query, history = [], isLocal = false } = body;
+    const { query, history = [], isLocal = false, vehicle } = body;
     
     if (!query || typeof query !== "string") {
       return NextResponse.json(
@@ -37,12 +37,16 @@ export async function POST(req: NextRequest) {
     console.log(`[Jake API] POST /api/jake/chat`);
     console.log(`[Jake API] Query: "${query.substring(0, 100)}${query.length > 100 ? '...' : ''}"`);
     console.log(`[Jake API] History: ${history.length} messages, isLocal: ${isLocal}`);
+    if (vehicle) {
+      console.log(`[Jake API] Vehicle context: ${vehicle.year} ${vehicle.make} ${vehicle.model}${vehicle.trim ? ` ${vehicle.trim}` : ''}`);
+    }
     
-    // Call Jake
+    // Call Jake with vehicle context
     const result = await chat(
       query,
       history as JakeMessage[],
-      isLocal
+      isLocal,
+      vehicle as { year?: string; make?: string; model?: string; trim?: string } | undefined
     );
     
     const duration = Date.now() - startTime;

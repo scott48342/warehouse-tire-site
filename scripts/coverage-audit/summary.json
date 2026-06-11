@@ -1,0 +1,309 @@
+{
+  "auditDate": "2026-06-10T17:03:26.108Z",
+  "totalVehicles": 36674,
+  "categories": {
+    "A_full_coverage": {
+      "count": 29417,
+      "pct": "80.2%"
+    },
+    "B_tire_only": {
+      "count": 2338,
+      "pct": "6.4%"
+    },
+    "C_wheel_only": {
+      "count": 4534,
+      "pct": "12.4%"
+    },
+    "D_no_products": {
+      "count": 375,
+      "pct": "1.0%"
+    },
+    "E_lookup_failure": {
+      "count": 10,
+      "pct": "0.0%"
+    }
+  },
+  "rootCauses": {
+    "vintage_tire_size": 4314,
+    "package_generation_gap": 3286,
+    "missing_inventory_wheels": 2315,
+    "missing_oem_tire_size": 571,
+    "missing_inventory_tires": 24,
+    "missing_wheel_sizes": 23,
+    "missing_bolt_pattern": 10
+  },
+  "topFailureMakes": [
+    [
+      "Chevrolet",
+      1193
+    ],
+    [
+      "Ford",
+      1088
+    ],
+    [
+      "GMC",
+      607
+    ],
+    [
+      "BMW",
+      506
+    ],
+    [
+      "RAM",
+      415
+    ],
+    [
+      "Pontiac",
+      301
+    ],
+    [
+      "Cadillac",
+      297
+    ],
+    [
+      "Buick",
+      252
+    ],
+    [
+      "Lexus",
+      201
+    ],
+    [
+      "Audi",
+      196
+    ],
+    [
+      "Dodge",
+      192
+    ],
+    [
+      "Subaru",
+      186
+    ],
+    [
+      "Mercedes",
+      183
+    ],
+    [
+      "Toyota",
+      183
+    ],
+    [
+      "Jeep",
+      177
+    ]
+  ],
+  "topFailureModels": [
+    [
+      "RAM 2500",
+      206
+    ],
+    [
+      "RAM 3500",
+      183
+    ],
+    [
+      "Ford f-150",
+      175
+    ],
+    [
+      "Chevrolet corvette",
+      171
+    ],
+    [
+      "Pontiac firebird",
+      165
+    ],
+    [
+      "Chevrolet silverado-2500hd",
+      141
+    ],
+    [
+      "GMC sierra-2500hd",
+      134
+    ],
+    [
+      "GMC yukon",
+      115
+    ],
+    [
+      "Ford f-350",
+      114
+    ],
+    [
+      "GMC sierra-3500hd",
+      107
+    ],
+    [
+      "Chevrolet camaro",
+      105
+    ],
+    [
+      "Audi q5",
+      103
+    ],
+    [
+      "Chevrolet silverado-3500hd",
+      101
+    ],
+    [
+      "BMW X3",
+      95
+    ],
+    [
+      "BMW 3 Series",
+      87
+    ],
+    [
+      "Buick regal",
+      83
+    ],
+    [
+      "Ford mustang",
+      83
+    ],
+    [
+      "Chevrolet impala",
+      80
+    ],
+    [
+      "Cadillac escalade-esv",
+      66
+    ],
+    [
+      "Ford f-250",
+      66
+    ]
+  ],
+  "revenueImpactTop20": [
+    {
+      "vehicle": "Chevrolet silverado-2500hd",
+      "affected": 72,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "CD"
+    },
+    {
+      "vehicle": "RAM 2500",
+      "affected": 70,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "CDB"
+    },
+    {
+      "vehicle": "BMW X3",
+      "affected": 67,
+      "years": "2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "BC"
+    },
+    {
+      "vehicle": "GMC sierra-2500hd",
+      "affected": 67,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "DC"
+    },
+    {
+      "vehicle": "Audi q5",
+      "affected": 66,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "B"
+    },
+    {
+      "vehicle": "RAM 3500",
+      "affected": 63,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "CD"
+    },
+    {
+      "vehicle": "Chevrolet silverado-3500hd",
+      "affected": 62,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "C"
+    },
+    {
+      "vehicle": "Ford f-150",
+      "affected": 61,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "B"
+    },
+    {
+      "vehicle": "Ford f-350",
+      "affected": 60,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "CD"
+    },
+    {
+      "vehicle": "Mercedes glc",
+      "affected": 58,
+      "years": "2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "B"
+    },
+    {
+      "vehicle": "Mercedes c-class",
+      "affected": 57,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025",
+      "categories": "B"
+    },
+    {
+      "vehicle": "GMC sierra-3500hd",
+      "affected": 56,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "C"
+    },
+    {
+      "vehicle": "Cadillac escalade-esv",
+      "affected": 53,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "C"
+    },
+    {
+      "vehicle": "BMW 3 Series",
+      "affected": 50,
+      "years": "2015,2016,2017,2021,2022,2023,2024,2025",
+      "categories": "B"
+    },
+    {
+      "vehicle": "Cadillac escalade",
+      "affected": 47,
+      "years": "2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "C"
+    },
+    {
+      "vehicle": "Chevrolet Corvette",
+      "affected": 42,
+      "years": "2018,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "DC"
+    },
+    {
+      "vehicle": "Subaru crosstrek",
+      "affected": 42,
+      "years": "2015,2016,2019,2020,2021,2022,2023",
+      "categories": "B"
+    },
+    {
+      "vehicle": "GMC yukon",
+      "affected": 39,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2025,2026",
+      "categories": "C"
+    },
+    {
+      "vehicle": "Chevrolet camaro",
+      "affected": 37,
+      "years": "2015,2016,2017,2019,2020,2021,2022,2023,2024",
+      "categories": "C"
+    },
+    {
+      "vehicle": "Mercedes gls",
+      "affected": 36,
+      "years": "2017,2019,2020,2021,2022,2023,2024,2025,2026",
+      "categories": "B"
+    }
+  ],
+  "probeStats": {
+    "tireSizesProbed": 595,
+    "tireSizesWithResults": 545,
+    "wheelClassesProbed": 532,
+    "wheelClassesWithResults": 460,
+    "packageClassesProbed": 460,
+    "packageClassesWithResults": 380
+  }
+}

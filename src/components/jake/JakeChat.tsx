@@ -7,6 +7,8 @@ import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
 import { trackJakeEvent, trackJakeMessage, getJakeSessionId, setJakeSessionId, resetJakeSessionId } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
 import { ProductRail, ProductCarousel, MOCK_TIRES, MOCK_WHEELS, RailProduct } from "./ProductRail";
+import { VehicleChip } from "./VehicleChip";
+import { useVehicleMemory, formatVehicleDisplay, type SavedVehicle } from "@/contexts/VehicleMemoryContext";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -138,6 +140,57 @@ function getRandomHeaderPrompts(count: number = 3): string[] {
   return shuffled.slice(0, count);
 }
 
+// Get vehicle-aware suggested prompts
+function getVehicleAwarePrompts(vehicle: SavedVehicle): typeof SUGGESTED_PROMPTS {
+  const makeModel = `${vehicle.make} ${vehicle.model}`;
+  const isTruck = /f-?150|silverado|sierra|ram|tundra|titan|tacoma|colorado|canyon|ranger|gladiator/i.test(vehicle.model);
+  const isMuscle = /mustang|camaro|challenger|charger|corvette|firebird|trans am/i.test(vehicle.model);
+  const isSUV = /tahoe|suburban|escalade|yukon|4runner|explorer|expedition|durango|grand cherokee/i.test(vehicle.model);
+  
+  if (isTruck) {
+    return [
+      { text: `Best all-terrain tires for my ${vehicle.model}`, icon: "🚚" },
+      { text: `20" wheel options for my ${makeModel}`, icon: "⚫" },
+      { text: `Will 35s fit my ${vehicle.model}?`, icon: "📏" },
+      { text: `Build me a package for towing`, icon: "🚛" },
+      { text: `Show me aggressive off-road setups`, icon: "🔥" },
+      { text: `Quiet highway tires for daily driving`, icon: "🛣️" },
+    ];
+  }
+  
+  if (isMuscle) {
+    return [
+      { text: `Best performance tires for my ${vehicle.model}`, icon: "🏁" },
+      { text: `Show me staggered wheel setups`, icon: "🔥" },
+      { text: `20" wheel options for my ${makeModel}`, icon: "⚫" },
+      { text: `Build me an aggressive setup`, icon: "💪" },
+      { text: `Track day tires for my ${vehicle.model}`, icon: "🎯" },
+      { text: `Deep dish wheels for that muscle look`, icon: "✨" },
+    ];
+  }
+  
+  if (isSUV) {
+    return [
+      { text: `Best all-season tires for my ${vehicle.model}`, icon: "🚙" },
+      { text: `22" wheel options for my ${makeModel}`, icon: "⚫" },
+      { text: `Quiet highway tires for family trips`, icon: "🛣️" },
+      { text: `All-terrain tires for light off-road`, icon: "🏔️" },
+      { text: `Show me a blacked-out package`, icon: "🖤" },
+      { text: `Budget tire options for my ${vehicle.model}`, icon: "💰" },
+    ];
+  }
+  
+  // Default prompts with vehicle name
+  return [
+    { text: `Best tires for my ${makeModel}`, icon: "🔍" },
+    { text: `Show me wheel options`, icon: "⚫" },
+    { text: `Build me a package`, icon: "📦" },
+    { text: `What's the OEM tire size?`, icon: "📏" },
+    { text: `Quiet highway tires`, icon: "🛣️" },
+    { text: `Budget tire options`, icon: "💰" },
+  ];
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -208,6 +261,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const [headerPrompts] = useState(() => getRandomHeaderPrompts(3));
   const [compareProducts, setCompareProducts] = useState<ParsedProduct[]>([]);
   const [showCompare, setShowCompare] = useState(false);
+  
+  // Vehicle Memory Integration
+  const { activeVehicle, isLoaded: vehicleLoaded, clearActiveVehicle, setActiveVehicle } = useVehicleMemory();
   
   // Product rail state - populated based on detected intent
   const [railTires, setRailTires] = useState<RailProduct[]>([]);
@@ -408,11 +464,28 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         content: m.content,
       }));
 
+      // Include saved vehicle context if available
+      const vehicleContext = activeVehicle ? {
+        year: activeVehicle.year,
+        make: activeVehicle.make,
+        model: activeVehicle.model,
+        trim: activeVehicle.trim,
+        modification: activeVehicle.modification,
+      } : undefined;
+      
       const response = await fetch("/api/jake/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: text, history, isLocal }),
+        body: JSON.stringify({ query: text, history, isLocal, vehicle: vehicleContext }),
       });
+      
+      // Track vehicle-aware interaction
+      if (activeVehicle) {
+        trackJakeEvent("vehicle_context_used", {
+          vehicle: formatVehicleDisplay(activeVehicle),
+          query_preview: text.substring(0, 50),
+        });
+      }
 
       const data = await response.json();
       const responseText = data.response || "Sorry, I had trouble processing that. Can you try again?";
@@ -485,6 +558,29 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       // Get cart URL from structured data or parse from text
       const cartUrl = data.cartUrl || parseCartUrl(responseText);
 
+      // If Jake detected/confirmed a vehicle, save it to memory (if not already saved)
+      if (data.vehicle?.year && data.vehicle?.make && data.vehicle?.model) {
+        const detectedVehicle = data.vehicle;
+        const shouldSave = !activeVehicle || 
+          activeVehicle.year !== String(detectedVehicle.year) ||
+          activeVehicle.make !== detectedVehicle.make ||
+          activeVehicle.model !== detectedVehicle.model;
+        
+        if (shouldSave) {
+          setActiveVehicle({
+            year: String(detectedVehicle.year),
+            make: detectedVehicle.make,
+            model: detectedVehicle.model,
+            trim: detectedVehicle.trim,
+          });
+          trackJakeEvent("vehicle_learned_from_chat", {
+            year: detectedVehicle.year,
+            make: detectedVehicle.make,
+            model: detectedVehicle.model,
+          });
+        }
+      }
+      
       // Track events with rich data
       if (products.length > 0) {
         trackJakeEvent("product_recommended", { 
@@ -495,7 +591,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             model: p.model,
             sku: p.productUrl?.match(/\/(tires|wheels)\/([^?/]+)/)?.[2],
           })),
-          vehicle: data.vehicle || undefined,
+          vehicle: data.vehicle || activeVehicle ? formatVehicleDisplay(activeVehicle) : undefined,
         });
       }
       if (cartUrl) {
@@ -653,34 +749,68 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
               <p className="text-white/50 text-xs">Your Fitment Expert</p>
             </div>
           </div>
-          {onClose && (
-            <button onClick={onClose} className="text-white/50 hover:text-white p-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          )}
+          <div className="flex items-center gap-2">
+            {/* Vehicle Chip - Welcome screen */}
+            {vehicleLoaded && activeVehicle && (
+              <VehicleChip 
+                vehicle={activeVehicle}
+                onClear={() => {
+                  clearActiveVehicle();
+                  trackJakeEvent("vehicle_cleared_from_jake");
+                }}
+                onSendMessage={handleSend}
+              />
+            )}
+            {onClose && (
+              <button onClick={onClose} className="text-white/50 hover:text-white p-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
         </div>
 
-        {/* Welcome Content - Centered, no rails */}
+        {/* Welcome Content - Personalized if Jake knows the vehicle */}
         <div className="flex-1 min-h-0 overflow-y-auto flex flex-col items-center justify-center px-6 py-12">
           <JakeAvatar size="xl" showGlow className="mb-6 shadow-lg shadow-red-500/20" />
-          <h2 className="text-white font-bold text-2xl mb-2">Hey, I'm Jake</h2>
-          <p className="text-white/60 text-center max-w-md mb-4">
-            Your wheel and tire expert. Tell me about your vehicle and what you're looking for — 
-            I'll help you build the perfect setup.
-          </p>
-          <p className="text-white/40 text-center text-sm max-w-sm mb-8">
-            💡 I can recommend products, build packages, and create your checkout when you're ready.
-          </p>
+          
+          {vehicleLoaded && activeVehicle ? (
+            // Personalized greeting - Jake knows the vehicle
+            <>
+              <h2 className="text-white font-bold text-2xl mb-2">Hey! Ready for your {activeVehicle.model}?</h2>
+              <p className="text-white/60 text-center max-w-md mb-4">
+                I've got your <span className="text-red-400 font-medium">{formatVehicleDisplay(activeVehicle)}</span> saved. 
+                Just tell me what you're looking for — tires, wheels, or a full package.
+              </p>
+              <p className="text-white/40 text-center text-sm max-w-sm mb-8">
+                💡 I already know your fitment specs, so we can skip right to the good stuff!
+              </p>
+            </>
+          ) : (
+            // Default greeting - no vehicle saved
+            <>
+              <h2 className="text-white font-bold text-2xl mb-2">Hey, I'm Jake</h2>
+              <p className="text-white/60 text-center max-w-md mb-4">
+                Your wheel and tire expert. Tell me about your vehicle and what you're looking for — 
+                I'll help you build the perfect setup.
+              </p>
+              <p className="text-white/40 text-center text-sm max-w-sm mb-8">
+                💡 I can recommend products, build packages, and create your checkout when you're ready.
+              </p>
+            </>
+          )}
 
-          {/* Suggested Prompts */}
+          {/* Suggested Prompts - Personalized if vehicle is known */}
           <div className="w-full max-w-xl">
             <p className="text-white/40 text-xs uppercase tracking-wide mb-3 text-center">
               Try asking...
             </p>
             <div className="grid grid-cols-2 gap-2">
-              {SUGGESTED_PROMPTS.map((prompt) => (
+              {(vehicleLoaded && activeVehicle
+                ? getVehicleAwarePrompts(activeVehicle)
+                : SUGGESTED_PROMPTS
+              ).map((prompt) => (
                 <button
                   key={prompt.text}
                   onClick={() => handlePromptClick(prompt.text)}
@@ -871,6 +1001,17 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             </div>
           </div>
           <div className="flex items-center gap-2">
+            {/* Vehicle Chip - shown when customer has a saved vehicle */}
+            {vehicleLoaded && activeVehicle && (
+              <VehicleChip 
+                vehicle={activeVehicle}
+                onClear={() => {
+                  clearActiveVehicle();
+                  trackJakeEvent("vehicle_cleared_from_jake");
+                }}
+                onSendMessage={handleSend}
+              />
+            )}
             <button
               onClick={handleNewConversation}
               className="text-white/50 hover:text-white text-sm px-3 py-1.5 rounded hover:bg-white/5 transition-colors"

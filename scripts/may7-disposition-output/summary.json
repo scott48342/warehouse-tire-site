@@ -1,0 +1,32 @@
+{
+  "analysisDate": "2026-06-10T13:25:19.585Z",
+  "targetDate": "2026-05-07",
+  "targetYear": 2018,
+  "totalMay7Records": 2154,
+  "categories": {
+    "duplicate_safe_delete": {
+      "count": 0,
+      "percentage": "0.0%"
+    },
+    "unique_needs_review": {
+      "count": 2003,
+      "percentage": "93.0%"
+    },
+    "missing_required_wheel_fields": {
+      "count": 49,
+      "percentage": "2.3%"
+    },
+    "lowercase_make_needs_canonicalization": {
+      "count": 4,
+      "percentage": "0.2%"
+    },
+    "malformed_make_needs_split": {
+      "count": 102,
+      "percentage": "4.7%"
+    },
+    "phantom_make_delete_candidate": {
+      "count": 0,
+      "percentage": "0.0%"
+    }
+  }
+}

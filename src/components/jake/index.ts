@@ -11,3 +11,4 @@ export {
 export { JakeComparePanel, CompareButton, CompareFloatingBar } from "./JakeComparePanel";
 export { trackJakeEvent, useJakeAnalytics, type JakeEventType } from "./JakeAnalytics";
 export { ProductRail, ProductCarousel, type RailProduct } from "./ProductRail";
+export { VehicleChip, VehicleChipCompact } from "./VehicleChip";

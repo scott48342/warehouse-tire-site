@@ -1,0 +1,447 @@
+{
+  "certByYear": [
+    {
+      "year": 2016,
+      "cert": "certified",
+      "n": 1237
+    },
+    {
+      "year": 2016,
+      "cert": "needs_review",
+      "n": 4
+    },
+    {
+      "year": 2017,
+      "cert": "certified",
+      "n": 1286
+    },
+    {
+      "year": 2017,
+      "cert": "needs_review",
+      "n": 5
+    },
+    {
+      "year": 2018,
+      "cert": "certified",
+      "n": 1828
+    },
+    {
+      "year": 2018,
+      "cert": "deprecated-superseded-by-canonical",
+      "n": 652
+    },
+    {
+      "year": 2019,
+      "cert": "certified",
+      "n": 1371
+    },
+    {
+      "year": 2019,
+      "cert": "needs_review",
+      "n": 9
+    },
+    {
+      "year": 2020,
+      "cert": "certified",
+      "n": 1535
+    },
+    {
+      "year": 2020,
+      "cert": "needs_review",
+      "n": 11
+    },
+    {
+      "year": 2024,
+      "cert": "certified",
+      "n": 1604
+    }
+  ],
+  "certOverall": [
+    {
+      "cert": "certified",
+      "n": 36674
+    },
+    {
+      "cert": "deprecated-superseded-by-canonical",
+      "n": 652
+    },
+    {
+      "cert": "needs_review",
+      "n": 169
+    }
+  ],
+  "makeFormats": [
+    {
+      "make": "Alfa Romeo",
+      "n": 129,
+      "min_y": 2014,
+      "max_y": 2025,
+      "certified": 119
+    },
+    {
+      "make": "Land Rover",
+      "n": 612,
+      "min_y": 1990,
+      "max_y": 2026,
+      "certified": 612
+    },
+    {
+      "make": "MINI",
+      "n": 344,
+      "min_y": 2002,
+      "max_y": 2026,
+      "certified": 344
+    },
+    {
+      "make": "Mercedes",
+      "n": 1384,
+      "min_y": 1980,
+      "max_y": 2026,
+      "certified": 1384
+    },
+    {
+      "make": "Mercedes-Benz",
+      "n": 1691,
+      "min_y": 1990,
+      "max_y": 2026,
+      "certified": 1591
+    },
+    {
+      "make": "Mini",
+      "n": 19,
+      "min_y": 2018,
+      "max_y": 2018,
+      "certified": 19
+    },
+    {
+      "make": "RAM",
+      "n": 1000,
+      "min_y": 1994,
+      "max_y": 2026,
+      "certified": 963
+    },
+    {
+      "make": "Ram",
+      "n": 37,
+      "min_y": 2018,
+      "max_y": 2018,
+      "certified": 37
+    },
+    {
+      "make": "Smart",
+      "n": 6,
+      "min_y": 2018,
+      "max_y": 2018,
+      "certified": 2
+    },
+    {
+      "make": "land rover",
+      "n": 15,
+      "min_y": 2024,
+      "max_y": 2024,
+      "certified": 15
+    }
+  ],
+  "makes2018VsRest": [
+    {
+      "make_2018_only": "Chevrolet Minivans"
+    },
+    {
+      "make_2018_only": "Chevrolet Vans"
+    },
+    {
+      "make_2018_only": "Chrysler Minivans"
+    },
+    {
+      "make_2018_only": "Dodge Minivans"
+    },
+    {
+      "make_2018_only": "Ford Minivans"
+    },
+    {
+      "make_2018_only": "Ford Vans"
+    },
+    {
+      "make_2018_only": "GMC Vans"
+    },
+    {
+      "make_2018_only": "Honda Minivans"
+    },
+    {
+      "make_2018_only": "Karma"
+    },
+    {
+      "make_2018_only": "Kia Minivans"
+    },
+    {
+      "make_2018_only": "Mercedes-Benz Minivans"
+    },
+    {
+      "make_2018_only": "Mercedes-Benz Vans"
+    },
+    {
+      "make_2018_only": "Mini"
+    },
+    {
+      "make_2018_only": "Nissan Minivans"
+    },
+    {
+      "make_2018_only": "Nissan Vans"
+    },
+    {
+      "make_2018_only": "RAM Minivans"
+    },
+    {
+      "make_2018_only": "RAM Vans"
+    },
+    {
+      "make_2018_only": "Ram"
+    },
+    {
+      "make_2018_only": "Smart"
+    },
+    {
+      "make_2018_only": "Toyota Minivans"
+    }
+  ],
+  "testVehicles": [
+    {
+      "year": 2018,
+      "make": "Acura",
+      "model": "NSX",
+      "recs": 3,
+      "certified": 1,
+      "has_bolt": 3,
+      "has_bore": 3
+    },
+    {
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "recs": 8,
+      "certified": 4,
+      "has_bolt": 8,
+      "has_bore": 8
+    },
+    {
+      "year": 2018,
+      "make": "BMW",
+      "model": "i3",
+      "recs": 7,
+      "certified": 3,
+      "has_bolt": 7,
+      "has_bore": 7
+    },
+    {
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "recs": 9,
+      "certified": 3,
+      "has_bolt": 9,
+      "has_bore": 9
+    },
+    {
+      "year": 2018,
+      "make": "Honda",
+      "model": "Accord",
+      "recs": 9,
+      "certified": 9,
+      "has_bolt": 9,
+      "has_bore": 9
+    },
+    {
+      "year": 2018,
+      "make": "Jeep",
+      "model": "Wrangler",
+      "recs": 8,
+      "certified": 8,
+      "has_bolt": 8,
+      "has_bore": 8
+    },
+    {
+      "year": 2018,
+      "make": "Porsche",
+      "model": "718 Cayman",
+      "recs": 9,
+      "certified": 3,
+      "has_bolt": 9,
+      "has_bore": 9
+    },
+    {
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Golf R",
+      "recs": 1,
+      "certified": 1,
+      "has_bolt": 1,
+      "has_bore": 1
+    },
+    {
+      "year": 2020,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "recs": 1,
+      "certified": 1,
+      "has_bolt": 1,
+      "has_bore": 1
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "f-150",
+      "recs": 11,
+      "certified": 11,
+      "has_bolt": 11,
+      "has_bore": 11
+    },
+    {
+      "year": 2024,
+      "make": "Toyota",
+      "model": "camry",
+      "recs": 11,
+      "certified": 11,
+      "has_bolt": 11,
+      "has_bore": 11
+    }
+  ],
+  "tierXcert": [
+    {
+      "tier": "complete",
+      "cert": "certified",
+      "n": 33616
+    },
+    {
+      "tier": "unknown",
+      "cert": "certified",
+      "n": 2012
+    },
+    {
+      "tier": "high",
+      "cert": "certified",
+      "n": 796
+    },
+    {
+      "tier": "unknown",
+      "cert": "deprecated-superseded-by-canonical",
+      "n": 652
+    },
+    {
+      "tier": "partial",
+      "cert": "certified",
+      "n": 248
+    },
+    {
+      "tier": "complete",
+      "cert": "needs_review",
+      "n": 169
+    },
+    {
+      "tier": "medium",
+      "cert": "certified",
+      "n": 2
+    }
+  ],
+  "certBySource": [
+    {
+      "source": "trim-research",
+      "total": 5151,
+      "certified": 5146
+    },
+    {
+      "source": "cache-import [expanded]",
+      "total": 4074,
+      "certified": 4074
+    },
+    {
+      "source": "google-ai-overview",
+      "total": 3343,
+      "certified": 3343
+    },
+    {
+      "source": "generation_inherit",
+      "total": 3122,
+      "certified": 3104
+    },
+    {
+      "source": "cache-import",
+      "total": 1900,
+      "certified": 1894
+    },
+    {
+      "source": "cache-import [trim-expanded]",
+      "total": 1594,
+      "certified": 1594
+    },
+    {
+      "source": "tgp_solutions",
+      "total": 1502,
+      "certified": 1502
+    },
+    {
+      "source": "90s-research-batch",
+      "total": 1437,
+      "certified": 1437
+    },
+    {
+      "source": "verified-research",
+      "total": 1235,
+      "certified": 1235
+    },
+    {
+      "source": "catalog-gap-fill",
+      "total": 1098,
+      "certified": 1098
+    },
+    {
+      "source": "generation-baseline",
+      "total": 1020,
+      "certified": 1020
+    },
+    {
+      "source": "api_import [expanded]",
+      "total": 899,
+      "certified": 899
+    },
+    {
+      "source": "deprecated-staggered-split",
+      "total": 652,
+      "certified": 0
+    },
+    {
+      "source": "generation_template",
+      "total": 642,
+      "certified": 617
+    },
+    {
+      "source": "generation_template [expanded]",
+      "total": 545,
+      "certified": 538
+    },
+    {
+      "source": "api_import",
+      "total": 520,
+      "certified": 508
+    },
+    {
+      "source": "catalog-gap-fill [web_research]",
+      "total": 502,
+      "certified": 502
+    },
+    {
+      "source": "api_import [trim-expanded]",
+      "total": 466,
+      "certified": 466
+    },
+    {
+      "source": "80s-research-batch",
+      "total": 448,
+      "certified": 448
+    },
+    {
+      "source": "generation-baseline [expanded]",
+      "total": 430,
+      "certified": 430
+    }
+  ]
+}

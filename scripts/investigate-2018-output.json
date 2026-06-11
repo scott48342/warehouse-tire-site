@@ -1,0 +1,2493 @@
+{
+  "qualityTiers2018": [
+    {
+      "quality_tier": "unknown",
+      "n": 2480
+    }
+  ],
+  "qualityTiersNeighbors": [
+    {
+      "year": 2016,
+      "quality_tier": "complete",
+      "n": 1233
+    },
+    {
+      "year": 2016,
+      "quality_tier": "partial",
+      "n": 8
+    },
+    {
+      "year": 2017,
+      "quality_tier": "complete",
+      "n": 1278
+    },
+    {
+      "year": 2017,
+      "quality_tier": "partial",
+      "n": 7
+    },
+    {
+      "year": 2017,
+      "quality_tier": "high",
+      "n": 6
+    },
+    {
+      "year": 2018,
+      "quality_tier": "unknown",
+      "n": 2480
+    },
+    {
+      "year": 2019,
+      "quality_tier": "complete",
+      "n": 1360
+    },
+    {
+      "year": 2019,
+      "quality_tier": "high",
+      "n": 17
+    },
+    {
+      "year": 2019,
+      "quality_tier": "partial",
+      "n": 3
+    },
+    {
+      "year": 2020,
+      "quality_tier": "complete",
+      "n": 1538
+    },
+    {
+      "year": 2020,
+      "quality_tier": "high",
+      "n": 5
+    },
+    {
+      "year": 2020,
+      "quality_tier": "partial",
+      "n": 3
+    }
+  ],
+  "sources2018": [
+    {
+      "source": "tgp_solutions",
+      "n": 1502
+    },
+    {
+      "source": "deprecated-staggered-split",
+      "n": 652
+    },
+    {
+      "source": "merged-staggered",
+      "n": 326
+    }
+  ],
+  "sources2018ByDate": [
+    {
+      "source": "tgp_solutions",
+      "created_date": "2026-05-07T04:00:00.000Z",
+      "n": 1502
+    },
+    {
+      "source": "deprecated-staggered-split",
+      "created_date": "2026-05-07T04:00:00.000Z",
+      "n": 652
+    },
+    {
+      "source": "merged-staggered",
+      "created_date": "2026-05-14T04:00:00.000Z",
+      "n": 326
+    }
+  ],
+  "createdDates2018": [
+    {
+      "created_date": "2026-05-07T04:00:00.000Z",
+      "n": 2154
+    },
+    {
+      "created_date": "2026-05-14T04:00:00.000Z",
+      "n": 326
+    }
+  ],
+  "makes2018": [
+    {
+      "make": "BMW",
+      "n": 327
+    },
+    {
+      "make": "Mercedes-Benz",
+      "n": 185
+    },
+    {
+      "make": "Porsche",
+      "n": 149
+    },
+    {
+      "make": "Ford",
+      "n": 132
+    },
+    {
+      "make": "Chevrolet",
+      "n": 114
+    },
+    {
+      "make": "Jaguar",
+      "n": 106
+    },
+    {
+      "make": "Nissan",
+      "n": 105
+    },
+    {
+      "make": "Audi",
+      "n": 97
+    },
+    {
+      "make": "Toyota",
+      "n": 89
+    },
+    {
+      "make": "Lexus",
+      "n": 87
+    },
+    {
+      "make": "Kia",
+      "n": 66
+    },
+    {
+      "make": "Jeep",
+      "n": 62
+    },
+    {
+      "make": "Cadillac",
+      "n": 57
+    },
+    {
+      "make": "Volkswagen",
+      "n": 53
+    },
+    {
+      "make": "Honda",
+      "n": 47
+    },
+    {
+      "make": "Hyundai",
+      "n": 45
+    },
+    {
+      "make": "GMC",
+      "n": 44
+    },
+    {
+      "make": "Volvo",
+      "n": 41
+    },
+    {
+      "make": "Dodge",
+      "n": 39
+    },
+    {
+      "make": "Ram",
+      "n": 37
+    },
+    {
+      "make": "Land Rover",
+      "n": 36
+    },
+    {
+      "make": "Maserati",
+      "n": 36
+    },
+    {
+      "make": "Subaru",
+      "n": 35
+    },
+    {
+      "make": "Infiniti",
+      "n": 32
+    },
+    {
+      "make": "Lincoln",
+      "n": 32
+    },
+    {
+      "make": "Buick",
+      "n": 30
+    },
+    {
+      "make": "Fiat",
+      "n": 29
+    },
+    {
+      "make": "Ferrari",
+      "n": 27
+    },
+    {
+      "make": "Tesla",
+      "n": 24
+    },
+    {
+      "make": "Mazda",
+      "n": 23
+    },
+    {
+      "make": "Alfa Romeo",
+      "n": 21
+    },
+    {
+      "make": "Rolls-Royce",
+      "n": 20
+    },
+    {
+      "make": "Mitsubishi",
+      "n": 20
+    },
+    {
+      "make": "Mini",
+      "n": 19
+    },
+    {
+      "make": "Lamborghini",
+      "n": 16
+    },
+    {
+      "make": "Acura",
+      "n": 16
+    },
+    {
+      "make": "Bentley",
+      "n": 15
+    },
+    {
+      "make": "Genesis",
+      "n": 13
+    },
+    {
+      "make": "Toyota Minivans",
+      "n": 13
+    },
+    {
+      "make": "McLaren",
+      "n": 12
+    },
+    {
+      "make": "Aston Martin",
+      "n": 12
+    },
+    {
+      "make": "Nissan Vans",
+      "n": 11
+    },
+    {
+      "make": "Ford Vans",
+      "n": 10
+    },
+    {
+      "make": "Chrysler Minivans",
+      "n": 9
+    },
+    {
+      "make": "Chrysler",
+      "n": 9
+    },
+    {
+      "make": "Ford Minivans",
+      "n": 9
+    },
+    {
+      "make": "Mercedes-Benz Vans",
+      "n": 7
+    },
+    {
+      "make": "GMC Vans",
+      "n": 6
+    },
+    {
+      "make": "Lotus",
+      "n": 6
+    },
+    {
+      "make": "Chevrolet Vans",
+      "n": 6
+    },
+    {
+      "make": "RAM Minivans",
+      "n": 6
+    },
+    {
+      "make": "Karma",
+      "n": 6
+    },
+    {
+      "make": "Smart",
+      "n": 6
+    },
+    {
+      "make": "Honda Minivans",
+      "n": 5
+    },
+    {
+      "make": "Kia Minivans",
+      "n": 5
+    },
+    {
+      "make": "RAM Vans",
+      "n": 5
+    },
+    {
+      "make": "Dodge Minivans",
+      "n": 4
+    },
+    {
+      "make": "Nissan Minivans",
+      "n": 3
+    },
+    {
+      "make": "Chevrolet Minivans",
+      "n": 2
+    },
+    {
+      "make": "Mercedes-Benz Minivans",
+      "n": 2
+    }
+  ],
+  "may7AllYears": [
+    {
+      "year": 2003,
+      "n": 1
+    },
+    {
+      "year": 2004,
+      "n": 2
+    },
+    {
+      "year": 2005,
+      "n": 2
+    },
+    {
+      "year": 2006,
+      "n": 2
+    },
+    {
+      "year": 2007,
+      "n": 2
+    },
+    {
+      "year": 2008,
+      "n": 2
+    },
+    {
+      "year": 2009,
+      "n": 2
+    },
+    {
+      "year": 2010,
+      "n": 2
+    },
+    {
+      "year": 2011,
+      "n": 2
+    },
+    {
+      "year": 2012,
+      "n": 2
+    },
+    {
+      "year": 2013,
+      "n": 2
+    },
+    {
+      "year": 2014,
+      "n": 6
+    },
+    {
+      "year": 2015,
+      "n": 6
+    },
+    {
+      "year": 2016,
+      "n": 6
+    },
+    {
+      "year": 2017,
+      "n": 6
+    },
+    {
+      "year": 2018,
+      "n": 2154
+    },
+    {
+      "year": 2019,
+      "n": 1
+    },
+    {
+      "year": 2020,
+      "n": 1
+    },
+    {
+      "year": 2021,
+      "n": 20
+    },
+    {
+      "year": 2022,
+      "n": 36
+    },
+    {
+      "year": 2023,
+      "n": 14
+    },
+    {
+      "year": 2024,
+      "n": 131
+    },
+    {
+      "year": 2025,
+      "n": 1
+    },
+    {
+      "year": 2026,
+      "n": 1
+    }
+  ],
+  "may7Sources": [
+    {
+      "source": "tgp_solutions",
+      "n": 1502
+    },
+    {
+      "source": "deprecated-staggered-split",
+      "n": 652
+    },
+    {
+      "source": "tire-guide-pro-import",
+      "n": 147
+    },
+    {
+      "source": "alias-from-mazda3",
+      "n": 53
+    },
+    {
+      "source": "manual-qa-fix",
+      "n": 37
+    },
+    {
+      "source": "manual_import",
+      "n": 7
+    },
+    {
+      "source": "manual-import",
+      "n": 6
+    }
+  ],
+  "may7VsRest2018Overlap": [
+    {
+      "may7_total": 2154,
+      "ymm_overlap": 823,
+      "ymmt_overlap": 100
+    }
+  ],
+  "may7NewModels": [
+    {
+      "may7_models": 449,
+      "rest_models": 161,
+      "new_models": 288
+    }
+  ],
+  "may7Completeness": [
+    {
+      "total": 2154,
+      "has_bolt": 2130,
+      "has_bore": 2106,
+      "has_wheels": 2154,
+      "has_tires": 2154
+    }
+  ],
+  "validationSample": [
+    {
+      "id": "72b72013-5193-49c3-b3c2-39c54c432cfb",
+      "year": 2018,
+      "make": "BMW",
+      "model": "i3",
+      "display_trim": "Range Extender Rear Range Extender",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.6",
+      "thread_size": "M14x1.25B",
+      "oem_wheel_sizes": [
+        "5.5x19",
+        "5.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "175/55R20",
+          "175/60R19"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "8689568d-69d9-4f40-9a55-c7fc7a58e83d",
+      "year": 2018,
+      "make": "Audi",
+      "model": "A6 Quattro",
+      "display_trim": "Sport 2.0",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.5",
+      "thread_size": "M14x1.50B",
+      "oem_wheel_sizes": [
+        "9x19",
+        "9x20"
+      ],
+      "oem_tire_sizes": [
+        "255/35R20",
+        "255/40R19"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "f33a7e81-673e-428a-8d7f-32e44047c322",
+      "year": 2018,
+      "make": "GMC",
+      "model": "Terrain",
+      "display_trim": "Denali",
+      "bolt_pattern": "5x115",
+      "center_bore_mm": "70.3",
+      "thread_size": "M12x1.50",
+      "oem_wheel_sizes": [
+        "7.5x19"
+      ],
+      "oem_tire_sizes": [
+        "235/50R19"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "5281351e-5fe9-4d6a-8c22-83c7e5451c17",
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Golf R",
+      "display_trim": "Base",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.50B",
+      "oem_wheel_sizes": [
+        "7.5x18",
+        "8x19"
+      ],
+      "oem_tire_sizes": [
+        "225/40R18",
+        "235/35R19"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "352c8125-a679-4d58-85ce-483f0f9236f2",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "370Z",
+      "display_trim": "Heritage Edition Front Heritage Edition",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "66.1",
+      "thread_size": "M12x1.25",
+      "oem_wheel_sizes": [
+        "8x18"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "225/50R18"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "cad4afac-8b11-43ca-a7b7-19f6a8af540e",
+      "year": 2018,
+      "make": "Mini",
+      "model": "Cooper",
+      "display_trim": "John Cooper Works Hardtop",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.6",
+      "thread_size": "M14x1.25B",
+      "oem_wheel_sizes": [
+        "7.5x18",
+        "7x17"
+      ],
+      "oem_tire_sizes": [
+        "205/40R18",
+        "205/45R17"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "9e61f484-51af-4dd5-b2f7-ba1608f0a00f",
+      "year": 2018,
+      "make": "Hyundai",
+      "model": "Kona",
+      "display_trim": "Ultimate",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.50",
+      "oem_wheel_sizes": [
+        "7.5x18"
+      ],
+      "oem_tire_sizes": [
+        "235/45R18"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "8ceabd7b-a5e8-4dd8-b624-6bb47801b735",
+      "year": 2018,
+      "make": "Lincoln",
+      "model": "MKC",
+      "display_trim": "Reserve",
+      "bolt_pattern": "5x108",
+      "center_bore_mm": "63.4",
+      "thread_size": "M12x1.50",
+      "oem_wheel_sizes": [
+        "8x18",
+        "8x19",
+        "9x20"
+      ],
+      "oem_tire_sizes": [
+        "235/45R19",
+        "235/50R18",
+        "245/45R19",
+        "255/40R20"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "847092f0-0b17-48c3-ac2c-58bfb431a7c9",
+      "year": 2018,
+      "make": "BMW",
+      "model": "430i Gran Coupe",
+      "display_trim": "Base Rear Base",
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "72.6",
+      "thread_size": "M14x1.25B",
+      "oem_wheel_sizes": [
+        "8.5x18",
+        "9x19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "255/35R19",
+          "255/40R18",
+          "255/40ZR18"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "100e9a97-b0d4-4456-9a13-5bb179032d43",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "718 Cayman",
+      "display_trim": "GTS Front GTS",
+      "bolt_pattern": "5x130",
+      "center_bore_mm": "71.5",
+      "thread_size": "M14x1.50B",
+      "oem_wheel_sizes": [
+        "8.5x20",
+        "8x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "235/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "8b9bbdcb-a566-4430-8914-c964e0c0bf19",
+      "year": 2018,
+      "make": "Acura",
+      "model": "RLX",
+      "display_trim": "Sport Hybrid SH-AWD",
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "thread_size": "M14x1.50",
+      "oem_wheel_sizes": [
+        "8x19"
+      ],
+      "oem_tire_sizes": [
+        "245/40R19"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "e9693dbc-2af2-4875-8c1f-83c6753eeb4c",
+      "year": 2018,
+      "make": "Cadillac",
+      "model": "CTS",
+      "display_trim": "Vsport Premium Luxury Front Vsport Premium Luxury",
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "66.9",
+      "thread_size": "M14x1.50",
+      "oem_wheel_sizes": [
+        "8.5x18"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/40R18"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "e3e6891a-4a7f-42a3-a9e9-239c23fc9139",
+      "year": 2018,
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "display_trim": "Spider Front Spider",
+      "bolt_pattern": "5x98",
+      "center_bore_mm": "58.1",
+      "thread_size": "M12x1.25B",
+      "oem_wheel_sizes": [
+        "7x17",
+        "7x18"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "205/40ZR18",
+          "205/45ZR17"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "da2b2a8e-1652-46ef-8096-805a2cb3b297",
+      "year": 2018,
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Carrera 4S Front Carrera 4S",
+      "bolt_pattern": "5x130",
+      "center_bore_mm": "71.5",
+      "thread_size": "M14x1.50B",
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "e5c9e57f-aede-4497-8d9a-c24a0582ff6f",
+      "year": 2018,
+      "make": "Nissan",
+      "model": "Kicks",
+      "display_trim": "S",
+      "bolt_pattern": "4x100",
+      "center_bore_mm": "60.1",
+      "thread_size": "M12x1.25",
+      "oem_wheel_sizes": [
+        "6x16"
+      ],
+      "oem_tire_sizes": [
+        "205/60R16"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "7c33ac39-d26e-45b3-90a1-718f855f94c6",
+      "year": 2018,
+      "make": "Mitsubishi",
+      "model": "Outlander Sport",
+      "display_trim": "SEL",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "67.1",
+      "thread_size": "M12x1.50",
+      "oem_wheel_sizes": [
+        "7x18"
+      ],
+      "oem_tire_sizes": [
+        "P225/55R18"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "0db19fc5-0e70-40af-8d00-4adf7e63f62d",
+      "year": 2018,
+      "make": "BMW",
+      "model": "640i Gran Coupe",
+      "display_trim": "Base Rear Base",
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "72.6",
+      "thread_size": "M14x1.25B",
+      "oem_wheel_sizes": [
+        "9x19",
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "275/30R20",
+          "275/35R19"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "e789bc95-870d-4ac3-a1d3-c119a8ad8a46",
+      "year": 2018,
+      "make": "Audi",
+      "model": "S5 Sportback",
+      "display_trim": "Prestige",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.5",
+      "thread_size": "M14x1.50B",
+      "oem_wheel_sizes": [
+        "8.5x18",
+        "8.5x19",
+        "9x19"
+      ],
+      "oem_tire_sizes": [
+        "245/40R18",
+        "255/35R19",
+        "255/35ZR19"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "cfcefa62-4b71-41c8-a616-461d3b4153ab",
+      "year": 2018,
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "display_trim": "Coast",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "57.1",
+      "thread_size": "M14x1.50B",
+      "oem_wheel_sizes": [
+        "7x17"
+      ],
+      "oem_tire_sizes": [
+        "215/55R17"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "485d6799-62af-4abb-af85-b866be43ba4f",
+      "year": 2018,
+      "make": "Chevrolet",
+      "model": "Trax",
+      "display_trim": "Premier",
+      "bolt_pattern": "5x105",
+      "center_bore_mm": "56.6",
+      "thread_size": "M12x1.50",
+      "oem_wheel_sizes": [
+        "7x18"
+      ],
+      "oem_tire_sizes": [
+        "P215/55R18"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "1d14165f-aa83-428d-bb5b-11d0297a350b",
+      "year": 2018,
+      "make": "Volvo",
+      "model": "XC60",
+      "display_trim": "T5 R-Design",
+      "bolt_pattern": "5x108",
+      "center_bore_mm": "63.5",
+      "thread_size": "M14x1.50",
+      "oem_wheel_sizes": [
+        "7.5x19",
+        "8.5x21"
+      ],
+      "oem_tire_sizes": [
+        "235/55R19",
+        "255/40R21"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "b2a18cef-3b4c-4615-b5be-9675a2788152",
+      "year": 2018,
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "display_trim": "First Edition",
+      "bolt_pattern": "5x108",
+      "center_bore_mm": "63.4",
+      "thread_size": "M14x1.50",
+      "oem_wheel_sizes": [
+        "8.5x20",
+        "8.5x21",
+        "9x22"
+      ],
+      "oem_tire_sizes": [
+        "255/50R20",
+        "265/40R22",
+        "265/45R21"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "a6ac7b04-3552-4ee7-b420-8a5577ad6e13",
+      "year": 2018,
+      "make": "Mercedes-Benz",
+      "model": "S560",
+      "display_trim": "Cabriolet Front Cabriolet",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.6",
+      "thread_size": "M14x1.50B",
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/40R20",
+          "245/45R19"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "6a31e57b-1adb-4e3f-ac2a-967863d39c59",
+      "year": 2018,
+      "make": "Volvo",
+      "model": "S60",
+      "display_trim": "T6 R-Design Platinum",
+      "bolt_pattern": "5x108",
+      "center_bore_mm": "63.4",
+      "thread_size": "M14x1.50",
+      "oem_wheel_sizes": [
+        "8x19"
+      ],
+      "oem_tire_sizes": [
+        "235/40R19"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "1c70a000-325c-46e5-ad7b-a09261a38868",
+      "year": 2018,
+      "make": "McLaren",
+      "model": "570S",
+      "display_trim": "Spider Front Spider",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.6",
+      "thread_size": "M12x1.50",
+      "oem_wheel_sizes": [
+        "8x19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "225/35ZR19"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    }
+  ],
+  "frontRearTrims": [
+    {
+      "n": 678
+    }
+  ],
+  "frontRearTrimSamples": [
+    {
+      "id": "0f842ac9-45c0-4187-b1dc-fc7ef4f58d7f",
+      "make": "Acura",
+      "model": "NSX",
+      "display_trim": "Base Front Base",
+      "raw_trim": "Base Front Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR19"
+        ]
+      }
+    },
+    {
+      "id": "dc3ce80f-5435-4d1a-bb93-84ed7e831cf2",
+      "make": "Acura",
+      "model": "NSX",
+      "display_trim": "Base Rear Base",
+      "raw_trim": "Base Rear Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "4e035628-8f15-420f-b3fb-338deac20503",
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "display_trim": "Base Front Base",
+      "raw_trim": "Base Front Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "7x17",
+        "7x18"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "205/40ZR18",
+          "205/45ZR17"
+        ]
+      }
+    },
+    {
+      "id": "5625e847-7479-47ef-a4bd-d474494e58d7",
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "display_trim": "Base Rear Base",
+      "raw_trim": "Base Rear Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8x18"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "235/35ZR19",
+          "235/40ZR18"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "e3e6891a-4a7f-42a3-a9e9-239c23fc9139",
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "display_trim": "Spider Front Spider",
+      "raw_trim": "Spider Front Spider",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "7x17",
+        "7x18"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "205/40ZR18",
+          "205/45ZR17"
+        ]
+      }
+    },
+    {
+      "id": "62bd94e2-e81a-4cf8-81da-0da389f58c3d",
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "display_trim": "Spider Rear Spider",
+      "raw_trim": "Spider Rear Spider",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8x18"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "235/35ZR19",
+          "235/40ZR18"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "56845fbd-3bde-4f7d-bc33-761928a51d13",
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "display_trim": "Quadrifoglio Front Quadrifoglio",
+      "raw_trim": "Quadrifoglio Front Quadrifoglio",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR19"
+        ]
+      }
+    },
+    {
+      "id": "1ed2d1a5-8cfe-4e69-baf0-b4c28d1570df",
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "display_trim": "Quadrifoglio Rear Quadrifoglio",
+      "raw_trim": "Quadrifoglio Rear Quadrifoglio",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "10x19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "285/30ZR19"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "45f416ad-178f-4190-97d6-7dd95ab12f25",
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "display_trim": "Ti w/Sport Pkg. Front Ti w/Sport Pkg.",
+      "raw_trim": "Ti w/Sport Pkg. Front Ti w/Sport Pkg.",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8x19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "225/40R19"
+        ]
+      }
+    },
+    {
+      "id": "869654ef-9803-487b-9299-0ae528a368e4",
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "display_trim": "Ti w/Sport Pkg. Rear Ti w/Sport Pkg.",
+      "raw_trim": "Ti w/Sport Pkg. Rear Ti w/Sport Pkg.",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "9x19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "255/35R19"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "2db3bc9f-6cfc-4641-8639-791b642f7d1f",
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "display_trim": "Quadrifoglio Front Quadrifoglio",
+      "raw_trim": "Quadrifoglio Front Quadrifoglio",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "255/45R20"
+        ]
+      }
+    },
+    {
+      "id": "bf074b0b-9a1d-4a46-a90d-1c7ccddc342c",
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "display_trim": "Quadrifoglio Rear Quadrifoglio",
+      "raw_trim": "Quadrifoglio Rear Quadrifoglio",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "10x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "285/40R20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "dbd1e26b-6bf0-4e7d-a0d3-d6796fc7c7bc",
+      "make": "Aston Martin",
+      "model": "DB11",
+      "display_trim": "Base Front Base",
+      "raw_trim": "Base Front Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "255/40ZR20"
+        ]
+      }
+    },
+    {
+      "id": "0eb76e22-31d2-41e0-8098-f0acc78e233c",
+      "make": "Aston Martin",
+      "model": "DB11",
+      "display_trim": "Base Rear Base",
+      "raw_trim": "Base Rear Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "9928e6b3-94fd-406c-83bd-26d16231fe91",
+      "make": "Aston Martin",
+      "model": "Rapide",
+      "display_trim": "S Front S",
+      "raw_trim": "S Front S",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/40ZR20"
+        ]
+      }
+    },
+    {
+      "id": "ebf2bd85-fd17-44fb-8100-1363f6a01d60",
+      "make": "Aston Martin",
+      "model": "Rapide",
+      "display_trim": "S Rear S",
+      "raw_trim": "S Rear S",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "d1c4fe22-402f-41ac-bd54-92ceb80e9497",
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "display_trim": "S Front S",
+      "raw_trim": "S Front S",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "255/35ZR20"
+        ]
+      }
+    },
+    {
+      "id": "a34f306a-eeea-44bc-a336-81f9dc4e2cac",
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "display_trim": "S Rear S",
+      "raw_trim": "S Rear S",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "b13e47f7-b329-4e52-ad85-30698472193f",
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "display_trim": "S Volante Front S Volante",
+      "raw_trim": "S Volante Front S Volante",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "255/35ZR20"
+        ]
+      }
+    },
+    {
+      "id": "fd75a5aa-2eb2-43c7-bf0a-6bb7d61c5765",
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "display_trim": "S Volante Rear S Volante",
+      "raw_trim": "S Volante Rear S Volante",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "e27e4100-a7cd-4c12-999c-1c3aa542dbd7",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Base Front Base",
+      "raw_trim": "Base Front Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/30ZR20",
+          "245/35ZR19"
+        ]
+      }
+    },
+    {
+      "id": "15a7d40b-d698-4b00-8db3-384732957b2a",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Base Rear Base",
+      "raw_trim": "Base Rear Base",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x19",
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR19",
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "868008dc-54ba-49b6-a6bb-443833058e85",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Plus Front Plus",
+      "raw_trim": "Plus Front Plus",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/30ZR20",
+          "245/35ZR19"
+        ]
+      }
+    },
+    {
+      "id": "7e183814-9943-4f20-88bb-af509d5d37ad",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Plus Rear Plus",
+      "raw_trim": "Plus Rear Plus",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x19",
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR19",
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "66ef5cc6-6af6-466e-ab2f-a133116fad51",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Plus Spyder Front Plus Spyder",
+      "raw_trim": "Plus Spyder Front Plus Spyder",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/30ZR20",
+          "245/35ZR19"
+        ]
+      }
+    },
+    {
+      "id": "23ab2cfe-2e12-4009-803c-42fee4ad9b7e",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Plus Spyder Rear Plus Spyder",
+      "raw_trim": "Plus Spyder Rear Plus Spyder",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x19",
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR19",
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "ded6763d-87b7-4dc8-9a1b-edec990f6de1",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "RWS Front RWS",
+      "raw_trim": "RWS Front RWS",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/30ZR20",
+          "245/35ZR19"
+        ]
+      }
+    },
+    {
+      "id": "7e5057fa-231c-4acf-8f9c-28f036af8ade",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "RWS Rear RWS",
+      "raw_trim": "RWS Rear RWS",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x19",
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR19",
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    },
+    {
+      "id": "f59356d7-ed8d-4df4-b2be-5bea8ffe8116",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Spyder Front Spyder",
+      "raw_trim": "Spyder Front Spyder",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "8.5x19",
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/30ZR20",
+          "245/35ZR19"
+        ]
+      }
+    },
+    {
+      "id": "4abdd811-d5b9-4048-a607-269d1efa33bc",
+      "make": "Audi",
+      "model": "R8",
+      "display_trim": "Spyder Rear Spyder",
+      "raw_trim": "Spyder Rear Spyder",
+      "submodel": null,
+      "oem_wheel_sizes": [
+        "11x19",
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR19",
+          "305/30ZR20"
+        ],
+        "front": []
+      }
+    }
+  ],
+  "frontRearAcrossYears": [
+    {
+      "year": 2018,
+      "n": 678
+    },
+    {
+      "year": 2020,
+      "n": 6
+    },
+    {
+      "year": 2021,
+      "n": 5
+    },
+    {
+      "year": 2022,
+      "n": 5
+    },
+    {
+      "year": 2023,
+      "n": 5
+    },
+    {
+      "year": 2024,
+      "n": 5
+    },
+    {
+      "year": 2025,
+      "n": 5
+    },
+    {
+      "year": 2026,
+      "n": 5
+    }
+  ],
+  "missingFields": [
+    {
+      "id": "d441b233-9d98-4aa5-92fb-f35174d8ec9a",
+      "make": "Ferrari",
+      "model": "812 Superfast",
+      "display_trim": "Base Rear Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "11.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "315/35ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "92d0d0e4-9b53-4f9c-bcd7-b31a076cc73d",
+      "make": "Ferrari",
+      "model": "812 Superfast",
+      "display_trim": "Base Front Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "10x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "275/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "2b1865cd-cb7e-47c0-aede-998bd7f0d66a",
+      "make": "Ferrari",
+      "model": "GTC4Lusso",
+      "display_trim": "(Michelin Tires) Front (Michelin Tires)",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "09d1f754-827d-4c34-ad03-5e9207b92497",
+      "make": "Ferrari",
+      "model": "GTC4Lusso",
+      "display_trim": "Base Front Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "651331ce-5eeb-456b-adf6-a85b09e278e2",
+      "make": "Ferrari",
+      "model": "GTC4Lusso",
+      "display_trim": "(Michelin Tires) Rear (Michelin Tires)",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "10.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "96cd9f19-8c5a-4ad4-8770-7cc29cf2db73",
+      "make": "Ferrari",
+      "model": "GTC4Lusso",
+      "display_trim": "Base Rear Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "10.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "19784583-3765-48a2-8509-f5f7eb1b9071",
+      "make": "Ferrari",
+      "model": "GTC4Lusso T",
+      "display_trim": "(Michelin Tires) Front (Michelin Tires)",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "79aa91fc-fd54-410b-bd1e-ae178aa1e053",
+      "make": "Ferrari",
+      "model": "GTC4Lusso T",
+      "display_trim": "(Michelin Tires) Rear (Michelin Tires)",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "10.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "e1056452-35cb-4d75-a503-7e943d48cbf4",
+      "make": "Ferrari",
+      "model": "GTC4Lusso T",
+      "display_trim": "Base Rear Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "10.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "295/35ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "af47fad6-a7df-4e69-a45b-6dde40136c26",
+      "make": "Ferrari",
+      "model": "GTC4Lusso T",
+      "display_trim": "Base Front Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "480f6649-4f78-4128-a2b1-fb1c71956c28",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "King Ranch 4x4 (DRW) w/Snow Plow Pkg.",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "d0ef0093-0549-4dee-b095-5685bc172ef4",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "XL 4x4 (DRW) w/Snow Plow Pkg.",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "3a107432-c386-4cc0-a7cd-2bcd8bf06df6",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "XLT 4x2 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "f1570e85-99ec-4b62-978e-71a86d93056c",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "XLT 4x4 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "16374ad1-6f0a-4779-9a8a-937e1932d404",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "Lariat 4x2 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "a4445559-3fdb-48a2-89a7-2c184a40a0f1",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "Lariat 4x4 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "81c39b8b-3d26-41d7-9374-b35349a743bf",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "Lariat 4x4 (DRW) w/Snow Plow Pkg.",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "b046f423-aae7-4d4d-8f8e-d3034a531a9d",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "King Ranch 4x2 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "b8e56c3c-a5f5-456c-b9d5-61426f16f711",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "King Ranch 4x4 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "2b45e3db-5125-4a4e-bbae-c366fca2c34e",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "Platinum (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "ff312564-1692-4982-a4d8-30eceee9c2d5",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "XL 4x2 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "374dc1bc-c203-424e-9205-f4a20b4c5d0c",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "XL 4x4 (DRW)",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "88f730bb-fa2c-4ded-8600-212cfb5f4649",
+      "make": "Ford",
+      "model": "F-350 Super Duty",
+      "display_trim": "XLT 4x4 (DRW) w/Snow Plow Pkg.",
+      "bolt_pattern": "8x200",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "LT245/75R17/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "79b99bd0-38ac-4600-a0c5-117a25af1b0b",
+      "make": "Ford",
+      "model": "GT",
+      "display_trim": "Base Rear Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "11.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "325/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "93ab84d4-27e0-46e0-8990-7fc2221e7a7d",
+      "make": "Ford",
+      "model": "GT",
+      "display_trim": "Base Front Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "d22815ac-e792-4195-b034-a97963ef7214",
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "display_trim": "LP740-4 S (Center Lock) Front LP740-4 S (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": "57.0",
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "255/30ZR20"
+        ]
+      },
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "ce56838b-717d-49eb-b97f-d3860a4c468f",
+      "make": "Lamborghini",
+      "model": "Aventador",
+      "display_trim": "LP740-4 S (Center Lock) Rear LP740-4 S (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": "70.0",
+      "oem_wheel_sizes": [
+        "13x21"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "355/25ZR21"
+        ],
+        "front": []
+      },
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "17f9a270-df97-46b5-b045-a2858db4ff4e",
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "display_trim": "Performante (Center Lock) Rear Performante (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": "66.0",
+      "oem_wheel_sizes": [
+        "11x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "9f17faae-f31c-4b2e-9d3e-3b76339ba1f0",
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "display_trim": "Performante (Center Lock) Front Performante (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": "57.0",
+      "oem_wheel_sizes": [
+        "8.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/30ZR20"
+        ]
+      },
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "a541f9be-c1b5-4398-81e4-17372d454ae8",
+      "make": "Lotus",
+      "model": "Evora",
+      "display_trim": "Sport 410 Front Sport 410",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "19"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "235/35ZR19"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "d74a5a6a-b88e-4182-94ae-1d979d5af32c",
+      "make": "Lotus",
+      "model": "Evora",
+      "display_trim": "Sport 410 Rear Sport 410",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "285/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "3a04571e-80e3-48c8-8de0-c342c88a426a",
+      "make": "Mercedes-Benz Minivans",
+      "model": "Metris",
+      "display_trim": "(Alloy Wheels)",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "7x17"
+      ],
+      "oem_tire_sizes": [
+        "225/55R17"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "57c24608-7acb-4d9e-a48b-d1c55871e42c",
+      "make": "Mercedes-Benz Minivans",
+      "model": "Metris",
+      "display_trim": "(Steel Wheels)",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "6.5x17"
+      ],
+      "oem_tire_sizes": [
+        "225/55R17"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "dddcedeb-6089-4f60-a608-6563df3913ff",
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500",
+      "display_trim": "(DRW)",
+      "bolt_pattern": "6x205",
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "5.5x16"
+      ],
+      "oem_tire_sizes": [
+        "LT215/85R16/E"
+      ],
+      "source": "tgp_solutions"
+    },
+    {
+      "id": "e906d45f-7646-4e46-b22d-28aa0fafb801",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Targa 4 GTS (Center Lock) Front Targa 4 GTS (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "1309d5e5-aca6-4356-96d6-442f976b413a",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Targa 4 GTS (Center Lock) Rear Targa 4 GTS (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "12x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "9b23716a-ecfc-4b4a-865c-f55845503581",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Turbo (Center Lock) Front Turbo (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "84c7da42-fb2d-4a22-a4fd-c33cd3239bf7",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "GT3 Front GT3",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "efb8c63d-45cb-48c0-a40b-d5deddcdd96d",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Turbo S Exclusive Series (Center Lock) Rear Turbo S Exclusive Series (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "11.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "5de686f9-fb13-4524-90f2-0f975fb32417",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Carrera GTS (Center Lock) Rear Carrera GTS (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "12x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "437f686c-bca9-4b7e-8fd8-8f70f629887f",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "GT3 RS Front GT3 RS",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "265/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "9aba0989-ee61-49fa-b8b7-6867cb0f7f5f",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "GT3 RS Rear GT3 RS",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "12.5x21"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "325/30ZR21"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "b4126e77-8581-44d1-90d8-d6e543263662",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Turbo (Center Lock) Rear Turbo (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "11.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "5062400a-2a9f-4f93-94f5-fa5392575719",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Turbo S (Center Lock) Front Turbo S (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "4c59c587-11b4-4736-961c-949c496b4870",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "GT2 RS Front GT2 RS",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "265/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "e560d9f6-6299-45d4-ba79-c8dc38039d43",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "GT2 RS Rear GT2 RS",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "12.5x21"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "325/30ZR21"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "dc688a7f-d86e-47bd-a5d0-f22afda38096",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Carrera GTS (Center Lock) Front Carrera GTS (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "cb0c4c3c-81bf-4888-a358-27d1abe786d4",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "GT3 Rear GT3",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "12x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "623d84bb-90a5-4d81-8a30-3cd8903c4225",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Turbo S Exclusive Series (Center Lock) Front Turbo S Exclusive Series (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "e718cd3f-8873-4543-b684-7981f317bb2a",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Turbo S (Center Lock) Rear Turbo S (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "11.5x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "1b7f93e9-d447-4834-a922-c908574ba315",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Carrera 4 GTS (Center Lock) Rear Carrera 4 GTS (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "12x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [
+          "305/30ZR20"
+        ],
+        "front": []
+      },
+      "source": "deprecated-staggered-split"
+    },
+    {
+      "id": "2a986a90-b350-4108-be32-c061544804b8",
+      "make": "Porsche",
+      "model": "911",
+      "display_trim": "Carrera 4 GTS (Center Lock) Front Carrera 4 GTS (Center Lock)",
+      "bolt_pattern": null,
+      "center_bore_mm": null,
+      "oem_wheel_sizes": [
+        "9x20"
+      ],
+      "oem_tire_sizes": {
+        "rear": [],
+        "front": [
+          "245/35ZR20"
+        ]
+      },
+      "source": "deprecated-staggered-split"
+    }
+  ],
+  "missingFieldsByMake": [
+    {
+      "make": "Porsche",
+      "n": 18
+    },
+    {
+      "make": "Ford",
+      "n": 15
+    },
+    {
+      "make": "Ferrari",
+      "n": 10
+    },
+    {
+      "make": "Lamborghini",
+      "n": 4
+    },
+    {
+      "make": "Lotus",
+      "n": 2
+    },
+    {
+      "make": "Mercedes-Benz Minivans",
+      "n": 2
+    },
+    {
+      "make": "Mercedes-Benz Vans",
+      "n": 1
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "input": "Mercedes-Benz",
+    "canonical": "mercedes",
+    "candidates": "mercedes-benz|mercedes",
+    "before_reachable": 1384,
+    "after_reachable": 2975,
+    "recovered": 1591
+  },
+  {
+    "input": "Mercedes",
+    "canonical": "mercedes",
+    "candidates": "mercedes|mercedes-benz",
+    "before_reachable": 1384,
+    "after_reachable": 2975,
+    "recovered": 1591
+  },
+  {
+    "input": "Land Rover",
+    "canonical": "land-rover",
+    "candidates": "land-rover",
+    "before_reachable": 0,
+    "after_reachable": 627,
+    "recovered": 627
+  },
+  {
+    "input": "Alfa Romeo",
+    "canonical": "alfa-romeo",
+    "candidates": "alfa-romeo",
+    "before_reachable": 0,
+    "after_reachable": 119,
+    "recovered": 119
+  },
+  {
+    "input": "Aston Martin",
+    "canonical": "aston-martin",
+    "candidates": "aston-martin",
+    "before_reachable": 0,
+    "after_reachable": 40,
+    "recovered": 40
+  },
+  {
+    "input": "Rolls-Royce",
+    "canonical": "rolls-royce",
+    "candidates": "rolls-royce",
+    "before_reachable": 32,
+    "after_reachable": 32,
+    "recovered": 0
+  },
+  {
+    "input": "Toyota",
+    "canonical": "toyota",
+    "candidates": "toyota",
+    "before_reachable": 2534,
+    "after_reachable": 2534,
+    "recovered": 0
+  },
+  {
+    "input": "Ford",
+    "canonical": "ford",
+    "candidates": "ford",
+    "before_reachable": 2772,
+    "after_reachable": 2772,
+    "recovered": 0
+  },
+  {
+    "input": "Chevrolet",
+    "canonical": "chevrolet",
+    "candidates": "chevrolet",
+    "before_reachable": 3175,
+    "after_reachable": 3175,
+    "recovered": 0
+  },
+  {
+    "input": "Chevy",
+    "canonical": "chevrolet",
+    "candidates": "chevy|chevrolet",
+    "before_reachable": 3175,
+    "after_reachable": 3175,
+    "recovered": 0
+  },
+  {
+    "input": "Jeep",
+    "canonical": "jeep",
+    "candidates": "jeep",
+    "before_reachable": 1191,
+    "after_reachable": 1191,
+    "recovered": 0
+  },
+  {
+    "input": "RAM",
+    "canonical": "ram",
+    "candidates": "ram",
+    "before_reachable": 1000,
+    "after_reachable": 1000,
+    "recovered": 0
+  },
+  {
+    "input": "MINI",
+    "canonical": "mini",
+    "candidates": "mini",
+    "before_reachable": 363,
+    "after_reachable": 363,
+    "recovered": 0
+  },
+  {
+    "input": "BMW",
+    "canonical": "bmw",
+    "candidates": "bmw",
+    "before_reachable": 1719,
+    "after_reachable": 1719,
+    "recovered": 0
+  }
+]

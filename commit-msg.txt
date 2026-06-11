@@ -1,0 +1,13 @@
+fix: expand default offset range for package generation
+
+Root cause: Default offset range (20-50mm) rejected ALL classic wheels
+with negative/low offsets, causing ~3,100 vehicles to fail package
+generation despite having inventory.
+
+Classic 14-15" wheels typically have offsets -10 to +15mm.
+Modern cars have +30 to +50mm.
+
+Change defaults from 20-50 to -15 to +55, covering both.
+The ±3% overall-diameter check remains the primary safety guard.
+
+Estimated recovery: 3,098 vehicles

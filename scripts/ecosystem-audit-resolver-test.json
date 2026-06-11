@@ -1,0 +1,93 @@
+[
+  {
+    "input": "Mercedes-Benz",
+    "canonical": "mercedes",
+    "reachable_via_resolver": 1384,
+    "total_brand_records": 1384,
+    "unreachable": 0
+  },
+  {
+    "input": "Mercedes",
+    "canonical": "mercedes",
+    "reachable_via_resolver": 1384,
+    "total_brand_records": 1384,
+    "unreachable": 0
+  },
+  {
+    "input": "Land Rover",
+    "canonical": "land-rover",
+    "reachable_via_resolver": 0,
+    "total_brand_records": 627,
+    "unreachable": 627
+  },
+  {
+    "input": "Alfa Romeo",
+    "canonical": "alfa-romeo",
+    "reachable_via_resolver": 0,
+    "total_brand_records": 119,
+    "unreachable": 119
+  },
+  {
+    "input": "Aston Martin",
+    "canonical": "aston-martin",
+    "reachable_via_resolver": 0,
+    "total_brand_records": 40,
+    "unreachable": 40
+  },
+  {
+    "input": "RAM",
+    "canonical": "ram",
+    "reachable_via_resolver": 1000,
+    "total_brand_records": 1000,
+    "unreachable": 0
+  },
+  {
+    "input": "Ram",
+    "canonical": "ram",
+    "reachable_via_resolver": 1000,
+    "total_brand_records": 1000,
+    "unreachable": 0
+  },
+  {
+    "input": "MINI",
+    "canonical": "mini",
+    "reachable_via_resolver": 363,
+    "total_brand_records": 363,
+    "unreachable": 0
+  },
+  {
+    "input": "Toyota",
+    "canonical": "toyota",
+    "reachable_via_resolver": 2534,
+    "total_brand_records": 2534,
+    "unreachable": 0
+  },
+  {
+    "input": "Ford",
+    "canonical": "ford",
+    "reachable_via_resolver": 2772,
+    "total_brand_records": 2772,
+    "unreachable": 0
+  },
+  {
+    "input": "BMW",
+    "canonical": "bmw",
+    "reachable_via_resolver": 1719,
+    "total_brand_records": 1719,
+    "unreachable": 0
+  },
+  {
+    "input": "smart",
+    "canonical": "smart",
+    "reachable_via_resolver": 2,
+    "total_brand_records": 2,
+    "unreachable": 0
+  },
+  {
+    "input": "Rolls-Royce",
+    "canonical": "rolls-royce",
+    "reachable_via_resolver": 32,
+    "total_brand_records": 32,
+    "unreachable": 0
+  }
+]

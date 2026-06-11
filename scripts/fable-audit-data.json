@@ -1,0 +1,3804 @@
+{
+  "overallStats": {
+    "total_records": 31309,
+    "min_year": 2000,
+    "max_year": 2026,
+    "unique_makes": 93,
+    "unique_models": 1151,
+    "unique_ymmt": 29926
+  },
+  "yearCoverage": [
+    {
+      "year": 2000,
+      "count": 553
+    },
+    {
+      "year": 2001,
+      "count": 614
+    },
+    {
+      "year": 2002,
+      "count": 659
+    },
+    {
+      "year": 2003,
+      "count": 728
+    },
+    {
+      "year": 2004,
+      "count": 779
+    },
+    {
+      "year": 2005,
+      "count": 831
+    },
+    {
+      "year": 2006,
+      "count": 847
+    },
+    {
+      "year": 2007,
+      "count": 889
+    },
+    {
+      "year": 2008,
+      "count": 946
+    },
+    {
+      "year": 2009,
+      "count": 988
+    },
+    {
+      "year": 2010,
+      "count": 1015
+    },
+    {
+      "year": 2011,
+      "count": 1051
+    },
+    {
+      "year": 2012,
+      "count": 1091
+    },
+    {
+      "year": 2013,
+      "count": 1102
+    },
+    {
+      "year": 2014,
+      "count": 1167
+    },
+    {
+      "year": 2015,
+      "count": 1186
+    },
+    {
+      "year": 2016,
+      "count": 1241
+    },
+    {
+      "year": 2017,
+      "count": 1291
+    },
+    {
+      "year": 2018,
+      "count": 2480
+    },
+    {
+      "year": 2019,
+      "count": 1380
+    },
+    {
+      "year": 2020,
+      "count": 1546
+    },
+    {
+      "year": 2021,
+      "count": 1534
+    },
+    {
+      "year": 2022,
+      "count": 1578
+    },
+    {
+      "year": 2023,
+      "count": 1530
+    },
+    {
+      "year": 2024,
+      "count": 1604
+    },
+    {
+      "year": 2025,
+      "count": 1427
+    },
+    {
+      "year": 2026,
+      "count": 1252
+    }
+  ],
+  "makeCoverage": [
+    {
+      "make": "Toyota",
+      "count": 2385,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Chevrolet",
+      "count": 2232,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Ford",
+      "count": 2018,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Nissan",
+      "count": 1659,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Mercedes-Benz",
+      "count": 1653,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "BMW",
+      "count": 1602,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Mercedes",
+      "count": 1191,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Honda",
+      "count": 1185,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Subaru",
+      "count": 1136,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Lexus",
+      "count": 1097,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "GMC",
+      "count": 1069,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Audi",
+      "count": 991,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Jeep",
+      "count": 979,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "RAM",
+      "count": 886,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Porsche",
+      "count": 845,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Volkswagen",
+      "count": 807,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Hyundai",
+      "count": 760,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Kia",
+      "count": 756,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Dodge",
+      "count": 600,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Land Rover",
+      "count": 591,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Acura",
+      "count": 571,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Cadillac",
+      "count": 564,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Buick",
+      "count": 549,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Mitsubishi",
+      "count": 529,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Mazda",
+      "count": 522,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Jaguar",
+      "count": 515,
+      "min_year": 2000,
+      "max_year": 2025
+    },
+    {
+      "make": "Volvo",
+      "count": 466,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Lincoln",
+      "count": 465,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "Infiniti",
+      "count": 411,
+      "min_year": 2004,
+      "max_year": 2026
+    },
+    {
+      "make": "Chrysler",
+      "count": 377,
+      "min_year": 2000,
+      "max_year": 2026
+    },
+    {
+      "make": "MINI",
+      "count": 344,
+      "min_year": 2002,
+      "max_year": 2026
+    },
+    {
+      "make": "Genesis",
+      "count": 169,
+      "min_year": 2017,
+      "max_year": 2026
+    },
+    {
+      "make": "Alfa Romeo",
+      "count": 129,
+      "min_year": 2014,
+      "max_year": 2025
+    },
+    {
+      "make": "Tesla",
+      "count": 124,
+      "min_year": 2012,
+      "max_year": 2026
+    },
+    {
+      "make": "Maserati",
+      "count": 88,
+      "min_year": 2007,
+      "max_year": 2026
+    },
+    {
+      "make": "Scion",
+      "count": 82,
+      "min_year": 2004,
+      "max_year": 2016
+    },
+    {
+      "make": "Fiat",
+      "count": 55,
+      "min_year": 2012,
+      "max_year": 2025
+    },
+    {
+      "make": "Ferrari",
+      "count": 55,
+      "min_year": 2015,
+      "max_year": 2026
+    },
+    {
+      "make": "jeep",
+      "count": 51,
+      "min_year": 2021,
+      "max_year": 2024
+    },
+    {
+      "make": "Aston Martin",
+      "count": 48,
+      "min_year": 2005,
+      "max_year": 2026
+    },
+    {
+      "make": "Mercury",
+      "count": 47,
+      "min_year": 2000,
+      "max_year": 2011
+    },
+    {
+      "make": "Lamborghini",
+      "count": 45,
+      "min_year": 2011,
+      "max_year": 2026
+    },
+    {
+      "make": "Rolls-Royce",
+      "count": 44,
+      "min_year": 2017,
+      "max_year": 2026
+    },
+    {
+      "make": "Bentley",
+      "count": 41,
+      "min_year": 2016,
+      "max_year": 2026
+    },
+    {
+      "make": "Pontiac",
+      "count": 40,
+      "min_year": 2000,
+      "max_year": 2010
+    },
+    {
+      "make": "McLaren",
+      "count": 37,
+      "min_year": 2015,
+      "max_year": 2026
+    },
+    {
+      "make": "Ram",
+      "count": 37,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Lotus",
+      "count": 34,
+      "min_year": 2009,
+      "max_year": 2026
+    },
+    {
+      "make": "chevrolet",
+      "count": 28,
+      "min_year": 2022,
+      "max_year": 2024
+    },
+    {
+      "make": "Saturn",
+      "count": 27,
+      "min_year": 2000,
+      "max_year": 2010
+    },
+    {
+      "make": "Saab",
+      "count": 26,
+      "min_year": 2000,
+      "max_year": 2012
+    },
+    {
+      "make": "Suzuki",
+      "count": 25,
+      "min_year": 2000,
+      "max_year": 2013
+    },
+    {
+      "make": "Hummer",
+      "count": 19,
+      "min_year": 2000,
+      "max_year": 2010
+    },
+    {
+      "make": "Mini",
+      "count": 19,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "ford",
+      "count": 17,
+      "min_year": 2022,
+      "max_year": 2024
+    },
+    {
+      "make": "land rover",
+      "count": 15,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "Oldsmobile",
+      "count": 13,
+      "min_year": 2000,
+      "max_year": 2004
+    },
+    {
+      "make": "Toyota Minivans",
+      "count": 13,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "cadillac",
+      "count": 12,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "Rivian",
+      "count": 11,
+      "min_year": 2021,
+      "max_year": 2026
+    },
+    {
+      "make": "Isuzu",
+      "count": 11,
+      "min_year": 2000,
+      "max_year": 2004
+    },
+    {
+      "make": "Nissan Vans",
+      "count": 11,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Lucid",
+      "count": 11,
+      "min_year": 2022,
+      "max_year": 2024
+    },
+    {
+      "make": "tesla",
+      "count": 10,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "Ford Vans",
+      "count": 10,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Polestar",
+      "count": 9,
+      "min_year": 2020,
+      "max_year": 2026
+    },
+    {
+      "make": "Ford Minivans",
+      "count": 9,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Chrysler Minivans",
+      "count": 9,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "audi",
+      "count": 8,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "porsche",
+      "count": 8,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "Mercedes-Benz Vans",
+      "count": 7,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "RAM Minivans",
+      "count": 6,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Smart",
+      "count": 6,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "GMC Vans",
+      "count": 6,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "volkswagen",
+      "count": 6,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "Chevrolet Vans",
+      "count": 6,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Karma",
+      "count": 6,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "rivian",
+      "count": 6,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "Kia Minivans",
+      "count": 5,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Geo",
+      "count": 5,
+      "min_year": 2000,
+      "max_year": 2002
+    },
+    {
+      "make": "Honda Minivans",
+      "count": 5,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "RAM Vans",
+      "count": 5,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "lincoln",
+      "count": 5,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "bmw",
+      "count": 5,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "kia",
+      "count": 5,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "hyundai",
+      "count": 4,
+      "min_year": 2024,
+      "max_year": 2024
+    },
+    {
+      "make": "Dodge Minivans",
+      "count": 4,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Plymouth",
+      "count": 4,
+      "min_year": 2000,
+      "max_year": 2002
+    },
+    {
+      "make": "Nissan Minivans",
+      "count": 3,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Daewoo",
+      "count": 3,
+      "min_year": 2000,
+      "max_year": 2002
+    },
+    {
+      "make": "Mercedes-Benz Minivans",
+      "count": 2,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "Chevrolet Minivans",
+      "count": 2,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "make": "dodge",
+      "count": 1,
+      "min_year": 2023,
+      "max_year": 2023
+    }
+  ],
+  "missingDataCounts": {
+    "missing_bolt_pattern": 30,
+    "missing_center_bore": 64,
+    "empty_tire_sizes": 0,
+    "empty_wheel_sizes": 1,
+    "missing_trim": 0
+  },
+  "potentialDuplicates": [
+    {
+      "year": 2010,
+      "make": "RAM",
+      "model": "3500",
+      "display_trim": "SLT",
+      "count": 6
+    },
+    {
+      "year": 2014,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2006,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2013,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2008,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2009,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2005,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2006,
+      "make": "BMW",
+      "model": "3 Series",
+      "display_trim": "330i xDrive",
+      "count": 6
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2012,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2007,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 6
+    },
+    {
+      "year": 2021,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2002,
+      "make": "Cadillac",
+      "model": "escalade",
+      "display_trim": "Base",
+      "count": 5
+    },
+    {
+      "year": 2012,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2005,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2003,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2002,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 5
+    },
+    {
+      "year": 2002,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2003,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 5
+    },
+    {
+      "year": 2007,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2004,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2010,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2013,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2000,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 5
+    },
+    {
+      "year": 2009,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2006,
+      "make": "Cadillac",
+      "model": "escalade",
+      "display_trim": "Base",
+      "count": 5
+    },
+    {
+      "year": 2004,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 5
+    },
+    {
+      "year": 2015,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2015,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 5
+    },
+    {
+      "year": 2006,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2000,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2000,
+      "make": "Ford",
+      "model": "expedition",
+      "display_trim": "XLT",
+      "count": 5
+    },
+    {
+      "year": 2017,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2011,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2001,
+      "make": "Toyota",
+      "model": "tacoma",
+      "display_trim": "SR5",
+      "count": 5
+    },
+    {
+      "year": 2016,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2001,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 470",
+      "count": 5
+    },
+    {
+      "year": 2014,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2020,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2008,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2019,
+      "make": "Lexus",
+      "model": "lx",
+      "display_trim": "LX 570",
+      "count": 5
+    },
+    {
+      "year": 2012,
+      "make": "RAM",
+      "model": "1500",
+      "display_trim": "SLT",
+      "count": 4
+    },
+    {
+      "year": 2009,
+      "make": "RAM",
+      "model": "2500",
+      "display_trim": "SLT",
+      "count": 4
+    },
+    {
+      "year": 2011,
+      "make": "Toyota",
+      "model": "tundra",
+      "display_trim": "SR5",
+      "count": 4
+    },
+    {
+      "year": 2011,
+      "make": "Cadillac",
+      "model": "cts",
+      "display_trim": "Base",
+      "count": 4
+    },
+    {
+      "year": 2004,
+      "make": "Cadillac",
+      "model": "cts",
+      "display_trim": "Base",
+      "count": 4
+    },
+    {
+      "year": 2001,
+      "make": "BMW",
+      "model": "3 Series",
+      "display_trim": "330i xDrive",
+      "count": 4
+    },
+    {
+      "year": 2010,
+      "make": "RAM",
+      "model": "2500",
+      "display_trim": "SLT",
+      "count": 4
+    },
+    {
+      "year": 2005,
+      "make": "BMW",
+      "model": "3 Series",
+      "display_trim": "330i xDrive",
+      "count": 4
+    }
+  ],
+  "boltPatternDistribution": [
+    {
+      "bolt_pattern": "5x114.3",
+      "count": 9490
+    },
+    {
+      "bolt_pattern": "5x112",
+      "count": 5206
+    },
+    {
+      "bolt_pattern": "5x120",
+      "count": 3339
+    },
+    {
+      "bolt_pattern": "6x139.7",
+      "count": 2833
+    },
+    {
+      "bolt_pattern": "5x108",
+      "count": 1411
+    },
+    {
+      "bolt_pattern": "5x115",
+      "count": 1094
+    },
+    {
+      "bolt_pattern": "8x165.1",
+      "count": 977
+    },
+    {
+      "bolt_pattern": "5x127",
+      "count": 845
+    },
+    {
+      "bolt_pattern": "5x100",
+      "count": 845
+    },
+    {
+      "bolt_pattern": "5x130",
+      "count": 823
+    },
+    {
+      "bolt_pattern": "4x100",
+      "count": 538
+    },
+    {
+      "bolt_pattern": "6x135",
+      "count": 534
+    },
+    {
+      "bolt_pattern": "8x180",
+      "count": 467
+    },
+    {
+      "bolt_pattern": "5x110",
+      "count": 435
+    },
+    {
+      "bolt_pattern": "5x150",
+      "count": 412
+    },
+    {
+      "bolt_pattern": "8x170",
+      "count": 348
+    },
+    {
+      "bolt_pattern": "5x139.7",
+      "count": 324
+    },
+    {
+      "bolt_pattern": "6x120",
+      "count": 290
+    },
+    {
+      "bolt_pattern": "4x114.3",
+      "count": 181
+    },
+    {
+      "bolt_pattern": "6x114.3",
+      "count": 172
+    },
+    {
+      "bolt_pattern": "6x132",
+      "count": 133
+    },
+    {
+      "bolt_pattern": "4x108",
+      "count": 104
+    },
+    {
+      "bolt_pattern": "6x127",
+      "count": 94
+    },
+    {
+      "bolt_pattern": "5x105",
+      "count": 94
+    },
+    {
+      "bolt_pattern": "5x120.65",
+      "count": 91
+    },
+    {
+      "bolt_pattern": "5x135",
+      "count": 33
+    },
+    {
+      "bolt_pattern": "8x200",
+      "count": 33
+    },
+    {
+      "bolt_pattern": "4x98",
+      "count": 27
+    },
+    {
+      "bolt_pattern": "5x160",
+      "count": 17
+    },
+    {
+      "bolt_pattern": "5x98",
+      "count": 15
+    },
+    {
+      "bolt_pattern": "8x210",
+      "count": 14
+    },
+    {
+      "bolt_pattern": "5x128",
+      "count": 12
+    },
+    {
+      "bolt_pattern": "10x225",
+      "count": 11
+    },
+    {
+      "bolt_pattern": "5x135.5",
+      "count": 10
+    },
+    {
+      "bolt_pattern": "5x120.7",
+      "count": 9
+    },
+    {
+      "bolt_pattern": "6x115",
+      "count": 8
+    },
+    {
+      "bolt_pattern": "6x130",
+      "count": 5
+    },
+    {
+      "bolt_pattern": "6x180",
+      "count": 3
+    },
+    {
+      "bolt_pattern": "6x205",
+      "count": 2
+    }
+  ],
+  "sampleRecords": [
+    {
+      "id": "58610474-9412-4b60-9a9a-3cdd6e591a86",
+      "year": 2025,
+      "make": "Porsche",
+      "model": "boxster",
+      "display_trim": "S",
+      "bolt_pattern": "5x130",
+      "center_bore_mm": "71.6",
+      "oem_tire_sizes": [
+        "235/45R17",
+        "255/40R17",
+        "235/40R18",
+        "265/40R18",
+        "235/35R19",
+        "265/35R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        },
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        }
+      ],
+      "source": "cache-import [trim-expanded]",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "ec5afa45-83aa-4839-9d2c-ff66cf28a064",
+      "year": 2025,
+      "make": "Mercedes",
+      "model": "e-class",
+      "display_trim": "E 450 4MATIC",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.6",
+      "oem_tire_sizes": [
+        "225/55R18",
+        "245/45R19",
+        "245/40R20",
+        "275/35R20",
+        "265/35R21",
+        "295/30R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "front",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 20
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "source": "generation-baseline",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "d999aea7-07df-4ebd-8186-259e3b7458ba",
+      "year": 2023,
+      "make": "Nissan",
+      "model": "versa",
+      "display_trim": "SR",
+      "bolt_pattern": "4x100",
+      "center_bore_mm": "59.1",
+      "oem_tire_sizes": [
+        "185/65R15",
+        "195/55R16",
+        "195/65R15",
+        "205/45R17",
+        "205/50R17",
+        "205/55R16"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 6,
+          "offset": null,
+          "isStock": true,
+          "diameter": 15
+        },
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 16
+        },
+        {
+          "axle": "both",
+          "width": 7,
+          "offset": null,
+          "isStock": true,
+          "diameter": 17
+        }
+      ],
+      "source": "cache-import [trim-expanded]",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "c47a936d-d29f-4933-a190-89855f6a8068",
+      "year": 2020,
+      "make": "RAM",
+      "model": "2500",
+      "display_trim": "Big Horn",
+      "bolt_pattern": "8x165.1",
+      "center_bore_mm": "121.3",
+      "oem_tire_sizes": [
+        "275/70R18",
+        "285/60R20"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "width": null,
+          "diameter": 18
+        },
+        {
+          "width": null,
+          "diameter": 20
+        }
+      ],
+      "source": "verified-research",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "cd159b69-9340-4701-b804-e2ec967ee36c",
+      "year": 2023,
+      "make": "Chevrolet",
+      "model": "equinox",
+      "display_trim": "LS, LT, RS, Premier",
+      "bolt_pattern": "5x115",
+      "center_bore_mm": "70.3",
+      "oem_tire_sizes": [
+        "235/50R19"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 7.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 19
+        }
+      ],
+      "source": "trim-research",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "866b3e06-cdbb-4c33-9c29-4baca7aed3bc",
+      "year": 2025,
+      "make": "Toyota",
+      "model": "bz4x",
+      "display_trim": "Base",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "60.1",
+      "oem_tire_sizes": [
+        "225/45R18",
+        "235/50R20",
+        "235/60R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "width": 7.5,
+          "offset": 40,
+          "diameter": 18,
+          "position": "both"
+        },
+        {
+          "width": 8,
+          "offset": 40,
+          "diameter": 20,
+          "position": "both"
+        }
+      ],
+      "source": "catalog-gap-fill [web_research]",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "5df1c826-4ed5-492c-a9c7-048a15873d17",
+      "year": 2025,
+      "make": "Audi",
+      "model": "q8",
+      "display_trim": "Base",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.5",
+      "oem_tire_sizes": [
+        "255/55R20",
+        "285/45R21",
+        "285/40R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 20,
+          "diameter": 20,
+          "position": "both"
+        },
+        {
+          "axle": "both",
+          "width": 9.5,
+          "offset": 26,
+          "diameter": 21,
+          "position": "both"
+        },
+        {
+          "axle": "both",
+          "width": 10,
+          "offset": 21,
+          "diameter": 22,
+          "position": "both"
+        }
+      ],
+      "source": "catalog-gap-fill [web_research]",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "66287e79-9b2c-4d6d-b607-bd8d72c57af2",
+      "year": 2022,
+      "make": "BMW",
+      "model": "X6 M",
+      "display_trim": "Base",
+      "bolt_pattern": "5x112",
+      "center_bore_mm": "66.6",
+      "oem_tire_sizes": [
+        "295/35R21",
+        "315/30R22"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "both",
+          "width": 10,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        },
+        {
+          "axle": "both",
+          "width": 11.5,
+          "offset": null,
+          "isStock": true,
+          "diameter": 22
+        }
+      ],
+      "source": "trim-research",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "a1d61a79-b2e2-44c9-b18e-686db185f195",
+      "year": 2024,
+      "make": "Honda",
+      "model": "Pilot",
+      "display_trim": "Sport",
+      "bolt_pattern": "5x120",
+      "center_bore_mm": "64.1",
+      "oem_tire_sizes": [
+        "255/60R18"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 8,
+          "offset": null,
+          "isStock": true,
+          "diameter": 18
+        }
+      ],
+      "source": "trim-research",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    },
+    {
+      "id": "9f097e32-18b5-4706-90e5-ac0f22541430",
+      "year": 2021,
+      "make": "Ford",
+      "model": "explorer",
+      "display_trim": "Platinum",
+      "bolt_pattern": "5x114.3",
+      "center_bore_mm": "63.4",
+      "oem_tire_sizes": [
+        "275/45R21"
+      ],
+      "oem_wheel_sizes": [
+        {
+          "axle": "square",
+          "width": 9,
+          "offset": null,
+          "isStock": true,
+          "diameter": 21
+        }
+      ],
+      "source": "trim-research",
+      "quality_tier": "complete",
+      "certification_status": "certified"
+    }
+  ],
+  "qualityTierDistribution": [
+    {
+      "quality_tier": "complete",
+      "count": 28239
+    },
+    {
+      "quality_tier": "unknown",
+      "count": 2664
+    },
+    {
+      "quality_tier": "partial",
+      "count": 241
+    },
+    {
+      "quality_tier": "high",
+      "count": 165
+    }
+  ],
+  "certificationStatusDistribution": [
+    {
+      "certification_status": "certified",
+      "count": 30531
+    },
+    {
+      "certification_status": "deprecated-superseded-by-canonical",
+      "count": 652
+    },
+    {
+      "certification_status": "needs_review",
+      "count": 126
+    }
+  ],
+  "sourceDistribution": [
+    {
+      "source": "trim-research",
+      "count": 4379
+    },
+    {
+      "source": "cache-import [expanded]",
+      "count": 3670
+    },
+    {
+      "source": "google-ai-overview",
+      "count": 3331
+    },
+    {
+      "source": "generation_inherit",
+      "count": 1724
+    },
+    {
+      "source": "cache-import",
+      "count": 1688
+    },
+    {
+      "source": "cache-import [trim-expanded]",
+      "count": 1594
+    },
+    {
+      "source": "tgp_solutions",
+      "count": 1502
+    },
+    {
+      "source": "verified-research",
+      "count": 1230
+    },
+    {
+      "source": "catalog-gap-fill",
+      "count": 1098
+    },
+    {
+      "source": "generation-baseline",
+      "count": 895
+    },
+    {
+      "source": "api_import [expanded]",
+      "count": 757
+    },
+    {
+      "source": "deprecated-staggered-split",
+      "count": 652
+    },
+    {
+      "source": "catalog-gap-fill [web_research]",
+      "count": 502
+    },
+    {
+      "source": "api_import [trim-expanded]",
+      "count": 466
+    },
+    {
+      "source": "api_import",
+      "count": 431
+    },
+    {
+      "source": "generation_template [expanded]",
+      "count": 384
+    },
+    {
+      "source": "generation_template",
+      "count": 351
+    },
+    {
+      "source": "merged-staggered",
+      "count": 326
+    },
+    {
+      "source": "generation",
+      "count": 290
+    },
+    {
+      "source": "tier-a-import",
+      "count": 279
+    },
+    {
+      "source": "railway_import",
+      "count": 257
+    },
+    {
+      "source": "manual_seed_spec [expanded]",
+      "count": 234
+    },
+    {
+      "source": "generation-baseline [expanded]",
+      "count": 232
+    },
+    {
+      "source": "manual_seed_spec [trim-expanded]",
+      "count": 221
+    },
+    {
+      "source": "generation_template [sib-same-year:tah [expanded]",
+      "count": 160
+    },
+    {
+      "source": "batch2v2-trim-groups",
+      "count": 159
+    },
+    {
+      "source": "api_import [template:gm_hd_gen4_2020_plus]",
+      "count": 158
+    },
+    {
+      "source": "verified-research [sizes-inherited]",
+      "count": 154
+    },
+    {
+      "source": "tire-guide-pro-import",
+      "count": 147
+    },
+    {
+      "source": "cleanup_cache-import",
+      "count": 146
+    },
+    {
+      "source": "verified-research [sizes-inherited] [expanded]",
+      "count": 135
+    },
+    {
+      "source": "generation_template [trim-expanded]",
+      "count": 131
+    },
+    {
+      "source": "manual_seed_spec",
+      "count": 130
+    },
+    {
+      "source": "tiresize.com",
+      "count": 124
+    },
+    {
+      "source": "cleanup_generation_template",
+      "count": 118
+    },
+    {
+      "source": "verified-research [expanded]",
+      "count": 112
+    },
+    {
+      "source": "corrected_batch2_generation_inherit",
+      "count": 107
+    },
+    {
+      "source": "corrected_batch1_generation_inherit",
+      "count": 99
+    },
+    {
+      "source": "merge_consolidation",
+      "count": 97
+    },
+    {
+      "source": "api_import [template:gm_hd_gen3_2011_2019]",
+      "count": 94
+    },
+    {
+      "source": "fix_cross_gen",
+      "count": 74
+    },
+    {
+      "source": "generation-baseline [trim-expanded]",
+      "count": 73
+    },
+    {
+      "source": "batch6-minivans-evs",
+      "count": 65
+    },
+    {
+      "source": "cleanup_wheelsize",
+      "count": 64
+    },
+    {
+      "source": "batch5-sports-more",
+      "count": 61
+    },
+    {
+      "source": "api_import [web_research] [expanded]",
+      "count": 61
+    },
+    {
+      "source": "backfill-gc",
+      "count": 60
+    },
+    {
+      "source": "railway_import [expanded]",
+      "count": 57
+    },
+    {
+      "source": "batch7-subcompacts-final [web_research]",
+      "count": 57
+    },
+    {
+      "source": "api_import [template:gm_hd_gen1_1999_2006]",
+      "count": 54
+    },
+    {
+      "source": "alias-from-mazda3",
+      "count": 53
+    },
+    {
+      "source": "manual_backfill [template:gm_hd_gen1_1999_2006]",
+      "count": 51
+    },
+    {
+      "source": "cleanup_legacy_mazda_mx-5-miata",
+      "count": 51
+    },
+    {
+      "source": "api_import [template:ram_hd_gen5_2019_ [expanded]",
+      "count": 49
+    },
+    {
+      "source": "luxury-gap-fill [web_research] [trim-expanded]",
+      "count": 49
+    },
+    {
+      "source": "final-gap-fill",
+      "count": 46
+    },
+    {
+      "source": "generation_template [web_research] [expanded]",
+      "count": 40
+    },
+    {
+      "source": "manual-qa-fix",
+      "count": 37
+    },
+    {
+      "source": "batch1-fill [web_research]",
+      "count": 36
+    },
+    {
+      "source": "generation_template [filled from 2010  [expanded]",
+      "count": 35
+    },
+    {
+      "source": "corrected_batch3_cache-import [expanded]",
+      "count": 32
+    },
+    {
+      "source": "generation_inherit_2015 [expanded]",
+      "count": 30
+    },
+    {
+      "source": "verified-research [trim-expanded]",
+      "count": 30
+    },
+    {
+      "source": "generation_template [sib-same-year:sub [expanded]",
+      "count": 30
+    },
+    {
+      "source": "final-gap-fill [expanded]",
+      "count": 29
+    },
+    {
+      "source": "wheelsize",
+      "count": 29
+    },
+    {
+      "source": "luxury-gap-fill [web_research] [expanded]",
+      "count": 28
+    },
+    {
+      "source": "api_import [template:gm_hd_gen2_2007_2010]",
+      "count": 28
+    },
+    {
+      "source": "luxury-gap-fill [web_research]",
+      "count": 27
+    },
+    {
+      "source": "generation_template [filled from 2008  [expanded]",
+      "count": 27
+    },
+    {
+      "source": "platform_inheritance_ld",
+      "count": 27
+    },
+    {
+      "source": "manual",
+      "count": 26
+    },
+    {
+      "source": "batch7-subcompacts-final",
+      "count": 26
+    },
+    {
+      "source": "manufacturer_spec [trim-expanded]",
+      "count": 25
+    },
+    {
+      "source": "manual_backfill [tpl:nissan_titan_xd_2016_plus]",
+      "count": 24
+    },
+    {
+      "source": "manual_import [template:gm_hd_gen4_2020_plus]",
+      "count": 24
+    },
+    {
+      "source": "generation_template [web_research]",
+      "count": 23
+    },
+    {
+      "source": "wheelsize [expanded]",
+      "count": 22
+    },
+    {
+      "source": "generation_template [filled from 2020  [expanded]",
+      "count": 21
+    },
+    {
+      "source": "generation_template [sib-same-year:esc [expanded]",
+      "count": 20
+    },
+    {
+      "source": "manual_import [template:gm_hd_gen3_2011_2019]",
+      "count": 20
+    },
+    {
+      "source": "final-gap-fill [trim-expanded]",
+      "count": 19
+    },
+    {
+      "source": "generation_inherit [web_research]",
+      "count": 18
+    },
+    {
+      "source": "generation_template [filled from 2018  [expanded]",
+      "count": 18
+    },
+    {
+      "source": "generation_template [filled from 2012  [expanded]",
+      "count": 17
+    },
+    {
+      "source": "generation_inherit_2025",
+      "count": 17
+    },
+    {
+      "source": "manual_backfill",
+      "count": 16
+    },
+    {
+      "source": "generation_template [filled from 2019  [expanded]",
+      "count": 16
+    },
+    {
+      "source": "luxury-gap-fill [trim-expanded]",
+      "count": 16
+    },
+    {
+      "source": "generation_template [filled from 2023  [expanded]",
+      "count": 15
+    },
+    {
+      "source": "generation_inherit_2023 [trim-expanded]",
+      "count": 15
+    },
+    {
+      "source": "generation_template [filled from 2016  [expanded]",
+      "count": 15
+    },
+    {
+      "source": "manufacturer_spec",
+      "count": 15
+    },
+    {
+      "source": "generation_template [filled from 2025  [expanded]",
+      "count": 14
+    },
+    {
+      "source": "final-gap-fill [sm-same-year:silverad: [expanded]",
+      "count": 14
+    },
+    {
+      "source": "api_import [web_research]",
+      "count": 13
+    },
+    {
+      "source": "gap-fix",
+      "count": 13
+    },
+    {
+      "source": "generation_inherit_2025 [trim-expanded]",
+      "count": 13
+    },
+    {
+      "source": "generation_template [filled from 2024  [expanded]",
+      "count": 13
+    },
+    {
+      "source": "api_import [template:ram_hd_gen5_2019_plus]",
+      "count": 11
+    },
+    {
+      "source": "manual_import",
+      "count": 11
+    },
+    {
+      "source": "generation_template [filled from 2007  [expanded]",
+      "count": 11
+    },
+    {
+      "source": "cleanup_legacy_bmw_3-series",
+      "count": 11
+    },
+    {
+      "source": "generation_template [filled from 2015  [expanded]",
+      "count": 10
+    },
+    {
+      "source": "generation_template [filled from 2011  [expanded]",
+      "count": 10
+    },
+    {
+      "source": "generation_template [filled from 2004  [expanded]",
+      "count": 10
+    },
+    {
+      "source": "generation_inherit_2024",
+      "count": 10
+    },
+    {
+      "source": "generation_template [filled from 2026  [expanded]",
+      "count": 10
+    },
+    {
+      "source": "generation_template [filled from 2013  [expanded]",
+      "count": 9
+    },
+    {
+      "source": "generation_inherit_2022",
+      "count": 9
+    },
+    {
+      "source": "cleanup_corvette_c5",
+      "count": 9
+    },
+    {
+      "source": "manual_import [template:gm_hd_gen2_2007_2010]",
+      "count": 9
+    },
+    {
+      "source": "generation_template [filled from 2009  [expanded]",
+      "count": 9
+    },
+    {
+      "source": "manual-import",
+      "count": 9
+    },
+    {
+      "source": "inherited_from_2018_SIBLING_PLATFORM",
+      "count": 8
+    },
+    {
+      "source": "generation_template [filled from 2006  [expanded]",
+      "count": 8
+    },
+    {
+      "source": "corrected_batch3_cache-import",
+      "count": 8
+    },
+    {
+      "source": "railway_import [trim-expanded]",
+      "count": 8
+    },
+    {
+      "source": "final-gap-fill [web_research]",
+      "count": 8
+    },
+    {
+      "source": "cache-import [trim-expanded] [verified-research]",
+      "count": 8
+    },
+    {
+      "source": "inherited_from_2007_SAME_GENERATION",
+      "count": 8
+    },
+    {
+      "source": "generation_template [filled from 2017  [expanded]",
+      "count": 7
+    },
+    {
+      "source": "batch4-suvs-sedans",
+      "count": 7
+    },
+    {
+      "source": "luxury-gap-fill",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2005 2500] [expanded]",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2004 2500] [expanded]",
+      "count": 6
+    },
+    {
+      "source": "manual_backfill [template:gm_hd_gen2_2007_2010]",
+      "count": 6
+    },
+    {
+      "source": "generation_inherit_2015",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2003 2500] [expanded]",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2009 2500] [expanded]",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2008 2500] [expanded]",
+      "count": 6
+    },
+    {
+      "source": "batch3-sports-cars",
+      "count": 6
+    },
+    {
+      "source": "batch4-suvs-sedans [web_research]",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2006 2500] [expanded]",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2007 2500] [expanded]",
+      "count": 6
+    },
+    {
+      "source": "backfill-2014",
+      "count": 6
+    },
+    {
+      "source": "api_import [filled from 2006 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "generation_template [web_research] [trim-expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2009 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2012 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2005 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2008 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "inherited_from_2020_SAME_GENERATION",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2020 3500] [trim-expanded]",
+      "count": 5
+    },
+    {
+      "source": "demo-fix",
+      "count": 5
+    },
+    {
+      "source": "generation_template [filled from 2002  [expanded]",
+      "count": 5
+    },
+    {
+      "source": "corrected_batch2_final-gap-fill [sm-same-year:silverad: [expanded]",
+      "count": 5
+    },
+    {
+      "source": "generation_import",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2004 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "generation_template [filled from 2003  [expanded]",
+      "count": 5
+    },
+    {
+      "source": "manual_fix_escalade_2026 [trim-expanded]",
+      "count": 5
+    },
+    {
+      "source": "reviewed_from_2025_ADJACENT_YEAR [trim-expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2007 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2011 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2010 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "api_import [filled from 2003 3500] [expanded]",
+      "count": 5
+    },
+    {
+      "source": "generation_inherit [verified-research]",
+      "count": 5
+    },
+    {
+      "source": "static",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2017 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "manual_import [filled from 2008 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2016 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2024 3500]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2014 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "chevy-gmc-research",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2010 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2009 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "inherited_from_2015_SAME_GENERATION",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2012 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2025 3500]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2019 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "corrected_batch2_cleanup_wheelsize",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2011 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2013 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2012 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2013 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "generation_inherit_2018",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2008 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "fix_cross_gen_contamination",
+      "count": 4
+    },
+    {
+      "source": "inherited_from_2019_SAME_GENERATION",
+      "count": 4
+    },
+    {
+      "source": "batch7-subcompacts-final [web_research [expanded]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2014 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2015 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "reviewed_from_2021_ADJACENT_YEAR",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2011 sierra-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "api_import [filled from 2007 silverado-2500hd]",
+      "count": 4
+    },
+    {
+      "source": "platform_inheritance_lx",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2007 sierra-2500hd]",
+      "count": 3
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2024]",
+      "count": 3
+    },
+    {
+      "source": "generation_template [filled from 2014 equinox]",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2026 3500]",
+      "count": 3
+    },
+    {
+      "source": "generation_template [filled from 2010 impala]",
+      "count": 3
+    },
+    {
+      "source": "generation_inherit_2023",
+      "count": 3
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2023]",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2012 3500]",
+      "count": 3
+    },
+    {
+      "source": "luxury-gap-fill [expanded]",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2010 3500]",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2009 sierra-2500hd]",
+      "count": 3
+    },
+    {
+      "source": "generation_template [filled from 2014  [expanded]",
+      "count": 3
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2021]",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2011 3500]",
+      "count": 3
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2022]",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2008 sierra-2500hd]",
+      "count": 3
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2026]",
+      "count": 3
+    },
+    {
+      "source": "manual_research",
+      "count": 3
+    },
+    {
+      "source": "api_import [filled from 2010 sierra-2500hd]",
+      "count": 3
+    },
+    {
+      "source": "inherited_from_2020_SIBLING_PLATFORM",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2004 lesabre]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2007]",
+      "count": 2
+    },
+    {
+      "source": "api_import [filled from 2008 3500]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2025]",
+      "count": 2
+    },
+    {
+      "source": "manual-fix [dealer-verified]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2004 regal]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2011]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2012 acadia]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2020 acadia]",
+      "count": 2
+    },
+    {
+      "source": "final-gap-fill [sm-same-year:silverad:2016]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2010 colorado]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2014]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2012]",
+      "count": 2
+    },
+    {
+      "source": "api_import [filled from 2006 3500]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:escalade:2003]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2013 traverse]",
+      "count": 2
+    },
+    {
+      "source": "reviewed_from_2013_ADJACENT_YEAR",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2009]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:escalade:2004]",
+      "count": 2
+    },
+    {
+      "source": "api_import [template:ram_hd_gen4_2010_ [expanded]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2023 acadia]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2000  [expanded]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:escalade:2005]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2010]",
+      "count": 2
+    },
+    {
+      "source": "api_import [filled from 2005 3500]",
+      "count": 2
+    },
+    {
+      "source": "reviewed_from_2020_ADJACENT_YEAR",
+      "count": 2
+    },
+    {
+      "source": "final-gap-fill [web_research] [expanded]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2008 acadia]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:escalade:2006]",
+      "count": 2
+    },
+    {
+      "source": "batch6-minivans-evs [web_research]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2001  [expanded]",
+      "count": 2
+    },
+    {
+      "source": "api_import [filled from 2007 3500]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2013]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2024 canyon]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [filled from 2026 escalade]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2008]",
+      "count": 2
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2021]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2025 3500] [trim-expanded]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 1999 firebird]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2015 traverse]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2007 escalade]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2009 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2016 equinox]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2011 impala]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2015 tahoe]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2016 traverse]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2020 suburban]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2003 corvette]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2011 canyon]",
+      "count": 1
+    },
+    {
+      "source": "priority-fix",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2012 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2008]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2014 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2012 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2021 enclave]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2019 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2006 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2019 3500] [expanded]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2026]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2018 canyon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2020]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2022 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:suburban:2001]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2010 canyon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2016 escalade]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2012]",
+      "count": 1
+    },
+    {
+      "source": "verified-research [verified-research]",
+      "count": 1
+    },
+    {
+      "source": "manufacturer_spec [filled from 2005 ram-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2003]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2012 impala]",
+      "count": 1
+    },
+    {
+      "source": "manufacturer_spec [filled from 2007 ram-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2018 acadia]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2019 escalade]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2009 tahoe]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2003 2500]",
+      "count": 1
+    },
+    {
+      "source": "manual_fix_escalade_2026",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2010]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2016 tahoe]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2017 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "final-gap-fill [sm-same-year:silverad:2017]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2025 acadia]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2017 yukon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2010 traverse]",
+      "count": 1
+    },
+    {
+      "source": "manual-fix",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2001 lesabre]",
+      "count": 1
+    },
+    {
+      "source": "verified-research [fixed:fitment-hardening]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2016 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2025 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:suburban:2004]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2007]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2014 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2016 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2004 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2023]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2026 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2005]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2019 yukon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2007 tahoe]",
+      "count": 1
+    },
+    {
+      "source": "tire-guide-manual",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2011 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2004 3500]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2012 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "reviewed_from_2025_ADJACENT_YEAR",
+      "count": 1
+    },
+    {
+      "source": "cache-import-fix",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2002 corvette]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2000 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "corrected_batch2_final-gap-fill [sm-same-year:silverad:2017]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2019 enclave]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2009 3500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2008 lacrosse]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2000 firebird]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2015]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2015 equinox]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2025 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2024 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2020 enclave]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2010 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2009]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2025 canyon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2022 enclave]",
+      "count": 1
+    },
+    {
+      "source": "manufacturer_spec [filled from 2004 ram-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2019 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2020 yukon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2000 corvette]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2006]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2025 enclave]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2009 traverse]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2024]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2004 2500]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2020 3500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2015 yukon]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2013 2500] [expanded]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2004 corvette]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2024 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2008 canyon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:suburban:2005]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2026 3500] [trim-expanded]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2016 yukon]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:suburban:2006]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2002 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2007 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2013 escalade]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2008 escalade]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2014 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2002 escalade]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2016 3500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2007 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2001 firebird]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2011 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2011 2500] [expanded]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2017 tahoe]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2018 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-near-year:yukon:2002]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2017]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2024 acadia]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2011 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2024 enclave]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2000]",
+      "count": 1
+    },
+    {
+      "source": "manufacturer_spec [filled from 2003 ram-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2013 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2001]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2023 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2009 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2016]",
+      "count": 1
+    },
+    {
+      "source": "wheel_fill_chevrolet_corvette_from_2024",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2007 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2025]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2011 traverse]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2010 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2003 3500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2013]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2012 2500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2008 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2020 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2023 enclave]",
+      "count": 1
+    },
+    {
+      "source": "reviewed_from_2018_ADJACENT_YEAR",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2015 3500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2020 tahoe]",
+      "count": 1
+    },
+    {
+      "source": "inherited_from_2015_SIBLING_PLATFORM",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2001 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2010 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2009 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2000 lesabre]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2019 tahoe]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2013 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:suburban:2003]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2013 3500] [expanded]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2006 2500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2008 malibu]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2013 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2004]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2018 escalade]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2010 2500]",
+      "count": 1
+    },
+    {
+      "source": "corrected_batch2_final-gap-fill [sm-same-year:silverad:2014]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2011 equinox]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2019]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2024 3500] [trim-expanded]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2009 2500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2020 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2007 impala]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2010 equinox]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2014 3500]",
+      "count": 1
+    },
+    {
+      "source": "manufacturer_spec [filled from 2008 ram-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2002]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2017 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2003 silverado-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "manufacturer_spec [filled from 2002 ram-1500]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2007 2500]",
+      "count": 1
+    },
+    {
+      "source": "final-gap-fill [sm-same-year:silverad:2013]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:suburban:2000]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2009 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2019 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2003 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2014 2500]",
+      "count": 1
+    },
+    {
+      "source": "final-gap-fill [sm-same-year:silverad:2009]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2022]",
+      "count": 1
+    },
+    {
+      "source": "reviewed_from_2022_ADJACENT_YEAR",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2010 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "manual_import [filled from 2015 sierra-2500hd]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2015 2500] [expanded]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2008 2500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2006 impala]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2006 escalade]",
+      "count": 1
+    },
+    {
+      "source": "api_import [filled from 2005 2500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-near-year:suburban:2000]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2005 sierra-1500]",
+      "count": 1
+    },
+    {
+      "source": "manufacturer_spec [filled from 2006 ram-1500]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:tahoe:2017]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2011]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2003 escalade]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2012 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2001 corvette]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2023 malibu]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [filled from 2010 escalade]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sm-same-year:silverad:2014]",
+      "count": 1
+    },
+    {
+      "source": "generation_template [sib-same-year:yukon:2002]",
+      "count": 1
+    }
+  ],
+  "yearCountComparison": [
+    {
+      "year": 2000,
+      "count": 553,
+      "prev_year_count": null,
+      "next_year_count": 614
+    },
+    {
+      "year": 2001,
+      "count": 614,
+      "prev_year_count": 553,
+      "next_year_count": 659
+    },
+    {
+      "year": 2002,
+      "count": 659,
+      "prev_year_count": 614,
+      "next_year_count": 728
+    },
+    {
+      "year": 2003,
+      "count": 728,
+      "prev_year_count": 659,
+      "next_year_count": 779
+    },
+    {
+      "year": 2004,
+      "count": 779,
+      "prev_year_count": 728,
+      "next_year_count": 831
+    },
+    {
+      "year": 2005,
+      "count": 831,
+      "prev_year_count": 779,
+      "next_year_count": 847
+    },
+    {
+      "year": 2006,
+      "count": 847,
+      "prev_year_count": 831,
+      "next_year_count": 889
+    },
+    {
+      "year": 2007,
+      "count": 889,
+      "prev_year_count": 847,
+      "next_year_count": 946
+    },
+    {
+      "year": 2008,
+      "count": 946,
+      "prev_year_count": 889,
+      "next_year_count": 988
+    },
+    {
+      "year": 2009,
+      "count": 988,
+      "prev_year_count": 946,
+      "next_year_count": 1015
+    },
+    {
+      "year": 2010,
+      "count": 1015,
+      "prev_year_count": 988,
+      "next_year_count": 1051
+    },
+    {
+      "year": 2011,
+      "count": 1051,
+      "prev_year_count": 1015,
+      "next_year_count": 1091
+    },
+    {
+      "year": 2012,
+      "count": 1091,
+      "prev_year_count": 1051,
+      "next_year_count": 1102
+    },
+    {
+      "year": 2013,
+      "count": 1102,
+      "prev_year_count": 1091,
+      "next_year_count": 1167
+    },
+    {
+      "year": 2014,
+      "count": 1167,
+      "prev_year_count": 1102,
+      "next_year_count": 1186
+    },
+    {
+      "year": 2015,
+      "count": 1186,
+      "prev_year_count": 1167,
+      "next_year_count": 1241
+    },
+    {
+      "year": 2016,
+      "count": 1241,
+      "prev_year_count": 1186,
+      "next_year_count": 1291
+    },
+    {
+      "year": 2017,
+      "count": 1291,
+      "prev_year_count": 1241,
+      "next_year_count": 2480
+    },
+    {
+      "year": 2018,
+      "count": 2480,
+      "prev_year_count": 1291,
+      "next_year_count": 1380
+    },
+    {
+      "year": 2019,
+      "count": 1380,
+      "prev_year_count": 2480,
+      "next_year_count": 1546
+    },
+    {
+      "year": 2020,
+      "count": 1546,
+      "prev_year_count": 1380,
+      "next_year_count": 1534
+    },
+    {
+      "year": 2021,
+      "count": 1534,
+      "prev_year_count": 1546,
+      "next_year_count": 1578
+    },
+    {
+      "year": 2022,
+      "count": 1578,
+      "prev_year_count": 1534,
+      "next_year_count": 1530
+    },
+    {
+      "year": 2023,
+      "count": 1530,
+      "prev_year_count": 1578,
+      "next_year_count": 1604
+    },
+    {
+      "year": 2024,
+      "count": 1604,
+      "prev_year_count": 1530,
+      "next_year_count": 1427
+    },
+    {
+      "year": 2025,
+      "count": 1427,
+      "prev_year_count": 1604,
+      "next_year_count": 1252
+    },
+    {
+      "year": 2026,
+      "count": 1252,
+      "prev_year_count": 1427,
+      "next_year_count": null
+    }
+  ],
+  "singleTrimModels": [
+    {
+      "make": "Acura",
+      "model": "RDX",
+      "trim_count": 1,
+      "latest_year": 2018
+    },
+    {
+      "make": "Acura",
+      "model": "adx",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Acura",
+      "model": "integra",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Acura",
+      "model": "nsx",
+      "trim_count": 1,
+      "latest_year": 2023
+    },
+    {
+      "make": "Acura",
+      "model": "zdx",
+      "trim_count": 1,
+      "latest_year": 2025
+    },
+    {
+      "make": "Aston Martin",
+      "model": "db11",
+      "trim_count": 1,
+      "latest_year": 2024
+    },
+    {
+      "make": "Aston Martin",
+      "model": "dbx",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "trim_count": 1,
+      "latest_year": 2025
+    },
+    {
+      "make": "Audi",
+      "model": "S6 e-tron",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "S8",
+      "trim_count": 1,
+      "latest_year": 2018
+    },
+    {
+      "make": "Audi",
+      "model": "SQ6 e-tron",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "TT Quattro",
+      "trim_count": 1,
+      "latest_year": 2018
+    },
+    {
+      "make": "Audi",
+      "model": "TT RS Quattro",
+      "trim_count": 1,
+      "latest_year": 2018
+    },
+    {
+      "make": "Audi",
+      "model": "TTS Quattro",
+      "trim_count": 1,
+      "latest_year": 2018
+    },
+    {
+      "make": "Audi",
+      "model": "a3",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "a6-e-tron",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "a7",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "allroad",
+      "trim_count": 1,
+      "latest_year": 2016
+    },
+    {
+      "make": "Audi",
+      "model": "e-tron-s",
+      "trim_count": 1,
+      "latest_year": 2023
+    },
+    {
+      "make": "Audi",
+      "model": "q6-e-tron",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "q6l-sportback-e-tron",
+      "trim_count": 1,
+      "latest_year": 2025
+    },
+    {
+      "make": "Audi",
+      "model": "q8-e-tron",
+      "trim_count": 1,
+      "latest_year": 2025
+    },
+    {
+      "make": "Audi",
+      "model": "q8-sportback-e-tron",
+      "trim_count": 1,
+      "latest_year": 2025
+    },
+    {
+      "make": "Audi",
+      "model": "r8",
+      "trim_count": 1,
+      "latest_year": 2023
+    },
+    {
+      "make": "Audi",
+      "model": "rs-models",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "rs3",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "rs5",
+      "trim_count": 1,
+      "latest_year": 2025
+    },
+    {
+      "make": "Audi",
+      "model": "rs6",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "rs7",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "s3",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "s5",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "s6",
+      "trim_count": 1,
+      "latest_year": 2025
+    },
+    {
+      "make": "Audi",
+      "model": "s6-e-tron",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "s8",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "s8l",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "sq5",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "sq6-e-tron",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "sq7",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "sq8",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "Audi",
+      "model": "tt",
+      "trim_count": 1,
+      "latest_year": 2023
+    },
+    {
+      "make": "Audi",
+      "model": "tt-rs",
+      "trim_count": 1,
+      "latest_year": 2023
+    },
+    {
+      "make": "Audi",
+      "model": "tt-s",
+      "trim_count": 1,
+      "latest_year": 2023
+    },
+    {
+      "make": "BMW",
+      "model": "2 Series",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "BMW",
+      "model": "6 Series",
+      "trim_count": 1,
+      "latest_year": 2019
+    },
+    {
+      "make": "BMW",
+      "model": "8 Series",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "BMW",
+      "model": "M8",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "BMW",
+      "model": "X3 M",
+      "trim_count": 1,
+      "latest_year": 2024
+    },
+    {
+      "make": "BMW",
+      "model": "X4 M",
+      "trim_count": 1,
+      "latest_year": 2026
+    },
+    {
+      "make": "BMW",
+      "model": "X5 M",
+      "trim_count": 1,
+      "latest_year": 2026
+    }
+  ]
+}

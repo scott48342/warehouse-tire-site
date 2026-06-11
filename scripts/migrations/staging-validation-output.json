@@ -1,0 +1,377 @@
+{
+  "startedAt": "2026-06-10T14:00:39.234Z",
+  "notices": [
+    "Deprecated split rows (2018): 652 total, 652 with verified merged replacement (will delete), 0 orphaned (kept for review)",
+    "Malformed makes: 101 rows matched, 101 will be renamed, 0 skipped due to YMMT collision (review manually)",
+    "Make casing: 1163 rows will be re-cased to canonical form",
+    "OK: no replaceable deprecated rows remain (0 orphans kept for review)",
+    "OK: 652 deleted rows preserved in vf_migration_2018_deleted",
+    "Category-suffix makes remaining (collision-skipped, needs review): 0",
+    "OK: no NEW duplicate YMMT keys created by renames (pre-existing dup groups excluded)"
+  ],
+  "phases": {
+    "baseline_before": {
+      "total_all": 37495,
+      "total_2018": 2480,
+      "deprecated_2018": 652,
+      "merged_2018": 326,
+      "deprecated_with_replacement": 652,
+      "malformed_makes": 103,
+      "casing_variants": 237,
+      "missing_wheel_fields": 78
+    },
+    "integrity_before_migration": [
+      {
+        "check_name": "case_dup_makes",
+        "violations": "17"
+      },
+      {
+        "check_name": "category_makes",
+        "violations": "16"
+      },
+      {
+        "check_name": "dup_ymmt",
+        "violations": "1225"
+      },
+      {
+        "check_name": "missing_wheel_fields",
+        "violations": "78"
+      },
+      {
+        "check_name": "year_spikes (advisory)",
+        "violations": "0"
+      }
+    ],
+    "migration_summary": [
+      {
+        "rows_deleted": "652",
+        "makes_split": "101",
+        "makes_recased": "1163",
+        "total_2018_after": "1828"
+      }
+    ],
+    "validation": {
+      "check1_replaceable_deprecated_remaining": 0,
+      "check1b_orphaned_deprecated_kept": 0,
+      "check2_category_makes_remaining": 0,
+      "check3_case_variant_groups": 8,
+      "check4_ymmt_dupes_from_renames": 888,
+      "check5_backup_rows": 652,
+      "check5_backup_still_in_table": 0,
+      "check6_integrity_summary": [
+        {
+          "check_name": "case_dup_makes",
+          "violations": "8"
+        },
+        {
+          "check_name": "category_makes",
+          "violations": "0"
+        },
+        {
+          "check_name": "dup_ymmt",
+          "violations": "1225"
+        },
+        {
+          "check_name": "missing_wheel_fields",
+          "violations": "46"
+        },
+        {
+          "check_name": "year_spikes (advisory)",
+          "violations": "0"
+        }
+      ],
+      "check7_year_counts": [
+        {
+          "year": 2016,
+          "n": 1241
+        },
+        {
+          "year": 2017,
+          "n": 1291
+        },
+        {
+          "year": 2018,
+          "n": 1828
+        },
+        {
+          "year": 2019,
+          "n": 1380
+        },
+        {
+          "year": 2020,
+          "n": 1546
+        }
+      ]
+    },
+    "metrics_after_migration": {
+      "total_all": 36843,
+      "total_2018": 1828,
+      "deprecated_2018": 0,
+      "merged_2018": 326,
+      "deprecated_with_replacement": 0,
+      "malformed_makes": 0,
+      "casing_variants": 37,
+      "missing_wheel_fields": 46
+    },
+    "vehicles_after_migration": [
+      {
+        "label": "Common",
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Camry",
+        "found": 11,
+        "trims": [
+          "Hybrid LE",
+          "Hybrid SE",
+          "Hybrid XLE",
+          "Hybrid XSE",
+          "LE",
+          "SE",
+          "SE Nightshade",
+          "Standard",
+          "TRD",
+          "XLE",
+          "XSE"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "trim-research"
+        ]
+      },
+      {
+        "label": "Common",
+        "year": 2024,
+        "make": "Ford",
+        "model": "F-150",
+        "found": 11,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Lightning",
+          "Limited",
+          "Platinum",
+          "Raptor",
+          "Raptor R",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "trim-research"
+        ]
+      },
+      {
+        "label": "Common",
+        "year": 2020,
+        "make": "Chevrolet",
+        "model": "Silverado 1500",
+        "found": 1,
+        "trims": [
+          "Base"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "trim-research"
+        ]
+      },
+      {
+        "label": "Common",
+        "year": 2018,
+        "make": "Honda",
+        "model": "Accord",
+        "found": 9,
+        "trims": [
+          "EX",
+          "EX-L",
+          "Hybrid",
+          "Hybrid EX",
+          "Hybrid EX-L",
+          "Hybrid Touring",
+          "LX",
+          "Sport",
+          "Touring"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "tgp_solutions"
+        ]
+      },
+      {
+        "label": "Common",
+        "year": 2018,
+        "make": "Jeep",
+        "model": "Wrangler",
+        "found": 8,
+        "trims": [
+          "Rubicon",
+          "Sport",
+          "Sport S",
+          "Unlimited Moab",
+          "Unlimited Rubicon",
+          "Unlimited Sahara",
+          "Unlimited Sport",
+          "Unlimited Sport S"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "tgp_solutions"
+        ]
+      },
+      {
+        "label": "Common",
+        "year": 2018,
+        "make": "Volkswagen",
+        "model": "Golf R",
+        "found": 1,
+        "trims": [
+          "Base"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "tgp_solutions"
+        ]
+      },
+      {
+        "label": "Premium/Staggered",
+        "year": 2018,
+        "make": "Acura",
+        "model": "NSX",
+        "found": 1,
+        "trims": [
+          "Base"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "merged-staggered"
+        ]
+      },
+      {
+        "label": "Premium/Staggered",
+        "year": 2018,
+        "make": "Porsche",
+        "model": "718 Cayman",
+        "found": 3,
+        "trims": [
+          "Base",
+          "GTS",
+          "S"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "merged-staggered"
+        ]
+      },
+      {
+        "label": "Premium/Staggered",
+        "year": 2018,
+        "make": "Alfa Romeo",
+        "model": "Giulia",
+        "found": 4,
+        "trims": [
+          "Base",
+          "Quadrifoglio",
+          "Ti",
+          "Ti w/Sport Pkg."
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "tgp_solutions",
+          "merged-staggered"
+        ]
+      },
+      {
+        "label": "Premium/Staggered",
+        "year": 2018,
+        "make": "BMW",
+        "model": "i3",
+        "found": 3,
+        "trims": [
+          "Base",
+          "Base",
+          "Range Extender"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "tgp_solutions",
+          "merged-staggered"
+        ]
+      },
+      {
+        "label": "Premium/Staggered",
+        "year": 2018,
+        "make": "Chevrolet",
+        "model": "Corvette",
+        "found": 3,
+        "trims": [
+          "Grand Sport",
+          "Stingray",
+          "Z06"
+        ],
+        "allHaveBolt": true,
+        "allHaveBore": true,
+        "allHaveWheels": true,
+        "allHaveTires": true,
+        "frontRearTrimLeak": false,
+        "sources": [
+          "merged-staggered"
+        ]
+      }
+    ],
+    "baseline_after_rollback": {
+      "total_all": 37495,
+      "total_2018": 2480,
+      "deprecated_2018": 652,
+      "merged_2018": 326,
+      "deprecated_with_replacement": 652,
+      "malformed_makes": 103,
+      "casing_variants": 237,
+      "missing_wheel_fields": 78
+    },
+    "rollback_verified_unchanged": true,
+    "backup_tables_after_rollback": 0,
+    "integrity_views_after_rollback": 0
+  },
+  "finishedAt": "2026-06-10T14:00:47.046Z"
+}

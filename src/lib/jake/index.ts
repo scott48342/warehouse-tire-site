@@ -15,6 +15,14 @@ export interface JakeMessage {
   content: string;
 }
 
+export interface SavedVehicleContext {
+  year?: string;
+  make?: string;
+  model?: string;
+  trim?: string;
+  modification?: string;
+}
+
 export interface JakeResponse {
   response: string;
   products?: {
@@ -26,16 +34,21 @@ export interface JakeResponse {
     year?: number;
     make?: string;
     model?: string;
+    trim?: string;
   };
 }
 
 export async function chat(
   query: string,
   history: JakeMessage[] = [],
-  isLocal: boolean = false
+  isLocal: boolean = false,
+  savedVehicle?: SavedVehicleContext
 ): Promise<JakeResponse> {
   console.log(`\n[Jake] Query: "${query}"`);
   console.log(`[Jake] History: ${history.length} messages, isLocal: ${isLocal}`);
+  if (savedVehicle) {
+    console.log(`[Jake] Saved vehicle context: ${savedVehicle.year} ${savedVehicle.make} ${savedVehicle.model}`);
+  }
   
   const toolsUsed: string[] = [];
   let collectedProducts: { tires?: any[]; wheels?: any[] } = {};
@@ -51,10 +64,42 @@ export async function chat(
       { role: "user" as const, content: query }
     ];
     
-    // Add local mode context to system prompt
-    const systemPrompt = isLocal 
-      ? JAKE_SYSTEM_PROMPT + `\n\nNOTE: This customer is on the LOCAL site (warehousetire.net). They can get installation at our Pontiac or Waterford locations. Mention installation is available when relevant.`
-      : JAKE_SYSTEM_PROMPT;
+    // Build system prompt with context
+    let systemPrompt = JAKE_SYSTEM_PROMPT;
+    
+    // Add vehicle context if customer has a saved vehicle
+    if (savedVehicle?.year && savedVehicle?.make && savedVehicle?.model) {
+      const vehicleStr = `${savedVehicle.year} ${savedVehicle.make} ${savedVehicle.model}${savedVehicle.trim ? ` ${savedVehicle.trim}` : ''}`;
+      systemPrompt += `
+
+═══════════════════════════════════════════════════════════════════════════════
+CUSTOMER'S SAVED VEHICLE (IMPORTANT!)
+═══════════════════════════════════════════════════════════════════════════════
+
+This customer has already told us their vehicle: **${vehicleStr}**
+
+YOU ALREADY KNOW THEIR VEHICLE. Do NOT ask them what vehicle they drive unless they explicitly say they want to change it or shop for a different vehicle.
+
+When they ask about tires, wheels, or fitment - use this vehicle automatically:
+- Year: ${savedVehicle.year}
+- Make: ${savedVehicle.make}
+- Model: ${savedVehicle.model}${savedVehicle.trim ? `\n- Trim: ${savedVehicle.trim}` : ''}
+
+If they say "I want to change my vehicle" or "different car" - then ask for the new vehicle info.
+Otherwise, assume all fitment questions are for the ${vehicleStr}.`;
+      
+      // Pre-populate detected vehicle
+      detectedVehicle = {
+        year: parseInt(savedVehicle.year),
+        make: savedVehicle.make,
+        model: savedVehicle.model,
+      };
+    }
+    
+    // Add local mode context
+    if (isLocal) {
+      systemPrompt += `\n\nNOTE: This customer is on the LOCAL site (warehousetire.net). They can get installation at our Pontiac or Waterford locations. Mention installation is available when relevant.`;
+    }
     
     console.log(`[Jake] Calling Claude...`);
     

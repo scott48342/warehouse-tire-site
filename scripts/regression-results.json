@@ -1,0 +1,792 @@
+{
+  "modernCars": [
+    {
+      "vehicle": "2024 Toyota Camry",
+      "year": 2024,
+      "make": "Toyota",
+      "model": "Camry",
+      "prod": {
+        "count": 3,
+        "offsets": [
+          40,
+          35,
+          50
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          40,
+          35,
+          30
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "2024 Honda Accord",
+      "year": 2024,
+      "make": "Honda",
+      "model": "Accord",
+      "prod": {
+        "count": 2,
+        "offsets": [
+          50,
+          45
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive"
+        ]
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          40,
+          40
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive"
+        ]
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "2024 Hyundai Sonata",
+      "year": 2024,
+      "make": "Hyundai",
+      "model": "Sonata",
+      "prod": {
+        "count": 2,
+        "offsets": [
+          45,
+          45
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive"
+        ]
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          40,
+          42
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive"
+        ]
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "2024 Tesla Model 3",
+      "year": 2024,
+      "make": "Tesla",
+      "model": "Model 3",
+      "prod": {
+        "count": 2,
+        "offsets": [
+          40,
+          30
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive"
+        ]
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          40,
+          -18
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive"
+        ]
+      },
+      "delta": 0
+    }
+  ],
+  "trucks": [
+    {
+      "vehicle": "2024 Ford F-150",
+      "year": 2024,
+      "make": "Ford",
+      "model": "F-150",
+      "prod": {
+        "count": 3,
+        "offsets": [
+          35,
+          35,
+          35
+        ],
+        "categories": [
+          "daily_driver",
+          "offroad_lifted",
+          "premium_look"
+        ]
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          35,
+          35
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "offroad_lifted"
+        ]
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "2024 Chevrolet Silverado 1500",
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "prod": {
+        "count": 4,
+        "offsets": [
+          30,
+          20,
+          20,
+          30
+        ],
+        "categories": [
+          "daily_driver",
+          "offroad_lifted",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "local": {
+        "count": 4,
+        "offsets": [
+          15,
+          -12,
+          1,
+          1
+        ],
+        "categories": [
+          "daily_driver",
+          "offroad_lifted",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "2024 RAM 1500",
+      "year": 2024,
+      "make": "RAM",
+      "model": "1500",
+      "prod": {
+        "count": 3,
+        "offsets": [
+          19,
+          19,
+          19
+        ],
+        "categories": [
+          "daily_driver",
+          "premium_look",
+          "sport_aggressive"
+        ]
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          15,
+          20,
+          20
+        ],
+        "categories": [
+          "daily_driver",
+          "premium_look",
+          "sport_aggressive"
+        ]
+      },
+      "delta": 0
+    }
+  ],
+  "suvs": [
+    {
+      "vehicle": "2024 Toyota RAV4",
+      "year": 2024,
+      "make": "Toyota",
+      "model": "RAV4",
+      "prod": {
+        "count": 4,
+        "offsets": [
+          40,
+          35,
+          42,
+          50
+        ],
+        "categories": [
+          "daily_driver",
+          "offroad_lifted",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "local": {
+        "count": 4,
+        "offsets": [
+          40,
+          30,
+          30,
+          35
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look",
+          "offroad_lifted"
+        ]
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "2024 BMW X3",
+      "year": 2024,
+      "make": "BMW",
+      "model": "X3",
+      "prod": {
+        "count": 2,
+        "offsets": [
+          35,
+          38
+        ],
+        "categories": [
+          "sport_aggressive",
+          "daily_driver"
+        ]
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          35,
+          38
+        ],
+        "categories": [
+          "sport_aggressive",
+          "daily_driver"
+        ]
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "2024 Audi Q5",
+      "year": 2024,
+      "make": "Audi",
+      "model": "Q5",
+      "prod": {
+        "count": 1,
+        "offsets": [
+          35
+        ],
+        "categories": [
+          "sport_aggressive"
+        ]
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          35,
+          30
+        ],
+        "categories": [
+          "sport_aggressive",
+          "daily_driver"
+        ]
+      },
+      "delta": 1
+    }
+  ],
+  "classicRecovered": [
+    {
+      "vehicle": "1969 AMC AMX",
+      "year": 1969,
+      "make": "AMC",
+      "model": "AMX",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          -12,
+          18
+        ],
+        "categories": [
+          "daily_driver",
+          "premium_look",
+          "sport_aggressive"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1970 Chevrolet Chevelle",
+      "year": 1970,
+      "make": "Chevrolet",
+      "model": "Chevelle",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          18,
+          0
+        ],
+        "categories": [
+          "sport_aggressive",
+          "daily_driver"
+        ]
+      },
+      "delta": 2
+    },
+    {
+      "vehicle": "1968 Ford Mustang",
+      "year": 1968,
+      "make": "Ford",
+      "model": "Mustang",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          40,
+          35,
+          38
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1972 Dodge Challenger",
+      "year": 1972,
+      "make": "Dodge",
+      "model": "Challenger",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          18,
+          30
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1965 Ford Galaxie",
+      "year": 1965,
+      "make": "Ford",
+      "model": "Galaxie",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          18,
+          -12
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1985 Chevrolet Camaro",
+      "year": 1985,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          45,
+          30,
+          50
+        ],
+        "categories": [
+          "daily_driver",
+          "premium_look",
+          "sport_aggressive"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1978 Pontiac Firebird",
+      "year": 1978,
+      "make": "Pontiac",
+      "model": "Firebird",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          18,
+          30,
+          0
+        ],
+        "categories": [
+          "sport_aggressive",
+          "premium_look",
+          "daily_driver"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1955 Chevrolet Bel Air",
+      "year": 1955,
+      "make": "Chevrolet",
+      "model": "Bel Air",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          18,
+          -12,
+          0
+        ],
+        "categories": [
+          "sport_aggressive",
+          "premium_look",
+          "daily_driver"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1967 Plymouth Barracuda",
+      "year": 1967,
+      "make": "Plymouth",
+      "model": "Barracuda",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          0,
+          0,
+          0
+        ],
+        "categories": [
+          "premium_look",
+          "daily_driver",
+          "sport_aggressive"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1973 Chevrolet Corvette",
+      "year": 1973,
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          18,
+          30,
+          0
+        ],
+        "categories": [
+          "sport_aggressive",
+          "premium_look",
+          "daily_driver"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1966 Pontiac GTO",
+      "year": 1966,
+      "make": "Pontiac",
+      "model": "GTO",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          18,
+          30
+        ],
+        "categories": [
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 2
+    },
+    {
+      "vehicle": "1969 Dodge Charger",
+      "year": 1969,
+      "make": "Dodge",
+      "model": "Charger",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          18,
+          30
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1970 Plymouth Road Runner",
+      "year": 1970,
+      "make": "Plymouth",
+      "model": "Road Runner",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          18,
+          -12
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1971 Buick Skylark",
+      "year": 1971,
+      "make": "Buick",
+      "model": "Skylark",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          40,
+          40,
+          40
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1974 Oldsmobile 442",
+      "year": 1974,
+      "make": "Oldsmobile",
+      "model": "442",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 0,
+        "offsets": [],
+        "categories": []
+      },
+      "delta": 0
+    },
+    {
+      "vehicle": "1965 Chevrolet Impala",
+      "year": 1965,
+      "make": "Chevrolet",
+      "model": "Impala",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          21,
+          34,
+          30
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1969 Chevrolet Nova",
+      "year": 1969,
+      "make": "Chevrolet",
+      "model": "Nova",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 2,
+        "offsets": [
+          18,
+          0
+        ],
+        "categories": [
+          "sport_aggressive",
+          "daily_driver"
+        ]
+      },
+      "delta": 2
+    },
+    {
+      "vehicle": "1970 Ford Torino",
+      "year": 1970,
+      "make": "Ford",
+      "model": "Torino",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          18,
+          -12
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1968 Chevrolet Camaro",
+      "year": 1968,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          21,
+          30,
+          30
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    },
+    {
+      "vehicle": "1967 Ford Fairlane",
+      "year": 1967,
+      "make": "Ford",
+      "model": "Fairlane",
+      "prod": {
+        "count": 0,
+        "error": "HTTP 400: {\"error\":\"Invalid year\"}"
+      },
+      "local": {
+        "count": 3,
+        "offsets": [
+          30,
+          18,
+          -12
+        ],
+        "categories": [
+          "daily_driver",
+          "sport_aggressive",
+          "premium_look"
+        ]
+      },
+      "delta": 3
+    }
+  ]
+}
