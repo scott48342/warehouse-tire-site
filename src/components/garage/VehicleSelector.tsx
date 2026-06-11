@@ -55,10 +55,12 @@ export function VehicleSelector({ onSelect, onClose }: VehicleSelectorProps) {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/vehicles/years");
+      const res = await fetch("/api/vehicles/all-years");
       if (!res.ok) throw new Error("Failed to fetch years");
       const data = await res.json();
-      setYears(data.years || []);
+      // API returns array of year numbers, convert to strings
+      const yearList = Array.isArray(data) ? data.map(String) : (data.years || []);
+      setYears(yearList);
     } catch (err) {
       setError("Failed to load years");
     } finally {
