@@ -75,7 +75,7 @@ export function VehicleSelector({ onSelect, onClose }: VehicleSelectorProps) {
       const res = await fetch(`/api/vehicles/makes?year=${selectedYear}`);
       if (!res.ok) throw new Error("Failed to fetch makes");
       const data = await res.json();
-      setMakes(data.makes || []);
+      setMakes(data.results || data.makes || []);
     } catch (err) {
       setError("Failed to load makes");
     } finally {
@@ -90,7 +90,7 @@ export function VehicleSelector({ onSelect, onClose }: VehicleSelectorProps) {
       const res = await fetch(`/api/vehicles/models?year=${selectedYear}&make=${encodeURIComponent(selectedMake)}`);
       if (!res.ok) throw new Error("Failed to fetch models");
       const data = await res.json();
-      setModels(data.models || []);
+      setModels(data.results || data.models || []);
     } catch (err) {
       setError("Failed to load models");
     } finally {
@@ -107,7 +107,9 @@ export function VehicleSelector({ onSelect, onClose }: VehicleSelectorProps) {
       );
       if (!res.ok) throw new Error("Failed to fetch trims");
       const data = await res.json();
-      setTrims(data.trims || []);
+      // Trims API returns array of { trim, modification } or array of strings
+      const trimData = data.results || data.trims || [];
+      setTrims(trimData.map((t: any) => typeof t === 'string' ? { trim: t } : t));
     } catch (err) {
       setError("Failed to load trims");
     } finally {
