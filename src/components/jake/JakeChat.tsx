@@ -574,9 +574,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             trim: detectedVehicle.trim,
           });
           trackJakeEvent("vehicle_learned_from_chat", {
-            year: detectedVehicle.year,
-            make: detectedVehicle.make,
-            model: detectedVehicle.model,
+            vehicle: {
+              year: String(detectedVehicle.year),
+              make: detectedVehicle.make,
+              model: detectedVehicle.model,
+            },
           });
         }
       }

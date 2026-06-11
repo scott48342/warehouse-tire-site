@@ -13,6 +13,9 @@ export type JakeEventType =
   | "message_received"
   | "suggested_prompt_clicked"
   | "vehicle_identified"
+  | "vehicle_context_used"
+  | "vehicle_learned_from_chat"
+  | "vehicle_cleared_from_jake"
   | "product_recommended"
   | "product_clicked"
   | "rail_product_clicked"
@@ -28,7 +31,9 @@ interface JakeEventData {
   // Message tracking for conversation replay
   role?: "user" | "assistant";
   content?: string;
-  vehicle?: {
+  hasVehicle?: boolean;
+  query_preview?: string;
+  vehicle?: string | {
     year?: string;
     make?: string;
     model?: string;
