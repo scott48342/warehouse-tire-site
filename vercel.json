@@ -76,6 +76,10 @@
     {
       "path": "/api/cron/sync-supplier-orders",
       "schedule": "0 */2 * * *"
+    },
+    {
+      "path": "/api/cron/daily-executive-report",
+      "schedule": "0 12 * * *"
     }
   ]
 }
