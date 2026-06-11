@@ -6,7 +6,8 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import { BRAND } from "@/lib/brand";
-import { AccessoriesMegaMenu } from "@/components/AccessoriesMegaMenu";
+// AccessoriesMegaMenu removed from header - 2026-06-11
+// import { AccessoriesMegaMenu } from "@/components/AccessoriesMegaMenu";
 import { useShopContext } from "@/contexts/ShopContextProvider";
 import { PartNumberSearch, CollapsiblePartNumberSearch } from "@/components/PartNumberSearch";
 
@@ -372,8 +373,7 @@ export function Header() {
               </div>
             </details>
 
-            {/* Accessories Mega Menu with subcategory hover */}
-            <AccessoriesMegaMenu />
+            {/* Accessories removed from nav - 2026-06-11 */}
 
             {/* Jake - Fitment Expert */}
             <Link

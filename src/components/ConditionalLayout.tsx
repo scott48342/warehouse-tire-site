@@ -4,7 +4,8 @@ import { usePathname } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartSlideout } from "@/components/CartSlideout";
-import { FirstOrderPopup } from "@/components/FirstOrderPopup";
+// FirstOrderPopup disabled - 2026-06-11
+// import { FirstOrderPopup } from "@/components/FirstOrderPopup";
 import { CompareFloatingBadge } from "@/components/CompareFloatingBadge";
 import { ComparePanel } from "@/components/ComparePanel";
 import { Suspense } from "react";
@@ -50,7 +51,7 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
         <Footer />
       </div>
       <CartSlideout />
-      <FirstOrderPopup />
+      {/* FirstOrderPopup disabled - 2026-06-11 */}
       <CompareFloatingBadge />
       <ComparePanel />
     </>
