@@ -9,6 +9,14 @@ export {
   JakeHeaderLink 
 } from "./JakeHomepageSection";
 export { JakeComparePanel, CompareButton, CompareFloatingBar } from "./JakeComparePanel";
-export { trackJakeEvent, useJakeAnalytics, type JakeEventType } from "./JakeAnalytics";
+export { 
+  trackJakeEvent, 
+  useJakeAnalytics, 
+  trackJakePackageView,
+  trackJakePackageClick,
+  trackJakePackageAddToCart,
+  type JakeEventType 
+} from "./JakeAnalytics";
+export type { MerchandisingBadge, ParsedProduct } from "./JakeProductCards";
 export { ProductRail, ProductCarousel, type RailProduct } from "./ProductRail";
 export { VehicleChip, VehicleChipCompact } from "./VehicleChip";

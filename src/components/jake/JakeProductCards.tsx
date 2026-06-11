@@ -32,6 +32,9 @@ export interface ParsedProduct {
   loadIndex?: number;
 }
 
+// Merchandising badge types (consistent with website packages)
+export type MerchandisingBadge = "best_value" | "most_popular" | "premium";
+
 interface PackageSummary {
   tire?: ParsedProduct;
   wheel?: ParsedProduct;
@@ -41,6 +44,12 @@ interface PackageSummary {
   badges?: PackageBadge[];
   buildRequirement?: string;
   monthlyPayment?: string;
+  // Merchandising MVP fields
+  merchandisingBadge?: MerchandisingBadge;
+  installedPrice?: string;
+  installedPriceNum?: number;
+  recommendationReason?: string;
+  vehicleFit?: string; // e.g., "2024 Ford F-150"
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -93,6 +102,33 @@ const PACKAGE_BADGE_CONFIG: Record<PackageBadge, { label: string; icon: string }
   "lightweight": { label: "Lightweight Setup", icon: "🪶" },
   "oem-plus": { label: "OEM+ Style", icon: "✨" },
   "show-winner": { label: "Show Winner", icon: "🏆" },
+};
+
+// Merchandising badge configuration (consistent with website)
+const MERCHANDISING_BADGE_CONFIG: Record<MerchandisingBadge, { 
+  label: string; 
+  icon: string; 
+  bgColor: string;
+  description: string;
+}> = {
+  "best_value": { 
+    label: "BEST VALUE", 
+    icon: "💰", 
+    bgColor: "bg-green-600",
+    description: "Great quality at the lowest price",
+  },
+  "most_popular": { 
+    label: "MOST POPULAR", 
+    icon: "⭐", 
+    bgColor: "bg-red-600",
+    description: "Customer favorite choice",
+  },
+  "premium": { 
+    label: "PREMIUM", 
+    icon: "👑", 
+    bgColor: "bg-amber-500",
+    description: "Top-tier quality & performance",
+  },
 };
 
 const FINISH_LABELS: Record<string, { label: string; color: string }> = {
@@ -351,7 +387,7 @@ export function JakeProductCard({
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// PREMIUM PACKAGE CARD v2
+// PREMIUM PACKAGE CARD v2 - WITH MERCHANDISING BADGES
 // ═══════════════════════════════════════════════════════════════════════════════
 
 interface JakePackageCardProps {
@@ -359,25 +395,92 @@ interface JakePackageCardProps {
   cartUrl?: string;
   onCheckout?: () => void;
   onAskJake?: () => void;
+  onView?: () => void; // Analytics callback
+  onClick?: () => void; // Analytics callback
 }
 
-export function JakePackageCard({ packageSummary, cartUrl, onCheckout, onAskJake }: JakePackageCardProps) {
-  const { tire, wheel, totalPrice, totalPriceNum, badges, buildRequirement, monthlyPayment } = packageSummary;
+// Calculate monthly payment (0% APR financing)
+function calcMonthlyPayment(price: number, months: number = 12): number {
+  return Math.ceil(price / months);
+}
+
+export function JakePackageCard({ packageSummary, cartUrl, onCheckout, onAskJake, onView, onClick }: JakePackageCardProps) {
+  const { 
+    tire, 
+    wheel, 
+    totalPrice, 
+    totalPriceNum, 
+    badges, 
+    buildRequirement, 
+    monthlyPayment,
+    // Merchandising fields
+    merchandisingBadge,
+    installedPrice,
+    installedPriceNum,
+    recommendationReason,
+    vehicleFit,
+  } = packageSummary;
+  
   const [wheelImgError, setWheelImgError] = useState(false);
   const [tireImgError, setTireImgError] = useState(false);
 
+  // Track view on mount
+  React.useEffect(() => {
+    onView?.();
+  }, [onView]);
+
+  // Get merchandising badge config
+  const merchBadgeConfig = merchandisingBadge ? MERCHANDISING_BADGE_CONFIG[merchandisingBadge] : null;
+  const isFeatured = merchandisingBadge === "most_popular";
+  
+  // Calculate monthly payment if not provided
+  const displayMonthlyPayment = monthlyPayment || (totalPriceNum ? `$${calcMonthlyPayment(totalPriceNum)}/mo` : null);
+  
+  // Calculate installed price if not provided (estimate ~8% for install)
+  const displayInstalledPrice = installedPrice || (totalPriceNum ? `$${Math.round(totalPriceNum * 1.08).toLocaleString()}` : null);
+
+  const handleClick = () => {
+    onClick?.();
+  };
+
   return (
-    <div className="bg-gradient-to-br from-[#1f1f1f] to-[#141414] border border-white/20 rounded-2xl overflow-hidden shadow-2xl">
-      {/* Header with Badges */}
+    <div 
+      className={`bg-gradient-to-br from-[#1f1f1f] to-[#141414] rounded-2xl overflow-hidden shadow-2xl transition-all ${
+        isFeatured 
+          ? "border-2 border-red-500 ring-2 ring-red-500/20" 
+          : "border border-white/20"
+      }`}
+      onClick={handleClick}
+    >
+      {/* Merchandising Badge Banner */}
+      {merchBadgeConfig && (
+        <div className={`${merchBadgeConfig.bgColor} text-white text-center py-2.5 px-4`}>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-lg">{merchBadgeConfig.icon}</span>
+            <span className="text-sm font-bold tracking-wide">{merchBadgeConfig.label}</span>
+          </div>
+          {isFeatured && (
+            <p className="text-xs opacity-90 mt-0.5">{merchBadgeConfig.description}</p>
+          )}
+        </div>
+      )}
+
+      {/* Header */}
       <div className="px-5 pt-5 pb-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center shadow-lg">
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center shadow-lg ${
+              isFeatured 
+                ? "bg-gradient-to-br from-red-500 to-red-700" 
+                : "bg-gradient-to-br from-white/20 to-white/10"
+            }`}>
               <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <span className="text-white font-bold text-lg">Your Package</span>
+            <span className="text-white font-bold text-lg">
+              {isFeatured ? "Jake's Pick" : "Your Package"}
+            </span>
           </div>
           {buildRequirement && (
             <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-300 rounded-full font-medium">
@@ -386,7 +489,7 @@ export function JakePackageCard({ packageSummary, cartUrl, onCheckout, onAskJake
           )}
         </div>
         
-        {/* Package Badges */}
+        {/* Package Badges (secondary) */}
         {badges && badges.length > 0 && (
           <div className="flex flex-wrap gap-2 mt-3">
             {badges.map((badge) => {
@@ -508,20 +611,63 @@ export function JakePackageCard({ packageSummary, cartUrl, onCheckout, onAskJake
         )}
       </div>
 
+      {/* Recommendation Reason (if provided) */}
+      {recommendationReason && (
+        <div className={`mx-5 p-3 rounded-xl ${isFeatured ? 'bg-red-600/10 border border-red-500/20' : 'bg-white/5'}`}>
+          <p className="text-xs text-white/80">
+            <span className="font-semibold text-white">Why Jake recommends this:</span>{' '}
+            {recommendationReason}
+          </p>
+        </div>
+      )}
+
+      {/* Trust Signals */}
+      <div className="mx-5 mt-3 space-y-1">
+        {vehicleFit && (
+          <div className="flex items-center gap-2 text-sm text-green-400">
+            <span>✓</span>
+            <span className="font-medium">Fits your {vehicleFit}</span>
+          </div>
+        )}
+        <div className="flex items-center gap-2 text-xs text-white/50">
+          <span>✓</span>
+          <span>Mounted & balanced ready</span>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-white/50">
+          <span>✓</span>
+          <span>TPMS compatible</span>
+        </div>
+      </div>
+
       {/* Total & CTA */}
       <div className="p-5 mt-2">
-        <div className="flex items-end justify-between mb-4">
-          <div>
-            <p className="text-white/50 text-sm">Package Total</p>
-            {monthlyPayment && (
-              <p className="text-green-400 text-xs font-medium">
-                or {monthlyPayment}/mo with financing
-              </p>
-            )}
+        {/* Price Block */}
+        <div className="bg-white/5 rounded-xl p-4 mb-4">
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="text-white/50 text-sm">Package Total</p>
+            </div>
+            <div className="text-right">
+              <p className="text-white font-bold text-3xl">{totalPrice}</p>
+            </div>
           </div>
-          <div className="text-right">
-            <p className="text-white font-bold text-3xl">{totalPrice}</p>
-          </div>
+          
+          {/* Installed Price */}
+          {displayInstalledPrice && (
+            <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10">
+              <span className="text-white/50 text-sm">Installed</span>
+              <span className="text-white font-semibold">{displayInstalledPrice}</span>
+            </div>
+          )}
+          
+          {/* Monthly Payment */}
+          {displayMonthlyPayment && (
+            <div className="flex items-center justify-center mt-3 pt-2 border-t border-white/10">
+              <span className="text-blue-400 font-semibold text-sm">
+                {displayMonthlyPayment} with financing
+              </span>
+            </div>
+          )}
         </div>
 
         {/* CTA Buttons */}
@@ -530,12 +676,16 @@ export function JakePackageCard({ packageSummary, cartUrl, onCheckout, onAskJake
             <a
               href={cartUrl}
               onClick={onCheckout}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3.5 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-500/20"
+              className={`w-full flex items-center justify-center gap-2 px-5 py-3.5 text-white font-bold rounded-xl transition-all shadow-lg ${
+                isFeatured 
+                  ? "bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 hover:shadow-red-500/20"
+                  : "bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 hover:shadow-green-500/20"
+              }`}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
-              Checkout This Package
+              {isFeatured ? 'Get This Package ⭐' : 'Checkout This Package'}
             </a>
           )}
           

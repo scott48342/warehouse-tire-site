@@ -22,7 +22,11 @@ export type JakeEventType =
   | "recommendation_shown"
   | "package_built"
   | "cart_created"
-  | "checkout_started";
+  | "checkout_started"
+  // Package merchandising events
+  | "jake_package_view"
+  | "jake_package_click"
+  | "jake_package_add_to_cart";
 
 interface JakeEventData {
   prompt?: string;
@@ -57,6 +61,9 @@ interface JakeEventData {
   cartUrl?: string;
   cartValue?: number; // Total cart value in dollars
   count?: number;
+  // Package merchandising fields
+  merchandisingBadge?: "best_value" | "most_popular" | "premium";
+  packageId?: string;
   name?: string;
   type?: string;
   source?: "homepage" | "header" | "page" | "floating";
@@ -184,7 +191,33 @@ export function useJakeAnalytics() {
     
     trackCheckoutStarted: () => 
       trackJakeEvent("checkout_started"),
+    
+    // Package merchandising tracking
+    trackPackageView: (packageId: string, badge?: JakeEventData["merchandisingBadge"]) =>
+      trackJakeEvent("jake_package_view", { packageId, merchandisingBadge: badge }),
+    
+    trackPackageClick: (packageId: string, badge?: JakeEventData["merchandisingBadge"]) =>
+      trackJakeEvent("jake_package_click", { packageId, merchandisingBadge: badge }),
+    
+    trackPackageAddToCart: (packageId: string, cartValue?: number, badge?: JakeEventData["merchandisingBadge"]) =>
+      trackJakeEvent("jake_package_add_to_cart", { packageId, cartValue, merchandisingBadge: badge }),
   };
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// STANDALONE PACKAGE TRACKING FUNCTIONS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export function trackJakePackageView(packageId: string, merchandisingBadge?: "best_value" | "most_popular" | "premium") {
+  trackJakeEvent("jake_package_view", { packageId, merchandisingBadge });
+}
+
+export function trackJakePackageClick(packageId: string, merchandisingBadge?: "best_value" | "most_popular" | "premium") {
+  trackJakeEvent("jake_package_click", { packageId, merchandisingBadge });
+}
+
+export function trackJakePackageAddToCart(packageId: string, cartValue?: number, merchandisingBadge?: "best_value" | "most_popular" | "premium") {
+  trackJakeEvent("jake_package_add_to_cart", { packageId, cartValue, merchandisingBadge });
 }
 
 export default trackJakeEvent;
