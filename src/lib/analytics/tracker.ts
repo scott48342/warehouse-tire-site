@@ -250,3 +250,47 @@ export function trackPackageBuilderEnter(vehicle?: { year: string; make: string;
     metadata: vehicle ? { vehicle: `${vehicle.year} ${vehicle.make} ${vehicle.model}` } : undefined
   });
 }
+
+/**
+ * Package Merchandising Analytics
+ */
+export type PackageBadgeType = 'best_value' | 'most_popular' | 'premium';
+
+export function trackPackageView(packageId: string, badgeType?: PackageBadgeType): void {
+  trackEvent('package_view', { 
+    productSku: packageId,
+    metadata: { badgeType }
+  });
+}
+
+export function trackPackageBadgeView(badgeType: PackageBadgeType, packageId: string): void {
+  trackEvent('package_badge_view', { 
+    productSku: packageId,
+    metadata: { badgeType }
+  });
+}
+
+export function trackPackageBadgeClick(badgeType: PackageBadgeType, packageId: string): void {
+  trackEvent('package_badge_click', { 
+    productSku: packageId,
+    metadata: { badgeType }
+  });
+}
+
+export function trackPackageAddToCart(packageId: string, badgeType?: PackageBadgeType, cartValue?: number): void {
+  trackEvent('package_add_to_cart', { 
+    productSku: packageId,
+    productType: 'package',
+    cartValue,
+    metadata: { badgeType }
+  });
+}
+
+export function trackPackageCheckoutStart(packageId: string, badgeType?: PackageBadgeType, cartValue?: number): void {
+  trackEvent('package_checkout_start', { 
+    productSku: packageId,
+    productType: 'package',
+    cartValue,
+    metadata: { badgeType }
+  });
+}

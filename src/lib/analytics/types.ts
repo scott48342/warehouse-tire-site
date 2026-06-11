@@ -19,7 +19,13 @@ export type FunnelEventName =
   | 'garage_vehicle_save'
   | 'garage_vehicle_restore'
   | 'quick_view_open'
-  | 'package_builder_enter';
+  | 'package_builder_enter'
+  // Package merchandising events
+  | 'package_view'
+  | 'package_badge_view'
+  | 'package_badge_click'
+  | 'package_add_to_cart'
+  | 'package_checkout_start';
 
 export type DeviceType = 'mobile' | 'desktop' | 'tablet';
 export type StoreMode = 'local' | 'national';
