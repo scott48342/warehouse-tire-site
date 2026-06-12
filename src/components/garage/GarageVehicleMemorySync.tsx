@@ -18,8 +18,10 @@ export function GarageVehicleMemorySync() {
   useEffect(() => {
     if (!garageLoaded) return;
 
+    // Only sync FROM garage TO memory when garage HAS a vehicle
+    // Don't clear memory when garage is empty - URL params may be the source of truth
+    // (e.g., user landed on /tires?year=2024&make=Ford&model=F-150)
     if (garageVehicle) {
-      // Sync garage vehicle to VehicleMemory format
       setActiveVehicle({
         year: garageVehicle.year,
         make: garageVehicle.make,
@@ -28,11 +30,10 @@ export function GarageVehicleMemorySync() {
         modification: garageVehicle.modification,
         wheelDia: garageVehicle.wheelDia,
       });
-    } else {
-      // No active vehicle in garage, clear VehicleMemory too
-      clearActiveVehicle();
     }
-  }, [garageVehicle, garageLoaded, setActiveVehicle, clearActiveVehicle]);
+    // NOTE: We intentionally do NOT call clearActiveVehicle() when garage is empty.
+    // This prevents a loop where VehicleMemorySync saves from URL and this clears it.
+  }, [garageVehicle, garageLoaded, setActiveVehicle]);
 
   // This component renders nothing - it's just for side effects
   return null;
