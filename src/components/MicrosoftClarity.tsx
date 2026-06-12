@@ -8,10 +8,10 @@
  * 
  * Setup:
  * 1. Go to https://clarity.microsoft.com
- * 2. Create a new project
- * 3. Add your site URL (shop.warehousetiredirect.com)
- * 4. Copy the project ID from the setup wizard
- * 5. Add NEXT_PUBLIC_CLARITY_PROJECT_ID to .env.local and Vercel
+ * 2. Create a new project for each domain
+ * 3. Add env vars to Vercel:
+ *    - NEXT_PUBLIC_CLARITY_PROJECT_ID (national: shop.warehousetiredirect.com)
+ *    - NEXT_PUBLIC_CLARITY_PROJECT_ID_LOCAL (local: shop.warehousetire.net)
  * 
  * Features tracked:
  * - Session recordings (replay user sessions)
@@ -26,25 +26,34 @@
 
 import Script from 'next/script'
 
-const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID
+// These are injected at build time from env vars
+const CLARITY_PROJECT_ID_NATIONAL = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || ''
+const CLARITY_PROJECT_ID_LOCAL = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID_LOCAL || ''
 
 export function MicrosoftClarity() {
-  // Don't render if no project ID configured
-  if (!CLARITY_PROJECT_ID) {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('[Clarity] No project ID configured. Set NEXT_PUBLIC_CLARITY_PROJECT_ID to enable.')
-    }
+  // Don't render if no project IDs configured
+  if (!CLARITY_PROJECT_ID_NATIONAL && !CLARITY_PROJECT_ID_LOCAL) {
     return null
   }
 
   return (
     <Script id="microsoft-clarity" strategy="afterInteractive">
       {`
-        (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
+        (function(){
+          // Determine which Clarity project to use based on hostname
+          var nationalId = "${CLARITY_PROJECT_ID_NATIONAL}";
+          var localId = "${CLARITY_PROJECT_ID_LOCAL}";
+          var projectId = window.location.hostname.includes('warehousetire.net') ? localId : nationalId;
+          
+          if (!projectId) return;
+          
+          // Standard Clarity initialization
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", projectId);
+        })();
       `}
     </Script>
   )
