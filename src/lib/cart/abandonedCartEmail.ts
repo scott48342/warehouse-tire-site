@@ -435,7 +435,36 @@ export async function sendRecoveryEmail(
     return { success: false, cartId, step, action: "skipped", reason: "below_min_value" };
   }
 
-  const hasConsent = await hasEmailConsent(cart.customerEmail);
+  // Auto-subscribe if they gave us their email in cart (implied consent)
+  let hasConsent = await hasEmailConsent(cart.customerEmail);
+  if (!hasConsent) {
+    // Auto-create subscriber with consent - they gave us their email at checkout
+    try {
+      const normalizedEmail = cart.customerEmail.toLowerCase().trim();
+      await db.insert(emailSubscribers).values({
+        email: normalizedEmail,
+        source: "checkout",
+        vehicleYear: cart.vehicleYear?.toString(),
+        vehicleMake: cart.vehicleMake,
+        vehicleModel: cart.vehicleModel,
+        vehicleTrim: cart.vehicleTrim,
+        cartId: cart.cartId,
+        marketingConsent: true,
+        isTest: cart.isTest || false,
+      }).onConflictDoUpdate({
+        target: emailSubscribers.email,
+        set: {
+          marketingConsent: true,
+          updatedAt: new Date(),
+        },
+      });
+      console.log(`[abandonedCartEmail] Auto-subscribed ${normalizedEmail} with consent`);
+      hasConsent = true;
+    } catch (err) {
+      console.error(`[abandonedCartEmail] Failed to auto-subscribe:`, err);
+    }
+  }
+  
   if (!hasConsent) {
     return { success: false, cartId, step, action: "skipped", reason: "no_consent" };
   }
