@@ -101,8 +101,7 @@ export const VEHICLE_YEAR_RANGES: Record<string, YearRange> = {
   'Chevrolet:Trax': { start: 2013 },
   'Honda:Passport': { start: 2019 }, // New gen; old was 1994-2002
   'Honda:HR-V': { start: 2016 },
-  'Toyota:Venza': { start: 2009, end: 2015 }, // Returned 2021 as hybrid-only
-  'Toyota:Venza': { start: 2021 }, // New gen
+  'Toyota:Venza': { start: 2021 }, // Returned 2021; old gen was 2009-2015
   'Nissan:Pathfinder': { start: 1987 },
   'Nissan:Murano': { start: 2003 },
   'Nissan:Kicks': { start: 2018 },
