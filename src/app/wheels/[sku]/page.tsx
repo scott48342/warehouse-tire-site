@@ -37,6 +37,8 @@ import { WheelGalleryBlock } from "@/components/WheelGalleryBlock";
 import { ProductViewTracker } from "@/components/ProductViewTracker";
 // SEO structured data (2026-06-09)
 import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
+// Mobile sticky CTA fix (2026-06-12) - actual add-to-cart instead of anchor link
+import { MobileStickyAddToCart } from "@/components/MobileStickyAddToCart";
 
 type WheelProsBrand = {
   code?: string;
@@ -834,20 +836,22 @@ export default async function WheelDetailPage({
         <div className="mt-6 text-xs text-neutral-400">SKU: {sku}</div>
       </div>
 
-      {/* Mobile sticky CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white p-3 md:hidden">
-        <div className="flex items-center justify-between gap-3">
-          <div>
-            <div className="text-lg font-extrabold text-neutral-900">
-              {typeof price === "number" && Number.isFinite(price) ? `$${price.toFixed(2)}` : "Call"}
-            </div>
-            <div className="text-[11px] text-neutral-500">per wheel</div>
-          </div>
-          <a href="#add-to-cart" className="flex-1 max-w-[200px] h-11 rounded-xl bg-[var(--brand-red)] px-4 flex items-center justify-center text-sm font-extrabold text-white">
-            Add to Cart
-          </a>
-        </div>
-      </div>
+      {/* Mobile sticky CTA - actual add-to-cart button (fixed 2026-06-12) */}
+      <MobileStickyAddToCart
+        type="wheel"
+        sku={sku}
+        brand={brand || "Wheel"}
+        model={String(it?.title || sku)}
+        finish={finish || undefined}
+        diameter={diameter || undefined}
+        width={width || undefined}
+        offset={offset || undefined}
+        boltPattern={boltPattern || undefined}
+        imageUrl={imageUrl}
+        unitPrice={typeof price === "number" && Number.isFinite(price) ? price : 0}
+        quantity={4}
+        vehicle={hasVehicle ? { year, make, model, trim: trim || undefined, modification: modification || undefined } : undefined}
+      />
     </main>
     </>
   );

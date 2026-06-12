@@ -14,6 +14,26 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false },
 });
 
+/**
+ * Detect if user agent indicates a bot/crawler
+ * Returns true if the user agent matches known bot patterns
+ */
+function isBot(userAgent: string): boolean {
+  if (!userAgent) return false;
+  const ua = userAgent.toLowerCase();
+  const botPatterns = [
+    'bot', 'crawl', 'spider', 'slurp', 'googlebot', 'bingbot',
+    'yandex', 'baidu', 'duckduck', 'facebookexternal', 'twitterbot',
+    'linkedinbot', 'whatsapp', 'telegrambot', 'applebot', 'semrush',
+    'ahref', 'mj12bot', 'petalbot', 'bytespider', 'dotbot', 'seznambot',
+    'headless', 'puppeteer', 'phantom', 'selenium', 'playwright',
+    'lighthouse', 'pagespeed', 'pingdom', 'gtmetrix', 'uptimerobot',
+    'prerender', 'scrapy', 'python-requests', 'curl/', 'wget/',
+    'go-http-client', 'java/', 'libwww', 'fetcher', 'archiver',
+  ];
+  return botPatterns.some(pattern => ua.includes(pattern));
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -53,12 +73,17 @@ export async function POST(request: NextRequest) {
                request.headers.get('x-real-ip') || '';
     const referrer = request.headers.get('referer') || '';
     
-    // Build metadata with discount info
+    // Detect bot traffic
+    const isBotTraffic = isBot(userAgent);
+    
+    // Build metadata with discount info and bot flag
     const enrichedMetadata = {
       ...metadata,
       // Include discount info in metadata for analysis
       ...(discountAmount !== undefined && { discountAmount }),
       ...(discountType && { discountType }),
+      // Mark bot traffic for filtering in analytics queries
+      isBot: isBotTraffic,
     };
     
     // Insert event

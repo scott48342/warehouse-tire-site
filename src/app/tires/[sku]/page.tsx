@@ -41,6 +41,8 @@ import { RebatePDPBlockStatic } from "@/components/RebateBlock";
 import { getPool as getRebatePool, listActiveRebates, getBestMatchingRebate, type SiteRebate } from "@/lib/rebates";
 // Funnel analytics tracking (2026-04-26)
 import { ProductViewTracker } from "@/components/ProductViewTracker";
+// Mobile sticky CTA fix (2026-06-12) - actual add-to-cart instead of anchor link
+import { MobileStickyAddToCart } from "@/components/MobileStickyAddToCart";
 // Shop context detection (local vs national)
 import { headers } from "next/headers";
 import { detectShopContext } from "@/lib/shopContext";
@@ -810,18 +812,21 @@ export default async function TireDetailPage({
                 <div className="mt-6 text-xs text-neutral-400">SKU: {safeSku}</div>
               </div>
 
-              {/* Mobile sticky CTA */}
-              <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white p-3 md:hidden">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <div className="text-lg font-extrabold text-neutral-900">{displayPrice != null ? fmtMoney(displayPrice) : "Call"}</div>
-                    <div className="text-[11px] text-neutral-500">per tire</div>
-                  </div>
-                  <a href="#add-to-cart" className="flex-1 max-w-[200px] h-11 rounded-xl bg-[var(--brand-red)] px-4 flex items-center justify-center text-sm font-extrabold text-white">
-                    Add to Cart
-                  </a>
-                </div>
-              </div>
+              {/* Mobile sticky CTA - actual add-to-cart button (fixed 2026-06-12) */}
+              <MobileStickyAddToCart
+                type="tire"
+                sku={tire.partNumber || safeSku}
+                brand={tire.brand || "Tire"}
+                model={title}
+                size={tire.size || size}
+                loadIndex={tire.badges?.loadIndex ? String(tire.badges.loadIndex) : undefined}
+                speedRating={tire.badges?.speedRating ? String(tire.badges.speedRating) : undefined}
+                imageUrl={tire.imageUrl}
+                unitPrice={displayPrice || 0}
+                quantity={4}
+                vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
+                source={tire.rawSource || tire.source || "tireweb"}
+              />
             </main>
             </>
           );
@@ -1265,18 +1270,21 @@ export default async function TireDetailPage({
         <div className="mt-6 text-xs text-neutral-400">SKU: {safeSku}</div>
       </div>
 
-      {/* Mobile sticky CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white p-3 md:hidden">
-        <div className="flex items-center justify-between gap-3">
-          <div>
-            <div className="text-lg font-extrabold text-neutral-900">{displayPrice != null ? fmtMoney(displayPrice) : "Call"}</div>
-            <div className="text-[11px] text-neutral-500">per tire</div>
-          </div>
-          <a href="#add-to-cart" className="flex-1 max-w-[200px] h-11 rounded-xl bg-[var(--brand-red)] px-4 flex items-center justify-center text-sm font-extrabold text-white">
-            Add to Cart
-          </a>
-        </div>
-      </div>
+      {/* Mobile sticky CTA - actual add-to-cart button (fixed 2026-06-12) */}
+      <MobileStickyAddToCart
+        type="tire"
+        sku={safeSku}
+        brand={String(t.brand_desc || "Tire")}
+        model={title}
+        size={String(t.tire_size || t.simple_size || "")}
+        loadIndex={t.load_index ? String(t.load_index) : undefined}
+        speedRating={t.speed_rating ? String(t.speed_rating) : undefined}
+        imageUrl={enrichedImageUrl || undefined}
+        unitPrice={displayPrice || 0}
+        quantity={4}
+        vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
+        source="wheelpros"
+      />
     </main>
     </>
   );
