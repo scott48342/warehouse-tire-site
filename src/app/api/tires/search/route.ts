@@ -270,6 +270,107 @@ function extractRimDiameter(size: string): number | null {
   return null;
 }
 
+// ============================================================================
+// LT (LIGHT TRUCK) TIRE DETECTION (2026-06-12)
+// 
+// Commercial vans, HD trucks, and work vehicles require LT (Light Truck) 
+// construction tires for proper load capacity. When OEM tires are LT,
+// plus-sized tires must also be LT to maintain safe load ratings.
+// 
+// Detection: LT prefix (e.g., "LT245/75R16") or Load Range C/D/E
+// ============================================================================
+
+/**
+ * Check if a tire SIZE string indicates LT (Light Truck) construction
+ * 
+ * LT tires are identifiable by:
+ * - "LT" prefix: LT245/75R16, LT265/70R17
+ * - Load range suffix: 245/75R16/E, 275/70R18/D
+ * - Sometimes "C" construction in description
+ * 
+ * @param size - Tire size string (e.g., "LT245/75R16" or "245/75R16/E")
+ * @returns true if the size indicates LT construction
+ */
+function isLtTireSize(size: string | null | undefined): boolean {
+  if (!size) return false;
+  const s = size.trim().toUpperCase();
+  
+  // Check for LT prefix
+  if (s.startsWith("LT")) return true;
+  
+  // Check for Load Range suffix (C, D, E are commercial)
+  // Format: 245/75R16/E or 275/70R18/D
+  if (/\/[CDE]$/i.test(s)) return true;
+  
+  // Check for /E or /D in the middle (some formats)
+  if (/\/[CDE]\s/i.test(s)) return true;
+  
+  return false;
+}
+
+/**
+ * Check if any OEM tire size requires LT construction
+ * If ANY OEM size is LT, the vehicle requires LT tires
+ * 
+ * @param sizes - Array of OEM tire sizes
+ * @returns true if vehicle requires LT tires
+ */
+function vehicleRequiresLtTires(sizes: string[]): boolean {
+  return sizes.some(isLtTireSize);
+}
+
+/**
+ * Check if a tire RESULT is an LT (Light Truck) tire
+ * 
+ * Checks multiple fields since data quality varies by source:
+ * - Size string (LT prefix or load range suffix)
+ * - Construction badge
+ * - Load range in badges/enrichment (C, D, E are commercial)
+ * - Description contains "LT" or load range indicator
+ * 
+ * @param tire - Tire search result
+ * @returns true if the tire is LT construction
+ */
+function isLtTire(tire: TireResult): boolean {
+  // Check size string
+  if (isLtTireSize(tire.size)) return true;
+  
+  // Check badges.construction
+  const construction = (tire.badges?.construction || "").toUpperCase();
+  if (construction === "LT" || construction.includes("LIGHT TRUCK")) return true;
+  
+  // Check load range (C, D, E are commercial/LT load ranges)
+  const loadRange = (tire.badges?.loadRange || tire.enrichment?.loadRange || "").toUpperCase();
+  if (/^[CDE]$/.test(loadRange)) return true;
+  
+  // Check description for LT indicators
+  const desc = (tire.description || "").toUpperCase();
+  // Match "LT" at start of description or after size (e.g., "LT245/75R16" or "245/75R16 LT")
+  if (/\bLT\d{3}/.test(desc) || /^\s*LT\b/.test(desc)) return true;
+  // Match load range in description (e.g., "245/75R16/E" or "Load Range E")
+  if (/LOAD\s*RANGE\s*[CDE]/i.test(desc)) return true;
+  if (/\/[CDE]\s/.test(desc) || /\/[CDE]$/i.test(desc)) return true;
+  
+  return false;
+}
+
+/**
+ * Filter tire results to only include LT (Light Truck) construction
+ * 
+ * Use this when the vehicle requires LT tires (commercial van, HD truck, etc.)
+ * to prevent showing passenger tires that can't handle the load capacity.
+ * 
+ * @param tires - Array of tire results
+ * @returns Filtered array containing only LT tires
+ */
+function filterToLtTiresOnly(tires: TireResult[]): { filtered: TireResult[]; removedCount: number } {
+  const filtered = tires.filter(isLtTire);
+  return {
+    filtered,
+    removedCount: tires.length - filtered.length,
+  };
+}
+
 /**
  * Extract tire section width from size string
  * 245/50R18 → 245
@@ -2047,6 +2148,17 @@ export async function GET(req: Request) {
     const oemTireSizes = [...tireSizes];
     
     // ═══════════════════════════════════════════════════════════════════════════
+    // LT (LIGHT TRUCK) TIRE DETECTION (2026-06-12)
+    // If OEM tires are LT construction (commercial van, HD truck), enforce LT-only
+    // results to maintain safe load capacity even when plus-sizing wheels.
+    // ═══════════════════════════════════════════════════════════════════════════
+    const requiresLtConstruction = vehicleRequiresLtTires(oemTireSizes);
+    if (requiresLtConstruction) {
+      console.log(`[tires/search] 🚚 LT CONSTRUCTION REQUIRED: ${year} ${make} ${model}`);
+      console.log(`  OEM sizes: ${oemTireSizes.join(", ")}`);
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════════
     // CLASSIC VEHICLE UPSIZE LOGIC
     // For classic vehicles, use the upsize engine to get proper tire sizes
     // when the wheel diameter differs from stock
@@ -2722,6 +2834,22 @@ export async function GET(req: Request) {
       console.log(`[tires/search] Wheel width filter: ${wheelWidth}" wheel → tire width ${tireWidthRange.min}-${tireWidthRange.max}mm, ${beforeCount} → ${filteredResults.length} results`);
     }
     
+    // ═══════════════════════════════════════════════════════════════════════════
+    // LT (LIGHT TRUCK) CONSTRUCTION FILTER (2026-06-12)
+    // If vehicle OEM tires are LT (commercial van, HD truck), filter to LT only.
+    // This prevents showing passenger tires that can't handle the load capacity.
+    // ═══════════════════════════════════════════════════════════════════════════
+    let ltFilterApplied = false;
+    let ltFilterRemovedCount = 0;
+    if (requiresLtConstruction) {
+      const beforeLtFilter = filteredResults.length;
+      const ltFilterResult = filterToLtTiresOnly(filteredResults);
+      filteredResults = ltFilterResult.filtered;
+      ltFilterApplied = true;
+      ltFilterRemovedCount = ltFilterResult.removedCount;
+      console.log(`[tires/search] 🚚 LT FILTER: ${beforeLtFilter} → ${filteredResults.length} results (removed ${ltFilterRemovedCount} non-LT tires)`);
+    }
+    
     const slicedResults = filteredResults.slice(0, pageSize * 2); // Fetch extra for image filtering
     
     // If strict filtering leaves us empty but we have results, return error
@@ -2948,6 +3076,17 @@ export async function GET(req: Request) {
         filteredOut: imageStats.invalid,
         ...(debug && { reasons: imageStats.invalidReasons }),
       },
+      
+      // LT (Light Truck) construction filter (2026-06-12)
+      // Applied when OEM tires are LT to ensure proper load capacity
+      ...(ltFilterApplied && {
+        ltConstructionFilter: {
+          applied: true,
+          vehicleRequiresLt: true,
+          oemLtSizes: oemTireSizes.filter(isLtTireSize),
+          nonLtTiresRemoved: ltFilterRemovedCount,
+        },
+      }),
       
       // Fallback messaging for empty results (QA validation)
       ...(fallbackMessage && { fallbackMessage }),
