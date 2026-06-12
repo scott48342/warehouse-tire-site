@@ -21,6 +21,7 @@
 
 import { db, schema } from "./db";
 import { sql, and, eq } from "drizzle-orm";
+import { vehicleExistsInYear } from "./vehicleYearRanges";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TARGET VEHICLES - Top 500+ by US Sales Volume
@@ -409,6 +410,11 @@ export async function calculateCoverage(): Promise<CoverageStats> {
 
     for (const vehicle of tier.vehicles) {
       for (const year of IMPORT_YEARS) {
+        // Skip phantom years (vehicles that didn't exist in that year)
+        if (!vehicleExistsInYear(vehicle.make, vehicle.model, year)) {
+          continue;
+        }
+        
         const key = `${year}|${vehicle.make.toLowerCase()}|${vehicle.model.toLowerCase()}`;
         tierTotal++;
         totalTarget++;
@@ -512,6 +518,10 @@ export function getTargetVehicles(config: BulkImportConfig) {
     const tierVehicles = tierMap[tier];
     for (const vehicle of tierVehicles) {
       for (const year of config.years) {
+        // Skip phantom years
+        if (!vehicleExistsInYear(vehicle.make, vehicle.model, year)) {
+          continue;
+        }
         vehicles.push({
           year,
           make: vehicle.make,
