@@ -1,0 +1,1345 @@
+{
+  "timestamp": "2026-06-12T18:01:27.330Z",
+  "readyToImport": [
+    {
+      "make": "Dodge",
+      "model": "Journey",
+      "years": [
+        2020,
+        2016,
+        2015
+      ],
+      "fitmentKey": "Dodge:Journey:2009-2020",
+      "searchHits": 64
+    },
+    {
+      "make": "Acura",
+      "model": "Integra",
+      "years": [
+        2026,
+        2024,
+        2023
+      ],
+      "fitmentKey": "Acura:Integra:2023-2026",
+      "searchHits": 40
+    },
+    {
+      "make": "Kia",
+      "model": "Soul",
+      "years": [
+        2020,
+        2017,
+        2016
+      ],
+      "fitmentKey": "Kia:Soul:2014-2019",
+      "searchHits": 31
+    },
+    {
+      "make": "Kia",
+      "model": "K5",
+      "years": [
+        2025,
+        2023,
+        2022
+      ],
+      "fitmentKey": "Kia:K5:2021-2025",
+      "searchHits": 23
+    },
+    {
+      "make": "Nissan",
+      "model": "Frontier",
+      "years": [
+        2024,
+        2023
+      ],
+      "fitmentKey": "Nissan:Frontier:2022-2025",
+      "searchHits": 23
+    },
+    {
+      "make": "Dodge",
+      "model": "Durango",
+      "years": [
+        2018
+      ],
+      "fitmentKey": "Dodge:Durango:2011-2024",
+      "searchHits": 38
+    },
+    {
+      "make": "Gmc",
+      "model": "Yukon Xl",
+      "years": [
+        2023
+      ],
+      "fitmentKey": "GMC:Yukon XL:2021-2025",
+      "searchHits": 25
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "years": [
+        2020
+      ],
+      "fitmentKey": "Toyota:Corolla:2019-2025",
+      "searchHits": 18
+    },
+    {
+      "make": "Subaru",
+      "model": "Forester",
+      "years": [
+        2025
+      ],
+      "fitmentKey": "Subaru:Forester:2019-2025",
+      "searchHits": 15
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "years": [
+        2010
+      ],
+      "fitmentKey": "Honda:Accord:2008-2012",
+      "searchHits": 17
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "years": [
+        2024
+      ],
+      "fitmentKey": "Chevrolet:Camaro:2016-2024",
+      "searchHits": 11
+    },
+    {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "years": [
+        2010
+      ],
+      "fitmentKey": "Toyota:Tacoma:2005-2015",
+      "searchHits": 11
+    },
+    {
+      "make": "Acura",
+      "model": "Rdx",
+      "years": [
+        2023
+      ],
+      "fitmentKey": "Acura:RDX:2019-2025",
+      "searchHits": 8
+    },
+    {
+      "make": "Ford",
+      "model": "Ranger",
+      "years": [
+        2024
+      ],
+      "fitmentKey": "Ford:Ranger:2019-2025",
+      "searchHits": 8
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "years": [
+        2015
+      ],
+      "fitmentKey": "Ford:Explorer:2011-2019",
+      "searchHits": 5
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Id.4",
+      "years": [
+        2023
+      ],
+      "fitmentKey": "Volkswagen:ID.4:2021-2025",
+      "searchHits": 1
+    }
+  ],
+  "needsReview": [
+    {
+      "make": "Mazda",
+      "model": "Mazda6",
+      "validatedYears": [
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2015,
+        2014,
+        2013,
+        2012
+      ],
+      "invalidYears": [
+        2022
+      ],
+      "fitmentKey": "Mazda:Mazda6:2009-2013",
+      "searchHits": 265,
+      "reason": "Partial year coverage - some years lack verified data"
+    }
+  ],
+  "noData": [
+    {
+      "make": "Ford",
+      "model": "F150",
+      "years": [
+        2024
+      ],
+      "searchHits": 1,
+      "reason": "No verified fitment data available"
+    }
+  ],
+  "importRecords": [
+    {
+      "year": 2021,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2020,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2019,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2018,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2017,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2015,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2014,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2013,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2012,
+      "make": "Mazda",
+      "model": "Mazda6",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "225/45R18"
+      ],
+      "source": "manual-validated:Mazda OEM specs",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Mazda OEM specs"
+    },
+    {
+      "year": 2020,
+      "make": "Dodge",
+      "model": "Journey",
+      "boltPattern": "5x127",
+      "centerBoreMm": 71.5,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 40,
+      "offsetMaxMm": 50,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 40,
+          "isStock": true
+        },
+        {
+          "diameter": 19,
+          "width": 7.5,
+          "offset": 50,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "225/65R17",
+        "225/55R19"
+      ],
+      "source": "manual-validated:Dodge/Chrysler OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Dodge/Chrysler OEM"
+    },
+    {
+      "year": 2016,
+      "make": "Dodge",
+      "model": "Journey",
+      "boltPattern": "5x127",
+      "centerBoreMm": 71.5,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 40,
+      "offsetMaxMm": 50,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 40,
+          "isStock": true
+        },
+        {
+          "diameter": 19,
+          "width": 7.5,
+          "offset": 50,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "225/65R17",
+        "225/55R19"
+      ],
+      "source": "manual-validated:Dodge/Chrysler OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Dodge/Chrysler OEM"
+    },
+    {
+      "year": 2015,
+      "make": "Dodge",
+      "model": "Journey",
+      "boltPattern": "5x127",
+      "centerBoreMm": 71.5,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 40,
+      "offsetMaxMm": 50,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 6.5,
+          "offset": 40,
+          "isStock": true
+        },
+        {
+          "diameter": 19,
+          "width": 7.5,
+          "offset": 50,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "225/65R17",
+        "225/55R19"
+      ],
+      "source": "manual-validated:Dodge/Chrysler OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Dodge/Chrysler OEM"
+    },
+    {
+      "year": 2026,
+      "make": "Acura",
+      "model": "Integra",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 64.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "245/40R18"
+      ],
+      "source": "manual-validated:Acura/Honda OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Acura/Honda OEM"
+    },
+    {
+      "year": 2024,
+      "make": "Acura",
+      "model": "Integra",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 64.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "245/40R18"
+      ],
+      "source": "manual-validated:Acura/Honda OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Acura/Honda OEM"
+    },
+    {
+      "year": 2023,
+      "make": "Acura",
+      "model": "Integra",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 64.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "245/40R18"
+      ],
+      "source": "manual-validated:Acura/Honda OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Acura/Honda OEM"
+    },
+    {
+      "year": 2020,
+      "make": "Kia",
+      "model": "Soul",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 52,
+      "oemWheelSizes": [
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "205/60R16",
+        "235/45R18"
+      ],
+      "source": "manual-validated:Kia/Hyundai OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Kia/Hyundai OEM"
+    },
+    {
+      "year": 2017,
+      "make": "Kia",
+      "model": "Soul",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 52,
+      "oemWheelSizes": [
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "205/60R16",
+        "235/45R18"
+      ],
+      "source": "manual-validated:Kia/Hyundai OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Kia/Hyundai OEM"
+    },
+    {
+      "year": 2016,
+      "make": "Kia",
+      "model": "Soul",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 52,
+      "oemWheelSizes": [
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 52,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "205/60R16",
+        "235/45R18"
+      ],
+      "source": "manual-validated:Kia/Hyundai OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Kia/Hyundai OEM"
+    },
+    {
+      "year": 2025,
+      "make": "Kia",
+      "model": "K5",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7.5,
+          "offset": 50,
+          "isStock": true
+        },
+        {
+          "diameter": 19,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ],
+      "source": "manual-validated:Kia/Hyundai OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Kia/Hyundai OEM"
+    },
+    {
+      "year": 2023,
+      "make": "Kia",
+      "model": "K5",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7.5,
+          "offset": 50,
+          "isStock": true
+        },
+        {
+          "diameter": 19,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ],
+      "source": "manual-validated:Kia/Hyundai OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Kia/Hyundai OEM"
+    },
+    {
+      "year": 2022,
+      "make": "Kia",
+      "model": "K5",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 67.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 45,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7.5,
+          "offset": 50,
+          "isStock": true
+        },
+        {
+          "diameter": 19,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "245/40R19"
+      ],
+      "source": "manual-validated:Kia/Hyundai OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Kia/Hyundai OEM"
+    },
+    {
+      "year": 2024,
+      "make": "Nissan",
+      "model": "Frontier",
+      "boltPattern": "6x114.3",
+      "centerBoreMm": 66.1,
+      "threadSize": "M12x1.25",
+      "seatType": "conical",
+      "offsetMinMm": 25,
+      "offsetMaxMm": 35,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 30,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7.5,
+          "offset": 25,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "265/70R17",
+        "265/65R18"
+      ],
+      "source": "manual-validated:Nissan OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Nissan OEM"
+    },
+    {
+      "year": 2023,
+      "make": "Nissan",
+      "model": "Frontier",
+      "boltPattern": "6x114.3",
+      "centerBoreMm": 66.1,
+      "threadSize": "M12x1.25",
+      "seatType": "conical",
+      "offsetMinMm": 25,
+      "offsetMaxMm": 35,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 30,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7.5,
+          "offset": 25,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "265/70R17",
+        "265/65R18"
+      ],
+      "source": "manual-validated:Nissan OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Nissan OEM"
+    },
+    {
+      "year": 2018,
+      "make": "Dodge",
+      "model": "Durango",
+      "boltPattern": "5x127",
+      "centerBoreMm": 71.5,
+      "threadSize": "M14x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 18,
+      "offsetMaxMm": 56,
+      "oemWheelSizes": [
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 56,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 8,
+          "offset": 56,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 10,
+          "offset": 18,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "265/60R18",
+        "295/45R20",
+        "295/45R20"
+      ],
+      "source": "manual-validated:Dodge/Stellantis OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Dodge/Stellantis OEM"
+    },
+    {
+      "year": 2023,
+      "make": "Gmc",
+      "model": "Yukon Xl",
+      "boltPattern": "6x139.7",
+      "centerBoreMm": 78.1,
+      "threadSize": "M14x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 24,
+      "offsetMaxMm": 44,
+      "oemWheelSizes": [
+        {
+          "diameter": 18,
+          "width": 8.5,
+          "offset": 44,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 8.5,
+          "offset": 31,
+          "isStock": true
+        },
+        {
+          "diameter": 22,
+          "width": 9,
+          "offset": 24,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "275/70R18",
+        "275/60R20",
+        "285/45R22"
+      ],
+      "source": "manual-validated:GM OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: GM OEM"
+    },
+    {
+      "year": 2020,
+      "make": "Toyota",
+      "model": "Corolla",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 60.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 39,
+      "offsetMaxMm": 50,
+      "oemWheelSizes": [
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 45,
+          "isStock": true
+        },
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 39,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "205/55R16",
+        "225/45R17",
+        "225/40R18"
+      ],
+      "source": "manual-validated:Toyota OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Toyota OEM"
+    },
+    {
+      "year": 2025,
+      "make": "Subaru",
+      "model": "Forester",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 56.1,
+      "threadSize": "M12x1.25",
+      "seatType": "conical",
+      "offsetMinMm": 48,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 7,
+          "offset": 48,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "225/60R17",
+        "225/55R18"
+      ],
+      "source": "manual-validated:Subaru OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Subaru OEM"
+    },
+    {
+      "year": 2010,
+      "make": "Honda",
+      "model": "Accord",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 64.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 17,
+          "width": 7,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 50,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "215/60R16",
+        "225/50R17",
+        "235/45R18"
+      ],
+      "source": "manual-validated:Honda OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Honda OEM"
+    },
+    {
+      "year": 2024,
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "boltPattern": "5x120",
+      "centerBoreMm": 67.1,
+      "threadSize": "M14x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 27,
+      "offsetMaxMm": 58,
+      "oemWheelSizes": [
+        {
+          "diameter": 18,
+          "width": 8.5,
+          "offset": 56,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 8.5,
+          "offset": 32,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 10,
+          "offset": 27,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "245/45R18",
+        "245/40R20",
+        "275/35R20"
+      ],
+      "source": "manual-validated:GM OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: GM OEM"
+    },
+    {
+      "year": 2010,
+      "make": "Toyota",
+      "model": "Tacoma",
+      "boltPattern": "6x139.7",
+      "centerBoreMm": 106.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 15,
+      "offsetMaxMm": 30,
+      "oemWheelSizes": [
+        {
+          "diameter": 16,
+          "width": 7,
+          "offset": 30,
+          "isStock": true
+        },
+        {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 30,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "245/75R16",
+        "265/65R17"
+      ],
+      "source": "manual-validated:Toyota OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Toyota OEM"
+    },
+    {
+      "year": 2023,
+      "make": "Acura",
+      "model": "Rdx",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 64.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 40,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 19,
+          "width": 8,
+          "offset": 55,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 9,
+          "offset": 40,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "235/55R19",
+        "255/45R20"
+      ],
+      "source": "manual-validated:Acura/Honda OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Acura/Honda OEM"
+    },
+    {
+      "year": 2024,
+      "make": "Ford",
+      "model": "Ranger",
+      "boltPattern": "6x139.7",
+      "centerBoreMm": 93.1,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 50,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 17,
+          "width": 7.5,
+          "offset": 52,
+          "isStock": true
+        },
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 50,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "255/65R17",
+        "265/60R18"
+      ],
+      "source": "manual-validated:Ford OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Ford OEM"
+    },
+    {
+      "year": 2015,
+      "make": "Ford",
+      "model": "Explorer",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 63.4,
+      "threadSize": "M12x1.5",
+      "seatType": "conical",
+      "offsetMinMm": 44,
+      "offsetMaxMm": 55,
+      "oemWheelSizes": [
+        {
+          "diameter": 18,
+          "width": 8,
+          "offset": 44,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 8.5,
+          "offset": 44,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "245/60R18",
+        "255/50R20"
+      ],
+      "source": "manual-validated:Ford OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: Ford OEM"
+    },
+    {
+      "year": 2023,
+      "make": "Volkswagen",
+      "model": "Id.4",
+      "boltPattern": "5x112",
+      "centerBoreMm": 57.1,
+      "threadSize": "M14x1.5",
+      "seatType": "ball",
+      "offsetMinMm": 41,
+      "offsetMaxMm": 52,
+      "oemWheelSizes": [
+        {
+          "diameter": 19,
+          "width": 8,
+          "offset": 45,
+          "isStock": true
+        },
+        {
+          "diameter": 20,
+          "width": 8.5,
+          "offset": 41,
+          "isStock": true
+        },
+        {
+          "diameter": 21,
+          "width": 8.5,
+          "offset": 52,
+          "isStock": true
+        }
+      ],
+      "oemTireSizes": [
+        "235/55R19",
+        "235/50R20",
+        "235/45R21"
+      ],
+      "source": "manual-validated:VW OEM",
+      "confidence": "high",
+      "sourceNotes": "Validated via Phase 3 audit. Source: VW OEM"
+    }
+  ]
+}

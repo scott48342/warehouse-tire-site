@@ -1,0 +1,269 @@
+{
+  "timestamp": "2026-06-12T18:00:04.818Z",
+  "stats": {
+    "totalAlerts": 3399,
+    "newVehicleAlerts": 332,
+    "thresholdAlerts": 1052,
+    "highPriorityAlerts": 2015,
+    "last24h": 0,
+    "last7d": 0
+  },
+  "tier1": [
+    {
+      "make": "Mazda",
+      "model": "Mazda6",
+      "years": "2022, 2021, 2020, 2019, 2018, 2017, 2015, 2014, 2013, 2012",
+      "searchHits": 265,
+      "priorityScore": 4240
+    },
+    {
+      "make": "Dodge",
+      "model": "Journey",
+      "years": "2020, 2016, 2015",
+      "searchHits": 64,
+      "priorityScore": 230
+    },
+    {
+      "make": "Acura",
+      "model": "Integra",
+      "years": "2026, 2024, 2023",
+      "searchHits": 40,
+      "priorityScore": 192
+    },
+    {
+      "make": "Kia",
+      "model": "Soul",
+      "years": "2020, 2017, 2016",
+      "searchHits": 31,
+      "priorityScore": 112
+    },
+    {
+      "make": "Kia",
+      "model": "K5",
+      "years": "2025, 2023, 2022",
+      "searchHits": 23,
+      "priorityScore": 110
+    },
+    {
+      "make": "Nissan",
+      "model": "Frontier",
+      "years": "2024, 2023",
+      "searchHits": 23,
+      "priorityScore": 64
+    },
+    {
+      "make": "Dodge",
+      "model": "Durango",
+      "years": "2018",
+      "searchHits": 38,
+      "priorityScore": 38
+    },
+    {
+      "make": "Gmc",
+      "model": "Yukon Xl",
+      "years": "2023",
+      "searchHits": 25,
+      "priorityScore": 30
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "years": "2020",
+      "searchHits": 18,
+      "priorityScore": 22
+    },
+    {
+      "make": "Subaru",
+      "model": "Forester",
+      "years": "2025",
+      "searchHits": 15,
+      "priorityScore": 18
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "years": "2010",
+      "searchHits": 17,
+      "priorityScore": 17
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "years": "2024",
+      "searchHits": 11,
+      "priorityScore": 13
+    },
+    {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "years": "2010",
+      "searchHits": 11,
+      "priorityScore": 11
+    },
+    {
+      "make": "Acura",
+      "model": "Rdx",
+      "years": "2023",
+      "searchHits": 8,
+      "priorityScore": 10
+    },
+    {
+      "make": "Ford",
+      "model": "Ranger",
+      "years": "2024",
+      "searchHits": 8,
+      "priorityScore": 10
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "years": "2015",
+      "searchHits": 5,
+      "priorityScore": 5
+    },
+    {
+      "make": "Ford",
+      "model": "F150",
+      "years": "2024",
+      "searchHits": 1,
+      "priorityScore": 1
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Id.4",
+      "years": "2023",
+      "searchHits": 1,
+      "priorityScore": 1
+    }
+  ],
+  "tier2": [],
+  "tier3Count": 0,
+  "allVehicles": [
+    {
+      "make": "Mazda",
+      "model": "Mazda6",
+      "years": "2022, 2021, 2020, 2019, 2018, 2017, 2015, 2014, 2013, 2012",
+      "searchHits": 265,
+      "priorityScore": 4240
+    },
+    {
+      "make": "Dodge",
+      "model": "Journey",
+      "years": "2020, 2016, 2015",
+      "searchHits": 64,
+      "priorityScore": 230
+    },
+    {
+      "make": "Acura",
+      "model": "Integra",
+      "years": "2026, 2024, 2023",
+      "searchHits": 40,
+      "priorityScore": 192
+    },
+    {
+      "make": "Kia",
+      "model": "Soul",
+      "years": "2020, 2017, 2016",
+      "searchHits": 31,
+      "priorityScore": 112
+    },
+    {
+      "make": "Kia",
+      "model": "K5",
+      "years": "2025, 2023, 2022",
+      "searchHits": 23,
+      "priorityScore": 110
+    },
+    {
+      "make": "Nissan",
+      "model": "Frontier",
+      "years": "2024, 2023",
+      "searchHits": 23,
+      "priorityScore": 64
+    },
+    {
+      "make": "Dodge",
+      "model": "Durango",
+      "years": "2018",
+      "searchHits": 38,
+      "priorityScore": 38
+    },
+    {
+      "make": "Gmc",
+      "model": "Yukon Xl",
+      "years": "2023",
+      "searchHits": 25,
+      "priorityScore": 30
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "years": "2020",
+      "searchHits": 18,
+      "priorityScore": 22
+    },
+    {
+      "make": "Subaru",
+      "model": "Forester",
+      "years": "2025",
+      "searchHits": 15,
+      "priorityScore": 18
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "years": "2010",
+      "searchHits": 17,
+      "priorityScore": 17
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "years": "2024",
+      "searchHits": 11,
+      "priorityScore": 13
+    },
+    {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "years": "2010",
+      "searchHits": 11,
+      "priorityScore": 11
+    },
+    {
+      "make": "Acura",
+      "model": "Rdx",
+      "years": "2023",
+      "searchHits": 8,
+      "priorityScore": 10
+    },
+    {
+      "make": "Ford",
+      "model": "Ranger",
+      "years": "2024",
+      "searchHits": 8,
+      "priorityScore": 10
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "years": "2015",
+      "searchHits": 5,
+      "priorityScore": 5
+    },
+    {
+      "make": "Ford",
+      "model": "F150",
+      "years": "2024",
+      "searchHits": 1,
+      "priorityScore": 1
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Id.4",
+      "years": "2023",
+      "searchHits": 1,
+      "priorityScore": 1
+    }
+  ]
+}

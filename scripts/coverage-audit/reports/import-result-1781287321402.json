@@ -1,0 +1,322 @@
+{
+  "mode": "bulk",
+  "success": true,
+  "total": 34,
+  "inserted": 34,
+  "updated": 0,
+  "skipped": 0,
+  "failed": 0,
+  "errors": [],
+  "results": [
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2021 Mazda Mazda6",
+      "modificationId": "manual_5efdfc91d052"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2020 Mazda Mazda6",
+      "modificationId": "manual_76acc69f34e0"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2019 Mazda Mazda6",
+      "modificationId": "manual_9e16f155c4cc"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2018 Mazda Mazda6",
+      "modificationId": "manual_eeb687b54fdf"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2017 Mazda Mazda6",
+      "modificationId": "manual_14e217ca009c"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2015 Mazda Mazda6",
+      "modificationId": "manual_9a30c1b82d30"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2014 Mazda Mazda6",
+      "modificationId": "manual_0a15e10aef81"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2013 Mazda Mazda6",
+      "modificationId": "manual_68bce9751751"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2012 Mazda Mazda6",
+      "modificationId": "manual_8ef87e22bc10"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2020 Dodge Journey",
+      "modificationId": "manual_3bab589c290b"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2016 Dodge Journey",
+      "modificationId": "manual_544ddc291b9c"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2015 Dodge Journey",
+      "modificationId": "manual_cfd2a07a57fa"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2026 Acura Integra",
+      "modificationId": "manual_c2feda015aa7"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2024 Acura Integra",
+      "modificationId": "manual_3574c7bc4ab2"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2023 Acura Integra",
+      "modificationId": "manual_ecb16a8cf9b5"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2020 Kia Soul",
+      "modificationId": "manual_6cf33b0b999b"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2017 Kia Soul",
+      "modificationId": "manual_222655e2fd47"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2016 Kia Soul",
+      "modificationId": "manual_8fa28cf85620"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2025 Kia K5",
+      "modificationId": "manual_553086ebd64c"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2023 Kia K5",
+      "modificationId": "manual_6ec4be9c12f2"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2022 Kia K5",
+      "modificationId": "manual_96726045f742"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2024 Nissan Frontier",
+      "modificationId": "manual_d3d978baa1ed"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2023 Nissan Frontier",
+      "modificationId": "manual_6c34be9fd024"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2018 Dodge Durango",
+      "modificationId": "manual_06bb141ba093"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2023 Gmc Yukon Xl",
+      "modificationId": "manual_f27e7fb75de5"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2020 Toyota Corolla",
+      "modificationId": "manual_3f14a0bca7b1"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2025 Subaru Forester",
+      "modificationId": "manual_2138a70db64a"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2010 Honda Accord",
+      "modificationId": "manual_d11acfa2f5e6"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2024 Chevrolet Camaro",
+      "modificationId": "manual_f83ce1fce20e"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2010 Toyota Tacoma",
+      "modificationId": "manual_62f04e7c5fa6"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2023 Acura Rdx",
+      "modificationId": "manual_e2d12fa3b80d"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2024 Ford Ranger",
+      "modificationId": "manual_dad2f98f3971"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2015 Ford Explorer",
+      "modificationId": "manual_f616ffe3bffe"
+    },
+    {
+      "success": true,
+      "action": "inserted",
+      "vehicle": "2023 Volkswagen Id.4",
+      "modificationId": "manual_e4ec5fe9d976"
+    }
+  ],
+  "coverage": {
+    "totalTargetVehicles": 3184,
+    "populatedVehicles": 2156,
+    "coveragePercent": 68,
+    "byTier": {
+      "tier1": {
+        "total": 816,
+        "populated": 622,
+        "percent": 76
+      },
+      "tier2": {
+        "total": 1488,
+        "populated": 1015,
+        "percent": 68
+      },
+      "tier3": {
+        "total": 880,
+        "populated": 519,
+        "percent": 59
+      }
+    },
+    "byYear": {
+      "2010": {
+        "total": 199,
+        "populated": 100,
+        "percent": 50
+      },
+      "2011": {
+        "total": 199,
+        "populated": 104,
+        "percent": 52
+      },
+      "2012": {
+        "total": 199,
+        "populated": 105,
+        "percent": 53
+      },
+      "2013": {
+        "total": 199,
+        "populated": 110,
+        "percent": 55
+      },
+      "2014": {
+        "total": 199,
+        "populated": 115,
+        "percent": 58
+      },
+      "2015": {
+        "total": 199,
+        "populated": 119,
+        "percent": 60
+      },
+      "2016": {
+        "total": 199,
+        "populated": 120,
+        "percent": 60
+      },
+      "2017": {
+        "total": 199,
+        "populated": 127,
+        "percent": 64
+      },
+      "2018": {
+        "total": 199,
+        "populated": 117,
+        "percent": 59
+      },
+      "2019": {
+        "total": 199,
+        "populated": 148,
+        "percent": 74
+      },
+      "2020": {
+        "total": 199,
+        "populated": 154,
+        "percent": 77
+      },
+      "2021": {
+        "total": 199,
+        "populated": 161,
+        "percent": 81
+      },
+      "2022": {
+        "total": 199,
+        "populated": 169,
+        "percent": 85
+      },
+      "2023": {
+        "total": 199,
+        "populated": 167,
+        "percent": 84
+      },
+      "2024": {
+        "total": 199,
+        "populated": 175,
+        "percent": 88
+      },
+      "2025": {
+        "total": 199,
+        "populated": 165,
+        "percent": 83
+      }
+    },
+    "estimatedSearchCoverage": 63,
+    "estimatedApiReduction": 63
+  }
+}

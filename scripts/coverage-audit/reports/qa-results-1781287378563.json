@@ -1,0 +1,671 @@
+{
+  "timestamp": "2026-06-12T18:02:41.481Z",
+  "totalTests": 85,
+  "passed": 52,
+  "failed": 33,
+  "vehicles": [
+    {
+      "make": "Mazda",
+      "model": "Mazda6",
+      "years": [
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2015,
+        2014,
+        2013,
+        2012
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 4
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Dodge",
+      "model": "Journey",
+      "years": [
+        2020,
+        2016,
+        2015
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 1
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Acura",
+      "model": "Integra",
+      "years": [
+        2026,
+        2024,
+        2023
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 1
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Kia",
+      "model": "Soul",
+      "years": [
+        2020,
+        2017,
+        2016
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 5
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Kia",
+      "model": "K5",
+      "years": [
+        2025,
+        2023,
+        2022
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 1
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": true,
+          "error": null,
+          "tireCount": 100
+        }
+      ]
+    },
+    {
+      "make": "Nissan",
+      "model": "Frontier",
+      "years": [
+        2024,
+        2023
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 6
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Dodge",
+      "model": "Durango",
+      "years": [
+        2018
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 7
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Gmc",
+      "model": "Yukon Xl",
+      "years": [
+        2023
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 1
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "years": [
+        2020
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 5
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Subaru",
+      "model": "Forester",
+      "years": [
+        2025
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 5
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "years": [
+        2010
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 5
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "years": [
+        2024
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 11
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "years": [
+        2010
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 5
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Acura",
+      "model": "Rdx",
+      "years": [
+        2023
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 3
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Ranger",
+      "years": [
+        2024
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 5
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "years": [
+        2015
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 6
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Id.4",
+      "years": [
+        2023
+      ],
+      "tests": [
+        {
+          "name": "Vehicle Lookup",
+          "pass": true,
+          "error": null
+        },
+        {
+          "name": "Trim Lookup",
+          "pass": true,
+          "error": null,
+          "trimCount": 4
+        },
+        {
+          "name": "Fitment Specs",
+          "pass": false,
+          "error": "API error: 401"
+        },
+        {
+          "name": "Wheel Search",
+          "pass": true,
+          "error": null,
+          "wheelCount": 24,
+          "fitmentResolved": true
+        },
+        {
+          "name": "Tire Search",
+          "pass": false,
+          "error": "No tires returned",
+          "tireCount": 0
+        }
+      ]
+    }
+  ]
+}
