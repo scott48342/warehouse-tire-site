@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState, useCallback, type React
 import type { CartAccessoryItem, AccessoryRecommendationState } from "./accessoryTypes";
 import { getCartId } from "./useCartTracking";
 import { trackAddToCart as trackFunnelAddToCart } from "@/components/FunnelTracker";
+import { clarityEvent, clarityUpgrade } from "@/components/MicrosoftClarity";
 
 export type { CartAccessoryItem, AccessoryRecommendationState };
 
@@ -298,6 +299,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
           model: typedItem.vehicle.model,
         } : undefined
       );
+      
+      // Microsoft Clarity tracking - tag session for easy filtering
+      clarityEvent(`add_to_cart_${item.type}`);
+      // Upgrade session priority so it gets recorded
+      clarityUpgrade('cart_activity');
     }
   }, []);
 

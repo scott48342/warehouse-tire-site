@@ -12,6 +12,7 @@
 
 import { useEffect, useRef } from "react";
 import { trackProductView } from "./FunnelTracker";
+import { clarityEvent, claritySetTag } from "./MicrosoftClarity";
 
 interface ProductViewTrackerProps {
   sku: string;
@@ -31,6 +32,13 @@ export function ProductViewTracker({ sku, type, vehicle }: ProductViewTrackerPro
     tracked.current = true;
     
     trackProductView(sku, type, vehicle);
+    
+    // Microsoft Clarity tracking - tag session for filtering
+    clarityEvent(`product_view_${type}`);
+    claritySetTag('product_type', type);
+    if (vehicle?.make) {
+      claritySetTag('vehicle_make', vehicle.make);
+    }
   }, [sku, type, vehicle]);
   
   return null;

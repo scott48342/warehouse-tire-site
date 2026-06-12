@@ -11,6 +11,7 @@ import { QuickViewProvider } from "@/contexts/QuickViewContext";
 import { CartTracker } from "@/components/CartTracker";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { MicrosoftClarity } from "@/components/MicrosoftClarity";
 import { Analytics } from "@/components/Analytics";
 import { FunnelTracker } from "@/components/FunnelTracker";
 import { GarageVehicleMemorySync } from "@/components/garage/GarageVehicleMemorySync";
@@ -76,6 +77,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleAnalytics />
+        <MicrosoftClarity />
       </head>
       <body className={`${inter.variable} ${oswald.variable} ${bebasNeue.variable} antialiased flex min-h-screen flex-col`}>
         <ShopContextProvider>
