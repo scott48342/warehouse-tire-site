@@ -117,7 +117,10 @@ export async function POST(req: Request) {
 
 /**
  * GET /api/cron/abandoned-cart-emails
- * Status check - shows pending carts
+ * 
+ * Vercel cron calls GET, so this MUST process emails (not just return status).
+ * 
+ * @updated 2026-06-12 - Fixed: GET now processes emails (was only returning status)
  */
 export async function GET(req: Request) {
   const authorized = await verifyRequest(req);
@@ -128,7 +131,12 @@ export async function GET(req: Request) {
     );
   }
 
-  try {
+  // Check if this is a status-only request (manual check via ?status=1)
+  const url = new URL(req.url);
+  const statusOnly = url.searchParams.get("status") === "1";
+  
+  if (statusOnly) {
+    // Return status without processing (for admin dashboard)
     const [first, second, third] = await Promise.all([
       findCartsForFirstEmail(),
       findCartsForSecondEmail(),
@@ -145,32 +153,66 @@ export async function GET(req: Request) {
         thirdEmail: third.length,
         total: first.length + second.length + third.length,
       },
-      pendingCarts: {
-        first: first.map(c => ({
-          cartId: c.cartId,
-          email: c.customerEmail,
-          value: c.estimatedTotal,
-          abandonedAt: c.abandonedAt,
-        })),
-        second: second.map(c => ({
-          cartId: c.cartId,
-          email: c.customerEmail,
-          value: c.estimatedTotal,
-          firstSentAt: c.firstEmailSentAt,
-        })),
-        third: third.map(c => ({
-          cartId: c.cartId,
-          email: c.customerEmail,
-          value: c.estimatedTotal,
-          secondSentAt: c.secondEmailSentAt,
-        })),
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PROCESS EMAILS (Vercel cron calls this)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const startTime = Date.now();
+  
+  try {
+    console.log("[cron/abandoned-cart-emails] GET triggered - processing emails...");
+
+    // Step 1: Mark carts as abandoned (if inactive for 1+ hours)
+    const abandonedCount = await processAbandonedCarts();
+    console.log(`[cron/abandoned-cart-emails] Marked ${abandonedCount} carts as abandoned`);
+
+    // Step 2: Send emails
+    const emailResult = await processAbandonedCartEmails();
+    console.log(`[cron/abandoned-cart-emails] Email results:`, {
+      processed: emailResult.processed,
+      sent: emailResult.sent,
+      logged: emailResult.logged,
+      skipped: emailResult.skipped,
+      errors: emailResult.errors,
+    });
+
+    const duration = Date.now() - startTime;
+
+    return NextResponse.json({
+      success: true,
+      safeMode: EMAIL_SAFE_MODE,
+      abandonedCarts: abandonedCount,
+      emails: {
+        processed: emailResult.processed,
+        sent: emailResult.sent,
+        logged: emailResult.logged,
+        skipped: emailResult.skipped,
+        errors: emailResult.errors,
       },
+      durationMs: duration,
+      timestamp: new Date().toISOString(),
     });
   } catch (err: any) {
-    console.error("[cron/abandoned-cart-emails] GET Error:", err);
+    console.error("[cron/abandoned-cart-emails] Error:", err);
     return NextResponse.json(
-      { error: err?.message || "Status check failed" },
+      { 
+        success: false, 
+        error: err?.message || "Processing failed",
+        timestamp: new Date().toISOString(),
+      },
       { status: 500 }
     );
   }
 }
+
+/**
+ * USAGE:
+ * - GET (no params) = Process emails (Vercel cron calls this)
+ * - GET ?status=1   = Return queue status only (admin dashboard)
+ * - POST            = Process emails (manual trigger / backward compat)
+ * 
+ * BUG FIX (2026-06-12): GET was only returning status, never processing.
+ * Vercel cron calls GET, so emails were never sent! Now fixed.
+ */

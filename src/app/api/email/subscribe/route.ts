@@ -22,7 +22,7 @@ import { sendExitIntentImmediateEmail, EXIT_EMAIL_SAFE_MODE } from "@/lib/email/
 
 export const runtime = "nodejs";
 
-const VALID_SOURCES: EmailSource[] = ["exit_intent", "cart_save", "checkout", "newsletter", "quote"];
+const VALID_SOURCES: EmailSource[] = ["exit_intent", "cart_save", "checkout", "newsletter", "quote", "jake"];
 
 /**
  * Parse cookies into a Record

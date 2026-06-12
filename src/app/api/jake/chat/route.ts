@@ -8,9 +8,48 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { chat, JakeMessage } from "@/lib/jake";
+import { subscribe } from "@/lib/email/subscriberService";
 
 export const runtime = "nodejs";
 export const maxDuration = 60; // Allow up to 60s for AI response
+
+// Email regex - captures emails from conversational text
+const EMAIL_REGEX = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
+
+/**
+ * Extract and auto-subscribe any emails found in the message
+ * Consent is implied when customer provides email in conversation
+ */
+async function captureEmailsFromMessage(
+  query: string,
+  vehicle?: { year?: string; make?: string; model?: string; trim?: string },
+  ipAddress?: string,
+  userAgent?: string
+): Promise<string[]> {
+  const emails = query.match(EMAIL_REGEX);
+  if (!emails || emails.length === 0) return [];
+  
+  const captured: string[] = [];
+  
+  for (const email of emails) {
+    try {
+      await subscribe({
+        email,
+        source: "jake",
+        vehicle,
+        marketingConsent: true, // Auto-consent when customer provides email
+        ipAddress,
+        userAgent,
+      });
+      captured.push(email);
+      console.log(`[Jake API] Auto-subscribed email: ${email} (consent=true)`);
+    } catch (err) {
+      console.error(`[Jake API] Failed to capture email ${email}:`, err);
+    }
+  }
+  
+  return captured;
+}
 
 export async function POST(req: NextRequest) {
   const startTime = Date.now();
@@ -39,6 +78,18 @@ export async function POST(req: NextRequest) {
     console.log(`[Jake API] History: ${history.length} messages, isLocal: ${isLocal}`);
     if (vehicle) {
       console.log(`[Jake API] Vehicle context: ${vehicle.year} ${vehicle.make} ${vehicle.model}${vehicle.trim ? ` ${vehicle.trim}` : ''}`);
+    }
+    
+    // Extract IP and user agent for subscriber tracking
+    const ipAddress = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                      req.headers.get("x-real-ip") || 
+                      undefined;
+    const userAgent = req.headers.get("user-agent") || undefined;
+    
+    // Auto-capture any emails in the message (with consent)
+    const capturedEmails = await captureEmailsFromMessage(query, vehicle, ipAddress, userAgent);
+    if (capturedEmails.length > 0) {
+      console.log(`[Jake API] Captured ${capturedEmails.length} email(s): ${capturedEmails.join(", ")}`);
     }
     
     // Call Jake with vehicle context

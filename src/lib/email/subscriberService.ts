@@ -25,7 +25,7 @@ import { detectTestData, type TestDetectionContext } from "@/lib/testData";
 // Types
 // ============================================================================
 
-export type EmailSource = "exit_intent" | "cart_save" | "checkout" | "newsletter" | "quote";
+export type EmailSource = "exit_intent" | "cart_save" | "checkout" | "newsletter" | "quote" | "jake";
 
 export interface SubscribeInput {
   email: string;

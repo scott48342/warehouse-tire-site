@@ -11707,3 +11707,112 @@ Files:
 
 Add these to .env.local
 [Thu 06/11/2026  9:00:13.11] Auto-post complete 
+[Thu 06/11/2026 18:00:02.76] Starting auto-post... 
+◇ injected env (50) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:13212) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC FC894 CORE
+  Downloading image for Fuel 1PC FC894 CORE...
+  ✅ Generated: fc894_core_1781215205670
+  📝 Caption preview: 🔥 Fuel 1PC FC894 CORE - Now in stock!
+
+📐 17x8.5
+🔩 6X5.5
+↔️ 25mm offset
+✨ CORE...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - fc894_core_1781215205670.png
+  - fc894_core_1781215205670.json
+◇ injected env (50) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+📱 Facebook/Instagram Poster
+
+Selected: abl_22_alpha_5_1780178405018
+
+--- Content Preview ---
+Wheel: Asanti Black ABL-22 ALPHA 5
+Price: $170
+Image: abl_22_alpha_5_1780178405018.png
+
+Caption:
+🔥 Asanti Black ABL-22 ALPHA 5 - Now in stock!
+
+📐 20x10.5
+🔩 5X112
+↔️ 27mm offset
+✨ ABL22 20X10.5 5X112 BRUSHED SLV 27MM
+
+💰 Starting at $170/wheel
+
+🛒 Shop now: https://shop.warehousetiredirect.com/wheels/ABL22-20055627SL
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #luxurycars #eurocar #germanengineering #asantiblack #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Thursday, 11-Jun-26 15:00:06 PDT.
+
+✨ Done!
+◇ injected env (50) from ..\..\.env.local // tip: ⌘ enable debugging { debug: true }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:13508) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Petrol PE004 P3E
+  Downloading image for Petrol PE004 P3E...
+  ✅ Generated: pe004_p3e_1781215212538
+  📝 Caption preview: Your 2024 Toyota Camry deserves these Petrol PE004 P3E wheels 💯
+
+📐 18x8
+🔩 5X4...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pe004_p3e_1781215212538.png
+  - pe004_p3e_1781215212538.json
+◇ injected env (50) from ..\..\.env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Thu 06/11/2026 18:00:13.15] Auto-post complete 
