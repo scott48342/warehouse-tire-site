@@ -187,8 +187,8 @@ function SearchCard() {
       .finally(() => setLoading(null));
   }, [year, make]);
 
-  // Fetch trims + auto-submit after model selection
-  // Auto-submits after 800ms, giving user time to optionally select trim
+  // Fetch trims after model selection
+  // Only auto-submits if there's 0 or 1 trim (no choice to make)
   useEffect(() => {
     if (!year || !make || !model) { setTrims([]); setTrim(""); return; }
     setLoading("trims");
@@ -197,13 +197,20 @@ function SearchCard() {
       .then(d => {
         const trimResults = d.results || [];
         setTrims(trimResults);
-        // Auto-submit after short delay (user can select trim to override)
-        const timer = setTimeout(() => {
-          const params = new URLSearchParams({ year, make, model });
-          router.push(`/tires?${params.toString()}`);
-        }, 800);
-        // Store timer so trim selection can cancel it
-        (window as any).__autoSubmitTimer = timer;
+        // Only auto-submit if there's 0 or 1 trim (no meaningful choice to make)
+        // If multiple trims exist, wait for user to select one
+        if (trimResults.length <= 1) {
+          const timer = setTimeout(() => {
+            const params = new URLSearchParams({ year, make, model });
+            // If exactly one trim, include it
+            if (trimResults.length === 1) {
+              params.set("trim", trimResults[0].value);
+            }
+            router.push(`/tires?${params.toString()}`);
+          }, 500);
+          (window as any).__autoSubmitTimer = timer;
+        }
+        // Otherwise, wait for user to select a trim (no auto-submit)
       })
       .finally(() => setLoading(null));
   }, [year, make, model, router]);

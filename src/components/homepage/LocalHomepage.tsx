@@ -203,13 +203,20 @@ function HeroSection() {
       .then(d => {
         const results = d.results || [];
         setTrims(results);
-        // Auto-submit after short delay (user can select trim to override)
-        const timer = setTimeout(() => {
-          const params = new URLSearchParams({ year, make, model });
-          router.push(`/tires?${params.toString()}`);
-        }, 800);
-        // Store timer so trim selection can cancel it
-        (window as any).__autoSubmitTimerDesktop = timer;
+        // Only auto-submit if there's 0 or 1 trim (no meaningful choice to make)
+        // If multiple trims exist, wait for user to select one
+        if (results.length <= 1) {
+          const timer = setTimeout(() => {
+            const params = new URLSearchParams({ year, make, model });
+            // If exactly one trim, include it
+            if (results.length === 1) {
+              params.set("trim", results[0].value);
+            }
+            router.push(`/tires?${params.toString()}`);
+          }, 500);
+          (window as any).__autoSubmitTimerDesktop = timer;
+        }
+        // Otherwise, wait for user to select a trim (no auto-submit)
       })
       .catch(() => setTrims([]))
       .finally(() => setLoading(null));
