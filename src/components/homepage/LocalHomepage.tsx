@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import LocalHomepageMobile from "./LocalHomepageMobile";
 import { JakeHomepageSection } from "@/components/jake";
+import { CallButton } from "@/components/CallButton";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // LOCAL HOMEPAGE - Neighborhood Tire Store
@@ -931,9 +932,13 @@ function FooterContact() {
               <Phone className="w-6 h-6 text-green-700" />
             </div>
             <div>
-              <a href={`tel:${PRIMARY_STORE.phone.replace(/[^\d]/g, "")}`} className="text-xl font-bold text-neutral-900 hover:text-green-700">
+              <CallButton 
+                phoneNumber={PRIMARY_STORE.phone.replace(/[^\d]/g, "")}
+                phoneDisplay={PRIMARY_STORE.phone}
+                className="text-xl font-bold text-neutral-900 hover:text-green-700"
+              >
                 {PRIMARY_STORE.phone}
-              </a>
+              </CallButton>
               <p className="text-sm text-neutral-500">Call us today!</p>
             </div>
           </div>

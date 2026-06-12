@@ -13,6 +13,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { JakeHomepageSection } from "@/components/jake";
+import { CallButton } from "@/components/CallButton";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // MOBILE-ONLY LOCAL HOMEPAGE
@@ -540,13 +541,14 @@ function StoreInfoCard() {
 
         {/* Action buttons */}
         <div className="mt-6 flex gap-3">
-          <a
-            href={`tel:${PRIMARY_STORE.phoneRaw}`}
+          <CallButton
+            phoneNumber={PRIMARY_STORE.phoneRaw}
+            phoneDisplay={PRIMARY_STORE.phone}
             className="flex-1 h-14 bg-green-600 rounded-xl flex items-center justify-center gap-2 text-white font-bold text-[18px]"
           >
             <Phone className="w-6 h-6" />
             Call Now
-          </a>
+          </CallButton>
           <a
             href={PRIMARY_STORE.mapsUrl}
             target="_blank"
@@ -602,13 +604,14 @@ function StickyActionBar() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-neutral-200 px-4 py-3 safe-area-pb">
       <div className="flex gap-3">
-        <a
-          href={`tel:${PRIMARY_STORE.phoneRaw}`}
+        <CallButton
+          phoneNumber={PRIMARY_STORE.phoneRaw}
+          phoneDisplay={PRIMARY_STORE.phone}
           className="flex-1 h-16 bg-green-600 rounded-2xl flex items-center justify-center gap-2.5 text-white font-bold text-[19px] shadow-lg"
         >
           <Phone className="w-7 h-7" />
           Call Now
-        </a>
+        </CallButton>
         <a
           href={PRIMARY_STORE.mapsUrl}
           target="_blank"
