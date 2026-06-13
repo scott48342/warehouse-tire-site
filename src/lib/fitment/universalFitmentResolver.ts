@@ -373,9 +373,14 @@ export async function resolveUniversalFitment(
   const modelVariants = getModelVariants(input.model);
   const requestedTrim = input.trim?.trim() || null;
   
-  console.log(`[universalFitmentResolver] Input: ${input.year} ${input.make} ${input.model} trim=${requestedTrim || "(none)"}`);
-  console.log(`[universalFitmentResolver] Normalized make: ${normalizedMake}`);
-  console.log(`[universalFitmentResolver] Model variants to try: ${modelVariants.join(", ")}`);
+  // Determine if alias mapping was used
+  const usedAliasMapping = MODEL_ALIASES[slugify(input.model)] !== undefined;
+  const usedMakeAlias = MAKE_ALIASES[input.make.toLowerCase().trim()] !== undefined;
+  
+  console.log(`[universalFitmentResolver] ══════════════════════════════════════════════════`);
+  console.log(`[universalFitmentResolver] INPUT: ${input.year} ${input.make} ${input.model} trim=${requestedTrim || "(none)"}`);
+  console.log(`[universalFitmentResolver] NORMALIZED: make="${normalizedMake}" (alias=${usedMakeAlias})`);
+  console.log(`[universalFitmentResolver] MODEL VARIANTS: [${modelVariants.join(", ")}] (alias=${usedAliasMapping})`);
   
   // Initialize result with defaults
   const result: UniversalFitmentResult = {
@@ -614,9 +619,13 @@ export async function resolveUniversalFitment(
   result.debug.dbQueriesCount = dbQueriesCount;
   result.debug.matchedBy = matchedBy;
   
-  console.log(`[universalFitmentResolver] ✓ Resolved: ${result.year} ${result.make} ${result.model} trim=${result.trim || "(auto)"}`);
-  console.log(`[universalFitmentResolver]   Bolt: ${result.boltPattern}, Hub: ${result.centerBore}mm, Confidence: ${result.confidence}`);
-  console.log(`[universalFitmentResolver]   Resolved in ${result.debug.resolutionTimeMs}ms with ${dbQueriesCount} DB queries`);
+  console.log(`[universalFitmentResolver] ✓ RESOLVED:`);
+  console.log(`[universalFitmentResolver]   DB Model: "${result.model}" | Trim: "${result.trim || "(auto)"}"`);
+  console.log(`[universalFitmentResolver]   Source: ${result.source} | Confidence: ${result.confidence} | Quality: ${result.qualityTier}`);
+  console.log(`[universalFitmentResolver]   Bolt: ${result.boltPattern}, Hub: ${result.centerBore}mm`);
+  console.log(`[universalFitmentResolver]   Alias used: ${usedAliasMapping ? "yes" : "no"} | Matched variant: "${matchedVariant}"`);
+  console.log(`[universalFitmentResolver]   Time: ${result.debug.resolutionTimeMs}ms, Queries: ${dbQueriesCount}`);
+  console.log(`[universalFitmentResolver] ══════════════════════════════════════════════════`);
   
   return result;
 }
