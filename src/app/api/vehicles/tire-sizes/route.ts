@@ -232,149 +232,154 @@ async function getDbFitmentSizes(
   trim?: string  // Display label for atomic trim matching
 ): Promise<DbFitmentResult | TrimBlockedResult | null> {
   try {
-    const { resolveVehicleFitment } = await import("@/lib/fitment/canonicalResolver");
+    // ═══════════════════════════════════════════════════════════════════════
+    // 2026-06-13: Use UNIVERSAL FITMENT RESOLVER (Single Source of Truth)
+    // Replaces canonicalResolver - all normalization/aliases encapsulated
+    // ═══════════════════════════════════════════════════════════════════════
+    const { resolveUniversalFitment } = await import("@/lib/fitment/universalFitmentResolver");
     const { canDetectStaggered } = await import("@/lib/fitment-db/qualityTier");
     
-    // ═══════════════════════════════════════════════════════════════════════
-    // 2026-05-04: Use CANONICAL RESOLVER for fitment identity
-    // This properly handles grouped trims and prevents fallback to model-level
-    // ═══════════════════════════════════════════════════════════════════════
+    // Debug logging for migration verification
+    console.log(`[tire-sizes] ══════════════════════════════════════════════════`);
+    console.log(`[tire-sizes] Using resolveUniversalFitment`);
+    console.log(`[tire-sizes] RAW INPUT: year=${year} make=${make} model=${model} trim=${trim || modification || "(none)"}`);
     
-    const resolveResult = await resolveVehicleFitment({
+    const resolveResult = await resolveUniversalFitment({
       year: parseInt(year, 10),
       make,
       model,
-      trim: trim || undefined,          // Use display label if available
-      modificationId: modification || undefined,
+      trim: trim || modification || null,
     });
     
-    // Check if resolution was blocked
-    if (resolveResult.matchedBy === "blocked") {
-      console.warn(`[tire-sizes] ⚠️ CANONICAL BLOCKED: ${year} ${make} ${model} → ${resolveResult.debug.fallbackBlockedReason}`);
-      
-      // Check for BMW variant clarification (2026-05-18)
-      const bmwVariantInfo = (resolveResult.debug as any).bmwVariantClarification;
-      
-      return {
-        blocked: true,
-        reason: bmwVariantInfo ? "bmw_variant_clarification" : "inconsistent_sizes",
-        availableTrims: resolveResult.debug.candidateTrims.map(c => ({
-          modificationId: c.modificationId,
-          displayTrim: c.atomicTrims[0], // Use first atomic trim for display
-          tireSizes: c.tireSizes,
-        })),
-        requestedTrim: modification || trim || "",
-        bmwVariantClarification: bmwVariantInfo,
-      };
-    }
+    // Debug logging (temporary - for migration verification)
+    console.log(`[tire-sizes] NORMALIZED: make="${resolveResult.normalized.make}" model="${resolveResult.normalized.model}"`);
+    console.log(`[tire-sizes] MATCHED VARIANT: "${resolveResult.normalized.matchedVariant || "(none)"}"`);
+    console.log(`[tire-sizes] SOURCE: ${resolveResult.source} | CONFIDENCE: ${resolveResult.confidence} | QUALITY: ${resolveResult.qualityTier}`);
+    console.log(`[tire-sizes] ══════════════════════════════════════════════════`);
     
     // Check if not found at all
-    if (resolveResult.matchedBy === "not_found" || !resolveResult.fitment) {
+    if (!resolveResult.found) {
+      // Check if we have available trims to suggest
+      if (resolveResult.availableTrims.length > 0 && (trim || modification)) {
+        // Trim was requested but not found - return available trims for selection
+        console.warn(`[tire-sizes] ⚠️ TRIM NOT FOUND: ${year} ${make} ${model} trim="${trim || modification}"`);
+        console.log(`[tire-sizes]   Available trims: ${resolveResult.availableTrims.map(t => t.displayTrim).join(", ")}`);
+        
+        return {
+          blocked: true,
+          reason: "inconsistent_sizes",
+          availableTrims: resolveResult.availableTrims.map(t => ({
+            modificationId: t.modificationId,
+            displayTrim: t.displayTrim,
+            tireSizes: t.tireSizes,
+          })),
+          requestedTrim: modification || trim || "",
+        };
+      }
+      
       // No match found - return null to fall through to other sources
-      console.log(`[tire-sizes] CANONICAL NOT_FOUND: ${year} ${make} ${model} mod=${modification}`);
+      console.log(`[tire-sizes] UNIVERSAL NOT_FOUND: ${year} ${make} ${model} mod=${modification}`);
       return null;
     }
     
-    const selectedFitment = resolveResult.fitment;
+    // Build debug info from universal result
     const debugInfo = {
       exactTrimMatch: resolveResult.confidence === "high",
-      resolutionMethod: resolveResult.matchedBy,
-      candidateCount: resolveResult.debug.candidateTrims.length,
+      resolutionMethod: resolveResult.source,
+      candidateCount: resolveResult.availableTrims.length,
       selectedModificationId: resolveResult.modificationId,
-      selectedDisplayTrim: resolveResult.displayTrim,
+      selectedDisplayTrim: resolveResult.trim,
     };
     
-    console.log(`[tire-sizes] CANONICAL HIT: ${year} ${make} ${model} → method=${resolveResult.matchedBy}, confidence=${resolveResult.confidence}, trim="${resolveResult.displayTrim}"`);
-    if (resolveResult.debug.wasGroupedRecord) {
-      console.log(`[tire-sizes]   ↳ Extracted from grouped record, matched atomic trim: "${resolveResult.debug.matchedAtomicTrim}"`);
-    }
+    console.log(`[tire-sizes] UNIVERSAL HIT: ${year} ${make} ${model} → method=${resolveResult.source}, confidence=${resolveResult.confidence}, trim="${resolveResult.trim}"`);
     
     // Check wheel sizes for staggered configuration
-    const oemWheelSizes = selectedFitment.oemWheelSizes as Array<{
-      diameter?: number;
-      width?: number;
-      offset?: number;
-      position?: string;
-      axle?: string;
-      tireSize?: string;
-      tires?: string[];
-    }> | null;
+    const oemWheelSizes = resolveResult.oemWheelSizes as Array<{
+      diameter: number;
+      width: number;
+      offset: number | null;
+      axle?: "front" | "rear" | "both";
+    }>;
     
     let staggeredInfo: StaggeredTireInfo | undefined;
     
-    // PHASE 3: Only detect staggered if quality tier allows it
-    const qualityTier = (selectedFitment as any).qualityTier;
-    const staggeredCheck = canDetectStaggered(qualityTier, oemWheelSizes);
-    
-    if (staggeredCheck.canDetect && oemWheelSizes && oemWheelSizes.length > 0) {
-      // Check for staggered setup by looking for front/rear positions
-      const frontWheel = oemWheelSizes.find(ws => ws.position === 'front' || ws.axle === 'front');
-      const rearWheel = oemWheelSizes.find(ws => ws.position === 'rear' || ws.axle === 'rear');
+    // Check for staggered from universalResult
+    if (resolveResult.oemTireSizesStaggered) {
+      const frontTires = resolveResult.oemTireSizesStaggered.front;
+      const rearTires = resolveResult.oemTireSizesStaggered.rear;
       
-      if (frontWheel && rearWheel) {
-        // Extract tire sizes for front and rear (with normalization for object arrays)
-        const oemTireSizes = normalizeOemTireSizes(selectedFitment.oemTireSizes);
-        let frontTire: string | undefined;
-        let rearTire: string | undefined;
-        
-        if (oemTireSizes.length >= 2) {
-          // Match tire sizes by rim diameter
-          for (const size of oemTireSizes) {
-            const rimMatch = size.match(/R(\d+)$/);
-            if (rimMatch) {
-              const rimDiameter = parseInt(rimMatch[1], 10);
-              if (frontWheel.diameter && rimDiameter === frontWheel.diameter && !frontTire) {
-                frontTire = size;
-              } else if (rearWheel.diameter && rimDiameter === rearWheel.diameter && !rearTire) {
-                rearTire = size;
-              }
-            }
-          }
-        }
+      if (frontTires.length > 0 || rearTires.length > 0) {
+        // Extract diameters from tire sizes
+        const extractDiameter = (size: string) => {
+          const match = size.match(/R(\d+)$/i);
+          return match ? parseInt(match[1], 10) : undefined;
+        };
         
         staggeredInfo = {
           isStaggered: true,
-          frontTireSize: frontTire,
-          rearTireSize: rearTire,
-          frontDiameter: frontWheel.diameter,
-          rearDiameter: rearWheel.diameter,
+          frontTireSize: frontTires[0],
+          rearTireSize: rearTires[0],
+          frontDiameter: frontTires[0] ? extractDiameter(frontTires[0]) : undefined,
+          rearDiameter: rearTires[0] ? extractDiameter(rearTires[0]) : undefined,
         };
         
-        console.log(`[tire-sizes] STAGGERED detected: F:${frontTire || 'unknown'} R:${rearTire || 'unknown'}`);
+        console.log(`[tire-sizes] STAGGERED detected: F:${frontTires[0] || 'unknown'} R:${rearTires[0] || 'unknown'}`);
       }
-    } else if (!staggeredCheck.canDetect) {
-      console.log(`[tire-sizes] Staggered detection BLOCKED: ${staggeredCheck.reason}`);
+    } else {
+      // Fallback: Check wheel sizes for staggered by looking at axle positions
+      const qualityTier = resolveResult.qualityTier;
+      const staggeredCheck = canDetectStaggered(qualityTier, oemWheelSizes);
+      
+      if (staggeredCheck.canDetect && oemWheelSizes && oemWheelSizes.length > 0) {
+        const frontWheel = oemWheelSizes.find(ws => ws.axle === 'front');
+        const rearWheel = oemWheelSizes.find(ws => ws.axle === 'rear');
+        
+        if (frontWheel && rearWheel && (frontWheel.diameter !== rearWheel.diameter || frontWheel.width !== rearWheel.width)) {
+          const oemTireSizes = resolveResult.oemTireSizes;
+          let frontTire: string | undefined;
+          let rearTire: string | undefined;
+          
+          if (oemTireSizes.length >= 2) {
+            for (const size of oemTireSizes) {
+              const rimMatch = size.match(/R(\d+)$/i);
+              if (rimMatch) {
+                const rimDiameter = parseInt(rimMatch[1], 10);
+                if (rimDiameter === frontWheel.diameter && !frontTire) {
+                  frontTire = size;
+                } else if (rimDiameter === rearWheel.diameter && !rearTire) {
+                  rearTire = size;
+                }
+              }
+            }
+          }
+          
+          staggeredInfo = {
+            isStaggered: true,
+            frontTireSize: frontTire,
+            rearTireSize: rearTire,
+            frontDiameter: frontWheel.diameter,
+            rearDiameter: rearWheel.diameter,
+          };
+          
+          console.log(`[tire-sizes] STAGGERED detected from wheels: F:${frontTire || 'unknown'} R:${rearTire || 'unknown'}`);
+        }
+      } else if (!staggeredCheck.canDetect) {
+        console.log(`[tire-sizes] Staggered detection BLOCKED: ${staggeredCheck.reason}`);
+      }
     }
     
-    // Extract tire sizes from oem_tire_sizes JSON field (with normalization for object arrays)
-    const oemTireSizes = normalizeOemTireSizes(selectedFitment.oemTireSizes);
+    // Get tire sizes from universal result
+    const oemTireSizes = resolveResult.oemTireSizes;
     if (oemTireSizes.length === 0) {
-      // Also check oemWheelSizes for tire info
-      if (oemWheelSizes) {
-        const extractedSizes = new Set<string>();
-        for (const ws of oemWheelSizes) {
-          if (ws.tires) {
-            ws.tires.forEach(t => extractedSizes.add(t));
-          }
-        }
-        if (extractedSizes.size > 0) {
-          return {
-            tireSizes: Array.from(extractedSizes),
-            boltPattern: selectedFitment.boltPattern ?? undefined,
-            centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
-            source: debugInfo.exactTrimMatch ? "db-exact" : "db-fallback",
-            staggered: staggeredInfo,
-            debug: debugInfo,
-          };
-        }
-      }
+      // No tire sizes found
+      console.log(`[tire-sizes] No tire sizes in universalResult for ${year} ${make} ${model}`);
       return null;
     }
     
     return {
       tireSizes: oemTireSizes,
-      boltPattern: selectedFitment.boltPattern ?? undefined,
-      centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
+      boltPattern: resolveResult.boltPattern ?? undefined,
+      centerBore: resolveResult.centerBore ?? undefined,
       source: debugInfo.exactTrimMatch ? "db-exact" : "db-fallback",
       staggered: staggeredInfo,
       debug: debugInfo,
