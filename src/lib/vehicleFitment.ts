@@ -4,6 +4,7 @@
  */
 import pg from "pg";
 import { normalizeModelForApi, normalizeMake } from "./fitment-db/keys";
+import { getModelVariants } from "./fitment-db/modelAliases";
 
 const { Pool } = pg;
 
@@ -645,6 +646,9 @@ export function detectStaggeredFitment(wheelSpecs: VehicleWheelSpec[]): Staggere
  * Build FitmentProfile directly from vehicle_fitments table (NEW - 2026-05-12)
  * This is the primary source of truth - use this instead of legacy tables.
  * Falls back to legacy buildFitmentProfile if no match found.
+ * 
+ * 2026-06-13: Now uses getModelVariants() to handle model name aliases like
+ * "Silverado 2500 HD" → "Silverado 2500HD" (DB format differs from display format)
  */
 export async function buildFitmentProfileFromNewTable(
   db: pg.Pool,
@@ -653,34 +657,53 @@ export async function buildFitmentProfileFromNewTable(
   model: string,
   trim?: string
 ): Promise<FitmentProfile | null> {
-  // Query vehicle_fitments directly
-  const query = trim
-    ? `SELECT * FROM vehicle_fitments 
-       WHERE year = $1 
-       AND LOWER(make) = LOWER($2) 
-       AND (LOWER(model) = LOWER($3) OR LOWER(REPLACE(model, '-', ' ')) = LOWER(REPLACE($3, '-', ' ')))
-       AND (LOWER(display_trim) = LOWER($4) OR modification_id = $4)
-       AND certification_status = 'certified'
-       ORDER BY quality_tier DESC NULLS LAST
-       LIMIT 1`
-    : `SELECT * FROM vehicle_fitments 
-       WHERE year = $1 
-       AND LOWER(make) = LOWER($2) 
-       AND (LOWER(model) = LOWER($3) OR LOWER(REPLACE(model, '-', ' ')) = LOWER(REPLACE($3, '-', ' ')))
-       AND certification_status = 'certified'
-       ORDER BY quality_tier DESC NULLS LAST
-       LIMIT 1`;
+  // Get all model name variants to try (handles aliases like "Silverado 2500 HD" → "Silverado 2500HD")
+  const modelVariants = getModelVariants(model);
+  
+  // Try each model variant until we find a match
+  for (const modelName of modelVariants) {
+    const query = trim
+      ? `SELECT * FROM vehicle_fitments 
+         WHERE year = $1 
+         AND LOWER(make) = LOWER($2) 
+         AND LOWER(model) ILIKE $3
+         AND (LOWER(display_trim) = LOWER($4) OR modification_id = $4)
+         AND certification_status = 'certified'
+         ORDER BY quality_tier DESC NULLS LAST
+         LIMIT 1`
+      : `SELECT * FROM vehicle_fitments 
+         WHERE year = $1 
+         AND LOWER(make) = LOWER($2) 
+         AND LOWER(model) ILIKE $3
+         AND certification_status = 'certified'
+         ORDER BY quality_tier DESC NULLS LAST
+         LIMIT 1`;
 
-  const params = trim ? [year, make, model, trim] : [year, make, model];
-  const result = await db.query(query, params);
+    const params = trim ? [year, make, modelName, trim] : [year, make, modelName];
+    const result = await db.query(query, params);
 
-  if (result.rows.length === 0) {
-    console.log(`[buildFitmentProfileFromNewTable] No match for ${year} ${make} ${model} ${trim || '(no trim)'}`);
-    return null;
+    if (result.rows.length > 0) {
+      console.log(`[buildFitmentProfileFromNewTable] Found match for ${year} ${make} ${model} using variant "${modelName}"`);
+      // Continue processing with the found row
+      const row = result.rows[0];
+      return buildProfileFromRow(row, year, make, model, trim);
+    }
   }
 
-  const row = result.rows[0];
-  
+  console.log(`[buildFitmentProfileFromNewTable] No match for ${year} ${make} ${model} ${trim || '(no trim)'} after trying ${modelVariants.length} variants: ${modelVariants.join(', ')}`);
+  return null;
+}
+
+/**
+ * Internal helper to build FitmentProfile from a database row
+ */
+function buildProfileFromRow(
+  row: any,
+  year: number,
+  make: string,
+  model: string,
+  trim?: string
+): FitmentProfile {
   // Parse oem_wheel_sizes JSON
   const oemWheelSizes = row.oem_wheel_sizes || [];
   

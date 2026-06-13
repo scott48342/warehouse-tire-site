@@ -1938,6 +1938,58 @@ export async function GET(req: Request) {
         }
       }
       
+      // ═══════════════════════════════════════════════════════════════════════════
+      // LT (LIGHT TRUCK) CONSTRUCTION FILTER FOR SIZE-BASED SEARCH (2026-06-13)
+      // When vehicle context is provided with a size search, check if the vehicle
+      // requires LT tires (commercial van, HD truck) and filter accordingly.
+      // This prevents showing P-metric tires for vehicles like Express 2500.
+      // ═══════════════════════════════════════════════════════════════════════════
+      let ltFilterAppliedSizeMode = false;
+      let ltFilterRemovedCountSizeMode = 0;
+      let vehicleOemSizes: string[] = [];
+      
+      if (year && make && model && finalResults.length > 0) {
+        try {
+          // Lookup OEM tire sizes via internal API (handles canonical resolution)
+          const baseUrl = process.env.VERCEL_URL 
+            ? `https://${process.env.VERCEL_URL}` 
+            : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+          const tireSizesUrl = new URL(`${baseUrl}/api/vehicles/tire-sizes`);
+          tireSizesUrl.searchParams.set("year", year);
+          tireSizesUrl.searchParams.set("make", make);
+          tireSizesUrl.searchParams.set("model", model);
+          if (modification) tireSizesUrl.searchParams.set("modification", modification);
+          
+          const tireSizesResponse = await fetch(tireSizesUrl.toString(), {
+            headers: { "Content-Type": "application/json" },
+            // Short timeout to avoid blocking search
+            signal: AbortSignal.timeout(2000),
+          });
+          
+          if (tireSizesResponse.ok) {
+            const tireSizesData = await tireSizesResponse.json();
+            vehicleOemSizes = tireSizesData.tireSizes || [];
+            
+            // Check if vehicle requires LT construction
+            if (vehicleOemSizes.length > 0 && vehicleRequiresLtTires(vehicleOemSizes)) {
+              const beforeLtFilter = finalResults.length;
+              const ltFilterResult = filterToLtTiresOnly(finalResults);
+              finalResults = ltFilterResult.filtered;
+              ltFilterAppliedSizeMode = true;
+              ltFilterRemovedCountSizeMode = ltFilterResult.removedCount;
+              console.log(`[tires/search:size] 🚚 LT FILTER (vehicle context): ${year} ${make} ${model}`);
+              console.log(`  OEM sizes: ${vehicleOemSizes.join(", ")}`);
+              console.log(`  Results: ${beforeLtFilter} → ${finalResults.length} (removed ${ltFilterRemovedCountSizeMode} non-LT tires)`);
+            }
+          } else {
+            console.warn(`[tires/search:size] Tire sizes API failed: ${tireSizesResponse.status}`);
+          }
+        } catch (err) {
+          console.error("[tires/search:size] LT filter lookup error:", err);
+          // Continue without LT filter on error
+        }
+      }
+      
       timing.totalMs = Date.now() - t0;
       
       // ═══════════════════════════════════════════════════════════════════════
@@ -1959,6 +2011,11 @@ export async function GET(req: Request) {
         mode: "size",
         size: sizeRaw,
         ...(brandFilter && { brand: brandFilter }),
+        // Include vehicle context if provided (for LT filter)
+        ...(year && make && model && {
+          vehicle: { year, make, model, modification },
+          oemTireSizes: vehicleOemSizes,
+        }),
         sources: cacheResult.sources,
         cache: {
           hit: cacheResult.source === "cache",
@@ -1972,6 +2029,12 @@ export async function GET(req: Request) {
         },
         packagePriorityApplied,
         supplierPriorityApplied,
+        // LT filter info (when vehicle context provided)
+        ...(ltFilterAppliedSizeMode && {
+          ltFilterApplied: true,
+          ltFilterRemovedCount: ltFilterRemovedCountSizeMode,
+          vehicleRequiresLt: true,
+        }),
         timing,
         // TireWeb protection status (for monitoring)
         tirewebProtection: {
@@ -2266,6 +2329,53 @@ export async function GET(req: Request) {
         sizesToSearch = classicUpsizeSizes;
         matchMode = "classic-upsize";
         console.log(`[tires/search] Using classic upsize sizes for ${wheelDiameter}" wheels`);
+      } else if (sizesToSearch.length > 0 && requiresLtConstruction) {
+        // ═══════════════════════════════════════════════════════════════════════
+        // LT VEHICLE PLUS-SIZING (2026-06-13)
+        // When an LT vehicle (commercial van, HD truck) gets different wheel diameter,
+        // calculate plus-sizes from OEM and search for LT versions of those sizes.
+        // ═══════════════════════════════════════════════════════════════════════
+        try {
+          const baseOemSize = oemTireSizes[0]; // Use first OEM size as base
+          const baseUrl = process.env.VERCEL_URL 
+            ? `https://${process.env.VERCEL_URL}` 
+            : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+          const plusSizesUrl = new URL(`${baseUrl}/api/tires/plus-sizes`);
+          plusSizesUrl.searchParams.set("oemSize", baseOemSize);
+          plusSizesUrl.searchParams.set("wheelDiameter", String(wheelDiameter));
+          
+          const plusResponse = await fetch(plusSizesUrl.toString(), {
+            headers: { "Content-Type": "application/json" },
+            signal: AbortSignal.timeout(3000),
+          });
+          
+          if (plusResponse.ok) {
+            const plusData = await plusResponse.json();
+            const plusSizes = plusData.primarySizes || [];
+            
+            if (plusSizes.length > 0) {
+              // Convert to LT format (add LT prefix if not already present)
+              sizesToSearch = plusSizes.slice(0, 5).map((s: string) => 
+                s.startsWith("LT") ? s : `LT${s}`
+              );
+              matchMode = "direct-search";
+              console.log(`[tires/search] 🚚 LT PLUS-SIZING: ${baseOemSize} → ${wheelDiameter}" wheels`);
+              console.log(`  Searching: ${sizesToSearch.join(", ")}`);
+            } else {
+              sizesToSearch = [];
+              matchMode = "direct-search";
+              console.log(`[tires/search] No plus-sizes found for ${baseOemSize} → ${wheelDiameter}"`);
+            }
+          } else {
+            sizesToSearch = [];
+            matchMode = "direct-search";
+            console.warn(`[tires/search] Plus-sizes API failed: ${plusResponse.status}`);
+          }
+        } catch (err) {
+          console.error("[tires/search] LT plus-sizing error:", err);
+          sizesToSearch = [];
+          matchMode = "direct-search";
+        }
       } else if (sizesToSearch.length > 0) {
         // No OEM tires match the wheel diameter - this is a plus/minus sizing scenario
         // Search directly for tires of the specified diameter

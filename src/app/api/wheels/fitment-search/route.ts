@@ -5,6 +5,7 @@ import {
   buildFitmentProfileFromNewTable,
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
+import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 // DB-FIRST: External API imports blocked. Use admin/fitment for manual import.
 // import { importVehicleFitment } from "@/lib/fitmentImport";
 import { 
@@ -2986,28 +2987,35 @@ async function handleLegacyPath(
   if (!profile && !lookupKey && year && make && model) {
     console.log(`[fitment-search] No trim specified - checking for available trims for ${year} ${make} ${model}`);
     try {
-      // Query available trims directly from vehicle_fitments table
-      const trimsResult = await db.query(
-        `SELECT DISTINCT modification_id, display_trim 
-         FROM vehicle_fitments 
-         WHERE year = $1 AND LOWER(make) = LOWER($2) 
-         AND (LOWER(model) = LOWER($3) OR LOWER(REPLACE(model, '-', ' ')) = LOWER(REPLACE($3, '-', ' ')))
-         AND certification_status = 'certified'
-         ORDER BY display_trim
-         LIMIT 10`,
-        [Number(year), make, model]
-      );
+      // 2026-06-13: Use getModelVariants to handle model name aliases
+      // (e.g., "Silverado 2500 HD" → "Silverado 2500HD" in DB)
+      const modelVariants = getModelVariants(model);
       
-      if (trimsResult.rows.length > 0) {
-        // Auto-select first available trim
-        const firstTrim = trimsResult.rows[0];
-        lookupKey = firstTrim.modification_id;
-        displayTrim = firstTrim.display_trim || lookupKey;
-        autoSelectedTrim = true;
-        console.log(`[fitment-search] AUTO-SELECTED trim: ${displayTrim} (${lookupKey}) from ${trimsResult.rows.length} available`);
+      // Try each model variant until we find trims
+      for (const modelName of modelVariants) {
+        const trimsResult = await db.query(
+          `SELECT DISTINCT modification_id, display_trim 
+           FROM vehicle_fitments 
+           WHERE year = $1 AND LOWER(make) = LOWER($2) 
+           AND LOWER(model) ILIKE $3
+           AND certification_status = 'certified'
+           ORDER BY display_trim
+           LIMIT 10`,
+          [Number(year), make, modelName]
+        );
         
-        // Retry profile lookup with the selected trim
-        profile = await buildFitmentProfileFromNewTable(db, Number(year), make, model, lookupKey);
+        if (trimsResult.rows.length > 0) {
+          // Auto-select first available trim
+          const firstTrim = trimsResult.rows[0];
+          lookupKey = firstTrim.modification_id;
+          displayTrim = firstTrim.display_trim || lookupKey;
+          autoSelectedTrim = true;
+          console.log(`[fitment-search] AUTO-SELECTED trim: ${displayTrim} (${lookupKey}) from ${trimsResult.rows.length} available (model variant: "${modelName}")`);
+          
+          // Retry profile lookup with the selected trim
+          profile = await buildFitmentProfileFromNewTable(db, Number(year), make, model, lookupKey);
+          break; // Found trims, stop searching
+        }
       }
     } catch (e) {
       console.error(`[fitment-search] Auto-trim lookup failed:`, e);
@@ -3023,17 +3031,28 @@ async function handleLegacyPath(
     profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
     
     // If legacy profile found, verify it's certified in vehicle_fitments
+    // 2026-06-13: Use getModelVariants for certification check too
     if (profile) {
       try {
-        const certCheck = await db.query(
-          `SELECT certification_status FROM vehicle_fitments 
-           WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
-           AND certification_status = 'certified'
-           LIMIT 1`,
-          [Number(year), make, model]
-        );
+        const modelVariants = getModelVariants(model);
+        let isCertified = false;
         
-        if (certCheck.rows.length === 0) {
+        for (const modelName of modelVariants) {
+          const certCheck = await db.query(
+            `SELECT certification_status FROM vehicle_fitments 
+             WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) ILIKE $3
+             AND certification_status = 'certified'
+             LIMIT 1`,
+            [Number(year), make, modelName]
+          );
+          
+          if (certCheck.rows.length > 0) {
+            isCertified = true;
+            break;
+          }
+        }
+        
+        if (!isCertified) {
           console.log(`[fitment-search] CERTIFICATION GATE: Legacy profile blocked - no certified record in vehicle_fitments`);
           profile = null;
         }

@@ -522,8 +522,16 @@ async function fetchActiveRebates() {
 /**
  * Fetch tires from TireWeb (ATD, NTW, US AutoForce)
  * Returns TireLibrary-enriched data including images
+ * 
+ * IMPORTANT: Pass vehicle params when available so the API can:
+ * - Apply LT-only filter for HD trucks/commercial vans (2026-07-26)
+ * - Better match tire sizes to vehicle fitment
  */
-async function fetchTireWebTires(tireSize: string, brand?: string) {
+async function fetchTireWebTires(
+  tireSize: string, 
+  brand?: string,
+  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number }
+) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
   try {
     const params = new URLSearchParams({
@@ -536,6 +544,12 @@ async function fetchTireWebTires(tireSize: string, brand?: string) {
     if (brand) {
       params.set("brand", brand);
     }
+    // Pass vehicle context so API can apply LT filter for HD trucks
+    if (vehicle?.year) params.set("year", vehicle.year);
+    if (vehicle?.make) params.set("make", vehicle.make);
+    if (vehicle?.model) params.set("model", vehicle.model);
+    if (vehicle?.wheelDiameter) params.set("wheelDiameter", String(vehicle.wheelDiameter));
+    
     const res = await fetch(`${getBaseUrl()}/api/tires/search?${params.toString()}`, {
       cache: "no-store",
     });
@@ -2280,7 +2294,12 @@ export default async function TiresPage({
           brand: brandParam || undefined,
         })
       : (wpSize || selectedSize) 
-        ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined) 
+        ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined, {
+            year: year || undefined,
+            make: make || undefined,
+            model: model || undefined,
+            wheelDiameter: wheelDiaNum || undefined,
+          }) 
         : hasBrandSearch 
           ? fetchTiresByBrand(brandParam) 
           : null,
