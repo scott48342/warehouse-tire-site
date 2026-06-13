@@ -34,28 +34,29 @@ export const MODEL_ALIASES: Record<string, string[]> = {
 
   // ═══════════════════════════════════════════════════════════════════════════
   // CHEVROLET HD TRUCKS
-  // DB has multiple formats: silverado-2500hd, silverado-2500-hd, silverado-2500
-  // Need bidirectional aliases for all common user inputs
+  // DB stores: "Silverado 2500HD" (title case, no space before HD)
+  // User inputs: "Silverado 2500 HD", "silverado-2500-hd", "silverado 2500 hd"
+  // 2026-06-13: Fixed to include actual DB format (title case)
   // ═══════════════════════════════════════════════════════════════════════════
-  "silverado": ["silverado-1500"],
-  "silverado-2500": ["silverado-2500hd", "silverado-2500-hd"],
-  "silverado-2500hd": ["silverado-2500", "silverado-2500-hd"],  // Reverse alias
-  "silverado-2500-hd": ["silverado-2500hd", "silverado-2500"],  // Reverse alias - fixes selector
-  "silverado-3500": ["silverado-3500hd", "silverado-3500-hd"],
-  "silverado-3500hd": ["silverado-3500", "silverado-3500-hd"],  // Reverse alias
-  "silverado-3500-hd": ["silverado-3500hd", "silverado-3500"],  // Reverse alias - fixes selector
+  "silverado": ["Silverado 1500", "silverado-1500"],
+  "silverado-2500": ["Silverado 2500HD", "Silverado 2500", "silverado-2500hd"],
+  "silverado-2500hd": ["Silverado 2500HD", "Silverado 2500", "silverado-2500"],
+  "silverado-2500-hd": ["Silverado 2500HD", "Silverado 2500", "silverado-2500hd"],  // User input format
+  "silverado-3500": ["Silverado 3500HD", "Silverado 3500", "silverado-3500hd"],
+  "silverado-3500hd": ["Silverado 3500HD", "Silverado 3500", "silverado-3500"],
+  "silverado-3500-hd": ["Silverado 3500HD", "Silverado 3500", "silverado-3500hd"],  // User input format
 
   // ═══════════════════════════════════════════════════════════════════════════
   // GMC HD TRUCKS  
-  // Same bidirectional pattern as Chevrolet
+  // DB stores: "Sierra 2500HD" (title case, no space before HD)
   // ═══════════════════════════════════════════════════════════════════════════
-  "sierra": ["sierra-1500"],
-  "sierra-2500": ["sierra-2500hd", "sierra-2500-hd"],
-  "sierra-2500hd": ["sierra-2500", "sierra-2500-hd"],  // Reverse alias
-  "sierra-2500-hd": ["sierra-2500hd", "sierra-2500"],  // Reverse alias - fixes selector
-  "sierra-3500": ["sierra-3500hd", "sierra-3500-hd"],
-  "sierra-3500hd": ["sierra-3500", "sierra-3500-hd"],  // Reverse alias
-  "sierra-3500-hd": ["sierra-3500hd", "sierra-3500"],  // Reverse alias - fixes selector
+  "sierra": ["Sierra 1500", "sierra-1500"],
+  "sierra-2500": ["Sierra 2500HD", "Sierra 2500", "sierra-2500hd"],
+  "sierra-2500hd": ["Sierra 2500HD", "Sierra 2500", "sierra-2500"],
+  "sierra-2500-hd": ["Sierra 2500HD", "Sierra 2500", "sierra-2500hd"],  // User input format
+  "sierra-3500": ["Sierra 3500HD", "Sierra 3500", "sierra-3500hd"],
+  "sierra-3500hd": ["Sierra 3500HD", "Sierra 3500", "sierra-3500"],
+  "sierra-3500-hd": ["Sierra 3500HD", "Sierra 3500", "sierra-3500hd"],  // User input format
 
   // ═══════════════════════════════════════════════════════════════════════════
   // RAM TRUCKS
@@ -225,10 +226,19 @@ export const MODEL_ALIASES: Record<string, string[]> = {
  * Always prioritize these in query order to get better trim options.
  */
 const HD_RICH_PRIORITY: Record<string, string> = {
-  "silverado-2500-hd": "silverado-2500hd",
-  "silverado-3500-hd": "silverado-3500hd",
-  "sierra-2500-hd": "sierra-2500hd",
-  "sierra-3500-hd": "sierra-3500hd",
+  // Map slugified user input → actual DB format (title case, no space before HD)
+  "silverado-2500-hd": "Silverado 2500HD",
+  "silverado-2500hd": "Silverado 2500HD",
+  "silverado-2500": "Silverado 2500HD",
+  "silverado-3500-hd": "Silverado 3500HD",
+  "silverado-3500hd": "Silverado 3500HD",
+  "silverado-3500": "Silverado 3500HD",
+  "sierra-2500-hd": "Sierra 2500HD",
+  "sierra-2500hd": "Sierra 2500HD",
+  "sierra-2500": "Sierra 2500HD",
+  "sierra-3500-hd": "Sierra 3500HD",
+  "sierra-3500hd": "Sierra 3500HD",
+  "sierra-3500": "Sierra 3500HD",
 };
 
 /**
