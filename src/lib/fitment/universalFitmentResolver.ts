@@ -227,14 +227,66 @@ const MODEL_ALIASES: Record<string, string[]> = {
   "x3": ["X3"],
   
   // ─────────────────────────────────────────────────────────────────────────
-  // MERCEDES CLASSES
+  // MERCEDES CLASSES (slug → DB title case)
   // ─────────────────────────────────────────────────────────────────────────
+  // Standard classes
+  "a-class": ["A-Class", "A Class"],
+  "b-class": ["B-Class", "B Class"],
   "c-class": ["C-Class", "C Class"],
+  "cla-class": ["CLA-Class", "CLA Class", "CLA"],
+  "clk-class": ["CLK-Class", "CLK Class", "CLK"],
+  "cls-class": ["CLS-Class", "CLS Class", "CLS"],
   "e-class": ["E-Class", "E Class"],
+  "g-class": ["G-Class", "G Class"],
+  "gl-class": ["GL-Class", "GL Class", "GL"],
+  "gla-class": ["GLA-Class", "GLA Class", "GLA"],
+  "glb-class": ["GLB-Class", "GLB Class", "GLB"],
+  "glc-class": ["GLC-Class", "GLC Class", "GLC"],
+  "gle-class": ["GLE-Class", "GLE Class", "GLE"],
+  "glk-class": ["GLK-Class", "GLK Class", "GLK"],
+  "gls-class": ["GLS-Class", "GLS Class", "GLS"],
+  "m-class": ["M-Class", "M Class", "ML"],
+  "ml-class": ["M-Class", "ML-Class", "ML Class", "ML"],
+  "r-class": ["R-Class", "R Class"],
   "s-class": ["S-Class", "S Class"],
+  "sl-class": ["SL-Class", "SL Class", "SL"],
+  "slc-class": ["SLC-Class", "SLC Class", "SLC"],
+  "slk-class": ["SLK-Class", "SLK Class", "SLK"],
+  "sls-class": ["SLS-Class", "SLS Class", "SLS"],
+  
+  // AMG variants (slug → DB title case with AMG suffix)
+  "a-class-amg": ["A-Class AMG", "A Class AMG", "AMG A-Class"],
+  "c-class-amg": ["C-Class AMG", "C Class AMG", "AMG C-Class"],
+  "cla-class-amg": ["CLA-Class AMG", "CLA Class AMG", "AMG CLA"],
+  "cls-class-amg": ["CLS-Class AMG", "CLS Class AMG", "AMG CLS"],
+  "e-class-amg": ["E-Class AMG", "E Class AMG", "AMG E-Class"],
+  "g-class-amg": ["G-Class AMG", "G Class AMG", "AMG G-Class"],
+  "gl-class-amg": ["GL-Class AMG", "GL Class AMG"],
+  "gla-class-amg": ["GLA-Class AMG", "GLA Class AMG", "AMG GLA"],
+  "glb-class-amg": ["GLB-Class AMG", "GLB Class AMG", "AMG GLB"],
+  "glc-class-amg": ["GLC-Class AMG", "GLC Class AMG", "AMG GLC"],
+  "gle-class-amg": ["GLE-Class AMG", "GLE Class AMG", "AMG GLE"],
+  "gls-class-amg": ["GLS-Class AMG", "GLS Class AMG", "AMG GLS"],
+  "m-class-amg": ["M-Class AMG", "M Class AMG", "ML AMG"],
+  "s-class-amg": ["S-Class AMG", "S Class AMG", "AMG S-Class"],
+  "sl-class-amg": ["SL-Class AMG", "SL Class AMG", "AMG SL"],
+  "slc-class-amg": ["SLC-Class AMG", "SLC Class AMG", "AMG SLC"],
+  "slk-class-amg": ["SLK-Class AMG", "SLK Class AMG"],
+  "sls-class-amg": ["SLS-Class AMG", "SLS Class AMG", "SLS AMG"],
+  
+  // Short form SUV classes (without -class suffix)
   "gle": ["GLE", "GLE-Class"],
   "glc": ["GLC", "GLC-Class"],
   "gls": ["GLS", "GLS-Class"],
+  "gla": ["GLA", "GLA-Class"],
+  "glb": ["GLB", "GLB-Class"],
+  "glk": ["GLK", "GLK-Class"],
+  
+  // AMG GT variants
+  "amg-gt": ["AMG GT"],
+  "amg-gt-s": ["AMG GT S"],
+  "amg-gt-c": ["AMG GT C"],
+  "amg-gt-r": ["AMG GT R"],
 
   // ─────────────────────────────────────────────────────────────────────────
   // HYUNDAI/KIA EVs
