@@ -14,7 +14,7 @@
  * @created 2026-06-13
  */
 
-import { db } from "@/lib/fitment-db/client";
+import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, ilike, or, asc, sql } from "drizzle-orm";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
@@ -543,8 +543,8 @@ export async function resolveUniversalFitment(
   result.modificationId = recordWithOverrides.modificationId;
   result.boltPattern = recordWithOverrides.boltPattern || null;
   result.centerBore = recordWithOverrides.centerBoreMm ? parseFloat(String(recordWithOverrides.centerBoreMm)) : null;
-  result.threadSize = recordWithOverrides.lugThread || null;
-  result.lugSeatType = recordWithOverrides.lugSeatType || null;
+  result.threadSize = recordWithOverrides.threadSize || null;
+  result.lugSeatType = recordWithOverrides.seatType || null;
   result.qualityTier = (recordWithOverrides.qualityTier as any) || "unknown";
   
   // Determine confidence based on quality tier and data completeness
