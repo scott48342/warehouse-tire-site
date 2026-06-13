@@ -64,6 +64,8 @@ import {
   type LiftedTireFilterResult,
   type LiftedTireFilterWithBandResult,
 } from "@/lib/liftedRecommendations";
+import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
+import { convertLegacyTireSize, convertTireSizesForSearch } from "@/lib/legacyTireConverter";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -2143,58 +2145,84 @@ export async function GET(req: Request) {
       });
     }
     
-    // Get tire sizes from vehicles/tire-sizes API
+    // ═══════════════════════════════════════════════════════════════════════════
+    // 2026-06-13: Use UNIVERSAL FITMENT RESOLVER directly (Single Source of Truth)
+    // Replaces HTTP call to /api/vehicles/tire-sizes for better performance
+    // ═══════════════════════════════════════════════════════════════════════════
     const tFitment0 = Date.now();
     let tireSizes: string[] = [];           // Original OEM sizes (for display)
     let searchableSizes: string[] = [];     // Modern sizes (for search)
     let sizeConversions: any[] = [];        // Conversion details
     let hasLegacySizes = false;
-    let fitmentSource = "api";
+    let fitmentSource = "universal_resolver";
+    
+    console.log(`[tires/search] ══════════════════════════════════════════════════`);
+    console.log(`[tires/search] Using resolveUniversalFitment`);
+    console.log(`[tires/search] RAW INPUT: year=${year} make=${make} model=${model} trim=${modification || "(none)"}`);
     
     try {
-      const tireSizesUrl = new URL(`${url.origin}/api/vehicles/tire-sizes`);
-      tireSizesUrl.searchParams.set("year", year);
-      tireSizesUrl.searchParams.set("make", make);
-      tireSizesUrl.searchParams.set("model", model);
-      if (modification) tireSizesUrl.searchParams.set("modification", modification);
+      const fitmentResult = await resolveUniversalFitment({
+        year: parseInt(year, 10),
+        make,
+        model,
+        trim: modification || null,
+      });
       
-      const tsRes = await fetch(tireSizesUrl.toString());
-      if (tsRes.ok) {
-        const tsData = await tsRes.json();
+      console.log(`[tires/search] NORMALIZED: make="${fitmentResult.normalized.make}" model="${fitmentResult.normalized.model}"`);
+      console.log(`[tires/search] MATCHED VARIANT: "${fitmentResult.normalized.matchedVariant || "(none)"}"`);
+      console.log(`[tires/search] SOURCE: ${fitmentResult.source} | CONFIDENCE: ${fitmentResult.confidence} | QUALITY: ${fitmentResult.qualityTier}`);
+      console.log(`[tires/search] ══════════════════════════════════════════════════`);
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // TRIM SELECTION REQUIRED
+      // When fitment not found but available trims exist, user needs to select trim
+      // ═══════════════════════════════════════════════════════════════════════
+      if (!fitmentResult.found && fitmentResult.availableTrims.length > 0 && modification) {
+        console.log(`[tires/search] TRIM SELECTION REQUIRED: ${year} ${make} ${model} has ${fitmentResult.availableTrims.length} trims with different sizes`);
+        return NextResponse.json({
+          results: [],
+          mode: "vehicle",
+          vehicle: { year, make, model, modification },
+          wheelDiameter: wheelDiameter || null,
+          oemTireSizes: [],
+          hasLegacySizes: false,
+          trimResolutionRequired: true,
+          availableTrims: fitmentResult.availableTrims,
+          error: "Please select your vehicle trim to see available tires.",
+          fallbackMessage: `This vehicle has ${fitmentResult.availableTrims.length} trims with different tire sizes. Please select your exact trim above to see matching tires.`,
+          noResultsReason: "trim_selection_required",
+          cache: { hit: false, stale: false },
+        });
+      }
+      
+      if (fitmentResult.found) {
+        // Get OEM tire sizes from universal result
+        tireSizes = fitmentResult.oemTireSizes;
         
-        // ═══════════════════════════════════════════════════════════════════════
-        // TRIM SELECTION REQUIRED (2026-06-08)
-        // When multiple trims exist with different tire sizes and no trim is
-        // specified, return early with the available trims for UI selection.
-        // ═══════════════════════════════════════════════════════════════════════
-        if (tsData.trimResolutionRequired && tsData.availableTrims?.length > 0) {
-          console.log(`[tires/search] TRIM SELECTION REQUIRED: ${year} ${make} ${model} has ${tsData.availableTrims.length} trims with different sizes`);
-          return NextResponse.json({
-            results: [],
-            mode: "vehicle",
-            vehicle: { year, make, model, modification },
-            wheelDiameter: wheelDiameter || null,
-            oemTireSizes: [],
-            hasLegacySizes: false,
-            trimResolutionRequired: true,
-            availableTrims: tsData.availableTrims,
-            error: tsData.message || "Please select your vehicle trim to see available tires.",
-            fallbackMessage: `This vehicle has ${tsData.availableTrims.length} trims with different tire sizes. Please select your exact trim above to see matching tires.`,
-            noResultsReason: "trim_selection_required",
-            cache: { hit: false, stale: false },
-          });
+        // Handle staggered fitment (front/rear different sizes)
+        if (fitmentResult.oemTireSizesStaggered) {
+          const { front, rear } = fitmentResult.oemTireSizesStaggered;
+          if (front.length > 0 || rear.length > 0) {
+            tireSizes = [...front, ...rear].filter((s, i, a) => a.indexOf(s) === i);
+          }
         }
         
-        // Get original OEM sizes (may include legacy formats like E70-14)
-        tireSizes = (tsData.tireSizes || tsData.sizes || tsData.results || []).map((s: any) => 
-          typeof s === "string" ? s : s.size || s.front || ""
-        ).filter(Boolean);
+        // Convert legacy tire sizes (e.g., E70-14) to modern P-metric
+        const { searchSizes } = convertTireSizesForSearch(tireSizes);
+        searchableSizes = searchSizes.length > 0 ? searchSizes : tireSizes;
         
-        // Get searchable sizes (modern P-metric equivalents)
-        // The tire-sizes API now returns searchableSizes for legacy tire conversion
-        searchableSizes = tsData.searchableSizes || tireSizes;
-        sizeConversions = tsData.sizeConversions || [];
-        hasLegacySizes = tsData.hasLegacySizes || false;
+        // Build size conversions for legacy tires
+        sizeConversions = tireSizes.map(size => {
+          const conv = convertLegacyTireSize(size);
+          return {
+            originalSize: conv.original,
+            recommendedSize: conv.recommended,
+            alternatives: conv.alternatives,
+            conversionMethod: conv.conversionMethod,
+            isLegacy: conv.isLegacy,
+          };
+        });
+        hasLegacySizes = sizeConversions.some(c => c.isLegacy);
         
         if (hasLegacySizes) {
           console.log(`[tires/search] Legacy tire sizes detected for ${year} ${make} ${model}`);
@@ -2203,7 +2231,7 @@ export async function GET(req: Request) {
         }
       }
     } catch (err) {
-      console.error("[tires/search] Tire sizes error:", err);
+      console.error("[tires/search] Universal fitment resolver error:", err);
     }
     timing.fitmentMs = Date.now() - tFitment0;
     
