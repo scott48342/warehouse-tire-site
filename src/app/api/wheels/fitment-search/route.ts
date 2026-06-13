@@ -1,11 +1,26 @@
 import { NextResponse } from "next/server";
 import { 
   getPool, 
-  buildFitmentProfile,
-  buildFitmentProfileFromNewTable,
+  // DEPRECATED: buildFitmentProfile - use resolveUniversalFitment instead
+  // buildFitmentProfile,
+  // DEPRECATED: buildFitmentProfileFromNewTable - use resolveUniversalFitment instead
+  // buildFitmentProfileFromNewTable,
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
-import { getModelVariants } from "@/lib/fitment-db/modelAliases";
+// DEPRECATED: getModelVariants - now encapsulated in resolveUniversalFitment
+// import { getModelVariants } from "@/lib/fitment-db/modelAliases";
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// UNIVERSAL FITMENT RESOLVER (2026-06-13)
+// Single source of truth for ALL fitment lookups. Replaces:
+// - buildFitmentProfile / buildFitmentProfileFromNewTable
+// - getModelVariants / MODEL_ALIASES
+// - canonicalResolver / resolveVehicleFitment
+// ═══════════════════════════════════════════════════════════════════════════════
+import { 
+  resolveUniversalFitment, 
+  type UniversalFitmentResult 
+} from "@/lib/fitment/universalFitmentResolver";
 // DB-FIRST: External API imports blocked. Use admin/fitment for manual import.
 // import { importVehicleFitment } from "@/lib/fitmentImport";
 import { 
@@ -82,6 +97,8 @@ import { calculateWheelSellPrice } from "@/lib/pricing";
 
 // 2026-05-04: CANONICAL IDENTITY - Use same resolver as tire-sizes API
 // This ensures grouped trim fallbacks are blocked consistently across all endpoints
+// TODO: Migrate canonical check to use resolveUniversalFitment in Phase 5
+// For now, keep the old resolver for the trim-blocking check at STEP 0
 import { resolveVehicleFitment, type ResolutionMethod } from "@/lib/fitment/canonicalResolver";
 
 import {
@@ -105,6 +122,8 @@ import {
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
+
+// NOTE: convertToDBFitmentProfile was removed - legacy path now builds its own format directly
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // PRICING HELPER - DATA QUALITY FIX (2025-07-18)
@@ -2970,97 +2989,114 @@ async function handleLegacyPath(
   const db = getPool();
   await ensureFitmentTables(db);
 
-  // modificationId is used for lookup (e.g., "s_5b30d3b0")
-  // displayTrimParam is kept separate for display (e.g., "Base")
-  let lookupKey = modificationId;
-  let displayTrim = displayTrimParam || modificationId || null;  // Prefer original trim param
-  let autoSelectedTrim = false;
-  
   // ═══════════════════════════════════════════════════════════════════════════
-  // 2026-05-12: PRIMARY PATH - Query vehicle_fitments table directly
-  // This is the source of truth with 37,000+ certified vehicles.
-  // Legacy tables are nearly empty - only use as fallback.
+  // 2026-06-13: UNIVERSAL FITMENT RESOLVER (Single Source of Truth)
+  // All model normalization, aliases, and DB lookups are now encapsulated
+  // in resolveUniversalFitment(). No more direct getModelVariants/buildFitmentProfile calls.
   // ═══════════════════════════════════════════════════════════════════════════
-  let profile = await buildFitmentProfileFromNewTable(db, Number(year), make, model, lookupKey || undefined);
   
-  // If no profile yet and no trim specified, try auto-selecting a trim
-  if (!profile && !lookupKey && year && make && model) {
-    console.log(`[fitment-search] No trim specified - checking for available trims for ${year} ${make} ${model}`);
-    try {
-      // 2026-06-13: Use getModelVariants to handle model name aliases
-      // (e.g., "Silverado 2500 HD" → "Silverado 2500HD" in DB)
-      const modelVariants = getModelVariants(model);
-      
-      // Try each model variant until we find trims
-      for (const modelName of modelVariants) {
-        const trimsResult = await db.query(
-          `SELECT DISTINCT modification_id, display_trim 
-           FROM vehicle_fitments 
-           WHERE year = $1 AND LOWER(make) = LOWER($2) 
-           AND LOWER(model) ILIKE $3
-           AND certification_status = 'certified'
-           ORDER BY display_trim
-           LIMIT 10`,
-          [Number(year), make, modelName]
-        );
-        
-        if (trimsResult.rows.length > 0) {
-          // Auto-select first available trim
-          const firstTrim = trimsResult.rows[0];
-          lookupKey = firstTrim.modification_id;
-          displayTrim = firstTrim.display_trim || lookupKey;
-          autoSelectedTrim = true;
-          console.log(`[fitment-search] AUTO-SELECTED trim: ${displayTrim} (${lookupKey}) from ${trimsResult.rows.length} available (model variant: "${modelName}")`);
-          
-          // Retry profile lookup with the selected trim
-          profile = await buildFitmentProfileFromNewTable(db, Number(year), make, model, lookupKey);
-          break; // Found trims, stop searching
-        }
-      }
-    } catch (e) {
-      console.error(`[fitment-search] Auto-trim lookup failed:`, e);
+  console.log(`[fitment-search] ══════════════════════════════════════════════════`);
+  console.log(`[fitment-search] LEGACY PATH - Using resolveUniversalFitment`);
+  console.log(`[fitment-search] RAW INPUT: year=${year} make=${make} model=${model} trim=${displayTrimParam || "(none)"}`);
+  
+  const universalResult = await resolveUniversalFitment({
+    year: Number(year),
+    make,
+    model,
+    trim: displayTrimParam || modificationId || null,
+  });
+  
+  // Debug logging (temporary - for migration verification)
+  console.log(`[fitment-search] NORMALIZED: make="${universalResult.normalized.make}" model="${universalResult.normalized.model}"`);
+  console.log(`[fitment-search] VARIANTS TRIED: [${universalResult.normalized.modelVariantsTried.join(", ")}]`);
+  console.log(`[fitment-search] MATCHED VARIANT: "${universalResult.normalized.matchedVariant || "(none)"}"`);
+  console.log(`[fitment-search] DB MODEL: "${universalResult.model}" | TRIM: "${universalResult.trim || "(auto)"}"`);
+  console.log(`[fitment-search] SOURCE: ${universalResult.source} | CONFIDENCE: ${universalResult.confidence} | QUALITY: ${universalResult.qualityTier}`);
+  console.log(`[fitment-search] BOLT PATTERN: ${universalResult.boltPattern} | CENTER BORE: ${universalResult.centerBore}mm`);
+  console.log(`[fitment-search] WHEEL RANGE: ${universalResult.wheelDiameterRange ? `${universalResult.wheelDiameterRange.min}"-${universalResult.wheelDiameterRange.max}"` : "(none)"}`);
+  console.log(`[fitment-search] OFFSET RANGE: ${universalResult.offsetRange ? `${universalResult.offsetRange.min}mm-${universalResult.offsetRange.max}mm` : "(none)"}`);
+  console.log(`[fitment-search] ══════════════════════════════════════════════════`);
+  
+  // Track display trim and auto-selection
+  let displayTrim = universalResult.trim || displayTrimParam || modificationId || null;
+  const autoSelectedTrim = !displayTrimParam && !modificationId && universalResult.trim !== null;
+  const lookupKey = universalResult.modificationId || modificationId;
+  
+  if (autoSelectedTrim) {
+    console.log(`[fitment-search] AUTO-SELECTED trim: ${displayTrim} (${universalResult.modificationId}) from ${universalResult.availableTrims.length} available`);
+  }
+  
+  // Build LEGACY profile format from UniversalFitmentResult
+  // (This format has different properties than DBFitmentProfile)
+  const wheelSpecs = universalResult.oemWheelSizes.map((ws, idx) => ({
+    rimDiameter: ws.diameter,
+    rimWidth: ws.width,
+    offset: ws.offset ?? null,
+    tireSize: universalResult.oemTireSizes[idx] || null,
+    axle: ws.axle || "both",
+    isStock: true,
+  }));
+  
+  const diameters = [...new Set(wheelSpecs.map(ws => ws.rimDiameter))].filter(d => d > 0);
+  const widths = [...new Set(wheelSpecs.map(ws => ws.rimWidth))].filter(w => w > 0);
+  const offsets = wheelSpecs.map(ws => ws.offset).filter((o): o is number => o !== null);
+  
+  // Compute allowed ranges from OEM wheel specs
+  const allowedDiameters = diameters.length > 0 ? diameters : 
+    (universalResult.wheelDiameterRange ? 
+      Array.from({ length: universalResult.wheelDiameterRange.max - universalResult.wheelDiameterRange.min + 1 }, 
+        (_, i) => universalResult.wheelDiameterRange!.min + i) : 
+      [17, 18, 19, 20]); // Default if no data
+  
+  const allowedWidths = widths.length > 0 ? widths :
+    (universalResult.wheelWidthRange ?
+      Array.from({ length: Math.floor((universalResult.wheelWidthRange.max - universalResult.wheelWidthRange.min) * 2) + 1 },
+        (_, i) => universalResult.wheelWidthRange!.min + i * 0.5) :
+      [7, 7.5, 8, 8.5, 9]); // Default if no data
+  
+  const allowedOffsets = offsets.length > 0 ? offsets :
+    (universalResult.offsetRange ?
+      Array.from({ length: universalResult.offsetRange.max - universalResult.offsetRange.min + 1 },
+        (_, i) => universalResult.offsetRange!.min + i) :
+      [30, 35, 40, 45]); // Default if no data
+  
+  // Parse bolt pattern to get PCD and stud holes
+  let pcd: number | null = null;
+  let studHoles: number | null = null;
+  if (universalResult.boltPattern) {
+    const bpMatch = universalResult.boltPattern.match(/^(\d+)x(\d+(?:\.\d+)?)/);
+    if (bpMatch) {
+      studHoles = parseInt(bpMatch[1], 10);
+      pcd = parseFloat(bpMatch[2]);
     }
   }
   
-  // ═══════════════════════════════════════════════════════════════════════════
-  // FALLBACK: Try legacy tables if new table didn't have the vehicle
-  // (kept for backwards compatibility but should rarely be used)
-  // ═══════════════════════════════════════════════════════════════════════════
-  if (!profile) {
-    console.log(`[fitment-search] New table miss - trying legacy tables for ${year} ${make} ${model}`);
-    profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
-    
-    // If legacy profile found, verify it's certified in vehicle_fitments
-    // 2026-06-13: Use getModelVariants for certification check too
-    if (profile) {
-      try {
-        const modelVariants = getModelVariants(model);
-        let isCertified = false;
-        
-        for (const modelName of modelVariants) {
-          const certCheck = await db.query(
-            `SELECT certification_status FROM vehicle_fitments 
-             WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) ILIKE $3
-             AND certification_status = 'certified'
-             LIMIT 1`,
-            [Number(year), make, modelName]
-          );
-          
-          if (certCheck.rows.length > 0) {
-            isCertified = true;
-            break;
-          }
-        }
-        
-        if (!isCertified) {
-          console.log(`[fitment-search] CERTIFICATION GATE: Legacy profile blocked - no certified record in vehicle_fitments`);
-          profile = null;
-        }
-      } catch (e) {
-        console.error(`[fitment-search] Certification check failed:`, e);
-      }
-    }
-  }
+  // Build legacy profile object
+  const profile = {
+    boltPattern: universalResult.boltPattern,
+    centerBore: universalResult.centerBore,
+    wheelSpecs,
+    allowedDiameters,
+    allowedWidths,
+    allowedOffsets,
+    displayTrim: displayTrim || "Base",  // For DBFitmentProfile compatibility
+    vehicle: {
+      year: universalResult.year,
+      make: universalResult.make,
+      model: universalResult.model,
+      trim: displayTrim,
+      slug: universalResult.modificationId || `${universalResult.year}-${universalResult.make}-${universalResult.model}`.toLowerCase().replace(/\s+/g, "-"),
+    },
+    fitment: {
+      pcd,
+      studHoles,
+      threadSize: universalResult.threadSize,
+      seatType: universalResult.lugSeatType,
+    },
+    tireSizes: universalResult.oemTireSizes,
+    qualityTier: universalResult.qualityTier,
+    source: universalResult.source,
+  };
   
   // ═══════════════════════════════════════════════════════════════════════════
   // DB-FIRST: No external API fallback. If profile not in DB, return user-friendly error.
@@ -3106,49 +3142,30 @@ async function handleLegacyPath(
   const profileMs = Date.now() - t0;
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // FETCH QUALITY TIER from new vehicle_fitments table (legacy profile doesn't have it)
-  // This is needed for proper staggered detection
+  // QUALITY TIER - Already included in profile from resolveUniversalFitment
   // ═══════════════════════════════════════════════════════════════════════════
-  let fetchedQualityTier: string | null = null;
-  try {
-    const tierResult = await db.query(
-      `SELECT quality_tier FROM vehicle_fitments 
-       WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3)
-       AND certification_status = 'certified'
-       ${lookupKey ? "AND (LOWER(modification_id) = LOWER($4) OR LOWER(display_trim) = LOWER($4))" : ""}
-       LIMIT 1`,
-      lookupKey ? [Number(year), make, model, lookupKey] : [Number(year), make, model]
-    );
-    if (tierResult.rows.length > 0) {
-      fetchedQualityTier = tierResult.rows[0].quality_tier;
-      console.log(`[fitment-search] Fetched qualityTier="${fetchedQualityTier}" from vehicle_fitments`);
-    }
-  } catch (e) {
-    console.error(`[fitment-search] Failed to fetch qualityTier:`, e);
-  }
-  
-  // Attach to profile for use in staggered detection
-  (profile as any).qualityTier = fetchedQualityTier || "unknown";
+  console.log(`[fitment-search] Using qualityTier="${profile.qualityTier}" from universalFitmentResolver`);
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // CRITICAL: Apply fitment rules to override incorrect legacy data
-  // This handles cases like RAM 1500 Classic vs 5th Gen where bolt pattern differs.
+  // NOTE: Fitment rules override is now applied INSIDE resolveUniversalFitment
+  // via applyOverrides(). This section is kept for backward compatibility but
+  // should not trigger since the resolver already handles these cases.
   // ═══════════════════════════════════════════════════════════════════════════
   const ruleOverride = getFitmentFromRules({
     year: Number(year),
     make,
     model,
     rawModel: model,
-    trim: profile.vehicle?.trim || displayTrim || undefined,
+    trim: displayTrim || profile.displayTrim || undefined,
     modificationId: lookupKey,
   });
   
   if (ruleOverride && ruleOverride.boltPattern && ruleOverride.boltPattern !== profile.boltPattern) {
-    console.log(`[fitment-search] 🔧 LEGACY RULE OVERRIDE: ${year} ${make} ${model} trim=${displayTrim || "(none)"}`);
+    console.log(`[fitment-search] 🔧 REDUNDANT RULE OVERRIDE (resolver should have handled this): ${year} ${make} ${model}`);
     console.log(`  Bolt pattern: ${profile.boltPattern} → ${ruleOverride.boltPattern}`);
     console.log(`  Reason: ${ruleOverride.notes || "Fitment rule match"}`);
     
-    // Override the bolt pattern in the profile
+    // Override the bolt pattern in the profile (should be redundant)
     profile.boltPattern = ruleOverride.boltPattern;
     
     // Also override center bore if provided
@@ -3158,13 +3175,18 @@ async function handleLegacyPath(
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // SAFETY CHECK: Calculate confidence on legacy profile
+  // SAFETY CHECK: Calculate confidence on profile
+  // Use universalResult.confidence which is already calculated
   // ═══════════════════════════════════════════════════════════════════════════
   
   const legacyConfidenceInput = {
     boltPattern: profile.boltPattern,
     centerBoreMm: profile.centerBore,
-    oemWheelSizes: profile.wheelSpecs,
+    oemWheelSizes: profile.wheelSpecs.map((ws: any) => ({
+      diameter: ws.rimDiameter,
+      width: ws.rimWidth,
+      offset: ws.offset,
+    })),
   };
   
   const confidenceResult = calculateConfidence(legacyConfidenceInput);
@@ -3213,7 +3235,7 @@ async function handleLegacyPath(
     mode = modeParam as FitmentMode;
   } else {
     const autoResult = autoDetectFitmentMode(model!, {
-      boltPattern: profile.boltPattern,
+      boltPattern: profile.boltPattern || undefined,  // Convert null to undefined
       minDiameter: profile.allowedDiameters.length > 0 ? Math.min(...profile.allowedDiameters) : undefined,
       maxWidth: profile.allowedWidths.length > 0 ? Math.max(...profile.allowedWidths) : undefined,
     });
@@ -3223,12 +3245,13 @@ async function handleLegacyPath(
   }
 
   // Build aftermarket fitment envelope
+  // Note: centerBore is required by OEMSpecs - use a safe default if missing
   const oemSpecs: OEMSpecs = {
-    boltPattern: profile.boltPattern,
-    centerBore: profile.centerBore,
-    studHoles: profile.fitment.studHoles,
-    pcd: profile.fitment.pcd,
-    wheelSpecs: profile.wheelSpecs.map((ws) => ({
+    boltPattern: profile.boltPattern || "",
+    centerBore: profile.centerBore || 72.6,  // Default to common bore size if missing
+    studHoles: profile.fitment.studHoles || undefined,
+    pcd: profile.fitment.pcd || undefined,
+    wheelSpecs: profile.wheelSpecs.map((ws: any) => ({
       rimDiameter: Number(ws.rimDiameter),
       rimWidth: Number(ws.rimWidth),
       offset: ws.offset,
@@ -3256,15 +3279,14 @@ async function handleLegacyPath(
   }
 
   // Build dbProfile-compatible response from legacy profile
-  // NOTE: Legacy profiles do NOT have threadSize/seatType - those only come from DB-first path.
-  // Accessory calculation will show a warning when these are missing.
+  // NOTE: With universalFitmentResolver, threadSize/seatType ARE now available
   const legacyDbProfile = {
     modificationId: profile.vehicle.slug || requestedModificationId || "",
     displayTrim: profile.vehicle.trim || "",
-    boltPattern: profile.boltPattern,
-    centerBoreMm: profile.centerBore || null,
-    threadSize: (profile.fitment as any)?.threadSize || null, // Not available in legacy
-    seatType: (profile.fitment as any)?.seatType || null, // Not available in legacy
+    boltPattern: profile.boltPattern,  // Can be null per the type
+    centerBoreMm: profile.centerBore,  // Can be null per the type
+    threadSize: profile.fitment?.threadSize || null,
+    seatType: profile.fitment?.seatType || null,
     offsetRange: {
       min: profile.allowedOffsets.length > 0 ? Math.min(...profile.allowedOffsets) : null,
       max: profile.allowedOffsets.length > 0 ? Math.max(...profile.allowedOffsets) : null,
@@ -3274,8 +3296,8 @@ async function handleLegacyPath(
       width: ws.rimWidth,
       offset: ws.offset,
     })),
-    oemTireSizes: (profile as any).tireSizes || [],
-    source: "legacy",
+    oemTireSizes: profile.tireSizes || [],
+    source: "universal" as string,  // Updated source to reflect new resolver
   };
 
   return await handleDbFirstWheelResults({
@@ -3284,7 +3306,7 @@ async function handleLegacyPath(
     make,
     model,
     displayTrim: profile.vehicle.trim || "",
-    boltPattern: profile.boltPattern,
+    boltPattern: profile.boltPattern || "",  // Ensure string, not null
     envelope,
     mode,
     modeAutoDetected,
@@ -3294,8 +3316,8 @@ async function handleLegacyPath(
     requestedModificationId,
     debug,
     t0,
-    confidenceResult,  // Pass confidence to response
-    staggeredInfo: legacyStaggeredInfo,  // Pass staggered info
+    confidenceResult,
+    staggeredInfo: legacyStaggeredInfo,
     dbProfileForResponse: legacyDbProfile,
   });
 }
