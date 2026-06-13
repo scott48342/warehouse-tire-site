@@ -12,13 +12,12 @@
  * - Bolt pattern must match exactly
  */
 
-import { listLocalFitments } from "@/lib/fitment-db/getFitment";
 import { parseWheelSizes } from "@/lib/fitment-db/profileService";
-import type { VehicleFitment } from "@/lib/fitment-db/schema";
 import { getTechfeedCandidatesByBoltPattern, type TechfeedWheel } from "@/lib/techfeed/wheels";
 import { getCachedBulk } from "@/lib/availabilityCache";
 import { calculateWheelSellPrice } from "@/lib/pricing";
 import { normalizeToStringArray } from "@/lib/tires/tireSizeUtils";
+import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
 
 // ============================================================================
 // Types
@@ -256,44 +255,43 @@ async function getVehicleFitment(
   model: string,
   trim?: string
 ): Promise<ParsedFitment | null> {
-  const fitments = await listLocalFitments(year, make, model);
+  // ═══════════════════════════════════════════════════════════════════════
+  // 2026-06-13: Use UNIVERSAL FITMENT RESOLVER (Single Source of Truth)
+  // Replaces listLocalFitments - all normalization/aliases encapsulated
+  // ═══════════════════════════════════════════════════════════════════════
   
-  if (fitments.length === 0) return null;
-
-  // Pick best fitment (prefer matching trim)
-  let bestFitment: VehicleFitment | null = null;
+  console.log(`[packages/engine] ══════════════════════════════════════════════════`);
+  console.log(`[packages/engine] Using resolveUniversalFitment`);
+  console.log(`[packages/engine] RAW INPUT: year=${year} make=${make} model=${model} trim=${trim || "(none)"}`);
   
-  if (trim) {
-    bestFitment = fitments.find(f => 
-      f.displayTrim.toLowerCase().includes(trim.toLowerCase()) ||
-      f.modificationId.toLowerCase().includes(trim.toLowerCase())
-    ) || null;
+  const result = await resolveUniversalFitment({
+    year,
+    make,
+    model,
+    trim: trim || null,
+  });
+  
+  console.log(`[packages/engine] NORMALIZED: make="${result.normalized.make}" model="${result.normalized.model}"`);
+  console.log(`[packages/engine] MATCHED VARIANT: "${result.normalized.matchedVariant || "(none)"}"`);
+  console.log(`[packages/engine] SOURCE: ${result.source} | CONFIDENCE: ${result.confidence} | QUALITY: ${result.qualityTier}`);
+  console.log(`[packages/engine] ══════════════════════════════════════════════════`);
+  
+  if (!result.found || !result.boltPattern) {
+    console.log(`[packages/engine] No fitment data found`);
+    return null;
   }
-  
-  if (!bestFitment) {
-    // Pick one with most data
-    bestFitment = fitments.find(f => 
-      f.boltPattern && 
-      Array.isArray(f.oemTireSizes) && 
-      f.oemTireSizes.length > 0
-    ) || fitments[0];
-  }
 
-  if (!bestFitment || !bestFitment.boltPattern) return null;
-
-  // Parse OEM wheel sizes (handles string formats like "8.5Jx18" from generation_template)
-  const parsedWheelSizes = parseWheelSizes(bestFitment.oemWheelSizes);
-  
-  const oemDiameters = parsedWheelSizes
+  // Extract OEM wheel sizes from universal result
+  const oemDiameters = result.oemWheelSizes
     .map((ws) => ws.diameter)
     .filter((d) => d > 0);
   
-  const oemWidths = parsedWheelSizes
+  const oemWidths = result.oemWheelSizes
     .map((ws) => ws.width)
     .filter((w) => w > 0);
 
-  // Parse OEM tire sizes (supports string arrays and {front, rear} staggered format)
-  const oemTireSizes = normalizeToStringArray(bestFitment.oemTireSizes);
+  // Get OEM tire sizes from universal result
+  const oemTireSizes = result.oemTireSizes;
 
   // Calculate OEM overall diameter (from first tire size) and per-rim map
   // FIX (2026-06-10): Exclude LT (Light Truck) sizes from baseline calculation.
@@ -334,19 +332,19 @@ async function getVehicleFitment(
     }
   }
 
-  // Offset range
+  // Offset range from universal result
   // FIX (2026-06-10): Default offset range expanded to cover classic to modern vehicles.
   // Classic wheels often have -10 to +15 offset, modern is typically +30 to +50.
   // Old defaults (20-50) rejected ALL classic wheels with negative/low offsets,
   // causing ~3,100 vehicles to fail package generation despite having inventory.
   // New defaults (-15 to 55) allow a permissive range while the ±3% overall-diameter
   // safety check remains the primary fitment guard.
-  const offsetMin = bestFitment.offsetMinMm != null ? Number(bestFitment.offsetMinMm) : -15;
-  const offsetMax = bestFitment.offsetMaxMm != null ? Number(bestFitment.offsetMaxMm) : 55;
+  const offsetMin = result.offsetRange?.min ?? -15;
+  const offsetMax = result.offsetRange?.max ?? 55;
 
   return {
-    boltPattern: bestFitment.boltPattern,
-    centerBore: bestFitment.centerBoreMm != null ? Number(bestFitment.centerBoreMm) : null,
+    boltPattern: result.boltPattern!,
+    centerBore: result.centerBore ?? null,
     offsetRange: { min: offsetMin, max: offsetMax },
     oemDiameters: oemDiameters.length > 0 ? oemDiameters : [17],
     oemWidths: oemWidths.length > 0 ? oemWidths : [7.5],
