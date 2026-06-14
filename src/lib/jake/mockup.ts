@@ -11,6 +11,8 @@
 import OpenAI from "openai";
 import { put, list } from "@vercel/blob";
 import crypto from "crypto";
+import { db } from "@/lib/fitment-db/db";
+import { galleryBuilds, generateBuildSlug } from "@/lib/fitment-db/schema-gallery";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -271,6 +273,11 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
     // Save to cache
     const cachedImageUrl = await saveToCache(dalleUrl, cacheKey);
     
+    // Save to gallery (non-blocking)
+    saveToGallery(request, cachedImageUrl).catch(err => {
+      console.error("[mockup] Gallery save error (non-blocking):", err);
+    });
+    
     return {
       success: true,
       imageUrl: cachedImageUrl,
@@ -290,6 +297,114 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
       cached: false,
       generationTime: Date.now() - startTime,
     };
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SAVE TO GALLERY
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<void> {
+  try {
+    const { vehicle, build } = request;
+    
+    // Parse wheel style into brand/model (best effort)
+    // Input like "Fuel Rebel D679 Matte Black" → brand: "Fuel", model: "Rebel D679", finish: "Matte Black"
+    const wheelParts = build.wheelStyle.split(" ");
+    const wheelBrand = wheelParts[0] || "Custom";
+    const wheelModel = wheelParts.slice(1, -2).join(" ") || wheelParts.slice(1).join(" ") || "Wheel";
+    const wheelFinish = wheelParts.slice(-2).join(" ") || undefined;
+    
+    // Map build style to gallery lift level
+    const liftLevelMap: Record<string, string> = {
+      "stock": "stock",
+      "leveled": "leveled",
+      "lifted-2": "2-inch",
+      "lifted-4": "4-inch", 
+      "lifted-6": "6-inch",
+      "lowered": "lowered",
+    };
+    
+    // Map tire style to gallery build style
+    const buildStyleMap: Record<string, string> = {
+      "all-terrain": "off-road",
+      "mud-terrain": "off-road",
+      "highway": "daily-driver",
+      "performance": "aggressive-street",
+      "all-season": "daily-driver",
+    };
+    
+    // Determine build style based on lift + tire combo
+    let buildStyle = buildStyleMap[build.tireStyle] || "daily-driver";
+    if (build.style.startsWith("lifted")) {
+      buildStyle = "lifted";
+    } else if (build.style === "lowered") {
+      buildStyle = "aggressive-street";
+    }
+    
+    // Create title
+    const title = `${vehicle.year} ${vehicle.make} ${vehicle.model} with ${wheelBrand} ${wheelModel}`;
+    
+    // Generate slug base
+    const slugBase = generateBuildSlug({
+      vehicleYear: vehicle.year,
+      vehicleMake: vehicle.make,
+      vehicleModel: vehicle.model,
+      wheelBrand,
+      wheelModel,
+      tireBrand: build.tireStyle, // Use style as brand placeholder for Jake builds
+      tireModel: build.tireSize || `${build.wheelSize}"`,
+    });
+    
+    // Add random suffix to ensure uniqueness
+    const slug = `${slugBase}-jake-${Date.now().toString(36)}`;
+    
+    // Insert into gallery
+    await db.insert(galleryBuilds).values({
+      slug,
+      title,
+      description: `AI-generated mockup created by Jake showing ${build.wheelSize}" ${build.wheelStyle} wheels with ${build.tireStyle} tires on a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}.`,
+      
+      // Vehicle
+      vehicleYear: vehicle.year,
+      vehicleMake: vehicle.make,
+      vehicleModel: vehicle.model,
+      vehicleTrim: vehicle.trim,
+      
+      // Build specs
+      buildStyle,
+      liftLevel: liftLevelMap[build.style] || "stock",
+      
+      // Wheel info (best effort from style string)
+      wheelBrand,
+      wheelModel,
+      wheelSize: `${build.wheelSize}`,
+      wheelFinish,
+      
+      // Tire info (limited for Jake-generated)
+      tireBrand: build.tireStyle.charAt(0).toUpperCase() + build.tireStyle.slice(1).replace("-", " "),
+      tireModel: build.tireSize || `${build.tireStyle} tire`,
+      tireSize: build.tireSize || `${build.wheelSize}"`,
+      
+      // Image
+      heroImageUrl: imageUrl,
+      
+      // Metadata
+      tags: ["jake-generated", build.tireStyle, vehicle.make.toLowerCase(), buildStyle],
+      isFeatured: false,
+      isPopular: false,
+      isActive: true,
+      
+      // Source attribution
+      sourceType: "jake",
+      sourceAttribution: "Created by Jake AI",
+    });
+    
+    console.log(`[mockup] Saved to gallery: ${slug}`);
+    
+  } catch (error) {
+    // Don't fail the mockup if gallery save fails
+    console.error("[mockup] Failed to save to gallery:", error);
   }
 }
 
