@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { db } from "@/lib/fitment-db/client";
+import { db } from "@/lib/fitment-db";
 import { galleryBuilds, buildToJakeContext } from "@/lib/fitment-db/schema";
 import { eq, and, ne } from "drizzle-orm";
 import { BuildDetailClient } from "./BuildDetailClient";

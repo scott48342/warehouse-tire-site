@@ -6,7 +6,7 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/fitment-db/client";
+import { db } from "@/lib/fitment-db";
 import { galleryBuilds, buildToJakeContext } from "@/lib/fitment-db/schema";
 import { eq, or, desc, asc } from "drizzle-orm";
 
