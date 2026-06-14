@@ -204,7 +204,7 @@ async function generateWithDalle(prompt: string): Promise<string> {
     n: 1,
     size: "1792x1024", // Wide format
     quality: "hd",
-    response_format: "url",
+    // Note: URL is the default response format for DALL-E 3
   });
   
   const imageUrl = response.data?.[0]?.url;
