@@ -519,3 +519,18 @@ export {
   type LeadSourceStats,
   type LeadFunnelStats,
 } from "./schema-leads";
+
+// ════════════════════════════════════════════════════════════════════════════════
+// BUILD GALLERY TABLES (re-exported from schema-gallery.ts)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export {
+  galleryBuilds,
+  BUILD_STYLES,
+  generateBuildSlug,
+  buildToJakeContext,
+  type GalleryBuild,
+  type NewGalleryBuild,
+  type BuildStyle,
+  type JakeBuildContext,
+} from "./schema-gallery";

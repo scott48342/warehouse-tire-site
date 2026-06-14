@@ -33,7 +33,7 @@ const EMAIL_REGEX = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { query, history = [], isLocal = false, vehicle } = body;
+    const { query, history = [], isLocal = false, vehicle, galleryBuildContext } = body;
     
     if (!query || typeof query !== "string") {
       return new Response(
@@ -56,6 +56,9 @@ export async function POST(req: NextRequest) {
     if (vehicle) {
       console.log(`[Jake Stream API] Vehicle context: ${vehicle.year} ${vehicle.make} ${vehicle.model}${vehicle.trim ? ` ${vehicle.trim}` : ''}`);
     }
+    if (galleryBuildContext?.galleryBuild) {
+      console.log(`[Jake Stream API] Gallery build context: ${galleryBuildContext.galleryBuild.vehicle} with ${galleryBuildContext.galleryBuild.wheel}`);
+    }
     
     // Create readable stream from async generator
     const encoder = new TextEncoder();
@@ -67,7 +70,8 @@ export async function POST(req: NextRequest) {
             query,
             history as JakeMessage[],
             isLocal,
-            vehicle as SavedVehicleContext | undefined
+            vehicle as SavedVehicleContext | undefined,
+            galleryBuildContext
           );
           
           for await (const event of generator) {

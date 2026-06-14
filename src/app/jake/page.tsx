@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 interface PageProps {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string; buildContext?: string }>;
 }
 
 // Detect if we're on the local site
@@ -29,11 +29,16 @@ async function isLocalSite(): Promise<boolean> {
 export default async function JakePage({ searchParams }: PageProps) {
   const params = await searchParams;
   const initialPrompt = params.q || undefined;
+  const buildContext = params.buildContext || undefined;
   const isLocal = await isLocalSite();
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      <JakeChat initialPrompt={initialPrompt} isLocal={isLocal} />
+      <JakeChat 
+        initialPrompt={initialPrompt} 
+        isLocal={isLocal}
+        buildContext={buildContext}
+      />
     </div>
   );
 }

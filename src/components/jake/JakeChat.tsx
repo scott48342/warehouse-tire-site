@@ -8,11 +8,19 @@ import { trackJakeEvent, trackJakeMessage, getJakeSessionId, setJakeSessionId, r
 import { JakeAvatar } from "./JakeAvatar";
 import { ProductRail, ProductCarousel, MOCK_TIRES, MOCK_WHEELS, RailProduct } from "./ProductRail";
 import { VehicleChip } from "./VehicleChip";
+import { JakeMockupCard } from "./JakeMockupCard";
 import { useVehicleMemory, formatVehicleDisplay, type SavedVehicle } from "@/contexts/VehicleMemoryContext";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
 // ═══════════════════════════════════════════════════════════════════════════════
+
+interface MockupData {
+  imageUrl: string;
+  disclaimer: string;
+  vehicle: string;
+  wheelStyle: string;
+}
 
 interface Message {
   id: string;
@@ -22,6 +30,7 @@ interface Message {
   products?: ParsedProduct[];
   cartUrl?: string;
   packageSummary?: PackageSummary;
+  mockup?: MockupData;
 }
 
 // ParsedProduct imported from JakeProductCards
@@ -251,9 +260,10 @@ interface JakeChatProps {
   initialPrompt?: string;
   onClose?: () => void;
   isLocal?: boolean; // Local site shows out-the-door pricing with installation
+  buildContext?: string; // JSON-encoded gallery build context for "Build Something Similar"
 }
 
-export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = false }: JakeChatProps) {
+export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = false, buildContext }: JakeChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -599,11 +609,30 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         });
       }
 
+      // Parse gallery build context if provided (from "Build Something Similar")
+      let parsedBuildContext = undefined;
+      if (buildContext) {
+        try {
+          parsedBuildContext = JSON.parse(decodeURIComponent(buildContext));
+          trackJakeEvent("gallery_build_context_used", {
+            build: parsedBuildContext?.galleryBuild?.vehicle,
+          });
+        } catch (e) {
+          console.error("[Jake] Failed to parse buildContext:", e);
+        }
+      }
+
       // Use streaming API
       const response = await fetch("/api/jake/chat/stream", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: text, history, isLocal, vehicle: vehicleContext }),
+        body: JSON.stringify({ 
+          query: text, 
+          history, 
+          isLocal, 
+          vehicle: vehicleContext,
+          galleryBuildContext: parsedBuildContext,
+        }),
       });
 
       if (!response.ok) {
@@ -621,6 +650,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       let productsData: any = undefined;
       let detectedVehicle: any = undefined;
       let cartUrl: string | undefined;
+      let mockupData: MockupData | undefined;
 
       while (true) {
         const { done, value } = await reader.read();
@@ -664,6 +694,14 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
 
                   case "cartUrl":
                     cartUrl = event.cartUrl;
+                    break;
+
+                  case "mockup":
+                    mockupData = event.mockup;
+                    trackJakeEvent("mockup_generated", {
+                      vehicle: event.mockup?.vehicle,
+                      wheelStyle: event.mockup?.wheelStyle,
+                    });
                     break;
 
                   case "done":
@@ -775,6 +813,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         timestamp: new Date(),
         products: products.length > 0 ? products : undefined,
         cartUrl,
+        mockup: mockupData,
       };
       setMessages(prev => [...prev, assistantMessage]);
       trackJakeMessage("assistant", responseText);
@@ -1199,6 +1238,35 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                         }}
                       />
                     ))}
+                  </div>
+                )}
+
+                {/* Visual Mockup */}
+                {message.mockup && (
+                  <div className="mt-4">
+                    <JakeMockupCard
+                      imageUrl={message.mockup.imageUrl}
+                      disclaimer={message.mockup.disclaimer}
+                      vehicle={message.mockup.vehicle}
+                      wheelStyle={message.mockup.wheelStyle}
+                      onSave={() => {
+                        trackJakeEvent("mockup_saved", {
+                          vehicle: message.mockup?.vehicle,
+                          wheelStyle: message.mockup?.wheelStyle,
+                        });
+                        // TODO: Implement save functionality
+                      }}
+                      onShare={() => {
+                        trackJakeEvent("mockup_shared", {
+                          vehicle: message.mockup?.vehicle,
+                          wheelStyle: message.mockup?.wheelStyle,
+                        });
+                        // Copy image URL to clipboard
+                        if (message.mockup?.imageUrl) {
+                          navigator.clipboard.writeText(message.mockup.imageUrl);
+                        }
+                      }}
+                    />
                   </div>
                 )}
 

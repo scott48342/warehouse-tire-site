@@ -221,6 +221,39 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
       },
       required: ["year", "make", "model"]
     }
+  },
+  {
+    name: "generate_visual_mockup",
+    description: `Generate a visual mockup showing approximate wheel/tire look on customer's vehicle.
+    
+USE FOR: Visual inspiration ONLY - NOT for fitment verification!
+WHEN TO USE: After showing product options, offer: "Want to see a quick visual mockup of this on your vehicle?"
+ALWAYS INCLUDE: The disclaimer that this is for visual inspiration only.
+
+After generating, say something like:
+"Here's a mockup to give you an idea of the vibe! This is for visual inspiration – the actual products may look slightly different. I'll verify exact fitment before we build your cart."`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        year: { type: "number", description: "Vehicle year" },
+        make: { type: "string", description: "Vehicle make" },
+        model: { type: "string", description: "Vehicle model" },
+        trim: { type: "string", description: "Vehicle trim (optional)" },
+        color: { type: "string", description: "Vehicle color (e.g., black, white, red, silver)" },
+        buildStyle: { 
+          type: "string", 
+          description: "Build style: stock, leveled, lifted-2, lifted-4, lifted-6, or lowered"
+        },
+        wheelStyle: { type: "string", description: "Wheel description (brand model finish, e.g., 'Fuel Rebel Matte Black')" },
+        wheelSize: { type: "number", description: "Wheel diameter in inches (e.g., 20)" },
+        tireStyle: { 
+          type: "string", 
+          description: "Tire style: all-terrain, mud-terrain, highway, performance, or all-season"
+        },
+        tireSize: { type: "string", description: "Tire size for context (e.g., 35x12.50R20)" }
+      },
+      required: ["year", "make", "model", "color", "wheelStyle", "wheelSize", "tireStyle"]
+    }
   }
 ];
 
@@ -474,6 +507,60 @@ export async function executeTool(
             : "Square setups are typical",
         },
       };
+    }
+    
+    case "generate_visual_mockup": {
+      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, tireStyle, tireSize } = input;
+      
+      const url = `${baseUrl}/api/jake/mockup`;
+      console.log(`[Jake Tool] generate_visual_mockup: ${year} ${make} ${model} with ${wheelStyle}`);
+      
+      try {
+        const res = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            vehicle: {
+              year: Number(year),
+              make: String(make),
+              model: String(model),
+              trim: trim ? String(trim) : undefined,
+              color: String(color),
+            },
+            build: {
+              style: buildStyle || "stock",
+              wheelStyle: String(wheelStyle),
+              wheelSize: Number(wheelSize),
+              tireStyle: String(tireStyle),
+              tireSize: tireSize ? String(tireSize) : undefined,
+            },
+          }),
+        });
+        
+        if (!res.ok) {
+          const error = await res.json().catch(() => ({}));
+          return {
+            success: false,
+            error: error.error || `API error: ${res.status}`,
+            disclaimer: "Mockup is for visual inspiration only.",
+          };
+        }
+        
+        const data = await res.json();
+        return {
+          success: true,
+          imageUrl: data.imageUrl,
+          disclaimer: data.disclaimer,
+          generationMethod: data.generationMethod,
+          cached: data.cached,
+        };
+      } catch (err) {
+        return {
+          success: false,
+          error: `Generation failed: ${err}`,
+          disclaimer: "Mockup is for visual inspiration only.",
+        };
+      }
     }
     
     default:

@@ -43,6 +43,7 @@ const STATUS_MESSAGES: Record<string, string> = {
   search_wheels: "Searching wheel options...",
   list_trims: "Looking up trim levels...",
   get_platform_context: "Checking platform specs...",
+  generate_visual_mockup: "Creating visual mockup... (this takes a moment)",
   processing: "Processing results...",
   generating: "Jake is typing...",
 };
@@ -53,8 +54,22 @@ export type StreamEvent =
   | { type: "products"; products: { tires?: any[]; wheels?: any[]; staggeredPairs?: any[] } }
   | { type: "vehicle"; vehicle: { year?: number; make?: string; model?: string; trim?: string } }
   | { type: "cartUrl"; cartUrl: string }
+  | { type: "mockup"; mockup: { imageUrl: string; disclaimer: string; vehicle: string; wheelStyle: string } }
   | { type: "done"; meta: { duration_ms: number; toolsUsed: string[] } }
   | { type: "error"; error: string };
+
+// Gallery build context from "Build Something Similar"
+export interface GalleryBuildContext {
+  galleryBuild?: {
+    vehicle: string;
+    wheel: string;
+    wheelSize: string;
+    tire: string;
+    tireSize: string;
+    style: string;
+    liftLevel?: string;
+  };
+}
 
 /**
  * Stream Jake's response as events
@@ -63,7 +78,8 @@ export async function* streamChat(
   query: string,
   history: JakeMessage[] = [],
   isLocal: boolean = false,
-  savedVehicle?: SavedVehicleContext
+  savedVehicle?: SavedVehicleContext,
+  galleryBuildContext?: GalleryBuildContext
 ): AsyncGenerator<StreamEvent> {
   const startTime = Date.now();
   console.log(`\n[Jake Stream] Query: "${query}"`);
@@ -122,6 +138,36 @@ Otherwise, assume all fitment questions are for the ${vehicleStr}.`;
     // Add local mode context
     if (isLocal) {
       systemPrompt += `\n\nNOTE: This customer is on the LOCAL site (warehousetire.net). They can get installation at our Pontiac or Waterford locations. Mention installation is available when relevant.`;
+    }
+    
+    // Add gallery build context (from "Build Something Similar")
+    if (galleryBuildContext?.galleryBuild) {
+      const gb = galleryBuildContext.galleryBuild;
+      systemPrompt += `
+
+═══════════════════════════════════════════════════════════════════════════════
+GALLERY BUILD INSPIRATION (from "Build Something Similar")
+═══════════════════════════════════════════════════════════════════════════════
+
+The customer clicked "Build Something Similar" on a build from our gallery. Here's what they liked:
+
+INSPIRATION BUILD:
+- Vehicle: ${gb.vehicle}
+- Wheels: ${gb.wheel} (${gb.wheelSize})
+- Tires: ${gb.tire} (${gb.tireSize})
+- Style: ${gb.style}${gb.liftLevel ? `\n- Lift/Suspension: ${gb.liftLevel}` : ""}
+
+IMPORTANT INSTRUCTIONS:
+1. Open with something like: "I see you're looking at a ${gb.vehicle} build running ${gb.wheel} wheels and ${gb.tire} tires. Love that setup!"
+2. Ask if they want something VERY close to this, or if they want to make some changes
+3. If their vehicle is different from the inspiration, ask what THEY drive so you can adapt the build
+4. The goal is to help them achieve a similar LOOK and VIBE, not necessarily the exact same parts
+5. If the exact wheel/tire doesn't fit their vehicle, recommend alternatives with a similar aesthetic
+6. Be excited about helping them recreate this style!
+
+The customer is inspired and ready to build. Help them turn this inspiration into reality!`;
+      
+      console.log(`[Jake Stream] Gallery build context: ${gb.vehicle} with ${gb.wheel}`);
     }
     
     console.log(`[Jake Stream] Calling Claude...`);
@@ -247,6 +293,19 @@ Otherwise, assume all fitment questions are for the ${vehicleStr}.`;
             }
             if (resultObj.cartUrl) {
               cartUrl = resultObj.cartUrl;
+            }
+            
+            // Handle mockup results
+            if (toolName === "generate_visual_mockup" && resultObj.success && resultObj.imageUrl) {
+              yield {
+                type: "mockup",
+                mockup: {
+                  imageUrl: resultObj.imageUrl,
+                  disclaimer: resultObj.disclaimer,
+                  vehicle: `${input.year} ${input.make} ${input.model}`,
+                  wheelStyle: String(input.wheelStyle),
+                },
+              } as any;
             }
             
             toolResults.push({

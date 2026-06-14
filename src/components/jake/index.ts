@@ -20,3 +20,4 @@ export {
 export type { MerchandisingBadge, ParsedProduct } from "./JakeProductCards";
 export { ProductRail, ProductCarousel, type RailProduct } from "./ProductRail";
 export { VehicleChip, VehicleChipCompact } from "./VehicleChip";
+export { JakeMockupCard } from "./JakeMockupCard";
