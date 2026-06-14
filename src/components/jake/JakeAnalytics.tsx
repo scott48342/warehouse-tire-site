@@ -26,7 +26,12 @@ export type JakeEventType =
   // Package merchandising events
   | "jake_package_view"
   | "jake_package_click"
-  | "jake_package_add_to_cart";
+  | "jake_package_add_to_cart"
+  // Gallery and mockup events
+  | "gallery_build_context_used"
+  | "mockup_generated"
+  | "mockup_saved"
+  | "mockup_shared";
 
 interface JakeEventData {
   prompt?: string;
