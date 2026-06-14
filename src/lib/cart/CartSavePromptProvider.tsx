@@ -13,7 +13,8 @@ import { createContext, useContext, useState, useCallback, useEffect, type React
 import { SaveCartModal, type SaveCartModalProps, type ModalContext } from "@/components/SaveCartModal";
 import { useCart } from "./CartContext";
 import { getCartId, getSessionId } from "./useCartTracking";
-import { trackModalShown, trackModalSkipped, trackModalSubmitted } from "@/lib/leads";
+// Import only the client-safe funnel events (not the full leads module which has server deps)
+import { trackModalShown, trackModalSkipped, trackModalSubmitted } from "@/lib/leads/funnelEvents";
 
 // ============================================================================
 // Constants

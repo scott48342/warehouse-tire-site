@@ -52,7 +52,7 @@ export function clearCartId(): void {
  * IMPORTANT: Must match format in src/lib/analytics/events.ts to ensure
  * cart sessions link to analytics sessions!
  */
-function getSessionId(): string {
+export function getSessionId(): string {
   if (typeof window === "undefined") return "";
   
   let sessionId = sessionStorage.getItem("wt_session_id");

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart/CartContext";
+import { CartSavePromptProvider } from "@/lib/cart/CartSavePromptProvider";
 import { CompareProvider } from "@/context/CompareContext";
 import { DiscountProvider } from "@/lib/discounts/DiscountContext";
 import { ShopContextProvider } from "@/contexts/ShopContextProvider";
@@ -85,20 +86,22 @@ export default function RootLayout({
             <VehicleMemoryProvider>
               <GarageVehicleMemorySync />
               <CartProvider>
-              <DiscountProvider>
-                <CompareProvider>
-                  <QuickViewProvider>
-                    <CartTracker />
-                    <Suspense fallback={null}>
-                      <Analytics />
-                      <FunnelTracker />
-                    </Suspense>
-                    <ConditionalLayout>
-                      {children}
-                    </ConditionalLayout>
-                  </QuickViewProvider>
-                </CompareProvider>
-              </DiscountProvider>
+                <CartSavePromptProvider>
+                  <DiscountProvider>
+                    <CompareProvider>
+                      <QuickViewProvider>
+                        <CartTracker />
+                        <Suspense fallback={null}>
+                          <Analytics />
+                          <FunnelTracker />
+                        </Suspense>
+                        <ConditionalLayout>
+                          {children}
+                        </ConditionalLayout>
+                      </QuickViewProvider>
+                    </CompareProvider>
+                  </DiscountProvider>
+                </CartSavePromptProvider>
               </CartProvider>
             </VehicleMemoryProvider>
           </GarageProvider>
