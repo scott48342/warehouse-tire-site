@@ -76,6 +76,9 @@ interface JakeEventData {
     type?: string;
     message?: string;
   };
+  // Gallery/mockup fields
+  build?: string;
+  wheelStyle?: string;
 }
 
 // Generate a session ID for tracking conversations
