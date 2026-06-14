@@ -152,6 +152,10 @@ Use the generate_visual_mockup tool with:
 - tireStyle: "all-terrain", "mud-terrain", "highway", "performance", "all-season"
 - tireSize: optional, the actual size (e.g., "35x12.50R20")
 
+TIMING NOTE:
+Mockup generation can take up to 1 minute. Before calling the tool, set expectations:
+"Let me generate a quick mockup for you - this might take up to a minute..."
+
 IMPORTANT DISCLAIMER (ALWAYS SAY THIS):
 After showing the mockup, ALWAYS say something like:
 "This is for visual inspiration - the actual product may look slightly different. I'll verify exact fitment before we build your cart."
