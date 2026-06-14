@@ -9,6 +9,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { chat, JakeMessage } from "@/lib/jake";
 import { subscribe } from "@/lib/email/subscriberService";
+import { trackJakeBuild, linkJakeBuildToLead, detectSourceSite } from "@/lib/leads";
 
 export const runtime = "nodejs";
 export const maxDuration = 60; // Allow up to 60s for AI response
@@ -102,6 +103,83 @@ export async function POST(req: NextRequest) {
     
     const duration = Date.now() - startTime;
     console.log(`[Jake API] Response in ${duration}ms`);
+    
+    // Track Jake build for abandoned build recovery (fire-and-forget)
+    const conversationId = body.conversationId || body.sessionId;
+    if (conversationId) {
+      const hostname = req.headers.get("host");
+      const sourceSite = detectSourceSite(hostname || undefined);
+      
+      // Extract build details from products/tools
+      const buildDetails: Record<string, unknown> = {};
+      
+      if (result.products?.wheels?.length) {
+        buildDetails.recommendedWheels = result.products.wheels.map((w: any) => ({
+          sku: w.sku,
+          brand: w.brand,
+          model: w.model,
+          diameter: w.diameter,
+          width: w.width,
+        }));
+        buildDetails.wheelDiameter = result.products.wheels[0]?.diameter;
+        buildDetails.wheelWidth = result.products.wheels[0]?.width;
+      }
+      
+      if (result.products?.tires?.length) {
+        buildDetails.recommendedTires = result.products.tires.map((t: any) => ({
+          sku: t.sku,
+          brand: t.brand,
+          model: t.model,
+          size: t.size,
+        }));
+        buildDetails.tireSize = result.products.tires[0]?.size;
+      }
+      
+      // Calculate package value
+      let packageValue = 0;
+      if (result.products?.wheels?.length) {
+        packageValue += result.products.wheels.reduce((sum: number, w: any) => 
+          sum + (w.price || 0) * 4, 0);
+      }
+      if (result.products?.tires?.length) {
+        packageValue += result.products.tires.reduce((sum: number, t: any) => 
+          sum + (t.price || 0) * 4, 0);
+      }
+      
+      // Detect build style from tools used
+      let buildStyle: string | undefined;
+      if (result.toolsUsed?.includes("search_lifted_truck_packages")) {
+        buildStyle = "lifted";
+      } else if (result.toolsUsed?.includes("search_leveled_truck_packages")) {
+        buildStyle = "leveled";
+      } else if (result.toolsUsed?.includes("search_performance_wheels")) {
+        buildStyle = "performance";
+      } else if (result.toolsUsed?.length) {
+        buildStyle = "stock";
+      }
+      
+      trackJakeBuild({
+        conversationId,
+        sessionId: body.sessionId,
+        vehicle: result.vehicle || vehicle,
+        buildStyle,
+        ...buildDetails,
+        recommendedPackageValue: packageValue > 0 ? packageValue : undefined,
+        messageCount: history.length + 1,
+        lastUserMessage: query,
+        toolsUsed: result.toolsUsed,
+        sourceSite,
+      }).catch(err => {
+        console.error("[Jake API] Failed to track build:", err);
+      });
+      
+      // Link to lead if email captured
+      if (capturedEmails.length > 0) {
+        linkJakeBuildToLead(conversationId, capturedEmails[0]).catch(err => {
+          console.error("[Jake API] Failed to link build to lead:", err);
+        });
+      }
+    }
     
     return NextResponse.json({
       response: result.response,

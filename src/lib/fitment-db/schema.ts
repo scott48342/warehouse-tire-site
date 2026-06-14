@@ -504,3 +504,18 @@ export {
   type CampaignDiscount,
   type NewCampaignDiscount,
 } from "./schema-campaign-discounts";
+
+// ════════════════════════════════════════════════════════════════════════════════
+// LEAD CAPTURE TABLES (re-exported from schema-leads.ts)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export {
+  leads,
+  jakeBuilds,
+  type Lead,
+  type NewLead,
+  type JakeBuild,
+  type NewJakeBuild,
+  type LeadSourceStats,
+  type LeadFunnelStats,
+} from "./schema-leads";
