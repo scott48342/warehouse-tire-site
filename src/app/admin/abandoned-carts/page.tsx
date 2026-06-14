@@ -310,6 +310,9 @@ function formatTimeAgo(dateStr: string): string {
   return date.toLocaleDateString();
 }
 
+type SortField = "value" | "lastActivityAt" | "createdAt" | "status" | "itemCount";
+type SortDir = "asc" | "desc";
+
 export default function AbandonedCartsPage() {
   const [carts, setCarts] = useState<AbandonedCart[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
@@ -321,6 +324,8 @@ export default function AbandonedCartsPage() {
   const [siteFilter, setSiteFilter] = useState<string>(""); // "", national, local, pos
   const [processing, setProcessing] = useState(false);
   const [showLifecyclePanel, setShowLifecyclePanel] = useState(false);
+  const [sortField, setSortField] = useState<SortField>("lastActivityAt");
+  const [sortDir, setSortDir] = useState<SortDir>("desc");
 
   const fetchData = useCallback(async () => {
     try {
@@ -371,6 +376,68 @@ export default function AbandonedCartsPage() {
     fetchData();
     fetchLifecycleCounts();
   }, [fetchData, fetchLifecycleCounts]);
+
+  // Sort carts
+  const sortedCarts = [...carts].sort((a, b) => {
+    let aVal: any;
+    let bVal: any;
+    
+    switch (sortField) {
+      case "value":
+        aVal = a.value;
+        bVal = b.value;
+        break;
+      case "lastActivityAt":
+        aVal = new Date(a.lastActivityAt).getTime();
+        bVal = new Date(b.lastActivityAt).getTime();
+        break;
+      case "createdAt":
+        aVal = new Date(a.createdAt).getTime();
+        bVal = new Date(b.createdAt).getTime();
+        break;
+      case "status":
+        const statusOrder = { active: 0, abandoned: 1, recovered: 2, expired: 3, archived: 4 };
+        aVal = statusOrder[a.status] ?? 99;
+        bVal = statusOrder[b.status] ?? 99;
+        break;
+      case "itemCount":
+        aVal = a.itemCount;
+        bVal = b.itemCount;
+        break;
+      default:
+        aVal = 0;
+        bVal = 0;
+    }
+    
+    if (sortDir === "asc") {
+      return aVal < bVal ? -1 : aVal > bVal ? 1 : 0;
+    } else {
+      return aVal > bVal ? -1 : aVal < bVal ? 1 : 0;
+    }
+  });
+
+  const handleSort = (field: SortField) => {
+    if (sortField === field) {
+      setSortDir(sortDir === "asc" ? "desc" : "asc");
+    } else {
+      setSortField(field);
+      setSortDir("desc"); // Default to descending for most fields
+    }
+  };
+
+  const SortHeader = ({ field, children }: { field: SortField; children: React.ReactNode }) => (
+    <th 
+      className="px-3 py-3 font-medium cursor-pointer hover:bg-neutral-800 select-none transition-colors"
+      onClick={() => handleSort(field)}
+    >
+      <span className="flex items-center gap-1">
+        {children}
+        {sortField === field && (
+          <span className="text-red-400">{sortDir === "asc" ? "↑" : "↓"}</span>
+        )}
+      </span>
+    </th>
+  );
 
   const handleProcessAbandoned = async () => {
     try {
@@ -920,6 +987,38 @@ export default function AbandonedCartsPage() {
         )}
       </div>
 
+      {/* Sort indicator */}
+      <div className="flex items-center gap-4 mb-4">
+        <span className="text-sm text-neutral-400">Sort:</span>
+        <div className="flex gap-2">
+          {[
+            { key: "lastActivityAt" as SortField, label: "Activity", icon: "🕐" },
+            { key: "createdAt" as SortField, label: "Created", icon: "📅" },
+            { key: "value" as SortField, label: "Value", icon: "💰" },
+            { key: "status" as SortField, label: "Status", icon: "📊" },
+          ].map((sort) => (
+            <button
+              key={sort.key}
+              onClick={() => handleSort(sort.key)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center gap-1.5 ${
+                sortField === sort.key
+                  ? "bg-red-600 text-white"
+                  : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+              }`}
+            >
+              <span>{sort.icon}</span>
+              <span>{sort.label}</span>
+              {sortField === sort.key && (
+                <span>{sortDir === "asc" ? "↑" : "↓"}</span>
+              )}
+            </button>
+          ))}
+        </div>
+        <span className="text-xs text-neutral-500">
+          Click column header or button to sort • Click again to reverse
+        </span>
+      </div>
+
       {/* Lifecycle Management Panel */}
       {showLifecyclePanel && (
         <div className="mb-6 p-4 bg-neutral-800 border border-neutral-700 rounded-xl">
@@ -984,17 +1083,20 @@ export default function AbandonedCartsPage() {
               <thead className="bg-neutral-900/50">
                 <tr className="text-left text-neutral-400 border-b border-neutral-700">
                   <th className="px-3 py-3 font-medium">Triage</th>
-                  <th className="px-3 py-3 font-medium text-right">Value</th>
+                  <SortHeader field="value">
+                    <span className="text-right w-full">Value</span>
+                  </SortHeader>
                   <th className="px-3 py-3 font-medium">Customer</th>
                   <th className="px-3 py-3 font-medium">Vehicle</th>
-                  <th className="px-3 py-3 font-medium text-center">Contents</th>
-                  <th className="px-3 py-3 font-medium">Status</th>
-                  <th className="px-3 py-3 font-medium">Activity</th>
+                  <SortHeader field="itemCount">Contents</SortHeader>
+                  <SortHeader field="status">Status</SortHeader>
+                  <SortHeader field="lastActivityAt">Activity</SortHeader>
+                  <SortHeader field="createdAt">Created</SortHeader>
                   <th className="px-3 py-3 font-medium">Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {carts.map((cart) => {
+                {sortedCarts.map((cart) => {
                   const statusConfig = STATUS_CONFIG[cart.status] || STATUS_CONFIG.active;
                   const isHotLead = cart.emailTracking?.clickedAt && cart.status === "abandoned";
                   return (
@@ -1065,6 +1167,10 @@ export default function AbandonedCartsPage() {
                             {cart.emailSentCount}× 📧
                           </div>
                         )}
+                      </td>
+                      {/* Created */}
+                      <td className="px-3 py-3">
+                        <div className="text-neutral-400 text-sm">{formatTimeAgo(cart.createdAt)}</div>
                       </td>
                       {/* Actions */}
                       <td className="px-3 py-3">
