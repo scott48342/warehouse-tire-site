@@ -2,7 +2,7 @@
  * Jake Visual Mockup Generator
  * 
  * Generates visual inspiration mockups showing wheel/tire setups on vehicles.
- * Uses DALL-E 3 as primary generator, SD WebUI as optional enhanced quality.
+ * Uses gpt-image-1 (GPT-4o image generation) as the primary generator.
  * 
  * IMPORTANT: These are for VISUAL INSPIRATION ONLY, not fitment verification.
  * Always include disclaimer with generated images.
@@ -33,14 +33,16 @@ export interface MockupRequest {
     tireStyle: "all-terrain" | "mud-terrain" | "highway" | "performance" | "all-season";
     tireSize?: string;  // "35x12.50R20" (optional context)
   };
+  sessionId?: string; // For analytics tracking
 }
 
 export interface MockupResult {
   success: boolean;
   imageUrl?: string;
   error?: string;
+  errorCode?: string;
   disclaimer: string;
-  generationMethod: "dalle3" | "sdwebui" | "cached";
+  generationMethod: "gpt-image" | "cached";
   cached: boolean;
   generationTime?: number;
 }
@@ -50,6 +52,10 @@ export interface MockupResult {
 // ═══════════════════════════════════════════════════════════════════════════
 
 const DISCLAIMER = "Mockup is for visual inspiration only. Actual product appearance may vary. Fitment will be verified before checkout.";
+
+// Use gpt-image-1 which is available on the account
+const IMAGE_MODEL = "gpt-image-1";
+const IMAGE_SIZE = "1024x1024"; // gpt-image-1 supports: 1024x1024, 1024x1536, 1536x1024
 
 const BUILD_STYLE_PROMPTS: Record<string, string> = {
   "stock": "factory height, standard ride height",
@@ -66,6 +72,18 @@ const TIRE_STYLE_PROMPTS: Record<string, string> = {
   "highway": "highway touring tires with smooth tread pattern",
   "performance": "low-profile performance tires, sticky rubber, minimal sidewall",
   "all-season": "all-season touring tires with balanced tread",
+};
+
+// Error codes for analytics
+const ERROR_CODES = {
+  NO_API_KEY: "MOCKUP_NO_API_KEY",
+  API_ERROR: "MOCKUP_API_ERROR",
+  RATE_LIMIT: "MOCKUP_RATE_LIMIT",
+  INVALID_REQUEST: "MOCKUP_INVALID_REQUEST",
+  NO_IMAGE_DATA: "MOCKUP_NO_IMAGE_DATA",
+  CACHE_ERROR: "MOCKUP_CACHE_ERROR",
+  BLOB_ERROR: "MOCKUP_BLOB_ERROR",
+  UNKNOWN: "MOCKUP_UNKNOWN_ERROR",
 };
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -121,8 +139,10 @@ async function checkCache(cacheKey: string): Promise<string | null> {
       const maxAgeMs = 7 * 24 * 60 * 60 * 1000; // 7 days
       
       if (ageMs < maxAgeMs) {
+        console.log(`[mockup] Cache valid, age: ${Math.round(ageMs / 1000 / 60)}min`);
         return blob.url;
       }
+      console.log(`[mockup] Cache expired, age: ${Math.round(ageMs / 1000 / 60 / 60)}h`);
     }
     
     return null;
@@ -179,7 +199,7 @@ function buildPrompt(request: MockupRequest): string {
     "studio lighting with soft shadows",
     "clean white to gray gradient background",
     "highly detailed",
-    "8K quality",
+    "high quality",
     "no watermarks",
     "no text overlays",
     "single vehicle only",
@@ -190,51 +210,64 @@ function buildPrompt(request: MockupRequest): string {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// DALL-E 3 GENERATION
+// IMAGE GENERATION (gpt-image-1)
 // ═══════════════════════════════════════════════════════════════════════════
 
-async function generateWithDalle(prompt: string): Promise<string> {
+async function generateImage(prompt: string): Promise<Buffer> {
   const openai = getOpenAI();
   
-  console.log(`[mockup] DALL-E prompt: ${prompt.substring(0, 150)}...`);
+  console.log(`[mockup] Generating with ${IMAGE_MODEL}`);
+  console.log(`[mockup] Prompt: ${prompt.substring(0, 100)}...`);
+  
+  const startTime = Date.now();
   
   const response = await openai.images.generate({
-    model: "dall-e-3",
+    model: IMAGE_MODEL,
     prompt,
     n: 1,
-    size: "1792x1024", // Wide format
-    quality: "hd",
-    // Note: URL is the default response format for DALL-E 3
+    size: IMAGE_SIZE,
   });
   
-  const imageUrl = response.data?.[0]?.url;
-  if (!imageUrl) {
-    throw new Error("No image URL returned from DALL-E");
+  const elapsed = Date.now() - startTime;
+  console.log(`[mockup] OpenAI responded in ${elapsed}ms`);
+  
+  // gpt-image-1 returns b64_json by default
+  const imageData = response.data?.[0];
+  
+  if (!imageData) {
+    throw new Error("No image data in response");
   }
   
-  return imageUrl;
+  // Handle both URL and base64 responses
+  if (imageData.b64_json) {
+    console.log(`[mockup] Received base64 image data`);
+    return Buffer.from(imageData.b64_json, "base64");
+  } else if (imageData.url) {
+    console.log(`[mockup] Received image URL, downloading...`);
+    const imgResponse = await fetch(imageData.url);
+    if (!imgResponse.ok) {
+      throw new Error(`Failed to download image: ${imgResponse.status}`);
+    }
+    return Buffer.from(await imgResponse.arrayBuffer());
+  }
+  
+  throw new Error("No image URL or base64 data in response");
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// SAVE TO CACHE
+// SAVE TO BLOB CACHE
 // ═══════════════════════════════════════════════════════════════════════════
 
-async function saveToCache(imageUrl: string, cacheKey: string): Promise<string> {
-  // Download image
-  const response = await fetch(imageUrl);
-  if (!response.ok) {
-    throw new Error(`Failed to download image: ${response.status}`);
-  }
+async function saveToBlobCache(imageBuffer: Buffer, cacheKey: string): Promise<string> {
+  console.log(`[mockup] Uploading to blob: ${cacheKey}`);
   
-  const buffer = Buffer.from(await response.arrayBuffer());
-  
-  // Upload to Vercel Blob
-  const blob = await put(cacheKey, buffer, {
+  const blob = await put(cacheKey, imageBuffer, {
     access: "public",
     contentType: "image/png",
     addRandomSuffix: false,
   });
   
+  console.log(`[mockup] Blob uploaded: ${blob.url}`);
   return blob.url;
 }
 
@@ -244,14 +277,37 @@ async function saveToCache(imageUrl: string, cacheKey: string): Promise<string> 
 
 export async function generateMockup(request: MockupRequest): Promise<MockupResult> {
   const startTime = Date.now();
+  const sessionId = request.sessionId || "unknown";
+  
+  console.log(`[mockup] ═══════════════════════════════════════════════════════`);
+  console.log(`[mockup] Starting mockup generation`);
+  console.log(`[mockup] Session: ${sessionId}`);
+  console.log(`[mockup] Vehicle: ${request.vehicle.year} ${request.vehicle.make} ${request.vehicle.model}`);
+  console.log(`[mockup] Build: ${request.build.wheelSize}" ${request.build.wheelStyle}`);
+  console.log(`[mockup] Style: ${request.build.style}, Tires: ${request.build.tireStyle}`);
   
   try {
+    // Check API key early
+    if (!process.env.OPENAI_API_KEY) {
+      console.error(`[mockup] OPENAI_API_KEY not configured`);
+      return {
+        success: false,
+        error: "Image generation service not configured",
+        errorCode: ERROR_CODES.NO_API_KEY,
+        disclaimer: DISCLAIMER,
+        generationMethod: "gpt-image",
+        cached: false,
+        generationTime: Date.now() - startTime,
+      };
+    }
+    
     const cacheKey = generateCacheKey(request);
+    console.log(`[mockup] Cache key: ${cacheKey}`);
     
     // Check cache first
     const cachedUrl = await checkCache(cacheKey);
     if (cachedUrl) {
-      console.log(`[mockup] Cache hit: ${cacheKey}`);
+      console.log(`[mockup] ✅ Cache hit!`);
       return {
         success: true,
         imageUrl: cachedUrl,
@@ -262,40 +318,85 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
       };
     }
     
-    console.log(`[mockup] Cache miss, generating: ${cacheKey}`);
+    console.log(`[mockup] Cache miss, generating new image...`);
     
     // Build prompt
     const prompt = buildPrompt(request);
     
-    // Generate with DALL-E 3
-    const dalleUrl = await generateWithDalle(prompt);
+    // Generate image
+    const imageBuffer = await generateImage(prompt);
+    console.log(`[mockup] Image generated, size: ${imageBuffer.length} bytes`);
     
-    // Save to cache
-    const cachedImageUrl = await saveToCache(dalleUrl, cacheKey);
+    // Save to blob cache
+    const imageUrl = await saveToBlobCache(imageBuffer, cacheKey);
     
     // Save to gallery (non-blocking)
-    saveToGallery(request, cachedImageUrl).catch(err => {
+    saveToGallery(request, imageUrl).catch(err => {
       console.error("[mockup] Gallery save error (non-blocking):", err);
     });
     
+    const totalTime = Date.now() - startTime;
+    console.log(`[mockup] ✅ Complete in ${totalTime}ms`);
+    console.log(`[mockup] Image URL: ${imageUrl}`);
+    console.log(`[mockup] ═══════════════════════════════════════════════════════`);
+    
     return {
       success: true,
-      imageUrl: cachedImageUrl,
+      imageUrl,
       disclaimer: DISCLAIMER,
-      generationMethod: "dalle3",
+      generationMethod: "gpt-image",
       cached: false,
-      generationTime: Date.now() - startTime,
+      generationTime: totalTime,
     };
     
   } catch (error) {
-    console.error("[mockup] Generation failed:", error);
+    const totalTime = Date.now() - startTime;
+    console.error(`[mockup] ❌ Generation failed after ${totalTime}ms`);
+    
+    // Parse error for better reporting
+    let errorMessage = "Unknown error";
+    let errorCode = ERROR_CODES.UNKNOWN;
+    
+    if (error instanceof Error) {
+      errorMessage = error.message;
+      
+      // Detect specific error types
+      if (error.message.includes("rate limit") || error.message.includes("429")) {
+        errorCode = ERROR_CODES.RATE_LIMIT;
+        errorMessage = "Image generation rate limit reached. Please try again in a moment.";
+      } else if (error.message.includes("API key") || error.message.includes("401")) {
+        errorCode = ERROR_CODES.NO_API_KEY;
+        errorMessage = "Image generation service authentication failed.";
+      } else if (error.message.includes("400") || error.message.includes("invalid")) {
+        errorCode = ERROR_CODES.INVALID_REQUEST;
+      } else if (error.message.includes("blob") || error.message.includes("storage")) {
+        errorCode = ERROR_CODES.BLOB_ERROR;
+        errorMessage = "Failed to save generated image.";
+      }
+      
+      console.error(`[mockup] Error type: ${error.constructor.name}`);
+      console.error(`[mockup] Error message: ${error.message}`);
+      
+      // Log additional OpenAI error details if available
+      if ("status" in error) {
+        console.error(`[mockup] HTTP status: ${(error as { status: number }).status}`);
+      }
+      if ("code" in error) {
+        console.error(`[mockup] Error code: ${(error as { code: string }).code}`);
+      }
+    }
+    
+    console.error(`[mockup] Final error code: ${errorCode}`);
+    console.log(`[mockup] ═══════════════════════════════════════════════════════`);
+    
     return {
       success: false,
-      error: error instanceof Error ? error.message : "Unknown error",
+      error: errorMessage,
+      errorCode,
       disclaimer: DISCLAIMER,
-      generationMethod: "dalle3",
+      generationMethod: "gpt-image",
       cached: false,
-      generationTime: Date.now() - startTime,
+      generationTime: totalTime,
     };
   }
 }
@@ -309,7 +410,6 @@ async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<
     const { vehicle, build } = request;
     
     // Parse wheel style into brand/model (best effort)
-    // Input like "Fuel Rebel D679 Matte Black" → brand: "Fuel", model: "Rebel D679", finish: "Matte Black"
     const wheelParts = build.wheelStyle.split(" ");
     const wheelBrand = wheelParts[0] || "Custom";
     const wheelModel = wheelParts.slice(1, -2).join(" ") || wheelParts.slice(1).join(" ") || "Wheel";
@@ -334,7 +434,6 @@ async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<
       "all-season": "daily-driver",
     };
     
-    // Determine build style based on lift + tire combo
     let buildStyle = buildStyleMap[build.tireStyle] || "daily-driver";
     if (build.style.startsWith("lifted")) {
       buildStyle = "lifted";
@@ -342,60 +441,42 @@ async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<
       buildStyle = "aggressive-street";
     }
     
-    // Create title
     const title = `${vehicle.year} ${vehicle.make} ${vehicle.model} with ${wheelBrand} ${wheelModel}`;
     
-    // Generate slug base
     const slugBase = generateBuildSlug({
       vehicleYear: vehicle.year,
       vehicleMake: vehicle.make,
       vehicleModel: vehicle.model,
       wheelBrand,
       wheelModel,
-      tireBrand: build.tireStyle, // Use style as brand placeholder for Jake builds
+      tireBrand: build.tireStyle,
       tireModel: build.tireSize || `${build.wheelSize}"`,
     });
     
-    // Add random suffix to ensure uniqueness
     const slug = `${slugBase}-jake-${Date.now().toString(36)}`;
     
-    // Insert into gallery
     await db.insert(galleryBuilds).values({
       slug,
       title,
       description: `AI-generated mockup created by Jake showing ${build.wheelSize}" ${build.wheelStyle} wheels with ${build.tireStyle} tires on a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}.`,
-      
-      // Vehicle
       vehicleYear: vehicle.year,
       vehicleMake: vehicle.make,
       vehicleModel: vehicle.model,
       vehicleTrim: vehicle.trim,
-      
-      // Build specs
       buildStyle,
       liftLevel: liftLevelMap[build.style] || "stock",
-      
-      // Wheel info (best effort from style string)
       wheelBrand,
       wheelModel,
       wheelSize: `${build.wheelSize}`,
       wheelFinish,
-      
-      // Tire info (limited for Jake-generated)
       tireBrand: build.tireStyle.charAt(0).toUpperCase() + build.tireStyle.slice(1).replace("-", " "),
       tireModel: build.tireSize || `${build.tireStyle} tire`,
       tireSize: build.tireSize || `${build.wheelSize}"`,
-      
-      // Image
       heroImageUrl: imageUrl,
-      
-      // Metadata
       tags: ["jake-generated", build.tireStyle, vehicle.make.toLowerCase(), buildStyle],
       isFeatured: false,
       isPopular: false,
       isActive: true,
-      
-      // Source attribution
       sourceType: "jake",
       sourceAttribution: "Created by Jake AI",
     });
@@ -403,13 +484,13 @@ async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<
     console.log(`[mockup] Saved to gallery: ${slug}`);
     
   } catch (error) {
-    // Don't fail the mockup if gallery save fails
     console.error("[mockup] Failed to save to gallery:", error);
   }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// EXPORT DISCLAIMER FOR USE ELSEWHERE
+// EXPORTS
 // ═══════════════════════════════════════════════════════════════════════════
 
 export { DISCLAIMER as MOCKUP_DISCLAIMER };
+export { ERROR_CODES as MOCKUP_ERROR_CODES };

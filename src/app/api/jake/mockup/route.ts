@@ -8,10 +8,10 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import { generateMockup, MockupRequest, MOCKUP_DISCLAIMER } from "@/lib/jake/mockup";
+import { generateMockup, MockupRequest, MOCKUP_DISCLAIMER, MOCKUP_ERROR_CODES } from "@/lib/jake/mockup";
 
 export const runtime = "nodejs";
-export const maxDuration = 60; // DALL-E can take up to 30s
+export const maxDuration = 90; // Image generation can take up to 60s
 
 export async function POST(req: NextRequest) {
   try {
@@ -63,16 +63,20 @@ export async function POST(req: NextRequest) {
         tireStyle: build.tireStyle,
         tireSize: build.tireSize,
       },
+      sessionId: body.sessionId,
     };
     
     const result = await generateMockup(request);
     
     if (!result.success) {
-      console.error(`[Jake Mockup] Failed: ${result.error}`);
+      console.error(`[Jake Mockup] Failed: ${result.errorCode} - ${result.error}`);
       return NextResponse.json(
         { 
+          success: false,
           error: result.error || "Generation failed",
+          errorCode: result.errorCode || MOCKUP_ERROR_CODES.UNKNOWN,
           disclaimer: MOCKUP_DISCLAIMER,
+          generationTime: result.generationTime,
         },
         { status: 500 }
       );
