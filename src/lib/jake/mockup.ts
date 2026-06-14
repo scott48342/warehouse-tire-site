@@ -10,7 +10,7 @@
 
 import OpenAI from "openai";
 import { put, list } from "@vercel/blob";
-import crypto from "crypto";
+import * as crypto from "crypto";
 import { db } from "@/lib/fitment-db/db";
 import { galleryBuilds, generateBuildSlug } from "@/lib/fitment-db/schema-gallery";
 
