@@ -201,3 +201,5 @@ Otherwise, assume all fitment questions are for the ${vehicleStr}.`;
 
 export { JAKE_SYSTEM_PROMPT } from "./systemPrompt";
 export { JAKE_TOOLS } from "./tools";
+export { fitmentCache } from "./fitmentCache";
+export { streamChat, type StreamEvent } from "./stream";

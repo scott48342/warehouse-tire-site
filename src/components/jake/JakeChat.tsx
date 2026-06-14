@@ -279,6 +279,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const inputRef = useRef<HTMLInputElement>(null);
   // Guard against double execution in React StrictMode
   const hasProcessedInitialPromptRef = useRef(false);
+  
+  // Streaming state
+  const [streamingText, setStreamingText] = useState("");
+  const [streamingStatus, setStreamingStatus] = useState<string | null>(null);
+  const streamingMessageId = useRef<string | null>(null);
 
   // Compare functions
   const toggleCompare = useCallback((product: ParsedProduct) => {
@@ -434,6 +439,117 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialPrompt, isRestored, showResumeDialog]);
 
+  // Helper to process products from stream result
+  const processStreamProducts = useCallback((productsData: any): ParsedProduct[] => {
+    let products: ParsedProduct[] = [];
+    
+    if (productsData?.tires && productsData.tires.length > 0) {
+      products = productsData.tires.map((t: any) => ({
+        type: "tire" as const,
+        name: `${t.brand} ${t.model}`,
+        brand: t.brand,
+        model: t.model,
+        price: t.price || t.priceEach,
+        priceNum: t.priceNum || parseFloat(String(t.price || t.priceEach || "0").replace(/[$,]/g, "")),
+        warranty: t.warrantyMiles 
+          ? `${Number(t.warrantyMiles).toLocaleString()} miles` 
+          : (t.warranty || undefined),
+        size: t.size,
+        terrain: t.terrain,
+        loadRange: t.loadRange,
+        speedRating: t.speedRating,
+        imageUrl: t.imageUrl,
+        productUrl: t.productUrl,
+        inStock: t.inStock !== false,
+        setPrice: t.priceSet,
+      }));
+    } else if (productsData?.wheels && productsData.wheels.length > 0) {
+      products = productsData.wheels.map((w: any) => ({
+        type: "wheel" as const,
+        name: `${w.brand} ${w.model || w.name}`,
+        brand: w.brand,
+        model: w.model || w.name,
+        price: w.price || w.priceEach,
+        priceNum: w.priceNum || parseFloat(String(w.price || w.priceEach || "0").replace("$", "")),
+        size: w.size,
+        finish: w.finish,
+        fitmentLabel: w.fitmentConfidence,
+        imageUrl: w.imageUrl,
+        productUrl: w.productUrl,
+        inStock: w.inStock !== false,
+        setPrice: w.priceSet,
+      }));
+    } else if (productsData?.staggeredPairs && productsData.staggeredPairs.length > 0) {
+      products = productsData.staggeredPairs.map((p: any) => ({
+        type: "tire" as const,
+        name: p.name || `${p.brand} ${p.model}`,
+        brand: p.brand,
+        model: p.model,
+        price: p.setOfFourFormatted || `$${p.setOfFourPrice}`,
+        priceNum: p.setOfFourPrice,
+        size: `F: ${p.frontSize} / R: ${p.rearSize}`,
+        terrain: p.terrain,
+        imageUrl: p.imageUrl,
+        productUrl: p.productUrl,
+        inStock: true,
+      }));
+    }
+    
+    return products;
+  }, []);
+
+  // Helper to populate rails from products
+  const populateRails = useCallback((productsData: any, products: ParsedProduct[]) => {
+    const tireProducts = products.filter(p => p.type === "tire");
+    const wheelProducts = products.filter(p => p.type === "wheel");
+    
+    const hasTireData = tireProducts.length > 0 || 
+      (productsData?.tires?.length > 0) || 
+      (productsData?.staggeredPairs?.length > 0);
+    const hasWheelData = wheelProducts.length > 0 || 
+      (productsData?.wheels?.length > 0);
+    
+    if (hasTireData) {
+      const railTireData: RailProduct[] = (productsData?.tires || productsData?.staggeredPairs || tireProducts).slice(0, 6).map((t: any) => ({
+        id: t.sku || t.productUrl || `tire-${Math.random()}`,
+        type: "tire" as const,
+        brand: t.brand || "",
+        model: t.model || t.name || "",
+        size: t.size || "",
+        price: typeof t.price === "string" ? t.price : (t.priceEach ? `$${t.priceEach}` : ""),
+        priceSet: typeof t.setPrice === "string" ? t.setPrice : (t.priceSet ? `$${t.priceSet}` : ""),
+        imageUrl: t.imageUrl,
+        badge: t.terrain || t.badge || (t.warrantyMiles > 60000 ? "Long Life" : undefined),
+        fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
+      }));
+      setRailTires(railTireData);
+    }
+    
+    if (hasWheelData) {
+      const railWheelData: RailProduct[] = (productsData?.wheels || wheelProducts).slice(0, 6).map((w: any) => ({
+        id: w.sku || w.productUrl || `wheel-${Math.random()}`,
+        type: "wheel" as const,
+        brand: w.brand || "",
+        model: w.model || w.name || "",
+        size: w.size || "",
+        price: typeof w.price === "string" ? w.price : (w.priceEach ? `$${w.priceEach}` : ""),
+        priceSet: typeof w.setPrice === "string" ? w.setPrice : (w.priceSet ? `$${w.priceSet}` : ""),
+        imageUrl: w.imageUrl,
+        badge: w.finish || w.badge,
+        fitmentBadge: w.fitmentConfidence || w.fitmentLabel,
+      }));
+      setRailWheels(railWheelData);
+    }
+    
+    if (hasTireData && hasWheelData) {
+      setRailsMessage("I've got some options for you! Click any product to learn more — I can add anything you like to your build.");
+    } else if (hasTireData) {
+      setRailsMessage("Here are some tire options. Click any to get details — I can put together your checkout when you're ready.");
+    } else if (hasWheelData) {
+      setRailsMessage("Check out these wheels! Click any you like and I'll give you the details. Ready to build your setup.");
+    }
+  }, []);
+
   const handleSend = async (messageText?: string) => {
     const text = messageText || input.trim();
     if (!text || isLoading) return;
@@ -444,7 +560,6 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     }
 
     setInput("");
-    // Keep focus on input after sending
     inputRef.current?.focus();
     
     const userMessage: Message = {
@@ -454,8 +569,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       timestamp: new Date(),
     };
     setMessages(prev => [...prev, userMessage]);
-    trackJakeMessage("user", text); // Track for conversation replay
+    trackJakeMessage("user", text);
     setIsLoading(true);
+    setStreamingText("");
+    setStreamingStatus("Connecting...");
+    streamingMessageId.current = generateId();
 
     try {
       // Build conversation history for context
@@ -473,12 +591,6 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         modification: activeVehicle.modification,
       } : undefined;
       
-      const response = await fetch("/api/jake/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: text, history, isLocal, vehicle: vehicleContext }),
-      });
-      
       // Track vehicle-aware interaction
       if (activeVehicle) {
         trackJakeEvent("vehicle_context_used", {
@@ -487,80 +599,110 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         });
       }
 
-      const data = await response.json();
-      const responseText = data.response || "Sorry, I had trouble processing that. Can you try again?";
+      // Use streaming API
+      const response = await fetch("/api/jake/chat/stream", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: text, history, isLocal, vehicle: vehicleContext }),
+      });
 
-      // Use structured products from backend if available, fallback to parsing markdown
-      let products: ParsedProduct[] = [];
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      if (!response.body) {
+        throw new Error("No response body");
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let fullText = "";
+      let productsData: any = undefined;
+      let detectedVehicle: any = undefined;
+      let cartUrl: string | undefined;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() || "";
+
+        let currentEventType = "";
+        let currentEventData = "";
+
+        for (const line of lines) {
+          if (line.startsWith("event: ")) {
+            currentEventType = line.slice(7).trim();
+          } else if (line.startsWith("data: ")) {
+            currentEventData = line.slice(6);
+
+            if (currentEventType && currentEventData) {
+              try {
+                const event = JSON.parse(currentEventData);
+
+                switch (event.type) {
+                  case "status":
+                    setStreamingStatus(event.status);
+                    break;
+
+                  case "text":
+                    fullText += event.text;
+                    setStreamingText(fullText);
+                    setStreamingStatus(null); // Clear status when text flows
+                    break;
+
+                  case "products":
+                    productsData = event.products;
+                    break;
+
+                  case "vehicle":
+                    detectedVehicle = event.vehicle;
+                    break;
+
+                  case "cartUrl":
+                    cartUrl = event.cartUrl;
+                    break;
+
+                  case "done":
+                    // Stream complete
+                    break;
+
+                  case "error":
+                    throw new Error(event.error);
+                }
+              } catch (parseError) {
+                // Ignore parse errors for incomplete data
+              }
+            }
+
+            currentEventType = "";
+            currentEventData = "";
+          } else if (line === "") {
+            currentEventType = "";
+            currentEventData = "";
+          }
+        }
+      }
+
+      // Process final response
+      const responseText = fullText || "Sorry, I had trouble processing that. Can you try again?";
       
-      // Check for structured tire data
-      if (data.products?.tires && data.products.tires.length > 0) {
-        products = data.products.tires.map((t: any) => ({
-          type: "tire" as const,
-          name: `${t.brand} ${t.model}`,
-          brand: t.brand,
-          model: t.model,
-          price: t.price || t.priceEach,
-          priceNum: t.priceNum || parseFloat(String(t.price || t.priceEach || "0").replace(/[$,]/g, "")),
-          // Format warranty miles as string
-          warranty: t.warrantyMiles 
-            ? `${Number(t.warrantyMiles).toLocaleString()} miles` 
-            : (t.warranty || undefined),
-          size: t.size,
-          terrain: t.terrain,
-          loadRange: t.loadRange,
-          speedRating: t.speedRating,
-          imageUrl: t.imageUrl,
-          productUrl: t.productUrl,
-          inStock: t.inStock !== false,
-          setPrice: t.priceSet,
-        }));
-      }
-      // Check for structured wheel data
-      else if (data.products?.wheels && data.products.wheels.length > 0) {
-        products = data.products.wheels.map((w: any) => ({
-          type: "wheel" as const,
-          name: `${w.brand} ${w.model || w.name}`,
-          brand: w.brand,
-          model: w.model || w.name,
-          price: w.price || w.priceEach,
-          priceNum: w.priceNum || parseFloat(String(w.price || w.priceEach || "0").replace("$", "")),
-          size: w.size,
-          finish: w.finish,
-          fitmentLabel: w.fitmentConfidence,
-          imageUrl: w.imageUrl,
-          productUrl: w.productUrl,
-          inStock: w.inStock !== false,
-          setPrice: w.priceSet,
-        }));
-      }
-      // Check for staggered pairs
-      else if (data.products?.staggeredPairs && data.products.staggeredPairs.length > 0) {
-        products = data.products.staggeredPairs.map((p: any) => ({
-          type: "tire" as const,
-          name: p.name || `${p.brand} ${p.model}`,
-          brand: p.brand,
-          model: p.model,
-          price: p.setOfFourFormatted || `$${p.setOfFourPrice}`,
-          priceNum: p.setOfFourPrice,
-          size: `F: ${p.frontSize} / R: ${p.rearSize}`,
-          terrain: p.terrain,
-          imageUrl: p.imageUrl,
-          productUrl: p.productUrl,
-          inStock: true,
-        }));
-      }
-      // Fallback to parsing markdown if no structured data
-      else {
+      // Process products
+      let products = productsData ? processStreamProducts(productsData) : [];
+      if (products.length === 0) {
         products = parseProductsFromResponse(responseText);
       }
       
-      // Get cart URL from structured data or parse from text
-      const cartUrl = data.cartUrl || parseCartUrl(responseText);
+      // Get cart URL from text if not from stream
+      if (!cartUrl) {
+        cartUrl = parseCartUrl(responseText);
+      }
 
-      // If Jake detected/confirmed a vehicle, save it to memory (if not already saved)
-      if (data.vehicle?.year && data.vehicle?.make && data.vehicle?.model) {
-        const detectedVehicle = data.vehicle;
+      // Handle detected vehicle
+      if (detectedVehicle?.year && detectedVehicle?.make && detectedVehicle?.model) {
         const shouldSave = !activeVehicle || 
           activeVehicle.year !== String(detectedVehicle.year) ||
           activeVehicle.make !== detectedVehicle.make ||
@@ -582,8 +724,8 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
           });
         }
       }
-      
-      // Track events with rich data
+
+      // Track events
       if (products.length > 0) {
         trackJakeEvent("product_recommended", { 
           count: products.length,
@@ -593,11 +735,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             model: p.model,
             sku: p.productUrl?.match(/\/(tires|wheels)\/([^?/]+)/)?.[2],
           })),
-          vehicle: data.vehicle || activeVehicle ? formatVehicleDisplay(activeVehicle) : undefined,
+          vehicle: detectedVehicle || activeVehicle ? formatVehicleDisplay(activeVehicle) : undefined,
         });
       }
+      
       if (cartUrl) {
-        // Try to parse cart value from URL
         let cartValue: number | undefined;
         try {
           const match = cartUrl.match(/data=([^&]+)/);
@@ -611,7 +753,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         trackJakeEvent("cart_created", {
           cartUrl,
           cartValue,
-          vehicle: data.vehicle || undefined,
+          vehicle: detectedVehicle || undefined,
           products: products.slice(0, 5).map(p => ({
             type: p.type,
             brand: p.brand,
@@ -620,70 +762,14 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         });
       }
 
-      // ═══════════════════════════════════════════════════════════════════════
-      // POPULATE PRODUCT RAILS BASED ON DETECTED INTENT
-      // ═══════════════════════════════════════════════════════════════════════
-      
-      // Convert ParsedProducts to RailProducts for the rails
-      const tireProducts = products.filter(p => p.type === "tire");
-      const wheelProducts = products.filter(p => p.type === "wheel");
-      
-      console.log("[Jake Rails] Products:", products.length, "Tires:", tireProducts.length, "Wheels:", wheelProducts.length);
-      
-      // Also check structured data from backend
-      const hasTireData = tireProducts.length > 0 || 
-        (data.products?.tires?.length > 0) || 
-        (data.products?.staggeredPairs?.length > 0);
-      const hasWheelData = wheelProducts.length > 0 || 
-        (data.products?.wheels?.length > 0);
-      
-      // Populate rails with actual product data
-      console.log("[Jake Rails] hasTireData:", hasTireData, "hasWheelData:", hasWheelData);
-      if (hasTireData) {
-        console.log("[Jake Rails] Setting tire rail data...");
-        const railTireData: RailProduct[] = (data.products?.tires || data.products?.staggeredPairs || tireProducts).slice(0, 6).map((t: any) => ({
-          id: t.sku || t.productUrl || `tire-${Math.random()}`,
-          type: "tire" as const,
-          brand: t.brand || "",
-          model: t.model || t.name || "",
-          size: t.size || "",
-          price: typeof t.price === "string" ? t.price : (t.priceEach ? `$${t.priceEach}` : ""),
-          priceSet: typeof t.setPrice === "string" ? t.setPrice : (t.priceSet ? `$${t.priceSet}` : ""),
-          imageUrl: t.imageUrl,
-          badge: t.terrain || t.badge || (t.warrantyMiles > 60000 ? "Long Life" : undefined),
-          fitmentBadge: t.loadRange ? `Load Range ${t.loadRange}` : undefined,
-        }));
-        console.log("[Jake Rails] Setting railTires:", railTireData.length, "items");
-        setRailTires(railTireData);
-      }
-      
-      if (hasWheelData) {
-        const railWheelData: RailProduct[] = (data.products?.wheels || wheelProducts).slice(0, 6).map((w: any) => ({
-          id: w.sku || w.productUrl || `wheel-${Math.random()}`,
-          type: "wheel" as const,
-          brand: w.brand || "",
-          model: w.model || w.name || "",
-          size: w.size || "",
-          price: typeof w.price === "string" ? w.price : (w.priceEach ? `$${w.priceEach}` : ""),
-          priceSet: typeof w.setPrice === "string" ? w.setPrice : (w.priceSet ? `$${w.priceSet}` : ""),
-          imageUrl: w.imageUrl,
-          badge: w.finish || w.badge,
-          fitmentBadge: w.fitmentConfidence || w.fitmentLabel,
-        }));
-        setRailWheels(railWheelData);
-      }
-      
-      // Set Jake's message about the rails - commerce-focused
-      if (hasTireData && hasWheelData) {
-        setRailsMessage("I've got some options for you! Click any product to learn more — I can add anything you like to your build.");
-      } else if (hasTireData) {
-        setRailsMessage("Here are some tire options. Click any to get details — I can put together your checkout when you're ready.");
-      } else if (hasWheelData) {
-        setRailsMessage("Check out these wheels! Click any you like and I'll give you the details. Ready to build your setup.");
+      // Populate rails
+      if (productsData) {
+        populateRails(productsData, products);
       }
 
+      // Create final message (replacing streaming message)
       const assistantMessage: Message = {
-        id: generateId(),
+        id: streamingMessageId.current || generateId(),
         role: "assistant",
         content: responseText,
         timestamp: new Date(),
@@ -691,22 +777,24 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         cartUrl,
       };
       setMessages(prev => [...prev, assistantMessage]);
-      trackJakeMessage("assistant", responseText); // Track for conversation replay
+      trackJakeMessage("assistant", responseText);
 
     } catch (error) {
       console.error("Jake error:", error);
       const errorContent = "I'm having trouble connecting right now. Please try again in a moment.";
       const errorMessage: Message = {
-        id: generateId(),
+        id: streamingMessageId.current || generateId(),
         role: "assistant",
         content: errorContent,
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, errorMessage]);
-      trackJakeMessage("assistant", errorContent); // Track error responses too
+      trackJakeMessage("assistant", errorContent);
     } finally {
       setIsLoading(false);
-      // Restore focus to input after response
+      setStreamingText("");
+      setStreamingStatus(null);
+      streamingMessageId.current = null;
       inputRef.current?.focus();
     }
   };
@@ -998,7 +1086,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             <div>
               <h1 className="text-white font-bold text-lg">Jake</h1>
               <p className="text-white/50 text-xs">
-                {isLoading ? "Typing..." : "Your Fitment Expert"}
+                {isLoading ? (streamingStatus || "Jake is typing...") : "Your Fitment Expert"}
               </p>
             </div>
           </div>
@@ -1136,23 +1224,36 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             </div>
           ))}
 
-          {/* Loading Indicator with Jake Thinking */}
+          {/* Streaming Response or Loading Indicator */}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 max-w-xs">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 max-w-2xl">
                 <div className="flex items-start gap-3">
                   <img 
                     src="/images/jake/jake-thinking.png" 
                     alt="Jake thinking"
-                    className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                    className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
                   />
-                  <div className="flex flex-col justify-center min-h-[64px]">
-                    <span className="text-white/70 text-sm font-medium">Finding your perfect setup...</span>
-                    <div className="flex gap-1 mt-2">
-                      <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                      <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                      <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
-                    </div>
+                  <div className="flex flex-col justify-center min-w-[200px]">
+                    {streamingText ? (
+                      /* Show streaming text as it arrives */
+                      <div className="text-white/90 text-sm whitespace-pre-wrap">
+                        {streamingText}
+                        <span className="inline-block w-2 h-4 bg-red-500/60 ml-1 animate-pulse" />
+                      </div>
+                    ) : (
+                      /* Show status while waiting for text */
+                      <>
+                        <span className="text-white/70 text-sm font-medium">
+                          {streamingStatus || "Finding your perfect setup..."}
+                        </span>
+                        <div className="flex gap-1 mt-2">
+                          <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                          <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                          <span className="w-2 h-2 bg-red-500/60 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
