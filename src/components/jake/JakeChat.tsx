@@ -1222,34 +1222,43 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                   <MessageContent content={message.content} />
                 </div>
 
-                {/* Product Cards */}
+                {/* Product Cards - Horizontal Scroll */}
                 {message.products && message.products.length > 0 && (
-                  <div className="mt-4 space-y-3">
-                    {message.products.slice(0, 6).map((product, idx) => (
-                      <JakeProductCard
-                        key={idx}
-                        product={product}
-                        showCompare={true}
-                        isComparing={isInCompare(product)}
-                        onCompareToggle={() => toggleCompare(product)}
-                        compareDisabled={compareProducts.length >= 4}
-                        isLocal={isLocal}
-                        installCostPerTire={LOCAL_INSTALL_PER_TIRE}
-                        taxRate={LOCAL_TAX_RATE}
-                        onClick={() => {
-                          trackJakeEvent("product_clicked", { 
-                            product: {
-                              type: product.type,
-                              brand: product.brand,
-                              model: product.model,
-                              name: product.name,
-                              sku: product.productUrl?.match(/\/(tires|wheels)\/([^?/]+)/)?.[2],
-                              price: product.priceNum,
-                            }
-                          });
-                        }}
-                      />
-                    ))}
+                  <div 
+                    className="mt-4 -mx-4 px-4 overflow-x-auto pb-2"
+                    style={{ 
+                      scrollbarWidth: 'thin',
+                      scrollbarColor: 'rgba(255,255,255,0.2) transparent',
+                    }}
+                  >
+                    <div className="flex gap-3" style={{ minWidth: 'max-content' }}>
+                      {message.products.slice(0, 8).map((product, idx) => (
+                        <div key={idx} className="flex-shrink-0 w-[280px]">
+                          <JakeProductCard
+                            product={product}
+                            showCompare={true}
+                            isComparing={isInCompare(product)}
+                            onCompareToggle={() => toggleCompare(product)}
+                            compareDisabled={compareProducts.length >= 4}
+                            isLocal={isLocal}
+                            installCostPerTire={LOCAL_INSTALL_PER_TIRE}
+                            taxRate={LOCAL_TAX_RATE}
+                            onClick={() => {
+                              trackJakeEvent("product_clicked", { 
+                                product: {
+                                  type: product.type,
+                                  brand: product.brand,
+                                  model: product.model,
+                                  name: product.name,
+                                  sku: product.productUrl?.match(/\/(tires|wheels)\/([^?/]+)/)?.[2],
+                                  price: product.priceNum,
+                                }
+                              });
+                            }}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
 
