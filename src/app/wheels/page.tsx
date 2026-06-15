@@ -692,7 +692,8 @@ export default async function WheelsPage({
 
     // Facet filters (WheelPros taxonomy)
     brand_cd: brandCd || undefined,
-    abbreviated_finish_desc: finish || undefined,
+    // NOTE: Use 'finish' param - fitment-search API expects 'finish', not 'abbreviated_finish_desc'
+    finish: finish || undefined,
     // Style filter (wheel model like "KM235") - from gallery links
     style: styleParam || undefined,
 
