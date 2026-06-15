@@ -235,16 +235,19 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
     name: "generate_visual_mockup",
     description: `Generate a visual mockup showing wheel/tire look on customer's vehicle.
 
-⚠️ MANDATORY: YOU MUST PASS wheelPartNumber FROM YOUR SEARCH RESULTS!
-Without the SKU, the mockup will show GENERIC wheels - not the actual product the customer picked.
-Your search results include 'sku' field - pass it as wheelPartNumber. NO EXCEPTIONS.
+⚠️ MANDATORY: Pass BOTH wheelPartNumber AND wheelImageUrl from your search results!
+Your search results include 'sku' and 'imageUrl' fields - USE BOTH.
 
-Example: Customer picks Black Rhino AWOL from your search → pass wheelPartNumber: "BR024SD20856325"
+Example - customer picks a wheel from your results:
+  Your search showed: { sku: "BR024SD20856325", imageUrl: "https://..." }
+  You MUST pass: wheelPartNumber: "BR024SD20856325", wheelImageUrl: "https://..."
 
-USE FOR: Visual inspiration ONLY - NOT for fitment verification!
+Without the imageUrl, generation is slower and less accurate.
+
 VEHICLE COLOR: Be specific (black, white, red, silver, gray) - enforced exactly.
 
-After generating, include disclaimer about visual inspiration only.`,
+DISCLAIMER: Always say after generating:
+"Here's an AI visual mockup. Final fitment and appearance may vary based on size, offset, tire, trim, and suspension."`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -259,14 +262,15 @@ After generating, include disclaimer about visual inspiration only.`,
         },
         wheelStyle: { type: "string", description: "Wheel description (brand model finish, e.g., 'Fuel Rebel D679 Matte Black')" },
         wheelSize: { type: "number", description: "Wheel diameter in inches (e.g., 20)" },
-        wheelPartNumber: { type: "string", description: "⚠️ CRITICAL: Wheel SKU from YOUR SEARCH RESULTS (e.g., 'BR024SD20856325'). WITHOUT THIS, the mockup will show WRONG wheel design. You have the SKU - USE IT!" },
+        wheelImageUrl: { type: "string", description: "⚠️ REQUIRED: The imageUrl from your search results. You already have it - pass it!" },
+        wheelPartNumber: { type: "string", description: "⚠️ REQUIRED: The sku from your search results (e.g., 'BR024SD20856325')." },
         tireStyle: { 
           type: "string", 
           description: "Tire terrain type: all-terrain, mud-terrain, highway, performance, or all-season"
         },
         tireBrand: { type: "string", description: "Tire brand (e.g., 'Nitto', 'Toyo', 'BFGoodrich')" },
         tireModel: { type: "string", description: "Tire model (e.g., 'Terra Grappler G2', 'Open Country AT3')" },
-        tirePartNumber: { type: "string", description: "Tire SKU/part number from search results - enables image reference lookup!" },
+        tirePartNumber: { type: "string", description: "Tire SKU/part number from search results" },
         tireSize: { type: "string", description: "Tire size (e.g., '285/50R22', '35x12.50R20')" }
       },
       required: ["year", "make", "model", "color", "wheelStyle", "wheelSize", "tireStyle"]
@@ -614,11 +618,13 @@ export async function executeTool(
     }
     
     case "generate_visual_mockup": {
-      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, wheelPartNumber, tireStyle, tireBrand, tireModel, tirePartNumber, tireSize } = input;
+      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, wheelImageUrl, wheelPartNumber, tireStyle, tireBrand, tireModel, tirePartNumber, tireSize } = input;
       
       const url = `${baseUrl}/api/jake/mockup`;
       console.log(`[Jake Tool] generate_visual_mockup: ${color} ${year} ${make} ${model} with ${wheelStyle}`);
-      if (wheelPartNumber) {
+      if (wheelImageUrl) {
+        console.log(`[Jake Tool] Using customer-provided wheel image URL`);
+      } else if (wheelPartNumber) {
         console.log(`[Jake Tool] Wheel PN: ${wheelPartNumber}`);
       }
       if (tireBrand && tireModel) {
@@ -652,6 +658,8 @@ export async function executeTool(
               // Phase 3: Include part numbers for image lookup
               wheelPartNumber: wheelPartNumber ? String(wheelPartNumber) : undefined,
               tirePartNumber: tirePartNumber ? String(tirePartNumber) : undefined,
+              // Phase 4: Direct wheel image URL (customer-provided)
+              wheelImageUrl: wheelImageUrl ? String(wheelImageUrl) : undefined,
             },
           }),
         });

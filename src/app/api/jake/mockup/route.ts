@@ -47,7 +47,9 @@ export async function POST(req: NextRequest) {
     }
     
     console.log(`[Jake Mockup] Generating: ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} with ${build.wheelStyle}`);
-    if (build.wheelPartNumber) {
+    if (build.wheelImageUrl) {
+      console.log(`[Jake Mockup] Using customer-provided wheel image URL`);
+    } else if (build.wheelPartNumber) {
       console.log(`[Jake Mockup] Wheel PN: ${build.wheelPartNumber}`);
     }
     if (build.tirePartNumber) {
@@ -74,6 +76,8 @@ export async function POST(req: NextRequest) {
         // Phase 3: Part numbers for image lookup
         wheelPartNumber: build.wheelPartNumber,
         tirePartNumber: build.tirePartNumber,
+        // Phase 4: Direct wheel image URL (customer-provided)
+        wheelImageUrl: build.wheelImageUrl,
       },
       sessionId: body.sessionId,
     };

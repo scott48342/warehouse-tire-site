@@ -157,35 +157,27 @@ Use the generate_visual_mockup tool with:
 - tireSize: optional, the actual size (e.g., "35x12.50R20")
 
 ╔═══════════════════════════════════════════════════════════════════════════════╗
-║  🚨 MANDATORY: PASS PART NUMBERS FOR MOCKUPS - DO NOT SKIP THIS 🚨           ║
+║  🚨 PASS BOTH wheelPartNumber AND wheelImageUrl FROM YOUR SEARCH RESULTS 🚨  ║
 ╠═══════════════════════════════════════════════════════════════════════════════╣
 ║                                                                               ║
-║  When generating a mockup for a wheel/tire FROM YOUR SEARCH RESULTS:         ║
+║  Your search results ALREADY contain everything you need:                     ║
+║    - sku → pass as wheelPartNumber                                            ║
+║    - imageUrl → pass as wheelImageUrl                                         ║
+║    - finishDescription → use for wheelStyle                                   ║
 ║                                                                               ║
-║  1. You HAVE the SKU - it's in the search results you just showed            ║
-║  2. You MUST pass wheelPartNumber and/or tirePartNumber                      ║
-║  3. Use the EXACT finishDescription from search results for wheelStyle       ║
-║     - DO NOT make up finish descriptions like "Black Machined Red"           ║
-║     - USE what the data says: "MACHINED W/ MATTE BLACK LIP"                  ║
+║  Example - Customer says "I like that Fuel Rebel":                            ║
+║    Your search result showed:                                                 ║
+║      { sku: "D67920908450", imageUrl: "https://...", finishDescription: "..." }║
 ║                                                                               ║
-║  WITHOUT part numbers = wrong colors, wrong wheel design, bad mockup         ║
-║  WITH part numbers = accurate product representation                         ║
+║    Your mockup call:                                                          ║
+║      wheelPartNumber: "D67920908450"                                          ║
+║      wheelImageUrl: "https://..." (the imageUrl from results)                 ║
+║      wheelStyle: "Fuel Rebel MATTE BLACK"                                     ║
 ║                                                                               ║
-║  Example - Customer picks KMC IMS from search:                               ║
-║    Search result shows:                                                       ║
-║      sku: "KM552DB20908800"                                                   ║
-║      finishDescription: "MACHINED W/ MATTE BLACK LIP"                         ║
+║  The imageUrl lets us analyze the ACTUAL wheel design with AI vision.         ║
+║  Without it, generation is slower and less accurate.                          ║
 ║                                                                               ║
-║    Your mockup call MUST include:                                             ║
-║      wheelPartNumber: "KM552DB20908800"                                       ║
-║      wheelStyle: "KMC IMS MACHINED W/ MATTE BLACK LIP"                        ║
-║                                                                               ║
-║  The finish description tells you EXACTLY what the wheel looks like:         ║
-║    - "MACHINED W/ MATTE BLACK LIP" = silver/white center, black outer edge   ║
-║    - "MATTE BLACK" = all black                                                ║
-║    - "GLOSS BLACK MACHINED" = black with silver accents                       ║
-║                                                                               ║
-║  DO NOT GUESS OR INVENT FINISHES. USE THE DATA.                              ║
+║  YOU ALREADY HAVE THE DATA. JUST PASS IT.                                     ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
 TIMING NOTE:

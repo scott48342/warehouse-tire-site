@@ -53,6 +53,8 @@ export interface MockupRequest {
     // Phase 3: Part numbers for image lookup
     wheelPartNumber?: string;
     tirePartNumber?: string;
+    // Phase 4: Direct wheel image URL (customer-provided, takes precedence)
+    wheelImageUrl?: string;
   };
   // Phase 2: Product metadata for better accuracy
   product?: {
@@ -91,7 +93,7 @@ export interface MockupResult {
 // CONSTANTS
 // ═══════════════════════════════════════════════════════════════════════════
 
-const DISCLAIMER = "Mockup is for visual inspiration only. Actual product appearance may vary. Fitment will be verified before checkout.";
+const DISCLAIMER = "Here's an AI visual mockup. Final fitment and appearance may vary based on size, offset, tire, trim, and suspension.";
 
 // Use gpt-image-1 which is available on the account
 const IMAGE_MODEL = "gpt-image-1";
@@ -168,10 +170,12 @@ function generateCacheKey(request: MockupRequest): string {
     // Phase 3: Include part numbers in cache key if provided
     request.build.wheelPartNumber ? crypto.createHash("md5").update(request.build.wheelPartNumber).digest("hex").substring(0, 4) : "x",
     request.build.tirePartNumber ? crypto.createHash("md5").update(request.build.tirePartNumber).digest("hex").substring(0, 4) : "x",
+    // Phase 4: Include wheel image URL hash if provided (customer-provided images)
+    request.build.wheelImageUrl ? crypto.createHash("md5").update(request.build.wheelImageUrl).digest("hex").substring(0, 6) : "x",
   ].join("-");
   
-  // v4: Phase 4 fix - better finish descriptions and fallback SKU lookup
-  return `mockups/v4/${keyParts}.png`;
+  // v5: Phase 4 - customer-provided wheel image support
+  return `mockups/v5/${keyParts}.png`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -293,9 +297,13 @@ async function buildEnhancedPrompt(request: MockupRequest): Promise<PromptBuildR
     sku: build.tirePartNumber,
   };
   
-  // Phase 4: If no wheel part number provided, try to look it up by brand/model
+  // Phase 4: Determine wheel image source (priority: direct URL > part number > fallback lookup)
   let effectiveWheelPartNumber = build.wheelPartNumber;
-  if (!effectiveWheelPartNumber && wheelProduct.brand && wheelProduct.model) {
+  let directWheelImageUrl = build.wheelImageUrl;
+  
+  if (directWheelImageUrl) {
+    console.log(`[mockup] ✅ Using customer-provided wheel image URL`);
+  } else if (!effectiveWheelPartNumber && wheelProduct.brand && wheelProduct.model) {
     console.log(`[mockup] ⚠️ No wheelPartNumber provided - attempting fallback lookup`);
     effectiveWheelPartNumber = await lookupWheelSkuByName(
       wheelProduct.brand, 
@@ -310,14 +318,57 @@ async function buildEnhancedPrompt(request: MockupRequest): Promise<PromptBuildR
     }
   }
   
-  // Phase 3: Analyze actual product images if part numbers provided (or found via fallback)
+  // Phase 3/4: Analyze actual product images
   let wheelDescription: string;
   let tireDescription: string;
   let wheelImageFound = false;
   let tireImageFound = false;
   let analysisConfidence: "high" | "medium" | "concept" = "concept";
   
-  if (effectiveWheelPartNumber || build.tirePartNumber) {
+  // Phase 4: If we have a direct wheel image URL, analyze it directly
+  if (directWheelImageUrl) {
+    console.log(`[mockup] Phase 4: Analyzing customer-provided wheel image...`);
+    const { analyzeWheelImage } = await import("./productImageAnalysis");
+    
+    try {
+      const wheelAnalysis = await analyzeWheelImage(directWheelImageUrl, build.wheelStyle);
+      if (wheelAnalysis.analyzed && wheelAnalysis.description) {
+        wheelDescription = wheelAnalysis.description;
+        wheelImageFound = true;
+        analysisConfidence = "high";
+        console.log(`[mockup] ✅ Customer wheel image analyzed successfully`);
+      } else {
+        const fallback = buildWheelVisualDescription(wheelProduct);
+        wheelDescription = fallback.prompt;
+      }
+    } catch (error) {
+      console.error(`[mockup] Failed to analyze customer wheel image:`, error);
+      const fallback = buildWheelVisualDescription(wheelProduct);
+      wheelDescription = fallback.prompt;
+    }
+    
+    // Still check tire part number
+    if (build.tirePartNumber) {
+      const { analyzeProducts } = await import("./productImageAnalysis");
+      const tireAnalysis = await analyzeProducts(
+        undefined,
+        build.tirePartNumber,
+        "",
+        `${tireProduct.brand} ${tireProduct.model}`
+      );
+      if (tireAnalysis.tire?.analyzed && tireAnalysis.tire.description) {
+        tireDescription = tireAnalysis.tire.description;
+        tireImageFound = true;
+      } else {
+        const fallback = buildTireVisualDescription(tireProduct);
+        tireDescription = fallback.prompt;
+      }
+    } else {
+      const fallback = buildTireVisualDescription(tireProduct);
+      tireDescription = fallback.prompt;
+    }
+  } else if (effectiveWheelPartNumber || build.tirePartNumber) {
+    // Phase 3: Use part numbers for image lookup
     console.log(`[mockup] Phase 3: Analyzing product images...`);
     const analysis = await analyzeProducts(
       effectiveWheelPartNumber,  // Use effective (may be from fallback lookup)
@@ -509,12 +560,14 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
   const sessionId = request.sessionId || "unknown";
   
   console.log(`[mockup] ═══════════════════════════════════════════════════════`);
-  console.log(`[mockup] Starting mockup generation (Phase 3 Enhanced)`);
+  console.log(`[mockup] Starting mockup generation (Phase 4 - Customer Image Support)`);
   console.log(`[mockup] Session: ${sessionId}`);
   console.log(`[mockup] Vehicle: ${request.vehicle.color} ${request.vehicle.year} ${request.vehicle.make} ${request.vehicle.model}`);
   console.log(`[mockup] Build: ${request.build.wheelSize}" ${request.build.wheelStyle}`);
   console.log(`[mockup] Style: ${request.build.style}, Tires: ${request.build.tireStyle}`);
-  if (request.build.wheelPartNumber) {
+  if (request.build.wheelImageUrl) {
+    console.log(`[mockup] 🖼️ Using CUSTOMER-PROVIDED wheel image URL`);
+  } else if (request.build.wheelPartNumber) {
     console.log(`[mockup] Wheel PN: ${request.build.wheelPartNumber}`);
   }
   if (request.build.tirePartNumber) {
