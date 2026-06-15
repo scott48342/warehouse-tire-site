@@ -181,7 +181,7 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
   },
   {
     name: "search_wheels",
-    description: `Search for actual wheel products that fit a vehicle. Returns products with prices and links.`,
+    description: `Search for actual wheel products that fit a vehicle. Returns products with prices and links. Use excludeFinishes to filter out unwanted finishes (e.g., when customer says "no black wheels").`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -189,7 +189,16 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
         make: { type: "string", description: "Vehicle make" },
         model: { type: "string", description: "Vehicle model" },
         diameter: { type: "number", description: "Desired wheel diameter (e.g., 20)" },
-        limit: { type: "number", description: "Max results (default 6)" }
+        limit: { type: "number", description: "Max results (default 6)" },
+        excludeFinishes: { 
+          type: "array", 
+          items: { type: "string" },
+          description: "Finish types to exclude (e.g., ['black', 'matte black', 'gloss black']). Use when customer says they don't want certain colors."
+        },
+        preferFinish: { 
+          type: "string", 
+          description: "Preferred finish to prioritize (e.g., 'Chrome', 'Bronze', 'Gunmetal'). Results with this finish will appear first."
+        }
       },
       required: ["year", "make", "model"]
     }
@@ -376,17 +385,20 @@ export async function executeTool(
     }
     
     case "search_wheels": {
-      const { year, make, model, diameter, limit = 6 } = input;
+      const { year, make, model, diameter, limit = 6, excludeFinishes, preferFinish } = input;
+      // Request more results if we're filtering, so we have enough after exclusion
+      const fetchLimit = excludeFinishes?.length ? Math.min(Number(limit) * 4, 50) : Number(limit);
+      
       const params = new URLSearchParams({
         year: String(year),
         make: String(make),
         model: String(model),
       });
       if (diameter) params.set("diameter", String(diameter));
-      params.set("limit", String(limit));
+      params.set("limit", String(fetchLimit));
       
       const url = `${baseUrl}/api/wheels/fitment-search?${params}`;
-      console.log(`[Jake Tool] search_wheels: ${url}`);
+      console.log(`[Jake Tool] search_wheels: ${url}${excludeFinishes ? ` (excluding: ${excludeFinishes.join(', ')})` : ''}`);
       
       try {
         const res = await fetch(url, { cache: "no-store" });
@@ -396,7 +408,32 @@ export async function executeTool(
         // Map the wheel API response to Jake's expected format
         // API returns wheels in 'results' array, not 'wheels'
         const wheelData = data.results || data.wheels || [];
-        const wheels = wheelData.slice(0, Number(limit)).map((w: any) => {
+        
+        // Helper to check if a finish should be excluded
+        const shouldExcludeFinish = (finishDesc: string, normalizedFinish: string): boolean => {
+          if (!excludeFinishes?.length) return false;
+          const lower = (finishDesc || "").toLowerCase();
+          const normalizedLower = (normalizedFinish || "").toLowerCase();
+          
+          return excludeFinishes.some(exclude => {
+            const excludeLower = exclude.toLowerCase();
+            // Check for exact or partial matches
+            return lower.includes(excludeLower) || 
+                   normalizedLower.includes(excludeLower) ||
+                   normalizedLower === excludeLower;
+          });
+        };
+        
+        // Helper to check if finish matches preference (for sorting)
+        const matchesPreference = (finishDesc: string, normalizedFinish: string): boolean => {
+          if (!preferFinish) return false;
+          const prefLower = preferFinish.toLowerCase();
+          const lower = (finishDesc || "").toLowerCase();
+          const normalizedLower = (normalizedFinish || "").toLowerCase();
+          return lower.includes(prefLower) || normalizedLower.includes(prefLower);
+        };
+        
+        let wheels = wheelData.map((w: any) => {
           const brandName = w.brand?.description || w.brand || "Unknown";
           const diam = w.properties?.diameter || w.diameter || "";
           const width = w.properties?.width || w.width || "";
@@ -426,10 +463,52 @@ export async function executeTool(
             imageUrl,
             fitmentLabel: w.fitmentGuidance?.levelLabel || null,
             inStock: w.availability?.confirmed || false,
+            _excluded: shouldExcludeFinish(finishDescription, finish),
+            _preferred: matchesPreference(finishDescription, finish),
           };
         });
         
-        return { wheels, count: wheels.length, totalAvailable: data.totalCount || wheels.length };
+        // Filter out excluded finishes
+        if (excludeFinishes?.length) {
+          const beforeCount = wheels.length;
+          wheels = wheels.filter((w: any) => !w._excluded);
+          console.log(`[Jake Tool] Filtered ${beforeCount - wheels.length} wheels with excluded finishes`);
+        }
+        
+        // Sort preferred finishes to the top
+        if (preferFinish) {
+          wheels.sort((a: any, b: any) => {
+            if (a._preferred && !b._preferred) return -1;
+            if (!a._preferred && b._preferred) return 1;
+            return 0;
+          });
+        }
+        
+        // Clean up internal properties and limit results
+        wheels = wheels.slice(0, Number(limit)).map((w: any) => {
+          const { _excluded, _preferred, ...clean } = w;
+          return clean;
+        });
+        
+        const result = { 
+          wheels, 
+          count: wheels.length, 
+          totalAvailable: data.totalCount || wheels.length,
+          finishFilters: {
+            excluded: excludeFinishes || [],
+            preferred: preferFinish || null,
+          }
+        };
+        
+        // Add helpful message if we filtered everything out
+        if (wheels.length === 0 && excludeFinishes?.length) {
+          return {
+            ...result,
+            message: `No wheels found after excluding ${excludeFinishes.join(', ')} finishes. Try broadening the search or considering different finish options.`
+          };
+        }
+        
+        return result;
       } catch (err) {
         return { error: `Fetch error: ${err}`, wheels: [] };
       }
