@@ -145,27 +145,20 @@ async function analyzeWheelForGeneration(base64Image: string, wheelName: string)
   try {
     const response = await openai.chat.completions.create({
       model: "gpt-4o",
-      max_tokens: 600,
+      max_tokens: 400,
       messages: [
-        {
-          role: "system",
-          content: `You are creating a detailed wheel description for an AI image generator. Your description must be EXTREMELY PRECISE about colors and design so the generated image matches exactly.
-
-OUTPUT FORMAT - describe the wheel with these exact sections:
-1. FINISH COLOR: Be very specific (e.g., "matte bronze/copper colored spokes" NOT just "bronze")
-2. SPOKE DESIGN: Count, shape, thickness
-3. LIP/BARREL: Color, style (e.g., "black outer lip with simulated beadlock bolts")
-4. CENTER CAP: Color, logo
-5. OVERALL: Any two-tone effects
-
-CRITICAL: The finish color is the most important detail. If the wheel has bronze/copper spokes, say "BRONZE/COPPER colored spokes". If black, say "BLACK". Be explicit.`
-        },
         {
           role: "user",
           content: [
             {
               type: "text",
-              text: `Describe this ${wheelName} wheel precisely for image generation:`,
+              text: `Describe this aftermarket wheel's visual appearance for an artist to recreate it. Focus on:
+- Color/finish of the spokes (bronze, black, chrome, etc)
+- Number of spokes and their shape
+- Lip/barrel color
+- Any accent details
+
+Be specific about colors. Keep under 100 words.`,
             },
             {
               type: "image_url",
@@ -303,7 +296,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     const blob = await put(cacheKey, imageBuffer, {
       access: "public",
       contentType: "image/png",
-      addRandomSuffix: false,
+      addRandomSuffix: true,
     });
     
     const elapsed = Date.now() - startTime;
