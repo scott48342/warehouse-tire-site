@@ -108,12 +108,12 @@ async function checkCache(cacheKey: string): Promise<string | null> {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// STEP 1: FETCH WHEEL IMAGE AND ANALYZE WITH GPT-4O VISION
+// STEP 1: FETCH WHEEL IMAGE
 // ═══════════════════════════════════════════════════════════════════════════
 
-async function fetchImageAsBase64(imageUrl: string): Promise<string | null> {
+async function fetchWheelImage(imageUrl: string): Promise<Buffer | null> {
   try {
-    console.log(`[wheelMockup] Fetching wheel image from: ${imageUrl.substring(0, 60)}...`);
+    console.log(`[wheelMockup] Step 1: Fetching wheel image from: ${imageUrl.substring(0, 60)}...`);
     const response = await fetch(imageUrl, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -127,84 +127,20 @@ async function fetchImageAsBase64(imageUrl: string): Promise<string | null> {
     }
     
     const arrayBuffer = await response.arrayBuffer();
-    const base64 = Buffer.from(arrayBuffer).toString('base64');
-    const contentType = response.headers.get('content-type') || 'image/png';
-    console.log(`[wheelMockup] Image fetched: ${Math.round(arrayBuffer.byteLength / 1024)}KB`);
-    return `data:${contentType};base64,${base64}`;
+    const buffer = Buffer.from(arrayBuffer);
+    console.log(`[wheelMockup] Wheel image fetched: ${Math.round(buffer.length / 1024)}KB`);
+    return buffer;
   } catch (error: any) {
     console.error(`[wheelMockup] Image fetch error: ${error?.message}`);
     return null;
   }
 }
 
-async function analyzeWheel(imageUrl: string, wheelName: string, wheelFinish?: string): Promise<string> {
-  const openai = getOpenAI();
-  
-  console.log(`[wheelMockup] Step 1: Analyzing wheel with GPT-4o Vision...`);
-  
-  // Fetch the image ourselves and convert to base64 (WheelPros CDN blocks OpenAI)
-  const base64Image = await fetchImageAsBase64(imageUrl);
-  
-  if (!base64Image) {
-    // Fallback if we can't fetch the image
-    const finishDesc = wheelFinish ? ` in ${wheelFinish} finish` : "";
-    console.log(`[wheelMockup] Cannot fetch image, using fallback with finish: ${wheelFinish || 'none provided'}`);
-    return `${wheelName} aftermarket wheel${finishDesc} with aggressive off-road styling, deep lip, and beadlock-style accents`;
-  }
-  
-  try {
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o",
-      max_tokens: 400,
-      messages: [
-        {
-          role: "system",
-          content: `You are a wheel design expert. Describe wheels with extreme visual precision.
-
-Your description will be used to generate an AI image, so be EXACT about:
-- Spoke count (exact number)
-- Spoke shape (straight, curved, Y-shaped, split, forked, etc.)
-- Spoke thickness and taper
-- Finish color (matte black, gloss black, bronze, machined silver, etc.)
-- Lip style (deep lip, flush, stepped)
-- Any two-tone or accent details
-- Center cap style
-
-Keep description under 100 words but highly specific.`
-        },
-        {
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: `Describe this ${wheelName} wheel's visual design precisely:`,
-            },
-            {
-              type: "image_url",
-              image_url: { url: base64Image, detail: "high" },
-            },
-          ],
-        },
-      ],
-    });
-    
-    const description = response.choices[0]?.message?.content || `${wheelName} aftermarket wheel`;
-    console.log(`[wheelMockup] Wheel analysis: ${description}`);
-    return description;
-  } catch (error: any) {
-    console.error("[wheelMockup] Vision analysis failed:", error?.message);
-    // Use finish description in fallback when vision fails
-    const finishDesc = wheelFinish ? ` in ${wheelFinish} finish` : "";
-    console.log(`[wheelMockup] Using fallback with finish: ${wheelFinish || 'none provided'}`);
-    return `${wheelName} aftermarket wheel${finishDesc} with aggressive off-road styling, deep lip, and beadlock-style accents`;
-  }
-}
-
 // ═══════════════════════════════════════════════════════════════════════════
-// STEP 2: BUILD PROMPT
+// STEP 2: BUILD PROMPT (wheel image will be passed separately)
 // ═══════════════════════════════════════════════════════════════════════════
 
-function buildPrompt(req: WheelMockupRequest, wheelDescription: string): string {
+function buildPrompt(req: WheelMockupRequest): string {
   const { vehicle, wheel, tire, lift } = req;
   
   // Determine stance
@@ -224,14 +160,20 @@ function buildPrompt(req: WheelMockupRequest, wheelDescription: string): string 
     tireDesc = `${tire.size} tires`;
   }
 
-  // The prompt - simple, specific, photorealistic
-  return `Professional automotive photograph of a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} ${stance}.
+  // The prompt - references the attached wheel image
+  return `Generate a realistic ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} pickup truck ${stance}.
 
-The truck has ${wheel.size}-inch ${wheel.brand} ${wheel.model} wheels: ${wheelDescription}
+Use the attached wheel image as the wheel reference. Install that exact wheel in a ${wheel.size}-inch fitment on all four corners.
+
+Maintain from the reference wheel:
+- Exact spoke design and spoke count
+- Exact finish color (bronze, black, chrome, etc.)
+- Beadlock ring appearance if present
+- Center cap styling
 
 Paired with ${tireDesc}.
 
-Shot from front three-quarter angle showing driver side. Outdoor setting with natural lighting. Sharp focus on the wheels. Clean professional dealership photo style. Photorealistic, high quality.`;
+Shot from front three-quarter angle showing driver side. Outdoor dealership/parking lot setting with natural lighting. Sharp focus on the wheels. Photorealistic professional automotive photography.`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -263,26 +205,35 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // }
     console.log(`[wheelMockup] Cache disabled - generating fresh`);
     
-    // Step 1: Analyze wheel with GPT-4o Vision
-    const wheelDescription = await analyzeWheel(
-      req.wheel.imageUrl,
-      `${req.wheel.brand} ${req.wheel.model}`,
-      req.wheel.finish
-    );
+    // Step 1: Fetch the wheel image
+    const wheelImageBuffer = await fetchWheelImage(req.wheel.imageUrl);
+    
+    if (!wheelImageBuffer) {
+      throw new Error("Failed to fetch wheel image");
+    }
     
     // Step 2: Build the prompt
-    const prompt = buildPrompt(req, wheelDescription);
+    const prompt = buildPrompt(req);
     console.log(`[wheelMockup] Step 2: Prompt built (${prompt.length} chars)`);
     
-    // Step 3: Generate with gpt-image-1
-    console.log(`[wheelMockup] Step 3: Generating image with gpt-image-1...`);
+    // Step 3: Generate with gpt-image-1 using wheel image as reference
+    console.log(`[wheelMockup] Step 3: Generating image with gpt-image-1 + wheel reference...`);
     const openai = getOpenAI();
     
+    // Convert wheel image to base64 for API
+    const wheelBase64 = wheelImageBuffer.toString('base64');
+    
+    // Use the images API with image input
     const response = await openai.images.generate({
       model: "gpt-image-1",
       prompt,
       n: 1,
       size: "1536x1024",
+      // @ts-ignore - image input support for gpt-image-1
+      image: [{
+        type: "base64",
+        data: wheelBase64,
+      }],
     });
     
     const imageData = response.data?.[0];
