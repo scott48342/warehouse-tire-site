@@ -115,12 +115,13 @@ export async function GET(req: Request) {
   const ct = res.headers.get("content-type") || "application/json";
 
   let data: WheelProsSearchResponse | null = null;
+  // Read body as text first, then parse as JSON - avoids "body already read" error
+  const bodyText = await res.text();
   try {
-    data = (await res.json()) as WheelProsSearchResponse;
+    data = JSON.parse(bodyText) as WheelProsSearchResponse;
   } catch {
     // If upstream didn't return JSON for some reason, just proxy through.
-    const text = await res.text();
-    return new NextResponse(text, { status: res.status, headers: { "content-type": ct } });
+    return new NextResponse(bodyText, { status: res.status, headers: { "content-type": ct } });
   }
 
   let enrichMs = debug ? 0 : 0;
