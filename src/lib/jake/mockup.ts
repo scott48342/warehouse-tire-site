@@ -203,6 +203,62 @@ async function checkCache(cacheKey: string): Promise<string | null> {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
+// PHASE 4: FALLBACK SKU LOOKUP (when Jake forgets to pass part numbers)
+// ═══════════════════════════════════════════════════════════════════════════
+
+const getBaseUrl = () => {
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return process.env.NEXT_PUBLIC_BASE_URL || "https://shop.warehousetiredirect.com";
+};
+
+/**
+ * Try to find a wheel SKU by searching for brand + model
+ * This is a fallback for when Jake doesn't pass wheelPartNumber
+ */
+async function lookupWheelSkuByName(brand: string, model: string, diameter: number): Promise<string | null> {
+  if (!brand || !model) return null;
+  
+  try {
+    const query = `${brand} ${model}`.trim();
+    const url = `${getBaseUrl()}/api/search?q=${encodeURIComponent(query)}&type=wheels&limit=5`;
+    
+    console.log(`[mockup] Fallback SKU lookup: "${query}"`);
+    
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+      console.log(`[mockup] SKU lookup failed: ${res.status}`);
+      return null;
+    }
+    
+    const data = await res.json();
+    const wheels = data.results || [];
+    
+    // Find a matching wheel with the right diameter
+    for (const wheel of wheels) {
+      const wheelDiam = parseFloat(wheel.properties?.diameter || wheel.diameter || "0");
+      if (Math.abs(wheelDiam - diameter) < 1) {
+        console.log(`[mockup] Found fallback SKU: ${wheel.sku}`);
+        return wheel.sku;
+      }
+    }
+    
+    // If no exact diameter match, return first result
+    if (wheels.length > 0) {
+      console.log(`[mockup] Using first result SKU: ${wheels[0].sku}`);
+      return wheels[0].sku;
+    }
+    
+    console.log(`[mockup] No fallback SKU found for "${query}"`);
+    return null;
+  } catch (error) {
+    console.error(`[mockup] SKU lookup error:`, error);
+    return null;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // PHASE 3: ENHANCED PROMPT BUILDER WITH IMAGE ANALYSIS
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -213,6 +269,7 @@ interface PromptBuildResult {
   tireMeta: TireProduct;
   wheelImageFound: boolean;
   tireImageFound: boolean;
+  effectiveWheelSku?: string;  // SKU used (may be from fallback lookup)
 }
 
 async function buildEnhancedPrompt(request: MockupRequest): Promise<PromptBuildResult> {
@@ -235,17 +292,34 @@ async function buildEnhancedPrompt(request: MockupRequest): Promise<PromptBuildR
     sku: build.tirePartNumber,
   };
   
-  // Phase 3: Analyze actual product images if part numbers provided
+  // Phase 4: If no wheel part number provided, try to look it up by brand/model
+  let effectiveWheelPartNumber = build.wheelPartNumber;
+  if (!effectiveWheelPartNumber && wheelProduct.brand && wheelProduct.model) {
+    console.log(`[mockup] ⚠️ No wheelPartNumber provided - attempting fallback lookup`);
+    effectiveWheelPartNumber = await lookupWheelSkuByName(
+      wheelProduct.brand, 
+      wheelProduct.model, 
+      build.wheelSize
+    ) || undefined;
+    
+    if (effectiveWheelPartNumber) {
+      console.log(`[mockup] ✅ Fallback found SKU: ${effectiveWheelPartNumber}`);
+    } else {
+      console.log(`[mockup] ❌ Fallback lookup failed - will use description-only generation`);
+    }
+  }
+  
+  // Phase 3: Analyze actual product images if part numbers provided (or found via fallback)
   let wheelDescription: string;
   let tireDescription: string;
   let wheelImageFound = false;
   let tireImageFound = false;
   let analysisConfidence: "high" | "medium" | "concept" = "concept";
   
-  if (build.wheelPartNumber || build.tirePartNumber) {
+  if (effectiveWheelPartNumber || build.tirePartNumber) {
     console.log(`[mockup] Phase 3: Analyzing product images...`);
     const analysis = await analyzeProducts(
-      build.wheelPartNumber,
+      effectiveWheelPartNumber,  // Use effective (may be from fallback lookup)
       build.tirePartNumber,
       `${wheelProduct.brand} ${wheelProduct.model}`,
       `${tireProduct.brand} ${tireProduct.model}`
@@ -358,6 +432,7 @@ async function buildEnhancedPrompt(request: MockupRequest): Promise<PromptBuildR
     tireMeta: tireProduct,
     wheelImageFound,
     tireImageFound,
+    effectiveWheelSku: effectiveWheelPartNumber,  // May be from fallback lookup
   };
 }
 
@@ -485,7 +560,7 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
     console.log(`[mockup] Cache miss, generating new image...`);
     
     // Phase 3: Build enhanced prompt with image analysis
-    const { prompt, confidence, wheelMeta, tireMeta, wheelImageFound, tireImageFound } = 
+    const { prompt, confidence, wheelMeta, tireMeta, wheelImageFound, tireImageFound, effectiveWheelSku } = 
       await buildEnhancedPrompt(request);
     
     // Generate image
@@ -518,7 +593,7 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
       productMeta: {
         wheelBrand: wheelMeta.brand,
         wheelModel: wheelMeta.model,
-        wheelSku: request.build.wheelPartNumber,
+        wheelSku: effectiveWheelSku || request.build.wheelPartNumber,  // Use fallback SKU if found
         wheelImageFound,
         tireBrand: tireMeta.brand,
         tireModel: tireMeta.model,

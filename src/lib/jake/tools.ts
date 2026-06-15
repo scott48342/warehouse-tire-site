@@ -400,7 +400,10 @@ export async function executeTool(
           const brandName = w.brand?.description || w.brand || "Unknown";
           const diam = w.properties?.diameter || w.diameter || "";
           const width = w.properties?.width || w.width || "";
-          const finish = w.properties?.abbreviated_finish_desc || w.properties?.fancy_finish_desc || w.finish || "";
+          // Use fancy_finish_desc as primary - it's more descriptive (e.g., "MACHINED W/ MATTE BLACK LIP")
+          // abbreviated_finish_desc is too ambiguous (e.g., "Black / Machined" - which is which?)
+          const finishDescription = w.properties?.fancy_finish_desc || w.properties?.abbreviated_finish_desc || w.finish || "";
+          const finish = w.properties?.abbreviated_finish_desc || "";
           const msrp = w.prices?.msrp?.[0]?.currencyAmount;
           const price = msrp ? parseFloat(msrp) : null;
           const imageUrl = w.images?.[0]?.imageUrlLarge || w.imageUrl || null;
@@ -416,6 +419,9 @@ export async function executeTool(
             priceNum: price,
             size: `${diam}x${width}`,
             finish,
+            // IMPORTANT: finishDescription is the detailed finish - USE THIS FOR MOCKUPS
+            // e.g., "MACHINED W/ MATTE BLACK LIP" tells you exactly what colors go where
+            finishDescription,
             productUrl: `${baseUrl}/wheels/${w.sku}`,
             imageUrl,
             fitmentLabel: w.fitmentGuidance?.levelLabel || null,

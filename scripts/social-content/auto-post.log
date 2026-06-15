@@ -12284,3 +12284,224 @@ Files:
 
 Add these to .env.local
 [Sun 06/14/2026  9:00:11.23] Auto-post complete 
+[Sun 06/14/2026 18:00:02.08] Starting auto-post... 
+◇ injected env (50) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:13796) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC D560 VAPOR
+  ⚠️ No matching vehicle for bolt pattern 8X180, using generic caption
+  Downloading image for Fuel 1PC D560 VAPOR...
+  ✅ Generated: d560_vapor_1781474405889
+  📝 Caption preview: Your ride deserves these Fuel 1PC D560 VAPOR wheels 💯
+
+📐 18x9
+🔩 8X180
+↔️ 20mm...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - d560_vapor_1781474405889.png
+  - d560_vapor_1781474405889.json
+◇ injected env (50) from ..\..\.env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+📱 Facebook/Instagram Poster
+
+Selected: abl_22_alpha_5_1780178405018
+
+--- Content Preview ---
+Wheel: Asanti Black ABL-22 ALPHA 5
+Price: $170
+Image: abl_22_alpha_5_1780178405018.png
+
+Caption:
+🔥 Asanti Black ABL-22 ALPHA 5 - Now in stock!
+
+📐 20x10.5
+🔩 5X112
+↔️ 27mm offset
+✨ ABL22 20X10.5 5X112 BRUSHED SLV 27MM
+
+💰 Starting at $170/wheel
+
+🛒 Shop now: https://shop.warehousetiredirect.com/wheels/ABL22-20055627SL
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #luxurycars #eurocar #germanengineering #asantiblack #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Sunday, 14-Jun-26 15:00:06 PDT.
+
+✨ Done!
+◇ injected env (50) from ..\..\.env.local // tip: ⌁ auth for agents [www.vestauth.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:4460) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Motegi MR154 BATTLE
+  ⚠️ No matching vehicle for bolt pattern 5X100, using generic caption
+  Downloading image for Motegi MR154 BATTLE...
+  ✅ Generated: mr154_battle_1781474412617
+  📝 Caption preview: Transform your car with the Motegi MR154 BATTLE 🛞
+
+📐 18x9.5
+🔩 5X100
+↔️ 38mm o...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - mr154_battle_1781474412617.png
+  - mr154_battle_1781474412617.json
+◇ injected env (50) from ..\..\.env.local // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Sun 06/14/2026 18:00:13.33] Auto-post complete 
+[Mon 06/15/2026  9:00:01.38] Starting auto-post... 
+◇ injected env (50) from ..\..\.env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:1576) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Rotiform R196 ZWS
+  ⚠️ No matching vehicle for bolt pattern 5X130, using generic caption
+  Downloading image for Rotiform R196 ZWS...
+  ✅ Generated: r196_zws_1781528405092
+  📝 Caption preview: Transform your car with the Rotiform R196 ZWS 🛞
+
+📐 22x10
+🔩 5X130
+↔️ 60mm offs...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - r196_zws_1781528405092.png
+  - r196_zws_1781528405092.json
+◇ injected env (50) from ..\..\.env.local // tip: ⌁ auth for agents [www.vestauth.com]
+
+📱 Facebook/Instagram Poster
+
+Selected: abl_22_alpha_5_1780178405018
+
+--- Content Preview ---
+Wheel: Asanti Black ABL-22 ALPHA 5
+Price: $170
+Image: abl_22_alpha_5_1780178405018.png
+
+Caption:
+🔥 Asanti Black ABL-22 ALPHA 5 - Now in stock!
+
+📐 20x10.5
+🔩 5X112
+↔️ 27mm offset
+✨ ABL22 20X10.5 5X112 BRUSHED SLV 27MM
+
+💰 Starting at $170/wheel
+
+🛒 Shop now: https://shop.warehousetiredirect.com/wheels/ABL22-20055627SL
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #luxurycars #eurocar #germanengineering #asantiblack #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ❌ Facebook error: Graph API Error: Error validating access token: Session has expired on Monday, 11-May-26 09:00:00 PDT. The current time is Monday, 15-Jun-26 06:00:06 PDT.
+
+✨ Done!
+◇ injected env (50) from ..\..\.env.local // tip: ⌁ auth for agents [www.vestauth.com]
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:424) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Black Rhino Hard Alloys BR014 SAHARA
+  Downloading image for Black Rhino Hard Alloys BR014 SAHARA...
+  ✅ Generated: br014_sahara_1781528412602
+  📝 Caption preview: 🔥 Black Rhino Hard Alloys BR014 SAHARA - Now in stock!
+
+📐 17x9
+🔩 6X5.5
+↔️ -12...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - br014_sahara_1781528412602.png
+  - br014_sahara_1781528412602.json
+◇ injected env (50) from ..\..\.env.local // tip: ⌘ override existing { override: true }
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Mon 06/15/2026  9:00:12.96] Auto-post complete 
