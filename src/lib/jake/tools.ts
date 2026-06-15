@@ -390,7 +390,9 @@ export async function executeTool(
         excludeFinishes?: string[]; preferFinish?: string;
       };
       // Request more results if we're filtering, so we have enough after exclusion
-      const fetchLimit = excludeFinishes?.length ? Math.min(Number(limit) * 4, 50) : Number(limit);
+      // When excluding finishes (like "no black"), we need to fetch A LOT more because
+      // black wheels dominate most inventories (often 80%+ of results)
+      const fetchLimit = excludeFinishes?.length ? Math.min(Number(limit) * 20, 200) : Number(limit);
       
       const params = new URLSearchParams({
         year: String(year),
@@ -399,6 +401,12 @@ export async function executeTool(
       });
       if (diameter) params.set("diameter", String(diameter));
       params.set("limit", String(fetchLimit));
+      
+      // Pass preferFinish to API for server-side filtering (much more efficient)
+      // This ensures we get results IN that finish, not just prioritize them client-side
+      if (preferFinish) {
+        params.set("finish", preferFinish);
+      }
       
       const url = `${baseUrl}/api/wheels/fitment-search?${params}`;
       console.log(`[Jake Tool] search_wheels: ${url}${excludeFinishes ? ` (excluding: ${excludeFinishes.join(', ')})` : ''}`);
