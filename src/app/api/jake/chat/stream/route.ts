@@ -25,7 +25,7 @@ import { NextRequest } from "next/server";
 import { streamChat, JakeMessage, SavedVehicleContext } from "@/lib/jake/stream";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 180; // Mockup generation can take 30-40s, plus Claude processing
 
 // Email regex for auto-capture
 const EMAIL_REGEX = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;

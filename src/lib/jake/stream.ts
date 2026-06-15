@@ -54,9 +54,7 @@ const STATUS_MESSAGES: Record<string, string> = {
   list_trims: "Looking up trim levels...",
   get_platform_context: "Checking platform specs...",
   // Phase 2: Better mockup status messaging (20-40 seconds expected)
-  generate_visual_mockup: "🎨 Generating visual mockup... This usually takes 20-40 seconds",
-  generate_visual_mockup_starting: "🎨 Starting mockup generation...",
-  generate_visual_mockup_rendering: "🎨 Rendering your setup... Almost there!",
+  generate_wheel_mockup: "🎨 Generating visual mockup... This takes 20-40 seconds",
   processing: "Processing results...",
   generating: "Jake is typing...",
 };
