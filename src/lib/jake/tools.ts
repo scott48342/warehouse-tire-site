@@ -250,7 +250,7 @@ REQUIRED DATA (you already have from search results):
 - wheelSize: diameter in inches
 
 DISCLAIMER (always say after showing):
-"AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting."`,
+"AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting."`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -657,7 +657,7 @@ export async function executeTool(
         return {
           success: false,
           error: `Generation failed: ${err}`,
-          disclaimer: "AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.",
+          disclaimer: "AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.",
         };
       }
     }

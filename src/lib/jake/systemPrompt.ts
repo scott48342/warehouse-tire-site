@@ -175,7 +175,7 @@ TIMING: Generation takes 1-2 minutes. Set expectations:
 "Let me generate a mockup - this takes about a minute or two..."
 
 DISCLAIMER (ALWAYS SAY AFTER):
-"AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting."
+"AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting."
 
 IF IT FAILS:
 Say once: "The mockup generator is being temperamental. Here's the build summary: [specs]. Want to proceed or call us at (248) 332-4120?"

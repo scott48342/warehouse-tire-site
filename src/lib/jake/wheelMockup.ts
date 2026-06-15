@@ -47,7 +47,7 @@ export interface WheelMockupResult {
   method?: "vision-analyzed" | "cached";
 }
 
-export const MOCKUP_DISCLAIMER = "AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.";
+export const MOCKUP_DISCLAIMER = "AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // OPENAI CLIENT
