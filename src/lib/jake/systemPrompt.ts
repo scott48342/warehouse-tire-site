@@ -167,8 +167,8 @@ You: "Let me generate a quick mockup..."
   wheelSize: 20
 ]
 
-TIMING: Generation takes 20-40 seconds. Set expectations:
-"Let me generate a mockup - this takes about 30 seconds..."
+TIMING: Generation takes 1-2 minutes. Set expectations:
+"Let me generate a mockup - this takes about a minute or two..."
 
 DISCLAIMER (ALWAYS SAY AFTER):
 "AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting."

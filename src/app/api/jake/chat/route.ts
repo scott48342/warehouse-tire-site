@@ -12,7 +12,7 @@ import { subscribe } from "@/lib/email/subscriberService";
 import { trackJakeBuild, linkJakeBuildToLead, detectSourceSite } from "@/lib/leads";
 
 export const runtime = "nodejs";
-export const maxDuration = 60; // Allow up to 60s for AI response
+export const maxDuration = 120; // Allow up to 120s for AI response (mockups take 60-90s)
 
 // Email regex - captures emails from conversational text
 const EMAIL_REGEX = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
