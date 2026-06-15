@@ -108,13 +108,49 @@ async function checkCache(cacheKey: string): Promise<string | null> {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// STEP 1: ANALYZE WHEEL WITH GPT-4O VISION
+// STEP 1: FETCH WHEEL IMAGE AND ANALYZE WITH GPT-4O VISION
 // ═══════════════════════════════════════════════════════════════════════════
+
+async function fetchImageAsBase64(imageUrl: string): Promise<string | null> {
+  try {
+    console.log(`[wheelMockup] Fetching wheel image from: ${imageUrl.substring(0, 60)}...`);
+    const response = await fetch(imageUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': 'image/*',
+      },
+    });
+    
+    if (!response.ok) {
+      console.error(`[wheelMockup] Image fetch failed: ${response.status}`);
+      return null;
+    }
+    
+    const arrayBuffer = await response.arrayBuffer();
+    const base64 = Buffer.from(arrayBuffer).toString('base64');
+    const contentType = response.headers.get('content-type') || 'image/png';
+    console.log(`[wheelMockup] Image fetched: ${Math.round(arrayBuffer.byteLength / 1024)}KB`);
+    return `data:${contentType};base64,${base64}`;
+  } catch (error: any) {
+    console.error(`[wheelMockup] Image fetch error: ${error?.message}`);
+    return null;
+  }
+}
 
 async function analyzeWheel(imageUrl: string, wheelName: string, wheelFinish?: string): Promise<string> {
   const openai = getOpenAI();
   
   console.log(`[wheelMockup] Step 1: Analyzing wheel with GPT-4o Vision...`);
+  
+  // Fetch the image ourselves and convert to base64 (WheelPros CDN blocks OpenAI)
+  const base64Image = await fetchImageAsBase64(imageUrl);
+  
+  if (!base64Image) {
+    // Fallback if we can't fetch the image
+    const finishDesc = wheelFinish ? ` in ${wheelFinish} finish` : "";
+    console.log(`[wheelMockup] Cannot fetch image, using fallback with finish: ${wheelFinish || 'none provided'}`);
+    return `${wheelName} aftermarket wheel${finishDesc} with aggressive off-road styling, deep lip, and beadlock-style accents`;
+  }
   
   try {
     const response = await openai.chat.completions.create({
@@ -145,7 +181,7 @@ Keep description under 100 words but highly specific.`
             },
             {
               type: "image_url",
-              image_url: { url: imageUrl, detail: "high" },
+              image_url: { url: base64Image, detail: "high" },
             },
           ],
         },
