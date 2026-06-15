@@ -4,14 +4,17 @@
  * POST /api/jake/mockup
  * 
  * Generates visual inspiration mockups showing wheel/tire setups on vehicles.
+ * Uses image reference with high fidelity to preserve wheel design.
  * For VISUAL INSPIRATION ONLY - not fitment verification.
+ * 
+ * @updated 2026-06-15 - Switch to wheelMockup with image reference
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import { generateMockup, MockupRequest, MOCKUP_DISCLAIMER, MOCKUP_ERROR_CODES } from "@/lib/jake/mockup";
+import { generateWheelMockup, WheelMockupRequest, MOCKUP_DISCLAIMER } from "@/lib/jake/wheelMockup";
 
 export const runtime = "nodejs";
-export const maxDuration = 90; // Image generation can take up to 60s
+export const maxDuration = 180; // Image generation with reference can take longer
 
 export async function POST(req: NextRequest) {
   try {
@@ -27,89 +30,97 @@ export async function POST(req: NextRequest) {
       );
     }
     
-    if (!build?.wheelStyle || !build?.wheelSize || !build?.tireStyle) {
+    if (!build?.wheelStyle || !build?.wheelSize) {
       return NextResponse.json(
-        { error: "Missing required build fields (wheelStyle, wheelSize, tireStyle)" },
+        { error: "Missing required build fields (wheelStyle, wheelSize)" },
         { status: 400 }
       );
     }
     
-    // Validate build style
-    const validBuildStyles = ["stock", "leveled", "lifted-2", "lifted-4", "lifted-6", "lowered"];
-    if (build.style && !validBuildStyles.includes(build.style)) {
-      build.style = "stock";
+    // REQUIRED: wheelImageUrl for accurate wheel reproduction
+    if (!build?.wheelImageUrl) {
+      return NextResponse.json(
+        { 
+          error: "Missing wheelImageUrl - required for accurate wheel mockups",
+          hint: "Pass the wheel product imageUrl from search results"
+        },
+        { status: 400 }
+      );
     }
     
-    // Validate tire style
-    const validTireStyles = ["all-terrain", "mud-terrain", "highway", "performance", "all-season"];
-    if (!validTireStyles.includes(build.tireStyle)) {
-      build.tireStyle = "all-terrain";
+    console.log(`[Jake Mockup] ═══════════════════════════════════════════════════`);
+    console.log(`[Jake Mockup] ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}`);
+    console.log(`[Jake Mockup] Wheel: ${build.wheelSize}" ${build.wheelStyle}`);
+    console.log(`[Jake Mockup] Image URL: ${build.wheelImageUrl.substring(0, 60)}...`);
+    console.log(`[Jake Mockup] Lift: ${build.style || "stock"}`);
+    
+    // Parse wheel brand/model from wheelStyle if not provided separately
+    let wheelBrand = build.wheelBrand || "";
+    let wheelModel = build.wheelModel || "";
+    
+    if (!wheelBrand && build.wheelStyle) {
+      // Try to parse "Fuel Flame Platinum Bronze" -> brand: "Fuel", model: "Flame Platinum Bronze"
+      const parts = build.wheelStyle.split(" ");
+      if (parts.length >= 2) {
+        wheelBrand = parts[0];
+        wheelModel = parts.slice(1).join(" ");
+      } else {
+        wheelBrand = build.wheelStyle;
+        wheelModel = "";
+      }
     }
     
-    console.log(`[Jake Mockup] Generating: ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} with ${build.wheelStyle}`);
-    if (build.wheelImageUrl) {
-      console.log(`[Jake Mockup] Using customer-provided wheel image URL`);
-    } else if (build.wheelPartNumber) {
-      console.log(`[Jake Mockup] Wheel PN: ${build.wheelPartNumber}`);
-    }
-    if (build.tirePartNumber) {
-      console.log(`[Jake Mockup] Tire PN: ${build.tirePartNumber}`);
-    }
+    // Convert lift style
+    let liftStyle = build.style || "stock";
+    if (liftStyle === "lifted") liftStyle = "4 inch lift"; // Default lift
+    if (liftStyle === "lifted-2") liftStyle = "2 inch lift";
+    if (liftStyle === "lifted-4") liftStyle = "4 inch lift";
+    if (liftStyle === "lifted-6") liftStyle = "6 inch lift";
     
-    const request: MockupRequest = {
+    const request: WheelMockupRequest = {
       vehicle: {
         year: parseInt(vehicle.year),
         make: vehicle.make,
         model: vehicle.model,
-        trim: vehicle.trim,
         color: vehicle.color,
       },
-      build: {
-        style: build.style || "stock",
-        wheelStyle: build.wheelStyle,
-        wheelSize: parseInt(build.wheelSize),
-        tireStyle: build.tireStyle,
-        tireSize: build.tireSize,
-        // Phase 2: Tire brand/model
-        tireBrand: build.tireBrand,
-        tireModel: build.tireModel,
-        // Phase 3: Part numbers for image lookup
-        wheelPartNumber: build.wheelPartNumber,
-        tirePartNumber: build.tirePartNumber,
-        // Phase 4: Direct wheel image URL (customer-provided)
-        wheelImageUrl: build.wheelImageUrl,
+      wheel: {
+        brand: wheelBrand,
+        model: wheelModel,
+        imageUrl: build.wheelImageUrl,
+        size: parseInt(build.wheelSize),
       },
-      sessionId: body.sessionId,
+      tire: build.tireSize ? { size: build.tireSize } : undefined,
+      lift: liftStyle,
     };
     
-    const result = await generateMockup(request);
+    const result = await generateWheelMockup(request);
     
     if (!result.success) {
-      console.error(`[Jake Mockup] Failed: ${result.errorCode} - ${result.error}`);
+      console.error(`[Jake Mockup] ❌ Failed: ${result.error}`);
       return NextResponse.json(
         { 
           success: false,
           error: result.error || "Generation failed",
-          errorCode: result.errorCode || MOCKUP_ERROR_CODES.UNKNOWN,
           disclaimer: MOCKUP_DISCLAIMER,
-          generationTime: result.generationTime,
+          generationTime: result.generationTimeMs,
+          confidence: result.confidence || "low",
         },
         { status: 500 }
       );
     }
     
-    console.log(`[Jake Mockup] Success: ${result.generationMethod}, ${result.generationTime}ms, cached: ${result.cached}, confidence: ${result.confidence}`);
+    console.log(`[Jake Mockup] ✅ Success: ${result.method}, ${result.generationTimeMs}ms, cached: ${result.cached}`);
+    console.log(`[Jake Mockup] ═══════════════════════════════════════════════════`);
     
     return NextResponse.json({
       success: true,
       imageUrl: result.imageUrl,
-      disclaimer: result.disclaimer,
-      generationMethod: result.generationMethod,
+      disclaimer: MOCKUP_DISCLAIMER,
+      generationMethod: result.method,
       cached: result.cached,
-      generationTime: result.generationTime,
-      // Phase 2: Include confidence and product metadata
+      generationTime: result.generationTimeMs,
       confidence: result.confidence,
-      productMeta: result.productMeta,
     });
     
   } catch (error) {
@@ -128,7 +139,8 @@ export async function POST(req: NextRequest) {
 export async function GET() {
   return NextResponse.json({
     status: "ok",
-    service: "jake-mockup",
+    service: "jake-mockup-v7",
     disclaimer: MOCKUP_DISCLAIMER,
+    features: ["image-reference", "input_fidelity:high"],
   });
 }

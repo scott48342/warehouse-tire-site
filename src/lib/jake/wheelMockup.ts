@@ -1,14 +1,15 @@
 /**
  * Jake AI Wheel Mockup Generator
  * 
- * Direct OpenAI image generation for wheel mockups.
- * Simple, clean, no legacy visualizer dependencies.
+ * Uses GPT-4o Vision to analyze wheel + gpt-image-1 to generate mockup.
+ * With detailed wheel analysis for accurate reproduction.
  * 
  * @created 2026-06-15
+ * @updated 2026-06-15 - Use chat completions + images API (fallback from Responses API)
  */
 
 import OpenAI from "openai";
-import { put } from "@vercel/blob";
+import { put, list } from "@vercel/blob";
 import * as crypto from "crypto";
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -26,12 +27,12 @@ export interface WheelMockupRequest {
     brand: string;
     model: string;
     imageUrl: string;
-    size: number; // diameter in inches
+    size: number;
   };
   tire?: {
-    size?: string; // e.g., "35x12.50R20"
+    size?: string;
   };
-  lift?: string; // e.g., "stock", "leveled", "4 inch lift"
+  lift?: string;
 }
 
 export interface WheelMockupResult {
@@ -40,6 +41,8 @@ export interface WheelMockupResult {
   error?: string;
   cached: boolean;
   generationTimeMs?: number;
+  confidence?: "high" | "medium" | "low";
+  method?: "image-reference" | "text-only" | "cached";
 }
 
 export const MOCKUP_DISCLAIMER = "AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.";
@@ -75,22 +78,17 @@ function getCacheKey(req: WheelMockupRequest): string {
     req.wheel.size,
     req.tire?.size?.replace(/[^a-z0-9]/gi, "") || "stock",
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
-    // Hash the wheel image URL for uniqueness
     crypto.createHash("md5").update(req.wheel.imageUrl).digest("hex").substring(0, 8),
   ].join("-");
   
-  return `jake-mockups/${parts}.png`;
+  return `jake-mockups/v8/${parts}.png`;
 }
 
-// Simple in-memory cache check via Vercel Blob list
 async function checkCache(cacheKey: string): Promise<string | null> {
   try {
-    const { list } = await import("@vercel/blob");
     const { blobs } = await list({ prefix: cacheKey.replace(".png", ""), limit: 1 });
-    
     if (blobs.length > 0) {
       const blob = blobs[0];
-      // 7 day TTL
       const ageMs = Date.now() - new Date(blob.uploadedAt).getTime();
       if (ageMs < 7 * 24 * 60 * 60 * 1000) {
         return blob.url;
@@ -103,86 +101,103 @@ async function checkCache(cacheKey: string): Promise<string | null> {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// WHEEL IMAGE ANALYSIS (GPT-4o Vision)
+// WHEEL ANALYSIS WITH GPT-4O VISION (DETAILED)
 // ═══════════════════════════════════════════════════════════════════════════
 
-async function analyzeWheelImage(imageUrl: string, wheelName: string): Promise<string> {
+async function analyzeWheelImageDetailed(imageUrl: string, wheelName: string): Promise<string> {
   const openai = getOpenAI();
+  
+  console.log(`[wheelMockup] Analyzing wheel with GPT-4o Vision...`);
   
   try {
     const response = await openai.chat.completions.create({
       model: "gpt-4o",
-      max_tokens: 300,
+      max_tokens: 500,
       messages: [
+        {
+          role: "system",
+          content: `You are a wheel design analyst. Describe wheels with extreme precision for image generation.
+Focus on exact details that distinguish this wheel from others:
+- Spoke count (e.g., "5 thick Y-spokes", "7 thin straight spokes", "6 split-spoke pairs")
+- Spoke shape (straight, curved, twisted, forked, stepped)
+- Finish and color (matte bronze, gloss black, machined silver, two-tone)
+- Lip style (deep lip, flush, stepped, machined lip)
+- Center cap design
+- Any accents (milled edges, colored bolts, contrast details)
+Be specific enough that an AI could recreate this exact wheel.`
+        },
         {
           role: "user",
           content: [
             {
               type: "text",
-              text: `Describe this ${wheelName} wheel in 2-3 sentences for image generation. Focus on: spoke pattern, finish/color, lip style, overall aesthetic. Be specific and visual.`,
+              text: `Describe this ${wheelName} wheel in precise detail for image generation. Include spoke count, spoke pattern/shape, finish color, lip style, and center cap. Be extremely specific so the wheel can be accurately reproduced.`,
             },
             {
               type: "image_url",
-              image_url: { url: imageUrl },
+              image_url: { url: imageUrl, detail: "high" },
             },
           ],
         },
       ],
     });
     
-    return response.choices[0]?.message?.content || "";
-  } catch (error) {
-    console.error("[wheelMockup] Vision analysis failed:", error);
-    return "";
+    const description = response.choices[0]?.message?.content || "";
+    console.log(`[wheelMockup] Wheel analysis: ${description.substring(0, 150)}...`);
+    return description;
+  } catch (error: any) {
+    console.error("[wheelMockup] Vision analysis failed:", error?.message || error);
+    // Return basic description on failure
+    return `${wheelName} aftermarket wheel`;
   }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// BUILD PROMPT
+// BUILD DETAILED PROMPT
 // ═══════════════════════════════════════════════════════════════════════════
 
 function buildPrompt(req: WheelMockupRequest, wheelDescription: string): string {
   const { vehicle, wheel, tire, lift } = req;
   
-  // Determine stance
   let stance = "factory ride height";
   if (lift) {
     const liftLower = lift.toLowerCase();
-    if (liftLower.includes("level")) {
-      stance = "leveled stance with leveling kit";
-    } else if (liftLower.includes("6")) {
-      stance = "6-inch suspension lift, aggressive lifted stance";
-    } else if (liftLower.includes("4")) {
-      stance = "4-inch suspension lift, lifted stance";
-    } else if (liftLower.includes("2") || liftLower.includes("3")) {
-      stance = "2-3 inch lift, mild lift";
-    } else if (liftLower.includes("lower")) {
-      stance = "lowered stance, dropped suspension";
-    }
+    if (liftLower.includes("level")) stance = "leveled stance";
+    else if (liftLower.includes("6")) stance = "6-inch lift, tall aggressive stance";
+    else if (liftLower.includes("4")) stance = "4-inch lift, lifted stance";
+    else if (liftLower.includes("2") || liftLower.includes("3")) stance = "2-3 inch lift";
+    else if (liftLower.includes("lower")) stance = "lowered stance";
   }
   
-  // Tire description
-  let tireDesc = "matching tires";
+  let tireDesc = "matching all-terrain tires";
   if (tire?.size) {
     tireDesc = `${tire.size} tires`;
     if (tire.size.includes("12.50") || tire.size.includes("13.50")) {
-      tireDesc += ", aggressive all-terrain look";
+      tireDesc += " with aggressive all-terrain tread";
     }
   }
-  
-  const prompt = `Professional dealership photograph of a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}.
 
-VEHICLE: ${vehicle.color} paint, ${stance}, clean and detailed.
+  return `Professional dealership photograph of a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}.
 
-WHEELS: ${wheel.size}-inch ${wheel.brand} ${wheel.model} aftermarket wheels. ${wheelDescription || "Custom aftermarket wheel design."}
+WHEEL (MUST MATCH EXACTLY):
+${wheel.size}-inch ${wheel.brand} ${wheel.model} wheels.
+${wheelDescription}
+The wheels MUST have the exact spoke count, pattern, finish color, and design described above.
 
-TIRES: ${tireDesc}.
+VEHICLE:
+- Color: ${vehicle.color}
+- Stance: ${stance}
+- Tires: ${tireDesc}
 
-PHOTOGRAPHY: Front three-quarter angle, outdoor natural lighting, clean background, dealership/showroom quality. Sharp focus on wheels and vehicle details. Realistic proportions and shadows.
+PHOTOGRAPHY:
+- Front three-quarter angle, driver side visible
+- Outdoor natural lighting
+- Clean background (showroom, parking lot, or scenic)
+- Sharp focus on wheels
+- Professional automotive quality
+- Realistic proportions
 
-Single vehicle only. No text, watermarks, or logos. Photorealistic.`;
-
-  return prompt;
+Single vehicle. No text/watermarks. Photorealistic.`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -195,41 +210,95 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
   console.log(`[wheelMockup] ═══════════════════════════════════════════════════`);
   console.log(`[wheelMockup] ${req.vehicle.color} ${req.vehicle.year} ${req.vehicle.make} ${req.vehicle.model}`);
   console.log(`[wheelMockup] Wheel: ${req.wheel.size}" ${req.wheel.brand} ${req.wheel.model}`);
-  console.log(`[wheelMockup] Lift: ${req.lift || "stock"}, Tire: ${req.tire?.size || "stock"}`);
+  console.log(`[wheelMockup] Wheel image: ${req.wheel.imageUrl.substring(0, 60)}...`);
+  console.log(`[wheelMockup] Lift: ${req.lift || "stock"}`);
   
   try {
-    // Check cache first
+    // Check cache
     const cacheKey = getCacheKey(req);
     const cached = await checkCache(cacheKey);
     if (cached) {
-      console.log(`[wheelMockup] ✅ Cache hit`);
-      return { success: true, imageUrl: cached, cached: true, generationTimeMs: Date.now() - startTime };
+      console.log(`[wheelMockup] ✅ Cache hit (v8)`);
+      return { 
+        success: true, 
+        imageUrl: cached, 
+        cached: true, 
+        generationTimeMs: Date.now() - startTime,
+        confidence: "medium",
+        method: "cached"
+      };
     }
     
-    // Analyze wheel image with GPT-4o Vision
-    console.log(`[wheelMockup] Analyzing wheel image...`);
-    const wheelDescription = await analyzeWheelImage(
+    // Step 1: Detailed wheel analysis with GPT-4o Vision
+    const wheelDescription = await analyzeWheelImageDetailed(
       req.wheel.imageUrl,
       `${req.wheel.brand} ${req.wheel.model}`
     );
-    console.log(`[wheelMockup] Wheel: ${wheelDescription.substring(0, 80)}...`);
     
-    // Build prompt
+    // Step 2: Build detailed prompt
     const prompt = buildPrompt(req, wheelDescription);
-    console.log(`[wheelMockup] Generating image...`);
+    console.log(`[wheelMockup] Generating image with gpt-image-1...`);
     
-    // Generate with OpenAI
+    // Step 3: Try Responses API with image reference first, fall back to images.generate
     const openai = getOpenAI();
-    const response = await openai.images.generate({
-      model: "gpt-image-1",
-      prompt,
-      n: 1,
-      size: "1536x1024", // Landscape for vehicle
-    });
+    let response: any;
+    let usedResponsesAPI = false;
+    
+    try {
+      // Try Responses API with input_fidelity for better wheel matching
+      console.log(`[wheelMockup] Trying Responses API with input_fidelity:high...`);
+      const responsesResult = await openai.responses.create({
+        model: "gpt-4o",
+        input: [
+          {
+            role: "user",
+            content: [
+              { type: "input_text", text: prompt },
+              { 
+                type: "input_image", 
+                image_url: req.wheel.imageUrl,
+                detail: "high",
+              }
+            ]
+          }
+        ],
+        tools: [{ 
+          type: "image_generation",
+          input_fidelity: "high",
+          model: "gpt-image-1",
+          size: "1536x1024",
+        }],
+      });
+      
+      // Extract image from response
+      for (const item of responsesResult.output || []) {
+        if (item.type === "image_generation_call" && (item as any).status === "completed") {
+          const imgResult = (item as any).result;
+          if (imgResult) {
+            response = { data: [{ b64_json: imgResult }] };
+            usedResponsesAPI = true;
+            console.log(`[wheelMockup] ✅ Responses API succeeded!`);
+            break;
+          }
+        }
+      }
+      
+      if (!usedResponsesAPI) {
+        throw new Error("No image in Responses API output");
+      }
+    } catch (responsesError: any) {
+      console.log(`[wheelMockup] Responses API unavailable (${responsesError?.message?.substring(0, 50)}), using images.generate`);
+      response = await openai.images.generate({
+        model: "gpt-image-1",
+        prompt,
+        n: 1,
+        size: "1536x1024",
+      });
+    }
     
     const imageData = response.data?.[0];
     if (!imageData?.b64_json && !imageData?.url) {
-      throw new Error("No image data returned");
+      throw new Error("No image data returned from generation");
     }
     
     // Get image buffer
@@ -241,8 +310,8 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       imageBuffer = Buffer.from(await imgRes.arrayBuffer());
     }
     
-    // Save to Vercel Blob
-    console.log(`[wheelMockup] Saving to CDN...`);
+    // Save to CDN
+    console.log(`[wheelMockup] Saving to CDN (${Math.round(imageBuffer.length / 1024)}KB)...`);
     const blob = await put(cacheKey, imageBuffer, {
       access: "public",
       contentType: "image/png",
@@ -251,6 +320,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     
     const elapsed = Date.now() - startTime;
     console.log(`[wheelMockup] ✅ Done in ${elapsed}ms: ${blob.url}`);
+    console.log(`[wheelMockup] Method: detailed-vision-analysis (v8)`);
     console.log(`[wheelMockup] ═══════════════════════════════════════════════════`);
     
     return {
@@ -258,17 +328,21 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       imageUrl: blob.url,
       cached: false,
       generationTimeMs: elapsed,
+      // High confidence if Responses API with image reference, medium for text-only
+      confidence: usedResponsesAPI ? "high" : "medium",
+      method: usedResponsesAPI ? "image-reference" : "text-only",
     };
     
-  } catch (error) {
+  } catch (error: any) {
     const elapsed = Date.now() - startTime;
-    console.error(`[wheelMockup] ❌ Failed after ${elapsed}ms:`, error);
+    console.error(`[wheelMockup] ❌ Failed after ${elapsed}ms:`, error?.message || error);
     
     return {
       success: false,
       error: error instanceof Error ? error.message : "Generation failed",
       cached: false,
       generationTimeMs: elapsed,
+      confidence: "low",
     };
   }
 }
