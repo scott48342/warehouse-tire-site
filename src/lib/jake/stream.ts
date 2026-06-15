@@ -327,7 +327,7 @@ The customer is inspired and ready to build. Help them turn this inspiration int
             // Handle mockup results (Phase 4: Include analytics data, Phase 2/3: Include confidence and image tracking)
             if (toolName === "generate_wheel_mockup") {
               if (resultObj.success && resultObj.imageUrl) {
-                console.log(`[Jake Stream] Mockup succeeded: ${resultObj.generationMethod}, cached: ${resultObj.cached}, time: ${resultObj.generationTime}ms, confidence: ${resultObj.confidence}`);
+                console.log(`[Jake Stream] Mockup succeeded: method=${resultObj.method}, cached=${resultObj.cached}, time=${resultObj.generationTimeMs}ms, confidence=${resultObj.confidence}`);
                 if (resultObj.productMeta) {
                   console.log(`[Jake Stream] Wheel image found: ${resultObj.productMeta.wheelImageFound}, Tire image found: ${resultObj.productMeta.tireImageFound}`);
                 }
@@ -341,7 +341,8 @@ The customer is inspired and ready to build. Help them turn this inspiration int
                     // Phase 4: Analytics data
                     generationTime: resultObj.generationTimeMs || resultObj.generationTime,
                     cached: resultObj.cached,
-                    generationMethod: resultObj.cached ? "cached" : "generated",
+                    // Pass through actual method: image-reference (high accuracy) vs text-only (may drift)
+                    generationMethod: resultObj.method || (resultObj.cached ? "cached" : "generated"),
                     // Phase 2/3: Confidence and product info
                     confidence: resultObj.confidence || "medium",
                     tireBrand: input.tireBrand ? String(input.tireBrand) : undefined,
