@@ -325,7 +325,7 @@ The customer is inspired and ready to build. Help them turn this inspiration int
             }
             
             // Handle mockup results (Phase 4: Include analytics data, Phase 2/3: Include confidence and image tracking)
-            if (toolName === "generate_visual_mockup") {
+            if (toolName === "generate_wheel_mockup") {
               if (resultObj.success && resultObj.imageUrl) {
                 console.log(`[Jake Stream] Mockup succeeded: ${resultObj.generationMethod}, cached: ${resultObj.cached}, time: ${resultObj.generationTime}ms, confidence: ${resultObj.confidence}`);
                 if (resultObj.productMeta) {
@@ -337,19 +337,19 @@ The customer is inspired and ready to build. Help them turn this inspiration int
                     imageUrl: resultObj.imageUrl,
                     disclaimer: resultObj.disclaimer,
                     vehicle: `${input.year} ${input.make} ${input.model}`,
-                    wheelStyle: String(input.wheelStyle),
+                    wheelStyle: `${input.wheelBrand} ${input.wheelModel} ${input.wheelSize}"`,
                     // Phase 4: Analytics data
-                    generationTime: resultObj.generationTime,
+                    generationTime: resultObj.generationTimeMs || resultObj.generationTime,
                     cached: resultObj.cached,
-                    generationMethod: resultObj.generationMethod,
+                    generationMethod: resultObj.cached ? "cached" : "generated",
                     // Phase 2/3: Confidence and product info
-                    confidence: resultObj.confidence,
-                    tireBrand: input.tireBrand ? String(input.tireBrand) : resultObj.productMeta?.tireBrand,
-                    tireModel: input.tireModel ? String(input.tireModel) : resultObj.productMeta?.tireModel,
+                    confidence: resultObj.confidence || "medium",
+                    tireBrand: input.tireBrand ? String(input.tireBrand) : undefined,
+                    tireModel: input.tireModel ? String(input.tireModel) : undefined,
                     // Phase 3: Image lookup tracking
-                    wheelImageFound: resultObj.productMeta?.wheelImageFound,
-                    tireImageFound: resultObj.productMeta?.tireImageFound,
-                    vehicleColor: resultObj.productMeta?.vehicleColor || String(input.color),
+                    wheelImageFound: true, // We require wheelImageUrl
+                    tireImageFound: false,
+                    vehicleColor: String(input.color),
                   },
                 } as any;
               } else {
