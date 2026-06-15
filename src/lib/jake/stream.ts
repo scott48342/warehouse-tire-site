@@ -66,10 +66,14 @@ export type StreamEvent =
       generationTime?: number;
       cached?: boolean;
       generationMethod?: "gpt-image" | "cached";
-      // Phase 2 Enhancement: Confidence level
+      // Phase 2/3 Enhancement: Confidence level and product data
       confidence?: "high" | "medium" | "concept";
       tireBrand?: string;
       tireModel?: string;
+      // Phase 3: Image lookup tracking
+      wheelImageFound?: boolean;
+      tireImageFound?: boolean;
+      vehicleColor?: string;
     } 
   }
   | { type: "done"; meta: { duration_ms: number; toolsUsed: string[] } }
@@ -306,10 +310,13 @@ The customer is inspired and ready to build. Help them turn this inspiration int
               cartUrl = resultObj.cartUrl;
             }
             
-            // Handle mockup results (Phase 4: Include analytics data, Phase 2: Include confidence)
+            // Handle mockup results (Phase 4: Include analytics data, Phase 2/3: Include confidence and image tracking)
             if (toolName === "generate_visual_mockup") {
               if (resultObj.success && resultObj.imageUrl) {
                 console.log(`[Jake Stream] Mockup succeeded: ${resultObj.generationMethod}, cached: ${resultObj.cached}, time: ${resultObj.generationTime}ms, confidence: ${resultObj.confidence}`);
+                if (resultObj.productMeta) {
+                  console.log(`[Jake Stream] Wheel image found: ${resultObj.productMeta.wheelImageFound}, Tire image found: ${resultObj.productMeta.tireImageFound}`);
+                }
                 yield {
                   type: "mockup",
                   mockup: {
@@ -321,10 +328,14 @@ The customer is inspired and ready to build. Help them turn this inspiration int
                     generationTime: resultObj.generationTime,
                     cached: resultObj.cached,
                     generationMethod: resultObj.generationMethod,
-                    // Phase 2: Confidence and tire info
+                    // Phase 2/3: Confidence and product info
                     confidence: resultObj.confidence,
                     tireBrand: input.tireBrand ? String(input.tireBrand) : resultObj.productMeta?.tireBrand,
                     tireModel: input.tireModel ? String(input.tireModel) : resultObj.productMeta?.tireModel,
+                    // Phase 3: Image lookup tracking
+                    wheelImageFound: resultObj.productMeta?.wheelImageFound,
+                    tireImageFound: resultObj.productMeta?.tireImageFound,
+                    vehicleColor: resultObj.productMeta?.vehicleColor || String(input.color),
                   },
                 } as any;
               } else {

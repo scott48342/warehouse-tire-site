@@ -230,9 +230,10 @@ USE FOR: Visual inspiration ONLY - NOT for fitment verification!
 WHEN TO USE: After showing product options, offer: "Want to see a quick visual mockup of this on your vehicle?"
 ALWAYS INCLUDE: The disclaimer that this is for visual inspiration only.
 
-IMPORTANT: Include tireBrand and tireModel when you know them! This dramatically improves mockup accuracy.
-- "Nitto Terra Grappler G2" looks different from "BFGoodrich KO2"
-- "Fuel Rebel" looks different from "Moto Metal Mason"
+ACCURACY TIPS (Phase 3):
+1. PART NUMBERS: Include wheelPartNumber and tirePartNumber when you have them from search results! This enables the system to look up actual product images for reference.
+2. TIRE DETAILS: Include tireBrand and tireModel for better tire representation.
+3. VEHICLE COLOR: Be specific (black, white, red, silver, gray, blue, etc.) - the color will be enforced exactly.
 
 After generating, say something like:
 "Here's a mockup to give you an idea of the vibe! This is for visual inspiration – the actual products may look slightly different. I'll verify exact fitment before we build your cart."`,
@@ -243,19 +244,21 @@ After generating, say something like:
         make: { type: "string", description: "Vehicle make" },
         model: { type: "string", description: "Vehicle model" },
         trim: { type: "string", description: "Vehicle trim (optional)" },
-        color: { type: "string", description: "Vehicle color (e.g., black, white, red, silver)" },
+        color: { type: "string", description: "Vehicle color - MUST be specific (black, white, red, silver, gray, blue, etc.)" },
         buildStyle: { 
           type: "string", 
           description: "Build style: stock, leveled, lifted-2, lifted-4, lifted-6, or lowered"
         },
         wheelStyle: { type: "string", description: "Wheel description (brand model finish, e.g., 'Fuel Rebel D679 Matte Black')" },
         wheelSize: { type: "number", description: "Wheel diameter in inches (e.g., 20)" },
+        wheelPartNumber: { type: "string", description: "Wheel SKU/part number from search results - enables image reference lookup!" },
         tireStyle: { 
           type: "string", 
           description: "Tire terrain type: all-terrain, mud-terrain, highway, performance, or all-season"
         },
-        tireBrand: { type: "string", description: "Tire brand (e.g., 'Nitto', 'Toyo', 'BFGoodrich') - IMPORTANT for accuracy!" },
-        tireModel: { type: "string", description: "Tire model (e.g., 'Terra Grappler G2', 'Open Country AT3') - IMPORTANT for accuracy!" },
+        tireBrand: { type: "string", description: "Tire brand (e.g., 'Nitto', 'Toyo', 'BFGoodrich')" },
+        tireModel: { type: "string", description: "Tire model (e.g., 'Terra Grappler G2', 'Open Country AT3')" },
+        tirePartNumber: { type: "string", description: "Tire SKU/part number from search results - enables image reference lookup!" },
         tireSize: { type: "string", description: "Tire size (e.g., '285/50R22', '35x12.50R20')" }
       },
       required: ["year", "make", "model", "color", "wheelStyle", "wheelSize", "tireStyle"]
@@ -516,12 +519,18 @@ export async function executeTool(
     }
     
     case "generate_visual_mockup": {
-      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, tireStyle, tireBrand, tireModel, tireSize } = input;
+      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, wheelPartNumber, tireStyle, tireBrand, tireModel, tirePartNumber, tireSize } = input;
       
       const url = `${baseUrl}/api/jake/mockup`;
-      console.log(`[Jake Tool] generate_visual_mockup: ${year} ${make} ${model} with ${wheelStyle}`);
+      console.log(`[Jake Tool] generate_visual_mockup: ${color} ${year} ${make} ${model} with ${wheelStyle}`);
+      if (wheelPartNumber) {
+        console.log(`[Jake Tool] Wheel PN: ${wheelPartNumber}`);
+      }
       if (tireBrand && tireModel) {
         console.log(`[Jake Tool] Tire: ${tireBrand} ${tireModel}`);
+      }
+      if (tirePartNumber) {
+        console.log(`[Jake Tool] Tire PN: ${tirePartNumber}`);
       }
       
       try {
@@ -545,6 +554,9 @@ export async function executeTool(
               tireBrand: tireBrand ? String(tireBrand) : undefined,
               tireModel: tireModel ? String(tireModel) : undefined,
               tireSize: tireSize ? String(tireSize) : undefined,
+              // Phase 3: Include part numbers for image lookup
+              wheelPartNumber: wheelPartNumber ? String(wheelPartNumber) : undefined,
+              tirePartNumber: tirePartNumber ? String(tirePartNumber) : undefined,
             },
           }),
         });

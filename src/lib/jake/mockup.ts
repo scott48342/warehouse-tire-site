@@ -1,14 +1,14 @@
 /**
- * Jake Visual Mockup Generator (Phase 2 Enhanced)
+ * Jake Visual Mockup Generator (Phase 3 Enhanced)
  * 
  * Generates visual inspiration mockups showing wheel/tire setups on vehicles.
  * Uses gpt-image-1 (GPT-4o image generation) as the primary generator.
  * 
- * Phase 2 Enhancements:
- * - Rich product descriptions for better visual accuracy
- * - Product image references when available
- * - Confidence level tracking
- * - Product metadata storage
+ * Phase 3 Enhancements:
+ * - Product image lookup by part number
+ * - GPT-4o Vision analysis of actual product images
+ * - Vehicle color as hard requirement
+ * - Enhanced analytics tracking
  * 
  * IMPORTANT: These are for VISUAL INSPIRATION ONLY, not fitment verification.
  * Always include disclaimer with generated images.
@@ -24,11 +24,11 @@ import { galleryBuilds, generateBuildSlug } from "@/lib/fitment-db/schema-galler
 import {
   buildWheelVisualDescription,
   buildTireVisualDescription,
-  getMockupConfidence,
   parseWheelStyle,
   type WheelProduct,
   type TireProduct,
 } from "./productVisuals";
+import { analyzeProducts, type ProductAnalysisResult } from "./productImageAnalysis";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -50,6 +50,9 @@ export interface MockupRequest {
     tireSize?: string;  // "35x12.50R20" (optional context)
     tireBrand?: string; // "Nitto" (optional for better accuracy)
     tireModel?: string; // "Terra Grappler G2" (optional for better accuracy)
+    // Phase 3: Part numbers for image lookup
+    wheelPartNumber?: string;
+    tirePartNumber?: string;
   };
   // Phase 2: Product metadata for better accuracy
   product?: {
@@ -68,16 +71,19 @@ export interface MockupResult {
   generationMethod: "gpt-image" | "cached";
   cached: boolean;
   generationTime?: number;
-  // Phase 2: Confidence tracking
+  // Phase 2/3: Confidence tracking
   confidence?: "high" | "medium" | "concept";
-  // Phase 2: Product metadata for analytics
+  // Phase 3: Enhanced product metadata for analytics
   productMeta?: {
     wheelBrand?: string;
     wheelModel?: string;
     wheelSku?: string;
+    wheelImageFound?: boolean;
     tireBrand?: string;
     tireModel?: string;
     tireSku?: string;
+    tireImageFound?: boolean;
+    vehicleColor?: string;
   };
 }
 
@@ -98,6 +104,21 @@ const BUILD_STYLE_PROMPTS: Record<string, string> = {
   "lifted-4": "4-inch suspension lift, elevated aggressive stance, room for larger tires",
   "lifted-6": "6-inch suspension lift kit, towering aggressive stance, significant ground clearance",
   "lowered": "lowered suspension, aggressive low stance, tucked wheel fitment",
+};
+
+// Phase 3: Vehicle color enforcement
+const COLOR_REQUIREMENTS: Record<string, string> = {
+  "black": "IMPORTANT: Vehicle paint color MUST be pure black. Do not use dark gray or charcoal. The vehicle is BLACK.",
+  "white": "IMPORTANT: Vehicle paint color MUST be pure white. Do not use cream or off-white. The vehicle is WHITE.",
+  "red": "IMPORTANT: Vehicle paint color MUST be red. Do not substitute with maroon or burgundy. The vehicle is RED.",
+  "blue": "IMPORTANT: Vehicle paint color MUST be blue. Match the specified shade. The vehicle is BLUE.",
+  "silver": "IMPORTANT: Vehicle paint color MUST be silver/metallic silver. The vehicle is SILVER.",
+  "gray": "IMPORTANT: Vehicle paint color MUST be gray/charcoal. The vehicle is GRAY.",
+  "grey": "IMPORTANT: Vehicle paint color MUST be gray/charcoal. The vehicle is GRAY.",
+  "green": "IMPORTANT: Vehicle paint color MUST be green. The vehicle is GREEN.",
+  "orange": "IMPORTANT: Vehicle paint color MUST be orange. The vehicle is ORANGE.",
+  "yellow": "IMPORTANT: Vehicle paint color MUST be yellow. The vehicle is YELLOW.",
+  "brown": "IMPORTANT: Vehicle paint color MUST be brown. The vehicle is BROWN.",
 };
 
 // Error codes for analytics
@@ -144,11 +165,12 @@ function generateCacheKey(request: MockupRequest): string {
     request.build.tireStyle,
     // Hash the wheel style to keep key manageable
     crypto.createHash("md5").update(request.build.wheelStyle.toLowerCase()).digest("hex").substring(0, 8),
-    // Phase 2: Include tire brand/model in cache key if provided
-    request.build.tireBrand ? crypto.createHash("md5").update(request.build.tireBrand.toLowerCase()).digest("hex").substring(0, 4) : "x",
+    // Phase 3: Include part numbers in cache key if provided
+    request.build.wheelPartNumber ? crypto.createHash("md5").update(request.build.wheelPartNumber).digest("hex").substring(0, 4) : "x",
+    request.build.tirePartNumber ? crypto.createHash("md5").update(request.build.tirePartNumber).digest("hex").substring(0, 4) : "x",
   ].join("-");
   
-  return `mockups/${keyParts}.png`;
+  return `mockups/v3/${keyParts}.png`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -181,7 +203,7 @@ async function checkCache(cacheKey: string): Promise<string | null> {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// PHASE 2: ENHANCED PROMPT BUILDER
+// PHASE 3: ENHANCED PROMPT BUILDER WITH IMAGE ANALYSIS
 // ═══════════════════════════════════════════════════════════════════════════
 
 interface PromptBuildResult {
@@ -189,9 +211,11 @@ interface PromptBuildResult {
   confidence: "high" | "medium" | "concept";
   wheelMeta: WheelProduct;
   tireMeta: TireProduct;
+  wheelImageFound: boolean;
+  tireImageFound: boolean;
 }
 
-function buildEnhancedPrompt(request: MockupRequest): PromptBuildResult {
+async function buildEnhancedPrompt(request: MockupRequest): Promise<PromptBuildResult> {
   const { vehicle, build, product } = request;
   
   // Parse wheel style into structured data
@@ -199,6 +223,7 @@ function buildEnhancedPrompt(request: MockupRequest): PromptBuildResult {
   const wheelProduct: WheelProduct = product?.wheel || {
     ...parsedWheel,
     size: `${build.wheelSize}x9`, // Assume common width
+    sku: build.wheelPartNumber,
   };
   
   // Build tire product info
@@ -207,16 +232,57 @@ function buildEnhancedPrompt(request: MockupRequest): PromptBuildResult {
     model: build.tireModel || build.tireStyle.replace("-", " "),
     terrain: build.tireStyle,
     size: build.tireSize,
+    sku: build.tirePartNumber,
   };
   
-  // Get rich visual descriptions
-  const wheelDesc = buildWheelVisualDescription(wheelProduct);
-  const tireDesc = buildTireVisualDescription(tireProduct);
-  const confidence = getMockupConfidence(wheelDesc, tireDesc);
+  // Phase 3: Analyze actual product images if part numbers provided
+  let wheelDescription: string;
+  let tireDescription: string;
+  let wheelImageFound = false;
+  let tireImageFound = false;
+  let analysisConfidence: "high" | "medium" | "concept" = "concept";
   
-  console.log(`[mockup] Wheel description: ${wheelDesc.prompt.substring(0, 80)}...`);
-  console.log(`[mockup] Tire description: ${tireDesc.prompt.substring(0, 80)}...`);
-  console.log(`[mockup] Confidence level: ${confidence}`);
+  if (build.wheelPartNumber || build.tirePartNumber) {
+    console.log(`[mockup] Phase 3: Analyzing product images...`);
+    const analysis = await analyzeProducts(
+      build.wheelPartNumber,
+      build.tirePartNumber,
+      `${wheelProduct.brand} ${wheelProduct.model}`,
+      `${tireProduct.brand} ${tireProduct.model}`
+    );
+    
+    wheelImageFound = analysis.wheelImageFound;
+    tireImageFound = analysis.tireImageFound;
+    analysisConfidence = analysis.overallConfidence;
+    
+    // Use vision-analyzed descriptions if available
+    if (analysis.wheel?.analyzed && analysis.wheel.description) {
+      wheelDescription = analysis.wheel.description;
+      console.log(`[mockup] Using vision-analyzed wheel description`);
+    } else {
+      const fallback = buildWheelVisualDescription(wheelProduct);
+      wheelDescription = fallback.prompt;
+    }
+    
+    if (analysis.tire?.analyzed && analysis.tire.description) {
+      tireDescription = analysis.tire.description;
+      console.log(`[mockup] Using vision-analyzed tire description`);
+    } else {
+      const fallback = buildTireVisualDescription(tireProduct);
+      tireDescription = fallback.prompt;
+    }
+  } else {
+    // Fall back to Phase 2 descriptions
+    const wheelDesc = buildWheelVisualDescription(wheelProduct);
+    const tireDesc = buildTireVisualDescription(tireProduct);
+    wheelDescription = wheelDesc.prompt;
+    tireDescription = tireDesc.prompt;
+    analysisConfidence = wheelDesc.confidence === "high" || tireDesc.confidence === "high" ? "medium" : "concept";
+  }
+  
+  console.log(`[mockup] Wheel description: ${wheelDescription.substring(0, 80)}...`);
+  console.log(`[mockup] Tire description: ${tireDescription.substring(0, 80)}...`);
+  console.log(`[mockup] Confidence level: ${analysisConfidence}`);
   
   // Build vehicle context
   const modelLower = vehicle.model.toLowerCase();
@@ -227,7 +293,7 @@ function buildEnhancedPrompt(request: MockupRequest): PromptBuildResult {
   const isMuscle = /mustang|camaro|challenger|charger|corvette/i.test(modelLower);
   
   let vehicleContext = "";
-  if (isFullSizeTruck) vehicleContext = "full-size American pickup truck, crew cab";
+  if (isFullSizeTruck) vehicleContext = "full-size American pickup truck, crew cab body style";
   else if (isMidSizeTruck) vehicleContext = "mid-size pickup truck";
   else if (isJeep) vehicleContext = "off-road capable SUV, rugged body styling";
   else if (isSUV) vehicleContext = "full-size SUV, premium appearance";
@@ -235,45 +301,63 @@ function buildEnhancedPrompt(request: MockupRequest): PromptBuildResult {
   
   const buildContext = BUILD_STYLE_PROMPTS[build.style] || BUILD_STYLE_PROMPTS.stock;
   
-  // Phase 2: New prompt structure prioritizing wheel/tire accuracy
+  // Phase 3: Vehicle color enforcement
+  const colorLower = vehicle.color.toLowerCase();
+  const colorRequirement = COLOR_REQUIREMENTS[colorLower] || 
+    `IMPORTANT: Vehicle paint color MUST be ${vehicle.color}. Do not change or substitute the color.`;
+  
+  // Phase 3: New prompt structure prioritizing wheel/tire accuracy with color enforcement
   const promptParts = [
     // Photography instruction first
-    "Professional automotive photography of a",
+    "Create a photorealistic professional automotive photograph of a",
     
-    // Vehicle
-    `${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}`,
+    // Vehicle with color enforcement
+    `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
     vehicle.trim ? `${vehicle.trim} trim` : null,
     vehicleContext ? vehicleContext : null,
+    
+    // COLOR REQUIREMENT (Phase 3 - hard requirement)
+    colorRequirement,
     
     // Suspension/stance
     buildContext,
     
-    // MOST IMPORTANT: Wheel description (detailed)
-    `WHEELS: ${wheelDesc.prompt}`,
+    // WHEEL REFERENCE (Phase 3 - from vision analysis or detailed description)
+    `WHEEL REFERENCE: ${wheelProduct.brand} ${wheelProduct.model} ${build.wheelSize}-inch aftermarket wheel. ${wheelDescription}`,
+    wheelImageFound ? "Use the wheel design exactly as described above - match the spoke pattern, finish, and lip style precisely." : null,
     
-    // MOST IMPORTANT: Tire description (detailed)
-    `TIRES: ${tireDesc.prompt}`,
+    // TIRE REFERENCE (Phase 3 - from vision analysis or detailed description)
+    `TIRE REFERENCE: ${tireProduct.brand} ${tireProduct.model}. ${tireDescription}`,
+    tireImageFound ? "Use the tire design exactly as described above - match the tread pattern, sidewall, and shoulder design precisely." : null,
+    build.tireSize ? `Tire size: ${build.tireSize}` : null,
     
     // Photography requirements
-    "front three-quarter view angle showing wheel and tire detail",
-    "natural outdoor lighting with subtle shadows",
-    "clean outdoor background, subtle gradient",
-    "photorealistic rendering",
-    "showroom quality detail",
-    "highly detailed wheel spokes and tire tread pattern",
+    "PHOTOGRAPHY REQUIREMENTS:",
+    "Front three-quarter view angle showing wheel and tire detail clearly",
+    "Natural outdoor lighting with realistic shadows",
+    "Clean outdoor background, subtle gradient",
+    "Dealership-quality professional photography",
+    "Highly detailed wheel spokes and tire tread pattern",
+    "Realistic proportions and fitment",
+    
+    // Critical priorities
+    "CRITICAL PRIORITIES (in order):",
+    "1. Vehicle color must match exactly as specified",
+    "2. Wheel design must match the reference description",
+    "3. Tire appearance must match the reference description",
+    "4. Realistic ride height and stance",
     
     // Negatives
-    "no text overlays",
-    "no watermarks",
-    "no logos on image",
-    "single vehicle only",
+    "Do NOT include: text overlays, watermarks, logos, multiple vehicles, unrealistic elements",
   ];
   
   return {
     prompt: promptParts.filter(Boolean).join(". ") + ".",
-    confidence,
+    confidence: analysisConfidence,
     wheelMeta: wheelProduct,
     tireMeta: tireProduct,
+    wheelImageFound,
+    tireImageFound,
   };
 }
 
@@ -286,7 +370,7 @@ async function generateImage(prompt: string): Promise<Buffer> {
   
   console.log(`[mockup] Generating with ${IMAGE_MODEL}`);
   console.log(`[mockup] Prompt length: ${prompt.length} chars`);
-  console.log(`[mockup] Prompt preview: ${prompt.substring(0, 200)}...`);
+  console.log(`[mockup] Prompt preview: ${prompt.substring(0, 250)}...`);
   
   const startTime = Date.now();
   
@@ -349,11 +433,17 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
   const sessionId = request.sessionId || "unknown";
   
   console.log(`[mockup] ═══════════════════════════════════════════════════════`);
-  console.log(`[mockup] Starting mockup generation (Phase 2 Enhanced)`);
+  console.log(`[mockup] Starting mockup generation (Phase 3 Enhanced)`);
   console.log(`[mockup] Session: ${sessionId}`);
-  console.log(`[mockup] Vehicle: ${request.vehicle.year} ${request.vehicle.make} ${request.vehicle.model}`);
+  console.log(`[mockup] Vehicle: ${request.vehicle.color} ${request.vehicle.year} ${request.vehicle.make} ${request.vehicle.model}`);
   console.log(`[mockup] Build: ${request.build.wheelSize}" ${request.build.wheelStyle}`);
   console.log(`[mockup] Style: ${request.build.style}, Tires: ${request.build.tireStyle}`);
+  if (request.build.wheelPartNumber) {
+    console.log(`[mockup] Wheel PN: ${request.build.wheelPartNumber}`);
+  }
+  if (request.build.tirePartNumber) {
+    console.log(`[mockup] Tire PN: ${request.build.tirePartNumber}`);
+  }
   if (request.build.tireBrand) {
     console.log(`[mockup] Tire brand/model: ${request.build.tireBrand} ${request.build.tireModel || ""}`);
   }
@@ -394,8 +484,9 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
     
     console.log(`[mockup] Cache miss, generating new image...`);
     
-    // Phase 2: Build enhanced prompt with rich descriptions
-    const { prompt, confidence, wheelMeta, tireMeta } = buildEnhancedPrompt(request);
+    // Phase 3: Build enhanced prompt with image analysis
+    const { prompt, confidence, wheelMeta, tireMeta, wheelImageFound, tireImageFound } = 
+      await buildEnhancedPrompt(request);
     
     // Generate image
     const imageBuffer = await generateImage(prompt);
@@ -413,6 +504,7 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
     console.log(`[mockup] ✅ Complete in ${totalTime}ms`);
     console.log(`[mockup] Image URL: ${imageUrl}`);
     console.log(`[mockup] Confidence: ${confidence}`);
+    console.log(`[mockup] Wheel image found: ${wheelImageFound}, Tire image found: ${tireImageFound}`);
     console.log(`[mockup] ═══════════════════════════════════════════════════════`);
     
     return {
@@ -426,10 +518,13 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
       productMeta: {
         wheelBrand: wheelMeta.brand,
         wheelModel: wheelMeta.model,
-        wheelSku: wheelMeta.sku,
+        wheelSku: request.build.wheelPartNumber,
+        wheelImageFound,
         tireBrand: tireMeta.brand,
         tireModel: tireMeta.model,
-        tireSku: tireMeta.sku,
+        tireSku: request.build.tirePartNumber,
+        tireImageFound,
+        vehicleColor: request.vehicle.color,
       },
     };
     
@@ -487,7 +582,7 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// SAVE TO GALLERY (Phase 2: Include product metadata)
+// SAVE TO GALLERY (Phase 3: Include enhanced metadata)
 // ═══════════════════════════════════════════════════════════════════════════
 
 async function saveToGallery(
@@ -525,7 +620,7 @@ async function saveToGallery(
       buildStyle = "aggressive-street";
     }
     
-    const title = `${vehicle.year} ${vehicle.make} ${vehicle.model} with ${wheelMeta.brand} ${wheelMeta.model}`;
+    const title = `${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} with ${wheelMeta.brand} ${wheelMeta.model}`;
     
     const slugBase = generateBuildSlug({
       vehicleYear: vehicle.year,
@@ -557,7 +652,7 @@ async function saveToGallery(
       tireModel: tireMeta.model,
       tireSize: build.tireSize || tireMeta.size || `${build.wheelSize}"`,
       heroImageUrl: imageUrl,
-      tags: ["jake-generated", build.tireStyle, vehicle.make.toLowerCase(), buildStyle],
+      tags: ["jake-generated", build.tireStyle, vehicle.make.toLowerCase(), buildStyle, vehicle.color.toLowerCase()],
       isFeatured: false,
       isPopular: false,
       isActive: true,

@@ -46,7 +46,13 @@ export async function POST(req: NextRequest) {
       build.tireStyle = "all-terrain";
     }
     
-    console.log(`[Jake Mockup] Generating: ${vehicle.year} ${vehicle.make} ${vehicle.model} with ${build.wheelStyle}`);
+    console.log(`[Jake Mockup] Generating: ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} with ${build.wheelStyle}`);
+    if (build.wheelPartNumber) {
+      console.log(`[Jake Mockup] Wheel PN: ${build.wheelPartNumber}`);
+    }
+    if (build.tirePartNumber) {
+      console.log(`[Jake Mockup] Tire PN: ${build.tirePartNumber}`);
+    }
     
     const request: MockupRequest = {
       vehicle: {
@@ -62,6 +68,12 @@ export async function POST(req: NextRequest) {
         wheelSize: parseInt(build.wheelSize),
         tireStyle: build.tireStyle,
         tireSize: build.tireSize,
+        // Phase 2: Tire brand/model
+        tireBrand: build.tireBrand,
+        tireModel: build.tireModel,
+        // Phase 3: Part numbers for image lookup
+        wheelPartNumber: build.wheelPartNumber,
+        tirePartNumber: build.tirePartNumber,
       },
       sessionId: body.sessionId,
     };
