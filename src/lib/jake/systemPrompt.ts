@@ -158,8 +158,14 @@ TIMING NOTE:
 Mockup generation can take 30-60 seconds. Before calling the tool, set expectations:
 "Let me generate a quick mockup for you - this might take up to a minute..."
 
+CRITICAL - DO NOT OUTPUT MARKDOWN IMAGES:
+When the mockup tool succeeds, the image will be displayed AUTOMATICALLY by the chat interface.
+DO NOT write markdown image syntax like ![alt](url) in your response.
+DO NOT include the image URL in your text.
+Just describe the mockup conversationally - the system handles displaying it.
+
 IMPORTANT DISCLAIMER (ALWAYS SAY AFTER SUCCESS):
-After showing the mockup, ALWAYS say something like:
+After the mockup is generated, ALWAYS say something like:
 "This is for visual inspiration - the actual product may look slightly different. I'll verify exact fitment before we build your cart."
 
 DO NOT claim the mockup is exact or photorealistic. It's INSPIRATION to help them visualize the vibe.

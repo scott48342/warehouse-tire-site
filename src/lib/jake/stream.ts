@@ -21,6 +21,16 @@ import { fitmentCache } from "./fitmentCache";
 
 const client = new Anthropic();
 
+/**
+ * Sanitize Jake's text output to remove markdown images
+ * Jake sometimes outputs ![alt](url) syntax which should be handled by JakeMockupCard instead
+ */
+function sanitizeText(text: string): string {
+  // Remove markdown image syntax: ![any text](any url)
+  // This can appear when Jake tries to "show" the mockup in text
+  return text.replace(/!\[[^\]]*\]\([^)]+\)/g, '');
+}
+
 export interface JakeMessage {
   role: "user" | "assistant";
   content: string;
@@ -227,8 +237,12 @@ The customer is inspired and ready to build. Help them turn this inspiration int
         if (event.type === "content_block_delta") {
           const delta = event.delta as any;
           if (delta.type === "text_delta" && delta.text) {
-            currentText += delta.text;
-            yield { type: "text", text: delta.text };
+            // Sanitize text to remove any markdown image syntax
+            const cleanText = sanitizeText(delta.text);
+            if (cleanText) {
+              currentText += cleanText;
+              yield { type: "text", text: cleanText };
+            }
           }
         } else if (event.type === "message_delta") {
           stopReason = (event.delta as any).stop_reason || null;
@@ -238,7 +252,7 @@ The customer is inspired and ready to build. Help them turn this inspiration int
       // Tools will be used - extract text from initial response (likely minimal or empty)
       for (const block of contentBlocks) {
         if (block.type === "text") {
-          currentText = block.text;
+          currentText = sanitizeText(block.text);
         }
       }
     }
@@ -384,8 +398,12 @@ The customer is inspired and ready to build. Help them turn this inspiration int
         if (event.type === "content_block_delta") {
           const delta = event.delta as any;
           if (delta.type === "text_delta" && delta.text) {
-            currentText += delta.text;
-            yield { type: "text", text: delta.text };
+            // Sanitize text to remove any markdown image syntax
+            const cleanText = sanitizeText(delta.text);
+            if (cleanText) {
+              currentText += cleanText;
+              yield { type: "text", text: cleanText };
+            }
           }
         } else if (event.type === "message_delta") {
           stopReason = (event.delta as any).stop_reason || null;
