@@ -1,11 +1,19 @@
 /**
- * Jake Visual Mockup Generator
+ * Jake Visual Mockup Generator (Phase 2 Enhanced)
  * 
  * Generates visual inspiration mockups showing wheel/tire setups on vehicles.
  * Uses gpt-image-1 (GPT-4o image generation) as the primary generator.
  * 
+ * Phase 2 Enhancements:
+ * - Rich product descriptions for better visual accuracy
+ * - Product image references when available
+ * - Confidence level tracking
+ * - Product metadata storage
+ * 
  * IMPORTANT: These are for VISUAL INSPIRATION ONLY, not fitment verification.
  * Always include disclaimer with generated images.
+ * 
+ * @updated 2026-06-15
  */
 
 import OpenAI from "openai";
@@ -13,6 +21,14 @@ import { put, list } from "@vercel/blob";
 import * as crypto from "crypto";
 import { db } from "@/lib/fitment-db/db";
 import { galleryBuilds, generateBuildSlug } from "@/lib/fitment-db/schema-gallery";
+import {
+  buildWheelVisualDescription,
+  buildTireVisualDescription,
+  getMockupConfidence,
+  parseWheelStyle,
+  type WheelProduct,
+  type TireProduct,
+} from "./productVisuals";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -32,6 +48,13 @@ export interface MockupRequest {
     wheelSize: number;  // 20
     tireStyle: "all-terrain" | "mud-terrain" | "highway" | "performance" | "all-season";
     tireSize?: string;  // "35x12.50R20" (optional context)
+    tireBrand?: string; // "Nitto" (optional for better accuracy)
+    tireModel?: string; // "Terra Grappler G2" (optional for better accuracy)
+  };
+  // Phase 2: Product metadata for better accuracy
+  product?: {
+    wheel?: WheelProduct;
+    tire?: TireProduct;
   };
   sessionId?: string; // For analytics tracking
 }
@@ -45,6 +68,17 @@ export interface MockupResult {
   generationMethod: "gpt-image" | "cached";
   cached: boolean;
   generationTime?: number;
+  // Phase 2: Confidence tracking
+  confidence?: "high" | "medium" | "concept";
+  // Phase 2: Product metadata for analytics
+  productMeta?: {
+    wheelBrand?: string;
+    wheelModel?: string;
+    wheelSku?: string;
+    tireBrand?: string;
+    tireModel?: string;
+    tireSku?: string;
+  };
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -58,20 +92,12 @@ const IMAGE_MODEL = "gpt-image-1";
 const IMAGE_SIZE = "1024x1024"; // gpt-image-1 supports: 1024x1024, 1024x1536, 1536x1024
 
 const BUILD_STYLE_PROMPTS: Record<string, string> = {
-  "stock": "factory height, standard ride height",
-  "leveled": "with a leveling kit, aggressive stance with rake removed",
-  "lifted-2": "with a 2-inch lift, slightly raised stance",
-  "lifted-4": "with a 4-inch lift, elevated aggressive stance",
-  "lifted-6": "with a 6-inch lift kit, towering aggressive stance",
-  "lowered": "lowered suspension, aggressive low stance, tucked fitment",
-};
-
-const TIRE_STYLE_PROMPTS: Record<string, string> = {
-  "all-terrain": "rugged all-terrain tires with aggressive sidewall text",
-  "mud-terrain": "aggressive mud-terrain tires with deep lugs and chunky tread",
-  "highway": "highway touring tires with smooth tread pattern",
-  "performance": "low-profile performance tires, sticky rubber, minimal sidewall",
-  "all-season": "all-season touring tires with balanced tread",
+  "stock": "factory suspension height, standard ride height stance",
+  "leveled": "leveling kit installed, aggressive stance with rake removed, front and rear level",
+  "lifted-2": "2-inch suspension lift, slightly raised aggressive stance",
+  "lifted-4": "4-inch suspension lift, elevated aggressive stance, room for larger tires",
+  "lifted-6": "6-inch suspension lift kit, towering aggressive stance, significant ground clearance",
+  "lowered": "lowered suspension, aggressive low stance, tucked wheel fitment",
 };
 
 // Error codes for analytics
@@ -118,6 +144,8 @@ function generateCacheKey(request: MockupRequest): string {
     request.build.tireStyle,
     // Hash the wheel style to keep key manageable
     crypto.createHash("md5").update(request.build.wheelStyle.toLowerCase()).digest("hex").substring(0, 8),
+    // Phase 2: Include tire brand/model in cache key if provided
+    request.build.tireBrand ? crypto.createHash("md5").update(request.build.tireBrand.toLowerCase()).digest("hex").substring(0, 4) : "x",
   ].join("-");
   
   return `mockups/${keyParts}.png`;
@@ -153,16 +181,44 @@ async function checkCache(cacheKey: string): Promise<string | null> {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// PROMPT BUILDER
+// PHASE 2: ENHANCED PROMPT BUILDER
 // ═══════════════════════════════════════════════════════════════════════════
 
-function buildPrompt(request: MockupRequest): string {
-  const { vehicle, build } = request;
+interface PromptBuildResult {
+  prompt: string;
+  confidence: "high" | "medium" | "concept";
+  wheelMeta: WheelProduct;
+  tireMeta: TireProduct;
+}
+
+function buildEnhancedPrompt(request: MockupRequest): PromptBuildResult {
+  const { vehicle, build, product } = request;
   
-  const buildContext = BUILD_STYLE_PROMPTS[build.style] || BUILD_STYLE_PROMPTS.stock;
-  const tireContext = TIRE_STYLE_PROMPTS[build.tireStyle] || TIRE_STYLE_PROMPTS["all-terrain"];
+  // Parse wheel style into structured data
+  const parsedWheel = parseWheelStyle(build.wheelStyle);
+  const wheelProduct: WheelProduct = product?.wheel || {
+    ...parsedWheel,
+    size: `${build.wheelSize}x9`, // Assume common width
+  };
   
-  // Detect vehicle category for context
+  // Build tire product info
+  const tireProduct: TireProduct = product?.tire || {
+    brand: build.tireBrand || "Premium",
+    model: build.tireModel || build.tireStyle.replace("-", " "),
+    terrain: build.tireStyle,
+    size: build.tireSize,
+  };
+  
+  // Get rich visual descriptions
+  const wheelDesc = buildWheelVisualDescription(wheelProduct);
+  const tireDesc = buildTireVisualDescription(tireProduct);
+  const confidence = getMockupConfidence(wheelDesc, tireDesc);
+  
+  console.log(`[mockup] Wheel description: ${wheelDesc.prompt.substring(0, 80)}...`);
+  console.log(`[mockup] Tire description: ${tireDesc.prompt.substring(0, 80)}...`);
+  console.log(`[mockup] Confidence level: ${confidence}`);
+  
+  // Build vehicle context
   const modelLower = vehicle.model.toLowerCase();
   const isFullSizeTruck = /silverado|sierra|f-?150|f-?250|f-?350|ram|tundra|titan/i.test(modelLower);
   const isMidSizeTruck = /colorado|canyon|tacoma|ranger|gladiator|frontier/i.test(modelLower);
@@ -171,42 +227,54 @@ function buildPrompt(request: MockupRequest): string {
   const isMuscle = /mustang|camaro|challenger|charger|corvette/i.test(modelLower);
   
   let vehicleContext = "";
-  if (isFullSizeTruck) vehicleContext = "full-size American pickup truck";
+  if (isFullSizeTruck) vehicleContext = "full-size American pickup truck, crew cab";
   else if (isMidSizeTruck) vehicleContext = "mid-size pickup truck";
-  else if (isJeep) vehicleContext = "off-road capable SUV";
-  else if (isSUV) vehicleContext = "full-size SUV";
-  else if (isMuscle) vehicleContext = "American muscle car";
+  else if (isJeep) vehicleContext = "off-road capable SUV, rugged body styling";
+  else if (isSUV) vehicleContext = "full-size SUV, premium appearance";
+  else if (isMuscle) vehicleContext = "American muscle car, aggressive body lines";
   
+  const buildContext = BUILD_STYLE_PROMPTS[build.style] || BUILD_STYLE_PROMPTS.stock;
+  
+  // Phase 2: New prompt structure prioritizing wheel/tire accuracy
   const promptParts = [
-    // Vehicle first
-    `A ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}`,
-    vehicle.trim ? vehicle.trim : null,
-    vehicleContext ? `(${vehicleContext})` : null,
+    // Photography instruction first
+    "Professional automotive photography of a",
     
-    // Build context
+    // Vehicle
+    `${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}`,
+    vehicle.trim ? `${vehicle.trim} trim` : null,
+    vehicleContext ? vehicleContext : null,
+    
+    // Suspension/stance
     buildContext,
     
-    // Wheels
-    `equipped with ${build.wheelSize}-inch ${build.wheelStyle} aftermarket wheels`,
+    // MOST IMPORTANT: Wheel description (detailed)
+    `WHEELS: ${wheelDesc.prompt}`,
     
-    // Tires
-    `mounted with ${tireContext}`,
-    build.tireSize ? `in size ${build.tireSize}` : null,
+    // MOST IMPORTANT: Tire description (detailed)
+    `TIRES: ${tireDesc.prompt}`,
     
-    // Photography style
-    "Professional automotive photography",
-    "front three-quarter view angle",
-    "studio lighting with soft shadows",
-    "clean white to gray gradient background",
-    "highly detailed",
-    "high quality",
-    "no watermarks",
+    // Photography requirements
+    "front three-quarter view angle showing wheel and tire detail",
+    "natural outdoor lighting with subtle shadows",
+    "clean outdoor background, subtle gradient",
+    "photorealistic rendering",
+    "showroom quality detail",
+    "highly detailed wheel spokes and tire tread pattern",
+    
+    // Negatives
     "no text overlays",
+    "no watermarks",
+    "no logos on image",
     "single vehicle only",
-    "showroom quality",
   ];
   
-  return promptParts.filter(Boolean).join(". ") + ".";
+  return {
+    prompt: promptParts.filter(Boolean).join(". ") + ".",
+    confidence,
+    wheelMeta: wheelProduct,
+    tireMeta: tireProduct,
+  };
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -217,7 +285,8 @@ async function generateImage(prompt: string): Promise<Buffer> {
   const openai = getOpenAI();
   
   console.log(`[mockup] Generating with ${IMAGE_MODEL}`);
-  console.log(`[mockup] Prompt: ${prompt.substring(0, 100)}...`);
+  console.log(`[mockup] Prompt length: ${prompt.length} chars`);
+  console.log(`[mockup] Prompt preview: ${prompt.substring(0, 200)}...`);
   
   const startTime = Date.now();
   
@@ -280,11 +349,14 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
   const sessionId = request.sessionId || "unknown";
   
   console.log(`[mockup] ═══════════════════════════════════════════════════════`);
-  console.log(`[mockup] Starting mockup generation`);
+  console.log(`[mockup] Starting mockup generation (Phase 2 Enhanced)`);
   console.log(`[mockup] Session: ${sessionId}`);
   console.log(`[mockup] Vehicle: ${request.vehicle.year} ${request.vehicle.make} ${request.vehicle.model}`);
   console.log(`[mockup] Build: ${request.build.wheelSize}" ${request.build.wheelStyle}`);
   console.log(`[mockup] Style: ${request.build.style}, Tires: ${request.build.tireStyle}`);
+  if (request.build.tireBrand) {
+    console.log(`[mockup] Tire brand/model: ${request.build.tireBrand} ${request.build.tireModel || ""}`);
+  }
   
   try {
     // Check API key early
@@ -298,6 +370,7 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
         generationMethod: "gpt-image",
         cached: false,
         generationTime: Date.now() - startTime,
+        confidence: "concept",
       };
     }
     
@@ -315,13 +388,14 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
         generationMethod: "cached",
         cached: true,
         generationTime: Date.now() - startTime,
+        confidence: "medium", // Cache doesn't know original confidence
       };
     }
     
     console.log(`[mockup] Cache miss, generating new image...`);
     
-    // Build prompt
-    const prompt = buildPrompt(request);
+    // Phase 2: Build enhanced prompt with rich descriptions
+    const { prompt, confidence, wheelMeta, tireMeta } = buildEnhancedPrompt(request);
     
     // Generate image
     const imageBuffer = await generateImage(prompt);
@@ -331,13 +405,14 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
     const imageUrl = await saveToBlobCache(imageBuffer, cacheKey);
     
     // Save to gallery (non-blocking)
-    saveToGallery(request, imageUrl).catch(err => {
+    saveToGallery(request, imageUrl, wheelMeta, tireMeta).catch(err => {
       console.error("[mockup] Gallery save error (non-blocking):", err);
     });
     
     const totalTime = Date.now() - startTime;
     console.log(`[mockup] ✅ Complete in ${totalTime}ms`);
     console.log(`[mockup] Image URL: ${imageUrl}`);
+    console.log(`[mockup] Confidence: ${confidence}`);
     console.log(`[mockup] ═══════════════════════════════════════════════════════`);
     
     return {
@@ -347,6 +422,15 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
       generationMethod: "gpt-image",
       cached: false,
       generationTime: totalTime,
+      confidence,
+      productMeta: {
+        wheelBrand: wheelMeta.brand,
+        wheelModel: wheelMeta.model,
+        wheelSku: wheelMeta.sku,
+        tireBrand: tireMeta.brand,
+        tireModel: tireMeta.model,
+        tireSku: tireMeta.sku,
+      },
     };
     
   } catch (error) {
@@ -397,23 +481,23 @@ export async function generateMockup(request: MockupRequest): Promise<MockupResu
       generationMethod: "gpt-image",
       cached: false,
       generationTime: totalTime,
+      confidence: "concept",
     };
   }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// SAVE TO GALLERY
+// SAVE TO GALLERY (Phase 2: Include product metadata)
 // ═══════════════════════════════════════════════════════════════════════════
 
-async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<void> {
+async function saveToGallery(
+  request: MockupRequest, 
+  imageUrl: string,
+  wheelMeta: WheelProduct,
+  tireMeta: TireProduct
+): Promise<void> {
   try {
     const { vehicle, build } = request;
-    
-    // Parse wheel style into brand/model (best effort)
-    const wheelParts = build.wheelStyle.split(" ");
-    const wheelBrand = wheelParts[0] || "Custom";
-    const wheelModel = wheelParts.slice(1, -2).join(" ") || wheelParts.slice(1).join(" ") || "Wheel";
-    const wheelFinish = wheelParts.slice(-2).join(" ") || undefined;
     
     // Map build style to gallery lift level
     const liftLevelMap: Record<string, string> = {
@@ -441,16 +525,16 @@ async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<
       buildStyle = "aggressive-street";
     }
     
-    const title = `${vehicle.year} ${vehicle.make} ${vehicle.model} with ${wheelBrand} ${wheelModel}`;
+    const title = `${vehicle.year} ${vehicle.make} ${vehicle.model} with ${wheelMeta.brand} ${wheelMeta.model}`;
     
     const slugBase = generateBuildSlug({
       vehicleYear: vehicle.year,
       vehicleMake: vehicle.make,
       vehicleModel: vehicle.model,
-      wheelBrand,
-      wheelModel,
-      tireBrand: build.tireStyle,
-      tireModel: build.tireSize || `${build.wheelSize}"`,
+      wheelBrand: wheelMeta.brand,
+      wheelModel: wheelMeta.model,
+      tireBrand: tireMeta.brand,
+      tireModel: tireMeta.model,
     });
     
     const slug = `${slugBase}-jake-${Date.now().toString(36)}`;
@@ -458,20 +542,20 @@ async function saveToGallery(request: MockupRequest, imageUrl: string): Promise<
     await db.insert(galleryBuilds).values({
       slug,
       title,
-      description: `AI-generated mockup created by Jake showing ${build.wheelSize}" ${build.wheelStyle} wheels with ${build.tireStyle} tires on a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}.`,
+      description: `AI-generated mockup created by Jake showing ${build.wheelSize}" ${wheelMeta.brand} ${wheelMeta.model} wheels with ${tireMeta.brand} ${tireMeta.model} tires on a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}.`,
       vehicleYear: vehicle.year,
       vehicleMake: vehicle.make,
       vehicleModel: vehicle.model,
       vehicleTrim: vehicle.trim,
       buildStyle,
       liftLevel: liftLevelMap[build.style] || "stock",
-      wheelBrand,
-      wheelModel,
+      wheelBrand: wheelMeta.brand,
+      wheelModel: wheelMeta.model,
       wheelSize: `${build.wheelSize}`,
-      wheelFinish,
-      tireBrand: build.tireStyle.charAt(0).toUpperCase() + build.tireStyle.slice(1).replace("-", " "),
-      tireModel: build.tireSize || `${build.tireStyle} tire`,
-      tireSize: build.tireSize || `${build.wheelSize}"`,
+      wheelFinish: wheelMeta.finish,
+      tireBrand: tireMeta.brand,
+      tireModel: tireMeta.model,
+      tireSize: build.tireSize || tireMeta.size || `${build.wheelSize}"`,
       heroImageUrl: imageUrl,
       tags: ["jake-generated", build.tireStyle, vehicle.make.toLowerCase(), buildStyle],
       isFeatured: false,

@@ -11,6 +11,10 @@ interface JakeMockupCardProps {
   wheelStyle: string;
   generationTime?: number;
   cached?: boolean;
+  // Phase 2: Confidence level
+  confidence?: "high" | "medium" | "concept";
+  tireBrand?: string;
+  tireModel?: string;
   // Conversion CTAs (Phase 3)
   onBuildSetup?: () => void;
   onAddToCart?: () => void;
@@ -21,6 +25,13 @@ interface JakeMockupCardProps {
   onShare?: () => void;
 }
 
+// Confidence level display
+const CONFIDENCE_LABELS: Record<string, { label: string; color: string; icon: string }> = {
+  high: { label: "High Match", color: "bg-green-500/80", icon: "✓" },
+  medium: { label: "Good Match", color: "bg-yellow-500/80", icon: "~" },
+  concept: { label: "Concept", color: "bg-blue-500/80", icon: "○" },
+};
+
 export function JakeMockupCard({
   imageUrl,
   disclaimer,
@@ -28,6 +39,9 @@ export function JakeMockupCard({
   wheelStyle,
   generationTime,
   cached,
+  confidence,
+  tireBrand,
+  tireModel,
   onBuildSetup,
   onAddToCart,
   onSaveBuild,
@@ -124,20 +138,29 @@ export function JakeMockupCard({
           </span>
         </div>
         
-        {/* Cache indicator (subtle) */}
-        {cached && (
-          <div className="absolute top-2 right-2">
+        {/* Confidence/Cache indicator */}
+        <div className="absolute top-2 right-2 flex gap-1">
+          {confidence && CONFIDENCE_LABELS[confidence] && (
+            <span className={`${CONFIDENCE_LABELS[confidence].color} backdrop-blur-sm text-white text-[9px] font-medium px-1.5 py-0.5 rounded`}>
+              {CONFIDENCE_LABELS[confidence].icon} {CONFIDENCE_LABELS[confidence].label}
+            </span>
+          )}
+          {cached && (
             <span className="bg-green-500/80 backdrop-blur-sm text-white text-[9px] font-medium px-1.5 py-0.5 rounded">
               ⚡ Instant
             </span>
-          </div>
-        )}
+          )}
+        </div>
       </div>
       
       {/* Info */}
       <div className="p-4">
         <div className="text-white font-semibold text-sm mb-1">{vehicle}</div>
-        <div className="text-white/70 text-xs mb-3">{wheelStyle}</div>
+        <div className="text-white/70 text-xs">{wheelStyle}</div>
+        {tireBrand && tireModel && (
+          <div className="text-white/50 text-xs mb-3">{tireBrand} {tireModel}</div>
+        )}
+        {(!tireBrand || !tireModel) && <div className="mb-3" />}
         
         {/* Disclaimer (Phase 3) */}
         <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-2 mb-4">

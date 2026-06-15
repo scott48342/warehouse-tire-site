@@ -24,6 +24,10 @@ interface MockupData {
   generationTime?: number;
   cached?: boolean;
   generationMethod?: "gpt-image" | "cached";
+  // Phase 2 Enhancement: Confidence level
+  confidence?: "high" | "medium" | "concept";
+  tireBrand?: string;
+  tireModel?: string;
 }
 
 interface Message {
@@ -1249,7 +1253,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                   </div>
                 )}
 
-                {/* Visual Mockup (Phase 3: Conversion CTAs) */}
+                {/* Visual Mockup (Phase 3: Conversion CTAs, Phase 2: Confidence) */}
                 {message.mockup && (
                   <div className="mt-4">
                     <JakeMockupCard
@@ -1259,6 +1263,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                       wheelStyle={message.mockup.wheelStyle}
                       generationTime={message.mockup.generationTime}
                       cached={message.mockup.cached}
+                      confidence={message.mockup.confidence}
+                      tireBrand={message.mockup.tireBrand}
+                      tireModel={message.mockup.tireModel}
                       // Phase 3: Conversion CTAs
                       onBuildSetup={() => {
                         // Trigger Jake to help build the setup

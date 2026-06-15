@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
       );
     }
     
-    console.log(`[Jake Mockup] Success: ${result.generationMethod}, ${result.generationTime}ms, cached: ${result.cached}`);
+    console.log(`[Jake Mockup] Success: ${result.generationMethod}, ${result.generationTime}ms, cached: ${result.cached}, confidence: ${result.confidence}`);
     
     return NextResponse.json({
       success: true,
@@ -91,6 +91,9 @@ export async function POST(req: NextRequest) {
       generationMethod: result.generationMethod,
       cached: result.cached,
       generationTime: result.generationTime,
+      // Phase 2: Include confidence and product metadata
+      confidence: result.confidence,
+      productMeta: result.productMeta,
     });
     
   } catch (error) {

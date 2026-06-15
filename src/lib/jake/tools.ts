@@ -230,6 +230,10 @@ USE FOR: Visual inspiration ONLY - NOT for fitment verification!
 WHEN TO USE: After showing product options, offer: "Want to see a quick visual mockup of this on your vehicle?"
 ALWAYS INCLUDE: The disclaimer that this is for visual inspiration only.
 
+IMPORTANT: Include tireBrand and tireModel when you know them! This dramatically improves mockup accuracy.
+- "Nitto Terra Grappler G2" looks different from "BFGoodrich KO2"
+- "Fuel Rebel" looks different from "Moto Metal Mason"
+
 After generating, say something like:
 "Here's a mockup to give you an idea of the vibe! This is for visual inspiration – the actual products may look slightly different. I'll verify exact fitment before we build your cart."`,
     input_schema: {
@@ -244,13 +248,15 @@ After generating, say something like:
           type: "string", 
           description: "Build style: stock, leveled, lifted-2, lifted-4, lifted-6, or lowered"
         },
-        wheelStyle: { type: "string", description: "Wheel description (brand model finish, e.g., 'Fuel Rebel Matte Black')" },
+        wheelStyle: { type: "string", description: "Wheel description (brand model finish, e.g., 'Fuel Rebel D679 Matte Black')" },
         wheelSize: { type: "number", description: "Wheel diameter in inches (e.g., 20)" },
         tireStyle: { 
           type: "string", 
-          description: "Tire style: all-terrain, mud-terrain, highway, performance, or all-season"
+          description: "Tire terrain type: all-terrain, mud-terrain, highway, performance, or all-season"
         },
-        tireSize: { type: "string", description: "Tire size for context (e.g., 35x12.50R20)" }
+        tireBrand: { type: "string", description: "Tire brand (e.g., 'Nitto', 'Toyo', 'BFGoodrich') - IMPORTANT for accuracy!" },
+        tireModel: { type: "string", description: "Tire model (e.g., 'Terra Grappler G2', 'Open Country AT3') - IMPORTANT for accuracy!" },
+        tireSize: { type: "string", description: "Tire size (e.g., '285/50R22', '35x12.50R20')" }
       },
       required: ["year", "make", "model", "color", "wheelStyle", "wheelSize", "tireStyle"]
     }
@@ -510,10 +516,13 @@ export async function executeTool(
     }
     
     case "generate_visual_mockup": {
-      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, tireStyle, tireSize } = input;
+      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, tireStyle, tireBrand, tireModel, tireSize } = input;
       
       const url = `${baseUrl}/api/jake/mockup`;
       console.log(`[Jake Tool] generate_visual_mockup: ${year} ${make} ${model} with ${wheelStyle}`);
+      if (tireBrand && tireModel) {
+        console.log(`[Jake Tool] Tire: ${tireBrand} ${tireModel}`);
+      }
       
       try {
         const res = await fetch(url, {
@@ -532,6 +541,9 @@ export async function executeTool(
               wheelStyle: String(wheelStyle),
               wheelSize: Number(wheelSize),
               tireStyle: String(tireStyle),
+              // Phase 2: Include tire brand/model for better accuracy
+              tireBrand: tireBrand ? String(tireBrand) : undefined,
+              tireModel: tireModel ? String(tireModel) : undefined,
               tireSize: tireSize ? String(tireSize) : undefined,
             },
           }),
@@ -553,6 +565,10 @@ export async function executeTool(
           disclaimer: data.disclaimer,
           generationMethod: data.generationMethod,
           cached: data.cached,
+          generationTime: data.generationTime,
+          // Phase 2: Include confidence and product metadata
+          confidence: data.confidence,
+          productMeta: data.productMeta,
         };
       } catch (err) {
         return {
