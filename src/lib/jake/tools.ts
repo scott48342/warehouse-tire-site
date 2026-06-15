@@ -385,7 +385,10 @@ export async function executeTool(
     }
     
     case "search_wheels": {
-      const { year, make, model, diameter, limit = 6, excludeFinishes, preferFinish } = input;
+      const { year, make, model, diameter, limit = 6, excludeFinishes, preferFinish } = input as {
+        year: number; make: string; model: string; diameter?: number; limit?: number;
+        excludeFinishes?: string[]; preferFinish?: string;
+      };
       // Request more results if we're filtering, so we have enough after exclusion
       const fetchLimit = excludeFinishes?.length ? Math.min(Number(limit) * 4, 50) : Number(limit);
       
