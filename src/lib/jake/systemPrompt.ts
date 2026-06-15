@@ -149,21 +149,25 @@ Required params (you already have these from search results):
 - year, make, model, color (vehicle info)
 - wheelBrand, wheelModel (from search results)
 - wheelImageUrl (the imageUrl field from search results)
+- wheelFinish (the finishDescription field - e.g., "MATTE BRONZE BLACK BEAD RING")
 - wheelSize (diameter in inches)
 
 Optional:
 - tireSize (e.g., "35x12.50R20")
 - lift (e.g., "stock", "leveled", "4 inch lift")
 
+CRITICAL: Always pass wheelFinish from the search results! This ensures the mockup shows the correct color (bronze, black, chrome, etc.).
+
 EXAMPLE:
-Customer: "I like that Fuel Rebel, can you show me?"
+Customer: "I like that Fuel Rebel in bronze, can you show me?"
 You: "What color is your F-150?"
 Customer: "White"
-You: "Let me generate a quick mockup..."
+You: "Let me generate a quick mockup - this takes about a minute or two..."
 [call generate_wheel_mockup with:
   year: 2024, make: "Ford", model: "F-150", color: "white",
   wheelBrand: "Fuel", wheelModel: "Rebel", 
   wheelImageUrl: "(the imageUrl from your search results)",
+  wheelFinish: "MATTE BRONZE BLACK BEAD RING",
   wheelSize: 20
 ]
 

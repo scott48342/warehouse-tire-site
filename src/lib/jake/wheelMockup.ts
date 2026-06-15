@@ -28,6 +28,7 @@ export interface WheelMockupRequest {
     brand: string;
     model: string;
     imageUrl: string;
+    finish?: string;
     size: number;
   };
   tire?: {
@@ -69,6 +70,11 @@ function getOpenAI(): OpenAI {
 // ═══════════════════════════════════════════════════════════════════════════
 
 function getCacheKey(req: WheelMockupRequest): string {
+  // Include finish in cache key so different colors get different cached images
+  const finishKey = req.wheel.finish 
+    ? req.wheel.finish.toLowerCase().replace(/[^a-z0-9]/g, "-").substring(0, 20)
+    : "default";
+  
   const parts = [
     req.vehicle.year,
     req.vehicle.make.toLowerCase().replace(/\s+/g, "-"),
@@ -76,13 +82,13 @@ function getCacheKey(req: WheelMockupRequest): string {
     req.vehicle.color.toLowerCase().replace(/\s+/g, "-"),
     req.wheel.brand.toLowerCase().replace(/\s+/g, "-"),
     req.wheel.model.toLowerCase().replace(/\s+/g, "-"),
+    finishKey,
     req.wheel.size,
     req.tire?.size?.replace(/[^a-z0-9]/gi, "") || "stock",
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
-    crypto.createHash("md5").update(req.wheel.imageUrl).digest("hex").substring(0, 8),
   ].join("-");
   
-  return `jake-mockups/v9/${parts}.png`;
+  return `jake-mockups/v10/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -105,7 +111,7 @@ async function checkCache(cacheKey: string): Promise<string | null> {
 // STEP 1: ANALYZE WHEEL WITH GPT-4O VISION
 // ═══════════════════════════════════════════════════════════════════════════
 
-async function analyzeWheel(imageUrl: string, wheelName: string): Promise<string> {
+async function analyzeWheel(imageUrl: string, wheelName: string, wheelFinish?: string): Promise<string> {
   const openai = getOpenAI();
   
   console.log(`[wheelMockup] Step 1: Analyzing wheel with GPT-4o Vision...`);
@@ -151,7 +157,10 @@ Keep description under 100 words but highly specific.`
     return description;
   } catch (error: any) {
     console.error("[wheelMockup] Vision analysis failed:", error?.message);
-    return `${wheelName} aftermarket wheel with aggressive styling`;
+    // Use finish description in fallback when vision fails
+    const finishDesc = wheelFinish ? ` in ${wheelFinish} finish` : "";
+    console.log(`[wheelMockup] Using fallback with finish: ${wheelFinish || 'none provided'}`);
+    return `${wheelName} aftermarket wheel${finishDesc} with aggressive off-road styling, deep lip, and beadlock-style accents`;
   }
 }
 
@@ -220,7 +229,8 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // Step 1: Analyze wheel with GPT-4o Vision
     const wheelDescription = await analyzeWheel(
       req.wheel.imageUrl,
-      `${req.wheel.brand} ${req.wheel.model}`
+      `${req.wheel.brand} ${req.wheel.model}`,
+      req.wheel.finish
     );
     
     // Step 2: Build the prompt

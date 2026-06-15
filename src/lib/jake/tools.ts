@@ -261,11 +261,12 @@ DISCLAIMER (always say after showing):
         wheelBrand: { type: "string", description: "Wheel brand from search results" },
         wheelModel: { type: "string", description: "Wheel model from search results" },
         wheelImageUrl: { type: "string", description: "The imageUrl from your search results - you already have this!" },
+        wheelFinish: { type: "string", description: "The finish/color description (e.g., 'Matte Bronze with Black Bead Ring', 'Gloss Black')" },
         wheelSize: { type: "number", description: "Wheel diameter (e.g., 20, 22)" },
         tireSize: { type: "string", description: "Tire size if known (e.g., '35x12.50R20')" },
         lift: { type: "string", description: "Lift level if known (e.g., 'stock', 'leveled', '4 inch lift')" }
       },
-      required: ["year", "make", "model", "color", "wheelBrand", "wheelModel", "wheelImageUrl", "wheelSize"]
+      required: ["year", "make", "model", "color", "wheelBrand", "wheelModel", "wheelImageUrl", "wheelFinish", "wheelSize"]
     }
   }
 ];
@@ -610,10 +611,10 @@ export async function executeTool(
     }
     
     case "generate_wheel_mockup": {
-      const { year, make, model, color, wheelBrand, wheelModel, wheelImageUrl, wheelSize, tireSize, lift } = input;
+      const { year, make, model, color, wheelBrand, wheelModel, wheelImageUrl, wheelFinish, wheelSize, tireSize, lift } = input;
       
       console.log(`[Jake Tool] generate_wheel_mockup: ${color} ${year} ${make} ${model}`);
-      console.log(`[Jake Tool] Wheel: ${wheelSize}" ${wheelBrand} ${wheelModel}`);
+      console.log(`[Jake Tool] Wheel: ${wheelSize}" ${wheelBrand} ${wheelModel} - ${wheelFinish || 'unknown finish'}`);
       
       try {
         // Import and call the new clean mockup generator directly
@@ -630,6 +631,7 @@ export async function executeTool(
             brand: String(wheelBrand),
             model: String(wheelModel),
             imageUrl: String(wheelImageUrl),
+            finish: wheelFinish ? String(wheelFinish) : undefined,
             size: Number(wheelSize),
           },
           tire: tireSize ? { size: String(tireSize) } : undefined,
