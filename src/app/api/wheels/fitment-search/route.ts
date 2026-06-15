@@ -1557,10 +1557,14 @@ async function handleDbFirstWheelResults(opts: {
   const filteredCandidates = candidates.filter((c) => {
     // Brand filter: supports both codes (FC) and names (Fuel)
     if (brandCd && !matchesBrandFilter(c.brand_cd || "", brandCd)) return false;
-    // Normalize candidate finish and compare with filter value
+    // Finish filter: partial match (case-insensitive) on raw finish text
+    // e.g., "bronze" matches "MATTE BRONZE W/ BLACK RING", "BRONZE", etc.
     if (finish) {
-      const candidateFinish = normalizeFinish(c.fancy_finish_desc, c.abbreviated_finish_desc);
-      if (candidateFinish !== finish) return false;
+      const finishLower = finish.toLowerCase();
+      const fancyLower = (c.fancy_finish_desc || "").toLowerCase();
+      const abbrLower = (c.abbreviated_finish_desc || "").toLowerCase();
+      // Match if either description contains the filter term
+      if (!fancyLower.includes(finishLower) && !abbrLower.includes(finishLower)) return false;
     }
     if (diameter && c.diameter && Number(c.diameter) !== Number(diameter)) return false;
     if (width && c.width && Number(c.width) !== Number(width)) return false;
