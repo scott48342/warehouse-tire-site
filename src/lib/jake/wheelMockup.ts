@@ -247,20 +247,21 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
   console.log(`[wheelMockup] Lift: ${req.lift || "stock"}`);
   
   try {
-    // Check cache first
+    // CACHE DISABLED FOR TESTING - always generate fresh
     const cacheKey = getCacheKey(req);
-    const cached = await checkCache(cacheKey);
-    if (cached) {
-      console.log(`[wheelMockup] ✅ Cache hit`);
-      return { 
-        success: true, 
-        imageUrl: cached, 
-        cached: true, 
-        generationTimeMs: Date.now() - startTime,
-        confidence: "high",
-        method: "cached"
-      };
-    }
+    // const cached = await checkCache(cacheKey);
+    // if (cached) {
+    //   console.log(`[wheelMockup] ✅ Cache hit`);
+    //   return { 
+    //     success: true, 
+    //     imageUrl: cached, 
+    //     cached: true, 
+    //     generationTimeMs: Date.now() - startTime,
+    //     confidence: "high",
+    //     method: "cached"
+    //   };
+    // }
+    console.log(`[wheelMockup] Cache disabled - generating fresh`);
     
     // Step 1: Analyze wheel with GPT-4o Vision
     const wheelDescription = await analyzeWheel(
