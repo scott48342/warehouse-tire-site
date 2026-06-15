@@ -233,19 +233,18 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
   },
   {
     name: "generate_visual_mockup",
-    description: `Generate a visual mockup showing approximate wheel/tire look on customer's vehicle.
-    
+    description: `Generate a visual mockup showing wheel/tire look on customer's vehicle.
+
+⚠️ MANDATORY: YOU MUST PASS wheelPartNumber FROM YOUR SEARCH RESULTS!
+Without the SKU, the mockup will show GENERIC wheels - not the actual product the customer picked.
+Your search results include 'sku' field - pass it as wheelPartNumber. NO EXCEPTIONS.
+
+Example: Customer picks Black Rhino AWOL from your search → pass wheelPartNumber: "BR024SD20856325"
+
 USE FOR: Visual inspiration ONLY - NOT for fitment verification!
-WHEN TO USE: After showing product options, offer: "Want to see a quick visual mockup of this on your vehicle?"
-ALWAYS INCLUDE: The disclaimer that this is for visual inspiration only.
+VEHICLE COLOR: Be specific (black, white, red, silver, gray) - enforced exactly.
 
-ACCURACY TIPS (Phase 3):
-1. PART NUMBERS: Include wheelPartNumber and tirePartNumber when you have them from search results! This enables the system to look up actual product images for reference.
-2. TIRE DETAILS: Include tireBrand and tireModel for better tire representation.
-3. VEHICLE COLOR: Be specific (black, white, red, silver, gray, blue, etc.) - the color will be enforced exactly.
-
-After generating, say something like:
-"Here's a mockup to give you an idea of the vibe! This is for visual inspiration – the actual products may look slightly different. I'll verify exact fitment before we build your cart."`,
+After generating, include disclaimer about visual inspiration only.`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -260,7 +259,7 @@ After generating, say something like:
         },
         wheelStyle: { type: "string", description: "Wheel description (brand model finish, e.g., 'Fuel Rebel D679 Matte Black')" },
         wheelSize: { type: "number", description: "Wheel diameter in inches (e.g., 20)" },
-        wheelPartNumber: { type: "string", description: "Wheel SKU/part number from search results - enables image reference lookup!" },
+        wheelPartNumber: { type: "string", description: "⚠️ CRITICAL: Wheel SKU from YOUR SEARCH RESULTS (e.g., 'BR024SD20856325'). WITHOUT THIS, the mockup will show WRONG wheel design. You have the SKU - USE IT!" },
         tireStyle: { 
           type: "string", 
           description: "Tire terrain type: all-terrain, mud-terrain, highway, performance, or all-season"
