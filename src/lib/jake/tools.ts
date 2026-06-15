@@ -232,48 +232,40 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
     }
   },
   {
-    name: "generate_visual_mockup",
-    description: `Generate a visual mockup showing wheel/tire look on customer's vehicle.
+    name: "generate_wheel_mockup",
+    description: `Generate an AI mockup showing a wheel on the customer's vehicle.
 
-⚠️ MANDATORY: Pass BOTH wheelPartNumber AND wheelImageUrl from your search results!
-Your search results include 'sku' and 'imageUrl' fields - USE BOTH.
+USE AFTER: Customer has seen wheel options and says "show me" / "what would it look like" / picks a wheel.
 
-Example - customer picks a wheel from your results:
-  Your search showed: { sku: "BR024SD20856325", imageUrl: "https://..." }
-  You MUST pass: wheelPartNumber: "BR024SD20856325", wheelImageUrl: "https://..."
+FLOW:
+1. You already showed wheel search results (which include imageUrl)
+2. Customer picks one or asks to see it on their truck
+3. Call this tool with the wheel's imageUrl from your search results
+4. Show the generated image with disclaimer
 
-Without the imageUrl, generation is slower and less accurate.
+REQUIRED DATA (you already have from search results):
+- wheelImageUrl: the imageUrl field from search results
+- wheelBrand: brand name
+- wheelModel: model name  
+- wheelSize: diameter in inches
 
-VEHICLE COLOR: Be specific (black, white, red, silver, gray) - enforced exactly.
-
-DISCLAIMER: Always say after generating:
-"Here's an AI visual mockup. Final fitment and appearance may vary based on size, offset, tire, trim, and suspension."`,
+DISCLAIMER (always say after showing):
+"AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting."`,
     input_schema: {
       type: "object" as const,
       properties: {
         year: { type: "number", description: "Vehicle year" },
         make: { type: "string", description: "Vehicle make" },
         model: { type: "string", description: "Vehicle model" },
-        trim: { type: "string", description: "Vehicle trim (optional)" },
-        color: { type: "string", description: "Vehicle color - MUST be specific (black, white, red, silver, gray, blue, etc.)" },
-        buildStyle: { 
-          type: "string", 
-          description: "Build style: stock, leveled, lifted-2, lifted-4, lifted-6, or lowered"
-        },
-        wheelStyle: { type: "string", description: "Wheel description (brand model finish, e.g., 'Fuel Rebel D679 Matte Black')" },
-        wheelSize: { type: "number", description: "Wheel diameter in inches (e.g., 20)" },
-        wheelImageUrl: { type: "string", description: "⚠️ REQUIRED: The imageUrl from your search results. You already have it - pass it!" },
-        wheelPartNumber: { type: "string", description: "⚠️ REQUIRED: The sku from your search results (e.g., 'BR024SD20856325')." },
-        tireStyle: { 
-          type: "string", 
-          description: "Tire terrain type: all-terrain, mud-terrain, highway, performance, or all-season"
-        },
-        tireBrand: { type: "string", description: "Tire brand (e.g., 'Nitto', 'Toyo', 'BFGoodrich')" },
-        tireModel: { type: "string", description: "Tire model (e.g., 'Terra Grappler G2', 'Open Country AT3')" },
-        tirePartNumber: { type: "string", description: "Tire SKU/part number from search results" },
-        tireSize: { type: "string", description: "Tire size (e.g., '285/50R22', '35x12.50R20')" }
+        color: { type: "string", description: "Vehicle color (black, white, red, silver, blue, etc.)" },
+        wheelBrand: { type: "string", description: "Wheel brand from search results" },
+        wheelModel: { type: "string", description: "Wheel model from search results" },
+        wheelImageUrl: { type: "string", description: "The imageUrl from your search results - you already have this!" },
+        wheelSize: { type: "number", description: "Wheel diameter (e.g., 20, 22)" },
+        tireSize: { type: "string", description: "Tire size if known (e.g., '35x12.50R20')" },
+        lift: { type: "string", description: "Lift level if known (e.g., 'stock', 'leveled', '4 inch lift')" }
       },
-      required: ["year", "make", "model", "color", "wheelStyle", "wheelSize", "tireStyle"]
+      required: ["year", "make", "model", "color", "wheelBrand", "wheelModel", "wheelImageUrl", "wheelSize"]
     }
   }
 ];
@@ -617,79 +609,53 @@ export async function executeTool(
       };
     }
     
-    case "generate_visual_mockup": {
-      const { year, make, model, trim, color, buildStyle, wheelStyle, wheelSize, wheelImageUrl, wheelPartNumber, tireStyle, tireBrand, tireModel, tirePartNumber, tireSize } = input;
+    case "generate_wheel_mockup": {
+      const { year, make, model, color, wheelBrand, wheelModel, wheelImageUrl, wheelSize, tireSize, lift } = input;
       
-      const url = `${baseUrl}/api/jake/mockup`;
-      console.log(`[Jake Tool] generate_visual_mockup: ${color} ${year} ${make} ${model} with ${wheelStyle}`);
-      if (wheelImageUrl) {
-        console.log(`[Jake Tool] Using customer-provided wheel image URL`);
-      } else if (wheelPartNumber) {
-        console.log(`[Jake Tool] Wheel PN: ${wheelPartNumber}`);
-      }
-      if (tireBrand && tireModel) {
-        console.log(`[Jake Tool] Tire: ${tireBrand} ${tireModel}`);
-      }
-      if (tirePartNumber) {
-        console.log(`[Jake Tool] Tire PN: ${tirePartNumber}`);
-      }
+      console.log(`[Jake Tool] generate_wheel_mockup: ${color} ${year} ${make} ${model}`);
+      console.log(`[Jake Tool] Wheel: ${wheelSize}" ${wheelBrand} ${wheelModel}`);
       
       try {
-        const res = await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            vehicle: {
-              year: Number(year),
-              make: String(make),
-              model: String(model),
-              trim: trim ? String(trim) : undefined,
-              color: String(color),
-            },
-            build: {
-              style: buildStyle || "stock",
-              wheelStyle: String(wheelStyle),
-              wheelSize: Number(wheelSize),
-              tireStyle: String(tireStyle),
-              // Phase 2: Include tire brand/model for better accuracy
-              tireBrand: tireBrand ? String(tireBrand) : undefined,
-              tireModel: tireModel ? String(tireModel) : undefined,
-              tireSize: tireSize ? String(tireSize) : undefined,
-              // Phase 3: Include part numbers for image lookup
-              wheelPartNumber: wheelPartNumber ? String(wheelPartNumber) : undefined,
-              tirePartNumber: tirePartNumber ? String(tirePartNumber) : undefined,
-              // Phase 4: Direct wheel image URL (customer-provided)
-              wheelImageUrl: wheelImageUrl ? String(wheelImageUrl) : undefined,
-            },
-          }),
+        // Import and call the new clean mockup generator directly
+        const { generateWheelMockup, MOCKUP_DISCLAIMER } = await import("./wheelMockup");
+        
+        const result = await generateWheelMockup({
+          vehicle: {
+            year: Number(year),
+            make: String(make),
+            model: String(model),
+            color: String(color),
+          },
+          wheel: {
+            brand: String(wheelBrand),
+            model: String(wheelModel),
+            imageUrl: String(wheelImageUrl),
+            size: Number(wheelSize),
+          },
+          tire: tireSize ? { size: String(tireSize) } : undefined,
+          lift: lift ? String(lift) : undefined,
         });
         
-        if (!res.ok) {
-          const error = await res.json().catch(() => ({}));
+        if (!result.success) {
           return {
             success: false,
-            error: error.error || `API error: ${res.status}`,
-            disclaimer: "Mockup is for visual inspiration only.",
+            error: result.error || "Generation failed",
+            disclaimer: MOCKUP_DISCLAIMER,
           };
         }
         
-        const data = await res.json();
         return {
           success: true,
-          imageUrl: data.imageUrl,
-          disclaimer: data.disclaimer,
-          generationMethod: data.generationMethod,
-          cached: data.cached,
-          generationTime: data.generationTime,
-          // Phase 2: Include confidence and product metadata
-          confidence: data.confidence,
-          productMeta: data.productMeta,
+          imageUrl: result.imageUrl,
+          disclaimer: MOCKUP_DISCLAIMER,
+          cached: result.cached,
+          generationTimeMs: result.generationTimeMs,
         };
       } catch (err) {
         return {
           success: false,
           error: `Generation failed: ${err}`,
-          disclaimer: "Mockup is for visual inspiration only.",
+          disclaimer: "AI visual mockup only. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.",
         };
       }
     }
