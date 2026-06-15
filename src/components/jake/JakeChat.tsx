@@ -1228,14 +1228,18 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
               {/* Product Cards - Full width horizontal scroll OUTSIDE message bubble */}
               {message.products && message.products.length > 0 && (
                 <div 
-                  className="mt-3 -mx-4 overflow-x-auto pb-3"
+                  className="mt-3 -mx-4 pb-3"
                   style={{ 
+                    overflowX: 'scroll',
+                    overflowY: 'hidden',
                     scrollbarWidth: 'thin',
                     scrollbarColor: 'rgba(255,255,255,0.3) transparent',
                     WebkitOverflowScrolling: 'touch',
+                    overscrollBehaviorX: 'contain',
+                    touchAction: 'pan-x',
                   }}
                 >
-                  <div className="flex gap-3 px-4 w-max">
+                  <div className="flex gap-3 px-4" style={{ width: 'max-content' }}>
                     {message.products.slice(0, 8).map((product, idx) => (
                       <div key={idx} className="flex-shrink-0 w-[280px]">
                         <JakeProductCard
