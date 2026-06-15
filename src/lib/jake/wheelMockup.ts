@@ -287,7 +287,9 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
         throw new Error("No image in Responses API output");
       }
     } catch (responsesError: any) {
-      console.log(`[wheelMockup] Responses API unavailable (${responsesError?.message?.substring(0, 50)}), using images.generate`);
+      console.error(`[wheelMockup] ⚠️ Responses API FAILED: ${responsesError?.message}`);
+      console.log(`[wheelMockup] Falling back to text-only generation (wheel design may not match)`);
+      console.log(`[wheelMockup] To fix: Ensure OpenAI org is verified at https://platform.openai.com/settings/organization/general`);
       response = await openai.images.generate({
         model: "gpt-image-1",
         prompt,
