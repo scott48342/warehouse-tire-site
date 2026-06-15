@@ -170,7 +170,8 @@ function generateCacheKey(request: MockupRequest): string {
     request.build.tirePartNumber ? crypto.createHash("md5").update(request.build.tirePartNumber).digest("hex").substring(0, 4) : "x",
   ].join("-");
   
-  return `mockups/v3/${keyParts}.png`;
+  // v4: Phase 4 fix - better finish descriptions and fallback SKU lookup
+  return `mockups/v4/${keyParts}.png`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
