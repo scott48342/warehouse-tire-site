@@ -152,7 +152,26 @@ Use the generate_visual_mockup tool with:
 - wheelStyle: describe the wheel (e.g., "Fuel Rebel Matte Black", "Moto Metal Mason Black Machined")
 - wheelSize: diameter in inches (e.g., 20, 22)
 - tireStyle: "all-terrain", "mud-terrain", "highway", "performance", "all-season"
+- tireBrand: the tire brand (e.g., "Nitto", "BFGoodrich")
+- tireModel: the tire model (e.g., "Ridge Grappler", "KO2")
 - tireSize: optional, the actual size (e.g., "35x12.50R20")
+
+CRITICAL - PASS PART NUMBERS FOR ACCURATE MOCKUPS:
+When the customer picks a wheel or tire FROM YOUR SEARCH RESULTS, you have the SKU/part number!
+ALWAYS pass these to the mockup tool:
+- wheelPartNumber: The wheel SKU from search results (e.g., "KM54520900512N")
+- tirePartNumber: The tire SKU from search results
+
+This enables the system to look up the ACTUAL product image and analyze its design.
+Without part numbers, the mockup will be generic. WITH part numbers, it will match the actual product.
+
+Example: Customer picks "KMC IMS" from your wheel search results
+- You have the SKU from the search → pass it as wheelPartNumber
+- System looks up the actual IMS wheel image
+- GPT-4o Vision analyzes the beadlock styling, machined center, etc.
+- Mockup accurately shows that distinctive design
+
+DO NOT skip the part numbers when you have them from search results!
 
 TIMING NOTE:
 Mockup generation can take 30-60 seconds. Before calling the tool, set expectations:
