@@ -29,9 +29,19 @@ export type JakeEventType =
   | "jake_package_add_to_cart"
   // Gallery and mockup events
   | "gallery_build_context_used"
+  // Mockup lifecycle events (Phase 4)
+  | "mockup_requested"
+  | "mockup_started"
+  | "mockup_succeeded"
+  | "mockup_failed"
   | "mockup_generated"
+  | "mockup_viewed"
   | "mockup_saved"
-  | "mockup_shared";
+  | "mockup_shared"
+  | "mockup_to_cart"
+  | "mockup_to_checkout"
+  | "mockup_build_this"
+  | "mockup_make_changes";
 
 interface JakeEventData {
   prompt?: string;
@@ -79,6 +89,11 @@ interface JakeEventData {
   // Gallery/mockup fields
   build?: string;
   wheelStyle?: string;
+  // Mockup tracking fields (Phase 4)
+  mockupGenerationTime?: number;
+  mockupCacheHit?: boolean;
+  mockupMethod?: "gpt-image" | "cached";
+  mockupErrorCode?: string;
 }
 
 // Generate a session ID for tracking conversations

@@ -20,6 +20,10 @@ interface MockupData {
   disclaimer: string;
   vehicle: string;
   wheelStyle: string;
+  // Phase 4: Analytics data
+  generationTime?: number;
+  cached?: boolean;
+  generationMethod?: "gpt-image" | "cached";
 }
 
 interface Message {
@@ -698,9 +702,13 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
 
                   case "mockup":
                     mockupData = event.mockup;
-                    trackJakeEvent("mockup_generated", {
+                    // Phase 4: Enhanced mockup analytics
+                    trackJakeEvent("mockup_succeeded", {
                       vehicle: event.mockup?.vehicle,
                       wheelStyle: event.mockup?.wheelStyle,
+                      mockupGenerationTime: event.mockup?.generationTime,
+                      mockupCacheHit: event.mockup?.cached,
+                      mockupMethod: event.mockup?.generationMethod,
                     });
                     break;
 
@@ -1241,7 +1249,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                   </div>
                 )}
 
-                {/* Visual Mockup */}
+                {/* Visual Mockup (Phase 3: Conversion CTAs) */}
                 {message.mockup && (
                   <div className="mt-4">
                     <JakeMockupCard
@@ -1249,22 +1257,35 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                       disclaimer={message.mockup.disclaimer}
                       vehicle={message.mockup.vehicle}
                       wheelStyle={message.mockup.wheelStyle}
-                      onSave={() => {
+                      generationTime={message.mockup.generationTime}
+                      cached={message.mockup.cached}
+                      // Phase 3: Conversion CTAs
+                      onBuildSetup={() => {
+                        // Trigger Jake to help build the setup
+                        handleSend("Let's build this setup! Help me get these exact products to checkout.");
+                      }}
+                      onAddToCart={() => {
+                        // If there's a cart URL from the conversation, use it
+                        if (message.cartUrl) {
+                          trackJakeEvent("mockup_to_cart", {
+                            vehicle: message.mockup?.vehicle,
+                            wheelStyle: message.mockup?.wheelStyle,
+                          });
+                          window.location.href = message.cartUrl;
+                        } else {
+                          // Otherwise ask Jake to build the cart
+                          handleSend("Add this package to my cart!");
+                        }
+                      }}
+                      onSaveBuild={() => {
+                        // TODO: Implement save to garage functionality
                         trackJakeEvent("mockup_saved", {
                           vehicle: message.mockup?.vehicle,
                           wheelStyle: message.mockup?.wheelStyle,
                         });
-                        // TODO: Implement save functionality
                       }}
-                      onShare={() => {
-                        trackJakeEvent("mockup_shared", {
-                          vehicle: message.mockup?.vehicle,
-                          wheelStyle: message.mockup?.wheelStyle,
-                        });
-                        // Copy image URL to clipboard
-                        if (message.mockup?.imageUrl) {
-                          navigator.clipboard.writeText(message.mockup.imageUrl);
-                        }
+                      onMakeChanges={() => {
+                        handleSend("I'd like to make some changes to this build.");
                       }}
                     />
                   </div>

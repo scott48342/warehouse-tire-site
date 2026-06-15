@@ -34,7 +34,7 @@ export interface SavedVehicleContext {
   modification?: string;
 }
 
-// Status messages for different operations
+// Status messages for different operations (Phase 2 - better customer messaging)
 const STATUS_MESSAGES: Record<string, string> = {
   thinking: "Thinking...",
   lookup_tire_sizes: "Checking your vehicle specs...",
@@ -43,7 +43,10 @@ const STATUS_MESSAGES: Record<string, string> = {
   search_wheels: "Searching wheel options...",
   list_trims: "Looking up trim levels...",
   get_platform_context: "Checking platform specs...",
-  generate_visual_mockup: "Creating visual mockup... (this takes a moment)",
+  // Phase 2: Better mockup status messaging (20-40 seconds expected)
+  generate_visual_mockup: "🎨 Generating visual mockup... This usually takes 20-40 seconds",
+  generate_visual_mockup_starting: "🎨 Starting mockup generation...",
+  generate_visual_mockup_rendering: "🎨 Rendering your setup... Almost there!",
   processing: "Processing results...",
   generating: "Jake is typing...",
 };
@@ -54,7 +57,17 @@ export type StreamEvent =
   | { type: "products"; products: { tires?: any[]; wheels?: any[]; staggeredPairs?: any[] } }
   | { type: "vehicle"; vehicle: { year?: number; make?: string; model?: string; trim?: string } }
   | { type: "cartUrl"; cartUrl: string }
-  | { type: "mockup"; mockup: { imageUrl: string; disclaimer: string; vehicle: string; wheelStyle: string } }
+  | { type: "mockup"; mockup: { 
+      imageUrl: string; 
+      disclaimer: string; 
+      vehicle: string; 
+      wheelStyle: string;
+      // Phase 4: Analytics data
+      generationTime?: number;
+      cached?: boolean;
+      generationMethod?: "gpt-image" | "cached";
+    } 
+  }
   | { type: "done"; meta: { duration_ms: number; toolsUsed: string[] } }
   | { type: "error"; error: string };
 
@@ -172,57 +185,51 @@ The customer is inspired and ready to build. Help them turn this inspiration int
     
     console.log(`[Jake Stream] Calling Claude...`);
     
-    // Initial Claude call with streaming
-    let response = await client.messages.create({
+    // Phase 6 FIX: Use non-streaming first to check if tools are needed
+    // This prevents duplicate text from initial stream + final stream
+    yield { type: "status", status: STATUS_MESSAGES.thinking };
+    
+    const initialResponse = await client.messages.create({
       model: "claude-sonnet-4-20250514",
       max_tokens: 1500,
       system: systemPrompt,
       tools: JAKE_TOOLS,
       messages,
-      stream: true,
     });
     
-    // Collect the streamed response
+    let contentBlocks: Anthropic.ContentBlock[] = initialResponse.content;
+    let stopReason: string | null = initialResponse.stop_reason;
     let currentText = "";
-    let contentBlocks: Anthropic.ContentBlock[] = [];
-    let stopReason: string | null = null;
     
-    yield { type: "status", status: STATUS_MESSAGES.generating };
-    
-    for await (const event of response) {
-      if (event.type === "content_block_delta") {
-        const delta = event.delta as any;
-        if (delta.type === "text_delta" && delta.text) {
-          currentText += delta.text;
-          yield { type: "text", text: delta.text };
-        }
-      } else if (event.type === "content_block_stop") {
-        // Block finished
-      } else if (event.type === "message_delta") {
-        stopReason = (event.delta as any).stop_reason || null;
-      } else if (event.type === "message_stop") {
-        // Message complete
-      }
-    }
-    
-    // Reconstruct content blocks for tool handling
-    // We need to re-fetch without streaming to get proper tool_use blocks
-    if (stopReason === "tool_use" || currentText === "") {
-      // Need to handle tool calls - use non-streaming for tool loop
-      const nonStreamResponse = await client.messages.create({
+    // Extract text from initial response (only emit if NOT using tools)
+    if (stopReason !== "tool_use") {
+      yield { type: "status", status: STATUS_MESSAGES.generating };
+      
+      // No tools - stream the response for better UX
+      const streamResponse = await client.messages.create({
         model: "claude-sonnet-4-20250514",
         max_tokens: 1500,
         system: systemPrompt,
         tools: JAKE_TOOLS,
         messages,
+        stream: true,
       });
       
-      contentBlocks = nonStreamResponse.content;
-      stopReason = nonStreamResponse.stop_reason;
-      
-      // Extract any text from non-streamed response
+      for await (const event of streamResponse) {
+        if (event.type === "content_block_delta") {
+          const delta = event.delta as any;
+          if (delta.type === "text_delta" && delta.text) {
+            currentText += delta.text;
+            yield { type: "text", text: delta.text };
+          }
+        } else if (event.type === "message_delta") {
+          stopReason = (event.delta as any).stop_reason || null;
+        }
+      }
+    } else {
+      // Tools will be used - extract text from initial response (likely minimal or empty)
       for (const block of contentBlocks) {
-        if (block.type === "text" && !currentText) {
+        if (block.type === "text") {
           currentText = block.text;
         }
       }
@@ -295,17 +302,27 @@ The customer is inspired and ready to build. Help them turn this inspiration int
               cartUrl = resultObj.cartUrl;
             }
             
-            // Handle mockup results
-            if (toolName === "generate_visual_mockup" && resultObj.success && resultObj.imageUrl) {
-              yield {
-                type: "mockup",
-                mockup: {
-                  imageUrl: resultObj.imageUrl,
-                  disclaimer: resultObj.disclaimer,
-                  vehicle: `${input.year} ${input.make} ${input.model}`,
-                  wheelStyle: String(input.wheelStyle),
-                },
-              } as any;
+            // Handle mockup results (Phase 4: Include analytics data)
+            if (toolName === "generate_visual_mockup") {
+              if (resultObj.success && resultObj.imageUrl) {
+                console.log(`[Jake Stream] Mockup succeeded: ${resultObj.generationMethod}, cached: ${resultObj.cached}, time: ${resultObj.generationTime}ms`);
+                yield {
+                  type: "mockup",
+                  mockup: {
+                    imageUrl: resultObj.imageUrl,
+                    disclaimer: resultObj.disclaimer,
+                    vehicle: `${input.year} ${input.make} ${input.model}`,
+                    wheelStyle: String(input.wheelStyle),
+                    // Phase 4: Analytics data
+                    generationTime: resultObj.generationTime,
+                    cached: resultObj.cached,
+                    generationMethod: resultObj.generationMethod,
+                  },
+                } as any;
+              } else {
+                // Phase 4: Track failed mockups
+                console.error(`[Jake Stream] Mockup failed: ${resultObj.errorCode} - ${resultObj.error}`);
+              }
             }
             
             toolResults.push({
