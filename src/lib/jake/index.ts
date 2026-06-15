@@ -104,7 +104,7 @@ Otherwise, assume all fitment questions are for the ${vehicleStr}.`;
     console.log(`[Jake] Calling Claude...`);
     
     let response = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens: 1500,
       system: systemPrompt,
       tools: JAKE_TOOLS,
@@ -164,7 +164,7 @@ Otherwise, assume all fitment questions are for the ${vehicleStr}.`;
       
       console.log(`[Jake] Sending tool results back...`);
       response = await client.messages.create({
-        model: "claude-sonnet-4-20250514",
+        model: "claude-sonnet-4-6",
         max_tokens: 1500,
         system: systemPrompt,
         tools: JAKE_TOOLS,

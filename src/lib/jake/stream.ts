@@ -208,7 +208,7 @@ The customer is inspired and ready to build. Help them turn this inspiration int
     yield { type: "status", status: STATUS_MESSAGES.thinking };
     
     const initialResponse = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens: 1500,
       system: systemPrompt,
       tools: JAKE_TOOLS,
@@ -225,7 +225,7 @@ The customer is inspired and ready to build. Help them turn this inspiration int
       
       // No tools - stream the response for better UX
       const streamResponse = await client.messages.create({
-        model: "claude-sonnet-4-20250514",
+        model: "claude-sonnet-4-6",
         max_tokens: 1500,
         system: systemPrompt,
         tools: JAKE_TOOLS,
@@ -383,7 +383,7 @@ The customer is inspired and ready to build. Help them turn this inspiration int
       
       // Stream the final response after tools
       const streamResponse = await client.messages.create({
-        model: "claude-sonnet-4-20250514",
+        model: "claude-sonnet-4-6",
         max_tokens: 1500,
         system: systemPrompt,
         tools: JAKE_TOOLS,
@@ -414,7 +414,7 @@ The customer is inspired and ready to build. Help them turn this inspiration int
       // Check if we need another tool round
       if (stopReason === "tool_use") {
         const checkResponse = await client.messages.create({
-          model: "claude-sonnet-4-20250514",
+          model: "claude-sonnet-4-6",
           max_tokens: 1500,
           system: systemPrompt,
           tools: JAKE_TOOLS,
