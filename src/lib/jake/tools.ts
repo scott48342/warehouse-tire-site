@@ -266,7 +266,11 @@ DISCLAIMER (always say after showing):
         wheelImageUrl: { type: "string", description: "Fallback only: the imageUrl from search results. Prefer passing wheelSku instead." },
         wheelFinish: { type: "string", description: "The finish/color description (e.g., 'Matte Bronze with Black Bead Ring', 'Gloss Black'). Server will override with authoritative finish if SKU is provided." },
         wheelSize: { type: "number", description: "Wheel diameter (e.g., 20, 22)" },
-        tireSize: { type: "string", description: "Tire size if known (e.g., '35x12.50R20')" },
+        tireSize: { type: "string", description: "Tire size if known (e.g., '275/60R20', '35x12.50R20')" },
+        tireSku: { type: "string", description: "The sku/partNumber of the tire from search_tires results. If provided WITH tireSize, the server resolves the real tire image so the mockup shows the actual tread/sidewall." },
+        tireBrand: { type: "string", description: "Tire brand from search_tires results (e.g., 'Hercules')" },
+        tireModel: { type: "string", description: "Tire model from search_tires results (e.g., 'Terra Trac AT')" },
+        tireTerrain: { type: "string", description: "Tire terrain category from search results (e.g., 'All-Terrain', 'Highway/Touring', 'Mud-Terrain')" },
         lift: { type: "string", description: "Lift level if known (e.g., 'stock', 'leveled', '4 inch lift')" }
       },
       required: ["year", "make", "model", "color", "wheelBrand", "wheelModel", "wheelSize"]
@@ -614,7 +618,7 @@ export async function executeTool(
     }
     
     case "generate_wheel_mockup": {
-      const { year, make, model, color, wheelBrand, wheelModel, wheelSku, wheelImageUrl, wheelFinish, wheelSize, tireSize, lift } = input;
+      const { year, make, model, color, wheelBrand, wheelModel, wheelSku, wheelImageUrl, wheelFinish, wheelSize, tireSize, tireSku, tireBrand, tireModel, tireTerrain, lift } = input;
       
       console.log(`[Jake Tool] generate_wheel_mockup: ${color} ${year} ${make} ${model}`);
       console.log(`[Jake Tool] Wheel: ${wheelSize}" ${wheelBrand} ${wheelModel} - sku=${wheelSku || 'none'} - ${wheelFinish || 'unknown finish'}`);
@@ -669,6 +673,45 @@ export async function executeTool(
           };
         }
 
+        // ─────────────────────────────────────────────────────────────────
+        // RESOLVE TIRE IMAGE FROM SKU (same approach as wheels)
+        // Tire search is by size, so we need tireSize + tireSku to resolve
+        // the exact product image. Falls back to terrain text if unavailable.
+        // ─────────────────────────────────────────────────────────────────
+        let tireImageUrl: string | undefined;
+        if (tireSku && tireSize) {
+          try {
+            const tParams = new URLSearchParams({ size: String(tireSize), partNumber: String(tireSku), limit: "1" });
+            const tLookupUrl = `${baseUrl}/api/tires/search?${tParams}`;
+            console.log(`[Jake Tool] Resolving tire image: ${tLookupUrl}`);
+            const tRes = await fetch(tLookupUrl, { cache: "no-store" });
+            if (tRes.ok) {
+              const tData = await tRes.json() as any;
+              const tHit = (tData.results || tData.tires || []).find(
+                (t: any) => String(t.partNumber || t.sku) === String(tireSku)
+              ) || (tData.results || tData.tires || [])[0];
+              if (tHit?.imageUrl) {
+                tireImageUrl = tHit.imageUrl;
+                console.log(`[Jake Tool] ✅ Resolved tire image: ${String(tireImageUrl).substring(0, 70)}...`);
+              } else {
+                console.warn(`[Jake Tool] ⚠️ Tire ${tireSku} returned no image; using terrain fallback`);
+              }
+            }
+          } catch (tErr) {
+            console.warn(`[Jake Tool] ⚠️ Tire lookup error: ${tErr}; using terrain fallback`);
+          }
+        }
+
+        const tireInput = (tireSize || tireSku || tireBrand || tireTerrain)
+          ? {
+              size: tireSize ? String(tireSize) : undefined,
+              brand: tireBrand ? String(tireBrand) : undefined,
+              model: tireModel ? String(tireModel) : undefined,
+              imageUrl: tireImageUrl,
+              terrain: tireTerrain ? String(tireTerrain) : undefined,
+            }
+          : undefined;
+
         const result = await generateWheelMockup({
           vehicle: {
             year: Number(year),
@@ -683,7 +726,7 @@ export async function executeTool(
             finish: resolvedFinish,
             size: Number(wheelSize),
           },
-          tire: tireSize ? { size: String(tireSize) } : undefined,
+          tire: tireInput,
           lift: lift ? String(lift) : undefined,
         });
         

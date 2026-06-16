@@ -153,8 +153,18 @@ Required params (you already have these from search results):
 
 Optional:
 - wheelFinish (the finishDescription field - e.g., "MATTE BRONZE BLACK BEAD RING")
-- tireSize (e.g., "35x12.50R20")
 - lift (e.g., "stock", "leveled", "4 inch lift")
+
+TIRES (optional but makes the mockup more accurate):
+If the customer has also picked a tire (from search_tires results), pass it so the
+mockup shows the real tread/sidewall instead of a generic tire:
+- tireSku (the sku/partNumber from search_tires results)
+- tireSize (e.g., "275/60R20") - REQUIRED together with tireSku so the server can resolve the image
+- tireBrand, tireModel (from search_tires results)
+- tireTerrain (e.g., "All-Terrain", "Highway/Touring", "Mud-Terrain")
+Like wheels, pass the tireSku + tireSize (short, reliable) - the server looks up the
+actual tire image. If you only know the terrain type, pass tireTerrain and the mockup
+will at least match the tread aggressiveness.
 
 CRITICAL - PASS THE SKU, NOT THE IMAGE URL:
 Always pass wheelSku (the short product id) from the search results. The server
