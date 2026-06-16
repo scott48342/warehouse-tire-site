@@ -37,13 +37,46 @@ export async function POST(req: NextRequest) {
       );
     }
     
-    // REQUIRED: wheelImageUrl for accurate wheel reproduction
-    if (!build?.wheelImageUrl) {
+    // Need EITHER a SKU (preferred - server resolves the real image) OR an imageUrl.
+    if (!build?.wheelSku && !build?.wheelImageUrl) {
       return NextResponse.json(
         { 
-          error: "Missing wheelImageUrl - required for accurate wheel mockups",
-          hint: "Pass the wheel product imageUrl from search results"
+          error: "Missing wheelSku or wheelImageUrl - one is required for accurate wheel mockups",
+          hint: "Pass the wheel product sku (preferred) or imageUrl from search results"
         },
+        { status: 400 }
+      );
+    }
+
+    // Resolve authoritative image + brand/model from SKU when provided.
+    // LLM-pasted image URLs are error-prone (wrong color/style); the SKU is reliable.
+    let resolvedImageUrl: string = build.wheelImageUrl || "";
+    let resolvedBrand: string = build.wheelBrand || "";
+    let resolvedModel: string = build.wheelModel || "";
+    if (build.wheelSku) {
+      try {
+        const origin = new URL(req.url).origin;
+        const lookupRes = await fetch(`${origin}/api/search?q=${encodeURIComponent(build.wheelSku)}`, { cache: "no-store" });
+        if (lookupRes.ok) {
+          const lookupData = await lookupRes.json();
+          const hit = (lookupData.results || []).find(
+            (r: any) => r.type === "wheel" && String(r.sku) === String(build.wheelSku)
+          ) || (lookupData.results || [])[0];
+          if (hit?.image) {
+            resolvedImageUrl = hit.image;
+            if (hit.brand) resolvedBrand = hit.brand;
+            if (hit.name) resolvedModel = hit.name;
+            console.log(`[Jake Mockup] ✅ Resolved image from SKU ${build.wheelSku}`);
+          }
+        }
+      } catch (e) {
+        console.warn(`[Jake Mockup] ⚠️ SKU resolution failed, using provided imageUrl: ${e}`);
+      }
+    }
+
+    if (!resolvedImageUrl) {
+      return NextResponse.json(
+        { error: "Could not resolve a wheel image from the provided sku/imageUrl" },
         { status: 400 }
       );
     }
@@ -51,12 +84,12 @@ export async function POST(req: NextRequest) {
     console.log(`[Jake Mockup] ═══════════════════════════════════════════════════`);
     console.log(`[Jake Mockup] ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}`);
     console.log(`[Jake Mockup] Wheel: ${build.wheelSize}" ${build.wheelStyle}`);
-    console.log(`[Jake Mockup] Image URL: ${build.wheelImageUrl.substring(0, 60)}...`);
+    console.log(`[Jake Mockup] Image URL: ${resolvedImageUrl.substring(0, 60)}...`);
     console.log(`[Jake Mockup] Lift: ${build.style || "stock"}`);
     
     // Parse wheel brand/model from wheelStyle if not provided separately
-    let wheelBrand = build.wheelBrand || "";
-    let wheelModel = build.wheelModel || "";
+    let wheelBrand = resolvedBrand || "";
+    let wheelModel = resolvedModel || "";
     
     if (!wheelBrand && build.wheelStyle) {
       // Try to parse "Fuel Flame Platinum Bronze" -> brand: "Fuel", model: "Flame Platinum Bronze"
@@ -87,7 +120,8 @@ export async function POST(req: NextRequest) {
       wheel: {
         brand: wheelBrand,
         model: wheelModel,
-        imageUrl: build.wheelImageUrl,
+        imageUrl: resolvedImageUrl,
+        finish: build.wheelFinish || undefined,
         size: parseInt(build.wheelSize),
       },
       tire: build.tireSize ? { size: build.tireSize } : undefined,
