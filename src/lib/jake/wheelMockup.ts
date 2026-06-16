@@ -286,8 +286,15 @@ function buildPrompt(req: WheelMockupRequest, wheelDescription: string, tireDesc
   }
   
   // Determine tires. Prefer a vision-analyzed description of the actual tire
-  // product image (most accurate). Fall back to terrain/size text.
-  let tireDesc = "all-terrain tires with black sidewalls";
+  // product image (most accurate). Fall back to terrain/size text. When nothing
+  // is specified, pick a body-style-appropriate default (street/performance for
+  // cars, all-terrain for trucks/SUVs) instead of always defaulting to A/T.
+  const defaultTireDesc = body.isTruckOrSuv
+    ? "all-terrain tires with black sidewalls"
+    : (body.noun === "coupe"
+        ? "low-profile performance summer tires with black sidewalls"
+        : "low-profile all-season touring tires with black sidewalls");
+  let tireDesc = defaultTireDesc;
   if (tireDescription && tireDescription.trim()) {
     const sizePrefix = tire?.size ? `${tire.size} tires. ` : "";
     tireDesc = `${sizePrefix}${tireDescription.trim()}`;
@@ -295,7 +302,8 @@ function buildPrompt(req: WheelMockupRequest, wheelDescription: string, tireDesc
     const sizePrefix = tire.size ? `${tire.size} ` : "";
     tireDesc = `${sizePrefix}${tire.terrain} tires with black sidewalls`;
   } else if (tire?.size) {
-    tireDesc = `${tire.size} all-terrain tires`;
+    const sizePrefix = `${tire.size} `;
+    tireDesc = body.isTruckOrSuv ? `${sizePrefix}all-terrain tires` : `${sizePrefix}${defaultTireDesc}`;
   }
 
   // Build an emphasized tire block when we have a real analyzed description,
