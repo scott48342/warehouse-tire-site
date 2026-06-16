@@ -44,7 +44,7 @@ export interface WheelMockupResult {
   cached: boolean;
   generationTimeMs?: number;
   confidence?: "high" | "medium" | "low";
-  method?: "vision-analyzed" | "cached";
+  method?: "vision-analyzed" | "cached" | "text-fallback";
 }
 
 export const MOCKUP_DISCLAIMER = "AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.";
@@ -248,6 +248,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     const base64Image = await fetchImageAsBase64(req.wheel.imageUrl);
     
     let wheelDescription = "";
+    let usedFallbackDescription = false;
     if (base64Image) {
       wheelDescription = await analyzeWheelForGeneration(
         base64Image,
@@ -255,11 +256,14 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       );
     }
     
-    // Fallback if analysis failed
+    // Fallback if analysis failed (image fetch failed OR vision returned nothing).
+    // This path produces LOWER-fidelity mockups because we're guessing the wheel
+    // from text instead of analyzing the real image - flag it so callers/UI know.
     if (!wheelDescription) {
+      usedFallbackDescription = true;
       const finishDesc = req.wheel.finish || "aftermarket";
       wheelDescription = `${req.wheel.brand} ${req.wheel.model} wheel in ${finishDesc} finish with aggressive off-road styling`;
-      console.log(`[wheelMockup] Using fallback description`);
+      console.warn(`[wheelMockup] ⚠️ FALLBACK DESCRIPTION USED - real wheel image not analyzed (fetch/vision failed). Mockup accuracy will be reduced. imageUrl=${req.wheel.imageUrl?.substring(0, 80)}`);
     }
     
     // Step 2: Build the prompt with wheel description
@@ -309,8 +313,9 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       imageUrl: blob.url,
       cached: false,
       generationTimeMs: elapsed,
-      confidence: "high",
-      method: "vision-analyzed",
+      // If we couldn't analyze the real image, the wheel is a text-based guess.
+      confidence: usedFallbackDescription ? "low" : "high",
+      method: usedFallbackDescription ? "text-fallback" : "vision-analyzed",
     };
     
   } catch (error: any) {

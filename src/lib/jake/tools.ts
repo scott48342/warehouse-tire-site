@@ -244,10 +244,12 @@ FLOW:
 4. Show the generated image with disclaimer
 
 REQUIRED DATA (you already have from search results):
-- wheelImageUrl: the imageUrl field from search results
+- wheelSku: the sku field from search results (PREFERRED - server looks up the exact image)
 - wheelBrand: brand name
 - wheelModel: model name  
 - wheelSize: diameter in inches
+
+IMPORTANT: Pass the wheelSku (short product id like "D69618901857"). Do NOT try to copy the long image URL by hand - the server resolves the correct image and finish from the SKU automatically. Only pass wheelImageUrl as a fallback if no SKU is available.
 
 DISCLAIMER (always say after showing):
 "AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting."`,
@@ -260,13 +262,14 @@ DISCLAIMER (always say after showing):
         color: { type: "string", description: "Vehicle color (black, white, red, silver, blue, etc.)" },
         wheelBrand: { type: "string", description: "Wheel brand from search results" },
         wheelModel: { type: "string", description: "Wheel model from search results" },
-        wheelImageUrl: { type: "string", description: "The imageUrl from your search results - you already have this!" },
-        wheelFinish: { type: "string", description: "The finish/color description (e.g., 'Matte Bronze with Black Bead Ring', 'Gloss Black')" },
+        wheelSku: { type: "string", description: "The sku from your search results (e.g., 'D69618901857'). PREFERRED - server resolves the exact image and finish from this." },
+        wheelImageUrl: { type: "string", description: "Fallback only: the imageUrl from search results. Prefer passing wheelSku instead." },
+        wheelFinish: { type: "string", description: "The finish/color description (e.g., 'Matte Bronze with Black Bead Ring', 'Gloss Black'). Server will override with authoritative finish if SKU is provided." },
         wheelSize: { type: "number", description: "Wheel diameter (e.g., 20, 22)" },
         tireSize: { type: "string", description: "Tire size if known (e.g., '35x12.50R20')" },
         lift: { type: "string", description: "Lift level if known (e.g., 'stock', 'leveled', '4 inch lift')" }
       },
-      required: ["year", "make", "model", "color", "wheelBrand", "wheelModel", "wheelImageUrl", "wheelFinish", "wheelSize"]
+      required: ["year", "make", "model", "color", "wheelBrand", "wheelModel", "wheelSize"]
     }
   }
 ];
@@ -611,15 +614,61 @@ export async function executeTool(
     }
     
     case "generate_wheel_mockup": {
-      const { year, make, model, color, wheelBrand, wheelModel, wheelImageUrl, wheelFinish, wheelSize, tireSize, lift } = input;
+      const { year, make, model, color, wheelBrand, wheelModel, wheelSku, wheelImageUrl, wheelFinish, wheelSize, tireSize, lift } = input;
       
       console.log(`[Jake Tool] generate_wheel_mockup: ${color} ${year} ${make} ${model}`);
-      console.log(`[Jake Tool] Wheel: ${wheelSize}" ${wheelBrand} ${wheelModel} - ${wheelFinish || 'unknown finish'}`);
+      console.log(`[Jake Tool] Wheel: ${wheelSize}" ${wheelBrand} ${wheelModel} - sku=${wheelSku || 'none'} - ${wheelFinish || 'unknown finish'}`);
       
       try {
         // Import and call the new clean mockup generator directly
         const { generateWheelMockup, MOCKUP_DISCLAIMER } = await import("./wheelMockup");
         
+        // ─────────────────────────────────────────────────────────────────
+        // RESOLVE AUTHORITATIVE IMAGE + FINISH FROM SKU (server-side)
+        // The LLM is bad at copying long CDN URLs by hand, which caused
+        // wrong-color / wrong-style mockups. If we have a SKU, look up the
+        // real product image and finish from our own data instead of
+        // trusting an LLM-pasted URL.
+        // ─────────────────────────────────────────────────────────────────
+        let resolvedImageUrl = wheelImageUrl ? String(wheelImageUrl) : "";
+        let resolvedFinish = wheelFinish ? String(wheelFinish) : undefined;
+        let resolvedBrand = String(wheelBrand || "");
+        let resolvedModel = String(wheelModel || "");
+
+        if (wheelSku) {
+          try {
+            const lookupUrl = `${baseUrl}/api/search?q=${encodeURIComponent(String(wheelSku))}`;
+            console.log(`[Jake Tool] Resolving wheel image from SKU: ${lookupUrl}`);
+            const lookupRes = await fetch(lookupUrl, { cache: "no-store" });
+            if (lookupRes.ok) {
+              const lookupData = await lookupRes.json() as any;
+              const hit = (lookupData.results || []).find(
+                (r: any) => r.type === "wheel" && String(r.sku) === String(wheelSku)
+              ) || (lookupData.results || [])[0];
+              if (hit?.image) {
+                resolvedImageUrl = hit.image;
+                if (hit.brand) resolvedBrand = hit.brand;
+                if (hit.name) resolvedModel = hit.name;
+                console.log(`[Jake Tool] ✅ Resolved image from SKU: ${resolvedImageUrl.substring(0, 70)}...`);
+              } else {
+                console.warn(`[Jake Tool] ⚠️ SKU ${wheelSku} returned no image; falling back to provided URL`);
+              }
+            } else {
+              console.warn(`[Jake Tool] ⚠️ SKU lookup failed (${lookupRes.status}); using provided URL`);
+            }
+          } catch (lookupErr) {
+            console.warn(`[Jake Tool] ⚠️ SKU lookup error: ${lookupErr}; using provided URL`);
+          }
+        }
+
+        if (!resolvedImageUrl) {
+          return {
+            success: false,
+            error: "No wheel image could be resolved (provide a valid wheelSku or wheelImageUrl)",
+            disclaimer: MOCKUP_DISCLAIMER,
+          };
+        }
+
         const result = await generateWheelMockup({
           vehicle: {
             year: Number(year),
@@ -628,10 +677,10 @@ export async function executeTool(
             color: String(color),
           },
           wheel: {
-            brand: String(wheelBrand),
-            model: String(wheelModel),
-            imageUrl: String(wheelImageUrl),
-            finish: wheelFinish ? String(wheelFinish) : undefined,
+            brand: resolvedBrand,
+            model: resolvedModel,
+            imageUrl: resolvedImageUrl,
+            finish: resolvedFinish,
             size: Number(wheelSize),
           },
           tire: tireSize ? { size: String(tireSize) } : undefined,

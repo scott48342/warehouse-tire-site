@@ -148,15 +148,19 @@ TOOL: generate_wheel_mockup
 Required params (you already have these from search results):
 - year, make, model, color (vehicle info)
 - wheelBrand, wheelModel (from search results)
-- wheelImageUrl (the imageUrl field from search results)
-- wheelFinish (the finishDescription field - e.g., "MATTE BRONZE BLACK BEAD RING")
+- wheelSku (the sku field from search results - e.g., "D69618901857")
 - wheelSize (diameter in inches)
 
 Optional:
+- wheelFinish (the finishDescription field - e.g., "MATTE BRONZE BLACK BEAD RING")
 - tireSize (e.g., "35x12.50R20")
 - lift (e.g., "stock", "leveled", "4 inch lift")
 
-CRITICAL: Always pass wheelFinish from the search results! This ensures the mockup shows the correct color (bronze, black, chrome, etc.).
+CRITICAL - PASS THE SKU, NOT THE IMAGE URL:
+Always pass wheelSku (the short product id) from the search results. The server
+looks up the EXACT product image and finish from that SKU automatically. Do NOT
+try to copy the long image URL by hand - copying it wrong is the #1 cause of
+mockups showing the wrong wheel color or style. The SKU is short and reliable.
 
 EXAMPLE:
 Customer: "I like that Fuel Rebel in bronze, can you show me?"
@@ -166,8 +170,7 @@ You: "Let me generate a quick mockup - this takes about a minute or two..."
 [call generate_wheel_mockup with:
   year: 2024, make: "Ford", model: "F-150", color: "white",
   wheelBrand: "Fuel", wheelModel: "Rebel", 
-  wheelImageUrl: "(the imageUrl from your search results)",
-  wheelFinish: "MATTE BRONZE BLACK BEAD RING",
+  wheelSku: "(the sku from your search results)",
   wheelSize: 20
 ]
 
