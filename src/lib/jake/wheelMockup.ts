@@ -254,17 +254,32 @@ function buildPrompt(req: WheelMockupRequest, wheelDescription: string, tireDesc
     tireDesc = `${tire.size} all-terrain tires`;
   }
 
-  // The prompt with explicit wheel description
+  // Build an emphasized tire block when we have a real analyzed description,
+  // otherwise a simple inline phrase. gpt-image-1 defaults tires to smooth/street
+  // unless the prompt explicitly insists on the tread aggressiveness.
+  const hasTireSpec = !!(tireDescription && tireDescription.trim());
+  const tireBlock = hasTireSpec
+    ? `
+
+TIRE SPECIFICATION (MUST MATCH):
+${tireDesc}
+
+CRITICAL: Render the tire tread to match the aggressiveness described above. If it says all-terrain, show moderately blocky tread with visible voids and shoulder lugs. If it says mud-terrain, show large chunky deep lugs. If it says highway/touring, show smooth ribbed tread. Match the sidewall (black sidewall vs raised white lettering) as described.`
+    : `
+
+The wheels are paired with ${tireDesc}.`;
+
+  // The prompt with explicit wheel + tire descriptions
   return `Professional automotive photograph of a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} pickup truck ${stance}.
 
 WHEEL SPECIFICATION (MUST MATCH EXACTLY):
 ${wheelDescription}
 
-The truck has ${wheel.size}-inch aftermarket wheels matching the above specification on all four corners. Paired with ${tireDesc}.
+The truck has ${wheel.size}-inch aftermarket wheels matching the above specification on all four corners.${tireBlock}
 
 CRITICAL: The wheel color/finish described above must be accurate. If the description says bronze/copper spokes, render bronze/copper. If it says black, render black.
 
-Shot from front three-quarter angle showing driver side. Outdoor dealership setting with natural lighting. Sharp focus on wheels. Photorealistic.`;
+Shot from front three-quarter angle showing driver side. Outdoor dealership setting with natural lighting. Sharp focus on wheels and tires. Photorealistic.`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
