@@ -228,21 +228,20 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
   console.log(`[wheelMockup] Lift: ${req.lift || "stock"}`);
   
   try {
-    // CACHE DISABLED FOR TESTING - always generate fresh
     const cacheKey = getCacheKey(req);
-    // const cached = await checkCache(cacheKey);
-    // if (cached) {
-    //   console.log(`[wheelMockup] ✅ Cache hit`);
-    //   return { 
-    //     success: true, 
-    //     imageUrl: cached, 
-    //     cached: true, 
-    //     generationTimeMs: Date.now() - startTime,
-    //     confidence: "high",
-    //     method: "cached"
-    //   };
-    // }
-    console.log(`[wheelMockup] Cache disabled - generating fresh`);
+    const cached = await checkCache(cacheKey);
+    if (cached) {
+      console.log(`[wheelMockup] ✅ Cache hit`);
+      return { 
+        success: true, 
+        imageUrl: cached, 
+        cached: true, 
+        generationTimeMs: Date.now() - startTime,
+        confidence: "high",
+        method: "cached"
+      };
+    }
+    console.log(`[wheelMockup] Cache miss - generating fresh`);
     
     // Step 1: Fetch wheel image and analyze with GPT-4o Vision
     const base64Image = await fetchImageAsBase64(req.wheel.imageUrl);

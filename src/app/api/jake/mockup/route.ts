@@ -162,8 +162,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       { 
         error: "Internal server error",
-        debugError: error instanceof Error ? `${error.name}: ${error.message}` : String(error),
-        debugStack: error instanceof Error ? (error.stack || "").split("\n").slice(0, 4).join(" | ") : undefined,
         disclaimer: MOCKUP_DISCLAIMER,
       },
       { status: 500 }
