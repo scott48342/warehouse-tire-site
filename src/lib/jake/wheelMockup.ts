@@ -94,7 +94,7 @@ function getCacheKey(req: WheelMockupRequest): string {
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
   ].join("-");
   
-  return `jake-mockups/v12/${parts}.png`;
+  return `jake-mockups/v13/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
