@@ -33,6 +33,10 @@ export interface WheelMockupRequest {
   };
   tire?: {
     size?: string;
+    brand?: string;
+    model?: string;
+    imageUrl?: string;
+    terrain?: string;
   };
   lift?: string;
 }
@@ -85,10 +89,12 @@ function getCacheKey(req: WheelMockupRequest): string {
     finishKey,
     req.wheel.size,
     req.tire?.size?.replace(/[^a-z0-9]/gi, "") || "stock",
+    // include tire identity so different tires don't collide in cache
+    (req.tire?.model || req.tire?.terrain || "").toLowerCase().replace(/[^a-z0-9]/g, "").substring(0, 16) || "std",
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
   ].join("-");
   
-  return `jake-mockups/v10/${parts}.png`;
+  return `jake-mockups/v11/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -178,11 +184,50 @@ Be specific about colors. Keep under 100 words.`,
   }
 }
 
+async function analyzeTireForGeneration(base64Image: string, tireName: string): Promise<string> {
+  const openai = getOpenAI();
+
+  console.log(`[wheelMockup] Analyzing tire with GPT-4o Vision...`);
+
+  try {
+    const response = await openai.chat.completions.create({
+      model: "gpt-4o",
+      max_tokens: 250,
+      messages: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: `Describe this tire's visual appearance for an artist recreating it on a truck. Focus ONLY on the tire (ignore any wheel shown):
+- Tread aggressiveness: highway/street, all-terrain, or mud-terrain
+- Tread block style (tight ribs vs chunky blocks vs deep lugs)
+- Sidewall: black sidewall (BSW) or raised white lettering (RWL)? Any aggressive sidewall lugs/styling?
+Keep under 70 words.`,
+            },
+            {
+              type: "image_url",
+              image_url: { url: base64Image, detail: "high" },
+            },
+          ],
+        },
+      ],
+    });
+
+    const description = response.choices[0]?.message?.content || "";
+    console.log(`[wheelMockup] Tire analysis: ${description.substring(0, 160)}...`);
+    return description;
+  } catch (error: any) {
+    console.error("[wheelMockup] Tire vision analysis failed:", error?.message);
+    return "";
+  }
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // STEP 2: BUILD PROMPT WITH PRECISE WHEEL DESCRIPTION
 // ═══════════════════════════════════════════════════════════════════════════
 
-function buildPrompt(req: WheelMockupRequest, wheelDescription: string): string {
+function buildPrompt(req: WheelMockupRequest, wheelDescription: string, tireDescription?: string): string {
   const { vehicle, wheel, tire, lift } = req;
   
   // Determine stance
@@ -196,9 +241,16 @@ function buildPrompt(req: WheelMockupRequest, wheelDescription: string): string 
     else if (liftLower.includes("lower")) stance = "lowered";
   }
   
-  // Determine tires
+  // Determine tires. Prefer a vision-analyzed description of the actual tire
+  // product image (most accurate). Fall back to terrain/size text.
   let tireDesc = "all-terrain tires with black sidewalls";
-  if (tire?.size) {
+  if (tireDescription && tireDescription.trim()) {
+    const sizePrefix = tire?.size ? `${tire.size} tires. ` : "";
+    tireDesc = `${sizePrefix}${tireDescription.trim()}`;
+  } else if (tire?.terrain) {
+    const sizePrefix = tire.size ? `${tire.size} ` : "";
+    tireDesc = `${sizePrefix}${tire.terrain} tires with black sidewalls`;
+  } else if (tire?.size) {
     tireDesc = `${tire.size} all-terrain tires`;
   }
 
@@ -265,8 +317,24 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       console.warn(`[wheelMockup] ⚠️ FALLBACK DESCRIPTION USED - real wheel image not analyzed (fetch/vision failed). Mockup accuracy will be reduced. imageUrl=${req.wheel.imageUrl?.substring(0, 80)}`);
     }
     
-    // Step 2: Build the prompt with wheel description
-    const prompt = buildPrompt(req, wheelDescription);
+    // Step 1b: If a tire product image is provided, analyze it too so the
+    // mockup shows the actual tire (tread aggressiveness + sidewall style)
+    // instead of a generic "all-terrain" guess.
+    let tireDescription = "";
+    if (req.tire?.imageUrl) {
+      const tireBase64 = await fetchImageAsBase64(req.tire.imageUrl);
+      if (tireBase64) {
+        tireDescription = await analyzeTireForGeneration(
+          tireBase64,
+          `${req.tire.brand || ""} ${req.tire.model || ""}`.trim()
+        );
+      } else {
+        console.warn(`[wheelMockup] ⚠️ Tire image fetch failed; using terrain/size fallback`);
+      }
+    }
+
+    // Step 2: Build the prompt with wheel + tire description
+    const prompt = buildPrompt(req, wheelDescription, tireDescription);
     console.log(`[wheelMockup] Step 2: Prompt built (${prompt.length} chars)`);
     
     // Step 3: Generate with gpt-image-1

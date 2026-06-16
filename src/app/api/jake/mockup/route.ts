@@ -109,7 +109,39 @@ export async function POST(req: NextRequest) {
     if (liftStyle === "lifted-2") liftStyle = "2 inch lift";
     if (liftStyle === "lifted-4") liftStyle = "4 inch lift";
     if (liftStyle === "lifted-6") liftStyle = "6 inch lift";
-    
+
+    // Resolve tire image from SKU + size (same approach as wheels)
+    let tireImageUrl: string | undefined = build.tireImageUrl || undefined;
+    if (build.tireSku && build.tireSize && !tireImageUrl) {
+      try {
+        const origin = new URL(req.url).origin;
+        const tParams = new URLSearchParams({ size: String(build.tireSize), partNumber: String(build.tireSku), limit: "1" });
+        const tRes = await fetch(`${origin}/api/tires/search?${tParams}`, { cache: "no-store" });
+        if (tRes.ok) {
+          const tData = await tRes.json();
+          const tHit = (tData.results || tData.tires || []).find(
+            (t: any) => String(t.partNumber || t.sku) === String(build.tireSku)
+          ) || (tData.results || tData.tires || [])[0];
+          if (tHit?.imageUrl) {
+            tireImageUrl = tHit.imageUrl;
+            console.log(`[Jake Mockup] ✅ Resolved tire image from SKU ${build.tireSku}`);
+          }
+        }
+      } catch (e) {
+        console.warn(`[Jake Mockup] ⚠️ Tire SKU resolution failed: ${e}`);
+      }
+    }
+
+    const tireInput = (build.tireSize || build.tireSku || build.tireBrand || build.tireTerrain)
+      ? {
+          size: build.tireSize || undefined,
+          brand: build.tireBrand || undefined,
+          model: build.tireModel || undefined,
+          imageUrl: tireImageUrl,
+          terrain: build.tireTerrain || undefined,
+        }
+      : undefined;
+
     const request: WheelMockupRequest = {
       vehicle: {
         year: parseInt(vehicle.year),
@@ -124,7 +156,7 @@ export async function POST(req: NextRequest) {
         finish: build.wheelFinish || undefined,
         size: parseInt(build.wheelSize),
       },
-      tire: build.tireSize ? { size: build.tireSize } : undefined,
+      tire: tireInput,
       lift: liftStyle,
     };
     
