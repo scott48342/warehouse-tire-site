@@ -94,7 +94,7 @@ function getCacheKey(req: WheelMockupRequest): string {
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
   ].join("-");
   
-  return `jake-mockups/v11/${parts}.png`;
+  return `jake-mockups/v12/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -199,7 +199,7 @@ async function analyzeTireForGeneration(base64Image: string, tireName: string): 
           content: [
             {
               type: "text",
-              text: `Describe this tire's visual appearance for an artist recreating it on a truck. Focus ONLY on the tire (ignore any wheel shown):
+              text: `Describe this tire's visual appearance for an artist recreating it on a vehicle. Focus ONLY on the tire (ignore any wheel shown):
 - Tread aggressiveness: highway/street, all-terrain, or mud-terrain
 - Tread block style (tight ribs vs chunky blocks vs deep lugs)
 - Sidewall: black sidewall (BSW) or raised white lettering (RWL)? Any aggressive sidewall lugs/styling?
@@ -227,18 +227,62 @@ Keep under 70 words.`,
 // STEP 2: BUILD PROMPT WITH PRECISE WHEEL DESCRIPTION
 // ═══════════════════════════════════════════════════════════════════════════
 
+// Infer the vehicle body style so the mockup renders the correct shape
+// instead of always assuming a pickup truck (which turned cars like a
+// Camaro into a Frankenstein coupe-truck).
+function inferBodyStyle(make: string, model: string): { noun: string; isTruckOrSuv: boolean } {
+  const m = `${model}`.toLowerCase();
+  const mk = `${make}`.toLowerCase();
+
+  // Known pickup trucks
+  const truckModels = ["f-150", "f150", "f-250", "f-350", "f-450", "silverado", "sierra", "ram", "1500", "2500", "3500", "tundra", "tacoma", "frontier", "titan", "ranger", "colorado", "canyon", "ridgeline", "gladiator", "maverick", "super duty", "superduty", "avalanche", "dakota", "hummer ev", "cybertruck", "lightning"];
+  if (truckModels.some((t) => m.includes(t))) return { noun: "pickup truck", isTruckOrSuv: true };
+
+  // Known SUVs / crossovers
+  const suvModels = ["tahoe", "suburban", "yukon", "escalade", "expedition", "explorer", "bronco", "4runner", "4-runner", "sequoia", "highlander", "pilot", "wrangler", "grand cherokee", "cherokee", "durango", "telluride", "palisade", "tahoe", "traverse", "blazer", "equinox", "rav4", "cr-v", "crv", "escape", "edge", "pathfinder", "armada", "land cruiser", "defender", "range rover", "g-wagon", "g-class", "q7", "q5", "x5", "x7", "gx", "lx", "rx", "qx", "mdx", "rdx", "atlas", "tiguan", "outback", "forester", "ascent", "cx-5", "cx-9", "cx-50", "cx-90", "santa fe", "tucson", "sorento", "sportage", "rogue", "murano", "kicks", "bronco sport", "trailblazer", "trax", "suv"];
+  if (suvModels.some((s) => m.includes(s))) return { noun: "SUV", isTruckOrSuv: true };
+
+  // Coupes / sports cars
+  const coupeModels = ["camaro", "mustang", "corvette", "challenger", "supra", "gt-r", "gtr", "86", "brz", "miata", "mx-5", "z4", "m4", "m2", "911", "cayman", "viper"];
+  if (coupeModels.some((c) => m.includes(c))) return { noun: "coupe", isTruckOrSuv: false };
+
+  // Charger/300/sedans
+  const sedanModels = ["charger", "300", "camry", "accord", "civic", "corolla", "altima", "sentra", "malibu", "impala", "sonata", "elantra", "jetta", "passat", "3-series", "5-series", "c-class", "e-class", "a4", "a6", "model 3", "model s", "taycan", "sedan"];
+  if (sedanModels.some((s) => m.includes(s))) return { noun: "sedan", isTruckOrSuv: false };
+
+  // Vans
+  if (m.includes("van") || m.includes("transit") || m.includes("sprinter") || m.includes("sienna") || m.includes("odyssey") || m.includes("pacifica")) {
+    return { noun: "van", isTruckOrSuv: false };
+  }
+
+  // Jeep brand default (non-Wrangler) -> SUV
+  if (mk === "jeep") return { noun: "SUV", isTruckOrSuv: true };
+
+  // Default: generic vehicle, no forced body shape, not truck/suv
+  return { noun: "vehicle", isTruckOrSuv: false };
+}
+
 function buildPrompt(req: WheelMockupRequest, wheelDescription: string, tireDescription?: string): string {
   const { vehicle, wheel, tire, lift } = req;
-  
-  // Determine stance
+
+  const body = inferBodyStyle(vehicle.make, vehicle.model);
+
+  // Determine stance. Lift language only makes sense for trucks/SUVs; for cars,
+  // map lift requests to lowered/stock so we never render a lifted coupe.
   let stance = "";
   if (lift) {
     const liftLower = lift.toLowerCase();
-    if (liftLower.includes("level")) stance = "with leveling kit";
-    else if (liftLower.includes("6")) stance = "with 6-inch lift, aggressive stance";
-    else if (liftLower.includes("4")) stance = "with 4-inch lift";
-    else if (liftLower.includes("2") || liftLower.includes("3")) stance = "slightly lifted";
-    else if (liftLower.includes("lower")) stance = "lowered";
+    if (body.isTruckOrSuv) {
+      if (liftLower.includes("level")) stance = "with leveling kit";
+      else if (liftLower.includes("6")) stance = "with 6-inch lift, aggressive stance";
+      else if (liftLower.includes("4")) stance = "with 4-inch lift";
+      else if (liftLower.includes("2") || liftLower.includes("3")) stance = "slightly lifted";
+      else if (liftLower.includes("lower")) stance = "lowered";
+    } else {
+      // Cars: never lift
+      if (liftLower.includes("lower")) stance = "lowered stance";
+      else stance = ""; // stock ride height
+    }
   }
   
   // Determine tires. Prefer a vision-analyzed description of the actual tire
@@ -269,13 +313,19 @@ CRITICAL: Render the tire tread to match the aggressiveness described above. If 
 
 The wheels are paired with ${tireDesc}.`;
 
-  // The prompt with explicit wheel + tire descriptions
-  return `Professional automotive photograph of a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model} pickup truck ${stance}.
+  // The prompt with explicit wheel + tire descriptions.
+  // Body style is inferred from the vehicle so we render the correct shape
+  // (a Camaro is a coupe, not a pickup).
+  const vehiclePhrase = `${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}`;
+  const stancePhrase = stance ? ` ${stance}` : "";
+  return `Professional automotive photograph of a ${vehiclePhrase}, a ${body.noun}${stancePhrase}.
+
+CRITICAL VEHICLE ACCURACY: Render the correct factory body style and proportions of a ${vehicle.year} ${vehicle.make} ${vehicle.model}. Do NOT change the body type. If it is a coupe, keep it a 2-door coupe; if a sedan, a 4-door sedan; if a pickup, a pickup; if an SUV, an SUV. Do not add a truck bed to a car.
 
 WHEEL SPECIFICATION (MUST MATCH EXACTLY):
 ${wheelDescription}
 
-The truck has ${wheel.size}-inch aftermarket wheels matching the above specification on all four corners.${tireBlock}
+The vehicle has ${wheel.size}-inch aftermarket wheels matching the above specification on all four corners.${tireBlock}
 
 CRITICAL: The wheel color/finish described above must be accurate. If the description says bronze/copper spokes, render bronze/copper. If it says black, render black.
 
