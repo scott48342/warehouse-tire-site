@@ -37,6 +37,13 @@ interface ProductRailProps {
   paused?: boolean;
   highlightedId?: string | null; // Highlight a product when clicked
   wide?: boolean; // v2 UI: wider "Your Build" sidebar
+  // v2 UI: optional Wheels | Tires toggle in the header. Shown only when both
+  // counts are > 0. activeType controls which is highlighted; onToggleType fires
+  // when the user clicks the other one.
+  activeType?: "wheel" | "tire";
+  wheelCount?: number;
+  tireCount?: number;
+  onToggleType?: (type: "wheel" | "tire") => void;
 }
 
 // Mock data for Phase 1 (no images - use placeholders)
@@ -293,7 +300,7 @@ function ProductCard({
 }
 
 // Main Rail Component
-export function ProductRail({ products, side, title, onProductClick, paused = false, highlightedId, wide = false }: ProductRailProps) {
+export function ProductRail({ products, side, title, onProductClick, paused = false, highlightedId, wide = false, activeType, wheelCount = 0, tireCount = 0, onToggleType }: ProductRailProps) {
   // Default title based on product type if not provided
   const railTitle = title || (products[0]?.type === "tire" ? "MATCHING TIRES" : "MATCHING WHEELS");
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -362,6 +369,33 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
         <p className="text-white/40 text-[10px] uppercase tracking-wider font-medium">
           {railTitle}
         </p>
+        {/* v2: Wheels | Tires toggle — only when both types are available */}
+        {wide && onToggleType && wheelCount > 0 && tireCount > 0 && (
+          <div className="mt-2 flex items-center gap-1 p-0.5 bg-white/5 rounded-lg">
+            <button
+              type="button"
+              onClick={() => onToggleType("wheel")}
+              className={`flex-1 px-2 py-1 rounded-md text-[11px] font-semibold transition-colors ${
+                activeType === "wheel"
+                  ? "bg-red-600 text-white"
+                  : "text-white/50 hover:text-white/80"
+              }`}
+            >
+              Wheels ({wheelCount})
+            </button>
+            <button
+              type="button"
+              onClick={() => onToggleType("tire")}
+              className={`flex-1 px-2 py-1 rounded-md text-[11px] font-semibold transition-colors ${
+                activeType === "tire"
+                  ? "bg-red-600 text-white"
+                  : "text-white/50 hover:text-white/80"
+              }`}
+            >
+              Tires ({tireCount})
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Fade masks — only on the auto-scrolling old rail (would clip items in v2) */}

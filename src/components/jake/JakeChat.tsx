@@ -1486,6 +1486,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
               onProductClick={handleRailProductClick}
               paused={isLoading}
               wide={useV2Ui}
+              activeType={activeRailType}
+              wheelCount={railWheels.length}
+              tireCount={railTires.length}
+              onToggleType={setActiveRailType}
             />
           )}
         </div>
