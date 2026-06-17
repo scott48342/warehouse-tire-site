@@ -275,6 +275,37 @@ DISCLAIMER (always say after showing):
       },
       required: ["year", "make", "model", "color", "wheelBrand", "wheelModel", "wheelSize"]
     }
+  },
+  {
+    name: "build_cart",
+    description: `Generate a ready-to-checkout cart link for the customer's selected wheels and/or tires. Call this whenever the customer agrees to a build, says they want to buy / check out / add to cart, or you've presented a final total. Pass every product they're buying (each wheel position and each tire position) using the sku/partNumber and price from your earlier search results. Returns a cartUrl the UI shows as a green "Your Cart is Ready" checkout button. For staggered setups include all front AND rear items with their correct quantities (usually 2 each). ALWAYS prefer this over telling the customer to call the store.`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        items: {
+          type: "array",
+          description: "Every product in the build. One entry per distinct SKU (use quantity for multiples, e.g. 2 front + 2 rear = two entries qty 2).",
+          items: {
+            type: "object",
+            properties: {
+              sku: { type: "string", description: "SKU / partNumber from search results" },
+              type: { type: "string", description: "'wheel' or 'tire'" },
+              quantity: { type: "number", description: "How many of this item (front pair = 2, rear pair = 2, square set = 4)" },
+              brand: { type: "string", description: "Brand name" },
+              model: { type: "string", description: "Model name" },
+              size: { type: "string", description: "Size, e.g. '20x9' or '245/45R20'" },
+              price: { type: "number", description: "Per-unit price from search results" },
+              imageUrl: { type: "string", description: "Product image URL from search results (optional)" }
+            },
+            required: ["sku", "type", "quantity"]
+          }
+        },
+        year: { type: "number", description: "Vehicle year" },
+        make: { type: "string", description: "Vehicle make" },
+        model: { type: "string", description: "Vehicle model" }
+      },
+      required: ["items"]
+    }
   }
 ];
 
@@ -754,6 +785,52 @@ export async function executeTool(
       }
     }
     
+    case "build_cart": {
+      const { items, year, make, model } = input as {
+        items: Array<Record<string, unknown>>;
+        year?: number; make?: string; model?: string;
+      };
+      console.log(`[Jake Tool] build_cart: ${Array.isArray(items) ? items.length : 0} item(s)`);
+      try {
+        if (!Array.isArray(items) || items.length === 0) {
+          return { success: false, error: "No items provided to build a cart." };
+        }
+        const res = await fetch(`${baseUrl}/api/ai/create-cart-link`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          cache: "no-store",
+          body: JSON.stringify({
+            items: items.map((it) => ({
+              sku: String(it.sku || ""),
+              type: String(it.type || "tire"),
+              quantity: Number(it.quantity) || 1,
+              brand: it.brand ? String(it.brand) : undefined,
+              model: it.model ? String(it.model) : undefined,
+              size: it.size ? String(it.size) : undefined,
+              price: it.price != null ? Number(it.price) : undefined,
+              imageUrl: it.imageUrl ? String(it.imageUrl) : undefined,
+            })),
+            vehicle: (year || make || model)
+              ? { year: year ? Number(year) : undefined, make: make ? String(make) : undefined, model: model ? String(model) : undefined }
+              : undefined,
+          }),
+        });
+        if (!res.ok) {
+          const txt = await res.text().catch(() => "");
+          console.warn(`[Jake Tool] build_cart failed (${res.status}): ${txt.slice(0, 200)}`);
+          return { success: false, error: `Cart link service returned ${res.status}` };
+        }
+        const data = await res.json() as any;
+        const cartUrl = data.url || data.cartUrl;
+        if (!cartUrl) return { success: false, error: "Cart link service returned no URL." };
+        console.log(`[Jake Tool] ✅ build_cart → ${String(cartUrl).slice(0, 80)}`);
+        return { success: true, cartUrl };
+      } catch (err) {
+        console.warn(`[Jake Tool] build_cart error: ${err}`);
+        return { success: false, error: `Cart build failed: ${err}` };
+      }
+    }
+
     default:
       throw new Error(`Unknown tool: ${toolName}`);
   }
