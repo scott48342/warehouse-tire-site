@@ -12,6 +12,8 @@
 import OpenAI, { toFile } from "openai";
 import { put, list } from "@vercel/blob";
 import * as crypto from "crypto";
+import sharp from "sharp";
+import { detectWheels, compositeRealWheels } from "./wheelComposite";
 
 /** Convert a data: URL (or base64 string) to a Buffer for image edit references. */
 function dataUrlToBuffer(dataUrl: string): Buffer {
@@ -56,6 +58,8 @@ export interface WheelMockupResult {
   generationTimeMs?: number;
   confidence?: "high" | "medium" | "low";
   method?: "vision-analyzed" | "cached" | "text-fallback" | "image-reference" | "flux-kontext";
+  /** True when the real wheel pixels were composited onto the render (accuracy pass). */
+  composited?: boolean;
 }
 
 export const MOCKUP_DISCLAIMER = "AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.";
@@ -195,6 +199,9 @@ function getCacheKey(req: WheelMockupRequest): string {
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
   ].join("-");
   
+  // v18: added ACCURACY PASS — composite the real wheel pixels onto the
+  //       rendered wheels via 4-point perspective warp (transplants exact
+  //       spoke geometry/finish/logo instead of letting the model redraw).
   // v17: switched PRIMARY engine to Flux Kontext Max (fal.ai). Bake-off across
   //       4 finishes: Flux best on spoke geometry + finish vs gpt-image-2/Gemini.
   //       gpt-image-2 remains the fallback when FAL_KEY is missing or Flux fails.
@@ -204,7 +211,7 @@ function getCacheKey(req: WheelMockupRequest): string {
   //       than gpt-image-1, which lost bronze/black/grey finishes).
   // v14: switched to images.edit with the real wheel/tire reference image
   //      (was redrawing from a text description, which mis-colored finishes).
-  return `jake-mockups/v17/${parts}.png`;
+  return `jake-mockups/v18/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -675,7 +682,44 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       const imgRes = await fetch(imageData.url!);
       imageBuffer = Buffer.from(await imgRes.arrayBuffer());
     }
-    
+
+    // ── ACCURACY PASS ────────────────────────────────────────────────────
+    // Composite the REAL wheel pixels onto the rendered wheels via 4-point
+    // perspective warp. This transplants brand-critical detail (spoke
+    // geometry, finish, logo) that any generative model would otherwise
+    // approximate. Best-effort: on any failure we keep the base render.
+    // Accuracy pass is OPT-IN. It is fully built and validated (9/10 fidelity
+    // when fed correct coordinates), but wheel LOCALIZATION via GPT-4o vision is
+    // currently unreliable (pixel coords drift 200px+ between calls), which can
+    // misplace the composited wheel. Until a real detection model (segmentation/
+    // SAM/YOLO) feeds accurate wheel boxes, keep this OFF by default and ship the
+    // reliable Flux single-pass render. Flip on with JAKE_WHEEL_COMPOSITE=1.
+    let usedComposite = false;
+    if (base64Image && !usedFallbackDescription && process.env.JAKE_WHEEL_COMPOSITE === "1") {
+      try {
+        const meta = await sharp(imageBuffer).metadata();
+        const W = meta.width || 0, H = meta.height || 0;
+        if (W && H) {
+          console.log(`[wheelMockup] Accuracy pass: detecting wheels (${W}x${H})...`);
+          const wheels = await detectWheels(openai, imageBuffer, W, H);
+          if (wheels.front || wheels.rear) {
+            const wheelRefBuf = dataUrlToBuffer(base64Image);
+            const composited = await compositeRealWheels({ mockupBuf: imageBuffer, wheelImageBuf: wheelRefBuf, wheels });
+            if (composited) {
+              imageBuffer = composited;
+              usedComposite = true;
+              const which = [wheels.front && "front", wheels.rear && "rear"].filter(Boolean).join("+");
+              console.log(`[wheelMockup] ✅ Accuracy pass composited real wheel onto: ${which}`);
+            }
+          } else {
+            console.log(`[wheelMockup] Accuracy pass: no wheels detected, keeping base render`);
+          }
+        }
+      } catch (compErr: any) {
+        console.warn(`[wheelMockup] Accuracy pass failed (${compErr?.message}); keeping base render`);
+      }
+    }
+
     // Save to CDN
     console.log(`[wheelMockup] Saving to CDN (${Math.round(imageBuffer.length / 1024)}KB)...`);
     const blob = await put(cacheKey, imageBuffer, {
@@ -697,6 +741,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       // High only when we actually used the real product image as a reference;
       // medium when we redrew from a vision description; low on text-only fallback.
       confidence: usedFallbackDescription ? "low" : usedImageReference ? "high" : "medium",
+      composited: usedComposite,
       method: usedFallbackDescription
         ? "text-fallback"
         : fluxBuffer

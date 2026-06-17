@@ -184,6 +184,7 @@ export async function POST(req: NextRequest) {
       imageUrl: result.imageUrl,
       disclaimer: MOCKUP_DISCLAIMER,
       generationMethod: result.method,
+      composited: result.composited ?? false,
       cached: result.cached,
       generationTime: result.generationTimeMs,
       confidence: result.confidence,
