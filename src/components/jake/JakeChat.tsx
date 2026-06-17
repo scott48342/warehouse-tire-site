@@ -279,6 +279,21 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const [headerPrompts] = useState(() => getRandomHeaderPrompts(3));
   const [compareProducts, setCompareProducts] = useState<ParsedProduct[]>([]);
   const [showCompare, setShowCompare] = useState(false);
+
+  // v2 UI flag (presentation only): cleaner markdown rendering + tighter bubbles.
+  // Reversible: ?ui=v2 query param or NEXT_PUBLIC_JAKE_UI=v2. Default = old UI.
+  // No logic changes — product cards, mockups, build, cart, analytics all unchanged.
+  const [useV2Ui, setUseV2Ui] = useState(false);
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("ui");
+      if (q === "v2") setUseV2Ui(true);
+      else if (q === "v1") setUseV2Ui(false);
+      else if (process.env.NEXT_PUBLIC_JAKE_UI === "v2") setUseV2Ui(true);
+    } catch {
+      /* ignore */
+    }
+  }, []);
   
   // Vehicle Memory Integration
   const { activeVehicle, isLoaded: vehicleLoaded, clearActiveVehicle, setActiveVehicle } = useVehicleMemory();
@@ -630,8 +645,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         }
       }
 
-      // Use streaming API
-      const response = await fetch("/api/jake/chat/stream", {
+      // Use streaming API. When the v2 UI is active, also drive the v2 engine
+      // (clean look + fast engine together). Old UI keeps v1 by default.
+      const streamUrl = useV2Ui ? "/api/jake/chat/stream?engine=v2" : "/api/jake/chat/stream";
+      const response = await fetch(streamUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -1212,16 +1229,24 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                 className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-2xl px-4 py-3 ${
+                  className={`rounded-2xl px-4 py-3 ${
+                    useV2Ui ? "max-w-[92%]" : "max-w-[85%]"
+                  } ${
                     message.role === "user"
                       ? "bg-red-600 text-white"
                       : "bg-white/5 border border-white/10 text-white/90"
                   }`}
                 >
                   {/* Message Content */}
-                  <div className="text-sm whitespace-pre-wrap leading-relaxed">
-                    <MessageContent content={message.content} />
-                  </div>
+                  {useV2Ui ? (
+                    <div className="text-sm">
+                      <RichMessageContent content={message.content} />
+                    </div>
+                  ) : (
+                    <div className="text-sm whitespace-pre-wrap leading-relaxed">
+                      <MessageContent content={message.content} />
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -1439,6 +1464,147 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
 // ═══════════════════════════════════════════════════════════════════════════════
 // MESSAGE CONTENT RENDERER
 // ═══════════════════════════════════════════════════════════════════════════════
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RICH MARKDOWN RENDERER (v2 UI) — proper tables / headings / lists / inline.
+// Presentation only. Renders safely via React nodes (no dangerouslySetInnerHTML).
+// Fixes the old renderer's mangled tables and broken "...HPThttps://" links.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Inline markdown → React nodes: [text](url), **bold**, *italic*, `code`.
+function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
+  const nodes: React.ReactNode[] = [];
+  // Tokenize on links / bold / italic / code, preserving order.
+  const regex = /(\[([^\]]+)\]\((https?:[^)\s]+)\))|(\*\*([^*]+)\*\*)|(`([^`]+)`)|(\*([^*]+)\*)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let i = 0;
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > last) nodes.push(<span key={`${keyPrefix}-t${i}`}>{text.slice(last, m.index)}</span>);
+    if (m[1]) {
+      nodes.push(
+        <a
+          key={`${keyPrefix}-l${i}`}
+          href={m[3]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-400 hover:text-red-300 underline underline-offset-2"
+        >
+          {m[2]}
+        </a>
+      );
+    } else if (m[4]) {
+      nodes.push(<strong key={`${keyPrefix}-b${i}`} className="font-semibold text-white">{m[5]}</strong>);
+    } else if (m[6]) {
+      nodes.push(
+        <code key={`${keyPrefix}-c${i}`} className="px-1 py-0.5 rounded bg-white/10 text-[0.85em] font-mono">{m[7]}</code>
+      );
+    } else if (m[8]) {
+      nodes.push(<em key={`${keyPrefix}-i${i}`}>{m[9]}</em>);
+    }
+    last = m.index + m[0].length;
+    i++;
+  }
+  if (last < text.length) nodes.push(<span key={`${keyPrefix}-t${i}`}>{text.slice(last)}</span>);
+  return nodes;
+}
+
+function RichMessageContent({ content }: { content: string }) {
+  const lines = content.replace(/\r/g, "").split("\n");
+  const blocks: React.ReactNode[] = [];
+  const isRow = (l: string) => /^\s*\|.*\|\s*$/.test(l);
+  const isSep = (l: string) => /^\s*\|?[\s:|-]+\|?\s*$/.test(l) && l.includes("-");
+  const cells = (l: string) =>
+    l.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+
+  let i = 0;
+  let key = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim()) { i++; continue; }
+
+    // Table
+    if (isRow(line) && i + 1 < lines.length && isSep(lines[i + 1])) {
+      const head = cells(line);
+      i += 2;
+      const rows: string[][] = [];
+      while (i < lines.length && isRow(lines[i])) { rows.push(cells(lines[i])); i++; }
+      blocks.push(
+        <div key={`tbl-${key++}`} className="my-2 overflow-x-auto">
+          <table className="w-full text-xs border-collapse">
+            <thead>
+              <tr>
+                {head.map((h, hi) => (
+                  <th key={hi} className="text-left font-semibold text-white/90 border-b border-white/20 px-2 py-1">
+                    {renderInline(h, `th-${key}-${hi}`)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r, ri) => (
+                <tr key={ri} className="border-b border-white/5">
+                  {r.map((c, ci) => (
+                    <td key={ci} className="align-top px-2 py-1 text-white/80">
+                      {renderInline(c, `td-${key}-${ri}-${ci}`)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+      continue;
+    }
+
+    // Heading
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      const sz = h[1].length <= 2 ? "text-base" : "text-sm";
+      blocks.push(
+        <div key={`h-${key++}`} className={`font-semibold text-white mt-2 mb-1 ${sz}`}>
+          {renderInline(h[2], `h-${key}`)}
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // Horizontal rule
+    if (/^\s*---+\s*$/.test(line)) { blocks.push(<hr key={`hr-${key++}`} className="my-2 border-white/10" />); i++; continue; }
+
+    // Unordered list
+    if (/^\s*[-*]\s+/.test(line)) {
+      const items: string[] = [];
+      while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*[-*]\s+/, "")); i++; }
+      blocks.push(
+        <ul key={`ul-${key++}`} className="list-disc pl-5 my-1 space-y-0.5">
+          {items.map((it, ii) => <li key={ii}>{renderInline(it, `ul-${key}-${ii}`)}</li>)}
+        </ul>
+      );
+      continue;
+    }
+
+    // Ordered list
+    if (/^\s*\d+\.\s+/.test(line)) {
+      const items: string[] = [];
+      while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*\d+\.\s+/, "")); i++; }
+      blocks.push(
+        <ol key={`ol-${key++}`} className="list-decimal pl-5 my-1 space-y-0.5">
+          {items.map((it, ii) => <li key={ii}>{renderInline(it, `ol-${key}-${ii}`)}</li>)}
+        </ol>
+      );
+      continue;
+    }
+
+    // Paragraph
+    blocks.push(<p key={`p-${key++}`} className="my-1">{renderInline(line, `p-${key}`)}</p>);
+    i++;
+  }
+
+  return <div className="leading-relaxed">{blocks}</div>;
+}
 
 function MessageContent({ content }: { content: string }) {
   // Convert markdown links to clickable links
