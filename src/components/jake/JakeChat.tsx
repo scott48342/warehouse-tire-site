@@ -311,6 +311,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // type Jake most recently surfaced so the customer doesn't have to scroll past
   // 20 wheels to reach tires. "wheel" while shopping wheels; "tire" once tires appear.
   const [activeRailType, setActiveRailType] = useState<"wheel" | "tire">("wheel");
+  // v2: latest mockup pinned in the left gutter so the customer keeps the visual
+  // (and the Build/Add-to-Cart CTA) in front of them while the chat scrolls.
+  // Stores the mockup plus the cartUrl that was live when it was generated.
+  const [pinnedMockup, setPinnedMockup] = useState<{ mockup: MockupData; cartUrl?: string } | null>(null);
   const [railsMessage, setRailsMessage] = useState<string | null>(null);
   
   // Persistence state
@@ -444,6 +448,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     setMessages([]);
     setHasStarted(false);
     setIsRestored(false);
+    setPinnedMockup(null);
+    setRailTires([]);
+    setRailWheels([]);
     clearConversation();
     resetJakeSessionId();
     hasProcessedInitialPromptRef.current = false;
@@ -466,6 +473,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     setIsRestored(false);
     setCompareProducts([]);
     setShowCompare(false);
+    setPinnedMockup(null);
+    setRailTires([]);
+    setRailWheels([]);
     clearConversation();
     resetJakeSessionId();
     hasProcessedInitialPromptRef.current = false;
@@ -862,6 +872,13 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         mockup: mockupData,
       };
       setMessages(prev => [...prev, assistantMessage]);
+      // Pin the latest mockup to the left gutter (v2). A later cartUrl (even without
+      // a new mockup) refreshes the pinned CTA so "Add to Cart" goes straight to checkout.
+      if (mockupData) {
+        setPinnedMockup({ mockup: mockupData, cartUrl });
+      } else if (cartUrl) {
+        setPinnedMockup(prev => (prev ? { ...prev, cartUrl } : prev));
+      }
       trackJakeMessage("assistant", responseText);
 
     } catch (error) {
@@ -1110,6 +1127,51 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
               onProductClick={handleRailProductClick}
               paused={isLoading}
             />
+          )}
+
+          {/* v2: Pinned mockup panel in the left gutter. Uses otherwise-empty space
+              so the customer keeps the visual + Build/Add-to-Cart CTA in front of
+              them while the chat scrolls. Desktop only; appears once a mockup exists. */}
+          {useV2Ui && pinnedMockup && (
+            <div className="hidden lg:flex flex-col w-[300px] flex-shrink-0 border-r border-white/5 p-3 overflow-y-auto">
+              <p className="text-white/40 text-[10px] uppercase tracking-wider font-medium mb-2 flex-shrink-0">
+                Your Mockup
+              </p>
+              <JakeMockupCard
+                imageUrl={pinnedMockup.mockup.imageUrl}
+                disclaimer={pinnedMockup.mockup.disclaimer}
+                vehicle={pinnedMockup.mockup.vehicle}
+                wheelStyle={pinnedMockup.mockup.wheelStyle}
+                generationTime={pinnedMockup.mockup.generationTime}
+                cached={pinnedMockup.mockup.cached}
+                confidence={pinnedMockup.mockup.confidence}
+                tireBrand={pinnedMockup.mockup.tireBrand}
+                tireModel={pinnedMockup.mockup.tireModel}
+                onBuildSetup={() => {
+                  handleSend("Let's build this setup! Help me get these exact products to checkout.");
+                }}
+                onAddToCart={() => {
+                  if (pinnedMockup.cartUrl) {
+                    trackJakeEvent("mockup_to_cart", {
+                      vehicle: pinnedMockup.mockup.vehicle,
+                      wheelStyle: pinnedMockup.mockup.wheelStyle,
+                    });
+                    window.location.href = pinnedMockup.cartUrl;
+                  } else {
+                    handleSend("Add this package to my cart!");
+                  }
+                }}
+                onSaveBuild={() => {
+                  trackJakeEvent("mockup_saved", {
+                    vehicle: pinnedMockup.mockup.vehicle,
+                    wheelStyle: pinnedMockup.mockup.wheelStyle,
+                  });
+                }}
+                onMakeChanges={() => {
+                  handleSend("I'd like to make some changes to this build.");
+                }}
+              />
+            </div>
           )}
 
           {/* Main Chat Area */}
