@@ -36,6 +36,7 @@ interface ProductRailProps {
   onProductClick: (product: RailProduct) => void;
   paused?: boolean;
   highlightedId?: string | null; // Highlight a product when clicked
+  wide?: boolean; // v2 UI: wider "Your Build" sidebar
 }
 
 // Mock data for Phase 1 (no images - use placeholders)
@@ -292,7 +293,7 @@ function ProductCard({
 }
 
 // Main Rail Component
-export function ProductRail({ products, side, title, onProductClick, paused = false, highlightedId }: ProductRailProps) {
+export function ProductRail({ products, side, title, onProductClick, paused = false, highlightedId, wide = false }: ProductRailProps) {
   // Default title based on product type if not provided
   const railTitle = title || (products[0]?.type === "tire" ? "MATCHING TIRES" : "MATCHING WHEELS");
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -340,7 +341,7 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
 
   return (
     <div 
-      className={`hidden lg:flex flex-col w-[200px] flex-shrink-0 relative ${
+      className={`hidden lg:flex flex-col ${wide ? "w-[340px]" : "w-[200px]"} flex-shrink-0 relative ${
         side === "left" ? "border-r" : "border-l"
       } border-white/5`}
       onMouseEnter={() => setIsHovered(true)}

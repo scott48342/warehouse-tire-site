@@ -234,6 +234,10 @@ export async function* streamChatV2(
         yield { type: "status", status: STATUS_MESSAGES[call.name] || `Running ${call.name}...` };
 
         const input = call.input as Record<string, unknown>;
+        // v2 UI shows a fuller side rail — pull more options so it doesn't look thin.
+        if ((call.name === "search_wheels" || call.name === "search_tires") && input.limit == null) {
+          input.limit = 20;
+        }
         if (input.year) detectedVehicle.year = Number(input.year);
         if (input.make) detectedVehicle.make = String(input.make);
         if (input.model) detectedVehicle.model = String(input.model);

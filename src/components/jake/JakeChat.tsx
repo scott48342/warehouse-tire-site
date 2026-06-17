@@ -294,6 +294,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       /* ignore */
     }
   }, []);
+  // v2 shows more options in the side rail so it never looks thin on choices.
+  // Use a ref so callbacks always read the current value (avoids stale closure).
+  const useV2UiRef = useRef(false);
+  useV2UiRef.current = useV2Ui;
+  const railMax = () => (useV2UiRef.current ? 20 : 6);
   
   // Vehicle Memory Integration
   const { activeVehicle, isLoaded: vehicleLoaded, clearActiveVehicle, setActiveVehicle } = useVehicleMemory();
@@ -543,7 +548,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       (productsData?.wheels?.length > 0);
     
     if (hasTireData) {
-      const railTireData: RailProduct[] = (productsData?.tires || productsData?.staggeredPairs || tireProducts).slice(0, 6).map((t: any) => ({
+      const railTireData: RailProduct[] = (productsData?.tires || productsData?.staggeredPairs || tireProducts).slice(0, railMax()).map((t: any) => ({
         id: t.sku || t.productUrl || `tire-${Math.random()}`,
         type: "tire" as const,
         brand: t.brand || "",
@@ -559,7 +564,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     }
     
     if (hasWheelData) {
-      const railWheelData: RailProduct[] = (productsData?.wheels || wheelProducts).slice(0, 6).map((w: any) => ({
+      const railWheelData: RailProduct[] = (productsData?.wheels || wheelProducts).slice(0, railMax()).map((w: any) => ({
         id: w.sku || w.productUrl || `wheel-${Math.random()}`,
         type: "wheel" as const,
         brand: w.brand || "",
@@ -1023,11 +1028,18 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // If both: tires left, wheels right
   // If only tires: tires left
   // If only wheels: wheels left
+  // v2 UI: everything lives in ONE right-hand "Your Build" rail (left rail hidden).
+  // Old UI: tires left, wheels right (existing behavior).
   const leftRailProducts = showTireRail ? railTires : railWheels;
-  const rightRailProducts = (showTireRail && showWheelRail) ? railWheels : [];
-  const showLeftRail = showTireRail || showWheelRail;
-  const showRightRail = showTireRail && showWheelRail;
+  const rightRailProducts = useV2Ui
+    ? [...railWheels, ...railTires]
+    : ((showTireRail && showWheelRail) ? railWheels : []);
+  const showLeftRail = !useV2Ui && (showTireRail || showWheelRail);
+  const showRightRail = useV2Ui
+    ? (showTireRail || showWheelRail)
+    : (showTireRail && showWheelRail);
   const leftRailTitle = showTireRail ? "MATCHING TIRES" : "MATCHING WHEELS";
+  const rightRailTitle = useV2Ui ? "YOUR BUILD" : "MATCHING WHEELS";
 
   const handleRailProductClick = (product: RailProduct) => {
     const productDesc = `${product.brand} ${product.model}${product.size ? ` (${product.size})` : ""}`;
@@ -1037,8 +1049,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   };
 
   return (
-    <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden relative`}>
-      {/* Cinematic Background */}
+    <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} ${useV2Ui ? "bg-black" : "bg-[#0a0a0a]"} overflow-hidden relative`}>
+      {/* Cinematic Background — hidden in v2 UI (pure black) */}
+      {!useV2Ui && (
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div 
           className="absolute inset-0"
@@ -1063,10 +1076,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(0,0,0,0.5) 100%)' }} />
         <div className="absolute bottom-0 left-0 right-0 h-[150px] bg-gradient-to-t from-red-900/10 to-transparent" />
       </div>
+      )}
 
-      {/* Main Container - Centered with rails inside */}
-      <div className="flex-1 min-h-0 flex justify-center relative z-10">
-        <div className="flex w-full max-w-6xl min-h-0">
+      {/* Main Container - v2: full-width left-aligned; old: centered */}
+      <div className={`flex-1 min-h-0 flex relative z-10 ${useV2Ui ? "" : "justify-center"}`}>
+        <div className={`flex min-h-0 ${useV2Ui ? "w-full" : "w-full max-w-6xl"}`}>
           {/* Left Product Rail - Desktop (only when we have products) */}
           {showLeftRail && (
             <ProductRail
@@ -1450,9 +1464,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             <ProductRail
               products={rightRailProducts}
               side="right"
-              title="MATCHING WHEELS"
+              title={rightRailTitle}
               onProductClick={handleRailProductClick}
               paused={isLoading}
+              wide={useV2Ui}
             />
           )}
         </div>
