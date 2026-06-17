@@ -775,6 +775,9 @@ export async function executeTool(
           disclaimer: MOCKUP_DISCLAIMER,
           cached: result.cached,
           generationTimeMs: result.generationTimeMs,
+          confidence: result.confidence,
+          method: result.method,
+          editDiag: (result as any).editDiag,
         };
       } catch (err) {
         return {
