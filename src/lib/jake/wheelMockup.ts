@@ -55,7 +55,7 @@ export interface WheelMockupResult {
   cached: boolean;
   generationTimeMs?: number;
   confidence?: "high" | "medium" | "low";
-  method?: "vision-analyzed" | "cached" | "text-fallback" | "image-reference";
+  method?: "vision-analyzed" | "cached" | "text-fallback" | "image-reference" | "flux-kontext";
 }
 
 export const MOCKUP_DISCLAIMER = "AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.";
@@ -74,6 +74,100 @@ function getOpenAI(): OpenAI {
     _openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   }
   return _openai;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// FLUX KONTEXT (fal.ai) — PRIMARY GENERATION ENGINE
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// Bake-off (2026-06-17) across 4 wheel finishes showed Flux Kontext Max best
+// reproduces the real wheel's spoke geometry AND finish/color, beating
+// gpt-image-2 (which drifted spoke patterns) and Gemini (which lost finish
+// color). Flux is reference-guided edit, takes public image URLs.
+//
+// Returns PNG bytes on success, or null to let the caller fall back to OpenAI.
+
+async function falUploadImage(buf: Buffer): Promise<string | null> {
+  const key = process.env.FAL_KEY || process.env.FAL_API_KEY;
+  if (!key) return null;
+  try {
+    const init = await fetch(
+      "https://rest.alpha.fal.ai/storage/upload/initiate?storage_type=fal-cdn-v3",
+      {
+        method: "POST",
+        headers: { Authorization: `Key ${key}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ content_type: "image/png", file_name: "wheel.png" }),
+      }
+    );
+    if (!init.ok) {
+      console.warn(`[wheelMockup][flux] upload initiate failed ${init.status}`);
+      return null;
+    }
+    const { upload_url, file_url } = await init.json();
+    const put = await fetch(upload_url, {
+      method: "PUT",
+      headers: { "Content-Type": "image/png" },
+      body: new Uint8Array(buf),
+    });
+    if (!put.ok) {
+      console.warn(`[wheelMockup][flux] upload PUT failed ${put.status}`);
+      return null;
+    }
+    return file_url as string;
+  } catch (e: any) {
+    console.warn(`[wheelMockup][flux] upload error: ${e?.message}`);
+    return null;
+  }
+}
+
+/**
+ * Generate the mockup with Flux Kontext Max via fal.ai using the real wheel
+ * image as a reference. Flux Kontext takes a single image_url, so we use the
+ * wheel reference (the most identity-critical element). Returns PNG bytes or null.
+ */
+async function generateWithFluxKontext(
+  wheelRefBuf: Buffer | null,
+  prompt: string,
+): Promise<Buffer | null> {
+  const key = process.env.FAL_KEY || process.env.FAL_API_KEY;
+  if (!key || !wheelRefBuf) return null;
+  try {
+    const imageUrl = await falUploadImage(wheelRefBuf);
+    if (!imageUrl) return null;
+
+    console.log(`[wheelMockup][flux] Calling Flux Kontext Max...`);
+    const res = await fetch("https://fal.run/fal-ai/flux-pro/kontext/max", {
+      method: "POST",
+      headers: { Authorization: `Key ${key}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt,
+        image_url: imageUrl,
+        num_images: 1,
+        aspect_ratio: "16:9",
+        output_format: "png",
+        safety_tolerance: "6",
+      }),
+    });
+    if (!res.ok) {
+      const txt = await res.text();
+      console.warn(`[wheelMockup][flux] generate failed ${res.status}: ${txt.slice(0, 200)}`);
+      return null;
+    }
+    const data = await res.json();
+    const outUrl: string | undefined = data?.images?.[0]?.url || data?.image?.url;
+    if (!outUrl) {
+      console.warn(`[wheelMockup][flux] no image url in response`);
+      return null;
+    }
+    const imgRes = await fetch(outUrl);
+    if (!imgRes.ok) return null;
+    const buf = Buffer.from(await imgRes.arrayBuffer());
+    console.log(`[wheelMockup][flux] ✅ Flux Kontext Max succeeded (${Math.round(buf.length / 1024)}KB)`);
+    return buf;
+  } catch (e: any) {
+    console.warn(`[wheelMockup][flux] error: ${e?.message}`);
+    return null;
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -101,9 +195,16 @@ function getCacheKey(req: WheelMockupRequest): string {
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
   ].join("-");
   
+  // v17: switched PRIMARY engine to Flux Kontext Max (fal.ai). Bake-off across
+  //       4 finishes: Flux best on spoke geometry + finish vs gpt-image-2/Gemini.
+  //       gpt-image-2 remains the fallback when FAL_KEY is missing or Flux fails.
+  // v16: hardened edit prompt to lock exact spoke geometry (gpt-image-2 was
+  //       keeping the finish but drifting to a generic mesh spoke pattern).
+  // v15: switched generation model to gpt-image-2 (better finish/color fidelity
+  //       than gpt-image-1, which lost bronze/black/grey finishes).
   // v14: switched to images.edit with the real wheel/tire reference image
-  // (was redrawing from a text description, which mis-colored finishes).
-  return `jake-mockups/v14/${parts}.png`;
+  //      (was redrawing from a text description, which mis-colored finishes).
+  return `jake-mockups/v17/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -392,9 +493,18 @@ function buildEditPrompt(
 
 ${refLine}
 
-CRITICAL — WHEEL ACCURACY: The wheel mounted on the vehicle MUST match the reference image's exact design: same spoke count and shape, same finish/color (e.g. chrome stays chrome, black stays black, milled stays milled), same lip and accents. Do NOT restyle, recolor, or substitute a different wheel. ${wheelDescription ? `For reference, the wheel looks like: ${wheelDescription.trim()}` : ""}
+#1 PRIORITY — EXACT WHEEL REPLICATION (most important instruction):
+The wheel mounted on the vehicle must be a faithful copy of the reference wheel image — treat it like you are photographing THAT SAME physical wheel bolted onto the truck, not designing a new one. Reproduce ALL of the following exactly:
+- SPOKE PATTERN: the exact same number of spokes and the exact same spoke shape and arrangement (e.g. split/forked spokes stay split/forked; a bold chunky multi-spoke pattern stays chunky; a fine mesh stays mesh). Do NOT substitute a generic mesh or fan pattern. Count the spokes in the reference and match that count.
+- WINDOW SHAPE: the openings between the spokes must have the same shape and proportions as the reference.
+- FINISH & COLOR: identical (bronze stays bronze, gloss black stays gloss black, satin/grey stays satin/grey, machined stays machined, chrome stays chrome). Never default to silver/machined if the reference is colored.
+- LIP/RING: same outer lip or simulated-beadlock ring, same bolt heads/accents and their color.
+- CENTER CAP: same cap and logo.
+Do NOT restyle, recolor, simplify, or substitute a different wheel model. If unsure, copy the reference more literally. ${wheelDescription ? `For reference, the wheel looks like: ${wheelDescription.trim()}` : ""}
 
 These are ${wheel.size}-inch wheels. ${tireLine}
+
+FRAMING: Compose the shot so the front and rear wheels are large and prominent in the frame with crisp, high-detail focus on the wheel faces — the wheel design must be clearly legible, not blurred or small.
 
 CRITICAL — VEHICLE ACCURACY: Render the correct factory body style and proportions of a ${vehicle.year} ${vehicle.make} ${vehicle.model}. Keep the correct body type (coupe stays a 2-door coupe, sedan a 4-door, pickup a pickup, SUV an SUV). Do not add a truck bed to a car.
 
@@ -482,6 +592,22 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // Falls back to text-only images.generate if edit fails or no real image.
     let imageData: { b64_json?: string | null; url?: string | null } | undefined;
     let usedImageReference = false;
+    let fluxBuffer: Buffer | null = null;
+
+    // PRIMARY ENGINE: Flux Kontext Max (fal.ai). Best spoke-geometry + finish
+    // fidelity in our bake-off. Uses the real wheel image as the reference.
+    // Falls through to the OpenAI gpt-image-2 path below if Flux is unavailable
+    // (no FAL_KEY) or fails.
+    if (base64Image && !usedFallbackDescription) {
+      const wheelRefBuf = dataUrlToBuffer(base64Image);
+      const editPromptForFlux = buildEditPrompt(req, wheelDescription, tireDescription, false);
+      fluxBuffer = await generateWithFluxKontext(wheelRefBuf, editPromptForFlux);
+      if (fluxBuffer) {
+        usedImageReference = true;
+        imageData = { b64_json: fluxBuffer.toString("base64") };
+        console.log(`[wheelMockup] ✅ Using Flux Kontext Max output`);
+      }
+    }
 
     const refFiles: Array<Awaited<ReturnType<typeof toFile>>> = [];
     if (base64Image && !usedFallbackDescription) {
@@ -502,12 +628,12 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       }
     }
 
-    if (refFiles.length > 0) {
+    if (!imageData && refFiles.length > 0) {
       try {
         console.log(`[wheelMockup] Step 3: images.edit with ${refFiles.length} reference image(s)...`);
         const editPrompt = buildEditPrompt(req, wheelDescription, tireDescription, refFiles.length > 1);
         const editRes = await openai.images.edit({
-          model: "gpt-image-1",
+          model: "gpt-image-2",
           image: refFiles,
           prompt: editPrompt,
           n: 1,
@@ -527,9 +653,9 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     }
 
     if (!imageData) {
-      console.log(`[wheelMockup] Step 3: Generating image with gpt-image-1 (text prompt)...`);
+      console.log(`[wheelMockup] Step 3: Generating image with gpt-image-2 (text prompt)...`);
       const response = await openai.images.generate({
-        model: "gpt-image-1",
+        model: "gpt-image-2",
         prompt,
         n: 1,
         size: "1536x1024",
@@ -571,7 +697,13 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       // High only when we actually used the real product image as a reference;
       // medium when we redrew from a vision description; low on text-only fallback.
       confidence: usedFallbackDescription ? "low" : usedImageReference ? "high" : "medium",
-      method: usedFallbackDescription ? "text-fallback" : usedImageReference ? "image-reference" : "vision-analyzed",
+      method: usedFallbackDescription
+        ? "text-fallback"
+        : fluxBuffer
+          ? "flux-kontext"
+          : usedImageReference
+            ? "image-reference"
+            : "vision-analyzed",
     };
     
   } catch (error: any) {
