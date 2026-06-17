@@ -9,9 +9,16 @@
  * @updated 2026-06-15 - Simplified flow, no experimental APIs
  */
 
-import OpenAI from "openai";
+import OpenAI, { toFile } from "openai";
 import { put, list } from "@vercel/blob";
 import * as crypto from "crypto";
+
+/** Convert a data: URL (or base64 string) to a Buffer for image edit references. */
+function dataUrlToBuffer(dataUrl: string): Buffer {
+  const comma = dataUrl.indexOf(",");
+  const b64 = comma >= 0 ? dataUrl.slice(comma + 1) : dataUrl;
+  return Buffer.from(b64, "base64");
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -48,7 +55,7 @@ export interface WheelMockupResult {
   cached: boolean;
   generationTimeMs?: number;
   confidence?: "high" | "medium" | "low";
-  method?: "vision-analyzed" | "cached" | "text-fallback";
+  method?: "vision-analyzed" | "cached" | "text-fallback" | "image-reference";
 }
 
 export const MOCKUP_DISCLAIMER = "AI visual mockup only. Wheel shown is a representation and may not be exact. Final appearance may vary by trim, wheel size, offset, tire size, suspension, and lighting.";
@@ -94,7 +101,9 @@ function getCacheKey(req: WheelMockupRequest): string {
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
   ].join("-");
   
-  return `jake-mockups/v13/${parts}.png`;
+  // v14: switched to images.edit with the real wheel/tire reference image
+  // (was redrawing from a text description, which mis-colored finishes).
+  return `jake-mockups/v14/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -340,9 +349,61 @@ CRITICAL: The wheel color/finish described above must be accurate. If the descri
 Shot from front three-quarter angle showing driver side. Outdoor dealership setting with natural lighting. Sharp focus on wheels and tires. Photorealistic.`;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
+/**
+ * Prompt for the images.edit path. The model is GIVEN the real wheel (and
+ * optionally tire) product image(s) as reference, so we instruct it to mount
+ * THOSE EXACT wheels on the vehicle rather than invent a wheel. The vision
+ * description is included as reinforcement, but the reference image is primary.
+ */
+function buildEditPrompt(
+  req: WheelMockupRequest,
+  wheelDescription: string,
+  tireDescription?: string,
+  hasTireRef?: boolean,
+): string {
+  const { vehicle, wheel, tire, lift } = req;
+  const body = inferBodyStyle(vehicle.make, vehicle.model);
+
+  let stance = "";
+  if (lift) {
+    const l = lift.toLowerCase();
+    if (body.isTruckOrSuv) {
+      if (l.includes("level")) stance = " with a leveling kit";
+      else if (l.includes("6")) stance = " with a 6-inch lift and aggressive stance";
+      else if (l.includes("4")) stance = " with a 4-inch lift";
+      else if (l.includes("2") || l.includes("3")) stance = " slightly lifted";
+      else if (l.includes("lower")) stance = " lowered";
+    } else if (l.includes("lower")) {
+      stance = " with a lowered stance";
+    }
+  }
+
+  const refLine = hasTireRef
+    ? "You are given two reference images: the FIRST is the exact aftermarket wheel, the SECOND is the exact tire. Reproduce BOTH faithfully on the vehicle."
+    : "You are given a reference image of the exact aftermarket wheel. Reproduce that wheel faithfully on the vehicle.";
+
+  const tireLine = hasTireRef
+    ? "Mount the tire from the second reference image — match its tread pattern and sidewall styling exactly."
+    : (tireDescription && tireDescription.trim())
+        ? `Fit tires described as: ${tireDescription.trim()}.`
+        : (tire?.terrain ? `Fit ${tire.terrain} tires.` : "");
+
+  return `Create a photorealistic automotive photograph of a ${vehicle.color} ${vehicle.year} ${vehicle.make} ${vehicle.model}, a ${body.noun}${stance}, fitted with the wheels from the reference image on all four corners.
+
+${refLine}
+
+CRITICAL — WHEEL ACCURACY: The wheel mounted on the vehicle MUST match the reference image's exact design: same spoke count and shape, same finish/color (e.g. chrome stays chrome, black stays black, milled stays milled), same lip and accents. Do NOT restyle, recolor, or substitute a different wheel. ${wheelDescription ? `For reference, the wheel looks like: ${wheelDescription.trim()}` : ""}
+
+These are ${wheel.size}-inch wheels. ${tireLine}
+
+CRITICAL — VEHICLE ACCURACY: Render the correct factory body style and proportions of a ${vehicle.year} ${vehicle.make} ${vehicle.model}. Keep the correct body type (coupe stays a 2-door coupe, sedan a 4-door, pickup a pickup, SUV an SUV). Do not add a truck bed to a car.
+
+Front three-quarter angle, driver side. Outdoor dealership setting, natural lighting, sharp focus on the wheels and tires. Photorealistic.`;
+}
+
+// ═══════════════════════════════════════════════════════════════════
 // STEP 3: GENERATE IMAGE
-// ═══════════════════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════════
 
 export async function generateWheelMockup(req: WheelMockupRequest): Promise<WheelMockupResult> {
   const startTime = Date.now();
@@ -411,17 +472,71 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     console.log(`[wheelMockup] Step 2: Prompt built (${prompt.length} chars)`);
     
     // Step 3: Generate with gpt-image-1
-    console.log(`[wheelMockup] Step 3: Generating image with gpt-image-1...`);
     const openai = getOpenAI();
-    
-    const response = await openai.images.generate({
-      model: "gpt-image-1",
-      prompt,
-      n: 1,
-      size: "1536x1024",
-    });
-    
-    const imageData = response.data?.[0];
+
+    // Step 3: Generate the mockup.
+    // PREFERRED PATH: images.edit with the REAL wheel (and tire) product image as
+    // visual references. This makes gpt-image-1 reproduce the actual wheel design
+    // and finish instead of redrawing a generic wheel from a text description
+    // (which previously turned a chrome wheel into a random bronze one).
+    // Falls back to text-only images.generate if edit fails or no real image.
+    let imageData: { b64_json?: string | null; url?: string | null } | undefined;
+    let usedImageReference = false;
+
+    const refFiles: Array<Awaited<ReturnType<typeof toFile>>> = [];
+    if (base64Image && !usedFallbackDescription) {
+      try {
+        refFiles.push(await toFile(dataUrlToBuffer(base64Image), "wheel.png", { type: "image/png" }));
+      } catch (e) {
+        console.warn(`[wheelMockup] could not prepare wheel ref file: ${e}`);
+      }
+    }
+    if (req.tire?.imageUrl) {
+      const tireB64 = await fetchImageAsBase64(req.tire.imageUrl);
+      if (tireB64) {
+        try {
+          refFiles.push(await toFile(dataUrlToBuffer(tireB64), "tire.png", { type: "image/png" }));
+        } catch (e) {
+          console.warn(`[wheelMockup] could not prepare tire ref file: ${e}`);
+        }
+      }
+    }
+
+    if (refFiles.length > 0) {
+      try {
+        console.log(`[wheelMockup] Step 3: images.edit with ${refFiles.length} reference image(s)...`);
+        const editPrompt = buildEditPrompt(req, wheelDescription, tireDescription, refFiles.length > 1);
+        const editRes = await openai.images.edit({
+          model: "gpt-image-1",
+          image: refFiles,
+          prompt: editPrompt,
+          n: 1,
+          size: "1536x1024",
+        });
+        const d = editRes.data?.[0];
+        if (d?.b64_json || d?.url) {
+          imageData = d;
+          usedImageReference = true;
+          console.log(`[wheelMockup] ✅ images.edit succeeded (real wheel reference used)`);
+        } else {
+          console.warn(`[wheelMockup] images.edit returned no data; falling back to generate`);
+        }
+      } catch (editErr: any) {
+        console.warn(`[wheelMockup] images.edit failed (${editErr?.message}); falling back to text generate`);
+      }
+    }
+
+    if (!imageData) {
+      console.log(`[wheelMockup] Step 3: Generating image with gpt-image-1 (text prompt)...`);
+      const response = await openai.images.generate({
+        model: "gpt-image-1",
+        prompt,
+        n: 1,
+        size: "1536x1024",
+      });
+      imageData = response.data?.[0];
+    }
+
     if (!imageData?.b64_json && !imageData?.url) {
       throw new Error("No image data returned");
     }
@@ -453,9 +568,10 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       imageUrl: blob.url,
       cached: false,
       generationTimeMs: elapsed,
-      // If we couldn't analyze the real image, the wheel is a text-based guess.
-      confidence: usedFallbackDescription ? "low" : "high",
-      method: usedFallbackDescription ? "text-fallback" : "vision-analyzed",
+      // High only when we actually used the real product image as a reference;
+      // medium when we redrew from a vision description; low on text-only fallback.
+      confidence: usedFallbackDescription ? "low" : usedImageReference ? "high" : "medium",
+      method: usedFallbackDescription ? "text-fallback" : usedImageReference ? "image-reference" : "vision-analyzed",
     };
     
   } catch (error: any) {

@@ -10,6 +10,136 @@ import { ProductRail, ProductCarousel, MOCK_TIRES, MOCK_WHEELS, RailProduct } fr
 import { VehicleChip } from "./VehicleChip";
 import { JakeMockupCard } from "./JakeMockupCard";
 import { useVehicleMemory, formatVehicleDisplay, type SavedVehicle } from "@/contexts/VehicleMemoryContext";
+// Authoritative pricing — SAME modules the cart/checkout uses, so the pinned
+// running total matches the cart to the penny (zero surprises at checkout).
+import {
+  LABOR_FEE_PER_SET,
+  RECYCLING_FEE_PER_SET,
+  TAX_RATE as LOCAL_OTD_TAX_RATE,
+} from "@/lib/localPricing";
+import {
+  calculateShipping,
+  FREE_SHIPPING_THRESHOLD,
+  isValidZipCode,
+  type ShippingItem,
+} from "@/lib/shipping/shippingService";
+
+// ZIP localStorage key shared with the cart's useCartShipping hook so a ZIP the
+// customer already entered carries into Jake's running total (and vice versa).
+const SHIPPING_ZIP_KEY = "wt_shipping_zip";
+
+/** A single line item for the running total, decoded from the cart prefill URL. */
+interface BuildLineItem {
+  type: "wheel" | "tire" | "accessory";
+  quantity: number;
+  unitPrice: number;
+}
+
+/**
+ * Decode the base64url cart-prefill payload back into line items.
+ * This is the EXACT set of products build_cart sent to checkout, so any total
+ * derived from it is guaranteed consistent with the cart page.
+ */
+function decodeCartItems(cartUrl: string): BuildLineItem[] {
+  try {
+    const m = cartUrl.match(/[?&]data=([^&]+)/);
+    if (!m) return [];
+    const json = typeof window !== "undefined"
+      ? atob(m[1].replace(/-/g, "+").replace(/_/g, "/"))
+      : Buffer.from(m[1], "base64url").toString("utf8");
+    const parsed = JSON.parse(json) as { items?: Array<Record<string, unknown>> };
+    const items = Array.isArray(parsed.items) ? parsed.items : [];
+    return items
+      .map((it) => {
+        const rawType = String(it.type || "tire").toLowerCase();
+        const type: BuildLineItem["type"] =
+          rawType === "wheel" ? "wheel" : rawType === "accessory" ? "accessory" : "tire";
+        const unitPrice = Number(it.price);
+        const quantity = Number(it.quantity) || (type === "accessory" ? 1 : 4);
+        return { type, quantity, unitPrice: Number.isFinite(unitPrice) ? unitPrice : 0 };
+      })
+      .filter((li) => li.unitPrice > 0 && li.quantity > 0);
+  } catch {
+    return [];
+  }
+}
+
+export interface RunningTotal {
+  subtotal: number;
+  /** National: shipping cost (0 = free / unknown). Local: not used. */
+  shipping: number;
+  /** National: true once subtotal clears the free-ship threshold. */
+  freeShipping: boolean;
+  /** National: a real ZIP-based shipping figure is included. */
+  shippingResolved: boolean;
+  /** Local-only fields. */
+  laborFee: number;
+  recyclingFee: number;
+  tax: number;
+  /** The headline number to show. */
+  total: number;
+  /** Whether the total is exact (local, or national free-ship) or an estimate. */
+  isExact: boolean;
+  /** Label: "Total Out the Door" (local) vs "Estimated Total" (national). */
+  label: string;
+  itemCount: number;
+}
+
+/**
+ * Compute a running total from build line items using the cart's OWN math.
+ * - Local: Products + Installation ($80/set) + Recycling ($20/set) + 6% tax on
+ *   products = exact "Total Out the Door" (mirrors cart/page.tsx local branch).
+ * - National: Subtotal; shipping is FREE ≥ $1,500, else ZIP-based if a stored ZIP
+ *   exists, else deferred to checkout. Mirrors useCartShipping/cart/page.tsx.
+ */
+function computeRunningTotal(items: BuildLineItem[], isLocal: boolean): RunningTotal | null {
+  if (!items.length) return null;
+  const subtotal = items.reduce((s, li) => s + li.unitPrice * li.quantity, 0);
+  if (subtotal <= 0) return null;
+
+  if (isLocal) {
+    // Fees scale per set of 4 tires (matches cart local branch exactly).
+    const tireCount = items.filter((i) => i.type === "tire").reduce((s, t) => s + t.quantity, 0);
+    const setMultiplier = tireCount > 0 ? tireCount / 4 : 0;
+    const laborFee = LABOR_FEE_PER_SET * setMultiplier;
+    const recyclingFee = RECYCLING_FEE_PER_SET * setMultiplier;
+    const tax = subtotal * LOCAL_OTD_TAX_RATE; // tax on products only
+    const total = subtotal + laborFee + recyclingFee + tax;
+    return {
+      subtotal, shipping: 0, freeShipping: false, shippingResolved: true,
+      laborFee, recyclingFee, tax, total, isExact: true,
+      label: "Total Out the Door", itemCount: items.length,
+    };
+  }
+
+  // National mode.
+  const freeShipping = subtotal >= FREE_SHIPPING_THRESHOLD;
+  let storedZip = "";
+  try { storedZip = typeof window !== "undefined" ? (localStorage.getItem(SHIPPING_ZIP_KEY) || "") : ""; } catch { /* ignore */ }
+  const hasZip = !!storedZip && isValidZipCode(storedZip);
+
+  let shipping = 0;
+  let shippingResolved = false;
+  if (freeShipping) {
+    shippingResolved = true; // free is exact
+  } else if (hasZip) {
+    const shipItems: ShippingItem[] = items.map((li) => ({ type: li.type, quantity: li.quantity, unitPrice: li.unitPrice }));
+    const est = calculateShipping({ zipCode: storedZip, items: shipItems, subtotal });
+    shipping = est.amount;
+    shippingResolved = true;
+  }
+  const total = freeShipping ? subtotal : subtotal + shipping;
+  return {
+    subtotal, shipping, freeShipping, shippingResolved,
+    laborFee: 0, recyclingFee: 0, tax: 0,
+    total, isExact: freeShipping, // exact when free; otherwise estimate
+    label: "Estimated Total", itemCount: items.length,
+  };
+}
+
+function money(n: number): string {
+  return n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -1147,6 +1277,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                 confidence={pinnedMockup.mockup.confidence}
                 tireBrand={pinnedMockup.mockup.tireBrand}
                 tireModel={pinnedMockup.mockup.tireModel}
+                hideActions={true}
                 onBuildSetup={() => {
                   handleSend("Let's build this setup! Help me get these exact products to checkout.");
                 }}
@@ -1171,6 +1302,89 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                   handleSend("I'd like to make some changes to this build.");
                 }}
               />
+
+              {/* Running total — uses the cart's OWN pricing math so it matches
+                  checkout exactly. Only shows once a cart (build_cart) exists. */}
+              {(() => {
+                if (!pinnedMockup.cartUrl) return null;
+                const rt = computeRunningTotal(decodeCartItems(pinnedMockup.cartUrl), isLocal);
+                if (!rt) return null;
+                return (
+                  <div className="mt-3 rounded-xl bg-white/5 border border-white/10 p-3 text-sm">
+                    <div className="flex justify-between text-white/70">
+                      <span>{isLocal ? "Products" : "Subtotal"}</span>
+                      <span className="text-white font-medium">{money(rt.subtotal)}</span>
+                    </div>
+
+                    {isLocal ? (
+                      <>
+                        {rt.laborFee > 0 && (
+                          <div className="flex justify-between text-white/70 mt-1">
+                            <span>Installation</span>
+                            <span className="text-white font-medium">{money(rt.laborFee)}</span>
+                          </div>
+                        )}
+                        {rt.recyclingFee > 0 && (
+                          <div className="flex justify-between text-white/70 mt-1">
+                            <span>Tire recycling</span>
+                            <span className="text-white font-medium">{money(rt.recyclingFee)}</span>
+                          </div>
+                        )}
+                        <div className="flex justify-between text-white/70 mt-1">
+                          <span>Tax (6%)</span>
+                          <span className="text-white font-medium">{money(rt.tax)}</span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="flex justify-between text-white/70 mt-1">
+                        <span>Shipping</span>
+                        <span className="text-white font-medium">
+                          {rt.freeShipping ? "FREE" : rt.shippingResolved ? money(rt.shipping) : "at checkout"}
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="mt-2 pt-2 border-t border-white/10 flex justify-between items-center">
+                      <span className="text-white font-bold">{rt.label}</span>
+                      <span className="text-green-400 text-lg font-extrabold">{money(rt.total)}</span>
+                    </div>
+
+                    {!rt.isExact && (
+                      <p className="text-white/40 text-[10px] mt-1.5 leading-snug">
+                        {isLocal
+                          ? "Final price confirmed at checkout."
+                          : rt.shippingResolved
+                            ? "Shipping estimated; tax calculated at checkout."
+                            : "Add your ZIP at checkout for exact shipping. Free shipping on orders over $1,500."}
+                      </p>
+                    )}
+
+                    {/* CTAs live under the total so the price + buy button stay together. */}
+                    <div className="mt-3 flex gap-2">
+                      <button
+                        onClick={() => {
+                          if (pinnedMockup.cartUrl) {
+                            trackJakeEvent("mockup_to_cart", {
+                              vehicle: pinnedMockup.mockup.vehicle,
+                              wheelStyle: pinnedMockup.mockup.wheelStyle,
+                            });
+                            window.location.href = pinnedMockup.cartUrl;
+                          }
+                        }}
+                        className="flex-1 rounded-lg bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 px-3 py-2.5 text-white text-sm font-bold transition-all shadow-lg flex items-center justify-center gap-2"
+                      >
+                        🛒 Checkout
+                      </button>
+                      <button
+                        onClick={() => handleSend("I'd like to make some changes to this build.")}
+                        className="rounded-lg bg-white/10 hover:bg-white/20 px-3 py-2.5 text-white text-xs font-medium transition-colors"
+                      >
+                        ✏️ Changes
+                      </button>
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           )}
 

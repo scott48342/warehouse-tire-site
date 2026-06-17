@@ -12,7 +12,7 @@ interface JakeMockupCardProps {
   generationTime?: number;
   cached?: boolean;
   // Phase 2: Confidence level
-  confidence?: "high" | "medium" | "concept";
+  confidence?: "high" | "medium" | "concept" | "low";
   tireBrand?: string;
   tireModel?: string;
   // Conversion CTAs (Phase 3)
@@ -23,6 +23,9 @@ interface JakeMockupCardProps {
   // Legacy actions
   onSave?: () => void;
   onShare?: () => void;
+  // When true, the card renders image + summary only (no action buttons).
+  // Used by the pinned-left panel, which renders its own CTAs under the total.
+  hideActions?: boolean;
 }
 
 // Confidence level display
@@ -48,6 +51,7 @@ export function JakeMockupCard({
   onMakeChanges,
   onSave,
   onShare,
+  hideActions = false,
 }: JakeMockupCardProps) {
   const [imageError, setImageError] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -170,6 +174,7 @@ export function JakeMockupCard({
         </div>
         
         {/* Conversion CTAs (Phase 3) */}
+        {!hideActions && (
         <div className="space-y-2">
           {/* Primary CTA Row */}
           <div className="flex gap-2">
@@ -217,6 +222,7 @@ export function JakeMockupCard({
             </button>
           </div>
         </div>
+        )}
         
         {/* Generation time (subtle) */}
         {generationTime && !cached && (
