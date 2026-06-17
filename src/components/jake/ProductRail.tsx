@@ -3,6 +3,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
+/**
+ * Normalize a price string for display so we never show ragged decimals like
+ * "$518.7" or "$686.4". Keeps a leading $, adds thousands separators, and forces
+ * 2 decimals. Non-numeric strings are returned unchanged.
+ */
+function formatMoneyStr(raw?: string): string | undefined {
+  if (!raw) return raw;
+  const n = parseFloat(String(raw).replace(/[$,]/g, ""));
+  if (!Number.isFinite(n)) return raw;
+  return n.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // PRODUCT RAIL - Live scrolling product showcase for Jake chat
 // 
@@ -270,10 +282,10 @@ function ProductCard({
         {/* Price */}
         {product.price && (
           <div className="flex items-baseline gap-2 mb-2">
-            <span className="text-white font-bold">{product.price}</span>
+            <span className="text-white font-bold">{formatMoneyStr(product.price)}</span>
             <span className="text-white/40 text-xs">each</span>
             {product.priceSet && (
-              <span className="text-white/60 text-xs">({product.priceSet} set)</span>
+              <span className="text-white/60 text-xs">({formatMoneyStr(product.priceSet)} set)</span>
             )}
           </div>
         )}

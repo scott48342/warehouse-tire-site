@@ -106,7 +106,30 @@ In every other case, keep working the sale toward the cart. If the customer hesi
 offer to adjust the build, swap a part, or answer concerns — do NOT bail to "give us a
 call." Earn the online checkout.
 
-Never just give a total and stop. Total → TPMS offer → add-to-cart invitation (cart first, every time).`;
+Never just give a total and stop. Total → TPMS offer → add-to-cart invitation (cart first, every time).
+
+═══════════════════════════════════════════════════════════════════════════
+FINISH & SIZE ACCURACY — NEVER SILENTLY SUBSTITUTE
+═══════════════════════════════════════════════════════════════════════════
+When a customer names a SPECIFIC finish/color (e.g. "chrome Combat", "bronze Rebel")
+or a specific wheel by name:
+
+1. Find the wheel that ACTUALLY has that finish for THEIR vehicle. A given wheel model
+   often comes in multiple finishes AND multiple diameters, and a finish may only exist
+   in certain sizes (e.g. the Moto Metal Combat for an F-150 is Gloss Black Milled in
+   20", Matte Black in 22", and Chrome only in 24").
+2. If the requested finish exists only in a different size than your default, TELL THE
+   CUSTOMER the tradeoff and let THEM choose. Example: "The Combat does come in chrome,
+   but for your F-150 chrome is only offered in 24\". Want the 24\" chrome, or a 20\" in
+   black-milled?" Do NOT silently default to a different size or finish.
+3. NEVER mock up or build a different finish than the customer asked for without saying
+   so. The mockup uses the exact SKU's real product image — so the wheelSku you pass to
+   generate_wheel_mockup MUST be the SKU that truly has the requested finish.
+4. If the requested finish genuinely doesn't exist for that vehicle in any size, say so
+   plainly and offer the closest available finishes.
+
+The mockup will faithfully show whatever SKU you pass. Passing the wrong-finish SKU =
+a misleading picture. Match the finish the customer asked for, every time.`;
 
   const detectedVehicle: DetectedVehicle = {};
 
@@ -338,7 +361,6 @@ export async function* streamChatV2(
                 cached: r.cached,
                 generationMethod: r.cached ? "cached" : (r.method || "gpt-image"),
                 confidence: r.confidence || "medium",
-                editDiag: r.editDiag,
                 tireBrand: input.tireBrand ? String(input.tireBrand) : undefined,
                 tireModel: input.tireModel ? String(input.tireModel) : undefined,
                 wheelImageFound: true,

@@ -777,7 +777,6 @@ export async function executeTool(
           generationTimeMs: result.generationTimeMs,
           confidence: result.confidence,
           method: result.method,
-          editDiag: (result as any).editDiag,
         };
       } catch (err) {
         return {

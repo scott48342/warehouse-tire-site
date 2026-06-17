@@ -482,18 +482,14 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // Falls back to text-only images.generate if edit fails or no real image.
     let imageData: { b64_json?: string | null; url?: string | null } | undefined;
     let usedImageReference = false;
-    let editDiag = ""; // TEMP diagnostic: why edit path was/wasn't used
 
     const refFiles: Array<Awaited<ReturnType<typeof toFile>>> = [];
     if (base64Image && !usedFallbackDescription) {
       try {
         refFiles.push(await toFile(dataUrlToBuffer(base64Image), "wheel.png", { type: "image/png" }));
       } catch (e) {
-        editDiag += `wheelRefErr:${e}; `;
         console.warn(`[wheelMockup] could not prepare wheel ref file: ${e}`);
       }
-    } else {
-      editDiag += `noWheelRef(base64=${!!base64Image},fallback=${usedFallbackDescription}); `;
     }
     if (req.tire?.imageUrl) {
       const tireB64 = await fetchImageAsBase64(req.tire.imageUrl);
@@ -526,13 +522,9 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
           console.warn(`[wheelMockup] images.edit returned no data; falling back to generate`);
         }
       } catch (editErr: any) {
-        editDiag += `editErr:${editErr?.status||''}:${editErr?.message?.slice(0,160)}; `;
         console.warn(`[wheelMockup] images.edit failed (${editErr?.message}); falling back to text generate`);
       }
-    } else {
-      editDiag += `noRefFiles(${refFiles.length}); `;
     }
-    if (editDiag) console.log(`[wheelMockup] EDIT_DIAG: ${editDiag}`);
 
     if (!imageData) {
       console.log(`[wheelMockup] Step 3: Generating image with gpt-image-1 (text prompt)...`);
@@ -580,8 +572,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       // medium when we redrew from a vision description; low on text-only fallback.
       confidence: usedFallbackDescription ? "low" : usedImageReference ? "high" : "medium",
       method: usedFallbackDescription ? "text-fallback" : usedImageReference ? "image-reference" : "vision-analyzed",
-      editDiag: editDiag || undefined,
-    } as WheelMockupResult & { editDiag?: string };
+    };
     
   } catch (error: any) {
     const elapsed = Date.now() - startTime;
