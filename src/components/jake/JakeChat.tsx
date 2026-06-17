@@ -279,6 +279,26 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const [headerPrompts] = useState(() => getRandomHeaderPrompts(3));
   const [compareProducts, setCompareProducts] = useState<ParsedProduct[]>([]);
   const [showCompare, setShowCompare] = useState(false);
+
+  // v2 UI flag (presentation only): cleaner markdown rendering + tighter bubbles.
+  // Reversible: ?ui=v2 query param or NEXT_PUBLIC_JAKE_UI=v2. Default = old UI.
+  // No logic changes — product cards, mockups, build, cart, analytics all unchanged.
+  const [useV2Ui, setUseV2Ui] = useState(false);
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("ui");
+      if (q === "v2") setUseV2Ui(true);
+      else if (q === "v1") setUseV2Ui(false);
+      else if (process.env.NEXT_PUBLIC_JAKE_UI === "v2") setUseV2Ui(true);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+  // v2 shows more options in the side rail so it never looks thin on choices.
+  // Use a ref so callbacks always read the current value (avoids stale closure).
+  const useV2UiRef = useRef(false);
+  useV2UiRef.current = useV2Ui;
+  const railMax = () => (useV2UiRef.current ? 20 : 6);
   
   // Vehicle Memory Integration
   const { activeVehicle, isLoaded: vehicleLoaded, clearActiveVehicle, setActiveVehicle } = useVehicleMemory();
@@ -528,7 +548,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       (productsData?.wheels?.length > 0);
     
     if (hasTireData) {
-      const railTireData: RailProduct[] = (productsData?.tires || productsData?.staggeredPairs || tireProducts).slice(0, 6).map((t: any) => ({
+      const railTireData: RailProduct[] = (productsData?.tires || productsData?.staggeredPairs || tireProducts).slice(0, railMax()).map((t: any) => ({
         id: t.sku || t.productUrl || `tire-${Math.random()}`,
         type: "tire" as const,
         brand: t.brand || "",
@@ -544,7 +564,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     }
     
     if (hasWheelData) {
-      const railWheelData: RailProduct[] = (productsData?.wheels || wheelProducts).slice(0, 6).map((w: any) => ({
+      const railWheelData: RailProduct[] = (productsData?.wheels || wheelProducts).slice(0, railMax()).map((w: any) => ({
         id: w.sku || w.productUrl || `wheel-${Math.random()}`,
         type: "wheel" as const,
         brand: w.brand || "",
@@ -630,8 +650,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         }
       }
 
-      // Use streaming API
-      const response = await fetch("/api/jake/chat/stream", {
+      // Use streaming API. When the v2 UI is active, also drive the v2 engine
+      // (clean look + fast engine together). Old UI keeps v1 by default.
+      const streamUrl = useV2Ui ? "/api/jake/chat/stream?engine=v2" : "/api/jake/chat/stream";
+      const response = await fetch(streamUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -1006,11 +1028,18 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // If both: tires left, wheels right
   // If only tires: tires left
   // If only wheels: wheels left
+  // v2 UI: everything lives in ONE right-hand "Your Build" rail (left rail hidden).
+  // Old UI: tires left, wheels right (existing behavior).
   const leftRailProducts = showTireRail ? railTires : railWheels;
-  const rightRailProducts = (showTireRail && showWheelRail) ? railWheels : [];
-  const showLeftRail = showTireRail || showWheelRail;
-  const showRightRail = showTireRail && showWheelRail;
+  const rightRailProducts = useV2Ui
+    ? [...railWheels, ...railTires]
+    : ((showTireRail && showWheelRail) ? railWheels : []);
+  const showLeftRail = !useV2Ui && (showTireRail || showWheelRail);
+  const showRightRail = useV2Ui
+    ? (showTireRail || showWheelRail)
+    : (showTireRail && showWheelRail);
   const leftRailTitle = showTireRail ? "MATCHING TIRES" : "MATCHING WHEELS";
+  const rightRailTitle = useV2Ui ? "YOUR BUILD" : "MATCHING WHEELS";
 
   const handleRailProductClick = (product: RailProduct) => {
     const productDesc = `${product.brand} ${product.model}${product.size ? ` (${product.size})` : ""}`;
@@ -1020,8 +1049,9 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   };
 
   return (
-    <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} bg-[#0a0a0a] overflow-hidden relative`}>
-      {/* Cinematic Background */}
+    <div className={`flex flex-col ${embedded ? "h-full" : "h-screen"} ${useV2Ui ? "bg-black" : "bg-[#0a0a0a]"} overflow-hidden relative`}>
+      {/* Cinematic Background — hidden in v2 UI (pure black) */}
+      {!useV2Ui && (
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div 
           className="absolute inset-0"
@@ -1046,10 +1076,11 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(0,0,0,0.5) 100%)' }} />
         <div className="absolute bottom-0 left-0 right-0 h-[150px] bg-gradient-to-t from-red-900/10 to-transparent" />
       </div>
+      )}
 
-      {/* Main Container - Centered with rails inside */}
-      <div className="flex-1 min-h-0 flex justify-center relative z-10">
-        <div className="flex w-full max-w-6xl min-h-0">
+      {/* Main Container - v2: full-width left-aligned; old: centered */}
+      <div className={`flex-1 min-h-0 flex relative z-10 ${useV2Ui ? "" : "justify-center"}`}>
+        <div className={`flex min-h-0 ${useV2Ui ? "w-full" : "w-full max-w-6xl"}`}>
           {/* Left Product Rail - Desktop (only when we have products) */}
           {showLeftRail && (
             <ProductRail
@@ -1212,16 +1243,24 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                 className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-2xl px-4 py-3 ${
+                  className={`rounded-2xl px-4 py-3 ${
+                    useV2Ui ? "max-w-[92%]" : "max-w-[85%]"
+                  } ${
                     message.role === "user"
                       ? "bg-red-600 text-white"
                       : "bg-white/5 border border-white/10 text-white/90"
                   }`}
                 >
                   {/* Message Content */}
-                  <div className="text-sm whitespace-pre-wrap leading-relaxed">
-                    <MessageContent content={message.content} />
-                  </div>
+                  {useV2Ui ? (
+                    <div className="text-sm">
+                      <RichMessageContent content={message.content} />
+                    </div>
+                  ) : (
+                    <div className="text-sm whitespace-pre-wrap leading-relaxed">
+                      <MessageContent content={message.content} />
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -1425,9 +1464,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
             <ProductRail
               products={rightRailProducts}
               side="right"
-              title="MATCHING WHEELS"
+              title={rightRailTitle}
               onProductClick={handleRailProductClick}
               paused={isLoading}
+              wide={useV2Ui}
             />
           )}
         </div>
@@ -1439,6 +1479,147 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
 // ═══════════════════════════════════════════════════════════════════════════════
 // MESSAGE CONTENT RENDERER
 // ═══════════════════════════════════════════════════════════════════════════════
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RICH MARKDOWN RENDERER (v2 UI) — proper tables / headings / lists / inline.
+// Presentation only. Renders safely via React nodes (no dangerouslySetInnerHTML).
+// Fixes the old renderer's mangled tables and broken "...HPThttps://" links.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Inline markdown → React nodes: [text](url), **bold**, *italic*, `code`.
+function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
+  const nodes: React.ReactNode[] = [];
+  // Tokenize on links / bold / italic / code, preserving order.
+  const regex = /(\[([^\]]+)\]\((https?:[^)\s]+)\))|(\*\*([^*]+)\*\*)|(`([^`]+)`)|(\*([^*]+)\*)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let i = 0;
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > last) nodes.push(<span key={`${keyPrefix}-t${i}`}>{text.slice(last, m.index)}</span>);
+    if (m[1]) {
+      nodes.push(
+        <a
+          key={`${keyPrefix}-l${i}`}
+          href={m[3]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-400 hover:text-red-300 underline underline-offset-2"
+        >
+          {m[2]}
+        </a>
+      );
+    } else if (m[4]) {
+      nodes.push(<strong key={`${keyPrefix}-b${i}`} className="font-semibold text-white">{m[5]}</strong>);
+    } else if (m[6]) {
+      nodes.push(
+        <code key={`${keyPrefix}-c${i}`} className="px-1 py-0.5 rounded bg-white/10 text-[0.85em] font-mono">{m[7]}</code>
+      );
+    } else if (m[8]) {
+      nodes.push(<em key={`${keyPrefix}-i${i}`}>{m[9]}</em>);
+    }
+    last = m.index + m[0].length;
+    i++;
+  }
+  if (last < text.length) nodes.push(<span key={`${keyPrefix}-t${i}`}>{text.slice(last)}</span>);
+  return nodes;
+}
+
+function RichMessageContent({ content }: { content: string }) {
+  const lines = content.replace(/\r/g, "").split("\n");
+  const blocks: React.ReactNode[] = [];
+  const isRow = (l: string) => /^\s*\|.*\|\s*$/.test(l);
+  const isSep = (l: string) => /^\s*\|?[\s:|-]+\|?\s*$/.test(l) && l.includes("-");
+  const cells = (l: string) =>
+    l.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+
+  let i = 0;
+  let key = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim()) { i++; continue; }
+
+    // Table
+    if (isRow(line) && i + 1 < lines.length && isSep(lines[i + 1])) {
+      const head = cells(line);
+      i += 2;
+      const rows: string[][] = [];
+      while (i < lines.length && isRow(lines[i])) { rows.push(cells(lines[i])); i++; }
+      blocks.push(
+        <div key={`tbl-${key++}`} className="my-2 overflow-x-auto">
+          <table className="w-full text-xs border-collapse">
+            <thead>
+              <tr>
+                {head.map((h, hi) => (
+                  <th key={hi} className="text-left font-semibold text-white/90 border-b border-white/20 px-2 py-1">
+                    {renderInline(h, `th-${key}-${hi}`)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r, ri) => (
+                <tr key={ri} className="border-b border-white/5">
+                  {r.map((c, ci) => (
+                    <td key={ci} className="align-top px-2 py-1 text-white/80">
+                      {renderInline(c, `td-${key}-${ri}-${ci}`)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+      continue;
+    }
+
+    // Heading
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      const sz = h[1].length <= 2 ? "text-base" : "text-sm";
+      blocks.push(
+        <div key={`h-${key++}`} className={`font-semibold text-white mt-2 mb-1 ${sz}`}>
+          {renderInline(h[2], `h-${key}`)}
+        </div>
+      );
+      i++;
+      continue;
+    }
+
+    // Horizontal rule
+    if (/^\s*---+\s*$/.test(line)) { blocks.push(<hr key={`hr-${key++}`} className="my-2 border-white/10" />); i++; continue; }
+
+    // Unordered list
+    if (/^\s*[-*]\s+/.test(line)) {
+      const items: string[] = [];
+      while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*[-*]\s+/, "")); i++; }
+      blocks.push(
+        <ul key={`ul-${key++}`} className="list-disc pl-5 my-1 space-y-0.5">
+          {items.map((it, ii) => <li key={ii}>{renderInline(it, `ul-${key}-${ii}`)}</li>)}
+        </ul>
+      );
+      continue;
+    }
+
+    // Ordered list
+    if (/^\s*\d+\.\s+/.test(line)) {
+      const items: string[] = [];
+      while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*\d+\.\s+/, "")); i++; }
+      blocks.push(
+        <ol key={`ol-${key++}`} className="list-decimal pl-5 my-1 space-y-0.5">
+          {items.map((it, ii) => <li key={ii}>{renderInline(it, `ol-${key}-${ii}`)}</li>)}
+        </ol>
+      );
+      continue;
+    }
+
+    // Paragraph
+    blocks.push(<p key={`p-${key++}`} className="my-1">{renderInline(line, `p-${key}`)}</p>);
+    i++;
+  }
+
+  return <div className="leading-relaxed">{blocks}</div>;
+}
 
 function MessageContent({ content }: { content: string }) {
   // Convert markdown links to clickable links

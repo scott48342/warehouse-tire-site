@@ -36,6 +36,7 @@ interface ProductRailProps {
   onProductClick: (product: RailProduct) => void;
   paused?: boolean;
   highlightedId?: string | null; // Highlight a product when clicked
+  wide?: boolean; // v2 UI: wider "Your Build" sidebar
 }
 
 // Mock data for Phase 1 (no images - use placeholders)
@@ -292,16 +293,16 @@ function ProductCard({
 }
 
 // Main Rail Component
-export function ProductRail({ products, side, title, onProductClick, paused = false, highlightedId }: ProductRailProps) {
+export function ProductRail({ products, side, title, onProductClick, paused = false, highlightedId, wide = false }: ProductRailProps) {
   // Default title based on product type if not provided
   const railTitle = title || (products[0]?.type === "tire" ? "MATCHING TIRES" : "MATCHING WHEELS");
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  // Auto-scroll effect
+  // Auto-scroll effect (disabled in v2 "wide" rail — manual scroll instead).
   useEffect(() => {
-    if (paused || isHovered || !scrollRef.current) return;
+    if (wide || paused || isHovered || !scrollRef.current) return;
 
     const scrollSpeed = 0.8; // pixels per frame
     let animationId: number;
@@ -328,19 +329,21 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
     return () => cancelAnimationFrame(animationId);
   }, [paused, isHovered]);
 
-  // Apply scroll position
+  // Apply scroll position (skip in v2 — user controls scroll).
   useEffect(() => {
+    if (wide) return;
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollPosition;
     }
-  }, [scrollPosition]);
+  }, [scrollPosition, wide]);
 
-  // Duplicate products for seamless looping
-  const duplicatedProducts = [...products, ...products];
+  // Old rail duplicates products for the seamless marquee loop.
+  // v2 shows the real list once and lets the user scroll it.
+  const duplicatedProducts = wide ? products : [...products, ...products];
 
   return (
     <div 
-      className={`hidden lg:flex flex-col w-[200px] flex-shrink-0 relative ${
+      className={`hidden lg:flex flex-col ${wide ? "w-[340px]" : "w-[200px]"} flex-shrink-0 relative ${
         side === "left" ? "border-r" : "border-l"
       } border-white/5`}
       onMouseEnter={() => setIsHovered(true)}
@@ -353,17 +356,19 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
         </p>
       </div>
 
-      {/* Top fade mask */}
-      <div className="absolute top-12 left-0 right-0 h-16 bg-gradient-to-b from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-      
-      {/* Bottom fade mask */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+      {/* Fade masks — only on the auto-scrolling old rail (would clip items in v2) */}
+      {!wide && (
+        <>
+          <div className="absolute top-12 left-0 right-0 h-16 bg-gradient-to-b from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        </>
+      )}
 
-      {/* Scrolling content */}
+      {/* Scrolling content — v2: manual scroll; old: hidden (auto-scrolled) */}
       <div 
         ref={scrollRef}
-        className="flex-1 overflow-hidden px-2 py-4"
-        style={{ scrollBehavior: isHovered ? 'smooth' : 'auto' }}
+        className={`flex-1 ${wide ? "overflow-y-auto" : "overflow-hidden"} px-2 py-4`}
+        style={{ scrollBehavior: isHovered && !wide ? 'smooth' : 'auto' }}
       >
         <div className="space-y-3">
           {duplicatedProducts.map((product, idx) => (
@@ -377,8 +382,8 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
         </div>
       </div>
 
-      {/* Pause indicator */}
-      {isHovered && (
+      {/* Pause indicator — only meaningful on the auto-scrolling old rail */}
+      {isHovered && !wide && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 px-2 py-1 bg-black/80 backdrop-blur-sm rounded-full text-white/60 text-[10px] flex items-center gap-1">
           <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
             <rect x="6" y="4" width="4" height="16" />
@@ -388,8 +393,8 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
         </div>
       )}
       
-      {/* Build Hint - shown when hovering */}
-      {isHovered && (
+      {/* Build Hint - shown when hovering (old rail only) */}
+      {isHovered && !wide && (
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 px-3 py-1.5 bg-red-600/90 backdrop-blur-sm rounded-lg text-white text-[10px] font-medium whitespace-nowrap shadow-lg animate-pulse">
           👆 Click to add to your build
         </div>
