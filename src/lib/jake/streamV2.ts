@@ -70,6 +70,32 @@ function buildSystemPrompt(
   gallery?: GalleryBuildContext
 ): { system: string; detectedVehicle: DetectedVehicle } {
   let system = JAKE_SYSTEM_PROMPT;
+
+  // v2-only guidance: close the loop on a build — offer cart/checkout + TPMS.
+  system += `
+
+═════════════════════════════════════════════════════════════════════════════
+CLOSING A BUILD (wheels + tires) — ALWAYS DO THIS
+═════════════════════════════════════════════════════════════════════════════
+
+Whenever you present a complete build with a total price, you MUST:
+
+1. RECOMMEND TPMS SENSORS. Aftermarket wheels usually need new TPMS (tire pressure
+   monitoring) sensors — the factory ones often don't transfer. Say something like:
+   "Since these are new wheels, you'll likely want a set of 4 TPMS sensors so your
+   dash light stays off — want me to include those?" Do NOT invent a sensor price;
+   if asked, say the team confirms exact TPMS pricing at checkout.
+
+2. OFFER TO ADD TO CART / BUILD IT. Always end a completed build by inviting the
+   customer to check out — e.g. "Want me to add this full setup to your cart so you
+   can check out?" The build card has "Build This Setup" / "Add to Cart" buttons —
+   point them there. Make completing the purchase the obvious next step.
+
+3. Phone numbers are a FALLBACK, not the primary CTA. Offer the cart FIRST, then
+   mention they can also call the store if they prefer.
+
+Never just give a total and stop. Total → TPMS offer → add-to-cart invitation.`;
+
   const detectedVehicle: DetectedVehicle = {};
 
   if (savedVehicle?.year && savedVehicle?.make && savedVehicle?.model) {
@@ -235,8 +261,11 @@ export async function* streamChatV2(
 
         const input = call.input as Record<string, unknown>;
         // v2 UI shows a fuller side rail — pull more options so it doesn't look thin.
-        if ((call.name === "search_wheels" || call.name === "search_tires") && input.limit == null) {
-          input.limit = 20;
+        // Force a high limit even if the model requested fewer (e.g. tires often
+        // default to 6). Honor a model-requested limit only if it's already larger.
+        if (call.name === "search_wheels" || call.name === "search_tires") {
+          const requested = Number(input.limit);
+          if (!Number.isFinite(requested) || requested < 24) input.limit = 24;
         }
         if (input.year) detectedVehicle.year = Number(input.year);
         if (input.make) detectedVehicle.make = String(input.make);
@@ -265,9 +294,23 @@ export async function* streamChatV2(
           }
 
           const r = result as any;
-          if (r?.tires?.length > 0) collectedProducts.tires = r.tires;
-          if (r?.wheels?.length > 0) collectedProducts.wheels = r.wheels;
-          if (r?.staggeredPairs?.length > 0) collectedProducts.staggeredPairs = r.staggeredPairs;
+          // Accumulate + dedupe across multiple searches in one turn. Staggered
+          // setups search front AND rear sizes; overwriting would drop one size
+          // and make the rail look thin. Dedupe by sku (fallback partNumber/url).
+          const mergeById = (existing: any[] = [], incoming: any[] = []) => {
+            const seen = new Set(existing.map((x) => x?.sku || x?.partNumber || x?.productUrl));
+            const merged = [...existing];
+            for (const item of incoming) {
+              const id = item?.sku || item?.partNumber || item?.productUrl;
+              if (id && seen.has(id)) continue;
+              if (id) seen.add(id);
+              merged.push(item);
+            }
+            return merged;
+          };
+          if (r?.tires?.length > 0) collectedProducts.tires = mergeById(collectedProducts.tires, r.tires);
+          if (r?.wheels?.length > 0) collectedProducts.wheels = mergeById(collectedProducts.wheels, r.wheels);
+          if (r?.staggeredPairs?.length > 0) collectedProducts.staggeredPairs = mergeById(collectedProducts.staggeredPairs, r.staggeredPairs);
           if (r?.cartUrl) cartUrl = r.cartUrl;
 
           // Mockup: emit the rich mockup event the UI expects (parity with v1).
