@@ -306,6 +306,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // Product rail state - populated based on detected intent
   const [railTires, setRailTires] = useState<RailProduct[]>([]);
   const [railWheels, setRailWheels] = useState<RailProduct[]>([]);
+  // v2: which product type the right rail currently focuses on. Flips to whatever
+  // type Jake most recently surfaced so the customer doesn't have to scroll past
+  // 20 wheels to reach tires. "wheel" while shopping wheels; "tire" once tires appear.
+  const [activeRailType, setActiveRailType] = useState<"wheel" | "tire">("wheel");
   const [railsMessage, setRailsMessage] = useState<string | null>(null);
   
   // Persistence state
@@ -547,6 +551,12 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
     const hasWheelData = wheelProducts.length > 0 || 
       (productsData?.wheels?.length > 0);
     
+    // v2: focus the right rail on whatever was just surfaced. Tires take priority
+    // when present in this batch (the customer just moved on to tires); otherwise
+    // wheels. This makes the rail SWAP instead of stacking wheels + tires.
+    if (hasTireData) setActiveRailType("tire");
+    else if (hasWheelData) setActiveRailType("wheel");
+
     if (hasTireData) {
       const railTireData: RailProduct[] = (productsData?.tires || productsData?.staggeredPairs || tireProducts).slice(0, railMax()).map((t: any) => ({
         id: t.sku || t.productUrl || `tire-${Math.random()}`,
@@ -1031,15 +1041,23 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   // v2 UI: everything lives in ONE right-hand "Your Build" rail (left rail hidden).
   // Old UI: tires left, wheels right (existing behavior).
   const leftRailProducts = showTireRail ? railTires : railWheels;
+  // v2: show ONLY the active type so the rail swaps (wheels -> tires) instead of
+  // stacking. Falls back to whichever list actually has products.
+  const v2ActiveRailProducts =
+    activeRailType === "tire"
+      ? (showTireRail ? railTires : railWheels)
+      : (showWheelRail ? railWheels : railTires);
   const rightRailProducts = useV2Ui
-    ? [...railWheels, ...railTires]
+    ? v2ActiveRailProducts
     : ((showTireRail && showWheelRail) ? railWheels : []);
   const showLeftRail = !useV2Ui && (showTireRail || showWheelRail);
   const showRightRail = useV2Ui
     ? (showTireRail || showWheelRail)
     : (showTireRail && showWheelRail);
   const leftRailTitle = showTireRail ? "MATCHING TIRES" : "MATCHING WHEELS";
-  const rightRailTitle = useV2Ui ? "YOUR BUILD" : "MATCHING WHEELS";
+  const rightRailTitle = useV2Ui
+    ? (activeRailType === "tire" ? "MATCHING TIRES" : "MATCHING WHEELS")
+    : "MATCHING WHEELS";
 
   const handleRailProductClick = (product: RailProduct) => {
     const productDesc = `${product.brand} ${product.model}${product.size ? ` (${product.size})` : ""}`;

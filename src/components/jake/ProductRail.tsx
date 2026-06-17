@@ -337,6 +337,14 @@ export function ProductRail({ products, side, title, onProductClick, paused = fa
     }
   }, [scrollPosition, wide]);
 
+  // v2: when the rail swaps contents (e.g. wheels -> tires), reset scroll to top
+  // so the customer sees the new list from the start instead of mid-scroll.
+  const firstId = products[0]?.id;
+  const firstType = products[0]?.type;
+  useEffect(() => {
+    if (wide && scrollRef.current) scrollRef.current.scrollTop = 0;
+  }, [wide, firstId, firstType, products.length]);
+
   // Old rail duplicates products for the seamless marquee loop.
   // v2 shows the real list once and lets the user scroll it.
   const duplicatedProducts = wide ? products : [...products, ...products];
