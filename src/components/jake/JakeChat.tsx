@@ -281,15 +281,16 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
   const [showCompare, setShowCompare] = useState(false);
 
   // v2 UI flag (presentation only): cleaner markdown rendering + tighter bubbles.
-  // Reversible: ?ui=v2 query param or NEXT_PUBLIC_JAKE_UI=v2. Default = old UI.
-  // No logic changes — product cards, mockups, build, cart, analytics all unchanged.
-  const [useV2Ui, setUseV2Ui] = useState(false);
+  // Default v2 as of 2026-06-17 live cutover. Escape hatch to old UI: ?ui=v1
+  // (or NEXT_PUBLIC_JAKE_UI=v1). No logic changes — product cards, mockups, build,
+  // cart, analytics all unchanged.
+  const [useV2Ui, setUseV2Ui] = useState(true);
   useEffect(() => {
     try {
       const q = new URLSearchParams(window.location.search).get("ui");
-      if (q === "v2") setUseV2Ui(true);
-      else if (q === "v1") setUseV2Ui(false);
-      else if (process.env.NEXT_PUBLIC_JAKE_UI === "v2") setUseV2Ui(true);
+      if (q === "v1") setUseV2Ui(false);
+      else if (q === "v2") setUseV2Ui(true);
+      else if (process.env.NEXT_PUBLIC_JAKE_UI === "v1") setUseV2Ui(false);
     } catch {
       /* ignore */
     }
@@ -660,9 +661,10 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
         }
       }
 
-      // Use streaming API. When the v2 UI is active, also drive the v2 engine
-      // (clean look + fast engine together). Old UI keeps v1 by default.
-      const streamUrl = useV2Ui ? "/api/jake/chat/stream?engine=v2" : "/api/jake/chat/stream";
+      // Use streaming API. v2 UI drives the v2 engine (clean look + fast engine);
+      // the v1 escape hatch (?ui=v1) explicitly drives the v1 engine so look and
+      // engine always stay consistent regardless of the server-side default.
+      const streamUrl = useV2Ui ? "/api/jake/chat/stream?engine=v2" : "/api/jake/chat/stream?engine=v1";
       const response = await fetch(streamUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

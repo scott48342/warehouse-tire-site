@@ -30,20 +30,20 @@ export const runtime = "nodejs";
 export const maxDuration = 180; // Mockup generation can take 30-40s, plus Claude processing
 
 /**
- * Engine flag: default v1 (old Jake). v2 (new lean engine) runs ONLY when
- * explicitly requested via ?engine=v2 query param or JAKE_ENGINE=v2 env.
+ * Engine flag: default v2 (new lean engine) as of 2026-06-17 live cutover.
+ * Escape hatch to old Jake: ?engine=v1 query param or JAKE_ENGINE=v1 env.
  */
 function resolveEngine(req: NextRequest, body: any): "v1" | "v2" {
   try {
     const q = req.nextUrl?.searchParams?.get("engine");
-    if (q === "v2") return "v2";
     if (q === "v1") return "v1";
-    if (typeof body?.engine === "string" && body.engine === "v2") return "v2";
-    if (process.env.JAKE_ENGINE === "v2") return "v2";
+    if (q === "v2") return "v2";
+    if (typeof body?.engine === "string" && body.engine === "v1") return "v1";
+    if (process.env.JAKE_ENGINE === "v1") return "v1";
   } catch {
     /* fall through to default */
   }
-  return "v1";
+  return "v2";
 }
 
 export async function POST(req: NextRequest) {
