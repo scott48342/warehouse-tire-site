@@ -269,7 +269,9 @@ function getCacheKey(req: WheelMockupRequest): string {
   //       satin black rendering as bronze) when a transient vision miss
   //       previously dropped to a generic text-only render. Invalidates the
   //       old finish-blind / non-composited cache entries.
-  return `jake-mockups/v21/${parts}.png`;
+  // v22: default to black-sidewall tires when no tire is selected (was letting
+  //       Flux invent whitewalls on wheel-only SRP mockups).
+  return `jake-mockups/v22/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -478,7 +480,7 @@ function buildPrompt(req: WheelMockupRequest, wheelDescription: string, tireDesc
     tireDesc = `${sizePrefix}${tire.terrain} tires with black sidewalls`;
   } else if (tire?.size) {
     const sizePrefix = `${tire.size} `;
-    tireDesc = body.isTruckOrSuv ? `${sizePrefix}all-terrain tires` : `${sizePrefix}${defaultTireDesc}`;
+    tireDesc = body.isTruckOrSuv ? `${sizePrefix}all-terrain tires with black sidewalls` : `${sizePrefix}${defaultTireDesc}`;
   }
 
   // Build an emphasized tire block when we have a real analyzed description,
@@ -690,7 +692,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       if (lockedPoseMode) {
         const vehDesc = `${req.vehicle.color} ${req.vehicle.year} ${req.vehicle.make} ${req.vehicle.model}`;
         const wheelInstr = `Reproduce the reference wheel faithfully (exact spoke count/shape, finish/color, lip ring, bolts, and center cap). Do not restyle or substitute a different wheel.${wheelDescription ? ` The wheel looks like: ${wheelDescription.trim()}` : ""}`;
-        const tireInstr = `These are ${req.wheel.size}-inch wheels${tireDescription ? ` with ${tireDescription.trim()}` : ""}.`;
+        const tireInstr = `These are ${req.wheel.size}-inch wheels${tireDescription ? ` with ${tireDescription.trim()}` : ""}. Fit standard black-sidewall tires (no whitewalls and no raised white lettering unless explicitly stated).`;
         promptForFlux = buildLockedPosePrompt(vehDesc, wheelInstr, tireInstr);
       } else {
         promptForFlux = buildEditPrompt(req, wheelDescription, tireDescription, false);
