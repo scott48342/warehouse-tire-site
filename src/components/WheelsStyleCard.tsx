@@ -802,8 +802,11 @@ export function WheelsStyleCard({
           )}
         </div>
         
-        {/* Visualize pill (only renders when we have YMM context) - bottom-left overlay */}
-        <div className="absolute bottom-3 left-3 z-10">
+        {/* Visualize pill (only renders when we have YMM context) - bottom-left
+            overlay on the image. Like the other card overlays it lives inside the
+            <Link> and the button stops propagation so it opens the modal rather
+            than navigating to the PDP. */}
+        <div className="absolute bottom-3 left-3 z-20">
           <WheelVisualizeButton
             vehicle={{ year: viewParams?.year, make: viewParams?.make, model: viewParams?.model }}
             wheelSku={selectedSku || baseSku}
