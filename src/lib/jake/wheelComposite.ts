@@ -116,6 +116,71 @@ async function circularMaskWheel(srcBuf: Buffer): Promise<Buffer> {
     .toBuffer();
 }
 
+/**
+ * Build a circular TIRE+WHEEL layer: a black rubber tire disc (outer radius =
+ * the SAM-detected tire bound) with the face-on rim composited on top at a
+ * smaller radius, so a real black sidewall shows around the rim instead of a
+ * bare floating rim (which exposes the barrel and looks unmounted).
+ *
+ * @param maskedWheel  circular-masked, face-on rim (RGBA PNG, any size)
+ * @param diameter     full layer diameter in px (= 2 * tire radius)
+ * @param rimRatio     rim diameter as a fraction of the tire diameter
+ *                     (e.g. 0.74 => ~13% sidewall ring on each side)
+ */
+async function buildTireWheelLayer(maskedWheel: Buffer, diameter: number, rimRatio: number): Promise<Buffer> {
+  const D = Math.max(8, Math.round(diameter));
+  const R = D / 2;
+  const rimD = Math.max(4, Math.round(D * rimRatio));
+  const rimR = rimD / 2;
+  const off = Math.round(R - rimR); // center the rim in the tire disc
+
+  // Tire disc: dark rubber with a radial sidewall sheen so it reads as a
+  // rounded sidewall under soft studio light (not a flat black hole). A faint
+  // off-axis specular highlight (top-left light source) + a darker bottom edge
+  // add roundness. The rim sits at `rimRatio`, so the rubber band runs from
+  // rimRatio*R out to the tire edge.
+  const rimPct = Math.round(rimRatio * 100);
+  const tireSvg = Buffer.from(
+    `<svg width="${D}" height="${D}" xmlns="http://www.w3.org/2000/svg">` +
+      `<defs>` +
+      `<radialGradient id="side" cx="50%" cy="50%" r="50%">` +
+      `<stop offset="0%" stop-color="#161616"/>` +
+      `<stop offset="${rimPct}%" stop-color="#161616"/>` +
+      `<stop offset="${Math.min(98, rimPct + 4)}%" stop-color="#262626"/>` +
+      `<stop offset="${Math.min(99, rimPct + 14)}%" stop-color="#3d3d3d"/>` +
+      `<stop offset="90%" stop-color="#333333"/>` +
+      `<stop offset="97%" stop-color="#1c1c1c"/>` +
+      `<stop offset="100%" stop-color="#0b0b0b"/>` +
+      `</radialGradient>` +
+      // off-axis sheen: brighter toward top-left, fading out
+      `<radialGradient id="sheen" cx="38%" cy="34%" r="60%">` +
+      `<stop offset="0%" stop-color="#6a6a6a" stop-opacity="0.30"/>` +
+      `<stop offset="55%" stop-color="#6a6a6a" stop-opacity="0.06"/>` +
+      `<stop offset="100%" stop-color="#000000" stop-opacity="0"/>` +
+      `</radialGradient>` +
+      `</defs>` +
+      `<circle cx="${R}" cy="${R}" r="${R - 1}" fill="url(#side)"/>` +
+      // sheen clipped to the rubber band only (annulus rimR..R)
+      `<circle cx="${R}" cy="${R}" r="${R - 1}" fill="url(#sheen)"/>` +
+      `</svg>`
+  );
+  const tireDisc = await sharp(Buffer.from(tireSvg)).png().toBuffer();
+
+  // Resize the rim to fit inside the sidewall.
+  const rimResized = await sharp(maskedWheel).resize(rimD, rimD, { fit: "fill" }).png().toBuffer();
+
+  // Composite rim onto tire disc, then clip the whole thing to a clean circle
+  // (kills any 1px SVG aliasing at the rim of the tire).
+  const combined = await sharp(tireDisc)
+    .composite([{ input: rimResized, left: off, top: off }])
+    .png()
+    .toBuffer();
+  const clip = Buffer.from(
+    `<svg width="${D}" height="${D}"><circle cx="${R}" cy="${R}" r="${R - 1}" fill="white"/></svg>`
+  );
+  return sharp(combined).composite([{ input: clip, blend: "dest-in" }]).png().toBuffer();
+}
+
 /** Warp a source image onto a destination quad on a transparent canvas (RGBA). */
 async function warpToQuad(srcBuf: Buffer, dstQuad: Point[], canvasW: number, canvasH: number): Promise<Buffer> {
   const { data, info } = await sharp(srcBuf).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
@@ -581,28 +646,30 @@ export async function compositeFixedWheels(opts: {
     }
   }
 
-  // Circular-mask the wheel once, then place a resized copy at each circle.
+  // Circular-mask the wheel once (face-on rim, white bg removed).
   const maskedWheel = await circularMaskWheel(wheelImageBuf);
 
-  // SAM "wheel" returns roughly the rim+tire bound. Scale the pasted wheel a
-  // touch inside it so a natural tire sidewall shows — more for low-profile
-  // passenger cars, less for trucks (which run shorter sidewalls relative to
-  // the big rim). Prevents the "rubber-band / wheel fills the arch" look.
-  const wheelScale = bodyClass === "sedan" ? 0.86 : bodyClass === "suv" ? 0.92 : 0.95;
+  // SAM "wheel" returns roughly the rim+tire OUTER bound. We treat that radius
+  // as the TIRE outer edge and seat the rim INSIDE a black tire sidewall ring,
+  // so the result looks like a real mounted tire+wheel instead of a bare rim
+  // (the FACE product image has no tire, so without this the barrel/edge shows
+  // and it reads as an unmounted rim). rimRatio = rim diameter / tire diameter:
+  // trucks/SUVs run more visible sidewall on big rims; sedans run low-profile.
+  const rimRatio = bodyClass === "sedan" ? 0.82 : bodyClass === "suv" ? 0.74 : 0.66;
+  // The pasted layer fills the full detected tire bound (slightly inside to
+  // avoid clipping the arch).
+  const tireScale = 0.99;
 
   const layers: sharp.OverlayOptions[] = [];
   for (const c of [front, rear]) {
     if (c.r <= 0) continue;
-    const pr = Math.round(c.r * wheelScale);
-    const d = pr * 2;
+    const tr = Math.round(c.r * tireScale);
+    const d = tr * 2;
     try {
-      const resized = await sharp(maskedWheel)
-        .resize(d, d, { fit: "fill" })
-        .png()
-        .toBuffer();
-      layers.push({ input: resized, left: c.cx - pr, top: c.cy - pr });
+      const layer = await buildTireWheelLayer(maskedWheel, d, rimRatio);
+      layers.push({ input: layer, left: c.cx - tr, top: c.cy - tr });
     } catch (e: any) {
-      console.warn(`[wheelComposite] fixed paste failed: ${e?.message}`);
+      console.warn(`[wheelComposite] tire+wheel paste failed: ${e?.message}`);
     }
   }
   if (layers.length === 0) return null;
