@@ -7,7 +7,8 @@ import { AddToCompareButton } from "@/components/AddToCompareButton";
 import { normalizeWheelForCompare } from "@/context/CompareContext";
 import { useCart } from "@/lib/cart/CartContext";
 import { QuickViewButton, buildWheelQuickViewData } from "@/components/QuickViewButton";
-import { WheelVisualizeButton } from "@/components/WheelVisualizeButton";
+// WheelVisualizeButton import shelved 2026-06-18 (see commented usage below).
+// import { WheelVisualizeButton } from "@/components/WheelVisualizeButton";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { FinancingBadge } from "@/components/FinancingBadge";
 import { 
@@ -802,20 +803,19 @@ export function WheelsStyleCard({
           )}
         </div>
         
-        {/* Visualize pill (only renders when we have YMM context) - bottom-left
-            overlay on the image. Like the other card overlays it lives inside the
-            <Link> and the button stops propagation so it opens the modal rather
-            than navigating to the PDP. */}
-        <div className="absolute bottom-3 left-3 z-20">
-          <WheelVisualizeButton
-            vehicle={{ year: viewParams?.year, make: viewParams?.make, model: viewParams?.model }}
-            wheelSku={selectedSku || baseSku}
-            wheelStyle={[brand, title, selectedFinish].filter(Boolean).join(" ")}
-            wheelSize={selectedPair?.front?.diameter ?? sizeLabel?.diameter}
-            wheelFinish={selectedFinish}
-            wheelImageUrl={selectedImage}
-          />
-        </div>
+        {/* Visualize pill SHELVED 2026-06-18: the mockup engine still misrenders
+            wheel style/finish and adds whitewalls on the SRP preview (e.g. AR907
+            on a Focus rendered a generic 5-spoke + whitewalls), which misleads
+            next to the real product photo. Component kept (WheelVisualizeButton)
+            for later re-enable once the composite is reliable. To restore, render
+            <WheelVisualizeButton .../> here again with the props below:
+              vehicle={{year:viewParams?.year, make:viewParams?.make, model:viewParams?.model}}
+              wheelSku={selectedSku || baseSku}
+              wheelStyle={[brand,title,selectedFinish].filter(Boolean).join(" ")}
+              wheelSize={selectedPair?.front?.diameter ?? sizeLabel?.diameter}
+              wheelFinish={selectedFinish}
+              wheelImageUrl={selectedImage}
+        */}
 
         {/* Action buttons overlay (Favorites + Compare + Quick View) */}
         <div className="absolute top-3 right-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
