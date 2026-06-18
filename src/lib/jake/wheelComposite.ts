@@ -343,6 +343,7 @@ STRICT FIXED COMPOSITION — orthographic side elevation (blueprint-style), must
 - Camera dead level at wheel-hub height, perfectly perpendicular to the vehicle's side.
 - The entire vehicle is centered and fills the frame horizontally with a small even margin on each side. Both wheels fully visible and the SAME size (perfect circles, no foreshortening).
 - Plain flat neutral light-grey seamless background. Even soft studio lighting. No props, people, text, or shadows on the background.
+- Tires have solid matte black rubber sidewalls (plain blackwall). Never whitewalls, never white stripes, never raised white lettering.
 
 ${tireInstr} Sharp focus on the wheels. Photorealistic.`;
 }
