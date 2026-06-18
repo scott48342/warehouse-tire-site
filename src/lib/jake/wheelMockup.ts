@@ -245,9 +245,6 @@ function getCacheKey(req: WheelMockupRequest): string {
     process.env.JAKE_WHEEL_LOCKED_POSE === "0" ? "hero" : "lp",
   ].join("-");
   
-  // v21: TIRE-WRAPPED composite. Seat the face-on rim inside a synthetic black
-  //       tire sidewall ring (rimRatio per body class) so it reads as a real
-  //       mounted tire+wheel instead of a bare floating rim with exposed barrel.
   // v20: FACE-ON wheel composite. Use WheelPros `-FACE-` image variant (true
   //       head-on shot) for the composite paste instead of the default 3/4
   //       angled catalog photo, so the pasted wheel matches the flat broadside
@@ -267,7 +264,7 @@ function getCacheKey(req: WheelMockupRequest): string {
   //       than gpt-image-1, which lost bronze/black/grey finishes).
   // v14: switched to images.edit with the real wheel/tire reference image
   //      (was redrawing from a text description, which mis-colored finishes).
-  return `jake-mockups/v21/${parts}.png`;
+  return `jake-mockups/v20/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
