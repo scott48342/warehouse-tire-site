@@ -22,6 +22,49 @@ function dataUrlToBuffer(dataUrl: string): Buffer {
   return Buffer.from(b64, "base64");
 }
 
+/**
+ * Derive the FACE-ON variant URL of a WheelPros product image.
+ *
+ * Why: catalog wheel photos default to a 3/4 angled shot (filename token
+ * `-A1-`, `-A2-`, ...). When we composite that 3/4 wheel onto the LOCKED-POSE
+ * broadside render (a flat 90-degree side profile where wheels are perfect
+ * circles), the angled rim looks "turned" and odd. WheelPros also publishes a
+ * true head-on `-FACE-` variant (perfect circle, round lug holes), which is
+ * what the broadside composite actually wants.
+ *
+ * The `media.wheelpros.com` host keeps the SAME media id for every angle, so we
+ * can string-swap the angle token to `FACE`. The `assets.wheelpros.com/transform`
+ * host uses a different UUID per angle, but the filename token still carries the
+ * angle, so we attempt the same swap defensively. Returns the candidate URL, or
+ * null when the URL has no swappable angle token / isn't a WheelPros image.
+ */
+function faceWheelImageCandidate(url: string): string | null {
+  if (!url) return null;
+  if (!/wheelpros\.com/i.test(url)) return null;
+  if (!/-A\d+-png/i.test(url)) return null;
+  const swapped = url.replace(/-A\d+-png/i, "-FACE-png");
+  return swapped === url ? null : swapped;
+}
+
+/**
+ * Resolve a face-on wheel image URL: if a `-FACE-` variant exists (HEAD 200),
+ * return it; otherwise return the original. Best-effort, never throws.
+ */
+async function resolveFaceWheelImageUrl(originalUrl: string): Promise<string> {
+  const candidate = faceWheelImageCandidate(originalUrl);
+  if (!candidate) return originalUrl;
+  try {
+    const head = await fetch(candidate, { method: "HEAD" });
+    if (head.ok) {
+      console.log(`[wheelMockup] ✅ Using FACE-on wheel variant for composite`);
+      return candidate;
+    }
+  } catch (e: any) {
+    console.warn(`[wheelMockup] FACE variant HEAD check failed (${e?.message}); using original`);
+  }
+  return originalUrl;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
 // ═══════════════════════════════════════════════════════════════════════════
@@ -202,6 +245,10 @@ function getCacheKey(req: WheelMockupRequest): string {
     process.env.JAKE_WHEEL_LOCKED_POSE === "0" ? "hero" : "lp",
   ].join("-");
   
+  // v20: FACE-ON wheel composite. Use WheelPros `-FACE-` image variant (true
+  //       head-on shot) for the composite paste instead of the default 3/4
+  //       angled catalog photo, so the pasted wheel matches the flat broadside
+  //       render instead of looking "turned".
   // v19: LOCKED-POSE + SAM 3 composite (default). Render a fixed orthographic
   //       broadside, SAM 3 detects the wheels, composite the real wheel pixels
   //       at those positions. Validated 8/10 on trucks AND sedans.
@@ -217,7 +264,7 @@ function getCacheKey(req: WheelMockupRequest): string {
   //       than gpt-image-1, which lost bronze/black/grey finishes).
   // v14: switched to images.edit with the real wheel/tire reference image
   //      (was redrawing from a text description, which mis-colored finishes).
-  return `jake-mockups/v19/${parts}.png`;
+  return `jake-mockups/v20/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -730,7 +777,16 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       try {
         const body = inferBodyStyle(req.vehicle.make, req.vehicle.model);
         const bodyClass = toBodyClass(body.noun, body.isTruckOrSuv, req.lift);
-        const wheelRefBuf = dataUrlToBuffer(base64Image);
+        // Use the FACE-ON wheel variant for the composite paste. The default
+        // catalog image is a 3/4 angled shot, which looks "turned" when pasted
+        // onto the flat broadside render. The -FACE- variant is a true head-on
+        // shot (perfect circle, round lug holes) that matches the side profile.
+        let wheelRefBuf = dataUrlToBuffer(base64Image);
+        const faceUrl = await resolveFaceWheelImageUrl(req.wheel.imageUrl);
+        if (faceUrl !== req.wheel.imageUrl) {
+          const faceB64 = await fetchImageAsBase64(faceUrl);
+          if (faceB64) wheelRefBuf = dataUrlToBuffer(faceB64);
+        }
         const composited = await compositeFixedWheels({ mockupBuf: imageBuffer, wheelImageBuf: wheelRefBuf, bodyClass, refine: "sam" });
         if (composited) {
           imageBuffer = composited;
