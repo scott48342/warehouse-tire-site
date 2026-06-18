@@ -7,6 +7,7 @@ import { AddToCompareButton } from "@/components/AddToCompareButton";
 import { normalizeWheelForCompare } from "@/context/CompareContext";
 import { useCart } from "@/lib/cart/CartContext";
 import { QuickViewButton, buildWheelQuickViewData } from "@/components/QuickViewButton";
+import { WheelVisualizeButton } from "@/components/WheelVisualizeButton";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { FinancingBadge } from "@/components/FinancingBadge";
 import { 
@@ -801,6 +802,17 @@ export function WheelsStyleCard({
           )}
         </div>
         
+        {/* Visualize pill (only renders when we have YMM context) - bottom-left overlay */}
+        <div className="absolute bottom-3 left-3 z-10">
+          <WheelVisualizeButton
+            vehicle={{ year: viewParams?.year, make: viewParams?.make, model: viewParams?.model }}
+            wheelSku={selectedSku || baseSku}
+            wheelStyle={[brand, title, selectedFinish].filter(Boolean).join(" ")}
+            wheelSize={selectedPair?.front?.diameter ?? sizeLabel?.diameter}
+            wheelImageUrl={selectedImage}
+          />
+        </div>
+
         {/* Action buttons overlay (Favorites + Compare + Quick View) */}
         <div className="absolute top-3 right-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
           <QuickViewButton
