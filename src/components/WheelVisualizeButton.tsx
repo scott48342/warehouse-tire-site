@@ -28,6 +28,7 @@ type WheelVisualizeButtonProps = {
   wheelSku: string;
   wheelStyle: string;       // e.g. "Niche Misano Gloss Black" (brand + model + finish)
   wheelSize?: string;       // diameter, e.g. "20"
+  wheelFinish?: string;     // discrete finish, e.g. "Satin Black" (cache + prompt)
   wheelImageUrl?: string;   // optional fallback if SKU resolution misses
   /** Default car color for the render (cosmetic only). */
   defaultColor?: string;
@@ -55,6 +56,7 @@ export function WheelVisualizeButton({
   wheelSku,
   wheelStyle,
   wheelSize,
+  wheelFinish,
   wheelImageUrl,
   defaultColor = "silver",
   className,
@@ -101,7 +103,12 @@ export function WheelVisualizeButton({
             wheelSku,
             wheelStyle,
             wheelSize: wheelSize || "20",
+            wheelFinish: wheelFinish || undefined,
             wheelImageUrl: wheelImageUrl || undefined,
+            // The SRP card already holds the exact, finish-accurate per-SKU
+            // product image. Trust it instead of letting the API re-resolve a
+            // (possibly wrong-finish) image via fuzzy search.
+            trustImageUrl: true,
             style: "stock",
           },
         }),
@@ -130,7 +137,7 @@ export function WheelVisualizeButton({
         message: "Network hiccup generating the preview. Please try again.",
       });
     }
-  }, [hasVehicle, vehicle, defaultColor, wheelSku, wheelStyle, wheelSize, wheelImageUrl]);
+  }, [hasVehicle, vehicle, defaultColor, wheelSku, wheelStyle, wheelSize, wheelFinish, wheelImageUrl]);
 
   const handleOpen = useCallback(
     (e: React.MouseEvent) => {

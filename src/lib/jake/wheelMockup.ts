@@ -264,7 +264,12 @@ function getCacheKey(req: WheelMockupRequest): string {
   //       than gpt-image-1, which lost bronze/black/grey finishes).
   // v14: switched to images.edit with the real wheel/tire reference image
   //      (was redrawing from a text description, which mis-colored finishes).
-  return `jake-mockups/v20/${parts}.png`;
+  // v21: run Flux + real-wheel composite even when GPT-4o vision returns no
+  //       description (image presence is enough). Fixes finish drift (e.g.
+  //       satin black rendering as bronze) when a transient vision miss
+  //       previously dropped to a generic text-only render. Invalidates the
+  //       old finish-blind / non-composited cache entries.
+  return `jake-mockups/v21/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -671,8 +676,16 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // coin-flip). Enabled by default; disable with JAKE_WHEEL_LOCKED_POSE=0,
     // force on with =1.
     const lockedPoseMode = process.env.JAKE_WHEEL_LOCKED_POSE !== "0";
-    if (base64Image && !usedFallbackDescription) {
-      const wheelRefBuf = dataUrlToBuffer(base64Image);
+    // ACCURATE PATH GATE (2026-06-18): run Flux + composite whenever we have the
+    // real wheel image, EVEN IF GPT-4o vision returned no description. The vision
+    // text is only flavor for the prompt; the composite pastes the REAL wheel
+    // pixels and the locked-pose prompt already says "reproduce the reference
+    // wheel faithfully." Previously this was gated on !usedFallbackDescription,
+    // so a transient vision miss dropped us to a text-only render that invented a
+    // generic finish (e.g. satin black -> bronze). Having the image is enough.
+    const realWheelImage: string | null = base64Image;
+    if (realWheelImage) {
+      const wheelRefBuf = dataUrlToBuffer(realWheelImage);
       let promptForFlux: string;
       if (lockedPoseMode) {
         const vehDesc = `${req.vehicle.color} ${req.vehicle.year} ${req.vehicle.make} ${req.vehicle.model}`;
@@ -691,9 +704,9 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     }
 
     const refFiles: Array<Awaited<ReturnType<typeof toFile>>> = [];
-    if (base64Image && !usedFallbackDescription) {
+    if (realWheelImage) {
       try {
-        refFiles.push(await toFile(dataUrlToBuffer(base64Image), "wheel.png", { type: "image/png" }));
+        refFiles.push(await toFile(dataUrlToBuffer(realWheelImage), "wheel.png", { type: "image/png" }));
       } catch (e) {
         console.warn(`[wheelMockup] could not prepare wheel ref file: ${e}`);
       }
@@ -773,7 +786,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // LOCKED-POSE composite (reliable): the render used the fixed broadside
     // pose, so composite the real wheel at calibrated FIXED positions — no
     // SAM 3 detects the actual wheel positions on the locked-pose render.
-    if (lockedPoseMode && base64Image && !usedFallbackDescription && fluxBuffer) {
+    if (lockedPoseMode && realWheelImage && fluxBuffer) {
       try {
         const body = inferBodyStyle(req.vehicle.make, req.vehicle.model);
         const bodyClass = toBodyClass(body.noun, body.isTruckOrSuv, req.lift);
@@ -781,7 +794,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
         // catalog image is a 3/4 angled shot, which looks "turned" when pasted
         // onto the flat broadside render. The -FACE- variant is a true head-on
         // shot (perfect circle, round lug holes) that matches the side profile.
-        let wheelRefBuf = dataUrlToBuffer(base64Image);
+        let wheelRefBuf = dataUrlToBuffer(realWheelImage);
         const faceUrl = await resolveFaceWheelImageUrl(req.wheel.imageUrl);
         if (faceUrl !== req.wheel.imageUrl) {
           const faceB64 = await fetchImageAsBase64(faceUrl);
@@ -798,7 +811,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
       }
     }
 
-    if (!usedComposite && base64Image && !usedFallbackDescription && process.env.JAKE_WHEEL_COMPOSITE === "1") {
+    if (!usedComposite && realWheelImage && process.env.JAKE_WHEEL_COMPOSITE === "1") {
       try {
         const meta = await sharp(imageBuffer).metadata();
         const W = meta.width || 0, H = meta.height || 0;
@@ -806,7 +819,7 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
           console.log(`[wheelMockup] Accuracy pass: detecting wheels (${W}x${H})...`);
           const wheels = await detectWheels(openai, imageBuffer, W, H);
           if (wheels.front || wheels.rear) {
-            const wheelRefBuf = dataUrlToBuffer(base64Image);
+            const wheelRefBuf = dataUrlToBuffer(realWheelImage);
             const composited = await compositeRealWheels({ mockupBuf: imageBuffer, wheelImageBuf: wheelRefBuf, wheels });
             if (composited) {
               imageBuffer = composited;

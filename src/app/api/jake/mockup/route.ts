@@ -53,7 +53,23 @@ export async function POST(req: NextRequest) {
     let resolvedImageUrl: string = build.wheelImageUrl || "";
     let resolvedBrand: string = build.wheelBrand || "";
     let resolvedModel: string = build.wheelModel || "";
-    if (build.wheelSku) {
+
+    // TRUSTED IMAGE PASS-THROUGH (2026-06-18):
+    // Callers like the wheel SRP "Visualize" button already hold the EXACT
+    // per-SKU finish-accurate product image from the catalog feed. Re-resolving
+    // that via the fuzzy /api/search lookup can return a different finish
+    // variant (e.g. bronze instead of satin black) or miss entirely. So when the
+    // caller passes a trusted WheelPros asset URL (or explicitly sets
+    // build.trustImageUrl), use it verbatim and skip search re-resolution.
+    const looksLikeWheelProsAsset = /(?:assets|cdn)\.wheelpros\.com\//i.test(build.wheelImageUrl || "");
+    const trustProvidedImage = Boolean(build.trustImageUrl) || looksLikeWheelProsAsset;
+
+    if (build.wheelSku && trustProvidedImage && resolvedImageUrl) {
+      console.log(`[Jake Mockup] ✅ Trusting provided per-SKU image for ${build.wheelSku} (skipping search re-resolution)`);
+      // Still fill brand/model from build fields below; keep the exact image.
+      resolvedBrand = build.wheelBrand || resolvedBrand;
+      resolvedModel = build.wheelModel || resolvedModel;
+    } else if (build.wheelSku) {
       try {
         const origin = new URL(req.url).origin;
         const lookupRes = await fetch(`${origin}/api/search?q=${encodeURIComponent(build.wheelSku)}`, { cache: "no-store" });

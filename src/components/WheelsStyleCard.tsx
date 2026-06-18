@@ -812,6 +812,7 @@ export function WheelsStyleCard({
             wheelSku={selectedSku || baseSku}
             wheelStyle={[brand, title, selectedFinish].filter(Boolean).join(" ")}
             wheelSize={selectedPair?.front?.diameter ?? sizeLabel?.diameter}
+            wheelFinish={selectedFinish}
             wheelImageUrl={selectedImage}
           />
         </div>
