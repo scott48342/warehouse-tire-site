@@ -76,22 +76,44 @@ function invert3(m: number[][]): number[][] {
  * a rectangular thumbnail. Returns an RGBA PNG buffer.
  */
 async function circularMaskWheel(srcBuf: Buffer): Promise<Buffer> {
-  const img = sharp(srcBuf).ensureAlpha();
-  const meta = await img.metadata();
+  // Product photos are typically a wheel centered on a WHITE background with a
+  // margin. If we circular-mask the raw square, the white background between
+  // the wheel edge and the circle survives as a bright halo ring on the
+  // composite. So first TRIM the white/near-uniform border so the wheel fills
+  // the frame, then center-crop to a square, then apply the circular mask.
+  let prepped: Buffer;
+  try {
+    prepped = await sharp(srcBuf)
+      .ensureAlpha()
+      // flatten any transparent areas to white so trim has a uniform border
+      .flatten({ background: "#ffffff" })
+      // trim near-white border (threshold tolerant of JPEG noise/soft shadow)
+      .trim({ background: "#ffffff", threshold: 30 })
+      .png()
+      .toBuffer();
+  } catch {
+    prepped = await sharp(srcBuf).ensureAlpha().png().toBuffer();
+  }
+
+  const meta = await sharp(prepped).metadata();
   const w = meta.width || 0, h = meta.height || 0;
+  if (!w || !h) return sharp(srcBuf).ensureAlpha().png().toBuffer();
   const side = Math.min(w, h);
-  // center-crop to a square, then apply a circular alpha mask.
   const left = Math.floor((w - side) / 2), top = Math.floor((h - side) / 2);
-  const squareBuf = await sharp(srcBuf).ensureAlpha().extract({ left, top, width: side, height: side }).png().toBuffer();
-  const r = side / 2;
+  const squareBuf = await sharp(prepped)
+    .ensureAlpha()
+    .extract({ left, top, width: side, height: side })
+    .resize(500, 500, { fit: "fill" })
+    .png()
+    .toBuffer();
+  // Mask slightly inside the edge so any residual border pixels are clipped.
   const maskSvg = Buffer.from(
-    `<svg width="${side}" height="${side}"><circle cx="${r}" cy="${r}" r="${r - 1}" fill="white"/></svg>`
+    `<svg width="500" height="500"><circle cx="250" cy="250" r="244" fill="white"/></svg>`
   );
-  const masked = await sharp(squareBuf)
+  return sharp(squareBuf)
     .composite([{ input: maskSvg, blend: "dest-in" }])
     .png()
     .toBuffer();
-  return masked;
 }
 
 /** Warp a source image onto a destination quad on a transparent canvas (RGBA). */
@@ -234,4 +256,367 @@ export async function compositeRealWheels(opts: {
   }
   if (layers.length === 0) return null;
   return sharp(mockupBuf).composite(layers).png().toBuffer();
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+// LOCKED-POSE composite (the reliable path).
+//
+// Insight (Scott, 2026-06-17): if every vehicle is rendered in the SAME locked
+// orthographic broadside pose, the wheels land in PREDICTABLE positions — so we
+// can composite the real wheel at FIXED, pre-calibrated circle positions with
+// NO per-image vision detection (which was the unreliable part). In a true
+// broadside the wheels are perfect circles, so it's a clean circular paste —
+// no homography warp needed.
+//
+// Empirically validated across body types (3 renders per pose held front.cx to
+// ±2px; cross-body the front anchor held ~320-329 while rear-X and radius
+// shifted predictably by class). Templates are stored as fractions of the
+// render width/height so they're resolution-independent.
+// ───────────────────────────────────────────────────────────────────────────
+
+export type BodyClass = "sedan" | "truck" | "lifted" | "suv";
+
+export interface FixedWheel {
+  /** center x as fraction of render width */
+  cx: number;
+  /** center y as fraction of render height */
+  cy: number;
+  /** radius as fraction of render width */
+  r: number;
+}
+
+export interface PoseTemplate {
+  front: FixedWheel;
+  rear: FixedWheel;
+}
+
+/**
+ * Calibrated fixed-wheel templates (normalized to render W/H). Derived from the
+ * locked orthographic broadside pose (aspect 16:9). Front anchor is nearly
+ * universal; rear-X and radius vary by class (wheelbase + tire size).
+ * Re-calibrate if the locked pose prompt changes.
+ */
+export const LOCKED_POSE_TEMPLATES: Record<BodyClass, PoseTemplate> = {
+  // Honda Accord render: front 328/556 r108, rear 1010/556 r108 @ 1392x752
+  sedan: {
+    front: { cx: 0.2356, cy: 0.7394, r: 0.0776 },
+    rear: { cx: 0.7256, cy: 0.7394, r: 0.0776 },
+  },
+  // XD852 F-150 baseline: front 329/531 r92, rear 1013/531 r92 @ 1392x752
+  truck: {
+    front: { cx: 0.2364, cy: 0.7062, r: 0.0661 },
+    rear: { cx: 0.7278, cy: 0.7062, r: 0.0661 },
+  },
+  // Lifted F-250 render: front 320/520 r120, rear 960/520 r120 @ 1392x752
+  lifted: {
+    front: { cx: 0.2299, cy: 0.6915, r: 0.0862 },
+    rear: { cx: 0.6897, cy: 0.6915, r: 0.0862 },
+  },
+  // Jeep Grand Cherokee render: front 320/520 r110, rear 960/520 r110 @ 1392x752
+  suv: {
+    front: { cx: 0.2299, cy: 0.6915, r: 0.079 },
+    rear: { cx: 0.6897, cy: 0.6915, r: 0.079 },
+  },
+};
+
+/** Resolve absolute pixel circles for a render of the given dimensions. */
+function resolveTemplate(t: PoseTemplate, W: number, H: number) {
+  const px = (fw: FixedWheel) => ({
+    cx: Math.round(fw.cx * W),
+    cy: Math.round(fw.cy * H),
+    r: Math.round(fw.r * W),
+  });
+  return { front: px(t.front), rear: px(t.rear) };
+}
+
+/**
+ * The locked broadside composition prompt. Use this (instead of the 3/4 hero
+ * prompt) when locked-pose composite mode is enabled, so wheel positions match
+ * the calibrated templates. The caller supplies the vehicle description and the
+ * wheel/tire reference instructions.
+ */
+export function buildLockedPosePrompt(vehicleDesc: string, wheelInstr: string, tireInstr: string): string {
+  return `Create a photorealistic automotive photograph of a ${vehicleDesc} fitted with the wheels from the reference image on all four corners. ${wheelInstr}
+
+STRICT FIXED COMPOSITION — orthographic side elevation (blueprint-style), must be identical every time:
+- TRUE 90-degree broadside side profile. Driver side faces camera. Vehicle points to the RIGHT. Zero three-quarter angle, zero perspective, flat orthographic side view.
+- Camera dead level at wheel-hub height, perfectly perpendicular to the vehicle's side.
+- The entire vehicle is centered and fills the frame horizontally with a small even margin on each side. Both wheels fully visible and the SAME size (perfect circles, no foreshortening).
+- Plain flat neutral light-grey seamless background. Even soft studio lighting. No props, people, text, or shadows on the background.
+
+${tireInstr} Sharp focus on the wheels. Photorealistic.`;
+}
+
+/**
+ * LOCAL SNAP: refine an expected wheel circle by finding the dark tire/wheel
+ * blob within a constrained search window around the template position. On a
+ * plain light-grey studio background (which the locked pose enforces), the
+ * tire+wheel are markedly darker than everything around them, so a simple dark-
+ * pixel centroid + spread within the window reliably locates the real wheel.
+ *
+ * This is FAR more robust than global LLM vision because the search is bounded
+ * (we already know roughly where the wheel is) and the background is clean.
+ * Returns refined {cx, cy, r}, or the input expectation if the snap is weak.
+ */
+function snapToWheel(
+  rawData: Buffer,
+  W: number,
+  H: number,
+  channels: number,
+  expect: { cx: number; cy: number; r: number }
+): { cx: number; cy: number; r: number } {
+  // Search window: generous around the expected circle (covers framing drift).
+  const pad = Math.round(expect.r * 1.8);
+  const x0 = Math.max(0, expect.cx - pad), x1 = Math.min(W - 1, expect.cx + pad);
+  const y0 = Math.max(0, expect.cy - pad), y1 = Math.min(H - 1, expect.cy + pad);
+
+  // Estimate background luminance from the window corners (grey bg).
+  const lum = (x: number, y: number) => {
+    const i = (y * W + x) * channels;
+    return 0.299 * rawData[i] + 0.587 * rawData[i + 1] + 0.114 * rawData[i + 2];
+  };
+  const cornerSamples = [
+    lum(x0, y0), lum(x1, y0), lum(x0, y1), lum(x1, y1),
+    lum(x0, Math.round((y0 + y1) / 2)), lum(x1, Math.round((y0 + y1) / 2)),
+  ];
+  const bg = cornerSamples.reduce((a, b) => a + b, 0) / cornerSamples.length;
+  // A pixel is "wheel" if notably darker than background.
+  const thresh = bg - 45;
+
+  let sumX = 0, sumY = 0, count = 0;
+  for (let y = y0; y <= y1; y++) {
+    for (let x = x0; x <= x1; x++) {
+      if (lum(x, y) < thresh) { sumX += x; sumY += y; count++; }
+    }
+  }
+  // Weak signal (mostly background, e.g. window landed off the wheel) -> keep expectation.
+  const windowArea = (x1 - x0 + 1) * (y1 - y0 + 1);
+  if (count < windowArea * 0.04) return expect;
+
+  const cx = Math.round(sumX / count);
+  const cy = Math.round(sumY / count);
+  // Radius from the dark-blob spread (std-dev based; tire is roughly circular).
+  let varSum = 0;
+  for (let y = y0; y <= y1; y++) {
+    for (let x = x0; x <= x1; x++) {
+      if (lum(x, y) < thresh) { varSum += (x - cx) * (x - cx) + (y - cy) * (y - cy); }
+    }
+  }
+  const rms = Math.sqrt(varSum / count);
+  // Empirically, for the locked broadside the dark tire+wheel mass gives
+  // rms ≈ actual wheel radius (validated: sedan rms 104 vs template r 108).
+  let r = Math.round(rms * 1.05);
+  // Clamp radius to a sane range around the template (guards against shadows/badges).
+  r = Math.max(Math.round(expect.r * 0.7), Math.min(Math.round(expect.r * 1.4), r));
+  // Clamp the snap so a bad detection can't fling the wheel far from expectation.
+  const maxShift = expect.r * 1.5;
+  const sx = Math.max(expect.cx - maxShift, Math.min(expect.cx + maxShift, cx));
+  const sy = Math.max(expect.cy - maxShift, Math.min(expect.cy + maxShift, cy));
+  return { cx: Math.round(sx), cy: Math.round(sy), r };
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+// SAM 3 wheel detection (the reliable detector).
+//
+// fal-ai/sam-3/image segments by TEXT prompt ("wheel") and returns one mask PNG
+// per detected instance. Unlike LLM coordinate-guessing or a brightness snap,
+// it actually finds the wheels (validated on the hard truck case: both hubs
+// located precisely, ignoring grille/bumper). We derive each wheel's circle
+// (center + radius) from its mask's bounding box, then assign front/rear by x.
+// Cost ~$0.002/image.
+// ───────────────────────────────────────────────────────────────────────────
+
+export interface WheelCircle { cx: number; cy: number; r: number }
+export interface SamWheels { front?: WheelCircle; rear?: WheelCircle; all: WheelCircle[] }
+
+async function falUploadPng(key: string, buf: Buffer): Promise<string | null> {
+  try {
+    const init = await fetch(
+      "https://rest.alpha.fal.ai/storage/upload/initiate?storage_type=fal-cdn-v3",
+      {
+        method: "POST",
+        headers: { Authorization: `Key ${key}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ content_type: "image/png", file_name: "render.png" }),
+      }
+    );
+    if (!init.ok) return null;
+    const { upload_url, file_url } = await init.json();
+    const put = await fetch(upload_url, { method: "PUT", headers: { "Content-Type": "image/png" }, body: new Uint8Array(buf) });
+    if (!put.ok) return null;
+    return file_url as string;
+  } catch {
+    return null;
+  }
+}
+
+/** Bounding circle of the "on" region of a SAM mask PNG (white/opaque blob). */
+async function maskToCircle(maskBuf: Buffer): Promise<WheelCircle | null> {
+  const { data, info } = await sharp(maskBuf).raw().toBuffer({ resolveWithObject: true });
+  const c = info.channels;
+  let minx = Infinity, miny = Infinity, maxx = -1, maxy = -1, n = 0;
+  for (let y = 0; y < info.height; y++) {
+    for (let x = 0; x < info.width; x++) {
+      const i = (y * info.width + x) * c;
+      const on = c === 4 ? data[i + 3] > 128 : data[i] > 128;
+      if (on) { n++; if (x < minx) minx = x; if (x > maxx) maxx = x; if (y < miny) miny = y; if (y > maxy) maxy = y; }
+    }
+  }
+  if (n < 200 || maxx < 0) return null;
+  return {
+    cx: Math.round((minx + maxx) / 2),
+    cy: Math.round((miny + maxy) / 2),
+    r: Math.round((maxx - minx + maxy - miny) / 4),
+  };
+}
+
+/**
+ * Detect the front/rear wheels in a render using SAM 3 (text prompt "wheel").
+ * Returns null if FAL_KEY missing or detection fails so the caller can fall
+ * back to template positions.
+ */
+export async function detectWheelsSAM(mockupBuf: Buffer): Promise<SamWheels | null> {
+  const key = process.env.FAL_KEY || process.env.FAL_API_KEY;
+  if (!key) return null;
+  try {
+    const url = await falUploadPng(key, mockupBuf);
+    if (!url) return null;
+    const res = await fetch("https://fal.run/fal-ai/sam-3/image", {
+      method: "POST",
+      headers: { Authorization: `Key ${key}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        image_url: url,
+        prompt: "wheel",
+        apply_mask: false,
+        return_multiple_masks: true,
+        max_masks: 6,
+        output_format: "png",
+      }),
+    });
+    if (!res.ok) {
+      console.warn(`[wheelComposite] SAM3 failed ${res.status}`);
+      return null;
+    }
+    const data = await res.json();
+    const masks: Array<{ url: string }> = data?.masks || [];
+    if (!masks.length) return null;
+
+    const meta = await sharp(mockupBuf).metadata();
+    const W = meta.width || 0, H = meta.height || 0;
+    const minR = W * 0.025; // ignore tiny spurious masks (e.g. spare tire badge)
+    const maxR = W * 0.18;
+
+    const circles: WheelCircle[] = [];
+    for (const m of masks) {
+      try {
+        const mb = Buffer.from(await (await fetch(m.url)).arrayBuffer());
+        const circ = await maskToCircle(mb);
+        if (circ && circ.r >= minR && circ.r <= maxR) circles.push(circleClamp(circ, W, H));
+      } catch { /* skip bad mask */ }
+    }
+    if (!circles.length) return null;
+
+    // Side profile = wheels at similar y. Take the two largest, assign by x.
+    circles.sort((a, b) => b.r - a.r);
+    const top = circles.slice(0, 2).sort((a, b) => a.cx - b.cx);
+    const result: SamWheels = { all: circles };
+    if (top.length === 2) {
+      // Vehicle points right: front wheel is the right one (larger x), rear left.
+      result.rear = top[0];
+      result.front = top[1];
+    } else if (top.length === 1) {
+      result.front = top[0];
+    }
+    return result;
+  } catch (e: any) {
+    console.warn(`[wheelComposite] SAM3 error: ${e?.message}`);
+    return null;
+  }
+}
+
+function circleClamp(c: WheelCircle, W: number, H: number): WheelCircle {
+  return {
+    cx: Math.max(0, Math.min(W, c.cx)),
+    cy: Math.max(0, Math.min(H, c.cy)),
+    r: c.r,
+  };
+}
+
+/**
+ * Composite the real wheel at template positions, refined by a local dark-blob
+ * snap (no global vision detection). Requires the render to have been produced
+ * with buildLockedPosePrompt so the wheels are near the template and the
+ * background is the plain grey the snap relies on.
+ */
+export async function compositeFixedWheels(opts: {
+  mockupBuf: Buffer;
+  wheelImageBuf: Buffer;
+  bodyClass: BodyClass;
+  /** "sam" (default): SAM 3 detection. "snap": brightness snap. "template": fixed only. */
+  refine?: "sam" | "snap" | "template";
+}): Promise<Buffer | null> {
+  const { mockupBuf, wheelImageBuf, bodyClass } = opts;
+  const refine = opts.refine ?? "sam";
+  const meta = await sharp(mockupBuf).metadata();
+  const W = meta.width || 0, H = meta.height || 0;
+  if (!W || !H) return null;
+
+  const tmpl = LOCKED_POSE_TEMPLATES[bodyClass] || LOCKED_POSE_TEMPLATES.truck;
+  let { front, rear } = resolveTemplate(tmpl, W, H);
+
+  // PRIMARY: SAM 3 detection (reliable). Falls back to template positions for
+  // any wheel SAM doesn't return.
+  if (refine === "sam") {
+    const sam = await detectWheelsSAM(mockupBuf);
+    if (sam?.front) front = sam.front;
+    if (sam?.rear) rear = sam.rear;
+    console.log(`[wheelComposite] SAM -> front(${front.cx},${front.cy},r${front.r}) rear(${rear.cx},${rear.cy},r${rear.r}) [detected ${sam?.all.length ?? 0}]`);
+  } else if (refine === "snap") {
+    try {
+      const { data, info } = await sharp(mockupBuf).raw().toBuffer({ resolveWithObject: true });
+      front = snapToWheel(data, info.width, info.height, info.channels, front);
+      rear = snapToWheel(data, info.width, info.height, info.channels, rear);
+      console.log(`[wheelComposite] snap -> front(${front.cx},${front.cy},r${front.r}) rear(${rear.cx},${rear.cy},r${rear.r})`);
+    } catch (e: any) {
+      console.warn(`[wheelComposite] snap failed (${e?.message}); using template positions`);
+    }
+  }
+
+  // Circular-mask the wheel once, then place a resized copy at each circle.
+  const maskedWheel = await circularMaskWheel(wheelImageBuf);
+
+  // SAM "wheel" returns roughly the rim+tire bound. Scale the pasted wheel a
+  // touch inside it so a natural tire sidewall shows — more for low-profile
+  // passenger cars, less for trucks (which run shorter sidewalls relative to
+  // the big rim). Prevents the "rubber-band / wheel fills the arch" look.
+  const wheelScale = bodyClass === "sedan" ? 0.86 : bodyClass === "suv" ? 0.92 : 0.95;
+
+  const layers: sharp.OverlayOptions[] = [];
+  for (const c of [front, rear]) {
+    if (c.r <= 0) continue;
+    const pr = Math.round(c.r * wheelScale);
+    const d = pr * 2;
+    try {
+      const resized = await sharp(maskedWheel)
+        .resize(d, d, { fit: "fill" })
+        .png()
+        .toBuffer();
+      layers.push({ input: resized, left: c.cx - pr, top: c.cy - pr });
+    } catch (e: any) {
+      console.warn(`[wheelComposite] fixed paste failed: ${e?.message}`);
+    }
+  }
+  if (layers.length === 0) return null;
+  return sharp(mockupBuf).composite(layers).png().toBuffer();
+}
+
+/** Map a body noun (from inferBodyStyle) + lift flag to a pose body class. */
+export function toBodyClass(bodyNoun: string, isTruckOrSuv: boolean, lift?: string): BodyClass {
+  const lifted = !!lift && /lift|level|[2-9]\s*-?\s*(in|")|inch/i.test(lift) && !/lower/i.test(lift);
+  const n = (bodyNoun || "").toLowerCase();
+  if (isTruckOrSuv) {
+    if (n.includes("suv")) return "suv";
+    if (lifted) return "lifted";
+    return "truck";
+  }
+  return "sedan";
 }

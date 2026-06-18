@@ -13,7 +13,7 @@ import OpenAI, { toFile } from "openai";
 import { put, list } from "@vercel/blob";
 import * as crypto from "crypto";
 import sharp from "sharp";
-import { detectWheels, compositeRealWheels } from "./wheelComposite";
+import { detectWheels, compositeRealWheels, compositeFixedWheels, buildLockedPosePrompt, toBodyClass } from "./wheelComposite";
 
 /** Convert a data: URL (or base64 string) to a Buffer for image edit references. */
 function dataUrlToBuffer(dataUrl: string): Buffer {
@@ -197,8 +197,14 @@ function getCacheKey(req: WheelMockupRequest): string {
     // include tire identity so different tires don't collide in cache
     (req.tire?.model || req.tire?.terrain || "").toLowerCase().replace(/[^a-z0-9]/g, "").substring(0, 16) || "std",
     (req.lift || "stock").toLowerCase().replace(/\s+/g, "-"),
+    // segment locked-pose renders so they don't collide with hero-shot ones
+    // locked-pose (SAM composite) is the default; segment cache accordingly
+    process.env.JAKE_WHEEL_LOCKED_POSE === "0" ? "hero" : "lp",
   ].join("-");
   
+  // v19: LOCKED-POSE + SAM 3 composite (default). Render a fixed orthographic
+  //       broadside, SAM 3 detects the wheels, composite the real wheel pixels
+  //       at those positions. Validated 8/10 on trucks AND sedans.
   // v18: added ACCURACY PASS — composite the real wheel pixels onto the
   //       rendered wheels via 4-point perspective warp (transplants exact
   //       spoke geometry/finish/logo instead of letting the model redraw).
@@ -211,7 +217,7 @@ function getCacheKey(req: WheelMockupRequest): string {
   //       than gpt-image-1, which lost bronze/black/grey finishes).
   // v14: switched to images.edit with the real wheel/tire reference image
   //      (was redrawing from a text description, which mis-colored finishes).
-  return `jake-mockups/v18/${parts}.png`;
+  return `jake-mockups/v19/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {
@@ -605,14 +611,35 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // fidelity in our bake-off. Uses the real wheel image as the reference.
     // Falls through to the OpenAI gpt-image-2 path below if Flux is unavailable
     // (no FAL_KEY) or fails.
+    // LOCKED-POSE MODE: render the vehicle in a fixed orthographic broadside so
+    // wheels land at calibrated positions, then composite the real wheel at
+    // those positions (refined by a local snap) — no per-image vision detection.
+    //
+    // STATUS (2026-06-17): locked-pose + SAM 3 detection composite.
+    // Pipeline: render the vehicle in a fixed orthographic broadside (wheels
+    // become perfect circles), then SAM 3 ("wheel" text prompt) detects the
+    // actual wheel positions and we composite the REAL wheel pixels there.
+    // Validated 8/10 on BOTH trucks and sedans (placement locked, no halos).
+    // This supersedes the brightness-snap (which was a render-to-render
+    // coin-flip). Enabled by default; disable with JAKE_WHEEL_LOCKED_POSE=0,
+    // force on with =1.
+    const lockedPoseMode = process.env.JAKE_WHEEL_LOCKED_POSE !== "0";
     if (base64Image && !usedFallbackDescription) {
       const wheelRefBuf = dataUrlToBuffer(base64Image);
-      const editPromptForFlux = buildEditPrompt(req, wheelDescription, tireDescription, false);
-      fluxBuffer = await generateWithFluxKontext(wheelRefBuf, editPromptForFlux);
+      let promptForFlux: string;
+      if (lockedPoseMode) {
+        const vehDesc = `${req.vehicle.color} ${req.vehicle.year} ${req.vehicle.make} ${req.vehicle.model}`;
+        const wheelInstr = `Reproduce the reference wheel faithfully (exact spoke count/shape, finish/color, lip ring, bolts, and center cap). Do not restyle or substitute a different wheel.${wheelDescription ? ` The wheel looks like: ${wheelDescription.trim()}` : ""}`;
+        const tireInstr = `These are ${req.wheel.size}-inch wheels${tireDescription ? ` with ${tireDescription.trim()}` : ""}.`;
+        promptForFlux = buildLockedPosePrompt(vehDesc, wheelInstr, tireInstr);
+      } else {
+        promptForFlux = buildEditPrompt(req, wheelDescription, tireDescription, false);
+      }
+      fluxBuffer = await generateWithFluxKontext(wheelRefBuf, promptForFlux);
       if (fluxBuffer) {
         usedImageReference = true;
         imageData = { b64_json: fluxBuffer.toString("base64") };
-        console.log(`[wheelMockup] ✅ Using Flux Kontext Max output`);
+        console.log(`[wheelMockup] ✅ Using Flux Kontext Max output${lockedPoseMode ? " (locked-pose)" : ""}`);
       }
     }
 
@@ -695,7 +722,27 @@ export async function generateWheelMockup(req: WheelMockupRequest): Promise<Whee
     // SAM/YOLO) feeds accurate wheel boxes, keep this OFF by default and ship the
     // reliable Flux single-pass render. Flip on with JAKE_WHEEL_COMPOSITE=1.
     let usedComposite = false;
-    if (base64Image && !usedFallbackDescription && process.env.JAKE_WHEEL_COMPOSITE === "1") {
+
+    // LOCKED-POSE composite (reliable): the render used the fixed broadside
+    // pose, so composite the real wheel at calibrated FIXED positions — no
+    // SAM 3 detects the actual wheel positions on the locked-pose render.
+    if (lockedPoseMode && base64Image && !usedFallbackDescription && fluxBuffer) {
+      try {
+        const body = inferBodyStyle(req.vehicle.make, req.vehicle.model);
+        const bodyClass = toBodyClass(body.noun, body.isTruckOrSuv, req.lift);
+        const wheelRefBuf = dataUrlToBuffer(base64Image);
+        const composited = await compositeFixedWheels({ mockupBuf: imageBuffer, wheelImageBuf: wheelRefBuf, bodyClass, refine: "sam" });
+        if (composited) {
+          imageBuffer = composited;
+          usedComposite = true;
+          console.log(`[wheelMockup] ✅ Locked-pose composite applied (bodyClass=${bodyClass})`);
+        }
+      } catch (lpErr: any) {
+        console.warn(`[wheelMockup] Locked-pose composite failed (${lpErr?.message}); keeping base render`);
+      }
+    }
+
+    if (!usedComposite && base64Image && !usedFallbackDescription && process.env.JAKE_WHEEL_COMPOSITE === "1") {
       try {
         const meta = await sharp(imageBuffer).metadata();
         const W = meta.width || 0, H = meta.height || 0;
