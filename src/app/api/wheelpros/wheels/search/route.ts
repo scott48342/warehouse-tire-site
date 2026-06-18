@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
-import { calculateWheelSellPrice } from "@/lib/pricing";
+import { calculateWheelSellPrice, resolveWheelMsrp } from "@/lib/pricing";
 import { getInventoryForSku } from "@/lib/inventoryCache";
 
 export const runtime = "nodejs";
@@ -174,10 +174,23 @@ export async function GET(req: Request) {
           ? Number(it.prices.map[0].currencyAmount)
           : null;
         
-        // Use API pricing when available, fall back to techfeed
+        // Use API pricing when available, fall back to techfeed.
+        const mapValue = apiMap ?? (tf.map_price ? Number(tf.map_price) : null);
+        const rawMsrp = apiMsrp ?? (tf.msrp ? Number(tf.msrp) : null);
+        // DATA QUALITY GUARD (2026-06-18): correct corrupt MSRPs (dealer cost
+        // mislabeled as MSRP) before markup. Identity from techfeed/API item.
+        const correctedMsrp = !mapValue
+          ? resolveWheelMsrp({
+              sku: sku,
+              brandCd: tf.brand_cd ?? tf.brand_desc ?? it?.brand?.code,
+              diameter: tf.diameter ?? it?.properties?.diameter,
+              msrp: rawMsrp,
+            })
+          : rawMsrp;
         const sellPrice = calculateWheelSellPrice({
-          map: apiMap ?? (tf.map_price ? Number(tf.map_price) : null),
-          msrp: apiMsrp ?? (tf.msrp ? Number(tf.msrp) : null),
+          sku,
+          map: mapValue,
+          msrp: correctedMsrp,
         });
         if (sellPrice !== null) {
           it.prices = it.prices || {};

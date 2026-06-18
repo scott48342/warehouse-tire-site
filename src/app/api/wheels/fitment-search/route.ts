@@ -93,7 +93,7 @@ import { matchesBrandFilter } from "@/lib/brandCodes";
 
 import { logUnresolvedFitment } from "@/lib/fitment-db/unresolvedFitmentTracker";
 
-import { calculateWheelSellPrice } from "@/lib/pricing";
+import { calculateWheelSellPrice, resolveWheelMsrp } from "@/lib/pricing";
 
 // 2026-05-04: CANONICAL IDENTITY - Use same resolver as tire-sizes API
 // This ensures grouped trim fallbacks are blocked consistently across all endpoints
@@ -139,6 +139,12 @@ export const maxDuration = 60;
 interface TechfeedPricingInput {
   map_price?: string | number | null;
   msrp?: string | number | null;
+  // identity fields (present on the real techfeed/candidate objects) used by
+  // the data-quality guard to detect corrupt MSRPs
+  sku?: string | null;
+  brand_cd?: string | null;
+  brand_desc?: string | null;
+  diameter?: string | number | null;
 }
 
 interface InventoryPricingInput {
@@ -153,9 +159,16 @@ interface InventoryPricingInput {
  * The inventory SFTP feed has reliable MSRP data for all products.
  * The old "MAP required" rule filtered out budget brands like Petrol.
  */
+interface WheelPriceIdentity {
+  sku?: string | null;
+  brandCd?: string | null;
+  diameter?: number | string | null;
+}
+
 function getSafeWheelPrice(
   techfeed: TechfeedPricingInput,
-  inventory?: InventoryPricingInput | null
+  inventory?: InventoryPricingInput | null,
+  identity?: WheelPriceIdentity | null
 ): number {
   // Prefer inventory cache (SFTP feed, 2hr sync) over techfeed (stale CSV)
   const mapValue = inventory?.mapPrice ?? (Number(techfeed.map_price) || null);
@@ -177,8 +190,26 @@ function getSafeWheelPrice(
     // Fallback: techfeed-only MSRP, trust if reasonable (> $100)
     trustedMsrp = msrpValue;
   }
-  
-  return calculateWheelSellPrice({ map: mapValue, msrp: trustedMsrp });
+
+  // DATA QUALITY GUARD (2026-06-18): correct corrupt feed MSRPs (dealer cost
+  // mislabeled as MSRP) via manual override + sibling-outlier guard before the
+  // markup math, so we never sell a wheel at ~cost. No-op for normal wheels.
+  // Identity comes from the explicit arg or, failing that, the techfeed object
+  // itself (the candidate objects carry sku/brand_cd/diameter).
+  const idSku = identity?.sku ?? techfeed.sku ?? null;
+  const idBrand = identity?.brandCd ?? techfeed.brand_cd ?? techfeed.brand_desc ?? null;
+  const idDia = identity?.diameter ?? techfeed.diameter ?? null;
+  if (!mapValue && trustedMsrp) {
+    const corrected = resolveWheelMsrp({
+      sku: idSku,
+      brandCd: idBrand,
+      diameter: idDia,
+      msrp: trustedMsrp,
+    });
+    if (corrected !== null) trustedMsrp = corrected;
+  }
+
+  return calculateWheelSellPrice({ sku: idSku ?? undefined, map: mapValue, msrp: trustedMsrp });
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════

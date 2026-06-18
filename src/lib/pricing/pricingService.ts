@@ -201,6 +201,65 @@ export function calculateWheelSellPrice(opts: {
 }
 
 /**
+ * Resolve the corrected MSRP for a wheel before pricing math, applying:
+ *   1. manual SKU override (wheelPriceOverrides) — exact, hand-verified
+ *   2. sibling-outlier guard (wheelPriceSanity) — automatic, brand+diameter
+ * Returns the corrected MSRP (or the input msrp unchanged). Synchronous; the
+ * sibling guard is a no-op until its in-memory index is warm.
+ *
+ * This is the single place all wheel surfaces should run their MSRP through so
+ * corrupt feed values (dealer cost mislabeled as MSRP) don't reach the sell
+ * price. Importing the helpers lazily avoids a circular dependency at module load.
+ */
+export function resolveWheelMsrp(opts: {
+  sku?: string | null;
+  brandCd?: string | null;
+  diameter?: number | string | null;
+  msrp: number | null;
+}): number | null {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { getWheelMsrpOverride } = require("./wheelPriceOverrides") as typeof import("./wheelPriceOverrides");
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { sanitizeWheelMsrpSync } = require("./wheelPriceSanity") as typeof import("./wheelPriceSanity");
+
+  const override = getWheelMsrpOverride(opts.sku);
+  if (override !== null) return override;
+
+  const sane = sanitizeWheelMsrpSync({
+    sku: opts.sku,
+    brandCd: opts.brandCd,
+    diameter: opts.diameter,
+    msrp: opts.msrp,
+  });
+  return sane.msrp;
+}
+
+/**
+ * Convenience: resolve corrected MSRP then compute the wheel sell price.
+ */
+export function calculateWheelSellPriceSafe(opts: {
+  sku?: string | null;
+  brandCd?: string | null;
+  diameter?: number | string | null;
+  cost?: number | null;
+  map?: number | null;
+  msrp?: number | null;
+}): number {
+  const correctedMsrp = resolveWheelMsrp({
+    sku: opts.sku,
+    brandCd: opts.brandCd,
+    diameter: opts.diameter,
+    msrp: opts.msrp ?? null,
+  });
+  return calculateWheelSellPrice({
+    sku: opts.sku ?? undefined,
+    cost: opts.cost,
+    map: opts.map,
+    msrp: correctedMsrp,
+  });
+}
+
+/**
  * Calculate sell price for a tire (convenience function)
  */
 export function calculateTireSellPrice(opts: {

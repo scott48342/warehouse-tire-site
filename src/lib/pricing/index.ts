@@ -9,9 +9,23 @@
 export {
   calculateSellPrice,
   calculateWheelSellPrice,
+  calculateWheelSellPriceSafe,
+  resolveWheelMsrp,
   calculateTireSellPrice,
   pricingService,
   type ProductType,
   type PricingInput,
   type PricingResult,
 } from "./pricingService";
+
+export {
+  getWheelMsrpOverride,
+  WHEEL_MSRP_OVERRIDES,
+} from "./wheelPriceOverrides";
+
+export {
+  sanitizeWheelMsrp,
+  sanitizeWheelMsrpSync,
+  warmWheelSiblingIndex,
+  resetWheelSiblingIndex,
+} from "./wheelPriceSanity";

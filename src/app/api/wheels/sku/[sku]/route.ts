@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
 import { getInventoryForSku } from "@/lib/inventoryCache";
-import { calculateWheelSellPrice } from "@/lib/pricing";
+import { calculateWheelSellPrice, resolveWheelMsrp } from "@/lib/pricing";
 
 export const runtime = "nodejs";
 
@@ -31,10 +31,17 @@ export async function GET(
     // Get inventory data
     const inventory = await getInventoryForSku(sku);
     
-    // Calculate sell price
+    // Calculate sell price.
+    const mapValue = inventory?.mapPrice ?? (wheel.map_price ? Number(wheel.map_price) : null);
+    const rawMsrp = inventory?.msrp ?? (wheel.msrp ? Number(wheel.msrp) : null);
+    // DATA QUALITY GUARD (2026-06-18): correct corrupt MSRPs before markup.
+    const correctedMsrp = !mapValue
+      ? resolveWheelMsrp({ sku: wheel.sku, brandCd: wheel.brand_cd ?? wheel.brand_desc, diameter: wheel.diameter, msrp: rawMsrp })
+      : rawMsrp;
     const price = calculateWheelSellPrice({
-      map: inventory?.mapPrice ?? (wheel.map_price ? Number(wheel.map_price) : null),
-      msrp: inventory?.msrp ?? (wheel.msrp ? Number(wheel.msrp) : null),
+      sku: wheel.sku,
+      map: mapValue,
+      msrp: correctedMsrp,
     });
 
     return NextResponse.json({

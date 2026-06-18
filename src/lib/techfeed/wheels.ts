@@ -70,6 +70,19 @@ export async function getTechfeedWheelBySku(sku: string): Promise<TechfeedWheel 
 }
 
 /**
+ * Return all techfeed wheels (from the in-memory bySku cache). Loads the cache
+ * lazily on first call. Used by pricing sanity checks to compute brand+diameter
+ * MSRP medians. Returns an empty array if the feed can't be loaded.
+ */
+export async function getAllTechfeedWheels(): Promise<TechfeedWheel[]> {
+  if (!bySkuCache) {
+    bySkuCache = await loadGzJson<WheelsBySkuFile>("src/techfeed/wheels_by_sku.json.gz");
+  }
+  if (!bySkuCache?.bySku) return [];
+  return Object.values(bySkuCache.bySku);
+}
+
+/**
  * Best-effort warmup so first real user request after deploy doesn't pay the gunzip+parse cost.
  * Returns a sample SKU when available.
  */

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { warmTechfeedWheelCache } from "@/lib/techfeed/wheels";
+import { warmWheelSiblingIndex } from "@/lib/pricing";
 import { warmBrowseCache } from "@/lib/techfeed/wheels-browse";
 import { runPrewarmJob, PREWARM_TARGETS } from "@/lib/availabilityPrewarm";
 import { getCacheStats } from "@/lib/availabilityCache";
@@ -45,6 +46,9 @@ export async function GET(req: Request) {
   const tf0 = Date.now();
   const tf = await warmTechfeedWheelCache();
   const techfeedMs = Date.now() - tf0;
+
+  // Warm the wheel pricing sibling-outlier index (data-quality guard).
+  try { await warmWheelSiblingIndex(); } catch { /* best-effort */ }
 
   // Warm the new fast browse cache (builds style index)
   const browse0 = Date.now();
