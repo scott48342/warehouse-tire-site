@@ -269,11 +269,13 @@ function getCacheKey(req: WheelMockupRequest): string {
   //       satin black rendering as bronze) when a transient vision miss
   //       previously dropped to a generic text-only render. Invalidates the
   //       old finish-blind / non-composited cache entries.
+  // v24: deskew angled catalog wheel photos toward head-on before compositing
+  //       (Standard product shots are ~3/4 angled; reduces the "turned" look).
   // v23: stronger blackwall enforcement as a fixed composition rule in the
   //       locked-pose prompt (v22 whitewall suppression wasn't winning).
   // v22: default to black-sidewall tires when no tire is selected (was letting
   //       Flux invent whitewalls on wheel-only SRP mockups).
-  return `jake-mockups/v23/${parts}.png`;
+  return `jake-mockups/v24/${parts}.png`;
 }
 
 async function checkCache(cacheKey: string): Promise<string | null> {

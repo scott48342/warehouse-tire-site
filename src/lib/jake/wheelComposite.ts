@@ -165,6 +165,132 @@ function quadFromDetection(d: WheelDetection, scale = 1.13): Point[] {
   return [grow(TL), grow(TR), grow(BR), grow(BL)];
 }
 
+// ───────────────────────────────────────────────────────────────────────────
+// Deskew an angled catalog wheel image to a head-on (orthographic) circle.
+//
+// Problem: WheelPros "Standard" product photos are shot at a ~30-40deg 3/4
+// angle, so the rim is an ELLIPSE (lug holes are ovals, the barrel depth shows
+// on one side). When this is pasted onto the flat broadside render the wheel
+// looks "turned". For these Standard images there is NO -FACE-/-A1- variant to
+// swap to, so we synthesize the head-on view here.
+//
+// Approach (best-effort, returns null on any failure so caller keeps original):
+//   1. Flatten to white + measure the tight non-white content bbox of the
+//      wheel (the product is a wheel centered on a near-white background).
+//   2. The bbox gives the ellipse extent W_e x H_e. Build the 4 ellipse
+//      extreme points (top, right, bottom, left) at the bbox edge midpoints.
+//   3. Perspective-warp those 4 points onto a SQUARE of side max(W_e, H_e) so
+//      the foreshortened axis is stretched back out to a circle (de-skew).
+//   4. Flatten onto white and return a PNG. circularMaskWheel downstream then
+//      clips it to the round wheel.
+// ───────────────────────────────────────────────────────────────────────────
+
+export async function deskewWheelToHeadOn(srcBuf: Buffer): Promise<Buffer | null> {
+  try {
+    // Flatten transparency to white so the bbox scan and final output share a
+    // clean white background (matches what circularMaskWheel expects).
+    const flat = await sharp(srcBuf).ensureAlpha().flatten({ background: "#ffffff" }).png().toBuffer();
+    const { data, info } = await sharp(flat).raw().toBuffer({ resolveWithObject: true });
+    const W = info.width, H = info.height, c = info.channels;
+    if (!W || !H) return null;
+
+    // Measure the tight bbox of non-white (wheel) content. Threshold tolerant
+    // of JPEG noise / soft drop shadow.
+    const WHITE_LUM = 235;
+    const lum = (x: number, y: number) => {
+      const i = (y * W + x) * c;
+      return 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
+    };
+    let minx = W, miny = H, maxx = -1, maxy = -1, n = 0;
+    for (let y = 0; y < H; y++) {
+      for (let x = 0; x < W; x++) {
+        if (lum(x, y) < WHITE_LUM) {
+          n++;
+          if (x < minx) minx = x;
+          if (x > maxx) maxx = x;
+          if (y < miny) miny = y;
+          if (y > maxy) maxy = y;
+        }
+      }
+    }
+    if (maxx < 0 || n < 500) return null; // no wheel content found
+
+    const We = maxx - minx + 1; // horizontal extent (possibly foreshortened)
+    const He = maxy - miny + 1; // vertical extent (possibly foreshortened)
+    if (We < 40 || He < 40) return null;
+
+    // If the wheel already reads as essentially circular (axes within ~6%),
+    // there's nothing meaningful to deskew — bail so the caller keeps the
+    // original (avoids a pointless resample / softening).
+    const ratio = Math.max(We, He) / Math.min(We, He);
+    if (ratio < 1.06) return null;
+
+    const cx = (minx + maxx) / 2;
+    const cy = (miny + maxy) / 2;
+    const hx = We / 2; // half horizontal extent
+    const hy = He / 2; // half vertical extent
+
+    // Ellipse extreme points in source pixel space: top, right, bottom, left.
+    const eTop: Point = [cx, cy - hy];
+    const eRight: Point = [cx + hx, cy];
+    const eBottom: Point = [cx, cy + hy];
+    const eLeft: Point = [cx - hx, cy];
+
+    // Target: a square canvas of side = max axis, with the de-foreshortened
+    // circle inscribed. Map the 4 ellipse extremes to the 4 square-edge
+    // midpoints (top-mid, right-mid, bottom-mid, left-mid).
+    const side = Math.round(Math.max(We, He));
+    const sMid = side / 2;
+    const sqTop: Point = [sMid, 0];
+    const sqRight: Point = [side, sMid];
+    const sqBottom: Point = [sMid, side];
+    const sqLeft: Point = [0, sMid];
+
+    // warpToQuad maps the source UNIT SQUARE (its 4 corners TL,TR,BR,BL) onto a
+    // destination quad. We instead want an arbitrary source quad (the 4 ellipse
+    // extremes) mapped onto the square edge-midpoints. To reuse the existing
+    // primitive we first crop the source to the ellipse bbox so the ellipse
+    // extremes sit at the crop's edge midpoints, i.e. the crop's unit-square
+    // corners correspond to the bbox corners. Then the de-foreshorten warp is a
+    // mapping of the bbox (rectangle) onto the square — which is exactly what
+    // warpToQuad does when given the square's 4 CORNERS as the destination quad.
+    //
+    // Cropping to [minx,miny,We,He] and warping that rectangle to a side x side
+    // square stretches the shorter axis up to the longer axis length, turning
+    // the foreshortened ellipse back into a circle. (The ellipse-extreme /
+    // square-edge-midpoint correspondence is preserved by an affine bbox->square
+    // stretch, so the explicit 4-point quad above reduces to this crop+stretch.)
+    void eTop; void eRight; void eBottom; void eLeft;
+    void sqTop; void sqRight; void sqBottom; void sqLeft;
+
+    const cropped = await sharp(flat)
+      .extract({ left: minx, top: miny, width: We, height: He })
+      .png()
+      .toBuffer();
+
+    // Destination quad = the full square's 4 corners (TL, TR, BR, BL). warpToQuad
+    // samples the source unit square (cropped bbox) across this quad, stretching
+    // each axis independently to `side`.
+    const sqQuad: Point[] = [
+      [0, 0],
+      [side, 0],
+      [side, side],
+      [0, side],
+    ];
+    const warped = await warpToQuad(cropped, sqQuad, side, side);
+
+    // Flatten onto white (warp leaves transparent fringe outside the mapped
+    // region) and emit a clean square PNG. Colors/finish are preserved verbatim
+    // (bilinear resample only, no tint).
+    const out = await sharp(warped).flatten({ background: "#ffffff" }).png().toBuffer();
+    console.log(`[wheelComposite] deskew: ellipse ${We}x${He} (ratio ${ratio.toFixed(3)}) -> ${side}x${side} head-on`);
+    return out;
+  } catch (e: any) {
+    console.warn(`[wheelComposite] deskewWheelToHeadOn failed: ${e?.message}`);
+    return null;
+  }
+}
+
 function validDetection(d: any): d is WheelDetection {
   const ok = (p: any) => Array.isArray(p) && p.length === 2 && p.every((n) => typeof n === "number" && isFinite(n));
   return d && ok(d.top) && ok(d.right) && ok(d.bottom) && ok(d.left);
@@ -582,8 +708,22 @@ export async function compositeFixedWheels(opts: {
     }
   }
 
+  // Deskew the (often 3/4-angled) catalog wheel to a head-on circle BEFORE
+  // masking so the pasted wheel reads dead-on flat on the broadside render.
+  // Best-effort: keep the original image if deskew can't find/transform it.
+  let sourceWheel = wheelImageBuf;
+  try {
+    const deskewed = await deskewWheelToHeadOn(wheelImageBuf);
+    if (deskewed) {
+      sourceWheel = deskewed;
+      console.log(`[wheelComposite] ✅ Deskew-to-head-on applied to source wheel image`);
+    }
+  } catch (e: any) {
+    console.warn(`[wheelComposite] deskew attempt failed (${e?.message}); using original wheel image`);
+  }
+
   // Circular-mask the wheel once, then place a resized copy at each circle.
-  const maskedWheel = await circularMaskWheel(wheelImageBuf);
+  const maskedWheel = await circularMaskWheel(sourceWheel);
 
   // SAM "wheel" returns roughly the rim+tire bound. Scale the pasted wheel a
   // touch inside it so a natural tire sidewall shows — more for low-profile
