@@ -10,8 +10,9 @@
  * NOT a filter - this is a required fitment selection.
  */
 
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
+import { resolveCanonicalGateBasePath } from "@/lib/tires/canonicalTiresPath";
 
 // Re-export the logic functions for backwards compatibility
 export { needsWheelSizeSelection, getAutoSelectedWheelDia } from "@/lib/tires/wheelSizeGate";
@@ -42,7 +43,6 @@ export function WheelSizeGateSelector({
   onSelect,
 }: WheelSizeGateSelectorProps) {
   const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   // Track that the prompt was shown
@@ -81,10 +81,13 @@ export function WheelSizeGateSelector({
     // Clear any conflicting params
     params.delete("wheelDiaFront");
     params.delete("wheelDiaRear");
-    
-    const targetPath = basePath || pathname;
+
+    // Navigate to the SAME canonical /tires/v/[slug] URL the redirect will use,
+    // so a gate click never lands on a path that's about to be redirected away
+    // (which swallows the navigation during the redirect race).
+    const targetPath = resolveCanonicalGateBasePath(params, basePath);
     router.push(`${targetPath}?${params.toString()}`);
-  }, [router, pathname, searchParams, basePath, onSelect, vehicle]);
+  }, [router, searchParams, basePath, onSelect, vehicle]);
 
   // Sort diameters ascending
   const sortedDiameters = [...availableDiameters].sort((a, b) => a - b);

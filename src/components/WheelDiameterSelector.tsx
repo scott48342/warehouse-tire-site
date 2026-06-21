@@ -9,23 +9,24 @@
  * CRITICAL: Prevents showing 24" tire sizes to users with 22" wheels.
  */
 
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
+import { resolveCanonicalGateBasePath } from "@/lib/tires/canonicalTiresPath";
 
 interface WheelDiameterSelectorProps {
   availableDiameters: number[];
   selectedDiameter: number | null;
-  /** Base path for navigation (e.g., "/tires") */
+  /** Base path for navigation (e.g., "/tires"). When YMM params exist, the
+   *  canonical `/tires/v/[slug]` path is always used regardless of this value. */
   basePath?: string;
 }
 
 export function WheelDiameterSelector({
   availableDiameters,
   selectedDiameter,
-  basePath = "/tires",
+  basePath,
 }: WheelDiameterSelectorProps) {
   const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const handleSelect = useCallback((diameter: number) => {
@@ -34,7 +35,10 @@ export function WheelDiameterSelector({
     // Remove any stale wheel size params that might conflict
     params.delete("wheelDiaFront");
     params.delete("wheelDiaRear");
-    router.push(`${basePath}?${params.toString()}`);
+    // Navigate to the SAME canonical /tires/v/[slug] URL the redirect will use,
+    // so the click never lands on a path that's about to be redirected away.
+    const targetPath = resolveCanonicalGateBasePath(params, basePath);
+    router.push(`${targetPath}?${params.toString()}`);
   }, [router, searchParams, basePath]);
 
   if (availableDiameters.length <= 1) {
