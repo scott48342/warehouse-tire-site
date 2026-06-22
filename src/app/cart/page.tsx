@@ -157,7 +157,7 @@ function WheelCartItem({
           </div>
         ) : null}
 
-        <div className="mt-4 flex items-center justify-between">
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-y-3">
           <div className="flex items-center gap-3">
             <label className="text-sm font-medium text-neutral-600">Qty:</label>
             <select
@@ -176,7 +176,7 @@ function WheelCartItem({
             </button>
           </div>
 
-          <div className="text-right">
+          <div className="text-right ml-auto">
             <div className="text-xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
             <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
           </div>
@@ -201,8 +201,8 @@ function TireCartItem({
   const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
 
   return (
-    <div className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-5">
-      <div className="w-28 h-28 flex-shrink-0 rounded-xl border border-neutral-100 bg-neutral-50 overflow-hidden">
+    <div className="flex gap-3 sm:gap-4 rounded-2xl border border-neutral-200 bg-white p-4 sm:p-5">
+      <div className="w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 rounded-xl border border-neutral-100 bg-neutral-50 overflow-hidden">
         {item.imageUrl ? (
           <img src={item.imageUrl} alt={item.model} className="w-full h-full object-contain" />
         ) : (
@@ -212,7 +212,7 @@ function TireCartItem({
 
       <div className="flex-1 min-w-0">
         <div className="text-sm font-semibold text-neutral-500">{item.brand}</div>
-        <h3 className="font-extrabold text-lg text-neutral-900">{item.model}</h3>
+        <h3 className="font-extrabold text-lg text-neutral-900 break-words">{item.model}</h3>
         
         {/* Tire size with load/speed rating */}
         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
@@ -237,7 +237,7 @@ function TireCartItem({
           </div>
         ) : null}
 
-        <div className="mt-4 flex items-center justify-between">
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-y-3">
           <div className="flex items-center gap-3">
             <label className="text-sm font-medium text-neutral-600">Qty:</label>
             <select
@@ -256,7 +256,7 @@ function TireCartItem({
             </button>
           </div>
 
-          <div className="text-right">
+          <div className="text-right ml-auto">
             <div className="text-xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
             <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
           </div>
@@ -513,9 +513,9 @@ export default function CartPage() {
           )}
         </LocalOnly>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_380px]">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_380px]">
           {/* Cart Items */}
-          <div className="space-y-4">
+          <div className="min-w-0 space-y-4">
             {/* Wheels Section */}
             {hasWheels() ? (
               <div>
@@ -598,7 +598,7 @@ export default function CartPage() {
           </div>
 
           {/* Order Summary */}
-          <div className="lg:sticky lg:top-24 h-fit space-y-4">
+          <div className="min-w-0 lg:sticky lg:top-24 h-fit space-y-4">
             {/* Shipping Estimator (National) or Installation Card (Local) */}
             {isLocal ? (
               <LocalInstallationCard />

@@ -207,7 +207,7 @@ export function Footer() {
               <li>
                 <a 
                   href="mailto:support@warehousetiredirect.com" 
-                  className="text-sm text-neutral-400 hover:text-white transition-colors"
+                  className="text-sm text-neutral-400 hover:text-white transition-colors break-all"
                 >
                   support@warehousetiredirect.com
                 </a>

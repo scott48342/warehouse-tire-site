@@ -603,9 +603,9 @@ export default function CheckoutPage() {
           </div>
         )}
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px]">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_400px]">
           {/* Main Content - Single Page Checkout */}
-          <div className="space-y-6">
+          <div className="min-w-0 space-y-6">
             {/* Mobile Order Summary - Collapsible */}
             <div className="lg:hidden">
               <button
@@ -1029,9 +1029,9 @@ export default function CheckoutPage() {
 
                     {/* Card logos */}
                     <div className="flex items-center justify-center gap-3 pt-2">
-                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-5 object-contain opacity-60" />
-                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-5 object-contain opacity-60" />
-                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-5 object-contain opacity-60" />
+                      <img src="/images/cards/visa.svg" alt="Visa" className="h-5 object-contain opacity-60" />
+                      <img src="/images/cards/mastercard.svg" alt="Mastercard" className="h-5 object-contain opacity-60" />
+                      <img src="/images/cards/amex.svg" alt="Amex" className="h-5 object-contain opacity-60" />
                     </div>
                   </div>
 
@@ -1057,7 +1057,7 @@ export default function CheckoutPage() {
           </div>
 
           {/* Order Summary Sidebar */}
-          <div className="lg:sticky lg:top-24 h-fit space-y-4">
+          <div className="min-w-0 lg:sticky lg:top-24 h-fit space-y-4">
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               {/* Order Summary header - DESKTOP ONLY (mobile has collapsible at top) */}
               <h2 className="hidden lg:block text-lg font-bold text-neutral-900 mb-4">Order Summary</h2>
