@@ -271,18 +271,56 @@ export default async function KmTireDetailPage({
     );
   }
 
-  // Fetch from unified search API which includes admin image overrides
-  const res = await fetch(
-    `${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(size)}&minQty=1`,
-    { cache: "no-store" }
-  );
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 2A FIX (2026-06-22): resilient lookup by part number.
+  //
+  // Previously this fetched `?size=X&minQty=1` (capped at the API's default
+  // pageSize of 50) and then `.find()`-ed the part within that slice. Valid K&M
+  // tires that fell outside the top-50 size slice (or were below the minQty=1
+  // bar) showed "KM Tire not found" even though they exist.
+  //
+  // Fix: ask the search API to do a normalized, case-insensitive exact match by
+  // part number (its `partNumber=` filter strips non-alphanumerics and uppercases
+  // both sides), and raise pageSize so the target is in the candidate set before
+  // filtering. We keep the size param for fitment/display context. We also drop
+  // minQty so out-of-stock-but-orderable tires still resolve (the buy box already
+  // renders an "Available to order" state for zero-stock items).
+  //
+  // Helper: normalize a part number the same way the search API does.
+  const normalizePn = (v: any) => String(v || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+  const targetPn = normalizePn(safePart);
 
-  const data = res.ok ? await res.json() : { error: await res.text() };
-  const items: any[] = Array.isArray((data as any)?.results) ? (data as any).results : [];
+  async function fetchTires(qs: string): Promise<any[]> {
+    try {
+      const r = await fetch(`${getBaseUrl()}/api/tires/search?${qs}`, { cache: "no-store" });
+      if (!r.ok) return [];
+      const j = await r.json();
+      return Array.isArray(j?.results) ? j.results : [];
+    } catch {
+      return [];
+    }
+  }
+  const matchPn = (t: any) =>
+    normalizePn(t?.partNumber) === targetPn || normalizePn(t?.mfgPartNumber) === targetPn;
 
-  const item = items.find(
-    (t) => String(t?.partNumber || "").trim() === safePart || String(t?.mfgPartNumber || "").trim() === safePart
+  // Attempt 1 (preferred): direct part-number lookup scoped to the size.
+  let items = await fetchTires(
+    `size=${encodeURIComponent(size)}&partNumber=${encodeURIComponent(safePart)}&pageSize=500`
   );
+  let item = items.find(matchPn);
+
+  // Attempt 2: broad size search (no minQty, large page) then match by part number,
+  // in case the partNumber filter dropped to the unfiltered set for this size.
+  if (!item) {
+    items = await fetchTires(`size=${encodeURIComponent(size)}&pageSize=500`);
+    item = items.find(matchPn);
+  }
+
+  // Attempt 3: the legacy query as a final safety net (preserves prior behavior).
+  if (!item) {
+    items = await fetchTires(`size=${encodeURIComponent(size)}&minQty=1`);
+    item = items.find(matchPn);
+  }
 
   if (!item) {
     return (
