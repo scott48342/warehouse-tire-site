@@ -20,8 +20,15 @@
 /** Free shipping threshold - orders over this amount ship free */
 export const FREE_SHIPPING_THRESHOLD = 1500;
 
-/** Free shipping messaging */
-export const FREE_SHIPPING_MESSAGE = "Free shipping on orders over $1,500";
+/**
+ * Single source of truth for the free-shipping threshold as a formatted dollar
+ * string (e.g. "$1,500"). Derive ALL free-shipping copy from this so messaging
+ * can never drift from FREE_SHIPPING_THRESHOLD again.
+ */
+export const FREE_SHIPPING_THRESHOLD_LABEL = `$${FREE_SHIPPING_THRESHOLD.toLocaleString("en-US")}`;
+
+/** Free shipping messaging (derived from the threshold constant) */
+export const FREE_SHIPPING_MESSAGE = `Free shipping on orders over ${FREE_SHIPPING_THRESHOLD_LABEL}`;
 export const PACKAGE_SHIPPING_MESSAGE = "Most packages qualify for free shipping";
 
 /** Base shipping rates by zone (for a standard 4-wheel set) */

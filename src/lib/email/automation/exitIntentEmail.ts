@@ -15,6 +15,7 @@ import { db } from "@/lib/fitment-db/db";
 import { emailSubscribers, abandonedCarts, type EmailSubscriber } from "@/lib/fitment-db/schema";
 import { eq, and, isNull, lt, desc } from "drizzle-orm";
 import { markExitIntentFollowupSent, findExitIntentFollowupsDue } from "./emailQueue";
+import { FREE_SHIPPING_MESSAGE } from "@/lib/shipping/shippingService";
 
 // ============================================================================
 // Configuration
@@ -219,7 +220,7 @@ function buildImmediateEmailHtml(subscriber: {
         </div>
         <div style="display: flex; gap: 12px;">
           <span style="color: #10b981;">✓</span>
-          <span style="color: #4b5563;">Free shipping on orders over $199</span>
+          <span style="color: #4b5563;">${FREE_SHIPPING_MESSAGE}</span>
         </div>
       </div>
 

@@ -11,6 +11,7 @@ import { db } from "@/lib/fitment-db/db";
 import { firstOrderDiscounts } from "@/lib/fitment-db/schema";
 import { eq, and, gt, isNull } from "drizzle-orm";
 import { Resend } from "resend";
+import { FREE_SHIPPING_MESSAGE } from "@/lib/shipping/shippingService";
 
 // ============================================================================
 // Constants
@@ -356,7 +357,7 @@ export async function sendDiscountEmail(
         Warehouse Tire Direct
       </p>
       <p style="color: #a1a1aa; font-size: 12px; margin: 0;">
-        Pontiac & Waterford, MI • Free Shipping on $599+
+        Pontiac & Waterford, MI • ${FREE_SHIPPING_MESSAGE}
       </p>
     </div>
   </div>

@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { JakeHomepageSection } from "@/components/jake";
 import { PersonalizedVehicleSection } from "./PersonalizedVehicleSection";
 import { buildVehicleSearchUrl, type YmmProductType } from "@/lib/ymm/vehicleSearchUrl";
+import { FREE_SHIPPING_THRESHOLD_LABEL } from "@/lib/shipping/shippingService";
 
 /**
  * PREMIUM NATIONAL HOMEPAGE
@@ -35,7 +36,7 @@ function TrustBar() {
             </div>
             <div>
               <p className="text-white font-semibold">Fast, Reliable Shipping</p>
-              <p className="text-white/40 text-xs">On orders over $199</p>
+              <p className="text-white/40 text-xs">On orders over {FREE_SHIPPING_THRESHOLD_LABEL}</p>
             </div>
           </div>
 
@@ -654,7 +655,7 @@ function ShopByVehicleType() {
 
 const TRUST_BADGES = [
   { icon: "people", title: "Real People. Real Experts.", subtitle: "We're here to help." },
-  { icon: "shipping", title: "Fast Shipping Nationwide", subtitle: "On orders over $199." },
+  { icon: "shipping", title: "Fast Shipping Nationwide", subtitle: `On orders over ${FREE_SHIPPING_THRESHOLD_LABEL}.` },
   { icon: "returns", title: "Easy Returns. No Hassle.", subtitle: "30-day returns." },
   { icon: "built", title: "Built for What Drives You", subtitle: "On every road. Every day." },
 ];
