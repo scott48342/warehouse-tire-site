@@ -176,6 +176,12 @@ export function VisualFitmentLauncher({
   const [modelsLoading, setModelsLoading] = useState(false);
   const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
   const [trimsLoading, setTrimsLoading] = useState(false);
+  // Guards the auto-skip race: only auto-continue past the trim step once trims
+  // have actually finished loading for the CURRENT model. Without this, clicking
+  // a model sets step="trim" while `trims` is still the old empty array and
+  // `trimsLoading` is briefly false, so the skip effect fires and navigates with
+  // no trim selected (which is wrong for staggered/multi-trim vehicles).
+  const [trimsLoadedOnce, setTrimsLoadedOnce] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -231,12 +237,16 @@ export function VisualFitmentLauncher({
       if (!draft.year || !draft.make || !draft.model) {
         setTrims([]);
         setTrimsLoading(false);
+        setTrimsLoadedOnce(false);
         return;
       }
 
       const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
 
-      if (!cancelled) setTrimsLoading(true);
+      if (!cancelled) {
+        setTrimsLoading(true);
+        setTrimsLoadedOnce(false);
+      }
 
       // Try fitment DB first (has curated Tier A trims for performance vehicles)
       try {
@@ -248,8 +258,11 @@ export function VisualFitmentLauncher({
         // When premium UX is enabled, trims API won't return "Base" at all
         const realTrims = dbResults.filter(t => !isBaseTrim(t.label));
         if (realTrims.length > 0) {
-          if (!cancelled) setTrims(realTrims);
-          if (!cancelled) setTrimsLoading(false);
+          if (!cancelled) {
+            setTrims(realTrims);
+            setTrimsLoading(false);
+            setTrimsLoadedOnce(true);
+          }
           return;
         }
       } catch {
@@ -260,8 +273,11 @@ export function VisualFitmentLauncher({
       // Vehicles not in DB will have no trims available.
 
       // No trims found in internal DB
-      if (!cancelled) setTrims([]);
-      if (!cancelled) setTrimsLoading(false);
+      if (!cancelled) {
+        setTrims([]);
+        setTrimsLoading(false);
+        setTrimsLoadedOnce(true);
+      }
     })();
     return () => {
       cancelled = true;
@@ -338,9 +354,12 @@ export function VisualFitmentLauncher({
     router.push(`/wheels?${qs.toString()}`);
   }
 
-  // Auto-continue when no trims available (skip the trim step entirely)
+  // Auto-continue when no trims available (skip the trim step entirely).
+  // IMPORTANT: only after trims have actually loaded for the current model
+  // (trimsLoadedOnce), otherwise we race and skip multi-trim vehicles like
+  // a staggered Camaro straight to results with no trim selected.
   useEffect(() => {
-    if (step === "trim" && !trimsLoading && trims.length === 0 && draft.year && draft.make && draft.model) {
+    if (step === "trim" && !trimsLoading && trimsLoadedOnce && trims.length === 0 && draft.year && draft.make && draft.model) {
       // No trims available - auto-continue without showing the empty state
       const next: Fitment = {
         ...draft,
@@ -351,7 +370,7 @@ export function VisualFitmentLauncher({
       complete(next);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step, trimsLoading, trims.length, draft.year, draft.make, draft.model]);
+  }, [step, trimsLoading, trimsLoadedOnce, trims.length, draft.year, draft.make, draft.model]);
 
   return (
     <>
