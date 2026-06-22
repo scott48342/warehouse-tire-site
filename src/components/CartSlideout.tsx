@@ -340,6 +340,34 @@ export function CartSlideout() {
   const vehicle = lastWheelItem?.vehicle || wheelVehicle;
   const itemCount = getItemCount();
 
+  // ── Issue B fix ──────────────────────────────────────────────────────────
+  // The "Fits your <vehicle>" banner must reflect the item being added/viewed,
+  // never an unrelated earlier cart item (e.g. a wheel for a different vehicle
+  // added in a prior session). `vehicle` (above) still drives the tires
+  // deep-link / lifted context and is intentionally left unchanged.
+  //
+  // Banner rules:
+  //  1. Prefer the just-added item's own vehicle (wheel OR tire).
+  //  2. Otherwise, only show a vehicle if the whole cart agrees on ONE vehicle.
+  //  3. If the cart spans multiple vehicles and there's no fresh add, hide it.
+  const lastAddedVehicle =
+    lastAddedItem && (lastAddedItem.type === "wheel" || lastAddedItem.type === "tire")
+      ? (lastAddedItem as CartWheelItem | CartTireItem).vehicle
+      : undefined;
+
+  const vehicleKey = (v?: { year: string; make: string; model: string }) =>
+    v ? `${v.year}|${v.make}|${v.model}` : "";
+
+  const cartVehicles = items
+    .filter((i): i is CartWheelItem | CartTireItem => i.type === "wheel" || i.type === "tire")
+    .map((i) => i.vehicle)
+    .filter((v): v is NonNullable<CartWheelItem["vehicle"]> => Boolean(v));
+  const distinctVehicleKeys = new Set(cartVehicles.map(vehicleKey));
+
+  const bannerVehicle =
+    lastAddedVehicle ?? (distinctVehicleKeys.size === 1 ? cartVehicles[0] : undefined);
+  // ─────────────────────────────────────────────────────────────────────────
+
   // Build tires URL with vehicle, wheel, and lifted info
   const tiresParams = new URLSearchParams();
   if (vehicle) {
@@ -427,13 +455,13 @@ export function CartSlideout() {
         </div>
 
         {/* Vehicle Confirmation */}
-        {vehicle ? (
+        {bannerVehicle ? (
           <div className="mx-4 mt-4 rounded-xl bg-green-50 border border-green-200 p-3">
             <div className="flex items-center gap-2">
               <span className="text-green-600 text-lg">✓</span>
               <div>
                 <div className="text-sm font-bold text-green-900">
-                  Fits your {vehicle.year} {vehicle.make} {vehicle.model}
+                  Fits your {bannerVehicle.year} {bannerVehicle.make} {bannerVehicle.model}
                 </div>
                 <div className="text-xs text-green-700">Guaranteed fitment</div>
               </div>
