@@ -84,6 +84,53 @@ function getPool() {
   return pool;
 }
 
+// ═══════════════════════════════════════════════════════════════════════
+// PHASE 2C: bare-URL cache lookup + resolvable canonical helpers.
+//
+// A bare TireWeb PDP URL (/tires/<partNumber> with no ?source/?size) is not
+// directly renderable — the TireWeb branch needs source+size. We consult
+// tireweb_sku_cache to recover the source + a size, then build a RESOLVABLE
+// route. K&M parts route to their dedicated /tires/km/<pn> route; all other
+// TireWeb suppliers (ATD/USAF/NTW) route to /tires/<pn>?source=tireweb&size=.
+//
+// Used by both generateMetadata (to emit a canonical that does NOT point at the
+// bare 302 URL) and the page component (to redirect bare URLs before 404).
+// ═══════════════════════════════════════════════════════════════════════
+const SITE_ORIGIN = "https://shop.warehousetiredirect.com";
+
+/** Build a resolvable PDP PATH for a TireWeb part, routing K&M to its dedicated route. */
+function buildResolvableTireWebPath(partNumber: string, source: string, size: string): string {
+  const pn = encodeURIComponent(partNumber);
+  const sz = size ? `&size=${encodeURIComponent(size)}` : "";
+  const src = String(source || "").toLowerCase();
+  if (src === "tireweb:km") {
+    // Dedicated, resilient K&M route (Phase 1/2A).
+    return `/tires/km/${pn}${size ? `?size=${encodeURIComponent(size)}` : ""}`;
+  }
+  // ATD / USAF / NTW (and any other tireweb:* source) use the resilient
+  // source=tireweb param route (Phase 2B).
+  return `/tires/${pn}?source=tireweb${sz}`;
+}
+
+/** Look up a part in tireweb_sku_cache. Returns null if unknown (do NOT canonicalize unknowns). */
+async function lookupTireWebCache(
+  partNumber: string
+): Promise<{ size: string; source: string } | null> {
+  try {
+    const db = getPool();
+    const res = await db.query({
+      text: `SELECT size, source FROM tireweb_sku_cache WHERE part_number = $1 LIMIT 1`,
+      values: [partNumber],
+    });
+    const row = res.rows[0];
+    if (!row) return null;
+    return { size: String(row.size || ""), source: String(row.source || "") };
+  } catch (err) {
+    console.error("[tire-pdp] tireweb_sku_cache lookup failed:", err);
+    return null;
+  }
+}
+
 function n(v: any): number | null {
   const x = Number(v);
   return Number.isFinite(x) ? x : null;
@@ -403,24 +450,57 @@ async function fetchTireForMetadata(sku: string): Promise<{
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ sku: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
   const { sku } = await params;
   const decodedSku = decodeURIComponent(sku);
-  const canonicalUrl = `https://shop.warehousetiredirect.com/tires/${decodedSku}`;
-  
-  // Fetch product data for dynamic metadata
+  const sp = (await searchParams) || {};
+  const spSource = String((sp as any).source || "").toLowerCase();
+  const spSize = String((sp as any).size || "");
+  const bareCanonical = `${SITE_ORIGIN}/tires/${decodedSku}`;
+
+  // ═════════════════════════════════════════════════════════════════════
+  // PHASE 2C: resolvable canonical for TireWeb PDPs.
+  // A TireWeb PDP is reachable at /tires/<pn>?source=tireweb&size=<size> (or the
+  // dedicated /tires/km/<pn> route). The bare /tires/<pn> only works via a 302
+  // redirect, so it must NOT be the canonical. When this is a TireWeb request,
+  // point the canonical at the resolvable route instead, and only emit one when
+  // we can confirm the part (cache hit) — never canonicalize an unknown/dead URL.
+  // ═══════════════════════════════════════════════════════════════════════
+  let canonicalUrl: string | undefined = bareCanonical;
+  if (spSource === "tireweb") {
+    // Reached via the resolvable param URL: canonicalize to a resolvable route.
+    const cache = await lookupTireWebCache(decodedSku);
+    const src = cache?.source || "tireweb:atd";
+    const size = spSize || cache?.size || "";
+    canonicalUrl = size ? `${SITE_ORIGIN}${buildResolvableTireWebPath(decodedSku, src, size)}` : undefined;
+  }
+
+  // Fetch product data for dynamic metadata (WheelPros DB).
   const tire = await fetchTireForMetadata(decodedSku);
   
   if (!tire) {
-    // Fallback for missing products (or TireWeb tires without DB entry)
+    // Not a WheelPros tire. If this is a bare TireWeb URL, resolve the canonical
+    // to the working route via the cache; if unknown, omit canonical entirely
+    // so we do not index a dead URL.
+    if (canonicalUrl === bareCanonical) {
+      const cache = await lookupTireWebCache(decodedSku);
+      canonicalUrl = cache && cache.size
+        ? `${SITE_ORIGIN}${buildResolvableTireWebPath(decodedSku, cache.source, cache.size)}`
+        : undefined;
+    }
     return {
       title: `Tire ${decodedSku} | ${BRAND.name}`,
       description: `Shop quality tires at ${BRAND.name}. Free shipping, guaranteed fitment, expert support.`,
-      alternates: { canonical: canonicalUrl },
+      ...(canonicalUrl ? { alternates: { canonical: canonicalUrl } } : {}),
     };
   }
+
+  // WheelPros tire found: the bare URL renders directly, so keep it canonical.
+  if (spSource !== "tireweb") canonicalUrl = bareCanonical;
 
   // Build dynamic title: "Brand Model Size | Category | Warehouse Tire Direct"
   const titleParts = [tire.brand, tire.model, tire.size].filter(Boolean).join(" ");
@@ -437,14 +517,17 @@ export async function generateMetadata({
   descParts.push("Free shipping. Guaranteed fitment. Expert support.");
   const description = descParts.join(". ").slice(0, 160);
 
+  // WheelPros tire renders at the bare URL; ensure a defined canonical.
+  const finalCanonical = canonicalUrl || bareCanonical;
+
   return {
     title,
     description,
-    alternates: { canonical: canonicalUrl },
+    alternates: { canonical: finalCanonical },
     openGraph: {
       title: titleParts,
       description,
-      url: canonicalUrl,
+      url: finalCanonical,
       siteName: BRAND.name,
       images: tire.imageUrl ? [{ url: tire.imageUrl, width: 800, height: 800, alt: titleParts }] : undefined,
       type: "website",
@@ -929,26 +1012,28 @@ export default async function TireDetailPage({
 
   const t = rows[0] || null;
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // TIREWEB FALLBACK: If not found in WheelPros, check TireWeb SKU cache
-  // This handles bare URLs like /tires/IHR0144K without source/size params
-  // ═══════════════════════════════════════════════════════════════════════════
-  if (!t) {
-    try {
-      const cacheResult = await db.query({
-        text: `SELECT size, source FROM tireweb_sku_cache WHERE part_number = $1 LIMIT 1`,
-        values: [safeSku],
-      });
-      if (cacheResult.rows[0]) {
-        const { size: cachedSize, source: cachedSource } = cacheResult.rows[0];
-        // Redirect to the proper URL with params
-        const redirectUrl = `/tires/${encodeURIComponent(safeSku)}?source=tireweb&size=${encodeURIComponent(cachedSize)}`;
+  // ═══════════════════════════════════════════════════════════════════════
+  // TIREWEB FALLBACK (Phase 2C): bare /tires/<partNumber> with no source/size.
+  // If the part is known in tireweb_sku_cache, redirect to a RESOLVABLE supplier
+  // PDP route (K&M -> /tires/km/<pn>?size=, others -> ?source=tireweb&size=)
+  // before falling through to notFound(). WheelPros behavior is unchanged: this
+  // only runs when the part is absent from wp_tires (!t).
+  //
+  // Loop-safe: only triggered for bare URLs (the source==='tireweb' branch above
+  // handles the param URL and returns/notFounds before reaching here), and the
+  // redirect target always differs from the bare URL (adds ?source/?size or the
+  // /km/ path). next/navigation redirect() defaults to 307 (temporary), which is
+  // correct for a source/size-derived destination that can vary with feed data.
+  // ═══════════════════════════════════════════════════════════════════════
+  if (!t && !source) {
+    const cache = await lookupTireWebCache(safeSku);
+    if (cache && cache.size) {
+      const redirectUrl = buildResolvableTireWebPath(safeSku, cache.source, cache.size);
+      // Guard against a no-op redirect back to the same bare path.
+      if (redirectUrl && redirectUrl !== `/tires/${encodeURIComponent(safeSku)}`) {
         const { redirect } = await import("next/navigation");
         redirect(redirectUrl);
       }
-    } catch (err) {
-      // Cache lookup failed, continue to "not found" page
-      console.error("[tire-pdp] TireWeb cache lookup failed:", err);
     }
   }
 
