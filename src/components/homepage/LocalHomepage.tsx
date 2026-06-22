@@ -21,6 +21,7 @@ import {
 import LocalHomepageMobile from "./LocalHomepageMobile";
 import { JakeHomepageSection } from "@/components/jake";
 import { CallButton } from "@/components/CallButton";
+import { buildVehicleSearchUrl, shouldRequireTrim } from "@/lib/ymm/vehicleSearchUrl";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // LOCAL HOMEPAGE - Neighborhood Tire Store
@@ -211,12 +212,15 @@ function HeroSection() {
         // If multiple trims exist, wait for user to select one
         if (results.length <= 1) {
           const timer = setTimeout(() => {
-            const params = new URLSearchParams({ year, make, model });
-            // If exactly one trim, include it
-            if (results.length === 1) {
-              params.set("trim", results[0].value);
-            }
-            router.push(`${productType === "wheels" ? "/wheels" : "/tires"}?${params.toString()}`);
+            const only = results.length === 1 ? results[0] : undefined;
+            router.push(
+              buildVehicleSearchUrl({
+                year, make, model,
+                trimValue: only?.value,
+                trimLabel: only?.label,
+                productType: productType === "wheels" ? "wheels" : "tires",
+              }),
+            );
           }, 500);
           (window as any).__autoSubmitTimerDesktop = timer;
         }
@@ -234,7 +238,7 @@ function HeroSection() {
   // (especially staggered setups like Camaro SS/ZL1). Require a trim selection
   // in that case so we never search on model-aggregated data, which produces
   // wrong/ambiguous wheel-size gates and incorrect staggered fitment.
-  const trimRequired = trims.length > 1 && !trim;
+  const trimRequired = shouldRequireTrim(trims.length, trim);
   const canSearchVehicle = year && make && model && !trimRequired;
   const canSearchMetricSize = width && aspect && rim;
   const canSearchFlotationSize = floatDia && floatWidth && floatRim;
@@ -244,9 +248,15 @@ function HeroSection() {
 
   const handleVehicleSearch = () => {
     if (!canSearchVehicle) return;
-    const params = new URLSearchParams({ year, make, model });
-    if (trim) params.set("trim", trim);
-    router.push(`${vehicleSearchBase}?${params.toString()}`);
+    const trimLabel = trims.find((t) => t.value === trim)?.label;
+    router.push(
+      buildVehicleSearchUrl({
+        year, make, model,
+        trimValue: trim,
+        trimLabel,
+        productType: productType === "wheels" ? "wheels" : "tires",
+      }),
+    );
   };
 
   const handleMetricSizeSearch = () => {
@@ -274,8 +284,15 @@ function HeroSection() {
       clearTimeout((window as any).__autoSubmitTimerDesktop);
     }
     if (selectedTrim && year && make && model) {
-      const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
-      router.push(`${productType === "wheels" ? "/wheels" : "/tires"}?${params.toString()}`);
+      const trimLabel = trims.find((t) => t.value === selectedTrim)?.label;
+      router.push(
+        buildVehicleSearchUrl({
+          year, make, model,
+          trimValue: selectedTrim,
+          trimLabel,
+          productType: productType === "wheels" ? "wheels" : "tires",
+        }),
+      );
     }
   };
 

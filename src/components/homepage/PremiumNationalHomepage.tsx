@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { JakeHomepageSection } from "@/components/jake";
 import { PersonalizedVehicleSection } from "./PersonalizedVehicleSection";
+import { buildVehicleSearchUrl, type YmmProductType } from "@/lib/ymm/vehicleSearchUrl";
 
 /**
  * PREMIUM NATIONAL HOMEPAGE
@@ -348,19 +349,12 @@ function VehicleSelectorSection() {
 
   const handleVehicleSearch = () => {
     if (!year || !make || !model) return;
-    const params = new URLSearchParams({ year, make, model });
-    if (trim) params.set("trim", trim);
-    
-    // Route based on intent
-    if (intent === "tires") {
-      router.push(`/tires?${params.toString()}`);
-    } else if (intent === "wheels") {
-      router.push(`/wheels?${params.toString()}`);
-    } else {
-      // package flow
-      params.set("package", "1");
-      router.push(`/wheels?${params.toString()}`);
-    }
+    const trimLabel = trims.find((t) => t.value === trim)?.label;
+    const productType: YmmProductType =
+      intent === "tires" ? "tires" : intent === "wheels" ? "wheels" : "packages";
+    router.push(
+      buildVehicleSearchUrl({ year, make, model, trimValue: trim, trimLabel, productType }),
+    );
   };
 
   const handleMetricSizeSearch = () => {

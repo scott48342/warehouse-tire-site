@@ -6,6 +6,7 @@ import { fitmentLabel, type Fitment } from "@/lib/fitment";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { isBaseTrim } from "@/lib/features/premiumTrimUx";
 import { useVehicleMemory } from "@/contexts/VehicleMemoryContext";
+import { buildVehicleSearchUrl, type YmmProductType } from "@/lib/ymm/vehicleSearchUrl";
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { cache: "no-store" });
@@ -321,37 +322,24 @@ export function VisualFitmentLauncher({
       return;
     }
 
-    const qs = new URLSearchParams();
-    if (next.year) qs.set("year", String(next.year));
-    if (next.make) qs.set("make", String(next.make));
-    if (next.model) qs.set("model", String(next.model));
-    // Use 'modification' for canonical fitment identity (not 'trim')
-    // The trim selector value is the modificationId
-    if (next.modification) {
-      qs.set("modification", String(next.modification));
-    } else if (next.trim) {
-      // next.trim contains the modificationId from the selector
-      qs.set("modification", String(next.trim));
-    }
-
-    // Navigate based on entry mode
-    if (mode === "tires") {
-      router.push(`/tires?${qs.toString()}`);
-      return;
-    }
-    if (mode === "wheels") {
-      router.push(`/wheels?${qs.toString()}`);
-      return;
-    }
-    if (mode === "packages") {
-      qs.set("package", "1");
-      router.push(`/wheels?${qs.toString()}`);
-      return;
-    }
-
-    // Vehicles: default to packages flow (wheel + tire)
-    qs.set("package", "1");
-    router.push(`/wheels?${qs.toString()}`);
+    // Canonical URL via the shared YMM helper so the header launcher stays in
+    // lockstep with the homepage heroes. next.modification holds the canonical
+    // slug; next.trim holds the human-readable label (display only).
+    const productType: YmmProductType =
+      mode === "tires" ? "tires" :
+      mode === "wheels" ? "wheels" :
+      mode === "packages" ? "packages" :
+      "vehicles";
+    router.push(
+      buildVehicleSearchUrl({
+        year: next.year,
+        make: next.make,
+        model: next.model,
+        trimValue: next.modification || next.trim,
+        trimLabel: next.trim,
+        productType,
+      }),
+    );
   }
 
   // Auto-continue when no trims available (skip the trim step entirely).

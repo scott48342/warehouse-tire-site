@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { JakeHomepageSection } from "@/components/jake";
 import { CallButton } from "@/components/CallButton";
+import { buildVehicleSearchUrl } from "@/lib/ymm/vehicleSearchUrl";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // MOBILE-ONLY LOCAL HOMEPAGE
@@ -202,12 +203,15 @@ function SearchCard() {
         // If multiple trims exist, wait for user to select one
         if (trimResults.length <= 1) {
           const timer = setTimeout(() => {
-            const params = new URLSearchParams({ year, make, model });
-            // If exactly one trim, include it
-            if (trimResults.length === 1) {
-              params.set("trim", trimResults[0].value);
-            }
-            router.push(`/tires?${params.toString()}`);
+            const only = trimResults.length === 1 ? trimResults[0] : undefined;
+            router.push(
+              buildVehicleSearchUrl({
+                year, make, model,
+                trimValue: only?.value,
+                trimLabel: only?.label,
+                productType: "tires",
+              }),
+            );
           }, 500);
           (window as any).__autoSubmitTimer = timer;
         }
@@ -221,9 +225,10 @@ function SearchCard() {
 
   const handleVehicleSearch = () => {
     if (!canSearchVehicle) return;
-    const params = new URLSearchParams({ year, make, model });
-    if (trim) params.set("trim", trim);
-    router.push(`/tires?${params.toString()}`);
+    const trimLabel = trims.find((t) => t.value === trim)?.label;
+    router.push(
+      buildVehicleSearchUrl({ year, make, model, trimValue: trim, trimLabel, productType: "tires" }),
+    );
   };
 
   const handleSizeSearch = () => {
@@ -307,8 +312,10 @@ function SearchCard() {
                   clearTimeout((window as any).__autoSubmitTimer);
                 }
                 if (selectedTrim) {
-                  const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
-                  router.push(`/tires?${params.toString()}`);
+                  const trimLabel = trims.find((t) => t.value === selectedTrim)?.label;
+                  router.push(
+                    buildVehicleSearchUrl({ year, make, model, trimValue: selectedTrim, trimLabel, productType: "tires" }),
+                  );
                 }
               }} 
               disabled={!model || loading === "trims"} 
