@@ -81,6 +81,9 @@ function HeroSection() {
   const router = useRouter();
   const [searchTab, setSearchTab] = useState<"vehicle" | "size">("vehicle");
   const [sizeFormat, setSizeFormat] = useState<"metric" | "flotation">("metric");
+  // Product type for the Shop-By-Vehicle flow: search tires or wheels for the
+  // selected vehicle. Routes to /tires or /wheels respectively.
+  const [productType, setProductType] = useState<"tires" | "wheels">("tires");
   
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
@@ -213,7 +216,7 @@ function HeroSection() {
             if (results.length === 1) {
               params.set("trim", results[0].value);
             }
-            router.push(`/tires?${params.toString()}`);
+            router.push(`${productType === "wheels" ? "/wheels" : "/tires"}?${params.toString()}`);
           }, 500);
           (window as any).__autoSubmitTimerDesktop = timer;
         }
@@ -221,7 +224,7 @@ function HeroSection() {
       })
       .catch(() => setTrims([]))
       .finally(() => setLoading(null));
-  }, [year, make, model, router]);
+  }, [year, make, model, router, productType]);
 
   // ═══════════════════════════════════════════════════════════════════════════
   // SEARCH HANDLERS
@@ -236,11 +239,14 @@ function HeroSection() {
   const canSearchMetricSize = width && aspect && rim;
   const canSearchFlotationSize = floatDia && floatWidth && floatRim;
 
+  // Base path for the Shop-By-Vehicle flow depending on selected product type.
+  const vehicleSearchBase = productType === "wheels" ? "/wheels" : "/tires";
+
   const handleVehicleSearch = () => {
     if (!canSearchVehicle) return;
     const params = new URLSearchParams({ year, make, model });
     if (trim) params.set("trim", trim);
-    router.push(`/tires?${params.toString()}`);
+    router.push(`${vehicleSearchBase}?${params.toString()}`);
   };
 
   const handleMetricSizeSearch = () => {
@@ -269,7 +275,7 @@ function HeroSection() {
     }
     if (selectedTrim && year && make && model) {
       const params = new URLSearchParams({ year, make, model, trim: selectedTrim });
-      router.push(`/tires?${params.toString()}`);
+      router.push(`${productType === "wheels" ? "/wheels" : "/tires"}?${params.toString()}`);
     }
   };
 
@@ -381,6 +387,23 @@ function HeroSection() {
             {/* Vehicle Search - LARGER FIELDS */}
             {searchTab === "vehicle" && (
               <div className="space-y-3">
+                {/* Product type: Tires vs Wheels */}
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setProductType("tires")}
+                    className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${productType === "tires" ? "bg-neutral-900 text-white" : "bg-neutral-100 text-neutral-600"}`}
+                  >
+                    Tires
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setProductType("wheels")}
+                    className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${productType === "wheels" ? "bg-neutral-900 text-white" : "bg-neutral-100 text-neutral-600"}`}
+                  >
+                    Wheels
+                  </button>
+                </div>
                 <select
                   value={year}
                   onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); setTrim(""); }}
@@ -424,7 +447,7 @@ function HeroSection() {
                 </select>
                 {trimRequired && (
                   <p className="text-sm font-semibold text-[#c41230]">
-                    This model has trim-specific fitment — select your trim to see the correct tire sizes.
+                    This model has trim-specific fitment — select your trim to see the correct {productType === "wheels" ? "wheel fitment" : "tire sizes"}.
                   </p>
                 )}
                 
@@ -433,7 +456,7 @@ function HeroSection() {
                   disabled={!canSearchVehicle}
                   className="w-full h-16 rounded-xl bg-[#c41230] text-white font-bold text-xl hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors shadow-lg"
                 >
-                  FIND TIRES
+                  {productType === "wheels" ? "FIND WHEELS" : "FIND TIRES"}
                 </button>
               </div>
             )}
@@ -630,7 +653,11 @@ function HeroSection() {
                 
                 {searchTab === "vehicle" && (
                   <div>
-                    <p className="text-sm text-neutral-600 mb-3">Find the right tires for your vehicle</p>
+                    <p className="text-sm text-neutral-600 mb-3">Find the right {productType} for your vehicle</p>
+                    <div className="flex gap-2 mb-3">
+                      <button type="button" onClick={() => setProductType("tires")} className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${productType === "tires" ? "bg-neutral-900 text-white" : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"}`}>Tires</button>
+                      <button type="button" onClick={() => setProductType("wheels")} className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${productType === "wheels" ? "bg-neutral-900 text-white" : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"}`}>Wheels</button>
+                    </div>
                     <div className="flex flex-wrap gap-2">
                       <select value={year} onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); setTrim(""); }} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none">
                         <option value="">Year</option>
@@ -649,11 +676,11 @@ function HeroSection() {
                         {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                       </select>
                       <button onClick={handleVehicleSearch} disabled={!canSearchVehicle} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">
-                        FIND TIRES
+                        {productType === "wheels" ? "FIND WHEELS" : "FIND TIRES"}
                       </button>
                     </div>
                     {trimRequired && (
-                      <p className="mt-2 text-sm font-semibold text-[#c41230]">This model has trim-specific fitment — select your trim to see the correct tire sizes.</p>
+                      <p className="mt-2 text-sm font-semibold text-[#c41230]">This model has trim-specific fitment — select your trim to see the correct {productType === "wheels" ? "wheel fitment" : "tire sizes"}.</p>
                     )}
                     <p className="mt-3 text-sm text-neutral-500">Don't know your vehicle? <button onClick={() => setSearchTab("size")} className="text-green-700 hover:underline font-medium">Help me find my size</button></p>
                   </div>
