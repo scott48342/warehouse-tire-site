@@ -227,7 +227,12 @@ function HeroSection() {
   // SEARCH HANDLERS
   // ═══════════════════════════════════════════════════════════════════════════
 
-  const canSearchVehicle = year && make && model;
+  // When a model has multiple meaningful trims, fitment can be trim-specific
+  // (especially staggered setups like Camaro SS/ZL1). Require a trim selection
+  // in that case so we never search on model-aggregated data, which produces
+  // wrong/ambiguous wheel-size gates and incorrect staggered fitment.
+  const trimRequired = trims.length > 1 && !trim;
+  const canSearchVehicle = year && make && model && !trimRequired;
   const canSearchMetricSize = width && aspect && rim;
   const canSearchFlotationSize = floatDia && floatWidth && floatRim;
 
@@ -409,11 +414,19 @@ function HeroSection() {
                   value={trim}
                   onChange={(e) => handleTrimChange(e.target.value)}
                   disabled={!model || loading === "trims"}
-                  className="w-full h-14 rounded-xl border-2 border-neutral-200 bg-white px-4 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400"
+                  className={
+                    "w-full h-14 rounded-xl border-2 bg-white px-4 text-base font-medium focus:border-green-600 focus:outline-none disabled:bg-neutral-50 disabled:text-neutral-400 " +
+                    (trimRequired ? "border-[#c41230]" : "border-neutral-200")
+                  }
                 >
-                  <option value="">{loading === "trims" ? "Loading..." : "Trim (Optional)"}</option>
+                  <option value="">{loading === "trims" ? "Loading..." : (trimRequired ? "Select Trim (required)" : "Trim (Optional)")}</option>
                   {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                 </select>
+                {trimRequired && (
+                  <p className="text-sm font-semibold text-[#c41230]">
+                    This model has trim-specific fitment — select your trim to see the correct tire sizes.
+                  </p>
+                )}
                 
                 <button
                   onClick={handleVehicleSearch}
@@ -631,14 +644,17 @@ function HeroSection() {
                         <option value="">{loading === "models" ? "Loading..." : "Model"}</option>
                         {models.map(m => <option key={m} value={m}>{m}</option>)}
                       </select>
-                      <select value={trim} onChange={(e) => handleTrimChange(e.target.value)} disabled={!model || loading === "trims"} className="flex-1 min-w-[100px] rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100">
-                        <option value="">{loading === "trims" ? "Loading..." : "Trim (Optional)"}</option>
+                      <select value={trim} onChange={(e) => handleTrimChange(e.target.value)} disabled={!model || loading === "trims"} className={"flex-1 min-w-[100px] rounded-lg border bg-white px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none disabled:bg-neutral-100 " + (trimRequired ? "border-[#c41230]" : "border-neutral-300")}>
+                        <option value="">{loading === "trims" ? "Loading..." : (trimRequired ? "Select Trim (required)" : "Trim (Optional)")}</option>
                         {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                       </select>
                       <button onClick={handleVehicleSearch} disabled={!canSearchVehicle} className="px-6 py-2.5 rounded-lg bg-[#c41230] text-white font-bold text-sm hover:bg-[#a30f28] disabled:bg-neutral-300 disabled:cursor-not-allowed transition-colors">
                         FIND TIRES
                       </button>
                     </div>
+                    {trimRequired && (
+                      <p className="mt-2 text-sm font-semibold text-[#c41230]">This model has trim-specific fitment — select your trim to see the correct tire sizes.</p>
+                    )}
                     <p className="mt-3 text-sm text-neutral-500">Don't know your vehicle? <button onClick={() => setSearchTab("size")} className="text-green-700 hover:underline font-medium">Help me find my size</button></p>
                   </div>
                 )}
