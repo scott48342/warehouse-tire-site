@@ -616,15 +616,24 @@ export async function resolveUniversalFitment(
   // Extract tire sizes
   result.oemTireSizes = normalizeTireSizes(recordWithOverrides.oemTireSizes);
   
-  // Check for staggered fitment
+  // Check for staggered fitment.
+  // NOTE: the DB stores staggered fitment as an object whose front/rear values
+  // may be EITHER a single string (e.g. {"front":"245/40R20","rear":"275/35R20"})
+  // OR an array of strings. Normalize both shapes to string[] so downstream
+  // code can safely index front[0]/rear[0]. Previously a raw string meant
+  // front[0] returned the first CHARACTER ("2"), corrupting staggered output.
   const tireSizesRaw = recordWithOverrides.oemTireSizes;
   if (tireSizesRaw && typeof tireSizesRaw === "object" && !Array.isArray(tireSizesRaw)) {
-    const staggered = tireSizesRaw as { front?: string[]; rear?: string[] };
-    if (staggered.front || staggered.rear) {
-      result.oemTireSizesStaggered = {
-        front: staggered.front || [],
-        rear: staggered.rear || [],
-      };
+    const staggered = tireSizesRaw as { front?: unknown; rear?: unknown };
+    const toSizeArray = (v: unknown): string[] => {
+      if (Array.isArray(v)) return v.map((s) => String(s).trim()).filter(Boolean);
+      if (typeof v === "string") return v.trim() ? [v.trim()] : [];
+      return [];
+    };
+    const front = toSizeArray(staggered.front);
+    const rear = toSizeArray(staggered.rear);
+    if (front.length > 0 || rear.length > 0) {
+      result.oemTireSizesStaggered = { front, rear };
     }
   }
   
