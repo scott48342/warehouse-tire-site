@@ -125,6 +125,26 @@ export interface ResolverInput {
   model: string;
   trim?: string;          // Display trim name (e.g., "Sport")
   modificationId?: string; // DB modificationId
+  canonicalFitmentId?: string; // Canonical fitment ID (unique per atomic trim)
+}
+
+/**
+ * Detect whether a string is a canonical fitment ID rather than a DB
+ * modificationId or a human trim label.
+ *
+ * canonicalFitmentId format (see generateCanonicalId):
+ *   {year}-{make-slug}-{model-slug}-{trim-slug}-{6charHash}
+ * e.g. "2024-ford-f-150-king-ranch-64d6fb"
+ *
+ * The trims API exposes this as each trim's `value`, and pickers pass it back
+ * as ?modification=. The resolver matches by modificationId/trim only, so a
+ * canonicalFitmentId would otherwise miss every match and BLOCK. We detect it
+ * here so it can be reverse-mapped to its atomic trim label.
+ */
+export function isCanonicalFitmentId(s: string | null | undefined): boolean {
+  if (!s) return false;
+  // Starts with a 4-digit year, contains slug segments, ends with a hex hash.
+  return /^\d{4}-[a-z0-9-]+-[0-9a-f]{4,8}$/i.test(s);
 }
 
 // ============================================================================
@@ -262,7 +282,54 @@ export async function resolveVehicleFitment(
   input: ResolverInput
 ): Promise<CanonicalFitmentResult> {
   let { year, make, model, trim, modificationId } = input;
-  
+  let { canonicalFitmentId } = input;
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // CANONICAL FITMENT ID NORMALIZATION (2026-06-22)
+  //
+  // Pickers send the trims API `value` (a canonicalFitmentId) back as the
+  // modification/trim param. canonicalFitmentId lives in a different namespace
+  // than DB modificationId, so STEP 1 (modificationId exact match) and trim
+  // matching both miss it, and the resolver falls through to BLOCK.
+  //
+  // FIX: if the incoming modificationId/trim/canonicalFitmentId is actually a
+  // canonicalFitmentId, reverse-map it to its atomic trim label (and real
+  // modificationId) via getAtomicTrimOptions, then resolve normally. This is
+  // additive: legacy modificationId and trim-label inputs are untouched.
+  // ─────────────────────────────────────────────────────────────────────────
+  if (!canonicalFitmentId) {
+    if (isCanonicalFitmentId(modificationId)) {
+      canonicalFitmentId = modificationId;
+      modificationId = undefined;
+    } else if (isCanonicalFitmentId(trim)) {
+      canonicalFitmentId = trim;
+      trim = undefined;
+    }
+  }
+  if (canonicalFitmentId) {
+    try {
+      const atomicOptions = await getAtomicTrimOptions(year, make, model);
+      const matched = atomicOptions.find(
+        (o) => o.canonicalFitmentId === canonicalFitmentId,
+      );
+      if (matched) {
+        // Prefer matching by the real modificationId when present and specific;
+        // always recover the atomic trim label so trim-based steps can resolve.
+        if (!modificationId && matched.modificationId) modificationId = matched.modificationId;
+        if (!trim) trim = matched.label;
+        console.log(
+          `[canonicalResolver] canonicalFitmentId "${canonicalFitmentId}" → trim="${matched.label}", modificationId="${matched.modificationId}"`,
+        );
+      } else {
+        console.warn(
+          `[canonicalResolver] canonicalFitmentId "${canonicalFitmentId}" did not match any atomic trim for ${year} ${make} ${model}`,
+        );
+      }
+    } catch (e) {
+      console.warn(`[canonicalResolver] canonicalFitmentId reverse-map failed: ${e}`);
+    }
+  }
+
   const normalizedMake = canonicalMake(make);
   
   // ─────────────────────────────────────────────────────────────────────────

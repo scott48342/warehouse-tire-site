@@ -18,6 +18,9 @@ import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, ilike, or, asc, sql } from "drizzle-orm";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
+// Utility helpers only (NOT the resolution path) for reverse-mapping a
+// canonicalFitmentId (the trims API `value`) back to its atomic trim label.
+import { isCanonicalFitmentId, getAtomicTrimOptions } from "@/lib/fitment/canonicalResolver";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -423,7 +426,30 @@ export async function resolveUniversalFitment(
   // Normalize inputs
   const normalizedMake = normalizeMake(input.make);
   const modelVariants = getModelVariants(input.model);
-  const requestedTrim = input.trim?.trim() || null;
+  let requestedTrim = input.trim?.trim() || null;
+
+  // ───────────────────────────────────────────────────────────────────────
+  // CANONICAL FITMENT ID NORMALIZATION (2026-06-22)
+  // Pickers pass the trims API `value` (a canonicalFitmentId, e.g.
+  // "2024-ford-f-150-king-ranch-64d6fb") in as the trim/modification param.
+  // That is a different namespace than trim labels, so trim matching misses
+  // it. Reverse-map it to its atomic trim label so resolution succeeds.
+  // Additive: plain trim labels are untouched.
+  // ───────────────────────────────────────────────────────────────────────
+  if (requestedTrim && isCanonicalFitmentId(requestedTrim)) {
+    try {
+      const atomicOptions = await getAtomicTrimOptions(input.year, input.make, input.model);
+      const matched = atomicOptions.find((o) => o.canonicalFitmentId === requestedTrim);
+      if (matched) {
+        console.log(`[universalFitmentResolver] canonicalFitmentId "${requestedTrim}" → trim="${matched.label}"`);
+        requestedTrim = matched.label;
+      } else {
+        console.warn(`[universalFitmentResolver] canonicalFitmentId "${requestedTrim}" did not match any atomic trim for ${input.year} ${input.make} ${input.model}`);
+      }
+    } catch (e) {
+      console.warn(`[universalFitmentResolver] canonicalFitmentId reverse-map failed: ${e}`);
+    }
+  }
   
   // Determine if alias mapping was used
   const usedAliasMapping = MODEL_ALIASES[slugify(input.model)] !== undefined;
