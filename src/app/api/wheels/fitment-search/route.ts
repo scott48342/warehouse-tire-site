@@ -112,7 +112,7 @@ import {
   sortFinishes,
 } from "@/lib/finishNormalization";
 
-import { normalizeToStringArray } from "@/lib/tires/tireSizeUtils";
+import { normalizeToStringArray, isStaggeredObject, getFrontTireSizes, getRearTireSizes } from "@/lib/tires/tireSizeUtils";
 
 import {
   filterOutUTVProducts,
@@ -1175,10 +1175,26 @@ async function handleDbProfilePath(
   // Try dbProfile first, then fetch from tire-sizes API if needed
   // Supports string arrays and {front, rear} staggered format
   let tireSizesForStagger = normalizeToStringArray(dbProfile.oemTireSizes);
+
+  // EXPLICIT front/rear mapping (preferred over diameter/width guessing).
+  // When the DB stores staggered tire data as { front, rear }, use that mapping
+  // directly so the rear tire isn't mis-assigned the front size (e.g. Camaro SS
+  // rear should be 275/35R20, not 245/40R20). Falls back to the heuristic below
+  // when no explicit mapping is available.
+  let explicitFrontTire: string | undefined;
+  let explicitRearTire: string | undefined;
+  if (isStaggeredObject(dbProfile.oemTireSizes)) {
+    explicitFrontTire = getFrontTireSizes(dbProfile.oemTireSizes)[0];
+    explicitRearTire = getRearTireSizes(dbProfile.oemTireSizes)[0];
+  }
   
-  // If no tire sizes in profile, look up from vehicle_fitments table directly
+  // Direct DB lookup of the raw oem_tire_sizes when staggered. We do this even
+  // if tireSizesForStagger already has values, because dbProfile.oemTireSizes is
+  // a flattened string[] that loses the front/rear mapping needed to assign the
+  // correct rear tire (e.g. Camaro SS rear 275/35R20). Skip only when we already
+  // have an explicit mapping.
   // (Avoids HTTP self-call which can timeout in dev)
-  if (staggeredInfo.isStaggered && tireSizesForStagger.length === 0) {
+  if (staggeredInfo.isStaggered && (tireSizesForStagger.length === 0 || (!explicitFrontTire && !explicitRearTire))) {
     try {
       // Direct DB query to get tire sizes for this vehicle
       const db = getPool();
@@ -1204,6 +1220,12 @@ async function handleDbProfilePath(
       for (const row of tireSizesResult.rows) {
         const sizes = normalizeToStringArray(row.oem_tire_sizes);
         sizes.forEach(s => allTireSizes.add(s));
+        // Capture explicit front/rear mapping if present (prefer the trim-matched
+        // record, which is the first/only row when modificationParam is set).
+        if (!explicitFrontTire && !explicitRearTire && isStaggeredObject(row.oem_tire_sizes)) {
+          explicitFrontTire = getFrontTireSizes(row.oem_tire_sizes)[0];
+          explicitRearTire = getRearTireSizes(row.oem_tire_sizes)[0];
+        }
       }
       
       if (allTireSizes.size > 0) {
@@ -1243,21 +1265,29 @@ async function handleDbProfilePath(
       return matching[0];
     };
     
-    // Populate front tireSize if missing
-    if (staggeredInfo.frontSpec && !staggeredInfo.frontSpec.tireSize) {
-      const frontTire = findTireSizeForDiameter(staggeredInfo.frontSpec.diameter, staggeredInfo.frontSpec.width);
+    // Front tire: prefer explicit DB front/rear mapping, else heuristic by
+    // diameter/width. Explicit mapping OVERRIDES any earlier value because the
+    // wheel-spec-derived guess can mis-assign sizes on staggered setups.
+    if (staggeredInfo.frontSpec) {
+      const frontTire = explicitFrontTire
+        || (!staggeredInfo.frontSpec.tireSize
+            ? findTireSizeForDiameter(staggeredInfo.frontSpec.diameter, staggeredInfo.frontSpec.width)
+            : undefined);
       if (frontTire) {
         staggeredInfo.frontSpec.tireSize = frontTire;
-        console.log(`[fitment-search] Populated front tireSize: ${frontTire}`);
+        console.log(`[fitment-search] front tireSize=${frontTire}${explicitFrontTire ? " (explicit)" : ""}`);
       }
     }
     
-    // Populate rear tireSize if missing
-    if (staggeredInfo.rearSpec && !staggeredInfo.rearSpec.tireSize) {
-      const rearTire = findTireSizeForDiameter(staggeredInfo.rearSpec.diameter, staggeredInfo.rearSpec.width);
+    // Rear tire: prefer explicit DB front/rear mapping, else heuristic.
+    if (staggeredInfo.rearSpec) {
+      const rearTire = explicitRearTire
+        || (!staggeredInfo.rearSpec.tireSize
+            ? findTireSizeForDiameter(staggeredInfo.rearSpec.diameter, staggeredInfo.rearSpec.width)
+            : undefined);
       if (rearTire) {
         staggeredInfo.rearSpec.tireSize = rearTire;
-        console.log(`[fitment-search] Populated rear tireSize: ${rearTire}`);
+        console.log(`[fitment-search] rear tireSize=${rearTire}${explicitRearTire ? " (explicit)" : ""}`);
       }
     }
   }
