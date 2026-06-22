@@ -505,13 +505,57 @@ export default async function TireDetailPage({
   // ═══════════════════════════════════════════════════════════════════════════
   if (source === "tireweb" && size) {
     try {
-      const searchRes = await fetch(
-        `${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(size)}&partNumber=${encodeURIComponent(safeSku)}&limit=1`,
-        { cache: "no-store" }
+      // ═══════════════════════════════════════════════════════════════════════
+      // PHASE 2B FIX (2026-06-22): resilient TireWeb PDP lookup by part number.
+      //
+      // Previously this fetched `?size=X&partNumber=Y&limit=1` and took
+      // results[0]. The `limit=1` window plus exact size handling meant ATD /
+      // USAF / NTW parts outside the first slice (or with LT-prefix size
+      // differences) were missed, rendering a soft-404 / notFound().
+      //
+      // Fix mirrors the KM route (Phase 2A): ask the search API for a normalized,
+      // case-insensitive part-number match with a large pageSize, in a 3-attempt
+      // fallback chain, and select the part that actually matches rather than the
+      // first row. The selected size is preserved for display/fitment. We only
+      // render the buy box when the supplier feed returns the product (the same
+      // `if (tire)` gate below), so unavailable stock still 404s.
+      const normalizePn = (v: any) => String(v || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+      const targetPn = normalizePn(safeSku);
+      const matchPn = (t: any) =>
+        normalizePn(t?.partNumber) === targetPn || normalizePn(t?.mfgPartNumber) === targetPn;
+
+      const fetchTireWeb = async (qs: string): Promise<any[]> => {
+        try {
+          const r = await fetch(`${getBaseUrl()}/api/tires/search?${qs}`, { cache: "no-store" });
+          if (!r.ok) return [];
+          const j = await r.json();
+          return Array.isArray(j?.results) ? j.results : [];
+        } catch {
+          return [];
+        }
+      };
+
+      // Attempt 1 (preferred): normalized part-number match scoped to the size.
+      let twItems = await fetchTireWeb(
+        `size=${encodeURIComponent(size)}&partNumber=${encodeURIComponent(safeSku)}&pageSize=500`
       );
-      if (searchRes.ok) {
-        const searchData = await searchRes.json();
-        const tire = searchData?.results?.[0];
+      let tire = twItems.find(matchPn);
+
+      // Attempt 2: broad size search (large page), then match by part number.
+      if (!tire) {
+        twItems = await fetchTireWeb(`size=${encodeURIComponent(size)}&pageSize=500`);
+        tire = twItems.find(matchPn);
+      }
+
+      // Attempt 3: legacy query as a final safety net (preserves prior behavior).
+      if (!tire) {
+        twItems = await fetchTireWeb(
+          `size=${encodeURIComponent(size)}&partNumber=${encodeURIComponent(safeSku)}&limit=1`
+        );
+        tire = twItems.find(matchPn) || twItems[0];
+      }
+
+      {
         if (tire) {
           const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
           const price = typeof tire.price === "number" && tire.price > 0 ? tire.price : null;
