@@ -2353,11 +2353,22 @@ export default async function TiresPage({
   };
   
   const itemsTw: Tire[] = (Array.isArray(tw?.results) ? tw.results : []).map((t: TireWebResult) => {
-    // Map source from unified search: "km" → "km", "wheelpros" → "wp", "TireWeb:*" → "tw"
+    // Map source from unified search to the route discriminator used by the
+    // PDP link builders below. The unified search API returns LOWERCASE,
+    // colon-namespaced source values: "wheelpros", "tireweb:km", "tireweb:atd",
+    // "tireweb:usautoforce", "tireweb:ntw" (and historically bare "km"/"tw").
+    //
+    // PHASE 1 FIX (2026-06-22): previously this only matched the bare "km" and
+    // case-sensitive "TireWeb" prefixes, so every namespaced tireweb tire fell
+    // through to "tw". That made the WORKING /tires/km/[partNumber] route
+    // unreachable for K&M tires. Now we normalize case-insensitively and route
+    // K&M ("tireweb:km" or bare "km") to "km" so it uses the working KM PDP.
+    // Other tireweb sources (atd/usautoforce/ntw) intentionally stay "tw" for now.
+    const srcLower = String(t.source || "").toLowerCase();
     let mappedSource: "wp" | "km" | "tw" = "tw";
-    if (t.source === "km") mappedSource = "km";
-    else if (t.source === "wheelpros") mappedSource = "wp";
-    else if (t.source?.startsWith("TireWeb")) mappedSource = "tw";
+    if (srcLower === "km" || srcLower === "tireweb:km") mappedSource = "km";
+    else if (srcLower === "wheelpros" || srcLower === "wp") mappedSource = "wp";
+    else if (srcLower === "tw" || srcLower.startsWith("tireweb")) mappedSource = "tw";
     
     return {
       source: mappedSource,
