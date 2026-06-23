@@ -5,6 +5,7 @@ import type { CartAccessoryItem, AccessoryRecommendationState } from "./accessor
 import { getCartId } from "./useCartTracking";
 import { trackAddToCart as trackFunnelAddToCart } from "@/components/FunnelTracker";
 import { clarityEvent, clarityUpgrade } from "@/components/MicrosoftClarity";
+import { ga4AddToCart } from "@/lib/ga4";
 
 export type { CartAccessoryItem, AccessoryRecommendationState };
 
@@ -299,6 +300,19 @@ export function CartProvider({ children }: { children: ReactNode }) {
           model: typedItem.vehicle.model,
         } : undefined
       );
+
+      // GA4 standard ecommerce event (additive; no-ops without gtag)
+      ga4AddToCart({
+        value: cartValue,
+        items: [{
+          item_id: typedItem.sku,
+          item_name: `${typedItem.brand} ${typedItem.model}`.trim(),
+          item_brand: typedItem.brand,
+          item_category: item.type,
+          price: typedItem.unitPrice,
+          quantity: typedItem.quantity,
+        }],
+      });
       
       // Microsoft Clarity tracking - tag session for easy filtering
       clarityEvent(`add_to_cart_${item.type}`);

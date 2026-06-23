@@ -237,7 +237,7 @@ export default async function CheckoutSuccessPage({
       {/* Mark cart as recovered */}
       <CartRecoveryHandler orderId={order.id} />
       
-      {/* Funnel analytics tracking */}
+      {/* Funnel analytics tracking (+ GA4 purchase + Enhanced Conversions) */}
       <PurchaseTracker 
         orderId={order.id}
         cartValue={totals.total}
@@ -245,6 +245,26 @@ export default async function CheckoutSuccessPage({
         discountAmount={snapshot.discount?.amount}
         discountType={snapshot.discount?.type}
         isFirstOrder={snapshot.discount?.type === 'first_order'}
+        tax={totals.tax}
+        items={lines.map((l) => ({
+          item_id: (l.meta?.sku as string) || l.name,
+          item_name: l.name,
+          item_brand: (l.meta?.brand as string) || undefined,
+          item_category: (l.meta?.cartType as string) || undefined,
+          price: l.unitPriceUsd,
+          quantity: l.qty,
+        }))}
+        userData={{
+          email: customer.email,
+          phone: customer.phone,
+          firstName: customer.firstName,
+          lastName: customer.lastName,
+          street: snapshot.shippingAddress?.address1,
+          city: snapshot.shippingAddress?.city,
+          region: snapshot.shippingAddress?.state,
+          postalCode: snapshot.shippingAddress?.zip,
+          country: "US",
+        }}
       />
       
       {/* Google Ads conversion tracking */}

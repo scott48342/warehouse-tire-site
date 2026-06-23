@@ -27,6 +27,7 @@ import {
   trackAddShippingInfo, 
   trackAddPaymentInfo 
 } from "@/components/FunnelTracker";
+import { ga4BeginCheckout } from "@/lib/ga4";
 
 /**
  * Checkout Page
@@ -124,8 +125,26 @@ export default function CheckoutPage() {
     if (items.length > 0) {
       checkoutTracked.current = true;
       trackBeginCheckout(cartTotal);
+
+      // GA4 standard ecommerce event (additive; no-ops without gtag)
+      ga4BeginCheckout({
+        value: cartTotal,
+        items: items
+          .filter((it) => it.type === "tire" || it.type === "wheel")
+          .map((it) => {
+            const ti = it as { sku: string; brand?: string; model?: string; unitPrice: number; quantity: number; type: string };
+            return {
+              item_id: ti.sku,
+              item_name: `${ti.brand ?? ""} ${ti.model ?? ""}`.trim() || ti.sku,
+              item_brand: ti.brand,
+              item_category: ti.type,
+              price: ti.unitPrice,
+              quantity: ti.quantity,
+            };
+          }),
+      });
     }
-  }, [isHydrated, items.length, cartTotal]);
+  }, [isHydrated, items, cartTotal]);
   
   // ═══════════════════════════════════════════════════════════════════════════
   // CHECKOUT STATE PERSISTENCE

@@ -13,6 +13,7 @@
 import { useEffect, useRef } from "react";
 import { trackProductView } from "./FunnelTracker";
 import { clarityEvent, claritySetTag } from "./MicrosoftClarity";
+import { ga4ViewItem } from "@/lib/ga4";
 
 interface ProductViewTrackerProps {
   sku: string;
@@ -22,9 +23,13 @@ interface ProductViewTrackerProps {
     make?: string;
     model?: string;
   };
+  /** Optional product details for GA4 view_item (additive; safe to omit). */
+  name?: string;
+  brand?: string;
+  price?: number;
 }
 
-export function ProductViewTracker({ sku, type, vehicle }: ProductViewTrackerProps) {
+export function ProductViewTracker({ sku, type, vehicle, name, brand, price }: ProductViewTrackerProps) {
   const tracked = useRef(false);
   
   useEffect(() => {
@@ -32,6 +37,19 @@ export function ProductViewTracker({ sku, type, vehicle }: ProductViewTrackerPro
     tracked.current = true;
     
     trackProductView(sku, type, vehicle);
+
+    // GA4 standard ecommerce event (additive; no-ops without gtag)
+    ga4ViewItem({
+      item: {
+        item_id: sku,
+        item_name: name,
+        item_brand: brand,
+        item_category: type,
+        price: typeof price === "number" ? price : undefined,
+        quantity: 1,
+      },
+      value: typeof price === "number" ? price : undefined,
+    });
     
     // Microsoft Clarity tracking - tag session for filtering
     clarityEvent(`product_view_${type}`);
