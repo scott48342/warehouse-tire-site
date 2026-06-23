@@ -106,7 +106,7 @@ export function LocalTireAddButton({
           <div className="flex justify-between gap-2 text-neutral-600"><span className="truncate">Tires ({quantity}×${unitPrice.toFixed(2)})</span><span className="flex-shrink-0">${breakdown.tiresTotal.toFixed(2)}</span></div>
           <div className="flex justify-between gap-2 text-neutral-600"><span>Install</span><span className="flex-shrink-0">${breakdown.installTotal.toFixed(2)}</span></div>
           <div className="flex justify-between gap-2 text-neutral-600"><span>Tax</span><span className="flex-shrink-0">${breakdown.taxTotal.toFixed(2)}</span></div>
-          <div className="flex justify-between gap-2 text-neutral-600"><span>Fees</span><span className="flex-shrink-0">${breakdown.recyclingTotal.toFixed(2)}</span></div>
+          <div className="flex justify-between gap-2 text-neutral-600"><span>Disposal</span><span className="flex-shrink-0">${breakdown.recyclingTotal.toFixed(2)}</span></div>
         </div>
         <div className="flex justify-between gap-2 font-bold text-green-800 border-t border-green-200 pt-1.5 mt-1.5">
           <span>Out the Door</span>

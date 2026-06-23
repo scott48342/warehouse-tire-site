@@ -52,6 +52,7 @@ export function AddTiresToCartButton({
   source,
 }: AddTiresToCartButtonProps) {
   const { addItem } = useCart();
+  const { isLocal } = useShopContext();
   const [isAdding, setIsAdding] = useState(false);
 
   const handleAddToCart = () => {
@@ -81,7 +82,10 @@ export function AddTiresToCartButton({
     }, 150);
   };
 
-  const total = unitPrice * quantity;
+  // In local mode the button reflects the out-the-door total (install + tax + fees)
+  // so the price doesn't jump when the item lands in the cart.
+  const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity) : unitPrice * quantity;
+  const otdSuffix = isLocal ? " out the door" : "";
 
   const baseStyles = {
     primary: "flex h-12 items-center justify-center rounded-2xl px-5 text-sm font-extrabold bg-gradient-to-b from-red-500 to-red-600 text-white hover:from-red-500 hover:to-red-700 hover:brightness-105 active:scale-[0.98] transition-all duration-250 ease-out shadow-md shadow-red-600/20 hover:shadow-lg hover:shadow-red-600/30 hover:scale-[1.015]",
@@ -125,7 +129,7 @@ export function AddTiresToCartButton({
       ) : (
         <span>
           {showPriceInButton && Number.isFinite(total) && total > 0 
-            ? `Add Set of ${quantity} — $${total.toFixed(2)}`
+            ? `Add Set of ${quantity} — $${total.toFixed(2)}${otdSuffix}`
             : `Add Set of ${quantity} to Cart`
           }
         </span>

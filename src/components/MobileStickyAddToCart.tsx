@@ -9,6 +9,8 @@
 
 import { useState } from "react";
 import { useCart, type CartTireItem, type CartWheelItem } from "@/lib/cart/CartContext";
+import { useShopContext } from "@/contexts/ShopContextProvider";
+import { getOutTheDoorTotal } from "@/lib/localPricing";
 
 interface TireProps {
   type: "tire";
@@ -61,6 +63,7 @@ function fmtMoney(v: number) {
 
 export function MobileStickyAddToCart(props: MobileStickyAddToCartProps) {
   const { addItem } = useCart();
+  const { isLocal } = useShopContext();
   const [isAdding, setIsAdding] = useState(false);
   
   const quantity = props.quantity || (props.type === "tire" ? 4 : 4);
@@ -115,7 +118,10 @@ export function MobileStickyAddToCart(props: MobileStickyAddToCartProps) {
   
   if (!hasPrice) return null;
   
-  const total = props.unitPrice * quantity;
+  // Local tire orders include install/tax/fees — show out-the-door so the cart total
+  // matches what's on screen and there's no sticker shock.
+  const isLocalTire = isLocal && props.type === "tire";
+  const total = isLocalTire ? getOutTheDoorTotal(props.unitPrice, quantity) : props.unitPrice * quantity;
   const label = props.type === "tire" ? "per tire" : "per wheel";
 
   return (
@@ -141,7 +147,7 @@ export function MobileStickyAddToCart(props: MobileStickyAddToCartProps) {
               Adding...
             </span>
           ) : (
-            <>Add {quantity} — {fmtMoney(total)}</>
+            <>Add {quantity} — {fmtMoney(total)}{isLocalTire ? " OTD" : ""}</>
           )}
         </button>
       </div>

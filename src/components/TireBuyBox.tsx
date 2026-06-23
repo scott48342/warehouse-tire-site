@@ -7,6 +7,7 @@ import { FinancingBadge } from "./FinancingBadge";
 import { EnhancedTrustStrip } from "./TirePDPEnhancements";
 import { InstallTimeIndicator } from "./InstallTimeIndicator";
 import { useShopContext } from "@/contexts/ShopContextProvider";
+import { getOutTheDoorBreakdown } from "@/lib/localPricing";
 
 type TireBuyBoxProps = {
   sku: string;
@@ -58,6 +59,8 @@ export function TireBuyBox({
   const { isLocal } = useShopContext();
   const hasPrice = unitPrice != null && unitPrice > 0;
   const total = hasPrice ? unitPrice * quantity : 0;
+  // Local mode shows the full out-the-door breakdown so the cart total isn't a surprise
+  const otd = hasPrice && isLocal ? getOutTheDoorBreakdown(unitPrice, quantity) : null;
 
   return (
     <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
@@ -86,7 +89,7 @@ export function TireBuyBox({
         )}
       </div>
       
-      {hasPrice && (
+      {hasPrice && !isLocal && (
         <div className="mt-1 text-sm text-neutral-600">
           {quantity === 1 ? (
             <span>Single tire</span>
@@ -97,10 +100,36 @@ export function TireBuyBox({
           )}
         </div>
       )}
+
+      {/* Local mode: out-the-door breakdown (matches desktop, prevents cart sticker shock) */}
+      {hasPrice && isLocal && otd && (
+        <div className="mt-3 rounded-xl border border-green-200 bg-white/70 p-3 text-sm">
+          <div className="flex items-center justify-between text-neutral-600">
+            <span>Tires ({quantity}×{fmtMoney(unitPrice)})</span>
+            <span className="font-medium text-neutral-800">{fmtMoney(otd.tiresTotal)}</span>
+          </div>
+          <div className="mt-1 flex items-center justify-between text-neutral-600">
+            <span>Install</span>
+            <span className="font-medium text-neutral-800">{fmtMoney(otd.installTotal)}</span>
+          </div>
+          <div className="mt-1 flex items-center justify-between text-neutral-600">
+            <span>Tax</span>
+            <span className="font-medium text-neutral-800">{fmtMoney(otd.taxTotal)}</span>
+          </div>
+          <div className="mt-1 flex items-center justify-between text-neutral-600">
+            <span>Disposal</span>
+            <span className="font-medium text-neutral-800">{fmtMoney(otd.recyclingTotal)}</span>
+          </div>
+          <div className="mt-2 flex items-center justify-between border-t border-green-200 pt-2 text-base font-extrabold text-green-800">
+            <span>Out the Door</span>
+            <span>{fmtMoney(otd.outTheDoorTotal)}</span>
+          </div>
+        </div>
+      )}
       
       {/* Financing option - shows when total is $50-$30k */}
-      {hasPrice && total >= 50 && (
-        <FinancingBadge price={total} className="mt-2" />
+      {hasPrice && (isLocal && otd ? otd.outTheDoorTotal : total) >= 50 && (
+        <FinancingBadge price={isLocal && otd ? otd.outTheDoorTotal : total} className="mt-2" />
       )}
 
       <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>

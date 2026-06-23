@@ -605,7 +605,7 @@ export function CartSlideout() {
                   <span className="text-neutral-900">${localBreakdown.installTotal.toFixed(2)}</span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-neutral-600">Tire Recycling</span>
+                  <span className="text-neutral-600">Disposal</span>
                   <span className="text-neutral-900">${localBreakdown.recyclingTotal.toFixed(2)}</span>
                 </div>
                 <div className="flex items-center justify-between text-sm">

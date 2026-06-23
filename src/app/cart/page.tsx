@@ -642,7 +642,7 @@ export default function CartPage() {
                             <span className="font-semibold text-neutral-900">${laborFee.toFixed(2)}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-neutral-600">Tire recycling fee</span>
+                            <span className="text-neutral-600">Disposal</span>
                             <span className="font-semibold text-neutral-900">${recyclingFee.toFixed(2)}</span>
                           </div>
                         </>

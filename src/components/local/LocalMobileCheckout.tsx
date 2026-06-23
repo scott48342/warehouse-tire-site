@@ -250,7 +250,7 @@ function CollapsibleOrderSummary({
             <span className="text-neutral-900">${installFees.toFixed(2)}</span>
           </div>
           <div className="flex justify-between text-sm">
-            <span className="text-neutral-600">Tire recycling</span>
+            <span className="text-neutral-600">Disposal</span>
             <span className="text-neutral-900">${disposalFees.toFixed(2)}</span>
           </div>
           <div className="flex justify-between text-sm">
