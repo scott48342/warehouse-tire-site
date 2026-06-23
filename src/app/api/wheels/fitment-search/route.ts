@@ -3079,6 +3079,39 @@ async function handleDbFirstWheelResults(opts: {
     // Sort applied flag (helps debug if sorting is working)
     sortApplied: isPriceSorted ? sortParam : 'default',
     // Debug SKU trace (only when debugSku param is provided)
+    // ─── Wheel-1 preview: surface ALL fitment-valid Wheel-1 items separately ─────────────
+    // When preview is active, the main results are WheelPros-dominated (by rank/volume).
+    // wheel1Preview surfaces all Wheel-1 fitment-valid items so admin can see them
+    // directly without paging through hundreds of WheelPros results.
+    // This field is ABSENT when preview is not active.
+    ...(isWheel1Preview ? {
+      wheel1Preview: rankedCandidates
+        .filter(item => (item.candidate as import('@/lib/wheel1/catalog').Wheel1Candidate)._supplier === 'wheel1')
+        .map(item => {
+          const c = item.candidate as import('@/lib/wheel1/catalog').Wheel1Candidate;
+          return {
+            sku:      c.sku,
+            supplier: 'wheel1',
+            title:    c.product_desc || c.sku,
+            brand:    c.brand_desc || c.brand_cd,
+            diameter: Number(c.diameter),
+            width:    Number(c.width),
+            offset:   Number(c.offset) || 0,
+            finish:   c.fancy_finish_desc,
+            msrp:     c._msrpNum,
+            mapPrice: c._mapNum,
+            // Computed sell price using the same pricing as WheelPros
+            sellPrice: getSafeWheelPrice(c),
+            images:   c.images || [],
+            fitmentClass: item.validation.fitmentClass,
+            score:    Math.round(item.score * 10) / 10,
+            w1Details: c._w1,
+          };
+        }),
+      wheel1PreviewCount: rankedCandidates.filter(
+        item => (item.candidate as import('@/lib/wheel1/catalog').Wheel1Candidate)._supplier === 'wheel1'
+      ).length,
+    } : {}),
     ...(debugSku && debugTrace.length > 0 ? { debugSkuTrace: { sku: debugSku, trace: debugTrace } } : {}),
   });
 }
