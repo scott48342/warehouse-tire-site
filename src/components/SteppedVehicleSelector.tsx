@@ -464,11 +464,16 @@ export function SteppedVehicleSelector({
       {step === "make" && (
         <div>
           <div className="text-xs font-extrabold text-neutral-900">Select Make</div>
-          <div className="mt-1 text-[11px] text-neutral-500">
-            {makesLoading ? "Loading makes…" : makes.length ? "" : "No makes found."}
-          </div>
+          {!makesLoading && !makes.length && (
+            <div className="mt-1 text-[11px] text-neutral-500">No makes found.</div>
+          )}
           <div className="mt-3 grid max-h-[360px] grid-cols-2 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-3">
-            {makes.map((m) => (
+            {makesLoading ? (
+              // Skeleton — prevents empty grid dead clicks during API fetch
+              Array.from({ length: 9 }).map((_, i) => (
+                <div key={i} className="rounded-2xl border border-neutral-100 bg-neutral-100 animate-pulse h-16" />
+              ))
+            ) : makes.map((m) => (
               <button
                 key={m}
                 type="button"
@@ -500,11 +505,16 @@ export function SteppedVehicleSelector({
       {step === "model" && (
         <div>
           <div className="text-xs font-extrabold text-neutral-900">Select Model</div>
-          <div className="mt-1 text-[11px] text-neutral-500">
-            {modelsLoading ? "Loading models…" : models.length ? "" : "No models found."}
-          </div>
+          {!modelsLoading && !models.length && (
+            <div className="mt-1 text-[11px] text-neutral-500">No models found.</div>
+          )}
           <div className="mt-3 grid max-h-[360px] grid-cols-2 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-3">
-            {models.map((m) => (
+            {modelsLoading ? (
+              // Skeleton — prevents empty grid dead clicks during API fetch
+              Array.from({ length: 9 }).map((_, i) => (
+                <div key={i} className="rounded-2xl border border-neutral-100 bg-neutral-100 animate-pulse h-10" />
+              ))
+            ) : models.map((m) => (
               <button
                 key={m}
                 type="button"
@@ -530,25 +540,33 @@ export function SteppedVehicleSelector({
       {step === "trim" && (
         <div>
           <div className="text-xs font-extrabold text-neutral-900">Select Trim</div>
-          <div className="mt-1 text-[11px] text-neutral-500">
-            {trimsLoading ? "Loading trims…" : trims.length ? "" : "No trims found."}
-          </div>
+          {/* Prominent checking-fitment banner — shows while wheelDiametersLoading to prevent re-click dead clicks */}
+          {wheelDiametersLoading && (
+            <div className="mt-2 flex items-center gap-2 rounded-lg bg-blue-50 border border-blue-100 px-3 py-2 text-sm text-blue-700">
+              <svg className="w-4 h-4 animate-spin flex-shrink-0" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+              </svg>
+              Checking fitment for your trim…
+            </div>
+          )}
           <div className="mt-3 grid max-h-[360px] grid-cols-1 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-2">
-            {trims.map((t) => (
+            {trimsLoading ? (
+              // Skeleton — prevents empty grid dead clicks during API fetch
+              Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="rounded-2xl border border-neutral-100 bg-neutral-100 animate-pulse h-12" />
+              ))
+            ) : trims.map((t) => (
               <button
                 key={t.value}
                 type="button"
                 onClick={() => handleTrimSelect(t)}
-                className="rounded-2xl border border-neutral-200 bg-white p-3 text-left hover:bg-neutral-50"
+                disabled={wheelDiametersLoading}
+                className="rounded-2xl border border-neutral-200 bg-white p-3 text-left hover:bg-neutral-50 disabled:opacity-50 disabled:cursor-wait"
               >
                 <div className="text-sm font-extrabold text-neutral-900">{t.label}</div>
               </button>
             ))}
-            {wheelDiametersLoading && (
-              <div className="col-span-full flex items-center justify-center py-4">
-                <div className="text-sm text-neutral-500">Checking wheel options...</div>
-              </div>
-            )}
             {!trimsLoading && !trims.length && !wheelDiametersLoading && (
               <div className="col-span-full rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700">
                 <div className="font-extrabold text-neutral-900">No trim list available.</div>

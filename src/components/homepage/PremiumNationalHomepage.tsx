@@ -223,7 +223,13 @@ function VehicleSelectorSection() {
   const [intent, setIntent] = useState<ShoppingIntent>("tires");
   const [tab, setTab] = useState<"vehicle" | "size">("vehicle");
   const [sizeFormat, setSizeFormat] = useState<"metric" | "flotation">("metric");
-  
+
+  // If user switches away from tires, reset tab to "vehicle" — prevents the size form
+  // from ghost-rendering while the size tab is hidden (dead click / form desync fix).
+  useEffect(() => {
+    if (intent !== "tires") setTab("vehicle");
+  }, [intent]);
+
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
   const [model, setModel] = useState("");
@@ -478,22 +484,43 @@ function VehicleSelectorSection() {
                 </div>
                 <div className="flex-1 min-w-[130px]">
                   <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Make</label>
-                  <select value={make} onChange={(e) => setMake(e.target.value)} disabled={!year} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Select Make</option>
+                  <select
+                    value={make}
+                    onChange={(e) => setMake(e.target.value)}
+                    disabled={!year}
+                    title={!year ? "Select a year first" : undefined}
+                    aria-label={!year ? "Make — select a year first" : "Make"}
+                    className={`${selectClass} w-full disabled:opacity-40 disabled:cursor-not-allowed`}
+                  >
+                    <option value="">{!year ? "← Select Year first" : "Select Make"}</option>
                     {makes.map(m => <option key={m} value={m}>{m}</option>)}
                   </select>
                 </div>
                 <div className="flex-1 min-w-[130px]">
                   <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Model</label>
-                  <select value={model} onChange={(e) => setModel(e.target.value)} disabled={!make} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Select Model</option>
+                  <select
+                    value={model}
+                    onChange={(e) => setModel(e.target.value)}
+                    disabled={!make}
+                    title={!make ? "Select a make first" : undefined}
+                    aria-label={!make ? "Model — select a make first" : "Model"}
+                    className={`${selectClass} w-full disabled:opacity-40 disabled:cursor-not-allowed`}
+                  >
+                    <option value="">{!make ? "← Select Make first" : "Select Model"}</option>
                     {models.map(m => <option key={m} value={m}>{m}</option>)}
                   </select>
                 </div>
                 <div className="flex-1 min-w-[130px]">
                   <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Trim (Optional)</label>
-                  <select value={trim} onChange={(e) => setTrim(e.target.value)} disabled={!model} className={`${selectClass} w-full disabled:opacity-40`}>
-                    <option value="">Select Trim</option>
+                  <select
+                    value={trim}
+                    onChange={(e) => setTrim(e.target.value)}
+                    disabled={!model}
+                    title={!model ? "Select a model first" : undefined}
+                    aria-label={!model ? "Trim — select a model first" : "Trim (optional)"}
+                    className={`${selectClass} w-full disabled:opacity-40 disabled:cursor-not-allowed`}
+                  >
+                    <option value="">{!model ? "← Select Model first" : "Select Trim (Optional)"}</option>
                     {trims.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
                   </select>
                 </div>
@@ -542,15 +569,15 @@ function VehicleSelectorSection() {
                     </div>
                     <div className="flex-1 min-w-[100px]">
                       <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Aspect Ratio</label>
-                      <select value={aspect} onChange={(e) => setAspect(e.target.value)} disabled={!width} className={`${selectClass} w-full disabled:opacity-40`}>
-                        <option value="">Aspect</option>
+                      <select value={aspect} onChange={(e) => setAspect(e.target.value)} disabled={!width} title={!width ? "Select width first" : undefined} className={`${selectClass} w-full disabled:opacity-40 disabled:cursor-not-allowed`}>
+                        <option value="">{!width ? "← Select Width first" : "Aspect"}</option>
                         {aspectOptions.map(a => <option key={a} value={a}>{a}</option>)}
                       </select>
                     </div>
                     <div className="flex-1 min-w-[100px]">
                       <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Rim Diameter</label>
-                      <select value={rim} onChange={(e) => setRim(e.target.value)} disabled={!aspect} className={`${selectClass} w-full disabled:opacity-40`}>
-                        <option value="">Rim</option>
+                      <select value={rim} onChange={(e) => setRim(e.target.value)} disabled={!aspect} title={!aspect ? "Select aspect ratio first" : undefined} className={`${selectClass} w-full disabled:opacity-40 disabled:cursor-not-allowed`}>
+                        <option value="">{!aspect ? "← Select Aspect first" : "Rim"}</option>
                         {rimOptions.map(r => <option key={r} value={r}>{r}</option>)}
                       </select>
                     </div>
@@ -863,9 +890,10 @@ export function PremiumNationalHomepage() {
   return (
     <div className="bg-[#050505] min-h-screen">
       <TrustBar />
-      {/* Personalized section for returning customers with saved vehicle */}
-      <PersonalizedVehicleSection />
       <HeroSection />
+      {/* Personalized section for returning customers — placed AFTER hero so that
+          client-side localStorage load doesn't shift above-the-fold content (CLS fix). */}
+      <PersonalizedVehicleSection />
       <VehicleSelectorSection />
       <JakeHomepageSection />
       <ShopByVehicleType />
