@@ -1603,7 +1603,7 @@ async function handleDbFirstWheelResults(opts: {
   // ─── Wheel-1 preview supplier (admin/preview only) ────────────────────────
   // isWheel1Preview is true ONLY when ?preview_suppliers=wheel1 or x-wtd-preview:wheel1
   // is present. Zero public exposure until inventory + cost feeds are wired.
-  const isWheel1Preview = isWheel1PreviewEnabled(new Request(url.toString()));
+  const isWheel1Preview = (url.searchParams.get('preview_suppliers') || '').toLowerCase().includes('wheel1');
 
   const [techfeedCandidates, wheel1Candidates] = await Promise.all([
     getTechfeedCandidatesByBoltPattern(opts.boltPattern),
