@@ -1907,7 +1907,7 @@ async function handleDbFirstWheelResults(opts: {
         inventoryData.set(c.sku, {
           sku:           c.sku,
           inventoryType: "ST",   // passes ORDERABLE_TYPES filter
-          totalQty:      4,      // passes MIN_INVENTORY_QTY=4 filter
+          totalQty:      20,     // in_stock tier (+40 pts) to compete with WheelPros
           mapPrice:      c._mapNum ?? null,
           msrp:          c._msrpNum ?? null,
           cachedAt:      Date.now(),
@@ -1978,7 +1978,13 @@ async function handleDbFirstWheelResults(opts: {
   
   // Brand tiers for scoring
   const TIER_1_BRANDS = new Set(["FM", "FT", "MO", "XD", "KM", "RC", "AR"]); // Fuel, Moto Metal, XD, KMC, Raceline, American Racing
-  const TIER_2_BRANDS = new Set(["HE", "VF", "PR", "LE", "DC", "NC", "UC", "OC", "AC", "TU"]); // Helo, Vision, Pro Comp, Level 8, Dick Cepek, Niche, Ultra, Ouray, ATX, Tuff
+  const TIER_2_BRANDS = new Set([
+    // WheelPros brands
+    "HE", "VF", "PR", "LE", "DC", "NC", "UC", "OC", "AC", "TU",
+    // Wheel-1 brands (brand_cd = brand.toUpperCase().replace(/\s+/g,''))
+    "MAYHEM", "TOUREN", "IONALLOY", "CALIOFF-ROAD", "RIDLER",
+    "DIRTYLIFE", "KRAZE", "AMERICANTRUXX", "TUFFSTUFF", "MAZZI", "DL",
+  ]);
   
   // Popular finish keywords for visual boost
   const PREMIUM_FINISHES = ["BLACK", "MATTE BLACK", "GLOSS BLACK", "MACHINED", "MILLED", "BRONZE", "GUNMETAL"];
