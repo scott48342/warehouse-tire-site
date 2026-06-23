@@ -1893,12 +1893,11 @@ async function handleDbFirstWheelResults(opts: {
   const inventoryData = await getInventoryBulk(allSkus);
   timing.cachedAvailabilityMs = Date.now() - tAvail0;
 
-  // ─── Wheel-1 preview: inject synthetic inventory records ────────────────────────────
-  // Wheel-1 SKUs are not in the WheelPros SFTP feed, so getInventoryBulk returns
-  // nothing for them. We inject a synthetic record (qty=4) so they score and rank
-  // alongside WheelPros products. Real inventory replaces this when the SFTP feed
-  // is wired (Phase 3 of Wheel-1 integration).
-  if (isWheel1Preview && wheel1Candidates.length > 0) {
+  // ─── Wheel-1: inject synthetic inventory records (always) ─────────────────────
+  // Wheel-1 SKUs are not in the WheelPros SFTP feed so getInventoryBulk returns
+  // nothing for them. Without this injection they are killed at the inventory
+  // filter (NOT in cache → EXCLUDED). Real feed replaces this in Phase 3.
+  if (wheel1Candidates.length > 0) {
     for (const c of wheel1Candidates) {
       if (!inventoryData.has(c.sku)) {
         // Use inventoryType="ST" (stocking) so the ORDERABLE_TYPES filter passes.
@@ -1978,13 +1977,14 @@ async function handleDbFirstWheelResults(opts: {
   
   // Brand tiers for scoring
   const TIER_1_BRANDS = new Set(["FM", "FT", "MO", "XD", "KM", "RC", "AR"]); // Fuel, Moto Metal, XD, KMC, Raceline, American Racing
-  const TIER_2_BRANDS = new Set([
-    // WheelPros brands
-    "HE", "VF", "PR", "LE", "DC", "NC", "UC", "OC", "AC", "TU",
-    // Wheel-1 brands (brand_cd = brand.toUpperCase().replace(/\s+/g,''))
+  const TIER_1_WHEEL1_BRANDS = new Set([
+    // Wheel-1 brands promoted to Tier 1 so they score on par with WheelPros
+    // and appear on page 1 via brand-diversification rules.
+    // (brand_cd = brand.toUpperCase().replace(/\s+/g,''))
     "MAYHEM", "TOUREN", "IONALLOY", "CALIOFF-ROAD", "RIDLER",
     "DIRTYLIFE", "KRAZE", "AMERICANTRUXX", "TUFFSTUFF", "MAZZI", "DL",
   ]);
+  const TIER_2_BRANDS = new Set(["HE", "VF", "PR", "LE", "DC", "NC", "UC", "OC", "AC", "TU"]);
   
   // Popular finish keywords for visual boost
   const PREMIUM_FINISHES = ["BLACK", "MATTE BLACK", "GLOSS BLACK", "MACHINED", "MILLED", "BRONZE", "GUNMETAL"];
@@ -2051,7 +2051,7 @@ async function handleDbFirstWheelResults(opts: {
     // 2. Brand Tier Score (0-100, weight: 20%)
     let brandTierScore = 50; // default for unknown brands
     const brandCode = (c.brand_cd || "").toUpperCase();
-    if (TIER_1_BRANDS.has(brandCode)) brandTierScore = 100;
+    if (TIER_1_BRANDS.has(brandCode) || TIER_1_WHEEL1_BRANDS.has(brandCode)) brandTierScore = 100;
     else if (TIER_2_BRANDS.has(brandCode)) brandTierScore = 75;
     
     // 3. Fitment Quality Score (0-100, weight: 20%)
