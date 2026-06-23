@@ -7,6 +7,8 @@ import {
   // buildFitmentProfileFromNewTable,
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
+// Wheel-1 preview supplier (admin/preview only — not public)
+import { getWheel1CandidatesByBoltPattern, isWheel1PreviewEnabled } from "@/lib/wheel1/catalog";
 // DEPRECATED: getModelVariants - now encapsulated in resolveUniversalFitment
 // import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 
@@ -1597,11 +1599,29 @@ async function handleDbFirstWheelResults(opts: {
   
   // Log the bolt pattern being searched (critical for debugging DRW issues)
   console.log(`[fitment-search] 🔍 SEARCHING: boltPattern=${opts.boltPattern}, rearWheelConfig=${opts.rearWheelConfig || 'n/a'}`);
-  
-  const candidates = await getTechfeedCandidatesByBoltPattern(opts.boltPattern);
+
+  // ─── Wheel-1 preview supplier (admin/preview only) ────────────────────────
+  // isWheel1Preview is true ONLY when ?preview_suppliers=wheel1 or x-wtd-preview:wheel1
+  // is present. Zero public exposure until inventory + cost feeds are wired.
+  const isWheel1Preview = isWheel1PreviewEnabled(new Request(url.toString()));
+
+  const [techfeedCandidates, wheel1Candidates] = await Promise.all([
+    getTechfeedCandidatesByBoltPattern(opts.boltPattern),
+    isWheel1Preview ? getWheel1CandidatesByBoltPattern(opts.boltPattern) : Promise.resolve([]),
+  ]);
+
+  // Merge: WheelPros/techfeed candidates first, then Wheel-1 appended
+  const candidates = isWheel1Preview
+    ? [...techfeedCandidates, ...wheel1Candidates]
+    : techfeedCandidates;
+
+  if (isWheel1Preview && wheel1Candidates.length > 0) {
+    console.log(`[fitment-search] 🔶 WHEEL-1 PREVIEW: ${wheel1Candidates.length} candidates added (bp=${opts.boltPattern})`);
+  }
+
   timing.candidatesDbMs = Date.now() - tCandidates0;
   
-  console.log(`[fitment-search] 📦 Found ${candidates.length} candidates with bolt pattern ${opts.boltPattern}`);
+  console.log(`[fitment-search] 📦 Found ${techfeedCandidates.length} WheelPros + ${wheel1Candidates.length} Wheel-1 candidates (bp=${opts.boltPattern})`);
   
   // Debug specific SKU tracing
   const debugSku = url.searchParams.get("debugSku");
@@ -1875,6 +1895,27 @@ async function handleDbFirstWheelResults(opts: {
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
   const inventoryData = await getInventoryBulk(allSkus);
   timing.cachedAvailabilityMs = Date.now() - tAvail0;
+
+  // ─── Wheel-1 preview: inject synthetic inventory records ────────────────────────────
+  // Wheel-1 SKUs are not in the WheelPros SFTP feed, so getInventoryBulk returns
+  // nothing for them. We inject a synthetic record (qty=4) so they score and rank
+  // alongside WheelPros products. Real inventory replaces this when the SFTP feed
+  // is wired (Phase 3 of Wheel-1 integration).
+  if (isWheel1Preview && wheel1Candidates.length > 0) {
+    for (const c of wheel1Candidates) {
+      if (!inventoryData.has(c.sku)) {
+        inventoryData.set(c.sku, {
+          sku:           c.sku,
+          inventoryType: "WHEEL1_PREVIEW",
+          totalQty:      4,
+          mapPrice:      c._mapNum ?? null,
+          msrp:          c._msrpNum ?? null,
+          cachedAt:      Date.now(),
+        } as CachedInventory);
+      }
+    }
+  }
+
   timing.cachedAvailabilityHits = inventoryData.size;
   timing.totalFitmentValid = fitmentValidCandidates.length;
   
@@ -2746,6 +2787,15 @@ async function handleDbFirstWheelResults(opts: {
           },
         };
       })() : undefined,
+      // ─── Supplier tag (Wheel-1 preview) ────────────────────────────────────
+      ...(c._supplier === 'wheel1' ? {
+        supplier: 'wheel1',
+        _previewSupplier: true,
+        // Extra Wheel-1 data for admin/PDP use
+        w1Details: (c as import('@/lib/wheel1/catalog').Wheel1Candidate)._w1,
+      } : {
+        supplier: 'wheelpros',
+      }),
     };
   });
 

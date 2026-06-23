@@ -28,6 +28,12 @@ export type TechfeedWheel = {
   map_price?: string;
 
   images?: string[];
+
+  /**
+   * Supplier tag injected by third-party catalog modules (e.g., Wheel-1).
+   * Absent on all standard WheelPros/techfeed entries.
+   */
+  _supplier?: string;
 };
 
 type WheelsBySkuFile = {
