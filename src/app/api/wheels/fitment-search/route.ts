@@ -1904,10 +1904,13 @@ async function handleDbFirstWheelResults(opts: {
   if (isWheel1Preview && wheel1Candidates.length > 0) {
     for (const c of wheel1Candidates) {
       if (!inventoryData.has(c.sku)) {
+        // Use inventoryType="ST" (stocking) so the ORDERABLE_TYPES filter passes.
+        // qty=4 = minimum set-of-four threshold.
+        // Real inventory replaces this when the Wheel-1 SFTP feed is wired.
         inventoryData.set(c.sku, {
           sku:           c.sku,
-          inventoryType: "WHEEL1_PREVIEW",
-          totalQty:      4,
+          inventoryType: "ST",   // passes ORDERABLE_TYPES filter
+          totalQty:      4,      // passes MIN_INVENTORY_QTY=4 filter
           mapPrice:      c._mapNum ?? null,
           msrp:          c._msrpNum ?? null,
           cachedAt:      Date.now(),
