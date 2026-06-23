@@ -169,24 +169,28 @@ export default async function VehicleTiresPage({
         <section className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             
-            {/* Recommended Packages - Package-first experience */}
-            <div className="mb-8">
-              <RecommendedPackages
-                year={Number(vehicle.year)}
-                make={vehicle.make}
-                model={vehicle.model}
-                maxPackages={4}
-                showTitle={true}
-              />
-            </div>
-            
-            {/* Client-side Trim Selector */}
+            {/* TIRE INTENT: lead with tire-only options (no package sticker shock). */}
             <VehicleTrimSelector
               year={String(vehicle.year)}
               make={vehicle.make}
               model={vehicle.model}
               productType="tires"
             />
+
+            {/* Packages demoted to a secondary upsell below the tire selector. */}
+            <div className="mt-10 mb-8">
+              <div className="mb-3 text-center">
+                <h2 className="text-xl font-bold text-gray-900">Want new wheels too?</h2>
+                <p className="text-sm text-gray-500">Save with a complete wheel &amp; tire package — mounted, balanced &amp; ready to install.</p>
+              </div>
+              <RecommendedPackages
+                year={Number(vehicle.year)}
+                make={vehicle.make}
+                model={vehicle.model}
+                maxPackages={4}
+                showTitle={false}
+              />
+            </div>
 
             {/* Why Choose Us */}
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">

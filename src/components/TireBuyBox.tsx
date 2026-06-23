@@ -8,6 +8,7 @@ import { EnhancedTrustStrip } from "./TirePDPEnhancements";
 import { InstallTimeIndicator } from "./InstallTimeIndicator";
 import { useShopContext } from "@/contexts/ShopContextProvider";
 import { getOutTheDoorBreakdown } from "@/lib/localPricing";
+import { ProductTrustBlock } from "@/components/trust/TrustSignals";
 
 type TireBuyBoxProps = {
   sku: string;
@@ -171,6 +172,9 @@ export function TireBuyBox({
       
       {/* Compact trust line */}
       <EnhancedTrustStrip hasVehicle={hasVehicle} hasWarranty={hasWarranty} />
+
+      {/* Social proof + guarantees right at the decision point */}
+      <ProductTrustBlock className="mt-3" />
     </div>
   );
 }

@@ -12,6 +12,7 @@ import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
 import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
 import { CheckoutTrustStrip } from "@/components/StoreReviews";
+import { CheckoutTrustBadges } from "@/components/trust/TrustSignals";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 import { RoadHazardProtection } from "@/components/RoadHazardProtection";
 import { useShopContext, LocalOnly } from "@/contexts/ShopContextProvider";
@@ -1283,10 +1284,7 @@ export default function CheckoutPage() {
 
             {/* Minimal trust line - LOCAL (conversion content moved to left column) */}
             {isLocal ? (
-              <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-neutral-500 py-2">
-                <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Secure checkout</span>
-                <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Guaranteed fitment</span>
-              </div>
+              <CheckoutTrustBadges className="py-2" />
             ) : (
               <>
                 {/* National Mode: Keep existing trust strip */}

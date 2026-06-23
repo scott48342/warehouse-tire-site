@@ -7,6 +7,7 @@ import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
+import { CartTrustModule } from "@/components/trust/TrustSignals";
 import { ShippingEstimator, FreeShippingProgress } from "@/components/ShippingEstimate";
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
@@ -671,7 +672,10 @@ export default function CartPage() {
                 />
               )}
 
-              <div className="mt-5 space-y-3">
+              {/* Social proof right at the decision point */}
+              <CartTrustModule className="mt-5" />
+
+              <div className="mt-4 space-y-3">
                 <Link
                   href={isLocal ? "/checkout?mode=local" : "/checkout"}
                   className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"

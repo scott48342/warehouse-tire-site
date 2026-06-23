@@ -16,6 +16,7 @@ import { MicrosoftClarity } from "@/components/MicrosoftClarity";
 import { Analytics } from "@/components/Analytics";
 import { FunnelTracker } from "@/components/FunnelTracker";
 import { GarageVehicleMemorySync } from "@/components/garage/GarageVehicleMemorySync";
+import { OrganizationJsonLd } from "@/components/trust/TrustJsonLd";
 // import { Chatwoot } from "@/components/Chatwoot"; // Disabled temporarily
 import { Suspense } from "react";
 
@@ -79,6 +80,7 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
         <MicrosoftClarity />
+        <OrganizationJsonLd />
       </head>
       <body className={`${inter.variable} ${oswald.variable} ${bebasNeue.variable} antialiased flex min-h-screen flex-col`}>
         <ShopContextProvider>

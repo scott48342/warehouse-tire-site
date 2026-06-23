@@ -1,8 +1,8 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import WheelsPage from "@/app/wheels/page";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { getVehicleBySlug } from "@/lib/seo/getVehicleBySlug";
 
 export const runtime = "nodejs";
 
@@ -49,17 +49,20 @@ export default async function WheelsVehicleSlugPage({
     return WheelsPage({ searchParams: Promise.resolve(sp) });
   }
 
-  return (
-    <main className="bg-neutral-50">
-      <div className="mx-auto max-w-6xl px-4 py-8">
-        <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Wheels</h1>
-        <p className="mt-2 text-sm text-neutral-700">This link needs year/make/model parameters.</p>
-        <div className="mt-4">
-          <Link href="/wheels" className="text-sm font-extrabold text-neutral-900 hover:underline">
-            Go to Wheels
-          </Link>
-        </div>
-      </div>
-    </main>
-  );
+  // No query params: resolve year/make/model FROM THE SLUG so these canonical
+  // /wheels/v/<slug> URLs (indexed + shared) never dead-end with zero products.
+  const resolved = await getVehicleBySlug(slug);
+  if (resolved) {
+    const merged: Record<string, string | string[] | undefined> = {
+      ...sp,
+      year: resolved.year,
+      make: resolved.make,
+      model: resolved.model,
+    };
+    return WheelsPage({ searchParams: Promise.resolve(merged) });
+  }
+
+  // Slug couldn't be resolved to a real vehicle: send the visitor to the
+  // working wheel selector instead of stranding them on a dead-end page.
+  redirect("/wheels");
 }
