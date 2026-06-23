@@ -1600,23 +1600,20 @@ async function handleDbFirstWheelResults(opts: {
   // Log the bolt pattern being searched (critical for debugging DRW issues)
   console.log(`[fitment-search] 🔍 SEARCHING: boltPattern=${opts.boltPattern}, rearWheelConfig=${opts.rearWheelConfig || 'n/a'}`);
 
-  // ─── Wheel-1 preview supplier (admin/preview only) ────────────────────────
-  // isWheel1Preview is true ONLY when ?preview_suppliers=wheel1 or x-wtd-preview:wheel1
-  // is present. Zero public exposure until inventory + cost feeds are wired.
+  // ─── Wheel-1 supplier (live) ─────────────────────────────────────────────
+  // Always included in results. isWheel1Preview flag only controls whether the
+  // convenience wheel1Preview[] field appears in the response (admin use).
   const isWheel1Preview = (url.searchParams.get('preview_suppliers') || '').toLowerCase().includes('wheel1');
 
   const [techfeedCandidates, wheel1Candidates] = await Promise.all([
     getTechfeedCandidatesByBoltPattern(opts.boltPattern),
-    isWheel1Preview ? getWheel1CandidatesByBoltPattern(opts.boltPattern) : Promise.resolve([]),
+    getWheel1CandidatesByBoltPattern(opts.boltPattern),
   ]);
 
-  // Merge: WheelPros/techfeed candidates first, then Wheel-1 appended
-  const candidates = isWheel1Preview
-    ? [...techfeedCandidates, ...wheel1Candidates]
-    : techfeedCandidates;
+  const candidates = [...techfeedCandidates, ...wheel1Candidates];
 
-  if (isWheel1Preview && wheel1Candidates.length > 0) {
-    console.log(`[fitment-search] 🔶 WHEEL-1 PREVIEW: ${wheel1Candidates.length} candidates added (bp=${opts.boltPattern})`);
+  if (wheel1Candidates.length > 0) {
+    console.log(`[fitment-search] 🟢 Wheel-1: ${wheel1Candidates.length} candidates (bp=${opts.boltPattern})`);
   }
 
   timing.candidatesDbMs = Date.now() - tCandidates0;
