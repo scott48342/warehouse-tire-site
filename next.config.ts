@@ -107,6 +107,8 @@ const nextConfig: NextConfig = {
 
   // Allow external images from wheel/tire providers and stock photos
   images: {
+    // Cache optimized images for 24h (overrides Bynder CDN's 5-min cache-control)
+    minimumCacheTTL: 86400,
     remotePatterns: [
       {
         protocol: 'https',
@@ -154,6 +156,13 @@ const nextConfig: NextConfig = {
         // Vercel Blob storage for gallery images
         protocol: 'https',
         hostname: '**.public.blob.vercel-storage.com',
+      },
+      {
+        // Wheel-1 product images (Bynder CDN)
+        // Hosted on Bynder DAM; ~700KB PNGs served as WebP via Next.js optimization.
+        // minimumCacheTTL overrides Bynder's 5-min cache-control header.
+        protocol: 'https',
+        hostname: 'cdn.bfldr.com',
       },
       {
         // TireWeb tire images
