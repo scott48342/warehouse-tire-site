@@ -49,6 +49,9 @@ export interface WheelVariantInput {
     buildRequirement: "stock" | "level" | "lift-small" | "lift-large" | "may-trim";
     buildLabel: string;
   };
+  // Supplier metadata
+  supplier?: string;
+  freeShipping?: boolean;
 }
 
 export interface FinishOption {
@@ -82,7 +85,9 @@ export interface GroupedWheel {
   
   // Fitment guidance (2026-04-07)
   fitmentGuidance?: WheelVariantInput["fitmentGuidance"];
-  
+  supplier?: string;
+  freeShipping?: boolean;
+
   // Selected finish (for display)
   selectedFinish?: string;
   
@@ -412,6 +417,8 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       fitmentClass: bestFitmentClass,
       pair: defaultFinish?.pair || representative.pair,
       fitmentGuidance: bestFitmentGuidance,
+      supplier:     representative.supplier,
+      freeShipping: representative.freeShipping,
       selectedFinish: defaultFinish?.finish,
       finishOptions,
       finishThumbs: finishOptions, // Legacy compat
@@ -449,6 +456,8 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       fitmentClass: w.fitmentClass,
       pair: w.pair,
       fitmentGuidance: w.fitmentGuidance,
+      supplier:     w.supplier,
+      freeShipping: w.freeShipping,
       selectedFinish: w.finish,
       finishOptions: finishOption ? [finishOption] : [],
       finishThumbs: finishOption ? [finishOption] : [],
