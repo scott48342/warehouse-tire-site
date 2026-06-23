@@ -1041,6 +1041,8 @@ export default async function WheelsPage({
       fitmentClass,
       pair,
       fitmentGuidance,
+      supplier:     (it as any)?.supplier || undefined,
+      freeShipping: (it as any)?.freeShipping === true,
     };
   });
 
@@ -1070,6 +1072,8 @@ export default async function WheelsPage({
     pair: g.pair,
     finishThumbs: g.finishOptions,
     fitmentGuidance: g.fitmentGuidance,
+    supplier:     (g as any).supplier,
+    freeShipping: (g as any).freeShipping === true,
   }));
 
   // Sort by fitmentClass first (surefit > specfit > extended), then by user's sort preference

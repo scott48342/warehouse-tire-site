@@ -317,14 +317,14 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Brand - show 5 initially */}
+      {/* Brand - show ALL brands, scrollable container */}
       <AccordionSection
         title="Brand"
         defaultOpen
         selectedCount={data.brands.length}
       >
-        <div className="max-h-48 overflow-y-auto scroll-smooth">
-          {data.brandOptions.slice(0, 5).map((brand) => (
+        <div className="max-h-64 overflow-y-auto scroll-smooth">
+          {data.brandOptions.map((brand) => (
             <FilterCheckbox
               key={brand.code}
               label={brand.desc}
@@ -333,24 +333,6 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
               onChange={() => toggleArrayFilter("brand_cd", data.brands, brand.code)}
             />
           ))}
-          {data.brandOptions.length > 5 && (
-            <details className="mt-1">
-              <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
-                +{data.brandOptions.length - 5} more
-              </summary>
-              <div className="mt-1">
-                {data.brandOptions.slice(5).map((brand) => (
-                  <FilterCheckbox
-                    key={brand.code}
-                    label={brand.desc}
-                    checked={data.brands.includes(brand.code)}
-                    count={brand.count}
-                    onChange={() => toggleArrayFilter("brand_cd", data.brands, brand.code)}
-                  />
-                ))}
-              </div>
-            </details>
-          )}
         </div>
       </AccordionSection>
       
@@ -375,13 +357,9 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
           const filtered = (data.modelOptions || []).filter((opt) =>
             opt.value.toLowerCase().includes(modelSearch.toLowerCase())
           );
-          const showAll = modelSearch.length > 0; // Show all when searching
-          const displayModels = showAll ? filtered : filtered.slice(0, 5);
-          const hiddenCount = filtered.length - displayModels.length;
-          
           return (
-            <div className="max-h-48 overflow-y-auto scroll-smooth">
-              {displayModels.map((opt) => (
+            <div className="max-h-64 overflow-y-auto scroll-smooth">
+              {filtered.map((opt) => (
                 <FilterCheckbox
                   key={opt.value}
                   label={opt.value}
@@ -390,24 +368,6 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
                   onChange={() => toggleArrayFilter("style", data.models, opt.value)}
                 />
               ))}
-              {hiddenCount > 0 && !showAll && (
-                <details className="mt-1">
-                  <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
-                    +{hiddenCount} more
-                  </summary>
-                  <div className="mt-1">
-                    {filtered.slice(5).map((opt) => (
-                      <FilterCheckbox
-                        key={opt.value}
-                        label={opt.value}
-                        checked={data.models.includes(opt.value)}
-                        count={opt.count}
-                        onChange={() => toggleArrayFilter("style", data.models, opt.value)}
-                      />
-                    ))}
-                  </div>
-                </details>
-              )}
               {filtered.length === 0 && modelSearch && (
                 <div className="py-2 text-[11px] text-neutral-400 text-center">
                   No models match "{modelSearch}"
@@ -465,13 +425,13 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
         )}
       </AccordionSection>
       
-      {/* Finish - show 5 initially */}
+      {/* Finish - show all, scrollable */}
       <AccordionSection
         title="Finish"
         selectedCount={data.finishes.length}
       >
-        <div className="max-h-48 overflow-y-auto scroll-smooth">
-          {data.finishOptions.slice(0, 5).map((opt) => (
+        <div className="max-h-64 overflow-y-auto scroll-smooth">
+          {data.finishOptions.map((opt) => (
             <FilterCheckbox
               key={opt.value}
               label={opt.value}
@@ -480,24 +440,7 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
               onChange={() => toggleArrayFilter("finish", data.finishes, opt.value)}
             />
           ))}
-          {data.finishOptions.length > 5 && (
-            <details className="mt-1">
-              <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
-                +{data.finishOptions.length - 5} more
-              </summary>
-              <div className="mt-1">
-                {data.finishOptions.slice(5).map((opt) => (
-                  <FilterCheckbox
-                    key={opt.value}
-                    label={opt.value}
-                    checked={data.finishes.includes(opt.value)}
-                    count={opt.count}
-                    onChange={() => toggleArrayFilter("finish", data.finishes, opt.value)}
-                  />
-                ))}
-              </div>
-            </details>
-          )}
+
         </div>
       </AccordionSection>
       

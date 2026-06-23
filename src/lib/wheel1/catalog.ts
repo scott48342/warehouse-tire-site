@@ -184,6 +184,40 @@ function mapRowToCandidate(row: Wheel1Row): Wheel1Candidate {
 // ─── Public API ──────────────────────────────────────────────────────────────
 
 /**
+ * Compute the Wheel-1 sell price with shipping baked in.
+ *
+ * Formula:
+ *   adjusted_cost = (dealer_cost ?? msrp * 0.68) + (diameter_inches * $1.00)
+ *   sell_price    = max(adjusted_cost * 1.30, map_price)
+ *
+ * $1/inch shipping baked in so we can show "Free Shipping" on every Wheel-1
+ * card without taking a loss. MAP is always the hard floor — never violated.
+ * When dealer_cost is populated (from forthcoming Wheel-1 pricing feed) the
+ * formula automatically uses the real cost instead of the MSRP estimate.
+ */
+export function computeWheel1SellPrice(params: {
+  msrp:       number | null;
+  mapPrice:   number | null;
+  dealerCost: number | null;
+  diameter:   number;
+}): number {
+  const { msrp, mapPrice, dealerCost, diameter } = params;
+  const shipping = Math.max(0, diameter); // $1 per inch
+
+  // Cost: real dealer cost when available, otherwise estimate at 68% of MSRP
+  const baseCost = dealerCost ?? (msrp ? msrp * 0.68 : null);
+  if (!baseCost || baseCost <= 0) {
+    return mapPrice && mapPrice > 0 ? mapPrice : (msrp ?? 0);
+  }
+
+  const adjustedCost = baseCost + shipping;
+  const markupPrice  = Math.round(adjustedCost * 1.30 * 100) / 100;
+
+  // MAP floor — never sell below MAP
+  return mapPrice && mapPrice > 0 ? Math.max(markupPrice, mapPrice) : markupPrice;
+}
+
+/**
  * Return all active, non-discontinued Wheel-1 products matching the given
  * bolt pattern (matches pcd1 OR pcd2 for multi-fit wheels).
  *

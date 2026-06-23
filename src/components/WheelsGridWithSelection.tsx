@@ -45,6 +45,8 @@ export type WheelItem = {
     buildRequirement: BuildRequirement;
     buildLabel: string;
   };
+  supplier?: string;
+  freeShipping?: boolean;
 };
 
 export type SelectedWheel = {
@@ -1325,6 +1327,7 @@ export function WheelsGridWithSelection({
           // NEW: Top Pick category props for guided selection
           topPickCategory={topPickCategory}
           isTopPick={isTopPick}
+          freeShipping={w.freeShipping}
           onSelect={(wheelState) => {
             // Use current card state (may have changed if user selected a different finish)
             const effectivePrice = wheelState?.price ?? w.price;

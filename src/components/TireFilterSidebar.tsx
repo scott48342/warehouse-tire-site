@@ -378,15 +378,15 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Brand - show 5 initially */}
+      {/* Brand - show all, scrollable */}
       <AccordionSection
         title="Brand"
         defaultOpen={data.brands.length > 0}
         selectedCount={data.brands.length}
         hidden={data.brandOptions.length === 0}
       >
-        <div className="max-h-48 overflow-y-auto scroll-smooth">
-          {data.brandOptions.slice(0, 5).map(({ value, count }) => (
+        <div className="max-h-64 overflow-y-auto scroll-smooth">
+          {data.brandOptions.map(({ value, count }) => (
             <FilterCheckbox
               key={value}
               label={value}
@@ -395,24 +395,6 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
               onChange={() => toggleArrayFilter("brand", value, data.brands)}
             />
           ))}
-          {data.brandOptions.length > 5 && (
-            <details className="mt-1">
-              <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
-                +{data.brandOptions.length - 5} more
-              </summary>
-              <div className="mt-1">
-                {data.brandOptions.slice(5).map(({ value, count }) => (
-                  <FilterCheckbox
-                    key={value}
-                    label={value}
-                    checked={data.brands.includes(value)}
-                    count={count}
-                    onChange={() => toggleArrayFilter("brand", value, data.brands)}
-                  />
-                ))}
-              </div>
-            </details>
-          )}
         </div>
       </AccordionSection>
       

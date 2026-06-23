@@ -469,8 +469,7 @@ function StyleTagsDisplay({ tags }: { tags: WheelStyleTag[] }) {
 // ═══════════════════════════════════════════════════════════════════════════════
 // TRUST STRIP - Near CTA for conversion confidence (refined colors)
 // ═══════════════════════════════════════════════════════════════════════════════
-function TrustStrip({ showHardware = true }: { showHardware?: boolean }) {
-  // NOTE: Free shipping only over $1500 on national site - don't show it on individual cards
+function TrustStrip({ showHardware = true, freeShipping = false }: { showHardware?: boolean; freeShipping?: boolean }) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 font-medium">
       <span className="inline-flex items-center gap-1">
@@ -481,6 +480,12 @@ function TrustStrip({ showHardware = true }: { showHardware?: boolean }) {
         <span className="inline-flex items-center gap-1">
           <span className="text-emerald-500">✓</span>
           <span>Hardware Included</span>
+        </span>
+      )}
+      {freeShipping && (
+        <span className="inline-flex items-center gap-1 text-emerald-600 font-semibold">
+          <span>📦</span>
+          <span>Free Shipping</span>
         </span>
       )}
     </div>
@@ -527,6 +532,7 @@ export function WheelsStyleCard({
   topPickCategory,
   // NEW: Is this card in the Top Picks section
   isTopPick = false,
+  freeShipping = false,
 }: {
   brand: string;
   title: string;
@@ -568,6 +574,7 @@ export function WheelsStyleCard({
   topPickCategory?: TopPickCategory;
   // NEW: Is this card in the Top Picks section
   isTopPick?: boolean;
+  freeShipping?: boolean;
 }) {
   const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -1123,7 +1130,7 @@ export function WheelsStyleCard({
               TRUST STRIP (Near CTA)
               ═══════════════════════════════════════════════════════════════════ */}
           <div className="mt-3">
-            <TrustStrip showHardware={!!fitmentClass} />
+            <TrustStrip showHardware={!!fitmentClass} freeShipping={freeShipping} />
           </div>
         </div>
 

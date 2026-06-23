@@ -7,8 +7,8 @@ import {
   // buildFitmentProfileFromNewTable,
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
-// Wheel-1 preview supplier (admin/preview only — not public)
-import { getWheel1CandidatesByBoltPattern, isWheel1PreviewEnabled } from "@/lib/wheel1/catalog";
+// Wheel-1 supplier
+import { getWheel1CandidatesByBoltPattern, isWheel1PreviewEnabled, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
 // DEPRECATED: getModelVariants - now encapsulated in resolveUniversalFitment
 // import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 
@@ -2671,8 +2671,18 @@ async function handleDbFirstWheelResults(opts: {
       prices: {
         msrp: [
           {
-            // Use safe pricing with data quality fix - only trusts MSRP when MAP is present
-            currencyAmount: String(getSafeWheelPrice(c, inv)),
+            // Wheel-1: shipping baked in ($1/inch), MAP floor enforced.
+            // WheelPros: existing safe pricing (data-quality fix for corrupt MSRPs).
+            currencyAmount: String(
+              c._supplier === 'wheel1'
+                ? computeWheel1SellPrice({
+                    msrp:       (c as Wheel1Candidate)._msrpNum,
+                    mapPrice:   (c as Wheel1Candidate)._mapNum,
+                    dealerCost: null, // replaced when Wheel-1 cost feed arrives
+                    diameter:   Number(c.diameter) || 20,
+                  })
+                : getSafeWheelPrice(c, inv)
+            ),
             currencyCode: "USD",
           },
         ],
@@ -2796,11 +2806,11 @@ async function handleDbFirstWheelResults(opts: {
       // ─── Supplier tag (Wheel-1 preview) ────────────────────────────────────
       ...(c._supplier === 'wheel1' ? {
         supplier: 'wheel1',
-        _previewSupplier: true,
-        // Extra Wheel-1 data for admin/PDP use
-        w1Details: (c as import('@/lib/wheel1/catalog').Wheel1Candidate)._w1,
+        freeShipping: true,   // shipping baked into price; display on SRP card
+        w1Details: (c as Wheel1Candidate)._w1,
       } : {
         supplier: 'wheelpros',
+        freeShipping: false,
       }),
     };
   });
