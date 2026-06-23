@@ -482,12 +482,7 @@ function TrustStrip({ showHardware = true, freeShipping = false }: { showHardwar
           <span>Hardware Included</span>
         </span>
       )}
-      {freeShipping && (
-        <span className="inline-flex items-center gap-1 text-emerald-600 font-semibold">
-          <span>📦</span>
-          <span>Free Shipping</span>
-        </span>
-      )}
+      {/* Free Shipping shown as pill badge at top of card, not repeated here */}
     </div>
   );
 }
@@ -768,9 +763,16 @@ export function WheelsStyleCard({
           ═══════════════════════════════════════════════════════════════════════ */}
       {topPickConfig && (
         <div className={`px-3 py-2 ${topPickConfig.color}`}>
-          <div className="flex items-center gap-1.5 text-xs font-bold">
-            <span className="text-sm">{topPickConfig.icon}</span>
-            <span>{topPickConfig.label}</span>
+          <div className="flex items-center gap-2 flex-wrap">
+            <div className="flex items-center gap-1.5 text-xs font-bold">
+              <span className="text-sm">{topPickConfig.icon}</span>
+              <span>{topPickConfig.label}</span>
+            </div>
+            {freeShipping && (
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-700">
+                🚚 Free Shipping
+              </span>
+            )}
           </div>
         </div>
       )}
@@ -779,11 +781,16 @@ export function WheelsStyleCard({
           SLIM FITMENT BADGE (Compact, not overwhelming)
           ═══════════════════════════════════════════════════════════════════════ */}
       {fitmentConfig && !topPickConfig && (
-        <div className="px-3 py-1.5 flex items-center gap-2">
+        <div className="px-3 py-1.5 flex items-center gap-2 flex-wrap">
           <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold ${fitmentConfig.className}`}>
             <span>{fitmentConfig.icon}</span>
             {fitmentConfig.label}
           </span>
+          {freeShipping && (
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-700">
+              🚚 Free Shipping
+            </span>
+          )}
           <span className="text-[10px] text-neutral-400">Hardware included</span>
         </div>
       )}
