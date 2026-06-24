@@ -1257,14 +1257,49 @@ export function WheelsGridWithSelection({
   
   // Render wheel card with selection state
   // Determine Top Pick category based on position
-  const getTopPickCategory = (idx: number): "best-overall" | "most-popular" | "best-style" | "best-value" | undefined => {
-    switch (idx) {
-      case 0: return "best-overall";
-      case 1: return "most-popular";
-      case 2: return "best-style";
-      case 3: return "best-value";
-      default: return undefined;
+  // Assign Top Pick labels based on ACTUAL wheel data, not arbitrary index.
+  // Uses the first 4 recommended wheels to determine relative positioning.
+  const topPickLabelMap = useMemo(() => {
+    const top4 = filteredRecommended.slice(0, 4);
+    if (top4.length === 0) return new Map<string, "best-overall" | "most-popular" | "best-style" | "best-value">();
+
+    const map = new Map<string, "best-overall" | "most-popular" | "best-style" | "best-value">();
+
+    // Best Overall = highest fitment score (index 0 — already sorted by score)
+    if (top4[0]) map.set(top4[0].sku || String(0), "best-overall");
+
+    // Best Value = lowest price among the remaining 3
+    const rest = top4.slice(1);
+    if (rest.length === 0) return map;
+
+    const withPrice = rest.filter(w => typeof w.price === "number" && w.price > 0);
+    if (withPrice.length > 0) {
+      const cheapest = withPrice.reduce((a, b) => (a.price ?? Infinity) < (b.price ?? Infinity) ? a : b);
+      map.set(cheapest.sku || "", "best-value");
     }
+
+    // Most Popular = wheel with the most finish options (most variety = most chosen)
+    const remaining = rest.filter(w => !map.has(w.sku || ""));
+    if (remaining.length > 0) {
+      const mostFinishes = remaining.reduce((a, b) => {
+        const aCount = (a.finishThumbs?.length ?? 0) + 1;
+        const bCount = (b.finishThumbs?.length ?? 0) + 1;
+        return aCount >= bCount ? a : b;
+      });
+      map.set(mostFinishes.sku || "", "most-popular");
+    }
+
+    // Best Style = whatever is left (the remaining unlabeled wheel)
+    const unlabeled = rest.filter(w => !map.has(w.sku || ""));
+    if (unlabeled.length > 0) {
+      map.set(unlabeled[0].sku || "", "best-style");
+    }
+
+    return map;
+  }, [filteredRecommended]);
+
+  const getTopPickCategory = (_idx: number, sku: string): "best-overall" | "most-popular" | "best-style" | "best-value" | undefined => {
+    return topPickLabelMap.get(sku) ?? undefined;
   };
   
   const renderWheelCard = (w: WheelItem, idx: number, isRecommended = false, useHorizontal = false) => {
@@ -1273,7 +1308,7 @@ export function WheelsGridWithSelection({
     const model = typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel";
     
     // Top Pick props (only for first 4 recommended wheels)
-    const topPickCategory = isRecommended && idx < 4 ? getTopPickCategory(idx) : undefined;
+    const topPickCategory = isRecommended && idx < 4 ? getTopPickCategory(idx, String(w.sku || "")) : undefined;
     const isTopPick = isRecommended && idx < 4;
     
     return (

@@ -212,8 +212,9 @@ function getBaseUrl() {
   // On Vercel, prefer the deployment URL.
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  // Local dev fallback
-  return "http://localhost:3000";
+  // Local dev fallback — use PORT env if set
+  const port = process.env.PORT || "3000";
+  return `http://localhost:${port}`;
 }
 
 async function fetchFitment(params: Record<string, string | undefined>) {

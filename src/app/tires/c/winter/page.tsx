@@ -17,7 +17,7 @@ async function getBaseUrl() {
   const host = h.get("x-forwarded-host") || h.get("host");
   if (host) return `${proto}://${host}`;
 
-  return "http://localhost:3000";
+  const port = process.env.PORT || "3000"; return `http://localhost:${port}`;
 }
 
 function money(n: number | null) {
