@@ -10,6 +10,7 @@ import { buildVehicleSearchUrl, type YmmProductType } from "@/lib/ymm/vehicleSea
 import { FREE_SHIPPING_THRESHOLD_LABEL } from "@/lib/shipping/shippingService";
 import { TRUST } from "@/lib/trust";
 import { ReviewCarousel } from "@/components/trust/TrustSignals";
+import { BrandShowcase } from "./BrandShowcase";
 
 /**
  * PREMIUM NATIONAL HOMEPAGE
@@ -899,7 +900,8 @@ export function PremiumNationalHomepage() {
       <ShopByVehicleType />
       <TrustBadgeStrip />
       <CategoryPromoCards />
-      <BrandLogoRow />
+      {/* BrandLogoRow replaced by BrandShowcase (premium logo grid, 2026-06-24) */}
+      <BrandShowcase />
       {/* Real Google reviews + accurate count (replaces placeholder ReviewsSection) */}
       <ReviewCarousel />
       <FitmentPromiseBanner />

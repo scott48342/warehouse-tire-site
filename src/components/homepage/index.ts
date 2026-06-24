@@ -6,6 +6,9 @@
 // NEW: Premium National Homepage (flagship redesign)
 export { PremiumNationalHomepage } from "./PremiumNationalHomepage";
 
+// Brand Showcase (replaces BrandLogoRow, 2026-06-24)
+export { BrandShowcase } from "./BrandShowcase";
+
 // Vehicle Memory Personalization (shows when customer has saved vehicle)
 export { PersonalizedVehicleSection, RecommendedForVehicle } from "./PersonalizedVehicleSection";
 
