@@ -138,7 +138,7 @@ export function AddTiresToCartButton({
   );
 }
 
-const QTY_OPTIONS = [1, 2, 4] as const;
+const QTY_OPTIONS = [1, 2, 3, 4] as const;
 
 // Simplified quick-add for tire cards with inline quantity selector
 export function QuickAddTireButton({
