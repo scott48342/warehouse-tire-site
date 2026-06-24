@@ -4482,7 +4482,7 @@ function TireCard({
     }`}>
 
       {/* ── IMAGE PANEL — 140px fixed ────────────────────────────────────── */}
-      <div className="relative w-[140px] flex-shrink-0 flex flex-col bg-neutral-50 rounded-l-2xl overflow-hidden">
+      <div className="relative w-[130px] min-w-[130px] flex-shrink-0 flex flex-col bg-neutral-50 rounded-l-2xl overflow-hidden" style={{maxHeight:'160px'}}>
 
         {/* Top Pick badge — top-left corner */}
         {isTopPick && !hideTopPickBadge && (
@@ -4641,25 +4641,16 @@ function TireCard({
           </h3>
         )}
 
-        {/* "Why This Tire" tagline — Top Picks only */}
-        {whyThisTire && (
-          <div className="text-[10px] italic text-amber-600/80">&ldquo;{whyThisTire}&rdquo;</div>
-        )}
-
-        {/* Tire size */}
-        <div className="text-xs font-medium text-neutral-700">
+        {/* Tire size + load/speed */}
+        <div className="text-[11px] text-neutral-500">
           {normalizeTireSize(selectedSize) || selectedSize}
           {t.badges?.loadIndex && t.badges?.speedRating ? (
-            <span className="ml-1 text-neutral-500">
-              {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
-            </span>
+            <span className="ml-1">{String(t.badges.loadIndex)}{String(t.badges.speedRating)}</span>
+          ) : null}
+          {t.badges?.utqg ? (
+            <span className="ml-1.5 text-neutral-400">UTQG&nbsp;{String(t.badges.utqg)}</span>
           ) : null}
         </div>
-
-        {/* UTQG */}
-        {t.badges?.utqg ? (
-          <div className="text-[10px] text-neutral-400">UTQG {String(t.badges.utqg)}</div>
-        ) : null}
 
         {/* Mileage warranty */}
         {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
@@ -4668,78 +4659,32 @@ function TireCard({
           </div>
         ) : null}
 
-        {/* Best-for guidance line */}
-        <BestForLine
-          category={(t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as EnhancementCategory}
-          mileageWarranty={t.enrichment?.mileage}
-          isRunFlat={t.enrichment?.isRunFlat}
-          is3PMSF={t.enrichment?.is3PMSF}
-          maxItems={2}
-        />
+        {/* Rebate + highlight badges (compact, one row) */}
+        {(rebateLabel || highlightLabel) && (
+          <div className="flex flex-wrap gap-1">
+            {rebateLabel && (
+              <span className="rounded-full bg-red-500 px-1.5 py-0.5 text-[9px] font-bold text-white">&#127991; {rebateLabel}</span>
+            )}
+            {highlightLabel && (
+              <span className={`rounded-full ${highlightLabel.bg} px-1.5 py-0.5 text-[9px] font-bold text-white`}>{highlightLabel.text}</span>
+            )}
+          </div>
+        )}
 
-        {/* Performance mini-bar ratings (only when UTQG data available) */}
-        {(() => {
-          const utqg = parseUTQG(t.badges?.utqg);
-          if (!utqg || !utqg.treadwear) return null;
-          const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as any;
-          const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
-          if (!ratings) return null;
-          return <MiniRatings ratings={ratings} category={category} />;
-        })()}
+        {/* Fitment confirmation */}
+        {hasVehicle && (
+          <div className="text-[10px] font-medium text-green-700">&#10004; Fits {year} {make} {model}</div>
+        )}
 
-        {/* Price per tire + set price */}
+        {/* Price — pushed to bottom */}
         {!isLocalMode && (() => {
           const unitPrice = getDisplayPrice(t);
           return unitPrice != null ? (
-            <div className="mt-1">
+            <div className="mt-auto pt-1.5">
               <TirePriceDisplay unitPrice={unitPrice} quantity={4} isLocalMode={isLocalMode} />
             </div>
           ) : null;
         })()}
-
-        {/* Rebate badge */}
-        {rebateLabel ? (
-          <span className="inline-flex self-start rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white">
-            &#127991; {rebateLabel}
-          </span>
-        ) : null}
-
-        {/* Trending / Popular / Long Life badge */}
-        {highlightLabel && (
-          <span className={`inline-flex self-start rounded-full ${highlightLabel.bg} px-2.5 py-0.5 text-[10px] font-bold text-white`}>
-            {highlightLabel.text}
-          </span>
-        )}
-
-        {/* Fitment confirmation */}
-        {hasVehicle ? (
-          <div className="text-[10px] font-medium text-green-700">
-            &#10004; Fits {year} {make} {model}
-            {(() => {
-              const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
-              const tireRimDia = (() => {
-                const desc = String(t.description || selectedSize || "").toUpperCase();
-                const mm = desc.match(/R(\d{2})(?:\D|$)/);
-                return mm ? Number(mm[1]) : NaN;
-              })();
-              const wheelMatches = isPackageFlow && Number.isFinite(wheelDiaN) && Number.isFinite(tireRimDia)
-                && Math.round(wheelDiaN) === Math.round(tireRimDia);
-              return wheelMatches ? (
-                <span className="ml-1 text-blue-600">&middot; Matches {Math.round(wheelDiaN)}&quot; wheels</span>
-              ) : null;
-            })()}
-          </div>
-        ) : null}
-
-        {/* Trust micro line */}
-        <div className="mt-auto pt-1">
-          <TrustMicroLine
-            hasVehicle={hasVehicle}
-            inStock={inStock}
-            hasWarranty={Boolean(t.enrichment?.mileage && t.enrichment.mileage > 0)}
-            isLocalMode={isLocalMode}
-          />
-        </div>
       </div>
 
       {/* ── CTA PANEL — 88px fixed ───────────────────────────────────────── */}
