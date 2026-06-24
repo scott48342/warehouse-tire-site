@@ -1,4 +1,12 @@
 import { NextResponse } from "next/server";
+import {
+  PREMIUM_FINISHES,
+  SCORE_WEIGHTS,
+  computeFitmentClassScore,
+  computeCustomerValueScore,
+  applySupplierNeutralMerchandising,
+  type ScoreBreakdownV2,
+} from "./rankingEngine";
 import { 
   getPool, 
   // DEPRECATED: buildFitmentProfile - use resolveUniversalFitment instead
@@ -1975,19 +1983,9 @@ async function handleDbFirstWheelResults(opts: {
   // ═══════════════════════════════════════════════════════════════════════════
   const tRanking0 = Date.now();
   
-  // Brand tiers for scoring
-  const TIER_1_BRANDS = new Set(["FM", "FT", "MO", "XD", "KM", "RC", "AR"]); // Fuel, Moto Metal, XD, KMC, Raceline, American Racing
-  const TIER_1_WHEEL1_BRANDS = new Set([
-    // Wheel-1 brands promoted to Tier 1 so they score on par with WheelPros
-    // and appear on page 1 via brand-diversification rules.
-    // (brand_cd = brand.toUpperCase().replace(/\s+/g,''))
-    "MAYHEM", "TOUREN", "IONALLOY", "CALIOFF-ROAD", "RIDLER",
-    "DIRTYLIFE", "KRAZE", "AMERICANTRUXX", "TUFFSTUFF", "MAZZI", "DL",
-  ]);
-  const TIER_2_BRANDS = new Set(["HE", "VF", "PR", "LE", "DC", "NC", "UC", "OC", "AC", "TU"]);
-  
-  // Popular finish keywords for visual boost
-  const PREMIUM_FINISHES = ["BLACK", "MATTE BLACK", "GLOSS BLACK", "MACHINED", "MILLED", "BRONZE", "GUNMETAL"];
+  // v3 ranking: TIER_1_BRANDS/TIER_2_BRANDS removed — replaced by fitmentClassScore
+  // (supplier-neutral: surefit=100, specfit=80, extended=55 from rankingEngine.ts)
+  // PREMIUM_FINISHES imported from rankingEngine.ts
   
   // Calculate OEM midpoints for fitment quality scoring
   const oemMidDiameter = (envelope.oemMinDiameter + envelope.oemMaxDiameter) / 2;
@@ -2007,14 +2005,7 @@ async function handleDbFirstWheelResults(opts: {
     candidate: typeof fitmentValidCandidates[0]["candidate"];
     validation: typeof fitmentValidCandidates[0]["validation"];
     score: number;
-    scoreBreakdown: {
-      availability: number;
-      brandTier: number;
-      fitmentQuality: number;
-      visualQuality: number;
-      priceRange: number;
-      finishBoost: number;
-    };
+    scoreBreakdown: ScoreBreakdownV2; // v3: fitmentClass replaces brandTier
     availabilityLabel: "in_stock" | "limited" | "check_availability";
     priceTier: "value" | "mid" | "premium";
     modelKey: string; // brand+style for deduping
@@ -2042,122 +2033,119 @@ async function handleDbFirstWheelResults(opts: {
     // SCORING v2 (rebalanced weights, normalized availability)
     // ═══════════════════════════════════════════════════════════════════════
     
-    // 1. Availability Score (0-100, weight: 25%) - REBALANCED
-    // Narrower gap so other factors can compete
+    // ── SCORING v3 (supplier-neutral, 2026-06-24) ──────────────────────────
+    // Weights from SCORE_WEIGHTS in rankingEngine.ts:
+    //   availability 25% | fitmentClass 20% | fitmentQuality 15%
+    //   visualQuality 15% | priceRange 10% | customerValue 10% | finishBoost 5%
+
+    // 1. Availability Score (0-100, weight: 25%)
     let availabilityScore = 50; // check_availability baseline
     if (availabilityLabel === "in_stock") availabilityScore = 100;
     else if (availabilityLabel === "limited") availabilityScore = 75;
-    
-    // 2. Brand Tier Score (0-100, weight: 20%)
-    let brandTierScore = 50; // default for unknown brands
-    const brandCode = (c.brand_cd || "").toUpperCase();
-    if (TIER_1_BRANDS.has(brandCode) || TIER_1_WHEEL1_BRANDS.has(brandCode)) brandTierScore = 100;
-    else if (TIER_2_BRANDS.has(brandCode)) brandTierScore = 75;
-    
-    // 3. Fitment Quality Score (0-100, weight: 20%)
+
+    // 2. Fitment Class Score (0-100, weight: 20%)  ← replaces brandTierScore
+    // Supplier-neutral: surefit=100, specfit=80, extended=55
+    // A Wheel-1 surefit scores identically to a WheelPros surefit.
+    const fitmentClassScore = computeFitmentClassScore(v.fitmentClass);
+
+    // 3. Fitment Quality Score (0-100, weight: 15%)
     // UPDATED (April 2026): OEM sizes get explicit boost, but extended sizes still shown
     let fitmentQualityScore = 50;
     const wheelDiameter = Number(c.diameter) || 0;
     const wheelOffset = Number(c.offset) || 0;
     const wheelWidth = Number(c.width) || 0;
-    
+
     // Check if wheel is within OEM ranges (for priority ranking)
     const isOemDiameter = wheelDiameter >= envelope.oemMinDiameter && wheelDiameter <= envelope.oemMaxDiameter;
     const isOemWidth = wheelWidth >= envelope.oemMinWidth && wheelWidth <= envelope.oemMaxWidth;
     const isOemOffset = wheelOffset >= envelope.oemMinOffset && wheelOffset <= envelope.oemMaxOffset;
-    
+
     // Diameter scoring: OEM gets highest score, near-OEM is good, extended is acceptable
     if (wheelDiameter > 0) {
       if (isOemDiameter) {
-        // OEM diameter: highest priority
         fitmentQualityScore = 100;
       } else {
-        // Extended diameter: score based on distance from OEM range
         const distFromOem = wheelDiameter < envelope.oemMinDiameter
           ? envelope.oemMinDiameter - wheelDiameter
           : wheelDiameter - envelope.oemMaxDiameter;
-        
-        if (distFromOem <= 1) fitmentQualityScore = 80;       // +1" from OEM = good
+        if (distFromOem <= 1)      fitmentQualityScore = 80;  // +1" from OEM = good
         else if (distFromOem <= 2) fitmentQualityScore = 65;  // +2" = acceptable
         else if (distFromOem <= 4) fitmentQualityScore = 50;  // +3-4" = standard
-        else fitmentQualityScore = 35;                         // >4" = lower priority
+        else                       fitmentQualityScore = 35;  // >4" = lower priority
       }
     }
-    
     // Width/Offset bonus: boost if within OEM ranges
-    if (isOemWidth) fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
+    if (isOemWidth)  fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
     if (isOemOffset) fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
-    
-    // Offset bonus for near midpoint (additional refinement)
+    // Offset bonus for near midpoint
     if (c.offset != null && !isOemOffset) {
       const offsetDiff = Math.abs(wheelOffset - oemMidOffset);
       if (offsetDiff <= 15) fitmentQualityScore = Math.min(100, fitmentQualityScore + 3);
     }
-    
+
     // 4. Visual Quality Score (0-100, weight: 15%)
     let visualQualityScore = 35; // no images
     const images = c.images || [];
     if (images.length >= 3) visualQualityScore = 100;
     else if (images.length >= 1) visualQualityScore = 75;
-    
-    // 5. Price Range Score (0-100, weight: 15%)
-    // All price tiers are viable, slight preference for mid-range
+
+    // 5. Price Range Score (0-100, weight: 10%)  ← reduced from 15%
     const price = getSafeWheelPrice(c);
     let priceRangeScore = 50;
     let priceTier: "value" | "mid" | "premium" = "mid";
-    
     if (price > 0) {
       if (price < priceP25) {
         priceTier = "value";
-        priceRangeScore = 80; // Value is good
+        priceRangeScore = 80;
       } else if (price <= priceP75) {
         priceTier = "mid";
-        priceRangeScore = 100; // Mid-range is best
+        priceRangeScore = 100;
       } else {
         priceTier = "premium";
-        priceRangeScore = 85; // Premium is good
+        priceRangeScore = 85;
       }
     }
-    
-    // 6. Finish Boost (0-15 bonus points) - NEW
-    // Boost popular truck/off-road finishes
+
+    // 6. Customer Value Score (0-100, weight: 10%)  ← NEW in v3
+    // Supplier-neutral: checks _freeShipping and _inventoryQty properties
+    const customerValueScore = computeCustomerValueScore(c as Record<string, unknown>);
+
+    // 7. Finish Boost (0-10 bonus, weight: 5%)
     let finishBoost = 0;
     const finishDesc = (c.abbreviated_finish_desc || c.fancy_finish_desc || "").toUpperCase();
     const productDesc = (c.product_desc || "").toUpperCase();
     const combinedDesc = `${finishDesc} ${productDesc}`;
-    
     for (const finish of PREMIUM_FINISHES) {
-      if (combinedDesc.includes(finish)) {
-        finishBoost = 10;
-        break;
-      }
+      if (combinedDesc.includes(finish)) { finishBoost = 10; break; }
     }
-    
-    // Calculate weighted total score
+
+    // Weighted total (v3 formula — weights from SCORE_WEIGHTS)
     const score = (
-      availabilityScore * 0.25 +
-      brandTierScore * 0.20 +
-      fitmentQualityScore * 0.20 +
-      visualQualityScore * 0.15 +
-      priceRangeScore * 0.15 +
-      finishBoost * 0.05 // 5% weight for finish boost
+      availabilityScore   * SCORE_WEIGHTS.availability   +
+      fitmentClassScore   * SCORE_WEIGHTS.fitmentClass   +
+      fitmentQualityScore * SCORE_WEIGHTS.fitmentQuality +
+      visualQualityScore  * SCORE_WEIGHTS.visualQuality  +
+      priceRangeScore     * SCORE_WEIGHTS.priceRange     +
+      customerValueScore  * SCORE_WEIGHTS.customerValue  +
+      finishBoost         * SCORE_WEIGHTS.finishBoost
     );
-    
+
     // Model key for deduping (brand + style/display_style_no)
     const modelKey = `${c.brand_cd || ""}:${c.style || c.display_style_no || c.product_desc?.split(" ")[0] || ""}`.toLowerCase();
-    
+
     return {
       candidate: c,
       validation: v,
       score,
       scoreBreakdown: {
-        availability: availabilityScore,
-        brandTier: brandTierScore,
+        availability:   availabilityScore,
+        fitmentClass:   fitmentClassScore,   // v3: was brandTier
         fitmentQuality: fitmentQualityScore,
-        visualQuality: visualQualityScore,
-        priceRange: priceRangeScore,
+        visualQuality:  visualQualityScore,
+        priceRange:     priceRangeScore,
+        customerValue:  customerValueScore,  // v3: new
         finishBoost,
-      },
+      } satisfies ScoreBreakdownV2,
       availabilityLabel,
       priceTier,
       modelKey,
@@ -2208,107 +2196,14 @@ async function handleDbFirstWheelResults(opts: {
   // 4. Consecutive brand limit
   // ═══════════════════════════════════════════════════════════════════════════
   
-  function applyMerchandisingRules(items: ScoredCandidate[]): ScoredCandidate[] {
-    if (items.length <= 5) return items;
-    
-    const result: ScoredCandidate[] = [];
-    const remaining = [...items];
-    
-    // Track for merchandising rules
-    const modelCountInTop20 = new Map<string, number>();
-    const brandCountInTop100 = new Map<string, number>();
-    const priceTierCountInTop20 = { value: 0, mid: 0, premium: 0 };
-    
-    // Target price mix for top 20: ~50% mid, ~25% premium, ~25% value
-    const priceMixTargets = { value: 5, mid: 10, premium: 5 };
-    
-    while (remaining.length > 0) {
-      const currentPosition = result.length;
-      const isTop20 = currentPosition < 20;
-      const isTop100 = currentPosition < 100;
-      
-      let bestIdx = 0;
-      let bestScore = -Infinity;
-      
-      // Evaluate each remaining candidate
-      for (let i = 0; i < Math.min(remaining.length, 50); i++) { // Look ahead up to 50 items
-        const item = remaining[i];
-        let adjustedScore = item.score;
-        
-        // === Rule 1: Model-level deduping in top 20 ===
-        if (isTop20) {
-          const modelCount = modelCountInTop20.get(item.modelKey) || 0;
-          if (modelCount >= 2) {
-            adjustedScore -= 30; // Heavy penalty for 3rd+ of same model
-          } else if (modelCount >= 1) {
-            adjustedScore -= 10; // Mild penalty for 2nd of same model
-          }
-        }
-        
-        // === Rule 2: Brand concentration control in top 100 ===
-        if (isTop100) {
-          const brandCount = brandCountInTop100.get(item.candidate.brand_cd || "") || 0;
-          const brandPct = brandCount / Math.max(1, currentPosition);
-          if (brandPct > 0.25 && brandCount >= 5) {
-            // Brand already >25% of results, penalize unless score is exceptional
-            adjustedScore -= 15;
-          }
-        }
-        
-        // === Rule 3: Price mix optimization in top 20 ===
-        if (isTop20) {
-          const tierCount = priceTierCountInTop20[item.priceTier];
-          const tierTarget = priceMixTargets[item.priceTier];
-          
-          if (tierCount < tierTarget) {
-            // Boost underrepresented price tiers
-            adjustedScore += 5;
-          } else if (tierCount >= tierTarget * 1.5) {
-            // Penalize overrepresented tiers
-            adjustedScore -= 5;
-          }
-        }
-        
-        // === Rule 4: Consecutive brand limit (max 2) ===
-        if (result.length >= 2) {
-          const lastBrand = result[result.length - 1].candidate.brand_cd;
-          const secondLastBrand = result[result.length - 2].candidate.brand_cd;
-          
-          if (lastBrand && lastBrand === secondLastBrand && item.candidate.brand_cd === lastBrand) {
-            adjustedScore -= 50; // Heavy penalty for 3rd consecutive
-          }
-        }
-        
-        if (adjustedScore > bestScore) {
-          bestScore = adjustedScore;
-          bestIdx = i;
-        }
-      }
-      
-      // Add best candidate to result
-      const selected = remaining[bestIdx];
-      result.push(selected);
-      remaining.splice(bestIdx, 1);
-      
-      // Update tracking
-      if (result.length <= 20) {
-        const mc = modelCountInTop20.get(selected.modelKey) || 0;
-        modelCountInTop20.set(selected.modelKey, mc + 1);
-        priceTierCountInTop20[selected.priceTier]++;
-      }
-      if (result.length <= 100) {
-        const bc = brandCountInTop100.get(selected.candidate.brand_cd || "") || 0;
-        brandCountInTop100.set(selected.candidate.brand_cd || "", bc + 1);
-      }
-    }
-    
-    return result;
-  }
-  
   // Skip merchandising rules when user explicitly sorts by price (preserve exact price order)
-  const isPriceSorted = sortParam === "price_asc" || sortParam === "price-low-to-high" || 
+  const isPriceSorted = sortParam === "price_asc" || sortParam === "price-low-to-high" ||
                         sortParam === "price_desc" || sortParam === "price-high-to-low";
-  let rankedCandidates = isPriceSorted ? scoredCandidates : applyMerchandisingRules(scoredCandidates);
+  // v3: replaced applyMerchandisingRules with supplier-neutral version from rankingEngine.ts
+  // → adds Rule 5 (supplier diversity cap) on top of existing rules 1-4
+  let rankedCandidates = isPriceSorted
+    ? scoredCandidates
+    : applySupplierNeutralMerchandising(scoredCandidates);
   
   timing.rankingMs = Date.now() - tRanking0;
 
@@ -2343,20 +2238,19 @@ async function handleDbFirstWheelResults(opts: {
       const aPrice = getSafeWheelPrice(a.candidate) || Infinity;
       const bPrice = getSafeWheelPrice(b.candidate) || Infinity;
       
-      // All wheels from our DB are WheelPros, so supplier is always "wheelpros"
-      const aIsWheelPros = true;
-      const bIsWheelPros = true;
-      
-      // Calculate priority tier (1-4)
-      const getTier = (isWP: boolean, hasImg: boolean, stock: number): PackagePriorityTier => {
-        if (isWP && hasImg && stock > 0) return 1;
-        if (hasImg && stock > 0) return 2;
-        if (isWP && stock > 0) return 3;
+      // v3: package priority is supplier-neutral — image + stock matters, not supplier name
+      // Tier 1: has image + has stock (any supplier)
+      // Tier 2: has stock only (any supplier)
+      // Tier 3: everything else
+      const getTier = (hasImg: boolean, stock: number): PackagePriorityTier => {
+        if (hasImg && stock > 0) return 1;
+        if (stock > 0) return 2;
+        if (hasImg) return 3;
         return 4;
       };
-      
-      const aTier = getTier(aIsWheelPros, aHasImage, aStock);
-      const bTier = getTier(bIsWheelPros, bHasImage, bStock);
+
+      const aTier = getTier(aHasImage, aStock);
+      const bTier = getTier(bHasImage, bStock);
       
       // Sort by tier first (ascending: 1 → 4)
       if (aTier !== bTier) {
