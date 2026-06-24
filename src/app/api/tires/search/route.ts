@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Unified Tire Search API
  * 
  * Accepts vehicle params (year, make, model, modification) + optional wheelDiameter
@@ -560,7 +560,7 @@ async function searchTiresBySize(
     return {
       partNumber: String(r.sku),
       mfgPartNumber: String(r.sku),
-      brand: r.brand_desc || null,
+      brand: normalizeBrandName(r.brand_desc),
       description,
       cost: null, // Not used for display - price is the sell price
       price: price != null && Number.isFinite(price) ? price : null,
@@ -731,7 +731,46 @@ const USAF_BRAND_NAMES: Record<string, string> = {
   'MAS': 'Mastercraft',
   'ACH': 'Achilles',
   'MUL': 'Multi-Mile',
+  'KEN': 'Kenda',
 };
+
+/**
+ * Normalize raw brand strings from any supplier.
+ * Handles short codes ("KEN" → "Kenda"), all-caps, etc.
+ */
+const BRAND_DISPLAY_NAMES: Record<string, string> = {
+  'KEN':           'Kenda',
+  'KENDA':         'Kenda',
+  'BFG':           'BFGoodrich',
+  'BF GOODRICH':   'BFGoodrich',
+  'BFGOODRICH':    'BFGoodrich',
+  'GOO':           'Goodyear',
+  'MIC':           'Michelin',
+  'TOY':           'Toyo',
+  'YOK':           'Yokohama',
+  'BRI':           'Bridgestone',
+  'HAN':           'Hankook',
+  'FAL':           'Falken',
+  'KUM':           'Kumho',
+  'NEX':           'Nexen',
+  'NIT':           'Nitto',
+  'GEN':           'General',
+  'COO':           'Cooper',
+  'DUN':           'Dunlop',
+  'FIR':           'Firestone',
+  'CON':           'Continental',
+  'PIR':           'Pirelli',
+  'UNI':           'Uniroyal',
+  'MUL':           'Multi-Mile',
+  'MAS':           'Mastercraft',
+};
+
+function normalizeBrandName(raw: string | null | undefined): string | null {
+  if (!raw) return null;
+  const s = raw.trim();
+  const key = s.toUpperCase();
+  return BRAND_DISPLAY_NAMES[key] || s;
+}
 
 function usafBrandName(brandCode: string): string {
   return USAF_BRAND_NAMES[brandCode?.toUpperCase()] || brandCode;
@@ -2077,7 +2116,7 @@ export async function GET(req: Request) {
         return {
           partNumber: String(r.sku),
           mfgPartNumber: String(r.sku),
-          brand: r.brand_desc || null,
+          brand: normalizeBrandName(r.brand_desc),
           description,
           cost: null,
           price: r.cost > 0 ? Math.round(r.cost * 1.30 * 100) / 100 : null, // 30% margin

@@ -4122,7 +4122,7 @@ export default async function TiresPage({
               </div>
             ) : null}
 
-            <div className="tire-grid mt-3 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="tire-grid mt-3 gap-3 grid-cols-1 md:grid-cols-2">
               {itemsPage.length ? (
                 itemsPage.map((t, idx) => (
                   <TireCard
