@@ -3073,6 +3073,20 @@ export async function GET(req: Request) {
       timing.prioritizationMs = Date.now() - tPriority0;
     }
     
+    // ═══════════════════════════════════════════════════════════════════════
+    // BRAND FILTER (vehicle mode)
+    // Apply brand filter when year/make/model is provided — same param as size
+    // mode. Previously missing, causing other brands to appear when filtered.
+    // ═══════════════════════════════════════════════════════════════════════
+    const vehicleBrandFilter = (url.searchParams.get("brand") || "").trim();
+    if (vehicleBrandFilter && finalResults.length > 0) {
+      const beforeBrand = finalResults.length;
+      finalResults = finalResults.filter(
+        (t) => (t.brand || "").toLowerCase() === vehicleBrandFilter.toLowerCase()
+      );
+      console.log(`[tires/search:vehicle] Brand filter "${vehicleBrandFilter}": ${beforeBrand} → ${finalResults.length} results`);
+    }
+
     timing.totalMs = Date.now() - t0;
     
     // ═══════════════════════════════════════════════════════════════════════
