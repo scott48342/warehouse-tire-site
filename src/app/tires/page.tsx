@@ -449,7 +449,7 @@ function getDisplayPrice(tire: Tire): number | null {
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  const port = process.env.PORT || "3000"; return `http://localhost:${port}`;
+  return "http://localhost:3000";
 }
 
 async function fetchFitment(params: Record<string, string | undefined>) {
@@ -4457,191 +4457,107 @@ function TireCard({
     return "Top choice for your vehicle";
   })() : null;
 
-
-  // Compute detail-page href once — used for image link, title link, and Details button
-  const detailHref: string | null =
-    t.source === "wp" && t.mfgPartNumber
-      ? `/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
-          year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia,
-        }).toString()}`
-      : t.source === "km" && t.partNumber
-        ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
-            year, make, model, trim, modification, size: selectedSize, sort,
-          }).toString()}`
-        : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber
-          ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
-              year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb",
-            }).toString()}`
-          : null;
-
   return (
-    <article className={`tire-card group relative overflow-hidden rounded-2xl flex flex-col p-4 transition-all duration-250 ease-out ${
-      isTopPick
-        ? "border border-amber-200/70 border-l-4 border-l-amber-400 bg-gradient-to-br from-amber-50/40 to-white shadow-md"
+    <article className={`tire-card group relative overflow-hidden rounded-2xl transition-all duration-250 ease-out ${
+      isTopPick 
+        ? "border border-amber-200/70 bg-gradient-to-br from-amber-50/40 to-white shadow-md" 
         : "border border-neutral-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-0.5"
-    }`}>
+    }`} style={{ padding: '1.5rem' }}>
+      {/* Left accent bar - premium feel */}
+      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 rounded-l-2xl ${isTopPick ? "bg-gradient-to-b from-amber-300 to-amber-400" : "bg-neutral-100"}`} />
+      
+      {/* Highlight label - top right corner */}
+      {highlightLabel && (
+        <div className={`absolute top-3 right-3 z-20 rounded-full ${highlightLabel.bg} px-2.5 py-1 text-[10px] font-bold text-white shadow-md`}>
+          {highlightLabel.text}
+        </div>
+      )}
 
-      {/* ── IMAGE PANEL — full width, centered ──────────────────────────── */}
-      <div className="relative w-full aspect-square max-h-[180px] flex items-center justify-center bg-neutral-50 rounded-xl overflow-hidden mb-3">
+      {t.source === "wp" && t.mfgPartNumber ? (
+        <Link
+          href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
+            year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia,
+          }).toString()}`}
+          className="absolute inset-0 z-0"
+          aria-label={`View ${displayTitle}`}
+        />
+      ) : t.source === "km" && t.partNumber ? (
+        <Link
+          href={`/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
+            year, make, model, trim, modification, size: selectedSize, sort,
+          }).toString()}`}
+          className="absolute inset-0 z-0"
+          aria-label={`View ${displayTitle}`}
+        />
+      ) : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber ? (
+        <Link
+          href={`/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
+            year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb",
+          }).toString()}`}
+          className="absolute inset-0 z-0"
+          aria-label={`View ${displayTitle}`}
+        />
+      ) : null}
 
-        {/* Top Pick badge — top-left corner */}
-        {isTopPick && !hideTopPickBadge && (
-          <div className="absolute top-2 left-2 z-20 rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-md leading-tight">
-            &#11088; Top Pick
-          </div>
-        )}
-
-        {/* Tire image, linked to detail page */}
-        {detailHref ? (
-          <Link href={detailHref} className="block flex-1" aria-label={`View ${displayTitle}`}>
-            {t.imageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={t.imageUrl}
-                alt={displayTitle}
-                loading="lazy"
-                className="h-full w-full object-contain aspect-square transition-transform duration-300 ease-out group-hover:scale-[1.02]"
-              />
-            ) : (
-              <div className="flex h-full min-h-[120px] w-full flex-col items-center justify-center p-2 text-center">
-                <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-                <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
-              </div>
-            )}
-          </Link>
-        ) : (
-          <div className="flex-1">
-            {t.imageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={t.imageUrl}
-                alt={displayTitle}
-                loading="lazy"
-                className="h-full w-full object-contain aspect-square transition-transform duration-300 ease-out group-hover:scale-[1.02]"
-              />
-            ) : (
-              <div className="flex h-full min-h-[120px] w-full flex-col items-center justify-center p-2 text-center">
-                <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-                <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Category pill — bottom of image panel */}
-        <div className="absolute bottom-2 left-1 right-1 flex justify-center">
-          {(() => {
-            const m = (displayTitle + ' ' + (t.description || '')).toUpperCase();
-            let rawCategory = t.enrichment?.treadCategory || t.badges?.terrain || null;
-            if (!rawCategory) {
-              if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) {
-                rawCategory = 'Winter';
-              } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
-                rawCategory = 'Mud-Terrain';
-              } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
-                rawCategory = 'Rugged-Terrain';
-              } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
-                rawCategory = 'All-Terrain';
-              } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
-                rawCategory = 'Highway/Touring';
-              } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S?\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
-                rawCategory = 'Performance';
-              } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
-                rawCategory = 'All-Weather';
-              } else {
-                rawCategory = 'All-Season';
-              }
-            }
-            const category = String(rawCategory || 'All-Season')
-              .trim()
-              .split(/\s+/)
-              .filter((word: string, idx: number, arr: string[]) => {
-                if (idx === 0) return true;
-                return word.toLowerCase() !== arr[idx - 1]?.toLowerCase();
-              })
-              .join(' ')
-              .replace(/^(.+?)\s+\1.*$/i, '$1');
-
-            const catStyle: Record<string, { bg: string; icon: string }> = {
-              'All-Terrain':     { bg: 'bg-gradient-to-r from-amber-600 to-amber-500',  icon: '\uD83D\uDEE3' },
-              'Mud-Terrain':     { bg: 'bg-gradient-to-r from-orange-700 to-orange-600', icon: '\uD83D\uDFEB' },
-              'Rugged-Terrain':  { bg: 'bg-gradient-to-r from-stone-700 to-stone-600',  icon: '\u26F0' },
-              'Winter':          { bg: 'bg-gradient-to-r from-sky-600 to-sky-500',      icon: '\u2744\uFE0F' },
-              'Performance':     { bg: 'bg-gradient-to-r from-red-600 to-red-500',      icon: '\uD83C\uDFCE\uFE0F' },
-              'Highway/Touring': { bg: 'bg-gradient-to-r from-blue-600 to-blue-500',   icon: '\uD83D\uDEE3\uFE0F' },
-              'All-Season':      { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '\uD83C\uDF3F' },
-              'All-Weather':     { bg: 'bg-gradient-to-r from-teal-600 to-teal-500',   icon: '\uD83C\uDF26\uFE0F' },
-            };
-            const style = catStyle[category] ?? { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '\uD83C\uDF3F' };
-
-            return (
-              <span
-                className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-bold text-white shadow-md max-w-full whitespace-nowrap overflow-hidden ${style.bg}`}
-                title={category}
-              >
-                <span className="drop-shadow-sm flex-shrink-0">{style.icon}</span>
-                <span className="truncate">{category}</span>
-              </span>
-            );
-          })()}
+      <div className="relative z-10 flex items-start justify-between gap-2">
+        <div className="text-sm font-bold text-neutral-800 uppercase tracking-wide">{t.brand || "Tire"}</div>
+        <div className="flex items-center gap-1">
+          {/* Compare button */}
+          <AddToCompareButton
+            item={normalizeTireForCompare({
+              sku: tireSku,
+              partNumber: t.partNumber,
+              mfgPartNumber: t.mfgPartNumber,
+              brand: t.brand,
+              model: displayTitle,
+              imageUrl: t.imageUrl,
+              price: getDisplayPrice(t) ?? undefined,
+              size: selectedSize,
+              loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+              speedRating: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+              category: (t.enrichment?.treadCategory || t.badges?.terrain) ?? undefined,
+              mileageWarranty: t.enrichment?.mileage ?? undefined,
+              is3PMSF: t.enrichment?.is3PMSF,
+              isRunFlat: t.enrichment?.isRunFlat,
+              stockQty: maxQty,
+              source: t.rawSource,
+            })}
+            variant="icon"
+            size="sm"
+          />
+          {/* Favorites button */}
+          {t.source === "wp" && t.mfgPartNumber ? (
+            <FavoritesButton
+              type="tire"
+              sku={t.mfgPartNumber}
+              label={`${t.brand || "Tire"} ${displayTitle}`}
+              href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
+              imageUrl={t.imageUrl}
+            />
+          ) : null}
         </div>
       </div>
 
-      {/* ── INFO PANEL — flex-1 ──────────────────────────────────────────── */}
-      <div className="flex-1 flex flex-col gap-1.5">
+      <h3 className="relative z-10 mt-2 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
+        {displayTitle}
+      </h3>
 
-        {/* Brand + action icons row */}
-        <div className="flex items-center justify-between gap-1">
-          <div className="text-[11px] font-bold text-neutral-400 uppercase tracking-wide truncate">{t.brand || "Tire"}</div>
-          <div className="flex items-center gap-0.5 flex-shrink-0">
-            <AddToCompareButton
-              item={normalizeTireForCompare({
-                sku: tireSku,
-                partNumber: t.partNumber,
-                mfgPartNumber: t.mfgPartNumber,
-                brand: t.brand,
-                model: displayTitle,
-                imageUrl: t.imageUrl,
-                price: getDisplayPrice(t) ?? undefined,
-                size: selectedSize,
-                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
-                speedRating: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
-                category: (t.enrichment?.treadCategory || t.badges?.terrain) ?? undefined,
-                mileageWarranty: t.enrichment?.mileage ?? undefined,
-                is3PMSF: t.enrichment?.is3PMSF,
-                isRunFlat: t.enrichment?.isRunFlat,
-                stockQty: maxQty,
-                source: t.rawSource,
-              })}
-              variant="icon"
-              size="sm"
-            />
-            {t.source === "wp" && t.mfgPartNumber ? (
-              <FavoritesButton
-                type="tire"
-                sku={t.mfgPartNumber}
-                label={`${t.brand || "Tire"} ${displayTitle}`}
-                href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
-                imageUrl={t.imageUrl}
-              />
-            ) : null}
-          </div>
+      {/* "Why This Tire" - Top Picks only */}
+      {whyThisTire && (
+        <div className="relative z-10 mt-1.5 text-[11px] italic text-amber-600/80">
+          "{whyThisTire}"
         </div>
+      )}
 
-        {/* Model title — linked to detail page */}
-        {detailHref ? (
-          <Link href={detailHref}>
-            <h3 className="text-sm font-extrabold tracking-tight text-neutral-900 line-clamp-2 hover:underline leading-snug">
-              {displayTitle}
-            </h3>
-          </Link>
-        ) : (
-          <h3 className="text-sm font-extrabold tracking-tight text-neutral-900 line-clamp-2 leading-snug">
-            {displayTitle}
-          </h3>
-        )}
+      {/* Mileage warranty - text line under title */}
+      {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
+        <div className="relative z-10 mt-0.5 text-xs text-neutral-600">
+          ✓ {Math.round(t.enrichment.mileage / 1000)}K mile warranty
+        </div>
+      ) : null}
 
-        {/* Best For guidance */}
+      {/* Best For guidance line - quick scannable use case */}
+      <div className="relative z-10 mt-0.5">
         <BestForLine 
           category={(t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as EnhancementCategory}
           mileageWarranty={t.enrichment?.mileage}
@@ -4649,176 +4565,316 @@ function TireCard({
           is3PMSF={t.enrichment?.is3PMSF}
           maxItems={2}
         />
-
-        {/* Tire size + load/speed */}
-        <div className="text-[11px] text-neutral-500">
-          {normalizeTireSize(selectedSize) || selectedSize}
-          {t.badges?.loadIndex && t.badges?.speedRating ? (
-            <span className="ml-1">{String(t.badges.loadIndex)}{String(t.badges.speedRating)}</span>
-          ) : null}
-          {t.badges?.utqg ? (
-            <span className="ml-1.5 text-neutral-400">UTQG&nbsp;{String(t.badges.utqg)}</span>
-          ) : null}
-        </div>
-
-        {/* Mileage warranty */}
-        {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
-          <div className="text-[10px] text-neutral-400">
-            {Math.round(t.enrichment.mileage / 1000)}K mi warranty
-          </div>
-        ) : null}
-
-        {/* Rebate + highlight badges (compact, one row) */}
-        {(rebateLabel || highlightLabel) && (
-          <div className="flex flex-wrap gap-1">
-            {rebateLabel && (
-              <span className="rounded-full bg-red-500 px-1.5 py-0.5 text-[9px] font-bold text-white">&#127991; {rebateLabel}</span>
-            )}
-            {highlightLabel && (
-              <span className={`rounded-full ${highlightLabel.bg} px-1.5 py-0.5 text-[9px] font-bold text-white`}>{highlightLabel.text}</span>
-            )}
-          </div>
-        )}
-
-        {/* Fitment confirmation */}
-        {hasVehicle && (
-          <div className="text-[10px] font-medium text-green-700">&#10004; Fits {year} {make} {model}</div>
-        )}
-
-        {/* Performance ratings - mini bar charts (only show if we have UTQG data) */}
-        {(() => {
-          const utqg = parseUTQG(t.badges?.utqg);
-          if (!utqg || !utqg.treadwear) return null;
-          const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as TreadCategory;
-          const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
-          if (!ratings) return null;
-          return (
-            <div className="mt-2">
-              <MiniRatings ratings={ratings} category={category} />
-            </div>
-          );
-        })()}
-
-        {/* Price — pushed to bottom */}
-        {!isLocalMode && (() => {
-          const unitPrice = getDisplayPrice(t);
-          return unitPrice != null ? (
-            <div className="mt-auto pt-1.5">
-              <TirePriceDisplay unitPrice={unitPrice} quantity={4} isLocalMode={isLocalMode} />
-            </div>
-          ) : null;
-        })()}
       </div>
 
-      {/* ── CTA PANEL — 88px fixed ───────────────────────────────────────── */}
-      <div className="w-full flex flex-col items-stretch gap-2 pt-3 mt-auto border-t border-neutral-100">
+      {/* Tire size - prominent display */}
+      <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
+        {normalizeTireSize(selectedSize) || selectedSize}
+        {t.badges?.loadIndex && t.badges?.speedRating ? (
+          <span className="ml-1 text-neutral-500">
+            {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
+          </span>
+        ) : null}
+      </div>
 
-        {/* Primary CTA button */}
-        <div className="tire-card-cta grid gap-1.5">
-          {typeof t.cost === "number" && wheelSku && tireSku ? (
-            isStaggered ? (
-              <SelectTireButtonAxle
-                wheelSku={String(wheelSku)}
-                axle={axle}
-                tire={{
-                  sku: tireSku,
-                  brand: String(t.brand || ""),
-                  title: String(displayTitle),
-                  size: selectedSize,
-                  price: getDisplayPrice(t) ?? undefined,
-                  imageUrl: t.imageUrl,
-                  speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
-                  loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
-                  season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
-                  runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
-                  xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
-                  source: t.rawSource,
-                }}
-              />
-            ) : (
-              <SelectTireButton
-                wheelSku={String(wheelSku)}
-                tire={{
-                  sku: tireSku,
-                  brand: String(t.brand || ""),
-                  title: String(displayTitle),
-                  size: selectedSize,
-                  price: getDisplayPrice(t) ?? undefined,
-                  imageUrl: t.imageUrl,
-                  speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
-                  loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
-                  season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
-                  runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
-                  xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
-                  source: t.rawSource,
-                }}
-              />
-            )
-          ) : getDisplayPrice(t) != null ? (
-            isLocalMode ? (
-              <LocalTireAddButton
-                sku={tireSku}
-                brand={String(t.brand || "Tire")}
-                model={String(displayTitle)}
-                size={selectedSize}
-                imageUrl={t.imageUrl}
-                unitPrice={getDisplayPrice(t)!}
-                vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
-                source={t.rawSource}
-              />
-            ) : (
-              <QuickAddTireButton
-                sku={tireSku}
-                brand={String(t.brand || "Tire")}
-                model={String(displayTitle)}
-                size={selectedSize}
-                imageUrl={t.imageUrl}
-                unitPrice={getDisplayPrice(t)!}
-                vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
-                quantity={4}
-                source={t.rawSource}
-              />
-            )
-          ) : (
-            <a href={BRAND.links.tel} className="rounded-xl bg-red-600 px-2 py-2 text-center text-[11px] font-extrabold text-white hover:bg-red-700">
-              Call for price
-            </a>
-          )}
-
-          {/* Details link */}
-          {detailHref ? (
-            <Link
-              href={detailHref}
-              className="rounded-xl border border-neutral-300 bg-white px-2 py-1.5 text-center text-[11px] font-bold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
-            >
-              Details
-            </Link>
+      {/* Badges row - Top Pick (unless hidden) and Rebate */}
+      {((isTopPick && !hideTopPickBadge) || rebateLabel) ? (
+        <div className="relative z-10 mt-2 flex flex-wrap gap-1.5">
+          {isTopPick && !hideTopPickBadge ? (
+            <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white">
+              ⭐ Top Pick
+            </span>
+          ) : null}
+          {rebateLabel ? (
+            <span className="rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white">
+              🔥 {rebateLabel}
+            </span>
           ) : null}
         </div>
+      ) : null}
 
-        {/* Stock status — no warehouse location codes */}
-        <div className="text-center text-[10px] font-semibold">
-          {isLocalMode ? (
-            inStock ? (
-              <InstallTimeIndicator variant="inline" />
-            ) : (
-              <span className="text-amber-700">&#9888; Can order</span>
-            )
-          ) : inStock ? (
-            <span className="text-green-700">&#10004; In Stock</span>
-          ) : maxQty > 0 ? (
-            <span className="text-amber-700">&#9888; Low stock</span>
-          ) : (
-            <span className="text-red-600">&#10007; Out of stock</span>
-          )}
-        </div>
-
-        {/* Ships info */}
-        {!isLocalMode && (
-          <div className="text-center text-[10px] text-neutral-500 leading-tight">
-            {inStock ? "Ships 1\u20132 days" : "Ships 1\u20132 wks"}
+      {/* Product image with badge stack overlay */}
+      <div className="tire-card-image-container relative z-10 mt-4 overflow-hidden rounded-lg pointer-events-none">
+        {t.imageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={t.imageUrl}
+            alt={displayTitle}
+            loading="lazy"
+            className="transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+          />
+        ) : (
+          <div className="tire-card-image-placeholder">
+            <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
+            <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
           </div>
         )}
+        
+        {/* Badge stack - top left of image (constrained to prevent overflow) */}
+        <div className="absolute top-2 left-2 right-2 flex flex-col items-start gap-1 overflow-hidden">
+          {/* Category badge with icon - infer from model name if not in data */}
+          {(() => {
+            // Determine category from enrichment, badges, or model name inference
+            // Hierarchy: enrichment.treadCategory → badges.terrain → model name patterns
+            const m = (displayTitle + ' ' + (t.description || '')).toUpperCase();
+            let rawCategory = t.enrichment?.treadCategory || t.badges?.terrain || null;
+            
+            // Infer from model name patterns if not set (improved regex)
+            if (!rawCategory) {
+              // Winter patterns (check first - most specific)
+              if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) {
+                rawCategory = 'Winter';
+              // Mud-Terrain patterns (M/T, MT, MUD) - before A/T
+              } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
+                rawCategory = 'Mud-Terrain';
+              // Rugged-Terrain patterns (R/T, RT, RUGGED)
+              } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
+                rawCategory = 'Rugged-Terrain';
+              // All-Terrain: A/T, AT, AT2, ATX, AT-X, TERRA TRAC, KO2, GRAPPLER (without MUD)
+              } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
+                rawCategory = 'All-Terrain';
+              // Highway/Touring: H/T, HT, HT2, HTX, HTX2, TOURING, HIGHWAY
+              } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
+                rawCategory = 'Highway/Touring';
+              // Performance patterns
+              } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S?\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
+                rawCategory = 'Performance';
+              // All-Weather patterns
+              } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
+                rawCategory = 'All-Weather';
+              } else {
+                rawCategory = 'All-Season'; // Default fallback
+              }
+            }
+            
+            // Deduplicate repeated category text (e.g., "All-Season All-Season" → "All-Season")
+            // Also trim and normalize whitespace
+            const category = String(rawCategory || 'All-Season')
+              .trim()
+              .split(/\s+/)
+              .filter((word, idx, arr) => {
+                // Remove duplicate consecutive words (case-insensitive)
+                if (idx === 0) return true;
+                return word.toLowerCase() !== arr[idx - 1]?.toLowerCase();
+              })
+              .join(' ')
+              // If still too long or has repeated phrases, extract just the first valid category
+              .replace(/^(.+?)\s+\1.*$/i, '$1');
+            
+            const catStyle = {
+              'All-Terrain': { bg: 'bg-gradient-to-r from-amber-600 to-amber-500', icon: '🏔️' },
+              'Mud-Terrain': { bg: 'bg-gradient-to-r from-orange-700 to-orange-600', icon: '🪨' },
+              'Rugged-Terrain': { bg: 'bg-gradient-to-r from-stone-700 to-stone-600', icon: '⛰️' },
+              'Winter': { bg: 'bg-gradient-to-r from-sky-600 to-sky-500', icon: '❄️' },
+              'Performance': { bg: 'bg-gradient-to-r from-red-600 to-red-500', icon: '🏎️' },
+              'Highway/Touring': { bg: 'bg-gradient-to-r from-blue-600 to-blue-500', icon: '🛣️' },
+              'All-Season': { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '🌤️' },
+              'All-Weather': { bg: 'bg-gradient-to-r from-teal-600 to-teal-500', icon: '🌦️' },
+            }[category] || { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '🌤️' };
+            
+            return (
+              <span 
+                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold text-white shadow-md max-w-full whitespace-nowrap overflow-hidden ${catStyle.bg}`}
+                title={category}
+              >
+                <span className="drop-shadow-sm flex-shrink-0">{catStyle.icon}</span>
+                <span className="truncate">{category}</span>
+              </span>
+            );
+          })()}
+        </div>
+      </div>
+
+      {/* Fitment confirmation - single line */}
+      {hasVehicle ? (
+        <div className="relative z-10 mt-3 text-[11px] font-medium text-green-700">
+          <span className="text-green-600">✓</span> Fits {year} {make} {model}
+          {(() => {
+            const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
+            const tireRimDia = (() => {
+              const desc = String(t.description || selectedSize || "").toUpperCase();
+              // Use (?:\D|$) instead of \b to handle flotation sizes with LT suffix
+              const m = desc.match(/R(\d{2})(?:\D|$)/);
+              return m ? Number(m[1]) : NaN;
+            })();
+            const wheelMatches = isPackageFlow && Number.isFinite(wheelDiaN) && Number.isFinite(tireRimDia)
+              && Math.round(wheelDiaN) === Math.round(tireRimDia);
+            return wheelMatches ? (
+              <span className="ml-2 text-blue-600">• Matches {Math.round(wheelDiaN)}&quot; wheels</span>
+            ) : null;
+          })()}
+        </div>
+      ) : null}
+
+      {/* Availability row - concise */}
+      <div className="relative z-10 mt-3 flex items-center gap-1.5 text-[11px] font-medium">
+        {isLocalMode ? (
+          // Local mode: just show install time indicator (replaces "in stock" text)
+          inStock ? (
+            <InstallTimeIndicator variant="inline" />
+          ) : (
+            <>
+              <span className="text-amber-500">📦</span>
+              <span className="text-amber-700">Available • Can order for you</span>
+            </>
+          )
+        ) : (
+          // National mode: show stock + shipping info
+          inStock ? (
+            <>
+              <span className="text-green-600">✓</span>
+              <span className="text-green-700">
+                {maxQty >= 20 ? 'In stock' : `${maxQty} in stock`} • Ships 1–2 days
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="text-amber-500">📦</span>
+              <span className="text-amber-700">Available • Ships 1–2 weeks</span>
+            </>
+          )
+        )}
+      </div>
+
+      {/* Performance ratings - mini bar charts (only show if we have UTQG data) */}
+      {(() => {
+        const utqg = parseUTQG(t.badges?.utqg);
+        // Don't show ratings if no UTQG data - would just show meaningless defaults
+        if (!utqg || !utqg.treadwear) return null;
+        const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as any;
+        const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
+        if (!ratings) return null;
+        return (
+          <div className="relative z-10 mt-4">
+            <MiniRatings ratings={ratings} category={category} />
+          </div>
+        );
+      })()}
+
+      {/* Price block - both prices clearly visible (hide for local mode - qty selector shows breakdown) */}
+      {!isLocalMode && (
+        <div className="relative z-10 mt-4 pt-4 border-t border-neutral-100">
+          <div className="flex items-start justify-between">
+            <div>
+              {(() => {
+                const unitPrice = getDisplayPrice(t);
+                return unitPrice != null ? (
+                  <TirePriceDisplay 
+                    unitPrice={unitPrice} 
+                    quantity={4} 
+                    isLocalMode={isLocalMode}
+                  />
+                ) : (
+                  <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
+                );
+              })()}
+            </div>
+            {/* Stock indicator */}
+            <div className="flex items-center gap-1.5 text-xs font-semibold mt-1">
+              <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
+              <span className={inStock ? "text-green-700" : "text-amber-700"}>
+                {inStock ? (maxQty >= 100 ? "100+" : `${maxQty} avail`) : "Order"}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Trust row - prominent before CTA */}
+      <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">
+        <TrustMicroLine 
+          hasVehicle={hasVehicle}
+          inStock={inStock}
+          hasWarranty={Boolean(t.enrichment?.mileage && t.enrichment.mileage > 0)}
+          isLocalMode={isLocalMode}
+        />
+      </div>
+
+      {/* CTA buttons */}
+      <div className="tire-card-cta relative z-10 mt-3 grid gap-2">
+        {typeof t.cost === "number" && wheelSku && tireSku ? (
+          isStaggered ? (
+            <SelectTireButtonAxle
+              wheelSku={String(wheelSku)}
+              axle={axle}
+              tire={{
+                sku: tireSku,
+                brand: String(t.brand || ""),
+                title: String(displayTitle),
+                size: selectedSize,
+                price: getDisplayPrice(t) ?? undefined,
+                imageUrl: t.imageUrl,
+                speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+                season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
+                runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
+                xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                source: t.rawSource,
+              }}
+            />
+          ) : (
+            <SelectTireButton
+              wheelSku={String(wheelSku)}
+              tire={{
+                sku: tireSku,
+                brand: String(t.brand || ""),
+                title: String(displayTitle),
+                size: selectedSize,
+                price: getDisplayPrice(t) ?? undefined,
+                imageUrl: t.imageUrl,
+                speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+                season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
+                runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
+                xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                source: t.rawSource,
+              }}
+            />
+          )
+        ) : getDisplayPrice(t) != null ? (
+          isLocalMode ? (
+            <LocalTireAddButton
+              sku={tireSku}
+              brand={String(t.brand || "Tire")}
+              model={String(displayTitle)}
+              size={selectedSize}
+              imageUrl={t.imageUrl}
+              unitPrice={getDisplayPrice(t)!}
+              vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+              source={t.rawSource}
+            />
+          ) : (
+            <QuickAddTireButton
+              sku={tireSku}
+              brand={String(t.brand || "Tire")}
+              model={String(displayTitle)}
+              size={selectedSize}
+              imageUrl={t.imageUrl}
+              unitPrice={getDisplayPrice(t)!}
+              vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+              quantity={4}
+              source={t.rawSource}
+            />
+          )
+        ) : (
+          <a href={BRAND.links.tel} className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700">
+            Call for price
+          </a>
+        )}
+
+        <Link
+          href={t.source === "wp" && t.mfgPartNumber
+            ? `/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
+            : t.source === "km" && t.partNumber
+              ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
+              : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber
+                ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb" }).toString()}`
+                : "#"
+          }
+          className="rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
+        >
+          View Details
+        </Link>
       </div>
     </article>
   );
@@ -4853,6 +4909,3 @@ function Check({ label, name, value, defaultChecked }: { label: string; name?: s
     </label>
   );
 }
-
-
-
