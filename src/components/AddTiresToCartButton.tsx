@@ -212,25 +212,23 @@ export function QuickAddTireButton({
 
   return (
     <div className="space-y-2">
-      {/* Quantity Selector Row */}
-      <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold text-neutral-500">Qty:</span>
-        <div className="flex gap-1">
-          {QTY_OPTIONS.map((q) => (
-            <button
-              key={q}
-              type="button"
-              onClick={() => setQuantity(q)}
-              className={`w-8 h-8 rounded-lg text-sm font-bold transition-all ${
-                quantity === q
-                  ? "bg-red-600 text-white shadow-sm"
-                  : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-              }`}
-            >
-              {q}
-            </button>
-          ))}
-        </div>
+      {/* Quantity Selector Row — compact to fit 88px CTA panel */}
+      <div className="flex items-center justify-center gap-1">
+        {QTY_OPTIONS.map((q) => (
+          <button
+            key={q}
+            type="button"
+            onClick={() => setQuantity(q)}
+            className={`w-6 h-6 rounded-md text-xs font-bold transition-all flex-shrink-0 ${
+              quantity === q
+                ? "bg-red-600 text-white shadow-sm"
+                : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+            }`}
+            title={`Qty: ${q}`}
+          >
+            {q}
+          </button>
+        ))}
       </div>
       
       {/* Add to Cart Button - Wheel card style CTA */}

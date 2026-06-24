@@ -135,6 +135,12 @@ export function WheelsStyleCardHorizontal({
     if (wid)  sp.set("wheelWidth",  String(wid));
     if (off)  sp.set("wheelOffset", String(off));
     if (bolt) sp.set("wheelBolt",   String(bolt));
+    // Pass rear wheel info for staggered PDP display
+    if (cp?.staggered && cp?.rear) {
+      if (cp.rear.sku)      sp.set("rearSku",   cp.rear.sku);
+      if (cp.rear.diameter) sp.set("rearDia",   String(cp.rear.diameter));
+      if (cp.rear.width)    sp.set("rearWidth", String(cp.rear.width));
+    }
     const s = sp.toString();
     return s ? `?${s}` : "";
   }, [viewParams, selectedPair, pair, sizeLabel, specLabel]);
@@ -307,8 +313,32 @@ export function WheelsStyleCardHorizontal({
           </h3>
         </Link>
 
-        {/* Size line: diameter × width · EToffset · CBmm */}
-        {(currentDiameter || currentWidth || currentOffset || wheelCenterBore) && (
+        {/* Size: staggered front+rear display OR standard single size */}
+        {(selectedPair?.staggered && selectedPair.rear) ? (
+          <div className="mt-0.5 space-y-0.5">
+            <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold text-amber-800">
+              ⚡ Staggered Set
+            </span>
+            <div className="text-[11px] leading-snug">
+              <span className="font-semibold text-blue-600">F 2×</span>
+              <span className="text-neutral-600 ml-1">
+                {selectedPair.front.diameter && `${fmtSizePart(String(selectedPair.front.diameter))}″`}
+                {selectedPair.front.diameter && selectedPair.front.width && " × "}
+                {selectedPair.front.width && `${fmtSizePart(String(selectedPair.front.width))}″`}
+                {selectedPair.front.offset && <> ET{selectedPair.front.offset}</>}
+              </span>
+            </div>
+            <div className="text-[11px] leading-snug">
+              <span className="font-semibold text-orange-600">R 2×</span>
+              <span className="text-neutral-600 ml-1">
+                {selectedPair.rear.diameter && `${fmtSizePart(String(selectedPair.rear.diameter))}″`}
+                {selectedPair.rear.diameter && selectedPair.rear.width && " × "}
+                {selectedPair.rear.width && `${fmtSizePart(String(selectedPair.rear.width))}″`}
+                {selectedPair.rear.offset && <> ET{selectedPair.rear.offset}</>}
+              </span>
+            </div>
+          </div>
+        ) : (currentDiameter || currentWidth || currentOffset || wheelCenterBore) ? (
           <div className="text-[11px] text-neutral-500 leading-snug">
             {currentDiameter && `${fmtSizePart(currentDiameter)}″`}
             {currentDiameter && currentWidth && " × "}
@@ -318,7 +348,7 @@ export function WheelsStyleCardHorizontal({
             )}
             {wheelCenterBore && <> · {wheelCenterBore}mm CB</>}
           </div>
-        )}
+        ) : null}
 
         {/* Finish swatches */}
         {visibleThumbs.length > 1 && (
@@ -387,7 +417,7 @@ export function WheelsStyleCardHorizontal({
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 0,
                   })}{" "}
-                  set
+                  {selectedPair?.staggered && selectedPair.rear ? "staggered 2+2" : "set"}
                 </span>
               )}
             </>

@@ -349,6 +349,11 @@ export default async function WheelDetailPage({
   
   const wheelDiaParam = safeString(Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia);
   const wheelWidthParam = safeString(Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth);
+  // Staggered context: rear wheel passed from SRP staggered card
+  const rearSkuParam = safeString(Array.isArray((sp as any).rearSku) ? (sp as any).rearSku[0] : (sp as any).rearSku);
+  const rearDiaParam = safeString(Array.isArray((sp as any).rearDia) ? (sp as any).rearDia[0] : (sp as any).rearDia);
+  const rearWidthParam = safeString(Array.isArray((sp as any).rearWidth) ? (sp as any).rearWidth[0] : (sp as any).rearWidth);
+  const isStaggeredPDP = Boolean(rearSkuParam || (rearDiaParam && rearWidthParam));
   
   // Lifted build context
   const liftedSource = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
@@ -620,7 +625,24 @@ export default async function WheelDetailPage({
                   🎨 {finish}
                 </span>
               )}
-              {diameter && width && (
+              {/* Staggered setup: show front + rear specs prominently */}
+              {isStaggeredPDP ? (
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-800">
+                    ⚡ Staggered Set (2 front + 2 rear)
+                  </span>
+                  {diameter && width && (
+                    <span className="inline-flex items-center rounded-full bg-blue-50 border border-blue-200 px-2.5 py-1 text-xs font-semibold text-blue-800">
+                      Front ×2: {diameter}&quot; × {width}&quot;
+                    </span>
+                  )}
+                  {rearDiaParam && rearWidthParam && (
+                    <span className="inline-flex items-center rounded-full bg-orange-50 border border-orange-200 px-2.5 py-1 text-xs font-semibold text-orange-800">
+                      Rear ×2: {rearDiaParam}&quot; × {rearWidthParam}&quot;
+                    </span>
+                  )}
+                </div>
+              ) : diameter && width && (
                 <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
                   {diameter}&quot; × {width}&quot;
                 </span>
