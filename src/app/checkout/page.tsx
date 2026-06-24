@@ -258,6 +258,8 @@ export default function CheckoutPage() {
       type: item.type as "wheel" | "tire" | "accessory",
       quantity: item.quantity || 1,
       unitPrice: item.unitPrice,
+      // Wheel-1 landed-cost: freight baked in, no shipping charge
+      freeShipping: (item as { freeShipping?: boolean }).freeShipping === true || undefined,
     }));
     
     return calculateShipping({

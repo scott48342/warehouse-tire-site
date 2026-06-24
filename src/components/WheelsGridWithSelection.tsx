@@ -999,6 +999,9 @@ export function WheelsGridWithSelection({
         fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
         vehicle: vehicleInfo,
         staggered: true,
+        // Supplier metadata — used for shipping calculation
+        source:       (selectedWheel as any).supplier || undefined,
+        freeShipping: (selectedWheel as any).freeShipping === true,
       };
       
       addItem(cartItem);
@@ -1022,6 +1025,9 @@ export function WheelsGridWithSelection({
         fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
         vehicle: vehicleInfo,
         staggered: false,
+        // Supplier metadata — used for shipping calculation
+        source:       (selectedWheel as any).supplier || undefined,
+        freeShipping: (selectedWheel as any).freeShipping === true,
       };
       
       addItem(cartItem);

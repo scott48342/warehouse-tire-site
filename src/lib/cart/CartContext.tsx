@@ -105,8 +105,13 @@ export type CartWheelItem = {
     modification?: string;
   };
   staggered?: boolean;
-  /** Supplier source (e.g., "wheelpros") - for internal use only */
+  /** Supplier source (e.g., "wheelpros", "wheel1") - for internal use only */
   source?: string;
+  /**
+   * True when freight is baked into the unit price (Wheel-1 landed-cost pricing).
+   * Cart and checkout treat these items as having $0 additional shipping cost.
+   */
+  freeShipping?: boolean;
 };
 
 export type CartTireItem = {

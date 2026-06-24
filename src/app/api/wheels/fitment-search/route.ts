@@ -2678,7 +2678,7 @@ async function handleDbFirstWheelResults(opts: {
                 ? computeWheel1SellPrice({
                     msrp:       (c as Wheel1Candidate)._msrpNum,
                     mapPrice:   (c as Wheel1Candidate)._mapNum,
-                    dealerCost: null, // replaced when Wheel-1 cost feed arrives
+                    dealerCost: (c as Wheel1Candidate)._dealerCost ?? null,
                     diameter:   Number(c.diameter) || 20,
                   })
                 : getSafeWheelPrice(c, inv)

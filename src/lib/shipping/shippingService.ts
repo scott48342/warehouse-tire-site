@@ -98,6 +98,11 @@ export interface ShippingItem {
   type: "wheel" | "tire" | "accessory";
   quantity: number;
   unitPrice?: number;
+  /**
+   * When true, freight is baked into the unit price (Wheel-1 landed-cost).
+   * calculateShipping returns isFree=true when ALL items have freeShipping=true.
+   */
+  freeShipping?: boolean;
 }
 
 export interface ShippingEstimate {
@@ -220,7 +225,24 @@ export function normalizeZipCode(zipCode: string): string {
  */
 export function calculateShipping(input: ShippingInput): ShippingEstimate {
   const { zipCode, items, subtotal } = input;
-  
+
+  // Wheel-1 landed-cost: if ALL items in cart have freight baked in, shipping = $0
+  const allItemsFreeShipping =
+    items.length > 0 && items.every((i) => i.freeShipping === true);
+  if (allItemsFreeShipping) {
+    const zone = zipCode ? getZoneFromZip(normalizeZipCode(zipCode)) : 3;
+    return {
+      amount: 0,
+      isFree: true,
+      zone,
+      zoneName: getZoneName(zone),
+      amountToFreeShipping: 0,
+      displayAmount: "FREE",
+      estimatedDays: getEstimatedDays(zone),
+      isEstimate: !zipCode,
+    };
+  }
+
   // Free shipping threshold check
   if (subtotal >= FREE_SHIPPING_THRESHOLD) {
     const zone = zipCode ? getZoneFromZip(normalizeZipCode(zipCode)) : 3;
