@@ -19,17 +19,22 @@ import { getPool } from "@/lib/vehicleFitment";
 
 const BASE_URL = "https://api.thewheelgroup.info/api/v1";
 
-// ─── FIELD MAP (update after API probe) ───────────────────────────────────────
-// Maps our DB column names → API response field names.
-// Common alternatives listed as comments for quick reference.
+// ─── FIELD MAP (confirmed by probe 2026-06-24) ────────────────────────────────
+// Exact field names from https://api.thewheelgroup.info/api/v1/inventory
 const FIELD_MAP = {
-  sku:           "sku",           // alt: "part_number", "partNumber", "item_number"
-  dealer_cost:   "dealer_cost",   // alt: "cost", "net_price", "netPrice", "dealer_price"
-  map_price:     "map",           // alt: "map_price", "MAP", "mapPrice"
-  qty:           "qty",           // alt: "quantity", "stock", "inventory_qty", "total_qty"
-  warehouse:     "warehouse",     // alt: "location", "warehouse_code", "wh"
-  available:     "available",     // alt: "is_available", "in_stock", "availability"
+  sku:         "item",        // Part number / SKU
+  dealer_cost: "DealerCost",  // Dealer cost (number)
+  map_price:   "MAP",         // MAP price (0 = no MAP, treat as null)
+  total_qty:   "Total",       // Total qty across all warehouses (pre-summed)
 } as const;
+
+// Warehouse columns present in the API response (flat, each is a number)
+// These become warehouse_stock JSONB: [{warehouse: "ATL", qty: 3}, ...]
+const WAREHOUSE_COLS = [
+  "ATL", "CHAR", "CHI", "COL", "DAL", "DEN", "HOUS",
+  "IND", "JACKFL", "KSCITY", "LA", "NASH", "NJ", "NORL",
+  "PHXAZ", "SANT", "SEAWA",
+] as const;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -48,19 +53,25 @@ interface ApiRecord {
 
 // ─── API client ───────────────────────────────────────────────────────────────
 
+interface PageResponse {
+  records: ApiRecord[];
+  totalPages: number;
+  total: number;
+}
+
 async function fetchInventoryPage(
   apiKey: string,
-  page?: number,
-  pageSize = 1000
-): Promise<ApiRecord[]> {
+  page: number,
+  pageSize = 200
+): Promise<PageResponse> {
   const url = new URL(`${BASE_URL}/inventory`);
-  if (page !== undefined) url.searchParams.set("page", String(page));
-  url.searchParams.set("per_page", String(pageSize));
+  url.searchParams.set("page",      String(page));
+  url.searchParams.set("page_size", String(pageSize));
 
   const res = await fetch(url.toString(), {
     headers: {
       "X-API-Key": apiKey,
-      "Accept": "application/json",
+      "Accept":    "application/json",
     },
     signal: AbortSignal.timeout(30_000),
   });
@@ -72,42 +83,38 @@ async function fetchInventoryPage(
 
   const data = await res.json();
 
-  // Handle both array and { data: [...] } envelope shapes
-  if (Array.isArray(data)) return data;
-  if (Array.isArray(data.data))    return data.data;
-  if (Array.isArray(data.items))   return data.items;
-  if (Array.isArray(data.results)) return data.results;
+  // Response shape: { success, pagination: { page, page_size, total, total_pages }, data: [...] }
+  const records    = Array.isArray(data)         ? data
+                   : Array.isArray(data.data)    ? data.data
+                   : Array.isArray(data.items)   ? data.items
+                   : Array.isArray(data.results) ? data.results
+                   : [];
+  const totalPages = data.pagination?.total_pages ?? (records.length < pageSize ? page : page + 1);
+  const total      = data.pagination?.total ?? records.length;
 
-  throw new Error(`Unexpected API response shape: ${JSON.stringify(Object.keys(data))}`);
+  return { records, totalPages, total };
 }
 
 /**
- * Fetch ALL inventory records from the API.
- * Handles pagination automatically (fetches until empty page).
+ * Fetch ALL inventory records from the API, paginating through all pages.
+ * Rate limit: 100 req/min → 650ms delay between pages.
  */
 export async function fetchAllInventory(apiKey: string): Promise<ApiRecord[]> {
   const all: ApiRecord[] = [];
 
-  // Try paginated first; if page=1 returns all, great
-  const page1 = await fetchInventoryPage(apiKey, undefined);
+  // Page 1 to discover total_pages
+  const first = await fetchInventoryPage(apiKey, 1);
+  all.push(...first.records);
+  console.log(`[wheel1-sync] Page 1/${first.totalPages}: ${first.records.length} records (total: ${first.total})`);
 
-  // If no pagination params returned, assume single response
-  if (page1.length < 1000) {
-    console.log(`[wheel1-sync] Single-page response: ${page1.length} records`);
-    return page1;
-  }
-
-  // Paginate
-  all.push(...page1);
-  let page = 2;
-  while (true) {
-    const batch = await fetchInventoryPage(apiKey, page);
-    if (batch.length === 0) break;
-    all.push(...batch);
-    console.log(`[wheel1-sync] Page ${page}: ${batch.length} records (total so far: ${all.length})`);
-    page++;
-    // Respect rate limit: 100 req/min → ~600ms between requests
-    await new Promise(r => setTimeout(r, 650));
+  for (let page = 2; page <= first.totalPages; page++) {
+    await new Promise(r => setTimeout(r, 650)); // respect 100 req/min
+    const { records } = await fetchInventoryPage(apiKey, page);
+    if (records.length === 0) break;
+    all.push(...records);
+    if (page % 5 === 0 || page === first.totalPages) {
+      console.log(`[wheel1-sync] Page ${page}/${first.totalPages}: ${records.length} records (running total: ${all.length})`);
+    }
   }
 
   return all;
@@ -144,49 +151,45 @@ function toString(v: unknown): string | null {
 
 /**
  * Normalize a raw API record into our internal InventoryRecord shape.
- * Handles both single-warehouse (flat) and multi-warehouse (array) responses.
+ *
+ * The Wheel Group API uses FLAT warehouse columns (ATL, CHAR, CHI, etc.).
+ * We aggregate them into warehouse_stock JSONB and sum to inventory_qty.
+ * MAP = 0 means no MAP constraint — treat as null.
  */
 export function normalizeRecord(raw: ApiRecord): Wheel1InventoryRecord | null {
   const sku = toString(getField(raw, FIELD_MAP.sku));
   if (!sku) return null;
 
   const dealer_cost = toNum(getField(raw, FIELD_MAP.dealer_cost));
-  const map_price   = toNum(getField(raw, FIELD_MAP.map_price));
 
-  // Warehouse handling: some APIs return per-warehouse rows, some aggregate
-  const warehouseVal = getField(raw, FIELD_MAP.warehouse);
-  const qtyVal       = getField(raw, FIELD_MAP.qty);
+  // MAP: 0 means "no MAP" — treat as null
+  const rawMap  = toNum(getField(raw, FIELD_MAP.map_price));
+  const map_price = (rawMap && rawMap > 0) ? rawMap : null;
 
-  let inventory_qty    = 0;
-  let warehouse_stock: { warehouse: string; qty: number }[] | null = null;
-  let primary_warehouse: string | null = null;
-
-  if (Array.isArray(warehouseVal)) {
-    // Multi-warehouse: [{ code: "TX", qty: 10 }, ...]
-    warehouse_stock = warehouseVal.map((w: Record<string, unknown>) => ({
-      warehouse: toString(w.code ?? w.warehouse ?? w.location) ?? "?",
-      qty: toInt(w.qty ?? w.quantity ?? w.stock),
-    }));
-    inventory_qty = warehouse_stock.reduce((s, w) => s + w.qty, 0);
-    primary_warehouse = warehouse_stock.sort((a, b) => b.qty - a.qty)[0]?.warehouse ?? null;
-  } else if (warehouseVal && qtyVal !== undefined) {
-    // Single-warehouse flat row
-    const wh  = toString(warehouseVal) ?? "default";
-    const qty = toInt(qtyVal);
-    inventory_qty    = qty;
-    warehouse_stock  = [{ warehouse: wh, qty }];
-    primary_warehouse = wh;
-  } else {
-    // No warehouse, just a quantity
-    inventory_qty = toInt(qtyVal);
+  // Build per-warehouse breakdown from flat columns
+  const warehouse_stock: { warehouse: string; qty: number }[] = [];
+  for (const wh of WAREHOUSE_COLS) {
+    const qty = toInt(raw[wh]);
+    if (qty > 0) warehouse_stock.push({ warehouse: wh, qty });
   }
+
+  // Use Total field (pre-summed by API) — verify against our sum
+  const apiTotal    = toInt(getField(raw, FIELD_MAP.total_qty));
+  const ourSum      = warehouse_stock.reduce((s, w) => s + w.qty, 0);
+  const inventory_qty = apiTotal > 0 ? apiTotal : ourSum;
+
+  // Primary warehouse = highest-qty location
+  const primary_warehouse =
+    warehouse_stock.length > 0
+      ? [...warehouse_stock].sort((a, b) => b.qty - a.qty)[0].warehouse
+      : null;
 
   return {
     sku,
     dealer_cost,
     map_price,
     inventory_qty,
-    warehouse_stock,
+    warehouse_stock: warehouse_stock.length > 0 ? warehouse_stock : null,
     primary_warehouse,
   };
 }

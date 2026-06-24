@@ -34,16 +34,20 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-// ─── FIELD MAP ────────────────────────────────────────────────────────────────
-// Run `node scripts/wheel1-probe-api.mjs <KEY>` to discover exact field names.
-// Update these after probe confirms names.
+// ─── FIELD MAP (confirmed by probe 2026-06-24) ───────────────────────────
 const FIELD_MAP = {
-  sku:          'sku',          // or: part_number, item_id, partNumber
-  dealer_cost:  'dealer_cost',  // or: cost, net_price, netPrice, dealer_price
-  map_price:    'map',          // or: map_price, MAP, mapPrice, min_advertised_price
-  qty:          'qty',          // or: quantity, stock, inventory_qty, total_qty, on_hand
-  warehouse:    'warehouse',    // or: location, warehouse_code, wh_code, depot
+  sku:         'item',        // Part number / SKU
+  dealer_cost: 'DealerCost', // Dealer cost (number)
+  map_price:   'MAP',        // MAP (0 = no MAP, treated as null)
+  total_qty:   'Total',      // Total qty across all warehouses (pre-summed)
 };
+
+// 17 warehouse columns present in the flat API response
+const WAREHOUSE_COLS = [
+  'ATL', 'CHAR', 'CHI', 'COL', 'DAL', 'DEN', 'HOUS',
+  'IND', 'JACKFL', 'KSCITY', 'LA', 'NASH', 'NJ', 'NORL',
+  'PHXAZ', 'SANT', 'SEAWA',
+];
 
 // ─── DB ───────────────────────────────────────────────────────────────────────
 
@@ -83,58 +87,46 @@ function toStr(v) {
 // ─── Fetch ────────────────────────────────────────────────────────────────────
 
 async function fetchInventory() {
-  console.log('📡 Fetching inventory from Wheel Group API...');
+  console.log('📡 Fetching inventory from Wheel Group API (paginated 200/page)...');
   const records = [];
-  let page = 1;
 
-  while (true) {
-    const url = new URL(`${BASE_URL}/inventory`);
-    // Try paginated; adjust params if API uses different pagination
-    if (page > 1) {
-      url.searchParams.set('page', String(page));
-      url.searchParams.set('per_page', '1000');
-    }
+  // Page 1 — discover total_pages
+  const first = await fetchPage(1);
+  records.push(...first.batch);
+  console.log(`  Page 1/${first.totalPages}: ${first.batch.length} records (API total: ${first.total})`);
 
-    const res = await fetch(url.toString(), {
-      headers: {
-        'X-API-Key': API_KEY,
-        'Accept':    'application/json',
-      },
-    });
-
-    if (!res.ok) {
-      const body = await res.text();
-      throw new Error(`API ${res.status}: ${body.substring(0, 300)}`);
-    }
-
-    const data = await res.json();
-
-    // Auto-detect envelope shape
-    const batch = Array.isArray(data) ? data
-                : Array.isArray(data.data)    ? data.data
-                : Array.isArray(data.items)   ? data.items
-                : Array.isArray(data.results) ? data.results
-                : (() => { throw new Error(`Unknown response shape: ${JSON.stringify(Object.keys(data))}`); })();
-
+  for (let page = 2; page <= first.totalPages; page++) {
+    await new Promise(r => setTimeout(r, 650)); // respect 100 req/min
+    const { batch } = await fetchPage(page);
     if (batch.length === 0) break;
     records.push(...batch);
-    console.log(`  Page ${page}: ${batch.length} records (total: ${records.length})`);
-
-    // Field discovery on first page
-    if (page === 1) {
-      console.log('\n🔑 API fields detected:');
-      Object.keys(batch[0]).forEach(f => console.log(`  ${f} = ${JSON.stringify(batch[0][f])}`));
-      console.log('');
+    if (page % 5 === 0 || page === first.totalPages) {
+      console.log(`  Page ${page}/${first.totalPages}: ${batch.length} records (running: ${records.length})`);
     }
-
-    // Single-page response (no pagination)
-    if (batch.length < 500) break;
-
-    page++;
-    await new Promise(r => setTimeout(r, 650)); // respect 100 req/min
   }
 
   return records;
+}
+
+async function fetchPage(page) {
+  const url = new URL(`${BASE_URL}/inventory`);
+  url.searchParams.set('page',      String(page));
+  url.searchParams.set('page_size', '200');
+
+  const res = await fetch(url.toString(), {
+    headers: { 'X-API-Key': API_KEY, 'Accept': 'application/json' },
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`API ${res.status}: ${body.substring(0, 300)}`);
+  }
+
+  const data  = await res.json();
+  const batch = Array.isArray(data) ? data : (data.data ?? data.items ?? data.results ?? []);
+  const totalPages = data.pagination?.total_pages ?? 1;
+  const total      = data.pagination?.total ?? batch.length;
+  return { batch, totalPages, total };
 }
 
 // ─── Normalize ────────────────────────────────────────────────────────────────
@@ -143,13 +135,32 @@ function normalize(raw) {
   const sku = toStr(getField(raw, FIELD_MAP.sku));
   if (!sku) return null;
 
+  const dealer_cost = toNum(getField(raw, FIELD_MAP.dealer_cost));
+
+  // MAP = 0 means "no MAP" — treat as null
+  const rawMap  = toNum(getField(raw, FIELD_MAP.map_price));
+  const map_price = (rawMap && rawMap > 0) ? rawMap : null;
+
+  // Build warehouse breakdown from flat columns
+  const warehouses = WAREHOUSE_COLS
+    .map(wh => ({ warehouse: wh, qty: toInt(raw[wh]) }))
+    .filter(w => w.qty > 0);
+
+  // Use API's pre-summed Total; fall back to our sum
+  const apiTotal = toInt(getField(raw, FIELD_MAP.total_qty));
+  const qty      = apiTotal > 0 ? apiTotal : warehouses.reduce((s, w) => s + w.qty, 0);
+
+  const primaryWh = warehouses.length > 0
+    ? [...warehouses].sort((a, b) => b.qty - a.qty)[0].warehouse
+    : null;
+
   return {
     sku,
-    dealer_cost: toNum(getField(raw, FIELD_MAP.dealer_cost)),
-    map_price:   toNum(getField(raw, FIELD_MAP.map_price)),
-    qty:         toInt(getField(raw, FIELD_MAP.qty)),
-    warehouse:   toStr(getField(raw, FIELD_MAP.warehouse)),
-    raw,          // keep for debugging
+    dealer_cost,
+    map_price,
+    qty,
+    warehouses:   warehouses.length > 0 ? warehouses : null,
+    primary_wh:   primaryWh,
   };
 }
 
@@ -176,45 +187,22 @@ async function upsertBatch(records) {
       ) ON COMMIT DROP
     `);
 
-    // Build per-SKU aggregation (handles multi-warehouse rows for same SKU)
-    const bySku = new Map();
+    // Insert into staging (API returns one row per SKU — no de-dup needed)
     for (const r of records) {
       if (!r) continue;
-      const existing = bySku.get(r.sku);
-      if (existing) {
-        existing.qty += r.qty;
-        if (r.warehouse) {
-          existing.warehouses.push({ warehouse: r.warehouse, qty: r.qty });
-        }
-        if (!existing.dealer_cost && r.dealer_cost) existing.dealer_cost = r.dealer_cost;
-        if (!existing.map_price   && r.map_price)   existing.map_price   = r.map_price;
-      } else {
-        bySku.set(r.sku, {
-          sku: r.sku,
-          qty: r.qty,
-          dealer_cost: r.dealer_cost,
-          map_price: r.map_price,
-          warehouses: r.warehouse ? [{ warehouse: r.warehouse, qty: r.qty }] : [],
-        });
-      }
-    }
-
-    // Insert into staging
-    for (const [, r] of bySku) {
-      const primaryWh = r.warehouses.sort((a, b) => b.qty - a.qty)[0]?.warehouse ?? null;
       await client.query(
         `INSERT INTO w1_inv_staging
            (sku, inventory_qty, dealer_cost, map_price, warehouse_stock, primary_warehouse)
          VALUES ($1, $2, $3, $4, $5::jsonb, $6)
          ON CONFLICT (sku) DO UPDATE SET
-           inventory_qty = w1_inv_staging.inventory_qty + EXCLUDED.inventory_qty`,
+           inventory_qty = EXCLUDED.inventory_qty`,
         [
           r.sku,
           r.qty,
           r.dealer_cost,
           r.map_price,
-          r.warehouses.length > 0 ? JSON.stringify(r.warehouses) : null,
-          primaryWh,
+          r.warehouses ? JSON.stringify(r.warehouses) : null,
+          r.primary_wh,
         ]
       );
     }
