@@ -32,7 +32,6 @@ import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { isPremiumTrimUxEnabled } from "@/lib/features/premiumTrimUx";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
 import { TireFilterSidebar } from "@/components/TireFilterSidebar";
-import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
 import { MiniRatings, PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { derivePerformanceRatings, parseUTQG, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { 
@@ -73,8 +72,6 @@ import {
 import { SeoContentBlock } from "@/components/SeoContentBlock";
 // Buying guides (2026-04-06)
 import { TireSizeGuide, TireTypesGuide, StaggeredGuide } from "@/components/BuyingGuides";
-// Local mode mobile SRP (2026-07-21)
-import { LocalMobileTireSRP } from "@/components/local/LocalMobileTireSRP";
 
 import { 
   type TreadCategory, 
@@ -93,9 +90,6 @@ import { WheelConfigAutoSelectTracker } from "@/components/WheelConfigAutoSelect
 import { FitmentCoverageTracker } from "@/components/FitmentCoverageTracker";
 import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
 import { getFitmentConfigurations } from "@/lib/fitment-db/getFitmentConfigurations";
-import { getOemTireSizesByFamily } from "@/lib/fitment-db/getOemTireSizesByFamily";
-import { resolveVehicleFitment } from "@/lib/fitment/canonicalResolver";
-import { getWheelSizeGateDecisionWithTrimMapping } from "@/lib/tires/wheelSizeGateDecisionServer";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
 import {
   type RearWheelConfig,
@@ -104,105 +98,6 @@ import {
   getEffectiveRearWheelConfig,
   parseRearWheelConfigParam,
 } from "@/lib/fitment/rearWheelConfig";
-import type { Metadata } from "next";
-
-// ═══════════════════════════════════════════════════════════════════════════
-// ROUTE CONFIG - Force dynamic rendering to ensure sort/filter params work
-// ═══════════════════════════════════════════════════════════════════════════
-export const dynamic = 'force-dynamic';
-
-// ═══════════════════════════════════════════════════════════════════════════
-// METADATA - SEO canonical tags to prevent duplicate content issues
-// ═══════════════════════════════════════════════════════════════════════════
-
-/**
- * Build canonical URL for tires pages.
- * Strips filter params (sort, page, wheelDia, wheelWidth, etc.) 
- * Keeps only essential vehicle identity params.
- */
-function buildCanonicalUrl(sp: Record<string, string | string[] | undefined>): string {
-  const getParam = (key: string) => {
-    const val = sp[key];
-    return Array.isArray(val) ? val[0] : val;
-  };
-  
-  const year = getParam("year");
-  const make = getParam("make");
-  const model = getParam("model");
-  const modification = getParam("modification");
-  const rearWheelConfig = getParam("rearWheelConfig");
-  // Size-only search mode
-  const size = getParam("size");
-  
-  // Size-only mode (no vehicle)
-  if (size && (!year || !make || !model)) {
-    return `https://shop.warehousetiredirect.com/tires?size=${encodeURIComponent(size)}`;
-  }
-  
-  // No vehicle and no size = browse
-  if (!year || !make || !model) {
-    return "https://shop.warehousetiredirect.com/tires";
-  }
-  
-  // Build canonical with only essential params
-  const params = new URLSearchParams();
-  params.set("year", year);
-  params.set("make", make);
-  params.set("model", model);
-  if (modification) params.set("modification", modification);
-  if (rearWheelConfig) params.set("rearWheelConfig", rearWheelConfig);
-  
-  return `https://shop.warehousetiredirect.com/tires?${params.toString()}`;
-}
-
-export async function generateMetadata({
-  searchParams,
-}: {
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
-}): Promise<Metadata> {
-  const sp = (await searchParams) ?? {};
-  
-  const getParam = (key: string) => {
-    const val = sp[key];
-    return Array.isArray(val) ? val[0] : val;
-  };
-  
-  const year = getParam("year");
-  const make = getParam("make");
-  const model = getParam("model");
-  const size = getParam("size");
-  
-  // Build page title
-  let title: string;
-  let description: string;
-  
-  if (year && make && model) {
-    const vehiclePart = `${year} ${make} ${model}`;
-    title = `Tires for ${vehiclePart} | Warehouse Tire Direct`;
-    description = `Shop tires for your ${vehiclePart}. Guaranteed fitment, competitive prices, expert support.`;
-  } else if (size) {
-    title = `${size} Tires | Warehouse Tire Direct`;
-    description = `Shop ${size} tires. Wide selection, competitive prices, expert support.`;
-  } else {
-    title = "Tires | Warehouse Tire Direct";
-    description = "Shop tires with guaranteed fitment. Browse by vehicle or tire size for the perfect match.";
-  }
-  
-  const canonicalUrl = buildCanonicalUrl(sp);
-  
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: canonicalUrl,
-    },
-    openGraph: {
-      title,
-      description,
-      url: canonicalUrl,
-    },
-  };
-}
 
 type Tire = {
   source?: "wp" | "km" | "tw";
@@ -449,7 +344,7 @@ function getDisplayPrice(tire: Tire): number | null {
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  const port = process.env.PORT || "3000"; return `http://localhost:${port}`;
+  return "http://localhost:3000";
 }
 
 async function fetchFitment(params: Record<string, string | undefined>) {
@@ -522,16 +417,8 @@ async function fetchActiveRebates() {
 /**
  * Fetch tires from TireWeb (ATD, NTW, US AutoForce)
  * Returns TireLibrary-enriched data including images
- * 
- * IMPORTANT: Pass vehicle params when available so the API can:
- * - Apply LT-only filter for HD trucks/commercial vans (2026-07-26)
- * - Better match tire sizes to vehicle fitment
  */
-async function fetchTireWebTires(
-  tireSize: string, 
-  brand?: string,
-  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number }
-) {
+async function fetchTireWebTires(tireSize: string, brand?: string) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
   try {
     const params = new URLSearchParams({
@@ -544,12 +431,6 @@ async function fetchTireWebTires(
     if (brand) {
       params.set("brand", brand);
     }
-    // Pass vehicle context so API can apply LT filter for HD trucks
-    if (vehicle?.year) params.set("year", vehicle.year);
-    if (vehicle?.make) params.set("make", vehicle.make);
-    if (vehicle?.model) params.set("model", vehicle.model);
-    if (vehicle?.wheelDiameter) params.set("wheelDiameter", String(vehicle.wheelDiameter));
-    
     const res = await fetch(`${getBaseUrl()}/api/tires/search?${params.toString()}`, {
       cache: "no-store",
     });
@@ -558,51 +439,6 @@ async function fetchTireWebTires(
     return data;
   } catch (err) {
     console.error("[fetchTireWebTires] Error:", err);
-    return { results: [] };
-  }
-}
-
-/**
- * Fetch tires for LIFTED builds
- * Uses the API's lifted tire search logic which generates proper flotation sizes
- * like "37x12.50R20" based on lift height and wheel diameter
- */
-async function fetchLiftedTires(opts: {
-  year: string;
-  make: string;
-  model: string;
-  wheelDiameter: number;
-  liftInches: number;
-  buildType: string;
-  brand?: string;
-}) {
-  try {
-    const params = new URLSearchParams({
-      year: opts.year,
-      make: opts.make,
-      model: opts.model,
-      wheelDiameter: String(opts.wheelDiameter),
-      liftInches: String(opts.liftInches),
-      buildType: opts.buildType,
-      minQty: "4",
-      pageSize: "500",
-    });
-    if (opts.brand) {
-      params.set("brand", opts.brand);
-    }
-    console.log(`[fetchLiftedTires] Fetching lifted tires: ${opts.make} ${opts.model}, ${opts.liftInches}" lift, ${opts.wheelDiameter}" wheels`);
-    const res = await fetch(`${getBaseUrl()}/api/tires/search?${params.toString()}`, {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      console.error(`[fetchLiftedTires] API error: ${res.status}`);
-      return { results: [] };
-    }
-    const data = await res.json();
-    console.log(`[fetchLiftedTires] Got ${data.results?.length || 0} results`);
-    return data;
-  } catch (err) {
-    console.error("[fetchLiftedTires] Error:", err);
     return { results: [] };
   }
 }
@@ -1148,23 +984,8 @@ export default async function TiresPage({
   let modification = modificationRaw;
   let trimLabel = trimRaw;
   
-  // Helper to detect if a string looks like a modification slug (not a display label)
-  // Modification slugs look like: "2021-chevrolet-silverado-2500-hd-high-country-1e5f8b"
-  // Display labels look like: "High Country", "LTZ", "Big Horn"
-  function looksLikeModificationSlug(s: string): boolean {
-    if (!s) return false;
-    // Short hash formats
-    if (/^s_[a-f0-9]{8}$/.test(s)) return true;
-    if (/^[a-f0-9]{10}$/.test(s)) return true;
-    // Full slug format: starts with year, contains dashes, ends with hex suffix
-    if (/^\d{4}-[a-z0-9-]+-[a-f0-9]{4,}$/i.test(s)) return true;
-    // Contains multiple dashes and a hex-ish suffix (e.g., "trim-name-abc123")
-    if (s.includes("-") && /[a-f0-9]{4,}$/i.test(s)) return true;
-    return false;
-  }
-  
   if (!modification && trimRaw) {
-    if (looksLikeModificationSlug(trimRaw)) {
+    if (/^s_[a-f0-9]{8}$/.test(trimRaw) || /^[a-f0-9]{10}$/.test(trimRaw)) {
       modification = trimRaw;
       trimLabel = "";
       console.warn(`[tires] DEPRECATION: Using 'trim' as modificationId. Migrate to 'modification=${trimRaw}'`);
@@ -1173,10 +994,6 @@ export default async function TiresPage({
   
   if (!modification && trimRaw && !trimRaw.includes(" ")) {
     modification = trimRaw;
-    // If this looks like a slug (not a clean label), don't display it
-    if (looksLikeModificationSlug(trimRaw)) {
-      trimLabel = "";
-    }
   }
   
   // IMPORTANT: Never use modification as display trim - it's a hex ID, not a customer-facing label
@@ -1316,34 +1133,19 @@ export default async function TiresPage({
   // LIFTED BUILD CONTEXT
   // ═══════════════════════════════════════════════════════════════════════════
   // When user comes from /lifted page, use lifted tire recommendations instead of OEM
-  // Also read legacy param names (targetTireSizes, buildType, liftLevel) for backwards compatibility
-  const liftedSourceRaw = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
-  const liftedPresetRaw = safeString(Array.isArray(sp.liftedPreset) ? sp.liftedPreset[0] : sp.liftedPreset);
+  const liftedSource = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
+  const liftedPreset = safeString(Array.isArray(sp.liftedPreset) ? sp.liftedPreset[0] : sp.liftedPreset);
   const liftedInchesRaw = safeString(Array.isArray(sp.liftedInches) ? sp.liftedInches[0] : sp.liftedInches);
   const liftedInches = liftedInchesRaw ? parseInt(liftedInchesRaw, 10) : 0;
   const liftedTireSizesRaw = safeString(Array.isArray(sp.liftedTireSizes) ? sp.liftedTireSizes[0] : sp.liftedTireSizes);
-  
-  // Fallback params for backwards compatibility with old URLs
-  const buildTypeParam = safeString(Array.isArray(sp.buildType) ? sp.buildType[0] : sp.buildType);
-  const liftLevelParam = safeString(Array.isArray(sp.liftLevel) ? sp.liftLevel[0] : sp.liftLevel);
-  const targetTireSizesRaw = safeString(Array.isArray(sp.targetTireSizes) ? sp.targetTireSizes[0] : sp.targetTireSizes);
-  
-  // Use explicit params or fall back to legacy params when buildType=lifted
-  const isLiftedFromBuildType = buildTypeParam === "lifted" || buildTypeParam === "leveled";
-  const liftedSource = liftedSourceRaw || (isLiftedFromBuildType ? "lifted" : "");
-  const liftedPreset = liftedPresetRaw || (isLiftedFromBuildType ? (liftLevelParam || "custom") : "");
-  
-  // Fall back liftedTireSizes to targetTireSizes for old URLs
-  const effectiveTireSizesRaw = liftedTireSizesRaw || targetTireSizesRaw;
-  const liftedTireSizes = effectiveTireSizesRaw ? effectiveTireSizesRaw.split(",").filter(Boolean) : [];
-  
+  const liftedTireSizes = liftedTireSizesRaw ? liftedTireSizesRaw.split(",").filter(Boolean) : [];
   const liftedTireDiaMinRaw = safeString(Array.isArray(sp.liftedTireDiaMin) ? sp.liftedTireDiaMin[0] : sp.liftedTireDiaMin);
   const liftedTireDiaMin = liftedTireDiaMinRaw ? parseInt(liftedTireDiaMinRaw, 10) : 0;
   const liftedTireDiaMaxRaw = safeString(Array.isArray(sp.liftedTireDiaMax) ? sp.liftedTireDiaMax[0] : sp.liftedTireDiaMax);
   const liftedTireDiaMax = liftedTireDiaMaxRaw ? parseInt(liftedTireDiaMaxRaw, 10) : 0;
   
   // Lifted build is active when we have valid lifted context from URL params
-  // liftedSource can be "lifted" (from /lifted page), "manual" (user-selected), or inferred from buildType
+  // liftedSource can be "lifted" (from /lifted page), "manual" (user-selected), or any truthy value
   const isLiftedBuild = Boolean(liftedSource) && Boolean(liftedPreset) && liftedInches > 0;
   
   if (isLiftedBuild) {
@@ -1588,56 +1390,21 @@ export default async function TiresPage({
   // 1. We have a vehicle selected (year/make/model)
   // 2. No modification is specified
   // 3. AND we don't have static tire data available (not a classic vehicle)
-  // 4. AND not a lifted build (lifted builds have their own tire size recommendations)
-  if (year && make && model && !modification && !hasStaticTireData && !isLiftedBuild) {
-    // Fetch available trims to show inline selector
-    let availableTrimsForGate: Array<{ value: string; label: string; modificationId: string; tireSizes?: string[] }> = [];
-    try {
-      const trimsRes = await fetch(`${getBaseUrl()}/api/vehicles/trims?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`, { cache: "no-store" });
-      if (trimsRes.ok) {
-        const trimsData = await trimsRes.json();
-        availableTrimsForGate = trimsData.results || [];
-      }
-    } catch (e) {
-      console.warn("[tires/page] Failed to fetch trims for gate:", e);
-    }
-    
-    // If we have trims, show them; otherwise show the generic message
+  if (year && make && model && !modification && !hasStaticTireData) {
     return (
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-screen-2xl px-4 py-8">
-          <div className="rounded-3xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-white p-6">
-            <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Tires for {year} {make} {model}</h1>
-            {availableTrimsForGate.length > 0 ? (
-              <>
-                <p className="mt-2 text-sm text-neutral-700">
-                  This vehicle has multiple trims with different tire sizes. Select your trim to see matching tires:
-                </p>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  {availableTrimsForGate.map((trim) => (
-                    <a
-                      key={trim.value}
-                      href={`/tires?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&modification=${encodeURIComponent(trim.modificationId || trim.value)}`}
-                      className="inline-flex flex-col items-start rounded-xl border-2 border-amber-300 bg-white px-5 py-4 text-sm hover:border-amber-500 hover:bg-amber-50 transition-colors shadow-sm"
-                    >
-                      <span className="font-extrabold text-neutral-900 text-base">{trim.label}</span>
-                    </a>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="mt-2 text-sm text-neutral-700">
-                  Select your vehicle <span className="font-semibold">trim / option</span> to show tires that fit.
-                </p>
-                <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
-                  Current selection: <span className="font-semibold">{year} {make} {model}</span>
-                  <div className="mt-2 text-xs text-neutral-500">
-                    Tip: Open the vehicle picker and choose a trim (it will auto-search).
-                  </div>
-                </div>
-              </>
-            )}
+          <div className="rounded-3xl border border-red-100 bg-gradient-to-r from-red-50 via-white to-white p-6">
+            <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Tires</h1>
+            <p className="mt-2 text-sm text-neutral-700">
+              Select your vehicle <span className="font-semibold">trim / option</span> to show tires that fit.
+            </p>
+            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+              Current selection: <span className="font-semibold">{year} {make} {model}</span>
+              <div className="mt-2 text-xs text-neutral-500">
+                Tip: Open the vehicle picker and choose a trim (it will auto-search).
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -1668,29 +1435,6 @@ export default async function TiresPage({
   const fitmentAgg = prefetchFitment || (year && make && model
     ? await fetchFitment({ year, make, model })
     : null);
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // OEM FAMILY TIRE SIZE LOOKUP (for aftermarket wheel builds)
-  // ═══════════════════════════════════════════════════════════════════════════
-  // When customer selects aftermarket wheels that weren't an OEM option for their
-  // specific year, look up what OEM tire sizes exist for that wheel diameter on
-  // ANY year of their make/model. This is MUCH more accurate than calculating.
-  // Example: 2004 Silverado with 22" wheels → find 275/50R22, 285/45R22 from 2019+ Silverados
-  const wheelDiaForFamilyLookup = Number(wheelDia) || 0;
-  const oemFamilySizes = (hasVehicle && wheelDiaForFamilyLookup > 0 && make && model)
-    ? await getOemTireSizesByFamily(make, model, wheelDiaForFamilyLookup)
-    : null;
-  
-  if (oemFamilySizes && oemFamilySizes.sizes.length > 0) {
-    console.log('[tires/page] 🔍 OEM FAMILY LOOKUP:', {
-      make,
-      model,
-      wheelDiameter: wheelDiaForFamilyLookup,
-      sizes: oemFamilySizes.sizes,
-      yearsWithThisSize: oemFamilySizes.yearsWithThisSize,
-      confidence: oemFamilySizes.confidence,
-    });
-  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // TIRE SIZE RESOLUTION
@@ -1866,50 +1610,6 @@ export default async function TiresPage({
   // Use auto-selected wheelDia for filtering when no URL param provided
   const wheelDiaFromConfigOrUrl = configAutoWheelDia || wheelDia;
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // PHASE 3: CANONICAL TRIM MAPPING RESOLUTION
-  // Check if we have an approved trim mapping that can skip the wheel size gate.
-  // This prevents unnecessary chooser screens for trims with confirmed single configs.
-  // NO REGRESSION: Customer-facing trim labels remain unchanged.
-  // ═══════════════════════════════════════════════════════════════════════════
-  let trimMappingResult: Awaited<ReturnType<typeof resolveVehicleFitment>> | null = null;
-  let trimMappingAppliedAutoSelect = false;
-  
-  if (hasVehicle && trim && !wheelDia && !isLiftedBuild && !isPackageFlow) {
-    try {
-      trimMappingResult = await resolveVehicleFitment({
-        year: parseInt(year, 10),
-        make,
-        model,
-        trim,
-        modificationId: modification || undefined,
-      });
-      
-      // Check if trim mapping can auto-select for us
-      if (
-        trimMappingResult.trimMapping.found &&
-        !trimMappingResult.trimMapping.showSizeChooser &&
-        trimMappingResult.trimMapping.autoSelectedConfig
-      ) {
-        // AUTO-SELECT from trim mapping (higher priority than config table)
-        const autoConfig = trimMappingResult.trimMapping.autoSelectedConfig;
-        configAutoWheelDia = String(autoConfig.wheelDiameter);
-        trimMappingAppliedAutoSelect = true;
-        wheelDiaWasAutoSelected = true;
-        console.log(
-          '[tires/page] ✅ AUTO-SELECTED from TRIM MAPPING:',
-          configAutoWheelDia,
-          `(mapping: ${trimMappingResult.trimMapping.mappingId}, reason: ${trimMappingResult.trimMapping.chooserReason || 'single_config'})`
-        );
-      }
-    } catch (err) {
-      console.warn('[tires/page] Trim mapping lookup failed:', err);
-    }
-  }
-  
-  // Update wheelDiaFromConfigOrUrl after potential trim mapping auto-select
-  const wheelDiaFromConfigOrUrlFinal = configAutoWheelDia || wheelDia;
-
   // Resolve modificationId to display label if trim looks like a hash ID
   let resolvedTrimLabel: string | undefined;
   if (trim && /^s_[a-f0-9]{8}$/.test(trim) && year && make && model) {
@@ -1942,9 +1642,7 @@ export default async function TiresPage({
     const str = String(s || "").toUpperCase();
     
     // Modern P-metric: 205/75R14, 275/65R18 → extract R## part
-    // Also handles flotation sizes: 35X12.50R20LT, 37x12.50R20
-    // Use (?:\D|$) instead of \b to handle load range suffixes (LT, C, E, etc.)
-    const modernMatch = str.match(/R(\d{2})(?:\D|$)/);
+    const modernMatch = str.match(/R(\d{2})\b/);
     if (modernMatch) return Number(modernMatch[1]);
     
     // Legacy alphanumeric: E70-14, F60-15, G78-14 → extract trailing ##
@@ -1961,10 +1659,10 @@ export default async function TiresPage({
 
   // For staggered vehicles, use effective wheel specs that consider fitment data
   // This handles the case where URL only has one wheel but fitment tells us about both axles
-  // Also handles auto-selected diameter from HIGH CONFIDENCE config table or TRIM MAPPING
+  // Also handles auto-selected diameter from HIGH CONFIDENCE config table
   const wheelDiaForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelDia
     ? effectiveWheelDia
-    : (wheelDiaFromConfigOrUrlFinal || wheelDiaActive); // Include auto-selected from config/trim mapping
+    : (wheelDiaFromConfigOrUrl || wheelDiaActive); // Include auto-selected from config
   const wheelWidthForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelWidth
     ? effectiveWheelWidth
     : wheelWidthActive;
@@ -2032,50 +1730,21 @@ export default async function TiresPage({
     return null; // Will be handled by aftermarketFallback below
   })();
   
-  // AFTERMARKET FALLBACK: When NO OEM data exists for this wheel diameter,
-  // first check if we have OEM data from the vehicle family (same make/model, different year),
-  // then fall back to calculated sizes only if no family data exists.
+  // AFTERMARKET FALLBACK: When NO OEM data exists at all,
+  // suggest tire sizes based purely on wheel specs and vehicle class.
+  // This is critical for aftermarket wheel builds on vehicles without fitment data.
   const aftermarketFallback = (() => {
     // Only use fallback when:
     // 1. We have a wheel diameter
-    // 2. No OEM sizes available for THIS vehicle at this diameter
+    // 2. No OEM sizes available at all (not just no match for this diameter)
     // 3. Plus-sizing couldn't help (no reference)
     // 4. NOT a lifted build (lifted builds use specific sizes)
     if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return null;
-    if (oemWheelMatchedSizes.length > 0) return null; // Have OEM match for this exact vehicle
+    if (oemWheelMatchedSizes.length > 0) return null; // Have OEM match
     if (plusSizeResult && plusSizeResult.acceptableCandidates.length > 0) return null; // Plus-sizing worked
     if (isLiftedBuild) return null; // Lifted builds don't use aftermarket fallback
     
-    // ✨ PREFER OEM FAMILY DATA: If we have OEM sizes from same make/model (any year), use those!
-    // This is far more accurate than calculating - these are proven sizes for this vehicle family.
-    if (oemFamilySizes && oemFamilySizes.sizes.length > 0) {
-      console.log('[tires/page] ✅ Using OEM family sizes instead of calculation:', oemFamilySizes.sizes);
-      return {
-        sizes: oemFamilySizes.sizes,
-        candidates: oemFamilySizes.sizes.map((size) => ({
-          size,
-          rimDiameter: Math.round(wheelDiaNum),
-          overallDiameter: 0, // Not calculated for OEM sizes
-          odDiffPercent: 0,
-          odDiffInches: 0,
-          isPrimary: true, // All OEM sizes are primary
-          isAcceptable: true,
-          widthMm: parseInt(size.match(/^(\d+)/)?.[1] || "0", 10),
-          aspectRatio: parseInt(size.match(/\/(\d+)/)?.[1] || "0", 10),
-        })),
-        method: 'oem-family-lookup' as const,
-        debug: {
-          wheelDiameter: Math.round(wheelDiaNum),
-          wheelWidth: Number.isFinite(wheelWidthNum) ? wheelWidthNum : null,
-          vehicleClass: null,
-          sizesMatchingRim: oemFamilySizes.sizes.length,
-          sizesMatchingWidth: oemFamilySizes.sizes.length,
-        },
-      };
-    }
-    
-    // LAST RESORT: Calculate sizes based on wheel specs and vehicle class
-    // This only runs if no OEM family data exists for this wheel diameter
+    // Detect vehicle class from model name for better suggestions
     const modelLower = String(model || "").toLowerCase();
     let vehicleClass: 'truck' | 'suv' | 'car' = 'car';
     if (/f-\d{3}|silverado|sierra|ram|tundra|titan|tacoma|ranger|frontier|colorado|canyon|ridgeline|maverick/i.test(modelLower)) {
@@ -2084,7 +1753,7 @@ export default async function TiresPage({
       vehicleClass = 'suv';
     }
     
-    console.log('[tires/page] ⚠️ No OEM family data, falling back to calculated sizes');
+    // Use aftermarket sizing function for wheel-based suggestions
     return generateAftermarketTireSizes(
       Math.round(wheelDiaNum),
       Number.isFinite(wheelWidthNum) ? wheelWidthNum : undefined,
@@ -2097,46 +1766,19 @@ export default async function TiresPage({
   // BUG FIX: Check if plusSizeResult has actual candidates, not just if it exists
   const plusSizeHasResults = plusSizeResult && plusSizeResult.acceptableCandidates.length > 0;
   
-  // Primary plus-sizes (±2% OD) - these are the BEST matches, prioritize these
+  const plusSizeSuggestions: string[] = plusSizeHasResults
+    ? plusSizeResult.acceptableCandidates.map((c) => c.size)
+    : (aftermarketFallback ? aftermarketFallback.sizes : []);
+
+  // Plus-size candidates with full metadata (for display)
+  const plusSizeCandidates: PlusSizeCandidate[] = plusSizeHasResults
+    ? plusSizeResult.acceptableCandidates
+    : (aftermarketFallback ? aftermarketFallback.candidates : []);
+
+  // Primary plus-sizes (±2% OD) - recommended
   const primaryPlusSizes: string[] = plusSizeHasResults
     ? plusSizeResult.primaryCandidates.map((c) => c.size)
     : (aftermarketFallback ? aftermarketFallback.candidates.filter((c: any) => c.isPrimary).map((c: any) => c.size) : []);
-
-  // STRICT TIRE SIZE LIMIT: Only show 3 best tire size options for stock builds
-  // This prevents overwhelming users with 20+ size options that are technically "acceptable"
-  // Priority: Primary candidates (±2% OD) first, then acceptable (±3%) to fill up to 3
-  const MAX_TIRE_SIZE_OPTIONS = 3;
-  const plusSizeSuggestions: string[] = (() => {
-    if (!plusSizeHasResults && !aftermarketFallback) return [];
-    
-    // Start with primary candidates (best matches)
-    const primary = plusSizeHasResults
-      ? plusSizeResult.primaryCandidates.map((c) => c.size)
-      : (aftermarketFallback?.candidates.filter((c: any) => c.isPrimary).map((c: any) => c.size) || []);
-    
-    // If we have enough primary, use just those
-    if (primary.length >= MAX_TIRE_SIZE_OPTIONS) {
-      return primary.slice(0, MAX_TIRE_SIZE_OPTIONS);
-    }
-    
-    // Otherwise, fill with acceptable candidates (excluding duplicates)
-    const acceptable = plusSizeHasResults
-      ? plusSizeResult.acceptableCandidates.map((c) => c.size)
-      : (aftermarketFallback?.sizes || []);
-    
-    const combined = [...primary];
-    for (const size of acceptable) {
-      if (!combined.includes(size) && combined.length < MAX_TIRE_SIZE_OPTIONS) {
-        combined.push(size);
-      }
-    }
-    return combined;
-  })();
-
-  // Plus-size candidates with full metadata (for display) - also limited
-  const plusSizeCandidates: PlusSizeCandidate[] = plusSizeHasResults
-    ? plusSizeResult.acceptableCandidates.filter((c) => plusSizeSuggestions.includes(c.size))
-    : (aftermarketFallback ? aftermarketFallback.candidates.filter((c: any) => plusSizeSuggestions.includes(c.size)) : []);
 
   // Track sizing method for display/logging (computed later after lockedSizes)
   const sizingMethod = oemWheelMatchedSizes.length > 0 
@@ -2271,38 +1913,18 @@ export default async function TiresPage({
   const shouldFetchStaggeredPairs = isStaggeredVehicle && isPackageFlow && staggeredFrontTireSize && staggeredRearTireSize;
   
   // Determine fetch strategy based on search mode
-  // - LIFTED: use lifted tire search (generates flotation sizes from lift height + wheel diameter)
   // - Brand search: fetch by brand (no size needed)
   // - Size search: fetch by size
   // - Vehicle search: fetch by resolved size
   // Fetch strategy:
-  // - If lifted build with wheel diameter, use lifted search
   // - If we have a size, always use size search (with optional brand filter)
   // - If no size but have brand, use brand-only search
-  // Note: wheelDiaNum is already defined above from wheelDiaForTireSearch
-  const canFetchLifted = isLiftedBuild && Number.isFinite(wheelDiaNum) && wheelDiaNum > 0 && make && model && liftedInches > 0;
-  
   const [unifiedTires, staggeredPairsData, rebates] = await Promise.all([
-    canFetchLifted
-      ? fetchLiftedTires({
-          year,
-          make,
-          model,
-          wheelDiameter: wheelDiaNum!,
-          liftInches: liftedInches,
-          buildType: "lifted",
-          brand: brandParam || undefined,
-        })
-      : (wpSize || selectedSize) 
-        ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined, {
-            year: year || undefined,
-            make: make || undefined,
-            model: model || undefined,
-            wheelDiameter: wheelDiaNum || undefined,
-          }) 
-        : hasBrandSearch 
-          ? fetchTiresByBrand(brandParam) 
-          : null,
+    (wpSize || selectedSize) 
+      ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined) 
+      : hasBrandSearch 
+        ? fetchTiresByBrand(brandParam) 
+        : null,
     shouldFetchStaggeredPairs 
       ? fetchStaggeredTirePairs(staggeredFrontTireSize!, staggeredRearTireSize!)
       : Promise.resolve({ pairs: [], pairCount: 0 }),
@@ -2320,20 +1942,12 @@ export default async function TiresPage({
   // K&M and WP are now part of unified search - set to empty for backward compat
   const km: { items?: any[]; error?: string } | null = { items: [] };
   const wp: { items?: any[]; error?: string } | null = { items: [] };
-  
-  // Extract trim selection data (when multiple trims have different tire sizes)
-  const trimResolutionRequired = tw?.trimResolutionRequired === true;
-  const availableTrims: Array<{ modificationId: string; displayTrim: string; tireSizes: string[] }> = 
-    tw?.availableTrims || [];
 
-  // Store ALL rebates per brand (multiple rebates per brand supported)
-  const rebatesByBrand = new Map<string, any[]>();
+  const rebatesByBrand = new Map<string, any>();
   for (const r of (rebates as any)?.items || []) {
     const b = String(r?.brand || "").trim().toLowerCase();
     if (!b) continue;
-    const arr = rebatesByBrand.get(b) || [];
-    arr.push(r);
-    rebatesByBrand.set(b, arr);
+    if (!rebatesByBrand.has(b)) rebatesByBrand.set(b, r);
   }
 
   // Map TireWeb results to our Tire format
@@ -2353,22 +1967,11 @@ export default async function TiresPage({
   };
   
   const itemsTw: Tire[] = (Array.isArray(tw?.results) ? tw.results : []).map((t: TireWebResult) => {
-    // Map source from unified search to the route discriminator used by the
-    // PDP link builders below. The unified search API returns LOWERCASE,
-    // colon-namespaced source values: "wheelpros", "tireweb:km", "tireweb:atd",
-    // "tireweb:usautoforce", "tireweb:ntw" (and historically bare "km"/"tw").
-    //
-    // PHASE 1 FIX (2026-06-22): previously this only matched the bare "km" and
-    // case-sensitive "TireWeb" prefixes, so every namespaced tireweb tire fell
-    // through to "tw". That made the WORKING /tires/km/[partNumber] route
-    // unreachable for K&M tires. Now we normalize case-insensitively and route
-    // K&M ("tireweb:km" or bare "km") to "km" so it uses the working KM PDP.
-    // Other tireweb sources (atd/usautoforce/ntw) intentionally stay "tw" for now.
-    const srcLower = String(t.source || "").toLowerCase();
+    // Map source from unified search: "km" → "km", "wheelpros" → "wp", "TireWeb:*" → "tw"
     let mappedSource: "wp" | "km" | "tw" = "tw";
-    if (srcLower === "km" || srcLower === "tireweb:km") mappedSource = "km";
-    else if (srcLower === "wheelpros" || srcLower === "wp") mappedSource = "wp";
-    else if (srcLower === "tw" || srcLower.startsWith("tireweb")) mappedSource = "tw";
+    if (t.source === "km") mappedSource = "km";
+    else if (t.source === "wheelpros") mappedSource = "wp";
+    else if (t.source?.startsWith("TireWeb")) mappedSource = "tw";
     
     return {
       source: mappedSource,
@@ -2890,12 +2493,11 @@ export default async function TiresPage({
   // Legacy array for backwards compatibility (used by some card logic)
   const topPicks: Tire[] = roleBasedPicks.map(p => p.tire);
 
-  // Pagination - disabled, show all results
-  // TODO: Add lazy loading / infinite scroll if performance becomes an issue
-  const tiresPerPage = 9999; // Show all tires
-  const totalPages = 1;
-  const safePage = 1;
-  const itemsPage = items; // Show all items
+  // Pagination
+  const tiresPerPage = 24;
+  const totalPages = Math.max(1, Math.ceil(items.length / tiresPerPage));
+  const safePage = Math.min(page, totalPages);
+  const itemsPage = items.slice((safePage - 1) * tiresPerPage, safePage * tiresPerPage);
 
   // Build query base for pagination
   const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}`;
@@ -2961,15 +2563,15 @@ export default async function TiresPage({
                     </svg>
                   ) : (
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
                     </svg>
                   )}
                 </div>
                 <div className="text-sm font-extrabold text-neutral-900">
-                  {isLocalMode ? "Professional Install" : "Fast Shipping"}
+                  {isLocalMode ? "Professional Install" : "Free Shipping"}
                 </div>
                 <div className="mt-1 text-xs text-neutral-500">
-                  {isLocalMode ? "Mount, balance & install included" : "Most orders ship same day"}
+                  {isLocalMode ? "Mount, balance & install included" : "On orders over $599"}
                 </div>
               </div>
               <div className="flex flex-col items-center text-center p-4">
@@ -3064,25 +2666,16 @@ export default async function TiresPage({
   // - Package flow (wheel selection already determines diameter via wheelDia param)
   // - Vehicles without multiple wheel diameters
   // - Config-backed vehicles (uses inline switcher instead)
-  // - PHASE 3: Trim mapping says showSizeChooser=false (auto-selected)
   // Accept 'high' OR 'medium' confidence - both indicate verified config data
   const hasConfigBackedData = configurationData?.usedConfigTable && 
     (configurationData?.confidence === "high" || configurationData?.confidence === "medium") &&
     configurationData?.hasMultipleDiameters;
   
-  // PHASE 3: Check if trim mapping already handled auto-selection
-  const trimMappingSkipsGate = trimMappingAppliedAutoSelect || (
-    trimMappingResult?.trimMapping.found &&
-    !trimMappingResult?.trimMapping.showSizeChooser &&
-    trimMappingResult?.trimMapping.autoSelectedConfig
-  );
-  
   const requiresWheelSizeGate = hasVehicle 
     && !isLiftedBuild 
     && !isPackageFlow  // Package flow already has wheelDia from wheel selection
     && !hasConfigBackedData  // Config-backed vehicles use inline switcher, not blocking gate
-    && !trimMappingSkipsGate  // PHASE 3: Trim mapping auto-selected
-    && needsWheelSizeSelection(oemWheelDiameters, wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : null);
+    && needsWheelSizeSelection(oemWheelDiameters, wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : null);
   
   // Show inline switcher when:
   // - HIGH CONFIDENCE config data exists
@@ -3110,14 +2703,9 @@ export default async function TiresPage({
             </div>
             
             {/* Wheel Size Gate Selector */}
-            {/* PHASE 3: When trimMapping.showSizeChooser=true, use only mapped configurations */}
             <WheelSizeGateSelector
-              availableDiameters={
-                trimMappingResult?.trimMapping.found && trimMappingResult.trimMapping.showSizeChooser
-                  ? [...new Set(trimMappingResult.trimMapping.configurations.map(c => c.wheelDiameter))].sort((a, b) => a - b)
-                  : oemWheelDiameters
-              }
-              selectedDiameter={wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : null}
+              availableDiameters={oemWheelDiameters}
+              selectedDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : null}
               basePath={basePath}
               vehicle={{ year, make, model, trim: displayTrim }}
             />
@@ -3139,10 +2727,9 @@ export default async function TiresPage({
   return (
     <main className="bg-neutral-50">
       {/* ═══════════════════════════════════════════════════════════════════════
-          STICKY BUILD BAR - REMOVED (regression fix)
-          Was showing for all vehicles, now disabled entirely
+          STICKY BUILD BAR - Shows lift/tire/offset context (lifted builds only)
           ═══════════════════════════════════════════════════════════════════════ */}
-      {/* {hasVehicle && <StickyBuildBar />} */}
+      {hasVehicle && <StickyBuildBar />}
 
       <div className="mx-auto max-w-screen-2xl px-4 py-4">
         {/* ═══════════════════════════════════════════════════════════════════════
@@ -3181,7 +2768,7 @@ export default async function TiresPage({
             liftedInches={liftedInches}
             liftedPreset={liftedPresetLabel}
             trim={trim}
-            liftedParams={isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(effectiveTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : ""}
+            liftedParams={isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(liftedTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : ""}
           />
         ) : (
           <div className="mb-4">
@@ -3224,9 +2811,9 @@ export default async function TiresPage({
             trim={displayTrim}
             modification={modification}
             hasConfig={configurationData?.usedConfigTable ?? false}
-            source={trimMappingAppliedAutoSelect ? "trim_mapping" : (configurationData?.usedConfigTable ? "config" : (configurationData ? "legacy" : "none"))}
-            confidence={trimMappingAppliedAutoSelect ? "high" : ((configurationData?.confidence as "low" | "medium" | "high") ?? "low")}
-            wheelDiameter={wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : undefined}
+            source={configurationData?.usedConfigTable ? "config" : (configurationData ? "legacy" : "none")}
+            confidence={(configurationData?.confidence as "low" | "medium" | "high") ?? "low"}
+            wheelDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : undefined}
             autoSelected={wheelDiaWasAutoSelected}
             productType="tires"
           />
@@ -3245,7 +2832,7 @@ export default async function TiresPage({
               configurationLabel: c.configurationLabel,
               tireSize: c.tireSize,
             }))}
-            activeDiameter={wheelDiaFromConfigOrUrlFinal ? Number(wheelDiaFromConfigOrUrlFinal) : (configurationData.defaultDiameter || oemWheelDiameters[0])}
+            activeDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : (configurationData.defaultDiameter || oemWheelDiameters[0])}
             vehicle={{ year, make, model, trim: displayTrim }}
           />
         ) : null}
@@ -3294,8 +2881,8 @@ export default async function TiresPage({
                     // Check if this is a legacy size with conversion
                     const isLegacy = sizeConversionMap.has(s);
                     const modernEquivalent = isLegacy ? sizeConversionMap.get(s) : null;
-                    // Preserve lifted context in size links (use effectiveTireSizesRaw for backwards compat)
-                    const liftedParams = isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(effectiveTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : "";
+                    // Preserve lifted context in size links
+                    const liftedParams = isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(liftedTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : "";
                     const href = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(s)}${liftedParams}`;
                     return (
                       <Link
@@ -3505,45 +3092,9 @@ export default async function TiresPage({
           </div>
         ) : null}
 
-        {/* ═══════════════════════════════════════════════════════════════════════
-            LOCAL MOBILE SRP - Replaces desktop layout on mobile+local
-            Only renders: (1) local mode AND (2) mobile viewport (md:hidden)
-            ═══════════════════════════════════════════════════════════════════════ */}
-        {isLocalMode && (
-          <LocalMobileTireSRP
-            tires={itemsPage.map(t => ({
-              partNumber: t.partNumber || t.mfgPartNumber || '',
-              brand: t.brand || '',
-              model: t.displayName || t.prettyName || t.description || '',
-              size: selectedSize || (t as any).size || '',
-              description: t.description,
-              imageUrl: t.imageUrl,
-              price: getDisplayPrice(t) || undefined,
-              cost: t.cost,
-              quantity: t.quantity,
-              badges: t.badges,
-              enrichment: t.enrichment,
-            }))}
-            tireSize={selectedSize}
-            totalCount={items.length}
-            basePath={basePath}
-            brandOptions={allBrands.map(b => ({ value: b, count: brandCountsDisplay.get(b) || 0 }))}
-            categoryOptions={treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 }))}
-            activeFilters={{
-              brands,
-              treadCategories,
-              priceMin,
-              priceMax,
-            }}
-            sort={sort}
-            vehicleInfo={hasVehicle ? { year, make, model, trim } : undefined}
-          />
-        )}
-
-        {/* Desktop/Tablet SRP Layout - Hidden on mobile when in local mode */}
-        <div className={`mt-5 grid gap-6 lg:grid-cols-[280px_1fr] ${isLocalMode ? 'hidden lg:grid' : ''}`}>
+        <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
           {/* Filters Sidebar - Compact utility panel */}
-          <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 lg:block">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 md:block">
             {/* Package Summary - shows when building a package */}
             <div className="mb-4">
               <PackageSummary variant="sidebar" showCheckout={true} />
@@ -3619,91 +3170,6 @@ export default async function TiresPage({
             />
 
           </aside>
-
-          {/* Mobile/Tablet Filter Drawer - floating button + slide-out panel */}
-          <MobileFilterDrawer
-            activeFilterCount={
-              brands.length +
-              treadCategories.length +
-              speeds.length +
-              loadRanges.length +
-              (selectedMileageBand ? 1 : 0) +
-              (runFlat ? 1 : 0) +
-              (snowRated ? 1 : 0) +
-              (allWeather ? 1 : 0) +
-              (xlOnly ? 1 : 0) +
-              (studdable ? 1 : 0) +
-              treadwearRanges.length +
-              rimDiameters.length +
-              overallDiameters.length +
-              (priceMin ? 1 : 0) +
-              (priceMax ? 1 : 0)
-            }
-          >
-            <div className="mb-4">
-              <PackageSummary variant="sidebar" showCheckout={true} />
-            </div>
-
-            {hasVehicle ? (
-              <div className="mb-4">
-                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
-              </div>
-            ) : null}
-
-            <TireFilterSidebar
-              data={{
-                brands,
-                priceMin,
-                priceMax,
-                treadCategories,
-                speeds,
-                loadRanges,
-                mileageBand: selectedMileageBand,
-                runFlat,
-                snowRated,
-                allWeather,
-                xlOnly,
-                studdable,
-                treadwearRanges,
-                rimDiameters,
-                overallDiameters,
-                brandOptions: allBrands.map(b => ({ value: b, count: brandCountsDisplay.get(b) || 0 })),
-                treadCategoryOptions: treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 })),
-                speedOptions: speedsAvailable.map(s => ({ value: s, count: speedCounts.get(s) || 0 })),
-                loadRangeOptions: loadRangesAvailable.map(lr => ({ value: lr.value, count: loadRangeCounts.get(lr.value) || 0 })),
-                mileageOptions: [
-                  { value: "40K+" as const, count: mileage40kCount },
-                  { value: "60K+" as const, count: mileage60kCount },
-                  { value: "80K+" as const, count: mileage80kCount },
-                ],
-                treadwearOptions: [
-                  { value: "300-400" as const, label: "300-400 (Performance)", count: treadwear300to400Count },
-                  { value: "400-500" as const, label: "400-500 (Standard)", count: treadwear400to500Count },
-                  { value: "500-600" as const, label: "500-600 (Long-wearing)", count: treadwear500to600Count },
-                  { value: "600+" as const, label: "600+ (Ultra long-wearing)", count: treadwear600plusCount },
-                ],
-                rimDiameterOptions: rimDiametersAvailable.map(rim => ({ value: rim, count: rimDiameterCounts.get(rim) || 0 })),
-                overallDiameterOptions: overallDiametersAvailable.map(dia => ({ value: dia, count: overallDiameterCounts.get(dia) || 0 })),
-                runFlatCount,
-                snowRatedCount,
-                allWeatherCount,
-                xlCount,
-                studdableCount,
-                basePath,
-                year,
-                make,
-                model,
-                trim,
-                modification,
-                selectedSize,
-                sort,
-                wheelSku,
-                wheelDia,
-                inStockCount: items.length,
-                totalCount: itemsEnriched.length,
-              }}
-            />
-          </MobileFilterDrawer>
 
           <section>
             {/* ═══════════════════════════════════════════════════════════════════════
@@ -3925,7 +3391,7 @@ export default async function TiresPage({
                         
                         {/* Stock & availability */}
                         <div className="mb-3 text-xs text-green-700">
-                          ✓ In stock {isLocalMode ? "• Ready for install" : ""}
+                          ✓ In stock {isLocalMode ? "• Ready for install" : "• Free Shipping"}
                         </div>
                         
                         {/* Price section */}
@@ -4122,7 +3588,7 @@ export default async function TiresPage({
               </div>
             ) : null}
 
-            <div className="tire-grid mt-3 gap-3 grid-cols-1 md:grid-cols-2">
+            <div className="tire-grid mt-3 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {itemsPage.length ? (
                 itemsPage.map((t, idx) => (
                   <TireCard
@@ -4210,31 +3676,6 @@ export default async function TiresPage({
                         <a href="tel:+12483324120" className="inline-flex h-10 items-center rounded-xl border border-amber-600 px-4 text-sm font-extrabold text-amber-700 hover:bg-amber-50">
                           📞 Call us
                         </a>
-                      </div>
-                    </div>
-                  ) : trimResolutionRequired && availableTrims.length > 0 ? (
-                    /* Multiple trims with different tire sizes - show trim selector */
-                    <div>
-                      <div className="font-extrabold text-amber-900 text-base">
-                        Select Your Trim
-                      </div>
-                      <div className="mt-2 text-amber-800">
-                        This {year} {make} {model} has multiple trims with different tire sizes. 
-                        Please select your exact trim to see matching tires.
-                      </div>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {availableTrims.map((trim) => (
-                          <a
-                            key={trim.modificationId}
-                            href={`/tires?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&modification=${encodeURIComponent(trim.modificationId)}`}
-                            className="inline-flex flex-col items-start rounded-xl border-2 border-amber-300 bg-white px-4 py-3 text-sm hover:border-amber-500 hover:bg-amber-50 transition-colors"
-                          >
-                            <span className="font-extrabold text-neutral-900">{trim.displayTrim}</span>
-                            <span className="text-xs text-neutral-500 mt-1">
-                              {trim.tireSizes.join(", ")}
-                            </span>
-                          </a>
-                        ))}
                       </div>
                     </div>
                   ) : hasVehicle ? (
@@ -4349,7 +3790,7 @@ function TireCard({
 }: {
   tire: Tire;
   stripSizeFromName: (name: string) => string;
-  rebatesByBrand: Map<string, any[]>;
+  rebatesByBrand: Map<string, any>;
   year: string;
   make: string;
   model: string;
@@ -4373,40 +3814,25 @@ function TireCard({
   /** Local mode flag for out-the-door pricing */
   isLocalMode?: boolean;
 }) {
-  // Check rebate eligibility at MODEL level - find best matching rebate from array
+  // Check rebate eligibility at MODEL level, not just brand level
   const brandKey = String(t.brand || "").trim().toLowerCase();
-  const brandRebates = brandKey ? rebatesByBrand.get(brandKey) : null;
+  const reb = brandKey ? rebatesByBrand.get(brandKey) : null;
   const tireModel = String(t.displayName || t.prettyName || t.description || "").toLowerCase();
   
-  // Find the best matching rebate: model-specific > brand-wide
-  let matchedRebate: any = null;
-  if (brandRebates && Array.isArray(brandRebates)) {
-    // First pass: look for model-specific match
-    for (const reb of brandRebates) {
-      if (Array.isArray(reb.eligible_models) && reb.eligible_models.length > 0) {
-        const modelMatch = reb.eligible_models.some((pattern: string) => 
+  // Only show rebate if: (1) brand_wide is true, OR (2) tire model matches eligible_models
+  const isRebateEligible = reb && (
+    reb.brand_wide === true || 
+    (Array.isArray(reb.eligible_models) && reb.eligible_models.length > 0 
+      ? reb.eligible_models.some((pattern: string) => 
           tireModel.includes(String(pattern).toLowerCase().trim())
-        );
-        if (modelMatch) {
-          matchedRebate = reb;
-          break; // Found specific match, stop looking
-        }
-      }
-    }
-    // Second pass: if no model match, look for brand-wide
-    if (!matchedRebate) {
-      for (const reb of brandRebates) {
-        if (reb.brand_wide === true && (!reb.eligible_models || reb.eligible_models.length === 0)) {
-          matchedRebate = reb;
-          break;
-        }
-      }
-    }
-  }
+        )
+      : reb.brand_wide !== false // Legacy: if no eligible_models and brand_wide not explicitly false
+    )
+  );
   
-  const headline = matchedRebate?.headline ? String(matchedRebate.headline) : "";
+  const headline = isRebateEligible && reb?.headline ? String(reb.headline) : "";
   const amt = headline.match(/\$(\d{2,4})/);
-  const rebateLabel = matchedRebate ? (amt ? `$${amt[1]} rebate` : "Rebate") : "";
+  const rebateLabel = amt ? `$${amt[1]} rebate` : (isRebateEligible ? "Rebate" : "");
 
   const q = t.quantity || {};
   const primary = typeof q.primary === "number" ? q.primary : 0;
@@ -4457,129 +3883,227 @@ function TireCard({
     return "Top choice for your vehicle";
   })() : null;
 
-
-  // Compute detail-page href once — used for image link, title link, and Details button
-  const detailHref: string | null =
-    t.source === "wp" && t.mfgPartNumber
-      ? `/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
-          year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia,
-        }).toString()}`
-      : t.source === "km" && t.partNumber
-        ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
-            year, make, model, trim, modification, size: selectedSize, sort,
-          }).toString()}`
-        : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber
-          ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
-              year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb",
-            }).toString()}`
-          : null;
-
   return (
-    <article className={`tire-card group relative overflow-hidden rounded-2xl flex flex-row transition-all duration-250 ease-out ${
-      isTopPick
-        ? "border border-amber-200/70 border-l-4 border-l-amber-400 bg-gradient-to-br from-amber-50/40 to-white shadow-md"
+    <article className={`tire-card group relative overflow-hidden rounded-2xl transition-all duration-250 ease-out ${
+      isTopPick 
+        ? "border border-amber-200/70 bg-gradient-to-br from-amber-50/40 to-white shadow-md" 
         : "border border-neutral-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-0.5"
-    }`}>
+    }`} style={{ padding: '1.5rem' }}>
+      {/* Left accent bar - premium feel */}
+      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 rounded-l-2xl ${isTopPick ? "bg-gradient-to-b from-amber-300 to-amber-400" : "bg-neutral-100"}`} />
+      
+      {/* Highlight label - top right corner */}
+      {highlightLabel && (
+        <div className={`absolute top-3 right-3 z-20 rounded-full ${highlightLabel.bg} px-2.5 py-1 text-[10px] font-bold text-white shadow-md`}>
+          {highlightLabel.text}
+        </div>
+      )}
 
-      {/* ── IMAGE PANEL — 140px fixed ────────────────────────────────────── */}
-      <div className="relative w-[130px] min-w-[130px] flex-shrink-0 flex flex-col bg-neutral-50 rounded-l-2xl overflow-hidden" style={{maxHeight:'160px'}}>
+      {t.source === "wp" && t.mfgPartNumber ? (
+        <Link
+          href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
+            year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia,
+          }).toString()}`}
+          className="absolute inset-0 z-0"
+          aria-label={`View ${displayTitle}`}
+        />
+      ) : t.source === "km" && t.partNumber ? (
+        <Link
+          href={`/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
+            year, make, model, trim, modification, size: selectedSize, sort,
+          }).toString()}`}
+          className="absolute inset-0 z-0"
+          aria-label={`View ${displayTitle}`}
+        />
+      ) : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber ? (
+        <Link
+          href={`/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
+            year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb",
+          }).toString()}`}
+          className="absolute inset-0 z-0"
+          aria-label={`View ${displayTitle}`}
+        />
+      ) : null}
 
-        {/* Top Pick badge — top-left corner */}
-        {isTopPick && !hideTopPickBadge && (
-          <div className="absolute top-2 left-2 z-20 rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-md leading-tight">
-            &#11088; Top Pick
-          </div>
-        )}
+      <div className="relative z-10 flex items-start justify-between gap-2">
+        <div className="text-sm font-bold text-neutral-800 uppercase tracking-wide">{t.brand || "Tire"}</div>
+        <div className="flex items-center gap-1">
+          {/* Compare button */}
+          <AddToCompareButton
+            item={normalizeTireForCompare({
+              sku: tireSku,
+              partNumber: t.partNumber,
+              mfgPartNumber: t.mfgPartNumber,
+              brand: t.brand,
+              model: displayTitle,
+              imageUrl: t.imageUrl,
+              price: getDisplayPrice(t) ?? undefined,
+              size: selectedSize,
+              loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+              speedRating: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+              category: (t.enrichment?.treadCategory || t.badges?.terrain) ?? undefined,
+              mileageWarranty: t.enrichment?.mileage ?? undefined,
+              is3PMSF: t.enrichment?.is3PMSF,
+              isRunFlat: t.enrichment?.isRunFlat,
+              stockQty: maxQty,
+              source: t.rawSource,
+            })}
+            variant="icon"
+            size="sm"
+          />
+          {/* Favorites button */}
+          {t.source === "wp" && t.mfgPartNumber ? (
+            <FavoritesButton
+              type="tire"
+              sku={t.mfgPartNumber}
+              label={`${t.brand || "Tire"} ${displayTitle}`}
+              href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
+              imageUrl={t.imageUrl}
+            />
+          ) : null}
+        </div>
+      </div>
 
-        {/* Tire image, linked to detail page */}
-        {detailHref ? (
-          <Link href={detailHref} className="block flex-1" aria-label={`View ${displayTitle}`}>
-            {t.imageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={t.imageUrl}
-                alt={displayTitle}
-                loading="lazy"
-                className="h-full w-full object-contain aspect-square transition-transform duration-300 ease-out group-hover:scale-[1.02]"
-              />
-            ) : (
-              <div className="flex h-full min-h-[120px] w-full flex-col items-center justify-center p-2 text-center">
-                <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-                <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
-              </div>
-            )}
-          </Link>
+      <h3 className="relative z-10 mt-2 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
+        {displayTitle}
+      </h3>
+
+      {/* "Why This Tire" - Top Picks only */}
+      {whyThisTire && (
+        <div className="relative z-10 mt-1.5 text-[11px] italic text-amber-600/80">
+          "{whyThisTire}"
+        </div>
+      )}
+
+      {/* Mileage warranty - text line under title */}
+      {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
+        <div className="relative z-10 mt-0.5 text-xs text-neutral-600">
+          ✓ {Math.round(t.enrichment.mileage / 1000)}K mile warranty
+        </div>
+      ) : null}
+
+      {/* Best For guidance line - quick scannable use case */}
+      <div className="relative z-10 mt-0.5">
+        <BestForLine 
+          category={(t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as EnhancementCategory}
+          mileageWarranty={t.enrichment?.mileage}
+          isRunFlat={t.enrichment?.isRunFlat}
+          is3PMSF={t.enrichment?.is3PMSF}
+          maxItems={2}
+        />
+      </div>
+
+      {/* Tire size - prominent display */}
+      <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
+        {normalizeTireSize(selectedSize) || selectedSize}
+        {t.badges?.loadIndex && t.badges?.speedRating ? (
+          <span className="ml-1 text-neutral-500">
+            {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
+          </span>
+        ) : null}
+      </div>
+
+      {/* Badges row - Top Pick (unless hidden) and Rebate */}
+      {((isTopPick && !hideTopPickBadge) || rebateLabel) ? (
+        <div className="relative z-10 mt-2 flex flex-wrap gap-1.5">
+          {isTopPick && !hideTopPickBadge ? (
+            <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white">
+              ⭐ Top Pick
+            </span>
+          ) : null}
+          {rebateLabel ? (
+            <span className="rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white">
+              🔥 {rebateLabel}
+            </span>
+          ) : null}
+        </div>
+      ) : null}
+
+      {/* Product image with badge stack overlay */}
+      <div className="tire-card-image-container relative z-10 mt-4 overflow-hidden rounded-lg">
+        {t.imageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={t.imageUrl}
+            alt={displayTitle}
+            loading="lazy"
+            className="transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+          />
         ) : (
-          <div className="flex-1">
-            {t.imageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={t.imageUrl}
-                alt={displayTitle}
-                loading="lazy"
-                className="h-full w-full object-contain aspect-square transition-transform duration-300 ease-out group-hover:scale-[1.02]"
-              />
-            ) : (
-              <div className="flex h-full min-h-[120px] w-full flex-col items-center justify-center p-2 text-center">
-                <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-                <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
-              </div>
-            )}
+          <div className="tire-card-image-placeholder">
+            <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
+            <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
           </div>
         )}
-
-        {/* Category pill — bottom of image panel */}
-        <div className="absolute bottom-2 left-1 right-1 flex justify-center">
+        
+        {/* Badge stack - top left of image (constrained to prevent overflow) */}
+        <div className="absolute top-2 left-2 right-2 flex flex-col items-start gap-1 overflow-hidden">
+          {/* Category badge with icon - infer from model name if not in data */}
           {(() => {
+            // Determine category from enrichment, badges, or model name inference
+            // Hierarchy: enrichment.treadCategory → badges.terrain → model name patterns
             const m = (displayTitle + ' ' + (t.description || '')).toUpperCase();
             let rawCategory = t.enrichment?.treadCategory || t.badges?.terrain || null;
+            
+            // Infer from model name patterns if not set (improved regex)
             if (!rawCategory) {
+              // Winter patterns (check first - most specific)
               if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) {
                 rawCategory = 'Winter';
+              // Mud-Terrain patterns (M/T, MT, MUD) - before A/T
               } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
                 rawCategory = 'Mud-Terrain';
+              // Rugged-Terrain patterns (R/T, RT, RUGGED)
               } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
                 rawCategory = 'Rugged-Terrain';
+              // All-Terrain: A/T, AT, AT2, ATX, AT-X, TERRA TRAC, KO2, GRAPPLER (without MUD)
               } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
                 rawCategory = 'All-Terrain';
+              // Highway/Touring: H/T, HT, HT2, HTX, HTX2, TOURING, HIGHWAY
               } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
                 rawCategory = 'Highway/Touring';
+              // Performance patterns
               } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S?\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
                 rawCategory = 'Performance';
+              // All-Weather patterns
               } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
                 rawCategory = 'All-Weather';
               } else {
-                rawCategory = 'All-Season';
+                rawCategory = 'All-Season'; // Default fallback
               }
             }
+            
+            // Deduplicate repeated category text (e.g., "All-Season All-Season" → "All-Season")
+            // Also trim and normalize whitespace
             const category = String(rawCategory || 'All-Season')
               .trim()
               .split(/\s+/)
-              .filter((word: string, idx: number, arr: string[]) => {
+              .filter((word, idx, arr) => {
+                // Remove duplicate consecutive words (case-insensitive)
                 if (idx === 0) return true;
                 return word.toLowerCase() !== arr[idx - 1]?.toLowerCase();
               })
               .join(' ')
+              // If still too long or has repeated phrases, extract just the first valid category
               .replace(/^(.+?)\s+\1.*$/i, '$1');
-
-            const catStyle: Record<string, { bg: string; icon: string }> = {
-              'All-Terrain':     { bg: 'bg-gradient-to-r from-amber-600 to-amber-500',  icon: '\uD83D\uDEE3' },
-              'Mud-Terrain':     { bg: 'bg-gradient-to-r from-orange-700 to-orange-600', icon: '\uD83D\uDFEB' },
-              'Rugged-Terrain':  { bg: 'bg-gradient-to-r from-stone-700 to-stone-600',  icon: '\u26F0' },
-              'Winter':          { bg: 'bg-gradient-to-r from-sky-600 to-sky-500',      icon: '\u2744\uFE0F' },
-              'Performance':     { bg: 'bg-gradient-to-r from-red-600 to-red-500',      icon: '\uD83C\uDFCE\uFE0F' },
-              'Highway/Touring': { bg: 'bg-gradient-to-r from-blue-600 to-blue-500',   icon: '\uD83D\uDEE3\uFE0F' },
-              'All-Season':      { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '\uD83C\uDF3F' },
-              'All-Weather':     { bg: 'bg-gradient-to-r from-teal-600 to-teal-500',   icon: '\uD83C\uDF26\uFE0F' },
-            };
-            const style = catStyle[category] ?? { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '\uD83C\uDF3F' };
-
+            
+            const catStyle = {
+              'All-Terrain': { bg: 'bg-gradient-to-r from-amber-600 to-amber-500', icon: '🏔️' },
+              'Mud-Terrain': { bg: 'bg-gradient-to-r from-orange-700 to-orange-600', icon: '🪨' },
+              'Rugged-Terrain': { bg: 'bg-gradient-to-r from-stone-700 to-stone-600', icon: '⛰️' },
+              'Winter': { bg: 'bg-gradient-to-r from-sky-600 to-sky-500', icon: '❄️' },
+              'Performance': { bg: 'bg-gradient-to-r from-red-600 to-red-500', icon: '🏎️' },
+              'Highway/Touring': { bg: 'bg-gradient-to-r from-blue-600 to-blue-500', icon: '🛣️' },
+              'All-Season': { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '🌤️' },
+              'All-Weather': { bg: 'bg-gradient-to-r from-teal-600 to-teal-500', icon: '🌦️' },
+            }[category] || { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '🌤️' };
+            
             return (
-              <span
-                className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-bold text-white shadow-md max-w-full whitespace-nowrap overflow-hidden ${style.bg}`}
+              <span 
+                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold text-white shadow-md max-w-full whitespace-nowrap overflow-hidden ${catStyle.bg}`}
                 title={category}
               >
-                <span className="drop-shadow-sm flex-shrink-0">{style.icon}</span>
+                <span className="drop-shadow-sm flex-shrink-0">{catStyle.icon}</span>
                 <span className="truncate">{category}</span>
               </span>
             );
@@ -4587,215 +4111,195 @@ function TireCard({
         </div>
       </div>
 
-      {/* ── INFO PANEL — flex-1 ──────────────────────────────────────────── */}
-      <div className="flex-1 min-w-0 flex flex-col gap-1 p-3">
-
-        {/* Brand + action icons row */}
-        <div className="flex items-center justify-between gap-1">
-          <div className="text-[11px] font-bold text-neutral-400 uppercase tracking-wide truncate">{t.brand || "Tire"}</div>
-          <div className="flex items-center gap-0.5 flex-shrink-0">
-            <AddToCompareButton
-              item={normalizeTireForCompare({
-                sku: tireSku,
-                partNumber: t.partNumber,
-                mfgPartNumber: t.mfgPartNumber,
-                brand: t.brand,
-                model: displayTitle,
-                imageUrl: t.imageUrl,
-                price: getDisplayPrice(t) ?? undefined,
-                size: selectedSize,
-                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
-                speedRating: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
-                category: (t.enrichment?.treadCategory || t.badges?.terrain) ?? undefined,
-                mileageWarranty: t.enrichment?.mileage ?? undefined,
-                is3PMSF: t.enrichment?.is3PMSF,
-                isRunFlat: t.enrichment?.isRunFlat,
-                stockQty: maxQty,
-                source: t.rawSource,
-              })}
-              variant="icon"
-              size="sm"
-            />
-            {t.source === "wp" && t.mfgPartNumber ? (
-              <FavoritesButton
-                type="tire"
-                sku={t.mfgPartNumber}
-                label={`${t.brand || "Tire"} ${displayTitle}`}
-                href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
-                imageUrl={t.imageUrl}
-              />
-            ) : null}
-          </div>
+      {/* Fitment confirmation - single line */}
+      {hasVehicle ? (
+        <div className="relative z-10 mt-3 text-[11px] font-medium text-green-700">
+          <span className="text-green-600">✓</span> Fits {year} {make} {model}
+          {(() => {
+            const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
+            const tireRimDia = (() => {
+              const desc = String(t.description || selectedSize || "").toUpperCase();
+              const m = desc.match(/R(\d{2})\b/);
+              return m ? Number(m[1]) : NaN;
+            })();
+            const wheelMatches = isPackageFlow && Number.isFinite(wheelDiaN) && Number.isFinite(tireRimDia)
+              && Math.round(wheelDiaN) === Math.round(tireRimDia);
+            return wheelMatches ? (
+              <span className="ml-2 text-blue-600">• Matches {Math.round(wheelDiaN)}&quot; wheels</span>
+            ) : null;
+          })()}
         </div>
+      ) : null}
 
-        {/* Model title — linked to detail page */}
-        {detailHref ? (
-          <Link href={detailHref}>
-            <h3 className="text-sm font-extrabold tracking-tight text-neutral-900 line-clamp-2 hover:underline leading-snug">
-              {displayTitle}
-            </h3>
-          </Link>
+      {/* Availability row - concise */}
+      <div className="relative z-10 mt-3 flex items-center gap-1.5 text-[11px] font-medium">
+        {isLocalMode ? (
+          // Local mode: just show install time indicator (replaces "in stock" text)
+          inStock ? (
+            <InstallTimeIndicator variant="inline" />
+          ) : (
+            <>
+              <span className="text-amber-500">📦</span>
+              <span className="text-amber-700">Available • Can order for you</span>
+            </>
+          )
         ) : (
-          <h3 className="text-sm font-extrabold tracking-tight text-neutral-900 line-clamp-2 leading-snug">
-            {displayTitle}
-          </h3>
+          // National mode: show stock + shipping info
+          inStock ? (
+            <>
+              <span className="text-green-600">✓</span>
+              <span className="text-green-700">
+                {maxQty >= 20 ? 'In stock' : `${maxQty} in stock`} • Ships 1–2 days
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="text-amber-500">📦</span>
+              <span className="text-amber-700">Available • Ships 1–2 weeks</span>
+            </>
+          )
         )}
-
-        {/* Tire size + load/speed */}
-        <div className="text-[11px] text-neutral-500">
-          {normalizeTireSize(selectedSize) || selectedSize}
-          {t.badges?.loadIndex && t.badges?.speedRating ? (
-            <span className="ml-1">{String(t.badges.loadIndex)}{String(t.badges.speedRating)}</span>
-          ) : null}
-          {t.badges?.utqg ? (
-            <span className="ml-1.5 text-neutral-400">UTQG&nbsp;{String(t.badges.utqg)}</span>
-          ) : null}
-        </div>
-
-        {/* Mileage warranty */}
-        {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
-          <div className="text-[10px] text-neutral-400">
-            {Math.round(t.enrichment.mileage / 1000)}K mi warranty
-          </div>
-        ) : null}
-
-        {/* Rebate + highlight badges (compact, one row) */}
-        {(rebateLabel || highlightLabel) && (
-          <div className="flex flex-wrap gap-1">
-            {rebateLabel && (
-              <span className="rounded-full bg-red-500 px-1.5 py-0.5 text-[9px] font-bold text-white">&#127991; {rebateLabel}</span>
-            )}
-            {highlightLabel && (
-              <span className={`rounded-full ${highlightLabel.bg} px-1.5 py-0.5 text-[9px] font-bold text-white`}>{highlightLabel.text}</span>
-            )}
-          </div>
-        )}
-
-        {/* Fitment confirmation */}
-        {hasVehicle && (
-          <div className="text-[10px] font-medium text-green-700">&#10004; Fits {year} {make} {model}</div>
-        )}
-
-        {/* Price — pushed to bottom */}
-        {!isLocalMode && (() => {
-          const unitPrice = getDisplayPrice(t);
-          return unitPrice != null ? (
-            <div className="mt-auto pt-1.5">
-              <TirePriceDisplay unitPrice={unitPrice} quantity={4} isLocalMode={isLocalMode} />
-            </div>
-          ) : null;
-        })()}
       </div>
 
-      {/* ── CTA PANEL — 88px fixed ───────────────────────────────────────── */}
-      <div className="w-[88px] flex-shrink-0 flex flex-col items-stretch gap-2 p-2 border-l border-neutral-100 justify-center">
-
-        {/* Primary CTA button */}
-        <div className="tire-card-cta grid gap-1.5">
-          {typeof t.cost === "number" && wheelSku && tireSku ? (
-            isStaggered ? (
-              <SelectTireButtonAxle
-                wheelSku={String(wheelSku)}
-                axle={axle}
-                tire={{
-                  sku: tireSku,
-                  brand: String(t.brand || ""),
-                  title: String(displayTitle),
-                  size: selectedSize,
-                  price: getDisplayPrice(t) ?? undefined,
-                  imageUrl: t.imageUrl,
-                  speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
-                  loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
-                  season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
-                  runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
-                  xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
-                  source: t.rawSource,
-                }}
-              />
-            ) : (
-              <SelectTireButton
-                wheelSku={String(wheelSku)}
-                tire={{
-                  sku: tireSku,
-                  brand: String(t.brand || ""),
-                  title: String(displayTitle),
-                  size: selectedSize,
-                  price: getDisplayPrice(t) ?? undefined,
-                  imageUrl: t.imageUrl,
-                  speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
-                  loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
-                  season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
-                  runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
-                  xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
-                  source: t.rawSource,
-                }}
-              />
-            )
-          ) : getDisplayPrice(t) != null ? (
-            isLocalMode ? (
-              <LocalTireAddButton
-                sku={tireSku}
-                brand={String(t.brand || "Tire")}
-                model={String(displayTitle)}
-                size={selectedSize}
-                imageUrl={t.imageUrl}
-                unitPrice={getDisplayPrice(t)!}
-                vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
-                source={t.rawSource}
-              />
-            ) : (
-              <QuickAddTireButton
-                sku={tireSku}
-                brand={String(t.brand || "Tire")}
-                model={String(displayTitle)}
-                size={selectedSize}
-                imageUrl={t.imageUrl}
-                unitPrice={getDisplayPrice(t)!}
-                vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
-                quantity={4}
-                source={t.rawSource}
-              />
-            )
-          ) : (
-            <a href={BRAND.links.tel} className="rounded-xl bg-red-600 px-2 py-2 text-center text-[11px] font-extrabold text-white hover:bg-red-700">
-              Call for price
-            </a>
-          )}
-
-          {/* Details link */}
-          {detailHref ? (
-            <Link
-              href={detailHref}
-              className="rounded-xl border border-neutral-300 bg-white px-2 py-1.5 text-center text-[11px] font-bold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
-            >
-              Details
-            </Link>
-          ) : null}
-        </div>
-
-        {/* Stock status — no warehouse location codes */}
-        <div className="text-center text-[10px] font-semibold">
-          {isLocalMode ? (
-            inStock ? (
-              <InstallTimeIndicator variant="inline" />
-            ) : (
-              <span className="text-amber-700">&#9888; Can order</span>
-            )
-          ) : inStock ? (
-            <span className="text-green-700">&#10004; In Stock</span>
-          ) : maxQty > 0 ? (
-            <span className="text-amber-700">&#9888; Low stock</span>
-          ) : (
-            <span className="text-red-600">&#10007; Out of stock</span>
-          )}
-        </div>
-
-        {/* Ships info */}
-        {!isLocalMode && (
-          <div className="text-center text-[10px] text-neutral-500 leading-tight">
-            {inStock ? "Ships 1\u20132 days" : "Ships 1\u20132 wks"}
+      {/* Performance ratings - mini bar charts (only show if we have UTQG data) */}
+      {(() => {
+        const utqg = parseUTQG(t.badges?.utqg);
+        // Don't show ratings if no UTQG data - would just show meaningless defaults
+        if (!utqg || !utqg.treadwear) return null;
+        const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as any;
+        const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
+        if (!ratings) return null;
+        return (
+          <div className="relative z-10 mt-4">
+            <MiniRatings ratings={ratings} category={category} />
           </div>
+        );
+      })()}
+
+      {/* Price block - both prices clearly visible (hide for local mode - qty selector shows breakdown) */}
+      {!isLocalMode && (
+        <div className="relative z-10 mt-4 pt-4 border-t border-neutral-100">
+          <div className="flex items-start justify-between">
+            <div>
+              {(() => {
+                const unitPrice = getDisplayPrice(t);
+                return unitPrice != null ? (
+                  <TirePriceDisplay 
+                    unitPrice={unitPrice} 
+                    quantity={4} 
+                    isLocalMode={isLocalMode}
+                  />
+                ) : (
+                  <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
+                );
+              })()}
+            </div>
+            {/* Stock indicator */}
+            <div className="flex items-center gap-1.5 text-xs font-semibold mt-1">
+              <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
+              <span className={inStock ? "text-green-700" : "text-amber-700"}>
+                {inStock ? (maxQty >= 100 ? "100+" : `${maxQty} avail`) : "Order"}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Trust row - prominent before CTA */}
+      <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">
+        <TrustMicroLine 
+          hasVehicle={hasVehicle}
+          inStock={inStock}
+          hasWarranty={Boolean(t.enrichment?.mileage && t.enrichment.mileage > 0)}
+          isLocalMode={isLocalMode}
+        />
+      </div>
+
+      {/* CTA buttons */}
+      <div className="tire-card-cta relative z-10 mt-3 grid gap-2">
+        {typeof t.cost === "number" && wheelSku && tireSku ? (
+          isStaggered ? (
+            <SelectTireButtonAxle
+              wheelSku={String(wheelSku)}
+              axle={axle}
+              tire={{
+                sku: tireSku,
+                brand: String(t.brand || ""),
+                title: String(displayTitle),
+                size: selectedSize,
+                price: getDisplayPrice(t) ?? undefined,
+                imageUrl: t.imageUrl,
+                speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+                season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
+                runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
+                xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                source: t.rawSource,
+              }}
+            />
+          ) : (
+            <SelectTireButton
+              wheelSku={String(wheelSku)}
+              tire={{
+                sku: tireSku,
+                brand: String(t.brand || ""),
+                title: String(displayTitle),
+                size: selectedSize,
+                price: getDisplayPrice(t) ?? undefined,
+                imageUrl: t.imageUrl,
+                speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+                season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
+                runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
+                xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                source: t.rawSource,
+              }}
+            />
+          )
+        ) : getDisplayPrice(t) != null ? (
+          isLocalMode ? (
+            <LocalTireAddButton
+              sku={tireSku}
+              brand={String(t.brand || "Tire")}
+              model={String(displayTitle)}
+              size={selectedSize}
+              imageUrl={t.imageUrl}
+              unitPrice={getDisplayPrice(t)!}
+              vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+              source={t.rawSource}
+            />
+          ) : (
+            <QuickAddTireButton
+              sku={tireSku}
+              brand={String(t.brand || "Tire")}
+              model={String(displayTitle)}
+              size={selectedSize}
+              imageUrl={t.imageUrl}
+              unitPrice={getDisplayPrice(t)!}
+              vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+              quantity={4}
+              source={t.rawSource}
+            />
+          )
+        ) : (
+          <a href={BRAND.links.tel} className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700">
+            Call for price
+          </a>
         )}
+
+        <Link
+          href={t.source === "wp" && t.mfgPartNumber
+            ? `/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
+            : t.source === "km" && t.partNumber
+              ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
+              : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber
+                ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb" }).toString()}`
+                : "#"
+          }
+          className="rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
+        >
+          View Details
+        </Link>
       </div>
     </article>
   );
