@@ -16,7 +16,7 @@ import {
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
 // Wheel-1 supplier
-import { getWheel1CandidatesByBoltPattern, isWheel1PreviewEnabled, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
+import { getWheel1CandidatesByBoltPattern, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
 // DEPRECATED: getModelVariants - now encapsulated in resolveUniversalFitment
 // import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 
@@ -1608,10 +1608,9 @@ async function handleDbFirstWheelResults(opts: {
   // Log the bolt pattern being searched (critical for debugging DRW issues)
   console.log(`[fitment-search] 🔍 SEARCHING: boltPattern=${opts.boltPattern}, rearWheelConfig=${opts.rearWheelConfig || 'n/a'}`);
 
-  // ─── Wheel-1 supplier (live) ─────────────────────────────────────────────
-  // Always included in results. isWheel1Preview flag only controls whether the
-  // convenience wheel1Preview[] field appears in the response (admin use).
-  const isWheel1Preview = (url.searchParams.get('preview_suppliers') || '').toLowerCase().includes('wheel1');
+  // ─── Wheel-1 supplier (live, no gate) ──────────────────────────────────────
+  // Wheel-1 is fully live. preview_suppliers param is no longer required.
+  // Wheel-1 candidates compete equally with WheelPros via the v3 ranking engine.
 
   const [techfeedCandidates, wheel1Candidates] = await Promise.all([
     getTechfeedCandidatesByBoltPattern(opts.boltPattern),
@@ -2986,39 +2985,6 @@ async function handleDbFirstWheelResults(opts: {
     // Sort applied flag (helps debug if sorting is working)
     sortApplied: isPriceSorted ? sortParam : 'default',
     // Debug SKU trace (only when debugSku param is provided)
-    // ─── Wheel-1 preview: surface ALL fitment-valid Wheel-1 items separately ─────────────
-    // When preview is active, the main results are WheelPros-dominated (by rank/volume).
-    // wheel1Preview surfaces all Wheel-1 fitment-valid items so admin can see them
-    // directly without paging through hundreds of WheelPros results.
-    // This field is ABSENT when preview is not active.
-    ...(isWheel1Preview ? {
-      wheel1Preview: rankedCandidates
-        .filter(item => (item.candidate as import('@/lib/wheel1/catalog').Wheel1Candidate)._supplier === 'wheel1')
-        .map(item => {
-          const c = item.candidate as import('@/lib/wheel1/catalog').Wheel1Candidate;
-          return {
-            sku:      c.sku,
-            supplier: 'wheel1',
-            title:    c.product_desc || c.sku,
-            brand:    c.brand_desc || c.brand_cd,
-            diameter: Number(c.diameter),
-            width:    Number(c.width),
-            offset:   Number(c.offset) || 0,
-            finish:   c.fancy_finish_desc,
-            msrp:     c._msrpNum,
-            mapPrice: c._mapNum,
-            // Computed sell price using the same pricing as WheelPros
-            sellPrice: getSafeWheelPrice(c),
-            images:   c.images || [],
-            fitmentClass: item.validation.fitmentClass,
-            score:    Math.round(item.score * 10) / 10,
-            w1Details: c._w1,
-          };
-        }),
-      wheel1PreviewCount: rankedCandidates.filter(
-        item => (item.candidate as import('@/lib/wheel1/catalog').Wheel1Candidate)._supplier === 'wheel1'
-      ).length,
-    } : {}),
     ...(debugSku && debugTrace.length > 0 ? { debugSkuTrace: { sku: debugSku, trace: debugTrace } } : {}),
   });
 }

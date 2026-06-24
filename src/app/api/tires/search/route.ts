@@ -739,11 +739,9 @@ const USAF_BRAND_NAMES: Record<string, string> = {
  * Handles short codes ("KEN" → "Kenda"), all-caps, etc.
  */
 const BRAND_DISPLAY_NAMES: Record<string, string> = {
+  // Short codes
   'KEN':           'Kenda',
-  'KENDA':         'Kenda',
   'BFG':           'BFGoodrich',
-  'BF GOODRICH':   'BFGoodrich',
-  'BFGOODRICH':    'BFGoodrich',
   'GOO':           'Goodyear',
   'MIC':           'Michelin',
   'TOY':           'Toyo',
@@ -763,6 +761,28 @@ const BRAND_DISPLAY_NAMES: Record<string, string> = {
   'UNI':           'Uniroyal',
   'MUL':           'Multi-Mile',
   'MAS':           'Mastercraft',
+  // All-caps variants from TireWeb (normalize to consistent Title Case)
+  'KENDA':         'Kenda',
+  'TOYO':          'Toyo',
+  'TOYO TIRES':    'Toyo',
+  'YOKOHAMA':      'Yokohama',
+  'BRIDGESTONE':   'Bridgestone',
+  'MICHELIN':      'Michelin',
+  'GOODYEAR':      'Goodyear',
+  'HANKOOK':       'Hankook',
+  'FALKEN':        'Falken',
+  'KUMHO':         'Kumho',
+  'NEXEN':         'Nexen',
+  'NITTO':         'Nitto',
+  'GENERAL':       'General',
+  'COOPER':        'Cooper',
+  'DUNLOP':        'Dunlop',
+  'FIRESTONE':     'Firestone',
+  'CONTINENTAL':   'Continental',
+  'PIRELLI':       'Pirelli',
+  'BF GOODRICH':   'BFGoodrich',
+  'BFGOODRICH':    'BFGoodrich',
+  'UNIROYAL':      'Uniroyal',
 };
 
 function normalizeBrandName(raw: string | null | undefined): string | null {
