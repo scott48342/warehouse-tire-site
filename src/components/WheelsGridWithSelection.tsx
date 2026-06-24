@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { WheelsStyleCard, type WheelFinishThumb, type WheelPair } from "./WheelsStyleCard";
+import { WheelsStyleCardHorizontal } from "./WheelsStyleCardHorizontal";
 import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
 import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
 import { FitmentDiameterChips, type DiameterOption } from "./FitmentDiameterChips";
@@ -1266,7 +1267,7 @@ export function WheelsGridWithSelection({
     }
   };
   
-  const renderWheelCard = (w: WheelItem, idx: number, isRecommended = false) => {
+  const renderWheelCard = (w: WheelItem, idx: number, isRecommended = false, useHorizontal = false) => {
     const isSelected = selectedWheel?.sku === w.sku;
     const brand = typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel");
     const model = typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel";
@@ -1295,77 +1296,140 @@ export function WheelsGridWithSelection({
           </div>
         )}
         
-        <WheelsStyleCard
-          brand={brand}
-          title={model}
-          baseSku={String(w.sku || "")}
-          baseFinish={w.finish ? String(w.finish) : undefined}
-          baseImageUrl={w.imageUrl}
-          price={w.price}
-          stockQty={w.stockQty}
-          inventoryType={w.inventoryType}
-          sizeLabel={
-            diameterParam || widthParam
-              ? { diameter: diameterParam || w.diameter, width: widthParam || w.width }
-              : w.diameter || w.width
-                ? { diameter: w.diameter, width: w.width }
-                : undefined
-          }
-          pair={w.pair}
-          specLabel={{
-            boltPattern: w.boltPattern,
-            offset: w.offset,
-          }}
-          finishThumbs={w.finishThumbs}
-          fitmentClass={w.fitmentClass}
-          isPopular={isRecommended && (idx === 0 || idx === 1)}
-          viewParams={viewParams}
-          dbProfile={dbProfile}
-          wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
-          // Fitment guidance (2026-04-07)
-          fitmentLevel={w.fitmentGuidance?.level}
-          buildRequirement={w.fitmentGuidance?.buildRequirement}
-          // Homepage intent: show offset for lifted builds
-          showOffset={showOffset}
-          // Selection props
-          isSelected={isSelected}
-          hasSelection={!!selectedWheel}
-          // NEW: Top Pick category props for guided selection
-          topPickCategory={topPickCategory}
-          isTopPick={isTopPick}
-          freeShipping={w.freeShipping}
-          onSelect={(wheelState) => {
-            // Use current card state (may have changed if user selected a different finish)
-            const effectivePrice = wheelState?.price ?? w.price;
-            const setPrice = typeof effectivePrice === "number" ? effectivePrice * 4 : 0;
-            
-            // Extract staggered info from pair if available
-            const isStaggered = w.pair?.staggered || false;
-            const rearSku = isStaggered && w.pair?.rear?.sku ? w.pair.rear.sku : undefined;
-            const rearWidth = isStaggered && w.pair?.rear?.width ? w.pair.rear.width : undefined;
-            const rearOffset = isStaggered && w.pair?.rear?.offset ? w.pair.rear.offset : undefined;
-            
-            handleWheelSelect({
-              sku: wheelState?.sku || String(w.sku || ""),
-              rearSku,
-              brand,
-              model,
-              finish: wheelState?.finish ?? w.finish,
-              diameter: w.diameter,
-              width: w.width,
-              rearWidth,
-              offset: w.offset,
-              rearOffset,
+        {useHorizontal ? (
+          <WheelsStyleCardHorizontal
+            brand={brand}
+            title={model}
+            baseSku={String(w.sku || "")}
+            baseFinish={w.finish ? String(w.finish) : undefined}
+            baseImageUrl={w.imageUrl}
+            price={w.price}
+            stockQty={w.stockQty}
+            inventoryType={w.inventoryType}
+            sizeLabel={
+              diameterParam || widthParam
+                ? { diameter: diameterParam || w.diameter, width: widthParam || w.width }
+                : w.diameter || w.width
+                  ? { diameter: w.diameter, width: w.width }
+                  : undefined
+            }
+            pair={w.pair}
+            specLabel={{
               boltPattern: w.boltPattern,
-              centerbore: w.centerbore,
-              imageUrl: wheelState?.imageUrl ?? w.imageUrl,
-              price: effectivePrice,
-              setPrice,
-              fitmentClass: w.fitmentClass,
-              staggered: isStaggered,
-            });
-          }}
-        />
+              offset: w.offset,
+            }}
+            finishThumbs={w.finishThumbs}
+            fitmentClass={w.fitmentClass}
+            viewParams={viewParams}
+            dbProfile={dbProfile}
+            wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
+            fitmentLevel={w.fitmentGuidance?.level}
+            buildRequirement={w.fitmentGuidance?.buildRequirement}
+            showOffset={showOffset}
+            isSelected={isSelected}
+            hasSelection={!!selectedWheel}
+            topPickCategory={topPickCategory}
+            isTopPick={isTopPick}
+            freeShipping={w.freeShipping}
+            onSelect={(wheelState) => {
+              const effectivePrice = wheelState?.price ?? w.price;
+              const setPrice = typeof effectivePrice === "number" ? effectivePrice * 4 : 0;
+              const isStaggered = w.pair?.staggered || false;
+              const rearSku = isStaggered && w.pair?.rear?.sku ? w.pair.rear.sku : undefined;
+              const rearWidth = isStaggered && w.pair?.rear?.width ? w.pair.rear.width : undefined;
+              const rearOffset = isStaggered && w.pair?.rear?.offset ? w.pair.rear.offset : undefined;
+              handleWheelSelect({
+                sku: wheelState?.sku || String(w.sku || ""),
+                rearSku,
+                brand,
+                model,
+                finish: wheelState?.finish ?? w.finish,
+                diameter: w.diameter,
+                width: w.width,
+                rearWidth,
+                offset: w.offset,
+                rearOffset,
+                boltPattern: w.boltPattern,
+                centerbore: w.centerbore,
+                imageUrl: wheelState?.imageUrl ?? w.imageUrl,
+                price: effectivePrice,
+                setPrice,
+                fitmentClass: w.fitmentClass,
+                staggered: isStaggered,
+              });
+            }}
+          />
+        ) : (
+          <WheelsStyleCard
+            brand={brand}
+            title={model}
+            baseSku={String(w.sku || "")}
+            baseFinish={w.finish ? String(w.finish) : undefined}
+            baseImageUrl={w.imageUrl}
+            price={w.price}
+            stockQty={w.stockQty}
+            inventoryType={w.inventoryType}
+            sizeLabel={
+              diameterParam || widthParam
+                ? { diameter: diameterParam || w.diameter, width: widthParam || w.width }
+                : w.diameter || w.width
+                  ? { diameter: w.diameter, width: w.width }
+                  : undefined
+            }
+            pair={w.pair}
+            specLabel={{
+              boltPattern: w.boltPattern,
+              offset: w.offset,
+            }}
+            finishThumbs={w.finishThumbs}
+            fitmentClass={w.fitmentClass}
+            isPopular={isRecommended && (idx === 0 || idx === 1)}
+            viewParams={viewParams}
+            dbProfile={dbProfile}
+            wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
+            // Fitment guidance (2026-04-07)
+            fitmentLevel={w.fitmentGuidance?.level}
+            buildRequirement={w.fitmentGuidance?.buildRequirement}
+            // Homepage intent: show offset for lifted builds
+            showOffset={showOffset}
+            // Selection props
+            isSelected={isSelected}
+            hasSelection={!!selectedWheel}
+            // NEW: Top Pick category props for guided selection
+            topPickCategory={topPickCategory}
+            isTopPick={isTopPick}
+            freeShipping={w.freeShipping}
+            onSelect={(wheelState) => {
+              // Use current card state (may have changed if user selected a different finish)
+              const effectivePrice = wheelState?.price ?? w.price;
+              const setPrice = typeof effectivePrice === "number" ? effectivePrice * 4 : 0;
+              // Extract staggered info from pair if available
+              const isStaggered = w.pair?.staggered || false;
+              const rearSku = isStaggered && w.pair?.rear?.sku ? w.pair.rear.sku : undefined;
+              const rearWidth = isStaggered && w.pair?.rear?.width ? w.pair.rear.width : undefined;
+              const rearOffset = isStaggered && w.pair?.rear?.offset ? w.pair.rear.offset : undefined;
+              handleWheelSelect({
+                sku: wheelState?.sku || String(w.sku || ""),
+                rearSku,
+                brand,
+                model,
+                finish: wheelState?.finish ?? w.finish,
+                diameter: w.diameter,
+                width: w.width,
+                rearWidth,
+                offset: w.offset,
+                rearOffset,
+                boltPattern: w.boltPattern,
+                centerbore: w.centerbore,
+                imageUrl: wheelState?.imageUrl ?? w.imageUrl,
+                price: effectivePrice,
+                setPrice,
+                fitmentClass: w.fitmentClass,
+                staggered: isStaggered,
+              });
+            }}
+          />
+        )}
       </div>
     );
   };
@@ -1507,10 +1571,10 @@ export function WheelsGridWithSelection({
         </div>
       )}
       
-      {/* Main Grid */}
-      <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+      {/* Main Grid — 2-col horizontal cards */}
+      <div className="grid gap-2.5 grid-cols-1 md:grid-cols-2">
         {displayWheels.length ? (
-          displayWheels.map((w, idx) => renderWheelCard(w, idx))
+          displayWheels.map((w, idx) => renderWheelCard(w, idx, false, true))
         ) : (
           <div className="col-span-full rounded-2xl border border-neutral-200 bg-white p-6 text-center">
             <div className="text-neutral-700 font-medium">
