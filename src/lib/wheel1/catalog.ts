@@ -31,6 +31,9 @@ interface Wheel1Row {
   color: string | null;
   msrp: string | null;
   map_price: string | null;
+  dealer_cost: string | null;       // real dealer cost from inventory sync
+  inventory_qty: number | null;     // live stock quantity
+  primary_warehouse: string | null; // highest-qty warehouse
   has_map: boolean;
   image1: string | null;
   image2: string | null;
@@ -58,6 +61,12 @@ export interface Wheel1Candidate extends TechfeedWheel {
   _msrpNum: number | null;
   /** Raw MAP as a number (used by pricing layer). */
   _mapNum: number | null;
+  /** Real dealer cost from inventory sync ($1/inch freight included in sell price). */
+  _dealerCost: number | null;
+  /** Live inventory quantity (null = not yet synced). */
+  _inventoryQty: number | null;
+  /** Shipping is baked into the price — show FREE SHIPPING badge. */
+  _freeShipping: true;
   /** Extra wheel-1 specific fields for PDP/admin. */
   _w1: {
     brandFull: string;
@@ -103,9 +112,16 @@ function resolveImage(blobUrl: string | null, cdnUrl: string | null): string | n
 
 // ─── Row → TechfeedWheel mapper ──────────────────────────────────────────────
 
-function mapRowToCandidate(row: Wheel1Row): Wheel1Candidate {
-  const msrpNum = row.msrp ? parseFloat(row.msrp) : null;
-  const mapNum  = row.map_price && parseFloat(row.map_price) > 0 ? parseFloat(row.map_price) : null;
+function mapRowToCandidate(row: Wheel1Row, requireStock = false): Wheel1Candidate | null {
+  // When inventory is synced, optionally filter out zero-stock wheels
+  if (requireStock && row.inventory_qty !== null && row.inventory_qty <= 0) {
+    return null;
+  }
+
+  const msrpNum   = row.msrp ? parseFloat(row.msrp) : null;
+  const mapNum    = row.map_price && parseFloat(row.map_price) > 0 ? parseFloat(row.map_price) : null;
+  const costNum   = row.dealer_cost && parseFloat(row.dealer_cost) > 0 ? parseFloat(row.dealer_cost) : null;
+  const invQty    = row.inventory_qty ?? null;
 
   // Derive a "brand code" (uppercase slug) for facets/filtering
   const brandCode = row.brand.toUpperCase().replace(/\s+/g, "");
@@ -162,9 +178,12 @@ function mapRowToCandidate(row: Wheel1Row): Wheel1Candidate {
     images,
 
     // ── Wheel-1 supplier extensions ────────────────────────────────────────
-    _supplier: "wheel1",
-    _msrpNum:  msrpNum,
-    _mapNum:   mapNum,
+    _supplier:     "wheel1",
+    _msrpNum:      msrpNum,
+    _mapNum:       mapNum,
+    _dealerCost:   costNum,
+    _inventoryQty: invQty,
+    _freeShipping: true,          // freight baked into landed-cost pricing
     _w1: {
       brandFull:         row.brand,
       styleName:         row.name || row.style_number || null,
@@ -177,8 +196,9 @@ function mapRowToCandidate(row: Wheel1Row): Wheel1Candidate {
       salesDescription:  row.sales_description,
       upc:               row.upc,
       countryOfOrigin:   row.country_of_origin,
+      primaryWarehouse:  row.primary_warehouse,
     },
-  };
+  } as Wheel1Candidate;
 }
 
 // ─── Public API ──────────────────────────────────────────────────────────────
@@ -202,18 +222,20 @@ export function computeWheel1SellPrice(params: {
   diameter:   number;
 }): number {
   const { msrp, mapPrice, dealerCost, diameter } = params;
-  const shipping = Math.max(0, diameter); // $1 per inch
+  const freightDollars = Math.max(0, diameter); // $1 per inch baked in
 
   // Cost: real dealer cost when available, otherwise estimate at 68% of MSRP
   const baseCost = dealerCost ?? (msrp ? msrp * 0.68 : null);
   if (!baseCost || baseCost <= 0) {
+    // No cost data at all: return MAP or MSRP as-is (no freight adder on pure-MAP fallback)
     return mapPrice && mapPrice > 0 ? mapPrice : (msrp ?? 0);
   }
 
-  const adjustedCost = baseCost + shipping;
-  const markupPrice  = Math.round(adjustedCost * 1.30 * 100) / 100;
+  // Landed cost = dealer cost + $1/inch freight
+  const landedCost  = baseCost + freightDollars;
+  const markupPrice = Math.round(landedCost * 1.30 * 100) / 100;
 
-  // MAP floor — never sell below MAP
+  // MAP is a hard floor — never advertise below MAP
   return mapPrice && mapPrice > 0 ? Math.max(markupPrice, mapPrice) : markupPrice;
 }
 
@@ -240,18 +262,26 @@ export async function getWheel1CandidatesByBoltPattern(
         sku, brand, name, style_number, description, short_description,
         diameter::text, wheel_width::text, hub::text, pcd1, pcd2,
         offset_mm::text, finish, color,
-        msrp::text, map_price::text, has_map,
+        msrp::text, map_price::text, dealer_cost::text, has_map,
+        inventory_qty, primary_warehouse,
         image1, image2, image3, image4, image1_source, image2_source,
         load_rating, tpms_compatible, is_dually, is_winter_approved,
         structure_warranty, bullet_points, sales_description, upc, country_of_origin
       FROM wheel1_products
       WHERE (pcd1 = $1 OR pcd2 = $1)
         AND is_discontinued = FALSE
-      ORDER BY msrp ASC`,
+      ORDER BY
+        -- In-stock first, then by price
+        (COALESCE(inventory_qty, 0) > 0) DESC,
+        msrp ASC`,
       [bp]
     );
 
-    return rows.map(mapRowToCandidate);
+    // requireStock=false: show all matching wheels (zero-stock shown with "check availability")
+    // Set requireStock=true here once inventory sync is fully running and trusted
+    return rows
+      .map(row => mapRowToCandidate(row, false))
+      .filter((c): c is Wheel1Candidate => c !== null);
   } catch (err) {
     // Never crash the primary search on a preview supplier failure
     console.error("[wheel1] getWheel1CandidatesByBoltPattern error:", (err as Error).message);

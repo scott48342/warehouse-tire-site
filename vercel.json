@@ -80,6 +80,10 @@
     {
       "path": "/api/cron/daily-executive-report",
       "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/sync-wheel1-inventory",
+      "schedule": "0 */4 * * *"
     }
   ]
 }
