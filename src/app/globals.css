@@ -44,8 +44,7 @@ body {
 /* Tire card layout - uses flexbox for consistent spacing */
 .tire-card {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row; /* horizontal: image left, info center, CTA right */
   min-width: 0; /* Allow card to shrink in grid */
   max-width: 100%; /* Never exceed grid cell */
   overflow: hidden; /* Prevent content overflow */
