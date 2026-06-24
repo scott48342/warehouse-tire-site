@@ -4641,6 +4641,15 @@ function TireCard({
           </h3>
         )}
 
+        {/* Best For guidance */}
+        <BestForLine 
+          category={(t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as EnhancementCategory}
+          mileageWarranty={t.enrichment?.mileage}
+          isRunFlat={t.enrichment?.isRunFlat}
+          is3PMSF={t.enrichment?.is3PMSF}
+          maxItems={2}
+        />
+
         {/* Tire size + load/speed */}
         <div className="text-[11px] text-neutral-500">
           {normalizeTireSize(selectedSize) || selectedSize}
@@ -4675,6 +4684,20 @@ function TireCard({
         {hasVehicle && (
           <div className="text-[10px] font-medium text-green-700">&#10004; Fits {year} {make} {model}</div>
         )}
+
+        {/* Performance ratings - mini bar charts (only show if we have UTQG data) */}
+        {(() => {
+          const utqg = parseUTQG(t.badges?.utqg);
+          if (!utqg || !utqg.treadwear) return null;
+          const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as TreadCategory;
+          const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
+          if (!ratings) return null;
+          return (
+            <div className="mt-2">
+              <MiniRatings ratings={ratings} category={category} />
+            </div>
+          );
+        })()}
 
         {/* Price — pushed to bottom */}
         {!isLocalMode && (() => {
