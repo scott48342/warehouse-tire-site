@@ -13,6 +13,7 @@ import { useRebateMatches, type RebateMatchData } from "@/hooks/useRebateMatch";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { parseUTQG, derivePerformanceRatings } from "@/lib/tires/tireSpecs";
 import { FinancingBadge } from "@/components/FinancingBadge";
+import { TireStyleCardHorizontal } from "@/components/TireStyleCardHorizontal";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -198,6 +199,43 @@ function getMileageBadgeStyle(miles: number): { label: string; bg: string } {
   if (miles >= 60000) return { label: '60K WARRANTY', bg: 'bg-indigo-600' };
   if (miles >= 40000) return { label: '40K WARRANTY', bg: 'bg-blue-600' };
   return { label: '', bg: '' };
+}
+
+// ─── Helpers used by TireStyleCardHorizontal mapping in CategorySection ────────
+
+/** Derive tread category from TireItem — same logic as TireCard's internal inference. */
+function deriveTireCategory(tire: TireItem, model: string): string {
+  if (tire.treadCategory) return tire.treadCategory;
+  if (tire.badges?.terrain) return tire.badges.terrain;
+  const m = model.toUpperCase();
+  if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) return "Winter";
+  if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) return "Mud-Terrain";
+  if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) return "Rugged-Terrain";
+  if (/\bA[\/\-]?T\d*[A-Z]?\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) return "All-Terrain";
+  if (/\bH[\/\-]?T\d*[A-Z]?\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) return "Highway/Touring";
+  if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b|\bCONTI\s*SPORT\b/.test(m)) return "Performance";
+  if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) return "All-Weather";
+  if (/\bSUMMER\b/.test(m) && !/ALL/.test(m)) return "Summer";
+  return "All-Season";
+}
+
+/** Build the detail-page href for a tire item. */
+function buildTireViewHref(tire: TireItem, size: string, vp: ViewParams): string {
+  const sku = tire.partNumber || tire.mfgPartNumber;
+  if (!sku) return "#";
+  const params = new URLSearchParams();
+  const source = tire.rawSource || tire.source;
+  params.set("size", source?.startsWith("tireweb") ? (tire.size || size) : size);
+  if (vp.year)  params.set("year",  vp.year);
+  if (vp.make)  params.set("make",  vp.make);
+  if (vp.model) params.set("model", vp.model);
+  if (vp.trim)  params.set("trim",  vp.trim);
+  if (source === "km") return `/tires/km/${encodeURIComponent(sku)}?${params.toString()}`;
+  if (source?.startsWith("tireweb")) {
+    params.set("source", "tireweb");
+    return `/tires/${encodeURIComponent(sku)}?${params.toString()}`;
+  }
+  return `/tires/${encodeURIComponent(sku)}?${params.toString()}`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -682,20 +720,31 @@ function CategorySection({
       </button>
       
       {expanded && (
-        <div className="mt-4 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-          {tires.slice(0, 10).map((tire, idx) => (
-            <TireCard
-              key={tire.partNumber || idx}
-              tire={tire}
-              size={size}
-              isSelected={selectedTire?.sku === tire.partNumber}
-              hasSelection={!!selectedTire}
-              onSelect={() => onSelectTire(tire)}
-              viewParams={viewParams}
-              isPackageFlow={isPackageFlow}
-              rebateMatch={rebateMatches?.[tire.partNumber || ""]}
-            />
-          ))}
+        <div className="mt-4 grid gap-3 grid-cols-1 md:grid-cols-2">
+          {tires.slice(0, 10).map((tire, idx) => {
+            const tileModel = tire.displayName || tire.prettyName || tire.description || "";
+            return (
+              <TireStyleCardHorizontal
+                key={tire.partNumber || idx}
+                sku={tire.partNumber || String(idx)}
+                brand={tire.brand || "Tire"}
+                title={tileModel}
+                imageUrl={tire.imageUrl}
+                price={getDisplayPrice(tire) ?? undefined}
+                size={size}
+                category={deriveTireCategory(tire, tileModel)}
+                utqg={tire.utqg ?? undefined}
+                mileageWarranty={tire.badges?.warrantyMiles ?? undefined}
+                stockQty={getStockInfo(tire.quantity).total}
+                viewHref={buildTireViewHref(tire, size, viewParams)}
+                onAddToCart={() => onSelectTire(tire)}
+                isSelected={selectedTire?.sku === tire.partNumber}
+                hasSelection={!!selectedTire}
+                isPackageFlow={isPackageFlow}
+                rebateMatch={rebateMatches?.[tire.partNumber || ""]}
+              />
+            );
+          })}
         </div>
       )}
       
