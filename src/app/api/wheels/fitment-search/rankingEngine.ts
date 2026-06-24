@@ -70,7 +70,7 @@ export const SCORE_WEIGHTS = {
  *
  * 0.65 = 65%: allows majority presence but guarantees room for other suppliers.
  */
-export const SUPPLIER_DIVERSITY_CAP = 0.65;
+export const SUPPLIER_DIVERSITY_CAP = 0.50;
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
