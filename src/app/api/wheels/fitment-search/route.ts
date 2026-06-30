@@ -3426,14 +3426,16 @@ function buildFacets(wheels: any[]) {
     // Diameter
     const dia = w.properties?.diameter;
     if (dia != null) {
-      const diaStr = String(dia);
+      // Normalize: String(Number()) collapses '16.0' -> '16' while preserving '8.5'
+      const diaStr = String(Number(dia));
       diameters.set(diaStr, (diameters.get(diaStr) || 0) + 1);
     }
 
     // Width
     const wid = w.properties?.width;
     if (wid != null) {
-      const widStr = String(wid);
+      // Normalize: String(Number()) collapses '7.0' -> '7' while preserving '8.5'
+      const widStr = String(Number(wid));
       widths.set(widStr, (widths.get(widStr) || 0) + 1);
     }
 
