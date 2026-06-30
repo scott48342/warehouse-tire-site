@@ -84,6 +84,10 @@
     {
       "path": "/api/cron/sync-wheel1-inventory",
       "schedule": "0 */4 * * *"
+    },
+    {
+      "path": "/api/cron/sync-wsi-inventory",
+      "schedule": "0 6 * * *"
     }
   ]
 }

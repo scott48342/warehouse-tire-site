@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import {
   PREMIUM_FINISHES,
   SCORE_WEIGHTS,
@@ -17,16 +17,18 @@ import {
 } from "@/lib/vehicleFitment";
 // Wheel-1 supplier
 import { getWheel1CandidatesByBoltPattern, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
+// WSI Wholesale supplier
+import { getWSICandidatesByBoltPattern, computeWSISellPrice, type WSICandidate } from "@/lib/wsi/catalog";
 // DEPRECATED: getModelVariants - now encapsulated in resolveUniversalFitment
 // import { getModelVariants } from "@/lib/fitment-db/modelAliases";
 
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // UNIVERSAL FITMENT RESOLVER (2026-06-13)
 // Single source of truth for ALL fitment lookups. Replaces:
 // - buildFitmentProfile / buildFitmentProfileFromNewTable
 // - getModelVariants / MODEL_ALIASES
 // - canonicalResolver / resolveVehicleFitment
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 import { 
   resolveUniversalFitment, 
   type UniversalFitmentResult 
@@ -135,16 +137,16 @@ export const maxDuration = 60;
 
 // NOTE: convertToDBFitmentProfile was removed - legacy path now builds its own format directly
 
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // PRICING HELPER - DATA QUALITY FIX (2025-07-18)
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // The techfeed/SFTP has corrupted MSRP values when MAP is empty.
 // Wheels WITH MAP have correct MSRP (~$450-490).
 // Wheels WITHOUT MAP have garbage MSRP (~$210-280, likely dealer cost).
 // 
 // FIX: Only trust MSRP if MAP is also present as a data quality signal.
 // This prevents selling wheels at ~50% off due to bad data.
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 interface TechfeedPricingInput {
   map_price?: string | number | null;
@@ -222,12 +224,12 @@ function getSafeWheelPrice(
   return calculateWheelSellPrice({ sku: idSku ?? undefined, map: mapValue, msrp: trustedMsrp });
 }
 
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // WHEEL SIZE STRING PARSER
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // Parses wheel size strings like "8.5Jx18" or "10Jx20" into {width, diameter}
 // Also handles object-based formats for backward compatibility
-// ═══════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 interface ParsedWheelSize {
   diameter: number;
@@ -421,7 +423,7 @@ function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo
 function inferStaggeredFromTireSizes(tireSizes: string[]): StaggeredInfo | null {
   if (!tireSizes || tireSizes.length < 2) return null;
   
-  // Parse tire widths (e.g., "255/40R18" → 255)
+  // Parse tire widths (e.g., "255/40R18" â†’ 255)
   const parsedTires = tireSizes.map(size => {
     const match = size.match(/^P?(\d{3})\//);
     const diamMatch = size.match(/R(\d+)/i);
@@ -622,8 +624,8 @@ type FitmentResolutionPath = ProfileResolutionPath | "legacyFallback" | "invalid
  * 
  * Resolution Flow:
  * 1. Try DB-first profile lookup by modificationId
- * 2. If found → use it directly (no legacy system needed)
- * 3. If not found → fall back to legacy system (with logging)
+ * 2. If found â†’ use it directly (no legacy system needed)
+ * 3. If not found â†’ fall back to legacy system (with logging)
  * 4. Return wheels with fitment validation
  * 
  * Query params:
@@ -656,9 +658,9 @@ export async function GET(req: Request) {
     console.warn(`[fitment-search] DEPRECATION: Using 'trim' param as modificationId. Migrate to 'modification=${trimParam}'`);
   }
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // REAR WHEEL CONFIG (SRW/DRW) - For HD Trucks (3500-class)
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const rearWheelConfigParam = url.searchParams.get("rearWheelConfig");
   const rearWheelConfig: RearWheelConfig | undefined = 
     rearWheelConfigParam === "srw" || rearWheelConfigParam === "drw" 
@@ -670,7 +672,7 @@ export async function GET(req: Request) {
   const vehicleNeedsRearWheelConfig = make && model ? needsRearWheelConfigSelection(make, model, trimParam) : false;
   
   if (vehicleIsDRWCapable) {
-    console.log(`[fitment-search] 🛻 HD TRUCK DETECTED: ${year} ${make} ${model}`, {
+    console.log(`[fitment-search] ðŸ›» HD TRUCK DETECTED: ${year} ${make} ${model}`, {
       isDRWCapable: vehicleIsDRWCapable,
       needsSelection: vehicleNeedsRearWheelConfig,
       rearWheelConfig: rearWheelConfig || "(not specified)",
@@ -694,11 +696,11 @@ export async function GET(req: Request) {
   }
 
   try {
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // STEP 0: CANONICAL IDENTITY CHECK (2026-05-04)
     // Use the same resolver as tire-sizes API to ensure consistent trim resolution.
     // This prevents grouped trim fallbacks that could show wheels for wrong trim.
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     if (modificationId || trimParam) {
       const canonicalCheck = await resolveVehicleFitment({
@@ -711,7 +713,7 @@ export async function GET(req: Request) {
       
       // If canonical resolver says BLOCKED, respect it - don't allow profileService fallback
       if (canonicalCheck.matchedBy === "blocked") {
-        console.warn(`[fitment-search] 🚫 CANONICAL BLOCKED: ${year} ${make} ${model} → ${canonicalCheck.debug.fallbackBlockedReason}`);
+        console.warn(`[fitment-search] ðŸš« CANONICAL BLOCKED: ${year} ${make} ${model} â†’ ${canonicalCheck.debug.fallbackBlockedReason}`);
         
         return NextResponse.json({
           results: [],
@@ -742,13 +744,13 @@ export async function GET(req: Request) {
       
       // Log canonical resolution for debugging
       if (canonicalCheck.matchedBy !== "not_found") {
-        console.log(`[fitment-search] ✅ CANONICAL RESOLVED: ${year} ${make} ${model} → method=${canonicalCheck.matchedBy}, confidence=${canonicalCheck.confidence}, trim="${canonicalCheck.displayTrim}"`);
+        console.log(`[fitment-search] âœ… CANONICAL RESOLVED: ${year} ${make} ${model} â†’ method=${canonicalCheck.matchedBy}, confidence=${canonicalCheck.confidence}, trim="${canonicalCheck.displayTrim}"`);
       }
     }
     
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // STEP 1: ModificationId-First Profile Resolution (with Alias Support)
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     let dbProfile: DBFitmentProfile | null = null;
     let resolutionPath: FitmentResolutionPath = "invalid";
@@ -756,7 +758,7 @@ export async function GET(req: Request) {
     let canonicalModificationId: string | null = null;
     let aliasUsed = false;
     
-    // Primary path: Use modificationId-first lookup (DB → Alias → API)
+    // Primary path: Use modificationId-first lookup (DB â†’ Alias â†’ API)
     // For HD trucks with rearWheelConfig, use the HD-aware function
     if (modificationId) {
       try {
@@ -770,7 +772,7 @@ export async function GET(req: Request) {
           canonicalModificationId = profileResult.canonicalModificationId;
           aliasUsed = profileResult.aliasUsed;
           
-          console.log(`[fitment-search] RESOLVED (${resolutionPath}): ${year} ${make} ${model} mod=${modificationId}${aliasUsed ? ` → ${canonicalModificationId}` : ''}`, {
+          console.log(`[fitment-search] RESOLVED (${resolutionPath}): ${year} ${make} ${model} mod=${modificationId}${aliasUsed ? ` â†’ ${canonicalModificationId}` : ''}`, {
             boltPattern: dbProfile.boltPattern,
             oemWheelSizes: dbProfile.oemWheelSizes.length,
             oemTireSizes: dbProfile.oemTireSizes.length,
@@ -822,10 +824,10 @@ export async function GET(req: Request) {
       }
     }
     
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // STEP 2: Use dbProfile if Available (ModificationId-First Path)
     // Check confidence and potentially block ONLY if we have a profile to evaluate
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     if (dbProfile) {
       const confidenceResult = calculateConfidence(dbProfile);
@@ -884,10 +886,10 @@ export async function GET(req: Request) {
       }
     }
     
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // STEP 3.5: Direct Local DB Fallback (bypass profileService)
     // This handles cases where profileService fails but we have local fitment data
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     if (!dbProfile) {
       try {
@@ -900,7 +902,7 @@ export async function GET(req: Request) {
           const bestFitment = localFitments.find(f => f.boltPattern && normalizeToStringArray(f.oemTireSizes).length > 0) || localFitments[0];
           
           if (bestFitment && bestFitment.boltPattern) {
-            console.log(`[fitment-search] LOCAL DB HIT: ${year} ${make} ${model} → ${bestFitment.modificationId} (boltPattern: ${bestFitment.boltPattern})`);
+            console.log(`[fitment-search] LOCAL DB HIT: ${year} ${make} ${model} â†’ ${bestFitment.modificationId} (boltPattern: ${bestFitment.boltPattern})`);
             
             // Convert to DBFitmentProfile format
             dbProfile = {
@@ -938,10 +940,10 @@ export async function GET(req: Request) {
       }
     }
 
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // STEP 3.7: Classic Fitment Fallback (No vehicle_fitments, but has classic_fitments)
     // For classic vehicles without vehicle_fitments records, construct profile from classic_fitments
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     if (!dbProfile && isClassicVehicle(Number(year), make)) {
       console.log(`[fitment-search] TRYING CLASSIC FALLBACK: ${year} ${make} ${model}`);
@@ -950,7 +952,7 @@ export async function GET(req: Request) {
         const classicResult = await getClassicFitment(Number(year), make, model);
         
         if (classicResult.isClassicVehicle && classicResult.fitmentMode === "classic") {
-          console.log(`[fitment-search] CLASSIC FALLBACK HIT: ${year} ${make} ${model} → platform=${classicResult.platform.code}`);
+          console.log(`[fitment-search] CLASSIC FALLBACK HIT: ${year} ${make} ${model} â†’ platform=${classicResult.platform.code}`);
           
           // Construct a minimal DB profile from classic fitment
           const classicModificationId = `classic_${classicResult.platform.code}_${year}`;
@@ -1021,9 +1023,9 @@ export async function GET(req: Request) {
       }
     }
 
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // STEP 4: Legacy Fallback (Only When ModificationId-First Fails)
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     console.warn(`[fitment-search] LEGACY FALLBACK: ${year} ${make} ${model} mod=${modificationId || "(none)"} - dbProfile unavailable`);
     resolutionPath = "legacyFallback";
@@ -1507,9 +1509,9 @@ function diversifyCandidatesByBrand<T extends { brand_cd?: string }>(candidates:
 }
 
 /**
- * ═══════════════════════════════════════════════════════════════════════════════
+ * â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  * DB-FIRST WHEEL SEARCH (March 2026 Architecture)
- * ═══════════════════════════════════════════════════════════════════════════════
+ * â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  * 
  * This function returns ALL fitment-valid wheels from the local Techfeed database.
  * NO live WheelPros API calls are made during search.
@@ -1521,7 +1523,7 @@ function diversifyCandidatesByBrand<T extends { brand_cd?: string }>(candidates:
  * Live availability checks happen ONLY at cart/checkout via:
  * POST /api/cart/validate-availability
  * 
- * ═══════════════════════════════════════════════════════════════════════════════
+ * â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  */
 async function handleDbFirstWheelResults(opts: {
   url: URL;
@@ -1570,9 +1572,9 @@ async function handleDbFirstWheelResults(opts: {
 }): Promise<NextResponse> {
   const { url, envelope, debug, t0 } = opts;
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // TIMING INSTRUMENTATION
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const timing: Record<string, number | string | null> = {};
 
   const requestedPage = Math.max(1, Number(url.searchParams.get("page") || "1") || 1);
@@ -1600,32 +1602,33 @@ async function handleDbFirstWheelResults(opts: {
   // minQty for cached availability label (not used for filtering in DB-first mode)
   const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 1: Get candidates from Techfeed DB (local, fast)
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tCandidates0 = Date.now();
   
   // Log the bolt pattern being searched (critical for debugging DRW issues)
-  console.log(`[fitment-search] 🔍 SEARCHING: boltPattern=${opts.boltPattern}, rearWheelConfig=${opts.rearWheelConfig || 'n/a'}`);
+  console.log(`[fitment-search] ðŸ” SEARCHING: boltPattern=${opts.boltPattern}, rearWheelConfig=${opts.rearWheelConfig || 'n/a'}`);
 
-  // ─── Wheel-1 supplier (live, no gate) ──────────────────────────────────────
+  // â”€â”€â”€ Wheel-1 supplier (live, no gate) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Wheel-1 is fully live. preview_suppliers param is no longer required.
   // Wheel-1 candidates compete equally with WheelPros via the v3 ranking engine.
 
-  const [techfeedCandidates, wheel1Candidates] = await Promise.all([
+  const [techfeedCandidates, wheel1Candidates, wsiCandidates] = await Promise.all([
     getTechfeedCandidatesByBoltPattern(opts.boltPattern),
     getWheel1CandidatesByBoltPattern(opts.boltPattern),
+    getWSICandidatesByBoltPattern(opts.boltPattern),
   ]);
 
-  const candidates = [...techfeedCandidates, ...wheel1Candidates];
+  const candidates = [...techfeedCandidates, ...wheel1Candidates, ...wsiCandidates];
 
   if (wheel1Candidates.length > 0) {
-    console.log(`[fitment-search] 🟢 Wheel-1: ${wheel1Candidates.length} candidates (bp=${opts.boltPattern})`);
+    console.log(`[fitment-search] ðŸŸ¢ Wheel-1: ${wheel1Candidates.length} candidates (bp=${opts.boltPattern})`);
   }
 
   timing.candidatesDbMs = Date.now() - tCandidates0;
   
-  console.log(`[fitment-search] 📦 Found ${techfeedCandidates.length} WheelPros + ${wheel1Candidates.length} Wheel-1 candidates (bp=${opts.boltPattern})`);
+  console.log(`[fitment-search] ðŸ“¦ Found ${techfeedCandidates.length} WheelPros + ${wheel1Candidates.length} Wheel-1 candidates (bp=${opts.boltPattern})`);
   
   // Debug specific SKU tracing
   const debugSku = url.searchParams.get("debugSku");
@@ -1672,11 +1675,11 @@ async function handleDbFirstWheelResults(opts: {
     return true;
   });
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // P0 FIX: UTV/POWERSPORTS FILTER (2026-05-20)
   // CRITICAL: Filter out UTV/ATV/SxS wheels from automotive searches
   // These share 5x4.5 bolt pattern with classic muscle but are NOT automotive wheels
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tUtvFilter0 = Date.now();
   const utvFilterInput = filteredCandidates.map(c => ({
     ...c,
@@ -1716,10 +1719,10 @@ async function handleDbFirstWheelResults(opts: {
     debugTrace.push(`2. After basic filter: ${!!afterFilter}`);
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 2: Fitment validation (fast, no I/O)
   // NO AVAILABILITY FILTERING - return ALL fitment-valid wheels
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tFitment0 = Date.now();
   type FitmentValidCandidate = {
     candidate: typeof diversifiedCandidates[0];
@@ -1743,7 +1746,7 @@ async function handleDbFirstWheelResults(opts: {
     const v = validateWheel(wheelSpec, envelope);
     if (v.fitmentClass === "excluded") continue;
     
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // DIAMETER HANDLING (April 2026 Update)
     // 
     // Diameter is now a RANKING SIGNAL with a SAFETY FLOOR, not a hard filter.
@@ -1759,7 +1762,7 @@ async function handleDbFirstWheelResults(opts: {
     // - Cars: 15" absolute floor (smaller brakes)
     // 
     // MAXIMUM: We allow generous upsizing (OEM + 8) but cap at 28" sanity check
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     if (wheelSpec.diameter !== undefined) {
       const wheelDia = Number(wheelSpec.diameter);
       
@@ -1769,7 +1772,7 @@ async function handleDbFirstWheelResults(opts: {
       }
       
       // SAFETY FLOOR: Based on vehicle type, NOT trim-specific OEM diameter
-      // This allows customers to downsize from high-trim wheels (e.g., 22" Limited → 17" off-road)
+      // This allows customers to downsize from high-trim wheels (e.g., 22" Limited â†’ 17" off-road)
       // while still preventing brake clearance issues
       let safetyFloor: number;
       if (opts.vehicleType === "truck") {
@@ -1800,7 +1803,7 @@ async function handleDbFirstWheelResults(opts: {
       }
     }
     
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // ENVELOPE OFFSET FILTER (HD SRW/DRW Critical)
     // 
     // The envelope's allowedMinOffset/allowedMaxOffset define the SAFE offset
@@ -1814,7 +1817,7 @@ async function handleDbFirstWheelResults(opts: {
     // DRW wheels are a completely different category - they're designed for
     // multi-wheel positions and have offsets that SRW wheels NEVER have.
     // The SRW "dead zone" (-65mm to +65mm) should be EXCLUDED from DRW results.
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
     // DRW REQUIRES valid offset data - reject wheels with NULL/undefined offset
     // because we can't verify they're actually DRW wheels without it
@@ -1826,19 +1829,19 @@ async function handleDbFirstWheelResults(opts: {
     if (!hasUserOffsetFilter && wheelSpec.offset !== undefined) {
       const wheelOffset = Number(wheelSpec.offset);
       if (Number.isFinite(wheelOffset)) {
-        // ═══════════════════════════════════════════════════════════════════
+        // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
         // DRW SPECIAL CASE: Exclude SRW "dead zone" offsets
         // 
         // DRW templates have wide offset ranges (-270 to +240) to cover all
         // wheel positions. But this incorrectly includes SRW wheels.
         // 
         // True DRW wheels have either:
-        //   - High positive offset (≥+75mm) for front/inner positions
-        //   - Extreme negative offset (≤-150mm) for outer positions
+        //   - High positive offset (â‰¥+75mm) for front/inner positions
+        //   - Extreme negative offset (â‰¤-150mm) for outer positions
         // 
         // Wheels with offset between -75 and +75 are SRW-style and should
         // NOT appear in DRW results. This is the "dead zone" exclusion.
-        // ═══════════════════════════════════════════════════════════════════
+        // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
         if (opts.rearWheelConfig === "drw") {
           // DRW wheels have TWO valid offset ranges (NOT one continuous range):
           //   - Front/Inner positions: typically +76mm to +145mm
@@ -1887,23 +1890,23 @@ async function handleDbFirstWheelResults(opts: {
   
   // Log DRW dead-zone exclusions if any
   if (opts.rearWheelConfig === "drw" && drwDeadZoneExcluded > 0) {
-    console.log(`[fitment-search] 🚛 DRW FILTER: Excluded ${drwDeadZoneExcluded} wheels with SRW-style offsets (-65 to +65mm)`);
+    console.log(`[fitment-search] ðŸš› DRW FILTER: Excluded ${drwDeadZoneExcluded} wheels with SRW-style offsets (-65 to +65mm)`);
     timing.drwDeadZoneExcluded = drwDeadZoneExcluded;
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 3: Inventory lookup from SFTP feed (synced every 2 hours)
   // FILTER: Only show SKUs that exist in inventory (removes discontinued products)
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tAvail0 = Date.now();
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
   const inventoryData = await getInventoryBulk(allSkus);
   timing.cachedAvailabilityMs = Date.now() - tAvail0;
 
-  // ─── Wheel-1: inject synthetic inventory records (always) ─────────────────────
+  // â”€â”€â”€ Wheel-1: inject synthetic inventory records (always) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Wheel-1 SKUs are not in the WheelPros SFTP feed so getInventoryBulk returns
   // nothing for them. Without this injection they are killed at the inventory
-  // filter (NOT in cache → EXCLUDED). Real feed replaces this in Phase 3.
+  // filter (NOT in cache â†’ EXCLUDED). Real feed replaces this in Phase 3.
   if (wheel1Candidates.length > 0) {
     for (const c of wheel1Candidates) {
       if (!inventoryData.has(c.sku)) {
@@ -1916,6 +1919,25 @@ async function handleDbFirstWheelResults(opts: {
           totalQty:      20,     // in_stock tier (+40 pts) to compete with WheelPros
           mapPrice:      c._mapNum ?? null,
           msrp:          c._msrpNum ?? null,
+          cachedAt:      Date.now(),
+        } as CachedInventory);
+      }
+    }
+  }
+
+  // ── WSI Wholesale: inject inventory so SKUs pass the ORDERABLE_TYPES filter ──
+  if (wsiCandidates.length > 0) {
+    for (const c of wsiCandidates) {
+      if (!inventoryData.has(c.sku)) {
+        // WSI has real stock counts from nightly FTP sync.
+        // Use totalQty from wsi_wheels; fall back to 4 (enough for a set) if 0.
+        const qty = c._inventoryQty > 0 ? c._inventoryQty : 4;
+        inventoryData.set(c.sku, {
+          sku:           c.sku,
+          inventoryType: "ST",
+          totalQty:      qty,
+          mapPrice:      null,   // WSI has no MAP
+          msrp:          c._catalogPrice ?? null,
           cachedAt:      Date.now(),
         } as CachedInventory);
       }
@@ -1940,9 +1962,9 @@ async function handleDbFirstWheelResults(opts: {
   //
   // Filter logic (2026-07-19 FIX):
   // - MUST have at least 4 units total (customers buy sets of 4)
-  // - If in inventory cache with qty >= 4 → include
-  // - If in inventory cache with qty < 4 → exclude (can't fulfill a set)
-  // - If NOT in inventory cache → exclude (can't verify availability)
+  // - If in inventory cache with qty >= 4 â†’ include
+  // - If in inventory cache with qty < 4 â†’ exclude (can't fulfill a set)
+  // - If NOT in inventory cache â†’ exclude (can't verify availability)
   //
   // Previous bug: orderable types were included regardless of qty,
   // which showed wheels with only 1-3 units nationally as "in stock"
@@ -1955,7 +1977,7 @@ async function handleDbFirstWheelResults(opts: {
     // Not in inventory cache? Exclude - can't verify we have enough stock
     if (!inv) {
       if (debugSku && item.candidate.sku === debugSku) {
-        debugTrace.push(`4. Inventory filter: NOT in cache → EXCLUDED (can't verify stock)`);
+        debugTrace.push(`4. Inventory filter: NOT in cache â†’ EXCLUDED (can't verify stock)`);
       }
       return false;
     }
@@ -1973,16 +1995,16 @@ async function handleDbFirstWheelResults(opts: {
   timing.inventoryFilteredOut = preFilterCount - fitmentValidCandidates.length;
   
   if (debug && timing.inventoryFilteredOut > 0) {
-    console.log(`[fitment-search] 🗑️ Inventory filter removed ${timing.inventoryFilteredOut} SKUs (not in feed or qty < ${MIN_INVENTORY_QTY})`);
+    console.log(`[fitment-search] ðŸ—‘ï¸ Inventory filter removed ${timing.inventoryFilteredOut} SKUs (not in feed or qty < ${MIN_INVENTORY_QTY})`);
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 4: RANKING & SCORING (v2 - Merchandising Refinement)
   // Score each wheel for quality-based ordering without removing any results
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tRanking0 = Date.now();
   
-  // v3 ranking: TIER_1_BRANDS/TIER_2_BRANDS removed — replaced by fitmentClassScore
+  // v3 ranking: TIER_1_BRANDS/TIER_2_BRANDS removed â€” replaced by fitmentClassScore
   // (supplier-neutral: surefit=100, specfit=80, extended=55 from rankingEngine.ts)
   // PREMIUM_FINISHES imported from rankingEngine.ts
   
@@ -2028,11 +2050,11 @@ async function handleDbFirstWheelResults(opts: {
       availabilityLabel = "limited"; // Orderable but low/no stock
     }
     
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // SCORING v2 (rebalanced weights, normalized availability)
-    // ═══════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     
-    // ── SCORING v3 (supplier-neutral, 2026-06-24) ──────────────────────────
+    // â”€â”€ SCORING v3 (supplier-neutral, 2026-06-24) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // Weights from SCORE_WEIGHTS in rankingEngine.ts:
     //   availability 25% | fitmentClass 20% | fitmentQuality 15%
     //   visualQuality 15% | priceRange 10% | customerValue 10% | finishBoost 5%
@@ -2042,7 +2064,7 @@ async function handleDbFirstWheelResults(opts: {
     if (availabilityLabel === "in_stock") availabilityScore = 100;
     else if (availabilityLabel === "limited") availabilityScore = 75;
 
-    // 2. Fitment Class Score (0-100, weight: 20%)  ← replaces brandTierScore
+    // 2. Fitment Class Score (0-100, weight: 20%)  â† replaces brandTierScore
     // Supplier-neutral: surefit=100, specfit=80, extended=55
     // A Wheel-1 surefit scores identically to a WheelPros surefit.
     const fitmentClassScore = computeFitmentClassScore(v.fitmentClass);
@@ -2088,7 +2110,7 @@ async function handleDbFirstWheelResults(opts: {
     if (images.length >= 3) visualQualityScore = 100;
     else if (images.length >= 1) visualQualityScore = 75;
 
-    // 5. Price Range Score (0-100, weight: 10%)  ← reduced from 15%
+    // 5. Price Range Score (0-100, weight: 10%)  â† reduced from 15%
     const price = getSafeWheelPrice(c);
     let priceRangeScore = 50;
     let priceTier: "value" | "mid" | "premium" = "mid";
@@ -2105,7 +2127,7 @@ async function handleDbFirstWheelResults(opts: {
       }
     }
 
-    // 6. Customer Value Score (0-100, weight: 10%)  ← NEW in v3
+    // 6. Customer Value Score (0-100, weight: 10%)  â† NEW in v3
     // Supplier-neutral: checks _freeShipping and _inventoryQty properties
     const customerValueScore = computeCustomerValueScore(c as Record<string, unknown>);
 
@@ -2118,7 +2140,7 @@ async function handleDbFirstWheelResults(opts: {
       if (combinedDesc.includes(finish)) { finishBoost = 10; break; }
     }
 
-    // Weighted total (v3 formula — weights from SCORE_WEIGHTS)
+    // Weighted total (v3 formula â€” weights from SCORE_WEIGHTS)
     const score = (
       availabilityScore   * SCORE_WEIGHTS.availability   +
       fitmentClassScore   * SCORE_WEIGHTS.fitmentClass   +
@@ -2187,30 +2209,30 @@ async function handleDbFirstWheelResults(opts: {
     });
   }
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 4b: MERCHANDISING POST-PROCESSING
   // 1. Model-level deduping for top slots
   // 2. Brand concentration control
   // 3. Price mix optimization
   // 4. Consecutive brand limit
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   
   // Skip merchandising rules when user explicitly sorts by price (preserve exact price order)
   const isPriceSorted = sortParam === "price_asc" || sortParam === "price-low-to-high" ||
                         sortParam === "price_desc" || sortParam === "price-high-to-low";
   // v3: replaced applyMerchandisingRules with supplier-neutral version from rankingEngine.ts
-  // → adds Rule 5 (supplier diversity cap) on top of existing rules 1-4
+  // â†’ adds Rule 5 (supplier diversity cap) on top of existing rules 1-4
   let rankedCandidates = isPriceSorted
     ? scoredCandidates
     : applySupplierNeutralMerchandising(scoredCandidates);
   
   timing.rankingMs = Date.now() - tRanking0;
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 4c: PACKAGE PRIORITY SORTING (Optional Overlay)
   // Apply ONLY when: searchType === 'package' OR buildType === 'lifted'
   // Prioritizes: WheelPros + image + stock > image + stock > WheelPros + stock > rest
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const packageParam = url.searchParams.get("package");
   const buildTypeParam = url.searchParams.get("buildType");
   const searchTypeParam = url.searchParams.get("searchType");
@@ -2237,7 +2259,7 @@ async function handleDbFirstWheelResults(opts: {
       const aPrice = getSafeWheelPrice(a.candidate) || Infinity;
       const bPrice = getSafeWheelPrice(b.candidate) || Infinity;
       
-      // v3: package priority is supplier-neutral — image + stock matters, not supplier name
+      // v3: package priority is supplier-neutral â€” image + stock matters, not supplier name
       // Tier 1: has image + has stock (any supplier)
       // Tier 2: has stock only (any supplier)
       // Tier 3: everything else
@@ -2251,7 +2273,7 @@ async function handleDbFirstWheelResults(opts: {
       const aTier = getTier(aHasImage, aStock);
       const bTier = getTier(bHasImage, bStock);
       
-      // Sort by tier first (ascending: 1 → 4)
+      // Sort by tier first (ascending: 1 â†’ 4)
       if (aTier !== bTier) {
         return aTier - bTier;
       }
@@ -2263,14 +2285,14 @@ async function handleDbFirstWheelResults(opts: {
     timing.packagePriorityMs = Date.now() - tPkgPriority0;
     packagePriorityApplied = true;
     
-    console.log(`[fitment-search] 📦 PACKAGE PRIORITY applied: reordered ${rankedCandidates.length} results`);
+    console.log(`[fitment-search] ðŸ“¦ PACKAGE PRIORITY applied: reordered ${rankedCandidates.length} results`);
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 4d: STAGGERED PAIRING
   // For staggered fitments, find wheels that exist in BOTH front and rear widths
   // Mark them with pair.staggered = true so frontend can filter to complete sets
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tStaggeredPairing0 = Date.now();
   let staggeredPairsFound = 0;
   
@@ -2281,7 +2303,7 @@ async function handleDbFirstWheelResults(opts: {
     const frontDiameter = opts.staggeredInfo.frontSpec.diameter;
     const rearDiameter = opts.staggeredInfo.rearSpec.diameter;
     
-    console.log(`[fitment-search] 🔄 STAGGERED PAIRING: looking for front ${frontDiameter}"×${frontWidth}" + rear ${rearDiameter}"×${rearWidth}"`);
+    console.log(`[fitment-search] ðŸ”„ STAGGERED PAIRING: looking for front ${frontDiameter}"Ã—${frontWidth}" + rear ${rearDiameter}"Ã—${rearWidth}"`);
     
     // Group candidates by style (brand + model)
     const styleGroups = new Map<string, typeof rankedCandidates>();
@@ -2307,11 +2329,11 @@ async function handleDbFirstWheelResults(opts: {
     }> = [];
     
     for (const [styleKey, candidates] of styleGroups) {
-      // ═══════════════════════════════════════════════════════════════════════════
+      // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
       // FLEXIBLE STAGGERED PAIRING WITH PLUS-SIZING
       // Support plus-sizes: 20/20, 20/22, 22/22 setups in addition to OEM 19/20
       // Group by diameter first, then find width pairs at each diameter level
-      // ═══════════════════════════════════════════════════════════════════════════
+      // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
       
       // Group candidates by diameter, then by width
       const byDiameterAndWidth = new Map<number, Map<number, typeof candidates[0][]>>();
@@ -2476,7 +2498,7 @@ async function handleDbFirstWheelResults(opts: {
     timing.staggeredStylesChecked = styleGroups.size;
     timing.staggeredPairsFound = staggeredPairsFound;
     
-    console.log(`[fitment-search] ✅ STAGGERED PAIRING complete: ${staggeredPairsFound} pairs from ${styleGroups.size} styles`);
+    console.log(`[fitment-search] âœ… STAGGERED PAIRING complete: ${staggeredPairsFound} pairs from ${styleGroups.size} styles`);
     
     // Attach pair info to ranked candidates (so it flows into results)
     for (const pair of staggeredPairs) {
@@ -2502,9 +2524,9 @@ async function handleDbFirstWheelResults(opts: {
     }
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 5: Build paginated results from ranked candidates
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const totalCount = rankedCandidates.length;
   const startIdx = (requestedPage - 1) * requestedPageSize;
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
@@ -2521,7 +2543,7 @@ async function handleDbFirstWheelResults(opts: {
     debugTrace.push(`6. In current page (${startIdx+1}-${startIdx+requestedPageSize}): ${!!inPage}`);
   }
 
-  // Build a lookup map for staggered pair specs (SKU → wheel specs)
+  // Build a lookup map for staggered pair specs (SKU â†’ wheel specs)
   // This lets us populate BOTH front and rear specs on each paired wheel
   const wheelSpecsBySku = new Map<string, { diameter: number; width: number; offset: number }>();
   for (const item of rankedCandidates) {
@@ -2574,6 +2596,11 @@ async function handleDbFirstWheelResults(opts: {
                     dealerCost: (c as Wheel1Candidate)._dealerCost ?? null,
                     diameter:   Number(c.diameter) || 20,
                   })
+                : c._supplier === 'wsi'
+                ? computeWSISellPrice({
+                    dealerCost:   (c as WSICandidate)._dealerCost,
+                    catalogPrice: (c as WSICandidate)._catalogPrice,
+                  })
                 : getSafeWheelPrice(c, inv)
             ),
             currencyCode: "USD",
@@ -2613,10 +2640,10 @@ async function handleDbFirstWheelResults(opts: {
             }
           : {}),
       },
-      // ═══════════════════════════════════════════════════════════════════════
+      // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
       // FITMENT GUIDANCE (2026-04-07)
       // Provides user-friendly labels without hiding/blocking results
-      // ═══════════════════════════════════════════════════════════════════════
+      // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
       fitmentGuidance: (() => {
         const wheelDia = Number(c.diameter) || 0;
         const wheelWidth = Number(c.width) || 0;
@@ -2696,11 +2723,14 @@ async function handleDbFirstWheelResults(opts: {
           },
         };
       })() : undefined,
-      // ─── Supplier tag (Wheel-1 preview) ────────────────────────────────────
+      // â”€â”€â”€ Supplier tag (Wheel-1 preview) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       ...(c._supplier === 'wheel1' ? {
         supplier: 'wheel1',
         freeShipping: true,   // shipping baked into price; display on SRP card
         w1Details: (c as Wheel1Candidate)._w1,
+      } : c._supplier === 'wsi' ? {
+        supplier: 'wsi',
+        freeShipping: false,
       } : {
         supplier: 'wheelpros',
         freeShipping: false,
@@ -2724,11 +2754,11 @@ async function handleDbFirstWheelResults(opts: {
     },
   })));
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // ADD FITMENT CATEGORIES TO SIZE FACETS (April 2026)
   // Categorize sizes as "recommended" (within safe envelope) or "extended"
   // This allows UI to show extended sizes in a separate section
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   
   // Calculate safe/recommended range for trucks vs cars
   const isTruckOrSuv = opts.vehicleType === "truck" || opts.vehicleType === "suv" ||
@@ -2756,7 +2786,7 @@ async function handleDbFirstWheelResults(opts: {
         isOem,
         // "recommended" = within safe envelope, "extended" = outside but still compatible
         fitmentCategory: isRecommended ? "recommended" : "extended",
-        label: isOem ? `${bucket.value}" ★` : `${bucket.value}"`,
+        label: isOem ? `${bucket.value}" â˜…` : `${bucket.value}"`,
       };
     });
     
@@ -3013,13 +3043,13 @@ async function handleLegacyPath(
   const db = getPool();
   await ensureFitmentTables(db);
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // 2026-06-13: UNIVERSAL FITMENT RESOLVER (Single Source of Truth)
   // All model normalization, aliases, and DB lookups are now encapsulated
   // in resolveUniversalFitment(). No more direct getModelVariants/buildFitmentProfile calls.
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   
-  console.log(`[fitment-search] ══════════════════════════════════════════════════`);
+  console.log(`[fitment-search] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•`);
   console.log(`[fitment-search] LEGACY PATH - Using resolveUniversalFitment`);
   console.log(`[fitment-search] RAW INPUT: year=${year} make=${make} model=${model} trim=${displayTrimParam || "(none)"}`);
   
@@ -3039,7 +3069,7 @@ async function handleLegacyPath(
   console.log(`[fitment-search] BOLT PATTERN: ${universalResult.boltPattern} | CENTER BORE: ${universalResult.centerBore}mm`);
   console.log(`[fitment-search] WHEEL RANGE: ${universalResult.wheelDiameterRange ? `${universalResult.wheelDiameterRange.min}"-${universalResult.wheelDiameterRange.max}"` : "(none)"}`);
   console.log(`[fitment-search] OFFSET RANGE: ${universalResult.offsetRange ? `${universalResult.offsetRange.min}mm-${universalResult.offsetRange.max}mm` : "(none)"}`);
-  console.log(`[fitment-search] ══════════════════════════════════════════════════`);
+  console.log(`[fitment-search] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•`);
   
   // Track display trim and auto-selection
   let displayTrim = universalResult.trim || displayTrimParam || modificationId || null;
@@ -3122,10 +3152,10 @@ async function handleLegacyPath(
     source: universalResult.source,
   };
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // DB-FIRST: No external API fallback. If profile not in DB, return user-friendly error.
   // Wheel-Size API is BLOCKED in this path. Use admin/fitment for manual import.
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   if (!profile) {
     console.log(`[fitment-search] DB-FIRST: No profile for ${year} ${make} ${model} lookupKey=${lookupKey || "(none)"} - NOT calling external API`);
     
@@ -3165,16 +3195,16 @@ async function handleLegacyPath(
 
   const profileMs = Date.now() - t0;
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // QUALITY TIER - Already included in profile from resolveUniversalFitment
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   console.log(`[fitment-search] Using qualityTier="${profile.qualityTier}" from universalFitmentResolver`);
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // NOTE: Fitment rules override is now applied INSIDE resolveUniversalFitment
   // via applyOverrides(). This section is kept for backward compatibility but
   // should not trigger since the resolver already handles these cases.
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const ruleOverride = getFitmentFromRules({
     year: Number(year),
     make,
@@ -3185,8 +3215,8 @@ async function handleLegacyPath(
   });
   
   if (ruleOverride && ruleOverride.boltPattern && ruleOverride.boltPattern !== profile.boltPattern) {
-    console.log(`[fitment-search] 🔧 REDUNDANT RULE OVERRIDE (resolver should have handled this): ${year} ${make} ${model}`);
-    console.log(`  Bolt pattern: ${profile.boltPattern} → ${ruleOverride.boltPattern}`);
+    console.log(`[fitment-search] ðŸ”§ REDUNDANT RULE OVERRIDE (resolver should have handled this): ${year} ${make} ${model}`);
+    console.log(`  Bolt pattern: ${profile.boltPattern} â†’ ${ruleOverride.boltPattern}`);
     console.log(`  Reason: ${ruleOverride.notes || "Fitment rule match"}`);
     
     // Override the bolt pattern in the profile (should be redundant)
@@ -3198,10 +3228,10 @@ async function handleLegacyPath(
     }
   }
 
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // SAFETY CHECK: Calculate confidence on profile
   // Use universalResult.confidence which is already calculated
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   
   const legacyConfidenceInput = {
     boltPattern: profile.boltPattern,
@@ -3359,7 +3389,7 @@ function buildFacets(wheels: any[]) {
   const offsets = new Map<string, number>();
   const boltPatterns = new Map<string, number>();
 
-  const normalizeBp = (bp: string) => String(bp || "").toLowerCase().replace(/[x×-]/g, "x").trim();
+  const normalizeBp = (bp: string) => String(bp || "").toLowerCase().replace(/[xÃ—-]/g, "x").trim();
   const parseBps = (bp: string) => {
     const raw = String(bp || "").trim();
     if (!raw) return [] as string[];
