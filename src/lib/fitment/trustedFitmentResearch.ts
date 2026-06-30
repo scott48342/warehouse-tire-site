@@ -486,15 +486,21 @@ function buildAftermarketProfile(fitment: ResearchedFitment): ResearchedFitment[
   const oemOffsets = fitment.trims
     ?.map(t => t.offset)
     .filter((o): o is number => o !== undefined) || [];
-  const offsetMin = oemOffsets.length > 0 ? Math.min(...oemOffsets) - 5 : 35;
-  const offsetMax = oemOffsets.length > 0 ? Math.max(...oemOffsets) + 5 : 50;
+  // 2026-06-30: Do NOT fill generic offset range when AI finds no verified data.
+  // Generic 35-50mm is indistinguishable from real data in the DB and will
+  // cause the geometry validator to silently accept all offsets for that vehicle.
+  // Null forces the missing-data gate in fitment-search and packages.
+  const hasVerifiedOffset = oemOffsets.length > 0;
+  const offsetMin = hasVerifiedOffset ? Math.min(...oemOffsets) - 5 : null;
+  const offsetMax = hasVerifiedOffset ? Math.max(...oemOffsets) + 5 : null;
   
   return {
     safeUpgradeDiameters: safeUpgrades,
     wheelHintsByDiameter: safeUpgrades.map(diameter => ({
       diameter,
       widths: [avgWidth, avgWidth + 0.5, avgWidth + 1].filter(w => w <= 10),
-      offsetRange: { min: offsetMin, max: offsetMax },
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      offsetRange: (offsetMin !== null && offsetMax !== null ? { min: offsetMin, max: offsetMax } : null) as any,
     })),
     plusSizeTireOptions: safeUpgrades.flatMap(diameter => {
       // Generate plus-size tire options based on diameter

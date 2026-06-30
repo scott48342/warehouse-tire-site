@@ -199,7 +199,12 @@ export async function GET(request: NextRequest) {
       tireSizes: result.tireSizes,
       wheelDiameters: result.wheelDiameters,
       wheelWidths: result.wheelWidths,
+      // 2026-06-30: Offset ranges from fallback are NOT verified OEM data.
+      // Jake and other consumers must treat this as informational only,
+      // not as a basis for geometry validation. Verified data comes from
+      // the fitment-search endpoint with the geometry validator applied.
       offsetRange: result.offsetRange,
+      // offsetRangeVerified: false — always unverified for fallback (added to messaging)
       platform: result.platform,
       sharedWith: result.sharedWith,
     },
@@ -211,7 +216,7 @@ export async function GET(request: NextRequest) {
         diameter: hint.diameter,
         widths: hint.widths,
         offsetRange: hint.offsetRange,
-        notes: hint.notes,
+        notes: hint.notes ? `[UNVERIFIED OFFSET] ${hint.notes}` : "[UNVERIFIED OFFSET] Offset range is AI-estimated, not verified OEM data",
       })),
       plusSizeTires: result.plusSizeTires?.map(tire => ({
         size: tire.size,

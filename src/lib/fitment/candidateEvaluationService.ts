@@ -629,7 +629,8 @@ function evaluateWheel(
     width: wheel.width,
     offset: wheel.offset,
     boltPattern: wheel.boltPattern,
-    centerBore: wheel.centerBore || 0,
+    // 2026-06-30: Do not coerce null centerbore to 0; 0 bypasses bore validation.
+    centerBore: (wheel.centerBore ?? 0) as number,
     score: totalScore,
     confidence,
     matchFactors,

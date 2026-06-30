@@ -22,6 +22,8 @@ function fitmentWith(partial: Partial<ParsedFitment>): ParsedFitment {
     boltPattern: "5x110",
     centerBore: 65.1,
     offsetRange: { min: 35, max: 52 },
+    // oemOffset required as of 2026-06-30 geometry validator integration
+    oemOffset: { missing: false, offset_mm: 43, width_in: 7.5, source: "db_range_midpoint" } as import("@/lib/fitment/geometryValidator").OemOffsetResolved,
     oemDiameters: [17, 18, 19],
     oemWidths: [7, 8],
     oemTireSizes: [],

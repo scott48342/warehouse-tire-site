@@ -1445,23 +1445,56 @@ async function handleDbProfilePath(
   });
 
   // Per-axle OEM offset for staggered vehicles (front/rear validated independently)
-  const frontOemOffsetResult: OemOffsetResult = staggeredInfo?.isStaggered && staggeredInfo.frontSpec
+  // For staggered-capable vehicles, require per-axle offset data (fail closed if missing).
+  // Non-staggered vehicles fall back to DB midpoint (axle not specified).
+  const isKnownStaggered = staggeredInfo?.isStaggered && isStaggeredCapableVehicle(make, model);
+
+  const frontOemOffsetResult: OemOffsetResult = isKnownStaggered && staggeredInfo?.frontSpec
     ? resolveOemOffset({
         offsetMinMm: dbProfile.offsetMinMm,
         offsetMaxMm: dbProfile.offsetMaxMm,
         oemWheelSizes: parsedWheelSizes,
         axle: "front",
+        requireAxleSpecific: true,   // staggered: must have per-axle data
       })
     : oemOffsetResult;
 
-  const rearOemOffsetResult: OemOffsetResult = staggeredInfo?.isStaggered && staggeredInfo.rearSpec
+  const rearOemOffsetResult: OemOffsetResult = isKnownStaggered && staggeredInfo?.rearSpec
     ? resolveOemOffset({
         offsetMinMm: dbProfile.offsetMinMm,
         offsetMaxMm: dbProfile.offsetMaxMm,
         oemWheelSizes: parsedWheelSizes,
         axle: "rear",
+        requireAxleSpecific: true,   // staggered: must have per-axle data
       })
     : oemOffsetResult;
+
+  // ========================================================================
+  // CENTER BORE NULL CHECK (2026-06-30)
+  // Null centerbore must not default to 0 — 0 passes every wheel's bore check.
+  // Fail closed with a clear missing-data response.
+  // ========================================================================
+  if (!dbProfile.centerBoreMm || Number(dbProfile.centerBoreMm) <= 0) {
+    console.warn(`[fitment-search] MISSING CENTER BORE: ${year} ${make} ${model} mod=${canonicalModificationId || "(none)"}`);
+    logUnresolvedFitment({
+      year, make, model,
+      trim: dbProfile.displayTrim || undefined,
+      searchType: "wheel", source: "api",
+      path: url.pathname + url.search,
+      modificationId: canonicalModificationId || undefined,
+      resolutionAttempts: ["missing_center_bore"],
+    }).catch(() => {});
+    return NextResponse.json({
+      results: [], totalCount: 0,
+      fitment: {
+        missingCenterBore: true,
+        message: "Wheel recommendations require verified hub bore data for this vehicle.",
+        vehicle: { year: Number(year), make, model, trim: dbProfile.displayTrim || null },
+        resolutionPath,
+      },
+      timing: { totalMs: Date.now() - t0 },
+    });
+  }
 
   // Missing OEM offset → no customer-facing wheel recommendations
   if (oemOffsetResult.missing) {
@@ -3433,7 +3466,9 @@ async function handleLegacyPath(
   // Note: centerBore is required by OEMSpecs - use a safe default if missing
   const oemSpecs: OEMSpecs = {
     boltPattern: profile.boltPattern || "",
-    centerBore: profile.centerBore || 72.6,  // Default to common bore size if missing
+    // 2026-06-30: null centerbore must NOT become 72.6 fallback — fail closed instead.
+    // The centerbore null check below will intercept missing-bore vehicles before this.
+    centerBore: profile.centerBore || 0,  // 0 will trigger the missing-bore check
     studHoles: profile.fitment.studHoles || undefined,
     pcd: profile.fitment.pcd || undefined,
     wheelSpecs: profile.wheelSpecs.map((ws: any) => ({
@@ -3485,6 +3520,71 @@ async function handleLegacyPath(
     source: "universal" as string,  // Updated source to reflect new resolver
   };
 
+  // ========================================================================
+  // LEGACY PATH: CENTERBORE NULL CHECK + GEOMETRY INJECTION (2026-06-30)
+  // Both must be resolved before proceeding to wheel search.
+  // ========================================================================
+  if (!profile.centerBore || Number(profile.centerBore) <= 0) {
+    console.warn(`[fitment-search] LEGACY MISSING CENTER BORE: ${year} ${make} ${model}`);
+    logUnresolvedFitment({
+      year, make, model, searchType: "wheel", source: "api",
+      path: url.pathname + url.search,
+      resolutionAttempts: ["legacyFallback_missing_center_bore"],
+    }).catch(() => {});
+    return NextResponse.json({
+      results: [], totalCount: 0,
+      fitment: {
+        missingCenterBore: true,
+        message: "Wheel recommendations require verified hub bore data for this vehicle.",
+        vehicle: { year: Number(year), make, model },
+        resolutionPath: "legacyFallback",
+      },
+      timing: { totalMs: Date.now() - t0 },
+    });
+  }
+
+  // Resolve OEM offset for legacy path geometry
+  const legacyGeoVehicleClass: VehicleClass =
+    vehicleType === "truck" ? "truck" :
+    vehicleType === "suv"   ? "suv"   :
+    (profile.boltPattern?.startsWith("6x") || profile.boltPattern?.startsWith("8x")) ? "truck" :
+    "car";
+  const legacyGeoProfile = mapModeToProfile(mode);
+  const legacyOemWheelSizes = profile.wheelSpecs.map((ws: any) => ({
+    diameter: Number(ws.rimDiameter), width: Number(ws.rimWidth),
+    offset: ws.offset ?? null, axle: ws.axle || "both",
+  }));
+  const legacyOemOffsetResult = resolveOemOffset({
+    offsetMinMm: universalResult.offsetRange?.min ?? null,
+    offsetMaxMm: universalResult.offsetRange?.max ?? null,
+    oemWheelSizes: legacyOemWheelSizes,
+  });
+  if (legacyOemOffsetResult.missing) {
+    console.warn(`[fitment-search] LEGACY MISSING OEM OFFSET: ${year} ${make} ${model}`);
+    logUnresolvedFitment({
+      year, make, model, searchType: "wheel", source: "api",
+      path: url.pathname + url.search,
+      resolutionAttempts: ["legacyFallback_missing_oem_offset"],
+    }).catch(() => {});
+    return NextResponse.json({
+      results: [], totalCount: 0,
+      fitment: {
+        missingOemOffset: true,
+        message: "Wheel recommendations require verified OEM offset data for this vehicle.",
+        vehicle: { year: Number(year), make, model },
+        resolutionPath: "legacyFallback",
+      },
+      timing: { totalMs: Date.now() - t0 },
+    });
+  }
+  const legacyIsKnownStaggered = legacyStaggeredInfo.isStaggered && isStaggeredCapableVehicle(make, model);
+  const legacyFrontOem: OemOffsetResult = legacyIsKnownStaggered && legacyStaggeredInfo.frontSpec
+    ? resolveOemOffset({ offsetMinMm: universalResult.offsetRange?.min ?? null, offsetMaxMm: universalResult.offsetRange?.max ?? null, oemWheelSizes: legacyOemWheelSizes, axle: "front", requireAxleSpecific: true })
+    : legacyOemOffsetResult;
+  const legacyRearOem: OemOffsetResult = legacyIsKnownStaggered && legacyStaggeredInfo.rearSpec
+    ? resolveOemOffset({ offsetMinMm: universalResult.offsetRange?.min ?? null, offsetMaxMm: universalResult.offsetRange?.max ?? null, oemWheelSizes: legacyOemWheelSizes, axle: "rear", requireAxleSpecific: true })
+    : legacyOemOffsetResult;
+
   return await handleDbFirstWheelResults({
     url,
     year,
@@ -3504,6 +3604,12 @@ async function handleLegacyPath(
     confidenceResult,
     staggeredInfo: legacyStaggeredInfo,
     dbProfileForResponse: legacyDbProfile,
+    // Geometry validation (unified with main path)
+    oemOffsetResult: legacyOemOffsetResult,
+    frontOemOffsetResult: legacyFrontOem,
+    rearOemOffsetResult: legacyRearOem,
+    geoVehicleClass: legacyGeoVehicleClass,
+    geoProfile: legacyGeoProfile,
   });
 }
 

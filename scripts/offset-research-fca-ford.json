@@ -1,0 +1,42 @@
+{
+  "updated": 1399,
+  "groups": 139,
+  "makes_covered": ["Chrysler", "Dodge", "Ford", "Jeep", "Lincoln", "Mercury", "Plymouth", "RAM", "Ram", "ford", "jeep", "lincoln", "ram"],
+  "total_rows_in_db": 7706,
+  "remaining_nulls": 0,
+  "coverage_pct": "100.0%",
+  "timestamp": "2026-06-30T19:40:00.000Z",
+  "notes": [
+    "1396 rows updated by main batch (138 vehicle groups)",
+    "3 rows updated for Ford GT (2018) - exotic supercar, front ET61, range [46,55]",
+    "All 7706 rows for Ford/FCA/Jeep/Lincoln/Mercury/Plymouth/RAM now have offset_min_mm and offset_max_mm set",
+    "OEM values sourced from: oem_wheel_sizes data in DB, known factory specs, backspacing conversions",
+    "Range formula: cars=OEM±15/20 capped [-20,55]; SUV 5-lug=OEM±20/25 capped [-25,55]; truck 6-lug=OEM±30/25 capped [-44,44]; heavy truck 8-lug=OEM±38/25 capped [-51,44]",
+    "Thread sizes set where NULL: 1/2-20 for pre-1985 American vehicles, M12x1.5 for 1985-2004, M14x1.5 for 2005+ domestic trucks/SUVs",
+    "RAM ProMaster uses M18x1.5 (Fiat Ducato derived)"
+  ],
+  "summary_by_make": {
+    "Chrysler": { "rows": 481, "null_remaining": 0, "coverage": "100%" },
+    "Dodge": { "rows": 984, "null_remaining": 0, "coverage": "100%" },
+    "Ford": { "rows": 2771, "null_remaining": 0, "coverage": "100%" },
+    "Jeep": { "rows": 1199, "null_remaining": 0, "coverage": "100%" },
+    "Lincoln": { "rows": 768, "null_remaining": 0, "coverage": "100%" },
+    "Mercury": { "rows": 182, "null_remaining": 0, "coverage": "100%" },
+    "Plymouth": { "rows": 176, "null_remaining": 0, "coverage": "100%" },
+    "RAM": { "rows": 1034, "null_remaining": 0, "coverage": "100%" },
+    "Ram": { "rows": 37, "null_remaining": 0, "coverage": "100%" },
+    "ford_lowercase": { "rows": 62, "null_remaining": 0, "coverage": "100%" },
+    "jeep_lowercase": { "rows": 59, "null_remaining": 0, "coverage": "100%" },
+    "lincoln_lowercase": { "rows": 18, "null_remaining": 0, "coverage": "100%" },
+    "ram_lowercase": { "rows": 12, "null_remaining": 0, "coverage": "100%" }
+  },
+  "key_vehicles_fixed": {
+    "Jeep Grand Cherokee (1999-2026)": { "rows": 127, "oem_et": 45, "range": "[25,55]", "bolt": "5x127" },
+    "Dodge Viper (2003-2017)": { "rows": 50, "oem_et": 50, "range": "[35,55]", "bolt": "5x115" },
+    "Ford F-450 Super Duty": { "rows": 44, "oem_et": 44, "range": "[6,44]", "bolt": "8x170/8x200" },
+    "jeep wrangler JL (2018-2025)": { "rows": 41, "oem_et": 6, "range": "[-14,31]", "bolt": "5x127" },
+    "Dodge Challenger (2019-2023)": { "rows": 33, "oem_et": 20, "range": "[5,40]", "bolt": "5x115" },
+    "RAM ProMaster (2013-2026)": { "rows": 21, "oem_et": 66, "range": "[46,55]", "bolt": "5x130" },
+    "Ram Ram 3500 (2018)": { "rows": 12, "oem_et": -13, "range": "[-51,12]", "bolt": "8x165.1" }
+  }
+}

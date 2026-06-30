@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle, searchWheelsByStyleFuzzy } from "@/lib/techfeed/wheels";
+import { resolveOemOffset, computeWheelGeometry, type OemOffsetResult } from "@/lib/fitment/geometryValidator";
+import { getFitmentProfileWithHdSupport } from "@/lib/fitment-db/profileService";
+import { parseWheelSizes } from "@/lib/fitment-db/profileService";
 
 export const runtime = "nodejs";
 
@@ -48,8 +51,30 @@ export async function GET(req: Request) {
     const vehicleBoltPattern = fitmentData?.fitment?.boltPattern || fitmentData?.boltPattern || "";
 
     if (!vehicleBoltPattern) {
-      // No vehicle bolt pattern data - can't verify, let them proceed
-      return NextResponse.json({ fits: true, reason: "no_vehicle_bolt_pattern" });
+      // No vehicle bolt pattern data - fail closed per policy
+      return NextResponse.json({ fits: false, reason: "no_vehicle_bolt_pattern", missingData: true });
+    }
+
+    // 2026-06-30: Also resolve geometry basis from the fitment DB
+    // Only check geometry when a specific SKU is provided (not style-only checks)
+    let checkOemOffset: OemOffsetResult | null = null;
+    if (sku || (year && make && model)) {
+      try {
+        const profileResult = await getFitmentProfileWithHdSupport(
+          Number(year ?? 0), make ?? "", model ?? "", "", {}
+        );
+        if (profileResult.profile?.boltPattern) {
+          const rawSizes = parseWheelSizes(profileResult.profile.oemWheelSizes ?? []) as Array<{diameter?:number;width?:number;offset?:number|null;axle?:string}>;
+          const sizes = rawSizes.map(s => ({ diameter: s.diameter ?? 0, width: s.width ?? 0, offset: s.offset ?? null, axle: (s.axle ?? 'both') as 'front'|'rear'|'both' }));
+          checkOemOffset = resolveOemOffset({
+            offsetMinMm: profileResult.profile.offsetMinMm,
+            offsetMaxMm: profileResult.profile.offsetMaxMm,
+            oemWheelSizes: sizes,
+          });
+        }
+      } catch {
+        // geometry check is best-effort; bolt pattern check still runs
+      }
     }
 
     // Normalize bolt patterns for comparison
@@ -89,12 +114,30 @@ export async function GET(req: Request) {
       // Quick check: does THIS specific SKU fit?
       const thisBp = wheel.bolt_pattern_metric || wheel.bolt_pattern_standard || "";
       if (thisBp && checkMatch(thisBp)) {
+        // Bolt pattern matches; also run geometry check when OEM basis available
+        let geometryPass = true;
+        let geometryNote: string | undefined;
+        if (checkOemOffset && !checkOemOffset.missing) {
+          const ww = Number(wheel.width) || checkOemOffset.width_in;
+          const wo = Number(wheel.offset);
+          if (!isNaN(wo)) {
+            const geo = computeWheelGeometry(
+              { width_in: ww, offset_mm: wo },
+              { width_in: checkOemOffset.width_in, offset_mm: checkOemOffset.offset_mm },
+            );
+            if (geo.exceedsSafetyCeiling || !geo.passesAggressive) {
+              geometryPass = false;
+              geometryNote = `Geometry unsafe: delta_backspacing=${geo.delta_backspacing_mm.toFixed(1)}mm`;
+            }
+          }
+        }
         return NextResponse.json({
-          fits: true,
+          fits: geometryPass,
           matchingSku: sku,
           vehicleBoltPattern,
           wheelBoltPattern: thisBp,
-          reason: "exact_sku_match",
+          reason: geometryPass ? "exact_sku_match" : "geometry_rejected",
+          geometryNote,
         });
       }
     }

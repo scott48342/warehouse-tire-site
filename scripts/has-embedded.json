@@ -1,0 +1,1411 @@
+[
+  {
+    "make": "Audi",
+    "model": "100",
+    "year_from": 1990,
+    "year_to": 1990,
+    "cnt": "1",
+    "bolt_pattern": "4x108",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 45, \"diameter\": 14}, {\"width\": 6, \"offset\": 45, \"diameter\": 15}]",
+    "tires": "[\"195/65R15\", \"205/60R15\"]",
+    "extractedOffsets": [
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "100",
+    "year_from": 1991,
+    "year_to": 1994,
+    "cnt": "4",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 45, \"diameter\": 14}, {\"width\": 6, \"offset\": 45, \"diameter\": 15}]",
+    "tires": "[\"195/65R15\", \"205/60R15\"]",
+    "extractedOffsets": [
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "200",
+    "year_from": 1990,
+    "year_to": 1991,
+    "cnt": "2",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7, \"offset\": 35, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7.5, \"offset\": 35, \"diameter\": 15}]",
+    "tires": "[\"195/65R15\", \"205/60R15\", \"215/60R15\"]",
+    "extractedOffsets": [
+      35,
+      35
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "80",
+    "year_from": 1990,
+    "year_to": 1996,
+    "cnt": "7",
+    "bolt_pattern": "4x108",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 45, \"diameter\": 14}, {\"width\": 6, \"offset\": 45, \"diameter\": 15}]",
+    "tires": "[\"185/65R14\", \"195/60R15\", \"195/65R15\"]",
+    "extractedOffsets": [
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "90",
+    "year_from": 1990,
+    "year_to": 1995,
+    "cnt": "6",
+    "bolt_pattern": "4x108",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 45, \"diameter\": 14}, {\"width\": 6, \"offset\": 45, \"diameter\": 15}]",
+    "tires": "[\"185/65R14\", \"195/60R15\", \"205/60R15\"]",
+    "extractedOffsets": [
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "year_from": 1995,
+    "year_to": 1997,
+    "cnt": "3",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 6.5, \"offset\": 45, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7, \"offset\": 45, \"diameter\": 16}]",
+    "tires": "[\"195/65R15\", \"205/55R16\"]",
+    "extractedOffsets": [
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "A6 e-tron",
+    "year_from": 2025,
+    "year_to": 2025,
+    "cnt": "1",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.5",
+    "wheels": "[{\"axle\": \"both\", \"width\": 9, \"offset\": 33, \"isStock\": true, \"diameter\": 20}, {\"axle\": \"both\", \"width\": 9, \"offset\": 33, \"isStock\": true, \"diameter\": 20}]",
+    "tires": "[\"255/45R20\"]",
+    "extractedOffsets": [
+      33,
+      33
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "year_from": 1997,
+    "year_to": 1999,
+    "cnt": "3",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7, \"offset\": 45, \"diameter\": 16}, {\"axle\": \"both\", \"width\": 7.5, \"offset\": 45, \"diameter\": 17}, {\"axle\": \"both\", \"width\": 8, \"offset\": 45, \"diameter\": 18}]",
+    "tires": "[\"225/60R16\", \"225/55R17\", \"245/45R18\"]",
+    "extractedOffsets": [
+      45,
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "Cabriolet",
+    "year_from": 1994,
+    "year_to": 1998,
+    "cnt": "5",
+    "bolt_pattern": "4x108",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 6.5, \"offset\": 41, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7, \"offset\": 37, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7, \"offset\": 37, \"diameter\": 16}]",
+    "tires": "[\"195/65R15\", \"205/60R15\", \"205/55R16\"]",
+    "extractedOffsets": [
+      41,
+      37,
+      37
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "Coupe",
+    "year_from": 1990,
+    "year_to": 1996,
+    "cnt": "7",
+    "bolt_pattern": "4x108",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 6, \"offset\": 45, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7, \"offset\": 37, \"diameter\": 15}]",
+    "tires": "[\"195/60R15\", \"205/60R15\"]",
+    "extractedOffsets": [
+      45,
+      37
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "S4",
+    "year_from": 1992,
+    "year_to": 1994,
+    "cnt": "3",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 7.5, \"offset\": 37, \"diameter\": 16}, {\"width\": 7.5, \"offset\": 37, \"diameter\": 17}]",
+    "tires": "[\"225/50R16\", \"225/45R17\"]",
+    "extractedOffsets": [
+      37,
+      37
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "S6",
+    "year_from": 1995,
+    "year_to": 1999,
+    "cnt": "4",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 7.5, \"offset\": 37, \"diameter\": 16}, {\"width\": 7.5, \"offset\": 37, \"diameter\": 17}]",
+    "tires": "[\"225/50R16\", \"225/45R17\"]",
+    "extractedOffsets": [
+      37,
+      37
+    ]
+  },
+  {
+    "make": "Audi",
+    "model": "V8",
+    "year_from": 1990,
+    "year_to": 1994,
+    "cnt": "5",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7, \"offset\": 35, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7.5, \"offset\": 35, \"diameter\": 16}]",
+    "tires": "[\"215/60R15\", \"225/55R16\"]",
+    "extractedOffsets": [
+      35,
+      35
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "4 Series Gran Coupe",
+    "year_from": 2024,
+    "year_to": 2026,
+    "cnt": "3",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7.5, \"offset\": 25, \"diameter\": 17, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 8, \"offset\": 30, \"diameter\": 18, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 8.5, \"offset\": 35, \"diameter\": 19, \"position\": \"both\"}]",
+    "tires": "[\"215/55R17\"]",
+    "extractedOffsets": [
+      25,
+      30,
+      35
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "5 Series",
+    "year_from": 1990,
+    "year_to": 1996,
+    "cnt": "7",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7, \"offset\": 20, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7.5, \"offset\": 20, \"diameter\": 16}]",
+    "tires": "[\"205/65R15\", \"225/60R16\"]",
+    "extractedOffsets": [
+      20,
+      20
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "5 Series",
+    "year_from": 1997,
+    "year_to": 1999,
+    "cnt": "3",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "74.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7, \"offset\": 20, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7.5, \"offset\": 20, \"diameter\": 16}]",
+    "tires": "[\"205/65R15\", \"225/60R16\"]",
+    "extractedOffsets": [
+      20,
+      20
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "6 Series",
+    "year_from": 2003,
+    "year_to": 2017,
+    "cnt": "14",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.5",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8, \"offset\": 20, \"diameter\": 17, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 8.5, \"offset\": 25, \"diameter\": 18, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 30, \"diameter\": 19, \"position\": \"both\"}]",
+    "tires": "[\"215/55R17\"]",
+    "extractedOffsets": [
+      20,
+      25,
+      30
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "6 Series",
+    "year_from": 2011,
+    "year_to": 2019,
+    "cnt": "2",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8, \"offset\": 20, \"diameter\": 17, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 8.5, \"offset\": 25, \"diameter\": 18, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 30, \"diameter\": 19, \"position\": \"both\"}]",
+    "tires": "[\"215/55R17\"]",
+    "extractedOffsets": [
+      20,
+      25,
+      30
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "7 Series",
+    "year_from": 1990,
+    "year_to": 1999,
+    "cnt": "10",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"width\": 7, \"offset\": 20, \"diameter\": 15}]",
+    "tires": "[\"205/65R15\", \"215/65R15\", \"225/60R15\"]",
+    "extractedOffsets": [
+      20
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "7 Series",
+    "year_from": 2000,
+    "year_to": 2026,
+    "cnt": "9",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 7, \"offset\": 20, \"diameter\": 15}]",
+    "tires": "[\"205/65R15\", \"215/65R15\", \"225/60R15\"]",
+    "extractedOffsets": [
+      20
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "7 Series",
+    "year_from": 2002,
+    "year_to": 2015,
+    "cnt": "11",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.5",
+    "wheels": "[{\"width\": 7, \"offset\": 20, \"diameter\": 15}]",
+    "tires": "[\"205/65R15\", \"215/65R15\", \"225/60R15\"]",
+    "extractedOffsets": [
+      20
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "8 Series",
+    "year_from": 2019,
+    "year_to": 2026,
+    "cnt": "8",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8, \"offset\": 25, \"diameter\": 18, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 8.5, \"offset\": 30, \"diameter\": 19, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 35, \"diameter\": 20, \"position\": \"both\"}]",
+    "tires": "[\"225/45R18\"]",
+    "extractedOffsets": [
+      25,
+      30,
+      35
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "M Coupe",
+    "year_from": 2000,
+    "year_to": 2002,
+    "cnt": "3",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7.5, \"offset\": 41, \"diameter\": 17, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 26, \"diameter\": 17, \"position\": \"both\"}]",
+    "tires": "[\"215/55R17\"]",
+    "extractedOffsets": [
+      41,
+      26
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "M Roadster",
+    "year_from": 2000,
+    "year_to": 2002,
+    "cnt": "3",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7.5, \"offset\": 41, \"diameter\": 17, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 26, \"diameter\": 17, \"position\": \"both\"}]",
+    "tires": "[\"215/55R17\"]",
+    "extractedOffsets": [
+      41,
+      26
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "M4",
+    "year_from": 2014,
+    "year_to": 2026,
+    "cnt": "38",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 9, \"offset\": 29, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x120\"}, {\"axle\": \"rear\", \"width\": 10, \"offset\": 40, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x120\"}]",
+    "tires": "{\"rear\": \"275/35R19\", \"front\": \"255/35R19\"}",
+    "extractedOffsets": [
+      29,
+      40
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X1",
+    "year_from": 2013,
+    "year_to": 2026,
+    "cnt": "18",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 8, \"offset\": 43, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 8, \"offset\": 43, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"245/45R19\"]",
+    "extractedOffsets": [
+      43,
+      43
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X3 M",
+    "year_from": 2020,
+    "year_to": 2024,
+    "cnt": "5",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 9.5, \"offset\": 28, \"diameter\": 20, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 10, \"offset\": 35, \"diameter\": 20, \"position\": \"both\"}]",
+    "tires": "[\"245/45R20\"]",
+    "extractedOffsets": [
+      28,
+      35
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X4 M",
+    "year_from": 2020,
+    "year_to": 2024,
+    "cnt": "5",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 9.5, \"offset\": 31, \"diameter\": 21, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 10, \"offset\": 35, \"diameter\": 21, \"position\": \"both\"}]",
+    "tires": "[\"265/40R21\"]",
+    "extractedOffsets": [
+      31,
+      35
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X5 M",
+    "year_from": 2010,
+    "year_to": 2017,
+    "cnt": "7",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "74.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 10, \"offset\": 40, \"diameter\": 20, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 11, \"offset\": 35, \"diameter\": 20, \"position\": \"both\"}]",
+    "tires": "[\"245/45R20\"]",
+    "extractedOffsets": [
+      40,
+      35
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X5 M",
+    "year_from": 2020,
+    "year_to": 2026,
+    "cnt": "7",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 10, \"offset\": 40, \"diameter\": 20, \"position\": \"both\"}, {\"axle\": \"both\", \"width\": 11, \"offset\": 35, \"diameter\": 20, \"position\": \"both\"}]",
+    "tires": "[\"245/45R20\"]",
+    "extractedOffsets": [
+      40,
+      35
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X6 M",
+    "year_from": 2010,
+    "year_to": 2019,
+    "cnt": "9",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "74.1",
+    "wheels": "[{\"axle\": \"both\", \"width\": 10.5, \"offset\": 31, \"diameter\": 21, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 11.5, \"offset\": 43, \"diameter\": 22, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"295/35R21\", \"315/30R22\"]",
+    "extractedOffsets": [
+      31,
+      43
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X6 M",
+    "year_from": 2020,
+    "year_to": 2026,
+    "cnt": "7",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 10.5, \"offset\": 31, \"diameter\": 21, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 11.5, \"offset\": 43, \"diameter\": 22, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"295/35R21\", \"315/30R22\"]",
+    "extractedOffsets": [
+      31,
+      43
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "X6 M",
+    "year_from": 2020,
+    "year_to": 2026,
+    "cnt": "7",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 10.5, \"offset\": 31, \"diameter\": 21, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 11.5, \"offset\": 43, \"diameter\": 22, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"295/35R21\", \"315/30R22\"]",
+    "extractedOffsets": [
+      31,
+      43
+    ]
+  },
+  {
+    "make": "BMW",
+    "model": "Z4",
+    "year_from": 2003,
+    "year_to": 2026,
+    "cnt": "64",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 8, \"offset\": 35, \"isStock\": true, \"diameter\": 18}, {\"axle\": \"rear\", \"width\": 8.5, \"offset\": 35, \"isStock\": true, \"diameter\": 18}]",
+    "tires": "[\"225/40R18\", \"255/35R18\"]",
+    "extractedOffsets": [
+      35,
+      35
+    ]
+  },
+  {
+    "make": "Jaguar",
+    "model": "XJ220",
+    "year_from": 1992,
+    "year_to": 1994,
+    "cnt": "3",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "63.4",
+    "wheels": "[{\"width\": 9, \"offset\": 40, \"diameter\": 17, \"position\": \"front\"}]",
+    "tires": "[\"255/45ZR17\"]",
+    "extractedOffsets": [
+      40
+    ]
+  },
+  {
+    "make": "Jaguar",
+    "model": "XJ6",
+    "year_from": 1990,
+    "year_to": 1997,
+    "cnt": "8",
+    "bolt_pattern": "5x120.65",
+    "center_bore_mm": "73.8",
+    "wheels": "[{\"axle\": \"front\", \"width\": 6.5, \"offset\": 30, \"diameter\": 15}, {\"axle\": \"rear\", \"width\": 7, \"offset\": 33, \"diameter\": 16}]",
+    "tires": "[\"215/70R15\", \"225/60R16\"]",
+    "extractedOffsets": [
+      30,
+      33
+    ]
+  },
+  {
+    "make": "Jaguar",
+    "model": "XJ8",
+    "year_from": 1998,
+    "year_to": 1999,
+    "cnt": "2",
+    "bolt_pattern": "5x120.65",
+    "center_bore_mm": "73.8",
+    "wheels": "[{\"axle\": \"front\", \"width\": 7, \"offset\": 33, \"diameter\": 16}, {\"axle\": \"rear\", \"width\": 7.5, \"offset\": 35, \"diameter\": 17}]",
+    "tires": "[\"225/60R16\", \"235/55R17\"]",
+    "extractedOffsets": [
+      33,
+      35
+    ]
+  },
+  {
+    "make": "Jaguar",
+    "model": "XJS",
+    "year_from": 1990,
+    "year_to": 1996,
+    "cnt": "7",
+    "bolt_pattern": "5x120.65",
+    "center_bore_mm": "73.8",
+    "wheels": "[{\"axle\": \"front\", \"width\": 6.5, \"offset\": 30, \"diameter\": 15}, {\"axle\": \"rear\", \"width\": 7, \"offset\": 33, \"diameter\": 16}]",
+    "tires": "[\"215/70VR15\", \"225/60R16\"]",
+    "extractedOffsets": [
+      30,
+      33
+    ]
+  },
+  {
+    "make": "Jaguar",
+    "model": "XK8",
+    "year_from": 1997,
+    "year_to": 1999,
+    "cnt": "3",
+    "bolt_pattern": "5x120.65",
+    "center_bore_mm": "73.8",
+    "wheels": "[{\"width\": 8, \"offset\": 35, \"diameter\": 17}, {\"width\": 8, \"offset\": 38, \"diameter\": 18}]",
+    "tires": "[\"245/50ZR17\", \"245/45ZR18\"]",
+    "extractedOffsets": [
+      35,
+      38
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Defender 90",
+    "year_from": 1993,
+    "year_to": 1997,
+    "cnt": "5",
+    "bolt_pattern": "5x165.1",
+    "center_bore_mm": "113.0",
+    "wheels": "[{\"width\": 7, \"offset\": 33, \"diameter\": 16}]",
+    "tires": "[\"235/85R16\", \"255/85R16\"]",
+    "extractedOffsets": [
+      33
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Discovery",
+    "year_from": 1994,
+    "year_to": 1999,
+    "cnt": "6",
+    "bolt_pattern": "5x165.1",
+    "center_bore_mm": "113.0",
+    "wheels": "[{\"width\": 8, \"offset\": 53, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x120\"}, {\"width\": 8, \"offset\": 53, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x120\"}]",
+    "tires": "[\"255/55R19\"]",
+    "extractedOffsets": [
+      53,
+      53
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Discovery",
+    "year_from": 2005,
+    "year_to": 2011,
+    "cnt": "7",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"width\": 8, \"offset\": 53, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x120\"}, {\"width\": 8, \"offset\": 53, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x120\"}]",
+    "tires": "[\"255/55R19\"]",
+    "extractedOffsets": [
+      53,
+      53
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Discovery Sport",
+    "year_from": 2015,
+    "year_to": 2024,
+    "cnt": "15",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "63.4",
+    "wheels": "[{\"width\": 8, \"offset\": 45, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x108\"}, {\"width\": 8, \"offset\": 45, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x108\"}]",
+    "tires": "[\"235/55R19\", \"235/60R18\", \"245/45R20\"]",
+    "extractedOffsets": [
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Range Rover",
+    "year_from": 1990,
+    "year_to": 1994,
+    "cnt": "5",
+    "bolt_pattern": "5x165.1",
+    "center_bore_mm": "113.0",
+    "wheels": "[{\"width\": 7, \"offset\": 33, \"diameter\": 16}]",
+    "tires": "[\"205/80R16\", \"235/75R16\"]",
+    "extractedOffsets": [
+      33
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Range Rover",
+    "year_from": 1995,
+    "year_to": 1999,
+    "cnt": "5",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.5",
+    "wheels": "[{\"width\": 7, \"offset\": 33, \"diameter\": 16}]",
+    "tires": "[\"205/80R16\", \"235/75R16\"]",
+    "extractedOffsets": [
+      33
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Range Rover Sport",
+    "year_from": 2006,
+    "year_to": 2026,
+    "cnt": "118",
+    "bolt_pattern": "5x120",
+    "center_bore_mm": "72.6",
+    "wheels": "[{\"width\": 9.5, \"offset\": 45, \"diameter\": 22, \"position\": \"front\", \"boltPattern\": \"5x120\"}, {\"width\": 9.5, \"offset\": 45, \"diameter\": 22, \"position\": \"rear\", \"boltPattern\": \"5x120\"}]",
+    "tires": "[\"285/45R22\"]",
+    "extractedOffsets": [
+      45,
+      45
+    ]
+  },
+  {
+    "make": "Land Rover",
+    "model": "Range Rover Velar",
+    "year_from": 2017,
+    "year_to": 2024,
+    "cnt": "7",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "63.4",
+    "wheels": "[{\"width\": 9, \"offset\": 42, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x108\"}, {\"width\": 9, \"offset\": 42, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x108\"}]",
+    "tires": "[\"255/50R20\", \"255/55R19\", \"265/45R21\"]",
+    "extractedOffsets": [
+      42,
+      42
+    ]
+  },
+  {
+    "make": "Mercedes",
+    "model": "A-Class AMG",
+    "year_from": 2019,
+    "year_to": 2021,
+    "cnt": "3",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 7.5, \"offset\": 52, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 7.5, \"offset\": 52, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/45R18\"]",
+    "extractedOffsets": [
+      52,
+      52
+    ]
+  },
+  {
+    "make": "Mercedes",
+    "model": "C-Class AMG",
+    "year_from": 2008,
+    "year_to": 2014,
+    "cnt": "7",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 8.5, \"offset\": 42, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 9.5, \"offset\": 47, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/40R18\", \"255/35R18\"]",
+    "extractedOffsets": [
+      42,
+      47
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "190E",
+    "year_from": 1990,
+    "year_to": 1993,
+    "cnt": "4",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 6.5, \"offset\": 49, \"diameter\": 15}]",
+    "tires": "[\"195/65R15\", \"195/60R15\"]",
+    "extractedOffsets": [
+      49
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "year_from": 2001,
+    "year_to": 2026,
+    "cnt": "83",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8, \"offset\": 43, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 54, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/40R18\", \"255/35R18\"]",
+    "extractedOffsets": [
+      43,
+      54
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "CLA",
+    "year_from": 2014,
+    "year_to": 2026,
+    "cnt": "38",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 8, \"offset\": 44, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 8, \"offset\": 44, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/35R19\"]",
+    "extractedOffsets": [
+      44,
+      44
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "CLS",
+    "year_from": 2012,
+    "year_to": 2023,
+    "cnt": "33",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 9, \"offset\": 33, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 10, \"offset\": 44, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"255/40R20\", \"285/35R20\"]",
+    "extractedOffsets": [
+      33,
+      44
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "CLS-Class",
+    "year_from": 2023,
+    "year_to": 2023,
+    "cnt": "1",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 8.5, \"offset\": 38, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 9.5, \"offset\": 48, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"245/40R19\", \"275/35R19\"]",
+    "extractedOffsets": [
+      38,
+      48
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "CLS-Class AMG",
+    "year_from": 2006,
+    "year_to": 2023,
+    "cnt": "17",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 9, \"offset\": 38, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 10, \"offset\": 48, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"255/35R19\", \"285/30R19\"]",
+    "extractedOffsets": [
+      38,
+      48
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "E-Class",
+    "year_from": 1990,
+    "year_to": 2026,
+    "cnt": "73",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 6.5, \"offset\": 49, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7, \"offset\": 44, \"diameter\": 15}, {\"axle\": \"both\", \"width\": 7.5, \"offset\": 41, \"diameter\": 16}]",
+    "tires": "[\"195/65R15\", \"205/60R15\", \"205/55R16\"]",
+    "extractedOffsets": [
+      49,
+      44,
+      41
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "E-Class AMG",
+    "year_from": 2002,
+    "year_to": 2025,
+    "cnt": "23",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 9, \"offset\": 38, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 10, \"offset\": 48, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"265/35R19\", \"295/30R19\"]",
+    "extractedOffsets": [
+      38,
+      48
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "E-Class Cabriolet",
+    "year_from": 2011,
+    "year_to": 2023,
+    "cnt": "12",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8, \"offset\": 43, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 51, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"245/45R18\", \"275/40R18\"]",
+    "extractedOffsets": [
+      43,
+      51
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "E-Class Coupe",
+    "year_from": 2010,
+    "year_to": 2023,
+    "cnt": "13",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8, \"offset\": 43, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 51, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"245/45R18\", \"275/40R18\"]",
+    "extractedOffsets": [
+      43,
+      51
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "EQB",
+    "year_from": 2022,
+    "year_to": 2026,
+    "cnt": "5",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 7.5, \"offset\": 52, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 7.5, \"offset\": 52, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/55R18\"]",
+    "extractedOffsets": [
+      52,
+      52
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "EQE",
+    "year_from": 2023,
+    "year_to": 2026,
+    "cnt": "16",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8.5, \"offset\": 38, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 10, \"offset\": 46, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"255/45R19\", \"285/40R19\"]",
+    "extractedOffsets": [
+      38,
+      46
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "G-Class",
+    "year_from": 1990,
+    "year_to": 2025,
+    "cnt": "33",
+    "bolt_pattern": "5x130",
+    "center_bore_mm": "84.1",
+    "wheels": "[{\"width\": 9.5, \"offset\": 50, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x130\"}, {\"width\": 9.5, \"offset\": 50, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x130\"}]",
+    "tires": "[\"275/50R20\"]",
+    "extractedOffsets": [
+      50,
+      50
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "G-Class",
+    "year_from": 2013,
+    "year_to": 2026,
+    "cnt": "39",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 9.5, \"offset\": 50, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x130\"}, {\"width\": 9.5, \"offset\": 50, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x130\"}]",
+    "tires": "[\"275/50R20\"]",
+    "extractedOffsets": [
+      50,
+      50
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "G-Class AMG",
+    "year_from": 2002,
+    "year_to": 2023,
+    "cnt": "21",
+    "bolt_pattern": "5x130",
+    "center_bore_mm": "84.1",
+    "wheels": "[{\"width\": 9.5, \"offset\": 50, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x130\"}, {\"width\": 9.5, \"offset\": 50, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x130\"}]",
+    "tires": "[\"275/50R20\"]",
+    "extractedOffsets": [
+      50,
+      50
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "GLA",
+    "year_from": 2015,
+    "year_to": 2026,
+    "cnt": "34",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 8, \"offset\": 44, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 8, \"offset\": 44, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/40R20\"]",
+    "extractedOffsets": [
+      44,
+      44
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "GLB",
+    "year_from": 2020,
+    "year_to": 2026,
+    "cnt": "21",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 7.5, \"offset\": 52, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 7.5, \"offset\": 52, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/55R18\"]",
+    "extractedOffsets": [
+      52,
+      52
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "GLC",
+    "year_from": 2016,
+    "year_to": 2026,
+    "cnt": "34",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 7.5, \"offset\": 42, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 7.5, \"offset\": 42, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/60R18\"]",
+    "extractedOffsets": [
+      42,
+      42
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "GLE",
+    "year_from": 2016,
+    "year_to": 2026,
+    "cnt": "51",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 8, \"offset\": 38, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 8, \"offset\": 38, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"275/55R19\"]",
+    "extractedOffsets": [
+      38,
+      38
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "GLS",
+    "year_from": 2017,
+    "year_to": 2026,
+    "cnt": "34",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 10, \"offset\": 30, \"diameter\": 22, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 11.5, \"offset\": 47, \"diameter\": 22, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"285/40R22\", \"325/35R22\"]",
+    "extractedOffsets": [
+      30,
+      47
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "M-Class",
+    "year_from": 2008,
+    "year_to": 2015,
+    "cnt": "8",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 8, \"offset\": 38, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 8, \"offset\": 38, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"265/60R18\"]",
+    "extractedOffsets": [
+      38,
+      38
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "M-Class AMG",
+    "year_from": 2000,
+    "year_to": 2015,
+    "cnt": "16",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"width\": 10, \"offset\": 28, \"diameter\": 21, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"width\": 10, \"offset\": 46, \"diameter\": 21, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"295/35R21\"]",
+    "extractedOffsets": [
+      28,
+      46
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "S-Class",
+    "year_from": 1992,
+    "year_to": 2026,
+    "cnt": "57",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8, \"offset\": 41, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 9, \"offset\": 46, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"245/50R18\", \"275/45R18\"]",
+    "extractedOffsets": [
+      41,
+      46
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "S-Class AMG",
+    "year_from": 2000,
+    "year_to": 2025,
+    "cnt": "24",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 9, \"offset\": 33, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 10, \"offset\": 44, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"255/40R20\", \"285/35R20\"]",
+    "extractedOffsets": [
+      33,
+      44
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "S-Class Coupe",
+    "year_from": 2015,
+    "year_to": 2021,
+    "cnt": "6",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 8.5, \"offset\": 35, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 9.5, \"offset\": 45, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"255/45R19\", \"285/40R19\"]",
+    "extractedOffsets": [
+      35,
+      45
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "SL-Class",
+    "year_from": 1990,
+    "year_to": 2026,
+    "cnt": "73",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 9.5, \"offset\": 35, \"diameter\": 20, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 10.5, \"offset\": 48, \"diameter\": 20, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"255/35R20\", \"285/30R20\"]",
+    "extractedOffsets": [
+      35,
+      48
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "SL-Class AMG",
+    "year_from": 2003,
+    "year_to": 2025,
+    "cnt": "20",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 9, \"offset\": 38, \"diameter\": 19, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 10, \"offset\": 48, \"diameter\": 19, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"255/35R19\", \"285/30R19\"]",
+    "extractedOffsets": [
+      38,
+      48
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "SLC-Class",
+    "year_from": 2016,
+    "year_to": 2020,
+    "cnt": "4",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7.5, \"offset\": 40, \"diameter\": 17, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 8.5, \"offset\": 45, \"diameter\": 17, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"225/45R17\", \"245/40R17\"]",
+    "extractedOffsets": [
+      40,
+      45
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "SLK-Class",
+    "year_from": 2000,
+    "year_to": 2016,
+    "cnt": "17",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"both\", \"width\": 7.5, \"offset\": 40, \"diameter\": 17, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"both\", \"width\": 8.5, \"offset\": 45, \"diameter\": 17, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"225/45R17\", \"245/40R17\"]",
+    "extractedOffsets": [
+      40,
+      45
+    ]
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "SLK-Class AMG",
+    "year_from": 2002,
+    "year_to": 2016,
+    "cnt": "15",
+    "bolt_pattern": "5x112",
+    "center_bore_mm": "66.6",
+    "wheels": "[{\"axle\": \"front\", \"width\": 8, \"offset\": 38, \"diameter\": 18, \"position\": \"front\", \"boltPattern\": \"5x112\"}, {\"axle\": \"rear\", \"width\": 9, \"offset\": 42, \"diameter\": 18, \"position\": \"rear\", \"boltPattern\": \"5x112\"}]",
+    "tires": "[\"235/40R18\", \"255/35R18\"]",
+    "extractedOffsets": [
+      38,
+      42
+    ]
+  },
+  {
+    "make": "Saab",
+    "model": "900",
+    "year_from": 1990,
+    "year_to": 1993,
+    "cnt": "4",
+    "bolt_pattern": "4x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 5.5, \"offset\": 40, \"diameter\": 15}, {\"width\": 6, \"offset\": 33, \"diameter\": 15}, {\"width\": 6, \"offset\": 33, \"diameter\": 16}]",
+    "tires": "[\"185/65R15\", \"195/60R15\", \"195/55R16\"]",
+    "extractedOffsets": [
+      40,
+      33,
+      33
+    ]
+  },
+  {
+    "make": "Saab",
+    "model": "900",
+    "year_from": 1994,
+    "year_to": 1998,
+    "cnt": "5",
+    "bolt_pattern": "5x110",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 5.5, \"offset\": 40, \"diameter\": 15}, {\"width\": 6, \"offset\": 33, \"diameter\": 15}, {\"width\": 6, \"offset\": 33, \"diameter\": 16}]",
+    "tires": "[\"185/65R15\", \"195/60R15\", \"195/55R16\"]",
+    "extractedOffsets": [
+      40,
+      33,
+      33
+    ]
+  },
+  {
+    "make": "Saab",
+    "model": "9000",
+    "year_from": 1990,
+    "year_to": 1998,
+    "cnt": "9",
+    "bolt_pattern": "4x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 5.5, \"offset\": 44, \"diameter\": 15}, {\"width\": 6, \"offset\": 33, \"diameter\": 15}, {\"width\": 6.5, \"offset\": 22, \"diameter\": 16}]",
+    "tires": "[\"185/65R15\", \"195/65R15\", \"205/55R16\"]",
+    "extractedOffsets": [
+      44,
+      33,
+      22
+    ]
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Beetle",
+    "year_from": 1998,
+    "year_to": 1999,
+    "cnt": "2",
+    "bolt_pattern": "5x100",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6.5, \"offset\": 42, \"diameter\": 16}]",
+    "tires": "[\"205/55R16\"]",
+    "extractedOffsets": [
+      42
+    ]
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Cabrio",
+    "year_from": 1995,
+    "year_to": 1999,
+    "cnt": "5",
+    "bolt_pattern": "4x100",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 38, \"diameter\": 14}, {\"width\": 6, \"offset\": 38, \"diameter\": 15}]",
+    "tires": "[\"185/60R14\", \"195/65R15\"]",
+    "extractedOffsets": [
+      38,
+      38
+    ]
+  },
+  {
+    "make": "Volkswagen",
+    "model": "GTI",
+    "year_from": 1990,
+    "year_to": 1998,
+    "cnt": "9",
+    "bolt_pattern": "4x100",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 38, \"diameter\": 14}]",
+    "tires": "[\"185/60R14\"]",
+    "extractedOffsets": [
+      38
+    ]
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Golf",
+    "year_from": 1990,
+    "year_to": 1998,
+    "cnt": "9",
+    "bolt_pattern": "4x100",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 38, \"diameter\": 14}, {\"width\": 6, \"offset\": 38, \"diameter\": 15}]",
+    "tires": "[\"185/60R14\", \"195/65R15\"]",
+    "extractedOffsets": [
+      38,
+      38
+    ]
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "year_from": 1990,
+    "year_to": 1998,
+    "cnt": "9",
+    "bolt_pattern": "4x100",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 38, \"diameter\": 14}, {\"width\": 6, \"offset\": 38, \"diameter\": 15}]",
+    "tires": "[\"185/60R14\", \"195/65R15\"]",
+    "extractedOffsets": [
+      38,
+      38
+    ]
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Passat",
+    "year_from": 1990,
+    "year_to": 1997,
+    "cnt": "8",
+    "bolt_pattern": "4x100",
+    "center_bore_mm": "57.1",
+    "wheels": "[{\"width\": 6, \"offset\": 38, \"diameter\": 14}, {\"width\": 6, \"offset\": 35, \"diameter\": 15}]",
+    "tires": "[\"185/60R14\", \"195/60R15\"]",
+    "extractedOffsets": [
+      38,
+      35
+    ]
+  },
+  {
+    "make": "Volvo",
+    "model": "850",
+    "year_from": 1993,
+    "year_to": 1997,
+    "cnt": "5",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 6, \"offset\": 35, \"diameter\": 15}, {\"width\": 6.5, \"offset\": 35, \"diameter\": 16}]",
+    "tires": "[\"195/60R15\", \"205/55R16\"]",
+    "extractedOffsets": [
+      35,
+      35
+    ]
+  },
+  {
+    "make": "Volvo",
+    "model": "940",
+    "year_from": 1991,
+    "year_to": 1995,
+    "cnt": "5",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 6, \"offset\": 30, \"diameter\": 15}, {\"width\": 6.5, \"offset\": 30, \"diameter\": 16}]",
+    "tires": "[\"185/65R15\", \"205/55R16\"]",
+    "extractedOffsets": [
+      30,
+      30
+    ]
+  },
+  {
+    "make": "Volvo",
+    "model": "960",
+    "year_from": 1992,
+    "year_to": 1997,
+    "cnt": "6",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 6, \"offset\": 30, \"diameter\": 15}]",
+    "tires": "[\"195/65R15\"]",
+    "extractedOffsets": [
+      30
+    ]
+  },
+  {
+    "make": "Volvo",
+    "model": "S70",
+    "year_from": 1998,
+    "year_to": 1999,
+    "cnt": "2",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 6.5, \"offset\": 38, \"diameter\": 15}, {\"width\": 6.5, \"offset\": 38, \"diameter\": 16}]",
+    "tires": "[\"195/60R15\", \"195/65R15\", \"205/50R16\", \"205/55R16\"]",
+    "extractedOffsets": [
+      38,
+      38
+    ]
+  },
+  {
+    "make": "Volvo",
+    "model": "S80",
+    "year_from": 1999,
+    "year_to": 1999,
+    "cnt": "1",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 7, \"offset\": 42, \"diameter\": 16}, {\"width\": 7, \"offset\": 42, \"diameter\": 17}]",
+    "tires": "[\"215/55R16\", \"225/55R16\", \"225/50R17\"]",
+    "extractedOffsets": [
+      42,
+      42
+    ]
+  },
+  {
+    "make": "Volvo",
+    "model": "V70",
+    "year_from": 1998,
+    "year_to": 1999,
+    "cnt": "2",
+    "bolt_pattern": "5x108",
+    "center_bore_mm": "65.1",
+    "wheels": "[{\"width\": 6.5, \"offset\": 38, \"diameter\": 15}, {\"width\": 6.5, \"offset\": 38, \"diameter\": 16}]",
+    "tires": "[\"195/60R15\", \"195/65R15\", \"205/55R16\", \"205/65R15\"]",
+    "extractedOffsets": [
+      38,
+      38
+    ]
+  }
+]

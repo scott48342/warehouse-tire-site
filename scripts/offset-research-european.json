@@ -1,0 +1,2912 @@
+{
+  "updated": [
+    {
+      "make": "Alfa Romeo",
+      "model": "4C",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 2
+    },
+    {
+      "make": "Alfa Romeo",
+      "model": "Giulia",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "23–48",
+      "category": "perf",
+      "records": 2
+    },
+    {
+      "make": "Alfa Romeo",
+      "model": "Stelvio",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 45,
+      "aftermarket_range": "25–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DB11",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 20,
+      "aftermarket_range": "10–35",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Aston Martin",
+      "model": "Rapide",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 20,
+      "aftermarket_range": "10–35",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Aston Martin",
+      "model": "Vanquish",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 20,
+      "aftermarket_range": "10–35",
+      "category": "perf",
+      "records": 2
+    },
+    {
+      "make": "Audi",
+      "model": "100",
+      "years": "1990-1990",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "30–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Audi",
+      "model": "100",
+      "years": "1991-1994",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "30–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Audi",
+      "model": "200",
+      "years": "1990-1991",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        35,
+        35
+      ],
+      "oem_range": "35–35",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Audi",
+      "model": "80",
+      "years": "1990-1996",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "30–55",
+      "category": "car",
+      "records": 7
+    },
+    {
+      "make": "Audi",
+      "model": "90",
+      "years": "1990-1995",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "30–55",
+      "category": "car",
+      "records": 6
+    },
+    {
+      "make": "Audi",
+      "model": "A6",
+      "years": "1995-1997",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "30–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "Audi",
+      "model": "A6 e-tron",
+      "years": "2025-2025",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        33,
+        33
+      ],
+      "oem_range": "33–33",
+      "aftermarket_range": "18–53",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Audi",
+      "model": "A8",
+      "years": "1997-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "30–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "Audi",
+      "model": "Cabriolet",
+      "years": "1994-1998",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        41,
+        37,
+        37
+      ],
+      "oem_range": "37–41",
+      "aftermarket_range": "22–55",
+      "category": "car",
+      "records": 5
+    },
+    {
+      "make": "Audi",
+      "model": "Coupe",
+      "years": "1990-1996",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        37
+      ],
+      "oem_range": "37–45",
+      "aftermarket_range": "22–55",
+      "category": "car",
+      "records": 7
+    },
+    {
+      "make": "Audi",
+      "model": "RS3",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 43,
+      "aftermarket_range": "33–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Audi",
+      "model": "S4",
+      "years": "1992-1994",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        37,
+        37
+      ],
+      "oem_range": "37–37",
+      "aftermarket_range": "22–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "Audi",
+      "model": "S6",
+      "years": "1995-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        37,
+        37
+      ],
+      "oem_range": "37–37",
+      "aftermarket_range": "22–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Audi",
+      "model": "S6 e-tron",
+      "years": "2025-2025",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "18–53",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Audi",
+      "model": "S6 e-tron",
+      "years": "2026-2026",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "18–53",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Audi",
+      "model": "SQ6 e-tron",
+      "years": "2025-2026",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "13–55",
+      "category": "suv",
+      "records": 2
+    },
+    {
+      "make": "Audi",
+      "model": "V8",
+      "years": "1990-1994",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        35,
+        35
+      ],
+      "oem_range": "35–35",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 5
+    },
+    {
+      "make": "BMW",
+      "model": "230i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "230i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "years": "1990-1991",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "years": "1992-1999",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 8
+    },
+    {
+      "make": "BMW",
+      "model": "320i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "320i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "328d",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "328d xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "330e",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "330i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "330i GT xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "330i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "340i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "340i GT xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "340i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "4 Series Gran Coupe",
+      "years": "2024-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        25,
+        30,
+        35
+      ],
+      "oem_range": "25–35",
+      "aftermarket_range": "10–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "BMW",
+      "model": "430i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "430i Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "430i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "430i xDrive Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "440i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "440i Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "440i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "440i xDrive Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "5 Series",
+      "years": "1990-1996",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        20,
+        20
+      ],
+      "oem_range": "20–20",
+      "aftermarket_range": "5–40",
+      "category": "car",
+      "records": 7
+    },
+    {
+      "make": "BMW",
+      "model": "5 Series",
+      "years": "1997-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        20,
+        20
+      ],
+      "oem_range": "20–20",
+      "aftermarket_range": "5–40",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "BMW",
+      "model": "530e",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "530e xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "530i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "530i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "540d xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "540i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "540i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "6 Series",
+      "years": "2003-2017",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        20,
+        25,
+        30
+      ],
+      "oem_range": "20–30",
+      "aftermarket_range": "5–50",
+      "category": "car",
+      "records": 15
+    },
+    {
+      "make": "BMW",
+      "model": "6 Series",
+      "years": "2011-2019",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        20,
+        25,
+        30
+      ],
+      "oem_range": "20–30",
+      "aftermarket_range": "5–50",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "640i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "640i Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "640i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "640i xDrive Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "640i xDrive Gran Turismo",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "650i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "650i Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "650i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "650i xDrive Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "7 Series",
+      "years": "1990-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        20
+      ],
+      "oem_range": "20–20",
+      "aftermarket_range": "5–40",
+      "category": "car",
+      "records": 10
+    },
+    {
+      "make": "BMW",
+      "model": "7 Series",
+      "years": "2000-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        20
+      ],
+      "oem_range": "20–20",
+      "aftermarket_range": "5–40",
+      "category": "car",
+      "records": 20
+    },
+    {
+      "make": "BMW",
+      "model": "7 Series",
+      "years": "2002-2015",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        20
+      ],
+      "oem_range": "20–20",
+      "aftermarket_range": "5–40",
+      "category": "car",
+      "records": 0
+    },
+    {
+      "make": "BMW",
+      "model": "740e xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "17–52",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "740i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "17–52",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "740i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "17–52",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "750i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "17–52",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "750i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "17–52",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "8 Series",
+      "years": "2019-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        25,
+        30,
+        35
+      ],
+      "oem_range": "25–35",
+      "aftermarket_range": "10–55",
+      "category": "car",
+      "records": 8
+    },
+    {
+      "make": "BMW",
+      "model": "Alpina B6 xDrive Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "Alpina B7",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 38,
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "M Coupe",
+      "years": "2000-2002",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        41,
+        26
+      ],
+      "oem_range": "26–41",
+      "aftermarket_range": "11–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "BMW",
+      "model": "M Roadster",
+      "years": "2000-2002",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        41,
+        26
+      ],
+      "oem_range": "26–41",
+      "aftermarket_range": "11–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "BMW",
+      "model": "M2",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "BMW",
+      "model": "M240i",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "M240i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "M3",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "M4",
+      "years": "2014-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        29,
+        40
+      ],
+      "oem_range": "29–40",
+      "aftermarket_range": "19–55",
+      "category": "perf",
+      "records": 38
+    },
+    {
+      "make": "BMW",
+      "model": "M5",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "BMW",
+      "model": "M550i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "M6",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "M6 Gran Coupe",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "M760i xDrive",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 38,
+      "aftermarket_range": "28–53",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "BMW",
+      "model": "X1",
+      "years": "2013-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        43,
+        43
+      ],
+      "oem_range": "43–43",
+      "aftermarket_range": "28–55",
+      "category": "car",
+      "records": 18
+    },
+    {
+      "make": "BMW",
+      "model": "X3",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 43,
+      "aftermarket_range": "23–55",
+      "category": "suv",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "X3 M",
+      "years": "2020-2024",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        28,
+        35
+      ],
+      "oem_range": "28–35",
+      "aftermarket_range": "8–55",
+      "category": "suv",
+      "records": 5
+    },
+    {
+      "make": "BMW",
+      "model": "X4",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "20–55",
+      "category": "suv",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "X4 M",
+      "years": "2020-2024",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        31,
+        35
+      ],
+      "oem_range": "31–35",
+      "aftermarket_range": "11–55",
+      "category": "suv",
+      "records": 5
+    },
+    {
+      "make": "BMW",
+      "model": "X5",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "20–55",
+      "category": "suv",
+      "records": 6
+    },
+    {
+      "make": "BMW",
+      "model": "X5 M",
+      "years": "2010-2017",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        40,
+        35
+      ],
+      "oem_range": "35–40",
+      "aftermarket_range": "15–55",
+      "category": "suv",
+      "records": 7
+    },
+    {
+      "make": "BMW",
+      "model": "X5 M",
+      "years": "2020-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        40,
+        35
+      ],
+      "oem_range": "35–40",
+      "aftermarket_range": "15–55",
+      "category": "suv",
+      "records": 7
+    },
+    {
+      "make": "BMW",
+      "model": "X6",
+      "years": "2008-2026",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "20–55",
+      "category": "suv",
+      "records": 26
+    },
+    {
+      "make": "BMW",
+      "model": "X6",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "20–55",
+      "category": "suv",
+      "records": 0
+    },
+    {
+      "make": "BMW",
+      "model": "X6 M",
+      "years": "2010-2019",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        31,
+        43
+      ],
+      "oem_range": "31–43",
+      "aftermarket_range": "11–55",
+      "category": "suv",
+      "records": 9
+    },
+    {
+      "make": "BMW",
+      "model": "X6 M",
+      "years": "2020-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        31,
+        43
+      ],
+      "oem_range": "31–43",
+      "aftermarket_range": "11–55",
+      "category": "suv",
+      "records": 14
+    },
+    {
+      "make": "BMW",
+      "model": "X6 M",
+      "years": "2020-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        31,
+        43
+      ],
+      "oem_range": "31–43",
+      "aftermarket_range": "11–55",
+      "category": "suv",
+      "records": 0
+    },
+    {
+      "make": "BMW",
+      "model": "Z3",
+      "years": "1996-1999",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 4
+    },
+    {
+      "make": "BMW",
+      "model": "Z4",
+      "years": "2003-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        35,
+        35
+      ],
+      "oem_range": "35–35",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 64
+    },
+    {
+      "make": "BMW",
+      "model": "i3",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "BMW",
+      "model": "i3s",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Ferrari",
+      "model": "488 GTB",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 37,
+      "aftermarket_range": "27–52",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Ferrari",
+      "model": "488 Spider",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 37,
+      "aftermarket_range": "27–52",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Ferrari",
+      "model": "812 Superfast",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "22–47",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "Ferrari",
+      "model": "California T",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Ferrari",
+      "model": "GTC4Lusso",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "22–47",
+      "category": "perf",
+      "records": 6
+    },
+    {
+      "make": "Ferrari",
+      "model": "GTC4Lusso T",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "22–47",
+      "category": "perf",
+      "records": 6
+    },
+    {
+      "make": "Ferrari",
+      "model": "Portofino",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "22–47",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Fiat",
+      "model": "500",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Jaguar",
+      "model": "E-Pace",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 45,
+      "aftermarket_range": "25–55",
+      "category": "suv",
+      "records": 7
+    },
+    {
+      "make": "Jaguar",
+      "model": "F-Type",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 5
+    },
+    {
+      "make": "Jaguar",
+      "model": "XE",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 45,
+      "aftermarket_range": "30–55",
+      "category": "car",
+      "records": 12
+    },
+    {
+      "make": "Jaguar",
+      "model": "XJ",
+      "years": "2004-2019",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 72
+    },
+    {
+      "make": "Jaguar",
+      "model": "XJ",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 0
+    },
+    {
+      "make": "Jaguar",
+      "model": "XJ220",
+      "years": "1992-1994",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        40
+      ],
+      "oem_range": "40–40",
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "Jaguar",
+      "model": "XJ6",
+      "years": "1990-1997",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        30,
+        33
+      ],
+      "oem_range": "30–33",
+      "aftermarket_range": "15–53",
+      "category": "car",
+      "records": 8
+    },
+    {
+      "make": "Jaguar",
+      "model": "XJ8",
+      "years": "1998-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        33,
+        35
+      ],
+      "oem_range": "33–35",
+      "aftermarket_range": "18–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Jaguar",
+      "model": "XJR575",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Jaguar",
+      "model": "XJS",
+      "years": "1990-1996",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        30,
+        33
+      ],
+      "oem_range": "30–33",
+      "aftermarket_range": "15–53",
+      "category": "car",
+      "records": 7
+    },
+    {
+      "make": "Jaguar",
+      "model": "XK8",
+      "years": "1997-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        35,
+        38
+      ],
+      "oem_range": "35–38",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "Land Rover",
+      "model": "Defender 90",
+      "years": "1993-1997",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        33
+      ],
+      "oem_range": "33–33",
+      "aftermarket_range": "13–55",
+      "category": "suv",
+      "records": 5
+    },
+    {
+      "make": "Land Rover",
+      "model": "Discovery",
+      "years": "1994-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        53,
+        53
+      ],
+      "oem_range": "53–53",
+      "aftermarket_range": "33–55",
+      "category": "suv",
+      "records": 6
+    },
+    {
+      "make": "Land Rover",
+      "model": "Discovery",
+      "years": "2005-2011",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        53,
+        53
+      ],
+      "oem_range": "53–53",
+      "aftermarket_range": "33–55",
+      "category": "suv",
+      "records": 7
+    },
+    {
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "years": "2015-2024",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "25–55",
+      "category": "suv",
+      "records": 15
+    },
+    {
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "years": "1990-1994",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        33
+      ],
+      "oem_range": "33–33",
+      "aftermarket_range": "13–55",
+      "category": "suv",
+      "records": 5
+    },
+    {
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "years": "1995-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        33
+      ],
+      "oem_range": "33–33",
+      "aftermarket_range": "13–55",
+      "category": "suv",
+      "records": 5
+    },
+    {
+      "make": "Land Rover",
+      "model": "Range Rover Sport",
+      "years": "2006-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        45,
+        45
+      ],
+      "oem_range": "45–45",
+      "aftermarket_range": "25–55",
+      "category": "suv",
+      "records": 122
+    },
+    {
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "years": "2017-2024",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        42,
+        42
+      ],
+      "oem_range": "42–42",
+      "aftermarket_range": "22–55",
+      "category": "suv",
+      "records": 10
+    },
+    {
+      "make": "Lotus",
+      "model": "Evora",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 4
+    },
+    {
+      "make": "Lotus",
+      "model": "Evora",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 0
+    },
+    {
+      "make": "Lotus",
+      "model": "Evora",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 0
+    },
+    {
+      "make": "Maserati",
+      "model": "Ghibli",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 9
+    },
+    {
+      "make": "Maserati",
+      "model": "GranTurismo",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 37,
+      "aftermarket_range": "27–52",
+      "category": "perf",
+      "records": 6
+    },
+    {
+      "make": "Maserati",
+      "model": "Levante",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "13–55",
+      "category": "suv",
+      "records": 12
+    },
+    {
+      "make": "Maserati",
+      "model": "Quattroporte",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 9
+    },
+    {
+      "make": "McLaren",
+      "model": "570GT",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "23–48",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "McLaren",
+      "model": "570S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "23–48",
+      "category": "perf",
+      "records": 2
+    },
+    {
+      "make": "McLaren",
+      "model": "720S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "23–48",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes",
+      "model": "A-Class AMG",
+      "years": "2019-2021",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        52,
+        52
+      ],
+      "oem_range": "52–52",
+      "aftermarket_range": "42–55",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "Mercedes",
+      "model": "C-Class AMG",
+      "years": "2008-2014",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        42,
+        47
+      ],
+      "oem_range": "42–47",
+      "aftermarket_range": "32–55",
+      "category": "perf",
+      "records": 7
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "190E",
+      "years": "1990-1993",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        49
+      ],
+      "oem_range": "49–49",
+      "aftermarket_range": "34–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT C",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 47,
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT R",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 47,
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "years": "2001-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        43,
+        54
+      ],
+      "oem_range": "43–54",
+      "aftermarket_range": "28–55",
+      "category": "car",
+      "records": 83
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C300",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C350e",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C43 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "32–55",
+      "category": "perf",
+      "records": 2
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C63 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C63 AMG S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "CLA",
+      "years": "2014-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        44,
+        44
+      ],
+      "oem_range": "44–44",
+      "aftermarket_range": "29–55",
+      "category": "car",
+      "records": 38
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "CLS",
+      "years": "2012-2023",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        33,
+        44
+      ],
+      "oem_range": "33–44",
+      "aftermarket_range": "18–55",
+      "category": "car",
+      "records": 33
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class",
+      "years": "2023-2023",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        48
+      ],
+      "oem_range": "38–48",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "CLS-Class AMG",
+      "years": "2006-2023",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        48
+      ],
+      "oem_range": "38–48",
+      "aftermarket_range": "28–55",
+      "category": "perf",
+      "records": 17
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "CLS550",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "27–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "CLS63 AMG S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "32–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E-Class",
+      "years": "1990-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        49,
+        44,
+        41
+      ],
+      "oem_range": "41–49",
+      "aftermarket_range": "26–55",
+      "category": "car",
+      "records": 73
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E-Class AMG",
+      "years": "2002-2025",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        48
+      ],
+      "oem_range": "38–48",
+      "aftermarket_range": "28–55",
+      "category": "perf",
+      "records": 23
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E-Class Cabriolet",
+      "years": "2011-2023",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        43,
+        51
+      ],
+      "oem_range": "43–51",
+      "aftermarket_range": "28–55",
+      "category": "car",
+      "records": 12
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E-Class Coupe",
+      "years": "2010-2023",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        43,
+        51
+      ],
+      "oem_range": "43–51",
+      "aftermarket_range": "28–55",
+      "category": "car",
+      "records": 13
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E400",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E43 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "E63 AMG S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "EQB",
+      "years": "2022-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        52,
+        52
+      ],
+      "oem_range": "52–52",
+      "aftermarket_range": "32–55",
+      "category": "suv",
+      "records": 5
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "EQE",
+      "years": "2023-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        46
+      ],
+      "oem_range": "38–46",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 16
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "years": "1990-2025",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        50,
+        50
+      ],
+      "oem_range": "50–50",
+      "aftermarket_range": "35–55",
+      "category": "car",
+      "records": 69
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "G-Class",
+      "years": "2013-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        50,
+        50
+      ],
+      "oem_range": "50–50",
+      "aftermarket_range": "35–55",
+      "category": "car",
+      "records": 3
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "G-Class AMG",
+      "years": "2002-2023",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        50,
+        50
+      ],
+      "oem_range": "50–50",
+      "aftermarket_range": "40–55",
+      "category": "perf",
+      "records": 21
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLA",
+      "years": "2015-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        44,
+        44
+      ],
+      "oem_range": "44–44",
+      "aftermarket_range": "24–55",
+      "category": "suv",
+      "records": 34
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLB",
+      "years": "2020-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        52,
+        52
+      ],
+      "oem_range": "52–52",
+      "aftermarket_range": "32–55",
+      "category": "suv",
+      "records": 21
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "years": "2016-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        42,
+        42
+      ],
+      "oem_range": "42–42",
+      "aftermarket_range": "22–55",
+      "category": "suv",
+      "records": 34
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC300",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "22–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC43 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "22–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC63 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "22–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLC63 AMG S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "22–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLE",
+      "years": "2016-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "18–55",
+      "category": "suv",
+      "records": 51
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLE43 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 38,
+      "aftermarket_range": "18–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLE63 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 38,
+      "aftermarket_range": "18–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLE63 AMG S",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 38,
+      "aftermarket_range": "18–55",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "GLS",
+      "years": "2017-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        30,
+        47
+      ],
+      "oem_range": "30–47",
+      "aftermarket_range": "15–55",
+      "category": "car",
+      "records": 34
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "M-Class",
+      "years": "2008-2015",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 8
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "M-Class AMG",
+      "years": "2000-2015",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        28,
+        46
+      ],
+      "oem_range": "28–46",
+      "aftermarket_range": "18–55",
+      "category": "perf",
+      "records": 16
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "Maybach S560",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "Maybach S650",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "years": "1992-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        41,
+        46
+      ],
+      "oem_range": "41–46",
+      "aftermarket_range": "26–55",
+      "category": "car",
+      "records": 57
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "S-Class AMG",
+      "years": "2000-2025",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        33,
+        44
+      ],
+      "oem_range": "33–44",
+      "aftermarket_range": "23–55",
+      "category": "perf",
+      "records": 24
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "S-Class Coupe",
+      "years": "2015-2021",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        35,
+        45
+      ],
+      "oem_range": "35–45",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 6
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "S450",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "S560",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "S63 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 2
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "S65 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SL-Class",
+      "years": "1990-2026",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        35,
+        48
+      ],
+      "oem_range": "35–48",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 73
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SL-Class AMG",
+      "years": "2003-2025",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        48
+      ],
+      "oem_range": "38–48",
+      "aftermarket_range": "28–55",
+      "category": "perf",
+      "records": 20
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SL450",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "22–47",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SL550",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 32,
+      "aftermarket_range": "22–47",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SL63 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SL65 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "30–55",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SLC-Class",
+      "years": "2016-2020",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        40,
+        45
+      ],
+      "oem_range": "40–45",
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SLC300",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SLC43 AMG",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 35,
+      "aftermarket_range": "25–50",
+      "category": "perf",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class",
+      "years": "2000-2016",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        40,
+        45
+      ],
+      "oem_range": "40–45",
+      "aftermarket_range": "25–55",
+      "category": "car",
+      "records": 17
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "SLK-Class AMG",
+      "years": "2002-2016",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        42
+      ],
+      "oem_range": "38–42",
+      "aftermarket_range": "28–55",
+      "category": "perf",
+      "records": 15
+    },
+    {
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 0,
+      "aftermarket_range": "-20–25",
+      "category": "suv",
+      "records": 1
+    },
+    {
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500XD",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 0,
+      "aftermarket_range": "-20–25",
+      "category": "suv",
+      "records": 2
+    },
+    {
+      "make": "Mercedes-Benz Vans",
+      "model": "Sprinter 3500XD",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 0,
+      "aftermarket_range": "-20–25",
+      "category": "suv",
+      "records": 0
+    },
+    {
+      "make": "Porsche",
+      "model": "718 Boxster",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": "57F/47R",
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "Porsche",
+      "model": "718 Cayman",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": "57F/47R",
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 3
+    },
+    {
+      "make": "Porsche",
+      "model": "911",
+      "years": "1990-1998",
+      "source": "lookup_table",
+      "oem_offset": "57F/47R",
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 9
+    },
+    {
+      "make": "Porsche",
+      "model": "911",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": "57F/47R",
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 21
+    },
+    {
+      "make": "Porsche",
+      "model": "911",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": "57F/47R",
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 0
+    },
+    {
+      "make": "Porsche",
+      "model": "911",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": "57F/47R",
+      "aftermarket_range": "37–55",
+      "category": "perf",
+      "records": 0
+    },
+    {
+      "make": "Porsche",
+      "model": "Macan",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 21,
+      "aftermarket_range": "1–46",
+      "category": "suv",
+      "records": 4
+    },
+    {
+      "make": "Porsche",
+      "model": "Panamera",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": "69F/58R",
+      "aftermarket_range": "48–55",
+      "category": "perf",
+      "records": 16
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Dawn",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 52,
+      "aftermarket_range": "37–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Ghost",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 52,
+      "aftermarket_range": "37–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Phantom",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 52,
+      "aftermarket_range": "37–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Rolls-Royce",
+      "model": "Wraith",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 52,
+      "aftermarket_range": "37–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Saab",
+      "model": "900",
+      "years": "1990-1993",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        40,
+        33,
+        33
+      ],
+      "oem_range": "33–40",
+      "aftermarket_range": "18–55",
+      "category": "car",
+      "records": 4
+    },
+    {
+      "make": "Saab",
+      "model": "900",
+      "years": "1994-1998",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        40,
+        33,
+        33
+      ],
+      "oem_range": "33–40",
+      "aftermarket_range": "18–55",
+      "category": "car",
+      "records": 5
+    },
+    {
+      "make": "Saab",
+      "model": "9000",
+      "years": "1990-1998",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        44,
+        33,
+        22
+      ],
+      "oem_range": "22–44",
+      "aftermarket_range": "7–55",
+      "category": "car",
+      "records": 9
+    },
+    {
+      "make": "Smart",
+      "model": "Fortwo",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 30,
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Atlas",
+      "years": "2018-2018",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "13–55",
+      "category": "suv",
+      "records": 8
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Beetle",
+      "years": "1998-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        42
+      ],
+      "oem_range": "42–42",
+      "aftermarket_range": "27–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Cabrio",
+      "years": "1995-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 5
+    },
+    {
+      "make": "Volkswagen",
+      "model": "GTI",
+      "years": "1990-1998",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 9
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Golf",
+      "years": "1990-1998",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 9
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Jetta",
+      "years": "1990-1998",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 9
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Passat",
+      "years": "1990-1997",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        35
+      ],
+      "oem_range": "35–38",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 8
+    },
+    {
+      "make": "Volvo",
+      "model": "850",
+      "years": "1993-1997",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        35,
+        35
+      ],
+      "oem_range": "35–35",
+      "aftermarket_range": "20–55",
+      "category": "car",
+      "records": 5
+    },
+    {
+      "make": "Volvo",
+      "model": "940",
+      "years": "1991-1995",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        30,
+        30
+      ],
+      "oem_range": "30–30",
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 5
+    },
+    {
+      "make": "Volvo",
+      "model": "960",
+      "years": "1992-1997",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        30
+      ],
+      "oem_range": "30–30",
+      "aftermarket_range": "15–50",
+      "category": "car",
+      "records": 6
+    },
+    {
+      "make": "Volvo",
+      "model": "S70",
+      "years": "1998-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "Volvo",
+      "model": "S80",
+      "years": "1999-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        42,
+        42
+      ],
+      "oem_range": "42–42",
+      "aftermarket_range": "27–55",
+      "category": "car",
+      "records": 1
+    },
+    {
+      "make": "Volvo",
+      "model": "V70",
+      "years": "1998-1999",
+      "source": "embedded_oem_data",
+      "oem_offsets": [
+        38,
+        38
+      ],
+      "oem_range": "38–38",
+      "aftermarket_range": "23–55",
+      "category": "car",
+      "records": 2
+    },
+    {
+      "make": "audi",
+      "model": "q7",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 37,
+      "aftermarket_range": "17–55",
+      "category": "suv",
+      "records": 8
+    },
+    {
+      "make": "bmw",
+      "model": "x5",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 40,
+      "aftermarket_range": "20–55",
+      "category": "suv",
+      "records": 5
+    },
+    {
+      "make": "land rover",
+      "model": "range rover",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 53,
+      "aftermarket_range": "33–55",
+      "category": "suv",
+      "records": 4
+    },
+    {
+      "make": "land rover",
+      "model": "range rover evoque",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 45,
+      "aftermarket_range": "25–55",
+      "category": "suv",
+      "records": 4
+    },
+    {
+      "make": "land rover",
+      "model": "range rover sport",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 45,
+      "aftermarket_range": "25–55",
+      "category": "suv",
+      "records": 0
+    },
+    {
+      "make": "land rover",
+      "model": "range rover velar",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 42,
+      "aftermarket_range": "22–55",
+      "category": "suv",
+      "records": 0
+    },
+    {
+      "make": "porsche",
+      "model": "cayenne",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 50,
+      "aftermarket_range": "30–55",
+      "category": "suv",
+      "records": 8
+    },
+    {
+      "make": "volkswagen",
+      "model": "id.4",
+      "years": "2024-2024",
+      "source": "lookup_table",
+      "oem_offset": 33,
+      "aftermarket_range": "13–55",
+      "category": "suv",
+      "records": 6
+    },
+    {
+      "make": "Porsche",
+      "model": "928",
+      "years": "1990-1995",
+      "source": "Embedded DB data: front ET60, rear ET43",
+      "oem_offset": "22F/43R",
+      "aftermarket_range": "33–55",
+      "category": "perf",
+      "records": 6,
+      "oem_range_corrected": "43–60"
+    },
+    {
+      "make": "Porsche",
+      "model": "944",
+      "years": "1990-1991",
+      "source": "Embedded DB data: front ET52-65, rear ET52-60",
+      "oem_offset": "23F/52R",
+      "aftermarket_range": "42–55",
+      "category": "perf",
+      "records": 2,
+      "oem_range_corrected": "52–65"
+    },
+    {
+      "make": "Porsche",
+      "model": "968",
+      "years": "1992-1995",
+      "source": "Embedded DB data: front ET55, rear ET52",
+      "oem_offset": "52F/52R",
+      "aftermarket_range": "42–55",
+      "category": "perf",
+      "records": 4,
+      "oem_range_corrected": "52–55"
+    }
+  ],
+  "skipped": [],
+  "errors": [],
+  "summary": {
+    "total_groups": 252,
+    "groups_updated": 252,
+    "groups_skipped": 0,
+    "errors": 0,
+    "total_db_rows_updated": 1887,
+    "run_at": "2026-06-30T19:31:39.963Z"
+  }
+}

@@ -60,6 +60,8 @@ export type FitmentEnvelope = {
 
   // Mode used
   mode: FitmentMode;
+  // Whether offset ranges are based on verified OEM data or a generic fallback
+  oemOffsetVerified: boolean;
 };
 
 export type WheelSpec = {
@@ -352,8 +354,13 @@ export function buildFitmentEnvelope(
   const oemMaxDiameter = diameters.length > 0 ? Math.max(...diameters) : 22;
   const oemMinWidth = widths.length > 0 ? Math.min(...widths) : 7;
   const oemMaxWidth = widths.length > 0 ? Math.max(...widths) : 10;
-  const oemMinOffset = offsets.length > 0 ? Math.min(...offsets) : 20;
-  const oemMaxOffset = offsets.length > 0 ? Math.max(...offsets) : 50;
+  // NOTE (2026-06-30): When no inline offset data exists, the envelope offset
+  // range is set to a wide permissive range so classification doesn't break.
+  // The geometry validator in fitment-search/route.ts is the actual hard gate.
+  // oemOffsetVerified=false signals that the offset range is unverified.
+  const oemOffsetVerified = offsets.length > 0;
+  const oemMinOffset = offsets.length > 0 ? Math.min(...offsets) : 0;
+  const oemMaxOffset = offsets.length > 0 ? Math.max(...offsets) : 0;
 
   // Parse bolt pattern for studHoles and pcd if not provided
   let studHoles = oem.studHoles;
@@ -420,6 +427,7 @@ export function buildFitmentEnvelope(
     allowedMaxOffset,
 
     mode,
+    oemOffsetVerified,
   };
 }
 

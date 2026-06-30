@@ -761,7 +761,10 @@ function buildProfileFromRow(
     id: 0,
     vehicleId: 0,
     boltPattern: row.bolt_pattern || '',
-    centerBore: parseFloat(row.center_bore_mm) || 0,
+    // 2026-06-30: null center_bore_mm must NOT default to 0.
+    // 0 causes centerBoreCompatible() to pass every wheel (wheelBore >= -0.1 is always true).
+    // Return null so validation can fail closed when bore is unknown.
+    centerBore: row.center_bore_mm != null ? (parseFloat(row.center_bore_mm) || 0) : null as unknown as number,
     studHoles: row.bolt_pattern ? parseInt(row.bolt_pattern.split('x')[0]) : 0,
     pcd: row.bolt_pattern ? parseFloat(row.bolt_pattern.split('x')[1]) : 0,
     threadSize: row.lug_thread || null,

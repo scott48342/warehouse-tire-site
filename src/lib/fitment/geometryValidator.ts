@@ -182,8 +182,14 @@ export function resolveOemOffset(params: {
     offset?: number | null;
     axle?: "front" | "rear" | "both";
   }>;
-  /** For staggered: try to get axle-specific offset before falling back to DB midpoint */
+  /** For staggered: which axle to resolve for */
   axle?: "front" | "rear";
+  /**
+   * When true and axle is specified: fail closed if no axle-specific offset found.
+   * Use for staggered-capable vehicles where front/rear must be validated independently.
+   * When false (default): fall back to DB range midpoint if axle-specific missing.
+   */
+  requireAxleSpecific?: boolean;
 }): OemOffsetResult {
   const { offsetMinMm, offsetMaxMm, oemWheelSizes, axle } = params;
 
@@ -208,6 +214,14 @@ export function resolveOemOffset(params: {
         offset_mm: avgOffset,
         width_in: w,
         source: "oem_wheel_sizes_axle",
+      };
+    }
+    // No axle-specific offset found for this staggered axle
+    if (params.requireAxleSpecific) {
+      return {
+        missing: true,
+        source: "missing",
+        reason: `No ${axle}-axle offset found in oem_wheel_sizes; staggered vehicle requires per-axle data — failing closed`,
       };
     }
   }

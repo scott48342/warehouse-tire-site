@@ -18,6 +18,12 @@ import { getCachedBulk } from "@/lib/availabilityCache";
 import { calculateWheelSellPrice } from "@/lib/pricing";
 import { normalizeToStringArray } from "@/lib/tires/tireSizeUtils";
 import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
+import {
+  resolveOemOffset,
+  computeWheelGeometry,
+  mapModeToProfile,
+  type VehicleClass as GeoVehicleClass,
+} from "@/lib/fitment/geometryValidator";
 
 // ============================================================================
 // Types
@@ -236,6 +242,8 @@ interface ParsedFitment {
   boltPattern: string;
   centerBore: number | null;
   offsetRange: { min: number; max: number };
+  // 2026-06-30: geometry-based OEM offset for validation (replaces offsetRange fallback)
+  oemOffset: import("@/lib/fitment/geometryValidator").OemOffsetResolved;
   oemDiameters: number[];
   oemWidths: number[];
   oemTireSizes: string[];
@@ -332,20 +340,32 @@ async function getVehicleFitment(
     }
   }
 
-  // Offset range from universal result
-  // FIX (2026-06-10): Default offset range expanded to cover classic to modern vehicles.
-  // Classic wheels often have -10 to +15 offset, modern is typically +30 to +50.
-  // Old defaults (20-50) rejected ALL classic wheels with negative/low offsets,
-  // causing ~3,100 vehicles to fail package generation despite having inventory.
-  // New defaults (-15 to 55) allow a permissive range while the ±3% overall-diameter
-  // safety check remains the primary fitment guard.
-  const offsetMin = result.offsetRange?.min ?? -15;
-  const offsetMax = result.offsetRange?.max ?? 55;
+  // 2026-06-30: OEM offset resolution — no fallback allowed.
+  // If the vehicle has no OEM offset data, package generation fails closed.
+  // Center bore null is also a hard failure.
+  if (!result.centerBore || result.centerBore <= 0) {
+    console.warn(`[packages/engine] Missing center bore for ${result.year} ${result.make} ${result.model} — package generation blocked`);
+    return null;
+  }
+  const parsedSizes = (parseWheelSizes(result.oemWheelSizes ?? []) as Array<{ diameter: number; width: number; offset: number | null; axle?: string }>)
+    .map(s => ({ ...s, axle: (s.axle ?? 'both') as 'front'|'rear'|'both' }));
+  const engineOemOffset = resolveOemOffset({
+    offsetMinMm: result.offsetRange?.min ?? null,
+    offsetMaxMm: result.offsetRange?.max ?? null,
+    oemWheelSizes: parsedSizes,
+  });
+  if (engineOemOffset.missing) {
+    console.warn(`[packages/engine] Missing OEM offset for ${result.year} ${result.make} ${result.model} — package generation blocked`);
+    return null;
+  }
 
   return {
     boltPattern: result.boltPattern!,
-    centerBore: result.centerBore ?? null,
-    offsetRange: { min: offsetMin, max: offsetMax },
+    centerBore: result.centerBore,
+    // Keep offsetRange for backward compat with findBestWheel; geometry check added separately
+    offsetRange: { min: result.offsetRange?.min ?? engineOemOffset.offset_mm - 30, max: result.offsetRange?.max ?? engineOemOffset.offset_mm + 30 },
+    // Geometry basis for OEM-relative validation
+    oemOffset: engineOemOffset,
     oemDiameters: oemDiameters.length > 0 ? oemDiameters : [17],
     oemWidths: oemWidths.length > 0 ? oemWidths : [7.5],
     oemTireSizes,
@@ -421,6 +441,25 @@ async function generatePackages(opts: {
     }
 
     if (!bestWheel) continue;
+
+    // ── Geometry validation (2026-06-30) ──────────────────────────────────
+    // Apply OEM-relative position check. Packages use "aggressive" profile
+    // since they intentionally show plus-sized fitments, but safety ceiling
+    // still applies. Wheels that exceed the ceiling are always rejected.
+    {
+      const wWidth  = Number(bestWheel.width   || fitment.oemOffset.width_in);
+      const wOffset = Number(bestWheel.offset  || fitment.oemOffset.offset_mm);
+      const geoVC: GeoVehicleClass = vehicleType;
+      const geo = computeWheelGeometry(
+        { width_in: wWidth, offset_mm: wOffset },
+        { width_in: fitment.oemOffset.width_in, offset_mm: fitment.oemOffset.offset_mm },
+        geoVC,
+      );
+      if (geo.exceedsSafetyCeiling || !geo.passesAggressive) {
+        console.log(`[packages/engine] GEOMETRY REJECTED ${bestWheel.sku}: delta_bs=${geo.delta_backspacing_mm.toFixed(1)}mm delta_out=${geo.delta_outboard_mm.toFixed(1)}mm`);
+        continue;
+      }
+    }
 
     // Find matching tire
     const tire = findMatchingTire(bestWheel, fitment, config.tireType);
@@ -553,11 +592,10 @@ function findBestWheel(
     // Skip if diameter doesn't match targets
     if (!criteria.targetDiameters.includes(diameter)) continue;
 
-    // Skip if offset is unsafe.
-    // Allow ±5mm beyond the OEM range — identical to the hard bounds
-    // validateFitment() enforces. Some records have degenerate ranges
-    // (min === max) that would otherwise reject every wheel in inventory.
-    if (offset < criteria.offsetRange.min - 5 || offset > criteria.offsetRange.max + 5) continue;
+    // 2026-06-30: The old flat offsetRange ±5mm filter is replaced by geometry validation.
+    // The fitment.oemOffset geometry check below is the authoritative gate.
+    // Keep the old check as a loose pre-filter only — geometry decides the final result.
+    if (offset < criteria.offsetRange.min - 15 || offset > criteria.offsetRange.max + 15) continue;
 
     // Calculate score
     let score = 50;
