@@ -24,6 +24,7 @@ import {
   mapModeToProfile,
   type VehicleClass as GeoVehicleClass,
 } from "@/lib/fitment/geometryValidator";
+import { isStaggeredCapableVehicle, analyzeStaggeredData, isConfirmedSquareSetup } from "@/lib/fitment-db/qualityTier";
 
 // ============================================================================
 // Types
@@ -337,6 +338,29 @@ async function getVehicleFitment(
         parsed.aspectRatio,
         parsed.rimDiameter
       );
+    }
+  }
+
+  // ========================================================================
+  // STAGGERED-CAPABLE VEHICLE: AXLE CONFIRMATION (2026-06-30)
+  // Cannot generate packages for a staggered-capable vehicle with unknown axle.
+  // Confirmed square (single width) is OK. Staggered detected: must have per-axle offset.
+  // ========================================================================
+  if (isStaggeredCapableVehicle(result.make ?? "", result.model ?? "")) {
+    const analysis = analyzeStaggeredData(result.oemWheelSizes ?? []);
+    if (analysis.hasStaggeredData) {
+      // Staggered detected — check for per-axle offset data
+      const staggeredFrontSizes = (result.oemWheelSizes ?? []).filter(
+        (s: any) => s.offset != null && (s.axle === 'front' || s.axle === 'both')
+      );
+      if (staggeredFrontSizes.length === 0) {
+        console.warn(`[packages/engine] Staggered ${result.make} ${result.model}: no per-axle offset data — blocked`);
+        return null;
+      }
+    } else if (!isConfirmedSquareSetup(analysis.reason)) {
+      // Neither staggered nor confirmed square — axle unknown
+      console.warn(`[packages/engine] Staggered-capable ${result.make} ${result.model}: unknown axle ("${analysis.reason}") — blocked`);
+      return null;
     }
   }
 

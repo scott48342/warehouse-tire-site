@@ -48,7 +48,7 @@ import {
   needsRearWheelConfigSelection,
 } from "@/lib/fitment/hdFitmentResolver";
 import { listLocalFitments, listFitmentsWithTierFilter } from "@/lib/fitment-db/getFitment";
-import { canDetectStaggered, isStaggeredCapableVehicle, analyzeStaggeredData, type QualityTier } from "@/lib/fitment-db/qualityTier";
+import { canDetectStaggered, isStaggeredCapableVehicle, analyzeStaggeredData, isConfirmedSquareSetup, type QualityTier } from "@/lib/fitment-db/qualityTier";
 import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 import {
   buildFitmentEnvelope,
@@ -1422,6 +1422,46 @@ async function handleDbProfilePath(
     };
     
     console.log(`  After: offset [${envelope.allowedMinOffset}, ${envelope.allowedMaxOffset}]`);
+  }
+
+  // ========================================================================
+  // STAGGERED-CAPABLE VEHICLE: AXLE CONFIRMATION (2026-06-30)
+  // For vehicles in the staggered-capable list (BMW M3, Corvette, Mustang PP,
+  // R8, GT-R, Viper, etc.), "axle unknown" must fail closed.
+  // Only two outcomes allowed:
+  //   a) isStaggered=true  → validated per-axle with requireAxleSpecific
+  //   b) isStaggered=false AND confirmed square reason → use DB midpoint (safe)
+  // Any other "axle unknown" state → hard fail.
+  // ========================================================================
+  if (isStaggeredCapableVehicle(make, model) && !staggeredInfo?.isStaggered) {
+    const reason = staggeredInfo?.reason ?? "";
+    if (!isConfirmedSquareSetup(reason)) {
+      console.warn(
+        `[fitment-search] UNKNOWN AXLE (staggered-capable): ${year} ${make} ${model} ` +
+        `reason="${reason}" — failing closed`
+      );
+      logUnresolvedFitment({
+        year, make, model,
+        trim: dbProfile.displayTrim || undefined,
+        searchType: "wheel", source: "api",
+        path: url.pathname + url.search,
+        modificationId: canonicalModificationId || undefined,
+        resolutionAttempts: ["unknown_axle_configuration"],
+      }).catch(() => {});
+      return NextResponse.json({
+        results: [], totalCount: 0,
+        fitment: {
+          unknownAxleConfiguration: true,
+          message: `This vehicle is known to have staggered wheel configurations. ` +
+            `Per-axle fitment data is required before we can safely show wheel recommendations. ` +
+            `Please contact us for assistance.`,
+          axleReason: reason || "insufficient wheel specification data",
+          vehicle: { year: Number(year), make, model, trim: dbProfile.displayTrim || null },
+          resolutionPath,
+        },
+        timing: { totalMs: Date.now() - t0 },
+      });
+    }
   }
 
   // ========================================================================
@@ -3519,6 +3559,32 @@ async function handleLegacyPath(
     oemTireSizes: profile.tireSizes || [],
     source: "universal" as string,  // Updated source to reflect new resolver
   };
+
+  // ========================================================================
+  // LEGACY PATH: STAGGERED-CAPABLE UNKNOWN AXLE CHECK
+  // Same rule as main path — must have confirmed square OR staggered+axle data.
+  // ========================================================================
+  if (isStaggeredCapableVehicle(make, model) && !legacyStaggeredInfo.isStaggered) {
+    const reason = legacyStaggeredInfo.reason ?? "";
+    if (!isConfirmedSquareSetup(reason)) {
+      console.warn(`[fitment-search] LEGACY UNKNOWN AXLE: ${year} ${make} ${model} reason="${reason}"`);
+      logUnresolvedFitment({
+        year, make, model, searchType: "wheel", source: "api",
+        path: url.pathname + url.search,
+        resolutionAttempts: ["legacyFallback_unknown_axle"],
+      }).catch(() => {});
+      return NextResponse.json({
+        results: [], totalCount: 0,
+        fitment: {
+          unknownAxleConfiguration: true,
+          message: "Per-axle fitment data required for this staggered-capable vehicle.",
+          vehicle: { year: Number(year), make, model },
+          resolutionPath: "legacyFallback",
+        },
+        timing: { totalMs: Date.now() - t0 },
+      });
+    }
+  }
 
   // ========================================================================
   // LEGACY PATH: CENTERBORE NULL CHECK + GEOMETRY INJECTION (2026-06-30)

@@ -121,6 +121,27 @@ const STAGGERED_CAPABLE_PATTERNS: Array<{ make: RegExp; model: RegExp }> = [
 ];
 
 /**
+ * Determine if a staggeredInfo result represents a CONFIRMED SQUARE setup.
+ * 
+ * A staggered-capable vehicle is only confirmed square when:
+ * - Wheel data explicitly shows same width on all specs ("Single wheel width")
+ * - Width delta < 0.5" across multiple specs ("Multiple widths but delta")
+ * - Explicit front + rear specs were compared and found identical
+ * - All specs apply to both axles with same width confirmed
+ *
+ * ANYTHING ELSE is "axle unknown" and must fail closed for staggered-capable vehicles.
+ * This includes: no data, no widths found, insufficient axle-specific data.
+ */
+export function isConfirmedSquareSetup(reason: string): boolean {
+  return (
+    reason.includes("Single wheel width (square fitment)") ||
+    reason.includes("Multiple widths but delta") ||
+    reason.includes("Front and rear specs are identical") ||
+    reason.includes("All wheel specs apply to both axles (square fitment)")
+  );
+}
+
+/**
  * Check if a vehicle is known to commonly have staggered wheel setups.
  */
 export function isStaggeredCapableVehicle(make: string, model: string): boolean {
