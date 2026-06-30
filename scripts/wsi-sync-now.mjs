@@ -71,7 +71,8 @@ function toInt(v) {
 async function main() {
   console.log('â¬‡ï¸  Downloading WSI FTP inventory...');
   const tmpFile = path.join(os.tmpdir(), `wsi_${Date.now()}.csv`);
-  execSync(`curl.exe -s --retry 3 --retry-delay 5 -u "${FTP_USER}:${FTP_PASS}" "${FTP_URL}" -o "${tmpFile}"`, { timeout: 120_000 });
+  const curlBin = process.platform === 'win32' ? 'curl.exe' : 'curl';
+  execSync(`${curlBin} -s --retry 3 --retry-delay 5 -u "${FTP_USER}:${FTP_PASS}" "${FTP_URL}" -o "${tmpFile}"`, { timeout: 120_000 });
   const stat = fs.statSync(tmpFile);
   console.log(`   Downloaded ${(stat.size / 1_048_576).toFixed(1)} MB`);
 

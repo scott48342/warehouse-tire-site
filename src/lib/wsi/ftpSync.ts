@@ -138,7 +138,9 @@ function parseCSV(text: string): Record<string, string>[] {
 
 async function downloadCSV(): Promise<string> {
   const tmpFile = path.join(os.tmpdir(), `wsi_inventory_${Date.now()}.csv`);
-  const cmd = `curl.exe -s --retry 3 --retry-delay 5 -u "${FTP_USER}:${FTP_PASS}" "${FTP_URL}" -o "${tmpFile}"`;
+  // curl.exe on Windows (local dev), curl on Linux (Vercel prod)
+  const curlBin = process.platform === "win32" ? "curl.exe" : "curl";
+  const cmd = `${curlBin} -s --retry 3 --retry-delay 5 -u "${FTP_USER}:${FTP_PASS}" "${FTP_URL}" -o "${tmpFile}"`;
 
   console.log("[wsi-sync] Downloading FTP inventory...");
   try {
