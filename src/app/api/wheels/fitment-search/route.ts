@@ -102,6 +102,13 @@ import {
 } from "@/lib/fitmentConfidence";
 
 import { matchesBrandFilter } from "@/lib/brandCodes";
+import {
+  resolveOemOffset,
+  computeWheelGeometry,
+  mapModeToProfile,
+  type OemOffsetResult,
+  type VehicleClass,
+} from "@/lib/fitment/geometryValidator";
 
 import { logUnresolvedFitment } from "@/lib/fitment-db/unresolvedFitmentTracker";
 
@@ -1418,6 +1425,70 @@ async function handleDbProfilePath(
   }
 
   // ========================================================================
+  // GEOMETRY VALIDATION SETUP (2026-06-30)
+  // Resolve OEM offset for position-delta geometry validation.
+  // Missing OEM offset = no customer-facing recommendations.
+  // ========================================================================
+
+  const geoVehicleClass: VehicleClass =
+    vehicleType === "truck" ? "truck" :
+    vehicleType === "suv"   ? "suv"   :
+    (dbProfile.boltPattern?.startsWith("6x") || dbProfile.boltPattern?.startsWith("8x")) ? "truck" :
+    "car";
+  const geoProfile = mapModeToProfile(mode);
+
+  // Primary OEM offset (all vehicles)
+  const oemOffsetResult = resolveOemOffset({
+    offsetMinMm: dbProfile.offsetMinMm,
+    offsetMaxMm: dbProfile.offsetMaxMm,
+    oemWheelSizes: parsedWheelSizes,
+  });
+
+  // Per-axle OEM offset for staggered vehicles (front/rear validated independently)
+  const frontOemOffsetResult: OemOffsetResult = staggeredInfo?.isStaggered && staggeredInfo.frontSpec
+    ? resolveOemOffset({
+        offsetMinMm: dbProfile.offsetMinMm,
+        offsetMaxMm: dbProfile.offsetMaxMm,
+        oemWheelSizes: parsedWheelSizes,
+        axle: "front",
+      })
+    : oemOffsetResult;
+
+  const rearOemOffsetResult: OemOffsetResult = staggeredInfo?.isStaggered && staggeredInfo.rearSpec
+    ? resolveOemOffset({
+        offsetMinMm: dbProfile.offsetMinMm,
+        offsetMaxMm: dbProfile.offsetMaxMm,
+        oemWheelSizes: parsedWheelSizes,
+        axle: "rear",
+      })
+    : oemOffsetResult;
+
+  // Missing OEM offset → no customer-facing wheel recommendations
+  if (oemOffsetResult.missing) {
+    console.warn(`[fitment-search] MISSING OEM OFFSET: ${year} ${make} ${model} mod=${canonicalModificationId || "(none)"} — ${oemOffsetResult.reason}`);
+    logUnresolvedFitment({
+      year, make, model,
+      trim: dbProfile.displayTrim || undefined,
+      searchType: "wheel",
+      source: "api",
+      path: url.pathname + url.search,
+      modificationId: canonicalModificationId || undefined,
+      resolutionAttempts: ["missing_oem_offset"],
+    }).catch(() => {});
+    return NextResponse.json({
+      results: [],
+      totalCount: 0,
+      fitment: {
+        missingOemOffset: true,
+        message: "Wheel recommendations require verified OEM offset data for this vehicle. Our team has been notified.",
+        vehicle: { year: Number(year), make, model, trim: dbProfile.displayTrim || null },
+        resolutionPath,
+      },
+      timing: { totalMs: Date.now() - t0 },
+    });
+  }
+
+  // ========================================================================
   // Production path: DB-first candidate filtering + live availability validation
   // - No multi-page WheelPros scans
   // - Always enforces orderable + qty >= minQty
@@ -1472,6 +1543,12 @@ async function handleDbProfilePath(
     // Fallback confidence (2026-04-26)
     fallbackConfidence,
     fallbackWarnings,
+    // Geometry validation (2026-06-30)
+    oemOffsetResult,
+    frontOemOffsetResult,
+    rearOemOffsetResult,
+    geoVehicleClass,
+    geoProfile,
   });
 }
 
@@ -1569,6 +1646,12 @@ async function handleDbFirstWheelResults(opts: {
   // Fallback confidence (2026-04-26)
   fallbackConfidence?: import("@/lib/fitment-db/fallbackEquivalence").FallbackConfidence;
   fallbackWarnings?: string[];
+  // Geometry validation (2026-06-30)
+  oemOffsetResult?: OemOffsetResult;
+  frontOemOffsetResult?: OemOffsetResult;
+  rearOemOffsetResult?: OemOffsetResult;
+  geoVehicleClass?: VehicleClass;
+  geoProfile?: "conservative" | "daily_driver" | "aggressive";
 }): Promise<NextResponse> {
   const { url, envelope, debug, t0 } = opts;
   
@@ -1862,14 +1945,62 @@ async function handleDbFirstWheelResults(opts: {
             continue; // Skip - this is an SRW-style offset, not a true DRW wheel
           }
         } else {
-          // Use envelope's allowed offset range (computed from OEM specs or HD templates)
-          const minOffset = envelope.allowedMinOffset;
-          const maxOffset = envelope.allowedMaxOffset;
-          
-          // Only filter if we have valid offset bounds
-          if (Number.isFinite(minOffset) && Number.isFinite(maxOffset)) {
-            if (wheelOffset < minOffset || wheelOffset > maxOffset) {
+          // ═══════════════════════════════════════════════════════════════
+          // GEOMETRY-BASED OFFSET VALIDATION (2026-06-30)
+          // OEM-relative position delta check replaces flat range check.
+          // delta_backspacing = how far wheel moves inboard vs OEM (dangerous).
+          // delta_outboard    = how far wheel face moves outboard vs OEM.
+          // Missing OEM offset was caught before the loop; won't be null here.
+          // ═══════════════════════════════════════════════════════════════
+          const activeGeoPrimary   = opts.oemOffsetResult;
+          const activeGeoFront     = opts.frontOemOffsetResult ?? activeGeoPrimary;
+          const activeGeoRear      = opts.rearOemOffsetResult  ?? activeGeoPrimary;
+          const geoVehicleClass    = opts.geoVehicleClass ?? "car";
+          const geoProfile         = opts.geoProfile      ?? "daily_driver";
+          const staggeredInfo      = opts.staggeredInfo;
+
+          // For staggered vehicles: assign to whichever axle this wheel width fits best
+          let activeOemGeo = activeGeoPrimary;
+          if (staggeredInfo?.isStaggered) {
+            const cw = Number(c.width) || 0;
+            const fw = staggeredInfo.frontSpec?.width ?? 0;
+            const rw = staggeredInfo.rearSpec?.width  ?? 0;
+            activeOemGeo = Math.abs(cw - fw) <= Math.abs(cw - rw)
+              ? activeGeoFront
+              : activeGeoRear;
+          }
+
+          if (activeOemGeo && !activeOemGeo.missing) {
+            const candidateWidth = Number(c.width) || activeOemGeo.width_in;
+            const geo = computeWheelGeometry(
+              { width_in: candidateWidth,          offset_mm: wheelOffset },
+              { width_in: activeOemGeo.width_in,   offset_mm: activeOemGeo.offset_mm },
+              geoVehicleClass,
+            );
+
+            if (geo.exceedsSafetyCeiling) {
+              // Hard safety ceiling — always excluded in every profile
+              if (debug) console.log(`[fitment-search] GEO EXCLUDED (safety ceiling) ${c.sku}: delta_bs=${geo.delta_backspacing_mm.toFixed(1)}mm`);
               continue;
+            }
+
+            const passesProfile =
+              geoProfile === "conservative" ? geo.passesConservative :
+              geoProfile === "aggressive"   ? geo.passesAggressive   :
+              geo.passesDailyDriver;  // daily_driver default
+
+            if (!passesProfile) {
+              if (geoProfile === "conservative") {
+                // Conservative mode: reject anything outside conservative thresholds
+                if (debug) console.log(`[fitment-search] GEO EXCLUDED (conservative) ${c.sku}: delta_bs=${geo.delta_backspacing_mm.toFixed(1)}mm`);
+                continue;
+              }
+              // daily_driver / aggressive: reject only if beyond aggressive thresholds
+              if (!geo.passesAggressive) {
+                if (debug) console.log(`[fitment-search] GEO EXCLUDED (beyond aggressive) ${c.sku}: delta_bs=${geo.delta_backspacing_mm.toFixed(1)}mm delta_out=${geo.delta_outboard_mm.toFixed(1)}mm`);
+                continue;
+              }
+              // Falls into "extended" — passes but will be labeled as such by fitment guidance
             }
           }
         }
