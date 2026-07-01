@@ -126,6 +126,9 @@ export function computeTotals(lines: QuoteLine[], taxRate: number) {
   let nontaxSubtotal = 0;
 
   for (const l of lines) {
+    // Skip tax line items — they are display-only; tax is computed below from partsSubtotal * taxRate.
+    // Including them here would double-count tax in the total.
+    if (l.meta?.type === "tax") continue;
     const ext = money((l.unitPriceUsd || 0) * (l.qty || 0));
     if (l.taxable) taxableSubtotal += ext;
     else nontaxSubtotal += ext;
