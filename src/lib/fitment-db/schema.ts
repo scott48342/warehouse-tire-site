@@ -534,3 +534,13 @@ export {
   type BuildStyle,
   type JakeBuildContext,
 } from "./schema-gallery";
+
+// ════════════════════════════════════════════════════════════════════════════════
+// EMPLOYMENT APPLICATIONS (re-exported from schema-employment.ts)
+// ════════════════════════════════════════════════════════════════════════════════
+
+export {
+  employmentApplications,
+  type EmploymentApplication,
+  type NewEmploymentApplication,
+} from "./schema-employment";

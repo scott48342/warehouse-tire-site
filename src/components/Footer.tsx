@@ -131,6 +131,14 @@ export function Footer() {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/careers" 
+                  className="text-sm text-green-400 hover:text-green-300 transition-colors font-medium"
+                >
+                  🚀 Now Hiring
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -418,6 +418,18 @@ export function Header() {
                 >
                   Wheel & Tire Packages Guide
                 </Link>
+                <div className="my-2 h-px bg-neutral-200" />
+                <Link
+                  href="/careers"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left hover:bg-green-50"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-500">🚀</span>
+                    <span className="text-sm font-semibold text-green-700">We're Hiring!</span>
+                  </div>
+                  <div className="text-xs text-neutral-500 ml-6">Join the Warehouse Tire team</div>
+                </Link>
               </div>
             </details>
 
