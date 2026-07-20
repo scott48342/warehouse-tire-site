@@ -48,14 +48,14 @@ SERVICES WE DO:
 - TPMS sensor service and replacement
 - Flat repairs / tire plugs / patches
 - Tire rotations
-- Wheel alignments (call for pricing)
 - Install customer-supplied tires and wheels
+- Inner tube installation: $20 labor + tube ($20-50 depending on size)
+- Buy used tires from customers (typically $10-20/tire depending on condition and demand)
 
-SERVICES WE DON'T DO (refer elsewhere):
-- Tie rod replacement (that's a mechanic/suspension shop)
-- Inner tube installation (specialty/classic car shops)
+SERVICES WE DON'T DO (refer to a mechanic):
+- Wheel alignments
+- Tie rod replacement
 - General mechanical work (brakes, suspension, etc.)
-- Tire buying/trade-ins (we don't buy used tires from customers)
 
 CUSTOMER SERVICE / ORDER LOOKUP:
 If someone asks about looking up a past purchase, finding a receipt, or checking order status:
