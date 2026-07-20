@@ -616,7 +616,7 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
       tires.push({
         partNumber: unified.partNumber,
         mfgPartNumber: unified.mfgPartNumber,
-        brand: unified.brand,
+        brand: normalizeBrandName(unified.brand),
         model: unified.model,
         description: unified.description,
         cost: unified.cost,
@@ -739,14 +739,16 @@ const USAF_BRAND_NAMES: Record<string, string> = {
  * Handles short codes ("KEN" → "Kenda"), all-caps, etc.
  */
 const BRAND_DISPLAY_NAMES: Record<string, string> = {
-  // Short codes
+  // Short codes (3-letter abbreviations from various supplier feeds)
   'KEN':           'Kenda',
   'BFG':           'BFGoodrich',
   'GOO':           'Goodyear',
+  'GDY':           'Goodyear',      // ATD abbreviation
   'MIC':           'Michelin',
   'TOY':           'Toyo',
   'YOK':           'Yokohama',
   'BRI':           'Bridgestone',
+  'BRD':           'Bridgestone',   // ATD abbreviation
   'HAN':           'Hankook',
   'FAL':           'Falken',
   'KUM':           'Kumho',
@@ -754,13 +756,29 @@ const BRAND_DISPLAY_NAMES: Record<string, string> = {
   'NIT':           'Nitto',
   'GEN':           'General',
   'COO':           'Cooper',
+  'COP':           'Cooper',        // ATD abbreviation
   'DUN':           'Dunlop',
+  'DNL':           'Dunlop',        // ATD abbreviation
   'FIR':           'Firestone',
   'CON':           'Continental',
   'PIR':           'Pirelli',
   'UNI':           'Uniroyal',
   'MUL':           'Multi-Mile',
   'MAS':           'Mastercraft',
+  'MSC':           'Mastercraft',   // ATD abbreviation
+  'KEL':           'Kelly',         // ATD abbreviation
+  'NOK':           'Nokian',        // ATD abbreviation
+  'ADV':           'Advanta',       // ATD abbreviation
+  'HER':           'Hercules',
+  'IRM':           'Ironman',
+  'SAI':           'Sailun',
+  'THU':           'Thunderer',
+  'VOG':           'Vogue',
+  'LAU':           'Laufenn',
+  'MIL':           'Milestar',
+  'OHT':           'Ohtsu',
+  'SUM':           'Sumitomo',
+  'GTR':           'GT Radial',
   // All-caps variants from TireWeb (normalize to consistent Title Case)
   'KENDA':         'Kenda',
   'TOYO':          'Toyo',
@@ -783,6 +801,24 @@ const BRAND_DISPLAY_NAMES: Record<string, string> = {
   'BF GOODRICH':   'BFGoodrich',
   'BFGOODRICH':    'BFGoodrich',
   'UNIROYAL':      'Uniroyal',
+  'ADVANTA':       'Advanta',
+  'ARGUS ADVANTA': 'Advanta',       // Combine variants into one
+  'KELLY':         'Kelly',
+  'NOKIAN':        'Nokian',
+  'NOKIAN TYRES':  'Nokian',
+  'HERCULES':      'Hercules',
+  'IRONMAN':       'Ironman',
+  'IRONHEAD':      'Ironman',       // Typo variant
+  'SAILUN':        'Sailun',
+  'THUNDERER':     'Thunderer',
+  'VOGUE':         'Vogue',
+  'LAUFENN':       'Laufenn',
+  'MILESTAR':      'Milestar',
+  'OHTSU':         'Ohtsu',
+  'SUMITOMO':      'Sumitomo',
+  'GT RADIAL':     'GT Radial',
+  'LEXANI':        'Lexani',
+  'LIONHART':      'Lionhart',
 };
 
 function normalizeBrandName(raw: string | null | undefined): string | null {
@@ -1962,10 +1998,12 @@ export async function GET(req: Request) {
       const brandFilter = (url.searchParams.get("brand") || "").trim();
       if (brandFilter) {
         const beforeCount = finalResults.length;
+        // Normalize the filter value to handle abbreviated codes in URLs
+        const normalizedFilter = normalizeBrandName(brandFilter) || brandFilter;
         finalResults = finalResults.filter(t => 
-          (t.brand || "").toLowerCase() === brandFilter.toLowerCase()
+          (t.brand || "").toLowerCase() === normalizedFilter.toLowerCase()
         );
-        console.log(`[tires/search] Brand filter "${brandFilter}": ${beforeCount} → ${finalResults.length} results`);
+        console.log(`[tires/search] Brand filter "${brandFilter}" (normalized: ${normalizedFilter}): ${beforeCount} → ${finalResults.length} results`);
       }
       
       // ═══════════════════════════════════════════════════════════════════════
@@ -2109,6 +2147,9 @@ export async function GET(req: Request) {
     if (brandFilterOnly && !year && !make && !model) {
       const tBrand0 = Date.now();
       
+      // Normalize the brand filter to handle abbreviated codes in URLs
+      const normalizedBrandOnly = normalizeBrandName(brandFilterOnly) || brandFilterOnly;
+      
       // Query WheelPros database for tires matching the brand
       // Join with inventory to only show in-stock items
       const brandQuery = `
@@ -2127,7 +2168,7 @@ export async function GET(req: Request) {
         limit $3
       `;
       
-      const { rows: brandRows } = await db.query(brandQuery, [brandFilterOnly, minQty || 4, pageSize * 2]);
+      const { rows: brandRows } = await db.query(brandQuery, [normalizedBrandOnly, minQty || 4, pageSize * 2]);
       
       let brandResults: TireResult[] = brandRows.map((r: any) => {
         const size = String(r.tire_size || "").trim();
@@ -3140,10 +3181,12 @@ export async function GET(req: Request) {
     const vehicleBrandFilter = (url.searchParams.get("brand") || "").trim();
     if (vehicleBrandFilter && finalResults.length > 0) {
       const beforeBrand = finalResults.length;
+      // Normalize the filter value to handle abbreviated codes in URLs
+      const normalizedVehicleBrandFilter = normalizeBrandName(vehicleBrandFilter) || vehicleBrandFilter;
       finalResults = finalResults.filter(
-        (t) => (t.brand || "").toLowerCase() === vehicleBrandFilter.toLowerCase()
+        (t) => (t.brand || "").toLowerCase() === normalizedVehicleBrandFilter.toLowerCase()
       );
-      console.log(`[tires/search:vehicle] Brand filter "${vehicleBrandFilter}": ${beforeBrand} → ${finalResults.length} results`);
+      console.log(`[tires/search:vehicle] Brand filter "${vehicleBrandFilter}" (normalized: ${normalizedVehicleBrandFilter}): ${beforeBrand} → ${finalResults.length} results`);
     }
 
     timing.totalMs = Date.now() - t0;
