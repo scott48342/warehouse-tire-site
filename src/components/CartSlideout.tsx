@@ -720,8 +720,8 @@ export function CartSlideout() {
           <div className="pt-3 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
             {isLocal ? (
               <>
-                <span>✓ Professional installation</span>
-                <span>✓ Local expert service</span>
+                <span>✓ FREE lifetime rotations</span>
+                <span>✓ FREE flat repairs</span>
               </>
             ) : (
               <>

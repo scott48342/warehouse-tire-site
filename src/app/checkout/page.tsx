@@ -912,13 +912,14 @@ export default function CheckoutPage() {
                   </div>
                 </div>
                 
-                {/* Included Services */}
+                {/* FREE Lifetime Services - Matches Belle Tire/Discount Tire value prop */}
                 <div className="border-t border-green-200/60 pt-3">
-                  <p className="text-xs font-semibold text-green-800 mb-2">Included Local Services:</p>
+                  <p className="text-xs font-semibold text-green-800 mb-2">FREE Lifetime Services Included:</p>
                   <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-green-700">
-                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Free air checks</span>
-                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Fitment verification</span>
-                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> Local support after the sale</span>
+                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> <strong>FREE lifetime rotations</strong></span>
+                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> <strong>FREE lifetime balancing</strong></span>
+                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> <strong>FREE flat repairs</strong></span>
+                    <span className="flex items-center gap-1"><span className="text-green-600">✓</span> FREE air checks</span>
                   </div>
                 </div>
               </div>

@@ -112,6 +112,10 @@ export function LocalTireAddButton({
           <span>Out the Door</span>
           <span className="flex-shrink-0">${outTheDoorTotal.toFixed(2)}</span>
         </div>
+        <div className="flex items-center gap-1.5 text-green-700 border-t border-green-200 pt-1.5 mt-1.5">
+          <span>✓</span>
+          <span className="font-semibold">FREE lifetime rotations, balancing & flat repairs</span>
+        </div>
       </div>
 
       {/* Add to Cart Button */}
