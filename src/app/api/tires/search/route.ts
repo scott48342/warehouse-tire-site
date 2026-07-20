@@ -707,8 +707,9 @@ async function searchTiresTireWebFormatted(size: string): Promise<TireResult[]> 
 // Better data than TireWeb: MAP, FET, warranty, tread depth, spec URLs
 // ============================================================================
 
-/** Brand code to brand name mapping */
+/** Brand code to brand name mapping for US AutoForce */
 const USAF_BRAND_NAMES: Record<string, string> = {
+  // Standard 3-letter codes
   'GEN': 'General',
   'BFG': 'BF Goodrich',
   'MIC': 'Michelin',
@@ -718,6 +719,7 @@ const USAF_BRAND_NAMES: Record<string, string> = {
   'TOY': 'Toyo',
   'YOK': 'Yokohama',
   'BRI': 'Bridgestone',
+  'BRD': 'Bridgestone',  // Alternate code
   'FIR': 'Firestone',
   'HAN': 'Hankook',
   'FAL': 'Falken',
@@ -727,11 +729,29 @@ const USAF_BRAND_NAMES: Record<string, string> = {
   'DUN': 'Dunlop',
   'UNI': 'Uniroyal',
   'COO': 'Cooper',
+  'COP': 'Cooper',       // Alternate code  
   'KLE': 'Kletcher',
   'MAS': 'Mastercraft',
+  'MSC': 'Mastercraft',  // Alternate code
   'ACH': 'Achilles',
   'MUL': 'Multi-Mile',
   'KEN': 'Kenda',
+  // Additional USAF brand codes
+  'GDY': 'Goodyear',     // Alternate code
+  'ADV': 'Advanta',
+  'KEL': 'Kelly',
+  'HER': 'Hercules',
+  'IRM': 'Ironman',
+  'SAI': 'Sailun',
+  'THU': 'Thunderer',
+  'LAU': 'Laufenn',
+  'MIL': 'Milestar',
+  'OHT': 'Ohtsu',
+  'SUM': 'Sumitomo',
+  'GTR': 'GT Radial',
+  'LEX': 'Lexani',
+  'LIO': 'Lionhart',
+  'NOK': 'Nokian',
 };
 
 /**
@@ -829,7 +849,9 @@ function normalizeBrandName(raw: string | null | undefined): string | null {
 }
 
 function usafBrandName(brandCode: string): string {
-  return USAF_BRAND_NAMES[brandCode?.toUpperCase()] || brandCode;
+  // First try USAF-specific code map, then fall back to general normalization
+  const code = brandCode?.toUpperCase();
+  return USAF_BRAND_NAMES[code] || normalizeBrandName(brandCode) || brandCode;
 }
 
 /**
