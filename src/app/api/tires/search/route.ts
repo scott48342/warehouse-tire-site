@@ -711,7 +711,7 @@ async function searchTiresTireWebFormatted(size: string): Promise<TireResult[]> 
 const USAF_BRAND_NAMES: Record<string, string> = {
   // Standard 3-letter codes
   'GEN': 'General',
-  'BFG': 'BF Goodrich',
+  'BFG': 'BFGoodrich',
   'MIC': 'Michelin',
   'GOO': 'Goodyear',
   'PIR': 'Pirelli',
@@ -752,6 +752,7 @@ const USAF_BRAND_NAMES: Record<string, string> = {
   'LEX': 'Lexani',
   'LIO': 'Lionhart',
   'NOK': 'Nokian',
+  'RBP': 'RBP',  // Rolling Big Power
 };
 
 /**
