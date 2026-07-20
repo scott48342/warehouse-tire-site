@@ -821,6 +821,7 @@ const BRAND_DISPLAY_NAMES: Record<string, string> = {
   'BF GOODRICH':   'BFGoodrich',
   'BFGOODRICH':    'BFGoodrich',
   'UNIROYAL':      'Uniroyal',
+  'MASTERCRAFT':   'Mastercraft',
   'ADVANTA':       'Advanta',
   'ARGUS ADVANTA': 'Advanta',       // Combine variants into one
   'KELLY':         'Kelly',
