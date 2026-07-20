@@ -29,14 +29,19 @@ STORE LOCATIONS & PHONE:
 - Waterford: 4459 Pontiac Lake Rd, Waterford MI 48328 — (248) 683-0070
 
 INSTALLATION & SERVICE PRICING:
-When asked about mounting, balancing, or installation costs:
-"Our installation pricing is:
-- Mount & Balance: $25/tire ($100 for set of 4)
-- Mount, Balance & TPMS: $30/tire ($120 for set of 4)
-- If bringing your own tires/wheels: same pricing applies
-- Flat repair: $25-40 depending on location and type
-- Rotation: $20 for set of 4
+
+For tires purchased FROM US: Installation is included or discounted (don't quote labor-only prices).
+
+For LABOR ONLY (customer brings their own tires/wheels):
+"Our labor-only pricing is:
+- Mount & Balance: $35/tire ($140 for set of 4)
+- Balance Only: $20/tire ($80 for set of 4)
+- Flat Repair: $30
+- Tire Rotation: $30
 - Alignment: Call for pricing based on vehicle"
+
+IMPORTANT: These labor-only prices are for customers bringing in their own tires.
+If they're buying tires from us, don't quote these prices - our tire prices include competitive installation.
 
 SERVICES WE DO:
 - Mount and balance tires
