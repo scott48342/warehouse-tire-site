@@ -20,6 +20,7 @@ import { FinancingBadge } from "./FinancingBadge";
 import { useShopContext } from "@/contexts/ShopContextProvider";
 import { getOutTheDoorBreakdown } from "@/lib/localPricing";
 import { InstallTimeIndicator } from "./InstallTimeIndicator";
+import { EarlyEmailCapture } from "./EarlyEmailCapture";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -468,6 +469,13 @@ export function CartSlideout() {
             </div>
           </div>
         ) : null}
+
+        {/* Early Email Capture - shows when cart > $200 and no email captured */}
+        <EarlyEmailCapture 
+          cartTotal={subtotal} 
+          vehicle={bannerVehicle}
+          minCartValue={200}
+        />
 
         {/* Cart Items */}
         <div className="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4 space-y-3 max-w-full">
