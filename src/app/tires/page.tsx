@@ -2570,12 +2570,15 @@ export default async function TiresPage({
     if (!raw) continue;
     const key = raw.toUpperCase();
     brandCounts.set(key, (brandCounts.get(key) || 0) + 1);
-    // Keep the first seen display name (or prefer title case)
+    // Keep the first seen display name - API returns normalized brand names
     if (!brandDisplayNames.has(key)) {
-      // Convert to title case for display
-      const display = raw.split(' ').map(w => 
-        w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-      ).join(' ');
+      // Use API-provided brand name directly (already normalized)
+      // Special handling for brands that need specific casing
+      const BRAND_DISPLAY_OVERRIDES: Record<string, string> = {
+        'BFGOODRICH': 'BFGoodrich',
+        'GT RADIAL': 'GT Radial',
+      };
+      const display = BRAND_DISPLAY_OVERRIDES[key] || raw;
       brandDisplayNames.set(key, display);
     }
   }
