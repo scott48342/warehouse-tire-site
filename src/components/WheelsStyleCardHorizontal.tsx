@@ -48,6 +48,9 @@ export interface WheelsStyleCardHorizontalProps {
   specLabel?: { boltPattern?: string; offset?: string };
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  // Extended offset fitment (2026-07-22)
+  offsetExtended?: boolean;
+  offsetExtendedReason?: string;
   isPopular?: boolean;
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;

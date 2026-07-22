@@ -48,6 +48,9 @@ export type WheelItem = {
   };
   supplier?: string;
   freeShipping?: boolean;
+  // Extended offset fitment (2026-07-22)
+  offsetExtended?: boolean;
+  offsetExtendedReason?: string;
 };
 
 export type SelectedWheel = {
@@ -1355,6 +1358,9 @@ export function WheelsGridWithSelection({
             }}
             finishThumbs={w.finishThumbs}
             fitmentClass={w.fitmentClass}
+            // Extended offset fitment (2026-07-22)
+            offsetExtended={w.offsetExtended}
+            offsetExtendedReason={w.offsetExtendedReason}
             viewParams={viewParams}
             dbProfile={dbProfile}
             wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
@@ -1418,6 +1424,9 @@ export function WheelsGridWithSelection({
             }}
             finishThumbs={w.finishThumbs}
             fitmentClass={w.fitmentClass}
+            // Extended offset fitment (2026-07-22)
+            offsetExtended={w.offsetExtended}
+            offsetExtendedReason={w.offsetExtendedReason}
             isPopular={isRecommended && (idx === 0 || idx === 1)}
             viewParams={viewParams}
             dbProfile={dbProfile}

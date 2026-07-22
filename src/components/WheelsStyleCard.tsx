@@ -503,6 +503,9 @@ export function WheelsStyleCard({
   selectToTires,
   pair,
   fitmentClass,
+  // Extended offset fitment (2026-07-22)
+  offsetExtended,
+  offsetExtendedReason,
   isPopular,
   dbProfile,
   wheelCenterBore,
@@ -545,6 +548,9 @@ export function WheelsStyleCard({
   selectToTires?: boolean;
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  // Extended offset fitment (2026-07-22)
+  offsetExtended?: boolean;
+  offsetExtendedReason?: string;
   isPopular?: boolean;
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
@@ -789,6 +795,14 @@ export function WheelsStyleCard({
           {freeShipping && (
             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-700">
               🚚 Free Shipping
+            </span>
+          )}
+          {offsetExtended && (
+            <span
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 cursor-help"
+              title={offsetExtendedReason || "Offset outside safe range - may require modification"}
+            >
+              ?? Extended Offset
             </span>
           )}
           <span className="text-[10px] text-neutral-400">Hardware included</span>
