@@ -51,6 +51,8 @@ export type WheelItem = {
   // Extended offset fitment (2026-07-22)
   offsetExtended?: boolean;
   offsetExtendedReason?: string;
+  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
+  requestQuote?: boolean;
 };
 
 export type SelectedWheel = {
@@ -1361,6 +1363,8 @@ export function WheelsGridWithSelection({
             // Extended offset fitment (2026-07-22)
             offsetExtended={w.offsetExtended}
             offsetExtendedReason={w.offsetExtendedReason}
+            // Request Quote (2026-07-22)
+            requestQuote={w.requestQuote}
             viewParams={viewParams}
             dbProfile={dbProfile}
             wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
@@ -1427,6 +1431,8 @@ export function WheelsGridWithSelection({
             // Extended offset fitment (2026-07-22)
             offsetExtended={w.offsetExtended}
             offsetExtendedReason={w.offsetExtendedReason}
+            // Request Quote (2026-07-22)
+            requestQuote={w.requestQuote}
             isPopular={isRecommended && (idx === 0 || idx === 1)}
             viewParams={viewParams}
             dbProfile={dbProfile}

@@ -53,6 +53,8 @@ export interface WheelVariantInput {
   offsetExtended?: boolean;
   offsetExtendedReason?: string;
   // Supplier metadata
+  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
+  requestQuote?: boolean;
   supplier?: string;
   freeShipping?: boolean;
 }
@@ -92,6 +94,8 @@ export interface GroupedWheel {
   offsetExtended?: boolean;
   offsetExtendedReason?: string;
   supplier?: string;
+  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
+  requestQuote?: boolean;
   freeShipping?: boolean;
 
   // Selected finish (for display)
@@ -468,6 +472,8 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       // Extended offset fitment (2026-07-22)
       offsetExtended: w.offsetExtended,
       offsetExtendedReason: w.offsetExtendedReason,
+      // Request Quote (2026-07-22)
+      requestQuote: w.requestQuote,
       supplier:     w.supplier,
       freeShipping: w.freeShipping,
       selectedFinish: w.finish,

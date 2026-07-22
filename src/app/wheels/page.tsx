@@ -160,6 +160,8 @@ type Wheel = {
   // Extended offset fitment (2026-07-22)
   offsetExtended?: boolean;
   offsetExtendedReason?: string;
+  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
+  requestQuote?: boolean;
 };
 
 type WheelProsBrand = {
@@ -2150,6 +2152,8 @@ export default async function WheelsPage({
                 // Extended offset fitment (2026-07-22)
                 offsetExtended: w.offsetExtended,
                 offsetExtendedReason: w.offsetExtendedReason,
+                // Request Quote (2026-07-22)
+                requestQuote: w.requestQuote,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
@@ -2176,6 +2180,8 @@ export default async function WheelsPage({
                 // Extended offset fitment (2026-07-22)
                 offsetExtended: w.offsetExtended,
                 offsetExtendedReason: w.offsetExtendedReason,
+                // Request Quote (2026-07-22)
+                requestQuote: w.requestQuote,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
@@ -2232,6 +2238,8 @@ export default async function WheelsPage({
                 // Extended offset fitment (2026-07-22)
                 offsetExtended: w.offsetExtended,
                 offsetExtendedReason: w.offsetExtendedReason,
+                // Request Quote (2026-07-22)
+                requestQuote: w.requestQuote,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,

@@ -506,6 +506,8 @@ export function WheelsStyleCard({
   // Extended offset fitment (2026-07-22)
   offsetExtended,
   offsetExtendedReason,
+  // Request Quote (2026-07-22)
+  requestQuote,
   isPopular,
   dbProfile,
   wheelCenterBore,
@@ -552,6 +554,8 @@ export function WheelsStyleCard({
   offsetExtended?: boolean;
   offsetExtendedReason?: string;
   isPopular?: boolean;
+  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
+  requestQuote?: boolean;
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
   wheelSeatType?: string;
@@ -1105,11 +1109,13 @@ export function WheelsStyleCard({
             {/* Set of 4 total - PRIMARY */}
             <div className="flex items-baseline gap-2 px-3 py-2 bg-gradient-to-r from-neutral-50 to-neutral-100 rounded-xl">
               <span className="text-2xl font-black text-neutral-900">
-                {setPrice !== null 
-                  ? `$${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
-                  : fromSetPrice !== null 
-                    ? `From $${fromSetPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
-                    : "Call for price"
+                {requestQuote 
+                  ? "Request Quote"
+                  : setPrice !== null 
+                    ? `$${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
+                    : fromSetPrice !== null 
+                      ? `From $${fromSetPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
+                      : "Call for price"
                 }
               </span>
               <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">

@@ -51,6 +51,8 @@ export interface WheelsStyleCardHorizontalProps {
   // Extended offset fitment (2026-07-22)
   offsetExtended?: boolean;
   offsetExtendedReason?: string;
+  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
+  requestQuote?: boolean;
   isPopular?: boolean;
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
