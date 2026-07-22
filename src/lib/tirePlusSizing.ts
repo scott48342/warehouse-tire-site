@@ -37,7 +37,7 @@ export type ParsedFlotationSize = {
 };
 
 export type PlusSizeCandidate = {
-  size: string;           // Tire size string (e.g., "235/55R18")
+  size: string;           // Tire size string (e.g., "235/55R18" or "33x12.50R17")
   rimDiameter: number;    // Rim diameter (must match selected wheel)
   overallDiameter: number; // Calculated OD in inches
   odDiffPercent: number;  // % difference from OEM OD (negative = smaller, positive = larger)
@@ -45,8 +45,35 @@ export type PlusSizeCandidate = {
   isPrimary: boolean;     // true if within ±2% (preferred)
   isAcceptable: boolean;  // true if within ±3% (acceptable)
   widthMm: number;        // Section width in mm
-  aspectRatio: number;    // Aspect ratio
+  aspectRatio: number;    // Aspect ratio (0 for flotation sizes)
+  isFlotation?: boolean;  // true when the candidate is a flotation size (e.g., "33x12.50R17")
 };
+
+export type FlotationEntry = {
+  dia: number;   // Overall diameter in inches
+  width: number; // Section width in inches
+  rim: number;   // Rim diameter in inches
+};
+
+/**
+ * Read the flotation size DB (values are stored as strings in tire-sizes.json).
+ */
+export function getFlotationEntries(): FlotationEntry[] {
+  return (tireSizesData.flotation as Array<{ dia: string | number; width: string | number; rim: string | number }>)
+    .map((f) => ({
+      dia: Number(f.dia),
+      width: Number(f.width),
+      rim: Number(f.rim),
+    }))
+    .filter((f) => f.dia > 0 && f.width > 0 && f.rim > 0);
+}
+
+/**
+ * Format a flotation entry as its canonical size string (e.g., "33x12.50R17").
+ */
+export function formatFlotationSize(entry: FlotationEntry): string {
+  return `${entry.dia}x${entry.width.toFixed(2)}R${entry.rim}`;
+}
 
 export type PlusSizeResult = {
   oemSize: string;
@@ -174,6 +201,90 @@ export function recommendedWheelWidthRange(tireWidthMm: number): [number, number
     Math.round((tireWidthInches * 0.7) * 2) / 2,  // Round to nearest 0.5
     Math.round((tireWidthInches * 0.95) * 2) / 2,
   ];
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// OD-BASED CANDIDATE GENERATION (metric + flotation)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Generate ALL tire size candidates (metric AND flotation) for a target wheel
+ * diameter, relative to a reference overall diameter.
+ *
+ * Unlike generatePlusSizeCandidates (which takes a metric OEM size string),
+ * this works from a raw reference OD, so the caller's original size can be
+ * metric OR flotation. A 33x12.50R26 and a 295/30R26 are near-identical in
+ * overall diameter and both belong in the same results list.
+ *
+ * Results are sorted by absolute OD difference (closest first).
+ */
+export function generateAllCandidatesForOd(
+  referenceOd: number,
+  targetRimDiameter: number,
+  options: {
+    maxOdDiffPercent?: number;     // default 3
+    primaryOdDiffPercent?: number; // default 2
+    includeFlotation?: boolean;    // default true
+  } = {}
+): PlusSizeCandidate[] {
+  const {
+    maxOdDiffPercent = 3,
+    primaryOdDiffPercent = 2,
+    includeFlotation = true,
+  } = options;
+
+  if (!referenceOd || referenceOd <= 0) return [];
+
+  const candidates: PlusSizeCandidate[] = [];
+
+  const push = (
+    size: string,
+    od: number,
+    widthMm: number,
+    aspectRatio: number,
+    isFlotation: boolean
+  ) => {
+    const odDiffInches = od - referenceOd;
+    const odDiffPercent = (odDiffInches / referenceOd) * 100;
+    const absPct = Math.abs(odDiffPercent);
+    if (absPct > maxOdDiffPercent) return;
+    candidates.push({
+      size,
+      rimDiameter: targetRimDiameter,
+      overallDiameter: Math.round(od * 100) / 100,
+      odDiffPercent: Math.round(odDiffPercent * 100) / 100,
+      odDiffInches: Math.round(odDiffInches * 100) / 100,
+      isPrimary: absPct <= primaryOdDiffPercent,
+      isAcceptable: true,
+      widthMm,
+      aspectRatio,
+      ...(isFlotation ? { isFlotation: true } : {}),
+    });
+  };
+
+  // Metric sizes
+  for (const size of tireSizesData.metric) {
+    const parsed = parseMetricSize(size);
+    if (!parsed || parsed.rim !== targetRimDiameter) continue;
+    push(size, calculateOdFromParsed(parsed), parsed.width, parsed.aspect, false);
+  }
+
+  // Flotation sizes (nominal OD = the "dia" component)
+  if (includeFlotation) {
+    for (const entry of getFlotationEntries()) {
+      if (entry.rim !== targetRimDiameter) continue;
+      push(
+        formatFlotationSize(entry),
+        entry.dia,
+        Math.round(entry.width * 25.4),
+        0,
+        true
+      );
+    }
+  }
+
+  candidates.sort((a, b) => Math.abs(a.odDiffPercent) - Math.abs(b.odDiffPercent));
+  return candidates;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

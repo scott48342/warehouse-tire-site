@@ -6,7 +6,9 @@ import tireSizesData from "@/data/tire-sizes.json";
 import {
   parseMetricSize,
   calculateOverallDiameter,
-  generatePlusSizeCandidates,
+  generateAllCandidatesForOd,
+  getFlotationEntries,
+  formatFlotationSize,
   type PlusSizeCandidate,
 } from "@/lib/tirePlusSizing";
 
@@ -15,11 +17,14 @@ import {
  *
  * Customer-facing "what other tire sizes fit?" tool.
  *
- * 1. Pick your current tire size (cascading dropdowns fed by the REAL
- *    tire-sizes.json database — only real, orderable sizes are selectable).
+ * 1. Pick your current tire size — metric (265/70R17) or flotation
+ *    (33x12.50R17) — via dropdowns fed by the REAL tire-sizes.json database,
+ *    so only real, orderable sizes are selectable.
  * 2. See full specs: overall diameter, sidewall, circumference, revs/mile.
- * 3. Pick any wheel diameter and see every alternate size within ±3% of
- *    your original overall diameter (±2% = "Best Match").
+ * 3. Pick any wheel diameter and see every alternate size — metric AND
+ *    flotation mixed together — within ±3% of your original overall diameter
+ *    (±2% = "Best Match"). A 33x12.50R26 shows up right next to its metric
+ *    twin 295/30R26.
  * 4. Every alternate size links straight into tire search (/tires?size=...).
  *
  * All math + candidate generation comes from @/lib/tirePlusSizing — the same
@@ -56,7 +61,15 @@ function rimsForWidthAspect(width: number, aspect: number): number[] {
   ].sort((a, b) => a - b);
 }
 
-const ALL_RIMS = [...new Set(ALL_PARSED.map((p) => p.rim))].sort((a, b) => a - b);
+// Flotation sizes, sorted by diameter → rim → width
+const ALL_FLOTATION = getFlotationEntries().sort(
+  (a, b) => a.dia - b.dia || a.rim - b.rim || a.width - b.width
+);
+
+// Every wheel diameter available in either DB (drives the chips)
+const ALL_RIMS = [
+  ...new Set([...ALL_PARSED.map((p) => p.rim), ...ALL_FLOTATION.map((f) => f.rim)]),
+].sort((a, b) => a - b);
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Formatting helpers
@@ -78,6 +91,8 @@ function diffColorClasses(absPct: number): string {
   return "text-yellow-600";
 }
 
+type SizeMode = "metric" | "flotation";
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Component
 // ─────────────────────────────────────────────────────────────────────────────
@@ -90,9 +105,19 @@ export function AlternateSizeFinder({
 }) {
   const initialParsed = initialSize ? parseMetricSize(initialSize) : null;
 
+  const [mode, setMode] = useState<SizeMode>("metric");
+
+  // Metric input state
   const [width, setWidth] = useState<number>(initialParsed?.width ?? 265);
   const [aspect, setAspect] = useState<number>(initialParsed?.aspect ?? 70);
   const [rim, setRim] = useState<number>(initialParsed?.rim ?? 17);
+
+  // Flotation input state (index into ALL_FLOTATION)
+  const [flotIndex, setFlotIndex] = useState<number>(() => {
+    const i = ALL_FLOTATION.findIndex((f) => f.dia === 33 && f.width === 12.5 && f.rim === 17);
+    return i >= 0 ? i : 0;
+  });
+
   const [selectedRim, setSelectedRim] = useState<number | null>(null);
 
   // Cascade: keep aspect/rim valid for the chosen width
@@ -101,22 +126,33 @@ export function AlternateSizeFinder({
   const rims = useMemo(() => rimsForWidthAspect(width, safeAspect), [width, safeAspect]);
   const safeRim = rims.includes(rim) ? rim : rims[Math.floor(rims.length / 2)];
 
-  const currentSize = `${width}/${safeAspect}R${safeRim}`;
-  const currentOd = calculateOverallDiameter(width, safeAspect, safeRim);
-  const sidewallMm = (width * safeAspect) / 100;
+  const flotation = ALL_FLOTATION[Math.min(flotIndex, ALL_FLOTATION.length - 1)];
 
-  // Candidate counts per wheel diameter (drives the chips)
+  // Current tire facts (shared by both modes)
+  const currentSize =
+    mode === "metric" ? `${width}/${safeAspect}R${safeRim}` : formatFlotationSize(flotation);
+  const currentRim = mode === "metric" ? safeRim : flotation.rim;
+  const currentOd =
+    mode === "metric"
+      ? calculateOverallDiameter(width, safeAspect, safeRim)
+      : flotation.dia;
+  const sidewallLabel =
+    mode === "metric"
+      ? `${((width * safeAspect) / 100).toFixed(0)}mm`
+      : `${((flotation.dia - flotation.rim) / 2).toFixed(1)}"`;
+
+  // Candidates per wheel diameter (metric + flotation, drives the chips)
   const rimResults = useMemo(() => {
-    return ALL_RIMS.map((r) => {
-      const result = generatePlusSizeCandidates(currentSize, r);
-      return { rim: r, candidates: result.acceptableCandidates };
-    }).filter((r) => r.candidates.length > 0);
-  }, [currentSize]);
+    return ALL_RIMS.map((r) => ({
+      rim: r,
+      candidates: generateAllCandidatesForOd(currentOd, r),
+    })).filter((r) => r.candidates.length > 0);
+  }, [currentOd]);
 
   const activeRim =
     selectedRim !== null && rimResults.some((r) => r.rim === selectedRim)
       ? selectedRim
-      : safeRim;
+      : currentRim;
 
   const activeCandidates: PlusSizeCandidate[] =
     rimResults.find((r) => r.rim === activeRim)?.candidates ?? [];
@@ -126,61 +162,113 @@ export function AlternateSizeFinder({
       <h3 className="text-xl font-bold text-neutral-900">Alternate Tire Size Finder</h3>
       <p className="mt-1 text-sm text-neutral-600">
         Enter your current tire size, then pick a wheel diameter to see every size that keeps
-        your speedometer accurate (within 3% of original diameter).
+        your speedometer accurate (within 3% of original diameter) — including flotation sizes
+        like 33x12.50R17.
       </p>
 
       {/* ── Current size input ─────────────────────────────────────────── */}
       <div className="mt-6 rounded-xl bg-neutral-50 p-4">
-        <h4 className="font-bold text-neutral-900">Your Current Tire Size</h4>
-        <div className="mt-3 flex items-end gap-2 sm:gap-3">
-          <div className="flex-1">
-            <label className="block text-xs font-medium text-neutral-500">Width</label>
-            <select
-              value={width}
-              onChange={(e) => setWidth(Number(e.target.value))}
-              className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm font-semibold"
-            >
-              {ALL_WIDTHS.map((w) => (
-                <option key={w} value={w}>
-                  {w}
-                </option>
-              ))}
-            </select>
-          </div>
-          <span className="pb-2 text-lg font-bold text-neutral-400">/</span>
-          <div className="flex-1">
-            <label className="block text-xs font-medium text-neutral-500">Aspect</label>
-            <select
-              value={safeAspect}
-              onChange={(e) => setAspect(Number(e.target.value))}
-              className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm font-semibold"
-            >
-              {aspects.map((a) => (
-                <option key={a} value={a}>
-                  {a}
-                </option>
-              ))}
-            </select>
-          </div>
-          <span className="pb-2 text-lg font-bold text-neutral-400">R</span>
-          <div className="flex-1">
-            <label className="block text-xs font-medium text-neutral-500">Wheel</label>
-            <select
-              value={safeRim}
-              onChange={(e) => {
-                setRim(Number(e.target.value));
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h4 className="font-bold text-neutral-900">Your Current Tire Size</h4>
+          <div className="flex rounded-full border border-neutral-200 bg-white p-0.5 text-xs font-bold">
+            <button
+              type="button"
+              onClick={() => {
+                setMode("metric");
                 setSelectedRim(null);
               }}
-              className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm font-semibold"
+              className={`rounded-full px-3 py-1 transition-colors ${
+                mode === "metric" ? "bg-neutral-900 text-white" : "text-neutral-500"
+              }`}
             >
-              {rims.map((r) => (
-                <option key={r} value={r}>
-                  {r}"
+              Metric
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setMode("flotation");
+                setSelectedRim(null);
+              }}
+              className={`rounded-full px-3 py-1 transition-colors ${
+                mode === "flotation" ? "bg-neutral-900 text-white" : "text-neutral-500"
+              }`}
+            >
+              Flotation
+            </button>
+          </div>
+        </div>
+
+        {mode === "metric" ? (
+          <div className="mt-3 flex items-end gap-2 sm:gap-3">
+            <div className="flex-1">
+              <label className="block text-xs font-medium text-neutral-500">Width</label>
+              <select
+                value={width}
+                onChange={(e) => setWidth(Number(e.target.value))}
+                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm font-semibold"
+              >
+                {ALL_WIDTHS.map((w) => (
+                  <option key={w} value={w}>
+                    {w}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <span className="pb-2 text-lg font-bold text-neutral-400">/</span>
+            <div className="flex-1">
+              <label className="block text-xs font-medium text-neutral-500">Aspect</label>
+              <select
+                value={safeAspect}
+                onChange={(e) => setAspect(Number(e.target.value))}
+                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm font-semibold"
+              >
+                {aspects.map((a) => (
+                  <option key={a} value={a}>
+                    {a}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <span className="pb-2 text-lg font-bold text-neutral-400">R</span>
+            <div className="flex-1">
+              <label className="block text-xs font-medium text-neutral-500">Wheel</label>
+              <select
+                value={safeRim}
+                onChange={(e) => {
+                  setRim(Number(e.target.value));
+                  setSelectedRim(null);
+                }}
+                className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm font-semibold"
+              >
+                {rims.map((r) => (
+                  <option key={r} value={r}>
+                    {r}"
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        ) : (
+          <div className="mt-3">
+            <label className="block text-xs font-medium text-neutral-500">
+              Flotation Size (Height x Width - Wheel)
+            </label>
+            <select
+              value={flotIndex}
+              onChange={(e) => {
+                setFlotIndex(Number(e.target.value));
+                setSelectedRim(null);
+              }}
+              className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm font-semibold sm:max-w-xs"
+            >
+              {ALL_FLOTATION.map((f, i) => (
+                <option key={formatFlotationSize(f)} value={i}>
+                  {formatFlotationSize(f)}
                 </option>
               ))}
             </select>
           </div>
-        </div>
+        )}
 
         {/* Current tire specs */}
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -189,9 +277,7 @@ export function AlternateSizeFinder({
             <p className="text-xs text-neutral-500">Overall Diameter</p>
           </div>
           <div className="rounded-lg bg-white px-3 py-2.5">
-            <p className="text-lg font-bold text-neutral-900">
-              {sidewallMm.toFixed(0)}mm
-            </p>
+            <p className="text-lg font-bold text-neutral-900">{sidewallLabel}</p>
             <p className="text-xs text-neutral-500">Sidewall Height</p>
           </div>
           <div className="rounded-lg bg-white px-3 py-2.5">
@@ -219,7 +305,7 @@ export function AlternateSizeFinder({
         <div className="mt-3 flex flex-wrap gap-2">
           {rimResults.map(({ rim: r, candidates }) => {
             const isActive = r === activeRim;
-            const isOriginal = r === safeRim;
+            const isOriginal = r === currentRim;
             return (
               <button
                 key={r}
@@ -274,6 +360,11 @@ export function AlternateSizeFinder({
               >
                 <div className="col-span-2 flex items-center gap-2 sm:col-span-1">
                   <span className="text-base font-bold text-neutral-900">{c.size}</span>
+                  {c.isFlotation && (
+                    <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[10px] font-bold text-neutral-500">
+                      FLOTATION
+                    </span>
+                  )}
                   {isCurrent && (
                     <span className="rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-bold text-blue-700">
                       YOUR SIZE
@@ -316,7 +407,8 @@ export function AlternateSizeFinder({
       <p className="mt-3 text-xs text-neutral-400">
         Staying within ±3% of your original overall diameter keeps your speedometer, odometer,
         ABS, and traction control working accurately. Sizes within ±2% are marked Best Match.
-        Always verify fender and suspension clearance before changing width or wheel diameter.
+        Flotation sizes (like 33x12.50R17) use their nominal diameter. Always verify fender and
+        suspension clearance before changing width or wheel diameter.
       </p>
     </div>
   );
