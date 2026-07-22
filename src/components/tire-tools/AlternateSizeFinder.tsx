@@ -120,6 +120,9 @@ export function AlternateSizeFinder({
 
   const [selectedRim, setSelectedRim] = useState<number | null>(null);
 
+  // Tire height upsize: 0 = stock height, 1/2/3 = inches ADDED to overall diameter
+  const [heightDelta, setHeightDelta] = useState<number>(0);
+
   // Cascade: keep aspect/rim valid for the chosen width
   const aspects = useMemo(() => aspectsForWidth(width), [width]);
   const safeAspect = aspects.includes(aspect) ? aspect : aspects[Math.floor(aspects.length / 2)];
@@ -141,13 +144,16 @@ export function AlternateSizeFinder({
       ? `${((width * safeAspect) / 100).toFixed(0)}mm`
       : `${((flotation.dia - flotation.rim) / 2).toFixed(1)}"`;
 
+  // Target diameter = current OD + optional upsize (+1" / +2" / +3")
+  const targetOd = currentOd + heightDelta;
+
   // Candidates per wheel diameter (metric + flotation, drives the chips)
   const rimResults = useMemo(() => {
     return ALL_RIMS.map((r) => ({
       rim: r,
-      candidates: generateAllCandidatesForOd(currentOd, r),
+      candidates: generateAllCandidatesForOd(targetOd, r),
     })).filter((r) => r.candidates.length > 0);
-  }, [currentOd]);
+  }, [targetOd]);
 
   const activeRim =
     selectedRim !== null && rimResults.some((r) => r.rim === selectedRim)
@@ -297,10 +303,69 @@ export function AlternateSizeFinder({
 
       {/* ── Wheel diameter chips ───────────────────────────────────────── */}
       <div className="mt-6">
-        <h4 className="font-bold text-neutral-900">Alternate Sizes by Wheel Diameter</h4>
+        <h4 className="font-bold text-neutral-900">Tire Height</h4>
         <p className="mt-1 text-sm text-neutral-600">
-          Pick a wheel size — great for upsizing to bigger wheels without changing your overall
-          tire height.
+          Stay stock height, or go taller for a more aggressive stance and extra ground
+          clearance.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {[0, 1, 2, 3].map((d) => {
+            const isActive = heightDelta === d;
+            return (
+              <button
+                key={d}
+                type="button"
+                onClick={() => setHeightDelta(d)}
+                className={`rounded-full border px-4 py-1.5 text-sm font-bold transition-colors ${
+                  isActive
+                    ? "border-neutral-900 bg-neutral-900 text-white"
+                    : "border-neutral-200 bg-white text-neutral-900 hover:border-neutral-400"
+                }`}
+              >
+                {d === 0 ? "Stock Height" : `+${d}"`}
+                {d > 0 && (
+                  <span
+                    className={`ml-1.5 text-[10px] font-semibold ${
+                      isActive ? "text-white/70" : "text-neutral-400"
+                    }`}
+                  >
+                    ~{(currentOd + d).toFixed(0)}"
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {heightDelta > 0 && (
+          <div className="mt-3 flex gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <span className="text-lg leading-none">⚠️</span>
+            <div className="text-sm text-amber-900">
+              <p className="font-bold">
+                Taller than stock (+{heightDelta}") — fitment is not guaranteed.
+              </p>
+              <p className="mt-1">
+                Oversized tires can rub the fenders, frame, or suspension components at full
+                steering lock or full compression. Depending on your vehicle, you may need a
+                leveling kit or lift, fender trimming, wheel spacers, or different wheel
+                offset. Your speedometer will also read slower than your true speed unless
+                recalibrated — the “Speedo @ 60” column shows the actual speed for each size.
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="mt-6">
+        <h4 className="font-bold text-neutral-900">
+          {heightDelta === 0
+            ? "Alternate Sizes by Wheel Diameter"
+            : `Sizes ~${targetOd.toFixed(0)}" Tall by Wheel Diameter`}
+        </h4>
+        <p className="mt-1 text-sm text-neutral-600">
+          {heightDelta === 0
+            ? "Pick a wheel size — great for upsizing to bigger wheels without changing your overall tire height."
+            : `Showing sizes close to ${targetOd.toFixed(1)}" overall diameter (your stock ${currentOd.toFixed(1)}" + ${heightDelta}").`}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {rimResults.map(({ rim: r, candidates }) => {
@@ -342,11 +407,15 @@ export function AlternateSizeFinder({
         </div>
         {activeCandidates.length === 0 ? (
           <div className="px-4 py-6 text-sm text-neutral-500">
-            No sizes within 3% of your original diameter on {activeRim}" wheels.
+            No sizes within 3% of {heightDelta === 0 ? "your original" : "the target"} diameter
+            on {activeRim}" wheels.
           </div>
         ) : (
           activeCandidates.map((c) => {
-            const isCurrent = c.size === currentSize;
+            const isCurrent = c.size === currentSize && heightDelta === 0;
+            // Difference shown vs YOUR CURRENT tire (not the upsize target) so
+            // the customer always sees the real change from what's on the truck.
+            const diffVsCurrentPct = ((c.overallDiameter - currentOd) / currentOd) * 100;
             const absPct = Math.abs(c.odDiffPercent);
             // Bigger tire → speedometer under-reads. When it shows 60, you're
             // actually going 60 × (newOD / oldOD).
@@ -381,11 +450,15 @@ export function AlternateSizeFinder({
                 </span>
                 <span
                   className={`text-right text-sm font-semibold ${
-                    isCurrent ? "text-blue-700" : diffColorClasses(absPct)
+                    isCurrent
+                      ? "text-blue-700"
+                      : heightDelta > 0
+                        ? "text-amber-600"
+                        : diffColorClasses(absPct)
                   }`}
                 >
-                  {c.odDiffPercent >= 0 ? "+" : ""}
-                  {c.odDiffPercent.toFixed(1)}%
+                  {diffVsCurrentPct >= 0 ? "+" : ""}
+                  {diffVsCurrentPct.toFixed(1)}%
                 </span>
                 <span className="text-right text-sm text-neutral-600">
                   {actualAt60.toFixed(1)} mph
@@ -406,9 +479,11 @@ export function AlternateSizeFinder({
 
       <p className="mt-3 text-xs text-neutral-400">
         Staying within ±3% of your original overall diameter keeps your speedometer, odometer,
-        ABS, and traction control working accurately. Sizes within ±2% are marked Best Match.
-        Flotation sizes (like 33x12.50R17) use their nominal diameter. Always verify fender and
-        suspension clearance before changing width or wheel diameter.
+        ABS, and traction control working accurately. Sizes within ±2% of the selected height
+        are marked Best Match. Flotation sizes (like 33x12.50R17) use their nominal diameter.
+        The % difference column always compares against your current tire. Always verify fender
+        and suspension clearance before changing width, height, or wheel diameter — taller
+        setups may require trimming, a leveling kit, or a lift.
       </p>
     </div>
   );
