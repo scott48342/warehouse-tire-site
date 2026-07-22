@@ -209,6 +209,22 @@ export default async function TireTechPage() {
             <SpeedometerCalculator />
             <PlusSizingCalculator />
           </div>
+
+          <div className="mt-8 rounded-2xl border border-red-100 bg-red-50 p-6 text-center">
+            <h3 className="text-lg font-bold text-neutral-900">
+              Want to see every alternate size for your wheels?
+            </h3>
+            <p className="mt-1 text-sm text-neutral-600">
+              Our full tire size calculator shows all compatible sizes for any wheel diameter
+              &mdash; with one-click shopping for each size.
+            </p>
+            <Link
+              href="/learn/tire-size-calculator"
+              className="mt-4 inline-block rounded-full bg-red-600 px-6 py-2.5 font-bold text-white transition-colors hover:bg-red-700"
+            >
+              Open Tire Size Calculator
+            </Link>
+          </div>
         </div>
       </section>
 

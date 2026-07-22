@@ -397,6 +397,13 @@ export function Header() {
                   Tire Tech & Tips
                 </Link>
                 <Link
+                  href="/learn/tire-size-calculator"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Tire Size Calculator
+                </Link>
+                <Link
                   href="/blog"
                   onClick={() => closeMenus()}
                   className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
