@@ -2203,7 +2203,7 @@ export default async function WheelsPage({
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
               <div className="text-sm font-semibold text-neutral-600">
-                {loadAllParam ? `${itemsFinal.length.toLocaleString()} styles (all loaded)` : `${itemsFinal.length} styles ({totalCount} SKUs)`}
+                {loadAllParam ? `${itemsFinal.length.toLocaleString()} styles (all loaded)` : `${itemsFinal.length} styles (${totalCount} SKUs)`}
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {safePage > 1 ? (
