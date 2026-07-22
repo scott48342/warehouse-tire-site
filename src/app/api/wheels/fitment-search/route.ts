@@ -1374,6 +1374,15 @@ async function handleDbProfilePath(
         envelope = applyClassicEnvelopeOverride(envelope, classicRange);
         classicFitmentUsed = true;
         
+        // CRITICAL: Also update dbProfile offset range for resolveOemOffset check
+        // Without this, the OEM offset validation uses vehicle_fitments data (often null)
+        // instead of the classic_fitments recommended range
+        if (classicRange.offset) {
+          dbProfile.offsetMinMm = classicRange.offset.min;
+          dbProfile.offsetMaxMm = classicRange.offset.max;
+          console.log(`[fitment-search] Updated dbProfile offset range from classic_fitments: [${classicRange.offset.min}, ${classicRange.offset.max}]`);
+        }
+        
         console.log(`[fitment-search] Envelope after classic override:`, {
           diameter: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
           width: [envelope.allowedMinWidth, envelope.allowedMaxWidth],
