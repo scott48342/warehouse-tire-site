@@ -157,11 +157,6 @@ type Wheel = {
     buildRequirement: BuildRequirement;
     buildLabel: string;
   };
-  // Extended offset fitment (2026-07-22)
-  offsetExtended?: boolean;
-  offsetExtendedReason?: string;
-  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
-  requestQuote?: boolean;
 };
 
 type WheelProsBrand = {
@@ -394,11 +389,6 @@ export default async function WheelsPage({
   const offsetMaxRaw = (Array.isArray(sp.offsetMax) ? sp.offsetMax[0] : sp.offsetMax) || "";
   const offsetMinUser = offsetMinRaw ? Number(String(offsetMinRaw)) : null;
   const offsetMaxUser = offsetMaxRaw ? Number(String(offsetMaxRaw)) : null;
-
-  // Extended fitment toggle (2026-07-22)
-  // Shows wheels that match bolt pattern but have offset outside safe range
-  const includeOffsetExtendedRaw = (Array.isArray(sp.extendedFitment) ? sp.extendedFitment[0] : sp.extendedFitment) || "";
-  const includeOffsetExtended = String(includeOffsetExtendedRaw).trim() === "1";
 
   // Fitment level: "oem" (default, strict offset) vs "lifted" (show all offsets for modified vehicles)
   const fitLevelRaw = (Array.isArray(sp.fitLevel) ? sp.fitLevel[0] : sp.fitLevel) || "";
@@ -716,9 +706,6 @@ export default async function WheelsPage({
     minOffset: minOffsetFinal,
     maxOffset: maxOffsetFinal,
     offsetType: minOffsetFinal || maxOffsetFinal ? "RANGE" : undefined,
-
-    // Extended fitment toggle (2026-07-22)
-    includeOffsetExtended: includeOffsetExtended ? "1" : undefined,
   };
 
   // Use WheelPros API for accurate fitment and full inventory
@@ -1055,9 +1042,6 @@ export default async function WheelsPage({
       fitmentClass,
       pair,
       fitmentGuidance,
-      // Extended offset fitment (2026-07-22)
-      offsetExtended: fitmentValidation?.offsetExtended || false,
-      offsetExtendedReason: fitmentValidation?.offsetExtendedReason || undefined,
       supplier:     (it as any)?.supplier || undefined,
       freeShipping: (it as any)?.freeShipping === true,
     };
@@ -1089,9 +1073,6 @@ export default async function WheelsPage({
     pair: g.pair,
     finishThumbs: g.finishOptions,
     fitmentGuidance: g.fitmentGuidance,
-    // Extended offset fitment (2026-07-22)
-    offsetExtended: g.offsetExtended,
-    offsetExtendedReason: g.offsetExtendedReason,
     supplier:     g.supplier,
     freeShipping: g.freeShipping === true,
   }));
@@ -2009,38 +1990,6 @@ export default async function WheelsPage({
               ) : null}
             </div>
 
-            {/* Extended Fitment Toggle (2026-07-22) */}
-            {hasVehicle && (
-              <div className="mt-2 flex items-center gap-2">
-                <label className="flex items-center gap-2 text-xs text-neutral-600 cursor-pointer hover:text-neutral-800">
-                  <input
-                    type="checkbox"
-                    checked={includeOffsetExtended}
-                    onChange={(e) => {
-                      const params = new URLSearchParams(window.location.search);
-                      if (e.target.checked) {
-                        params.set("extendedFitment", "1");
-                      } else {
-                        params.delete("extendedFitment");
-                      }
-                      window.location.search = params.toString();
-                    }}
-                    className="h-4 w-4 rounded border-neutral-300 text-amber-600 focus:ring-amber-500"
-                  />
-                  <span>Show extended fitment</span>
-                  <span
-                    className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-neutral-200 text-[10px] text-neutral-600 cursor-help"
-                    title="Shows wheels that match your bolt pattern but may require fender trimming, spacers, or suspension modification due to offset differences"
-                  >?</span>
-                </label>
-                {includeOffsetExtended && (
-                  <span className="text-xs text-amber-600 font-medium">
-                    ?? Extended results shown
-                  </span>
-                )}
-              </div>
-            )}
-
             {/* ═══════════════════════════════════════════════════════════════════════
                 BUILD STYLE TOGGLE - Guides users to stock/level/lifted results
                 Only shown for trucks/SUVs where leveling/lifting makes sense
@@ -2149,11 +2098,6 @@ export default async function WheelsPage({
                 inventoryType: w.inventoryType,
                 styleKey: w.styleKey,
                 fitmentClass: w.fitmentClass,
-                // Extended offset fitment (2026-07-22)
-                offsetExtended: w.offsetExtended,
-                offsetExtendedReason: w.offsetExtendedReason,
-                // Request Quote (2026-07-22)
-                requestQuote: w.requestQuote,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
@@ -2177,11 +2121,6 @@ export default async function WheelsPage({
                 inventoryType: w.inventoryType,
                 styleKey: w.styleKey,
                 fitmentClass: w.fitmentClass,
-                // Extended offset fitment (2026-07-22)
-                offsetExtended: w.offsetExtended,
-                offsetExtendedReason: w.offsetExtendedReason,
-                // Request Quote (2026-07-22)
-                requestQuote: w.requestQuote,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
@@ -2235,11 +2174,6 @@ export default async function WheelsPage({
                 inventoryType: w.inventoryType,
                 styleKey: w.styleKey,
                 fitmentClass: w.fitmentClass,
-                // Extended offset fitment (2026-07-22)
-                offsetExtended: w.offsetExtended,
-                offsetExtendedReason: w.offsetExtendedReason,
-                // Request Quote (2026-07-22)
-                requestQuote: w.requestQuote,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,

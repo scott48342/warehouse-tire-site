@@ -49,12 +49,7 @@ export interface WheelVariantInput {
     buildRequirement: "stock" | "level" | "lift-small" | "lift-large" | "may-trim";
     buildLabel: string;
   };
-  // Extended offset fitment (2026-07-22)
-  offsetExtended?: boolean;
-  offsetExtendedReason?: string;
   // Supplier metadata
-  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
-  requestQuote?: boolean;
   supplier?: string;
   freeShipping?: boolean;
 }
@@ -90,12 +85,7 @@ export interface GroupedWheel {
   
   // Fitment guidance (2026-04-07)
   fitmentGuidance?: WheelVariantInput["fitmentGuidance"];
-  // Extended offset fitment (2026-07-22)
-  offsetExtended?: boolean;
-  offsetExtendedReason?: string;
   supplier?: string;
-  /** WSI wheel with stock but no price - show Request Quote (2026-07-22) */
-  requestQuote?: boolean;
   freeShipping?: boolean;
 
   // Selected finish (for display)
@@ -427,9 +417,6 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       fitmentClass: bestFitmentClass,
       pair: defaultFinish?.pair || representative.pair,
       fitmentGuidance: bestFitmentGuidance,
-      // Extended offset fitment - use representative's status
-      offsetExtended: representative.offsetExtended,
-      offsetExtendedReason: representative.offsetExtendedReason,
       supplier:     representative.supplier,
       freeShipping: representative.freeShipping,
       selectedFinish: defaultFinish?.finish,
@@ -469,11 +456,6 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       fitmentClass: w.fitmentClass,
       pair: w.pair,
       fitmentGuidance: w.fitmentGuidance,
-      // Extended offset fitment (2026-07-22)
-      offsetExtended: w.offsetExtended,
-      offsetExtendedReason: w.offsetExtendedReason,
-      // Request Quote (2026-07-22)
-      requestQuote: w.requestQuote,
       supplier:     w.supplier,
       freeShipping: w.freeShipping,
       selectedFinish: w.finish,
