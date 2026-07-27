@@ -6,6 +6,8 @@ type Props = {
   images: string[];
   alt: string;
   note?: string;
+  /** Enable rotating wheel effect on hover (for wheel PDPs) */
+  rotateOnHover?: boolean;
 };
 
 function uniq(arr: string[]) {
@@ -202,7 +204,7 @@ function Lightbox({ src, alt, onClose, images, currentIndex, onNavigate }: Light
 // IMAGE GALLERY COMPONENT
 // ============================================================================
 
-export function ImageGallery({ images, alt, note }: Props) {
+export function ImageGallery({ images, alt, note, rotateOnHover = false }: Props) {
   const imgs = useMemo(() => uniq(images || []), [images]);
   const [idx, setIdx] = useState(0);
   const [open, setOpen] = useState(false);
@@ -216,13 +218,15 @@ export function ImageGallery({ images, alt, note }: Props) {
         {current ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={current}
-              alt={alt}
-              className="h-[360px] w-full cursor-zoom-in object-contain transition-transform duration-300 group-hover:scale-105"
-              loading="lazy"
-              onClick={() => setOpen(true)}
-            />
+            <div className={rotateOnHover ? "wheel-rotate-hover" : ""}>
+              <img
+                src={current}
+                alt={alt}
+                className={`h-[360px] w-full cursor-zoom-in object-contain ${rotateOnHover ? "" : "transition-transform duration-300 group-hover:scale-105"}`}
+                loading="lazy"
+                onClick={() => setOpen(true)}
+              />
+            </div>
             {/* Zoom hint overlay - pointer-events-none so clicks reach the img */}
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/5 group-hover:opacity-100">
               <div className="rounded-full bg-black/60 px-4 py-2 text-sm font-medium text-white">

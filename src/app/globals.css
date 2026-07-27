@@ -29,6 +29,22 @@ body {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   WHEEL ROTATE ON HOVER
+   Slowly rotates wheel images when hovered - inspired by Diablo Wheels
+   Apply .wheel-rotate-hover to the container, img inside will rotate
+   ═══════════════════════════════════════════════════════════════════════════ */
+.wheel-rotate-hover img {
+  transition: transform 0.3s ease-out;
+}
+.wheel-rotate-hover:hover img {
+  animation: wheel-spin 20s linear infinite;
+}
+@keyframes wheel-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* give room for the mobile action bar */
 @media (max-width: 767px) {
   body {
