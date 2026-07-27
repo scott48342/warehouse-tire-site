@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import {
   PREMIUM_FINISHES,
   SCORE_WEIGHTS,
@@ -90,7 +90,6 @@ import {
 import {
   getInventoryBulk,
   type CachedInventory,
-  type InventoryBulkResult,
 } from "@/lib/inventoryCache";
 
 import {
@@ -2115,22 +2114,8 @@ async function handleDbFirstWheelResults(opts: {
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tAvail0 = Date.now();
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
-  let inventoryResult: Awaited<ReturnType<typeof getInventoryBulk>>;
-  try {
-    inventoryResult = await getInventoryBulk(allSkus);
-  } catch (invErr: any) {
-    // Catch any unhandled Redis errors at route level
-    console.error(`[fitment-search] Inventory lookup threw: ${invErr?.message || invErr}`);
-    inventoryResult = { data: new Map(), redisError: true, errorMessage: invErr?.message || String(invErr) };
-  }
-  const inventoryData = inventoryResult.data;
-  const redisError = inventoryResult.redisError;
+  const inventoryData = await getInventoryBulk(allSkus);
   timing.cachedAvailabilityMs = Date.now() - tAvail0;
-
-  // Log Redis errors but continue gracefully
-  if (redisError) {
-    console.warn(`[fitment-search] ⚠️ Redis error - bypassing inventory filter: ${inventoryResult.errorMessage}`);
-  }
 
   // â”€â”€â”€ Wheel-1: inject synthetic inventory records (always) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Wheel-1 SKUs are not in the WheelPros SFTP feed so getInventoryBulk returns
@@ -2200,15 +2185,6 @@ async function handleDbFirstWheelResults(opts: {
   const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
   const MIN_INVENTORY_QTY = 4; // Minimum for a set of wheels
   const preFilterCount = fitmentValidCandidates.length;
-  
-  // REDIS RESILIENCE: If Redis failed, bypass inventory filtering entirely.
-  // Better to show potentially unavailable wheels than show nothing.
-  // Customers can still add to cart; stock is verified at checkout.
-  if (redisError) {
-    console.warn(`[fitment-search] Bypassing inventory filter due to Redis error - showing all ${preFilterCount} fitment-valid wheels`);
-    timing.inventoryFilteredOut = 0;
-    timing.redisError = true;
-  } else {
   fitmentValidCandidates = fitmentValidCandidates.filter(item => {
     const inv = inventoryData.get(item.candidate.sku);
     
@@ -2230,8 +2206,7 @@ async function handleDbFirstWheelResults(opts: {
     // Must be orderable type AND have at least 4 units to sell a set
     return isOrderable && hasSufficientQty;
   });
-    timing.inventoryFilteredOut = preFilterCount - fitmentValidCandidates.length;
-  }
+  timing.inventoryFilteredOut = preFilterCount - fitmentValidCandidates.length;
   
   if (debug && timing.inventoryFilteredOut > 0) {
     console.log(`[fitment-search] ðŸ—‘ï¸ Inventory filter removed ${timing.inventoryFilteredOut} SKUs (not in feed or qty < ${MIN_INVENTORY_QTY})`);
