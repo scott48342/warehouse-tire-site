@@ -76,7 +76,7 @@ const TIRE_BRANDS = [
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const THIS_YEAR = new Date().getFullYear();
-const YEARS = Array.from({ length: 35 }, (_, i) => String(THIS_YEAR - i));
+const YEARS = Array.from({ length: 70 }, (_, i) => String(THIS_YEAR - i));
 
 function HeroSection() {
   const router = useRouter();

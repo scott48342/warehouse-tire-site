@@ -51,7 +51,7 @@ const PRIMARY_STORE = STORES[0];
 const TIRE_BRANDS = ["Michelin", "BFGoodrich", "Goodyear", "Pirelli", "Continental", "Bridgestone"];
 
 const THIS_YEAR = new Date().getFullYear();
-const YEARS = Array.from({ length: 35 }, (_, i) => String(THIS_YEAR - i));
+const YEARS = Array.from({ length: 70 }, (_, i) => String(THIS_YEAR - i));
 const WIDTHS = [175, 185, 195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315];
 const ASPECTS = [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80];
 const RIMS = [14, 15, 16, 17, 18, 19, 20, 21, 22, 24];

@@ -19,7 +19,7 @@ import { BrandShowcase } from "./BrandShowcase";
  */
 
 const THIS_YEAR = new Date().getFullYear();
-const YEARS = Array.from({ length: 35 }, (_, i) => String(THIS_YEAR + 1 - i));
+const YEARS = Array.from({ length: 70 }, (_, i) => String(THIS_YEAR + 1 - i));
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SECTION 1: TRUST BAR (below header)
