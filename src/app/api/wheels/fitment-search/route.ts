@@ -923,8 +923,9 @@ export async function GET(req: Request) {
               centerBoreMm: bestFitment.centerBoreMm ? Number(bestFitment.centerBoreMm) : null,
               threadSize: bestFitment.threadSize,
               seatType: bestFitment.seatType,
-              offsetMinMm: bestFitment.offsetMinMm ? Number(bestFitment.offsetMinMm) : null,
-              offsetMaxMm: bestFitment.offsetMaxMm ? Number(bestFitment.offsetMaxMm) : null,
+              // CRITICAL: Use != null - offset can legitimately be 0!
+              offsetMinMm: bestFitment.offsetMinMm != null ? Number(bestFitment.offsetMinMm) : null,
+              offsetMaxMm: bestFitment.offsetMaxMm != null ? Number(bestFitment.offsetMaxMm) : null,
               oemWheelSizes: parseWheelSizes(bestFitment.oemWheelSizes),
               oemTireSizes: normalizeToStringArray(bestFitment.oemTireSizes),
               source: "db",

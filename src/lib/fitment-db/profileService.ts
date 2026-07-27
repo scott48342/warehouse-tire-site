@@ -1544,8 +1544,9 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
   let centerBoreMm = record.centerBoreMm ? parseFloat(String(record.centerBoreMm)) : null;
   let threadSize = record.threadSize;
   let seatType = record.seatType;
-  let offsetMinMm = record.offsetMinMm ? parseFloat(String(record.offsetMinMm)) : null;
-  let offsetMaxMm = record.offsetMaxMm ? parseFloat(String(record.offsetMaxMm)) : null;
+  // CRITICAL: Use != null, not truthiness check - offset can legitimately be 0!
+  let offsetMinMm = record.offsetMinMm != null ? parseFloat(String(record.offsetMinMm)) : null;
+  let offsetMaxMm = record.offsetMaxMm != null ? parseFloat(String(record.offsetMaxMm)) : null;
   let rulesApplied = false;
   
   // Check if fitment rules should override
