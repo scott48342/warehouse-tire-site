@@ -2115,7 +2115,14 @@ async function handleDbFirstWheelResults(opts: {
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const tAvail0 = Date.now();
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
-  const inventoryResult = await getInventoryBulk(allSkus);
+  let inventoryResult: Awaited<ReturnType<typeof getInventoryBulk>>;
+  try {
+    inventoryResult = await getInventoryBulk(allSkus);
+  } catch (invErr: any) {
+    // Catch any unhandled Redis errors at route level
+    console.error(`[fitment-search] Inventory lookup threw: ${invErr?.message || invErr}`);
+    inventoryResult = { data: new Map(), redisError: true, errorMessage: invErr?.message || String(invErr) };
+  }
   const inventoryData = inventoryResult.data;
   const redisError = inventoryResult.redisError;
   timing.cachedAvailabilityMs = Date.now() - tAvail0;

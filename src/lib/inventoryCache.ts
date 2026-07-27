@@ -96,6 +96,23 @@ export async function getInventoryBulk(skus: string[]): Promise<InventoryBulkRes
     const keys = skus.map((sku) => `${CACHE_KEY_PREFIX}${sku}`);
     const values = await redis.mget<string[]>(...keys);
     
+    // Check if the response itself is an error object (Upstash returns errors this way sometimes)
+    if (values && typeof values === 'object' && 'error' in (values as any)) {
+      const errorMsg = (values as any).error || 'Unknown Redis error';
+      console.warn(`[inventoryCache] Redis bulk error response for ${skus.length} SKUs: ${errorMsg}`);
+      result.redisError = true;
+      result.errorMessage = errorMsg;
+      return result;
+    }
+    
+    // Check if values is not an array (unexpected response format)
+    if (!Array.isArray(values)) {
+      console.warn(`[inventoryCache] Unexpected Redis response type: ${typeof values}`);
+      result.redisError = true;
+      result.errorMessage = 'Unexpected Redis response format';
+      return result;
+    }
+    
     for (let i = 0; i < skus.length; i++) {
       const value = values[i];
       if (!value) continue;
