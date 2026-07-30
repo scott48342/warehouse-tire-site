@@ -2027,6 +2027,22 @@ async function handleDbFirstWheelResults(opts: {
             drwDeadZoneExcluded++;
             continue; // Skip - this is an SRW-style offset, not a true DRW wheel
           }
+        } else if (opts.classicFitmentUsed) {
+          // ---------------------------------------------------------------
+          // CLASSIC VEHICLE OFFSET VALIDATION (2026-07-30)
+          // OEM-relative geometry deltas are meaningless for classics: the
+          // stock reference is a vintage narrow steel wheel (e.g. 14x6 ET0 on
+          // a G-Body), so EVERY modern 8.5"+ wide wheel exceeds the 30mm
+          // inboard safety ceiling and gets excluded (bug: '84 Regal 20"
+          // returned 0 of 457 candidates while WheelPros showed 39).
+          // classic_fitments defines the safe aftermarket offset window for
+          // the platform, and applyClassicEnvelopeOverride() has already
+          // written it into the envelope. Use that flat range instead.
+          // ---------------------------------------------------------------
+          if (wheelOffset < envelope.allowedMinOffset || wheelOffset > envelope.allowedMaxOffset) {
+            if (debug) console.log(`[fitment-search] CLASSIC OFFSET EXCLUDED ${c.sku}: ET${wheelOffset} outside classic range [${envelope.allowedMinOffset}, ${envelope.allowedMaxOffset}]`);
+            continue;
+          }
         } else {
           // ═══════════════════════════════════════════════════════════════
           // GEOMETRY-BASED OFFSET VALIDATION (2026-06-30)
