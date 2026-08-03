@@ -4,8 +4,9 @@ import { usePathname } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartSlideout } from "@/components/CartSlideout";
-// FirstOrderPopup disabled - 2026-06-11
-// import { FirstOrderPopup } from "@/components/FirstOrderPopup";
+// FirstOrderPopup re-enabled 2026-08-03 (was disabled 2026-06-11 by Package
+// Merchandising MVP commit 4aec6db; national site lost its email capture)
+import { FirstOrderPopup } from "@/components/FirstOrderPopup";
 import { CompareFloatingBadge } from "@/components/CompareFloatingBadge";
 import { ComparePanel } from "@/components/ComparePanel";
 import { Suspense } from "react";
@@ -51,7 +52,7 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
         <Footer />
       </div>
       <CartSlideout />
-      {/* FirstOrderPopup disabled - 2026-06-11 */}
+      <FirstOrderPopup />
       <CompareFloatingBadge />
       <ComparePanel />
     </>

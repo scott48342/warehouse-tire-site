@@ -19,6 +19,7 @@ import { abandonedCarts } from "@/lib/fitment-db/schema";
 import { eq } from "drizzle-orm";
 import { CartRestorer } from "./CartRestorer";
 import { markRecoveredAfterEmail } from "@/lib/cart/abandonedCartEmail";
+import { verifyCartToken } from "@/lib/cart/recoveryLink";
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 
@@ -27,13 +28,39 @@ export const dynamic = "force-dynamic";
 
 interface PageProps {
   params: Promise<{ cartId: string }>;
+  searchParams: Promise<{ tk?: string }>;
 }
 
-export default async function CartRecoverPage({ params }: PageProps) {
+export default async function CartRecoverPage({ params, searchParams }: PageProps) {
   const { cartId } = await params;
+  const { tk } = await searchParams;
 
   if (!cartId) {
     notFound();
+  }
+
+  // Validate the signed, expiring recovery token (prevents cart enumeration).
+  // Fails open only when CART_RECOVERY_LINK_SECRET is not configured (legacy).
+  const verification = verifyCartToken(cartId, tk || null, "recover");
+  if (!verification.valid) {
+    return (
+      <main className="min-h-screen bg-neutral-50 flex items-center justify-center p-4">
+        <div className="max-w-md w-full bg-white rounded-2xl shadow-lg p-8 text-center">
+          <div className="text-5xl mb-4">⏰</div>
+          <h1 className="text-2xl font-bold text-neutral-900 mb-2">Link Expired</h1>
+          <p className="text-neutral-600 mb-6">
+            This cart recovery link is invalid or has expired. No worries — you can
+            rebuild your package in just a couple of minutes.
+          </p>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center h-12 px-6 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-700 transition-colors"
+          >
+            Start Shopping
+          </Link>
+        </div>
+      </main>
+    );
   }
 
   // Fetch cart from database

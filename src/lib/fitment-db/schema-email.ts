@@ -305,3 +305,82 @@ export const cartAddEvents = pgTable(
 
 export type CartAddEvent = typeof cartAddEvents.$inferSelect;
 export type NewCartAddEvent = typeof cartAddEvents.$inferInsert;
+
+// ============================================================================
+// Cart Recovery Consents
+//
+// Dedicated consent record for abandoned-cart recovery emails.
+// SEPARATE from general marketing consent (email_subscribers.marketing_consent).
+// A customer checking "email me my cart" at checkout consents ONLY to cart
+// recovery reminders, never to promotional campaigns.
+//
+// @created 2026-08-03 (Phase 1 abandoned-cart consent rework)
+// ============================================================================
+
+export const cartRecoveryConsents = pgTable(
+  "cart_recovery_consents",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    email: varchar("email", { length: 255 }).notNull().unique(),
+    cartId: varchar("cart_id", { length: 100 }),
+    sessionId: varchar("session_id", { length: 100 }),
+    consented: boolean("consented").notNull().default(true),
+    consentSource: varchar("consent_source", { length: 100 }).notNull(),
+    consentWordingVersion: varchar("consent_wording_version", { length: 100 }).notNull(),
+    consentedAt: timestamp("consented_at", { withTimezone: true }).notNull().defaultNow(),
+    revokedAt: timestamp("revoked_at", { withTimezone: true }),
+    revokedSource: varchar("revoked_source", { length: 100 }),
+    ipAddress: varchar("ip_address", { length: 45 }),
+    userAgent: text("user_agent"),
+    isTest: boolean("is_test").notNull().default(false),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => ({
+    emailIdx: index("cart_recovery_consents_email_idx").on(table.email),
+    cartIdIdx: index("cart_recovery_consents_cart_id_idx").on(table.cartId),
+  })
+);
+
+export type CartRecoveryConsent = typeof cartRecoveryConsents.$inferSelect;
+export type NewCartRecoveryConsent = typeof cartRecoveryConsents.$inferInsert;
+
+// ============================================================================
+// Checkout Diagnostics
+//
+// Privacy-safe checkout funnel diagnostics. NEVER stores card data, full
+// addresses, full emails, or phone numbers. Used to distinguish voluntary
+// abandonment from validation failures, JS exceptions, API/shipping/payment
+// failures on mobile and desktop.
+//
+// @created 2026-08-03 (Phase 1 mobile checkout observability)
+// ============================================================================
+
+export const checkoutDiagnostics = pgTable(
+  "checkout_diagnostics",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
+    cartId: varchar("cart_id", { length: 100 }),
+    sessionId: varchar("session_id", { length: 100 }),
+    deviceType: varchar("device_type", { length: 20 }),
+    browser: varchar("browser", { length: 120 }),
+    siteMode: varchar("site_mode", { length: 20 }),
+    checkoutStep: varchar("checkout_step", { length: 50 }),
+    eventType: varchar("event_type", { length: 60 }).notNull(),
+    status: varchar("status", { length: 20 }),
+    endpoint: varchar("endpoint", { length: 200 }),
+    httpStatus: integer("http_status"),
+    errorCode: varchar("error_code", { length: 120 }),
+    detail: json("detail"),
+    pageUrl: text("page_url"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => ({
+    cartIdIdx: index("checkout_diagnostics_cart_id_idx").on(table.cartId),
+    eventTypeIdx: index("checkout_diagnostics_event_type_idx").on(table.eventType),
+    createdAtIdx: index("checkout_diagnostics_created_at_idx").on(table.createdAt),
+  })
+);
+
+export type CheckoutDiagnostic = typeof checkoutDiagnostics.$inferSelect;
+export type NewCheckoutDiagnostic = typeof checkoutDiagnostics.$inferInsert;

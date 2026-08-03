@@ -28,6 +28,9 @@ import {
   trackAddPaymentInfo 
 } from "@/components/FunnelTracker";
 import { ga4BeginCheckout } from "@/lib/ga4";
+// Checkout diagnostics + cart recovery consent (2026-08-03 Phase 1)
+import { logCheckoutDiagnostic } from "@/lib/checkout/diagnosticsClient";
+import { CART_RECOVERY_CONSENT_WORDING } from "@/lib/cart/recoveryConsentWording";
 
 /**
  * Checkout Page
@@ -110,6 +113,17 @@ export default function CheckoutPage() {
   const [processing, setProcessing] = useState(false);
   const [paymentCanceled, setPaymentCanceled] = useState(false);
   const [installSelectorExpanded, setInstallSelectorExpanded] = useState(false);
+
+  // ═══ CART RECOVERY CONSENT (2026-08-03) ═══
+  // Dedicated opt-in for cart-save/reminder emails. Does NOT subscribe the
+  // customer to marketing. Unchecked by default (explicit consent).
+  const [recoveryConsent, setRecoveryConsent] = useState(false);
+  const lastConsentSyncRef = useRef<string>("");
+
+  // ═══ CHECKOUT DIAGNOSTICS (2026-08-03) ═══
+  // Tracks the furthest step reached so exit events can attribute drop-off.
+  const checkoutStepRef = useRef<string>("contact");
+  const checkoutCompletedRef = useRef(false);
   
   // ═══════════════════════════════════════════════════════════════════════════
   // FUNNEL TRACKING
@@ -125,6 +139,7 @@ export default function CheckoutPage() {
     if (items.length > 0) {
       checkoutTracked.current = true;
       trackBeginCheckout(cartTotal);
+      logCheckoutDiagnostic({ eventType: "checkout_loaded", checkoutStep: "contact", status: "ok", detail: { itemCount: items.length } });
 
       // GA4 standard ecommerce event (additive; no-ops without gtag)
       ga4BeginCheckout({
@@ -196,10 +211,85 @@ export default function CheckoutPage() {
     if (shippingTracked.current) return;
     if (shipping.firstName && shipping.email && shipping.address && shipping.city && shipping.state && shipping.zip) {
       shippingTracked.current = true;
+      checkoutStepRef.current = "shipping";
       trackCheckoutStep2(cartTotal);
       trackAddShippingInfo(cartTotal);
     }
   }, [shipping, cartTotal]);
+
+  // ═══ CART RECOVERY CONSENT SYNC (2026-08-03) ═══
+  // Record/revoke the dedicated cart-recovery consent when the customer
+  // checks/unchecks the box with a valid email. Debounced; dedupes on
+  // (email + consent state) so we never spam the endpoint.
+  useEffect(() => {
+    const email = shipping.email.trim().toLowerCase();
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!emailValid) return;
+    // Only sync revocation if we previously recorded consent for this email
+    if (!recoveryConsent && !lastConsentSyncRef.current.startsWith(`${email}|true`)) return;
+
+    const syncKey = `${email}|${recoveryConsent}`;
+    if (lastConsentSyncRef.current === syncKey) return;
+
+    const timeoutId = setTimeout(() => {
+      lastConsentSyncRef.current = syncKey;
+      fetch("/api/cart/recovery-consent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          cartId: getCartId(),
+          sessionId: (() => { try { return sessionStorage.getItem("wt_session_id") || undefined; } catch { return undefined; } })(),
+          consented: recoveryConsent,
+          source: "checkout_checkbox",
+        }),
+        keepalive: true,
+      }).catch(() => {
+        // Allow retry on next change
+        lastConsentSyncRef.current = "";
+      });
+    }, 800);
+
+    return () => clearTimeout(timeoutId);
+  }, [recoveryConsent, shipping.email]);
+
+  // ═══ CHECKOUT DIAGNOSTICS: exit + JS exception capture (2026-08-03) ═══
+  useEffect(() => {
+    const onError = (e: ErrorEvent) => {
+      logCheckoutDiagnostic({
+        eventType: "js_exception",
+        checkoutStep: checkoutStepRef.current,
+        status: "error",
+        errorCode: e.message || "unknown_js_error",
+        detail: { source: e.filename ? e.filename.split("/").pop() : undefined, line: e.lineno },
+      });
+    };
+    const onRejection = (e: PromiseRejectionEvent) => {
+      logCheckoutDiagnostic({
+        eventType: "js_exception",
+        checkoutStep: checkoutStepRef.current,
+        status: "error",
+        errorCode: String(e.reason?.message || e.reason || "unhandled_rejection"),
+      });
+    };
+    const onPageHide = () => {
+      if (checkoutCompletedRef.current) return;
+      logCheckoutDiagnostic({
+        eventType: "checkout_exit",
+        checkoutStep: checkoutStepRef.current,
+        status: "ok",
+      });
+    };
+
+    window.addEventListener("error", onError);
+    window.addEventListener("unhandledrejection", onRejection);
+    window.addEventListener("pagehide", onPageHide);
+    return () => {
+      window.removeEventListener("error", onError);
+      window.removeEventListener("unhandledrejection", onRejection);
+      window.removeEventListener("pagehide", onPageHide);
+    };
+  }, []);
   
   const [stripeError, setStripeError] = useState<string | null>(null);
   const [paypalError, setPaypalError] = useState<string | null>(null);
@@ -237,9 +327,13 @@ export default function CheckoutPage() {
           setTaxRate(data.taxRate);
         } else {
           setTaxRate(0);
+          logCheckoutDiagnostic({ eventType: "tax_calc_result", checkoutStep: checkoutStepRef.current, status: "fail", endpoint: "/api/tax", errorCode: String(data?.error || "tax_lookup_failed") });
         }
       })
-      .catch(() => setTaxRate(0))
+      .catch((err) => {
+        setTaxRate(0);
+        logCheckoutDiagnostic({ eventType: "tax_calc_result", checkoutStep: checkoutStepRef.current, status: "error", endpoint: "/api/tax", errorCode: String(err?.message || "tax_fetch_error") });
+      })
       .finally(() => setTaxLoading(false));
   }, [isLocal, shipping.state]);
 
@@ -271,6 +365,38 @@ export default function CheckoutPage() {
 
   // Local mode: no shipping charges (delivery to store included)
   const shippingAmount = isLocal ? 0 : (shippingEstimate.isFree ? 0 : shippingEstimate.amount);
+
+  // Diagnostics: log shipping calculation result once per ZIP (2026-08-03)
+  const lastShippingZipLogged = useRef<string>("");
+  useEffect(() => {
+    if (isLocal) return;
+    const zip = shipping.zip.trim();
+    if (zip.length !== 5 || lastShippingZipLogged.current === zip) return;
+    lastShippingZipLogged.current = zip;
+    const failed = !shippingEstimate || (typeof shippingEstimate.amount !== "number") || Number.isNaN(shippingEstimate.amount);
+    logCheckoutDiagnostic({
+      eventType: "shipping_calc_result",
+      checkoutStep: checkoutStepRef.current,
+      status: failed ? "fail" : "ok",
+      detail: { isFree: !!shippingEstimate?.isFree, amountKnown: !failed },
+    });
+  }, [isLocal, shipping.zip, shippingEstimate]);
+
+  // Diagnostics: log client-side validation failures once per error set (2026-08-03)
+  const lastValidationLogged = useRef<string>("");
+  useEffect(() => {
+    if (validation.errors.length === 0) return;
+    const key = validation.errors.join("|");
+    if (lastValidationLogged.current === key) return;
+    lastValidationLogged.current = key;
+    logCheckoutDiagnostic({
+      eventType: "validation_failed",
+      checkoutStep: checkoutStepRef.current,
+      status: "fail",
+      errorCode: "package_validation",
+      detail: { errorCount: validation.errors.length },
+    });
+  }, [validation.errors]);
   
   // ═══════════════════════════════════════════════════════════════════════════
   // LOCAL SERVICE FEES
@@ -356,14 +482,17 @@ export default function CheckoutPage() {
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok || !data?.approvalUrl) {
         setPaypalError(String(data?.error || data?.detail || "PayPal checkout failed"));
+        logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "fail", endpoint: "/api/paypal/create-order", httpStatus: res.status, errorCode: String(data?.error || "paypal_create_failed") });
         setProcessing(false);
         return;
       }
 
       // Redirect to PayPal
+      checkoutCompletedRef.current = true; // leaving intentionally for PayPal
       window.location.href = String(data.approvalUrl);
     } catch (e: any) {
       setPaypalError(e?.message || String(e));
+      logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "error", endpoint: "/api/paypal/create-order", errorCode: String(e?.message || "paypal_exception") });
       setProcessing(false);
     }
   }
@@ -421,14 +550,17 @@ export default function CheckoutPage() {
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok || !data?.url) {
         setStripeError(String(data?.error || data?.detail || "Stripe checkout failed"));
+        logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-checkout-session", httpStatus: res.status, errorCode: String(data?.error || "stripe_session_failed") });
         setProcessing(false);
         return;
       }
 
       // Redirect to Stripe Checkout
+      checkoutCompletedRef.current = true; // leaving intentionally for Stripe
       window.location.href = String(data.url);
     } catch (e: any) {
       setStripeError(e?.message || String(e));
+      logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "error", endpoint: "/api/stripe/create-checkout-session", errorCode: String(e?.message || "stripe_session_exception") });
       setProcessing(false);
     }
   }
@@ -494,14 +626,17 @@ export default function CheckoutPage() {
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok || !data?.clientSecret) {
         setStripeError(String(data?.error || data?.detail || "Failed to initialize payment"));
+        logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-payment-intent", httpStatus: res.status, errorCode: String(data?.error || "payment_intent_failed") });
         return;
       }
+      logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "ok", endpoint: "/api/stripe/create-payment-intent" });
 
       setClientSecret(data.clientSecret);
       setPaymentIntentId(data.paymentIntentId);
       setQuoteId(data.quoteId);
     } catch (e: any) {
       setStripeError(e?.message || String(e));
+      logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "error", endpoint: "/api/stripe/create-payment-intent", errorCode: String(e?.message || "payment_intent_exception") });
     } finally {
       setPaymentLoading(false);
     }
@@ -527,6 +662,7 @@ export default function CheckoutPage() {
   // Create PaymentIntent when shipping info is complete
   useEffect(() => {
     if (isShippingComplete && !clientSecret && !paymentLoading) {
+      checkoutStepRef.current = "payment";
       createPaymentIntent();
       trackAddPaymentInfo(cartTotal);
     }
@@ -534,6 +670,8 @@ export default function CheckoutPage() {
 
   // Handle successful payment
   const handlePaymentSuccess = useCallback((paymentIntentId: string) => {
+    checkoutCompletedRef.current = true;
+    logCheckoutDiagnostic({ eventType: "payment_succeeded", checkoutStep: "payment", status: "ok" });
     // Clear cart and redirect to success page
     clearCart();
     router.push(`/checkout/success?payment_intent=${paymentIntentId}&quote_id=${quoteId}`);
@@ -542,6 +680,14 @@ export default function CheckoutPage() {
   // Handle payment error
   const handlePaymentError = useCallback((error: string) => {
     setStripeError(error);
+    // Classify: declines are customer-side, everything else is provider/technical
+    const declinePattern = /(declin|insufficient|card was|card_declined|expired_card|incorrect_cvc|incorrect_number|invalid.*(card|cvc|expir))/i;
+    logCheckoutDiagnostic({
+      eventType: declinePattern.test(error) ? "payment_declined" : "payment_provider_error",
+      checkoutStep: "payment",
+      status: "fail",
+      errorCode: error,
+    });
   }, []);
 
   // Handle processing state
@@ -760,6 +906,19 @@ export default function CheckoutPage() {
                   className="h-12 rounded-xl border border-neutral-200 px-4 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
                 />
               </div>
+
+              {/* Cart recovery consent - SEPARATE from marketing (2026-08-03) */}
+              <label className="mt-4 flex items-start gap-3 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={recoveryConsent}
+                  onChange={(e) => setRecoveryConsent(e.target.checked)}
+                  className="mt-0.5 h-5 w-5 rounded border-neutral-300 text-green-600 focus:ring-green-500/30 accent-green-600"
+                />
+                <span className="text-sm text-neutral-600 leading-snug">
+                  {CART_RECOVERY_CONSENT_WORDING}
+                </span>
+              </label>
             </div>
 
             {/* Section 2: Shipping/Installation */}

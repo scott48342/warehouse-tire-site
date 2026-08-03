@@ -15,7 +15,7 @@ import { eq, sql } from "drizzle-orm";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://shop.warehousetiredirect.com";
 
 export async function GET(
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ cartId: string }> }
 ) {
   const { cartId } = await params;
@@ -25,8 +25,10 @@ export async function GET(
     console.error(`[email/track/click] Failed to record click for ${cartId}:`, err);
   });
 
-  // Redirect to recovery page
-  const recoveryUrl = `${BASE_URL}/cart/recover/${cartId}`;
+  // Redirect to recovery page, forwarding the signed token from the email
+  // link (the recovery page validates it - this route never re-signs).
+  const tk = new URL(request.url).searchParams.get("tk");
+  const recoveryUrl = `${BASE_URL}/cart/recover/${encodeURIComponent(cartId)}${tk ? `?tk=${encodeURIComponent(tk)}` : ""}`;
   
   return NextResponse.redirect(recoveryUrl, {
     status: 302,

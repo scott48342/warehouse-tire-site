@@ -8,14 +8,25 @@
  * 
  * @created 2026-03-25
  * @updated 2026-04-29 - Unified professional email template
+ * @updated 2026-08-03 - Phase 1 consent rework:
+ *   - Recovery emails now require DEDICATED cart-recovery consent
+ *     (cart_recovery_consents table). Marketing consent alone is NOT enough.
+ *   - Removed "implied consent" auto-subscribe (never worked: ON CONFLICT
+ *     targeted email alone but the unique index is (email, source)).
+ *   - Recovery + opt-out links are HMAC-signed and expiring.
+ *   - Completed orders (matched by email) stop the sequence server-side.
+ *   - Duplicate-scheduler-run guard re-reads the cart before sending.
  */
 
 import nodemailer from "nodemailer";
 import pg from "pg";
 import { BRAND } from "@/lib/brand";
 import { db } from "@/lib/fitment-db/db";
-import { abandonedCarts, emailSubscribers, type AbandonedCart } from "@/lib/fitment-db/schema";
-import { eq, and, isNull, isNotNull, lt, or, sql, desc } from "drizzle-orm";
+import { abandonedCarts, type AbandonedCart } from "@/lib/fitment-db/schema";
+import { eq, and, isNull, isNotNull, lt, sql, desc } from "drizzle-orm";
+import { hasCartRecoveryConsent } from "@/lib/cart/recoveryConsent";
+import { decideRecoveryEmail } from "@/lib/cart/recoveryEligibility";
+import { signCartToken } from "@/lib/cart/recoveryLink";
 import {
   emailWrapper,
   infoBar,
@@ -166,30 +177,44 @@ async function getTransporter(settings: EmailSettings) {
 }
 
 // ============================================================================
-// Consent Checking
+// Consent + Order Checking
 // ============================================================================
 
-async function hasEmailConsent(email: string): Promise<boolean> {
+/**
+ * Recovery emails require the DEDICATED cart-recovery consent record.
+ * General marketing consent is intentionally NOT checked here - the two
+ * consent types are separate (see src/lib/cart/recoveryConsent.ts).
+ */
+async function hasRecoveryEmailConsent(email: string): Promise<boolean> {
+  return hasCartRecoveryConsent(email);
+}
+
+/**
+ * Has this email completed an order since the cart was created?
+ * Covers "customer bought (this or another cart) - stop reminding them".
+ */
+async function hasCompletedOrderForEmail(
+  email: string,
+  since: Date | null
+): Promise<boolean> {
   const normalizedEmail = email.toLowerCase().trim();
+  if (!normalizedEmail) return false;
 
-  const [subscriber] = await db
-    .select()
-    .from(emailSubscribers)
-    .where(
-      and(
-        eq(emailSubscribers.email, normalizedEmail),
-        eq(emailSubscribers.unsubscribed, false),
-        or(
-          eq(emailSubscribers.marketingConsent, true),
-          eq(emailSubscribers.source, "cart_save"),
-          eq(emailSubscribers.source, "exit_intent"),
-          eq(emailSubscribers.source, "checkout")
-        )
-      )
-    )
-    .limit(1);
-
-  return !!subscriber;
+  try {
+    const sinceDate = since || new Date(0);
+    const result: any = await db.execute(sql`
+      SELECT 1 FROM orders
+      WHERE LOWER(customer_email) = ${normalizedEmail}
+        AND paid_at IS NOT NULL
+        AND created_at >= ${sinceDate}
+      LIMIT 1
+    `);
+    const rows = Array.isArray(result) ? result : result?.rows || [];
+    return rows.length > 0;
+  } catch (err) {
+    console.error("[abandonedCartEmail] Order check failed:", err);
+    return false; // fail-open on the CHECK, eligibility still requires consent
+  }
 }
 
 // ============================================================================
@@ -197,11 +222,22 @@ async function hasEmailConsent(email: string): Promise<boolean> {
 // ============================================================================
 
 export function generateRecoveryLink(cartId: string): string {
-  return `${BASE_URL}/cart/recover/${encodeURIComponent(cartId)}`;
+  const token = signCartToken(cartId, "recover");
+  const base = `${BASE_URL}/cart/recover/${encodeURIComponent(cartId)}`;
+  return token ? `${base}?tk=${encodeURIComponent(token)}` : base;
 }
 
 export function generateTrackedClickLink(cartId: string): string {
-  return `${BASE_URL}/api/email/track/click/${encodeURIComponent(cartId)}`;
+  const token = signCartToken(cartId, "recover");
+  const base = `${BASE_URL}/api/email/track/click/${encodeURIComponent(cartId)}`;
+  return token ? `${base}?tk=${encodeURIComponent(token)}` : base;
+}
+
+/** Signed opt-out link - stops further recovery reminders for this cart's email. */
+export function generateRecoveryOptOutLink(cartId: string): string {
+  const token = signCartToken(cartId, "optout");
+  const base = `${BASE_URL}/api/cart/recovery-optout?cartId=${encodeURIComponent(cartId)}`;
+  return token ? `${base}&tk=${encodeURIComponent(token)}` : base;
 }
 
 export function generateTrackingPixelUrl(cartId: string): string {
@@ -358,8 +394,8 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
     ${ctaButton("Complete My Order", recoveryLink)}
     ${footer({
       showPhone: true,
-      unsubscribeUrl: `${BASE_URL}/unsubscribe?email=${encodeURIComponent(cart.customerEmail || "")}`,
-      customText: "Questions? Reply to this email.",
+      unsubscribeUrl: generateRecoveryOptOutLink(cart.cartId),
+      customText: "Questions? Reply to this email. You're receiving this because you asked us to save your cart \u2014 this is not a marketing subscription.",
     })}
     <tr><td>${trackingPixel}</td></tr>
   `;
@@ -414,67 +450,69 @@ export async function sendRecoveryEmail(
 ): Promise<EmailResult> {
   const cartId = cart.cartId;
 
-  if (cart.isTest) {
-    return { success: false, cartId, step, action: "skipped", reason: "test_data" };
-  }
-
-  if (!cart.customerEmail) {
-    return { success: false, cartId, step, action: "skipped", reason: "no_email" };
-  }
-
-  if (cart.status === "recovered") {
-    return { success: false, cartId, step, action: "skipped", reason: "already_recovered" };
-  }
-
-  if (cart.unsubscribed) {
-    return { success: false, cartId, step, action: "skipped", reason: "unsubscribed" };
-  }
+  // Re-read the cart to guard against duplicate scheduler runs and
+  // recoveries that happened after the batch query.
+  const [fresh] = await db
+    .select()
+    .from(abandonedCarts)
+    .where(eq(abandonedCarts.cartId, cartId))
+    .limit(1);
+  if (fresh) cart = fresh;
 
   const cartValue = Number(cart.estimatedTotal) || 0;
-  if (cartValue < MIN_CART_VALUE_FOR_EMAIL) {
-    return { success: false, cartId, step, action: "skipped", reason: "below_min_value" };
-  }
 
-  // Auto-subscribe if they gave us their email in cart (implied consent)
-  let hasConsent = await hasEmailConsent(cart.customerEmail);
-  if (!hasConsent) {
-    // Auto-create subscriber with consent - they gave us their email at checkout
-    try {
-      const normalizedEmail = cart.customerEmail.toLowerCase().trim();
-      await db.insert(emailSubscribers).values({
-        email: normalizedEmail,
-        source: "checkout",
-        vehicleYear: cart.vehicleYear?.toString(),
-        vehicleMake: cart.vehicleMake,
-        vehicleModel: cart.vehicleModel,
-        vehicleTrim: cart.vehicleTrim,
-        cartId: cart.cartId,
-        marketingConsent: true,
-        isTest: cart.isTest || false,
-      }).onConflictDoUpdate({
-        target: emailSubscribers.email,
-        set: {
-          marketingConsent: true,
-          updatedAt: new Date(),
-        },
-      });
-      console.log(`[abandonedCartEmail] Auto-subscribed ${normalizedEmail} with consent`);
-      hasConsent = true;
-    } catch (err) {
-      console.error(`[abandonedCartEmail] Failed to auto-subscribe:`, err);
-    }
-  }
-  
-  if (!hasConsent) {
-    return { success: false, cartId, step, action: "skipped", reason: "no_consent" };
-  }
+  const stepSentAt =
+    step === "first" ? cart.firstEmailSentAt :
+    step === "second" ? cart.secondEmailSentAt :
+    cart.thirdEmailSentAt;
 
   const lastEmailAt = cart.thirdEmailSentAt || cart.secondEmailSentAt || cart.firstEmailSentAt;
-  if (lastEmailAt) {
-    const hoursSinceLastEmail = (Date.now() - new Date(lastEmailAt).getTime()) / (1000 * 60 * 60);
-    if (hoursSinceLastEmail < EMAIL_COOLDOWN_HOURS) {
-      return { success: false, cartId, step, action: "skipped", reason: "cooldown" };
+  const hoursSinceLastEmail = lastEmailAt
+    ? (Date.now() - new Date(lastEmailAt).getTime()) / (1000 * 60 * 60)
+    : null;
+
+  const [hasRecoveryConsent, hasCompletedOrder] = cart.customerEmail
+    ? await Promise.all([
+        hasRecoveryEmailConsent(cart.customerEmail),
+        hasCompletedOrderForEmail(cart.customerEmail, cart.createdAt ? new Date(cart.createdAt) : null),
+      ])
+    : [false, false];
+
+  const decision = decideRecoveryEmail({
+    isTest: !!cart.isTest,
+    email: cart.customerEmail,
+    cartStatus: cart.status,
+    cartUnsubscribed: !!cart.unsubscribed,
+    cartValue,
+    minCartValue: MIN_CART_VALUE_FOR_EMAIL,
+    hasRecoveryConsent,
+    hasCompletedOrder,
+    stepAlreadySent: !!stepSentAt,
+    hoursSinceLastEmail,
+    cooldownHours: EMAIL_COOLDOWN_HOURS,
+  });
+
+  if (!decision.allowed) {
+    // If the customer completed an order, close the cart so future runs
+    // skip it cheaply and dashboards reflect reality.
+    if (decision.reason === "order_completed") {
+      try {
+        await db
+          .update(abandonedCarts)
+          .set({ status: "recovered", recoveredAt: new Date(), updatedAt: new Date() })
+          .where(eq(abandonedCarts.cartId, cartId));
+        console.log(`[abandonedCartEmail] Cart ${cartId} closed - order completed for its email`);
+      } catch (err) {
+        console.error(`[abandonedCartEmail] Failed to close cart ${cartId}:`, err);
+      }
     }
+    return { success: false, cartId, step, action: "skipped", reason: decision.reason };
+  }
+
+  // decideRecoveryEmail guarantees an email exists; narrow for TypeScript.
+  const customerEmail = cart.customerEmail;
+  if (!customerEmail) {
+    return { success: false, cartId, step, action: "skipped", reason: "no_email" };
   }
 
   const subject = buildSubject(cart, step);
@@ -513,14 +551,14 @@ export async function sendRecoveryEmail(
     
     const result = await transporter.sendMail({
       from: fromAddress,
-      to: cart.customerEmail,
+      to: customerEmail,
       subject,
       // Send HTML-only (no text fallback) to avoid SMTP servers that mangle multipart messages
       html,
       replyTo: BRAND.email,
     });
 
-    console.log(`[abandonedCartEmail] Sent ${step} to ${cart.customerEmail}, id: ${result.messageId}`);
+    console.log(`[abandonedCartEmail] Sent ${step} to ${customerEmail}, id: ${result.messageId}`);
     await updateEmailTracking(cartId, step, "sent");
 
     return { success: true, cartId, step, action: "sent", messageId: result.messageId };
@@ -614,7 +652,19 @@ export async function processAbandonedCartEmails(): Promise<ProcessEmailsResult>
 
       if (result.action === "sent") sent++;
       else if (result.action === "logged") logged++;
-      else if (["no_email", "below_min_value", "cooldown", "no_consent"].includes(result.reason || "")) skipped++;
+      else if ([
+        "no_email",
+        "below_min_value",
+        "cooldown",
+        "no_consent",
+        "no_recovery_consent",
+        "order_completed",
+        "step_already_sent",
+        "already_recovered",
+        "cart_not_abandoned",
+        "unsubscribed",
+        "test_data",
+      ].includes(result.reason || "")) skipped++;
       else errors++;
     }
   }
@@ -635,8 +685,8 @@ export async function getCartEmailStatus(cartId: string): Promise<CartEmailStatu
 
   if (!cart) return null;
 
-  const hasConsent = cart.customerEmail 
-    ? await hasEmailConsent(cart.customerEmail)
+  const hasConsent = cart.customerEmail
+    ? await hasRecoveryEmailConsent(cart.customerEmail)
     : false;
 
   let nextEmailStep: EmailStep | null = null;

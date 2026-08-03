@@ -5,6 +5,8 @@ import { getStripeClient } from "@/lib/payments/stripeClient";
 import { createOrder, getOrderByStripeSession, getOrderByPaymentIntent, getOrderByQuote, markOrderEmailSent } from "@/lib/orders";
 import { sendOrderConfirmationEmail } from "@/lib/email";
 import { markCartEventsPurchased } from "@/lib/cart/cartAddEventService";
+import { markCartRecovered } from "@/lib/cart/abandonedCartService";
+import { logCheckoutDiagnosticServer } from "@/lib/checkout/diagnosticsServer";
 import { processSupplierOrders } from "@/lib/suppliers/supplierOrderService";
 
 export const runtime = "nodejs";
@@ -92,14 +94,32 @@ export async function POST(req: Request) {
     }
 
     // Create order (note: no stripeSessionId for PaymentIntent flow)
-    const { id: orderId } = await createOrder(db, {
-      quoteId,
-      stripePaymentIntentId: paymentIntentId,
-      amountPaidCents: amountTotal,
-      customerEmail: customerEmail || quote.snapshot.customer.email,
-      customerPhone: quote.snapshot.customer.phone,
-      snapshot: quote.snapshot,
-    });
+    let orderId: string;
+    try {
+      const created = await createOrder(db, {
+        quoteId,
+        stripePaymentIntentId: paymentIntentId,
+        amountPaidCents: amountTotal,
+        customerEmail: customerEmail || quote.snapshot.customer.email,
+        customerPhone: quote.snapshot.customer.phone,
+        snapshot: quote.snapshot,
+      });
+      orderId = created.id;
+    } catch (orderErr: any) {
+      // CRITICAL: payment succeeded but order creation failed.
+      // Log a diagnostic, then 500 so Stripe retries the webhook.
+      console.error(`[stripe/webhook] ORDER CREATE FAILED after successful payment:`, orderErr);
+      await logCheckoutDiagnosticServer({
+        eventType: "order_create_failed",
+        cartId,
+        checkoutStep: "post_payment",
+        status: "error",
+        endpoint: "stripe_webhook:payment_intent.succeeded",
+        errorCode: String(orderErr?.message || "order_create_exception"),
+        detail: { quoteId },
+      });
+      return NextResponse.json({ error: "order_create_failed" }, { status: 500 });
+    }
 
     console.log(`[stripe/webhook] Created order from PaymentIntent: ${orderId}`);
 
@@ -140,6 +160,15 @@ export async function POST(req: Request) {
         }
       } catch (err: any) {
         console.warn(`[stripe/webhook] Failed to mark cart events purchased:`, err.message);
+      }
+
+      // Mark abandoned cart as recovered (server-side; stops recovery emails
+      // even if the client-side success-page call never fires)
+      try {
+        await markCartRecovered(cartId, orderId);
+        console.log(`[stripe/webhook] Marked abandoned cart ${cartId} recovered`);
+      } catch (err: any) {
+        console.warn(`[stripe/webhook] Failed to mark abandoned cart recovered:`, err.message);
       }
     }
 
@@ -250,6 +279,15 @@ export async function POST(req: Request) {
         }
       } catch (err: any) {
         console.warn(`[stripe/webhook] Failed to mark cart events purchased:`, err.message);
+      }
+
+      // Mark abandoned cart as recovered (server-side; stops recovery emails
+      // even if the client-side success-page call never fires)
+      try {
+        await markCartRecovered(cartId, orderId);
+        console.log(`[stripe/webhook] Marked abandoned cart ${cartId} recovered`);
+      } catch (err: any) {
+        console.warn(`[stripe/webhook] Failed to mark abandoned cart recovered:`, err.message);
       }
     }
 

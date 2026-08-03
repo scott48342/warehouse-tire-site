@@ -30,9 +30,19 @@ import Script from 'next/script'
 const CLARITY_PROJECT_ID_NATIONAL = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || ''
 const CLARITY_PROJECT_ID_LOCAL = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID_LOCAL || ''
 
+// Production-only: never record dev or preview sessions (2026-08-03)
+const IS_PRODUCTION =
+  process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ||
+  (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_VERCEL_ENV)
+
 export function MicrosoftClarity() {
   // Don't render if no project IDs configured
   if (!CLARITY_PROJECT_ID_NATIONAL && !CLARITY_PROJECT_ID_LOCAL) {
+    return null
+  }
+
+  // Don't record dev/preview sessions
+  if (!IS_PRODUCTION) {
     return null
   }
 
@@ -40,10 +50,16 @@ export function MicrosoftClarity() {
     <Script id="microsoft-clarity" strategy="afterInteractive">
       {`
         (function(){
+          // Duplicate-injection guard (Script id dedupes across renders, this
+          // guards against any second init path)
+          if (window.__wtClarityInit) return;
+          window.__wtClarityInit = true;
+
           // Determine which Clarity project to use based on hostname
           var nationalId = "${CLARITY_PROJECT_ID_NATIONAL}";
           var localId = "${CLARITY_PROJECT_ID_LOCAL}";
-          var projectId = window.location.hostname.includes('warehousetire.net') ? localId : nationalId;
+          var isLocalSite = window.location.hostname.indexOf('warehousetire.net') !== -1;
+          var projectId = isLocalSite ? localId : nationalId;
           
           if (!projectId) return;
           
@@ -53,6 +69,16 @@ export function MicrosoftClarity() {
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", projectId);
+
+          // Base session tags (privacy-safe: no PII)
+          try {
+            window.clarity('set', 'site_mode', isLocalSite ? 'local' : 'national');
+            var ua = navigator.userAgent.toLowerCase();
+            var device = /tablet|ipad|playbook|silk/.test(ua) ? 'tablet'
+              : /mobile|iphone|ipod|android|blackberry|opera mini|iemobile/.test(ua) ? 'mobile'
+              : 'desktop';
+            window.clarity('set', 'device_type', device);
+          } catch (e) {}
         })();
       `}
     </Script>

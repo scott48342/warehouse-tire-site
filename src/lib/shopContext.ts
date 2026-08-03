@@ -163,8 +163,15 @@ export function detectShopContextFromHostPath(
 ): ShopContext {
   const normalizedHost = host.toLowerCase().replace(/:\d+$/, ''); // Remove port
   
-  // FORCE_LOCAL_MODE env var for testing local mode on any host
-  if (typeof process !== 'undefined' && process.env?.FORCE_LOCAL_MODE === 'true') {
+  // FORCE_LOCAL_MODE env var for testing local mode on any host.
+  // HARDENED 2026-08-03: never honored in production. Both domains are served
+  // by ONE Vercel project, so a production FORCE_LOCAL_MODE would silently
+  // flip the national site into local mode (hiding the first-order popup,
+  // enabling install fees, etc.). Dev + preview only.
+  const forceLocalAllowed =
+    typeof process !== 'undefined' &&
+    (process.env?.NODE_ENV === 'development' || process.env?.VERCEL_ENV === 'preview');
+  if (forceLocalAllowed && process.env?.FORCE_LOCAL_MODE === 'true') {
     return {
       mode: 'local',
       selectedStore: 'pontiac',

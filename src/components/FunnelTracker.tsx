@@ -178,6 +178,43 @@ async function sendEvent(options: TrackEventOptions): Promise<void> {
   } catch {
     // Silently fail
   }
+
+  // Mirror funnel events into Microsoft Clarity (2026-08-03).
+  // Privacy-safe: event names, site mode, device, cart id (random id, no PII),
+  // vehicle YMM. NEVER email/phone/address/payment data.
+  try {
+    const clarity = (window as any).clarity;
+    if (typeof clarity === "function") {
+      clarity("event", options.eventName);
+      clarity("set", "site_mode", payload.storeMode);
+      clarity("set", "device_type", payload.deviceType);
+
+      if (options.vehicle?.make) {
+        const v = options.vehicle;
+        clarity("set", "vehicle", `${v.year || ""} ${v.make || ""} ${v.model || ""}`.trim());
+      }
+
+      // Non-sensitive random cart identifier for cross-referencing recordings
+      try {
+        const cartId = localStorage.getItem("wt_cart_id");
+        if (cartId) clarity("set", "cart_id", cartId);
+      } catch {}
+
+      // Upgrade high-value sessions so Clarity always keeps the recording
+      if (options.eventName === "add_to_cart") clarity("upgrade", "add_to_cart");
+      if (options.eventName === "begin_checkout") clarity("upgrade", "begin_checkout");
+      if (options.eventName === "add_payment_info") {
+        clarity("set", "payment_step_reached", "true");
+        clarity("upgrade", "payment_step");
+      }
+      if (options.eventName === "purchase") {
+        clarity("set", "order_completed", "true");
+        clarity("upgrade", "purchase");
+      }
+    }
+  } catch {
+    // Clarity mirroring must never break funnel tracking
+  }
 }
 
 // ============================================================================

@@ -455,6 +455,12 @@ export {
   type NewAbandonedCart,
   type CartAddEvent,
   type NewCartAddEvent,
+  cartRecoveryConsents,
+  type CartRecoveryConsent,
+  type NewCartRecoveryConsent,
+  checkoutDiagnostics,
+  type CheckoutDiagnostic,
+  type NewCheckoutDiagnostic,
 } from "./schema-email";
 
 // ════════════════════════════════════════════════════════════════════════════════
