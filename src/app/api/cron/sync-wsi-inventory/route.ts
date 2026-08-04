@@ -12,11 +12,15 @@ export const maxDuration = 300; // 5 minutes
 export const dynamic     = "force-dynamic";
 
 export async function GET(req: NextRequest) {
-  const cronSecret = req.headers.get("x-vercel-cron-signature");
+  // FIX (2026-08-04): Vercel cron does NOT send "x-vercel-cron-signature".
+  // When CRON_SECRET is set, Vercel sends "Authorization: Bearer <CRON_SECRET>".
+  // The old header check 401'd every scheduled run — this cron never fired.
+  const authHeader = req.headers.get("authorization");
+  const validCron  = !!process.env.CRON_SECRET && authHeader === `Bearer ${process.env.CRON_SECRET}`;
   const adminKey   = req.headers.get("x-admin-key");
   const validAdmin = !!process.env.ADMIN_API_KEY && adminKey === process.env.ADMIN_API_KEY;
 
-  if (!cronSecret && !validAdmin) {
+  if (!validCron && !validAdmin) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
