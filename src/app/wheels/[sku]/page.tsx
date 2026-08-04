@@ -409,7 +409,10 @@ export default async function WheelDetailPage({
     }
   }
 
-  if (maybeData?.error || !it) {
+  // NOTE (2026-08-04): only show "not found" when we truly have no item.
+  // Previously `maybeData?.error || !it` made an upstream WheelPros API error
+  // override a successful TechFeed fallback lookup.
+  if (!it) {
     return (
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-10">

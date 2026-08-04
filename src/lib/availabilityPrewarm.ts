@@ -64,6 +64,7 @@ import {
 } from "./techfeed/wheels";
 
 import { getSupplierCredentials } from "./supplierCredentialsSecure";
+import { sanitizeUpstreamBase } from "./wheelpros/upstreamBase";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TARGET VEHICLE PATTERNS
@@ -363,7 +364,7 @@ export async function runPrewarmJob(options?: {
   };
   
   // Get WheelPros credentials
-  const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
+  const wheelProsBase = sanitizeUpstreamBase(process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL) || undefined;
   if (!wheelProsBase) {
     result.success = false;
     result.errors.push("Missing WHEELPROS_WRAPPER_URL or NEXT_PUBLIC_WHEELPROS_API_BASE_URL");
@@ -596,7 +597,9 @@ async function checkSkuAvailability(opts: {
   const to = setTimeout(() => ac.abort(), CONFIG.SKU_TIMEOUT_MS);
   
   try {
-    const u = new URL("/wheels/search", opts.wheelProsBase);
+    // Append (not replace) the path — base may include a path like /api/wheelpros-proxy,
+    // and `new URL("/x", base)` would clobber it.
+    const u = new URL(`${opts.wheelProsBase.replace(/\/+$/, "")}/wheels/search`);
     u.searchParams.set("sku", sku);
     u.searchParams.set("page", "1");
     u.searchParams.set("pageSize", "1");

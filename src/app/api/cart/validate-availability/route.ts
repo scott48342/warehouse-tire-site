@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sanitizeUpstreamBase } from "@/lib/wheelpros/upstreamBase";
 import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
@@ -67,7 +68,7 @@ export async function POST(req: Request) {
       }
     }
     
-    const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
+    const wheelProsBase = sanitizeUpstreamBase(process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL) || undefined;
     if (!wheelProsBase) {
       return NextResponse.json({ 
         ok: false, 

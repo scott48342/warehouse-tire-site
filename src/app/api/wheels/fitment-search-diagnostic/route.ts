@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sanitizeUpstreamBase } from "@/lib/wheelpros/upstreamBase";
 import {
   getTechfeedCandidatesByBoltPattern,
   getTechfeedIndexBuiltAt,
@@ -252,7 +253,7 @@ export async function GET(req: Request) {
     // =========================================================================
     // STAGE 4: After availability validation
     // =========================================================================
-    const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
+    const wheelProsBase = sanitizeUpstreamBase(process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL) || undefined;
     const wpCreds = await getSupplierCredentials("wheelpros");
     const headers: Record<string, string> = { Accept: "application/json" };
     if (process.env.WHEELPROS_WRAPPER_API_KEY) {

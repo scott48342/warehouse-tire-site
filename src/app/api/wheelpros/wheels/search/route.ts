@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
 import { calculateWheelSellPrice, resolveWheelMsrp } from "@/lib/pricing";
 import { getInventoryForSku } from "@/lib/inventoryCache";
+import { sanitizeUpstreamBase } from "@/lib/wheelpros/upstreamBase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -48,9 +49,10 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const debug = url.searchParams.get("debug") === "1" || process.env.WT_DIAGNOSTICS === "1";
   const t0 = debug ? Date.now() : 0;
-  const base =
+  const base = sanitizeUpstreamBase(
     process.env.WHEELPROS_WRAPPER_URL ||
-    process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
+    process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL
+  );
   if (!base) {
     return NextResponse.json(
       { error: "Missing WHEELPROS_WRAPPER_URL (or NEXT_PUBLIC_WHEELPROS_API_BASE_URL)" },
@@ -58,7 +60,8 @@ export async function GET(req: Request) {
     );
   }
 
-  const upstream = new URL("/wheels/search", base);
+  // Append (not replace) the path — base may include a path like /api/wheelpros-proxy.
+  const upstream = new URL(`${base}/wheels/search`);
   url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
 
   // NOTE: The Railway wrapper appears to block "bot"/default Node fetch user agents (403 Forbidden).

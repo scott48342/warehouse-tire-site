@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sanitizeUpstreamBase } from "@/lib/wheelpros/upstreamBase";
 import { getPool, createQuote, type QuoteLine } from "@/lib/quotes";
 import { getStripeClient } from "@/lib/payments/stripeClient";
 import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
@@ -28,7 +29,7 @@ async function validateWheelAvailability(items: CartItem[]): Promise<{
     return { ok: true }; // No wheels to validate
   }
   
-  const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
+  const wheelProsBase = sanitizeUpstreamBase(process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL) || undefined;
   if (!wheelProsBase) {
     console.warn("[checkout] WHEELPROS_WRAPPER_URL not configured, skipping availability check");
     return { ok: true }; // Skip validation if not configured (fail open)
