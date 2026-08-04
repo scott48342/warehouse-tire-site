@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVariantSelector";
 import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
+import { getWheel1WheelBySku, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
+import { getWSIWheelBySku, computeWSISellPrice, type WSICandidate } from "@/lib/wsi/catalog";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddToCartButton } from "@/components/AddToCartButton";
@@ -385,9 +387,34 @@ export default async function WheelDetailPage({
   const rawItems: unknown[] = Array.isArray(maybeData?.items) ? maybeData.items : (Array.isArray(maybeData?.results) ? maybeData.results : []);
   let it = (rawItems[0] as WheelProsItem | undefined) || undefined;
 
-  // Fallback to TechFeed
+  // Fallback to TechFeed, then supplier catalogs (Wheel-1, WSI).
+  // Fitment-search surfaces Wheel-1/WSI wheels on the SRP, so their PDPs
+  // must resolve here too — they don't exist in the WheelPros API/techfeed.
   if (!it) {
-    const tf = await getTechfeedWheelBySku(sku);
+    let tf = await getTechfeedWheelBySku(sku);
+    if (!tf) {
+      const w1 = await getWheel1WheelBySku(sku);
+      if (w1) {
+        // Price parity with SRP card: show the computed sell price
+        const sell = computeWheel1SellPrice({
+          msrp:       (w1 as Wheel1Candidate)._msrpNum,
+          mapPrice:   (w1 as Wheel1Candidate)._mapNum,
+          dealerCost: (w1 as Wheel1Candidate)._dealerCost ?? null,
+          diameter:   Number(w1.diameter) || 0,
+        });
+        tf = { ...w1, msrp: sell > 0 ? String(sell) : w1.msrp };
+      }
+    }
+    if (!tf) {
+      const wsi = await getWSIWheelBySku(sku);
+      if (wsi) {
+        const sell = computeWSISellPrice({
+          dealerCost:   (wsi as WSICandidate)._dealerCost,
+          catalogPrice: (wsi as WSICandidate)._catalogPrice,
+        });
+        tf = { ...wsi, msrp: sell > 0 ? String(sell) : wsi.msrp };
+      }
+    }
     if (tf) {
       it = {
         sku: tf.sku,

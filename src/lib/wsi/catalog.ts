@@ -192,3 +192,37 @@ export async function getWSICandidatesByBoltPattern(
     return [];
   }
 }
+
+/**
+ * Look up a single WSI product by exact SKU.
+ *
+ * Used by the wheel PDP as a fallback when the SKU isn't found in the
+ * WheelPros API or techfeed (WSI wheels surface on the SRP via
+ * fitment-search, so their PDPs must resolve too).
+ */
+export async function getWSIWheelBySku(sku: string): Promise<WSICandidate | null> {
+  if (!sku) return null;
+
+  const pool = getPool();
+  try {
+    const { rows } = await pool.query<WSIWheelRow>(
+      `SELECT
+        sku, brand, style, finish,
+        diameter::text, width::text,
+        bp1, bp2,
+        offset_mm::text, centerbore::text,
+        wsi_stock, alt_stock,
+        catalog_price::text, dealer_cost::text, load_rating::text,
+        image_url, logo_url
+      FROM wsi_wheels
+      WHERE sku = $1
+      LIMIT 1`,
+      [sku]
+    );
+    if (!rows.length) return null;
+    return mapRowToCandidate(rows[0]);
+  } catch (err) {
+    console.error("[wsi] getWSIWheelBySku error:", (err as Error).message);
+    return null;
+  }
+}

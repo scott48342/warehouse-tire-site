@@ -290,6 +290,42 @@ export async function getWheel1CandidatesByBoltPattern(
 }
 
 /**
+ * Look up a single Wheel-1 product by exact SKU.
+ *
+ * Used by the wheel PDP as a fallback when the SKU isn't found in the
+ * WheelPros API or techfeed (Wheel-1 wheels surface on the SRP via
+ * fitment-search, so their PDPs must resolve too).
+ */
+export async function getWheel1WheelBySku(sku: string): Promise<Wheel1Candidate | null> {
+  if (!sku) return null;
+
+  const pool = getPool();
+  try {
+    const { rows } = await pool.query<Wheel1Row>(
+      `SELECT
+        sku, brand, name, style_number, description, short_description,
+        diameter::text, wheel_width::text, hub::text, pcd1, pcd2,
+        offset_mm::text, finish, color,
+        msrp::text, map_price::text, dealer_cost::text, has_map,
+        inventory_qty, primary_warehouse,
+        image1, image2, image3, image4, image1_source, image2_source,
+        load_rating, tpms_compatible, is_dually, is_winter_approved,
+        structure_warranty, bullet_points, sales_description, upc, country_of_origin
+      FROM wheel1_products
+      WHERE sku = $1
+        AND is_discontinued = FALSE
+      LIMIT 1`,
+      [sku]
+    );
+    if (!rows.length) return null;
+    return mapRowToCandidate(rows[0], false);
+  } catch (err) {
+    console.error("[wheel1] getWheel1WheelBySku error:", (err as Error).message);
+    return null;
+  }
+}
+
+/**
  * Check whether the Wheel-1 preview flag is set on an incoming request.
  *
  * Activated by EITHER:
