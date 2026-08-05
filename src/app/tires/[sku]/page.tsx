@@ -140,13 +140,28 @@ function fmtMoney(v: number) {
   return `$${v.toFixed(2)}`;
 }
 
+/**
+ * Commercial / medium-truck detection (decimal rims 17.5/19.5/22.5/24.5 or
+ * R-style like 11R22.5). Mirrors isCommercialTruckSize in /api/tires/search.
+ */
+function isCommercialTruckSizePdp(s: string): boolean {
+  const v = String(s || "").trim().toUpperCase();
+  if (/^\d{1,2}\s*R\s*\d{2}\.5$/.test(v)) return true;
+  if (/^\d{5}$/.test(v)) return true;
+  if (/R\s*\d{2}\.5(?:[^0-9]|$)/.test(v)) return true;
+  if (/^\d{3}\d{2}(?:175|195|225|245)$/.test(v)) return true;
+  return false;
+}
+
 function priceFromRow(r: any): number | null {
   const msrpUsd0 = n(r?.msrp_usd);
   const mapUsd0 = n(r?.map_usd);
   const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
   const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
-  // Sell price = (MSRP × 0.85) + $40, fall back to MAP if no MSRP
-  if (msrpUsd) return (msrpUsd * 0.85) + 40;
+  // Sell price = (MSRP × 0.85) + $40, fall back to MAP if no MSRP.
+  // Commercial/medium-truck sizes: $165 adder ($100 markup + $40 labor + $25 disposal).
+  const adder = isCommercialTruckSizePdp(String(r?.tire_size || r?.simple_size || "")) ? 165 : 40;
+  if (msrpUsd) return (msrpUsd * 0.85) + adder;
   if (mapUsd) return mapUsd; // MAP fallback (already retail price)
   return null;
 }

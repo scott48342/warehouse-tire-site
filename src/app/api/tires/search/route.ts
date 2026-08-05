@@ -263,6 +263,14 @@ function isCommercialTruckSize(s: string): boolean {
   return false;
 }
 
+/**
+ * Commercial / medium-truck per-tire adder:
+ *   $100 markup + $40 labor + $25 disposal = $165 per tire.
+ * Applied on top of landed cost (cost + FET). Note: TireWeb BuyPrice already
+ * includes FET; K&M direct and USAF report FET separately.
+ */
+const COMMERCIAL_TIRE_ADDER = 165;
+
 function normalizeFlotationSize(s: string): string | null {
   // Handle flotation/LT sizes like:
   // - 35/12.50R20 → 35X12.50R20 (normalized)
@@ -574,9 +582,11 @@ async function searchTiresBySize(
     const mapUsd0 = n(r.map_usd);
     const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
     const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
-    // Sell price = (MSRP × 0.85) + $40, fall back to MAP
-    const price = msrpUsd ? (msrpUsd * 0.85) + 40 : mapUsd;
     const tireSize = r.tire_size || r.simple_size || "";
+    // Sell price = (MSRP × 0.85) + $40, fall back to MAP.
+    // Commercial/medium-truck sizes use the $165 commercial adder instead.
+    const marginAdder = isCommercialTruckSize(tireSize) ? COMMERCIAL_TIRE_ADDER : 40;
+    const price = msrpUsd ? (msrpUsd * 0.85) + marginAdder : mapUsd;
     const description = r.tire_description || tireSize || r.sku;
 
     // Compute enrichment data from WheelPros fields
@@ -643,12 +653,13 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
       
       // CRITICAL: Always use cost + $40 for TireWeb tires
       // Don't trust supplier sellPrice - they may have different margins
+      // Commercial/medium-truck: cost + $165 (TireWeb BuyPrice already includes FET)
       const cost = unified.cost;
       let displayPrice: number | null = null;
       
       if (cost && cost > 0) {
-        // Always apply our $40 margin over cost
-        displayPrice = cost + 40;
+        const marginAdder = isCommercialTruckSize(unified.size || unified.simpleSize || "") ? COMMERCIAL_TIRE_ADDER : 40;
+        displayPrice = cost + marginAdder;
       }
       
       tires.push({
@@ -927,8 +938,12 @@ function convertUSAFToTireResult(item: USAutoForceStockItem): TireResult {
   // Normalize terrain from tireType (e.g., "PASSENGER/CUV/SUV" → category)
   const terrain = normalizeTreadCategory(item.tireType, item.description);
   
-  // Calculate sell price: cost + $40 margin (same as TireWeb)
-  const sellPrice = item.cost > 0 ? item.cost + 40 : null;
+  // Calculate sell price: cost + $40 margin (same as TireWeb).
+  // Commercial/medium-truck: cost + FET + $165 (USAF reports FET separately).
+  const usafIsCommercial = isCommercialTruckSize(item.tireSize || "");
+  const sellPrice = item.cost > 0
+    ? (usafIsCommercial ? item.cost + (item.fet || 0) + COMMERCIAL_TIRE_ADDER : item.cost + 40)
+    : null;
   
   return {
     partNumber: item.partNumber,
@@ -1319,6 +1334,7 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
       const brand = pickKmField(it, ["BrandName", "Brand", "brand"]) || "";
       const description = pickKmField(it, ["Description", "description"]) || "";
       const cost = parseFloat(pickKmField(it, ["Cost", "cost"]) || "0") || 0;
+      const fet = parseFloat(pickKmField(it, ["FET", "Fet", "fet"]) || "0") || 0;
       // Quantity is an object: { Primary, Alternate, National }
       const qtyObj = (it?.Quantity && typeof it.Quantity === "object") ? it.Quantity : null;
       const primary = qtyObj
@@ -1338,7 +1354,11 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
         model: "",
         description,
         cost,
-        price: cost + 40, // Standard markup
+        // Commercial/medium-truck: cost + FET + $165 ($100 markup + $40 labor + $25 disposal).
+        // K&M reports FET separately from Cost.
+        price: isCommercialTruckSize(size)
+          ? cost + fet + COMMERCIAL_TIRE_ADDER
+          : cost + fet + 40,
         quantity: { primary, alternate, national },
         imageUrl: null, // K&M direct doesn't have images, TireWeb will provide
         size,

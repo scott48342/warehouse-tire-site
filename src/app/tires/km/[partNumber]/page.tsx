@@ -367,9 +367,14 @@ export default async function KmTireDetailPage({
   const loadIndex = item.badges?.loadIndex ? String(item.badges.loadIndex) : null;
   const speedRating = item.badges?.speedRating ? String(item.badges.speedRating) : null;
   
-  // Calculate price and stock
+  // Calculate price and stock.
+  // Prefer the price computed by /api/tires/search (handles commercial
+  // medium-truck pricing: cost + FET + $165). Fall back to cost + 50.
   const cost = n(item.cost);
-  const displayPrice = cost != null ? cost + 50 : null;
+  const apiPrice = n(item.price);
+  const displayPrice = apiPrice != null && (cost == null || apiPrice > cost)
+    ? apiPrice
+    : cost != null ? cost + 50 : null;
   const qPrimary = n(item?.quantity?.primary);
   const qAlt = n(item?.quantity?.alternate);
   const qNat = n(item?.quantity?.national);
