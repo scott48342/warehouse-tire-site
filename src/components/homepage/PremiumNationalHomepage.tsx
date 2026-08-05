@@ -223,7 +223,7 @@ function VehicleSelectorSection() {
   const router = useRouter();
   const [intent, setIntent] = useState<ShoppingIntent>("tires");
   const [tab, setTab] = useState<"vehicle" | "size">("vehicle");
-  const [sizeFormat, setSizeFormat] = useState<"metric" | "flotation">("metric");
+  const [sizeFormat, setSizeFormat] = useState<"metric" | "flotation" | "commercial">("metric");
 
   // If user switches away from tires, reset tab to "vehicle" — prevents the size form
   // from ghost-rendering while the size tab is hidden (dead click / form desync fix).
@@ -394,6 +394,12 @@ function VehicleSelectorSection() {
     router.push(`/tires?${params.toString()}`);
   };
 
+  // Commercial / medium-truck R-style sizes (also listed in src/data/tire-sizes.json "commercial")
+  const COMMERCIAL_SIZES = ["10R22.5", "11R22.5", "12R22.5", "11R24.5"];
+  const handleCommercialSizeSearch = (size: string) => {
+    router.push(`/tires?size=${encodeURIComponent(size)}`);
+  };
+
   const currentIntent = INTENT_CONFIG[intent];
   const selectClass = `h-11 px-3 bg-[#1a1a1a] border border-white/20 rounded text-white text-sm focus:border-white/40 focus:outline-none appearance-none cursor-pointer ${loading ? "opacity-50" : ""}`;
 
@@ -557,9 +563,36 @@ function VehicleSelectorSection() {
                   >
                     Flotation (35x12.50R17)
                   </button>
+                  <button
+                    onClick={() => setSizeFormat("commercial")}
+                    className={`px-4 py-2 text-sm font-semibold rounded transition-colors ${
+                      sizeFormat === "commercial"
+                        ? "bg-red-600 text-white"
+                        : "bg-[#1a1a1a] text-white/60 hover:text-white border border-white/10"
+                    }`}
+                  >
+                    Commercial (11R22.5)
+                  </button>
                 </div>
 
-                {sizeFormat === "metric" ? (
+                {sizeFormat === "commercial" ? (
+                  <div>
+                    <div className="flex flex-wrap gap-2">
+                      {COMMERCIAL_SIZES.map((s) => (
+                        <button
+                          key={s}
+                          onClick={() => handleCommercialSizeSearch(s)}
+                          className="h-11 px-5 bg-[#1a1a1a] hover:bg-red-600 border border-white/20 hover:border-red-600 text-white font-bold text-sm rounded transition-colors"
+                        >
+                          {s}
+                        </button>
+                      ))}
+                    </div>
+                    <p className="mt-2 text-xs text-white/40">
+                      Looking for 19.5&quot;, 22.5&quot; or 24.5&quot; metric sizes (like 225/70R19.5)? Use the Metric selector — they&apos;re in the Rim Diameter list.
+                    </p>
+                  </div>
+                ) : sizeFormat === "metric" ? (
                   <div className="flex flex-wrap items-end gap-3">
                     <div className="flex-1 min-w-[100px]">
                       <label className="block text-xs text-white/50 uppercase tracking-wide mb-1.5">Width</label>

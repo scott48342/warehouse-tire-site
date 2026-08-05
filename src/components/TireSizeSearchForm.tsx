@@ -55,11 +55,17 @@ export function TireSizeSearchForm({
     : [];
   const parsedMetric = metric
     .map((s) => {
-      const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2})$/);
+      // Supports standard (245/50R18) and medium-truck decimal rims (225/70R19.5)
+      const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2}(?:\.5)?)$/);
       if (!m) return null;
       return { width: Number(m[1]), aspect: Number(m[2]), rim: Number(m[3]), label: s };
     })
     .filter(Boolean) as Array<{ width: number; aspect: number; rim: number; label: string }>;
+
+  // Commercial / medium truck sizes (e.g., 11R22.5) — direct one-click search
+  const commercialSizes = Array.isArray((tireSizes as any)?.commercial)
+    ? ((tireSizes as any).commercial as string[])
+    : [];
 
   // Parse flotation sizes from JSON
   const flotationRows = Array.isArray((tireSizes as any)?.flotation)
@@ -391,6 +397,36 @@ export function TireSizeSearchForm({
           </div>
         </div>
       </div>
+
+      {commercialSizes.length > 0 && (
+        <>
+          <div className="mt-6 h-px bg-neutral-200" />
+
+          {/* ═══════════════════════════════════════════════════════════════════════════ */}
+          {/* COMMERCIAL / MEDIUM TRUCK SIZES */}
+          {/* ═══════════════════════════════════════════════════════════════════════════ */}
+          <div className="mt-4">
+            <div className="text-xs font-extrabold text-neutral-900">Commercial / Medium truck sizes</div>
+            <div className="mt-2 flex flex-wrap gap-2 rounded-2xl border border-neutral-200 bg-white p-3">
+              {commercialSizes.map((s) => (
+                <Btn
+                  key={s}
+                  label={s}
+                  active={false}
+                  onClick={() => {
+                    const next = new URLSearchParams();
+                    next.set("size", s);
+                    router.push(`/tires?${next.toString()}`);
+                  }}
+                />
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-neutral-500">
+              19.5&quot;, 22.5&quot; and 24.5&quot; sizes are in the metric selector above — commercial R-sizes are one-click here.
+            </p>
+          </div>
+        </>
+      )}
 
       {/* Help text */}
       <p className="mt-6 text-center text-xs text-neutral-500">

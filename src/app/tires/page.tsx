@@ -352,28 +352,28 @@ interface ParsedTireSize {
 
 function parseTireSize(size: string, description?: string): ParsedTireSize {
   const s = String(size || description || "").trim().toUpperCase();
-  
-  // Try flotation format first: 35X12.50R20, 35/12.50R20, 33X12.5R17
-  const flotation = s.match(/(\d{2,3})\s*[X\/\-]\s*(\d{1,2}(?:\.\d+)?)\s*[A-Z]*\s*R(\d{2})/i);
-  if (flotation) {
-    const overallDia = parseFloat(flotation[1]);
-    const width = parseFloat(flotation[2]);
-    const rim = parseInt(flotation[3], 10);
+
+  // Commercial / medium-truck R-style: 11R22.5, 12R24.5 (width in inches, no aspect)
+  const commercial = s.match(/^(\d{1,2})\s*R\s*(\d{2}(?:\.\d)?)$/i);
+  if (commercial) {
+    const width = parseFloat(commercial[1]);
+    const rim = parseFloat(commercial[2]);
     return {
       rimDiameter: rim,
       sectionWidth: width,
-      overallDiameter: overallDia,
-      isFlotation: true,
+      overallDiameter: null,
+      isFlotation: false,
       original: s,
     };
   }
-  
-  // Try metric format: 285/65R20, P245/50R18, LT285/70R17
-  const metric = s.match(/(?:LT|P)?(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*R(\d{2})/i);
+
+  // Try metric format first: 285/65R20, P245/50R18, LT285/70R17, 225/70R19.5 (medium truck)
+  // (checked before flotation so "285/65R20" isn't misread as a 285" flotation diameter)
+  const metric = s.match(/(?:LT|P)?(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*R(\d{2}(?:\.\d)?)/i);
   if (metric) {
     const widthMm = parseInt(metric[1], 10);
     const aspect = parseInt(metric[2], 10);
-    const rim = parseInt(metric[3], 10);
+    const rim = parseFloat(metric[3]);
     
     // Convert width to inches: mm / 25.4
     const widthInches = widthMm / 25.4;
@@ -393,11 +393,26 @@ function parseTireSize(size: string, description?: string): ParsedTireSize {
       original: s,
     };
   }
-  
-  // Fallback: try to extract just rim diameter
-  const rimMatch = s.match(/R(\d{2})/i);
+
+  // Flotation format: 35X12.50R20, 35/12.50R20, 33X12.5R17, 33X12.50R16.5
+  const flotation = s.match(/(\d{2,3})\s*[X\/\-]\s*(\d{1,2}(?:\.\d+)?)\s*[A-Z]*\s*R(\d{2}(?:\.\d)?)/i);
+  if (flotation) {
+    const overallDia = parseFloat(flotation[1]);
+    const width = parseFloat(flotation[2]);
+    const rim = parseFloat(flotation[3]);
+    return {
+      rimDiameter: rim,
+      sectionWidth: width,
+      overallDiameter: overallDia,
+      isFlotation: true,
+      original: s,
+    };
+  }
+
+  // Fallback: try to extract just rim diameter (supports decimal rims like 19.5)
+  const rimMatch = s.match(/R(\d{2}(?:\.\d)?)/i);
   return {
-    rimDiameter: rimMatch ? parseInt(rimMatch[1], 10) : null,
+    rimDiameter: rimMatch ? parseFloat(rimMatch[1]) : null,
     sectionWidth: null,
     overallDiameter: null,
     isFlotation: false,
@@ -499,8 +514,12 @@ async function fetchKmTires(tireSize: string) {
 
 function normalizeTireSizeForQuery(s: string) {
   const v = String(s || "").trim().toUpperCase();
+  // Medium-truck decimal rims first (225/70R19.5) so the .5 isn't truncated
+  const md = v.match(/\b(\d{3}\/\d{2})(?:ZR|R)(\d{2}\.5)\b/);
+  if (md) return `${md[1]}R${md[2]}`;
   const m = v.match(/\b(\d{3}\/\d{2})(?:ZR|R)(\d{2})\b/);
   if (m) return `${m[1]}R${m[2]}`;
+  // Commercial R-style (11R22.5) passes through untouched
   return String(s || "").trim();
 }
 
@@ -1943,6 +1962,9 @@ export default async function TiresPage({
     
     // Modern P-metric: 205/75R14, 275/65R18 → extract R## part
     // Also handles flotation sizes: 35X12.50R20LT, 37x12.50R20
+    // And medium-truck decimal rims: 225/70R19.5, 11R22.5
+    const mtMatch = str.match(/R(\d{2}\.\d)(?:[^0-9]|$)/);
+    if (mtMatch) return Number(mtMatch[1]);
     // Use (?:\D|$) instead of \b to handle load range suffixes (LT, C, E, etc.)
     const modernMatch = str.match(/R(\d{2})(?:\D|$)/);
     if (modernMatch) return Number(modernMatch[1]);
@@ -2714,7 +2736,7 @@ export default async function TiresPage({
   }
 
   function extractSizeFromText(s: string) {
-    const m = String(s || "").toUpperCase().match(/\b(\d{3}\/\d{2}(?:ZR|R)\d{2})\b/);
+    const m = String(s || "").toUpperCase().match(/\b(\d{3}\/\d{2}(?:ZR|R)\d{2}(?:\.\d)?)\b/);
     return m ? m[1].replace("ZR", "R") : "";
   }
 

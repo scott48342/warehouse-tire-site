@@ -101,10 +101,19 @@ export function buildVehicleCacheKey(sizes: string[], wheelDiameter?: number): s
 
 function toSimpleSize(s: string): string {
   const v = String(s || "").trim().toUpperCase();
+  // Medium-truck decimal rim first (225/70R19.5 → 22570195) to avoid cache-key
+  // collision with the integer-rim size (225/70R19 → 2257019)
+  const md = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})\.5/i);
+  if (md) return `${md[1]}${md[2]}${md[3]}5`;
   const m = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})/i);
   if (m) return `${m[1]}${m[2]}${m[3]}`;
-  const m2 = v.match(/^(\d{7})$/);
+  // Commercial R-style: 11R22.5 → 11225
+  const c = v.match(/^(\d{1,2})\s*R\s*(\d{2})\.5$/i);
+  if (c) return `${c[1]}${c[2]}5`;
+  const m2 = v.match(/^(\d{7,8})$/);
   if (m2) return m2[1];
+  const m3 = v.match(/^(\d{5})$/);
+  if (m3) return m3[1];
   return "";
 }
 

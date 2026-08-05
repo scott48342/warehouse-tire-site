@@ -31,14 +31,26 @@ function toTireSizeCompact(size: string) {
     return `${dia}${width}${rim}`;
   }
 
+  // Medium-truck decimal rim: 225/70R19.5 -> 22570195 (checked before generic metric)
+  const mt = s.match(/(\d{3})\s*\/?\s*(\d{2})\s*[A-Z]*\s*R\s*(\d{2})\.5/i);
+  if (mt) return `${mt[1]}${mt[2]}${mt[3]}5`;
+
   const m = s.match(/(\d{3})\s*\/?\s*(\d{2})\s*[A-Z]*\s*R\s*(\d{2})/i);
   if (m) return `${m[1]}${m[2]}${m[3]}`;
+
+  // Commercial R-style: 11R22.5 -> 11225 (K&M compact, confirmed 2026-08-05)
+  const cr = s.match(/^(\d{1,2})\s*R\s*(\d{2})\.5$/i);
+  if (cr) return `${cr[1]}${cr[2]}5`;
 
   const m2 = s.match(/^\d{7}$/);
   if (m2) return s;
 
   const m3 = s.match(/^\d{8}$/);
   if (m3) return s;
+
+  // Commercial compact: 11225
+  const m4 = s.match(/^\d{5}$/);
+  if (m4) return s;
 
   return "";
 }

@@ -23,7 +23,8 @@ import tireSizesData from "@/data/tire-sizes.json";
 const metricSizes = Array.isArray(tireSizesData.metric) ? tireSizesData.metric : [];
 const parsedMetric = metricSizes
   .map((s: string) => {
-    const m = String(s).match(/^(\d{2,3})\/(\d{2})R(\d{2})$/);
+    // Supports standard (245/50R18) and medium-truck decimal rims (225/70R19.5)
+    const m = String(s).match(/^(\d{2,3})\/(\d{2})R(\d{2}(?:\.5)?)$/);
     if (!m) return null;
     return { width: m[1], aspect: m[2], rim: m[3] };
   })
@@ -70,7 +71,8 @@ function getMetricRims(width?: string, aspect?: string): string[] {
       rims.add(size.rim);
     }
   }
-  return Array.from(rims).sort((a, b) => parseInt(a) - parseInt(b));
+  // parseFloat so decimal rims (19.5, 22.5) sort correctly
+  return Array.from(rims).sort((a, b) => parseFloat(a) - parseFloat(b));
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════

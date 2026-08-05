@@ -230,12 +230,37 @@ function toSimpleSize(s: string): string {
   // - 245/50R18 → 2455018
   // - 245/40ZR20 95Y → 2454020
   // - 2455018 → 2455018
+  // - 225/70R19.5 → 22570195 (medium truck, decimal rim)
+  // - 11R22.5 → 11225 (commercial R-style)
   const v = String(s || "").trim().toUpperCase();
+  // Medium-truck decimal rim FIRST so "225/70R19.5" doesn't truncate to 225/70R19
+  const md = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})\.5/i);
+  if (md) return `${md[1]}${md[2]}${md[3]}5`;
   const m = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})/i);
   if (m) return `${m[1]}${m[2]}${m[3]}`;
-  const m2 = v.match(/^(\d{7})$/);
+  // Commercial R-style: 11R22.5 → 11225, 10R24.5 → 10245
+  const c = v.match(/^(\d{1,2})\s*R\s*(\d{2})\.5$/i);
+  if (c) return `${c[1]}${c[2]}5`;
+  const m2 = v.match(/^(\d{7,8})$/);
   if (m2) return m2[1];
+  // Commercial compact (5 digits): 11225
+  const m3 = v.match(/^(\d{5})$/);
+  if (m3) return m3[1];
   return "";
+}
+
+/**
+ * Detect commercial / medium-truck sizes (decimal rims 17.5/19.5/22.5/24.5
+ * or R-style like 11R22.5). These have limited product imagery, so the
+ * image-required filter is relaxed for them.
+ */
+function isCommercialTruckSize(s: string): boolean {
+  const v = String(s || "").trim().toUpperCase();
+  if (/^\d{1,2}\s*R\s*\d{2}\.5$/.test(v)) return true;          // 11R22.5
+  if (/^\d{5}$/.test(v)) return true;                            // 11225 compact
+  if (/R\s*\d{2}\.5(?:[^0-9]|$)/.test(v)) return true;           // 225/70R19.5
+  if (/^\d{3}\d{2}(?:175|195|225|245)$/.test(v)) return true;    // 22570195 compact
+  return false;
 }
 
 function normalizeFlotationSize(s: string): string | null {
@@ -263,9 +288,22 @@ function extractRimDiameter(size: string): number | null {
   // Extract rim diameter from tire size
   // 245/50R18 → 18
   // 2455018 → 18
+  // 225/70R19.5 / 22570195 → 19.5, 11R22.5 / 11225 → 22.5
+  const mdec = size.match(/R(\d{2}\.\d)/i);
+  if (mdec) return parseFloat(mdec[1]);
   const simple = toSimpleSize(size);
   if (simple && simple.length === 7) {
     return parseInt(simple.slice(5), 10);
+  }
+  if (simple && simple.length === 5) {
+    // Commercial compact: 11225 → 22.5
+    return parseInt(simple.slice(2), 10) / 10;
+  }
+  if (simple && simple.length === 8) {
+    // Metric medium-truck compact (22570195 → 19.5) vs flotation (37135022 → 22)
+    const last3 = simple.slice(5);
+    if (/^(175|195|225|245)$/.test(last3)) return parseInt(last3, 10) / 10;
+    return parseInt(simple.slice(6), 10);
   }
   const m = size.match(/R(\d{2})/i);
   if (m) return parseInt(m[1], 10);
@@ -1268,7 +1306,9 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: "@_" });
     const data = parser.parse(text);
     
-    const result = data?.InventoryResponse?.InventoryResult;
+    // K&M returns InventoryResponse.Item directly (confirmed 2026-08-05);
+    // keep InventoryResult as legacy fallback
+    const result = data?.InventoryResponse?.InventoryResult || data?.InventoryResponse;
     if (!result) return [];
     
     const rawItems = result.Item || result.Items?.Item || [];
@@ -1276,12 +1316,20 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     
     return items.map((it: any) => {
       const partNumber = pickKmField(it, ["PartNumber", "partNumber"]) || "";
-      const brand = pickKmField(it, ["Brand", "brand"]) || "";
+      const brand = pickKmField(it, ["BrandName", "Brand", "brand"]) || "";
       const description = pickKmField(it, ["Description", "description"]) || "";
       const cost = parseFloat(pickKmField(it, ["Cost", "cost"]) || "0") || 0;
-      const primary = parseInt(pickKmField(it, ["Quantity", "QtyAvailable", "PrimaryQty"]) || "0") || 0;
-      const alternate = parseInt(pickKmField(it, ["AlternateQty", "SecondaryQty"]) || "0") || 0;
-      const national = parseInt(pickKmField(it, ["NationalQty", "TotalQty"]) || "0") || primary + alternate;
+      // Quantity is an object: { Primary, Alternate, National }
+      const qtyObj = (it?.Quantity && typeof it.Quantity === "object") ? it.Quantity : null;
+      const primary = qtyObj
+        ? (parseInt(String(qtyObj.Primary ?? "0")) || 0)
+        : (parseInt(pickKmField(it, ["Quantity", "QtyAvailable", "PrimaryQty"]) || "0") || 0);
+      const alternate = qtyObj
+        ? (parseInt(String(qtyObj.Alternate ?? "0")) || 0)
+        : (parseInt(pickKmField(it, ["AlternateQty", "SecondaryQty"]) || "0") || 0);
+      const national = qtyObj
+        ? (parseInt(String(qtyObj.National ?? "0")) || primary + alternate)
+        : (parseInt(pickKmField(it, ["NationalQty", "TotalQty"]) || "0") || primary + alternate);
       
       return {
         partNumber,
@@ -1295,7 +1343,7 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
         imageUrl: null, // K&M direct doesn't have images, TireWeb will provide
         size,
         simpleSize: sizeCompact,
-        rimDiameter: parseInt(sizeCompact.slice(-2)) || 0,
+        rimDiameter: extractRimDiameter(size) ?? (parseInt(sizeCompact.slice(-2)) || 0),
         tireLibraryId: null,
         source: "km-direct" as const, // Mark as direct K&M for inventory merge
         badges: {},
@@ -1335,9 +1383,17 @@ function toKmSizeFormat(size: string): string {
     return `${dia}${width}${rim}`;
   }
   
+  // Medium-truck decimal rim: 225/70R19.5 -> 22570195 (checked before generic metric)
+  const mt = s.match(/(\d{3})\s*\/?\s*(\d{2})\s*[A-Z]*\s*R\s*(\d{2})\.5/i);
+  if (mt) return `${mt[1]}${mt[2]}${mt[3]}5`;
+  
   // Standard metric: 245/50R18 -> 2455018
   const m = s.match(/(\d{3})\s*\/?\s*(\d{2})\s*[A-Z]*\s*R\s*(\d{2})/i);
   if (m) return `${m[1]}${m[2]}${m[3]}`;
+  
+  // Commercial R-style: 11R22.5 -> 11225 (K&M compact format, confirmed 2026-08-05)
+  const cr = s.match(/^(\d{1,2})\s*R\s*(\d{2})\.5$/i);
+  if (cr) return `${cr[1]}${cr[2]}5`;
   
   // Already in compact format
   const m2 = s.match(/^\d{7}$/);
@@ -1345,6 +1401,10 @@ function toKmSizeFormat(size: string): string {
   
   const m3 = s.match(/^\d{8}$/);
   if (m3) return s;
+  
+  // Commercial compact: 11225
+  const m4 = s.match(/^\d{5}$/);
+  if (m4) return s;
   
   return "";
 }
@@ -1989,8 +2049,13 @@ export async function GET(req: Request) {
       timing.searchMs = Date.now() - tSearch0;
       
       // Filter out tires without valid images (dynamic - not cached)
+      // EXCEPTION (2026-08-05): commercial/medium-truck sizes (19.5"/22.5"/24.5", 11R22.5)
+      // have very limited product imagery — keep results, cards render brand fallback
       const debug = url.searchParams.get("debug") === "true";
-      let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(cacheResult.results, debug);
+      const skipImageFilter = isCommercialTruckSize(sizeRaw);
+      let { filtered: finalResults, stats: imageStats } = skipImageFilter
+        ? { filtered: cacheResult.results, stats: { total: cacheResult.results.length, valid: cacheResult.results.length, invalid: 0, invalidReasons: {} as Record<string, number> } }
+        : filterTiresWithValidImages(cacheResult.results, debug);
       
       // ═══════════════════════════════════════════════════════════════════════
       // SINGLE-TIRE LOOKUP BY PART NUMBER (for PDP detail pages)

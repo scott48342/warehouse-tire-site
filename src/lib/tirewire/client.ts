@@ -438,6 +438,11 @@ export const searchTiresTirewire = searchTiresTireWeb;
 function toSimpleSize(s: string): string {
   const v = String(s || "").trim().toUpperCase();
   
+  // Medium-truck decimal rims: 225/70R19.5 → 22570195 (checked FIRST so .5 isn't truncated,
+  // which would silently search the wrong size, e.g. 255/70R22.5 → 255/70R22)
+  const md = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})\.5/i);
+  if (md) return `${md[1]}${md[2]}${md[3]}5`;
+  
   // Metric sizes: 245/50R18 → 2455018
   const m = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})/i);
   if (m) return `${m[1]}${m[2]}${m[3]}`;
@@ -515,7 +520,9 @@ export interface UnifiedTire {
 }
 
 export function tireWebTireToUnified(tire: TireWebTire, provider: string): UnifiedTire {
-  const size = `${Math.round(tire.width)}/${Math.round(tire.aspectRatio)}R${Math.round(tire.rim)}`;
+  // Preserve decimal rims (19.5/22.5/24.5) — Math.round(19.5) would mislabel as R20
+  const rimLabel = tire.rim % 1 !== 0 ? tire.rim.toFixed(1) : String(Math.round(tire.rim));
+  const size = `${Math.round(tire.width)}/${Math.round(tire.aspectRatio)}R${rimLabel}`;
   
   // Image URL will be resolved later via getCachedTireImage()
   // Store the patternId for batch lookup in the caller
@@ -557,8 +564,8 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
     },
     imageUrl,
     size,
-    simpleSize: `${Math.round(tire.width)}${Math.round(tire.aspectRatio)}${Math.round(tire.rim)}`,
-    rimDiameter: Math.round(tire.rim),
+    simpleSize: `${Math.round(tire.width)}${Math.round(tire.aspectRatio)}${rimLabel.replace(".", "")}`,
+    rimDiameter: tire.rim % 1 !== 0 ? tire.rim : Math.round(tire.rim),
     tireLibraryId: tire.id || null,
     source: `tireweb:${provider.replace("tireweb_", "")}`, // FIXED: "tireweb:atd" not "tirewire:atd"
     badges: {

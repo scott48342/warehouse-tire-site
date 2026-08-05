@@ -362,7 +362,8 @@ export function SearchModal({
                           const metric = Array.isArray((tireSizes as any)?.metric) ? ((tireSizes as any).metric as string[]) : [];
                           const parsed = metric
                             .map((s) => {
-                              const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2})$/);
+                              // Supports standard (245/50R18) and medium-truck decimal rims (225/70R19.5)
+                              const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2}(?:\.5)?)$/);
                               if (!m) return null;
                               return { width: Number(m[1]), aspect: Number(m[2]), rim: Number(m[3]), label: s };
                             })
@@ -556,7 +557,7 @@ export function SearchModal({
                           const metricRaw = Array.isArray((tireSizes as any)?.metric) ? ((tireSizes as any).metric as string[]) : [];
                           const metricParsed = metricRaw
                             .map((s) => {
-                              const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2})$/);
+                              const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2}(?:\.5)?)$/);
                               if (!m) return null;
                               return { width: Number(m[1]), aspect: Number(m[2]), rim: Number(m[3]), label: s };
                             })
@@ -722,6 +723,42 @@ export function SearchModal({
                           );
                         })()}
                       </div>
+
+                      {(() => {
+                        // ═══ COMMERCIAL / MEDIUM TRUCK SIZES (11R22.5 etc.) ═══
+                        const commercial = Array.isArray((tireSizes as any)?.commercial)
+                          ? ((tireSizes as any).commercial as string[])
+                          : [];
+                        if (!commercial.length) return null;
+                        return (
+                          <>
+                            <div className="mt-6 h-px bg-neutral-200" />
+                            <div className="mt-3">
+                              <div className="text-xs font-extrabold text-neutral-900">Commercial / Medium truck sizes</div>
+                              <div className="mt-2 flex flex-wrap gap-2 rounded-2xl border border-neutral-200 bg-white p-3">
+                                {commercial.map((s) => (
+                                  <button
+                                    key={s}
+                                    type="button"
+                                    onClick={() => {
+                                      const next = new URLSearchParams();
+                                      next.set("size", s);
+                                      router.push(`/tires?${next.toString()}`);
+                                      onClose();
+                                    }}
+                                    className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+                                  >
+                                    {s}
+                                  </button>
+                                ))}
+                              </div>
+                              <p className="mt-2 text-xs text-neutral-500">
+                                19.5&quot;, 22.5&quot; and 24.5&quot; metric sizes are in the selector above.
+                              </p>
+                            </div>
+                          </>
+                        );
+                      })()}
                     </>
                   </div>
                 ) : (
