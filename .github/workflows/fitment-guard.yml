@@ -26,12 +26,12 @@ on:
       - 'src/db/schema*'
       - 'drizzle/**'
       - 'prisma/schema.prisma'
-    paths-ignore:
-      # Tests don't change runtime behavior
-      - '**/__tests__/**'
-      - '**/*.test.ts'
-      - '**/*.test.tsx'
-      - '**/*.spec.ts'
+      # Tests don't change runtime behavior (negations; paths-ignore
+      # cannot be combined with paths on the same event)
+      - '!**/__tests__/**'
+      - '!**/*.test.ts'
+      - '!**/*.test.tsx'
+      - '!**/*.spec.ts'
   push:
     branches: [main]
     paths:
@@ -40,12 +40,12 @@ on:
       - 'src/app/api/vehicles/**'
       - 'src/app/api/wheels/fitment-search/**'
       - 'src/app/api/tires/search/**'
-    paths-ignore:
-      # Tests don't change runtime behavior
-      - '**/__tests__/**'
-      - '**/*.test.ts'
-      - '**/*.test.tsx'
-      - '**/*.spec.ts'
+      # Tests don't change runtime behavior (negations; paths-ignore
+      # cannot be combined with paths on the same event)
+      - '!**/__tests__/**'
+      - '!**/*.test.ts'
+      - '!**/*.test.tsx'
+      - '!**/*.spec.ts'
 
 jobs:
   fitment-approval-check:
