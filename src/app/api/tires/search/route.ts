@@ -271,6 +271,9 @@ function isCommercialTruckSize(s: string): boolean {
  */
 const COMMERCIAL_TIRE_ADDER = 165;
 
+/** Standard passenger / light-truck per-tire margin (matches in-store pricing). */
+const STANDARD_TIRE_ADDER = 50;
+
 function normalizeFlotationSize(s: string): string | null {
   // Handle flotation/LT sizes like:
   // - 35/12.50R20 → 35X12.50R20 (normalized)
@@ -583,9 +586,9 @@ async function searchTiresBySize(
     const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
     const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
     const tireSize = r.tire_size || r.simple_size || "";
-    // Sell price = (MSRP × 0.85) + $40, fall back to MAP.
+    // Sell price = (MSRP × 0.85) + $50, fall back to MAP.
     // Commercial/medium-truck sizes use the $165 commercial adder instead.
-    const marginAdder = isCommercialTruckSize(tireSize) ? COMMERCIAL_TIRE_ADDER : 40;
+    const marginAdder = isCommercialTruckSize(tireSize) ? COMMERCIAL_TIRE_ADDER : STANDARD_TIRE_ADDER;
     const price = msrpUsd ? (msrpUsd * 0.85) + marginAdder : mapUsd;
     const description = r.tire_description || tireSize || r.sku;
 
@@ -651,14 +654,14 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
     for (const tire of result.tires) {
       const unified = tireWebTireToUnified(tire, result.provider);
       
-      // CRITICAL: Always use cost + $40 for TireWeb tires
+      // CRITICAL: Always use cost + $50 for TireWeb tires
       // Don't trust supplier sellPrice - they may have different margins
       // Commercial/medium-truck: cost + $165 (TireWeb BuyPrice already includes FET)
       const cost = unified.cost;
       let displayPrice: number | null = null;
       
       if (cost && cost > 0) {
-        const marginAdder = isCommercialTruckSize(unified.size || unified.simpleSize || "") ? COMMERCIAL_TIRE_ADDER : 40;
+        const marginAdder = isCommercialTruckSize(unified.size || unified.simpleSize || "") ? COMMERCIAL_TIRE_ADDER : STANDARD_TIRE_ADDER;
         displayPrice = cost + marginAdder;
       }
       
@@ -938,11 +941,11 @@ function convertUSAFToTireResult(item: USAutoForceStockItem): TireResult {
   // Normalize terrain from tireType (e.g., "PASSENGER/CUV/SUV" → category)
   const terrain = normalizeTreadCategory(item.tireType, item.description);
   
-  // Calculate sell price: cost + $40 margin (same as TireWeb).
+  // Calculate sell price: cost + $50 margin (same as TireWeb).
   // Commercial/medium-truck: cost + FET + $165 (USAF reports FET separately).
   const usafIsCommercial = isCommercialTruckSize(item.tireSize || "");
   const sellPrice = item.cost > 0
-    ? (usafIsCommercial ? item.cost + (item.fet || 0) + COMMERCIAL_TIRE_ADDER : item.cost + 40)
+    ? (usafIsCommercial ? item.cost + (item.fet || 0) + COMMERCIAL_TIRE_ADDER : item.cost + STANDARD_TIRE_ADDER)
     : null;
   
   return {
@@ -1358,7 +1361,7 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
         // K&M reports FET separately from Cost.
         price: isCommercialTruckSize(size)
           ? cost + fet + COMMERCIAL_TIRE_ADDER
-          : cost + fet + 40,
+          : cost + fet + STANDARD_TIRE_ADDER,
         quantity: { primary, alternate, national },
         imageUrl: null, // K&M direct doesn't have images, TireWeb will provide
         size,
