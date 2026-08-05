@@ -264,12 +264,13 @@ function isCommercialTruckSize(s: string): boolean {
 }
 
 /**
- * Commercial / medium-truck per-tire adder:
- *   $100 markup + $40 labor + $25 disposal = $165 per tire.
- * Applied on top of landed cost (cost + FET). Note: TireWeb BuyPrice already
- * includes FET; K&M direct and USAF report FET separately.
+ * Commercial / medium-truck per-tire markup: $100 on top of landed cost
+ * (cost + FET). Labor ($40/tire) and disposal ($25/tire) are charged as
+ * separate line items on the local site (see lib/localPricing.ts) — same
+ * structure as passenger/LT. Note: TireWeb BuyPrice already includes FET;
+ * K&M direct and USAF report FET separately.
  */
-const COMMERCIAL_TIRE_ADDER = 165;
+const COMMERCIAL_TIRE_ADDER = 100;
 
 /** Standard passenger / light-truck per-tire margin (matches in-store pricing). */
 const STANDARD_TIRE_ADDER = 50;
@@ -942,7 +943,7 @@ function convertUSAFToTireResult(item: USAutoForceStockItem): TireResult {
   const terrain = normalizeTreadCategory(item.tireType, item.description);
   
   // Calculate sell price: cost + $50 margin (same as TireWeb).
-  // Commercial/medium-truck: cost + FET + $165 (USAF reports FET separately).
+  // Commercial/medium-truck: cost + FET + $100 markup (USAF reports FET separately).
   const usafIsCommercial = isCommercialTruckSize(item.tireSize || "");
   const sellPrice = item.cost > 0
     ? (usafIsCommercial ? item.cost + (item.fet || 0) + COMMERCIAL_TIRE_ADDER : item.cost + STANDARD_TIRE_ADDER)
@@ -1357,8 +1358,8 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
         model: "",
         description,
         cost,
-        // Commercial/medium-truck: cost + FET + $165 ($100 markup + $40 labor + $25 disposal).
-        // K&M reports FET separately from Cost.
+        // Commercial/medium-truck: cost + FET + $100 markup (labor/disposal are
+        // separate local line items). K&M reports FET separately from Cost.
         price: isCommercialTruckSize(size)
           ? cost + fet + COMMERCIAL_TIRE_ADDER
           : cost + fet + STANDARD_TIRE_ADDER,

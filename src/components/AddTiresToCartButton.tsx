@@ -84,7 +84,7 @@ export function AddTiresToCartButton({
 
   // In local mode the button reflects the out-the-door total (install + tax + fees)
   // so the price doesn't jump when the item lands in the cart.
-  const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity) : unitPrice * quantity;
+  const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity, size) : unitPrice * quantity;
   const otdSuffix = isLocal ? " out the door" : "";
 
   const baseStyles = {
@@ -203,7 +203,7 @@ export function QuickAddTireButton({
   };
 
   // For local mode, show out-the-door price (includes install, tax, recycling)
-  const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity) : unitPrice * quantity;
+  const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity, size) : unitPrice * quantity;
 
   // Use wheel card style: red gradient CTA with price inline (matches WheelsStyleCard)
   const buttonStyles = isPackageFlow

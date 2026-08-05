@@ -261,9 +261,27 @@ export function CartSlideout() {
     .filter((i): i is CartWheelItem => i.type === "wheel")
     .reduce((sum, w) => sum + w.unitPrice * w.quantity, 0);
   
-  // For local mode, get full price breakdown
-  const localBreakdown = isLocal && tireCount > 0 
-    ? getOutTheDoorBreakdown(tireSubtotal / tireCount, tireCount)
+  // For local mode, get full price breakdown (per item so commercial
+  // medium-truck tires get commercial labor/disposal rates)
+  const localBreakdown = isLocal && tireCount > 0
+    ? (() => {
+        const tireItems = items.filter((i): i is CartTireItem => i.type === "tire");
+        let installTotal = 0;
+        let recyclingTotal = 0;
+        for (const t of tireItems) {
+          const b = getOutTheDoorBreakdown(t.unitPrice, t.quantity, t.size);
+          installTotal += b.installTotal;
+          recyclingTotal += b.recyclingTotal;
+        }
+        const taxTotal = tireSubtotal * 0.06;
+        return {
+          tiresTotal: tireSubtotal,
+          installTotal,
+          taxTotal,
+          recyclingTotal,
+          outTheDoorTotal: tireSubtotal + installTotal + recyclingTotal + taxTotal,
+        };
+      })()
     : null;
   
   // Total for local: tire OTD + wheels (taxed but no install fee)

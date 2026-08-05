@@ -66,8 +66,8 @@ export function LocalTireAddButton({
   };
 
   // Calculate out-the-door total for selected quantity
-  const outTheDoorTotal = getOutTheDoorTotal(unitPrice, quantity);
-  const breakdown = getOutTheDoorBreakdown(unitPrice, quantity);
+  const outTheDoorTotal = getOutTheDoorTotal(unitPrice, quantity, size);
+  const breakdown = getOutTheDoorBreakdown(unitPrice, quantity, size);
 
   const buttonStyles = isPackageFlow
     ? "rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-sm font-bold text-green-800 hover:bg-green-100 transition-colors disabled:opacity-60"

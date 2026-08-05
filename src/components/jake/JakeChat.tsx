@@ -15,6 +15,9 @@ import { useVehicleMemory, formatVehicleDisplay, type SavedVehicle } from "@/con
 import {
   LABOR_FEE_PER_SET,
   RECYCLING_FEE_PER_SET,
+  COMMERCIAL_LABOR_FEE_PER_SET,
+  COMMERCIAL_RECYCLING_FEE_PER_SET,
+  isCommercialTireSize,
   TAX_RATE as LOCAL_OTD_TAX_RATE,
 } from "@/lib/localPricing";
 import {
@@ -33,6 +36,8 @@ interface BuildLineItem {
   type: "wheel" | "tire" | "accessory";
   quantity: number;
   unitPrice: number;
+  /** Tire size (commercial sizes get commercial labor/disposal rates) */
+  size?: string;
 }
 
 /**
@@ -56,7 +61,8 @@ function decodeCartItems(cartUrl: string): BuildLineItem[] {
           rawType === "wheel" ? "wheel" : rawType === "accessory" ? "accessory" : "tire";
         const unitPrice = Number(it.price);
         const quantity = Number(it.quantity) || (type === "accessory" ? 1 : 4);
-        return { type, quantity, unitPrice: Number.isFinite(unitPrice) ? unitPrice : 0 };
+        const size = typeof it.size === "string" ? it.size : undefined;
+        return { type, quantity, unitPrice: Number.isFinite(unitPrice) ? unitPrice : 0, size };
       })
       .filter((li) => li.unitPrice > 0 && li.quantity > 0);
   } catch {
@@ -99,10 +105,15 @@ function computeRunningTotal(items: BuildLineItem[], isLocal: boolean): RunningT
 
   if (isLocal) {
     // Fees scale per set of 4 tires (matches cart local branch exactly).
-    const tireCount = items.filter((i) => i.type === "tire").reduce((s, t) => s + t.quantity, 0);
-    const setMultiplier = tireCount > 0 ? tireCount / 4 : 0;
-    const laborFee = LABOR_FEE_PER_SET * setMultiplier;
-    const recyclingFee = RECYCLING_FEE_PER_SET * setMultiplier;
+    // Commercial/medium-truck tires use commercial rates ($40/$25 per tire).
+    const tireItems = items.filter((i) => i.type === "tire");
+    let laborFee = 0;
+    let recyclingFee = 0;
+    for (const t of tireItems) {
+      const commercial = isCommercialTireSize(t.size);
+      laborFee += ((commercial ? COMMERCIAL_LABOR_FEE_PER_SET : LABOR_FEE_PER_SET) / 4) * t.quantity;
+      recyclingFee += ((commercial ? COMMERCIAL_RECYCLING_FEE_PER_SET : RECYCLING_FEE_PER_SET) / 4) * t.quantity;
+    }
     const tax = subtotal * LOCAL_OTD_TAX_RATE; // tax on products only
     const total = subtotal + laborFee + recyclingFee + tax;
     return {

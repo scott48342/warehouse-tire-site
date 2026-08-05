@@ -24,6 +24,7 @@ import { useShopContext, useIsLocalMode } from '@/contexts/ShopContextProvider';
 import { STORES, type LocalStore } from '@/lib/shopContext';
 import { StripePaymentElement } from '@/components/StripePaymentElement';
 import { getCartId } from '@/lib/cart/useCartTracking';
+import { isCommercialTireSize } from '@/lib/localPricing';
 
 // ============================================================================
 // TYPES
@@ -43,6 +44,9 @@ const LOCAL_FEES = {
   installPerTire: 20,
   installPerWheel: 15,
   disposalPerTire: 5,
+  // Commercial/medium-truck rates (19.5/22.5/24.5 rims, R-style sizes)
+  commercialInstallPerTire: 40,
+  commercialDisposalPerTire: 25,
 };
 
 // ============================================================================
@@ -333,8 +337,14 @@ export function LocalMobileCheckout({ onDesktopView }: LocalMobileCheckoutProps)
   const roadHazardPerTire = Math.max(roadHazardMinPerTire, avgTirePrice * roadHazardRate);
   const roadHazardTotal = Math.round(roadHazardPerTire * tireCount * 100) / 100;
   
-  const installFees = (tireCount * LOCAL_FEES.installPerTire) + (wheelOnlyCount * LOCAL_FEES.installPerWheel);
-  const disposalFees = tireCount * LOCAL_FEES.disposalPerTire;
+  // Commercial/medium-truck tires use commercial install/disposal rates
+  let installFees = wheelOnlyCount * LOCAL_FEES.installPerWheel;
+  let disposalFees = 0;
+  for (const t of tires) {
+    const commercial = isCommercialTireSize(t.size);
+    installFees += t.quantity * (commercial ? LOCAL_FEES.commercialInstallPerTire : LOCAL_FEES.installPerTire);
+    disposalFees += t.quantity * (commercial ? LOCAL_FEES.commercialDisposalPerTire : LOCAL_FEES.disposalPerTire);
+  }
   const taxableAmount = subtotal;
   const tax = taxableAmount * 0.06;
   const total = subtotal + installFees + disposalFees + tax;

@@ -4788,6 +4788,7 @@ function TireCard({
                     unitPrice={unitPrice} 
                     quantity={4} 
                     isLocalMode={isLocalMode}
+                    tireSize={t.size || undefined}
                   />
                 ) : (
                   <div className="text-xl font-extrabold text-neutral-900">Call for price</div>

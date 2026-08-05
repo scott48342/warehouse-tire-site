@@ -14,11 +14,14 @@ import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { formatCurrency } from "@/lib/shipping/shippingService";
 import { useShopContext, LocalOnly, NationalOnly } from "@/contexts/ShopContextProvider";
 import { STORES } from "@/lib/shopContext";
-import { 
-  calculateLocalOutTheDoorPrice, 
-  LABOR_FEE_PER_SET, 
-  RECYCLING_FEE_PER_SET, 
-  TAX_RATE 
+import {
+  calculateLocalOutTheDoorPrice,
+  LABOR_FEE_PER_SET,
+  RECYCLING_FEE_PER_SET,
+  COMMERCIAL_LABOR_FEE_PER_SET,
+  COMMERCIAL_RECYCLING_FEE_PER_SET,
+  isCommercialTireSize,
+  TAX_RATE
 } from "@/lib/localPricing";
 import { useDiscount } from "@/lib/discounts/DiscountContext";
 import { DiscountBanner, DiscountCodeInput } from "@/components/DiscountBanner";
@@ -43,8 +46,8 @@ function NationalOrderSummary({
   const { activeDiscount, calculateDiscount, hasDiscount } = useDiscount();
   const discountAmount = calculateDiscount(subtotal);
   const discountedSubtotal = subtotal - discountAmount;
-  const finalTotal = isFreeShipping || !isValidZip 
-    ? discountedSubtotal 
+  const finalTotal = isFreeShipping || !isValidZip
+    ? discountedSubtotal
     : estimatedTotal - discountAmount;
 
   return (
@@ -53,7 +56,7 @@ function NationalOrderSummary({
         <span className="text-neutral-600">Subtotal</span>
         <span className="font-semibold text-neutral-900">${subtotal.toFixed(2)}</span>
       </div>
-      
+
       {/* Discount Row */}
       {hasDiscount && (
         <div className="flex justify-between items-center text-green-600 bg-green-50 -mx-2 px-2 py-1.5 rounded-lg">
@@ -64,7 +67,7 @@ function NationalOrderSummary({
           <span className="font-bold">-${discountAmount.toFixed(2)}</span>
         </div>
       )}
-      
+
       <div className="flex justify-between">
         <span className="text-neutral-600">Shipping</span>
         {isFreeShipping ? (
@@ -85,7 +88,7 @@ function NationalOrderSummary({
           ${finalTotal.toFixed(2)}
         </span>
       </div>
-      
+
       {/* Discount Code Input - only show if no active discount */}
       {!hasDiscount && (
         <div className="mt-3 pt-3 border-t border-neutral-100">
@@ -214,7 +217,7 @@ function TireCartItem({
       <div className="flex-1 min-w-0">
         <div className="text-sm font-semibold text-neutral-500">{item.brand}</div>
         <h3 className="font-extrabold text-lg text-neutral-900 break-words">{item.model}</h3>
-        
+
         {/* Tire size with load/speed rating */}
         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
           <span className="font-semibold text-neutral-900">{normalizeTireSize(item.size)}</span>
@@ -222,7 +225,7 @@ function TireCartItem({
             <span className="text-neutral-600">• {loadSpeedDisplay}</span>
           ) : null}
         </div>
-        
+
         {/* Staggered rear size */}
         {item.staggered && item.rearSize ? (
           <div className="text-sm text-neutral-500">Rear: {normalizeTireSize(item.rearSize)}</div>
@@ -275,7 +278,7 @@ function AccessoryCartItem({
   onRemove: () => void;
 }) {
   const total = item.unitPrice * item.quantity;
-  
+
   // Icon based on category
   const iconMap: Record<string, string> = {
     lug_nut: "🔩",
@@ -309,10 +312,10 @@ function AccessoryCartItem({
               : null}
           </div>
         ) : null}
-        
+
         {/* SKU / Part Number */}
         <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
-        
+
         <div className="text-xs text-neutral-500 mt-0.5">{item.reason}</div>
 
         <div className="mt-4 flex items-center justify-between">
@@ -338,7 +341,7 @@ function AccessoryCartItem({
 // Local Installation Card - shown in local mode, displays both store locations
 function LocalInstallationCard() {
   const stores = Object.values(STORES);
-  
+
   return (
     <div className="rounded-2xl border-2 border-blue-200 bg-blue-50 p-5">
       <div className="flex items-start gap-3">
@@ -498,7 +501,7 @@ export default function CartPage() {
         <NationalOnly>
           <FreeShippingProgress subtotal={subtotal} className="mb-6" />
         </NationalOnly>
-        
+
         {/* Local mode: Installation banner */}
         <LocalOnly>
           {storeInfo && (
@@ -577,9 +580,9 @@ export default function CartPage() {
                   <div className="flex-1">
                     <h3 className="font-bold text-amber-900">Complete your setup with tires</h3>
                     <p className="mt-1 text-sm text-amber-800">
-                      {isLocal 
-                        ? "Add matching tires for your new wheels — we'll mount and install everything together."
-                        : "Add matching tires for your new wheels — ships together for faster delivery."}
+                      {isLocal
+                        ? "Add matching tires for your new wheels - we'll mount and install everything together."
+                        : "Add matching tires for your new wheels - ships together for faster delivery."}
                     </p>
                     <Link
                       href={tiresUrl}
@@ -591,7 +594,7 @@ export default function CartPage() {
                 </div>
               </div>
             ) : null}
-            
+
             {/* Complete Your Setup - Accessory Upsell (National mode only - local includes install) */}
             {!isLocal && (hasWheels() || hasTires()) && !hasAccessories() ? (
               <CartAccessoryUpsell className="mt-4" />
@@ -617,19 +620,25 @@ export default function CartPage() {
               {/* Local mode: Show full breakdown with labor, recycling, and tax */}
               {isLocal ? (
                 (() => {
-                  // Count tire quantity to scale fees proportionally
-                  const tireCount = items
-                    .filter((i): i is CartTireItem => i.type === "tire")
-                    .reduce((sum, t) => sum + t.quantity, 0);
-                  const setMultiplier = tireCount > 0 ? tireCount / 4 : 1;
+                  // Count tire quantity to scale fees proportionally.
+                  // Commercial/medium-truck tires use commercial rates ($40/$25 per tire).
+                  const tireItems = items.filter((i): i is CartTireItem => i.type === "tire");
+                  const tireCount = tireItems.reduce((sum, t) => sum + t.quantity, 0);
                   
-                  const laborFee = LABOR_FEE_PER_SET * setMultiplier;
-                  const recyclingFee = RECYCLING_FEE_PER_SET * setMultiplier;
+                  let laborFee = 0;
+                  let recyclingFee = 0;
+                  for (const t of tireItems) {
+                    const commercial = isCommercialTireSize(t.size);
+                    const perTireLabor = (commercial ? COMMERCIAL_LABOR_FEE_PER_SET : LABOR_FEE_PER_SET) / 4;
+                    const perTireRecycling = (commercial ? COMMERCIAL_RECYCLING_FEE_PER_SET : RECYCLING_FEE_PER_SET) / 4;
+                    laborFee += perTireLabor * t.quantity;
+                    recyclingFee += perTireRecycling * t.quantity;
+                  }
                   const subtotalWithFees = subtotal + laborFee + recyclingFee;
                   // Tax only applies to products (tires/wheels), not labor or recycling fees
                   const taxAmount = subtotal * TAX_RATE;
                   const totalOutTheDoor = subtotalWithFees + taxAmount;
-                  
+
                   return (
                     <div className="mt-4 space-y-2 text-sm">
                       <div className="flex justify-between">
@@ -663,8 +672,8 @@ export default function CartPage() {
                 })()
               ) : (
                 /* National mode: Original shipping-based pricing */
-                <NationalOrderSummary 
-                  subtotal={subtotal} 
+                <NationalOrderSummary
+                  subtotal={subtotal}
                   isFreeShipping={isFreeShipping}
                   isValidZip={isValidZip}
                   shippingEstimate={shippingEstimate}
@@ -703,7 +712,7 @@ export default function CartPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-green-600">✓</span>
-                      <span>No surprises — price includes everything</span>
+                      <span>No surprises - price includes everything</span>
                     </div>
                   </>
                 ) : (
@@ -728,13 +737,13 @@ export default function CartPage() {
                 </a>
               </div>
             </div>
-            
+
             {/* Store Reviews Trust Strip */}
             <CheckoutTrustStrip className="mt-4" />
-            
+
             {/* Why Shop With Us */}
             <CartTrustSection className="mt-4" />
-            
+
             {/* Customer Reviews */}
             <ReviewsMini count={2} />
           </div>

@@ -61,7 +61,7 @@ export function TireBuyBox({
   const hasPrice = unitPrice != null && unitPrice > 0;
   const total = hasPrice ? unitPrice * quantity : 0;
   // Local mode shows the full out-the-door breakdown so the cart total isn't a surprise
-  const otd = hasPrice && isLocal ? getOutTheDoorBreakdown(unitPrice, quantity) : null;
+  const otd = hasPrice && isLocal ? getOutTheDoorBreakdown(unitPrice, quantity, size) : null;
 
   return (
     <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">

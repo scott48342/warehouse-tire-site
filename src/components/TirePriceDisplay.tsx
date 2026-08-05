@@ -20,6 +20,8 @@ interface TirePriceDisplayProps {
   compact?: boolean;
   /** Override shop mode detection (for server components) */
   isLocalMode?: boolean;
+  /** Tire size — commercial sizes get commercial labor/disposal rates */
+  tireSize?: string;
 }
 
 export function TirePriceDisplay({
@@ -28,13 +30,14 @@ export function TirePriceDisplay({
   showFinancing = true,
   compact = false,
   isLocalMode,
+  tireSize,
 }: TirePriceDisplayProps) {
   // Use prop if provided, otherwise detect from context
   const shopContext = useShopContext();
   const isLocal = isLocalMode ?? shopContext.isLocal;
   
   const setPrice = unitPrice * quantity;
-  const outTheDoorPrice = getOutTheDoorTotal(unitPrice, quantity);
+  const outTheDoorPrice = getOutTheDoorTotal(unitPrice, quantity, tireSize);
   
   if (isLocal) {
     // LOCAL MODE: Show out-the-door price
@@ -110,11 +113,11 @@ export function TirePriceDisplay({
 /**
  * Simple inline price for lists/tables
  */
-export function TirePriceInline({ unitPrice, quantity = 4 }: { unitPrice: number; quantity?: number }) {
+export function TirePriceInline({ unitPrice, quantity = 4, tireSize }: { unitPrice: number; quantity?: number; tireSize?: string }) {
   const { isLocal } = useShopContext();
   
   if (isLocal) {
-    const outTheDoorPrice = getOutTheDoorTotal(unitPrice, quantity);
+    const outTheDoorPrice = getOutTheDoorTotal(unitPrice, quantity, tireSize);
     return (
       <span className="font-bold text-green-800">
         ${formatPrice(outTheDoorPrice)}

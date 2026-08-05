@@ -8,6 +8,7 @@ import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
 import { normalizeTireSize } from "@/lib/productFormat";
+import { isCommercialTireSize } from "@/lib/localPricing";
 import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
 import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
@@ -406,6 +407,9 @@ export default function CheckoutPage() {
     installPerTire: 20,      // Mount, balance, install per tire ($80/set of 4)
     installPerWheel: 15,     // Wheel-only install (no tire)
     disposalPerTire: 5,      // Tire recycling fee ($20/set of 4)
+    // Commercial/medium-truck rates (19.5/22.5/24.5 rims, R-style sizes)
+    commercialInstallPerTire: 40,
+    commercialDisposalPerTire: 25,
   };
   
   // Card processing fee - REMOVED per business decision (2025-07-22)
@@ -419,16 +423,23 @@ export default function CheckoutPage() {
   const localServiceFees = useMemo(() => {
     if (!isLocal) return { install: 0, disposal: 0, total: 0 };
     
-    // Tire install includes mounting on wheel
-    const installFee = (tireCount * LOCAL_FEES.installPerTire) + (wheelOnlyCount * LOCAL_FEES.installPerWheel);
-    const disposalFee = tireCount * LOCAL_FEES.disposalPerTire;
+    // Tire install includes mounting on wheel.
+    // Commercial/medium-truck tires use commercial rates per tire.
+    let installFee = wheelOnlyCount * LOCAL_FEES.installPerWheel;
+    let disposalFee = 0;
+    for (const t of tires) {
+      const commercial = isCommercialTireSize(t.size);
+      installFee += t.quantity * (commercial ? LOCAL_FEES.commercialInstallPerTire : LOCAL_FEES.installPerTire);
+      disposalFee += t.quantity * (commercial ? LOCAL_FEES.commercialDisposalPerTire : LOCAL_FEES.disposalPerTire);
+    }
     
     return {
       install: installFee,
       disposal: disposalFee,
       total: installFee + disposalFee,
     };
-  }, [isLocal, tireCount, wheelOnlyCount]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLocal, tires, wheelOnlyCount]);
 
   // Card processing fee - REMOVED (absorbed by business)
   // Previously calculated 3.99% for local orders, now $0

@@ -159,8 +159,9 @@ function priceFromRow(r: any): number | null {
   const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
   const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
   // Sell price = (MSRP × 0.85) + $50, fall back to MAP if no MSRP.
-  // Commercial/medium-truck sizes: $165 adder ($100 markup + $40 labor + $25 disposal).
-  const adder = isCommercialTruckSizePdp(String(r?.tire_size || r?.simple_size || "")) ? 165 : 50;
+  // Commercial/medium-truck sizes: $100 markup (labor/disposal are separate
+  // local line items — same structure as passenger/LT).
+  const adder = isCommercialTruckSizePdp(String(r?.tire_size || r?.simple_size || "")) ? 100 : 50;
   if (msrpUsd) return (msrpUsd * 0.85) + adder;
   if (mapUsd) return mapUsd; // MAP fallback (already retail price)
   return null;

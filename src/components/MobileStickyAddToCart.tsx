@@ -121,7 +121,7 @@ export function MobileStickyAddToCart(props: MobileStickyAddToCartProps) {
   // Local tire orders include install/tax/fees — show out-the-door so the cart total
   // matches what's on screen and there's no sticker shock.
   const isLocalTire = isLocal && props.type === "tire";
-  const total = isLocalTire ? getOutTheDoorTotal(props.unitPrice, quantity) : props.unitPrice * quantity;
+  const total = isLocalTire ? getOutTheDoorTotal(props.unitPrice, quantity, props.type === "tire" ? props.size : undefined) : props.unitPrice * quantity;
   const label = props.type === "tire" ? "per tire" : "per wheel";
 
   return (
