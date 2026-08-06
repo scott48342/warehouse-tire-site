@@ -6,6 +6,7 @@ import { WheelsGridWithSelection } from "@/components/WheelsGridWithSelection";
 import { WheelFilterSidebar } from "@/components/WheelFilterSidebar";
 import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
 import { WheelsLazyLoader, LoadMoreButton } from "@/components/WheelsLazyLoader";
+import WheelsAutoLoadAll from "@/components/WheelsAutoLoadAll";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
@@ -2187,22 +2188,13 @@ export default async function WheelsPage({
               }))}
             />
 
-            {/* LOAD ALL WHEELS BUTTON - Shows when there are more wheels to load */}
+            {/* AUTO LOAD ALL - triggers the full fetch automatically when the user scrolls past everything fetched so far */}
             {!loadAllParam && totalCount > fetchedSkuCount && (
-              <div className="mt-6 flex flex-col items-center gap-2 rounded-lg border border-dashed border-neutral-300 bg-neutral-50 py-6">
-                <p className="text-sm text-neutral-600">
-                  Showing {itemsFinal.length.toLocaleString()} of {totalCount.toLocaleString()} wheels with inventory
-                </p>
-                <a
-                  href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${styleParam ? `&style=${encodeURIComponent(styleParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&loadAll=true&page=1`}
-                  className="rounded-lg bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-neutral-800"
-                >
-                  Load All {totalCount.toLocaleString()} Wheels
-                </a>
-                <p className="text-xs text-neutral-400">
-                  May take a moment to load
-                </p>
-              </div>
+              <WheelsAutoLoadAll
+                href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${styleParam ? `&style=${encodeURIComponent(styleParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&loadAll=true&page=1`}
+                totalCount={totalCount}
+                shownCount={itemsFinal.length}
+              />
             )}
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">

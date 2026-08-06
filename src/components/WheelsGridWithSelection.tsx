@@ -856,6 +856,30 @@ export function WheelsGridWithSelection({
     setVisibleCount(INFINITE_BATCH);
   }, [setupMode, wheels, allWheels]);
 
+  // Restore scroll + reveal window after an auto "Load All" reload
+  // (WheelsAutoLoadAll stashes position in sessionStorage before navigating)
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem("wtd:wheels:loadall-restore");
+      if (!raw) return;
+      sessionStorage.removeItem("wtd:wheels:loadall-restore");
+      const saved = JSON.parse(raw) as { y?: number; count?: number; ts?: number };
+      if (!saved || typeof saved.ts !== "number" || Date.now() - saved.ts > 120_000) return;
+      const count = typeof saved.count === "number" && saved.count > 0 ? saved.count : INFINITE_BATCH;
+      // Reveal at least what the user had already scrolled through, then jump back
+      setVisibleCount(Math.max(count + INFINITE_BATCH, INFINITE_BATCH));
+      const y = typeof saved.y === "number" ? saved.y : 0;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: y, behavior: "instant" as ScrollBehavior });
+        });
+      });
+    } catch {
+      /* ignore restore failures */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     const el = loadMoreSentinelRef.current;
     if (!el) return;
