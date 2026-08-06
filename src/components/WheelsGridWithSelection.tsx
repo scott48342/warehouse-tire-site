@@ -764,7 +764,11 @@ export function WheelsGridWithSelection({
       // STAGGERED MODE: Trust API's pair property
       // The fitment-search API computes staggered pairs server-side
       // ═══════════════════════════════════════════════════════════════════════════
-      return wheels.filter(w => w.pair?.staggered === true);
+      // IMPORTANT: Filter from allWheels (full fetched set), NOT the server page slice.
+      // The server paginates WITHOUT the staggered filter, so an individual page slice
+      // can contain zero complete staggered pairs (caused empty page 2+ bug).
+      const staggeredSource = (allWheels && allWheels.length > 0) ? allWheels : wheels;
+      return staggeredSource.filter(w => w.pair?.staggered === true);
     } else {
       // Square mode: Show wheels that work on all 4 corners
       // For staggered-capable vehicles, this means wheels that match FRONT spec
@@ -797,7 +801,7 @@ export function WheelsGridWithSelection({
       // Fallback: show all non-staggered wheels
       return wheels.filter(w => !w.pair?.staggered);
     }
-  }, [wheels, setupMode, supportsStaggered, staggeredInfo, staggeredPairs, completePairStyles, matchesStaggeredSpec]);
+  }, [wheels, allWheels, setupMode, supportsStaggered, staggeredInfo, staggeredPairs, completePairStyles, matchesStaggeredSpec]);
   
   // For staggered mode, deduplicate by style (show one card per style, not per SKU)
   // The API already provides pair data, so we just need to dedupe
