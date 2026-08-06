@@ -830,6 +830,34 @@ export function WheelsGridWithSelection({
   
   // Final wheels to display
   const displayWheels = setupMode === "staggered" ? wheelsWithPairs : filteredWheels;
+
+  // ─── INFINITE SCROLL: progressively reveal wheels as the user scrolls ───
+  // (replaces page tabs, which distracted customers)
+  const INFINITE_BATCH = 24;
+  const [visibleCount, setVisibleCount] = useState(INFINITE_BATCH);
+  const loadMoreSentinelRef = useRef<HTMLDivElement | null>(null);
+
+  // Reset reveal window when the underlying list changes (filters, setup mode, new search)
+  useEffect(() => {
+    setVisibleCount(INFINITE_BATCH);
+  }, [setupMode, wheels, allWheels]);
+
+  useEffect(() => {
+    const el = loadMoreSentinelRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisibleCount((c) => (c < displayWheels.length ? c + INFINITE_BATCH : c));
+        }
+      },
+      { rootMargin: "600px 0px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [displayWheels.length, visibleCount]);
+
+  const visibleWheels = displayWheels.slice(0, visibleCount);
   
   // Also filter recommended wheels by setup mode
   // For staggered mode, compute pairs specifically for recommended wheels
@@ -1613,7 +1641,7 @@ export function WheelsGridWithSelection({
       {/* Main Grid — 2-col horizontal cards */}
       <div className="grid gap-2.5 grid-cols-1 md:grid-cols-2">
         {displayWheels.length ? (
-          displayWheels.map((w, idx) => renderWheelCard(w, idx, false, true))
+          visibleWheels.map((w, idx) => renderWheelCard(w, idx, false, true))
         ) : (
           <div className="col-span-full rounded-2xl border border-neutral-200 bg-white p-6 text-center">
             <div className="text-neutral-700 font-medium">
@@ -1632,6 +1660,16 @@ export function WheelsGridWithSelection({
           </div>
         )}
       </div>
+
+      {/* Infinite scroll sentinel - reveals the next batch when it comes into view */}
+      {visibleCount < displayWheels.length && (
+        <div
+          ref={loadMoreSentinelRef}
+          className="mt-4 flex items-center justify-center py-6 text-xs font-semibold text-neutral-400"
+        >
+          Loading more wheels… ({Math.min(visibleCount, displayWheels.length)} of {displayWheels.length})
+        </div>
+      )}
       {/* Desktop + Mobile sticky CTAs REMOVED - single CTA block in SelectionConfirmation only */}
       
       {/* Mobile Sticky Bar - disabled */}

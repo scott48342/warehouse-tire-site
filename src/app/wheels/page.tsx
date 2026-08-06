@@ -1231,9 +1231,9 @@ export default async function WheelsPage({
   const safePage = Math.min(page, totalPages);
 
   // For fast browse, items are already paginated server-side
-  const itemsPage: Wheel[] = useFastBrowse
-    ? itemsFinal
-    : itemsFinal.slice((safePage - 1) * stylesPerPage, safePage * stylesPerPage);
+  // INFINITE SCROLL: pass ALL styles to the grid; it reveals them progressively
+  // as the user scrolls (no page tabs - they distracted customers).
+  const itemsPage: Wheel[] = itemsFinal;
 
   // Still show raw SKU count for reference.
   const totalCount = useFastBrowse ? fastTotalCount : (typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length);
@@ -1955,7 +1955,7 @@ export default async function WheelsPage({
 
             <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-neutral-500">
               <div>
-                Showing <span className="font-semibold text-neutral-700">{itemsPage.length}</span> styles (page {safePage} of {totalPages})
+                Showing <span className="font-semibold text-neutral-700">{itemsPage.length}</span> styles
               </div>
 
               {hasVehicle ? (
@@ -2205,48 +2205,7 @@ export default async function WheelsPage({
               <div className="text-sm font-semibold text-neutral-600">
                 {loadAllParam ? `${itemsFinal.length.toLocaleString()} styles (all loaded)` : `${itemsFinal.length} styles (${totalCount} SKUs)`}
               </div>
-              <div className="flex flex-wrap items-center gap-2">
-                {safePage > 1 ? (
-                  <a
-                    className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${safePage - 1}`}
-                  >
-                    Prev
-                  </a>
-                ) : null}
-
-                {Array.from({ length: totalPages }, (_, i) => i + 1)
-                  .filter((p) => p === 1 || p === totalPages || Math.abs(p - page) <= 2)
-                  .map((p, i, arr) => {
-                    const prev = arr[i - 1];
-                    const gap = prev != null && p - prev > 1;
-                    const href = `${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${p}`;
-                    return (
-                      <span key={p} className="flex items-center gap-2">
-                        {gap ? <span className="px-1 text-xs text-neutral-500">…</span> : null}
-                        <a
-                          href={href}
-                          className={
-                            p === safePage
-                              ? "rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
-                              : "rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-                          }
-                        >
-                          {p}
-                        </a>
-                      </span>
-                    );
-                  })}
-
-                {safePage < totalPages ? (
-                  <a
-                    className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${safePage + 1}`}
-                  >
-                    Next
-                  </a>
-                ) : null}
-              </div>
+              {/* Pagination tabs removed - infinite scroll in WheelsGridWithSelection reveals styles as the user scrolls */}
             </div>
           </section>
         </div>
