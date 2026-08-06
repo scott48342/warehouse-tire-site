@@ -657,7 +657,17 @@ export default async function WheelsPage({
   // User can click "Load All Wheels" to see everything with inventory
   // Check for loadAll param to show all results
   const loadAllParam = (Array.isArray(sp.loadAll) ? sp.loadAll[0] : sp.loadAll) === "true";
-  const upstreamPageSize = loadAllParam ? 3000 : 100;
+
+  // STAGGERED DEFAULT VIEW: staggered-capable vehicles default to "Performance
+  // Staggered" in the grid, so fetch ONLY complete staggered pairs from the API
+  // (staggeredOnly=1). totalCount + displayed counts then reflect the ACTUAL
+  // number of available staggered sets instead of all fitment-valid SKUs.
+  // (vehicleCallsForStaggered here is the pre-fetch probe value; a post-fetch
+  // fallback below refetches if the probe missed staggered info.)
+  const wantsStaggeredView = setupParam !== "square";
+  const staggeredOnlyFetch = vehicleCallsForStaggered && wantsStaggeredView;
+  // Paired SKUs are a much smaller set - fetch them all in one go (1000 cap).
+  const upstreamPageSize = loadAllParam ? 3000 : (staggeredOnlyFetch ? 2000 : 100);
 
   const baseWheelProsParams: Record<string, string | undefined> = {
     // Vehicle info (triggers fitment-search endpoint when present)
@@ -681,6 +691,8 @@ export default async function WheelsPage({
     // Include properties so we have wheel center bore for required hub ring calculation.
     fields: "inventory,price,images,properties",
     priceType: "msrp",
+    // Staggered-only mode: API returns only complete front+rear pair SKUs
+    staggeredOnly: staggeredOnlyFetch ? "1" : undefined,
     // NOTE: WheelPros docs say company is required for pricing, but in practice passing
     // company can zero results for some accounts/environments. Omit for now.
     currencyCode: "USD",
@@ -774,6 +786,18 @@ export default async function WheelsPage({
     // Extract staggered info from fitment-search response (authoritative source)
     if (data?.fitment?.staggered) {
       vehicleCallsForStaggered = Boolean(data.fitment.staggered.isStaggered);
+    }
+
+    // STAGGERED FALLBACK: the pre-fetch probe said non-staggered but the
+    // authoritative fitment-search response says staggered. Refetch in
+    // staggered-only mode so the default staggered view shows ALL available
+    // sets with honest counts.
+    if (!staggeredOnlyFetch && vehicleCallsForStaggered && wantsStaggeredView) {
+      data = await fetchWheels({
+        ...baseWheelProsParams,
+        staggeredOnly: "1",
+        pageSize: "2000",
+      });
     }
   }
 
@@ -1234,6 +1258,9 @@ export default async function WheelsPage({
   // INFINITE SCROLL: pass ALL styles to the grid; it reveals them progressively
   // as the user scrolls (no page tabs - they distracted customers).
   const itemsPage: Wheel[] = itemsFinal;
+
+  // Raw SKUs actually fetched upstream (for honest Load All visibility)
+  const fetchedSkuCount = Array.isArray((data as any)?.results) ? (data as any).results.length : 0;
 
   // Still show raw SKU count for reference.
   const totalCount = useFastBrowse ? fastTotalCount : (typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length);
@@ -2105,29 +2132,6 @@ export default async function WheelsPage({
                 supplier:     (w as any).supplier,
                 freeShipping: (w as any).freeShipping === true,
               }))}
-              allWheels={itemsFinal.map(w => ({
-                sku: w.sku,
-                brand: w.brand,
-                brandCode: w.brandCode,
-                model: w.model,
-                finish: w.finish,
-                diameter: w.diameter,
-                width: w.width,
-                offset: w.offset,
-                centerbore: w.centerbore,
-                imageUrl: w.imageUrl,
-                price: w.price,
-                stockQty: w.stockQty,
-                inventoryType: w.inventoryType,
-                styleKey: w.styleKey,
-                fitmentClass: w.fitmentClass,
-                finishThumbs: w.finishThumbs,
-                pair: w.pair,
-                boltPattern: (w as any).boltPattern,
-                fitmentGuidance: w.fitmentGuidance,
-                supplier:     (w as any).supplier,
-                freeShipping: (w as any).freeShipping === true,
-              }))}
               viewParams={{
                 year,
                 make,
@@ -2184,7 +2188,7 @@ export default async function WheelsPage({
             />
 
             {/* LOAD ALL WHEELS BUTTON - Shows when there are more wheels to load */}
-            {!loadAllParam && totalCount > itemsFinal.length && (
+            {!loadAllParam && totalCount > fetchedSkuCount && (
               <div className="mt-6 flex flex-col items-center gap-2 rounded-lg border border-dashed border-neutral-300 bg-neutral-50 py-6">
                 <p className="text-sm text-neutral-600">
                   Showing {itemsFinal.length.toLocaleString()} of {totalCount.toLocaleString()} wheels with inventory

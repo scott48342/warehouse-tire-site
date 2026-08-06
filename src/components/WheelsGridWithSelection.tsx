@@ -656,6 +656,20 @@ export function WheelsGridWithSelection({
     setSetupMode(mode);
     // Notify parent for URL sync
     onSetupModeChange?.(mode);
+    // NAVIGATE with the setup param so the SERVER refetches the right inventory:
+    // staggered view fetches complete pair sets only (staggeredOnly=1, honest
+    // counts), square view fetches the full fitment-valid catalog.
+    if (typeof window !== "undefined") {
+      try {
+        const url = new URL(window.location.href);
+        const current = url.searchParams.get("setup") || (supportsStaggered ? "staggered" : "square");
+        if (current !== mode) {
+          url.searchParams.set("setup", mode);
+          url.searchParams.delete("page");
+          window.location.assign(url.toString());
+        }
+      } catch { /* fall back to client-only toggle */ }
+    }
     // Track the selection
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "staggered_setup_select", {
@@ -666,7 +680,7 @@ export function WheelsGridWithSelection({
         vehicle_trim: viewParams.trim || viewParams.modification,
       });
     }
-  }, [viewParams, onSetupModeChange]);
+  }, [viewParams, onSetupModeChange, supportsStaggered]);
   
   // ═══════════════════════════════════════════════════════════════════════════════
   // PHASE 2: Filter wheels based on setup mode + match to staggered specs

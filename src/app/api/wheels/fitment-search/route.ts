@@ -2757,6 +2757,17 @@ async function handleDbFirstWheelResults(opts: {
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // PHASE 5: Build paginated results from ranked candidates
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // ─── STAGGERED-ONLY MODE (staggeredOnly=1) ───
+  // Return only complete staggered pair members (front + rear SKUs) so
+  // totalCount and pagination reflect the ACTUAL number of available
+  // staggered sets, not every fitment-valid SKU. Used by the wheels SRP
+  // when a staggered vehicle is in "Performance Staggered" view.
+  const staggeredOnlyRequested = opts.url.searchParams.get("staggeredOnly") === "1";
+  if (staggeredOnlyRequested && opts.staggeredInfo?.isStaggered) {
+    rankedCandidates = rankedCandidates.filter((c) => (c as any).staggeredPair?.staggered === true);
+    console.log(`[fitment-search] STAGGERED-ONLY filter: ${rankedCandidates.length} paired SKUs (${staggeredPairsFound} sets)`);
+  }
+
   const totalCount = rankedCandidates.length;
   const startIdx = (requestedPage - 1) * requestedPageSize;
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
