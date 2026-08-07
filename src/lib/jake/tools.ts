@@ -205,11 +205,16 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
   },
   {
     name: "search_tires",
-    description: `Search for tires by size or vehicle. Returns products with prices and links.`,
+    description: `Search for tires by size, brand, or vehicle. Returns products with prices and links.
+
+When customer asks for a SPECIFIC BRAND (e.g., "Mastercraft", "Michelin", "BFGoodrich"):
+- ALWAYS pass the brand parameter to filter results
+- This ensures you show them what they asked for, not just whatever's cheapest`,
     input_schema: {
       type: "object" as const,
       properties: {
         size: { type: "string", description: "Tire size (e.g., 275/55R20)" },
+        brand: { type: "string", description: "Tire brand to filter by (e.g., 'Mastercraft', 'Michelin', 'Goodyear'). USE THIS when customer asks for a specific brand!" },
         year: { type: "number", description: "Vehicle year (alternative to size)" },
         make: { type: "string", description: "Vehicle make" },
         model: { type: "string", description: "Vehicle model" },
@@ -651,13 +656,17 @@ export async function executeTool(
     }
     
     case "search_tires": {
-      const { size, year, make, model, limit = 6 } = input;
+      const { size, brand, year, make, model, limit = 6 } = input as {
+        size?: string; brand?: string; year?: number; make?: string; model?: string; limit?: number;
+      };
       const params = new URLSearchParams();
       if (size) params.set("size", String(size));
+      if (brand) params.set("brand", String(brand));
       if (year) params.set("year", String(year));
       if (make) params.set("make", String(make));
       if (model) params.set("model", String(model));
-      params.set("limit", String(limit));
+      // Request more results when filtering by brand so we have good selection
+      params.set("limit", brand ? String(Math.max(Number(limit), 15)) : String(limit));
       
       const url = `${baseUrl}/api/tires/search?${params}`;
       console.log(`[Jake Tool] search_tires: ${url}`);
