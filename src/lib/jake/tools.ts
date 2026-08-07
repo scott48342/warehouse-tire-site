@@ -354,7 +354,7 @@ AFTER GETTING RESULTS:
 - NEVER badmouth competitors, just highlight our strengths
 
 VALUE-ADDS TO MENTION:
-- Free shipping on orders over $599 (or whatever the current threshold is)
+- Free shipping on orders over $1,500
 - Local installation available (Pontiac & Waterford)
 - We stand behind what we sell - easy returns/warranty support
 - Real humans answer the phone
@@ -370,6 +370,31 @@ VALUE-ADDS TO MENTION:
         sku: { type: "string", description: "Our SKU (optional, for more precise matching)" }
       },
       required: ["productType", "brand", "model", "size"]
+    }
+  },
+  {
+    name: "lookup_order",
+    description: `Look up a customer's order status and tracking information.
+
+USE THIS WHEN:
+- Customer provides an order number (e.g., "WTD-ABC123")
+- Customer asks "where's my order?" or "order status"
+- Customer gives their email and asks about an order
+
+Returns: Order status, items ordered, tracking numbers (if shipped), and shipping destination.`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        orderId: { 
+          type: "string", 
+          description: "Order ID (e.g., 'WTD-ABC123'). PREFERRED if customer has it." 
+        },
+        email: { 
+          type: "string", 
+          description: "Customer's email address. Use if they don't have the order number." 
+        }
+      },
+      required: []
     }
   },
   {
@@ -511,6 +536,81 @@ export async function executeTool(
         return { trims: data.trims || [], count: data.trims?.length || 0 };
       } catch (err) {
         return { error: `Fetch error: ${err}` };
+      }
+    }
+
+    case "lookup_order": {
+      const { orderId, email } = input as { orderId?: string; email?: string };
+      
+      if (!orderId && !email) {
+        return {
+          found: false,
+          error: "I need either the order number (like WTD-ABC123) or the email address used for the order."
+        };
+      }
+      
+      const params = new URLSearchParams();
+      if (orderId) params.set("orderId", String(orderId));
+      if (email) params.set("email", String(email));
+      
+      const url = `${baseUrl}/api/jake/order-lookup?${params}`;
+      console.log(`[Jake Tool] lookup_order: ${url}`);
+      
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) {
+          return { 
+            found: false, 
+            error: "Unable to look up order. Please call us at (248) 332-4120 for assistance." 
+          };
+        }
+        const data = await res.json() as any;
+        
+        if (!data.found) {
+          return {
+            found: false,
+            message: data.message || "Order not found.",
+            suggestion: orderId 
+              ? "Double-check the order number (it should look like WTD-ABC123). If you're still having trouble, call us at (248) 332-4120."
+              : "Try a different email address or the order number from your confirmation email. You can also call us at (248) 332-4120."
+          };
+        }
+        
+        // Format response for Jake
+        const order = data.order;
+        const itemsSummary = order.items?.map((i: any) => 
+          `${i.qty}x ${i.name}`
+        ).join(", ") || "Items not available";
+        
+        return {
+          found: true,
+          orderId: order.id,
+          status: order.statusLabel,
+          orderDate: new Date(order.orderDate).toLocaleDateString('en-US', { 
+            month: 'long', day: 'numeric', year: 'numeric' 
+          }),
+          total: `$${order.total.toFixed(2)}`,
+          items: itemsSummary,
+          tracking: order.tracking && order.tracking.length > 0 
+            ? order.tracking.join(", ")
+            : null,
+          shippingTo: order.shippingAddress 
+            ? `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`
+            : null,
+          nextSteps: order.status === "shipped" 
+            ? "Your order is on its way! Use the tracking number above to follow delivery progress."
+            : order.status === "processing" || order.status === "parts_ordered"
+            ? "We're working on your order. You'll receive tracking info once it ships."
+            : order.status === "delivered"
+            ? "Your order has been delivered! If you have any questions or issues, give us a call."
+            : null
+        };
+      } catch (err) {
+        console.error(`[Jake Tool] lookup_order error:`, err);
+        return {
+          found: false,
+          error: "Something went wrong looking up your order. Please call us at (248) 332-4120 for assistance."
+        };
       }
     }
     
@@ -1106,7 +1206,7 @@ export async function executeTool(
         return {
           success: false,
           error: "Price comparison not available",
-          suggestion: "Our prices are competitive with free shipping over $599 and local installation available."
+          suggestion: "Our prices are competitive with free shipping over $1,500 and local installation available."
         };
       }
       
@@ -1154,7 +1254,7 @@ Only include retailers where you found actual current prices. If you can't find 
           return {
             success: false,
             error: "Price comparison temporarily unavailable",
-            suggestion: "Our prices include free shipping over $599 and we offer local installation."
+            suggestion: "Our prices include free shipping over $1,500 and we offer local installation."
           };
         }
         
@@ -1195,7 +1295,7 @@ Only include retailers where you found actual current prices. If you can't find 
               comparison = {
                 verdict: "higher",
                 difference: Math.abs(diff).toFixed(2),
-                message: "We may be slightly higher, but we include free shipping over $599 and offer local installation."
+                message: "We may be slightly higher, but we include free shipping over $1,500 and offer local installation."
               };
             }
           }
@@ -1211,7 +1311,7 @@ Only include retailers where you found actual current prices. If you can't find 
             comparison,
             citations: citations.slice(0, 3),
             valueAdds: [
-              "Free shipping on orders over $599",
+              "Free shipping on orders over $1,500",
               "Local installation available (Pontiac & Waterford)",
               "Family-owned business with real customer service",
               "Easy returns and warranty support"
@@ -1228,7 +1328,7 @@ Only include retailers where you found actual current prices. If you can't find 
           rawAnswer: answer,
           notes: "Could not find specific competitor prices. Our pricing is competitive with major retailers.",
           valueAdds: [
-            "Free shipping on orders over $599",
+            "Free shipping on orders over $1,500",
             "Local installation available (Pontiac & Waterford)",
             "Family-owned business with real customer service"
           ]

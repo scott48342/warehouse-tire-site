@@ -10,10 +10,10 @@ async function main() {
   const result = await pool.query(`
     SELECT column_name, data_type 
     FROM information_schema.columns 
-    WHERE table_name = 'classic_fitments'
+    WHERE table_name = 'vehicle_fitments'
     ORDER BY ordinal_position
   `);
-  console.log('classic_fitments columns:');
+  console.log('vehicle_fitments columns:');
   result.rows.forEach(r => console.log('  ' + r.column_name + ' (' + r.data_type + ')'));
   await pool.end();
 }
