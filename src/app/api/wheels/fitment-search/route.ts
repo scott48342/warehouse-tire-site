@@ -102,6 +102,7 @@ import {
 } from "@/lib/fitmentConfidence";
 
 import { matchesBrandFilter } from "@/lib/brandCodes";
+import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels/groupWheelsBySpec";
 import {
   resolveOemOffset,
   computeWheelGeometry,
@@ -1820,8 +1821,10 @@ async function handleDbFirstWheelResults(opts: {
       // Match if either description contains the filter term
       if (!fancyLower.includes(finishLower) && !abbrLower.includes(finishLower)) return false;
     }
-    if (diameter && c.diameter && Number(c.diameter) !== Number(diameter)) return false;
-    if (width && c.width && Number(c.width) !== Number(width)) return false;
+    // NOTE (Aug 2026): diameter/width selections are NO LONGER filtered here.
+    // They are applied AFTER ranking (Phase 5) so the size facets can be built
+    // disjunctively - every size pill keeps an accurate count even when one
+    // diameter is selected.
     // Style filter - match wheel model name (e.g., "KM235", "ARCHER")
     if (styleFilter) {
       const wheelStyle = (c.style || c.display_style_no || "").toUpperCase();
@@ -2768,6 +2771,24 @@ async function handleDbFirstWheelResults(opts: {
     console.log(`[fitment-search] STAGGERED-ONLY filter: ${rankedCandidates.length} paired SKUs (${staggeredPairsFound} sets)`);
   }
 
+  // ─── DISJUNCTIVE SIZE FILTERING (Aug 2026) ───
+  // Capture the candidate set BEFORE the user's diameter/width selection so
+  // the diameter facet (size pills) can always show accurate counts for EVERY
+  // size, not just the selected one. The user's diameter/width selection is
+  // applied here (moved from the basic DB-level filter) as a hard filter on
+  // results/pagination only.
+  const preSizeFilterCandidates = rankedCandidates;
+  if (diameter) {
+    rankedCandidates = rankedCandidates.filter(
+      (c) => !c.candidate.diameter || Number(c.candidate.diameter) === Number(diameter)
+    );
+  }
+  if (width) {
+    rankedCandidates = rankedCandidates.filter(
+      (c) => !c.candidate.width || Number(c.candidate.width) === Number(width)
+    );
+  }
+
   const totalCount = rankedCandidates.length;
   const startIdx = (requestedPage - 1) * requestedPageSize;
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
@@ -2860,6 +2881,9 @@ async function handleDbFirstWheelResults(opts: {
         // Use normalized finish for filtering/display, keep raw for reference
         abbreviated_finish_desc: normalizeFinish(c.fancy_finish_desc, c.abbreviated_finish_desc),
         fancy_finish_desc: c.fancy_finish_desc,
+        // Supplier's stable style identifier (e.g., "U117 RAMBLER") - used by
+        // the SRP for style-card grouping so card counts match facet counts.
+        style: c.style || c.display_style_no || undefined,
         diameter: c.diameter,
         width: c.width,
         offset: c.offset,
@@ -2994,6 +3018,47 @@ async function handleDbFirstWheelResults(opts: {
       boltPattern: e.candidate.bolt_pattern_standard,
     },
   })));
+
+  // ─── STYLE-GROUPED DIAMETER COUNTS (Aug 2026) ───
+  // The SRP groups SKUs into style cards via groupWheelsBySpec (brand+model+
+  // size+bp+offset+cb merge finishes into one card). Count those GROUPS per
+  // diameter - using the SAME grouping function the page uses - so the size
+  // pill counts match the "N styles" total the customer sees. Built from
+  // preSizeFilterCandidates (disjunctive) so every pill keeps its accurate
+  // count even when a diameter/width is selected.
+  {
+    const facetGroupInputs: WheelVariantInput[] = preSizeFilterCandidates.map((e) => {
+      const c = e.candidate;
+      return {
+        sku: c.sku,
+        brand: c.brand_desc,
+        brandCode: c.brand_cd,
+        // Stable style identifier drives the grouping key (same as the SRP).
+        styleKey: c.style || c.display_style_no || undefined,
+        // Full title fallback; groupWheelsBySpec extracts the model name when
+        // no styleKey exists.
+        model: c.product_desc || c.sku,
+        finish: c.abbreviated_finish_desc || c.fancy_finish_desc,
+        diameter: c.diameter != null ? String(c.diameter) : undefined,
+        width: c.width != null ? String(c.width) : undefined,
+        offset: c.offset != null ? String(c.offset) : undefined,
+        boltPattern: c.bolt_pattern_metric || c.bolt_pattern_standard || undefined,
+        centerbore: c.centerbore != null ? String(c.centerbore) : undefined,
+      };
+    });
+    const stylesPerDiameter = new Map<string, number>();
+    for (const g of groupWheelsBySpec(facetGroupInputs)) {
+      const diaNum = Number(g.diameter);
+      if (!Number.isFinite(diaNum) || diaNum <= 0) continue;
+      const diaKey = String(diaNum);
+      stylesPerDiameter.set(diaKey, (stylesPerDiameter.get(diaKey) ?? 0) + 1);
+    }
+    facets.wheel_diameter = {
+      buckets: Array.from(stylesPerDiameter.entries())
+        .sort((a, b) => Number(a[0]) - Number(b[0]))
+        .map(([value, count]) => ({ value, count })),
+    };
+  }
   
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // ADD FITMENT CATEGORIES TO SIZE FACETS (April 2026)

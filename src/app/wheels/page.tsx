@@ -1004,9 +1004,14 @@ export default async function WheelsPage({
     // We want just the model name (e.g. "GRZ") for style matching
     let model = it?.properties?.model;
     if (!model && it?.title) {
-      // Extract model name: everything before the first size pattern (e.g., "20X10")
-      const sizeMatch = it.title.match(/^(.+?)\s+\d+[Xx]\d/);
+      // Extract model name: everything before the first size pattern (e.g., "20X10").
+      // Tolerates inch marks used by Wheel-1/WSI titles (e.g., '18"x8.5"').
+      const sizeMatch = it.title.match(/^(.+?)\s+\d+(?:\.\d+)?["”]?[Xx]["”]?\d/);
       model = sizeMatch ? sizeMatch[1].trim() : it.title.split(' ')[0];
+      // Wheel-1/WSI titles embed the finish BEFORE the size - strip it
+      if (model && finish && model.toLowerCase().endsWith(String(finish).toLowerCase())) {
+        model = model.slice(0, model.length - String(finish).length).trim();
+      }
     }
     const diameter = it?.properties?.diameter ? String(it.properties.diameter) : undefined;
     const width = it?.properties?.width ? String(it.properties.width) : undefined;
@@ -1023,7 +1028,9 @@ export default async function WheelsPage({
     const img0 = Array.isArray(it?.images) ? it.images[0] : undefined;
     const imageUrl = img0?.imageUrlLarge || img0?.imageUrlMedium || img0?.imageUrlOriginal || undefined;
 
-    const styleKey = it?.techfeed?.style || undefined;
+    // Prefer the supplier's stable style id from the API (drives style-card
+    // grouping so SRP card counts match the size-pill facet counts)
+    const styleKey = it?.techfeed?.style || (it?.properties as { style?: string } | undefined)?.style || undefined;
 
     // Extract fitmentClass from validation engine (from fitment-search endpoint)
     const fitmentValidation = (it as any)?.fitmentValidation;

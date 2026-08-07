@@ -613,7 +613,7 @@ export default async function WheelDetailPage({
               </div>
               <div className="text-[11px] text-neutral-400 italic">Finish may vary by screen</div>
             </div>
-            <ImageGallery images={galleryImages} alt={String(it?.title || sku)} note="Finish may vary by lighting" rotateOnHover />
+            <ImageGallery images={galleryImages} alt={String(it?.title || sku)} note="Finish may vary by lighting" />
           </div>
 
           {/* Right: Streamlined Buy Box */}

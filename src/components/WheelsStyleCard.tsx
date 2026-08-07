@@ -796,10 +796,10 @@ export function WheelsStyleCard({
       )}
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          IMAGE (With rotating wheel effect on hover - inspired by Diablo Wheels)
+          IMAGE (rotate-on-hover removed Aug 2026 - looks wrong on 3/4-angle shots)
           ═══════════════════════════════════════════════════════════════════════ */}
       <Link href={viewHref} className="block relative overflow-hidden">
-        <div className={`aspect-square w-full overflow-hidden bg-neutral-50 ${selectedPair?.staggered ? '' : 'wheel-rotate-hover'}`}>
+        <div className="aspect-square w-full overflow-hidden bg-neutral-50">
           {selectedImage ? (
             <img
               src={selectedImage}

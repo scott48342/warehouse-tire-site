@@ -52,9 +52,19 @@ export function buildDiameterOptions({
   for (const facet of inventoryFacets) {
     const dia = Math.round(parseFloat(facet.value));
     if (Number.isFinite(dia)) {
-      inventoryCounts.set(dia, facet.count ?? 0);
+      inventoryCounts.set(dia, (inventoryCounts.get(dia) ?? 0) + (facet.count ?? 0));
     }
   }
+
+  // When facet data exists at all, a size missing from the facets means it
+  // genuinely has 0 fitment-valid options - report an exact 0 instead of
+  // "unknown" so the UI can show a real quantity on every pill.
+  const facetsAvailable = inventoryCounts.size > 0;
+  const lookupCount = (dia: number): number | undefined => {
+    const c = inventoryCounts.get(dia);
+    if (c !== undefined) return c;
+    return facetsAvailable ? 0 : undefined;
+  };
   
   // Lifted build: use lifted recommendations
   if (isLiftedBuild && liftedWheelDiaMin && liftedWheelDiaMax) {
@@ -62,7 +72,7 @@ export function buildDiameterOptions({
     
     // Add popular wheel sizes first (these are the recommended ones)
     for (const dia of liftedPopularWheelSizes) {
-      const count = inventoryCounts.get(dia);
+      const count = lookupCount(dia);
       options.set(dia, {
         diameter: dia,
         label: `${dia}"`,
@@ -96,7 +106,7 @@ export function buildDiameterOptions({
     
     for (let dia = minDia; dia <= maxDia; dia++) {
       const isStock = stockSet.has(dia);
-      const count = inventoryCounts.get(dia);
+      const count = lookupCount(dia);
       
       options.set(dia, {
         diameter: dia,
@@ -111,7 +121,7 @@ export function buildDiameterOptions({
     // Also add stock diameter if outside range
     for (const dia of stockDiameters) {
       if (!options.has(dia)) {
-        const count = inventoryCounts.get(dia);
+        const count = lookupCount(dia);
         options.set(dia, {
           diameter: dia,
           label: `${dia}"`,
@@ -149,7 +159,7 @@ export function buildDiameterOptions({
     
     // Add OEM diameters first
     for (const dia of oemDiameters) {
-      const count = inventoryCounts.get(dia);
+      const count = lookupCount(dia);
       const isStock = stockDiameters.includes(dia) || dia === minOemDia;
       
       options.set(dia, {
@@ -185,7 +195,7 @@ export function buildDiameterOptions({
     const commonSizes = [17, 18, 19, 20, 22, 24, 26];
     for (const dia of commonSizes) {
       if (!options.has(dia)) {
-        const count = inventoryCounts.get(dia);
+        const count = lookupCount(dia);
         options.set(dia, {
           diameter: dia,
           label: `${dia}"`,

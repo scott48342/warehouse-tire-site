@@ -164,23 +164,13 @@ export function FitmentDiameterChips({
                 </span>
               )}
               
-              {/* Upsize indicator */}
-              {option.isUpsize && !option.isStock && (
-                <span className={`
-                  rounded px-1 py-0.5 text-[10px] font-bold uppercase
-                  ${isSelected ? "bg-red-200 text-red-800" : "bg-amber-100 text-amber-700"}
-                `}>
-                  +
-                </span>
-              )}
-              
-              {/* Count badge */}
-              {showCounts && option.count !== undefined && option.count > 0 && (
+              {/* Count badge - exact style count for this size (0 = none available) */}
+              {showCounts && option.count !== undefined && (
                 <span className={`
                   text-[10px] font-medium
-                  ${isSelected ? "text-red-600" : "text-neutral-400"}
+                  ${isSelected ? "text-red-600" : isDisabled ? "text-neutral-300" : "text-neutral-400"}
                 `}>
-                  ({option.count})
+                  ({option.count.toLocaleString()})
                 </span>
               )}
             </button>

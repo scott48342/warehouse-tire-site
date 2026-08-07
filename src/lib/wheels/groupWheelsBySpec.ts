@@ -119,7 +119,8 @@ function extractModelFromTitle(title: string | undefined | null): string {
   const t = String(title).trim();
   
   // Find the first size pattern (e.g., "17X8", "18X8.5", "20X9")
-  const sizeMatch = t.match(/\b\d{2}X\d+(?:\.\d+)?\b/i);
+  // Also tolerates inch marks used by Wheel-1/WSI titles (e.g., '18"x8.5"')
+  const sizeMatch = t.match(/\b\d{2}(?:\.\d+)?["”]?[Xx]["”]?\d+(?:\.\d+)?/);
   
   if (sizeMatch && sizeMatch.index !== undefined && sizeMatch.index > 0) {
     // Take everything before the size pattern
@@ -200,12 +201,20 @@ function normalizeFinish(s: string | undefined | null): string {
 function getNormalizedModel(wheel: WheelVariantInput): string {
   const model = wheel.model || "";
   
-  // Check if model looks like a full title (contains size pattern like "17X8")
-  if (/\b\d{2}X\d+/i.test(model)) {
-    return normalizeString(extractModelFromTitle(model));
+  // Check if model looks like a full title (contains size pattern like "17X8" or '18"x8.5"')
+  let extracted = /\b\d{2}(?:\.\d+)?["”]?[Xx]["”]?\d/.test(model)
+    ? extractModelFromTitle(model)
+    : model;
+  
+  // Wheel-1/WSI titles embed the finish BEFORE the size (e.g.
+  // 'LEXANI QUANTUM Gloss Black 18"x8.5"') - strip a trailing finish so
+  // finish variants of the same model group together.
+  const finish = String(wheel.finish || "").trim();
+  if (finish && extracted.toLowerCase().endsWith(finish.toLowerCase())) {
+    extracted = extracted.slice(0, extracted.length - finish.length).trim();
   }
   
-  return normalizeString(model);
+  return normalizeString(extracted);
 }
 
 /**
@@ -216,7 +225,10 @@ function getNormalizedModel(wheel: WheelVariantInput): string {
 function generateGroupingKey(wheel: WheelVariantInput): string {
   const parts = [
     normalizeString(wheel.brandCode || wheel.brand),
-    getNormalizedModel(wheel),
+    // Prefer the supplier's stable style identifier (e.g., "U117 RAMBLER",
+    // Wheel-1 style number) - it's finish-free and immune to title-format
+    // parsing issues. Fall back to model extraction when absent.
+    normalizeString(wheel.styleKey) || getNormalizedModel(wheel),
     normalizeNumeric(wheel.diameter),
     normalizeNumeric(wheel.width),
     normalizeBoltPattern(wheel.boltPattern),
