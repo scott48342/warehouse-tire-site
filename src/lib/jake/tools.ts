@@ -277,6 +277,60 @@ DISCLAIMER (always say after showing):
     }
   },
   {
+    name: "web_search",
+    description: `Search the web for information you don't have in your knowledge base.
+
+USE THIS WHEN:
+- Customer asks about fitment issues not in your database (rubbing, clearance, fender mods)
+- Classic/custom cars with unusual setups
+- "Will X fit?" questions where you're not confident
+- Technical questions about wheel adapters, spacers, lift kits
+- Forum discussions about specific builds
+- Any real-world experience/advice questions
+
+EXAMPLES:
+- "65 Malibu 18 inch wheels rear fender clearance"
+- "4th gen Camaro 275 tire rubbing fix"
+- "F-150 leveling kit 35 inch tires"
+- "wheel spacers safe for daily driving"
+
+The search returns relevant results with snippets. Use the information to give the customer REAL, ACTIONABLE advice - not just "call the store".`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        query: { 
+          type: "string", 
+          description: "Search query - be specific, include year/make/model and the problem" 
+        },
+        focus: {
+          type: "string",
+          description: "Optional focus: 'forums' for enthusiast discussions, 'technical' for specs/how-to",
+          enum: ["general", "forums", "technical"]
+        }
+      },
+      required: ["query"]
+    }
+  },
+  {
+    name: "fetch_webpage",
+    description: `Fetch and read content from a specific URL. Use after web_search to get more detail from a promising result, or when customer shares a link.
+
+USE THIS WHEN:
+- web_search found a good forum thread and you need more detail
+- Customer shares a link and asks about it
+- You need to read a specific article/guide
+
+Returns the main text content of the page (cleaned up, no ads/navigation).`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        url: { type: "string", description: "Full URL to fetch" },
+        maxLength: { type: "number", description: "Max characters to return (default 8000)" }
+      },
+      required: ["url"]
+    }
+  },
+  {
     name: "build_cart",
     description: `Generate a ready-to-checkout cart link for the customer's selected wheels and/or tires. Call this whenever the customer agrees to a build, says they want to buy / check out / add to cart, or you've presented a final total. Pass every product they're buying (each wheel position and each tire position) using the sku/partNumber and price from your earlier search results. Returns a cartUrl the UI shows as a green "Your Cart is Ready" checkout button. For staggered setups include all front AND rear items with their correct quantities (usually 2 each). ALWAYS prefer this over telling the customer to call the store.`,
     input_schema: {
@@ -830,6 +884,162 @@ export async function executeTool(
       } catch (err) {
         console.warn(`[Jake Tool] build_cart error: ${err}`);
         return { success: false, error: `Cart build failed: ${err}` };
+      }
+    }
+
+    case "web_search": {
+      const { query, focus } = input as { query: string; focus?: string };
+      console.log(`[Jake Tool] web_search: "${query}" (focus: ${focus || 'general'})`);
+      
+      // Try Perplexity first (better for research queries), fall back to Brave
+      const perplexityKey = process.env.PERPLEXITY_API_KEY;
+      const braveKey = process.env.BRAVE_SEARCH_API_KEY;
+      
+      if (perplexityKey) {
+        try {
+          const res = await fetch("https://api.perplexity.ai/chat/completions", {
+            method: "POST",
+            headers: {
+              "Authorization": `Bearer ${perplexityKey}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              model: "sonar",
+              messages: [
+                {
+                  role: "system",
+                  content: "You are a helpful automotive research assistant. Provide concise, factual answers about wheel/tire fitment, clearance issues, and modifications. Include specific measurements and real-world experiences when available. Cite sources when possible."
+                },
+                {
+                  role: "user",
+                  content: query
+                }
+              ],
+              max_tokens: 1024,
+              return_citations: true,
+              search_recency_filter: "year"
+            }),
+          });
+          
+          if (res.ok) {
+            const data = await res.json() as any;
+            const answer = data.choices?.[0]?.message?.content || "";
+            const citations = data.citations || [];
+            console.log(`[Jake Tool] ✅ Perplexity returned ${answer.length} chars, ${citations.length} citations`);
+            return {
+              success: true,
+              source: "perplexity",
+              answer,
+              citations: citations.slice(0, 5),
+            };
+          } else {
+            console.warn(`[Jake Tool] Perplexity failed (${res.status}), trying Brave...`);
+          }
+        } catch (err) {
+          console.warn(`[Jake Tool] Perplexity error: ${err}, trying Brave...`);
+        }
+      }
+      
+      if (braveKey) {
+        try {
+          const params = new URLSearchParams({
+            q: query,
+            count: "8",
+            text_decorations: "false",
+            search_lang: "en",
+          });
+          const res = await fetch(`https://api.search.brave.com/res/v1/web/search?${params}`, {
+            headers: { "X-Subscription-Token": braveKey },
+          });
+          
+          if (res.ok) {
+            const data = await res.json() as any;
+            const results = (data.web?.results || []).slice(0, 6).map((r: any) => ({
+              title: r.title,
+              url: r.url,
+              snippet: r.description,
+            }));
+            console.log(`[Jake Tool] ✅ Brave returned ${results.length} results`);
+            return {
+              success: true,
+              source: "brave",
+              results,
+              tip: "Use fetch_webpage to get more detail from any of these URLs."
+            };
+          }
+        } catch (err) {
+          console.warn(`[Jake Tool] Brave search error: ${err}`);
+        }
+      }
+      
+      // Neither API available or both failed
+      return {
+        success: false,
+        error: "Web search is not configured. Please ask the store for help with this question.",
+        fallback: "Call us at (248) 332-4120 - we can research this for you!"
+      };
+    }
+
+    case "fetch_webpage": {
+      const { url, maxLength = 8000 } = input as { url: string; maxLength?: number };
+      console.log(`[Jake Tool] fetch_webpage: ${url}`);
+      
+      try {
+        // Use a readability-style extraction
+        const res = await fetch(url, {
+          headers: {
+            "User-Agent": "Mozilla/5.0 (compatible; WTDBot/1.0; +https://warehousetiredirect.com)",
+            "Accept": "text/html,application/xhtml+xml",
+          },
+          redirect: "follow",
+        });
+        
+        if (!res.ok) {
+          return { success: false, error: `Failed to fetch: ${res.status}` };
+        }
+        
+        const html = await res.text();
+        
+        // Basic HTML to text extraction (strip tags, decode entities)
+        let text = html
+          // Remove script/style/nav/header/footer content
+          .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+          .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+          .replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '')
+          .replace(/<header[^>]*>[\s\S]*?<\/header>/gi, '')
+          .replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '')
+          .replace(/<aside[^>]*>[\s\S]*?<\/aside>/gi, '')
+          // Convert common elements to newlines
+          .replace(/<\/?(p|div|br|h[1-6]|li|tr)[^>]*>/gi, '\n')
+          // Strip remaining tags
+          .replace(/<[^>]+>/g, ' ')
+          // Decode common entities
+          .replace(/&nbsp;/g, ' ')
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'")
+          // Clean up whitespace
+          .replace(/[ \t]+/g, ' ')
+          .replace(/\n\s*\n/g, '\n\n')
+          .trim();
+        
+        // Truncate if needed
+        if (text.length > maxLength) {
+          text = text.substring(0, maxLength) + "\n\n[... content truncated ...]";
+        }
+        
+        console.log(`[Jake Tool] ✅ Fetched ${text.length} chars from ${url}`);
+        return {
+          success: true,
+          url,
+          content: text,
+          charCount: text.length,
+        };
+      } catch (err) {
+        console.warn(`[Jake Tool] fetch_webpage error: ${err}`);
+        return { success: false, error: `Fetch failed: ${err}` };
       }
     }
 
