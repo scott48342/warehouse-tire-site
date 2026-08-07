@@ -398,6 +398,88 @@ Returns: Order status, items ordered, tracking numbers (if shipped), and shippin
     }
   },
   {
+    name: "check_rebates",
+    description: `Check for active manufacturer rebates on tires.
+
+USE THIS WHEN:
+- Customer is looking at a specific tire brand
+- Customer asks about deals, rebates, or promotions
+- You're about to close a sale and want to mention savings
+
+Pass the brand (required) and optionally the model. Returns any active rebates with amounts and expiration dates.`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        brand: { 
+          type: "string", 
+          description: "Tire brand (e.g., 'Goodyear', 'Michelin', 'BFGoodrich')" 
+        },
+        model: { 
+          type: "string", 
+          description: "Tire model (optional, for more specific match)" 
+        },
+        sku: {
+          type: "string",
+          description: "Tire SKU/part number (optional, for exact match)"
+        }
+      },
+      required: ["brand"]
+    }
+  },
+  {
+    name: "send_quote_email",
+    description: `Send a quote/build summary to the customer's email.
+
+USE THIS WHEN:
+- Customer says "email me this" or "send me a quote"
+- Customer wants to think about it and come back later
+- Customer is comparing builds and wants a record
+
+Collect the customer's email and send them the build details so they can purchase later.`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        email: { 
+          type: "string", 
+          description: "Customer's email address" 
+        },
+        customerName: {
+          type: "string",
+          description: "Customer's name (optional, for personalization)"
+        },
+        vehicle: {
+          type: "object",
+          description: "Vehicle info",
+          properties: {
+            year: { type: "number" },
+            make: { type: "string" },
+            model: { type: "string" }
+          }
+        },
+        items: {
+          type: "array",
+          description: "Products in the build",
+          items: {
+            type: "object",
+            properties: {
+              type: { type: "string", description: "'wheel' or 'tire'" },
+              brand: { type: "string" },
+              model: { type: "string" },
+              size: { type: "string" },
+              quantity: { type: "number" },
+              price: { type: "number", description: "Per-unit price" }
+            }
+          }
+        },
+        notes: {
+          type: "string",
+          description: "Any additional notes for the customer"
+        }
+      },
+      required: ["email", "items"]
+    }
+  },
+  {
     name: "build_cart",
     description: `Generate a ready-to-checkout cart link for the customer's selected wheels and/or tires. Call this whenever the customer agrees to a build, says they want to buy / check out / add to cart, or you've presented a final total. Pass every product they're buying (each wheel position and each tire position) using the sku/partNumber and price from your earlier search results. Returns a cartUrl the UI shows as a green "Your Cart is Ready" checkout button. For staggered setups include all front AND rear items with their correct quantities (usually 2 each). ALWAYS prefer this over telling the customer to call the store.`,
     input_schema: {
@@ -610,6 +692,127 @@ export async function executeTool(
         return {
           found: false,
           error: "Something went wrong looking up your order. Please call us at (248) 332-4120 for assistance."
+        };
+      }
+    }
+
+    case "check_rebates": {
+      const { brand, model, sku } = input as { brand: string; model?: string; sku?: string };
+      
+      console.log(`[Jake Tool] check_rebates: brand=${brand}, model=${model || 'any'}, sku=${sku || 'none'}`);
+      
+      try {
+        // First try to get all active rebates
+        const activeRes = await fetch(`${baseUrl}/api/rebates/active`, { cache: "no-store" });
+        if (!activeRes.ok) {
+          return { found: false, error: "Unable to check rebates right now." };
+        }
+        const activeData = await activeRes.json() as any;
+        const allRebates = activeData.items || [];
+        
+        // Filter to matching brand
+        const brandLower = brand.toLowerCase();
+        const matchingRebates = allRebates.filter((r: any) => {
+          const rebateBrand = (r.brand || "").toLowerCase();
+          return rebateBrand.includes(brandLower) || brandLower.includes(rebateBrand);
+        });
+        
+        if (matchingRebates.length === 0) {
+          return {
+            found: false,
+            message: `No active rebates for ${brand} right now. Rebates change frequently though - check back or ask about other brands!`
+          };
+        }
+        
+        // Format the rebates for Jake
+        const rebates = matchingRebates.map((r: any) => ({
+          headline: r.headline,
+          amount: r.rebate_amount,
+          endsText: r.ends_text,
+          requirements: r.requirements,
+          formUrl: r.form_url,
+        }));
+        
+        return {
+          found: true,
+          brand,
+          rebates,
+          tip: "Mention the rebate amount and expiration to create urgency!"
+        };
+      } catch (err) {
+        console.error(`[Jake Tool] check_rebates error:`, err);
+        return { found: false, error: "Unable to check rebates right now." };
+      }
+    }
+
+    case "send_quote_email": {
+      const { email, customerName, vehicle, items, notes } = input as {
+        email: string;
+        customerName?: string;
+        vehicle?: { year?: number; make?: string; model?: string };
+        items: Array<{ type: string; brand: string; model: string; size: string; quantity: number; price: number }>;
+        notes?: string;
+      };
+      
+      console.log(`[Jake Tool] send_quote_email: ${email}`);
+      
+      // Validate email
+      if (!email || !email.includes("@")) {
+        return {
+          success: false,
+          error: "Please provide a valid email address."
+        };
+      }
+      
+      if (!items || items.length === 0) {
+        return {
+          success: false,
+          error: "No items to quote. Build the package first, then send the quote."
+        };
+      }
+      
+      try {
+        // Calculate totals
+        const itemsWithTotals = items.map(item => ({
+          ...item,
+          lineTotal: (item.price || 0) * (item.quantity || 1)
+        }));
+        const grandTotal = itemsWithTotals.reduce((sum, item) => sum + item.lineTotal, 0);
+        
+        // Call the quote email API
+        const res = await fetch(`${baseUrl}/api/jake/send-quote`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            customerName,
+            vehicle,
+            items: itemsWithTotals,
+            grandTotal,
+            notes,
+          }),
+        });
+        
+        if (!res.ok) {
+          const errorData = await res.json().catch(() => ({}));
+          return {
+            success: false,
+            error: errorData.error || "Failed to send quote email. Please try again."
+          };
+        }
+        
+        return {
+          success: true,
+          message: `Quote sent to ${email}! They can use the link in the email to complete their purchase.`,
+          email,
+          itemCount: items.length,
+          total: `$${grandTotal.toFixed(2)}`
+        };
+      } catch (err) {
+        console.error(`[Jake Tool] send_quote_email error:`, err);
+        return {
+          success: false,
+          error: "Something went wrong sending the quote. Please try again or have them call us at (248) 332-4120."
         };
       }
     }
