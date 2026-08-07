@@ -331,6 +331,43 @@ Returns the main text content of the page (cleaned up, no ads/navigation).`,
     }
   },
   {
+    name: "compare_competitor_prices",
+    description: `Search for competitor prices on a specific tire or wheel.
+
+USE THIS WHEN:
+- Customer says "I saw it cheaper at..." or "Discount Tire has it for..."
+- Customer asks "Is this a good price?" or "Can you beat X price?"
+- Customer is comparing options and wants to know if our price is competitive
+- You want to proactively show we're competitive
+
+Searches major competitors (TireRack, Discount Tire, SimpleTire, etc.) for the same or similar product.
+
+AFTER GETTING RESULTS:
+- If we're cheaper: "We're actually $X less than [competitor]!"
+- If we're close: "That's competitive with what you'll find anywhere"
+- If we're higher: Focus on our value-adds (free shipping, local install, warranty support)
+- NEVER badmouth competitors, just highlight our strengths
+
+VALUE-ADDS TO MENTION:
+- Free shipping on orders over $599 (or whatever the current threshold is)
+- Local installation available (Pontiac & Waterford)
+- We stand behind what we sell - easy returns/warranty support
+- Real humans answer the phone
+- We're a family business, not a faceless corporation`,
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        productType: { type: "string", enum: ["tire", "wheel"], description: "Type of product" },
+        brand: { type: "string", description: "Brand name (e.g., 'Michelin', 'Fuel')" },
+        model: { type: "string", description: "Model/pattern name (e.g., 'Defender', 'Rebel')" },
+        size: { type: "string", description: "Size (e.g., '275/55R20' for tires, '20x9' for wheels)" },
+        ourPrice: { type: "number", description: "Our current price (from search results)" },
+        sku: { type: "string", description: "Our SKU (optional, for more precise matching)" }
+      },
+      required: ["productType", "brand", "model", "size"]
+    }
+  },
+  {
     name: "build_cart",
     description: `Generate a ready-to-checkout cart link for the customer's selected wheels and/or tires. Call this whenever the customer agrees to a build, says they want to buy / check out / add to cart, or you've presented a final total. Pass every product they're buying (each wheel position and each tire position) using the sku/partNumber and price from your earlier search results. Returns a cartUrl the UI shows as a green "Your Cart is Ready" checkout button. For staggered setups include all front AND rear items with their correct quantities (usually 2 each). ALWAYS prefer this over telling the customer to call the store.`,
     input_schema: {
@@ -1040,6 +1077,161 @@ export async function executeTool(
       } catch (err) {
         console.warn(`[Jake Tool] fetch_webpage error: ${err}`);
         return { success: false, error: `Fetch failed: ${err}` };
+      }
+    }
+
+    case "compare_competitor_prices": {
+      const { productType, brand, model, size, ourPrice, sku } = input as {
+        productType: "tire" | "wheel";
+        brand: string;
+        model: string;
+        size: string;
+        ourPrice?: number;
+        sku?: string;
+      };
+      
+      console.log(`[Jake Tool] compare_competitor_prices: ${brand} ${model} ${size}`);
+      
+      const perplexityKey = process.env.PERPLEXITY_API_KEY;
+      if (!perplexityKey) {
+        return {
+          success: false,
+          error: "Price comparison not available",
+          suggestion: "Our prices are competitive with free shipping over $599 and local installation available."
+        };
+      }
+      
+      try {
+        // Build a search query for competitor prices
+        const searchQuery = productType === "tire"
+          ? `${brand} ${model} ${size} tire price TireRack Discount Tire SimpleTire`
+          : `${brand} ${model} ${size} wheel price Custom Offsets Fitment Industries`;
+        
+        const res = await fetch("https://api.perplexity.ai/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${perplexityKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "sonar",
+            messages: [
+              {
+                role: "system",
+                content: `You are a price comparison assistant. Search for current retail prices for the specified ${productType}. Return a JSON object with this structure:
+{
+  "prices": [
+    { "retailer": "TireRack", "price": 189.99, "url": "..." },
+    { "retailer": "Discount Tire", "price": 195.00, "url": "..." }
+  ],
+  "lowestPrice": 189.99,
+  "averagePrice": 192.50,
+  "notes": "Price includes..." 
+}
+Only include retailers where you found actual current prices. If you can't find prices, return { "prices": [], "notes": "Could not find current pricing" }.`
+              },
+              {
+                role: "user",
+                content: `Find current retail prices for: ${brand} ${model} ${size} ${productType}`
+              }
+            ],
+            max_tokens: 800,
+            return_citations: true,
+          }),
+        });
+        
+        if (!res.ok) {
+          console.warn(`[Jake Tool] Perplexity price search failed: ${res.status}`);
+          return {
+            success: false,
+            error: "Price comparison temporarily unavailable",
+            suggestion: "Our prices include free shipping over $599 and we offer local installation."
+          };
+        }
+        
+        const data = await res.json() as any;
+        const answer = data.choices?.[0]?.message?.content || "";
+        const citations = data.citations || [];
+        
+        // Try to parse the JSON response
+        let priceData: any = null;
+        try {
+          // Extract JSON from the response (it might be wrapped in markdown)
+          const jsonMatch = answer.match(/\{[\s\S]*\}/);
+          if (jsonMatch) {
+            priceData = JSON.parse(jsonMatch[0]);
+          }
+        } catch {
+          // If JSON parsing fails, return the raw answer
+          console.warn(`[Jake Tool] Could not parse price JSON, returning raw`);
+        }
+        
+        if (priceData?.prices?.length > 0) {
+          // Calculate comparison if we have our price
+          let comparison = null;
+          if (ourPrice && priceData.lowestPrice) {
+            const diff = priceData.lowestPrice - ourPrice;
+            if (diff > 0) {
+              comparison = {
+                verdict: "cheaper",
+                savings: diff.toFixed(2),
+                message: `We're $${diff.toFixed(2)} less than the lowest competitor price!`
+              };
+            } else if (diff > -5) {
+              comparison = {
+                verdict: "competitive",
+                message: "Our price is right in line with competitors."
+              };
+            } else {
+              comparison = {
+                verdict: "higher",
+                difference: Math.abs(diff).toFixed(2),
+                message: "We may be slightly higher, but we include free shipping over $599 and offer local installation."
+              };
+            }
+          }
+          
+          console.log(`[Jake Tool] ✅ Found ${priceData.prices.length} competitor prices`);
+          return {
+            success: true,
+            product: { brand, model, size, type: productType },
+            ourPrice: ourPrice || null,
+            competitors: priceData.prices.slice(0, 5),
+            lowestCompetitorPrice: priceData.lowestPrice,
+            averageCompetitorPrice: priceData.averagePrice,
+            comparison,
+            citations: citations.slice(0, 3),
+            valueAdds: [
+              "Free shipping on orders over $599",
+              "Local installation available (Pontiac & Waterford)",
+              "Family-owned business with real customer service",
+              "Easy returns and warranty support"
+            ]
+          };
+        }
+        
+        // No structured prices found, return what we have
+        return {
+          success: true,
+          product: { brand, model, size, type: productType },
+          ourPrice: ourPrice || null,
+          competitors: [],
+          rawAnswer: answer,
+          notes: "Could not find specific competitor prices. Our pricing is competitive with major retailers.",
+          valueAdds: [
+            "Free shipping on orders over $599",
+            "Local installation available (Pontiac & Waterford)",
+            "Family-owned business with real customer service"
+          ]
+        };
+        
+      } catch (err) {
+        console.warn(`[Jake Tool] compare_competitor_prices error: ${err}`);
+        return {
+          success: false,
+          error: `Price comparison failed: ${err}`,
+          suggestion: "Our prices are competitive - we'd be happy to match if you find it cheaper elsewhere!"
+        };
       }
     }
 
