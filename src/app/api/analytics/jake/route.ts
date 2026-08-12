@@ -59,7 +59,18 @@ interface JakeAnalyticsEvent {
 
 // Test detection patterns
 const TEST_PATTERNS = {
-  userAgents: [/HeadlessChrome/i, /Playwright/i, /Puppeteer/i, /bot/i, /crawler/i],
+  userAgents: [
+    /HeadlessChrome/i,
+    /Playwright/i,
+    /Puppeteer/i,
+    /bot/i,
+    /crawler/i,
+    // Outdated Chrome versions (likely automated - real users update)
+    /Chrome\/14[0-2]\./i,
+    /Chrome\/13\d\./i,
+    // Quotes around user-agent (bots often send this incorrectly)
+    /^"/,
+  ],
   hostnames: ["localhost", "127.0.0.1", "preview.vercel.app"],
   emails: [/@test\./, /@example\./, /test@/i],
 };

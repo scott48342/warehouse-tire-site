@@ -38,6 +38,8 @@ export type JakeEventType =
   | "mockup_viewed"
   | "mockup_saved"
   | "mockup_shared"
+  // Error tracking
+  | "error_occurred"
   | "mockup_to_cart"
   | "mockup_to_checkout"
   | "mockup_build_this"

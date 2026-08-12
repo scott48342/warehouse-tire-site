@@ -1033,6 +1033,13 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
       };
       setMessages(prev => [...prev, errorMessage]);
       trackJakeMessage("assistant", errorContent);
+      // Track the error for analytics
+      trackJakeEvent("error_occurred", {
+        error: {
+          type: "stream_error",
+          message: error instanceof Error ? error.message : String(error),
+        },
+      });
     } finally {
       setIsLoading(false);
       setStreamingText("");

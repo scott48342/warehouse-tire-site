@@ -25,6 +25,7 @@ import { NextRequest } from "next/server";
 import { streamChat, JakeMessage, SavedVehicleContext, StreamEvent } from "@/lib/jake/stream";
 import { streamChatV2 } from "@/lib/jake/streamV2";
 import { captureEmailsFromMessage, trackBuildAndLink } from "@/lib/jake/capture";
+import { detectBot } from "@/lib/jake/botDetection";
 
 export const runtime = "nodejs";
 export const maxDuration = 180; // Mockup generation can take 30-40s, plus Claude processing
@@ -66,6 +67,50 @@ export async function POST(req: NextRequest) {
       );
     }
     
+    // Non-blocking capture context (extracted from non-stream route).
+    const ipAddress =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      req.headers.get("x-real-ip") ||
+      undefined;
+    const userAgent = req.headers.get("user-agent") || undefined;
+    const hostname = req.headers.get("host");
+    const sessionId = body.sessionId || null;
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // BOT DETECTION & RATE LIMITING
+    // ═══════════════════════════════════════════════════════════════════════════
+    const botCheck = detectBot(userAgent || null, query, sessionId, ipAddress || null);
+    
+    if (botCheck.action === "block" || botCheck.action === "rate_limit") {
+      console.log(`[Jake Stream API] 🤖 ${botCheck.action.toUpperCase()}: ${botCheck.reason} | Query: "${query.substring(0, 50)}"`);
+      
+      // Return a friendly message via SSE (same format as normal response)
+      const encoder = new TextEncoder();
+      const botResponse = botCheck.message || "I need a moment. Try again shortly!";
+      
+      const stream = new ReadableStream({
+        start(controller) {
+          // Send text event with the bot message
+          const textEvent = `event: text\ndata: ${JSON.stringify({ type: "text", text: botResponse })}\n\n`;
+          controller.enqueue(encoder.encode(textEvent));
+          
+          // Send done event
+          const doneEvent = `event: done\ndata: ${JSON.stringify({ type: "done", meta: { duration_ms: 0, toolsUsed: [], blocked: botCheck.reason } })}\n\n`;
+          controller.enqueue(encoder.encode(doneEvent));
+          
+          controller.close();
+        },
+      });
+      
+      return new Response(stream, {
+        headers: {
+          "Content-Type": "text/event-stream",
+          "Cache-Control": "no-cache, no-transform",
+          "Connection": "keep-alive",
+        },
+      });
+    }
+
     console.log(`\n${"=".repeat(60)}`);
     console.log(`[Jake Stream API] POST /api/jake/chat/stream`);
     console.log(`[Jake Stream API] Query: "${query.substring(0, 100)}${query.length > 100 ? '...' : ''}"`);
@@ -76,14 +121,6 @@ export async function POST(req: NextRequest) {
     if (galleryBuildContext?.galleryBuild) {
       console.log(`[Jake Stream API] Gallery build context: ${galleryBuildContext.galleryBuild.vehicle} with ${galleryBuildContext.galleryBuild.wheel}`);
     }
-    
-    // Non-blocking capture context (extracted from non-stream route).
-    const ipAddress =
-      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-      req.headers.get("x-real-ip") ||
-      undefined;
-    const userAgent = req.headers.get("user-agent") || undefined;
-    const hostname = req.headers.get("host");
 
     // Fire email capture immediately (fail-safe, awaited but guarded so it can
     // never throw). Email capture is cheap and benefits from running up-front.
