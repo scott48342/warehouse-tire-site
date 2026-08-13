@@ -7,12 +7,22 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 
-// Base URL for API calls (internal calls go through the same host)
+// Base URL for internal API calls (can use preview deployment URL)
 const getBaseUrl = () => {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
   }
   return process.env.NEXT_PUBLIC_BASE_URL || "https://shop.warehousetiredirect.com";
+};
+
+// Public URL for customer-facing links (ALWAYS use production domain, never preview URLs)
+const getPublicUrl = () => {
+  // Check if we're on the local site
+  if (process.env.NEXT_PUBLIC_BASE_URL?.includes('warehousetire.net')) {
+    return 'https://shop.warehousetire.net';
+  }
+  // Default to national production site
+  return 'https://shop.warehousetiredirect.com';
 };
 
 // Enthusiast platform knowledge for confident responses
@@ -517,7 +527,8 @@ export async function executeTool(
   toolName: string, 
   input: Record<string, unknown>
 ): Promise<unknown> {
-  const baseUrl = getBaseUrl();
+  const baseUrl = getBaseUrl();  // For internal API calls
+  const publicUrl = getPublicUrl();  // For customer-facing product links
   
   switch (toolName) {
     case "lookup_tire_sizes": {
@@ -903,7 +914,7 @@ export async function executeTool(
             // IMPORTANT: finishDescription is the detailed finish - USE THIS FOR MOCKUPS
             // e.g., "MACHINED W/ MATTE BLACK LIP" tells you exactly what colors go where
             finishDescription,
-            productUrl: `${baseUrl}/wheels/${w.sku}`,
+            productUrl: `${publicUrl}/wheels/${w.sku}`,
             imageUrl,
             fitmentLabel: w.fitmentGuidance?.levelLabel || null,
             inStock: w.availability?.confirmed || false,
@@ -1007,7 +1018,7 @@ export async function executeTool(
             price: sellPrice ? `$${sellPrice.toFixed(2)}` : "Call for price",
             priceNum: sellPrice,
             size: t.size,
-            productUrl: `${baseUrl}/tires/${t.partNumber || t.sku}?source=${t.source?.includes('tireweb') ? 'tireweb' : 'usautoforce'}`,
+            productUrl: `${publicUrl}/tires/${t.partNumber || t.sku}?source=${t.source?.includes('tireweb') ? 'tireweb' : 'usautoforce'}`,
             imageUrl: t.imageUrl,
             warranty: warrantyMiles ? `${Number(warrantyMiles).toLocaleString()} miles` : undefined,
             terrain,
