@@ -19,6 +19,7 @@ import { JakeAvatar } from "@/components/jake/JakeAvatar";
 import { VehicleIndicator, VehicleIndicatorCompact } from "@/components/VehicleIndicator";
 import { GarageSwitcher, GarageSwitcherCompact } from "@/components/garage";
 import { VehicleMemorySync } from "@/components/VehicleMemorySync";
+import { AuthButton, AuthButtonCompact } from "@/components/auth";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -236,6 +237,8 @@ export function Header() {
             </div>
             {/* Garage Switcher - compact */}
             <GarageSwitcherCompact />
+            {/* Auth button - compact */}
+            <AuthButtonCompact />
             {/* Cart icon for mobile */}
             <CartIcon />
           </div>
@@ -447,6 +450,9 @@ export function Header() {
 
           {/* Garage Switcher */}
           <GarageSwitcher />
+
+          {/* Auth Button */}
+          <AuthButton variant="desktop" />
 
           <CartIcon />
         </nav>

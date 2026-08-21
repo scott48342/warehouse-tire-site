@@ -101,9 +101,11 @@ export const auth = betterAuth({
   }),
 
   // Base URL for auth callbacks
-  baseURL: process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
-    ? `https://${process.env.VERCEL_URL}` 
-    : "http://localhost:3000",
+  // Use explicit production URL for email links, fall back to VERCEL_URL for previews
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL 
+    || (process.env.VERCEL_ENV === "production" ? "https://shop.warehousetiredirect.com" : null)
+    || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null)
+    || "http://localhost:3000",
 
   // ══════════════════════════════════════════════════════════════════════════
   // Email & Password Authentication
