@@ -53,6 +53,7 @@ interface WheelProps {
     trim?: string;
     modification?: string;
   };
+  inStock?: boolean;
 }
 
 type MobileStickyAddToCartProps = TireProps | WheelProps;
@@ -116,7 +117,9 @@ export function MobileStickyAddToCart(props: MobileStickyAddToCartProps) {
     }
   };
   
-  if (!hasPrice) return null;
+  // Hide mobile CTA if out of stock (wheels only - tires don't have this prop yet)
+  const isOutOfStock = props.type === "wheel" && props.inStock === false;
+  if (!hasPrice || isOutOfStock) return null;
   
   // Local tire orders include install/tax/fees — show out-the-door so the cart total
   // matches what's on screen and there's no sticker shock.

@@ -41,6 +41,8 @@ import { ProductViewTracker } from "@/components/ProductViewTracker";
 import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
 // Mobile sticky CTA fix (2026-06-12) - actual add-to-cart instead of anchor link
 import { MobileStickyAddToCart } from "@/components/MobileStickyAddToCart";
+// Inventory cache for stock availability (2026-08-21)
+import { getInventoryForSku } from "@/lib/inventoryCache";
 
 type WheelProsBrand = {
   code?: string;
@@ -537,6 +539,15 @@ export default async function WheelDetailPage({
   // Fetch co-add recommendations (non-blocking, cached)
   const coAddedProducts = await getCoAddedProductsForPDP(sku, "wheel");
 
+  // Fetch inventory status from SFTP cache (2026-08-21)
+  // This determines if the wheel is in stock and purchasable
+  const inventoryData = await getInventoryForSku(sku);
+  const inventoryStatus = inventoryData ? {
+    inStock: ["ST", "BW", "NW", "SO", "CS"].includes(inventoryData.inventoryType) && inventoryData.totalQty >= 4,
+    totalQty: inventoryData.totalQty,
+    inventoryType: inventoryData.inventoryType,
+  } : null;
+
   // ═══════════════════════════════════════════════════════════════════════════
   // SEO: Build structured data for Product and Breadcrumb schemas
   // ═══════════════════════════════════════════════════════════════════════════
@@ -575,7 +586,7 @@ export default async function WheelDetailPage({
           brand: brand || "Wheel",
           imageUrl: imageUrl || undefined,
           price: sellPrice,
-          inStock: true, // Wheels are generally available
+          inStock: inventoryStatus?.inStock ?? true, // Use actual inventory status
           url: canonicalUrl,
           attributes: {
             diameter: diameter || undefined,
@@ -717,6 +728,7 @@ export default async function WheelDetailPage({
               hasVehicle={hasVehicle}
               dbProfile={dbProfile}
               wheelCenterBore={centerBore ? Number(centerBore) : undefined}
+              inventory={inventoryStatus}
             />
 
             {/* Real behavior-driven popularity signal */}
@@ -903,6 +915,7 @@ export default async function WheelDetailPage({
         unitPrice={typeof price === "number" && Number.isFinite(price) ? price : 0}
         quantity={4}
         vehicle={hasVehicle ? { year, make, model, trim: trim || undefined, modification: modification || undefined } : undefined}
+        inStock={inventoryStatus?.inStock ?? true}
       />
     </main>
     </>

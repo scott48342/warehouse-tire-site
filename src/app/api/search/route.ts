@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getInventoryBulk } from "@/lib/inventoryCache";
 
 export const runtime = "nodejs"; // Need nodejs for XML parsing
 
@@ -10,6 +11,7 @@ interface SearchResult {
   image?: string;
   price?: number;
   url: string;
+  inStock?: boolean; // Added 2026-08-21: inventory status
 }
 
 /**
@@ -29,6 +31,25 @@ export async function GET(request: NextRequest) {
   
   // Search wheels via WheelPros (supports SKU and UPC lookup)
   const wheelResults = await searchWheels(upperQuery);
+  
+  // Enrich wheel results with inventory status (2026-08-21)
+  if (wheelResults.length > 0) {
+    const skus = wheelResults.map(r => r.sku);
+    const inventoryMap = await getInventoryBulk(skus);
+    const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
+    const MIN_QTY = 4;
+    
+    for (const result of wheelResults) {
+      const inv = inventoryMap.get(result.sku);
+      if (inv) {
+        result.inStock = ORDERABLE_TYPES.has(inv.inventoryType) && inv.totalQty >= MIN_QTY;
+      } else {
+        // No inventory data = assume out of stock (safer than assuming in stock)
+        result.inStock = false;
+      }
+    }
+  }
+  
   results.push(...wheelResults);
   
   // Note: Tire part number search is not currently supported.
