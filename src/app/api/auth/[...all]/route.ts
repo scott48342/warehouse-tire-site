@@ -22,12 +22,20 @@ import { toNextJsHandler } from "better-auth/next-js";
 // Export handlers for Next.js App Router
 // Use lazy getter to prevent build-time initialization
 export const GET = async (req: Request) => {
-  const handler = toNextJsHandler(getAuth().handler);
+  const auth = getAuth();
+  if (!auth) {
+    return new Response("Auth not configured", { status: 503 });
+  }
+  const handler = toNextJsHandler(auth.handler);
   return handler.GET(req);
 };
 
 export const POST = async (req: Request) => {
-  const handler = toNextJsHandler(getAuth().handler);
+  const auth = getAuth();
+  if (!auth) {
+    return new Response("Auth not configured", { status: 503 });
+  }
+  const handler = toNextJsHandler(auth.handler);
   return handler.POST(req);
 };
 

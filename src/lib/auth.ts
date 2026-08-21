@@ -104,7 +104,7 @@ function getAuthSecret(): string {
 
 let _auth: ReturnType<typeof betterAuth> | null = null;
 
-export function getAuth() {
+export function getAuth(): ReturnType<typeof betterAuth> {
   if (!_auth) {
     const resend = getResend();
     
