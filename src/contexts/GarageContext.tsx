@@ -59,6 +59,8 @@ type GarageContextValue = {
   hasCompleteVehicle: boolean;
   /** Number of vehicles in garage */
   vehicleCount: number;
+  /** Replace entire garage (for server sync) */
+  replaceGarage: (vehicles: GarageVehicle[], activeId?: string | null) => void;
 };
 
 const GarageContext = createContext<GarageContextValue | null>(null);
@@ -497,6 +499,33 @@ export function GarageProvider({ children }: { children: ReactNode }) {
     return params;
   }, [activeVehicle]);
 
+  /**
+   * Replace entire garage with new vehicles (used for server sync)
+   * Atomic operation that replaces local state with server state
+   */
+  const replaceGarage = useCallback((vehicles: GarageVehicle[], newActiveId?: string | null) => {
+    setGarage(vehicles);
+    writeGarage({ vehicles, version: GARAGE_VERSION });
+    
+    // Determine active ID
+    let finalActiveId: string | null = null;
+    if (newActiveId && vehicles.find(v => v.id === newActiveId)) {
+      finalActiveId = newActiveId;
+    } else if (vehicles.length > 0) {
+      // Fall back to most recently active
+      const sorted = [...vehicles].sort((a, b) => b.lastActiveAt - a.lastActiveAt);
+      finalActiveId = sorted[0].id;
+    }
+    
+    setActiveId(finalActiveId);
+    writeActiveId(finalActiveId);
+    
+    console.log("[Garage] Replaced:", {
+      count: vehicles.length,
+      activeId: finalActiveId,
+    });
+  }, []);
+
   const hasCompleteVehicle = Boolean(
     activeVehicle?.year && 
     activeVehicle?.make && 
@@ -519,6 +548,7 @@ export function GarageProvider({ children }: { children: ReactNode }) {
         buildVehicleParams,
         hasCompleteVehicle,
         vehicleCount: garage.length,
+        replaceGarage,
       }}
     >
       {children}

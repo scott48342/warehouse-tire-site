@@ -151,19 +151,23 @@ export function useAccountGarage() {
         garage.activeVehicle?.id || null
       );
 
-      // Update local garage with server state
-      // This replaces local state with merged server state
-      for (const serverVehicle of result.vehicles) {
-        const localExists = garage.garage.some(v => v.id === serverVehicle.id);
-        if (!localExists) {
-          // Add server-only vehicles to local garage
-          garage.addVehicle(serverVehicle, false);
+      // Replace local garage with server state (server is source of truth)
+      // Use replaceGarage if available, otherwise add missing vehicles
+      if (typeof garage.replaceGarage === "function") {
+        // Preferred: atomic replacement
+        garage.replaceGarage(result.vehicles, result.activeId);
+      } else {
+        // Fallback: add server vehicles not in local
+        const localIds = new Set(garage.garage.map(v => v.id));
+        for (const serverVehicle of result.vehicles) {
+          if (!localIds.has(serverVehicle.id)) {
+            garage.addVehicle(serverVehicle, false);
+          }
         }
-      }
-
-      // Set server's active vehicle as local active
-      if (result.activeId) {
-        garage.setActiveVehicle(result.activeId);
+        // Set active vehicle
+        if (result.activeId) {
+          garage.setActiveVehicle(result.activeId);
+        }
       }
 
       setState({
