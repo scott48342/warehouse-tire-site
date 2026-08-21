@@ -65,7 +65,7 @@ function getResend(): Resend | null {
 const resend = getResend();
 
 // Email sender configuration
-const EMAIL_FROM = process.env.AUTH_EMAIL_FROM || "Warehouse Tire Direct <noreply@warehousetiredirect.com>";
+const EMAIL_FROM = process.env.RESEND_FROM || process.env.AUTH_EMAIL_FROM || "Warehouse Tire Direct <noreply@warehousetiredirect.com>";
 
 // ============================================================================
 // Better Auth Configuration
