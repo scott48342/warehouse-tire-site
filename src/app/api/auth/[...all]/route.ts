@@ -16,11 +16,20 @@
  * @created 2026-08-20
  */
 
-import { auth } from "@/lib/auth";
+import { getAuth } from "@/lib/auth";
 import { toNextJsHandler } from "better-auth/next-js";
 
 // Export handlers for Next.js App Router
-export const { GET, POST } = toNextJsHandler(auth.handler);
+// Use lazy getter to prevent build-time initialization
+export const GET = async (req: Request) => {
+  const handler = toNextJsHandler(getAuth().handler);
+  return handler.GET(req);
+};
+
+export const POST = async (req: Request) => {
+  const handler = toNextJsHandler(getAuth().handler);
+  return handler.POST(req);
+};
 
 // Ensure this route uses Node.js runtime for crypto operations
 export const runtime = "nodejs";

@@ -23,7 +23,7 @@ import { Resend } from "resend";
 import * as authSchema from "./auth-schema";
 
 // ============================================================================
-// Database Connection
+// Database Connection (lazy-initialized to prevent build-time errors)
 // ============================================================================
 
 function getPostgresUrl(): string {
@@ -34,20 +34,33 @@ function getPostgresUrl(): string {
   return url;
 }
 
-// Create connection pool (same pattern as src/lib/fitment-db/db.ts)
-const pool = new Pool({
-  connectionString: getPostgresUrl(),
-  max: 5,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 10000,
-  ssl: process.env.NODE_ENV === "production" || process.env.VERCEL
-    ? { rejectUnauthorized: false }
-    : (getPostgresUrl().includes('sslmode=require')
-        ? { rejectUnauthorized: false }
-        : undefined),
-});
+// Lazy-init pool and db to prevent build-time crashes
+let _pool: Pool | null = null;
+let _db: ReturnType<typeof drizzle> | null = null;
 
-const db = drizzle(pool, { schema: authSchema });
+function getPool(): Pool {
+  if (!_pool) {
+    _pool = new Pool({
+      connectionString: getPostgresUrl(),
+      max: 5,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 10000,
+      ssl: process.env.NODE_ENV === "production" || process.env.VERCEL
+        ? { rejectUnauthorized: false }
+        : (getPostgresUrl().includes('sslmode=require')
+            ? { rejectUnauthorized: false }
+            : undefined),
+    });
+  }
+  return _pool;
+}
+
+function getDb() {
+  if (!_db) {
+    _db = drizzle(getPool(), { schema: authSchema });
+  }
+  return _db;
+}
 
 // ============================================================================
 // Email Service (Resend)
@@ -62,7 +75,7 @@ function getResend(): Resend | null {
   return new Resend(apiKey);
 }
 
-const resend = getResend();
+// Resend client is lazy-initialized via getResend()
 
 // Email sender configuration
 const EMAIL_FROM = process.env.AUTH_EMAIL_FROM || "Warehouse Tire Direct <noreply@warehousetiredirect.com>";
@@ -85,20 +98,30 @@ function getAuthSecret(): string {
   return secret;
 }
 
-export const auth = betterAuth({
-  // Auth secret for signing tokens
-  secret: getAuthSecret(),
+// ============================================================================
+// Auth Instance (lazy-initialized)
+// ============================================================================
 
-  // Database adapter
-  database: drizzleAdapter(db, {
-    provider: "pg",
-    schema: {
-      user: authSchema.authUsers,
-      session: authSchema.authSessions,
-      account: authSchema.authAccounts,
-      verification: authSchema.authVerifications,
-    },
-  }),
+let _auth: ReturnType<typeof betterAuth> | null = null;
+
+export function getAuth() {
+  if (!_auth) {
+    const resend = getResend();
+    
+    _auth = betterAuth({
+      // Auth secret for signing tokens
+      secret: getAuthSecret(),
+
+      // Database adapter
+      database: drizzleAdapter(getDb(), {
+        provider: "pg",
+        schema: {
+          user: authSchema.authUsers,
+          session: authSchema.authSessions,
+          account: authSchema.authAccounts,
+          verification: authSchema.authVerifications,
+        },
+      }),
 
   // Base URL for auth callbacks
   baseURL: process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
@@ -261,7 +284,10 @@ export const auth = betterAuth({
     // Vercel preview URLs
     "https://*.vercel.app",
   ],
-});
+    });
+  }
+  return _auth;
+}
 
 // ============================================================================
 // Email Templates
@@ -376,4 +402,16 @@ function buildPasswordResetEmail(name: string, url: string): string {
 }
 
 // Export type for use in other files
-export type Auth = typeof auth;
+export type Auth = ReturnType<typeof getAuth>;
+
+// Legacy export for compatibility - lazy getter
+export const auth = {
+  get api() { return getAuth().api; },
+  get handler() { return getAuth().handler; },
+  get signIn() { return getAuth().signIn; },
+  get signUp() { return getAuth().signUp; },
+  get signOut() { return getAuth().signOut; },
+  get session() { return getAuth().session; },
+  get user() { return getAuth().user; },
+  get options() { return getAuth().options; },
+};
