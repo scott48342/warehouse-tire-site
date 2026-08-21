@@ -119,6 +119,32 @@ export const auth = betterAuth({
     // Revoke all other sessions when password is reset (security best practice)
     revokeSessionsOnPasswordReset: true,
     
+    // Send password reset email callback
+    sendResetPassword: async (
+      { user, url, token }: { user: User; url: string; token: string },
+      _request?: Request
+    ) => {
+      console.log(`[auth] Sending password reset email to ${user.email}`);
+      
+      if (!resend) {
+        console.log(`[auth] [DEV] Reset URL: ${url}`);
+        console.log(`[auth] [DEV] Token: ${token}`);
+        return;
+      }
+      
+      try {
+        const result = await resend.emails.send({
+          from: EMAIL_FROM,
+          to: user.email,
+          subject: "Reset your password - Warehouse Tire Direct",
+          html: buildPasswordResetEmail(user.name || "Customer", url),
+        });
+        console.log(`[auth] Password reset email sent to ${user.email}`, result);
+      } catch (err) {
+        console.error(`[auth] Failed to send password reset email:`, err);
+      }
+    },
+    
     // Callback after password reset completes
     onPasswordReset: async (
       data: { user: User },
@@ -164,32 +190,6 @@ export const auth = betterAuth({
       } catch (err) {
         console.error(`[auth] Failed to send verification email:`, err);
         // Don't throw - Better Auth handles this gracefully
-      }
-    },
-    
-    // Send password reset email callback
-    sendResetPassword: async (
-      { user, url, token }: { user: User; url: string; token: string },
-      _request?: Request
-    ) => {
-      console.log(`[auth] Sending password reset email to ${user.email}`);
-      
-      if (!resend) {
-        console.log(`[auth] [DEV] Reset URL: ${url}`);
-        console.log(`[auth] [DEV] Token: ${token}`);
-        return;
-      }
-      
-      try {
-        const result = await resend.emails.send({
-          from: EMAIL_FROM,
-          to: user.email,
-          subject: "Reset your password - Warehouse Tire Direct",
-          html: buildPasswordResetEmail(user.name || "Customer", url),
-        });
-        console.log(`[auth] Password reset email sent to ${user.email}`, result);
-      } catch (err) {
-        console.error(`[auth] Failed to send password reset email:`, err);
       }
     },
   },
