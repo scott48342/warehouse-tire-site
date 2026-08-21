@@ -10,7 +10,17 @@ import { Resend } from "resend";
 
 export const runtime = "nodejs";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy init to prevent build-time crash when RESEND_API_KEY is missing
+let resend: Resend | null = null;
+function getResend() {
+  if (!resend) {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error("RESEND_API_KEY is not configured");
+    }
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 interface QuoteItem {
   type: string;
@@ -144,7 +154,7 @@ export async function POST(request: NextRequest) {
     `;
     
     // Send the email
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResend().emails.send({
       from: "Jake at Warehouse Tire <jake@warehousetiredirect.com>",
       to: [email],
       replyTo: "scott@warehousetire.net",
