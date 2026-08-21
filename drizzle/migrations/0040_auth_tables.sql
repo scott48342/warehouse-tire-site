@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS auth_accounts (
     user_id TEXT NOT NULL REFERENCES auth_users(id) ON DELETE CASCADE,
     provider_id TEXT NOT NULL,
     account_id TEXT NOT NULL,
+    issuer TEXT NOT NULL, -- Better Auth 1.7+ requirement
     access_token TEXT,
     refresh_token TEXT,
     access_token_expires_at TIMESTAMPTZ,
@@ -72,13 +73,14 @@ CREATE TABLE IF NOT EXISTS auth_accounts (
     password TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    UNIQUE (provider_id, account_id)
+    UNIQUE (issuer, account_id) -- Better Auth 1.7+ compound index
 );
 
 -- Indexes
 CREATE INDEX IF NOT EXISTS auth_accounts_user_id_idx ON auth_accounts (user_id);
-CREATE UNIQUE INDEX IF NOT EXISTS auth_accounts_provider_account_idx 
-    ON auth_accounts (provider_id, account_id);
+-- Better Auth 1.7+ uses issuer+accountId for unique identity
+CREATE UNIQUE INDEX IF NOT EXISTS auth_accounts_issuer_account_id_idx 
+    ON auth_accounts (issuer, account_id);
 
 COMMENT ON TABLE auth_accounts IS 'Authentication credentials. Supports multiple providers per user.';
 COMMENT ON COLUMN auth_accounts.provider_id IS 'For email/password: "credential". For OAuth: provider name.';

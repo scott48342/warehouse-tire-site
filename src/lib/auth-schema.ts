@@ -120,11 +120,12 @@ export const authAccounts = pgTable(
       .notNull()
       .references(() => authUsers.id, { onDelete: "cascade" }),
     
-    // Provider identification
-    // For email/password: providerId = "credential", accountId = user.id
-    // For OAuth: providerId = "google", accountId = Google user ID, etc.
+    // Provider identification (Better Auth 1.7+)
+    // For email/password: providerId = "credential", issuer = "local:credential", accountId = user.id
+    // For OAuth: providerId = "google", issuer = "https://accounts.google.com", accountId = Google sub
     providerId: text("provider_id").notNull(),
     accountId: text("account_id").notNull(),
+    issuer: text("issuer").notNull(), // Better Auth 1.7 requirement
     
     // OAuth tokens (null for credential auth)
     accessToken: text("access_token"),
@@ -142,9 +143,9 @@ export const authAccounts = pgTable(
   },
   (table) => ({
     userIdIdx: index("auth_accounts_user_id_idx").on(table.userId),
-    // Unique constraint: one account per provider per user
-    providerAccountIdx: uniqueIndex("auth_accounts_provider_account_idx").on(
-      table.providerId,
+    // Unique constraint: one account per issuer + accountId (Better Auth 1.7+)
+    issuerAccountIdx: uniqueIndex("auth_accounts_issuer_account_id_idx").on(
+      table.issuer,
       table.accountId
     ),
   })
