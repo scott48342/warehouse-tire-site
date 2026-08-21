@@ -1,14 +1,20 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from "react";
+import { createContext, useContext, useCallback, ReactNode, useMemo } from "react";
+import { useGarage, type GarageVehicle } from "@/contexts/GarageContext";
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// VEHICLE MEMORY MVP
-// Persists customer's selected vehicle across sessions
+// VEHICLE MEMORY - COMPATIBILITY ADAPTER
+// 
+// This context now derives from GarageContext (single source of truth).
+// It maintains backward-compatible API for existing consumers (Jake, header, etc.)
+// but no longer independently persists to localStorage.
+//
+// MIGRATION NOTE (2026-08-21):
+// Previously this context wrote SavedVehicle objects to wt_active_vehicle.
+// GarageContext wrote ID strings to the same key, causing collisions.
+// Now: GarageContext owns all vehicle persistence, this is just an adapter.
 // ═══════════════════════════════════════════════════════════════════════════════
-
-const STORAGE_KEY = "wt_active_vehicle";
-const STORAGE_VERSION = 1;
 
 export type SavedVehicle = {
   year: string;
@@ -39,157 +45,64 @@ type VehicleMemoryContextValue = {
 const VehicleMemoryContext = createContext<VehicleMemoryContextValue | null>(null);
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// Storage helpers
+// Helper: Convert GarageVehicle to SavedVehicle for backward compatibility
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function readVehicle(): SavedVehicle | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    const data = JSON.parse(raw) as SavedVehicle;
-    // Validate required fields
-    if (!data?.year || !data?.make || !data?.model) return null;
-    // Version check for future migrations
-    if (data.version !== STORAGE_VERSION) {
-      // Future: migrate old versions here
-      console.log("[VehicleMemory] Migrating from version", data.version, "to", STORAGE_VERSION);
-    }
-    return data;
-  } catch (err) {
-    console.warn("[VehicleMemory] Failed to read:", err);
-    return null;
-  }
-}
-
-function writeVehicle(vehicle: SavedVehicle): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(vehicle));
-    return true;
-  } catch (err) {
-    console.warn("[VehicleMemory] Failed to write:", err);
-    return false;
-  }
-}
-
-function clearVehicle(): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    localStorage.removeItem(STORAGE_KEY);
-    return true;
-  } catch (err) {
-    console.warn("[VehicleMemory] Failed to clear:", err);
-    return false;
-  }
+function garageVehicleToSavedVehicle(gv: GarageVehicle | null): SavedVehicle | null {
+  if (!gv) return null;
+  return {
+    year: gv.year,
+    make: gv.make,
+    model: gv.model,
+    trim: gv.trim,
+    modification: gv.modification,
+    wheelDia: gv.wheelDia,
+    savedAt: gv.lastActiveAt,
+    version: 1,
+  };
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// Analytics helpers
-// ═══════════════════════════════════════════════════════════════════════════════
-
-function trackEvent(event: string, data?: Record<string, unknown>) {
-  if (typeof window === "undefined") return;
-  
-  // gtag (Google Analytics 4)
-  if (typeof (window as any).gtag === "function") {
-    (window as any).gtag("event", event, data);
-  }
-  
-  // Console log for debugging
-  console.log(`[VehicleMemory] Analytics: ${event}`, data);
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// Provider
+// Provider - Adapter over GarageContext
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export function VehicleMemoryProvider({ children }: { children: ReactNode }) {
-  const [activeVehicle, setActiveVehicleState] = useState<SavedVehicle | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  // Get state and actions from GarageContext (our source of truth)
+  const {
+    activeVehicle: garageActiveVehicle,
+    isLoaded,
+    setActiveVehicleByData,
+    clearActiveVehicle: garageClearActive,
+    buildVehicleParams,
+    hasCompleteVehicle,
+  } = useGarage();
 
-  // Load from storage on mount
-  useEffect(() => {
-    const stored = readVehicle();
-    if (stored) {
-      setActiveVehicleState(stored);
-      trackEvent("vehicle_restored", {
-        year: stored.year,
-        make: stored.make,
-        model: stored.model,
-        trim: stored.trim,
-        days_since_saved: Math.floor((Date.now() - stored.savedAt) / (1000 * 60 * 60 * 24)),
-      });
-    }
-    setIsLoaded(true);
-  }, []);
-
-  const setActiveVehicle = useCallback((vehicle: Omit<SavedVehicle, "savedAt" | "version">) => {
-    // ═══════════════════════════════════════════════════════════════════════════
-    // DUPLICATE PREVENTION: Don't save/track if vehicle is the same
-    // This prevents duplicate analytics events from VehicleMemorySync
-    // ═══════════════════════════════════════════════════════════════════════════
-    const isSameVehicle = activeVehicle !== null &&
-      activeVehicle.year === vehicle.year &&
-      activeVehicle.make === vehicle.make &&
-      activeVehicle.model === vehicle.model &&
-      activeVehicle.modification === vehicle.modification;
-    
-    if (isSameVehicle) {
-      // Skip save if same vehicle (prevents duplicate events)
-      return;
-    }
-    
-    const saved: SavedVehicle = {
-      ...vehicle,
-      savedAt: Date.now(),
-      version: STORAGE_VERSION,
-    };
-    
-    const isChange = activeVehicle !== null;
-    
-    if (writeVehicle(saved)) {
-      setActiveVehicleState(saved);
-      trackEvent(isChange ? "vehicle_changed" : "vehicle_saved", {
-        year: saved.year,
-        make: saved.make,
-        model: saved.model,
-        trim: saved.trim,
-        modification: saved.modification,
-        wheel_diameter: saved.wheelDia,
-      });
-    }
-  }, [activeVehicle]);
-
-  const clearActiveVehicle = useCallback(() => {
-    if (activeVehicle && clearVehicle()) {
-      trackEvent("vehicle_cleared", {
-        year: activeVehicle.year,
-        make: activeVehicle.make,
-        model: activeVehicle.model,
-      });
-      setActiveVehicleState(null);
-    }
-  }, [activeVehicle]);
-
-  const buildVehicleParams = useCallback(() => {
-    const params = new URLSearchParams();
-    if (!activeVehicle) return params;
-    
-    if (activeVehicle.year) params.set("year", activeVehicle.year);
-    if (activeVehicle.make) params.set("make", activeVehicle.make);
-    if (activeVehicle.model) params.set("model", activeVehicle.model);
-    if (activeVehicle.trim) params.set("trim", activeVehicle.trim);
-    if (activeVehicle.modification) params.set("modification", activeVehicle.modification);
-    
-    return params;
-  }, [activeVehicle]);
-
-  const hasCompleteVehicle = Boolean(
-    activeVehicle?.year && 
-    activeVehicle?.make && 
-    activeVehicle?.model
+  // Convert GarageVehicle → SavedVehicle for backward-compatible API
+  const activeVehicle = useMemo(
+    () => garageVehicleToSavedVehicle(garageActiveVehicle),
+    [garageActiveVehicle]
   );
+
+  // setActiveVehicle delegates to GarageContext
+  // This adds to garage (if needed) and sets as active
+  const setActiveVehicle = useCallback(
+    (vehicle: Omit<SavedVehicle, "savedAt" | "version">) => {
+      setActiveVehicleByData({
+        year: vehicle.year,
+        make: vehicle.make,
+        model: vehicle.model,
+        trim: vehicle.trim,
+        modification: vehicle.modification,
+        wheelDia: vehicle.wheelDia,
+      });
+    },
+    [setActiveVehicleByData]
+  );
+
+  // clearActiveVehicle delegates to GarageContext
+  const clearActiveVehicle = useCallback(() => {
+    garageClearActive();
+  }, [garageClearActive]);
 
   return (
     <VehicleMemoryContext.Provider

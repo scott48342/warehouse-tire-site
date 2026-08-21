@@ -15,7 +15,6 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { MicrosoftClarity } from "@/components/MicrosoftClarity";
 import { Analytics } from "@/components/Analytics";
 import { FunnelTracker } from "@/components/FunnelTracker";
-import { GarageVehicleMemorySync } from "@/components/garage/GarageVehicleMemorySync";
 import { OrganizationJsonLd } from "@/components/trust/TrustJsonLd";
 // import { Chatwoot } from "@/components/Chatwoot"; // Disabled temporarily
 import { Suspense } from "react";
@@ -86,7 +85,6 @@ export default function RootLayout({
         <ShopContextProvider>
           <GarageProvider>
             <VehicleMemoryProvider>
-              <GarageVehicleMemorySync />
               <CartProvider>
                 <CartSavePromptProvider>
                   <DiscountProvider>

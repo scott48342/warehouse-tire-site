@@ -9,7 +9,8 @@ import { trackGarageVehicleSave, trackGarageVehicleRestore } from "@/lib/analyti
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const GARAGE_KEY = "wt_garage";
-const ACTIVE_KEY = "wt_active_vehicle";
+const ACTIVE_ID_KEY = "wt_garage_active_id";  // NEW dedicated key for active ID
+const LEGACY_ACTIVE_KEY = "wt_active_vehicle"; // DEPRECATED - read-only for migration
 const GARAGE_VERSION = 1;
 const MAX_VEHICLES = 10;
 
@@ -44,6 +45,8 @@ type GarageContextValue = {
   removeVehicle: (vehicleId: string) => boolean;
   /** Set a vehicle as the active vehicle */
   setActiveVehicle: (vehicleId: string) => boolean;
+  /** Set active vehicle by vehicle data (for URL sync) - adds to garage if needed */
+  setActiveVehicleByData: (vehicle: Omit<GarageVehicle, "id" | "addedAt" | "lastActiveAt" | "nickname">) => GarageVehicle | null;
   /** Clear the active vehicle (but keep in garage) */
   clearActiveVehicle: () => void;
   /** Update a vehicle's nickname */
@@ -95,57 +98,85 @@ function writeGarage(garage: Garage): boolean {
   }
 }
 
+/**
+ * Read active vehicle ID from storage
+ * Priority: new key > legacy key (for migration)
+ */
 function readActiveId(): string | null {
   if (typeof window === "undefined") return null;
+  
+  // 1. Try the new dedicated key first
   try {
-    const raw = localStorage.getItem(ACTIVE_KEY);
+    const newKeyRaw = localStorage.getItem(ACTIVE_ID_KEY);
+    if (newKeyRaw) {
+      const parsed = JSON.parse(newKeyRaw);
+      if (typeof parsed === "string" && parsed.startsWith("v_")) {
+        return parsed;
+      }
+    }
+  } catch {
+    // Continue to legacy
+  }
+  
+  // 2. Fall back to legacy key for migration
+  return readLegacyActiveId();
+}
+
+/**
+ * Read active ID from legacy wt_active_vehicle key
+ * Handles both formats: string ID or SavedVehicle object
+ */
+function readLegacyActiveId(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(LEGACY_ACTIVE_KEY);
     if (!raw) return null;
     const data = JSON.parse(raw);
-    // Support both old format (SavedVehicle) and new format (just ID)
-    if (typeof data === "string") return data;
-    if (data?.id) return data.id;
-    // Old format - need to find matching vehicle
-    if (data?.year && data?.make && data?.model) {
-      return null; // Will be resolved by finding matching vehicle
+    
+    // Format 1: String ID (GarageContext wrote this)
+    if (typeof data === "string" && data.startsWith("v_")) {
+      return data;
     }
+    
+    // Format 2: Object with id field
+    if (data?.id && typeof data.id === "string" && data.id.startsWith("v_")) {
+      return data.id;
+    }
+    
+    // Format 3: SavedVehicle object without id (VehicleMemoryContext format)
+    // Will be handled by readLegacySavedVehicle() instead
     return null;
   } catch {
     return null;
   }
 }
 
-function writeActiveId(id: string | null): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    if (id) {
-      localStorage.setItem(ACTIVE_KEY, JSON.stringify(id));
-    } else {
-      localStorage.removeItem(ACTIVE_KEY);
-    }
-    return true;
-  } catch (err) {
-    console.warn("[Garage] Failed to write active ID:", err);
-    return false;
-  }
-}
-
-// Legacy migration: read old wt_active_vehicle format
-function readLegacyVehicle(): GarageVehicle | null {
+/**
+ * Read legacy SavedVehicle object from wt_active_vehicle
+ * Only returns data if it's the old VehicleMemoryContext format
+ */
+function readLegacySavedVehicle(): GarageVehicle | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = localStorage.getItem(ACTIVE_KEY);
+    const raw = localStorage.getItem(LEGACY_ACTIVE_KEY);
     if (!raw) return null;
     const data = JSON.parse(raw);
-    // Check if it's old format (has year/make/model but no id)
-    if (data?.year && data?.make && data?.model && !data?.id) {
+    
+    // Check if it's old SavedVehicle format (has year/make/model but no garage id)
+    if (
+      data?.year && 
+      data?.make && 
+      data?.model && 
+      !(typeof data.id === "string" && data.id.startsWith("v_"))
+    ) {
       return {
         id: generateId(),
-        year: data.year,
-        make: data.make,
-        model: data.model,
-        trim: data.trim,
-        modification: data.modification,
-        wheelDia: data.wheelDia,
+        year: String(data.year),
+        make: String(data.make),
+        model: String(data.model),
+        trim: data.trim ? String(data.trim) : undefined,
+        modification: data.modification ? String(data.modification) : undefined,
+        wheelDia: typeof data.wheelDia === "number" ? data.wheelDia : undefined,
         addedAt: data.savedAt || Date.now(),
         lastActiveAt: Date.now(),
       };
@@ -154,6 +185,57 @@ function readLegacyVehicle(): GarageVehicle | null {
   } catch {
     return null;
   }
+}
+
+/**
+ * Write active vehicle ID to the NEW dedicated key only
+ * Does NOT write to legacy key
+ */
+function writeActiveId(id: string | null): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    if (id) {
+      localStorage.setItem(ACTIVE_ID_KEY, JSON.stringify(id));
+    } else {
+      localStorage.removeItem(ACTIVE_ID_KEY);
+    }
+    return true;
+  } catch (err) {
+    console.warn("[Garage] Failed to write active ID:", err);
+    return false;
+  }
+}
+
+/**
+ * Find a vehicle in the garage by canonical identity
+ * Uses modification as primary key when available, falls back to YMM
+ */
+function findMatchingVehicle(
+  vehicles: GarageVehicle[],
+  target: { year: string; make: string; model: string; modification?: string }
+): GarageVehicle | null {
+  // First try exact match with modification
+  if (target.modification) {
+    const exactMatch = vehicles.find(v =>
+      v.year === target.year &&
+      v.make === target.make &&
+      v.model === target.model &&
+      v.modification === target.modification
+    );
+    if (exactMatch) return exactMatch;
+  }
+  
+  // Fall back to YMM match (for legacy data without modification)
+  // Only match if NEITHER has modification (to avoid collapsing different trims)
+  const ymmMatch = vehicles.find(v =>
+    v.year === target.year &&
+    v.make === target.make &&
+    v.model === target.model &&
+    !v.modification &&
+    !target.modification
+  );
+  
+  return ymmMatch || null;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -186,21 +268,29 @@ export function GarageProvider({ children }: { children: ReactNode }) {
     let vehicles = storedGarage.vehicles;
     let activeVehicleId = readActiveId();
 
-    // Handle legacy migration
-    const legacyVehicle = readLegacyVehicle();
-    if (legacyVehicle && !vehicles.find(v => 
-      v.year === legacyVehicle.year && 
-      v.make === legacyVehicle.make && 
-      v.model === legacyVehicle.model
-    )) {
-      // Migrate legacy vehicle to garage
-      vehicles = [...vehicles, legacyVehicle];
-      activeVehicleId = legacyVehicle.id;
-      writeGarage({ vehicles, version: GARAGE_VERSION });
-      writeActiveId(legacyVehicle.id);
-      trackEvent("garage_legacy_migrated", {
-        vehicle: `${legacyVehicle.year} ${legacyVehicle.make} ${legacyVehicle.model}`,
-      });
+    // Handle legacy SavedVehicle migration from wt_active_vehicle
+    const legacySavedVehicle = readLegacySavedVehicle();
+    if (legacySavedVehicle) {
+      // Check if this vehicle already exists in garage (deterministic deduplication)
+      const existingMatch = findMatchingVehicle(vehicles, legacySavedVehicle);
+      
+      if (existingMatch) {
+        // Vehicle already in garage - just set it as active
+        activeVehicleId = existingMatch.id;
+        console.log("[Garage] Legacy vehicle matched existing:", existingMatch.id);
+      } else {
+        // New vehicle - add to garage
+        vehicles = [...vehicles, legacySavedVehicle];
+        activeVehicleId = legacySavedVehicle.id;
+        writeGarage({ vehicles, version: GARAGE_VERSION });
+        console.log("[Garage] Legacy vehicle migrated:", legacySavedVehicle.id);
+        trackEvent("garage_legacy_migrated", {
+          vehicle: `${legacySavedVehicle.year} ${legacySavedVehicle.make} ${legacySavedVehicle.model}`,
+        });
+      }
+      
+      // Write to new key location
+      writeActiveId(activeVehicleId);
     }
 
     setGarage(vehicles);
@@ -208,11 +298,13 @@ export function GarageProvider({ children }: { children: ReactNode }) {
     // Validate active ID exists in garage
     if (activeVehicleId && vehicles.find(v => v.id === activeVehicleId)) {
       setActiveId(activeVehicleId);
+      writeActiveId(activeVehicleId); // Ensure new key is populated
     } else if (vehicles.length > 0) {
       // Default to most recently active
       const sorted = [...vehicles].sort((a, b) => b.lastActiveAt - a.lastActiveAt);
-      setActiveId(sorted[0].id);
-      writeActiveId(sorted[0].id);
+      const fallbackId = sorted[0].id;
+      setActiveId(fallbackId);
+      writeActiveId(fallbackId);
     }
 
     setIsLoaded(true);
@@ -231,13 +323,8 @@ export function GarageProvider({ children }: { children: ReactNode }) {
     vehicle: Omit<GarageVehicle, "id" | "addedAt" | "lastActiveAt">,
     setActive = true
   ): GarageVehicle | null => {
-    // Check if already in garage
-    const existing = garage.find(v =>
-      v.year === vehicle.year &&
-      v.make === vehicle.make &&
-      v.model === vehicle.model &&
-      v.modification === vehicle.modification
-    );
+    // Check if already in garage using canonical matching
+    const existing = findMatchingVehicle(garage, vehicle);
 
     if (existing) {
       // Update last active and set active if requested
@@ -292,6 +379,17 @@ export function GarageProvider({ children }: { children: ReactNode }) {
     return newVehicle;
   }, [garage]);
 
+  /**
+   * Set active vehicle by vehicle data (used for URL sync)
+   * Adds to garage if not present, returns the garage vehicle
+   */
+  const setActiveVehicleByData = useCallback((
+    vehicle: Omit<GarageVehicle, "id" | "addedAt" | "lastActiveAt" | "nickname">
+  ): GarageVehicle | null => {
+    // This delegates to addVehicle which handles deduplication
+    return addVehicle(vehicle, true);
+  }, [addVehicle]);
+
   const removeVehicle = useCallback((vehicleId: string): boolean => {
     const vehicle = garage.find(v => v.id === vehicleId);
     if (!vehicle) return false;
@@ -304,8 +402,9 @@ export function GarageProvider({ children }: { children: ReactNode }) {
     if (activeId === vehicleId) {
       if (updated.length > 0) {
         const sorted = [...updated].sort((a, b) => b.lastActiveAt - a.lastActiveAt);
-        setActiveId(sorted[0].id);
-        writeActiveId(sorted[0].id);
+        const newActiveId = sorted[0].id;
+        setActiveId(newActiveId);
+        writeActiveId(newActiveId);
       } else {
         setActiveId(null);
         writeActiveId(null);
@@ -382,12 +481,7 @@ export function GarageProvider({ children }: { children: ReactNode }) {
     model: string,
     modification?: string
   ): GarageVehicle | null => {
-    return garage.find(v =>
-      v.year === year &&
-      v.make === make &&
-      v.model === model &&
-      (!modification || v.modification === modification)
-    ) || null;
+    return findMatchingVehicle(garage, { year, make, model, modification });
   }, [garage]);
 
   const buildVehicleParams = useCallback(() => {
@@ -418,6 +512,7 @@ export function GarageProvider({ children }: { children: ReactNode }) {
         addVehicle,
         removeVehicle,
         setActiveVehicle: setActiveVehicleById,
+        setActiveVehicleByData,
         clearActiveVehicle,
         updateNickname,
         isInGarage,

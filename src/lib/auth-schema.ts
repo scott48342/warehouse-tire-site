@@ -189,6 +189,55 @@ export const authVerifications = pgTable(
 );
 
 // ============================================================================
+// USER_GARAGE - Saved Vehicles (Account-Backed)
+// ============================================================================
+
+/**
+ * User's saved garage vehicles.
+ * 
+ * This table persists vehicles to the server for authenticated users.
+ * Each user can have up to 10 vehicles. The garage is synced on login:
+ * - Local garage vehicles are merged into server garage (no duplicates)
+ * - Server becomes source of truth for authenticated sessions
+ * 
+ * @created 2026-08-21
+ */
+export const userGarage = pgTable(
+  "user_garage",
+  {
+    id: text("id").primaryKey(), // Format: v_<timestamp>_<random>
+    
+    // User reference
+    userId: text("user_id")
+      .notNull()
+      .references(() => authUsers.id, { onDelete: "cascade" }),
+    
+    // Vehicle identification (required)
+    year: text("year").notNull(),
+    make: text("make").notNull(),
+    model: text("model").notNull(),
+    trim: text("trim"),
+    modification: text("modification"), // Canonical vehicle ID (e.g., "ford-f-150-2024-xlt")
+    
+    // Optional metadata
+    wheelDia: text("wheel_dia"), // Selected wheel diameter (stored as text for flexibility)
+    nickname: text("nickname"), // User-assigned nickname
+    
+    // Timestamps
+    addedAt: timestamp("added_at", { withTimezone: true }).notNull().defaultNow(),
+    lastActiveAt: timestamp("last_active_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => ({
+    userIdIdx: index("user_garage_user_id_idx").on(table.userId),
+    // Composite unique: one vehicle per user per modification (prevents duplicates)
+    userModificationIdx: uniqueIndex("user_garage_user_modification_idx").on(
+      table.userId,
+      table.modification
+    ),
+  })
+);
+
+// ============================================================================
 // Type Exports
 // ============================================================================
 
@@ -203,3 +252,6 @@ export type NewAuthAccount = typeof authAccounts.$inferInsert;
 
 export type AuthVerification = typeof authVerifications.$inferSelect;
 export type NewAuthVerification = typeof authVerifications.$inferInsert;
+
+export type UserGarageVehicle = typeof userGarage.$inferSelect;
+export type NewUserGarageVehicle = typeof userGarage.$inferInsert;

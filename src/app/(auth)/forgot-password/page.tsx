@@ -9,7 +9,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { authClient } from "@/lib/auth-client";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -21,11 +20,14 @@ export default function ForgotPasswordPage() {
     setLoading(true);
 
     try {
-      // Use Better Auth client method for password reset
-      // This calls the correct endpoint internally
-      await authClient.forgetPassword({
-        email,
-        redirectTo: "/reset-password",
+      // Better Auth endpoint for password reset
+      await fetch("/api/auth/request-password-reset", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          redirectTo: "/reset-password",
+        }),
       });
     } catch (err) {
       // Ignore errors - still show success message for security
