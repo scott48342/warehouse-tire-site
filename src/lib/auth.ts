@@ -119,12 +119,32 @@ export const auth = betterAuth({
     // Revoke all other sessions when password is reset (security best practice)
     revokeSessionsOnPasswordReset: true,
     
-    // Send verification email on signup
-    sendVerificationEmail: async (
-      data: { user: User; url: string; token: string },
+    // Callback after password reset completes
+    onPasswordReset: async (
+      data: { user: User },
       _request?: Request
     ) => {
-      const { user, url, token } = data;
+      const { user } = data;
+      console.log(`[auth] Password reset completed for user ${user.id} (${user.email})`);
+      // Future: could trigger security notification email here
+    },
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // Email Verification Configuration (Better Auth 1.7+)
+  // ══════════════════════════════════════════════════════════════════════════
+  emailVerification: {
+    // Send verification email automatically on signup
+    sendOnSignUp: true,
+    
+    // Auto sign in after email verification
+    autoSignInAfterVerification: true,
+    
+    // Send verification email callback
+    sendVerificationEmail: async (
+      { user, url, token }: { user: User; url: string; token: string },
+      _request?: Request
+    ) => {
       console.log(`[auth] Sending verification email to ${user.email}`);
       
       if (!resend) {
@@ -134,25 +154,24 @@ export const auth = betterAuth({
       }
       
       try {
-        await resend.emails.send({
+        const result = await resend.emails.send({
           from: EMAIL_FROM,
           to: user.email,
           subject: "Verify your email - Warehouse Tire Direct",
           html: buildVerificationEmail(user.name || "Customer", url),
         });
-        console.log(`[auth] Verification email sent to ${user.email}`);
+        console.log(`[auth] Verification email sent to ${user.email}`, result);
       } catch (err) {
         console.error(`[auth] Failed to send verification email:`, err);
         // Don't throw - Better Auth handles this gracefully
       }
     },
     
-    // Send password reset email
+    // Send password reset email callback
     sendResetPassword: async (
-      data: { user: User; url: string; token: string },
+      { user, url, token }: { user: User; url: string; token: string },
       _request?: Request
     ) => {
-      const { user, url, token } = data;
       console.log(`[auth] Sending password reset email to ${user.email}`);
       
       if (!resend) {
@@ -162,26 +181,16 @@ export const auth = betterAuth({
       }
       
       try {
-        await resend.emails.send({
+        const result = await resend.emails.send({
           from: EMAIL_FROM,
           to: user.email,
           subject: "Reset your password - Warehouse Tire Direct",
           html: buildPasswordResetEmail(user.name || "Customer", url),
         });
-        console.log(`[auth] Password reset email sent to ${user.email}`);
+        console.log(`[auth] Password reset email sent to ${user.email}`, result);
       } catch (err) {
         console.error(`[auth] Failed to send password reset email:`, err);
       }
-    },
-    
-    // Callback after password reset completes
-    onPasswordReset: async (
-      data: { user: User },
-      _request?: Request
-    ) => {
-      const { user } = data;
-      console.log(`[auth] Password reset completed for user ${user.id} (${user.email})`);
-      // Future: could trigger security notification email here
     },
   },
 
