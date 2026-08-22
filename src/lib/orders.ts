@@ -47,6 +47,7 @@ export async function ensureOrdersTable(db: pg.Pool) {
     CREATE INDEX IF NOT EXISTS orders_created_at_idx ON orders (created_at DESC);
     CREATE INDEX IF NOT EXISTS orders_stripe_session_id_idx ON orders (stripe_session_id);
     CREATE INDEX IF NOT EXISTS orders_stripe_pi_idx ON orders (stripe_payment_intent_id);
+    CREATE INDEX IF NOT EXISTS orders_customer_email_idx ON orders (LOWER(customer_email));
   `);
 }
 

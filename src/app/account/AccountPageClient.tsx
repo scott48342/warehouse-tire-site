@@ -6,9 +6,9 @@
  * User account dashboard with:
  * - Profile information
  * - Saved vehicles (garage) with server sync
- * - Order history (future)
+ * - Order history
  * 
- * @updated 2026-08-21 - Added garage section with useAccountGarage
+ * @updated 2026-08-22 - Added My Orders section (Phase 3A)
  */
 
 import { useRouter } from "next/navigation";
@@ -16,12 +16,225 @@ import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
 import Link from "next/link";
 import { useAccountGarage } from "@/hooks/useAccountGarage";
+import { useAccountOrders, type OrderSummary } from "@/hooks/useAccountOrders";
+import { OrderDetailModal } from "./OrderDetailModal";
 
 interface User {
   id: string;
   email: string;
   name?: string | null;
   emailVerified: boolean;
+}
+
+/**
+ * Format date for display
+ */
+function formatDate(isoDate: string): string {
+  try {
+    return new Date(isoDate).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  } catch {
+    return isoDate;
+  }
+}
+
+/**
+ * Format currency
+ */
+function formatCurrency(amount: number): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(amount);
+}
+
+/**
+ * Get status badge color
+ */
+function getStatusColor(status: string): string {
+  switch (status) {
+    case "shipped":
+    case "delivered":
+    case "completed":
+      return "bg-green-100 text-green-700";
+    case "processing":
+    case "parts_ordered":
+    case "ready_for_install":
+      return "bg-blue-100 text-blue-700";
+    case "cancelled":
+      return "bg-red-100 text-red-700";
+    default:
+      return "bg-neutral-100 text-neutral-700";
+  }
+}
+
+/**
+ * Single order card component
+ */
+function OrderCard({
+  order,
+  onViewOrder,
+}: {
+  order: OrderSummary;
+  onViewOrder: (id: string) => void;
+}) {
+  return (
+    <div className="p-4 rounded-xl border border-neutral-200 hover:border-neutral-300 transition-colors">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+        {/* Left: Order info */}
+        <div className="flex-1 min-w-0">
+          {/* Order ID and status */}
+          <div className="flex items-center gap-3 flex-wrap mb-2">
+            <span className="font-semibold text-neutral-900">{order.id}</span>
+            <span
+              className={`text-xs px-2 py-0.5 rounded-full font-medium ${getStatusColor(order.status)}`}
+            >
+              {order.statusLabel}
+            </span>
+            {order.hasTracking && (
+              <span className="text-xs text-green-600 flex items-center gap-1">
+                📦 Tracking available
+              </span>
+            )}
+          </div>
+
+          {/* Date and total */}
+          <div className="text-sm text-neutral-500 mb-2">
+            {formatDate(order.orderDate)} • {formatCurrency(order.total)}
+          </div>
+
+          {/* Vehicle */}
+          {order.vehicle && (
+            <div className="text-sm text-neutral-600 mb-1">
+              🚗 {order.vehicle.year} {order.vehicle.make} {order.vehicle.model}
+              {order.vehicle.trim && ` ${order.vehicle.trim}`}
+            </div>
+          )}
+
+          {/* Items summary */}
+          <div className="text-sm text-neutral-500 truncate">{order.itemSummary}</div>
+        </div>
+
+        {/* Right: Actions */}
+        <div className="flex items-center gap-3 sm:flex-col sm:items-end">
+          <button
+            onClick={() => onViewOrder(order.id)}
+            className="text-sm font-medium text-blue-600 hover:text-blue-700"
+          >
+            View Order →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * My Orders section
+ */
+function MyOrdersSection({ emailVerified }: { emailVerified: boolean }) {
+  const { orders, isLoading, error } = useAccountOrders();
+  const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
+
+  // Email not verified - show message
+  if (!emailVerified) {
+    return (
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📦</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Orders</h2>
+        </div>
+        <div className="text-center py-6">
+          <p className="text-amber-600 mb-2">⚠️ Email verification required</p>
+          <p className="text-sm text-neutral-500">
+            Please verify your email address to view your order history.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📦</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Orders</h2>
+        </div>
+        <div className="text-center py-8">
+          <div className="inline-block animate-spin rounded-full h-6 w-6 border-2 border-neutral-300 border-t-neutral-900 mb-3" />
+          <p className="text-sm text-neutral-500">Loading orders...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📦</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Orders</h2>
+        </div>
+        <div className="text-center py-6">
+          <p className="text-red-600 mb-2">Unable to load orders</p>
+          <p className="text-sm text-neutral-500">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📦</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Orders</h2>
+          {orders.length > 0 && (
+            <span className="text-sm text-neutral-500">({orders.length})</span>
+          )}
+        </div>
+
+        {orders.length === 0 ? (
+          <div className="text-center py-8">
+            <p className="text-neutral-500 mb-4">No orders yet</p>
+            <p className="text-sm text-neutral-400 mb-4">
+              Orders placed with this email address will appear here
+            </p>
+            <Link
+              href="/tires"
+              className="inline-block px-6 py-3 bg-neutral-900 text-white font-semibold rounded-xl hover:bg-neutral-800 transition-colors"
+            >
+              Shop Tires
+            </Link>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {orders.map((order) => (
+              <OrderCard
+                key={order.id}
+                order={order}
+                onViewOrder={setSelectedOrderId}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Order detail modal */}
+      {selectedOrderId && (
+        <OrderDetailModal
+          orderId={selectedOrderId}
+          onClose={() => setSelectedOrderId(null)}
+        />
+      )}
+    </>
+  );
 }
 
 export function AccountPageClient({ user }: { user: User }) {
@@ -197,14 +410,8 @@ export function AccountPageClient({ user }: { user: User }) {
           </div>
         </div>
 
-        {/* Orders Section (Coming Soon) */}
-        <div className="rounded-2xl border border-neutral-200 bg-white p-6">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-xl">📦</span>
-            <h2 className="text-lg font-bold text-neutral-900">My Orders</h2>
-          </div>
-          <p className="text-neutral-500 text-sm">Coming soon</p>
-        </div>
+        {/* Orders Section */}
+        <MyOrdersSection emailVerified={user.emailVerified} />
       </div>
     </div>
   );
