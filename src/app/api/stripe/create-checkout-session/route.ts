@@ -364,11 +364,19 @@ export async function POST(req: Request) {
     // SAVED QUOTE CONVERSION TRACKING
     // If checkout was initiated from a resumed saved quote, validate ownership
     // and attach the quote ID to Stripe metadata for conversion tracking.
+    // 
+    // NOTE: Affirm/Hosted Checkout path is EXCLUDED from saved quote conversion
+    // until Affirm test environment verification is complete. The order will
+    // still be created normally, but the Saved Quote won't auto-mark as Purchased.
+    // TODO: Enable Affirm saved quote conversion after test environment verification.
     // ═══════════════════════════════════════════════════════════════════════════
     let validatedSavedQuoteId: string | undefined;
     const clientSavedQuoteId = body.savedQuoteId;
+    const isAffirmCheckout = requestedPaymentMethod === "affirm";
     
-    if (clientSavedQuoteId) {
+    if (clientSavedQuoteId && !isAffirmCheckout) {
+      // Only enable saved quote conversion for card payments (Payment Element)
+      // Affirm uses Hosted Checkout which hasn't been tested with this feature
       const validation = await validateSavedQuoteOwnership(clientSavedQuoteId);
       if (validation.valid && validation.quoteId) {
         validatedSavedQuoteId = validation.quoteId;
@@ -377,6 +385,9 @@ export async function POST(req: Request) {
         // Log but don't fail checkout - customer can still purchase
         console.warn(`[checkout] Saved quote validation failed: ${validation.reason}`);
       }
+    } else if (clientSavedQuoteId && isAffirmCheckout) {
+      // Log that we're skipping conversion for Affirm
+      console.log(`[checkout] Saved quote conversion skipped for Affirm checkout (not yet verified)`);
     }
 
     // Build metadata - include local install info if in local mode
