@@ -5,6 +5,7 @@
  * Never trust arbitrary CartItem snapshots from the browser.
  * 
  * @created 2026-08-24
+ * @updated 2026-08-24 - Fixed tire price lookup to include size param
  */
 
 import type { 
@@ -177,8 +178,11 @@ export function validateItems(
 // ============================================================================
 
 /**
- * Verify and compute pricing using existing commerce helpers
- * This ensures saved quotes reflect what WTD actually showed
+ * Verify and compute pricing using existing commerce helpers.
+ * This ensures saved quotes reflect what WTD actually showed.
+ * 
+ * CRITICAL: Never silently accept $0 for purchasable items.
+ * If we can't establish a valid authoritative price, fail the operation.
  */
 export async function verifyPricing(
   items: SavedQuoteItem[],
@@ -192,32 +196,82 @@ export async function verifyPricing(
   // Default tax rate (will be refined based on location)
   const taxRate = 0.06; // Michigan default
   
+  // Track items that failed pricing resolution
+  const pricingFailures: string[] = [];
+  
   for (const item of items) {
-    let verifiedPrice = clientPrices?.[item.sku] ?? item.unitPrice;
+    let verifiedPrice: number | null = null;
+    let clientDisplayedPrice = clientPrices?.[item.sku];
     
-    // For tires and wheels, verify against our actual pricing
+    // For tires and wheels, server must verify price authoritatively
     if (item.type === "tire") {
-      try {
-        const price = await lookupTirePrice(item.sku);
-        if (price !== null) {
-          verifiedPrice = price;
-        }
-      } catch {
-        // Fall back to client price if lookup fails
+      // Tire lookup requires size for the search API
+      const tireSize = item.size;
+      if (!tireSize) {
+        console.warn(`[verifyPricing] Tire ${item.sku} missing size, cannot verify price`);
+        pricingFailures.push(`${item.brand} ${item.model} (missing size)`);
+        continue;
       }
+      
+      try {
+        verifiedPrice = await lookupTirePrice(item.sku, tireSize);
+        
+        // Log if client-displayed price differs significantly from server price
+        if (verifiedPrice !== null && clientDisplayedPrice !== undefined) {
+          const diff = Math.abs(verifiedPrice - clientDisplayedPrice);
+          if (diff > 0.01) {
+            console.log(`[verifyPricing] Price mismatch for ${item.sku}: client=${clientDisplayedPrice}, server=${verifiedPrice}`);
+          }
+        }
+      } catch (err) {
+        console.error(`[verifyPricing] Tire price lookup failed for ${item.sku}:`, err);
+      }
+      
+      if (verifiedPrice === null) {
+        pricingFailures.push(`${item.brand} ${item.model} (${item.sku})`);
+      }
+      
     } else if (item.type === "wheel") {
       try {
-        const price = await lookupWheelPrice(item.sku);
-        if (price !== null) {
-          verifiedPrice = price;
+        verifiedPrice = await lookupWheelPrice(item.sku);
+        
+        // Log if client-displayed price differs significantly
+        if (verifiedPrice !== null && clientDisplayedPrice !== undefined) {
+          const diff = Math.abs(verifiedPrice - clientDisplayedPrice);
+          if (diff > 0.01) {
+            console.log(`[verifyPricing] Price mismatch for ${item.sku}: client=${clientDisplayedPrice}, server=${verifiedPrice}`);
+          }
         }
-      } catch {
-        // Fall back to client price if lookup fails
+      } catch (err) {
+        console.error(`[verifyPricing] Wheel price lookup failed for ${item.sku}:`, err);
+      }
+      
+      if (verifiedPrice === null) {
+        pricingFailures.push(`${item.brand} ${item.model} (${item.sku})`);
+      }
+      
+    } else if (item.type === "accessory") {
+      // Accessories may be free (TPMS sensors bundled, etc) or have a price
+      // For accessories, we can accept client price if it looks reasonable
+      // or allow $0 only for explicitly free items (like required TPMS)
+      if (item.required) {
+        // Required accessories (like TPMS) can be $0 or bundled
+        verifiedPrice = clientDisplayedPrice ?? 0;
+      } else {
+        // Optional accessories need a price
+        verifiedPrice = clientDisplayedPrice ?? null;
+        if (verifiedPrice === null || verifiedPrice <= 0) {
+          pricingFailures.push(`${item.brand || "Accessory"} ${item.model} (${item.sku})`);
+        }
       }
     }
     
-    // Ensure price is a valid positive number
-    verifiedPrice = Math.max(0, Number(verifiedPrice) || 0);
+    // Skip items that failed pricing
+    if (verifiedPrice === null) {
+      continue;
+    }
+    
+    // Round to 2 decimal places
     verifiedPrice = Math.round(verifiedPrice * 100) / 100;
     
     const verifiedItem = { ...item, unitPrice: verifiedPrice };
@@ -230,6 +284,24 @@ export async function verifyPricing(
       // Accessories may or may not be taxable, assume not for simplicity
       servicesSubtotal += verifiedPrice * item.quantity;
     }
+  }
+  
+  // CRITICAL: Fail if we couldn't price any purchasable items
+  if (pricingFailures.length > 0) {
+    throw new ValidationError(
+      `We couldn't verify the current price for: ${pricingFailures.join(", ")}. Please try again.`,
+      "items",
+      "pricing_unavailable"
+    );
+  }
+  
+  // All items must have been successfully priced
+  if (verifiedItems.length !== items.length) {
+    throw new ValidationError(
+      "Some items could not be priced. Please try again.",
+      "items",
+      "pricing_incomplete"
+    );
   }
   
   const estimatedTax = Math.round(partsSubtotal * taxRate * 100) / 100;
@@ -248,32 +320,58 @@ export async function verifyPricing(
 }
 
 /**
- * Lookup tire price from our pricing service
+ * Lookup tire price from our pricing service.
+ * Uses the same tire search API as normal shopping.
+ * 
+ * @param sku - Tire SKU/part number
+ * @param size - Tire size (required for search API)
+ * @returns Authoritative sell price or null if not found
  */
-async function lookupTirePrice(sku: string): Promise<number | null> {
+async function lookupTirePrice(sku: string, size: string): Promise<number | null> {
   try {
     // Use internal API to get current price
+    // This is the same endpoint normal tire shopping uses
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
       ? `https://${process.env.VERCEL_URL}` 
       : "http://localhost:3001";
     
-    const res = await fetch(
-      `${baseUrl}/api/tires/search?partNumber=${encodeURIComponent(sku)}&limit=1`,
-      { cache: "no-store" }
-    );
+    // Include size in the query - required by the search API
+    const url = new URL(`${baseUrl}/api/tires/search`);
+    url.searchParams.set("partNumber", sku);
+    url.searchParams.set("size", size);
+    url.searchParams.set("limit", "1");
     
-    if (!res.ok) return null;
+    const res = await fetch(url.toString(), { cache: "no-store" });
+    
+    if (!res.ok) {
+      console.warn(`[lookupTirePrice] API returned ${res.status} for ${sku}`);
+      return null;
+    }
     
     const data = await res.json();
+    
+    // Check for API-level errors
+    if (data.error) {
+      console.warn(`[lookupTirePrice] API error for ${sku}:`, data.error);
+      return null;
+    }
+    
     const result = data?.results?.[0];
-    if (!result) return null;
+    if (!result) {
+      console.warn(`[lookupTirePrice] No results for ${sku} size ${size}`);
+      return null;
+    }
     
-    // Use sell price or cost + margin
+    // Use the sell price from the API (already computed: cost + margin)
     const sellPrice = typeof result.price === "number" && result.price > 0 ? result.price : null;
-    const cost = typeof result.cost === "number" && result.cost > 0 ? result.cost : null;
     
-    return sellPrice || (cost ? cost + 50 : null);
-  } catch {
+    if (sellPrice === null) {
+      console.warn(`[lookupTirePrice] No valid price for ${sku}:`, result);
+    }
+    
+    return sellPrice;
+  } catch (err) {
+    console.error(`[lookupTirePrice] Exception for ${sku}:`, err);
     return null;
   }
 }
@@ -292,15 +390,28 @@ async function lookupWheelPrice(sku: string): Promise<number | null> {
       { cache: "no-store" }
     );
     
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.warn(`[lookupWheelPrice] API returned ${res.status} for ${sku}`);
+      return null;
+    }
     
     const data = await res.json();
     // Extract price from search results
     const result = data?.wheels?.[0];
-    if (!result) return null;
+    if (!result) {
+      console.warn(`[lookupWheelPrice] No results for ${sku}`);
+      return null;
+    }
     
-    return typeof result.price === "number" ? result.price : null;
-  } catch {
+    const price = typeof result.price === "number" && result.price > 0 ? result.price : null;
+    
+    if (price === null) {
+      console.warn(`[lookupWheelPrice] No valid price for ${sku}:`, result);
+    }
+    
+    return price;
+  } catch (err) {
+    console.error(`[lookupWheelPrice] Exception for ${sku}:`, err);
     return null;
   }
 }
