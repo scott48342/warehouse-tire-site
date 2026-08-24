@@ -238,6 +238,101 @@ export const userGarage = pgTable(
 );
 
 // ============================================================================
+// SAVED_QUOTES - Customer Saved Shopping Configurations
+// ============================================================================
+
+/**
+ * Customer-saved shopping configurations.
+ * 
+ * Allows customers to save a cart/package configuration to their account
+ * and return to it later from any device. Separate from checkout quotes.
+ * 
+ * @created 2026-08-24
+ */
+export const savedQuotes = pgTable(
+  "saved_quotes",
+  {
+    id: text("id").primaryKey(), // Format: sq_<nanoid(21)>
+    
+    // User reference
+    userId: text("user_id")
+      .notNull()
+      .references(() => authUsers.id, { onDelete: "cascade" }),
+    
+    // Optional user-assigned name
+    name: text("name"),
+    
+    // Vehicle (denormalized for display)
+    vehicleYear: text("vehicle_year"),
+    vehicleMake: text("vehicle_make"),
+    vehicleModel: text("vehicle_model"),
+    vehicleTrim: text("vehicle_trim"),
+    vehicleModification: text("vehicle_modification"),
+    
+    // Immutable configuration snapshot
+    snapshotJson: text("snapshot_json").notNull(), // JSONB stored as text for Drizzle
+    
+    // Timestamps
+    savedAt: timestamp("saved_at", { withTimezone: true }).notNull().defaultNow(),
+    lastViewedAt: timestamp("last_viewed_at", { withTimezone: true }),
+    
+    // Conversion tracking
+    convertedOrderId: text("converted_order_id"),
+    convertedAt: timestamp("converted_at", { withTimezone: true }),
+    
+    // Soft delete
+    archivedAt: timestamp("archived_at", { withTimezone: true }),
+    
+    // Audit
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => ({
+    userActiveIdx: index("idx_saved_quotes_user_active").on(table.userId),
+  })
+);
+
+// ============================================================================
+// PENDING_SAVED_QUOTES - Guest Flow Temporary Storage
+// ============================================================================
+
+/**
+ * Temporary holding for guest quote saves pending authentication.
+ * 
+ * When a guest clicks "Save Quote", the validated snapshot is stored here
+ * with a secure token. After authentication, the token is claimed and
+ * the quote moves to saved_quotes.
+ * 
+ * @created 2026-08-24
+ */
+export const pendingSavedQuotes = pgTable(
+  "pending_saved_quotes",
+  {
+    token: text("token").primaryKey(), // Format: psq_<nanoid(32)>
+    
+    // Validated snapshot
+    snapshotJson: text("snapshot_json").notNull(),
+    
+    // Vehicle (denormalized)
+    vehicleYear: text("vehicle_year"),
+    vehicleMake: text("vehicle_make"),
+    vehicleModel: text("vehicle_model"),
+    vehicleTrim: text("vehicle_trim"),
+    vehicleModification: text("vehicle_modification"),
+    
+    // Tracking
+    cartId: text("cart_id"),
+    returnTo: text("return_to").notNull().default("/account"),
+    
+    // Expiration
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => ({
+    expiresIdx: index("idx_pending_saved_quotes_expires").on(table.expiresAt),
+  })
+);
+
+// ============================================================================
 // Type Exports
 // ============================================================================
 
@@ -255,3 +350,9 @@ export type NewAuthVerification = typeof authVerifications.$inferInsert;
 
 export type UserGarageVehicle = typeof userGarage.$inferSelect;
 export type NewUserGarageVehicle = typeof userGarage.$inferInsert;
+
+export type SavedQuote = typeof savedQuotes.$inferSelect;
+export type NewSavedQuote = typeof savedQuotes.$inferInsert;
+
+export type PendingSavedQuote = typeof pendingSavedQuotes.$inferSelect;
+export type NewPendingSavedQuote = typeof pendingSavedQuotes.$inferInsert;
