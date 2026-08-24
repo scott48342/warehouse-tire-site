@@ -9,7 +9,7 @@
  * 
  * Pricing formula:
  * - Standard tires: cost + $50 (STANDARD_TIRE_ADDER)
- * - Commercial/medium-truck tires: cost + $165 (COMMERCIAL_TIRE_ADDER)
+ * - Commercial/medium-truck tires: cost + $100 (COMMERCIAL_TIRE_ADDER)
  * 
  * @created 2026-08-24
  */
@@ -24,8 +24,8 @@ import { checkStockBySize as checkStockUSAF, getStatus as getUSAFStatus, type US
 /** Standard tire margin: cost + $50 */
 export const STANDARD_TIRE_ADDER = 50;
 
-/** Commercial/medium-truck margin: cost + $165 */
-export const COMMERCIAL_TIRE_ADDER = 165;
+/** Commercial/medium-truck margin: cost + $100 */
+export const COMMERCIAL_TIRE_ADDER = 100;
 
 // ============================================================================
 // Commercial Size Detection
@@ -33,22 +33,36 @@ export const COMMERCIAL_TIRE_ADDER = 165;
 
 /**
  * Detect if a tire size is commercial/medium-truck (uses higher margin).
- * Commercial sizes: LT prefix, decimal rims (19.5, 22.5, 24.5), ST prefix
+ * 
+ * Commercial sizes include:
+ * - LT prefix (light truck)
+ * - ST prefix (special trailer)
+ * - Decimal rim diameters (19.5, 22.5, 24.5) - medium truck
+ * - Compact numeric formats for medium truck (11225, 22570195)
+ * - Large flotation sizes (40"+ diameter)
  */
 export function isCommercialTruckSize(size: string): boolean {
   if (!size) return false;
-  const s = size.toUpperCase();
+  const s = size.toUpperCase().trim();
   
   // LT prefix (light truck)
   if (/^LT\s?\d/.test(s)) return true;
   
-  // Decimal rim diameters (medium truck): 19.5, 22.5, 24.5
-  if (/R?\d{2}\.5\b/.test(s)) return true;
-  
-  // Special trailer (ST prefix)
+  // ST prefix (special trailer)
   if (/^ST\s?\d/.test(s)) return true;
   
-  // Very large flotation sizes (commercial use)
+  // Decimal rim diameters (medium truck): 19.5, 22.5, 24.5
+  // Matches: 225/70R19.5, 11R22.5, R22.5
+  if (/R?\s*\d{2}\.5(?:[^0-9]|$)/.test(s)) return true;
+  
+  // Compact numeric format: 11225 (11R22.5 compressed)
+  if (/^\d{5}$/.test(s)) return true;
+  
+  // Compact numeric format: 22570195 (225/70R19.5 compressed)
+  // Pattern: width(3) + aspect(2) + rim with .5 (175, 195, 225, 245)
+  if (/^\d{3}\d{2}(?:175|195|225|245)$/.test(s)) return true;
+  
+  // Very large flotation sizes (commercial use): 40"+ diameter
   const flotMatch = s.match(/^(\d{2,3})[X\/]/);
   if (flotMatch && parseInt(flotMatch[1], 10) >= 40) return true;
   

@@ -26,6 +26,11 @@ import pg from "pg";
 import { XMLParser } from "fast-xml-parser";
 import { searchTiresTireWeb, tireWebTireToUnified, type UnifiedTire, type TireWebSearchResult } from "@/lib/tirewire/client";
 import { checkStockBySize as checkStockUSAF, getStatus as getUSAFStatus, type USAutoForceStockItem } from "@/lib/usautoforce";
+import { 
+  STANDARD_TIRE_ADDER, 
+  COMMERCIAL_TIRE_ADDER, 
+  isCommercialTruckSize,
+} from "@/lib/tires/tirePricingService";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
@@ -253,27 +258,10 @@ function toSimpleSize(s: string): string {
  * Detect commercial / medium-truck sizes (decimal rims 17.5/19.5/22.5/24.5
  * or R-style like 11R22.5). These have limited product imagery, so the
  * image-required filter is relaxed for them.
+ * 
+ * NOTE: isCommercialTruckSize, COMMERCIAL_TIRE_ADDER, and STANDARD_TIRE_ADDER
+ * are now imported from @/lib/tires/tirePricingService (single source of truth).
  */
-function isCommercialTruckSize(s: string): boolean {
-  const v = String(s || "").trim().toUpperCase();
-  if (/^\d{1,2}\s*R\s*\d{2}\.5$/.test(v)) return true;          // 11R22.5
-  if (/^\d{5}$/.test(v)) return true;                            // 11225 compact
-  if (/R\s*\d{2}\.5(?:[^0-9]|$)/.test(v)) return true;           // 225/70R19.5
-  if (/^\d{3}\d{2}(?:175|195|225|245)$/.test(v)) return true;    // 22570195 compact
-  return false;
-}
-
-/**
- * Commercial / medium-truck per-tire markup: $100 on top of landed cost
- * (cost + FET). Labor ($40/tire) and disposal ($25/tire) are charged as
- * separate line items on the local site (see lib/localPricing.ts) — same
- * structure as passenger/LT. Note: TireWeb BuyPrice already includes FET;
- * K&M direct and USAF report FET separately.
- */
-const COMMERCIAL_TIRE_ADDER = 100;
-
-/** Standard passenger / light-truck per-tire margin (matches in-store pricing). */
-const STANDARD_TIRE_ADDER = 50;
 
 function normalizeFlotationSize(s: string): string | null {
   // Handle flotation/LT sizes like:
