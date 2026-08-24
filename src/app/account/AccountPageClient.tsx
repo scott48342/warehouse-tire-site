@@ -12,15 +12,16 @@
  * @updated 2026-08-24 - Added My Quotes section (Phase 3B)
  */
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useAccountGarage } from "@/hooks/useAccountGarage";
 import { useAccountOrders, type OrderSummary } from "@/hooks/useAccountOrders";
 import { useAccountQuotes, type SavedQuoteResponse } from "@/hooks/useAccountQuotes";
 import { OrderDetailModal } from "./OrderDetailModal";
 import { QuoteDetailModal } from "./QuoteDetailModal";
+import { PendingQuoteClaimHandler } from "@/components/PendingQuoteClaimHandler";
 
 interface User {
   id: string;
@@ -438,7 +439,9 @@ function MyQuotesSection({ emailVerified }: { emailVerified: boolean }) {
 
 export function AccountPageClient({ user }: { user: User }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [signingOut, setSigningOut] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const {
     garage,
@@ -448,6 +451,24 @@ export function AccountPageClient({ user }: { user: User }) {
     removeVehicle,
     setActiveVehicle,
   } = useAccountGarage();
+
+  // Handle success query params
+  useEffect(() => {
+    const quoteClaimed = searchParams.get("quote_claimed");
+    const quoteSaved = searchParams.get("quote_saved");
+    
+    if (quoteClaimed) {
+      setSuccessMessage("Quote saved to your account!");
+      // Clean up URL
+      window.history.replaceState({}, "", "/account");
+      // Auto-dismiss after 5 seconds
+      setTimeout(() => setSuccessMessage(null), 5000);
+    } else if (quoteSaved) {
+      setSuccessMessage("Quote saved successfully!");
+      window.history.replaceState({}, "", "/account");
+      setTimeout(() => setSuccessMessage(null), 5000);
+    }
+  }, [searchParams]);
 
   const handleSignOut = async () => {
     setSigningOut(true);
@@ -473,7 +494,24 @@ export function AccountPageClient({ user }: { user: User }) {
 
   return (
     <div className="min-h-[80vh] px-4 py-12">
+      {/* Handle pending quote claims after auth */}
+      <PendingQuoteClaimHandler />
+      
       <div className="mx-auto max-w-3xl">
+        {/* Success Message */}
+        {successMessage && (
+          <div className="mb-6 rounded-xl bg-green-50 border border-green-200 p-4 flex items-center gap-3">
+            <span className="text-green-600 text-xl">✓</span>
+            <p className="text-green-800 font-medium">{successMessage}</p>
+            <button 
+              onClick={() => setSuccessMessage(null)}
+              className="ml-auto text-green-600 hover:text-green-800"
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-3xl font-extrabold text-neutral-900">My Account</h1>

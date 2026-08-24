@@ -21,6 +21,7 @@ import { useShopContext } from "@/contexts/ShopContextProvider";
 import { getOutTheDoorBreakdown } from "@/lib/localPricing";
 import { InstallTimeIndicator } from "./InstallTimeIndicator";
 import { EarlyEmailCapture } from "./EarlyEmailCapture";
+import { SaveQuoteButton } from "./SaveQuoteButton";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -729,8 +730,10 @@ export function CartSlideout() {
             Keep Shopping
           </button>
 
-          {/* Email cart link */}
-          <div className="pt-3 border-t border-neutral-100 flex justify-center">
+          {/* Save & Email actions */}
+          <div className="pt-3 border-t border-neutral-100 flex justify-center gap-4">
+            <SaveQuoteButton variant="inline" onSaveComplete={() => setIsOpen(false)} />
+            <span className="text-neutral-300">|</span>
             <EmailCartButton variant="inline" />
           </div>
 
