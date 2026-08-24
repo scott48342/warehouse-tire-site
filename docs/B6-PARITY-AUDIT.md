@@ -74,54 +74,107 @@
 2. **Response format**: Acceptable - PayPal returns more for client use
 3. **Retry model**: Acceptable architectural difference (webhook vs client-call)
 
-## Required Fixes Before Production
+## Fixes Applied (Commit 048d591)
 
-### Fix 1: Validate quoteId Against PayPal Order
+### ✅ Fix 1: Validate quoteId From PayPal custom_id (SECURITY)
 
 ```typescript
-// After captureOrder, verify quoteId matches what was set in createOrder
-const expectedQuoteId = captureResult.purchase_units?.[0]?.custom_id;
-if (quoteId !== expectedQuoteId) {
-  console.error(`[paypal/capture-order] Quote ID mismatch: body=${quoteId}, paypal=${expectedQuoteId}`);
-  return NextResponse.json({ ok: false, error: "quote_mismatch" }, { status: 400 });
+// Extract quoteId from PayPal's custom_id (server-verified)
+const purchaseUnit = captureResult.purchase_units?.[0];
+const serverQuoteId = purchaseUnit?.custom_id || purchaseUnit?.reference_id;
+
+// If client provided quoteId, verify it matches server
+if (clientQuoteId && clientQuoteId !== serverQuoteId) {
+  console.error(`[paypal/capture-order] SECURITY: Quote ID mismatch`);
+  return NextResponse.json({ ok: false, error: "quote_id_mismatch" }, { status: 400 });
 }
 ```
 
-### Fix 2: Use PayPal Capture Amount
+### ✅ Fix 2: Use PayPal Capture Amount
 
 ```typescript
-// Get actual captured amount from PayPal response
-const capturedAmount = captureResult.purchase_units?.[0]?.payments?.captures?.[0]?.amount;
-const amountPaidCents = Math.round(parseFloat(capturedAmount?.value || "0") * 100);
-```
-
-### Fix 3: Add Diagnostic Logging
-
-```typescript
-} catch (orderErr: any) {
-  console.error(`[paypal/capture-order] ORDER CREATE FAILED after successful payment:`, orderErr);
-  await logCheckoutDiagnosticServer({
-    eventType: "order_create_failed",
-    cartId,
-    checkoutStep: "post_payment",
-    status: "error",
-    endpoint: "paypal_capture",
-    errorCode: String(orderErr?.message || "order_create_exception"),
-    detail: { quoteId, paypalOrderId },
-  });
-  return NextResponse.json({ ok: false, error: "order_create_failed" }, { status: 500 });
+const capture = purchaseUnit?.payments?.captures?.[0];
+if (capture?.amount?.value) {
+  amountPaidCents = Math.round(parseFloat(capture.amount.value) * 100);
 }
 ```
 
-## Database Constraint Audit
+### ✅ Fix 3: Diagnostic Logging Added
 
-The `paypal_order_id` column needs a UNIQUE constraint for idempotency:
-
-```sql
--- Check current constraint
-SELECT indexname, indexdef 
-FROM pg_indexes 
-WHERE tablename = 'orders' AND indexdef LIKE '%paypal%';
+```typescript
+await logCheckoutDiagnosticServer({
+  eventType: "order_create_failed",
+  cartId,
+  checkoutStep: "post_payment",
+  status: "error",
+  endpoint: "paypal_capture",
+  errorCode: String(orderErr?.message || "order_create_exception"),
+  detail: { quoteId, paypalOrderId },
+});
 ```
 
-If only an INDEX exists (not UNIQUE), the application-level check has a race condition window.
+### ✅ Fix 4: PayPalCaptureResult Type Updated
+
+```typescript
+export type PayPalCaptureResult = {
+  id: string;
+  status: string;
+  payer?: any;
+  purchase_units?: Array<{
+    reference_id?: string;
+    custom_id?: string;
+    payments?: {
+      captures?: Array<{
+        id: string;
+        status: string;
+        amount?: { currency_code: string; value: string };
+      }>;
+    };
+  }>;
+};
+```
+
+### ✅ Fix 5: UNIQUE Constraint on paypal_order_id
+
+```typescript
+// Partial unique index: allows NULL, non-NULL must be unique
+await db.query(`
+  CREATE UNIQUE INDEX orders_paypal_order_id_unique 
+  ON orders (paypal_order_id) 
+  WHERE paypal_order_id IS NOT NULL;
+`);
+```
+
+## Additional Fixes (Commits 273a8f9, e9b8e97)
+
+### ✅ Fix 6: PayPal Tracking Data Persistence
+
+Before PayPal redirect, store in sessionStorage:
+- `wt_paypal_cart_id`
+- `wt_paypal_saved_quote_id`
+
+Retrieved by paypal-return page and passed to capture.
+
+### ✅ Fix 7: Stale Correlation Prevention
+
+`addItem()` now clears `resumedFromQuoteId` to prevent:
+1. Resume Saved Quote A
+2. Add unrelated item (correlation remains)
+3. Checkout → Quote A incorrectly marked Purchased
+
+## Current Parity Status: ✅ COMPLETE
+
+| Behavior | Stripe | PayPal | Status |
+|----------|--------|--------|--------|
+| Payment verification | ✅ | ✅ | Match |
+| Duplicate prevention | ✅ | ✅ | Match |
+| Quote retrieval | Server metadata | Server custom_id | ✅ Secure |
+| Amount from provider | ✅ | ✅ | Fixed |
+| Customer email | ✅ | ✅ | Fixed |
+| Order creation | ✅ | ✅ | Match |
+| Provider ID storage | ✅ | ✅ | Match |
+| Email confirmation | ✅ | ✅ | Match |
+| Supplier orders | ✅ | ✅ | Match |
+| Cart tracking | ✅ | ✅ | Match |
+| Diagnostic logging | ✅ | ✅ | Fixed |
+| Saved quote conversion | ✅ | ✅ | Match |
