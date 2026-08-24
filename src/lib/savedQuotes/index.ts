@@ -7,6 +7,8 @@
  */
 
 export * from "./types";
+export * from "./resumeTypes";
 export * from "./validation";
 export * from "./savedQuoteService";
 export * from "./pendingQuoteService";
+export * from "./resumeService";
