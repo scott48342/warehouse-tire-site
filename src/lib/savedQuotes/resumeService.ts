@@ -501,8 +501,29 @@ async function validateWheel(
 }
 
 // ============================================================================
-// Tire Validation
+// Tire Validation - Uses same tire search API as normal shopping
 // ============================================================================
+
+/**
+ * Tire search result from /api/tires/search
+ * Matches the actual API response structure
+ */
+interface TireSearchResult {
+  partNumber: string;        // Primary identifier
+  mfgPartNumber: string;     // Manufacturer part number
+  brand: string;
+  model: string;
+  price: number;             // Sell price (cost + margin)
+  cost: number | null;
+  quantity: {                // Stock levels
+    primary: number;
+    alternate: number;
+    national: number;
+  };
+  imageUrl: string | null;
+  size: string;
+  source: string;            // e.g. "tireweb:km", "tireweb:atd"
+}
 
 async function validateTire(
   item: SavedQuoteItem,
@@ -526,9 +547,12 @@ async function validateTire(
   }
   
   try {
+    // Use the same tire search API as normal shopping
+    // Include both size and partNumber for precise matching
     const searchUrl = new URL(`${BASE_URL}/api/tires/search`);
     searchUrl.searchParams.set("size", tireSize);
-    searchUrl.searchParams.set("limit", "100");
+    searchUrl.searchParams.set("partNumber", item.sku);
+    searchUrl.searchParams.set("limit", "1");
     
     const response = await fetch(searchUrl.toString(), {
       headers: { Accept: "application/json" },
@@ -540,70 +564,52 @@ async function validateTire(
     }
     
     const data = await response.json();
-    const tires: Array<{
-      sku: string;
-      brand: string;
-      model: string;
-      sellPrice: number;
-      inStock: boolean;
-      availableQty?: number;
-      imageUrl?: string;
-      source?: string;
-    }> = data.tires || [];
     
-    // Find matching tire by SKU
-    const match = tires.find(t => t.sku === item.sku);
+    // Check for API-level errors
+    if (data.error) {
+      console.warn(`[validateTire] API error for ${item.sku}:`, data.error);
+      throw new Error(data.error);
+    }
+    
+    // API response uses 'results' not 'tires'
+    const results: TireSearchResult[] = data.results || [];
+    
+    // Find exact match by partNumber or mfgPartNumber
+    let match = results.find(t => 
+      t.partNumber === item.sku || t.mfgPartNumber === item.sku
+    );
+    
+    // If no exact match, try broader search by size and find by brand+model
+    if (!match && results.length === 0) {
+      const broaderUrl = new URL(`${BASE_URL}/api/tires/search`);
+      broaderUrl.searchParams.set("size", tireSize);
+      broaderUrl.searchParams.set("limit", "200");
+      
+      const broaderResponse = await fetch(broaderUrl.toString(), {
+        headers: { Accept: "application/json" },
+        cache: "no-store",
+      });
+      
+      if (broaderResponse.ok) {
+        const broaderData = await broaderResponse.json();
+        const broaderResults: TireSearchResult[] = broaderData.results || [];
+        
+        // Try exact SKU match first
+        match = broaderResults.find(t => 
+          t.partNumber === item.sku || t.mfgPartNumber === item.sku
+        );
+        
+        // Fallback to brand+model match
+        if (!match) {
+          match = broaderResults.find(t => 
+            t.brand.toLowerCase() === item.brand.toLowerCase() &&
+            t.model.toLowerCase() === item.model.toLowerCase()
+          );
+        }
+      }
+    }
     
     if (!match) {
-      // Try to find by brand + model as fallback
-      const brandModelMatch = tires.find(t => 
-        t.brand.toLowerCase() === item.brand.toLowerCase() &&
-        t.model.toLowerCase() === item.model.toLowerCase()
-      );
-      
-      if (brandModelMatch) {
-        const priceDiff = brandModelMatch.sellPrice - item.unitPrice;
-        // Check availability
-        if (!brandModelMatch.inStock) {
-          return {
-            ...baseResult,
-            status: "unavailable",
-            currentItem: {
-              sku: brandModelMatch.sku,
-              brand: brandModelMatch.brand,
-              model: brandModelMatch.model,
-              unitPrice: brandModelMatch.sellPrice,
-              availableQty: 0,
-              supplier: brandModelMatch.source || "tireweb",
-              imageUrl: brandModelMatch.imageUrl,
-            },
-            currentUnitPrice: brandModelMatch.sellPrice,
-            currentAvailableQty: 0,
-            message: "This tire is currently out of stock",
-            unavailableReason: "out_of_stock",
-          };
-        }
-        
-        return {
-          ...baseResult,
-          status: "price_changed",
-          currentItem: {
-            sku: brandModelMatch.sku,
-            brand: brandModelMatch.brand,
-            model: brandModelMatch.model,
-            unitPrice: brandModelMatch.sellPrice,
-            availableQty: brandModelMatch.availableQty || 100,
-            supplier: brandModelMatch.source || "tireweb",
-            imageUrl: brandModelMatch.imageUrl,
-          },
-          currentUnitPrice: brandModelMatch.sellPrice,
-          currentAvailableQty: brandModelMatch.availableQty || 100,
-          priceDifference: priceDiff,
-          priceChangePercent: item.unitPrice > 0 ? (priceDiff / item.unitPrice) * 100 : 0,
-          message: `Price ${priceDiff >= 0 ? 'increased' : 'decreased'} by $${Math.abs(priceDiff).toFixed(2)}`,
-        };
-      }
-      
       return {
         ...baseResult,
         status: "unavailable",
@@ -612,67 +618,72 @@ async function validateTire(
       };
     }
     
-    // Check availability
-    if (!match.inStock) {
+    // Calculate total available quantity from all warehouses
+    const totalQty = (match.quantity?.primary || 0) + 
+                     (match.quantity?.alternate || 0) + 
+                     (match.quantity?.national || 0);
+    const currentPrice = match.price;
+    
+    // Check if completely out of stock
+    if (totalQty === 0) {
       return {
         ...baseResult,
         status: "unavailable",
         currentItem: {
-          sku: match.sku,
+          sku: match.partNumber,
           brand: match.brand,
           model: match.model,
-          unitPrice: match.sellPrice,
+          unitPrice: currentPrice,
           availableQty: 0,
           supplier: match.source || "tireweb",
-          imageUrl: match.imageUrl,
+          imageUrl: match.imageUrl || undefined,
         },
-        currentUnitPrice: match.sellPrice,
+        currentUnitPrice: currentPrice,
         currentAvailableQty: 0,
         message: "This tire is currently out of stock",
         unavailableReason: "out_of_stock",
       };
     }
     
-    // Check quantity availability (TireWeb may have limited stock)
-    const availableQty = match.availableQty || 100; // Default high if not provided
-    if (availableQty < item.quantity) {
+    // Check if insufficient quantity for the saved order
+    if (totalQty < item.quantity) {
       return {
         ...baseResult,
         status: "insufficient_quantity",
         currentItem: {
-          sku: match.sku,
+          sku: match.partNumber,
           brand: match.brand,
           model: match.model,
-          unitPrice: match.sellPrice,
-          availableQty,
+          unitPrice: currentPrice,
+          availableQty: totalQty,
           supplier: match.source || "tireweb",
-          imageUrl: match.imageUrl,
+          imageUrl: match.imageUrl || undefined,
         },
-        currentUnitPrice: match.sellPrice,
-        currentAvailableQty: availableQty,
-        priceDifference: match.sellPrice - item.unitPrice,
-        message: `Only ${availableQty} available (you saved ${item.quantity})`,
+        currentUnitPrice: currentPrice,
+        currentAvailableQty: totalQty,
+        priceDifference: currentPrice - item.unitPrice,
+        message: `Only ${totalQty} available (you saved ${item.quantity})`,
       };
     }
     
     // Price comparison
-    const priceDiff = match.sellPrice - item.unitPrice;
+    const priceDiff = currentPrice - item.unitPrice;
     const status: ItemValidationStatus = Math.abs(priceDiff) < 0.01 ? "unchanged" : "price_changed";
     
     return {
       ...baseResult,
       status,
       currentItem: {
-        sku: match.sku,
+        sku: match.partNumber,
         brand: match.brand,
         model: match.model,
-        unitPrice: match.sellPrice,
-        availableQty,
+        unitPrice: currentPrice,
+        availableQty: totalQty,
         supplier: match.source || "tireweb",
-        imageUrl: match.imageUrl,
+        imageUrl: match.imageUrl || undefined,
       },
-      currentUnitPrice: match.sellPrice,
-      currentAvailableQty: availableQty,
+      currentUnitPrice: currentPrice,
+      currentAvailableQty: totalQty,
       priceDifference: priceDiff,
       priceChangePercent: item.unitPrice > 0 ? (priceDiff / item.unitPrice) * 100 : 0,
       message: status === "price_changed"
