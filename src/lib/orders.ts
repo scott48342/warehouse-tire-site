@@ -62,7 +62,21 @@ export async function ensureOrdersTable(db: pg.Pool) {
         WHERE table_name = 'orders' AND column_name = 'paypal_order_id'
       ) THEN
         ALTER TABLE orders ADD COLUMN paypal_order_id TEXT;
-        CREATE INDEX IF NOT EXISTS orders_paypal_order_id_idx ON orders (paypal_order_id);
+      END IF;
+    END
+    $$;
+  `);
+  
+  // Ensure UNIQUE constraint on paypal_order_id for idempotency
+  // (allows NULL, but non-NULL values must be unique)
+  await db.query(`
+    DO $$
+    BEGIN
+      IF NOT EXISTS (
+        SELECT 1 FROM pg_indexes 
+        WHERE tablename = 'orders' AND indexname = 'orders_paypal_order_id_unique'
+      ) THEN
+        CREATE UNIQUE INDEX orders_paypal_order_id_unique ON orders (paypal_order_id) WHERE paypal_order_id IS NOT NULL;
       END IF;
     END
     $$;

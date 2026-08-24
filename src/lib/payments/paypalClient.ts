@@ -6,12 +6,29 @@ const PAYPAL_API = {
   live: "https://api-m.paypal.com",
 } as const;
 
+export type PayPalCaptureResult = {
+  id: string;
+  status: string;
+  payer?: any;
+  purchase_units?: Array<{
+    reference_id?: string;
+    custom_id?: string;
+    payments?: {
+      captures?: Array<{
+        id: string;
+        status: string;
+        amount?: { currency_code: string; value: string };
+      }>;
+    };
+  }>;
+};
+
 export type PayPalClient = {
   mode: PayPalMode;
   clientId: string;
   getAccessToken: () => Promise<string>;
   createOrder: (amount: number, currency: string, quoteId: string, description?: string, returnUrl?: string, cancelUrl?: string) => Promise<{ id: string; approvalUrl: string }>;
-  captureOrder: (orderId: string) => Promise<{ id: string; status: string; payer?: any }>;
+  captureOrder: (orderId: string) => Promise<PayPalCaptureResult>;
 };
 
 export async function getPayPalClient(db: pg.Pool): Promise<PayPalClient | null> {
@@ -122,7 +139,7 @@ export async function getPayPalClient(db: pg.Pool): Promise<PayPalClient | null>
     };
   }
 
-  async function captureOrder(orderId: string): Promise<{ id: string; status: string; payer?: any }> {
+  async function captureOrder(orderId: string): Promise<PayPalCaptureResult> {
     const token = await getAccessToken();
 
     const res = await fetch(`${baseUrl}/v2/checkout/orders/${orderId}/capture`, {
@@ -143,6 +160,7 @@ export async function getPayPalClient(db: pg.Pool): Promise<PayPalClient | null>
       id: data.id,
       status: data.status,
       payer: data.payer,
+      purchase_units: data.purchase_units,
     };
   }
 

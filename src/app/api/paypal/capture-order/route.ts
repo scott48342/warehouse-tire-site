@@ -8,6 +8,7 @@ import { markCartEventsPurchased } from "@/lib/cart/cartAddEventService";
 import { markCartRecovered } from "@/lib/cart/abandonedCartService";
 import { processSupplierOrders } from "@/lib/suppliers/supplierOrderService";
 import { markSavedQuoteConverted } from "@/lib/savedQuotes/checkoutIntegration";
+import { logCheckoutDiagnosticServer } from "@/lib/checkout/diagnosticsServer";
 
 export const runtime = "nodejs";
 
@@ -19,11 +20,15 @@ export const runtime = "nodejs";
  * 
  * This is the PayPal equivalent of the Stripe webhook - creates the order
  * and handles all post-payment processing.
+ * 
+ * SECURITY: quoteId is verified against PayPal's custom_id to prevent
+ * client injection of arbitrary quote IDs.
  */
 export async function POST(req: Request) {
   try {
     const body = await req.json().catch(() => ({} as any));
     const paypalOrderId = String(body.orderId || "").trim();
+    const clientQuoteId = body.quoteId ? String(body.quoteId).trim() : undefined;
     const cartId = body.cartId ? String(body.cartId).trim() : undefined;
     const savedQuoteId = body.savedQuoteId ? String(body.savedQuoteId).trim() : undefined;
 
@@ -50,16 +55,29 @@ export async function POST(req: Request) {
 
     console.log(`[paypal/capture-order] PayPal capture completed: ${paypalOrderId}`);
 
-    // Get quoteId from PayPal order metadata (stored in custom_id or reference_id)
-    // Note: PayPal returns the capture details, we need to get the quoteId from body or metadata
-    const quoteId = body.quoteId;
+    // ═══════════════════════════════════════════════════════════════════════════
+    // SECURITY: Extract quoteId from PayPal's custom_id (server-verified)
+    // Do NOT trust client-provided quoteId alone
+    // ═══════════════════════════════════════════════════════════════════════════
+    const purchaseUnit = captureResult.purchase_units?.[0];
+    const serverQuoteId = purchaseUnit?.custom_id || purchaseUnit?.reference_id;
     
-    if (!quoteId) {
-      console.error("[paypal/capture-order] No quoteId provided");
-      return NextResponse.json({ ok: false, error: "quote_id_required" }, { status: 400 });
+    if (!serverQuoteId) {
+      console.error("[paypal/capture-order] No quoteId in PayPal custom_id/reference_id");
+      return NextResponse.json({ ok: false, error: "quote_id_missing_from_paypal" }, { status: 400 });
     }
 
-    // Check if order already exists (idempotency)
+    // If client provided quoteId, verify it matches server (defense in depth)
+    if (clientQuoteId && clientQuoteId !== serverQuoteId) {
+      console.error(`[paypal/capture-order] SECURITY: Quote ID mismatch - client=${clientQuoteId}, paypal=${serverQuoteId}`);
+      return NextResponse.json({ ok: false, error: "quote_id_mismatch" }, { status: 400 });
+    }
+
+    const quoteId = serverQuoteId;
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // IDEMPOTENCY: Check if order already exists
+    // ═══════════════════════════════════════════════════════════════════════════
     const existingByPayPal = await getOrderByPayPalOrder(db, paypalOrderId);
     if (existingByPayPal) {
       console.log(`[paypal/capture-order] Order already exists: ${existingByPayPal.id}`);
@@ -92,20 +110,55 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "quote_not_found" }, { status: 400 });
     }
 
-    // Calculate amount in cents from quote
-    const amountPaidCents = Math.round(
-      quote.snapshot.lines.reduce((sum, l) => sum + (l.unitPriceUsd * l.qty), 0) * 100
-    );
+    // ═══════════════════════════════════════════════════════════════════════════
+    // AMOUNT: Use actual captured amount from PayPal, not calculated
+    // ═══════════════════════════════════════════════════════════════════════════
+    const capture = purchaseUnit?.payments?.captures?.[0];
+    let amountPaidCents: number;
+    
+    if (capture?.amount?.value) {
+      // Use actual captured amount from PayPal
+      amountPaidCents = Math.round(parseFloat(capture.amount.value) * 100);
+      console.log(`[paypal/capture-order] Using PayPal captured amount: $${capture.amount.value} (${amountPaidCents} cents)`);
+    } else {
+      // Fallback: calculate from quote (shouldn't happen normally)
+      console.warn("[paypal/capture-order] No capture amount in PayPal response, calculating from quote");
+      amountPaidCents = Math.round(
+        quote.snapshot.lines.reduce((sum, l) => sum + (l.unitPriceUsd * l.qty), 0) * 100
+      );
+    }
 
-    // Create WTD order
-    const { id: wtdOrderId } = await createOrder(db, {
-      quoteId,
-      paypalOrderId,
-      amountPaidCents,
-      customerEmail: quote.snapshot.customer.email,
-      customerPhone: quote.snapshot.customer.phone,
-      snapshot: quote.snapshot,
-    });
+    // Get customer email - prefer PayPal payer email if available
+    const customerEmail = captureResult.payer?.email_address || quote.snapshot.customer.email;
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // CREATE ORDER
+    // ═══════════════════════════════════════════════════════════════════════════
+    let wtdOrderId: string;
+    try {
+      const { id } = await createOrder(db, {
+        quoteId,
+        paypalOrderId,
+        amountPaidCents,
+        customerEmail,
+        customerPhone: quote.snapshot.customer.phone,
+        snapshot: quote.snapshot,
+      });
+      wtdOrderId = id;
+    } catch (orderErr: any) {
+      // CRITICAL: payment succeeded but order creation failed
+      console.error(`[paypal/capture-order] ORDER CREATE FAILED after successful payment:`, orderErr);
+      await logCheckoutDiagnosticServer({
+        eventType: "order_create_failed",
+        cartId,
+        checkoutStep: "post_payment",
+        status: "error",
+        endpoint: "paypal_capture",
+        errorCode: String(orderErr?.message || "order_create_exception"),
+        detail: { quoteId, paypalOrderId },
+      });
+      return NextResponse.json({ ok: false, error: "order_create_failed" }, { status: 500 });
+    }
 
     console.log(`[paypal/capture-order] Created WTD order: ${wtdOrderId}`);
 
@@ -158,7 +211,9 @@ export async function POST(req: Request) {
       }
     }
 
-    // Mark cart add events as purchased
+    // ═══════════════════════════════════════════════════════════════════════════
+    // CART TRACKING
+    // ═══════════════════════════════════════════════════════════════════════════
     if (cartId) {
       try {
         const markedCount = await markCartEventsPurchased(cartId, wtdOrderId);
@@ -178,13 +233,14 @@ export async function POST(req: Request) {
       }
     }
 
-    // Send confirmation email
-    const emailTo = quote.snapshot.customer.email;
-    if (emailTo) {
+    // ═══════════════════════════════════════════════════════════════════════════
+    // CONFIRMATION EMAIL
+    // ═══════════════════════════════════════════════════════════════════════════
+    if (customerEmail) {
       try {
-        await sendOrderConfirmationEmail(wtdOrderId, emailTo, quote.snapshot);
+        await sendOrderConfirmationEmail(wtdOrderId, customerEmail, quote.snapshot);
         await markOrderEmailSent(db, wtdOrderId);
-        console.log(`[paypal/capture-order] Confirmation email sent to ${emailTo}`);
+        console.log(`[paypal/capture-order] Confirmation email sent to ${customerEmail}`);
       } catch (emailErr: any) {
         console.error(`[paypal/capture-order] Failed to send email:`, emailErr.message);
       }
