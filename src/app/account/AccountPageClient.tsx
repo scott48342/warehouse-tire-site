@@ -6,9 +6,10 @@
  * User account dashboard with:
  * - Profile information
  * - Saved vehicles (garage) with server sync
+ * - Saved quotes (Phase 3B)
  * - Order history
  * 
- * @updated 2026-08-22 - Added My Orders section (Phase 3A)
+ * @updated 2026-08-24 - Added My Quotes section (Phase 3B)
  */
 
 import { useRouter } from "next/navigation";
@@ -17,7 +18,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { useAccountGarage } from "@/hooks/useAccountGarage";
 import { useAccountOrders, type OrderSummary } from "@/hooks/useAccountOrders";
+import { useAccountQuotes, type SavedQuoteResponse } from "@/hooks/useAccountQuotes";
 import { OrderDetailModal } from "./OrderDetailModal";
+import { QuoteDetailModal } from "./QuoteDetailModal";
 
 interface User {
   id: string;
@@ -237,6 +240,202 @@ function MyOrdersSection({ emailVerified }: { emailVerified: boolean }) {
   );
 }
 
+/**
+ * Single quote card component
+ */
+function QuoteCard({
+  quote,
+  onViewQuote,
+  onArchive,
+  onRename,
+}: {
+  quote: SavedQuoteResponse;
+  onViewQuote: (id: string) => void;
+  onArchive: (id: string) => void;
+  onRename: (id: string, currentName: string | null) => void;
+}) {
+  return (
+    <div className="p-4 rounded-xl border border-neutral-200 hover:border-neutral-300 transition-colors">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+        {/* Left: Quote info */}
+        <div className="flex-1 min-w-0">
+          {/* Name and status */}
+          <div className="flex items-center gap-3 flex-wrap mb-2">
+            <span className="font-semibold text-neutral-900">
+              {quote.name || `${quote.vehicle.year} ${quote.vehicle.make} ${quote.vehicle.model}`}
+            </span>
+            {quote.convertedOrderId && (
+              <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-green-100 text-green-700">
+                Purchased
+              </span>
+            )}
+          </div>
+
+          {/* Date and total */}
+          <div className="text-sm text-neutral-500 mb-2">
+            Saved {formatDate(quote.savedAt)} • {formatCurrency(quote.total)}
+          </div>
+
+          {/* Vehicle (if name is custom) */}
+          {quote.name && (
+            <div className="text-sm text-neutral-600 mb-1">
+              🚗 {quote.vehicle.year} {quote.vehicle.make} {quote.vehicle.model}
+              {quote.vehicle.trim && ` ${quote.vehicle.trim}`}
+            </div>
+          )}
+
+          {/* Items summary */}
+          <div className="text-sm text-neutral-500 truncate">
+            {quote.itemSummary}
+          </div>
+        </div>
+
+        {/* Right: Actions */}
+        <div className="flex items-center gap-3 sm:flex-col sm:items-end">
+          <button
+            onClick={() => onViewQuote(quote.id)}
+            className="text-sm font-medium text-blue-600 hover:text-blue-700"
+          >
+            View →
+          </button>
+          <button
+            onClick={() => onRename(quote.id, quote.name)}
+            className="text-sm text-neutral-500 hover:text-neutral-700"
+          >
+            Rename
+          </button>
+          <button
+            onClick={() => onArchive(quote.id)}
+            className="text-sm text-red-500 hover:text-red-600"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * My Quotes section
+ */
+function MyQuotesSection({ emailVerified }: { emailVerified: boolean }) {
+  const { quotes, isLoading, error, count, maxQuotes, archiveQuote, renameQuote } = useAccountQuotes();
+  const [selectedQuoteId, setSelectedQuoteId] = useState<string | null>(null);
+
+  const handleArchive = async (quoteId: string) => {
+    if (confirm("Remove this saved quote? This cannot be undone.")) {
+      await archiveQuote(quoteId);
+    }
+  };
+
+  const handleRename = async (quoteId: string, currentName: string | null) => {
+    const newName = prompt("Enter a name for this quote:", currentName || "");
+    if (newName !== null) {
+      await renameQuote(quoteId, newName.trim() || null);
+    }
+  };
+
+  // Email not verified - show message
+  if (!emailVerified) {
+    return (
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📋</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Quotes</h2>
+        </div>
+        <div className="text-center py-6">
+          <p className="text-amber-600 mb-2">⚠️ Email verification required</p>
+          <p className="text-sm text-neutral-500">
+            Please verify your email address to save and view quotes.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📋</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Quotes</h2>
+        </div>
+        <div className="text-center py-8">
+          <div className="inline-block animate-spin rounded-full h-6 w-6 border-2 border-neutral-300 border-t-neutral-900 mb-3" />
+          <p className="text-sm text-neutral-500">Loading quotes...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📋</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Quotes</h2>
+        </div>
+        <div className="text-center py-6">
+          <p className="text-red-600 mb-2">Unable to load quotes</p>
+          <p className="text-sm text-neutral-500">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xl">📋</span>
+          <h2 className="text-lg font-bold text-neutral-900">My Quotes</h2>
+          {quotes.length > 0 && (
+            <span className="text-sm text-neutral-500">({count}/{maxQuotes})</span>
+          )}
+        </div>
+
+        {quotes.length === 0 ? (
+          <div className="text-center py-8">
+            <p className="text-neutral-500 mb-4">No saved quotes yet</p>
+            <p className="text-sm text-neutral-400 mb-4">
+              When you save a cart or package configuration, it will appear here
+            </p>
+            <Link
+              href="/tires"
+              className="inline-block px-6 py-3 bg-neutral-900 text-white font-semibold rounded-xl hover:bg-neutral-800 transition-colors"
+            >
+              Start Shopping
+            </Link>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {quotes.map((quote) => (
+              <QuoteCard
+                key={quote.id}
+                quote={quote}
+                onViewQuote={setSelectedQuoteId}
+                onArchive={handleArchive}
+                onRename={handleRename}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Quote detail modal */}
+      {selectedQuoteId && (
+        <QuoteDetailModal
+          quoteId={selectedQuoteId}
+          onClose={() => setSelectedQuoteId(null)}
+        />
+      )}
+    </>
+  );
+}
+
 export function AccountPageClient({ user }: { user: User }) {
   const router = useRouter();
   const [signingOut, setSigningOut] = useState(false);
@@ -408,6 +607,11 @@ export function AccountPageClient({ user }: { user: User }) {
               are saved to your account.
             </p>
           </div>
+        </div>
+
+        {/* Quotes Section */}
+        <div className="mb-6">
+          <MyQuotesSection emailVerified={user.emailVerified} />
         </div>
 
         {/* Orders Section */}
