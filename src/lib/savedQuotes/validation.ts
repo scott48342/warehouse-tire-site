@@ -225,14 +225,27 @@ export async function verifyPricing(
         // This avoids HTTP self-calls which can fail on serverless
         verifiedPrice = await getTirePrice(item.sku, tireSize);
         
-        // Log if client-displayed price differs significantly from server price
-        if (verifiedPrice !== null && clientDisplayedPrice !== undefined) {
+        // DEFENSIVE: Detect significant price discrepancies
+        // If client-displayed price differs from server price by >5%,
+        // reject the quote save to prevent price consistency bugs.
+        if (verifiedPrice !== null && clientDisplayedPrice !== undefined && clientDisplayedPrice > 0) {
           const diff = Math.abs(verifiedPrice - clientDisplayedPrice);
-          if (diff > 0.01) {
-            console.log(`[verifyPricing] Price mismatch for ${item.sku}: client=${clientDisplayedPrice}, server=${verifiedPrice}`);
+          const diffPercent = (diff / clientDisplayedPrice) * 100;
+          if (diffPercent > 5) {
+            console.error(`[verifyPricing] SIGNIFICANT price mismatch for ${item.sku}: client=$${clientDisplayedPrice}, server=$${verifiedPrice} (${diffPercent.toFixed(1)}% diff)`);
+            throw new ValidationError(
+              `The price for ${item.brand} ${item.model} has changed. Please refresh and try again.`,
+              `items.${item.sku}`,
+              "price_changed"
+            );
+          } else if (diff > 0.01) {
+            // Log minor differences (rounding, etc) but allow
+            console.log(`[verifyPricing] Minor price mismatch for ${item.sku}: client=$${clientDisplayedPrice}, server=$${verifiedPrice}`);
           }
         }
       } catch (err) {
+        // Re-throw ValidationErrors, log and continue for other errors
+        if (err instanceof ValidationError) throw err;
         console.error(`[verifyPricing] Tire price lookup failed for ${item.sku}:`, err);
       }
       
@@ -244,14 +257,23 @@ export async function verifyPricing(
       try {
         verifiedPrice = await lookupWheelPrice(item.sku);
         
-        // Log if client-displayed price differs significantly
-        if (verifiedPrice !== null && clientDisplayedPrice !== undefined) {
+        // DEFENSIVE: Detect significant price discrepancies
+        if (verifiedPrice !== null && clientDisplayedPrice !== undefined && clientDisplayedPrice > 0) {
           const diff = Math.abs(verifiedPrice - clientDisplayedPrice);
-          if (diff > 0.01) {
-            console.log(`[verifyPricing] Price mismatch for ${item.sku}: client=${clientDisplayedPrice}, server=${verifiedPrice}`);
+          const diffPercent = (diff / clientDisplayedPrice) * 100;
+          if (diffPercent > 5) {
+            console.error(`[verifyPricing] SIGNIFICANT price mismatch for ${item.sku}: client=$${clientDisplayedPrice}, server=$${verifiedPrice} (${diffPercent.toFixed(1)}% diff)`);
+            throw new ValidationError(
+              `The price for ${item.brand} ${item.model} has changed. Please refresh and try again.`,
+              `items.${item.sku}`,
+              "price_changed"
+            );
+          } else if (diff > 0.01) {
+            console.log(`[verifyPricing] Minor price mismatch for ${item.sku}: client=$${clientDisplayedPrice}, server=$${verifiedPrice}`);
           }
         }
       } catch (err) {
+        if (err instanceof ValidationError) throw err;
         console.error(`[verifyPricing] Wheel price lookup failed for ${item.sku}:`, err);
       }
       

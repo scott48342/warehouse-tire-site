@@ -158,6 +158,7 @@ export function SaveQuoteButton({
           quantity: item.quantity,
           imageUrl: item.imageUrl,
           staggered: item.staggered,
+          unitPrice: item.unitPrice, // Client-displayed price for consistency check
         };
       } else if (item.type === "tire") {
         return {
@@ -174,6 +175,7 @@ export function SaveQuoteButton({
           imageUrl: item.imageUrl,
           staggered: item.staggered,
           source: item.source,
+          unitPrice: item.unitPrice, // Client-displayed price for consistency check
         };
       } else {
         // Accessory

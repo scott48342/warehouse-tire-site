@@ -153,8 +153,16 @@ export async function createPendingQuote(
     const vehicle = validateVehicle(request.vehicle);
     const items = validateItems(request.items);
     
-    // Verify pricing
-    const { items: pricedItems, pricing } = await verifyPricing(items, vehicle);
+    // Build client prices map for consistency check
+    const clientPrices: Record<string, number> = {};
+    for (const item of request.items) {
+      if (item.unitPrice != null && item.unitPrice > 0) {
+        clientPrices[String(item.sku)] = Number(item.unitPrice);
+      }
+    }
+    
+    // Verify pricing (with client price consistency check)
+    const { items: pricedItems, pricing } = await verifyPricing(items, vehicle, clientPrices);
     
     // Create snapshot
     const source = request.source || "cart";
