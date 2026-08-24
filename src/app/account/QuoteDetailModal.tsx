@@ -499,8 +499,8 @@ export function QuoteDetailModal({ quoteId, onClose }: QuoteDetailModalProps) {
         }
       });
 
-      // Use CartContext.replaceCart (not direct localStorage)
-      replaceCart(newCartItems);
+      // Use CartContext.replaceCart with quoteId for conversion tracking
+      replaceCart(newCartItems, quoteId);
       
       // Use GarageContext.setActiveVehicleByData for vehicle activation (handles dedup)
       if (quote.vehicle) {

@@ -60,6 +60,7 @@ export default function CheckoutPage() {
     clearCart,
     removeItem,
     updateQuantity,
+    resumedFromQuoteId,
   } = useCart();
   
   // Shop context for local mode detection
@@ -528,6 +529,8 @@ export default function CheckoutPage() {
           customer,
           vehicle,
           cartId: getCartId(),
+          // If cart was resumed from a saved quote, include for conversion tracking
+          ...(resumedFromQuoteId ? { savedQuoteId: resumedFromQuoteId } : {}),
           // Force Affirm-only checkout
           ...(options?.forceAffirm ? { paymentMethod: "affirm" } : {}),
           // Local mode: include install store for order routing
@@ -600,6 +603,8 @@ export default function CheckoutPage() {
           customer,
           vehicle,
           cartId: getCartId(),
+          // If cart was resumed from a saved quote, include for conversion tracking
+          ...(resumedFromQuoteId ? { savedQuoteId: resumedFromQuoteId } : {}),
           ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
           shipping: {
             address: shipping.address,

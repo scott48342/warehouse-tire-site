@@ -6,6 +6,7 @@ import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
 import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } from "@/lib/shopContext";
+import { validateSavedQuoteOwnership } from "@/lib/savedQuotes/checkoutIntegration";
 
 export const runtime = "nodejs";
 
@@ -331,10 +332,31 @@ export async function POST(req: Request) {
 
     console.log(`[checkout/payment-intent] Card-only PaymentIntent for $${totalUsd.toFixed(2)}`);
 
+    // ═══════════════════════════════════════════════════════════════════════════
+    // SAVED QUOTE CONVERSION TRACKING
+    // If checkout was initiated from a resumed saved quote, validate ownership
+    // and attach the quote ID to Stripe metadata for conversion tracking.
+    // ═══════════════════════════════════════════════════════════════════════════
+    let validatedSavedQuoteId: string | undefined;
+    const clientSavedQuoteId = body.savedQuoteId;
+    
+    if (clientSavedQuoteId) {
+      const validation = await validateSavedQuoteOwnership(clientSavedQuoteId);
+      if (validation.valid && validation.quoteId) {
+        validatedSavedQuoteId = validation.quoteId;
+        console.log(`[checkout/payment-intent] ✓ Saved quote ${validatedSavedQuoteId} validated for conversion tracking`);
+      } else {
+        // Log but don't fail checkout - customer can still purchase
+        console.warn(`[checkout/payment-intent] Saved quote validation failed: ${validation.reason}`);
+      }
+    }
+
     // Build metadata for PaymentIntent
     const metadata: Record<string, string> = {
       quoteId,
       ...(cartId ? { cartId } : {}),
+      // Only include savedQuoteId if ownership was verified server-side
+      ...(validatedSavedQuoteId ? { savedQuoteId: validatedSavedQuoteId } : {}),
       ...(taxState ? { taxState } : {}),
       ...(taxAmount > 0 ? { taxAmount: String(taxAmount.toFixed(2)) } : {}),
       ...(shippingAmount > 0 ? { shippingAmount: String(shippingAmount.toFixed(2)) } : {}),

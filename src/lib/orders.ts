@@ -15,6 +15,7 @@ export type OrderRecord = {
   status: OrderStatus;
   stripeSessionId: string | null;
   stripePaymentIntentId: string | null;
+  paypalOrderId: string | null;
   amountPaidCents: number;
   paidAt: Date | null;
   customerEmail: string | null;
@@ -32,6 +33,7 @@ export async function ensureOrdersTable(db: pg.Pool) {
       status TEXT NOT NULL DEFAULT 'received',
       stripe_session_id TEXT,
       stripe_payment_intent_id TEXT,
+      paypal_order_id TEXT,
       amount_paid_cents INTEGER NOT NULL DEFAULT 0,
       paid_at TIMESTAMPTZ,
       customer_email TEXT,
@@ -47,7 +49,23 @@ export async function ensureOrdersTable(db: pg.Pool) {
     CREATE INDEX IF NOT EXISTS orders_created_at_idx ON orders (created_at DESC);
     CREATE INDEX IF NOT EXISTS orders_stripe_session_id_idx ON orders (stripe_session_id);
     CREATE INDEX IF NOT EXISTS orders_stripe_pi_idx ON orders (stripe_payment_intent_id);
+    CREATE INDEX IF NOT EXISTS orders_paypal_order_id_idx ON orders (paypal_order_id);
     CREATE INDEX IF NOT EXISTS orders_customer_email_idx ON orders (LOWER(customer_email));
+  `);
+  
+  // Migration: Add paypal_order_id column if it doesn't exist
+  await db.query(`
+    DO $$
+    BEGIN
+      IF NOT EXISTS (
+        SELECT 1 FROM information_schema.columns 
+        WHERE table_name = 'orders' AND column_name = 'paypal_order_id'
+      ) THEN
+        ALTER TABLE orders ADD COLUMN paypal_order_id TEXT;
+        CREATE INDEX IF NOT EXISTS orders_paypal_order_id_idx ON orders (paypal_order_id);
+      END IF;
+    END
+    $$;
   `);
 }
 
@@ -67,6 +85,7 @@ export async function createOrder(
     quoteId,
     stripeSessionId,
     stripePaymentIntentId,
+    paypalOrderId,
     amountPaidCents,
     customerEmail,
     customerPhone,
@@ -75,6 +94,7 @@ export async function createOrder(
     quoteId: string;
     stripeSessionId?: string;
     stripePaymentIntentId?: string;
+    paypalOrderId?: string;
     amountPaidCents: number;
     customerEmail?: string;
     customerPhone?: string;
@@ -88,15 +108,16 @@ export async function createOrder(
   await db.query({
     text: `
       INSERT INTO orders (
-        id, quote_id, status, stripe_session_id, stripe_payment_intent_id,
+        id, quote_id, status, stripe_session_id, stripe_payment_intent_id, paypal_order_id,
         amount_paid_cents, paid_at, customer_email, customer_phone, snapshot_json
-      ) VALUES ($1, $2, 'received', $3, $4, $5, NOW(), $6, $7, $8)
+      ) VALUES ($1, $2, 'received', $3, $4, $5, $6, NOW(), $7, $8, $9)
     `,
     values: [
       id,
       quoteId,
       stripeSessionId || null,
       stripePaymentIntentId || null,
+      paypalOrderId || null,
       amountPaidCents,
       customerEmail || null,
       customerPhone || null,
@@ -112,7 +133,7 @@ export async function getOrder(db: pg.Pool, id: string): Promise<OrderRecord | n
   
   const { rows } = await db.query({
     text: `
-      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id,
+      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id, paypal_order_id,
              amount_paid_cents, paid_at, customer_email, customer_phone,
              snapshot_json, email_sent_at, created_at, updated_at
       FROM orders
@@ -131,6 +152,7 @@ export async function getOrder(db: pg.Pool, id: string): Promise<OrderRecord | n
     status: r.status as OrderStatus,
     stripeSessionId: r.stripe_session_id,
     stripePaymentIntentId: r.stripe_payment_intent_id,
+    paypalOrderId: r.paypal_order_id,
     amountPaidCents: r.amount_paid_cents,
     paidAt: r.paid_at,
     customerEmail: r.customer_email,
@@ -146,7 +168,7 @@ export async function getOrderByStripeSession(db: pg.Pool, sessionId: string): P
   
   const { rows } = await db.query({
     text: `
-      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id,
+      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id, paypal_order_id,
              amount_paid_cents, paid_at, customer_email, customer_phone,
              snapshot_json, email_sent_at, created_at, updated_at
       FROM orders
@@ -165,6 +187,7 @@ export async function getOrderByStripeSession(db: pg.Pool, sessionId: string): P
     status: r.status as OrderStatus,
     stripeSessionId: r.stripe_session_id,
     stripePaymentIntentId: r.stripe_payment_intent_id,
+    paypalOrderId: r.paypal_order_id,
     amountPaidCents: r.amount_paid_cents,
     paidAt: r.paid_at,
     customerEmail: r.customer_email,
@@ -180,7 +203,7 @@ export async function getOrderByQuote(db: pg.Pool, quoteId: string): Promise<Ord
   
   const { rows } = await db.query({
     text: `
-      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id,
+      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id, paypal_order_id,
              amount_paid_cents, paid_at, customer_email, customer_phone,
              snapshot_json, email_sent_at, created_at, updated_at
       FROM orders
@@ -200,6 +223,7 @@ export async function getOrderByQuote(db: pg.Pool, quoteId: string): Promise<Ord
     status: r.status as OrderStatus,
     stripeSessionId: r.stripe_session_id,
     stripePaymentIntentId: r.stripe_payment_intent_id,
+    paypalOrderId: r.paypal_order_id,
     amountPaidCents: r.amount_paid_cents,
     paidAt: r.paid_at,
     customerEmail: r.customer_email,
@@ -215,7 +239,7 @@ export async function getOrderByPaymentIntent(db: pg.Pool, paymentIntentId: stri
   
   const { rows } = await db.query({
     text: `
-      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id,
+      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id, paypal_order_id,
              amount_paid_cents, paid_at, customer_email, customer_phone,
              snapshot_json, email_sent_at, created_at, updated_at
       FROM orders
@@ -234,6 +258,42 @@ export async function getOrderByPaymentIntent(db: pg.Pool, paymentIntentId: stri
     status: r.status as OrderStatus,
     stripeSessionId: r.stripe_session_id,
     stripePaymentIntentId: r.stripe_payment_intent_id,
+    paypalOrderId: r.paypal_order_id,
+    amountPaidCents: r.amount_paid_cents,
+    paidAt: r.paid_at,
+    customerEmail: r.customer_email,
+    customerPhone: r.customer_phone,
+    snapshot: r.snapshot_json as QuoteSnapshot,
+    createdAt: r.created_at,
+    updatedAt: r.updated_at,
+  };
+}
+
+export async function getOrderByPayPalOrder(db: pg.Pool, paypalOrderId: string): Promise<OrderRecord | null> {
+  await ensureOrdersTable(db);
+  
+  const { rows } = await db.query({
+    text: `
+      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id, paypal_order_id,
+             amount_paid_cents, paid_at, customer_email, customer_phone,
+             snapshot_json, email_sent_at, created_at, updated_at
+      FROM orders
+      WHERE paypal_order_id = $1
+      LIMIT 1
+    `,
+    values: [paypalOrderId],
+  });
+
+  const r = rows[0];
+  if (!r) return null;
+
+  return {
+    id: r.id,
+    quoteId: r.quote_id,
+    status: r.status as OrderStatus,
+    stripeSessionId: r.stripe_session_id,
+    stripePaymentIntentId: r.stripe_payment_intent_id,
+    paypalOrderId: r.paypal_order_id,
     amountPaidCents: r.amount_paid_cents,
     paidAt: r.paid_at,
     customerEmail: r.customer_email,
@@ -273,7 +333,7 @@ export async function listOrders(
   await ensureOrdersTable(db);
   
   let query = `
-    SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id,
+    SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id, paypal_order_id,
            amount_paid_cents, paid_at, customer_email, customer_phone,
            snapshot_json, email_sent_at, created_at, updated_at
     FROM orders
@@ -296,6 +356,7 @@ export async function listOrders(
     status: r.status as OrderStatus,
     stripeSessionId: r.stripe_session_id,
     stripePaymentIntentId: r.stripe_payment_intent_id,
+    paypalOrderId: r.paypal_order_id,
     amountPaidCents: r.amount_paid_cents,
     paidAt: r.paid_at,
     customerEmail: r.customer_email,

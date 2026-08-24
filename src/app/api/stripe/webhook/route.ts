@@ -8,6 +8,7 @@ import { markCartEventsPurchased } from "@/lib/cart/cartAddEventService";
 import { markCartRecovered } from "@/lib/cart/abandonedCartService";
 import { logCheckoutDiagnosticServer } from "@/lib/checkout/diagnosticsServer";
 import { processSupplierOrders } from "@/lib/suppliers/supplierOrderService";
+import { markSavedQuoteConverted } from "@/lib/savedQuotes/checkoutIntegration";
 
 export const runtime = "nodejs";
 
@@ -122,6 +123,28 @@ export async function POST(req: Request) {
     }
 
     console.log(`[stripe/webhook] Created order from PaymentIntent: ${orderId}`);
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // SAVED QUOTE CONVERSION TRACKING
+    // Mark the originating saved quote as converted (if checkout was from resume)
+    // IMPORTANT: This is secondary bookkeeping - never fails the webhook
+    // ═══════════════════════════════════════════════════════════════════════════
+    const savedQuoteId = paymentIntent.metadata?.savedQuoteId;
+    if (savedQuoteId) {
+      try {
+        const conversionResult = await markSavedQuoteConverted(savedQuoteId, orderId);
+        if (conversionResult.success) {
+          console.log(`[stripe/webhook] ✓ Saved quote ${savedQuoteId} marked converted to ${orderId}`);
+        } else if (conversionResult.conflictingOrder) {
+          console.error(`[stripe/webhook] CONFLICT: Saved quote ${savedQuoteId} already converted to ${conversionResult.conflictingOrder}`);
+        } else {
+          console.warn(`[stripe/webhook] Saved quote conversion failed: ${conversionResult.error}`);
+        }
+      } catch (conversionErr) {
+        // NEVER fail the webhook due to conversion tracking errors
+        console.error(`[stripe/webhook] Saved quote conversion error (non-fatal):`, conversionErr);
+      }
+    }
 
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPLIER AUTO-ORDERING
@@ -241,6 +264,28 @@ export async function POST(req: Request) {
     });
 
     console.log(`[stripe/webhook] Created order: ${orderId}`);
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // SAVED QUOTE CONVERSION TRACKING
+    // Mark the originating saved quote as converted (if checkout was from resume)
+    // IMPORTANT: This is secondary bookkeeping - never fails the webhook
+    // ═══════════════════════════════════════════════════════════════════════════
+    const savedQuoteId = session.metadata?.savedQuoteId;
+    if (savedQuoteId) {
+      try {
+        const conversionResult = await markSavedQuoteConverted(savedQuoteId, orderId);
+        if (conversionResult.success) {
+          console.log(`[stripe/webhook] ✓ Saved quote ${savedQuoteId} marked converted to ${orderId}`);
+        } else if (conversionResult.conflictingOrder) {
+          console.error(`[stripe/webhook] CONFLICT: Saved quote ${savedQuoteId} already converted to ${conversionResult.conflictingOrder}`);
+        } else {
+          console.warn(`[stripe/webhook] Saved quote conversion failed: ${conversionResult.error}`);
+        }
+      } catch (conversionErr) {
+        // NEVER fail the webhook due to conversion tracking errors
+        console.error(`[stripe/webhook] Saved quote conversion error (non-fatal):`, conversionErr);
+      }
+    }
 
     // ═══════════════════════════════════════════════════════════════════════════
     // SUPPLIER AUTO-ORDERING

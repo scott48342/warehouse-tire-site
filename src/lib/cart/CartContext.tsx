@@ -145,6 +145,12 @@ type CartContextValue = {
   items: CartItem[];
   /** Whether cart has loaded from localStorage (safe to check items.length) */
   isHydrated: boolean;
+  /** 
+   * If this cart was resumed from a Saved Quote, contains the quote ID.
+   * Used to link checkout → order → saved quote conversion.
+   * Set by QuoteDetailModal.replaceCart when resuming.
+   */
+  resumedFromQuoteId: string | null;
   /** Add item to cart. Optional source for analytics (pdp, package, search, etc.) */
   addItem: (item: CartItem, source?: string) => void;
   addAccessory: (item: CartAccessoryItem) => void;
@@ -157,7 +163,9 @@ type CartContextValue = {
   updateQuantity: (sku: string, type: "wheel" | "tire" | "accessory", quantity: number) => void;
   clearCart: () => void;
   /** Replace entire cart with new items (for quote resume, cart restore) */
-  replaceCart: (newItems: CartItem[]) => void;
+  replaceCart: (newItems: CartItem[], resumedFromQuoteId?: string) => void;
+  /** Clear the resumed quote link (called after checkout completes or cart is modified) */
+  clearResumedQuote: () => void;
   getItemCount: () => number;
   getTotal: () => number;
   hasWheels: () => boolean;
@@ -179,12 +187,16 @@ const CartContext = createContext<CartContextValue | null>(null);
 
 const CART_STORAGE_KEY = "wt_cart";
 
+const RESUMED_QUOTE_KEY = "wt_resumed_quote";
+
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [lastAddedItem, setLastAddedItem] = useState<CartItem | null>(null);
   const [hydrated, setHydrated] = useState(false);
   const [accessoryState, setAccessoryState] = useState<AccessoryRecommendationState | null>(null);
+  /** If cart was resumed from a Saved Quote, track the quote ID for checkout linking */
+  const [resumedFromQuoteId, setResumedFromQuoteId] = useState<string | null>(null);
 
   // Load cart from localStorage on mount
   // Note: This is the correct SSR hydration pattern - localStorage isn't available during SSR
@@ -196,6 +208,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
         if (Array.isArray(parsed)) {
           setItems(parsed);
         }
+      }
+      // Also load resumed quote ID if present
+      const storedQuoteId = localStorage.getItem(RESUMED_QUOTE_KEY);
+      if (storedQuoteId) {
+        setResumedFromQuoteId(storedQuoteId);
       }
     } catch {
       // Ignore parse errors
@@ -415,18 +432,49 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const clearCart = useCallback(() => {
     setItems([]);
     setLastAddedItem(null);
+    // Also clear resumed quote link
+    setResumedFromQuoteId(null);
+    try {
+      localStorage.removeItem(RESUMED_QUOTE_KEY);
+    } catch {}
   }, []);
 
   /**
    * Replace entire cart with new items.
    * Used for quote resume, cart restore, etc.
    * Clears existing items and sets new ones atomically.
+   * 
+   * @param resumedFromQuoteId - If resuming from a saved quote, pass the quote ID
+   *   to link this cart to the quote for conversion tracking at checkout.
    */
-  const replaceCart = useCallback((newItems: CartItem[]) => {
-    console.log("[cart] Replacing cart with", newItems.length, "items");
+  const replaceCart = useCallback((newItems: CartItem[], quoteId?: string) => {
+    console.log("[cart] Replacing cart with", newItems.length, "items", quoteId ? `(from quote ${quoteId})` : "");
     setItems(newItems);
     setLastAddedItem(newItems.length > 0 ? newItems[0] : null);
+    // Track resumed quote for checkout linking
+    if (quoteId) {
+      setResumedFromQuoteId(quoteId);
+      try {
+        localStorage.setItem(RESUMED_QUOTE_KEY, quoteId);
+      } catch {}
+    } else {
+      setResumedFromQuoteId(null);
+      try {
+        localStorage.removeItem(RESUMED_QUOTE_KEY);
+      } catch {}
+    }
     // Don't auto-open slideout for replace operations
+  }, []);
+
+  /**
+   * Clear the resumed quote link without clearing the cart.
+   * Called after successful checkout or when cart is modified.
+   */
+  const clearResumedQuote = useCallback(() => {
+    setResumedFromQuoteId(null);
+    try {
+      localStorage.removeItem(RESUMED_QUOTE_KEY);
+    } catch {}
   }, []);
 
   const getItemCount = useCallback(() => {
@@ -528,6 +576,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       value={{
         items,
         isHydrated: hydrated,
+        resumedFromQuoteId,
         addItem,
         addAccessory,
         addAccessories,
@@ -537,6 +586,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         updateQuantity,
         clearCart,
         replaceCart,
+        clearResumedQuote,
         getItemCount,
         getTotal,
         hasWheels,
