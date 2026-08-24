@@ -4,10 +4,17 @@
  * Server-side validation of client-submitted quote data.
  * Never trust arbitrary CartItem snapshots from the browser.
  * 
+ * ARCHITECTURE:
+ * - Server is ALWAYS authoritative for pricing
+ * - Client-submitted prices are context only, never trusted
+ * - Uses the same pricing logic as normal shopping (tire pricing service)
+ * - Never silently falls back to $0 - fails cleanly with pricing_unavailable
+ * 
  * @created 2026-08-24
- * @updated 2026-08-24 - Fixed tire price lookup to include size param
+ * @updated 2026-08-24 - Fixed tire pricing to use direct lookup (no HTTP self-call)
  */
 
+import { getTirePrice } from "@/lib/tires/tirePricingService";
 import type { 
   SaveQuoteRequest, 
   SavedQuoteItem, 
@@ -214,7 +221,9 @@ export async function verifyPricing(
       }
       
       try {
-        verifiedPrice = await lookupTirePrice(item.sku, tireSize);
+        // Use direct tire pricing service (same logic as normal shopping)
+        // This avoids HTTP self-calls which can fail on serverless
+        verifiedPrice = await getTirePrice(item.sku, tireSize);
         
         // Log if client-displayed price differs significantly from server price
         if (verifiedPrice !== null && clientDisplayedPrice !== undefined) {
@@ -320,96 +329,69 @@ export async function verifyPricing(
 }
 
 /**
- * Lookup tire price from our pricing service.
- * Uses the same tire search API as normal shopping.
- * 
- * @param sku - Tire SKU/part number
- * @param size - Tire size (required for search API)
- * @returns Authoritative sell price or null if not found
+ * Lookup wheel price using direct database query.
+ * Uses the same pricing logic as normal shopping.
  */
-async function lookupTirePrice(sku: string, size: string): Promise<number | null> {
-  try {
-    // Use internal API to get current price
-    // This is the same endpoint normal tire shopping uses
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}` 
-      : "http://localhost:3001";
-    
-    // Include size in the query - required by the search API
-    const url = new URL(`${baseUrl}/api/tires/search`);
-    url.searchParams.set("partNumber", sku);
-    url.searchParams.set("size", size);
-    url.searchParams.set("limit", "1");
-    
-    const res = await fetch(url.toString(), { cache: "no-store" });
-    
-    if (!res.ok) {
-      console.warn(`[lookupTirePrice] API returned ${res.status} for ${sku}`);
-      return null;
-    }
-    
-    const data = await res.json();
-    
-    // Check for API-level errors
-    if (data.error) {
-      console.warn(`[lookupTirePrice] API error for ${sku}:`, data.error);
-      return null;
-    }
-    
-    const result = data?.results?.[0];
-    if (!result) {
-      console.warn(`[lookupTirePrice] No results for ${sku} size ${size}`);
-      return null;
-    }
-    
-    // Use the sell price from the API (already computed: cost + margin)
-    const sellPrice = typeof result.price === "number" && result.price > 0 ? result.price : null;
-    
-    if (sellPrice === null) {
-      console.warn(`[lookupTirePrice] No valid price for ${sku}:`, result);
-    }
-    
-    return sellPrice;
-  } catch (err) {
-    console.error(`[lookupTirePrice] Exception for ${sku}:`, err);
-    return null;
-  }
+import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
+import { calculateWheelSellPrice, resolveWheelMsrp } from "@/lib/pricing";
+import { getInventoryForSku } from "@/lib/inventoryCache";
+import pg from "pg";
+
+const { Pool } = pg;
+
+let pool: pg.Pool | null = null;
+function getPool() {
+  if (pool) return pool;
+  const DATABASE_URL = process.env.POSTGRES_URL;
+  if (!DATABASE_URL) throw new Error("Missing POSTGRES_URL");
+  pool = new Pool({
+    connectionString: DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
+    max: 3,
+  });
+  return pool;
 }
 
-/**
- * Lookup wheel price from our pricing service
- */
 async function lookupWheelPrice(sku: string): Promise<number | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}` 
-      : "http://localhost:3001";
+    // Try WheelPros/techfeed first
+    const wheel = await getTechfeedWheelBySku(sku);
     
-    const res = await fetch(
-      `${baseUrl}/api/search?q=${encodeURIComponent(sku)}&limit=1`,
-      { cache: "no-store" }
+    if (wheel) {
+      const inventory = await getInventoryForSku(sku);
+      const mapValue = inventory?.mapPrice ?? (wheel.map_price ? Number(wheel.map_price) : null);
+      const rawMsrp = inventory?.msrp ?? (wheel.msrp ? Number(wheel.msrp) : null);
+      const correctedMsrp = !mapValue
+        ? resolveWheelMsrp({ sku: wheel.sku, brandCd: wheel.brand_cd ?? wheel.brand_desc, diameter: wheel.diameter, msrp: rawMsrp })
+        : rawMsrp;
+      const price = calculateWheelSellPrice({ sku: wheel.sku, map: mapValue, msrp: correctedMsrp });
+      
+      if (price && price > 0) {
+        return price;
+      }
+    }
+    
+    // Try Wheel-1 fallback
+    const db = getPool();
+    const { rows } = await db.query(
+      `SELECT sku, msrp, map_price, has_map
+       FROM wheel1_products WHERE sku = $1 AND is_discontinued = FALSE`,
+      [sku]
     );
     
-    if (!res.ok) {
-      console.warn(`[lookupWheelPrice] API returned ${res.status} for ${sku}`);
-      return null;
+    if (rows.length > 0) {
+      const w = rows[0];
+      const msrpNum = w.msrp ? Number(w.msrp) : null;
+      const mapNum = w.map_price && Number(w.map_price) > 0 ? Number(w.map_price) : null;
+      const price = calculateWheelSellPrice({ sku: w.sku, map: mapNum, msrp: msrpNum });
+      
+      if (price && price > 0) {
+        return price;
+      }
     }
     
-    const data = await res.json();
-    // Extract price from search results
-    const result = data?.wheels?.[0];
-    if (!result) {
-      console.warn(`[lookupWheelPrice] No results for ${sku}`);
-      return null;
-    }
-    
-    const price = typeof result.price === "number" && result.price > 0 ? result.price : null;
-    
-    if (price === null) {
-      console.warn(`[lookupWheelPrice] No valid price for ${sku}:`, result);
-    }
-    
-    return price;
+    console.warn(`[lookupWheelPrice] No valid price for ${sku}`);
+    return null;
   } catch (err) {
     console.error(`[lookupWheelPrice] Exception for ${sku}:`, err);
     return null;

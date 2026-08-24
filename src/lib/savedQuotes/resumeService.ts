@@ -7,14 +7,14 @@
  * REUSES existing commerce systems:
  * - buildFitmentProfile + evaluateWheel for wheel fitment (vehicleFitment.ts)
  * - getTechfeedWheelBySku + calculateWheelSellPrice for wheel pricing
- * - /api/tires/search for tire lookup + pricing
+ * - lookupTireDirect for tire lookup + pricing (same logic as search API)
  * - firstOrderService.validateDiscount / campaignDiscountService for promos
  * - Direct DB for accessories
  * 
  * DOES NOT create new pricing/inventory/fitment engines.
  * 
  * @created 2026-08-24
- * @updated 2026-08-24 - B5 fixes per review requirements
+ * @updated 2026-08-24 - Fixed tire lookup to use direct supplier query (no HTTP self-call)
  */
 
 import type { SavedQuoteSnapshot, SavedQuoteItem, SavedQuoteVehicle } from "./types";
@@ -39,12 +39,7 @@ import { calculateWheelSellPrice, resolveWheelMsrp } from "@/lib/pricing";
 import { getInventoryForSku } from "@/lib/inventoryCache";
 import { firstOrderService } from "@/lib/discounts/firstOrderService";
 import { campaignDiscountService } from "@/lib/discounts/campaignDiscountService";
-
-// ============================================================================
-// Configuration
-// ============================================================================
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+import { lookupTireDirect, type TireLookupResult } from "@/lib/tires/tirePricingService";
 
 // ============================================================================
 // Main Revalidation Function
@@ -501,29 +496,8 @@ async function validateWheel(
 }
 
 // ============================================================================
-// Tire Validation - Uses same tire search API as normal shopping
+// Tire Validation - Uses direct supplier lookup (same logic as search API)
 // ============================================================================
-
-/**
- * Tire search result from /api/tires/search
- * Matches the actual API response structure
- */
-interface TireSearchResult {
-  partNumber: string;        // Primary identifier
-  mfgPartNumber: string;     // Manufacturer part number
-  brand: string;
-  model: string;
-  price: number;             // Sell price (cost + margin)
-  cost: number | null;
-  quantity: {                // Stock levels
-    primary: number;
-    alternate: number;
-    national: number;
-  };
-  imageUrl: string | null;
-  size: string;
-  source: string;            // e.g. "tireweb:km", "tireweb:atd"
-}
 
 async function validateTire(
   item: SavedQuoteItem,
@@ -547,69 +521,10 @@ async function validateTire(
   }
   
   try {
-    // Use the same tire search API as normal shopping
-    // Include both size and partNumber for precise matching
-    const searchUrl = new URL(`${BASE_URL}/api/tires/search`);
-    searchUrl.searchParams.set("size", tireSize);
-    searchUrl.searchParams.set("partNumber", item.sku);
-    searchUrl.searchParams.set("limit", "1");
+    // Use direct tire lookup (same logic as search API, no HTTP self-call)
+    const match = await lookupTireDirect(item.sku, tireSize);
     
-    const response = await fetch(searchUrl.toString(), {
-      headers: { Accept: "application/json" },
-      cache: "no-store",
-    });
-    
-    if (!response.ok) {
-      throw new Error(`Tire search failed: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    
-    // Check for API-level errors
-    if (data.error) {
-      console.warn(`[validateTire] API error for ${item.sku}:`, data.error);
-      throw new Error(data.error);
-    }
-    
-    // API response uses 'results' not 'tires'
-    const results: TireSearchResult[] = data.results || [];
-    
-    // Find exact match by partNumber or mfgPartNumber
-    let match = results.find(t => 
-      t.partNumber === item.sku || t.mfgPartNumber === item.sku
-    );
-    
-    // If no exact match, try broader search by size and find by brand+model
-    if (!match && results.length === 0) {
-      const broaderUrl = new URL(`${BASE_URL}/api/tires/search`);
-      broaderUrl.searchParams.set("size", tireSize);
-      broaderUrl.searchParams.set("limit", "200");
-      
-      const broaderResponse = await fetch(broaderUrl.toString(), {
-        headers: { Accept: "application/json" },
-        cache: "no-store",
-      });
-      
-      if (broaderResponse.ok) {
-        const broaderData = await broaderResponse.json();
-        const broaderResults: TireSearchResult[] = broaderData.results || [];
-        
-        // Try exact SKU match first
-        match = broaderResults.find(t => 
-          t.partNumber === item.sku || t.mfgPartNumber === item.sku
-        );
-        
-        // Fallback to brand+model match
-        if (!match) {
-          match = broaderResults.find(t => 
-            t.brand.toLowerCase() === item.brand.toLowerCase() &&
-            t.model.toLowerCase() === item.model.toLowerCase()
-          );
-        }
-      }
-    }
-    
-    if (!match) {
+    if (!match || !match.found) {
       return {
         ...baseResult,
         status: "unavailable",
@@ -622,7 +537,7 @@ async function validateTire(
     const totalQty = (match.quantity?.primary || 0) + 
                      (match.quantity?.alternate || 0) + 
                      (match.quantity?.national || 0);
-    const currentPrice = match.price;
+    const currentPrice = match.price || 0;
     
     // Check if completely out of stock
     if (totalQty === 0) {
