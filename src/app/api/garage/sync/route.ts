@@ -24,23 +24,28 @@ const MAX_VEHICLES = 10;
 
 /**
  * Check if two vehicles are duplicates
- * Uses modification ID if available, falls back to year/make/model
+ * Checks by ID first, then modification ID, then year/make/model
  */
 function isDuplicate(
-  a: { year: string; make: string; model: string; modification?: string | null },
-  b: { year: string; make: string; model: string; modification?: string | null }
+  server: { id?: string; year: string; make: string; model: string; modification?: string | null },
+  local: { id?: string; year: string; make: string; model: string; modification?: string | null }
 ): boolean {
-  // Prefer modification ID match
-  if (a.modification && b.modification) {
-    return a.modification === b.modification;
+  // 1. Same ID = definitely duplicate (handles retry race conditions)
+  if (server.id && local.id && server.id === local.id) {
+    return true;
   }
   
-  // Fall back to normalized YMM (case-insensitive)
+  // 2. Both have modification ID = use that
+  if (server.modification && local.modification) {
+    return server.modification === local.modification;
+  }
+  
+  // 3. Fall back to normalized YMM (case-insensitive)
   const normalize = (s: string) => s.toLowerCase().replace(/[-_\s]+/g, '');
   return (
-    a.year === b.year &&
-    normalize(a.make) === normalize(b.make) &&
-    normalize(a.model) === normalize(b.model)
+    server.year === local.year &&
+    normalize(server.make) === normalize(local.make) &&
+    normalize(server.model) === normalize(local.model)
   );
 }
 
@@ -86,23 +91,22 @@ export async function POST(req: NextRequest) {
         break;
       }
 
-      // Check for duplicates
-      const exists = serverVehicles.some(server => isDuplicate(server, {
+      // Build local vehicle object for comparison
+      const localVehicle = {
+        id: local.id,
         year: String(local.year),
         make: String(local.make),
         model: String(local.model),
-        modification: local.modification,
-      }));
+        modification: local.modification ?? null,
+      };
+
+      // Check for duplicates (by ID, modification, or YMM)
+      const exists = serverVehicles.some(server => isDuplicate(server, localVehicle));
 
       if (exists) {
         // If this was the local active, find the server equivalent
         if (local.id === localActiveId) {
-          const match = serverVehicles.find(server => isDuplicate(server, {
-            year: String(local.year),
-            make: String(local.make),
-            model: String(local.model),
-            modification: local.modification,
-          }));
+          const match = serverVehicles.find(server => isDuplicate(server, localVehicle));
           if (match) {
             newActiveId = match.id;
             // Update lastActiveAt on the matched vehicle
@@ -132,8 +136,17 @@ export async function POST(req: NextRequest) {
         lastActiveAt: new Date(),
       };
 
-      await db.insert(userGarage).values(newVehicle);
-      merged++;
+      // Use ON CONFLICT to handle concurrent inserts gracefully
+      // This prevents PK violations when retry requests race
+      const result = await db
+        .insert(userGarage)
+        .values(newVehicle)
+        .onConflictDoNothing({ target: userGarage.id });
+      
+      // Only count as merged if actually inserted
+      if (result.rowCount && result.rowCount > 0) {
+        merged++;
+      }
 
       // If this was the local active, it becomes the new active
       if (local.id === localActiveId) {
