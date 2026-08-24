@@ -35,35 +35,43 @@ export const COMMERCIAL_TIRE_ADDER = 100;
  * Detect if a tire size is commercial/medium-truck (uses higher margin).
  * 
  * Commercial sizes include:
- * - LT prefix (light truck)
- * - ST prefix (special trailer)
  * - Decimal rim diameters (19.5, 22.5, 24.5) - medium truck
+ * - R-style medium truck (11R22.5, 12R22.5)
  * - Compact numeric formats for medium truck (11225, 22570195)
- * - Large flotation sizes (40"+ diameter)
+ * - Large flotation sizes with X separator (37X12.50R20, 44X19.50R26)
+ * 
+ * NOT commercial (standard passenger/light-truck pricing):
+ * - Standard metric sizes (205/55R16, 215/55R16, 275/70R18)
+ * - LT metric sizes (LT245/75R16) - these use standard adder
+ * - ST trailer sizes (ST225/75R15) - these use standard adder
+ * 
+ * IMPORTANT: The `/` in metric sizes like "215/55R16" is NOT the same as
+ * the `X` in flotation sizes like "37X12.50R20". Do not conflate them.
  */
 export function isCommercialTruckSize(size: string): boolean {
   if (!size) return false;
   const s = size.toUpperCase().trim();
   
-  // LT prefix (light truck)
-  if (/^LT\s?\d/.test(s)) return true;
+  // Medium truck R-style: 11R22.5, 12R22.5, 11R24.5
+  // Pattern: 1-2 digit width + R + decimal rim (17.5, 19.5, 22.5, 24.5)
+  if (/^\d{1,2}\s*R\s*\d{2}\.5$/.test(s)) return true;
   
-  // ST prefix (special trailer)
-  if (/^ST\s?\d/.test(s)) return true;
-  
-  // Decimal rim diameters (medium truck): 19.5, 22.5, 24.5
-  // Matches: 225/70R19.5, 11R22.5, R22.5
-  if (/R?\s*\d{2}\.5(?:[^0-9]|$)/.test(s)) return true;
+  // Medium truck metric with decimal rim: 225/70R19.5, 245/70R19.5, 255/70R22.5
+  // Pattern: 3-digit width / 2-digit aspect R decimal-rim
+  if (/^\d{3}\/\d{2}R\d{2}\.5$/.test(s)) return true;
   
   // Compact numeric format: 11225 (11R22.5 compressed)
-  if (/^\d{5}$/.test(s)) return true;
+  // Pattern: exactly 5 digits where last 3 end in 5 (175, 195, 225, 245)
+  if (/^\d{2}(?:175|195|225|245)$/.test(s)) return true;
   
   // Compact numeric format: 22570195 (225/70R19.5 compressed)
-  // Pattern: width(3) + aspect(2) + rim with .5 (175, 195, 225, 245)
+  // Pattern: width(3) + aspect(2) + rim ending in 5 (175, 195, 225, 245)
   if (/^\d{3}\d{2}(?:175|195|225|245)$/.test(s)) return true;
   
-  // Very large flotation sizes (commercial use): 40"+ diameter
-  const flotMatch = s.match(/^(\d{2,3})[X\/]/);
+  // Flotation sizes with X separator: 35X12.50R20, 37X13.50R22, 44X19.50R26
+  // Pattern: 2-digit diameter + X + width + R + rim
+  // Only match actual flotation format (diameter X width), not metric (width / aspect)
+  const flotMatch = s.match(/^(\d{2})X\d/);
   if (flotMatch && parseInt(flotMatch[1], 10) >= 40) return true;
   
   return false;
@@ -148,9 +156,6 @@ function toSimpleSize(s: string): string {
 // Direct Tire Lookup (bypasses HTTP)
 // ============================================================================
 
-// Diagnostic SKU for debugging price doubling issue
-const DIAGNOSTIC_SKU = "LXST2031655020";
-
 /**
  * Look up a specific tire by SKU and size.
  * 
@@ -165,84 +170,26 @@ export async function lookupTireDirect(
   sku: string,
   size: string
 ): Promise<TireLookupResult | null> {
-  const isDiagnostic = sku === DIAGNOSTIC_SKU;
-  
-  if (isDiagnostic) {
-    console.log(`\n========== SAVED QUOTE TIRE PRICING DIAGNOSTIC ==========`);
-    console.log(`requested SKU: ${sku}`);
-    console.log(`requested size: ${size}`);
-  }
-  
   const simpleSize = toSimpleSize(size);
   if (!simpleSize) {
     console.warn(`[tirePricingService] Invalid tire size: ${size}`);
     return null;
   }
   
-  // Collect all candidates for diagnostic comparison
-  const candidates: Array<{
-    source: string;
-    partNumber: string;
-    rawBuyPrice: number;
-    rawSellPrice: number | null;
-    unifiedCost: number | null;
-    unifiedPrice: number | null;
-    matchReason: string;
-  }> = [];
-  
   // Search TireWeb (primary supplier)
   try {
     const tireWebResults = await searchTiresTireWeb(size);
     
-    if (isDiagnostic) {
-      console.log(`\nTireWeb returned ${tireWebResults.length} provider(s)`);
-    }
-    
     for (const result of tireWebResults) {
-      if (isDiagnostic) {
-        console.log(`  Provider: ${result.provider}, tires: ${result.tires.length}`);
-      }
-      
       for (const tire of result.tires) {
         const unified = tireWebTireToUnified(tire, result.provider);
-        
-        // Log ALL candidates for the diagnostic SKU
-        if (isDiagnostic && (unified.partNumber === sku || unified.mfgPartNumber === sku)) {
-          candidates.push({
-            source: `tireweb:${result.provider}`,
-            partNumber: unified.partNumber,
-            rawBuyPrice: tire.buyPrice,
-            rawSellPrice: tire.sellPrice,
-            unifiedCost: unified.cost,
-            unifiedPrice: unified.price,
-            matchReason: unified.partNumber === sku ? 'partNumber match' : 'mfgPartNumber match',
-          });
-        }
         
         // Match by SKU or manufacturer part number
         if (unified.partNumber === sku || unified.mfgPartNumber === sku) {
           const cost = unified.cost;
-          const isCommercial = isCommercialTruckSize(unified.size || size);
           const price = calculateTireSellPrice(cost, unified.size || size);
           
-          if (isDiagnostic) {
-            console.log(`\n--- MATCHED TIRE (TireWeb) ---`);
-            console.log(`supplier: tireweb:${result.provider}`);
-            console.log(`raw TireWeb buyPrice: ${tire.buyPrice}`);
-            console.log(`raw TireWeb sellPrice: ${tire.sellPrice}`);
-            console.log(`unified.cost: ${unified.cost}`);
-            console.log(`unified.price: ${unified.price}`);
-            console.log(`unified.source: ${unified.source}`);
-            console.log(`unified.partNumber: ${unified.partNumber}`);
-            console.log(`unified.size: ${unified.size}`);
-            console.log(`isCommercialTruckSize result: ${isCommercial}`);
-            console.log(`STANDARD_TIRE_ADDER: ${STANDARD_TIRE_ADDER}`);
-            console.log(`COMMERCIAL_TIRE_ADDER: ${COMMERCIAL_TIRE_ADDER}`);
-            console.log(`input passed to calculateTireSellPrice: cost=${cost}, size=${unified.size || size}`);
-            console.log(`output from calculateTireSellPrice: ${price}`);
-          }
-          
-          const result_obj = {
+          return {
             found: true,
             partNumber: unified.partNumber,
             mfgPartNumber: unified.mfgPartNumber || unified.partNumber,
@@ -255,20 +202,6 @@ export async function lookupTireDirect(
             imageUrl: unified.imageUrl,
             source: `tireweb:${result.provider}`,
           };
-          
-          if (isDiagnostic) {
-            console.log(`\nfinal lookupTireDirect.price: ${result_obj.price}`);
-            console.log(`final lookupTireDirect.cost: ${result_obj.cost}`);
-            if (candidates.length > 1) {
-              console.log(`\n--- ALL CANDIDATES FOR THIS SKU ---`);
-              candidates.forEach((c, i) => {
-                console.log(`  [${i}] ${c.source}: rawBuyPrice=${c.rawBuyPrice}, rawSellPrice=${c.rawSellPrice}, unifiedCost=${c.unifiedCost}, unifiedPrice=${c.unifiedPrice}`);
-              });
-            }
-            console.log(`========== END DIAGNOSTIC ==========\n`);
-          }
-          
-          return result_obj;
         }
       }
     }
@@ -335,14 +268,7 @@ export async function getTirePrice(
   sku: string,
   size: string
 ): Promise<number | null> {
-  const isDiagnostic = sku === DIAGNOSTIC_SKU;
-  
   const result = await lookupTireDirect(sku, size);
-  
-  if (isDiagnostic) {
-    console.log(`[getTirePrice] lookupTireDirect returned price: ${result?.price}`);
-    console.log(`[getTirePrice] lookupTireDirect returned cost: ${result?.cost}`);
-  }
   
   if (!result || !result.found) {
     return null;
@@ -352,10 +278,6 @@ export async function getTirePrice(
   if (result.price == null || result.price <= 0) {
     console.warn(`[tirePricingService] Invalid price for ${sku}: ${result.price}`);
     return null;
-  }
-  
-  if (isDiagnostic) {
-    console.log(`[getTirePrice] final return: ${result.price}`);
   }
   
   return result.price;
