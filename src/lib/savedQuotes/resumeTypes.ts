@@ -14,12 +14,12 @@ import type { SavedQuoteItem, SavedQuoteVehicle, SavedQuotePricing } from "./typ
 // ============================================================================
 
 export type ItemValidationStatus =
-  | "unchanged"        // Same price, available, fits
-  | "price_changed"    // Available but price different
-  | "unavailable"      // Cannot fulfill (out of stock, discontinued)
-  | "fitment_failed"   // No longer fits the vehicle
-  | "quantity_partial" // Only partial quantity available
-  | "needs_review"     // Requires manual review (ambiguous state)
+  | "unchanged"             // Same price, available, fits
+  | "price_changed"         // Available but price different
+  | "unavailable"           // Cannot fulfill (out of stock, discontinued)
+  | "fitment_failed"        // No longer fits the vehicle
+  | "insufficient_quantity" // Requested quantity not available (BLOCKS continuation)
+  | "needs_review"          // Requires manual review (ambiguous state)
   ;
 
 // ============================================================================
@@ -79,6 +79,9 @@ export interface VehicleValidationResult {
     oemTireSizes: string[];
     wheelDiameterRange: { min: number; max: number } | null;
   };
+  
+  // Internal: full fitment profile for wheel validation (not exposed in API response)
+  _fitmentProfile?: unknown;
 }
 
 // ============================================================================
@@ -86,7 +89,7 @@ export interface VehicleValidationResult {
 // ============================================================================
 
 export interface CurrentPricingSummary {
-  // From saved quote
+  // From saved quote (historical)
   savedSubtotal: number;
   savedTax: number;
   savedShipping: number | null;
@@ -95,14 +98,18 @@ export interface CurrentPricingSummary {
   
   // Current (revalidated)
   currentSubtotal?: number;
-  currentTaxEstimate?: number;
-  currentShippingEstimate?: number | null;  // null = unknown
+  currentTaxEstimate?: number;              // undefined = pending/unknown
+  currentShippingEstimate?: number | null;  // null = pending/unknown
   currentDiscount?: { code: string; amount: number; type: string; expired?: boolean } | null;
-  currentTotal?: number;
+  currentTotal?: number;                    // Merchandise subtotal only if tax/shipping pending
   
-  // Differences
+  // Differences (merchandise only when tax/shipping pending)
   subtotalDifference?: number;
   totalDifference?: number;
+  
+  // Pending flags - indicates checkout will finalize these
+  shippingPending?: boolean;
+  taxPending?: boolean;
 }
 
 // ============================================================================

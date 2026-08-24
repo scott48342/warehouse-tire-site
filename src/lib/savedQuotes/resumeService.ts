@@ -4,14 +4,17 @@
  * Revalidates a saved quote snapshot against current commerce state.
  * Does NOT mutate the saved quote - returns comparison results only.
  * 
- * Reuses existing commerce systems:
- * - Wheel lookup via /api/wheels/sku/[sku]
- * - Tire search via search functions
- * - Inventory via /api/cart/validate-availability
- * - Fitment via universalFitmentResolver
- * - Pricing via existing price calculation functions
+ * REUSES existing commerce systems:
+ * - buildFitmentProfile + evaluateWheel for wheel fitment (vehicleFitment.ts)
+ * - getTechfeedWheelBySku + calculateWheelSellPrice for wheel pricing
+ * - /api/tires/search for tire lookup + pricing
+ * - firstOrderService.validateDiscount / campaignDiscountService for promos
+ * - Direct DB for accessories
+ * 
+ * DOES NOT create new pricing/inventory/fitment engines.
  * 
  * @created 2026-08-24
+ * @updated 2026-08-24 - B5 fixes per review requirements
  */
 
 import type { SavedQuoteSnapshot, SavedQuoteItem, SavedQuoteVehicle } from "./types";
@@ -24,13 +27,18 @@ import type {
   ItemValidationStatus,
 } from "./resumeTypes";
 import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
+import { 
+  getPool, 
+  buildFitmentProfile, 
+  evaluateWheel,
+  type WheelToValidate,
+  type FitmentProfile,
+} from "@/lib/vehicleFitment";
 import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
 import { calculateWheelSellPrice, resolveWheelMsrp } from "@/lib/pricing";
 import { getInventoryForSku } from "@/lib/inventoryCache";
-import { getPool } from "@/lib/vehicleFitment";
-import pg from "pg";
-
-const { Pool } = pg;
+import { firstOrderService } from "@/lib/discounts/firstOrderService";
+import { campaignDiscountService } from "@/lib/discounts/campaignDiscountService";
 
 // ============================================================================
 // Configuration
@@ -49,7 +57,7 @@ export async function revalidateSavedQuote(
   const validatedAt = new Date().toISOString();
   const warnings: ValidationWarning[] = [];
   
-  // 1. Validate vehicle
+  // 1. Validate vehicle and get fitment profile
   const vehicleResult = await validateVehicle(snapshot.vehicle);
   
   if (!vehicleResult.valid) {
@@ -60,19 +68,33 @@ export async function revalidateSavedQuote(
     });
   }
   
-  // 2. Validate each item
+  // 2. Validate each item using FULL fitment validation for wheels
   const validatedItems = await Promise.all(
     snapshot.items.map(item => validateItem(item, snapshot.vehicle, vehicleResult))
   );
   
-  // 3. Check for unavailable items
+  // 3. Check for blocking conditions
   const unavailableItems = validatedItems.filter(vi => vi.status === "unavailable");
+  const insufficientQtyItems = validatedItems.filter(vi => vi.status === "insufficient_quantity");
   const fitmentFailures = validatedItems.filter(vi => vi.status === "fitment_failed");
   const priceChanges = validatedItems.filter(vi => vi.status === "price_changed");
-  const partialQty = validatedItems.filter(vi => vi.status === "quantity_partial");
   
-  // 4. Calculate current pricing
-  const pricing = calculateCurrentPricing(snapshot.pricing, validatedItems);
+  // 4. Revalidate discount/promotion
+  const discountResult = await revalidateDiscount(snapshot.pricing.discount);
+  
+  if (discountResult.status === "expired") {
+    warnings.push({
+      code: "discount_expired",
+      severity: "warning",
+      message: `Your saved discount (${snapshot.pricing.discount?.code}) has expired`,
+    });
+  } else if (discountResult.status === "invalid") {
+    warnings.push({
+      code: "discount_invalid",
+      severity: "warning",
+      message: `Your saved discount (${snapshot.pricing.discount?.code}) is no longer valid`,
+    });
+  }
   
   // 5. Add warnings for changes
   if (priceChanges.length > 0) {
@@ -94,28 +116,23 @@ export async function revalidateSavedQuote(
     }
   }
   
-  if (partialQty.length > 0) {
-    for (const item of partialQty) {
-      warnings.push({
-        code: "partial_quantity",
-        severity: "warning",
-        message: `Only ${item.currentAvailableQty} of ${item.savedQty} available for ${item.savedItem.brand} ${item.savedItem.model}`,
-        itemSku: item.savedItem.sku,
-      });
-    }
-  }
-  
-  // Check for expired promotions
-  if (snapshot.pricing.discount && !pricing.currentDiscount) {
+  // 6. Add warnings for insufficient quantity (these BLOCK continuation)
+  for (const item of insufficientQtyItems) {
     warnings.push({
-      code: "discount_expired",
-      severity: "warning",
-      message: `Your saved discount (${snapshot.pricing.discount.code}) has expired`,
+      code: "insufficient_quantity",
+      severity: "error",
+      message: `Only ${item.currentAvailableQty} of ${item.savedQty} available for ${item.savedItem.brand} ${item.savedItem.model}`,
+      itemSku: item.savedItem.sku,
     });
   }
   
-  // 6. Determine if user can continue
+  // 7. Calculate current pricing (with proper shipping/tax handling)
+  const pricing = calculateCurrentPricing(snapshot.pricing, validatedItems, discountResult);
+  
+  // 8. Determine if user can continue
+  // Insufficient quantity BLOCKS continuation (per requirements)
   const canContinue = unavailableItems.length === 0 && 
+                      insufficientQtyItems.length === 0 &&
                       fitmentFailures.length === 0 &&
                       vehicleResult.valid;
   
@@ -125,12 +142,14 @@ export async function revalidateSavedQuote(
       continueBlockedReason = "Vehicle configuration is no longer valid";
     } else if (unavailableItems.length > 0) {
       continueBlockedReason = `${unavailableItems.length} item(s) are no longer available`;
+    } else if (insufficientQtyItems.length > 0) {
+      continueBlockedReason = `${insufficientQtyItems.length} item(s) have insufficient quantity available`;
     } else if (fitmentFailures.length > 0) {
       continueBlockedReason = `${fitmentFailures.length} item(s) no longer fit your vehicle`;
     }
   }
   
-  // 7. Build cart preview (only if can continue)
+  // 9. Build cart preview (only if can continue)
   let cartPreview: ResumeValidationResult["cartPreview"];
   if (canContinue) {
     const cartItems = validatedItems
@@ -149,9 +168,11 @@ export async function revalidateSavedQuote(
     cartPreview = {
       items: cartItems,
       subtotal,
-      estimatedTax: pricing.currentTaxEstimate ?? null,
-      estimatedShipping: pricing.currentShippingEstimate ?? null,
-      total: pricing.currentTotal ?? null,
+      // Tax and shipping are PENDING - not estimated from old data
+      estimatedTax: null,
+      estimatedShipping: null,
+      // Total cannot be accurately calculated without address
+      total: null,
     };
   }
   
@@ -170,7 +191,7 @@ export async function revalidateSavedQuote(
 }
 
 // ============================================================================
-// Vehicle Validation
+// Vehicle Validation (builds fitment profile for wheel validation)
 // ============================================================================
 
 async function validateVehicle(vehicle: SavedQuoteVehicle): Promise<VehicleValidationResult> {
@@ -180,7 +201,7 @@ async function validateVehicle(vehicle: SavedQuoteVehicle): Promise<VehicleValid
       return { valid: false, reason: "Invalid vehicle year" };
     }
     
-    // Use Universal Fitment Resolver
+    // Use Universal Fitment Resolver for basic vehicle lookup
     const fitment = await resolveUniversalFitment({
       year,
       make: vehicle.make,
@@ -195,21 +216,15 @@ async function validateVehicle(vehicle: SavedQuoteVehicle): Promise<VehicleValid
       };
     }
     
-    // Check if we have enough data for fitment validation
-    if (!fitment.boltPattern) {
-      return {
-        valid: true, // Still valid, just incomplete data
-        reason: "Limited fitment data available - fitment verification may be incomplete",
-        fitmentData: {
-          boltPattern: fitment.boltPattern,
-          centerBore: fitment.centerBore,
-          threadSize: fitment.threadSize,
-          lugSeatType: fitment.lugSeatType,
-          oemTireSizes: fitment.oemTireSizes,
-          wheelDiameterRange: fitment.wheelDiameterRange,
-        },
-      };
-    }
+    // Build full fitment profile for wheel validation
+    const pool = getPool();
+    const fitmentProfile = await buildFitmentProfile(
+      pool,
+      year,
+      vehicle.make,
+      vehicle.model,
+      vehicle.trim
+    );
     
     return {
       valid: true,
@@ -221,6 +236,8 @@ async function validateVehicle(vehicle: SavedQuoteVehicle): Promise<VehicleValid
         oemTireSizes: fitment.oemTireSizes,
         wheelDiameterRange: fitment.wheelDiameterRange,
       },
+      // Store the full profile for wheel validation
+      _fitmentProfile: fitmentProfile,
     };
   } catch (err) {
     console.error("[resumeService] Vehicle validation error:", err);
@@ -234,7 +251,7 @@ async function validateVehicle(vehicle: SavedQuoteVehicle): Promise<VehicleValid
 
 async function validateItem(
   item: SavedQuoteItem,
-  _vehicle: SavedQuoteVehicle,
+  vehicle: SavedQuoteVehicle,
   vehicleResult: VehicleValidationResult
 ): Promise<ValidatedItem> {
   const baseResult: ValidatedItem = {
@@ -246,7 +263,7 @@ async function validateItem(
   
   try {
     if (item.type === "wheel") {
-      return await validateWheel(item, vehicleResult);
+      return await validateWheel(item, vehicle, vehicleResult);
     } else if (item.type === "tire") {
       return await validateTire(item, vehicleResult);
     } else if (item.type === "accessory") {
@@ -266,11 +283,12 @@ async function validateItem(
 }
 
 // ============================================================================
-// Wheel Validation
+// Wheel Validation - Uses FULL existing fitment validation
 // ============================================================================
 
 async function validateWheel(
   item: SavedQuoteItem,
+  vehicle: SavedQuoteVehicle,
   vehicleResult: VehicleValidationResult
 ): Promise<ValidatedItem> {
   const baseResult: ValidatedItem = {
@@ -295,7 +313,7 @@ async function validateWheel(
     
     const totalQty = (inventory?.totalQty ?? 0);
     
-    // Check availability
+    // Check availability - INSUFFICIENT QUANTITY BLOCKS CONTINUATION
     if (totalQty < item.quantity) {
       if (totalQty === 0) {
         return {
@@ -316,9 +334,10 @@ async function validateWheel(
           unavailableReason: "out_of_stock",
         };
       } else {
+        // Insufficient quantity - BLOCKS continuation (not partial fulfillment)
         return {
           ...baseResult,
-          status: "quantity_partial",
+          status: "insufficient_quantity",
           currentItem: {
             sku: wheel.sku,
             brand: wheel.brand_desc || "Unknown",
@@ -337,13 +356,22 @@ async function validateWheel(
       }
     }
     
-    // Check fitment if we have vehicle data
-    if (vehicleResult.fitmentData?.boltPattern && wheel.bolt_pattern_metric) {
-      const wheelBoltPattern = wheel.bolt_pattern_metric;
-      const vehicleBoltPattern = vehicleResult.fitmentData.boltPattern;
+    // FULL FITMENT VALIDATION using existing vehicleFitment.ts evaluateWheel
+    const fitmentProfile = (vehicleResult as any)._fitmentProfile as FitmentProfile | null;
+    
+    if (fitmentProfile) {
+      const wheelToValidate: WheelToValidate = {
+        sku: wheel.sku,
+        boltPattern: wheel.bolt_pattern_metric || wheel.bolt_pattern_standard,
+        centerBore: wheel.centerbore ? Number(wheel.centerbore) : undefined,
+        diameter: wheel.diameter ? Number(wheel.diameter) : undefined,
+        width: wheel.width ? Number(wheel.width) : undefined,
+        offset: wheel.offset ? Number(wheel.offset) : undefined,
+      };
       
-      // Simple bolt pattern check (could be more sophisticated)
-      if (!boltPatternsMatch(wheelBoltPattern, vehicleBoltPattern)) {
+      const fitmentResult = evaluateWheel(wheelToValidate, fitmentProfile);
+      
+      if (fitmentResult.fitmentClass === "excluded") {
         return {
           ...baseResult,
           status: "fitment_failed",
@@ -357,7 +385,7 @@ async function validateWheel(
           },
           currentUnitPrice: currentPrice,
           currentAvailableQty: totalQty,
-          message: `Wheel bolt pattern (${wheelBoltPattern}) doesn't match vehicle (${vehicleBoltPattern})`,
+          message: fitmentResult.exclusionReasons.join("; "),
         };
       }
     }
@@ -392,7 +420,7 @@ async function validateWheel(
   const pool = getPool();
   const { rows } = await pool.query(
     `SELECT sku, brand, name, description, msrp, map_price, has_map,
-            diameter, wheel_width, offset_mm, pcd1,
+            diameter, wheel_width, offset_mm, pcd1, hub,
             image1, image1_source
      FROM wheel1_products WHERE sku = $1 AND is_discontinued = FALSE`,
     [item.sku]
@@ -404,7 +432,40 @@ async function validateWheel(
     const mapNum = w.map_price && Number(w.map_price) > 0 ? Number(w.map_price) : null;
     const currentPrice = calculateWheelSellPrice({ sku: w.sku, map: mapNum, msrp: msrpNum });
     
-    // Wheel-1 doesn't have real-time inventory, assume available
+    // Wheel-1 fitment validation
+    const fitmentProfile = (vehicleResult as any)._fitmentProfile as FitmentProfile | null;
+    
+    if (fitmentProfile) {
+      const wheelToValidate: WheelToValidate = {
+        sku: w.sku,
+        boltPattern: w.pcd1,
+        centerBore: w.hub ? Number(w.hub) : undefined,
+        diameter: w.diameter ? Number(w.diameter) : undefined,
+        width: w.wheel_width ? Number(w.wheel_width) : undefined,
+        offset: w.offset_mm ? Number(w.offset_mm) : undefined,
+      };
+      
+      const fitmentResult = evaluateWheel(wheelToValidate, fitmentProfile);
+      
+      if (fitmentResult.fitmentClass === "excluded") {
+        return {
+          ...baseResult,
+          status: "fitment_failed",
+          currentItem: {
+            sku: w.sku,
+            brand: w.brand,
+            model: w.name || w.description || w.sku,
+            unitPrice: currentPrice,
+            availableQty: 4, // Synthetic for Wheel-1
+            supplier: "wheel1",
+          },
+          currentUnitPrice: currentPrice,
+          currentAvailableQty: 4,
+          message: fitmentResult.exclusionReasons.join("; "),
+        };
+      }
+    }
+    
     const priceDiff = currentPrice - item.unitPrice;
     const status: ItemValidationStatus = Math.abs(priceDiff) < 0.01 ? "unchanged" : "price_changed";
     
@@ -454,7 +515,6 @@ async function validateTire(
     savedQty: item.quantity,
   };
   
-  // Get tire size from saved item
   const tireSize = item.size;
   if (!tireSize) {
     return {
@@ -465,12 +525,10 @@ async function validateTire(
     };
   }
   
-  // Search for tire by size to get current pricing
-  // We'll use internal fetch to reuse existing tire search logic
   try {
     const searchUrl = new URL(`${BASE_URL}/api/tires/search`);
     searchUrl.searchParams.set("size", tireSize);
-    searchUrl.searchParams.set("limit", "100"); // Get more results to find the exact SKU
+    searchUrl.searchParams.set("limit", "100");
     
     const response = await fetch(searchUrl.toString(), {
       headers: { Accept: "application/json" },
@@ -488,6 +546,7 @@ async function validateTire(
       model: string;
       sellPrice: number;
       inStock: boolean;
+      availableQty?: number;
       imageUrl?: string;
       source?: string;
     }> = data.tires || [];
@@ -503,22 +562,42 @@ async function validateTire(
       );
       
       if (brandModelMatch) {
-        // Found by brand/model but different SKU - treat as substituted/needs review
         const priceDiff = brandModelMatch.sellPrice - item.unitPrice;
+        // Check availability
+        if (!brandModelMatch.inStock) {
+          return {
+            ...baseResult,
+            status: "unavailable",
+            currentItem: {
+              sku: brandModelMatch.sku,
+              brand: brandModelMatch.brand,
+              model: brandModelMatch.model,
+              unitPrice: brandModelMatch.sellPrice,
+              availableQty: 0,
+              supplier: brandModelMatch.source || "tireweb",
+              imageUrl: brandModelMatch.imageUrl,
+            },
+            currentUnitPrice: brandModelMatch.sellPrice,
+            currentAvailableQty: 0,
+            message: "This tire is currently out of stock",
+            unavailableReason: "out_of_stock",
+          };
+        }
+        
         return {
           ...baseResult,
-          status: "price_changed", // Or could be "substituted" if we add that status
+          status: "price_changed",
           currentItem: {
             sku: brandModelMatch.sku,
             brand: brandModelMatch.brand,
             model: brandModelMatch.model,
             unitPrice: brandModelMatch.sellPrice,
-            availableQty: brandModelMatch.inStock ? 100 : 0, // TireWeb doesn't give exact qty
+            availableQty: brandModelMatch.availableQty || 100,
             supplier: brandModelMatch.source || "tireweb",
             imageUrl: brandModelMatch.imageUrl,
           },
           currentUnitPrice: brandModelMatch.sellPrice,
-          currentAvailableQty: brandModelMatch.inStock ? 100 : 0,
+          currentAvailableQty: brandModelMatch.availableQty || 100,
           priceDifference: priceDiff,
           priceChangePercent: item.unitPrice > 0 ? (priceDiff / item.unitPrice) * 100 : 0,
           message: `Price ${priceDiff >= 0 ? 'increased' : 'decreased'} by $${Math.abs(priceDiff).toFixed(2)}`,
@@ -554,6 +633,28 @@ async function validateTire(
       };
     }
     
+    // Check quantity availability (TireWeb may have limited stock)
+    const availableQty = match.availableQty || 100; // Default high if not provided
+    if (availableQty < item.quantity) {
+      return {
+        ...baseResult,
+        status: "insufficient_quantity",
+        currentItem: {
+          sku: match.sku,
+          brand: match.brand,
+          model: match.model,
+          unitPrice: match.sellPrice,
+          availableQty,
+          supplier: match.source || "tireweb",
+          imageUrl: match.imageUrl,
+        },
+        currentUnitPrice: match.sellPrice,
+        currentAvailableQty: availableQty,
+        priceDifference: match.sellPrice - item.unitPrice,
+        message: `Only ${availableQty} available (you saved ${item.quantity})`,
+      };
+    }
+    
     // Price comparison
     const priceDiff = match.sellPrice - item.unitPrice;
     const status: ItemValidationStatus = Math.abs(priceDiff) < 0.01 ? "unchanged" : "price_changed";
@@ -566,12 +667,12 @@ async function validateTire(
         brand: match.brand,
         model: match.model,
         unitPrice: match.sellPrice,
-        availableQty: 100, // TireWeb doesn't provide exact qty
+        availableQty,
         supplier: match.source || "tireweb",
         imageUrl: match.imageUrl,
       },
       currentUnitPrice: match.sellPrice,
-      currentAvailableQty: 100,
+      currentAvailableQty: availableQty,
       priceDifference: priceDiff,
       priceChangePercent: item.unitPrice > 0 ? (priceDiff / item.unitPrice) * 100 : 0,
       message: status === "price_changed"
@@ -601,7 +702,6 @@ async function validateAccessory(item: SavedQuoteItem): Promise<ValidatedItem> {
     savedQty: item.quantity,
   };
   
-  // Query accessories table directly
   try {
     const pool = getPool();
     const { rows } = await pool.query(
@@ -676,45 +776,119 @@ async function validateAccessory(item: SavedQuoteItem): Promise<ValidatedItem> {
 }
 
 // ============================================================================
-// Pricing Calculation
+// Discount/Promotion Revalidation - Uses existing discount services
+// ============================================================================
+
+type DiscountRevalidationResult = {
+  status: "valid" | "expired" | "invalid" | "none";
+  currentDiscount?: {
+    code: string;
+    discountPercent: number;
+    type: string;
+  };
+};
+
+async function revalidateDiscount(
+  savedDiscount?: { code: string; amount: number; type: string }
+): Promise<DiscountRevalidationResult> {
+  if (!savedDiscount || !savedDiscount.code) {
+    return { status: "none" };
+  }
+  
+  try {
+    // Try first-order discount validation
+    const firstOrderResult = await firstOrderService.validateDiscount(savedDiscount.code);
+    
+    if (firstOrderResult.valid) {
+      return {
+        status: "valid",
+        currentDiscount: {
+          code: savedDiscount.code,
+          discountPercent: firstOrderResult.discountPercent || 10,
+          type: "first_order",
+        },
+      };
+    }
+    
+    // Check if explicitly expired
+    if (firstOrderResult.expired) {
+      return { status: "expired" };
+    }
+    
+    // Try campaign discount
+    const campaignResult = await campaignDiscountService.validateCampaignDiscount(savedDiscount.code);
+    
+    if (campaignResult.valid) {
+      return {
+        status: "valid",
+        currentDiscount: {
+          code: savedDiscount.code,
+          discountPercent: campaignResult.discountPercent || 10,
+          type: "campaign",
+        },
+      };
+    }
+    
+    if (campaignResult.expired) {
+      return { status: "expired" };
+    }
+    
+    // Neither valid - treat as invalid
+    return { status: "invalid" };
+  } catch (err) {
+    console.error("[resumeService] Discount validation error:", err);
+    // On error, assume expired to be safe
+    return { status: "expired" };
+  }
+}
+
+// ============================================================================
+// Pricing Calculation - Properly handles shipping/tax as pending
 // ============================================================================
 
 function calculateCurrentPricing(
   savedPricing: SavedQuoteSnapshot["pricing"],
-  validatedItems: ValidatedItem[]
+  validatedItems: ValidatedItem[],
+  discountResult: DiscountRevalidationResult
 ): CurrentPricingSummary {
   // Calculate current subtotal from validated items
   const currentSubtotal = validatedItems.reduce((sum, vi) => {
-    if (vi.currentItem && vi.status !== "unavailable" && vi.status !== "fitment_failed") {
+    if (vi.currentItem && vi.status !== "unavailable" && vi.status !== "fitment_failed" && vi.status !== "insufficient_quantity") {
       return sum + (vi.currentItem.unitPrice * vi.savedQty);
     }
     return sum;
   }, 0);
   
-  // Estimate tax (using same rate as saved quote)
-  const currentTaxEstimate = savedPricing.taxRate > 0 
-    ? currentSubtotal * savedPricing.taxRate 
-    : null;
-  
-  // Shipping estimate - keep saved estimate for now (would need address to recalculate)
-  const currentShippingEstimate = savedPricing.estimatedShipping;
-  
-  // Check if saved discount would still apply (simplified - would need promo validation logic)
+  // Current discount (only if still valid)
   let currentDiscount: CurrentPricingSummary["currentDiscount"] = null;
-  if (savedPricing.discount) {
-    // For now, assume saved discounts are expired
-    // In production, would call discount validation API
+  if (discountResult.status === "valid" && discountResult.currentDiscount) {
+    const discountAmount = currentSubtotal * (discountResult.currentDiscount.discountPercent / 100);
     currentDiscount = {
-      ...savedPricing.discount,
+      code: discountResult.currentDiscount.code,
+      amount: discountAmount,
+      type: discountResult.currentDiscount.type,
+      expired: false,
+    };
+  } else if (savedPricing.discount && discountResult.status !== "none") {
+    // Discount was saved but is no longer valid
+    currentDiscount = {
+      code: savedPricing.discount.code,
+      amount: 0,
+      type: savedPricing.discount.type,
       expired: true,
     };
   }
   
-  // Calculate current total
-  const currentTotal = currentSubtotal + 
-    (currentTaxEstimate || 0) + 
-    (currentShippingEstimate || 0) -
-    (currentDiscount?.expired === false ? currentDiscount.amount : 0);
+  // Shipping: PENDING - cannot calculate without address
+  // Do NOT carry over saved shipping as "current"
+  const currentShippingEstimate: number | null = null; // PENDING
+  
+  // Tax: PENDING - cannot accurately calculate without address
+  // Do NOT apply saved tax rate to current subtotal
+  const currentTaxEstimate: number | null = null; // PENDING
+  
+  // Current total: subtotal - discount (shipping and tax pending at checkout)
+  const subtotalAfterDiscount = currentSubtotal - (currentDiscount?.amount || 0);
   
   return {
     savedSubtotal: savedPricing.partsSubtotal + savedPricing.servicesSubtotal,
@@ -722,66 +896,24 @@ function calculateCurrentPricing(
     savedShipping: savedPricing.estimatedShipping,
     savedDiscount: savedPricing.discount,
     savedTotal: savedPricing.total,
+    
+    // Current values
     currentSubtotal,
-    currentTaxEstimate: currentTaxEstimate ?? undefined,
-    currentShippingEstimate,
+    currentTaxEstimate: undefined, // Pending
+    currentShippingEstimate: null, // Pending
     currentDiscount,
-    currentTotal,
+    
+    // Current total is merchandise subtotal only (tax/shipping pending)
+    currentTotal: subtotalAfterDiscount,
+    
+    // Show differences in merchandise value
     subtotalDifference: currentSubtotal - (savedPricing.partsSubtotal + savedPricing.servicesSubtotal),
-    totalDifference: currentTotal - savedPricing.total,
+    
+    // Total difference only reflects merchandise (tax/shipping will be at checkout)
+    totalDifference: subtotalAfterDiscount - savedPricing.total,
+    
+    // Flags to indicate what's pending
+    shippingPending: true,
+    taxPending: true,
   };
-}
-
-// ============================================================================
-// Utility Functions
-// ============================================================================
-
-/**
- * Check if two bolt patterns are compatible
- * Handles formats like "5x114.3", "5x4.5", "5x114.3/5x120" (dual pattern)
- */
-function boltPatternsMatch(wheelPattern: string, vehiclePattern: string): boolean {
-  const normalize = (p: string) => p.toLowerCase().replace(/\s+/g, "");
-  const wp = normalize(wheelPattern);
-  const vp = normalize(vehiclePattern);
-  
-  // Exact match
-  if (wp === vp) return true;
-  
-  // Check dual patterns (e.g., "5x114.3/5x120")
-  const wpPatterns = wp.split("/");
-  const vpPatterns = vp.split("/");
-  
-  // Any wheel pattern matches any vehicle pattern
-  for (const w of wpPatterns) {
-    for (const v of vpPatterns) {
-      if (w === v) return true;
-      
-      // Handle metric/imperial conversion (e.g., 5x4.5 = 5x114.3)
-      const wNorm = convertToMetric(w);
-      const vNorm = convertToMetric(v);
-      if (wNorm === vNorm) return true;
-    }
-  }
-  
-  return false;
-}
-
-/**
- * Convert imperial bolt pattern to metric
- * e.g., "5x4.5" → "5x114.3"
- */
-function convertToMetric(pattern: string): string {
-  const match = pattern.match(/^(\d+)x([\d.]+)$/);
-  if (!match) return pattern;
-  
-  const bolts = match[1];
-  const spacing = parseFloat(match[2]);
-  
-  // If already metric (> 50), return as-is
-  if (spacing > 50) return pattern;
-  
-  // Convert inches to mm
-  const metricSpacing = (spacing * 25.4).toFixed(1);
-  return `${bolts}x${metricSpacing}`;
 }

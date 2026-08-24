@@ -156,6 +156,8 @@ type CartContextValue = {
   removeItem: (sku: string, type: "wheel" | "tire" | "accessory") => void;
   updateQuantity: (sku: string, type: "wheel" | "tire" | "accessory", quantity: number) => void;
   clearCart: () => void;
+  /** Replace entire cart with new items (for quote resume, cart restore) */
+  replaceCart: (newItems: CartItem[]) => void;
   getItemCount: () => number;
   getTotal: () => number;
   hasWheels: () => boolean;
@@ -415,6 +417,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setLastAddedItem(null);
   }, []);
 
+  /**
+   * Replace entire cart with new items.
+   * Used for quote resume, cart restore, etc.
+   * Clears existing items and sets new ones atomically.
+   */
+  const replaceCart = useCallback((newItems: CartItem[]) => {
+    console.log("[cart] Replacing cart with", newItems.length, "items");
+    setItems(newItems);
+    setLastAddedItem(newItems.length > 0 ? newItems[0] : null);
+    // Don't auto-open slideout for replace operations
+  }, []);
+
   const getItemCount = useCallback(() => {
     return items.reduce((sum, i) => sum + i.quantity, 0);
   }, [items]);
@@ -522,6 +536,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         removeItem,
         updateQuantity,
         clearCart,
+        replaceCart,
         getItemCount,
         getTotal,
         hasWheels,

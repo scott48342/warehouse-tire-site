@@ -23,7 +23,7 @@
 import { NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
-import { getSavedQuoteById } from "@/lib/savedQuotes/savedQuoteService";
+import { getSavedQuote } from "@/lib/savedQuotes/savedQuoteService";
 import { revalidateSavedQuote } from "@/lib/savedQuotes/resumeService";
 import type { ResumeAPIResponse } from "@/lib/savedQuotes/resumeTypes";
 import type { SavedQuoteSnapshot } from "@/lib/savedQuotes/types";
@@ -87,7 +87,7 @@ export async function POST(
     // ══════════════════════════════════════════════════════════════════════════
     // Fetch Quote (ownership verified inside)
     // ══════════════════════════════════════════════════════════════════════════
-    const quote = await getSavedQuoteById(userId, id);
+    const quote = await getSavedQuote(userId, id);
     
     if (!quote) {
       // Return 404 for both "not found" and "not owned by user"

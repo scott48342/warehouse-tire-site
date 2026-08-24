@@ -6,12 +6,18 @@
  * Displays full quote details including vehicle, items, and pricing.
  * Supports "Check Current Price" revalidation flow.
  * 
+ * Uses:
+ * - CartContext.replaceCart() for cart replacement (not direct localStorage)
+ * - GarageContext.setActiveVehicleByData() for vehicle activation (with dedup)
+ * 
  * @created 2026-08-24
- * @updated 2026-08-24 - Added revalidation/resume flow (B5)
+ * @updated 2026-08-24 - B5 fixes: proper context integration, insufficient qty handling
  */
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useCart, type CartItem, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { useGarage } from "@/contexts/GarageContext";
 import type { SavedQuoteDetailResponse, SavedQuoteItem } from "@/lib/savedQuotes/types";
 import type { ResumeValidationResult, ValidatedItem } from "@/lib/savedQuotes/resumeTypes";
 
@@ -21,25 +27,15 @@ interface QuoteDetailModalProps {
 }
 
 function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(amount);
+  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount);
 }
 
 function formatDate(isoDate: string): string {
   try {
     return new Date(isoDate).toLocaleDateString("en-US", {
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-      hour: "numeric",
-      minute: "2-digit",
+      weekday: "short", month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit",
     });
-  } catch {
-    return isoDate;
-  }
+  } catch { return isoDate; }
 }
 
 function ItemTypeIcon({ type }: { type: string }) {
@@ -106,14 +102,14 @@ function QuoteItem({ item }: { item: SavedQuoteItem }) {
 // ============================================================================
 
 function ValidatedItemRow({ item }: { item: ValidatedItem }) {
-  const { savedItem, status, currentUnitPrice, priceDifference, message } = item;
+  const { savedItem, status, currentUnitPrice, priceDifference, currentAvailableQty, message } = item;
   
   const statusColors: Record<string, string> = {
     unchanged: "bg-green-50 border-green-200",
     price_changed: "bg-amber-50 border-amber-200",
     unavailable: "bg-red-50 border-red-200",
     fitment_failed: "bg-red-50 border-red-200",
-    quantity_partial: "bg-amber-50 border-amber-200",
+    insufficient_quantity: "bg-red-50 border-red-200",
     needs_review: "bg-neutral-50 border-neutral-200",
   };
   
@@ -122,9 +118,11 @@ function ValidatedItemRow({ item }: { item: ValidatedItem }) {
     price_changed: priceDifference && priceDifference > 0 ? "↑" : "↓",
     unavailable: "✗",
     fitment_failed: "⚠",
-    quantity_partial: "⚠",
+    insufficient_quantity: "⚠",
     needs_review: "?",
   };
+  
+  const isBlocking = status === "unavailable" || status === "fitment_failed" || status === "insufficient_quantity";
   
   return (
     <div className={`flex items-start gap-4 p-4 rounded-xl border ${statusColors[status] || statusColors.needs_review}`}>
@@ -144,8 +142,13 @@ function ValidatedItemRow({ item }: { item: ValidatedItem }) {
             <div className="text-sm text-neutral-500">
               {savedItem.quantity}× • {savedItem.type === "tire" ? savedItem.size : savedItem.type === "wheel" ? `${savedItem.diameter}"` : savedItem.category}
             </div>
-            {message && (
-              <div className={`text-sm mt-1 ${status === "unavailable" || status === "fitment_failed" ? "text-red-600" : "text-amber-600"}`}>
+            {status === "insufficient_quantity" && (
+              <div className="text-sm mt-1 text-red-600">
+                Requested: {savedItem.quantity} • Available: {currentAvailableQty ?? 0}
+              </div>
+            )}
+            {message && status !== "insufficient_quantity" && (
+              <div className={`text-sm mt-1 ${isBlocking ? "text-red-600" : "text-amber-600"}`}>
                 {message}
               </div>
             )}
@@ -153,8 +156,10 @@ function ValidatedItemRow({ item }: { item: ValidatedItem }) {
           <div className="text-right flex-shrink-0">
             <div className="flex items-center gap-2">
               <span className="text-lg">{statusIcons[status] || "?"}</span>
-              {status === "unavailable" || status === "fitment_failed" ? (
-                <span className="text-red-600 font-semibold">Unavailable</span>
+              {isBlocking ? (
+                <span className="text-red-600 font-semibold">
+                  {status === "insufficient_quantity" ? "Insufficient Qty" : "Unavailable"}
+                </span>
               ) : (
                 <div>
                   {currentUnitPrice !== undefined && (
@@ -188,9 +193,9 @@ function RevalidationResults({
   isContinuing: boolean;
 }) {
   const { canContinue, items, pricing, warnings } = result;
-  const priceIncreased = (pricing.totalDifference ?? 0) > 0;
-  const priceDecreased = (pricing.totalDifference ?? 0) < 0;
-  const priceUnchanged = Math.abs(pricing.totalDifference ?? 0) < 0.01;
+  const priceIncreased = (pricing.subtotalDifference ?? 0) > 0;
+  const priceDecreased = (pricing.subtotalDifference ?? 0) < 0;
+  const priceUnchanged = Math.abs(pricing.subtotalDifference ?? 0) < 0.01;
   
   return (
     <div className="space-y-6">
@@ -244,21 +249,24 @@ function RevalidationResults({
         <h3 className="font-semibold text-neutral-900 mb-3">Price Comparison</h3>
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-neutral-100 rounded-xl p-4">
-            <div className="text-sm text-neutral-500 mb-1">When Saved</div>
+            <div className="text-sm text-neutral-500 mb-1">When Saved (Total)</div>
             <div className="text-2xl font-bold text-neutral-900">{formatCurrency(pricing.savedTotal)}</div>
+            <div className="text-xs text-neutral-400 mt-1">Included tax & shipping</div>
           </div>
           <div className={`rounded-xl p-4 ${
             !canContinue ? "bg-neutral-100" :
             priceDecreased ? "bg-green-100" :
             priceIncreased ? "bg-amber-100" : "bg-green-100"
           }`}>
-            <div className="text-sm text-neutral-500 mb-1">Today's Price</div>
-            {canContinue && pricing.currentTotal !== undefined ? (
+            <div className="text-sm text-neutral-500 mb-1">Current Subtotal</div>
+            {canContinue && pricing.currentSubtotal !== undefined ? (
               <>
-                <div className="text-2xl font-bold text-neutral-900">{formatCurrency(pricing.currentTotal)}</div>
+                <div className="text-2xl font-bold text-neutral-900">{formatCurrency(pricing.currentSubtotal)}</div>
+                <div className="text-xs text-neutral-400 mt-1">+ Tax & shipping at checkout</div>
                 {!priceUnchanged && (
                   <div className={`text-sm mt-1 ${priceDecreased ? "text-green-600" : "text-amber-600"}`}>
-                    {priceDecreased ? "You save " : ""}{formatCurrency(Math.abs(pricing.totalDifference ?? 0))}{priceIncreased ? " more" : ""}
+                    {priceDecreased ? "↓ " : "↑ "}{formatCurrency(Math.abs(pricing.subtotalDifference ?? 0))}
+                    {priceDecreased ? " less" : " more"}
                   </div>
                 )}
               </>
@@ -267,6 +275,25 @@ function RevalidationResults({
             )}
           </div>
         </div>
+        
+        {/* Tax/Shipping pending notice */}
+        {canContinue && (pricing.shippingPending || pricing.taxPending) && (
+          <div className="mt-3 text-sm text-neutral-500 bg-neutral-50 p-3 rounded-lg">
+            <strong>Note:</strong> Final tax and shipping will be calculated at checkout based on your delivery address.
+          </div>
+        )}
+        
+        {/* Discount status */}
+        {pricing.currentDiscount?.expired && (
+          <div className="mt-3 text-sm text-amber-700 bg-amber-50 p-3 rounded-lg">
+            Your saved discount ({pricing.savedDiscount?.code}) has expired and is not included in the current price.
+          </div>
+        )}
+        {pricing.currentDiscount && !pricing.currentDiscount.expired && (
+          <div className="mt-3 text-sm text-green-700 bg-green-50 p-3 rounded-lg">
+            Discount {pricing.currentDiscount.code} ({pricing.currentDiscount.amount > 0 ? `-${formatCurrency(pricing.currentDiscount.amount)}` : "still valid"}) applied
+          </div>
+        )}
       </div>
 
       {/* Actions */}
@@ -328,6 +355,11 @@ function CartReplacementConfirm({
 
 export function QuoteDetailModal({ quoteId, onClose }: QuoteDetailModalProps) {
   const router = useRouter();
+  
+  // Use proper context hooks instead of direct localStorage
+  const { items: cartItems, replaceCart, getItemCount } = useCart();
+  const { setActiveVehicleByData } = useGarage();
+  
   const [quote, setQuote] = useState<SavedQuoteDetailResponse | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -379,8 +411,10 @@ export function QuoteDetailModal({ quoteId, onClose }: QuoteDetailModalProps) {
 
   const handleContinue = async () => {
     if (!revalidationResult?.canContinue || !revalidationResult.cartPreview) return;
-    const cartData = localStorage.getItem("wtd_cart_v2");
-    const hasExistingCart = cartData && JSON.parse(cartData)?.items?.length > 0;
+    
+    // Check if cart has items using CartContext
+    const hasExistingCart = getItemCount() > 0;
+    
     if (hasExistingCart) {
       setShowCartConfirm(true);
     } else {
@@ -392,71 +426,97 @@ export function QuoteDetailModal({ quoteId, onClose }: QuoteDetailModalProps) {
     if (!revalidationResult?.cartPreview || !quote) return;
     setIsContinuing(true);
     setShowCartConfirm(false);
+    
     try {
-      const cartItems = revalidationResult.cartPreview.items.map(item => {
+      // Build cart items from validation result
+      const newCartItems: CartItem[] = revalidationResult.cartPreview.items.map(item => {
         const savedItem = quote.snapshot.items.find(si => si.sku === item.sku);
+        
         if (item.type === "wheel") {
-          return {
-            id: `wheel_${item.sku}_${Date.now()}`,
-            type: "wheel" as const,
-            sku: item.sku, rearSku: savedItem?.rearSku, brand: item.brand, model: item.model,
-            finish: savedItem?.finish, diameter: savedItem?.diameter, width: savedItem?.width,
-            offset: savedItem?.offset, boltPattern: savedItem?.boltPattern, quantity: item.quantity,
-            unitPrice: item.unitPrice, imageUrl: savedItem?.imageUrl, staggered: savedItem?.staggered,
+          const wheelItem: CartWheelItem = {
+            type: "wheel",
+            sku: item.sku,
+            rearSku: savedItem?.rearSku,
+            brand: item.brand,
+            model: item.model,
+            finish: savedItem?.finish,
+            diameter: savedItem?.diameter,
+            width: savedItem?.width,
+            offset: savedItem?.offset,
+            boltPattern: savedItem?.boltPattern,
+            quantity: item.quantity,
+            unitPrice: item.unitPrice,
+            imageUrl: savedItem?.imageUrl,
+            staggered: savedItem?.staggered,
+            vehicle: quote.vehicle ? {
+              year: quote.vehicle.year,
+              make: quote.vehicle.make,
+              model: quote.vehicle.model,
+              trim: quote.vehicle.trim,
+              modification: quote.vehicle.modification,
+            } : undefined,
           };
+          return wheelItem;
         } else if (item.type === "tire") {
-          return {
-            id: `tire_${item.sku}_${Date.now()}`,
-            type: "tire" as const,
-            sku: item.sku, rearSku: savedItem?.rearSku, brand: item.brand, model: item.model,
-            size: savedItem?.size, rearSize: savedItem?.rearSize, loadIndex: savedItem?.loadIndex,
-            speedRating: savedItem?.speedRating, quantity: item.quantity, unitPrice: item.unitPrice,
-            imageUrl: savedItem?.imageUrl, staggered: savedItem?.staggered, source: savedItem?.source,
+          const tireItem: CartTireItem = {
+            type: "tire",
+            sku: item.sku,
+            rearSku: savedItem?.rearSku,
+            brand: item.brand,
+            model: item.model,
+            size: savedItem?.size || "",
+            rearSize: savedItem?.rearSize,
+            loadIndex: savedItem?.loadIndex,
+            speedRating: savedItem?.speedRating,
+            quantity: item.quantity,
+            unitPrice: item.unitPrice,
+            imageUrl: savedItem?.imageUrl,
+            staggered: savedItem?.staggered,
+            source: savedItem?.source,
+            vehicle: quote.vehicle ? {
+              year: quote.vehicle.year,
+              make: quote.vehicle.make,
+              model: quote.vehicle.model,
+              trim: quote.vehicle.trim,
+              modification: quote.vehicle.modification,
+            } : undefined,
           };
+          return tireItem;
         } else {
-          return {
-            id: `accessory_${item.sku}_${Date.now()}`,
-            type: "accessory" as const,
-            sku: item.sku, brand: item.brand, name: item.model, category: savedItem?.category,
-            quantity: item.quantity, unitPrice: item.unitPrice, imageUrl: savedItem?.imageUrl,
-            required: savedItem?.required, reason: savedItem?.reason,
+          const accessoryItem: CartAccessoryItem = {
+            type: "accessory",
+            sku: item.sku,
+            brand: item.brand,
+            name: item.model,
+            category: (savedItem?.category as CartAccessoryItem["category"]) || "other",
+            quantity: item.quantity,
+            unitPrice: item.unitPrice,
+            imageUrl: savedItem?.imageUrl,
+            required: savedItem?.required ?? false,
+            reason: savedItem?.reason ?? "",
           };
+          return accessoryItem;
         }
       });
 
-      // Update garage
-      const vehicle = quote.vehicle;
-      const garageVehicle = {
-        id: `garage_${Date.now()}`,
-        year: vehicle.year, make: vehicle.make, model: vehicle.model,
-        trim: vehicle.trim || undefined, modification: vehicle.modification || undefined,
-      };
-      const garageData = localStorage.getItem("wtd_garage_v2");
-      let garage = garageData ? JSON.parse(garageData) : { vehicles: [], activeVehicleId: null };
-      const existingVehicle = garage.vehicles?.find((v: any) => 
-        v.year === garageVehicle.year && v.make === garageVehicle.make &&
-        v.model === garageVehicle.model && v.trim === garageVehicle.trim
-      );
-      if (existingVehicle) {
-        garage.activeVehicleId = existingVehicle.id;
-      } else {
-        garage.vehicles = [...(garage.vehicles || []), garageVehicle];
-        garage.activeVehicleId = garageVehicle.id;
+      // Use CartContext.replaceCart (not direct localStorage)
+      replaceCart(newCartItems);
+      
+      // Use GarageContext.setActiveVehicleByData for vehicle activation (handles dedup)
+      if (quote.vehicle) {
+        setActiveVehicleByData({
+          year: quote.vehicle.year,
+          make: quote.vehicle.make,
+          model: quote.vehicle.model,
+          trim: quote.vehicle.trim,
+          modification: quote.vehicle.modification,
+        });
       }
-      localStorage.setItem("wtd_garage_v2", JSON.stringify(garage));
-
-      // Replace cart
-      const newCart = {
-        items: cartItems,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      localStorage.setItem("wtd_cart_v2", JSON.stringify(newCart));
-      window.dispatchEvent(new StorageEvent("storage", { key: "wtd_cart_v2", newValue: JSON.stringify(newCart) }));
 
       onClose();
       router.push("/cart");
     } catch (err) {
+      console.error("[QuoteDetailModal] Cart replacement error:", err);
       setRevalidationError("Failed to add items to cart");
     } finally {
       setIsContinuing(false);

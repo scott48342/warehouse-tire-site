@@ -16,6 +16,7 @@ import { useCart } from "@/lib/cart/CartContext";
 import { useGarage } from "@/contexts/GarageContext";
 import { authClient } from "@/lib/auth-client";
 import { storePendingClaim } from "@/lib/savedQuotes/pendingClaimStorage";
+import { getCartId } from "@/lib/cart/useCartTracking";
 import type { SaveQuoteRequest } from "@/lib/savedQuotes/types";
 
 interface SaveQuoteButtonProps {
@@ -30,7 +31,8 @@ export function SaveQuoteButton({
   onSaveComplete,
 }: SaveQuoteButtonProps) {
   const router = useRouter();
-  const { items, cartId } = useCart();
+  const { items } = useCart();
+  const cartId = getCartId();
   const { activeVehicle } = useGarage();
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
