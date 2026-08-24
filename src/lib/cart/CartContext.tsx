@@ -285,6 +285,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [items, hydrated]);
 
   const addItem = useCallback((item: CartItem, source?: string) => {
+    // IMPORTANT: Clear saved quote correlation when adding new items
+    // Adding items indicates the customer is now shopping fresh content,
+    // not continuing from the saved quote. This prevents stale correlations.
+    setResumedFromQuoteId(null);
+    if (typeof localStorage !== "undefined") {
+      localStorage.removeItem("wt_resumed_quote");
+    }
+    
     setItems((prev) => {
       // Check if item already exists (same SKU and type)
       const existingIndex = prev.findIndex(
