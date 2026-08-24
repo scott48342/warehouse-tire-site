@@ -24,7 +24,10 @@ import {
   timestamp,
   index,
   uniqueIndex,
+  jsonb,
 } from "drizzle-orm/pg-core";
+
+import type { SavedQuoteSnapshot } from "./savedQuotes/types";
 
 // ============================================================================
 // AUTH_USERS - Customer Accounts
@@ -269,8 +272,8 @@ export const savedQuotes = pgTable(
     vehicleTrim: text("vehicle_trim"),
     vehicleModification: text("vehicle_modification"),
     
-    // Immutable configuration snapshot
-    snapshotJson: text("snapshot_json").notNull(), // JSONB stored as text for Drizzle
+    // Immutable configuration snapshot (JSONB in database)
+    snapshotJson: jsonb("snapshot_json").$type<SavedQuoteSnapshot>().notNull(),
     
     // Timestamps
     savedAt: timestamp("saved_at", { withTimezone: true }).notNull().defaultNow(),
@@ -314,8 +317,8 @@ export const pendingSavedQuotes = pgTable(
   {
     token: text("token").primaryKey(), // Format: psq_<nanoid(32)>
     
-    // Validated snapshot
-    snapshotJson: text("snapshot_json").notNull(),
+    // Validated snapshot (JSONB in database)
+    snapshotJson: jsonb("snapshot_json").$type<SavedQuoteSnapshot>().notNull(),
     
     // Vehicle (denormalized)
     vehicleYear: text("vehicle_year"),

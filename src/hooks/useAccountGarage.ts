@@ -32,6 +32,10 @@ type AccountGarageState = {
   error: string | null;
   /** Server-side active vehicle ID (may differ from local during sync) */
   serverActiveId: string | null;
+  /** Number of sync attempts (for backoff) */
+  syncAttempts: number;
+  /** Timestamp of last sync attempt */
+  lastSyncAttempt: number;
 };
 
 /**
@@ -130,20 +134,37 @@ export function useAccountGarage() {
     isSynced: false,
     error: null,
     serverActiveId: null,
+    syncAttempts: 0,
+    lastSyncAttempt: 0,
   });
+
+  // Max retries before giving up (exponential backoff: 1s, 2s, 4s, 8s)
+  const MAX_SYNC_RETRIES = 4;
 
   const isAuthenticated = !!session?.user?.id;
 
   /**
    * Sync local garage with server on login
+   * Uses exponential backoff on failure (1s, 2s, 4s, 8s max)
    */
-  const syncGarage = useCallback(async () => {
+  const syncGarage = useCallback(async (isRetry = false) => {
     if (!isAuthenticated) {
-      setState(prev => ({ ...prev, isSynced: false, error: null }));
+      setState(prev => ({ ...prev, isSynced: false, error: null, syncAttempts: 0 }));
       return;
     }
 
-    setState(prev => ({ ...prev, isLoading: true, error: null }));
+    // Prevent retry storm: check if we've exceeded max retries
+    if (isRetry && state.syncAttempts >= MAX_SYNC_RETRIES) {
+      console.log("[useAccountGarage] Max retries exceeded, stopping sync attempts");
+      return;
+    }
+
+    setState(prev => ({ 
+      ...prev, 
+      isLoading: true, 
+      error: null,
+      lastSyncAttempt: Date.now(),
+    }));
 
     try {
       const result = await syncToServer(
@@ -175,6 +196,8 @@ export function useAccountGarage() {
         isSynced: true,
         error: null,
         serverActiveId: result.activeId,
+        syncAttempts: 0,
+        lastSyncAttempt: Date.now(),
       });
 
       console.log("[useAccountGarage] Synced:", {
@@ -184,13 +207,27 @@ export function useAccountGarage() {
       });
     } catch (error) {
       console.error("[useAccountGarage] Sync error:", error);
+      const newAttempts = state.syncAttempts + 1;
       setState(prev => ({
         ...prev,
         isLoading: false,
         error: error instanceof Error ? error.message : "Sync failed",
+        syncAttempts: newAttempts,
+        lastSyncAttempt: Date.now(),
       }));
+
+      // Schedule retry with exponential backoff (1s, 2s, 4s, 8s)
+      if (newAttempts < MAX_SYNC_RETRIES) {
+        const backoffMs = Math.pow(2, newAttempts - 1) * 1000;
+        console.log(`[useAccountGarage] Scheduling retry ${newAttempts}/${MAX_SYNC_RETRIES} in ${backoffMs}ms`);
+        setTimeout(() => {
+          syncGarage(true);
+        }, backoffMs);
+      } else {
+        console.log("[useAccountGarage] Max retries reached, giving up");
+      }
     }
-  }, [isAuthenticated, garage]);
+  }, [isAuthenticated, garage, state.syncAttempts]);
 
   /**
    * Wrap garage.addVehicle to also sync to server when authenticated
@@ -284,24 +321,40 @@ export function useAccountGarage() {
     [garage, isAuthenticated]
   );
 
-  // Auto-sync on login
+  // Auto-sync on login (only once, not on every state change)
   useEffect(() => {
-    if (isAuthenticated && !state.isSynced && !state.isLoading) {
-      syncGarage();
+    // Only attempt sync if:
+    // 1. User is authenticated
+    // 2. Not already synced
+    // 3. Not currently loading
+    // 4. Haven't exceeded max retries
+    // 5. Not a recent failed attempt (debounce)
+    const shouldSync = 
+      isAuthenticated && 
+      !state.isSynced && 
+      !state.isLoading &&
+      state.syncAttempts < MAX_SYNC_RETRIES &&
+      (state.syncAttempts === 0 || Date.now() - state.lastSyncAttempt > 500);
+    
+    if (shouldSync && state.syncAttempts === 0) {
+      // Initial sync only - retries are handled by the syncGarage function
+      syncGarage(false);
     }
-  }, [isAuthenticated, state.isSynced, state.isLoading, syncGarage]);
+  }, [isAuthenticated, state.isSynced, state.isLoading, state.syncAttempts, state.lastSyncAttempt, syncGarage, MAX_SYNC_RETRIES]);
 
   // Reset sync state on logout
   useEffect(() => {
-    if (!isAuthenticated && state.isSynced) {
+    if (!isAuthenticated && (state.isSynced || state.syncAttempts > 0)) {
       setState({
         isLoading: false,
         isSynced: false,
         error: null,
         serverActiveId: null,
+        syncAttempts: 0,
+        lastSyncAttempt: 0,
       });
     }
-  }, [isAuthenticated, state.isSynced]);
+  }, [isAuthenticated, state.isSynced, state.syncAttempts]);
 
   return {
     // Garage state (from local GarageContext)

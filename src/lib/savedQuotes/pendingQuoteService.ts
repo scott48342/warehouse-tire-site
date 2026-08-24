@@ -34,6 +34,21 @@ import {
 import { generateSavedQuoteId } from "./savedQuoteService";
 
 // ============================================================================
+// JSONB Parsing Helper
+// ============================================================================
+
+/**
+ * Parse saved quote snapshot from database.
+ * PostgreSQL JSONB columns are automatically parsed by the pg driver.
+ */
+function parseSnapshotJson(value: unknown): SavedQuoteSnapshot {
+  if (typeof value === "string") {
+    return JSON.parse(value) as SavedQuoteSnapshot;
+  }
+  return value as SavedQuoteSnapshot;
+}
+
+// ============================================================================
 // Token Generation & Hashing
 // ============================================================================
 
@@ -167,7 +182,7 @@ export async function createPendingQuote(
     // Insert pending quote (use hash as primary key)
     await db.insert(pendingSavedQuotes).values({
       token: tokenHash,
-      snapshotJson: JSON.stringify(snapshot),
+      snapshotJson: snapshot, // JSONB - Drizzle handles serialization
       vehicleYear: vehicle.year,
       vehicleMake: vehicle.make,
       vehicleModel: vehicle.model,
@@ -283,8 +298,8 @@ export async function claimPendingQuote(
         };
       }
       
-      // Parse snapshot
-      const snapshot = JSON.parse(record.snapshotJson) as SavedQuoteSnapshot;
+      // Parse snapshot (JSONB is already an object from pg driver)
+      const snapshot = parseSnapshotJson(record.snapshotJson);
       
       // Create saved quote
       const quoteId = generateSavedQuoteId();
@@ -298,7 +313,7 @@ export async function claimPendingQuote(
         vehicleModel: record.vehicleModel,
         vehicleTrim: record.vehicleTrim,
         vehicleModification: record.vehicleModification,
-        snapshotJson: record.snapshotJson,
+        snapshotJson: snapshot, // Use parsed snapshot (already validated)
         idempotencyKey: `claimed_${tokenHash.slice(0, 32)}`, // Prevent duplicate claims
       });
       

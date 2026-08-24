@@ -159,10 +159,20 @@ export async function POST(req: NextRequest) {
       count: vehicles.length,
       maxVehicles: MAX_VEHICLES,
     });
-  } catch (error) {
-    console.error("[garage/sync] POST error:", error);
+  } catch (error: unknown) {
+    // Enhanced error logging for production debugging
+    const err = error as Error & { code?: string; constraint?: string; detail?: string };
+    console.error("[garage/sync] POST error:", {
+      message: err.message,
+      code: err.code,
+      constraint: err.constraint,
+      detail: err.detail,
+      stack: err.stack?.split('\n').slice(0, 5).join('\n'),
+    });
+    
+    // Return sanitized error (no internal details exposed)
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Internal server error", code: "sync_failed" },
       { status: 500 }
     );
   }

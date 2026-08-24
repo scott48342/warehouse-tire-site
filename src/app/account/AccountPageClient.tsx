@@ -448,6 +448,7 @@ export function AccountPageClient({ user }: { user: User }) {
     activeVehicle,
     isLoading: garageSyncing,
     isSynced,
+    syncError,
     removeVehicle,
     setActiveVehicle,
   } = useAccountGarage();
@@ -559,6 +560,11 @@ export function AccountPageClient({ user }: { user: User }) {
             )}
             {isSynced && !garageSyncing && (
               <span className="text-sm text-green-600">✓ Synced</span>
+            )}
+            {syncError && !garageSyncing && !isSynced && (
+              <span className="text-sm text-neutral-500" title={syncError}>
+                Saved on this device
+              </span>
             )}
           </div>
 

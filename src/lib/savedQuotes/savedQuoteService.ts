@@ -35,6 +35,24 @@ import {
 } from "./validation";
 
 // ============================================================================
+// JSONB Parsing Helper
+// ============================================================================
+
+/**
+ * Parse saved quote snapshot from database.
+ * 
+ * PostgreSQL JSONB columns are automatically parsed to objects by the pg driver,
+ * but some code paths may still have string values. This helper handles both cases.
+ */
+function parseSnapshotJson(value: unknown): SavedQuoteSnapshot {
+  if (typeof value === "string") {
+    return JSON.parse(value) as SavedQuoteSnapshot;
+  }
+  // Already parsed by pg driver (JSONB → object)
+  return value as SavedQuoteSnapshot;
+}
+
+// ============================================================================
 // ID Generation
 // ============================================================================
 
@@ -167,7 +185,7 @@ export async function createSavedQuote(
           vehicleModel: vehicle.model,
           vehicleTrim: vehicle.trim || null,
           vehicleModification: vehicle.modification || null,
-          snapshotJson: JSON.stringify(snapshot),
+          snapshotJson: snapshot, // JSONB - Drizzle handles serialization
           idempotencyKey,
         });
         
@@ -247,7 +265,7 @@ export async function listSavedQuotes(
     .orderBy(desc(savedQuotes.savedAt));
   
   const quotes: SavedQuoteResponse[] = rows.map(row => {
-    const snapshot = JSON.parse(row.snapshotJson) as SavedQuoteSnapshot;
+    const snapshot = parseSnapshotJson(row.snapshotJson);
     
     return {
       id: row.id,
@@ -302,7 +320,7 @@ export async function getSavedQuote(
       .where(eq(savedQuotes.id, quoteId));
   }
   
-  const snapshot = JSON.parse(row.snapshotJson) as SavedQuoteSnapshot;
+  const snapshot = parseSnapshotJson(row.snapshotJson);
   
   return {
     id: row.id,
