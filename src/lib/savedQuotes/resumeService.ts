@@ -521,8 +521,22 @@ async function validateTire(
   }
   
   try {
+    // DIAGNOSTIC: Log resume lookup
+    const isDiagnostic = item.sku === "LXST2031655020";
+    if (isDiagnostic) {
+      console.log(`\n[resumeService.validateTire] DIAGNOSTIC for ${item.sku}`);
+      console.log(`[resumeService.validateTire] saved item unitPrice: ${item.unitPrice}`);
+      console.log(`[resumeService.validateTire] saved item size: ${tireSize}`);
+    }
+    
     // Use direct tire lookup (same logic as search API, no HTTP self-call)
     const match = await lookupTireDirect(item.sku, tireSize);
+    
+    if (isDiagnostic) {
+      console.log(`[resumeService.validateTire] lookupTireDirect.price: ${match?.price}`);
+      console.log(`[resumeService.validateTire] lookupTireDirect.cost: ${match?.cost}`);
+      console.log(`[resumeService.validateTire] lookupTireDirect.source: ${match?.source}`);
+    }
     
     if (!match || !match.found) {
       return {
@@ -538,6 +552,11 @@ async function validateTire(
                      (match.quantity?.alternate || 0) + 
                      (match.quantity?.national || 0);
     const currentPrice = match.price || 0;
+    
+    if (isDiagnostic) {
+      console.log(`[resumeService.validateTire] current item unitPrice assigned: ${currentPrice}`);
+      console.log(`[resumeService.validateTire] totalQty: ${totalQty}`);
+    }
     
     // Check if completely out of stock
     if (totalQty === 0) {

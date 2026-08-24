@@ -148,6 +148,9 @@ function toSimpleSize(s: string): string {
 // Direct Tire Lookup (bypasses HTTP)
 // ============================================================================
 
+// Diagnostic SKU for debugging price doubling issue
+const DIAGNOSTIC_SKU = "LXST2031655020";
+
 /**
  * Look up a specific tire by SKU and size.
  * 
@@ -162,26 +165,84 @@ export async function lookupTireDirect(
   sku: string,
   size: string
 ): Promise<TireLookupResult | null> {
+  const isDiagnostic = sku === DIAGNOSTIC_SKU;
+  
+  if (isDiagnostic) {
+    console.log(`\n========== SAVED QUOTE TIRE PRICING DIAGNOSTIC ==========`);
+    console.log(`requested SKU: ${sku}`);
+    console.log(`requested size: ${size}`);
+  }
+  
   const simpleSize = toSimpleSize(size);
   if (!simpleSize) {
     console.warn(`[tirePricingService] Invalid tire size: ${size}`);
     return null;
   }
   
+  // Collect all candidates for diagnostic comparison
+  const candidates: Array<{
+    source: string;
+    partNumber: string;
+    rawBuyPrice: number;
+    rawSellPrice: number | null;
+    unifiedCost: number | null;
+    unifiedPrice: number | null;
+    matchReason: string;
+  }> = [];
+  
   // Search TireWeb (primary supplier)
   try {
     const tireWebResults = await searchTiresTireWeb(size);
     
+    if (isDiagnostic) {
+      console.log(`\nTireWeb returned ${tireWebResults.length} provider(s)`);
+    }
+    
     for (const result of tireWebResults) {
+      if (isDiagnostic) {
+        console.log(`  Provider: ${result.provider}, tires: ${result.tires.length}`);
+      }
+      
       for (const tire of result.tires) {
         const unified = tireWebTireToUnified(tire, result.provider);
+        
+        // Log ALL candidates for the diagnostic SKU
+        if (isDiagnostic && (unified.partNumber === sku || unified.mfgPartNumber === sku)) {
+          candidates.push({
+            source: `tireweb:${result.provider}`,
+            partNumber: unified.partNumber,
+            rawBuyPrice: tire.buyPrice,
+            rawSellPrice: tire.sellPrice,
+            unifiedCost: unified.cost,
+            unifiedPrice: unified.price,
+            matchReason: unified.partNumber === sku ? 'partNumber match' : 'mfgPartNumber match',
+          });
+        }
         
         // Match by SKU or manufacturer part number
         if (unified.partNumber === sku || unified.mfgPartNumber === sku) {
           const cost = unified.cost;
+          const isCommercial = isCommercialTruckSize(unified.size || size);
           const price = calculateTireSellPrice(cost, unified.size || size);
           
-          return {
+          if (isDiagnostic) {
+            console.log(`\n--- MATCHED TIRE (TireWeb) ---`);
+            console.log(`supplier: tireweb:${result.provider}`);
+            console.log(`raw TireWeb buyPrice: ${tire.buyPrice}`);
+            console.log(`raw TireWeb sellPrice: ${tire.sellPrice}`);
+            console.log(`unified.cost: ${unified.cost}`);
+            console.log(`unified.price: ${unified.price}`);
+            console.log(`unified.source: ${unified.source}`);
+            console.log(`unified.partNumber: ${unified.partNumber}`);
+            console.log(`unified.size: ${unified.size}`);
+            console.log(`isCommercialTruckSize result: ${isCommercial}`);
+            console.log(`STANDARD_TIRE_ADDER: ${STANDARD_TIRE_ADDER}`);
+            console.log(`COMMERCIAL_TIRE_ADDER: ${COMMERCIAL_TIRE_ADDER}`);
+            console.log(`input passed to calculateTireSellPrice: cost=${cost}, size=${unified.size || size}`);
+            console.log(`output from calculateTireSellPrice: ${price}`);
+          }
+          
+          const result_obj = {
             found: true,
             partNumber: unified.partNumber,
             mfgPartNumber: unified.mfgPartNumber || unified.partNumber,
@@ -194,6 +255,20 @@ export async function lookupTireDirect(
             imageUrl: unified.imageUrl,
             source: `tireweb:${result.provider}`,
           };
+          
+          if (isDiagnostic) {
+            console.log(`\nfinal lookupTireDirect.price: ${result_obj.price}`);
+            console.log(`final lookupTireDirect.cost: ${result_obj.cost}`);
+            if (candidates.length > 1) {
+              console.log(`\n--- ALL CANDIDATES FOR THIS SKU ---`);
+              candidates.forEach((c, i) => {
+                console.log(`  [${i}] ${c.source}: rawBuyPrice=${c.rawBuyPrice}, rawSellPrice=${c.rawSellPrice}, unifiedCost=${c.unifiedCost}, unifiedPrice=${c.unifiedPrice}`);
+              });
+            }
+            console.log(`========== END DIAGNOSTIC ==========\n`);
+          }
+          
+          return result_obj;
         }
       }
     }
@@ -260,7 +335,14 @@ export async function getTirePrice(
   sku: string,
   size: string
 ): Promise<number | null> {
+  const isDiagnostic = sku === DIAGNOSTIC_SKU;
+  
   const result = await lookupTireDirect(sku, size);
+  
+  if (isDiagnostic) {
+    console.log(`[getTirePrice] lookupTireDirect returned price: ${result?.price}`);
+    console.log(`[getTirePrice] lookupTireDirect returned cost: ${result?.cost}`);
+  }
   
   if (!result || !result.found) {
     return null;
@@ -270,6 +352,10 @@ export async function getTirePrice(
   if (result.price == null || result.price <= 0) {
     console.warn(`[tirePricingService] Invalid price for ${sku}: ${result.price}`);
     return null;
+  }
+  
+  if (isDiagnostic) {
+    console.log(`[getTirePrice] final return: ${result.price}`);
   }
   
   return result.price;

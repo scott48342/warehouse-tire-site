@@ -221,9 +221,22 @@ export async function verifyPricing(
       }
       
       try {
+        // DIAGNOSTIC: Log before getTirePrice call
+        const isDiagnostic = item.sku === "LXST2031655020";
+        if (isDiagnostic) {
+          console.log(`\n[verifyPricing] DIAGNOSTIC for ${item.sku}`);
+          console.log(`[verifyPricing] item SKU: ${item.sku}`);
+          console.log(`[verifyPricing] item size: ${tireSize}`);
+          console.log(`[verifyPricing] client/displayed price: ${clientDisplayedPrice}`);
+        }
+        
         // Use direct tire pricing service (same logic as normal shopping)
         // This avoids HTTP self-calls which can fail on serverless
         verifiedPrice = await getTirePrice(item.sku, tireSize);
+        
+        if (isDiagnostic) {
+          console.log(`[verifyPricing] server verified price returned: ${verifiedPrice}`);
+        }
         
         // Log if client-displayed price differs significantly from server price
         if (verifiedPrice !== null && clientDisplayedPrice !== undefined) {
@@ -231,6 +244,10 @@ export async function verifyPricing(
           if (diff > 0.01) {
             console.log(`[verifyPricing] Price mismatch for ${item.sku}: client=${clientDisplayedPrice}, server=${verifiedPrice}`);
           }
+        }
+        
+        if (isDiagnostic) {
+          console.log(`[verifyPricing] price assigned to verifiedItems: ${verifiedPrice}`);
         }
       } catch (err) {
         console.error(`[verifyPricing] Tire price lookup failed for ${item.sku}:`, err);
@@ -315,6 +332,21 @@ export async function verifyPricing(
   
   const estimatedTax = Math.round(partsSubtotal * taxRate * 100) / 100;
   const total = Math.round((partsSubtotal + servicesSubtotal + estimatedTax) * 100) / 100;
+  
+  // DIAGNOSTIC: Log snapshot values before return
+  const hasDiagnosticSku = verifiedItems.some(i => i.sku === "LXST2031655020");
+  if (hasDiagnosticSku) {
+    console.log(`\n[verifyPricing] FINAL SNAPSHOT VALUES:`);
+    for (const item of verifiedItems) {
+      if (item.sku === "LXST2031655020") {
+        console.log(`[verifyPricing] snapshot item unitPrice: ${item.unitPrice}`);
+        console.log(`[verifyPricing] snapshot item quantity: ${item.quantity}`);
+      }
+    }
+    console.log(`[verifyPricing] partsSubtotal: ${Math.round(partsSubtotal * 100) / 100}`);
+    console.log(`[verifyPricing] tax: ${estimatedTax}`);
+    console.log(`[verifyPricing] total: ${total}`);
+  }
   
   const pricing: SavedQuotePricing = {
     partsSubtotal: Math.round(partsSubtotal * 100) / 100,
