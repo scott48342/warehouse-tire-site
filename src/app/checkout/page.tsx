@@ -499,6 +499,15 @@ export default function CheckoutPage() {
         return;
       }
 
+      // Store tracking data before redirect (retrieved by paypal-return page)
+      const cartId = getCartId();
+      if (cartId) {
+        sessionStorage.setItem("wt_paypal_cart_id", cartId);
+      }
+      if (resumedFromQuoteId) {
+        sessionStorage.setItem("wt_paypal_saved_quote_id", resumedFromQuoteId);
+      }
+      
       // Redirect to PayPal
       checkoutCompletedRef.current = true; // leaving intentionally for PayPal
       window.location.href = String(data.approvalUrl);

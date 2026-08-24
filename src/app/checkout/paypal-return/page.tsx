@@ -50,10 +50,22 @@ function PayPalReturnContent() {
     // Capture the order
     async function captureOrder() {
       try {
+        // Retrieve tracking data stored before PayPal redirect
+        const cartId = sessionStorage.getItem("wt_paypal_cart_id");
+        const savedQuoteId = sessionStorage.getItem("wt_paypal_saved_quote_id");
+        
+        // Clear after reading (one-time use)
+        sessionStorage.removeItem("wt_paypal_cart_id");
+        sessionStorage.removeItem("wt_paypal_saved_quote_id");
+        
         const res = await fetch("/api/paypal/capture-order", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ orderId: token }),
+          body: JSON.stringify({
+            orderId: token,
+            ...(cartId ? { cartId } : {}),
+            ...(savedQuoteId ? { savedQuoteId } : {}),
+          }),
         });
 
         const data = await res.json();
