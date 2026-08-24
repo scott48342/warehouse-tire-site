@@ -283,11 +283,16 @@ export const savedQuotes = pgTable(
     // Soft delete
     archivedAt: timestamp("archived_at", { withTimezone: true }),
     
+    // Idempotency (for serverless concurrency)
+    idempotencyKey: text("idempotency_key"),
+    
     // Audit
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => ({
     userActiveIdx: index("idx_saved_quotes_user_active").on(table.userId),
+    // Unique partial index for idempotency (only when key is not null)
+    // Note: Drizzle doesn't support partial indexes directly, so we create it in SQL migration
   })
 );
 

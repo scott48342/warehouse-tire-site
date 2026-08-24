@@ -3,7 +3,13 @@
  * 
  * Server-side operations for customer saved quotes.
  * 
+ * Concurrency Safety:
+ * - Database-backed idempotency via unique (user_id, idempotency_key) index
+ * - Atomic 20-active-quote limit via pg_advisory_xact_lock + transaction
+ * - Safe for Vercel serverless (no in-memory state)
+ * 
  * @created 2026-08-24
+ * @updated 2026-08-24 - Concurrency fixes
  */
 
 import { db } from "@/lib/db";
@@ -16,7 +22,6 @@ import type {
   SavedQuoteDetailResponse,
   SavedQuotesListResponse,
   SavedQuoteSnapshot,
-  SAVED_QUOTE_LIMITS,
 } from "./types";
 import { SAVED_QUOTE_LIMITS as LIMITS } from "./types";
 import {
@@ -38,91 +43,50 @@ export function generateSavedQuoteId(): string {
 }
 
 // ============================================================================
-// Idempotency
+// Advisory Lock Key Generation
 // ============================================================================
 
-// In-memory cache for idempotency (would be Redis in production)
-const idempotencyCache = new Map<string, { quoteId: string; expiresAt: number }>();
-
-function getIdempotencyKey(userId: string, clientKey?: string): string | null {
-  if (!clientKey) return null;
-  return `${userId}:${clientKey}`;
-}
-
-function checkIdempotency(key: string): string | null {
-  const cached = idempotencyCache.get(key);
-  if (cached && cached.expiresAt > Date.now()) {
-    return cached.quoteId;
+/**
+ * Generate a consistent advisory lock key from user ID.
+ * Uses a hash to convert UUID to bigint for pg_advisory_xact_lock.
+ */
+function userLockKey(userId: string): number {
+  // Simple hash: sum of char codes with position weighting
+  let hash = 0;
+  for (let i = 0; i < userId.length; i++) {
+    hash = ((hash << 5) - hash + userId.charCodeAt(i)) | 0;
   }
-  if (cached) {
-    idempotencyCache.delete(key);
-  }
-  return null;
-}
-
-function setIdempotency(key: string, quoteId: string): void {
-  idempotencyCache.set(key, {
-    quoteId,
-    expiresAt: Date.now() + LIMITS.idempotencyWindowMs,
-  });
-  
-  // Clean up old entries periodically
-  if (idempotencyCache.size > 1000) {
-    const now = Date.now();
-    for (const [k, v] of idempotencyCache) {
-      if (v.expiresAt <= now) {
-        idempotencyCache.delete(k);
-      }
-    }
-  }
+  // Ensure positive and in safe integer range
+  return Math.abs(hash);
 }
 
 // ============================================================================
-// Create Quote
+// Create Quote (Concurrency-Safe)
 // ============================================================================
 
 export type CreateQuoteResult = 
   | { ok: true; id: string; isIdempotent?: boolean }
   | { ok: false; error: string; code: string; field?: string };
 
+/**
+ * Create a saved quote with:
+ * 1. Database-backed idempotency (unique constraint on user_id + idempotency_key)
+ * 2. Atomic 20-active-quote limit (advisory lock + transaction)
+ * 
+ * Logic:
+ * - If idempotency_key provided, check for existing quote first
+ * - If found, return it (even if at limit)
+ * - Otherwise, acquire per-user advisory lock
+ * - Within lock: check count, insert if under limit
+ * - Handle unique constraint conflict as idempotent success
+ */
 export async function createSavedQuote(
   userId: string,
   request: SaveQuoteRequest
 ): Promise<CreateQuoteResult> {
   try {
-    // Check idempotency first
-    const idempotencyKey = getIdempotencyKey(userId, request.idempotencyKey);
-    if (idempotencyKey) {
-      const existingId = checkIdempotency(idempotencyKey);
-      if (existingId) {
-        return { ok: true, id: existingId, isIdempotent: true };
-      }
-    }
-    
-    // Check quote limit
-    const countResult = await db
-      .select({ count: sql<number>`count(*)` })
-      .from(savedQuotes)
-      .where(
-        and(
-          eq(savedQuotes.userId, userId),
-          isNull(savedQuotes.archivedAt)
-        )
-      );
-    
-    const currentCount = Number(countResult[0]?.count || 0);
-    if (currentCount >= LIMITS.maxActiveQuotes) {
-      return {
-        ok: false,
-        error: `Maximum ${LIMITS.maxActiveQuotes} saved quotes allowed`,
-        code: "limit_reached",
-      };
-    }
-    
-    // Validate vehicle
+    // Validate inputs first (before any DB operations)
     const vehicle = validateVehicle(request.vehicle);
-    
-    // Validate items
     const items = validateItems(request.items);
     
     // Verify pricing using our commerce system
@@ -141,28 +105,110 @@ export async function createSavedQuote(
     // Validate snapshot size
     validateSnapshotSize(snapshot);
     
-    // Generate ID and save
+    // Sanitize idempotency key
+    const idempotencyKey = request.idempotencyKey?.trim().slice(0, 100) || null;
+    
+    // If idempotency key provided, check for existing quote FIRST
+    // This handles the "retry after success" case even when at limit
+    if (idempotencyKey) {
+      const existing = await db
+        .select({ id: savedQuotes.id })
+        .from(savedQuotes)
+        .where(
+          and(
+            eq(savedQuotes.userId, userId),
+            eq(savedQuotes.idempotencyKey, idempotencyKey)
+          )
+        )
+        .limit(1);
+      
+      if (existing.length > 0) {
+        return { ok: true, id: existing[0].id, isIdempotent: true };
+      }
+    }
+    
+    // Generate ID and name
     const id = generateSavedQuoteId();
     const name = request.name?.trim().slice(0, LIMITS.maxNameLength) || null;
     
-    await db.insert(savedQuotes).values({
-      id,
-      userId,
-      name,
-      vehicleYear: vehicle.year,
-      vehicleMake: vehicle.make,
-      vehicleModel: vehicle.model,
-      vehicleTrim: vehicle.trim || null,
-      vehicleModification: vehicle.modification || null,
-      snapshotJson: JSON.stringify(snapshot),
+    // Atomic creation with advisory lock for limit enforcement
+    // Using raw SQL for the transaction with advisory lock
+    const lockKey = userLockKey(userId);
+    
+    const result = await db.transaction(async (tx) => {
+      // Acquire per-user advisory lock (released on transaction end)
+      await tx.execute(sql`SELECT pg_advisory_xact_lock(${lockKey})`);
+      
+      // Check active quote count within the lock
+      const countResult = await tx
+        .select({ count: sql<number>`count(*)::int` })
+        .from(savedQuotes)
+        .where(
+          and(
+            eq(savedQuotes.userId, userId),
+            isNull(savedQuotes.archivedAt)
+          )
+        );
+      
+      const currentCount = countResult[0]?.count || 0;
+      
+      if (currentCount >= LIMITS.maxActiveQuotes) {
+        return { limitReached: true };
+      }
+      
+      // Insert the new quote
+      try {
+        await tx.insert(savedQuotes).values({
+          id,
+          userId,
+          name,
+          vehicleYear: vehicle.year,
+          vehicleMake: vehicle.make,
+          vehicleModel: vehicle.model,
+          vehicleTrim: vehicle.trim || null,
+          vehicleModification: vehicle.modification || null,
+          snapshotJson: JSON.stringify(snapshot),
+          idempotencyKey,
+        });
+        
+        return { success: true, id };
+      } catch (insertError: any) {
+        // Check for unique constraint violation (concurrent request with same key)
+        if (insertError.code === '23505' && idempotencyKey) {
+          // Unique violation on idempotency key - fetch the existing quote
+          const existing = await tx
+            .select({ id: savedQuotes.id })
+            .from(savedQuotes)
+            .where(
+              and(
+                eq(savedQuotes.userId, userId),
+                eq(savedQuotes.idempotencyKey, idempotencyKey)
+              )
+            )
+            .limit(1);
+          
+          if (existing.length > 0) {
+            return { success: true, id: existing[0].id, isIdempotent: true };
+          }
+        }
+        throw insertError;
+      }
     });
     
-    // Set idempotency cache
-    if (idempotencyKey) {
-      setIdempotency(idempotencyKey, id);
+    if ('limitReached' in result) {
+      return {
+        ok: false,
+        error: `Maximum ${LIMITS.maxActiveQuotes} saved quotes allowed`,
+        code: "limit_reached",
+      };
     }
     
-    return { ok: true, id };
+    return { 
+      ok: true, 
+      id: result.id, 
+      isIdempotent: result.isIdempotent 
+    };
+    
   } catch (error) {
     if (error instanceof ValidationError) {
       return {
@@ -352,7 +398,7 @@ export async function archiveSavedQuote(
 }
 
 // ============================================================================
-// Delete Quote (Permanent)
+// Delete Quote (Permanent - Admin/API only)
 // ============================================================================
 
 export async function deleteSavedQuote(
@@ -369,7 +415,6 @@ export async function deleteSavedQuote(
     );
   
   // Check if any rows were deleted
-  // Note: Drizzle doesn't return rowCount directly, so we check existence first
   const remaining = await db
     .select({ id: savedQuotes.id })
     .from(savedQuotes)
@@ -402,7 +447,7 @@ export async function markQuoteConverted(
   // Only update if:
   // 1. Quote exists and belongs to user
   // 2. Not already converted (idempotent)
-  const result = await db
+  await db
     .update(savedQuotes)
     .set({
       convertedOrderId: orderId,
