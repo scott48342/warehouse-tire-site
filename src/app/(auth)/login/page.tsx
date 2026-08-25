@@ -12,10 +12,28 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 
+/**
+ * Check if returnTo represents a legitimate Saved Quote claim flow.
+ * Only trust internal claim-quote routes, not arbitrary external URLs.
+ */
+function isSavedQuoteClaimFlow(returnTo: string): boolean {
+  // Must be an internal path starting with /account/claim-quote
+  // Decode once to handle URL encoding
+  try {
+    const decoded = decodeURIComponent(returnTo);
+    return decoded.startsWith("/account/claim-quote");
+  } catch {
+    return false;
+  }
+}
+
 export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const returnTo = searchParams.get("returnTo") || "/account";
+  
+  // Detect Save Quote claim context for contextual messaging
+  const isQuoteClaimFlow = isSavedQuoteClaimFlow(returnTo);
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,10 +72,23 @@ export default function LoginPage() {
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-extrabold text-neutral-900">Sign In</h1>
-          <p className="mt-2 text-neutral-600">
-            Welcome back! Sign in to your account.
-          </p>
+          {isQuoteClaimFlow ? (
+            // Contextual messaging for Save Quote flow
+            <>
+              <h1 className="text-3xl font-extrabold text-neutral-900">Your quote is waiting</h1>
+              <p className="mt-2 text-neutral-600">
+                Sign in to save this setup to your account.
+              </p>
+            </>
+          ) : (
+            // Normal login messaging
+            <>
+              <h1 className="text-3xl font-extrabold text-neutral-900">Sign In</h1>
+              <p className="mt-2 text-neutral-600">
+                Welcome back! Sign in to your account.
+              </p>
+            </>
+          )}
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -117,7 +148,14 @@ export default function LoginPage() {
           </button>
         </form>
 
+        {/* Account value proposition */}
         <div className="mt-6 text-center">
+          <p className="text-xs text-neutral-400">
+            Save your vehicles, quotes & orders in one place.
+          </p>
+        </div>
+
+        <div className="mt-4 text-center">
           <p className="text-sm text-neutral-600">
             Don't have an account?{" "}
             <Link

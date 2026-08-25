@@ -37,6 +37,7 @@ export function SaveQuoteButton({
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
+  const [quoteReady, setQuoteReady] = useState(false); // Brief "Quote ready" state for guests
 
   // Don't show if no items
   if (items.length === 0) {
@@ -125,8 +126,17 @@ export function SaveQuoteButton({
         // Build claim URL for the return destination
         const claimUrl = `/account/claim-quote?token=${encodeURIComponent(data.token)}`;
         
-        // Redirect to login with claim URL as return destination
-        router.push(`/login?returnTo=${encodeURIComponent(claimUrl)}`);
+        // Show brief "Quote ready" state before redirect
+        setQuoteReady(true);
+        setIsSaving(false);
+        
+        // Continue to auth flow after brief visual acknowledgment
+        // Using requestAnimationFrame + small timeout for visual comprehension without blocking
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            router.push(`/login?returnTo=${encodeURIComponent(claimUrl)}`);
+          }, 150);
+        });
       }
       
     } catch (err) {
@@ -212,13 +222,18 @@ export function SaveQuoteButton({
     return (
       <button
         onClick={handleSave}
-        disabled={isSaving || success}
+        disabled={isSaving || success || quoteReady}
         className="text-sm text-blue-600 hover:text-blue-700 font-medium disabled:opacity-50 flex items-center gap-1.5"
       >
         {isSaving ? (
           <>
             <span className="inline-block w-3 h-3 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
             Saving...
+          </>
+        ) : quoteReady ? (
+          <>
+            <span className="text-green-600">✓</span>
+            <span className="text-green-600">Quote ready</span>
           </>
         ) : success ? (
           <>
@@ -240,13 +255,22 @@ export function SaveQuoteButton({
     <div className="space-y-2">
       <button
         onClick={handleSave}
-        disabled={isSaving || success}
-        className="flex h-10 w-full items-center justify-center rounded-xl border border-blue-200 bg-blue-50 px-3 text-sm font-semibold text-blue-700 hover:bg-blue-100 transition-colors disabled:opacity-50 gap-2"
+        disabled={isSaving || success || quoteReady}
+        className={`flex h-10 w-full items-center justify-center rounded-xl border px-3 text-sm font-semibold transition-colors disabled:opacity-50 gap-2 ${
+          quoteReady
+            ? "border-green-200 bg-green-50 text-green-700"
+            : "border-blue-200 bg-blue-50 text-blue-700 hover:bg-blue-100"
+        }`}
       >
         {isSaving ? (
           <>
             <span className="inline-block w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
             Saving...
+          </>
+        ) : quoteReady ? (
+          <>
+            <span>✓</span>
+            Quote ready
           </>
         ) : success ? (
           <>
@@ -265,9 +289,9 @@ export function SaveQuoteButton({
         <p className="text-xs text-red-600 text-center">{error}</p>
       )}
       
-      {!success && !isSaving && (
+      {!success && !isSaving && !quoteReady && (
         <p className="text-xs text-neutral-500 text-center">
-          Save to your account for easy access later
+          Not ready to order? Save this setup and come back anytime.
         </p>
       )}
     </div>

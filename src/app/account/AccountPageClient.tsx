@@ -400,16 +400,27 @@ function MyQuotesSection({ emailVerified }: { emailVerified: boolean }) {
 
         {quotes.length === 0 ? (
           <div className="text-center py-8">
-            <p className="text-neutral-500 mb-4">No saved quotes yet</p>
-            <p className="text-sm text-neutral-400 mb-4">
-              When you save a cart or package configuration, it will appear here
+            <p className="text-neutral-500 mb-3">No saved quotes yet.</p>
+            <p className="text-sm text-neutral-400 mb-1">
+              Save a tire or wheel setup from your cart and come back to it anytime.
             </p>
-            <Link
-              href="/tires"
-              className="inline-block px-6 py-3 bg-neutral-900 text-white font-semibold rounded-xl hover:bg-neutral-800 transition-colors"
-            >
-              Start Shopping
-            </Link>
+            <p className="text-sm text-neutral-400 mb-5">
+              We'll check current pricing and availability when you're ready.
+            </p>
+            <div className="flex items-center justify-center gap-3">
+              <Link
+                href="/tires"
+                className="px-5 py-2.5 bg-neutral-900 text-white text-sm font-semibold rounded-xl hover:bg-neutral-800 transition-colors"
+              >
+                Shop Tires
+              </Link>
+              <Link
+                href="/wheels"
+                className="px-5 py-2.5 border border-neutral-300 text-neutral-700 text-sm font-semibold rounded-xl hover:border-neutral-400 hover:bg-neutral-50 transition-colors"
+              >
+                Shop Wheels
+              </Link>
+            </div>
           </div>
         ) : (
           <div className="space-y-3">
@@ -514,7 +525,7 @@ export function AccountPageClient({ user }: { user: User }) {
         )}
 
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-2">
           <h1 className="text-3xl font-extrabold text-neutral-900">My Account</h1>
           <button
             onClick={handleSignOut}
@@ -524,6 +535,11 @@ export function AccountPageClient({ user }: { user: User }) {
             {signingOut ? "Signing out..." : "Sign Out"}
           </button>
         </div>
+        
+        {/* Account value line */}
+        <p className="text-sm text-neutral-500 mb-8">
+          Your vehicles, quotes & orders — all in one place.
+        </p>
 
         {/* Profile Section */}
         <div className="rounded-2xl border border-neutral-200 bg-white p-6 mb-6">
