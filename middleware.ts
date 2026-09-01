@@ -6,7 +6,7 @@ import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
   // Get country from Vercel's geo headers
-  const country = request.headers.get('x-vercel-ip-country') || request.geo?.country
+  const country = request.headers.get('x-vercel-ip-country')
 
   // Allow US traffic and localhost/dev
   const allowedCountries = ['US', 'US-CA', 'US-NY', 'US-TX', 'US-FL', 'US-MI'] // US and US territories
