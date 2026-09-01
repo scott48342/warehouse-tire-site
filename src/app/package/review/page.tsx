@@ -7,7 +7,6 @@ import { BRAND } from "@/lib/brand";
 import { normalizeTireSize } from "@/lib/productFormat";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
-import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 import { SmartTireUpsell } from "@/components/SmartTireUpsell";
 

@@ -741,7 +741,7 @@ export default function CampaignEditorPage({ params }: { params: Promise<{ id: s
                     disabled={!isEditable}
                     className="rounded bg-neutral-700 border-neutral-600"
                   />
-                  Free Shipping Banner
+                  Fast Shipping Banner
                 </label>
                 <label className="flex items-center gap-2 text-sm text-neutral-300">
                   <input

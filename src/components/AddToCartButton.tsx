@@ -39,6 +39,10 @@ type AddToCartButtonProps = {
   wheelCenterBore?: number;
   /** Wheel seat type override (conical, ball, flat, mag) */
   wheelSeatType?: string;
+  /** Supplier source (e.g., "wheelpros", "wheel1"). Defaults to "wheelpros". */
+  source?: string;
+  /** True when freight is baked into the unit price (Wheel-1 landed-cost) */
+  freeShipping?: boolean;
 };
 
 export function AddToCartButton({
@@ -65,6 +69,8 @@ export function AddToCartButton({
   dbProfile,
   wheelCenterBore,
   wheelSeatType,
+  source,
+  freeShipping,
 }: AddToCartButtonProps) {
   const { addItem, addAccessories, setAccessoryState, replaceAccessorySku } = useCart();
   const [isAdding, setIsAdding] = useState(false);
@@ -192,7 +198,9 @@ export function AddToCartButton({
       fitmentClass,
       vehicle,
       staggered,
-      source: "wheelpros", // All wheels come from WheelPros
+      source: source || "wheelpros",
+      // Wheel-1 landed-cost: freight baked into unit price, $0 shipping in cart
+      freeShipping: freeShipping === true || undefined,
     };
 
     // Calculate accessories if we have profile data

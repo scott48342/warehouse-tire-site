@@ -1,7 +1,6 @@
 "use client";
 
 import { type ReactNode } from "react";
-import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 
 // ============================================================================
 // Types
@@ -80,9 +79,9 @@ const BADGE_CONFIG: Record<TrustBadgeType, {
   },
   free_shipping: {
     icon: "🚚",
-    label: "Free Shipping",
-    shortLabel: "Free Ship",
-    description: "Free shipping on orders over $1,500",
+    label: "Fast Shipping",
+    shortLabel: "Fast Ship",
+    description: "Fast, reliable shipping nationwide",
     color: "text-amber-700",
     bgColor: "bg-amber-50",
     borderColor: "border-amber-200",

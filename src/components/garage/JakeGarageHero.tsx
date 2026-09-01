@@ -640,7 +640,7 @@ export function JakeGarageHero({ onStart }: JakeGarageHeroProps) {
           <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-16">
             {[
               { icon: "✓", title: "100% FITMENT GUARANTEE", desc: "We double check everything" },
-              { icon: "📦", title: "FAST, FREE SHIPPING $1500+", desc: "To your door or local shop" },
+              { icon: "📦", title: "FAST NATIONWIDE SHIPPING", desc: "To your door or local shop" },
               { icon: "⭐", title: "TOP BRANDS ONLY", desc: "Quality you can trust" },
               { icon: "❤️", title: "EXPERT SUPPORT", desc: "Jake's got your back" },
             ].map((item, idx) => (

@@ -1448,7 +1448,7 @@ export function JakeGarageChat({ initialPrompt, onBack }: JakeGarageChatProps) {
               <div className="space-y-3">
                 {[
                   { icon: "✓", text: "Fitment Guaranteed" },
-                  { icon: "🚚", text: "Free Shipping $1500+" },
+                  { icon: "🚚", text: "Fast Nationwide Shipping" },
                   { icon: "💬", text: "Expert Support" },
                 ].map((badge, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-white/40 text-xs">

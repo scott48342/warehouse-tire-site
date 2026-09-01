@@ -66,7 +66,7 @@ export async function GET(req: NextRequest) {
         landedCost:  "dealer_cost + (diameter_inches × $1.00)",
         sellPrice:   "max(landedCost × 1.30, map_price)",
         costFallback: "msrp × 0.68 when dealer_cost is null",
-        freeShipping: "freight baked in — customer sees FREE SHIPPING",
+        freeShipping: "freight baked in - customer sees FREE SHIPPING",
       },
     });
   } catch (err) {

@@ -293,7 +293,7 @@ export async function generateMetadata({
     // Fallback for missing products
     return {
       title: `Wheel ${decodedSku} | ${BRAND.name}`,
-      description: `Shop custom wheels at ${BRAND.name}. Free shipping, guaranteed fitment, expert support.`,
+      description: `Shop custom wheels at ${BRAND.name}. Fast shipping, guaranteed fitment, expert support.`,
       alternates: { canonical: canonicalUrl },
     };
   }
@@ -310,7 +310,7 @@ export async function generateMetadata({
   if (wheel.finish) descParts.push(`in ${wheel.finish} finish`);
   if (wheel.diameter) descParts.push(`${wheel.diameter}" diameter`);
   if (wheel.boltPattern) descParts.push(`${wheel.boltPattern} bolt pattern`);
-  descParts.push("Free shipping on all orders. Guaranteed fitment. Expert support.");
+  descParts.push("Fast shipping. Guaranteed fitment. Expert support.");
   const description = descParts.join(". ").slice(0, 160);
 
   return {
@@ -392,11 +392,15 @@ export default async function WheelDetailPage({
   // Fallback to TechFeed, then supplier catalogs (Wheel-1, WSI).
   // Fitment-search surfaces Wheel-1/WSI wheels on the SRP, so their PDPs
   // must resolve here too — they don't exist in the WheelPros API/techfeed.
+  // Wheel-1 wheels: freight is baked into the landed price → Free Shipping badge
+  // + freeShipping cart flag ($0 shipping at checkout).
+  let isWheel1 = false;
   if (!it) {
     let tf = await getTechfeedWheelBySku(sku);
     if (!tf) {
       const w1 = await getWheel1WheelBySku(sku);
       if (w1) {
+        isWheel1 = true;
         // Price parity with SRP card: show the computed sell price
         const sell = computeWheel1SellPrice({
           msrp:       (w1 as Wheel1Candidate)._msrpNum,
@@ -571,7 +575,7 @@ export default async function WheelDetailPage({
     diameter && width ? `${diameter}" x ${width}" size` : null,
     boltPattern ? `${boltPattern} bolt pattern` : null,
     offset ? `${offset}mm offset` : null,
-    "Free shipping. Guaranteed fitment.",
+    "Fast shipping. Guaranteed fitment.",
   ].filter(Boolean).join(". ");
 
   return (
@@ -729,6 +733,8 @@ export default async function WheelDetailPage({
               dbProfile={dbProfile}
               wheelCenterBore={centerBore ? Number(centerBore) : undefined}
               inventory={inventoryStatus}
+              source={isWheel1 ? "wheel1" : undefined}
+              freeShipping={isWheel1}
             />
 
             {/* Real behavior-driven popularity signal */}

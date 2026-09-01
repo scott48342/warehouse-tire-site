@@ -60,6 +60,7 @@ export async function GET(request: NextRequest) {
       WHERE last_seen_at >= NOW() - INTERVAL '${activeMinutes} minutes'
         AND is_bot = false
         AND is_test = false
+        AND (country = 'US' OR country IS NULL)
         ${siteCondition}
       ORDER BY last_seen_at DESC
       LIMIT 100

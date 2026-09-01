@@ -57,7 +57,10 @@ export async function GET(req: Request) {
           count: cached.length,
           yearFiltered: !!year,
         }, {
-          headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+          // Reduced from 1h/24h (2026-08-31): 24h edge cache served stale model
+          // lists for a full day after fitment data was added (Intrepid gap-fill).
+          // Matches the trims API fix from 2026-04-01.
+          headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
         });
       }
     } catch (e) {
@@ -119,7 +122,8 @@ export async function GET(req: Request) {
       yearFiltered: !!year,
       v: API_VERSION,
     }, {
-      headers: { "Cache-Control": noCache ? "no-store" : "public, max-age=3600, s-maxage=86400" },
+      // Reduced from 1h/24h (2026-08-31) — see cache-hit branch note above.
+      headers: { "Cache-Control": noCache ? "no-store" : "public, max-age=300, s-maxage=600" },
     });
     
   } catch (err: any) {

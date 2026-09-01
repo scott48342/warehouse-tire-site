@@ -510,7 +510,7 @@ export async function generateMetadata({
     }
     return {
       title: `Tire ${decodedSku} | ${BRAND.name}`,
-      description: `Shop quality tires at ${BRAND.name}. Free shipping, guaranteed fitment, expert support.`,
+      description: `Shop quality tires at ${BRAND.name}. Fast shipping, guaranteed fitment, expert support.`,
       ...(canonicalUrl ? { alternates: { canonical: canonicalUrl } } : {}),
     };
   }
@@ -530,7 +530,7 @@ export async function generateMetadata({
   if (tire.mileageWarranty && tire.mileageWarranty >= 40000) {
     descParts.push(`${Math.round(tire.mileageWarranty / 1000)}K mile warranty`);
   }
-  descParts.push("Free shipping. Guaranteed fitment. Expert support.");
+  descParts.push("Fast shipping. Guaranteed fitment. Expert support.");
   const description = descParts.join(". ").slice(0, 160);
 
   // WheelPros tire renders at the bare URL; ensure a defined canonical.
@@ -731,7 +731,7 @@ export default async function TireDetailPage({
             tire.size || size ? `Size: ${normalizeTireSize(tire.size || size)}` : null,
             category ? `${category} tire` : null,
             tire.badges?.warrantyMiles ? `${Math.round(Number(tire.badges.warrantyMiles) / 1000)}K mile warranty` : null,
-            "Free shipping. Guaranteed fitment.",
+            "Fast shipping. Guaranteed fitment.",
           ].filter(Boolean).join(". ");
           
           return (
@@ -1166,7 +1166,7 @@ export default async function TireDetailPage({
     t.tire_size ? `Size: ${normalizeTireSize(t.tire_size)}` : null,
     category ? `${category} tire` : null,
     t.mileage_warranty ? `${Math.round(Number(t.mileage_warranty) / 1000)}K mile warranty` : null,
-    "Free shipping. Guaranteed fitment.",
+    "Fast shipping. Guaranteed fitment.",
   ].filter(Boolean).join(". ");
 
   return (

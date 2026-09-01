@@ -83,7 +83,7 @@ function PriceAnchor({ packages }: { packages: RecommendedPackage[] }) {
         <> – <span className="font-bold text-neutral-900">${maxPrice.toLocaleString()}</span></>
       )}
       {" "}
-      <span className="text-green-700 font-medium">• Free shipping</span>
+      <span className="text-green-700 font-medium">• Fast nationwide shipping</span>
     </p>
   );
 }

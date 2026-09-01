@@ -35,6 +35,10 @@ type WheelBuyBoxProps = {
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
   inventory?: InventoryStatus | null;
+  /** Supplier source (e.g., "wheel1") — passed through to the cart item */
+  source?: string;
+  /** True when freight is baked into the unit price (Wheel-1 landed-cost) */
+  freeShipping?: boolean;
 };
 
 export function WheelBuyBox({
@@ -53,6 +57,8 @@ export function WheelBuyBox({
   dbProfile,
   wheelCenterBore,
   inventory,
+  source,
+  freeShipping,
 }: WheelBuyBoxProps) {
   const [quantity, setQuantity] = useState(4);
   const total = unitPrice * quantity;
@@ -93,6 +99,13 @@ export function WheelBuyBox({
       {/* Financing option - shows when total is $50-$30k */}
       {hasPrice && total >= 50 && (
         <FinancingBadge price={total} className="mt-2" />
+      )}
+
+      {freeShipping && (
+        <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-emerald-700">
+          <span>🚚</span>
+          <span>Free Shipping — included in price</span>
+        </div>
       )}
 
       {isInStock ? (
@@ -141,6 +154,8 @@ export function WheelBuyBox({
             showPriceInButton={hasPrice}
             dbProfile={dbProfile}
             wheelCenterBore={wheelCenterBore}
+            source={source}
+            freeShipping={freeShipping}
           />
         ) : (
           <button

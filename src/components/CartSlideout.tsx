@@ -11,8 +11,7 @@ import {
 } from "@/lib/liftedBuildContext";
 import { EmailCartButton } from "./EmailCartButton";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
-import { ZipCodeInput, FreeShippingProgress } from "./ShippingEstimate";
-import { formatCurrency, FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
+import { ZipCodeInput } from "./ShippingEstimate";
 import { CartTPMSUpsell } from "./TPMSSuggestion";
 import { CartCoAdditions } from "./CartCoAdditions";
 import { CartSmartTireUpsell } from "./SmartTireUpsell";
@@ -297,7 +296,6 @@ export function CartSlideout() {
     clearZipCode,
     estimate: shippingEstimate,
     isFreeShipping,
-    amountToFreeShipping,
     estimatedTotal,
     isValidZip,
   } = useCartShipping(items, subtotal);
@@ -591,23 +589,18 @@ export function CartSlideout() {
                   <span className="font-semibold">Free Shipping!</span>
                 </div>
               ) : (
-                <>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm text-neutral-600">Shipping to:</span>
-                    <ZipCodeInput
-                      value={zipCode}
-                      onChange={setZipCode}
-                      onClear={clearZipCode}
-                      compact
-                    />
-                    {isValidZip && shippingEstimate && (
-                      <span className="text-sm font-semibold">{shippingEstimate.displayAmount}</span>
-                    )}
-                  </div>
-                  <div className="text-xs text-amber-700">
-                    {formatCurrency(amountToFreeShipping)} away from free shipping
-                  </div>
-                </>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-neutral-600">Shipping to:</span>
+                  <ZipCodeInput
+                    value={zipCode}
+                    onChange={setZipCode}
+                    onClear={clearZipCode}
+                    compact
+                  />
+                  {isValidZip && shippingEstimate && (
+                    <span className="text-sm font-semibold">{shippingEstimate.displayAmount}</span>
+                  )}
+                </div>
               )}
             </div>
           )}
@@ -746,7 +739,7 @@ export function CartSlideout() {
               </>
             ) : (
               <>
-                <span>✓ Free shipping over {formatCurrency(FREE_SHIPPING_THRESHOLD)}</span>
+                <span>✓ Fast nationwide shipping</span>
                 <span>✓ Expert support</span>
               </>
             )}

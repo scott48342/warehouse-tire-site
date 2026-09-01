@@ -458,7 +458,10 @@ export function footer(options: {
 }
 
 /**
- * Free shipping banner
+ * Shipping banner
+ * (2026-08-31: free-shipping offer removed — function name kept for the
+ * existing includeFreeShippingBanner campaign toggle plumbing; content is
+ * now the fast-shipping message.)
  */
 export function freeShippingBanner(): string {
   return `
@@ -467,7 +470,7 @@ export function freeShippingBanner(): string {
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #dcfce7; border-radius: 8px; border: 1px solid #22c55e;">
           <tr>
             <td style="padding: 12px 16px; text-align: center;">
-              <span style="color: #166534; font-weight: 600;">🚚 FREE SHIPPING on orders over $1,500</span>
+              <span style="color: #166534; font-weight: 600;">🚚 Fast, reliable shipping nationwide</span>
             </td>
           </tr>
         </table>

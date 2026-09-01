@@ -22,7 +22,6 @@ import {
 } from "@/lib/localPricing";
 import {
   calculateShipping,
-  FREE_SHIPPING_THRESHOLD,
   isValidZipCode,
   type ShippingItem,
 } from "@/lib/shipping/shippingService";
@@ -74,7 +73,7 @@ export interface RunningTotal {
   subtotal: number;
   /** National: shipping cost (0 = free / unknown). Local: not used. */
   shipping: number;
-  /** National: true once subtotal clears the free-ship threshold. */
+  /** National: true only for Wheel-1 landed-cost carts (site-wide free-ship offer removed 2026-08-31). */
   freeShipping: boolean;
   /** National: a real ZIP-based shipping figure is included. */
   shippingResolved: boolean;
@@ -95,8 +94,9 @@ export interface RunningTotal {
  * Compute a running total from build line items using the cart's OWN math.
  * - Local: Products + Installation ($80/set) + Recycling ($20/set) + 6% tax on
  *   products = exact "Total Out the Door" (mirrors cart/page.tsx local branch).
- * - National: Subtotal; shipping is FREE ≥ $1,500, else ZIP-based if a stored ZIP
- *   exists, else deferred to checkout. Mirrors useCartShipping/cart/page.tsx.
+ * - National: Subtotal + ZIP-based shipping if a stored ZIP exists, else
+ *   deferred to checkout. Mirrors useCartShipping/cart/page.tsx.
+ *   (Free-shipping threshold removed 2026-08-31 — every order pays shipping.)
  */
 function computeRunningTotal(items: BuildLineItem[], isLocal: boolean): RunningTotal | null {
   if (!items.length) return null;
@@ -123,27 +123,29 @@ function computeRunningTotal(items: BuildLineItem[], isLocal: boolean): RunningT
     };
   }
 
-  // National mode.
-  const freeShipping = subtotal >= FREE_SHIPPING_THRESHOLD;
+  // National mode. Every order pays calculated shipping (no free-ship threshold).
+  const shipItemsAll: ShippingItem[] = items.map((li) => ({
+    type: li.type,
+    quantity: li.quantity,
+    unitPrice: li.unitPrice,
+    sizeLabel: li.type === "tire" ? li.size : undefined,
+  }));
   let storedZip = "";
   try { storedZip = typeof window !== "undefined" ? (localStorage.getItem(SHIPPING_ZIP_KEY) || "") : ""; } catch { /* ignore */ }
   const hasZip = !!storedZip && isValidZipCode(storedZip);
 
   let shipping = 0;
   let shippingResolved = false;
-  if (freeShipping) {
-    shippingResolved = true; // free is exact
-  } else if (hasZip) {
-    const shipItems: ShippingItem[] = items.map((li) => ({ type: li.type, quantity: li.quantity, unitPrice: li.unitPrice }));
-    const est = calculateShipping({ zipCode: storedZip, items: shipItems, subtotal });
+  if (hasZip) {
+    const est = calculateShipping({ zipCode: storedZip, items: shipItemsAll, subtotal });
     shipping = est.amount;
     shippingResolved = true;
   }
-  const total = freeShipping ? subtotal : subtotal + shipping;
+  const total = subtotal + shipping;
   return {
-    subtotal, shipping, freeShipping, shippingResolved,
+    subtotal, shipping, freeShipping: false, shippingResolved,
     laborFee: 0, recyclingFee: 0, tax: 0,
-    total, isExact: freeShipping, // exact when free; otherwise estimate
+    total, isExact: false, // shipping is an estimate until checkout confirms
     label: "Estimated Total", itemCount: items.length,
   };
 }
@@ -1373,7 +1375,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                           ? "Final price confirmed at checkout."
                           : rt.shippingResolved
                             ? "Shipping estimated; tax calculated at checkout."
-                            : "Add your ZIP at checkout for exact shipping. Free shipping on orders over $1,500."}
+                            : "Add your ZIP at checkout for exact shipping."}
                       </p>
                     )}
 

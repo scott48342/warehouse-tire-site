@@ -86,6 +86,7 @@ export async function GET(request: NextRequest) {
         AND s.is_bot = false
         AND s.is_test = false
         AND s.page_view_count >= ${minPages}
+        AND (s.country = 'US' OR s.country IS NULL)
         ${siteCondition}
       ORDER BY s.last_seen_at DESC
       LIMIT ${limit}

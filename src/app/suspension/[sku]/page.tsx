@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : `${product.yearStart}-${product.yearEnd}`;
   
   const title = `${product.productDesc} | ${BRAND.name}`;
-  const description = `${product.brand} ${product.productDesc}. ${product.liftHeight ? `${product.liftHeight}" lift` : "Suspension upgrade"} for ${yearRange} ${product.make} ${product.model}. Free shipping, expert support.`;
+  const description = `${product.brand} ${product.productDesc}. ${product.liftHeight ? `${product.liftHeight}" lift` : "Suspension upgrade"} for ${yearRange} ${product.make} ${product.model}. Fast shipping, expert support.`;
 
   return {
     title,
@@ -139,7 +139,7 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
     `${product.brand} ${product.productDesc}`,
     product.liftHeight ? `${product.liftHeight}" lift kit` : "suspension upgrade",
     `for ${yearRange} ${product.make} ${product.model}`,
-    "Direct bolt-on installation. Free shipping.",
+    "Direct bolt-on installation. Fast shipping.",
   ].join(". ");
 
   return (

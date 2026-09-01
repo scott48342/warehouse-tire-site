@@ -11,7 +11,7 @@ import { normalizeTireSize } from "@/lib/productFormat";
 import { isCommercialTireSize } from "@/lib/localPricing";
 import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
-import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
+import { calculateShipping, type ShippingItem } from "@/lib/shipping/shippingService";
 import { CheckoutTrustStrip } from "@/components/StoreReviews";
 import { CheckoutTrustBadges } from "@/components/trust/TrustSignals";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
@@ -356,6 +356,8 @@ export default function CheckoutPage() {
       unitPrice: item.unitPrice,
       // Wheel-1 landed-cost: freight baked in, no shipping charge
       freeShipping: (item as { freeShipping?: boolean }).freeShipping === true || undefined,
+      // Tire size label for oversized/heavy detection (LT, flotation, large metric)
+      sizeLabel: item.type === "tire" ? (item as { size?: string }).size : undefined,
     }));
     
     return calculateShipping({
@@ -1504,7 +1506,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex items-center gap-2 text-neutral-700">
                     <span className="text-green-600">✓</span>
-                    <span>Free shipping over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
+                    <span>Fast, reliable nationwide shipping</span>
                   </div>
                   <div className="flex items-center gap-2 text-neutral-700">
                     <span className="text-green-600">✓</span>

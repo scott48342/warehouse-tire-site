@@ -8,8 +8,7 @@ import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
 import { CartTrustModule } from "@/components/trust/TrustSignals";
-import { ShippingEstimator, FreeShippingProgress } from "@/components/ShippingEstimate";
-import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
+import { ShippingEstimator } from "@/components/ShippingEstimate";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { formatCurrency } from "@/lib/shipping/shippingService";
 import { useShopContext, LocalOnly, NationalOnly } from "@/contexts/ShopContextProvider";
@@ -402,7 +401,6 @@ export default function CartPage() {
     setZipCode,
     estimate: shippingEstimate,
     isFreeShipping,
-    amountToFreeShipping,
     estimatedTotal,
     isValidZip,
   } = useCartShipping(items, subtotal);
@@ -497,10 +495,7 @@ export default function CartPage() {
           </div>
         )}
 
-        {/* Free Shipping Progress - National mode only */}
-        <NationalOnly>
-          <FreeShippingProgress subtotal={subtotal} className="mb-6" />
-        </NationalOnly>
+
 
         {/* Local mode: Installation banner */}
         <LocalOnly>
@@ -718,7 +713,7 @@ export default function CartPage() {
                 ) : (
                   <div className="flex items-center gap-2">
                     <span className="text-green-600">✓</span>
-                    <span>Free shipping on orders over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
+                    <span>Fast, reliable nationwide shipping</span>
                   </div>
                 )}
                 <div className="flex items-center gap-2">

@@ -32,8 +32,8 @@ const faqs = [
         a: 'Most orders ship within 1-2 business days. Standard shipping typically takes 3-7 business days depending on your location. Expedited shipping options are available at checkout.'
       },
       {
-        q: 'Do you offer free shipping?',
-        a: 'Yes! We offer free standard shipping on orders over $1,500. Some oversized items or remote locations may have additional shipping fees.'
+        q: 'How much does shipping cost?',
+        a: 'Shipping is calculated at checkout based on your location and order size. Oversized items (like LT and large truck tires) and remote locations may have additional shipping fees. Select products include shipping in the price.'
       },
       {
         q: 'Do you ship to Alaska, Hawaii, or Puerto Rico?',

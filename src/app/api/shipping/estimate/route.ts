@@ -14,7 +14,6 @@ import { NextResponse } from "next/server";
 import {
   calculateShipping,
   isValidZipCode,
-  FREE_SHIPPING_THRESHOLD,
   type ShippingItem,
 } from "@/lib/shipping/shippingService";
 
@@ -64,6 +63,8 @@ export async function POST(req: Request) {
       type: item.type || "wheel",
       quantity: Number(item.quantity) || 1,
       unitPrice: Number(item.unitPrice) || 0,
+      sizeLabel: typeof item.sizeLabel === "string" ? item.sizeLabel : (typeof item.size === "string" ? item.size : undefined),
+      weightLbs: Number(item.weightLbs) > 0 ? Number(item.weightLbs) : undefined,
     }));
 
     const estimate = calculateShipping({
@@ -82,9 +83,8 @@ export async function POST(req: Request) {
         displayAmount: estimate.displayAmount,
         estimatedDays: estimate.estimatedDays,
         isEstimate: true,
+        oversizedCount: estimate.oversizedCount,
       },
-      freeShippingThreshold: FREE_SHIPPING_THRESHOLD,
-      amountToFreeShipping: estimate.amountToFreeShipping,
     });
   } catch (err: any) {
     console.error("[shipping/estimate] Error:", err);
@@ -106,7 +106,6 @@ export async function GET(req: Request) {
 
   if (!zipCode) {
     return NextResponse.json({
-      freeShippingThreshold: FREE_SHIPPING_THRESHOLD,
       message: "Provide ?zip=12345&subtotal=1000 for estimate",
     });
   }
@@ -140,7 +139,5 @@ export async function GET(req: Request) {
       displayAmount: estimate.displayAmount,
       estimatedDays: estimate.estimatedDays,
     },
-    freeShippingThreshold: FREE_SHIPPING_THRESHOLD,
-    amountToFreeShipping: estimate.amountToFreeShipping,
   });
 }

@@ -12,17 +12,17 @@ export default function ShippingPage() {
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Shipping Information</h1>
 
-        {/* Free Shipping Banner */}
+        {/* Fast Shipping Banner */}
         <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8 text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
             </svg>
-            <span className="text-xl font-bold text-green-800">Free Shipping on Orders Over $1,500</span>
+            <span className="text-xl font-bold text-green-800">Fast, Reliable Shipping Nationwide</span>
           </div>
           <p className="text-green-700">
-            Most in-stock tire orders arrive in 1-3 business days
+            Most in-stock tire orders arrive in 1-3 business days. Shipping calculated at checkout.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function ShippingPage() {
                       <div className="text-gray-700 font-medium">Usually 1-3 business days</div>
                       <div className="text-sm text-gray-500">Many in-stock orders arrive next business day*</div>
                     </td>
-                    <td className="py-4 text-gray-600">Free over $1,500 / Calculated at checkout</td>
+                    <td className="py-4 text-gray-600">Calculated at checkout</td>
                   </tr>
                   <tr>
                     <td className="py-4">
@@ -83,7 +83,7 @@ export default function ShippingPage() {
                       <div className="text-gray-700 font-medium">Usually 2-5 business days</div>
                       <div className="text-sm text-gray-500">Varies by brand, finish, and availability</div>
                     </td>
-                    <td className="py-4 text-gray-600">Free over $1,500 / Calculated at checkout</td>
+                    <td className="py-4 text-gray-600">Calculated at checkout</td>
                   </tr>
                   <tr>
                     <td className="py-4">
@@ -94,7 +94,7 @@ export default function ShippingPage() {
                       <div className="text-gray-700 font-medium">Usually 2-5 business days</div>
                       <div className="text-sm text-gray-500">Extra processing for matching & safe handling</div>
                     </td>
-                    <td className="py-4 text-gray-600">Free over $1,500 / Calculated at checkout</td>
+                    <td className="py-4 text-gray-600">Calculated at checkout</td>
                   </tr>
                   <tr>
                     <td className="py-4">
@@ -140,8 +140,8 @@ export default function ShippingPage() {
               <div>
                 <h3 className="font-medium text-gray-900 mb-2">Continental US</h3>
                 <p className="text-gray-600">
-                  We ship to all 48 contiguous states. Standard shipping rates apply, with free 
-                  shipping available on qualifying orders.
+                  We ship to all 48 contiguous states. Shipping rates are calculated at 
+                  checkout based on your location and order size.
                 </p>
               </div>
               <div>

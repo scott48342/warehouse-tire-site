@@ -163,7 +163,7 @@ BUSINESS CONTEXT:
 - We sell tires, wheels, and tire/wheel packages
 - Two locations: Pontiac and Waterford, MI
 - Online store: shop.warehousetiredirect.com
-- FREE SHIPPING on orders over $1,500 (IMPORTANT: always use $1,500, never $599)
+- Fast, reliable nationwide shipping (IMPORTANT: we do NOT offer free shipping — never mention free shipping or any free-shipping threshold)
 - Professional installation available
 
 ${rebateContext}
@@ -188,9 +188,9 @@ Generate a campaign with:
 VALUE PROPS RULES:
 - Keep each under 50 characters
 - Make them scannable - one benefit per point
-- Include the $1,500 free shipping threshold in one of them
-- Example good: "FREE shipping over $1,500"
-- Example bad: "FREE shipping on orders over $1,500 - no hidden fees"
+- NEVER mention free shipping (we don't offer it)
+- Example good: "Fast nationwide shipping"
+- Example bad: "FREE shipping on orders over $1,500"
 
 Respond in JSON format:
 {
@@ -200,7 +200,7 @@ Respond in JSON format:
   "headline": "Main headline in email",
   "subheadline": "Supporting subheadline",
   "valueProps": [
-    {"icon": "🚚", "text": "FREE shipping over $1,500"},
+    {"icon": "🚚", "text": "Fast nationwide shipping"},
     {"icon": "🔧", "text": "Pro installation in Pontiac & Waterford"}
   ],
   "ctaText": "Shop Now",

@@ -332,8 +332,8 @@ function generateMeta(
   };
   
   const descMap: Record<PageType, string> = {
-    wheels: `Shop wheels for your ${ctx.year} ${ctx.make} ${ctx.model}. ${productCount}+ fitment-verified options. Free shipping. Expert support.`,
-    tires: `Find the perfect tires for your ${ctx.year} ${ctx.make} ${ctx.model}. All sizes guaranteed to fit. Shop now with free shipping.`,
+    wheels: `Shop wheels for your ${ctx.year} ${ctx.make} ${ctx.model}. ${productCount}+ fitment-verified options. Fast shipping. Expert support.`,
+    tires: `Find the perfect tires for your ${ctx.year} ${ctx.make} ${ctx.model}. All sizes guaranteed to fit. Shop now with fast shipping.`,
     packages: `Complete wheel and tire packages for the ${ctx.year} ${ctx.make} ${ctx.model}. Mounted, balanced, and ready to install.`,
   };
   

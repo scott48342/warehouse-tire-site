@@ -5,9 +5,6 @@ import {
   calculateShipping,
   isValidZipCode,
   normalizeZipCode,
-  formatCurrency,
-  FREE_SHIPPING_THRESHOLD,
-  FREE_SHIPPING_MESSAGE,
   PACKAGE_SHIPPING_MESSAGE,
   type ShippingItem,
   type ShippingEstimate as ShippingEstimateType,
@@ -246,99 +243,9 @@ export function ShippingEstimateBadge({
   );
 }
 
-interface FreeShippingProgressProps {
-  subtotal: number;
-  compact?: boolean;
-  className?: string;
-}
-
-/**
- * Progress bar toward free shipping
- */
-export function FreeShippingProgress({ subtotal, compact = false, className = "" }: FreeShippingProgressProps) {
-  const remaining = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
-  const progress = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
-
-  // Already qualified for free shipping
-  if (subtotal >= FREE_SHIPPING_THRESHOLD) {
-    if (compact) {
-      return (
-        <div className={`flex items-center gap-1.5 text-green-700 ${className}`}>
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-          <span className="text-sm font-semibold">Free shipping unlocked!</span>
-        </div>
-      );
-    }
-    return (
-      <div className={`bg-green-50 border border-green-200 rounded-lg p-3 ${className}`}>
-        <div className="flex items-center gap-2 text-green-700">
-          <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <span className="font-semibold">Free shipping unlocked!</span>
-            <span className="text-green-600 text-sm ml-1">Your order qualifies.</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Compact variant for tight spaces
-  if (compact) {
-    return (
-      <div className={`text-sm ${className}`}>
-        <div className="flex items-center gap-2 text-amber-700 mb-1">
-          <span className="font-medium">{formatCurrency(remaining)} away from FREE shipping</span>
-        </div>
-        <div className="h-1.5 bg-amber-100 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-amber-400 to-amber-500 rounded-full transition-all duration-300"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-      </div>
-    );
-  }
-
-  // Full progress bar
-  return (
-    <div className={`bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-3 ${className}`}>
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
-          <span className="text-lg">🚚</span>
-          <span className="text-sm text-amber-900">
-            You&apos;re <span className="font-bold">{formatCurrency(remaining)}</span> away from FREE shipping!
-          </span>
-        </div>
-      </div>
-      <div className="h-2.5 bg-amber-200/60 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-amber-400 to-green-500 rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
-      <div className="mt-1.5 flex justify-between text-[10px] text-amber-600">
-        <span>{formatCurrency(subtotal)}</span>
-        <span>{formatCurrency(FREE_SHIPPING_THRESHOLD)}</span>
-      </div>
-    </div>
-  );
-}
-
-/**
- * Inline free shipping badge for product pages
- */
-export function FreeShippingBadge({ className = "" }: { className?: string }) {
-  return (
-    <div className={`inline-flex items-center gap-1.5 text-sm text-neutral-600 ${className}`}>
-      <span className="text-green-600">🚚</span>
-      <span>{FREE_SHIPPING_MESSAGE}</span>
-    </div>
-  );
-}
+// NOTE (2026-08-31): FreeShippingProgress and FreeShippingBadge were removed
+// along with the site-wide $1,500 free-shipping offer. All orders now pay
+// calculated shipping.
 
 /**
  * Package shipping message
@@ -371,15 +278,6 @@ export function ShippingEstimator({
   className = "",
 }: ShippingEstimatorProps) {
   const { zipCode, setZipCode, clearZipCode, estimate, isValidZip } = useShippingEstimate(items, subtotal);
-
-  // Free shipping - no ZIP needed
-  if (subtotal >= FREE_SHIPPING_THRESHOLD) {
-    return (
-      <div className={className}>
-        <FreeShippingProgress subtotal={subtotal} />
-      </div>
-    );
-  }
 
   if (variant === "minimal") {
     return (
@@ -415,7 +313,6 @@ export function ShippingEstimator({
             <span className="font-semibold">{estimate.displayAmount}</span>
           )}
         </div>
-        <FreeShippingProgress subtotal={subtotal} />
       </div>
     );
   }
@@ -453,10 +350,8 @@ export function ShippingEstimator({
           )}
         </div>
 
-        <FreeShippingProgress subtotal={subtotal} />
-
         <p className="text-xs text-neutral-500">
-          Free shipping on orders over {formatCurrency(FREE_SHIPPING_THRESHOLD)}
+          Shipping calculated by destination and order size. Oversized &amp; LT tires may include a handling surcharge.
         </p>
       </div>
     </div>

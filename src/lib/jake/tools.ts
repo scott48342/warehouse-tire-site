@@ -360,11 +360,10 @@ Searches major competitors (TireRack, Discount Tire, SimpleTire, etc.) for the s
 AFTER GETTING RESULTS:
 - If we're cheaper: "We're actually $X less than [competitor]!"
 - If we're close: "That's competitive with what you'll find anywhere"
-- If we're higher: Focus on our value-adds (free shipping, local install, warranty support)
+- If we're higher: Focus on our value-adds (local install, warranty support, real experts)
 - NEVER badmouth competitors, just highlight our strengths
 
 VALUE-ADDS TO MENTION:
-- Free shipping on orders over $1,500
 - Local installation available (Pontiac & Waterford)
 - We stand behind what we sell - easy returns/warranty support
 - Real humans answer the phone
@@ -1420,7 +1419,7 @@ export async function executeTool(
         return {
           success: false,
           error: "Price comparison not available",
-          suggestion: "Our prices are competitive with free shipping over $1,500 and local installation available."
+          suggestion: "Our prices are competitive and we offer local installation."
         };
       }
       
@@ -1468,7 +1467,7 @@ Only include retailers where you found actual current prices. If you can't find 
           return {
             success: false,
             error: "Price comparison temporarily unavailable",
-            suggestion: "Our prices include free shipping over $1,500 and we offer local installation."
+            suggestion: "Our prices are competitive and we offer local installation."
           };
         }
         
@@ -1509,7 +1508,7 @@ Only include retailers where you found actual current prices. If you can't find 
               comparison = {
                 verdict: "higher",
                 difference: Math.abs(diff).toFixed(2),
-                message: "We may be slightly higher, but we include free shipping over $1,500 and offer local installation."
+                message: "We may be slightly higher, but you get real fitment experts and we offer local installation."
               };
             }
           }
@@ -1525,7 +1524,6 @@ Only include retailers where you found actual current prices. If you can't find 
             comparison,
             citations: citations.slice(0, 3),
             valueAdds: [
-              "Free shipping on orders over $1,500",
               "Local installation available (Pontiac & Waterford)",
               "Family-owned business with real customer service",
               "Easy returns and warranty support"
@@ -1542,7 +1540,6 @@ Only include retailers where you found actual current prices. If you can't find 
           rawAnswer: answer,
           notes: "Could not find specific competitor prices. Our pricing is competitive with major retailers.",
           valueAdds: [
-            "Free shipping on orders over $1,500",
             "Local installation available (Pontiac & Waterford)",
             "Family-owned business with real customer service"
           ]

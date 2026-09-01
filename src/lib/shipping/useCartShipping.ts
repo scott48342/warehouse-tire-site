@@ -5,7 +5,6 @@ import {
   calculateShipping,
   isValidZipCode,
   normalizeZipCode,
-  FREE_SHIPPING_THRESHOLD,
   type ShippingItem,
   type ShippingEstimate,
 } from "./shippingService";
@@ -43,6 +42,8 @@ function cartItemsToShippingItems(cartItems: CartItem[]): ShippingItem[] {
     unitPrice: item.unitPrice,
     // Pass through freeShipping flag (set for Wheel-1 landed-cost items)
     freeShipping: (item as { freeShipping?: boolean }).freeShipping === true || undefined,
+    // Tire size label for oversized/heavy detection (LT, flotation, large metric)
+    sizeLabel: item.type === "tire" ? (item as { size?: string }).size : undefined,
   }));
 }
 
@@ -76,18 +77,15 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
 
   // Derived values
   //
-  // Free-shipping rules (in priority order):
-  //   1. Order subtotal >= $1,500 threshold (site-wide policy)
-  //   2. ALL items in cart have freeShipping=true (Wheel-1 landed-cost strategy:
-  //      freight is baked into the per-unit price, so no additional charge).
-  //      Mixed carts (Wheel-1 + WheelPros) get standard shipping on WheelPros portion.
+  // The $1,500 free-shipping threshold was REMOVED (2026-08-31).
+  // The only $0-shipping case: ALL items have freeShipping=true (Wheel-1
+  // landed-cost strategy: freight is baked into the per-unit price).
+  // Mixed carts (Wheel-1 + WheelPros) get standard shipping on everything else.
   const allItemsFreeShipping =
     cartItems.length > 0 &&
     cartItems.every((item) => (item as { freeShipping?: boolean }).freeShipping === true);
 
-  const isFreeShipping = subtotal >= FREE_SHIPPING_THRESHOLD || allItemsFreeShipping;
-  const amountToFreeShipping = allItemsFreeShipping ? 0 : Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
-  const freeShippingProgress = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
+  const isFreeShipping = allItemsFreeShipping;
 
   // Set ZIP code and persist
   const setZipCode = useCallback((zip: string) => {
@@ -121,11 +119,9 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
     estimate,
     shippingAmount: estimate.amount,
     
-    // Free shipping
+    // Free shipping (Wheel-1 landed-cost only; site-wide offer removed)
     isFreeShipping,
-    amountToFreeShipping,
-    freeShippingProgress,
-    freeShippingThreshold: FREE_SHIPPING_THRESHOLD,
+    oversizedCount: estimate.oversizedCount,
 
     // Totals
     subtotal,

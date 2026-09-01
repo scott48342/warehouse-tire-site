@@ -5,31 +5,35 @@
  * - Zone-based pricing using ZIP prefixes
  * - Product type multipliers (wheels heavier than tires)
  * - Quantity tiers
- * - Free shipping threshold: $1500
+ * - Heavy/oversized tire surcharge
  * 
  * No external API calls - instant response.
  * 
  * @created 2026-04-03
- * @updated 2026-04-05 - Threshold model: $1500 for free shipping
+ * @updated 2026-08-31 - Removed $1,500 free-shipping threshold entirely.
+ *   All orders pay calculated shipping. Only exception: Wheel-1 landed-cost
+ *   items (per-item freeShipping flag) where freight is baked into unit price.
  */
 
 // ============================================================================
 // Configuration
 // ============================================================================
 
-/** Free shipping threshold - orders over this amount ship free */
-export const FREE_SHIPPING_THRESHOLD = 1500;
+/** Shipping messaging (free-shipping offer removed 2026-08-31) */
+export const SHIPPING_MESSAGE = "Fast, reliable shipping nationwide";
+export const PACKAGE_SHIPPING_MESSAGE = "Fast, reliable shipping on every package";
 
 /**
- * Single source of truth for the free-shipping threshold as a formatted dollar
- * string (e.g. "$1,500"). Derive ALL free-shipping copy from this so messaging
- * can never drift from FREE_SHIPPING_THRESHOLD again.
+ * Per-tire surcharge for heavy/oversized tires (LT, flotation, large SUV sizes).
+ * Carriers charge ~$50/pkg "additional handling" for packages over 50 lbs,
+ * plus dimensional weight — a 60 lb LT tire costs FAR more to ship than a
+ * passenger tire. Added 2026-08-31 after order #626D8110 ($119 charged,
+ * $635 actual FedEx cost on 4x LT285/65R18 E-load).
  */
-export const FREE_SHIPPING_THRESHOLD_LABEL = `$${FREE_SHIPPING_THRESHOLD.toLocaleString("en-US")}`;
+export const HEAVY_TIRE_SURCHARGE = 45;
 
-/** Free shipping messaging (derived from the threshold constant) */
-export const FREE_SHIPPING_MESSAGE = `Free shipping on orders over ${FREE_SHIPPING_THRESHOLD_LABEL}`;
-export const PACKAGE_SHIPPING_MESSAGE = "Most packages qualify for free shipping";
+/** Per-item weight (LBS) at/above which a tire is treated as oversized */
+export const HEAVY_TIRE_WEIGHT_LBS = 45;
 
 /** Base shipping rates by zone (for a standard 4-wheel set) */
 const ZONE_BASE_RATES: Record<number, number> = {
@@ -103,6 +107,12 @@ export interface ShippingItem {
    * calculateShipping returns isFree=true when ALL items have freeShipping=true.
    */
   freeShipping?: boolean;
+  /** Tire size label (e.g. "LT285/65R18", "35X12.50R20") for oversized detection */
+  sizeLabel?: string;
+  /** Actual item weight in LBS when known (e.g. from USAF enrichment) */
+  weightLbs?: number;
+  /** Explicit oversized flag (overrides size/weight detection) */
+  oversized?: boolean;
 }
 
 export interface ShippingEstimate {
@@ -114,14 +124,14 @@ export interface ShippingEstimate {
   zone: number;
   /** Zone name for display */
   zoneName: string;
-  /** Amount needed for free shipping (0 if already free) */
-  amountToFreeShipping: number;
   /** Formatted display string */
   displayAmount: string;
   /** Estimated delivery days */
   estimatedDays: { min: number; max: number };
   /** Is this an estimate or final? */
   isEstimate: boolean;
+  /** Number of oversized/heavy tire units in the cart */
+  oversizedCount: number;
 }
 
 export interface ShippingInput {
@@ -202,6 +212,58 @@ function getEstimatedDays(zone: number): { min: number; max: number } {
 }
 
 /**
+ * Detect oversized/heavy tires from the size label.
+ *
+ * Oversized when:
+ * - LT-metric ("LT285/65R18") — LT tires run 45-80 lbs
+ * - Flotation ("35X12.50R20", "37X13.50R22") — all heavy
+ * - Large metric sizes (width >= 285 with aspect >= 60, or width >= 305)
+ *   — big SUV/truck tires that push past the 50 lb carrier surcharge line
+ */
+export function isOversizedTireSize(size?: string): boolean {
+  if (!size) return false;
+  const s = size.trim().toUpperCase();
+
+  // LT-metric prefix (LT285/65R18)
+  if (s.startsWith("LT")) return true;
+
+  // Flotation sizes (35X12.50R20, 33X12.50R15LT, etc.)
+  if (/^\d{2}(\.\d+)?X/.test(s)) return true;
+
+  // Metric sizes: width/aspect(R)diameter
+  const m = s.match(/^(\d{3})\/(\d{2,3})\s*[A-Z]*R?(\d{2})/);
+  if (m) {
+    const width = parseInt(m[1], 10);
+    const aspect = parseInt(m[2], 10);
+    if (width >= 305) return true;
+    if (width >= 285 && aspect >= 60) return true;
+  }
+
+  return false;
+}
+
+/**
+ * Is this shipping item an oversized/heavy tire?
+ * Priority: explicit flag > known weight > size-label detection.
+ */
+export function isOversizedItem(item: ShippingItem): boolean {
+  if (item.type !== "tire") return false;
+  if (item.oversized === true) return true;
+  if (typeof item.weightLbs === "number" && item.weightLbs >= HEAVY_TIRE_WEIGHT_LBS) return true;
+  return isOversizedTireSize(item.sizeLabel);
+}
+
+/**
+ * Count oversized tire units in a cart
+ */
+export function countOversizedUnits(items: ShippingItem[]): number {
+  return items.reduce(
+    (n, item) => n + (isOversizedItem(item) ? item.quantity || 0 : 0),
+    0
+  );
+}
+
+/**
  * Validate ZIP code format
  */
 export function isValidZipCode(zipCode: string): boolean {
@@ -224,9 +286,14 @@ export function normalizeZipCode(zipCode: string): string {
  * Calculate shipping estimate
  */
 export function calculateShipping(input: ShippingInput): ShippingEstimate {
-  const { zipCode, items, subtotal } = input;
+  // NOTE: input.subtotal kept in the signature for compatibility; no longer
+  // affects the rate now that the free-shipping threshold is gone.
+  const { zipCode, items } = input;
 
-  // Wheel-1 landed-cost: if ALL items in cart have freight baked in, shipping = $0
+  const oversizedCount = countOversizedUnits(items);
+
+  // Wheel-1 landed-cost: if ALL items in cart have freight baked in, shipping = $0.
+  // This is NOT a free-shipping promo — freight is included in the unit price.
   const allItemsFreeShipping =
     items.length > 0 && items.every((i) => i.freeShipping === true);
   if (allItemsFreeShipping) {
@@ -236,28 +303,16 @@ export function calculateShipping(input: ShippingInput): ShippingEstimate {
       isFree: true,
       zone,
       zoneName: getZoneName(zone),
-      amountToFreeShipping: 0,
       displayAmount: "FREE",
       estimatedDays: getEstimatedDays(zone),
       isEstimate: !zipCode,
+      oversizedCount,
     };
   }
 
-  // Free shipping threshold check
-  if (subtotal >= FREE_SHIPPING_THRESHOLD) {
-    const zone = zipCode ? getZoneFromZip(normalizeZipCode(zipCode)) : 3;
-    return {
-      amount: 0,
-      isFree: true,
-      zone,
-      zoneName: getZoneName(zone),
-      amountToFreeShipping: 0,
-      displayAmount: "FREE",
-      estimatedDays: getEstimatedDays(zone),
-      isEstimate: !zipCode,
-    };
-  }
-  
+  // NOTE (2026-08-31): The $1,500 free-shipping threshold was removed.
+  // Every order pays calculated shipping.
+
   // Need ZIP for calculation
   if (!zipCode || !isValidZipCode(zipCode)) {
     return {
@@ -265,10 +320,10 @@ export function calculateShipping(input: ShippingInput): ShippingEstimate {
       isFree: false,
       zone: 0,
       zoneName: "Unknown",
-      amountToFreeShipping: FREE_SHIPPING_THRESHOLD - subtotal,
       displayAmount: "Enter ZIP",
       estimatedDays: { min: 3, max: 10 },
       isEstimate: true,
+      oversizedCount,
     };
   }
   
@@ -293,7 +348,14 @@ export function calculateShipping(input: ShippingInput): ShippingEstimate {
     // Each additional set adds 25% of base rate
     shippingAmount += baseRate * QUANTITY_TIER_RATE * (sets - 1);
   }
-  
+
+  // Heavy/oversized tire surcharge (per tire).
+  // Covers carrier "additional handling" fees (~$50/pkg over 50 lbs)
+  // and dimensional-weight billing on large tires.
+  if (oversizedCount > 0) {
+    shippingAmount += oversizedCount * HEAVY_TIRE_SURCHARGE;
+  }
+
   // Round to nearest dollar
   shippingAmount = Math.round(shippingAmount);
   
@@ -302,10 +364,10 @@ export function calculateShipping(input: ShippingInput): ShippingEstimate {
     isFree: false,
     zone,
     zoneName: getZoneName(zone),
-    amountToFreeShipping: FREE_SHIPPING_THRESHOLD - subtotal,
     displayAmount: `$${shippingAmount}`,
     estimatedDays: getEstimatedDays(zone),
     isEstimate: true, // Always estimate until checkout confirms
+    oversizedCount,
   };
 }
 
@@ -349,7 +411,10 @@ export const shippingService = {
   isValidZipCode,
   normalizeZipCode,
   formatCurrency,
-  FREE_SHIPPING_THRESHOLD,
+  isOversizedTireSize,
+  isOversizedItem,
+  countOversizedUnits,
+  HEAVY_TIRE_SURCHARGE,
 };
 
 export default shippingService;

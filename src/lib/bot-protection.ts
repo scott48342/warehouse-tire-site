@@ -117,7 +117,9 @@ export function checkBotProtection(req: NextRequest): {
              "unknown";
 
   // 1. Allow unrestricted paths
-  if (BOT_PROTECTION_CONFIG.UNRESTRICTED_PATHS.some(p => path.startsWith(p))) {
+  // NOTE (2026-08-31): "/" must be an EXACT match — with startsWith it matched
+  // every path on the site, silently disabling ALL bot protection below.
+  if (BOT_PROTECTION_CONFIG.UNRESTRICTED_PATHS.some(p => p === "/" ? path === "/" : path.startsWith(p))) {
     return { allowed: true };
   }
 
