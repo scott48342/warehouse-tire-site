@@ -137,6 +137,8 @@ export type CartTireItem = {
   staggered?: boolean;
   /** Supplier source (e.g., "tireweb:atd", "km") - for internal use only */
   source?: string;
+  /** Tire weight in pounds - used for accurate shipping quotes */
+  weightLbs?: number;
 };
 
 export type CartItem = CartWheelItem | CartTireItem | CartAccessoryItem;

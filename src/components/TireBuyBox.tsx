@@ -29,6 +29,8 @@ type TireBuyBoxProps = {
   hasVehicle?: boolean;
   hasWarranty?: boolean;
   source?: string;
+  /** Tire weight in pounds - for accurate shipping calculation */
+  weightLbs?: number;
   delivery: {
     text: string;
     color: string;
@@ -54,6 +56,7 @@ export function TireBuyBox({
   hasVehicle = false,
   hasWarranty = true,
   source,
+  weightLbs,
   delivery,
 }: TireBuyBoxProps) {
   const [quantity, setQuantity] = useState(4);
@@ -164,6 +167,7 @@ export function TireBuyBox({
             quantity={quantity}
             vehicle={vehicle}
             source={source}
+            weightLbs={weightLbs}
             variant="primary"
             className="w-full"
           />

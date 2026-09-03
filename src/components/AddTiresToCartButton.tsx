@@ -30,6 +30,8 @@ type AddTiresToCartButtonProps = {
   showPriceInButton?: boolean;
   /** Supplier source (e.g., "tireweb:atd", "km") - for internal tracking */
   source?: string;
+  /** Tire weight in pounds - for accurate shipping calculation */
+  weightLbs?: number;
 };
 
 export function AddTiresToCartButton({
@@ -50,6 +52,7 @@ export function AddTiresToCartButton({
   variant = "primary",
   showPriceInButton = true,
   source,
+  weightLbs,
 }: AddTiresToCartButtonProps) {
   const { addItem } = useCart();
   const { isLocal } = useShopContext();
@@ -74,6 +77,7 @@ export function AddTiresToCartButton({
       vehicle,
       staggered,
       source,
+      weightLbs,
     };
 
     setTimeout(() => {

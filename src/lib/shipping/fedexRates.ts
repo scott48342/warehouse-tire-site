@@ -149,12 +149,14 @@ export function cartItemsToPackages(items: CartItemForShipping[]): PackageInfo[]
       const diameter = item.diameterInches || 30;
       
       // Estimate weight based on tire size if not provided
-      // LT/flotation/oversized tires typically 45-70 lbs
+      // LT/flotation/oversized tires typically 55-75 lbs (larger ones 65-80)
       // Passenger tires typically 20-35 lbs
       let weight = item.weightLbs;
       if (!weight) {
         const isOversized = isOversizedTireSize(item.sizeLabel);
-        weight = isOversized ? 55 : 25; // Conservative estimate for LT tires
+        // Use 65 lbs for LT tires - better reflects typical heavy truck tire weight
+        // Most LT285/70R17 and larger are 60-70 lbs
+        weight = isOversized ? 65 : 25;
       }
       
       for (let i = 0; i < qty; i++) {

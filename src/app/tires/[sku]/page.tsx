@@ -873,6 +873,7 @@ export default async function TireDetailPage({
                       hasVehicle={hasVehicle}
                       hasWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) > 0 : true}
                       source={tire.rawSource || tire.source || "tireweb"}
+                      weightLbs={tire.badges?.tireWeight ? Number(tire.badges.tireWeight) : undefined}
                       delivery={delivery}
                     />
 
@@ -1310,6 +1311,7 @@ export default async function TireDetailPage({
               hasVehicle={hasVehicle}
               hasWarranty={t.mileage_warranty ? Number(t.mileage_warranty) > 0 : true}
               source="wheelpros"
+              weightLbs={t.tire_weight ? Number(t.tire_weight) : undefined}
               delivery={delivery}
             />
 
