@@ -276,12 +276,16 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
   // Set ZIP code and persist
   const setZipCode = useCallback((zip: string) => {
     const normalized = normalizeZipCode(zip);
+    // Only update if ZIP actually changed
+    if (normalized === zipCode) {
+      return; // No change, skip re-fetch
+    }
     setZipCodeState(normalized);
     setStoredZipCode(normalized);
     // Clear live rate when ZIP changes - will refetch
     setLiveRate(null);
     lastFetchKey.current = "";
-  }, []);
+  }, [zipCode]);
 
   // Clear ZIP code
   const clearZipCode = useCallback(() => {
