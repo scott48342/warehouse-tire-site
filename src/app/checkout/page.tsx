@@ -402,11 +402,15 @@ export default function CheckoutPage() {
         const body = {
           zipCode: shipping.zip,
           stateCode: shipping.state,
-          items: shippingItems.map(item => ({
+          items: items.map(item => ({
             type: item.type,
-            quantity: item.quantity,
-            sizeLabel: item.sizeLabel,
-            freeShipping: item.freeShipping,
+            quantity: item.quantity || 1,
+            sizeLabel: item.type === "tire" ? (item as { size?: string }).size : undefined,
+            freeShipping: (item as { freeShipping?: boolean }).freeShipping === true || undefined,
+            weightLbs: (item as { weightLbs?: number }).weightLbs,
+            source: (item as { source?: string }).source,
+            // Part number enables USAF branch-aware freight origin
+            partNumber: (item as { sku?: string }).sku,
           })),
           subtotal: validation.totals.total,
         };
@@ -435,7 +439,7 @@ export default function CheckoutPage() {
     })();
 
     return () => controller.abort();
-  }, [isLocal, needsFedExLookup, shipping.zip, shipping.state, shippingItems, validation.totals.total]);
+  }, [isLocal, needsFedExLookup, shipping.zip, shipping.state, items, validation.totals.total]);
 
   // Final shipping estimate: use live FedEx rate for heavy items, zone estimate otherwise
   const shippingEstimate = useMemo(() => {

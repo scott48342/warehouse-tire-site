@@ -50,6 +50,11 @@ export interface SupplierOrderRequest {
     zip: string;
     phone?: string;
   };
+  /**
+   * USAF fulfillment branch selected at checkout (freight-quote origin).
+   * Submitted as <branch> so fulfillment matches the shipping quote.
+   */
+  usafBranch?: string;
 }
 
 export interface SupplierOrderResult {
@@ -59,6 +64,8 @@ export interface SupplierOrderResult {
   supplierPO?: string;
   errorMessage?: string;
   items: SupplierOrderItem[];
+  /** Warehouse/branch the order was placed against (USAF) */
+  fulfillmentBranch?: string;
 }
 
 // ============================================================================
@@ -81,6 +88,8 @@ export async function ensureSupplierOrdersTable(db: pg.Pool): Promise<void> {
       created_at TIMESTAMPTZ DEFAULT NOW(),
       updated_at TIMESTAMPTZ DEFAULT NOW()
     );
+    
+    ALTER TABLE supplier_orders ADD COLUMN IF NOT EXISTS fulfillment_branch TEXT;
     
     CREATE INDEX IF NOT EXISTS supplier_orders_order_id_idx ON supplier_orders (order_id);
     CREATE INDEX IF NOT EXISTS supplier_orders_supplier_idx ON supplier_orders (supplier);
@@ -309,10 +318,37 @@ async function placeUSAutoForceSupplierOrder(
       };
     }
     
+    // Resolve fulfillment branch:
+    // 1. Use the branch persisted at checkout (matches the freight quote)
+    // 2. Otherwise select nearest stocking branch for the destination ZIP
+    // (never blindly default to a fixed warehouse)
+    let warehouseCode = request.usafBranch;
+    if (!warehouseCode && request.shipTo.zip) {
+      try {
+        const { selectUsafBranch, parseTireSize } = await import("@/lib/usautoforce/branchSelector");
+        const selection = await selectUsafBranch(
+          request.items.map(i => ({
+            partNumber: i.partNumber,
+            quantity: i.quantity,
+            size: parseTireSize(i.lineName) || undefined,
+            name: i.lineName,
+          })),
+          request.shipTo.zip
+        );
+        if (selection) {
+          warehouseCode = selection.branchCode;
+          console.log(`[supplier-order] USAF branch selected at order time: ${warehouseCode} (${selection.warehouse.city}, ${selection.warehouse.state}), complete=${selection.complete}`);
+        }
+      } catch (err) {
+        console.error(`[supplier-order] USAF branch selection failed; order will use client default:`, err);
+      }
+    }
+    
     console.log(`[supplier-order] Placing US AutoForce order for ${request.orderId}:`, {
       items: request.items.length,
       itemDetails: request.items.map(i => ({ partNumber: i.partNumber, lineCode: i.lineCode, qty: i.quantity })),
       shipTo: `${request.shipTo.city}, ${request.shipTo.state}`,
+      warehouseCode: warehouseCode || "(client default)",
     });
     
     const result = await placeUSAutoForceOrder({
@@ -324,16 +360,18 @@ async function placeUSAutoForceSupplierOrder(
       })),
       shipTo: request.shipTo,
       notes: `Warehouse Tire Direct Order ${request.orderId}`,
+      warehouseCode,
     });
     
     if (result.success) {
-      console.log(`[supplier-order] US AutoForce order placed: ${result.orderNumber}`);
+      console.log(`[supplier-order] US AutoForce order placed: ${result.orderNumber} (branch: ${warehouseCode || "default"})`);
       return {
         success: true,
         supplier: "usautoforce",
         supplierOrderNumber: result.orderNumber,
         supplierPO: `WTD-${request.orderId}`,
         items: request.items,
+        fulfillmentBranch: warehouseCode,
       };
     } else {
       console.error(`[supplier-order] US AutoForce order failed:`, result.errorMessage);
@@ -342,6 +380,7 @@ async function placeUSAutoForceSupplierOrder(
         supplier: "usautoforce",
         errorMessage: result.errorMessage,
         items: request.items,
+        fulfillmentBranch: warehouseCode,
       };
     }
   } catch (err: any) {
@@ -362,7 +401,8 @@ export async function processSupplierOrders(
   db: pg.Pool,
   orderId: string,
   snapshot: QuoteSnapshot,
-  shipTo: SupplierOrderRequest["shipTo"]
+  shipTo: SupplierOrderRequest["shipTo"],
+  options?: { usafBranch?: string }
 ): Promise<SupplierOrderResult[]> {
   await ensureSupplierOrdersTable(db);
   
@@ -377,6 +417,7 @@ export async function processSupplierOrders(
       supplier,
       items,
       shipTo,
+      usafBranch: supplier === "usautoforce" ? options?.usafBranch : undefined,
     };
     
     let result: SupplierOrderResult;
@@ -411,8 +452,8 @@ export async function processSupplierOrders(
     await db.query(`
       INSERT INTO supplier_orders (
         order_id, supplier, supplier_order_number, supplier_po,
-        status, items_json, ship_to_json, error_message
-      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+        status, items_json, ship_to_json, error_message, fulfillment_branch
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
     `, [
       orderId,
       supplier,
@@ -422,6 +463,7 @@ export async function processSupplierOrders(
       JSON.stringify(items),
       JSON.stringify(shipTo),
       result.errorMessage || null,
+      result.fulfillmentBranch || null,
     ]);
     
     results.push(result);

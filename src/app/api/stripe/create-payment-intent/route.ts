@@ -351,6 +351,26 @@ export async function POST(req: Request) {
       }
     }
 
+    // ═══════════════════════════════════════════════════════════════════════════
+    // USAF FULFILLMENT BRANCH SELECTION
+    // Pick the nearest USAF warehouse with complete stock so the order ships
+    // from the same origin used for the freight quote. Persisted in metadata
+    // and submitted as <branch> when the supplier order is placed.
+    // ═══════════════════════════════════════════════════════════════════════════
+    let usafBranch: string | undefined;
+    if (!isLocalMode && shippingInfo.zip) {
+      try {
+        const { selectUsafBranchForCartLines } = await import("@/lib/usautoforce/branchSelector");
+        const selection = await selectUsafBranchForCartLines(linesAll, String(shippingInfo.zip));
+        if (selection) {
+          usafBranch = selection.branchCode;
+          console.log(`[checkout/payment-intent] USAF fulfillment branch: ${usafBranch} (${selection.warehouse.city}, ${selection.warehouse.state}) - ${selection.distanceMiles}mi, complete=${selection.complete}`);
+        }
+      } catch (usafErr) {
+        console.error("[checkout/payment-intent] USAF branch selection failed (non-blocking):", usafErr);
+      }
+    }
+
     // Build metadata for PaymentIntent
     const metadata: Record<string, string> = {
       quoteId,
@@ -361,6 +381,7 @@ export async function POST(req: Request) {
       ...(taxAmount > 0 ? { taxAmount: String(taxAmount.toFixed(2)) } : {}),
       ...(shippingAmount > 0 ? { shippingAmount: String(shippingAmount.toFixed(2)) } : {}),
       ...(shippingInfo.zip ? { shippingZip: shippingInfo.zip } : {}),
+      ...(usafBranch ? { usafBranch } : {}),
     };
     
     // Add local mode metadata

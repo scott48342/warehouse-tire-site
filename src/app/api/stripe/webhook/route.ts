@@ -162,7 +162,8 @@ export async function POST(req: Request) {
           phone: quote.snapshot.customer.phone,
         };
         
-        const supplierResults = await processSupplierOrders(db, orderId, quote.snapshot, shipTo);
+        const usafBranch = paymentIntent.metadata?.usafBranch || undefined;
+        const supplierResults = await processSupplierOrders(db, orderId, quote.snapshot, shipTo, { usafBranch });
         console.log(`[stripe/webhook] Supplier orders processed:`, supplierResults.map(r => ({
           supplier: r.supplier,
           success: r.success,
@@ -303,7 +304,8 @@ export async function POST(req: Request) {
           phone: quote.snapshot.customer.phone,
         };
         
-        const supplierResults = await processSupplierOrders(db, orderId, quote.snapshot, shipTo);
+        const usafBranch = session.metadata?.usafBranch || undefined;
+        const supplierResults = await processSupplierOrders(db, orderId, quote.snapshot, shipTo, { usafBranch });
         console.log(`[stripe/webhook] Supplier orders processed:`, supplierResults.map(r => ({
           supplier: r.supplier,
           success: r.success,

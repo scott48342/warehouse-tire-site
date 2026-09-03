@@ -44,7 +44,7 @@ const BRAND_TO_CODE: Record<string, string> = {
   "kelly": "KEL",
   "fuzion": "FUZ",
   "hercules": "HER",
-  "mastercraft": "MAS",
+  "mastercraft": "MSC",  // Confirmed from API (was MAS - wrong)
   "multi-mile": "MUL",
   "multi mile": "MUL",
   "milestar": "MLS",
@@ -72,7 +72,7 @@ const BRAND_TO_CODE: Record<string, string> = {
   "lexani": "LEX",
   "lion sport": "LIO",
   "maxxis": "MAX",
-  "mickey thompson": "MKT",
+  "mickey thompson": "MTT", // Confirmed from API (was MKT - wrong)
   "minerva": "MIN",
   "mohawk": "MOH",
   "national": "NAT",

@@ -390,6 +390,26 @@ export async function POST(req: Request) {
       console.log(`[checkout] Saved quote conversion skipped for Affirm checkout (not yet verified)`);
     }
 
+    // ═══════════════════════════════════════════════════════════════════════════
+    // USAF FULFILLMENT BRANCH SELECTION
+    // Pick the nearest USAF warehouse with complete stock so the order ships
+    // from the same origin used for the freight quote. Persisted in metadata
+    // and submitted as <branch> when the supplier order is placed.
+    // ═══════════════════════════════════════════════════════════════════════════
+    let usafBranch: string | undefined;
+    if (!isLocalMode && shippingInfo.zip) {
+      try {
+        const { selectUsafBranchForCartLines } = await import("@/lib/usautoforce/branchSelector");
+        const selection = await selectUsafBranchForCartLines(linesAll, String(shippingInfo.zip));
+        if (selection) {
+          usafBranch = selection.branchCode;
+          console.log(`[checkout] USAF fulfillment branch: ${usafBranch} (${selection.warehouse.city}, ${selection.warehouse.state}) - ${selection.distanceMiles}mi, complete=${selection.complete}`);
+        }
+      } catch (usafErr) {
+        console.error("[checkout] USAF branch selection failed (non-blocking):", usafErr);
+      }
+    }
+
     // Build metadata - include local install info if in local mode
     const sessionMetadata: Record<string, string | undefined> = {
       quoteId,
@@ -400,6 +420,7 @@ export async function POST(req: Request) {
       taxAmount: taxAmount > 0 ? String(taxAmount.toFixed(2)) : undefined,
       shippingAmount: shippingAmount > 0 ? String(shippingAmount.toFixed(2)) : undefined,
       shippingZip: shippingInfo.zip || undefined,
+      usafBranch,
     };
     
     // Add local mode metadata - ONLY when in local mode with valid store

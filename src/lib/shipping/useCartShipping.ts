@@ -91,6 +91,8 @@ function buildApiRequestBody(
     weightLbs: (item as { weightLbs?: number }).weightLbs,
     diameterInches: (item as { diameterInches?: number }).diameterInches,
     source: (item as { source?: string }).source,
+    // Part number enables USAF branch-aware freight origin
+    partNumber: (item as { sku?: string }).sku,
   }));
 
   return { zipCode, items, subtotal };

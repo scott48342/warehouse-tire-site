@@ -96,6 +96,7 @@ export async function POST(req: Request) {
       freeShipping: item.freeShipping === true,
       source: item.source,
       sizeLabel: item.sizeLabel || item.size, // Tire size for LT detection
+      partNumber: item.partNumber || item.sku, // Enables USAF branch-aware origin
     }));
 
     // Check if we should use FedEx (heavy items present)
@@ -106,6 +107,8 @@ export async function POST(req: Request) {
     let fedexServiceName: string | null = null;
     let rateSource: "fedex" | "zone" = "zone";
     let fedexError: string | undefined;
+    let usafBranch: string | undefined;
+    let originZip: string | undefined;
 
     if (shouldUseFedEx) {
       // Derive state from ZIP if not provided
@@ -118,6 +121,8 @@ export async function POST(req: Request) {
         fedexTransitDays = fedexResult.transitDays;
         fedexServiceName = fedexResult.serviceName;
         rateSource = "fedex";
+        usafBranch = fedexResult.usafBranch;
+        originZip = fedexResult.originZip;
       } else {
         fedexError = fedexResult.error;
         console.warn("[shipping/estimate] FedEx lookup failed:", fedexError);
@@ -165,6 +170,8 @@ export async function POST(req: Request) {
         rateSource,
         fedexServiceName,
         requiresQuote: false,
+        usafBranch,
+        originZip,
       },
     });
   } catch (err: any) {

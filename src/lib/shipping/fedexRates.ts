@@ -70,6 +70,8 @@ export interface CartItemForShipping {
   source?: string;
   /** Tire size label for LT/oversized detection */
   sizeLabel?: string;
+  /** Supplier part number (e.g., USAF "355530") - enables branch-aware origin */
+  partNumber?: string;
 }
 
 export interface FedExRateResult {
@@ -80,6 +82,10 @@ export interface FedExRateResult {
   serviceName: string | null;
   fromCache: boolean;
   error?: string;
+  /** USAF branch code used as ship origin (when items are USAF-sourced) */
+  usafBranch?: string;
+  /** Origin used for the quote (city/state/zip) */
+  originZip?: string;
 }
 
 // =============================================================================
@@ -218,19 +224,82 @@ export function shouldUseFedExLookup(items: CartItemForShipping[]): boolean {
 }
 
 /**
- * Determine origin warehouse based on item sources
+ * Determine origin warehouse based on item sources (legacy sync version)
+ * @deprecated Use resolveOriginForItems for USAF branch-aware origins
  */
 export function getOriginForItems(items: CartItemForShipping[]): typeof SHIP_ORIGINS[keyof typeof SHIP_ORIGINS] {
-  // Check if any items are from USAF
-  const hasUsafItem = items.some(
-    item => item.source?.toLowerCase().includes('usautoforce') || 
-            item.source?.toLowerCase().includes('usaf')
-  );
-  
-  // If mixed sources or USAF, use Pontiac (we may consolidate)
-  // For pure USAF drop-ship, could use their warehouse
-  // For now, default to Pontiac as primary
   return SHIP_ORIGINS.pontiac;
+}
+
+function isUsafSource(source?: string): boolean {
+  const s = (source || '').toLowerCase();
+  return s.includes('usautoforce') || s === 'usaf';
+}
+
+export interface ResolvedOrigin {
+  postalCode: string;
+  stateOrProvinceCode: string;
+  city: string;
+  countryCode: 'US';
+  residential: boolean;
+  /** USAF branch code when origin is a USAF warehouse */
+  usafBranch?: string;
+}
+
+/**
+ * Determine origin warehouse based on item sources.
+ *
+ * For carts where ALL shippable items are USAF-sourced, selects the nearest
+ * USAF branch (relative to destination ZIP) that has the full quantity in
+ * stock, and uses THAT warehouse as freight origin. This keeps the shipping
+ * quote consistent with actual fulfillment (branch is also submitted with
+ * the USAF order).
+ *
+ * Mixed-source or non-USAF carts continue to use Pontiac.
+ */
+export async function resolveOriginForItems(
+  items: CartItemForShipping[],
+  destZip: string
+): Promise<ResolvedOrigin> {
+  const shippable = items.filter(i => !i.freeShipping);
+  const usafItems = shippable.filter(i => isUsafSource(i.source));
+
+  // Only branch-select when the entire shippable cart is USAF drop-ship
+  const allUsaf = shippable.length > 0 && usafItems.length === shippable.length;
+
+  if (allUsaf && destZip) {
+    const itemsWithParts = usafItems.filter(i => i.partNumber);
+    if (itemsWithParts.length === usafItems.length) {
+      try {
+        const { selectUsafBranch } = await import('@/lib/usautoforce/branchSelector');
+        const selection = await selectUsafBranch(
+          itemsWithParts.map(i => ({
+            partNumber: i.partNumber!,
+            quantity: i.quantity,
+            size: i.sizeLabel,
+          })),
+          destZip
+        );
+
+        if (selection) {
+          return {
+            postalCode: selection.warehouse.zip,
+            stateOrProvinceCode: selection.warehouse.state,
+            city: selection.warehouse.city,
+            countryCode: 'US',
+            residential: false,
+            usafBranch: selection.branchCode,
+          };
+        }
+      } catch (err) {
+        console.error('[fedex] USAF branch selection failed; using default origin:', err);
+      }
+    } else {
+      console.warn('[fedex] USAF items missing partNumber; cannot branch-select origin');
+    }
+  }
+
+  return { ...SHIP_ORIGINS.pontiac };
 }
 
 // =============================================================================
@@ -264,14 +333,14 @@ export async function getFedExShippingRate(
     };
   }
   
-  // Determine origin
-  const origin = getOriginForItems(items);
+  // Determine origin (USAF branch-aware for pure USAF carts)
+  const origin = await resolveOriginForItems(items, destZip);
   
-  // Check cache first
+  // Check cache first (keyed by origin+dest+packages, so branch changes bust cache)
   const cacheKey = buildCacheKey(origin.postalCode, destZip, packages);
   const cached = await getCachedRate(cacheKey);
   if (cached) {
-    return { ...cached, fromCache: true };
+    return { ...cached, fromCache: true, usafBranch: origin.usafBranch, originZip: origin.postalCode };
   }
   
   try {
@@ -311,6 +380,8 @@ export async function getFedExShippingRate(
       transitDays: groundRate?.transitDays || null,
       serviceName: groundRate?.serviceName || null,
       fromCache: false,
+      usafBranch: origin.usafBranch,
+      originZip: origin.postalCode,
     };
     
     // Cache successful result
@@ -390,6 +461,7 @@ export const fedexRates = {
   shouldUseFedExLookup,
   cartItemsToPackages,
   getOriginForItems,
+  resolveOriginForItems,
   SHIP_ORIGINS,
   FEDEX_LOOKUP_WEIGHT_THRESHOLD,
 };
