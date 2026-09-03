@@ -65,11 +65,7 @@ export async function GET(request: Request) {
         <alternateFlag>no</alternateFlag>
         <branch>4101</branch>
         <dataSource>manual</dataSource>
-        <alternateBranches>
-          <BranchDto><code>4862</code></BranchDto>
-          <BranchDto><code>4501</code></BranchDto>
-          <BranchDto><code>4701</code></BranchDto>
-        </alternateBranches>
+
         <tires>
           <TireDto>
             <lineNumber>1</lineNumber>
