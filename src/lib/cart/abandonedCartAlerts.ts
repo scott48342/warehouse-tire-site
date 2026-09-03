@@ -77,8 +77,21 @@ export async function sendAbandonedCartAlert(cart: AbandonedCart): Promise<{
   error?: string;
 }> {
   const cartValue = Number(cart.estimatedTotal) || 0;
+  const hasEmail = cart.customerEmail && cart.customerEmail !== 'null' && cart.customerEmail.includes('@');
+  const hasPhone = cart.customerPhone && cart.customerPhone !== 'null' && cart.customerPhone.length >= 10;
+  const hasContactInfo = hasEmail || hasPhone;
 
-  console.log(`[abandonedCartAlerts] Processing cart ${cart.cartId}: $${cartValue.toFixed(2)}, email=${cart.customerEmail}, phone=${cart.customerPhone}`);
+  console.log(`[abandonedCartAlerts] Processing cart ${cart.cartId}: $${cartValue.toFixed(2)}, email=${cart.customerEmail}, phone=${cart.customerPhone}, hasContact=${hasContactInfo}`);
+
+  // Skip carts without any contact info (can't follow up anyway)
+  if (!hasContactInfo) {
+    console.log(`[abandonedCartAlerts] SKIPPED ${cart.cartId}: no contact info (email=${cart.customerEmail}, phone=${cart.customerPhone})`);
+    return {
+      success: true,
+      skipped: true,
+      reason: "No contact info provided",
+    };
+  }
 
   // Skip low-value carts
   if (cartValue < MIN_ALERT_VALUE) {
