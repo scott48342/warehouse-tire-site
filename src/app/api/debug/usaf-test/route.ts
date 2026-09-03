@@ -56,6 +56,7 @@ export async function GET(request: Request) {
     const width = simpleSize.slice(0, 3);
     const aspect = simpleSize.slice(3, 5);
     const rim = simpleSize.slice(5);
+    const withAlts = searchParams.get('alts') !== '0';
     
     bodyContent = `<StockCheck xmlns="${SOAP_NS}">
       <request>
@@ -64,8 +65,13 @@ export async function GET(request: Request) {
         <accountNumber>${escapeXml(account)}</accountNumber>
         <alternateFlag>no</alternateFlag>
         <branch>4101</branch>
-        <dataSource>manual</dataSource>
-
+        <dataSource>manual</dataSource>${withAlts ? `
+        <alternateBranches>
+          <BranchDto><code>4862</code></BranchDto>
+          <BranchDto><code>4101</code></BranchDto>
+          <BranchDto><code>4501</code></BranchDto>
+          <BranchDto><code>4701</code></BranchDto>
+        </alternateBranches>` : ''}
         <tires>
           <TireDto>
             <lineNumber>1</lineNumber>
