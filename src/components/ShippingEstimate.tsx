@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import {
   calculateShipping,
   isValidZipCode,
@@ -99,9 +99,12 @@ export function ZipCodeInput({
 }: ZipCodeInputProps) {
   const [localValue, setLocalValue] = useState(value);
   const [isFocused, setIsFocused] = useState(false);
+  // Track last submitted ZIP to avoid duplicate onChange calls
+  const lastSubmittedRef = useRef(value);
 
   useEffect(() => {
     setLocalValue(value);
+    lastSubmittedRef.current = value;
   }, [value]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -109,14 +112,17 @@ export function ZipCodeInput({
     setLocalValue(raw);
     
     // Auto-submit when 5 digits entered
-    if (raw.length === 5) {
+    if (raw.length === 5 && raw !== lastSubmittedRef.current) {
+      lastSubmittedRef.current = raw;
       onChange(raw);
     }
   };
 
   const handleBlur = () => {
     setIsFocused(false);
-    if (localValue.length === 5) {
+    // Only call onChange if this is a NEW value (not already submitted)
+    if (localValue.length === 5 && localValue !== lastSubmittedRef.current) {
+      lastSubmittedRef.current = localValue;
       onChange(localValue);
     }
   };
