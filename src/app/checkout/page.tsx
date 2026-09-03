@@ -1048,8 +1048,17 @@ export default function CheckoutPage() {
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-bold text-neutral-900 mb-4 flex items-center gap-2">
                 <span className="flex items-center justify-center w-7 h-7 rounded-full bg-green-100 text-green-700 text-sm font-bold">2</span>
-                {isLocal ? "Installation Details" : "Shipping Address"}
+                {isLocal ? "Installation Details" : "Billing & Shipping Address"}
               </h2>
+              
+              {/* FRAUD PREVENTION NOTICE - National orders only */}
+              {!isLocal && (
+                <div className="mb-4 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3">
+                  <p className="text-sm text-blue-800">
+                    <span className="font-semibold">📦 Shipping Policy:</span> For your protection, all orders ship to the billing address on file with your credit card.
+                  </p>
+                </div>
+              )}
               
               {/* Local Mode: Compact Install Summary OR Expanded Selector */}
               {isLocal && (
@@ -1142,17 +1151,7 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              {!isLocal && (
-                <label className="mt-4 flex items-center gap-2 text-sm text-neutral-700">
-                  <input
-                    type="checkbox"
-                    checked={sameAsBilling}
-                    onChange={(e) => setSameAsBilling(e.target.checked)}
-                    className="rounded border-neutral-300"
-                  />
-                  Billing address same as shipping
-                </label>
-              )}
+              {/* Billing = Shipping notice removed - address above IS the billing/shipping address */}
             </div>
 
             {/* LOCAL ONLY: Why Local Customers Choose Us - Conversion Section */}
