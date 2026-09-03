@@ -97,11 +97,13 @@ function buildApiRequestBody(
 }
 
 interface LiveRateResult {
-  amount: number;
-  rateSource: "fedex" | "zone";
+  amount: number | null;
+  rateSource: "fedex" | "zone" | "unavailable";
   transitDays: { min: number; max: number } | null;
   serviceName: string | null;
   fedexError?: string;
+  requiresQuote?: boolean;
+  quoteReason?: string;
 }
 
 /**
@@ -196,6 +198,8 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
             transitDays: data.estimate.estimatedDays,
             serviceName: data.estimate.fedexServiceName,
             fedexError: data.estimate.fedexError,
+            requiresQuote: data.estimate.requiresQuote,
+            quoteReason: data.estimate.quoteReason,
           });
         }
       } catch (err: any) {
@@ -217,10 +221,26 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
 
   // Final estimate combines live rate (if available) with zone estimate
   const estimate = useMemo((): ShippingEstimate & { 
-    rateSource: "fedex" | "zone";
+    rateSource: "fedex" | "zone" | "unavailable";
     serviceName?: string | null;
+    requiresQuote?: boolean;
+    quoteReason?: string;
   } => {
-    if (liveRate && liveRate.rateSource === "fedex") {
+    // If FedEx couldn't quote heavy items, require a call
+    if (liveRate && liveRate.requiresQuote) {
+      return {
+        ...zoneEstimate,
+        amount: 0, // Can't proceed without quote
+        displayAmount: "Call for Quote",
+        isEstimate: false,
+        estimatedDays: { min: 0, max: 0 },
+        rateSource: "unavailable",
+        requiresQuote: true,
+        quoteReason: liveRate.quoteReason || "Shipping to this location requires a custom quote. Please call (248) 332-4120.",
+      };
+    }
+    
+    if (liveRate && liveRate.rateSource === "fedex" && liveRate.amount !== null) {
       return {
         ...zoneEstimate,
         amount: liveRate.amount,
@@ -229,13 +249,15 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
         estimatedDays: liveRate.transitDays || zoneEstimate.estimatedDays,
         rateSource: "fedex",
         serviceName: liveRate.serviceName,
+        requiresQuote: false,
       };
     }
     
-    // Use zone estimate (possibly with amount from API if it used zone too)
+    // Use zone estimate (for non-heavy items only)
     return {
       ...zoneEstimate,
       rateSource: "zone",
+      requiresQuote: false,
     };
   }, [zoneEstimate, liveRate]);
 
@@ -289,6 +311,10 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
     shippingAmount: estimate.amount,
     isLoadingRate,
     rateSource: estimate.rateSource,
+    
+    // Quote required (FedEx can't service this route for heavy items)
+    requiresQuote: estimate.requiresQuote || false,
+    quoteReason: estimate.quoteReason,
     
     // Free shipping (Wheel-1 landed-cost only; site-wide offer removed)
     isFreeShipping,

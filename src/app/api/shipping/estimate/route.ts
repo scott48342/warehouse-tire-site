@@ -119,11 +119,32 @@ export async function POST(req: Request) {
         rateSource = "fedex";
       } else {
         fedexError = fedexResult.error;
-        console.warn("[shipping/estimate] FedEx lookup failed, using zone estimate:", fedexError);
+        console.warn("[shipping/estimate] FedEx lookup failed:", fedexError);
+        
+        // NO FALLBACK for heavy items - require call for quote
+        // This prevents undercharging on routes FedEx can't quote
+        return NextResponse.json({
+          success: true,
+          estimate: {
+            amount: null,
+            isFree: false,
+            zone: zoneEstimate.zone,
+            zoneName: zoneEstimate.zoneName,
+            displayAmount: "Call for Quote",
+            estimatedDays: null,
+            isEstimate: false,
+            oversizedCount: zoneEstimate.oversizedCount,
+            rateSource: "unavailable",
+            fedexServiceName: null,
+            requiresQuote: true,
+            quoteReason: "Shipping to this location requires a custom quote. Please call (248) 332-4120.",
+            fedexError: fedexError,
+          },
+        });
       }
     }
 
-    // Use FedEx rate if available, otherwise zone estimate
+    // Use FedEx rate if available, otherwise zone estimate (for non-heavy items only)
     const finalAmount = fedexRate !== null ? fedexRate : zoneEstimate.amount;
     const finalDays = fedexTransitDays !== null 
       ? { min: fedexTransitDays, max: fedexTransitDays + 2 }
@@ -140,11 +161,9 @@ export async function POST(req: Request) {
         estimatedDays: finalDays,
         isEstimate: rateSource === "zone",
         oversizedCount: zoneEstimate.oversizedCount,
-        // New fields for transparency
         rateSource,
         fedexServiceName,
-        zoneEstimate: zoneEstimate.amount, // Always include for comparison
-        fedexError: fedexError, // Include if FedEx failed
+        requiresQuote: false,
       },
     });
   } catch (err: any) {
