@@ -8,6 +8,7 @@
  */
 
 import { getShippingRates, type PackageInfo, type ShippingRate } from '@/lib/fedex';
+import { isOversizedTireSize } from './shippingService';
 import { Redis } from '@upstash/redis';
 
 // Initialize Redis client (same pattern as sharedCache.ts)
@@ -67,6 +68,8 @@ export interface CartItemForShipping {
   freeShipping?: boolean;
   /** Source/supplier - determines origin warehouse */
   source?: string;
+  /** Tire size label for LT/oversized detection */
+  sizeLabel?: string;
 }
 
 export interface FedExRateResult {
@@ -144,7 +147,15 @@ export function cartItemsToPackages(items: CartItemForShipping[]): PackageInfo[]
       // Tire package dimensions
       // Diameter determines length, width ~12" when boxed flat
       const diameter = item.diameterInches || 30;
-      const weight = item.weightLbs || 25;
+      
+      // Estimate weight based on tire size if not provided
+      // LT/flotation/oversized tires typically 45-70 lbs
+      // Passenger tires typically 20-35 lbs
+      let weight = item.weightLbs;
+      if (!weight) {
+        const isOversized = isOversizedTireSize(item.sizeLabel);
+        weight = isOversized ? 55 : 25; // Conservative estimate for LT tires
+      }
       
       for (let i = 0; i < qty; i++) {
         packages.push({
@@ -187,10 +198,17 @@ export function shouldUseFedExLookup(items: CartItemForShipping[]): boolean {
       return true;
     }
     
-    // Also trigger for LT/oversized tires even if weight unknown
+    // Trigger for LT/oversized tires even if weight unknown
     // (they're almost always 45+ lbs)
-    if (item.type === 'tire' && item.diameterInches && item.diameterInches >= 32) {
-      return true;
+    if (item.type === 'tire') {
+      // Check by size label (LT prefix, flotation, large metric)
+      if (isOversizedTireSize(item.sizeLabel)) {
+        return true;
+      }
+      // Check by diameter (32"+ tires are always heavy)
+      if (item.diameterInches && item.diameterInches >= 32) {
+        return true;
+      }
     }
   }
   

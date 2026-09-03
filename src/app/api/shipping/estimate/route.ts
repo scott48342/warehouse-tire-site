@@ -95,6 +95,7 @@ export async function POST(req: Request) {
       diameterInches: Number(item.diameterInches) > 0 ? Number(item.diameterInches) : undefined,
       freeShipping: item.freeShipping === true,
       source: item.source,
+      sizeLabel: item.sizeLabel || item.size, // Tire size for LT detection
     }));
 
     // Check if we should use FedEx (heavy items present)
