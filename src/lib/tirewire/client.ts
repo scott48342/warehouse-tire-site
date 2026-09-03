@@ -1,9 +1,12 @@
 /**
  * TireWeb Connections Center API Client
  * 
- * Queries tire inventory from multiple suppliers (ATD, NTW, US AutoForce)
- * via the TireWeb SOAP API (ws.tirewire.com). Returns TireLibrary-enriched 
- * data including images, specs, and pricing.
+ * Queries tire inventory from multiple suppliers (ATD, NTW, K&M) via the
+ * TireWeb SOAP API (ws.tirewire.com). Returns TireLibrary-enriched data
+ * including images, specs, and pricing.
+ * 
+ * NOTE: US AutoForce is NOT queried via TireWeb - we use the direct USAF API
+ * instead (see src/lib/usautoforce/client.ts) for richer data (MAP, FET, etc).
  * 
  * NOTE: The API domain is "tirewire.com" but the product is "TireWeb".
  * We use "TireWeb" internally for consistency with the admin UI.
@@ -185,11 +188,12 @@ export async function getTireWebCredentials(): Promise<TireWebCredentials | null
 export const getTirewireCredentials = getTireWebCredentials;
 
 // Default connections when using env var credentials (avoids DB query)
-// NOTE: USAF direct API disabled (auth issues) - re-enabled TireWeb USAF for now
+// NOTE: USAF removed from TireWeb - we use USAF direct API instead (better data: MAP, FET, warranty, specs)
 const DEFAULT_CONNECTIONS: TireWebConnection[] = [
   { provider: "tireweb_atd", connectionId: 488677, enabled: true },
   { provider: "tireweb_ntw", connectionId: 488546, enabled: true },
-  { provider: "tireweb_usautoforce", connectionId: 488548, enabled: true }, // Re-enabled until direct API creds work
+  // USAF disabled in TireWeb - using direct USAF API instead (searchTiresUSAF in tires/search/route.ts)
+  // { provider: "tireweb_usautoforce", connectionId: 488548, enabled: false },
   { provider: "tireweb_km", connectionId: 490820, enabled: true }, // K&M via TireWeb (images!)
 ];
 
