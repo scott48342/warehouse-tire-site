@@ -51,20 +51,35 @@ export async function GET(request: Request) {
     </ServiceCheck>`;
     soapAction = `${SOAP_NS}/ServiceCheck`;
   } else {
-    // StockCheck
+    // StockCheck - use TireDto structure like the actual client
+    // Parse size: "2857017" -> width=285, aspect=70, rim=17
+    const width = simpleSize.slice(0, 3);
+    const aspect = simpleSize.slice(3, 5);
+    const rim = simpleSize.slice(5);
+    
     bodyContent = `<StockCheck xmlns="${SOAP_NS}">
       <request>
         <revision>1.0</revision>
         <transactionId>${Date.now()}</transactionId>
         <accountNumber>${escapeXml(account)}</accountNumber>
+        <alternateFlag>no</alternateFlag>
         <branch>4101</branch>
+        <dataSource>manual</dataSource>
         <alternateBranches>
-          <string>4862</string>
-          <string>4501</string>
-          <string>4701</string>
+          <BranchDto><code>4862</code></BranchDto>
+          <BranchDto><code>4501</code></BranchDto>
+          <BranchDto><code>4701</code></BranchDto>
         </alternateBranches>
-        <tireSize>${escapeXml(simpleSize)}</tireSize>
-        <quantity>4</quantity>
+        <tires>
+          <TireDto>
+            <lineNumber>1</lineNumber>
+            <width>${width}</width>
+            <aspectRatio>${aspect}</aspectRatio>
+            <rim>${rim}</rim>
+            <tireSize>${escapeXml(simpleSize)}</tireSize>
+            <quantityRequested>4</quantityRequested>
+          </TireDto>
+        </tires>
       </request>
     </StockCheck>`;
     soapAction = `${SOAP_NS}/StockCheck`;
