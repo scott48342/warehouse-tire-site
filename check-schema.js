@@ -1,22 +1,19 @@
 const { Pool } = require('pg');
-const fs = require('fs');
+require('dotenv').config({ path: '.env.local' });
+const pool = new Pool({ connectionString: process.env.POSTGRES_URL });
 
-// Read env file
-const envContent = fs.readFileSync('.env.local', 'utf8');
-const match = envContent.match(/POSTGRES_URL=["']?([^"'\n]+)["']?/);
-const url = match ? match[1].trim() : null;
-
-if (!url) {
-  console.error('No POSTGRES_URL found');
-  process.exit(1);
+async function checkSchema() {
+  const tables = ['abandoned_carts', 'saved_quotes', 'cart_add_events'];
+  
+  for (const table of tables) {
+    const result = await pool.query(
+      `SELECT column_name FROM information_schema.columns WHERE table_name = $1`,
+      [table]
+    );
+    console.log(`${table}:`, result.rows.map(r => r.column_name).join(', '));
+  }
+  
+  await pool.end();
 }
 
-const pool = new Pool({ connectionString: url, ssl: { rejectUnauthorized: false } });
-
-pool.query(`SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'orders'`)
-  .then(r => {
-    console.log('Orders table columns:');
-    console.log(JSON.stringify(r.rows, null, 2));
-  })
-  .catch(e => console.error('Error:', e.message))
-  .finally(() => pool.end());
+checkSchema().catch(console.error);
