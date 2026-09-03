@@ -7,6 +7,15 @@ import { NextResponse } from "next/server";
 const PROD_URL = 'https://services.usautoforce.com/integrationservice.asmx';
 const SOAP_NS = 'https://services.usautoforce.com';
 
+function escapeXml(str: string): string {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const size = searchParams.get('size') || '285/70R17';
@@ -28,47 +37,52 @@ export async function GET(request: Request) {
   // Simple size normalization
   const simpleSize = size.replace(/[^0-9]/g, '');
   
-  let envelope: string;
+  let bodyContent: string;
   let soapAction: string;
   
   if (action === 'service') {
     // ServiceCheck - auth test
-    envelope = `<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-               xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-  <soap:Body>
-    <ServiceCheck xmlns="${SOAP_NS}">
+    bodyContent = `<ServiceCheck xmlns="${SOAP_NS}">
       <request>
-        <username>${username}</username>
-        <password>${password}</password>
-        <accountNumber>${account}</accountNumber>
+        <revision>1.0</revision>
+        <transactionId>${Date.now()}</transactionId>
+        <accountNumber>${escapeXml(account)}</accountNumber>
       </request>
-    </ServiceCheck>
-  </soap:Body>
-</soap:Envelope>`;
+    </ServiceCheck>`;
     soapAction = `${SOAP_NS}/ServiceCheck`;
   } else {
     // StockCheck
-    envelope = `<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-               xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-  <soap:Body>
-    <StockCheck xmlns="${SOAP_NS}">
+    bodyContent = `<StockCheck xmlns="${SOAP_NS}">
       <request>
-        <username>${username}</username>
-        <password>${password}</password>
-        <accountNumber>${account}</accountNumber>
-        <branchId>4101</branchId>
-        <tireSize>${simpleSize}</tireSize>
+        <revision>1.0</revision>
+        <transactionId>${Date.now()}</transactionId>
+        <accountNumber>${escapeXml(account)}</accountNumber>
+        <branch>4101</branch>
+        <alternateBranches>
+          <string>4862</string>
+          <string>4501</string>
+          <string>4701</string>
+        </alternateBranches>
+        <tireSize>${escapeXml(simpleSize)}</tireSize>
         <quantity>4</quantity>
       </request>
-    </StockCheck>
-  </soap:Body>
-</soap:Envelope>`;
+    </StockCheck>`;
     soapAction = `${SOAP_NS}/StockCheck`;
   }
+  
+  // Build envelope with credentials in SOAP Header (like the actual client does!)
+  const envelope = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <Authentication xmlns="${SOAP_NS}">
+      <User>${escapeXml(username)}</User>
+      <Password>${escapeXml(password)}</Password>
+    </Authentication>
+  </soap:Header>
+  <soap:Body>
+    ${bodyContent}
+  </soap:Body>
+</soap:Envelope>`;
   
   try {
     const response = await fetch(PROD_URL, {
@@ -83,7 +97,7 @@ export async function GET(request: Request) {
     const xml = await response.text();
     
     // Extract error info
-    const errorMatch = xml.match(/<errorCode>(\d+)<\/errorCode>/);
+    const errorMatch = xml.match(/<errorCode>([^<]*)<\/errorCode>/);
     const errorMsgMatch = xml.match(/<errorMessage>([^<]*)<\/errorMessage>/);
     
     // Count tires if stock check
@@ -106,8 +120,8 @@ export async function GET(request: Request) {
       errorMessage: errorMsgMatch?.[1] || null,
       tireCount,
       samplePartNumbers: partNumbers,
-      // Include raw response if error
-      rawResponse: response.status !== 200 ? xml.substring(0, 500) : undefined,
+      // Include raw response if error or short
+      rawResponse: response.status !== 200 || xml.length < 2000 ? xml.substring(0, 1000) : undefined,
       credentials: {
         username,
         account,
