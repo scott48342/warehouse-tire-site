@@ -361,6 +361,168 @@ export function formatTireDisplayName(
  * Maps abbreviated/shortened names to their full proper names.
  */
 const BRAND_ABBREVIATIONS: Record<string, Record<string, string>> = {
+  // Toyo abbreviations (Open Country line)
+  toyo: {
+    "OPAT": "Open Country A/T",
+    "OPAT2": "Open Country A/T II",
+    "OPAT3": "Open Country A/T III",
+    "OPMT": "Open Country M/T",
+    "OPMT2": "Open Country M/T II",
+    "OPRT": "Open Country R/T",
+    "OPRT2": "Open Country R/T II",
+    "OPHT": "Open Country H/T",
+    "OPHT2": "Open Country H/T II",
+    "OPUT": "Open Country U/T",
+    "OPCT": "Open Country C/T",
+    "OPWT": "Open Country W/T",
+    "TRL": "Trail",
+    "CELSI": "Celsius",
+    "CELS": "Celsius",
+    "PRXA": "Proxes A",
+    "PRXS": "Proxes S",
+    "PRXR": "Proxes R",
+    "PRXC": "Proxes C",
+    "PRXT": "Proxes T",
+    "PRXSP": "Proxes Sport",
+    "PRXST": "Proxes ST",
+    "EXTSN": "Extensa",
+    "VERSU": "Versado",
+    "OBSRV": "Observe",
+    "OBS": "Observe",
+  },
+  // Nitto abbreviations (Toyo subsidiary)
+  nitto: {
+    "NTGR": "NT G2",
+    "RDGR": "Ridge Grappler",
+    "TRLGR": "Trail Grappler",
+    "TERRGR": "Terra Grappler",
+    "GRAP": "Grappler",
+    "EXTRM": "Extreme",
+    "INVO": "Invo",
+    "MOTVO": "Motivo",
+    "RECON": "Recon",
+  },
+  // BFGoodrich abbreviations
+  bfgoodrich: {
+    "KOTA": "KO2 All-Terrain T/A",
+    "KO2": "KO2",
+    "KO": "KO",
+    "ADVNT": "Advantage",
+    "ADVAN": "Advantage",
+    "GFORC": "g-Force",
+    "TRAILTERR": "Trail-Terrain T/A",
+    "MUDTERR": "Mud-Terrain T/A",
+    "ALLTERR": "All-Terrain T/A",
+  },
+  // Cooper abbreviations
+  cooper: {
+    "DISC": "Discoverer",
+    "DSCVR": "Discoverer",
+    "ATP": "AT/P",
+    "AT3": "AT3",
+    "STT": "STT",
+    "EVOL": "Evolution",
+    "ENDU": "Endeavor",
+    "ZEON": "Zeon",
+  },
+  // Falken abbreviations
+  falken: {
+    "WILD": "Wildpeak",
+    "WLDPK": "Wildpeak",
+    "AZIA": "Azenis",
+    "AZEN": "Azenis",
+    "SINC": "Sincera",
+    "EURO": "EuroAll",
+    "ZEIX": "Ziex",
+  },
+  // Hankook abbreviations
+  hankook: {
+    "DYNA": "Dynapro",
+    "DYNAP": "Dynapro",
+    "VENT": "Ventus",
+    "KINRG": "Kinergy",
+    "OPTM": "Optimo",
+    "IPIK": "i*Pike",
+  },
+  // Yokohama abbreviations
+  yokohama: {
+    "GEOL": "Geolandar",
+    "AVAN": "Avid",
+    "ADVA": "Advan",
+    "ICEG": "iceGUARD",
+    "BLUZ": "BluEarth",
+  },
+  // Continental abbreviations
+  continental: {
+    "CNTCT": "Contact",
+    "EXTRM": "Extreme",
+    "CROSS": "Cross",
+    "TERRA": "Terrain",
+    "PREM": "Premium",
+    "CONTI": "Conti",
+  },
+  // Michelin abbreviations  
+  michelin: {
+    "DFNDR": "Defender",
+    "LTXMS": "LTX M/S",
+    "PRMCY": "Primacy",
+    "PILOT": "Pilot",
+    "XICE": "X-Ice",
+    "ENRGY": "Energy",
+    "LATIT": "Latitude",
+  },
+  // Goodyear abbreviations
+  goodyear: {
+    "WRNGL": "Wrangler",
+    "ASSUR": "Assurance",
+    "EAGL": "Eagle",
+    "EFFGR": "EfficientGrip",
+    "ULTRA": "UltraGrip",
+  },
+  // Pirelli abbreviations
+  pirelli: {
+    "SCORP": "Scorpion",
+    "CNERO": "Cinturato",
+    "PZERO": "P Zero",
+    "WINT": "Winter",
+  },
+  // Nexen abbreviations
+  nexen: {
+    "ROAD": "Roadian",
+    "NFER": "N'Fera",
+    "NPRIZ": "N'Priz",
+    "ARIA": "Aria",
+    "WNGRD": "Winguard",
+  },
+  // Kumho abbreviations
+  kumho: {
+    "CRUIS": "Crugen",
+    "ECSTA": "Ecsta",
+    "SOLUS": "Solus",
+    "RDVEN": "Road Venture",
+  },
+  // General abbreviations
+  general: {
+    "GRAB": "Grabber",
+    "ALTI": "Altimax",
+    "GMAX": "G-MAX",
+  },
+  // Firestone abbreviations
+  firestone: {
+    "DEST": "Destination",
+    "CHAMP": "Champion",
+    "AFFIN": "Affinity",
+    "TRANF": "Transforce",
+  },
+  // Bridgestone abbreviations
+  bridgestone: {
+    "DUEL": "Dueler",
+    "TURZ": "Turanza",
+    "POTEN": "Potenza",
+    "BLIZZ": "Blizzak",
+    "ECOPI": "Ecopia",
+    "WEATH": "WeatherPeak",
+  },
   // Thunderer abbreviations
   thunderer: {
     "RNGR": "Ranger",
@@ -380,6 +542,16 @@ const BRAND_ABBREVIATIONS: Record<string, Record<string, string>> = {
     "RWL": "Raised White Letter",
     "RL": "Raised Letter",
     "QR": "", // Remove QR suffix (internal code)
+    // Common model suffixes/prefixes
+    "PRO": "Pro",
+    "MAX": "Max",
+    "PLUS": "Plus",
+    "SPORT": "Sport",
+    "TOUR": "Touring",
+    "PERF": "Performance",
+    "COMFRT": "Comfort",
+    "CNTRL": "Control",
+    "ULTR": "Ultra",
   },
 };
 
@@ -434,12 +606,31 @@ export function cleanTireDisplayTitle(
   // Clean up any double spaces from removed abbreviations
   cleaned = cleaned.replace(/\s+/g, " ").trim();
   
-  // 5. If we stripped everything, fall back to original (safety net)
+  // 5. Strip technical tire codes that shouldn't be in display names:
+  //    - Load index/speed rating: 117T, 116Q, 121/118S, 126/123Q
+  //    - Load range: C6, E10, D8, F12 (letter+number at end)
+  //    - Ply rating: SL (Standard Load - already handled above)
+  //    - Overall diameter: 32.8, 33.0 (decimal numbers)
+  cleaned = cleaned
+    // Remove load index/speed patterns: 117T, 116Q, 121/118S, etc.
+    .replace(/\b\d{2,3}(?:\/\d{2,3})?[A-Z]\b/g, "")
+    // Remove load range codes: C6, E10, D8, F12 (anywhere as standalone)
+    .replace(/\b[CDEF]\d{1,2}\b/g, "")
+    // Remove trailing SL (Standard Load)
+    .replace(/\s+SL$/i, "")
+    // Remove overall diameter: 32.8, 33.0
+    .replace(/\b\d{2}\.\d\b/g, "")
+    // Remove standalone "LT" that might remain
+    .replace(/\bLT\b/g, "")
+    // Final cleanup
+    .replace(/\s+/g, " ").trim();
+  
+  // 6. If we stripped everything, fall back to original (safety net)
   if (!cleaned) {
     return String(title).trim();
   }
   
-  // 6. Apply smart capitalization for premium presentation
+  // 7. Apply smart capitalization for premium presentation
   cleaned = smartCapitalizeTireTitle(cleaned);
   
   return cleaned;
