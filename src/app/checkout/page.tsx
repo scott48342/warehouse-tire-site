@@ -11,7 +11,7 @@ import { normalizeTireSize } from "@/lib/productFormat";
 import { isCommercialTireSize } from "@/lib/localPricing";
 import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
-import { calculateShipping, type ShippingItem } from "@/lib/shipping/shippingService";
+import { calculateShipping, isOversizedTireSize, type ShippingItem } from "@/lib/shipping/shippingService";
 import { CheckoutTrustStrip } from "@/components/StoreReviews";
 import { CheckoutTrustBadges } from "@/components/trust/TrustSignals";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
@@ -349,23 +349,115 @@ export default function CheckoutPage() {
   const calculatedTax = taxableSubtotal * taxRate;
 
   // Calculate shipping based on ZIP code and cart items
-  const shippingEstimate = useMemo(() => {
-    const shippingItems: ShippingItem[] = items.map((item) => ({
-      type: item.type as "wheel" | "tire" | "accessory",
-      quantity: item.quantity || 1,
-      unitPrice: item.unitPrice,
-      // Wheel-1 landed-cost: freight baked in, no shipping charge
-      freeShipping: (item as { freeShipping?: boolean }).freeShipping === true || undefined,
-      // Tire size label for oversized/heavy detection (LT, flotation, large metric)
-      sizeLabel: item.type === "tire" ? (item as { size?: string }).size : undefined,
-    }));
-    
+  const shippingItems: ShippingItem[] = useMemo(() => items.map((item) => ({
+    type: item.type as "wheel" | "tire" | "accessory",
+    quantity: item.quantity || 1,
+    unitPrice: item.unitPrice,
+    // Wheel-1 landed-cost: freight baked in, no shipping charge
+    freeShipping: (item as { freeShipping?: boolean }).freeShipping === true || undefined,
+    // Tire size label for oversized/heavy detection (LT, flotation, large metric)
+    sizeLabel: item.type === "tire" ? (item as { size?: string }).size : undefined,
+  })), [items]);
+
+  // Zone-based estimate (instant fallback)
+  const zoneEstimate = useMemo(() => {
     return calculateShipping({
       zipCode: shipping.zip,
       items: shippingItems,
       subtotal: validation.totals.total,
     });
-  }, [items, shipping.zip, validation.totals.total]);
+  }, [shippingItems, shipping.zip, validation.totals.total]);
+
+  // Check if cart has heavy/oversized items that need FedEx lookup
+  const needsFedExLookup = useMemo(() => {
+    return shippingItems.some(item => {
+      if (item.freeShipping) return false;
+      if (item.type !== "tire") return false;
+      return isOversizedTireSize(item.sizeLabel);
+    });
+  }, [shippingItems]);
+
+  // Live FedEx rate for heavy items
+  const [liveShippingRate, setLiveShippingRate] = useState<{
+    amount: number | null;
+    requiresQuote: boolean;
+    quoteReason?: string;
+    loading: boolean;
+  }>({ amount: null, requiresQuote: false, loading: false });
+
+  // Fetch live FedEx rate for heavy/oversized items
+  useEffect(() => {
+    if (isLocal) return;
+    if (!needsFedExLookup) {
+      setLiveShippingRate({ amount: null, requiresQuote: false, loading: false });
+      return;
+    }
+    if (!shipping.zip || shipping.zip.length !== 5) return;
+
+    const controller = new AbortController();
+    setLiveShippingRate(prev => ({ ...prev, loading: true }));
+
+    (async () => {
+      try {
+        const body = {
+          zipCode: shipping.zip,
+          stateCode: shipping.state,
+          items: shippingItems.map(item => ({
+            type: item.type,
+            quantity: item.quantity,
+            sizeLabel: item.sizeLabel,
+            freeShipping: item.freeShipping,
+          })),
+          subtotal: validation.totals.total,
+        };
+        const res = await fetch("/api/shipping/estimate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          signal: controller.signal,
+        });
+        if (!res.ok) throw new Error("API error");
+        const data = await res.json();
+        if (data.success && data.estimate) {
+          setLiveShippingRate({
+            amount: data.estimate.amount,
+            requiresQuote: data.estimate.requiresQuote || false,
+            quoteReason: data.estimate.quoteReason,
+            loading: false,
+          });
+        }
+      } catch (err: any) {
+        if (err.name !== "AbortError") {
+          console.warn("[checkout] FedEx rate fetch failed:", err);
+          setLiveShippingRate({ amount: null, requiresQuote: false, loading: false });
+        }
+      }
+    })();
+
+    return () => controller.abort();
+  }, [isLocal, needsFedExLookup, shipping.zip, shipping.state, shippingItems, validation.totals.total]);
+
+  // Final shipping estimate: use live FedEx rate for heavy items, zone estimate otherwise
+  const shippingEstimate = useMemo(() => {
+    if (liveShippingRate.requiresQuote) {
+      return {
+        ...zoneEstimate,
+        amount: 0,
+        displayAmount: "Call for Quote",
+        requiresQuote: true,
+        quoteReason: liveShippingRate.quoteReason,
+      };
+    }
+    if (needsFedExLookup && liveShippingRate.amount !== null) {
+      return {
+        ...zoneEstimate,
+        amount: liveShippingRate.amount,
+        displayAmount: `$${liveShippingRate.amount}`,
+        isEstimate: false,
+      };
+    }
+    return zoneEstimate;
+  }, [zoneEstimate, needsFedExLookup, liveShippingRate]);
 
   // Local mode: no shipping charges (delivery to store included)
   const shippingAmount = isLocal ? 0 : (shippingEstimate.isFree ? 0 : shippingEstimate.amount);
