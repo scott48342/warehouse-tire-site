@@ -276,10 +276,14 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
   const isFreeShipping = allItemsFreeShipping;
 
   // Set ZIP code and persist
+  // Track current ZIP to avoid stale closure issues
+  const currentZipRef = useRef(zipCode);
+  currentZipRef.current = zipCode;
+
   const setZipCode = useCallback((zip: string) => {
     const normalized = normalizeZipCode(zip);
-    // Only update if ZIP actually changed
-    if (normalized === zipCode) {
+    // Only update if ZIP actually changed (use ref to avoid stale closure)
+    if (normalized === currentZipRef.current) {
       return; // No change, skip re-fetch
     }
     setZipCodeState(normalized);
@@ -287,7 +291,7 @@ export function useCartShipping(cartItems: CartItem[], subtotal: number) {
     // Clear live rate when ZIP changes - will refetch
     setLiveRate(null);
     lastFetchKey.current = "";
-  }, [zipCode]);
+  }, []); // No deps needed - uses ref
 
   // Clear ZIP code
   const clearZipCode = useCallback(() => {
