@@ -261,23 +261,37 @@ export async function sendAbandonedCartAlert(cart: AbandonedCart): Promise<{
       const customerName = [cart.customerFirstName, cart.customerLastName].filter(Boolean).join(" ") || "Customer";
       const smsText = `ABANDONED CART: $${cartValue.toFixed(0)}\n${customerName}\n${cart.customerPhone || cart.customerEmail || "No contact"}\n${vehicleInfo}`;
       
+      // Send SMS as completely separate plain-text-only emails
+      const smsTransporter = nodemailer.createTransport({
+        host: settings.smtpHost,
+        port: settings.smtpPort,
+        secure: settings.smtpPort === 465,
+        auth: {
+          user: settings.smtpUser,
+          pass: settings.smtpPass,
+        },
+        requireTLS: settings.smtpPort === 587,
+        tls: {
+          ciphers: "SSLv3",
+          rejectUnauthorized: false,
+        },
+      });
+
       for (const smsAddr of ABANDONED_CART_SMS_NOTIFY) {
         try {
-          await transporter.sendMail({
-            from: fromAddress,
+          // Send plain text only - no html property at all
+          await smsTransporter.sendMail({
+            from: settings.fromEmail, // Simple from, no display name
             to: smsAddr,
-            subject: `Cart $${cartValue.toFixed(0)}`,
+            subject: `$${cartValue.toFixed(0)} cart`,
             text: smsText,
-            html: undefined, // Explicitly no HTML
-            headers: {
-              'Content-Type': 'text/plain; charset=utf-8',
-            },
           });
           console.log("[abandonedCartAlerts] SMS notification sent to:", smsAddr);
         } catch (smsErr: any) {
           console.error("[abandonedCartAlerts] SMS failed:", smsAddr, smsErr.message);
         }
       }
+      smsTransporter.close();
     }
 
     return { success: true };
