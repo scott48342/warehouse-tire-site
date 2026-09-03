@@ -25,6 +25,19 @@ export async function GET(request: Request) {
   const password = process.env.USAUTOFORCE_PASSWORD;
   const account = process.env.USAUTOFORCE_ACCOUNT;
   
+  // Status action - check env vars
+  if (action === 'status') {
+    return NextResponse.json({
+      hasUsername: !!username,
+      hasPassword: !!password,
+      hasAccount: !!account,
+      username: username || null,
+      account: account || null,
+      passwordLength: password?.length || 0,
+      envKeys: Object.keys(process.env).filter(k => k.includes('USAUTOFORCE')),
+    });
+  }
+  
   if (!username || !password || !account) {
     return NextResponse.json({
       error: 'Missing USAF credentials',
