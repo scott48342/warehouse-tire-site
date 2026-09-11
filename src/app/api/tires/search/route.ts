@@ -48,6 +48,7 @@ import {
   isRunFlat,
   type TreadCategory,
 } from "@/lib/tires/normalization";
+import { applyMapFloorBatch } from "@/lib/pricing/mapPriceFloor";
 import { protectedFetch, getCircuitStatus } from "@/lib/tireweb/protection";
 import { 
   cachedTireSearch, 
@@ -2206,8 +2207,11 @@ export async function GET(req: Request) {
         });
       }
       
+      // Apply MAP floor enforcement (critical for Falken/Dunlop compliance)
+      const resultsWithMap = await applyMapFloorBatch(finalResults.slice(0, pageSize));
+      
       return NextResponse.json({
-        results: finalResults.slice(0, pageSize),
+        results: resultsWithMap,
         mode: "size",
         size: sizeRaw,
         ...(brandFilter && { brand: brandFilter }),
@@ -3290,6 +3294,9 @@ export async function GET(req: Request) {
       console.log(`[tires/search:vehicle] Brand filter "${vehicleBrandFilter}" (normalized: ${normalizedVehicleBrandFilter}): ${beforeBrand} → ${finalResults.length} results`);
     }
 
+    // Apply MAP floor enforcement (critical for Falken/Dunlop compliance)
+    finalResults = await applyMapFloorBatch(finalResults);
+    
     timing.totalMs = Date.now() - t0;
     
     // ═══════════════════════════════════════════════════════════════════════
