@@ -9,6 +9,13 @@ import { markCartRecovered } from "@/lib/cart/abandonedCartService";
 import { logCheckoutDiagnosticServer } from "@/lib/checkout/diagnosticsServer";
 import { processSupplierOrders } from "@/lib/suppliers/supplierOrderService";
 import { markSavedQuoteConverted } from "@/lib/savedQuotes/checkoutIntegration";
+import {
+  FITMENT_API_PRODUCT_TAG,
+  handleFitmentApiCheckoutCompleted,
+  handleFitmentApiSubscriptionUpdated,
+  handleFitmentApiSubscriptionDeleted,
+  handleFitmentApiInvoicePaymentFailed,
+} from "@/lib/fitment-api/billing";
 
 export const runtime = "nodejs";
 
@@ -20,6 +27,11 @@ export const runtime = "nodejs";
  * - payment_intent.succeeded (embedded Payment Element flow)
  * 
  * Both create an order and send confirmation email.
+ * 
+ * Fitment API subscriptions (metadata.product = "fitment_api"):
+ * - checkout.session.completed → create API key + email it
+ * - customer.subscription.updated / .deleted → sync key status
+ * - invoice.payment_failed → mark past_due
  */
 export async function POST(req: Request) {
   const body = await req.text();
@@ -216,6 +228,20 @@ export async function POST(req: Request) {
   // ═══════════════════════════════════════════════════════════════════════════
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as any;
+
+    // ─── Fitment API subscription signup (not a store order) ───────────────
+    if (session.metadata?.product === FITMENT_API_PRODUCT_TAG) {
+      console.log(`[stripe/webhook] fitment_api checkout completed: session=${session.id}, plan=${session.metadata?.plan}, sub=${session.subscription}`);
+      try {
+        const result = await handleFitmentApiCheckoutCompleted(session);
+        return NextResponse.json({ received: true, fitmentApi: result });
+      } catch (err: any) {
+        // Payment succeeded but key creation failed → 500 so Stripe retries
+        console.error(`[stripe/webhook] FITMENT API KEY CREATE FAILED after payment:`, err);
+        return NextResponse.json({ error: "fitment_api_key_create_failed" }, { status: 500 });
+      }
+    }
+
     const quoteId = session.metadata?.quoteId;
     const cartId = session.metadata?.cartId;
     const sessionId = session.id;
@@ -351,6 +377,56 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ received: true, orderId });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FITMENT API SUBSCRIPTION LIFECYCLE
+  // Only acts on subscriptions we issued a key for (lookup by subscription id),
+  // so unrelated subscriptions / invoices are ignored safely.
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (event.type === "customer.subscription.updated") {
+    const subscription = event.data.object as any;
+    if (subscription.metadata?.product === FITMENT_API_PRODUCT_TAG) {
+      try {
+        const result = await handleFitmentApiSubscriptionUpdated(subscription);
+        return NextResponse.json({ received: true, fitmentApi: result });
+      } catch (err: any) {
+        console.error(`[stripe/webhook] fitment_api subscription.updated failed:`, err);
+        return NextResponse.json({ error: "fitment_api_sync_failed" }, { status: 500 });
+      }
+    }
+    return NextResponse.json({ received: true });
+  }
+
+  if (event.type === "customer.subscription.deleted") {
+    const subscription = event.data.object as any;
+    if (subscription.metadata?.product === FITMENT_API_PRODUCT_TAG) {
+      try {
+        const result = await handleFitmentApiSubscriptionDeleted(subscription);
+        return NextResponse.json({ received: true, fitmentApi: result });
+      } catch (err: any) {
+        console.error(`[stripe/webhook] fitment_api subscription.deleted failed:`, err);
+        return NextResponse.json({ error: "fitment_api_sync_failed" }, { status: 500 });
+      }
+    }
+    return NextResponse.json({ received: true });
+  }
+
+  if (event.type === "invoice.payment_failed") {
+    const invoice = event.data.object as any;
+    // Invoices don't inherit our metadata; billing.ts matches by subscription id
+    // and no-ops when the subscription isn't a Fitment API key.
+    if (invoice.subscription) {
+      try {
+        const result = await handleFitmentApiInvoicePaymentFailed(invoice);
+        return NextResponse.json({ received: true, fitmentApi: result });
+      } catch (err: any) {
+        console.error(`[stripe/webhook] fitment_api invoice.payment_failed handling failed:`, err);
+        // Non-critical bookkeeping — ack so Stripe doesn't retry forever
+        return NextResponse.json({ received: true, fitmentApi: { updated: false, error: true } });
+      }
+    }
+    return NextResponse.json({ received: true });
   }
 
   // Handle other events as needed

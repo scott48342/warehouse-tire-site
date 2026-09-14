@@ -119,6 +119,74 @@ function buildHtml(r: NewRequestAlertInput): string {
 </body></html>`;
 }
 
+// ============================================================================
+// Paid subscriber alert (self-serve Stripe checkout)
+// ============================================================================
+
+export interface NewSubscriberAlertInput {
+  name: string;
+  email: string;
+  company?: string;
+  plan: string;
+  planLabel: string; // e.g. "Growth ($249/mo)"
+  apiKeyId: string;
+  keyPrefix: string;
+  stripeCustomerId?: string;
+  stripeSubscriptionId?: string;
+}
+
+function buildSubscriberSubject(s: NewSubscriberAlertInput): string {
+  return `💰 New PAID Fitment API subscriber — ${s.company || s.name} (${s.planLabel})`;
+}
+
+function buildSubscriberSms(s: NewSubscriberAlertInput): string {
+  return `FITMENT API PAID: ${s.company || s.name} / ${s.email} / ${s.planLabel}. Key auto-issued. ${ADMIN_URL}`;
+}
+
+function buildSubscriberHtml(s: NewSubscriberAlertInput): string {
+  const esc = (v?: string) =>
+    (v || "—").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const stripeBase = "https://dashboard.stripe.com";
+  const custLink = s.stripeCustomerId
+    ? `<a href="${stripeBase}/customers/${esc(s.stripeCustomerId)}">${esc(s.stripeCustomerId)}</a>`
+    : "—";
+  const subLink = s.stripeSubscriptionId
+    ? `<a href="${stripeBase}/subscriptions/${esc(s.stripeSubscriptionId)}">${esc(s.stripeSubscriptionId)}</a>`
+    : "—";
+  return `<!DOCTYPE html><html><body style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#222;max-width:600px;margin:0 auto;padding:20px">
+  <h2 style="margin:0 0 4px">💰 New paid Fitment API subscriber</h2>
+  <p style="margin:0 0 16px;color:#666">Paid via Stripe Checkout just now · API key was created and emailed automatically. Nothing to approve.</p>
+  <table style="border-collapse:collapse;width:100%">
+    <tr><td style="padding:6px 8px;color:#666;width:160px">Company</td><td style="padding:6px 8px"><strong>${esc(s.company || s.name)}</strong></td></tr>
+    <tr><td style="padding:6px 8px;color:#666">Contact</td><td style="padding:6px 8px">${esc(s.name)} &lt;<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>&gt;</td></tr>
+    <tr><td style="padding:6px 8px;color:#666">Plan</td><td style="padding:6px 8px"><strong>${esc(s.planLabel)}</strong></td></tr>
+    <tr><td style="padding:6px 8px;color:#666">API key</td><td style="padding:6px 8px"><code>${esc(s.keyPrefix)}…</code> (id ${esc(s.apiKeyId)})</td></tr>
+    <tr><td style="padding:6px 8px;color:#666">Stripe customer</td><td style="padding:6px 8px">${custLink}</td></tr>
+    <tr><td style="padding:6px 8px;color:#666">Stripe subscription</td><td style="padding:6px 8px">${subLink}</td></tr>
+  </table>
+  <p style="margin:20px 0 0"><a href="${ADMIN_URL}" style="background:#16a34a;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none">Open Fitment API admin</a></p>
+  <p style="margin:24px 0 0;font-size:12px;color:#999">Reply directly to this email to reach the subscriber.</p>
+</body></html>`;
+}
+
+/**
+ * Alert the owner about a new paid (Stripe) subscriber. Never throws.
+ */
+export async function sendOwnerNewSubscriberAlert(
+  s: NewSubscriberAlertInput
+): Promise<{ email: boolean; sms: boolean; via: "smtp" | "resend" | "none" }> {
+  return deliverOwnerAlert({
+    subject: buildSubscriberSubject(s),
+    html: buildSubscriberHtml(s),
+    sms: buildSubscriberSms(s),
+    replyTo: s.email,
+  });
+}
+
+// ============================================================================
+// New access request alert (manual review path)
+// ============================================================================
+
 /**
  * Send owner alert. Never throws — request submission must not fail because
  * a notification did.
@@ -126,10 +194,28 @@ function buildHtml(r: NewRequestAlertInput): string {
 export async function sendOwnerNewRequestAlert(
   r: NewRequestAlertInput
 ): Promise<{ email: boolean; sms: boolean; via: "smtp" | "resend" | "none" }> {
+  return deliverOwnerAlert({
+    subject: buildSubject(r),
+    html: buildHtml(r),
+    sms: buildSms(r),
+    replyTo: r.email,
+  });
+}
+
+// ============================================================================
+// Shared transport: Gmail SMTP (admin_settings) → Resend fallback
+// ============================================================================
+
+async function deliverOwnerAlert(msg: {
+  subject: string;
+  html: string;
+  sms: string;
+  replyTo: string;
+}): Promise<{ email: boolean; sms: boolean; via: "smtp" | "resend" | "none" }> {
   const result = { email: false, sms: false, via: "none" as "smtp" | "resend" | "none" };
 
   if (process.env.EMAIL_SAFE_MODE === "true") {
-    console.log("[fitment-api/ownerAlert] SAFE MODE — would alert:", buildSubject(r));
+    console.log("[fitment-api/ownerAlert] SAFE MODE — would alert:", msg.subject);
     return { email: true, sms: true, via: "none" };
   }
 
@@ -150,16 +236,16 @@ export async function sendOwnerNewRequestAlert(
       await transporter.sendMail({
         from,
         to,
-        replyTo: r.email,
-        subject: buildSubject(r),
-        html: buildHtml(r),
+        replyTo: msg.replyTo,
+        subject: msg.subject,
+        html: msg.html,
       });
       result.email = true;
       result.via = "smtp";
 
       if (SMS_NOTIFY.length) {
         try {
-          await transporter.sendMail({ from, to: SMS_NOTIFY, text: buildSms(r) });
+          await transporter.sendMail({ from, to: SMS_NOTIFY, text: msg.sms });
           result.sms = true;
         } catch (smsErr) {
           console.error("[fitment-api/ownerAlert] SMS gateway send failed:", smsErr);
@@ -178,12 +264,12 @@ export async function sendOwnerNewRequestAlert(
     try {
       const resend = new Resend(resendKey);
       const from = process.env.FITMENT_API_EMAIL_FROM || process.env.EMAIL_FROM || "api@warehousetiredirect.com";
-      await resend.emails.send({ from, to: fallbackTo, replyTo: r.email, subject: buildSubject(r), html: buildHtml(r) });
+      await resend.emails.send({ from, to: fallbackTo, replyTo: msg.replyTo, subject: msg.subject, html: msg.html });
       result.email = true;
       result.via = "resend";
       if (SMS_NOTIFY.length) {
         try {
-          await resend.emails.send({ from, to: SMS_NOTIFY, subject: "", text: buildSms(r) });
+          await resend.emails.send({ from, to: SMS_NOTIFY, subject: "", text: msg.sms });
           result.sms = true;
         } catch (smsErr) {
           console.error("[fitment-api/ownerAlert] Resend SMS gateway send failed:", smsErr);
@@ -195,6 +281,6 @@ export async function sendOwnerNewRequestAlert(
     }
   }
 
-  console.error("[fitment-api/ownerAlert] No working email transport — owner NOT notified for", r.email);
+  console.error("[fitment-api/ownerAlert] No working email transport — owner NOT notified for", msg.replyTo);
   return result;
 }

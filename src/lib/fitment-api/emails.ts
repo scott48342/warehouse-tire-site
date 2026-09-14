@@ -135,10 +135,20 @@ export async function sendApprovalEmail(params: {
   company: string;
   apiKey: string; // Plain key (only time we show it)
   plan: string;
+  /**
+   * "approved" (default): manual access-request approval copy.
+   * "subscribed": self-serve Stripe checkout — no review happened, so say "You're in".
+   */
+  mode?: "approved" | "subscribed";
 }): Promise<EmailResult> {
   const { email, name, company, apiKey, plan } = params;
+  const subscribed = params.mode === "subscribed";
   
   const subject = "🎉 Your Fitment API key is ready!";
+  const headline = subscribed ? "You're in! 🎉" : "You're Approved! 🎉";
+  const intro = subscribed
+    ? `Thanks for subscribing! Your Fitment API access for <strong>${company}</strong> is live right now.`
+    : `Great news! Your Fitment API access for <strong>${company}</strong> has been approved.`;
   
   const exampleUrl = `${BASE_URL}/api/public/fitment/specs?year=2020&make=Ford&model=F-150`;
   const exampleCurl = `curl -H "X-API-Key: ${apiKey}" "${exampleUrl}"`;
@@ -156,7 +166,7 @@ export async function sendApprovalEmail(params: {
     
     <!-- Header -->
     <div style="background: #10b981; padding: 24px; text-align: center;">
-      <h1 style="margin: 0; color: white; font-size: 22px;">You're Approved! 🎉</h1>
+      <h1 style="margin: 0; color: white; font-size: 22px;">${headline}</h1>
     </div>
 
     <!-- Content -->
@@ -164,7 +174,7 @@ export async function sendApprovalEmail(params: {
       
       <p style="margin: 0 0 24px; color: #4b5563;">
         Hey ${name},<br><br>
-        Great news! Your Fitment API access for <strong>${company}</strong> has been approved.
+        ${intro}
       </p>
       
       <!-- API Key Box -->

@@ -106,6 +106,11 @@ export const apiKeys = pgTable(
     suspendedAt: timestamp("suspended_at"),
     suspendReason: text("suspend_reason"),
     
+    // Stripe billing (self-serve subscriptions; NULL for manually-approved keys)
+    stripeCustomerId: varchar("stripe_customer_id", { length: 64 }),
+    stripeSubscriptionId: varchar("stripe_subscription_id", { length: 64 }),
+    subscriptionStatus: varchar("subscription_status", { length: 32 }), // active, past_due, canceled
+    
     // Timestamps
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
@@ -116,6 +121,8 @@ export const apiKeys = pgTable(
     keyPrefixIdx: index("api_keys_key_prefix_idx").on(table.keyPrefix),
     emailIdx: index("api_keys_email_idx").on(table.email),
     activeIdx: index("api_keys_active_idx").on(table.active),
+    stripeCustomerIdIdx: index("api_keys_stripe_customer_id_idx").on(table.stripeCustomerId),
+    stripeSubscriptionIdIdx: uniqueIndex("api_keys_stripe_subscription_id_idx").on(table.stripeSubscriptionId),
   })
 );
 

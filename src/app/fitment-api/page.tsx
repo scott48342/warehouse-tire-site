@@ -58,7 +58,7 @@ const faqItems = [
   },
   {
     question: 'How do I get started?',
-    answer: 'Fill out the access request form and we\'ll review your application within 24 hours. Once approved, you\'ll receive your API key and documentation via email. We offer sandbox keys for testing before going live.'
+    answer: 'Pick a plan above and check out with a card — your API key is emailed to you instantly, no approval wait. You can make your first call within a minute of paying, and you can cancel anytime. Need more than 200k calls a month, custom terms, or invoicing? Use the request form at the bottom of the page and we\'ll get back to you within 24 hours.'
   }
 ];
 
@@ -120,10 +120,10 @@ export default function FitmentApiPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#request-access" 
+                href="#pricing" 
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
               >
-                Request API Access
+                Get an API key — from $99/mo
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -468,18 +468,20 @@ export default function FitmentApiPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-zinc-950">
+      <section id="pricing" className="py-20 bg-zinc-950 scroll-mt-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Simple, Predictable Pricing</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto">
               Start small and scale as you grow. All plans include full API access and documentation.
+              Pay by card and your API key is emailed instantly — no approval wait.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <PricingCard 
               name="Starter"
+              plan="starter"
               price="$99"
               description="Perfect for small shops and testing"
               features={[
@@ -492,6 +494,7 @@ export default function FitmentApiPage() {
             />
             <PricingCard 
               name="Growth"
+              plan="growth"
               price="$249"
               description="For growing ecommerce businesses"
               features={[
@@ -506,6 +509,7 @@ export default function FitmentApiPage() {
             />
             <PricingCard 
               name="Pro"
+              plan="pro"
               price="$499"
               description="For high-volume operations"
               features={[
@@ -614,10 +618,10 @@ export default function FitmentApiPage() {
             Take control of your fitment data layer. Get consistent, reliable vehicle data with zero external dependencies.
           </p>
           <a 
-            href="#request-access" 
+            href="#pricing" 
             className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 px-10 rounded-lg transition-colors text-lg"
           >
-            Request API Access
+            Choose a plan — instant API key
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -625,13 +629,15 @@ export default function FitmentApiPage() {
         </div>
       </section>
 
-      {/* Access Request Form */}
+      {/* Access Request Form (secondary path: enterprise / custom / invoicing) */}
       <section id="request-access" className="py-20 border-t border-zinc-900">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Request API Access</h2>
+            <h2 className="text-3xl font-bold mb-4">Need more than 200k calls or an invoice? Request access</h2>
             <p className="text-zinc-400">
-              Fill out the form below and we&apos;ll get you set up within 24 hours.
+              Enterprise volume, custom limits, SLAs, or paying by invoice instead of card — tell us what you need
+              and we&apos;ll get back to you within 24 hours. Standard plans don&apos;t need this form:{" "}
+              <a href="#pricing" className="text-blue-400 hover:text-blue-300 underline">pick a plan</a> and your key is emailed instantly.
             </p>
           </div>
           

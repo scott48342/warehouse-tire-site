@@ -1,5 +1,7 @@
 'use client';
 
+import { PlanCheckoutButton, type CheckoutPlan } from './PlanCheckoutButton';
+
 interface PricingCardProps {
   name: string;
   price: string;
@@ -8,6 +10,8 @@ interface PricingCardProps {
   features: string[];
   highlighted?: boolean;
   cta?: string;
+  /** When set, the CTA starts Stripe Checkout for this plan instead of linking to the request form. */
+  plan?: CheckoutPlan;
 }
 
 export function PricingCard({ 
@@ -17,8 +21,10 @@ export function PricingCard({
   description, 
   features, 
   highlighted = false,
-  cta = 'Request Access'
+  cta,
+  plan,
 }: PricingCardProps) {
+  const ctaLabel = cta ?? (plan ? `Start now — ${price}${period}` : 'Request Access');
   return (
     <div className={`rounded-2xl p-8 ${
       highlighted 
@@ -59,16 +65,25 @@ export function PricingCard({
           </li>
         ))}
       </ul>
-      <a 
-        href="#request-access"
-        className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
-          highlighted 
-            ? 'bg-white text-blue-600 hover:bg-blue-50' 
-            : 'bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700'
-        }`}
-      >
-        {cta}
-      </a>
+      {plan ? (
+        <>
+          <PlanCheckoutButton plan={plan} label={ctaLabel} highlighted={highlighted} />
+          <p className={`mt-3 text-xs text-center ${highlighted ? 'text-blue-200' : 'text-zinc-500'}`}>
+            Instant API key by email · Cancel anytime
+          </p>
+        </>
+      ) : (
+        <a 
+          href="#request-access"
+          className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
+            highlighted 
+              ? 'bg-white text-blue-600 hover:bg-blue-50' 
+              : 'bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700'
+          }`}
+        >
+          {ctaLabel}
+        </a>
+      )}
     </div>
   );
 }
