@@ -6,6 +6,7 @@ import {
   FaqAccordion, 
   AccessRequestForm 
 } from '@/components/fitment-api';
+import LiveDemo from '@/components/fitment-api/LiveDemo';
 
 export const metadata: Metadata = {
   title: 'Vehicle Fitment API | 14,000+ Verified Fitments | Production-Grade',
@@ -129,13 +130,20 @@ export default function FitmentApiPage() {
                 </svg>
               </a>
               <a 
-                href="#endpoints" 
+                href="#demo" 
                 className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-4 px-8 rounded-lg border border-zinc-700 transition-colors text-lg"
               >
-                View API Documentation
+                Try the live demo
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Live Demo — real data, no key */}
+      <section id="demo" className="py-12 border-t border-zinc-900 scroll-mt-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <LiveDemo />
         </div>
       </section>
 
