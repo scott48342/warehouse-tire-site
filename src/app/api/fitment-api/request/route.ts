@@ -8,6 +8,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { submitAccessRequest } from "@/lib/fitment-api/requests";
+import { checkAccessRequestSpam } from "@/lib/fitment-api/antiSpam";
 
 export async function POST(request: NextRequest) {
   try {
@@ -43,7 +44,39 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    
+
+    // ------------------------------------------------------------------
+    // Anti-spam (honeypot / timing / gibberish / optional Turnstile).
+    // Bots get a fake 200 so they don't learn what tripped them; nothing
+    // is stored and nobody is emailed.
+    // ------------------------------------------------------------------
+    const ip =
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      request.headers.get("x-real-ip") ||
+      undefined;
+
+    const spam = await checkAccessRequestSpam({
+      name: String(name),
+      email: String(email),
+      company: String(company),
+      website: body.website ? String(body.website) : undefined,
+      useCaseDetails: body.useCaseDetails ? String(body.useCaseDetails) : undefined,
+      honeypot: body.website_url ? String(body.website_url) : undefined,
+      formLoadedAt: typeof body.formLoadedAt === "number" ? body.formLoadedAt : undefined,
+      turnstileToken: body.turnstileToken ? String(body.turnstileToken) : undefined,
+      ip,
+    });
+
+    if (spam.isSpam) {
+      console.warn(
+        `[api/fitment-api/request] Rejected spam (score ${spam.score}): ${spam.reasons.join(",")} | ${company} <${email}> ip=${ip || "?"}`
+      );
+      return NextResponse.json({
+        success: true,
+        message: "Request submitted successfully. We'll review it within 24 hours.",
+      });
+    }
+
     // Submit the request
     const result = await submitAccessRequest({
       name: name.trim(),
@@ -53,6 +86,7 @@ export async function POST(request: NextRequest) {
       useCase: useCase.trim(),
       useCaseDetails: body.useCaseDetails?.trim() || undefined,
       expectedUsage: body.expectedUsage?.trim() || undefined,
+      spamScore: spam.score,
     });
     
     if (!result.success) {

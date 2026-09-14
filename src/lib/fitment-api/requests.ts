@@ -9,6 +9,7 @@ import { apiAccessRequests, apiKeys, type ApiAccessRequest } from "./schema";
 import { eq, and, isNull, lt, desc } from "drizzle-orm";
 import { createApiKey, getApiKeyById } from "./apiKeys";
 import { sendConfirmationEmail, sendApprovalEmail, sendFollowUpEmail } from "./emails";
+import { sendOwnerNewRequestAlert } from "./ownerAlert";
 
 // ============================================================================
 // Request Submission
@@ -22,6 +23,8 @@ export interface AccessRequestInput {
   useCase: string;
   useCaseDetails?: string;
   expectedUsage?: string;
+  /** Anti-spam score that this request passed with (for the owner alert) */
+  spamScore?: number;
 }
 
 /**
@@ -97,7 +100,27 @@ export async function submitAccessRequest(input: AccessRequestInput): Promise<{
       console.error("[requests] Failed to send confirmation email:", emailErr);
       // Continue - don't fail the request
     }
-    
+
+    // Notify the owner (email + SMS). Never fail the request because of this.
+    try {
+      const alert = await sendOwnerNewRequestAlert({
+        requestId: request.id,
+        name: input.name,
+        email: input.email,
+        company: input.company,
+        website: input.website,
+        useCase: input.useCase,
+        useCaseDetails: input.useCaseDetails,
+        expectedUsage: input.expectedUsage,
+        spamScore: input.spamScore,
+      });
+      console.log(
+        `[requests] Owner alert for ${input.company}: email=${alert.email} sms=${alert.sms} via=${alert.via}`
+      );
+    } catch (alertErr) {
+      console.error("[requests] Failed to send owner alert:", alertErr);
+    }
+
     return { success: true, requestId: request.id };
   } catch (err) {
     console.error("[requests] Failed to submit request:", err);

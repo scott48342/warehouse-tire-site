@@ -1,7 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+
+// Cloudflare Turnstile — optional. Widget only renders when the site key is set.
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 // Use case options
 const USE_CASES = [
@@ -18,12 +21,59 @@ export function AccessRequestForm() {
   const [error, setError] = useState<string | null>(null);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
+  // Anti-spam: when the form was rendered (bots submit in <1s) and Turnstile token
+  const [formLoadedAt] = useState<number>(() => Date.now());
+  const [turnstileToken, setTurnstileToken] = useState<string>('');
+  const turnstileRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY || !turnstileRef.current) return;
+
+    const render = () => {
+      // @ts-expect-error Turnstile global injected by script
+      if (window.turnstile && turnstileRef.current && !turnstileRef.current.hasChildNodes()) {
+        // @ts-expect-error Turnstile global injected by script
+        window.turnstile.render(turnstileRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          theme: 'dark',
+          callback: (token: string) => setTurnstileToken(token),
+          'expired-callback': () => setTurnstileToken(''),
+        });
+      }
+    };
+
+    // @ts-expect-error Turnstile global injected by script
+    if (window.turnstile) {
+      render();
+      return;
+    }
+    if (!document.querySelector('script[src*="challenges.cloudflare.com/turnstile"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      s.async = true;
+      s.defer = true;
+      s.onload = render;
+      document.head.appendChild(s);
+    } else {
+      const t = setInterval(() => {
+        // @ts-expect-error Turnstile global injected by script
+        if (window.turnstile) { clearInterval(t); render(); }
+      }, 200);
+      return () => clearInterval(t);
+    }
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     
     if (!agreedToTerms) {
       setError('Please agree to the Terms of Service and Privacy Policy to continue.');
+      return;
+    }
+
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      setError('Please complete the verification check before submitting.');
       return;
     }
     
@@ -43,6 +93,10 @@ export function AccessRequestForm() {
           useCase: formData.get('useCase'),
           useCaseDetails: formData.get('useCaseDetails') || undefined,
           expectedUsage: formData.get('usage'),
+          // anti-spam
+          website_url: formData.get('website_url') || undefined, // honeypot — humans never see it
+          formLoadedAt,
+          turnstileToken: turnstileToken || undefined,
         }),
       });
       
@@ -89,6 +143,12 @@ export function AccessRequestForm() {
           <p className="text-red-400 text-sm">{error}</p>
         </div>
       )}
+
+      {/* Honeypot — visually hidden, excluded from tab order and autofill. Bots fill it; humans can't. */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', top: 'auto', width: 1, height: 1, overflow: 'hidden' }}>
+        <label htmlFor="website_url">Website URL</label>
+        <input id="website_url" type="text" name="website_url" tabIndex={-1} autoComplete="off" defaultValue="" />
+      </div>
       
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div>
@@ -229,7 +289,13 @@ export function AccessRequestForm() {
           </span>
         </label>
       </div>
-      
+
+      {TURNSTILE_SITE_KEY && (
+        <div className="mb-6 flex justify-center">
+          <div ref={turnstileRef} />
+        </div>
+      )}
+
       <button 
         type="submit"
         disabled={loading}
