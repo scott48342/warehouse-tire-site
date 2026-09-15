@@ -33,6 +33,7 @@ function parse(html, bp) {
     const tq = (detail.match(/(\d{2,3})\s*to\s*(\d{2,3})\s*lb-ft/i) || []);
     const os = (detail.match(/[?&]os=([^&"]*)/) || [])[1];
     let yFrom = null, yTo = null;
+    const open = years.match(/^(\d{4})\s*>\s*$/); if (open) { yFrom = +open[1]; yTo = 2027; }
     const ym = years.match(/^(\d{4})(?:\s*-\s*(\d{2,4}))?$/);
     if (ym) { yFrom = +ym[1]; yTo = ym[2] ? (ym[2].length === 2 ? Math.floor(yFrom / 100) * 100 + +ym[2] : +ym[2]) : yFrom; if (yTo < yFrom) yTo += 100; }
     rows.push({ bp, make: make.trim(), model: model.trim(), years, yearFrom: yFrom, yearTo: yTo, bolt: bolt ? decode(bolt) : bp, stud: stud ? decode(stud) : null, bore: bore ? decode(bore) : null, torqueMin: tq[1] ? +tq[1] : null, torqueMax: tq[2] ? +tq[2] : null, offset: os ? decode(os) : null });

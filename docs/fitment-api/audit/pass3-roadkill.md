@@ -126,3 +126,14 @@ _Internal cross-check source. Never cite publicly. Read-only comparison; no DB w
 - 2005 cadillac escalade [Base] bolt ours=6x139.7 rk=6x139.7 (agree); bore ours=78.1 rk=78.3 (disagree) — CADILLAC ESCALADE, EXT & ESV 1998 >
 
 Files: pass3/roadkill-disagree.csv, roadkill-fill-candidates.csv, roadkill-agree.csv, roadkill-unmatched-rk.csv
+
+## Applied 2026-09-15 evening: generation-boundary bolt fixes (04-fix-bolt-nameplates.mjs)
+
+The 664 tight-range bolt disagreements collapse to 277 Y/M/M across 71 nameplates (05-disagree-summary.mjs). Nearly all are generation-boundary errors (one side applied a neighbouring generation's pattern). Reviewed nameplate by nameplate:
+
+- ~26 nameplates: OUR rows wrong -> fixed (435 rows, 28 fix rules; bolt + center bore + thread where known). Source tag 'audit-pass3-bolt-fix', confidence MEDIUM, prior values in audit_original_data, reason text carries the generation rationale. Tire Guide Pro pass re-verifies these Y/M/M.
+- ~14 nameplates: roadkill wrong (its open/lumped ranges) -> no change: Prius 04+ 5x100, Civic 06-11, MDX 07+, Sorento 10-11, Mustang 94-04 4x108, Scion xB 08+, Jetta/Golf Mk5, Boxster, Buick Century 90-96, Chrysler/Plymouth/Dodge minivans 90-95 5x100, Pathfinder 2013, F-350 99-00 8x170, Lancer 08+.
+- Mixed / left for Tire Guide: F-450 (pickup vs chassis-cab 8x170/8x200/10x225), Kia Optima MY2006 split year, E-350 MY2008, Geo Metro (4x100 vs 4x114.3 by generation), Lexus ES 250 1990-91.
+- Quarantined 67 duplicate rows carrying impossible patterns: F-450 5x114.3 'Base' dups (15), PT Cruiser 5x115 catalog-gap-fill dups (10), 1st-gen Pilot phantom trims Elite/TrailSport/Touring (15), 2000-08 TL phantom trims SH-AWD/Advance/Technology (27).
+
+Follow-ups noticed (not touched): phantom trims on other rows in these nameplates (Corolla XSE 2000-02, Prius XLE/Limited 2001-03, Altima SV/SR/Platinum 2000-03, Lexus ES 300h/350/F Sport 1990-96, Enclave Preferred/Essence/Avenir 2008-10, WRX GT 2002-14, Beetle MY2011 phantom year). Ford E-250 2008-14 likely also 8x170 (not in roadkill; verify via TG).
