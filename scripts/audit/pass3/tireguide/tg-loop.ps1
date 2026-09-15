@@ -52,7 +52,7 @@ function LetterGroup($year, $name) {
   foreach ($p in $mkIndex.PSObject.Properties) { $w = $p.Value; if ($p.Name.Substring(0,1).ToUpper() -eq $L -and $year -ge $w[0] -and $year -le $w[1]) { $grp += $p.Name } }
   return @($grp | Sort-Object { $_.ToLower() })
 }
-function SetMake($year, $name, [int]$kAdj = 0) {
+function SetMake($year, $name, [int]$kAdj = 0, [int]$attemptsLeft = 3) {
   # returns $true if picker accepted; verification happens later via PDF header
   Rly dclick 224 134; Start-Sleep -Milliseconds 100; Rly key "ctrl+a"; Rly key "delete"; Start-Sleep -Milliseconds 150
   Rly click 341 134
@@ -66,8 +66,21 @@ function SetMake($year, $name, [int]$kAdj = 0) {
   for ($i = 0; $i -le $k; $i++) { Rly key $letter; Start-Sleep -Milliseconds 280 }
   Rly key "enter"
   if (-not (WaitWin "Select Vehicle Make" 4 $true)) { Rly key "escape"; return $false }
-  Start-Sleep -Milliseconds 300
-  return $true
+  Start-Sleep -Milliseconds 400
+  # verify: OCR the Make field
+  Rly shot $T "tg-makefield"; Start-Sleep -Milliseconds 150
+  $got = (& powershell -NoProfile -File "$PSScriptRoot\tg-ocr.ps1" "$env:TEMP\win_relay\tg-makefield.png" -Crop "140,124,200,22" -Scale 6 2>$null | Select-Object -First 1)
+  $got = if ($got) { ($got -replace "^Make:?\s*", "").Trim() } else { "" }
+  if ((NormName $got) -eq (NormName $name)) { return $true }
+  # mis-landed: compute adjustment from the letter group if we recognise what we got
+  $gotName = $null; foreach ($n in $grp) { if ((NormName $n) -eq (NormName $got)) { $gotName = $n } }
+  @{ ts = (Get-Date).ToString("s"); year = $year; wanted = $name; got = $got; k = $k } | ConvertTo-Json -Compress | Add-Content $CORR
+  if ($attemptsLeft -le 0) { return $false }
+  $adj = 1; if ($gotName) { $gi = [Array]::IndexOf($grp, $gotName); $wi = [Array]::IndexOf($grp, $name); if ($gi -ge 0 -and $wi -ge 0 -and $gi -ne $wi) { $adj = $wi - $gi } }
+  # wrapped past the end (landed on first-of-group or another letter) -> fewer presses
+  if (-not $gotName -and $got -and $got.Substring(0,1).ToUpper() -ne $letter.ToUpper()) { $adj = -1 }
+  if (-not $gotName -and $gotName -eq $null -and $got -and (NormName $got) -eq (NormName $grp[0]) -and $k -gt 0) { $adj = -1 }
+  return (SetMake $year $name ($kAdj + $adj) ($attemptsLeft - 1))
 }
 function HeaderMake($json) {
   # 'Ford Trucks Ranger' → compare against candidate names (longest match wins)
@@ -77,13 +90,17 @@ function HeaderMake($json) {
   foreach ($p in $mkIndex.PSObject.Properties) { if ($raw.StartsWith($p.Name + " ", [StringComparison]::OrdinalIgnoreCase) -and ($null -eq $best -or $p.Name.Length -gt $best.Length)) { $best = $p.Name } }
   return $best
 }
-function NormName($s) { return (($s -replace '[^A-Za-z0-9]', '').ToLower()) }
+function NormName($s) { if ($null -eq $s) { return "" }; return (($s -replace '[^A-Za-z0-9]', '').ToLower()) }
 function CleanOcr($s, $tgMake) {
-  $t = $s.Trim()
+  $t = ($s -replace '[\u0007\u2010-\u2015]', '-').Trim()
+  if ($tgMake -like 'Audi*') { $t = $t -replace '^0(\d)', 'Q$1' }
   $t = $t -replace '^([A-Za-z]) (?=[a-z])', '$1'           # 'E xpedition' -> 'Expedition'
   $t = $t -replace '^F\.(\d{3})', 'F-$1'                   # 'F.150' -> 'F-150'
   if ($tgMake -like 'Ford*') { $t = $t -replace '^6(\d{3})\b', 'F-$1' }   # '6250 Super Duty' -> 'F-250 Super Duty'
   $t = $t -replace '\bsuper Duty\b', 'Super Duty'
+  $t = $t -replace '(\*Drive|O rive|xDnve|xDrlve)', 'xDrive'
+  $t = $t -replace '^43CIi', '430i'
+  if ($t -match 'cancel|IZEE|^Description$') { return '' }
   return $t
 }
 function EnumModels($year, $tgMake) {
@@ -104,7 +121,7 @@ function EnumModels($year, $tgMake) {
     $lines = & powershell -NoProfile -File "$PSScriptRoot\tg-ocr.ps1" $shot 2>$null
     foreach ($l in $lines) {
       $t = CleanOcr $l $tgMake
-      if ($t -match '^(Select Vehicle Model|Search:?|D ?escription|x|Select|Cancel)$' -or $t.Length -lt 2) { continue }
+      if (-not $t -or $t -match '^(Select Vehicle Model|Search:?|D ?escription|x|Select|Cancel)$' -or $t.Length -lt 2) { continue }
       if (-not $names.Contains($t)) { $names.Add($t) }
     }
     Rly key "pagedown"; Start-Sleep -Milliseconds 350
@@ -117,6 +134,16 @@ function EnumModels($year, $tgMake) {
 function MatchModels($ourSlug, $tgModels) {
   # our 'f-150' -> ['F-150']; 'gs' -> ['GS 350','GS 460','GS 450h']; 'silverado-1500' -> ['Silverado 1500']; 'f-250' -> ['F-250','F-250 Super Duty']
   $n = NormName $ourSlug
+  # family rules (engine-named luxury models)
+  $rx = $null
+  if ($ourSlug -match '^(\d)-series') { $d = $Matches[1]; $rx = "^(M)?$d\d{2}[a-z]?\b|^i$d\b" }
+  elseif ($ourSlug -match '^x(\d)m?$') { $rx = "^X$($Matches[1])(?!\d)" }
+  elseif ($ourSlug -match '^m(\d)$') { $rx = "^M$($Matches[1])(?!\d)" }
+  elseif ($ourSlug -match '^z(\d)$') { $rx = "^Z$($Matches[1])" }
+  elseif ($ourSlug -match '^i(\d)$') { $rx = "^i$($Matches[1])\b" }
+  elseif ($ourSlug -match '^([a-z]{1,3})-class(?:-(coupe|cabriolet|wagon|sedan))?$') { $L = $Matches[1].ToUpper(); $rx = "^$L\d{2,3}|^(Mercedes-)?AMG $L|^$L \d" }
+  elseif ($ourSlug -match '^(gla|glb|glc|gle|gls|glk|cla|cls|eqb|eqe|eqs|sl|slk|slc|amg-gt)$') { $L = ($Matches[1] -replace '-', ' ').ToUpper(); $rx = "^$L\b|^(Mercedes-)?AMG $L\b" }
+  if ($rx) { $fam = @($tgModels | Where-Object { $_ -match $rx }); if ($fam.Count -gt 0) { return $fam } }
   $exact = @($tgModels | Where-Object { (NormName $_) -eq $n })
   if ($exact.Count -gt 0) { return $exact }
   $pref = @($tgModels | Where-Object { (NormName $_).StartsWith($n) })
@@ -124,6 +151,68 @@ function MatchModels($ourSlug, $tgModels) {
   # our slug longer than TG (e.g. ours 'ram-1500' vs TG '1500'): TG name is suffix of ours
   $suf = @($tgModels | Where-Object { $nn = (NormName $_); $nn.Length -ge 3 -and $n.EndsWith($nn) })
   return $suf
+}
+function EnumMakes($year) {
+  $cache = "$OUT\_makes\$year.json"
+  if (Test-Path $cache) { return @(Get-Content $cache -Raw | ConvertFrom-Json) }
+  Rly dclick 224 134; Start-Sleep -Milliseconds 100; Rly key "ctrl+a"; Rly key "delete"; Start-Sleep -Milliseconds 150
+  Rly click 341 134
+  if (-not (WaitWin "Select Vehicle Make" 6)) { return @() }
+  Rly focus "Select Vehicle Make"; Start-Sleep -Milliseconds 250; Rly key "home"; Start-Sleep -Milliseconds 300
+  $names = New-Object System.Collections.Generic.List[string]
+  $prevHash = ""
+  for ($pg = 0; $pg -lt 12; $pg++) {
+    $shot = "$env:TEMP\win_relay\tg-makes-$pg.png"
+    Rly shot "Select Vehicle Make" "tg-makes-$pg"; Start-Sleep -Milliseconds 200
+    $hash = (Get-FileHash $shot -Algorithm MD5).Hash
+    if ($hash -eq $prevHash) { break }
+    $prevHash = $hash
+    $lines = & powershell -NoProfile -File "$PSScriptRoot\tg-ocr.ps1" $shot 2>$null
+    foreach ($l in $lines) {
+      $t = ($l -replace '[\u0007\u2010-\u2015]', '-').Trim(); $t = $t -replace '^([A-Za-z]) (?=[a-z])', '$1'
+      if ($t -match '^(Select Vehicle Make|Search:?|D ?escription|x|Select|Cancel)$' -or $t.Length -lt 3) { continue }
+      if (-not $names.Contains($t)) { $names.Add($t) }
+    }
+    Rly key "pagedown"; Start-Sleep -Milliseconds 350
+  }
+  Rly key "escape"; Start-Sleep -Milliseconds 300
+  New-Item -ItemType Directory -Force -Path (Split-Path $cache) | Out-Null
+  ($names | ConvertTo-Json) | Set-Content $cache -Encoding UTF8
+  return @($names)
+}
+function ReadMakeField {
+  Rly shot $T "tg-makefield"; Start-Sleep -Milliseconds 150
+  $got = (& powershell -NoProfile -File "$PSScriptRoot\tg-ocr.ps1" "$env:TEMP\win_relay\tg-makefield.png" -Crop "140,124,200,22" -Scale 6 2>$null | Select-Object -First 1)
+  if (-not $got) { Start-Sleep -Milliseconds 600; Rly shot $T "tg-makefield"; Start-Sleep -Milliseconds 150; $got = (& powershell -NoProfile -File "$PSScriptRoot\tg-ocr.ps1" "$env:TEMP\win_relay\tg-makefield.png" -Crop "140,124,200,22" -Scale 6 2>$null | Select-Object -First 1) }
+  return $(if ($got) { ($got -replace "^Make:?\s*", "").Trim() } else { "" })
+}
+function SetMake2($year, $name) {
+  $all = EnumMakes $year
+  if ($all.Count -eq 0) { return $false }
+  $letter = $name.Substring(0,1)
+  $grp = @($all | Where-Object { $_.Substring(0,1).ToUpper() -eq $letter.ToUpper() })
+  $k = -1; for ($i = 0; $i -lt $grp.Count; $i++) { if ((NormName $grp[$i]) -eq (NormName $name)) { $k = $i } }
+  if ($k -lt 0) { return $false }   # make not offered this year
+  for ($try = 0; $try -lt 2; $try++) {
+    Rly dclick 224 134; Start-Sleep -Milliseconds 100; Rly key "ctrl+a"; Rly key "delete"; Start-Sleep -Milliseconds 150
+    Rly click 341 134
+    if (-not (WaitWin "Select Vehicle Make" 6)) { return $false }
+    Rly focus "Select Vehicle Make"; Start-Sleep -Milliseconds 250; Rly key "home"; Start-Sleep -Milliseconds 250
+    $offset = if ((NormName $grp[0]) -eq (NormName $all[0])) { 0 } else { 1 }
+    $presses = $k + $offset
+    for ($i = 0; $i -lt $presses; $i++) { Rly key $letter.ToLower(); Start-Sleep -Milliseconds 280 }
+    Rly key "enter"
+    if (-not (WaitWin "Select Vehicle Make" 4 $true)) { Rly key "escape"; return $false }
+    Start-Sleep -Milliseconds 700
+    $got = ReadMakeField
+    if ($got -eq "") { return $true }   # OCR blank: trust presses; PDF header verify catches mis-lands
+    if ((NormName $got) -eq (NormName $name)) { return $true }
+    @{ ts = (Get-Date).ToString("s"); year = $year; wanted = $name; got = $got; k = $k } | ConvertTo-Json -Compress | Add-Content $CORR
+    $gi = -1; for ($i = 0; $i -lt $grp.Count; $i++) { if ((NormName $grp[$i]) -eq (NormName $got)) { $gi = $i } }
+    if ($gi -ge 0) { $k += ($k - $gi) } else { break }
+    if ($k -lt 0) { break }
+  }
+  return $false
 }
 function CloseStray {
   # dismiss message boxes / pickers / inventory jumps
@@ -139,14 +228,14 @@ function OneVehicle($it) {
   $t0 = Get-Date
   foreach ($tgMake in $cands) {
     if (Test-Path $PAUSE) { return @{ status = "paused" } }
-    $w = $mkIndex.$tgMake; if ($w -and ($y -lt $w[0] -or $y -gt $w[1])) { continue }   # make not offered this year
+
     $attempt = 0; $kAdj = 0
     while ($attempt -lt 3) {
       $attempt++
       Rly focus $T; Start-Sleep -Milliseconds 250
       CloseStray
       SetField 59 134 "$y"
-      if (-not (SetMake $y $tgMake $kAdj)) { break }
+      if (-not (SetMake2 $y $tgMake)) { break }
       $tgModels = EnumModels $y $tgMake
       $targets = MatchModels $md $tgModels
       if ($targets.Count -eq 0) { @{ ts = (Get-Date).ToString("s"); year = $y; make = $mk; model = $md; tgMake = $tgMake; tgModels = $tgModels } | ConvertTo-Json -Compress | Add-Content "$OUT\tg-unmatched-models.jsonl"; break }

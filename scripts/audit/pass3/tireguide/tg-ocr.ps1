@@ -1,6 +1,6 @@
 # Local OCR of a screenshot using the built-in Windows.Media.Ocr engine (no install, no model cost).
 #   powershell -NoProfile -File tg-ocr.ps1 <png> [-Lines]   → prints recognized text (one line per OCR line)
-param([Parameter(Mandatory)][string]$Path, [switch]$Lines, [int]$Scale = 3)
+param([Parameter(Mandatory)][string]$Path, [switch]$Lines, [int]$Scale = 3, [string]$Crop = "")
 $ErrorActionPreference = "Stop"
 Add-Type -AssemblyName System.Runtime.WindowsRuntime
 $null = [Windows.Media.Ocr.OcrEngine, Windows.Foundation, ContentType = WindowsRuntime]
@@ -14,6 +14,7 @@ function Await($WinRtTask, $ResultType) {
 # upscale for better OCR on small UI fonts
 Add-Type -AssemblyName System.Drawing
 $src = [System.Drawing.Image]::FromFile((Resolve-Path $Path).Path)
+if ($Crop) { $cx, $cy, $cw, $ch = ($Crop -split ",") | ForEach-Object { [int]$_ }; $rect = New-Object System.Drawing.Rectangle $cx, $cy, $cw, $ch; $cropped = (New-Object System.Drawing.Bitmap $src).Clone($rect, $src.PixelFormat); $src.Dispose(); $src = $cropped }
 $bmp2 = New-Object System.Drawing.Bitmap ($src.Width * $Scale), ($src.Height * $Scale)
 $g = [System.Drawing.Graphics]::FromImage($bmp2); $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
 $g.DrawImage($src, 0, 0, $bmp2.Width, $bmp2.Height); $g.Dispose(); $src.Dispose()
