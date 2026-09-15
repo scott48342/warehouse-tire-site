@@ -1,0 +1,5102 @@
+[
+ {
+  "year": 1992,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1992-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1992 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1992,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1992-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E",
+   "LT225/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1992 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1992,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1992-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1992 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1993,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1993-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1993 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1993,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1993-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1993 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1993,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1993-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1993 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1994,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1994-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1994 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1994,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1994-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1994 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1994,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1994-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1994 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1995,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1995-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1995 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1995,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1995-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1995 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1995,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1995-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1995 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1996,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1996-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1996 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1996,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1996-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E",
+   "P245/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1996 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1996,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1996-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1996 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1997,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1997-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1997 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1997,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1997-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E",
+   "P245/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1997 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1997,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1997-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1997 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1998,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1998-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1998 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1998,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1998-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E",
+   "P245/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1998 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1998,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1998-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1998 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "kit downloaded; bracketed by page-verified 1992/1995/1996/1997/1999 kits (same platform, same RPO tire codes)"
+ },
+ {
+  "year": 1999,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1999-chevrolet-suburban-1500-2wd",
+  "raw_trim": "C1500 (C10906)",
+  "display_trim": "1500 2WD",
+  "submodel": "C1500",
+  "bolt_pattern": "5x127",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": 0,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1999 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Suburban.pdf",
+    "note": "1999 Product Information Guide p.13: 15-inch (2WD) / 16-inch (4WD) std steel; optional aluminum 15\" C1500 / 16\" K1500"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1999,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1999-chevrolet-suburban-1500-4wd",
+  "raw_trim": "K1500 (K10906)",
+  "display_trim": "1500 4WD",
+  "submodel": "K1500",
+  "bolt_pattern": "6x139.7",
+  "center_bore_mm": 78.1,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16",
+   "LT245/75R16E",
+   "P245/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1999 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Suburban.pdf",
+    "note": "1999 Product Information Guide p.13: 15-inch (2WD) / 16-inch (4WD) std steel; optional aluminum 15\" C1500 / 16\" K1500"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1999,
+  "make": "chevrolet",
+  "model": "suburban",
+  "modification_id": "1999-chevrolet-suburban-2500",
+  "raw_trim": "C2500/K2500 (C20906/K20906)",
+  "display_trim": "2500",
+  "submodel": "2500",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 116.7,
+  "thread_size": "M14x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16E"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT245/75R16E"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "high",
+  "sources": [
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Suburban.pdf",
+    "note": "GM Heritage Vehicle Information Kit, 1999 Chevrolet Suburban (order guide TIRES/WHEELS section; scanned PDF, cached scripts/audit/pass3a/cache/)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+    "note": "1992 C/K Suburban Technical Guide 'Wheels and Tires' table: wheel size, bolt holes, bolt circle, offset per tire (page 11 of kit)"
+   },
+   {
+    "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Suburban.pdf",
+    "note": "1999 Product Information Guide p.13: 15-inch (2WD) / 16-inch (4WD) std steel; optional aluminum 15\" C1500 / 16\" K1500"
+   }
+  ],
+  "generation": "Suburban GMT400 1992-1999",
+  "note": "page-verified"
+ },
+ {
+  "year": 1992,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1992-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1992/",
+    "note": "tiresize.com OE sizes 1992 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1992,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1992-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1992/",
+    "note": "tiresize.com OE sizes 1992 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1993-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1992/",
+    "note": "tiresize.com OE sizes 1992 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1993-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1992/",
+    "note": "tiresize.com OE sizes 1992 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1993-ford-f-150-lightning",
+  "raw_trim": "SVT Lightning",
+  "display_trim": "Lightning",
+  "submodel": "Lightning",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 20,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 17,
+    "width": 8,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P275/60R17"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P275/60R17"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1992/",
+    "note": "tiresize.com OE sizes 1992 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   },
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com 1994 F-150 Lightning: 275/60R17"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1994-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com OE sizes 1994 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1994-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com OE sizes 1994 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1994-ford-f-150-lightning",
+  "raw_trim": "SVT Lightning",
+  "display_trim": "Lightning",
+  "submodel": "Lightning",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 20,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 17,
+    "width": 8,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P275/60R17"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P275/60R17"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com OE sizes 1994 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   },
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com 1994 F-150 Lightning: 275/60R17"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1995-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com OE sizes 1994 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1995-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com OE sizes 1994 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1995-ford-f-150-lightning",
+  "raw_trim": "SVT Lightning",
+  "display_trim": "Lightning",
+  "submodel": "Lightning",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 20,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 17,
+    "width": 8,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P275/60R17"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P275/60R17"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com OE sizes 1994 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15)"
+   },
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1994/",
+    "note": "tiresize.com 1994 F-150 Lightning: 275/60R17"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1996-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1996/",
+    "note": "tiresize.com OE sizes 1996 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15, 265/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1996-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x139.7",
+  "center_bore_mm": 87.1,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -18,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P265/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/75R15",
+   "P265/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1996/",
+    "note": "tiresize.com OE sizes 1996 F-150 (2wd: 215/75R15, 235/75R15; 4wd: 235/75R15, 265/75R15)"
+   }
+  ],
+  "generation": "F-150 9th gen 1992-1996"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1997-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x135",
+  "center_bore_mm": 87.1,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/70R16",
+   "P255/70R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1997/",
+    "note": "tiresize.com OE sizes 1997 F-150 (235/70R16 std; 255/70R16; 265/70R17 4wd; )"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): PN-96 generation MY1997-2004; Lightning introduced March 1999 (MY1999)"
+   }
+  ],
+  "generation": "F-150 10th gen 1997-2003"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1997-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x135",
+  "center_bore_mm": 87.1,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 17,
+    "width": 7.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P265/70R17"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/70R16",
+   "P255/70R16",
+   "P265/70R17"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1997/",
+    "note": "tiresize.com OE sizes 1997 F-150 (235/70R16 std; 255/70R16; 265/70R17 4wd; )"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): PN-96 generation MY1997-2004; Lightning introduced March 1999 (MY1999)"
+   }
+  ],
+  "generation": "F-150 10th gen 1997-2003"
+ },
+ {
+  "year": 1998,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1998-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x135",
+  "center_bore_mm": 87.1,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/70R16",
+   "P255/70R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1997/",
+    "note": "tiresize.com OE sizes 1997 F-150 (235/70R16 std; 255/70R16; 265/70R17 4wd; )"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): PN-96 generation MY1997-2004; Lightning introduced March 1999 (MY1999)"
+   }
+  ],
+  "generation": "F-150 10th gen 1997-2003"
+ },
+ {
+  "year": 1998,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1998-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x135",
+  "center_bore_mm": 87.1,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 17,
+    "width": 7.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P265/70R17"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/70R16",
+   "P255/70R16",
+   "P265/70R17"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1997/",
+    "note": "tiresize.com OE sizes 1997 F-150 (235/70R16 std; 255/70R16; 265/70R17 4wd; )"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): PN-96 generation MY1997-2004; Lightning introduced March 1999 (MY1999)"
+   }
+  ],
+  "generation": "F-150 10th gen 1997-2003"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1999-ford-f-150-2wd",
+  "raw_trim": "F-150 4x2",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x135",
+  "center_bore_mm": 87.1,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/70R16",
+   "P255/70R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1999/",
+    "note": "tiresize.com OE sizes 1999 F-150 (235/70R16 std; 255/70R16; 265/70R17 4wd; 275/60R17 4wd Lariat/SuperCab; Lightning 295/45R18)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): PN-96 generation MY1997-2004; Lightning introduced March 1999 (MY1999)"
+   }
+  ],
+  "generation": "F-150 10th gen 1997-2003"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1999-ford-f-150-4wd",
+  "raw_trim": "F-150 4x4",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x135",
+  "center_bore_mm": 87.1,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 17,
+    "width": 7.5,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P265/70R17"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/70R16",
+   "P255/70R16",
+   "P265/70R17",
+   "P275/60R17"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1999/",
+    "note": "tiresize.com OE sizes 1999 F-150 (235/70R16 std; 255/70R16; 265/70R17 4wd; 275/60R17 4wd Lariat/SuperCab; Lightning 295/45R18)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): PN-96 generation MY1997-2004; Lightning introduced March 1999 (MY1999)"
+   }
+  ],
+  "generation": "F-150 10th gen 1997-2003"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-150",
+  "modification_id": "1999-ford-f-150-lightning",
+  "raw_trim": "SVT Lightning",
+  "display_trim": "Lightning",
+  "submodel": "Lightning",
+  "bolt_pattern": "5x135",
+  "center_bore_mm": 87.1,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 30,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 18,
+    "width": 9.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P295/45ZR18"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P295/45ZR18"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F150/1999/",
+    "note": "tiresize.com OE sizes 1999 F-150 (235/70R16 std; 255/70R16; 265/70R17 4wd; 275/60R17 4wd Lariat/SuperCab; Lightning 295/45R18)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): PN-96 generation MY1997-2004; Lightning introduced March 1999 (MY1999)"
+   }
+  ],
+  "generation": "F-150 10th gen 1997-2003"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1993-ford-ranger-2wd",
+  "raw_trim": "Ranger 4x2 (incl. SuperCab)",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P225/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P215/70R14",
+   "P225/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1993/",
+    "note": "tiresize.com OE sizes 1993 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1993-ford-ranger-4wd",
+  "raw_trim": "Ranger 4x4 (incl. SuperCab, Splash 4x4)",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P225/75R15",
+   "P235/75R15",
+   "P265/70R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1993/",
+    "note": "tiresize.com OE sizes 1993 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1994-ford-ranger-2wd",
+  "raw_trim": "Ranger 4x2 (incl. SuperCab)",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P225/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P215/70R14",
+   "P225/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1993/",
+    "note": "tiresize.com OE sizes 1993 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1994-ford-ranger-4wd",
+  "raw_trim": "Ranger 4x4 (incl. SuperCab, Splash 4x4)",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P225/75R15",
+   "P235/75R15",
+   "P265/70R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1993/",
+    "note": "tiresize.com OE sizes 1993 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1995-ford-ranger-2wd",
+  "raw_trim": "Ranger 4x2 (incl. SuperCab)",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P225/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P215/70R14",
+   "P225/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1995-ford-ranger-4wd",
+  "raw_trim": "Ranger 4x4 (incl. SuperCab, Splash 4x4)",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P225/75R15",
+   "P235/75R15",
+   "P265/70R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1995-ford-ranger-splash-2wd",
+  "raw_trim": "Ranger Splash 4x2",
+  "display_trim": "Splash 2WD",
+  "submodel": "Splash",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/60R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/60R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1996-ford-ranger-2wd",
+  "raw_trim": "Ranger 4x2 (incl. SuperCab)",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P225/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P215/70R14",
+   "P225/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1996-ford-ranger-4wd",
+  "raw_trim": "Ranger 4x4 (incl. SuperCab, Splash 4x4)",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P225/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1996-ford-ranger-splash-2wd",
+  "raw_trim": "Ranger Splash 4x2",
+  "display_trim": "Splash 2WD",
+  "submodel": "Splash",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/60R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/60R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1997-ford-ranger-2wd",
+  "raw_trim": "Ranger 4x2 (incl. SuperCab)",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P215/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P225/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P215/70R14",
+   "P225/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1997-ford-ranger-4wd",
+  "raw_trim": "Ranger 4x4 (incl. SuperCab, Splash 4x4)",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P225/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1997-ford-ranger-splash-2wd",
+  "raw_trim": "Ranger Splash 4x2",
+  "display_trim": "Splash 2WD",
+  "submodel": "Splash",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/60R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/60R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1995/",
+    "note": "tiresize.com OE sizes 1995 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 3rd gen 1993-1997"
+ },
+ {
+  "year": 1998,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1998-ford-ranger-2wd",
+  "raw_trim": "Ranger 4x2 (incl. SuperCab)",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P205/75R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P225/70R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P205/75R14",
+   "P225/70R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1998/",
+    "note": "tiresize.com OE sizes 1998 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 4th gen 1998-2011"
+ },
+ {
+  "year": 1998,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1998-ford-ranger-4wd",
+  "raw_trim": "Ranger 4x4 (incl. SuperCab, Splash 4x4)",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P225/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1998/",
+    "note": "tiresize.com OE sizes 1998 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 4th gen 1998-2011"
+ },
+ {
+  "year": 1998,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1998-ford-ranger-splash-2wd",
+  "raw_trim": "Ranger Splash 4x2",
+  "display_trim": "Splash 2WD",
+  "submodel": "Splash",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/60R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P235/60R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1998/",
+    "note": "tiresize.com OE sizes 1998 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 4th gen 1998-2011"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1999-ford-ranger-2wd",
+  "raw_trim": "Ranger 4x2 (incl. SuperCab)",
+  "display_trim": "2WD",
+  "submodel": "4x2",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -6,
+  "offset_max_mm": 45,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P205/75R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P225/70R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P205/75R14",
+   "P225/70R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1998/",
+    "note": "tiresize.com OE sizes 1998 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 4th gen 1998-2011"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "ranger",
+  "modification_id": "1999-ford-ranger-4wd",
+  "raw_trim": "Ranger 4x4 (incl. SuperCab, Splash 4x4)",
+  "display_trim": "4WD",
+  "submodel": "4x4",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 70.6,
+  "thread_size": "1/2-20",
+  "seat_type": "conical",
+  "offset_min_mm": -12,
+  "offset_max_mm": 31,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P235/75R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P215/75R15",
+   "P225/75R15",
+   "P235/75R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "medium",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/Ranger/1998/",
+    "note": "tiresize.com OE sizes 1998 Ranger by 2wd/4wd/Splash/SuperCab"
+   },
+   {
+    "url": "https://www.therangerstation.com/tech/ford-ranger-wheel-fitment-guide/",
+    "note": "TheRangerStation 1983-2011 Ranger Wheel Fitment Guide: 5x4.5 bolt pattern; factory wheels 14x6 & 15x7 (1993-1999)"
+   }
+  ],
+  "generation": "Ranger 4th gen 1998-2011"
+ },
+ {
+  "year": 1991,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1991-ford-f-250-base",
+  "raw_trim": "F-250 / F-250 HD 4x2 & 4x4",
+  "display_trim": "Base",
+  "submodel": "8-lug",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1992/",
+    "note": "tiresize.com OE sizes 1992 F-250 2wd/4wd: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-250 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1991,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1991-ford-f-350-srw",
+  "raw_trim": "F-350 single rear wheel 4x2 & 4x4",
+  "display_trim": "SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT215/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1991,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1991-ford-f-350-drw",
+  "raw_trim": "F-350 dual rear wheel 4x2 & 4x4",
+  "display_trim": "DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 130,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1992,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1992-ford-f-250-base",
+  "raw_trim": "F-250 / F-250 HD 4x2 & 4x4",
+  "display_trim": "Base",
+  "submodel": "8-lug",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1992/",
+    "note": "tiresize.com OE sizes 1992 F-250 2wd/4wd: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-250 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1992,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1992-ford-f-350-srw",
+  "raw_trim": "F-350 single rear wheel 4x2 & 4x4",
+  "display_trim": "SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT215/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1992,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1992-ford-f-350-drw",
+  "raw_trim": "F-350 dual rear wheel 4x2 & 4x4",
+  "display_trim": "DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 130,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1993-ford-f-250-base",
+  "raw_trim": "F-250 / F-250 HD 4x2 & 4x4",
+  "display_trim": "Base",
+  "submodel": "8-lug",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1992/",
+    "note": "tiresize.com OE sizes 1992 F-250 2wd/4wd: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-250 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1993-ford-f-350-srw",
+  "raw_trim": "F-350 single rear wheel 4x2 & 4x4",
+  "display_trim": "SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT215/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1993,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1993-ford-f-350-drw",
+  "raw_trim": "F-350 dual rear wheel 4x2 & 4x4",
+  "display_trim": "DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 130,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1994-ford-f-250-base",
+  "raw_trim": "F-250 / F-250 HD 4x2 & 4x4",
+  "display_trim": "Base",
+  "submodel": "8-lug",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1992/",
+    "note": "tiresize.com OE sizes 1992 F-250 2wd/4wd: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-250 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1994-ford-f-350-srw",
+  "raw_trim": "F-350 single rear wheel 4x2 & 4x4",
+  "display_trim": "SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT215/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1994,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1994-ford-f-350-drw",
+  "raw_trim": "F-350 dual rear wheel 4x2 & 4x4",
+  "display_trim": "DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 130,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1995-ford-f-250-base",
+  "raw_trim": "F-250 / F-250 HD 4x2 & 4x4",
+  "display_trim": "Base",
+  "submodel": "8-lug",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1997/",
+    "note": "tiresize.com OE sizes 1997 F-250 2wd/4wd: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-250 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1995-ford-f-350-srw",
+  "raw_trim": "F-350 single rear wheel 4x2 & 4x4",
+  "display_trim": "SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT215/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1995,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1995-ford-f-350-drw",
+  "raw_trim": "F-350 dual rear wheel 4x2 & 4x4",
+  "display_trim": "DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 130,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1996-ford-f-250-base",
+  "raw_trim": "F-250 / F-250 HD 4x2 & 4x4",
+  "display_trim": "Base",
+  "submodel": "8-lug",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1997/",
+    "note": "tiresize.com OE sizes 1997 F-250 2wd/4wd: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-250 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1996-ford-f-350-srw",
+  "raw_trim": "F-350 single rear wheel 4x2 & 4x4",
+  "display_trim": "SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT215/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1996,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1996-ford-f-350-drw",
+  "raw_trim": "F-350 dual rear wheel 4x2 & 4x4",
+  "display_trim": "DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 130,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1997-ford-f-250-base",
+  "raw_trim": "F-250 / F-250 HD 4x2 & 4x4",
+  "display_trim": "Base",
+  "submodel": "8-lug",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1997/",
+    "note": "tiresize.com OE sizes 1997 F-250 2wd/4wd: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-250 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1997-ford-f-350-srw",
+  "raw_trim": "F-350 single rear wheel 4x2 & 4x4",
+  "display_trim": "SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 25,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT215/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1997-ford-f-350-drw",
+  "raw_trim": "F-350 dual rear wheel 4x2 & 4x4",
+  "display_trim": "DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x165.1",
+  "center_bore_mm": 121.3,
+  "thread_size": "9/16-18",
+  "seat_type": "conical",
+  "offset_min_mm": -25,
+  "offset_max_mm": 130,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1992/",
+    "note": "tiresize.com OE sizes 1992 F-350 4wd / 4wd Dually: LT215/85R16, LT235/85R16"
+   }
+  ],
+  "generation": "F-350 OBS (8-lug) 1987-1997"
+ },
+ {
+  "year": 1997,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1997-ford-f-250-light-duty",
+  "raw_trim": "F-250 Light Duty (7-lug) 4x2 & 4x4",
+  "display_trim": "Light Duty",
+  "submodel": "Light Duty",
+  "bolt_pattern": "7x150",
+  "center_bore_mm": 121.3,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P255/70R16",
+   "LT245/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1997/",
+    "note": "tiresize.com 1997 'F250 Light': 255/70R16, 245/75R16"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): light-duty F-250 on PN-96 platform MY1997-1999"
+   }
+  ],
+  "generation": "F-250 Light Duty (7-lug) 1997-1999"
+ },
+ {
+  "year": 1998,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1998-ford-f-250-light-duty",
+  "raw_trim": "F-250 Light Duty (7-lug) 4x2 & 4x4",
+  "display_trim": "Light Duty",
+  "submodel": "Light Duty",
+  "bolt_pattern": "7x150",
+  "center_bore_mm": 121.3,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P255/70R16",
+   "LT245/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1997/",
+    "note": "tiresize.com 1997 'F250 Light': 255/70R16, 245/75R16"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): light-duty F-250 on PN-96 platform MY1997-1999"
+   }
+  ],
+  "generation": "F-250 Light Duty (7-lug) 1997-1999"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1999-ford-f-250-light-duty",
+  "raw_trim": "F-250 Light Duty (7-lug) 4x2 & 4x4",
+  "display_trim": "Light Duty",
+  "submodel": "Light Duty",
+  "bolt_pattern": "7x150",
+  "center_bore_mm": 121.3,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 10,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P255/70R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT245/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P255/70R16",
+   "LT245/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1999/",
+    "note": "tiresize.com 1999 'F250 Light': 255/70R16, 245/75R16"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_F-Series_(tenth_generation)",
+    "note": "Wikipedia (index only): light-duty F-250 on PN-96 platform MY1997-1999"
+   }
+  ],
+  "generation": "F-250 Light Duty (7-lug) 1997-1999"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1999-ford-f-250-super-duty-2wd",
+  "raw_trim": "F-250 Super Duty 4x2",
+  "display_trim": "Super Duty 2WD",
+  "submodel": "Super Duty",
+  "bolt_pattern": "8x170",
+  "center_bore_mm": 124.9,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1999/",
+    "note": "tiresize.com 1999 F250 2wd Super Duty: 235/85R16; 4wd Super Duty: 235/85R16, 265/75R16"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_Super_Duty",
+    "note": "Wikipedia (index only): Super Duty production from Jan 1998, MY1999+"
+   }
+  ],
+  "generation": "F-250 Super Duty 1st gen 1999-2007"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-250",
+  "modification_id": "1999-ford-f-250-super-duty-4wd",
+  "raw_trim": "F-250 Super Duty 4x4",
+  "display_trim": "Super Duty 4WD",
+  "submodel": "Super Duty",
+  "bolt_pattern": "8x170",
+  "center_bore_mm": 124.9,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "LT265/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT235/85R16",
+   "LT265/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F250/1999/",
+    "note": "tiresize.com 1999 F250 2wd Super Duty: 235/85R16; 4wd Super Duty: 235/85R16, 265/75R16"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_Super_Duty",
+    "note": "Wikipedia (index only): Super Duty production from Jan 1998, MY1999+"
+   }
+  ],
+  "generation": "F-250 Super Duty 1st gen 1999-2007"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1999-ford-f-350-super-duty-srw",
+  "raw_trim": "F-350 Super Duty single rear wheel 4x2 & 4x4",
+  "display_trim": "Super Duty SRW",
+  "submodel": "SRW",
+  "bolt_pattern": "8x170",
+  "center_bore_mm": 124.9,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 44,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 7,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT265/75R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT265/75R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1999/",
+    "note": "tiresize.com 1999 F350 2wd/4wd Super Duty: 265/75R16; 2wd SD Dually: 215/85R16; 4wd SD Dually: 235/85R16"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_Super_Duty",
+    "note": "Wikipedia (index only): Super Duty MY1999+"
+   }
+  ],
+  "generation": "F-350 Super Duty 1st gen 1999-2007"
+ },
+ {
+  "year": 1999,
+  "make": "ford",
+  "model": "f-350",
+  "modification_id": "1999-ford-f-350-super-duty-drw",
+  "raw_trim": "F-350 Super Duty dual rear wheel 4x2 & 4x4",
+  "display_trim": "Super Duty DRW",
+  "submodel": "DRW",
+  "bolt_pattern": "8x170",
+  "center_bore_mm": 124.9,
+  "thread_size": "M14x2.0",
+  "seat_type": "conical",
+  "offset_min_mm": 0,
+  "offset_max_mm": 135,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT215/85R16"
+   },
+   {
+    "axle": "both",
+    "diameter": 16,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "LT235/85R16"
+   }
+  ],
+  "oem_tire_sizes": [
+   "LT215/85R16",
+   "LT235/85R16"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Ford/F350/1999/",
+    "note": "tiresize.com 1999 F350 2wd/4wd Super Duty: 265/75R16; 2wd SD Dually: 215/85R16; 4wd SD Dually: 235/85R16"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ford_Super_Duty",
+    "note": "Wikipedia (index only): Super Duty MY1999+"
+   }
+  ],
+  "generation": "F-350 Super Duty 1st gen 1999-2007"
+ },
+ {
+  "year": 1992,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1992-toyota-camry-dx",
+  "raw_trim": "DX 4-cyl",
+  "display_trim": "DX",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1992,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1992-toyota-camry-le",
+  "raw_trim": "LE 4-cyl / LE V6",
+  "display_trim": "LE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1992,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1992-toyota-camry-xle",
+  "raw_trim": "XLE 4-cyl / XLE V6",
+  "display_trim": "XLE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1992,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1992-toyota-camry-se",
+  "raw_trim": "SE V6",
+  "display_trim": "SE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1993,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1993-toyota-camry-dx",
+  "raw_trim": "DX 4-cyl",
+  "display_trim": "DX",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1993,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1993-toyota-camry-le",
+  "raw_trim": "LE 4-cyl / LE V6",
+  "display_trim": "LE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1993,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1993-toyota-camry-xle",
+  "raw_trim": "XLE 4-cyl / XLE V6",
+  "display_trim": "XLE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1993,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1993-toyota-camry-se",
+  "raw_trim": "SE V6",
+  "display_trim": "SE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1994,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1994-toyota-camry-dx",
+  "raw_trim": "DX 4-cyl",
+  "display_trim": "DX",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1994,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1994-toyota-camry-le",
+  "raw_trim": "LE 4-cyl / LE V6",
+  "display_trim": "LE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1994,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1994-toyota-camry-xle",
+  "raw_trim": "XLE 4-cyl / XLE V6",
+  "display_trim": "XLE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1994,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1994-toyota-camry-se",
+  "raw_trim": "SE V6",
+  "display_trim": "SE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1995,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1995-toyota-camry-dx",
+  "raw_trim": "DX 4-cyl",
+  "display_trim": "DX",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1995,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1995-toyota-camry-le",
+  "raw_trim": "LE 4-cyl / LE V6",
+  "display_trim": "LE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1995,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1995-toyota-camry-xle",
+  "raw_trim": "XLE 4-cyl / XLE V6",
+  "display_trim": "XLE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1995,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1995-toyota-camry-se",
+  "raw_trim": "SE V6",
+  "display_trim": "SE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1996,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1996-toyota-camry-dx",
+  "raw_trim": "DX 4-cyl",
+  "display_trim": "DX",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1996,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1996-toyota-camry-le",
+  "raw_trim": "LE 4-cyl / LE V6",
+  "display_trim": "LE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1996,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1996-toyota-camry-xle",
+  "raw_trim": "XLE 4-cyl / XLE V6",
+  "display_trim": "XLE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 14,
+    "width": 5.5,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P195/70R14"
+   },
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": false,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P195/70R14",
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ },
+ {
+  "year": 1996,
+  "make": "toyota",
+  "model": "camry",
+  "modification_id": "1996-toyota-camry-se",
+  "raw_trim": "SE V6",
+  "display_trim": "SE",
+  "submodel": "XV10",
+  "bolt_pattern": "5x114.3",
+  "center_bore_mm": 60.1,
+  "thread_size": "M12x1.5",
+  "seat_type": "conical",
+  "offset_min_mm": 30,
+  "offset_max_mm": 50,
+  "oem_wheel_sizes": [
+   {
+    "axle": "both",
+    "diameter": 15,
+    "width": 6,
+    "offset": null,
+    "isStock": true,
+    "tireSize": "P205/65R15"
+   }
+  ],
+  "oem_tire_sizes": [
+   "P205/65R15"
+  ],
+  "source": "audit-2026-09-pass3-research",
+  "confidence": "low",
+  "sources": [
+   {
+    "url": "https://tiresize.com/tires/Toyota/Camry/1992/",
+    "note": "tiresize.com 1992 Camry: DX/LE/XLE 195/70R14; SE & V6 205/65R15"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Toyota_Camry_(XV10)",
+    "note": "Wikipedia (index only): XV10 model years 1992-1996 (US)"
+   }
+  ],
+  "generation": "Camry XV10 1992-1996"
+ }
+]

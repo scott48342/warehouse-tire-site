@@ -1,0 +1,11 @@
+import pg from "pg";
+const p = new pg.Pool({ connectionString: process.env.POSTGRES_URL, ssl: { rejectUnauthorized: false } });
+const q = async (s, v) => (await p.query(s, v)).rows;
+const T = (rows) => rows.map((r) => Object.values(r).map(x=>typeof x==='object'?JSON.stringify(x):x).join(" | ")).join("\n");
+console.log("=== columns ===");
+console.log(T(await q(`select column_name, data_type, is_nullable, column_default from information_schema.columns where table_name='vehicle_fitments' order by ordinal_position`)));
+console.log("\n=== 1990s slugs for target makes ===");
+console.log(T(await q(`select make, model, min(year) miny, max(year) maxy, count(*)::int n, count(*) filter (where quarantined_at is null)::int active from vehicle_fitments where make in ('ford','chevrolet','gmc','dodge','toyota','ram') and year < 2000 group by 1,2 order by 1,2`)));
+console.log("\n=== all slugs for target models any year ===");
+console.log(T(await q(`select make, model, min(year) miny, max(year) maxy, count(*)::int n from vehicle_fitments where (make in ('ford','chevrolet','gmc','dodge','toyota','ram')) and (model ilike '%f-1%' or model ilike '%f-2%' or model ilike '%f-3%' or model ilike 'ranger%' or model ilike '%silverado%' or model ilike '%sierra%' or model ilike 'c%k%' or model ilike '%1500%' or model ilike '%2500%' or model ilike '%3500%' or model ilike 'ram%' or model ilike 'tacoma%' or model ilike '4runner%' or model ilike 'camry%' or model ilike 'suburban%' or model ilike 'tahoe%' or model ilike 'yukon%' or model ilike 'super-duty%' or model ilike 'lightning%') group by 1,2 order by 1,2`)));
+await p.end();
