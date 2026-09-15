@@ -10,7 +10,7 @@
 
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
-import { eq, and, sql, inArray } from "drizzle-orm";
+import { eq, and, sql, inArray, isNull } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "@/lib/fitment-db/keys";
 import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 import { getModelVariants } from "@/lib/fitment-db/modelAliases";
@@ -67,10 +67,14 @@ export interface PublicFitmentSpecs {
 /**
  * Get all available years (across all makes/models)
  */
+/** Rows pulled from service must never reach the public API. Apply to every query. */
+const notQuarantined = () => isNull(vehicleFitments.quarantinedAt);
+
 export async function getPublicYears(): Promise<PublicYear[]> {
   const result = await db
     .selectDistinct({ year: vehicleFitments.year })
     .from(vehicleFitments)
+    .where(notQuarantined())
     .orderBy(sql`${vehicleFitments.year} DESC`);
   
   return result.map(r => ({ year: r.year }));
@@ -80,12 +84,12 @@ export async function getPublicYears(): Promise<PublicYear[]> {
  * Get all makes, optionally filtered by year
  */
 export async function getPublicMakes(year?: number): Promise<PublicMake[]> {
-  const whereConditions = year ? [eq(vehicleFitments.year, year)] : [];
+  const whereConditions = [notQuarantined(), ...(year ? [eq(vehicleFitments.year, year)] : [])];
   
   const result = await db
     .selectDistinct({ make: vehicleFitments.make })
     .from(vehicleFitments)
-    .where(whereConditions.length ? and(...whereConditions) : undefined)
+    .where(and(...whereConditions))
     .orderBy(vehicleFitments.make);
   
   return result.map(r => ({
@@ -99,7 +103,7 @@ export async function getPublicMakes(year?: number): Promise<PublicMake[]> {
  */
 export async function getPublicModels(make: string, year?: number): Promise<PublicModel[]> {
   const normalizedMake = normalizeMake(make);
-  const whereConditions = [makeSlugMatch(vehicleFitments.make, normalizedMake)];
+  const whereConditions = [notQuarantined(), makeSlugMatch(vehicleFitments.make, normalizedMake)];
   
   if (year) {
     whereConditions.push(eq(vehicleFitments.year, year));
@@ -129,6 +133,7 @@ export async function getPublicYearsForModel(make: string, model: string): Promi
     .from(vehicleFitments)
     .where(
       and(
+        notQuarantined(),
         makeSlugMatch(vehicleFitments.make, normalizedMake),
         inArray(vehicleFitments.model, modelVariants)
       )
@@ -157,6 +162,7 @@ export async function getPublicTrims(
     .from(vehicleFitments)
     .where(
       and(
+        notQuarantined(),
         eq(vehicleFitments.year, year),
         makeSlugMatch(vehicleFitments.make, normalizedMake),
         inArray(vehicleFitments.model, modelVariants)

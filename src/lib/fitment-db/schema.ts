@@ -85,6 +85,8 @@ export const vehicleFitments = pgTable(
      * - LOW: Needs manual review
      */
     confidenceTag: varchar("confidence_tag", { length: 20 }).default("MEDIUM"),
+    /** Set when a row is pulled from service (bad/phantom data). Public API + resolvers must filter `IS NULL`. */
+    quarantinedAt: timestamp("quarantined_at", { mode: "date" }),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
   },
