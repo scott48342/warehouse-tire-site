@@ -1,0 +1,720 @@
+make,nhtsa_model,vehicle_type,years_missing_epa_confirmed,n_epa_confirmed,years_missing_nhtsa_only,n_years_missing,n_years_listed,entirely_missing,epa_corroborated_any_year,most_recent_missing,priority_score
+acura,RLX,Passenger Car,2014-2017 2019-2020,6,,6,7,false,true,2020,40
+acura,SLX,MPV,1996-1999,4,,4,4,true,true,1999,36
+acura,Vigor,Passenger Car,1992-1994,3,,3,3,true,true,1994,26
+acura,ZDX,MPV,2026,1,,1,7,false,true,2026,26
+acura,TL,Passenger Car,1995 1999,2,1990-1994,7,25,false,true,1999,23
+acura,CL,Passenger Car,,0,1990-1996,7,13,false,true,1996,17
+acura,RL,Passenger Car,,0,1990-1995,6,23,false,true,1995,16
+acura,NSX,Passenger Car,,0,1990,1,23,false,true,1990,11
+alfaromeo,164,Passenger Car,1991-1995,5,1990,6,6,true,true,1995,35
+alfaromeo,Spider,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+alfaromeo,Tonale,Passenger Car,2025-2026,2,2024,3,3,true,true,2026,29
+alfaromeo,Stelvio,MPV,2026,1,,1,9,false,true,2026,26
+alfaromeo,Giulia (952),Passenger Car,2026,1,2016,2,11,false,true,2026,21
+astonmartin,DB9,Passenger Car,2005-2016,12,,12,12,true,true,2016,68
+astonmartin,Vanquish,Passenger Car,2002-2006 2014-2017 2025-2026,11,2001 2007,13,14,false,true,2026,62
+astonmartin,DBS,Passenger Car,2009-2012 2019-2023,9,2024,10,10,true,true,2024,57
+astonmartin,Rapide,Passenger Car,2010-2012 2014-2017 2019,8,,8,9,false,true,2019,48
+astonmartin,Virage,Passenger Car,1991-1993 2012,4,1990 1994,6,6,true,true,2012,35
+astonmartin,DB7,Passenger Car,1997-1998,2,1994-1996 1999-2003,10,10,true,true,2003,30
+astonmartin,Valhalla,Passenger Car,2026,1,,1,1,true,true,2026,24
+astonmartin,Valour,Passenger Car,2024,1,,1,1,true,true,2024,24
+astonmartin,V12 Vantage,Passenger Car,,0,2018,1,7,false,true,2018,17
+astonmartin,V8 Vantage,Passenger Car,,0,2018,1,10,false,true,2018,17
+astonmartin,DB12,Passenger Car,,0,2024-2026,3,3,true,false,2026,13
+astonmartin,Valiant,Passenger Car,,0,2024-2026,3,3,true,false,2026,13
+astonmartin,Vanquish Zagato,Passenger Car,,0,2018-2019,2,2,true,false,2019,12
+astonmartin,Lagonda,Passenger Car,,0,1991-1994,4,4,true,false,1994,8
+audi,S7,Passenger Car,2013-2017 2020-2025,11,,11,12,false,true,2025,60
+audi,Q4,MPV,2022-2026,5,,5,5,true,true,2026,46
+audi,e-tron GT,Passenger Car,2022-2024,3,,3,3,true,true,2024,32
+audi,S e-tron GT,Passenger Car,2025-2026,2,,2,2,true,true,2026,28
+audi,e-tron,MPV,2020,1,,1,5,false,true,2020,26
+audi,RS 4,Passenger Car,2007-2008,2,,2,2,true,true,2008,25
+audi,R8,Passenger Car,2018,1,,1,14,false,true,2018,20
+audi,A6,Passenger Car,1998-1999,2,,2,32,false,true,1999,18
+audi,Cabriolet,Passenger Car,,0,1992-1993,2,7,false,true,1993,12
+audi,RS 6,Passenger Car,,0,2004,1,8,false,true,2004,11
+bentley,Continental,Passenger Car,1998-2001 2003-2017,19,1990-1997 2002,28,37,false,true,2017,101
+bentley,Arnage,Passenger Car,1999-2009,11,,11,11,true,true,2009,61
+bentley,Azure,Passenger Car,1998-2001 2003 2007-2010,9,1996-1997 2002 2004-2006,15,15,true,true,2010,59
+bentley,Mulsanne,Passenger Car,2011-2017 2019-2020,9,1990-1992,12,13,false,true,2020,55
+bentley,Brooklands,Passenger Car,1998 2009-2010,3,1993-1997,8,8,true,true,2010,34
+bentley,Flying Spur,Passenger Car,2014-2017,4,,4,13,false,true,2017,32
+bentley,ARMOURED ARNAGE,Passenger Car,,0,2004-2009,6,6,true,false,2009,13
+bentley,Turbo,Passenger Car,,0,1990-1998,9,9,true,false,1998,13
+bentley,Eight,Passenger Car,,0,1990-1992,3,3,true,false,1992,7
+bmw,i3,Passenger Car,2014-2017 2019-2021,7,,7,8,false,true,2021,44
+bmw,128i,Passenger Car,2008-2013,6,2014,7,7,true,true,2014,42
+bmw,135i,Passenger Car,2008-2013,6,2014,7,7,true,true,2014,42
+bmw,840Ci,Passenger Car,1991-1996,6,1990,7,7,true,true,1996,39
+bmw,850Ci,Passenger Car,1991-1996,6,1990,7,7,true,true,1996,39
+bmw,Alpina B8,Passenger Car,2022-2025,4,,4,4,true,true,2025,36
+bmw,B7,Passenger Car,2019-2022,4,,4,4,true,true,2022,36
+bmw,850CSi,Passenger Car,1991-1995,5,1990,6,6,true,true,1995,35
+bmw,M2,Passenger Car,2022,1,,1,11,false,true,2022,20
+bmw,M6,Passenger Car,2019,1,,1,13,false,true,2019,20
+bmw,850i,Passenger Car,1991-1992,2,,2,3,false,true,1992,18
+bmw,ActiveE,Passenger Car,,0,2012,1,1,true,true,2012,18
+bmw,M3,Passenger Car,1990-1991,2,,2,29,false,true,1991,18
+bmw,"750i, Alpina B7",Passenger Car,,0,2012-2015,4,4,true,false,2015,14
+bmw,"750Li, Alpina B7",Passenger Car,,0,2012-2015,4,4,true,false,2015,14
+bmw,X1,Passenger Car,,0,2012,1,15,false,true,2012,14
+bmw,"650i, B6",Passenger Car,,0,2017-2019,3,3,true,false,2019,13
+bmw,"750i, B7",Passenger Car,,0,2017-2019,3,3,true,false,2019,13
+bmw,"650i, Alpina B6",Passenger Car,,0,2015-2016,2,2,true,false,2016,12
+buick,LeSabre,Passenger Car,1991-1999,9,,9,16,false,true,1999,46
+buick,Coachbuilder,Passenger Car,1990-1995,6,1996,7,7,true,true,1996,39
+buick,Allure,Passenger Car,2005-2009,5,,5,5,true,true,2009,37
+buick,Century,Passenger Car,2000-2005,6,,6,16,false,true,2005,37
+buick,Park Avenue,Passenger Car,2000-2005,6,,6,15,false,true,2005,37
+buick,Reatta,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+buick,Electra,Passenger Car,1990,1,,1,1,true,true,1990,18
+buick,Skylark,Passenger Car,1990-1991,2,,2,9,false,true,1991,18
+buick,Rendezvous,MPV,,0,2001,1,7,false,true,2001,17
+buick,Roadmaster,Passenger Car,,0,1990,1,7,false,true,1990,11
+cadillac,SRX,MPV,2006-2016,11,,11,13,false,true,2016,66
+cadillac,DTS,Passenger Car,2006-2011,6,,6,6,true,true,2011,41
+cadillac,Limousine,Passenger Car,1998-1999 2002-2003 2010,5,2000-2001,7,7,true,true,2010,39
+cadillac,Deville,Passenger Car,2000-2005,6,,6,16,false,true,2005,37
+cadillac,Hearse,Passenger Car,1998-1999 2003 2010,4,1997 2000-2002,8,8,true,true,2010,37
+cadillac,Lyriq,MPV,2023 2025-2026,3,,3,4,false,true,2026,34
+cadillac,ELR,Passenger Car,2014-2016,3,2017,4,4,true,true,2017,33
+cadillac,Optiq,MPV,2026,1,2025,2,2,true,true,2026,31
+cadillac,Seville,Passenger Car,2000-2004,5,,5,15,false,true,2004,30
+cadillac,Eldorado,Passenger Car,1993 2000-2002,4,,4,13,false,true,2002,26
+cadillac,STS,Passenger Car,2005 2010-2011,3,,3,7,false,true,2011,25
+cadillac,XLR,Passenger Car,2004-2005,2,2003,3,7,false,true,2005,22
+cadillac,60 Special,Passenger Car,1993,1,1991-1992,3,3,true,true,1993,20
+cadillac,Allante,Passenger Car,1990-1991,2,,2,4,false,true,1991,18
+cadillac,Catera,Passenger Car,2000-2001,2,,2,5,false,true,2001,18
+chevrolet,Aveo,Passenger Car,2004-2011,8,2012-2020,17,17,true,true,2020,61
+chevrolet,Venture,MPV,1997-2005,9,,9,9,true,true,2005,59
+chevrolet,Suburban,Truck,1992-1999,8,,8,37,false,true,1999,50
+chevrolet,Tracker,MPV,2000-2004,5,1995-1997 2016-2020,13,15,false,true,2020,50
+chevrolet,Sonic,Passenger Car,2012-2017 2019-2020,8,,8,9,false,true,2020,48
+chevrolet,HHR,MPV,2006-2011,6,,6,6,true,true,2011,47
+chevrolet,Cobalt,Passenger Car,2005-2010,6,,6,6,true,true,2010,41
+chevrolet,SSR,Truck,2003-2006,4,,4,4,true,true,2006,41
+chevrolet,Uplander,MPV,2005-2008,4,2009,5,5,true,true,2009,40
+chevrolet,Cavalier,Passenger Car,2000-2005,6,,6,16,false,true,2005,37
+chevrolet,City Express,Truck,2015-2017,3,,3,4,false,true,2017,36
+chevrolet,SS,Passenger Car,2014-2017,4,,4,4,true,true,2017,36
+chevrolet,Optra,Passenger Car,2004-2007,4,2008-2009,6,6,true,true,2009,35
+chevrolet,Epica,Passenger Car,2004-2006,3,,3,3,true,true,2006,29
+chevrolet,Captiva Sport,MPV,,0,2010-2017,8,8,true,false,2017,24
+chevrolet,Orlando,MPV,,0,2009-2015,7,7,true,false,2015,23
+chevrolet,GMT-400,Truck,2000,1,,1,11,false,true,2000,22
+chevrolet,BrightDrop,Truck,,0,2025-2026,2,2,true,false,2026,20
+chevrolet,G-Series,Truck,,0,1996,1,7,false,true,1996,19
+chevrolet,Celebrity,Passenger Car,1990,1,,1,1,true,true,1990,18
+chevrolet,C5,Truck,,0,1990-1993,4,4,true,false,1993,16
+chevrolet,C6,Truck,,0,1990-1993,4,4,true,false,1993,16
+chevrolet,C7,Truck,,0,1990-1993,4,4,true,false,1993,16
+chevrolet,Hi-Cube,Truck,,0,1992-1994,3,3,true,false,1994,15
+chevrolet,3 ton,MPV,,0,2001-2004,4,4,true,false,2004,14
+chevrolet,Cruze,Passenger Car,,0,2010,1,10,false,true,2010,14
+chevrolet,Onix,Passenger Car,,0,2021-2024,4,4,true,false,2024,14
+chevrolet,R Conventional,Truck,,0,1990-1991,2,2,true,false,1991,14
+chevrolet,S6,Truck,,0,1990-1991,2,2,true,false,1991,14
+chevrolet,V Conventional,Truck,,0,1990-1991,2,2,true,false,1991,14
+chevrolet,Matiz,Passenger Car,,0,2004-2006 2008 2012,5,5,true,false,2012,12
+chevrolet,U100,Passenger Car,,0,2004-2005,2,2,true,false,2005,9
+chrysler,Voyager,MPV,2001-2003 2008 2020-2026,11,2009,12,18,false,true,2026,67
+chrysler,Aspen,MPV,2007-2009,3,,3,3,true,true,2009,35
+chrysler,300,Passenger Car,1999-2003,5,,5,25,false,true,2003,30
+chrysler,Concorde,Passenger Car,2000-2004,5,,5,12,false,true,2004,30
+chrysler,Grand Caravan,MPV,,0,2021-2026,6,6,true,false,2026,22
+chrysler,TC,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+chrysler,PT Cruiser,MPV,,0,1995-1999,5,16,false,true,1999,21
+chrysler,Pacifica,MPV,,0,2009,1,16,false,true,2009,20
+chrysler,Cirrus,Passenger Car,2000,1,2006,2,7,false,true,2006,18
+chrysler,LHS,Passenger Car,2000-2001,2,,2,7,false,true,2001,18
+chrysler,Intrepid,Passenger Car,,0,1993-2003,11,11,true,false,2003,15
+chrysler,New Yorker,Passenger Car,1997,1,,1,8,false,true,1997,14
+chrysler,Viper,Passenger Car,,0,1991-1997,7,7,true,false,1997,11
+chrysler,Vision,Passenger Car,,0,1991-1997,7,7,true,false,1997,11
+chrysler,Daytona,Passenger Car,,0,1990-1993,4,4,true,false,1993,8
+chrysler,Shadow,Passenger Car,,0,1991-1994,4,4,true,false,1994,8
+chrysler,Stratus,Passenger Car,,0,1995-1997,3,3,true,false,1997,7
+chrysler,Neon,Passenger Car,,0,2000-2002,3,8,false,false,2002,3
+daewoo,LANOS,Passenger Car,2000-2002,3,,3,4,false,true,2002,22
+daewoo,NUBIRA,Passenger Car,2000-2002,3,,3,4,false,true,2002,22
+daihatsu,Rocky,MPV,1990-1992,3,,3,3,true,true,1992,32
+daihatsu,Charade,Passenger Car,1990-1992,3,,3,3,true,true,1992,26
+dodge,Dakota,Truck,2000-2011,12,2012,13,23,false,true,2012,70
+dodge,Avenger,Passenger Car,2000 2008-2014,8,2007,9,14,false,true,2014,46
+dodge,Stratus,Passenger Car,2000-2006,7,,7,12,false,true,2006,41
+dodge,Neon,Passenger Car,2000-2005,6,1994,7,12,false,true,2005,38
+dodge,RAM 50,Truck,1990-1993,4,,4,4,true,true,1993,38
+dodge,Ramcharger,MPV,1990-1993,4,1996-1997,6,6,true,true,1997,38
+dodge,Shadow,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+dodge,Daytona,Passenger Car,1990-1993,4,,4,4,true,true,1993,30
+dodge,D-Series,MPV,1990,1,1991-1993,4,4,true,true,1993,27
+dodge,Grand Caravan,MPV,,0,2021-2023,3,22,false,true,2023,25
+dodge,Journey,MPV,,0,2021-2023,3,15,false,true,2023,25
+dodge,Durango,MPV,,0,1995-1997,3,31,false,true,1997,19
+dodge,OMNI,Passenger Car,1990,1,,1,1,true,true,1990,18
+dodge,Sprinter,MPV,,0,2005-2009,5,5,true,false,2009,18
+dodge,Stealth,Passenger Car,1993,1,,1,6,false,true,1993,14
+dodge,Colt,Passenger Car,,0,1995,1,6,false,true,1995,11
+eagle,Talon,Passenger Car,1990-1998,9,,9,9,true,true,1998,50
+eagle,Summit,Passenger Car,1990-1996,7,,7,7,true,true,1996,42
+eagle,Vision,Passenger Car,1993-1997,5,1991-1992,7,7,true,true,1997,36
+eagle,PREMIER,Passenger Car,1990-1992,3,,3,3,true,true,1992,26
+eagle,2000 GTX,Passenger Car,,0,1991-1993,3,3,true,false,1993,7
+eagle,VISTA,Passenger Car,,0,1990-1992,3,3,true,false,1992,7
+ferrari,California T,Passenger Car,2010-2017,8,,8,9,false,true,2017,48
+ferrari,458 Italia,Passenger Car,2010-2015,6,2016-2017,8,8,true,true,2017,46
+ferrari,612 Scaglietti,Passenger Car,2005-2011,7,,7,7,true,true,2011,45
+ferrari,FF,Passenger Car,2012-2016,5,2010-2011,7,7,true,true,2016,42
+ferrari,Purosangue,MPV,2024-2026,3,2023,4,4,true,true,2026,39
+ferrari,458,Passenger Car,2013-2015,3,2010-2012 2016-2017,8,8,true,true,2017,37
+ferrari,California,Passenger Car,2010-2014,5,,5,5,true,true,2014,37
+ferrari,599 GTB Fiorano,Passenger Car,2008-2011,4,2007,5,5,true,true,2011,34
+ferrari,La Ferrari,Passenger Car,2014 2017,2,2010-2013 2015-2016,8,8,true,true,2017,34
+ferrari,F430,Passenger Car,2006-2009,4,,4,4,true,true,2009,33
+ferrari,348 tb,Passenger Car,1990-1993,4,1994-1995,6,6,true,true,1995,32
+ferrari,812,Passenger Car,2019-2021,3,2017 2022-2024,7,8,false,true,2024,32
+ferrari,Daytona SP3,Passenger Car,2023-2025,3,,3,3,true,true,2025,32
+ferrari,F12 Berlinetta,Passenger Car,2017,1,2010-2016,8,8,true,true,2017,31
+ferrari,550 Maranello,Passenger Car,1999-2001,3,1997-1998,5,5,true,true,2001,28
+ferrari,GTC4Lusso,Passenger Car,2017 2019-2020,3,,3,4,false,true,2020,28
+ferrari,Mondial T,Passenger Car,1990-1992,3,1993-1994,5,5,true,true,1994,28
+ferrari,575M Maranello,Passenger Car,2003-2004,2,2002 2005,4,4,true,true,2005,27
+ferrari,12Cilindri,Passenger Car,2026,1,2025,2,2,true,true,2026,25
+ferrari,296 Speciale,Passenger Car,2026,1,,1,1,true,true,2026,24
+ferrari,296 Speciale A,Passenger Car,2026,1,,1,1,true,true,2026,24
+ferrari,F12 tdf (Tour de France),Passenger Car,2017,1,,1,1,true,true,2017,24
+ferrari,F60 America,Passenger Car,2016,1,,1,1,true,true,2016,24
+ferrari,F80,Passenger Car,2026,1,,1,1,true,true,2026,24
+ferrari,Monza SP1/SP2,Passenger Car,2023,1,,1,1,true,true,2023,24
+ferrari,F40,Passenger Car,1991-1992,2,,2,2,true,true,1992,22
+ferrari,488,Passenger Car,2020,1,,1,5,false,true,2020,20
+ferrari,F355,Passenger Car,1999,1,1996 1998,3,3,true,true,1999,20
+ferrari,296,Passenger Car,,0,2022-2026,5,5,true,false,2026,15
+ferrari,360,Passenger Car,,0,2000-2005,6,6,true,false,2005,13
+ferrari,348 ts,Passenger Car,,0,1990-1995,6,6,true,false,1995,10
+ferrari,430,Passenger Car,,0,2007-2009,3,3,true,false,2009,10
+ferrari,599,Passenger Car,,0,2006 2010-2011,3,3,true,false,2011,10
+ferrari,456,Passenger Car,,0,1995-1999,5,5,true,false,1999,9
+ferrari,456M,Passenger Car,,0,2000-2003,4,4,true,false,2003,8
+ferrari,512 TR,Passenger Car,,0,1993-1995,3,3,true,false,1995,7
+ferrari,348 Spider,Passenger Car,,0,1994-1995,2,2,true,false,1995,6
+ferrari,355 Berlinetta,Passenger Car,,0,1995 1997,2,2,true,false,1997,6
+ferrari,355 GTS,Passenger Car,,0,1995 1997,2,2,true,false,1997,6
+ferrari,355 Spider,Passenger Car,,0,1995 1997,2,2,true,false,1997,6
+fiat,500L,MPV,2014-2017 2019-2020,6,,6,7,false,true,2020,46
+fiat,Freemont,MPV,,0,2011-2016,6,6,true,false,2016,22
+fiat,Ducato,MPV,,0,2019-2023,5,5,true,false,2023,21
+fiat,500e,Passenger Car,2026,1,,1,3,false,true,2026,20
+fisker,Ocean,MPV,2023-2024,2,,2,2,true,true,2024,34
+fisker,Nina,Passenger Car,,0,2011-2024,14,14,true,false,2024,24
+fisker,Karma,Passenger Car,2012,1,2011,2,2,true,true,2012,22
+ford,Transit Connect,Truck,2010-2017 2019-2023,13,,13,14,false,true,2023,76
+ford,F-250,MPV,1991-1999,9,,9,37,false,true,1999,52
+ford,F-150,MPV,1992-1999,8,,8,37,false,true,1999,48
+ford,F-350,MPV,1991-1997 1999,8,,8,36,false,true,1999,48
+ford,Ranger,MPV,1993-1999,7,,7,30,false,true,1999,44
+ford,Freestar,Truck,2004-2007,4,,4,4,true,true,2007,41
+ford,Ecosport,MPV,2019-2022,4,,4,5,false,true,2022,38
+ford,Bronco,MPV,1992-1996,5,,5,13,false,true,1996,36
+ford,C-Max,Passenger Car,2013-2017,5,,5,6,false,true,2017,36
+ford,Freestyle,MPV,2005-2007,3,,3,3,true,true,2007,35
+ford,Tempo,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+ford,Maverick,Truck,2023-2024,2,,2,5,false,true,2024,32
+ford,Windstar,MPV,2000-2003,4,,4,9,false,true,2003,32
+ford,Festiva,Passenger Car,1990-1993,4,1994,5,5,true,true,1994,31
+ford,Aspire,Passenger Car,1994-1997,4,,4,4,true,true,1997,30
+ford,F-Super Duty,Truck,,0,1990-1997,8,8,true,false,1997,30
+ford,Crown Victoria,Passenger Car,2008-2011,4,,4,22,false,true,2011,29
+ford,Five Hundred,Passenger Car,2005-2007,3,,3,3,true,true,2007,29
+ford,Bronco II,MPV,1990,1,,1,1,true,true,1990,24
+ford,F-800,MPV,,0,1990-2002,13,13,true,false,2002,23
+ford,A8513,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,A9513,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,A9522,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,AT8513,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,AT9513,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,AT9522,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,F-700,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,FT900,Truck,,0,1990-1998,9,9,true,false,1998,21
+ford,L8000,Truck,,0,1990-1997,8,8,true,false,1997,20
+ford,L9000,Truck,,0,1990-1997,8,8,true,false,1997,20
+ford,LL9000,Truck,,0,1990-1997,8,8,true,false,1997,20
+ford,L8513,MPV,,0,1990-1998,9,9,true,false,1998,19
+ford,L9513,MPV,,0,1990-1998,9,9,true,false,1998,19
+ford,LT8501,MPV,,0,1990-1998,9,9,true,false,1998,19
+ford,LT8513,MPV,,0,1990-1998,9,9,true,false,1998,19
+ford,LT9501,MPV,,0,1990-1998,9,9,true,false,1998,19
+ford,LT9513,MPV,,0,1990-1998,9,9,true,false,1998,19
+ford,LT9522,MPV,,0,1990-1998,9,9,true,false,1998,19
+ford,CF8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,CFT8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LA8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LA9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LLA9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LLS9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LN7000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LN8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LN9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LNT8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LNT9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LS8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LS9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LT8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LT9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LTA9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LTL9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LTLA9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LTLS9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LTS8000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,LTS9000,MPV,,0,1990-1997,8,8,true,false,1997,18
+ford,CF7000,MPV,,0,1990-1996,7,7,true,false,1996,17
+ford,B600,MPV,,0,1990-1994,5,5,true,false,1994,15
+ford,B700,MPV,,0,1990-1994,5,5,true,false,1994,15
+ford,F-590,MPV,,0,1990-1994,5,5,true,false,1994,15
+ford,P600,MPV,,0,1990-1994,5,5,true,false,1994,15
+ford,Recreational Vehicle,MPV,,0,1990-1994,5,5,true,false,1994,15
+ford,Contour,Passenger Car,2000,1,,1,6,false,true,2000,14
+ford,E-550,Truck,,0,2002-2003,2,2,true,false,2003,14
+ford,F-450,MPV,,0,1999 2018,2,28,false,false,2018,14
+ford,GT MKII,Passenger Car,,0,2023-2026,4,4,true,false,2026,14
+ford,ZX2,Passenger Car,1999,1,,1,5,false,true,1999,14
+ford,B800,MPV,,0,1995-1997,3,3,true,false,1997,13
+ford,CL9000,MPV,,0,1990-1992,3,3,true,false,1992,13
+ford,P700,MPV,,0,1995-1997,3,3,true,false,1997,13
+ford,P800,MPV,,0,1995-1997,3,3,true,false,1997,13
+ford,Transit,MPV,,0,2026,1,12,false,false,2026,13
+ford,L8501,MPV,,0,1997-1998,2,2,true,false,1998,12
+ford,L9501,MPV,,0,1997-1998,2,2,true,false,1998,12
+ford,GT,Passenger Car,,0,2004,1,9,false,true,2004,11
+genesis,GV60,MPV,2023-2026,4,,4,4,true,true,2026,42
+geo,Tracker,MPV,1990-1994,5,,5,5,true,true,1994,40
+geo,Sprint,Passenger Car,,0,1990-1993,4,4,true,false,1993,8
+gmc,Vandura,Truck,1990-1995,6,1996,7,7,true,true,1996,47
+gmc,Rally,MPV,1990-1995,6,1996,7,7,true,true,1996,45
+gmc,Sonoma,MPV,2000-2004,5,,5,14,false,true,2004,36
+gmc,Savana,MPV,1996-1999,4,,4,31,false,true,1999,32
+gmc,Hummer EV Pickup,Truck,2025,1,2026,2,5,false,true,2026,29
+gmc,Hummer EV SUV,MPV,2025,1,2026,2,3,false,true,2026,27
+gmc,Jimmy Utility,MPV,,0,1995-2005,11,11,true,false,2005,24
+gmc,Canyon,Truck,,0,2013-2014,2,23,false,true,2014,23
+gmc,Hi-Cube,Truck,,0,1990-1994,5,5,true,false,1994,17
+gmc,Magna Van,Truck,,0,1990-1993,4,4,true,false,1993,16
+gmc,Value Van,Truck,,0,1990-1993,4,4,true,false,1993,16
+gmc,S15 Utility,MPV,,0,1990-1994,5,5,true,false,1994,15
+gmc,R Conventional,Truck,,0,1990-1991,2,2,true,false,1991,14
+gmc,V Conventional,Truck,,0,1990-1991,2,2,true,false,1991,14
+gmc,Electric Vehicle,Passenger Car,,0,1997-2000,4,4,true,false,2000,8
+honda,CR-Z,Passenger Car,2011-2016,6,,6,6,true,true,2016,44
+honda,Accord,Passenger Car,1994-1999,6,,6,37,false,true,1999,34
+honda,FCX Clarity,Passenger Car,2014,1,2004-2013,11,11,true,true,2014,31
+honda,Prologue,MPV,2024-2025,2,,2,3,false,true,2025,30
+honda,EV Plus,Passenger Car,1998-1999,2,1997,3,3,true,true,1999,23
+honda,Civic,Passenger Car,1998-1999,2,,2,37,false,true,1999,18
+honda,Insight,Passenger Car,,0,2007-2008,2,19,false,true,2008,15
+hummer,H2,MPV,,0,2010,1,8,false,false,2010,10
+hyundai,Accent,Passenger Car,2000-2017 2019-2022,22,,22,28,false,true,2022,104
+hyundai,Azera,Passenger Car,2006-2017,12,2018,13,13,true,true,2018,69
+hyundai,Nexo,MPV,2019-2026,8,,8,8,true,true,2026,58
+hyundai,Genesis,Passenger Car,2009-2016,8,,8,8,true,true,2016,52
+hyundai,Venue,Passenger Car,2020-2026,7,,7,7,true,true,2026,48
+hyundai,Entourage,MPV,2007-2011,5,2006 2012-2014,9,9,true,true,2014,47
+hyundai,Equus,Passenger Car,2011-2016,6,,6,6,true,true,2016,44
+hyundai,Santa Cruz,Truck,2022-2025,4,,4,5,false,true,2025,40
+hyundai,Excel,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+hyundai,Scoupe,Passenger Car,1991-1995,5,,5,5,true,true,1995,34
+hyundai,Xcient,Truck,,0,2023-2026,4,4,true,false,2026,22
+hyundai,Ioniq 6 N,Passenger Car,,0,2026,1,1,true,true,2026,21
+hyundai,Veloster N,Passenger Car,2022,1,,1,4,false,true,2022,20
+hyundai,Veloster,Passenger Car,,0,2018,1,10,false,true,2018,17
+hyundai,Tiburon,Passenger Car,2002,1,,1,12,false,true,2002,14
+ineos,Grenadier,MPV,,0,2023-2026,4,4,true,false,2026,20
+infiniti,FX35,MPV,2003-2010 2012,9,,9,9,true,true,2012,59
+infiniti,FX45,MPV,2003-2008,6,,6,6,true,true,2008,47
+infiniti,G35,Passenger Car,2003-2009,7,,7,7,true,true,2009,45
+infiniti,M45,Passenger Car,2003-2004 2006-2010,7,,7,7,true,true,2010,45
+infiniti,Q45,Passenger Car,2000-2006,7,2007,8,18,false,true,2007,42
+infiniti,G37,Passenger Car,2008-2013,6,,6,6,true,true,2013,41
+infiniti,M35,Passenger Car,2006-2010,5,,5,5,true,true,2010,37
+infiniti,FX50,MPV,2009-2012,4,,4,5,false,true,2012,35
+infiniti,QX70,MPV,2015-2017,3,2018,4,5,false,true,2018,35
+infiniti,QX4,MPV,2000-2003,4,,4,7,false,true,2003,32
+infiniti,I35,Passenger Car,2002-2004,3,,3,3,true,true,2004,26
+infiniti,M30,Passenger Car,1990-1992,3,,3,3,true,true,1992,26
+infiniti,G25,Passenger Car,2011-2012,2,,2,2,true,true,2012,25
+infiniti,Q40,Passenger Car,2015,1,2016,2,2,true,true,2016,25
+infiniti,QX30,Passenger Car,2017 2019,2,,2,3,false,true,2019,24
+infiniti,G20,Passenger Car,2000-2002,3,,3,10,false,true,2002,22
+infiniti,M37,Passenger Car,2011-2012,2,,2,3,false,true,2012,21
+infiniti,M56,Passenger Car,2011-2012,2,,2,3,false,true,2012,21
+infiniti,I30,Passenger Car,2000-2001,2,,2,6,false,true,2001,18
+infiniti,M35h,Passenger Car,2012,1,,1,2,false,true,2012,17
+infiniti,Q70,Passenger Car,,0,2022,1,9,false,true,2022,17
+infiniti,Q70L,Passenger Car,,0,2022,1,8,false,true,2022,17
+infiniti,QX56,MPV,,0,2003,1,11,false,true,2003,17
+isuzu,Ascender,MPV,2003-2008,6,,6,6,true,true,2008,47
+isuzu,Pickup,MPV,1990-1995,6,,6,6,true,true,1995,44
+isuzu,Hombre,Truck,1996-2000,5,,5,5,true,true,2000,42
+isuzu,i-290,Truck,2007-2008,2,,2,2,true,true,2008,33
+isuzu,i-370,Truck,2007-2008,2,,2,2,true,true,2008,33
+isuzu,i-280,Truck,2006,1,,1,1,true,true,2006,29
+isuzu,i-350,Truck,2006,1,,1,1,true,true,2006,29
+isuzu,IMPULSE,Passenger Car,1990-1992,3,,3,3,true,true,1992,26
+isuzu,Stylus,Passenger Car,1990-1992,3,,3,3,true,true,1992,26
+isuzu,VehiCross,MPV,2000-2001,2,2002,3,4,false,true,2002,25
+isuzu,F6,Truck,,0,1997-2002,6,6,true,false,2002,18
+isuzu,F7,Truck,,0,1997-2002,6,6,true,false,2002,18
+isuzu,FSR,Truck,,0,1992-1996,5,5,true,false,1996,17
+isuzu,Rodeo,MPV,,0,1990,1,14,false,true,1990,17
+jaguar,Vanden Plas,Passenger Car,1996-2003,8,1990-1995 2004,15,15,true,true,2004,53
+jaguar,XK,Passenger Car,2000-2006,7,,7,16,false,true,2006,41
+jaguar,XK8,Passenger Car,2000-2004,5,,5,8,false,true,2004,30
+jaguar,F-PACE,MPV,2026,1,,1,10,false,true,2026,26
+jeep,Wrangler,MPV,1990-1995 1997-1999,9,,9,37,false,true,1999,52
+jeep,Commander,MPV,2006-2010,5,,5,5,true,true,2010,43
+jeep,Wagoneer S,MPV,2024-2026,3,,3,3,true,true,2026,38
+jeep,Grand Wagoneer,MPV,1990-1991 2026,3,1992-1993,5,9,false,true,2026,36
+jeep,Comanche,MPV,1990-1992,3,,3,3,true,true,1992,32
+jeep,Liberty,Truck,,0,1993-2001 2013,10,21,false,true,2013,31
+jeep,Recon,MPV,2026,1,,1,1,true,true,2026,30
+jeep,Cherokee,MPV,2026,1,,1,33,false,true,2026,26
+jeep,Grand Wagoneer L,MPV,2026,1,,1,3,false,true,2026,26
+jeep,Patriot,MPV,,0,2018,1,12,false,true,2018,23
+jeep,Compass,MPV,,0,2006,1,21,false,true,2006,20
+jeep,Wagoneer,MPV,1990,1,,1,5,false,true,1990,20
+karma,GS-6,Passenger Car,2021,1,2022-2025,5,5,true,true,2025,28
+karma,Revero,Passenger Car,2019-2020,2,2017 2021-2022 2025,6,7,false,true,2025,28
+karma,Revero GT,Passenger Car,,0,2021-2024,4,4,true,true,2024,24
+kia,Rio,Passenger Car,2001-2017 2019-2023,22,,22,23,false,true,2023,104
+kia,Sephia,Passenger Car,1993-2001,9,,9,9,true,true,2001,50
+kia,Rondo,Passenger Car,2007-2012,6,2013-2016,10,10,true,true,2016,48
+kia,K900,Passenger Car,2015-2020,6,,6,6,true,true,2020,44
+kia,Amanti,Passenger Car,2004-2009,6,,6,6,true,true,2009,41
+kia,Cadenza,Passenger Car,2014-2017 2019-2020,6,,6,7,false,true,2020,40
+kia,Carnival,MPV,2022-2025,4,,4,5,false,true,2025,38
+kia,Spectra,Passenger Car,2000-2004,5,,5,10,false,true,2004,30
+kia,Sportage,Passenger Car,1995-1999,5,,5,32,false,true,1999,30
+kia,Borrego,Passenger Car,2009-2011,3,,3,3,true,true,2011,29
+kia,K4,Passenger Car,2025-2026,2,,2,2,true,true,2026,28
+kia,Sedona,MPV,,0,2001,1,21,false,true,2001,17
+kia,Sorento,MPV,,0,2001,1,25,false,true,2001,17
+lamborghini,Gallardo,Passenger Car,2004-2014,11,,11,11,true,true,2014,61
+lamborghini,Diablo,Passenger Car,1990-1999 2001,11,2000,12,12,true,true,2001,59
+lamborghini,Murcielago,Passenger Car,2004-2010,7,,7,7,true,true,2010,45
+lamborghini,Revuelto,Passenger Car,2024-2025,2,2026,3,3,true,true,2026,29
+lamborghini,Aventador,Passenger Car,2018,1,,1,12,false,true,2018,20
+lamborghini,Huracan,Passenger Car,2018,1,,1,10,false,true,2018,20
+lamborghini,Roadster,Passenger Car,,0,1990-2000,11,11,true,false,2000,15
+landrover,LR2,MPV,2008-2015,8,,8,8,true,true,2015,58
+landrover,Discovery,MPV,2000-2004 2026,6,,6,21,false,true,2026,46
+landrover,Freelander,MPV,2002-2005,4,,4,4,true,true,2005,39
+landrover,Range Rover,MPV,2000-2001 2026,3,,3,37,false,true,2026,34
+landrover,New Range Rover,MPV,2022,1,,1,1,true,true,2022,30
+lexus,SC,Passenger Car,2000 2002-2010,10,2001,11,19,false,true,2010,54
+lexus,LX,MPV,2000-2007,8,,8,31,false,true,2007,51
+lexus,CT,Passenger Car,2011-2017,7,,7,7,true,true,2017,48
+lexus,RZ,MPV,2023-2026,4,,4,4,true,true,2026,42
+lexus,TX,MPV,2024-2026,3,,3,3,true,true,2026,38
+lexus,HS,Passenger Car,2010-2012,3,,3,3,true,true,2012,29
+lexus,LFA,Passenger Car,2012,1,2013,2,2,true,true,2013,22
+lincoln,MKS,Passenger Car,2009-2016,8,,8,8,true,true,2016,52
+lincoln,Navigator L,MPV,2017-2021,5,2022-2026,10,10,true,true,2026,51
+lincoln,Continental,Passenger Car,1991-1999,9,,9,17,false,true,1999,46
+lincoln,Mark LT,Truck,2006-2008,3,,3,3,true,true,2008,37
+lincoln,Blackwood,Truck,2002-2003,2,,2,2,true,true,2003,30
+lincoln,Corsair,MPV,2026,1,,1,7,false,true,2026,26
+lincoln,Nautilus,MPV,2026,1,,1,8,false,true,2026,26
+lincoln,Zephyr,Passenger Car,2006,1,,1,1,true,true,2006,21
+lotus,Esprit,Passenger Car,1990-1995 1997-2004,14,1996 2007-2009,18,18,true,true,2009,77
+lotus,Elan,Passenger Car,1991-1993,3,1990 1994-1997 2007-2009,11,11,true,true,2009,37
+lotus,Elise,Passenger Car,2005-2009,5,,5,8,false,true,2009,33
+lotus,Exige,Passenger Car,2008 2010-2011,3,2012,4,4,true,true,2012,30
+lotus,ELETRE,MPV,,0,2025-2026,2,2,true,false,2026,18
+lotus,Eclat,Passenger Car,,0,1990 1992-1997 2007-2008,9,9,true,false,2008,16
+lotus,Elite,Passenger Car,,0,1990 1992-1997 2007-2008,9,9,true,false,2008,16
+lotus,2-Eleven,Passenger Car,,0,2008-2009 2011-2012,4,4,true,false,2012,11
+lotus,Europa,Passenger Car,,0,2007-2009,3,3,true,false,2009,10
+lotus,MEL,Passenger Car,,0,2007-2009,3,3,true,false,2009,10
+lotus,340R,Passenger Car,,0,2007-2008,2,2,true,false,2008,9
+lotus,Eagle,Passenger Car,,0,2008-2009,2,2,true,false,2009,9
+lotus,Eleven,Passenger Car,,0,2007 2010,2,2,true,false,2010,9
+lotus,Monaco,Passenger Car,,0,2007-2008,2,2,true,false,2008,9
+lotus,Monza,Passenger Car,,0,2007-2008,2,2,true,false,2008,9
+lotus,Spa,Passenger Car,,0,2007-2008,2,2,true,false,2008,9
+lucid,Gravity,MPV,2025-2026,2,,2,2,true,true,2026,34
+lucid,Air,Passenger Car,2025-2026,2,,2,5,false,true,2026,24
+maserati,Quattroporte,Passenger Car,2005-2012 2024,9,1990-1991,11,22,false,true,2024,54
+maserati,Grecale,MPV,2023-2026,4,,4,4,true,true,2026,42
+maserati,Spyder,Passenger Car,1990-1991 2002-2004,5,2006,6,6,true,true,2006,38
+maserati,MC20,Passenger Car,2022-2025,4,,4,4,true,true,2025,36
+maserati,Grancabrio,Passenger Car,2024-2026,3,,3,3,true,true,2026,32
+maserati,Levante,MPV,2024,1,,1,8,false,true,2024,26
+maserati,MCPura,Passenger Car,2026,1,,1,1,true,true,2026,24
+maserati,430,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+maserati,Ghibli,Passenger Car,2024,1,,1,11,false,true,2024,20
+maserati,228,Passenger Car,1990,1,1991,2,2,true,true,1991,19
+maserati,Coupe,Passenger Car,,0,2002-2004 2006,4,4,true,false,2006,11
+maserati,Biturbo,Passenger Car,,0,1990-1991,2,2,true,false,1991,6
+maserati,Merak,Passenger Car,,0,1990-1991,2,2,true,false,1991,6
+maserati,TC,Passenger Car,,0,1990-1991,2,2,true,false,1991,6
+maybach,57,Passenger Car,2004-2012,9,2003,10,10,true,true,2012,54
+maybach,62,Passenger Car,2004-2009 2011-2012,8,2003 2010,10,10,true,true,2012,51
+mazda,B-Series,Truck,1990-1993 2000-2009,14,2010,15,21,false,true,2010,78
+mazda,Tribute,MPV,2001-2006 2008-2011,10,,10,10,true,true,2011,63
+mazda,RX-8,Passenger Car,2004-2011,8,2012,9,9,true,true,2012,50
+mazda,MPV,MPV,2000-2006,7,1999,8,17,false,true,2006,48
+mazda,CX-7,MPV,2007-2012,6,,6,6,true,true,2012,47
+mazda,CX-3,Passenger Car,2016-2017 2019-2021,5,2022,6,7,false,true,2022,37
+mazda,MX-3,Passenger Car,1992-1996,5,1990-1991,7,7,true,true,1996,36
+mazda,Navajo,MPV,1991-1994,4,,4,4,true,true,1994,36
+mazda,323,Passenger Car,1992-1994,3,1990-1991,5,5,true,true,1994,28
+mazda,Protege,Passenger Car,2000-2003,4,,4,14,false,true,2003,26
+mazda,626,Passenger Car,2000-2002,3,,3,13,false,true,2002,22
+mazda,Millenia,Passenger Car,2000-2002,3,,3,8,false,true,2002,22
+mazda,929,Passenger Car,,0,1996,1,7,false,true,1996,11
+mazda,RX-7,Passenger Car,,0,1996,1,6,false,true,1996,11
+mclaren,540C,Passenger Car,2018,1,2011-2017 2019-2021,11,11,true,true,2021,34
+mclaren,650S,Passenger Car,2015-2016,2,2011-2014 2020-2021,8,8,true,true,2021,34
+mclaren,MP4-12C,Passenger Car,2012 2014,2,2011 2013 2015-2016 2020-2021,8,8,true,true,2021,34
+mclaren,P1,Passenger Car,2014-2015,2,2011-2013 2016 2020-2021,8,8,true,true,2021,34
+mclaren,600LT,Passenger Car,2019-2020,2,2017-2018 2021,5,5,true,true,2021,31
+mclaren,675LT,Passenger Car,2016,1,2011-2015 2020-2021,8,8,true,true,2021,31
+mclaren,SENNA,Passenger Car,2019,1,2017-2018 2020-2021,5,5,true,true,2021,28
+mclaren,620R,Passenger Car,2020,1,2021,2,2,true,true,2021,25
+mclaren,765LT,Passenger Car,2022,1,,1,1,true,true,2022,24
+mclaren,ELVA,Passenger Car,,0,2022,1,1,true,true,2022,21
+mclaren,625C,Passenger Car,,0,2011-2016 2020-2021,8,8,true,false,2021,18
+mclaren,GT,Passenger Car,,0,2017-2018,2,7,false,true,2018,18
+mclaren,570GT,Passenger Car,,0,2011-2014,4,11,false,true,2014,17
+mclaren,570S,Passenger Car,,0,2011-2014,4,11,false,true,2014,17
+mclaren,SENNA GTR,Passenger Car,,0,2017-2021,5,5,true,false,2021,15
+mclaren,750S,Passenger Car,,0,2024-2026,3,3,true,false,2026,13
+mclaren,GTS,Passenger Car,,0,2025-2026,2,2,true,false,2026,12
+mercedesbenz,GL-Class,MPV,2007-2016,10,2006,11,11,true,true,2016,67
+mercedesbenz,CLK-Class,Passenger Car,1998-2009,12,,12,12,true,true,2009,65
+mercedesbenz,R-Class,MPV,2006-2013,8,,8,8,true,true,2013,55
+mercedesbenz,Metris,MPV,2016-2017 2019-2023,7,,7,8,false,true,2023,50
+mercedesbenz,B-Class,Passenger Car,2016-2017,2,2011-2012 2014-2015 2018-2022,11,11,true,true,2022,37
+mercedesbenz,M-Class,MPV,1998-1999,2,1995-1997 2016-2019,9,21,false,true,2019,37
+mercedesbenz,300,Passenger Car,1990-1993,4,,4,4,true,true,1993,30
+mercedesbenz,500,Passenger Car,1990-1993,4,,4,4,true,true,1993,30
+mercedesbenz,Sprinter,MPV,,0,2010-2017 2019-2026,16,17,false,false,2026,28
+mercedesbenz,GLK-Class,MPV,,0,2016-2020,5,11,false,true,2020,27
+mercedesbenz,GLS-Class,MPV,2016,1,,1,11,false,true,2016,26
+mercedesbenz,350,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+mercedesbenz,400,Passenger Car,1992-1993,2,,2,2,true,true,1993,22
+mercedesbenz,420,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+mercedesbenz,560,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+mercedesbenz,600,Passenger Car,1992-1993,2,,2,2,true,true,1993,22
+mercedesbenz,SLS-Class,Passenger Car,,0,2011-2022,12,12,true,false,2022,22
+mercedesbenz,eSprinter,MPV,,0,2024-2026,3,3,true,false,2026,19
+mercedesbenz,CL-Class,Passenger Car,1998-1999,2,,2,17,false,true,1999,18
+mercedesbenz,SL-Class,Passenger Car,,0,2021,1,32,false,true,2021,17
+mercedesbenz,SLK-Class,Passenger Car,1999,1,1998,2,19,false,true,1999,15
+mercedesbenz,CLE,Passenger Car,,0,2024-2026,3,3,true,false,2026,13
+mercedesbenz,SLR McLaren,Passenger Car,,0,2004-2009,6,6,true,false,2009,13
+mercury,Villager,MPV,1993-2002,10,,10,10,true,true,2002,60
+mercury,Tracer,Passenger Car,1991-1999,9,1990,10,10,true,true,1999,51
+mercury,Cougar,Passenger Car,1991-1997 1999,8,,8,12,false,true,1999,42
+mercury,Monterey,MPV,2004-2007,4,,4,4,true,true,2007,39
+mercury,Mystique,Passenger Car,1995-2000,6,,6,6,true,true,2000,38
+mercury,Topaz,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+mercury,Capri,Passenger Car,1991-1994,4,1990,5,5,true,true,1994,31
+mercury,Montego,Passenger Car,2005-2007,3,,3,3,true,true,2007,29
+mercury,Marauder,Passenger Car,2004,1,,1,1,true,true,2004,18
+mini,Paceman,Passenger Car,2014-2016,3,2013 2017-2019,7,7,true,true,2019,36
+mitsubishi,Outlander Sport,MPV,2011-2017 2019-2026,15,,15,16,false,true,2026,82
+mitsubishi,Mirage,MPV,1990-1999 2002,11,,11,24,false,true,2002,60
+mitsubishi,Raider,Truck,2006-2010,5,1993-2005,18,18,true,true,2010,58
+mitsubishi,Endeavor,MPV,2004-2011,8,,8,8,true,true,2011,55
+mitsubishi,Montero Sport,MPV,1997-2004,8,1991-1993,11,11,true,true,2004,55
+mitsubishi,Diamante,Passenger Car,1992-1999 2005,9,,9,14,false,true,2005,49
+mitsubishi,Mighty Max,MPV,1990-1996,7,,7,7,true,true,1996,48
+mitsubishi,Montero,MPV,1994-1999,6,,6,14,false,true,1999,40
+mitsubishi,Expo,Passenger Car,1992-1996,5,,5,5,true,true,1996,34
+mitsubishi,Galant,Passenger Car,1994-1999,6,,6,23,false,true,1999,34
+mitsubishi,Precis,Passenger Car,1990-1993,4,1994,5,5,true,true,1994,31
+mitsubishi,i-MiEV,Passenger Car,2014 2016-2017,3,2015 2018,5,7,false,true,2018,30
+mitsubishi,RVR,MPV,,0,2011-2022,12,12,true,false,2022,28
+mitsubishi,Van,MPV,1990,1,,1,1,true,true,1990,24
+mitsubishi,Wagon,MPV,1990,1,,1,1,true,true,1990,24
+mitsubishi,Sigma,Passenger Car,1990,1,,1,1,true,true,1990,18
+nissan,Frontier,Truck,2000-2017 2019 2026,20,,20,29,false,true,2026,104
+nissan,NV200,Truck,2013-2017 2019-2021,8,2022-2024,11,12,false,true,2024,59
+nissan,Juke,MPV,2011-2017,7,2018,8,8,true,true,2018,55
+nissan,Cube,Truck,2009-2014,6,,6,6,true,true,2014,49
+nissan,350Z,Passenger Car,2003-2009,7,,7,7,true,true,2009,45
+nissan,Maxima,Passenger Car,1995-1999 2004,6,,6,33,false,true,2004,34
+nissan,Pathfinder,MPV,1996-1999,4,,4,37,false,true,1999,32
+nissan,200SX,Passenger Car,1995-1998,4,,4,4,true,true,1998,30
+nissan,Sentra,Passenger Car,1995-1999,5,,5,37,false,true,1999,30
+nissan,Ariya Hatchback,Passenger Car,2023-2024,2,,2,2,true,true,2024,28
+nissan,Rogue Select,MPV,2014,1,,1,1,true,true,2014,27
+nissan,NX,Passenger Car,1991-1993,3,,3,3,true,true,1993,26
+nissan,Stanza,Passenger Car,1990-1992,3,,3,3,true,true,1992,26
+nissan,Kicks Play,Passenger Car,2025,1,,1,1,true,true,2025,24
+nissan,Van,MPV,1990,1,,1,1,true,true,1990,24
+nissan,Altra,Passenger Car,2000,1,1998-1999 2001-2002 2004,6,6,true,true,2004,23
+nissan,NV,Truck,,0,2012-2017 2019-2021,9,10,false,false,2021,23
+nissan,Axxess,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+nissan,370Z,Passenger Car,2021,1,2022,2,14,false,true,2022,21
+nissan,Altima,Passenger Car,1998-1999,2,,2,34,false,true,1999,18
+nissan,Ariya MPV,MPV,,0,2025-2026,2,2,true,false,2026,18
+nissan,Armada,MPV,,0,2002-2003,2,24,false,true,2003,18
+nissan,Kicks MPV,MPV,,0,2025-2026,2,2,true,false,2026,18
+nissan,Titan,MPV,,0,2002-2003,2,23,false,true,2003,18
+nissan,Murano,MPV,,0,2002,1,24,false,true,2002,17
+nissan,X-Trail,MPV,,0,2005-2006,2,2,true,false,2006,15
+nissan,Nissan Z,Passenger Car,,0,2023-2026,4,4,true,false,2026,14
+nissan,Sentra Classic,Passenger Car,1995,1,,1,3,false,true,1995,14
+nissan,240SX,Passenger Car,,0,1999-2001,3,12,false,true,2001,13
+nissan,Micra,Passenger Car,,0,1990-1991,2,2,true,false,1991,6
+oldsmobile,Bravada,MPV,1991-1994 1996-1999,8,,8,14,false,true,1999,48
+oldsmobile,Achieva,Passenger Car,1992-1998,7,,7,7,true,true,1998,42
+oldsmobile,Silhouette,MPV,2000-2004,5,,5,15,false,true,2004,36
+oldsmobile,Toronado,Passenger Car,1990-1993,4,,4,4,true,true,1993,30
+oldsmobile,Custom Cruiser,Passenger Car,1990-1992,3,1993,4,4,true,true,1993,27
+oldsmobile,Regency,Passenger Car,1997-1999,3,,3,3,true,true,1999,26
+oldsmobile,Aurora,Passenger Car,2001-2003,3,,3,8,false,true,2003,22
+peugeot,405,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+peugeot,505,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+plymouth,Colt,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+plymouth,Neon,Passenger Car,2000-2001,2,1994,3,8,false,true,2001,19
+plymouth,Breeze,Passenger Car,1996 2000,2,,2,5,false,true,2000,18
+plymouth,HORIZON,Passenger Car,1990,1,,1,1,true,true,1990,18
+pontiac,Trans Sport,MPV,1990-1998,9,,9,9,true,true,1998,56
+pontiac,Vibe,Passenger Car,2003-2010,8,,8,8,true,true,2010,49
+pontiac,Bonneville,Passenger Car,1991-1999,9,,9,16,false,true,1999,46
+pontiac,Aztek,MPV,2001-2005,5,2000,6,6,true,true,2005,44
+pontiac,Montana,MPV,1999-2004,6,,6,6,true,true,2004,44
+pontiac,Torrent,MPV,2006-2009,4,,4,4,true,true,2009,39
+pontiac,Sunfire,Passenger Car,2000-2005,6,,6,10,false,true,2005,37
+pontiac,Firefly,Passenger Car,1990-1994,5,1995,6,6,true,true,1995,35
+pontiac,Sunbird,Passenger Car,1990-1994,5,1995,6,6,true,true,1995,35
+pontiac,G5,Passenger Car,2007-2010,4,,4,4,true,true,2010,33
+pontiac,Montana SV6,MPV,2006,1,2005 2007-2009,5,5,true,true,2009,31
+pontiac,Lemans,Passenger Car,1990-1993,4,,4,4,true,true,1993,30
+pontiac,Wave,Passenger Car,2005-2006,2,2007-2008,4,4,true,true,2008,27
+pontiac,G3,Passenger Car,2009-2010,2,2008,3,3,true,true,2010,26
+pontiac,6000,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+pontiac,Pursuit,Passenger Car,,0,2005-2006,2,2,true,true,2006,19
+pontiac,G8,Passenger Car,,0,2010,1,3,false,true,2010,14
+pontiac,Matiz,Passenger Car,,0,2007 2010,2,2,true,false,2010,9
+pontiac,Tempest,Passenger Car,,0,1990-1991,2,2,true,false,1991,6
+porsche,Taycan,Passenger Car,2026,1,,1,7,false,true,2026,20
+ram,Promaster City,MPV,2015-2017 2019-2022,7,,7,8,false,true,2022,50
+ram,4000,MPV,,0,2013-2023,11,11,true,false,2023,27
+rivian,EDV,Truck,,0,2022-2026,5,5,true,false,2026,23
+rivian,RCV,Truck,,0,2022 2024-2026,4,4,true,false,2026,22
+rollsroyce,Phantom,Passenger Car,2004-2016,13,,13,23,false,true,2016,68
+rollsroyce,Ghost,Passenger Car,2010-2017 2019,9,,9,17,false,true,2019,52
+rollsroyce,Silver Spur,Passenger Car,1990-1993 1996-1999,8,1994-1995,10,10,true,true,1999,48
+rollsroyce,Corniche,Passenger Car,1990-1995 2000-2001,8,2002,9,9,true,true,2002,47
+rollsroyce,Wraith,Passenger Car,2014-2017 2019-2021,7,,7,8,false,true,2021,44
+rollsroyce,Dawn,Passenger Car,2016-2017 2019-2021,5,,5,6,false,true,2021,36
+rollsroyce,Spectre,Passenger Car,2024-2026,3,,3,3,true,true,2026,32
+rollsroyce,Silver Seraph,Passenger Car,1999 2001-2002,3,2000,4,4,true,true,2002,27
+rollsroyce,Park Ward,Passenger Car,2001-2002,2,1998-1999,4,4,true,true,2002,24
+rollsroyce,Silver Dawn,Passenger Car,1996-1997,2,1995,3,3,true,true,1997,23
+rollsroyce,Flying Spur,Passenger Car,1995,1,,1,1,true,true,1995,18
+rollsroyce,Silver Spirit,Passenger Car,,0,1990-1996,7,7,true,false,1996,11
+rollsroyce,Touring Limousine,Passenger Car,,0,1993-1998,6,6,true,false,1998,10
+saab,9-7X,MPV,2005-2009,5,,5,5,true,true,2009,43
+saab,9-4x,MPV,2011-2012,2,,2,2,true,true,2012,31
+saab,9-2X,Passenger Car,2005-2006,2,2007-2009,5,5,true,true,2009,28
+saturn,Outlook,MPV,2007-2010,4,,4,4,true,true,2010,39
+saturn,Relay,MPV,2005-2007,3,,3,3,true,true,2007,35
+saturn,Aura,Passenger Car,2007-2010,4,,4,4,true,true,2010,33
+saturn,Astra,Passenger Car,2008-2009,2,,2,2,true,true,2009,25
+saturn,LW1,Passenger Car,,0,2000-2002,3,3,true,false,2002,7
+saturn,LW2,Passenger Car,,0,2000-2002,3,3,true,false,2002,7
+saturn,SL3,Passenger Car,,0,1991-1993,3,3,true,false,1993,7
+smart,Fortwo,Passenger Car,2008-2017 2019,11,,11,12,false,true,2019,60
+smart,Fortwo Electric Drive,Passenger Car,2013-2015,3,,3,3,true,true,2015,32
+smart,EQ Fortwo,Passenger Car,2019,1,2018,2,2,true,true,2019,25
+subaru,B9 Tribeca,MPV,2006-2007,2,2008-2014,9,9,true,true,2014,38
+subaru,Justy,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+subaru,Loyale,Passenger Car,1990-1994,5,,5,5,true,true,1994,34
+subaru,Trailseeker,MPV,2026,1,,1,1,true,true,2026,30
+subaru,Uncharted,MPV,2026,1,,1,1,true,true,2026,30
+subaru,XT,Passenger Car,1990-1991,2,,2,2,true,true,1991,22
+subaru,XV CrossTrek,MPV,,0,2012,1,4,false,true,2012,20
+subaru,XT6,Passenger Car,,0,1990-1991,2,2,true,false,1991,6
+suzuki,Esteem,Passenger Car,1996-2002,7,1995,8,8,true,true,2002,43
+suzuki,Equator,Truck,2009-2012,4,2013,5,5,true,true,2013,42
+suzuki,Aerio,Passenger Car,2002-2007,6,,6,6,true,true,2007,41
+suzuki,Sidekick Sport,MPV,1996-1998,3,1990-1995,9,9,true,true,1998,38
+suzuki,XL7,MPV,2007-2009,3,2003-2005,6,6,true,true,2009,38
+suzuki,Forenza,Passenger Car,2004-2008,5,,5,5,true,true,2008,37
+suzuki,Swift,Passenger Car,2000-2001 2004-2006,5,2007-2008,7,17,false,true,2008,35
+suzuki,Grand Vitara XL-7,MPV,2002 2006,2,2007-2008,4,4,true,true,2008,33
+suzuki,Reno,Passenger Car,2005-2008,4,,4,4,true,true,2008,33
+suzuki,Verona,Passenger Car,2004-2006,3,2007-2008,5,5,true,true,2008,31
+suzuki,X-90,MPV,1998,1,,1,3,false,true,1998,20
+suzuki,Samurai,MPV,,0,1996,1,7,false,true,1996,17
+tesla,Semi,Truck,,0,2023-2026,4,4,true,false,2026,22
+tesla,Roadster,Passenger Car,,0,2008-2012,5,5,true,false,2012,12
+toyota,4Runner,MPV,1991-1999,9,,9,37,false,true,1999,52
+toyota,Previa,MPV,1991-1997,7,1998,8,8,true,true,1998,49
+toyota,Paseo,Passenger Car,1992-1999,8,,8,8,true,true,1999,46
+toyota,Camry,Passenger Car,1992-1999,8,,8,37,false,true,1999,42
+toyota,Pick-Up,Passenger Car,1990-1995,6,,6,6,true,true,1995,38
+toyota,Crown,Passenger Car,2023-2026,4,,4,4,true,true,2026,36
+toyota,MR2,Passenger Car,1991-1995,5,,5,13,false,true,1995,30
+toyota,Crown Signia,Passenger Car,2025-2026,2,,2,2,true,true,2026,28
+toyota,Cressida,Passenger Car,1990-1992,3,,3,3,true,true,1992,26
+toyota,Venza,MPV,,0,2016-2017,2,13,false,true,2017,24
+toyota,Tundra,Truck,,0,1995-1999,5,32,false,true,1999,23
+toyota,C-HR,Passenger Car,2026,1,,1,6,false,true,2026,20
+toyota,Sienna,MPV,,0,1995-1997,3,32,false,true,1997,19
+toyota,Corolla Matrix,Passenger Car,,0,2003-2013,11,11,true,false,2013,18
+toyota,Sequoia,MPV,,0,2000,1,27,false,true,2000,17
+toyota,Scion iQ,Passenger Car,,0,2011-2015,5,5,true,false,2015,15
+toyota,Camry Solara,Passenger Car,1999,1,,1,11,false,true,1999,14
+toyota,Celica,Passenger Car,,0,2006,1,17,false,true,2006,14
+toyota,Scion xD,Passenger Car,,0,2008-2014,7,7,true,false,2014,14
+toyota,Scion xB,MPV,,0,2007,1,12,false,false,2007,10
+toyota,FCHV-adv,Passenger Car,,0,2009-2010,2,2,true,false,2010,9
+vinfast,VF 8,MPV,2023 2025,2,2024 2026,4,4,true,true,2026,36
+vinfast,VF 9,MPV,2024-2025,2,2023 2026,4,4,true,true,2026,36
+vinfast,VF 6,MPV,2025,1,2023-2024 2026,4,4,true,true,2026,33
+vinfast,VF 7,MPV,2025,1,2023-2024 2026,4,4,true,true,2026,33
+volkswagen,Eos,Passenger Car,2007-2016,10,,10,10,true,true,2016,60
+volkswagen,CC,Passenger Car,2012 2014-2017,5,2018,6,6,true,true,2018,41
+volkswagen,EuroVan,MPV,1993-1995 1997 1999,5,1992 1996 1998,8,12,false,true,1999,39
+volkswagen,Corrado,Passenger Car,1990-1994,5,1995,6,6,true,true,1995,35
+volkswagen,Phaeton,MPV,2004-2006,3,,3,3,true,true,2006,35
+volkswagen,CABRIOLET,Passenger Car,1990-1993,4,,4,4,true,true,1993,30
+volkswagen,FOX,Passenger Car,1990-1993,4,,4,4,true,true,1993,30
+volkswagen,ID. Buzz,MPV,2025,1,,1,1,true,true,2025,30
+volkswagen,Golf III,Passenger Car,1993-1995,3,1991-1992,5,5,true,true,1995,28
+volkswagen,Vanagon,MPV,1990-1991,2,,2,2,true,true,1991,28
+volkswagen,Touareg,MPV,,0,2018,1,15,false,true,2018,23
+volkswagen,Cabrio,Passenger Car,2000-2002,3,,3,8,false,true,2002,22
+volkswagen,R32,MPV,2004,1,,1,2,false,true,2004,20
+volkswagen,Passat,Passenger Car,1998-1999,2,,2,33,false,true,1999,18
+volkswagen,Golf,Passenger Car,1999,1,,1,27,false,true,1999,14
+volkswagen,GTI,Passenger Car,1999,1,,1,22,false,true,1999,14
+volkswagen,Jetta,Passenger Car,1999,1,,1,37,false,true,1999,14
+volvo,C70,MPV,1998-2004 2006-2013,15,,15,15,true,true,2013,83
+volvo,XC70,Passenger Car,2004-2016,13,,13,13,true,true,2016,72
+volvo,V70,MPV,2000-2010,11,,11,13,false,true,2010,63
+volvo,C30,Passenger Car,2008-2013,6,2007,7,7,true,true,2013,42
+volvo,V40,Passenger Car,2000-2004,5,,5,5,true,true,2004,34
+volvo,V90CC,MPV,2026,1,,1,10,false,true,2026,26
+volvo,VS,Truck,,0,2019-2026,8,8,true,false,2026,26
+volvo,VT,Truck,,0,2019-2026,8,8,true,false,2026,26
+volvo,S90,Passenger Car,1998 2026,2,,2,11,false,true,2026,24
+volvo,C70 / C30,Passenger Car,2012,1,,1,1,true,true,2012,21
+volvo,V90,Passenger Car,1998,1,,1,6,false,true,1998,14
+volvo,960 Series,Passenger Car,,0,1991-1997,7,7,true,false,1997,11
+volvo,S40,Passenger Car,,0,1999,1,13,false,true,1999,11
+volvo,850 Series,Passenger Car,,0,1993-1997,5,5,true,false,1997,9
+volvo,940 Series,Passenger Car,,0,1991-1995,5,5,true,false,1995,9
+volvo,240 Series,Passenger Car,,0,1990-1993,4,4,true,false,1993,8
+volvo,740 Series,Passenger Car,,0,1990-1992,3,3,true,false,1992,7
+volvo,780 Series,Passenger Car,,0,1990-1991,2,2,true,false,1991,6
+yugo,"102, GV",Passenger Car,,0,1990-1992,3,3,true,false,1992,7

@@ -1,0 +1,3656 @@
+{
+ "_doc": "Single source of truth for Pass 1 name normalization. Keys are 'compact' (lowercase alnum). make: our DB slug -> canonical make key. govMake: compact NHTSA/EPA make name -> canonical key. nhtsaName: canonical -> exact NHTSA Make_Name to query. makeWindows: [minYear,maxYear] the make sold cars in the US (outside = impossible). model: '<make>:<ourKey>' or '<ourKey>' -> list of equivalent gov keys (applied symmetrically). modelPatterns: regexes turning a gov model key into a family key (e.g. c300 -> cclass).",
+ "make": {
+  "mercedes": "mercedesbenz",
+  "mercedes-benz": "mercedesbenz",
+  "land rover": "landrover",
+  "alfa romeo": "alfaromeo",
+  "aston martin": "astonmartin",
+  "rolls-royce": "rollsroyce",
+  "amc": "amc",
+  "ram": "ram",
+  "mini": "mini",
+  "smart": "smart"
+ },
+ "govMake": {
+  "mercedesbenz": "mercedesbenz",
+  "mclarenautomotive": "mclaren",
+  "americanmotorscorporation": "amc",
+  "americanmotors": "amc",
+  "landrover": "landrover",
+  "alfaromeo": "alfaromeo",
+  "astonmartin": "astonmartin",
+  "rollsroyce": "rollsroyce",
+  "vpgvehicleproductiongroup": "vpg",
+  "generalmotors": "gm",
+  "chryslergroupllc": "chrysler",
+  "fiatchrysler": "chrysler",
+  "ramtrucks": "ram",
+  "dodgeram": "ram",
+  "deloreanmotorcompany": "delorean",
+  "karmaautomotive": "karma",
+  "lucidmotors": "lucid",
+  "polestarautomotive": "polestar",
+  "genesismotors": "genesis",
+  "hummerbygmc": "hummer"
+ },
+ "nhtsaName": {
+  "acura": "ACURA",
+  "alfaromeo": "ALFA ROMEO",
+  "amc": "AMERICAN MOTORS",
+  "astonmartin": "ASTON MARTIN",
+  "audi": "AUDI",
+  "bentley": "BENTLEY",
+  "bmw": "BMW",
+  "buick": "BUICK",
+  "cadillac": "CADILLAC",
+  "chevrolet": "CHEVROLET",
+  "chrysler": "CHRYSLER",
+  "daewoo": "DAEWOO",
+  "datsun": "DATSUN",
+  "delorean": "DELOREAN",
+  "dodge": "DODGE",
+  "ferrari": "FERRARI",
+  "fiat": "FIAT",
+  "ford": "FORD",
+  "genesis": "GENESIS",
+  "geo": "GEO",
+  "gmc": "GMC",
+  "honda": "HONDA",
+  "hummer": "HUMMER",
+  "hyundai": "HYUNDAI",
+  "infiniti": "INFINITI",
+  "isuzu": "ISUZU",
+  "jaguar": "JAGUAR",
+  "jeep": "JEEP",
+  "karma": "KARMA",
+  "kia": "KIA",
+  "lamborghini": "LAMBORGHINI",
+  "landrover": "LAND ROVER",
+  "lexus": "LEXUS",
+  "lincoln": "LINCOLN",
+  "lotus": "LOTUS",
+  "lucid": "LUCID",
+  "maserati": "MASERATI",
+  "mazda": "MAZDA",
+  "mclaren": "MCLAREN",
+  "mercedesbenz": "MERCEDES-BENZ",
+  "mercury": "MERCURY",
+  "mini": "MINI",
+  "mitsubishi": "MITSUBISHI",
+  "nissan": "NISSAN",
+  "oldsmobile": "OLDSMOBILE",
+  "plymouth": "PLYMOUTH",
+  "polestar": "POLESTAR",
+  "pontiac": "PONTIAC",
+  "porsche": "PORSCHE",
+  "ram": "RAM",
+  "rivian": "RIVIAN",
+  "rollsroyce": "ROLLS-ROYCE",
+  "saab": "SAAB",
+  "saturn": "SATURN",
+  "scion": "SCION",
+  "smart": "SMART",
+  "subaru": "SUBARU",
+  "suzuki": "SUZUKI",
+  "tesla": "TESLA",
+  "toyota": "TOYOTA",
+  "volkswagen": "VOLKSWAGEN",
+  "volvo": "VOLVO",
+  "eagle": "EAGLE",
+  "merkur": "MERKUR",
+  "daihatsu": "DAIHATSU",
+  "fisker": "FISKER",
+  "vinfast": "VINFAST",
+  "ineos": "INEOS",
+  "maybach": "MAYBACH",
+  "peugeot": "PEUGEOT",
+  "yugo": "YUGO",
+  "sterling": "STERLING"
+ },
+ "makeWindows": {
+  "genesis": [
+   2017,
+   null
+  ],
+  "scion": [
+   2003,
+   2016
+  ],
+  "saturn": [
+   1990,
+   2010
+  ],
+  "pontiac": [
+   1990,
+   2010
+  ],
+  "hummer": [
+   1992,
+   2010
+  ],
+  "plymouth": [
+   1990,
+   2001
+  ],
+  "oldsmobile": [
+   1990,
+   2004
+  ],
+  "mercury": [
+   1990,
+   2011
+  ],
+  "suzuki": [
+   1990,
+   2013
+  ],
+  "isuzu": [
+   1990,
+   2008
+  ],
+  "daewoo": [
+   1999,
+   2002
+  ],
+  "eagle": [
+   1990,
+   1998
+  ],
+  "geo": [
+   1990,
+   1997
+  ],
+  "polestar": [
+   2020,
+   null
+  ],
+  "rivian": [
+   2021,
+   null
+  ],
+  "lucid": [
+   2021,
+   null
+  ],
+  "tesla": [
+   2008,
+   null
+  ],
+  "datsun": [
+   1990,
+   1990
+  ],
+  "delorean": [
+   1990,
+   1990
+  ],
+  "karma": [
+   2017,
+   null
+  ],
+  "smart": [
+   2008,
+   2019
+  ],
+  "merkur": [
+   1990,
+   1990
+  ],
+  "daihatsu": [
+   1990,
+   1992
+  ],
+  "fisker": [
+   2011,
+   2024
+  ],
+  "vinfast": [
+   2023,
+   null
+  ],
+  "ineos": [
+   2023,
+   null
+  ],
+  "maybach": [
+   2003,
+   2012
+  ],
+  "peugeot": [
+   1990,
+   1991
+  ],
+  "yugo": [
+   1990,
+   1992
+  ],
+  "sterling": [
+   1990,
+   1991
+  ],
+  "amc": [
+   1990,
+   1990
+  ],
+  "mini": [
+   2002,
+   null
+  ],
+  "alfaromeo": [
+   1990,
+   1995,
+   2015,
+   null
+  ],
+  "fiat": [
+   1990,
+   1990,
+   2011,
+   null
+  ],
+  "lotus": [
+   1990,
+   null
+  ],
+  "mclaren": [
+   2011,
+   null
+  ],
+  "lamborghini": [
+   1990,
+   null
+  ],
+  "ram": [
+   2011,
+   null
+  ]
+ },
+ "_makeWindowsNote": "makeWindows may hold 2 or 4 numbers (two ranges). datsun/delorean/amc/merkur windows set to 1990-1990 = effectively 'not sold 1990+' for phantom purposes; pre-1990 rows are out of scope for Pass 1.",
+ "modelNoiseTokens": [
+  "2wd",
+  "4wd",
+  "awd",
+  "fwd",
+  "rwd",
+  "4x4",
+  "4x2",
+  "2x4",
+  "ffv",
+  "cng",
+  "phev",
+  "hev",
+  "bev",
+  "ev",
+  "plug in",
+  "plug in hybrid",
+  "pickup",
+  "pick up",
+  "van",
+  "wagon",
+  "cargo",
+  "passenger",
+  "cab",
+  "chassis",
+  "cab chassis",
+  "crew cab",
+  "extended cab",
+  "regular cab",
+  "quad cab",
+  "mega cab",
+  "double cab",
+  "king cab",
+  "supercab",
+  "supercrew",
+  "long bed",
+  "short bed",
+  "2dr",
+  "4dr",
+  "2 door",
+  "4 door",
+  "sedan",
+  "coupe",
+  "convertible",
+  "hatchback",
+  "hardtop",
+  "roadster",
+  "spyder",
+  "spider",
+  "cabriolet",
+  "sportback",
+  "gran coupe",
+  "gran turismo",
+  "sport wagon",
+  "sportwagon",
+  "sportwagen",
+  "avant",
+  "touring",
+  "4matic",
+  "xdrive",
+  "quattro",
+  "sdrive",
+  "all4",
+  "4motion",
+  "sh awd",
+  "e 4orce",
+  "2 5l",
+  "3 5l",
+  "1 5l",
+  "1 6l",
+  "2 0l",
+  "2 4l",
+  "3 0l",
+  "3 6l",
+  "5 0l",
+  "5 3l",
+  "5 7l",
+  "6 2l",
+  "6 6l",
+  "6 7l",
+  "turbo",
+  "diesel",
+  "hybrid",
+  "eco",
+  "econoline",
+  "conversion",
+  "incomplete",
+  "police",
+  "taxi",
+  "limo",
+  "limousine",
+  "lwb",
+  "swb",
+  "std",
+  "base",
+  "hd",
+  "sd",
+  "cutaway",
+  "stripped",
+  "motorhome",
+  "commercial",
+  "fleet",
+  "natural gas",
+  "flex fuel",
+  "dual fuel",
+  "c15",
+  "k15",
+  "c10",
+  "k10",
+  "c1500",
+  "k1500",
+  "c25",
+  "k25",
+  "c2500",
+  "k2500",
+  "c35",
+  "k35",
+  "c3500",
+  "k3500",
+  "police vehicle",
+  "vehicle",
+  "ppv",
+  "sports",
+  "5dr",
+  "3dr",
+  "sports wagon",
+  "gt xdrive",
+  "cc",
+  "hearse",
+  "funeral coach",
+  "ambulance",
+  "shuttle",
+  "wheelchair",
+  "mobility",
+  "electric",
+  "fuel cell",
+  "fcev",
+  "energi",
+  "e tron",
+  "recharge",
+  "twin engine",
+  "mild hybrid",
+  "srt"
+ ],
+ "familySuffixes": [
+  "hd",
+  "srw",
+  "drw",
+  "classic",
+  "super duty",
+  "superduty",
+  "ld"
+ ],
+ "model": {
+  "chevrolet:ck1500": [
+   "c1500",
+   "k1500",
+   "ck",
+   "gmt400",
+   "c10",
+   "k10",
+   "silverado1500",
+   "silverado"
+  ],
+  "gmc:ck1500": [
+   "c1500",
+   "k1500",
+   "ck",
+   "gmt400",
+   "sierra1500",
+   "sierra"
+  ],
+  "chevrolet:c1500": [
+   "ck1500",
+   "ck",
+   "gmt400",
+   "c10",
+   "silverado"
+  ],
+  "chevrolet:k1500": [
+   "ck1500",
+   "ck",
+   "gmt400",
+   "k10",
+   "silverado"
+  ],
+  "chevrolet:c2500": [
+   "ck2500",
+   "ck",
+   "gmt400",
+   "c20",
+   "silverado"
+  ],
+  "chevrolet:k2500": [
+   "ck2500",
+   "ck",
+   "gmt400",
+   "k20",
+   "silverado"
+  ],
+  "chevrolet:c3500": [
+   "ck3500",
+   "ck",
+   "gmt400",
+   "c30",
+   "silverado"
+  ],
+  "chevrolet:k3500": [
+   "ck3500",
+   "ck",
+   "gmt400",
+   "k30",
+   "silverado"
+  ],
+  "chevrolet:silverado": [
+   "silverado1500",
+   "silverado2500",
+   "silverado3500",
+   "silverado2500hd",
+   "silverado3500hd",
+   "ck",
+   "gmt400"
+  ],
+  "gmc:sierra": [
+   "sierra1500",
+   "sierra2500",
+   "sierra3500",
+   "sierra2500hd",
+   "sierra3500hd",
+   "ck",
+   "gmt400"
+  ],
+  "chevrolet:s10": [
+   "s10pickup",
+   "s10",
+   "s10blazer"
+  ],
+  "chevrolet:s10blazer": [
+   "s10",
+   "blazer",
+   "s10blazer"
+  ],
+  "chevrolet:astro": [
+   "astrovan",
+   "astro"
+  ],
+  "gmc:safari": [
+   "safarivan",
+   "safari"
+  ],
+  "gmc:s15": [
+   "s15",
+   "s15pickup",
+   "sonoma"
+  ],
+  "gmc:sierra3500": [
+   "sierra3500hd",
+   "sierra"
+  ],
+  "chevrolet:silverado2500": [
+   "silverado2500hd",
+   "silverado"
+  ],
+  "chevrolet:silverado3500": [
+   "silverado3500hd",
+   "silverado"
+  ],
+  "chevrolet:avalanche1500": [
+   "avalanche"
+  ],
+  "chevrolet:avalanche2500": [
+   "avalanche"
+  ],
+  "chevrolet:suburban1500": [
+   "suburban"
+  ],
+  "chevrolet:suburban2500": [
+   "suburban"
+  ],
+  "chevrolet:g10van": [
+   "g10",
+   "gvan",
+   "chevyvan",
+   "g10van",
+   "gseries",
+   "sportvan",
+   "van"
+  ],
+  "chevrolet:g20van": [
+   "g20",
+   "gvan",
+   "chevyvan",
+   "g20van",
+   "gseries",
+   "sportvan",
+   "van"
+  ],
+  "chevrolet:g30van": [
+   "g30",
+   "gvan",
+   "chevyvan",
+   "g30van",
+   "gseries",
+   "sportvan",
+   "van"
+  ],
+  "chevrolet:express1500": [
+   "express",
+   "express1500"
+  ],
+  "chevrolet:express2500": [
+   "express",
+   "express2500"
+  ],
+  "chevrolet:express3500": [
+   "express",
+   "express3500"
+  ],
+  "gmc:savana1500": [
+   "savana",
+   "savana1500"
+  ],
+  "gmc:savana2500": [
+   "savana",
+   "savana2500"
+  ],
+  "gmc:savana3500": [
+   "savana",
+   "savana3500"
+  ],
+  "chevrolet:luminaapv": [
+   "lumina",
+   "luminaapv",
+   "luminaminivan"
+  ],
+  "chevrolet:tracker": [
+   "tracker",
+   "geotracker"
+  ],
+  "chevrolet:cityexpress": [
+   "cityexpress"
+  ],
+  "chevrolet:blazerev": [
+   "blazerev",
+   "blazer"
+  ],
+  "chevrolet:equinoxev": [
+   "equinoxev",
+   "equinox"
+  ],
+  "chevrolet:bolteuv": [
+   "bolteuv",
+   "bolt"
+  ],
+  "chevrolet:boltev": [
+   "boltev",
+   "bolt"
+  ],
+  "chevrolet:trailblazer": [
+   "trailblazer",
+   "trailblazerext"
+  ],
+  "chevrolet:tahoe": [
+   "tahoe",
+   "tahoehybrid"
+  ],
+  "gmc:yukonxl": [
+   "yukonxl",
+   "yukon"
+  ],
+  "gmc:hummerevsuv": [
+   "hummerev",
+   "hummerevsuv",
+   "hummerevpickup"
+  ],
+  "gmc:jimmy": [
+   "jimmy",
+   "s15jimmy"
+  ],
+  "cadillac:escaladeesv": [
+   "escaladeesv",
+   "escalade"
+  ],
+  "cadillac:xlrv": [
+   "xlr"
+  ],
+  "cadillac:stsv": [
+   "sts"
+  ],
+  "cadillac:atsv": [
+   "ats"
+  ],
+  "cadillac:ct4v": [
+   "ct4"
+  ],
+  "cadillac:ct5v": [
+   "ct5"
+  ],
+  "cadillac:ct6v": [
+   "ct6"
+  ],
+  "cadillac:deville": [
+   "deville",
+   "sedandeville"
+  ],
+  "buick:regalsportback": [
+   "regal"
+  ],
+  "buick:regaltourx": [
+   "regal",
+   "regaltourx"
+  ],
+  "buick:envisions": [
+   "envision"
+  ],
+  "buick:electrae5": [
+   "electra",
+   "electrae5"
+  ],
+  "ford:f150": [
+   "f150",
+   "f150pickup",
+   "f150lightning",
+   "f150raptor"
+  ],
+  "ford:f250": [
+   "f250",
+   "f250superduty",
+   "superduty"
+  ],
+  "ford:f350": [
+   "f350",
+   "f350superduty",
+   "superduty"
+  ],
+  "ford:f450superduty": [
+   "f450",
+   "f450superduty",
+   "superduty"
+  ],
+  "ford:f250superduty": [
+   "f250",
+   "superduty"
+  ],
+  "ford:f350superduty": [
+   "f350",
+   "superduty"
+  ],
+  "ford:e150": [
+   "e150",
+   "e150econoline",
+   "econoline",
+   "eseries",
+   "clubwagon"
+  ],
+  "ford:e150econoline": [
+   "e150",
+   "econoline",
+   "eseries",
+   "clubwagon"
+  ],
+  "ford:e250econoline": [
+   "e250",
+   "econoline",
+   "eseries"
+  ],
+  "ford:e350econoline": [
+   "e350",
+   "econoline",
+   "eseries"
+  ],
+  "ford:clubwagone150": [
+   "e150",
+   "clubwagon",
+   "econoline",
+   "eseries"
+  ],
+  "ford:mustangshelbygt350": [
+   "mustang",
+   "shelbygt350"
+  ],
+  "ford:mustangshelbygt500": [
+   "mustang",
+   "shelbygt500"
+  ],
+  "ford:mustangmach1": [
+   "mustang",
+   "mach1"
+  ],
+  "ford:mustangmache": [
+   "mustangmache",
+   "mache"
+  ],
+  "ford:tauryssho": [
+   "taurus"
+  ],
+  "ford:taurussho": [
+   "taurus",
+   "taurussho"
+  ],
+  "ford:escortzx2": [
+   "escort",
+   "zx2",
+   "escortzx2"
+  ],
+  "ford:explorersporttrac": [
+   "explorersporttrac",
+   "sporttrac",
+   "explorer"
+  ],
+  "ford:transit150": [
+   "transit",
+   "transit150"
+  ],
+  "ford:transit250": [
+   "transit",
+   "transit250"
+  ],
+  "ford:transit350": [
+   "transit",
+   "transit350"
+  ],
+  "ford:transit350hd": [
+   "transit",
+   "transit350"
+  ],
+  "ford:transit": [
+   "transit",
+   "transit150",
+   "transit250",
+   "transit350",
+   "transitvan",
+   "transitwagon"
+  ],
+  "ford:transitconnect": [
+   "transitconnect"
+  ],
+  "ford:cmax": [
+   "cmax",
+   "cmaxhybrid",
+   "cmaxenergi"
+  ],
+  "ford:broncoii": [
+   "broncoii"
+  ],
+  "ford:broncosport": [
+   "broncosport"
+  ],
+  "lincoln:towncar": [
+   "towncar"
+  ],
+  "lincoln:markvii": [
+   "markvii",
+   "mark7"
+  ],
+  "lincoln:markviii": [
+   "markviii",
+   "mark8"
+  ],
+  "mercury:grandmarquis": [
+   "grandmarquis"
+  ],
+  "dodge:ram1500": [
+   "ram1500",
+   "ram1500pickup",
+   "ram"
+  ],
+  "dodge:ram2500": [
+   "ram2500",
+   "ram"
+  ],
+  "dodge:ram3500": [
+   "ram3500",
+   "ram"
+  ],
+  "dodge:ram": [
+   "ram",
+   "rampickup",
+   "ram1500",
+   "ram2500",
+   "ram3500",
+   "dseries",
+   "d150",
+   "w150"
+  ],
+  "dodge:ramvanb150": [
+   "ramvan",
+   "b150",
+   "ramwagon",
+   "bseries"
+  ],
+  "dodge:ramvanb1500": [
+   "ramvan",
+   "b1500",
+   "ramwagon",
+   "bseries"
+  ],
+  "dodge:ramvanb250": [
+   "ramvan",
+   "b250",
+   "ramwagon",
+   "bseries"
+  ],
+  "dodge:ramvanb2500": [
+   "ramvan",
+   "b2500",
+   "ramwagon",
+   "bseries"
+  ],
+  "dodge:ramvanb350": [
+   "ramvan",
+   "b350",
+   "ramwagon",
+   "bseries"
+  ],
+  "dodge:ramvanb3500": [
+   "ramvan",
+   "b3500",
+   "ramwagon",
+   "bseries"
+  ],
+  "dodge:grandcaravan": [
+   "grandcaravan",
+   "caravan"
+  ],
+  "dodge:caravan": [
+   "caravan",
+   "caravancv",
+   "grandcaravan"
+  ],
+  "dodge:challenger": [
+   "challenger",
+   "challengersrt"
+  ],
+  "dodge:charger": [
+   "charger",
+   "chargersrt"
+  ],
+  "ram:1500": [
+   "1500",
+   "ram1500",
+   "1500pickup"
+  ],
+  "ram:2500": [
+   "2500",
+   "ram2500"
+  ],
+  "ram:3500": [
+   "3500",
+   "ram3500"
+  ],
+  "ram:1500classic": [
+   "1500",
+   "ram1500",
+   "1500classic"
+  ],
+  "ram:1500trx": [
+   "1500",
+   "ram1500",
+   "trx",
+   "1500trx"
+  ],
+  "ram:ram1500": [
+   "1500"
+  ],
+  "ram:ram2500": [
+   "2500"
+  ],
+  "ram:ram3500": [
+   "3500"
+  ],
+  "ram:cv": [
+   "cv",
+   "cvtradesman",
+   "cargovan",
+   "ccv"
+  ],
+  "ram:promaster": [
+   "promaster",
+   "promaster1500",
+   "promaster2500",
+   "promaster3500"
+  ],
+  "ram:promaster1500": [
+   "promaster"
+  ],
+  "ram:promaster2500": [
+   "promaster"
+  ],
+  "ram:promaster3500": [
+   "promaster"
+  ],
+  "ram:promastercity": [
+   "promastercity"
+  ],
+  "chrysler:towncountry": [
+   "townandcountry"
+  ],
+  "chrysler:townandcountry": [
+   "townandcountry",
+   "towncountry"
+  ],
+  "chrysler:300c": [
+   "300",
+   "300c"
+  ],
+  "chrysler:300m": [
+   "300m"
+  ],
+  "chrysler:300": [
+   "300",
+   "300c",
+   "300s"
+  ],
+  "chrysler:pacificaminivan": [
+   "pacifica",
+   "pacificahybrid"
+  ],
+  "chrysler:pacifica": [
+   "pacifica",
+   "pacificahybrid"
+  ],
+  "chrysler:grandvoyager": [
+   "grandvoyager",
+   "voyager"
+  ],
+  "chrysler:ptcruiser": [
+   "ptcruiser"
+  ],
+  "plymouth:grandvoyager": [
+   "grandvoyager",
+   "voyager"
+  ],
+  "jeep:wranglerjk": [
+   "wrangler"
+  ],
+  "jeep:wrangler": [
+   "wrangler",
+   "wranglerjk",
+   "wranglerjl",
+   "wranglerunlimited",
+   "wrangler4xe"
+  ],
+  "jeep:grandcherokee": [
+   "grandcherokee",
+   "grandcherokeel",
+   "grandcherokee4xe",
+   "grandcherokeewk"
+  ],
+  "jeep:cherokee": [
+   "cherokee"
+  ],
+  "jeep:grandwagoneer": [
+   "grandwagoneer",
+   "grandwagoneerl"
+  ],
+  "jeep:wagoneer": [
+   "wagoneer",
+   "wagoneerl"
+  ],
+  "toyota:mr2roadster": [
+   "mr2",
+   "mr2spyder"
+  ],
+  "toyota:mr2spyder": [
+   "mr2",
+   "mr2spyder"
+  ],
+  "toyota:mr2": [
+   "mr2",
+   "mr2spyder"
+  ],
+  "toyota:gt86": [
+   "86",
+   "gt86",
+   "gr86"
+  ],
+  "toyota:86": [
+   "86",
+   "gt86"
+  ],
+  "toyota:gr86": [
+   "gr86",
+   "86"
+  ],
+  "toyota:priusplugin": [
+   "priusplugin",
+   "priusprime",
+   "prius"
+  ],
+  "toyota:priusprime": [
+   "priusprime",
+   "priusplugin",
+   "prius"
+  ],
+  "toyota:priusv": [
+   "priusv",
+   "prius"
+  ],
+  "toyota:priusc": [
+   "priusc",
+   "prius"
+  ],
+  "toyota:prius": [
+   "prius"
+  ],
+  "toyota:rav4hybrid": [
+   "rav4",
+   "rav4hybrid"
+  ],
+  "toyota:rav4": [
+   "rav4",
+   "rav4hybrid",
+   "rav4prime",
+   "rav4ev"
+  ],
+  "toyota:corollacross": [
+   "corollacross"
+  ],
+  "toyota:corollaim": [
+   "corollaim",
+   "corolla"
+  ],
+  "toyota:yarisia": [
+   "yarisia",
+   "yaris"
+  ],
+  "toyota:xa": [
+   "xa",
+   "scionxa"
+  ],
+  "toyota:grsupra": [
+   "supra",
+   "grsupra"
+  ],
+  "toyota:supra": [
+   "supra",
+   "grsupra"
+  ],
+  "toyota:grcorolla": [
+   "grcorolla",
+   "corolla"
+  ],
+  "toyota:landcruiser": [
+   "landcruiser",
+   "landcruiserwagon"
+  ],
+  "toyota:pickup": [
+   "pickup",
+   "truck",
+   "toyotatruck",
+   "compactpickup",
+   "hilux"
+  ],
+  "toyota:highlander": [
+   "highlander",
+   "highlanderhybrid"
+  ],
+  "toyota:sienna": [
+   "sienna"
+  ],
+  "toyota:tacoma": [
+   "tacoma"
+  ],
+  "toyota:tundra": [
+   "tundra"
+  ],
+  "toyota:fjcruiser": [
+   "fjcruiser"
+  ],
+  "toyota:sequoia": [
+   "sequoia"
+  ],
+  "toyota:4runner": [
+   "4runner"
+  ],
+  "toyota:camry": [
+   "camry",
+   "camryhybrid",
+   "camrysolara"
+  ],
+  "toyota:solara": [
+   "solara",
+   "camrysolara"
+  ],
+  "toyota:avalon": [
+   "avalon",
+   "avalonhybrid"
+  ],
+  "toyota:venza": [
+   "venza"
+  ],
+  "toyota:chr": [
+   "chr"
+  ],
+  "toyota:bz4x": [
+   "bz4x",
+   "bz"
+  ],
+  "lexus:es": [
+   "es",
+   "es250",
+   "es300",
+   "es330",
+   "es350",
+   "es300h"
+  ],
+  "lexus:es300": [
+   "es",
+   "es300"
+  ],
+  "lexus:gs": [
+   "gs",
+   "gs300",
+   "gs350",
+   "gs400",
+   "gs430",
+   "gs450h",
+   "gs460",
+   "gsf",
+   "gs200t"
+  ],
+  "lexus:gs300": [
+   "gs",
+   "gs300"
+  ],
+  "lexus:gsf": [
+   "gs",
+   "gsf"
+  ],
+  "lexus:is": [
+   "is",
+   "is250",
+   "is300",
+   "is350",
+   "is200t",
+   "is500",
+   "isf",
+   "isc"
+  ],
+  "lexus:ls": [
+   "ls",
+   "ls400",
+   "ls430",
+   "ls460",
+   "ls500",
+   "ls600h",
+   "ls500h"
+  ],
+  "lexus:ls400": [
+   "ls",
+   "ls400"
+  ],
+  "lexus:lx": [
+   "lx",
+   "lx450",
+   "lx470",
+   "lx570",
+   "lx600",
+   "lx700h"
+  ],
+  "lexus:lx450": [
+   "lx",
+   "lx450"
+  ],
+  "lexus:gx": [
+   "gx",
+   "gx460",
+   "gx470",
+   "gx550"
+  ],
+  "lexus:rx": [
+   "rx",
+   "rx300",
+   "rx330",
+   "rx350",
+   "rx400h",
+   "rx450h",
+   "rx350l",
+   "rx450hl",
+   "rx500h"
+  ],
+  "lexus:rx300": [
+   "rx",
+   "rx300"
+  ],
+  "lexus:nx": [
+   "nx",
+   "nx200t",
+   "nx300",
+   "nx300h",
+   "nx250",
+   "nx350",
+   "nx350h",
+   "nx450h"
+  ],
+  "lexus:rc": [
+   "rc",
+   "rc200t",
+   "rc300",
+   "rc350",
+   "rcf"
+  ],
+  "lexus:rcf": [
+   "rc",
+   "rcf"
+  ],
+  "lexus:lc": [
+   "lc",
+   "lc500",
+   "lc500h"
+  ],
+  "lexus:ux": [
+   "ux",
+   "ux200",
+   "ux250h",
+   "ux300h"
+  ],
+  "lexus:sc300": [
+   "sc",
+   "sc300"
+  ],
+  "lexus:sc400": [
+   "sc",
+   "sc400"
+  ],
+  "acura:cltypes": [
+   "cl"
+  ],
+  "acura:integratyper": [
+   "integra"
+  ],
+  "acura:integra": [
+   "integra",
+   "integratyper"
+  ],
+  "honda:crv": [
+   "crv"
+  ],
+  "honda:hrv": [
+   "hrv"
+  ],
+  "honda:crosstour": [
+   "crosstour",
+   "accordcrosstour"
+  ],
+  "honda:delsol": [
+   "delsol",
+   "civicdelsol"
+  ],
+  "honda:crx": [
+   "crx",
+   "civiccrx"
+  ],
+  "honda:clarity": [
+   "clarity"
+  ],
+  "nissan:pickup": [
+   "pickup",
+   "truck",
+   "hardbody",
+   "d21",
+   "nissantruck"
+  ],
+  "nissan:titanxd": [
+   "titanxd",
+   "titan"
+  ],
+  "nissan:titan": [
+   "titan",
+   "titanxd"
+  ],
+  "nissan:z": [
+   "z",
+   "400z"
+  ],
+  "nissan:roguesport": [
+   "roguesport"
+  ],
+  "nissan:versanote": [
+   "versanote",
+   "versa"
+  ],
+  "nissan:nv1500": [
+   "nv",
+   "nv1500",
+   "nvcargo",
+   "nvpassenger"
+  ],
+  "nissan:nv2500": [
+   "nv",
+   "nv2500",
+   "nvcargo",
+   "nvpassenger"
+  ],
+  "nissan:nv3500": [
+   "nv",
+   "nv3500",
+   "nvcargo",
+   "nvpassenger"
+  ],
+  "nissan:nv200": [
+   "nv200"
+  ],
+  "infiniti:q70l": [
+   "q70"
+  ],
+  "infiniti:qx4": [
+   "qx4"
+  ],
+  "mazda:3": [
+   "mazda3",
+   "3"
+  ],
+  "mazda:6": [
+   "mazda6",
+   "6"
+  ],
+  "mazda:mazda3": [
+   "mazda3",
+   "3"
+  ],
+  "mazda:mazda5": [
+   "mazda5",
+   "5"
+  ],
+  "mazda:mazda6": [
+   "mazda6",
+   "6"
+  ],
+  "mazda:miata": [
+   "mx5",
+   "mx5miata",
+   "miata"
+  ],
+  "mazda:mx5miata": [
+   "mx5",
+   "mx5miata",
+   "miata"
+  ],
+  "mazda:mx5": [
+   "mx5",
+   "mx5miata",
+   "miata"
+  ],
+  "mazda:b2300": [
+   "b2300",
+   "bseries",
+   "b2300pickup"
+  ],
+  "mazda:b3000": [
+   "b3000",
+   "bseries"
+  ],
+  "mazda:b4000": [
+   "b4000",
+   "bseries"
+  ],
+  "mazda:b2600": [
+   "b2600",
+   "bseries"
+  ],
+  "mazda:b2200": [
+   "b2200",
+   "bseries"
+  ],
+  "mazda:cx9": [
+   "cx9"
+  ],
+  "mazda:cx5": [
+   "cx5"
+  ],
+  "mazda:cx3": [
+   "cx3"
+  ],
+  "mazda:cx30": [
+   "cx30"
+  ],
+  "mazda:cx50": [
+   "cx50"
+  ],
+  "mazda:cx70": [
+   "cx70"
+  ],
+  "mazda:cx90": [
+   "cx90"
+  ],
+  "mazda:mx30": [
+   "mx30"
+  ],
+  "mazda:mx6": [
+   "mx6"
+  ],
+  "mazda:rx7": [
+   "rx7"
+  ],
+  "mazda:millenia": [
+   "millenia"
+  ],
+  "mitsubishi:3000gt": [
+   "3000gt"
+  ],
+  "mitsubishi:eclipsespider": [
+   "eclipse",
+   "eclipsespyder"
+  ],
+  "mitsubishi:mirageg4": [
+   "mirageg4",
+   "mirage"
+  ],
+  "mitsubishi:outlanderphev": [
+   "outlander",
+   "outlanderphev"
+  ],
+  "mitsubishi:outlandersport": [
+   "outlandersport"
+  ],
+  "mitsubishi:i": [
+   "imiev",
+   "i",
+   "i miev"
+  ],
+  "mitsubishi:lancerevolution": [
+   "lancerevolution",
+   "lancer",
+   "evolution"
+  ],
+  "mitsubishi:mightymax": [
+   "mightymax",
+   "truck"
+  ],
+  "subaru:wrxsti": [
+   "wrx",
+   "wrxsti",
+   "imprezawrxsti",
+   "sti"
+  ],
+  "subaru:imprezawrxsti": [
+   "wrx",
+   "wrxsti",
+   "impreza"
+  ],
+  "subaru:wrx": [
+   "wrx",
+   "imprezawrx",
+   "impreza"
+  ],
+  "subaru:impreza": [
+   "impreza",
+   "imprezawagon",
+   "imprezaawd"
+  ],
+  "subaru:crosstrek": [
+   "crosstrek",
+   "xvcrosstrek"
+  ],
+  "subaru:brz": [
+   "brz"
+  ],
+  "subaru:legacy": [
+   "legacy",
+   "legacyawd"
+  ],
+  "subaru:outback": [
+   "outback",
+   "legacyoutback"
+  ],
+  "hyundai:santafeclassic": [
+   "santafe"
+  ],
+  "hyundai:santafesport": [
+   "santafe",
+   "santafesport"
+  ],
+  "hyundai:santafe": [
+   "santafe",
+   "santafesport",
+   "santafexl"
+  ],
+  "hyundai:ioniq5": [
+   "ioniq5",
+   "ioniq"
+  ],
+  "hyundai:ioniq": [
+   "ioniq",
+   "ioniqhybrid",
+   "ioniqelectric",
+   "ioniqplugin"
+  ],
+  "hyundai:elantragt": [
+   "elantragt",
+   "elantra"
+  ],
+  "hyundai:tiburonturbulence": [
+   "tiburon"
+  ],
+  "hyundai:xg300": [
+   "xg300",
+   "xg"
+  ],
+  "hyundai:xg350": [
+   "xg350",
+   "xg"
+  ],
+  "hyundai:santacruz": [
+   "santacruz"
+  ],
+  "kia:forte5": [
+   "forte",
+   "forte5"
+  ],
+  "kia:soulev": [
+   "soulev",
+   "soul"
+  ],
+  "kia:spectra5": [
+   "spectra",
+   "spectra5"
+  ],
+  "kia:sedona": [
+   "sedona",
+   "carnival"
+  ],
+  "kia:carnival": [
+   "carnival",
+   "sedona"
+  ],
+  "kia:sportage": [
+   "sportage"
+  ],
+  "genesis:g70": [
+   "g70"
+  ],
+  "genesis:gv70": [
+   "gv70"
+  ],
+  "genesis:gv80": [
+   "gv80"
+  ],
+  "volkswagen:id4": [
+   "id4",
+   "id 4"
+  ],
+  "volkswagen:gti": [
+   "gti",
+   "golfgti"
+  ],
+  "volkswagen:jettagli": [
+   "jetta",
+   "jettagli",
+   "gli"
+  ],
+  "volkswagen:gli": [
+   "jetta",
+   "gli",
+   "jettagli"
+  ],
+  "volkswagen:golfr": [
+   "golfr",
+   "golf"
+  ],
+  "volkswagen:golfsportwagen": [
+   "golf",
+   "golfsportwagen"
+  ],
+  "volkswagen:golfalltrack": [
+   "golfalltrack",
+   "golf"
+  ],
+  "volkswagen:egolf": [
+   "egolf",
+   "golf"
+  ],
+  "volkswagen:r32": [
+   "r32",
+   "golfr32"
+  ],
+  "volkswagen:rabbit": [
+   "rabbit",
+   "golf"
+  ],
+  "volkswagen:cabrio": [
+   "cabrio",
+   "cabriolet",
+   "golfcabrio"
+  ],
+  "volkswagen:beetle": [
+   "beetle",
+   "newbeetle"
+  ],
+  "volkswagen:arteonsr": [
+   "arteon"
+  ],
+  "volkswagen:tiguanlimited": [
+   "tiguan",
+   "tiguanlimited"
+  ],
+  "volkswagen:atlascrosssport": [
+   "atlascrosssport",
+   "atlas"
+  ],
+  "volkswagen:eurovan": [
+   "eurovan"
+  ],
+  "audi:a3quattro": [
+   "a3"
+  ],
+  "audi:a4quattro": [
+   "a4"
+  ],
+  "audi:a5quattro": [
+   "a5"
+  ],
+  "audi:a6quattro": [
+   "a6"
+  ],
+  "audi:a7quattro": [
+   "a7"
+  ],
+  "audi:a8quattro": [
+   "a8"
+  ],
+  "audi:q3quattro": [
+   "q3"
+  ],
+  "audi:ttquattro": [
+   "tt"
+  ],
+  "audi:ttrsquattro": [
+   "ttrs",
+   "tt"
+  ],
+  "audi:ttsquattro": [
+   "tts",
+   "tt"
+  ],
+  "audi:tts": [
+   "tts",
+   "tt"
+  ],
+  "audi:ttrs": [
+   "ttrs",
+   "tt"
+  ],
+  "audi:a3sportbacketron": [
+   "a3",
+   "a3etron"
+  ],
+  "audi:a4allroad": [
+   "a4allroad",
+   "a4",
+   "allroad"
+  ],
+  "audi:a5sportback": [
+   "a5"
+  ],
+  "audi:s5sportback": [
+   "s5"
+  ],
+  "audi:allroad": [
+   "allroad",
+   "a6allroad",
+   "a4allroad"
+  ],
+  "audi:etron": [
+   "etron",
+   "q8etron"
+  ],
+  "audi:etrons": [
+   "etron",
+   "etrons"
+  ],
+  "audi:s8l": [
+   "s8"
+  ],
+  "audi:rsmodels": [
+   "rs3",
+   "rs5",
+   "rs6",
+   "rs7",
+   "rsq8",
+   "rsetrongt"
+  ],
+  "audi:q6lsportbacketron": [
+   "q6etron",
+   "q6"
+  ],
+  "audi:q8sportbacketron": [
+   "q8etron",
+   "q8"
+  ],
+  "audi:q6etron": [
+   "q6etron",
+   "q6"
+  ],
+  "audi:q8etron": [
+   "q8etron",
+   "etron"
+  ],
+  "audi:a6etron": [
+   "a6etron",
+   "a6"
+  ],
+  "audi:s6etron": [
+   "s6etron",
+   "s6"
+  ],
+  "audi:sq6etron": [
+   "sq6etron",
+   "sq6"
+  ],
+  "audi:cabriolet": [
+   "cabriolet",
+   "80cabriolet",
+   "90cabriolet"
+  ],
+  "audi:coupe": [
+   "coupe",
+   "coupequattro",
+   "80coupe",
+   "90coupe"
+  ],
+  "bmw:mcoupe": [
+   "mcoupe",
+   "z3",
+   "z3m",
+   "z4m"
+  ],
+  "bmw:mroadster": [
+   "mroadster",
+   "z3",
+   "z3m",
+   "z4m"
+  ],
+  "bmw:4seriesgrancoupe": [
+   "4series"
+  ],
+  "bmw:x3m": [
+   "x3",
+   "x3m"
+  ],
+  "bmw:x4m": [
+   "x4",
+   "x4m"
+  ],
+  "bmw:x5m": [
+   "x5",
+   "x5m"
+  ],
+  "bmw:x6m": [
+   "x6",
+   "x6m"
+  ],
+  "bmw:i3s": [
+   "i3"
+  ],
+  "bmw:alpinab7": [
+   "alpinab7",
+   "7series",
+   "b7"
+  ],
+  "bmw:alpinab6xdrivegrancoupe": [
+   "alpinab6",
+   "6series",
+   "b6"
+  ],
+  "mercedesbenz:190e": [
+   "190e",
+   "190",
+   "190class"
+  ],
+  "mercedesbenz:amggt": [
+   "amggt",
+   "amggts",
+   "amggtc",
+   "amggtr",
+   "amggt4door",
+   "amggt43",
+   "amggt53",
+   "amggt63"
+  ],
+  "mercedesbenz:amggtc": [
+   "amggt"
+  ],
+  "mercedesbenz:amggtr": [
+   "amggt"
+  ],
+  "mercedesbenz:amggts": [
+   "amggt"
+  ],
+  "mercedesbenz:cla": [
+   "cla",
+   "claclass"
+  ],
+  "mercedesbenz:claclass": [
+   "cla"
+  ],
+  "mercedesbenz:claclassamg": [
+   "cla"
+  ],
+  "mercedesbenz:cls": [
+   "cls",
+   "clsclass"
+  ],
+  "mercedesbenz:clsclass": [
+   "cls"
+  ],
+  "mercedesbenz:clsclassamg": [
+   "cls"
+  ],
+  "mercedesbenz:glc": [
+   "glc",
+   "glcclass",
+   "glccoupe"
+  ],
+  "mercedesbenz:glcclass": [
+   "glc"
+  ],
+  "mercedesbenz:glcclasscoupe": [
+   "glc",
+   "glccoupe"
+  ],
+  "mercedesbenz:gle": [
+   "gle",
+   "gleclass",
+   "glecoupe"
+  ],
+  "mercedesbenz:gleclass": [
+   "gle"
+  ],
+  "mercedesbenz:gleclasscoupe": [
+   "gle",
+   "glecoupe"
+  ],
+  "mercedesbenz:gls": [
+   "gls",
+   "glsclass"
+  ],
+  "mercedesbenz:gla": [
+   "gla",
+   "glaclass"
+  ],
+  "mercedesbenz:glaclass": [
+   "gla"
+  ],
+  "mercedesbenz:glaclassamg": [
+   "gla"
+  ],
+  "mercedesbenz:glb": [
+   "glb",
+   "glbclass"
+  ],
+  "mercedesbenz:glbclass": [
+   "glb"
+  ],
+  "mercedesbenz:glkclass": [
+   "glk"
+  ],
+  "mercedesbenz:aclassamg": [
+   "aclass",
+   "a"
+  ],
+  "mercedesbenz:cclassamg": [
+   "cclass",
+   "c"
+  ],
+  "mercedesbenz:eclassamg": [
+   "eclass",
+   "e"
+  ],
+  "mercedesbenz:sclassamg": [
+   "sclass",
+   "s"
+  ],
+  "mercedesbenz:slclassamg": [
+   "slclass",
+   "sl"
+  ],
+  "mercedesbenz:slkclassamg": [
+   "slkclass",
+   "slk"
+  ],
+  "mercedesbenz:clclassamg": [
+   "clclass",
+   "cl"
+  ],
+  "mercedesbenz:gclassamg": [
+   "gclass",
+   "g"
+  ],
+  "mercedesbenz:mclassamg": [
+   "mclass",
+   "m",
+   "ml"
+  ],
+  "mercedesbenz:eclasscoupe": [
+   "eclass",
+   "e"
+  ],
+  "mercedesbenz:eclasscabriolet": [
+   "eclass",
+   "e"
+  ],
+  "mercedesbenz:sclasscoupe": [
+   "sclass",
+   "s"
+  ],
+  "mercedesbenz:mclass": [
+   "mclass",
+   "ml",
+   "m"
+  ],
+  "mercedesbenz:slcclass": [
+   "slc",
+   "slcclass"
+  ],
+  "mercedesbenz:slkclass": [
+   "slk",
+   "slkclass"
+  ],
+  "mercedesbenz:slclass": [
+   "sl",
+   "slclass"
+  ],
+  "mercedesbenz:clclass": [
+   "cl",
+   "clclass"
+  ],
+  "mercedesbenz:gclass": [
+   "g",
+   "gclass"
+  ],
+  "mercedesbenz:cclass": [
+   "c",
+   "cclass"
+  ],
+  "mercedesbenz:eclass": [
+   "e",
+   "eclass"
+  ],
+  "mercedesbenz:sclass": [
+   "s",
+   "sclass"
+  ],
+  "mercedesbenz:g5504x4": [
+   "g",
+   "gclass",
+   "g550"
+  ],
+  "mercedesbenz:maybachs560": [
+   "sclass",
+   "maybach",
+   "maybachs560"
+  ],
+  "mercedesbenz:maybachs650": [
+   "sclass",
+   "maybach",
+   "maybachs650"
+  ],
+  "mercedesbenz:metris": [
+   "metris"
+  ],
+  "mercedesbenz:sprinter2500": [
+   "sprinter"
+  ],
+  "mercedesbenz:sprinter3500": [
+   "sprinter"
+  ],
+  "mercedesbenz:sprinter3500xd": [
+   "sprinter"
+  ],
+  "mercedesbenz:eqe": [
+   "eqe",
+   "eqesuv",
+   "eqesedan"
+  ],
+  "mercedesbenz:eqs": [
+   "eqs",
+   "eqssuv",
+   "eqssedan"
+  ],
+  "mercedesbenz:eqb": [
+   "eqb"
+  ],
+  "mercedesbenz:eqa": [
+   "eqa"
+  ],
+  "porsche:718": [
+   "718",
+   "718boxster",
+   "718cayman",
+   "boxster",
+   "cayman"
+  ],
+  "porsche:718boxster": [
+   "718",
+   "boxster",
+   "718boxster"
+  ],
+  "porsche:718cayman": [
+   "718",
+   "cayman",
+   "718cayman"
+  ],
+  "porsche:boxster": [
+   "boxster",
+   "718boxster",
+   "718"
+  ],
+  "porsche:cayman": [
+   "cayman",
+   "718cayman",
+   "718"
+  ],
+  "porsche:911": [
+   "911",
+   "911carrera",
+   "911turbo",
+   "911gt3"
+  ],
+  "porsche:918": [
+   "918",
+   "918spyder"
+  ],
+  "jaguar:xjr575": [
+   "xj",
+   "xjr"
+  ],
+  "jaguar:xj6": [
+   "xj",
+   "xj6"
+  ],
+  "jaguar:xj8": [
+   "xj",
+   "xj8"
+  ],
+  "jaguar:xj": [
+   "xj",
+   "xj6",
+   "xj8",
+   "xjr",
+   "xjl",
+   "xjseries"
+  ],
+  "jaguar:xjs": [
+   "xjs"
+  ],
+  "jaguar:xk8": [
+   "xk",
+   "xk8"
+  ],
+  "jaguar:xk": [
+   "xk",
+   "xk8",
+   "xkr"
+  ],
+  "jaguar:stype": [
+   "stype"
+  ],
+  "jaguar:xtype": [
+   "xtype"
+  ],
+  "jaguar:ftype": [
+   "ftype"
+  ],
+  "jaguar:fpace": [
+   "fpace"
+  ],
+  "jaguar:epace": [
+   "epace"
+  ],
+  "jaguar:ipace": [
+   "ipace"
+  ],
+  "landrover:defender90": [
+   "defender",
+   "defender90"
+  ],
+  "landrover:defender": [
+   "defender",
+   "defender90",
+   "defender110",
+   "defender130"
+  ],
+  "landrover:rangerover": [
+   "rangerover"
+  ],
+  "landrover:rangeroversport": [
+   "rangeroversport"
+  ],
+  "landrover:rangeroverevoque": [
+   "rangeroverevoque",
+   "evoque"
+  ],
+  "landrover:rangerovervelar": [
+   "rangerovervelar",
+   "velar"
+  ],
+  "landrover:discovery": [
+   "discovery",
+   "discoveryseriesii",
+   "lr3",
+   "lr4"
+  ],
+  "landrover:discoverysport": [
+   "discoverysport"
+  ],
+  "mini:cooper": [
+   "cooper",
+   "coopers",
+   "cooperhardtop",
+   "hardtop",
+   "minicooper",
+   "cooperconvertible",
+   "cooper2door",
+   "cooper4door",
+   "hardtop2door",
+   "hardtop4door",
+   "convertible",
+   "coopercoupe",
+   "cooperroadster",
+   "cooperse",
+   "johncooperworks",
+   "jcw"
+  ],
+  "mini:clubman": [
+   "clubman",
+   "cooperclubman"
+  ],
+  "mini:cooperclubman": [
+   "clubman",
+   "cooperclubman"
+  ],
+  "mini:countryman": [
+   "countryman",
+   "coopercountryman"
+  ],
+  "mini:coopercountryman": [
+   "countryman",
+   "coopercountryman"
+  ],
+  "mini:roadster": [
+   "roadster",
+   "cooperroadster"
+  ],
+  "volvo:s60crosscountry": [
+   "s60",
+   "s60crosscountry"
+  ],
+  "volvo:v60crosscountry": [
+   "v60",
+   "v60crosscountry"
+  ],
+  "volvo:v90crosscountry": [
+   "v90",
+   "v90crosscountry"
+  ],
+  "volvo:ex40": [
+   "ex40",
+   "xc40"
+  ],
+  "volvo:ec40": [
+   "ec40",
+   "c40"
+  ],
+  "saturn:sseries": [
+   "sl",
+   "sl1",
+   "sl2",
+   "sc",
+   "sc1",
+   "sc2",
+   "sw",
+   "sw1",
+   "sw2",
+   "sseries"
+  ],
+  "saturn:sl": [
+   "sl",
+   "sl1",
+   "sl2",
+   "sseries"
+  ],
+  "saturn:sc": [
+   "sc",
+   "sc1",
+   "sc2",
+   "sseries"
+  ],
+  "saturn:sw": [
+   "sw",
+   "sw1",
+   "sw2",
+   "sseries"
+  ],
+  "saturn:lseries": [
+   "l",
+   "l100",
+   "l200",
+   "l300",
+   "lw",
+   "lw200",
+   "lw300",
+   "lseries",
+   "ls",
+   "ls1",
+   "ls2"
+  ],
+  "saturn:ion": [
+   "ion"
+  ],
+  "saturn:vue": [
+   "vue"
+  ],
+  "saturn:sky": [
+   "sky"
+  ],
+  "scion:frs": [
+   "frs"
+  ],
+  "scion:tc": [
+   "tc"
+  ],
+  "scion:xb": [
+   "xb"
+  ],
+  "scion:ia": [
+   "ia"
+  ],
+  "pontiac:transam": [
+   "firebird",
+   "transam",
+   "firebirdtransam"
+  ],
+  "pontiac:firebird": [
+   "firebird",
+   "transam"
+  ],
+  "pontiac:grandam": [
+   "grandam"
+  ],
+  "pontiac:grandprix": [
+   "grandprix"
+  ],
+  "pontiac:g6": [
+   "g6"
+  ],
+  "pontiac:g8": [
+   "g8"
+  ],
+  "pontiac:gto": [
+   "gto"
+  ],
+  "pontiac:sunfire": [
+   "sunfire"
+  ],
+  "pontiac:solstice": [
+   "solstice"
+  ],
+  "pontiac:bonneville": [
+   "bonneville"
+  ],
+  "oldsmobile:88": [
+   "88",
+   "eightyeight",
+   "delta88",
+   "lss"
+  ],
+  "oldsmobile:98": [
+   "98",
+   "ninetyeight",
+   "regency"
+  ],
+  "oldsmobile:cutlass": [
+   "cutlass",
+   "cutlassciera",
+   "cutlasssupreme",
+   "cutlasscalais"
+  ],
+  "oldsmobile:cutlassciera": [
+   "cutlassciera",
+   "ciera",
+   "cutlass"
+  ],
+  "oldsmobile:cutlasssupreme": [
+   "cutlasssupreme",
+   "cutlass"
+  ],
+  "buick:lesabre": [
+   "lesabre"
+  ],
+  "buick:parkavenue": [
+   "parkavenue"
+  ],
+  "buick:roadmaster": [
+   "roadmaster"
+  ],
+  "buick:regal": [
+   "regal",
+   "regalsportback",
+   "regaltourx"
+  ],
+  "buick:encoregx": [
+   "encoregx"
+  ],
+  "buick:encore": [
+   "encore"
+  ],
+  "isuzu:pickup": [
+   "pickup",
+   "pup",
+   "isuzupickup",
+   "truck"
+  ],
+  "isuzu:amigo": [
+   "amigo"
+  ],
+  "isuzu:rodeo": [
+   "rodeo",
+   "rodeosport"
+  ],
+  "isuzu:trooper": [
+   "trooper",
+   "trooperii"
+  ],
+  "isuzu:oasis": [
+   "oasis"
+  ],
+  "isuzu:axiom": [
+   "axiom"
+  ],
+  "isuzu:vehicross": [
+   "vehicross"
+  ],
+  "suzuki:grandvitara": [
+   "grandvitara"
+  ],
+  "suzuki:x90": [
+   "x90"
+  ],
+  "suzuki:sx4": [
+   "sx4"
+  ],
+  "suzuki:sidekick": [
+   "sidekick"
+  ],
+  "suzuki:samurai": [
+   "samurai"
+  ],
+  "suzuki:swift": [
+   "swift"
+  ],
+  "suzuki:kizashi": [
+   "kizashi"
+  ],
+  "suzuki:vitara": [
+   "vitara",
+   "grandvitara"
+  ],
+  "geo:metro": [
+   "metro",
+   "geometro"
+  ],
+  "geo:prizm": [
+   "prizm",
+   "geoprizm"
+  ],
+  "geo:storm": [
+   "storm",
+   "geostorm"
+  ],
+  "tesla:model3": [
+   "model3"
+  ],
+  "tesla:models": [
+   "models"
+  ],
+  "tesla:modelx": [
+   "modelx"
+  ],
+  "tesla:modely": [
+   "modely"
+  ],
+  "tesla:cybertruck": [
+   "cybertruck"
+  ],
+  "polestar:polestar1": [
+   "1",
+   "polestar1",
+   "ps1"
+  ],
+  "polestar:polestar2": [
+   "2",
+   "polestar2",
+   "ps2"
+  ],
+  "rivian:r1t": [
+   "r1t"
+  ],
+  "rivian:r1s": [
+   "r1s"
+  ],
+  "lucid:air": [
+   "air"
+  ],
+  "lucid:gravity": [
+   "gravity"
+  ],
+  "fiat:124spider": [
+   "124spider",
+   "124"
+  ],
+  "fiat:500": [
+   "500",
+   "500c",
+   "500e",
+   "500abarth"
+  ],
+  "fiat:500l": [
+   "500l"
+  ],
+  "fiat:500x": [
+   "500x"
+  ],
+  "ferrari:488": [
+   "488",
+   "488gtb",
+   "488spider",
+   "488pista"
+  ],
+  "ferrari:488gtb": [
+   "488"
+  ],
+  "ferrari:488spider": [
+   "488"
+  ],
+  "ferrari:f8": [
+   "f8",
+   "f8tributo",
+   "f8spider"
+  ],
+  "ferrari:sf90": [
+   "sf90",
+   "sf90stradale",
+   "sf90spider"
+  ],
+  "ferrari:812superfast": [
+   "812",
+   "812superfast"
+  ],
+  "ferrari:californiat": [
+   "california",
+   "californiat"
+  ],
+  "ferrari:gtc4lussot": [
+   "gtc4lusso"
+  ],
+  "ferrari:roma": [
+   "roma"
+  ],
+  "ferrari:portofino": [
+   "portofino",
+   "portofinom"
+  ],
+  "lamborghini:huracan": [
+   "huracan"
+  ],
+  "lamborghini:aventador": [
+   "aventador"
+  ],
+  "lamborghini:urus": [
+   "urus"
+  ],
+  "mclaren:570gt": [
+   "570gt",
+   "570s",
+   "570"
+  ],
+  "mclaren:570s": [
+   "570s",
+   "570"
+  ],
+  "mclaren:720s": [
+   "720s",
+   "720"
+  ],
+  "mclaren:gt": [
+   "gt"
+  ],
+  "mclaren:artura": [
+   "artura"
+  ],
+  "bentley:continental": [
+   "continental",
+   "continentalgt",
+   "continentalflyingspur",
+   "continentalgtc"
+  ],
+  "bentley:continentalgt": [
+   "continental",
+   "continentalgt",
+   "continentalgtc"
+  ],
+  "bentley:flyingspur": [
+   "flyingspur",
+   "continentalflyingspur"
+  ],
+  "bentley:bentayga": [
+   "bentayga"
+  ],
+  "bentley:mulsanne": [
+   "mulsanne"
+  ],
+  "rollsroyce:cullinan": [
+   "cullinan"
+  ],
+  "rollsroyce:ghost": [
+   "ghost"
+  ],
+  "rollsroyce:phantom": [
+   "phantom"
+  ],
+  "rollsroyce:dawn": [
+   "dawn"
+  ],
+  "rollsroyce:wraith": [
+   "wraith"
+  ],
+  "astonmartin:vantage": [
+   "vantage",
+   "v8vantage",
+   "v12vantage"
+  ],
+  "astonmartin:db11": [
+   "db11"
+  ],
+  "astonmartin:dbx": [
+   "dbx"
+  ],
+  "astonmartin:rapide": [
+   "rapide",
+   "rapides"
+  ],
+  "astonmartin:vanquish": [
+   "vanquish"
+  ],
+  "lotus:elise": [
+   "elise"
+  ],
+  "lotus:evora": [
+   "evora",
+   "evora400",
+   "evoragt"
+  ],
+  "lotus:emira": [
+   "emira"
+  ],
+  "maserati:ghibli": [
+   "ghibli"
+  ],
+  "maserati:granturismo": [
+   "granturismo",
+   "granturismoconvertible"
+  ],
+  "maserati:levante": [
+   "levante"
+  ],
+  "maserati:quattroporte": [
+   "quattroporte"
+  ],
+  "smart:fortwo": [
+   "fortwo",
+   "fortwoelectric"
+  ],
+  "karma:revero": [
+   "revero",
+   "reverogt"
+  ],
+  "hummer:h1": [
+   "h1",
+   "h1alpha"
+  ],
+  "hummer:h2": [
+   "h2",
+   "h2sut"
+  ],
+  "hummer:h3": [
+   "h3",
+   "h3t"
+  ],
+  "daewoo:lanos": [
+   "lanos"
+  ],
+  "daewoo:leganza": [
+   "leganza"
+  ],
+  "daewoo:nubira": [
+   "nubira"
+  ],
+  "saab:93": [
+   "93",
+   "9 3"
+  ],
+  "saab:95": [
+   "95",
+   "9 5"
+  ],
+  "saab:900": [
+   "900"
+  ],
+  "saab:9000": [
+   "9000"
+  ],
+  "chevrolet:sonic": [
+   "sonic"
+  ],
+  "chevrolet:spark": [
+   "spark",
+   "sparkev"
+  ],
+  "chevrolet:volt": [
+   "volt"
+  ],
+  "chevrolet:cruze": [
+   "cruze"
+  ],
+  "chevrolet:trax": [
+   "trax"
+  ],
+  "chevrolet:traverse": [
+   "traverse"
+  ],
+  "dodge:dakota": [
+   "dakota"
+  ],
+  "dodge:durango": [
+   "durango"
+  ],
+  "dodge:journey": [
+   "journey"
+  ],
+  "dodge:nitro": [
+   "nitro"
+  ],
+  "dodge:caliber": [
+   "caliber"
+  ],
+  "dodge:magnum": [
+   "magnum"
+  ],
+  "dodge:viper": [
+   "viper",
+   "srtviper"
+  ],
+  "dodge:stealth": [
+   "stealth"
+  ],
+  "dodge:colt": [
+   "colt"
+  ],
+  "dodge:hornet": [
+   "hornet"
+  ],
+  "dodge:dart": [
+   "dart"
+  ],
+  "dodge:avenger": [
+   "avenger"
+  ],
+  "dodge:neon": [
+   "neon",
+   "srt4"
+  ],
+  "dodge:intrepid": [
+   "intrepid"
+  ],
+  "dodge:stratus": [
+   "stratus"
+  ],
+  "dodge:spirit": [
+   "spirit"
+  ],
+  "dodge:dynasty": [
+   "dynasty"
+  ],
+  "dodge:monaco": [
+   "monaco"
+  ],
+  "plymouth:neon": [
+   "neon"
+  ],
+  "plymouth:voyager": [
+   "voyager",
+   "grandvoyager"
+  ],
+  "plymouth:acclaim": [
+   "acclaim"
+  ],
+  "plymouth:laser": [
+   "laser"
+  ],
+  "plymouth:sundance": [
+   "sundance"
+  ],
+  "plymouth:breeze": [
+   "breeze"
+  ],
+  "plymouth:prowler": [
+   "prowler"
+  ],
+  "chrysler:prowler": [
+   "prowler"
+  ],
+  "chrysler:crossfire": [
+   "crossfire"
+  ],
+  "chrysler:sebring": [
+   "sebring"
+  ],
+  "chrysler:cirrus": [
+   "cirrus"
+  ],
+  "chrysler:concorde": [
+   "concorde"
+  ],
+  "chrysler:lhs": [
+   "lhs"
+  ],
+  "chrysler:newyorker": [
+   "newyorker"
+  ],
+  "chrysler:lebaron": [
+   "lebaron"
+  ],
+  "chrysler:fifthavenue": [
+   "fifthavenue",
+   "newyorkerfifthavenue"
+  ],
+  "chrysler:imperial": [
+   "imperial"
+  ],
+  "chrysler:dynasty": [
+   "dynasty"
+  ],
+  "chrysler:voyager": [
+   "voyager",
+   "grandvoyager"
+  ],
+  "chrysler:200": [
+   "200"
+  ],
+  "chevrolet:ck": [
+   "ck",
+   "gmt400",
+   "c1500",
+   "k1500"
+  ],
+  "chevrolet:camaro": [
+   "camaro"
+  ],
+  "chevrolet:corvette": [
+   "corvette"
+  ],
+  "chevrolet:impala": [
+   "impala",
+   "impalalimited"
+  ],
+  "chevrolet:malibu": [
+   "malibu",
+   "malibuclassic",
+   "malibumaxx"
+  ],
+  "chevrolet:montecarlo": [
+   "montecarlo"
+  ],
+  "chevrolet:caprice": [
+   "caprice",
+   "capriceppv"
+  ],
+  "chevrolet:lumina": [
+   "lumina",
+   "luminaapv"
+  ],
+  "chevrolet:beretta": [
+   "beretta"
+  ],
+  "chevrolet:corsica": [
+   "corsica"
+  ],
+  "chevrolet:cavalier": [
+   "cavalier"
+  ],
+  "chevrolet:colorado": [
+   "colorado"
+  ],
+  "chevrolet:equinox": [
+   "equinox"
+  ],
+  "chevrolet:blazer": [
+   "blazer",
+   "s10blazer",
+   "blazerev",
+   "k5blazer"
+  ],
+  "chevrolet:suburban": [
+   "suburban",
+   "suburban1500",
+   "suburban2500"
+  ],
+  "chevrolet:avalanche": [
+   "avalanche",
+   "avalanche1500",
+   "avalanche2500"
+  ],
+  "gmc:acadia": [
+   "acadia",
+   "acadialimited"
+  ],
+  "gmc:canyon": [
+   "canyon"
+  ],
+  "gmc:envoy": [
+   "envoy",
+   "envoyxl",
+   "envoyxuv"
+  ],
+  "gmc:terrain": [
+   "terrain"
+  ],
+  "gmc:yukon": [
+   "yukon",
+   "yukonxl",
+   "yukondenali"
+  ],
+  "gmc:sonoma": [
+   "sonoma",
+   "s15"
+  ],
+  "gmc:suburban": [
+   "suburban",
+   "yukonxl"
+  ],
+  "gmc:sierra1500": [
+   "sierra",
+   "sierra1500",
+   "c1500",
+   "k1500",
+   "ck"
+  ],
+  "gmc:sierra2500hd": [
+   "sierra",
+   "sierra2500",
+   "sierra2500hd",
+   "c2500",
+   "k2500"
+  ],
+  "gmc:sierra3500hd": [
+   "sierra",
+   "sierra3500",
+   "sierra3500hd",
+   "c3500",
+   "k3500"
+  ],
+  "chevrolet:silverado1500": [
+   "silverado",
+   "silverado1500",
+   "silverado1500ld",
+   "c1500",
+   "k1500",
+   "ck"
+  ],
+  "chevrolet:silverado2500hd": [
+   "silverado",
+   "silverado2500",
+   "silverado2500hd",
+   "c2500",
+   "k2500"
+  ],
+  "chevrolet:silverado3500hd": [
+   "silverado",
+   "silverado3500",
+   "silverado3500hd",
+   "c3500",
+   "k3500"
+  ],
+  "nissan:240sx": [
+   "240sx"
+  ],
+  "nissan:300zx": [
+   "300zx"
+  ],
+  "nissan:370z": [
+   "370z"
+  ],
+  "nissan:gtr": [
+   "gtr"
+  ],
+  "nissan:xterra": [
+   "xterra"
+  ],
+  "nissan:frontier": [
+   "frontier"
+  ],
+  "nissan:armada": [
+   "armada"
+  ],
+  "nissan:quest": [
+   "quest"
+  ],
+  "nissan:kicks": [
+   "kicks"
+  ],
+  "nissan:leaf": [
+   "leaf"
+  ],
+  "ford:aerostar": [
+   "aerostar"
+  ],
+  "ford:windstar": [
+   "windstar"
+  ],
+  "ford:excursion": [
+   "excursion"
+  ],
+  "ford:expedition": [
+   "expedition",
+   "expeditionmax",
+   "expeditionel"
+  ],
+  "ford:explorer": [
+   "explorer",
+   "explorersport"
+  ],
+  "ford:crownvictoria": [
+   "crownvictoria",
+   "crownvic",
+   "ltdcrownvictoria"
+  ],
+  "ford:contour": [
+   "contour"
+  ],
+  "ford:probe": [
+   "probe"
+  ],
+  "ford:escort": [
+   "escort",
+   "escortzx2"
+  ],
+  "ford:focus": [
+   "focus",
+   "focuselectric"
+  ],
+  "ford:fusion": [
+   "fusion",
+   "fusionhybrid",
+   "fusionenergi"
+  ],
+  "ford:fiesta": [
+   "fiesta"
+  ],
+  "ford:flex": [
+   "flex"
+  ],
+  "ford:edge": [
+   "edge"
+  ],
+  "ford:escape": [
+   "escape",
+   "escapehybrid"
+  ],
+  "ford:ecosport": [
+   "ecosport"
+  ],
+  "ford:ranger": [
+   "ranger"
+  ],
+  "ford:maverick": [
+   "maverick"
+  ],
+  "ford:bronco": [
+   "bronco"
+  ],
+  "ford:gt": [
+   "gt",
+   "fordgt"
+  ],
+  "ford:thunderbird": [
+   "thunderbird"
+  ],
+  "ford:taurus": [
+   "taurus",
+   "taurussho",
+   "taurusx"
+  ],
+  "ford:mustang": [
+   "mustang",
+   "mustanggt",
+   "shelbygt350",
+   "shelbygt500",
+   "mustangshelby"
+  ],
+  "honda:accord": [
+   "accord",
+   "accordhybrid",
+   "accordcrosstour"
+  ],
+  "honda:civic": [
+   "civic",
+   "civichybrid",
+   "civicsi",
+   "civictyper",
+   "civicdelsol",
+   "civiccrx"
+  ],
+  "honda:fit": [
+   "fit",
+   "fitev"
+  ],
+  "honda:insight": [
+   "insight"
+  ],
+  "honda:odyssey": [
+   "odyssey"
+  ],
+  "honda:passport": [
+   "passport"
+  ],
+  "honda:pilot": [
+   "pilot"
+  ],
+  "honda:ridgeline": [
+   "ridgeline"
+  ],
+  "honda:element": [
+   "element"
+  ],
+  "honda:prelude": [
+   "prelude"
+  ],
+  "honda:s2000": [
+   "s2000"
+  ],
+  "honda:prologue": [
+   "prologue"
+  ],
+  "acura:mdx": [
+   "mdx"
+  ],
+  "acura:rdx": [
+   "rdx"
+  ],
+  "acura:tlx": [
+   "tlx"
+  ],
+  "acura:tl": [
+   "tl"
+  ],
+  "acura:tsx": [
+   "tsx"
+  ],
+  "acura:rl": [
+   "rl"
+  ],
+  "acura:rlx": [
+   "rlx"
+  ],
+  "acura:ilx": [
+   "ilx"
+  ],
+  "acura:rsx": [
+   "rsx"
+  ],
+  "acura:nsx": [
+   "nsx"
+  ],
+  "acura:zdx": [
+   "zdx"
+  ],
+  "acura:legend": [
+   "legend"
+  ],
+  "acura:cl": [
+   "cl"
+  ],
+  "acura:adx": [
+   "adx"
+  ]
+ },
+ "modelPatterns": [
+  {
+   "make": "mercedesbenz",
+   "re": "^(c|e|s|g|m|ml|sl|slk|slc|cl|cls|cla|gla|glb|glc|gle|gls|glk|gl|a|b|r|amggt|eqe|eqs|eqb|eqa|eqc)(\\d{2,3}[a-z]{0,3})?$",
+   "to": "$1",
+   "map": {
+    "ml": "mclass",
+    "m": "mclass",
+    "gl": "gls",
+    "c": "cclass",
+    "e": "eclass",
+    "s": "sclass",
+    "g": "gclass",
+    "sl": "slclass",
+    "slk": "slkclass",
+    "slc": "slcclass",
+    "cl": "clclass",
+    "glk": "glkclass",
+    "a": "aclass",
+    "b": "bclass",
+    "r": "rclass"
+   }
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(?:amg|mercedesamg)(c|e|s|g|sl|slk|slc|cl|cls|cla|gla|glb|glc|gle|gls|glk|a)(\\d{2,3}[a-z]{0,3})?$",
+   "to": "$1",
+   "map": {
+    "c": "cclass",
+    "e": "eclass",
+    "s": "sclass",
+    "g": "gclass",
+    "sl": "slclass",
+    "slk": "slkclass",
+    "slc": "slcclass",
+    "cl": "clclass",
+    "glk": "glkclass",
+    "a": "aclass"
+   }
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(c|e|s|g|sl|slk|slc|cl|cls|cla|gla|glb|glc|gle|gls|glk|a)(\\d{2,3})amg[a-z]*$",
+   "to": "$1",
+   "map": {
+    "c": "cclass",
+    "e": "eclass",
+    "s": "sclass",
+    "g": "gclass",
+    "sl": "slclass",
+    "slk": "slkclass",
+    "slc": "slcclass",
+    "cl": "clclass",
+    "glk": "glkclass",
+    "a": "aclass"
+   }
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^maybach(s\\d{3}|gls\\d{3}|s|gls)$",
+   "to": "sclass"
+  },
+  {
+   "make": "bmw",
+   "re": "^(\\d)\\d{2}[a-z]{0,3}(?:xdrive|gt|grancoupe|granturismo|convertible|coupe|sedan|wagon|sportswagon|touring)*$",
+   "to": "$1series"
+  },
+  {
+   "make": "bmw",
+   "re": "^(\\d)series[a-z]*$",
+   "to": "$1series"
+  },
+  {
+   "make": "bmw",
+   "re": "^activehybrid(\\d)$",
+   "to": "$1series"
+  },
+  {
+   "make": "bmw",
+   "re": "^m(\\d)\\d{2}[a-z]*$",
+   "to": "$1series"
+  },
+  {
+   "make": "bmw",
+   "re": "^(x\\d|z\\d|i\\d|ix|xm|m\\d)(?:m|xdrive|sdrive|edrive)?\\d{0,3}[a-z]{0,2}$",
+   "to": "$1"
+  },
+  {
+   "make": "bmw",
+   "re": "^alpinab(\\d)[a-z]*$",
+   "to": "alpinab$1"
+  },
+  {
+   "make": "lexus",
+   "re": "^(es|gs|is|ls|lx|gx|rx|nx|rc|lc|ux|sc|hs|ct|tx|lfa|rz|lm)\\s?\\d{0,3}[a-z]{0,3}$",
+   "to": "$1"
+  },
+  {
+   "make": "infiniti",
+   "re": "^(q|qx|g|m|fx|ex|jx|i|j)(\\d{2,3})[a-z]{0,2}$",
+   "to": "$1$2"
+  },
+  {
+   "make": "audi",
+   "re": "^(a|s|rs|q|sq|rsq|tt|tts|ttrs)(\\d)[a-z]*(?:etron|allroad|sportback|quattro|cabriolet|avant)*$",
+   "to": "$1$2"
+  },
+  {
+   "make": "porsche",
+   "re": "^(911|718|boxster|cayman|cayenne|macan|panamera|taycan|928|944|968|918)[a-z0-9]*$",
+   "to": "$1"
+  },
+  {
+   "make": "cadillac",
+   "re": "^(escalade|ct\\d|xt\\d|ats|cts|sts|dts|xts|xlr|srx|elr|lyriq|optiq|vistiq|celestiq)(v|esv|ext|iq|coupe|wagon|blackwing)*$",
+   "to": "$1"
+  },
+  {
+   "make": "jaguar",
+   "re": "^(xj|xk|xf|xe|ftype|fpace|epace|ipace|stype|xtype|xjs)(\\d|l|r|s|sport|series|supercharged|portfolio|\\w)*$",
+   "to": "$1"
+  },
+  {
+   "make": "landrover",
+   "re": "^(rangerover)(sport|evoque|velar)?(?:\\w*)$",
+   "to": "$1$2"
+  },
+  {
+   "make": "landrover",
+   "re": "^(discovery)(sport)?(?:\\w*)$",
+   "to": "$1$2"
+  },
+  {
+   "make": "landrover",
+   "re": "^(defender)(?:\\d+|\\w)*$",
+   "to": "$1"
+  },
+  {
+   "make": "volvo",
+   "re": "^(s|v|xc|c|ex|ec|es)(\\d{2})[a-z]*$",
+   "to": "$1$2"
+  },
+  {
+   "make": "mini",
+   "re": "^(?:mini)?cooper(?:s|se|jcw|johncooperworks)?(hardtop|clubman|countryman|convertible|coupe|roadster|paceman|2door|4door)?[a-z0-9]*$",
+   "to": "cooper$1",
+   "map": {
+    "cooperhardtop": "cooper",
+    "cooperconvertible": "cooper",
+    "coopercoupe": "cooper",
+    "cooper2door": "cooper",
+    "cooper4door": "cooper",
+    "cooperclubman": "clubman",
+    "coopercountryman": "countryman",
+    "cooperroadster": "roadster",
+    "cooperpaceman": "paceman",
+    "cooper": "cooper"
+   }
+  },
+  {
+   "make": "mini",
+   "re": "^(hardtop|clubman|countryman|convertible|coupe|roadster|paceman)[a-z0-9]*$",
+   "to": "$1",
+   "map": {
+    "hardtop": "cooper",
+    "convertible": "cooper",
+    "coupe": "cooper"
+   }
+  },
+  {
+   "make": "genesis",
+   "re": "^(g|gv)(\\d{2})[a-z]*$",
+   "to": "$1$2"
+  },
+  {
+   "make": "tesla",
+   "re": "^(model[3sxy]|cybertruck|roadster)[a-z0-9]*$",
+   "to": "$1"
+  },
+  {
+   "make": "ram",
+   "re": "^(?:ram)?(1500|2500|3500)[a-z0-9]*$",
+   "to": "$1"
+  },
+  {
+   "make": "ram",
+   "re": "^promaster(?!city)[a-z0-9]*$",
+   "to": "promaster"
+  },
+  {
+   "make": "ford",
+   "re": "^f(150|250|350|450)[a-z0-9]*$",
+   "to": "f$1"
+  },
+  {
+   "make": "ford",
+   "re": "^e(150|250|350|450)[a-z0-9]*$",
+   "to": "e$1"
+  },
+  {
+   "make": "ford",
+   "re": "^transit(150|250|350)[a-z0-9]*$",
+   "to": "transit"
+  },
+  {
+   "make": "ford",
+   "re": "^mustang(?!mache)[a-z0-9]*$",
+   "to": "mustang"
+  },
+  {
+   "make": "chevrolet",
+   "re": "^silverado(1500|2500|3500)?[a-z0-9]*$",
+   "to": "silverado$1"
+  },
+  {
+   "make": "gmc",
+   "re": "^sierra(1500|2500|3500)?[a-z0-9]*$",
+   "to": "sierra$1"
+  },
+  {
+   "make": "chevrolet",
+   "re": "^express(1500|2500|3500)?[a-z0-9]*$",
+   "to": "express$1"
+  },
+  {
+   "make": "gmc",
+   "re": "^savana(1500|2500|3500)?[a-z0-9]*$",
+   "to": "savana$1"
+  },
+  {
+   "make": "chevrolet",
+   "re": "^(?:c|k)(10|15|1500)[a-z0-9]*$",
+   "to": "ck1500"
+  },
+  {
+   "make": "chevrolet",
+   "re": "^(?:c|k)(20|25|2500)[a-z0-9]*$",
+   "to": "ck2500"
+  },
+  {
+   "make": "chevrolet",
+   "re": "^(?:c|k)(30|35|3500)[a-z0-9]*$",
+   "to": "ck3500"
+  },
+  {
+   "make": "gmc",
+   "re": "^(?:c|k)(10|15|1500)[a-z0-9]*$",
+   "to": "ck1500"
+  },
+  {
+   "make": "gmc",
+   "re": "^(?:c|k)(20|25|2500)[a-z0-9]*$",
+   "to": "ck2500"
+  },
+  {
+   "make": "gmc",
+   "re": "^(?:c|k)(30|35|3500)[a-z0-9]*$",
+   "to": "ck3500"
+  },
+  {
+   "make": "dodge",
+   "re": "^ram(1500|2500|3500)[a-z0-9]*$",
+   "to": "ram$1"
+  },
+  {
+   "make": "dodge",
+   "re": "^ram(?:van|wagon)?b?(150|250|350|1500|2500|3500)?(?:van|wagon)?$",
+   "to": "ramvan"
+  },
+  {
+   "make": "nissan",
+   "re": "^nv(1500|2500|3500)[a-z0-9]*$",
+   "to": "nv"
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^sprinter[a-z0-9]*$",
+   "to": "sprinter"
+  },
+  {
+   "make": "toyota",
+   "re": "^prius[a-z0-9]*$",
+   "to": "prius"
+  },
+  {
+   "make": "toyota",
+   "re": "^(camry|corolla|highlander|rav4|avalon|sienna|tundra|tacoma|sequoia|4runner|venza|landcruiser|crown|mirai|grandhighlander|corollacross|bz4x|supra|yaris|matrix|echo|tercel|celica|mr2|previa|t100|paseo|cressida|solara)(?:hybrid|prime|awd|4wd|2wd|le|xle|se|xse|trd|limited|platinum|cross|wagon|im|ia|l|ev|liftback|sedan|coupe|hatchback|sportcross|spyder|roadster|gr|grsport|woodland|nightshade|trailhunter)*$",
+   "to": "$1"
+  },
+  {
+   "make": "honda",
+   "re": "^(accord|civic|crv|hrv|pilot|odyssey|ridgeline|passport|fit|insight|clarity|element|prelude|s2000|crz|crx|delsol|crosstour|prologue|zrv)(?:hybrid|si|typer|touring|crosstour|wagon|coupe|sedan|hatchback|ev|awd|2wd|4wd|natural gas|cng|plugin|electric|fuelcell)*$",
+   "to": "$1"
+  },
+  {
+   "make": "hyundai",
+   "re": "^(santafe|ioniq|elantra|sonata|tucson|kona|palisade|veloster|accent|azera|genesis|equus|veracruz|tiburon|entourage|nexo|venue|santacruz|ioniq5|ioniq6|ioniq9)(?:sport|classic|xl|hybrid|plugin|electric|n|gt|coupe|touring|limited|se|sel|awd|2wd|4wd|blue)*$",
+   "to": "$1"
+  },
+  {
+   "make": "kia",
+   "re": "^(sorento|sportage|soul|forte|optima|k5|k4|k900|niro|telluride|seltos|sedona|carnival|rio|stinger|cadenza|ev6|ev9|ev5|rondo|sephia|spectra|amanti|borrego|cadenza)(?:hybrid|plugin|phev|ev|5|koup|awd|2wd|4wd|gt|x|xline|wagon|sedan|hatchback)*$",
+   "to": "$1"
+  },
+  {
+   "make": "subaru",
+   "re": "^(impreza|legacy|outback|forester|crosstrek|ascent|brz|wrx|solterra|tribeca|baja|svx|xt|loyale|justy|xv)(?:wrx|sti|wagon|sedan|awd|4wd|hybrid|wilderness|sport|premium|limited|touring|gt|outback|tr|coupe|hatchback|ts)*$",
+   "to": "$1"
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^190(e|d)?$",
+   "to": "190e"
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(?!190)(\\d{3})(sl|slc)$",
+   "to": "slclass"
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(?!190)(\\d{3})(sel|se|sec|sd|sdl|s)$",
+   "to": "sclass"
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(?!190)(\\d{3})(e|d|te|ce|td|de|ge|c)$",
+   "to": "eclass"
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(\\d{3})$",
+   "to": ""
+  },
+  {
+   "make": "infiniti",
+   "re": "^qx56$",
+   "to": "qx80"
+  },
+  {
+   "make": "infiniti",
+   "re": "^ex(35|37)$",
+   "to": "qx50"
+  },
+  {
+   "make": "infiniti",
+   "re": "^fx(35|37|45|50)$",
+   "to": "qx70"
+  },
+  {
+   "make": "infiniti",
+   "re": "^jx35$",
+   "to": "qx60"
+  },
+  {
+   "make": "infiniti",
+   "re": "^m(35|37|45|56)[a-z]*$",
+   "to": "q70"
+  },
+  {
+   "make": "infiniti",
+   "re": "^g(35|37)[a-z]*$",
+   "to": "q40"
+  },
+  {
+   "make": "landrover",
+   "re": "^lr[34]$",
+   "to": "discovery"
+  },
+  {
+   "make": "landrover",
+   "re": "^lr2$",
+   "to": "freelander"
+  },
+  {
+   "make": "chevrolet",
+   "re": "^s10blazer$",
+   "to": "s10blazer"
+  },
+  {
+   "make": "toyota",
+   "re": "^scion(xa|xb|xd|tc|frs|iq|im|ia)$",
+   "to": "$1"
+  },
+  {
+   "make": "toyota",
+   "re": "^(xa|xb|xd|tc|frs|iq|im|ia)$",
+   "to": "$1"
+  },
+  {
+   "make": "scion",
+   "re": "^scion(xa|xb|xd|tc|frs|iq|im|ia)$",
+   "to": "$1"
+  },
+  {
+   "make": "kia",
+   "re": "^(sedona|carnival)$",
+   "to": "sedona"
+  },
+  {
+   "make": "hyundai",
+   "re": "^(santafe|santafesport|santafexl)$",
+   "to": "santafe"
+  },
+  {
+   "make": "volkswagen",
+   "re": "^(golf|gti|golfgti|golfr|rabbit|egolf|golfsportwagen|golfalltrack|jetta|jettagli|gli|jettawagon|jettasportwagen)$",
+   "to": "$1",
+   "map": {
+    "golfgti": "gti",
+    "jettagli": "gli",
+    "jettawagon": "jetta",
+    "jettasportwagen": "jetta",
+    "golfsportwagen": "golf",
+    "golfalltrack": "golf",
+    "egolf": "golf",
+    "rabbit": "golf"
+   }
+  },
+  {
+   "make": "chevrolet",
+   "re": "^(tahoe|suburban|avalanche|silverado|express|colorado|blazer|trailblazer|traverse|equinox|malibu|impala|camaro|corvette|cruze|sonic|spark|volt|bolt|trax|aveo|cobalt|hhr|uplander|venture|monte carlo|montecarlo|ssr|astro|s10|caprice|lumina|cavalier|prizm|tracker|captiva|orlando|city express|cityexpress|corsica|beretta)(?:ev|euv|hybrid|ppv|limited|classic|maxx|ss|ls|lt|ltz|rs|z71|zr2|1500|2500|3500|k1500|c1500|k2500|c2500|k3500|c3500|hd|awd|2wd|4wd|fwd|ffv|cng|police|van|cargo|passenger|wagon|sedan|coupe|convertible|hatchback)*$",
+   "to": "$1",
+   "map": {
+    "monte carlo": "montecarlo",
+    "city express": "cityexpress"
+   }
+  },
+  {
+   "make": "gmc",
+   "re": "^(yukon|sierra|savana|canyon|acadia|terrain|envoy|jimmy|sonoma|safari|suburban|hummerev)(?:xl|denali|hybrid|limited|1500|2500|3500|k1500|c1500|hd|awd|2wd|4wd|ffv|van|cargo|passenger|pickup|suv)*$",
+   "to": "$1"
+  },
+  {
+   "make": "jeep",
+   "re": "^(wrangler|grandcherokee|cherokee|compass|renegade|patriot|liberty|gladiator|wagoneer|grandwagoneer|commander|recon)(?:jk|jl|tj|yj|unlimited|4xe|l|srt|trackhawk|trailhawk|4dr|2dr|4wd|2wd|awd|wk|wk2|wj|zj|xj|kj|kk|kl)*$",
+   "to": "$1"
+  },
+  {
+   "make": "dodge",
+   "re": "^(durango|dakota|journey|nitro|caliber|avenger|charger|challenger|magnum|viper|dart|neon|stratus|intrepid|caravan|grandcaravan|hornet|sprinter|ram|ramvan|ramwagon|ramcharger|stealth|spirit|shadow|dynasty|monaco|colt|daytona)(?:srt|srt4|srt8|srt10|hellcat|scatpack|rt|gt|sxt|awd|2wd|4wd|pickup|van|wagon|cv|1500|2500|3500|150|250|350|b150|b250|b350|b1500|b2500|b3500)*$",
+   "to": "$1",
+   "map": {
+    "ramwagon": "ramvan"
+   }
+  },
+  {
+   "make": "nissan",
+   "re": "^(altima|maxima|sentra|versa|rogue|murano|pathfinder|armada|frontier|titan|xterra|quest|leaf|kicks|juke|cube|370z|350z|300zx|240sx|gtr|nv200|nv|ariya|z)(?:xd|sport|note|coupe|sedan|hybrid|awd|2wd|4wd|king cab|crew cab|cargo|passenger|1500|2500|3500|sv|sl|s|se|le|pro4x|nismo|roadster)*$",
+   "to": "$1"
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(eqa|eqb|eqc|eqe|eqs|glc|gle|gls|gla|glb|cla|cls|sls|slc|slk|slr|clk|sl|cl|gl|glk|ml|g|c|e|s|a|b|m|r)class(?:suv|sedan|coupe|cabriolet|wagon)?$",
+   "to": "$1",
+   "map": {
+    "c": "cclass",
+    "e": "eclass",
+    "s": "sclass",
+    "g": "gclass",
+    "sl": "slclass",
+    "slk": "slkclass",
+    "slc": "slcclass",
+    "cl": "clclass",
+    "glk": "glkclass",
+    "a": "aclass",
+    "b": "bclass",
+    "r": "rclass",
+    "m": "mclass",
+    "ml": "mclass",
+    "gl": "gls",
+    "sls": "slsclass",
+    "slr": "slrclass",
+    "clk": "clkclass"
+   }
+  },
+  {
+   "make": "mercedesbenz",
+   "re": "^(eqa|eqb|eqc|eqe|eqs)(?:\\d{3})?(?:suv|sedan|plus|4matic)*$",
+   "to": "$1"
+  },
+  {
+   "make": "mini",
+   "re": "^(?:jcw|johncooperworks)(hardtop|clubman|countryman|convertible|coupe|roadster|paceman|gp)?[a-z0-9]*$",
+   "to": "cooper$1",
+   "map": {
+    "cooperhardtop": "cooper",
+    "cooperconvertible": "cooper",
+    "coopercoupe": "cooper",
+    "cooperclubman": "clubman",
+    "coopercountryman": "countryman",
+    "cooperroadster": "roadster",
+    "cooperpaceman": "paceman",
+    "coopergp": "cooper",
+    "cooper": "cooper"
+   }
+  }
+ ]
+}

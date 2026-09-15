@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-15T13:05:37.599Z",
-  "total": 36337,
+  "generatedAt": "2026-09-15T13:29:02.557Z",
+  "total": 35627,
   "alreadyCanonical": 788,
-  "wouldRewrite": 35509,
-  "cannotConvert": 40,
+  "wouldRewrite": 34839,
+  "cannotConvert": 0,
   "perShape": [
     {
       "shape": "obj:axle",
@@ -30,20 +30,20 @@
       "dropped_keys": 11
     },
     {
-      "shape": "strings",
-      "rows": 2840,
-      "convertible": 2800,
-      "blocked": 40,
-      "entries_out": 4571,
-      "dropped_keys": 0
-    },
-    {
       "shape": "obj:position",
       "rows": 2260,
       "convertible": 2260,
       "blocked": 0,
       "entries_out": 4724,
       "dropped_keys": 16
+    },
+    {
+      "shape": "strings",
+      "rows": 2130,
+      "convertible": 2130,
+      "blocked": 0,
+      "entries_out": 3527,
+      "dropped_keys": 0
     },
     {
       "shape": "not-array:string→obj:axle",
@@ -167,8 +167,8 @@
     }
   ],
   "tireShapeCounts": {
-    "array": 34927,
-    "obj:front,rear": 1268,
+    "array": 34887,
+    "obj:front,rear": 598,
     "not-array:string": 142
   },
   "examples": {
@@ -199,19 +199,19 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7.5,
               "offset": 45,
-              "tireSize": "225/55R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 19,
               "width": 8.5,
               "offset": 35,
-              "tireSize": "235/45R19",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -247,19 +247,19 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7.5,
               "offset": 45,
-              "tireSize": "225/55R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 19,
               "width": 8.5,
               "offset": 35,
-              "tireSize": "235/45R19",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -288,11 +288,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7,
               "offset": 45,
-              "tireSize": "225/50R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -321,11 +321,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": 50,
-              "tireSize": "205/55R16",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -352,11 +352,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": 50,
-              "tireSize": "205/55R16",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -383,11 +383,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": 50,
-              "tireSize": "205/55R16",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -420,19 +420,19 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": null,
-              "tireSize": "205/60R16",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 6.5,
               "offset": null,
-              "tireSize": "215/50R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -464,19 +464,19 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": null,
-              "tireSize": "205/60R16",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 6.5,
               "offset": null,
-              "tireSize": "215/50R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -508,19 +508,19 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": null,
-              "tireSize": "205/60R16",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 6.5,
               "offset": null,
-              "tireSize": "215/50R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -532,106 +532,6 @@
       }
     ],
     "obj:axle": [
-      {
-        "id": "ad96c064-2401-4f05-ad91-eeec8f0ad59b",
-        "vehicle": "2013 acura ilx A-Spec",
-        "before": {
-          "wheels": [
-            {
-              "axle": "front",
-              "width": 6.5,
-              "offset": null,
-              "isStock": true,
-              "diameter": 16
-            },
-            {
-              "axle": "front",
-              "width": 7,
-              "offset": null,
-              "isStock": true,
-              "diameter": 17
-            },
-            {
-              "axle": "front",
-              "width": 7.5,
-              "offset": null,
-              "isStock": true,
-              "diameter": 18
-            }
-          ],
-          "tires": [
-            "205/55R16",
-            "215/45R17",
-            "225/40R18"
-          ]
-        },
-        "after": {
-          "wheels": [
-            {
-              "axle": "square",
-              "diameter": 16,
-              "width": 6.5,
-              "offset": null,
-              "tireSize": "205/55R16",
-              "isStock": true
-            },
-            {
-              "axle": "square",
-              "diameter": 17,
-              "width": 7,
-              "offset": null,
-              "tireSize": "215/45R17",
-              "isStock": true
-            },
-            {
-              "axle": "square",
-              "diameter": 18,
-              "width": 7.5,
-              "offset": null,
-              "tireSize": "225/40R18",
-              "isStock": true
-            }
-          ],
-          "tires": [
-            "205/55R16",
-            "215/45R17",
-            "225/40R18"
-          ]
-        }
-      },
-      {
-        "id": "50abd94e-50ce-41f3-a140-a5495ba37bec",
-        "vehicle": "2013 acura ilx Technology",
-        "before": {
-          "wheels": [
-            {
-              "axle": "square",
-              "width": 7,
-              "offset": null,
-              "isStock": true,
-              "diameter": 17
-            }
-          ],
-          "tires": [
-            "215/45R17"
-          ]
-        },
-        "after": {
-          "wheels": [
-            {
-              "axle": "square",
-              "diameter": 17,
-              "width": 7,
-              "offset": null,
-              "tireSize": "215/45R17",
-              "isStock": true
-            }
-          ],
-          "tires": [
-            "215/45R17"
-          ]
-        }
-      },
       {
         "id": "75c1d505-2385-45ef-809d-37b8e480c561",
         "vehicle": "2013 acura ilx Base",
@@ -652,11 +552,77 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 7,
               "offset": null,
-              "tireSize": "205/55R16",
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        }
+      },
+      {
+        "id": "8e9d9392-c57e-4c97-9989-880a96814944",
+        "vehicle": "2013 acura ilx Base, Premium, Technology, A-Spec",
+        "before": {
+          "wheels": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "both",
+              "diameter": 16,
+              "width": 7,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        }
+      },
+      {
+        "id": "5410405c-b805-4600-97bd-4346edd02b7c",
+        "vehicle": "2013 acura ilx Premium",
+        "before": {
+          "wheels": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "both",
+              "diameter": 16,
+              "width": 7,
+              "offset": null,
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -668,8 +634,8 @@
     ],
     "strings": [
       {
-        "id": "1158eb70-6910-41c1-9155-4b7e1cdd3d1e",
-        "vehicle": "2018 acura ilx w/A-Spec Pkg.",
+        "id": "ec26e7a5-664d-4e51-87a4-84c83b2f657c",
+        "vehicle": "2018 acura ilx Special Edition",
         "before": {
           "wheels": [
             "7.5x18"
@@ -681,11 +647,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7.5,
               "offset": null,
-              "tireSize": "225/40R18",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -708,11 +674,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7,
               "offset": null,
-              "tireSize": "P215/45R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -722,8 +688,8 @@
         }
       },
       {
-        "id": "ec26e7a5-664d-4e51-87a4-84c83b2f657c",
-        "vehicle": "2018 acura ilx Special Edition",
+        "id": "1158eb70-6910-41c1-9155-4b7e1cdd3d1e",
+        "vehicle": "2018 acura ilx w/A-Spec Pkg.",
         "before": {
           "wheels": [
             "7.5x18"
@@ -735,11 +701,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7.5,
               "offset": null,
-              "tireSize": "225/40R18",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -1036,7 +1002,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7.5,
               "offset": null,
@@ -1044,15 +1010,15 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8,
               "offset": null,
-              "tireSize": "255/55R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 8.5,
               "offset": null,
@@ -1060,23 +1026,23 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 19,
               "width": 8,
               "offset": 50,
-              "tireSize": "255/60R19",
+              "tireSize": null,
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 50,
-              "tireSize": "255/55R20",
+              "tireSize": null,
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 9,
               "offset": 55.5,
@@ -1133,31 +1099,31 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7.5,
               "offset": null,
-              "tireSize": "245/60R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8,
               "offset": null,
-              "tireSize": "255/55R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 8.5,
               "offset": null,
-              "tireSize": "275/45R21",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 19,
               "width": 8,
               "offset": 50,
@@ -1165,19 +1131,19 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 50,
-              "tireSize": "255/55R20",
+              "tireSize": null,
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 9,
               "offset": 55.5,
-              "tireSize": "275/45R21",
+              "tireSize": null,
               "isStock": false
             }
           ],
@@ -1227,31 +1193,31 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7.5,
               "offset": null,
-              "tireSize": "245/60R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8,
               "offset": null,
-              "tireSize": "255/55R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 8.5,
               "offset": null,
-              "tireSize": "275/45R21",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 19,
               "width": 8,
               "offset": 50,
@@ -1259,19 +1225,19 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 50,
-              "tireSize": "255/55R20",
+              "tireSize": null,
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 9,
               "offset": 55.5,
-              "tireSize": "275/45R21",
+              "tireSize": null,
               "isStock": false
             }
           ],
@@ -1296,15 +1262,15 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 14,
               "width": 6,
               "offset": null,
-              "tireSize": "G70-14",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 7,
               "offset": 0,
@@ -1312,7 +1278,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 8,
               "offset": 0,
@@ -1320,7 +1286,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 8,
               "offset": 0,
@@ -1328,7 +1294,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 8,
               "offset": 0,
@@ -1336,7 +1302,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 9,
               "offset": 0,
@@ -1344,7 +1310,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8.5,
               "offset": 0,
@@ -1352,7 +1318,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 9.5,
               "offset": 0,
@@ -1360,7 +1326,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 0,
@@ -1368,7 +1334,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 10,
               "offset": 0,
@@ -1393,15 +1359,15 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 14,
               "width": 6,
               "offset": null,
-              "tireSize": "G70-14",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 7,
               "offset": 0,
@@ -1409,7 +1375,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 8,
               "offset": 0,
@@ -1417,7 +1383,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 8,
               "offset": 0,
@@ -1425,7 +1391,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 8,
               "offset": 0,
@@ -1433,7 +1399,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 9,
               "offset": 0,
@@ -1441,7 +1407,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8.5,
               "offset": 0,
@@ -1449,7 +1415,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 9.5,
               "offset": 0,
@@ -1457,7 +1423,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 0,
@@ -1465,7 +1431,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 10,
               "offset": 0,
@@ -1490,15 +1456,15 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 14,
               "width": 6,
               "offset": null,
-              "tireSize": "G70-14",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 7,
               "offset": 0,
@@ -1506,7 +1472,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 8,
               "offset": 0,
@@ -1514,7 +1480,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 8,
               "offset": 0,
@@ -1522,7 +1488,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 8,
               "offset": 0,
@@ -1530,7 +1496,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 9,
               "offset": 0,
@@ -1538,7 +1504,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8.5,
               "offset": 0,
@@ -1546,7 +1512,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 9.5,
               "offset": 0,
@@ -1554,7 +1520,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 0,
@@ -1562,7 +1528,7 @@
               "isStock": false
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 10,
               "offset": 0,
@@ -1587,27 +1553,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7.5,
               "offset": null,
-              "tireSize": "265/70R17",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8,
               "offset": null,
-              "tireSize": "265/65R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": null,
-              "tireSize": "275/55R20",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -1628,27 +1594,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7.5,
               "offset": null,
-              "tireSize": "265/70R17",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8,
               "offset": null,
-              "tireSize": "265/65R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": null,
-              "tireSize": "275/55R20",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -1669,27 +1635,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7.5,
               "offset": null,
-              "tireSize": "265/70R17",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8,
               "offset": null,
-              "tireSize": "265/65R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": null,
-              "tireSize": "275/55R20",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -1714,41 +1680,16 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": 41,
-              "tireSize": "205/65R16",
+              "tireSize": null,
               "isStock": true
             }
           ],
           "tires": [
             "205/65R16"
-          ]
-        }
-      },
-      {
-        "id": "2b6e2b62-baa0-42e0-9dc8-f3c3921a0209",
-        "vehicle": "2024 chevrolet trax LT",
-        "before": {
-          "wheels": "[{\"diameter\":17,\"width\":7,\"offset\":44}]",
-          "tires": [
-            "215/55R17"
-          ]
-        },
-        "after": {
-          "wheels": [
-            {
-              "axle": "square",
-              "diameter": 17,
-              "width": 7,
-              "offset": 44,
-              "tireSize": "215/55R17",
-              "isStock": true
-            }
-          ],
-          "tires": [
-            "215/55R17"
           ]
         }
       },
@@ -1764,11 +1705,36 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 7,
               "offset": 44,
-              "tireSize": "225/55R18",
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/55R18"
+          ]
+        }
+      },
+      {
+        "id": "3e9e3fcd-5c99-4e08-8cfa-625756b8cc06",
+        "vehicle": "2024 chevrolet trax RS",
+        "before": {
+          "wheels": "[{\"diameter\":18,\"width\":7,\"offset\":44}]",
+          "tires": [
+            "225/55R18"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "both",
+              "diameter": 18,
+              "width": 7,
+              "offset": 44,
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -1792,19 +1758,19 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": null,
               "offset": null,
-              "tireSize": "225/60R17",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": null,
               "offset": null,
-              "tireSize": "225/55R18",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -1827,7 +1793,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": null,
               "offset": null,
@@ -1855,7 +1821,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": null,
               "offset": null,
@@ -1863,11 +1829,11 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": null,
               "offset": null,
-              "tireSize": "225/60R18",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -1900,7 +1866,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 11,
               "offset": null,
@@ -1935,7 +1901,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 11,
               "offset": null,
@@ -2004,7 +1970,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 8,
               "offset": 19,
@@ -2012,7 +1978,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8,
               "offset": 19,
@@ -2020,7 +1986,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8,
               "offset": 19,
@@ -2028,7 +1994,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": 19,
@@ -2036,7 +2002,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 22,
               "width": 9,
               "offset": 19,
@@ -2105,7 +2071,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 8,
               "offset": 19,
@@ -2113,7 +2079,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8,
               "offset": 19,
@@ -2121,7 +2087,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8,
               "offset": 19,
@@ -2129,7 +2095,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": 19,
@@ -2137,7 +2103,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 22,
               "width": 9,
               "offset": 19,
@@ -2197,7 +2163,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": 35,
@@ -2205,7 +2171,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7,
               "offset": 35,
@@ -2213,15 +2179,15 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 6.5,
               "offset": 35,
-              "tireSize": "195/45R16",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7,
               "offset": 38,
@@ -2268,27 +2234,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8.5,
               "offset": 24,
-              "tireSize": "275/65R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": 24,
-              "tireSize": "275/60R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 22,
               "width": 9,
               "offset": 28,
-              "tireSize": "285/45R22",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2329,27 +2295,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8.5,
               "offset": 24,
-              "tireSize": "275/65R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": 24,
-              "tireSize": "275/60R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 22,
               "width": 9,
               "offset": 28,
-              "tireSize": "285/45R22",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2390,27 +2356,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 18,
               "width": 8.5,
               "offset": 24,
-              "tireSize": "275/65R18",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 9,
               "offset": 24,
-              "tireSize": "275/60R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 22,
               "width": 9,
               "offset": 28,
-              "tireSize": "285/45R22",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2448,6 +2414,70 @@
     ],
     "obj:boltPattern": [
       {
+        "id": "ace88892-9d1c-405a-a6f0-66d88afb2602",
+        "vehicle": "2022 mercedes-benz eqs AMG EQS53",
+        "before": {
+          "wheels": [
+            {
+              "width": 8.5,
+              "offset": 33,
+              "diameter": 20,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 21,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 22,
+              "boltPattern": "5x112"
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "both",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 33,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "both",
+              "diameter": 21,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "both",
+              "diameter": 22,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        }
+      },
+      {
         "id": "0427f5a1-69a1-4f72-998b-9abcef182a82",
         "vehicle": "2022 mercedes-benz eqs EQS580 4MATIC",
         "before": {
@@ -2480,27 +2510,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 33,
-              "tireSize": "255/45R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 9.5,
               "offset": 33,
-              "tireSize": "265/40R21",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 22,
               "width": 9.5,
               "offset": 33,
-              "tireSize": "265/35R22",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2544,91 +2574,27 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 20,
               "width": 8.5,
               "offset": 33,
-              "tireSize": "255/45R20",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 21,
               "width": 9.5,
               "offset": 33,
-              "tireSize": "265/40R21",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 22,
               "width": 9.5,
               "offset": 33,
-              "tireSize": "265/35R22",
-              "isStock": true
-            }
-          ],
-          "tires": [
-            "255/45R20",
-            "265/40R21",
-            "265/35R22"
-          ]
-        }
-      },
-      {
-        "id": "ace88892-9d1c-405a-a6f0-66d88afb2602",
-        "vehicle": "2022 mercedes-benz eqs AMG EQS53",
-        "before": {
-          "wheels": [
-            {
-              "width": 8.5,
-              "offset": 33,
-              "diameter": 20,
-              "boltPattern": "5x112"
-            },
-            {
-              "width": 9.5,
-              "offset": 33,
-              "diameter": 21,
-              "boltPattern": "5x112"
-            },
-            {
-              "width": 9.5,
-              "offset": 33,
-              "diameter": 22,
-              "boltPattern": "5x112"
-            }
-          ],
-          "tires": [
-            "255/45R20",
-            "265/40R21",
-            "265/35R22"
-          ]
-        },
-        "after": {
-          "wheels": [
-            {
-              "axle": "square",
-              "diameter": 20,
-              "width": 8.5,
-              "offset": 33,
-              "tireSize": "255/45R20",
-              "isStock": true
-            },
-            {
-              "axle": "square",
-              "diameter": 21,
-              "width": 9.5,
-              "offset": 33,
-              "tireSize": "265/40R21",
-              "isStock": true
-            },
-            {
-              "axle": "square",
-              "diameter": 22,
-              "width": 9.5,
-              "offset": 33,
-              "tireSize": "265/35R22",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2642,8 +2608,8 @@
     ],
     "obj:isStaggered": [
       {
-        "id": "04b806eb-fc98-4314-8e83-df3491739583",
-        "vehicle": "2024 nissan frontier Hardbody Edition",
+        "id": "fab50e36-795c-457d-bf0a-e8359daeabad",
+        "vehicle": "2024 nissan frontier PRO-4X",
         "before": {
           "wheels": [
             {
@@ -2660,11 +2626,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7.5,
               "offset": 30,
-              "tireSize": "265/70R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2674,8 +2640,8 @@
         }
       },
       {
-        "id": "38025dcf-a299-45f4-a635-b33e1b0d4a3d",
-        "vehicle": "2024 nissan frontier SV",
+        "id": "b2757984-8617-4044-96b1-f3b397919dc7",
+        "vehicle": "2024 nissan frontier PRO-X",
         "before": {
           "wheels": [
             {
@@ -2686,54 +2652,54 @@
             }
           ],
           "tires": [
-            "265/65R17"
+            "265/70R17"
           ]
         },
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 17,
               "width": 7.5,
               "offset": 30,
-              "tireSize": "265/65R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
           "tires": [
-            "265/65R17"
+            "265/70R17"
           ]
         }
       },
       {
-        "id": "dbc2f8ec-0336-432b-ac42-57b236972265",
-        "vehicle": "2024 nissan frontier SL",
+        "id": "89405f02-7d2d-41aa-a1df-1b4176d7b4aa",
+        "vehicle": "2024 nissan frontier S",
         "before": {
           "wheels": [
             {
-              "width": 7.5,
+              "width": 7,
               "offset": 30,
-              "diameter": 17,
+              "diameter": 16,
               "isStaggered": false
             }
           ],
           "tires": [
-            "265/65R17"
+            "265/70R16"
           ]
         },
         "after": {
           "wheels": [
             {
-              "axle": "square",
-              "diameter": 17,
-              "width": 7.5,
+              "axle": "both",
+              "diameter": 16,
+              "width": 7,
               "offset": 30,
-              "tireSize": "265/65R17",
+              "tireSize": null,
               "isStock": true
             }
           ],
           "tires": [
-            "265/65R17"
+            "265/70R16"
           ]
         }
       }
@@ -2758,11 +2724,11 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 13,
               "width": 4.5,
               "offset": 0,
-              "tireSize": "6.50-13",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2804,7 +2770,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 13,
               "width": 4.5,
               "offset": 0,
@@ -2812,7 +2778,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 13,
               "width": 5,
               "offset": 0,
@@ -2820,11 +2786,11 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 14,
               "width": 5.5,
               "offset": 0,
-              "tireSize": "6.95-14",
+              "tireSize": null,
               "isStock": true
             }
           ],
@@ -2862,15 +2828,15 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 13,
               "width": 4.5,
               "offset": 0,
-              "tireSize": "6.50-13",
+              "tireSize": null,
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 14,
               "width": 5.5,
               "offset": 0,
@@ -3196,7 +3162,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 6,
               "offset": 45,
@@ -3204,7 +3170,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 6.5,
               "offset": 50,
@@ -3228,7 +3194,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 8,
               "offset": 50,
@@ -3294,7 +3260,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 6,
               "offset": 45,
@@ -3302,7 +3268,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 6.5,
               "offset": 50,
@@ -3326,7 +3292,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 8,
               "offset": 50,
@@ -3392,7 +3358,7 @@
         "after": {
           "wheels": [
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 6,
               "offset": 45,
@@ -3400,7 +3366,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 15,
               "width": 6.5,
               "offset": 50,
@@ -3424,7 +3390,7 @@
               "isStock": true
             },
             {
-              "axle": "square",
+              "axle": "both",
               "diameter": 16,
               "width": 8,
               "offset": 50,
@@ -3443,7 +3409,5 @@
       }
     ]
   },
-  "byBlock": {
-    "string_unparseable": 40
-  }
+  "byBlock": {}
 }

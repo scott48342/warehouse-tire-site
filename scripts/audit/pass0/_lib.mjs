@@ -123,7 +123,7 @@ export function normalizeTires(raw) {
 // and 640 double-encoded rows carry plus-size options flagged isStock:false.
 // Returns { entries, shape, issues:[], unparsed:[], mixed:boolean, widthFirst:number, hasFrontRear:boolean }
 // ─────────────────────────────────────────────────────────────────────────────
-const AXLE = (a) => (a === "front" || a === "rear" ? a : "square");
+const AXLE = (a) => (a === "front" || a === "rear" ? a : "both"); // parent decision 2026-09-15: emit "both" (what readers compare against), not "square"
 const num = (x) => { if (x == null || x === "") return null; const n = Number(x); return Number.isFinite(n) ? n : null; };
 
 export function shapeOfWheels(raw) {
@@ -178,8 +178,8 @@ export function normalizeWheels(raw) {
       if (!p) { out.unparsed.push(el); out.issues.push("string_unparseable"); continue; }
       if (p.widthFirst) out.widthFirst++;
       if (p.width == null) out.issues.push("diameter_only");
-      add("square", p.diameter, p.width, p.offset, null, true, el);
-      if (p.kind === "range") { out.issues.push("width_range"); if (p.widthMax !== p.width) add("square", p.diameter, p.widthMax, p.offset, null, true, el); }
+      add("both", p.diameter, p.width, p.offset, null, true, el);
+      if (p.kind === "range") { out.issues.push("width_range"); if (p.widthMax !== p.width) add("both", p.diameter, p.widthMax, p.offset, null, true, el); }
       continue;
     }
     if (!el || typeof el !== "object") { out.unparsed.push(el); out.issues.push("bad_element"); continue; }
@@ -201,7 +201,7 @@ export function normalizeWheels(raw) {
       if (!p) { out.unparsed.push(el); out.issues.push("size_unparseable"); continue; }
       if (p.widthFirst) out.widthFirst++;
       const tires = Array.isArray(el.tires) ? el.tires.filter((t) => typeof t === "string") : [];
-      add("square", p.diameter, p.width, el.offset ?? p.offset, tires.length === 1 ? tires[0] : null, el.isStock, el);
+      add("both", p.diameter, p.width, el.offset ?? p.offset, tires.length === 1 ? tires[0] : null, el.isStock, el);
       if (tires.length > 1) out.issues.push("size_multi_tire");
       continue;
     }
@@ -225,13 +225,13 @@ export function normalizeWheels(raw) {
   // 5,452 rows label EVERY entry axle:'front' with no rear/both entries (cache-import/api_import "[expanded]" families).
   // A front-only fitment cannot exist → these are square fitments; relabel and record.
   if (out.entries.length > 0 && out.entries.every((x) => x.axle === "front")) {
-    out.entries = out.entries.map((x) => ({ ...x, axle: "square" }));
+    out.entries = out.entries.map((x) => ({ ...x, axle: "both" }));
     out.issues.push("front_only_relabeled_square");
   }
   // de-dupe identical entries
   const seen = new Set();
   out.entries = out.entries.filter((x) => { const k = JSON.stringify([x.axle, x.diameter, x.width, x.offset, x.tireSize, x.isStock]); if (seen.has(k)) return false; seen.add(k); return true; });
-  out.hasFrontRear = out.entries.some((x) => x.axle !== "square");
+  out.hasFrontRear = out.entries.some((x) => x.axle !== "both");
   out.issues = [...new Set(out.issues)];
   return out;
 }

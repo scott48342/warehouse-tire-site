@@ -1,0 +1,829 @@
+id,year,make,model,display_trim,raw_trim,submodel,source,severity,reason,gov_years_for_model
+518133bc-b3c1-4feb-a68e-014ca039386e,2014,alfa romeo,4c,Base,Base,Standard,api_import [expanded],error,make alfaromeo not sold in US in 2014,2015-2020
+29084114-f963-4cb5-bf34-8b0e4a241401,2014,alfa romeo,4c,Spider,Spider,Standard,api_import [expanded],error,make alfaromeo not sold in US in 2014,2015-2020
+532816f1-6ba6-4675-82e8-b11392f147bb,2014,alfa romeo,4c,"Base, Spider",,Standard,api_import,error,make alfaromeo not sold in US in 2014,2015-2020
+4b166e08-25a0-4053-bea2-13b6513c376f,2003,ford,sportka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+78ef0ecd-a712-4cf9-a000-f3743556e167,2004,ford,sportka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+07688d2d-e6c6-4cd0-bf28-4bbf87847127,2005,ford,sportka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+1f5a90ae-f8ee-4886-831c-b6715d13cbaf,2006,ford,sportka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+dbc337dd-19b8-47fa-bc95-78544a2e005a,2007,ford,sportka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+e378b9a6-f008-43ce-a706-65148d8b62ab,2008,ford,sportka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+9fba6635-18b0-46e1-87ac-533539b06315,2003,ford,streetka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+3b70dd1f-9e08-4722-a833-75b13eee68b1,2004,ford,streetka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+3e83a0ea-f63c-4e09-9224-c15975235cc0,2005,ford,streetka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+fb4564df-a83d-4a97-9cc2-0aef1e43c233,2006,ford,streetka,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+1ed1a618-3fed-4d03-a002-bebd9e7477f9,2021,mercedes,eqa,Base,Base,Premium,catalog-gap-fill,error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+f5cba06f-fa67-49b3-a243-800a70b71da3,2022,mercedes,eqa,Base,Base,Premium,catalog-gap-fill,error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+c4998a85-4468-41c5-af83-d38f0ce27409,2023,mercedes,eqa,Base,Base,Premium,catalog-gap-fill,error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+dbed740b-063f-4759-9c76-a3939184f519,2024,mercedes,eqa,Base,Base,Premium,catalog-gap-fill,error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+0bbed974-aaed-476e-8b42-bf845b60724a,2025,mercedes,eqa,Base,Base,Premium,catalog-gap-fill,error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+59b94ffd-27ab-4a46-9680-412b73644ccb,2026,mercedes,eqa,Base,Base,Premium,catalog-gap-fill,error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+b91e37f3-1f76-42ac-a062-1d75e279e1dc,2000,mitsubishi,chariot-grandis,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+fd77cc6f-ccd5-415d-9a6a-4ba0cef690ef,2001,mitsubishi,chariot-grandis,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+81f53706-b1c8-4ef5-b0bf-cad34acfec7e,2002,mitsubishi,chariot-grandis,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+60428cf8-a675-4437-ab12-dd46f856b628,2003,mitsubishi,chariot-grandis,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+aed75803-3b00-45e9-936c-60df5af940b1,2025,mitsubishi,destinator,Base,Base,Premium,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+b2dbc005-1c58-456a-9322-895907a242fb,2026,mitsubishi,destinator,Base,Base,Premium,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+c178678c-2096-41ed-a58e-fb1516ffe00e,2000,mitsubishi,l400,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+cb375264-6a27-4169-bcb6-c9f27fdc95f7,2001,mitsubishi,l400,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+2f5733a9-bc18-4959-9151-da47d8c1fb8c,2005,mitsubishi,maven,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+0283d341-1c6b-4518-911a-978f0c32bf86,2006,mitsubishi,maven,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+7b41f6e3-cd78-4f43-a1ff-eb7593930aed,2007,mitsubishi,maven,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+9fd1479e-5967-4f2c-bda2-6c4594978948,2008,mitsubishi,maven,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+f46d399a-7aee-4e00-a93b-b6051298b82c,2009,mitsubishi,maven,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+24fb6703-b515-45ab-af52-46ee44798047,2011,toyota,e-z,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+c064638b-5495-49c0-9828-70cd808e04e1,2012,toyota,e-z,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+c32f25b1-e6c3-4615-bc0d-da449e6b31ef,2013,toyota,e-z,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+a330d9c9-e8ef-443c-9b72-f90e1f47c56c,2014,toyota,e-z,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+2c47ec5a-a6ad-4a2d-b234-edd470094889,2015,toyota,e-z,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+bf0470bd-09ea-4933-a38a-3aa2341c2113,2016,toyota,e-z,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+424e9fd3-6d99-4519-82b1-dd34b5e69cac,2017,toyota,e-z,Base,Base,LS,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+b7444edc-8b67-496a-9052-0ba607cc0b9f,2011,toyota,etios-valco,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+71a0da1a-33b6-42c3-bb28-07289aa865fc,2012,toyota,etios-valco,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+6ee2e36c-4584-4d89-a059-b085d41ca90e,2013,toyota,etios-valco,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+83538334-0dc6-4f8d-9a42-4175a5b712d5,2014,toyota,etios-valco,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+dd85c3c3-3464-4bf9-974a-8ef5ccc5f223,2015,toyota,etios-valco,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+f13f7b81-10be-43a2-bbcc-c0a5a616f5e2,2016,toyota,etios-valco,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+6657b0ae-d868-4df6-8b8c-d28fd6a2ad90,2017,toyota,etios-valco,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+d379a764-8ea9-45b9-aee2-3dd6de5c6632,2000,toyota,grand-hiace,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+457b8d80-0e83-42c9-ad9f-43a8943dc9ef,2001,toyota,grand-hiace,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+61f421d9-2a07-4575-ac44-039148597948,2002,toyota,grand-hiace,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+6654cbe5-b290-4791-a132-814aaad3f40c,2000,toyota,soluna,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+6c40081f-9d83-4a97-bca9-96f9f986bd67,2001,toyota,soluna,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+405fb253-2f0b-4dbc-8090-eb29686a8804,2002,toyota,soluna,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+130f0e9c-ee34-408f-9b18-6a375e762b25,2003,toyota,soluna,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+13512cbe-d71f-488d-8687-0700f988eaf8,2000,toyota,vienta,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+6596d71e-fbc8-46dd-837f-48449036fbc4,2017,toyota,vios-fs,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+2700a7b3-1356-4de5-abc6-68ba3fb0f16c,2019,toyota,vios-fs,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+770ee152-0cb9-4ae2-ac42-2c2112ed7fb0,2020,toyota,vios-fs,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+dfab60b6-241f-4354-9ddb-2bcbda05a324,2021,toyota,vios-fs,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+067d02de-c05e-4ece-9fba-025b626eafaf,2022,toyota,vios-fs,Base,Base,Standard,catalog-gap-fill [web_research],error,model never appears in NHTSA or EPA for this make (any year 1990–2026),
+8486257c-672b-456f-b7b7-0cc884f85ca9,2026,acura,tlx,A-Spec,A-Spec,A-Spec,trim-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+1889eac9-fbeb-473c-81df-bf2b31a30548,2026,acura,tlx,Advance,Advance,A-Spec,trim-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+c67c9f84-d759-4c34-82c6-3cdd6babcd49,2026,acura,tlx,Type S,Type S,Type S,trim-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+ea73e2b1-fe39-41e1-bbb3-2d548a3a46a1,2026,acura,tlx,"Base, Technology, A-Spec, Advance, Type S",,Standard,trim-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+f25779c0-e414-4cf7-811e-82df7543786d,2026,acura,tlx,Technology,Technology,Standard,trim-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+29eb701b-c8cf-4a26-a777-eba6b0bf2c86,2026,acura,tlx,Base,Base,Standard,trim-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+eee68cc9-b6f3-470c-ba21-1ec8801d3b04,2026,audi,a4,45 TFSI,45 TFSI,Premium Plus,cleanup_cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1996-2025,1996-2025
+bc3d338a-3e58-44cb-b1b6-13027397f394,2026,audi,a4,Base,Base,Premium,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1996-2025,1996-2025
+e9c910af-78ae-49c1-af3a-4b5ee2ef5366,2026,audi,a4,40 TFSI,40 TFSI,Premium,cleanup_cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1996-2025,1996-2025
+c75c68e6-724f-4b7a-ac89-8cacf671ac25,2026,audi,a4,45 TFSI quattro,45 TFSI quattro,Premium Plus,cleanup_cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1996-2025,1996-2025
+da11bc05-2f5b-448a-bdcc-137fce463d11,2026,audi,a7,Base,Base,Premium,catalog-gap-fill [web_research],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2012-2025,2012-2025
+52ccc76b-c2ab-427e-8aa0-892ace03cbfa,2026,audi,s4,S4,S4,Premium,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1992-1994 2000-2002 2004-2016 2018-2025,1992-1994 2000-2002 2004-2016 2018-2025
+a54fee23-afbc-4320-9bdb-0769adf695bc,2026,audi,s4,S4 Premium Plus,S4 Premium Plus,Sport,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1992-1994 2000-2002 2004-2016 2018-2025,1992-1994 2000-2002 2004-2016 2018-2025
+c0d55890-be67-47be-b42a-e79a09012202,2026,audi,s4,S4 Prestige,S4 Prestige,Sport,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1992-1994 2000-2002 2004-2016 2018-2025,1992-1994 2000-2002 2004-2016 2018-2025
+33d31bc6-6417-4506-9516-a915920dc938,2026,audi,s4,Base,Base,Premium,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1992-1994 2000-2002 2004-2016 2018-2025,1992-1994 2000-2002 2004-2016 2018-2025
+09f759d4-6d3e-46f9-abef-7a8d777dfb33,2026,audi,s6-e-tron,Base,,Standard,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1995-1997 2002-2003 2007-2011 2013-2018 2020-2025,1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+1f88ed6c-b241-4786-9a5c-35d5ec28d5b6,2026,audi,s6-e-tron,Base,Base,Sport,catalog-gap-fill,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1995-1997 2002-2003 2007-2011 2013-2018 2020-2025,1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+d244e894-e8cd-4cdd-bc49-11e6a8c02dc3,2026,bmw,x4,Base,Base,Sport,catalog-gap-fill [web_research],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+6e1f86ee-724c-4192-a58b-4d89bce2896d,2026,bmw,x4-m,Base,Base,Performance,catalog-gap-fill [web_research],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2025,2015-2025
+b52b4825-d31f-41f5-a8be-de4e9d90937a,2025,buick,electra-e5,Base,Base,Sport,catalog-gap-fill [web_research],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990,1990
+59008068-0721-4430-b9c2-7fa046b359df,2026,buick,electra-e5,Base,Base,Sport,catalog-gap-fill [web_research],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990,1990
+cd6b16d0-92db-4d22-a6a5-e96c52b398a3,2025,buick,lacrosse,Base,Base,Essence,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2005-2019,2005-2019
+7e0aca6a-b2f6-4d06-a3d7-3b8232f2e149,2026,buick,lacrosse,Base,Base,Essence,catalog-gap-fill,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2005-2019,2005-2019
+e93651a2-c998-46aa-9b25-b236eff21419,2025,buick,regal,Base,Base,Preferred,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2004 2011-2020,1990-2004 2011-2020
+ecbc97db-fbf4-4835-83f9-d245f99978ff,2026,buick,regal,Base,Base,Preferred,catalog-gap-fill,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2004 2011-2020,1990-2004 2011-2020
+78d263b1-d73a-46cb-b60f-432d97e663e9,2025,cadillac,ct6,Base,Base,Premium,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2016-2020,2016-2020
+393e0da0-9b65-47b1-beb3-7ab042f88190,2025,cadillac,vistiq,Base,Base,Performance,catalog-gap-fill [web_research],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2026,2026
+b91bc080-af91-44c4-8b23-e130bc6e0ced,2026,chevrolet,malibu,RS,RS,Standard,generation_template [filled from 2025  [expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+edfdc3cf-d58d-4c55-a74d-5b251eb40d4f,2026,chevrolet,malibu,Premier,Premier,Standard,generation_template [filled from 2025  [expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+e1a8b5fa-b4be-4c77-9fb9-0c593e153bb7,2026,chevrolet,malibu,LS,LS,Standard,generation_template [filled from 2025  [expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+631c4ee1-5400-40a3-a035-f4ddb00928bd,2026,chevrolet,malibu,"LS, RS, LT, Premier",Base,Standard,generation_template [filled from 2025 malibu],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+8323ddeb-0c92-4b21-9cba-901e65a87b2f,2026,chevrolet,malibu,LT,LT,Standard,generation_template [filled from 2025  [expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+b6d181dc-4a26-4f01-8545-bf5d2b219762,2025,chrysler,300,Base,,Touring,platform_inheritance_ld,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+d4ba6e62-307c-40c0-a5ee-71d0bf22ca12,2025,chrysler,300,300C,300C,300S,tier-a-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+042b6933-83fc-4a79-a681-656e27000a0e,2025,chrysler,300,Touring,Touring,Touring L,tier-a-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+deeb1e4e-9920-43d9-a458-69cc3bf83050,2025,chrysler,300,Touring L,Touring L,Limited,tier-a-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+02ae350a-3662-42ce-bb5e-5861b92aac32,2025,chrysler,300,300S,300S,300S,tier-a-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+066b7f38-1a00-4bed-8a7e-1510e8b624d2,2026,chrysler,300,Base,,Touring,platform_inheritance_ld,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+e3447bc8-0b17-4dc5-bb65-2e5fb37f7459,2026,chrysler,300,Touring L,Touring L,Limited,tier-a-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+8e391fcf-d809-433d-9238-9d11330e83ae,2026,chrysler,300,300C,300C,300S,tier-a-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+09476d4e-c3d7-4749-8aee-006afa237ac7,2026,chrysler,300,Touring,Touring,Touring L,tier-a-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+9941d33a-2f16-4706-be5e-7ad9e1f3c393,2026,chrysler,300,300S,300S,300S,tier-a-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1999-2023,1999-2023
+77ccd9e5-93f7-4f32-9c52-37fdca323736,2026,dodge,hornet,Base,Base,Standard,generation_template,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2023-2025,2023-2025
+190330b4-d70e-49d0-ada8-5911e1ddb68a,2026,ferrari,sf90,SF90 Stradale/Spider,SF90 Stradale/Spider,Luxury,generation,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2021-2025,2021-2025
+c79bf39d-33c6-4bab-9e00-1f63d0db4c7b,2025,fiat,500x,Base,,LS,api_import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2016-2023,2016-2023
+df4c54af-4168-4c5d-96db-28f955a89d84,2025,ford,focus,Base,Base,SE,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2000-2018,2000-2018
+420ec4f3-1f26-4244-8434-87ee2dc32f3a,2025,ford,taurus,Base,Base,Standard,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2019,1990-2019
+4eb63e67-7888-4147-84f1-59860bfe4400,2025,honda,prelude,Base,Base,Standard,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2001 2026,1990-2001 2026
+6fa39a63-2613-4e16-9cad-94437a308aa9,2025,infiniti,q50,Red Sport 400,Red Sport 400,Pure,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+e7f71e7d-6035-47e4-ac51-a334c339cfe4,2025,infiniti,q50,Pure,Pure,Pure,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+b22ded99-6064-47cb-8765-96b92d622bef,2025,infiniti,q50,Sensory,Sensory,Pure,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+732f6bf2-d93a-4b7e-b2fe-8673ecfa56eb,2025,infiniti,q50,Luxe,Luxe,Pure,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+6079fc5a-9422-4147-b495-88c539d99f59,2025,infiniti,q50,"Pure, Luxe, Sensory, Red Sport 400",,Pure,cache-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+1ff6d3bd-dd43-49a9-9f6b-90683a405bc4,2026,infiniti,q50,Pure,Pure,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+9536be1b-4d5c-42bc-95dd-36c954cd673c,2026,infiniti,q50,Sensory,Sensory,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+20b424e7-e81c-4675-a878-ce7022702d1e,2026,infiniti,q50,Red Sport 400,Red Sport 400,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+ea7a0330-3e63-4148-b7eb-80e8f5abf912,2026,infiniti,q50,Luxe,Luxe,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+a770c8dd-ff55-4dac-bd09-dcf333b2c870,2026,infiniti,q50,"Pure, Luxe, Sensory, Red Sport 400",,Pure,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+7b8328ea-f987-4612-b3f5-22d269fdd196,2026,infiniti,qx50,Pure,Pure,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2017 2019-2025,2008-2017 2019-2025
+51299210-76a6-4f6e-8abc-fd369a47d6a2,2026,infiniti,qx50,Essential,Essential,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2017 2019-2025,2008-2017 2019-2025
+02c43b1d-37e5-4c71-828d-ab9387dc075f,2026,infiniti,qx50,Sensory,Sensory,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2017 2019-2025,2008-2017 2019-2025
+88f47664-20a3-43bd-838c-d23027f2caf3,2026,infiniti,qx50,Autograph,Autograph,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2017 2019-2025,2008-2017 2019-2025
+b749f1dd-e823-460c-9c3f-db9fb2e79965,2026,infiniti,qx50,Luxe,Luxe,Pure,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2017 2019-2025,2008-2017 2019-2025
+ad67cb39-dead-4b75-83a3-fffec7a4383c,2026,infiniti,qx50,"Pure, Luxe, Essential, Sensory, Autograph",,Pure,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2017 2019-2025,2008-2017 2019-2025
+ad23aec0-3455-41fb-ac76-2fa4d9460735,2025,jaguar,e-pace,Base,Base,SE,verified-research [sizes-inherited],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2018-2024,2018-2024
+64c660fb-361d-49e2-aaa4-b48780e1de24,2025,jaguar,f-type,Base,,S,api_import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2014-2024,2014-2024
+eb832baf-05b6-478b-bed8-2173e614e748,2025,jaguar,i-pace,Base,Base,S,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2019-2024,2019-2024
+ea34257b-9821-4cda-ad2b-bbb23a4aa3a4,2025,jaguar,xe,Prestige,Prestige,SE,api_import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2017-2021,2017-2021
+b75d0125-4949-46ba-9096-5ae0dbf9672f,2025,jaguar,xe,S,S,SE,api_import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2017-2021,2017-2021
+70e42828-4e46-4cd9-b41a-9df7a20bad09,2025,jaguar,xe,R-Dynamic,R-Dynamic,SE,api_import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2017-2021,2017-2021
+9b7c6f4a-02c2-46dc-8d28-6845c92d86a0,2025,jaguar,xe,"Premium, Prestige, R-Dynamic, S",,SE,api_import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2017-2021,2017-2021
+e5fae5e1-cf33-4ad4-9f80-3c3de0a7eec7,2025,jaguar,xe,Premium,Premium,SE,api_import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2017-2021,2017-2021
+3b082280-06e4-44fc-ae43-b6f608dc4753,2025,jaguar,xf,R-Dynamic,R-Dynamic,Standard,verified-research [sizes-inherited] [expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+2958e8da-c852-48d8-a2e8-877ea9948d1f,2025,jaguar,xf,"Premium, Prestige, R-Dynamic, S",,Standard,verified-research [sizes-inherited],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+459908bf-8a26-40a1-8abc-40a6f42c7808,2025,jaguar,xf,S,S,Standard,verified-research [sizes-inherited] [expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+7fa2f7b5-916f-46c0-a21d-3d325fd23765,2025,jaguar,xf,Premium,Premium,Standard,verified-research [sizes-inherited] [expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+8a82f778-a0ee-4ac7-9855-778ecb5bccb5,2025,jaguar,xf,Prestige,Prestige,Standard,verified-research [sizes-inherited] [expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+73d82f24-80b2-44b6-94dd-7f6d15ee9697,2025,jeep,renegade,Trailhawk,Trailhawk,Latitude,verified-research,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+a34cb3f4-36b9-44b3-a280-7d4ae52daf4e,2025,jeep,renegade,Latitude,Latitude,Latitude,verified-research,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+a05708fc-3b04-4fc3-b01d-7d9b76f39e87,2025,jeep,renegade,Sport,Sport,Sport,verified-research,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+d3f0b143-d697-41c4-9e9f-10835c603176,2025,jeep,renegade,Limited,Limited,Limited,verified-research,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+de7a1c79-c7a7-4d6e-af08-583d3dbf984e,2025,jeep,renegade,"Sport, Latitude, Trailhawk, Limited",Base,Sport,cache-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+2e8dc0bb-cb8a-4f14-a7cc-77e26ed207be,2026,jeep,renegade,"Sport, Latitude, Trailhawk, Limited",Base,Sport,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+a1f6c7e9-6542-4649-887f-589778a9bb1e,2026,jeep,renegade,Sport,Sport,Sport,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+aa752031-a1e9-4445-a0c9-3b049bb73a36,2026,jeep,renegade,Latitude,Latitude,Latitude,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+87da9304-da1c-4e3b-935f-c3d83acc3c5a,2026,jeep,renegade,Trailhawk,Trailhawk,Latitude,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+b629518d-9cc8-4ca5-9f0d-fcb49adf0339,2026,jeep,renegade,Limited,Limited,Limited,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2015-2023,2015-2023
+c9d32f4e-b4c0-49ed-9ae2-96da4ca03937,2025,kia,forte,"FE, LXS, GT-Line, GT",Base,FE,cache-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+bb6a75f7-c086-46ea-b2a6-210125c8a3e0,2025,kia,forte,FE,FE,FE,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+2bfbfa38-60e4-4e15-9d81-005ae006e4e3,2025,kia,forte,GT,GT,FE,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+8303185e-43d4-4827-b826-d2319cbecfc9,2025,kia,forte,GT-Line,GT-Line,FE,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+7c874a68-5b3f-4b2b-a329-f91b04301c86,2025,kia,forte,LXS,LXS,FE,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+815afe50-2401-42fd-8dbb-bbe597a9083b,2026,kia,forte,GT,GT,GT,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+af12824b-e120-4c29-a0cf-2c2da394d6e5,2026,kia,forte,LXS,LXS,LXS,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+97544190-e685-42be-be87-27ea97623520,2026,kia,forte,GT-Line,GT-Line,GT-Line,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+a7407e18-5c5f-4085-909a-2bc98cacd90f,2026,kia,forte,FE,FE,FE,verified-research,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+bbbaa356-5b8a-4c5f-ae7a-216bdc163d6c,2026,kia,forte,"FE, LXS, GT-Line, GT",Base,FE,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2024,2010-2024
+4c991737-ce02-4da4-8332-a1ae0559d18c,2026,kia,soul,S,S,LS,manual_seed_spec [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2025,2010-2025
+a0cbddda-bac7-4a63-9bbe-2f7214e9ec7f,2026,kia,soul,Turbo,Turbo,LS,manual_seed_spec [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2025,2010-2025
+a005e7df-43ad-4b22-9d5d-4b2ecd24a764,2026,kia,soul,EX,EX,LS,manual_seed_spec [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2025,2010-2025
+26d42b9c-afba-419d-bbdb-326b8b7bb123,2026,kia,soul,GT-Line,GT-Line,LS,manual_seed_spec [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2025,2010-2025
+1e7908db-64dd-4bd8-841a-8873640d9317,2026,kia,soul,LX,LX,LS,manual_seed_spec [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2025,2010-2025
+f62a3191-a5d5-4dfa-86f5-69230095da00,2026,kia,soul,"LX, S, GT-Line, EX, Turbo",Base,LS,manual_seed_spec,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2010-2025,2010-2025
+5746fd43-42d1-4ee7-8ed7-ff27b2abed08,2025,mazda,cx-9,Signature,Signature,Sport,generation_inherit_2024,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+b503b82c-0922-4244-b753-aa4407e61cdb,2025,mazda,cx-9,Grand Touring,Grand Touring,Sport,generation_inherit_2024,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+9f589821-a755-4f8c-a9c1-2ea8a38b2e14,2025,mazda,cx-9,Carbon Edition,Carbon Edition,Sport,generation_inherit_2024,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+9747c149-f4ce-4ab1-bd1c-b90c2fa7500d,2025,mazda,cx-9,Touring,Touring,Sport,generation_inherit_2024,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+d138c6bf-a568-446d-8ca0-83a9485d9937,2025,mazda,cx-9,Sport,Sport,Sport,generation_inherit_2024,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+d0b31046-1cc5-4f8f-9b97-aa94ab4f1c13,2026,mazda,cx-9,Touring,Touring,Sport,generation_inherit_2024,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+9e655d18-e1f0-4752-a577-60d154238793,2026,mazda,cx-9,Sport,Sport,Sport,generation_inherit_2024,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+a602dcec-af42-4f9d-a652-00b8640a0699,2026,mazda,cx-9,Carbon Edition,Carbon Edition,Sport,generation_inherit_2024,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+fda5ef9a-d9c2-4973-8b21-96f9b61715e0,2026,mazda,cx-9,Signature,Signature,Sport,generation_inherit_2024,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+878613d4-10ec-41a5-b088-400516a7827e,2026,mazda,cx-9,Grand Touring,Grand Touring,Sport,generation_inherit_2024,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2023,2007-2023
+34419704-2ea8-41e6-823c-a1dfa69bb045,2025,mazda,mx-30,Base,Base,Premium,google-ai-overview,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2022-2023,2022-2023
+cf1b71f7-8a0d-4f36-b945-fae415320019,2025,mclaren,gt,GT,GT,Luxury,generation,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2017-2023,2017-2023
+f30e4e0c-fccd-4a0b-8cf0-5d0d748923c1,2026,mclaren,gt,GT,GT,Luxury,generation,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2017-2023,2017-2023
+e07bad9d-4461-406e-b3eb-fd0c95de558e,2025,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2019-2022,2019-2022
+e8f15aa4-0abf-4ed5-9135-05c2052b7fb1,2026,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2019-2022,2019-2022
+4f215deb-9e71-4cac-ac42-a05f45729c44,2026,mercedes,eqb,Base,Base,Premium,catalog-gap-fill,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2022-2025,2022-2025
+a407801a-3807-4251-bd3e-3b62a33dc431,2026,mercedes-benz,eqb,Base,,Premium,google-ai-overview,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2022-2025,2022-2025
+127be4a3-9d7c-4979-8373-992b65a9011c,2025,mini,clubman,Signature,Signature,LS,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+f543f637-5b57-4ed3-9189-0a49c1c080b2,2025,mini,clubman,"Classic, Signature, Iconic, S, John Cooper Works",Base,LS,cache-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+009bdbfd-ebe8-49ec-95d9-b371f9598c64,2025,mini,clubman,Classic,Classic,LS,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+f66599bf-b78e-485f-b877-7450e2bf1968,2025,mini,clubman,Iconic,Iconic,LS,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+93d9cda6-3b26-4d14-976b-cb1c80830e50,2025,mini,clubman,S,S,LS,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+5f146229-340e-45d4-894f-41d2a06f15cd,2025,mini,clubman,John Cooper Works,John Cooper Works,LS,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+ce4f8c77-b56c-4359-b169-42514b9c7246,2026,mini,clubman,"Classic, Signature, Iconic, S, John Cooper Works",Base,LS,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+12598bbf-e9fa-41b7-95c4-a2df1bbf17da,2026,mini,clubman,S,S,LS,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+b995085c-7fc3-49aa-b0d2-c6411fd7398e,2026,mini,clubman,John Cooper Works,John Cooper Works,LS,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+3cd37031-294a-4f52-8af2-ebb81a84c77f,2026,mini,clubman,Signature,Signature,LS,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+e9d23c97-2fb9-44ea-a914-1d2bb0e117e6,2026,mini,clubman,Iconic,Iconic,LS,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+0f9bebb2-6927-48fe-b31f-f1c09bc527b6,2026,mini,clubman,Classic,Classic,LS,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2008-2014 2016-2024,2008-2014 2016-2024
+547c93ef-65d6-4cbf-a036-cff22f165134,2025,mitsubishi,mirage,ES/SE/GT,ES/SE/GT,Standard,batch7-subcompacts-final [web_research],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2002 2014-2024,1990-2002 2014-2024
+e5ad19a3-8804-4f4e-949f-d8cc281ed633,2026,mitsubishi,mirage,ES/SE/GT,ES/SE/GT,Standard,batch7-subcompacts-final [web_research],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2002 2014-2024,1990-2002 2014-2024
+53178c33-6d9a-47a5-a07a-55f9473d5f40,2025,nissan,gt-r,Track Edition,Track Edition,Luxury,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+e4fd6bc5-32f5-4615-ac01-ab7b07d52f50,2025,nissan,gt-r,Premium,Premium,Luxury,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+a822644e-21be-4543-a794-cecd165851d9,2025,nissan,gt-r,NISMO,NISMO,Luxury,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+9c1d1713-f668-49a8-8ab9-c740bddbe319,2025,nissan,gt-r,Black Edition,Black Edition,Luxury,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+3cfe537c-b1a9-4e62-b31b-bc259ac54bf6,2025,nissan,gt-r,T-Spec,T-Spec,Luxury,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+24076d52-0237-49da-a969-8597d3ad0b09,2025,nissan,gt-r,Base,,Luxury,cache-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+01e0c68d-db93-4fda-b32d-a7f435cbfddd,2026,nissan,gt-r,Base,,Luxury,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+cd56dbb0-52aa-4989-9750-f0f53e988abe,2026,nissan,gt-r,NISMO,NISMO,Luxury,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+461e53f9-a4ea-4ad1-85f6-bd8a3fe8b51f,2026,nissan,gt-r,Premium,Premium,Luxury,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+b2c938be-d5ee-46f9-bb7c-d0b26d20204f,2026,nissan,gt-r,Black Edition,Black Edition,Luxury,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+1f972e16-74db-4bc0-a1e5-2424524ca0ed,2026,nissan,gt-r,Track Edition,Track Edition,Luxury,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+1b41e1cb-568a-4925-b0e2-7c4cdba29bb1,2026,nissan,gt-r,T-Spec,T-Spec,Luxury,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2009-2024,2009-2024
+2f0c9405-d20f-4bba-89c8-23e5b47c91e8,2025,nissan,maxima,"S, SV, SL, SR, Platinum",Base,S,generation_inherit_2023,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+b9c5887b-6818-4f7f-9176-990ee69b323a,2025,nissan,maxima,S,S,S,generation_inherit_2023 [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+e5386555-19ef-4aba-929c-927665e95faa,2025,nissan,maxima,SV,SV,S,generation_inherit_2023 [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+ea0ea772-d973-4f37-aacd-078d6e1e9a8a,2025,nissan,maxima,SL,SL,S,generation_inherit_2023 [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+ed80cc12-c573-423a-a3c6-115543e58b03,2025,nissan,maxima,SR,SR,S,generation_inherit_2023 [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+ee448178-8e80-4fec-82aa-a891d38b474a,2025,nissan,maxima,Platinum,Platinum,S,generation_inherit_2023 [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+d443e73b-2fe8-4c44-84b2-df97881f98fd,2026,nissan,maxima,S,S,S,generation_inherit_2023 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+01288fb2-73ad-4b08-a6da-97c624f2c4a8,2026,nissan,maxima,SV,SV,S,generation_inherit_2023 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+bea76aed-8653-447a-a741-c9944273d048,2026,nissan,maxima,SL,SL,S,generation_inherit_2023 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+1e650d67-a265-4677-be9d-87ab829aed83,2026,nissan,maxima,SR,SR,S,generation_inherit_2023 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+eb26ca61-1a44-487b-aa23-eddb259a18e9,2026,nissan,maxima,Platinum,Platinum,S,generation_inherit_2023 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+960f1ee5-e835-40c7-9503-e2ce8d9d3b5a,2026,nissan,maxima,"S, SV, SL, SR, Platinum",Base,S,generation_inherit_2023,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1990-2014 2016-2023,1990-2014 2016-2023
+c0747e10-87e6-4bb8-85d2-18110222d901,2025,nissan,titan,S,S,S,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+b7c0903f-02da-4e2f-b1d9-4b2387691b30,2025,nissan,titan,Pro-4X,Pro-4X,SV,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+913f208a-7213-4d2a-8b0b-7fb47f8ae643,2025,nissan,titan,SL,SL,SL,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+f2acf5d3-98f1-4cfb-9d8e-0eeb7098285c,2025,nissan,titan,Platinum Reserve,Platinum Reserve,SV,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+fc5d6a3d-2dc0-47a4-be79-ae70f63f97c2,2025,nissan,titan,PRO-4X,PRO-4X,SV,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+31759a4e-0644-4671-99fc-290efa52ed24,2025,nissan,titan,"S, SV, SL, Platinum Reserve, PRO-4X",,SV,cache-import,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+0fa473db-52e8-4194-ae7a-760d1a6ef310,2025,nissan,titan,SL,SL,SV,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+2cf5e461-e553-43e7-9a6c-a31ee9516980,2025,nissan,titan,S,S,SV,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+1b9d9e90-c4b4-4dae-98fa-00c4e309a49a,2025,nissan,titan,SV,SV,SV,cache-import [trim-expanded],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+cb25986f-5288-4459-a45b-c3df1cd9343e,2025,nissan,titan,Platinum Reserve,Platinum Reserve,SL,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+4c2eaa90-50a4-4345-9621-0e1a6ad3ed30,2025,nissan,titan,XD,XD,SV,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+7c736b4f-f1e0-4af8-b8d8-b4bfd36d738d,2025,nissan,titan,SV,SV,SV,generation_inherit,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+a24f2d90-4116-4cbd-a746-2ec6e2933124,2026,nissan,titan,SV,SV,SV,generation_inherit_2025 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+e0488410-1b79-48c1-a35b-2f83f85f3460,2026,nissan,titan,Pro-4X,Pro-4X,SV,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+5be5de75-4951-4327-b233-8131a790af32,2026,nissan,titan,SL,SL,SL,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+1479c59b-677e-4067-b60b-0eb9c60bd6b3,2026,nissan,titan,XD,XD,SV,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+20283d89-9948-4499-ac75-c24450a5aa59,2026,nissan,titan,S,S,SV,generation_inherit_2025 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+64bdb211-6455-44b5-9651-31d8dca766d9,2026,nissan,titan,SL,SL,SV,generation_inherit_2025 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+5e65bc28-49b1-46fb-83c7-ec9651e3ea34,2026,nissan,titan,Platinum Reserve,Platinum Reserve,SV,generation_inherit_2025 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+9e9f1124-a854-461c-bbbd-466e9dfd2ca4,2026,nissan,titan,PRO-4X,PRO-4X,SV,generation_inherit_2025 [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+cdd4e10c-1d84-40b5-adbc-b703c613a8d5,2026,nissan,titan,"S, SV, SL, Platinum Reserve, PRO-4X",Base,SV,generation_inherit_2025,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+16378e7c-9663-4e45-9c49-e234a37d1402,2026,nissan,titan,Platinum Reserve,Platinum Reserve,SL,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+4ae7f99e-8897-48a8-a8d0-1d0a96c4f9c0,2026,nissan,titan,SV,SV,SV,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+32420d10-f2a4-4014-ab8d-993dec16fc54,2026,nissan,titan,S,S,S,generation_inherit,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2002-2024,2002-2024
+47e5fd64-9d9c-46c4-a824-99f2879ae366,2026,nissan,versa,"S, SV, SR",,Standard,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2025,2007-2025
+da339530-fe9b-4bbf-af9e-e09f51b30cb6,2026,nissan,versa,S,S,Standard,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2025,2007-2025
+81cc3517-3ead-4c1a-95ef-21dde92e91c4,2026,nissan,versa,SV,SV,Standard,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2025,2007-2025
+c9395076-fea4-41b4-9eb0-aa798ec305c9,2026,nissan,versa,SR,SR,Standard,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 2007-2025,2007-2025
+403ff954-231a-44b9-b702-1ea0b4b8ee1d,2026,porsche,boxster,S,S,Standard,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+362eb6c3-4520-4db6-a83e-d5d1f3a701b6,2026,porsche,boxster,Spyder,Spyder,Standard,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+0e99bfa7-95dc-47f5-b09f-29825e542e2f,2026,porsche,boxster,Base,Base,Standard,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+7e530f10-766e-453f-a0f6-18f85258884e,2026,porsche,boxster,GTS,GTS,Standard,cache-import [trim-expanded],info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+16298630-aee7-44c7-b4ef-d8100c9de518,2026,porsche,boxster,"Base, S, GTS, Spyder",Base,Standard,cache-import,info,no 2026 listing yet (gov sources lag for MY2025+); model exists 1997-2025,1997-2025
+dfc5d7ee-a1c3-478c-b7fa-d717be69646f,2025,toyota,avalon,Base,Base,Standard,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 1995-2022,1995-2022
+ad824288-8bda-42e5-9998-736cd9f3fb41,2025,toyota,c-hr,Base,Base,Standard,catalog-gap-fill [web_research],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2018-2022 2026,2018-2022 2026
+1f2f0a8e-d7b2-4f76-a8d5-6583ced07077,2025,toyota,venza,Base,Base,Standard,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2009-2017 2021-2024,2009-2017 2021-2024
+76abf83f-044e-4f87-9562-567b879811a6,2025,volkswagen,arteon,Base,Base,SE,catalog-gap-fill,info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2019-2024,2019-2024
+dd917b1b-6f62-4ace-87c8-e0d40ee624f0,2025,volkswagen,arteon-sr,Base,Base,SE,catalog-gap-fill [web_research],info,no 2025 listing yet (gov sources lag for MY2025+); model exists 2019-2024,2019-2024
+9886176c-82a1-43be-8c9f-66d83451fc70,2012,acura,ilx,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2013-2022) — adjacent model year, likely boundary",2013-2022
+dea8a3b3-1ccf-4a11-9e37-dc719374b235,2023,acura,nsx,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (1990-2005 2016-2022) — adjacent model year, likely boundary",1990-2005 2016-2022
+f36badf1-2a2c-4969-8246-6313c6191ffc,2006,acura,rdx,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2007-2026) — adjacent model year, likely boundary",2007-2026
+50684f2f-8beb-4537-8e9e-c05ec057ceb7,2013,acura,rl,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (1990-2012) — adjacent model year, likely boundary",1990-2012
+ca73a01c-3f8b-4838-86dc-e125d2e52134,2014,acura,tlx,Base,Base,Standard,railway_import [expanded],warn,"model exists other years (2015-2025) — adjacent model year, likely boundary",2015-2025
+e5ce7629-2a6c-4d65-ae97-50e7206b3e86,2014,acura,tlx,"Base, Technology, A-Spec, Advance, Type S",2.4i,Standard,railway_import,warn,"model exists other years (2015-2025) — adjacent model year, likely boundary",2015-2025
+c767e399-d36f-4705-92d0-4dca98503aff,2014,acura,tlx,Technology,Technology,Standard,railway_import [expanded],warn,"model exists other years (2015-2025) — adjacent model year, likely boundary",2015-2025
+5ae71c3e-6922-4ffc-afec-cb64acd4c011,2014,acura,tlx,A-Spec,A-Spec,Standard,railway_import [expanded],warn,"model exists other years (2015-2025) — adjacent model year, likely boundary",2015-2025
+a4fde065-4e0f-48fe-9e4f-2f455728c755,2014,acura,tlx,Advance,Advance,Standard,railway_import [expanded],warn,"model exists other years (2015-2025) — adjacent model year, likely boundary",2015-2025
+969d7bdd-235c-472e-acbe-ae0aec407db9,2014,acura,tlx,Type S,Type S,Standard,railway_import [expanded],warn,"model exists other years (2015-2025) — adjacent model year, likely boundary",2015-2025
+7419aeda-b6ac-48c3-9279-e64a57c17857,2003,acura,tsx,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2004-2014) — adjacent model year, likely boundary",2004-2014
+d24cf20a-135a-44aa-9951-210512395987,2009,acura,zdx,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (2010-2013 2024-2026) — adjacent model year, likely boundary",2010-2013 2024-2026
+18cd7087-4a23-417c-9618-d43d454624b5,2023,acura,zdx,Base,Base,Performance,google-ai-overview,warn,"model exists other years (2010-2013 2024-2026) — adjacent model year, likely boundary",2010-2013 2024-2026
+5d7664c3-e273-4635-8502-bcb6ad6b5cce,2016,aston martin,db11,DB11 V8/V12,DB11 V8/V12,Luxury,generation,warn,"model exists other years (2017-2024) — adjacent model year, likely boundary",2017-2024
+a802dec8-3ba6-473f-b6a6-b1609a537655,2020,aston martin,dbx,DBX/DBX707,DBX/DBX707,Flagship,generation,warn,"model exists other years (2021-2026) — adjacent model year, likely boundary",2021-2026
+524f26ba-8977-4118-8b17-925dc36688d5,2005,aston martin,vantage,V8/V12 Vantage (2nd Gen),V8/V12 Vantage (2nd Gen),Premium,generation,warn,"model exists other years (2006-2026) — adjacent model year, likely boundary",2006-2026
+ee7ebecb-674d-4f0b-bc68-5416ae5a6006,1996,audi,80,B4,,,90s-research-batch,warn,"model exists other years (1990-1995) — adjacent model year, likely boundary",1990-1995
+a6db93a8-af25-4f4e-8906-d4e919866abd,1996,audi,a3,Base,Base,,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+7998fc7f-90b9-4adc-82b5-ce911b7a9a08,1997,audi,a3,Base,Base,,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+f356c5be-ba97-4bb1-8552-b3d5fd0cf3b6,1998,audi,a3,Base,Base,,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+29f2d671-7d34-434c-8747-3116735bbcbe,1999,audi,a3,Base,Base,,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+8962771d-ed20-4ae0-aafd-80e84c0142a0,2000,audi,a3,Base,Base,Standard,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+e20e256d-5a56-450d-869c-3ef378cd2bf3,2001,audi,a3,Base,Base,Standard,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+e59743c7-6d46-4428-9556-380bdda6d23e,2002,audi,a3,Base,Base,Standard,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+35c62981-c0a7-4f8e-b54f-442f3ec87d7e,2003,audi,a3,Base,Base,Standard,cache-import,warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+fb4f3239-412f-4cf8-a7d0-75805cfcec4c,2004,audi,a3,2.0T,2.0T,Premium,luxury-gap-fill [web_research] [expanded],warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+89541be3-d4ed-4a5b-9beb-c2897b90e743,2004,audi,a3,"2.0T, 3.2 Quattro",,Premium,luxury-gap-fill [web_research],warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+85436df3-dcf1-4411-8394-c28ddb3874af,2004,audi,a3,3.2 Quattro,3.2 Quattro,Premium,luxury-gap-fill [web_research] [expanded],warn,model exists other years (2006-2013 2015-2020 2022-2026),2006-2013 2015-2020 2022-2026
+b99fbf1f-d485-4d57-a525-617d0384a581,2005,audi,a3,"2.0T, 3.2 Quattro",,Premium,luxury-gap-fill [web_research],warn,"model exists other years (2006-2013 2015-2020 2022-2026) — adjacent model year, likely boundary",2006-2013 2015-2020 2022-2026
+3191c61a-c7d5-4e5f-b91b-8007d8558eed,2005,audi,a3,3.2 Quattro,3.2 Quattro,Premium,luxury-gap-fill [web_research] [expanded],warn,"model exists other years (2006-2013 2015-2020 2022-2026) — adjacent model year, likely boundary",2006-2013 2015-2020 2022-2026
+b33e98d0-6fd0-46f3-a095-36b08890b8ac,2005,audi,a3,2.0T,2.0T,Premium,luxury-gap-fill [web_research] [expanded],warn,"model exists other years (2006-2013 2015-2020 2022-2026) — adjacent model year, likely boundary",2006-2013 2015-2020 2022-2026
+ddd1b9a4-2957-4066-9e13-43d63cc48653,2014,audi,a3,Base,Base,LS,cache-import,warn,"model exists other years (2006-2013 2015-2020 2022-2026) — adjacent model year, likely boundary",2006-2013 2015-2020 2022-2026
+90198105-37ef-4ab0-8d9a-2977e078421a,2021,audi,a3,Base,Base,Premium,cache-import,warn,"model exists other years (2006-2013 2015-2020 2022-2026) — adjacent model year, likely boundary",2006-2013 2015-2020 2022-2026
+cbbf43df-f19c-4c84-98e6-c4feaedb0934,2007,audi,a5,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2008-2026) — adjacent model year, likely boundary",2008-2026
+4ab16bd3-e571-4308-8d45-3424dff64c6f,2011,audi,a7,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2012-2025) — adjacent model year, likely boundary",2012-2025
+ca582394-0a5d-4f53-9502-1917126123e5,2000,audi,cabriolet,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (1992-1998),1992-1998
+0eeb62e8-dc25-4fde-8791-6ea7b053b46a,1995,audi,coupe,B4,,,90s-research-batch,warn,model exists other years (1990-1991),1990-1991
+85b9ec7f-d4a3-489e-872d-1c49600c5289,1996,audi,coupe,B4,,,90s-research-batch,warn,model exists other years (1990-1991),1990-1991
+ff9dd16e-3e0e-44cd-a3df-17d283589071,2008,audi,q5,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2009-2026) — adjacent model year, likely boundary",2009-2026
+ab6cbb69-9ffd-4773-b78c-ddab62fb272d,2024,audi,q6-e-tron,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (2025-2026) — adjacent model year, likely boundary",2025-2026
+b3c18ba6-52ee-4370-bf59-1c2a811a5f65,2016,audi,q7,"Premium, Premium Plus, Prestige, SQ7",Base,Premium,cache-import,warn,"model exists other years (2007-2015 2017-2026) — adjacent model year, likely boundary",2007-2015 2017-2026
+a721e445-61a2-43b9-8ba0-a0c281667801,2016,audi,q7,Premium,Premium,Premium,cache-import [expanded],warn,"model exists other years (2007-2015 2017-2026) — adjacent model year, likely boundary",2007-2015 2017-2026
+d7c831cd-e5f4-48c1-8574-1adc5cb8d0a2,2016,audi,q7,Premium Plus,Premium Plus,Premium,cache-import [expanded],warn,"model exists other years (2007-2015 2017-2026) — adjacent model year, likely boundary",2007-2015 2017-2026
+e781da91-9a28-4306-9e5c-d1239a1156a4,2016,audi,q7,Prestige,Prestige,Premium,cache-import [expanded],warn,"model exists other years (2007-2015 2017-2026) — adjacent model year, likely boundary",2007-2015 2017-2026
+98e5e7a6-31a8-4181-982b-6965a883f3c4,2016,audi,q7,SQ7,SQ7,Premium,cache-import [expanded],warn,"model exists other years (2007-2015 2017-2026) — adjacent model year, likely boundary",2007-2015 2017-2026
+a401efdc-1c9a-4f0b-a30d-efb0bc6c3def,2007,audi,r8,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2008-2012 2014-2018 2020-2023) — adjacent model year, likely boundary",2008-2012 2014-2018 2020-2023
+772cc2a1-ed96-425b-92f3-21ffd2f90373,2013,audi,r8,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2008-2012 2014-2018 2020-2023) — adjacent model year, likely boundary",2008-2012 2014-2018 2020-2023
+17ec174b-5f17-4e49-9e17-3a299038edb1,2019,audi,r8,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2008-2012 2014-2018 2020-2023) — adjacent model year, likely boundary",2008-2012 2014-2018 2020-2023
+d5e38459-a8ab-4a46-a145-4e1ef9f4976e,2021,audi,rs3,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (2017-2020 2022-2026) — adjacent model year, likely boundary",2017-2020 2022-2026
+f8a3a768-1521-4b3e-85cb-79673a688266,2010,audi,rs5,Base,Base,Sport,catalog-gap-fill [web_research],warn,model exists other years (2013-2015 2018-2019 2021-2025),2013-2015 2018-2019 2021-2025
+41dd9f02-be30-4ecf-9ae3-b92820cfee83,2011,audi,rs5,Base,Base,Sport,catalog-gap-fill [web_research],warn,model exists other years (2013-2015 2018-2019 2021-2025),2013-2015 2018-2019 2021-2025
+38cc8369-ae3e-44fc-b807-9464286b5a8b,2012,audi,rs5,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (2013-2015 2018-2019 2021-2025) — adjacent model year, likely boundary",2013-2015 2018-2019 2021-2025
+f65454be-4a2d-4952-93ec-fefa72f4c397,2016,audi,rs5,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (2013-2015 2018-2019 2021-2025) — adjacent model year, likely boundary",2013-2015 2018-2019 2021-2025
+61be7e0c-a9ea-4bd8-87ad-9a2da00e3427,2017,audi,rs5,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (2013-2015 2018-2019 2021-2025) — adjacent model year, likely boundary",2013-2015 2018-2019 2021-2025
+452a280b-c2b5-454a-b894-ff05b8720ff2,2020,audi,rs5,Base,Base,Luxury,catalog-gap-fill [web_research],warn,"model exists other years (2013-2015 2018-2019 2021-2025) — adjacent model year, likely boundary",2013-2015 2018-2019 2021-2025
+0b792243-de72-456b-a90e-3e4e803e9a61,2002,audi,rs6,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2003-2004 2021-2026) — adjacent model year, likely boundary",2003-2004 2021-2026
+0c1b147d-62cc-4efa-82ca-33fa9dda1740,2020,audi,rs6,Base,Base,Flagship,google-ai-overview,warn,"model exists other years (2003-2004 2021-2026) — adjacent model year, likely boundary",2003-2004 2021-2026
+dceaa269-b990-412c-b9e5-e0419258daf1,2019,audi,rs7,Base,Base,Performance,catalog-gap-fill [web_research],warn,"model exists other years (2014-2018 2021-2026) — adjacent model year, likely boundary",2014-2018 2021-2026
+c87dd723-480c-4036-8ca5-a0c62dda584c,2020,audi,rs7,Base,Base,Performance,catalog-gap-fill,warn,"model exists other years (2014-2018 2021-2026) — adjacent model year, likely boundary",2014-2018 2021-2026
+76f4e761-ff3d-4108-8b9a-156de5ee53b4,2021,audi,s3,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2015-2020 2022-2026) — adjacent model year, likely boundary",2015-2020 2022-2026
+8bffd202-6335-4aac-97c4-bd4a56bbc513,2003,audi,s4,"Avant, Sedan",,Premium,luxury-gap-fill [web_research],warn,"model exists other years (1992-1994 2000-2002 2004-2016 2018-2025) — adjacent model year, likely boundary",1992-1994 2000-2002 2004-2016 2018-2025
+990849f6-fb6d-4696-8774-3124785c06e1,2003,audi,s4,Avant,Avant,Premium,luxury-gap-fill [web_research] [expanded],warn,"model exists other years (1992-1994 2000-2002 2004-2016 2018-2025) — adjacent model year, likely boundary",1992-1994 2000-2002 2004-2016 2018-2025
+07871167-1fae-4e51-8332-eae826e0c791,2003,audi,s4,Sedan,Sedan,Premium,luxury-gap-fill [web_research] [expanded],warn,"model exists other years (1992-1994 2000-2002 2004-2016 2018-2025) — adjacent model year, likely boundary",1992-1994 2000-2002 2004-2016 2018-2025
+11bf3d9a-da81-4641-bbb5-d91a2dac7847,2017,audi,s4,Premium Plus,Premium Plus,Premium,luxury-gap-fill [web_research] [expanded],warn,"model exists other years (1992-1994 2000-2002 2004-2016 2018-2025) — adjacent model year, likely boundary",1992-1994 2000-2002 2004-2016 2018-2025
+e172f57b-a391-4f12-86b2-8ab303bc3dbc,2017,audi,s4,"Premium Plus, Prestige",,Premium,luxury-gap-fill [web_research],warn,"model exists other years (1992-1994 2000-2002 2004-2016 2018-2025) — adjacent model year, likely boundary",1992-1994 2000-2002 2004-2016 2018-2025
+2994a2b5-2f13-4c0b-b4c4-f07375f7c6fb,2017,audi,s4,Prestige,Prestige,Premium,luxury-gap-fill [web_research] [expanded],warn,"model exists other years (1992-1994 2000-2002 2004-2016 2018-2025) — adjacent model year, likely boundary",1992-1994 2000-2002 2004-2016 2018-2025
+89dce0a6-263c-4d54-9d51-afd28789e293,2007,audi,s5,Base,Base,Sport,catalog-gap-fill [web_research],warn,"model exists other years (2008-2026) — adjacent model year, likely boundary",2008-2026
+c4384b10-980e-4edb-999f-d8759582f715,1999,audi,s6,C5,,,90s-research-batch,warn,model exists other years (1995-1997 2002-2003 2007-2011 2013-2018 2020-2025),1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+b54269d0-78b8-4079-a987-18ca3033c674,2000,audi,s6,Base,Base,Standard,google-ai-overview,warn,model exists other years (1995-1997 2002-2003 2007-2011 2013-2018 2020-2025),1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+8d29c4a3-d8e7-4143-a90c-ad4803b06c71,2001,audi,s6,Base,Base,Standard,google-ai-overview,warn,"model exists other years (1995-1997 2002-2003 2007-2011 2013-2018 2020-2025) — adjacent model year, likely boundary",1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+1ca4cca4-cb59-43a4-a797-8afede35bfd4,2006,audi,s6,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (1995-1997 2002-2003 2007-2011 2013-2018 2020-2025) — adjacent model year, likely boundary",1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+f987cffa-0c47-431c-8c9d-64f0abf42bc1,2012,audi,s6,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (1995-1997 2002-2003 2007-2011 2013-2018 2020-2025) — adjacent model year, likely boundary",1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+ae2566e0-7e71-4895-802f-3515959af875,2019,audi,s6,Base,Base,Performance,trim-research,warn,"model exists other years (1995-1997 2002-2003 2007-2011 2013-2018 2020-2025) — adjacent model year, likely boundary",1995-1997 2002-2003 2007-2011 2013-2018 2020-2025
+a6522399-35ba-4bf8-bc31-466aaa209c83,2000,audi,s8,Base,Base,Performance,trim-research,warn,"model exists other years (2001-2003 2007-2009 2013-2018 2020-2026) — adjacent model year, likely boundary",2001-2003 2007-2009 2013-2018 2020-2026
+e77603af-f640-434d-b36f-dca6c8473e3a,2006,audi,s8,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2001-2003 2007-2009 2013-2018 2020-2026) — adjacent model year, likely boundary",2001-2003 2007-2009 2013-2018 2020-2026
+0cc8cb94-2b46-4e47-b46e-bc181e934a93,2010,audi,s8,Base,Base,Luxury,trim-research,warn,"model exists other years (2001-2003 2007-2009 2013-2018 2020-2026) — adjacent model year, likely boundary",2001-2003 2007-2009 2013-2018 2020-2026
+e3342b48-e7f1-47b2-b217-b90e23740bf9,2011,audi,s8,Base,Base,Sport,catalog-gap-fill,warn,model exists other years (2001-2003 2007-2009 2013-2018 2020-2026),2001-2003 2007-2009 2013-2018 2020-2026
+0794592f-29b5-42f9-be93-988db73c9757,2012,audi,s8,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2001-2003 2007-2009 2013-2018 2020-2026) — adjacent model year, likely boundary",2001-2003 2007-2009 2013-2018 2020-2026
+f3d17b00-5802-4db9-b7a2-f22d6a842efe,2019,audi,s8,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2001-2003 2007-2009 2013-2018 2020-2026) — adjacent model year, likely boundary",2001-2003 2007-2009 2013-2018 2020-2026
+13669fd9-fede-4f70-826a-2876803fd75c,2024,audi,sq6-e-tron,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2025-2026) — adjacent model year, likely boundary",2025-2026
+aa8f02ed-ee6d-462d-a5f2-d4d785cad0b2,2007,audi,tt,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2000-2006 2008-2023) — adjacent model year, likely boundary",2000-2006 2008-2023
+b91d2ff1-0de8-4fbd-b92c-d3e8286f1b49,2016,bentley,bentayga,1st Gen (2020 Facelift),1st Gen (2020 Facelift),Luxury,generation,warn,"model exists other years (2017-2026) — adjacent model year, likely boundary",2017-2026
+18f16a62-02c7-473b-99d3-be9926d99bb7,2013,bmw,2-series,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2014-2026) — adjacent model year, likely boundary",2014-2026
+4a710c46-1a45-4f63-b01b-d431c04c8c5d,2013,bmw,4-series,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2014-2026) — adjacent model year, likely boundary",2014-2026
+f8a084fd-23c5-42d1-b982-9cc888742c98,2013,bmw,4-series-gran-coupe,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2014-2026) — adjacent model year, likely boundary",2014-2026
+86aa395b-12a1-4ac8-a359-305ab6c0f3ef,1996,bmw,5-series,Base,,,90s-research-batch,warn,"model exists other years (1990-1995 1997-2026) — adjacent model year, likely boundary",1990-1995 1997-2026
+21646f7e-b239-460d-b633-4b0022fe80bc,1996,bmw,5-series,Base,Base,,cache-import,warn,"model exists other years (1990-1995 1997-2026) — adjacent model year, likely boundary",1990-1995 1997-2026
+a3e20d6c-827a-4e92-b06d-b875b1a9bcef,2003,bmw,6-series,Base,,Premium,trim-research,warn,"model exists other years (2004-2010 2012-2019) — adjacent model year, likely boundary",2004-2010 2012-2019
+cee8847b-707d-4e8e-8b34-664f92e2577b,2003,bmw,6-series,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2004-2010 2012-2019) — adjacent model year, likely boundary",2004-2010 2012-2019
+21d2b16b-2018-404f-b422-0192c2b75279,2011,bmw,6-series,Base,,Premium,verified-research [sizes-inherited],warn,"model exists other years (2004-2010 2012-2019) — adjacent model year, likely boundary",2004-2010 2012-2019
+5f4f098b-8c79-49e8-b191-a4ec6faeeb97,2011,bmw,6-series,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2004-2010 2012-2019) — adjacent model year, likely boundary",2004-2010 2012-2019
+e4e9c1b0-31b4-4eeb-be3c-2cfe7bdc5591,2021,bmw,i4,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2022-2026) — adjacent model year, likely boundary",2022-2026
+de54c0c3-83ae-4f3d-b434-3bff7a178df5,2023,bmw,i5,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2024-2026) — adjacent model year, likely boundary",2024-2026
+d9d4ba7d-13e6-432a-b9b8-03b82281dc7c,2022,bmw,i7,Base,Base,Luxury,catalog-gap-fill [web_research],warn,"model exists other years (2023-2026) — adjacent model year, likely boundary",2023-2026
+00a7c16b-712a-4227-94d4-dd3c086834cd,2013,bmw,i8,Base,Base,Luxury,catalog-gap-fill [web_research],warn,"model exists other years (2014-2017 2019-2020) — adjacent model year, likely boundary",2014-2017 2019-2020
+f0a2073f-814f-4854-b434-e39ea878ef4c,2000,bmw,m3,Base,Base,Competition,trim-research,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+2deaa58a-55bc-480f-9a3c-d027bfea6ba5,2007,bmw,m3,"Base, Competition",,Competition,trim-research,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+8d094da8-c082-49bd-980d-5cdaaca3b3b6,2007,bmw,m3,Competition,Competition,Competition,trim-research,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+60efc6f7-8e79-429e-ad38-ad019464498c,2007,bmw,m3,Base,Base,Competition,trim-research,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+e69f4d25-7fac-4175-b563-047770e8f50e,2014,bmw,m3,Competition,Competition,Competition,trim-research,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+6df0bac4-0ca8-4c5d-95bb-6cbb01375567,2014,bmw,m3,Base,Base,Competition,trim-research,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+9b51c9bb-f543-4f22-ad17-911210f6cf6e,2014,bmw,m3,"Base, Competition",,Competition,trim-research,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+673c01e9-c683-446a-bd3a-0547947b2e13,2019,bmw,m3,Base,Base,Competition,cache-import,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+bdf5891c-d4b7-406c-b5e0-c072a027acbd,2019,bmw,m3,M3 CS,M3 CS,Competition,generation_inherit,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+fa1c1139-1b06-4ff2-b99e-3fd15c741638,2019,bmw,m3,M3 Competition,M3 Competition,Competition,generation_inherit,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+e024ddcb-2a4a-4418-a148-e8e69ae8303a,2019,bmw,m3,M3,M3,Competition,generation_inherit,warn,"model exists other years (1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026) — adjacent model year, likely boundary",1990-1991 1995-1999 2001-2006 2008-2013 2015-2018 2020-2026
+e127f32a-0fbb-4ffc-8686-c1fb56b2fe0d,2014,bmw,m4,CS,,Competition,google-ai-overview,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+e8741a28-7ccc-408d-a43d-2e66dcf026e2,2014,bmw,m4,GTS,,Competition,google-ai-overview,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+0f5dbc6a-84c5-4c10-b31e-c4b2096af86e,2014,bmw,m4,Competition,,Competition,google-ai-overview,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+4b8d4c6e-4785-47ff-8578-5ef2b1588c5a,2014,bmw,m4,Base,Base,Competition,google-ai-overview,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+afc20017-bb22-445f-b35e-fe671fb22492,1995,bmw,m5,Base,Base,,cache-import,warn,model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026),1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+ca954eba-7642-4e09-b34a-afe12e6c706f,1999,bmw,m5,Base,Base,,cache-import,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+ba18b871-47c9-4149-9a05-cbef151c6e68,2004,bmw,m5,Base,,Luxury,trim-research,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+811e46a2-a21a-4b2d-b439-ebbfbf9e037b,2005,bmw,m5,M5,M5,Sport,generation_inherit,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+e8de1324-3174-4a23-80d2-76391cacd294,2005,bmw,m5,Base,Base,Sport,cache-import,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+d394be1e-1af0-4337-a259-fd1a4d872956,2011,bmw,m5,Base,,Luxury,trim-research,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+2a75ccd2-fef9-4c91-a81e-2994e7042b9d,2012,bmw,m5,M5 Competition,M5 Competition,Luxury,generation_inherit,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+4c1b5cc4-6d2a-4803-a533-dc35759a7f95,2012,bmw,m5,M5,M5,Sport,generation_inherit,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+16134e77-16f7-40d1-9174-c002efb48b1d,2012,bmw,m5,Base,Base,Sport,cache-import,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+dd82f555-b4b1-4929-b685-345de0558bc5,2024,bmw,m5,Base,Base,Sport,cache-import,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+4adedaa7-02ff-465a-b80f-145ddfb6aa11,2024,bmw,m5,M5,M5,Sport,generation_inherit,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+098d3871-dd44-4148-8753-3df25b7fb9cf,2024,bmw,m5,M5 CS,M5 CS,Luxury,generation_inherit,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+02e461ee-1919-4932-bef2-f706b0e96a5c,2024,bmw,m5,M5 Competition,M5 Competition,Luxury,generation_inherit,warn,"model exists other years (1991-1993 2000-2003 2006-2010 2013-2023 2025-2026) — adjacent model year, likely boundary",1991-1993 2000-2003 2006-2010 2013-2023 2025-2026
+2b1a7064-64a0-4668-bab5-f5a45f0e5509,2005,bmw,m6,Base,Base,Sport,google-ai-overview,warn,"model exists other years (2006-2010 2012-2019) — adjacent model year, likely boundary",2006-2010 2012-2019
+5b132bc6-2929-4877-9721-64c6aa3ab0f2,2014,bmw,x4,xDrive20d,xDrive20d,Premium,railway_import,warn,"model exists other years (2015-2025) — adjacent model year, likely boundary",2015-2025
+9a955a26-5a76-47b7-b30d-977f6e8e170c,2002,bmw,z4,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (1998-2001 2003-2016 2019-2026) — adjacent model year, likely boundary",1998-2001 2003-2016 2019-2026
+ac5920b6-736b-4f4a-b67a-78fb160fb849,2017,bmw,z4,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (1998-2001 2003-2016 2019-2026) — adjacent model year, likely boundary",1998-2001 2003-2016 2019-2026
+86067568-3aef-4c6b-8fcf-f58f1b0c2f22,2023,buick,electra-e5,Base,Base,Sport,catalog-gap-fill [web_research],warn,model exists other years (1990),1990
+c4176f6c-cea2-434b-96bf-9a52c5cd5a89,2024,buick,electra-e5,Base,Base,Sport,catalog-gap-fill [web_research],warn,model exists other years (1990),1990
+d0f01c9e-3b07-4c4a-9ca8-0f716204b424,2012,buick,encore,Base,Base,Preferred,catalog-gap-fill,warn,"model exists other years (2013-2026) — adjacent model year, likely boundary",2013-2026
+8dbe51be-a115-4698-95eb-7f2ca18a55fd,2014,buick,envision,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2016-2026),2016-2026
+a0d770b5-2ec1-4f41-8d33-e712ddb62e5a,2015,buick,envision,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+8c828282-abaa-43ba-ae4c-bc45cb3c0605,2020,buick,lacrosse,Base,Base,Essence,catalog-gap-fill,warn,"model exists other years (2005-2019) — adjacent model year, likely boundary",2005-2019
+f9ce2504-36c8-4120-8390-06f1f11e6ad9,2021,buick,lacrosse,Base,Base,Essence,catalog-gap-fill,warn,model exists other years (2005-2019),2005-2019
+5d6eeb67-dd0d-4160-839e-fe521d24488d,2022,buick,lacrosse,Base,Base,Essence,catalog-gap-fill,warn,model exists other years (2005-2019),2005-2019
+87e225d8-19af-46a6-b6d3-6ca691f9d067,2023,buick,lacrosse,Base,Base,Essence,catalog-gap-fill,warn,model exists other years (2005-2019),2005-2019
+a703879e-e701-42f5-9a11-c5a6ba4af180,2024,buick,lacrosse,Base,Base,Essence,catalog-gap-fill,warn,model exists other years (2005-2019),2005-2019
+13a8b836-20e1-4d41-a4f4-313e6999be56,2005,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,"model exists other years (1990-2004 2011-2020) — adjacent model year, likely boundary",1990-2004 2011-2020
+10e11fd2-b2ef-429a-8cea-6c8b59e3c827,2006,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,model exists other years (1990-2004 2011-2020),1990-2004 2011-2020
+8212f499-b89e-4ee8-ab4e-4aaf5a2d8fdf,2007,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,model exists other years (1990-2004 2011-2020),1990-2004 2011-2020
+b95888ae-3d9d-4e5e-9e5c-5bbbfc38d6bf,2008,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,model exists other years (1990-2004 2011-2020),1990-2004 2011-2020
+ea042fe8-8baf-49d7-9fe2-cde602dda609,2009,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,model exists other years (1990-2004 2011-2020),1990-2004 2011-2020
+f8b22a0d-fd78-482e-bbf1-9df46911c3de,2010,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,"model exists other years (1990-2004 2011-2020) — adjacent model year, likely boundary",1990-2004 2011-2020
+3675fa24-8d1d-447c-9f9d-67622463509a,2021,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,"model exists other years (1990-2004 2011-2020) — adjacent model year, likely boundary",1990-2004 2011-2020
+50ecc4f2-7954-46cd-8ab0-5148fdb68fa7,2022,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,model exists other years (1990-2004 2011-2020),1990-2004 2011-2020
+e0b45bbf-5f76-4010-8d1e-fc78803dcbf3,2023,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,model exists other years (1990-2004 2011-2020),1990-2004 2011-2020
+c1cca0a4-964f-46ca-8acd-4d7a0e4cca67,2024,buick,regal,Base,Base,Preferred,catalog-gap-fill,warn,model exists other years (1990-2004 2011-2020),1990-2004 2011-2020
+d0e6a2b9-513f-4431-a114-276f85b9f164,2011,buick,verano,Base,Base,LS,catalog-gap-fill,warn,"model exists other years (2012-2017) — adjacent model year, likely boundary",2012-2017
+b8a5ca7f-5342-4542-afda-627fea2f3227,2019,buick,verano,Base,Base,LS,catalog-gap-fill,warn,model exists other years (2012-2017),2012-2017
+a2024995-386a-4eb9-aad9-25fb360c955f,2020,buick,verano,Base,Base,LS,catalog-gap-fill,warn,model exists other years (2012-2017),2012-2017
+8c27d63b-69f1-49e7-828b-6216ce442a6b,2021,buick,verano,Base,Base,LS,catalog-gap-fill,warn,model exists other years (2012-2017),2012-2017
+6bc331cc-2b7f-4aee-a8f0-dc0f8128eb41,2022,buick,verano,Base,Base,LS,catalog-gap-fill,warn,model exists other years (2012-2017),2012-2017
+95232b63-5623-44ef-a57c-8cdd123e335f,2024,cadillac,celestiq,Base,Base,Ultimate,trim-research,warn,"model exists other years (2025-2026) — adjacent model year, likely boundary",2025-2026
+85e3326f-5d61-4b68-98f8-45eae2b769da,2021,cadillac,ct6,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2016-2020) — adjacent model year, likely boundary",2016-2020
+21c9999a-4e83-4afa-941d-824255efdd47,2022,cadillac,ct6,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2016-2020),2016-2020
+fb6c7dcc-0e10-4341-bc9f-e1e0ba4ee2c3,2023,cadillac,ct6,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2016-2020),2016-2020
+43cbea07-2cf8-4227-9166-4301cc71fc3d,2024,cadillac,ct6,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2016-2020),2016-2020
+bca8caf5-8ad7-494b-801d-ee5bb545e96e,2013,chevrolet,colorado,"WT, LT, Z71, ZR2, Trail Boss",2.4i,WT,railway_import,warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+867f75f8-7926-40fe-b69c-3068c7509a4a,2013,chevrolet,colorado,Trail Boss,Trail Boss,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+f0b385bc-5ec8-423b-a1e1-56a679aa4c15,2013,chevrolet,colorado,LT,LT,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+14f9ecb4-bf7d-4ae2-b2d3-1344b742430b,2013,chevrolet,colorado,Z71,Z71,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+20a08386-9651-480e-957c-5e5f1b3bdd94,2013,chevrolet,colorado,WT,WT,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+b4352272-70f9-44a7-a12c-9d32138ee082,2013,chevrolet,colorado,ZR2,ZR2,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+affdb47d-ad8f-4f55-884f-992a312cb331,2014,chevrolet,colorado,"WT, LT, Z71, ZR2, Trail Boss",2.4i,WT,railway_import,warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+eed0d92f-7215-4739-9d05-feb7304faebe,2014,chevrolet,colorado,Trail Boss,Trail Boss,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+f595b992-9ef2-4ec1-bae4-eb5dd6b798db,2014,chevrolet,colorado,LT,LT,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+dfe2a3ff-db00-4343-8d03-cedd49856424,2014,chevrolet,colorado,WT,WT,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+16aa9f49-2f65-42c2-94c0-6cda4f155471,2014,chevrolet,colorado,Z71,Z71,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+56f90a65-e498-429f-92ac-7a9b1bfc270b,2014,chevrolet,colorado,ZR2,ZR2,WT,railway_import [expanded],warn,"model exists other years (2004-2012 2015-2026) — adjacent model year, likely boundary",2004-2012 2015-2026
+1ed6c1f2-1984-45bc-8f14-538cab00816b,2005,chevrolet,spark,Base,Base,LT,catalog-gap-fill,warn,model exists other years (2008 2011-2022),2008 2011-2022
+351c541f-e932-4637-a6eb-1aaf04064482,2006,chevrolet,spark,Base,Base,LT,catalog-gap-fill,warn,model exists other years (2008 2011-2022),2008 2011-2022
+09a32ac8-a1fd-41cc-bb1d-7753eb7f93d2,2007,chevrolet,spark,Base,Base,LT,catalog-gap-fill,warn,"model exists other years (2008 2011-2022) — adjacent model year, likely boundary",2008 2011-2022
+7fbecc1f-875c-457f-9bce-89abfca19119,2009,chevrolet,spark,Base,Base,LT,catalog-gap-fill,warn,"model exists other years (2008 2011-2022) — adjacent model year, likely boundary",2008 2011-2022
+0c012e13-7a76-43d8-a71a-2708e2151747,2010,chevrolet,spark,Base,Base,LT,catalog-gap-fill,warn,"model exists other years (2008 2011-2022) — adjacent model year, likely boundary",2008 2011-2022
+587ab7a1-0734-4dda-a54b-60f8d1a6048a,2023,chevrolet,spark,Base,Base,LT,catalog-gap-fill,warn,"model exists other years (2008 2011-2022) — adjacent model year, likely boundary",2008 2011-2022
+1c8a5dbb-d4b3-4047-8b42-b28e80c2880f,2001,chevrolet,trailblazer,Base,Base,LS,verified-research,warn,"model exists other years (2002-2009 2021-2026) — adjacent model year, likely boundary",2002-2009 2021-2026
+fb569e00-1ae4-455c-9126-3339334df023,2013,chevrolet,trailblazer,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2002-2009 2021-2026),2002-2009 2021-2026
+6a114934-8c85-48e4-9b64-ce63d9c561d5,2014,chevrolet,trailblazer,2.8 D,2.8 D,LS,railway_import,warn,model exists other years (2002-2009 2021-2026),2002-2009 2021-2026
+b9a4b3a7-ad27-4065-97d2-d9cc938c5bbe,2015,chevrolet,trailblazer,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2002-2009 2021-2026),2002-2009 2021-2026
+a125f613-03b3-4cf7-8bc1-929b2cf784e5,2016,chevrolet,trailblazer,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2002-2009 2021-2026),2002-2009 2021-2026
+ddb2db56-8e97-43e1-9ec2-6cabf47757ea,2017,chevrolet,trailblazer,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2002-2009 2021-2026),2002-2009 2021-2026
+0755ba8f-c524-4ff6-93a8-2ddf13b7c5d1,2019,chevrolet,trailblazer,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2002-2009 2021-2026),2002-2009 2021-2026
+a835ccb2-db47-4500-96c5-04abbdd83b5c,2020,chevrolet,trailblazer,1.2T,1.2T,Standard,railway_import,warn,"model exists other years (2002-2009 2021-2026) — adjacent model year, likely boundary",2002-2009 2021-2026
+c1a889e2-62c6-4d95-8673-0791e58068fb,2010,chevrolet,volt,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2011-2019) — adjacent model year, likely boundary",2011-2019
+d24055e4-a552-4816-b078-eae11b56c3fe,2010,chrysler,200,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2011-2017) — adjacent model year, likely boundary",2011-2017
+5ba597b8-40d2-4ffd-a584-afc974d07810,2024,chrysler,300,Base,,Touring,platform_inheritance_ld,warn,"model exists other years (1999-2023) — adjacent model year, likely boundary",1999-2023
+fd74aa43-9206-4d18-a348-ce4e6e4ad842,2024,chrysler,300,300C,300C,300S,tier-a-import,warn,"model exists other years (1999-2023) — adjacent model year, likely boundary",1999-2023
+36926234-37bc-49e3-946c-8d591e41ad0c,2024,chrysler,300,Touring,Touring,Touring L,tier-a-import,warn,"model exists other years (1999-2023) — adjacent model year, likely boundary",1999-2023
+3279b33d-9156-43dc-ba67-85e8e01faf6d,2024,chrysler,300,Touring L,Touring L,Limited,tier-a-import,warn,"model exists other years (1999-2023) — adjacent model year, likely boundary",1999-2023
+a7c3a348-32b0-4988-b23a-725433ce2d43,2024,chrysler,300,300S,300S,300S,tier-a-import,warn,"model exists other years (1999-2023) — adjacent model year, likely boundary",1999-2023
+315ea080-7148-4147-9baf-9c4272fee9f9,2003,chrysler,crossfire,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2004-2008) — adjacent model year, likely boundary",2004-2008
+935b4f6b-d88e-4d95-b343-9e5cb2ab2c6b,2016,chrysler,pacifica,Base,Base,Touring,catalog-gap-fill,warn,"model exists other years (2004-2009 2017-2026) — adjacent model year, likely boundary",2004-2009 2017-2026
+da51fac4-39aa-46e8-be07-0ba23ad4e18c,2024,dodge,challenger,R/T Scat Pack,R/T Scat Pack,R/T,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+3341905b-78e7-495e-a8a1-3aead658c195,2024,dodge,challenger,SRT Hellcat,SRT Hellcat,R/T,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+63ab9838-d86d-40fc-af7a-48be61ace212,2024,dodge,challenger,SRT Demon 170,SRT Demon 170,SXT,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+21495e4a-65f9-48a1-b692-10c80566501b,2024,dodge,challenger,SRT Hellcat Widebody,SRT Hellcat Widebody,R/T,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+29ce3a09-8147-4917-b12b-27feb71c5503,2024,dodge,challenger,SXT,SXT,SXT,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+93984bba-708d-481b-bbb6-a71501143960,2024,dodge,challenger,R/T Scat Pack Widebody,R/T Scat Pack Widebody,R/T,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+55532a86-cc47-485c-8a48-60272ccaf09e,2024,dodge,challenger,R/T,R/T,R/T,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+296d847f-16e9-44c9-b4e1-f2077ddc5cfd,2024,dodge,challenger,Base,Base,Standard,generation_template,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+f582375e-0ab9-4a9b-b6bf-39d0156191ba,2024,dodge,challenger,GT,GT,Sport,tier-a-import,warn,"model exists other years (2008-2023) — adjacent model year, likely boundary",2008-2023
+ac18e061-07e2-402a-83ae-8059c88aff3f,2005,dodge,charger,Base,Base,SXT,catalog-gap-fill,warn,"model exists other years (2006-2026) — adjacent model year, likely boundary",2006-2026
+9805e4ad-8e7b-409d-adfd-dc0a80479f2e,2012,dodge,dart,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2013-2016) — adjacent model year, likely boundary",2013-2016
+a68651bd-1bbc-4127-8abf-e0427e71aadf,2010,dodge,durango,SXT/Crew/R/T,SXT/Crew/R/T,Standard,batch6-minivans-evs,warn,"model exists other years (1995-2009 2011-2026) — adjacent model year, likely boundary",1995-2009 2011-2026
+00d4a2ac-2e93-4de3-9bba-d7e4ffe4818d,2022,dodge,hornet,2.0 Turbo,2.0 Turbo,Standard,railway_import,warn,"model exists other years (2023-2025) — adjacent model year, likely boundary",2023-2025
+9a0bd382-bf81-4915-ad73-3c3ada15dfeb,2015,ferrari,488,488 GTB/Spider,488 GTB/Spider,Luxury,generation,warn,"model exists other years (2016-2020) — adjacent model year, likely boundary",2016-2020
+4303f6c4-55ac-4273-9b8e-81cf81a5c550,2019,ferrari,f8,F8 Tributo/Spider,F8 Tributo/Spider,Luxury,generation,warn,"model exists other years (2020-2023) — adjacent model year, likely boundary",2020-2023
+71a3fbb9-a8c9-4739-be79-c2b0a79dafec,2018,ferrari,portofino,Base,Base,,merged-staggered,warn,"model exists other years (2019-2023) — adjacent model year, likely boundary",2019-2023
+adfec88a-98da-4d22-b28f-4bcdb3f2bbbf,2020,ferrari,roma,Roma,Roma,Luxury,generation,warn,"model exists other years (2021-2026) — adjacent model year, likely boundary",2021-2026
+9fbcb82c-1e67-4bdf-a7c1-f139142eeeca,2020,ferrari,sf90,SF90 Stradale/Spider,SF90 Stradale/Spider,Luxury,generation,warn,"model exists other years (2021-2025) — adjacent model year, likely boundary",2021-2025
+a57c98eb-4d94-41b1-8abd-48c05a804510,2016,fiat,124-spider,Base,,Standard,api_import,warn,"model exists other years (2017-2020) — adjacent model year, likely boundary",2017-2020
+934443ea-ce71-48a9-813c-89f19ade862c,2024,fiat,500x,Base,,LS,api_import,warn,"model exists other years (2016-2023) — adjacent model year, likely boundary",2016-2023
+ad1dc272-8a07-4e55-8249-21ad69cbcdf8,2000,ford,escape,XLS/XLT,XLS/XLT,Standard,batch6-minivans-evs [web_research],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+59a4cd6a-6f7d-4c2d-9cb4-cd42790ea781,2000,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+c0bdf8f7-2298-4088-be06-c9716591c4e2,2001,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+659934f1-c016-41f7-8671-0975fcb2d898,2002,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+80c83e1b-c611-4d6d-8baf-764d7ea63786,2003,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+e5ed8e9f-40e4-4928-91a4-a33fb18bf7ac,2004,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+05696420-08d3-4d33-9e8c-351fc59d6434,2005,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+23a27d80-7ae4-4280-b380-1be7ae5242ab,2006,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+ae07c1f4-3b7f-48d6-96d7-e4bcf94435fb,2007,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+1c9b3fb8-406b-4c6c-b4f9-5052cc92c2d6,2008,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+cab111ea-70fe-423e-829b-62bf40bb8a0e,2009,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+b2e10cbd-0982-4953-b682-daa0330bf6c2,2010,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2011-2019) — adjacent model year, likely boundary",2011-2019
+fb82b2a1-1924-4aca-8284-8a3683e40c23,2020,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2011-2019) — adjacent model year, likely boundary",2011-2019
+6e56c509-8d3b-42ca-912c-3fabc141b407,2021,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+f7d4f131-82c9-4be3-80fb-da2c7595f5aa,2022,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+098a1362-7576-410d-8952-72305cc76d70,2023,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+eaedca87-5630-4086-a1f5-58660cc0e599,2024,ford,fiesta,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2011-2019),2011-2019
+a80c305d-b0aa-4e3a-9d7f-bc8f1ba62714,2008,ford,flex,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2009-2019) — adjacent model year, likely boundary",2009-2019
+30171d5b-76cb-4577-950a-2eab601e18aa,2019,ford,focus,Base,Base,SE,catalog-gap-fill,warn,"model exists other years (2000-2018) — adjacent model year, likely boundary",2000-2018
+f3cc9e49-381f-4f4d-8718-27a76e2a1698,2020,ford,focus,1.0 EcoBoost,1.0 EcoBoost,SE,railway_import,warn,model exists other years (2000-2018),2000-2018
+1c54eeb9-f49a-49bf-9b73-404c91f70c6b,2021,ford,focus,Base,Base,SE,catalog-gap-fill,warn,model exists other years (2000-2018),2000-2018
+5816f03e-4de1-439f-a0e6-285473ab887e,2022,ford,focus,Base,Base,SE,catalog-gap-fill,warn,model exists other years (2000-2018),2000-2018
+1ddc9f59-754c-42c8-aa08-bf989953b8c1,2023,ford,focus,1.0 EcoBoost,1.0 EcoBoost,SE,railway_import,warn,model exists other years (2000-2018),2000-2018
+df41689e-eebd-4b0f-bd7e-4466546546bc,2024,ford,focus,Base,Base,SE,catalog-gap-fill,warn,model exists other years (2000-2018),2000-2018
+c266ac90-8d9d-4cf0-9ba8-87a2604ed9c3,2002,ford,fusion,Base,Base,SE,catalog-gap-fill,warn,model exists other years (2006-2020),2006-2020
+ae1437cf-d6ec-4e57-9d23-c7f746207b4f,2003,ford,fusion,Base,Base,SE,catalog-gap-fill,warn,model exists other years (2006-2020),2006-2020
+43bf8cf3-d186-4556-b07f-a3fd7e2cbead,2004,ford,fusion,Base,Base,SE,catalog-gap-fill,warn,model exists other years (2006-2020),2006-2020
+1b30c806-6131-4c69-aa36-72f77f02dccc,2005,ford,fusion,Base,Base,SE,catalog-gap-fill,warn,"model exists other years (2006-2020) — adjacent model year, likely boundary",2006-2020
+ceb3cabc-79c0-4fdd-9dbf-85629e73917f,2021,ford,fusion,1.5 EcoBoost,1.5 EcoBoost,S,railway_import,warn,"model exists other years (2006-2020) — adjacent model year, likely boundary",2006-2020
+4500accc-5a9e-4725-aeb2-2f281ec8832b,2021,ford,maverick,2.0 EcoBoost,2.0 EcoBoost,Standard,railway_import,warn,"model exists other years (2022-2026) — adjacent model year, likely boundary",2022-2026
+5ebc997f-a8d9-4e66-9c1d-3da93e86f81c,2020,ford,mustang-mach-e,Extended Range,Extended Range,Shelby GT500,railway_import,warn,"model exists other years (2021-2026) — adjacent model year, likely boundary",2021-2026
+725e6a4c-c5d9-4870-bf92-bebf8ebb8e10,2012,ford,ranger,Raptor,Raptor,Standard,railway_import [expanded],warn,"model exists other years (1990-2011 2019-2026) — adjacent model year, likely boundary",1990-2011 2019-2026
+5840cc3a-7d93-4d32-8d6c-cf949387b4e4,2012,ford,ranger,Tremor,Tremor,Standard,railway_import [expanded],warn,"model exists other years (1990-2011 2019-2026) — adjacent model year, likely boundary",1990-2011 2019-2026
+4e706a5e-c6a9-4542-ac16-af22d0d8a582,2012,ford,ranger,"XL, XLT, Lariat, Tremor, Raptor",2.3i,Standard,railway_import,warn,"model exists other years (1990-2011 2019-2026) — adjacent model year, likely boundary",1990-2011 2019-2026
+d1b82a06-6ba2-49a2-936e-fa34c287bf60,2012,ford,ranger,XLT,XLT,Standard,railway_import [expanded],warn,"model exists other years (1990-2011 2019-2026) — adjacent model year, likely boundary",1990-2011 2019-2026
+127ab2ae-e606-44e8-8eea-a0fb42f6ce39,2012,ford,ranger,Lariat,Lariat,Standard,railway_import [expanded],warn,"model exists other years (1990-2011 2019-2026) — adjacent model year, likely boundary",1990-2011 2019-2026
+f13ecf5f-0590-49bb-9424-106039c4eeae,2012,ford,ranger,XL,XL,Standard,railway_import [expanded],warn,"model exists other years (1990-2011 2019-2026) — adjacent model year, likely boundary",1990-2011 2019-2026
+49899ffe-e1ea-4561-bc63-dccea6b8e951,2013,ford,ranger,2.2 TDCi,2.2 TDCi,XL,railway_import,warn,model exists other years (1990-2011 2019-2026),1990-2011 2019-2026
+d079d7b6-0889-4575-8679-98b9611f8391,2014,ford,ranger,2.2 TDCi,2.2 TDCi,XL,railway_import,warn,model exists other years (1990-2011 2019-2026),1990-2011 2019-2026
+95ef2d4c-2d7f-42b8-b9ff-35748623ae4e,2015,ford,ranger,2.2 TDCi,2.2 TDCi,XL,railway_import,warn,model exists other years (1990-2011 2019-2026),1990-2011 2019-2026
+95f8320e-1cc0-4312-ab17-fd41b31135f6,2016,ford,ranger,2.2 TDCi,2.2 TDCi,XL,railway_import,warn,model exists other years (1990-2011 2019-2026),1990-2011 2019-2026
+07bf0b71-e0cb-457e-b145-921fde0b403e,2017,ford,ranger,2.0 TDCi,2.0 TDCi,XLT,railway_import,warn,model exists other years (1990-2011 2019-2026),1990-2011 2019-2026
+29fa948d-dce7-49c2-aa8d-50ca31290cd9,2020,ford,taurus,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (1990-2019) — adjacent model year, likely boundary",1990-2019
+c549e368-2f60-4206-912f-834024258215,2021,ford,taurus,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (1990-2019),1990-2019
+984a7004-7ef0-44ec-bcd7-99eacc3ee8e7,2022,ford,taurus,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (1990-2019),1990-2019
+29c55e2d-27cf-4130-8860-7e61f469d2a4,2023,ford,taurus,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (1990-2019),1990-2019
+9e3b562c-e164-4523-8585-600450712fb8,2024,ford,taurus,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (1990-2019),1990-2019
+f529068a-8cff-4fc9-9f16-885964dc6e86,2006,gmc,acadia,Base,Base,SLE,catalog-gap-fill,warn,"model exists other years (2007-2026) — adjacent model year, likely boundary",2007-2026
+98198a44-a876-4bb9-bf88-98827c5d2384,2016,honda,clarity,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2014 2017-2021) — adjacent model year, likely boundary",2014 2017-2021
+ce6992d9-e1a9-4448-99ce-2d53f35d3acc,2017,hyundai,kona,Base,Base,SEL,catalog-gap-fill,warn,"model exists other years (2018-2026) — adjacent model year, likely boundary",2018-2026
+4fccf45a-c277-4063-8026-834481a76c55,2000,hyundai,santa-fe,Base,,Standard,verified-research,warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+aad9922f-bd9b-4cff-bfa4-54ed37a6571f,2004,hyundai,tucson,Base,Base,Standard,verified-research,warn,"model exists other years (2005-2026) — adjacent model year, likely boundary",2005-2026
+c0e384a8-fb07-48ac-8be0-7fa58df84270,2011,hyundai,veloster,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2012-2022) — adjacent model year, likely boundary",2012-2022
+79ff397b-e0cd-4688-9c01-ac33548d9a40,2006,hyundai,veracruz,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2007-2013) — adjacent model year, likely boundary",2007-2013
+32f06085-bf21-4b94-9501-023ce8d16f55,2014,hyundai,veracruz,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2007-2013) — adjacent model year, likely boundary",2007-2013
+fec9d594-63be-4c94-b136-868c020f2ac8,2015,hyundai,veracruz,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2007-2013),2007-2013
+9900c244-de9a-4815-a01a-c690e30e6914,2013,infiniti,q60,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2014-2015 2017-2022) — adjacent model year, likely boundary",2014-2015 2017-2022
+6269a799-7877-4ecd-8330-cb0fcff4fdc3,2016,infiniti,q60,2.0t,2.0t,Luxe,railway_import,warn,"model exists other years (2014-2015 2017-2022) — adjacent model year, likely boundary",2014-2015 2017-2022
+84a013ae-7b04-4961-9cd2-fc50506dbb52,2023,infiniti,q60,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2014-2015 2017-2022) — adjacent model year, likely boundary",2014-2015 2017-2022
+6c58ccd1-114f-47ea-af5c-766456dd5589,2017,jaguar,e-pace,P250,P250,S,railway_import,warn,"model exists other years (2018-2024) — adjacent model year, likely boundary",2018-2024
+deea5715-7b76-4252-94f5-f32503c22d73,2015,jaguar,f-pace,Base,Base,Premium,catalog-gap-fill [web_research],warn,model exists other years (2017-2026),2017-2026
+25d376ca-fce1-472f-b693-cdfa0abe6a47,2016,jaguar,f-pace,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2017-2026) — adjacent model year, likely boundary",2017-2026
+cbb13b3b-cbd9-4ea8-8482-ca8471b56a23,2012,jaguar,f-type,V8 S,V8 S,P300,railway_import [expanded],warn,model exists other years (2014-2024),2014-2024
+168b127f-2298-4065-99f9-58fb62ed7499,2012,jaguar,f-type,Base,Base,P300,railway_import [expanded],warn,model exists other years (2014-2024),2014-2024
+6dcb3bf2-a8fe-4e39-b6ff-e32dffaeb7ff,2012,jaguar,f-type,S,S,P300,railway_import [expanded],warn,model exists other years (2014-2024),2014-2024
+bdd5442c-a15b-423c-b4b0-034d3b68bc55,2012,jaguar,f-type,"Base, S, V8 S",3.0,P300,railway_import,warn,model exists other years (2014-2024),2014-2024
+6d79bfb8-3811-4392-9854-fa8287b5e654,2013,jaguar,f-type,V8 S,V8 S,P300,verified-research [sizes-inherited] [expanded],warn,"model exists other years (2014-2024) — adjacent model year, likely boundary",2014-2024
+95e61a47-2b0e-4e32-adf5-1075b5c36073,2013,jaguar,f-type,"Base, S, V8 S",,P300,verified-research [sizes-inherited],warn,"model exists other years (2014-2024) — adjacent model year, likely boundary",2014-2024
+653e9804-2097-431e-b285-2455f89d89bd,2013,jaguar,f-type,Base,Base,P300,verified-research [sizes-inherited] [expanded],warn,"model exists other years (2014-2024) — adjacent model year, likely boundary",2014-2024
+14649883-5abd-46be-abdf-5d31a2699bcc,2013,jaguar,f-type,S,S,P300,verified-research [sizes-inherited] [expanded],warn,"model exists other years (2014-2024) — adjacent model year, likely boundary",2014-2024
+38a3398b-47da-4855-86f5-783855068e12,2001,jaguar,x-type,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2002-2008) — adjacent model year, likely boundary",2002-2008
+921afb3c-7c18-4364-8e91-3f54cf73dab1,2009,jaguar,x-type,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2002-2008) — adjacent model year, likely boundary",2002-2008
+28b782af-7be7-4281-a830-478b6dc4d027,2015,jaguar,xe,Premium,Premium,SE,api_import [expanded],warn,model exists other years (2017-2021),2017-2021
+d1761b2a-804f-428c-b2d1-71c5bdda2ae3,2015,jaguar,xe,Prestige,Prestige,SE,api_import [expanded],warn,model exists other years (2017-2021),2017-2021
+7136248f-4329-4489-9f81-b2ad37247b4f,2015,jaguar,xe,R-Dynamic,R-Dynamic,SE,api_import [expanded],warn,model exists other years (2017-2021),2017-2021
+6be19cdd-3da7-40ed-8cc4-c8af636f49d0,2015,jaguar,xe,S,S,SE,api_import [expanded],warn,model exists other years (2017-2021),2017-2021
+e4d2fa9b-47a5-4b40-a37a-de235e82abe3,2015,jaguar,xe,"Premium, Prestige, R-Dynamic, S",,SE,api_import,warn,model exists other years (2017-2021),2017-2021
+f6a958cc-793e-41d4-8149-908d268a7a59,2016,jaguar,xe,S,S,SE,api_import [expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+00f94e89-ad79-454f-ab4b-dcce2df20e2c,2016,jaguar,xe,Premium,Premium,SE,api_import [expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+da081d2d-ec06-408e-8aa1-77efcccb3424,2016,jaguar,xe,"Premium, Prestige, R-Dynamic, S",,SE,api_import,warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+dcde961f-ec00-4bde-9013-beab5403e3c1,2016,jaguar,xe,Prestige,Prestige,SE,api_import [expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+5b4896bd-0cc9-4523-8dff-f3cc4d631950,2016,jaguar,xe,R-Dynamic,R-Dynamic,SE,api_import [expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+191f36d9-f57e-4836-9b91-4e476f5240cf,2022,jaguar,xe,"Premium, Prestige, R-Dynamic, S",,SE,api_import,warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+c2bbec8b-d31e-435b-bc17-66ae98b9b324,2022,jaguar,xe,Premium,Premium,SE,api_import [trim-expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+a20a5635-5d38-4ae2-9378-677b2d3354cd,2022,jaguar,xe,Prestige,Prestige,SE,api_import [trim-expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+579db604-3a6b-4b3b-9d49-30de0d24a5b5,2022,jaguar,xe,S,S,SE,api_import [trim-expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+d1dff89d-f83c-4710-9dd6-243cbe53f55b,2022,jaguar,xe,R-Dynamic,R-Dynamic,SE,api_import [trim-expanded],warn,"model exists other years (2017-2021) — adjacent model year, likely boundary",2017-2021
+a20d70de-11ca-413b-a1af-3c08f74aaf1e,2023,jaguar,xe,Prestige,Prestige,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+91da35c2-45b2-48cd-af93-5b4a3349234c,2023,jaguar,xe,S,S,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+d6d99b67-75ab-470e-b160-cd9296cd06ba,2023,jaguar,xe,Premium,Premium,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+c8caec40-c377-4974-94b6-4fccbedf1d56,2023,jaguar,xe,R-Dynamic,R-Dynamic,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+6da78811-1388-4c16-89e7-620c2ffec7fa,2023,jaguar,xe,"Premium, Prestige, R-Dynamic, S",,SE,api_import,warn,model exists other years (2017-2021),2017-2021
+56594a91-90b8-4322-a643-9cb6d408845e,2024,jaguar,xe,Prestige,Prestige,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+bf160587-7cd1-4c6c-aad0-1908f32f8ccc,2024,jaguar,xe,R-Dynamic,R-Dynamic,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+b8350f23-1e7c-425d-9b6e-1b00c1afe2c9,2024,jaguar,xe,Premium,Premium,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+b9c231ec-f422-4841-9640-2edf45562559,2024,jaguar,xe,S,S,SE,api_import [trim-expanded],warn,model exists other years (2017-2021),2017-2021
+4ea012db-3aa6-4ef5-b55a-9b709394a680,2024,jaguar,xe,"Premium, Prestige, R-Dynamic, S",,SE,api_import,warn,model exists other years (2017-2021),2017-2021
+d508fff8-6de9-4ed3-bf6e-6f6abd60ee13,2007,jaguar,xf,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2009-2024),2009-2024
+5f62a372-98ed-4cc7-a5e8-1de7f9b66d8a,2008,jaguar,xf,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2009-2024) — adjacent model year, likely boundary",2009-2024
+980e62f4-b100-42cf-bdc5-a3cb87765520,2020,jaguar,xj,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (1990-2019) — adjacent model year, likely boundary",1990-2019
+4c7931cb-e8ec-46b5-a305-a36f17455194,2021,jaguar,xj,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (1990-2019),1990-2019
+b0866fc2-ecdc-4bec-8c61-47e4be587c76,2022,jaguar,xj,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (1990-2019),1990-2019
+c16ddca4-8911-4014-9ebc-299edecf2e5d,2012,jeep,cherokee,Base,Base,LS,cache-import,warn,"model exists other years (1990-2011 2014-2023 2026) — adjacent model year, likely boundary",1990-2011 2014-2023 2026
+8aa0c716-fb36-48ea-9167-3747f3f6791f,2013,jeep,cherokee,Classic/Limited,3.7i,Laredo,railway_import,warn,"model exists other years (1990-2011 2014-2023 2026) — adjacent model year, likely boundary",1990-2011 2014-2023 2026
+fc032dec-fa6b-46df-8b9f-1131e2aefc3f,2019,jeep,gladiator,3.6 Pentastar,3.6 Pentastar,Sport,railway_import,warn,"model exists other years (2020-2026) — adjacent model year, likely boundary",2020-2026
+fa7f1ad4-a2e7-4a76-b026-524062ad4fce,2024,jeep,renegade,Trailhawk,Trailhawk,Latitude,verified-research,warn,"model exists other years (2015-2023) — adjacent model year, likely boundary",2015-2023
+3cfa970c-a5db-4fbe-9834-bde234900eb6,2024,jeep,renegade,Latitude,Latitude,Latitude,verified-research,warn,"model exists other years (2015-2023) — adjacent model year, likely boundary",2015-2023
+87eac984-10b8-4a97-9b9c-9256a1f1c02b,2024,jeep,renegade,Sport,Sport,Sport,verified-research,warn,"model exists other years (2015-2023) — adjacent model year, likely boundary",2015-2023
+dae487e8-350f-4375-b432-5ece54bca3e9,2024,jeep,renegade,Limited,Limited,Limited,verified-research,warn,"model exists other years (2015-2023) — adjacent model year, likely boundary",2015-2023
+378e79b6-cadc-44c2-a54e-97fe093a926f,2024,jeep,renegade,"Sport, Latitude, Trailhawk, Limited",Base,Sport,cache-import,warn,"model exists other years (2015-2023) — adjacent model year, likely boundary",2015-2023
+f10f64ae-64ac-48f3-860a-2fd67c6e22c6,2010,kia,sorento,X-Line,X-Line,LX,cache-import [expanded],warn,"model exists other years (2001-2009 2011-2026) — adjacent model year, likely boundary",2001-2009 2011-2026
+2c341f6c-2b47-40cd-ba3a-32e357e87850,2010,kia,sorento,"LX, S, EX, SX, SX Prestige, X-Line",Base,LX,cache-import,warn,"model exists other years (2001-2009 2011-2026) — adjacent model year, likely boundary",2001-2009 2011-2026
+785d989d-f27e-4331-8450-f3f8db1996e4,2010,kia,sorento,LX,LX,LX,cache-import [expanded],warn,"model exists other years (2001-2009 2011-2026) — adjacent model year, likely boundary",2001-2009 2011-2026
+edb77ee3-f8b0-4095-99ea-96c79320a7d4,2010,kia,sorento,S,S,LX,cache-import [expanded],warn,"model exists other years (2001-2009 2011-2026) — adjacent model year, likely boundary",2001-2009 2011-2026
+46e4ecee-4870-43ad-a7cb-18bfc5d98c48,2010,kia,sorento,EX,EX,LX,cache-import [expanded],warn,"model exists other years (2001-2009 2011-2026) — adjacent model year, likely boundary",2001-2009 2011-2026
+49e79638-467b-404c-9b3f-f37f20763d0d,2010,kia,sorento,SX,SX,LX,cache-import [expanded],warn,"model exists other years (2001-2009 2011-2026) — adjacent model year, likely boundary",2001-2009 2011-2026
+553141b5-ff91-4ea4-b0a4-1996b3e1ef5a,2010,kia,sorento,SX Prestige,SX Prestige,LX,cache-import [expanded],warn,"model exists other years (2001-2009 2011-2026) — adjacent model year, likely boundary",2001-2009 2011-2026
+4ff18748-bba3-48cd-9bce-5eb83d9d2e31,2017,kia,stinger,Base,Base,Standard,verified-research,warn,"model exists other years (2018-2023) — adjacent model year, likely boundary",2018-2023
+2bdcf2fb-2541-4e11-9906-4cf0987567d7,2024,kia,stinger,Base,Base,Standard,verified-research,warn,"model exists other years (2018-2023) — adjacent model year, likely boundary",2018-2023
+45366381-1d71-49ad-8ca1-42e0515137fe,2014,lamborghini,huracan,Huracan (All Variants),Huracan (All Variants),Sport,generation,warn,"model exists other years (2015-2024) — adjacent model year, likely boundary",2015-2024
+506568b3-a643-46b4-9d47-15f9c2bc4512,2000,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+a8fceb8a-da7b-4873-a1bc-35fc89de2bb9,2001,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+a8149695-3ec1-455f-be5b-7d8099554689,2002,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+c076dfea-70a5-49a2-846f-a5d6be443620,2003,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+bb9c7f16-4056-4485-b7a4-088d8571abdd,2004,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+4fd172b0-6ae3-4ae5-9545-a9dfa9a0435f,2005,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+811904c5-8436-44fc-8428-93e3edc0ac75,2006,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+94568cbe-ae89-475e-b0ca-9d36534393ff,2007,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+59734258-08b9-4534-aa0d-1e218337f03f,2008,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+1dc0facf-0245-4a9a-b6b8-8e4c8f76bbaa,2009,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+26aa185d-2bee-4ee4-88ef-8967158eca2d,2010,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+e012bdcb-b7d5-46a1-96d6-cf15b2778c14,2011,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+2f6cbd2e-2248-445c-8e13-8df15de34a5e,2012,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+c7725326-c719-4751-b07c-d7e1fba629cb,2013,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+0197a7d5-e949-4344-95c6-3fd03ee465bf,2014,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+49757616-ae30-4eff-ac01-3223a986604f,2015,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+7825535b-500f-499b-ada9-e68db58444b9,2016,land rover,defender,Base,Base,90,catalog-gap-fill,warn,model exists other years (1993-1995 1997 2020-2026),1993-1995 1997 2020-2026
+ad8d7ba4-1c56-4e41-a5bd-3cc27ed8f560,2019,land rover,defender,Base,Base,90,catalog-gap-fill,warn,"model exists other years (1993-1995 1997 2020-2026) — adjacent model year, likely boundary",1993-1995 1997 2020-2026
+f2335765-9628-470e-be76-c3824afe9331,1996,land rover,defender-90,Base,,,90s-research-batch,warn,"model exists other years (1993-1995 1997 2020-2026) — adjacent model year, likely boundary",1993-1995 1997 2020-2026
+d994a20e-0b0d-4c4e-89a2-4aba029f3d0b,2014,land rover,discovery-sport,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+07875816-6238-44de-85ac-4d6d4e96620d,2011,land rover,range-rover-evoque,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2012-2026) — adjacent model year, likely boundary",2012-2026
+46952bfc-e8de-4f37-9b83-e9e604a066c6,2005,land rover,range-rover-sport,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2006-2026) — adjacent model year, likely boundary",2006-2026
+7a54f32a-1de8-4907-a6de-4b1b2adc4765,2017,land rover,range-rover-velar,Base,,Luxury,google-ai-overview,warn,"model exists other years (2018-2026) — adjacent model year, likely boundary",2018-2026
+752a1125-7461-4e6f-bb9b-95ab403dff20,2017,land rover,range-rover-velar,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2018-2026) — adjacent model year, likely boundary",2018-2026
+b7199d35-5172-4708-b5b9-d495e1b7ac44,2002,lexus,gx,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2003-2026) — adjacent model year, likely boundary",2003-2026
+3fe57c97-6e3b-4d15-9fc2-a799a8b0d203,1999,lexus,is,IS 300,IS 300,,cache-import [expanded],warn,model exists other years (2001-2026),2001-2026
+77fdf08c-5830-4db0-9204-0ed1608e105a,1999,lexus,is,IS 300,IS 300,,cache-import [expanded],warn,model exists other years (2001-2026),2001-2026
+7609dc9f-38ec-451a-b3bc-f9d7768d61f0,1999,lexus,is,IS 350,IS 350,,cache-import [expanded],warn,model exists other years (2001-2026),2001-2026
+5e18dcb6-38ad-450d-83bb-72c70b3139d5,1999,lexus,is,IS 500,IS 500,,cache-import [expanded],warn,model exists other years (2001-2026),2001-2026
+542edc88-c8cc-4632-9f72-ccdeb805550c,1999,lexus,is,"IS 300, IS 350, IS 500, F Sport",,,cache-import,warn,model exists other years (2001-2026),2001-2026
+766de9cb-bf23-4c80-9ecb-27e201d7e4e9,2000,lexus,is,"IS 300, IS 350, IS 500, F Sport",,LS,cache-import,warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+142002a2-adb2-4df4-8295-6945a061f102,2000,lexus,is,IS 300,IS 300,LS,cache-import [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+298aa38a-1106-49ab-a568-22b184648b11,2000,lexus,is,IS 350,IS 350,LS,cache-import [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+a5f06daf-2a24-4e32-868e-1b78de3425ad,2000,lexus,is,IS 500,IS 500,LS,cache-import [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+435ec86f-5897-498c-a407-597b1c56b6e9,2000,lexus,is,IS 300,IS 300,LS,cache-import [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+56d36e6e-5d91-44f6-9db8-3d38ba6cb92b,2017,lexus,lc,LC500,LC500,LC 500,railway_import,warn,"model exists other years (2018-2026) — adjacent model year, likely boundary",2018-2026
+c1f31dff-deb5-4154-b3e2-0d17f3488544,2019,lincoln,corsair,2.0 Turbo,2.0 Turbo,Standard,railway_import,warn,"model exists other years (2020-2026) — adjacent model year, likely boundary",2020-2026
+04276027-fcc0-403d-86c8-29af7f0b93aa,2014,lincoln,mkc,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2015-2019) — adjacent model year, likely boundary",2015-2019
+0de9f1b3-b36e-4b46-b36e-a1f5624b8dff,2020,lincoln,mkc,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2015-2019) — adjacent model year, likely boundary",2015-2019
+6007330a-ae65-47eb-82cf-b20b5824817f,2009,lincoln,mkt,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2010-2019) — adjacent model year, likely boundary",2010-2019
+35439ee1-446c-4954-9eec-dd891c394d56,2006,lincoln,mkx,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2007-2018) — adjacent model year, likely boundary",2007-2018
+56c8a276-9d99-4d84-b3aa-8ce0005b2605,2006,lincoln,mkz,Select,Select,Select,generation-baseline [expanded],warn,"model exists other years (2007-2020) — adjacent model year, likely boundary",2007-2020
+dddd4be4-8c23-46aa-93f8-d9a637552796,2006,lincoln,mkz,Black Label,Black Label,Select,generation-baseline [expanded],warn,"model exists other years (2007-2020) — adjacent model year, likely boundary",2007-2020
+80748daa-78d8-4de2-91c0-935e3edfcecb,2006,lincoln,mkz,Premiere,Premiere,Select,generation-baseline [expanded],warn,"model exists other years (2007-2020) — adjacent model year, likely boundary",2007-2020
+107069b4-ad3a-403a-9298-e6594297fd41,2006,lincoln,mkz,"Premiere, Select, Reserve, Black Label",,Select,generation-baseline,warn,"model exists other years (2007-2020) — adjacent model year, likely boundary",2007-2020
+644c5c5e-c0c0-4fb1-9167-8fe0389708fb,2006,lincoln,mkz,Reserve,Reserve,Select,generation-baseline [expanded],warn,"model exists other years (2007-2020) — adjacent model year, likely boundary",2007-2020
+335c1a1e-d339-41cd-99cf-766727b9a972,2013,lotus,elise,Series 3,Series 3,LS,generation,warn,"model exists other years (2005-2012) — adjacent model year, likely boundary",2005-2012
+185daaad-115f-460d-b0bb-c8dab458db12,2014,lotus,elise,Series 3,Series 3,LS,generation,warn,model exists other years (2005-2012),2005-2012
+c8483d1e-c442-4523-a25c-abe028762036,2015,lotus,elise,Series 3,Series 3,LS,generation,warn,model exists other years (2005-2012),2005-2012
+363e06d0-e969-48fa-aeaf-075a1dae5dc6,2016,lotus,elise,Series 3,Series 3,LS,generation,warn,model exists other years (2005-2012),2005-2012
+5564e551-c1fb-4327-8b67-31fb1fe87e85,2017,lotus,elise,Series 3,Series 3,LS,generation,warn,model exists other years (2005-2012),2005-2012
+e34dc3f0-8ead-4eaa-a144-93316d8de112,2019,lotus,elise,Series 3,Series 3,LS,generation,warn,model exists other years (2005-2012),2005-2012
+ab0aa832-5d52-4a31-9a37-5e45819a6eed,2020,lotus,elise,Series 3,Series 3,LS,generation,warn,model exists other years (2005-2012),2005-2012
+a0b38420-1372-4ff9-ac7d-71bc55b41a6f,2021,lotus,elise,Series 3,Series 3,LS,generation,warn,model exists other years (2005-2012),2005-2012
+26b5ab93-d677-409f-8322-70e68fa45665,2022,lotus,emira,Emira,Emira,Luxury,generation,warn,model exists other years (2024-2026),2024-2026
+46b56f74-5536-41c6-9131-0785ee8db080,2023,lotus,emira,Emira,Emira,Luxury,generation,warn,"model exists other years (2024-2026) — adjacent model year, likely boundary",2024-2026
+9c3dbdbc-64cf-47a1-a161-e7cbb4f84a43,2009,lotus,evora,Evora/Evora S/Evora 400/Evora GT,Evora/Evora S/Evora 400/Evora GT,Premium,generation,warn,"model exists other years (2010-2021) — adjacent model year, likely boundary",2010-2021
+ffd5e323-4daa-4d75-9934-bcf9c79faebf,2024,lucid,gravity,Grand Touring,Grand Touring,Standard,manual_backfill,warn,"model exists other years (2025-2026) — adjacent model year, likely boundary",2025-2026
+d100bb47-5e44-4dd9-a3f3-e1312d1241b0,2024,lucid,gravity,Touring,Touring,Standard,manual_backfill,warn,"model exists other years (2025-2026) — adjacent model year, likely boundary",2025-2026
+92888283-2a9c-41bd-95e4-d36092b12ba1,2013,maserati,ghibli,M157 (3rd Gen),M157 (3rd Gen),Premium,generation,warn,"model exists other years (2014-2024) — adjacent model year, likely boundary",2014-2024
+7918750c-02d3-4574-a3d3-f795501f7502,2007,maserati,granturismo,M145 (1st Gen Modern),M145 (1st Gen Modern),Sport,generation,warn,"model exists other years (2008-2026) — adjacent model year, likely boundary",2008-2026
+02a679ee-0269-4335-84e5-6753528c035e,2016,maserati,levante,M161,M161,Sport,generation,warn,"model exists other years (2017-2024) — adjacent model year, likely boundary",2017-2024
+e68e8aac-8d72-49a5-871a-2d22f5174d1c,2019,mazda,cx-30,Base,Base,2.5 S,catalog-gap-fill,warn,"model exists other years (2020-2026) — adjacent model year, likely boundary",2020-2026
+d523cbcb-9fb0-46bd-8d0c-947822897327,2011,mazda,cx-5,Base,Base,Sport,catalog-gap-fill,warn,model exists other years (2013-2026),2013-2026
+92987ece-00fb-4de2-a516-292d2388340a,2012,mazda,cx-5,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2013-2026) — adjacent model year, likely boundary",2013-2026
+7929de7e-9c93-4821-b778-3b7d6c37c953,2022,mazda,cx-50,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2023-2026) — adjacent model year, likely boundary",2023-2026
+12b5f67f-962f-4762-9508-5bb23163ee7f,2006,mazda,cx-9,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2007-2023) — adjacent model year, likely boundary",2007-2023
+26cd1d1d-a06e-43dc-b865-3976c196aca8,2024,mazda,cx-9,Carbon Edition,Carbon Edition,Sport,generation-baseline,warn,"model exists other years (2007-2023) — adjacent model year, likely boundary",2007-2023
+6edd58f8-fc74-4ff5-9e12-e0cdd1b7c551,2024,mazda,cx-9,Sport,Sport,Sport,generation-baseline,warn,"model exists other years (2007-2023) — adjacent model year, likely boundary",2007-2023
+9d347c3d-0b1d-4698-9adc-5b5dd013ab53,2024,mazda,cx-9,Touring,Touring,Sport,generation-baseline,warn,"model exists other years (2007-2023) — adjacent model year, likely boundary",2007-2023
+79aa2619-d9f4-4fa3-b6ce-ae35b856e550,2024,mazda,cx-9,Grand Touring,Grand Touring,Sport,generation-baseline,warn,"model exists other years (2007-2023) — adjacent model year, likely boundary",2007-2023
+123060a3-bff4-4fe6-95bd-36289471485e,2024,mazda,cx-9,Signature,Signature,Sport,generation-baseline,warn,"model exists other years (2007-2023) — adjacent model year, likely boundary",2007-2023
+26032d7d-721c-415b-912b-09dd8956e03a,2023,mazda,cx-90,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2024-2026) — adjacent model year, likely boundary",2024-2026
+bd038837-c397-4c68-953c-5b63ca74c3e6,1998,mazda,miata,Base,,,90s-research-batch,warn,"model exists other years (1990-1997 1999-2026) — adjacent model year, likely boundary",1990-1997 1999-2026
+2fd30bfb-07b4-4f51-bd0e-3570777f530a,2020,mazda,mx-30,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2022-2023),2022-2023
+6125b3d4-4609-4c72-b94b-aff661d4606e,2021,mazda,mx-30,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2022-2023) — adjacent model year, likely boundary",2022-2023
+079c71b2-4a26-4851-9e38-635bbb021394,2024,mazda,mx-30,Base,Base,Premium,google-ai-overview,warn,"model exists other years (2022-2023) — adjacent model year, likely boundary",2022-2023
+02ffac53-4de4-48d3-99da-4c9a96a0c854,2022,mclaren,artura,Artura/Artura Spider,Artura/Artura Spider,Sport,generation,warn,"model exists other years (2023-2026) — adjacent model year, likely boundary",2023-2026
+1d57a651-fbd5-4ad9-bf0c-b33f5ba505bf,2024,mclaren,gt,GT,GT,Luxury,generation,warn,"model exists other years (2017-2023) — adjacent model year, likely boundary",2017-2023
+b1055f29-d0aa-4668-96e1-7bb710db92fc,2013,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2019-2022),2019-2022
+629507b3-81b1-4fb6-a9ac-2764fc374057,2014,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2019-2022),2019-2022
+aca8e04f-7e2e-43b3-9110-591421785ca9,2015,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2019-2022),2019-2022
+571a6132-4e44-4239-8991-b3984bdaa7e8,2016,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2019-2022),2019-2022
+6cadff3a-32d5-420f-841b-e2cb7a483889,2017,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2019-2022),2019-2022
+aa277acb-23cc-4624-95c2-e0da88c69a4c,2023,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2019-2022) — adjacent model year, likely boundary",2019-2022
+5cd488cf-82ec-4028-a3e8-b0bb8588fc5b,2024,mercedes,a-class-amg,Base,Base,Premium,catalog-gap-fill,warn,model exists other years (2019-2022),2019-2022
+29500b03-39cc-4439-88d4-f73274fbdbc0,2014,mercedes,amg-gt,Base,Base,Sport,catalog-gap-fill,warn,model exists other years (2016-2026),2016-2026
+0f58818b-8202-4666-b8df-919b81051c8b,2015,mercedes,amg-gt,AMG GT S,AMG GT S,Sport,generation_inherit,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+577fc038-9981-43a0-bcc0-9d03a66d081b,2015,mercedes,amg-gt,AMG GT C,AMG GT C,Sport,generation_inherit,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+c371cefe-b018-42dd-8c69-7c6f19506b58,2015,mercedes,amg-gt,Base,Base,Sport,cache-import,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+888bf083-ff4f-46fc-8c9e-fb783b94ee0a,2015,mercedes,amg-gt,AMG GT R,AMG GT R,Sport,generation_inherit,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+6ce38859-1ecd-4fca-bc7b-8dd323a12453,2015,mercedes,amg-gt,AMG GT R Pro,AMG GT R Pro,Sport,generation_inherit,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+6179c1ea-c6be-4e01-873a-802c5db0750f,2015,mercedes,amg-gt,AMG GT Black Series,AMG GT Black Series,Sport,generation_inherit,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+6f184086-23b3-4bf9-8403-a7eb9db34302,2015,mercedes,amg-gt,AMG GT,AMG GT,Sport,generation_inherit,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+3a4c827a-2610-44ce-af0f-58c3055389bf,2013,mercedes,cla-class,Base,Base,LS,catalog-gap-fill,warn,"model exists other years (2014-2026) — adjacent model year, likely boundary",2014-2026
+b693ef6e-42b1-4f16-aadd-d5cf20cf7a82,2013,mercedes,cla-class-amg,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2014-2026) — adjacent model year, likely boundary",2014-2026
+f819cb94-f147-41d6-8f04-3352c8209454,2004,mercedes,cls-class,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2005-2023) — adjacent model year, likely boundary",2005-2023
+cfd59d48-1a48-456b-bfd8-f9dc380924f4,2024,mercedes,cls-class,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2005-2023) — adjacent model year, likely boundary",2005-2023
+e4ad7552-38e0-4867-af16-e7ead88f658a,2004,mercedes,cls-class-amg,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2005-2023) — adjacent model year, likely boundary",2005-2023
+12d2f054-d329-455e-9dff-03eaaabbf521,2024,mercedes,cls-class-amg,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2005-2023) — adjacent model year, likely boundary",2005-2023
+93a9d070-12c0-409c-b791-0f1ed2810d8a,2021,mercedes,eqb,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2022-2025) — adjacent model year, likely boundary",2022-2025
+7c1197dd-c4f4-43a9-9ddd-21a39b57bcef,2022,mercedes,eqe,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2023-2026) — adjacent model year, likely boundary",2023-2026
+c6ba8ecc-6f80-4159-ae5e-f83e88326a2c,2021,mercedes,eqs,Base,Base,Performance,catalog-gap-fill,warn,"model exists other years (2022-2026) — adjacent model year, likely boundary",2022-2026
+1666a0f1-f67a-4e28-afa2-f33df267f0bc,2000,mercedes,g-class,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (1999 2002-2026) — adjacent model year, likely boundary",1999 2002-2026
+687f051c-8170-4cc5-9559-48507c564f4f,2001,mercedes,g-class,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (1999 2002-2026) — adjacent model year, likely boundary",1999 2002-2026
+3ac26551-2402-4eb4-ae81-da279f45776b,2000,mercedes,g-class-amg,Base,Base,Luxury,catalog-gap-fill,warn,"model exists other years (1999 2002-2026) — adjacent model year, likely boundary",1999 2002-2026
+6b933a77-28b0-4508-b182-7e607d50906f,2001,mercedes,g-class-amg,Base,Base,Luxury,catalog-gap-fill,warn,"model exists other years (1999 2002-2026) — adjacent model year, likely boundary",1999 2002-2026
+29c43e30-424d-4e4d-a675-9a30aba731d3,2013,mercedes,gla-class,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2015-2026),2015-2026
+5282575e-ea06-4f0a-81b1-91511ce2c4a6,2014,mercedes,gla-class,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+c5f8accb-ed40-4ba7-918a-1e54214c2a4b,2014,mercedes,gla-class-amg,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+e1f6fd5c-62ec-4f03-a0dd-b3f5958b84da,2019,mercedes,glb-class,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2020-2026) — adjacent model year, likely boundary",2020-2026
+ae7189fa-f8ea-46ee-9b93-e1aba718327c,2008,mercedes,glk-class,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (2010-2020),2010-2020
+7829eb9d-2b29-4560-a393-5a7f843af683,2009,mercedes,glk-class,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2010-2020) — adjacent model year, likely boundary",2010-2020
+adf3d8d4-5a7c-4d03-b33d-7ba770f9e756,2010,mercedes,sl-class,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (1990-2009 2011-2026) — adjacent model year, likely boundary",1990-2009 2011-2026
+ef77789f-eca6-4f76-8df8-40c1156920b9,2010,mercedes,sl-class-amg,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (1990-2009 2011-2026) — adjacent model year, likely boundary",1990-2009 2011-2026
+bfcf86df-cfa0-4731-a090-2caf50643973,2016,mercedes,slc-class,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (2017-2020) — adjacent model year, likely boundary",2017-2020
+85207cf2-8ecf-4eff-845e-b34d12ffbe5b,1995,mercedes-benz,g-class,Base,,,90s-research-batch,warn,model exists other years (1999 2002-2026),1999 2002-2026
+17c5f69d-1472-41c4-b692-c9a6296e571e,1996,mercedes-benz,g-class,Base,,,90s-research-batch,warn,model exists other years (1999 2002-2026),1999 2002-2026
+76950ccb-9f8a-471e-adfa-49eb050eb7a5,1997,mercedes-benz,g-class,Base,,,90s-research-batch,warn,model exists other years (1999 2002-2026),1999 2002-2026
+1d13f9bb-36bd-4237-ab4c-06b6b946c652,1998,mercedes-benz,g-class,Base,,,90s-research-batch,warn,"model exists other years (1999 2002-2026) — adjacent model year, likely boundary",1999 2002-2026
+3caef06f-bbb8-4d51-817a-8d846a345656,2015,mercedes-benz,gle,GLE 450,GLE 450,GLE 350,google-ai-overview,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+771ff4b0-46b2-47b4-a722-8fa3d3a26d14,2015,mercedes-benz,gle,GLE 53 AMG,GLE 53 AMG,GLE 350,google-ai-overview,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+a5fab130-eefc-46f1-bbd6-b113d2fb9153,2015,mercedes-benz,gle,"GLE 350, GLE 450, GLE 53 AMG, GLE 63 AMG",,GLE 350,google-ai-overview,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+41e8e6ad-eee0-45cd-b263-d12d13c32678,2015,mercedes-benz,gle,GLE 350,GLE 350,GLE 350,google-ai-overview,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+6e01298d-e09c-4050-b43a-484bc4870cfc,2015,mercedes-benz,gle,GLE 63 AMG,GLE 63 AMG,GLE 350,google-ai-overview,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+dd28ae7b-9764-44b4-ae80-7f36b5f924cf,2010,mercedes-benz,sl-class,Base,,AMG CLA 35,google-ai-overview,warn,"model exists other years (1990-2009 2011-2026) — adjacent model year, likely boundary",1990-2009 2011-2026
+d9356be0-0b08-4044-8695-5d0be9d9d907,2010,mercedes-benz,sl-class-amg,Base,,AMG CLA 35,google-ai-overview,warn,"model exists other years (1990-2009 2011-2026) — adjacent model year, likely boundary",1990-2009 2011-2026
+e907411c-7c8b-40ee-b26b-eba14dd2504a,2016,mercedes-benz,slc-class,Base,,C 300,google-ai-overview,warn,"model exists other years (2017-2020) — adjacent model year, likely boundary",2017-2020
+0951927e-eb75-4979-88ca-bb6a78ca10e8,2015,mini,clubman,JCW,JCW,Standard,luxury-gap-fill [expanded],warn,"model exists other years (2008-2014 2016-2024) — adjacent model year, likely boundary",2008-2014 2016-2024
+b00b383e-4df4-4471-ba1c-3acdc1d43948,2015,mini,clubman,Cooper S,Cooper S,Standard,luxury-gap-fill [expanded],warn,"model exists other years (2008-2014 2016-2024) — adjacent model year, likely boundary",2008-2014 2016-2024
+1b6566b0-02b3-453e-a054-1361d62d14ff,2015,mini,clubman,"Cooper, Cooper S, JCW",,Standard,luxury-gap-fill,warn,"model exists other years (2008-2014 2016-2024) — adjacent model year, likely boundary",2008-2014 2016-2024
+f6201c18-f198-46ae-968f-e07d7ae58d11,2015,mini,clubman,Cooper,Cooper,Standard,luxury-gap-fill [expanded],warn,"model exists other years (2008-2014 2016-2024) — adjacent model year, likely boundary",2008-2014 2016-2024
+6de3efc9-8a83-4966-b46c-527a5e29f0cf,2000,mitsubishi,3000-gt,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (1991-1999) — adjacent model year, likely boundary",1991-1999
+082cd818-de43-4586-8a6f-4d47935f7466,2001,mitsubishi,3000-gt,Base,Base,LS,catalog-gap-fill [web_research],warn,model exists other years (1991-1999),1991-1999
+8995b4ae-00f4-411f-8bac-1a8e5ad01fc5,2017,mitsubishi,eclipse-cross,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2018-2026) — adjacent model year, likely boundary",2018-2026
+2e279380-41cf-4b3a-9366-f0c530dc53e7,2005,mitsubishi,i,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2012-2018),2012-2018
+ee5dc13e-a118-43f0-a9df-2568e5f7a3c7,2006,mitsubishi,i,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2012-2018),2012-2018
+3cf870f8-c367-417f-932b-ee061d43839e,2007,mitsubishi,i,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2012-2018),2012-2018
+2b1319da-f1be-45ae-a20b-7e36f2613ae1,2008,mitsubishi,i,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2012-2018),2012-2018
+1f82528c-a7ee-4d3f-9727-39ad9cafb50a,2009,mitsubishi,i,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2012-2018),2012-2018
+126b0ea8-22de-44e8-bfa1-3d562f2d91d4,2010,mitsubishi,i,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2012-2018),2012-2018
+e6b140f0-cbf0-40be-8495-f4d44eaf1372,2011,mitsubishi,i,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2012-2018) — adjacent model year, likely boundary",2012-2018
+004d109d-29c7-4e70-89ef-ca6b0547d510,2012,mitsubishi,mirage,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (1990-2002 2014-2024),1990-2002 2014-2024
+4cd12160-775c-4109-9ced-a0f4ca15e051,2013,mitsubishi,mirage,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (1990-2002 2014-2024) — adjacent model year, likely boundary",1990-2002 2014-2024
+1970991e-5559-40e1-97e5-86b85d7c2e5a,2007,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,"model exists other years (1990-2006) — adjacent model year, likely boundary",1990-2006
+b895fc22-6378-408d-b584-261df70a07a3,2008,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+38c2ab1c-1f2e-405c-8ef2-7a444910c882,2009,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+00424892-50d5-48d7-9fe4-fa3003f079b7,2010,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+107bc1fa-cdfe-458a-9c11-b3135e40d252,2011,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+8c9cc33c-9618-4e08-ab64-27141d8f288b,2012,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+ed6849c8-b341-4cd0-b565-2971439aeaff,2013,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+636fbe5e-75ba-4eec-96fe-099f2c03468d,2014,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+8c950b5b-8ac6-4f1c-98a1-06a672d3fc8f,2015,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+cb59b18a-9834-48f6-9ffc-0def6b079314,2016,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+d136ed11-f4dd-4a07-b5a9-d8f094b4de44,2017,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+41768781-df72-46dc-ad8b-b52c82ec877a,2019,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+e1e308a0-f7cb-4554-b2b5-b1f8f3bec9c6,2020,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+702dd728-ad0a-425a-9d9e-6b528412066e,2021,mitsubishi,montero,Base,Base,LS,catalog-gap-fill,warn,model exists other years (1990-2006),1990-2006
+18831119-30f0-47cd-91c5-7b8f0df60278,2015,nissan,maxima,S/SV/SL/Platinum,S/SV/SL/Platinum,Standard,batch6-minivans-evs,warn,"model exists other years (1990-2014 2016-2023) — adjacent model year, likely boundary",1990-2014 2016-2023
+a17d5589-ca4f-431b-9940-cb98881a7b3c,2024,nissan,maxima,S,S,S,generation_inherit_2023 [trim-expanded],warn,"model exists other years (1990-2014 2016-2023) — adjacent model year, likely boundary",1990-2014 2016-2023
+93928f76-c1ee-47af-8d3e-13016d3fd6f7,2024,nissan,maxima,SV,SV,S,generation_inherit_2023 [trim-expanded],warn,"model exists other years (1990-2014 2016-2023) — adjacent model year, likely boundary",1990-2014 2016-2023
+20b1cd8b-3e3c-4d5d-947c-798a1883e2b0,2024,nissan,maxima,SL,SL,S,generation_inherit_2023 [trim-expanded],warn,"model exists other years (1990-2014 2016-2023) — adjacent model year, likely boundary",1990-2014 2016-2023
+c8980d56-479f-4cc5-a93a-359bb0541f1c,2024,nissan,maxima,SR,SR,S,generation_inherit_2023 [trim-expanded],warn,"model exists other years (1990-2014 2016-2023) — adjacent model year, likely boundary",1990-2014 2016-2023
+f9aadd25-9ec8-49f8-b621-e02e146e60fd,2024,nissan,maxima,Platinum,Platinum,S,generation_inherit_2023 [trim-expanded],warn,"model exists other years (1990-2014 2016-2023) — adjacent model year, likely boundary",1990-2014 2016-2023
+c145cb63-09f0-4960-8053-945bd8979e4a,2024,nissan,maxima,"S, SV, SL, SR, Platinum",Base,S,generation_inherit_2023,warn,"model exists other years (1990-2014 2016-2023) — adjacent model year, likely boundary",1990-2014 2016-2023
+bc510f0b-0dee-487b-bce6-1153c0ed4d3d,2008,nissan,murano,S/SL/SE,S/SL/SE,Standard,batch6-minivans-evs,warn,"model exists other years (2002-2007 2009-2026) — adjacent model year, likely boundary",2002-2007 2009-2026
+24d1a63c-f0b7-460f-903f-14e79b614d65,1998,plymouth,prowler,Base,,,generation-baseline,warn,"model exists other years (1997 1999-2002) — adjacent model year, likely boundary",1997 1999-2002
+bbb9d089-c1ef-4655-9bb6-8747c20ac20c,2014,porsche,918,Base,Base,Luxury,google-ai-overview,warn,"model exists other years (2015) — adjacent model year, likely boundary",2015
+80c94fdb-d8f5-480e-a4ec-84613db53ed3,2002,porsche,cayenne,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2003-2026) — adjacent model year, likely boundary",2003-2026
+1b0fcb86-d93a-41e6-a867-161ef7ff5e20,2014,porsche,macan,2.0 Macan,2.0 Macan,Macan,railway_import,warn,"model exists other years (2015-2026) — adjacent model year, likely boundary",2015-2026
+40585e71-c797-4e46-a20c-d69b842cd697,2017,ram,c/v,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2012-2016) — adjacent model year, likely boundary",2012-2016
+43df4302-2283-43cf-a3be-b461be90b9f4,2013,ram,promaster-1500,3.0 EcoDiesel,3.0 EcoDiesel,LS,railway_import,warn,"model exists other years (2014-2026) — adjacent model year, likely boundary",2014-2026
+a75e8bcd-15a5-494f-a12b-c4358be9e0aa,2021,rivian,r1t,Quad,Quad,Adventure,railway_import,warn,"model exists other years (2022-2026) — adjacent model year, likely boundary",2022-2026
+ab8c2349-9297-4095-8f39-861d6bc641a0,1998,saab,9-3,Base,,,api_import,warn,"model exists other years (1999-2012) — adjacent model year, likely boundary",1999-2012
+a24e1f6e-a9db-4ff0-a109-8c544779d324,1998,saab,9-5,Base,,,api_import,warn,"model exists other years (1999-2012) — adjacent model year, likely boundary",1999-2012
+366841b8-17d6-4be2-bb84-f07e604f5788,2002,subaru,baja,Base,Base,LS,catalog-gap-fill,warn,"model exists other years (2003-2006) — adjacent model year, likely boundary",2003-2006
+de155e71-83a4-46b6-a047-7acaded338df,2007,subaru,baja,Base,Base,LS,catalog-gap-fill,warn,"model exists other years (2003-2006) — adjacent model year, likely boundary",2003-2006
+6a388caf-32fe-4f4b-92a8-8e4314306242,2012,subaru,brz,Limited,2.0i,Premium,railway_import,warn,"model exists other years (2013-2026) — adjacent model year, likely boundary",2013-2026
+558ffcab-23af-41ea-9104-1153ade64f9c,2012,subaru,brz,tS,tS,Limited,generation_inherit,warn,"model exists other years (2013-2026) — adjacent model year, likely boundary",2013-2026
+7ecfcd3b-9393-4bec-aae5-0023493ac706,2012,subaru,brz,Limited,Limited,Premium,generation_inherit,warn,"model exists other years (2013-2026) — adjacent model year, likely boundary",2013-2026
+6425e232-2da0-4077-9160-0f9f815e1a61,2012,subaru,brz,Premium,Premium,Premium,generation_inherit,warn,"model exists other years (2013-2026) — adjacent model year, likely boundary",2013-2026
+ebdf66ac-5c76-4008-80ca-374414d9610b,2022,subaru,solterra,Base,Base,Premium,catalog-gap-fill,warn,"model exists other years (2023-2026) — adjacent model year, likely boundary",2023-2026
+e7015e65-a164-409c-87cb-52cef9a2fbc5,2015,tesla,model-x,1st Gen,1st Gen,Long Range,generation,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+2dd64a16-ee57-46b4-b37a-60ca8b1efe7f,2015,tesla,model-x,Base,Base,Long Range,cache-import,warn,"model exists other years (2016-2026) — adjacent model year, likely boundary",2016-2026
+53129ec5-dc1a-4763-b602-7d9c49c00dd9,2012,toyota,86,Base,Base,GT,trim-research,warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+72214f82-5b56-4d38-a323-f444feafe7e3,2013,toyota,86,Base,Base,GT,trim-research,warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+21fb7946-5821-4b73-9abc-31d5fadf5191,2014,toyota,86,Base,Base,GT,trim-research,warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+9e9b853d-a2ca-44e3-9c60-0b72b65d46ea,2015,toyota,86,Base,Base,GT,trim-research,warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+d08a2273-de5b-417a-b177-cba12fba8694,2016,toyota,86,Base,Base,GT,trim-research,warn,"model exists other years (2017-2020 2022-2026) — adjacent model year, likely boundary",2017-2020 2022-2026
+1e65a65b-9e0a-4c07-a762-aabafc3186e6,2021,toyota,86,Base,Base,GT,trim-research,warn,"model exists other years (2017-2020 2022-2026) — adjacent model year, likely boundary",2017-2020 2022-2026
+405d5e65-c775-4458-9ee6-987710f3a108,2023,toyota,avalon,Base,Base,Standard,catalog-gap-fill,warn,"model exists other years (1995-2022) — adjacent model year, likely boundary",1995-2022
+d80d1e15-c8d8-4bb4-bd40-6e760695d6b2,2024,toyota,avalon,Base,Base,Standard,catalog-gap-fill,warn,model exists other years (1995-2022),1995-2022
+a7aebf87-7886-4da5-aa2c-e152dabf90e3,2022,toyota,bz4x,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2023-2026) — adjacent model year, likely boundary",2023-2026
+97c2a761-f888-44b9-9fde-e03809027dc5,2016,toyota,c-hr,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2018-2022 2026),2018-2022 2026
+138dfb81-472b-42f6-a3bc-3aba8567996b,2017,toyota,c-hr,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2018-2022 2026) — adjacent model year, likely boundary",2018-2022 2026
+8e4aa324-b80c-45a0-b91a-9d072018beab,2023,toyota,c-hr,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2018-2022 2026) — adjacent model year, likely boundary",2018-2022 2026
+feb7f699-3aa2-4017-89e7-a0d6cae41bed,2024,toyota,c-hr,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2018-2022 2026),2018-2022 2026
+f5a08e51-19cf-4c39-ac26-e90787a6520f,2015,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2007-2014) — adjacent model year, likely boundary",2007-2014
+69cb26c6-dced-4909-b3fe-ec69caf12606,2016,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2007-2014),2007-2014
+db50f4d0-9b66-480c-947d-1a0b9df19451,2017,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2007-2014),2007-2014
+3a3ddb84-1848-4215-bb77-996cddf1e6c9,2019,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2007-2014),2007-2014
+842d4cba-10f1-486b-a1dd-5eb60f67cc7a,2020,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2007-2014),2007-2014
+e2dcd064-5318-40ed-93fd-df8874b64090,2021,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2007-2014),2007-2014
+ed695075-390a-4790-bd1d-e2f6ed9460be,2022,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2007-2014),2007-2014
+8d68f6e3-ee6a-40b5-b105-7fd332dd1b24,2023,toyota,fj-cruiser,Base,Base,Standard,catalog-gap-fill [web_research],warn,model exists other years (2007-2014),2007-2014
+ed9d4db5-68e3-4a69-b2a8-7d5f14342ac7,2012,toyota,gt-86,Base,Base,LS,catalog-gap-fill [web_research],warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+2da5b3d8-de22-4e1a-aa45-c7e6c5fd3b37,2013,toyota,gt-86,Base,Base,LS,catalog-gap-fill [web_research],warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+db24700a-f17b-4b68-b592-83b01100ad02,2014,toyota,gt-86,Base,Base,LS,catalog-gap-fill [web_research],warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+feb11efb-6bee-4f1f-a845-c12d0a8d2ee3,2015,toyota,gt-86,Base,Base,LS,catalog-gap-fill [web_research],warn,model exists other years (2017-2020 2022-2026),2017-2020 2022-2026
+b9433987-0f94-4f7d-b3a7-b17023e350d7,2016,toyota,gt-86,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2017-2020 2022-2026) — adjacent model year, likely boundary",2017-2020 2022-2026
+5b7bcfb4-8bb5-49ca-b8c0-b18938305b88,2022,toyota,land-cruiser,Base,,Standard,final-gap-fill,warn,"model exists other years (1990-2021 2024-2026) — adjacent model year, likely boundary",1990-2021 2024-2026
+c31afa3d-77c4-4873-ac45-d05368c0914d,2023,toyota,land-cruiser,2.4 T,2.4 T,Standard,railway_import,warn,"model exists other years (1990-2021 2024-2026) — adjacent model year, likely boundary",1990-2021 2024-2026
+c773ae9a-069b-4baa-8c16-41dd24c5ef97,2000,toyota,prius,"L Eco, LE, XLE, Limited",Base,Standard,batch7-subcompacts-final [web_research],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+576bc174-c6b3-4371-9510-88c3199c19ba,2000,toyota,prius,LE,LE,Standard,batch7-subcompacts-final [web_research [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+f7c8696d-87bf-4fdb-87d8-ebc831524743,2000,toyota,prius,L Eco,L Eco,Standard,batch7-subcompacts-final [web_research [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+4c16c254-1b42-480b-a581-16d8a23bbd68,2000,toyota,prius,XLE,XLE,Standard,batch7-subcompacts-final [web_research [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+4e8cedc5-5107-43e3-8ec9-d1c3c4dc1e72,2000,toyota,prius,Limited,Limited,Standard,batch7-subcompacts-final [web_research [expanded],warn,"model exists other years (2001-2026) — adjacent model year, likely boundary",2001-2026
+21fb50d7-1754-483e-a18d-e0ae482e88eb,2019,toyota,supra,Base,Base,3.0,google-ai-overview,warn,"model exists other years (1990-1998 2020-2026) — adjacent model year, likely boundary",1990-1998 2020-2026
+bde11a8e-ad6e-45d9-a8f8-25fb0e3f6fd9,2007,toyota,xa,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (2004-2006) — adjacent model year, likely boundary",2004-2006
+eba28b56-cb96-4070-824c-feef861fccb1,2000,toyota,yaris,Base/LE/XLE,Base/LE/XLE,Standard,batch7-subcompacts-final [web_research],warn,model exists other years (2007-2020),2007-2020
+edccd30a-87c9-4d0e-b0a3-26dd84efeee6,2001,toyota,yaris,Base/LE/XLE,Base/LE/XLE,Standard,batch7-subcompacts-final [web_research],warn,model exists other years (2007-2020),2007-2020
+d5f44d2e-e303-4497-9c80-f7f8a4cd0014,2002,toyota,yaris,Base/LE/XLE,Base/LE/XLE,Standard,batch7-subcompacts-final [web_research],warn,model exists other years (2007-2020),2007-2020
+857cf5cc-65ed-4311-a314-eb8dbb89816e,2003,toyota,yaris,Base/LE/XLE,Base/LE/XLE,Standard,batch7-subcompacts-final [web_research],warn,model exists other years (2007-2020),2007-2020
+bede38b4-df9f-4a2b-b999-4b94d5bce2cb,2004,toyota,yaris,Base/LE/XLE,Base/LE/XLE,Standard,batch7-subcompacts-final [web_research],warn,model exists other years (2007-2020),2007-2020
+17be6b21-feb5-400a-9338-1bda456effad,2005,toyota,yaris,Base/LE/XLE,Base/LE/XLE,Standard,batch7-subcompacts-final [web_research],warn,model exists other years (2007-2020),2007-2020
+36e7f15d-f631-437d-a4a4-2ca189ec870a,2006,toyota,yaris,Base/LE/XLE,Base/LE/XLE,Standard,batch7-subcompacts-final [web_research],warn,"model exists other years (2007-2020) — adjacent model year, likely boundary",2007-2020
+f0da71ad-0974-477e-bf82-e42ab5507622,2017,volkswagen,arteon,Base,Base,SE,catalog-gap-fill,warn,model exists other years (2019-2024),2019-2024
+fd1d28b8-e7aa-4cee-a21c-abacba44a7c4,2011,volkswagen,beetle,Base,Base,LS,catalog-gap-fill,warn,"model exists other years (1998-2010 2012-2019) — adjacent model year, likely boundary",1998-2010 2012-2019
+6e6e6d22-eb56-48b1-8f1d-028b410ffcad,2004,volkswagen,eurovan,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (1992-2003) — adjacent model year, likely boundary",1992-2003
+edcfdbe4-0e28-463b-a2d2-c248470a00f6,2020,volkswagen,id-4,Base,Base,Sport,catalog-gap-fill,warn,"model exists other years (2021-2026) — adjacent model year, likely boundary",2021-2026
+a841c5c9-40e0-4b02-a6c9-d4af89059234,2008,volkswagen,routan,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2009-2014) — adjacent model year, likely boundary",2009-2014
+12dc5516-be4f-4377-bc49-52e42221caca,2021,volvo,c40,Base,Base,R-Design,google-ai-overview,warn,"model exists other years (2022-2026) — adjacent model year, likely boundary",2022-2026
+3403a113-9e39-42bc-94ec-6ea45657c606,2023,volvo,ex30,Base,Base,Premium,catalog-gap-fill [web_research],warn,model exists other years (2025-2026),2025-2026
+034e66cf-dbaa-439c-a475-6b7a8468f9b7,2024,volvo,ex30,Base,Base,Premium,catalog-gap-fill [web_research],warn,"model exists other years (2025-2026) — adjacent model year, likely boundary",2025-2026
+caf9e0d4-3982-4580-bc20-c5e77fe5660f,2023,volvo,ex90,Base,Base,Performance,catalog-gap-fill [web_research],warn,model exists other years (2025-2026),2025-2026
+3dfe0270-2b26-44b1-af23-92fb33f0439d,2024,volvo,ex90,Base,Base,Performance,verified-research [sizes-inherited],warn,"model exists other years (2025-2026) — adjacent model year, likely boundary",2025-2026
+32b2c390-e2b0-4f0c-b757-7510df8dbe1e,2012,volvo,s40,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (1999-2011) — adjacent model year, likely boundary",1999-2011
+0be69dfd-0c18-45c9-8235-2bd31593fa2f,2016,volvo,s90,Base,Base,Standard,catalog-gap-fill [web_research],warn,"model exists other years (1997-1998 2017-2026) — adjacent model year, likely boundary",1997-1998 2017-2026
+7e302d45-321c-4f94-b324-c3ccfdd86ab1,2004,volvo,v50,Base,Base,Standard,google-ai-overview,warn,"model exists other years (2005-2011) — adjacent model year, likely boundary",2005-2011
+2349fd1c-ab00-44a6-8bef-deb673e3288e,2012,volvo,v50,Base,Base,LS,catalog-gap-fill [web_research],warn,"model exists other years (2005-2011) — adjacent model year, likely boundary",2005-2011
+f3a9a0ba-9624-40d0-8156-810b7cde2d8c,2016,volvo,v90,D3,D3,Standard,railway_import,warn,"model exists other years (1997-1998 2017-2026) — adjacent model year, likely boundary",1997-1998 2017-2026

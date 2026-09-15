@@ -1,0 +1,80 @@
+make_slug,canonical,n_rows,years,issues
+acura,acura,603,1990-2026,
+alfa romeo,alfaromeo,119,2014-2025,
+amc,amc,29,1967-1974,no NHTSA data 1990+ (pre-1990 make or window); no EPA data 1990+
+aston martin,astonmartin,40,2005-2026,
+audi,audi,1030,1990-2026,
+bentley,bentley,41,2016-2026,
+bmw,bmw,1545,1981-2026,
+buick,buick,648,1965-2026,
+cadillac,cadillac,682,1955-2026,
+chevrolet,chevrolet,3252,1950-2026,3 slugs map to chevrolet
+chevrolet minivans,chevrolet,2,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to chevrolet
+chevrolet vans,chevrolet,6,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to chevrolet
+chrysler,chrysler,450,1990-2026,2 slugs map to chrysler
+chrysler minivans,chrysler,9,2018-2018,non-canonical slug; body-style suffix in make; 2 slugs map to chrysler
+daewoo,daewoo,6,1999-2002,
+datsun,datsun,8,1980-1983,no NHTSA data 1990+ (pre-1990 make or window); no EPA data 1990+
+delorean,delorean,3,1981-1983,no NHTSA data 1990+ (pre-1990 make or window); no EPA data 1990+
+dodge,dodge,971,1964-2026,2 slugs map to dodge
+dodge minivans,dodge,4,2018-2018,non-canonical slug; body-style suffix in make; 2 slugs map to dodge
+ferrari,ferrari,37,2015-2026,
+fiat,fiat,51,2012-2025,
+ford,ford,2541,1953-2026,3 slugs map to ford
+ford minivans,ford,9,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to ford
+ford vans,ford,10,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to ford
+genesis,genesis,161,2017-2026,
+geo,geo,31,1989-2002,
+gmc,gmc,1520,1980-2026,2 slugs map to gmc
+gmc vans,gmc,6,2018-2018,non-canonical slug; body-style suffix in make; 2 slugs map to gmc
+honda,honda,1284,1980-2026,2 slugs map to honda
+honda minivans,honda,5,2018-2018,non-canonical slug; body-style suffix in make; 2 slugs map to honda
+hummer,hummer,27,1992-2010,
+hyundai,hyundai,795,1990-2026,
+infiniti,infiniti,436,1990-2026,
+isuzu,isuzu,66,1981-2004,
+jaguar,jaguar,494,1990-2025,
+jeep,jeep,1068,1987-2026,
+karma,karma,2,2018-2018,
+kia,kia,744,2000-2026,2 slugs map to kia
+kia minivans,kia,5,2018-2018,non-canonical slug; body-style suffix in make; 2 slugs map to kia
+lamborghini,lamborghini,29,2011-2026,
+land rover,landrover,612,1990-2026,
+lexus,lexus,1206,1990-2026,
+lincoln,lincoln,671,1961-2026,
+lotus,lotus,30,2009-2026,
+lucid,lucid,11,2022-2024,
+maserati,maserati,66,2007-2026,
+mazda,mazda,642,1980-2026,
+mclaren,mclaren,29,2015-2026,
+mercedes,mercedesbenz,1279,1980-2026,duplicate of mercedes-benz; 4 slugs map to mercedesbenz
+mercedes-benz,mercedesbenz,1578,1990-2026,4 slugs map to mercedesbenz
+mercedes-benz minivans,mercedesbenz,2,2018-2018,non-canonical slug; body-style suffix in make; 4 slugs map to mercedesbenz
+mercedes-benz vans,mercedesbenz,5,2018-2018,non-canonical slug; body-style suffix in make; 4 slugs map to mercedesbenz
+mercury,mercury,138,1964-2011,
+mini,mini,363,2002-2026,
+mitsubishi,mitsubishi,626,1983-2026,
+nissan,nissan,1736,1980-2026,3 slugs map to nissan
+nissan minivans,nissan,3,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to nissan
+nissan vans,nissan,11,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to nissan
+oldsmobile,oldsmobile,112,1964-2004,
+plymouth,plymouth,116,1964-2002,
+polestar,polestar,9,2020-2026,
+pontiac,pontiac,294,1964-2010,
+porsche,porsche,795,1990-2026,
+ram,ram,948,1994-2026,3 slugs map to ram
+ram minivans,ram,6,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to ram
+ram vans,ram,5,2018-2018,non-canonical slug; body-style suffix in make; 3 slugs map to ram
+rivian,rivian,11,2021-2026,
+rolls-royce,rollsroyce,32,2017-2026,
+saab,saab,48,1990-2012,
+saturn,saturn,59,1991-2010,
+scion,scion,82,2004-2016,no NHTSA data 1990+ (pre-1990 make or window)
+smart,smart,2,2018-2018,
+subaru,subaru,1200,1980-2026,
+suzuki,suzuki,58,1986-2013,
+tesla,tesla,112,2012-2026,
+toyota,toyota,2612,1980-2026,2 slugs map to toyota
+toyota minivans,toyota,13,2018-2018,non-canonical slug; body-style suffix in make; 2 slugs map to toyota
+volkswagen,volkswagen,849,1990-2026,
+volvo,volvo,487,1991-2026,
