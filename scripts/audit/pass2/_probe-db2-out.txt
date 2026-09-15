@@ -1,0 +1,191 @@
+﻿=== distinct active Y/M/M 1990-2026 & rows ===
+10500 | 33642
+
+=== columns of vehicle_fitments ===
+id, year, make, model, modification_id, raw_trim, display_trim, submodel, bolt_pattern, center_bore_mm, thread_size, seat_type, offset_min_mm, offset_max_mm, oem_wheel_sizes, oem_tire_sizes, source, source_record_id, created_at, updated_at, last_verified_at, quality_tier, certification_status, certification_errors, audit_original_data, quarantined_at, certified_at, certified_by_script_version, is_locked, dataset_version, last_modified_by, last_modified_reason, confidence_tag
+
+=== bmw | 3-series (14) ===
+2005 | 330i | 330i xDrive | 330i | ["225/50R17"]
+2005 | 325i | 330i xDrive | LS | ["205/60R16"]
+2005 | 323i | 330i xDrive | LS | ["205/60R16"]
+2005 | 328i | 330i xDrive | LS | ["205/60R16"]
+2005 | Base | Base | LS | ["205/55R16", "225/50R16", "205/50R17", "225/45R17", "245/40R17", "225/40R18", "245/35R18"]
+2012 | 320i xDrive | 320i xDrive | 330i | ["225/50R17", "225/45R18", "255/40R18", "225/40R19", "255/35R19"]
+2012 | 328i xDrive | 328i xDrive | 330i | ["225/50R17", "225/45R18", "255/40R18", "225/40R19", "255/35R19"]
+2012 | 335i | 330i xDrive | 330i | ["225/50R17", "225/45R18", "255/40R18"]
+2012 | 340i xDrive | 340i xDrive | 330i | ["225/50R17", "225/45R18", "255/40R18", "225/40R19", "255/35R19"]
+2012 | Base | Base | 330i | ["225/50R17", "225/45R17", "225/45R18", "255/40R18", "225/40R19", "255/35R19", "225/35R20", "255/30R20"]
+2020 | 330e | 330e | 330i | ["225/45R18", "255/40R18", "225/40R19", "255/35R19", "275/35R19", "275/30R20", "285/30R20"]
+2020 | 330e xDrive | 330e xDrive | 330i M Sport | ["225/45ZR18", "225/50ZR17", "255/40ZR18", "225/40ZR19", "255/35ZR19", "225/35ZR20", "255/30ZR20", "225/50R17", "225/45R18", "255/40R18"]
+2020 | 330i | 330i xDrive | 330i | ["225/45R18", "255/40R18", "225/40R19", "255/35R19", "275/35R19", "275/30R20", "285/30R20"]
+2020 | Base | Base | 330i | ["225/50R17", "225/45R18", "255/40R18", "225/40R19", "255/35R19"]
+
+=== mercedes | c-class (14) ===
+2005 | Base | Base | LS | ["205/55R16", "225/50R16", "225/45R17", "245/40R17", "225/40R18", "255/35R18"]
+2005 | C230 | C230 | LS | ["205/60R16"]
+2005 | C240 | C240 | LS | ["205/60R16"]
+2005 | C320 | C320 | Standard | ["225/50R17"]
+2005 | C55 AMG | C55 AMG | Premium | ["225/45R18", "245/40R18"]
+2012 | Base | Base | LS | ["205/55R16", "225/45R17", "225/40R18", "255/35R18", "225/35R19", "255/30R19"]
+2012 | C300 | C300 | Standard | ["225/50R17"]
+2012 | C350 | C350 | Standard | ["225/50R17"]
+2012 | C63 AMG | C63 AMG | Premium | ["225/45R18", "245/40R18"]
+2020 | AMG C 43 | AMG C 43 4MATIC | LS | ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"]
+2020 | AMG C 63 | AMG C 63 | LS | ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"]
+2020 | AMG C 63 S | AMG C 63 S | LS | ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"]
+2020 | Base | Base | LS | ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19"]
+2020 | C 300 | C 300 | LS | ["205/60R16", "225/50R17", "225/45R18", "245/40R18", "225/40R19", "255/35R19", "285/30R19", "255/30R20", "285/25R20"]
+
+=== mercedes-benz | c-class (14) ===
+2005 |  | C230 | LS | ["205/55R16"]
+2005 |  | C240 | LS | ["205/55R16"]
+2005 | C300 | C300 | C 300 | ["225/45R17", "245/40R17"]
+2005 |  | C300, C350, C400, C43 AMG, C63 AMG | C 300 | ["225/45R17", "245/40R17"]
+2005 |  | C320 | C 300 | ["225/45R17", "245/40R17"]
+2005 | C350 | C350 | C 300 | ["225/50R17"]
+2005 | C400 | C400 | C 300 | ["225/50R17"]
+2005 | C43 AMG | C43 AMG | C 300 AMG Line | ["235/40R18", "255/35R18"]
+2005 |  | C55 AMG | C 300 | ["225/45R17", "245/40R17"]
+2005 | C63 AMG | C63 AMG | C 300 AMG Line | ["235/40R18", "255/35R18"]
+2012 |  | C250 | C 300 | ["225/45R17", "245/40R17"]
+2012 | C300 | C300 | C 300 | ["225/45R17", "245/40R17"]
+2012 |  | C300, C350, C400, C43 AMG, C63 AMG | C 300 | ["225/45R17", "245/40R17"]
+2012 | C350 | C350 | C 300 | ["225/45R17", "245/40R17"]
+
+=== lexus | es (14) ===
+2005 | ES 250 | ES 250 | LS | ["215/60R16", "215/55R17"]
+2005 |  | ES 250, ES 300h, ES 350, F Sport | LS | ["P215/60R16", "P215/55R17"]
+2005 | ES 300h | ES 300h | LS | ["215/60R16", "215/55R17"]
+2005 | ES 330 | ES 330 | LS | ["215/60R16"]
+2005 | ES 350 | ES 350 | LS | ["215/60R16", "215/55R17"]
+2012 | ES 250 | ES 250 | ES 250 | ["215/55R17", "225/45R18", "235/50R17", "235/45ZR18"]
+2012 |  | ES 250, ES 300h, ES 350, F Sport | ES 250 | ["P215/55R17"]
+2012 | ES 300h | ES 300h | ES 250 | ["215/55R17", "225/45R18", "235/50R17", "235/45ZR18"]
+2012 | ES 350 | ES 350 | ES 250 | ["215/55R17", "225/45R18", "235/50R17", "235/45ZR18"]
+2012 | ES 350 | ES 350 | ES 250 | ["215/55R17"]
+2020 | ES 250 | ES 250 | ES 250 | ["215/55R17", "235/45R18", "235/40R19", "235/50R17"]
+2020 |  | ES 250, ES 300h, ES 350, F Sport | ES 250 | ["P215/55R17", "P235/45R18", "P235/40R19"]
+2020 | ES 300h | ES 300h | ES 250 | ["215/55R17", "235/45R18", "235/40R19", "235/50R17"]
+2020 | ES 350 | ES 350 | ES 250 | ["215/55R17", "235/45R18", "235/40R19", "235/50R17"]
+
+=== infiniti | q50 (5) ===
+2020 | Luxe | Luxe | Pure | ["225/55R17", "225/50R18", "245/40R19", "265/35R19"]
+2020 | Pure | Pure | Pure | ["225/55R17", "225/50R18", "245/40R19", "265/35R19"]
+2020 |  | Pure, Luxe, Sensory, Red Sport 400 | Pure | ["225/55R17", "225/50R18", "245/40R19", "265/35R19"]
+2020 | Red Sport 400 | Red Sport 400 | Pure | ["225/55R17", "225/50R18", "245/40R19", "265/35R19"]
+2020 | Sensory | Sensory | Pure | ["225/55R17", "225/50R18", "245/40R19", "265/35R19"]
+
+=== audi | a4 (10) ===
+2005 | 1.8T | 1.8T | LS | ["205/55R16"]
+2005 | 3.0 | 2.0T | Premium | ["225/45R17"]
+2005 | Base | Base | LS | ["205/55R16", "225/50R17", "235/45R17", "235/40R18"]
+2012 | 2.0T | 2.0T | Premium | ["225/45R17"]
+2012 | Base | Base | LS | ["205/60R16", "225/50R17", "245/40R18", "245/35R19"]
+2020 | 40 TFSI | 40 TFSI | Premium | ["225/50R17", "225/50ZR17"]
+2020 | 40 TFSi Quattro | 40 TFSi Quattro | Premium | ["225/50R17", "245/40ZR18", "245/35ZR19", "225/50ZR17", "245/40R18"]
+2020 | 45 TFSI | 45 TFSI | Premium Plus | ["245/40R18", "245/40ZR18"]
+2020 | 45 TFSI quattro | 45 TFSI quattro | Premium Plus | ["245/40R18", "245/35R19", "255/35R19", "245/40ZR18", "245/35ZR19"]
+2020 | Base | Base | Premium | ["225/50R17", "245/40R18", "245/35R19", "255/35R19", "245/40ZR18", "245/35ZR19", "225/50ZR17"]
+
+=== chevrolet | silverado-2500hd (13) ===
+2005 | Base | Base | LS | ["LT245/75R16", "LT265/75R16", "LT245/70R17", "LT265/70R17"]
+2005 | LT | LT | WT | ["LT245/70R17"]
+2012 |  | Base |  | ["265/70R17", "275/70R18"]
+2012 | LT | LT | LT | ["LT265/70R18"]
+2012 | LTZ | LTZ | LT | ["LT265/70R18"]
+2012 | WT | WT | LT | ["LT265/70R18"]
+2012 | Z71 | Z71 | LT | ["LT265/70R18"]
+2020 |  | Base |  | ["275/70R18", "275/60R20"]
+2020 | Custom | Custom | WT | ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"]
+2020 | High Country | High Country | WT | ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"]
+2020 | LT | LT | WT | ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"]
+2020 | LTZ | LTZ | WT | ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"]
+2020 | WT | WT | WT | ["LT245/70R17", "LT265/70R18", "LT275/70R18", "LT275/65R20"]
+
+=== ford | f-250-super-duty (0) ===
+
+
+=== dodge | ram-1500 (5) ===
+2005 | Base | Base | Standard | ["265/70R17"]
+2005 | Laramie | Laramie | Luxury | ["275/60R20"]
+2005 | SLT | SLT | Standard | ["265/70R17"]
+2005 | ST | ST | Standard | ["265/70R17"]
+2005 | Sport | Sport | Luxury | ["275/60R20"]
+
+=== ram | 1500 (14) ===
+2005 | Laramie | Laramie | Tradesman | ["245/70R17", "265/70R17", "275/60R20"]
+2005 | SLT | SLT | Tradesman | ["245/70R17", "265/70R17", "275/60R20"]
+2005 | ST | ST | Tradesman | ["245/70R17", "265/70R17", "275/60R20"]
+2005 | Sport | Sport | Tradesman | ["245/70R17", "265/70R17", "275/60R20"]
+2012 | 5.7 HEMI | 5.7 HEMI | Limited | ["275/60R20", "285/45R22", "305/45R22", "LT245/70R17", "LT265/70R17"]
+2012 |  | Base |  | ["265/70R17", "275/60R18", "275/55R20"]
+2012 | Laramie | Laramie | Laramie | ["275/60R20", "LT245/70R17", "LT265/70R17"]
+2012 | Laramie | Laramie | Laramie | ["275/60R20", "LT245/70R17", "LT265/70R17"]
+2012 | Laramie Longhorn | Laramie Longhorn | Laramie | ["275/60R20", "LT245/70R17", "LT265/70R17"]
+2012 | SLT | SLT | Laramie | ["275/65R18", "LT245/70R17", "LT265/70R17"]
+2012 | SLT | SLT | Laramie | ["275/65R18", "LT245/70R17", "LT265/70R17"]
+2012 | Sport | Sport | Laramie | ["275/60R20", "LT245/70R17", "LT265/70R17"]
+2020 | 3.6 Pentastar | 3.6 Pentastar | Big Horn | ["275/65R18", "275/55R20", "LT275/65R18", "285/45R22", "LT275/70R18"]
+2020 |  | Base |  | ["275/65R18", "275/55R20", "285/45R22"]
+
+=== mercedes-benz | gle (11) ===
+2020 |  | AMG GLE53 | AMG GLE 53 | ["275/45R21", "315/40R21"]
+2020 |  | AMG GLE63 S | AMG GLE 63 | ["285/40R22", "325/35R22"]
+2020 | GLE 350 | GLE 350 | GLE 350 | ["275/55R19"]
+2020 |  | GLE 350, GLE 450, GLE 53 AMG, GLE 63 AMG | GLE 350 | ["275/55R19"]
+2020 | GLE 450 | GLE 450 | GLE 450 | ["275/50R20", "315/45R20"]
+2020 | GLE 53 AMG | GLE 53 AMG | AMG GLE 53 | ["275/45R21", "315/40R21"]
+2020 | GLE 63 AMG | GLE 63 AMG | GLE 350 | ["275/55R19"]
+2020 |  | GLE350 | GLE 350 | ["275/55R19"]
+2020 |  | GLE350 4MATIC | GLE 350 | ["275/55R19"]
+2020 |  | GLE450 4MATIC | GLE 450 | ["275/50R20", "315/45R20"]
+2020 |  | GLE580 4MATIC | AMG GLE 53 | ["275/45R21", "315/40R21"]
+
+=== bmw | x5 (10) ===
+2005 | Base | Base | Standard | ["235/65R17", "255/55R18", "255/50R19", "275/40R20", "285/45R19", "315/35R20"]
+2012 | Base | Base | Premium | ["255/55R18", "255/50R19", "275/40R20", "295/35R20", "285/35R21", "325/30R21", "315/35R20"]
+2020 | Base | Base | Premium | ["255/55R18", "255/50R19", "275/45R19", "275/45R20", "315/35R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+2020 | M50i | M50i | xDrive40i | ["265/50R19", "275/45R20", "305/40R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+2020 | X5 M | X5 M | xDrive40i | ["265/50R19", "275/45R20", "305/40R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+2020 | X5 M Competition | X5 M Competition | xDrive40i | ["265/50R19", "275/45R20", "305/40R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+2020 | sDrive40i | sDrive40i | xDrive40i | ["265/50R19", "275/45R20", "305/40R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+2020 | xDrive40i | xDrive40i | xDrive40i | ["265/50R19", "275/45R20", "305/40R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+2020 | xDrive45e | xDrive45e | xDrive40i | ["265/50R19", "275/45R20", "305/40R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+2020 | xDrive50i | xDrive50i | xDrive40i | ["265/50R19", "275/45R20", "305/40R20", "275/40R21", "315/35R21", "285/35R22", "315/30R22", "275/35R22", "295/35R21"]
+
+=== family-ish slugs (series|class|-e) ===
+mercedes-benz | c-class | 240
+mercedes-benz | e-class | 230
+mercedes-benz | s-class | 213
+mercedes | c-class | 190
+bmw | 3-series | 186
+bmw | 5-series | 179
+mercedes | e-class | 177
+mercedes | s-class | 138
+bmw | 7-series | 89
+mercedes-benz | sl-class | 73
+mercedes-benz | g-class | 59
+bmw | 6-series | 32
+mercedes | g-class | 25
+mercedes | cls-class | 20
+mercedes | sl-class | 20
+mercedes | slk-class | 17
+mercedes-benz | slk-class | 17
+mercedes | m-class | 16
+bmw | 8-series | 16
+mercedes | cl-class | 15
+bmw | 4-series | 14
+bmw | 2-series | 13
+mercedes | cla-class | 13
+mercedes | gla-class | 13
+saturn | s-series | 12
+mercedes | glk-class | 8
+mercedes | glb-class | 8
+mercedes-benz | m-class | 8
+saturn | l-series | 6
+mercedes | slc-class | 4
+mercedes-benz | slc-class | 4
+mercedes-benz | cla-class | 1
+mercedes-benz | gle-class | 1
+mercedes-benz | glc-class | 1
+mercedes-benz | cls-class | 1

@@ -1,0 +1,18 @@
+import pg from "pg";
+const p = new pg.Pool({ connectionString: process.env.POSTGRES_URL, ssl: { rejectUnauthorized: false } });
+const q = async (s, a) => (await p.query(s, a)).rows;
+const T = (rows) => rows.map((r) => Object.values(r).join(" | ")).join("\n");
+console.log("=== odd tire strings (not plain metric) ===");
+console.log(T(await q(`select s, count(*)::int n from (select jsonb_array_elements_text(oem_tire_sizes) s from vehicle_fitments where quarantined_at is null and jsonb_typeof(oem_tire_sizes)='array') x where s !~ '^P?(LT)?\\d{3}/\\d{2}Z?R\\d{2}(\\.5)?$' group by 1 order by 2 desc limit 120`)));
+console.log("\n=== {front,rear} samples ===");
+console.log(T(await q(`select oem_tire_sizes::text from vehicle_fitments where quarantined_at is null and jsonb_typeof(oem_tire_sizes)='object' order by random() limit 8`)));
+console.log("\n=== bare string samples ===");
+console.log(T(await q(`select oem_tire_sizes::text from vehicle_fitments where quarantined_at is null and jsonb_typeof(oem_tire_sizes)='string' order by random() limit 8`)));
+console.log("\n=== empty/null tires (active, 1990+) ===");
+console.log(T(await q(`select count(*)::int from vehicle_fitments where quarantined_at is null and year between 1990 and 2026 and (oem_tire_sizes is null or oem_tire_sizes::text in ('[]','""','null','{}'))`)));
+console.log("\n=== all make+model slugs 1990+ (count, years) ===");
+const mm = await q(`select make, model, count(*)::int n, min(year) y0, max(year) y1, count(distinct year)::int ny from vehicle_fitments where quarantined_at is null and year between 1990 and 2026 group by 1,2 order by 1,2`);
+for (const r of mm) console.log(`${r.make} | ${r.model} | ${r.n} | ${r.y0}-${r.y1} (${r.ny}y)`);
+console.log("\n=== audit tables present ===");
+console.log(T(await q(`select table_name from information_schema.tables where table_schema='public' and table_name like 'audit_%' order by 1`)));
+await p.end();

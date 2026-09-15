@@ -1,0 +1,3265 @@
+{
+ "generated": "2026-09-15T16:10:44.681Z",
+ "rows": 33753,
+ "ymm": 10545,
+ "byStatus": {
+  "match": 15996,
+  "mismatch": 3866,
+  "usaf_missing_ymm": 1671,
+  "partial": 12206,
+  "our_empty": 14
+ },
+ "byDecade": {
+  "2020s": {
+   "match": 5196,
+   "mismatch": 876,
+   "partial": 3688,
+   "usaf_missing_ymm": 601
+  },
+  "1990s": {
+   "match": 1357,
+   "mismatch": 568,
+   "partial": 952,
+   "usaf_missing_ymm": 195,
+   "our_empty": 8
+  },
+  "2000s": {
+   "match": 2978,
+   "mismatch": 1388,
+   "partial": 3132,
+   "usaf_missing_ymm": 361,
+   "our_empty": 6
+  },
+  "2010s": {
+   "usaf_missing_ymm": 514,
+   "match": 6465,
+   "partial": 4434,
+   "mismatch": 1034
+  }
+ },
+ "bySource": {
+  "manual-fix": {
+   "match": 2,
+   "partial": 1
+  },
+  "90s-research-batch": {
+   "match": 682,
+   "partial": 523,
+   "mismatch": 136,
+   "usaf_missing_ymm": 94
+  },
+  "google-ai-overview": {
+   "match": 2006,
+   "partial": 367,
+   "mismatch": 852,
+   "usaf_missing_ymm": 105
+  },
+  "catalog-gap-fill": {
+   "mismatch": 389,
+   "usaf_missing_ymm": 501,
+   "partial": 492,
+   "match": 164
+  },
+  "trim-research": {
+   "match": 3790,
+   "mismatch": 475,
+   "partial": 248,
+   "usaf_missing_ymm": 35
+  },
+  "cache-import": {
+   "partial": 4423,
+   "match": 2183,
+   "mismatch": 285,
+   "usaf_missing_ymm": 405
+  },
+  "tgp_solutions": {
+   "match": 1466,
+   "usaf_missing_ymm": 3,
+   "partial": 3,
+   "mismatch": 2
+  },
+  "verified-research": {
+   "usaf_missing_ymm": 73,
+   "partial": 352,
+   "match": 1125,
+   "mismatch": 83
+  },
+  "merged-staggered": {
+   "match": 326
+  },
+  "railway_import": {
+   "usaf_missing_ymm": 71,
+   "partial": 134,
+   "match": 115,
+   "mismatch": 2
+  },
+  "api_import": {
+   "usaf_missing_ymm": 58,
+   "match": 568,
+   "partial": 1631,
+   "mismatch": 197
+  },
+  "generation": {
+   "usaf_missing_ymm": 43,
+   "partial": 140,
+   "mismatch": 24,
+   "match": 83
+  },
+  "luxury-gap-fill": {
+   "usaf_missing_ymm": 25,
+   "mismatch": 17,
+   "partial": 10,
+   "match": 77
+  },
+  "generation_inherit": {
+   "mismatch": 693,
+   "match": 732,
+   "partial": 364,
+   "usaf_missing_ymm": 54
+  },
+  "cleanup_cache-import": {
+   "mismatch": 26,
+   "match": 51,
+   "partial": 66,
+   "usaf_missing_ymm": 3
+  },
+  "reviewed_from_2021_ADJACENT_YEAR": {
+   "match": 2,
+   "partial": 2
+  },
+  "cleanup_wheelsize": {
+   "match": 41
+  },
+  "wheelsize": {
+   "match": 33,
+   "partial": 12
+  },
+  "reviewed_from_2013_ADJACENT_YEAR": {
+   "partial": 2
+  },
+  "tire-guide-manual": {
+   "match": 1
+  },
+  "generation-baseline": {
+   "match": 176,
+   "partial": 898,
+   "mismatch": 130,
+   "usaf_missing_ymm": 15
+  },
+  "reviewed_from_2018_ADJACENT_YEAR": {
+   "match": 1
+  },
+  "cleanup_legacy_bmw_3-series": {
+   "match": 4,
+   "partial": 7
+  },
+  "generation_template": {
+   "partial": 988,
+   "match": 658,
+   "mismatch": 134,
+   "our_empty": 6,
+   "usaf_missing_ymm": 48
+  },
+  "manual-research": {
+   "partial": 716,
+   "mismatch": 211,
+   "match": 219
+  },
+  "final-gap-fill": {
+   "mismatch": 19,
+   "match": 29,
+   "usaf_missing_ymm": 8,
+   "partial": 62
+  },
+  "manual_fix_escalade_2026": {
+   "partial": 6
+  },
+  "reddit-correction-2026-09-15": {
+   "partial": 24,
+   "match": 11,
+   "mismatch": 5
+  },
+  "tire-guide-pro-import": {
+   "match": 7
+  },
+  "batch6-minivans-evs": {
+   "match": 19,
+   "usaf_missing_ymm": 23,
+   "partial": 17,
+   "mismatch": 8
+  },
+  "tier-a-import": {
+   "match": 161,
+   "mismatch": 11,
+   "partial": 82,
+   "usaf_missing_ymm": 20
+  },
+  "cleanup_corvette_c5": {
+   "match": 12
+  },
+  "fix_cross_gen": {
+   "partial": 6,
+   "match": 61,
+   "mismatch": 7
+  },
+  "fix_cross_gen_contamination": {
+   "partial": 3,
+   "match": 1
+  },
+  "cleanup_generation_template": {
+   "match": 77,
+   "partial": 26
+  },
+  "wheel_fill_chevrolet_corvette_from_2024": {
+   "match": 1
+  },
+  "oem_specs": {
+   "match": 26,
+   "partial": 94,
+   "mismatch": 22
+  },
+  "manual_backfill": {
+   "partial": 20,
+   "mismatch": 26,
+   "usaf_missing_ymm": 6,
+   "match": 4
+  },
+  "manual-qa-fix": {
+   "mismatch": 4,
+   "match": 4
+  },
+  "batch7-subcompacts-final": {
+   "match": 56,
+   "partial": 16,
+   "usaf_missing_ymm": 15
+  },
+  "chevy-gmc-research": {
+   "match": 8
+  },
+  "audit-2026-09-pass3-research": {
+   "our_empty": 8,
+   "match": 83,
+   "partial": 9,
+   "usaf_missing_ymm": 4,
+   "mismatch": 3
+  },
+  "inherited_from_2018_SIBLING_PLATFORM": {
+   "partial": 4,
+   "match": 4
+  },
+  "inherited_from_2020_SIBLING_PLATFORM": {
+   "match": 2
+  },
+  "demo-fix": {
+   "mismatch": 3,
+   "match": 2
+  },
+  "static": {
+   "match": 4
+  },
+  "platform_inheritance_lx": {
+   "partial": 3
+  },
+  "platform_inheritance_ld": {
+   "match": 17,
+   "partial": 7,
+   "usaf_missing_ymm": 3
+  },
+  "reviewed_from_2020_ADJACENT_YEAR": {
+   "partial": 2
+  },
+  "manual-import": {
+   "partial": 1,
+   "match": 8
+  },
+  "manual_research": {
+   "match": 2,
+   "mismatch": 1
+  },
+  "tiresize.com": {
+   "match": 112,
+   "mismatch": 9,
+   "partial": 2,
+   "usaf_missing_ymm": 1
+  },
+  "intrepid-gap-fill-2026-08-31": {
+   "match": 16
+  },
+  "manufacturer_spec": {
+   "match": 38,
+   "partial": 9
+  },
+  "manual_import": {
+   "match": 11,
+   "mismatch": 1
+  },
+  "batch2v2-trim-groups": {
+   "match": 140,
+   "mismatch": 11,
+   "partial": 8
+  },
+  "tire-guide-pro": {
+   "match": 4
+  },
+  "manual": {
+   "partial": 12,
+   "match": 14
+  },
+  "gap-fix": {
+   "partial": 13
+  },
+  "manual_seed_spec": {
+   "partial": 279,
+   "usaf_missing_ymm": 23,
+   "match": 277,
+   "mismatch": 6
+  },
+  "batch4-suvs-sedans": {
+   "mismatch": 1,
+   "match": 12
+  },
+  "reviewed_from_2022_ADJACENT_YEAR": {
+   "partial": 1
+  },
+  "batch3-sports-cars": {
+   "match": 6
+  },
+  "inherited_from_2020_SAME_GENERATION": {
+   "match": 4,
+   "partial": 1
+  },
+  "backfill-gc": {
+   "mismatch": 13,
+   "partial": 13,
+   "match": 34
+  },
+  "backfill-2014": {
+   "match": 4,
+   "partial": 1,
+   "mismatch": 1
+  },
+  "inherited_from_2007_SAME_GENERATION": {
+   "partial": 8
+  },
+  "generation_inherit_2025": {
+   "partial": 13,
+   "match": 11,
+   "usaf_missing_ymm": 6
+  },
+  "alias-from-mazda3": {
+   "usaf_missing_ymm": 1,
+   "match": 27,
+   "partial": 25
+  },
+  "generation_inherit_2024": {
+   "usaf_missing_ymm": 10
+  },
+  "batch5-sports-more": {
+   "partial": 4,
+   "match": 47,
+   "mismatch": 10
+  },
+  "cleanup_legacy_mazda_mx-5-miata": {
+   "match": 50,
+   "partial": 1
+  },
+  "priority-fix": {
+   "partial": 1
+  },
+  "generation_inherit_2023": {
+   "usaf_missing_ymm": 18
+  },
+  "generation_inherit_2015": {
+   "partial": 36
+  },
+  "batch1-fill": {
+   "mismatch": 8,
+   "match": 28
+  },
+  "generation_inherit_2018": {
+   "match": 1,
+   "partial": 3
+  },
+  "inherited_from_2015_SAME_GENERATION": {
+   "partial": 4
+  },
+  "inherited_from_2019_SAME_GENERATION": {
+   "match": 4
+  },
+  "merge_consolidation": {
+   "partial": 10,
+   "mismatch": 36,
+   "match": 37
+  },
+  "cache-import-fix": {
+   "partial": 1
+  },
+  "reviewed_from_2025_ADJACENT_YEAR": {
+   "match": 6
+  },
+  "generation_import": {
+   "mismatch": 5
+  },
+  "generation_inherit_2022": {
+   "match": 9
+  }
+ },
+ "ymmByStatus": {
+  "exact": 2442,
+  "overlap": 5034,
+  "usaf_missing_ymm": 1009,
+  "disjoint": 895,
+  "ours_subset": 1165
+ },
+ "ymmCoverage": {
+  "total": 10545,
+  "matched": 9536,
+  "unmatched": 1009,
+  "not_fetched": 0
+ },
+ "ymmByDecade": {
+  "2020s": {
+   "exact": 559,
+   "overlap": 1297,
+   "ours_subset": 274,
+   "usaf_missing_ymm": 325,
+   "disjoint": 202
+  },
+  "1990s": {
+   "exact": 550,
+   "disjoint": 229,
+   "ours_subset": 301,
+   "overlap": 751,
+   "usaf_missing_ymm": 138
+  },
+  "2000s": {
+   "exact": 381,
+   "overlap": 1375,
+   "usaf_missing_ymm": 244,
+   "disjoint": 300,
+   "ours_subset": 257
+  },
+  "2010s": {
+   "usaf_missing_ymm": 302,
+   "overlap": 1611,
+   "exact": 952,
+   "disjoint": 164,
+   "ours_subset": 333
+  }
+ },
+ "topMismatch": [
+  {
+   "make": "porsche",
+   "model": "911",
+   "rows": 246,
+   "match": 25,
+   "partial": 213,
+   "mismatch": 8,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 221,
+   "bad_pct": 89.8
+  },
+  {
+   "make": "ram",
+   "model": "3500",
+   "rows": 332,
+   "match": 134,
+   "partial": 74,
+   "mismatch": 124,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 198,
+   "bad_pct": 59.6
+  },
+  {
+   "make": "nissan",
+   "model": "titan",
+   "rows": 257,
+   "match": 38,
+   "partial": 164,
+   "mismatch": 31,
+   "our_empty": 0,
+   "usaf_missing_ymm": 24,
+   "bad": 195,
+   "bad_pct": 75.9
+  },
+  {
+   "make": "ford",
+   "model": "expedition",
+   "rows": 211,
+   "match": 43,
+   "partial": 160,
+   "mismatch": 8,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 168,
+   "bad_pct": 79.6
+  },
+  {
+   "make": "mercedes",
+   "model": "c-class",
+   "rows": 190,
+   "match": 24,
+   "partial": 95,
+   "mismatch": 71,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 166,
+   "bad_pct": 87.4
+  },
+  {
+   "make": "jeep",
+   "model": "grand-cherokee",
+   "rows": 413,
+   "match": 259,
+   "partial": 68,
+   "mismatch": 86,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 154,
+   "bad_pct": 37.3
+  },
+  {
+   "make": "mercedes",
+   "model": "e-class",
+   "rows": 177,
+   "match": 21,
+   "partial": 60,
+   "mismatch": 92,
+   "our_empty": 0,
+   "usaf_missing_ymm": 4,
+   "bad": 152,
+   "bad_pct": 85.9
+  },
+  {
+   "make": "bmw",
+   "model": "3-series",
+   "rows": 186,
+   "match": 35,
+   "partial": 100,
+   "mismatch": 51,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 151,
+   "bad_pct": 81.2
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "e-class",
+   "rows": 230,
+   "match": 75,
+   "partial": 47,
+   "mismatch": 104,
+   "our_empty": 0,
+   "usaf_missing_ymm": 4,
+   "bad": 151,
+   "bad_pct": 65.7
+  },
+  {
+   "make": "bmw",
+   "model": "5-series",
+   "rows": 179,
+   "match": 29,
+   "partial": 84,
+   "mismatch": 64,
+   "our_empty": 0,
+   "usaf_missing_ymm": 2,
+   "bad": 148,
+   "bad_pct": 82.7
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "s-class",
+   "rows": 213,
+   "match": 69,
+   "partial": 46,
+   "mismatch": 96,
+   "our_empty": 0,
+   "usaf_missing_ymm": 2,
+   "bad": 142,
+   "bad_pct": 66.7
+  },
+  {
+   "make": "chevrolet",
+   "model": "express-3500",
+   "rows": 139,
+   "match": 0,
+   "partial": 138,
+   "mismatch": 1,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 139,
+   "bad_pct": 100
+  },
+  {
+   "make": "gmc",
+   "model": "savana-3500",
+   "rows": 135,
+   "match": 0,
+   "partial": 135,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 135,
+   "bad_pct": 100
+  },
+  {
+   "make": "gmc",
+   "model": "sierra-2500hd",
+   "rows": 154,
+   "match": 20,
+   "partial": 85,
+   "mismatch": 49,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 134,
+   "bad_pct": 87
+  },
+  {
+   "make": "subaru",
+   "model": "forester",
+   "rows": 203,
+   "match": 69,
+   "partial": 134,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 134,
+   "bad_pct": 66
+  },
+  {
+   "make": "subaru",
+   "model": "outback",
+   "rows": 236,
+   "match": 70,
+   "partial": 131,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 35,
+   "bad": 131,
+   "bad_pct": 55.5
+  },
+  {
+   "make": "lexus",
+   "model": "es",
+   "rows": 180,
+   "match": 46,
+   "partial": 109,
+   "mismatch": 20,
+   "our_empty": 0,
+   "usaf_missing_ymm": 5,
+   "bad": 129,
+   "bad_pct": 71.7
+  },
+  {
+   "make": "subaru",
+   "model": "impreza",
+   "rows": 141,
+   "match": 16,
+   "partial": 123,
+   "mismatch": 2,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 125,
+   "bad_pct": 88.7
+  },
+  {
+   "make": "porsche",
+   "model": "boxster",
+   "rows": 145,
+   "match": 15,
+   "partial": 85,
+   "mismatch": 40,
+   "our_empty": 0,
+   "usaf_missing_ymm": 5,
+   "bad": 125,
+   "bad_pct": 86.2
+  },
+  {
+   "make": "kia",
+   "model": "sportage",
+   "rows": 155,
+   "match": 32,
+   "partial": 120,
+   "mismatch": 1,
+   "our_empty": 0,
+   "usaf_missing_ymm": 2,
+   "bad": 121,
+   "bad_pct": 78.1
+  },
+  {
+   "make": "gmc",
+   "model": "sierra-3500hd",
+   "rows": 130,
+   "match": 12,
+   "partial": 106,
+   "mismatch": 12,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 118,
+   "bad_pct": 90.8
+  },
+  {
+   "make": "chevrolet",
+   "model": "silverado-2500hd",
+   "rows": 145,
+   "match": 29,
+   "partial": 75,
+   "mismatch": 41,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 116,
+   "bad_pct": 80
+  },
+  {
+   "make": "mitsubishi",
+   "model": "eclipse",
+   "rows": 115,
+   "match": 0,
+   "partial": 115,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 115,
+   "bad_pct": 100
+  },
+  {
+   "make": "chevrolet",
+   "model": "express-2500",
+   "rows": 112,
+   "match": 0,
+   "partial": 96,
+   "mismatch": 16,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 112,
+   "bad_pct": 100
+  },
+  {
+   "make": "mitsubishi",
+   "model": "lancer",
+   "rows": 112,
+   "match": 0,
+   "partial": 112,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 112,
+   "bad_pct": 100
+  },
+  {
+   "make": "porsche",
+   "model": "panamera",
+   "rows": 128,
+   "match": 16,
+   "partial": 112,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 112,
+   "bad_pct": 87.5
+  },
+  {
+   "make": "hyundai",
+   "model": "tucson",
+   "rows": 136,
+   "match": 23,
+   "partial": 112,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 1,
+   "bad": 112,
+   "bad_pct": 82.4
+  },
+  {
+   "make": "chevrolet",
+   "model": "colorado",
+   "rows": 138,
+   "match": 14,
+   "partial": 96,
+   "mismatch": 16,
+   "our_empty": 0,
+   "usaf_missing_ymm": 12,
+   "bad": 112,
+   "bad_pct": 81.2
+  },
+  {
+   "make": "volvo",
+   "model": "s60",
+   "rows": 120,
+   "match": 10,
+   "partial": 110,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 110,
+   "bad_pct": 91.7
+  },
+  {
+   "make": "gmc",
+   "model": "savana-2500",
+   "rows": 108,
+   "match": 0,
+   "partial": 88,
+   "mismatch": 20,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 108,
+   "bad_pct": 100
+  },
+  {
+   "make": "dodge",
+   "model": "grand-caravan",
+   "rows": 107,
+   "match": 0,
+   "partial": 107,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 107,
+   "bad_pct": 100
+  },
+  {
+   "make": "hyundai",
+   "model": "sonata",
+   "rows": 183,
+   "match": 77,
+   "partial": 106,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 106,
+   "bad_pct": 57.9
+  },
+  {
+   "make": "lincoln",
+   "model": "town-car",
+   "rows": 104,
+   "match": 0,
+   "partial": 34,
+   "mismatch": 70,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 104,
+   "bad_pct": 100
+  },
+  {
+   "make": "chevrolet",
+   "model": "silverado-3500hd",
+   "rows": 120,
+   "match": 16,
+   "partial": 93,
+   "mismatch": 11,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 104,
+   "bad_pct": 86.7
+  },
+  {
+   "make": "ford",
+   "model": "ranger",
+   "rows": 153,
+   "match": 38,
+   "partial": 96,
+   "mismatch": 8,
+   "our_empty": 0,
+   "usaf_missing_ymm": 11,
+   "bad": 104,
+   "bad_pct": 68
+  },
+  {
+   "make": "volkswagen",
+   "model": "jetta",
+   "rows": 171,
+   "match": 67,
+   "partial": 103,
+   "mismatch": 1,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 104,
+   "bad_pct": 60.8
+  },
+  {
+   "make": "lexus",
+   "model": "rx",
+   "rows": 162,
+   "match": 59,
+   "partial": 103,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 103,
+   "bad_pct": 63.6
+  },
+  {
+   "make": "audi",
+   "model": "q5",
+   "rows": 106,
+   "match": 3,
+   "partial": 102,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 1,
+   "bad": 102,
+   "bad_pct": 96.2
+  },
+  {
+   "make": "lexus",
+   "model": "gx",
+   "rows": 139,
+   "match": 36,
+   "partial": 102,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 1,
+   "bad": 102,
+   "bad_pct": 73.4
+  },
+  {
+   "make": "nissan",
+   "model": "armada",
+   "rows": 109,
+   "match": 4,
+   "partial": 100,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 5,
+   "bad": 100,
+   "bad_pct": 91.7
+  },
+  {
+   "make": "lincoln",
+   "model": "navigator",
+   "rows": 124,
+   "match": 24,
+   "partial": 64,
+   "mismatch": 36,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 100,
+   "bad_pct": 80.6
+  },
+  {
+   "make": "porsche",
+   "model": "cayenne",
+   "rows": 170,
+   "match": 64,
+   "partial": 77,
+   "mismatch": 21,
+   "our_empty": 0,
+   "usaf_missing_ymm": 8,
+   "bad": 98,
+   "bad_pct": 57.6
+  },
+  {
+   "make": "dodge",
+   "model": "charger",
+   "rows": 134,
+   "match": 36,
+   "partial": 97,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 1,
+   "bad": 97,
+   "bad_pct": 72.4
+  },
+  {
+   "make": "hyundai",
+   "model": "santa-fe",
+   "rows": 154,
+   "match": 56,
+   "partial": 97,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 1,
+   "bad": 97,
+   "bad_pct": 63
+  },
+  {
+   "make": "subaru",
+   "model": "legacy",
+   "rows": 160,
+   "match": 63,
+   "partial": 97,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 97,
+   "bad_pct": 60.6
+  },
+  {
+   "make": "volvo",
+   "model": "xc90",
+   "rows": 115,
+   "match": 19,
+   "partial": 96,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 96,
+   "bad_pct": 83.5
+  },
+  {
+   "make": "mercedes",
+   "model": "s-class",
+   "rows": 138,
+   "match": 37,
+   "partial": 63,
+   "mismatch": 32,
+   "our_empty": 0,
+   "usaf_missing_ymm": 6,
+   "bad": 95,
+   "bad_pct": 68.8
+  },
+  {
+   "make": "bmw",
+   "model": "x5",
+   "rows": 110,
+   "match": 16,
+   "partial": 94,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 94,
+   "bad_pct": 85.5
+  },
+  {
+   "make": "gmc",
+   "model": "acadia",
+   "rows": 119,
+   "match": 24,
+   "partial": 94,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 1,
+   "bad": 94,
+   "bad_pct": 79
+  },
+  {
+   "make": "ram",
+   "model": "2500",
+   "rows": 312,
+   "match": 219,
+   "partial": 59,
+   "mismatch": 34,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 93,
+   "bad_pct": 29.8
+  },
+  {
+   "make": "bmw",
+   "model": "x3",
+   "rows": 96,
+   "match": 4,
+   "partial": 92,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 92,
+   "bad_pct": 95.8
+  },
+  {
+   "make": "nissan",
+   "model": "pathfinder",
+   "rows": 140,
+   "match": 43,
+   "partial": 92,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 5,
+   "bad": 92,
+   "bad_pct": 65.7
+  },
+  {
+   "make": "chevrolet",
+   "model": "malibu",
+   "rows": 151,
+   "match": 56,
+   "partial": 75,
+   "mismatch": 15,
+   "our_empty": 0,
+   "usaf_missing_ymm": 5,
+   "bad": 90,
+   "bad_pct": 59.6
+  },
+  {
+   "make": "mini",
+   "model": "cooper",
+   "rows": 152,
+   "match": 62,
+   "partial": 90,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 90,
+   "bad_pct": 59.2
+  },
+  {
+   "make": "dodge",
+   "model": "challenger",
+   "rows": 157,
+   "match": 60,
+   "partial": 84,
+   "mismatch": 4,
+   "our_empty": 0,
+   "usaf_missing_ymm": 9,
+   "bad": 88,
+   "bad_pct": 56.1
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "c-class",
+   "rows": 240,
+   "match": 153,
+   "partial": 15,
+   "mismatch": 72,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 87,
+   "bad_pct": 36.3
+  },
+  {
+   "make": "gmc",
+   "model": "yukon",
+   "rows": 217,
+   "match": 131,
+   "partial": 67,
+   "mismatch": 19,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 86,
+   "bad_pct": 39.6
+  },
+  {
+   "make": "audi",
+   "model": "q7",
+   "rows": 100,
+   "match": 10,
+   "partial": 85,
+   "mismatch": 0,
+   "our_empty": 0,
+   "usaf_missing_ymm": 5,
+   "bad": 85,
+   "bad_pct": 85
+  },
+  {
+   "make": "subaru",
+   "model": "wrx",
+   "rows": 203,
+   "match": 118,
+   "partial": 65,
+   "mismatch": 20,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 85,
+   "bad_pct": 41.9
+  },
+  {
+   "make": "gmc",
+   "model": "canyon",
+   "rows": 106,
+   "match": 22,
+   "partial": 60,
+   "mismatch": 24,
+   "our_empty": 0,
+   "usaf_missing_ymm": 0,
+   "bad": 84,
+   "bad_pct": 79.2
+  }
+ ],
+ "topMissing": [
+  {
+   "make": "bmw",
+   "model": "3-series",
+   "ymm_with_missing": 33,
+   "missing_sizes_total": 121,
+   "years": "1991-2026",
+   "sample": "205/55R15 195/65R14 225/55R15 235/40R17 225/45R17 245/40R17"
+  },
+  {
+   "make": "mercedes",
+   "model": "e-class-coupe",
+   "ymm_with_missing": 14,
+   "missing_sizes_total": 107,
+   "years": "2009-2023",
+   "sample": "245/45R17 265/35R18 235/45R17 255/40R17 235/40R18 255/35R18"
+  },
+  {
+   "make": "mercedes",
+   "model": "e-class",
+   "ymm_with_missing": 32,
+   "missing_sizes_total": 104,
+   "years": "1994-2026",
+   "sample": "205/60R15 235/45R17 275/35R18 215/55R16 265/35R18 255/40R17"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "e-class-coupe",
+   "ymm_with_missing": 13,
+   "missing_sizes_total": 101,
+   "years": "2010-2023",
+   "sample": "245/45R17 245/40R18 265/35R18 235/45R17 255/40R17 235/40R18"
+  },
+  {
+   "make": "mercedes",
+   "model": "e-class-cabriolet",
+   "ymm_with_missing": 14,
+   "missing_sizes_total": 100,
+   "years": "2009-2023",
+   "sample": "245/45R17 265/35R18 235/45R17 255/40R17 235/40R18 255/35R18"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "c-class",
+   "ymm_with_missing": 25,
+   "missing_sizes_total": 99,
+   "years": "2000-2026",
+   "sample": "225/45R17 245/40R17 195/65R15 205/60R15 205/55R16 225/50R16"
+  },
+  {
+   "make": "bmw",
+   "model": "5-series",
+   "ymm_with_missing": 27,
+   "missing_sizes_total": 97,
+   "years": "1997-2026",
+   "sample": "225/60R15 255/40R17 235/45R17 235/40R18 265/35R18 255/40R19"
+  },
+  {
+   "make": "mercedes",
+   "model": "c-class-amg",
+   "ymm_with_missing": 18,
+   "missing_sizes_total": 95,
+   "years": "2008-2026",
+   "sample": "235/35R19 255/30R19 255/35R19 285/30R19 265/35R19 235/40R18"
+  },
+  {
+   "make": "ford",
+   "model": "f-150",
+   "ymm_with_missing": 26,
+   "missing_sizes_total": 93,
+   "years": "1990-2026",
+   "sample": "215/75R15 265/75R15 275/60R17 245/75R16 265/70R17 255/70R16"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "e-class-cabriolet",
+   "ymm_with_missing": 12,
+   "missing_sizes_total": 90,
+   "years": "2011-2023",
+   "sample": "245/45R17 245/40R18 265/35R18 235/45R17 255/40R17 235/40R18"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "e-class",
+   "ymm_with_missing": 27,
+   "missing_sizes_total": 88,
+   "years": "1994-2026",
+   "sample": "225/55R16 245/40R18 275/35R18 235/45R17 215/55R16 255/40R17"
+  },
+  {
+   "make": "mercedes",
+   "model": "c-class",
+   "ymm_with_missing": 25,
+   "missing_sizes_total": 84,
+   "years": "1995-2026",
+   "sample": "245/40R17 245/35R18 235/35R19 235/40R18 255/35R19 285/30R19"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "s-class",
+   "ymm_with_missing": 26,
+   "missing_sizes_total": 84,
+   "years": "2000-2026",
+   "sample": "225/55R17 275/40R18 245/45R18 225/60R16 265/40R18 245/40R19"
+  },
+  {
+   "make": "porsche",
+   "model": "911",
+   "ymm_with_missing": 31,
+   "missing_sizes_total": 84,
+   "years": "1994-2026",
+   "sample": "225/40R18 265/35R18 285/30R18 205/50R17 255/40R17 315/30R18"
+  },
+  {
+   "make": "mercedes",
+   "model": "s-class",
+   "ymm_with_missing": 27,
+   "missing_sizes_total": 83,
+   "years": "1999-2026",
+   "sample": "235/60R16 225/60R16 265/40R18 245/45R18 225/55R17 245/40R19"
+  },
+  {
+   "make": "porsche",
+   "model": "boxster",
+   "ymm_with_missing": 21,
+   "missing_sizes_total": 82,
+   "years": "2000-2025",
+   "sample": "205/55R16 225/50R16 205/50R17 225/40R18 265/35R18 225/45R17"
+  },
+  {
+   "make": "bmw",
+   "model": "x5-m",
+   "ymm_with_missing": 17,
+   "missing_sizes_total": 78,
+   "years": "2009-2026",
+   "sample": "255/55R18 255/50R19 275/40R20 315/35R20 285/35R21 325/30R21"
+  },
+  {
+   "make": "chevrolet",
+   "model": "silverado",
+   "ymm_with_missing": 13,
+   "missing_sizes_total": 70,
+   "years": "1999-2026",
+   "sample": "235/75R16 255/70R16 245/75R16 235/75R15 255/70R17 265/65R18"
+  },
+  {
+   "make": "porsche",
+   "model": "cayenne",
+   "ymm_with_missing": 16,
+   "missing_sizes_total": 69,
+   "years": "2003-2026",
+   "sample": "255/55R18 275/45R19 275/40R20 235/60R18 255/50R19 265/50R19"
+  },
+  {
+   "make": "bmw",
+   "model": "x6-m",
+   "ymm_with_missing": 17,
+   "missing_sizes_total": 66,
+   "years": "2009-2026",
+   "sample": "255/50R19 275/40R20 315/35R20 285/35R21 325/30R21 275/45R20"
+  },
+  {
+   "make": "ford",
+   "model": "mustang",
+   "ymm_with_missing": 32,
+   "missing_sizes_total": 66,
+   "years": "1990-2026",
+   "sample": "195/75R14 225/60R15 225/55R16 205/65R15 245/45R17 255/45R17"
+  },
+  {
+   "make": "ford",
+   "model": "mustang-shelby-gt500",
+   "ymm_with_missing": 12,
+   "missing_sizes_total": 65,
+   "years": "2007-2023",
+   "sample": "235/55R17 235/50R18 215/65R16 215/60R17 245/45R19 255/45R18"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "e-class-amg",
+   "ymm_with_missing": 21,
+   "missing_sizes_total": 65,
+   "years": "2002-2025",
+   "sample": "245/40R18 275/35R18 265/35R18 255/40R18 285/35R18 255/35R19"
+  },
+  {
+   "make": "mercedes",
+   "model": "amg-gt",
+   "ymm_with_missing": 9,
+   "missing_sizes_total": 64,
+   "years": "2017-2026",
+   "sample": "295/30R19 255/45R19 285/40R19 265/40R20 295/35R20 275/35R21"
+  },
+  {
+   "make": "mercedes",
+   "model": "gle-class-coupe",
+   "ymm_with_missing": 10,
+   "missing_sizes_total": 64,
+   "years": "2016-2026",
+   "sample": "255/50R19 265/45R20 295/35R21 285/40R22 325/35R22 275/45R21"
+  },
+  {
+   "make": "gmc",
+   "model": "sierra-2500hd",
+   "ymm_with_missing": 28,
+   "missing_sizes_total": 61,
+   "years": "1990-2026",
+   "sample": "225/75R16 245/75R16 265/60R20 265/70R18 245/75R17 265/70R17"
+  },
+  {
+   "make": "mercedes",
+   "model": "slk-class",
+   "ymm_with_missing": 17,
+   "missing_sizes_total": 58,
+   "years": "2000-2016",
+   "sample": "225/50R16 245/40R17 225/40R18 245/35R18 235/40R18 255/35R18"
+  },
+  {
+   "make": "mercedes",
+   "model": "cls-class",
+   "ymm_with_missing": 17,
+   "missing_sizes_total": 56,
+   "years": "2006-2023",
+   "sample": "275/35R18 255/40R18 285/35R18 285/30R19 245/40R19 275/35R19"
+  },
+  {
+   "make": "mercedes",
+   "model": "sl-class",
+   "ymm_with_missing": 19,
+   "missing_sizes_total": 56,
+   "years": "2000-2020",
+   "sample": "245/45R17 245/40R18 275/35R18 285/35R18 255/45R17 255/35R19"
+  },
+  {
+   "make": "mercedes",
+   "model": "sl-class-amg",
+   "ymm_with_missing": 19,
+   "missing_sizes_total": 55,
+   "years": "2003-2025",
+   "sample": "285/35R18 255/35R19 285/30R19 265/35R19 325/30R20 265/40R20"
+  },
+  {
+   "make": "porsche",
+   "model": "panamera",
+   "ymm_with_missing": 13,
+   "missing_sizes_total": 54,
+   "years": "2010-2026",
+   "sample": "275/45R18 255/45R19 285/40R19 255/40R20 295/35R20 295/40R19"
+  },
+  {
+   "make": "mercedes",
+   "model": "glc-class-coupe",
+   "ymm_with_missing": 10,
+   "missing_sizes_total": 53,
+   "years": "2016-2026",
+   "sample": "235/55R19 285/40R20 255/40R21 285/35R21 265/45R20 295/40R20"
+  },
+  {
+   "make": "audi",
+   "model": "a8",
+   "ymm_with_missing": 21,
+   "missing_sizes_total": 52,
+   "years": "2000-2026",
+   "sample": "225/60R16 225/55R17 245/45R18 235/55R17 255/45R18 255/40R19"
+  },
+  {
+   "make": "bmw",
+   "model": "6-series",
+   "ymm_with_missing": 14,
+   "missing_sizes_total": 52,
+   "years": "2004-2019",
+   "sample": "275/35R18 245/40R19 275/35R19 275/40R18 245/35R20 275/30R20"
+  },
+  {
+   "make": "gmc",
+   "model": "sierra-1500",
+   "ymm_with_missing": 24,
+   "missing_sizes_total": 50,
+   "years": "1990-2026",
+   "sample": "275/60R15 225/75R16 235/75R16 255/70R16 235/75R15 265/70R17"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "slk-class",
+   "ymm_with_missing": 17,
+   "missing_sizes_total": 50,
+   "years": "2000-2016",
+   "sample": "205/55R16 225/50R16 225/40R18 245/35R18 235/40R18 255/35R18"
+  },
+  {
+   "make": "bmw",
+   "model": "x4-m",
+   "ymm_with_missing": 7,
+   "missing_sizes_total": 49,
+   "years": "2019-2025",
+   "sample": "245/50R19 245/45R20 275/40R20 245/40R21 275/35R21 255/40R21"
+  },
+  {
+   "make": "mercedes",
+   "model": "gls",
+   "ymm_with_missing": 8,
+   "missing_sizes_total": 49,
+   "years": "2019-2026",
+   "sample": "285/40R22 275/55R19 315/40R21 285/45R22 285/40R23 325/35R23"
+  },
+  {
+   "make": "chevrolet",
+   "model": "suburban",
+   "ymm_with_missing": 22,
+   "missing_sizes_total": 48,
+   "years": "1993-2026",
+   "sample": "225/75R16 235/75R15 245/75R16 265/70R17 265/70R16 275/55R20"
+  },
+  {
+   "make": "ford",
+   "model": "mustang-shelby-gt350",
+   "ymm_with_missing": 8,
+   "missing_sizes_total": 47,
+   "years": "2011-2020",
+   "sample": "285/35R19 265/40R19 285/35R20 235/50R18 245/45R19 215/65R17"
+  },
+  {
+   "make": "lexus",
+   "model": "is",
+   "ymm_with_missing": 17,
+   "missing_sizes_total": 46,
+   "years": "2002-2026",
+   "sample": "225/45R17 245/45R17 255/40R18 225/40R19 255/35R19 205/55R16"
+  },
+  {
+   "make": "toyota",
+   "model": "tundra",
+   "ymm_with_missing": 26,
+   "missing_sizes_total": 46,
+   "years": "2000-2026",
+   "sample": "245/70R16 255/70R18 285/70R17 265/60R20 245/75R18 285/65R18"
+  },
+  {
+   "make": "maserati",
+   "model": "quattroporte",
+   "ymm_with_missing": 10,
+   "missing_sizes_total": 45,
+   "years": "2013-2023",
+   "sample": "245/35R20 295/30R20 245/40R20 285/35R20 245/45R19 275/40R19"
+  },
+  {
+   "make": "mercedes",
+   "model": "e-class-amg",
+   "ymm_with_missing": 21,
+   "missing_sizes_total": 45,
+   "years": "2002-2025",
+   "sample": "275/35R18 265/35R18 255/40R18 285/35R18 285/30R19 245/40R19"
+  },
+  {
+   "make": "porsche",
+   "model": "macan",
+   "ymm_with_missing": 6,
+   "missing_sizes_total": 45,
+   "years": "2015-2026",
+   "sample": "235/55R19 255/50R19 255/55R18 265/45R20 295/40R20 235/55R20"
+  },
+  {
+   "make": "bmw",
+   "model": "4-series-gran-coupe",
+   "ymm_with_missing": 10,
+   "missing_sizes_total": 44,
+   "years": "2015-2026",
+   "sample": "225/40R19 225/45R18 225/50R17 255/40R18 255/35R19 245/45R18"
+  },
+  {
+   "make": "chevrolet",
+   "model": "silverado-2500hd",
+   "ymm_with_missing": 22,
+   "missing_sizes_total": 43,
+   "years": "1999-2026",
+   "sample": "245/75R16 225/75R16 265/70R17 245/75R17 265/60R20 275/65R18"
+  },
+  {
+   "make": "land rover",
+   "model": "range-rover",
+   "ymm_with_missing": 24,
+   "missing_sizes_total": 43,
+   "years": "1995-2025",
+   "sample": "205/80R16 255/55R18 255/50R20 255/55R19 235/65R19 275/40R22"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "g-class",
+   "ymm_with_missing": 23,
+   "missing_sizes_total": 43,
+   "years": "2002-2026",
+   "sample": "265/60R18 285/55R18 285/45R21 295/40R22"
+  },
+  {
+   "make": "bmw",
+   "model": "x3-m",
+   "ymm_with_missing": 6,
+   "missing_sizes_total": 42,
+   "years": "2019-2024",
+   "sample": "225/60R18 245/50R19 275/40R20 245/40R21 275/35R21 265/45R20"
+  },
+  {
+   "make": "mercedes",
+   "model": "cl-class",
+   "ymm_with_missing": 15,
+   "missing_sizes_total": 42,
+   "years": "2000-2014",
+   "sample": "225/55R17 245/45R18 275/40R18 265/40R18 245/40R19 275/35R19"
+  },
+  {
+   "make": "toyota",
+   "model": "tacoma",
+   "ymm_with_missing": 19,
+   "missing_sizes_total": 41,
+   "years": "1995-2015",
+   "sample": "195/75R14 205/75R14 215/65R15 31X10.50R15 215/70R14 205/75R15"
+  },
+  {
+   "make": "bmw",
+   "model": "7-series",
+   "ymm_with_missing": 21,
+   "missing_sizes_total": 40,
+   "years": "1994-2023",
+   "sample": "225/60R15 235/50R18 255/45R18 235/60R16 245/45R19 245/40R20"
+  },
+  {
+   "make": "lexus",
+   "model": "rc",
+   "ymm_with_missing": 10,
+   "missing_sizes_total": 40,
+   "years": "2015-2025",
+   "sample": "235/40R19 265/35R19 255/35R19 275/35R19"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "s-class-coupe",
+   "ymm_with_missing": 6,
+   "missing_sizes_total": 40,
+   "years": "2015-2021",
+   "sample": "255/40R20 285/35R20 245/50R18 245/45R19 275/40R19 245/40R20"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "sl-class-amg",
+   "ymm_with_missing": 16,
+   "missing_sizes_total": 40,
+   "years": "2003-2025",
+   "sample": "255/40R18 285/35R18 265/35R19 325/30R20 285/30R20 265/40R20"
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "cla",
+   "ymm_with_missing": 12,
+   "missing_sizes_total": 39,
+   "years": "2014-2026",
+   "sample": "225/40R18 235/35R19 225/40R19 245/35R19 235/40R18 255/35R19"
+  },
+  {
+   "make": "volkswagen",
+   "model": "jetta-gli",
+   "ymm_with_missing": 14,
+   "missing_sizes_total": 39,
+   "years": "2012-2026",
+   "sample": "195/65R15 205/55R16 205/50R17 205/60R16 205/55R17 225/45R18"
+  },
+  {
+   "make": "buick",
+   "model": "regal",
+   "ymm_with_missing": 22,
+   "missing_sizes_total": 38,
+   "years": "1990-2017",
+   "sample": "205/70R15 225/60R16 215/70R15 245/40R19 235/50R17 255/35R20"
+  },
+  {
+   "make": "pontiac",
+   "model": "grand-prix",
+   "ymm_with_missing": 18,
+   "missing_sizes_total": 38,
+   "years": "1990-2008",
+   "sample": "215/65R15 195/75R14 205/65R15 215/60R16 245/50R16 215/60R15"
+  }
+ ],
+ "unmatchedModels": [
+  {
+   "make": "ford",
+   "model": "f-450-super-duty",
+   "ymm": 26,
+   "rows": 70,
+   "years": "2000-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "mini",
+   "model": "clubman",
+   "ymm": 10,
+   "rows": 58,
+   "years": "2008-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "infiniti",
+   "model": "qx50",
+   "ymm": 7,
+   "rows": 42,
+   "years": "2008-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "infiniti",
+   "model": "qx80",
+   "ymm": 10,
+   "rows": 40,
+   "years": "2004-2013",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "xe",
+   "ymm": 7,
+   "rows": 35,
+   "years": "2015-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "subaru",
+   "model": "outback",
+   "ymm": 5,
+   "rows": 35,
+   "years": "1995-1999",
+   "other_years_matched": true
+  },
+  {
+   "make": "volkswagen",
+   "model": "gti",
+   "ymm": 15,
+   "rows": 33,
+   "years": "1990-2005",
+   "other_years_matched": true
+  },
+  {
+   "make": "volkswagen",
+   "model": "golf",
+   "ymm": 8,
+   "rows": 32,
+   "years": "2007-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "nissan",
+   "model": "titan",
+   "ymm": 2,
+   "rows": 24,
+   "years": "2025-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "chevrolet",
+   "model": "tahoe",
+   "ymm": 3,
+   "rows": 21,
+   "years": "1992-1994",
+   "other_years_matched": true
+  },
+  {
+   "make": "chrysler",
+   "model": "pacifica",
+   "ymm": 10,
+   "rows": 20,
+   "years": "2016-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "nissan",
+   "model": "maxima",
+   "ymm": 4,
+   "rows": 19,
+   "years": "2015-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "m5",
+   "ymm": 10,
+   "rows": 18,
+   "years": "1990-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "land rover",
+   "model": "defender",
+   "ymm": 18,
+   "rows": 18,
+   "years": "2000-2019",
+   "other_years_matched": true
+  },
+  {
+   "make": "nissan",
+   "model": "gt-r",
+   "ymm": 3,
+   "rows": 18,
+   "years": "2022-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "subaru",
+   "model": "crosstrek",
+   "ymm": 3,
+   "rows": 18,
+   "years": "2013-2015",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "m3",
+   "ymm": 8,
+   "rows": 17,
+   "years": "1992-2020",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "a3",
+   "ymm": 12,
+   "rows": 16,
+   "years": "1996-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "chrysler",
+   "model": "300",
+   "ymm": 4,
+   "rows": 16,
+   "years": "2004-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "ford",
+   "model": "fiesta",
+   "ymm": 16,
+   "rows": 16,
+   "years": "2000-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "mazda",
+   "model": "cx-9",
+   "ymm": 4,
+   "rows": 16,
+   "years": "2006-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "tt-s",
+   "ymm": 15,
+   "rows": 15,
+   "years": "2008-2023",
+   "other_years_matched": false
+  },
+  {
+   "make": "jeep",
+   "model": "renegade",
+   "ymm": 3,
+   "rows": 15,
+   "years": "2024-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "mitsubishi",
+   "model": "montero",
+   "ymm": 14,
+   "rows": 14,
+   "years": "2007-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "acura",
+   "model": "tlx",
+   "ymm": 2,
+   "rows": 12,
+   "years": "2014-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "buick",
+   "model": "regal",
+   "ymm": 12,
+   "rows": 12,
+   "years": "2005-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "chevrolet",
+   "model": "colorado",
+   "ymm": 2,
+   "rows": 12,
+   "years": "2013-2014",
+   "other_years_matched": true
+  },
+  {
+   "make": "honda",
+   "model": "ridgeline",
+   "ymm": 2,
+   "rows": 12,
+   "years": "2015-2016",
+   "other_years_matched": true
+  },
+  {
+   "make": "hyundai",
+   "model": "santa-fe-classic",
+   "ymm": 6,
+   "rows": 12,
+   "years": "2007-2012",
+   "other_years_matched": false
+  },
+  {
+   "make": "jaguar",
+   "model": "xj",
+   "ymm": 4,
+   "rows": 12,
+   "years": "2010-2022",
+   "other_years_matched": true
+  },
+  {
+   "make": "jeep",
+   "model": "cherokee",
+   "ymm": 12,
+   "rows": 12,
+   "years": "2002-2013",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "a-class-amg",
+   "ymm": 11,
+   "rows": 12,
+   "years": "2013-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "mini",
+   "model": "countryman",
+   "ymm": 2,
+   "rows": 12,
+   "years": "2025-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "ford",
+   "model": "ranger",
+   "ymm": 6,
+   "rows": 11,
+   "years": "2012-2017",
+   "other_years_matched": true
+  },
+  {
+   "make": "maserati",
+   "model": "granturismo",
+   "ymm": 5,
+   "rows": 11,
+   "years": "2007-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "s4",
+   "ymm": 3,
+   "rows": 10,
+   "years": "2003-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "chrysler",
+   "model": "voyager",
+   "ymm": 10,
+   "rows": 10,
+   "years": "1990-1999",
+   "other_years_matched": false
+  },
+  {
+   "make": "infiniti",
+   "model": "q50",
+   "ymm": 2,
+   "rows": 10,
+   "years": "2025-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "infiniti",
+   "model": "qx60",
+   "ymm": 2,
+   "rows": 10,
+   "years": "2013-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "kia",
+   "model": "forte",
+   "ymm": 2,
+   "rows": 10,
+   "years": "2025-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "lexus",
+   "model": "is",
+   "ymm": 2,
+   "rows": 10,
+   "years": "1999-2000",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "g-class",
+   "ymm": 10,
+   "rows": 10,
+   "years": "1990-1999",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "rs-models",
+   "ymm": 9,
+   "rows": 9,
+   "years": "2017-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "chevrolet",
+   "model": "spark",
+   "ymm": 9,
+   "rows": 9,
+   "years": "2005-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "dodge",
+   "model": "challenger",
+   "ymm": 1,
+   "rows": 9,
+   "years": "2024-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "f-type",
+   "ymm": 3,
+   "rows": 9,
+   "years": "2012-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "lotus",
+   "model": "elise",
+   "ymm": 9,
+   "rows": 9,
+   "years": "2012-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "mitsubishi",
+   "model": "i",
+   "ymm": 9,
+   "rows": 9,
+   "years": "2005-2013",
+   "other_years_matched": false
+  },
+  {
+   "make": "audi",
+   "model": "s6",
+   "ymm": 8,
+   "rows": 8,
+   "years": "1996-2019",
+   "other_years_matched": true
+  },
+  {
+   "make": "chevrolet",
+   "model": "trailblazer",
+   "ymm": 8,
+   "rows": 8,
+   "years": "2001-2020",
+   "other_years_matched": true
+  },
+  {
+   "make": "kia",
+   "model": "sorento",
+   "ymm": 2,
+   "rows": 8,
+   "years": "2002-2010",
+   "other_years_matched": true
+  },
+  {
+   "make": "kia",
+   "model": "telluride",
+   "ymm": 1,
+   "rows": 8,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "amg-gt",
+   "ymm": 2,
+   "rows": 8,
+   "years": "2014-2015",
+   "other_years_matched": true
+  },
+  {
+   "make": "porsche",
+   "model": "cayenne",
+   "ymm": 2,
+   "rows": 8,
+   "years": "2002-2007",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "fj-cruiser",
+   "ymm": 8,
+   "rows": 8,
+   "years": "2015-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "gt-86",
+   "ymm": 8,
+   "rows": 8,
+   "years": "2012-2020",
+   "other_years_matched": false
+  },
+  {
+   "make": "toyota",
+   "model": "mr2-roadster",
+   "ymm": 8,
+   "rows": 8,
+   "years": "2000-2007",
+   "other_years_matched": false
+  },
+  {
+   "make": "buick",
+   "model": "lacrosse",
+   "ymm": 7,
+   "rows": 7,
+   "years": "2020-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "ford",
+   "model": "focus",
+   "ymm": 7,
+   "rows": 7,
+   "years": "2019-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "xf",
+   "ymm": 3,
+   "rows": 7,
+   "years": "2007-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "oldsmobile",
+   "model": "cutlass",
+   "ymm": 7,
+   "rows": 7,
+   "years": "1990-1996",
+   "other_years_matched": true
+  },
+  {
+   "make": "saturn",
+   "model": "sc",
+   "ymm": 7,
+   "rows": 7,
+   "years": "1993-1999",
+   "other_years_matched": false
+  },
+  {
+   "make": "saturn",
+   "model": "sw",
+   "ymm": 7,
+   "rows": 7,
+   "years": "1993-1999",
+   "other_years_matched": false
+  },
+  {
+   "make": "toyota",
+   "model": "e-z",
+   "ymm": 7,
+   "rows": 7,
+   "years": "2011-2017",
+   "other_years_matched": false
+  },
+  {
+   "make": "toyota",
+   "model": "etios-valco",
+   "ymm": 7,
+   "rows": 7,
+   "years": "2011-2017",
+   "other_years_matched": false
+  },
+  {
+   "make": "toyota",
+   "model": "yaris",
+   "ymm": 7,
+   "rows": 7,
+   "years": "2000-2006",
+   "other_years_matched": true
+  },
+  {
+   "make": "acura",
+   "model": "mdx",
+   "ymm": 1,
+   "rows": 6,
+   "years": "2021-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "rs5",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2010-2020",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "s8",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2000-2019",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "s8l",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2021-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "audi",
+   "model": "tt-rs",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2010-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "cadillac",
+   "model": "escalade",
+   "ymm": 1,
+   "rows": 6,
+   "years": "2001-2001",
+   "other_years_matched": true
+  },
+  {
+   "make": "ford",
+   "model": "sportka",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2003-2008",
+   "other_years_matched": false
+  },
+  {
+   "make": "ford",
+   "model": "taurus",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2020-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "kia",
+   "model": "soul",
+   "ymm": 1,
+   "rows": 6,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "mazda",
+   "model": "mx-30",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2020-2025",
+   "other_years_matched": false
+  },
+  {
+   "make": "mercedes",
+   "model": "eqa",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2021-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "mercedes",
+   "model": "eqb",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2021-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "mercedes",
+   "model": "s-class",
+   "ymm": 2,
+   "rows": 6,
+   "years": "1992-1993",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "86",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2012-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "volvo",
+   "model": "v90",
+   "ymm": 6,
+   "rows": 6,
+   "years": "2016-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "coupe",
+   "ymm": 5,
+   "rows": 5,
+   "years": "1992-1996",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "q7",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2016-2016",
+   "other_years_matched": true
+  },
+  {
+   "make": "buick",
+   "model": "encore",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2012-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "buick",
+   "model": "verano",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2011-2022",
+   "other_years_matched": true
+  },
+  {
+   "make": "cadillac",
+   "model": "ct6",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2021-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "chevrolet",
+   "model": "malibu",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "chrysler",
+   "model": "grand-voyager",
+   "ymm": 5,
+   "rows": 5,
+   "years": "1990-1999",
+   "other_years_matched": false
+  },
+  {
+   "make": "ford",
+   "model": "fusion",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2002-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "geo",
+   "model": "prizm",
+   "ymm": 5,
+   "rows": 5,
+   "years": "1998-2002",
+   "other_years_matched": true
+  },
+  {
+   "make": "lexus",
+   "model": "es",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "lexus",
+   "model": "lx",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2012-2012",
+   "other_years_matched": true
+  },
+  {
+   "make": "lincoln",
+   "model": "mkz",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2006-2006",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "cls-class-amg",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2004-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "eqb",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2022-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "gle",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2015-2015",
+   "other_years_matched": true
+  },
+  {
+   "make": "mitsubishi",
+   "model": "maven",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2005-2009",
+   "other_years_matched": false
+  },
+  {
+   "make": "mitsubishi",
+   "model": "mirage",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2012-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "mitsubishi",
+   "model": "outlander",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2021-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "nissan",
+   "model": "armada",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2004-2004",
+   "other_years_matched": true
+  },
+  {
+   "make": "nissan",
+   "model": "pathfinder",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2021-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "porsche",
+   "model": "boxster",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "subaru",
+   "model": "brz",
+   "ymm": 2,
+   "rows": 5,
+   "years": "2012-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "c-hr",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2016-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "land-cruiser",
+   "ymm": 3,
+   "rows": 5,
+   "years": "2012-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "prius",
+   "ymm": 1,
+   "rows": 5,
+   "years": "2000-2000",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "vios-fs",
+   "ymm": 5,
+   "rows": 5,
+   "years": "2017-2022",
+   "other_years_matched": false
+  },
+  {
+   "make": "audi",
+   "model": "80",
+   "ymm": 4,
+   "rows": 4,
+   "years": "1993-1996",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "a4",
+   "ymm": 1,
+   "rows": 4,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "r8",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2007-2019",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "6-series",
+   "ymm": 2,
+   "rows": 4,
+   "years": "2003-2011",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "m4",
+   "ymm": 1,
+   "rows": 4,
+   "years": "2014-2014",
+   "other_years_matched": true
+  },
+  {
+   "make": "buick",
+   "model": "electra-e5",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2023-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "chrysler",
+   "model": "dynasty",
+   "ymm": 4,
+   "rows": 4,
+   "years": "1990-1993",
+   "other_years_matched": false
+  },
+  {
+   "make": "chrysler",
+   "model": "fifth-avenue",
+   "ymm": 4,
+   "rows": 4,
+   "years": "1990-1993",
+   "other_years_matched": false
+  },
+  {
+   "make": "fiat",
+   "model": "500",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2020-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "ford",
+   "model": "f-250",
+   "ymm": 4,
+   "rows": 4,
+   "years": "1991-1994",
+   "other_years_matched": true
+  },
+  {
+   "make": "ford",
+   "model": "streetka",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2003-2006",
+   "other_years_matched": false
+  },
+  {
+   "make": "geo",
+   "model": "metro",
+   "ymm": 4,
+   "rows": 4,
+   "years": "1998-2001",
+   "other_years_matched": true
+  },
+  {
+   "make": "gmc",
+   "model": "hummer-ev-suv",
+   "ymm": 2,
+   "rows": 4,
+   "years": "2022-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "hyundai",
+   "model": "veracruz",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2006-2015",
+   "other_years_matched": true
+  },
+  {
+   "make": "lexus",
+   "model": "gs",
+   "ymm": 1,
+   "rows": 4,
+   "years": "2012-2012",
+   "other_years_matched": true
+  },
+  {
+   "make": "lexus",
+   "model": "ls",
+   "ymm": 1,
+   "rows": 4,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "lotus",
+   "model": "evora",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2009-2019",
+   "other_years_matched": true
+  },
+  {
+   "make": "mclaren",
+   "model": "gt",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2019-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "e-class",
+   "ymm": 4,
+   "rows": 4,
+   "years": "1990-1993",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "g-class-amg",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2000-2012",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "s-class-amg",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2000-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "e-class",
+   "ymm": 4,
+   "rows": 4,
+   "years": "1990-1993",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "s-class-amg",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2000-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "mini",
+   "model": "roadster",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2012-2015",
+   "other_years_matched": false
+  },
+  {
+   "make": "mitsubishi",
+   "model": "chariot-grandis",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2000-2003",
+   "other_years_matched": false
+  },
+  {
+   "make": "nissan",
+   "model": "leaf",
+   "ymm": 1,
+   "rows": 4,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "nissan",
+   "model": "versa",
+   "ymm": 1,
+   "rows": 4,
+   "years": "2026-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "soluna",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2000-2003",
+   "other_years_matched": false
+  },
+  {
+   "make": "toyota",
+   "model": "xa",
+   "ymm": 4,
+   "rows": 4,
+   "years": "2004-2007",
+   "other_years_matched": false
+  },
+  {
+   "make": "acura",
+   "model": "zdx",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2009-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "alfa romeo",
+   "model": "4c",
+   "ymm": 1,
+   "rows": 3,
+   "years": "2014-2014",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "s6-e-tron",
+   "ymm": 2,
+   "rows": 3,
+   "years": "2024-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "sq6-e-tron",
+   "ymm": 2,
+   "rows": 3,
+   "years": "2024-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "4-series-gran-coupe",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2013-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "m8",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2019-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "cadillac",
+   "model": "celestiq",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2024-2026",
+   "other_years_matched": false
+  },
+  {
+   "make": "chevrolet",
+   "model": "trax",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2013-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "ferrari",
+   "model": "sf90",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2020-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "ford vans",
+   "model": "transit-350-hd",
+   "ymm": 1,
+   "rows": 3,
+   "years": "2018-2018",
+   "other_years_matched": false
+  },
+  {
+   "make": "infiniti",
+   "model": "q60",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2013-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "infiniti",
+   "model": "q70",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2013-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "xj220",
+   "ymm": 3,
+   "rows": 3,
+   "years": "1992-1994",
+   "other_years_matched": false
+  },
+  {
+   "make": "mazda",
+   "model": "mazda5",
+   "ymm": 1,
+   "rows": 3,
+   "years": "2011-2011",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "cls-class",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2004-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "m-class-amg",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2004-2006",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "sl-class-amg",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2001-2010",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "slk-class-amg",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2000-2011",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes-benz",
+   "model": "m-class-amg",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2004-2006",
+   "other_years_matched": true
+  },
+  {
+   "make": "polestar",
+   "model": "polestar-2",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2020-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "avalon",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2023-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "toyota",
+   "model": "grand-hiace",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2000-2002",
+   "other_years_matched": false
+  },
+  {
+   "make": "volkswagen",
+   "model": "arteon",
+   "ymm": 3,
+   "rows": 3,
+   "years": "2017-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "acura",
+   "model": "nsx",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2016-2023",
+   "other_years_matched": true
+  },
+  {
+   "make": "aston martin",
+   "model": "db11",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2016-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "aston martin",
+   "model": "vantage",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2005-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "a6-e-tron",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2024-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "a7",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2011-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "e-tron-s",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2020-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "q6-e-tron",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2024-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "q8-e-tron",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2023-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "q8-sportback-e-tron",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2023-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "rs6",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2002-2020",
+   "other_years_matched": true
+  },
+  {
+   "make": "audi",
+   "model": "rs7",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2019-2020",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "5-series",
+   "ymm": 1,
+   "rows": 2,
+   "years": "1996-1996",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "x4",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2014-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "bmw",
+   "model": "z4",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2002-2017",
+   "other_years_matched": true
+  },
+  {
+   "make": "buick",
+   "model": "envision",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2014-2015",
+   "other_years_matched": true
+  },
+  {
+   "make": "chevrolet",
+   "model": "bolt-euv",
+   "ymm": 1,
+   "rows": 2,
+   "years": "2021-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "chevrolet",
+   "model": "silverado-3500",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2015-2016",
+   "other_years_matched": true
+  },
+  {
+   "make": "dodge",
+   "model": "hornet",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2022-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "ferrari",
+   "model": "roma",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2020-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "fiat",
+   "model": "500x",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2024-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "gmc",
+   "model": "suburban",
+   "ymm": 2,
+   "rows": 2,
+   "years": "1990-1991",
+   "other_years_matched": true
+  },
+  {
+   "make": "honda",
+   "model": "crosstour",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2011-2016",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "e-pace",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2017-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "f-pace",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2015-2016",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "i-pace",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2021-2025",
+   "other_years_matched": true
+  },
+  {
+   "make": "jaguar",
+   "model": "x-type",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2001-2009",
+   "other_years_matched": true
+  },
+  {
+   "make": "kia",
+   "model": "sedona",
+   "ymm": 1,
+   "rows": 2,
+   "years": "2013-2013",
+   "other_years_matched": true
+  },
+  {
+   "make": "kia",
+   "model": "sportage",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2003-2004",
+   "other_years_matched": true
+  },
+  {
+   "make": "kia",
+   "model": "stinger",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2017-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "land rover",
+   "model": "range-rover-velar",
+   "ymm": 1,
+   "rows": 2,
+   "years": "2017-2017",
+   "other_years_matched": true
+  },
+  {
+   "make": "lincoln",
+   "model": "mkc",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2014-2020",
+   "other_years_matched": true
+  },
+  {
+   "make": "lucid",
+   "model": "gravity",
+   "ymm": 1,
+   "rows": 2,
+   "years": "2024-2024",
+   "other_years_matched": false
+  },
+  {
+   "make": "mazda",
+   "model": "b2300",
+   "ymm": 2,
+   "rows": 2,
+   "years": "1998-1999",
+   "other_years_matched": true
+  },
+  {
+   "make": "mazda",
+   "model": "cx-5",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2011-2012",
+   "other_years_matched": true
+  },
+  {
+   "make": "mclaren",
+   "model": "570s",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2015-2021",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "e-class-amg",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2017-2024",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "eqe",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2022-2026",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "g-class",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2000-2001",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "gla-class",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2013-2014",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "gla-class-amg",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2014-2020",
+   "other_years_matched": true
+  },
+  {
+   "make": "mercedes",
+   "model": "glk-class",
+   "ymm": 2,
+   "rows": 2,
+   "years": "2008-2009",
+   "other_years_matched": true
+  }
+ ],
+ "unmatchedModelsTotal": 344,
+ "missingOeSizesTotal": 9808,
+ "ymmWithMissingOe": 4710,
+ "trimLevel": {
+  "match": 490,
+  "mismatch": 452,
+  "partial": 436
+ },
+ "unparseableRows": 46
+}
