@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Drizzle schema for vehicle fitment database
  * 
  * TABLE ARCHITECTURE (2026-05-13):
@@ -12,10 +12,10 @@
  *                                    Only accessible via /api/admin/* endpoints for data review.
  * 
  * AUDIT/ENRICHMENT SOURCES:
- *   wheel_size_trim_mappings - Used for trim→configuration matching
+ *   wheel_size_trim_mappings - Used for trimâ†’configuration matching
  *   wheel_size_configurations - Size/wheel configs linked to trim mappings
  * 
- * ⚠️ CONSOLIDATION GUARD:
+ * âš ï¸ CONSOLIDATION GUARD:
  * If you're adding a new customer-facing endpoint that needs fitment data,
  * ONLY import and use `vehicleFitments`. Never read from `vehicleFitmentConfigurations`
  * in runtime code paths. Use the canonicalResolver for all fitment identity resolution.
@@ -36,10 +36,10 @@ import {
   uniqueIndex,
 } from "drizzle-orm/pg-core";
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // CANONICAL RUNTIME TABLE
 // This is THE source of truth for all customer-facing fitment resolution.
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 /**
  * vehicle_fitments - CANONICAL fitment table
@@ -87,6 +87,18 @@ export const vehicleFitments = pgTable(
     confidenceTag: varchar("confidence_tag", { length: 20 }).default("MEDIUM"),
     /** Set when a row is pulled from service (bad/phantom data). Public API + resolvers must filter `IS NULL`. */
     quarantinedAt: timestamp("quarantined_at", { mode: "date" }),
+    /**
+     * Per-field verification (audit Pass 2/3). Tire sizes and wheel/bolt/offset are verified by
+     * different sources at different times. `*_source` is INTERNAL provenance â€” never expose publicly.
+     */
+    tireSizesVerifiedAt: timestamp("tire_sizes_verified_at", { mode: "date", withTimezone: true }),
+    tireSizesSource: varchar("tire_sizes_source", { length: 40 }),
+    tireSizesConfidence: varchar("tire_sizes_confidence", { length: 10 }),
+    tireSizesPrev: json("tire_sizes_prev"),
+    tireSizesNeedsTrimSplit: boolean("tire_sizes_needs_trim_split").default(false),
+    wheelSpecsVerifiedAt: timestamp("wheel_specs_verified_at", { mode: "date", withTimezone: true }),
+    wheelSpecsSource: varchar("wheel_specs_source", { length: 40 }),
+    wheelSpecsConfidence: varchar("wheel_specs_confidence", { length: 10 }),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
   },
@@ -107,10 +119,10 @@ export const vehicleFitments = pgTable(
 export type VehicleFitment = typeof vehicleFitments.$inferSelect;
 export type NewVehicleFitment = typeof vehicleFitments.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // DEPRECATED TABLE - ADMIN USE ONLY
 // DO NOT import this in customer-facing code paths.
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 /**
  * @deprecated DO NOT USE IN RUNTIME CODE
@@ -166,10 +178,10 @@ export const vehicleFitmentConfigurations = pgTable(
 export type VehicleFitmentConfiguration = typeof vehicleFitmentConfigurations.$inferSelect;
 export type NewVehicleFitmentConfiguration = typeof vehicleFitmentConfigurations.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // TRIM MAPPING TABLES (Phase 2 Resolution)
-// Used for Wheel-Size.com trim→configuration matching
-// ════════════════════════════════════════════════════════════════════════════════
+// Used for Wheel-Size.com trimâ†’configuration matching
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 /**
  * wheel_size_trim_mappings - Links our trims to Wheel-Size.com configurations
@@ -252,10 +264,10 @@ export const wheelSizeConfigurations = pgTable(
 export type WheelSizeConfiguration = typeof wheelSizeConfigurations.$inferSelect;
 export type NewWheelSizeConfiguration = typeof wheelSizeConfigurations.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // FITMENT OVERRIDE TABLE
 // Per-vehicle corrections applied after base resolution
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export const fitmentOverrides = pgTable(
   "fitment_overrides",
@@ -290,9 +302,9 @@ export const fitmentOverrides = pgTable(
 export type FitmentOverride = typeof fitmentOverrides.$inferSelect;
 export type NewFitmentOverride = typeof fitmentOverrides.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // MODIFICATION ALIASES (maps requested modificationId to canonical modificationId)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export const modificationAliases = pgTable(
   "modification_aliases",
@@ -318,9 +330,9 @@ export const modificationAliases = pgTable(
 export type ModificationAlias = typeof modificationAliases.$inferSelect;
 export type NewModificationAlias = typeof modificationAliases.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // FITMENT SOURCE RECORDS (tracks where fitment data came from)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export const fitmentSourceRecords = pgTable(
   "fitment_source_records",
@@ -344,9 +356,9 @@ export const fitmentSourceRecords = pgTable(
 export type FitmentSourceRecord = typeof fitmentSourceRecords.$inferSelect;
 export type NewFitmentSourceRecord = typeof fitmentSourceRecords.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // FITMENT IMPORT JOBS (tracks bulk import job status)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export const fitmentImportJobs = pgTable(
   "fitment_import_jobs",
@@ -378,9 +390,9 @@ export const fitmentImportJobs = pgTable(
 export type FitmentImportJob = typeof fitmentImportJobs.$inferSelect;
 export type NewFitmentImportJob = typeof fitmentImportJobs.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // RESEARCHED FITMENT CACHE (caches AI-researched fitment data)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export const researchedFitmentCache = pgTable(
   "researched_fitment_cache",
@@ -434,9 +446,9 @@ export const researchedFitmentCache = pgTable(
 export type ResearchedFitmentCacheRecord = typeof researchedFitmentCache.$inferSelect;
 export type NewResearchedFitmentCacheRecord = typeof researchedFitmentCache.$inferInsert;
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // EMAIL CAMPAIGN TABLES (re-exported from schema-email.ts)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export {
   emailCampaigns,
@@ -465,9 +477,9 @@ export {
   type NewCheckoutDiagnostic,
 } from "./schema-email";
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // IMAGE CACHE TABLES (re-exported from schema-images.ts)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export {
   tireImages,
@@ -478,9 +490,9 @@ export {
   type NewKmImageMapping,
 } from "./schema-images";
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // CATALOG TABLES (re-exported from schema-catalog.ts)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export {
   catalogMakes,
@@ -503,9 +515,9 @@ export {
   type NewCompetitorPageAnalysis,
 } from "./schema-catalog";
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // CAMPAIGN DISCOUNTS (re-exported from schema-campaign-discounts.ts)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export {
   campaignDiscounts,
@@ -513,9 +525,9 @@ export {
   type NewCampaignDiscount,
 } from "./schema-campaign-discounts";
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // LEAD CAPTURE TABLES (re-exported from schema-leads.ts)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export {
   leads,
@@ -528,9 +540,9 @@ export {
   type LeadFunnelStats,
 } from "./schema-leads";
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // BUILD GALLERY TABLES (re-exported from schema-gallery.ts)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export {
   galleryBuilds,
@@ -543,12 +555,13 @@ export {
   type JakeBuildContext,
 } from "./schema-gallery";
 
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // EMPLOYMENT APPLICATIONS (re-exported from schema-employment.ts)
-// ════════════════════════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 export {
   employmentApplications,
   type EmploymentApplication,
   type NewEmploymentApplication,
 } from "./schema-employment";
+
