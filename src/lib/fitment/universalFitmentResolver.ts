@@ -16,7 +16,7 @@
 
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
-import { eq, and, ilike, or, asc, sql } from "drizzle-orm";
+import { eq, and, ilike, or, asc, sql, isNull } from "drizzle-orm";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 // Utility helpers only (NOT the resolution path) for reverse-mapping a
 // canonicalFitmentId (the trims API `value`) back to its atomic trim label.
@@ -401,10 +401,16 @@ function makeCanonicalKey(year: number, make: string, model: string, trim?: stri
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// CERTIFIED FILTER (only return certified records)
+// CERTIFIED FILTER (only return certified, non-quarantined records)
+// 2026-09-15 audit Pass 0: quarantined rows (quarantined_at IS NOT NULL) were
+// still being served by the site because this filter only checked
+// certification_status. Mirrors notQuarantined() in public-fitment-service.ts.
 // ═══════════════════════════════════════════════════════════════════════════
 
-const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
+const CERTIFIED_FILTER = and(
+  eq(vehicleFitments.certificationStatus, "certified"),
+  isNull(vehicleFitments.quarantinedAt)
+);
 
 // ═══════════════════════════════════════════════════════════════════════════
 // MAIN RESOLVER

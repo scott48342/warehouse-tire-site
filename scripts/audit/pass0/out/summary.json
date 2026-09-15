@@ -1,0 +1,7907 @@
+{
+  "generatedAt": "2026-09-15T13:06:39.569Z",
+  "active": 36337,
+  "rowsWithError": 9844,
+  "rowsAny": 28863,
+  "bySev": [
+    {
+      "severity": "error",
+      "flags": 10754,
+      "rows": 9844
+    },
+    {
+      "severity": "info",
+      "flags": 23188,
+      "rows": 18821
+    },
+    {
+      "severity": "warn",
+      "flags": 21565,
+      "rows": 16602
+    }
+  ],
+  "summary": [
+    {
+      "check_name": "bolt_or_cb_changes_within_run",
+      "severity": "info",
+      "count": 671,
+      "rows": 671
+    },
+    {
+      "check_name": "cb_implausible",
+      "severity": "warn",
+      "count": 94,
+      "rows": 94
+    },
+    {
+      "check_name": "cert_status_non_certified_active",
+      "severity": "info",
+      "count": 815,
+      "rows": 815
+    },
+    {
+      "check_name": "deprecated_source_active",
+      "severity": "error",
+      "count": 644,
+      "rows": 644
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "severity": "error",
+      "count": 2907,
+      "rows": 2907
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "severity": "warn",
+      "count": 462,
+      "rows": 462
+    },
+    {
+      "check_name": "empty_bolt_pattern",
+      "severity": "error",
+      "count": 30,
+      "rows": 30
+    },
+    {
+      "check_name": "junk_trim_name",
+      "severity": "error",
+      "count": 670,
+      "rows": 670
+    },
+    {
+      "check_name": "junk_trim_name",
+      "severity": "warn",
+      "count": 2730,
+      "rows": 2730
+    },
+    {
+      "check_name": "junk_trim_name",
+      "severity": "info",
+      "count": 2483,
+      "rows": 2483
+    },
+    {
+      "check_name": "make_slug_variant",
+      "severity": "warn",
+      "count": 1382,
+      "rows": 1382
+    },
+    {
+      "check_name": "missing_core_fields",
+      "severity": "warn",
+      "count": 5423,
+      "rows": 5423
+    },
+    {
+      "check_name": "offset_out_of_range",
+      "severity": "warn",
+      "count": 8,
+      "rows": 8
+    },
+    {
+      "check_name": "offset_out_of_range",
+      "severity": "info",
+      "count": 19,
+      "rows": 19
+    },
+    {
+      "check_name": "phantom_year_hint",
+      "severity": "info",
+      "count": 260,
+      "rows": 260
+    },
+    {
+      "check_name": "seat_type_nonstandard",
+      "severity": "warn",
+      "count": 2298,
+      "rows": 2298
+    },
+    {
+      "check_name": "staggered_inconsistent",
+      "severity": "warn",
+      "count": 676,
+      "rows": 676
+    },
+    {
+      "check_name": "staggered_inconsistent",
+      "severity": "info",
+      "count": 5303,
+      "rows": 5303
+    },
+    {
+      "check_name": "thread_size_nonstandard",
+      "severity": "warn",
+      "count": 3054,
+      "rows": 3054
+    },
+    {
+      "check_name": "tire_axle_suffix",
+      "severity": "warn",
+      "count": 34,
+      "rows": 34
+    },
+    {
+      "check_name": "tire_not_array",
+      "severity": "error",
+      "count": 142,
+      "rows": 142
+    },
+    {
+      "check_name": "tire_rim_mismatch",
+      "severity": "error",
+      "count": 14,
+      "rows": 14
+    },
+    {
+      "check_name": "tire_rim_mismatch",
+      "severity": "warn",
+      "count": 1323,
+      "rows": 1323
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "severity": "error",
+      "count": 5457,
+      "rows": 5457
+    },
+    {
+      "check_name": "wheel_dims_implausible",
+      "severity": "warn",
+      "count": 612,
+      "rows": 612
+    },
+    {
+      "check_name": "wheel_dropped_keys",
+      "severity": "warn",
+      "count": 54,
+      "rows": 54
+    },
+    {
+      "check_name": "wheel_mixed_types",
+      "severity": "warn",
+      "count": 529,
+      "rows": 529
+    },
+    {
+      "check_name": "wheel_not_array",
+      "severity": "error",
+      "count": 849,
+      "rows": 849
+    },
+    {
+      "check_name": "wheel_object_stringified",
+      "severity": "error",
+      "count": 40,
+      "rows": 40
+    },
+    {
+      "check_name": "wheel_shape_nonstandard",
+      "severity": "info",
+      "count": 13637,
+      "rows": 13637
+    },
+    {
+      "check_name": "wheel_string_width_first",
+      "severity": "warn",
+      "count": 2886,
+      "rows": 2886
+    },
+    {
+      "check_name": "wheel_unparseable",
+      "severity": "error",
+      "count": 1,
+      "rows": 1
+    }
+  ],
+  "topMakes": [
+    {
+      "make": "bmw",
+      "errors": 828,
+      "warns": 1297,
+      "rows": 988
+    },
+    {
+      "make": "chevrolet",
+      "errors": 788,
+      "warns": 2238,
+      "rows": 2187
+    },
+    {
+      "make": "subaru",
+      "errors": 757,
+      "warns": 247,
+      "rows": 863
+    },
+    {
+      "make": "volkswagen",
+      "errors": 580,
+      "warns": 280,
+      "rows": 692
+    },
+    {
+      "make": "mitsubishi",
+      "errors": 481,
+      "warns": 166,
+      "rows": 543
+    },
+    {
+      "make": "ram",
+      "errors": 456,
+      "warns": 1002,
+      "rows": 832
+    },
+    {
+      "make": "kia",
+      "errors": 452,
+      "warns": 253,
+      "rows": 523
+    },
+    {
+      "make": "mercedes",
+      "errors": 443,
+      "warns": 1289,
+      "rows": 1279
+    },
+    {
+      "make": "toyota",
+      "errors": 438,
+      "warns": 1307,
+      "rows": 1466
+    },
+    {
+      "make": "ford",
+      "errors": 406,
+      "warns": 1350,
+      "rows": 1358
+    },
+    {
+      "make": "porsche",
+      "errors": 396,
+      "warns": 722,
+      "rows": 548
+    },
+    {
+      "make": "jeep",
+      "errors": 390,
+      "warns": 876,
+      "rows": 850
+    },
+    {
+      "make": "hyundai",
+      "errors": 389,
+      "warns": 272,
+      "rows": 522
+    },
+    {
+      "make": "lincoln",
+      "errors": 328,
+      "warns": 590,
+      "rows": 589
+    },
+    {
+      "make": "mini",
+      "errors": 306,
+      "warns": 95,
+      "rows": 331
+    }
+  ],
+  "topModels": [
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "errors": 286,
+      "warns": 310,
+      "rows": 366
+    },
+    {
+      "make": "ram",
+      "model": "2500",
+      "errors": 203,
+      "warns": 124,
+      "rows": 257
+    },
+    {
+      "make": "toyota",
+      "model": "tacoma",
+      "errors": 168,
+      "warns": 106,
+      "rows": 230
+    },
+    {
+      "make": "subaru",
+      "model": "forester",
+      "errors": 162,
+      "warns": 35,
+      "rows": 173
+    },
+    {
+      "make": "ram",
+      "model": "3500",
+      "errors": 161,
+      "warns": 171,
+      "rows": 270
+    },
+    {
+      "make": "nissan",
+      "model": "titan",
+      "errors": 152,
+      "warns": 27,
+      "rows": 179
+    },
+    {
+      "make": "porsche",
+      "model": "911",
+      "errors": 148,
+      "warns": 371,
+      "rows": 246
+    },
+    {
+      "make": "volkswagen",
+      "model": "jetta",
+      "errors": 144,
+      "warns": 47,
+      "rows": 161
+    },
+    {
+      "make": "subaru",
+      "model": "outback",
+      "errors": 140,
+      "warns": 38,
+      "rows": 151
+    },
+    {
+      "make": "mini",
+      "model": "cooper",
+      "errors": 138,
+      "warns": 40,
+      "rows": 147
+    },
+    {
+      "make": "hyundai",
+      "model": "santa-fe",
+      "errors": 133,
+      "warns": 52,
+      "rows": 148
+    },
+    {
+      "make": "subaru",
+      "model": "legacy",
+      "errors": 132,
+      "warns": 35,
+      "rows": 145
+    },
+    {
+      "make": "porsche",
+      "model": "boxster",
+      "errors": 130,
+      "warns": 49,
+      "rows": 133
+    },
+    {
+      "make": "mitsubishi",
+      "model": "eclipse",
+      "errors": 115,
+      "warns": 23,
+      "rows": 115
+    },
+    {
+      "make": "mitsubishi",
+      "model": "lancer",
+      "errors": 112,
+      "warns": 16,
+      "rows": 112
+    },
+    {
+      "make": "subaru",
+      "model": "impreza",
+      "errors": 105,
+      "warns": 37,
+      "rows": 121
+    },
+    {
+      "make": "volkswagen",
+      "model": "gti",
+      "errors": 104,
+      "warns": 41,
+      "rows": 116
+    },
+    {
+      "make": "toyota",
+      "model": "prius",
+      "errors": 102,
+      "warns": 45,
+      "rows": 119
+    },
+    {
+      "make": "mitsubishi",
+      "model": "outlander",
+      "errors": 100,
+      "warns": 33,
+      "rows": 108
+    },
+    {
+      "make": "subaru",
+      "model": "wrx",
+      "errors": 100,
+      "warns": 27,
+      "rows": 107
+    }
+  ],
+  "worstRows": [
+    {
+      "fitment_id": "e718cd3f-8873-4543-b684-7981f317bb2a",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Turbo S (Center Lock) Rear Turbo S (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "437f686c-bca9-4b7e-8fd8-8f70f629887f",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "GT3 RS Front GT3 RS",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "b4126e77-8581-44d1-90d8-d6e543263662",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Turbo (Center Lock) Rear Turbo (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "e560d9f6-6299-45d4-ba79-c8dc38039d43",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "GT2 RS Rear GT2 RS",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "efb8c63d-45cb-48c0-a40b-d5deddcdd96d",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Turbo S Exclusive Series (Center Lock) Rear Turbo S Exclusive Series (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "4c59c587-11b4-4736-961c-949c496b4870",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "GT2 RS Front GT2 RS",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "9b23716a-ecfc-4b4a-865c-f55845503581",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Turbo (Center Lock) Front Turbo (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "a541f9be-c1b5-4398-81e4-17372d454ae8",
+      "year": 2018,
+      "make": "lotus",
+      "model": "evora",
+      "display_trim": "Sport 410 Front Sport 410",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_dims_implausible, wheel_shape_nonstandard"
+    },
+    {
+      "fitment_id": "d74a5a6a-b88e-4182-94ae-1d979d5af32c",
+      "year": 2018,
+      "make": "lotus",
+      "model": "evora",
+      "display_trim": "Sport 410 Rear Sport 410",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_dims_implausible, wheel_shape_nonstandard"
+    },
+    {
+      "fitment_id": "dc688a7f-d86e-47bd-a5d0-f22afda38096",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Carrera GTS (Center Lock) Front Carrera GTS (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "e906d45f-7646-4e46-b22d-28aa0fafb801",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Targa 4 GTS (Center Lock) Front Targa 4 GTS (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "84c7da42-fb2d-4a22-a4fd-c33cd3239bf7",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "GT3 Front GT3",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "623d84bb-90a5-4d81-8a30-3cd8903c4225",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Turbo S Exclusive Series (Center Lock) Front Turbo S Exclusive Series (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "9aba0989-ee61-49fa-b8b7-6867cb0f7f5f",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "GT3 RS Rear GT3 RS",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "1309d5e5-aca6-4356-96d6-442f976b413a",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Targa 4 GTS (Center Lock) Rear Targa 4 GTS (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "5de686f9-fb13-4524-90f2-0f975fb32417",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Carrera GTS (Center Lock) Rear Carrera GTS (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "1b7f93e9-d447-4834-a922-c908574ba315",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Carrera 4 GTS (Center Lock) Rear Carrera 4 GTS (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "2a986a90-b350-4108-be32-c061544804b8",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Carrera 4 GTS (Center Lock) Front Carrera 4 GTS (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "5062400a-2a9f-4f93-94f5-fa5392575719",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Turbo S (Center Lock) Front Turbo S (Center Lock)",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "cb0c4c3c-81bf-4888-a358-27d1abe786d4",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "GT3 Rear GT3",
+      "errors": 3,
+      "warns": 3,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, empty_bolt_pattern, junk_trim_name, missing_core_fields, staggered_inconsistent, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "86dc271d-6193-4694-afa1-db0b18e25c3f",
+      "year": 2018,
+      "make": "bmw",
+      "model": "alpina-b7",
+      "display_trim": "xDrive (21 Inch Option) Rear xDrive (21 Inch Option)",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cb_implausible, cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "82e1111b-baab-4fb3-8916-e122b81fc029",
+      "year": 2018,
+      "make": "bmw",
+      "model": "740i-xdrive",
+      "display_trim": "Base Rear Base",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cb_implausible, cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "91efc7da-f86d-4fd5-8550-ffd1e8111558",
+      "year": 2018,
+      "make": "bmw",
+      "model": "740i",
+      "display_trim": "Base Rear Base",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cb_implausible, cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "74b876a5-aa97-4e7f-94d2-c664345410a3",
+      "year": 2018,
+      "make": "karma",
+      "model": "revero",
+      "display_trim": "(Optional Tire Pkg.) Rear (Optional Tire Pkg.)",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cb_implausible, cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "6b672edb-676a-449d-a7c7-202020c8ee45",
+      "year": 2018,
+      "make": "porsche",
+      "model": "911",
+      "display_trim": "Carrera Rear Carrera",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, junk_trim_name, offset_out_of_range, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "7a12d167-568f-4fa0-a48a-86550d6b8d06",
+      "year": 2018,
+      "make": "mercedes-benz vans",
+      "model": "sprinter-3500xd",
+      "display_trim": "Super Single (C-Type Tires) Rear Super Single (C-Type Tires)",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, junk_trim_name, make_slug_variant, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "7fb5901a-81af-4aea-98c8-1a2946aa834a",
+      "year": 2018,
+      "make": "audi",
+      "model": "rs3",
+      "display_trim": "Base Front Base",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_dims_implausible, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "819ec54e-1d91-4f67-bc03-e6ba29352ff4",
+      "year": 2018,
+      "make": "bmw",
+      "model": "m550i-xdrive",
+      "display_trim": "Base Front Base",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cb_implausible, cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "6086285d-e02e-4653-9ac2-00be5cf511e2",
+      "year": 2018,
+      "make": "bmw",
+      "model": "750i-xdrive",
+      "display_trim": "Base Rear Base",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cb_implausible, cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    },
+    {
+      "fitment_id": "6638cae8-4d4e-477c-bd60-ceb72a5abadb",
+      "year": 2018,
+      "make": "bmw",
+      "model": "alpina-b7",
+      "display_trim": "xDrive (21 Inch Option) Front xDrive (21 Inch Option)",
+      "errors": 2,
+      "warns": 4,
+      "checks": "cb_implausible, cert_status_non_certified_active, deprecated_source_active, junk_trim_name, staggered_inconsistent, thread_size_nonstandard, wheel_shape_nonstandard, wheel_string_width_first"
+    }
+  ],
+  "bySource": [
+    {
+      "source": "cache-import [expanded]",
+      "rows": 3881,
+      "rows_with_error": 1668,
+      "pct": "43.0"
+    },
+    {
+      "source": "cache-import",
+      "rows": 1855,
+      "rows_with_error": 827,
+      "pct": "44.6"
+    },
+    {
+      "source": "cache-import [trim-expanded]",
+      "rows": 1589,
+      "rows_with_error": 656,
+      "pct": "41.3"
+    },
+    {
+      "source": "deprecated-staggered-split",
+      "rows": 644,
+      "rows_with_error": 644,
+      "pct": "100.0"
+    },
+    {
+      "source": "generation_inherit",
+      "rows": 2197,
+      "rows_with_error": 610,
+      "pct": "27.8"
+    },
+    {
+      "source": "api_import [expanded]",
+      "rows": 863,
+      "rows_with_error": 587,
+      "pct": "68.0"
+    },
+    {
+      "source": "generation-baseline",
+      "rows": 982,
+      "rows_with_error": 583,
+      "pct": "59.4"
+    },
+    {
+      "source": "trim-research",
+      "rows": 4994,
+      "rows_with_error": 475,
+      "pct": "9.5"
+    },
+    {
+      "source": "api_import",
+      "rows": 493,
+      "rows_with_error": 311,
+      "pct": "63.1"
+    },
+    {
+      "source": "google-ai-overview",
+      "rows": 3330,
+      "rows_with_error": 241,
+      "pct": "7.2"
+    },
+    {
+      "source": "generation-baseline [expanded]",
+      "rows": 346,
+      "rows_with_error": 212,
+      "pct": "61.3"
+    },
+    {
+      "source": "catalog-gap-fill",
+      "rows": 1076,
+      "rows_with_error": 206,
+      "pct": "19.1"
+    },
+    {
+      "source": "verified-research",
+      "rows": 1209,
+      "rows_with_error": 193,
+      "pct": "16.0"
+    },
+    {
+      "source": "manual_seed_spec [expanded]",
+      "rows": 234,
+      "rows_with_error": 190,
+      "pct": "81.2"
+    },
+    {
+      "source": "api_import [trim-expanded]",
+      "rows": 466,
+      "rows_with_error": 174,
+      "pct": "37.3"
+    },
+    {
+      "source": "manual_seed_spec [trim-expanded]",
+      "rows": 221,
+      "rows_with_error": 174,
+      "pct": "78.7"
+    },
+    {
+      "source": "generation_template [expanded]",
+      "rows": 482,
+      "rows_with_error": 150,
+      "pct": "31.1"
+    },
+    {
+      "source": "catalog-gap-fill [web_research]",
+      "rows": 470,
+      "rows_with_error": 148,
+      "pct": "31.5"
+    },
+    {
+      "source": "chevy-gmc-research",
+      "rows": 345,
+      "rows_with_error": 144,
+      "pct": "41.7"
+    },
+    {
+      "source": "oem_specs",
+      "rows": 142,
+      "rows_with_error": 142,
+      "pct": "100.0"
+    },
+    {
+      "source": "tgp_solutions",
+      "rows": 1500,
+      "rows_with_error": 126,
+      "pct": "8.4"
+    },
+    {
+      "source": "merged-staggered",
+      "rows": 326,
+      "rows_with_error": 107,
+      "pct": "32.8"
+    },
+    {
+      "source": "manual_seed_spec",
+      "rows": 130,
+      "rows_with_error": 98,
+      "pct": "75.4"
+    },
+    {
+      "source": "generation_template",
+      "rows": 560,
+      "rows_with_error": 92,
+      "pct": "16.4"
+    },
+    {
+      "source": "80s-research-batch",
+      "rows": 154,
+      "rows_with_error": 90,
+      "pct": "58.4"
+    }
+  ],
+  "shapes": [
+    {
+      "wheel_shape": "obj:axle",
+      "inner_shape": "",
+      "n": 22700
+    },
+    {
+      "wheel_shape": "obj:width,diameter",
+      "inner_shape": "",
+      "n": 3404
+    },
+    {
+      "wheel_shape": "obj:width,offset,diameter",
+      "inner_shape": "",
+      "n": 3257
+    },
+    {
+      "wheel_shape": "strings",
+      "inner_shape": "",
+      "n": 2840
+    },
+    {
+      "wheel_shape": "obj:position",
+      "inner_shape": "",
+      "n": 2260
+    },
+    {
+      "wheel_shape": "not-array:string",
+      "inner_shape": "obj:axle",
+      "n": 649
+    },
+    {
+      "wheel_shape": "mixed",
+      "inner_shape": "",
+      "n": 529
+    },
+    {
+      "wheel_shape": "obj:front_width",
+      "inner_shape": "",
+      "n": 325
+    },
+    {
+      "wheel_shape": "not-array:string",
+      "inner_shape": "strings",
+      "n": 142
+    },
+    {
+      "wheel_shape": "obj:size",
+      "inner_shape": "",
+      "n": 86
+    },
+    {
+      "wheel_shape": "not-array:string",
+      "inner_shape": "obj:position",
+      "n": 53
+    },
+    {
+      "wheel_shape": "obj:front/rear",
+      "inner_shape": "",
+      "n": 36
+    },
+    {
+      "wheel_shape": "obj:boltPattern",
+      "inner_shape": "",
+      "n": 20
+    },
+    {
+      "wheel_shape": "obj:d,o,w",
+      "inner_shape": "",
+      "n": 13
+    },
+    {
+      "wheel_shape": "obj:isStaggered",
+      "inner_shape": "",
+      "n": 6
+    },
+    {
+      "wheel_shape": "obj:notes",
+      "inner_shape": "",
+      "n": 6
+    },
+    {
+      "wheel_shape": "not-array:string",
+      "inner_shape": "obj:width,offset,diameter",
+      "n": 5
+    },
+    {
+      "wheel_shape": "obj:trim",
+      "inner_shape": "",
+      "n": 3
+    },
+    {
+      "wheel_shape": "obj:staggered",
+      "inner_shape": "",
+      "n": 2
+    },
+    {
+      "wheel_shape": "empty",
+      "inner_shape": "",
+      "n": 1
+    }
+  ],
+  "axleStats": [
+    {
+      "axle": "square",
+      "n": 72299
+    },
+    {
+      "axle": "front",
+      "n": 8462
+    },
+    {
+      "axle": "rear",
+      "n": 6042
+    }
+  ],
+  "junkKinds": [
+    {
+      "kind": "wheels_staggered_tires_flat",
+      "severity": "info",
+      "n": 5303
+    },
+    {
+      "kind": "conflicting_specs",
+      "severity": "error",
+      "n": 2907
+    },
+    {
+      "kind": "comma_catch_all",
+      "severity": "warn",
+      "n": 2730
+    },
+    {
+      "kind": "base_with_siblings",
+      "severity": "info",
+      "n": 2357
+    },
+    {
+      "kind": "tires_staggered_wheels_square",
+      "severity": "warn",
+      "n": 676
+    },
+    {
+      "kind": "front_rear_in_trim",
+      "severity": "error",
+      "n": 670
+    },
+    {
+      "kind": "identical_specs",
+      "severity": "warn",
+      "n": 462
+    },
+    {
+      "kind": "single_year_model",
+      "severity": "info",
+      "n": 248
+    },
+    {
+      "kind": "equals_model",
+      "severity": "info",
+      "n": 126
+    },
+    {
+      "kind": "isolated_year",
+      "severity": "info",
+      "n": 12
+    }
+  ],
+  "makeVariants": [
+    {
+      "make": "mercedes",
+      "proposed": "mercedes-benz",
+      "n": 1279
+    },
+    {
+      "make": "toyota minivans",
+      "proposed": "toyota",
+      "n": 13
+    },
+    {
+      "make": "nissan vans",
+      "proposed": "nissan",
+      "n": 11
+    },
+    {
+      "make": "ford vans",
+      "proposed": "ford",
+      "n": 10
+    },
+    {
+      "make": "ford minivans",
+      "proposed": "ford",
+      "n": 9
+    },
+    {
+      "make": "chrysler minivans",
+      "proposed": "chrysler",
+      "n": 9
+    },
+    {
+      "make": "mercedes-benz vans",
+      "proposed": "mercedes-benz",
+      "n": 7
+    },
+    {
+      "make": "gmc vans",
+      "proposed": "gmc",
+      "n": 6
+    },
+    {
+      "make": "chevrolet vans",
+      "proposed": "chevrolet",
+      "n": 6
+    },
+    {
+      "make": "ram minivans",
+      "proposed": "ram",
+      "n": 6
+    },
+    {
+      "make": "kia minivans",
+      "proposed": "kia",
+      "n": 5
+    },
+    {
+      "make": "ram vans",
+      "proposed": "ram",
+      "n": 5
+    },
+    {
+      "make": "honda minivans",
+      "proposed": "honda",
+      "n": 5
+    },
+    {
+      "make": "dodge minivans",
+      "proposed": "dodge",
+      "n": 4
+    },
+    {
+      "make": "nissan minivans",
+      "proposed": "nissan",
+      "n": 3
+    },
+    {
+      "make": "chevrolet minivans",
+      "proposed": "chevrolet",
+      "n": 2
+    },
+    {
+      "make": "mercedes-benz minivans",
+      "proposed": "mercedes-benz",
+      "n": 2
+    }
+  ],
+  "cbOutliers": [
+    {
+      "bolt": "5x112",
+      "cb": "72.6",
+      "n": 39,
+      "ex_make": "bmw",
+      "ex_model": "740e-xdrive"
+    },
+    {
+      "bolt": "5x127",
+      "cb": "70.3",
+      "n": 32,
+      "ex_make": "cadillac",
+      "ex_model": "deville"
+    },
+    {
+      "bolt": "5x120.65",
+      "cb": "57.1",
+      "n": 8,
+      "ex_make": "buick",
+      "ex_model": "skylark"
+    },
+    {
+      "bolt": "5x130",
+      "cb": "67.1",
+      "n": 6,
+      "ex_make": "karma",
+      "ex_model": "revero"
+    },
+    {
+      "bolt": "5x139.7",
+      "cb": "71.6",
+      "n": 6,
+      "ex_make": "dodge",
+      "ex_model": "ramcharger"
+    },
+    {
+      "bolt": "5x130",
+      "cb": "71.0",
+      "n": 2,
+      "ex_make": "bentley",
+      "ex_model": "mulsanne"
+    },
+    {
+      "bolt": "5x139.7",
+      "cb": "64.1",
+      "n": 1,
+      "ex_make": "rivian",
+      "ex_model": "r1t"
+    }
+  ],
+  "threadVariants": [
+    {
+      "v": "M12x1.50",
+      "proposed": "M12x1.5",
+      "n": 630
+    },
+    {
+      "v": "M14x1.50",
+      "proposed": "M14x1.5",
+      "n": 592
+    },
+    {
+      "v": "M14x1.50B",
+      "proposed": "M14x1.5",
+      "n": 491
+    },
+    {
+      "v": "M14 x 1.5",
+      "proposed": "M14x1.5",
+      "n": 408
+    },
+    {
+      "v": "M14x1.25B",
+      "proposed": "M14x1.25",
+      "n": 346
+    },
+    {
+      "v": "M12 x 1.5",
+      "proposed": "M12x1.5",
+      "n": 292
+    },
+    {
+      "v": "M12x1.50B",
+      "proposed": "M12x1.5",
+      "n": 73
+    },
+    {
+      "v": "M12x1.25B",
+      "proposed": "M12x1.25",
+      "n": 49
+    },
+    {
+      "v": "M12 x 1.25",
+      "proposed": "M12x1.25",
+      "n": 33
+    },
+    {
+      "v": "M14 x 1.25",
+      "proposed": "M14x1.25",
+      "n": 31
+    },
+    {
+      "v": "M1/2x20",
+      "proposed": "M1/2x20",
+      "n": 25
+    },
+    {
+      "v": "1/2\" - 20 UNF",
+      "proposed": "1/2\"-20UNF",
+      "n": 23
+    },
+    {
+      "v": "M18x1.5",
+      "proposed": "M18x1.5",
+      "n": 21
+    },
+    {
+      "v": "M16 x 1.5",
+      "proposed": "M16x1.5",
+      "n": 13
+    },
+    {
+      "v": "M1/2-20x1.5",
+      "proposed": "M1/2-20x1.5",
+      "n": 9
+    },
+    {
+      "v": "14x1.50",
+      "proposed": "14x1.5",
+      "n": 7
+    },
+    {
+      "v": "M16x1.5",
+      "proposed": "M16x1.5",
+      "n": 5
+    },
+    {
+      "v": "M16x1.50",
+      "proposed": "M16x1.5",
+      "n": 5
+    },
+    {
+      "v": "M15 x 1.25",
+      "proposed": "M15x1.25",
+      "n": 1
+    }
+  ],
+  "seatVariants": [
+    {
+      "v": "Conical",
+      "proposed": "conical",
+      "n": 1417
+    },
+    {
+      "v": "Lug nuts",
+      "proposed": null,
+      "n": 826
+    },
+    {
+      "v": "Ball",
+      "proposed": "ball",
+      "n": 48
+    },
+    {
+      "v": "Lug bolts",
+      "proposed": null,
+      "n": 7
+    }
+  ],
+  "rimMismatchBySource": [
+    {
+      "source": "trim-research",
+      "severity": "warn",
+      "n": 444
+    },
+    {
+      "source": "cache-import [expanded]",
+      "severity": "warn",
+      "n": 140
+    },
+    {
+      "source": "generation_inherit",
+      "severity": "warn",
+      "n": 127
+    },
+    {
+      "source": "google-ai-overview",
+      "severity": "warn",
+      "n": 116
+    },
+    {
+      "source": "api_import [trim-expanded]",
+      "severity": "warn",
+      "n": 70
+    },
+    {
+      "source": "verified-research",
+      "severity": "warn",
+      "n": 45
+    },
+    {
+      "source": "cache-import [trim-expanded]",
+      "severity": "warn",
+      "n": 35
+    },
+    {
+      "source": "batch2v2-trim-groups",
+      "severity": "warn",
+      "n": 31
+    },
+    {
+      "source": "manual-research",
+      "severity": "warn",
+      "n": 30
+    },
+    {
+      "source": "tiresize.com",
+      "severity": "warn",
+      "n": 30
+    },
+    {
+      "source": "generation_template [expanded]",
+      "severity": "warn",
+      "n": 27
+    },
+    {
+      "source": "cache-import",
+      "severity": "warn",
+      "n": 25
+    }
+  ],
+  "unparsedTires": [],
+  "unparsedWheels": [
+    {
+      "u": [],
+      "shape": "empty",
+      "n": 1
+    }
+  ],
+  "dupExamples": [
+    {
+      "year": 2018,
+      "make": "jaguar",
+      "model": "xe",
+      "display_trim": "Portfolio",
+      "dupes": "2",
+      "sources": [
+        "merged-staggered",
+        "tgp_solutions"
+      ],
+      "ids": [
+        "a8e65fca-4dbd-463e-a34b-d51c2e4e011e",
+        "c635c753-04c5-4d53-805f-5d5d8682ad00"
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "wrx-sti",
+      "display_trim": "Base",
+      "dupes": "2",
+      "sources": [
+        "google-ai-overview",
+        "tiresize.com"
+      ],
+      "ids": [
+        "1b2625ea-09c9-4d73-8c68-2891ebed7312",
+        "4b95a5cf-0819-4356-a2fa-55f1970dcfb7"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "display_trim": "Denali",
+      "dupes": "2",
+      "sources": [
+        "cleanup_generation_template",
+        "final-gap-fill [trim-expanded]"
+      ],
+      "ids": [
+        "2104360b-5cb3-4849-a084-ec01880f3a24",
+        "b27c88db-a232-4e59-9ac3-ff2b4d89aa27"
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "mercedes-benz",
+      "model": "glc300",
+      "display_trim": "4Matic Coupe",
+      "dupes": "2",
+      "sources": [
+        "merged-staggered",
+        "tgp_solutions"
+      ],
+      "ids": [
+        "3894ddae-d408-4459-9195-4f960118be49",
+        "d2d7cf2b-8bc5-4cc7-9f6c-f1c45234b660"
+      ]
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "expedition",
+      "display_trim": "XLT",
+      "dupes": "3",
+      "sources": [
+        "cache-import",
+        "cache-import [expanded]"
+      ],
+      "ids": [
+        "5fb3bfdc-9bdb-4ca8-92ac-9b6755b16061",
+        "efd5c2a2-12e4-436f-909b-033649eb53fb",
+        "ff71b849-3034-47f0-8646-bd60a3c83532"
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "8-series",
+      "display_trim": "Base",
+      "dupes": "2",
+      "sources": [
+        "catalog-gap-fill [web_research]",
+        "trim-research"
+      ],
+      "ids": [
+        "51d36a9c-345e-47fc-aef2-caa4eb6d4274",
+        "a43d77a8-b7a2-47b3-860b-e93323655fe2"
+      ]
+    },
+    {
+      "year": 1999,
+      "make": "ram",
+      "model": "2500",
+      "display_trim": "SLT",
+      "dupes": "4",
+      "sources": [
+        "api_import [expanded]",
+        "generation_inherit"
+      ],
+      "ids": [
+        "5cfffacb-3f66-44d1-aff5-07c2035e5775",
+        "b122316c-25fb-4531-9e3a-86dd8b6c4c61",
+        "d228f7ff-aea5-4be1-aa54-cc5962020401",
+        "ec74b1da-ec10-4a47-8e31-bf32090c018c"
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "ram",
+      "model": "2500",
+      "display_trim": "Tradesman",
+      "dupes": "2",
+      "sources": [
+        "api_import [template:ram_hd_gen5_2019_ [expanded]",
+        "verified-research"
+      ],
+      "ids": [
+        "57fcffc7-b640-40d1-9055-a83c51f7a9d1",
+        "71588b67-a305-4b94-8648-3ffc61871658"
+      ]
+    }
+  ],
+  "boltChanges": [
+    {
+      "make": "acura",
+      "model": "integra",
+      "from_year": "1999",
+      "to_year": "2023",
+      "before": "4x100/56.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "legend",
+      "from_year": "1990",
+      "to_year": "1991",
+      "before": "4x114.3/64.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "mdx",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x114.3/64.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "nsx",
+      "from_year": "2005",
+      "to_year": "2016",
+      "before": "5x114.3/64.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "nsx",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/64.1",
+      "after": "5x120/70.0"
+    },
+    {
+      "make": "acura",
+      "model": "nsx",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120/70.0",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "nsx",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x120/64.1",
+      "after": "5x120/70.1"
+    },
+    {
+      "make": "acura",
+      "model": "nsx",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x120/70.1",
+      "after": "5x120/70.5"
+    },
+    {
+      "make": "acura",
+      "model": "rl",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x114.3/64.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "tl",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x114.3/64.1",
+      "after": "5x114.3/64.1;5x120/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "tl",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x114.3/64.1;5x120/64.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "tlx",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x114.3/64.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "acura",
+      "model": "zdx",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x120/64.1",
+      "after": "5x120/70.1"
+    },
+    {
+      "make": "acura",
+      "model": "zdx",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x120/70.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "alfa romeo",
+      "model": "4c",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x110/65.1",
+      "after": "5x98/58.1"
+    },
+    {
+      "make": "alfa romeo",
+      "model": "4c",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x98/58.1",
+      "after": "5x110/65.1"
+    },
+    {
+      "make": "aston martin",
+      "model": "db11",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/68.1",
+      "after": "5x128/75.1"
+    },
+    {
+      "make": "aston martin",
+      "model": "db11",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x128/75.1",
+      "after": "5x114.3/68.1"
+    },
+    {
+      "make": "audi",
+      "model": "100",
+      "from_year": "1990",
+      "to_year": "1991",
+      "before": "4x108/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "a3",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x100/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "a4",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x112/57.1;5x112/66.5",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a5",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a5",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "a6",
+      "from_year": "1997",
+      "to_year": "2000",
+      "before": "5x112/57.1",
+      "after": "5x112/57.1;5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a6",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x112/57.1;5x112/66.5",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a6-e-tron",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x112/66.6",
+      "after": "5x112/57.1;5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a6-e-tron",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/57.1;5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "a7",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a7",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x112/66.6",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2000",
+      "to_year": "2001",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "a8",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/66.6",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "allroad",
+      "from_year": "2005",
+      "to_year": "2013",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "cabriolet",
+      "from_year": "1998",
+      "to_year": "2000",
+      "before": "4x108/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "e-tron",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "q5",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "q6-e-tron",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "q7",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x130/71.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "r8",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x112/57.1",
+      "after": "5x112/57.1;5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "r8",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/57.1;5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "rs-models",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "rs5",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "rs5",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "rs6",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "rs6",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "rs7",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "rs7",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "rs7",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "s4",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x112/57.1",
+      "after": "5x112/57.1;5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s4",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x112/57.1;5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "s4",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s4",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "s4",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s5",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s5",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "s6",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s6",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "s6",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s6-e-tron",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x112/66.6",
+      "after": "5x112/57.1;5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s6-e-tron",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/57.1;5x112/66.5",
+      "after": "5x112/57.1;5x112/66.6"
+    },
+    {
+      "make": "audi",
+      "model": "s8",
+      "from_year": "2003",
+      "to_year": "2006",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "s8",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s8",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "s8",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "s8",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/66.5",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "audi",
+      "model": "s8",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x112/57.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "audi",
+      "model": "sq6-e-tron",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x130/71.6",
+      "after": "5x112/66.5;5x130/71.6"
+    },
+    {
+      "make": "audi",
+      "model": "tt",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x100/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "bentley",
+      "model": "flying-spur",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/57.0",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "bmw",
+      "model": "2-series",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "3-series",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x120/72.6",
+      "after": "4x100/57.1;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "3-series",
+      "from_year": "1991",
+      "to_year": "1992",
+      "before": "4x100/57.1;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "3-series",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x120/72.6",
+      "after": "5x112/66.5;5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "3-series",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x112/66.5;5x112/66.6;5x120/72.6",
+      "after": "5x112/66.5;5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "4-series",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "4-series-gran-coupe",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "5-series",
+      "from_year": "1996",
+      "to_year": "1997",
+      "before": "5x120/72.6",
+      "after": "5x120/72.6;5x120/74.1"
+    },
+    {
+      "make": "bmw",
+      "model": "5-series",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x120/72.6;5x120/74.1",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "5-series",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x120/72.6",
+      "after": "5x112/66.5;5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "6-series",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "6-series",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x120/72.6",
+      "after": "5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "6-series",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x112/66.6;5x120/72.6",
+      "after": "5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x120/72.6",
+      "after": "5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x120/72.6",
+      "after": "5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x112/66.5;5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x112/66.5;5x112/66.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5;5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x112/66.5;5x112/66.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "7-series",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/66.6",
+      "after": "5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m2",
+      "from_year": "2021",
+      "to_year": "2023",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "from_year": "2000",
+      "to_year": "2001",
+      "before": "5x112/66.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x112/66.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x112/66.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m5",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m5",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x112/66.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m5",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m5",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x112/66.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m5",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/72.6",
+      "after": "5x112/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "m5",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/72.6",
+      "after": "5x112/66.5;5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x1",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x112/66.6;5x120/72.5",
+      "after": "5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x1",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x112/66.6;5x120/72.6",
+      "after": "5x112/66.6;5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x1",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x112/66.6;5x120/72.5;5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x3",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x3",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/66.6",
+      "after": "5x112/66.5;5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x3",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/66.5;5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "bmw",
+      "model": "x4",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x120/72.6",
+      "after": "5x120/72.5"
+    },
+    {
+      "make": "bmw",
+      "model": "x4",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x120/72.5",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x4",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x4-m",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x120/66.6",
+      "after": "5x112/66.6;5x120/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x4-m",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x112/66.6;5x120/66.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x5",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120/74.1",
+      "after": "5x112/66.5;5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x5",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/66.5;5x112/66.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "bmw",
+      "model": "x5-m",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x120/74.1",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x6",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x120/72.6;5x120/74.1",
+      "after": "5x120/74.1"
+    },
+    {
+      "make": "bmw",
+      "model": "x6",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x120/74.1",
+      "after": "5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "x6-m",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x120/74.1",
+      "after": "5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "z4",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x120/72.6",
+      "after": "5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "z4",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "z4",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x120/72.6",
+      "after": "5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "z4",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "bmw",
+      "model": "z4",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6;5x120/72.6"
+    },
+    {
+      "make": "buick",
+      "model": "century",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x115/70.3",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "buick",
+      "model": "century",
+      "from_year": "1996",
+      "to_year": "1997",
+      "before": "5x100/57.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "enclave",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x120/67.1",
+      "after": "6x120/67.1;6x132/74.5"
+    },
+    {
+      "make": "buick",
+      "model": "enclave",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x120/67.1;6x132/74.5",
+      "after": "6x120/66.9"
+    },
+    {
+      "make": "buick",
+      "model": "enclave",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x120/66.9",
+      "after": "5x120/67.1;6x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "enclave",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "5x120/67.1;6x120/67.1",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "enclave",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x120/67.1",
+      "after": "5x120/67.1;6x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "encore",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x120/67.1",
+      "after": "5x105/56.6"
+    },
+    {
+      "make": "buick",
+      "model": "encore",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x105/56.6",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "encore-gx",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x115/56.6;5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "encore-gx",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x115/70.3",
+      "after": "5x115/56.6;5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "envision",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "envision",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x115/70.3",
+      "after": "5x120/66.9"
+    },
+    {
+      "make": "buick",
+      "model": "envision-s",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x115/70.3",
+      "after": "5x120/66.9"
+    },
+    {
+      "make": "buick",
+      "model": "lacrosse",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x115/70.3;5x120/67.1",
+      "after": "5x120/67.0;5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "lacrosse",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/67.0;5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "lacrosse",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x115/70.3",
+      "after": "5x120/67.0;5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "lacrosse",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x120/67.0;5x120/67.1",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "regal",
+      "from_year": "1987",
+      "to_year": "1988",
+      "before": "5x120.65/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "regal",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x115/70.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "regal",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x120/67.1",
+      "after": "5x115/70.3;5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "regal",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x115/70.3;5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "regal",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x115/70.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "buick",
+      "model": "riviera",
+      "from_year": "1970",
+      "to_year": "1980",
+      "before": "5x120.65/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "skylark",
+      "from_year": "1972",
+      "to_year": "1992",
+      "before": "5x120.65/57.1",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "buick",
+      "model": "terraza",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x115/70.3",
+      "after": "6x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "verano",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "buick",
+      "model": "verano",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x115/70.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "cadillac",
+      "model": "ats",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x115/70.3",
+      "after": "5x115/70.3;5x120/70.3"
+    },
+    {
+      "make": "cadillac",
+      "model": "ats",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x115/70.3;5x120/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "cadillac",
+      "model": "ct4",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x115/70.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "cadillac",
+      "model": "ct4",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "cadillac",
+      "model": "ct6",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/67.1",
+      "after": "5x120/66.9"
+    },
+    {
+      "make": "cadillac",
+      "model": "ct6",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120/66.9",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "cadillac",
+      "model": "cts",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x115/67.1;5x120/67.1",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "cadillac",
+      "model": "cts",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x120/67.1",
+      "after": "5x120/66.9;5x120/67.1"
+    },
+    {
+      "make": "cadillac",
+      "model": "cts",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x120/66.9;5x120/67.1",
+      "after": "5x120/66.9"
+    },
+    {
+      "make": "cadillac",
+      "model": "deville",
+      "from_year": "1970",
+      "to_year": "1980",
+      "before": "5x127/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "cadillac",
+      "model": "eldorado",
+      "from_year": "1970",
+      "to_year": "1980",
+      "before": "5x127/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "cadillac",
+      "model": "fleetwood",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x127/77.8",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "cadillac",
+      "model": "fleetwood",
+      "from_year": "1992",
+      "to_year": "1993",
+      "before": "5x115/70.3",
+      "after": "5x127/78.3"
+    },
+    {
+      "make": "cadillac",
+      "model": "xts",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/67.1",
+      "after": "5x120/66.9"
+    },
+    {
+      "make": "cadillac",
+      "model": "xts",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120/66.9",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "astro",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x127/78.1;6x139.7/78.1",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "blazer",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "6x139.7/78.1",
+      "after": "5x120.65/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "blazer",
+      "from_year": "2005",
+      "to_year": "2019",
+      "before": "5x120.65/70.3",
+      "after": "5x120/66.9;5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "c2500",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "6x139.7/78.1",
+      "after": "8x165.1/116.7"
+    },
+    {
+      "make": "chevrolet",
+      "model": "camaro",
+      "from_year": "2002",
+      "to_year": "2010",
+      "before": "5x120.65/70.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "camaro",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/67.1",
+      "after": "5x120/67.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "camaro",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120/67.0",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "caprice",
+      "from_year": "1976",
+      "to_year": "1977",
+      "before": "5x127/78.1",
+      "after": "5x120.65/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "caprice",
+      "from_year": "1979",
+      "to_year": "1980",
+      "before": "5x120.65/70.3",
+      "after": "5x127/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "caprice",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x127/78.1",
+      "after": "5x120.65/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "caprice",
+      "from_year": "1990",
+      "to_year": "1991",
+      "before": "5x120.65/70.3",
+      "after": "5x127/78.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "caprice",
+      "from_year": "1996",
+      "to_year": "2011",
+      "before": "5x127/78.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "colorado",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "6x127/78.1;6x139.7/100.3",
+      "after": "6x139.7/100.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "colorado",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "6x139.7/100.3",
+      "after": "6x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "colorado",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x120/67.1",
+      "after": "6x120/66.9"
+    },
+    {
+      "make": "chevrolet",
+      "model": "colorado",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x120/66.9",
+      "after": "6x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "corvette",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120.65/70.3",
+      "after": "5x120.7/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "corvette",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120.7/70.3",
+      "after": "5x120.65/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "corvette",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x120.65/70.3",
+      "after": "5x120/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "equinox",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x114.3/70.3;5x115/70.3",
+      "after": "5x120/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "equinox",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "equinox",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x115/70.3",
+      "after": "5x112/66.5;5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-1500",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "6x139.7/78.1;6x139.7/?",
+      "after": "5x120/67.1;5x127/78.3;6x139.7/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-1500",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x120/67.1;5x127/78.3;6x139.7/78.1",
+      "after": "5x120/67.1;5x127/78.1;6x139.7/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-2500",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "8x165.1/116.7",
+      "after": "8x165.1/121.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-2500",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "8x165.1/121.0",
+      "after": "6x139.7/78.1;8x165.1/121.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-2500",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "6x139.7/78.1;8x165.1/121.0",
+      "after": "8x165.1/116.7;8x165.1/121.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-2500",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "8x165.1/116.7;8x165.1/121.0",
+      "after": "6x139.7/78.1;8x165.1/121.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-2500",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "6x139.7/78.1;8x165.1/121.0",
+      "after": "8x165.1/121.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "express-3500",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "8x165.1/116.7",
+      "after": "8x165.1/121.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "impala",
+      "from_year": "1985",
+      "to_year": "1994",
+      "before": "5x120/67.1",
+      "after": "5x127/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "impala",
+      "from_year": "1996",
+      "to_year": "2000",
+      "before": "5x127/78.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "impala",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x115/70.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "impala",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/67.1",
+      "after": "5x120/66.9"
+    },
+    {
+      "make": "chevrolet",
+      "model": "impala",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x120/66.9",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "k1500",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/108.0"
+    },
+    {
+      "make": "chevrolet",
+      "model": "malibu",
+      "from_year": "1972",
+      "to_year": "1997",
+      "before": "5x120.65/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "malibu",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x115/70.3",
+      "after": "5x110/65.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "malibu",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x110/65.1",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "malibu",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "from_year": "1987",
+      "to_year": "1988",
+      "before": "5x120.65/70.3",
+      "after": "5x115/70.3;5x120.65/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "monte-carlo",
+      "from_year": "1988",
+      "to_year": "1995",
+      "before": "5x115/70.3;5x120.65/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-2500",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x120/67.1;8x165.1/116.6",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "8x165.1/116.7",
+      "after": "8x165.1/116.7;8x180/124.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "8x165.1/116.7;8x180/124.1",
+      "after": "8x165.1/116.7;8x165.1/116.8;8x180/124.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "8x165.1/116.7;8x165.1/116.8;8x180/124.1",
+      "after": "8x180/124.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x120/67.1;8x165.1/124.1",
+      "after": "8x165.1/116.7"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-3500",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "8x165.1/116.7",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "8x165.1/116.7",
+      "after": "8x165.1/116.7;8x165.1/116.8"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "8x165.1/116.7;8x165.1/116.8",
+      "after": "8x180/124.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "8x180/124.1",
+      "after": "8x180/124.1;8x210/154.2"
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "8x180/124.1;8x210/154.2",
+      "after": "8x180/124.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "spark",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x120/67.1",
+      "after": "4x100/56.6"
+    },
+    {
+      "make": "chevrolet",
+      "model": "spark",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "4x100/56.6",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "suburban",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/108.0;6x139.7/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "suburban",
+      "from_year": "1991",
+      "to_year": "2000",
+      "before": "6x139.7/108.0;6x139.7/78.1",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "suburban",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/78.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "suburban",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/78.3",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "tahoe",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/78.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "tahoe",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/78.3",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "from_year": "2009",
+      "to_year": "2013",
+      "before": "6x127/78.1",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x120/67.1",
+      "after": "6x139.7/100.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "6x139.7/100.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x120/67.1",
+      "after": "5x115/70.5"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x115/70.5",
+      "after": "5x105/56.5"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trailblazer",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x105/56.5",
+      "after": "5x100/56.6"
+    },
+    {
+      "make": "chevrolet",
+      "model": "traverse",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x120/67.1;6x132/74.5",
+      "after": "6x120/66.9"
+    },
+    {
+      "make": "chevrolet",
+      "model": "traverse",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x120/66.9",
+      "after": "6x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "traverse",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "6x120/67.1",
+      "after": "5x120/67.1;6x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trax",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x120/67.1",
+      "after": "5x105/56.6"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trax",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x105/56.6",
+      "after": "5x105/56.5"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trax",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x105/56.5",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "trax",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x115/70.3",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "chevrolet",
+      "model": "volt",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "chevrolet",
+      "model": "volt",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x115/70.3",
+      "after": "5x105/56.5"
+    },
+    {
+      "make": "chevrolet",
+      "model": "volt",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x105/56.5",
+      "after": "5x105/56.6"
+    },
+    {
+      "make": "chevrolet",
+      "model": "volt",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x105/56.6",
+      "after": "5x105/56.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "200",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x115/71.5",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "chrysler",
+      "model": "200",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/65.1"
+    },
+    {
+      "make": "chrysler",
+      "model": "200",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x114.3/65.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "chrysler",
+      "model": "200",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x114.3/67.1",
+      "after": "5x110/65.1"
+    },
+    {
+      "make": "chrysler",
+      "model": "300",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x115/71.5",
+      "after": "5x115/71.5;5x115/71.6"
+    },
+    {
+      "make": "chrysler",
+      "model": "300",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x115/71.5;5x115/71.6",
+      "after": "5x115/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "300c",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x115/71.5",
+      "after": "5x115/71.5;5x115/71.6"
+    },
+    {
+      "make": "chrysler",
+      "model": "crossfire",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x115/71.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "chrysler",
+      "model": "grand-voyager",
+      "from_year": "1990",
+      "to_year": "1996",
+      "before": "5x100/57.1",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "new-yorker",
+      "from_year": "1993",
+      "to_year": "1994",
+      "before": "5x100/57.1",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "pacifica",
+      "from_year": "2008",
+      "to_year": "2016",
+      "before": "5x127/71.5",
+      "after": "5x115/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "pacifica",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x115/71.5",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "pacifica",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x127/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "chrysler",
+      "model": "pacifica",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "pt-cruiser",
+      "from_year": "2000",
+      "to_year": "2001",
+      "before": "5x115/71.5",
+      "after": "5x100/57.1;5x115/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "sebring",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x100/57.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "chrysler",
+      "model": "town-&-country",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x114.3/71.5",
+      "after": "5x114.3/71.6"
+    },
+    {
+      "make": "chrysler",
+      "model": "town-&-country",
+      "from_year": "2000",
+      "to_year": "2001",
+      "before": "5x114.3/71.6",
+      "after": "5x114.3/71.6;5x127/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "town-&-country",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x114.3/71.6;5x127/71.5",
+      "after": "5x114.3/71.5;5x127/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "town-&-country",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x114.3/71.5;5x127/71.5",
+      "after": "5x114.3/71.6;5x127/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "town-&-country",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x114.3/71.6;5x127/71.5",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "town-and-country",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x114.3/71.5",
+      "after": "5x114.3/71.5;5x114.3/71.6"
+    },
+    {
+      "make": "chrysler",
+      "model": "town-and-country",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x114.3/71.5;5x114.3/71.6",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "chrysler",
+      "model": "voyager",
+      "from_year": "1995",
+      "to_year": "1996",
+      "before": "5x100/57.1",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "daewoo",
+      "model": "leganza",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x114.3/56.6",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "dodge",
+      "model": "caliber",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x115/71.5",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "dodge",
+      "model": "caravan",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x127/71.5",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "dodge",
+      "model": "caravan",
+      "from_year": "1990",
+      "to_year": "1991",
+      "before": "5x100/57.1",
+      "after": "5x114.3/71.6"
+    },
+    {
+      "make": "dodge",
+      "model": "caravan",
+      "from_year": "1995",
+      "to_year": "1996",
+      "before": "5x114.3/71.6",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "dodge",
+      "model": "caravan",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x100/57.1",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "challenger",
+      "from_year": "1974",
+      "to_year": "2008",
+      "before": "5x114.3/71.6",
+      "after": "5x115/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "charger",
+      "from_year": "1971",
+      "to_year": "2005",
+      "before": "5x114.3/71.6",
+      "after": "5x115/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "dakota",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x139.7/77.8",
+      "after": "5x114.3/71.6"
+    },
+    {
+      "make": "dodge",
+      "model": "dakota",
+      "from_year": "1990",
+      "to_year": "1991",
+      "before": "5x114.3/71.6",
+      "after": "6x114.3/71.6"
+    },
+    {
+      "make": "dodge",
+      "model": "dart",
+      "from_year": "1976",
+      "to_year": "2012",
+      "before": "5x110/65.1",
+      "after": "5x115/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "dart",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x115/71.5",
+      "after": "5x110/65.1"
+    },
+    {
+      "make": "dodge",
+      "model": "durango",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "6x114.3/71.5",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "durango",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x127/71.5",
+      "after": "5x127/71.6"
+    },
+    {
+      "make": "dodge",
+      "model": "durango",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "durango",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x127/71.5",
+      "after": "5x127/71.6"
+    },
+    {
+      "make": "dodge",
+      "model": "grand-caravan",
+      "from_year": "1995",
+      "to_year": "1996",
+      "before": "5x100/57.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "dodge",
+      "model": "grand-caravan",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "ramcharger",
+      "from_year": "1981",
+      "to_year": "1982",
+      "before": "5x139.7/108.0",
+      "after": "5x139.7/71.6"
+    },
+    {
+      "make": "dodge",
+      "model": "ramcharger",
+      "from_year": "1987",
+      "to_year": "1988",
+      "before": "5x139.7/71.6",
+      "after": "5x139.7/108.0"
+    },
+    {
+      "make": "dodge",
+      "model": "viper",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "6x114.3/71.6",
+      "after": "6x114.3/71.5"
+    },
+    {
+      "make": "dodge",
+      "model": "viper",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "6x114.3/71.5",
+      "after": "5x115/71.5;6x114.3/71.5"
+    },
+    {
+      "make": "ferrari",
+      "model": "portofino",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/67.1",
+      "after": "5x108/67.0"
+    },
+    {
+      "make": "fiat",
+      "model": "124-spider",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/67.1",
+      "after": "4x100/54.1"
+    },
+    {
+      "make": "fiat",
+      "model": "124-spider",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "4x100/54.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "aerostar",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/70.6"
+    },
+    {
+      "make": "ford",
+      "model": "bronco",
+      "from_year": "1991",
+      "to_year": "2021",
+      "before": "5x139.7/87.1",
+      "after": "6x139.7/93.1"
+    },
+    {
+      "make": "ford",
+      "model": "bronco-sport",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x108/63.4",
+      "after": "5x108/63.4;5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "bronco-sport",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x108/63.4;5x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "crown-victoria",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x114.3/70.6",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "crown-victoria",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/70.5;5x114.3/70.6"
+    },
+    {
+      "make": "ford",
+      "model": "crown-victoria",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x114.3/70.5;5x114.3/70.6",
+      "after": "5x114.3/70.5;5x114.3/73.1"
+    },
+    {
+      "make": "ford",
+      "model": "e-150",
+      "from_year": "1989",
+      "to_year": "2000",
+      "before": "5x139.7/87.1",
+      "after": "5x135/87.1"
+    },
+    {
+      "make": "ford",
+      "model": "e-150-econoline",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x139.7/87.1",
+      "after": "8x165.1/124.1"
+    },
+    {
+      "make": "ford",
+      "model": "e-250-econoline",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "8x165.1/124.9",
+      "after": "8x165.1/116.1"
+    },
+    {
+      "make": "ford",
+      "model": "e-250-econoline",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "8x165.1/116.1",
+      "after": "8x165.1/124.1"
+    },
+    {
+      "make": "ford",
+      "model": "e-350-econoline",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "8x165.1/124.9",
+      "after": "8x165.1/116.1"
+    },
+    {
+      "make": "ford",
+      "model": "e-350-econoline",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "8x165.1/116.1",
+      "after": "8x165.1/124.1"
+    },
+    {
+      "make": "ford",
+      "model": "edge",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x114.3/63.4",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "escape",
+      "from_year": "2000",
+      "to_year": "2001",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "escape",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x114.3/63.4",
+      "after": "5x114.3/63.4;5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "escape",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x114.3/63.4;5x114.3/67.1",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "escape",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/63.4",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "escape",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.4",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "escape",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x114.3/63.4",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "escort",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "4x100/54.1",
+      "after": "4x108/63.6"
+    },
+    {
+      "make": "ford",
+      "model": "escort",
+      "from_year": "1990",
+      "to_year": "1991",
+      "before": "4x108/63.6",
+      "after": "4x100/54.1"
+    },
+    {
+      "make": "ford",
+      "model": "expedition",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x135/87.1",
+      "after": "6x135/87.1"
+    },
+    {
+      "make": "ford",
+      "model": "expedition",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x135/87.1",
+      "after": "6x135/87.0"
+    },
+    {
+      "make": "ford",
+      "model": "expedition",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x135/87.0",
+      "after": "6x135/87.1"
+    },
+    {
+      "make": "ford",
+      "model": "explorer",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x114.3/63.4;5x114.3/70.5;5x114.3/70.6",
+      "after": "5x114.3/63.4;5x114.3/70.5;6x135/87.1"
+    },
+    {
+      "make": "ford",
+      "model": "explorer",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x114.3/63.4;5x114.3/70.5;6x135/87.1",
+      "after": "5x114.3/63.4;5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "explorer",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x114.3/63.4;5x114.3/70.5",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "f-150",
+      "from_year": "1991",
+      "to_year": "2000",
+      "before": "5x139.7/87.1",
+      "after": "6x135/87.1"
+    },
+    {
+      "make": "ford",
+      "model": "f-250",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "8x165.1/116.1",
+      "after": "8x165.1/124.9"
+    },
+    {
+      "make": "ford",
+      "model": "f-250",
+      "from_year": "1990",
+      "to_year": "2000",
+      "before": "8x165.1/124.9",
+      "after": "8x170/124.9"
+    },
+    {
+      "make": "ford",
+      "model": "f-350",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "8x165.1/116.1",
+      "after": "8x165.1/124.9"
+    },
+    {
+      "make": "ford",
+      "model": "f-350",
+      "from_year": "1990",
+      "to_year": "2000",
+      "before": "8x165.1/124.9",
+      "after": "8x170/124.9"
+    },
+    {
+      "make": "ford",
+      "model": "f-350",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "8x170/124.9",
+      "after": "8x170/124.9;8x200/142.1"
+    },
+    {
+      "make": "ford",
+      "model": "f-350",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "8x170/124.9;8x200/142.1",
+      "after": "8x170/124.9"
+    },
+    {
+      "make": "ford",
+      "model": "f-350",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "8x170/124.9",
+      "after": "8x170/124.9;8x200/142.1"
+    },
+    {
+      "make": "ford",
+      "model": "f-350",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "8x170/124.9;8x200/142.1",
+      "after": "8x170/124.9"
+    },
+    {
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x114.3/67.1;8x170/124.9",
+      "after": "5x114.3/67.1;8x170/124.9;8x200/142.0"
+    },
+    {
+      "make": "ford",
+      "model": "f-450-super-duty",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x114.3/67.1;8x170/124.9;8x200/142.0",
+      "after": "10x225/170.1;8x170/124.9;8x200/142.0"
+    },
+    {
+      "make": "ford",
+      "model": "falcon",
+      "from_year": "1967",
+      "to_year": "1968",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/61.5"
+    },
+    {
+      "make": "ford",
+      "model": "fiesta",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x114.3/67.1",
+      "after": "4x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "fiesta",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "4x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "flex",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "flex",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/70.6"
+    },
+    {
+      "make": "ford",
+      "model": "flex",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/70.6",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "flex",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/63.4",
+      "after": "5x114.3/70.6"
+    },
+    {
+      "make": "ford",
+      "model": "focus",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "4x108/63.4",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "focus",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "focus",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x114.3/67.1",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "focus",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "focus",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x114.3/67.1",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "focus",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "5x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "fusion",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x114.3/67.1",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "gt",
+      "from_year": "2006",
+      "to_year": "2017",
+      "before": "5x114.3/63.5",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "maverick",
+      "from_year": "1974",
+      "to_year": "2021",
+      "before": "5x114.3/70.5",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "mustang",
+      "from_year": "1986",
+      "to_year": "1987",
+      "before": "5x114.3/70.5",
+      "after": "4x108/63.4;5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "mustang",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "4x108/63.4;5x114.3/70.5",
+      "after": "4x108/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "mustang",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "4x108/63.4",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "mustang",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/70.4;5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "mustang",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/70.4;5x114.3/70.5",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "from_year": "2004",
+      "to_year": "2019",
+      "before": "5x114.3/67.1;5x114.3/70.5",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-mach-1",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/67.1;5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x108/63.4",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x114.3/63.4",
+      "after": "5x108/63.4;5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-mach-e",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "5x108/63.4;5x114.3/63.4",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "from_year": "2013",
+      "to_year": "2015",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/67.1;5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "mustang-shelby-gt350",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x114.3/67.1;5x114.3/70.5",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "ranger",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/70.6"
+    },
+    {
+      "make": "ford",
+      "model": "ranger",
+      "from_year": "1992",
+      "to_year": "2000",
+      "before": "5x114.3/70.6",
+      "after": "5x114.3/70.5;5x114.3/70.6"
+    },
+    {
+      "make": "ford",
+      "model": "ranger",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x114.3/70.5;5x114.3/70.6",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "ranger",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x114.3/70.5",
+      "after": "6x139.7/93.1"
+    },
+    {
+      "make": "ford",
+      "model": "taurus",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x108/63.4",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "ford",
+      "model": "taurus",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/63.4",
+      "after": "5x114.3/63.3"
+    },
+    {
+      "make": "ford",
+      "model": "taurus",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/63.3",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "ford",
+      "model": "taurus",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x114.3/70.5",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "ford",
+      "model": "thunderbird",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x114.3/70.5",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "gmc",
+      "model": "acadia",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "6x139.7/78.1",
+      "after": "6x132/74.5"
+    },
+    {
+      "make": "gmc",
+      "model": "acadia",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "6x132/74.5",
+      "after": "5x115/67.1;5x120/67.1"
+    },
+    {
+      "make": "gmc",
+      "model": "acadia",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x115/67.1;5x120/67.1",
+      "after": "6x120/66.9"
+    },
+    {
+      "make": "gmc",
+      "model": "acadia",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x120/66.9",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "gmc",
+      "model": "canyon",
+      "from_year": "2012",
+      "to_year": "2015",
+      "before": "6x127/78.1;6x139.7/78.1",
+      "after": "6x120/67.1"
+    },
+    {
+      "make": "gmc",
+      "model": "canyon",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x120/67.1",
+      "after": "6x120/66.9"
+    },
+    {
+      "make": "gmc",
+      "model": "canyon",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x120/66.9",
+      "after": "6x120/67.1"
+    },
+    {
+      "make": "gmc",
+      "model": "safari",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x127/78.1;6x139.7/78.1",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-1500",
+      "from_year": "1998",
+      "to_year": "1999",
+      "before": "5x127/78.1;6x139.7/78.1",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "8x165.1/116.7",
+      "after": "8x165.1/116.7;8x180/124.1"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "8x165.1/116.7;8x180/124.1",
+      "after": "8x165.1/116.7;8x165.1/116.8;8x180/124.1"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-2500hd",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "8x165.1/116.7;8x165.1/116.8;8x180/124.1",
+      "after": "8x180/124.1"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-3500hd",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "8x165.1/116.7",
+      "after": "8x165.1/116.7;8x165.1/116.8"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-3500hd",
+      "from_year": "2010",
+      "to_year": "2011",
+      "before": "8x165.1/116.7;8x165.1/116.8",
+      "after": "8x180/124.1"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-3500hd",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "8x180/124.1",
+      "after": "8x180/124.1;8x210/154.2"
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-3500hd",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "8x180/124.1;8x210/154.2",
+      "after": "8x180/124.1"
+    },
+    {
+      "make": "gmc",
+      "model": "sonoma",
+      "from_year": "1995",
+      "to_year": "1996",
+      "before": "5x120.65/70.1",
+      "after": "5x120.65/70.3"
+    },
+    {
+      "make": "gmc",
+      "model": "terrain",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "6x139.7/78.1",
+      "after": "5x120/67.1"
+    },
+    {
+      "make": "gmc",
+      "model": "terrain",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/67.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "gmc",
+      "model": "terrain",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x115/70.3",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "gmc",
+      "model": "yukon",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/78.3"
+    },
+    {
+      "make": "gmc",
+      "model": "yukon",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/78.3",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "gmc",
+      "model": "yukon-xl",
+      "from_year": "2018",
+      "to_year": "2021",
+      "before": "6x139.7/78.3",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "honda",
+      "model": "accord",
+      "from_year": "1985",
+      "to_year": "1986",
+      "before": "4x100/56.1",
+      "after": "4x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "accord",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "4x114.3/64.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "accord",
+      "from_year": "1993",
+      "to_year": "2000",
+      "before": "5x114.3/64.1",
+      "after": "4x114.3/64.1;5x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "accord",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "4x114.3/64.1;5x114.3/64.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "civic",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "4x100/56.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "civic",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/64.1",
+      "after": "5x114.3/64.1;5x120/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "civic",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/64.1;5x120/64.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "insight",
+      "from_year": "2014",
+      "to_year": "2019",
+      "before": "4x100/56.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "odyssey",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x114.3/64.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "passport",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "6x139.7/107.0",
+      "after": "6x139.7/100.1"
+    },
+    {
+      "make": "honda",
+      "model": "passport",
+      "from_year": "2002",
+      "to_year": "2019",
+      "before": "6x139.7/100.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "pilot",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x114.3/64.1;5x120/64.1",
+      "after": "5x120/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "prelude",
+      "from_year": "1991",
+      "to_year": "1992",
+      "before": "4x100/56.1",
+      "after": "4x114.3/64.1"
+    },
+    {
+      "make": "honda",
+      "model": "prelude",
+      "from_year": "1996",
+      "to_year": "1997",
+      "before": "4x114.3/64.1",
+      "after": "5x114.3/64.1"
+    },
+    {
+      "make": "hyundai",
+      "model": "accent",
+      "from_year": "1999",
+      "to_year": "2018",
+      "before": "4x114.3/67.1",
+      "after": "4x100/54.1"
+    },
+    {
+      "make": "hyundai",
+      "model": "elantra",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "4x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "hyundai",
+      "model": "sonata",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "4x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "hyundai",
+      "model": "tiburon",
+      "from_year": "2001",
+      "to_year": "2003",
+      "before": "4x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "infiniti",
+      "model": "qx80",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/77.8"
+    },
+    {
+      "make": "infiniti",
+      "model": "qx80",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/77.8",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "isuzu",
+      "model": "rodeo",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "6x139.7/100.5",
+      "after": "6x139.7/106.0"
+    },
+    {
+      "make": "isuzu",
+      "model": "trooper",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "6x139.7/106.0",
+      "after": "6x139.7/100.5"
+    },
+    {
+      "make": "isuzu",
+      "model": "trooper",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "6x139.7/100.5",
+      "after": "6x139.7/106.0"
+    },
+    {
+      "make": "jaguar",
+      "model": "xe",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x108/63.4",
+      "after": "5x108/63.5"
+    },
+    {
+      "make": "jaguar",
+      "model": "xe",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.5",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "jaguar",
+      "model": "xf",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x108/63.4",
+      "after": "5x108/63.5"
+    },
+    {
+      "make": "jaguar",
+      "model": "xf",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.5",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "jaguar",
+      "model": "xj",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x120/72.6",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "jaguar",
+      "model": "xj",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x108/63.4",
+      "after": "5x108/63.5"
+    },
+    {
+      "make": "jaguar",
+      "model": "xj",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.5",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "jeep",
+      "model": "cherokee",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x114.3/71.5",
+      "after": "5x114.3/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "cherokee",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x114.3/71.6",
+      "after": "5x110/65.1"
+    },
+    {
+      "make": "jeep",
+      "model": "compass",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x114.3/67.1",
+      "after": "5x110/65.1"
+    },
+    {
+      "make": "jeep",
+      "model": "gladiator",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x127/71.6",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "gladiator",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "1997",
+      "to_year": "1998",
+      "before": "5x114.3/71.5",
+      "after": "5x114.3/71.5;5x114.3/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "1998",
+      "to_year": "1999",
+      "before": "5x114.3/71.5;5x114.3/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x127/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x127/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x127/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x114.3/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2008",
+      "to_year": "2009",
+      "before": "5x127/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x127/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "5x127/71.5",
+      "after": "5x127/71.5;5x127/71.6"
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x127/71.5;5x127/71.6",
+      "after": "5x127/71.5"
+    },
+    {
+      "make": "kia",
+      "model": "sedona",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x114.3/67.1",
+      "after": "6x139.7/92.3"
+    },
+    {
+      "make": "kia",
+      "model": "sedona",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "6x139.7/92.3",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "kia",
+      "model": "sorento",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "5x139.7/95.3",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "kia",
+      "model": "sportage",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "5x139.7/95.3",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "lamborghini",
+      "model": "aventador",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x130/71.6",
+      "after": "5x112/57.0;5x120/70.0;?/57.0;?/70.0"
+    },
+    {
+      "make": "lamborghini",
+      "model": "aventador",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/57.0;5x120/70.0;?/57.0;?/70.0",
+      "after": "5x130/71.6"
+    },
+    {
+      "make": "lamborghini",
+      "model": "huracan",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x112/57.1",
+      "after": "5x112/57.0;5x112/66.0;?/57.0;?/66.0"
+    },
+    {
+      "make": "lamborghini",
+      "model": "huracan",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/57.0;5x112/66.0;?/57.0;?/66.0",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "land rover",
+      "model": "discovery",
+      "from_year": "1999",
+      "to_year": "2005",
+      "before": "5x165.1/113.0",
+      "after": "5x120/72.5;5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "discovery",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x120/72.5;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "discovery-sport",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x120/72.6",
+      "after": "5x108/63.4;5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "discovery-sport",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x108/63.4;5x120/72.6",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "land rover",
+      "model": "discovery-sport",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.4",
+      "after": "5x108/63.4;5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "discovery-sport",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x108/63.4;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "range-rover",
+      "from_year": "1994",
+      "to_year": "1995",
+      "before": "5x165.1/113.0",
+      "after": "5x120/72.5"
+    },
+    {
+      "make": "land rover",
+      "model": "range-rover",
+      "from_year": "1999",
+      "to_year": "2002",
+      "before": "5x120/72.5",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "range-rover-evoque",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x120/72.6",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "land rover",
+      "model": "range-rover-evoque",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x108/63.4",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "range-rover-velar",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x108/63.4;5x120/72.6",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "land rover",
+      "model": "range-rover-velar",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.4",
+      "after": "5x108/63.4;5x120/72.6"
+    },
+    {
+      "make": "land rover",
+      "model": "range-rover-velar",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x108/63.4;5x120/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "lexus",
+      "model": "gx",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x114.3/60.1",
+      "after": "6x139.7/106.1"
+    },
+    {
+      "make": "lexus",
+      "model": "lc",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x120/60.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "lexus",
+      "model": "lc",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x114.3/60.1",
+      "after": "5x120/60.1"
+    },
+    {
+      "make": "lexus",
+      "model": "lc",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x120/60.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "lexus",
+      "model": "ls",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x114.3/60.1",
+      "after": "5x120/60.1"
+    },
+    {
+      "make": "lexus",
+      "model": "lx",
+      "from_year": "1997",
+      "to_year": "1998",
+      "before": "5x150/108.0",
+      "after": "5x150/110.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "aviator",
+      "from_year": "2005",
+      "to_year": "2020",
+      "before": "5x114.3/70.6",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "lincoln",
+      "model": "continental",
+      "from_year": "1979",
+      "to_year": "1990",
+      "before": "5x114.3/70.6",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "lincoln",
+      "model": "continental",
+      "from_year": "2002",
+      "to_year": "2017",
+      "before": "5x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "continental",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/67.1",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "lincoln",
+      "model": "continental",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "mkc",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x114.3/67.1",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "lincoln",
+      "model": "mkc",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "mkt",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/63.4"
+    },
+    {
+      "make": "lincoln",
+      "model": "mkt",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "mkx",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x114.3/67.1",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "lincoln",
+      "model": "mkz",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x114.3/67.1",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "lincoln",
+      "model": "navigator",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x135/87.1",
+      "after": "6x135/87.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "navigator",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x135/87.1",
+      "after": "6x135/87.0"
+    },
+    {
+      "make": "lincoln",
+      "model": "navigator",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x135/87.0",
+      "after": "6x135/87.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "navigator",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "6x135/87.1",
+      "after": "6x135/87.0;6x135/87.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "navigator",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "6x135/87.0;6x135/87.1",
+      "after": "6x135/87.1"
+    },
+    {
+      "make": "lincoln",
+      "model": "town-car",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x114.3/70.6",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "lotus",
+      "model": "evora",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/60.1",
+      "after": "5x114.3/68.0;5x114.3/?;?/?"
+    },
+    {
+      "make": "lotus",
+      "model": "evora",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/68.0;5x114.3/?;?/?",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "mazda",
+      "model": "3",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/67.0"
+    },
+    {
+      "make": "mazda",
+      "model": "3",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/67.0",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mazda",
+      "model": "626",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "4x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mazda",
+      "model": "b3000",
+      "from_year": "1995",
+      "to_year": "1996",
+      "before": "5x114.3/70.3",
+      "after": "5x114.3/70.5"
+    },
+    {
+      "make": "mazda",
+      "model": "cx-5",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/67.0"
+    },
+    {
+      "make": "mazda",
+      "model": "cx-5",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/67.0",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mazda",
+      "model": "cx-9",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/67.0"
+    },
+    {
+      "make": "mazda",
+      "model": "cx-9",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x114.3/67.0",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "4x100/54.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "4x100/54.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x114.3/67.1",
+      "after": "5x114.3/54.1"
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/54.1",
+      "after": "4x100/54.1"
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "4x100/54.1",
+      "after": "5x114.3/54.1"
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x114.3/54.1",
+      "after": "4x100/54.1;5x114.3/54.1"
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "4x100/54.1;5x114.3/54.1",
+      "after": "5x114.3/54.1"
+    },
+    {
+      "make": "mazda",
+      "model": "rx-7",
+      "from_year": "1985",
+      "to_year": "1986",
+      "before": "4x110/65.1",
+      "after": "4x114.3/67.1"
+    },
+    {
+      "make": "mazda",
+      "model": "rx-7",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "4x114.3/67.1",
+      "after": "5x114.3/59.6"
+    },
+    {
+      "make": "mazda",
+      "model": "rx-7",
+      "from_year": "1992",
+      "to_year": "1993",
+      "before": "5x114.3/59.6",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mclaren",
+      "model": "570s",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x112/57.1",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mclaren",
+      "model": "570s",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/66.6",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "mclaren",
+      "model": "720s",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x112/57.1",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mclaren",
+      "model": "720s",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/66.6",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "from_year": "2017",
+      "to_year": "2019",
+      "before": "5x114.3/67.1",
+      "after": "5x112/66.6;5x114.3/67.1"
+    },
+    {
+      "make": "mercedes",
+      "model": "a-class-amg",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x112/66.6;5x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mercedes",
+      "model": "amg-gt",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x114.3/67.1",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mercedes",
+      "model": "c-class-amg",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x112/66.6;5x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mercedes",
+      "model": "cla-class",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x114.3/67.1",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mercedes-benz",
+      "model": "g-class",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "5x130/84.1",
+      "after": "5x112/66.6;5x130/84.1"
+    },
+    {
+      "make": "mercedes-benz",
+      "model": "g-class",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x112/66.6;5x130/84.1",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mercury",
+      "model": "comet",
+      "from_year": "1965",
+      "to_year": "1966",
+      "before": "4x114.3/61.5",
+      "after": "5x114.3/70.3"
+    },
+    {
+      "make": "mercury",
+      "model": "cougar",
+      "from_year": "1990",
+      "to_year": "2000",
+      "before": "5x114.3/70.6",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "mercury",
+      "model": "sable",
+      "from_year": "2005",
+      "to_year": "2008",
+      "before": "5x108/63.4",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mini",
+      "model": "clubman",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "4x100/56.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "mini",
+      "model": "clubman",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x112/66.5",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mini",
+      "model": "cooper",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "4x100/56.1",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mini",
+      "model": "cooper",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/66.6",
+      "after": "4x100/56.1"
+    },
+    {
+      "make": "mini",
+      "model": "countryman",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x120/72.6",
+      "after": "5x112/66.6"
+    },
+    {
+      "make": "mitsubishi",
+      "model": "galant",
+      "from_year": "1993",
+      "to_year": "2000",
+      "before": "4x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mitsubishi",
+      "model": "lancer",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "4x114.3/67.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mitsubishi",
+      "model": "mirage",
+      "from_year": "2013",
+      "to_year": "2014",
+      "before": "5x114.3/67.1",
+      "after": "4x100/56.1"
+    },
+    {
+      "make": "mitsubishi",
+      "model": "montero",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "6x139.7/106.1",
+      "after": "6x139.7/108.1"
+    },
+    {
+      "make": "mitsubishi",
+      "model": "montero",
+      "from_year": "1991",
+      "to_year": "2000",
+      "before": "6x139.7/108.1",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "mitsubishi",
+      "model": "montero",
+      "from_year": "2000",
+      "to_year": "2001",
+      "before": "5x114.3/67.1",
+      "after": "6x139.7/106.0"
+    },
+    {
+      "make": "mitsubishi",
+      "model": "montero",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "6x139.7/106.0",
+      "after": "5x114.3/67.1"
+    },
+    {
+      "make": "nissan",
+      "model": "altima",
+      "from_year": "1997",
+      "to_year": "2000",
+      "before": "4x114.3/66.1",
+      "after": "5x114.3/66.1"
+    },
+    {
+      "make": "nissan",
+      "model": "frontier",
+      "from_year": "1999",
+      "to_year": "2018",
+      "before": "6x139.7/100.3",
+      "after": "6x114.3/66.1"
+    },
+    {
+      "make": "nissan",
+      "model": "kicks",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "4x100/60.1",
+      "after": "5x114.3/66.1"
+    },
+    {
+      "make": "nissan",
+      "model": "pathfinder",
+      "from_year": "1995",
+      "to_year": "2000",
+      "before": "6x139.7/100.3",
+      "after": "6x139.7/108.0"
+    },
+    {
+      "make": "nissan",
+      "model": "pathfinder",
+      "from_year": "2004",
+      "to_year": "2005",
+      "before": "6x139.7/108.0",
+      "after": "6x114.3/66.1"
+    },
+    {
+      "make": "nissan",
+      "model": "pathfinder",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "6x114.3/66.1",
+      "after": "5x114.3/66.1"
+    },
+    {
+      "make": "nissan",
+      "model": "pickup",
+      "from_year": "1989",
+      "to_year": "1990",
+      "before": "5x114.3/66.1;6x139.7/108.0",
+      "after": "6x139.7/100.3"
+    },
+    {
+      "make": "nissan",
+      "model": "sentra",
+      "from_year": "1994",
+      "to_year": "2000",
+      "before": "4x100/59.1",
+      "after": "4x114.3/66.1"
+    },
+    {
+      "make": "nissan",
+      "model": "sentra",
+      "from_year": "2012",
+      "to_year": "2013",
+      "before": "4x114.3/66.1",
+      "after": "5x114.3/66.1"
+    },
+    {
+      "make": "nissan",
+      "model": "titan",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/77.8"
+    },
+    {
+      "make": "nissan",
+      "model": "titan",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/77.8",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "nissan",
+      "model": "titan-xd",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/78.1",
+      "after": "6x139.7/77.8"
+    },
+    {
+      "make": "nissan",
+      "model": "titan-xd",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/77.8",
+      "after": "6x139.7/78.1"
+    },
+    {
+      "make": "nissan",
+      "model": "versa",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "4x114.3/66.1",
+      "after": "4x100/59.1"
+    },
+    {
+      "make": "nissan",
+      "model": "versa",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "4x100/59.1",
+      "after": "4x100/60.1"
+    },
+    {
+      "make": "nissan",
+      "model": "versa",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "4x100/60.1",
+      "after": "4x100/59.1"
+    },
+    {
+      "make": "oldsmobile",
+      "model": "bravada",
+      "from_year": "1995",
+      "to_year": "2000",
+      "before": "5x120.65/70.3",
+      "after": "5x120.65/83.1"
+    },
+    {
+      "make": "oldsmobile",
+      "model": "bravada",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x120.65/83.1",
+      "after": "6x127/78.1"
+    },
+    {
+      "make": "oldsmobile",
+      "model": "cutlass",
+      "from_year": "1981",
+      "to_year": "1982",
+      "before": "5x120.65/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "plymouth",
+      "model": "barracuda",
+      "from_year": "1969",
+      "to_year": "1970",
+      "before": "5x101.6/71.1",
+      "after": "5x114.3/71.1"
+    },
+    {
+      "make": "plymouth",
+      "model": "duster",
+      "from_year": "1972",
+      "to_year": "1973",
+      "before": "5x101.6/71.1",
+      "after": "5x114.3/71.1"
+    },
+    {
+      "make": "plymouth",
+      "model": "duster",
+      "from_year": "1973",
+      "to_year": "1985",
+      "before": "5x114.3/71.1",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "plymouth",
+      "model": "grand-voyager",
+      "from_year": "1995",
+      "to_year": "1996",
+      "before": "5x100/57.1",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "plymouth",
+      "model": "road-runner",
+      "from_year": "1971",
+      "to_year": "1972",
+      "before": "5x114.3/71.1;5x114.3/71.5",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "plymouth",
+      "model": "valiant",
+      "from_year": "1972",
+      "to_year": "1973",
+      "before": "5x101.6/71.1",
+      "after": "5x114.3/71.1"
+    },
+    {
+      "make": "plymouth",
+      "model": "voyager",
+      "from_year": "1995",
+      "to_year": "1996",
+      "before": "5x100/57.1",
+      "after": "5x114.3/71.5"
+    },
+    {
+      "make": "pontiac",
+      "model": "grand-am",
+      "from_year": "1998",
+      "to_year": "1999",
+      "before": "5x100/57.1",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "pontiac",
+      "model": "grand-prix",
+      "from_year": "1987",
+      "to_year": "1988",
+      "before": "5x120.65/70.3",
+      "after": "5x115/70.3"
+    },
+    {
+      "make": "pontiac",
+      "model": "gto",
+      "from_year": "1974",
+      "to_year": "2004",
+      "before": "5x120.65/70.3",
+      "after": "5x120/69.6"
+    },
+    {
+      "make": "porsche",
+      "model": "911",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x130/71.6",
+      "after": "5x130/71.5;5x130/?;?/?"
+    },
+    {
+      "make": "porsche",
+      "model": "911",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x130/71.5;5x130/?;?/?",
+      "after": "5x130/71.6"
+    },
+    {
+      "make": "porsche",
+      "model": "cayenne",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x130/71.6",
+      "after": "5x130/71.5"
+    },
+    {
+      "make": "porsche",
+      "model": "cayenne",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x130/71.5",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "porsche",
+      "model": "panamera",
+      "from_year": "2016",
+      "to_year": "2017",
+      "before": "5x130/71.6",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "porsche",
+      "model": "panamera",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x112/66.5",
+      "after": "5x130/71.5"
+    },
+    {
+      "make": "porsche",
+      "model": "panamera",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x130/71.5",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "ram",
+      "model": "1500",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x139.7/77.8",
+      "after": "5x139.7/77.8;6x139.7/77.8"
+    },
+    {
+      "make": "ram",
+      "model": "1500",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x139.7/77.8;6x139.7/77.8",
+      "after": "6x139.7/77.8"
+    },
+    {
+      "make": "ram",
+      "model": "2500",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "8x165.1/121.3",
+      "after": "8x165.1/121.3;8x165.1/121.4"
+    },
+    {
+      "make": "ram",
+      "model": "2500",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "8x165.1/121.3;8x165.1/121.4",
+      "after": "8x165.1/121.4"
+    },
+    {
+      "make": "ram",
+      "model": "2500",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "8x165.1/121.4",
+      "after": "8x165.1/121.3;8x165.1/121.4"
+    },
+    {
+      "make": "ram",
+      "model": "2500",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "8x165.1/121.3;8x165.1/121.4",
+      "after": "8x165.1/121.3"
+    },
+    {
+      "make": "ram",
+      "model": "3500",
+      "from_year": "2009",
+      "to_year": "2010",
+      "before": "8x165.1/121.3",
+      "after": "8x165.1/121.3;8x165.1/121.4"
+    },
+    {
+      "make": "ram",
+      "model": "3500",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "8x165.1/121.3;8x165.1/121.4",
+      "after": "8x165.1/121.4"
+    },
+    {
+      "make": "ram",
+      "model": "3500",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "8x165.1/121.4",
+      "after": "8x165.1/121.3;8x165.1/121.4"
+    },
+    {
+      "make": "ram",
+      "model": "3500",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "8x165.1/121.3;8x165.1/121.4",
+      "after": "8x165.1/121.3"
+    },
+    {
+      "make": "rivian",
+      "model": "r1t",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x139.7/64.1",
+      "after": "5x135.5/84.1"
+    },
+    {
+      "make": "rolls-royce",
+      "model": "phantom",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x120/72.6",
+      "after": "5x112/72.6"
+    },
+    {
+      "make": "rolls-royce",
+      "model": "phantom",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x112/72.6",
+      "after": "5x120/72.6"
+    },
+    {
+      "make": "saab",
+      "model": "900",
+      "from_year": "1993",
+      "to_year": "1994",
+      "before": "4x108/65.1",
+      "after": "5x110/65.1"
+    },
+    {
+      "make": "scion",
+      "model": "xb",
+      "from_year": "2006",
+      "to_year": "2008",
+      "before": "4x100/54.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "subaru",
+      "model": "baja",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "5x114.3/56.1",
+      "after": "5x100/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "baja",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x100/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "crosstrek",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "5x100/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "forester",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x100/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "impreza",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x100/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "impreza",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/56.1",
+      "after": "5x100/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "impreza",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x100/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "legacy",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x100/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "outback",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x100/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "solterra",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x114.3/56.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "subaru",
+      "model": "wrx",
+      "from_year": "2007",
+      "to_year": "2008",
+      "before": "5x100/56.1",
+      "after": "5x100/56.1;5x114.3/56.1"
+    },
+    {
+      "make": "subaru",
+      "model": "wrx",
+      "from_year": "2014",
+      "to_year": "2015",
+      "before": "5x100/56.1;5x114.3/56.1",
+      "after": "5x114.3/56.1"
+    },
+    {
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x139.7/108.0",
+      "after": "5x139.7/108.1"
+    },
+    {
+      "make": "suzuki",
+      "model": "grand-vitara",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x139.7/108.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "4runner",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/106.1",
+      "after": "6x139.7/106.0"
+    },
+    {
+      "make": "toyota",
+      "model": "4runner",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/106.0",
+      "after": "6x139.7/106.1"
+    },
+    {
+      "make": "toyota",
+      "model": "4runner",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "6x139.7/106.1",
+      "after": "6x139.7/95.1"
+    },
+    {
+      "make": "toyota",
+      "model": "celica",
+      "from_year": "1985",
+      "to_year": "1986",
+      "before": "4x114.3/60.1",
+      "after": "5x100/54.1"
+    },
+    {
+      "make": "toyota",
+      "model": "corolla",
+      "from_year": "1997",
+      "to_year": "1998",
+      "before": "4x100/54.1",
+      "after": "5x100/54.1"
+    },
+    {
+      "make": "toyota",
+      "model": "corolla",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x100/54.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser",
+      "from_year": "1997",
+      "to_year": "1998",
+      "before": "6x139.7/106.1",
+      "after": "5x150/110.0"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x150/110.0",
+      "after": "5x150/110.0;5x150/110.1"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser",
+      "from_year": "2001",
+      "to_year": "2002",
+      "before": "5x150/110.0;5x150/110.1",
+      "after": "5x150/110.1"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x150/110.1",
+      "after": "5x150/106.0"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x150/106.0",
+      "after": "5x150/110.1"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x150/110.1",
+      "after": "6x139.7/95.2"
+    },
+    {
+      "make": "toyota",
+      "model": "land-cruiser",
+      "from_year": "2023",
+      "to_year": "2024",
+      "before": "6x139.7/95.2",
+      "after": "5x150/110.1"
+    },
+    {
+      "make": "toyota",
+      "model": "prius",
+      "from_year": "2002",
+      "to_year": "2003",
+      "before": "4x100/54.1",
+      "after": "5x100/54.1"
+    },
+    {
+      "make": "toyota",
+      "model": "prius",
+      "from_year": "2003",
+      "to_year": "2004",
+      "before": "5x100/54.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "prius",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x114.3/60.1",
+      "after": "5x100/54.1"
+    },
+    {
+      "make": "toyota",
+      "model": "prius",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x100/54.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "prius-plug-in",
+      "from_year": "2015",
+      "to_year": "2016",
+      "before": "5x100/54.1;5x114.3/60.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "prius-prime",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x100/54.1;5x114.3/60.1",
+      "after": "5x100/54.1"
+    },
+    {
+      "make": "toyota",
+      "model": "prius-prime",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x100/54.1",
+      "after": "5x100/54.1;5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "rav4",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x100/60.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "sequoia",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x150/110.1",
+      "after": "5x150/110.0"
+    },
+    {
+      "make": "toyota",
+      "model": "sequoia",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x150/110.0",
+      "after": "5x150/110.1"
+    },
+    {
+      "make": "toyota",
+      "model": "sequoia",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x150/110.1",
+      "after": "6x139.7/95.1"
+    },
+    {
+      "make": "toyota",
+      "model": "supra",
+      "from_year": "1981",
+      "to_year": "1982",
+      "before": "4x114.3/60.1",
+      "after": "5x114.3/60.1"
+    },
+    {
+      "make": "toyota",
+      "model": "supra",
+      "from_year": "1998",
+      "to_year": "2019",
+      "before": "5x114.3/60.1",
+      "after": "5x114.3/66.1"
+    },
+    {
+      "make": "toyota",
+      "model": "supra",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x114.3/66.1",
+      "after": "5x112/66.5;5x114.3/66.1"
+    },
+    {
+      "make": "toyota",
+      "model": "supra",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x112/66.5;5x114.3/66.1",
+      "after": "5x112/66.5"
+    },
+    {
+      "make": "toyota",
+      "model": "tacoma",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "6x139.7/106.1",
+      "after": "6x139.7/106.0"
+    },
+    {
+      "make": "toyota",
+      "model": "tacoma",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "6x139.7/106.0",
+      "after": "6x139.7/106.1"
+    },
+    {
+      "make": "toyota",
+      "model": "tundra",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "6x139.7/106.1",
+      "after": "5x150/110.1"
+    },
+    {
+      "make": "toyota",
+      "model": "tundra",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x150/110.1",
+      "after": "5x150/110.0"
+    },
+    {
+      "make": "toyota",
+      "model": "tundra",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x150/110.0",
+      "after": "5x150/110.1"
+    },
+    {
+      "make": "toyota",
+      "model": "tundra",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x150/110.1",
+      "after": "6x139.7/95.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "beetle",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x100/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "golf",
+      "from_year": "1998",
+      "to_year": "2000",
+      "before": "4x100/57.1",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "golf",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x100/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "gti",
+      "from_year": "1998",
+      "to_year": "2000",
+      "before": "4x100/57.1",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "gti",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x100/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "jetta",
+      "from_year": "1998",
+      "to_year": "2000",
+      "before": "4x100/57.1",
+      "after": "5x100/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "jetta",
+      "from_year": "2005",
+      "to_year": "2006",
+      "before": "5x100/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "passat",
+      "from_year": "1997",
+      "to_year": "2000",
+      "before": "4x100/57.1",
+      "after": "5x112/57.1"
+    },
+    {
+      "make": "volkswagen",
+      "model": "touareg",
+      "from_year": "2006",
+      "to_year": "2007",
+      "before": "5x112/57.1",
+      "after": "5x130/71.6"
+    },
+    {
+      "make": "volvo",
+      "model": "ex30",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x108/63.4",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "ex40",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x108/63.4",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "ex90",
+      "from_year": "2024",
+      "to_year": "2025",
+      "before": "5x108/63.4",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "s40",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x108/63.3",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "volvo",
+      "model": "s70",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x108/65.1",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "s80",
+      "from_year": "1999",
+      "to_year": "2000",
+      "before": "5x108/65.1",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "v50",
+      "from_year": "2011",
+      "to_year": "2012",
+      "before": "5x108/63.3",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "volvo",
+      "model": "v90",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x108/63.4",
+      "after": "5x108/63.5"
+    },
+    {
+      "make": "volvo",
+      "model": "v90",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.5",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "v90",
+      "from_year": "2019",
+      "to_year": "2020",
+      "before": "5x108/63.3",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "volvo",
+      "model": "v90",
+      "from_year": "2020",
+      "to_year": "2021",
+      "before": "5x108/63.4",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "v90",
+      "from_year": "2021",
+      "to_year": "2022",
+      "before": "5x108/63.3",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "volvo",
+      "model": "xc40",
+      "from_year": "2022",
+      "to_year": "2023",
+      "before": "5x108/63.4",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "xc60",
+      "from_year": "2017",
+      "to_year": "2018",
+      "before": "5x108/63.4",
+      "after": "5x108/63.5"
+    },
+    {
+      "make": "volvo",
+      "model": "xc60",
+      "from_year": "2018",
+      "to_year": "2019",
+      "before": "5x108/63.5",
+      "after": "5x108/63.4"
+    },
+    {
+      "make": "volvo",
+      "model": "xc60",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x108/63.4",
+      "after": "5x108/63.3"
+    },
+    {
+      "make": "volvo",
+      "model": "xc90",
+      "from_year": "2025",
+      "to_year": "2026",
+      "before": "5x108/63.4",
+      "after": "5x108/63.3"
+    }
+  ],
+  "frontOnlyBySource": [
+    {
+      "source": "cache-import [expanded]",
+      "n": 1437
+    },
+    {
+      "source": "cache-import",
+      "n": 782
+    },
+    {
+      "source": "cache-import [trim-expanded]",
+      "n": 631
+    },
+    {
+      "source": "generation-baseline",
+      "n": 570
+    },
+    {
+      "source": "api_import [expanded]",
+      "n": 539
+    },
+    {
+      "source": "api_import",
+      "n": 311
+    },
+    {
+      "source": "generation-baseline [expanded]",
+      "n": 212
+    },
+    {
+      "source": "manual_seed_spec [expanded]",
+      "n": 190
+    },
+    {
+      "source": "api_import [trim-expanded]",
+      "n": 174
+    },
+    {
+      "source": "manual_seed_spec [trim-expanded]",
+      "n": 174
+    },
+    {
+      "source": "manual_seed_spec",
+      "n": 98
+    },
+    {
+      "source": "generation",
+      "n": 53
+    },
+    {
+      "source": "cleanup_legacy_mazda_mx-5-miata",
+      "n": 50
+    },
+    {
+      "source": "generation_template [sib-same-year:tah [expanded]",
+      "n": 47
+    },
+    {
+      "source": "generation-baseline [trim-expanded]",
+      "n": 30
+    }
+  ],
+  "errorsByCheckSource": [
+    {
+      "check_name": "deprecated_source_active",
+      "source": "deprecated-staggered-split",
+      "n": 644
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "trim-research",
+      "n": 412
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_inherit",
+      "n": 335
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "google-ai-overview",
+      "n": 241
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "cache-import [expanded]",
+      "n": 231
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "catalog-gap-fill",
+      "n": 196
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "verified-research",
+      "n": 193
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [expanded]",
+      "n": 150
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "catalog-gap-fill [web_research]",
+      "n": 148
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "merged-staggered",
+      "n": 100
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "tgp_solutions",
+      "n": 100
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "cache-import",
+      "n": 60
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [expanded]",
+      "n": 48
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "backfill-gc",
+      "n": 45
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "tiresize.com",
+      "n": 42
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [template:ram_hd_gen5_2019_ [expanded]",
+      "n": 39
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "railway_import",
+      "n": 38
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [sib-same-year:tah [expanded]",
+      "n": 37
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template",
+      "n": 34
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "90s-research-batch",
+      "n": 31
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "merge_consolidation",
+      "n": 28
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "cache-import [trim-expanded]",
+      "n": 25
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "tier-a-import",
+      "n": 21
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_inherit_2015 [expanded]",
+      "n": 18
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [sib-same-year:sub [expanded]",
+      "n": 18
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "cleanup_generation_template",
+      "n": 18
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "final-gap-fill",
+      "n": 17
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [web_research] [expanded]",
+      "n": 16
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "final-gap-fill [expanded]",
+      "n": 16
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "chevy-gmc-research",
+      "n": 16
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "final-gap-fill [trim-expanded]",
+      "n": 15
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "verified-research [sizes-inherited]",
+      "n": 9
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [web_research] [expanded]",
+      "n": 8
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "cleanup_wheelsize",
+      "n": 7
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "manual-research",
+      "n": 7
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2010  [expanded]",
+      "n": 7
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "final-gap-fill [web_research]",
+      "n": 7
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2016  [expanded]",
+      "n": 6
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "manufacturer_spec",
+      "n": 6
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "final-gap-fill [sm-same-year:silverad: [expanded]",
+      "n": 6
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2004 2500] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2007 2500] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2006 2500] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "backfill-2014",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2005 2500] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2003 2500] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2008 2500] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2009 2500] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation-baseline",
+      "n": 5
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_inherit_2025 [trim-expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2019  [expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2008  [expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "80s-research-batch",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2004 3500] [expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_inherit [web_research]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2012  [expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2020 3500] [trim-expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2003 3500] [expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2005 3500] [expanded]",
+      "n": 4
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2010 3500] [expanded]",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2017  [expanded]",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2024 3500]",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2015  [expanded]",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2009  [expanded]",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "wheelsize",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "cache-import [trim-expanded] [verified-research]",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "cleanup_legacy_bmw_3-series",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2025 3500]",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "fix_cross_gen",
+      "n": 3
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "verified-research [expanded]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2007  [expanded]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "batch2v2-trim-groups",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "wheelsize [expanded]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2020  [expanded]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2008 acadia]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2012 acadia]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "manual_import",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2026 3500]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2018  [expanded]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2012 3500] [expanded]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation-baseline [trim-expanded]",
+      "n": 2
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2013  [expanded]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "batch7-subcompacts-final",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2010 traverse]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2013 traverse]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "batch7-subcompacts-final [web_research]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "batch6-minivans-evs",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2011 3500]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2010 3500]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2010 2500]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2012 2500]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2009 traverse]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2012 3500]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2011 3500] [expanded]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2011 traverse]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "generation_template [filled from 2011  [expanded]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "final-gap-fill [web_research] [expanded]",
+      "n": 1
+    },
+    {
+      "check_name": "dup_trim_per_ymm",
+      "source": "api_import [filled from 2015 3500]",
+      "n": 1
+    },
+    {
+      "check_name": "empty_bolt_pattern",
+      "source": "deprecated-staggered-split",
+      "n": 20
+    },
+    {
+      "check_name": "empty_bolt_pattern",
+      "source": "merged-staggered",
+      "n": 6
+    },
+    {
+      "check_name": "empty_bolt_pattern",
+      "source": "tgp_solutions",
+      "n": 4
+    },
+    {
+      "check_name": "junk_trim_name",
+      "source": "deprecated-staggered-split",
+      "n": 644
+    },
+    {
+      "check_name": "junk_trim_name",
+      "source": "tgp_solutions",
+      "n": 26
+    },
+    {
+      "check_name": "tire_not_array",
+      "source": "oem_specs",
+      "n": 142
+    },
+    {
+      "check_name": "tire_rim_mismatch",
+      "source": "trim-research",
+      "n": 14
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "cache-import [expanded]",
+      "n": 1437
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "cache-import",
+      "n": 782
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "cache-import [trim-expanded]",
+      "n": 631
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation-baseline",
+      "n": 570
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "api_import [expanded]",
+      "n": 539
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "api_import",
+      "n": 311
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation-baseline [expanded]",
+      "n": 212
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "manual_seed_spec [expanded]",
+      "n": 190
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "api_import [trim-expanded]",
+      "n": 174
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "manual_seed_spec [trim-expanded]",
+      "n": 174
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "manual_seed_spec",
+      "n": 98
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation",
+      "n": 53
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "cleanup_legacy_mazda_mx-5-miata",
+      "n": 50
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tah [expanded]",
+      "n": 47
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation-baseline [trim-expanded]",
+      "n": 30
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "platform_inheritance_ld",
+      "n": 27
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "alias-from-mazda3",
+      "n": 25
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_inherit_2025",
+      "n": 15
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template",
+      "n": 13
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_inherit_2024",
+      "n": 10
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "inherited_from_2007_SAME_GENERATION",
+      "n": 8
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_inherit_2025 [trim-expanded]",
+      "n": 8
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "wheelsize",
+      "n": 7
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "verified-research [sizes-inherited]",
+      "n": 5
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "wheelsize [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "90s-research-batch",
+      "n": 5
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "verified-research [sizes-inherited] [expanded]",
+      "n": 5
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "inherited_from_2020_SAME_GENERATION",
+      "n": 5
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "manual-qa-fix",
+      "n": 3
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "platform_inheritance_lx",
+      "n": 3
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "reviewed_from_2021_ADJACENT_YEAR",
+      "n": 2
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2025]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2017]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2019]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2026]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2015]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2021]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2022]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2023]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2016]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2020]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "cache-import-fix",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "generation_template [sib-same-year:tahoe:2024]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_axle_front_only",
+      "source": "reviewed_from_2020_ADJACENT_YEAR",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "generation_inherit",
+      "n": 288
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "oem_specs",
+      "n": 142
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "chevy-gmc-research",
+      "n": 135
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "80s-research-batch",
+      "n": 90
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "generation_template",
+      "n": 54
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "catalog-gap-fill",
+      "n": 52
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "trim-research",
+      "n": 49
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "manual-research",
+      "n": 20
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "generation-baseline",
+      "n": 13
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "demo-fix",
+      "n": 5
+    },
+    {
+      "check_name": "wheel_not_array",
+      "source": "verified-research [sizes-inherited]",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_object_stringified",
+      "source": "manual-clawd",
+      "n": 22
+    },
+    {
+      "check_name": "wheel_object_stringified",
+      "source": "manual-validated:tier3-fill",
+      "n": 11
+    },
+    {
+      "check_name": "wheel_object_stringified",
+      "source": "manual-validated:tier2-fill",
+      "n": 5
+    },
+    {
+      "check_name": "wheel_object_stringified",
+      "source": "manual_fix",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_object_stringified",
+      "source": "manual-validated:swiss-cheese-fill",
+      "n": 1
+    },
+    {
+      "check_name": "wheel_unparseable",
+      "source": "merged-staggered",
+      "n": 1
+    }
+  ],
+  "checks": [
+    {
+      "name": "dup_trim_per_ymm",
+      "desc": "same year/make/model/display_trim appears >1 (error if specs conflict, warn if identical)"
+    },
+    {
+      "name": "junk_trim_name",
+      "desc": "Front/Rear in trim (error); comma catch-all, trim==model (warn); Base/empty beside real trims (info)"
+    },
+    {
+      "name": "wheel_string_width_first",
+      "desc": "string wheel entries stored width-first (8x18 / 8Jx17)"
+    },
+    {
+      "name": "wheel_not_array",
+      "desc": "oem_wheel_sizes is a bare jsonb scalar (double-encoded JSON string)"
+    },
+    {
+      "name": "tire_not_array",
+      "desc": "oem_tire_sizes is a bare jsonb scalar (double-encoded JSON string)"
+    },
+    {
+      "name": "wheel_shape_nonstandard",
+      "desc": "oem_wheel_sizes shape other than obj:axle"
+    },
+    {
+      "name": "wheel_axle_front_only",
+      "desc": "every wheel entry is axle:'front' with no rear/both — square fitment mislabelled; fitment-search filters axle=='both' so these resolve as staggered-with-no-rear"
+    },
+    {
+      "name": "wheel_object_stringified",
+      "desc": "wheel entries are the literal string '[object Object]' — data destroyed at import, unrecoverable"
+    },
+    {
+      "name": "wheel_unparseable",
+      "desc": "wheel entries the canonical converter cannot convert (or all entries dropped)"
+    },
+    {
+      "name": "wheel_dims_implausible",
+      "desc": "wheel width outside 3..14 in, width null/missing, diameter-only entry, or width range string"
+    },
+    {
+      "name": "wheel_mixed_types",
+      "desc": "oem_wheel_sizes array mixes strings and objects"
+    },
+    {
+      "name": "wheel_dropped_keys",
+      "desc": "wheel entries carry per-entry notes/trim that the canonical shape cannot hold (needs trim split)"
+    },
+    {
+      "name": "tire_unparseable",
+      "desc": "tire size strings with no recognizable rim diameter"
+    },
+    {
+      "name": "tire_double_encoded",
+      "desc": "tire array elements that are themselves JSON-encoded arrays"
+    },
+    {
+      "name": "tire_axle_suffix",
+      "desc": "staggered tires encoded as '245/40R19 front' strings inside a flat array"
+    },
+    {
+      "name": "tire_rim_mismatch",
+      "desc": "tire rim diameter with no matching OEM wheel diameter (error if none match, warn if partial)"
+    },
+    {
+      "name": "empty_bolt_pattern",
+      "desc": "bolt_pattern null/empty"
+    },
+    {
+      "name": "bolt_pattern_malformed",
+      "desc": "bolt_pattern not ^\\d+x\\d+(\\.\\d+)?$"
+    },
+    {
+      "name": "bolt_or_cb_changes_within_run",
+      "desc": "consecutive model-years where the set of bolt/CB values changes (info: Pass 3 reviews)"
+    },
+    {
+      "name": "offset_out_of_range",
+      "desc": "offset_min < -80 or offset_max > 75 or min > max (info for HD 8-lug / DRW where +130 is real)"
+    },
+    {
+      "name": "cb_implausible",
+      "desc": "center bore outside the plausible range for the bolt pattern family"
+    },
+    {
+      "name": "deprecated_source_active",
+      "desc": "source LIKE 'deprecated%' but not quarantined"
+    },
+    {
+      "name": "cert_status_non_certified_active",
+      "desc": "active rows the site will never serve (certification_status <> certified) — quarantine or fix"
+    },
+    {
+      "name": "make_slug_variant",
+      "desc": "make slug variants: 'mercedes' vs 'mercedes-benz', '<make> vans/minivans'"
+    },
+    {
+      "name": "phantom_year_hint",
+      "desc": "year out of 1940..2026 (error); model-year with no sibling year within ±3 (info)"
+    },
+    {
+      "name": "missing_core_fields",
+      "desc": "null/empty thread_size, seat_type, center_bore, tires or wheels"
+    },
+    {
+      "name": "staggered_inconsistent",
+      "desc": "tires {front,rear} but wheels all square (warn); wheels front/rear but tires flat (info)"
+    },
+    {
+      "name": "thread_size_nonstandard",
+      "desc": "thread_size not in canonical form (M12x1.5 | M14x1.5 | 1/2-20 …): spaces, trailing B, .50"
+    },
+    {
+      "name": "seat_type_nonstandard",
+      "desc": "seat_type not in (conical, ball, flat)"
+    }
+  ]
+}

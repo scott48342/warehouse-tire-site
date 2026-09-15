@@ -1,0 +1,3449 @@
+{
+  "generatedAt": "2026-09-15T13:05:37.599Z",
+  "total": 36337,
+  "alreadyCanonical": 788,
+  "wouldRewrite": 35509,
+  "cannotConvert": 40,
+  "perShape": [
+    {
+      "shape": "obj:axle",
+      "rows": 22700,
+      "convertible": 22700,
+      "blocked": 0,
+      "entries_out": 55576,
+      "dropped_keys": 52
+    },
+    {
+      "shape": "obj:width,diameter",
+      "rows": 3404,
+      "convertible": 3404,
+      "blocked": 0,
+      "entries_out": 4148,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:width,offset,diameter",
+      "rows": 3257,
+      "convertible": 3257,
+      "blocked": 0,
+      "entries_out": 6251,
+      "dropped_keys": 11
+    },
+    {
+      "shape": "strings",
+      "rows": 2840,
+      "convertible": 2800,
+      "blocked": 40,
+      "entries_out": 4571,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:position",
+      "rows": 2260,
+      "convertible": 2260,
+      "blocked": 0,
+      "entries_out": 4724,
+      "dropped_keys": 16
+    },
+    {
+      "shape": "not-array:string→obj:axle",
+      "rows": 649,
+      "convertible": 649,
+      "blocked": 0,
+      "entries_out": 6463,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "mixed",
+      "rows": 529,
+      "convertible": 529,
+      "blocked": 0,
+      "entries_out": 2630,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:front_width",
+      "rows": 325,
+      "convertible": 325,
+      "blocked": 0,
+      "entries_out": 1056,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "not-array:string→strings",
+      "rows": 142,
+      "convertible": 142,
+      "blocked": 0,
+      "entries_out": 330,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:size",
+      "rows": 86,
+      "convertible": 86,
+      "blocked": 0,
+      "entries_out": 661,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "not-array:string→obj:position",
+      "rows": 53,
+      "convertible": 53,
+      "blocked": 0,
+      "entries_out": 94,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:front/rear",
+      "rows": 36,
+      "convertible": 36,
+      "blocked": 0,
+      "entries_out": 162,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:boltPattern",
+      "rows": 20,
+      "convertible": 20,
+      "blocked": 0,
+      "entries_out": 60,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:d,o,w",
+      "rows": 13,
+      "convertible": 13,
+      "blocked": 0,
+      "entries_out": 39,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:isStaggered",
+      "rows": 6,
+      "convertible": 6,
+      "blocked": 0,
+      "entries_out": 6,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:notes",
+      "rows": 6,
+      "convertible": 6,
+      "blocked": 0,
+      "entries_out": 10,
+      "dropped_keys": 10
+    },
+    {
+      "shape": "not-array:string→obj:width,offset,diameter",
+      "rows": 5,
+      "convertible": 5,
+      "blocked": 0,
+      "entries_out": 5,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "obj:trim",
+      "rows": 3,
+      "convertible": 3,
+      "blocked": 0,
+      "entries_out": 15,
+      "dropped_keys": 15
+    },
+    {
+      "shape": "obj:staggered",
+      "rows": 2,
+      "convertible": 2,
+      "blocked": 0,
+      "entries_out": 2,
+      "dropped_keys": 0
+    },
+    {
+      "shape": "empty",
+      "rows": 1,
+      "convertible": 1,
+      "blocked": 0,
+      "entries_out": 0,
+      "dropped_keys": 0
+    }
+  ],
+  "tireShapeCounts": {
+    "array": 34927,
+    "obj:front,rear": 1268,
+    "not-array:string": 142
+  },
+  "examples": {
+    "obj:position": [
+      {
+        "id": "05e8dac6-86c3-4c12-82ce-4d738a20615f",
+        "vehicle": "2025 acura adx Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 7.5,
+              "offset": 45,
+              "diameter": 18,
+              "position": "both"
+            },
+            {
+              "width": 8.5,
+              "offset": 35,
+              "diameter": 19,
+              "position": "both"
+            }
+          ],
+          "tires": [
+            "225/55R18",
+            "235/45R19"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": 45,
+              "tireSize": "225/55R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 19,
+              "width": 8.5,
+              "offset": 35,
+              "tireSize": "235/45R19",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/55R18",
+            "235/45R19"
+          ]
+        }
+      },
+      {
+        "id": "41084d19-35d2-4f67-a0d9-e8199ca92f8a",
+        "vehicle": "2026 acura adx Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 7.5,
+              "offset": 45,
+              "diameter": 18,
+              "position": "both"
+            },
+            {
+              "width": 8.5,
+              "offset": 35,
+              "diameter": 19,
+              "position": "both"
+            }
+          ],
+          "tires": [
+            "225/55R18",
+            "235/45R19"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": 45,
+              "tireSize": "225/55R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 19,
+              "width": 8.5,
+              "offset": 35,
+              "tireSize": "235/45R19",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/55R18",
+            "235/45R19"
+          ]
+        }
+      },
+      {
+        "id": "0242a7d9-8d78-45c7-afa4-0b44b905db0d",
+        "vehicle": "2001 acura cl-type-s Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 7,
+              "offset": 45,
+              "diameter": 17,
+              "position": "both"
+            }
+          ],
+          "tires": [
+            "225/50R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7,
+              "offset": 45,
+              "tireSize": "225/50R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/50R17"
+          ]
+        }
+      }
+    ],
+    "obj:width,offset,diameter": [
+      {
+        "id": "3d06acec-a118-4dc5-9f0f-dd34b95d51db",
+        "vehicle": "1997 acura cl Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 6.5,
+              "offset": 50,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": 50,
+              "tireSize": "205/55R16",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        }
+      },
+      {
+        "id": "3ecf4228-1030-4d58-a6c5-b59e3f2d6d2f",
+        "vehicle": "1998 acura cl Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 6.5,
+              "offset": 50,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": 50,
+              "tireSize": "205/55R16",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        }
+      },
+      {
+        "id": "1739433a-50f5-4983-a043-caffd0675180",
+        "vehicle": "1999 acura cl Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 6.5,
+              "offset": 50,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": 50,
+              "tireSize": "205/55R16",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        }
+      }
+    ],
+    "obj:width,diameter": [
+      {
+        "id": "817feb0e-22f6-4a24-8dbc-4a2d6ac382d6",
+        "vehicle": "2001 acura cl Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 6.5,
+              "diameter": 16
+            },
+            {
+              "width": 6.5,
+              "diameter": 17
+            }
+          ],
+          "tires": [
+            "205/60R16",
+            "215/50R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": null,
+              "tireSize": "205/60R16",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 6.5,
+              "offset": null,
+              "tireSize": "215/50R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/60R16",
+            "215/50R17"
+          ]
+        }
+      },
+      {
+        "id": "282a2d0d-3bdc-4878-aeeb-fa0ca4d41d6d",
+        "vehicle": "2002 acura cl Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 6.5,
+              "diameter": 16
+            },
+            {
+              "width": 6.5,
+              "diameter": 17
+            }
+          ],
+          "tires": [
+            "205/60R16",
+            "215/50R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": null,
+              "tireSize": "205/60R16",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 6.5,
+              "offset": null,
+              "tireSize": "215/50R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/60R16",
+            "215/50R17"
+          ]
+        }
+      },
+      {
+        "id": "47fdf43a-8079-4776-b9ad-abd7a0f9b033",
+        "vehicle": "2003 acura cl Base",
+        "before": {
+          "wheels": [
+            {
+              "width": 6.5,
+              "diameter": 16
+            },
+            {
+              "width": 6.5,
+              "diameter": 17
+            }
+          ],
+          "tires": [
+            "205/60R16",
+            "215/50R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": null,
+              "tireSize": "205/60R16",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 6.5,
+              "offset": null,
+              "tireSize": "215/50R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/60R16",
+            "215/50R17"
+          ]
+        }
+      }
+    ],
+    "obj:axle": [
+      {
+        "id": "ad96c064-2401-4f05-ad91-eeec8f0ad59b",
+        "vehicle": "2013 acura ilx A-Spec",
+        "before": {
+          "wheels": [
+            {
+              "axle": "front",
+              "width": 6.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "front",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            },
+            {
+              "axle": "front",
+              "width": 7.5,
+              "offset": null,
+              "isStock": true,
+              "diameter": 18
+            }
+          ],
+          "tires": [
+            "205/55R16",
+            "215/45R17",
+            "225/40R18"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": null,
+              "tireSize": "205/55R16",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7,
+              "offset": null,
+              "tireSize": "215/45R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "225/40R18",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16",
+            "215/45R17",
+            "225/40R18"
+          ]
+        }
+      },
+      {
+        "id": "50abd94e-50ce-41f3-a140-a5495ba37bec",
+        "vehicle": "2013 acura ilx Technology",
+        "before": {
+          "wheels": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "tires": [
+            "215/45R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7,
+              "offset": null,
+              "tireSize": "215/45R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "215/45R17"
+          ]
+        }
+      },
+      {
+        "id": "75c1d505-2385-45ef-809d-37b8e480c561",
+        "vehicle": "2013 acura ilx Base",
+        "before": {
+          "wheels": [
+            {
+              "axle": "square",
+              "width": 7,
+              "offset": null,
+              "isStock": true,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 7,
+              "offset": null,
+              "tireSize": "205/55R16",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16"
+          ]
+        }
+      }
+    ],
+    "strings": [
+      {
+        "id": "1158eb70-6910-41c1-9155-4b7e1cdd3d1e",
+        "vehicle": "2018 acura ilx w/A-Spec Pkg.",
+        "before": {
+          "wheels": [
+            "7.5x18"
+          ],
+          "tires": [
+            "225/40R18"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "225/40R18",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/40R18"
+          ]
+        }
+      },
+      {
+        "id": "68777174-d2e7-4309-b3bd-429a585314ba",
+        "vehicle": "2018 acura ilx Base",
+        "before": {
+          "wheels": [
+            "7x17"
+          ],
+          "tires": [
+            "P215/45R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7,
+              "offset": null,
+              "tireSize": "P215/45R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "P215/45R17"
+          ]
+        }
+      },
+      {
+        "id": "ec26e7a5-664d-4e51-87a4-84c83b2f657c",
+        "vehicle": "2018 acura ilx Special Edition",
+        "before": {
+          "wheels": [
+            "7.5x18"
+          ],
+          "tires": [
+            "225/40R18"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "225/40R18",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/40R18"
+          ]
+        }
+      }
+    ],
+    "obj:front_width": [
+      {
+        "id": "2560a57a-0a3e-4dfa-a0e7-49b40f7ccc1d",
+        "vehicle": "2018 acura nsx Base",
+        "before": {
+          "wheels": [
+            {
+              "diameter": 19,
+              "front_width": 8.5
+            },
+            {
+              "diameter": 20,
+              "rear_width": 11
+            }
+          ],
+          "tires": {
+            "rear": [
+              "305/30ZR20"
+            ],
+            "front": [
+              "245/35ZR19"
+            ]
+          }
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "front",
+              "diameter": 19,
+              "width": 8.5,
+              "offset": null,
+              "tireSize": "245/35ZR19",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 19,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 20,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 20,
+              "width": 11,
+              "offset": null,
+              "tireSize": "305/30ZR20",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "245/35ZR19",
+            "305/30ZR20"
+          ]
+        }
+      },
+      {
+        "id": "db214f3e-863b-40e5-9a57-0252a6479023",
+        "vehicle": "2018 alfa romeo 4c Base",
+        "before": {
+          "wheels": [
+            {
+              "diameter": 17,
+              "front_width": 7
+            },
+            {
+              "diameter": 18,
+              "rear_width": 8,
+              "front_width": 7
+            },
+            {
+              "diameter": 19,
+              "rear_width": 8.5
+            }
+          ],
+          "tires": {
+            "rear": [
+              "235/35ZR19",
+              "235/40ZR18"
+            ],
+            "front": [
+              "205/40ZR18",
+              "205/45ZR17"
+            ]
+          }
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "front",
+              "diameter": 17,
+              "width": 7,
+              "offset": null,
+              "tireSize": "205/45ZR17",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 17,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 18,
+              "width": 7,
+              "offset": null,
+              "tireSize": "205/40ZR18",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 18,
+              "width": 8,
+              "offset": null,
+              "tireSize": "235/40ZR18",
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 19,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 19,
+              "width": 8.5,
+              "offset": null,
+              "tireSize": "235/35ZR19",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/40ZR18",
+            "205/45ZR17",
+            "235/35ZR19",
+            "235/40ZR18"
+          ]
+        }
+      },
+      {
+        "id": "eb2e3a3e-94c8-41bd-990a-987431f4c332",
+        "vehicle": "2018 alfa romeo 4c Spider",
+        "before": {
+          "wheels": [
+            {
+              "diameter": 17,
+              "front_width": 7
+            },
+            {
+              "diameter": 18,
+              "rear_width": 8,
+              "front_width": 7
+            },
+            {
+              "diameter": 19,
+              "rear_width": 8.5
+            }
+          ],
+          "tires": {
+            "rear": [
+              "235/35ZR19",
+              "235/40ZR18"
+            ],
+            "front": [
+              "205/40ZR18",
+              "205/45ZR17"
+            ]
+          }
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "front",
+              "diameter": 17,
+              "width": 7,
+              "offset": null,
+              "tireSize": "205/45ZR17",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 17,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 18,
+              "width": 7,
+              "offset": null,
+              "tireSize": "205/40ZR18",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 18,
+              "width": 8,
+              "offset": null,
+              "tireSize": "235/40ZR18",
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 19,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 19,
+              "width": 8.5,
+              "offset": null,
+              "tireSize": "235/35ZR19",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/40ZR18",
+            "205/45ZR17",
+            "235/35ZR19",
+            "235/40ZR18"
+          ]
+        }
+      }
+    ],
+    "mixed": [
+      {
+        "id": "e0da989c-776c-4654-b711-d0d0d5b8eda1",
+        "vehicle": "2019 buick enclave Preferred, Essence, Avenir",
+        "before": {
+          "wheels": [
+            "7.5Jx18",
+            "8Jx20",
+            "8.5Jx21",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 50,
+              "isStock": false,
+              "diameter": 19
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 50,
+              "isStock": false,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 55.5,
+              "isStock": false,
+              "diameter": 21
+            }
+          ],
+          "tires": [
+            "245/60R18",
+            "255/55R20",
+            "275/45R21",
+            "255/65R18",
+            "255/60R19",
+            "265/50R21"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8,
+              "offset": null,
+              "tireSize": "255/55R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 8.5,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 19,
+              "width": 8,
+              "offset": 50,
+              "tireSize": "255/60R19",
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 50,
+              "tireSize": "255/55R20",
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 9,
+              "offset": 55.5,
+              "tireSize": null,
+              "isStock": false
+            }
+          ],
+          "tires": [
+            "245/60R18",
+            "255/55R20",
+            "275/45R21",
+            "255/65R18",
+            "255/60R19",
+            "265/50R21"
+          ]
+        }
+      },
+      {
+        "id": "77c22cb7-a9e2-4556-965a-10d1d1c467b8",
+        "vehicle": "2020 buick enclave Preferred, Essence, Avenir",
+        "before": {
+          "wheels": [
+            "7.5Jx18",
+            "8Jx20",
+            "8.5Jx21",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 50,
+              "isStock": false,
+              "diameter": 19
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 50,
+              "isStock": false,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 55.5,
+              "isStock": false,
+              "diameter": 21
+            }
+          ],
+          "tires": [
+            "245/60R18",
+            "255/55R20",
+            "275/45R21"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "245/60R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8,
+              "offset": null,
+              "tireSize": "255/55R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 8.5,
+              "offset": null,
+              "tireSize": "275/45R21",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 19,
+              "width": 8,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 50,
+              "tireSize": "255/55R20",
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 9,
+              "offset": 55.5,
+              "tireSize": "275/45R21",
+              "isStock": false
+            }
+          ],
+          "tires": [
+            "245/60R18",
+            "255/55R20",
+            "275/45R21"
+          ]
+        }
+      },
+      {
+        "id": "dccc3ddd-1554-44b2-9505-ca365fcce479",
+        "vehicle": "2021 buick enclave Preferred, Essence, Avenir",
+        "before": {
+          "wheels": [
+            "7.5Jx18",
+            "8Jx20",
+            "8.5Jx21",
+            {
+              "axle": "both",
+              "width": 8,
+              "offset": 50,
+              "isStock": false,
+              "diameter": 19
+            },
+            {
+              "axle": "both",
+              "width": 8.5,
+              "offset": 50,
+              "isStock": false,
+              "diameter": 20
+            },
+            {
+              "axle": "both",
+              "width": 9,
+              "offset": 55.5,
+              "isStock": false,
+              "diameter": 21
+            }
+          ],
+          "tires": [
+            "245/60R18",
+            "255/55R20",
+            "275/45R21"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "245/60R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8,
+              "offset": null,
+              "tireSize": "255/55R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 8.5,
+              "offset": null,
+              "tireSize": "275/45R21",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 19,
+              "width": 8,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 50,
+              "tireSize": "255/55R20",
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 9,
+              "offset": 55.5,
+              "tireSize": "275/45R21",
+              "isStock": false
+            }
+          ],
+          "tires": [
+            "245/60R18",
+            "255/55R20",
+            "275/45R21"
+          ]
+        }
+      }
+    ],
+    "not-array:string→obj:axle": [
+      {
+        "id": "9f990fac-2fc8-4fc9-866b-6a523d0df348",
+        "vehicle": "1965 buick gran-sport Base",
+        "before": {
+          "wheels": "[{\"diameter\":14,\"width\":6,\"offset\":null,\"isStock\":true,\"axle\":\"both\"},{\"diameter\":15,\"width\":7,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":15,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":16,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":17,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":17,\"width\":9,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":18,\"width\":8.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":18,\"width\":9.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":20,\"width\":8.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":20,\"width\":10,\"offset\":0,\"isStock\":false,\"axle\":\"both\"}]",
+          "tires": [
+            "G70-14"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 14,
+              "width": 6,
+              "offset": null,
+              "tireSize": "G70-14",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 7,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 9,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 9.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 10,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            }
+          ],
+          "tires": [
+            "G70-14"
+          ]
+        }
+      },
+      {
+        "id": "d03c920a-f04b-4814-9983-190aaed0c403",
+        "vehicle": "1966 buick gran-sport Base",
+        "before": {
+          "wheels": "[{\"diameter\":14,\"width\":6,\"offset\":null,\"isStock\":true,\"axle\":\"both\"},{\"diameter\":15,\"width\":7,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":15,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":16,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":17,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":17,\"width\":9,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":18,\"width\":8.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":18,\"width\":9.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":20,\"width\":8.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":20,\"width\":10,\"offset\":0,\"isStock\":false,\"axle\":\"both\"}]",
+          "tires": [
+            "G70-14"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 14,
+              "width": 6,
+              "offset": null,
+              "tireSize": "G70-14",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 7,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 9,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 9.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 10,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            }
+          ],
+          "tires": [
+            "G70-14"
+          ]
+        }
+      },
+      {
+        "id": "8f1ee83d-e19c-4a3b-8431-0aa7c661852a",
+        "vehicle": "1967 buick gran-sport Base",
+        "before": {
+          "wheels": "[{\"diameter\":14,\"width\":6,\"offset\":null,\"isStock\":true,\"axle\":\"both\"},{\"diameter\":15,\"width\":7,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":15,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":16,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":17,\"width\":8,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":17,\"width\":9,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":18,\"width\":8.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":18,\"width\":9.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":20,\"width\":8.5,\"offset\":0,\"isStock\":false,\"axle\":\"both\"},{\"diameter\":20,\"width\":10,\"offset\":0,\"isStock\":false,\"axle\":\"both\"}]",
+          "tires": [
+            "G70-14"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 14,
+              "width": 6,
+              "offset": null,
+              "tireSize": "G70-14",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 7,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 8,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 9,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 9.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 10,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": false
+            }
+          ],
+          "tires": [
+            "G70-14"
+          ]
+        }
+      }
+    ],
+    "not-array:string→strings": [
+      {
+        "id": "2afbaae2-f7c8-46bd-9471-2d2227897f63",
+        "vehicle": "2010 chevrolet silverado-1500 Base",
+        "before": {
+          "wheels": "[\"17x7.5\",\"18x8\",\"20x9\"]",
+          "tires": "[\"265/70R17\",\"265/65R18\",\"275/55R20\"]"
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "265/70R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8,
+              "offset": null,
+              "tireSize": "265/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": null,
+              "tireSize": "275/55R20",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/70R17",
+            "265/65R18",
+            "275/55R20"
+          ]
+        }
+      },
+      {
+        "id": "de9f6b03-0dec-41db-8534-0c6f9502342b",
+        "vehicle": "2011 chevrolet silverado-1500 Base",
+        "before": {
+          "wheels": "[\"17x7.5\",\"18x8\",\"20x9\"]",
+          "tires": "[\"265/70R17\",\"265/65R18\",\"275/55R20\"]"
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "265/70R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8,
+              "offset": null,
+              "tireSize": "265/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": null,
+              "tireSize": "275/55R20",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/70R17",
+            "265/65R18",
+            "275/55R20"
+          ]
+        }
+      },
+      {
+        "id": "4001d404-dcd5-47e0-9302-06d8d6c2de10",
+        "vehicle": "2012 chevrolet silverado-1500 Base",
+        "before": {
+          "wheels": "[\"17x7.5\",\"18x8\",\"20x9\"]",
+          "tires": "[\"265/70R17\",\"265/65R18\",\"275/55R20\"]"
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7.5,
+              "offset": null,
+              "tireSize": "265/70R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8,
+              "offset": null,
+              "tireSize": "265/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": null,
+              "tireSize": "275/55R20",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/70R17",
+            "265/65R18",
+            "275/55R20"
+          ]
+        }
+      }
+    ],
+    "not-array:string→obj:width,offset,diameter": [
+      {
+        "id": "b286ef0e-4e7e-406e-8beb-8d7aa991a7d1",
+        "vehicle": "2024 chevrolet trax LS",
+        "before": {
+          "wheels": "[{\"diameter\":16,\"width\":6.5,\"offset\":41}]",
+          "tires": [
+            "205/65R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": 41,
+              "tireSize": "205/65R16",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/65R16"
+          ]
+        }
+      },
+      {
+        "id": "2b6e2b62-baa0-42e0-9dc8-f3c3921a0209",
+        "vehicle": "2024 chevrolet trax LT",
+        "before": {
+          "wheels": "[{\"diameter\":17,\"width\":7,\"offset\":44}]",
+          "tires": [
+            "215/55R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7,
+              "offset": 44,
+              "tireSize": "215/55R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "215/55R17"
+          ]
+        }
+      },
+      {
+        "id": "dbbf3658-8128-43f4-a22d-5b1ca952ac08",
+        "vehicle": "2024 chevrolet trax ACTIV",
+        "before": {
+          "wheels": "[{\"diameter\":18,\"width\":7,\"offset\":44}]",
+          "tires": [
+            "225/55R18"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 7,
+              "offset": 44,
+              "tireSize": "225/55R18",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/55R18"
+          ]
+        }
+      }
+    ],
+    "not-array:string→obj:position": [
+      {
+        "id": "ad25336c-85ec-43a0-9d76-abc88a3d1068",
+        "vehicle": "2026 chevrolet trax Base",
+        "before": {
+          "wheels": "[{\"diameter\":17,\"position\":\"both\"},{\"diameter\":18,\"position\":\"both\"}]",
+          "tires": [
+            "225/55R18",
+            "225/60R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": null,
+              "offset": null,
+              "tireSize": "225/60R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": null,
+              "offset": null,
+              "tireSize": "225/55R18",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/55R18",
+            "225/60R17"
+          ]
+        }
+      },
+      {
+        "id": "30d20b66-d25d-41b1-b740-a354a211b4ea",
+        "vehicle": "2025 ford bronco-sport Base",
+        "before": {
+          "wheels": "[{\"diameter\":17,\"position\":\"both\"}]",
+          "tires": [
+            "225/65R17",
+            "235/65R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/65R17",
+            "235/65R17"
+          ]
+        }
+      },
+      {
+        "id": "c7cf4d8a-67ef-42b6-9e9f-be44e486a471",
+        "vehicle": "2026 ford bronco-sport Base",
+        "before": {
+          "wheels": "[{\"diameter\":17,\"position\":\"both\"},{\"diameter\":18,\"position\":\"both\"}]",
+          "tires": [
+            "225/65R17",
+            "235/65R17",
+            "225/60R18"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": null,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": null,
+              "offset": null,
+              "tireSize": "225/60R18",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "225/65R17",
+            "235/65R17",
+            "225/60R18"
+          ]
+        }
+      }
+    ],
+    "obj:staggered": [
+      {
+        "id": "93984bba-708d-481b-bbb6-a71501143960",
+        "vehicle": "2024 dodge challenger R/T Scat Pack Widebody",
+        "before": {
+          "wheels": [
+            {
+              "width": 11,
+              "diameter": 20,
+              "staggered": true
+            }
+          ],
+          "tires": [
+            "245/45R20",
+            "275/40R20",
+            "305/35R20"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 11,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "245/45R20",
+            "275/40R20",
+            "305/35R20"
+          ]
+        }
+      },
+      {
+        "id": "21495e4a-65f9-48a1-b692-10c80566501b",
+        "vehicle": "2024 dodge challenger SRT Hellcat Widebody",
+        "before": {
+          "wheels": [
+            {
+              "width": 11,
+              "diameter": 20,
+              "staggered": true
+            }
+          ],
+          "tires": [
+            "245/45R20",
+            "275/40R20",
+            "305/35R20"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 11,
+              "offset": null,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "245/45R20",
+            "275/40R20",
+            "305/35R20"
+          ]
+        }
+      }
+    ],
+    "obj:size": [
+      {
+        "id": "57fddeb3-0d3a-41ab-a981-e734ec703a64",
+        "vehicle": "2009 dodge ram-1500 Base",
+        "before": {
+          "wheels": [
+            {
+              "size": "8Jx17",
+              "tires": [
+                "265/70R17"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "8Jx18",
+              "tires": [
+                "275/65R18"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "8Jx20",
+              "tires": [
+                "275/60R20"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "9Jx20",
+              "tires": [
+                "275/55R20"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "9Jx22",
+              "tires": [
+                "285/45R22"
+              ],
+              "offset": 19
+            }
+          ],
+          "tires": [
+            "265/70R17",
+            "275/65R18",
+            "275/60R20",
+            "275/55R20",
+            "285/45R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 8,
+              "offset": 19,
+              "tireSize": "265/70R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8,
+              "offset": 19,
+              "tireSize": "275/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8,
+              "offset": 19,
+              "tireSize": "275/60R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": 19,
+              "tireSize": "275/55R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9,
+              "offset": 19,
+              "tireSize": "285/45R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/70R17",
+            "275/65R18",
+            "275/60R20",
+            "275/55R20",
+            "285/45R22"
+          ]
+        }
+      },
+      {
+        "id": "d3729253-b66c-41fd-9f38-ff4df6138ff0",
+        "vehicle": "2010 dodge ram-1500 Base",
+        "before": {
+          "wheels": [
+            {
+              "size": "8Jx17",
+              "tires": [
+                "265/70R17"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "8Jx18",
+              "tires": [
+                "275/65R18"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "8Jx20",
+              "tires": [
+                "275/60R20"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "9Jx20",
+              "tires": [
+                "275/55R20"
+              ],
+              "offset": 19
+            },
+            {
+              "size": "9Jx22",
+              "tires": [
+                "285/45R22"
+              ],
+              "offset": 19
+            }
+          ],
+          "tires": [
+            "265/70R17",
+            "275/65R18",
+            "275/60R20",
+            "275/55R20",
+            "285/45R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 8,
+              "offset": 19,
+              "tireSize": "265/70R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8,
+              "offset": 19,
+              "tireSize": "275/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8,
+              "offset": 19,
+              "tireSize": "275/60R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": 19,
+              "tireSize": "275/55R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9,
+              "offset": 19,
+              "tireSize": "285/45R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/70R17",
+            "275/65R18",
+            "275/60R20",
+            "275/55R20",
+            "285/45R22"
+          ]
+        }
+      },
+      {
+        "id": "63957544-0af3-4a54-bf86-14c126e79719",
+        "vehicle": "2012 fiat 500 Base",
+        "before": {
+          "wheels": [
+            {
+              "size": "16x6.5",
+              "tires": [
+                "195/45R16"
+              ],
+              "offset": 35
+            },
+            {
+              "size": "17x7",
+              "tires": [
+                "205/40R17"
+              ],
+              "offset": 35
+            },
+            {
+              "axle": "both",
+              "width": 6.5,
+              "offset": 35,
+              "isStock": true,
+              "diameter": 16
+            },
+            {
+              "axle": "both",
+              "width": 7,
+              "offset": 38,
+              "isStock": true,
+              "diameter": 17
+            }
+          ],
+          "tires": [
+            "195/45R16",
+            "205/40R17",
+            "205/40ZR17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": 35,
+              "tireSize": "195/45R16",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7,
+              "offset": 35,
+              "tireSize": "205/40R17",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 6.5,
+              "offset": 35,
+              "tireSize": "195/45R16",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7,
+              "offset": 38,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "195/45R16",
+            "205/40R17",
+            "205/40ZR17"
+          ]
+        }
+      }
+    ],
+    "obj:d,o,w": [
+      {
+        "id": "0b554cd5-d8f1-4d69-956b-39600d25f63d",
+        "vehicle": "2021 gmc yukon-xl Base",
+        "before": {
+          "wheels": [
+            {
+              "d": 18,
+              "o": 24,
+              "w": 8.5
+            },
+            {
+              "d": 20,
+              "o": 24,
+              "w": 9
+            },
+            {
+              "d": 22,
+              "o": 28,
+              "w": 9
+            }
+          ],
+          "tires": [
+            "275/65R18",
+            "275/60R20",
+            "285/45R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8.5,
+              "offset": 24,
+              "tireSize": "275/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": 24,
+              "tireSize": "275/60R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9,
+              "offset": 28,
+              "tireSize": "285/45R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "275/65R18",
+            "275/60R20",
+            "285/45R22"
+          ]
+        }
+      },
+      {
+        "id": "2d248f10-ecf2-4489-ac47-3bccc0a04b3e",
+        "vehicle": "2022 gmc yukon-xl Base",
+        "before": {
+          "wheels": [
+            {
+              "d": 18,
+              "o": 24,
+              "w": 8.5
+            },
+            {
+              "d": 20,
+              "o": 24,
+              "w": 9
+            },
+            {
+              "d": 22,
+              "o": 28,
+              "w": 9
+            }
+          ],
+          "tires": [
+            "275/65R18",
+            "275/60R20",
+            "285/45R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8.5,
+              "offset": 24,
+              "tireSize": "275/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": 24,
+              "tireSize": "275/60R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9,
+              "offset": 28,
+              "tireSize": "285/45R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "275/65R18",
+            "275/60R20",
+            "285/45R22"
+          ]
+        }
+      },
+      {
+        "id": "a001958b-77ed-4bef-a345-6819a001045f",
+        "vehicle": "2023 gmc yukon-xl Base",
+        "before": {
+          "wheels": [
+            {
+              "d": 18,
+              "o": 24,
+              "w": 8.5
+            },
+            {
+              "d": 20,
+              "o": 24,
+              "w": 9
+            },
+            {
+              "d": 22,
+              "o": 28,
+              "w": 9
+            }
+          ],
+          "tires": [
+            "275/65R18",
+            "275/60R20",
+            "285/45R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 18,
+              "width": 8.5,
+              "offset": 24,
+              "tireSize": "275/65R18",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 9,
+              "offset": 24,
+              "tireSize": "275/60R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9,
+              "offset": 28,
+              "tireSize": "285/45R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "275/65R18",
+            "275/60R20",
+            "285/45R22"
+          ]
+        }
+      }
+    ],
+    "empty": [
+      {
+        "id": "1e032569-83be-4633-861f-2ba43857b42a",
+        "vehicle": "2018 lotus evora Sport 410",
+        "before": {
+          "wheels": [],
+          "tires": {
+            "rear": [
+              "285/30ZR20"
+            ],
+            "front": [
+              "235/35ZR19"
+            ]
+          }
+        },
+        "after": {
+          "wheels": [],
+          "tires": [
+            "235/35ZR19",
+            "285/30ZR20"
+          ]
+        }
+      }
+    ],
+    "obj:boltPattern": [
+      {
+        "id": "0427f5a1-69a1-4f72-998b-9abcef182a82",
+        "vehicle": "2022 mercedes-benz eqs EQS580 4MATIC",
+        "before": {
+          "wheels": [
+            {
+              "width": 8.5,
+              "offset": 33,
+              "diameter": 20,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 21,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 22,
+              "boltPattern": "5x112"
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 33,
+              "tireSize": "255/45R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": "265/40R21",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": "265/35R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        }
+      },
+      {
+        "id": "0e86db05-a270-4d7f-b479-5ba4a591c118",
+        "vehicle": "2022 mercedes-benz eqs EQS450+",
+        "before": {
+          "wheels": [
+            {
+              "width": 8.5,
+              "offset": 33,
+              "diameter": 20,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 21,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 22,
+              "boltPattern": "5x112"
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 33,
+              "tireSize": "255/45R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": "265/40R21",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": "265/35R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        }
+      },
+      {
+        "id": "ace88892-9d1c-405a-a6f0-66d88afb2602",
+        "vehicle": "2022 mercedes-benz eqs AMG EQS53",
+        "before": {
+          "wheels": [
+            {
+              "width": 8.5,
+              "offset": 33,
+              "diameter": 20,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 21,
+              "boltPattern": "5x112"
+            },
+            {
+              "width": 9.5,
+              "offset": 33,
+              "diameter": 22,
+              "boltPattern": "5x112"
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 20,
+              "width": 8.5,
+              "offset": 33,
+              "tireSize": "255/45R20",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 21,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": "265/40R21",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 22,
+              "width": 9.5,
+              "offset": 33,
+              "tireSize": "265/35R22",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "255/45R20",
+            "265/40R21",
+            "265/35R22"
+          ]
+        }
+      }
+    ],
+    "obj:isStaggered": [
+      {
+        "id": "04b806eb-fc98-4314-8e83-df3491739583",
+        "vehicle": "2024 nissan frontier Hardbody Edition",
+        "before": {
+          "wheels": [
+            {
+              "width": 7.5,
+              "offset": 30,
+              "diameter": 17,
+              "isStaggered": false
+            }
+          ],
+          "tires": [
+            "265/70R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7.5,
+              "offset": 30,
+              "tireSize": "265/70R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/70R17"
+          ]
+        }
+      },
+      {
+        "id": "38025dcf-a299-45f4-a635-b33e1b0d4a3d",
+        "vehicle": "2024 nissan frontier SV",
+        "before": {
+          "wheels": [
+            {
+              "width": 7.5,
+              "offset": 30,
+              "diameter": 17,
+              "isStaggered": false
+            }
+          ],
+          "tires": [
+            "265/65R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7.5,
+              "offset": 30,
+              "tireSize": "265/65R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/65R17"
+          ]
+        }
+      },
+      {
+        "id": "dbc2f8ec-0336-432b-ac42-57b236972265",
+        "vehicle": "2024 nissan frontier SL",
+        "before": {
+          "wheels": [
+            {
+              "width": 7.5,
+              "offset": 30,
+              "diameter": 17,
+              "isStaggered": false
+            }
+          ],
+          "tires": [
+            "265/65R17"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 17,
+              "width": 7.5,
+              "offset": 30,
+              "tireSize": "265/65R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "265/65R17"
+          ]
+        }
+      }
+    ],
+    "obj:notes": [
+      {
+        "id": "b26cc588-dc54-4e27-bd68-abc81d77dac7",
+        "vehicle": "1964 plymouth barracuda Base",
+        "before": {
+          "wheels": [
+            {
+              "notes": "Standard steel",
+              "width": 4.5,
+              "offset": 0,
+              "diameter": 13
+            }
+          ],
+          "tires": [
+            "6.50-13"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 13,
+              "width": 4.5,
+              "offset": 0,
+              "tireSize": "6.50-13",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "6.50-13"
+          ]
+        }
+      },
+      {
+        "id": "426dbf05-fd1c-4354-8a94-73ad0d05ccd1",
+        "vehicle": "1965 plymouth barracuda Base",
+        "before": {
+          "wheels": [
+            {
+              "notes": "Slant-6 base",
+              "width": 4.5,
+              "offset": 0,
+              "diameter": 13
+            },
+            {
+              "notes": "V8 base",
+              "width": 5,
+              "offset": 0,
+              "diameter": 13
+            },
+            {
+              "notes": "Formula S",
+              "width": 5.5,
+              "offset": 0,
+              "diameter": 14
+            }
+          ],
+          "tires": [
+            "6.50-13",
+            "7.00-13",
+            "6.95-14"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 13,
+              "width": 4.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 13,
+              "width": 5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 14,
+              "width": 5.5,
+              "offset": 0,
+              "tireSize": "6.95-14",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "6.50-13",
+            "7.00-13",
+            "6.95-14"
+          ]
+        }
+      },
+      {
+        "id": "29cda393-ea44-40d7-97b9-2d247ca0c91d",
+        "vehicle": "1966 plymouth barracuda Base",
+        "before": {
+          "wheels": [
+            {
+              "notes": "Base",
+              "width": 4.5,
+              "offset": 0,
+              "diameter": 13
+            },
+            {
+              "notes": "Formula S",
+              "width": 5.5,
+              "offset": 0,
+              "diameter": 14
+            }
+          ],
+          "tires": [
+            "6.50-13",
+            "6.95-14",
+            "7.35-14"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 13,
+              "width": 4.5,
+              "offset": 0,
+              "tireSize": "6.50-13",
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 14,
+              "width": 5.5,
+              "offset": 0,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "6.50-13",
+            "6.95-14",
+            "7.35-14"
+          ]
+        }
+      }
+    ],
+    "obj:front/rear": [
+      {
+        "id": "8c495b0d-564d-4672-a3b8-ab75fdaf5a9a",
+        "vehicle": "1990 porsche 911 964",
+        "before": {
+          "wheels": [
+            {
+              "rear": {
+                "width": 8,
+                "offset": 52.3,
+                "diameter": 16
+              },
+              "front": {
+                "width": 6,
+                "offset": 52.3,
+                "diameter": 16
+              }
+            },
+            {
+              "rear": {
+                "width": 8,
+                "offset": 52,
+                "diameter": 17
+              },
+              "front": {
+                "width": 7,
+                "offset": 55,
+                "diameter": 17
+              }
+            }
+          ],
+          "tires": {
+            "rear": [
+              "225/50R16",
+              "225/45R17",
+              "255/40R17"
+            ],
+            "front": [
+              "205/55R16",
+              "205/50R17"
+            ]
+          }
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "front",
+              "diameter": 16,
+              "width": 6,
+              "offset": 52.3,
+              "tireSize": "205/55R16",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 16,
+              "width": 8,
+              "offset": 52.3,
+              "tireSize": "225/50R16",
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 17,
+              "width": 7,
+              "offset": 55,
+              "tireSize": "205/50R17",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 17,
+              "width": 8,
+              "offset": 52,
+              "tireSize": "225/45R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16",
+            "205/50R17",
+            "225/50R16",
+            "225/45R17",
+            "255/40R17"
+          ]
+        }
+      },
+      {
+        "id": "2bb8105c-7a26-4c71-8038-f8c0366e5c98",
+        "vehicle": "1991 porsche 911 964",
+        "before": {
+          "wheels": [
+            {
+              "rear": {
+                "width": 8,
+                "offset": 52.3,
+                "diameter": 16
+              },
+              "front": {
+                "width": 6,
+                "offset": 52.3,
+                "diameter": 16
+              }
+            },
+            {
+              "rear": {
+                "width": 8,
+                "offset": 52,
+                "diameter": 17
+              },
+              "front": {
+                "width": 7,
+                "offset": 55,
+                "diameter": 17
+              }
+            }
+          ],
+          "tires": {
+            "rear": [
+              "225/50R16",
+              "225/45R17",
+              "255/40R17"
+            ],
+            "front": [
+              "205/55R16",
+              "205/50R17"
+            ]
+          }
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "front",
+              "diameter": 16,
+              "width": 6,
+              "offset": 52.3,
+              "tireSize": "205/55R16",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 16,
+              "width": 8,
+              "offset": 52.3,
+              "tireSize": "225/50R16",
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 17,
+              "width": 7,
+              "offset": 55,
+              "tireSize": "205/50R17",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 17,
+              "width": 8,
+              "offset": 52,
+              "tireSize": "225/45R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16",
+            "205/50R17",
+            "225/50R16",
+            "225/45R17",
+            "255/40R17"
+          ]
+        }
+      },
+      {
+        "id": "34b50838-f225-4ef8-aab2-c7c6960285ec",
+        "vehicle": "1992 porsche 911 964",
+        "before": {
+          "wheels": [
+            {
+              "rear": {
+                "width": 8,
+                "offset": 52.3,
+                "diameter": 16
+              },
+              "front": {
+                "width": 6,
+                "offset": 52.3,
+                "diameter": 16
+              }
+            },
+            {
+              "rear": {
+                "width": 8,
+                "offset": 52,
+                "diameter": 17
+              },
+              "front": {
+                "width": 7,
+                "offset": 55,
+                "diameter": 17
+              }
+            }
+          ],
+          "tires": {
+            "rear": [
+              "225/50R16",
+              "225/45R17",
+              "255/40R17"
+            ],
+            "front": [
+              "205/55R16",
+              "205/50R17"
+            ]
+          }
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "front",
+              "diameter": 16,
+              "width": 6,
+              "offset": 52.3,
+              "tireSize": "205/55R16",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 16,
+              "width": 8,
+              "offset": 52.3,
+              "tireSize": "225/50R16",
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 17,
+              "width": 7,
+              "offset": 55,
+              "tireSize": "205/50R17",
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 17,
+              "width": 8,
+              "offset": 52,
+              "tireSize": "225/45R17",
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "205/55R16",
+            "205/50R17",
+            "225/50R16",
+            "225/45R17",
+            "255/40R17"
+          ]
+        }
+      }
+    ],
+    "obj:trim": [
+      {
+        "id": "0f7dbc1b-dce1-48be-9eaf-31d5a13e8440",
+        "vehicle": "1990 toyota supra Base",
+        "before": {
+          "wheels": [
+            {
+              "trim": "base",
+              "width": 6,
+              "offset": 45,
+              "diameter": 15
+            },
+            {
+              "trim": "twin turbo",
+              "width": 6.5,
+              "offset": 50,
+              "diameter": 15
+            },
+            {
+              "trim": "Turbo US",
+              "width": 7,
+              "offset": 37,
+              "diameter": 16,
+              "position": "front"
+            },
+            {
+              "trim": "Turbo US",
+              "width": 9,
+              "offset": 37,
+              "diameter": 16,
+              "position": "rear"
+            },
+            {
+              "trim": "JDM turbo",
+              "width": 8,
+              "offset": 50,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "195/60R15",
+            "205/60R15",
+            "215/60R15",
+            "225/50R16",
+            "245/45R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 6,
+              "offset": 45,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 6.5,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 16,
+              "width": 7,
+              "offset": 37,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 16,
+              "width": 9,
+              "offset": 37,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 8,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "195/60R15",
+            "205/60R15",
+            "215/60R15",
+            "225/50R16",
+            "245/45R16"
+          ]
+        }
+      },
+      {
+        "id": "59f29776-2dac-479a-ae43-67d51d4af6aa",
+        "vehicle": "1991 toyota supra Base",
+        "before": {
+          "wheels": [
+            {
+              "trim": "base",
+              "width": 6,
+              "offset": 45,
+              "diameter": 15
+            },
+            {
+              "trim": "twin turbo",
+              "width": 6.5,
+              "offset": 50,
+              "diameter": 15
+            },
+            {
+              "trim": "Turbo US",
+              "width": 7,
+              "offset": 37,
+              "diameter": 16,
+              "position": "front"
+            },
+            {
+              "trim": "Turbo US",
+              "width": 9,
+              "offset": 37,
+              "diameter": 16,
+              "position": "rear"
+            },
+            {
+              "trim": "JDM turbo",
+              "width": 8,
+              "offset": 50,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "195/60R15",
+            "205/60R15",
+            "215/60R15",
+            "225/50R16",
+            "245/45R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 6,
+              "offset": 45,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 6.5,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 16,
+              "width": 7,
+              "offset": 37,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 16,
+              "width": 9,
+              "offset": 37,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 8,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "195/60R15",
+            "205/60R15",
+            "215/60R15",
+            "225/50R16",
+            "245/45R16"
+          ]
+        }
+      },
+      {
+        "id": "da4f02cb-9420-4689-bfd1-765e30347aaf",
+        "vehicle": "1992 toyota supra Base",
+        "before": {
+          "wheels": [
+            {
+              "trim": "base",
+              "width": 6,
+              "offset": 45,
+              "diameter": 15
+            },
+            {
+              "trim": "twin turbo",
+              "width": 6.5,
+              "offset": 50,
+              "diameter": 15
+            },
+            {
+              "trim": "Turbo US",
+              "width": 7,
+              "offset": 37,
+              "diameter": 16,
+              "position": "front"
+            },
+            {
+              "trim": "Turbo US",
+              "width": 9,
+              "offset": 37,
+              "diameter": 16,
+              "position": "rear"
+            },
+            {
+              "trim": "JDM turbo",
+              "width": 8,
+              "offset": 50,
+              "diameter": 16
+            }
+          ],
+          "tires": [
+            "195/60R15",
+            "205/60R15",
+            "215/60R15",
+            "225/50R16",
+            "245/45R16"
+          ]
+        },
+        "after": {
+          "wheels": [
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 6,
+              "offset": 45,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 15,
+              "width": 6.5,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "front",
+              "diameter": 16,
+              "width": 7,
+              "offset": 37,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "rear",
+              "diameter": 16,
+              "width": 9,
+              "offset": 37,
+              "tireSize": null,
+              "isStock": true
+            },
+            {
+              "axle": "square",
+              "diameter": 16,
+              "width": 8,
+              "offset": 50,
+              "tireSize": null,
+              "isStock": true
+            }
+          ],
+          "tires": [
+            "195/60R15",
+            "205/60R15",
+            "215/60R15",
+            "225/50R16",
+            "245/45R16"
+          ]
+        }
+      }
+    ]
+  },
+  "byBlock": {
+    "string_unparseable": 40
+  }
+}

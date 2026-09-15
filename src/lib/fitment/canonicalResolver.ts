@@ -22,7 +22,7 @@
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import type { VehicleFitment, VehicleFitmentConfiguration, WheelSizeTrimMapping } from "@/lib/fitment-db/schema";
-import { eq, and, ilike, sql } from "drizzle-orm";
+import { eq, and, ilike, sql, isNull } from "drizzle-orm";
 import { normalizeModel, slugify } from "@/lib/fitment-db/keys";
 import { canonicalMake, getMakeVariantsForQuery } from "@/lib/fitment/makeAliases";
 import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
@@ -410,7 +410,8 @@ export async function resolveVehicleFitment(
             makeLikeAny(vehicleFitments.make, make),
             ilike(vehicleFitments.model, modelName),
             eq(vehicleFitments.modificationId, normalizedModId),
-            eq(vehicleFitments.certificationStatus, "certified")
+            eq(vehicleFitments.certificationStatus, "certified"),
+            isNull(vehicleFitments.quarantinedAt)
           )
         )
         .limit(1);
@@ -509,7 +510,7 @@ export async function resolveVehicleFitment(
           ? await db
               .select()
               .from(vehicleFitments)
-              .where(eq(vehicleFitments.id, mappingResult.mapping.vehicleFitmentId))
+              .where(and(eq(vehicleFitments.id, mappingResult.mapping.vehicleFitmentId), isNull(vehicleFitments.quarantinedAt)))
               .limit(1)
               .then(rows => rows[0] || null)
           : null;
@@ -586,7 +587,8 @@ export async function resolveVehicleFitment(
             makeLikeAny(vehicleFitments.make, make),
             ilike(vehicleFitments.model, modelName),
             eq(vehicleFitments.displayTrim, requestedTrim),
-            eq(vehicleFitments.certificationStatus, "certified")
+            eq(vehicleFitments.certificationStatus, "certified"),
+            isNull(vehicleFitments.quarantinedAt)
           )
         )
         .limit(1);
@@ -621,7 +623,8 @@ export async function resolveVehicleFitment(
           eq(vehicleFitments.year, year),
           makeLikeAny(vehicleFitments.make, make),
           ilike(vehicleFitments.model, modelName),
-          eq(vehicleFitments.certificationStatus, "certified")
+          eq(vehicleFitments.certificationStatus, "certified"),
+          isNull(vehicleFitments.quarantinedAt)
         )
       )
       .limit(50);
@@ -979,7 +982,8 @@ export async function getAtomicTrimOptions(
           eq(vehicleFitments.year, year),
           makeLikeAny(vehicleFitments.make, make),
           ilike(vehicleFitments.model, modelName),
-          eq(vehicleFitments.certificationStatus, "certified")
+          eq(vehicleFitments.certificationStatus, "certified"),
+          isNull(vehicleFitments.quarantinedAt)
         )
       )
       .limit(50);
