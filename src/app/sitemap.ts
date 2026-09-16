@@ -129,6 +129,7 @@ async function getIndexableVehicles(): Promise<VehicleRow[]> {
         COUNT(*)::int as trim_count
       FROM vehicle_fitments
       WHERE bolt_pattern IS NOT NULL
+        AND quarantined_at IS NULL
         AND year >= 2010
       GROUP BY year, make, model
       ORDER BY year DESC, make, model

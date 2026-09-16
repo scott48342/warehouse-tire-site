@@ -9,7 +9,7 @@
 
 import { NextResponse } from "next/server";
 import { db } from "@/lib/fitment-db/db";
-import { vehicleFitments } from "@/lib/fitment-db/schema";
+import { vehicleFitments, notQuarantined } from "@/lib/fitment-db/schema";
 import { sql } from "drizzle-orm";
 
 export const runtime = "nodejs";
@@ -19,6 +19,7 @@ export async function GET() {
     const results = await db
       .selectDistinct({ year: vehicleFitments.year })
       .from(vehicleFitments)
+      .where(notQuarantined())
       .orderBy(sql`${vehicleFitments.year} DESC`);
     
     const years = results.map(r => r.year).filter(y => y != null);

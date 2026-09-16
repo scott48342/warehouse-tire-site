@@ -9,8 +9,8 @@
 
 import { NextResponse } from "next/server";
 import { db } from "@/lib/fitment-db/db";
-import { vehicleFitments } from "@/lib/fitment-db/schema";
-import { eq } from "drizzle-orm";
+import { vehicleFitments, notQuarantined } from "@/lib/fitment-db/schema";
+import { eq, and } from "drizzle-orm";
 import {
   getCachedMakes,
   setCachedMakes,
@@ -57,7 +57,7 @@ export async function GET(req: Request) {
       const results = await db
         .selectDistinct({ make: vehicleFitments.make })
         .from(vehicleFitments)
-        .where(eq(vehicleFitments.year, year))
+        .where(and(eq(vehicleFitments.year, year), notQuarantined()))
         .orderBy(vehicleFitments.make);
       
       makes = results.map(r => displayMake(r.make));
@@ -66,6 +66,7 @@ export async function GET(req: Request) {
       const results = await db
         .selectDistinct({ make: vehicleFitments.make })
         .from(vehicleFitments)
+        .where(notQuarantined())
         .orderBy(vehicleFitments.make);
       
       makes = results.map(r => displayMake(r.make));

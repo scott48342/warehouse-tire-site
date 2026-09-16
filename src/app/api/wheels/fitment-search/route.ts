@@ -1224,11 +1224,11 @@ async function handleDbProfilePath(
         ? `SELECT oem_tire_sizes FROM vehicle_fitments 
            WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3) 
            AND (LOWER(modification_id) = LOWER($4) OR LOWER(display_trim) = LOWER($4))
-           AND certification_status = 'certified'
+           AND certification_status = 'certified' AND quarantined_at IS NULL
            LIMIT 1`
         : `SELECT oem_tire_sizes FROM vehicle_fitments 
            WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3) 
-           AND certification_status = 'certified'
+           AND certification_status = 'certified' AND quarantined_at IS NULL
            LIMIT 10`;
       const params = modificationParam 
         ? [year, make, model, modificationParam]

@@ -47,8 +47,9 @@ export type FitmentCacheStats = {
  * Version history:
  * - v1: Initial version
  * - v2: Added qualityTier to cache shape (2026-05-06)
+ * - v3: Bust profiles built before quarantined_at filtering on runtime reads (2026-09-16)
  */
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
 
 const CONFIG = {
   KEY_PREFIX: `wt:fit:${CACHE_VERSION}:`,  // Version included in key prefix

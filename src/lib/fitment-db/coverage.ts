@@ -6,7 +6,7 @@
  */
 
 import { db } from "./db";
-import { vehicleFitments } from "./schema";
+import { vehicleFitments, notQuarantined } from "./schema";
 import { sql, eq, and, or, inArray, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./keys";
 import { getModelVariants } from "./modelAliases";
@@ -83,7 +83,8 @@ export async function getYearsWithCoverage(
     .where(
       and(
         makeCaseInsensitive(normalizedMake),
-        modelNormalizedMatch(modelVariants)
+        modelNormalizedMatch(modelVariants),
+        notQuarantined()
       )
     )
     .orderBy(sql`${vehicleFitments.year} DESC`);
@@ -121,7 +122,8 @@ export async function getTrimsWithCoverage(
       and(
         eq(vehicleFitments.year, year),
         makeCaseInsensitive(normalizedMake),
-        modelNormalizedMatch(modelVariants)
+        modelNormalizedMatch(modelVariants),
+        notQuarantined()
       )
     )
     .orderBy(vehicleFitments.displayTrim);
@@ -154,7 +156,8 @@ export async function hasAnyCoverage(
     .where(
       and(
         makeCaseInsensitive(normalizedMake),
-        modelNormalizedMatch(modelVariants)
+        modelNormalizedMatch(modelVariants),
+        notQuarantined()
       )
     )
     .limit(1);
@@ -177,7 +180,7 @@ export async function getModelsWithCoverage(
   const normalizedMake = normalizeMake(make);
   
   // Use case-insensitive comparison for make (DB has mixed case)
-  const whereConditions: any[] = [makeCaseInsensitive(normalizedMake)];
+  const whereConditions: any[] = [makeCaseInsensitive(normalizedMake), notQuarantined()];
   if (year) {
     whereConditions.push(eq(vehicleFitments.year, year));
   }
@@ -214,7 +217,8 @@ export async function hasYearCoverage(
       and(
         eq(vehicleFitments.year, year),
         makeCaseInsensitive(normalizedMake),
-        modelNormalizedMatch(modelVariants)
+        modelNormalizedMatch(modelVariants),
+        notQuarantined()
       )
     )
     .limit(1);

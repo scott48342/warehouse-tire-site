@@ -18,7 +18,7 @@
  */
 
 import { db } from "./db";
-import { vehicleFitments } from "./schema";
+import { vehicleFitments, notQuarantined } from "./schema";
 import type { VehicleFitment } from "./schema";
 import { eq, and, sql, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
@@ -33,7 +33,8 @@ import { fitmentLog } from "./logger";
 // No NULL fallback - all records are stamped as of certification pass
 // ============================================================================
 
-const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
+// Runtime rows must be certified AND not soft-deleted (quarantined_at IS NULL).
+const CERTIFIED_FILTER = and(eq(vehicleFitments.certificationStatus, "certified"), notQuarantined());
 
 // ============================================================================
 // Types

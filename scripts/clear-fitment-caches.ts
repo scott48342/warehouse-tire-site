@@ -8,7 +8,15 @@ dotenv.config({ path: path.resolve(__dirname, "../.env.local") });
 
 import { Redis } from "@upstash/redis";
 
+// Actual key prefixes used in src (2026-09-16 audit):
+//   wt:fit:v*:*     src/lib/fitment-db/fitmentCache.ts  (fitment profiles / dbProfile, 15 min TTL)
+//   wt:ymm:*        src/lib/fitment-db/ymmCache.ts      (year/make/model/trim selectors, 1 h TTL)
+//   jake:fitment:*  src/lib/jake/fitmentCache.ts        (Jake AI fitment lookups, 24 h TTL)
+// Legacy prefixes kept for safety.
 const PREFIXES = [
+  "wt:fit:*",
+  "wt:ymm:*",
+  "jake:fitment:*",
   "tiresearch:*",
   "ymm:*", 
   "fitment:*",

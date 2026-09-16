@@ -49,6 +49,7 @@ export async function getOemTireSizesByFamily(
         FROM vehicle_fitments
         WHERE make = ${make}
           AND model ILIKE ${`%${model}%`}
+          AND quarantined_at IS NULL
           AND EXISTS (
             SELECT 1 
             FROM jsonb_array_elements(oem_wheel_sizes) as wheel
@@ -104,6 +105,7 @@ export async function hasOemFamilyData(
       FROM vehicle_fitments
       WHERE make = ${make}
         AND model ILIKE ${`%${model}%`}
+        AND quarantined_at IS NULL
         AND EXISTS (
           SELECT 1 
           FROM jsonb_array_elements(oem_wheel_sizes) as wheel

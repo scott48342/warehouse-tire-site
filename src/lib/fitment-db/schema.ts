@@ -35,6 +35,7 @@ import {
   index,
   uniqueIndex,
 } from "drizzle-orm/pg-core";
+import { isNull, sql, type SQL } from "drizzle-orm";
 
 // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // CANONICAL RUNTIME TABLE
@@ -118,6 +119,29 @@ export const vehicleFitments = pgTable(
 
 export type VehicleFitment = typeof vehicleFitments.$inferSelect;
 export type NewVehicleFitment = typeof vehicleFitments.$inferInsert;
+
+/**
+ * Runtime read guard: exclude soft-deleted (quarantined) vehicle_fitments rows.
+ *
+ * Every customer-facing / resolver read of `vehicleFitments` MUST include this in its WHERE.
+ * Admin audit, import, and repair tooling intentionally sees all rows and should NOT use it.
+ *
+ * Drizzle usage:  `.where(and(eq(...), notQuarantined()))`
+ * Raw SQL usage:  `WHERE ... AND ${NOT_QUARANTINED_SQL}` (string) or `${notQuarantinedSql()}` (sql tag)
+ */
+export function notQuarantined(): SQL {
+  return isNull(vehicleFitments.quarantinedAt);
+}
+
+/** Raw-SQL fragment for hand-written queries against `vehicle_fitments` (optionally table-aliased). */
+export function notQuarantinedSqlText(alias?: string): string {
+  return alias ? `${alias}.quarantined_at IS NULL` : `quarantined_at IS NULL`;
+}
+
+/** Same fragment for drizzle `sql` template queries. */
+export function notQuarantinedSql(): SQL {
+  return sql`quarantined_at IS NULL`;
+}
 
 // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // DEPRECATED TABLE - ADMIN USE ONLY

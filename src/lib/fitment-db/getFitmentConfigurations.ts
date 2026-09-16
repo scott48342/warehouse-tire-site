@@ -13,7 +13,7 @@
  */
 
 import { db } from "./db";
-import { vehicleFitmentConfigurations, vehicleFitments } from "./schema";
+import { vehicleFitmentConfigurations, vehicleFitments, notQuarantined } from "./schema";
 import type { VehicleFitmentConfiguration } from "./schema";
 import { eq, and, asc } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./keys";
@@ -116,7 +116,8 @@ export async function getFitmentConfigurations(
             eq(vehicleFitments.year, year),
             makeSlugMatch(vehicleFitments.make, makeKey),
             eq(vehicleFitments.model, modelKey),
-            eq(vehicleFitments.modificationId, modificationId)
+            eq(vehicleFitments.modificationId, modificationId),
+            notQuarantined()
           )
         )
         .limit(1);
@@ -351,12 +352,14 @@ async function getLegacyFallback(
               eq(vehicleFitments.year, year),
               makeSlugMatch(vehicleFitments.make, makeKey),
               eq(vehicleFitments.model, modelKey),
-              eq(vehicleFitments.modificationId, modificationId)
+              eq(vehicleFitments.modificationId, modificationId),
+              notQuarantined()
             )
           : and(
               eq(vehicleFitments.year, year),
               makeSlugMatch(vehicleFitments.make, makeKey),
-              eq(vehicleFitments.model, modelKey)
+              eq(vehicleFitments.model, modelKey),
+              notQuarantined()
             )
       )
       .limit(1);

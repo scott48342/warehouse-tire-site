@@ -20,6 +20,7 @@ import {
   type WheelSizeTrimMapping,
   type NewWheelSizeTrimMapping,
   type VehicleFitmentConfiguration,
+  notQuarantined,
 } from "./schema";
 import { eq, and, ilike, sql, inArray, isNull, desc } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
@@ -441,7 +442,8 @@ export async function buildMappingsForVehicle(
         eq(vehicleFitments.year, year),
         makeSlugMatch(vehicleFitments.make, normalizedMake),
         ilike(vehicleFitments.model, normalizedModel),
-        eq(vehicleFitments.certificationStatus, 'certified')
+        eq(vehicleFitments.certificationStatus, 'certified'),
+        notQuarantined()
       )
     );
   

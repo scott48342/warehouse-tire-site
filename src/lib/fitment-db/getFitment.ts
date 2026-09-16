@@ -14,7 +14,7 @@
  */
 
 import { db } from "./db";
-import { vehicleFitments } from "./schema";
+import { vehicleFitments, notQuarantined } from "./schema";
 import type { VehicleFitment } from "./schema";
 import { eq, and, asc, or, ilike, inArray, desc, sql, SQL } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
@@ -39,7 +39,8 @@ import {
 // STRICT: Only return certified records for runtime queries
 // ============================================================================
 
-const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
+// Runtime rows must be certified AND not soft-deleted (quarantined_at IS NULL).
+const CERTIFIED_FILTER = and(eq(vehicleFitments.certificationStatus, "certified"), notQuarantined());
 
 // ============================================================================
 // Model Name Matching Helper
@@ -434,7 +435,7 @@ export async function getQualityTierReport(): Promise<{
   const overallRows = await db.execute(sql`
     SELECT quality_tier as tier, COUNT(*) as count
     FROM vehicle_fitments
-    WHERE year >= 2000
+    WHERE year >= 2000 AND quarantined_at IS NULL
     GROUP BY quality_tier
   `) as { rows: Array<{ tier: string; count: string }> };
   
@@ -457,7 +458,7 @@ export async function getQualityTierReport(): Promise<{
   const makeResult = await db.execute(sql`
     SELECT make, quality_tier as tier, COUNT(*) as count
     FROM vehicle_fitments
-    WHERE year >= 2015
+    WHERE year >= 2015 AND quarantined_at IS NULL
     GROUP BY make, quality_tier
     ORDER BY make
   `) as { rows: Array<{ make: string; tier: string; count: string }> };
@@ -483,7 +484,7 @@ export async function getQualityTierReport(): Promise<{
   const missingResult = await db.execute(sql`
     SELECT DISTINCT year, make, model, quality_tier as tier
     FROM vehicle_fitments
-    WHERE year >= 2020 AND quality_tier != 'complete'
+    WHERE year >= 2020 AND quality_tier != 'complete' AND quarantined_at IS NULL
     ORDER BY year DESC, make, model
     LIMIT 50
   `) as { rows: Array<{ year: number; make: string; model: string; tier: string }> };

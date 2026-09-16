@@ -16,7 +16,7 @@
  */
 
 import { db } from "./db";
-import { vehicleFitments, fitmentSourceRecords, modificationAliases } from "./schema";
+import { vehicleFitments, fitmentSourceRecords, modificationAliases, notQuarantined } from "./schema";
 import type { VehicleFitment } from "./schema";
 import { eq, and, or, inArray, sql, ilike, ne } from "drizzle-orm";
 import { 
@@ -30,8 +30,8 @@ import {
 // STRICT: Only return certified records for runtime queries
 // No NULL fallback - all records are stamped as of certification pass
 // ============================================================================
-
-const CERTIFIED_FILTER = eq(vehicleFitments.certificationStatus, "certified");
+// Also excludes soft-deleted rows (quarantined_at IS NOT NULL) from every runtime read.
+const CERTIFIED_FILTER = and(eq(vehicleFitments.certificationStatus, "certified"), notQuarantined());
 
 /**
  * Slug-normalized make comparison for DB queries (P0 fix 2026-06-10).
@@ -975,7 +975,8 @@ export async function getFitmentProfile(
             makeCaseInsensitive(normalizedMake),
             modelNormalizedMatch(getModelVariants(model)),
             eq(vehicleFitments.modificationId, requestedModId),
-            ne(vehicleFitments.certificationStatus, "certified")
+            ne(vehicleFitments.certificationStatus, "certified"),
+            notQuarantined()
           )
         )
         .limit(1);
