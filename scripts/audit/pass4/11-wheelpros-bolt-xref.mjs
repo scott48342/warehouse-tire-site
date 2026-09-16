@@ -35,7 +35,7 @@ function modelVariants(slug) {
   v.add(title(slug).replace(/-/g, " "));
   return [...v].slice(0, 4);
 }
-const norm = s => String(s || "").toUpperCase().replace(/\s+/g, "").replace(/X/g, "x").replace(/(\d)\.0\b/g, "$1");
+const norm = s => String(s || "").toUpperCase().replace(/\s+/g, "").replace(/X/g, "x").replace(/(\d)\.0\b/g, "$1").replace(/120\.7\b/, "120.65");
 let i = 0, agree = 0, conflict = 0, weak = 0, nf = 0;
 for (const it of items) {
   i++;
@@ -73,4 +73,5 @@ for (const it of items) {
   await new Promise(res => setTimeout(res, 350));
 }
 console.log("done");
+
 
