@@ -1,4 +1,4 @@
-﻿# Tire Guide Pro extraction loop Ã¢â‚¬â€ drives the Tire Power Front Counter (RDP) via win-relay, prints each Y/M/M to PDF
+# Tire Guide Pro extraction loop Ã¢â‚¬â€ drives the Tire Power Front Counter (RDP) via win-relay, prints each Y/M/M to PDF
 # on this PC (\\tsclient\F redirection), parses with tg-parse.py, keeps JSON, deletes PDF.
 #   powershell -NoProfile -File tg-loop.ps1 [-Worklist worklist.json] [-Limit 20] [-Only "1998|ford|ranger,2011|lexus|gs"] [-Hwnd 4983028]
 # PAUSE: create F:\clawd\tire-guide-pdfs\PAUSE ; loop finishes current vehicle and exits cleanly. Resumable: skips existing out JSON.
@@ -9,6 +9,9 @@ param(
   [string]$Only = "",
   [int]$Hwnd = 4983028,
   [switch]$KeepPdf
+,
+  [int]$MakeBtnX = 341,   # relay click space is ~1.17x screenshot pixels (DPI); 341 verified 2026-09-16
+  [int]$ModelBtnX = 605
 )
 $ErrorActionPreference = "Continue"
 $RELAY = "g:\clawd\win-relay\relay.js"
@@ -99,7 +102,7 @@ function LetterGroup($year, $name) {
 function SetMake($year, $name, [int]$kAdj = 0, [int]$attemptsLeft = 3) {
   # returns $true if picker accepted; verification happens later via PDF header
   ClearField 224 (134+$DY)
-  Rly click 341 (134+$DY)
+  Rly click $MakeBtnX (134+$DY)
   if (-not (WaitWin "Select Vehicle Make" 6)) { return $false }
   Rly focus "Select Vehicle Make"; Start-Sleep -Milliseconds 250
   SendKey "home"; Start-Sleep -Milliseconds 250
@@ -151,7 +154,7 @@ function EnumModels($year, $tgMake) {
   $cache = "$OUT\_models\$year\$(Safe $tgMake).json"
   if (Test-Path $cache) { return (Get-Content $cache -Raw | ConvertFrom-Json) }
   ClearField 480 (134+$DY)
-  Rly click 605 (134+$DY)
+  Rly click $ModelBtnX (134+$DY)
   if (-not (WaitWin "Select Vehicle Model" 6)) { return @() }
   Rly focus "Select Vehicle Model"; Start-Sleep -Milliseconds 250; FocusPickerList "Select Vehicle Model"; SendKey "home"; Start-Sleep -Milliseconds 300
   $names = New-Object System.Collections.Generic.List[string]
@@ -201,7 +204,7 @@ function EnumMakes($year) {
   $cache = "$OUT\_makes\$year.json"
   if (Test-Path $cache) { return @(Get-Content $cache -Raw | ConvertFrom-Json) }
   ClearField 224 (134+$DY)
-  Rly click 341 (134+$DY)
+  Rly click $MakeBtnX (134+$DY)
   if (-not (WaitWin "Select Vehicle Make" 6)) { return @() }
   Rly focus "Select Vehicle Make"; Start-Sleep -Milliseconds 250; FocusPickerList "Select Vehicle Make"; SendKey "home"; Start-Sleep -Milliseconds 300
   $names = New-Object System.Collections.Generic.List[string]
@@ -241,14 +244,14 @@ function SetMake2($year, $name) {
   $grp = @($all | Where-Object { $_.Substring(0,1).ToUpper() -eq $letter.ToUpper() })
   $k = -1; for ($i = 0; $i -lt $grp.Count; $i++) { if ((NormName $grp[$i]) -eq (NormName $name)) { $k = $i } }
   if ($k -lt 0) { return $false }   # make not offered this year
-  for ($try = 0; $try -lt 2; $try++) {
+  for ($try = 0; $try -lt 3; $try++) {
     ClearField 224 (134+$DY)
-    Rly click 341 (134+$DY)
+    Rly click $MakeBtnX (134+$DY)
     if (-not (WaitWin "Select Vehicle Make" 6)) { return $false }
     Rly focus "Select Vehicle Make"; Start-Sleep -Milliseconds 250; FocusPickerList "Select Vehicle Make"; SendKey "home"; Start-Sleep -Milliseconds 250
     $offset = if ((NormName $grp[0]) -eq (NormName $all[0])) { 0 } else { 1 }
     $presses = $k + $offset
-    for ($i = 0; $i -lt $presses; $i++) { SendKey $letter.ToLower(); Start-Sleep -Milliseconds 280 }
+    for ($i = 0; $i -lt $presses; $i++) { SendKey $letter.ToLower(); Start-Sleep -Milliseconds (280 + 250 * $try) }
     SendKey "enter"
     if (-not (WaitWin "Select Vehicle Make" 4 $true)) { SendKey "escape"; return $false }
     Start-Sleep -Milliseconds 700
@@ -257,7 +260,7 @@ function SetMake2($year, $name) {
     if ((NormName $got) -eq (NormName $name)) { return $true }
     @{ ts = (Get-Date).ToString("s"); year = $year; wanted = $name; got = $got; k = $k } | ConvertTo-Json -Compress | Add-Content $CORR
     $gi = -1; for ($i = 0; $i -lt $grp.Count; $i++) { if ((NormName $grp[$i]) -eq (NormName $got)) { $gi = $i } }
-    if ($gi -ge 0) { $k += ($k - $gi) } else { break }
+    if ($gi -ge 0 -and ($k - $gi) -gt 0) { $k += ($k - $gi) } elseif ($gi -ge 0) { Trace "picker overshot ($got past $name) - retrying slower"; SendKey "home"; Start-Sleep -Milliseconds 400 } else { break }
     if ($k -lt 0) { break }
   }
   return $false
@@ -308,18 +311,18 @@ function OneVehicle($it) {
       while ($qi -lt $queue.Count) {
         $tgm = $queue[$qi]; $qi++
         Rly focus $T; ClearField 480 (134+$DY); SendText $tgm; Start-Sleep -Milliseconds 150
-        Rly click 605 (134+$DY); Start-Sleep -Seconds 3
+        Rly click $ModelBtnX (134+$DY); Start-Sleep -Seconds 3
         CloseStray
         $pdf = "$PDFDIR\$y-$mk-$(Safe $md)-$(Safe $tgm).pdf"
         if (Test-Path $pdf) { Remove-Item $pdf -Force }
         Rly focus $T; Rly click 176 (99+$DY)
-        if (-not (WaitWin "Save Print Output As" 8)) { Trace "$y $tgMake $tgm : no Save dialog after Print All; windows=$(((Wins) | Where-Object { $_.process -eq 'mstsc.exe' } | % { $_.title }) -join '|') fg=$((Invoke-RestMethod 'http://127.0.0.1:9334/foreground').title)"; continue }
+        if (-not (WaitWin "Save Print Output As" 25)) { Trace "$y $tgMake $tgm : no Save dialog after Print All; windows=$(((Wins) | Where-Object { $_.process -eq 'mstsc.exe' } | % { $_.title }) -join '|') fg=$((Invoke-RestMethod 'http://127.0.0.1:9334/foreground').title)"; continue }
         Rly focus "Save Print Output As"; Start-Sleep -Milliseconds 300
         SendText ("\\tsclient\F" + $pdf.Substring(2)); Start-Sleep -Milliseconds 200; SendKey "enter"
         WaitWin "Save Print Output As" 8 $true | Out-Null
         if (HasWin "Confirm Save As") { Rly focus "Confirm Save As"; SendKey "y"; Start-Sleep -Milliseconds 300 }
         WaitWin "Printing Report" 25 $true | Out-Null
-        $end = (Get-Date).AddSeconds(15); while ((Get-Date) -lt $end -and -not (Test-Path $pdf)) { Start-Sleep -Milliseconds 300 }
+        $end = (Get-Date).AddSeconds(40); while ((Get-Date) -lt $end -and -not (Test-Path $pdf)) { Start-Sleep -Milliseconds 300 }
         if (-not (Test-Path $pdf)) { Trace "$y $tgMake $tgm : Save dialog handled but no PDF at $pdf; windows=$(((Wins) | Where-Object { $_.process -eq 'mstsc.exe' } | % { $_.title }) -join '|')"; continue }
         $sz = -1; for ($q = 0; $q -lt 20; $q++) { $n2 = (Get-Item $pdf).Length; if ($n2 -eq $sz -and $n2 -gt 0) { break }; $sz = $n2; Start-Sleep -Milliseconds 300 }
         $tmpJson = "$env:TEMP\tg-one.json"
