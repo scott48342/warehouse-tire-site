@@ -282,16 +282,23 @@ async function getDbFitmentSizes(
       return null;
     }
     
-    // Build debug info from universal result
+    // Build debug info from universal result.
+    // 2026-09-17: exactTrimMatch now reflects HOW the trim was matched
+    // (resolver debug.matchedBy), not the record's quality tier. Previously
+    // confidence==="high" reported exactTrimMatch=true even when the resolver
+    // had silently fallen back to the first row ("Base") for the model.
+    const matchedBy = resolveResult.debug.matchedBy || resolveResult.source;
+    const isExactMatch =
+      matchedBy.startsWith("exact_") || matchedBy === "single_record";
     const debugInfo = {
-      exactTrimMatch: resolveResult.confidence === "high",
-      resolutionMethod: resolveResult.source,
+      exactTrimMatch: isExactMatch,
+      resolutionMethod: matchedBy,
       candidateCount: resolveResult.availableTrims.length,
       selectedModificationId: resolveResult.modificationId,
       selectedDisplayTrim: resolveResult.trim,
     };
     
-    console.log(`[tire-sizes] UNIVERSAL HIT: ${year} ${make} ${model} → method=${resolveResult.source}, confidence=${resolveResult.confidence}, trim="${resolveResult.trim}"`);
+    console.log(`[tire-sizes] UNIVERSAL HIT: ${year} ${make} ${model} → matchedBy=${matchedBy}, source=${resolveResult.source}, confidence=${resolveResult.confidence}, trim="${resolveResult.trim}" mod=${resolveResult.modificationId}`);
     
     // Check wheel sizes for staggered configuration
     const oemWheelSizes = resolveResult.oemWheelSizes as Array<{

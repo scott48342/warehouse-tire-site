@@ -21,6 +21,7 @@ import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 // Utility helpers only (NOT the resolution path) for reverse-mapping a
 // canonicalFitmentId (the trims API `value`) back to its atomic trim label.
 import { isCanonicalFitmentId, getAtomicTrimOptions } from "@/lib/fitment/canonicalResolver";
+import { isGroupedTrim, explodeTrim } from "@/lib/fitment/trimExplosion";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -351,28 +352,32 @@ function getModelVariants(model: string): string[] {
   const richVariant = HD_RICH_PRIORITY[slugified];
   
   // Build variants list, prioritizing:
+  // 0. The input itself (lowercased / slugified). 2026-09-17: the DB stores
+  //    model as a slug ("silverado-1500"), and the alias list for
+  //    "silverado-1500" includes the generic "Silverado" — which is a
+  //    DIFFERENT live model ("silverado", a 1-row-per-year placeholder with
+  //    display_trim "Base" / modification_id "base"). Trying aliases first
+  //    made every 2021 Silverado 1500 trim resolve to that phantom base row.
+  //    An exact match on the caller's own model name must always win.
   // 1. Rich variant (HD trucks with best data)
   // 2. Aliases (actual DB names)
   // 3. Original lowercased (might match directly)
   // 4. Slugified version
   const variants: string[] = [];
   
+  variants.push(lowercased);
+  if (slugified !== lowercased) {
+    variants.push(slugified);
+  }
+  
   if (richVariant) {
-    variants.push(richVariant);
+    if (!variants.includes(richVariant)) variants.push(richVariant);
   }
   
   for (const alias of aliases) {
     if (!variants.includes(alias)) {
       variants.push(alias);
     }
-  }
-  
-  // Add original input variants
-  if (!variants.includes(lowercased)) {
-    variants.push(lowercased);
-  }
-  if (!variants.includes(slugified) && slugified !== lowercased) {
-    variants.push(slugified);
   }
   
   // Also add the original model with title case preserved
@@ -383,6 +388,28 @@ function getModelVariants(model: string): string[] {
   }
   
   return variants;
+}
+
+/**
+ * Normalize a trim label for exact (not fuzzy) comparison:
+ * lowercase, trim, collapse whitespace.
+ */
+function normalizeTrimLabel(s: string | null | undefined): string {
+  return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+/**
+ * Atomic trim labels for a record. Grouped display_trims
+ * ("Big Horn / Laramie / Tradesman") explode into their individual trims;
+ * atomic display_trims return themselves.
+ */
+function atomicTrimsOf(displayTrim: string | null | undefined): string[] {
+  if (!displayTrim) return [];
+  try {
+    return isGroupedTrim(displayTrim) ? explodeTrim(displayTrim) : [displayTrim];
+  } catch {
+    return [displayTrim];
+  }
 }
 
 /**
@@ -432,7 +459,14 @@ export async function resolveUniversalFitment(
   // Normalize inputs
   const normalizedMake = normalizeMake(input.make);
   const modelVariants = getModelVariants(input.model);
-  let requestedTrim = input.trim?.trim() || null;
+  // Raw trim/modification param exactly as the caller sent it. Pickers send
+  // either a live modification_id (legacy trims path) or a canonicalFitmentId
+  // (atomic trims path). Kept separate from the label we derive below so the
+  // exact-modification_id match can always run first.
+  const rawTrimParam = input.trim?.trim() || null;
+  let requestedTrim = rawTrimParam;
+  // modification_id of the row a canonicalFitmentId reverse-mapped to.
+  let preferredModificationId: string | null = null;
 
   // ───────────────────────────────────────────────────────────────────────
   // CANONICAL FITMENT ID NORMALIZATION (2026-06-22)
@@ -447,8 +481,9 @@ export async function resolveUniversalFitment(
       const atomicOptions = await getAtomicTrimOptions(input.year, input.make, input.model);
       const matched = atomicOptions.find((o) => o.canonicalFitmentId === requestedTrim);
       if (matched) {
-        console.log(`[universalFitmentResolver] canonicalFitmentId "${requestedTrim}" → trim="${matched.label}"`);
+        console.log(`[universalFitmentResolver] canonicalFitmentId "${requestedTrim}" → trim="${matched.label}" modificationId="${matched.modificationId}"`);
         requestedTrim = matched.label;
+        preferredModificationId = matched.modificationId;
       } else {
         console.warn(`[universalFitmentResolver] canonicalFitmentId "${requestedTrim}" did not match any atomic trim for ${input.year} ${input.make} ${input.model}`);
       }
@@ -584,22 +619,50 @@ export async function resolveUniversalFitment(
   let matchedBy = "first_available";
   
   if (requestedTrim) {
-    // Try exact trim match
-    const trimLower = requestedTrim.toLowerCase();
-    selectedRecord = matchedRecords.find(r => 
-      r.displayTrim?.toLowerCase() === trimLower ||
-      r.modificationId === requestedTrim
-    ) || null;
+    // ─────────────────────────────────────────────────────────────────────
+    // 2026-09-17: Strict-first trim selection. Order matters:
+    //   1. exact live modification_id (raw param)
+    //   2. row the canonicalFitmentId reverse-mapped to (exact modification_id)
+    //   3. exact display_trim (case-insensitive)
+    //   4. exact ATOMIC trim inside a grouped display_trim
+    //      ("Big Horn" ∈ "Big Horn / Laramie / Tradesman")
+    //   5. fuzzy contains (legacy) — only when nothing above matched
+    // Previously fuzzy `includes` ran as soon as exact display_trim missed,
+    // so "Big Horn" matched the first row containing it alphabetically:
+    // "Big Horn (DRW) / ..." (8x200) instead of the SRW row.
+    // ─────────────────────────────────────────────────────────────────────
+    const trimNorm = normalizeTrimLabel(requestedTrim);
+    
+    if (rawTrimParam) {
+      selectedRecord = matchedRecords.find(r => r.modificationId === rawTrimParam) || null;
+      if (selectedRecord) matchedBy = "exact_modification_id";
+    }
+    
+    if (!selectedRecord && preferredModificationId) {
+      selectedRecord = matchedRecords.find(r => r.modificationId === preferredModificationId) || null;
+      if (selectedRecord) matchedBy = "exact_canonical_id";
+    }
+    
+    if (!selectedRecord) {
+      selectedRecord = matchedRecords.find(r => normalizeTrimLabel(r.displayTrim) === trimNorm) || null;
+      if (selectedRecord) matchedBy = "exact_trim";
+    }
+    
+    if (!selectedRecord) {
+      selectedRecord = matchedRecords.find(r =>
+        atomicTrimsOf(r.displayTrim).some(t => normalizeTrimLabel(t) === trimNorm)
+      ) || null;
+      if (selectedRecord) matchedBy = "exact_atomic_trim";
+    }
     
     if (selectedRecord) {
-      matchedBy = "exact_trim";
       result.normalized.trim = selectedRecord.displayTrim;
     } else {
-      // Try fuzzy trim match
-      selectedRecord = matchedRecords.find(r => 
-        r.displayTrim?.toLowerCase().includes(trimLower) ||
-        trimLower.includes(r.displayTrim?.toLowerCase() || "")
-      ) || null;
+      // Try fuzzy trim match (legacy behaviour, last resort)
+      selectedRecord = matchedRecords.find(r => {
+        const dt = normalizeTrimLabel(r.displayTrim);
+        return dt.length > 0 && (dt.includes(trimNorm) || trimNorm.includes(dt));
+      }) || null;
       
       if (selectedRecord) {
         matchedBy = "fuzzy_trim";
