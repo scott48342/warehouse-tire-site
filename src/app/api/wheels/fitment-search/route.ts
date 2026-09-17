@@ -1152,7 +1152,27 @@ async function handleDbProfilePath(
     // ALLOW: Sports cars - try to detect staggered from data
     // Even without "complete" quality tier, if the data has front/rear markers or width differences, detect it
     const dataAnalysis = analyzeStaggeredData(dbProfile.oemWheelSizes);
-    if (dataAnalysis.hasStaggeredData) {
+    // Axle-explicit sources (Tire Guide Pro, 2026-09-16): staggered OE options are always stored with
+    // axle:"front"/"rear". When every entry is axle:"both", the entries are square OE wheel OPTIONS
+    // (e.g. Camaro LT 18x7.5 or 20x8.5), so the legacy "infer staggered from width delta" heuristic
+    // (built for mislabeled data) must not run. Reason text must satisfy isConfirmedSquareSetup().
+    const axleExplicitSource = dbProfile.wheelSpecsSource === "tireguide-pro";
+    if (dataAnalysis.hasStaggeredData && axleExplicitSource && !dataAnalysis.debug?.hasExplicitPositions) {
+      staggeredInfo = {
+        isStaggered: false,
+        reason: "All wheel specs apply to both axles (square fitment) - axle-explicit source (tireguide-pro), width inference skipped",
+      };
+      if (parsedWheelSizes.length > 0) {
+        const sample = parsedWheelSizes[0];
+        staggeredInfo.frontSpec = {
+          diameter: sample.diameter,
+          width: sample.width,
+          offset: sample.offset,
+          tireSize: sample.tireSize,
+        };
+      }
+      console.log(`[fitment-search] Staggered inference SKIPPED for ${make} ${model}: tireguide-pro row, all specs axle=both`);
+    } else if (dataAnalysis.hasStaggeredData) {
       staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
       console.log(`[fitment-search] Staggered detection ALLOWED for ${make} ${model}: ${staggeredInfo.reason}`);
     } else {

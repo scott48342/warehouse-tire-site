@@ -106,6 +106,8 @@ export interface FitmentProfile {
   apiCalled: boolean;
   overridesApplied: boolean;
   qualityTier?: "complete" | "partial" | "low_confidence" | "unknown";
+  /** vehicle_fitments.wheel_specs_source (internal provenance; "tireguide-pro" = axle-explicit oem_wheel_sizes) */
+  wheelSpecsSource?: string | null;
 }
 
 export interface WheelSize {
@@ -808,6 +810,7 @@ export async function getFitmentProfile(
             apiCalled: false,
             overridesApplied: false,
             qualityTier: cached.qualityTier || "unknown",
+            wheelSpecsSource: cached.wheelSpecsSource ?? null,
           },
           resolutionPath: "directCanonical",
           requestedModificationId: requestedModId,
@@ -867,6 +870,7 @@ export async function getFitmentProfile(
           displayTrim: profile.displayTrim,
           source: "db",
           qualityTier: profile.qualityTier,
+          wheelSpecsSource: profile.wheelSpecsSource ?? null,
         }).catch(() => {}); // Ignore cache write errors
         
         return {
@@ -934,6 +938,7 @@ export async function getFitmentProfile(
             displayTrim: profile.displayTrim,
             source: "db",
             qualityTier: profile.qualityTier,
+            wheelSpecsSource: profile.wheelSpecsSource ?? null,
           }).catch(() => {});
           
           return {
@@ -1104,6 +1109,7 @@ export async function getFitmentProfile(
             displayTrim: profile.displayTrim,
             source: "db",
             qualityTier: profile.qualityTier,
+            wheelSpecsSource: profile.wheelSpecsSource ?? null,
           }).catch(() => {});
           
           return {
@@ -1630,6 +1636,7 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     apiCalled: source === "api",
     overridesApplied: rulesApplied,
     qualityTier: (record.qualityTier as FitmentProfile["qualityTier"]) || "unknown",
+    wheelSpecsSource: record.wheelSpecsSource ?? null,
   };
 }
 

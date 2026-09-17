@@ -26,6 +26,8 @@ export type CachedFitmentProfile = {
   source: string;
   cachedAt: string;
   qualityTier?: "complete" | "partial" | "low_confidence" | "unknown";
+  /** vehicle_fitments.wheel_specs_source (internal provenance; "tireguide-pro" = axle-explicit data) */
+  wheelSpecsSource?: string | null;
 };
 
 export type FitmentCacheStats = {
