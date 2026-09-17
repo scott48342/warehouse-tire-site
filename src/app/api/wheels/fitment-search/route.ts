@@ -1936,21 +1936,17 @@ async function handleDbFirstWheelResults(opts: {
     if (v.fitmentClass === "excluded") continue;
     
     // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-    // DIAMETER HANDLING (April 2026 Update)
-    // 
-    // Diameter is now a RANKING SIGNAL with a SAFETY FLOOR, not a hard filter.
-    // validateWheel() classifies wheels as surefit/specfit/extended based on
-    // how close they are to OEM, but does NOT exclude based on diameter alone.
-    // 
-    // SAFETY FLOOR: We enforce a minimum based on vehicle type to prevent
-    // brake clearance issues. Importantly, we allow DOWNSIZING from high-trim
-    // OEM wheels (e.g., F-150 Limited with 22" can run 17" for off-road).
-    // 
-    // - Trucks (6-lug): 17" absolute floor (all full-size trucks clear 17")
-    // - SUVs: 17" absolute floor
-    // - Cars: 15" absolute floor (smaller brakes)
-    // 
-    // MAXIMUM: We allow generous upsizing (OEM + 8) but cap at 28" sanity check
+    // DIAMETER HANDLING
+    //
+    // NO-DOWNSIZE RULE (Scott, 2026-09-17, site-wide): when the vehicle has a
+    // factory wheel size, only plus-size fitments are shown. The hard floor is
+    // the smallest factory diameter for the selected trim and is enforced in
+    // validateWheel() (fitmentClass "excluded"), so it applies to every API
+    // consumer (retail, POS, packages, validate-wheels). The April 2026
+    // vehicle-type floor that allowed downsizing (22" Limited -> 17") is gone.
+    //
+    // Below: sanity bounds + a fallback floor for vehicles with NO factory data,
+    // and the upsizing ceiling (OEM + 8, capped at 28").
     // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     if (wheelSpec.diameter !== undefined) {
       const wheelDia = Number(wheelSpec.diameter);
@@ -1960,18 +1956,14 @@ async function handleDbFirstWheelResults(opts: {
         continue;
       }
       
-      // SAFETY FLOOR: Based on vehicle type, NOT trim-specific OEM diameter
-      // This allows customers to downsize from high-trim wheels (e.g., 22" Limited â†’ 17" off-road)
-      // while still preventing brake clearance issues
+      // Floor: factory minimum when known (already enforced by validateWheel; kept here so the
+      // ceiling/floor logic reads as one block). Without factory data: 17" trucks/SUVs, 15" cars.
       let safetyFloor: number;
-      if (opts.vehicleType === "truck") {
-        // Full-size trucks: 17" minimum (all clear 17" regardless of stock wheel size)
-        safetyFloor = 17;
-      } else if (opts.vehicleType === "suv") {
-        // SUVs: 17" minimum (most modern SUVs have large brakes)
+      if (envelope.oemDiameterVerified) {
+        safetyFloor = envelope.oemMinDiameter;
+      } else if (opts.vehicleType === "truck" || opts.vehicleType === "suv") {
         safetyFloor = 17;
       } else {
-        // Cars: 15" minimum (smaller brakes, but still need clearance)
         safetyFloor = 15;
       }
       
@@ -3090,10 +3082,13 @@ async function handleDbFirstWheelResults(opts: {
   const isTruckOrSuv = opts.vehicleType === "truck" || opts.vehicleType === "suv" ||
     envelope.boltPattern.startsWith("6x") || envelope.boltPattern.startsWith("8x");
   
-  // Recommended diameter range (matches safety floor/ceiling logic)
-  const recommendedMinDia = isTruckOrSuv 
-    ? Math.max(17, envelope.oemMinDiameter - 3)
-    : Math.max(15, envelope.oemMinDiameter - 2);
+  // Recommended diameter range (matches safety floor/ceiling logic).
+  // NO-DOWNSIZE RULE: nothing below the factory minimum is ever offered, so the
+  // recommended range starts AT the factory minimum (fallback floors only apply
+  // when the vehicle has no factory wheel data).
+  const recommendedMinDia = envelope.oemDiameterVerified
+    ? envelope.oemMinDiameter
+    : (isTruckOrSuv ? Math.max(17, envelope.oemMinDiameter) : Math.max(15, envelope.oemMinDiameter));
   const recommendedMaxDia = Math.min(28, envelope.oemMaxDiameter + 6);
   
   // Recommended width range

@@ -62,6 +62,11 @@ export type FitmentEnvelope = {
   mode: FitmentMode;
   // Whether offset ranges are based on verified OEM data or a generic fallback
   oemOffsetVerified: boolean;
+  /**
+   * Whether oemMinDiameter came from real factory wheel data (vs. the 17" fallback).
+   * When true, wheels smaller than oemMinDiameter are EXCLUDED (brake clearance) — see NO-DOWNSIZE RULE.
+   */
+  oemDiameterVerified: boolean;
 };
 
 export type WheelSpec = {
@@ -373,27 +378,21 @@ export function buildFitmentEnvelope(
     }
   }
 
-  // Apply expansion rules
-  // TRUCK MODE SPECIAL HANDLING:
-  // Half-ton trucks (6-lug) have the same brakes across all trims.
-  // High-trim packages (High Country, Denali, Limited) come with 20-22" wheels
-  // for aesthetics, but base trims use 17-18" with identical brakes.
-  // Allow downsizing to 17" floor for 6-lug trucks.
-  //
-  // For non-truck modes, allow modest downsizing per rules.diameterPlusMin
-  // but never below 15" (physical safety floor for modern vehicles).
-  
+  // ═══════════════════════════════════════════════════════════════════════
+  // NO-DOWNSIZE RULE (Scott, 2026-09-17 — site-wide, every vehicle)
+  // When the vehicle has a factory wheel size, only plus-size fitments are
+  // offered: the floor is the smallest factory diameter for the selected trim.
+  // Downsizing (e.g. 18" on a 19" Mach-E Premium, 17" on a 22" F-150 Limited)
+  // is no longer allowed in any mode — brake clearance is trim-specific and we
+  // cannot verify it. rules.diameterPlusMin is therefore ignored when negative.
+  // Without factory data we keep the conservative 17" fallback (15" floor).
+  // ═══════════════════════════════════════════════════════════════════════
+  const oemDiameterVerified = diameters.length > 0;
   let allowedMinDiameter: number;
-  
-  if (mode === "truck") {
-    // 6-lug half-ton trucks: 17" floor (base trims use 17-18")
-    // 8-lug HD trucks: 17" floor as well (base trims use 17-18")
-    const truckFloor = studHoles === 8 ? 17 : 17;
-    allowedMinDiameter = Math.max(truckFloor, oemMinDiameter + rules.diameterPlusMin);
+  if (oemDiameterVerified) {
+    allowedMinDiameter = oemMinDiameter + Math.max(0, rules.diameterPlusMin);
   } else {
-    // Non-truck: allow downsizing per rules, with 15" absolute floor
-    const safetyFloor = 15;
-    allowedMinDiameter = Math.max(safetyFloor, oemMinDiameter + rules.diameterPlusMin);
+    allowedMinDiameter = Math.max(15, oemMinDiameter + rules.diameterPlusMin);
   }
   
   const allowedMaxDiameter = oemMaxDiameter + rules.diameterPlusMax;
@@ -428,6 +427,7 @@ export function buildFitmentEnvelope(
 
     mode,
     oemOffsetVerified,
+    oemDiameterVerified,
   };
 }
 
@@ -546,6 +546,16 @@ export function validateWheel(
       );
     }
   }
+
+  // Diameter floor — NO-DOWNSIZE RULE (hard): a wheel smaller than the factory
+  // minimum for this trim is excluded. Only applies when factory data exists.
+  let diameterFloorPass = true;
+  if (envelope.oemDiameterVerified && wheel.diameter !== undefined && wheel.diameter > 0 && wheel.diameter < envelope.oemMinDiameter) {
+    diameterFloorPass = false;
+    exclusionReasons.push(
+      `Downsize not allowed: wheel=${wheel.diameter}", factory minimum=${envelope.oemMinDiameter}"`
+    );
+  }
   
   // ─────────────────────────────────────────────────────────────────────────
   // SOFT RULES (for classification only - DO NOT EXCLUDE)
@@ -609,7 +619,7 @@ export function validateWheel(
   // CLASSIFICATION (soft rules inform class, don't exclude)
   // ─────────────────────────────────────────────────────────────────────────
   
-  const hardRulesPass = boltPatternPass && centerBorePass;
+  const hardRulesPass = boltPatternPass && centerBorePass && diameterFloorPass;
   
   // Check for missing data
   const hasMissingData = 
@@ -837,6 +847,8 @@ export function applyClassicEnvelopeOverride(
     allowedMaxWidth: classicRange.width.max,
     allowedMinOffset: classicRange.offset.min,
     allowedMaxOffset: classicRange.offset.max,
+    // The curated classic range is authoritative: its minimum diameter is the hard floor
+    oemDiameterVerified: true,
     // Mark as classic mode
     mode: "aftermarket_safe", // Classic uses its own rules, not modern modes
   };

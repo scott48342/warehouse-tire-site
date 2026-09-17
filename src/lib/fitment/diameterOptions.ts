@@ -134,6 +134,10 @@ export function buildDiameterOptions({
     }
   } else {
     // Modern vehicle: OEM sizes + upsizes with inventory
+    // NO-DOWNSIZE RULE (Scott, 2026-09-17, site-wide): when factory wheel sizes are
+    // known, never offer a diameter below the smallest factory size (brake clearance).
+    // The API already excludes such wheels; this keeps the UI from rendering
+    // 17"/18" chips on a 19" vehicle.
     const oemDiameters = new Set<number>();
     
     for (const size of oemWheelSizes) {
@@ -146,6 +150,9 @@ export function buildDiameterOptions({
     for (const dia of stockDiameters) {
       oemDiameters.add(dia);
     }
+
+    // Factory data present => hard floor at the smallest factory diameter
+    const hasFactoryData = oemDiameters.size > 0;
     
     // If no OEM data, use inventory facets as fallback
     if (oemDiameters.size === 0) {
@@ -156,6 +163,7 @@ export function buildDiameterOptions({
     
     // Find the smallest stock/OEM diameter
     const minOemDia = Math.min(...oemDiameters);
+    const belowFloor = (dia: number) => hasFactoryData && dia < minOemDia;
     
     // Add OEM diameters first
     for (const dia of oemDiameters) {
@@ -172,10 +180,9 @@ export function buildDiameterOptions({
       });
     }
     
-    // Add ALL sizes from inventory that have results
-    // Show any size with inventory, regardless of upsize distance from stock
+    // Add sizes from inventory that have results (plus-size only when factory data exists)
     for (const [dia, count] of inventoryCounts) {
-      if (!options.has(dia) && count > 0) {
+      if (!options.has(dia) && count > 0 && !belowFloor(dia)) {
         options.set(dia, {
           diameter: dia,
           label: `${dia}"`,
@@ -187,14 +194,13 @@ export function buildDiameterOptions({
       }
     }
     
-    // ALWAYS show common wheel sizes even if not in current facets
-    // This prevents chips from disappearing when a filter is applied
-    // (Facets only return filtered results, so we need to show options regardless)
-    // Note: We don't restrict by minOemDia because that value gets corrupted when
-    // filters are applied (facets only return filtered diameters).
+    // Show common wheel sizes even if not in current facets, so chips don't
+    // disappear when a filter is applied (facets only return filtered results).
+    // With factory data the floor is exact (it comes from the fitment profile,
+    // not the facets), so sizes below it are simply not offered.
     const commonSizes = [17, 18, 19, 20, 22, 24, 26];
     for (const dia of commonSizes) {
-      if (!options.has(dia)) {
+      if (!options.has(dia) && !belowFloor(dia)) {
         const count = lookupCount(dia);
         options.set(dia, {
           diameter: dia,

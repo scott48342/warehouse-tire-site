@@ -10,7 +10,7 @@
  */
 
 import { parseWheelSizes, type WheelSize } from './profileService';
-import { buildFitmentEnvelope, type OEMSpecs } from '@/lib/aftermarketFitment';
+import { buildFitmentEnvelope, validateWheel, type OEMSpecs } from '@/lib/aftermarketFitment';
 
 describe('Fitment Regression Tests', () => {
   describe('2020 Chevrolet Camaro Base (generation_template source)', () => {
@@ -70,9 +70,9 @@ describe('Fitment Regression Tests', () => {
       expect(envelope.oemMaxDiameter).toBe(20);
     });
 
-    it('builds envelope with correct allowed diameter range: 18-22 (+2 rule)', () => {
+    it('builds envelope with correct allowed diameter range: 18-24 (no downsize; aftermarket_safe +4)', () => {
       expect(envelope.allowedMinDiameter).toBe(18);
-      expect(envelope.allowedMaxDiameter).toBe(22);
+      expect(envelope.allowedMaxDiameter).toBe(24);
     });
 
     it('builds envelope with correct OEM width range: 8.5-10', () => {
@@ -125,6 +125,47 @@ describe('Fitment Regression Tests', () => {
       // This was the Railway DB scenario where oem_wheel_sizes was {}
       const parsed = parseWheelSizes({});
       expect(parsed).toEqual([]);
+    });
+  });
+
+  /**
+   * NO-DOWNSIZE RULE (Scott, 2026-09-17, site-wide): when a vehicle has a factory wheel
+   * size, only plus-size fitments are offered. Regression seen on 2024 Mustang Mach-E
+   * Premium (19" stock) showing 18"/17" wheels - brake clearance risk.
+   */
+  describe('NO-DOWNSIZE RULE: factory minimum diameter is a hard floor', () => {
+    const machE: OEMSpecs = {
+      boltPattern: '5x108',
+      centerBore: 63.4,
+      wheelSpecs: [{ rimDiameter: 19, rimWidth: 7.5, offset: 53 }],
+    };
+    const wheel = (diameter: number) => ({ sku: `T${diameter}`, boltPattern: '5x108', centerBore: 72.6, diameter, width: 8.5, offset: 35 });
+
+    for (const mode of ['oem', 'aftermarket_safe', 'aggressive', 'truck'] as const) {
+      it(`${mode}: envelope floor equals the factory minimum and smaller wheels are EXCLUDED`, () => {
+        const env = buildFitmentEnvelope(machE, mode);
+        expect(env.oemDiameterVerified).toBe(true);
+        expect(env.allowedMinDiameter).toBe(19);
+        expect(validateWheel(wheel(18), env).fitmentClass).toBe('excluded');
+        expect(validateWheel(wheel(17), env).fitmentClass).toBe('excluded');
+        expect(validateWheel(wheel(19), env).fitmentClass).not.toBe('excluded');
+        expect(validateWheel(wheel(20), env).fitmentClass).not.toBe('excluded');
+      });
+    }
+
+    it('truck with 22" high-trim factory wheels no longer downsizes to 17-20', () => {
+      const limited: OEMSpecs = { boltPattern: '6x135', centerBore: 87.1, wheelSpecs: [{ rimDiameter: 22, rimWidth: 9, offset: 44 }] };
+      const env = buildFitmentEnvelope(limited, 'truck');
+      expect(env.allowedMinDiameter).toBe(22);
+      expect(validateWheel({ sku: 'T20', boltPattern: '6x135', centerBore: 87.1, diameter: 20, width: 9, offset: 20 }, env).fitmentClass).toBe('excluded');
+    });
+
+    it('without factory data the conservative fallback floor still applies (not a hard exclusion)', () => {
+      const unknown: OEMSpecs = { boltPattern: '5x114.3', centerBore: 67.1, wheelSpecs: [] };
+      const env = buildFitmentEnvelope(unknown, 'aftermarket_safe');
+      expect(env.oemDiameterVerified).toBe(false);
+      expect(env.oemMinDiameter).toBe(17);
+      expect(validateWheel({ sku: 'T16', boltPattern: '5x114.3', centerBore: 72.6, diameter: 16, width: 7, offset: 40 }, env).fitmentClass).not.toBe('excluded');
     });
   });
 });
