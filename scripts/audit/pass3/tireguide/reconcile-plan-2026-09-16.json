@@ -1,0 +1,8927 @@
+{
+ "runDate": "2026-09-16",
+ "applied": true,
+ "reconciled": [
+  {
+   "year": 1998,
+   "make": "ford",
+   "model": "ranger",
+   "file": "out/1998/ford/ranger.json",
+   "tg": "Ford Trucks Ranger",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "2WD",
+    "4WD",
+    "Splash 2WD",
+    "Splash 4WD"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "1998-ford-ranger-ev-4x2-xl-4x2-xlt-4x2",
+     "display": "EV 4x2 / XL 4x2 / XLT 4x2",
+     "bolt": "5x114.3",
+     "cb": 70.6,
+     "offset": [
+      -6,
+      45
+     ],
+     "wheels": [
+      "14x5.5@20"
+     ],
+     "tires": [
+      "205/75R14",
+      "215/75R14"
+     ],
+     "carry": "trim-match \"2WD\"",
+     "boltNote": null
+    },
+    {
+     "id": "1998-ford-ranger-splash-4x2-splash-4x2-super-cab",
+     "display": "Splash 4x2 / Splash 4x2 Super Cab",
+     "bolt": "5x114.3",
+     "cb": 70.6,
+     "offset": [
+      -6,
+      45
+     ],
+     "wheels": [
+      "15x7@20"
+     ],
+     "tires": [
+      "235/60R15"
+     ],
+     "carry": "trim-match \"Splash 2WD\"",
+     "boltNote": null
+    },
+    {
+     "id": "1998-ford-ranger-splash-4x4-splash-4x4-super-cab",
+     "display": "Splash 4x4 / Splash 4x4 Super Cab",
+     "bolt": "5x114.3",
+     "cb": 70.6,
+     "offset": [
+      -6,
+      45
+     ],
+     "wheels": [
+      "15x7@20"
+     ],
+     "tires": [
+      "235/75R15"
+     ],
+     "carry": "trim-match \"Splash 4WD\"",
+     "boltNote": null
+    },
+    {
+     "id": "1998-ford-ranger-xl-4x2-70-series-option-xlt-4x2-70-series-option",
+     "display": "XL 4x2 (70 Series Option) / XLT 4x2 (70 Series Option)",
+     "bolt": "5x114.3",
+     "cb": 70.6,
+     "offset": [
+      -6,
+      45
+     ],
+     "wheels": [
+      "14x6@20"
+     ],
+     "tires": [
+      "225/70R14"
+     ],
+     "carry": "trim-match \"2WD\"",
+     "boltNote": null
+    },
+    {
+     "id": "1998-ford-ranger-xl-4x4-xlt-4x4",
+     "display": "XL 4x4 / XLT 4x4",
+     "bolt": "5x114.3",
+     "cb": 70.6,
+     "offset": [
+      -12,
+      31
+     ],
+     "wheels": [
+      "15x6@10"
+     ],
+     "tires": [
+      "215/75R15"
+     ],
+     "carry": "trim-match \"4WD\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2021,
+   "make": "chevrolet",
+   "model": "silverado-1500",
+   "file": "out/2021/chevrolet/silverado-1500.json",
+   "tg": "Chevrolet Trucks Silverado 1500",
+   "carryLevel": "same-year",
+   "oldRows": 9,
+   "oldTrims": [
+    "2.7T",
+    "Base",
+    "Custom",
+    "High Country",
+    "LT",
+    "LT Trail Boss",
+    "LTZ",
+    "RST",
+    "WT"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 9,
+   "idSuffixed": 0,
+   "inserted": 7,
+   "rows": [
+    {
+     "id": "2021-chevrolet-silverado-1500-custom",
+     "display": "Custom",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      0,
+      46
+     ],
+     "wheels": [
+      "20x9@23"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"Custom\"",
+     "boltNote": null
+    },
+    {
+     "id": "2021-chevrolet-silverado-1500-custom-trail-boss-lt-trail-boss",
+     "display": "Custom Trail Boss / LT Trail Boss",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      0,
+      46
+     ],
+     "wheels": [
+      "18x8.5@23",
+      "20x8.5@23"
+     ],
+     "tires": [
+      "275/65R18",
+      "265/60R20"
+     ],
+     "carry": "trim-match \"LT Trail Boss\"",
+     "boltNote": null
+    },
+    {
+     "id": "2021-chevrolet-silverado-1500-high-country-ltz",
+     "display": "High Country / LTZ",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      0,
+      46
+     ],
+     "wheels": [
+      "20x9@23",
+      "22x9@23"
+     ],
+     "tires": [
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"High Country\"",
+     "boltNote": null
+    },
+    {
+     "id": "2021-chevrolet-silverado-1500-lt",
+     "display": "LT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      0,
+      46
+     ],
+     "wheels": [
+      "17x8@23",
+      "18x8.5@23",
+      "20x9@23"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20",
+      "275/65R18"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2021-chevrolet-silverado-1500-rst",
+     "display": "RST",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      0,
+      46
+     ],
+     "wheels": [
+      "18x8.5@23",
+      "20x9@23",
+      "22x9@23"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"RST\"",
+     "boltNote": null
+    },
+    {
+     "id": "2021-chevrolet-silverado-1500-ssv",
+     "display": "SSV",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      0,
+      46
+     ],
+     "wheels": [
+      "17xnull@23",
+      "18xnull@23"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17",
+      "275/65R18"
+     ],
+     "carry": "same-year mode",
+     "boltNote": "bolt missing on TG print for this trim; used file-level TG bolt 6x139.7; rim width missing on TG print (diameter from tire)"
+    },
+    {
+     "id": "2021-chevrolet-silverado-1500-wt",
+     "display": "WT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      0,
+      46
+     ],
+     "wheels": [
+      "17x8@23",
+      "18x8.5@23"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17",
+      "275/65R18"
+     ],
+     "carry": "trim-match \"WT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2023,
+   "make": "bmw",
+   "model": "xm",
+   "file": "out/2023/bmw/xm.json",
+   "tg": "BMW Trucks XM",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2023-bmw-xm-base",
+     "display": "Base",
+     "bolt": "5x112",
+     "cb": 66.6,
+     "offset": [
+      30,
+      50
+     ],
+     "wheels": [
+      "f:23x10@40",
+      "r:23x11@40",
+      "f:22x10@40",
+      "r:22x11@40"
+     ],
+     "tires": [
+      "275/35R23",
+      "315/30R23",
+      "275/40R22",
+      "315/35R22"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": "tire/rim salvaged from _unparsed"
+    }
+   ]
+  },
+  {
+   "year": 2023,
+   "make": "chevrolet",
+   "model": "trailblazer",
+   "file": "out/2023/chevrolet/trailblazer.json",
+   "tg": "Chevrolet Trucks Trailblazer",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "Activ",
+    "Activ, RS",
+    "L",
+    "L, LS, LT",
+    "LS",
+    "LT",
+    "RS"
+   ],
+   "oldBolt": [
+    "5x115"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2023-chevrolet-trailblazer-activ-ls",
+     "display": "ACTIV / LS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "17x7.5@45"
+     ],
+     "tires": [
+      "225/60R17"
+     ],
+     "carry": "trim-match \"Activ\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-chevrolet-trailblazer-lt",
+     "display": "LT",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "17x7.5@45",
+      "18x7.5@45"
+     ],
+     "tires": [
+      "225/60R17",
+      "225/55R18"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-chevrolet-trailblazer-rs",
+     "display": "RS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "18x7.5@45"
+     ],
+     "tires": [
+      "225/55R18"
+     ],
+     "carry": "trim-match \"RS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2023,
+   "make": "dodge",
+   "model": "challenger",
+   "file": "out/2023/dodge/challenger.json",
+   "tg": "Dodge Challenger",
+   "carryLevel": "same-year",
+   "oldRows": 13,
+   "oldTrims": [
+    "Base",
+    "GT",
+    "R/T",
+    "R/T",
+    "R/T Scat Pack",
+    "R/T Scat Pack",
+    "R/T Scat Pack Widebody",
+    "SRT Hellcat",
+    "SRT Hellcat Redeye Widebody",
+    "SRT Hellcat Widebody",
+    "SRT Super Stock",
+    "SXT",
+    "SXT"
+   ],
+   "oldBolt": [
+    "5x115"
+   ],
+   "quarantined": 13,
+   "idSuffixed": 0,
+   "inserted": 9,
+   "rows": [
+    {
+     "id": "2023-dodge-challenger-gt-awd",
+     "display": "GT (AWD)",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      5,
+      40
+     ],
+     "wheels": [
+      "20x8@23"
+     ],
+     "tires": [
+      "245/45R20"
+     ],
+     "carry": "trim-match \"GT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-gt-rwd",
+     "display": "GT (RWD)",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      5,
+      40
+     ],
+     "wheels": [
+      "20x8@23",
+      "20x9@23"
+     ],
+     "tires": [
+      "245/45R20"
+     ],
+     "carry": "trim-match \"GT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-r-t",
+     "display": "R/T",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      5,
+      40
+     ],
+     "wheels": [
+      "20x8@23",
+      "20x9@23",
+      "20x9.5@23"
+     ],
+     "tires": [
+      "245/45R20",
+      "275/40R20"
+     ],
+     "carry": "trim-match \"R/T\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-r-t-scat-pack",
+     "display": "R/T Scat Pack",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      11,
+      34
+     ],
+     "wheels": [
+      "20x9@23",
+      "20x9.5@23"
+     ],
+     "tires": [
+      "245/45R20",
+      "275/40R20"
+     ],
+     "carry": "trim-match \"R/T Scat Pack\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-r-t-scat-pack-widebody-srt-hellcat-jailbreak-srt-hellcat-redeye-widebody-srt-hellcat-widebody",
+     "display": "R/T Scat Pack Widebody / SRT Hellcat Jailbreak / SRT Hellcat Redeye Widebody / SRT Hellcat Widebody",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      5,
+      40
+     ],
+     "wheels": [
+      "20x11@23"
+     ],
+     "tires": [
+      "305/35R20"
+     ],
+     "carry": "trim-match \"R/T Scat Pack Widebody\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-srt-hellcat-srt-hellcat-redeye",
+     "display": "SRT Hellcat / SRT Hellcat Redeye",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      5,
+      40
+     ],
+     "wheels": [
+      "20x9.5@23"
+     ],
+     "tires": [
+      "275/40R20"
+     ],
+     "carry": "trim-match \"SRT Hellcat\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-srt-super-stock",
+     "display": "SRT Super Stock",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      8,
+      28
+     ],
+     "wheels": [
+      "18x11@18"
+     ],
+     "tires": [
+      "315/40R18"
+     ],
+     "carry": "trim-match \"SRT Super Stock\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-sxt-awd",
+     "display": "SXT (AWD)",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      5,
+      40
+     ],
+     "wheels": [
+      "19x7.5@23",
+      "20x8@23"
+     ],
+     "tires": [
+      "235/55R19",
+      "245/45R20"
+     ],
+     "carry": "trim-match \"SXT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2023-dodge-challenger-sxt-rwd",
+     "display": "SXT (RWD)",
+     "bolt": "5x115",
+     "cb": 71.5,
+     "offset": [
+      5,
+      40
+     ],
+     "wheels": [
+      "18x7.5@23",
+      "20x8@23"
+     ],
+     "tires": [
+      "235/55R18",
+      "245/45R20"
+     ],
+     "carry": "trim-match \"SXT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "acura",
+   "model": "mdx",
+   "file": "out/2024/acura/mdx.json",
+   "tg": "Acura Trucks MDX",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "A-Spec",
+    "Advance",
+    "Base",
+    "Base, Technology, A-Spec, Advance, Type S",
+    "Technology",
+    "Type S"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-acura-mdx-base-sh-awd",
+     "display": "Base / SH-AWD",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x8.5@48"
+     ],
+     "tires": [
+      "255/55R19"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-acura-mdx-sh-awd-a-spec-sh-awd-advance-pkg-sh-awd-tech-pkg-tech-pkg",
+     "display": "SH-AWD A-Spec / SH-AWD Advance Pkg. / SH-AWD Tech Pkg. / Tech Pkg.",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x9@48"
+     ],
+     "tires": [
+      "255/50R20"
+     ],
+     "carry": "trim-match \"Base, Technology, A-Spec, Advance, Type S\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-acura-mdx-type-s",
+     "display": "Type S",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "21x9.5@48"
+     ],
+     "tires": [
+      "275/40R21"
+     ],
+     "carry": "trim-match \"Type S\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "acura",
+   "model": "rdx",
+   "file": "out/2024/acura/rdx.json",
+   "tg": "Acura Trucks RDX",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "A-Spec",
+    "Advance",
+    "Base",
+    "Base, Technology, A-Spec, Advance",
+    "Technology"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-acura-rdx-sh-awd-sh-awd-advance-pkg-sh-awd-tech-pkg",
+     "display": "SH-AWD / SH-AWD Advance Pkg. / SH-AWD Tech Pkg.",
+     "bolt": "5x114.3",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x8@48"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "trim-match \"Advance\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-acura-rdx-sh-awd-a-spec-sh-awd-a-spec-advance",
+     "display": "SH-AWD A-Spec / SH-AWD A-Spec Advance",
+     "bolt": "5x114.3",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x8@48"
+     ],
+     "tires": [
+      "255/45R20"
+     ],
+     "carry": "trim-match \"Base, Technology, A-Spec, Advance\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "acura",
+   "model": "tlx",
+   "file": "out/2024/acura/tlx.json",
+   "tg": "Acura TLX",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "A-Spec",
+    "Advance",
+    "Base",
+    "Base, Technology, A-Spec, Advance, Type S",
+    "Technology",
+    "Type S"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-acura-tlx-a-spec-technology",
+     "display": "A-Spec / Technology",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x8.5@48"
+     ],
+     "tires": [
+      "255/40R19"
+     ],
+     "carry": "trim-match \"A-Spec\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-acura-tlx-type-s",
+     "display": "Type S",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x9@48"
+     ],
+     "tires": [
+      "255/35R20"
+     ],
+     "carry": "trim-match \"Type S\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "audi",
+   "model": "a7",
+   "file": "out/2024/audi/a7.json",
+   "tg": "Audi A7 Sportback",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-audi-a7-premium-premium-plus-prestige",
+     "display": "Premium / Premium Plus / Prestige",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x8.5@45"
+     ],
+     "tires": [
+      "255/40R20"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-audi-a7-prestige-w-black-optic-pkg",
+     "display": "Prestige w/Black Optic Pkg.",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x8.5@45",
+      "21x8.5@45"
+     ],
+     "tires": [
+      "255/40R20",
+      "255/35R21"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "audi",
+   "model": "a8",
+   "file": "out/2024/audi/a8.json",
+   "tg": "Audi A8 Quattro",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-audi-a8-l",
+     "display": "L",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "19x9@45"
+     ],
+     "tires": [
+      "255/45R19"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-audi-a8-l-w-black-optic-pkg",
+     "display": "L w/Black Optic Pkg.",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "21x9@45"
+     ],
+     "tires": [
+      "265/35R21"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-audi-a8-l-w-executive-pkg",
+     "display": "L w/Executive Pkg.",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x9@45"
+     ],
+     "tires": [
+      "265/40R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "audi",
+   "model": "q3",
+   "file": "out/2024/audi/q3.json",
+   "tg": "Audi Trucks Q3",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "Premium",
+    "Premium Plus",
+    "Premium, Premium Plus, Prestige",
+    "Prestige"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-audi-q3-premium-premium-plus-40-tfsi",
+     "display": "Premium / Premium Plus 40 TFSI",
+     "bolt": "5x112",
+     "cb": 57.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "18x7@45",
+      "19x7@45"
+     ],
+     "tires": [
+      "235/55R18",
+      "235/50R19",
+      "255/45R19"
+     ],
+     "carry": "trim-match \"Premium\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-audi-q3-premium-plus-45-tfsi",
+     "display": "Premium Plus 45 TFSI",
+     "bolt": "5x112",
+     "cb": 57.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "18x7@45",
+      "19x7@45",
+      "20x8.5@45"
+     ],
+     "tires": [
+      "235/55R18",
+      "235/50R19",
+      "255/45R19",
+      "255/40R20"
+     ],
+     "carry": "trim-match \"Premium Plus\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "audi",
+   "model": "rs7",
+   "file": "out/2024/audi/rs7.json",
+   "tg": "Audi RS7 Sportback",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-audi-rs7-155-mph-190-mph-w-ceramic-brake-pkg",
+     "display": "(155 mph) / (190 mph) w/Ceramic Brake Pkg.",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "21x10.5@45",
+      "22x10.5@45"
+     ],
+     "tires": [
+      "275/35R21",
+      "285/30R22"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-audi-rs7-155-mph-w-black-optic-pkg-190-mph-w-black-optic-pkg",
+     "display": "(155 mph) w/Black Optic Pkg. / (190 mph) w/Black Optic Pkg.",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "22x10.5@45"
+     ],
+     "tires": [
+      "285/30R22"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "buick",
+   "model": "enclave",
+   "file": "out/2024/buick/enclave.json",
+   "tg": "Buick Trucks Enclave",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Avenir",
+    "Essence",
+    "Preferred",
+    "Preferred, Essence, Avenir",
+    "Premium"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-buick-enclave-avenir-essence-sport-touring-edition",
+     "display": "Avenir / Essence Sport Touring Edition",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "20x8@45"
+     ],
+     "tires": [
+      "255/55R20"
+     ],
+     "carry": "trim-match \"Avenir\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-buick-enclave-essence-premium",
+     "display": "Essence / Premium",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "18x7.5@45",
+      "20x8@45"
+     ],
+     "tires": [
+      "255/65R18",
+      "255/55R20"
+     ],
+     "carry": "trim-match \"Essence\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "buick",
+   "model": "envision",
+   "file": "out/2024/buick/envision.json",
+   "tg": "Buick Trucks Envision",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "Avenir",
+    "Essence",
+    "Preferred",
+    "Preferred, Essence, Avenir"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-buick-envision-avenir-sport-touring",
+     "display": "Avenir / Sport Touring",
+     "bolt": "5x120",
+     "cb": 66.9,
+     "offset": [
+      38,
+      48
+     ],
+     "wheels": [
+      "20x8.5@43"
+     ],
+     "tires": [
+      "245/45R20"
+     ],
+     "carry": "trim-match \"Avenir\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-buick-envision-preferred",
+     "display": "Preferred",
+     "bolt": "5x120",
+     "cb": 66.9,
+     "offset": [
+      38,
+      48
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "235/60R18"
+     ],
+     "carry": "trim-match \"Preferred\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "cadillac",
+   "model": "escalade",
+   "file": "out/2024/cadillac/escalade.json",
+   "tg": "Cadillac Trucks Escalade",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Luxury",
+    "Luxury, Premium Luxury, Sport, Platinum, V",
+    "Platinum",
+    "Premium Luxury",
+    "Sport",
+    "V"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-cadillac-escalade-luxury-premium-luxury-premium-luxury-platinum-sport-sport-platinum-v",
+     "display": "Luxury / Premium Luxury / Premium Luxury Platinum / Sport / Sport Platinum / V",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "22x9@34"
+     ],
+     "tires": [
+      "275/50R22"
+     ],
+     "carry": "trim-match \"Luxury\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "cadillac",
+   "model": "xt4",
+   "file": "out/2024/cadillac/xt4.json",
+   "tg": "Cadillac Trucks XT4",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "Luxury",
+    "Luxury, Premium Luxury, Sport",
+    "Premium Luxury",
+    "Sport"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-cadillac-xt4-luxury-premium-luxury-sport",
+     "display": "Luxury / Premium Luxury / Sport",
+     "bolt": "5x120",
+     "cb": 66.9,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "18x8@45",
+      "20x8.5@45"
+     ],
+     "tires": [
+      "235/60R18",
+      "245/45R20"
+     ],
+     "carry": "trim-match \"Luxury\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "camaro",
+   "file": "out/2024/chevrolet/camaro.json",
+   "tg": "Chevrolet Camaro",
+   "carryLevel": "same-year",
+   "oldRows": 12,
+   "oldTrims": [
+    "Base",
+    "LS",
+    "LT",
+    "LT RS Package",
+    "LT1",
+    "SS",
+    "SS 1LE",
+    "SS 1LE Track Package",
+    "ZL1",
+    "ZL1 1LE",
+    "ZL1 1LE Extreme Track",
+    "ZL1 1LE Extreme Track Package"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 12,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-chevrolet-camaro-lt",
+     "display": "LT",
+     "bolt": "5x120",
+     "cb": 67.1,
+     "offset": [
+      25,
+      55
+     ],
+     "wheels": [
+      "18x7.5@40",
+      "20x8.5@40"
+     ],
+     "tires": [
+      "245/50R18",
+      "245/40R20"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-camaro-lt1",
+     "display": "LT1",
+     "bolt": "5x120",
+     "cb": 67.1,
+     "offset": [
+      25,
+      45
+     ],
+     "wheels": [
+      "20x8.5@35"
+     ],
+     "tires": [
+      "245/40R20"
+     ],
+     "carry": "trim-match \"LT1\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-camaro-ss-1le-pkg-zl1",
+     "display": "SS 1LE Pkg. / ZL1",
+     "bolt": "5x120",
+     "cb": 67.1,
+     "offset": [
+      20,
+      40
+     ],
+     "wheels": [
+      "f:20x10@30",
+      "r:20x11@30"
+     ],
+     "tires": [
+      "285/30R20",
+      "305/30R20"
+     ],
+     "carry": "trim-match \"ZL1\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-camaro-ss",
+     "display": "SS",
+     "bolt": "5x120",
+     "cb": 67.1,
+     "offset": [
+      25,
+      45
+     ],
+     "wheels": [
+      "f:20x8.5@35",
+      "r:20x9.5@35"
+     ],
+     "tires": [
+      "245/40R20",
+      "275/35R20"
+     ],
+     "carry": "trim-match \"SS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-camaro-zl1-1le-pkg",
+     "display": "ZL1 1LE Pkg.",
+     "bolt": "5x120",
+     "cb": 67.1,
+     "offset": [
+      25,
+      55
+     ],
+     "wheels": [
+      "f:19x11@40",
+      "r:19x12@40"
+     ],
+     "tires": [
+      "305/30R19",
+      "325/30R19"
+     ],
+     "carry": "trim-match \"ZL1 1LE Extreme Track Package\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "colorado",
+   "file": "out/2024/chevrolet/colorado.json",
+   "tg": "Chevrolet Trucks Colorado",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "LT",
+    "Trail Boss",
+    "WT",
+    "WT, LT, Z71, ZR2, Trail Boss",
+    "Z71",
+    "ZR2"
+   ],
+   "oldBolt": [
+    "6x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2024-chevrolet-colorado-lt",
+     "display": "LT",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "17x8@34",
+      "18x8.5@34"
+     ],
+     "tires": [
+      "255/65R17",
+      "265/60R18"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-colorado-trail-boss",
+     "display": "Trail Boss",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "18x8.5@34",
+      "20x9@34"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/60R20",
+      "275/65R18"
+     ],
+     "carry": "trim-match \"Trail Boss\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-colorado-wt",
+     "display": "WT",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "17x8@34"
+     ],
+     "tires": [
+      "255/65R17"
+     ],
+     "carry": "trim-match \"WT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-colorado-z71",
+     "display": "Z71",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "18x8.5@34",
+      "20x9@34"
+     ],
+     "tires": [
+      "265/65R18",
+      "255/55R20"
+     ],
+     "carry": "trim-match \"Z71\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-colorado-zr2",
+     "display": "ZR2",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "17x8@34"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"ZR2\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-colorado-zr2-bison-edition",
+     "display": "ZR2 Bison Edition",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "17x8.5@34"
+     ],
+     "tires": [
+      "315/70R17"
+     ],
+     "carry": "trim-match \"ZR2\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "corvette",
+   "file": "out/2024/chevrolet/corvette.json",
+   "tg": "Chevrolet Corvette",
+   "carryLevel": "same-year",
+   "oldRows": 12,
+   "oldTrims": [
+    "Base",
+    "E-Ray",
+    "E-Ray 1LZ",
+    "E-Ray 3LZ",
+    "Stingray",
+    "Stingray 1LT",
+    "Stingray 2LT",
+    "Stingray 3LT",
+    "Stingray Z51",
+    "Z06",
+    "Z06 1LZ",
+    "Z06 3LZ"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 12,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-chevrolet-corvette-e-ray-e-ray-w-zer-performance-pkg-z06-z06-w-z07-performance-pkg",
+     "display": "E-RAY / E-RAY w/ZER Performance Pkg. / Z06 / Z06 w/Z07 Performance Pkg.",
+     "bolt": "5x120",
+     "cb": 70.3,
+     "offset": [
+      18,
+      58
+     ],
+     "wheels": [
+      "f:20x10@38",
+      "r:21x13@38"
+     ],
+     "tires": [
+      "275/30R20",
+      "345/25R21"
+     ],
+     "carry": "trim-match \"E-Ray\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-corvette-stingray-stingray-w-z51-performance-pkg",
+     "display": "Stingray / Stingray w/Z51 Performance Pkg.",
+     "bolt": "5x120",
+     "cb": 70.3,
+     "offset": [
+      18,
+      58
+     ],
+     "wheels": [
+      "f:19x8.5@38",
+      "r:20x11@38"
+     ],
+     "tires": [
+      "245/35R19",
+      "305/30R20"
+     ],
+     "carry": "trim-match \"Stingray\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "equinox",
+   "file": "out/2024/chevrolet/equinox.json",
+   "tg": "Chevrolet Trucks Equinox",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "LS",
+    "LS, LT, RS, Premier",
+    "LT",
+    "Premier",
+    "RS"
+   ],
+   "oldBolt": [
+    "5x115"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-chevrolet-equinox-ls",
+     "display": "LS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      47
+     ],
+     "wheels": [
+      "17x7@43"
+     ],
+     "tires": [
+      "225/65R17"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-equinox-ls-midnight-edition-ls-sport-edition",
+     "display": "LS Midnight Edition / LS Sport Edition",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      47
+     ],
+     "wheels": [
+      "18x7@43"
+     ],
+     "tires": [
+      "225/60R18"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-equinox-lt",
+     "display": "LT",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      47
+     ],
+     "wheels": [
+      "17x7@43",
+      "18x7@43",
+      "19x7.5@43"
+     ],
+     "tires": [
+      "225/65R17",
+      "225/60R18",
+      "235/50R19"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-equinox-premier",
+     "display": "Premier",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      47
+     ],
+     "wheels": [
+      "18x7@43",
+      "19x7.5@43"
+     ],
+     "tires": [
+      "225/60R18",
+      "235/50R19"
+     ],
+     "carry": "trim-match \"Premier\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-equinox-rs",
+     "display": "RS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      47
+     ],
+     "wheels": [
+      "19x7.5@43"
+     ],
+     "tires": [
+      "235/50R19"
+     ],
+     "carry": "trim-match \"RS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "equinox-ev",
+   "file": "out/2024/chevrolet/equinox-ev.json",
+   "tg": "Chevrolet Trucks Equinox EV",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "1LT",
+    "2LT",
+    "3LT",
+    "RS"
+   ],
+   "oldBolt": [
+    "6x120"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-chevrolet-equinox-ev-1lt-2lt",
+     "display": "1LT / 2LT",
+     "bolt": "6x120",
+     "cb": 70.3,
+     "offset": [
+      20,
+      55
+     ],
+     "wheels": [
+      "19x8.5@38"
+     ],
+     "tires": [
+      "245/55R19"
+     ],
+     "carry": "trim-match \"1LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-equinox-ev-3lt-rs",
+     "display": "3LT / RS",
+     "bolt": "6x120",
+     "cb": 70.3,
+     "offset": [
+      20,
+      55
+     ],
+     "wheels": [
+      "21x9@38"
+     ],
+     "tires": [
+      "275/40R21"
+     ],
+     "carry": "trim-match \"3LT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "express-2500",
+   "file": "out/2024/chevrolet/express-2500.json",
+   "tg": "Chevrolet Vans Express 2500",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "Cargo",
+    "LS",
+    "LT",
+    "Passenger"
+   ],
+   "oldBolt": [
+    "8x165.1"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-chevrolet-express-2500-base-ls-lt",
+     "display": "Base / LS / LT",
+     "bolt": "8x165.1",
+     "cb": 121,
+     "offset": [
+      28,
+      50
+     ],
+     "wheels": [
+      "16x6.5@39"
+     ],
+     "tires": [
+      "245/75R16"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "express-3500",
+   "file": "out/2024/chevrolet/express-3500.json",
+   "tg": "Chevrolet Vans Express 3500",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Cargo",
+    "Cutaway",
+    "LS",
+    "LT",
+    "Passenger"
+   ],
+   "oldBolt": [
+    "8x165.1"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-chevrolet-express-3500-base-ls-lt",
+     "display": "Base / LS / LT",
+     "bolt": "8x165.1",
+     "cb": 121,
+     "offset": [
+      28,
+      50
+     ],
+     "wheels": [
+      "16x6.5@39"
+     ],
+     "tires": [
+      "245/75R16"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "malibu",
+   "file": "out/2024/chevrolet/malibu.json",
+   "tg": "Chevrolet Malibu",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "LS",
+    "LS, RS, LT, Premier",
+    "LT",
+    "Premier",
+    "RS"
+   ],
+   "oldBolt": [
+    "5x115"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-chevrolet-malibu-2lt",
+     "display": "2LT",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "19x8@44"
+     ],
+     "tires": [
+      "245/40R19"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-malibu-ls",
+     "display": "LS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "16x7.5@44"
+     ],
+     "tires": [
+      "205/65R16"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-malibu-lt",
+     "display": "LT",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "17x8@44",
+      "16x7.5@44",
+      "18x8@44",
+      "19x8@44"
+     ],
+     "tires": [
+      "225/55R17",
+      "205/65R16",
+      "245/45R18",
+      "245/40R19"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-malibu-rs",
+     "display": "RS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "18x8@44"
+     ],
+     "tires": [
+      "245/45R18"
+     ],
+     "carry": "trim-match \"RS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "silverado-1500",
+   "file": "out/2024/chevrolet/silverado-1500.json",
+   "tg": "Chevrolet Trucks Silverado 1500",
+   "carryLevel": "same-year",
+   "oldRows": 11,
+   "oldTrims": [
+    "2.7 TurboMax",
+    "Base",
+    "Custom",
+    "Custom Trail Boss",
+    "High Country",
+    "LT",
+    "LT Trail Boss",
+    "LTZ",
+    "RST",
+    "WT",
+    "ZR2"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 11,
+   "idSuffixed": 0,
+   "inserted": 10,
+   "rows": [
+    {
+     "id": "2024-chevrolet-silverado-1500-custom",
+     "display": "Custom",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "20x9@19"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"Custom\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-custom-trail-boss-lt-trail-boss",
+     "display": "Custom Trail Boss / LT Trail Boss",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "18x8.5@19",
+      "20x9@19"
+     ],
+     "tires": [
+      "275/65R18",
+      "275/60R20",
+      "265/60R20"
+     ],
+     "carry": "trim-match \"Custom Trail Boss\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-high-country-ltz",
+     "display": "High Country / LTZ",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "20x9@19",
+      "22x9@19"
+     ],
+     "tires": [
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"High Country\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-lt",
+     "display": "LT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "17x8@19",
+      "18x8.5@19",
+      "22x9@19",
+      "20x9@19"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/50R22",
+      "275/60R20"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-ppv",
+     "display": "PPV",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "20xnull@19"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": "bolt missing on TG print for this trim; used file-level TG bolt 6x139.7; rim width missing on TG print (diameter from tire)"
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-rst",
+     "display": "RST",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "18x8.5@19",
+      "20x9@19",
+      "22x9@19"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"RST\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-ssv",
+     "display": "SSV",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "17xnull@19",
+      "18xnull@19"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17",
+      "275/65R18"
+     ],
+     "carry": "same-year mode",
+     "boltNote": "bolt missing on TG print for this trim; used file-level TG bolt 6x139.7; rim width missing on TG print (diameter from tire)"
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-wt",
+     "display": "WT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "17x8@19"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17"
+     ],
+     "carry": "trim-match \"WT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-wt-4x4-double-crew-cab",
+     "display": "WT 4x4 Double/Crew Cab",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "17x8@19",
+      "18x8.5@19"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17",
+      "275/65R18"
+     ],
+     "carry": "trim-match \"WT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-1500-zr2",
+     "display": "ZR2",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "18x8.5@19"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"ZR2\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "silverado-2500hd",
+   "file": "out/2024/chevrolet/silverado-2500hd.json",
+   "tg": "Chevrolet Trucks Silverado 2500 HD",
+   "carryLevel": "same-year",
+   "oldRows": 8,
+   "oldTrims": [
+    "Base",
+    "Custom",
+    "High Country",
+    "LT",
+    "LTZ",
+    "WT",
+    "ZR2",
+    "ZR2 Bison"
+   ],
+   "oldBolt": [
+    "8x180"
+   ],
+   "quarantined": 8,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-chevrolet-silverado-2500hd-custom-high-country",
+     "display": "Custom / High Country",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/65R20"
+     ],
+     "carry": "trim-match \"Custom\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-2500hd-lt",
+     "display": "LT",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x7.5@8",
+      "18x8@8",
+      "20x8.5@8"
+     ],
+     "tires": [
+      "245/75R17",
+      "265/70R17",
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-2500hd-ltz",
+     "display": "LTZ",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x8@45",
+      "20x8.5@45"
+     ],
+     "tires": [
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"LTZ\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-2500hd-wt",
+     "display": "WT",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x7.5@8",
+      "18x8@8"
+     ],
+     "tires": [
+      "245/75R17",
+      "265/70R17",
+      "275/70R18"
+     ],
+     "carry": "trim-match \"WT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-2500hd-zr2-zr2-bison-zr2-bison-diesel-zr2-diesel",
+     "display": "ZR2 / ZR2 Bison / ZR2 Bison Diesel / ZR2 Diesel",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x9@45"
+     ],
+     "tires": [
+      "305/70R18"
+     ],
+     "carry": "trim-match \"ZR2\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "silverado-3500hd",
+   "file": "out/2024/chevrolet/silverado-3500hd.json",
+   "tg": "Chevrolet Trucks Silverado 3500 HD",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Base",
+    "Custom",
+    "High Country",
+    "LT",
+    "WT"
+   ],
+   "oldBolt": [
+    "8x180"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-chevrolet-silverado-3500hd-high-country",
+     "display": "High Country",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/65R20"
+     ],
+     "carry": "trim-match \"High Country\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-3500hd-high-country-drw-ltz-regular-cab-2wd-drw-wt-regular-cab-2wd-drw",
+     "display": "High Country (DRW) / LTZ (Regular Cab)(2WD)(DRW) / WT (Regular Cab)(2WD)(DRW)",
+     "bolt": "8x210",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x6.5@8"
+     ],
+     "tires": [
+      "235/80R18"
+     ],
+     "carry": "trim-match \"High Country\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-3500hd-lt-ltz",
+     "display": "LT / LTZ",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x8@8",
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-3500hd-lt-drw-ltz-drw-wt-drw",
+     "display": "LT (DRW) / LTZ (DRW) / WT (DRW)",
+     "bolt": "8x210",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x6.5@8"
+     ],
+     "tires": [
+      "235/80R17"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-silverado-3500hd-wt",
+     "display": "WT",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x8@8"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"WT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "suburban",
+   "file": "out/2024/chevrolet/suburban.json",
+   "tg": "Chevrolet Trucks Suburban",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "LS"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-chevrolet-suburban-high-country-rst",
+     "display": "High Country / RST",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "22x9@34"
+     ],
+     "tires": [
+      "275/50R22"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-suburban-ls-lt",
+     "display": "LS / LT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "18x8.5@34",
+      "20x9@34",
+      "22x9@34"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-suburban-premier",
+     "display": "Premier",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20x9@34",
+      "22x9@34"
+     ],
+     "tires": [
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-suburban-z71",
+     "display": "Z71",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20x9@34"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "tahoe",
+   "file": "out/2024/chevrolet/tahoe.json",
+   "tg": "Chevrolet Trucks Tahoe",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "High Country",
+    "LS",
+    "LS, LT, RST, Z71, Premier, High Country",
+    "LT",
+    "Premier",
+    "RST",
+    "Z71"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2024-chevrolet-tahoe-high-country-rst",
+     "display": "High Country / RST",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "22x9@34"
+     ],
+     "tires": [
+      "275/50R22"
+     ],
+     "carry": "trim-match \"High Country\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-tahoe-ls-lt",
+     "display": "LS / LT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "18x8.5@34",
+      "20x9@34",
+      "22x9@34"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-tahoe-ppv-rst-w-rst-performance-edition",
+     "display": "PPV / RST w/RST Performance Edition",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20x9@34"
+     ],
+     "tires": [
+      "275/55R20"
+     ],
+     "carry": "trim-match \"RST\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-tahoe-premier",
+     "display": "Premier",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20x9@34",
+      "22x9@34"
+     ],
+     "tires": [
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"Premier\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-tahoe-ssv",
+     "display": "SSV",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20xnull@34"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": "bolt missing on TG print for this trim; used file-level TG bolt 6x139.7; rim width missing on TG print (diameter from tire)"
+    },
+    {
+     "id": "2024-chevrolet-tahoe-z71",
+     "display": "Z71",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20x9@34"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"Z71\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "traverse",
+   "file": "out/2024/chevrolet/traverse.json",
+   "tg": "Chevrolet Trucks Traverse",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "High Country",
+    "LS",
+    "LS, LT, RS, Premier, High Country",
+    "LT",
+    "Premier",
+    "RS"
+   ],
+   "oldBolt": [
+    "6x120",
+    "5x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-chevrolet-traverse-ls-lt",
+     "display": "LS / LT",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "18x7.5@45"
+     ],
+     "tires": [
+      "255/65R18"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-traverse-ls-w-midnight-sport-edition-lt-w-midnight-sport-edition",
+     "display": "LS w/Midnight/Sport Edition / LT w/Midnight/Sport Edition",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "20x8@45"
+     ],
+     "tires": [
+      "255/55R20"
+     ],
+     "carry": "trim-match \"LS, LT, RS, Premier, High Country\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-traverse-rs",
+     "display": "RS",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "22x8.5@45"
+     ],
+     "tires": [
+      "275/45R22"
+     ],
+     "carry": "trim-match \"RS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-traverse-z71",
+     "display": "Z71",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "18x8@45"
+     ],
+     "tires": [
+      "265/65R18"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "chevrolet",
+   "model": "trax",
+   "file": "out/2024/chevrolet/trax.json",
+   "tg": "Chevrolet Trucks Trax",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "1RS",
+    "ACTIV",
+    "Base",
+    "LS",
+    "LT",
+    "RS"
+   ],
+   "oldBolt": [
+    "5x115"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-chevrolet-trax-activ",
+     "display": "ACTIV",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      50
+     ],
+     "wheels": [
+      "18x7.5@43"
+     ],
+     "tires": [
+      "225/55R18"
+     ],
+     "carry": "trim-match \"ACTIV\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-trax-ls-w-aluminum-wheels-lt",
+     "display": "LS w/Aluminum Wheels / LT",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      50
+     ],
+     "wheels": [
+      "17x7.5@43"
+     ],
+     "tires": [
+      "225/60R17"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-trax-ls-w-steel-wheels",
+     "display": "LS w/Steel Wheels",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      50
+     ],
+     "wheels": [
+      "17x7@43"
+     ],
+     "tires": [
+      "225/60R17"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-chevrolet-trax-rs",
+     "display": "RS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      50
+     ],
+     "wheels": [
+      "18x7.5@43",
+      "19x8@43"
+     ],
+     "tires": [
+      "225/55R18",
+      "245/45R19"
+     ],
+     "carry": "trim-match \"RS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "bronco",
+   "file": "out/2024/ford/bronco.json",
+   "tg": "Ford Trucks Bronco",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "Badlands",
+    "Base",
+    "Big Bend",
+    "Black Diamond",
+    "Outer Banks",
+    "Raptor",
+    "Wildtrak"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2024-ford-bronco-badlands",
+     "display": "Badlands",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      15,
+      55
+     ],
+     "wheels": [
+      "17x8@35"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"Badlands\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-badlands-w-sasquatch-pkg-big-bend-w-sasquatch-pkg-black-diamond-w-sasquatch-pkg-everglades-heritage-edition-heritage-limited-edition-outer-banks-w-sasquatch-pkg-wildtrak",
+     "display": "Badlands w/Sasquatch Pkg. / Big Bend w/Sasquatch Pkg. / Black Diamond w/Sasquatch Pkg. / Everglades / Heritage Edition / Heritage Limited Edition / Outer Banks w/Sasquatch Pkg. / Wildtrak",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      15,
+      55
+     ],
+     "wheels": [
+      "17x8.5@35"
+     ],
+     "tires": [
+      "315/70R17"
+     ],
+     "carry": "trim-match \"Wildtrak\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-big-bend",
+     "display": "Big Bend",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      15,
+      55
+     ],
+     "wheels": [
+      "17x7.5@35"
+     ],
+     "tires": [
+      "255/75R17"
+     ],
+     "carry": "trim-match \"Big Bend\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-black-diamond",
+     "display": "Black Diamond",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      15,
+      55
+     ],
+     "wheels": [
+      "17x7.5@35"
+     ],
+     "tires": [
+      "265/70R17"
+     ],
+     "carry": "trim-match \"Black Diamond\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-outer-banks",
+     "display": "Outer Banks",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      15,
+      55
+     ],
+     "wheels": [
+      "18x7.5@35"
+     ],
+     "tires": [
+      "255/70R18"
+     ],
+     "carry": "trim-match \"Outer Banks\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-raptor",
+     "display": "Raptor",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      15,
+      55
+     ],
+     "wheels": [
+      "17x8.5@35"
+     ],
+     "tires": [
+      "37x12.50R17"
+     ],
+     "carry": "trim-match \"Raptor\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "bronco-sport",
+   "file": "out/2024/ford/bronco-sport.json",
+   "tg": "Ford Trucks Bronco Sport",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "Badlands",
+    "Base",
+    "Big Bend",
+    "Outer Banks"
+   ],
+   "oldBolt": [
+    "5x108"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-ford-bronco-sport-badlands",
+     "display": "Badlands",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "17x7@48"
+     ],
+     "tires": [
+      "225/65R17",
+      "235/65R17"
+     ],
+     "carry": "trim-match \"Badlands\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-sport-big-bend",
+     "display": "Big Bend",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "17x7@48",
+      "18x7@48"
+     ],
+     "tires": [
+      "225/65R17",
+      "225/60R18"
+     ],
+     "carry": "trim-match \"Big Bend\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-sport-free-wheeling-heritage-edition-outer-banks-w-black-diamond-off-road-pkg",
+     "display": "Free Wheeling / Heritage Edition / Outer Banks w/Black Diamond Off-Road Pkg.",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "17x7@48"
+     ],
+     "tires": [
+      "225/65R17"
+     ],
+     "carry": "trim-match \"Outer Banks\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-bronco-sport-outer-banks",
+     "display": "Outer Banks",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7@48"
+     ],
+     "tires": [
+      "225/60R18"
+     ],
+     "carry": "trim-match \"Outer Banks\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "edge",
+   "file": "out/2024/ford/edge.json",
+   "tg": "Ford Trucks Edge",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "SE",
+    "SEL",
+    "ST",
+    "Titanium"
+   ],
+   "oldBolt": [
+    "5x108"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-ford-edge-se",
+     "display": "SE",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x8@48",
+      "19x8@48"
+     ],
+     "tires": [
+      "245/60R18",
+      "245/55R19"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-edge-sel",
+     "display": "SEL",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x8@48"
+     ],
+     "tires": [
+      "245/60R18"
+     ],
+     "carry": "trim-match \"SEL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-edge-st",
+     "display": "ST",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x8@48",
+      "21x9@48"
+     ],
+     "tires": [
+      "245/50R20",
+      "265/40R21"
+     ],
+     "carry": "trim-match \"ST\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-edge-st-line",
+     "display": "ST-Line",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x8@48"
+     ],
+     "tires": [
+      "245/50R20"
+     ],
+     "carry": "trim-match \"ST\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-edge-titanium",
+     "display": "Titanium",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x8@48",
+      "20x8@48",
+      "20x8.5@48"
+     ],
+     "tires": [
+      "245/55R19",
+      "245/50R20"
+     ],
+     "carry": "trim-match \"Titanium\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "escape",
+   "file": "out/2024/ford/escape.json",
+   "tg": "Ford Trucks Escape",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "Plug-In Hybrid",
+    "S",
+    "S, SE, SEL, ST-Line, Titanium, Plug-In Hybrid",
+    "SE",
+    "SEL",
+    "ST-Line",
+    "Titanium"
+   ],
+   "oldBolt": [
+    "5x108"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2024-ford-escape-active",
+     "display": "Active",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "17x7@50"
+     ],
+     "tires": [
+      "225/65R17"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-escape-platinum-platinum-hybrid",
+     "display": "Platinum / Platinum Hybrid",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x7@50",
+      "19x7.5@50"
+     ],
+     "tires": [
+      "225/55R19"
+     ],
+     "carry": "trim-match \"Plug-In Hybrid\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-escape-plug-in-hybrid",
+     "display": "Plug-In Hybrid",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x7.5@50"
+     ],
+     "tires": [
+      "225/60R18"
+     ],
+     "carry": "trim-match \"Plug-In Hybrid\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-escape-st-line-st-line-hybrid",
+     "display": "ST-Line / ST-Line Hybrid",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x7@50"
+     ],
+     "tires": [
+      "225/60R18"
+     ],
+     "carry": "trim-match \"ST-Line\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-escape-st-line-elite-st-line-elite-hybrid",
+     "display": "ST-Line Elite / ST-Line Elite Hybrid",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x7@50"
+     ],
+     "tires": [
+      "225/55R19"
+     ],
+     "carry": "trim-match \"S, SE, SEL, ST-Line, Titanium, Plug-In Hybrid\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-escape-st-line-select-st-line-select-hybrid",
+     "display": "ST-Line Select / ST-Line Select Hybrid",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x7@50",
+      "19x7.5@50"
+     ],
+     "tires": [
+      "225/60R18",
+      "225/55R19"
+     ],
+     "carry": "trim-match \"S, SE, SEL, ST-Line, Titanium, Plug-In Hybrid\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "expedition",
+   "file": "out/2024/ford/expedition.json",
+   "tg": "Ford Trucks Expedition",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "King Ranch",
+    "Limited",
+    "Platinum",
+    "Timberline",
+    "XL",
+    "XL, XLT, Limited, King Ranch, Platinum, Timberline",
+    "XLT"
+   ],
+   "oldBolt": [
+    "6x135"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-ford-expedition-king-ranch-max-king-ranch-max-platinum-platinum",
+     "display": "King Ranch / Max King Ranch / Max Platinum / Platinum",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      44
+     ],
+     "wheels": [
+      "22x9.5@35"
+     ],
+     "tires": [
+      "285/45R22"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-expedition-limited-max-limited",
+     "display": "Limited / Max Limited",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      44
+     ],
+     "wheels": [
+      "20x8.5@35",
+      "22x9.5@35"
+     ],
+     "tires": [
+      "275/55R20",
+      "285/45R22"
+     ],
+     "carry": "trim-match \"Limited\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-expedition-max-xlt-xlt",
+     "display": "Max XLT / XLT",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      44
+     ],
+     "wheels": [
+      "18x8.5@35",
+      "20x8.5@35"
+     ],
+     "tires": [
+      "275/65R18",
+      "275/55R20"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-expedition-timberline",
+     "display": "Timberline",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      44
+     ],
+     "wheels": [
+      "18x8.5@35"
+     ],
+     "tires": [
+      "265/70R18"
+     ],
+     "carry": "trim-match \"Timberline\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-expedition-xl-stx",
+     "display": "XL STX",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      44
+     ],
+     "wheels": [
+      "18x8.5@35"
+     ],
+     "tires": [
+      "275/65R18"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "explorer",
+   "file": "out/2024/ford/explorer.json",
+   "tg": "Ford Trucks Explorer",
+   "carryLevel": "same-year",
+   "oldRows": 8,
+   "oldTrims": [
+    "Base",
+    "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline",
+    "King Ranch",
+    "Limited",
+    "Platinum",
+    "ST",
+    "Timberline",
+    "XLT"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 8,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2024-ford-explorer-base",
+     "display": "Base",
+     "bolt": "5x114.3",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7.5@48"
+     ],
+     "tires": [
+      "255/65R18"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-explorer-king-ranch-limited-xlt-w-sport-appearance-pkg",
+     "display": "King Ranch / Limited / XLT w/Sport Appearance Pkg.",
+     "bolt": "5x114.3",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x8@48"
+     ],
+     "tires": [
+      "255/55R20"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-explorer-platinum-st-w-high-performance-pkg-st-w-street-pack",
+     "display": "Platinum / ST w/High-Performance Pkg. / ST w/Street Pack",
+     "bolt": "5x114.3",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "21x9@48"
+     ],
+     "tires": [
+      "275/45R21"
+     ],
+     "carry": "trim-match \"Platinum\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-explorer-st-st-line",
+     "display": "ST / ST-Line",
+     "bolt": "5x114.3",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x8.5@48",
+      "21x9@48"
+     ],
+     "tires": [
+      "255/55R20",
+      "275/45R21"
+     ],
+     "carry": "trim-match \"ST\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-explorer-timberline",
+     "display": "Timberline",
+     "bolt": "5x114.3",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x8@48"
+     ],
+     "tires": [
+      "265/65R18"
+     ],
+     "carry": "trim-match \"Timberline\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-explorer-xlt",
+     "display": "XLT",
+     "bolt": "5x114.3",
+     "cb": 63.4,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7.5@48",
+      "20x8@48"
+     ],
+     "tires": [
+      "255/65R18",
+      "255/55R20"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "f-150",
+   "file": "out/2024/ford/f-150.json",
+   "tg": "Ford Trucks F-150",
+   "carryLevel": "same-year",
+   "oldRows": 11,
+   "oldTrims": [
+    "Base",
+    "King Ranch",
+    "Lariat",
+    "Lightning",
+    "Limited",
+    "Platinum",
+    "Raptor",
+    "Raptor R",
+    "Tremor",
+    "XL",
+    "XLT"
+   ],
+   "oldBolt": [
+    "6x135"
+   ],
+   "quarantined": 11,
+   "idSuffixed": 0,
+   "inserted": 10,
+   "rows": [
+    {
+     "id": "2024-ford-f-150-king-ranch-lariat-platinum",
+     "display": "King Ranch / Lariat / Platinum",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "20x8.5@36",
+      "22x8.5@36"
+     ],
+     "tires": [
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-police-responder-stx-fx4-off-road-pkg-xlt-fx4-off-road-pkg",
+     "display": "Police Responder / STX FX4 Off-Road Pkg. / XLT FX4 Off-Road Pkg.",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "18x8.5@36"
+     ],
+     "tires": [
+      "265/70R18"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-raptor",
+     "display": "Raptor",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "17x8.5@36"
+     ],
+     "tires": [
+      "315/70R17",
+      "37x12.50R17"
+     ],
+     "carry": "trim-match \"Raptor\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-raptor-r",
+     "display": "Raptor R",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "17x8.5@36"
+     ],
+     "tires": [
+      "37x12.50R17"
+     ],
+     "carry": "trim-match \"Raptor R\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-stx-4x2-stx-4x4",
+     "display": "STX 4x2 / STX 4x4",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "20x8.5@36"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-tremor",
+     "display": "Tremor",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "18x7.5@36"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"Tremor\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-xl-4x2",
+     "display": "XL 4x2",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      34,
+      44
+     ],
+     "wheels": [
+      "17x7.5@39"
+     ],
+     "tires": [
+      "245/70R17"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-xl-4x4",
+     "display": "XL 4x4",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      34,
+      44
+     ],
+     "wheels": [
+      "17x7.5@39"
+     ],
+     "tires": [
+      "265/70R17"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-xlt-4x2",
+     "display": "XLT 4x2",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "18x7.5@36",
+      "18x8.5@36",
+      "20x8.5@36"
+     ],
+     "tires": [
+      "265/60R18",
+      "275/60R20"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-150-xlt-4x4",
+     "display": "XLT 4x4",
+     "bolt": "6x135",
+     "cb": 87.1,
+     "offset": [
+      25,
+      46
+     ],
+     "wheels": [
+      "18x7.5@36",
+      "18x8.5@36",
+      "20x8.5@36"
+     ],
+     "tires": [
+      "275/65R18",
+      "275/60R20"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "f-250",
+   "file": "out/2024/ford/f-250.json",
+   "tg": "Ford Trucks F-250 Super Duty",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "King Ranch",
+    "Lariat",
+    "Limited",
+    "Platinum",
+    "Tremor",
+    "XL",
+    "XLT"
+   ],
+   "oldBolt": [
+    "8x170"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 7,
+   "rows": [
+    {
+     "id": "2024-ford-f-250-king-ranch-lariat-w-sport-chrome-black-pkg-limited-platinum-xlt-w-black-appearance-pkg",
+     "display": "King Ranch / Lariat w/Sport/Chrome/Black Pkg. / Limited / Platinum / XLT w/Black Appearance Pkg.",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "20x8@43"
+     ],
+     "tires": [
+      "275/65R20"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-250-king-ranch-w-tremor-off-road-pkg-lariat-w-tremor-off-road-pkg-platinum-w-tremor-off-road-pkg-xlt-w-tremor-off-road-pkg",
+     "display": "King Ranch w/Tremor Off-Road Pkg. / Lariat w/Tremor Off-Road Pkg. / Platinum w/Tremor Off-Road Pkg. / XLT w/Tremor Off-Road Pkg.",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "285/75R18"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-250-lariat-xl-reg-cab-w-stx-appearance-pkg",
+     "display": "Lariat / XL Reg. Cab w/STX Appearance Pkg.",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"Lariat\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-250-xl-4x2-xl-4x4",
+     "display": "XL 4x2 / XL 4x4",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "17x7.5@43"
+     ],
+     "tires": [
+      "245/75R17"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-250-xl-w-off-road-pkg",
+     "display": "XL w/Off-Road Pkg.",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "17x7.5@43"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-250-xl-w-stx-appearance-pkg-xlt-w-sport-appearance-pkg",
+     "display": "XL w/STX Appearance Pkg. / XLT w/Sport Appearance Pkg.",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43",
+      "20x8@43"
+     ],
+     "tires": [
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-250-xlt",
+     "display": "XLT",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "275/65R18",
+      "275/70R18"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "f-350",
+   "file": "out/2024/ford/f-350.json",
+   "tg": "Ford Trucks F-350 Super Duty",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "King Ranch",
+    "Lariat",
+    "Limited",
+    "Platinum",
+    "XL",
+    "XLT"
+   ],
+   "oldBolt": [
+    "8x170"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 8,
+   "rows": [
+    {
+     "id": "2024-ford-f-350-king-ranch-lariat-w-sport-chrome-pkg-limited-platinum",
+     "display": "King Ranch / Lariat w/Sport/Chrome Pkg. / Limited / Platinum",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "20x8@43"
+     ],
+     "tires": [
+      "275/65R20"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-350-king-ranch-drw-lariat-drw-limited-drw-platinum-drw-xl-4x2-drw-xl-4x4-drw-xlt-drw",
+     "display": "King Ranch (DRW) / Lariat (DRW) / Limited (DRW) / Platinum (DRW) / XL 4x2 (DRW) / XL 4x4 (DRW) / XLT (DRW)",
+     "bolt": "8x200",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "17x6.5@43"
+     ],
+     "tires": [
+      "245/75R17"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-350-king-ranch-w-tremor-off-road-pkg-platinum-w-tremor-off-road-pkg",
+     "display": "King Ranch w/Tremor Off-Road Pkg. / Platinum w/Tremor Off-Road Pkg.",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "285/75R18"
+     ],
+     "carry": "trim-match \"King Ranch\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-350-lariat",
+     "display": "Lariat",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"Lariat\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-350-xl-4x2",
+     "display": "XL 4x2",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "275/65R18"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-350-xl-4x4",
+     "display": "XL 4x4",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "275/65R18",
+      "275/70R18"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-350-xl-4x4-w-off-road-pkg",
+     "display": "XL 4x4 w/Off-Road Pkg.",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "17x7.5@43"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-f-350-xlt",
+     "display": "XLT",
+     "bolt": "8x170",
+     "cb": 124.9,
+     "offset": [
+      25,
+      60
+     ],
+     "wheels": [
+      "18x8@43",
+      "20x8@43"
+     ],
+     "tires": [
+      "275/65R18",
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "mustang",
+   "file": "out/2024/ford/mustang.json",
+   "tg": "Ford Mustang",
+   "carryLevel": "same-year",
+   "oldRows": 9,
+   "oldTrims": [
+    "Dark Horse",
+    "Dark Horse",
+    "Dark Horse Handling Package",
+    "EcoBoost",
+    "GT",
+    "GT Performance Pack",
+    "GT Performance Package",
+    "Mach 1",
+    "Shelby GT500"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 9,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-ford-mustang-dark-horse-dark-horse-premium",
+     "display": "Dark Horse / Dark Horse Premium",
+     "bolt": "5x114.3",
+     "cb": 70.5,
+     "offset": [
+      30,
+      52
+     ],
+     "wheels": [
+      "f:19x9.5@41",
+      "r:19x10@41",
+      "f:19x10.5@41",
+      "r:19x11@41"
+     ],
+     "tires": [
+      "255/40R19",
+      "275/40R19",
+      "305/30R19",
+      "315/30R19"
+     ],
+     "carry": "trim-match \"Dark Horse\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-mustang-ecoboost",
+     "display": "EcoBoost",
+     "bolt": "5x114.3",
+     "cb": 70.5,
+     "offset": [
+      30,
+      55
+     ],
+     "wheels": [
+      "17x7.5@43",
+      "18x8@43",
+      "19x9@43",
+      "19x8.5@43"
+     ],
+     "tires": [
+      "235/55R17",
+      "235/50R18",
+      "255/40R19"
+     ],
+     "carry": "trim-match \"EcoBoost\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-mustang-ecoboost-premium",
+     "display": "EcoBoost Premium",
+     "bolt": "5x114.3",
+     "cb": 70.5,
+     "offset": [
+      30,
+      55
+     ],
+     "wheels": [
+      "18x8@43",
+      "19x8.5@43",
+      "19x9@43",
+      "20x9@43"
+     ],
+     "tires": [
+      "235/50R18",
+      "255/40R19",
+      "265/35R20"
+     ],
+     "carry": "trim-match \"EcoBoost\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-mustang-gt",
+     "display": "GT",
+     "bolt": "5x114.3",
+     "cb": 70.5,
+     "offset": [
+      28,
+      52
+     ],
+     "wheels": [
+      "18x8.5@40",
+      "19x8.5@40",
+      "f:19x9@40",
+      "r:19x9.5@40"
+     ],
+     "tires": [
+      "255/45R18",
+      "255/40R19",
+      "275/40R19"
+     ],
+     "carry": "trim-match \"GT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-mustang-gt-premium",
+     "display": "GT Premium",
+     "bolt": "5x114.3",
+     "cb": 70.5,
+     "offset": [
+      28,
+      52
+     ],
+     "wheels": [
+      "19x8.5@40",
+      "f:19x9@40",
+      "r:19x9.5@40",
+      "20x9@40"
+     ],
+     "tires": [
+      "255/40R19",
+      "275/40R19",
+      "265/35R20"
+     ],
+     "carry": "trim-match \"GT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "mustang-mach-e",
+   "file": "out/2024/ford/mustang-mach-e.json",
+   "tg": "Ford Trucks Mustang Mach-E",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-ford-mustang-mach-e-gt",
+     "display": "GT",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "20x8@50"
+     ],
+     "tires": [
+      "245/45R20"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-mustang-mach-e-premium",
+     "display": "Premium",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x7.5@50"
+     ],
+     "tires": [
+      "225/55R19"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-mustang-mach-e-rally",
+     "display": "Rally",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x7.5@50"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-mustang-mach-e-select",
+     "display": "Select",
+     "bolt": "5x108",
+     "cb": 63.4,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x7@50"
+     ],
+     "tires": [
+      "225/55R19"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "ford",
+   "model": "ranger",
+   "file": "out/2024/ford/ranger.json",
+   "tg": "Ford Trucks Ranger",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Lariat",
+    "Raptor",
+    "Tremor",
+    "XL",
+    "XL, XLT, Lariat, Tremor, Raptor",
+    "XLT"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-ford-ranger-lariat-4x2-lariat-4x4",
+     "display": "Lariat 4x2 / Lariat 4x4",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      20,
+      50
+     ],
+     "wheels": [
+      "18x7.5@35"
+     ],
+     "tires": [
+      "255/65R18"
+     ],
+     "carry": "trim-match \"Lariat\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-ranger-raptor",
+     "display": "Raptor",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      20,
+      50
+     ],
+     "wheels": [
+      "17x8.5@35"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"Raptor\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-ranger-xl-4x2-xl-4x4",
+     "display": "XL 4x2 / XL 4x4",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      20,
+      50
+     ],
+     "wheels": [
+      "17x7.5@35"
+     ],
+     "tires": [
+      "255/70R17"
+     ],
+     "carry": "trim-match \"XL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-ford-ranger-xlt-4x2-xlt-4x4",
+     "display": "XLT 4x2 / XLT 4x4",
+     "bolt": "6x139.7",
+     "cb": 93.1,
+     "offset": [
+      20,
+      50
+     ],
+     "wheels": [
+      "17x7.5@35",
+      "18x7.5@35"
+     ],
+     "tires": [
+      "255/70R17",
+      "255/65R18"
+     ],
+     "carry": "trim-match \"XLT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "genesis",
+   "model": "gv70",
+   "file": "out/2024/genesis/gv70.json",
+   "tg": "Genesis Trucks GV70",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "2.5T",
+    "2.5T, 3.5T, Sport Prestige, Electrified",
+    "3.5T",
+    "Electrified",
+    "Sport Prestige"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-genesis-gv70-2-5t-awd-advanced-2-5t-awd-select-2-5t-awd-sport-3-5t-awd",
+     "display": "2.5T AWD / Advanced 2.5T AWD / Select 2.5T AWD / Sport 3.5T AWD",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "19x8@46"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "trim-match \"2.5T, 3.5T, Sport Prestige, Electrified\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-genesis-gv70-sport-advanced-3-5t-awd-sport-prestige-2-5t-awd-sport-prestige-3-5t-awd",
+     "display": "Sport Advanced 3.5T AWD / Sport Prestige 2.5T AWD / Sport Prestige 3.5T AWD",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "21x9@46"
+     ],
+     "tires": [
+      "255/40R21"
+     ],
+     "carry": "trim-match \"2.5T, 3.5T, Sport Prestige, Electrified\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "gmc",
+   "model": "canyon",
+   "file": "out/2024/gmc/canyon.json",
+   "tg": "GMC Trucks Canyon",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "AT4",
+    "AT4X",
+    "Denali",
+    "Elevation",
+    "Elevation, AT4, AT4X, Denali"
+   ],
+   "oldBolt": [
+    "6x120"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-gmc-canyon-at4",
+     "display": "AT4",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "18x8.5@34",
+      "20x9@34"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/65R18",
+      "275/60R20"
+     ],
+     "carry": "trim-match \"AT4\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-canyon-at4x",
+     "display": "AT4X",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "17x8@34"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"AT4X\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-canyon-at4x-aev-edition",
+     "display": "AT4X AEV Edition",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "17x8.5@34"
+     ],
+     "tires": [
+      "315/70R17"
+     ],
+     "carry": "trim-match \"AT4X\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-canyon-denali",
+     "display": "Denali",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "20x9@34"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"Denali\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-canyon-elevation",
+     "display": "Elevation",
+     "bolt": "6x139.7",
+     "cb": 67.1,
+     "offset": [
+      22,
+      45
+     ],
+     "wheels": [
+      "18x8.5@34"
+     ],
+     "tires": [
+      "265/65R18"
+     ],
+     "carry": "trim-match \"Elevation\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "gmc",
+   "model": "savana-2500",
+   "file": "out/2024/gmc/savana-2500.json",
+   "tg": "GMC Vans Savana 2500",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "Cargo",
+    "Passenger",
+    "SL",
+    "SLE"
+   ],
+   "oldBolt": [
+    "8x165.1"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-gmc-savana-2500-base-ls-lt",
+     "display": "Base / LS / LT",
+     "bolt": "8x165.1",
+     "cb": 121,
+     "offset": [
+      28,
+      50
+     ],
+     "wheels": [
+      "16x6.5@39"
+     ],
+     "tires": [
+      "245/75R16"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "gmc",
+   "model": "savana-3500",
+   "file": "out/2024/gmc/savana-3500.json",
+   "tg": "GMC Vans Savana 3500",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Cargo",
+    "Cutaway",
+    "Passenger",
+    "SL",
+    "SLE"
+   ],
+   "oldBolt": [
+    "8x165.1"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-gmc-savana-3500-base-ls-lt",
+     "display": "Base / LS / LT",
+     "bolt": "8x165.1",
+     "cb": 121,
+     "offset": [
+      28,
+      50
+     ],
+     "wheels": [
+      "16x6.5@39"
+     ],
+     "tires": [
+      "245/75R16"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "gmc",
+   "model": "sierra-1500",
+   "file": "out/2024/gmc/sierra-1500.json",
+   "tg": "GMC Trucks Sierra 1500",
+   "carryLevel": "same-year",
+   "oldRows": 9,
+   "oldTrims": [
+    "AT4",
+    "AT4X",
+    "Base",
+    "Denali",
+    "Denali Ultimate",
+    "Elevation",
+    "Pro",
+    "SLE",
+    "SLT"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 9,
+   "idSuffixed": 0,
+   "inserted": 8,
+   "rows": [
+    {
+     "id": "2024-gmc-sierra-1500-at4",
+     "display": "AT4",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "18x8.5@19",
+      "20x9@19"
+     ],
+     "tires": [
+      "275/65R18",
+      "275/60R20",
+      "265/60R20"
+     ],
+     "carry": "trim-match \"AT4\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-1500-at4x-at4x-aev-edition-pro-4x4-w-x31-off-road-pkg",
+     "display": "AT4X / AT4X AEV Edition / Pro 4x4 w/X31 Off-Road Pkg.",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "18x8.5@19"
+     ],
+     "tires": [
+      "275/65R18"
+     ],
+     "carry": "trim-match \"AT4X\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-1500-denali",
+     "display": "Denali",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "20x9@19",
+      "22x9@19"
+     ],
+     "tires": [
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"Denali\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-1500-denali-ultimate",
+     "display": "Denali Ultimate",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "22x9@19"
+     ],
+     "tires": [
+      "275/50R22"
+     ],
+     "carry": "trim-match \"Denali Ultimate\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-1500-elevation-pro-graphite-edition",
+     "display": "Elevation / Pro Graphite Edition",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "20x9@19"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"Elevation\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-1500-pro",
+     "display": "Pro",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "17x8@19"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17"
+     ],
+     "carry": "trim-match \"Pro\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-1500-sle",
+     "display": "SLE",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "17x8@19",
+      "18x8.5@19",
+      "20x9@19"
+     ],
+     "tires": [
+      "255/70R17",
+      "265/70R17",
+      "265/65R18",
+      "275/60R20"
+     ],
+     "carry": "trim-match \"SLE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-1500-slt",
+     "display": "SLT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      -6,
+      44
+     ],
+     "wheels": [
+      "18x8.5@19",
+      "20x9@19",
+      "22x9@19"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"SLT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "gmc",
+   "model": "sierra-2500hd",
+   "file": "out/2024/gmc/sierra-2500hd.json",
+   "tg": "GMC Trucks Sierra 2500 HD",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "AT4",
+    "Base",
+    "Denali",
+    "Denali Ultimate",
+    "Pro",
+    "SLE",
+    "SLT"
+   ],
+   "oldBolt": [
+    "8x180"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2024-gmc-sierra-2500hd-at4",
+     "display": "AT4",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "20x8.5@8",
+      "18x8@8"
+     ],
+     "tires": [
+      "275/65R20",
+      "275/70R18"
+     ],
+     "carry": "trim-match \"AT4\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-2500hd-at4x-at4x-aev-edition-at4x-aev-edition-diesel-at4x-diesel",
+     "display": "AT4X / AT4X AEV Edition / AT4X AEV Edition Diesel / AT4X Diesel",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x9@8"
+     ],
+     "tires": [
+      "305/70R18"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-2500hd-denali-denali-ultimate",
+     "display": "Denali / Denali Ultimate",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/65R20"
+     ],
+     "carry": "trim-match \"Denali\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-2500hd-pro",
+     "display": "Pro",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x7.5@8",
+      "18x8@8"
+     ],
+     "tires": [
+      "245/75R17",
+      "265/70R17",
+      "275/70R18"
+     ],
+     "carry": "trim-match \"Pro\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-2500hd-sle",
+     "display": "SLE",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x7.5@8",
+      "18x8@8",
+      "20x8.5@8"
+     ],
+     "tires": [
+      "245/75R17",
+      "265/70R17",
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"SLE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-2500hd-slt",
+     "display": "SLT",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x8@8",
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"SLT\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "gmc",
+   "model": "sierra-3500hd",
+   "file": "out/2024/gmc/sierra-3500hd.json",
+   "tg": "GMC Trucks Sierra 3500 HD",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "AT4",
+    "Base",
+    "Denali",
+    "Pro",
+    "SLE",
+    "SLT"
+   ],
+   "oldBolt": [
+    "8x180"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2024-gmc-sierra-3500hd-at4-denali-denali-ultimate",
+     "display": "AT4 / Denali / Denali Ultimate",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/65R20"
+     ],
+     "carry": "trim-match \"AT4\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-3500hd-denali-drw-denali-ultimate-drw",
+     "display": "Denali (DRW) / Denali Ultimate (DRW)",
+     "bolt": "8x210",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x6.5@8"
+     ],
+     "tires": [
+      "235/80R18"
+     ],
+     "carry": "trim-match \"Denali\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-3500hd-pro",
+     "display": "Pro",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x8@8"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"Pro\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-3500hd-pro-drw-sle-drw",
+     "display": "Pro (DRW) / SLE (DRW)",
+     "bolt": "8x210",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x6.5@8"
+     ],
+     "tires": [
+      "235/80R17"
+     ],
+     "carry": "trim-match \"Pro\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-3500hd-pro-regular-cab-2wd-drw-slt-drw",
+     "display": "Pro (Regular Cab)(2WD)(DRW) / SLT (DRW)",
+     "bolt": "8x210",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x6.5@8",
+      "18x6.5@8"
+     ],
+     "tires": [
+      "235/80R17",
+      "235/80R18"
+     ],
+     "carry": "trim-match \"Pro\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-sierra-3500hd-sle-slt",
+     "display": "SLE / SLT",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "18x8@8",
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/70R18",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"SLE\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "gmc",
+   "model": "yukon",
+   "file": "out/2024/gmc/yukon.json",
+   "tg": "GMC Trucks Yukon",
+   "carryLevel": "same-year",
+   "oldRows": 11,
+   "oldTrims": [
+    "AT4",
+    "Denali",
+    "Denali Ultimate",
+    "SLE",
+    "SLE, SLT, AT4, Denali, Denali Ultimate",
+    "SLT",
+    "XL AT4",
+    "XL Denali",
+    "XL Denali Ultimate",
+    "XL SLE",
+    "XL SLT"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 11,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-gmc-yukon-at4",
+     "display": "AT4",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20x9@34"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"AT4\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-yukon-denali-slt",
+     "display": "Denali / SLT",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "20x9@34",
+      "22x9@34"
+     ],
+     "tires": [
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"Denali\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-yukon-denali-ultimate",
+     "display": "Denali Ultimate",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "22x9@34"
+     ],
+     "tires": [
+      "275/50R22"
+     ],
+     "carry": "trim-match \"Denali Ultimate\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-gmc-yukon-sle",
+     "display": "SLE",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      24,
+      44
+     ],
+     "wheels": [
+      "18x8.5@34",
+      "20x9@34",
+      "22x9@34"
+     ],
+     "tires": [
+      "265/65R18",
+      "275/60R20",
+      "275/50R22"
+     ],
+     "carry": "trim-match \"SLE\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "honda",
+   "model": "accord",
+   "file": "out/2024/honda/accord.json",
+   "tg": "Honda Accord",
+   "carryLevel": "same-year",
+   "oldRows": 10,
+   "oldTrims": [
+    "EX",
+    "EX-L",
+    "EX-L Hybrid",
+    "LX",
+    "LX, Sport, EX, EX-L, Touring",
+    "Sport",
+    "Sport Hybrid",
+    "Sport-L Hybrid",
+    "Touring",
+    "Touring Hybrid"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 10,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-honda-accord-ex-hybrid-ex-l-lx",
+     "display": "EX / Hybrid EX-L / LX",
+     "bolt": "5x114.3",
+     "cb": 64.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "17x7.5@50"
+     ],
+     "tires": [
+      "225/50R17"
+     ],
+     "carry": "trim-match \"EX\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-accord-hybrid-sport-hybrid-sport-l-hybrid-touring",
+     "display": "Hybrid Sport / Hybrid Sport-L / Hybrid Touring",
+     "bolt": "5x114.3",
+     "cb": 64.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x8.5@50"
+     ],
+     "tires": [
+      "235/40R19"
+     ],
+     "carry": "trim-match \"Sport-L Hybrid\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "honda",
+   "model": "civic",
+   "file": "out/2024/honda/civic.json",
+   "tg": "Honda Civic",
+   "carryLevel": "same-year",
+   "oldRows": 17,
+   "oldTrims": [
+    "EX",
+    "EX-L",
+    "Hatchback EX-L",
+    "Hatchback LX",
+    "Hatchback Sport",
+    "Hatchback Sport Touring",
+    "LX",
+    "LX, Sport, EX, EX-L, Touring, Si",
+    "Sedan EX",
+    "Sedan LX",
+    "Sedan Si",
+    "Sedan Sport",
+    "Sedan Touring",
+    "Si",
+    "Sport",
+    "Touring",
+    "Type R"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 17,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-honda-civic-ex-sedan-ex-l-hatchback",
+     "display": "EX Sedan / EX-L Hatchback",
+     "bolt": "5x114.3",
+     "cb": 64.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "17x7@50"
+     ],
+     "tires": [
+      "215/50R17"
+     ],
+     "carry": "trim-match \"Hatchback EX-L\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-civic-lx-hatchback-lx-sedan",
+     "display": "LX Hatchback / LX Sedan",
+     "bolt": "5x114.3",
+     "cb": 64.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "16x7@50"
+     ],
+     "tires": [
+      "215/55R16"
+     ],
+     "carry": "trim-match \"Hatchback LX\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-civic-si-sport-hatchback-sport-sedan-sport-touring-hatchback-touring-sedan",
+     "display": "Si / Sport Hatchback / Sport Sedan / Sport Touring Hatchback / Touring Sedan",
+     "bolt": "5x114.3",
+     "cb": 64.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x8@50"
+     ],
+     "tires": [
+      "235/40R18"
+     ],
+     "carry": "trim-match \"Si\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-civic-type-r",
+     "display": "Type R",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x9.5@50"
+     ],
+     "tires": [
+      "265/30R19"
+     ],
+     "carry": "trim-match \"Type R\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "honda",
+   "model": "odyssey",
+   "file": "out/2024/honda/odyssey.json",
+   "tg": "Honda Minivans Odyssey",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Base",
+    "EX",
+    "EX-L",
+    "Elite",
+    "Sport",
+    "Touring"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-honda-odyssey-elite-sport-touring",
+     "display": "Elite / Sport / Touring",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x7.5@48"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "trim-match \"Elite\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-odyssey-ex-ex-l",
+     "display": "EX / EX-L",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7.5@48"
+     ],
+     "tires": [
+      "235/60R18"
+     ],
+     "carry": "trim-match \"EX\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "honda",
+   "model": "passport",
+   "file": "out/2024/honda/passport.json",
+   "tg": "Honda Trucks Passport",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Base",
+    "EX-L",
+    "Elite",
+    "Sport",
+    "Touring",
+    "TrailSport"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-honda-passport-black-edition-ex-l",
+     "display": "Black Edition / EX-L",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x8.5@45"
+     ],
+     "tires": [
+      "265/45R20"
+     ],
+     "carry": "trim-match \"EX-L\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-passport-trailsport",
+     "display": "TrailSport",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x8@45"
+     ],
+     "tires": [
+      "245/60R18"
+     ],
+     "carry": "trim-match \"TrailSport\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "honda",
+   "model": "pilot",
+   "file": "out/2024/honda/pilot.json",
+   "tg": "Honda Trucks Pilot",
+   "carryLevel": "same-year",
+   "oldRows": 8,
+   "oldTrims": [
+    "EX",
+    "EX-L",
+    "Elite",
+    "LX",
+    "LX, EX, EX-L, Touring, Elite, TrailSport",
+    "Sport",
+    "Touring",
+    "TrailSport"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 8,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-honda-pilot-elite-sport-touring",
+     "display": "Elite / Sport / Touring",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x8@48"
+     ],
+     "tires": [
+      "255/50R20"
+     ],
+     "carry": "trim-match \"Elite\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-pilot-ex-l-lx",
+     "display": "EX-L / LX",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x8@48"
+     ],
+     "tires": [
+      "255/60R18"
+     ],
+     "carry": "trim-match \"EX-L\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-honda-pilot-trailsport",
+     "display": "TrailSport",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x8@48"
+     ],
+     "tires": [
+      "265/60R18"
+     ],
+     "carry": "trim-match \"TrailSport\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "honda",
+   "model": "ridgeline",
+   "file": "out/2024/honda/ridgeline.json",
+   "tg": "Honda Trucks Ridgeline",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Black Edition",
+    "RTL",
+    "RTL-E",
+    "Sport",
+    "Sport, RTL, RTL-E, Black Edition, TrailSport",
+    "TrailSport"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-honda-ridgeline-black-edition-rtl-sport-trailsport",
+     "display": "Black Edition / RTL / Sport / TrailSport",
+     "bolt": "5x120",
+     "cb": 64.1,
+     "offset": [
+      35,
+      50
+     ],
+     "wheels": [
+      "18x8@43"
+     ],
+     "tires": [
+      "245/60R18"
+     ],
+     "carry": "trim-match \"Black Edition\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "hyundai",
+   "model": "elantra",
+   "file": "out/2024/hyundai/elantra.json",
+   "tg": "Hyundai Elantra",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Limited",
+    "N Line",
+    "SE",
+    "SE, SEL, N Line, Limited",
+    "SEL"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-hyundai-elantra-blue-hybrid",
+     "display": "Blue Hybrid",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "16x6.5@50"
+     ],
+     "tires": [
+      "205/55R16"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-elantra-limited-limited-hybrid",
+     "display": "Limited / Limited Hybrid",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "17x7@50"
+     ],
+     "tires": [
+      "225/45R17"
+     ],
+     "carry": "trim-match \"Limited\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-elantra-n-line",
+     "display": "N Line",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x8@50"
+     ],
+     "tires": [
+      "235/40R18"
+     ],
+     "carry": "trim-match \"N Line\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-elantra-se",
+     "display": "SE",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "15x6@50"
+     ],
+     "tires": [
+      "195/65R15"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-elantra-sel",
+     "display": "SEL",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "16x6.5@50",
+      "17x7@50"
+     ],
+     "tires": [
+      "205/55R16",
+      "225/45R17"
+     ],
+     "carry": "trim-match \"SEL\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "hyundai",
+   "model": "kona",
+   "file": "out/2024/hyundai/kona.json",
+   "tg": "Hyundai Trucks Kona",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Limited",
+    "N Line",
+    "SE",
+    "SE, SEL, N Line, Limited",
+    "SEL"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-hyundai-kona-limited-n-line",
+     "display": "Limited / N Line",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "19x7.5@46"
+     ],
+     "tires": [
+      "235/45R19"
+     ],
+     "carry": "trim-match \"Limited\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-kona-se",
+     "display": "SE",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "17x7@46"
+     ],
+     "tires": [
+      "215/60R17"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-kona-sel",
+     "display": "SEL",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "18x7@46"
+     ],
+     "tires": [
+      "215/55R18"
+     ],
+     "carry": "trim-match \"SEL\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "hyundai",
+   "model": "palisade",
+   "file": "out/2024/hyundai/palisade.json",
+   "tg": "Hyundai Trucks Palisade",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Calligraphy",
+    "Limited",
+    "SE",
+    "SE, SEL, XRT, Limited, Calligraphy",
+    "SEL",
+    "XRT"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-hyundai-palisade-calligraphy-calligraphy-night-edition-limited-xrt",
+     "display": "Calligraphy / Calligraphy Night Edition / Limited / XRT",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "20x7.5@48"
+     ],
+     "tires": [
+      "245/50R20"
+     ],
+     "carry": "trim-match \"Calligraphy\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-palisade-se",
+     "display": "SE",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7.5@48"
+     ],
+     "tires": [
+      "245/60R18"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-palisade-sel",
+     "display": "SEL",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7.5@48",
+      "20x7.5@48"
+     ],
+     "tires": [
+      "245/60R18",
+      "245/50R20"
+     ],
+     "carry": "trim-match \"SEL\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "hyundai",
+   "model": "santa-fe",
+   "file": "out/2024/hyundai/santa-fe.json",
+   "tg": "Hyundai Trucks Santa Fe",
+   "carryLevel": "same-year",
+   "oldRows": 8,
+   "oldTrims": [
+    "1.6 T-GDi HEV",
+    "Base",
+    "Calligraphy",
+    "Limited",
+    "SE",
+    "SE, SEL, XRT, Limited, Calligraphy",
+    "SEL",
+    "XRT"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 8,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-hyundai-santa-fe-calligraphy",
+     "display": "Calligraphy",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "21x8.5@50"
+     ],
+     "tires": [
+      "245/45R21"
+     ],
+     "carry": "trim-match \"Calligraphy\"",
+     "boltNote": "bolt carried from our rows (5x114.3) - TG print had none"
+    },
+    {
+     "id": "2024-hyundai-santa-fe-hybrid-calligraphy-hybrid-limited-limited",
+     "display": "Hybrid Calligraphy / Hybrid Limited / Limited",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "20x8.5@50"
+     ],
+     "tires": [
+      "255/45R20"
+     ],
+     "carry": "trim-match \"Limited\"",
+     "boltNote": "bolt carried from our rows (5x114.3) - TG print had none"
+    },
+    {
+     "id": "2024-hyundai-santa-fe-hybrid-sel-se-sel",
+     "display": "Hybrid SEL / SE / SEL",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x7.5@50"
+     ],
+     "tires": [
+      "235/60R18"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": "bolt carried from our rows (5x114.3) - TG print had none"
+    },
+    {
+     "id": "2024-hyundai-santa-fe-xrt",
+     "display": "XRT",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x7.5@50"
+     ],
+     "tires": [
+      "245/60R18"
+     ],
+     "carry": "trim-match \"XRT\"",
+     "boltNote": "bolt carried from our rows (5x114.3) - TG print had none"
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "hyundai",
+   "model": "sonata",
+   "file": "out/2024/hyundai/sonata.json",
+   "tg": "Hyundai Sonata",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Limited",
+    "N Line",
+    "SE",
+    "SE, SEL, SEL Plus, Limited, N Line",
+    "SEL",
+    "SEL Plus"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-hyundai-sonata-hybrid-limited-hybrid-sel-sel",
+     "display": "Hybrid Limited / Hybrid SEL / SEL",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "17x7@50"
+     ],
+     "tires": [
+      "215/55R17"
+     ],
+     "carry": "trim-match \"SEL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-sonata-n-line",
+     "display": "N Line",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x8@50"
+     ],
+     "tires": [
+      "245/40R19"
+     ],
+     "carry": "trim-match \"N Line\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-sonata-sel-w-convenience-pkg",
+     "display": "SEL w/Convenience Pkg.",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x7.5@50"
+     ],
+     "tires": [
+      "235/45R18"
+     ],
+     "carry": "trim-match \"SEL\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "hyundai",
+   "model": "tucson",
+   "file": "out/2024/hyundai/tucson.json",
+   "tg": "Hyundai Trucks Tucson",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Limited",
+    "N Line",
+    "SE",
+    "SE, SEL, XRT, Limited, N Line",
+    "SEL",
+    "XRT"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-hyundai-tucson-blue-hybrid-se-sel",
+     "display": "Blue Hybrid / SE / SEL",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "17x7@50"
+     ],
+     "tires": [
+      "235/65R17"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-hyundai-tucson-limited-limited-hybrid-limited-plug-in-hybrid-n-line-hybrid-sel-convenience-hybrid-sel-plug-in-hybrid-sel-w-convenience-pkg-xrt",
+     "display": "Limited / Limited Hybrid / Limited Plug-In Hybrid / N Line Hybrid / SEL Convenience Hybrid / SEL Plug-In Hybrid / SEL w/Convenience Pkg. / XRT",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "19x7.5@50"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "trim-match \"Limited\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "infiniti",
+   "model": "qx50",
+   "file": "out/2024/infiniti/qx50.json",
+   "tg": "Infiniti Trucks QX50",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Autograph",
+    "Essential",
+    "Luxe",
+    "Pure",
+    "Pure, Luxe, Essential, Sensory, Autograph",
+    "Sensory"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-infiniti-qx50-autograph-sensory-sport",
+     "display": "Autograph / Sensory / Sport",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x8.5@45"
+     ],
+     "tires": [
+      "255/45R20"
+     ],
+     "carry": "trim-match \"Autograph\"",
+     "boltNote": "tire/rim salvaged from _unparsed"
+    },
+    {
+     "id": "2024-infiniti-qx50-luxe-pure",
+     "display": "Luxe / Pure",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "19x7.5@45"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "trim-match \"Luxe\"",
+     "boltNote": "tire/rim salvaged from _unparsed"
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "infiniti",
+   "model": "qx55",
+   "file": "out/2024/infiniti/qx55.json",
+   "tg": "Infiniti Trucks QX55",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "2.0 VC-Turbo"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2024-infiniti-qx55-essential-luxe-sensory",
+     "display": "Essential / Luxe / Sensory",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      44,
+      44
+     ],
+     "wheels": [
+      "20x8.5@44"
+     ],
+     "tires": [
+      "255/45R20"
+     ],
+     "carry": "trim-match \"2.0 VC-Turbo\"",
+     "boltNote": "tire/rim salvaged from _unparsed"
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "infiniti",
+   "model": "qx60",
+   "file": "out/2024/infiniti/qx60.json",
+   "tg": "Infiniti Trucks QX60",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Autograph",
+    "Luxe",
+    "Pure",
+    "Pure, Luxe, Sensory, Autograph",
+    "Sensory"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-infiniti-qx60-autograph-luxe-sensory",
+     "display": "Autograph / Luxe / Sensory",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x8@45"
+     ],
+     "tires": [
+      "255/50R20"
+     ],
+     "carry": "trim-match \"Autograph\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-infiniti-qx60-pure",
+     "display": "Pure",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x8@45"
+     ],
+     "tires": [
+      "255/60R18"
+     ],
+     "carry": "trim-match \"Pure\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "infiniti",
+   "model": "qx80",
+   "file": "out/2024/infiniti/qx80.json",
+   "tg": "Infiniti Trucks QX80",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "Luxe",
+    "Luxe, Premium Select, Sensory",
+    "Premium Select",
+    "Sensory"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2024-infiniti-qx80-luxe",
+     "display": "Luxe",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      20,
+      45
+     ],
+     "wheels": [
+      "20x8@33"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"Luxe\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-infiniti-qx80-premium-select-sensory",
+     "display": "Premium Select / Sensory",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      20,
+      45
+     ],
+     "wheels": [
+      "22x8@33"
+     ],
+     "tires": [
+      "275/50R22"
+     ],
+     "carry": "trim-match \"Premium Select\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "jeep",
+   "model": "compass",
+   "file": "out/2024/jeep/compass.json",
+   "tg": "Jeep Trucks Compass",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "High Altitude",
+    "Latitude",
+    "Latitude Lux",
+    "Limited",
+    "Sport",
+    "Sport, Latitude, Trailhawk, Limited, High Altitude",
+    "Trailhawk"
+   ],
+   "oldBolt": [
+    "5x110"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-jeep-compass-latitude-sport",
+     "display": "Latitude / Sport",
+     "bolt": "5x110",
+     "cb": 65.1,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "17x7@44"
+     ],
+     "tires": [
+      "225/60R17"
+     ],
+     "carry": "trim-match \"Latitude\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-compass-latitude-lux",
+     "display": "Latitude Lux",
+     "bolt": "5x110",
+     "cb": 65.1,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "18x7@44"
+     ],
+     "tires": [
+      "225/55R18"
+     ],
+     "carry": "trim-match \"Latitude Lux\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-compass-limited",
+     "display": "Limited",
+     "bolt": "5x110",
+     "cb": 65.1,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "18x7@44",
+      "19x7.5@44"
+     ],
+     "tires": [
+      "225/55R18",
+      "235/45R19"
+     ],
+     "carry": "trim-match \"Limited\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-compass-trailhawk",
+     "display": "Trailhawk",
+     "bolt": "5x110",
+     "cb": 65.1,
+     "offset": [
+      38,
+      50
+     ],
+     "wheels": [
+      "17x6.5@44"
+     ],
+     "tires": [
+      "215/65R17"
+     ],
+     "carry": "trim-match \"Trailhawk\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "jeep",
+   "model": "gladiator",
+   "file": "out/2024/jeep/gladiator.json",
+   "tg": "Jeep Trucks Gladiator",
+   "carryLevel": "same-year",
+   "oldRows": 12,
+   "oldTrims": [
+    "3.6 Pentastar",
+    "Base",
+    "High Tide",
+    "Mojave",
+    "Mojave X",
+    "Nighthawk",
+    "Rubicon",
+    "Rubicon X",
+    "Sport",
+    "Sport S",
+    "Texas Trail",
+    "Willys"
+   ],
+   "oldBolt": [
+    "5x127"
+   ],
+   "quarantined": 12,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-jeep-gladiator-high-tide-texas-trail-willys",
+     "display": "High Tide / Texas Trail / Willys",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      45,
+      45
+     ],
+     "wheels": [
+      "17x7.5@45"
+     ],
+     "tires": [
+      "255/75R17"
+     ],
+     "carry": "trim-match \"High Tide\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-gladiator-mojave-mojave-x-rubicon-rubicon-x",
+     "display": "Mojave / Mojave X / Rubicon / Rubicon X",
+     "bolt": "5x127",
+     "cb": 71.6,
+     "offset": [
+      37.17,
+      44.45
+     ],
+     "wheels": [
+      "17x7.5@41"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"Mojave\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-gladiator-nighthawk",
+     "display": "Nighthawk",
+     "bolt": "5x127",
+     "cb": 71.6,
+     "offset": [
+      37.17,
+      44.45
+     ],
+     "wheels": [
+      "20x8@41"
+     ],
+     "tires": [
+      "275/55R20"
+     ],
+     "carry": "trim-match \"Nighthawk\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-gladiator-sport-sport-s",
+     "display": "Sport / Sport S",
+     "bolt": "5x127",
+     "cb": 71.6,
+     "offset": [
+      37.17,
+      44.45
+     ],
+     "wheels": [
+      "17x7.5@41"
+     ],
+     "tires": [
+      "245/75R17"
+     ],
+     "carry": "trim-match \"Sport\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "jeep",
+   "model": "grand-cherokee",
+   "file": "out/2024/jeep/grand-cherokee.json",
+   "tg": "Jeep Trucks Grand Cherokee",
+   "carryLevel": "same-year",
+   "oldRows": 16,
+   "oldTrims": [
+    "2.0 T4 PHEV",
+    "4xe",
+    "Altitude",
+    "Altitude",
+    "Base",
+    "Laredo",
+    "Laredo",
+    "Limited",
+    "Limited",
+    "Overland",
+    "Overland",
+    "Summit",
+    "Summit",
+    "Summit Reserve",
+    "Summit Reserve",
+    "Trailhawk"
+   ],
+   "oldBolt": [
+    "5x127"
+   ],
+   "quarantined": 16,
+   "idSuffixed": 0,
+   "inserted": 5,
+   "rows": [
+    {
+     "id": "2024-jeep-grand-cherokee-4xe-altitude-altitude-x-limited",
+     "display": "4xe / Altitude / Altitude X / Limited",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "18x8@16",
+      "20x8.5@16"
+     ],
+     "tires": [
+      "265/60R18",
+      "265/50R20"
+     ],
+     "carry": "trim-match \"4xe\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-grand-cherokee-4xe-w-black-appearance-pkg-limited-w-black-appearance-pkg-overland-overland-4xe-summit-summit-4xe",
+     "display": "4xe w/Black Appearance Pkg. / Limited w/Black Appearance Pkg. / Overland / Overland 4xe / Summit / Summit 4xe",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "20x8.5@16"
+     ],
+     "tires": [
+      "265/50R20"
+     ],
+     "carry": "trim-match \"Overland\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-grand-cherokee-laredo-laredo-a",
+     "display": "Laredo / Laredo A",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "17x6.5@16"
+     ],
+     "tires": [
+      "245/70R17"
+     ],
+     "carry": "trim-match \"Laredo\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-grand-cherokee-laredo-x-trailhawk-4xe",
+     "display": "Laredo X / Trailhawk 4xe",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "18x8@16"
+     ],
+     "tires": [
+      "265/60R18"
+     ],
+     "carry": "trim-match \"4xe\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-grand-cherokee-summit-reserve-summit-reserve-4xe",
+     "display": "Summit Reserve / Summit Reserve 4xe",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "21x9@16"
+     ],
+     "tires": [
+      "275/45R21"
+     ],
+     "carry": "trim-match \"Summit Reserve\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "jeep",
+   "model": "wrangler",
+   "file": "out/2024/jeep/wrangler.json",
+   "tg": "Jeep Trucks Wrangler",
+   "carryLevel": "same-year",
+   "oldRows": 11,
+   "oldTrims": [
+    "3.6 Pentastar",
+    "4xe",
+    "Base",
+    "Rubicon",
+    "Rubicon 392",
+    "Rubicon X",
+    "Sahara",
+    "Sport",
+    "Sport S",
+    "Willys",
+    "Xtreme Tire Package"
+   ],
+   "oldBolt": [
+    "5x127"
+   ],
+   "quarantined": 11,
+   "idSuffixed": 0,
+   "inserted": 7,
+   "rows": [
+    {
+     "id": "2024-jeep-wrangler-rubicon-rubicon-x-unlimited-rubicon-unlimited-rubicon-4xe-unlimited-rubicon-x-4xe-unlimited-willys-unlimited-willys-4xe-willys",
+     "display": "Rubicon / Rubicon X / Unlimited Rubicon / Unlimited Rubicon 4xe / Unlimited Rubicon X 4xe / Unlimited Willys / Unlimited Willys 4xe / Willys",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "17x7.5@16"
+     ],
+     "tires": [
+      "285/70R17"
+     ],
+     "carry": "trim-match \"Rubicon\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-wrangler-sport-i4-sport-s-i4-sport-s-v6-sport-v6-unlimited-sport-i4-unlimited-sport-s-i4-unlimited-sport-s-v6-unlimited-sport-v6",
+     "display": "Sport I4 / Sport S I4 / Sport S V6 / Sport V6 / Unlimited Sport I4 / Unlimited Sport S I4 / Unlimited Sport S V6 / Unlimited Sport V6",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "17x7.5@16"
+     ],
+     "tires": [
+      "245/75R17"
+     ],
+     "carry": "trim-match \"Sport S\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-wrangler-unlimited-high-altitude-4xe",
+     "display": "Unlimited High Altitude 4xe",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "20x8@16"
+     ],
+     "tires": [
+      "275/55R20"
+     ],
+     "carry": "trim-match \"4xe\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-wrangler-unlimited-rubicon-392-unlimited-rubicon-392-final-edition-unlimited-rubicon-w-xtreme-recon-tire-pkg-unlimited-willys-w-xtreme-recon-tire-pkg",
+     "display": "Unlimited Rubicon 392 / Unlimited Rubicon 392 Final Edition / Unlimited Rubicon w/Xtreme Recon Tire Pkg. / Unlimited Willys w/Xtreme Recon Tire Pkg.",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "17x8@16"
+     ],
+     "tires": [
+      "315/70R17"
+     ],
+     "carry": "trim-match \"Xtreme Tire Package\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-wrangler-unlimited-rubicon-x",
+     "display": "Unlimited Rubicon X",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "17x7.5@16",
+      "17x8@16"
+     ],
+     "tires": [
+      "255/75R17",
+      "315/70R17"
+     ],
+     "carry": "trim-match \"Rubicon X\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-wrangler-unlimited-sahara",
+     "display": "Unlimited Sahara",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "18x7.5@16"
+     ],
+     "tires": [
+      "255/70R18"
+     ],
+     "carry": "trim-match \"Sahara\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-jeep-wrangler-unlimited-sahara-4xe-unlimited-sport-s-4xe",
+     "display": "Unlimited Sahara 4xe / Unlimited Sport S 4xe",
+     "bolt": "5x127",
+     "cb": 71.5,
+     "offset": [
+      -25,
+      56.4
+     ],
+     "wheels": [
+      "20x8@16"
+     ],
+     "tires": [
+      "255/60R20"
+     ],
+     "carry": "trim-match \"Sport S\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "kia",
+   "model": "forte",
+   "file": "out/2024/kia/forte.json",
+   "tg": "Kia Forte",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "FE",
+    "FE, LXS, GT-Line, GT",
+    "GT",
+    "GT-Line",
+    "LXS"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2024-kia-forte-fe-lx",
+     "display": "FE / LX",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "15x6@50"
+     ],
+     "tires": [
+      "195/65R15"
+     ],
+     "carry": "trim-match \"FE\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-kia-forte-gt-gt-m-t",
+     "display": "GT / GT M/T",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "18x7.5@50"
+     ],
+     "tires": [
+      "225/40R18"
+     ],
+     "carry": "trim-match \"GT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-kia-forte-gt-line",
+     "display": "GT-Line",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "17x7@50"
+     ],
+     "tires": [
+      "225/45R17"
+     ],
+     "carry": "trim-match \"GT-Line\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-kia-forte-lxs",
+     "display": "LXS",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      45,
+      55
+     ],
+     "wheels": [
+      "16x6.5@50"
+     ],
+     "tires": [
+      "205/55R16"
+     ],
+     "carry": "trim-match \"LXS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "kia",
+   "model": "soul",
+   "file": "out/2024/kia/soul.json",
+   "tg": "Kia Soul",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "EX",
+    "GT-Line",
+    "LX",
+    "LX, S, GT-Line, EX, Turbo",
+    "S",
+    "Turbo"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-kia-soul-ex",
+     "display": "EX",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "17x7@46"
+     ],
+     "tires": [
+      "215/55R17"
+     ],
+     "carry": "trim-match \"EX\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-kia-soul-gt-line",
+     "display": "GT-Line",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "18x7.5@46"
+     ],
+     "tires": [
+      "235/45R18"
+     ],
+     "carry": "trim-match \"GT-Line\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-kia-soul-lx-s",
+     "display": "LX / S",
+     "bolt": "5x114.3",
+     "cb": 67.1,
+     "offset": [
+      40,
+      52
+     ],
+     "wheels": [
+      "16x6.5@46"
+     ],
+     "tires": [
+      "205/60R16"
+     ],
+     "carry": "trim-match \"LX\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "nissan",
+   "model": "altima",
+   "file": "out/2024/nissan/altima.json",
+   "tg": "Nissan Altima",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Platinum",
+    "S",
+    "S, SV, SL, SR, Platinum",
+    "SL",
+    "SR",
+    "SV"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-nissan-altima-s",
+     "display": "S",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "16x7@48"
+     ],
+     "tires": [
+      "215/60R16"
+     ],
+     "carry": "trim-match \"S\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-altima-sl-sr",
+     "display": "SL / SR",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x8@48"
+     ],
+     "tires": [
+      "235/40R19"
+     ],
+     "carry": "trim-match \"SL\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-altima-sv",
+     "display": "SV",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "17x7.5@48"
+     ],
+     "tires": [
+      "215/55R17"
+     ],
+     "carry": "trim-match \"SV\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "nissan",
+   "model": "rogue",
+   "file": "out/2024/nissan/rogue.json",
+   "tg": "Nissan Trucks Rogue",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Platinum",
+    "S",
+    "S, SV, SL, Platinum",
+    "SL",
+    "SV"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-nissan-rogue-platinum-sl",
+     "display": "Platinum / SL",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x7.5@48"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "trim-match \"Platinum\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-rogue-s",
+     "display": "S",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "17x7.5@48"
+     ],
+     "tires": [
+      "235/65R17"
+     ],
+     "carry": "trim-match \"S\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-rogue-sv",
+     "display": "SV",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7.5@48"
+     ],
+     "tires": [
+      "235/60R18"
+     ],
+     "carry": "trim-match \"SV\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "nissan",
+   "model": "titan",
+   "file": "out/2024/nissan/titan.json",
+   "tg": "Nissan Trucks Titan",
+   "carryLevel": "same-year",
+   "oldRows": 12,
+   "oldTrims": [
+    "PRO-4X",
+    "Platinum Reserve",
+    "Platinum Reserve",
+    "Pro-4X",
+    "S",
+    "S",
+    "S, SV, SL, Platinum Reserve, PRO-4X",
+    "SL",
+    "SL",
+    "SV",
+    "SV",
+    "XD"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 12,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-nissan-titan-platinum-reserve-sv-bronze-edition",
+     "display": "Platinum Reserve / SV Bronze Edition",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      18,
+      35
+     ],
+     "wheels": [
+      "20x8@27"
+     ],
+     "tires": [
+      "275/60R20"
+     ],
+     "carry": "trim-match \"Platinum Reserve\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-titan-pro-4x",
+     "display": "PRO-4X",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      18,
+      35
+     ],
+     "wheels": [
+      "18x8@27"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"PRO-4X\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-titan-sv",
+     "display": "SV",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      10,
+      45
+     ],
+     "wheels": [
+      "18x8@28",
+      "20x8@28"
+     ],
+     "tires": [
+      "265/70R18",
+      "275/60R20"
+     ],
+     "carry": "trim-match \"SV\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2024,
+   "make": "nissan",
+   "model": "titan-xd",
+   "file": "out/2024/nissan/titan-xd.json",
+   "tg": "Nissan Trucks Titan XD",
+   "carryLevel": "same-year",
+   "oldRows": 4,
+   "oldTrims": [
+    "PRO-4X",
+    "Platinum Reserve",
+    "S",
+    "SV"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 4,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2024-nissan-titan-xd-platinum-reserve",
+     "display": "Platinum Reserve",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      18,
+      45
+     ],
+     "wheels": [
+      "20x7.5@32"
+     ],
+     "tires": [
+      "265/60R20"
+     ],
+     "carry": "trim-match \"Platinum Reserve\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-titan-xd-pro-4x",
+     "display": "PRO-4X",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      18,
+      45
+     ],
+     "wheels": [
+      "18x7.5@32"
+     ],
+     "tires": [
+      "275/65R18"
+     ],
+     "carry": "trim-match \"PRO-4X\"",
+     "boltNote": null
+    },
+    {
+     "id": "2024-nissan-titan-xd-sv",
+     "display": "SV",
+     "bolt": "6x139.7",
+     "cb": 78.1,
+     "offset": [
+      18,
+      45
+     ],
+     "wheels": [
+      "17x7.5@32",
+      "20x7.5@32"
+     ],
+     "tires": [
+      "245/75R17",
+      "265/60R20"
+     ],
+     "carry": "trim-match \"SV\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "audi",
+   "model": "a7",
+   "file": "out/2025/audi/a7.json",
+   "tg": "Audi A7 Sportback",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2025-audi-a7-premium-premium-plus-prestige",
+     "display": "Premium / Premium Plus / Prestige",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x8.5@45"
+     ],
+     "tires": [
+      "255/40R20"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-audi-a7-prestige-w-black-optic-pkg",
+     "display": "Prestige w/Black Optic Pkg.",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x8.5@45",
+      "21x8.5@45"
+     ],
+     "tires": [
+      "255/40R20",
+      "255/35R21"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "audi",
+   "model": "a8",
+   "file": "out/2025/audi/a8.json",
+   "tg": "Audi A8 Quattro",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2025-audi-a8-l",
+     "display": "L",
+     "bolt": "5x112",
+     "cb": 66.6,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x9@45"
+     ],
+     "tires": [
+      "265/40R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2025-audi-a8-l-w-black-optic-pkg",
+     "display": "L w/Black Optic Pkg.",
+     "bolt": "5x112",
+     "cb": 66.6,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "21x9@45"
+     ],
+     "tires": [
+      "265/35R21"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "audi",
+   "model": "q6-e-tron",
+   "file": "out/2025/audi/q6-e-tron.json",
+   "tg": "Audi Trucks Q6 e-tron",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2025-audi-q6-e-tron-premium-premium-plus-prestige",
+     "display": "Premium / Premium Plus / Prestige",
+     "bolt": "5x112",
+     "cb": 57.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "f:19x8@45",
+      "r:19x9@45",
+      "f:20x8.5@45",
+      "r:20x10@45"
+     ],
+     "tires": [
+      "235/60R19",
+      "255/55R19",
+      "255/50R20",
+      "285/45R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2025-audi-q6-e-tron-premium-w-ultra-pkg",
+     "display": "Premium w/Ultra Pkg.",
+     "bolt": "5x112",
+     "cb": 57.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "f:18x8@45",
+      "r:18x9@45"
+     ],
+     "tires": [
+      "235/65R18",
+      "255/60R18"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "audi",
+   "model": "sq6-e-tron",
+   "file": "out/2025/audi/sq6-e-tron.json",
+   "tg": "Audi Trucks SQ6 e-tron",
+   "carryLevel": "same-year",
+   "oldRows": 2,
+   "oldTrims": [
+    "Base",
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112",
+    "5x130"
+   ],
+   "quarantined": 2,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2025-audi-sq6-e-tron-premium",
+     "display": "Premium",
+     "bolt": "5x112",
+     "cb": 71.6,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "f:20x8.5@45",
+      "r:20x10@45"
+     ],
+     "tires": [
+      "255/50R20",
+      "285/45R20"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-audi-sq6-e-tron-premium-plus-premium-plus-w-black-optic-pkg-prestige",
+     "display": "Premium Plus / Premium Plus w/Black Optic Pkg. / Prestige",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      13,
+      55
+     ],
+     "wheels": [
+      "f:20x8.5@34",
+      "r:20x10@34",
+      "f:21x9@34",
+      "r:21x10@34"
+     ],
+     "tires": [
+      "255/50R20",
+      "285/45R20",
+      "255/45R21",
+      "285/40R21"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-audi-sq6-e-tron-prestige-w-black-optic-pkg-prestige-w-edition-one",
+     "display": "Prestige w/Black Optic Pkg. / Prestige w/Edition One",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      13,
+      55
+     ],
+     "wheels": [
+      "f:21x9@34",
+      "r:21x10@34"
+     ],
+     "tires": [
+      "255/45R21",
+      "285/40R21"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "buick",
+   "model": "enclave",
+   "file": "out/2025/buick/enclave.json",
+   "tg": "Buick Trucks Enclave",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Avenir",
+    "Essence",
+    "Preferred",
+    "Preferred, Essence, Avenir",
+    "Premium"
+   ],
+   "oldBolt": [
+    "5x120",
+    "6x120"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2025-buick-enclave-avenir",
+     "display": "Avenir",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "22x8.5@45"
+     ],
+     "tires": [
+      "275/45R22"
+     ],
+     "carry": "trim-match \"Avenir\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-buick-enclave-preferred-sport-touring",
+     "display": "Preferred / Sport Touring",
+     "bolt": "6x120",
+     "cb": 67.1,
+     "offset": [
+      40,
+      50
+     ],
+     "wheels": [
+      "20x8@45",
+      "22x8.5@45"
+     ],
+     "tires": [
+      "255/55R20",
+      "275/45R22"
+     ],
+     "carry": "trim-match \"Preferred\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "chevrolet",
+   "model": "silverado-2500hd",
+   "file": "out/2025/chevrolet/silverado-2500hd.json",
+   "tg": "Chevrolet Trucks Silverado 2500 HD",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "Base",
+    "Custom",
+    "High Country",
+    "LT",
+    "LTZ",
+    "WT",
+    "ZR2"
+   ],
+   "oldBolt": [
+    "8x180"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 6,
+   "rows": [
+    {
+     "id": "2025-chevrolet-silverado-2500hd-custom-custom-inflation-option-lt-inflation-option-ltz-inflation-option",
+     "display": "Custom / Custom (Inflation Option) / LT (Inflation Option) / LTZ (Inflation Option)",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "20x8.5@8"
+     ],
+     "tires": [
+      "275/65R20"
+     ],
+     "carry": "trim-match \"Custom\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-silverado-2500hd-high-country",
+     "display": "High Country",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "20x8.5@8",
+      "22x8.5@8"
+     ],
+     "tires": [
+      "275/65R20",
+      "265/60R22"
+     ],
+     "carry": "trim-match \"High Country\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-silverado-2500hd-lt",
+     "display": "LT",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x7.5@8",
+      "18x8@8",
+      "22x8.5@8",
+      "20x8.5@8"
+     ],
+     "tires": [
+      "245/75R17",
+      "265/70R17",
+      "275/70R18",
+      "265/60R22",
+      "275/65R20"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-silverado-2500hd-ltz",
+     "display": "LTZ",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x8@45",
+      "20x8.5@45",
+      "22x8.5@45"
+     ],
+     "tires": [
+      "275/70R18",
+      "275/65R20",
+      "265/60R22"
+     ],
+     "carry": "trim-match \"LTZ\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-silverado-2500hd-wt",
+     "display": "WT",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      -44,
+      60
+     ],
+     "wheels": [
+      "17x7.5@8",
+      "18x8@8"
+     ],
+     "tires": [
+      "245/75R17",
+      "265/70R17",
+      "275/70R18"
+     ],
+     "carry": "trim-match \"WT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-silverado-2500hd-zr2-zr2-diesel",
+     "display": "ZR2 / ZR2 Diesel",
+     "bolt": "8x180",
+     "cb": 124.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x9@45"
+     ],
+     "tires": [
+      "305/70R18"
+     ],
+     "carry": "trim-match \"ZR2\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "chevrolet",
+   "model": "trax",
+   "file": "out/2025/chevrolet/trax.json",
+   "tg": "Chevrolet Trucks Trax",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "ACTIV",
+    "Base",
+    "LS",
+    "LT",
+    "RS"
+   ],
+   "oldBolt": [
+    "5x115"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2025-chevrolet-trax-1rs-activ",
+     "display": "1RS / ACTIV",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x7.5@45"
+     ],
+     "tires": [
+      "225/55R18"
+     ],
+     "carry": "trim-match \"ACTIV\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-trax-2rs",
+     "display": "2RS",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "19x8@45"
+     ],
+     "tires": [
+      "245/45R19"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-trax-ls-w-aluminum-wheels-lt",
+     "display": "LS w/Aluminum Wheels / LT",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "17x7.5@45"
+     ],
+     "tires": [
+      "225/60R17"
+     ],
+     "carry": "trim-match \"LT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-chevrolet-trax-ls-w-steel-wheels",
+     "display": "LS w/Steel Wheels",
+     "bolt": "5x115",
+     "cb": 70.3,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "17x7@45"
+     ],
+     "tires": [
+      "225/60R17"
+     ],
+     "carry": "trim-match \"LS\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "jeep",
+   "model": "grand-wagoneer",
+   "file": "out/2025/jeep/grand-wagoneer.json",
+   "tg": "Jeep Trucks Grand Wagoneer",
+   "carryLevel": "same-year",
+   "oldRows": 2,
+   "oldTrims": [
+    "Base",
+    "Base"
+   ],
+   "oldBolt": [
+    "6x139.7"
+   ],
+   "quarantined": 2,
+   "idSuffixed": 0,
+   "inserted": 1,
+   "rows": [
+    {
+     "id": "2025-jeep-grand-wagoneer-base-obsidian-series-iii-series-iii-obsidian",
+     "display": "Base / Obsidian / Series III / Series III Obsidian",
+     "bolt": "6x139.7",
+     "cb": 77.8,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "22x9@45"
+     ],
+     "tires": [
+      "285/45R22"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "land rover",
+   "model": "range-rover",
+   "file": "out/2025/land rover/range-rover.json",
+   "tg": "Land Rover Trucks Range Rover",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Autobiography",
+    "HSE",
+    "SE",
+    "SE, HSE, Autobiography, SV Autobiography, SVAutobiography Dynamic",
+    "SV Autobiography",
+    "SVAutobiography Dynamic"
+   ],
+   "oldBolt": [
+    "5x120"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2025-land-rover-range-rover-autobiography-autobiography-phev-w-7-seats-sv",
+     "display": "Autobiography / Autobiography PHEV w/7 Seats / SV",
+     "bolt": "5x120",
+     "cb": 72.6,
+     "offset": [
+      12,
+      58
+     ],
+     "wheels": [
+      "22x9.5@35",
+      "23x9.5@35",
+      "21x8.5@35"
+     ],
+     "tires": [
+      "285/45R22",
+      "285/40R23",
+      "275/50R21"
+     ],
+     "carry": "trim-match \"Autobiography\"",
+     "boltNote": "tire/rim salvaged from _unparsed"
+    },
+    {
+     "id": "2025-land-rover-range-rover-autobiography-phev",
+     "display": "Autobiography PHEV",
+     "bolt": "5x120",
+     "cb": 72.6,
+     "offset": [
+      12,
+      58
+     ],
+     "wheels": [
+      "22x9.5@35",
+      "21x8.5@35"
+     ],
+     "tires": [
+      "285/45R22",
+      "275/50R21"
+     ],
+     "carry": "trim-match \"Autobiography\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-land-rover-range-rover-se",
+     "display": "SE",
+     "bolt": "5x120",
+     "cb": 72.6,
+     "offset": [
+      12,
+      58
+     ],
+     "wheels": [
+      "21x8.5@35",
+      "22x9.5@35",
+      "23x9.5@35"
+     ],
+     "tires": [
+      "275/50R21",
+      "285/45R22",
+      "285/40R23"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": "tire/rim salvaged from _unparsed"
+    },
+    {
+     "id": "2025-land-rover-range-rover-se-plug-in-hybrid",
+     "display": "SE Plug-In Hybrid",
+     "bolt": "5x120",
+     "cb": 72.6,
+     "offset": [
+      12,
+      58
+     ],
+     "wheels": [
+      "21x8.5@35",
+      "22x9.5@35"
+     ],
+     "tires": [
+      "275/50R21",
+      "285/45R22"
+     ],
+     "carry": "trim-match \"SE\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "nissan",
+   "model": "rogue",
+   "file": "out/2025/nissan/rogue.json",
+   "tg": "Nissan Trucks Rogue",
+   "carryLevel": "same-year",
+   "oldRows": 6,
+   "oldTrims": [
+    "Platinum",
+    "Rock Creek",
+    "S",
+    "S, SV, SL, Platinum",
+    "SL",
+    "SV"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 6,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2025-nissan-rogue-platinum-sl",
+     "display": "Platinum / SL",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "19x7.5@48"
+     ],
+     "tires": [
+      "235/55R19"
+     ],
+     "carry": "trim-match \"Platinum\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-nissan-rogue-rock-creek-s",
+     "display": "Rock Creek / S",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "17x7.5@48"
+     ],
+     "tires": [
+      "235/65R17"
+     ],
+     "carry": "trim-match \"Rock Creek\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-nissan-rogue-sv",
+     "display": "SV",
+     "bolt": "5x114.3",
+     "cb": 66.1,
+     "offset": [
+      40,
+      55
+     ],
+     "wheels": [
+      "18x7.5@48"
+     ],
+     "tires": [
+      "235/60R18"
+     ],
+     "carry": "trim-match \"SV\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "porsche",
+   "model": "cayenne",
+   "file": "out/2025/porsche/cayenne.json",
+   "tg": "Porsche Trucks Cayenne",
+   "carryLevel": "same-year",
+   "oldRows": 7,
+   "oldTrims": [
+    "Base",
+    "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+    "E-Hybrid",
+    "GTS",
+    "S",
+    "Turbo",
+    "Turbo S"
+   ],
+   "oldBolt": [
+    "5x130"
+   ],
+   "quarantined": 7,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2025-porsche-cayenne-base-coupe-e-hybrid-coupe-e-hybrid-s-coupe-s-e-hybrid-coupe-s-e-hybrid-s",
+     "display": "Base / Coupe / E-Hybrid Coupe / E-Hybrid / S Coupe / S E-Hybrid Coupe / S E-Hybrid / S",
+     "bolt": "5x130",
+     "cb": 71.6,
+     "offset": [
+      17,
+      56
+     ],
+     "wheels": [
+      "f:20x9@37",
+      "r:20x10.5@37",
+      "f:21x9.5@37",
+      "r:21x11@37",
+      "f:22x10@37",
+      "r:22x11.5@37"
+     ],
+     "tires": [
+      "255/55R20",
+      "295/45R20",
+      "285/45R21",
+      "315/40R21",
+      "285/40R22",
+      "315/35R22"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-porsche-cayenne-gts-coupe-gts-turbo-e-hybrid-coupe-turbo-e-hybrid",
+     "display": "GTS Coupe / GTS / Turbo E-Hybrid Coupe / Turbo E-Hybrid",
+     "bolt": "5x130",
+     "cb": 71.6,
+     "offset": [
+      17,
+      56
+     ],
+     "wheels": [
+      "f:21x9.5@37",
+      "r:21x11@37",
+      "f:22x10@37",
+      "r:22x11.5@37"
+     ],
+     "tires": [
+      "285/45R21",
+      "315/40R21",
+      "285/40R22",
+      "315/35R22"
+     ],
+     "carry": "trim-match \"GTS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-porsche-cayenne-turbo-gt-coupe",
+     "display": "Turbo GT Coupe",
+     "bolt": "5x130",
+     "cb": 71.6,
+     "offset": [
+      17,
+      56
+     ],
+     "wheels": [
+      "f:22x10.5@37",
+      "r:22x11.5@37"
+     ],
+     "tires": [
+      "285/40R22",
+      "315/35R22"
+     ],
+     "carry": "trim-match \"Turbo\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "porsche",
+   "model": "macan",
+   "file": "out/2025/porsche/macan.json",
+   "tg": "Porsche Trucks Macan",
+   "carryLevel": "same-year",
+   "oldRows": 5,
+   "oldTrims": [
+    "Base",
+    "Base, S, GTS, Turbo",
+    "GTS",
+    "S",
+    "Turbo"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 5,
+   "idSuffixed": 0,
+   "inserted": 4,
+   "rows": [
+    {
+     "id": "2025-porsche-macan-4-electric-4s-electric-electric-turbo-electric",
+     "display": "4 Electric / 4S Electric / Electric / Turbo Electric",
+     "bolt": "5x130",
+     "cb": 66.5,
+     "offset": [
+      23,
+      55
+     ],
+     "wheels": [
+      "f:20x7.5@39",
+      "r:20x10@39",
+      "f:21x8.5@39",
+      "r:21x10.5@39",
+      "f:22x9@39",
+      "r:22x11@39"
+     ],
+     "tires": [
+      "235/55R20",
+      "285/45R20",
+      "255/45R21",
+      "295/40R21",
+      "255/40R22",
+      "295/35R22"
+     ],
+     "carry": "trim-match \"Turbo\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-porsche-macan-base",
+     "display": "Base",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      23,
+      55
+     ],
+     "wheels": [
+      "f:19x8.5@39",
+      "r:19x9@39",
+      "f:20x9@39",
+      "r:20x10@39",
+      "f:21x9.5@39",
+      "r:21x10@39"
+     ],
+     "tires": [
+      "235/55R19",
+      "255/50R19",
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-porsche-macan-gts",
+     "display": "GTS",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      23,
+      55
+     ],
+     "wheels": [
+      "f:21x9.5@39",
+      "r:21x10@39"
+     ],
+     "tires": [
+      "265/40R21",
+      "295/35R21"
+     ],
+     "carry": "trim-match \"GTS\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-porsche-macan-s-t",
+     "display": "S / T",
+     "bolt": "5x112",
+     "cb": 66.5,
+     "offset": [
+      23,
+      55
+     ],
+     "wheels": [
+      "f:20x9@39",
+      "r:20x10@39",
+      "f:21x9.5@39",
+      "r:21x10@39"
+     ],
+     "tires": [
+      "265/45R20",
+      "295/40R20",
+      "265/40R21",
+      "295/35R21"
+     ],
+     "carry": "trim-match \"S\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "ram",
+   "model": "3500",
+   "file": "out/2025/ram/3500.json",
+   "tg": "RAM Trucks 3500",
+   "carryLevel": "same-year",
+   "oldRows": 19,
+   "oldTrims": [
+    "Base",
+    "Big Horn",
+    "Big Horn",
+    "Big Horn Dual Rear Wheel",
+    "Laramie",
+    "Laramie",
+    "Laramie Dual Rear Wheel",
+    "Laramie Longhorn",
+    "Limited",
+    "Limited",
+    "Limited Dual Rear Wheel",
+    "Limited Longhorn",
+    "Limited Longhorn Dual Rear Wheel",
+    "Longhorn",
+    "Power Wagon",
+    "Tradesman",
+    "Tradesman",
+    "Tradesman Dual Rear Wheel",
+    "Tradesman, Big Horn, Laramie, Limited, Longhorn"
+   ],
+   "oldBolt": [
+    "8x165.1"
+   ],
+   "quarantined": 19,
+   "idSuffixed": 0,
+   "inserted": 3,
+   "rows": [
+    {
+     "id": "2025-ram-3500-big-horn-laramie-tradesman",
+     "display": "Big Horn / Laramie / Tradesman",
+     "bolt": "8x165.1",
+     "cb": 121.3,
+     "offset": [
+      35,
+      60
+     ],
+     "wheels": [
+      "18x8@48"
+     ],
+     "tires": [
+      "275/70R18"
+     ],
+     "carry": "trim-match \"Big Horn\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-ram-3500-big-horn-drw-big-horn-drw-w-night-edition-laramie-drw-laramie-drw-w-night-edition-limited-drw-limited-longhorn-drw-tradesman-drw-tradesman-4x4-drw",
+     "display": "Big Horn (DRW) / Big Horn (DRW) w/Night Edition / Laramie (DRW) / Laramie (DRW) w/Night Edition / Limited (DRW) / Limited Longhorn (DRW) / Tradesman (DRW) / Tradesman 4x4 (DRW)",
+     "bolt": "8x200",
+     "cb": 121.3,
+     "offset": [
+      35,
+      60
+     ],
+     "wheels": [
+      "17x6@48"
+     ],
+     "tires": [
+      "235/80R17"
+     ],
+     "carry": "trim-match \"Tradesman, Big Horn, Laramie, Limited, Longhorn\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-ram-3500-big-horn-w-night-edition-laramie-w-night-sport-pkg-limited-limited-longhorn",
+     "display": "Big Horn w/Night Edition / Laramie w/Night/Sport Pkg. / Limited / Limited Longhorn",
+     "bolt": "8x165.1",
+     "cb": 121.3,
+     "offset": [
+      35,
+      60
+     ],
+     "wheels": [
+      "20x8@48"
+     ],
+     "tires": [
+      "285/60R20"
+     ],
+     "carry": "trim-match \"Limited\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2025,
+   "make": "subaru",
+   "model": "wrx",
+   "file": "out/2025/subaru/wrx.json",
+   "tg": "Subaru WRX",
+   "carryLevel": "same-year",
+   "oldRows": 9,
+   "oldTrims": [
+    "Base",
+    "Base, Premium, Limited, GT",
+    "GT",
+    "Limited",
+    "Premium",
+    "WRX",
+    "WRX GT",
+    "WRX Limited",
+    "WRX Premium"
+   ],
+   "oldBolt": [
+    "5x114.3"
+   ],
+   "quarantined": 9,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2025-subaru-wrx-gt-limited-premium",
+     "display": "GT / Limited / Premium",
+     "bolt": "5x114.3",
+     "cb": 56.1,
+     "offset": [
+      48,
+      55
+     ],
+     "wheels": [
+      "18x8.5@52"
+     ],
+     "tires": [
+      "245/40R18"
+     ],
+     "carry": "trim-match \"GT\"",
+     "boltNote": null
+    },
+    {
+     "id": "2025-subaru-wrx-ts",
+     "display": "tS",
+     "bolt": "5x114.3",
+     "cb": 56.1,
+     "offset": [
+      48,
+      55
+     ],
+     "wheels": [
+      "19x8.5@52"
+     ],
+     "tires": [
+      "245/35R19"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2026,
+   "make": "audi",
+   "model": "a5",
+   "file": "out/2026/audi/a5.json",
+   "tg": "Audi A5 Quattro",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2026-audi-a5-premium-premium-plus-prestige",
+     "display": "Premium / Premium Plus / Prestige",
+     "bolt": "5x112",
+     "cb": 66.6,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "18x8@45",
+      "19x8@45"
+     ],
+     "tires": [
+      "235/45R18",
+      "245/40R19"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    },
+    {
+     "id": "2026-audi-a5-premium-plus-w-s-line-black-optic-pkg-premium-w-s-line-black-optic-pkg-prestige-w-s-line-black-optic-pkg",
+     "display": "Premium Plus w/S Line Black Optic Pkg. / Premium w/S Line Black Optic Pkg. / Prestige w/S Line Black Optic Pkg.",
+     "bolt": "5x112",
+     "cb": 66.6,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "19x8@45"
+     ],
+     "tires": [
+      "245/40R19"
+     ],
+     "carry": "trim-match \"Base\"",
+     "boltNote": null
+    }
+   ]
+  },
+  {
+   "year": 2026,
+   "make": "audi",
+   "model": "a8",
+   "file": "out/2026/audi/a8.json",
+   "tg": "Audi A8 Quattro",
+   "carryLevel": "same-year",
+   "oldRows": 1,
+   "oldTrims": [
+    "Base"
+   ],
+   "oldBolt": [
+    "5x112"
+   ],
+   "quarantined": 1,
+   "idSuffixed": 0,
+   "inserted": 2,
+   "rows": [
+    {
+     "id": "2026-audi-a8-l",
+     "display": "L",
+     "bolt": "5x112",
+     "cb": 57.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "20x9@45"
+     ],
+     "tires": [
+      "265/40R20"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    },
+    {
+     "id": "2026-audi-a8-l-w-black-optic-pkg",
+     "display": "L w/Black Optic Pkg.",
+     "bolt": "5x112",
+     "cb": 57.1,
+     "offset": [
+      35,
+      55
+     ],
+     "wheels": [
+      "21x9@45"
+     ],
+     "tires": [
+      "265/35R21"
+     ],
+     "carry": "same-year mode",
+     "boltNote": null
+    }
+   ]
+  }
+ ],
+ "skipped": {
+  "empty": [],
+  "alreadyTireguide": [],
+  "noCatalog": [
+   "2024 alfa romeo giulia",
+   "2024 alfa romeo stelvio",
+   "2024 bentley flying-spur",
+   "2024 cadillac escalade-esv",
+   "2024 ferrari roma",
+   "2024 ferrari sf90",
+   "2024 gmc hummer-ev-suv",
+   "2024 land rover range-rover-sport",
+   "2026 bentley bentayga"
+  ],
+  "modelMismatch": [
+   "2024 audi a4 (TG print = \"Audi A4 allroad\")",
+   "2024 audi a6 (TG print = \"Audi A6 allroad\")",
+   "2024 audi q5 (TG print = \"Audi Trucks Q5 PHEV\")",
+   "2024 bmw 2-series (TG print = \"BMW 228i Gran Coupe\")",
+   "2024 bmw 3-series (TG print = \"BMW 330e\")",
+   "2024 bmw 4-series (TG print = \"BMW 430i\")",
+   "2024 bmw 4-series-gran-coupe (TG print = \"BMW 430i\")",
+   "2024 bmw 5-series (TG print = \"BMW 530i\")",
+   "2024 bmw 7-series (TG print = \"BMW 740i\")",
+   "2024 bmw 8-series (TG print = \"BMW 840i\")",
+   "2024 bmw m2 (TG print = \"BMW M235i xDrive Gran Coupe\")",
+   "2024 bmw m3 (TG print = \"BMW M340i\")",
+   "2024 bmw m4 (TG print = \"BMW M440i\")",
+   "2024 bmw m8 (TG print = \"BMW M8 Gran Coupe\")",
+   "2024 buick encore (TG print = \"Buick Trucks Encore GX\")",
+   "2024 chevrolet silverado (TG print = \"Chevrolet Trucks Silverado 1500\")",
+   "2024 ford transit (TG print = \"Ford Vans Transit-150\")"
+  ],
+  "noOffset": [],
+  "noCenterBore": []
+ },
+ "notes": [
+  "2024 chevrolet silverado-2500hd: year 2024 missing from catalog_models.years (picker may not list it)",
+  "2024 chevrolet silverado-3500hd: year 2024 missing from catalog_models.years (picker may not list it)",
+  "2024 gmc sierra-2500hd: year 2024 missing from catalog_models.years (picker may not list it)",
+  "2024 gmc sierra-3500hd: year 2024 missing from catalog_models.years (picker may not list it)",
+  "2024 hyundai santa-fe: TG print has no bolt circle; carried our bolt 5x114.3",
+  "2025 chevrolet silverado-2500hd: year 2025 missing from catalog_models.years (picker may not list it)",
+  "2025 land rover range-rover: year 2025 missing from catalog_models.years (picker may not list it)"
+ ],
+ "boltConflicts": [
+  {
+   "ymm": "2024 buick enclave",
+   "ours": "5x120",
+   "tg": "6x120"
+  },
+  {
+   "ymm": "2024 chevrolet colorado",
+   "ours": "6x120",
+   "tg": "6x139.7"
+  },
+  {
+   "ymm": "2024 chevrolet silverado-3500hd",
+   "ours": "8x180",
+   "tg": "8x180, 8x210"
+  },
+  {
+   "ymm": "2024 chevrolet traverse",
+   "ours": "5x120, 6x120",
+   "tg": "6x120"
+  },
+  {
+   "ymm": "2024 ford f-350",
+   "ours": "8x170",
+   "tg": "8x170, 8x200"
+  },
+  {
+   "ymm": "2024 ford mustang-mach-e",
+   "ours": "5x114.3",
+   "tg": "5x108"
+  },
+  {
+   "ymm": "2024 gmc canyon",
+   "ours": "6x120",
+   "tg": "6x139.7"
+  },
+  {
+   "ymm": "2024 gmc sierra-3500hd",
+   "ours": "8x180",
+   "tg": "8x180, 8x210"
+  },
+  {
+   "ymm": "2024 honda civic",
+   "ours": "5x114.3",
+   "tg": "5x114.3, 5x120"
+  },
+  {
+   "ymm": "2025 audi sq6-e-tron",
+   "ours": "5x112, 5x130",
+   "tg": "5x112"
+  },
+  {
+   "ymm": "2025 buick enclave",
+   "ours": "5x120, 6x120",
+   "tg": "6x120"
+  },
+  {
+   "ymm": "2025 porsche macan",
+   "ours": "5x112",
+   "tg": "5x112, 5x130"
+  },
+  {
+   "ymm": "2025 ram 3500",
+   "ours": "8x165.1",
+   "tg": "8x165.1, 8x200"
+  }
+ ],
+ "totals": {
+  "ymm": 93,
+  "inserted": 339,
+  "quarantined": 570,
+  "idSuffixed": 0
+ },
+ "verify": {
+  "ok": true,
+  "lines": [
+   "live TG rows by audit-tg-reconcile: 339; quarantined by audit-tg-reconcile: 570",
+   "PASS no live TG row with null offset / center bore / bolt / per-wheel offset",
+   "PASS no duplicate live (year, make, model, modification_id)",
+   "checked 93 reconciled Y/M/M: every live row is tireguide-pro and at least one exists (PASS)"
+  ]
+ }
+}
