@@ -14,7 +14,7 @@ import { eq, and, sql, inArray, isNull } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "@/lib/fitment-db/keys";
 import { makeSlugMatch } from "@/lib/fitment-db/makeMatch";
 import { getModelVariants } from "@/lib/fitment-db/modelAliases";
-import { getFitmentProfile, type FitmentProfile } from "@/lib/fitment-db/profileService";
+import { getFitmentProfile, type FitmentProfile, type FitmentServiceSpecs } from "@/lib/fitment-db/profileService";
 
 // ============================================================================
 // Public Response Types (clean, no internal fields)
@@ -55,6 +55,8 @@ export interface PublicFitmentSpecs {
   boltPattern: string | null;
   centerBore: number | null;
   threadSize: string | null;
+  /** OE service specs when on file: lug torque (ft-lb), placard tire pressure (psi), load index */
+  serviceSpecs: FitmentServiceSpecs | null;
   isStaggered: boolean;
   wheelSpecs: PublicWheelSpec[];
   tireSizes: string[];
@@ -210,6 +212,7 @@ export async function getPublicSpecs(
     boltPattern: profile.boltPattern,
     centerBore: profile.centerBoreMm,
     threadSize: profile.threadSize,
+    serviceSpecs: profile.serviceSpecs ?? null,
     isStaggered,
     wheelSpecs: wheelSpecs.map((w: any) => ({
       diameter: w.diameter,

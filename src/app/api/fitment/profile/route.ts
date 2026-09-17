@@ -91,6 +91,7 @@ export async function GET(req: Request) {
       centerBore: result.centerBore,
       threadSize: result.threadSize,
       lugSeatType: result.lugSeatType,
+      serviceSpecs: result.serviceSpecs,
       
       // Tire data
       oemTireSizes: result.oemTireSizes,
@@ -128,6 +129,7 @@ export async function GET(req: Request) {
         centerBore: result.centerBore,
         threadSize: result.threadSize,
         lugSeatType: result.lugSeatType,
+        serviceSpecs: result.serviceSpecs,
       },
       derived: {
         allowedDiameters: result.wheelDiameterRange 

@@ -18,6 +18,7 @@ import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, ilike, or, asc, sql, isNull } from "drizzle-orm";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
+import { serviceSpecsFromRecord, type FitmentServiceSpecs } from "@/lib/fitment-db/profileService";
 // Utility helpers only (NOT the resolution path) for reverse-mapping a
 // canonicalFitmentId (the trims API `value`) back to its atomic trim label.
 import { isCanonicalFitmentId, getAtomicTrimOptions } from "@/lib/fitment/canonicalResolver";
@@ -69,6 +70,8 @@ export interface UniversalFitmentResult {
   centerBore: number | null;
   threadSize: string | null;
   lugSeatType: string | null;
+  /** OE service specs (lug torque ft-lb, placard tire pressure psi, load index); null = none on file */
+  serviceSpecs: FitmentServiceSpecs | null;
   
   // Tire data
   oemTireSizes: string[];
@@ -527,6 +530,7 @@ export async function resolveUniversalFitment(
     centerBore: null,
     threadSize: null,
     lugSeatType: null,
+    serviceSpecs: null,
     oemTireSizes: [],
     oemTireSizesStaggered: null,
     wheelDiameterRange: null,
@@ -697,6 +701,7 @@ export async function resolveUniversalFitment(
   result.centerBore = recordWithOverrides.centerBoreMm ? parseFloat(String(recordWithOverrides.centerBoreMm)) : null;
   result.threadSize = recordWithOverrides.threadSize || null;
   result.lugSeatType = recordWithOverrides.seatType || null;
+  result.serviceSpecs = serviceSpecsFromRecord(recordWithOverrides);
   result.qualityTier = (recordWithOverrides.qualityTier as any) || "unknown";
   
   // Determine confidence based on quality tier and data completeness

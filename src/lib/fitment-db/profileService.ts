@@ -6,10 +6,10 @@
  * Supports alias mapping when requested modificationId differs from canonical.
  * 
  * Resolution Flow (DB-Only):
- * 1. Direct DB lookup by requested modificationId → "directCanonical"
- * 2. Alias lookup (requested → canonical mapping) → "canonicalAlias"
- * 3. YMM fallback (any fitment for year/make/model) → "canonicalAlias"
- * 4. Failure → "not_found"
+ * 1. Direct DB lookup by requested modificationId â†’ "directCanonical"
+ * 2. Alias lookup (requested â†’ canonical mapping) â†’ "canonicalAlias"
+ * 3. YMM fallback (any fitment for year/make/model) â†’ "canonicalAlias"
+ * 4. Failure â†’ "not_found"
  * 
  * NOTE: External API fallback has been removed. All fitment data must be
  * imported via admin tools from static data sources.
@@ -108,6 +108,32 @@ export interface FitmentProfile {
   qualityTier?: "complete" | "partial" | "low_confidence" | "unknown";
   /** vehicle_fitments.wheel_specs_source (internal provenance; "tireguide-pro" = axle-explicit oem_wheel_sizes) */
   wheelSpecsSource?: string | null;
+  /** OE service specs (lug torque, placard tire pressure, load index). Null fields = not on file. */
+  serviceSpecs?: FitmentServiceSpecs | null;
+}
+
+/** OE service specs stored on vehicle_fitments (migration 0049). */
+export interface FitmentServiceSpecs {
+  lugTorqueFtlb: number | null;
+  tirePressureFrontPsi: number | null;
+  tirePressureRearPsi: number | null;
+  oemLoadIndex: number | null;
+}
+
+/** Build serviceSpecs from a vehicle_fitments row; null when nothing is on file. */
+export function serviceSpecsFromRecord(record: {
+  lugTorqueFtlb?: number | null;
+  tirePressureFrontPsi?: number | null;
+  tirePressureRearPsi?: number | null;
+  oemLoadIndex?: number | null;
+}): FitmentServiceSpecs | null {
+  const specs: FitmentServiceSpecs = {
+    lugTorqueFtlb: record.lugTorqueFtlb ?? null,
+    tirePressureFrontPsi: record.tirePressureFrontPsi ?? null,
+    tirePressureRearPsi: record.tirePressureRearPsi ?? null,
+    oemLoadIndex: record.oemLoadIndex ?? null,
+  };
+  return Object.values(specs).some((v) => v != null) ? specs : null;
 }
 
 export interface WheelSize {
@@ -280,7 +306,7 @@ function resolveSupplementTrimValue(
         const input = `${year}:${normalizedMake}:${normalizedModel}:${slugify(entry.value)}`;
         const hash = crypto.createHash("sha256").update(input).digest("hex").slice(0, 8);
         if (`s_${hash}` === supplementId) {
-          console.log(`[profileService] Resolved supplement ID ${supplementId} → trim "${entry.value}" (${entry.label})`);
+          console.log(`[profileService] Resolved supplement ID ${supplementId} â†’ trim "${entry.value}" (${entry.label})`);
           return entry.value;
         }
       }
@@ -390,7 +416,7 @@ async function storeAlias(
     return;
   }
   
-  console.log(`[profileService] STORING ALIAS: ${year} ${make} ${model} | ${requestedModificationId} → ${canonicalModificationId}`);
+  console.log(`[profileService] STORING ALIAS: ${year} ${make} ${model} | ${requestedModificationId} â†’ ${canonicalModificationId}`);
   
   try {
     // Upsert the alias
@@ -489,7 +515,7 @@ async function getProfileByModificationIdDirect(
   }
   
   // Third try: FUZZY TRIM MATCHING
-  // Handles partial matches like "GT Performance" → "GT Performance Pack"
+  // Handles partial matches like "GT Performance" â†’ "GT Performance Pack"
   // This is critical for performance vehicles where staggered fitment varies by trim.
   const searchTermLower = normalizedModId.toLowerCase();
   const searchWords = searchTermLower.split(/[\s-_]+/).filter(w => w.length >= 2);
@@ -553,7 +579,7 @@ async function getProfileByModificationIdDirect(
         // This prevents matching "Base" when searching for "Performance"
         const bestMatch = scored[0];
         if (bestMatch && bestMatch.score >= 30) {
-          console.log(`[profileService] FUZZY TRIM MATCH: "${modificationId}" → "${bestMatch.fitment.displayTrim}" (score: ${bestMatch.score})`);
+          console.log(`[profileService] FUZZY TRIM MATCH: "${modificationId}" â†’ "${bestMatch.fitment.displayTrim}" (score: ${bestMatch.score})`);
           return { fitment: bestMatch.fitment, lookupMs: Date.now() - t0 };
         }
       }
@@ -606,11 +632,11 @@ async function getProfileByYMMFallback(
     .limit(10);
   
   if (fitments.length === 0) {
-    // ─────────────────────────────────────────────────────────────────────────
-    // YEAR-ADJACENT FALLBACK: Try ±1 year when exact year not found
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // YEAR-ADJACENT FALLBACK: Try Â±1 year when exact year not found
     // This helps when data has gaps (e.g., 2021 exists but 2020 doesn't)
     // For most vehicles, fitment is identical within a generation (3-7 years)
-    // ─────────────────────────────────────────────────────────────────────────
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const adjacentYears = [year + 1, year - 1];
     
     for (const adjYear of adjacentYears) {
@@ -638,7 +664,7 @@ async function getProfileByYMMFallback(
           }
         }
         
-        console.warn(`[profileService] YEAR FALLBACK: ${year} ${make} ${model} → using ${adjYear} data (${best.modificationId})`);
+        console.warn(`[profileService] YEAR FALLBACK: ${year} ${make} ${model} â†’ using ${adjYear} data (${best.modificationId})`);
         
         // Log fallback behavior
         fitmentLog.fallback("year_inherit", {
@@ -704,7 +730,7 @@ function applyHdOverridesToProfile(
   const hdFitment = getHdPlatform(year, make, model, rearWheelConfig, profile.displayTrim);
   if (!hdFitment) return profile;
   
-  console.log(`[profileService] HD OVERRIDE: ${year} ${make} ${model} → ${rearWheelConfig.toUpperCase()} (template: ${hdFitment.templateId})`);
+  console.log(`[profileService] HD OVERRIDE: ${year} ${make} ${model} â†’ ${rearWheelConfig.toUpperCase()} (template: ${hdFitment.templateId})`);
   
   // Apply HD template values, preserving non-HD fields
   return {
@@ -756,10 +782,10 @@ function applyHdOverridesToResult(
  * Get fitment profile for a vehicle modification.
  * 
  * Resolution order:
- * 1. Direct DB lookup by requested modificationId → "directCanonical"
- * 2. Alias lookup (requested → canonical) → "canonicalAlias"  
- * 3. API fetch + import (stores alias if different) → "importedAlias"
- * 4. Failure → "not_found"
+ * 1. Direct DB lookup by requested modificationId â†’ "directCanonical"
+ * 2. Alias lookup (requested â†’ canonical) â†’ "canonicalAlias"  
+ * 3. API fetch + import (stores alias if different) â†’ "importedAlias"
+ * 4. Failure â†’ "not_found"
  * 
  * HD Override:
  * When rearWheelConfig is provided for HD trucks (3500-class), the profile
@@ -782,9 +808,9 @@ export async function getFitmentProfile(
   // NOTE: Don't slugify - manual imports use "manual_XXXX" with underscores
   const requestedModId = modificationId.toLowerCase().trim();
   
-  // ─────────────────────────────────────────────────────────────────────────
+  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Step 0: Check Redis cache first (unless forceRefresh)
-  // ─────────────────────────────────────────────────────────────────────────
+  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   if (!options?.forceRefresh) {
     try {
       const cached = await getCachedFitment(year, make, model, requestedModId);
@@ -811,6 +837,7 @@ export async function getFitmentProfile(
             overridesApplied: false,
             qualityTier: cached.qualityTier || "unknown",
             wheelSpecsSource: cached.wheelSpecsSource ?? null,
+            serviceSpecs: cached.serviceSpecs ?? null,
           },
           resolutionPath: "directCanonical",
           requestedModificationId: requestedModId,
@@ -834,9 +861,9 @@ export async function getFitmentProfile(
   let importMs: number | undefined;
   let canonicalModificationId: string | null = null;
   
-  // ─────────────────────────────────────────────────────────────────────────
+  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Step 1: Direct DB lookup by requested modificationId
-  // ─────────────────────────────────────────────────────────────────────────
+  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   
   if (!options?.forceRefresh) {
     let directResult: { fitment: any; lookupMs: number } = { fitment: null, lookupMs: 0 };
@@ -871,6 +898,7 @@ export async function getFitmentProfile(
           source: "db",
           qualityTier: profile.qualityTier,
           wheelSpecsSource: profile.wheelSpecsSource ?? null,
+            serviceSpecs: profile.serviceSpecs ?? null,
         }).catch(() => {}); // Ignore cache write errors
         
         return {
@@ -888,9 +916,9 @@ export async function getFitmentProfile(
       }
     }
     
-    // ─────────────────────────────────────────────────────────────────────────
-    // Step 2: Alias lookup (requested → canonical)
-    // ─────────────────────────────────────────────────────────────────────────
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // Step 2: Alias lookup (requested â†’ canonical)
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     
     const aliasStart = Date.now();
     let aliasResult: any = null;
@@ -915,7 +943,7 @@ export async function getFitmentProfile(
         const { quality } = assessFitmentQuality(overrideResult.fitment);
         
         if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
-          console.log(`[profileService] RESOLVED (canonicalAlias): ${year} ${make} ${model} mod=${modificationId} → ${canonicalModificationId} (${dbLookupMs + aliasLookupMs}ms)`);
+          console.log(`[profileService] RESOLVED (canonicalAlias): ${year} ${make} ${model} mod=${modificationId} â†’ ${canonicalModificationId} (${dbLookupMs + aliasLookupMs}ms)`);
           
           // Log alias usage
           fitmentLog.fallback("alias_used", {
@@ -939,6 +967,7 @@ export async function getFitmentProfile(
             source: "db",
             qualityTier: profile.qualityTier,
             wheelSpecsSource: profile.wheelSpecsSource ?? null,
+            serviceSpecs: profile.serviceSpecs ?? null,
           }).catch(() => {});
           
           return {
@@ -958,7 +987,7 @@ export async function getFitmentProfile(
     
     console.log(`[profileService] DB MISS: ${year} ${make} ${model} mod=${modificationId} (db: ${dbLookupMs}ms, alias: ${aliasLookupMs}ms)`);
     
-    // ─────────────────────────────────────────────────────────────────────────
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // Step 2.5: YMM Fallback with Equivalence Check (2026-04-26)
     // 
     // This handles cases where:
@@ -967,7 +996,7 @@ export async function getFitmentProfile(
     // 
     // NEW: We now check fitment equivalence before allowing fallback.
     // Only allow fallback if the trims are fitment-equivalent (same specs).
-    // ─────────────────────────────────────────────────────────────────────────
+    // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     
     try {
       // First, check if the requested modificationId exists but is needs_review
@@ -1012,7 +1041,7 @@ export async function getFitmentProfile(
           const overrideResult = await applyOverridesWithMeta(fallbackResult.fallbackTrim);
           const profile = dbRecordToProfile(overrideResult.fitment, "db");
           
-          console.log(`[profileService] FALLBACK (${fallbackResult.confidence}): ${needsReviewRecord.displayTrim} → ${fallbackResult.fallbackTrim.displayTrim}`);
+          console.log(`[profileService] FALLBACK (${fallbackResult.confidence}): ${needsReviewRecord.displayTrim} â†’ ${fallbackResult.fallbackTrim.displayTrim}`);
           console.log(`  Reasons: ${fallbackResult.reasons.join(", ")}`);
           if (fallbackResult.warnings.length > 0) {
             console.log(`  Warnings: ${fallbackResult.warnings.join(", ")}`);
@@ -1073,7 +1102,7 @@ export async function getFitmentProfile(
         const { quality } = assessFitmentQuality(overrideResult.fitment);
         
         if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
-          console.log(`[profileService] RESOLVED (ymmFallback): ${year} ${make} ${model} mod=${modificationId} → used ${ymmResult.usedModificationId} (${ymmFallbackMs}ms)`);
+          console.log(`[profileService] RESOLVED (ymmFallback): ${year} ${make} ${model} mod=${modificationId} â†’ used ${ymmResult.usedModificationId} (${ymmFallbackMs}ms)`);
           
           // Log YMM fallback
           fitmentLog.fallback("canonical_fallback", {
@@ -1110,6 +1139,7 @@ export async function getFitmentProfile(
             source: "db",
             qualityTier: profile.qualityTier,
             wheelSpecsSource: profile.wheelSpecsSource ?? null,
+            serviceSpecs: profile.serviceSpecs ?? null,
           }).catch(() => {});
           
           return {
@@ -1131,9 +1161,9 @@ export async function getFitmentProfile(
     }
   }
   
-  // ─────────────────────────────────────────────────────────────────────────
+  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // DB-FIRST: No external API fallback. Return not_found.
-  // ─────────────────────────────────────────────────────────────────────────
+  // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   
   console.log(`[profileService] NOT FOUND (DB-first, no API fallback): ${year} ${make} ${model} mod=${modificationId}`);
   
@@ -1222,7 +1252,7 @@ async function _unusedImportPlaceholder(
       const overrideResult = await applyOverridesWithMeta(importedResult.fitment);
 
       console.log(
-        `[profileService] RESOLVED (importedAlias): ${year} ${make} ${model} mod=${requestedModId} → ${actualCanonicalId}`
+        `[profileService] RESOLVED (importedAlias): ${year} ${make} ${model} mod=${requestedModId} â†’ ${actualCanonicalId}`
       );
 
       return {
@@ -1363,7 +1393,7 @@ async function importApiDataToDb(
     // Use first trim level, or join multiple (e.g., "XL / XLT / Lariat")
     // For display, we'll use the first one as primary but store all in raw
     displayTrim = trimLevels[0];
-    console.log(`[importApiDataToDb] Using trim_levels: ${trimLevels.join(", ")} → displayTrim="${displayTrim}"`);
+    console.log(`[importApiDataToDb] Using trim_levels: ${trimLevels.join(", ")} â†’ displayTrim="${displayTrim}"`);
   } else {
     // Fall back to normalized label from engine/name
     displayTrim = normalizeTrimLabel(trimStr, engineStr, nameStr, String(year), make, model) || "Base";
@@ -1376,11 +1406,11 @@ async function importApiDataToDb(
   let threadSize = tech.wheel_fasteners?.thread_size || null;
   let seatType = tech.wheel_fasteners?.type || null;
   
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // APPLY FITMENT RULES - Override API data with known-correct values
   // This is critical for vehicles like RAM 1500 vs RAM 1500 Classic where
   // the bolt pattern differs by model variant, not just year.
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   const ruleOverride = getFitmentFromRules({
     year,
     make,
@@ -1541,11 +1571,11 @@ async function importApiDataToDb(
 // ============================================================================
 
 function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): FitmentProfile {
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // CRITICAL: Apply fitment rules to override incorrect DB/API data
   // This is the ONLY place where rules are applied at resolution time.
   // Rules handle cases like RAM 1500 Classic vs 5th Gen where bolt pattern differs.
-  // ═══════════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   
   let boltPattern = record.boltPattern;
   let centerBoreMm = record.centerBoreMm ? parseFloat(String(record.centerBoreMm)) : null;
@@ -1569,8 +1599,8 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
   if (ruleOverride) {
     // Log when rules override data
     if (ruleOverride.boltPattern && ruleOverride.boltPattern !== boltPattern) {
-      console.log(`[dbRecordToProfile] 🔧 RULE OVERRIDE: ${record.year} ${record.make} ${record.model} (mod=${record.modificationId})`);
-      console.log(`  Bolt pattern: ${boltPattern} → ${ruleOverride.boltPattern}`);
+      console.log(`[dbRecordToProfile] ðŸ”§ RULE OVERRIDE: ${record.year} ${record.make} ${record.model} (mod=${record.modificationId})`);
+      console.log(`  Bolt pattern: ${boltPattern} â†’ ${ruleOverride.boltPattern}`);
       console.log(`  Reason: ${ruleOverride.notes || "Fitment rule match"}`);
     }
     
@@ -1637,6 +1667,7 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     overridesApplied: rulesApplied,
     qualityTier: (record.qualityTier as FitmentProfile["qualityTier"]) || "unknown",
     wheelSpecsSource: record.wheelSpecsSource ?? null,
+    serviceSpecs: serviceSpecsFromRecord(record),
   };
 }
 
@@ -1678,9 +1709,9 @@ export async function getFitmentProfileWithHdSupport(
     const hdFitment = getHdPlatform(year, make, model, options.rearWheelConfig, result.profile.displayTrim);
     
     if (hdFitment) {
-      console.log(`[getFitmentProfileWithHdSupport] HD OVERRIDE APPLIED: ${year} ${make} ${model} → ${options.rearWheelConfig.toUpperCase()}`);
+      console.log(`[getFitmentProfileWithHdSupport] HD OVERRIDE APPLIED: ${year} ${make} ${model} â†’ ${options.rearWheelConfig.toUpperCase()}`);
       console.log(`  Template: ${hdFitment.templateId}`);
-      console.log(`  Bolt Pattern: ${result.profile.boltPattern} → ${hdFitment.boltPattern}`);
+      console.log(`  Bolt Pattern: ${result.profile.boltPattern} â†’ ${hdFitment.boltPattern}`);
       console.log(`  Offset Range: ${hdFitment.offsetMinMm}mm to ${hdFitment.offsetMaxMm}mm`);
       
       return {

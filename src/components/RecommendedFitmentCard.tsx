@@ -7,6 +7,11 @@ type NormalizedFitment = {
   boltPattern?: string;
   centerBoreMm?: number;
   threadSize?: string;
+  /** OE service specs (shown only when on file) */
+  lugTorqueFtlb?: number;
+  tirePressureFrontPsi?: number;
+  tirePressureRearPsi?: number;
+  oemLoadIndex?: number;
   wheelDiameterRangeIn?: [number, number];
   wheelWidthRangeIn?: [number, number];
   offsetRangeMm?: [number, number];
@@ -217,6 +222,12 @@ export function RecommendedFitmentCard({
               boltPattern: string | null;
               centerBoreMm: number | null;
               threadSize: string | null;
+              serviceSpecs?: {
+                lugTorqueFtlb: number | null;
+                tirePressureFrontPsi: number | null;
+                tirePressureRearPsi: number | null;
+                oemLoadIndex: number | null;
+              } | null;
               offsetRange: { min: number | null; max: number | null };
               oemWheelSizes: Array<{ diameter: number; width: number; offset: number | null }>;
               oemTireSizes: string[];
@@ -257,6 +268,10 @@ export function RecommendedFitmentCard({
             boltPattern: dbProfile.boltPattern || undefined,
             centerBoreMm: dbProfile.centerBoreMm || undefined,
             threadSize: dbProfile.threadSize || undefined,
+            lugTorqueFtlb: dbProfile.serviceSpecs?.lugTorqueFtlb ?? undefined,
+            tirePressureFrontPsi: dbProfile.serviceSpecs?.tirePressureFrontPsi ?? undefined,
+            tirePressureRearPsi: dbProfile.serviceSpecs?.tirePressureRearPsi ?? undefined,
+            oemLoadIndex: dbProfile.serviceSpecs?.oemLoadIndex ?? undefined,
             wheelDiameterRangeIn: oemWheelDias.length ? [Math.min(...oemWheelDias), Math.max(...oemWheelDias)] : undefined,
             wheelWidthRangeIn: oemWheelWidths.length ? [Math.min(...oemWheelWidths), Math.max(...oemWheelWidths)] : undefined,
             offsetRangeMm: dbProfile.offsetRange?.min != null && dbProfile.offsetRange?.max != null 
@@ -509,6 +524,31 @@ export function RecommendedFitmentCard({
             <div className="flex items-center justify-between gap-3">
               <span className="text-neutral-600">Lug thread</span>
               <span className="font-semibold">{details.threadSize}</span>
+            </div>
+          ) : null}
+
+          {details?.lugTorqueFtlb ? (
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-neutral-600">Lug torque</span>
+              <span className="font-semibold">{details.lugTorqueFtlb} ft-lb</span>
+            </div>
+          ) : null}
+
+          {details?.tirePressureFrontPsi || details?.tirePressureRearPsi ? (
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-neutral-600">Factory tire pressure</span>
+              <span className="font-semibold">
+                {details.tirePressureFrontPsi && details.tirePressureRearPsi && details.tirePressureFrontPsi !== details.tirePressureRearPsi
+                  ? `F ${details.tirePressureFrontPsi} / R ${details.tirePressureRearPsi} psi`
+                  : `${details.tirePressureFrontPsi ?? details.tirePressureRearPsi} psi`}
+              </span>
+            </div>
+          ) : null}
+
+          {details?.oemLoadIndex ? (
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-neutral-600">Min. tire load index</span>
+              <span className="font-semibold">{details.oemLoadIndex}</span>
             </div>
           ) : null}
 
