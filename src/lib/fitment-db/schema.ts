@@ -108,6 +108,11 @@ export const vehicleFitments = pgTable(
     tirePressureFrontPsi: integer("tire_pressure_front_psi"),
     tirePressureRearPsi: integer("tire_pressure_rear_psi"),
     oemLoadIndex: integer("oem_load_index"),
+    /** OE tire speed symbol for the primary size (e.g. "H", "V", "(Y)"). Migration 0050, US AutoForce feed. */
+    oemSpeedRating: varchar("oem_speed_rating", { length: 4 }),
+    /** Provenance for oem_load_index / oem_speed_rating: 'tireguide-pro' | 'usaf'. INTERNAL — never expose. */
+    loadIndexSource: varchar("load_index_source", { length: 40 }),
+    loadIndexVerifiedAt: timestamp("load_index_verified_at", { mode: "date", withTimezone: true }),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
   },
