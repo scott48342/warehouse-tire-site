@@ -10,7 +10,7 @@ bolt circle '5-114.3mm', tpms, 'Front:', gvwr base, gvwr max, rim size '15x6-15x
 import sys, re, json
 import fitz
 
-TIRE = re.compile(r"^(?:LT|P|T|ST)?\d{2,3}/\d{2,3}\s?Z?R\s?\d{2}(?:\.\d)?[A-Z]?(?:/[CDEF])?$|^\d{2}(?:\.\d{1,2})?[xX]\d{1,2}(?:\.\d{1,2})?\s?Z?R\s?\d{2}(?:\.\d)?(?:LT)?(?:/[CDEF])?$")
+TIRE = re.compile(r"^(?:LT|P|T|ST)?\d{2,3}/\d{2,3}\s?Z?RF?\s?\d{2}(?:\.\d)?[A-Z]?(?:/[CDEF])?$|^\d{2}(?:\.\d{1,2})?[xX]\d{1,2}(?:\.\d{1,2})?\s?Z?R\s?\d{2}(?:\.\d)?(?:LT)?(?:/[CDEF])?$")
 BOLT = re.compile(r"^(\d)-(\d{2,3}(?:\.\d{1,2})?)mm$", re.I)
 RIM = re.compile(r"^(\d{2}(?:\.\d)?)x(\d{1,2}(?:\.\d{1,2})?)(?:-(\d{2}(?:\.\d)?)x(\d{1,2}(?:\.\d{1,2})?))?$", re.I)
 LABELS = {"Vehicle Option:", "Torque /", "Standard Tire Size", "Spd Rating", "No. Holes & Bolt Circle", "Base", "Max Gross", "Wheel", "Rim",
@@ -91,13 +91,36 @@ def parse(pdf):
                 row["inflation_front"] = int(nxt); nums.remove(int(nxt))
         except StopIteration:
             pass
-        tail = nums[-3:] if len(nums) >= 3 else nums
+        # The trailing block is POSITIONAL: the values right after the rim size are [load index, torque, wheelbase].
+        # A second wheelbase (longer variant) is printed between Max Gross and Base weight, so pooling all
+        # integers and taking the last three shifted the columns (2021 Silverado: LI=157 torque=115). Fixed 2026-09-17.
+        NUM = re.compile(r"^\d{2,3}(?:\.\d{1,2})?$")
+        start = None
+        if row["rim_size"] is not None:
+            start = next((i for i, v in enumerate(vals) if v.lower() == row["rim_size"]), None)
+        if start is None:
+            # no rim size on this line: start after the last weight / 'Front:' token
+            wi = [i for i, v in enumerate(vals) if v == "Front:" or re.fullmatch(r"\d{1,2},\d{3}", v)]
+            start = wi[-1] if wi else -1
+        tail = []
+        for v in vals[start + 1:]:
+            if NUM.match(v):
+                tail.append(float(v) if "." in v else int(v))
+            elif tail:
+                break
+        tail = tail[:3]
         if len(tail) == 3:
             row["load_index"], row["torque_ftlb"], row["wheelbase_in"] = tail
         elif len(tail) == 2:
-            row["load_index"], row["torque_ftlb"] = tail
+            # [LI, torque] normally; a decimal second value can only be a wheelbase
+            if isinstance(tail[1], float): row["load_index"], row["wheelbase_in"] = tail
+            else: row["load_index"], row["torque_ftlb"] = tail
         elif len(tail) == 1:
             row["load_index"] = tail[0]
+        for k in ("load_index", "torque_ftlb"):
+            if isinstance(row[k], float): row[k] = int(row[k]) if row[k] == int(row[k]) else row[k]
+        # values consumed positionally must not linger in _unparsed
+        row["_unparsed"] = [u for u in row["_unparsed"] if not (NUM.match(u) and "." in u)]
         if not row["_unparsed"]:
             del row["_unparsed"]
         if name not in options:

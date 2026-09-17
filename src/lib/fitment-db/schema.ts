@@ -100,6 +100,14 @@ export const vehicleFitments = pgTable(
     wheelSpecsVerifiedAt: timestamp("wheel_specs_verified_at", { mode: "date", withTimezone: true }),
     wheelSpecsSource: varchar("wheel_specs_source", { length: 40 }),
     wheelSpecsConfidence: varchar("wheel_specs_confidence", { length: 10 }),
+    /**
+     * Service specs from OE placard / Tire Guide prints (migration 0049). Customer-facing:
+     * torque on the wheel PDP, recommended cold pressure on the tire PDP.
+     */
+    lugTorqueFtlb: integer("lug_torque_ftlb"),
+    tirePressureFrontPsi: integer("tire_pressure_front_psi"),
+    tirePressureRearPsi: integer("tire_pressure_rear_psi"),
+    oemLoadIndex: integer("oem_load_index"),
     createdAt: timestamp("created_at", { mode: "date" }).defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date" }).defaultNow(),
   },

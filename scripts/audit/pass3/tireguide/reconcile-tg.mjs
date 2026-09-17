@@ -23,6 +23,7 @@ import fs from "fs";
 import path from "path";
 
 const APPLY = process.argv.includes("--apply");
+const RETEST = process.argv.includes("--retest"); // DRY RUN ONLY: re-plan Y/M/M that are already tireguide-pro (exercise the insert path); ignored with --apply
 const VERIFY_ONLY = process.argv.includes("--verify");
 const QUIET = process.argv.includes("--quiet");
 const ONLY = process.argv.filter(a => a.startsWith("--only=")).flatMap(a => a.slice(7).split(",")).map(s => s.trim()).filter(Boolean);
@@ -148,7 +149,8 @@ function buildTrims(j) {
     for (const s of o.sizes) {
       const sv = salvage(s);
       if (!sv.tire && !sv.rim) continue; // nothing usable on this line
-      g.entries.push({ axle, rank: Number(s.rank) || 99, rim: sv.rim, tire: sv.tire, bolt: normBolt(s.bolt_circle), tpms: s.tpms, salvaged: sv.salvaged });
+      g.entries.push({ axle, rank: Number(s.rank) || 99, rim: sv.rim, tire: sv.tire, bolt: normBolt(s.bolt_circle), tpms: s.tpms, salvaged: sv.salvaged,
+        torque: svcInt(s.torque_ftlb, 60, 200), psiF: svcInt(s.inflation_front, 20, 90), psiR: svcInt(s.inflation_rear, 20, 90), li: svcInt(s.load_index, 60, 140) });
     }
   }
   const fileBolt = modeOf([...groups.values()].flatMap(g => g.entries.map(e => e.bolt)).filter(Boolean));
@@ -175,17 +177,38 @@ function buildTrims(j) {
     }
     if (!wheels.length || !tires.length) { boltMissing += 0; notes.push("UNUSABLE: no wheel or tire size parsed"); }
     const staggered = wheels.some(w => w.axle !== "both");
+    const svc = serviceSpecs(g.entries);
     if (notes.length) boltNote = [boltNote, ...notes].filter(Boolean).join("; ");
-    trims.push({ base, names: [...g.names], bolt, boltNote, wheels, tires, staggered, unusable: !wheels.length || !tires.length, key: JSON.stringify([bolt, wheels.map(w => [w.axle, w.diameter, w.width]), tires]) });
+    trims.push({ base, names: [...g.names], bolt, boltNote, wheels, tires, staggered, svc, unusable: !wheels.length || !tires.length, key: JSON.stringify([bolt, wheels.map(w => [w.axle, w.diameter, w.width]), tires]) });
   }
   // merge identical spec sets
   const merged = new Map();
   for (const t of trims) {
     if (!merged.has(t.key)) merged.set(t.key, { ...t, bases: [t.base], names: [...t.names] });
-    else { const m = merged.get(t.key); m.bases.push(t.base); m.names.push(...t.names); }
+    else {
+      const m = merged.get(t.key); m.bases.push(t.base); m.names.push(...t.names);
+      // torque is a safety spec: merged trims that disagree store NULL rather than a majority vote
+      if (m.svc.torque !== t.svc.torque) m.svc.torque = null;
+      for (const k of ["psiF", "psiR", "li"]) if (m.svc[k] == null) m.svc[k] = t.svc[k];
+    }
   }
   const out = [...merged.values()].map(t => ({ ...t, display: t.bases.join(" / ") }));
   return { trims: out, bolts: new Set(out.map(t => t.bolt).filter(Boolean)), boltMissing };
+}
+
+/** Integer within [lo, hi] or null (drops parser garbage rather than storing it). */
+function svcInt(v, lo, hi) { const n = Number(v); return Number.isInteger(n) && n >= lo && n <= hi ? n : null; }
+/**
+ * Service specs for one TG trim from its size lines (migration 0049 columns): lug torque (unique across the trim's sizes,
+ * else null), OE cold pressure front/rear (mode; front from non-rear-axle lines, rear from non-front-axle lines), and the
+ * load index of the rank-1 front/both-axle size.
+ */
+function serviceSpecs(entries) {
+  const tq = [...new Set(entries.map(e => e.torque).filter(v => v != null))];
+  const psiF = modeOf(entries.filter(e => e.axle !== "rear").map(e => e.psiF).filter(v => v != null));
+  const psiR = modeOf(entries.filter(e => e.axle !== "front").map(e => e.psiR).filter(v => v != null));
+  const first = [...entries].filter(e => e.axle !== "rear" && e.li != null).sort((a, b) => a.rank - b.rank)[0];
+  return { torque: tq.length === 1 ? tq[0] : null, psiF: psiF ?? null, psiR: psiR ?? null, li: first ? first.li : null };
 }
 
 // ---------------------------------------------------------------- main
@@ -238,7 +261,7 @@ try {
       const catRow = cat.get(`${make}/${model}`);
       if (!catRow) { plan.skipped.noCatalog.push(tag); log(`SKIP no catalog_models entry: ${tag}`); continue; }
       if (!modelMatches(j.header.make_model_raw, make, model, catRow.name)) { plan.skipped.modelMismatch.push(`${tag} (TG print = "${j.header.make_model_raw}")`); log(`SKIP model mismatch: ${tag} <- TG "${j.header.make_model_raw}"`); continue; }
-      if (already.has(key)) { plan.skipped.alreadyTireguide.push(tag); log(`SKIP already tireguide-pro: ${tag}`); continue; }
+      if (already.has(key) && !(RETEST && !APPLY)) { plan.skipped.alreadyTireguide.push(tag); log(`SKIP already tireguide-pro: ${tag}`); continue; }
       if (Array.isArray(catRow.years) && !catRow.years.includes(year)) plan.notes.push(`${tag}: year ${year} missing from catalog_models.years (picker may not list it)`);
 
       const old = await q(`select id, modification_id, display_trim, raw_trim, submodel, bolt_pattern, center_bore_mm, thread_size, seat_type, offset_min_mm, offset_max_mm, oem_wheel_sizes, wheel_specs_source
@@ -294,7 +317,7 @@ try {
         let n = 2; const base = id; while (usedIds.has(id)) id = `${base}-${n++}`;
         usedIds.add(id);
         const carry = m ? `trim-match "${m.display_trim}"${m.year ? ` (${m.year})` : ""}` : `${carryLevel} mode`;
-        rows.push({ id, display: t.display, raw: t.names.join(" | "), bolt, boltNote, cb, thread, seat, omin, omax, wheels, tires: t.tires, staggered: t.staggered, carry, reason: `Tire Guide Pro print ${year} "${j.header.make_model_raw}" (${file}): ${t.display} = ${wheels.map(w => (w.axle === "both" ? "" : w.axle[0].toUpperCase() + ":") + w.diameter + "x" + w.width).join("/")} ${t.tires.join("/")} ${bolt}; offset/CB carried from ${carry}` });
+        rows.push({ id, display: t.display, raw: t.names.join(" | "), bolt, boltNote, cb, thread, seat, omin, omax, wheels, tires: t.tires, staggered: t.staggered, svc: t.svc, carry, reason: `Tire Guide Pro print ${year} "${j.header.make_model_raw}" (${file}): ${t.display} = ${wheels.map(w => (w.axle === "both" ? "" : w.axle[0].toUpperCase() + ":") + w.diameter + "x" + w.width).join("/")} ${t.tires.join("/")} ${bolt}; offset/CB carried from ${carry}` });
       }
       if (!rows.length) { plan.skipped.empty.push(`${tag} (no parseable options)`); continue; }
 
@@ -304,7 +327,7 @@ try {
       log(`      trims: ${old.map(r => r.display_trim).join("; ")}`);
       if (conflict) log(`  !! BOLT CONFLICT ours=${[...oldBolts].join(",")} tg=${[...tgBolts].join(",")} -> TG wins`);
       log(`  NEW ${rows.length} TG trims:`);
-      for (const r of rows) log(`    - ${r.display}${r.staggered ? " [staggered]" : ""}: ${r.wheels.map(w => (w.axle === "both" ? "" : w.axle[0].toUpperCase() + ":") + w.diameter + "x" + w.width + "@" + w.offset).join(" ")} | ${r.tires.join(" ")} | ${r.bolt} cb=${r.cb} off=${r.omin}..${r.omax} ${r.thread || ""} | ${r.carry}${r.boltNote ? " | " + r.boltNote : ""}  id=${r.id}`);
+      for (const r of rows) log(`    - ${r.display}${r.staggered ? " [staggered]" : ""}: ${r.wheels.map(w => (w.axle === "both" ? "" : w.axle[0].toUpperCase() + ":") + w.diameter + "x" + w.width + "@" + w.offset).join(" ")} | ${r.tires.join(" ")} | ${r.bolt} cb=${r.cb} off=${r.omin}..${r.omax} ${r.thread || ""} | tq=${r.svc.torque ?? "-"} psi=${r.svc.psiF ?? "-"}/${r.svc.psiR ?? "-"} LI=${r.svc.li ?? "-"} | ${r.carry}${r.boltNote ? " | " + r.boltNote : ""}  id=${r.id}`);
 
       // ---- transaction
       await c.query("BEGIN");
@@ -317,9 +340,12 @@ try {
       for (const r of rows) {
         const res = await q(`insert into vehicle_fitments (year, make, model, modification_id, raw_trim, display_trim, submodel, bolt_pattern, center_bore_mm, thread_size, seat_type,
             offset_min_mm, offset_max_mm, oem_wheel_sizes, oem_tire_sizes, tire_sizes_source, tire_sizes_confidence, tire_sizes_verified_at,
-            wheel_specs_source, wheel_specs_confidence, wheel_specs_verified_at, source, quality_tier, certification_status, is_locked, confidence_tag, last_modified_by, last_modified_reason)
-          values ($1, $2, $3, $4, $5, $6, $6, $7, $8, $9, $10, $11, $12, $13::jsonb, $14::jsonb, $15, 'HIGH', now(), $15, 'HIGH', now(), $15, 'complete', 'certified', true, 'HIGH', $16, $17) returning id`,
-          [year, make, model, r.id, r.raw.slice(0, 255), r.display.slice(0, 255), r.bolt, r.cb, r.thread, r.seat, r.omin, r.omax, JSON.stringify(r.wheels), JSON.stringify(r.tires), SRC, WHO, r.reason]);
+            wheel_specs_source, wheel_specs_confidence, wheel_specs_verified_at, source, quality_tier, certification_status, is_locked, confidence_tag, last_modified_by, last_modified_reason,
+            lug_torque_ftlb, tire_pressure_front_psi, tire_pressure_rear_psi, oem_load_index)
+          values ($1, $2, $3, $4, $5, $6, $6, $7, $8, $9, $10, $11, $12, $13::jsonb, $14::jsonb, $15, 'HIGH', now(), $15, 'HIGH', now(), $15, 'complete', 'certified', true, 'HIGH', $16, $17,
+            $18, $19, $20, $21) returning id`,
+          [year, make, model, r.id, r.raw.slice(0, 255), r.display.slice(0, 255), r.bolt, r.cb, r.thread, r.seat, r.omin, r.omax, JSON.stringify(r.wheels), JSON.stringify(r.tires), SRC, WHO, r.reason,
+            r.svc.torque, r.svc.psiF, r.svc.psiR, r.svc.li]);
         ins += res.length;
       }
       if (APPLY) await c.query("COMMIT"); else await c.query("ROLLBACK");
