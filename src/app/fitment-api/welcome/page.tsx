@@ -118,6 +118,7 @@ export default async function FitmentApiWelcomePage({
   "boltPattern": "6x135",
   "centerBore": 87.1,
   "threadSize": "M14x1.5",
+  "serviceSpecs": { "lugTorqueFtlb": 150, "tirePressureFrontPsi": 36, "tirePressureRearPsi": 36, "oemLoadIndex": 110 },
   "offsetRange": [20, 44],
   "wheelSizes": ["17x7.5", "18x8", "20x9"],
   "tireSizes": ["265/70R17", "275/65R18"],

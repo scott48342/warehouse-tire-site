@@ -10,16 +10,17 @@ import LiveDemo from '@/components/fitment-api/LiveDemo';
 
 export const metadata: Metadata = {
   title: 'Vehicle Fitment API | 14,000+ Verified Fitments | Production-Grade',
-  description: 'Production-grade vehicle fitment API with bolt patterns, center bore, wheel sizes, tire sizes, and staggered fitment detection. No external dependencies. Fully controlled dataset for tire and wheel ecommerce.',
+  description: 'Production-grade vehicle fitment API with bolt patterns, center bore, wheel sizes, tire sizes, lug torque, factory tire pressure, load index, and staggered fitment detection. No external dependencies. Fully controlled dataset for tire and wheel ecommerce.',
 };
 
 // Primary API Example for hero section
 const primaryApiExample = {
-  endpoint: 'GET /api/public/fitment/specs?year=2020&make=Ford&model=F-150',
+  endpoint: 'GET /api/public/fitment/specs?year=2024&make=Ford&model=F-150&trim=XLT',
   response: {
     boltPattern: '6x135',
     centerBore: 87.1,
     threadSize: 'M14x1.5',
+    serviceSpecs: { lugTorqueFtlb: 150, tirePressureFrontPsi: 36, tirePressureRearPsi: 36, oemLoadIndex: 110 },
     offsetRange: [20, 44],
     wheelSizes: ['17x7.5', '18x8', '20x9'],
     tireSizes: ['265/70R17', '275/65R18'],
@@ -166,7 +167,7 @@ export default function FitmentApiPage() {
               <div className="mb-4">
                 <code className="text-sm sm:text-base">
                   <span className="text-green-400">GET</span>{' '}
-                  <span className="text-blue-400">/api/public/fitment/specs?year=2020&make=Ford&model=F-150</span>
+                  <span className="text-blue-400">/api/public/fitment/specs?year=2024&make=Ford&model=F-150&trim=XLT</span>
                 </code>
               </div>
               <div className="border-t border-zinc-800 pt-4">
@@ -317,6 +318,10 @@ export default function FitmentApiPage() {
               { field: 'Tire Sizes', example: '265/70R17, 275/65R18' },
               { field: 'Staggered Detection', example: 'true/false flag' },
               { field: 'Trim-Level Data', example: 'GT, SS, XLT, etc.' },
+              { field: 'Lug Torque', example: '100, 140, 150 ft-lb' },
+              { field: 'Factory Tire Pressure', example: '35 psi, F 36 / R 32' },
+              { field: 'OE Load Index', example: '95, 103, 110' },
+              { field: 'Service Specs', example: 'null when not on file' },
             ].map((item, i) => (
               <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
                 <div className="font-semibold text-white mb-1">{item.field}</div>

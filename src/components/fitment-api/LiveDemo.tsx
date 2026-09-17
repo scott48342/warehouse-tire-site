@@ -28,6 +28,12 @@ type Specs = {
   boltPattern: string | null;
   centerBore: number | null;
   threadSize: string | null;
+  serviceSpecs?: {
+    lugTorqueFtlb: number | null;
+    tirePressureFrontPsi: number | null;
+    tirePressureRearPsi: number | null;
+    oemLoadIndex: number | null;
+  } | null;
   isStaggered: boolean;
   wheelSpecs: WheelSpec[];
   tireSizes: string[];
@@ -239,6 +245,15 @@ export default function LiveDemo() {
             <Stat label="Thread" value={specs.threadSize ?? "—"} />
             <Stat label="OEM wheels" value={`${front.length + rear.length} size${front.length + rear.length === 1 ? "" : "s"}`} />
           </div>
+
+          {specs.serviceSpecs && (
+            <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <Stat label="Lug torque" value={specs.serviceSpecs.lugTorqueFtlb ? `${specs.serviceSpecs.lugTorqueFtlb} ft-lb` : "—"} />
+              <Stat label="Tire pressure (F)" value={specs.serviceSpecs.tirePressureFrontPsi ? `${specs.serviceSpecs.tirePressureFrontPsi} psi` : "—"} />
+              <Stat label="Tire pressure (R)" value={specs.serviceSpecs.tirePressureRearPsi ? `${specs.serviceSpecs.tirePressureRearPsi} psi` : "—"} />
+              <Stat label="Min. load index" value={specs.serviceSpecs.oemLoadIndex ? String(specs.serviceSpecs.oemLoadIndex) : "—"} />
+            </div>
+          )}
 
           {(front.length > 0 || rear.length > 0) && (
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
