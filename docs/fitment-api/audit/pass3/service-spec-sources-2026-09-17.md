@@ -45,8 +45,18 @@ Populated counts across 912 USAF option rows: `LoadIndex` 912, `SpeedRate` 912, 
 3. **Hold torque/pressure bulk work** until (1) or the TCS terms land. Don't scale the counter-print loop.
 4. **Public copy**: keep "verified against manufacturer OE specifications"; never name any of the above.
 
-## Draft note to USAF
+## Draft note to USAF (Scott's framing: retailer need, not a data ask — 2026-09-17 09:50)
 
-> Subject: GetVehicleOptions — enabling inflation / torque / bolt-circle fields
+> **Subject:** GetVehicleOptions — a few additional vehicle fields for our fitment lookup
 >
-> Hi ___, we're using the AIS `GetVehicleOptions` method on account 1381479 to power vehicle tire lookup on our sites. The response schema includes `FrontInf`, `RearInf`, `WBC` and `TRQ1`, but they come back empty for every vehicle while `TireSize`, `LoadIndex` and `SpeedRate` are populated. Can those four fields be enabled for our account (and 1180608)? We'd also like to confirm that surfacing this vehicle-fitment data (OE sizes, load index, inflation, torque) to our customers — including through our own fitment API — is permitted under our agreement. Happy to sign whatever data-use addendum you need. Thanks, Scott
+> Hi ___, quick technical question on the AIS integration. We're using `GetVehicleOptions` on account 1381479 to drive the vehicle lookup on our sites — a customer enters year/make/model, we show the OE tire sizes and load index, they buy the tires (and usually wheels), and the order flows to you through the Order API. That part's working well.
+>
+> Since we sell wheel and tire packages, the same lookup needs to carry a few more of the basics that show up on every install ticket and product page: factory inflation pressures (front/rear), lug nut torque, and wheel bolt circle.
+>
+> I noticed the `GetVehicleOptions` response already includes `FrontInf`, `RearInf`, `TRQ1` and `WBC` fields — they just come back empty on our account while `TireSize`, `LoadIndex` and `SpeedRate` populate. Is that something that can be enabled for us? Same for our brick-and-mortar account 1180608 when its API access is set up, since the store counter uses the same specs.
+>
+> If there's an additional agreement or data tier involved, let me know what's needed and we'll take care of it.
+>
+> Thanks, Scott — Warehouse Tire
+
+Deliberately omitted: the "may we redistribute via our own fitment API" question. Ask it separately, in writing, before the paid API ships on USAF-derived torque/pressure data.
