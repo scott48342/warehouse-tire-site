@@ -29,7 +29,7 @@ for (const key of PICK) {
   const trimsOk = trims.status === 200 && missing.length === 0 && stale.length === 0 && modsOk;
   // pick the first (non-DRW-merged) row for deeper checks
   const row = rec.rows.find(r => r.display.length < 60) || rec.rows[0];
-  const ts = await get(`${BASE}/api/vehicles/tire-sizes?year=${y}&make=${enc(mk)}&model=${enc(md)}&modification=${enc(row.id)}&refresh=1`);
+  const ts = await get(`${BASE}/api/vehicles/tire-sizes?year=${y}&make=${enc(mk)}&model=${enc(md)}&trim=${enc(explode(row.display)[0])}`); // picker label (exploded) - what SteppedVehicleSelector sends
   const gotSizes = ts.json?.tireSizes || [];
   const sizesOk = ts.status === 200 && row.tires.every(s => gotSizes.includes(s)) && gotSizes.every(s => row.tires.includes(s)) && ts.json?.debug?.modificationId === row.id;
   const fs_ = await get(`${BASE}/api/wheels/fitment-search?year=${y}&make=${enc(mk)}&model=${enc(md)}&modification=${enc(row.id)}&limit=1`);
@@ -38,6 +38,6 @@ for (const key of PICK) {
   const errish = f.missingOemOffset || f.unknownAxleConfiguration || f.missingCenterBore || /missing OEM offset|missing_offset|MISSING/i.test(JSON.stringify(f).slice(0, 4000));
   const diam = JSON.stringify(fs_.json || {}).match(/"diameter":(\d+)/)?.[1];
   const fsOk = fs_.status === 200 && bolt === row.bolt && !errish && (fs_.json?.totalCount ?? 0) > 0 && f.canonicalModificationId === row.id;
-  out.push(`${key}: trims ${trimsOk ? "PASS" : "FAIL"} (${labels.length} live labels from ${mods.size} TG rows${missing.length ? `; missing: ${missing.join(" | ")}` : ""}${stale.length ? `; stale: ${stale.join(" | ")}` : ""}${modsOk ? "" : "; non-TG modification ids present"}) | tire-sizes[${row.id}] ${sizesOk ? "PASS" : "FAIL"} (${gotSizes.join(",")} exp=${row.tires.join(",")} src=${ts.json?.source} mod=${ts.json?.debug?.modificationId}) | fitment-search ${fsOk ? "PASS" : "FAIL"} (bolt=${bolt} exp=${row.bolt} diam=${diam} total=${fs_.json?.totalCount} conf=${f.confidence} staggered=${f.staggered?.isStaggered} path=${f.resolutionPath}${errish ? " ERR=" + JSON.stringify(f).slice(0, 300) : ""})`);
+  out.push(`${key}: trims ${trimsOk ? "PASS" : "FAIL"} (${labels.length} live labels from ${mods.size} TG rows${missing.length ? `; missing: ${missing.join(" | ")}` : ""}${stale.length ? `; stale: ${stale.join(" | ")}` : ""}${modsOk ? "" : "; non-TG modification ids present"}) | tire-sizes[trim=${explode(row.display)[0]} -> ${row.id}] ${sizesOk ? "PASS" : "FAIL"} (${gotSizes.join(",")} exp=${row.tires.join(",")} src=${ts.json?.source} mod=${ts.json?.debug?.modificationId}) | fitment-search ${fsOk ? "PASS" : "FAIL"} (bolt=${bolt} exp=${row.bolt} diam=${diam} total=${fs_.json?.totalCount} conf=${f.confidence} staggered=${f.staggered?.isStaggered} path=${f.resolutionPath}${errish ? " ERR=" + JSON.stringify(f).slice(0, 300) : ""})`);
 }
 console.log(out.join("\n"));
