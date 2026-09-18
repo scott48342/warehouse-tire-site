@@ -71,14 +71,24 @@ function PriceAnchorBlock({ tireSetPrice, quantity }: { tireSetPrice: number | n
 // ═══════════════════════════════════════════════════════════════════════════════
 // TRUST STRIP - Matches wheel card style
 // ═══════════════════════════════════════════════════════════════════════════════
-function TrustStrip({ hasVehicle = false, isLocalMode = false }: { hasVehicle?: boolean; isLocalMode?: boolean }) {
+function TrustStrip({ hasVehicle = false, isLocalMode = false, fitBadgeAllowed }: { hasVehicle?: boolean; isLocalMode?: boolean; fitBadgeAllowed?: boolean }) {
   // NOTE: Free shipping only over $1500 on national site - don't show it on individual cards
+  // 2026-09-18 (audit C2/F3): fitBadgeAllowed gates the "Guaranteed Fit" label
+  const showGuaranteedFit = hasVehicle && fitBadgeAllowed === true;
+  const showUnverified = hasVehicle && fitBadgeAllowed !== true;
+  
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 font-medium">
-      {hasVehicle && (
+      {showGuaranteedFit && (
         <span className="inline-flex items-center gap-1">
           <span className="text-emerald-500">✓</span>
           <span>Guaranteed Fit</span>
+        </span>
+      )}
+      {showUnverified && (
+        <span className="inline-flex items-center gap-1">
+          <span className="text-neutral-400">○</span>
+          <span>Fitment Unverified</span>
         </span>
       )}
       {!isLocalMode && (
@@ -140,6 +150,12 @@ export type TireStyleCardProps = {
   
   // Site context
   isLocalMode?: boolean;
+
+  // Load-index gate (2026-09-18, audit C2/F3)
+  // fitBadgeAllowed: false = NO "Guaranteed Fit" badge
+  // loadIndexNote: warning message when load index is below required
+  fitBadgeAllowed?: boolean;
+  loadIndexNote?: string | null;
   
   // Link params
   viewParams?: Record<string, string>;
@@ -184,6 +200,8 @@ export function TireStyleCard({
   isStaggered = false,
   axle,
   isLocalMode = false,
+  fitBadgeAllowed,
+  loadIndexNote,
   viewParams = {},
   source,
   compareItem,
@@ -258,15 +276,41 @@ export function TireStyleCard({
           FITMENT BADGE ROW (When has vehicle, not top pick)
           ═══════════════════════════════════════════════════════════════════════ */}
       {hasVehicle && !topPickConfig && (
-        <div className="px-3 py-1.5 flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-green-600 text-white">
-            <span>✓</span>
-            Guaranteed Fit
-          </span>
-          {mileageWarranty && mileageWarranty >= 40000 && (
-            <span className="text-[10px] text-neutral-400">
-              {Math.round(mileageWarranty / 1000)}K mi warranty
-            </span>
+        <div className="px-3 py-1.5 flex flex-col gap-1">
+          {/* Load-index gate (2026-09-18, audit C2/F3):
+              - fitBadgeAllowed:true -> green "Guaranteed Fit"
+              - fitBadgeAllowed:false -> amber warning, NO green badge
+              - fitBadgeAllowed:undefined -> neutral "Fitment Unverified" */}
+          {fitBadgeAllowed === true ? (
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-green-600 text-white">
+                <span>✓</span>
+                Guaranteed Fit
+              </span>
+              {mileageWarranty && mileageWarranty >= 40000 && (
+                <span className="text-[10px] text-neutral-400">
+                  {Math.round(mileageWarranty / 1000)}K mi warranty
+                </span>
+              )}
+            </div>
+          ) : fitBadgeAllowed === false ? (
+            <div className="flex flex-col gap-0.5">
+              <span
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200"
+                data-testid="load-index-warning"
+              >
+                <span aria-hidden>⚠</span>
+                {loadIndexNote || "Load rating below required"}
+              </span>
+            </div>
+          ) : (
+            /* No verified load requirement - show neutral state */
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-neutral-100 text-neutral-600">
+                <span>○</span>
+                Fitment Unverified
+              </span>
+            </div>
           )}
         </div>
       )}
@@ -497,7 +541,7 @@ export function TireStyleCard({
 
           {/* Trust strip */}
           <div className="mt-3">
-            <TrustStrip hasVehicle={hasVehicle} isLocalMode={isLocalMode} />
+      <TrustStrip hasVehicle={hasVehicle} isLocalMode={isLocalMode} fitBadgeAllowed={fitBadgeAllowed} />
           </div>
         </div>
 

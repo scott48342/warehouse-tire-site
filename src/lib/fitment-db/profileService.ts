@@ -55,7 +55,7 @@ function modelNormalizedMatch(modelVariants: string[]) {
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { makeSlugMatch } from "./makeMatch";
 import { modelVariantsExactMatch } from "./modelMatch";
-import { assessTrimAmbiguity, type TrimAmbiguityResult } from "./trimAmbiguity";
+import { assessTrimAmbiguity, failClosedAmbiguity, type TrimAmbiguityResult } from "./trimAmbiguity";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import crypto from "crypto";
@@ -233,6 +233,8 @@ export interface ProfileLookupResult {
   // bore / tire-size set. profile is null in that case.
   trimRequired?: boolean;
   ambiguous?: boolean;
+  /** false when the trim was omitted and not every compared field agrees (R3) */
+  certifiable?: boolean;
   trimAmbiguity?: TrimAmbiguityResult;
 }
 
@@ -613,13 +615,20 @@ export async function assessTrimAmbiguityForYmm(
 ): Promise<TrimAmbiguityResult | null> {
   const normalizedMake = normalizeMake(make);
   const modelVariants = getModelVariants(model);
+  // R3: no LIMIT on the Y/M/M scope - a conflicting row past a limit would
+  // otherwise be silently ignored. YMM candidate sets are small (tens of rows).
   const rows = await db
     .select({
       modificationId: vehicleFitments.modificationId,
       displayTrim: vehicleFitments.displayTrim,
       boltPattern: vehicleFitments.boltPattern,
       centerBoreMm: vehicleFitments.centerBoreMm,
+      threadSize: vehicleFitments.threadSize,
+      oemWheelSizes: vehicleFitments.oemWheelSizes,
+      offsetMinMm: vehicleFitments.offsetMinMm,
+      offsetMaxMm: vehicleFitments.offsetMaxMm,
       oemTireSizes: vehicleFitments.oemTireSizes,
+      requiredLoadIndex: vehicleFitments.oemLoadIndex,
     })
     .from(vehicleFitments)
     .where(
@@ -629,8 +638,7 @@ export async function assessTrimAmbiguityForYmm(
         modelNormalizedMatch(modelVariants),
         CERTIFIED_FILTER
       )
-    )
-    .limit(50);
+    );
   if (rows.length === 0) return null;
   return assessTrimAmbiguity(rows);
 }
@@ -862,27 +870,34 @@ export async function getFitmentProfile(
   // ─────────────────────────────────────────────────────────────────────────
   const trimOmitted = options?.trimOmitted === true || requestedModId === "";
   if (trimOmitted) {
+    let ambiguity: TrimAmbiguityResult | null = null;
     try {
-      const ambiguity = await assessTrimAmbiguityForYmm(year, make, model);
-      if (ambiguity && ambiguity.ambiguous) {
-        console.warn(`[profileService] TRIM REQUIRED: ${year} ${make} ${model} - ${ambiguity.candidates.length} certified trims disagree on [${ambiguity.conflictingFields.join(", ")}]`);
-        return {
-          profile: null,
-          resolutionPath: "trim_required",
-          requestedModificationId: requestedModId,
-          canonicalModificationId: null,
-          aliasUsed: false,
-          source: "db",
-          apiCalled: false,
-          overridesApplied: false,
-          trimRequired: true,
-          ambiguous: true,
-          trimAmbiguity: ambiguity,
-          timing: { dbLookupMs: Date.now() - t0, totalMs: Date.now() - t0 },
-        };
-      }
+      ambiguity = await assessTrimAmbiguityForYmm(year, make, model);
     } catch (e: any) {
-      console.warn(`[profileService] ambiguity check failed; continuing: ${e?.message || String(e)}`);
+      // R3: FAIL CLOSED. An error here must never fall through into an
+      // arbitrary auto-resolution; the caller gets trimRequired / certifiable:false.
+      console.error(`[profileService] ambiguity check failed; failing closed: ${e?.message || String(e)}`);
+      ambiguity = failClosedAmbiguity(`ambiguity check error: ${e?.message || String(e)}`);
+    }
+    // null => no certified rows for the YMM; fall through to the normal not_found
+    // / year-adjacent handling below.
+    if (ambiguity && ambiguity.trimRequired) {
+      console.warn(`[profileService] TRIM REQUIRED (${ambiguity.resolution}): ${year} ${make} ${model} - ${ambiguity.candidates.length} certified trims; disagree=[${ambiguity.conflictingFields.join(", ")}] unknown=[${ambiguity.unknownFields.join(", ")}]`);
+      return {
+        profile: null,
+        resolutionPath: "trim_required",
+        requestedModificationId: requestedModId,
+        canonicalModificationId: null,
+        aliasUsed: false,
+        source: "db",
+        apiCalled: false,
+        overridesApplied: false,
+        trimRequired: true,
+        ambiguous: ambiguity.ambiguous,
+        certifiable: false,
+        trimAmbiguity: ambiguity,
+        timing: { dbLookupMs: Date.now() - t0, totalMs: Date.now() - t0 },
+      };
     }
   }
   

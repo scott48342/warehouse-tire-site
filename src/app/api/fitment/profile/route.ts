@@ -78,23 +78,32 @@ export async function GET(req: Request) {
 
     // 2026-09-18 (audit F7): trim omitted and certified trims disagree. Do not
     // hand back the auto-picked first row as if it were this vehicle's fitment.
-    if (!trim && result.trimRequired && result.trimAmbiguity) {
+    if (result.trimRequired && result.trimAmbiguity) {
+      // R3: also fires when a trim was requested but did not match any row (the
+      // resolver would otherwise hand back an arbitrary first row).
       const amb = result.trimAmbiguity;
       return NextResponse.json({
         found: false,
         trimRequired: true,
-        ambiguous: true,
+        certifiable: false,
+        ambiguous: amb.ambiguous,
+        resolution: amb.resolution,
         year: result.year,
         make: result.make,
         model: result.model,
         trim: null,
         modificationId: null,
-        error: "Trim required: certified trims for this vehicle disagree on fitment",
+        error: amb.resolution === "error"
+          ? `Trim required: fitment could not be verified (${amb.error ?? "ambiguity check error"})`
+          : "Trim required: certified trims for this vehicle do not fully agree on fitment",
+        fieldStates: amb.fieldStates,
         conflictingFields: amb.conflictingFields,
+        unknownFields: amb.unknownFields,
         agreedFields: amb.agreedFields,
+        sharedSpecs: amb.sharedSpecs,
         sharedFitment: {
-          boltPattern: amb.shared.boltPattern,
-          centerBore: amb.shared.centerBoreMm,
+          boltPattern: amb.sharedSpecs.boltPattern,
+          centerBore: amb.sharedSpecs.centerBoreMm,
         },
         candidateTrims: amb.candidates,
         availableTrims: result.availableTrims,

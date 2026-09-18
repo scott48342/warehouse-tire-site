@@ -49,33 +49,38 @@ export async function GET(req: Request) {
 
     const fitmentData = await fitmentRes.json();
 
-    // 2026-09-18 (audit F7/F13): trim omitted and certified trims disagree.
-    // If the bolt pattern is shared by every trim we can still answer the
-    // bolt-pattern question; otherwise return fits:null (unknown), never a
-    // false negative built on an arbitrary trim.
-    let trimRequiredNote: { conflictingFields: string[]; candidateTrims: unknown[] } | null = null;
-    if (fitmentData?.trimRequired) {
-      const sharedBp = fitmentData?.sharedFitment?.boltPattern || "";
+    // 2026-09-18 (audit F7/F13, R3): trim omitted and the certified trims do
+    // not fully agree. Rules:
+    //   - bolt pattern NOT shared by every trim  -> fits:null, reason:"trim_required"
+    //   - bolt shared, wheel bolt mismatches    -> fits:false (safe rejection), boltPatternCompatible:false
+    //   - bolt shared, wheel bolt matches       -> fits:null, reason:"trim_required_for_geometry",
+    //                                              boltPatternCompatible:true  (NEVER fits:true)
+    // Partial agreement is never a fit certification.
+    let trimRequiredNote:
+      | { trimRequired: true; certifiable: false; conflictingFields: string[]; unknownFields: string[]; candidateTrims: unknown[] }
+      | null = null;
+    if (fitmentData?.trimRequired || fitmentData?.certifiable === false) {
+      trimRequiredNote = {
+        trimRequired: true,
+        certifiable: false,
+        conflictingFields: fitmentData.conflictingFields ?? [],
+        unknownFields: fitmentData.unknownFields ?? [],
+        candidateTrims: fitmentData.candidateTrims ?? [],
+      };
+      const sharedBp = fitmentData?.sharedSpecs?.boltPattern || fitmentData?.sharedFitment?.boltPattern || "";
       if (!sharedBp) {
         return NextResponse.json({
           fits: null,
           reason: "trim_required",
-          trimRequired: true,
-          conflictingFields: fitmentData.conflictingFields ?? [],
-          candidateTrims: fitmentData.candidateTrims ?? [],
+          boltPatternCompatible: null,
+          ...trimRequiredNote,
         });
       }
-      trimRequiredNote = {
-        conflictingFields: fitmentData.conflictingFields ?? [],
-        candidateTrims: fitmentData.candidateTrims ?? [],
-      };
     }
 
-    const vehicleBoltPattern =
-      fitmentData?.fitment?.boltPattern ||
-      fitmentData?.boltPattern ||
-      fitmentData?.sharedFitment?.boltPattern ||
-      "";
+    const vehicleBoltPattern = trimRequiredNote
+      ? (fitmentData?.sharedSpecs?.boltPattern || fitmentData?.sharedFitment?.boltPattern || "")
+      : (fitmentData?.fitment?.boltPattern || fitmentData?.boltPattern || "");
 
     if (!vehicleBoltPattern) {
       // No vehicle bolt pattern data - fail closed per policy
@@ -142,6 +147,19 @@ export async function GET(req: Request) {
       // Quick check: does THIS specific SKU fit?
       const thisBp = wheel.bolt_pattern_metric || wheel.bolt_pattern_standard || "";
       if (thisBp && checkMatch(thisBp)) {
+        if (trimRequiredNote) {
+          // Bolt pattern is shared by every trim and matches, but width/offset/
+          // diameter are per-trim and unresolved: unknown, not a fit.
+          return NextResponse.json({
+            fits: null,
+            reason: "trim_required_for_geometry",
+            boltPatternCompatible: true,
+            matchingSku: sku,
+            vehicleBoltPattern,
+            wheelBoltPattern: thisBp,
+            ...trimRequiredNote,
+          });
+        }
         // Bolt pattern matches; also run geometry check when OEM basis available
         let geometryPass = true;
         let geometryNote: string | undefined;
@@ -166,7 +184,6 @@ export async function GET(req: Request) {
           wheelBoltPattern: thisBp,
           reason: geometryPass ? "exact_sku_match" : "geometry_rejected",
           geometryNote,
-          ...(trimRequiredNote ? { trimRequired: true, boltPatternSharedByAllTrims: true, ...trimRequiredNote } : {}),
         });
       }
     }
@@ -188,6 +205,18 @@ export async function GET(req: Request) {
       for (const variant of allVariants) {
         const variantBp = variant.bolt_pattern_metric || variant.bolt_pattern_standard || "";
         if (variantBp && checkMatch(variantBp)) {
+          if (trimRequiredNote) {
+            return NextResponse.json({
+              fits: null,
+              reason: "trim_required_for_geometry",
+              boltPatternCompatible: true,
+              matchingSku: variant.sku,
+              vehicleBoltPattern,
+              wheelBoltPattern: variantBp,
+              checkedVariants: allVariants.length,
+              ...trimRequiredNote,
+            });
+          }
           // Found a variant that fits!
           return NextResponse.json({
             fits: true,
@@ -196,22 +225,25 @@ export async function GET(req: Request) {
             wheelBoltPattern: variantBp,
             reason: "style_variant_match",
             checkedVariants: allVariants.length,
-            ...(trimRequiredNote ? { trimRequired: true, boltPatternSharedByAllTrims: true, ...trimRequiredNote } : {}),
           });
         }
       }
       
-      // No variants fit
+      // No variants fit (a rejection on a bolt pattern shared by every trim is safe)
       return NextResponse.json({
         fits: false,
         vehicleBoltPattern,
         reason: "no_matching_bolt_pattern",
         checkedVariants: allVariants.length,
-        ...(trimRequiredNote ? { trimRequired: true, boltPatternSharedByAllTrims: true, ...trimRequiredNote } : {}),
+        ...(trimRequiredNote ? { boltPatternCompatible: false, ...trimRequiredNote } : {}),
       });
     }
 
-    // Fallback: if we can't find style variants, be permissive
+    // Fallback: if we can't find style variants, be permissive - but never
+    // certify when the trim is unresolved.
+    if (trimRequiredNote) {
+      return NextResponse.json({ fits: null, reason: "trim_required", boltPatternCompatible: null, ...trimRequiredNote });
+    }
     return NextResponse.json({ fits: true, reason: "no_style_data" });
   } catch (err) {
     console.error("[check-fitment] Error:", err);

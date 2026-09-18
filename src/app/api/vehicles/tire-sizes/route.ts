@@ -205,7 +205,7 @@ interface DbFitmentResult {
 // 2026-05-04: Enhanced result type for trim-blocked fallback
 interface TrimBlockedResult {
   blocked: true;
-  reason: "inconsistent_sizes" | "bmw_variant_clarification";
+  reason: "inconsistent_sizes" | "bmw_variant_clarification" | "trim_required";
   availableTrims: Array<{
     modificationId: string;
     displayTrim: string;
@@ -282,6 +282,24 @@ async function getDbFitmentSizes(
       return null;
     }
     
+    // R3 (audit F7): trim omitted/unmatched and the certified rows do not agree
+    // on tire sizes -> the auto-selected row's sizes are a guess. Block (same UI
+    // path as inconsistent_sizes). If tire sizes DO agree across trims the
+    // sizes may be shown for browsing, but the result is not certifiable.
+    if (resolveResult.trimRequired && resolveResult.trimAmbiguity?.fieldStates.oemTireSizes !== "agree") {
+      console.warn(`[tire-sizes] TRIM REQUIRED: ${year} ${make} ${model} - tire sizes not shared by all certified trims`);
+      return {
+        blocked: true,
+        reason: "trim_required",
+        availableTrims: resolveResult.availableTrims.map(t => ({
+          modificationId: t.modificationId,
+          displayTrim: t.displayTrim,
+          tireSizes: t.tireSizes,
+        })),
+        requestedTrim: modification || trim || "",
+      };
+    }
+
     // Build debug info from universal result.
     // 2026-09-17: exactTrimMatch now reflects HOW the trim was matched
     // (resolver debug.matchedBy), not the record's quality tier. Previously
@@ -492,7 +510,9 @@ export async function GET(req: Request) {
         tireSizesFound: [],
         fallbackBlockedReason: isBmwVariantClarification
           ? `Multiple "${bmwVariants?.requestedTrim}" variants exist with different fitments.`
-          : `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes.`,
+          : dbFitment.reason === "trim_required"
+            ? `Trim required: ${dbFitment.availableTrims.length} certified trims do not share the same tire sizes.`
+            : `Trim "${modification}" not found. ${dbFitment.availableTrims.length} trims exist with different tire sizes.`,
         // Additional context
         fitmentSource: "none",
         exactTrimMatch: false,

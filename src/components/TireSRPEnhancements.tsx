@@ -193,6 +193,8 @@ interface TrustMicroLineProps {
   inStock?: boolean;
   hasWarranty?: boolean;
   isLocalMode?: boolean;
+  /** Load-index gate (2026-09-18): false = NO "Guaranteed Fit" badge */
+  fitBadgeAllowed?: boolean;
 }
 
 /**
@@ -200,18 +202,28 @@ interface TrustMicroLineProps {
  * Premium trust indicators with icons - positioned above CTA
  * Hidden for local mode (install indicator already shows value prop)
  */
-export function TrustMicroLine({ hasVehicle = false, inStock = true, hasWarranty = true, isLocalMode = false }: TrustMicroLineProps) {
+export function TrustMicroLine({ hasVehicle = false, inStock = true, hasWarranty = true, isLocalMode = false, fitBadgeAllowed }: TrustMicroLineProps) {
   // Local mode doesn't need this - the install time indicator is more relevant
   if (isLocalMode) return null;
+  
+  // 2026-09-18 (audit C2/F3): fitBadgeAllowed gates the "Guaranteed Fit" label
+  const showGuaranteedFit = hasVehicle && fitBadgeAllowed === true;
+  const showUnverified = hasVehicle && fitBadgeAllowed !== true;
   
   // Wheel card style trust strip (centered, neutral-400 text, emerald checkmarks)
   // NOTE: Free shipping only over $1500 on national site - don't show it on individual cards
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 font-medium">
-      {hasVehicle && (
+      {showGuaranteedFit && (
         <span className="inline-flex items-center gap-1">
           <span className="text-emerald-500">✓</span>
           <span>Guaranteed Fit</span>
+        </span>
+      )}
+      {showUnverified && (
+        <span className="inline-flex items-center gap-1">
+          <span className="text-neutral-400">○</span>
+          <span>Fitment Unverified</span>
         </span>
       )}
       <span className="inline-flex items-center gap-1">

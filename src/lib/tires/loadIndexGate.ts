@@ -8,16 +8,21 @@
  * This module is pure (no DB / no fetch) so it can be unit-tested with fixtures
  * and reused by tires/search, staggered-search and the package builder.
  *
+ * IMPORTANT (per reviewer 2026-09-18):
+ * - The sidebar minima are NOT verified OEM values. Field is `requiredLoadIndex`,
+ *   NOT `oemMinLoadIndex`. Never label "OE"/"OEM"/"factory" in UI or API.
+ * - Below required → EXCLUDE from packages, BLOCK fit-certified paths.
+ * - Plain browse MAY show tire with incompatibility message, NO fit badge.
+ * - Missing/unverified minimum → NO green badge (degrade to neutral state).
+ *
  * Rules:
- * - OE minimum comes from the fitment record. Per-axle minimums are supported
- *   when the caller has them; otherwise a single value applies to both axles.
+ * - Required minimum comes from the fitment record (unverified source).
  * - A tire's load index badge may be "119", "126/123" (LT single/dual),
  *   "119/116Q" etc. The SINGLE-wheel value (first number) is the one that
  *   applies to a normal (non-dually) fitment.
- * - Below OE minimum -> loadIndexOk:false, badge downgraded, tire is KEPT in
- *   results (visible warning, not deletion).
- * - Missing OE minimum or unparseable tire value -> loadIndexChecked:false,
- *   loadIndexOk:null, badge unchanged.
+ * - Below required -> loadIndexOk:false, excluded from packages, no fit badge.
+ * - Missing required or unparseable tire value -> loadIndexChecked:false,
+ *   loadIndexOk:null, NO fit badge (fitBadgeAllowed:false, not true).
  */
 
 export interface LoadIndexAssessment {
@@ -25,21 +30,35 @@ export interface LoadIndexAssessment {
   loadIndex: number | null;
   /** Raw badge string as received (kept for display) */
   loadIndexRaw: string | null;
-  /** OE minimum applied for this comparison (null when the record has none) */
-  oemMinLoadIndex: number | null;
-  /** true = meets/exceeds OE, false = below OE, null = could not check */
+  /** Required minimum from vehicle record (null when record has none) */
+  requiredLoadIndex: number | null;
+  /** Source of the required value - always "vehicle_record_unverified" when present */
+  requiredLoadIndexSource: "vehicle_record_unverified" | null;
+  /** true = meets/exceeds required, false = below required, null = could not check */
   loadIndexOk: boolean | null;
   /** true only when both sides were known and compared */
   loadIndexChecked: boolean;
   /** Human-readable reason when loadIndexOk === false */
   loadIndexNote: string | null;
-  /** Whether a verified/guaranteed-fit badge may be shown for this tire */
+  /**
+   * Whether a verified/guaranteed-fit badge may be shown for this tire.
+   * false when: loadIndexOk === false OR loadIndexChecked === false (missing data)
+   */
   fitBadgeAllowed: boolean;
+  /**
+   * Whether this tire may be included in recommended/compatible packages.
+   * false when loadIndexOk === false. true otherwise (including when unchecked).
+   */
+  packageEligible: boolean;
+  /**
+   * Reason code when packageEligible is false.
+   */
+  packageExclusionReason: "load_index_below_required" | null;
 }
 
-export interface OemLoadIndexSpec {
-  /** Single value applying to both axles */
-  oemLoadIndex?: number | string | null;
+export interface RequiredLoadIndexSpec {
+  /** Single value applying to both axles (from vehicle_fitments.oem_load_index) */
+  requiredLoadIndex?: number | string | null;
   /** Optional per-axle values (take precedence when present) */
   front?: number | string | null;
   rear?: number | string | null;
@@ -65,17 +84,17 @@ export function parseLoadIndex(raw: string | number | null | undefined): number 
 }
 
 /**
- * Resolve the OE minimum for a given axle. Per-axle values win; otherwise the
- * single value applies. Returns null when the record has nothing usable.
+ * Resolve the required minimum for a given axle. Per-axle values win; otherwise
+ * the single value applies. Returns null when the record has nothing usable.
  */
-export function resolveOemMinLoadIndex(
-  spec: OemLoadIndexSpec | null | undefined,
+export function resolveRequiredLoadIndex(
+  spec: RequiredLoadIndexSpec | null | undefined,
   axle: "front" | "rear" | "both" = "both"
 ): number | null {
   if (!spec) return null;
   const front = parseLoadIndex(spec.front as string | number | null | undefined);
   const rear = parseLoadIndex(spec.rear as string | number | null | undefined);
-  const single = parseLoadIndex(spec.oemLoadIndex as string | number | null | undefined);
+  const single = parseLoadIndex(spec.requiredLoadIndex as string | number | null | undefined);
   if (axle === "front") return front ?? single;
   if (axle === "rear") return rear ?? single;
   // "both": a square fitment must satisfy the more demanding axle
@@ -83,64 +102,126 @@ export function resolveOemMinLoadIndex(
   return single;
 }
 
-/** Compare one tire's load index against the OE minimum. */
+/** Compare one tire's load index against the required minimum. */
 export function assessLoadIndex(
   tireLoadIndex: string | number | null | undefined,
-  oemMinLoadIndex: number | null | undefined
+  requiredLoadIndex: number | null | undefined
 ): LoadIndexAssessment {
   const raw = tireLoadIndex == null ? null : String(tireLoadIndex);
   const li = parseLoadIndex(tireLoadIndex);
-  const oem = oemMinLoadIndex == null ? null : parseLoadIndex(oemMinLoadIndex);
+  const required = requiredLoadIndex == null ? null : parseLoadIndex(requiredLoadIndex);
 
-  if (oem == null || li == null) {
+  // Case 1: No required minimum in record -> cannot verify fit, no badge
+  if (required == null) {
     return {
       loadIndex: li,
       loadIndexRaw: raw,
-      oemMinLoadIndex: oem,
+      requiredLoadIndex: null,
+      requiredLoadIndexSource: null,
       loadIndexOk: null,
       loadIndexChecked: false,
       loadIndexNote: null,
-      fitBadgeAllowed: true, // unchanged behaviour when we cannot check
+      fitBadgeAllowed: false, // NO badge when we cannot verify
+      packageEligible: true, // Can still appear in packages (unverified)
+      packageExclusionReason: null,
     };
   }
 
-  const ok = li >= oem;
+  // Case 2: Required minimum exists but tire load index unknown -> cannot verify
+  if (li == null) {
+    return {
+      loadIndex: null,
+      loadIndexRaw: raw,
+      requiredLoadIndex: required,
+      requiredLoadIndexSource: "vehicle_record_unverified",
+      loadIndexOk: null,
+      loadIndexChecked: false,
+      loadIndexNote: "Tire load rating unknown",
+      fitBadgeAllowed: false, // NO badge when we cannot verify
+      packageEligible: true, // Can still appear (unknown, not known-bad)
+      packageExclusionReason: null,
+    };
+  }
+
+  // Case 3: Both known -> compare
+  const ok = li >= required;
   return {
     loadIndex: li,
     loadIndexRaw: raw,
-    oemMinLoadIndex: oem,
+    requiredLoadIndex: required,
+    requiredLoadIndexSource: "vehicle_record_unverified",
     loadIndexOk: ok,
     loadIndexChecked: true,
-    loadIndexNote: ok ? null : `Load rating below OE (${li} < ${oem})`,
-    fitBadgeAllowed: ok,
+    loadIndexNote: ok ? null : `Load rating ${li} is below the ${required} this vehicle requires`,
+    fitBadgeAllowed: ok, // Badge only when meets requirement
+    packageEligible: ok, // EXCLUDE from packages when below required
+    packageExclusionReason: ok ? null : "load_index_below_required",
   };
 }
 
 /** Fields merged onto API tire results so clients / retests can see the gate. */
 export type LoadIndexResultFields = Pick<
   LoadIndexAssessment,
-  "loadIndex" | "oemMinLoadIndex" | "loadIndexOk" | "loadIndexChecked" | "loadIndexNote" | "fitBadgeAllowed"
+  | "loadIndex"
+  | "requiredLoadIndex"
+  | "requiredLoadIndexSource"
+  | "loadIndexOk"
+  | "loadIndexChecked"
+  | "loadIndexNote"
+  | "fitBadgeAllowed"
+  | "packageEligible"
+  | "packageExclusionReason"
 >;
 
 /**
  * Annotate a list of tire results in place (returns the same array).
  * Each item must expose `badges.loadIndex`; an optional `axle` field selects a
- * per-axle OE minimum when `spec` carries front/rear values.
+ * per-axle required minimum when `spec` carries front/rear values.
  */
 export function annotateLoadIndex<
   T extends { badges?: { loadIndex?: string | null } | null; axle?: "front" | "rear" | "both" | null }
->(items: T[], spec: OemLoadIndexSpec | null | undefined): Array<T & LoadIndexResultFields> {
+>(items: T[], spec: RequiredLoadIndexSpec | null | undefined): Array<T & LoadIndexResultFields> {
   for (const item of items) {
-    const oem = resolveOemMinLoadIndex(spec, item.axle ?? "both");
-    const a = assessLoadIndex(item.badges?.loadIndex ?? null, oem);
+    const required = resolveRequiredLoadIndex(spec, item.axle ?? "both");
+    const a = assessLoadIndex(item.badges?.loadIndex ?? null, required);
     Object.assign(item, {
       loadIndex: a.loadIndex,
-      oemMinLoadIndex: a.oemMinLoadIndex,
+      requiredLoadIndex: a.requiredLoadIndex,
+      requiredLoadIndexSource: a.requiredLoadIndexSource,
       loadIndexOk: a.loadIndexOk,
       loadIndexChecked: a.loadIndexChecked,
       loadIndexNote: a.loadIndexNote,
       fitBadgeAllowed: a.fitBadgeAllowed,
+      packageEligible: a.packageEligible,
+      packageExclusionReason: a.packageExclusionReason,
     });
   }
   return items as Array<T & LoadIndexResultFields>;
+}
+
+/**
+ * Filter out tires that are NOT eligible for packages (loadIndexOk === false).
+ * Returns a new array with only package-eligible tires.
+ */
+export function filterPackageEligible<T extends { packageEligible?: boolean }>(
+  items: T[]
+): T[] {
+  return items.filter((item) => item.packageEligible !== false);
+}
+
+/**
+ * Count how many tires failed the load-index gate.
+ */
+export function countLoadIndexFailures<T extends { loadIndexOk?: boolean | null }>(
+  items: T[]
+): { total: number; failed: number; passed: number; unchecked: number } {
+  let failed = 0;
+  let passed = 0;
+  let unchecked = 0;
+  for (const item of items) {
+    if (item.loadIndexOk === false) failed++;
+    else if (item.loadIndexOk === true) passed++;
+    else unchecked++;
+  }
+  return { total: items.length, failed, passed, unchecked };
 }

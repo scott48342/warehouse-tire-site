@@ -116,6 +116,12 @@ export interface UniversalFitmentResult {
    */
   trimAmbiguity: TrimAmbiguityResult | null;
   trimRequired: boolean;
+  /**
+   * R3: true when a trim was selected, or the single/all-agreeing candidate rows
+   * make the selected record safe to certify. false => no fit badge, no
+   * fits:true, no certified package may be built from this result.
+   */
+  certifiable: boolean;
   
   // Warnings and debug info
   warnings: string[];
@@ -555,6 +561,7 @@ export async function resolveUniversalFitment(
     availableTrims: [],
     trimAmbiguity: null,
     trimRequired: false,
+    certifiable: false,
     warnings: [],
     debug: {
       resolutionTimeMs: 0,
@@ -630,6 +637,9 @@ export async function resolveUniversalFitment(
 
   // F7: when the caller omitted the trim, record whether auto-selecting a row
   // would be a silent guess. Non-breaking: resolution still proceeds below.
+  // R3: tri-state per-field compare. `certifiable` is false unless every field
+  // agrees; consumers MUST NOT claim fit (badge / fits:true / certified package)
+  // when `trimRequired` is true. Browsing may use `trimAmbiguity.sharedSpecs`.
   if (!requestedTrim && matchedRecords.length > 1) {
     result.trimAmbiguity = assessTrimAmbiguity(
       matchedRecords.map((r) => ({
@@ -637,15 +647,24 @@ export async function resolveUniversalFitment(
         displayTrim: r.displayTrim,
         boltPattern: r.boltPattern,
         centerBoreMm: r.centerBoreMm as unknown as number | string | null,
+        threadSize: r.threadSize,
+        oemWheelSizes: r.oemWheelSizes,
+        offsetMinMm: r.offsetMinMm,
+        offsetMaxMm: r.offsetMaxMm,
         oemTireSizes: r.oemTireSizes,
+        requiredLoadIndex: r.oemLoadIndex,
       }))
     );
-    result.trimRequired = result.trimAmbiguity.ambiguous;
+    result.trimRequired = result.trimAmbiguity.trimRequired;
+    result.certifiable = result.trimAmbiguity.certifiable;
     if (result.trimRequired) {
+      const a = result.trimAmbiguity;
       warnings.push(
-        `Trim required: ${matchedRecords.length} certified trims disagree on ${result.trimAmbiguity.conflictingFields.join(", ")}`
+        `Trim required: ${matchedRecords.length} certified trims; disagree on [${a.conflictingFields.join(", ")}], unknown [${a.unknownFields.join(", ")}]. Auto-selected record is NOT certified fitment.`
       );
     }
+  } else if (!requestedTrim && matchedRecords.length === 1) {
+    result.certifiable = true;
   }
   
   // ─────────────────────────────────────────────────────────────────────────
@@ -716,7 +735,34 @@ export async function resolveUniversalFitment(
     
     if (matchedRecords.length > 1 && requestedTrim) {
       warnings.push(`Requested trim "${requestedTrim}" not found. Using "${selectedRecord.displayTrim || "Base"}".`);
+      // R3: a requested-but-unmatched trim is the same silent guess as an omitted
+      // trim. Run the same gate so consumers cannot certify the fallback row.
+      if (!result.trimAmbiguity) {
+        result.trimAmbiguity = assessTrimAmbiguity(
+          matchedRecords.map((r) => ({
+            modificationId: r.modificationId,
+            displayTrim: r.displayTrim,
+            boltPattern: r.boltPattern,
+            centerBoreMm: r.centerBoreMm as unknown as number | string | null,
+            threadSize: r.threadSize,
+            oemWheelSizes: r.oemWheelSizes,
+            offsetMinMm: r.offsetMinMm,
+            offsetMaxMm: r.offsetMaxMm,
+            oemTireSizes: r.oemTireSizes,
+            requiredLoadIndex: r.oemLoadIndex,
+          }))
+        );
+        result.trimRequired = result.trimAmbiguity.trimRequired;
+        result.certifiable = result.trimAmbiguity.certifiable;
+      }
     }
+  }
+
+  // R3: an explicitly matched trim (exact or fuzzy) or a single record is
+  // certifiable; first_available is only certifiable when the gate said so.
+  if (matchedBy !== "first_available") {
+    result.certifiable = true;
+    result.trimRequired = false;
   }
   
   // Apply overrides (hub bore, bolt pattern corrections, etc.)

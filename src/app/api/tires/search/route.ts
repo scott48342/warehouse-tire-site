@@ -71,7 +71,7 @@ import {
   type LiftedTireFilterWithBandResult,
 } from "@/lib/liftedRecommendations";
 import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
-import { annotateLoadIndex, resolveOemMinLoadIndex } from "@/lib/tires/loadIndexGate";
+import { annotateLoadIndex, resolveRequiredLoadIndex, countLoadIndexFailures } from "@/lib/tires/loadIndexGate";
 import { convertLegacyTireSize, convertTireSizesForSearch } from "@/lib/legacyTireConverter";
 
 export const runtime = "nodejs";
@@ -505,13 +505,16 @@ interface TireResult {
     brandCode: string | null;    // e.g., "GEN", "BFG" - needed for orders
   };
   // Load-index gate (2026-09-18, audit C2/F3) - set in vehicle mode by
-  // annotateLoadIndex(). loadIndexOk:false => no verified/guaranteed badge.
+  // annotateLoadIndex(). loadIndexOk:false => no verified/guaranteed badge, excluded from packages.
   loadIndex?: number | null;
-  oemMinLoadIndex?: number | null;
+  requiredLoadIndex?: number | null;
+  requiredLoadIndexSource?: "vehicle_record_unverified" | null;
   loadIndexOk?: boolean | null;
   loadIndexChecked?: boolean;
   loadIndexNote?: string | null;
   fitBadgeAllowed?: boolean;
+  packageEligible?: boolean;
+  packageExclusionReason?: "load_index_below_required" | null;
 }
 
 async function searchTiresBySize(
@@ -2369,9 +2372,10 @@ export async function GET(req: Request) {
     let sizeConversions: any[] = [];        // Conversion details
     let hasLegacySizes = false;
     let fitmentSource = "universal_resolver";
-    // 2026-09-18 (audit C2/F3): OE minimum load index from the fitment record.
-    // null = record has none -> gate reports loadIndexChecked:false, badges unchanged.
-    let oemMinLoadIndex: number | null = null;
+    // 2026-09-18 (audit C2/F3): Required load index from the fitment record.
+    // NOT verified OEM - field is requiredLoadIndex, source is "vehicle_record_unverified".
+    // null = record has none -> gate reports loadIndexChecked:false, NO fit badge.
+    let requiredLoadIndex: number | null = null;
     
     console.log(`[tires/search] ══════════════════════════════════════════════════`);
     console.log(`[tires/search] Using resolveUniversalFitment`);
@@ -2415,9 +2419,9 @@ export async function GET(req: Request) {
       if (fitmentResult.found) {
         // Get OEM tire sizes from universal result
         tireSizes = fitmentResult.oemTireSizes;
-        oemMinLoadIndex = resolveOemMinLoadIndex({ oemLoadIndex: fitmentResult.serviceSpecs?.oemLoadIndex ?? null });
-        if (oemMinLoadIndex != null) {
-          console.log(`[tires/search] OE MIN LOAD INDEX: ${oemMinLoadIndex} (${year} ${make} ${model} ${fitmentResult.trim || ""})`);
+        requiredLoadIndex = resolveRequiredLoadIndex({ requiredLoadIndex: fitmentResult.serviceSpecs?.oemLoadIndex ?? null });
+        if (requiredLoadIndex != null) {
+          console.log(`[tires/search] REQUIRED LOAD INDEX: ${requiredLoadIndex} (${year} ${make} ${model} ${fitmentResult.trim || ""}) [source: vehicle_record_unverified]`);
         }
         
         // Handle staggered fitment (front/rear different sizes)
@@ -3313,14 +3317,14 @@ export async function GET(req: Request) {
     // Apply MAP floor enforcement (critical for Falken/Dunlop compliance)
     finalResults = await applyMapFloorBatch(finalResults);
 
-    // 2026-09-18 (audit C2/F3): load-index gate. Tires below the OE minimum are
-    // KEPT in results but flagged (loadIndexOk:false, fitBadgeAllowed:false) so
-    // the UI downgrades "Guaranteed Fit" to "Load rating below OE (110 < 119)".
-    annotateLoadIndex(finalResults, { oemLoadIndex: oemMinLoadIndex });
-    const loadIndexBelowOeCount = finalResults.filter((t: any) => t.loadIndexOk === false).length;
-    if (oemMinLoadIndex != null) {
-      console.log(`[tires/search] LOAD INDEX GATE: min=${oemMinLoadIndex}, ${loadIndexBelowOeCount}/${finalResults.length} below OE`);
-    }
+    // 2026-09-18 (audit C2/F3): load-index gate. Tires below the required minimum:
+    // - Kept in generic browse results but flagged (loadIndexOk:false, fitBadgeAllowed:false)
+    // - EXCLUDED from packages (packageEligible:false, packageExclusionReason:"load_index_below_required")
+    // - NO "Guaranteed Fit" badge (fitBadgeAllowed:false)
+    // When requiredLoadIndex is missing: NO badge (fitBadgeAllowed:false), but packageEligible:true
+    annotateLoadIndex(finalResults, { requiredLoadIndex });
+    const loadIndexStats = countLoadIndexFailures(finalResults);
+    console.log(`[tires/search] LOAD INDEX GATE: required=${requiredLoadIndex ?? 'none'}, passed=${loadIndexStats.passed}, failed=${loadIndexStats.failed}, unchecked=${loadIndexStats.unchecked}`);
     
     timing.totalMs = Date.now() - t0;
     
@@ -3389,9 +3393,10 @@ export async function GET(req: Request) {
       wheelWidth: wheelWidth || null,
 
       // Load-index gate summary (2026-09-18, audit C2/F3)
-      oemMinLoadIndex,
-      loadIndexChecked: oemMinLoadIndex != null,
-      loadIndexBelowOeCount,
+      // NOT labeled "OEM" - source is unverified vehicle record data
+      requiredLoadIndex,
+      requiredLoadIndexSource: requiredLoadIndex != null ? "vehicle_record_unverified" as const : null,
+      loadIndexStats,
       
       // Mixed-diameter stagger info (e.g., Corvette 19F/20R)
       ...(isMixedDiameterStagger && {

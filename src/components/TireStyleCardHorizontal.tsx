@@ -56,12 +56,14 @@ export type TireStyleCardHorizontalProps = {
   isPackageFlow?: boolean;
   rebateMatch?: RebateMatchData | null;
   /**
-   * Load-index gate (2026-09-18, audit C2/F3). false = tire's load index is
-   * below the vehicle's OE minimum; `loadIndexNote` carries the reason
-   * ("Load rating below OE (110 < 119)"). Undefined/null = not checked.
+   * Load-index gate (2026-09-18, audit C2/F3).
+   * - loadIndexOk: false = below required, true = meets required, null = unchecked
+   * - fitBadgeAllowed: false = NO "Guaranteed Fit" badge (below required OR unchecked)
+   * - loadIndexNote: human-readable reason when loadIndexOk === false
    */
   loadIndexOk?: boolean | null;
   loadIndexNote?: string | null;
+  fitBadgeAllowed?: boolean;
 };
 
 // ─── Component ───────────────────────────────────────────────────────────────
@@ -76,6 +78,7 @@ export function TireStyleCardHorizontal({
   mileageWarranty,
   loadIndexOk,
   loadIndexNote,
+  fitBadgeAllowed,
   stockQty = 0,
   topPickCategory,
   viewHref,

@@ -58,18 +58,35 @@ export async function GET(req: Request) {
     );
 
     if (result.trimRequired && result.trimAmbiguity) {
+      // R3: partial agreement is NOT fit certification. `sharedSpecs` carries only
+      // the fields every certified trim agrees on, for browsing (no fit badge).
       const amb = result.trimAmbiguity;
       return NextResponse.json({
         fitment: null,
         trimRequired: true,
-        ambiguous: true,
-        error: "Trim required: certified trims for this vehicle disagree on fitment",
+        certifiable: false,
+        ambiguous: amb.ambiguous,
+        resolution: amb.resolution,
+        error: amb.resolution === "error"
+          ? `Trim required: fitment could not be verified (${amb.error ?? "ambiguity check error"})`
+          : "Trim required: certified trims for this vehicle do not fully agree on fitment",
+        fieldStates: amb.fieldStates,
         conflictingFields: amb.conflictingFields,
+        unknownFields: amb.unknownFields,
         agreedFields: amb.agreedFields,
-        // Fields every trim agrees on (safe to use without a trim), null otherwise
+        sharedSpecs: {
+          boltPattern: amb.sharedSpecs.boltPattern,
+          centerBore: amb.sharedSpecs.centerBoreMm != null ? String(amb.sharedSpecs.centerBoreMm) : null,
+          threadSize: amb.sharedSpecs.threadSize,
+          oemWheelSizes: amb.sharedSpecs.oemWheelSizes,
+          oemTireSizes: amb.sharedSpecs.oemTireSizes,
+          requiredLoadIndex: amb.sharedSpecs.requiredLoadIndex,
+          staggered: amb.sharedSpecs.staggered,
+        },
+        // Legacy alias of sharedSpecs (bolt/bore only) kept for one release
         sharedFitment: {
-          boltPattern: amb.shared.boltPattern,
-          centerBore: amb.shared.centerBoreMm != null ? String(amb.shared.centerBoreMm) : null,
+          boltPattern: amb.sharedSpecs.boltPattern,
+          centerBore: amb.sharedSpecs.centerBoreMm != null ? String(amb.sharedSpecs.centerBoreMm) : null,
         },
         candidateTrims: amb.candidates,
         resolutionPath: result.resolutionPath,

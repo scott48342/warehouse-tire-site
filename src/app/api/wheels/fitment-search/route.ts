@@ -3679,6 +3679,22 @@ async function handleLegacyPath(
     })),
     oemTireSizes: profile.tireSizes || [],
     source: "universal" as string,  // Updated source to reflect new resolver
+    // R3 (audit F7): when no trim was selected and the certified trims do not
+    // fully agree, this profile is an auto-selected GUESS. Browsing is allowed
+    // but NO fit badge / certified claim may be derived from it.
+    trimRequired: universalResult.trimRequired,
+    certifiable: universalResult.certifiable,
+    autoSelectedTrim,
+    trimAmbiguity: universalResult.trimAmbiguity
+      ? {
+          resolution: universalResult.trimAmbiguity.resolution,
+          fieldStates: universalResult.trimAmbiguity.fieldStates,
+          conflictingFields: universalResult.trimAmbiguity.conflictingFields,
+          unknownFields: universalResult.trimAmbiguity.unknownFields,
+          sharedSpecs: universalResult.trimAmbiguity.sharedSpecs,
+          candidateTrims: universalResult.trimAmbiguity.candidates,
+        }
+      : null,
   };
 
   // ========================================================================

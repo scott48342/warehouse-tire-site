@@ -737,6 +737,7 @@ function CategorySection({
                 mileageWarranty={tire.badges?.warrantyMiles ?? undefined}
                 loadIndexOk={(tire as { loadIndexOk?: boolean | null }).loadIndexOk ?? null}
                 loadIndexNote={(tire as { loadIndexNote?: string | null }).loadIndexNote ?? null}
+                fitBadgeAllowed={(tire as { fitBadgeAllowed?: boolean }).fitBadgeAllowed ?? undefined}
                 stockQty={getStockInfo(tire.quantity).total}
                 viewHref={buildTireViewHref(tire, size, viewParams)}
                 onAddToCart={() => onSelectTire(tire)}

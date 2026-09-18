@@ -40,4 +40,27 @@ Scope: F5 exact model match, F7 ambiguous-trim gate, F3 load-index gating. No DB
 - Verified every Redis client (`fitmentCache`, `ymmCache`, `tires/searchCache`, `tireweb/protection`, `sharedCache`, `inventoryCache`, `inventorySync`, `jake/fitmentCache`, `fedexRates`, `wheel-viz`, `safetyGovernor`, analytics) returns `null` / local-fallback when the env vars are absent — no crash path.
 - `fitmentCache.ts`: `CACHE_VERSION` v5 → **v6** (key prefix `wt:fit:v6:`); added `FITMENT_CACHE_DISABLED=1` switch that bypasses Redis AND the in-process map (get → miss, set → no-op).
 - Other caches audited, NOT bumped (reason): `tiresearch:size:*` / `tiresearch:vehicle:*` cache raw supplier results BEFORE `annotateLoadIndex` runs (route.ts L3325 is post-cache) so gate fields never persist; `wt:ymm:*` = years/makes/models/trims lists (unchanged shape); `wt:avail:*` = wheel availability (unrelated).
+- Committed as `ed499321`.
 - Shared write side effects on exercised paths: (1) `tires/search` L194 upserts `tireweb_sku_cache` (SKU enrichment cache — DB write, not fitment data; unavoidable when exercising tire search; noted). (2) Redis writes: none (creds removed). (3) Vercel Blob: only Jake mockup — not exercised. (4) db-reporter / analytics inserts: `analytics/fitment-coverage` requires Redis (disabled). No writes to `vehicle_fitments` on any exercised path.
+
+## 14:27 - R3 Trim ambiguity (code written, tsc running)
+- src/lib/fitment-db/trimAmbiguity.ts REWRITTEN: tri-state ieldStates (agree|disagree|unknown) over boltPattern, centerBore, threadSize, oemWheelSizes (axle:diaxwidth@offset; entry offset, else row offsetMin/Max, else UNKNOWN), oemTireSizes (per axle F:/R: keys), requiredLoadIndex, staggered. Any null in any row => unknown; unknown never = agreement. esolution: single|auto|trim_required|error; certifiable only when every field agrees (or single row); sharedSpecs (agreed fields only) for browsing; ailClosedAmbiguity() for errors/truncation; ssessTrimAmbiguity(rows, {truncated:true}) => all unknown.
+- profileService.ts: ssessTrimAmbiguityForYmm selects all 7 compare columns, .limit(50) REMOVED; gate now fires on 	rimRequired (not only mbiguous); catch FAILS CLOSED (esolution:"error", certifiable:false, 	rimRequired:true) - no fall-through to arbitrary resolution. ProfileLookupResult.certifiable added.
+- universalFitmentResolver.ts: passes all fields; sets 	rimRequired/certifiable; ALSO gates the "requested trim not found -> first_available" fallback; explicit/single matches are certifiable.
+- check-fitment/route.ts: regression fixed. trimRequired + bolt not shared => its:null, reason:"trim_required", boltPatternCompatible:null; bolt shared + wheel mismatch => its:false, no_matching_bolt_pattern, boltPatternCompatible:false; bolt shared + wheel matches => its:null, reason:"trim_required_for_geometry", boltPatternCompatible:true (never fits:true). 
+o_style_data permissive fallback also blocked when trim required. Negative paths (bolt mismatch, geometry_rejected) unchanged for resolved vehicles.
+- /api/vehicles/search + /api/fitment/profile: trim-required response now carries certifiable:false, resolution, fieldStates, conflictingFields, unknownFields, sharedSpecs (+ legacy sharedFitment). profile route also fires when a requested trim did not match.
+- Universal-resolver consumer disposition:
+  | consumer | disposition |
+  |---|---|
+  | pi/fitment/profile | returns ound:false, trimRequired, certifiable:false, sharedSpecs |
+  | pi/vehicles/search (via profileService) | itment:null, trimRequired, certifiable:false, sharedSpecs |
+  | pi/wheels/check-fitment | fits:null / trim_required / trim_required_for_geometry (above) |
+  | lib/packages/engine.ts | getVehicleFitment returns null when 	rimRequired => NO packages (certified packages impossible) |
+  | pi/vehicles/tire-sizes | blocked eason:"trim_required" unless ieldStates.oemTireSizes==="agree" (then sizes shown for browsing, existing multi-size gate applies) |
+  | pi/wheels/fitment-search (legacy path) | dbProfile.trimRequired/certifiable/autoSelectedTrim/trimAmbiguity exposed for browsing on sharedSpecs. **PARTIAL:** wheel-card fit badge (fitmentClass surefit/specfit) NOT yet suppressed server-side when certifiable:false - UNFIXED, see handoff |
+  | pi/tires/search | see R4 - certifiable passed to nnotateLoadIndex => itBadgeAllowed:false for every result when trim required |
+  | pi/fitment/lifted | browsing only (lift suggestions); not a fit-certification path; flags available on result, not consumed - UNFIXED (low) |
+  | lib/savedQuotes/resumeService.ts | resumes saved quote with stored trim => requestedTrim present, gate not triggered; no change |
+  | pi/admin/fitment/coverage-report | admin report, no fit claim; no change |
+  | Jake / POS / staggered-search / plus-sizes | do NOT import the resolver directly (grep); they consume /api/wheels/fitment-search, /api/vehicles/search, /api/tires/search responses above |

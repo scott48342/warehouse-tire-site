@@ -290,6 +290,17 @@ async function getVehicleFitment(
     return null;
   }
 
+  // R3 (audit F7): packages CLAIM fit. Without a trim, an auto-selected record
+  // whose certified siblings disagree (or carry unknown fields) may not be used
+  // to build certified packages. No certified packages => return null.
+  if (result.trimRequired || result.certifiable === false) {
+    console.warn(
+      `[packages/engine] TRIM REQUIRED - refusing to build certified packages for ${year} ${make} ${model} (trim=${trim || "(none)"}); ` +
+        `disagree=[${result.trimAmbiguity?.conflictingFields.join(", ") ?? ""}] unknown=[${result.trimAmbiguity?.unknownFields.join(", ") ?? ""}]`
+    );
+    return null;
+  }
+
   // Extract OEM wheel sizes from universal result
   const oemDiameters = result.oemWheelSizes
     .map((ws) => ws.diameter)
