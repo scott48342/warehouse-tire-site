@@ -119,3 +119,8 @@ px tsc --noEmit -> 0 errors.
 - Live: lifted page 35x12.50R17 x670 / 245-70R17 x0; API 40/40 correct; retest 24/24; tsc clean.
 - Jake regressions J1-J4 in docs/fitment-api/audit/jake/REGRESSIONS.md. J1 = deployment blocker. Jake owned by Clawd from 16:24.
 - NEXT: Jake J1-J4, then Batch 3 staggered (H2/H4), Batch 4 SKU continuity, Batch 5 packages.
+
+## 2026-09-18 17:12 - 40860ce8 JAKE J1-J4 - REVIEW-READY
+- Tool contract: no hard-coded specs, certification state on every lookup, trim forwarded, tire gates carried. tire-sizes emits trimRequired/certifiable/candidateTrims. Resolver: collapsed-HD slug.
+- Codex harness 7/7 (was 0/7); 16 new jest; retest 24/24; tsc clean. Baseline 17 jest failures unchanged.
+- NEXT: Batch 3 staggered (H2/H4), Batch 4 SKU continuity, Batch 5 packages; then full jest + deploy.

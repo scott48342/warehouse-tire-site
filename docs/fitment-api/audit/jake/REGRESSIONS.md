@@ -29,3 +29,10 @@ Jake: "both data sources agree", "5x120 confirmed genuinely correct for G82 M4",
 G8x M3/M4 = 5x112 (F8x was 5x120). The DB row is disputed/uncertified; Jake echoed it as verified with an invented second source.
 Preserved 19F/20R + 275/35R19 / 285/30R20 but no widths/offsets. No cart created.
 Required: Jake reads certification state (certifiable/fitBadgeAllowed/source) and says "unverified/disputed" when the row is; never invents corroborating sources; quarantine + certification gates apply to Jake tools identically to the site.
+
+## 2026-09-18 17:12 - FIX COMMITTED 40b0ce8 -> 40860ce8 (review-ready)
+J1 platform table + prompt hard-coded 6x139.7 for any "silverado" -> removed all bolt patterns from Jake; HD/Mach-E/Raptor excluded from platform match; resolver now finds "Silverado 2500 HD" (collapsed-hd slug) -> 8x180 certifiable:true.
+J2 search_tires carries fitBadgeAllowed/loadIndexOk/requiredLoadIndexVerified; prompt forbids invented load range / "verified" sizes; diameter math rule.
+J3 detectEnthusiastPlatform excludes Mach-E.
+J4 search_wheels/search_tires forward trim; certificationFromApi on every lookup; prompt reserves verified/confirmed/both-sources for certifiable:true.
+Evidence: Codex harness 7/7, jest tools-certification 16/16, tsc clean, retest 24/24. Prompt-level behaviour (what Jake SAYS) still needs a live chat re-run against :3002 by the reviewer - tool contract is enforced, wording is prompt-guided.
