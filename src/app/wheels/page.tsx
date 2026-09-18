@@ -889,6 +889,14 @@ export default async function WheelsPage({
   // dbProfile is the canonical fitment data from our own database.
   // It takes precedence over legacy envelope data when present.
   const dbProfile = data?.fitment?.dbProfile || null;
+  // 2026-09-18 (audit F7/C4): server-side fit certification block. When set,
+  // the SRP must not render "Guaranteed Fit"/"Good Fit" on any card.
+  const fitCertificationBlock: "trim_required" | "fallback_unverified" | null =
+    data?.fitment?.certificationBlock === "trim_required" || data?.fitment?.certificationBlock === "fallback_unverified"
+      ? data.fitment.certificationBlock
+      : data?.fitment?.showGuaranteedFit === false
+        ? "fallback_unverified"
+        : null;
 
   if (dbProfile) {
     console.log('[wheels/page] ✅ DB PROFILE CONSUMED:', {
@@ -2159,6 +2167,7 @@ export default async function WheelsPage({
                 } : {}),
               }}
               dbProfile={dbProfile}
+              certificationBlock={fitCertificationBlock}
               diameterParam={diameterParam}
               widthParam={widthParam}
               showRecommended={hasVehicle && recommendedWheels.length > 0 && safePage === 1}

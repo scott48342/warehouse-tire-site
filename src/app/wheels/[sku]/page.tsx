@@ -639,8 +639,8 @@ export default async function WheelDetailPage({
                 <div className="flex items-center gap-2">
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-xs">✓</span>
                   <div>
-                    <div className="text-sm font-bold text-green-900">Fits {year} {make} {model}</div>
-                    <div className="text-[11px] text-green-700">Guaranteed fitment</div>
+                    <div className="text-sm font-bold text-green-900">Shopping for {year} {make} {model}</div>
+                    <div className="text-[11px] text-green-700">Fitment support included</div>
                   </div>
                 </div>
                 <Link href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`} className="text-xs font-semibold text-green-700 hover:underline">

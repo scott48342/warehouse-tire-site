@@ -38,10 +38,18 @@ import {
 import { 
   getFitmentProfile,
   getFitmentProfileWithHdSupport,
+  assessTrimAmbiguityForYmm,
   type FitmentProfile as DBFitmentProfile,
   type ProfileResolutionPath,
   type ProfileLookupResult,
 } from "@/lib/fitment-db/profileService";
+import { failClosedAmbiguity, type TrimAmbiguityResult } from "@/lib/fitment-db/trimAmbiguity";
+import {
+  computeCertificationBlock,
+  gatedFitmentClass,
+  isCertifiedFit,
+  type FitCertificationBlock,
+} from "@/lib/fitment-db/fitCertification";
 import {
   type RearWheelConfig,
   isDRWCapable,
@@ -936,11 +944,36 @@ export async function GET(req: Request) {
             resolutionPath = "directCanonical";
             canonicalModificationId = bestFitment.modificationId;
             
+            // R3 (audit F7): no trim was selected. `bestFitment` is an
+            // auto-selected GUESS unless every certified trim for this Y/M/M
+            // agrees on the compared fields. Browsing stays allowed, but the
+            // per-wheel fit claims are downgraded server-side when not certifiable.
+            let noTrimGate: TrimAmbiguityResult;
+            try {
+              noTrimGate =
+                (await assessTrimAmbiguityForYmm(Number(year), make, model)) ??
+                failClosedAmbiguity("no certified rows for trim assessment");
+            } catch (gateErr: any) {
+              console.error(`[fitment-search] trim ambiguity assessment failed (fail closed):`, gateErr?.message || gateErr);
+              noTrimGate = failClosedAmbiguity(`assessment error: ${gateErr?.message || gateErr}`);
+            }
+            const noTrimCertifiable = noTrimGate.certifiable === true;
+            if (!noTrimCertifiable) {
+              console.log(`[fitment-search] NO-TRIM GATE: ${year} ${make} ${model} -> trim_required (resolution=${noTrimGate.resolution}, conflicting=${noTrimGate.conflictingFields.join(",") || "-"}, unknown=${noTrimGate.unknownFields.join(",") || "-"})`);
+            }
+
             // Now proceed with wheel search
             const confidenceResult = calculateConfidence(dbProfile);
             if (confidenceResult.canShowWheels && dbProfile.boltPattern) {
-              // Local DB fallback always returns certified records (CERTIFIED_FILTER applied in listLocalFitments)
-              return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult, "exact_certified");
+              // Local DB fallback returns certified ROWS (CERTIFIED_FILTER), but the
+              // auto-selected row is only a certified FIT for this vehicle when the
+              // trims agree. Otherwise mark needs_manual_verification and pass the gate.
+              return await handleDbProfilePath(
+                url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult,
+                noTrimCertifiable ? "exact_certified" : "needs_manual_verification",
+                noTrimCertifiable ? undefined : ["Select your trim to confirm fitment. Wheel sizes or specs differ between trims of this vehicle."],
+                noTrimGate
+              );
             }
           }
         }
@@ -1065,7 +1098,8 @@ async function handleDbProfilePath(
   t0: number,
   confidenceResult?: ConfidenceResult,
   fallbackConfidence?: import("@/lib/fitment-db/fallbackEquivalence").FallbackConfidence,
-  fallbackWarnings?: string[]
+  fallbackWarnings?: string[],
+  trimGate?: TrimAmbiguityResult | null
 ): Promise<NextResponse> {
   const year = url.searchParams.get("year")!;
   const make = url.searchParams.get("make")!;
@@ -1648,6 +1682,8 @@ async function handleDbProfilePath(
     // Fallback confidence (2026-04-26)
     fallbackConfidence,
     fallbackWarnings,
+    // R3 no-trim gate (2026-09-18)
+    trimGate: trimGate ?? null,
     // Geometry validation (2026-06-30)
     oemOffsetResult,
     frontOemOffsetResult,
@@ -1752,6 +1788,8 @@ async function handleDbFirstWheelResults(opts: {
   // Fallback confidence (2026-04-26)
   fallbackConfidence?: import("@/lib/fitment-db/fallbackEquivalence").FallbackConfidence;
   fallbackWarnings?: string[];
+  // R3 no-trim gate (2026-09-18): null when a specific trim resolved the profile
+  trimGate?: TrimAmbiguityResult | null;
   // Geometry validation (2026-06-30)
   oemOffsetResult?: OemOffsetResult;
   frontOemOffsetResult?: OemOffsetResult;
@@ -2831,6 +2869,23 @@ async function handleDbFirstWheelResults(opts: {
     });
   }
 
+  // ------------------------------------------------------------------------
+  // FIT CERTIFICATION GATE (2026-09-18, audit F7/C4)
+  // A wheel may only carry a certified fit claim (surefit/specfit) when the
+  // vehicle profile itself is certified for THIS vehicle. Two blockers:
+  //   trim_required      - no trim selected, certified trims disagree/unknown
+  //   fallback_unverified - trim-to-trim fallback not exact/equivalent certified
+  // Decision logic lives in lib/fitment-db/fitCertification.ts (unit-tested).
+  // When blocked, the per-item `fitmentClass` is downgraded server-side to
+  // "extended" so no consumer (SRP card, quick view, compare, POS) can render a
+  // "Guaranteed Fit"/"Good Fit" label; the raw geometry result is preserved in
+  // `geometryClass`. Ranking already ran on the geometry result, so browse
+  // order is unchanged.
+  // ------------------------------------------------------------------------
+  const certificationBlock: FitCertificationBlock = computeCertificationBlock(opts.fallbackConfidence, opts.trimGate);
+  const fallbackCertified = computeCertificationBlock(opts.fallbackConfidence, null) === null;
+  const showGuaranteedFit = certificationBlock === null;
+
   const results = pageItems.map((item) => {
     const { candidate: c, validation: v, score, scoreBreakdown, availabilityLabel, priceTier, modelKey } = item;
     const staggeredPair = (item as any).staggeredPair;
@@ -2906,7 +2961,12 @@ async function handleDbFirstWheelResults(opts: {
         boltPattern: c.bolt_pattern_standard,
       },
       fitmentValidation: {
-        fitmentClass: v.fitmentClass,
+        fitmentClass: gatedFitmentClass(v.fitmentClass, certificationBlock),
+        // Raw geometry classification (pre-gate). Not a fit claim.
+        geometryClass: v.fitmentClass,
+        // true only when the profile is certified for this vehicle AND geometry passed
+        certified: isCertifiedFit(v.fitmentClass, certificationBlock),
+        certificationBlock,
         fitmentMode: v.fitmentMode,
         ...(debug
           ? {
@@ -3271,10 +3331,21 @@ async function handleDbFirstWheelResults(opts: {
       // Indicates reliability of trim-to-trim fallback
       fallbackConfidence: opts.fallbackConfidence || "exact_certified",
       fallbackWarnings: opts.fallbackWarnings || [],
-      // Show guaranteed fit badge only for exact_certified or equivalent_certified
-      showGuaranteedFit: opts.fallbackConfidence === "exact_certified" || 
-                         opts.fallbackConfidence === "equivalent_certified" ||
-                         !opts.fallbackConfidence,
+      // Show guaranteed fit badge only when nothing blocks certification
+      // (exact/equivalent certified fallback AND no-trim gate certifiable).
+      showGuaranteedFit,
+      certificationBlock,
+      // R3 no-trim gate (2026-09-18, audit F7)
+      trimRequired: opts.trimGate ? opts.trimGate.trimRequired === true : false,
+      certifiable: opts.trimGate ? opts.trimGate.certifiable === true : fallbackCertified,
+      trimAmbiguity: opts.trimGate
+        ? {
+            resolution: opts.trimGate.resolution,
+            conflictingFields: opts.trimGate.conflictingFields ?? [],
+            unknownFields: opts.trimGate.unknownFields ?? [],
+            candidateTrims: opts.trimGate.candidates ?? [],
+          }
+        : null,
       envelope: {
         boltPattern: envelope.boltPattern,
         centerBore: envelope.centerBore,

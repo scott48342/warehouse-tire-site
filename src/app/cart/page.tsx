@@ -485,7 +485,7 @@ export default function CartPage() {
               </div>
               <div className="flex items-center gap-4 text-xs">
                 <span className="flex items-center gap-1.5 text-green-400">
-                  <span>✓</span> Guaranteed Fit
+                  <span>✓</span> Fitment support
                 </span>
                 <span className="flex items-center gap-1.5 text-green-400">
                   <span>✓</span> Ready for Install
@@ -718,7 +718,7 @@ export default function CartPage() {
                 )}
                 <div className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>
-                  <span>Guaranteed fitment</span>
+                  <span>Fitment support included</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>

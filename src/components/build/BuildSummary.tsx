@@ -225,7 +225,7 @@ export function BuildSummary() {
         <div className="pt-3 border-t border-neutral-100 space-y-1.5">
           <div className="flex items-center gap-2 text-xs text-neutral-600">
             <span className="text-green-500">✓</span>
-            <span>Guaranteed Fit</span>
+            <span>Fitment support included</span>
           </div>
           <div className="flex items-center gap-2 text-xs text-neutral-600">
             <span className="text-green-500">✓</span>

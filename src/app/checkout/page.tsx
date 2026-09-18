@@ -1613,7 +1613,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex items-center gap-2 text-neutral-700">
                     <span className="text-green-600">✓</span>
-                    <span>Guaranteed fitment</span>
+                    <span>Fitment support included</span>
                   </div>
                 </div>
                 

@@ -113,6 +113,12 @@ type WheelsGridProps = {
   allWheels?: WheelItem[];
   viewParams: ViewParams;
   dbProfile?: DBProfileForAccessories | null;
+  /**
+   * 2026-09-18 (audit F7/C4): page-level fit certification block from
+   * fitment-search `fitment.certificationBlock`. When set, no card may render
+   * a "Guaranteed Fit"/"Good Fit" label; cards show a neutral trim prompt.
+   */
+  certificationBlock?: "trim_required" | "fallback_unverified" | null;
   diameterParam?: string;
   widthParam?: string;
   showRecommended?: boolean;
@@ -589,6 +595,7 @@ export function WheelsGridWithSelection({
   allWheels,
   viewParams,
   dbProfile,
+  certificationBlock = null,
   diameterParam,
   widthParam,
   showRecommended = false,
@@ -1425,6 +1432,7 @@ export function WheelsGridWithSelection({
             }}
             finishThumbs={w.finishThumbs}
             fitmentClass={w.fitmentClass}
+            certificationBlock={certificationBlock}
             viewParams={viewParams}
             dbProfile={dbProfile}
             wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
@@ -1488,6 +1496,7 @@ export function WheelsGridWithSelection({
             }}
             finishThumbs={w.finishThumbs}
             fitmentClass={w.fitmentClass}
+            certificationBlock={certificationBlock}
             isPopular={isRecommended && (idx === 0 || idx === 1)}
             viewParams={viewParams}
             dbProfile={dbProfile}

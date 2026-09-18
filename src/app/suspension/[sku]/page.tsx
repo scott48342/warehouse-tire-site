@@ -202,7 +202,7 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-xl border border-neutral-200 bg-white p-3 text-center">
                 <div className="text-lg">✅</div>
-                <div className="text-xs font-semibold text-neutral-700">Guaranteed Fit</div>
+                <div className="text-xs font-semibold text-neutral-700">Fitment support</div>
                 <div className="text-xs text-neutral-500">For your vehicle</div>
               </div>
               <div className="rounded-xl border border-neutral-200 bg-white p-3 text-center">

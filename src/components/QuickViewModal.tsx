@@ -545,7 +545,7 @@ function WheelQuickViewContent({
             </span>
             <span className="inline-flex items-center gap-1">
               <span className="text-emerald-500">✓</span>
-              Guaranteed Fit
+              Fitment support
             </span>
           </div>
         </div>

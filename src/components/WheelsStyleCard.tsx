@@ -503,6 +503,7 @@ export function WheelsStyleCard({
   selectToTires,
   pair,
   fitmentClass,
+  certificationBlock = null,
   isPopular,
   dbProfile,
   wheelCenterBore,
@@ -545,6 +546,8 @@ export function WheelsStyleCard({
   selectToTires?: boolean;
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  /** 2026-09-18 (audit F7/C4): when set, suppress fit-class labels; show trim prompt */
+  certificationBlock?: "trim_required" | "fallback_unverified" | null;
   isPopular?: boolean;
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
@@ -737,7 +740,18 @@ export function WheelsStyleCard({
   }
 
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
-  const fitmentConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
+  // 2026-09-18 (audit F7/C4): a certification block overrides any fit class.
+  // The server already downgrades fitmentClass to "extended" in this case; this
+  // guard keeps the card honest even if a stale/other API shape slips through.
+  const fitmentConfig = certificationBlock
+    ? {
+        label: certificationBlock === "trim_required" ? "Select trim to confirm fit" : "Fit not yet confirmed",
+        icon: "?",
+        className: "bg-neutral-200 text-neutral-800",
+      }
+    : fitmentClass
+      ? FITMENT_CONFIG[fitmentClass]
+      : null;
 
   // Top Pick category badge config
   const topPickConfig = topPickCategory ? TOP_PICK_CONFIG[topPickCategory] : null;

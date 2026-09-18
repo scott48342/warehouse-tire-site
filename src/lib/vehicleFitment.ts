@@ -130,7 +130,27 @@ export function getPool(): pg.Pool {
 // SCHEMA INITIALIZATION
 // ─────────────────────────────────────────────────────────────────────────────
 
+/**
+ * 2026-09-18 (audit F14): this DDL used to run on EVERY request of the routes
+ * that call it (validate, validate-wheels, fitment-search legacy path). It is
+ * now memoized per process and skipped entirely in read-only preview
+ * (FITMENT_PREVIEW_READONLY=1), where `CREATE TABLE IF NOT EXISTS` would fail
+ * under `default_transaction_read_only=on` even when the tables already exist.
+ */
+let fitmentTablesEnsured: Promise<void> | null = null;
+
 export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
+  if (process.env.FITMENT_PREVIEW_READONLY === "1") return;
+  if (!fitmentTablesEnsured) {
+    fitmentTablesEnsured = ensureFitmentTablesOnce(db).catch((err) => {
+      fitmentTablesEnsured = null; // allow retry on next request
+      throw err;
+    });
+  }
+  return fitmentTablesEnsured;
+}
+
+async function ensureFitmentTablesOnce(db: pg.Pool): Promise<void> {
   await db.query(`
     CREATE TABLE IF NOT EXISTS vehicles (
       id SERIAL PRIMARY KEY,

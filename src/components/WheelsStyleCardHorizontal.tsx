@@ -48,6 +48,8 @@ export interface WheelsStyleCardHorizontalProps {
   specLabel?: { boltPattern?: string; offset?: string };
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  /** 2026-09-18 (audit F7/C4): when set, suppress fit-class labels; show trim prompt */
+  certificationBlock?: "trim_required" | "fallback_unverified" | null;
   isPopular?: boolean;
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
@@ -80,6 +82,7 @@ export function WheelsStyleCardHorizontal({
   specLabel,
   pair,
   fitmentClass,
+  certificationBlock = null,
   dbProfile,
   wheelCenterBore,
   wheelSeatType,
@@ -213,7 +216,16 @@ export function WheelsStyleCardHorizontal({
   }
 
   // ─── Derived display values ────────────────────────────────────────────────
-  const fitmentConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
+  // 2026-09-18 (audit F7/C4): a certification block overrides any fit class.
+  const fitmentConfig = certificationBlock
+    ? {
+        label: certificationBlock === "trim_required" ? "Select trim to confirm fit" : "Fit not yet confirmed",
+        icon: "?",
+        className: "bg-neutral-200 text-neutral-800",
+      }
+    : fitmentClass
+      ? FITMENT_CONFIG[fitmentClass]
+      : null;
 
   /** Simple stock label — no warehouse location codes */
   const stockLabel = (() => {

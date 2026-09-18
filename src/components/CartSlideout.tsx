@@ -479,9 +479,9 @@ export function CartSlideout() {
               <span className="text-green-600 text-lg">✓</span>
               <div>
                 <div className="text-sm font-bold text-green-900">
-                  Fits your {bannerVehicle.year} {bannerVehicle.make} {bannerVehicle.model}
+                  Shopping for your {bannerVehicle.year} {bannerVehicle.make} {bannerVehicle.model}
                 </div>
-                <div className="text-xs text-green-700">Guaranteed fitment</div>
+                <div className="text-xs text-green-700">Fitment support included</div>
               </div>
             </div>
           </div>
