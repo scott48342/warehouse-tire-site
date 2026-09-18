@@ -76,6 +76,33 @@ export async function GET(req: Request) {
       wheelDiameter: wheelDiameter ? parseInt(wheelDiameter, 10) : null,
     });
 
+    // 2026-09-18 (audit F7): trim omitted and certified trims disagree. Do not
+    // hand back the auto-picked first row as if it were this vehicle's fitment.
+    if (!trim && result.trimRequired && result.trimAmbiguity) {
+      const amb = result.trimAmbiguity;
+      return NextResponse.json({
+        found: false,
+        trimRequired: true,
+        ambiguous: true,
+        year: result.year,
+        make: result.make,
+        model: result.model,
+        trim: null,
+        modificationId: null,
+        error: "Trim required: certified trims for this vehicle disagree on fitment",
+        conflictingFields: amb.conflictingFields,
+        agreedFields: amb.agreedFields,
+        sharedFitment: {
+          boltPattern: amb.shared.boltPattern,
+          centerBore: amb.shared.centerBoreMm,
+        },
+        candidateTrims: amb.candidates,
+        availableTrims: result.availableTrims,
+        warnings: result.warnings,
+        ...(debug ? { debug: result.debug, normalized: result.normalized, input: result.input } : {}),
+      });
+    }
+
     // Build response
     const response: any = {
       // Core fitment data

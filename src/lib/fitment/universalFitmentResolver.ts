@@ -23,6 +23,7 @@ import { serviceSpecsFromRecord, type FitmentServiceSpecs } from "@/lib/fitment-
 // canonicalFitmentId (the trims API `value`) back to its atomic trim label.
 import { isCanonicalFitmentId, getAtomicTrimOptions } from "@/lib/fitment/canonicalResolver";
 import { isGroupedTrim, explodeTrim } from "@/lib/fitment/trimExplosion";
+import { assessTrimAmbiguity, type TrimAmbiguityResult } from "@/lib/fitment-db/trimAmbiguity";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -105,6 +106,16 @@ export interface UniversalFitmentResult {
     displayTrim: string;
     tireSizes: string[];
   }>;
+
+  /**
+   * 2026-09-18 (audit F7): set when NO trim was requested and >1 certified rows
+   * exist. `trimAmbiguity.ambiguous` means the rows disagree on bolt pattern /
+   * center bore / tire-size set and the auto-selected record (matchedBy
+   * "first_available") must NOT be presented as this vehicle's fitment.
+   * Callers that need a definite answer should return trimRequired instead.
+   */
+  trimAmbiguity: TrimAmbiguityResult | null;
+  trimRequired: boolean;
   
   // Warnings and debug info
   warnings: string[];
@@ -542,6 +553,8 @@ export async function resolveUniversalFitment(
     qualityTier: "unknown",
     confidence: "low",
     availableTrims: [],
+    trimAmbiguity: null,
+    trimRequired: false,
     warnings: [],
     debug: {
       resolutionTimeMs: 0,
@@ -614,6 +627,26 @@ export async function resolveUniversalFitment(
   }
   
   result.availableTrims = Array.from(trimMap.values());
+
+  // F7: when the caller omitted the trim, record whether auto-selecting a row
+  // would be a silent guess. Non-breaking: resolution still proceeds below.
+  if (!requestedTrim && matchedRecords.length > 1) {
+    result.trimAmbiguity = assessTrimAmbiguity(
+      matchedRecords.map((r) => ({
+        modificationId: r.modificationId,
+        displayTrim: r.displayTrim,
+        boltPattern: r.boltPattern,
+        centerBoreMm: r.centerBoreMm as unknown as number | string | null,
+        oemTireSizes: r.oemTireSizes,
+      }))
+    );
+    result.trimRequired = result.trimAmbiguity.ambiguous;
+    if (result.trimRequired) {
+      warnings.push(
+        `Trim required: ${matchedRecords.length} certified trims disagree on ${result.trimAmbiguity.conflictingFields.join(", ")}`
+      );
+    }
+  }
   
   // ─────────────────────────────────────────────────────────────────────────
   // STEP 3: Select the best matching record

@@ -44,25 +44,18 @@ function makeCaseInsensitive(make: string) {
 /**
  * Normalize-and-compare for model names.
  * Handles: "Encore GX" (DB) vs "encore-gx" (URL slug)
- * Uses ILIKE with pattern matching to handle case and separator differences.
+ *
+ * 2026-09-18 (audit C4/F5): EXACT compact-key match, no substring fallback.
+ * The old `ILIKE '%mustang%'` pattern let "Mustang" resolve to "Mustang Mach-E".
+ * Cross-model matches must be declared in modelAliases.ts.
  */
 function modelNormalizedMatch(modelVariants: string[]) {
-  // Build ILIKE patterns that match regardless of separators
-  // e.g., "encore-gx" -> "%encore%gx%" matches "Encore GX", "encore-gx", "ENCORE_GX", etc.
-  const patterns = modelVariants.map(v => {
-    const words = v.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/);
-    return `%${words.join('%')}%`;
-  });
-  
-  if (patterns.length === 1) {
-    return ilike(vehicleFitments.model, patterns[0]);
-  }
-  
-  const conditions = patterns.map(p => ilike(vehicleFitments.model, p));
-  return or(...conditions);
+  return modelVariantsExactMatch(vehicleFitments.model, modelVariants);
 }
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { makeSlugMatch } from "./makeMatch";
+import { modelVariantsExactMatch } from "./modelMatch";
+import { assessTrimAmbiguity, type TrimAmbiguityResult } from "./trimAmbiguity";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import crypto from "crypto";
@@ -85,6 +78,7 @@ export type ProfileResolutionPath =
   | "directCanonical"   // Found directly in DB by requested modificationId
   | "canonicalAlias"    // Found via alias to different canonical modificationId
   | "importedAlias"     // Imported from API, alias stored
+  | "trim_required"     // Trim omitted and certified trims disagree (2026-09-18, F7)
   | "not_found";        // Could not resolve
 
 export interface FitmentProfile {
@@ -233,6 +227,13 @@ export interface ProfileLookupResult {
   // Indicates how reliable the fitment data is for this specific trim
   fallbackConfidence?: FallbackConfidence;
   fallbackWarnings?: string[];
+
+  // Trim ambiguity (2026-09-18, audit F7). Present when the caller omitted the
+  // trim and the certified rows for the YMM disagree on bolt pattern / center
+  // bore / tire-size set. profile is null in that case.
+  trimRequired?: boolean;
+  ambiguous?: boolean;
+  trimAmbiguity?: TrimAmbiguityResult;
 }
 
 // ============================================================================
@@ -600,6 +601,41 @@ async function getProfileByModificationIdDirect(
 // ============================================================================
 
 /**
+ * Load the certified rows for a YMM and assess whether they can be used
+ * without an explicit trim (2026-09-18, audit F7).
+ * Returns null when no certified rows exist (caller falls through to the
+ * normal not_found / year-adjacent handling).
+ */
+export async function assessTrimAmbiguityForYmm(
+  year: number,
+  make: string,
+  model: string
+): Promise<TrimAmbiguityResult | null> {
+  const normalizedMake = normalizeMake(make);
+  const modelVariants = getModelVariants(model);
+  const rows = await db
+    .select({
+      modificationId: vehicleFitments.modificationId,
+      displayTrim: vehicleFitments.displayTrim,
+      boltPattern: vehicleFitments.boltPattern,
+      centerBoreMm: vehicleFitments.centerBoreMm,
+      oemTireSizes: vehicleFitments.oemTireSizes,
+    })
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        makeCaseInsensitive(normalizedMake),
+        modelNormalizedMatch(modelVariants),
+        CERTIFIED_FILTER
+      )
+    )
+    .limit(50);
+  if (rows.length === 0) return null;
+  return assessTrimAmbiguity(rows);
+}
+
+/**
  * Look up any valid fitment for a year/make/model, regardless of modificationId.
  * This handles cases where:
  * - We imported fitment with generated IDs (manual_XXXX)
@@ -804,6 +840,13 @@ export async function getFitmentProfile(
     forceRefresh?: boolean;
     /** For HD trucks (3500-class), specify SRW or DRW to get correct fitment */
     rearWheelConfig?: RearWheelConfig;
+    /**
+     * Caller did NOT receive a trim/modification from the user (2026-09-18, F7).
+     * When set (or when modificationId is empty), certified trims for the YMM are
+     * checked for agreement before any row is auto-selected. If they disagree the
+     * result is `resolutionPath: "trim_required"` with the candidate trims.
+     */
+    trimOmitted?: boolean;
   }
 ): Promise<ProfileLookupResult> {
   const t0 = Date.now();
@@ -811,6 +854,37 @@ export async function getFitmentProfile(
   const normalizedModel = normalizeModel(model);
   // NOTE: Don't slugify - manual imports use "manual_XXXX" with underscores
   const requestedModId = modificationId.toLowerCase().trim();
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // Step -1: Trim-omitted ambiguity gate (2026-09-18, F7)
+  // Runs BEFORE the cache so a cached "base" auto-pick can never mask it.
+  // Single row / single grouped row -> not ambiguous -> proceed as before.
+  // ─────────────────────────────────────────────────────────────────────────
+  const trimOmitted = options?.trimOmitted === true || requestedModId === "";
+  if (trimOmitted) {
+    try {
+      const ambiguity = await assessTrimAmbiguityForYmm(year, make, model);
+      if (ambiguity && ambiguity.ambiguous) {
+        console.warn(`[profileService] TRIM REQUIRED: ${year} ${make} ${model} - ${ambiguity.candidates.length} certified trims disagree on [${ambiguity.conflictingFields.join(", ")}]`);
+        return {
+          profile: null,
+          resolutionPath: "trim_required",
+          requestedModificationId: requestedModId,
+          canonicalModificationId: null,
+          aliasUsed: false,
+          source: "db",
+          apiCalled: false,
+          overridesApplied: false,
+          trimRequired: true,
+          ambiguous: true,
+          trimAmbiguity: ambiguity,
+          timing: { dbLookupMs: Date.now() - t0, totalMs: Date.now() - t0 },
+        };
+      }
+    } catch (e: any) {
+      console.warn(`[profileService] ambiguity check failed; continuing: ${e?.message || String(e)}`);
+    }
+  }
   
   // â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Step 0: Check Redis cache first (unless forceRefresh)
@@ -1700,12 +1774,14 @@ export async function getFitmentProfileWithHdSupport(
   options?: {
     forceRefresh?: boolean;
     rearWheelConfig?: RearWheelConfig;
+    trimOmitted?: boolean;
   }
 ): Promise<ProfileLookupResult> {
   // Get base profile
   const result = await getFitmentProfile(year, make, model, modificationId, {
     forceRefresh: options?.forceRefresh,
     rearWheelConfig: options?.rearWheelConfig,
+    trimOmitted: options?.trimOmitted,
   });
   
   // Apply HD overrides if rearWheelConfig is specified and profile exists

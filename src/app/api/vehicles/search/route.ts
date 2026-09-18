@@ -46,12 +46,35 @@ export async function GET(req: Request) {
 
   try {
     // Use the profile service which is now DB-only
+    // 2026-09-18 (audit F7): when the caller sent no trim/modification, tell the
+    // service so it can refuse to auto-pick when certified trims disagree.
+    const trimOmitted = !modification;
     const result = await getFitmentProfile(
       parseInt(year, 10),
       make,
       model,
-      modification || "base"
+      modification || "base",
+      { trimOmitted }
     );
+
+    if (result.trimRequired && result.trimAmbiguity) {
+      const amb = result.trimAmbiguity;
+      return NextResponse.json({
+        fitment: null,
+        trimRequired: true,
+        ambiguous: true,
+        error: "Trim required: certified trims for this vehicle disagree on fitment",
+        conflictingFields: amb.conflictingFields,
+        agreedFields: amb.agreedFields,
+        // Fields every trim agrees on (safe to use without a trim), null otherwise
+        sharedFitment: {
+          boltPattern: amb.shared.boltPattern,
+          centerBore: amb.shared.centerBoreMm != null ? String(amb.shared.centerBoreMm) : null,
+        },
+        candidateTrims: amb.candidates,
+        resolutionPath: result.resolutionPath,
+      });
+    }
 
     if (!result.profile) {
       return NextResponse.json({ 

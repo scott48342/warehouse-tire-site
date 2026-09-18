@@ -48,7 +48,34 @@ export async function GET(req: Request) {
     }
 
     const fitmentData = await fitmentRes.json();
-    const vehicleBoltPattern = fitmentData?.fitment?.boltPattern || fitmentData?.boltPattern || "";
+
+    // 2026-09-18 (audit F7/F13): trim omitted and certified trims disagree.
+    // If the bolt pattern is shared by every trim we can still answer the
+    // bolt-pattern question; otherwise return fits:null (unknown), never a
+    // false negative built on an arbitrary trim.
+    let trimRequiredNote: { conflictingFields: string[]; candidateTrims: unknown[] } | null = null;
+    if (fitmentData?.trimRequired) {
+      const sharedBp = fitmentData?.sharedFitment?.boltPattern || "";
+      if (!sharedBp) {
+        return NextResponse.json({
+          fits: null,
+          reason: "trim_required",
+          trimRequired: true,
+          conflictingFields: fitmentData.conflictingFields ?? [],
+          candidateTrims: fitmentData.candidateTrims ?? [],
+        });
+      }
+      trimRequiredNote = {
+        conflictingFields: fitmentData.conflictingFields ?? [],
+        candidateTrims: fitmentData.candidateTrims ?? [],
+      };
+    }
+
+    const vehicleBoltPattern =
+      fitmentData?.fitment?.boltPattern ||
+      fitmentData?.boltPattern ||
+      fitmentData?.sharedFitment?.boltPattern ||
+      "";
 
     if (!vehicleBoltPattern) {
       // No vehicle bolt pattern data - fail closed per policy
@@ -58,10 +85,11 @@ export async function GET(req: Request) {
     // 2026-06-30: Also resolve geometry basis from the fitment DB
     // Only check geometry when a specific SKU is provided (not style-only checks)
     let checkOemOffset: OemOffsetResult | null = null;
-    if (sku || (year && make && model)) {
+    // Skip when the trim is ambiguous: offsets/wheel sizes are per-trim data.
+    if (!trimRequiredNote && (sku || (year && make && model))) {
       try {
         const profileResult = await getFitmentProfileWithHdSupport(
-          Number(year ?? 0), make ?? "", model ?? "", "", {}
+          Number(year ?? 0), make ?? "", model ?? "", "", { trimOmitted: true }
         );
         if (profileResult.profile?.boltPattern) {
           const rawSizes = parseWheelSizes(profileResult.profile.oemWheelSizes ?? []) as Array<{diameter?:number;width?:number;offset?:number|null;axle?:string}>;
@@ -138,6 +166,7 @@ export async function GET(req: Request) {
           wheelBoltPattern: thisBp,
           reason: geometryPass ? "exact_sku_match" : "geometry_rejected",
           geometryNote,
+          ...(trimRequiredNote ? { trimRequired: true, boltPatternSharedByAllTrims: true, ...trimRequiredNote } : {}),
         });
       }
     }
@@ -167,6 +196,7 @@ export async function GET(req: Request) {
             wheelBoltPattern: variantBp,
             reason: "style_variant_match",
             checkedVariants: allVariants.length,
+            ...(trimRequiredNote ? { trimRequired: true, boltPatternSharedByAllTrims: true, ...trimRequiredNote } : {}),
           });
         }
       }
@@ -177,6 +207,7 @@ export async function GET(req: Request) {
         vehicleBoltPattern,
         reason: "no_matching_bolt_pattern",
         checkedVariants: allVariants.length,
+        ...(trimRequiredNote ? { trimRequired: true, boltPatternSharedByAllTrims: true, ...trimRequiredNote } : {}),
       });
     }
 
