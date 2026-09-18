@@ -279,3 +279,47 @@ describe("countLoadIndexFailures", () => {
     expect(result.unchecked).toBe(2);
   });
 });
+
+// R5 required cases (fix-batch1-REQUIREMENTS)
+import { certifiedPathBlock } from "../loadIndexGate";
+describe("R5 load-index gate cases", () => {
+  test("110 < 119 (Raptor) -> blocked, no badge, excluded from packages", () => {
+    const a = assessLoadIndex("110T", 119);
+    expect(a.loadIndexOk).toBe(false);
+    expect(a.fitBadgeAllowed).toBe(false);
+    expect(a.packageEligible).toBe(false);
+    expect(a.packageExclusionReason).toBe("load_index_below_required");
+    expect(a.fitBlockReason).toBe("load_index_below_required");
+    expect(a.requiredLoadIndexSource).toBe("vehicle_record_unverified");
+    expect(a.loadIndexNote).toBe("Load rating 110 is below the 119 this vehicle requires");
+    expect(certifiedPathBlock(a)).toEqual({ blocked: true, reason: "load_index_below_required" });
+  });
+  test("99 < 100 (M4) -> blocked", () => {
+    const a = assessLoadIndex("99Y", 100);
+    expect(a.loadIndexOk).toBe(false);
+    expect(a.fitBadgeAllowed).toBe(false);
+    expect(certifiedPathBlock(a).blocked).toBe(true);
+  });
+  test("equal -> ok, badge allowed", () => {
+    const a = assessLoadIndex("119", 119);
+    expect(a.loadIndexOk).toBe(true);
+    expect(a.fitBadgeAllowed).toBe(true);
+    expect(a.tireLoadIndex).toBe(119);
+    expect(certifiedPathBlock(a).blocked).toBe(false);
+  });
+  test("missing requirement -> NO badge, unchecked, still browsable/package-eligible", () => {
+    const a = assessLoadIndex("119", null);
+    expect(a.loadIndexChecked).toBe(false);
+    expect(a.loadIndexOk).toBeNull();
+    expect(a.fitBadgeAllowed).toBe(false);
+    expect(a.fitBlockReason).toBe("load_index_unverified");
+    expect(a.packageEligible).toBe(true);
+  });
+  test("trim not certifiable -> badge suppressed even when load index passes", () => {
+    const items = [{ badges: { loadIndex: "121" } }];
+    const [r] = annotateLoadIndex(items, { requiredLoadIndex: 119 }, { certifiable: false });
+    expect(r.loadIndexOk).toBe(true);
+    expect(r.fitBadgeAllowed).toBe(false);
+    expect(r.fitBlockReason).toBe("trim_required");
+  });
+});

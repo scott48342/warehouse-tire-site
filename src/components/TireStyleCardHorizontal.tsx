@@ -200,7 +200,7 @@ export function TireStyleCardHorizontal({
             data-testid="load-index-warning"
           >
             <span aria-hidden>!</span>
-            <span>{loadIndexNote || "Load rating below OE"}</span>
+            <span>{loadIndexNote || "Load rating is below what this vehicle requires"}</span>
           </div>
         )}
 

@@ -551,11 +551,12 @@ export function RecommendedFitmentCard({
           {details?.oemLoadIndex || details?.oemSpeedRating ? (
             <div className="flex items-center justify-between gap-3">
               <span className="text-neutral-600">
+                {/* R4 (audit H5): the stored minimum is NOT verified OEM - never label it OE/OEM/factory */}
                 {details.oemLoadIndex && details.oemSpeedRating
-                  ? "OE load index / speed rating"
+                  ? "Required load index / speed rating"
                   : details.oemLoadIndex
-                    ? "OE load index"
-                    : "OE speed rating"}
+                    ? "Required load index"
+                    : "Speed rating"}
               </span>
               <span className="font-semibold">
                 {[details.oemLoadIndex, details.oemSpeedRating].filter(Boolean).join(" / ")}

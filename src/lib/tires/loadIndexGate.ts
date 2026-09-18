@@ -25,9 +25,16 @@
  *   loadIndexOk:null, NO fit badge (fitBadgeAllowed:false, not true).
  */
 
+export type FitBlockReason =
+  | "load_index_below_required"
+  | "load_index_unverified"
+  | "trim_required";
+
 export interface LoadIndexAssessment {
   /** Parsed single-wheel load index of the tire (null when unknown) */
   loadIndex: number | null;
+  /** Same as loadIndex (spec field name) */
+  tireLoadIndex: number | null;
   /** Raw badge string as received (kept for display) */
   loadIndexRaw: string | null;
   /** Required minimum from vehicle record (null when record has none) */
@@ -54,6 +61,20 @@ export interface LoadIndexAssessment {
    * Reason code when packageEligible is false.
    */
   packageExclusionReason: "load_index_below_required" | null;
+  /**
+   * Why no fit badge / certified path is allowed (null when fitBadgeAllowed).
+   * `load_index_below_required` also blocks package/cart certified paths;
+   * `load_index_unverified` and `trim_required` only block the badge.
+   */
+  fitBlockReason: FitBlockReason | null;
+}
+
+export interface LoadIndexGateOptions {
+  /**
+   * R3 trim gate. When false (trim omitted and certified trims do not fully
+   * agree) NO fit badge may be shown regardless of load index.
+   */
+  certifiable?: boolean;
 }
 
 export interface RequiredLoadIndexSpec {
@@ -115,6 +136,7 @@ export function assessLoadIndex(
   if (required == null) {
     return {
       loadIndex: li,
+      tireLoadIndex: li,
       loadIndexRaw: raw,
       requiredLoadIndex: null,
       requiredLoadIndexSource: null,
@@ -124,6 +146,7 @@ export function assessLoadIndex(
       fitBadgeAllowed: false, // NO badge when we cannot verify
       packageEligible: true, // Can still appear in packages (unverified)
       packageExclusionReason: null,
+      fitBlockReason: "load_index_unverified",
     };
   }
 
@@ -131,6 +154,7 @@ export function assessLoadIndex(
   if (li == null) {
     return {
       loadIndex: null,
+      tireLoadIndex: null,
       loadIndexRaw: raw,
       requiredLoadIndex: required,
       requiredLoadIndexSource: "vehicle_record_unverified",
@@ -140,6 +164,7 @@ export function assessLoadIndex(
       fitBadgeAllowed: false, // NO badge when we cannot verify
       packageEligible: true, // Can still appear (unknown, not known-bad)
       packageExclusionReason: null,
+      fitBlockReason: "load_index_unverified",
     };
   }
 
@@ -147,6 +172,7 @@ export function assessLoadIndex(
   const ok = li >= required;
   return {
     loadIndex: li,
+    tireLoadIndex: li,
     loadIndexRaw: raw,
     requiredLoadIndex: required,
     requiredLoadIndexSource: "vehicle_record_unverified",
@@ -156,7 +182,22 @@ export function assessLoadIndex(
     fitBadgeAllowed: ok, // Badge only when meets requirement
     packageEligible: ok, // EXCLUDE from packages when below required
     packageExclusionReason: ok ? null : "load_index_below_required",
+    fitBlockReason: ok ? null : "load_index_below_required",
   };
+}
+
+/**
+ * Gate for fit-certified construction paths (add-to-package, package review,
+ * add-to-cart as a vehicle-fitted item). Returns the reason code when the tire
+ * MUST be blocked. Only a known-below-required load index blocks; unverified
+ * data merely removes the badge (see fitBadgeAllowed).
+ */
+export function certifiedPathBlock(
+  a: Pick<LoadIndexAssessment, "loadIndexOk">
+): { blocked: true; reason: "load_index_below_required" } | { blocked: false; reason: null } {
+  return a.loadIndexOk === false
+    ? { blocked: true, reason: "load_index_below_required" }
+    : { blocked: false, reason: null };
 }
 
 /** Fields merged onto API tire results so clients / retests can see the gate. */
@@ -171,6 +212,8 @@ export type LoadIndexResultFields = Pick<
   | "fitBadgeAllowed"
   | "packageEligible"
   | "packageExclusionReason"
+  | "fitBlockReason"
+  | "tireLoadIndex"
 >;
 
 /**
@@ -180,12 +223,23 @@ export type LoadIndexResultFields = Pick<
  */
 export function annotateLoadIndex<
   T extends { badges?: { loadIndex?: string | null } | null; axle?: "front" | "rear" | "both" | null }
->(items: T[], spec: RequiredLoadIndexSpec | null | undefined): Array<T & LoadIndexResultFields> {
+>(
+  items: T[],
+  spec: RequiredLoadIndexSpec | null | undefined,
+  options: LoadIndexGateOptions = {}
+): Array<T & LoadIndexResultFields> {
+  const trimBlocked = options.certifiable === false;
   for (const item of items) {
     const required = resolveRequiredLoadIndex(spec, item.axle ?? "both");
     const a = assessLoadIndex(item.badges?.loadIndex ?? null, required);
+    if (trimBlocked && a.fitBadgeAllowed) {
+      a.fitBadgeAllowed = false;
+      a.fitBlockReason = "trim_required";
+    }
     Object.assign(item, {
       loadIndex: a.loadIndex,
+      tireLoadIndex: a.tireLoadIndex,
+      fitBlockReason: a.fitBlockReason,
       requiredLoadIndex: a.requiredLoadIndex,
       requiredLoadIndexSource: a.requiredLoadIndexSource,
       loadIndexOk: a.loadIndexOk,

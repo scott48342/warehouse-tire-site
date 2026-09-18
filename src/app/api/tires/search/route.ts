@@ -2376,6 +2376,10 @@ export async function GET(req: Request) {
     // NOT verified OEM - field is requiredLoadIndex, source is "vehicle_record_unverified".
     // null = record has none -> gate reports loadIndexChecked:false, NO fit badge.
     let requiredLoadIndex: number | null = null;
+    // R3 trim gate: false when the trim was omitted and certified trims disagree
+    // (or carry unknown fields). Forces fitBadgeAllowed:false on every result.
+    let fitCertifiable: boolean = true;
+    let trimRequiredForFit: boolean = false;
     
     console.log(`[tires/search] ══════════════════════════════════════════════════`);
     console.log(`[tires/search] Using resolveUniversalFitment`);
@@ -2419,6 +2423,11 @@ export async function GET(req: Request) {
       if (fitmentResult.found) {
         // Get OEM tire sizes from universal result
         tireSizes = fitmentResult.oemTireSizes;
+        fitCertifiable = fitmentResult.certifiable !== false;
+        trimRequiredForFit = fitmentResult.trimRequired === true;
+        if (!fitCertifiable) {
+          console.warn(`[tires/search] TRIM REQUIRED for fit certification: ${year} ${make} ${model} - results are browse-only (no fit badge)`);
+        }
         requiredLoadIndex = resolveRequiredLoadIndex({ requiredLoadIndex: fitmentResult.serviceSpecs?.oemLoadIndex ?? null });
         if (requiredLoadIndex != null) {
           console.log(`[tires/search] REQUIRED LOAD INDEX: ${requiredLoadIndex} (${year} ${make} ${model} ${fitmentResult.trim || ""}) [source: vehicle_record_unverified]`);
@@ -3322,7 +3331,7 @@ export async function GET(req: Request) {
     // - EXCLUDED from packages (packageEligible:false, packageExclusionReason:"load_index_below_required")
     // - NO "Guaranteed Fit" badge (fitBadgeAllowed:false)
     // When requiredLoadIndex is missing: NO badge (fitBadgeAllowed:false), but packageEligible:true
-    annotateLoadIndex(finalResults, { requiredLoadIndex });
+    annotateLoadIndex(finalResults, { requiredLoadIndex }, { certifiable: fitCertifiable });
     const loadIndexStats = countLoadIndexFailures(finalResults);
     console.log(`[tires/search] LOAD INDEX GATE: required=${requiredLoadIndex ?? 'none'}, passed=${loadIndexStats.passed}, failed=${loadIndexStats.failed}, unchecked=${loadIndexStats.unchecked}`);
     
@@ -3397,6 +3406,9 @@ export async function GET(req: Request) {
       requiredLoadIndex,
       requiredLoadIndexSource: requiredLoadIndex != null ? "vehicle_record_unverified" as const : null,
       loadIndexStats,
+      // R3 trim gate summary
+      certifiable: fitCertifiable,
+      trimRequired: trimRequiredForFit,
       
       // Mixed-diameter stagger info (e.g., Corvette 19F/20R)
       ...(isMixedDiameterStagger && {

@@ -21,6 +21,10 @@ type TireResult = {
   warrantyMiles?: number;
   treadCategory?: string;
   stockQty?: number;
+  /** R4 load-index gate (from /api/tires/search). false => blocked from the package. */
+  packageEligible?: boolean;
+  packageExclusionReason?: "load_index_below_required" | null;
+  loadIndexNote?: string | null;
 };
 
 type TireCategory = "best-overall" | "most-popular" | "best-comfort" | "best-value";
@@ -228,8 +232,14 @@ export function TireStep() {
             warrantyMiles: badges.warrantyMiles || t.warrantyMiles,
             treadCategory: t.treadCategory || badges.terrain,
             stockQty: quantity.primary || 0,
+            packageEligible: t.packageEligible,
+            packageExclusionReason: t.packageExclusionReason ?? null,
+            loadIndexNote: t.loadIndexNote ?? null,
           };
-        });
+        })
+        // R4 (audit C2/F3): a tire whose load index is KNOWN to be below the
+        // vehicle's required minimum may never enter a fit-certified package.
+        .filter((t: TireResult) => t.packageEligible !== false);
         
         setTires(normalizedTires);
       } catch (err) {
@@ -244,6 +254,11 @@ export function TireStep() {
   }, [state.vehicle, state.wheel]);
   
   const handleSelect = (tire: TireResult) => {
+    if (tire.packageEligible === false) {
+      console.warn(`[TireStep] blocked: ${tire.sku} ${tire.packageExclusionReason ?? "load_index_below_required"}`);
+      setError(tire.loadIndexNote || "This tire's load rating is below what your vehicle requires.");
+      return;
+    }
     const buildTire: BuildTire = {
       sku: tire.sku,
       brand: tire.brand,
