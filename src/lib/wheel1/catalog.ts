@@ -101,6 +101,13 @@ function toStandard(pcd: string): string {
   return pcd.replace(/^(\d+)x(.+)$/, "$1-$2");
 }
 
+/** "5x114.3" + "5x120" -> "5x114.3/5x120"; blanks dropped; undefined when both blank. */
+function joinPatterns(a: string | null, b: string | null, fmt: (s: string) => string = (s) => s): string | undefined {
+  const parts = [a, b].map((v) => (v ?? "").trim()).filter(Boolean);
+  const uniq = Array.from(new Set(parts));
+  return uniq.length ? uniq.map(fmt).join("/") : undefined;
+}
+
 // ─── Image resolution ────────────────────────────────────────────────────────
 
 /** Return the best available image URL: Vercel Blob first, CDN fallback. */
@@ -159,13 +166,18 @@ function mapRowToCandidate(row: Wheel1Row, requireStock = false): Wheel1Candidat
 
     diameter:              row.diameter,
     width:                 row.wheel_width,
-    offset:                row.offset_mm ?? "0",
+    // 2026-09-18 (audit): an unknown offset stays unknown. It used to default to "0",
+    // which fabricated a real-looking offset that geometry checks then certified.
+    offset:                n2u(row.offset_mm),
     centerbore:            n2u(row.hub),
     backspacing:           undefined,
 
     lug_count:             undefined,
-    bolt_pattern_metric:   n2u(row.pcd1),    // "5x114.3" — used by validateWheel()
-    bolt_pattern_standard: row.pcd1 ? toStandard(row.pcd1) : undefined, // "5-114.3"
+    // Dual-drilled wheels carry both patterns, in the techfeed convention "5x114.3/5x120"
+    // (parseBoltPatternKeys splits on "/"). Previously only pcd1 was exposed, so a wheel
+    // matched via pcd2 by the DB query failed every downstream bolt comparison.
+    bolt_pattern_metric:   joinPatterns(row.pcd1, row.pcd2),
+    bolt_pattern_standard: joinPatterns(row.pcd1, row.pcd2, toStandard),
 
     abbreviated_finish_desc: n2u(finish),
     fancy_finish_desc:       n2u(finish),

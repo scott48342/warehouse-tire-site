@@ -170,9 +170,11 @@ export function TirePageCompactHeader({
             )}
           </div>
           
-          {/* Verified fit badge */}
-          <span className="hidden sm:inline-flex rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-bold text-green-700">
-            Verified Fit
+          {/* 2026-09-18 (audit): the header has no per-result certification data, so it
+              must not claim "Verified Fit". Neutral vehicle-context pill only; per-tire
+              badges are gated by fitBadgeAllowed on the cards. */}
+          <span className="hidden sm:inline-flex rounded-full bg-neutral-100 px-2 py-0.5 text-[10px] font-bold text-neutral-600">
+            Vehicle selected
           </span>
           
           {/* Trust signals removed - free shipping only on orders over $1500 */}

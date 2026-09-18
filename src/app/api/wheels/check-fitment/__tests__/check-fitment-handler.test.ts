@@ -19,6 +19,8 @@ jest.mock("@/lib/techfeed/wheels", () => ({
   getTechfeedWheelsByStyle: jest.fn(),
   searchWheelsByStyleFuzzy: jest.fn(),
 }));
+jest.mock("@/lib/wheel1/catalog", () => ({ getWheel1WheelBySku: jest.fn() }));
+jest.mock("@/lib/wsi/catalog", () => ({ getWSIWheelBySku: jest.fn() }));
 jest.mock("@/lib/fitment-db/profileService", () => ({
   getFitmentProfileWithHdSupport: jest.fn(),
   parseWheelSizes: jest.fn((x: unknown) => (Array.isArray(x) ? x : [])),
@@ -32,7 +34,11 @@ import {
 } from "@/lib/techfeed/wheels";
 import { getFitmentProfileWithHdSupport, parseWheelSizes } from "@/lib/fitment-db/profileService";
 
+import { getWheel1WheelBySku } from "@/lib/wheel1/catalog";
+import { getWSIWheelBySku } from "@/lib/wsi/catalog";
 const mockBySku = getTechfeedWheelBySku as jest.Mock;
+const mockWheel1BySku = getWheel1WheelBySku as jest.Mock;
+const mockWsiBySku = getWSIWheelBySku as jest.Mock;
 const mockByStyle = getTechfeedWheelsByStyle as jest.Mock;
 const mockFuzzy = searchWheelsByStyleFuzzy as jest.Mock;
 const mockProfile = getFitmentProfileWithHdSupport as jest.Mock;
@@ -194,12 +200,43 @@ describe("GET /api/wheels/check-fitment - requested SKU is judged on its own rec
     expect(b.fits).toBeNull();
     expect(b.reason).toBe("sku_bolt_pattern_unknown");
   });
-  it("unknown SKU is fits:false wheel_not_found", async () => {
+  it("SKU in no supplier catalog is UNKNOWN (fits:null wheel_not_found), never a rejection", async () => {
     stubVehicleSearch(resolvedVehicle());
     mockBySku.mockResolvedValue(null);
+    mockWheel1BySku.mockResolvedValue(null);
+    mockWsiBySku.mockResolvedValue(null);
     const b = await call("sku=NOPE&year=2024&make=Ford&model=Mustang");
-    expect(b.fits).toBe(false);
+    expect(b.fits).toBeNull();
     expect(b.reason).toBe("wheel_not_found");
+    expect(mockWheel1BySku).toHaveBeenCalledWith("NOPE");
+    expect(mockWsiBySku).toHaveBeenCalledWith("NOPE");
+  });
+  it("Wheel-1 SKU (not in techfeed) is looked up and judged on its own record", async () => {
+    stubVehicleSearch(resolvedVehicle());
+    mockBySku.mockResolvedValue(null);
+    mockWheel1BySku.mockResolvedValue({ sku: "KR196-2912GB35", bolt_pattern_metric: "5x108", width: "8", offset: "35", style: "KR196" });
+    const b = await call("sku=KR196-2912GB35&year=2024&make=Ford&model=Mustang");
+    expect(b.fits).toBe(false);
+    expect(b.reason).toBe("sku_bolt_pattern_mismatch");
+    expect(mockWsiBySku).not.toHaveBeenCalled();
+  });
+  it("WSI dual-drilled SKU matches on its SECOND pattern (techfeed '/' convention)", async () => {
+    stubVehicleSearch(resolvedVehicle("5x114.3"));
+    mockBySku.mockResolvedValue(null);
+    mockWheel1BySku.mockResolvedValue(null);
+    mockWsiBySku.mockResolvedValue({ sku: "HFX4-0B04", bolt_pattern_metric: "5x120/5x114.3", width: "8", offset: "35", style: "HFX4" });
+    const b = await call("sku=HFX4-0B04&year=2024&make=Ford&model=Mustang");
+    expect(b.boltPatternCompatible).toBe(true);
+    expect(b.reason).not.toBe("sku_bolt_pattern_mismatch");
+    expect(b.wheelSource).toBe("wsi");
+  });
+  it("supplier SKU with unknown offset is unverified, not certified", async () => {
+    stubVehicleSearch(resolvedVehicle("5x114.3"));
+    mockBySku.mockResolvedValue(null);
+    mockWheel1BySku.mockResolvedValue({ sku: "W1-NOOFF", bolt_pattern_metric: "5x114.3", width: "8", offset: undefined, style: "X" });
+    const b = await call("sku=W1-NOOFF&year=2024&make=Ford&model=Mustang");
+    expect(b.fits).not.toBe(true);
+    expect(b.boltPatternCompatible).toBe(true);
   });
 });
 

@@ -1619,10 +1619,16 @@ export function WheelsGridWithSelection({
               </div>
               {/* Quick decision helper - refined */}
               <div className="hidden md:flex items-center gap-2 text-[11px] text-neutral-400">
-                <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
-                  <span className="text-green-600">✓</span> Verified Fitment
-                </span>
-                <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
+                {/* 2026-09-18 (audit): claim only when nothing blocks certification */}
+                {certificationBlock ? (
+                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
+                    {certificationBlock === "trim_required" ? "Select trim to confirm fit" : "Fit not yet confirmed"}
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
+                    <span className="text-green-600">&#10003;</span> Verified Fitment
+                  </span>
+                )}                <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
                   <span className="text-neutral-400">🔧</span> Hardware Included
                 </span>
               </div>

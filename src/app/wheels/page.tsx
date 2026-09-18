@@ -1749,7 +1749,12 @@ export default async function WheelsPage({
                 </div>
                 {/* Fitment badges - combined */}
                 <div className="flex items-center gap-2">
-                  {hasVehicle && !effectivelyBlocked && !data?.error && fitmentConfidence === "high" ? (
+                  {hasVehicle && !effectivelyBlocked && !data?.error && fitCertificationBlock ? (
+                    /* 2026-09-18 (audit): certification blocked (trim ambiguity / fallback) - neutral, never Verified/Good */
+                    <span className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-bold text-neutral-600">
+                      {fitCertificationBlock === "trim_required" ? "Select trim to confirm fit" : "Fit not yet confirmed"}
+                    </span>
+                  ) : hasVehicle && !effectivelyBlocked && !data?.error && fitmentConfidence === "high" ? (
                     <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-bold text-green-700">
                       Verified Fit
                     </span>

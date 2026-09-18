@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import { getTechfeedWheelBySku, getTechfeedWheelsByStyle, searchWheelsByStyleFuzzy } from "@/lib/techfeed/wheels";
+import { getTechfeedWheelBySku, getTechfeedWheelsByStyle, searchWheelsByStyleFuzzy, type TechfeedWheel } from "@/lib/techfeed/wheels";
+import { getWheel1WheelBySku } from "@/lib/wheel1/catalog";
+import { getWSIWheelBySku } from "@/lib/wsi/catalog";
 import { resolveOemOffset, computeWheelGeometry, type OemOffsetResult, type OemOffsetResolved, type VehicleClass } from "@/lib/fitment/geometryValidator";
 import { getFitmentProfileWithHdSupport } from "@/lib/fitment-db/profileService";
 import { parseWheelSizes } from "@/lib/fitment-db/profileService";
@@ -234,9 +236,16 @@ export async function GET(req: Request) {
       // 2026-09-18 (audit F13): a REQUESTED SKU is judged on its own record.
       // Another SKU of the same style fitting does not certify this one; at
       // most it is reported as alternativeSku alongside fits:false.
-      const wheel = await getTechfeedWheelBySku(sku);
+      // 2026-09-18 (audit): results come from three suppliers (WheelPros techfeed,
+      // Wheel-1, WSI) - same fall-through the PDP uses. A SKU in none of them is
+      // UNKNOWN (fits:null), not a rejection: the gallery treats fits:false as
+      // "does not fit" and every Wheel-1/WSI wheel was being falsely rejected.
+      let wheel: TechfeedWheel | null = await getTechfeedWheelBySku(sku);
+      let wheelSource: "wheelpros" | "wheel1" | "wsi" | null = wheel ? "wheelpros" : null;
+      if (!wheel) { wheel = await getWheel1WheelBySku(sku); if (wheel) wheelSource = "wheel1"; }
+      if (!wheel) { wheel = await getWSIWheelBySku(sku); if (wheel) wheelSource = "wsi"; }
       if (!wheel) {
-        return NextResponse.json({ fits: false, reason: "wheel_not_found" });
+        return NextResponse.json({ fits: null, reason: "wheel_not_found", boltPatternCompatible: null, matchingSku: sku });
       }
       styleKey = wheel.style || wheel.display_style_no || "";
       wheelBrand = wheel.brand_desc || wheel.brand_cd || "";
@@ -253,7 +262,7 @@ export async function GET(req: Request) {
         });
       }
       if (checkMatch(thisBp)) {
-        return NextResponse.json(certifyWheel({ sku, width: wheel.width, offset: wheel.offset }, thisBp, "exact_sku_match"));
+        return NextResponse.json({ ...certifyWheel({ sku, width: wheel.width, offset: wheel.offset }, thisBp, "exact_sku_match"), wheelSource });
       }
 
       // Requested SKU does not fit. A sibling is only a suggestion.

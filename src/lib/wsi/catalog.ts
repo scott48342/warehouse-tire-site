@@ -81,6 +81,12 @@ export function computeWSISellPrice(params: {
 function toStandard(bp: string): string {
   return bp.replace(/^(\d+)x(.+)$/, "$1-$2");
 }
+/** "6x135" + "6x139.7" -> "6x135/6x139.7"; blanks dropped; undefined when both blank. */
+function joinPatterns(a: string | null, b: string | null, fmt: (s: string) => string = (s) => s): string | undefined {
+  const parts = [a, b].map((v) => (v ?? "").trim()).filter(Boolean);
+  const uniq = Array.from(new Set(parts));
+  return uniq.length ? uniq.map(fmt).join("/") : undefined;
+}
 
 /** Fitment-search uses "5x114.3" format; DB stores same. */
 function toBPDb(raw: string): string {
@@ -122,14 +128,15 @@ function mapRowToCandidate(row: WSIWheelRow): WSICandidate | null {
 
     diameter:              row.diameter,
     width:                 row.width,
-    offset:                row.offset_mm ?? "0",
+    // 2026-09-18 (audit): unknown offset stays unknown (was fabricated as "0").
+    offset:                n2u(row.offset_mm),
     centerbore:            n2u(row.centerbore),
     backspacing:           undefined,
 
     lug_count:             undefined,
-    bolt_pattern_metric:   n2u(row.bp1),                           // "6x139.7"
-    bolt_pattern_standard: row.bp1 ? toStandard(row.bp1) : undefined, // "6-139.7"
-
+    // Dual-drilled: expose both patterns in techfeed convention "6x135/6x139.7".
+    bolt_pattern_metric:   joinPatterns(row.bp1, row.bp2),
+    bolt_pattern_standard: joinPatterns(row.bp1, row.bp2, toStandard),
     abbreviated_finish_desc: n2u(finish),
     fancy_finish_desc:       n2u(finish),
     box_label_desc:          undefined,

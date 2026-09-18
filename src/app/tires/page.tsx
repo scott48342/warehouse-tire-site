@@ -464,7 +464,8 @@ function getDisplayPrice(tire: Tire): number | null {
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return "http://localhost:3000";
+  // 2026-09-18: honour the port the dev server is actually on (isolated preview :3002)
+  return `http://localhost:${process.env.PORT || "3000"}`;
 }
 
 async function fetchFitment(params: Record<string, string | undefined>) {

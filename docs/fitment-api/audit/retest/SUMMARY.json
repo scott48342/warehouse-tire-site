@@ -1,0 +1,126 @@
+{
+  "base": "http://localhost:3002",
+  "at": "2026-09-18T20:04:28.893Z",
+  "pass": 24,
+  "fail": 0,
+  "results": [
+    {
+      "name": "vehicles/search Mustang: 200",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "vehicles/search Mustang: no Mach-E leakage",
+      "pass": true,
+      "detail": "clean"
+    },
+    {
+      "name": "vehicles/search Mustang: no 5x108 (Mach-E) bolt",
+      "pass": true
+    },
+    {
+      "name": "vehicles/search Mustang: exposes trimRequired/certifiable flags",
+      "pass": true,
+      "detail": "trimRequired=true certifiable=false"
+    },
+    {
+      "name": "check-fitment Mustang D68117906545: 200",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "check-fitment Mustang D68117906545: fits !== true",
+      "pass": true,
+      "detail": "fits=null reason=trim_required_for_geometry"
+    },
+    {
+      "name": "vehicles/search M4: 200",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "vehicles/search M4 (no trim): certifiable:false",
+      "pass": true,
+      "detail": "certifiable=false trimRequired=true"
+    },
+    {
+      "name": "fitment-search M4 (no trim): 200",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "fitment-search M4 (no trim): fitment.certificationBlock = trim_required",
+      "pass": true,
+      "detail": "block=trim_required trimRequired=true certifiable=false resolution=trim_required conflicting="
+    },
+    {
+      "name": "fitment-search M4 (no trim): showGuaranteedFit false",
+      "pass": true,
+      "detail": "false"
+    },
+    {
+      "name": "fitment-search M4 (no trim): zero surefit/specfit items",
+      "pass": true,
+      "detail": "items=50 claims=0"
+    },
+    {
+      "name": "fitment-search M4 (no trim): zero certified:true items",
+      "pass": true,
+      "detail": "certified=0"
+    },
+    {
+      "name": "check-fitment M4 (no trim): 200",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "check-fitment M4 (no trim): fits !== true",
+      "pass": true,
+      "detail": "fits=null reason=trim_required_for_geometry boltPatternCompatible=true"
+    },
+    {
+      "name": "check-fitment M4 (no trim): reason mentions trim",
+      "pass": true,
+      "detail": "trim_required_for_geometry"
+    },
+    {
+      "name": "tires/search Raptor 17: 200",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "tires/search Raptor 17: results returned",
+      "pass": true,
+      "detail": "n=120"
+    },
+    {
+      "name": "tires/search Raptor 17: fitBadgeAllowed never true (unverified source)",
+      "pass": true,
+      "detail": "badge=0"
+    },
+    {
+      "name": "tires/search Raptor 17: requiredLoadIndexSource = vehicle_record_unverified only",
+      "pass": true,
+      "detail": "vehicle_record_unverified"
+    },
+    {
+      "name": "tires/search Raptor 17: below-required tires are packageEligible:false",
+      "pass": true,
+      "detail": "below=85 stillEligible=0 required=119"
+    },
+    {
+      "name": "tires/search Raptor 17: no 'OE load'/'OEM load'/'factory load' labels",
+      "pass": true
+    },
+    {
+      "name": "packages/recommended Raptor: 200/204-ish",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "packages/recommended Raptor: no package with below-required tire",
+      "pass": true,
+      "detail": "packages=0 bad=0"
+    }
+  ]
+}
