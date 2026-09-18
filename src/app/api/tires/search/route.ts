@@ -145,6 +145,12 @@ async function cacheTireWebSkus(
   tires: TireResult[],
   size: string
 ): Promise<void> {
+  // R1 preview isolation: skip DB writes when FITMENT_PREVIEW_READONLY=1
+  // (combined with session-level default_transaction_read_only=on for defense in depth)
+  if (process.env.FITMENT_PREVIEW_READONLY === "1") {
+    console.log(`[tires/search] FITMENT_PREVIEW_READONLY: skipping tireweb_sku_cache write for ${tires.length} tires`);
+    return;
+  }
   if (tires.length === 0) return;
   
   // Build upsert values - now with 18 columns
