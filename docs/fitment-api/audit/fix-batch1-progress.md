@@ -82,3 +82,21 @@ px tsc --noEmit -p tsconfig.json => 0 errors.
 
 ## 14:50 - R6 UNFIXED
 - Dev server on :3002 not started; the retest URLs below were NOT hit (budget). R1 isolation is in place so the next worker can run set PORT=3002 && npm run dev immediately.
+
+## 14:30 - Parent closeout (Clawd, main session) - READY FOR REVIEW
+Worker sessions terminated and deleted (both were revived by queued turns after Stop; no further writers). Single writer from here.
+
+**Post-handoff fixes by parent**
+- cc5e19a0 R4 addendum: itBadgeAllowed now requires a VERIFIED requirement source (VERIFIED_LOAD_SOURCES, currently only erified_manufacturer, which NO production caller passes) AND tire meets. ehicle_record_unverified (the only source today) can never certify, even on equal/higher index; loadIndexOk (compatibility) and itBadgeAllowed (certification) are separate. itBlockReason = load_index_unverified when compatible-but-unverified. TireStyleCard amber "below required" warning now keyed on loadIndexOk === false (was itBadgeAllowed === false, which would have mis-warned every compatible tire). nnotateLoadIndex trim gate applies whenever loadIndexOk !== false. 9 regression tests added.
+- 15384623 (worker follow-up run) R1 read-only enforcement: .env.local POSTGRES_URL carries options=-c default_transaction_read_only=on; FITMENT_PREVIEW_READONLY=1 skips the 	ireweb_sku_cache upsert; proof script scripts/audit/batch1-readonly-proof.mjs.
+
+**R1 proof (parent re-ran 14:26, 
+ode --env-file=.env.local scripts/audit/batch1-readonly-proof.mjs):**
+default_transaction_read_only = on; role 
+eondb_owner rolsuper=false rolcreatedb=true; 	ireweb_sku_cache count 35728; UPDATE ... WHERE false inside a rolled-back txn -> **BLOCKED: "cannot execute UPDATE in a read-only transaction"**. All app DB access is pg Pool via drizzle-orm/node-postgres (src/lib/db/pool.ts, fitment-db/db.ts, analytics/db.ts, visualizer/db.ts, db.ts) so the session option applies to every route. Worker's follow-up also hit /api/tires/search on :3002 with before/after count unchanged (35728). Other writers found by grep on lib/fitment* request paths (all blocked by the session option, none exercised): profileService modificationAliases upsert (L444-452), unresolvedFitmentTracker, missingFitmentService, researchedFitmentCache, oemPackageChoices upsert, gapAlerts.
+
+**Tests:** 
+px jest src/lib/tires/__tests__/loadIndexGate.test.ts src/lib/fitment-db/__tests__/trimAmbiguity.test.ts src/lib/fitment-db/__tests__/modelMatch.test.ts -> **3 suites, 60 passed, 0 failed**; 
+px tsc --noEmit -> 0 errors.
+
+**Still UNFIXED / for reviewer:** endpoint/integration tests (no route-mock layer in repo); full existing jest suite not run; :3002 retest URLs not hit by parent (dev server was started and stopped by the worker follow-up for the tires/search write proof only); fitment-search wheel-card surefit/specfit badge not suppressed when certifiable:false (PARTIAL); /api/fitment/lifted flags not consumed; getOemTireSizesByFamily family-ILIKE reachability note.
