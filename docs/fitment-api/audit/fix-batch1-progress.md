@@ -112,3 +112,10 @@ px tsc --noEmit -> 0 errors.
 - Jest: check-fitment 39/39; fitment-db + fitment-search 205/205 tests; 2 suite-level fails (staggeredCanonical, staggeredFitment) are in the 11-suite baseline.
 - OWNERSHIP: Jake (src/lib/jake/*, src/components/jake/*, Jake tests/API guards) = Codex. I do not add/commit those paths.
 - :3002 preview restarted after gateway restart (session oceanic-meadow, readonly flags).
+
+## 2026-09-18 16:52 - 77a31b11 BATCH 2 (H1 lifted flow) - REVIEW-READY
+- Flotation recovery in tireWebTireToUnified (0/0R17 -> 35X12.50R17), 11 tests. Lifted links carry liftedTireSizes + liftedSource; /tires seeds lifted list from size=. Lift ctx on all 48/48 PDP links.
+- Assurance copy gated: TireCard/TireStyleCard "Fits" (fitBadgeAllowed), LiftedTireRecommendations guarantee, PDP "Guaranteed fitment" x4, TPMS direct-fit, Cart "Fits" (new CartItem.fitVerified, default neutral).
+- Live: lifted page 35x12.50R17 x670 / 245-70R17 x0; API 40/40 correct; retest 24/24; tsc clean.
+- Jake regressions J1-J4 in docs/fitment-api/audit/jake/REGRESSIONS.md. J1 = deployment blocker. Jake owned by Clawd from 16:24.
+- NEXT: Jake J1-J4, then Batch 3 staggered (H2/H4), Batch 4 SKU continuity, Batch 5 packages.
