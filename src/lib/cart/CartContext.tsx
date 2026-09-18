@@ -104,6 +104,12 @@ export type CartWheelItem = {
     trim?: string;
     modification?: string;
   };
+  /**
+   * Audit 2026-09-18: true ONLY when the add-to-cart path had a verified fit
+   * (fitBadgeAllowed / certified result). Absent/false => cart shows a neutral
+   * "fit not confirmed" line instead of the green "Fits <vehicle>" claim.
+   */
+  fitVerified?: boolean;
   staggered?: boolean;
   /** Supplier source (e.g., "wheelpros", "wheel1") - for internal use only */
   source?: string;
@@ -134,6 +140,8 @@ export type CartTireItem = {
     trim?: string;
     modification?: string;
   };
+  /** See CartWheelItem.fitVerified - only a verified fit may claim "Fits". */
+  fitVerified?: boolean;
   staggered?: boolean;
   /** Supplier source (e.g., "tireweb:atd", "km") - for internal use only */
   source?: string;

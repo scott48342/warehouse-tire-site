@@ -300,6 +300,8 @@ function ResultsCard({
       params.set("liftedSource", "lifted");
       params.set("liftedPreset", liftPreset.id);
       params.set("liftedInches", String(liftPreset.liftInches));
+      // Audit H1: without this, /tires fell back to OEM sizes and replaced `size` with stock.
+      params.set("liftedTireSizes", size);
     }
     return `/tires?${params.toString()}`;
   };
@@ -768,13 +770,13 @@ export default function LiftedPage() {
                 {/* Quick Action Buttons */}
                 <div className="grid grid-cols-2 gap-3">
                   <Link
-                    href={`/tires?year=${selectedVehicle.year}&make=${encodeURIComponent(selectedVehicle.make)}&model=${encodeURIComponent(selectedVehicle.model)}${selectedVehicle.trim ? `&trim=${encodeURIComponent(selectedVehicle.trim)}` : ""}${selectedLift.id !== "stock" ? `&liftedPreset=${selectedLift.id}&liftedInches=${selectedLift.liftInches}` : ""}`}
+                    href={`/tires?year=${selectedVehicle.year}&make=${encodeURIComponent(selectedVehicle.make)}&model=${encodeURIComponent(selectedVehicle.model)}${selectedVehicle.trim ? `&trim=${encodeURIComponent(selectedVehicle.trim)}` : ""}${selectedLift.id !== "stock" ? `&liftedSource=lifted&liftedPreset=${selectedLift.id}&liftedInches=${selectedLift.liftInches}${fitmentData.shoppingSuggestions?.tireSizes?.length ? `&liftedTireSizes=${encodeURIComponent(fitmentData.shoppingSuggestions.tireSizes.join(","))}` : ""}` : ""}`}
                     className="flex items-center justify-center gap-2 h-14 rounded-xl bg-green-600 text-white font-bold text-base hover:bg-green-700 transition-colors"
                   >
                     🛞 Shop Tires
                   </Link>
                   <Link
-                    href={`/wheels?year=${selectedVehicle.year}&make=${encodeURIComponent(selectedVehicle.make)}&model=${encodeURIComponent(selectedVehicle.model)}${selectedVehicle.trim ? `&trim=${encodeURIComponent(selectedVehicle.trim)}` : ""}${selectedLift.id !== "stock" ? `&liftedPreset=${selectedLift.id}&liftedInches=${selectedLift.liftInches}` : ""}`}
+                    href={`/wheels?year=${selectedVehicle.year}&make=${encodeURIComponent(selectedVehicle.make)}&model=${encodeURIComponent(selectedVehicle.model)}${selectedVehicle.trim ? `&trim=${encodeURIComponent(selectedVehicle.trim)}` : ""}${selectedLift.id !== "stock" ? `&liftedSource=lifted&liftedPreset=${selectedLift.id}&liftedInches=${selectedLift.liftInches}` : ""}`}
                     className="flex items-center justify-center gap-2 h-14 rounded-xl bg-blue-600 text-white font-bold text-base hover:bg-blue-700 transition-colors"
                   >
                     ⚙️ Shop Wheels

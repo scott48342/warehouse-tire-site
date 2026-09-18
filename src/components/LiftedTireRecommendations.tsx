@@ -193,7 +193,7 @@ export function LiftedTireRecommendations({
           <div className="flex flex-wrap items-center gap-4 text-xs text-neutral-600">
             <span className="flex items-center gap-1">
               <span className="text-green-500">✓</span>
-              <strong>Fitment guaranteed</strong> — no guesswork
+              <strong>Sizes for your lift</strong> - fit is confirmed per tire
             </span>
           </div>
         </div>
@@ -312,9 +312,9 @@ export function TireTrustBar({ className = "" }: { className?: string }) {
       <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
         <span className="flex items-center gap-2 text-green-800">
           <span className="text-green-600">✓</span>
-          <strong>Fitment Guarantee</strong>
-          <span className="text-green-600">—</span>
-          Everything shown will fit
+          <strong>Lifted sizing</strong>
+          <span className="text-green-600">-</span>
+          Sizes matched to your lift; fit is confirmed on each tire
         </span>
       </div>
     </div>

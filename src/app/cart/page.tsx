@@ -153,11 +153,32 @@ function WheelCartItem({
         {/* SKU / Part Number */}
         <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
 
+        {/* Audit 2026-09-18: the cart claimed "Fits <vehicle>" for any item carrying a vehicle. Only a
+
+            verified fit (item.fitVerified) may say so; otherwise the shopper sees an honest neutral line. */}
+
         {item.vehicle ? (
-          <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-green-50 border border-green-200 px-3 py-1 text-xs font-medium text-green-800">
-            <span className="text-green-600">✓</span>
-            Fits {item.vehicle.year} {item.vehicle.make} {item.vehicle.model}
-          </div>
+
+          item.fitVerified === true ? (
+
+            <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-green-50 border border-green-200 px-3 py-1 text-xs font-medium text-green-800">
+
+              <span className="text-green-600">&#10003;</span>
+
+              Fits {item.vehicle.year} {item.vehicle.make} {item.vehicle.model}
+
+            </div>
+
+          ) : (
+
+            <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-600" data-testid="cart-fit-unconfirmed">
+
+              For {item.vehicle.year} {item.vehicle.make} {item.vehicle.model} &middot; fit not yet confirmed
+
+            </div>
+
+          )
+
         ) : null}
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-y-3">
@@ -233,11 +254,32 @@ function TireCartItem({
         {/* SKU / Part Number */}
         <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
 
+        {/* Audit 2026-09-18: the cart claimed "Fits <vehicle>" for any item carrying a vehicle. Only a
+
+            verified fit (item.fitVerified) may say so; otherwise the shopper sees an honest neutral line. */}
+
         {item.vehicle ? (
-          <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-green-50 border border-green-200 px-3 py-1 text-xs font-medium text-green-800">
-            <span className="text-green-600">✓</span>
-            Fits {item.vehicle.year} {item.vehicle.make} {item.vehicle.model}
-          </div>
+
+          item.fitVerified === true ? (
+
+            <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-green-50 border border-green-200 px-3 py-1 text-xs font-medium text-green-800">
+
+              <span className="text-green-600">&#10003;</span>
+
+              Fits {item.vehicle.year} {item.vehicle.make} {item.vehicle.model}
+
+            </div>
+
+          ) : (
+
+            <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-600" data-testid="cart-fit-unconfirmed">
+
+              For {item.vehicle.year} {item.vehicle.make} {item.vehicle.model} &middot; fit not yet confirmed
+
+            </div>
+
+          )
+
         ) : null}
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-y-3">

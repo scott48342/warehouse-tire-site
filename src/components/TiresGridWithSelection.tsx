@@ -101,7 +101,20 @@ type ViewParams = {
   wheelSku?: string;
   wheelDia?: string;
   selectedSize?: string;
+  /** Lift-build context forwarded to detail pages (review 2026-09-18: PDP/cart lost the lift) */
+  liftedSource?: string;
+  liftedPreset?: string;
+  liftedInches?: string;
+  liftedTireSizes?: string;
 };
+
+const LIFTED_VIEW_KEYS = ["liftedSource", "liftedPreset", "liftedInches", "liftedTireSizes"] as const;
+function appendLiftedParams(params: URLSearchParams, vp: ViewParams): void {
+  for (const k of LIFTED_VIEW_KEYS) {
+    const v = vp[k];
+    if (v) params.set(k, v);
+  }
+}
 
 type TiresGridProps = {
   tires: TireItem[];
@@ -230,6 +243,7 @@ function buildTireViewHref(tire: TireItem, size: string, vp: ViewParams): string
   if (vp.make)  params.set("make",  vp.make);
   if (vp.model) params.set("model", vp.model);
   if (vp.trim)  params.set("trim",  vp.trim);
+  appendLiftedParams(params, vp);
   if (source === "km") return `/tires/km/${encodeURIComponent(sku)}?${params.toString()}`;
   if (source?.startsWith("tireweb")) {
     params.set("source", "tireweb");
@@ -283,6 +297,7 @@ function TireCard({
     if (viewParams.make) params.set("make", viewParams.make);
     if (viewParams.model) params.set("model", viewParams.model);
     if (viewParams.trim) params.set("trim", viewParams.trim);
+    appendLiftedParams(params, viewParams);
     
     // Route based on source
     if (source === "km") {

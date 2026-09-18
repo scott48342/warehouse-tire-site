@@ -147,7 +147,7 @@ export function TPMSSuggestion({
               )}
             </div>
             <p className="mt-1 text-sm text-neutral-600">
-              Direct-fit sensors available • Pre-programmed & ready to install
+              Pre-programmed sensors available - compatibility confirmed for your vehicle at install
             </p>
             <div className="mt-3 flex items-center gap-3">
               <button

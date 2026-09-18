@@ -1355,7 +1355,7 @@ export default async function TiresPage({
   
   // Fall back liftedTireSizes to targetTireSizes for old URLs
   const effectiveTireSizesRaw = liftedTireSizesRaw || targetTireSizesRaw;
-  const liftedTireSizes = effectiveTireSizesRaw ? effectiveTireSizesRaw.split(",").filter(Boolean) : [];
+  const liftedTireSizesFromParam = effectiveTireSizesRaw ? effectiveTireSizesRaw.split(",").filter(Boolean) : [];
   
   const liftedTireDiaMinRaw = safeString(Array.isArray(sp.liftedTireDiaMin) ? sp.liftedTireDiaMin[0] : sp.liftedTireDiaMin);
   const liftedTireDiaMin = liftedTireDiaMinRaw ? parseInt(liftedTireDiaMinRaw, 10) : 0;
@@ -1365,6 +1365,25 @@ export default async function TiresPage({
   // Lifted build is active when we have valid lifted context from URL params
   // liftedSource can be "lifted" (from /lifted page), "manual" (user-selected), or inferred from buildType
   const isLiftedBuild = Boolean(liftedSource) && Boolean(liftedPreset) && liftedInches > 0;
+
+  // Audit 2026-09-18 H1: the /lifted per-size links pass the recommended size as `size=`
+  // (plus liftedSource/Preset/Inches) but not `liftedTireSizes=`. With an empty lifted list
+  // the strict set fell back to OEM sizes, and `size` was then rejected by the allowed-set
+  // check below and silently replaced by allowedSizes[0] - the STOCK size. In a lifted
+  // build an explicit `size` is the lifted recommendation, so seed the lifted list from it.
+  const liftedTireSizes: string[] = liftedTireSizesFromParam.length > 0
+    ? liftedTireSizesFromParam
+    : (isLiftedBuild && sizeParam ? [sizeParam] : []);
+
+  // Lift context forwarded on every tire detail link (review 2026-09-18: PDP/cart lost the lift).
+  const liftedQuery: Record<string, string> = isLiftedBuild
+    ? {
+        liftedSource: liftedSource,
+        liftedPreset: liftedPreset,
+        liftedInches: String(liftedInches),
+        ...(liftedTireSizes.length ? { liftedTireSizes: liftedTireSizes.join(",") } : {}),
+      }
+    : {};
   
   if (isLiftedBuild) {
     console.log('[tires/page] 🚀 LIFTED BUILD DETECTED:', {
@@ -3799,6 +3818,7 @@ export default async function TiresPage({
                   wheelSku,
                   wheelDia,
                   selectedSize,
+                  ...liftedQuery,
                 }}
                 selectedWheel={wheelSku ? {
                   sku: wheelSku,
@@ -3944,9 +3964,9 @@ export default async function TiresPage({
                           </div>
                         </div>
                         
-                        {/* Fits vehicle */}
-                        <div className="mb-2 text-xs text-green-700">
-                          ✓ Fits {year} {make} {model}
+                        {/* Audit 2026-09-18: staggered pairs are not per-tire certified here - neutral, not a fit claim */}
+                        <div className="mb-2 text-xs text-neutral-500">
+                          Sized for {year} {make} {model} · fit not yet confirmed
                         </div>
                         
                         {/* Stock & availability */}
@@ -4120,6 +4140,7 @@ export default async function TiresPage({
                         isPackageFlow={isPackageFlow}
                         popularitySignal={popularitySignalsMap.get(pick.tire.partNumber || pick.tire.mfgPartNumber || '')}
                         isLocalMode={isLocalMode}
+                        liftedQuery={liftedQuery}
                       />
                     </div>
                   ))}
@@ -4174,6 +4195,7 @@ export default async function TiresPage({
                     isPackageFlow={isPackageFlow}
                     popularitySignal={popularitySignalsMap.get(t.partNumber || t.mfgPartNumber || '')}
                     isLocalMode={isLocalMode}
+                    liftedQuery={liftedQuery}
                   />
                 ))
               ) : (
@@ -4372,6 +4394,7 @@ function TireCard({
   isPackageFlow,
   popularitySignal,
   isLocalMode,
+  liftedQuery,
 }: {
   tire: Tire;
   stripSizeFromName: (name: string) => string;
@@ -4398,6 +4421,8 @@ function TireCard({
   popularitySignal?: PopularitySignal | null;
   /** Local mode flag for out-the-door pricing */
   isLocalMode?: boolean;
+  /** Lift-build context (liftedSource/Preset/Inches/TireSizes) carried onto detail links */
+  liftedQuery?: Record<string, string>;
 }) {
   // Check rebate eligibility at MODEL level - find best matching rebate from array
   const brandKey = String(t.brand || "").trim().toLowerCase();
@@ -4502,7 +4527,7 @@ function TireCard({
       {t.source === "wp" && t.mfgPartNumber ? (
         <Link
           href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
-            year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia,
+            year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia, ...(liftedQuery || {}),
           }).toString()}`}
           className="absolute inset-0 z-0"
           aria-label={`View ${displayTitle}`}
@@ -4510,7 +4535,7 @@ function TireCard({
       ) : t.source === "km" && t.partNumber ? (
         <Link
           href={`/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
-            year, make, model, trim, modification, size: selectedSize, sort,
+            year, make, model, trim, modification, size: selectedSize, sort, ...(liftedQuery || {}),
           }).toString()}`}
           className="absolute inset-0 z-0"
           aria-label={`View ${displayTitle}`}
@@ -4518,7 +4543,7 @@ function TireCard({
       ) : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber ? (
         <Link
           href={`/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
-            year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb",
+            year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb", ...(liftedQuery || {}),
           }).toString()}`}
           className="absolute inset-0 z-0"
           aria-label={`View ${displayTitle}`}
@@ -4557,7 +4582,7 @@ function TireCard({
               type="tire"
               sku={t.mfgPartNumber}
               label={`${t.brand || "Tire"} ${displayTitle}`}
-              href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
+              href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia, ...(liftedQuery || {}) }).toString()}`}
               imageUrl={t.imageUrl}
             />
           ) : null}
@@ -4711,10 +4736,14 @@ function TireCard({
         </div>
       </div>
 
-      {/* Fitment confirmation - single line */}
+      {/* Fitment line - single line. Audit 2026-09-18 (lifted review): the green "Fits <vehicle>" claim
+          showed on every card, even beside the neutral "Fitment Unverified" pill. It now requires the same
+          verified-fit gate the card badge uses (fitBadgeAllowed from /api/tires/search); otherwise neutral copy. */}
       {hasVehicle ? (
-        <div className="relative z-10 mt-3 text-[11px] font-medium text-green-700">
-          <span className="text-green-600">✓</span> Fits {year} {make} {model}
+        <div className={`relative z-10 mt-3 text-[11px] font-medium ${(t as { fitBadgeAllowed?: boolean }).fitBadgeAllowed === true ? "text-green-700" : "text-neutral-500"}`}>
+          {(t as { fitBadgeAllowed?: boolean }).fitBadgeAllowed === true
+            ? <><span className="text-green-600">✓</span> Fits {year} {make} {model}</>
+            : <>Sized for {year} {make} {model} · fit not yet confirmed</>}
           {(() => {
             const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
             const tireRimDia = (() => {
@@ -4891,11 +4920,11 @@ function TireCard({
 
         <Link
           href={t.source === "wp" && t.mfgPartNumber
-            ? `/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
+            ? `/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, ...(liftedQuery || {}) }).toString()}`
             : t.source === "km" && t.partNumber
-              ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
+              ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, ...(liftedQuery || {}) }).toString()}`
               : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber
-                ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb" }).toString()}`
+                ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb", ...(liftedQuery || {}) }).toString()}`
                 : "#"
           }
           className="rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"

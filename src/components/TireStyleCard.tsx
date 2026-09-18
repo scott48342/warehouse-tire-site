@@ -458,8 +458,9 @@ export function TireStyleCard({
           </div>
         )}
 
-        {/* Vehicle fitment confirmation */}
-        {hasVehicle && (
+        {/* Vehicle fitment confirmation. Audit 2026-09-18 (lifted review): this said "Fits <vehicle>"
+            on every card, even beside the neutral "Fitment Unverified" pill. Same gate as the pill. */}
+        {hasVehicle && fitBadgeAllowed === true && (
           <div className="mt-2 text-[11px] font-medium text-green-700">
             <span className="text-green-600">✓</span> Fits {year} {make} {model_}
             {wheelDia && (

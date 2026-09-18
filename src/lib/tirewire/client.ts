@@ -523,10 +523,38 @@ export interface UnifiedTire {
   };
 }
 
+/**
+ * Flotation / LT sizes (35X12.50R17LT, 37x13.50R22, 33X1250R20) come back from TireWeb
+ * with Width=0 and AspectRatio=0 - the size only survives in Name/Description.
+ * Audit 2026-09-18 H1: every flotation result rendered as "0/0R17" / "0017".
+ * Returns the normalized display size + 8-digit compact (35125017) or null.
+ */
+export function parseFlotationFromText(text: string | null | undefined): { size: string; simpleSize: string; rim: number } | null {
+  const v = String(text || "").toUpperCase();
+  // {dia}X{width}[.dd]R{rim}  (separator X or /, optional space, optional R, optional LT suffix)
+  const m = v.match(/\b(\d{2})\s*[X\/]\s*(\d{1,2})(?:\.(\d{1,2}))?\s*R?\s*(\d{2})(?:LT)?\b/);
+  if (!m) return null;
+  const dia = Number(m[1]);
+  const rim = Number(m[4]);
+  // Sanity: flotation overall diameters 26-46", rims 14-24", width 6-16"
+  const widthWhole = Number(m[2]);
+  if (dia < 26 || dia > 46 || rim < 14 || rim > 24 || widthWhole < 6 || widthWhole > 16) return null;
+  const dec = (m[3] || "").padEnd(2, "0");
+  return {
+    size: `${m[1]}X${m[2]}.${dec}R${m[4]}`,          // 35X12.50R17
+    simpleSize: `${m[1]}${m[2]}${dec}${m[4]}`,        // 35125017
+    rim,
+  };
+}
+
 export function tireWebTireToUnified(tire: TireWebTire, provider: string): UnifiedTire {
+  // Flotation sizes arrive with width/aspect = 0; recover from the text before formatting.
+  const flotation = (!(tire.width > 0) || !(tire.aspectRatio > 0))
+    ? parseFlotationFromText(tire.name) ?? parseFlotationFromText(tire.description)
+    : null;
   // Preserve decimal rims (19.5/22.5/24.5) — Math.round(19.5) would mislabel as R20
   const rimLabel = tire.rim % 1 !== 0 ? tire.rim.toFixed(1) : String(Math.round(tire.rim));
-  const size = `${Math.round(tire.width)}/${Math.round(tire.aspectRatio)}R${rimLabel}`;
+  const size = flotation ? flotation.size : `${Math.round(tire.width)}/${Math.round(tire.aspectRatio)}R${rimLabel}`;
   
   // Image URL will be resolved later via getCachedTireImage()
   // Store the patternId for batch lookup in the caller
@@ -568,8 +596,8 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
     },
     imageUrl,
     size,
-    simpleSize: `${Math.round(tire.width)}${Math.round(tire.aspectRatio)}${rimLabel.replace(".", "")}`,
-    rimDiameter: tire.rim % 1 !== 0 ? tire.rim : Math.round(tire.rim),
+    simpleSize: flotation ? flotation.simpleSize : `${Math.round(tire.width)}${Math.round(tire.aspectRatio)}${rimLabel.replace(".", "")}`,
+    rimDiameter: flotation ? (tire.rim > 0 ? Math.round(tire.rim) : flotation.rim) : (tire.rim % 1 !== 0 ? tire.rim : Math.round(tire.rim)),
     tireLibraryId: tire.id || null,
     source: `tireweb:${provider.replace("tireweb_", "")}`, // FIXED: "tireweb:atd" not "tirewire:atd"
     badges: {
