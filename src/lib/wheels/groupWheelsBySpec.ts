@@ -39,8 +39,10 @@ export interface WheelVariantInput {
   fitmentClass?: "surefit" | "specfit" | "extended";
   pair?: {
     staggered: boolean;
-    front: { sku: string; diameter?: string; width?: string; offset?: string };
-    rear?: { sku: string; diameter?: string; width?: string; offset?: string };
+    front: { sku: string; diameter?: string; width?: string; offset?: string; finish?: string; price?: number | null };
+    rear?: { sku: string; diameter?: string; width?: string; offset?: string; finish?: string; price?: number | null };
+    /** 2 front + 2 rear when both prices known; null otherwise (audit H2) */
+    setPrice?: number | null;
   };
   // Fitment guidance (2026-04-07)
   fitmentGuidance?: {

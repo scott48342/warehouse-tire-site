@@ -97,6 +97,79 @@ async function fetchWheelBySku(sku: string) {
   return res.json();
 }
 
+/**
+ * Resolve the REAR wheel of a staggered set (audit H2, 2026-09-18).
+ * Same lookup chain as the main item (WheelPros API -> TechFeed -> Wheel-1 -> WSI)
+ * so the PDP can price 2 front + 2 rear and add both SKUs to the cart.
+ * Returns null when the SKU cannot be resolved; price is null when unknown -
+ * the buy box then refuses to invent a set total.
+ */
+async function resolveRearWheel(rearSku: string): Promise<{
+  sku: string;
+  price: number | null;
+  diameter?: string;
+  width?: string;
+  offset?: string;
+  finish?: string;
+} | null> {
+  try {
+    const data = await fetchWheelBySku(rearSku);
+    const maybe = data as { items?: unknown[]; results?: unknown[] };
+    const raw: unknown[] = Array.isArray(maybe?.items) ? maybe.items : (Array.isArray(maybe?.results) ? maybe.results : []);
+    const it = raw[0] as WheelProsItem | undefined;
+    if (it) {
+      const msrp = it?.prices?.msrp;
+      const first = Array.isArray(msrp) ? msrp[0] : undefined;
+      const n = first?.currencyAmount != null ? Number(first.currencyAmount) : NaN;
+      const props = (it.properties || {}) as Record<string, unknown>;
+      return {
+        sku: it.sku || rearSku,
+        price: Number.isFinite(n) && n > 0 ? n : null,
+        diameter: props.diameter != null ? String(props.diameter) : undefined,
+        width: props.width != null ? String(props.width) : undefined,
+        offset: props.offset != null ? String(props.offset) : undefined,
+        finish: (props.finish as string) || (props.abbreviated_finish_desc as string) || (props.fancy_finish_desc as string) || undefined,
+      };
+    }
+    let tf: any = await getTechfeedWheelBySku(rearSku);
+    if (!tf) {
+      const w1 = await getWheel1WheelBySku(rearSku);
+      if (w1) {
+        const sell = computeWheel1SellPrice({
+          msrp:       (w1 as Wheel1Candidate)._msrpNum,
+          mapPrice:   (w1 as Wheel1Candidate)._mapNum,
+          dealerCost: (w1 as Wheel1Candidate)._dealerCost ?? null,
+          diameter:   Number(w1.diameter) || 0,
+        });
+        tf = { ...w1, msrp: sell > 0 ? String(sell) : w1.msrp };
+      }
+    }
+    if (!tf) {
+      const wsi = await getWSIWheelBySku(rearSku);
+      if (wsi) {
+        const sell = computeWSISellPrice({
+          dealerCost:   (wsi as WSICandidate)._dealerCost,
+          catalogPrice: (wsi as WSICandidate)._catalogPrice,
+        });
+        tf = { ...wsi, msrp: sell > 0 ? String(sell) : wsi.msrp };
+      }
+    }
+    if (!tf) return null;
+    const n = tf.msrp != null ? Number(tf.msrp) : NaN;
+    return {
+      sku: tf.sku || rearSku,
+      price: Number.isFinite(n) && n > 0 ? n : null,
+      diameter: tf.diameter != null ? String(tf.diameter) : undefined,
+      width: tf.width != null ? String(tf.width) : undefined,
+      offset: tf.offset != null ? String(tf.offset) : undefined,
+      finish: tf.abbreviated_finish_desc || tf.fancy_finish_desc || undefined,
+    };
+  } catch (err) {
+    console.error("[wheels/[sku]] rear wheel resolve failed (non-fatal):", err);
+    return null;
+  }
+}
+
 async function fetchFitment(params: Record<string, string | undefined>) {
   const sp = new URLSearchParams();
   for (const [k, v] of Object.entries(params)) {
@@ -358,6 +431,13 @@ export default async function WheelDetailPage({
   const rearDiaParam = safeString(Array.isArray((sp as any).rearDia) ? (sp as any).rearDia[0] : (sp as any).rearDia);
   const rearWidthParam = safeString(Array.isArray((sp as any).rearWidth) ? (sp as any).rearWidth[0] : (sp as any).rearWidth);
   const isStaggeredPDP = Boolean(rearSkuParam || (rearDiaParam && rearWidthParam));
+  const rearOffsetParam = safeString(Array.isArray((sp as any).rearOffset) ? (sp as any).rearOffset[0] : (sp as any).rearOffset);
+  // Audit H2: a staggered PDP must price and add 2 front + 2 rear. Resolve the
+  // rear SKU now; the buy box refuses to show a set total without its price.
+  const rearWheel = rearSkuParam ? await resolveRearWheel(rearSkuParam) : null;
+  const rearDia = rearWheel?.diameter || rearDiaParam || undefined;
+  const rearWidth = rearWheel?.width || rearWidthParam || undefined;
+  const rearOffset = rearWheel?.offset || rearOffsetParam || undefined;
   
   // Lifted build context
   const liftedSource = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
@@ -681,9 +761,9 @@ export default async function WheelDetailPage({
                       Front ×2: {diameter}&quot; × {width}&quot;
                     </span>
                   )}
-                  {rearDiaParam && rearWidthParam && (
+                  {rearDia && rearWidth && (
                     <span className="inline-flex items-center rounded-full bg-orange-50 border border-orange-200 px-2.5 py-1 text-xs font-semibold text-orange-800">
-                      Rear ×2: {rearDiaParam}&quot; × {rearWidthParam}&quot;
+                      Rear ×2: {rearDia}&quot; × {rearWidth}&quot;
                     </span>
                   )}
                 </div>
@@ -728,6 +808,15 @@ export default async function WheelDetailPage({
               boltPattern={boltPattern || undefined}
               imageUrl={imageUrl}
               unitPrice={typeof price === "number" && Number.isFinite(price) ? price : 0}
+              staggered={isStaggeredPDP ? {
+                rearSku: rearWheel?.sku || rearSkuParam || undefined,
+                rearUnitPrice: rearWheel?.price ?? null,
+                rearDiameter: rearDia,
+                rearWidth: rearWidth,
+                rearOffset: rearOffset,
+                rearFinish: rearWheel?.finish,
+                rearResolved: Boolean(rearWheel),
+              } : undefined}
               vehicle={hasVehicle ? { year, make, model, trim: trim || undefined, modification: modification || undefined } : undefined}
               hasVehicle={hasVehicle}
               dbProfile={dbProfile}
@@ -834,6 +923,20 @@ export default async function WheelDetailPage({
                     if (liftedInches) liftedUrlParams.liftedInches = String(liftedInches);
                     if (liftedTireSizesRaw) liftedUrlParams.liftedTireSizes = liftedTireSizesRaw;
                   }
+                  // Audit H4 (2026-09-18): a staggered PDP must hand the tire
+                  // page BOTH axles, otherwise it searches a square set for the
+                  // front size only. Tires page keys staggered mode off
+                  // wheelSkuRear + wheelDiaFront/Rear + wheelWidthFront/Rear.
+                  const staggeredUrlParams: Record<string, string> = {};
+                  if (isStaggeredPDP) {
+                    staggeredUrlParams.setup = "staggered";
+                    if (rearWheel?.sku || rearSkuParam) staggeredUrlParams.wheelSkuRear = String(rearWheel?.sku || rearSkuParam);
+                    if (wheelDiaN) staggeredUrlParams.wheelDiaFront = String(wheelDiaN);
+                    if (width) staggeredUrlParams.wheelWidthFront = String(width);
+                    if (rearDia) staggeredUrlParams.wheelDiaRear = String(rearDia).replace(/[^0-9.]/g, "");
+                    if (rearWidth) staggeredUrlParams.wheelWidthRear = String(rearWidth).replace(/[^0-9.]/g, "");
+                  }
+                  const linkExtras = { ...liftedUrlParams, ...staggeredUrlParams };
                   
                   const effectiveTireSizes = isLiftedBuild
                     ? liftedTireSizes.filter((s) => { const m = String(s).toUpperCase().match(/R(\d{2})(?:\D|$)/); const rim = m ? Number(m[1]) : NaN; return !wheelDiaN || (Number.isFinite(rim) && rim === wheelDiaN); })
@@ -847,7 +950,7 @@ export default async function WheelDetailPage({
                   
                   if (vehicleLabel && effectiveTireSizes.length > 0) {
                     return effectiveTireSizes.slice(0, 4).map((s) => (
-                      <Link key={s} href={vehicleSlugStr ? `/tires/v/${vehicleSlugStr}?${buildParams({ year, make, model, trim, modification, size: s, wheelDia: wheelDiaN, wheelWidth: width, ...liftedUrlParams })}` : `/tires?${buildParams({ year, make, model, trim, modification, size: s, wheelDia: wheelDiaN, wheelWidth: width, ...liftedUrlParams })}`}
+                      <Link key={s} href={vehicleSlugStr ? `/tires/v/${vehicleSlugStr}?${buildParams({ year, make, model, trim, modification, size: s, wheelDia: wheelDiaN, wheelWidth: width, ...linkExtras })}` : `/tires?${buildParams({ year, make, model, trim, modification, size: s, wheelDia: wheelDiaN, wheelWidth: width, ...linkExtras })}`}
                         className={`rounded-xl border px-3 py-2 text-xs font-extrabold hover:border-neutral-300 ${isLiftedBuild ? "border-amber-200 bg-amber-50 text-amber-900" : "border-neutral-200 bg-white text-neutral-900"}`}>
                         {s}
                       </Link>
@@ -856,9 +959,9 @@ export default async function WheelDetailPage({
                   
                   if (vehicleLabel && wheelDiaN) {
                     return (
-                      <Link href={vehicleSlugStr ? `/tires/v/${vehicleSlugStr}?${buildParams({ year, make, model, trim, modification, wheelDia: wheelDiaN, wheelWidth: width, ...liftedUrlParams })}` : `/tires?${buildParams({ year, make, model, trim, modification, wheelDia: wheelDiaN, wheelWidth: width, ...liftedUrlParams })}`}
+                      <Link href={vehicleSlugStr ? `/tires/v/${vehicleSlugStr}?${buildParams({ year, make, model, trim, modification, wheelDia: wheelDiaN, wheelWidth: width, ...linkExtras })}` : `/tires?${buildParams({ year, make, model, trim, modification, wheelDia: wheelDiaN, wheelWidth: width, ...linkExtras })}`}
                         className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white hover:bg-neutral-800">
-                        Find {wheelDiaN}&quot; tires
+                        {isStaggeredPDP && rearDia ? `Find ${wheelDiaN}" front / ${String(rearDia).replace(/[^0-9.]/g, "")}" rear tires` : `Find ${wheelDiaN}" tires`}
                       </Link>
                     );
                   }

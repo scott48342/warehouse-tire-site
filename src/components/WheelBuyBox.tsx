@@ -39,6 +39,20 @@ type WheelBuyBoxProps = {
   source?: string;
   /** True when freight is baked into the unit price (Wheel-1 landed-cost) */
   freeShipping?: boolean;
+  /**
+   * Staggered set context (audit H2, 2026-09-18). When present the buy box
+   * prices 2 front + 2 rear and adds both SKUs. If the rear price is unknown
+   * we do NOT invent a set total from 4x the front price.
+   */
+  staggered?: {
+    rearSku?: string;
+    rearUnitPrice: number | null;
+    rearDiameter?: string;
+    rearWidth?: string;
+    rearOffset?: string;
+    rearFinish?: string;
+    rearResolved: boolean;
+  };
 };
 
 export function WheelBuyBox({
@@ -59,10 +73,24 @@ export function WheelBuyBox({
   inventory,
   source,
   freeShipping,
+  staggered,
 }: WheelBuyBoxProps) {
-  const [quantity, setQuantity] = useState(4);
-  const total = unitPrice * quantity;
-  const hasPrice = typeof unitPrice === "number" && Number.isFinite(unitPrice) && unitPrice > 0;
+  const [rawQuantity, setQuantity] = useState(4);
+  const isStaggered = Boolean(staggered);
+  // A staggered set is always 2 front + 2 rear.
+  const quantity = isStaggered ? 4 : rawQuantity;
+  const hasFrontPrice = typeof unitPrice === "number" && Number.isFinite(unitPrice) && unitPrice > 0;
+  const rearPrice = staggered?.rearUnitPrice;
+  const hasRearPrice = typeof rearPrice === "number" && Number.isFinite(rearPrice) && rearPrice > 0;
+  // Staggered: both prices required for any total. Square: front price only.
+  const hasPrice = isStaggered ? hasFrontPrice && hasRearPrice : hasFrontPrice;
+  const total = isStaggered
+    ? (hasPrice ? unitPrice * 2 + (rearPrice as number) * 2 : 0)
+    : unitPrice * quantity;
+  // Cart stores one unitPrice x quantity per line; for a 2+2 set the blended
+  // per-wheel price keeps the line total equal to the real set price.
+  const cartUnitPrice = isStaggered && hasPrice ? total / 4 : unitPrice;
+  const rearMissing = isStaggered && (!staggered?.rearSku || !staggered?.rearResolved);
   
   // Inventory check: orderable types that we can sell
   const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
@@ -74,7 +102,16 @@ export function WheelBuyBox({
   return (
     <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
       <div className="flex items-baseline gap-2">
-        {hasPrice ? (
+        {isStaggered ? (
+          hasPrice ? (
+            <>
+              <div className="text-3xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
+              <div className="text-sm text-neutral-500">staggered set (2 front + 2 rear)</div>
+            </>
+          ) : (
+            <div className="text-xl font-bold text-neutral-700">Call for staggered set price</div>
+          )
+        ) : hasPrice ? (
           <>
             <div className="text-3xl font-extrabold text-neutral-900">${unitPrice.toFixed(2)}</div>
             <div className="text-sm text-neutral-500">per wheel</div>
@@ -83,8 +120,24 @@ export function WheelBuyBox({
           <div className="text-xl font-bold text-neutral-700">Call for price</div>
         )}
       </div>
-      
-      {hasPrice && (
+
+      {isStaggered && hasPrice && (
+        <div className="mt-1 text-sm text-neutral-600">
+          2 front @ <span className="font-semibold">${unitPrice.toFixed(2)}</span>
+          {" + "}2 rear @ <span className="font-semibold">${(rearPrice as number).toFixed(2)}</span>
+          {staggered?.rearDiameter && staggered?.rearWidth && (
+            <span className="text-neutral-500"> ({staggered.rearDiameter}&quot; x {staggered.rearWidth}&quot; rear)</span>
+          )}
+        </div>
+      )}
+
+      {isStaggered && !hasPrice && hasFrontPrice && (
+        <div className="mt-1 text-sm text-neutral-600">
+          Front wheels ${unitPrice.toFixed(2)} each. Rear pricing unavailable online, so we won&apos;t quote a set total here.
+        </div>
+      )}
+
+      {!isStaggered && hasPrice && (
         <div className="mt-1 text-sm text-neutral-600">
           {quantity === 1 ? (
             <span>Single wheel</span>
@@ -125,30 +178,48 @@ export function WheelBuyBox({
         </div>
       )}
 
-      {/* Quantity Selector */}
-      <div className="mt-4">
-        <QuantitySelector
-          value={quantity}
-          onChange={setQuantity}
-          presets={[1, 2, 4, 5]}
-          label="How many wheels?"
-        />
-      </div>
+      {/* Quantity Selector - a staggered set is fixed at 2 + 2 */}
+      {isStaggered ? (
+        <div className="mt-4 text-sm text-neutral-700">
+          <span className="font-semibold">Quantity:</span> 2 front + 2 rear (staggered set)
+        </div>
+      ) : (
+        <div className="mt-4">
+          <QuantitySelector
+            value={quantity}
+            onChange={setQuantity}
+            presets={[1, 2, 4, 5]}
+            label="How many wheels?"
+          />
+        </div>
+      )}
       
       <div className="mt-4">
-        {isInStock ? (
+        {isStaggered && (rearMissing || !hasPrice) ? (
+          <button
+            disabled
+            className="w-full rounded-xl bg-neutral-300 py-3 text-sm font-bold text-neutral-500 cursor-not-allowed"
+            title={rearMissing ? "Rear wheel could not be resolved" : "Rear wheel price unavailable"}
+          >
+            {rearMissing ? "Rear wheel unavailable - call to order" : "Call to order staggered set"}
+          </button>
+        ) : isInStock ? (
           <AddToCartButton
             sku={sku}
+            rearSku={isStaggered ? staggered?.rearSku : undefined}
             brand={brand}
             model={model}
             finish={finish}
             diameter={diameter}
             width={width}
+            rearWidth={isStaggered ? staggered?.rearWidth : undefined}
             offset={offset}
+            rearOffset={isStaggered ? staggered?.rearOffset : undefined}
             boltPattern={boltPattern}
             imageUrl={imageUrl}
-            unitPrice={hasPrice ? unitPrice : 0}
+            unitPrice={hasPrice ? cartUnitPrice : 0}
             quantity={quantity}
+            staggered={isStaggered || undefined}
             vehicle={vehicle}
             className="w-full"
             showPriceInButton={hasPrice}

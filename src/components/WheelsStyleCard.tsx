@@ -39,12 +39,17 @@ export type WheelPick = {
   diameter?: string;
   width?: string;
   offset?: string;
+  finish?: string;
+  /** Sell price per wheel for THIS axle's SKU (from fitment-search pair). */
+  price?: number | null;
 };
 
 export type WheelPair = {
   staggered: boolean;
   front: WheelPick;
   rear?: WheelPick;
+  /** 2 front + 2 rear when both axle prices are known; null otherwise. */
+  setPrice?: number | null;
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -588,15 +593,36 @@ export function WheelsStyleCard({
   const [selectedPair, setSelectedPair] = useState<WheelPair | undefined>(pair);
   const [isAdding, setIsAdding] = useState(false);
 
-  // Calculate set price (4 wheels)
-  const setPrice = typeof selectedPrice === "number" ? selectedPrice * 4 : null;
+  // 2026-09-18 (audit H2): a pair only applies to the finish being displayed.
+  // Pairs are attached per SKU by fitment-search; when the customer switches to a
+  // finish thumb that has no pair of its own, the previous finish's pair must not
+  // keep driving the badge, the price, or the link (Platinum card -> Bronze PDP).
+  const displayedSku = selectedSku || baseSku;
+  const activePair: WheelPair | undefined = (() => {
+    const cp = selectedPair || pair;
+    if (!cp?.staggered || !cp.rear) return undefined;
+    return cp.front?.sku === displayedSku ? cp : undefined;
+  })();
+  const isStaggeredCard = Boolean(activePair);
+
+  // Set price: square = 4 x this wheel; staggered = 2 x front + 2 x rear.
+  // Never 4 x front for a staggered set - if the rear price is unknown, no total.
+  const setPrice: number | null = isStaggeredCard
+    ? (() => {
+        if (typeof activePair?.setPrice === "number" && Number.isFinite(activePair.setPrice)) return activePair.setPrice;
+        const fp = typeof activePair?.front?.price === "number" ? activePair.front.price : (typeof selectedPrice === "number" ? selectedPrice : null);
+        const rp = typeof activePair?.rear?.price === "number" ? activePair.rear.price : null;
+        return fp != null && rp != null ? Math.round((fp * 2 + rp * 2) * 100) / 100 : null;
+      })()
+    : typeof selectedPrice === "number" ? selectedPrice * 4 : null;
   const fromSetPrice = useMemo(() => {
+    if (isStaggeredCard) return null; // "From $" would be a 4x-front number
     const ps = (finishThumbs || [])
       .map((t) => (typeof t?.price === "number" ? t.price * 4 : null))
       .filter((v): v is number => typeof v === "number" && Number.isFinite(v));
     if (!ps.length) return null;
     return Math.min(...ps);
-  }, [finishThumbs]);
+  }, [finishThumbs, isStaggeredCard]);
 
   // ═══════════════════════════════════════════════════════════════════════════
   // CONVERSION HELPERS - Computed values
@@ -651,7 +677,7 @@ export function WheelsStyleCard({
       sp.delete("modification");
     }
     
-    const currentPair = selectedPair || pair;
+    const currentPair = activePair;
     const dia = currentPair?.front?.diameter ?? sizeLabel?.diameter;
     const wid = currentPair?.front?.width ?? sizeLabel?.width;
     const off = currentPair?.front?.offset ?? specLabel?.offset;
@@ -661,12 +687,20 @@ export function WheelsStyleCard({
     if (wid) sp.set("wheelWidth", String(wid));
     if (off) sp.set("wheelOffset", String(off));
     if (bolt) sp.set("wheelBolt", String(bolt));
+    // Staggered: carry the rear SKU/specs so the PDP prices and adds 2+2,
+    // not 4 x front (audit H2). Same params WheelsStyleCardHorizontal emits.
+    if (currentPair?.staggered && currentPair.rear) {
+      if (currentPair.rear.sku) sp.set("rearSku", currentPair.rear.sku);
+      if (currentPair.rear.diameter) sp.set("rearDia", String(currentPair.rear.diameter));
+      if (currentPair.rear.width) sp.set("rearWidth", String(currentPair.rear.width));
+      if (currentPair.rear.offset) sp.set("rearOffset", String(currentPair.rear.offset));
+    }
     
     const s = sp.toString();
     return s ? `?${s}` : "";
-  }, [viewParams, selectedPair, pair, sizeLabel, specLabel]);
+  }, [viewParams, activePair, sizeLabel, specLabel]);
 
-  const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}${qs}`;
+  const viewHref = `/wheels/${encodeURIComponent(displayedSku)}${qs}`;
 
   // ═══════════════════════════════════════════════════════════════════════════
   // SINGLE CTA: Add to Package / Build My Package
@@ -684,29 +718,36 @@ export function WheelsStyleCard({
       ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
       : undefined;
 
-    const currentPair = selectedPair || pair;
-    const effectiveSku = selectedSku || currentPair?.front?.sku || baseSku;
+    const currentPair = activePair;
+    const effectiveSku = displayedSku;
     const effectiveDia = currentPair?.front?.diameter ?? sizeLabel?.diameter;
     const effectiveWidth = currentPair?.front?.width ?? sizeLabel?.width;
     const effectiveOffset = currentPair?.front?.offset ?? specLabel?.offset;
+    // Staggered cart line: 4 wheels (2+2) at the blended unit price so the cart
+    // total equals 2 x front + 2 x rear. Requires both prices; otherwise 0 (call).
+    const staggeredUnit = currentPair && setPrice != null ? Math.round((setPrice / 4) * 100) / 100 : null;
 
     setTimeout(() => {
       // Add wheel to cart
       addItem({
         type: "wheel",
         sku: effectiveSku,
+        rearSku: currentPair?.rear?.sku,
         brand,
         model: title,
         finish: selectedFinish,
         diameter: effectiveDia,
         width: effectiveWidth,
+        rearWidth: currentPair?.rear?.width,
         offset: effectiveOffset,
+        rearOffset: currentPair?.rear?.offset,
         boltPattern: specLabel?.boltPattern,
         imageUrl: selectedImage,
-        unitPrice: typeof selectedPrice === "number" ? selectedPrice : 0,
+        unitPrice: currentPair ? (staggeredUnit ?? 0) : (typeof selectedPrice === "number" ? selectedPrice : 0),
         quantity: 4,
         fitmentClass,
         vehicle,
+        staggered: Boolean(currentPair),
       });
 
       // Auto-add accessories (fail-soft)
@@ -918,7 +959,7 @@ export function WheelsStyleCard({
           </Link>
           
           {/* Show staggered badge + front/rear specs for staggered wheels */}
-          {selectedPair?.staggered && selectedPair.rear ? (
+          {activePair?.staggered && activePair.rear ? (
             <div className="mt-2">
               {/* Staggered badge */}
               <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800 mb-2">
@@ -929,23 +970,23 @@ export function WheelsStyleCard({
                 <div className="rounded-lg bg-blue-50 px-2 py-1.5">
                   <div className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Front (×2)</div>
                   <div className="font-bold text-blue-900">
-                    {selectedPair.front.diameter && `${fmtSizePart(selectedPair.front.diameter)}"`}
-                    {selectedPair.front.diameter && selectedPair.front.width && " × "}
-                    {selectedPair.front.width && `${fmtSizePart(selectedPair.front.width)}"`}
+                    {activePair.front.diameter && `${fmtSizePart(activePair.front.diameter)}"`}
+                    {activePair.front.diameter && activePair.front.width && " × "}
+                    {activePair.front.width && `${fmtSizePart(activePair.front.width)}"`}
                   </div>
-                  {selectedPair.front.offset && (
-                    <div className="text-[10px] text-blue-600">ET{selectedPair.front.offset}</div>
+                  {activePair.front.offset && (
+                    <div className="text-[10px] text-blue-600">ET{activePair.front.offset}</div>
                   )}
                 </div>
                 <div className="rounded-lg bg-orange-50 px-2 py-1.5">
                   <div className="text-[10px] font-semibold text-orange-600 uppercase tracking-wide">Rear (×2)</div>
                   <div className="font-bold text-orange-900">
-                    {selectedPair.rear.diameter && `${fmtSizePart(selectedPair.rear.diameter)}"`}
-                    {selectedPair.rear.diameter && selectedPair.rear.width && " × "}
-                    {selectedPair.rear.width && `${fmtSizePart(selectedPair.rear.width)}"`}
+                    {activePair.rear.diameter && `${fmtSizePart(activePair.rear.diameter)}"`}
+                    {activePair.rear.diameter && activePair.rear.width && " × "}
+                    {activePair.rear.width && `${fmtSizePart(activePair.rear.width)}"`}
                   </div>
-                  {selectedPair.rear.offset && (
-                    <div className="text-[10px] text-orange-600">ET{selectedPair.rear.offset}</div>
+                  {activePair.rear.offset && (
+                    <div className="text-[10px] text-orange-600">ET{activePair.rear.offset}</div>
                   )}
                 </div>
               </div>
@@ -1054,7 +1095,8 @@ export function WheelsStyleCard({
                       if (typeof t.price === "number") setSelectedPrice(t.price);
                       if (typeof t.stockQty === "number") setSelectedStockQty(t.stockQty);
                       if (t.inventoryType) setSelectedInventoryType(t.inventoryType);
-                      if (t.pair) setSelectedPair(t.pair);
+                      // Always replace (undefined clears a stale pair from another finish)
+                      setSelectedPair(t.pair);
                     }}
                     className={`h-9 w-9 overflow-hidden rounded-lg border-2 transition-all ${
                       active 
@@ -1113,7 +1155,7 @@ export function WheelsStyleCard({
                 }
               </span>
               <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">
-                {selectedPair?.staggered && selectedPair.rear ? (
+                {activePair?.staggered && activePair.rear ? (
                   <>staggered set</>
                 ) : (
                   <>set of 4</>

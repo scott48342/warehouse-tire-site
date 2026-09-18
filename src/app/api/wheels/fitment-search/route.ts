@@ -2607,14 +2607,23 @@ async function handleDbFirstWheelResults(opts: {
     
     console.log(`[fitment-search] Ã°Å¸â€â€ž STAGGERED PAIRING: looking for front ${frontDiameter}"Ãƒâ€”${frontWidth}" + rear ${rearDiameter}"Ãƒâ€”${rearWidth}"`);
     
-    // Group candidates by style (brand + model)
+    // Group candidates by style (brand + model) AND finish (2026-09-18, audit H2).
+    // A staggered set must be the same finish front and rear. Style-only grouping
+    // paired candidates[0] at each width regardless of finish, so a Platinum card
+    // could carry a Bronze rear (or a Bronze front) and the card/PDP disagreed.
     const styleGroups = new Map<string, typeof rankedCandidates>();
     for (const c of rankedCandidates) {
       const brandCode = c.candidate.brand_cd || "";
       // Use style or model name for grouping
       const styleName = c.candidate.style || c.candidate.display_style_no || 
                        (c.candidate.product_desc?.split(" ")[0]) || "";
-      const styleKey = `${brandCode}:${styleName}`.toLowerCase();
+      const finishKey = String(
+        normalizeFinish(c.candidate.fancy_finish_desc, c.candidate.abbreviated_finish_desc) ||
+          c.candidate.abbreviated_finish_desc ||
+          c.candidate.fancy_finish_desc ||
+          ""
+      ).toLowerCase();
+      const styleKey = `${brandCode}:${styleName}:${finishKey}`.toLowerCase();
       
       if (!styleGroups.has(styleKey)) {
         styleGroups.set(styleKey, []);
@@ -2876,13 +2885,36 @@ async function handleDbFirstWheelResults(opts: {
 
   // Build a lookup map for staggered pair specs (SKU Ã¢â€ â€™ wheel specs)
   // This lets us populate BOTH front and rear specs on each paired wheel
-  const wheelSpecsBySku = new Map<string, { diameter: number; width: number; offset: number }>();
+  const wheelSpecsBySku = new Map<string, { diameter: number; width: number; offset: number; finish?: string; price: number | null }>();
+  // Sell price for any ranked candidate (same rules as the result item below).
+  // Used for the item itself AND for the paired rear wheel so a staggered card
+  // can show 2x front + 2x rear instead of 4x front (audit H2).
+  const sellPriceFor = (c: any, inv: any): number | null => {
+    const raw =
+      c._supplier === 'wheel1'
+        ? computeWheel1SellPrice({
+            msrp:       (c as Wheel1Candidate)._msrpNum,
+            mapPrice:   (c as Wheel1Candidate)._mapNum,
+            dealerCost: (c as Wheel1Candidate)._dealerCost ?? null,
+            diameter:   Number(c.diameter) || 20,
+          })
+        : c._supplier === 'wsi'
+        ? computeWSISellPrice({
+            dealerCost:   (c as WSICandidate)._dealerCost,
+            catalogPrice: (c as WSICandidate)._catalogPrice,
+          })
+        : getSafeWheelPrice(c, inv);
+    const n = Number(raw);
+    return Number.isFinite(n) && n > 0 ? n : null;
+  };
   for (const item of rankedCandidates) {
     const c = item.candidate;
     wheelSpecsBySku.set(c.sku, {
       diameter: Number(c.diameter) || 0,
       width: Number(c.width) || 0,
       offset: Number(c.offset) || 0,
+      finish: normalizeFinish(c.fancy_finish_desc, c.abbreviated_finish_desc) || c.abbreviated_finish_desc || undefined,
+      price: sellPriceFor(c, inventoryData.get(c.sku)),
     });
   }
 
@@ -2948,21 +2980,7 @@ async function handleDbFirstWheelResults(opts: {
           {
             // Wheel-1: shipping baked in ($1/inch), MAP floor enforced.
             // WheelPros: existing safe pricing (data-quality fix for corrupt MSRPs).
-            currencyAmount: String(
-              c._supplier === 'wheel1'
-                ? computeWheel1SellPrice({
-                    msrp:       (c as Wheel1Candidate)._msrpNum,
-                    mapPrice:   (c as Wheel1Candidate)._mapNum,
-                    dealerCost: (c as Wheel1Candidate)._dealerCost ?? null,
-                    diameter:   Number(c.diameter) || 20,
-                  })
-                : c._supplier === 'wsi'
-                ? computeWSISellPrice({
-                    dealerCost:   (c as WSICandidate)._dealerCost,
-                    catalogPrice: (c as WSICandidate)._catalogPrice,
-                  })
-                : getSafeWheelPrice(c, inv)
-            ),
+            currencyAmount: String(sellPriceFor(c, inv) ?? getSafeWheelPrice(c, inv)),
             currencyCode: "USD",
           },
         ],
@@ -3075,20 +3093,30 @@ async function handleDbFirstWheelResults(opts: {
           }
         }
         
+        const frontPrice = frontSpecs?.price ?? null;
+        const rearPrice = rearSpecs?.price ?? null;
         return {
           staggered: true,
+          role: staggeredPair.role === "rear" ? "rear" : "front",
           front: {
             sku: frontSku,
             diameter: frontSpecs?.diameter,
             width: frontSpecs?.width,
             offset: frontSpecs?.offset,
+            finish: frontSpecs?.finish,
+            price: frontPrice,
           },
           rear: {
             sku: rearSku,
             diameter: rearSpecs?.diameter,
             width: rearSpecs?.width,
             offset: rearSpecs?.offset,
+            finish: rearSpecs?.finish,
+            price: rearPrice,
           },
+          // 2 front + 2 rear. null when either axle has no sell price - the UI
+          // must then say "call for price", never 4x the front wheel.
+          setPrice: frontPrice != null && rearPrice != null ? Math.round((frontPrice * 2 + rearPrice * 2) * 100) / 100 : null,
         };
       })() : undefined,
       // Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Supplier tag (Wheel-1 preview) Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
