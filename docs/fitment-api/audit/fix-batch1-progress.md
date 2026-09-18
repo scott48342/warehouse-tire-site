@@ -100,3 +100,15 @@ px jest src/lib/tires/__tests__/loadIndexGate.test.ts src/lib/fitment-db/__tests
 px tsc --noEmit -> 0 errors.
 
 **Still UNFIXED / for reviewer:** endpoint/integration tests (no route-mock layer in repo); full existing jest suite not run; :3002 retest URLs not hit by parent (dev server was started and stopped by the worker follow-up for the tires/search write proof only); fitment-search wheel-card surefit/specfit badge not suppressed when certifiable:false (PARTIAL); /api/fitment/lifted flags not consumed; getOemTireSizesByFamily family-ILIKE reachability note.
+
+## 2026-09-18 16:05 - d6ecf384 check-fitment supplier fall-through + banners + mappers
+- Endpoint retest 24/24 (SUMMARY.json committed). Previous last fail = Wheel-1/WSI SKUs wheel_not_found -> fits:false (false rejection). Root cause: check-fitment read only wp_wheels; M4 result set is Wheel-1 + WSI.
+- NEW FINDINGS (not in original F1-F20):
+  - F21 Wheel-1/WSI mappers fabricated offset "0" when offset_mm null (1 + 9 live rows) -> would pass geometry gate. Fixed: undefined.
+  - F22 Wheel-1/WSI mappers exposed only pcd1/bp1; DB query matches pcd2/bp2 -> 486 + 4,280 dual-drilled wheels failed downstream bolt checks on 2nd pattern. Fixed: joined in techfeed "a/b" convention.
+  - F23 check-fitment: SKU absent from all catalogs is UNKNOWN (fits:null), not a rejection.
+- Banners neutralized: TirePageCompactHeader, WheelsGridWithSelection top picks, wheels/page badge (gated on certificationBlock).
+- tires/page getBaseUrl honours PORT. Preview .env.local has NEXT_PUBLIC_BASE_URL=http://localhost:3002 (untracked).
+- Jest: check-fitment 39/39; fitment-db + fitment-search 205/205 tests; 2 suite-level fails (staggeredCanonical, staggeredFitment) are in the 11-suite baseline.
+- OWNERSHIP: Jake (src/lib/jake/*, src/components/jake/*, Jake tests/API guards) = Codex. I do not add/commit those paths.
+- :3002 preview restarted after gateway restart (session oceanic-meadow, readonly flags).
