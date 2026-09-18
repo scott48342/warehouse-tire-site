@@ -1,10 +1,42 @@
 import { NextResponse } from "next/server";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle, searchWheelsByStyleFuzzy } from "@/lib/techfeed/wheels";
-import { resolveOemOffset, computeWheelGeometry, type OemOffsetResult } from "@/lib/fitment/geometryValidator";
+import { resolveOemOffset, computeWheelGeometry, type OemOffsetResult, type OemOffsetResolved, type VehicleClass } from "@/lib/fitment/geometryValidator";
 import { getFitmentProfileWithHdSupport } from "@/lib/fitment-db/profileService";
 import { parseWheelSizes } from "@/lib/fitment-db/profileService";
 
 export const runtime = "nodejs";
+
+/**
+ * Bolt pattern -> canonical keys (2026-09-18, audit F13).
+ * "5x120.65" -> ["5X120.65"]; "6X135/6x139.7" -> ["6X135","6X139.7"]; "5 x 120.0" -> ["5X120"].
+ * Unparseable input yields [] so callers fail closed. Exported for tests.
+ */
+export function parseBoltPatternKeys(bp: string | null | undefined): string[] {
+  if (!bp) return [];
+  return String(bp)
+    .split(/[\/,]/)
+    .map((part) => {
+      const m = part.replace(/\s+/g, "").match(/^(\d+)[xX\u00d7-](\d+(?:\.\d+)?)$/);
+      if (!m) return null;
+      const lugs = parseInt(m[1], 10);
+      const pcd = Math.round(parseFloat(m[2]) * 100) / 100;
+      if (!Number.isFinite(lugs) || !Number.isFinite(pcd) || lugs <= 0 || pcd <= 0) return null;
+      return `${lugs}X${pcd}`;
+    })
+    .filter((k): k is string => k !== null);
+}
+/** null/undefined/blank -> null; finite numbers and numeric strings (incl. 0 / "0") -> number; else null. Exported for tests. */
+export function strictNumber(v: unknown): number | null {
+  if (v === null || v === undefined) return null;
+  if (typeof v === "number") return Number.isFinite(v) ? v : null;
+  if (typeof v === "string") {
+    const t = v.trim();
+    if (t === "") return null;
+    const n = Number(t);
+    return Number.isFinite(n) ? n : null;
+  }
+  return null;
+}
 
 /**
  * Check if a wheel style fits a vehicle.
@@ -14,7 +46,8 @@ export const runtime = "nodejs";
  * 
  * GET /api/wheels/check-fitment?sku=FC401BT20906718&year=2024&make=Ford&model=F-150
  * Or: /api/wheels/check-fitment?brand=Fuel&style=Rebel&year=2024&make=Ford&model=F-150
- * Returns: { fits: true, matchingSku?: string, reason?: string }
+ * Returns: { fits: true|false|null, matchingSku?: string, reason?: string, boltPatternCompatible?: boolean|null }
+ *   fits:null = UNVERIFIED (trim required, wheel not in style data, lookup/check failed). Never treat null as a fit.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -34,8 +67,10 @@ export async function GET(req: Request) {
 
   try {
     // Get vehicle fitment data first
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 
-                    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+    // 2026-09-18 (audit F13): resolve against THIS server's origin first so an
+    // isolated preview (:3002) or self-hosted instance never hard-codes :3000.
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ||
+                    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : url.origin);
     
     const fitmentRes = await fetch(
       `${baseUrl}/api/vehicles/search?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`,
@@ -43,8 +78,8 @@ export async function GET(req: Request) {
     );
 
     if (!fitmentRes.ok) {
-      // Can't verify - assume it might fit
-      return NextResponse.json({ fits: true, reason: "fitment_lookup_failed" });
+      // 2026-09-18 (audit F13): cannot verify -> NOT a fit claim. fits:null = unverified.
+      return NextResponse.json({ fits: null, reason: "fitment_lookup_failed", boltPatternCompatible: null });
     }
 
     const fitmentData = await fitmentRes.json();
@@ -110,126 +145,176 @@ export async function GET(req: Request) {
       }
     }
 
-    // Normalize bolt patterns for comparison
-    const normalizePattern = (bp: string): string[] => {
-      // Handle dual patterns like "6X135/6X139.7"
-      return bp
-        .toUpperCase()
-        .replace(/\s/g, "")
-        .split("/")
-        .map((p) => p.replace(/[×-]/g, "X").trim())
-        .filter(Boolean);
-    };
+    // 2026-09-18 (audit F13): EXACT bolt-pattern equality. The previous
+    // substring test certified 5x120 wheels on 5x120.65 hubs (and vice versa).
+    // Each side may be a dual pattern ("6X135/6X139.7"); a match requires one
+    // wheel pattern to equal one vehicle pattern after numeric normalisation.
+    const vehiclePatterns = parseBoltPatternKeys(vehicleBoltPattern);
 
-    const vehiclePatterns = normalizePattern(vehicleBoltPattern);
-
-    // Helper to check if a wheel's bolt pattern matches the vehicle
     const checkMatch = (wheelBp: string): boolean => {
       if (!wheelBp) return false;
-      const wheelPatterns = normalizePattern(wheelBp);
-      return wheelPatterns.some((wp) =>
-        vehiclePatterns.some((vp) => wp === vp || wp.includes(vp) || vp.includes(wp))
-      );
+      const wheelPatterns = parseBoltPatternKeys(wheelBp);
+      if (wheelPatterns.length === 0 || vehiclePatterns.length === 0) return false;
+      return wheelPatterns.some((wp) => vehiclePatterns.includes(wp));
     };
 
-    // If we have a SKU, get its style and check ALL variants of that style
+    // Certify ONE concrete wheel record whose bolt pattern already matched.
+    //   - trim unresolved                                   -> fits:null  trim_required_for_geometry
+    //   - OEM offset/width or wheel width/offset unavailable -> fits:null  geometry_unverified
+    //   - geometry computed and safe                        -> fits:true
+    //   - geometry computed and unsafe                      -> fits:false geometry_rejected
+    // Missing geometry is UNVERIFIED, never a certification (2026-09-18, audit F13).
+    const certifyWheel = (
+      w: { sku: string; width: unknown; offset: unknown },
+      wheelBp: string,
+      okReason: "exact_sku_match" | "style_variant_match",
+      extra: Record<string, unknown> = {},
+    ): Record<string, unknown> & { fits: boolean | null } => {
+      if (trimRequiredNote) {
+        return ({
+          fits: null,
+          reason: "trim_required_for_geometry",
+          boltPatternCompatible: true,
+          matchingSku: w.sku,
+          vehicleBoltPattern,
+          wheelBoltPattern: wheelBp,
+          ...extra,
+          ...trimRequiredNote,
+        });
+      }
+      // Strict: null/undefined/blank are ABSENT (Number(null) === 0 would fake an offset of 0).
+      // Real numeric 0 and the string "0" are preserved as a legitimate 0mm offset.
+      const ww = strictNumber(w.width);
+      const wo = strictNumber(w.offset);
+      const oemMissing = !checkOemOffset || checkOemOffset.missing;
+      if (oemMissing || ww === null || ww <= 0 || wo === null) {
+        return ({
+          fits: null,
+          reason: "geometry_unverified",
+          boltPatternCompatible: true,
+          matchingSku: w.sku,
+          vehicleBoltPattern,
+          wheelBoltPattern: wheelBp,
+          geometryNote: oemMissing
+            ? "OEM offset/width basis unavailable for this vehicle"
+            : "Wheel width/offset unavailable",
+          ...extra,
+        });
+      }
+      // 2026-09-18: vehicleClass was never passed before, so passesAggressive was
+      // always undefined and every geometry-checked wheel was rejected. Class is
+      // derived like fitment-search does when vehicleType is unknown (6x/8x -> truck,
+      // else car = strictest thresholds). Certification uses the daily_driver profile.
+      const geoVehicleClass: VehicleClass =
+        /^(6|8)x/i.test(vehicleBoltPattern.trim()) ? "truck" : "car";
+      const geo = computeWheelGeometry(
+        { width_in: ww, offset_mm: wo },
+        { width_in: (checkOemOffset as OemOffsetResolved).width_in, offset_mm: (checkOemOffset as OemOffsetResolved).offset_mm },
+        geoVehicleClass,
+      );
+      const geometryPass = geo.passesDailyDriver === true && !geo.exceedsSafetyCeiling;
+      return ({
+        fits: geometryPass,
+        boltPatternCompatible: true,
+        matchingSku: w.sku,
+        vehicleBoltPattern,
+        wheelBoltPattern: wheelBp,
+        reason: geometryPass ? okReason : "geometry_rejected",
+        geometryProfile: "daily_driver",
+        geometryVehicleClass: geoVehicleClass,
+        geometryNote: geometryPass ? undefined : `Geometry unsafe: delta_backspacing=${geo.delta_backspacing_mm.toFixed(1)}mm`,
+        ...extra,
+      });
+    };
+
     let styleKey = style || "";
     let wheelBrand = brand || "";
-    
+
     if (sku) {
+      // 2026-09-18 (audit F13): a REQUESTED SKU is judged on its own record.
+      // Another SKU of the same style fitting does not certify this one; at
+      // most it is reported as alternativeSku alongside fits:false.
       const wheel = await getTechfeedWheelBySku(sku);
       if (!wheel) {
         return NextResponse.json({ fits: false, reason: "wheel_not_found" });
       }
       styleKey = wheel.style || wheel.display_style_no || "";
       wheelBrand = wheel.brand_desc || wheel.brand_cd || "";
-      
-      // Quick check: does THIS specific SKU fit?
       const thisBp = wheel.bolt_pattern_metric || wheel.bolt_pattern_standard || "";
-      if (thisBp && checkMatch(thisBp)) {
-        if (trimRequiredNote) {
-          // Bolt pattern is shared by every trim and matches, but width/offset/
-          // diameter are per-trim and unresolved: unknown, not a fit.
-          return NextResponse.json({
-            fits: null,
-            reason: "trim_required_for_geometry",
-            boltPatternCompatible: true,
-            matchingSku: sku,
-            vehicleBoltPattern,
-            wheelBoltPattern: thisBp,
-            ...trimRequiredNote,
-          });
-        }
-        // Bolt pattern matches; also run geometry check when OEM basis available
-        let geometryPass = true;
-        let geometryNote: string | undefined;
-        if (checkOemOffset && !checkOemOffset.missing) {
-          const ww = Number(wheel.width) || checkOemOffset.width_in;
-          const wo = Number(wheel.offset);
-          if (!isNaN(wo)) {
-            const geo = computeWheelGeometry(
-              { width_in: ww, offset_mm: wo },
-              { width_in: checkOemOffset.width_in, offset_mm: checkOemOffset.offset_mm },
-            );
-            if (geo.exceedsSafetyCeiling || !geo.passesAggressive) {
-              geometryPass = false;
-              geometryNote = `Geometry unsafe: delta_backspacing=${geo.delta_backspacing_mm.toFixed(1)}mm`;
-            }
-          }
-        }
+
+      if (!thisBp) {
         return NextResponse.json({
-          fits: geometryPass,
+          fits: null,
+          reason: "sku_bolt_pattern_unknown",
+          boltPatternCompatible: null,
           matchingSku: sku,
           vehicleBoltPattern,
-          wheelBoltPattern: thisBp,
-          reason: geometryPass ? "exact_sku_match" : "geometry_rejected",
-          geometryNote,
+          ...(trimRequiredNote ?? {}),
         });
       }
+      if (checkMatch(thisBp)) {
+        return NextResponse.json(certifyWheel({ sku, width: wheel.width, offset: wheel.offset }, thisBp, "exact_sku_match"));
+      }
+
+      // Requested SKU does not fit. A sibling is only a suggestion.
+      let alternativeSku: string | undefined;
+      let checkedVariants = 0;
+      if (styleKey) {
+        const siblings = await getTechfeedWheelsByStyle(styleKey);
+        checkedVariants = siblings?.length ?? 0;
+        const alt = (siblings ?? []).find((v) => {
+          const vbp = v.bolt_pattern_metric || v.bolt_pattern_standard || "";
+          return v.sku !== sku && !!vbp && checkMatch(vbp);
+        });
+        alternativeSku = alt?.sku;
+      }
+      return NextResponse.json({
+        fits: false,
+        reason: "sku_bolt_pattern_mismatch",
+        boltPatternCompatible: false,
+        vehicleBoltPattern,
+        wheelBoltPattern: thisBp,
+        checkedVariants,
+        ...(alternativeSku ? { alternativeSku } : {}),
+        ...(trimRequiredNote ?? {}),
+      });
     }
 
-    // Check ALL variants of this style for any that fit
-    // First try exact match, then fuzzy match
+    // Style-only request (brand+style): any variant of the style may satisfy it.
     let allVariants: Awaited<ReturnType<typeof getTechfeedWheelsByStyle>> = [];
-    
     if (styleKey) {
       allVariants = await getTechfeedWheelsByStyle(styleKey);
     }
-    
-    // If no exact match, try fuzzy search (e.g., "Rebel" → "D679 REBEL")
     if ((!allVariants || allVariants.length === 0) && style) {
-      allVariants = await searchWheelsByStyleFuzzy(style, brand || undefined);
+      allVariants = await searchWheelsByStyleFuzzy(style, wheelBrand || undefined);
     }
-    
+
     if (allVariants && allVariants.length > 0) {
+      // 2026-09-18: scan EVERY bolt-compatible variant. A geometry rejection on
+      // one variant must not reject the style while a later variant passes.
+      // Outcome precedence: any fits:true > any unverified (null) > all rejected.
+      let firstNull: Record<string, unknown> | null = null;
+      let firstFalse: Record<string, unknown> | null = null;
+      let compatible = 0;
       for (const variant of allVariants) {
         const variantBp = variant.bolt_pattern_metric || variant.bolt_pattern_standard || "";
-        if (variantBp && checkMatch(variantBp)) {
-          if (trimRequiredNote) {
-            return NextResponse.json({
-              fits: null,
-              reason: "trim_required_for_geometry",
-              boltPatternCompatible: true,
-              matchingSku: variant.sku,
-              vehicleBoltPattern,
-              wheelBoltPattern: variantBp,
-              checkedVariants: allVariants.length,
-              ...trimRequiredNote,
-            });
-          }
-          // Found a variant that fits!
-          return NextResponse.json({
-            fits: true,
-            matchingSku: variant.sku,
-            vehicleBoltPattern,
-            wheelBoltPattern: variantBp,
-            reason: "style_variant_match",
-            checkedVariants: allVariants.length,
-          });
+        if (!variantBp || !checkMatch(variantBp)) continue;
+        compatible++;
+        const body = certifyWheel(
+          { sku: variant.sku, width: variant.width, offset: variant.offset },
+          variantBp,
+          "style_variant_match",
+          { checkedVariants: allVariants.length },
+        );
+        if (body.fits === true) {
+          return NextResponse.json({ ...body, compatibleVariants: compatible });
         }
+        if (body.fits === null && !firstNull) firstNull = body;
+        if (body.fits === false && !firstFalse) firstFalse = body;
       }
-      
-      // No variants fit (a rejection on a bolt pattern shared by every trim is safe)
+      if (firstNull) return NextResponse.json({ ...firstNull, compatibleVariants: compatible });
+      if (firstFalse) return NextResponse.json({ ...firstFalse, compatibleVariants: compatible });
+      // No variants share the bolt pattern (a rejection on a bolt pattern shared by every trim is safe)
       return NextResponse.json({
         fits: false,
         vehicleBoltPattern,
@@ -244,10 +329,11 @@ export async function GET(req: Request) {
     if (trimRequiredNote) {
       return NextResponse.json({ fits: null, reason: "trim_required", boltPatternCompatible: null, ...trimRequiredNote });
     }
-    return NextResponse.json({ fits: true, reason: "no_style_data" });
+    // 2026-09-18 (audit F13): wheel not in our style data -> unverified, never fits:true
+    return NextResponse.json({ fits: null, reason: "style_not_found", boltPatternCompatible: null });
   } catch (err) {
     console.error("[check-fitment] Error:", err);
-    // On error, be permissive - let them proceed
-    return NextResponse.json({ fits: true, reason: "check_failed" });
+    // 2026-09-18 (audit F13): fail CLOSED. An error is not evidence of fit.
+    return NextResponse.json({ fits: null, reason: "check_failed", boltPatternCompatible: null });
   }
 }

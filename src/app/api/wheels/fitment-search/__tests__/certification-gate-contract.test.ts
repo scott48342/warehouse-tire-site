@@ -42,7 +42,7 @@ describe("fitment-search certification gate wiring", () => {
     // (platform-based, no trims) - anything more means a new ungated caller
     const unconditional = src.match(/confidenceResult,\s*"exact_certified"\);/g) ?? [];
     expect(unconditional).toHaveLength(1);
-    const idx = src.indexOf(unconditional[0]);
+    const idx = src.indexOf(unconditional[0] ?? "");
     expect(src.slice(Math.max(0, idx - 4000), idx)).toMatch(/CLASSIC FALLBACK HIT/);
   });
 

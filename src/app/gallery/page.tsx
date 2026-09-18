@@ -691,8 +691,8 @@ function GalleryPageInner() {
           const fitRes = await fetch(`/api/wheels/check-fitment?${fitCheckParams.toString()}`);
           const fitData = await fitRes.json();
           
-          if (fitData.fits) {
-            // Wheel fits! Use the matching SKU (might be different from original)
+          if (fitData.fits === true) {
+            // Verified fit. Use the matching SKU (might be different from original)
             const targetSku = fitData.matchingSku || item.wheelSku;
             
             if (targetSku) {
@@ -703,6 +703,12 @@ function GalleryPageInner() {
               if (item.wheelBrand) vehicleParams.set("brand", item.wheelBrand);
               router.push(`/wheels?${vehicleParams.toString()}`);
             }
+          } else if (fitData.fits === null) {
+            // 2026-09-18 (audit F13): UNVERIFIED (trim required / geometry unknown /
+            // check failed). Not a rejection and not a fit claim: go to the SRP with
+            // vehicle context so the gated fitment UI decides. Never the PDP as "fits".
+            if (item.wheelBrand) vehicleParams.set("brand", item.wheelBrand);
+            router.push(`/wheels?${vehicleParams.toString()}`);
           } else {
             // Wheel doesn't fit - show error and go to SRP
             const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
