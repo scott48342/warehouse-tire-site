@@ -14,3 +14,30 @@ Scope: F5 exact model match, F7 ambiguous-trim gate, F3 load-index gating. No DB
 
 **Next:** tsc on touched files, unit tests for modelMatch + trimAmbiguity, then F3 grep + implementation.
 **Blockers:** none yet.
+
+## 13:58 — DB privilege check (per reviewer corrections)
+**User:** `neondb_owner` — has FULL write privileges (UPDATE/DELETE/INSERT on vehicle_fitments).
+**NOT read-only.** Mitigations:
+- Avoid `/api/fitment/validate*` endpoints (they run CREATE TABLE IF NOT EXISTS)
+- `src/app/api/tires/search/route.ts:194` writes to `tireweb_sku_cache` — this is a SKU enrichment cache, NOT fitment data. Will be triggered by tire searches but acceptable (cache only).
+- No other DB writes found in tires/packages routes.
+
+## 13:59 — F3 load-index rework (per reviewer corrections)
+**Spec changes from original:**
+- Field: `requiredLoadIndex` / `requiredLoadIndexSource` (NOT "OE"/"OEM")
+- Below required → EXCLUDE from packages, BLOCK fit-certified paths
+- Plain browse MAY show with incompatibility message, NO fit badge
+- Missing/unverified minimum → NO green badge (degrade to neutral)
+
+**In progress:** Rewriting loadIndexGate.ts to match new spec.
+
+---
+# CONTINUATION (new worker, 2026-09-18 14:05) — working from fix-batch1-REQUIREMENTS.md (R1–R6)
+
+## 14:05 — R1 Preview isolation DONE
+- Privilege check (`node --env-file=.env.local scripts/check-db-privs.mjs`): `current_user=neondb_owner`, `rolsuper=false`, `rolcreatedb=true`, `has_table_privilege(vehicle_fitments, UPDATE)=true` (also DELETE/INSERT true). **Role is writable.** Mitigation: never call `/api/fitment/validate*`; write-path inventory below.
+- `.env.local` (gitignored; backup `.env.local.bak-prestrip`, also gitignored): removed `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, `KV_REST_API_URL`, `KV_REST_API_TOKEN`, `KV_REST_API_READ_ONLY_TOKEN`, `KV_URL`, `REDIS_URL`; added `FITMENT_CACHE_DISABLED=1`.
+- Verified every Redis client (`fitmentCache`, `ymmCache`, `tires/searchCache`, `tireweb/protection`, `sharedCache`, `inventoryCache`, `inventorySync`, `jake/fitmentCache`, `fedexRates`, `wheel-viz`, `safetyGovernor`, analytics) returns `null` / local-fallback when the env vars are absent — no crash path.
+- `fitmentCache.ts`: `CACHE_VERSION` v5 → **v6** (key prefix `wt:fit:v6:`); added `FITMENT_CACHE_DISABLED=1` switch that bypasses Redis AND the in-process map (get → miss, set → no-op).
+- Other caches audited, NOT bumped (reason): `tiresearch:size:*` / `tiresearch:vehicle:*` cache raw supplier results BEFORE `annotateLoadIndex` runs (route.ts L3325 is post-cache) so gate fields never persist; `wt:ymm:*` = years/makes/models/trims lists (unchanged shape); `wt:avail:*` = wheel availability (unrelated).
+- Shared write side effects on exercised paths: (1) `tires/search` L194 upserts `tireweb_sku_cache` (SKU enrichment cache — DB write, not fitment data; unavoidable when exercising tire search; noted). (2) Redis writes: none (creds removed). (3) Vercel Blob: only Jake mockup — not exercised. (4) db-reporter / analytics inserts: `analytics/fitment-coverage` requires Redis (disabled). No writes to `vehicle_fitments` on any exercised path.

@@ -60,8 +60,18 @@ export type FitmentCacheStats = {
  * - v3: Bust profiles built before quarantined_at filtering on runtime reads (2026-09-16)
  * - v4: Added serviceSpecs (lug torque / tire pressure / load index) (2026-09-17)
  * - v5: serviceSpecs.oemSpeedRating; DB-wide load index/speed backfill landed (2026-09-17)
+ * - v6: fix-batch1 (2026-09-18): exact model match (F5), trim-ambiguity gate fields
+ *       (trimRequired / certifiable / sharedSpecs), load-index gate fields (F3)
  */
-const CACHE_VERSION = "v5";
+const CACHE_VERSION = "v6";
+
+/**
+ * Kill switch for local/preview runs: `FITMENT_CACHE_DISABLED=1` bypasses both
+ * Redis and the in-process cache so every profile is rebuilt from the DB.
+ */
+function cacheDisabled(): boolean {
+  return process.env.FITMENT_CACHE_DISABLED === "1";
+}
 
 const CONFIG = {
   KEY_PREFIX: `wt:fit:${CACHE_VERSION}:`,  // Version included in key prefix
@@ -167,6 +177,10 @@ export async function getCachedFitment(
   model: string,
   modificationId: string
 ): Promise<CachedFitmentProfile | null> {
+  if (cacheDisabled()) {
+    stats.misses++;
+    return null;
+  }
   const key = makeFitmentCacheKey(year, make, model, modificationId);
   
   // Try Redis first
@@ -213,6 +227,7 @@ export async function setCachedFitment(
   modificationId: string,
   profile: Omit<CachedFitmentProfile, "cachedAt">
 ): Promise<void> {
+  if (cacheDisabled()) return;
   const key = makeFitmentCacheKey(year, make, model, modificationId);
   const entry: CachedFitmentProfile = {
     ...profile,
