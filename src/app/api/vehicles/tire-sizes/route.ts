@@ -199,6 +199,10 @@ interface DbFitmentResult {
     candidateCount: number;
     selectedModificationId: string | null;
     selectedDisplayTrim: string | null;
+    // Audit 2026-09-18: resolver's tri-state trim verdict, surfaced so callers
+    // (Jake, PDP) can tell "browsable" from "certified".
+    trimRequired: boolean;
+    candidateTrims: string[];
   };
 }
 
@@ -314,6 +318,8 @@ async function getDbFitmentSizes(
       candidateCount: resolveResult.availableTrims.length,
       selectedModificationId: resolveResult.modificationId,
       selectedDisplayTrim: resolveResult.trim,
+      trimRequired: resolveResult.trimRequired === true,
+      candidateTrims: resolveResult.availableTrims.map(t => t.displayTrim),
     };
     
     console.log(`[tire-sizes] UNIVERSAL HIT: ${year} ${make} ${model} → matchedBy=${matchedBy}, source=${resolveResult.source}, confidence=${resolveResult.confidence}, trim="${resolveResult.trim}" mod=${resolveResult.modificationId}`);
@@ -600,7 +606,7 @@ export async function GET(req: Request) {
         // Scott's required audit fields
         requestedTrim: trimParam || null,
         normalizedRequestedTrim: modification || null,
-        candidateTrims: [], // Would need to fetch from safeResolver for full list
+        candidateTrims: dbFitment.debug.candidateTrims,
         matchedTrim: dbFitment.debug.selectedDisplayTrim,
         matchedBy: dbFitment.debug.resolutionMethod,
         modificationId: dbFitment.debug.selectedModificationId,
@@ -615,6 +621,12 @@ export async function GET(req: Request) {
         reasonMultipleSizesShown,
       };
       
+      // Audit 2026-09-18: certification state at the top level. certifiable is
+      // true only for an exact trim match with no trim-required verdict; when
+      // false the sizes are shown for browsing and no "Fits" claim may be made.
+      const trimRequired = dbFitment.debug.trimRequired;
+      const certifiable = dbFitment.debug.exactTrimMatch && !trimRequired;
+
       return NextResponse.json({
         tireSizes: dbFitment.tireSizes,
         tireSizesStrict: dbFitment.tireSizes,
@@ -626,6 +638,11 @@ export async function GET(req: Request) {
           boltPattern: dbFitment.boltPattern,
           centerBore: dbFitment.centerBore,
         },
+        trimRequired,
+        certifiable,
+        certificationBlock: certifiable ? null : (trimRequired ? "trim_required" : "trim_unconfirmed"),
+        matchedTrim: dbFitment.debug.selectedDisplayTrim,
+        candidateTrims: dbFitment.debug.candidateTrims,
         // Wheel diameter analysis for trim-specific filtering
         // For staggered: needsSelection=false because both sizes are needed
         wheelDiameters: {

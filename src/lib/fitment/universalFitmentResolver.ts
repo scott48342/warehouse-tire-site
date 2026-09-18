@@ -389,6 +389,17 @@ function getModelVariants(model: string): string[] {
   if (slugified !== lowercased) {
     variants.push(slugified);
   }
+  // 2026-09-18 (audit / Jake J1): the DB slug for HD trucks has no separator
+  // before "hd" ("silverado-2500hd"), but customers - and Jake - write
+  // "Silverado 2500 HD", which slugifies to "silverado-2500-hd" and missed
+  // every variant above (tire-sizes answered "No tire size data" while
+  // fitment-search, reached via a different input, resolved 8x180). Try the
+  // collapsed form too. Exact-input variants stay first, so nothing that
+  // matched before changes.
+  const hdCollapsed = slugified.replace(/-(hd)$/i, "$1");
+  if (hdCollapsed !== slugified && !variants.includes(hdCollapsed)) {
+    variants.push(hdCollapsed);
+  }
   
   if (richVariant) {
     if (!variants.includes(richVariant)) variants.push(richVariant);

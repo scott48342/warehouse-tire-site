@@ -25,9 +25,16 @@ const getPublicUrl = () => {
   return 'https://shop.warehousetiredirect.com';
 };
 
-// Enthusiast platform knowledge for confident responses
+// Enthusiast platform knowledge for confident responses.
+//
+// Audit 2026-09-18 (Jake J1/J3/J4): this table is BUILD-CULTURE guidance only
+// (sweet-spot diameters, staggered norms, tone). It carries NO bolt pattern and
+// is never a fitment source: Jake told a 2024 Silverado 2500 HD its bolt
+// pattern was 6x139.7 "confirmed" (HD is 8x180) because the old table hard-coded
+// 6x139.7 for anything containing "silverado". Bolt pattern / bore / sizes
+// come only from the fitment DB via the tools below, with their certification
+// state attached.
 const ENTHUSIAST_PLATFORMS: Record<string, {
-  boltPattern: string;
   sweetSpotDiameters: number[];
   aggressiveDiameters: number[];
   staggeredCommon: boolean;
@@ -35,7 +42,6 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
   confidence: string;
 }> = {
   "4th_gen_fbody": {
-    boltPattern: "5x120.65",
     sweetSpotDiameters: [18, 19, 20],
     aggressiveDiameters: [21, 22],
     staggeredCommon: true,
@@ -43,7 +49,6 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
     confidence: "20s are the sweet spot on these cars",
   },
   "c5_corvette": {
-    boltPattern: "5x120.65",
     sweetSpotDiameters: [18, 19],
     aggressiveDiameters: [19, 20],
     staggeredCommon: true,
@@ -51,7 +56,6 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
     confidence: "Factory staggered - embrace it",
   },
   "s197_mustang": {
-    boltPattern: "5x114.3",
     sweetSpotDiameters: [19, 20],
     aggressiveDiameters: [20, 22],
     staggeredCommon: true,
@@ -59,7 +63,6 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
     confidence: "Massive aftermarket support",
   },
   "s550_mustang": {
-    boltPattern: "5x114.3",
     sweetSpotDiameters: [19, 20],
     aggressiveDiameters: [20, 22],
     staggeredCommon: true,
@@ -67,7 +70,6 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
     confidence: "20s are basically standard at this point",
   },
   "mopar_lx": {
-    boltPattern: "5x115",
     sweetSpotDiameters: [20],
     aggressiveDiameters: [22, 24],
     staggeredCommon: true,
@@ -75,7 +77,6 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
     confidence: "20s are the sweet spot",
   },
   "gm_truck_modern": {
-    boltPattern: "6x139.7",
     sweetSpotDiameters: [20, 22],
     aggressiveDiameters: [22, 24],
     staggeredCommon: false,
@@ -83,7 +84,6 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
     confidence: "22s are basically standard now",
   },
   "ford_f150_modern": {
-    boltPattern: "6x135",
     sweetSpotDiameters: [20, 22],
     aggressiveDiameters: [22, 24],
     staggeredCommon: false,
@@ -92,10 +92,15 @@ const ENTHUSIAST_PLATFORMS: Record<string, {
   },
 };
 
-// Helper to detect enthusiast platform
-function detectEnthusiastPlatform(year: number, make: string, model: string): string | null {
-  const makeLower = make.toLowerCase();
-  const modelLower = model.toLowerCase();
+// Helper to detect enthusiast platform.
+// Matching is EXCLUSIVE, not substring-happy: a platform id is returned only
+// when the model is that platform. Derivatives that share a name but not the
+// chassis (Mustang Mach-E, Silverado/Sierra HD, F-150 Raptor/Lightning) return
+// null so Jake uses the normal DB lookup with no culture overlay.
+export function detectEnthusiastPlatform(year: number, make: string, model: string): string | null {
+  const makeLower = make.toLowerCase().trim();
+  const modelLower = model.toLowerCase().trim();
+  const isHdTruck = /\b(2500|3500|4500|5500)\b|\bhd\b|heavy duty|silverado ?hd|sierra ?hd/.test(modelLower);
   
   // 4th Gen F-Body (1993-2002 Camaro/Firebird)
   if (year >= 1993 && year <= 2002) {
@@ -112,36 +117,85 @@ function detectEnthusiastPlatform(year: number, make: string, model: string): st
     return "c5_corvette";
   }
   
-  // S197 Mustang
-  if (year >= 2005 && year <= 2014 && makeLower === "ford" && modelLower.includes("mustang")) {
+  // Mustang (S197 / S550). Mach-E is an EV crossover on a different platform.
+  const isMustangCoupe = makeLower === "ford" && modelLower.includes("mustang") && !modelLower.includes("mach-e") && !modelLower.includes("mach e");
+  if (year >= 2005 && year <= 2014 && isMustangCoupe) {
     return "s197_mustang";
   }
-  
-  // S550 Mustang
-  if (year >= 2015 && year <= 2023 && makeLower === "ford" && modelLower.includes("mustang")) {
+  if (year >= 2015 && year <= 2023 && isMustangCoupe) {
     return "s550_mustang";
   }
   
-  // Mopar LX/LC
-  if (year >= 2006 && (makeLower === "dodge" || makeLower === "chrysler")) {
-    if (modelLower.includes("challenger") || modelLower.includes("charger") || modelLower.includes("300")) {
+  // Mopar LX/LC (2006-2023; the 2024+ Charger is a new platform)
+  if (year >= 2006 && year <= 2023 && (makeLower === "dodge" || makeLower === "chrysler")) {
+    if (modelLower.includes("challenger") || modelLower.includes("charger") || /\b300c?\b/.test(modelLower)) {
       return "mopar_lx";
     }
   }
   
-  // Modern GM Trucks
-  if (year >= 2014 && (makeLower === "chevrolet" || makeLower === "chevy" || makeLower === "gmc")) {
-    if (modelLower.includes("silverado") || modelLower.includes("sierra")) {
+  // Modern GM half-ton trucks ONLY. 2500/3500 HD are 8-lug, different everything.
+  if (year >= 2014 && (makeLower === "chevrolet" || makeLower === "chevy" || makeLower === "gmc") && !isHdTruck) {
+    if (/\bsilverado\b(\s*1500)?$|\bsierra\b(\s*1500)?$|silverado 1500|sierra 1500/.test(modelLower)) {
       return "gm_truck_modern";
     }
   }
   
-  // Modern F-150
-  if (year >= 2015 && makeLower === "ford" && modelLower.includes("f-150")) {
+  // Modern F-150 (not Raptor - 17" wheels / 35s are its normal - and not Lightning)
+  if (year >= 2015 && makeLower === "ford" && /\bf-?150\b/.test(modelLower) && !modelLower.includes("raptor") && !modelLower.includes("lightning")) {
     return "ford_f150_modern";
   }
   
   return null;
+}
+
+/**
+ * Fit-certification state as the site APIs report it (audit 2026-09-18).
+ * tire-sizes, fitment-search and tires/search all emit some of
+ * trimRequired / certifiable / certificationBlock / trimAmbiguity, either at the
+ * top level or under `fitment`. Jake surfaces them verbatim so it can only say
+ * "confirmed" when the site would show a Guaranteed Fit badge.
+ *
+ * Absent flags are NOT treated as certified: certifiable is true only when the
+ * API says so, or when it explicitly reports an exact trim match with no block.
+ */
+export function certificationFromApi(data: any): {
+  trimRequired: boolean;
+  certifiable: boolean;
+  certificationBlock: string | null;
+  matchedTrim: string | null;
+  exactTrimMatch: boolean | null;
+  candidateTrims: string[];
+  dataNote: string;
+} {
+  const f = data?.fitment ?? {};
+  const dbg = data?.debug ?? {};
+  const trimRequired =
+    data?.trimRequired === true || f.trimRequired === true || f.trimAmbiguity?.resolution === "trim_required" ||
+    data?.trimResolutionRequired === true || data?.blocked === true;
+  const certificationBlock: string | null =
+    data?.certificationBlock ?? f.certificationBlock ?? (trimRequired ? "trim_required" : null) ?? null;
+  const exactTrimMatch: boolean | null =
+    typeof dbg.exactTrimMatch === "boolean" ? dbg.exactTrimMatch
+    : typeof data?.exactTrimMatch === "boolean" ? data.exactTrimMatch
+    : null;
+  const explicitCert = data?.certifiable ?? f.certifiable;
+  const certifiable =
+    typeof explicitCert === "boolean" ? explicitCert && !trimRequired && !certificationBlock
+    : exactTrimMatch === true && !trimRequired && !certificationBlock;
+  const candidateTrims: string[] = Array.isArray(f.trimAmbiguity?.candidateTrims)
+    ? f.trimAmbiguity.candidateTrims.map((t: any) => t?.displayTrim ?? String(t))
+    : Array.isArray(data?.availableTrims) ? data.availableTrims.map((t: any) => t?.displayTrim ?? String(t))
+    : Array.isArray(dbg.candidateTrims) ? dbg.candidateTrims
+    : [];
+  const matchedTrim: string | null = dbg.matchedTrim ?? f.vehicle?.trim ?? f.dbProfile?.displayTrim ?? data?.matchedTrim ?? null;
+  const dataNote = certifiable
+    ? "Specs are certified for the matched trim."
+    : trimRequired
+      ? `Specs are for browsing only - trim not confirmed (matched "${matchedTrim ?? "?"}" by default${candidateTrims.length ? `; trims: ${candidateTrims.join(", ")}` : ""}). Do not call any spec "confirmed" or "verified" until the customer's trim is looked up.`
+      : certificationBlock
+        ? `Fit not certified (${certificationBlock}). Present specs as our database values, not as verified.`
+        : "Specs are our database values for this vehicle; certification state not reported - present as database values, not as verified.";
+  return { trimRequired, certifiable, certificationBlock, matchedTrim, exactTrimMatch, candidateTrims, dataNote };
 }
 
 // Tool definitions for Claude
@@ -164,7 +218,7 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
   },
   {
     name: "lookup_wheel_fitment",
-    description: `Look up wheel fitment specs for a vehicle. Returns bolt pattern, center bore, offset range, and available wheel diameters.`,
+    description: `Look up wheel fitment specs for a vehicle from the fitment database. Returns bolt pattern, center bore, available wheel diameters, plus certifiable / trimRequired / candidateTrims. If trimRequired is true the values are for the default-matched trim and are NOT confirmed for the customer - ask for or pass the trim. If a customer states a different bolt pattern than the database, report the database value AND its certification state; never say the database is "confirmed correct" unless certifiable is true.`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -191,13 +245,15 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
   },
   {
     name: "search_wheels",
-    description: `Search for actual wheel products that fit a vehicle. Returns products with prices and links. Use excludeFinishes to filter out unwanted finishes (e.g., when customer says "no black wheels").`,
+    description: `Search for actual wheel products that fit a vehicle. Returns products with prices and links. Use excludeFinishes to filter out unwanted finishes (e.g., when customer says "no black wheels").
+ALWAYS pass trim when the customer has named one. The result carries certifiable/certificationBlock: if certificationBlock is "trim_required" or certifiable is false, the wheels are for browsing and you must NOT call them a confirmed fit.`,
     input_schema: {
       type: "object" as const,
       properties: {
         year: { type: "number", description: "Vehicle year" },
         make: { type: "string", description: "Vehicle make" },
         model: { type: "string", description: "Vehicle model" },
+        trim: { type: "string", description: "Vehicle trim exactly as the customer named it (e.g., 'Competition xDrive', 'GT', 'LT Trail Boss'). Pass it whenever known." },
         diameter: { type: "number", description: "Desired wheel diameter (e.g., 20)" },
         limit: { type: "number", description: "Max results (default 6)" },
         excludeFinishes: { 
@@ -219,7 +275,9 @@ Must have year, make, model. Trim is optional but improves accuracy for performa
 
 When customer asks for a SPECIFIC BRAND (e.g., "Mastercraft", "Michelin", "BFGoodrich"):
 - ALWAYS pass the brand parameter to filter results
-- This ensures you show them what they asked for, not just whatever's cheapest`,
+- This ensures you show them what they asked for, not just whatever's cheapest
+
+Each tire carries fitBadgeAllowed / loadIndexOk / requiredLoadIndex / packageEligible exactly as the site computes them. A tire is a confirmed fit ONLY when fitBadgeAllowed is true. If requiredLoadIndexVerified is false, the minimum load index is unknown - say so, never invent one or a load range requirement.`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -228,6 +286,7 @@ When customer asks for a SPECIFIC BRAND (e.g., "Mastercraft", "Michelin", "BFGoo
         year: { type: "number", description: "Vehicle year (alternative to size)" },
         make: { type: "string", description: "Vehicle make" },
         model: { type: "string", description: "Vehicle model" },
+        trim: { type: "string", description: "Vehicle trim as the customer named it. Pass it whenever known so the load-index requirement is trim-specific." },
         limit: { type: "number", description: "Max results (default 6)" }
       },
       required: []
@@ -235,7 +294,7 @@ When customer asks for a SPECIFIC BRAND (e.g., "Mastercraft", "Michelin", "BFGoo
   },
   {
     name: "get_platform_context",
-    description: `Get enthusiast platform knowledge for a vehicle. Use this FIRST for muscle cars, trucks, and performance vehicles.`,
+    description: `Get enthusiast BUILD-CULTURE guidance (sweet-spot diameters, staggered norms, tone) for muscle cars and half-ton trucks. It returns NO bolt pattern or specs - those come only from lookup_wheel_fitment / lookup_tire_sizes. Returns isEnthusiastPlatform:false for anything not on the list (including Mach-E, HD trucks, Raptor).`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -548,11 +607,13 @@ export async function executeTool(
           return { error: `API error: ${res.status}` };
         }
         const data = await res.json() as any;
+        const cert = certificationFromApi(data);
         return {
           tireSizes: data.tireSizes || [],
           staggered: data.staggered || null,
           boltPattern: data.fitment?.boltPattern || null,
           source: data.source,
+          ...cert,
         };
       } catch (err) {
         return { error: `Fetch error: ${err}` };
@@ -572,23 +633,30 @@ export async function executeTool(
       const platform = detectEnthusiastPlatform(Number(year), String(make), String(model));
       const platformContext = platform ? ENTHUSIAST_PLATFORMS[platform] : null;
       
+      // Audit 2026-09-18 (J1/J4): the DB is the ONLY source for bolt pattern /
+      // bore / OEM diameters. When the lookup fails we say so - we never hand
+      // Jake a platform-table bolt pattern to present as the vehicle's.
       try {
         const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok && platformContext) {
+        if (!res.ok) {
           return {
-            boltPattern: platformContext.boltPattern,
-            wheelDiameters: platformContext.sweetSpotDiameters,
-            isEnthusiastPlatform: true,
-            platformGuidance: platformContext.confidence,
+            error: `API error: ${res.status}`,
+            boltPattern: null,
+            certifiable: false,
+            dataNote: "Fitment lookup failed - bolt pattern and wheel sizes are UNKNOWN. Do not state a bolt pattern.",
+            ...(platformContext ? { isEnthusiastPlatform: true, platformGuidance: platformContext.confidence, sweetSpotDiameters: platformContext.sweetSpotDiameters } : {}),
           };
         }
         const data = await res.json() as any;
+        const cert = certificationFromApi(data);
         
         const result: Record<string, any> = {
-          boltPattern: data.fitment?.boltPattern || platformContext?.boltPattern || null,
+          boltPattern: data.fitment?.boltPattern || null,
+          boltPatternSource: data.fitment?.boltPattern ? "fitment_db" : null,
           centerBore: data.fitment?.centerBore || null,
-          wheelDiameters: data.wheelDiameters?.available || platformContext?.sweetSpotDiameters || [],
+          wheelDiameters: data.wheelDiameters?.available || [],
           staggered: data.staggered || null,
+          ...cert,
         };
         
         if (platformContext) {
@@ -600,15 +668,12 @@ export async function executeTool(
         
         return result;
       } catch (err) {
-        if (platformContext) {
-          return {
-            boltPattern: platformContext.boltPattern,
-            wheelDiameters: platformContext.sweetSpotDiameters,
-            isEnthusiastPlatform: true,
-            platformGuidance: platformContext.confidence,
-          };
-        }
-        return { error: `Fetch error: ${err}` };
+        return {
+          error: `Fetch error: ${err}`,
+          boltPattern: null,
+          certifiable: false,
+          dataNote: "Fitment lookup failed - bolt pattern and wheel sizes are UNKNOWN. Do not state a bolt pattern.",
+        };
       }
     }
     
@@ -828,8 +893,8 @@ export async function executeTool(
     }
     
     case "search_wheels": {
-      const { year, make, model, diameter, limit = 6, excludeFinishes, preferFinish } = input as {
-        year: number; make: string; model: string; diameter?: number; limit?: number;
+      const { year, make, model, trim, diameter, limit = 6, excludeFinishes, preferFinish } = input as {
+        year: number; make: string; model: string; trim?: string; diameter?: number; limit?: number;
         excludeFinishes?: string[]; preferFinish?: string;
       };
       // Request more results if we're filtering, so we have enough after exclusion
@@ -842,6 +907,10 @@ export async function executeTool(
         make: String(make),
         model: String(model),
       });
+      // Audit 2026-09-18 (J4): the selected trim was dropped here, so the API
+      // auto-picked a trim and returned certificationBlock=trim_required for a
+      // customer who HAD named their trim.
+      if (trim) params.set("trim", String(trim));
       if (diameter) params.set("diameter", String(diameter));
       params.set("limit", String(fetchLimit));
       
@@ -944,6 +1013,7 @@ export async function executeTool(
           return clean;
         });
         
+        const cert = certificationFromApi(data);
         const result = { 
           wheels, 
           count: wheels.length, 
@@ -951,7 +1021,20 @@ export async function executeTool(
           finishFilters: {
             excluded: excludeFinishes || [],
             preferred: preferFinish || null,
-          }
+          },
+          // Fit certification state of the vehicle these results were matched to
+          // (audit 2026-09-18). certificationBlock e.g. "trim_required" means the
+          // list is for browsing only - nothing in it may be called a confirmed fit.
+          ...cert,
+          fitment: data.fitment
+            ? {
+                boltPattern: data.fitment.envelope?.boltPattern ?? data.fitment.dbProfile?.boltPattern ?? null,
+                centerBore: data.fitment.envelope?.centerBore ?? data.fitment.dbProfile?.centerBoreMm ?? null,
+                resolvedTrim: data.fitment.vehicle?.trim ?? data.fitment.dbProfile?.displayTrim ?? null,
+                staggered: data.fitment.staggered ?? null,
+                certificationBlock: cert.certificationBlock,
+              }
+            : null,
         };
         
         // Add helpful message if we filtered everything out
@@ -969,8 +1052,8 @@ export async function executeTool(
     }
     
     case "search_tires": {
-      const { size, brand, year, make, model, limit = 6 } = input as {
-        size?: string; brand?: string; year?: number; make?: string; model?: string; limit?: number;
+      const { size, brand, year, make, model, trim, limit = 6 } = input as {
+        size?: string; brand?: string; year?: number; make?: string; model?: string; trim?: string; limit?: number;
       };
       const params = new URLSearchParams();
       if (size) params.set("size", String(size));
@@ -978,6 +1061,7 @@ export async function executeTool(
       if (year) params.set("year", String(year));
       if (make) params.set("make", String(make));
       if (model) params.set("model", String(model));
+      if (trim) params.set("trim", String(trim));
       // Request more results when filtering by brand so we have good selection
       params.set("limit", brand ? String(Math.max(Number(limit), 15)) : String(limit));
       
@@ -1023,10 +1107,29 @@ export async function executeTool(
             terrain,
             loadRange: t.enrichment?.loadRange || t.badges?.construction,
             inStock: (t.quantity?.primary || 0) >= 4,
+            // Audit 2026-09-18 (J2): the fit / load-index gates the site applies
+            // to every tire card travel with the result, so Jake can only call a
+            // tire a confirmed fit when the site itself would.
+            fitBadgeAllowed: t.fitBadgeAllowed === true,
+            fitBlockReason: t.fitBlockReason ?? null,
+            packageEligible: t.packageEligible !== false,
+            packageExclusionReason: t.packageExclusionReason ?? null,
+            loadIndex: t.loadIndex ?? t.tireLoadIndex ?? null,
+            loadIndexOk: typeof t.loadIndexOk === "boolean" ? t.loadIndexOk : null,
+            loadIndexChecked: t.loadIndexChecked === true,
+            requiredLoadIndex: t.requiredLoadIndex ?? null,
           };
         });
         
-        return { tires, count: tires.length };
+        const cert = certificationFromApi(data);
+        return {
+          tires,
+          count: tires.length,
+          ...cert,
+          requiredLoadIndex: data.requiredLoadIndex ?? null,
+          requiredLoadIndexSource: data.requiredLoadIndexSource ?? null,
+          requiredLoadIndexVerified: data.requiredLoadIndexSource === "db" || data.requiredLoadIndexSource === "placard",
+        };
       } catch (err) {
         return { error: `Fetch error: ${err}`, tires: [] };
       }
@@ -1047,7 +1150,8 @@ export async function executeTool(
       return {
         isEnthusiastPlatform: true,
         platformId: platform,
-        boltPattern: data.boltPattern,
+        // No boltPattern here on purpose - use lookup_wheel_fitment (fitment DB).
+        dataNote: "Build-culture guidance only. Bolt pattern, bore and OEM sizes must come from lookup_wheel_fitment / lookup_tire_sizes.",
         sweetSpotDiameters: data.sweetSpotDiameters,
         aggressiveDiameters: data.aggressiveDiameters,
         staggeredCommon: data.staggeredCommon,
