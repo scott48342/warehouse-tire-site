@@ -67,3 +67,8 @@ Independent checks against the current file FAIL on known+unknown agreement and 
 - Dev server on PORT 3002 (isolated cache, R1 done). Hit and record JSON for: `/api/vehicles/search?year=2024&make=Ford&model=Mustang`, `/api/wheels/check-fitment?sku=D68117906545&year=2024&make=Ford&model=Mustang`, `/api/vehicles/search?year=2024&make=BMW&model=M4`, `/api/wheels/check-fitment?year=2024&make=BMW&model=M4&sku=<a 5x120 sku from fitment-search>`, `/api/tires/search` for 2020 F-150 Raptor 17".
 - Small conventional commits; no push.
 - Handoff in `fix-batch1-progress.md` and in your final message: commits, files changed, test command + counts, cache keys bumped, privilege-check result, consumer disposition table, retest URLs on :3002, UNFIXED items with reasons.
+
+## R4 addendum (14:13, reviewer acceptance test) — semantics clarification, binding
+- ssessLoadIndex("119", 119) with equiredLoadIndexSource: "vehicle_record_unverified" currently returns itBadgeAllowed: true. FAIL. An UNVERIFIED requirement can never certify fit, even when the tire index is equal or higher.
+- Keep two separate outputs: loadIndexOk (compatibility vs the stored requirement: true/false/null) and itBadgeAllowed (certification). itBadgeAllowed is true ONLY when the requirement source is a verified one (none exists today ? always false) AND the tire meets it. Below-required still excludes from certified packages/cart (packageEligible:false, reason load_index_below_required) regardless of source.
+- Regression tests to add: unverified source + equal index ? loadIndexOk:true, itBadgeAllowed:false; unverified + higher ? same; unverified + lower ? loadIndexOk:false, itBadgeAllowed:false, packageEligible:false; missing ? loadIndexOk:null, itBadgeAllowed:false.

@@ -64,3 +64,21 @@ o_style_data permissive fallback also blocked when trim required. Negative paths
   | lib/savedQuotes/resumeService.ts | resumes saved quote with stored trim => requestedTrim present, gate not triggered; no change |
   | pi/admin/fitment/coverage-report | admin report, no fit claim; no change |
   | Jake / POS / staggered-search / plus-sizes | do NOT import the resolver directly (grep); they consume /api/wheels/fitment-search, /api/vehicles/search, /api/tires/search responses above |
+- R3 committed as 1e4281de.
+
+## 14:45 - R4 Load-index gate DONE (commit 5bd3a89f)
+- Grep of actual enforcement before this batch: /api/tires/search L3325 nnotateLoadIndex (draft), TireStyleCardHorizontal amber warning + itBadgeAllowed prop (draft, NOT consumed by any badge renderer - the only tire "Guaranteed Fit" strings are static marketing copy: tires/page.tsx L2978, tires/[sku] L796/L1232, tires/km L414, cart L488, package/review L24/30). src/lib/packages/engine.ts builds placeholder tires (rand:"TBD"), real tires enter packages via /api/tires/search -> components/build/TireStep.tsx. staggered-search: no load-index logic.
+- loadIndexGate.ts: draft's inversion was ALREADY corrected by the previous worker at 13:59 (missing minimum => itBadgeAllowed:false) - verified by test. Added: 	ireLoadIndex (spec field), itBlockReason (load_index_below_required | load_index_unverified | 	rim_required), certifiedPathBlock() (blocks only KNOWN below-required), nnotateLoadIndex(items, spec, {certifiable}) - trim gate forces itBadgeAllowed:false with reason 	rim_required. Per-axle via esolveRequiredLoadIndex(spec, axle) (front/rear win; oth = max) - record currently has a single oem_load_index column so per-axle input is null in practice.
+- /api/tires/search: passes certifiable from the resolver; response adds certifiable, 	rimRequired; every result carries loadIndex/tireLoadIndex/requiredLoadIndex/requiredLoadIndexSource:"vehicle_record_unverified"/loadIndexOk/loadIndexChecked/loadIndexNote/fitBadgeAllowed/packageEligible/packageExclusionReason/fitBlockReason.
+- Packages wired: components/build/TireStep.tsx filters out packageEligible:false tires and handleSelect refuses them (load_index_below_required). lib/packages/engine.ts returns no packages when trim required (R3).
+- OE labels removed: TireStyleCardHorizontal fallback text "Load rating below OE" -> "Load rating is below what this vehicle requires"; RecommendedFitmentCard sidebar "OE load index" -> "Required load index".
+
+## 14:48 - R5 Tests
+- Command: 
+px jest src/lib/fitment-db/__tests__/trimAmbiguity.test.ts src/lib/tires/__tests__/loadIndexGate.test.ts src/lib/fitment-db/__tests__/modelMatch.test.ts => **3 suites, 52 passed, 0 failed**. Cases (a)-(f) + Mustang/Mach-E bolt disagree + offset-unknown + failClosed; load-index 110<119, 99<100, equal, missing, trim-gate suppression.
+- 
+px tsc --noEmit -p tsconfig.json => 0 errors.
+- **UNFIXED:** endpoint/integration tests for /api/vehicles/search, /api/fitment/profile, /api/wheels/check-fitment, /api/tires/search, packages (reason: 60-min budget exhausted; routes call the DB directly and check-fitment fetches /api/vehicles/search over HTTP - needs a mock layer not present in repo). Full existing jest suite before/after NOT run (same reason).
+
+## 14:50 - R6 UNFIXED
+- Dev server on :3002 not started; the retest URLs below were NOT hit (budget). R1 isolation is in place so the next worker can run set PORT=3002 && npm run dev immediately.
