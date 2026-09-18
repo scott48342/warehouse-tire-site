@@ -9,6 +9,7 @@
 
 import { NextResponse } from "next/server";
 import { getFitmentProfile } from "@/lib/fitment-db/profileService";
+import { toPublicSourceVerification } from "@/lib/fitment-db/sourceVerification";
 
 export const runtime = "nodejs";
 
@@ -127,10 +128,27 @@ export async function GET(req: Request) {
       },
     };
 
+    // 2026-09-18 (J4): an exact trim match is not verification. The wheel-side
+    // claim (bolt pattern / bore / offsets) is certifiable only when the row's
+    // wheel specs carry approved-source provenance. Source names stay internal.
+    const sv = result.profile.sourceVerification ?? null;
+    const wheelCertifiable = sv?.wheelSpecs === "verified";
+    const certificationBlock = wheelCertifiable ? null : "source_unverified";
+    if (!wheelCertifiable) {
+      console.log(`[vehicles/search] SOURCE GATE: ${year} ${make} ${model} ${result.profile.displayTrim} -> wheel specs unverified (no fit claim)`);
+    }
+
     return NextResponse.json({ 
       fitment,
       source: "database",
       resolutionPath: result.resolutionPath,
+      trimRequired: false,
+      // wheel-side certification (this endpoint answers wheel questions)
+      certifiable: wheelCertifiable,
+      wheelCertifiable,
+      tireCertifiable: sv?.tireSizes === "verified",
+      certificationBlock,
+      sourceVerification: toPublicSourceVerification(sv),
     });
   } catch (err: any) {
     console.error(`[vehicles/search] Error:`, err?.message || err);

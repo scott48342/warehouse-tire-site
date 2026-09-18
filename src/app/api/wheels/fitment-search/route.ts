@@ -51,6 +51,12 @@ import {
   type FitCertificationBlock,
 } from "@/lib/fitment-db/fitCertification";
 import {
+  assessSourceVerification,
+  unverifiedSourceVerification,
+  toPublicSourceVerification,
+  type SourceVerification,
+} from "@/lib/fitment-db/sourceVerification";
+import {
   type RearWheelConfig,
   isDRWCapable,
   needsRearWheelConfigSelection,
@@ -940,6 +946,8 @@ export async function GET(req: Request) {
               source: "db",
               apiCalled: false,
               overridesApplied: false,
+              // 2026-09-18 (J4): provenance verdict for the wheel-side claim
+              sourceVerification: assessSourceVerification(bestFitment, { trimCount: localFitments.length }),
             };
             resolutionPath = "directCanonical";
             canonicalModificationId = bestFitment.modificationId;
@@ -1031,6 +1039,8 @@ export async function GET(req: Request) {
             source: "db",  // classic fitment stored in our DB
             apiCalled: false,
             overridesApplied: false,
+            // Classic fitment table carries no provenance columns -> browsable, not certified
+            sourceVerification: unverifiedSourceVerification("classic fitment table has no source provenance"),
           };
           
           resolutionPath = "directCanonical";
@@ -1684,6 +1694,10 @@ async function handleDbProfilePath(
     fallbackWarnings,
     // R3 no-trim gate (2026-09-18)
     trimGate: trimGate ?? null,
+    // 2026-09-18 (J4): approved-source gate for the wheel-side claim. Absent
+    // verdict (legacy cache / manual profile) fails closed.
+    sourceGate: { verified: dbProfile.sourceVerification?.wheelSpecs === "verified" },
+    sourceVerification: dbProfile.sourceVerification ?? null,
     // Geometry validation (2026-06-30)
     oemOffsetResult,
     frontOemOffsetResult,
@@ -1790,6 +1804,9 @@ async function handleDbFirstWheelResults(opts: {
   fallbackWarnings?: string[];
   // R3 no-trim gate (2026-09-18): null when a specific trim resolved the profile
   trimGate?: TrimAmbiguityResult | null;
+  // 2026-09-18 (J4): approved-source gate for wheel specs; omitted = legacy caller (no source gating)
+  sourceGate?: { verified: boolean } | null;
+  sourceVerification?: SourceVerification | null;
   // Geometry validation (2026-06-30)
   oemOffsetResult?: OemOffsetResult;
   frontOemOffsetResult?: OemOffsetResult;
@@ -2882,9 +2899,21 @@ async function handleDbFirstWheelResults(opts: {
   // `geometryClass`. Ranking already ran on the geometry result, so browse
   // order is unchanged.
   // ------------------------------------------------------------------------
-  const certificationBlock: FitCertificationBlock = computeCertificationBlock(opts.fallbackConfidence, opts.trimGate);
-  const fallbackCertified = computeCertificationBlock(opts.fallbackConfidence, null) === null;
+  // 2026-09-18 (J4): third blocker - source_unverified. An exact trim match on a
+  // row without approved-source provenance for its wheel specs (2024 BMW M4:
+  // web-AI-overview row, bolt pattern disputed) is browsable, never certified.
+  const certificationBlock: FitCertificationBlock =
+    opts.sourceGate !== undefined
+      ? computeCertificationBlock(opts.fallbackConfidence, opts.trimGate, opts.sourceGate)
+      : computeCertificationBlock(opts.fallbackConfidence, opts.trimGate);
+  const fallbackCertified =
+    (opts.sourceGate !== undefined
+      ? computeCertificationBlock(opts.fallbackConfidence, null, opts.sourceGate)
+      : computeCertificationBlock(opts.fallbackConfidence, null)) === null;
   const showGuaranteedFit = certificationBlock === null;
+  if (certificationBlock === "source_unverified") {
+    console.log(`[fitment-search] SOURCE GATE: ${opts.year} ${opts.make} ${opts.model} ${opts.displayTrim} -> wheel specs unverified; fit claims suppressed`);
+  }
 
   const results = pageItems.map((item) => {
     const { candidate: c, validation: v, score, scoreBreakdown, availabilityLabel, priceTier, modelKey } = item;
@@ -3335,9 +3364,11 @@ async function handleDbFirstWheelResults(opts: {
       // (exact/equivalent certified fallback AND no-trim gate certifiable).
       showGuaranteedFit,
       certificationBlock,
+      // Per-field approved-source verdict (states only; source names stay internal)
+      sourceVerification: toPublicSourceVerification(opts.sourceVerification),
       // R3 no-trim gate (2026-09-18, audit F7)
       trimRequired: opts.trimGate ? opts.trimGate.trimRequired === true : false,
-      certifiable: opts.trimGate ? opts.trimGate.certifiable === true : fallbackCertified,
+      certifiable: certificationBlock === null,
       trimAmbiguity: opts.trimGate
         ? {
             resolution: opts.trimGate.resolution,
@@ -3878,6 +3909,11 @@ async function handleLegacyPath(
     confidenceResult,
     staggeredInfo: legacyStaggeredInfo,
     dbProfileForResponse: legacyDbProfile,
+    // 2026-09-18: legacy path was passing no gates at all (certifiable defaulted
+    // to true). Apply the resolver's trim verdict and the source gate.
+    trimGate: universalResult.trimAmbiguity ?? null,
+    sourceGate: { verified: universalResult.wheelCertifiable === true || universalResult.sourceVerification?.wheelSpecs === "verified" },
+    sourceVerification: universalResult.sourceVerification ?? null,
     // Geometry validation (unified with main path)
     oemOffsetResult: legacyOemOffsetResult,
     frontOemOffsetResult: legacyFrontOem,

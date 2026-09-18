@@ -28,7 +28,8 @@
 export type FitBlockReason =
   | "load_index_below_required"
   | "load_index_unverified"
-  | "trim_required";
+  | "trim_required"
+  | "source_unverified";
 
 export interface LoadIndexAssessment {
   /** Parsed single-wheel load index of the tire (null when unknown) */
@@ -98,6 +99,12 @@ export interface LoadIndexGateOptions {
    * agree) NO fit badge may be shown regardless of load index.
    */
   certifiable?: boolean;
+  /**
+   * Why `certifiable` is false. "source_unverified" (2026-09-18, J2): the trim
+   * resolved but its OE tire sizes have no approved-source provenance (e.g.
+   * model-level US AutoForce list on a multi-trim vehicle). Default trim_required.
+   */
+  blockReason?: "trim_required" | "source_unverified";
 }
 
 export interface RequiredLoadIndexSpec {
@@ -257,6 +264,7 @@ export function annotateLoadIndex<
   options: LoadIndexGateOptions = {}
 ): Array<T & LoadIndexResultFields> {
   const trimBlocked = options.certifiable === false;
+  const blockReason: FitBlockReason = options.blockReason ?? "trim_required";
   for (const item of items) {
     const required = resolveRequiredLoadIndex(spec, item.axle ?? "both");
     const a = assessLoadIndex(item.badges?.loadIndex ?? null, required);
@@ -264,7 +272,7 @@ export function annotateLoadIndex<
     // (that reason also blocks certified paths and must stay visible).
     if (trimBlocked && a.loadIndexOk !== false) {
       a.fitBadgeAllowed = false;
-      a.fitBlockReason = "trim_required";
+      a.fitBlockReason = blockReason;
     }
     Object.assign(item, {
       loadIndex: a.loadIndex,

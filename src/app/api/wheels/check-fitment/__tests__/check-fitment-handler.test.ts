@@ -428,3 +428,77 @@ describe("GET /api/wheels/check-fitment - upstream failures fail closed", () => 
     expect(((await res.json()) as Body).fits).toBe(false);
   });
 });
+
+describe("GET /api/wheels/check-fitment - trim forwarding + source verification (2026-09-18, J4)", () => {
+  /** Resolved trim whose bolt pattern has NO approved-source provenance (2024 M4 on file as 5x120). */
+  function sourceUnverifiedVehicle(boltPattern = "5x120") {
+    return {
+      fitment: { boltPattern },
+      trimRequired: false,
+      certifiable: false,
+      wheelCertifiable: false,
+      certificationBlock: "source_unverified",
+      sourceVerification: { wheelSpecs: "unverified", tireSizes: "unverified", tireSizesScope: "model", loadIndex: "unverified", verified: false, unverifiedFields: ["wheelSpecs", "tireSizes", "loadIndex"] },
+    };
+  }
+
+  it("forwards the caller's modification to the vehicle lookup (it was dropped before)", async () => {
+    stubVehicleSearch(resolvedVehicle());
+    mockBySku.mockResolvedValue(wheel());
+    await call("sku=W-5X12065&year=2024&make=BMW&model=M4&modification=2024-bmw-m4-competition-xdrive");
+    const url = new URL((global.fetch as jest.Mock).mock.calls[0][0] as string);
+    expect(url.searchParams.get("modification")).toBe("2024-bmw-m4-competition-xdrive");
+  });
+  it("accepts trim= as an alias", async () => {
+    stubVehicleSearch(resolvedVehicle());
+    mockBySku.mockResolvedValue(wheel());
+    await call("sku=W-5X12065&year=2024&make=BMW&model=M4&trim=Competition%20xDrive");
+    const url = new URL((global.fetch as jest.Mock).mock.calls[0][0] as string);
+    expect(url.searchParams.get("modification")).toBe("Competition xDrive");
+  });
+  it("matching wheel on an UNVERIFIED on-file pattern => fits:null source_unverified (never true)", async () => {
+    stubVehicleSearch(sourceUnverifiedVehicle("5x120"));
+    profileWithGeometry();
+    mockBySku.mockResolvedValue(wheel({ bolt_pattern_metric: "5x120" }));
+    const b = await call("sku=W-5X12065&year=2024&make=BMW&model=M4&modification=2024-bmw-m4-competition-xdrive");
+    expect(b.fits).toBeNull();
+    expect(b.reason).toBe("source_unverified");
+    expect(b.boltPatternCompatible).toBe(true);
+    expect(b.certifiable).toBe(false);
+    expect(b.certificationBlock).toBe("source_unverified");
+    expect(b.trimRequired).toBeUndefined(); // not mis-reported as a trim problem
+  });
+  it("mismatching wheel on an UNVERIFIED on-file pattern => fits:null, NOT a rejection", async () => {
+    stubVehicleSearch(sourceUnverifiedVehicle("5x120"));
+    mockBySku.mockResolvedValue(wheel({ bolt_pattern_metric: "5x112" }));
+    mockByStyle.mockResolvedValue([]);
+    const b = await call("sku=W-5X12065&year=2024&make=BMW&model=M4&modification=2024-bmw-m4-competition-xdrive");
+    expect(b.fits).toBeNull();
+    expect(b.reason).toBe("source_unverified");
+    expect(b.boltPatternCompatible).toBe(false);
+  });
+  it("style request with no bolt-compatible variant on an UNVERIFIED pattern => fits:null", async () => {
+    stubVehicleSearch(sourceUnverifiedVehicle("5x120"));
+    mockByStyle.mockResolvedValue([wheel({ sku: "A", bolt_pattern_metric: "5x112" })]);
+    const b = await call("brand=Fuel&style=REBEL&year=2024&make=BMW&model=M4&modification=2024-bmw-m4-competition-xdrive");
+    expect(b.fits).toBeNull();
+    expect(b.reason).toBe("source_unverified");
+  });
+  it("verified provenance keeps certifying (Raptor 6x135 with geometry)", async () => {
+    stubVehicleSearch({
+      fitment: { boltPattern: "6x135" },
+      trimRequired: false,
+      certifiable: true,
+      wheelCertifiable: true,
+      certificationBlock: null,
+      sourceVerification: { wheelSpecs: "verified", tireSizes: "unverified", tireSizesScope: "model", loadIndex: "unverified", verified: false, unverifiedFields: ["tireSizes", "loadIndex"] },
+    });
+    mockProfile.mockResolvedValue({
+      profile: { boltPattern: "6x135", offsetMinMm: 30, offsetMaxMm: 30, oemWheelSizes: [{ diameter: 17, width: 8, offset: 30, axle: "both" }] },
+    });
+    mockBySku.mockResolvedValue(wheel({ bolt_pattern_metric: "6x135" }));
+    const b = await call("sku=W-5X12065&year=2020&make=Ford&model=F-150&modification=2020-ford-f-150-raptor-471cff");
+    expect(b.fits).toBe(true);
+    expect(b.reason).toBe("exact_sku_match");
+  });
+});

@@ -56,6 +56,7 @@ import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePaylo
 import { makeSlugMatch } from "./makeMatch";
 import { modelVariantsExactMatch } from "./modelMatch";
 import { assessTrimAmbiguity, failClosedAmbiguity, type TrimAmbiguityResult } from "./trimAmbiguity";
+import { assessSourceVerification, unverifiedSourceVerification, type SourceVerification } from "./sourceVerification";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import crypto from "crypto";
@@ -104,6 +105,13 @@ export interface FitmentProfile {
   wheelSpecsSource?: string | null;
   /** OE service specs (lug torque, placard tire pressure, load index). Null fields = not on file. */
   serviceSpecs?: FitmentServiceSpecs | null;
+  /**
+   * 2026-09-18 (J2/J4): per-field approved-source verdict for the row behind this
+   * profile. `internal` carries source names - strip with
+   * toPublicSourceVerification() before it leaves the server. Absent (legacy
+   * cache entries) must be treated as unverified.
+   */
+  sourceVerification?: SourceVerification | null;
 }
 
 /** OE service specs stored on vehicle_fitments (migrations 0049 / 0050). */
@@ -930,7 +938,7 @@ export async function getFitmentProfile(
             overridesApplied: false,
             qualityTier: cached.qualityTier || "unknown",
             wheelSpecsSource: cached.wheelSpecsSource ?? null,
-            serviceSpecs: cached.serviceSpecs ?? null,
+            serviceSpecs: cached.serviceSpecs ?? null,            // legacy cache entries (pre-v7) have no verdict -> unverified (fail closed)            sourceVerification: cached.sourceVerification ?? unverifiedSourceVerification("cached profile without provenance"),
           },
           resolutionPath: "directCanonical",
           requestedModificationId: requestedModId,
@@ -976,7 +984,7 @@ export async function getFitmentProfile(
       if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
         console.log(`[profileService] RESOLVED (directCanonical): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
         
-        const profile = dbRecordToProfile(overrideResult.fitment, "db");
+        const profile = await dbRecordToProfile(overrideResult.fitment, "db");
         
         // Cache the result for future requests (fire and forget)
         setCachedFitment(year, make, model, requestedModId, {
@@ -991,7 +999,7 @@ export async function getFitmentProfile(
           source: "db",
           qualityTier: profile.qualityTier,
           wheelSpecsSource: profile.wheelSpecsSource ?? null,
-            serviceSpecs: profile.serviceSpecs ?? null,
+            serviceSpecs: profile.serviceSpecs ?? null,            sourceVerification: profile.sourceVerification ?? null,
         }).catch(() => {}); // Ignore cache write errors
         
         return {
@@ -1045,7 +1053,7 @@ export async function getFitmentProfile(
             vehicle: `${year} ${make} ${model}`,
           });
           
-          const profile = dbRecordToProfile(overrideResult.fitment, "db");
+          const profile = await dbRecordToProfile(overrideResult.fitment, "db");
           
           // Cache the result (fire and forget)
           setCachedFitment(year, make, model, requestedModId, {
@@ -1060,7 +1068,7 @@ export async function getFitmentProfile(
             source: "db",
             qualityTier: profile.qualityTier,
             wheelSpecsSource: profile.wheelSpecsSource ?? null,
-            serviceSpecs: profile.serviceSpecs ?? null,
+            serviceSpecs: profile.serviceSpecs ?? null,            sourceVerification: profile.sourceVerification ?? null,
           }).catch(() => {});
           
           return {
@@ -1132,7 +1140,7 @@ export async function getFitmentProfile(
         
         if (fallbackResult.allowed && fallbackResult.fallbackTrim) {
           const overrideResult = await applyOverridesWithMeta(fallbackResult.fallbackTrim);
-          const profile = dbRecordToProfile(overrideResult.fitment, "db");
+          const profile = await dbRecordToProfile(overrideResult.fitment, "db");
           
           console.log(`[profileService] FALLBACK (${fallbackResult.confidence}): ${needsReviewRecord.displayTrim} â†’ ${fallbackResult.fallbackTrim.displayTrim}`);
           console.log(`  Reasons: ${fallbackResult.reasons.join(", ")}`);
@@ -1217,7 +1225,7 @@ export async function getFitmentProfile(
             );
           }
           
-          const profile = dbRecordToProfile(overrideResult.fitment, "db");
+          const profile = await dbRecordToProfile(overrideResult.fitment, "db");
           
           // Cache the result (fire and forget)
           setCachedFitment(year, make, model, requestedModId, {
@@ -1232,7 +1240,7 @@ export async function getFitmentProfile(
             source: "db",
             qualityTier: profile.qualityTier,
             wheelSpecsSource: profile.wheelSpecsSource ?? null,
-            serviceSpecs: profile.serviceSpecs ?? null,
+            serviceSpecs: profile.serviceSpecs ?? null,            sourceVerification: profile.sourceVerification ?? null,
           }).catch(() => {});
           
           return {
@@ -1349,7 +1357,7 @@ async function _unusedImportPlaceholder(
       );
 
       return {
-        profile: dbRecordToProfile(overrideResult.fitment, "api"),
+        profile: await dbRecordToProfile(overrideResult.fitment, "api"),
         resolutionPath: "importedAlias",
         requestedModificationId: requestedModId,
         canonicalModificationId: actualCanonicalId,
@@ -1663,7 +1671,40 @@ async function importApiDataToDb(
 // Conversion Helper
 // ============================================================================
 
-function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): FitmentProfile {
+/**
+ * Live (non-quarantined, certified) trim rows for the record's year/make/model.
+ * Needed by the source gate: model-level tire sources (US AutoForce) only verify
+ * a trim when it is the ONLY trim. Errors -> null (gate fails closed).
+ */
+async function countLiveTrims(record: VehicleFitment): Promise<number | null> {
+  try {
+    const rows = await db
+      .select({ id: vehicleFitments.id })
+      .from(vehicleFitments)
+      .where(
+        and(
+          eq(vehicleFitments.year, record.year),
+          makeCaseInsensitive(normalizeMake(record.make)),
+          modelNormalizedMatch(getModelVariants(record.model)),
+          CERTIFIED_FILTER
+        )
+      )
+      .limit(50);
+    return rows.length;
+  } catch (e: any) {
+    console.warn(`[profileService] trim count failed (source gate fails closed): ${e?.message || e}`);
+    return null;
+  }
+}
+
+async function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Promise<FitmentProfile> {
+  const trimCount = await countLiveTrims(record);
+  const sourceVerification = assessSourceVerification(record, { trimCount });
+  if (!sourceVerification.verified) {
+    console.log(
+      `[dbRecordToProfile] SOURCE GATE: ${record.year} ${record.make} ${record.model} ${record.displayTrim} -> unverified [${sourceVerification.unverifiedFields.join(",")}]`
+    );
+  }
   // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // CRITICAL: Apply fitment rules to override incorrect DB/API data
   // This is the ONLY place where rules are applied at resolution time.
@@ -1761,6 +1802,7 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     qualityTier: (record.qualityTier as FitmentProfile["qualityTier"]) || "unknown",
     wheelSpecsSource: record.wheelSpecsSource ?? null,
     serviceSpecs: serviceSpecsFromRecord(record),
+    sourceVerification,
   };
 }
 

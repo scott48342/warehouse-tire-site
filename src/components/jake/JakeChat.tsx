@@ -1126,7 +1126,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                 Just tell me what you're looking for — tires, wheels, or a full package.
               </p>
               <p className="text-white/40 text-center text-sm max-w-sm mb-8">
-                💡 I already know your fitment specs, so we can skip right to the good stuff!
+                💡 Your vehicle is saved, so we can skip right to the good stuff. I&apos;ll tell you what&apos;s verified and what still needs your trim.
               </p>
             </>
           ) : (

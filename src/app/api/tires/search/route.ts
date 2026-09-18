@@ -72,6 +72,7 @@ import {
 } from "@/lib/liftedRecommendations";
 import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
 import { annotateLoadIndex, resolveRequiredLoadIndex, countLoadIndexFailures } from "@/lib/tires/loadIndexGate";
+import { toPublicSourceVerification } from "@/lib/fitment-db/sourceVerification";
 import { convertLegacyTireSize, convertTireSizesForSearch } from "@/lib/legacyTireConverter";
 
 export const runtime = "nodejs";
@@ -2386,6 +2387,10 @@ export async function GET(req: Request) {
     // (or carry unknown fields). Forces fitBadgeAllowed:false on every result.
     let fitCertifiable: boolean = true;
     let trimRequiredForFit: boolean = false;
+    // 2026-09-18 (J2): why fitCertifiable is false, and the public per-field
+    // provenance verdict (states only, no source names).
+    let fitCertificationBlock: "trim_required" | "source_unverified" | null = null;
+    let fitSourceVerification: import("@/lib/fitment-db/sourceVerification").PublicSourceVerification | null = null;
     
     console.log(`[tires/search] ══════════════════════════════════════════════════`);
     console.log(`[tires/search] Using resolveUniversalFitment`);
@@ -2429,10 +2434,16 @@ export async function GET(req: Request) {
       if (fitmentResult.found) {
         // Get OEM tire sizes from universal result
         tireSizes = fitmentResult.oemTireSizes;
-        fitCertifiable = fitmentResult.certifiable !== false;
+        // Tire-side certification: trim gate AND approved-source provenance for
+        // THIS trim's OE tire sizes. An exact trim match on a model-level list
+        // (2020 F-150 Raptor: 245/70R17 ... 315/70R17 from US AutoForce) is NOT
+        // verified for the Raptor. Sizes stay browsable; no "Fits"/"verified".
         trimRequiredForFit = fitmentResult.trimRequired === true;
+        fitCertifiable = fitmentResult.tireCertifiable === true;
+        fitSourceVerification = toPublicSourceVerification(fitmentResult.sourceVerification);
+        fitCertificationBlock = fitCertifiable ? null : trimRequiredForFit ? "trim_required" : "source_unverified";
         if (!fitCertifiable) {
-          console.warn(`[tires/search] TRIM REQUIRED for fit certification: ${year} ${make} ${model} - results are browse-only (no fit badge)`);
+          console.warn(`[tires/search] FIT NOT CERTIFIABLE (${fitCertificationBlock}): ${year} ${make} ${model} ${fitmentResult.trim || ""} - results are browse-only (no fit badge)`);
         }
         requiredLoadIndex = resolveRequiredLoadIndex({ requiredLoadIndex: fitmentResult.serviceSpecs?.oemLoadIndex ?? null });
         if (requiredLoadIndex != null) {
@@ -3337,7 +3348,10 @@ export async function GET(req: Request) {
     // - EXCLUDED from packages (packageEligible:false, packageExclusionReason:"load_index_below_required")
     // - NO "Guaranteed Fit" badge (fitBadgeAllowed:false)
     // When requiredLoadIndex is missing: NO badge (fitBadgeAllowed:false), but packageEligible:true
-    annotateLoadIndex(finalResults, { requiredLoadIndex }, { certifiable: fitCertifiable });
+    annotateLoadIndex(finalResults, { requiredLoadIndex }, {
+      certifiable: fitCertifiable,
+      blockReason: fitCertificationBlock === "source_unverified" ? "source_unverified" : "trim_required",
+    });
     const loadIndexStats = countLoadIndexFailures(finalResults);
     console.log(`[tires/search] LOAD INDEX GATE: required=${requiredLoadIndex ?? 'none'}, passed=${loadIndexStats.passed}, failed=${loadIndexStats.failed}, unchecked=${loadIndexStats.unchecked}`);
     
@@ -3415,6 +3429,9 @@ export async function GET(req: Request) {
       // R3 trim gate summary
       certifiable: fitCertifiable,
       trimRequired: trimRequiredForFit,
+      certificationBlock: fitCertificationBlock,
+      sourceVerification: fitSourceVerification,
+      tireSizesScope: fitSourceVerification?.tireSizesScope ?? null,
       
       // Mixed-diameter stagger info (e.g., Corvette 19F/20R)
       ...(isMixedDiameterStagger && {

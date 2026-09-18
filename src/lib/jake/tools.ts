@@ -7,6 +7,26 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 
+/**
+ * HD trucks offered with single or dual rear wheels (different bolt patterns /
+ * offsets). Mirrors DRW_CAPABLE_MODELS in lib/fitment/rearWheelConfig.ts;
+ * duplicated here because this module must stay import-free (the external
+ * review harness transpiles it standalone). Keep both lists in sync.
+ */
+const DRW_CAPABLE: Array<{ make: RegExp; model: RegExp }> = [
+  { make: /^chevrolet$/i, model: /silverado.*3500/i },
+  { make: /^gmc$/i, model: /sierra.*3500/i },
+  { make: /^ford$/i, model: /f-?350/i },
+  { make: /^ram$/i, model: /3500/i },
+  { make: /^dodge$/i, model: /ram.*3500/i },
+];
+export function isDrwCapableModel(make: string, model: string): boolean {
+  const m = (make || "").trim();
+  const mo = (model || "").trim();
+  if (!m || !mo) return false;
+  return DRW_CAPABLE.some((e) => e.make.test(m) && e.model.test(mo));
+}
+
 // Base URL for internal API calls (can use preview deployment URL)
 const getBaseUrl = () => {
   if (process.env.VERCEL_URL) {
@@ -158,13 +178,19 @@ export function detectEnthusiastPlatform(year: number, make: string, model: stri
  * Absent flags are NOT treated as certified: certifiable is true only when the
  * API says so, or when it explicitly reports an exact trim match with no block.
  */
-export function certificationFromApi(data: any): {
+export function certificationFromApi(data: any, claim: "wheel" | "tire" | "all" = "all"): {
   trimRequired: boolean;
   certifiable: boolean;
   certificationBlock: string | null;
   matchedTrim: string | null;
   exactTrimMatch: boolean | null;
   candidateTrims: string[];
+  /** Per-field approved-source states from the API (never source names). */
+  sourceVerification: { wheelSpecs: string; tireSizes: string; tireSizesScope?: string; loadIndex: string } | null;
+  /** "trim" = sizes verified for this trim; "model" = OE sizes for the model year, trim attribution unverified */
+  tireSizesScope: string | null;
+  /** Plain-language status Jake may say to the customer (no internal field names). */
+  customerStatus: string;
   dataNote: string;
 } {
   const f = data?.fitment ?? {};
@@ -172,30 +198,87 @@ export function certificationFromApi(data: any): {
   const trimRequired =
     data?.trimRequired === true || f.trimRequired === true || f.trimAmbiguity?.resolution === "trim_required" ||
     data?.trimResolutionRequired === true || data?.blocked === true;
-  const certificationBlock: string | null =
-    data?.certificationBlock ?? f.certificationBlock ?? (trimRequired ? "trim_required" : null) ?? null;
+  const svRaw0 = data?.sourceVerification ?? f.sourceVerification ?? null;
+  // Claim-specific source gate (2026-09-18, J2/J4): a wheel question needs the
+  // wheel specs verified; a tire question needs this trim's tire sizes verified.
+  const claimFieldVerified: boolean | null =
+    svRaw0 && typeof svRaw0 === "object"
+      ? claim === "wheel"
+        ? svRaw0.wheelSpecs === "verified"
+        : claim === "tire"
+          ? svRaw0.tireSizes === "verified"
+          : svRaw0.wheelSpecs === "verified" && svRaw0.tireSizes === "verified"
+      : null;
+  let certificationBlock: string | null = data?.certificationBlock ?? f.certificationBlock ?? null;
+  if (!trimRequired && claimFieldVerified === false) certificationBlock = certificationBlock ?? "source_unverified";
+  if (!trimRequired && claimFieldVerified === true && certificationBlock === "source_unverified") certificationBlock = null;
+  if (trimRequired && !certificationBlock) certificationBlock = "trim_required";
   const exactTrimMatch: boolean | null =
     typeof dbg.exactTrimMatch === "boolean" ? dbg.exactTrimMatch
     : typeof data?.exactTrimMatch === "boolean" ? data.exactTrimMatch
     : null;
-  const explicitCert = data?.certifiable ?? f.certifiable;
+  const explicitCert =
+    claim === "wheel" ? (data?.wheelCertifiable ?? f.wheelCertifiable ?? data?.certifiable ?? f.certifiable)
+    : claim === "tire" ? (data?.tireCertifiable ?? f.tireCertifiable ?? data?.certifiable ?? f.certifiable)
+    : (data?.certifiable ?? f.certifiable);
+  // Absent provenance never certifies: when the API reports no sourceVerification
+  // at all, the claim stays uncertified even if an older flag says certifiable.
+  const provenanceKnown = claimFieldVerified !== null;
   const certifiable =
-    typeof explicitCert === "boolean" ? explicitCert && !trimRequired && !certificationBlock
-    : exactTrimMatch === true && !trimRequired && !certificationBlock;
+    provenanceKnown &&
+    (typeof explicitCert === "boolean" ? explicitCert && !trimRequired && !certificationBlock
+    : exactTrimMatch === true && !trimRequired && !certificationBlock);
+  if (!certifiable && !certificationBlock && !trimRequired) {
+    certificationBlock = !provenanceKnown ? "provenance_unknown" : claimFieldVerified ? "not_certified" : "source_unverified";
+  }
   const candidateTrims: string[] = Array.isArray(f.trimAmbiguity?.candidateTrims)
     ? f.trimAmbiguity.candidateTrims.map((t: any) => t?.displayTrim ?? String(t))
     : Array.isArray(data?.availableTrims) ? data.availableTrims.map((t: any) => t?.displayTrim ?? String(t))
     : Array.isArray(dbg.candidateTrims) ? dbg.candidateTrims
     : [];
   const matchedTrim: string | null = dbg.matchedTrim ?? f.vehicle?.trim ?? f.dbProfile?.displayTrim ?? data?.matchedTrim ?? null;
-  const dataNote = certifiable
-    ? "Specs are certified for the matched trim."
-    : trimRequired
-      ? `Specs are for browsing only - trim not confirmed (matched "${matchedTrim ?? "?"}" by default${candidateTrims.length ? `; trims: ${candidateTrims.join(", ")}` : ""}). Do not call any spec "confirmed" or "verified" until the customer's trim is looked up.`
-      : certificationBlock
-        ? `Fit not certified (${certificationBlock}). Present specs as our database values, not as verified.`
-        : "Specs are our database values for this vehicle; certification state not reported - present as database values, not as verified.";
-  return { trimRequired, certifiable, certificationBlock, matchedTrim, exactTrimMatch, candidateTrims, dataNote };
+  const svRaw = data?.sourceVerification ?? f.sourceVerification ?? null;
+  const sourceVerification =
+    svRaw && typeof svRaw === "object"
+      ? {
+          wheelSpecs: String(svRaw.wheelSpecs ?? "unverified"),
+          tireSizes: String(svRaw.tireSizes ?? "unverified"),
+          tireSizesScope: svRaw.tireSizesScope != null ? String(svRaw.tireSizesScope) : undefined,
+          loadIndex: String(svRaw.loadIndex ?? "unverified"),
+        }
+      : null;
+  const tireSizesScope: string | null = data?.tireSizesScope ?? sourceVerification?.tireSizesScope ?? null;
+
+  // What Jake is allowed to SAY. dataNote is for the model; customerStatus is a
+  // sentence the customer may hear (no internal field names).
+  let customerStatus: string;
+  let dataNote: string;
+  if (certifiable) {
+    customerStatus = `Verified for the ${matchedTrim ?? "selected"} trim.`;
+    dataNote = "Specs are verified for the matched trim by an approved source. You may say confirmed/verified.";
+  } else if (trimRequired) {
+    customerStatus = `I have specs on file for the ${matchedTrim ?? "base"} trim, but trims differ on this vehicle - which trim do you have?`;
+    dataNote = `Browsing only - trim not confirmed (matched "${matchedTrim ?? "?"}" by default${candidateTrims.length ? `; trims: ${candidateTrims.join(", ")}` : ""}). Do not call any spec "confirmed" or "verified" until the customer's trim is looked up.`;
+  } else if (certificationBlock === "source_unverified") {
+    const unverified: string[] = [];
+    if (sourceVerification?.wheelSpecs !== "verified") unverified.push("bolt pattern/center bore");
+    if (sourceVerification?.tireSizes !== "verified") unverified.push(tireSizesScope === "model" ? "which of these sizes came on this trim" : "tire sizes");
+    const list = unverified.join(" and ") || "they";
+    customerStatus = `Our database lists these specs for this vehicle, but ${list} ${unverified.length === 1 ? "hasn't" : "haven't"} been verified against an approved source yet - treat them as a starting point, not a guarantee.`;
+    dataNote =
+      "Fit NOT certified: the matched row has no approved-source provenance for " + (unverified.join(" and ") || "its values") +
+      ". Say 'our database lists X' / 'on file as X' - NEVER confirmed, verified, guaranteed, or 'both sources agree'. " +
+      "If the customer states a different value, report ours as unverified and say the mismatch must be resolved before anything is ordered. " +
+      (tireSizesScope === "model" ? "Tire sizes are the model-year list from our supplier feed; do not attribute any single size to this trim. " : "") +
+      "Do not read these field names to the customer.";
+  } else if (certificationBlock) {
+    customerStatus = "Our database has specs for this vehicle, but the fit hasn't been confirmed yet.";
+    dataNote = `Fit not certified (${certificationBlock}). Present specs as our database values, not as verified. Do not read field names to the customer.`;
+  } else {
+    customerStatus = "Our database has specs for this vehicle, but the fit hasn't been confirmed yet.";
+    dataNote = "Certification state not reported - present as database values, not as verified. Do not read field names to the customer.";
+  }
+  return { trimRequired, certifiable, certificationBlock, matchedTrim, exactTrimMatch, candidateTrims, sourceVerification, tireSizesScope, customerStatus, dataNote };
 }
 
 // Tool definitions for Claude
@@ -607,7 +690,7 @@ export async function executeTool(
           return { error: `API error: ${res.status}` };
         }
         const data = await res.json() as any;
-        const cert = certificationFromApi(data);
+        const cert = certificationFromApi(data, "tire");
         return {
           tireSizes: data.tireSizes || [],
           staggered: data.staggered || null,
@@ -648,7 +731,7 @@ export async function executeTool(
           };
         }
         const data = await res.json() as any;
-        const cert = certificationFromApi(data);
+        const cert = certificationFromApi(data, "wheel");
         
         const result: Record<string, any> = {
           boltPattern: data.fitment?.boltPattern || null,
@@ -664,6 +747,17 @@ export async function executeTool(
           result.platformGuidance = platformContext.confidence;
           result.sweetSpotDiameters = platformContext.sweetSpotDiameters;
           result.staggeredCommon = platformContext.staggeredCommon;
+        }
+
+        // 2026-09-18 (J1 residual): HD trucks may run single (SRW) or dual (DRW)
+        // rear wheels with DIFFERENT bolt patterns/offsets (GM 2011+: 8x180 SRW
+        // vs 8x210 DRW; Ram 3500 DRW 8x200). The database row is the SRW
+        // configuration unless the customer said otherwise. Never generalize.
+        if (isDrwCapableModel(String(make), String(model))) {
+          result.rearWheelConfigNote =
+            "This model is offered with single (SRW) or dual (DRW) rear wheels, which can use different bolt patterns and offsets. " +
+            "The specs above are for the single-rear-wheel configuration. Ask whether the truck is a dually before quoting; if DRW, do not present these specs as applicable.";
+          result.rearWheelConfig = "srw_assumed";
         }
         
         return result;
@@ -1013,7 +1107,7 @@ export async function executeTool(
           return clean;
         });
         
-        const cert = certificationFromApi(data);
+        const cert = certificationFromApi(data, "wheel");
         const result = { 
           wheels, 
           count: wheels.length, 
@@ -1121,7 +1215,7 @@ export async function executeTool(
           };
         });
         
-        const cert = certificationFromApi(data);
+        const cert = certificationFromApi(data, "tire");
         return {
           tires,
           count: tires.length,

@@ -27,7 +27,7 @@ export type CachedFitmentProfile = {
   cachedAt: string;
   qualityTier?: "complete" | "partial" | "low_confidence" | "unknown";
   /** vehicle_fitments.wheel_specs_source (internal provenance; "tireguide-pro" = axle-explicit data) */
-  wheelSpecsSource?: string | null;
+  wheelSpecsSource?: string | null;  /** 2026-09-18 (J2/J4): per-field approved-source verdict; absent on pre-v7 entries -> treat as unverified */  sourceVerification?: import("./sourceVerification").SourceVerification | null;
   /** OE service specs (lug torque / placard psi / load index / speed rating); null = none on file */
   serviceSpecs?: {
     lugTorqueFtlb: number | null;
@@ -63,7 +63,7 @@ export type FitmentCacheStats = {
  * - v6: fix-batch1 (2026-09-18): exact model match (F5), trim-ambiguity gate fields
  *       (trimRequired / certifiable / sharedSpecs), load-index gate fields (F3)
  */
-const CACHE_VERSION = "v6";
+const CACHE_VERSION = "v7";
 
 /**
  * Kill switch for local/preview runs: `FITMENT_CACHE_DISABLED=1` bypasses both

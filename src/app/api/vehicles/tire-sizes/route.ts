@@ -32,6 +32,7 @@ import {
   convertTireSizesForSearch,
 } from "@/lib/legacyTireConverter";
 import { analyzeTireSizeOptions } from "@/lib/tires/wheelDiameterFilter";
+import { toPublicSourceVerification } from "@/lib/fitment-db/sourceVerification";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -203,6 +204,12 @@ interface DbFitmentResult {
     // (Jake, PDP) can tell "browsable" from "certified".
     trimRequired: boolean;
     candidateTrims: string[];
+    // 2026-09-18 (J2): resolver certification for TIRE claims. tireCertifiable
+    // requires the trim gate AND approved-source provenance for the tire sizes
+    // of this trim. sourceVerification is the public projection (no source names).
+    tireCertifiable: boolean;
+    wheelCertifiable: boolean;
+    sourceVerification: import("@/lib/fitment-db/sourceVerification").PublicSourceVerification | null;
   };
 }
 
@@ -320,6 +327,9 @@ async function getDbFitmentSizes(
       selectedDisplayTrim: resolveResult.trim,
       trimRequired: resolveResult.trimRequired === true,
       candidateTrims: resolveResult.availableTrims.map(t => t.displayTrim),
+      tireCertifiable: resolveResult.tireCertifiable === true,
+      wheelCertifiable: resolveResult.wheelCertifiable === true,
+      sourceVerification: toPublicSourceVerification(resolveResult.sourceVerification),
     };
     
     console.log(`[tire-sizes] UNIVERSAL HIT: ${year} ${make} ${model} → matchedBy=${matchedBy}, source=${resolveResult.source}, confidence=${resolveResult.confidence}, trim="${resolveResult.trim}" mod=${resolveResult.modificationId}`);
@@ -622,10 +632,20 @@ export async function GET(req: Request) {
       };
       
       // Audit 2026-09-18: certification state at the top level. certifiable is
-      // true only for an exact trim match with no trim-required verdict; when
-      // false the sizes are shown for browsing and no "Fits" claim may be made.
+      // true only for an exact trim match with no trim-required verdict AND
+      // approved-source provenance for this trim's tire sizes (J2: an exact DB
+      // match is not verification). When false the sizes are shown for
+      // browsing and no "Fits"/"verified" claim may be made.
       const trimRequired = dbFitment.debug.trimRequired;
-      const certifiable = dbFitment.debug.exactTrimMatch && !trimRequired;
+      const trimConfirmed = dbFitment.debug.exactTrimMatch && !trimRequired;
+      const certifiable = trimConfirmed && dbFitment.debug.tireCertifiable === true;
+      const certificationBlock = certifiable
+        ? null
+        : trimRequired
+          ? "trim_required"
+          : !trimConfirmed
+            ? "trim_unconfirmed"
+            : "source_unverified";
 
       return NextResponse.json({
         tireSizes: dbFitment.tireSizes,
@@ -640,7 +660,17 @@ export async function GET(req: Request) {
         },
         trimRequired,
         certifiable,
-        certificationBlock: certifiable ? null : (trimRequired ? "trim_required" : "trim_unconfirmed"),
+        // Claim-specific certification (2026-09-18): wheel questions need the
+        // wheel specs verified; tire questions need this trim's tire sizes.
+        wheelCertifiable: trimConfirmed && dbFitment.debug.wheelCertifiable === true,
+        tireCertifiable: certifiable,
+        certificationBlock,
+        // Which field groups have approved-source provenance (states only).
+        sourceVerification: dbFitment.debug.sourceVerification,
+        // Model-level sources (US AutoForce) list sizes for the whole model
+        // year; on a multi-trim vehicle they are "OE sizes for this model",
+        // not verified for the selected trim.
+        tireSizesScope: dbFitment.debug.sourceVerification?.tireSizesScope ?? "none",
         matchedTrim: dbFitment.debug.selectedDisplayTrim,
         candidateTrims: dbFitment.debug.candidateTrims,
         // Wheel diameter analysis for trim-specific filtering

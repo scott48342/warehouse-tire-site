@@ -24,6 +24,11 @@ import { serviceSpecsFromRecord, type FitmentServiceSpecs } from "@/lib/fitment-
 import { isCanonicalFitmentId, getAtomicTrimOptions } from "@/lib/fitment/canonicalResolver";
 import { isGroupedTrim, explodeTrim } from "@/lib/fitment/trimExplosion";
 import { assessTrimAmbiguity, type TrimAmbiguityResult } from "@/lib/fitment-db/trimAmbiguity";
+import {
+  assessSourceVerification,
+  type SourceVerification,
+} from "@/lib/fitment-db/sourceVerification";
+import type { FitCertificationBlock } from "@/lib/fitment-db/fitCertification";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -120,8 +125,20 @@ export interface UniversalFitmentResult {
    * R3: true when a trim was selected, or the single/all-agreeing candidate rows
    * make the selected record safe to certify. false => no fit badge, no
    * fits:true, no certified package may be built from this result.
+   *
+   * 2026-09-18 (J2/J4): ALSO requires approved-source provenance for BOTH wheel
+   * specs and tire sizes (see `sourceVerification`). An exact trim match on a
+   * row with no provenance is NOT certifiable.
    */
   certifiable: boolean;
+  /** trim gate passed AND wheel specs (bolt/bore/offset) have approved provenance */
+  wheelCertifiable: boolean;
+  /** trim gate passed AND OE tire sizes for THIS trim have approved provenance */
+  tireCertifiable: boolean;
+  /** Why `certifiable` is false (null when certifiable). */
+  certificationBlock: FitCertificationBlock;
+  /** Per-field provenance verdict for the selected row. `internal` must never be serialized publicly. */
+  sourceVerification: SourceVerification | null;
   
   // Warnings and debug info
   warnings: string[];
@@ -573,6 +590,10 @@ export async function resolveUniversalFitment(
     trimAmbiguity: null,
     trimRequired: false,
     certifiable: false,
+    wheelCertifiable: false,
+    tireCertifiable: false,
+    certificationBlock: "source_unverified",
+    sourceVerification: null,
     warnings: [],
     debug: {
       resolutionTimeMs: 0,
@@ -775,6 +796,27 @@ export async function resolveUniversalFitment(
     result.certifiable = true;
     result.trimRequired = false;
   }
+
+  // 2026-09-18 (J2/J4): source-verification gate. The trim gate above answers
+  // "is this row THIS vehicle?"; this answers "are the row's values verified by
+  // an approved source?". Both must hold. `matchedRecords.length` is the live
+  // trim count for the Y/M/M, which is what model-level tire sources need.
+  const trimGatePassed = result.certifiable;
+  const sv = assessSourceVerification(selectedRecord, { trimCount: matchedRecords.length });
+  result.sourceVerification = sv;
+  result.wheelCertifiable = trimGatePassed && sv.wheelSpecs === "verified";
+  result.tireCertifiable = trimGatePassed && sv.tireSizes === "verified";
+  result.certifiable = trimGatePassed && sv.verified;
+  result.certificationBlock = !trimGatePassed
+    ? "trim_required"
+    : sv.verified
+      ? null
+      : "source_unverified";
+  if (trimGatePassed && !sv.verified) {
+    warnings.push(
+      `Source verification: ${sv.unverifiedFields.join(", ")} not verified by an approved source. Values may be shown as "on file", never as confirmed/verified.`
+    );
+  }
   
   // Apply overrides (hub bore, bolt pattern corrections, etc.)
   const recordWithOverrides = await applyOverrides(selectedRecord);
@@ -874,6 +916,10 @@ export async function resolveUniversalFitment(
   console.log(`[universalFitmentResolver]   DB Model: "${result.model}" | Trim: "${result.trim || "(auto)"}"`);
   console.log(`[universalFitmentResolver]   Source: ${result.source} | Confidence: ${result.confidence} | Quality: ${result.qualityTier}`);
   console.log(`[universalFitmentResolver]   Bolt: ${result.boltPattern}, Hub: ${result.centerBore}mm`);
+  console.log(
+    `[universalFitmentResolver]   Certification: certifiable=${result.certifiable} wheel=${result.wheelCertifiable} tire=${result.tireCertifiable} block=${result.certificationBlock ?? "none"}` +
+      (result.sourceVerification ? ` | unverified=[${result.sourceVerification.unverifiedFields.join(",")}]` : "")
+  );
   console.log(`[universalFitmentResolver]   Alias used: ${usedAliasMapping ? "yes" : "no"} | Matched variant: "${matchedVariant}"`);
   console.log(`[universalFitmentResolver]   Time: ${result.debug.resolutionTimeMs}ms, Queries: ${dbQueriesCount}`);
   console.log(`[universalFitmentResolver] ══════════════════════════════════════════════════`);

@@ -59,6 +59,16 @@ export async function GET(req: Request) {
   const year = url.searchParams.get("year");
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
+  // 2026-09-18 (J4): the caller's trim was DROPPED before the vehicle lookup, so
+  // every check ran trim-less (M4 Competition xDrive -> "trim_required" even
+  // when the gallery/Jake had the trim). Accept the same names the rest of the
+  // site uses and forward whichever is present.
+  const modification =
+    url.searchParams.get("modification") ||
+    url.searchParams.get("modificationId") ||
+    url.searchParams.get("trim") ||
+    url.searchParams.get("submodel") ||
+    "";
 
   if ((!sku && !style) || !year || !make || !model) {
     return NextResponse.json(
@@ -75,7 +85,8 @@ export async function GET(req: Request) {
                     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : url.origin);
     
     const fitmentRes = await fetch(
-      `${baseUrl}/api/vehicles/search?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`,
+      `${baseUrl}/api/vehicles/search?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}` +
+        (modification ? `&modification=${encodeURIComponent(modification)}` : ""),
       { cache: "no-store" }
     );
 
@@ -96,7 +107,24 @@ export async function GET(req: Request) {
     let trimRequiredNote:
       | { trimRequired: true; certifiable: false; conflictingFields: string[]; unknownFields: string[]; candidateTrims: unknown[] }
       | null = null;
-    if (fitmentData?.trimRequired || fitmentData?.certifiable === false) {
+    // 2026-09-18 (J4): a resolved profile whose bolt pattern has no approved-
+    // source provenance (certificationBlock "source_unverified"). The on-file
+    // pattern may be compared for information, but the answer is fits:null in
+    // BOTH directions - an unverified value can neither certify nor reject
+    // (2024 M4 on file as 5x120; a disputed value must not reject 5x112 wheels).
+    const sourceUnverified =
+      !fitmentData?.trimRequired &&
+      (fitmentData?.certificationBlock === "source_unverified" ||
+        (fitmentData?.certifiable === false && !!(fitmentData?.fitment?.boltPattern || fitmentData?.boltPattern)));
+    const sourceUnverifiedNote = sourceUnverified
+      ? {
+          certifiable: false as const,
+          certificationBlock: "source_unverified" as const,
+          sourceVerification: fitmentData?.sourceVerification ?? null,
+          sourceNote: "Vehicle bolt pattern on file has not been verified against an approved source; fit cannot be confirmed or rejected.",
+        }
+      : null;
+    if (fitmentData?.trimRequired || (fitmentData?.certifiable === false && !sourceUnverified)) {
       trimRequiredNote = {
         trimRequired: true,
         certifiable: false,
@@ -184,6 +212,18 @@ export async function GET(req: Request) {
           ...trimRequiredNote,
         });
       }
+      if (sourceUnverifiedNote) {
+        return ({
+          fits: null,
+          reason: "source_unverified",
+          boltPatternCompatible: true,
+          matchingSku: w.sku,
+          vehicleBoltPattern,
+          wheelBoltPattern: wheelBp,
+          ...extra,
+          ...sourceUnverifiedNote,
+        });
+      }
       // Strict: null/undefined/blank are ABSENT (Number(null) === 0 would fake an offset of 0).
       // Real numeric 0 and the string "0" are preserved as a legitimate 0mm offset.
       const ww = strictNumber(w.width);
@@ -264,6 +304,19 @@ export async function GET(req: Request) {
       if (checkMatch(thisBp)) {
         return NextResponse.json({ ...certifyWheel({ sku, width: wheel.width, offset: wheel.offset }, thisBp, "exact_sku_match"), wheelSource });
       }
+      if (sourceUnverifiedNote) {
+        // Mismatch against an UNVERIFIED on-file pattern is not a rejection.
+        return NextResponse.json({
+          fits: null,
+          reason: "source_unverified",
+          boltPatternCompatible: false,
+          matchingSku: sku,
+          vehicleBoltPattern,
+          wheelBoltPattern: thisBp,
+          wheelSource,
+          ...sourceUnverifiedNote,
+        });
+      }
 
       // Requested SKU does not fit. A sibling is only a suggestion.
       let alternativeSku: string | undefined;
@@ -323,6 +376,16 @@ export async function GET(req: Request) {
       }
       if (firstNull) return NextResponse.json({ ...firstNull, compatibleVariants: compatible });
       if (firstFalse) return NextResponse.json({ ...firstFalse, compatibleVariants: compatible });
+      if (sourceUnverifiedNote) {
+        return NextResponse.json({
+          fits: null,
+          reason: "source_unverified",
+          boltPatternCompatible: false,
+          vehicleBoltPattern,
+          checkedVariants: allVariants.length,
+          ...sourceUnverifiedNote,
+        });
+      }
       // No variants share the bolt pattern (a rejection on a bolt pattern shared by every trim is safe)
       return NextResponse.json({
         fits: false,

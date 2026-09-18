@@ -91,10 +91,70 @@ describe("certificationFromApi", () => {
     expect(c.candidateTrims).toEqual(["CS", "Competition", "Competition xDrive"]);
     expect(c.dataNote).toMatch(/Do not call any spec "confirmed"/);
   });
-  it("exact trim match with no block certifies", () => {
+  it("exact trim match WITHOUT provenance does NOT certify (J2/J4: exact DB match != verified source)", () => {
     const c = certificationFromApi({ certifiable: true, trimRequired: false, debug: { exactTrimMatch: true, matchedTrim: "Competition xDrive" } });
-    expect(c.certifiable).toBe(true);
+    expect(c.certifiable).toBe(false);
+    expect(c.certificationBlock).toBe("provenance_unknown");
     expect(c.matchedTrim).toBe("Competition xDrive");
+    expect(c.dataNote).toMatch(/not as verified/);
+  });
+  it("exact trim match WITH approved-source provenance certifies", () => {
+    const c = certificationFromApi(
+      {
+        certifiable: true,
+        wheelCertifiable: true,
+        trimRequired: false,
+        debug: { exactTrimMatch: true, matchedTrim: "Raptor" },
+        sourceVerification: { wheelSpecs: "verified", tireSizes: "unverified", tireSizesScope: "model", loadIndex: "unverified", verified: false },
+      },
+      "wheel"
+    );
+    expect(c.certifiable).toBe(true);
+    expect(c.certificationBlock).toBeNull();
+    expect(c.customerStatus).toMatch(/Verified for the Raptor trim/);
+  });
+  it("J4: 2024 M4 Competition xDrive - exact trim, API says source_unverified -> never confirmed", () => {
+    const c = certificationFromApi(
+      {
+        certifiable: false,
+        wheelCertifiable: false,
+        trimRequired: false,
+        certificationBlock: "source_unverified",
+        matchedTrim: "Competition xDrive",
+        fitment: { boltPattern: "5x120" },
+        sourceVerification: { wheelSpecs: "unverified", tireSizes: "unverified", tireSizesScope: "model", loadIndex: "unverified", verified: false },
+      },
+      "wheel"
+    );
+    expect(c.certifiable).toBe(false);
+    expect(c.certificationBlock).toBe("source_unverified");
+    expect(c.dataNote).toMatch(/NEVER confirmed, verified, guaranteed/);
+    expect(c.customerStatus).toMatch(/hasn't been verified|haven't been verified/);
+    // customer-facing sentence carries no internal field names or source names
+    expect(c.customerStatus).not.toMatch(/certifiable|exactTrimMatch|trimRequired|certificationBlock|source_unverified|usaf|wheelpros/i);
+  });
+  it("J2: 2020 Raptor - tire claim on a model-level list is unverified even though wheel specs are verified", () => {
+    const api = {
+      certifiable: false,
+      wheelCertifiable: true,
+      tireCertifiable: false,
+      trimRequired: false,
+      certificationBlock: "source_unverified",
+      tireSizesScope: "model",
+      matchedTrim: "Raptor",
+      tireSizes: ["245/70R17", "265/60R18", "275/65R18", "315/70R17"],
+      sourceVerification: { wheelSpecs: "verified", tireSizes: "unverified", tireSizesScope: "model", loadIndex: "unverified", verified: false },
+    };
+    const tire = certificationFromApi(api, "tire");
+    expect(tire.certifiable).toBe(false);
+    expect(tire.certificationBlock).toBe("source_unverified");
+    expect(tire.tireSizesScope).toBe("model");
+    expect(tire.dataNote).toMatch(/model-year list.*do not attribute any single size to this trim/);
+    expect(tire.customerStatus).toMatch(/which of these sizes came on this trim/);
+    // the same row answers a WHEEL question as verified (bolt pattern has approved provenance)
+    const wheel = certificationFromApi(api, "wheel");
+    expect(wheel.certifiable).toBe(true);
+    expect(wheel.certificationBlock).toBeNull();
   });
 });
 
@@ -117,6 +177,20 @@ describe("lookup_wheel_fitment", () => {
     const { urls } = mockFetch({ fitment: {} });
     await executeTool("lookup_wheel_fitment", { ...ymm, trim: "Competition xDrive" });
     expect(new URL(urls[0]).searchParams.get("trim")).toBe("Competition xDrive");
+  });
+  it("J1 residual: DRW-capable HD trucks carry a single-vs-dual rear wheel note; 2500 / half-ton do not", async () => {
+    const verified = { wheelSpecs: "verified", tireSizes: "unverified", tireSizesScope: "model", loadIndex: "unverified", verified: false };
+    mockFetch({ certifiable: false, wheelCertifiable: true, trimRequired: false, fitment: { boltPattern: "8x180" }, sourceVerification: verified });
+    const drw = (await executeTool("lookup_wheel_fitment", { year: 2024, make: "Chevrolet", model: "Silverado 3500 HD", trim: "LT" })) as any;
+    expect(drw.rearWheelConfig).toBe("srw_assumed");
+    expect(drw.rearWheelConfigNote).toMatch(/single \(SRW\) or dual \(DRW\)/);
+    mockFetch({ certifiable: false, wheelCertifiable: true, trimRequired: false, fitment: { boltPattern: "8x180" }, sourceVerification: verified });
+    const srw = (await executeTool("lookup_wheel_fitment", { year: 2024, make: "Chevrolet", model: "Silverado 2500 HD", trim: "LT" })) as any;
+    expect(srw.rearWheelConfigNote).toBeUndefined();
+    mockFetch({ certifiable: true, wheelCertifiable: true, trimRequired: false, fitment: { boltPattern: "6x139.7" }, sourceVerification: verified });
+    const half = (await executeTool("lookup_wheel_fitment", { year: 2021, make: "Chevrolet", model: "Silverado 1500", trim: "LT" })) as any;
+    expect(half.rearWheelConfigNote).toBeUndefined();
+    expect(half.certifiable).toBe(true);
   });
 });
 
