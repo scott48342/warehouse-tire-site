@@ -36,3 +36,12 @@ J2 search_tires carries fitBadgeAllowed/loadIndexOk/requiredLoadIndexVerified; p
 J3 detectEnthusiastPlatform excludes Mach-E.
 J4 search_wheels/search_tires forward trim; certificationFromApi on every lookup; prompt reserves verified/confirmed/both-sources for certifiable:true.
 Evidence: Codex harness 7/7, jest tools-certification 16/16, tsc clean, retest 24/24. Prompt-level behaviour (what Jake SAYS) still needs a live chat re-run against :3002 by the reviewer - tool contract is enforced, wording is prompt-guided.
+
+## 2026-09-18 17:52 - 8c3b76f2 CERTIFICATION SEMANTICS (reviewer finding on 40860ce8)
+Exact DB match != verified source. New approved-source gate (sourceVerification.ts) on every fit claim; certificationBlock "source_unverified".
+- J4 M4 Comp xDrive: wheel specs from a web AI overview, no provenance -> certifiable:false everywhere; check-fitment fits:null both directions (never rejects 5x112 on an unverified 5x120).
+- J2 Raptor: tire list is model-level USAF -> tire claim unverified, tireSizesScope model; Jake told to present as "sizes on the 2020 F-150 range, can't attribute to Raptor"; Load Range rule tightened.
+- J1 residual: rearWheelConfigNote for DRW-capable models; prompt forbids generalizing 2500/3500.
+- Raw flags: customerStatus sentence added; prompt forbids reading field names/JSON. "I already know your fitment specs" greeting removed.
+- Quarantine is runtime (gate), not a DB write - no speculative import. Coverage impact in retest/source-gate-impact.txt.
+STILL NEEDS: reviewer's browser conversation rerun (wording is prompt-guided; tool contract enforced).

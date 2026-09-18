@@ -124,3 +124,9 @@ px tsc --noEmit -> 0 errors.
 - Tool contract: no hard-coded specs, certification state on every lookup, trim forwarded, tire gates carried. tire-sizes emits trimRequired/certifiable/candidateTrims. Resolver: collapsed-HD slug.
 - Codex harness 7/7 (was 0/7); 16 new jest; retest 24/24; tsc clean. Baseline 17 jest failures unchanged.
 - NEXT: Batch 3 staggered (H2/H4), Batch 4 SKU continuity, Batch 5 packages; then full jest + deploy.
+
+## 2026-09-18 17:52 - 8c3b76f2 SOURCE-VERIFICATION GATE (J2/J4 reopened by reviewer) - REVIEW-READY
+- Runtime provenance gate across resolver / profileService (cache v7) / fitment-search / vehicles-search / check-fitment (+ trim forwarding fix) / tire-sizes / tires-search / Jake.
+- Evidence: cert-gate-live.txt, source-gate-impact.txt; 141 jest, tsc clean, harness 7/7, retest 24/24.
+- DECISION FOR SCOTT: approve or reject roadkill-xref (3,259 rows) and audit-pass3-bolt-fix (337) as wheel-spec sources; until then those rows browse without a Guaranteed Fit badge.
+- NEXT: Batch 3 staggered (H2/H4) - not started, no commit yet.
