@@ -39,8 +39,13 @@ export interface LoadIndexAssessment {
   loadIndexRaw: string | null;
   /** Required minimum from vehicle record (null when record has none) */
   requiredLoadIndex: number | null;
-  /** Source of the required value - always "vehicle_record_unverified" when present */
-  requiredLoadIndexSource: "vehicle_record_unverified" | null;
+  /**
+   * Source of the required value. Today the only source is the vehicle record,
+   * whose minima are NOT authority-verified and NOT axle-specific, so it is
+   * always "vehicle_record_unverified" when present. Certification
+   * (fitBadgeAllowed) requires a source listed in VERIFIED_LOAD_SOURCES.
+   */
+  requiredLoadIndexSource: RequiredLoadIndexSource | null;
   /** true = meets/exceeds required, false = below required, null = could not check */
   loadIndexOk: boolean | null;
   /** true only when both sides were known and compared */
@@ -49,7 +54,10 @@ export interface LoadIndexAssessment {
   loadIndexNote: string | null;
   /**
    * Whether a verified/guaranteed-fit badge may be shown for this tire.
-   * false when: loadIndexOk === false OR loadIndexChecked === false (missing data)
+   * true ONLY when the requirement comes from a verified source AND the tire
+   * meets it. An unverified requirement can never certify fit, even when the
+   * tire index is equal or higher (loadIndexOk stays true in that case -
+   * compatibility and certification are separate outputs).
    */
   fitBadgeAllowed: boolean;
   /**
@@ -67,6 +75,21 @@ export interface LoadIndexAssessment {
    * `load_index_unverified` and `trim_required` only block the badge.
    */
   fitBlockReason: FitBlockReason | null;
+}
+
+export type RequiredLoadIndexSource = "vehicle_record_unverified" | "verified_manufacturer";
+
+/**
+ * Sources that may certify fit. Empty-by-design today: no load requirement in
+ * the DB has been verified against a manufacturer/Tire Guide authority. Add a
+ * source here only when a verified column/provenance exists.
+ */
+export const VERIFIED_LOAD_SOURCES: ReadonlySet<RequiredLoadIndexSource> = new Set<RequiredLoadIndexSource>([
+  "verified_manufacturer",
+]);
+
+export function isVerifiedLoadSource(source: RequiredLoadIndexSource | null | undefined): boolean {
+  return source != null && VERIFIED_LOAD_SOURCES.has(source);
 }
 
 export interface LoadIndexGateOptions {
@@ -126,11 +149,13 @@ export function resolveRequiredLoadIndex(
 /** Compare one tire's load index against the required minimum. */
 export function assessLoadIndex(
   tireLoadIndex: string | number | null | undefined,
-  requiredLoadIndex: number | null | undefined
+  requiredLoadIndex: number | null | undefined,
+  requiredLoadIndexSource: RequiredLoadIndexSource = "vehicle_record_unverified"
 ): LoadIndexAssessment {
   const raw = tireLoadIndex == null ? null : String(tireLoadIndex);
   const li = parseLoadIndex(tireLoadIndex);
   const required = requiredLoadIndex == null ? null : parseLoadIndex(requiredLoadIndex);
+  const sourceVerified = isVerifiedLoadSource(requiredLoadIndexSource);
 
   // Case 1: No required minimum in record -> cannot verify fit, no badge
   if (required == null) {
@@ -157,7 +182,7 @@ export function assessLoadIndex(
       tireLoadIndex: null,
       loadIndexRaw: raw,
       requiredLoadIndex: required,
-      requiredLoadIndexSource: "vehicle_record_unverified",
+      requiredLoadIndexSource,
       loadIndexOk: null,
       loadIndexChecked: false,
       loadIndexNote: "Tire load rating unknown",
@@ -170,19 +195,22 @@ export function assessLoadIndex(
 
   // Case 3: Both known -> compare
   const ok = li >= required;
+  // Certification requires BOTH: tire meets requirement AND the requirement is
+  // from a verified source. Compatibility (loadIndexOk) is reported separately.
+  const badge = ok && sourceVerified;
   return {
     loadIndex: li,
     tireLoadIndex: li,
     loadIndexRaw: raw,
     requiredLoadIndex: required,
-    requiredLoadIndexSource: "vehicle_record_unverified",
+    requiredLoadIndexSource,
     loadIndexOk: ok,
     loadIndexChecked: true,
     loadIndexNote: ok ? null : `Load rating ${li} is below the ${required} this vehicle requires`,
-    fitBadgeAllowed: ok, // Badge only when meets requirement
+    fitBadgeAllowed: badge,
     packageEligible: ok, // EXCLUDE from packages when below required
     packageExclusionReason: ok ? null : "load_index_below_required",
-    fitBlockReason: ok ? null : "load_index_below_required",
+    fitBlockReason: !ok ? "load_index_below_required" : badge ? null : "load_index_unverified",
   };
 }
 
@@ -232,7 +260,9 @@ export function annotateLoadIndex<
   for (const item of items) {
     const required = resolveRequiredLoadIndex(spec, item.axle ?? "both");
     const a = assessLoadIndex(item.badges?.loadIndex ?? null, required);
-    if (trimBlocked && a.fitBadgeAllowed) {
+    // Trim gate outranks the load-index reason unless the tire is known-below
+    // (that reason also blocks certified paths and must stay visible).
+    if (trimBlocked && a.loadIndexOk !== false) {
       a.fitBadgeAllowed = false;
       a.fitBlockReason = "trim_required";
     }

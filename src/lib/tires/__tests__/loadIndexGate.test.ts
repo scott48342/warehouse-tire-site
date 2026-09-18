@@ -113,7 +113,7 @@ describe("assessLoadIndex", () => {
   });
 
   describe("when tire meets required minimum", () => {
-    it("returns loadIndexOk:true, fitBadgeAllowed:true, packageEligible:true", () => {
+    it("returns loadIndexOk:true, packageEligible:true, but fitBadgeAllowed:false (unverified source cannot certify)", () => {
       const result = assessLoadIndex("119", 119);
       expect(result.loadIndex).toBe(119);
       expect(result.requiredLoadIndex).toBe(119);
@@ -121,15 +121,16 @@ describe("assessLoadIndex", () => {
       expect(result.loadIndexOk).toBe(true);
       expect(result.loadIndexChecked).toBe(true);
       expect(result.loadIndexNote).toBe(null);
-      expect(result.fitBadgeAllowed).toBe(true);
+      expect(result.fitBadgeAllowed).toBe(false);
+      expect(result.fitBlockReason).toBe("load_index_unverified");
       expect(result.packageEligible).toBe(true);
       expect(result.packageExclusionReason).toBe(null);
     });
 
-    it("passes when tire exceeds required", () => {
+    it("compatible when tire exceeds required, still no badge from unverified source", () => {
       const result = assessLoadIndex("126", 119);
       expect(result.loadIndexOk).toBe(true);
-      expect(result.fitBadgeAllowed).toBe(true);
+      expect(result.fitBadgeAllowed).toBe(false);
       expect(result.packageEligible).toBe(true);
     });
   });
@@ -160,11 +161,11 @@ describe("assessLoadIndex", () => {
       expect(result.packageExclusionReason).toBe("load_index_below_required");
     });
 
-    it("121/118Q LT tire passes against 119 requirement", () => {
+    it("121/118Q LT tire is compatible with 119 requirement (no badge: unverified source)", () => {
       const result = assessLoadIndex("121/118Q", 119);
       expect(result.loadIndex).toBe(121);
       expect(result.loadIndexOk).toBe(true);
-      expect(result.fitBadgeAllowed).toBe(true);
+      expect(result.fitBadgeAllowed).toBe(false);
       expect(result.packageEligible).toBe(true);
     });
   });
@@ -194,13 +195,13 @@ describe("annotateLoadIndex", () => {
     // Second item: meets required
     expect(result[1].loadIndex).toBe(119);
     expect(result[1].loadIndexOk).toBe(true);
-    expect(result[1].fitBadgeAllowed).toBe(true);
+    expect(result[1].fitBadgeAllowed).toBe(false); // unverified source
     expect(result[1].packageEligible).toBe(true);
     
     // Third item: exceeds required
     expect(result[2].loadIndex).toBe(126);
     expect(result[2].loadIndexOk).toBe(true);
-    expect(result[2].fitBadgeAllowed).toBe(true);
+    expect(result[2].fitBadgeAllowed).toBe(false); // unverified source
     expect(result[2].packageEligible).toBe(true);
   });
 
@@ -300,10 +301,11 @@ describe("R5 load-index gate cases", () => {
     expect(a.fitBadgeAllowed).toBe(false);
     expect(certifiedPathBlock(a).blocked).toBe(true);
   });
-  test("equal -> ok, badge allowed", () => {
+  test("equal -> compatible, but NO badge (requirement source unverified)", () => {
     const a = assessLoadIndex("119", 119);
     expect(a.loadIndexOk).toBe(true);
-    expect(a.fitBadgeAllowed).toBe(true);
+    expect(a.fitBadgeAllowed).toBe(false);
+    expect(a.fitBlockReason).toBe("load_index_unverified");
     expect(a.tireLoadIndex).toBe(119);
     expect(certifiedPathBlock(a).blocked).toBe(false);
   });
@@ -321,5 +323,56 @@ describe("R5 load-index gate cases", () => {
     expect(r.loadIndexOk).toBe(true);
     expect(r.fitBadgeAllowed).toBe(false);
     expect(r.fitBlockReason).toBe("trim_required");
+  });
+});
+
+// R4 addendum (reviewer acceptance 14:13): unverified source can never certify,
+// even on equal/higher index. Compatibility and certification stay separate.
+describe("R4 addendum: certification requires a VERIFIED requirement source", () => {
+  test("unverified + equal -> loadIndexOk:true, fitBadgeAllowed:false", () => {
+    const a = assessLoadIndex("119", 119, "vehicle_record_unverified");
+    expect(a.loadIndexOk).toBe(true);
+    expect(a.fitBadgeAllowed).toBe(false);
+    expect(a.fitBlockReason).toBe("load_index_unverified");
+    expect(a.packageEligible).toBe(true);
+  });
+  test("unverified + higher -> loadIndexOk:true, fitBadgeAllowed:false", () => {
+    const a = assessLoadIndex("126", 119);
+    expect(a.loadIndexOk).toBe(true);
+    expect(a.fitBadgeAllowed).toBe(false);
+  });
+  test("unverified + lower -> loadIndexOk:false, fitBadgeAllowed:false, packageEligible:false", () => {
+    const a = assessLoadIndex("110", 119);
+    expect(a.loadIndexOk).toBe(false);
+    expect(a.fitBadgeAllowed).toBe(false);
+    expect(a.packageEligible).toBe(false);
+    expect(a.fitBlockReason).toBe("load_index_below_required");
+  });
+  test("missing -> loadIndexOk:null, fitBadgeAllowed:false", () => {
+    const a = assessLoadIndex("119", null);
+    expect(a.loadIndexOk).toBeNull();
+    expect(a.fitBadgeAllowed).toBe(false);
+  });
+  test("default source is the unverified vehicle record", () => {
+    expect(assessLoadIndex("119", 119).requiredLoadIndexSource).toBe("vehicle_record_unverified");
+  });
+  test("verified source + meets -> badge allowed (only path to certification)", () => {
+    const a = assessLoadIndex("119", 119, "verified_manufacturer");
+    expect(a.loadIndexOk).toBe(true);
+    expect(a.fitBadgeAllowed).toBe(true);
+    expect(a.fitBlockReason).toBeNull();
+  });
+  test("verified source + below -> still blocked", () => {
+    const a = assessLoadIndex("110", 119, "verified_manufacturer");
+    expect(a.fitBadgeAllowed).toBe(false);
+    expect(a.packageEligible).toBe(false);
+    expect(certifiedPathBlock(a).blocked).toBe(true);
+  });
+  test("no production caller passes a verified source today (grep guard documented in REQUIREMENTS R4 addendum)", () => {
+    // VERIFIED_LOAD_SOURCES exists so the gate can be enabled later; the DB has
+    // no verified provenance column yet, so annotateLoadIndex must yield no badges.
+    const items = [{ badges: { loadIndex: "121" } }];
+    const [r] = annotateLoadIndex(items, { requiredLoadIndex: 119 });
+    expect(r.fitBadgeAllowed).toBe(false);
   });
 });

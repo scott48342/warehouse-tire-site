@@ -152,9 +152,11 @@ export type TireStyleCardProps = {
   isLocalMode?: boolean;
 
   // Load-index gate (2026-09-18, audit C2/F3)
-  // fitBadgeAllowed: false = NO "Guaranteed Fit" badge
-  // loadIndexNote: warning message when load index is below required
+  // fitBadgeAllowed: true only when a VERIFIED requirement exists and the tire meets it
+  // loadIndexOk: false = below the stored requirement (amber warning), true = meets, null = unchecked
+  // loadIndexNote: warning message when loadIndexOk === false
   fitBadgeAllowed?: boolean;
+  loadIndexOk?: boolean | null;
   loadIndexNote?: string | null;
   
   // Link params
@@ -201,6 +203,7 @@ export function TireStyleCard({
   axle,
   isLocalMode = false,
   fitBadgeAllowed,
+  loadIndexOk,
   loadIndexNote,
   viewParams = {},
   source,
@@ -278,9 +281,9 @@ export function TireStyleCard({
       {hasVehicle && !topPickConfig && (
         <div className="px-3 py-1.5 flex flex-col gap-1">
           {/* Load-index gate (2026-09-18, audit C2/F3):
-              - fitBadgeAllowed:true -> green "Guaranteed Fit"
-              - fitBadgeAllowed:false -> amber warning, NO green badge
-              - fitBadgeAllowed:undefined -> neutral "Fitment Unverified" */}
+              - fitBadgeAllowed:true (verified source AND meets) -> green "Guaranteed Fit"
+              - loadIndexOk:false -> amber "below required" warning, NO green badge
+              - otherwise (unverified requirement / unchecked) -> neutral "Fitment Unverified" */}
           {fitBadgeAllowed === true ? (
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-green-600 text-white">
@@ -293,7 +296,7 @@ export function TireStyleCard({
                 </span>
               )}
             </div>
-          ) : fitBadgeAllowed === false ? (
+          ) : loadIndexOk === false ? (
             <div className="flex flex-col gap-0.5">
               <span
                 className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200"
