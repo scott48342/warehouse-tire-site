@@ -735,6 +735,8 @@ function CategorySection({
                 category={deriveTireCategory(tire, tileModel)}
                 utqg={tire.utqg ?? undefined}
                 mileageWarranty={tire.badges?.warrantyMiles ?? undefined}
+                loadIndexOk={(tire as { loadIndexOk?: boolean | null }).loadIndexOk ?? null}
+                loadIndexNote={(tire as { loadIndexNote?: string | null }).loadIndexNote ?? null}
                 stockQty={getStockInfo(tire.quantity).total}
                 viewHref={buildTireViewHref(tire, size, viewParams)}
                 onAddToCart={() => onSelectTire(tire)}

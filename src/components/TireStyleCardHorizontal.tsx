@@ -55,6 +55,13 @@ export type TireStyleCardHorizontalProps = {
   hasSelection?: boolean;
   isPackageFlow?: boolean;
   rebateMatch?: RebateMatchData | null;
+  /**
+   * Load-index gate (2026-09-18, audit C2/F3). false = tire's load index is
+   * below the vehicle's OE minimum; `loadIndexNote` carries the reason
+   * ("Load rating below OE (110 < 119)"). Undefined/null = not checked.
+   */
+  loadIndexOk?: boolean | null;
+  loadIndexNote?: string | null;
 };
 
 // ─── Component ───────────────────────────────────────────────────────────────
@@ -67,6 +74,8 @@ export function TireStyleCardHorizontal({
   category = "All-Season",
   utqg,
   mileageWarranty,
+  loadIndexOk,
+  loadIndexNote,
   stockQty = 0,
   topPickCategory,
   viewHref,
@@ -178,6 +187,17 @@ export function TireStyleCardHorizontal({
         {mileageWarranty && mileageWarranty >= 40000 && (
           <div className="text-[10px] text-neutral-400">
             {Math.round(mileageWarranty / 1000)}K mi warranty
+          </div>
+        )}
+
+        {/* Load-index gate: visible downgrade, tire stays listed */}
+        {loadIndexOk === false && (
+          <div
+            className="mt-0.5 inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-[10px] font-semibold bg-amber-50 text-amber-800 border border-amber-200"
+            data-testid="load-index-warning"
+          >
+            <span aria-hidden>!</span>
+            <span>{loadIndexNote || "Load rating below OE"}</span>
           </div>
         )}
 

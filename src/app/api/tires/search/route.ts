@@ -71,6 +71,7 @@ import {
   type LiftedTireFilterWithBandResult,
 } from "@/lib/liftedRecommendations";
 import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
+import { annotateLoadIndex, resolveOemMinLoadIndex } from "@/lib/tires/loadIndexGate";
 import { convertLegacyTireSize, convertTireSizesForSearch } from "@/lib/legacyTireConverter";
 
 export const runtime = "nodejs";
@@ -503,6 +504,14 @@ interface TireResult {
     onSpecial: boolean;          // Currently on special pricing
     brandCode: string | null;    // e.g., "GEN", "BFG" - needed for orders
   };
+  // Load-index gate (2026-09-18, audit C2/F3) - set in vehicle mode by
+  // annotateLoadIndex(). loadIndexOk:false => no verified/guaranteed badge.
+  loadIndex?: number | null;
+  oemMinLoadIndex?: number | null;
+  loadIndexOk?: boolean | null;
+  loadIndexChecked?: boolean;
+  loadIndexNote?: string | null;
+  fitBadgeAllowed?: boolean;
 }
 
 async function searchTiresBySize(
@@ -2360,6 +2369,9 @@ export async function GET(req: Request) {
     let sizeConversions: any[] = [];        // Conversion details
     let hasLegacySizes = false;
     let fitmentSource = "universal_resolver";
+    // 2026-09-18 (audit C2/F3): OE minimum load index from the fitment record.
+    // null = record has none -> gate reports loadIndexChecked:false, badges unchanged.
+    let oemMinLoadIndex: number | null = null;
     
     console.log(`[tires/search] ══════════════════════════════════════════════════`);
     console.log(`[tires/search] Using resolveUniversalFitment`);
@@ -2403,6 +2415,10 @@ export async function GET(req: Request) {
       if (fitmentResult.found) {
         // Get OEM tire sizes from universal result
         tireSizes = fitmentResult.oemTireSizes;
+        oemMinLoadIndex = resolveOemMinLoadIndex({ oemLoadIndex: fitmentResult.serviceSpecs?.oemLoadIndex ?? null });
+        if (oemMinLoadIndex != null) {
+          console.log(`[tires/search] OE MIN LOAD INDEX: ${oemMinLoadIndex} (${year} ${make} ${model} ${fitmentResult.trim || ""})`);
+        }
         
         // Handle staggered fitment (front/rear different sizes)
         if (fitmentResult.oemTireSizesStaggered) {
@@ -3296,6 +3312,15 @@ export async function GET(req: Request) {
 
     // Apply MAP floor enforcement (critical for Falken/Dunlop compliance)
     finalResults = await applyMapFloorBatch(finalResults);
+
+    // 2026-09-18 (audit C2/F3): load-index gate. Tires below the OE minimum are
+    // KEPT in results but flagged (loadIndexOk:false, fitBadgeAllowed:false) so
+    // the UI downgrades "Guaranteed Fit" to "Load rating below OE (110 < 119)".
+    annotateLoadIndex(finalResults, { oemLoadIndex: oemMinLoadIndex });
+    const loadIndexBelowOeCount = finalResults.filter((t: any) => t.loadIndexOk === false).length;
+    if (oemMinLoadIndex != null) {
+      console.log(`[tires/search] LOAD INDEX GATE: min=${oemMinLoadIndex}, ${loadIndexBelowOeCount}/${finalResults.length} below OE`);
+    }
     
     timing.totalMs = Date.now() - t0;
     
@@ -3362,6 +3387,11 @@ export async function GET(req: Request) {
       wheelDiameter: wheelDiameter || null,
       rearWheelDiameter: rearWheelDiameter || null,
       wheelWidth: wheelWidth || null,
+
+      // Load-index gate summary (2026-09-18, audit C2/F3)
+      oemMinLoadIndex,
+      loadIndexChecked: oemMinLoadIndex != null,
+      loadIndexBelowOeCount,
       
       // Mixed-diameter stagger info (e.g., Corvette 19F/20R)
       ...(isMixedDiameterStagger && {
