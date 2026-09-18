@@ -3036,9 +3036,32 @@ async function handleDbFirstWheelResults(opts: {
         const wheelOffset = Number(c.offset) || 0;
         
         if (wheelDia > 0 && wheelWidth > 0) {
+          // Audit H3 (2026-09-18): on a staggered vehicle the envelope spans
+          // BOTH axles (e.g. 19-20" dia, 9.5-10.5" width), so a 20x9 ET35
+          // front wheel read as "within OEM" against a 19x9.5 ET20 front OE
+          // spec. Compare each paired wheel to ITS OWN axle's OE spec instead.
+          // Unpaired wheels on a staggered vehicle keep the merged envelope
+          // (we do not know which axle they would go on).
+          const si = opts.staggeredInfo;
+          const axleSpec = staggeredPair && si?.isStaggered
+            ? (staggeredPair.role === "rear" ? si.rearSpec : si.frontSpec)
+            : undefined;
+          const axleBaseline = axleSpec && axleSpec.diameter > 0 && axleSpec.width > 0
+            ? {
+                minDiameter: axleSpec.diameter,
+                maxDiameter: axleSpec.diameter,
+                minWidth: axleSpec.width,
+                maxWidth: axleSpec.width,
+                // OE offset unknown for this axle => fall back to the envelope's
+                // offset range rather than inventing a single value.
+                minOffset: axleSpec.offset != null ? axleSpec.offset : envelope.oemMinOffset,
+                maxOffset: axleSpec.offset != null ? axleSpec.offset : envelope.oemMaxOffset,
+                vehicleType: opts.vehicleType,
+              }
+            : null;
           const guidance = calculateFitmentGuidance(
             { diameter: wheelDia, width: wheelWidth, offset: wheelOffset },
-            {
+            axleBaseline ?? {
               minDiameter: envelope.oemMinDiameter,
               maxDiameter: envelope.oemMaxDiameter,
               minWidth: envelope.oemMinWidth,
@@ -3053,6 +3076,7 @@ async function handleDbFirstWheelResults(opts: {
             levelLabel: guidance.levelLabel,
             buildRequirement: guidance.buildRequirement,
             buildLabel: guidance.buildLabel,
+            ...(axleBaseline ? { axle: staggeredPair.role === "rear" ? "rear" : "front" } : {}),
             ...(debug ? { reasoning: guidance.reasoning } : {}),
           };
         }
