@@ -19,6 +19,7 @@ import type { VehicleFitment } from "./schema";
 import { eq, and, asc, or, ilike, inArray, desc, sql, SQL } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
 import { makeSlugMatch } from "./makeMatch";
+import { modelVariantsExactMatch } from "./modelMatch";
 import { applyOverrides } from "./applyOverrides";
 import { getModelVariants } from "./modelAliases";
 import { safeResolveFitment } from "./safeResolver";
@@ -49,23 +50,13 @@ const CERTIFIED_FILTER = and(eq(vehicleFitments.certificationStatus, "certified"
 /**
  * Normalize-and-compare for model names.
  * Handles: "Encore GX" (DB) vs "encore-gx" (URL slug)
- * Uses ILIKE with pattern matching to handle case and separator differences.
+ *
+ * 2026-09-18 (audit C4/F5): EXACT compact-key match, no substring fallback.
+ * The old `ILIKE '%mustang%'` pattern let "Mustang" resolve to "Mustang Mach-E".
  */
 function modelNormalizedMatch(modelVariants: string[]): SQL | undefined {
-  // Build ILIKE patterns that match regardless of separators
-  // e.g., "encore-gx" -> "%encore%gx%" matches "Encore GX", "encore-gx", "ENCORE_GX", etc.
-  const patterns = modelVariants.map(v => {
-    const words = v.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/);
-    return `%${words.join('%')}%`;
-  });
-  
-  if (patterns.length === 0) return undefined;
-  if (patterns.length === 1) {
-    return ilike(vehicleFitments.model, patterns[0]);
-  }
-  
-  const conditions = patterns.map(p => ilike(vehicleFitments.model, p));
-  return or(...conditions);
+  if (modelVariants.length === 0) return undefined;
+  return modelVariantsExactMatch(vehicleFitments.model, modelVariants);
 }
 
 // ============================================================================

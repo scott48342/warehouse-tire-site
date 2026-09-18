@@ -11,6 +11,7 @@ import { sql, eq, and, or, inArray, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./keys";
 import { getModelVariants } from "./modelAliases";
 import { makeSlugMatch } from "./makeMatch";
+import { modelVariantsExactMatch } from "./modelMatch";
 
 /**
  * Slug-normalized make comparison (P0 fix 2026-06-10).
@@ -25,22 +26,13 @@ function makeCaseInsensitive(make: string) {
 /**
  * Normalize-and-compare for model names.
  * Handles: "Encore GX" (DB) vs "encore-gx" (URL slug)
- * Uses ILIKE with pattern matching to handle case and separator differences.
+ *
+ * 2026-09-18 (audit C4/F5): EXACT compact-key match, no substring fallback.
+ * The old `ILIKE '%mustang%'` pattern made /api/vehicles/trims for "Mustang"
+ * include Mach-E trims.
  */
 function modelNormalizedMatch(modelVariants: string[]) {
-  // Build ILIKE patterns that match regardless of separators
-  // e.g., "encore-gx" -> "%encore%gx%" matches "Encore GX", "encore-gx", "ENCORE_GX", etc.
-  const patterns = modelVariants.map(v => {
-    const words = v.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/);
-    return `%${words.join('%')}%`;
-  });
-  
-  if (patterns.length === 1) {
-    return ilike(vehicleFitments.model, patterns[0]);
-  }
-  
-  const conditions = patterns.map(p => ilike(vehicleFitments.model, p));
-  return or(...conditions);
+  return modelVariantsExactMatch(vehicleFitments.model, modelVariants);
 }
 
 // ============================================================================
