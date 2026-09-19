@@ -1,0 +1,69 @@
+{
+  "url": "http://localhost:3002/api/vehicles/trims?year=2020&make=Ford&model=F-150",
+  "status": 200,
+  "ms": 363,
+  "body": {
+    "results": [
+      {
+        "value": "2020-ford-f-150-3-3-ti-vct-06a62c",
+        "label": "3.3 Ti-VCT",
+        "modificationId": "f587899086",
+        "canonicalFitmentId": "2020-ford-f-150-3-3-ti-vct-06a62c",
+        "isFromGroupedRecord": false
+      },
+      {
+        "value": "2020-ford-f-150-king-ranch-618e09",
+        "label": "King Ranch",
+        "modificationId": "ford-f-150-king-ranch-89b6102d",
+        "canonicalFitmentId": "2020-ford-f-150-king-ranch-618e09",
+        "isFromGroupedRecord": false
+      },
+      {
+        "value": "2020-ford-f-150-lariat-0ac708",
+        "label": "Lariat",
+        "modificationId": "ford-f-150-lariat-5dbbc657",
+        "canonicalFitmentId": "2020-ford-f-150-lariat-0ac708",
+        "isFromGroupedRecord": false
+      },
+      {
+        "value": "2020-ford-f-150-limited-5150af",
+        "label": "Limited",
+        "modificationId": "ford-f-150-limited-9fffdb41",
+        "canonicalFitmentId": "2020-ford-f-150-limited-5150af",
+        "isFromGroupedRecord": false
+      },
+      {
+        "value": "2020-ford-f-150-platinum-7a9f55",
+        "label": "Platinum",
+        "modificationId": "ford-f-150-platinum-f1d7900c",
+        "canonicalFitmentId": "2020-ford-f-150-platinum-7a9f55",
+        "isFromGroupedRecord": false
+      },
+      {
+        "value": "2020-ford-f-150-raptor-471cff",
+        "label": "Raptor",
+        "modificationId": "ford-f-150-raptor-d926fbf9",
+        "canonicalFitmentId": "2020-ford-f-150-raptor-471cff",
+        "isFromGroupedRecord": false
+      },
+      {
+        "value": "2020-ford-f-150-xl-8f3edd",
+        "label": "XL",
+        "modificationId": "ford-f-150-xl-19e86d47",
+        "canonicalFitmentId": "2020-ford-f-150-xl-8f3edd",
+        "isFromGroupedRecord": false
+      },
+      {
+        "value": "2020-ford-f-150-xlt-a762c9",
+        "label": "XLT",
+        "modificationId": "ford-f-150-xlt-0c791658",
+        "canonicalFitmentId": "2020-ford-f-150-xlt-a762c9",
+        "isFromGroupedRecord": false
+      }
+    ],
+    "source": "fitment_db",
+    "count": 8,
+    "hasCoverage": true,
+    "premiumUx": true
+  }
+}

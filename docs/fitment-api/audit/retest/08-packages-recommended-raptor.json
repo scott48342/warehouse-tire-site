@@ -1,0 +1,29 @@
+{
+  "url": "http://localhost:3002/api/packages/recommended?year=2020&make=Ford&model=F-150&modification=ford-f-150-raptor-d926fbf9",
+  "status": 200,
+  "ms": 3144,
+  "body": {
+    "packages": [],
+    "vehicle": {
+      "year": 2020,
+      "make": "Ford",
+      "model": "F-150"
+    },
+    "fitment": {
+      "boltPattern": null,
+      "oemDiameters": [],
+      "oemTireSizes": [],
+      "offsetRange": {
+        "min": null,
+        "max": null
+      }
+    },
+    "timing": {
+      "totalMs": 369,
+      "fitmentMs": 368,
+      "wheelsMs": 0,
+      "packagesMs": 0,
+      "apiTotalMs": 369
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "url": "http://localhost:3002/api/wheels/check-fitment?sku=D68117906545&year=2024&make=Ford&model=Mustang",
+  "status": 200,
+  "ms": 89,
+  "body": {
+    "fits": null,
+    "reason": "trim_required_for_geometry",
+    "boltPatternCompatible": true,
+    "matchingSku": "D68117906545",
+    "vehicleBoltPattern": "5x114.3",
+    "wheelBoltPattern": "5X114.3",
+    "trimRequired": true,
+    "certifiable": false,
+    "conflictingFields": [
+      "oemWheelSizes",
+      "oemTireSizes",
+      "requiredLoadIndex"
+    ],
+    "unknownFields": [],
+    "candidateTrims": [
+      {
+        "modificationId": "2024-ford-mustang-gt",
+        "displayTrim": "GT"
+      },
+      {
+        "modificationId": "2024-ford-mustang-gt-premium",
+        "displayTrim": "GT Premium"
+      },
+      {
+        "modificationId": "2024-ford-mustang-dark-horse-dark-horse-premium",
+        "displayTrim": "Dark Horse / Dark Horse Premium"
+      },
+      {
+        "modificationId": "2024-ford-mustang-ecoboost",
+        "displayTrim": "EcoBoost"
+      },
+      {
+        "modificationId": "2024-ford-mustang-ecoboost-premium",
+        "displayTrim": "EcoBoost Premium"
+      }
+    ],
+    "wheelSource": "wheelpros"
+  }
+}

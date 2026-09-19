@@ -1,0 +1,10 @@
+import pg from "pg";
+const p = new pg.Pool({ connectionString: process.env.POSTGRES_URL, max: 1 });
+const c = await p.connect();
+await c.query("SET default_transaction_read_only = on");
+console.log("ro=", (await c.query("SHOW default_transaction_read_only")).rows[0].default_transaction_read_only);
+const r = await c.query(`SELECT left(id::text,8) id, year, make, model, display_trim, raw_trim, bolt_pattern, oem_tire_sizes::text ts, source, wheel_specs_source wss FROM vehicle_fitments WHERE id::text LIKE '6dc2e084%' OR id::text LIKE '463d44a3%' OR id::text LIKE '8302a4ef%' OR id::text LIKE 'b6dce2ba%'`);
+for (const x of r.rows) console.log(JSON.stringify(x));
+const m = await c.query(`SELECT model, display_trim, count(*)::int n FROM vehicle_fitments WHERE make='Ford' AND model ILIKE '%mach%' AND year=2022 AND quarantined_at IS NULL GROUP BY 1,2 ORDER BY 1,2`);
+for (const x of m.rows) console.log("2022:", JSON.stringify(x));
+await c.release(); await p.end();

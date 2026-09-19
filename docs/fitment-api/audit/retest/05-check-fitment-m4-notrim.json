@@ -1,0 +1,34 @@
+{
+  "url": "http://localhost:3002/api/wheels/check-fitment?year=2024&make=BMW&model=M4&sku=KR196-2912GB35",
+  "status": 200,
+  "ms": 787,
+  "body": {
+    "fits": null,
+    "reason": "trim_required_for_geometry",
+    "boltPatternCompatible": true,
+    "matchingSku": "KR196-2912GB35",
+    "vehicleBoltPattern": "5x120",
+    "wheelBoltPattern": "5x120",
+    "trimRequired": true,
+    "certifiable": false,
+    "conflictingFields": [],
+    "unknownFields": [
+      "threadSize"
+    ],
+    "candidateTrims": [
+      {
+        "modificationId": "2024-bmw-m4-cs",
+        "displayTrim": "CS"
+      },
+      {
+        "modificationId": "2024-bmw-m4-competition",
+        "displayTrim": "Competition"
+      },
+      {
+        "modificationId": "2024-bmw-m4-competition-xdrive",
+        "displayTrim": "Competition xDrive"
+      }
+    ],
+    "wheelSource": "wheel1"
+  }
+}

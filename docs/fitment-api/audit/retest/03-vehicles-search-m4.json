@@ -1,0 +1,68 @@
+{
+  "url": "http://localhost:3002/api/vehicles/search?year=2024&make=BMW&model=M4",
+  "status": 200,
+  "ms": 84,
+  "body": {
+    "fitment": null,
+    "trimRequired": true,
+    "certifiable": false,
+    "ambiguous": false,
+    "resolution": "trim_required",
+    "error": "Trim required: certified trims for this vehicle do not fully agree on fitment",
+    "fieldStates": {
+      "boltPattern": "agree",
+      "centerBore": "agree",
+      "threadSize": "unknown",
+      "oemWheelSizes": "agree",
+      "oemTireSizes": "agree",
+      "requiredLoadIndex": "agree",
+      "staggered": "agree"
+    },
+    "conflictingFields": [],
+    "unknownFields": [
+      "threadSize"
+    ],
+    "agreedFields": [
+      "boltPattern",
+      "centerBore",
+      "oemWheelSizes",
+      "oemTireSizes",
+      "requiredLoadIndex",
+      "staggered"
+    ],
+    "sharedSpecs": {
+      "boltPattern": "5x120",
+      "centerBore": "72.6",
+      "threadSize": null,
+      "oemWheelSizes": [
+        "front:19x9.5@20",
+        "rear:20x10.5@20"
+      ],
+      "oemTireSizes": [
+        "275/35R19",
+        "285/30R20"
+      ],
+      "requiredLoadIndex": 100,
+      "staggered": false
+    },
+    "sharedFitment": {
+      "boltPattern": "5x120",
+      "centerBore": "72.6"
+    },
+    "candidateTrims": [
+      {
+        "modificationId": "2024-bmw-m4-cs",
+        "displayTrim": "CS"
+      },
+      {
+        "modificationId": "2024-bmw-m4-competition",
+        "displayTrim": "Competition"
+      },
+      {
+        "modificationId": "2024-bmw-m4-competition-xdrive",
+        "displayTrim": "Competition xDrive"
+      }
+    ],
+    "resolutionPath": "trim_required"
+  }
+}

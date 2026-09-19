@@ -1,0 +1,70 @@
+{
+  "url": "http://localhost:3002/api/vehicles/search?year=2024&make=Ford&model=Mustang",
+  "status": 200,
+  "ms": 416,
+  "body": {
+    "fitment": null,
+    "trimRequired": true,
+    "certifiable": false,
+    "ambiguous": true,
+    "resolution": "trim_required",
+    "error": "Trim required: certified trims for this vehicle do not fully agree on fitment",
+    "fieldStates": {
+      "boltPattern": "agree",
+      "centerBore": "agree",
+      "threadSize": "agree",
+      "oemWheelSizes": "disagree",
+      "oemTireSizes": "disagree",
+      "requiredLoadIndex": "disagree",
+      "staggered": "agree"
+    },
+    "conflictingFields": [
+      "oemWheelSizes",
+      "oemTireSizes",
+      "requiredLoadIndex"
+    ],
+    "unknownFields": [],
+    "agreedFields": [
+      "boltPattern",
+      "centerBore",
+      "threadSize",
+      "staggered"
+    ],
+    "sharedSpecs": {
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5",
+      "threadSize": "M14x1.5",
+      "oemWheelSizes": null,
+      "oemTireSizes": null,
+      "requiredLoadIndex": null,
+      "staggered": false
+    },
+    "sharedFitment": {
+      "boltPattern": "5x114.3",
+      "centerBore": "70.5"
+    },
+    "candidateTrims": [
+      {
+        "modificationId": "2024-ford-mustang-gt",
+        "displayTrim": "GT"
+      },
+      {
+        "modificationId": "2024-ford-mustang-gt-premium",
+        "displayTrim": "GT Premium"
+      },
+      {
+        "modificationId": "2024-ford-mustang-dark-horse-dark-horse-premium",
+        "displayTrim": "Dark Horse / Dark Horse Premium"
+      },
+      {
+        "modificationId": "2024-ford-mustang-ecoboost",
+        "displayTrim": "EcoBoost"
+      },
+      {
+        "modificationId": "2024-ford-mustang-ecoboost-premium",
+        "displayTrim": "EcoBoost Premium"
+      }
+    ],
+    "resolutionPath": "trim_required"
+  }
+}
