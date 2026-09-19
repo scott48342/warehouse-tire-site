@@ -11,8 +11,12 @@
  *   resolver. The client `unitPrice` is only used for a mismatch log. A wheel
  *   or tire SKU (front OR rear) that cannot be priced REJECTS the checkout
  *   (`unpriceable`), it never falls back to the client price or $0.
- * - Accessories (lug nuts, hub rings, TPMS) have no catalog resolver here and
- *   keep the client price ($0 required hardware stays in the snapshot).
+ * - Accessories are ALSO server-priced (release review 2026-09-19): fixed
+ *   synthetic SKUs, the `accessories` table, or `suspension_fitments`. Road
+ *   hazard (RH-PROTECT-2YR) is recomputed from the server-priced tire lines.
+ *   The only client-trusted accessory value is a $0 line for REQUIRED included
+ *   hardware (lug nuts / hub rings / valve stems) whose catalog price, if any,
+ *   is cheap hardware; anything else that cannot be priced is rejected.
  * - Staggered lines are forced to 2+2 regardless of the client quantity.
  *
  * Pure: no I/O besides the injected resolver, so it is unit-testable.
@@ -20,6 +24,7 @@
 import type { QuoteLine } from "@/lib/quotes";
 import type { CartItem, CartWheelItem, CartTireItem } from "@/lib/cart/CartContext";
 import type { CatalogPriceResolver } from "./repriceCatalog";
+import { INCLUDED_HARDWARE_MAX_UNIT_USD, ROAD_HAZARD_SKU, isIncludedHardwareCategory, roadHazardPerTireUsd } from "./fixedPriceSkus";
 
 export type CheckoutLineRejection = {
   reason: "unpriceable" | "rear_unresolved" | "finish_mismatch";
@@ -44,8 +49,16 @@ function baseMeta(i: any, extra: Record<string, unknown> = {}) {
     meta: i.meta,
     source: i.source,
     brand: i.brand,
+    // Tire-specific fields (email/display; parity with the legacy payment-intent mapper)
+    ...(i.type === "tire" ? { tireSize: i.size, loadIndex: i.loadIndex, speedRating: i.speedRating } : {}),
     ...extra,
   };
+}
+
+/** "245/65R17 Brand Model" for tires (legacy payment-intent naming), else the plain name. */
+function lineName(i: any, name: string) {
+  if (i.type === "tire" && i.size) return `${i.size} ${i.brand || ""} ${name}`.trim().replace(/\s+/g, " ");
+  return name;
 }
 
 export async function buildCheckoutLines(
@@ -56,16 +69,40 @@ export async function buildCheckoutLines(
   const rejected: CheckoutLineRejection[] = [];
   const repriced: Array<{ sku: string; clientUnitPrice: number; serverUnitPrice: number }> = [];
 
+  const roadHazard: Array<{ i: any; name: string }> = [];
+
   for (const raw of items) {
     const i = raw as any;
-    const name = String(i.model || i.name || i.sku || "Item").trim();
+    const name = lineName(i, String(i.model || i.name || i.sku || "Item").trim());
     const sku = String(i.sku || "").trim() || undefined;
     const clientUnit = Number(i.unitPrice || 0);
     const qtyClient = Math.max(1, Math.trunc(Number(i.quantity || 1)));
 
     if (i.type !== "wheel" && i.type !== "tire") {
-      // Accessories: no catalog resolver; keep client price, keep $0 required hardware.
-      lines.push({ kind: "product", name, sku, unitPriceUsd: clientUnit, qty: qtyClient, taxable: false, meta: baseMeta(i) });
+      if (!sku) {
+        rejected.push({ reason: "unpriceable", sku: "", name });
+        continue;
+      }
+      if (sku.toUpperCase() === ROAD_HAZARD_SKU) {
+        roadHazard.push({ i, name }); // priced after the tire lines are known
+        continue;
+      }
+      const server = await resolvePrice(sku, { type: "accessory" });
+      const includedHardware =
+        !!i.required && clientUnit === 0 && isIncludedHardwareCategory(i.category) &&
+        (server == null || server.unitPrice <= INCLUDED_HARDWARE_MAX_UNIT_USD);
+      if (includedHardware) {
+        lines.push({ kind: "product", name, sku, unitPriceUsd: 0, qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: "included_hardware", catalogUnitPrice: server?.unitPrice }) });
+        continue;
+      }
+      if (!server) {
+        rejected.push({ reason: "unpriceable", sku, name });
+        continue;
+      }
+      if (Math.abs(server.unitPrice - clientUnit) > 0.005) {
+        repriced.push({ sku, clientUnitPrice: clientUnit, serverUnitPrice: server.unitPrice });
+      }
+      lines.push({ kind: "product", name, sku, unitPriceUsd: money(server.unitPrice), qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: server.source, clientUnitPrice: clientUnit }) });
       continue;
     }
 
@@ -153,6 +190,25 @@ export async function buildCheckoutLines(
         finish: type === "wheel" ? ((i as CartWheelItem).rearFinish ?? (i as CartWheelItem).finish) : undefined,
       }),
     });
+  }
+
+  // Road hazard: 20% of the SERVER tire price per tire ($15 min), one unit per tire
+  // actually in the order. Client unit price and quantity are ignored.
+  if (roadHazard.length > 0) {
+    const tireLines = lines.filter((l) => (l.meta as any)?.cartType === "tire");
+    const tireCount = tireLines.reduce((n, l) => n + l.qty, 0);
+    const tireSubtotal = tireLines.reduce((n, l) => n + l.unitPriceUsd * l.qty, 0);
+    const { i, name } = roadHazard[0];
+    if (tireCount === 0) {
+      rejected.push({ reason: "unpriceable", sku: ROAD_HAZARD_SKU, name });
+    } else {
+      const unit = roadHazardPerTireUsd(tireSubtotal, tireCount);
+      const clientUnit = Number(i.unitPrice || 0);
+      if (Math.abs(unit - clientUnit) > 0.005 || Number(i.quantity) !== tireCount) {
+        repriced.push({ sku: ROAD_HAZARD_SKU, clientUnitPrice: clientUnit, serverUnitPrice: unit });
+      }
+      lines.push({ kind: "product", name, sku: ROAD_HAZARD_SKU, unitPriceUsd: unit, qty: tireCount, taxable: false, meta: baseMeta(i, { priceSource: "computed_road_hazard", clientUnitPrice: clientUnit, tireCount, tireSubtotal: money(tireSubtotal) }) });
+    }
   }
 
   if (rejected.length > 0) return { ok: false, rejected };

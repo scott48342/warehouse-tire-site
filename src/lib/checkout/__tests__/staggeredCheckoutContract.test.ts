@@ -212,3 +212,115 @@ describe("checkout -> snapshot -> supplier PO", () => {
     expect(wp.some((x) => x.partNumber === FRONT && x.quantity === 4)).toBe(false);
   });
 });
+
+describe("accessory price authority (release review 2026-09-19)", () => {
+  // Accessory catalog the server would see: a $38 lug kit, a $1,895 lift kit.
+  const LIFT = "RC-LIFTKIT-6IN";
+  const LUGS = "GOR-LUG-14x1.5";
+  const accResolver: CatalogPriceResolver = async (sku, ctx) => {
+    if (ctx.type === "accessory") {
+      if (sku === LIFT) return { sku, unitPrice: 1895, source: "suspension_db" };
+      if (sku === LUGS) return { sku, unitPrice: 38, source: "accessories_db" };
+      if (sku === "TPMS-SENSOR-UNIVERSAL") return { sku, unitPrice: 49.99, source: "fixed" };
+      return null;
+    }
+    return resolver(sku, ctx);
+  };
+  const acc = (over: Record<string, unknown>): CartItem =>
+    ({ type: "accessory", brand: "X", model: "Acc", quantity: 1, required: false, category: "other", ...over } as any);
+
+  it("charges the catalog price when a lift kit's client price is tampered to $1", async () => {
+    const r = await buildCheckoutLines([acc({ sku: LIFT, unitPrice: 1, category: "suspension" })], accResolver);
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    expect(r.lines[0]).toMatchObject({ sku: LIFT, unitPriceUsd: 1895, qty: 1 });
+    expect(r.repriced).toEqual([{ sku: LIFT, clientUnitPrice: 1, serverUnitPrice: 1895 }]);
+  });
+
+  it("a lift kit relabelled as required $0 lug nuts is still charged catalog price", async () => {
+    const r = await buildCheckoutLines([acc({ sku: LIFT, unitPrice: 0, required: true, category: "lug_nut" })], accResolver);
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    expect(r.lines[0]).toMatchObject({ sku: LIFT, unitPriceUsd: 1895 });
+  });
+
+  it("genuine included hardware (required, $0, lug_nut, cheap in catalog or unknown) stays $0", async () => {
+    const r = await buildCheckoutLines(
+      [acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" }), acc({ sku: "HUB-73-66", unitPrice: 0, required: true, category: "hub-rings" })],
+      accResolver,
+    );
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    expect(r.lines.map((l) => [l.sku, l.unitPriceUsd, (l.meta as any).priceSource])).toEqual([
+      [LUGS, 0, "included_hardware"],
+      ["HUB-73-66", 0, "included_hardware"],
+    ]);
+  });
+
+  it("a non-required lug kit is charged catalog price even if the client sent $0", async () => {
+    const r = await buildCheckoutLines([acc({ sku: LUGS, unitPrice: 0, required: false, category: "lug_nut" })], accResolver);
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    expect(r.lines[0]).toMatchObject({ sku: LUGS, unitPriceUsd: 38 });
+  });
+
+  it("rejects an accessory the catalog cannot price (no client-price fallback) and one without a SKU", async () => {
+    const r1 = await buildCheckoutLines([acc({ sku: "UNKNOWN-1", unitPrice: 12.5 })], accResolver);
+    expect(r1).toEqual({ ok: false, rejected: [{ reason: "unpriceable", sku: "UNKNOWN-1", name: "Acc" }] });
+    const r2 = await buildCheckoutLines([acc({ sku: "", unitPrice: 12.5 })], accResolver);
+    expect(r2.ok).toBe(false);
+  });
+
+  it("TPMS synthetic SKU is charged the fixed server price, not the client price", async () => {
+    const r = await buildCheckoutLines([acc({ sku: "TPMS-SENSOR-UNIVERSAL", unitPrice: 0.99, quantity: 4, category: "tpms" })], accResolver);
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    expect(r.lines[0]).toMatchObject({ unitPriceUsd: 49.99, qty: 4 });
+  });
+
+  it("road hazard is recomputed from SERVER tire prices: 20%/tire, $15 floor, qty = tires in order", async () => {
+    // Tire resolver: TIRE-A prices at $200 server-side regardless of the $50 the client sends.
+    const tireResolver: CatalogPriceResolver = async (sku, ctx) =>
+      ctx.type === "tire" && sku === "TIRE-A" ? { sku, unitPrice: 200, source: "tireweb" } : accResolver(sku, ctx);
+    const tire: CartItem = { type: "tire", sku: "TIRE-A", brand: "Toyo", model: "AT3", size: "275/65R18", unitPrice: 50, quantity: 4 } as any;
+    const rh = acc({ sku: "RH-PROTECT-2YR", unitPrice: 10, quantity: 1, category: "other" });
+    const r = await buildCheckoutLines([tire, rh], tireResolver);
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    const line = r.lines.find((l) => l.sku === "RH-PROTECT-2YR")!;
+    expect(line).toMatchObject({ unitPriceUsd: 40, qty: 4 }); // 20% of $200, x4 tires
+    expect(r.repriced).toEqual(expect.arrayContaining([{ sku: "RH-PROTECT-2YR", clientUnitPrice: 10, serverUnitPrice: 40 }]));
+
+    // $15 floor on cheap tires
+    const cheap: CatalogPriceResolver = async (sku, ctx) => (ctx.type === "tire" ? { sku, unitPrice: 60, source: "tireweb" } : accResolver(sku, ctx));
+    const r2 = await buildCheckoutLines([tire, rh], cheap);
+    if (!r2.ok) throw new Error("unexpected rejection");
+    expect(r2.lines.find((l) => l.sku === "RH-PROTECT-2YR")).toMatchObject({ unitPriceUsd: 15, qty: 4 });
+
+    // no tires -> nothing to protect -> rejected, not silently charged
+    const r3 = await buildCheckoutLines([rh], accResolver);
+    expect(r3.ok).toBe(false);
+  });
+
+  it("tire line keeps the legacy size-prefixed name and tire meta (payment-intent parity)", async () => {
+    const tireResolver: CatalogPriceResolver = async (sku, ctx) => (ctx.type === "tire" ? { sku, unitPrice: 200, source: "tireweb" } : null);
+    const tire: CartItem = { type: "tire", sku: "TIRE-A", brand: "Toyo", model: "AT3", size: "275/65R18", unitPrice: 200, quantity: 4, loadIndex: 116, speedRating: "T" } as any;
+    const r = await buildCheckoutLines([tire], tireResolver);
+    if (!r.ok) throw new Error("unexpected rejection");
+    expect(r.lines[0].name).toBe("275/65R18 Toyo AT3");
+    expect(r.lines[0].meta).toMatchObject({ tireSize: "275/65R18", loadIndex: 116, speedRating: "T", brand: "Toyo" });
+  });
+});
+
+describe("both Stripe routes go through the server price authority (wiring guard)", () => {
+  const fs = require("fs") as typeof import("fs");
+  const path = require("path") as typeof import("path");
+  for (const route of ["create-checkout-session", "create-payment-intent"]) {
+    it(`${route} builds lines via buildCheckoutLines and never reads the client unitPrice`, () => {
+      const src = fs.readFileSync(path.join(process.cwd(), "src/app/api/stripe", route, "route.ts"), "utf8");
+      expect(src).toMatch(/buildCheckoutLines\(items, defaultCatalogPriceResolver\)/);
+      expect(src).not.toMatch(/Number\(i\.unitPrice/);
+      expect(src).toMatch(/line_unpriceable/);
+    });
+  }
+});

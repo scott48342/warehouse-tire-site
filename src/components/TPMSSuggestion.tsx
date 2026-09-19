@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useCart, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { trackEvent } from "@/lib/analytics";
+import { TPMS_SENSOR_UNIVERSAL_SKU, TPMS_SENSOR_UNIVERSAL_UNIT_USD } from "@/lib/checkout/fixedPriceSkus";
 
 // ============================================================================
 // Types
@@ -28,10 +29,10 @@ const TPMS_MANDATORY_YEAR = 2007;
 
 // Default TPMS product - universal pre-programmed sensors
 const TPMS_PRODUCT: Omit<CartAccessoryItem, "type"> = {
-  sku: "TPMS-SENSOR-UNIVERSAL",
+  sku: TPMS_SENSOR_UNIVERSAL_SKU,
   name: "TPMS Sensors (Set of 4)",
   category: "tpms",
-  unitPrice: 49.99,
+  unitPrice: TPMS_SENSOR_UNIVERSAL_UNIT_USD, // server authority: src/lib/checkout/fixedPriceSkus.ts
   quantity: 4,
   required: false,
   reason: "Recommended for tire pressure monitoring",

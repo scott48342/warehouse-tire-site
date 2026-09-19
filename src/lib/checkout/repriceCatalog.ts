@@ -6,10 +6,16 @@
  * (identical to `resolveRearWheel` on the wheel PDP). Tires: /api/tires/search
  * exact part-number match scoped to size (identical to the tire PDP).
  *
+ * Accessories (release review 2026-09-19): fixed-price synthetic SKUs ->
+ * `accessories` table (sell_price, else msrp - what the accessory PDP shows) ->
+ * `suspension_fitments` (msrp, else map_price - what the lift-kit PDP shows).
+ *
  * Every resolver returns `null` when the SKU cannot be priced. Callers must
  * REJECT the line in that case - never fall back to the client price or $0.
  */
 import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
+import { getDbPool } from "@/lib/db/pool";
+import { FIXED_PRICE_SKUS } from "./fixedPriceSkus";
 import { getWheel1WheelBySku, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
 import { getWSIWheelBySku, computeWSISellPrice, type WSICandidate } from "@/lib/wsi/catalog";
 
@@ -17,10 +23,13 @@ export type ResolvedCatalogPrice = {
   sku: string;
   unitPrice: number;
   finish?: string;
-  source: "wheelpros" | "techfeed" | "wheel1" | "wsi" | "tireweb";
+  source: "wheelpros" | "techfeed" | "wheel1" | "wsi" | "tireweb" | "fixed" | "accessories_db" | "suspension_db";
 };
 
-export type CatalogPriceResolver = (sku: string, ctx: { type: "wheel" | "tire"; size?: string }) => Promise<ResolvedCatalogPrice | null>;
+export type CatalogPriceResolver = (
+  sku: string,
+  ctx: { type: "wheel" | "tire" | "accessory"; size?: string },
+) => Promise<ResolvedCatalogPrice | null>;
 
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
@@ -123,5 +132,39 @@ export async function resolveTirePrice(sku: string, size?: string): Promise<Reso
   return null;
 }
 
+export async function resolveAccessoryPrice(sku: string): Promise<ResolvedCatalogPrice | null> {
+  const clean = String(sku || "").trim();
+  if (!clean) return null;
+
+  const fixed = FIXED_PRICE_SKUS[clean.toUpperCase()];
+  if (fixed != null) return { sku: clean, unitPrice: fixed, source: "fixed" };
+
+  const pool = getDbPool();
+  if (!pool) {
+    console.warn(`[checkout/reprice] no DB pool - accessory ${clean} unpriceable`);
+    return null;
+  }
+  try {
+    const acc = await pool.query<{ sku: string; sell_price: unknown; msrp: unknown }>(
+      `SELECT sku, sell_price, msrp FROM accessories WHERE UPPER(sku) = UPPER($1) LIMIT 1`,
+      [clean],
+    );
+    const a = acc.rows[0];
+    const accPrice = a ? positive(a.sell_price) ?? positive(a.msrp) : null;
+    if (a && accPrice != null) return { sku: a.sku || clean, unitPrice: accPrice, source: "accessories_db" };
+
+    const sus = await pool.query<{ sku: string; msrp: unknown; map_price: unknown }>(
+      `SELECT sku, msrp, map_price FROM suspension_fitments WHERE UPPER(sku) = UPPER($1) LIMIT 1`,
+      [clean],
+    );
+    const s = sus.rows[0];
+    const susPrice = s ? positive(s.msrp) ?? positive(s.map_price) : null;
+    if (s && susPrice != null) return { sku: s.sku || clean, unitPrice: susPrice, source: "suspension_db" };
+  } catch (e) {
+    console.warn(`[checkout/reprice] accessory lookup failed for ${clean}:`, e instanceof Error ? e.message : e);
+  }
+  return null;
+}
+
 export const defaultCatalogPriceResolver: CatalogPriceResolver = (sku, ctx) =>
-  ctx.type === "wheel" ? resolveWheelPrice(sku) : resolveTirePrice(sku, ctx.size);
+  ctx.type === "wheel" ? resolveWheelPrice(sku) : ctx.type === "tire" ? resolveTirePrice(sku, ctx.size) : resolveAccessoryPrice(sku);

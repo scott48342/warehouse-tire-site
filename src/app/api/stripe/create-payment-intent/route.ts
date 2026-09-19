@@ -7,6 +7,8 @@ import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
 import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } from "@/lib/shopContext";
 import { validateSavedQuoteOwnership } from "@/lib/savedQuotes/checkoutIntegration";
+import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
+import { defaultCatalogPriceResolver } from "@/lib/checkout/repriceCatalog";
 
 export const runtime = "nodejs";
 
@@ -142,42 +144,22 @@ export async function POST(req: Request) {
     const taxAmount = Number(taxInfo.amount) || 0;
     const taxState = String(taxInfo.state || "").toUpperCase();
 
-    // Convert cart items to quote lines
-    const linesAll: QuoteLine[] = items
-      .map((i: any) => {
-        const kind: QuoteLine["kind"] = "product";
-        // Build product name - include tire size for tire items
-        let name = String(i.model || i.name || i.sku || "Item").trim();
-        if (i.type === "tire" && i.size) {
-          // Prepend tire size to name: "245/65R17 Brand Model"
-          name = `${i.size} ${i.brand || ""} ${name}`.trim().replace(/\s+/g, " ");
-        }
-        const sku = String(i.sku || "").trim() || undefined;
-        const unitPriceUsd = Number(i.unitPrice || 0);
-        const qty = Math.max(1, Math.trunc(Number(i.quantity || 1)));
-        const taxable = i.type === "wheel" || i.type === "tire";
-
-        const meta = {
-          cartType: i.type,
-          category: i.category,
-          required: !!i.required,
-          wheelSku: i.wheelSku,
-          spec: i.spec,
-          meta: i.meta,
-          source: i.source,
-          // Brand name for supplier order placement (needed for USAF lineCode)
-          brand: i.brand,
-          // Tire-specific fields (for email/display)
-          ...(i.type === "tire" ? {
-            tireSize: i.size,
-            loadIndex: i.loadIndex,
-            speedRating: i.speedRating,
-          } : {}),
-        };
-
-        return { kind, name, sku, unitPriceUsd, qty, taxable, meta };
-      })
-      .filter((l) => l.qty > 0);
+    // Convert cart items to quote lines - SERVER-SIDE re-priced through the same
+    // builder as create-checkout-session (release review 2026-09-19: this embedded
+    // Payment Element path previously charged the client-sent unitPrice for every
+    // item and never split staggered sets). Unpriceable lines reject the checkout.
+    const built = await buildCheckoutLines(items, defaultCatalogPriceResolver);
+    if (!built.ok) {
+      console.warn("[checkout/payment-intent] rejected lines:", built.rejected);
+      return NextResponse.json(
+        { ok: false, error: "line_unpriceable", detail: "One or more items could not be priced or matched to a rear wheel. Please remove and re-add them.", rejected: built.rejected },
+        { status: 409 }
+      );
+    }
+    if (built.repriced.length > 0) {
+      console.warn("[checkout/payment-intent] client/server price mismatch (server price charged):", built.repriced);
+    }
+    const linesAll: QuoteLine[] = built.lines.filter((l) => l.qty > 0);
 
     if (linesAll.length === 0) {
       return NextResponse.json({ ok: false, error: "empty_cart" }, { status: 400 });

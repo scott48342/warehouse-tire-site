@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useCart, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { ROAD_HAZARD_RATE, ROAD_HAZARD_MIN_PER_TIRE_USD, ROAD_HAZARD_SKU } from "@/lib/checkout/fixedPriceSkus";
 
 /**
  * Road Hazard Protection Component
@@ -27,9 +28,9 @@ interface RoadHazardProtectionProps {
 }
 
 // Road hazard product configuration
-const ROAD_HAZARD_RATE = 0.20; // 20% of tire price
-const ROAD_HAZARD_MIN_PER_TIRE = 15; // Minimum $15 per tire
-const ROAD_HAZARD_SKU = "RH-PROTECT-2YR";
+// Rate / minimum / SKU come from the server pricing authority (src/lib/checkout/fixedPriceSkus.ts);
+// checkout recomputes this line from the server tire prices regardless of what the cart sends.
+const ROAD_HAZARD_MIN_PER_TIRE = ROAD_HAZARD_MIN_PER_TIRE_USD;
 
 export function RoadHazardProtection({
   tireCount,
