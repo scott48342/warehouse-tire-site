@@ -7,7 +7,7 @@
  * - Safety validation (diameter tolerance, offset safety)
  * 
  * SAFETY RULES (NEVER BYPASS):
- * - Overall diameter must be within ±3% of OEM
+ * - Overall diameter must be within Â±3% of OEM
  * - Offset must be within safe range for vehicle
  * - Bolt pattern must match exactly
  */
@@ -59,6 +59,13 @@ export interface PackageTire {
   width: number;         // Section width in mm
   aspectRatio: number;   // e.g., 55
   rimDiameter: number;   // e.g., 20
+  /** LT (light-truck) construction required, carried from the OE size (audit Batch 5). */
+  lt: boolean;
+  /** "oem" = an OE size for this rim; "computed" = plus-size derived to hold OE overall diameter. */
+  sizeSource: "oem" | "computed";
+  /** Always true here: brand "TBD" + estimateTirePrice(). A real tire is chosen on /package/customize. */
+  placeholder: true;
+  priceEstimated: true;
 }
 
 export interface FitmentValidation {
@@ -76,6 +83,15 @@ export interface RecommendedPackage {
   wheel: PackageWheel;
   tire: PackageTire;
   totalPrice: number;           // 4 wheels + 4 tires
+  /** totalPrice includes an ESTIMATED tire price (placeholder tire). Never a quote. */
+  priceEstimated: true;
+  /**
+   * A recommended package is never a certified fit and never directly
+   * purchasable: the tire is a placeholder and the wheel's own fit
+   * certification is decided by /api/wheels/fitment-search, not here.
+   */
+  certified: false;
+  purchasable: false;
   fitmentValidation: FitmentValidation;
   overallDiameter: number;      // in inches
   oemOverallDiameter: number;   // baseline for comparison
@@ -248,11 +264,12 @@ interface ParsedFitment {
   oemDiameters: number[];
   oemWidths: number[];
   oemTireSizes: string[];
-  oemOverallDiameter: number;
+  /** null when no OE size parsed - no fabricated baseline (audit Batch 5). */
+  oemOverallDiameter: number | null;
   /**
    * OEM overall diameter per rim diameter (e.g., {17: 24.3, 18: 24.5, 19: 25.5}).
    * Vehicles with multiple OEM sizes (staggered, optional wheels) have different
-   * overall diameters per rim — validating every candidate against a single
+   * overall diameters per rim â€” validating every candidate against a single
    * baseline falsely rejects valid OEM-equivalent setups.
    */
   oemOverallDiameterByRim: Record<number, number>;
@@ -264,12 +281,12 @@ async function getVehicleFitment(
   model: string,
   trim?: string
 ): Promise<ParsedFitment | null> {
-  // ═══════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   // 2026-06-13: Use UNIVERSAL FITMENT RESOLVER (Single Source of Truth)
   // Replaces listLocalFitments - all normalization/aliases encapsulated
-  // ═══════════════════════════════════════════════════════════════════════
+  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
   
-  console.log(`[packages/engine] ══════════════════════════════════════════════════`);
+  console.log(`[packages/engine] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•`);
   console.log(`[packages/engine] Using resolveUniversalFitment`);
   console.log(`[packages/engine] RAW INPUT: year=${year} make=${make} model=${model} trim=${trim || "(none)"}`);
   
@@ -283,7 +300,7 @@ async function getVehicleFitment(
   console.log(`[packages/engine] NORMALIZED: make="${result.normalized.make}" model="${result.normalized.model}"`);
   console.log(`[packages/engine] MATCHED VARIANT: "${result.normalized.matchedVariant || "(none)"}"`);
   console.log(`[packages/engine] SOURCE: ${result.source} | CONFIDENCE: ${result.confidence} | QUALITY: ${result.qualityTier}`);
-  console.log(`[packages/engine] ══════════════════════════════════════════════════`);
+  console.log(`[packages/engine] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•`);
   
   if (!result.found || !result.boltPattern) {
     console.log(`[packages/engine] No fitment data found`);
@@ -316,9 +333,11 @@ async function getVehicleFitment(
   // Calculate OEM overall diameter (from first tire size) and per-rim map
   // FIX (2026-06-10): Exclude LT (Light Truck) sizes from baseline calculation.
   // LT tires like LT315/70R17 are oversized optional fitments (off-road packages)
-  // and inflate the baseline diameter, causing standard packages to fail ±3% validation.
+  // and inflate the baseline diameter, causing standard packages to fail Â±3% validation.
   // Use only standard (non-LT) tire sizes for baseline; fall back to all sizes if none exist.
-  let oemOverallDiameter = 28; // fallback
+  // No fabricated baseline: when no OE size parses, the baseline stays null and
+  // no computed (plus-size) tire may be produced (audit Batch 5).
+  let oemOverallDiameter: number | null = null;
   const oemOverallDiameterByRim: Record<number, number> = {};
   
   // First pass: collect standard (non-LT) sizes only
@@ -336,7 +355,7 @@ async function getVehicleFitment(
     // Use FIRST OEM size per rim as baseline (not MAX).
     // Vehicles like F-150 have multiple OEM options (245/70R17, 265/70R17).
     // Using MAX would set baseline to the larger option, causing standard-size
-    // packages to fail ±3% validation. First size = primary/standard option.
+    // packages to fail Â±3% validation. First size = primary/standard option.
     if (oemOverallDiameterByRim[parsed.rimDiameter] == null) {
       oemOverallDiameterByRim[parsed.rimDiameter] = od;
     }
@@ -360,26 +379,26 @@ async function getVehicleFitment(
   if (isStaggeredCapableVehicle(result.make ?? "", result.model ?? "")) {
     const analysis = analyzeStaggeredData(result.oemWheelSizes ?? []);
     if (analysis.hasStaggeredData) {
-      // Staggered detected — check for per-axle offset data
+      // Staggered detected â€” check for per-axle offset data
       const staggeredFrontSizes = (result.oemWheelSizes ?? []).filter(
         (s: any) => s.offset != null && (s.axle === 'front' || s.axle === 'both')
       );
       if (staggeredFrontSizes.length === 0) {
-        console.warn(`[packages/engine] Staggered ${result.make} ${result.model}: no per-axle offset data — blocked`);
+        console.warn(`[packages/engine] Staggered ${result.make} ${result.model}: no per-axle offset data â€” blocked`);
         return null;
       }
     } else if (!isConfirmedSquareSetup(analysis.reason)) {
-      // Neither staggered nor confirmed square — axle unknown
-      console.warn(`[packages/engine] Staggered-capable ${result.make} ${result.model}: unknown axle ("${analysis.reason}") — blocked`);
+      // Neither staggered nor confirmed square â€” axle unknown
+      console.warn(`[packages/engine] Staggered-capable ${result.make} ${result.model}: unknown axle ("${analysis.reason}") â€” blocked`);
       return null;
     }
   }
 
-  // 2026-06-30: OEM offset resolution — no fallback allowed.
+  // 2026-06-30: OEM offset resolution â€” no fallback allowed.
   // If the vehicle has no OEM offset data, package generation fails closed.
   // Center bore null is also a hard failure.
   if (!result.centerBore || result.centerBore <= 0) {
-    console.warn(`[packages/engine] Missing center bore for ${result.year} ${result.make} ${result.model} — package generation blocked`);
+    console.warn(`[packages/engine] Missing center bore for ${result.year} ${result.make} ${result.model} â€” package generation blocked`);
     return null;
   }
   const parsedSizes = (parseWheelSizes(result.oemWheelSizes ?? []) as Array<{ diameter: number; width: number; offset: number | null; axle?: string }>)
@@ -390,7 +409,7 @@ async function getVehicleFitment(
     oemWheelSizes: parsedSizes,
   });
   if (engineOemOffset.missing) {
-    console.warn(`[packages/engine] Missing OEM offset for ${result.year} ${result.make} ${result.model} — package generation blocked`);
+    console.warn(`[packages/engine] Missing OEM offset for ${result.year} ${result.make} ${result.model} â€” package generation blocked`);
     return null;
   }
 
@@ -433,9 +452,9 @@ async function generatePackages(opts: {
   // Get baseline OEM diameter
   const baseOemDiameter = Math.max(...fitment.oemDiameters, 17);
 
-  // Diameters actually available in inventory for this bolt pattern —
+  // Diameters actually available in inventory for this bolt pattern â€”
   // used as a fallback when a category's strict plus-size targets don't exist
-  // (e.g., HD trucks with OEM 18" where inventory jumps 18" → 20").
+  // (e.g., HD trucks with OEM 18" where inventory jumps 18" â†’ 20").
   const availableDiameters = [...new Set(
     wheels.map(w => Number(w.diameter || 0)).filter(d => d > 0)
   )].sort((a, b) => a - b);
@@ -455,8 +474,8 @@ async function generatePackages(opts: {
       priceRange: config.priceRange,
     });
 
-    // Fallback: strict targets missing from inventory — try the nearest
-    // available diameters within a safe window (OEM-1 .. OEM+3). The ±3%
+    // Fallback: strict targets missing from inventory â€” try the nearest
+    // available diameters within a safe window (OEM-1 .. OEM+3). The Â±3%
     // overall-diameter validation below still guards every package.
     if (!bestWheel) {
       const fallbackDiameters = availableDiameters.filter(
@@ -477,7 +496,7 @@ async function generatePackages(opts: {
 
     if (!bestWheel) continue;
 
-    // ── Geometry validation (2026-06-30) ──────────────────────────────────
+    // â”€â”€ Geometry validation (2026-06-30) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // Apply OEM-relative position check. Packages use "aggressive" profile
     // since they intentionally show plus-sized fitments, but safety ceiling
     // still applies. Wheels that exceed the ceiling are always rejected.
@@ -509,12 +528,14 @@ async function generatePackages(opts: {
 
     // Pick the OEM baseline for THIS rim diameter when known (staggered /
     // multi-size vehicles), falling back to the closest known rim, then the
-    // single-size baseline. Prevents false ±3% rejections when a vehicle's
+    // single-size baseline. Prevents false Â±3% rejections when a vehicle's
     // OEM sizes legitimately differ in overall diameter per wheel size.
     const oemBaseline = resolveOemBaseline(
       fitment,
       tire.rimDiameter
     );
+    // No parsed OE baseline -> nothing to validate against -> no package.
+    if (oemBaseline == null || !Number.isFinite(oemBaseline) || oemBaseline <= 0) continue;
 
     // Validate fitment
     const validation = validateFitment(
@@ -528,7 +549,11 @@ async function generatePackages(opts: {
     if (!validation.safe) continue;
 
     // Calculate total price (4 wheels + 4 tires)
-    const totalPrice = (bestWheel.price * 4) + (tire.price * 4);
+    const wheelUnit = Number(bestWheel.price);
+    // Finite-price guard: a wheel without a real price cannot be shown as a
+    // "from $X" package total. Tire side is an explicit estimate (priceEstimated).
+    if (!Number.isFinite(wheelUnit) || wheelUnit <= 0 || !Number.isFinite(tire.price) || tire.price <= 0) continue;
+    const totalPrice = (wheelUnit * 4) + (tire.price * 4);
 
     // Score the package
     const score = scorePackage({
@@ -558,6 +583,9 @@ async function generatePackages(opts: {
       },
       tire,
       totalPrice: Math.round(totalPrice * 100) / 100,
+      priceEstimated: true,
+      certified: false,
+      purchasable: false,
       fitmentValidation: validation,
       overallDiameter: Math.round(overallDiameter * 10) / 10,
       oemOverallDiameter: Math.round(oemBaseline * 10) / 10,
@@ -627,9 +655,9 @@ function findBestWheel(
     // Skip if diameter doesn't match targets
     if (!criteria.targetDiameters.includes(diameter)) continue;
 
-    // 2026-06-30: The old flat offsetRange ±5mm filter is replaced by geometry validation.
+    // 2026-06-30: The old flat offsetRange Â±5mm filter is replaced by geometry validation.
     // The fitment.oemOffset geometry check below is the authoritative gate.
-    // Keep the old check as a loose pre-filter only — geometry decides the final result.
+    // Keep the old check as a loose pre-filter only â€” geometry decides the final result.
     if (offset < criteria.offsetRange.min - 15 || offset > criteria.offsetRange.max + 15) continue;
 
     // Calculate score
@@ -689,6 +717,11 @@ function findMatchingTire(
 ): PackageTire | null {
   const wheelDiameter = Number(wheel.diameter);
   const wheelWidth = Number(wheel.width);
+  // Finite-input guard: a wheel row with a missing/garbage diameter or width
+  // must not yield "NaN/NaNRNaN" or a size computed from NaN.
+  if (!Number.isFinite(wheelDiameter) || wheelDiameter < 10 || wheelDiameter > 30) return null;
+  if (!Number.isFinite(wheelWidth) || wheelWidth < 4 || wheelWidth > 16) return null;
+  const oeRequiresLt = fitment.oemTireSizes.length > 0 && fitment.oemTireSizes.every((s) => /^LT/i.test(String(s).trim()));
 
   // Look for OEM tire size with matching diameter
   const matchingOemSize = fitment.oemTireSizes.find(size => {
@@ -707,12 +740,21 @@ function findMatchingTire(
       width: parsed.width,
       aspectRatio: parsed.aspectRatio,
       rimDiameter: parsed.rimDiameter,
+      lt: parsed.lt,
+      sizeSource: "oem",
+      placeholder: true,
+      priceEstimated: true,
     };
   }
 
   // Calculate recommended tire size for plus-sizing
   // Maintain overall diameter within 3%
-  const targetOverallDiameter = fitment.oemOverallDiameter;
+  const targetOverallDiameter = resolveOemBaseline(fitment, wheelDiameter);
+  if (targetOverallDiameter == null || !Number.isFinite(targetOverallDiameter) || targetOverallDiameter <= wheelDiameter) {
+    // No parsed OE baseline (or wheel larger than the OE overall diameter):
+    // nothing to derive from. Never invent a size.
+    return null;
+  }
   
   // Common tire widths based on wheel width
   const recommendedTireWidth = Math.round((wheelWidth * 25.4) + 20); // Approx 20mm wider than rim
@@ -735,7 +777,8 @@ function findMatchingTire(
     Math.abs(curr - recommendedTireWidth) < Math.abs(prev - recommendedTireWidth) ? curr : prev
   );
 
-  const tireSize = `${snappedWidth}/${snappedAspect}R${wheelDiameter}`;
+  if (!Number.isFinite(snappedWidth) || !Number.isFinite(snappedAspect)) return null;
+  const tireSize = `${oeRequiresLt ? "LT" : ""}${snappedWidth}/${snappedAspect}R${wheelDiameter}`;
 
   return {
     size: tireSize,
@@ -746,31 +789,41 @@ function findMatchingTire(
     width: snappedWidth,
     aspectRatio: snappedAspect,
     rimDiameter: wheelDiameter,
+    lt: oeRequiresLt,
+    sizeSource: "computed",
+    placeholder: true,
+    priceEstimated: true,
   };
 }
 
-function parseTireSize(size: string): { width: number; aspectRatio: number; rimDiameter: number } | null {
-  // Handle standard metric: 265/70R17, P265/70R17, 265/70ZR17
-  const match = size.match(/^[P]?(\d{3})\/(\d{2,3})[A-Z]*R(\d{2})/i);
+function parseTireSize(size: string): { width: number; aspectRatio: number; rimDiameter: number; lt: boolean } | null {
+  if (typeof size !== "string") return null;
+  const s = size.trim();
+  // Handle standard metric: 265/70R17, P265/70R17, 265/70ZR17, LT275/70R18 (LT kept as a flag)
+  const match = s.match(/^(LT|P)?(\d{3})\/(\d{2,3})[A-Z]*R(\d{2})/i);
   if (match) {
-    return {
-      width: parseInt(match[1], 10),
-      aspectRatio: parseInt(match[2], 10),
-      rimDiameter: parseInt(match[3], 10),
+    const out = {
+      width: parseInt(match[2], 10),
+      aspectRatio: parseInt(match[3], 10),
+      rimDiameter: parseInt(match[4], 10),
+      lt: (match[1] || "").toUpperCase() === "LT",
     };
+    return Number.isFinite(out.width) && Number.isFinite(out.aspectRatio) && Number.isFinite(out.rimDiameter) ? out : null;
   }
   
-  // Handle flotation: 35x12.50R22
-  const flotationMatch = size.match(/^(\d{2,3})[xX](\d+\.?\d*)R(\d{2})/);
+  // Handle flotation: 35x12.50R22 (flotation sizes are LT construction)
+  const flotationMatch = s.match(/^(\d{2,3})[xX](\d+\.?\d*)R(\d{2})/);
   if (flotationMatch) {
     const overallDiameterInches = parseFloat(flotationMatch[1]);
     const sectionWidthInches = parseFloat(flotationMatch[2]);
     const rimDiameter = parseInt(flotationMatch[3], 10);
+    if (!Number.isFinite(overallDiameterInches) || !Number.isFinite(sectionWidthInches) || sectionWidthInches <= 0 || !Number.isFinite(rimDiameter)) return null;
     
     return {
       width: Math.round(sectionWidthInches * 25.4),
       aspectRatio: Math.round(((overallDiameterInches - rimDiameter) / 2 / sectionWidthInches) * 100),
       rimDiameter,
+      lt: true,
     };
   }
 
@@ -779,12 +832,12 @@ function parseTireSize(size: string): { width: number; aspectRatio: number; rimD
 
 /**
  * Resolve the OEM overall-diameter baseline for a candidate rim diameter.
- * Order: exact rim match → closest known rim → single-size fallback.
+ * Order: exact rim match â†’ closest known rim â†’ single-size fallback.
  */
 function resolveOemBaseline(
   fitment: ParsedFitment,
   rimDiameter: number
-): number {
+): number | null {
   const byRim = fitment.oemOverallDiameterByRim;
   if (byRim && byRim[rimDiameter] != null) return byRim[rimDiameter];
   const rims = byRim ? Object.keys(byRim).map(Number) : [];
@@ -819,12 +872,12 @@ function validateFitment(
   const notes: string[] = [];
   let safe = true;
 
-  // Check overall diameter (±3% tolerance)
+  // Check overall diameter (Â±3% tolerance)
   const diameterChange = ((overallDiameter - oemOverallDiameter) / oemOverallDiameter) * 100;
   
   if (Math.abs(diameterChange) > 3) {
     safe = false;
-    notes.push(`Overall diameter ${diameterChange > 0 ? "increased" : "decreased"} by ${Math.abs(diameterChange).toFixed(1)}% (max ±3%)`);
+    notes.push(`Overall diameter ${diameterChange > 0 ? "increased" : "decreased"} by ${Math.abs(diameterChange).toFixed(1)}% (max Â±3%)`);
   } else if (Math.abs(diameterChange) > 1.5) {
     notes.push(`Overall diameter change: ${diameterChange > 0 ? "+" : ""}${diameterChange.toFixed(1)}%`);
   }
@@ -907,5 +960,6 @@ export {
   resolveOemBaseline,
   validateFitment,
   findBestWheel,
+  findMatchingTire,
 };
 export type { ParsedFitment };

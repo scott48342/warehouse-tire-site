@@ -49,7 +49,10 @@ function TrustStack() {
     { icon: "🛞", text: "Wheels + Tires" },
     { icon: "🔧", text: "Mounted & Balanced" },
     { icon: "📡", text: "TPMS Included" },
-    { icon: "✓", text: "Fitment Guaranteed" },
+    // Audit Batch 5 (2026-09-19): recommended packages are sized from OE
+    // specs with a placeholder tire; they are never a certified fit here.
+    // Fit certification lives on the wheel results / check-fitment gates.
+    { icon: "✓", text: "Sized from OE specs" },
   ];
 
   return (
@@ -71,17 +74,20 @@ function TrustStack() {
 function PriceAnchor({ packages }: { packages: RecommendedPackage[] }) {
   if (packages.length === 0) return null;
   
-  const prices = packages.map(p => p.totalPrice);
+  const prices = packages.map(p => p.totalPrice).filter((p) => Number.isFinite(p) && p > 0);
+  if (prices.length === 0) return null;
   const minPrice = Math.min(...prices);
   const maxPrice = Math.max(...prices);
   
   return (
     <p className="text-center text-lg text-neutral-600 mb-6">
-      Complete packages from{" "}
+      Complete packages estimated from{" "}
       <span className="font-bold text-neutral-900">${minPrice.toLocaleString()}</span>
       {maxPrice > minPrice && (
         <> – <span className="font-bold text-neutral-900">${maxPrice.toLocaleString()}</span></>
       )}
+      {" "}
+      <span className="text-neutral-500 text-base">• tire price set when you pick tires</span>
       {" "}
       <span className="text-green-700 font-medium">• Fast nationwide shipping</span>
     </p>

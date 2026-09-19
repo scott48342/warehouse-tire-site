@@ -269,7 +269,8 @@ export function PackageCard({
             <span className="text-3xl font-bold text-neutral-900">
               ${pkg.totalPrice.toLocaleString()}
             </span>
-            <span className="text-sm text-neutral-500">complete</span>
+            {/* Audit Batch 5: tire side is a placeholder estimate until a tire is chosen */}
+            <span className="text-sm text-neutral-500">estimated complete</span>
           </div>
 
           {/* Installed Price */}
@@ -295,9 +296,12 @@ export function PackageCard({
 
         {/* Trust Signals */}
         <div className="space-y-1.5 mb-4">
-          <div className="flex items-center gap-2 text-sm text-green-700">
+          {/* Audit Batch 5 (2026-09-19): a recommended package is never a certified
+              fit (placeholder tire; wheel certification is decided on the wheel
+              results). Say what it is: sized from the vehicle's OE specs. */}
+          <div className="flex items-center gap-2 text-sm text-neutral-700">
             <span>✓</span>
-            <span className="font-medium">Fits your {vehicleMake} {vehicleModel}</span>
+            <span className="font-medium">Sized from your {vehicleMake} {vehicleModel}&apos;s OE specs</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-neutral-600">
             <span>✓</span>

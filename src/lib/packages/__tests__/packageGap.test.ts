@@ -1,9 +1,9 @@
 /**
- * Package generation gap fixes — regression tests
+ * Package generation gap fixes Ã¢â‚¬â€ regression tests
  *
  * Covers the three root causes found in the 2026-06-10 investigation:
- * 1. Per-rim OEM baseline (multi-size vehicles falsely failed ±3% validation)
- * 2. Offset pre-filter aligned with validateFitment ±5mm tolerance
+ * 1. Per-rim OEM baseline (multi-size vehicles falsely failed Ã‚Â±3% validation)
+ * 2. Offset pre-filter aligned with validateFitment Ã‚Â±5mm tolerance
  *    (degenerate min===max offset ranges rejected all inventory)
  * 3. Diameter fallback handled in generatePackages (integration-level;
  *    findBestWheel itself unchanged for strict targets)
@@ -14,6 +14,7 @@ import {
   resolveOemBaseline,
   validateFitment,
   findBestWheel,
+  findMatchingTire,
   type ParsedFitment,
 } from "../engine";
 
@@ -35,17 +36,17 @@ function fitmentWith(partial: Partial<ParsedFitment>): ParsedFitment {
 
 describe("parseTireSize", () => {
   it("parses standard metric", () => {
-    expect(parseTireSize("205/45R17")).toEqual({ width: 205, aspectRatio: 45, rimDiameter: 17 });
+    expect(parseTireSize("205/45R17")).toEqual({ width: 205, aspectRatio: 45, rimDiameter: 17, lt: false });
   });
   it("parses P-metric and ZR", () => {
-    expect(parseTireSize("P235/35R19")).toEqual({ width: 235, aspectRatio: 35, rimDiameter: 19 });
-    expect(parseTireSize("245/35ZR20")).toEqual({ width: 245, aspectRatio: 35, rimDiameter: 20 });
+    expect(parseTireSize("P235/35R19")).toEqual({ width: 235, aspectRatio: 35, rimDiameter: 19, lt: false });
+    expect(parseTireSize("245/35ZR20")).toEqual({ width: 245, aspectRatio: 35, rimDiameter: 20, lt: false });
   });
 });
 
 describe("resolveOemBaseline (root cause 1: multi-size vehicles)", () => {
-  // Alfa Romeo 4C: 205/45R17 → 24.3", 235/35R19 → 25.5"
-  // Old code used a single 24.3" baseline → 19" candidates failed at +5%
+  // Alfa Romeo 4C: 205/45R17 Ã¢â€ â€™ 24.3", 235/35R19 Ã¢â€ â€™ 25.5"
+  // Old code used a single 24.3" baseline Ã¢â€ â€™ 19" candidates failed at +5%
   const od17 = calculateOverallDiameter(205, 45, 17);
   const od18 = calculateOverallDiameter(205, 40, 18);
   const od19 = calculateOverallDiameter(235, 35, 19);
@@ -68,9 +69,9 @@ describe("resolveOemBaseline (root cause 1: multi-size vehicles)", () => {
     expect(resolveOemBaseline(f, 18)).toBe(30);
   });
 
-  it("19in OEM-equivalent package passes ±3% with per-rim baseline", () => {
+  it("19in OEM-equivalent package passes Ã‚Â±3% with per-rim baseline", () => {
     const candidate = calculateOverallDiameter(235, 35, 19);
-    const baseline = resolveOemBaseline(fitment, 19);
+    const baseline = resolveOemBaseline(fitment, 19)!;
     const v = validateFitment(candidate, baseline, 40, fitment.offsetRange);
     expect(v.safe).toBe(true);
   });
@@ -90,8 +91,8 @@ describe("findBestWheel offset pre-filter (root cause 2: degenerate ranges)", ()
     },
   ] as any[];
 
-  it("accepts a wheel within ±5mm of a degenerate min===max range", () => {
-    // Subaru BRZ record: offset min=max=48; wheel offset 45 is 3mm off → valid
+  it("accepts a wheel within Ã‚Â±5mm of a degenerate min===max range", () => {
+    // Subaru BRZ record: offset min=max=48; wheel offset 45 is 3mm off Ã¢â€ â€™ valid
     const best = findBestWheel(wheels, {
       targetDiameters: [17],
       preferredBrands: ["KM"],
@@ -103,11 +104,11 @@ describe("findBestWheel offset pre-filter (root cause 2: degenerate ranges)", ()
     expect(best!.sku).toBe("W1");
   });
 
-  it("still rejects offsets beyond the ±5mm hard bound", () => {
+  it("still rejects offsets beyond the Ã‚Â±5mm hard bound", () => {
     const best = findBestWheel(wheels, {
       targetDiameters: [17],
       preferredBrands: ["KM"],
-      offsetRange: { min: 55, max: 60 }, // wheel at 45 → 10mm below min - 5
+      offsetRange: { min: 55, max: 60 }, // wheel at 45 Ã¢â€ â€™ 10mm below min - 5
       offsetPreference: "oem",
       priceRange: "value",
     });
@@ -115,7 +116,7 @@ describe("findBestWheel offset pre-filter (root cause 2: degenerate ranges)", ()
   });
 });
 
-describe("validateFitment ±3% rule unchanged (safety)", () => {
+describe("validateFitment Ã‚Â±3% rule unchanged (safety)", () => {
   it("rejects >3% diameter change", () => {
     const v = validateFitment(28.9, 28, 40, { min: 20, max: 50 });
     expect(v.safe).toBe(false);
@@ -123,5 +124,64 @@ describe("validateFitment ±3% rule unchanged (safety)", () => {
   it("accepts within 3%", () => {
     const v = validateFitment(28.5, 28, 40, { min: 20, max: 50 });
     expect(v.safe).toBe(true);
+  });
+});
+
+describe("Batch 5 (2026-09-19): finite-input guards, LT prefix, no fabricated sizes", () => {
+  // Minimal ScoredWheel shape; the guard under test only reads diameter/width.
+  const wheel = (diameter: unknown, width: unknown) =>
+    ({ sku: "W-TEST", price: 250, score: 90, diameter, width } as unknown as Parameters<typeof findMatchingTire>[0]);
+  it("parseTireSize keeps the LT prefix as a flag and flags flotation as LT", () => {
+    expect(parseTireSize("LT275/70R18")).toEqual({ width: 275, aspectRatio: 70, rimDiameter: 18, lt: true });
+    expect(parseTireSize("LT315/70R17")).toEqual({ width: 315, aspectRatio: 70, rimDiameter: 17, lt: true });
+    expect(parseTireSize("35x12.50R17")?.lt).toBe(true);
+    expect(parseTireSize("")).toBeNull();
+    expect(parseTireSize(undefined as unknown as string)).toBeNull();
+    expect(parseTireSize("NaN/NaNRNaN")).toBeNull();
+  });
+
+  const od17 = calculateOverallDiameter(265, 70, 17);
+  const ltFitment = fitmentWith({
+    oemTireSizes: ["LT265/70R17"],
+    oemOverallDiameter: od17,
+    oemOverallDiameterByRim: { 17: od17 },
+  });
+
+  it("returns null for NaN / out-of-range wheel dimensions instead of a NaN size", () => {
+    expect(findMatchingTire(wheel(undefined, "9"), ltFitment, "any")).toBeNull();
+    expect(findMatchingTire(wheel("abc", "9"), ltFitment, "any")).toBeNull();
+    expect(findMatchingTire(wheel("18", null), ltFitment, "any")).toBeNull();
+    expect(findMatchingTire(wheel("99", "9"), ltFitment, "any")).toBeNull();
+  });
+
+  it("OE match on an LT vehicle keeps the LT size and marks the tire as placeholder/estimated", () => {
+    const t = findMatchingTire(wheel("17", "8.5"), ltFitment, "all_terrain");
+    expect(t).not.toBeNull();
+    expect(t!.size).toBe("LT265/70R17");
+    expect(t!.lt).toBe(true);
+    expect(t!.sizeSource).toBe("oem");
+    expect(t!.placeholder).toBe(true);
+    expect(t!.priceEstimated).toBe(true);
+    expect(t!.brand).toBe("TBD");
+  });
+
+  it("computed plus-size on an LT-only vehicle is emitted as an LT size", () => {
+    const t = findMatchingTire(wheel("20", "9"), ltFitment, "all_terrain");
+    expect(t).not.toBeNull();
+    expect(t!.size.startsWith("LT")).toBe(true);
+    expect(t!.lt).toBe(true);
+    expect(t!.sizeSource).toBe("computed");
+    expect(t!.size).toMatch(/^LT\d{3}\/\d{2}R20$/);
+  });
+
+  it("never fabricates a size when no OE baseline parsed (no 28-inch fallback)", () => {
+    const noBaseline = fitmentWith({ oemTireSizes: [], oemOverallDiameter: null, oemOverallDiameterByRim: {} });
+    expect(resolveOemBaseline(noBaseline, 20)).toBeNull();
+    expect(findMatchingTire(wheel("20", "9"), noBaseline, "any")).toBeNull();
+  });
+
+  it("refuses to compute a tire when the wheel is not smaller than the OE overall diameter", () => {
+    const tiny = fitmentWith({ oemTireSizes: ["165/65R14"], oemOverallDiameter: 22.4, oemOverallDiameterByRim: { 14: 22.4 } });
+    expect(findMatchingTire(wheel("24", "9"), tiny, "any")).toBeNull();
   });
 });
