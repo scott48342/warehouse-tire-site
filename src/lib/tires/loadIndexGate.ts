@@ -31,7 +31,11 @@ export type FitBlockReason =
   | "trim_required"
   | "source_unverified"
   /** Mixed front/rear wheel diameters requested on a vehicle whose OE fitment is not staggered (audit L1). */
-  | "aftermarket_stagger";
+  | "aftermarket_stagger"
+  /** Mixed front/rear diameters requested; OE record lists several rim sizes but does not say which axle is which (audit L1 follow-up). */
+  | "stagger_unverified"
+  /** Sizes searched are not this vehicle's OE sizes (plus/minus sizing, lifted, classic upsize, direct fallback). */
+  | "oe_size_unmatched";
 
 export interface LoadIndexAssessment {
   /** Parsed single-wheel load index of the tire (null when unknown) */
@@ -71,7 +75,7 @@ export interface LoadIndexAssessment {
   /**
    * Reason code when packageEligible is false.
    */
-  packageExclusionReason: "load_index_below_required" | null;
+  packageExclusionReason: "load_index_below_required" | "load_requirement_per_axle_unknown" | null;
   /**
    * Why no fit badge / certified path is allowed (null when fitBadgeAllowed).
    * `load_index_below_required` also blocks package/cart certified paths;
@@ -106,7 +110,18 @@ export interface LoadIndexGateOptions {
    * resolved but its OE tire sizes have no approved-source provenance (e.g.
    * model-level US AutoForce list on a multi-trim vehicle). Default trim_required.
    */
-  blockReason?: "trim_required" | "source_unverified" | "aftermarket_stagger";
+  blockReason?: Exclude<FitBlockReason, "load_index_below_required" | "load_index_unverified">;
+  /**
+   * H5 interim (2026-09-19): the vehicle record holds ONE load index but its
+   * OE fitment lists several tire sizes and/or a front/rear split, so that
+   * number describes ONE of the OE tires, not a per-axle/per-size minimum.
+   * Fail closed: no minimum is asserted, no badge, the tire is NOT
+   * package-eligible, and the raw comparison against the stored value is
+   * exposed ONLY as `recordLoadIndexComparison` (informational). It is never
+   * used to reject a tire: a higher optional/rear OE rating would otherwise
+   * falsely reject a valid front/other-size tire.
+   */
+  loadRequirementScope?: "single" | "per_axle_unknown";
 }
 
 export interface RequiredLoadIndexSpec {
@@ -251,7 +266,11 @@ export type LoadIndexResultFields = Pick<
   | "packageExclusionReason"
   | "fitBlockReason"
   | "tireLoadIndex"
->;
+> & {
+  /** Informational only (scope per_axle_unknown): how the tire compares to the raw single record value. Not a minimum. */
+  recordLoadIndex?: number | null;
+  recordLoadIndexComparison?: "below_record_value" | "meets_record_value" | "unknown" | null;
+};
 
 /**
  * Annotate a list of tire results in place (returns the same array).
@@ -267,9 +286,25 @@ export function annotateLoadIndex<
 ): Array<T & LoadIndexResultFields> {
   const trimBlocked = options.certifiable === false;
   const blockReason: FitBlockReason = options.blockReason ?? "trim_required";
+  const perAxleUnknown = options.loadRequirementScope === "per_axle_unknown";
   for (const item of items) {
-    const required = resolveRequiredLoadIndex(spec, item.axle ?? "both");
-    const a = assessLoadIndex(item.badges?.loadIndex ?? null, required);
+    const recordValue = resolveRequiredLoadIndex(spec, item.axle ?? "both");
+    let recordComparison: "below_record_value" | "meets_record_value" | "unknown" | null = null;
+    let a: LoadIndexAssessment;
+    if (perAxleUnknown) {
+      // The stored value is NOT a minimum here. Assess with no requirement
+      // (=> unchecked, no badge) and then fail closed on package eligibility.
+      a = assessLoadIndex(item.badges?.loadIndex ?? null, null);
+      const li = a.loadIndex;
+      recordComparison = li == null || recordValue == null ? "unknown" : li >= recordValue ? "meets_record_value" : "below_record_value";
+      a.loadIndexNote = "OE load index varies by tire size/axle on this vehicle; minimum not verified";
+      a.fitBadgeAllowed = false;
+      a.packageEligible = false;
+      a.packageExclusionReason = "load_requirement_per_axle_unknown";
+      a.fitBlockReason = "load_index_unverified";
+    } else {
+      a = assessLoadIndex(item.badges?.loadIndex ?? null, recordValue);
+    }
     // Trim gate outranks the load-index reason unless the tire is known-below
     // (that reason also blocks certified paths and must stay visible).
     if (trimBlocked && a.loadIndexOk !== false) {
@@ -288,6 +323,7 @@ export function annotateLoadIndex<
       fitBadgeAllowed: a.fitBadgeAllowed,
       packageEligible: a.packageEligible,
       packageExclusionReason: a.packageExclusionReason,
+      ...(perAxleUnknown ? { recordLoadIndex: recordValue, recordLoadIndexComparison: recordComparison } : {}),
     });
   }
   return items as Array<T & LoadIndexResultFields>;

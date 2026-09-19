@@ -72,6 +72,7 @@ import {
 } from "@/lib/liftedRecommendations";
 import { resolveUniversalFitment } from "@/lib/fitment/universalFitmentResolver";
 import { annotateLoadIndex, resolveRequiredLoadIndex, countLoadIndexFailures } from "@/lib/tires/loadIndexGate";
+import { assessOeStagger } from "@/lib/fitment/oeStagger";
 import { toPublicSourceVerification } from "@/lib/fitment-db/sourceVerification";
 import { convertLegacyTireSize, convertTireSizesForSearch } from "@/lib/legacyTireConverter";
 
@@ -2389,13 +2390,21 @@ export async function GET(req: Request) {
     let trimRequiredForFit: boolean = false;
     // 2026-09-18 (J2): why fitCertifiable is false, and the public per-field
     // provenance verdict (states only, no source names).
-    let fitCertificationBlock: "trim_required" | "source_unverified" | "aftermarket_stagger" | null = null;
+    let fitCertificationBlock: Exclude<import("@/lib/tires/loadIndexGate").FitBlockReason, "load_index_below_required" | "load_index_unverified"> | null = null;
     let fitSourceVerification: import("@/lib/fitment-db/sourceVerification").PublicSourceVerification | null = null;
     // Audit L1 (2026-09-18): does THIS vehicle's OE fitment actually run
     // different front/rear sizes? A mixed-diameter request on a square OE
     // vehicle (Camry 18F/20R) is a customer's aftermarket choice - searchable,
     // never a verified fit.
     let oemStaggered: boolean | null = null;
+    // When oemStaggered === true: OE rim diameters per axle (for matching a
+    // mixed-diameter request against the factory split).
+    let oemFrontDiameters: number[] = [];
+    let oemRearDiameters: number[] = [];
+    // H5 interim: is the single stored load index usable as THE minimum?
+    // Only when the record lists exactly one OE tire size and no axle split.
+    let oemLoadScopeSingle = true;
+    let loadRequirementScope: "single" | "per_axle_unknown" = "single";
     
     console.log(`[tires/search] ══════════════════════════════════════════════════`);
     console.log(`[tires/search] Using resolveUniversalFitment`);
@@ -2462,27 +2471,41 @@ export async function GET(req: Request) {
             tireSizes = [...front, ...rear].filter((s, i, a) => a.indexOf(s) === i);
           }
         }
-        // L1: OE staggered by DIAMETER? Records store staggered OE either as a
-        // front/rear object or as a flat list (M4: 275/35R19 + 285/30R20), so
-        // derive it from the data: >1 distinct rim diameter across OE tire
-        // sizes or OE wheel sizes.
+        // L1 / H5 interim (2026-09-19): OE stagger + load-index scope from the
+        // RECORD only - see src/lib/fitment/oeStagger.ts for the rules.
         {
-          const rimDias = new Set<number>();
-          for (const s of tireSizes) {
-            const d = extractRimDiameter(s);
-            if (d && d > 0) rimDias.add(d);
-          }
-          for (const ws of fitmentResult.oemWheelSizes || []) {
-            if (ws.diameter > 0) rimDias.add(ws.diameter);
-          }
-          oemStaggered = rimDias.size > 1
-            || (fitmentResult.oemTireSizesStaggered != null
-              && fitmentResult.oemTireSizesStaggered.front.join("|") !== fitmentResult.oemTireSizesStaggered.rear.join("|"));
+          const stagger = assessOeStagger({
+            tireSizes,
+            oemTireSizesStaggered: fitmentResult.oemTireSizesStaggered,
+            oemWheelSizes: fitmentResult.oemWheelSizes,
+          });
+          oemStaggered = stagger.oemStaggered;
+          oemFrontDiameters = stagger.frontDiameters;
+          oemRearDiameters = stagger.rearDiameters;
+          oemLoadScopeSingle = stagger.loadScopeSingle;
         }
-        if (isMixedDiameterStagger && oemStaggered === false) {
-          fitCertifiable = false;
-          fitCertificationBlock = "aftermarket_stagger";
-          console.warn(`[tires/search] MIXED-DIAMETER REQUEST ON SQUARE OE VEHICLE: ${year} ${make} ${model} ${fitmentResult.trim || ""} ${wheelDiameter}F/${rearWheelDiameter}R - browse-only (no fit badge)`);
+        if (isMixedDiameterStagger) {
+          if (oemStaggered === false) {
+            fitCertifiable = false;
+            fitCertificationBlock = "aftermarket_stagger";
+            console.warn(`[tires/search] MIXED-DIAMETER REQUEST ON SQUARE OE VEHICLE: ${year} ${make} ${model} ${fitmentResult.trim || ""} ${wheelDiameter}F/${rearWheelDiameter}R - browse-only (no fit badge)`);
+          } else if (oemStaggered === null) {
+            fitCertifiable = false;
+            fitCertificationBlock = "stagger_unverified";
+            console.warn(`[tires/search] MIXED-DIAMETER REQUEST, OE AXLE SPLIT UNKNOWN: ${year} ${make} ${model} ${fitmentResult.trim || ""} lists several rim sizes without front/rear - browse-only (no fit badge)`);
+          } else if (
+            !oemFrontDiameters.includes(Number(wheelDiameter)) ||
+            !oemRearDiameters.includes(Number(rearWheelDiameter))
+          ) {
+            // OE is staggered, but not in the combination requested (OE 19F/20R, asked 20F/21R).
+            fitCertifiable = false;
+            fitCertificationBlock = "aftermarket_stagger";
+            console.warn(`[tires/search] MIXED-DIAMETER REQUEST ${wheelDiameter}F/${rearWheelDiameter}R DOES NOT MATCH OE STAGGER ${oemFrontDiameters.join("/")}F ${oemRearDiameters.join("/")}R - browse-only`);
+          }
+        }
+        if (requiredLoadIndex != null && !oemLoadScopeSingle) {
+          loadRequirementScope = "per_axle_unknown";
+          console.warn(`[tires/search] LOAD INDEX SCOPE per_axle_unknown: ${year} ${make} ${model} ${fitmentResult.trim || ""} stores one LI (${requiredLoadIndex}) for ${tireSizes.length} OE sizes${oemStaggered ? " (staggered)" : ""} - no minimum asserted, results not package-eligible`);
         }
         
         // Convert legacy tire sizes (e.g., E70-14) to modern P-metric
@@ -2694,6 +2717,18 @@ export async function GET(req: Request) {
         matchMode = "direct-search";
         console.log(`[tires/search] No tire sizes for vehicle, using direct search for ${wheelDiameter}" wheel`);
       }
+    }
+
+    // 2026-09-19: sizes that are NOT this vehicle's OE sizes can never be a
+    // verified fit. Covers the Mustang GT 19F/20R case where the rear side
+    // fell to `direct:R20` (guessed common 20" sizes) while certifiable stayed
+    // true, plus plus/minus sizing, classic upsize and lifted searches. The
+    // OE-mismatch reason is set only when no stronger reason already applies.
+    const searchesNonOeSizes = matchMode !== "exact" || sizesToSearch.some((s) => s.startsWith("direct:"));
+    if (fitCertifiable && searchesNonOeSizes) {
+      fitCertifiable = false;
+      fitCertificationBlock = "oe_size_unmatched";
+      console.warn(`[tires/search] FIT NOT CERTIFIABLE (oe_size_unmatched): matchMode=${matchMode}, sizes=${sizesToSearch.join(",") || "(none)"} - browse-only (no fit badge)`);
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
@@ -3375,9 +3410,12 @@ export async function GET(req: Request) {
     // - EXCLUDED from packages (packageEligible:false, packageExclusionReason:"load_index_below_required")
     // - NO "Guaranteed Fit" badge (fitBadgeAllowed:false)
     // When requiredLoadIndex is missing: NO badge (fitBadgeAllowed:false), but packageEligible:true
+    // H5 interim (2026-09-19): scope per_axle_unknown -> no minimum asserted,
+    // packageEligible:false, raw record comparison informational only.
     annotateLoadIndex(finalResults, { requiredLoadIndex }, {
       certifiable: fitCertifiable,
       blockReason: fitCertificationBlock ?? "trim_required",
+      loadRequirementScope,
     });
     const loadIndexStats = countLoadIndexFailures(finalResults);
     console.log(`[tires/search] LOAD INDEX GATE: required=${requiredLoadIndex ?? 'none'}, passed=${loadIndexStats.passed}, failed=${loadIndexStats.failed}, unchecked=${loadIndexStats.unchecked}`);
@@ -3448,10 +3486,20 @@ export async function GET(req: Request) {
       rearWheelDiameter: rearWheelDiameter || null,
       wheelWidth: wheelWidth || null,
 
-      // Load-index gate summary (2026-09-18, audit C2/F3)
-      // NOT labeled "OEM" - source is unverified vehicle record data
-      requiredLoadIndex,
-      requiredLoadIndexSource: requiredLoadIndex != null ? "vehicle_record_unverified" as const : null,
+      // Load-index gate summary (2026-09-18, audit C2/F3; H5 interim 2026-09-19)
+      // NOT labeled "OEM" - source is unverified vehicle record data. When the
+      // record's single value cannot be a per-axle/per-size minimum it is NOT
+      // reported as requiredLoadIndex; the raw record value is exposed
+      // separately as informational only.
+      requiredLoadIndex: loadRequirementScope === "single" ? requiredLoadIndex : null,
+      requiredLoadIndexSource: loadRequirementScope === "single" && requiredLoadIndex != null ? "vehicle_record_unverified" as const : null,
+      loadRequirement: {
+        scope: loadRequirementScope,
+        recordLoadIndex: requiredLoadIndex,
+        ...(loadRequirementScope === "per_axle_unknown"
+          ? { note: "This vehicle's OE fitment lists more than one tire size (or a front/rear split) and the record holds a single load index. No minimum is asserted; tires are shown for browsing only and are not package-eligible until per-size load data is verified." }
+          : {}),
+      },
       loadIndexStats,
       // R3 trim gate summary
       certifiable: fitCertifiable,
@@ -3466,14 +3514,18 @@ export async function GET(req: Request) {
           isMixedDiameter: true,
           frontWheelDiameter: wheelDiameter,
           rearWheelDiameter: rearWheelDiameter,
-          // L1: true when the vehicle's OE fitment is itself staggered; false
-          // means this is an aftermarket staggered request on a square OE
-          // vehicle (results browsable, certifiable:false); null when the
-          // vehicle record was not found.
+          // L1: true when the vehicle RECORD says the OE fitment is staggered
+          // (front/rear object or axle-tagged wheel sizes); false when every OE
+          // size shares one rim diameter (aftermarket request, browse-only);
+          // null when the record lists several rim sizes without saying which
+          // axle is which (or was not found) - also browse-only.
           oemStaggered,
+          ...(oemStaggered === true ? { oemFrontDiameters, oemRearDiameters } : {}),
           ...(oemStaggered === false
             ? { note: "This vehicle is not staggered from the factory. Mixed front/rear sizes are an aftermarket setup and cannot be shown as a verified fit." }
-            : {}),
+            : oemStaggered === null
+              ? { note: "This vehicle's factory fitment lists more than one rim size but does not specify a front/rear split. Mixed front/rear sizes cannot be shown as a verified fit." }
+              : {}),
         },
       }),
       

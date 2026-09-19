@@ -5,6 +5,7 @@ import Link from "next/link";
 import { trackJakeEvent } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
 import { useVehicleMemory, formatVehicleDisplay } from "@/contexts/VehicleMemoryContext";
+import { classifyVehicleForPrompts } from "@/lib/jake/vehiclePromptClass";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SUGGESTED PROMPTS FOR HOMEPAGE
@@ -18,12 +19,19 @@ const QUICK_PROMPTS = [
 ];
 
 // Vehicle-aware prompts
-function getVehiclePrompts(model: string): typeof QUICK_PROMPTS {
-  const isTruck = /f-?150|silverado|sierra|ram|tundra|tacoma|colorado|ranger/i.test(model);
-  const isMuscle = /mustang|camaro|challenger|charger|corvette/i.test(model);
-  const isSUV = /tahoe|suburban|escalade|yukon|explorer|expedition|4runner|highlander/i.test(model);
-  
-  if (isTruck) {
+function getVehiclePrompts(make: string, model: string): typeof QUICK_PROMPTS {
+  const cls = classifyVehicleForPrompts(make, model);
+
+  if (cls === "ev") {
+    return [
+      { text: `Best tires for my ${model}`, category: "tires" },
+      { text: "Low rolling resistance tires", category: "tires" },
+      { text: "OEM tire size and load index", category: "fitment" },
+      { text: "Wheel options", category: "wheels" },
+    ];
+  }
+
+  if (cls === "truck") {
     return [
       { text: `Best all-terrain tires for my ${model}`, category: "tires" },
       { text: "Will 35s fit?", category: "fitment" },
@@ -32,7 +40,7 @@ function getVehiclePrompts(model: string): typeof QUICK_PROMPTS {
     ];
   }
   
-  if (isMuscle) {
+  if (cls === "muscle") {
     return [
       { text: `Best performance tires for my ${model}`, category: "tires" },
       { text: "Staggered wheel setup", category: "fitment" },
@@ -41,7 +49,7 @@ function getVehiclePrompts(model: string): typeof QUICK_PROMPTS {
     ];
   }
   
-  if (isSUV) {
+  if (cls === "suv") {
     return [
       { text: `Best all-season tires for my ${model}`, category: "tires" },
       { text: "22 inch wheel options", category: "wheels" },
@@ -82,7 +90,7 @@ export function JakeHomepageSection() {
   
   // Use vehicle-aware prompts if vehicle is saved
   const prompts = isLoaded && activeVehicle 
-    ? getVehiclePrompts(activeVehicle.model)
+    ? getVehiclePrompts(activeVehicle.make, activeVehicle.model)
     : QUICK_PROMPTS;
   
   const vehicleDisplay = activeVehicle ? formatVehicleDisplay(activeVehicle) : null;

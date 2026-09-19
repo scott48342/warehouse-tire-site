@@ -376,3 +376,77 @@ describe("R4 addendum: certification requires a VERIFIED requirement source", ()
     expect(r.fitBadgeAllowed).toBe(false);
   });
 });
+
+describe("H5 interim: loadRequirementScope per_axle_unknown (2026-09-19)", () => {
+  // Record stores ONE value (89 = Corvette FRONT 245/35R19). Rear OE is 103.
+  const spec: RequiredLoadIndexSpec = { requiredLoadIndex: 89 };
+  const tires = () => [
+    { sku: "front-ok-90", badges: { loadIndex: "90" } },   // valid front tire, below the rear rating
+    { sku: "rear-103", badges: { loadIndex: "103" } },
+    { sku: "below-85", badges: { loadIndex: "85" } },
+    { sku: "unknown", badges: { loadIndex: null } },
+  ];
+
+  it("asserts NO minimum: requiredLoadIndex null, unchecked, no badge, not package-eligible", () => {
+    const out = annotateLoadIndex(tires(), spec, { loadRequirementScope: "per_axle_unknown" });
+    for (const t of out) {
+      expect(t.requiredLoadIndex).toBeNull();
+      expect(t.requiredLoadIndexSource).toBeNull();
+      expect(t.loadIndexChecked).toBe(false);
+      expect(t.loadIndexOk).toBeNull();
+      expect(t.fitBadgeAllowed).toBe(false);
+      expect(t.packageEligible).toBe(false);
+      expect(t.packageExclusionReason).toBe("load_requirement_per_axle_unknown");
+      expect(t.fitBlockReason).toBe("load_index_unverified");
+    }
+  });
+
+  it("never rejects a tire as below-required from the scalar (a higher rear/optional OE rating must not reject a valid front tire)", () => {
+    const out = annotateLoadIndex(tires(), { requiredLoadIndex: 103 }, { loadRequirementScope: "per_axle_unknown" });
+    const front = out.find((t) => t.sku === "front-ok-90")!;
+    expect(front.loadIndexOk).toBeNull();
+    expect(front.fitBlockReason).not.toBe("load_index_below_required");
+    expect(front.packageExclusionReason).toBe("load_requirement_per_axle_unknown");
+    expect(countLoadIndexFailures(out).failed).toBe(0);
+  });
+
+  it("exposes the raw record comparison as informational only", () => {
+    const out = annotateLoadIndex(tires(), spec, { loadRequirementScope: "per_axle_unknown" });
+    const by = Object.fromEntries(out.map((t) => [t.sku, t]));
+    expect(by["front-ok-90"].recordLoadIndex).toBe(89);
+    expect(by["front-ok-90"].recordLoadIndexComparison).toBe("meets_record_value");
+    expect(by["below-85"].recordLoadIndexComparison).toBe("below_record_value");
+    expect(by["unknown"].recordLoadIndexComparison).toBe("unknown");
+    // ...and it does not leak into the minimum fields
+    expect(by["below-85"].requiredLoadIndex).toBeNull();
+    expect(by["below-85"].loadIndexOk).toBeNull();
+  });
+
+  it("trim/source gate reason still wins over load_index_unverified when scope is unknown", () => {
+    const out = annotateLoadIndex(tires(), spec, {
+      loadRequirementScope: "per_axle_unknown",
+      certifiable: false,
+      blockReason: "stagger_unverified",
+    });
+    expect(out.every((t) => t.fitBlockReason === "stagger_unverified")).toBe(true);
+    expect(out.every((t) => t.packageEligible === false)).toBe(true);
+  });
+
+  it("scope single (default) keeps the existing minimum behaviour", () => {
+    const out = annotateLoadIndex(tires(), spec, {});
+    const by = Object.fromEntries(out.map((t) => [t.sku, t]));
+    expect(by["below-85"].loadIndexOk).toBe(false);
+    expect(by["below-85"].packageExclusionReason).toBe("load_index_below_required");
+    expect(by["front-ok-90"].loadIndexOk).toBe(true);
+    expect(by["front-ok-90"].requiredLoadIndex).toBe(89);
+    expect(by["front-ok-90"].recordLoadIndexComparison).toBeUndefined();
+  });
+
+  it("new block reasons are accepted by the options type", () => {
+    for (const reason of ["aftermarket_stagger", "stagger_unverified", "oe_size_unmatched"] as const) {
+      const out = annotateLoadIndex(tires(), spec, { certifiable: false, blockReason: reason });
+      expect(out[0].fitBlockReason).toBe(reason);
+      expect(out[0].fitBadgeAllowed).toBe(false);
+    }
+  });
+});

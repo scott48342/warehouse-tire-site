@@ -10,6 +10,7 @@ import { ProductRail, ProductCarousel, MOCK_TIRES, MOCK_WHEELS, RailProduct } fr
 import { VehicleChip } from "./VehicleChip";
 import { JakeMockupCard } from "./JakeMockupCard";
 import { useVehicleMemory, formatVehicleDisplay, type SavedVehicle } from "@/contexts/VehicleMemoryContext";
+import { classifyVehicleForPrompts } from "@/lib/jake/vehiclePromptClass";
 // Authoritative pricing — SAME modules the cart/checkout uses, so the pinned
 // running total matches the cart to the penny (zero surprises at checkout).
 import {
@@ -303,11 +304,20 @@ function getRandomHeaderPrompts(count: number = 3): string[] {
 // Get vehicle-aware suggested prompts
 function getVehicleAwarePrompts(vehicle: SavedVehicle): typeof SUGGESTED_PROMPTS {
   const makeModel = `${vehicle.make} ${vehicle.model}`;
-  const isTruck = /f-?150|silverado|sierra|ram|tundra|titan|tacoma|colorado|canyon|ranger|gladiator/i.test(vehicle.model);
-  const isMuscle = /mustang|camaro|challenger|charger|corvette|firebird|trans am/i.test(vehicle.model);
-  const isSUV = /tahoe|suburban|escalade|yukon|4runner|explorer|expedition|durango|grand cherokee/i.test(vehicle.model);
-  
-  if (isTruck) {
+  const cls = classifyVehicleForPrompts(vehicle.make, vehicle.model);
+
+  if (cls === "ev") {
+    return [
+      { text: `Best tires for my ${makeModel}`, icon: "🔍" },
+      { text: `Low rolling resistance tires for range`, icon: "🔋" },
+      { text: `Quiet tires for my ${vehicle.model}`, icon: "🛣️" },
+      { text: `What's the OEM tire size and load index?`, icon: "📏" },
+      { text: `Show me wheel options`, icon: "⚫" },
+      { text: `Budget tire options`, icon: "💰" },
+    ];
+  }
+
+  if (cls === "truck") {
     return [
       { text: `Best all-terrain tires for my ${vehicle.model}`, icon: "🚚" },
       { text: `20" wheel options for my ${makeModel}`, icon: "⚫" },
@@ -318,7 +328,7 @@ function getVehicleAwarePrompts(vehicle: SavedVehicle): typeof SUGGESTED_PROMPTS
     ];
   }
   
-  if (isMuscle) {
+  if (cls === "muscle") {
     return [
       { text: `Best performance tires for my ${vehicle.model}`, icon: "🏁" },
       { text: `Show me staggered wheel setups`, icon: "🔥" },
@@ -329,7 +339,7 @@ function getVehicleAwarePrompts(vehicle: SavedVehicle): typeof SUGGESTED_PROMPTS
     ];
   }
   
-  if (isSUV) {
+  if (cls === "suv") {
     return [
       { text: `Best all-season tires for my ${vehicle.model}`, icon: "🚙" },
       { text: `22" wheel options for my ${makeModel}`, icon: "⚫" },
