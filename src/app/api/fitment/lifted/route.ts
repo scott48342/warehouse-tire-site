@@ -61,6 +61,8 @@ export interface LiftedFitmentResponse {
     id: string;
     name: string;
     inches: number;
+    /** Present when the caller asked in inches; the band it was mapped to is above. */
+    requestedInches?: number;
   };
   
   // Lifted recommendations (null if stock or no profile)
@@ -127,7 +129,28 @@ export async function GET(request: NextRequest) {
   const make = searchParams.get("make");
   const model = searchParams.get("model");
   const trim = searchParams.get("trim") || undefined;
-  const liftLevelParam = searchParams.get("liftLevel") || "stock";
+  const liftLevelRaw = searchParams.get("liftLevel");
+  // Audit L4 (2026-09-18): callers passing inches (`liftInches`, the UI's
+  // `liftedInches`, `liftHeight`) were silently answered with STOCK guidance
+  // labelled success. Map inches onto the level bands; reject anything we
+  // cannot interpret instead of quietly defaulting.
+  const liftInchesRaw =
+    searchParams.get("liftInches") ??
+    searchParams.get("liftedInches") ??
+    searchParams.get("liftHeight");
+  let liftLevelParam = liftLevelRaw || "stock";
+  let liftInchesRequested: number | null = null;
+  if (!liftLevelRaw && liftInchesRaw != null) {
+    const inches = Number(liftInchesRaw);
+    if (!Number.isFinite(inches) || inches < 0 || inches > 24) {
+      return NextResponse.json(
+        { success: false, error: `Invalid lift inches: "${liftInchesRaw}". Expected a number 0-24, or liftLevel=stock|daily|offroad|extreme` },
+        { status: 400 }
+      );
+    }
+    liftInchesRequested = inches;
+    liftLevelParam = inches < 1 ? "stock" : inches < 3 ? "daily" : inches < 5 ? "offroad" : "extreme";
+  }
   
   // Validate required params
   if (!year || !make || !model) {
@@ -265,7 +288,9 @@ export async function GET(request: NextRequest) {
         qualityTier: baseFitmentResult.qualityTier,
       },
       
-      liftLevel: liftConfig,
+      liftLevel: liftInchesRequested != null
+        ? { ...liftConfig, requestedInches: liftInchesRequested }
+        : liftConfig,
       
       liftedRecommendations: {
         hasProfile: !!liftedProfile,
