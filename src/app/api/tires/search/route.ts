@@ -2389,8 +2389,13 @@ export async function GET(req: Request) {
     let trimRequiredForFit: boolean = false;
     // 2026-09-18 (J2): why fitCertifiable is false, and the public per-field
     // provenance verdict (states only, no source names).
-    let fitCertificationBlock: "trim_required" | "source_unverified" | null = null;
+    let fitCertificationBlock: "trim_required" | "source_unverified" | "aftermarket_stagger" | null = null;
     let fitSourceVerification: import("@/lib/fitment-db/sourceVerification").PublicSourceVerification | null = null;
+    // Audit L1 (2026-09-18): does THIS vehicle's OE fitment actually run
+    // different front/rear sizes? A mixed-diameter request on a square OE
+    // vehicle (Camry 18F/20R) is a customer's aftermarket choice - searchable,
+    // never a verified fit.
+    let oemStaggered: boolean | null = null;
     
     console.log(`[tires/search] ══════════════════════════════════════════════════`);
     console.log(`[tires/search] Using resolveUniversalFitment`);
@@ -2456,6 +2461,28 @@ export async function GET(req: Request) {
           if (front.length > 0 || rear.length > 0) {
             tireSizes = [...front, ...rear].filter((s, i, a) => a.indexOf(s) === i);
           }
+        }
+        // L1: OE staggered by DIAMETER? Records store staggered OE either as a
+        // front/rear object or as a flat list (M4: 275/35R19 + 285/30R20), so
+        // derive it from the data: >1 distinct rim diameter across OE tire
+        // sizes or OE wheel sizes.
+        {
+          const rimDias = new Set<number>();
+          for (const s of tireSizes) {
+            const d = extractRimDiameter(s);
+            if (d && d > 0) rimDias.add(d);
+          }
+          for (const ws of fitmentResult.oemWheelSizes || []) {
+            if (ws.diameter > 0) rimDias.add(ws.diameter);
+          }
+          oemStaggered = rimDias.size > 1
+            || (fitmentResult.oemTireSizesStaggered != null
+              && fitmentResult.oemTireSizesStaggered.front.join("|") !== fitmentResult.oemTireSizesStaggered.rear.join("|"));
+        }
+        if (isMixedDiameterStagger && oemStaggered === false) {
+          fitCertifiable = false;
+          fitCertificationBlock = "aftermarket_stagger";
+          console.warn(`[tires/search] MIXED-DIAMETER REQUEST ON SQUARE OE VEHICLE: ${year} ${make} ${model} ${fitmentResult.trim || ""} ${wheelDiameter}F/${rearWheelDiameter}R - browse-only (no fit badge)`);
         }
         
         // Convert legacy tire sizes (e.g., E70-14) to modern P-metric
@@ -3350,7 +3377,7 @@ export async function GET(req: Request) {
     // When requiredLoadIndex is missing: NO badge (fitBadgeAllowed:false), but packageEligible:true
     annotateLoadIndex(finalResults, { requiredLoadIndex }, {
       certifiable: fitCertifiable,
-      blockReason: fitCertificationBlock === "source_unverified" ? "source_unverified" : "trim_required",
+      blockReason: fitCertificationBlock ?? "trim_required",
     });
     const loadIndexStats = countLoadIndexFailures(finalResults);
     console.log(`[tires/search] LOAD INDEX GATE: required=${requiredLoadIndex ?? 'none'}, passed=${loadIndexStats.passed}, failed=${loadIndexStats.failed}, unchecked=${loadIndexStats.unchecked}`);
@@ -3439,6 +3466,14 @@ export async function GET(req: Request) {
           isMixedDiameter: true,
           frontWheelDiameter: wheelDiameter,
           rearWheelDiameter: rearWheelDiameter,
+          // L1: true when the vehicle's OE fitment is itself staggered; false
+          // means this is an aftermarket staggered request on a square OE
+          // vehicle (results browsable, certifiable:false); null when the
+          // vehicle record was not found.
+          oemStaggered,
+          ...(oemStaggered === false
+            ? { note: "This vehicle is not staggered from the factory. Mixed front/rear sizes are an aftermarket setup and cannot be shown as a verified fit." }
+            : {}),
         },
       }),
       

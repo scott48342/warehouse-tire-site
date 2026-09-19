@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Load-index gating (audit 2026-09-18, finding C2 / F3).
  *
  * BEFORE: `vehicle_fitments.oem_load_index` was displayed in the sidebar
@@ -29,7 +29,9 @@ export type FitBlockReason =
   | "load_index_below_required"
   | "load_index_unverified"
   | "trim_required"
-  | "source_unverified";
+  | "source_unverified"
+  /** Mixed front/rear wheel diameters requested on a vehicle whose OE fitment is not staggered (audit L1). */
+  | "aftermarket_stagger";
 
 export interface LoadIndexAssessment {
   /** Parsed single-wheel load index of the tire (null when unknown) */
@@ -104,7 +106,7 @@ export interface LoadIndexGateOptions {
    * resolved but its OE tire sizes have no approved-source provenance (e.g.
    * model-level US AutoForce list on a multi-trim vehicle). Default trim_required.
    */
-  blockReason?: "trim_required" | "source_unverified";
+  blockReason?: "trim_required" | "source_unverified" | "aftermarket_stagger";
 }
 
 export interface RequiredLoadIndexSpec {
