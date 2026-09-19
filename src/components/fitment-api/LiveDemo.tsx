@@ -33,6 +33,7 @@ type Specs = {
     tirePressureFrontPsi: number | null;
     tirePressureRearPsi: number | null;
     oemLoadIndex: number | null;
+    oemSpeedRating: string | null;
   } | null;
   isStaggered: boolean;
   wheelSpecs: WheelSpec[];
@@ -247,11 +248,12 @@ export default function LiveDemo() {
           </div>
 
           {specs.serviceSpecs && (
-            <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-5">
               <Stat label="Lug torque" value={specs.serviceSpecs.lugTorqueFtlb ? `${specs.serviceSpecs.lugTorqueFtlb} ft-lb` : "—"} />
               <Stat label="Tire pressure (F)" value={specs.serviceSpecs.tirePressureFrontPsi ? `${specs.serviceSpecs.tirePressureFrontPsi} psi` : "—"} />
               <Stat label="Tire pressure (R)" value={specs.serviceSpecs.tirePressureRearPsi ? `${specs.serviceSpecs.tirePressureRearPsi} psi` : "—"} />
-              <Stat label="Min. load index" value={specs.serviceSpecs.oemLoadIndex ? String(specs.serviceSpecs.oemLoadIndex) : "—"} />
+              <Stat label="OE load index" value={specs.serviceSpecs.oemLoadIndex ? String(specs.serviceSpecs.oemLoadIndex) : "—"} />
+              <Stat label="OE speed rating" value={specs.serviceSpecs.oemSpeedRating ?? "—"} />
             </div>
           )}
 

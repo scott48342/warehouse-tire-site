@@ -112,12 +112,14 @@ export interface FitmentProfile {
   serviceSpecs?: FitmentServiceSpecs | null;
 }
 
-/** OE service specs stored on vehicle_fitments (migration 0049). */
+/** OE service specs stored on vehicle_fitments (migrations 0049 / 0050). */
 export interface FitmentServiceSpecs {
   lugTorqueFtlb: number | null;
   tirePressureFrontPsi: number | null;
   tirePressureRearPsi: number | null;
   oemLoadIndex: number | null;
+  /** OE tire speed rating letter (e.g. "H", "V", "W"); null when unknown. */
+  oemSpeedRating: string | null;
 }
 
 /** Build serviceSpecs from a vehicle_fitments row; null when nothing is on file. */
@@ -126,12 +128,14 @@ export function serviceSpecsFromRecord(record: {
   tirePressureFrontPsi?: number | null;
   tirePressureRearPsi?: number | null;
   oemLoadIndex?: number | null;
+  oemSpeedRating?: string | null;
 }): FitmentServiceSpecs | null {
   const specs: FitmentServiceSpecs = {
     lugTorqueFtlb: record.lugTorqueFtlb ?? null,
     tirePressureFrontPsi: record.tirePressureFrontPsi ?? null,
     tirePressureRearPsi: record.tirePressureRearPsi ?? null,
     oemLoadIndex: record.oemLoadIndex ?? null,
+    oemSpeedRating: record.oemSpeedRating?.trim().toUpperCase() || null,
   };
   return Object.values(specs).some((v) => v != null) ? specs : null;
 }

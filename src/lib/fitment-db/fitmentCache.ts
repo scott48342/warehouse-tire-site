@@ -28,12 +28,13 @@ export type CachedFitmentProfile = {
   qualityTier?: "complete" | "partial" | "low_confidence" | "unknown";
   /** vehicle_fitments.wheel_specs_source (internal provenance; "tireguide-pro" = axle-explicit data) */
   wheelSpecsSource?: string | null;
-  /** OE service specs (lug torque / placard psi / load index); null = none on file */
+  /** OE service specs (lug torque / placard psi / load index / speed rating); null = none on file */
   serviceSpecs?: {
     lugTorqueFtlb: number | null;
     tirePressureFrontPsi: number | null;
     tirePressureRearPsi: number | null;
     oemLoadIndex: number | null;
+    oemSpeedRating: string | null;
   } | null;
 };
 
@@ -58,8 +59,9 @@ export type FitmentCacheStats = {
  * - v2: Added qualityTier to cache shape (2026-05-06)
  * - v3: Bust profiles built before quarantined_at filtering on runtime reads (2026-09-16)
  * - v4: Added serviceSpecs (lug torque / tire pressure / load index) (2026-09-17)
+ * - v5: serviceSpecs.oemSpeedRating; DB-wide load index/speed backfill landed (2026-09-17)
  */
-const CACHE_VERSION = "v4";
+const CACHE_VERSION = "v5";
 
 const CONFIG = {
   KEY_PREFIX: `wt:fit:${CACHE_VERSION}:`,  // Version included in key prefix

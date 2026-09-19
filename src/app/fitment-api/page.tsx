@@ -10,7 +10,7 @@ import LiveDemo from '@/components/fitment-api/LiveDemo';
 
 export const metadata: Metadata = {
   title: 'Vehicle Fitment API | 14,000+ Verified Fitments | Production-Grade',
-  description: 'Production-grade vehicle fitment API with bolt patterns, center bore, wheel sizes, tire sizes, lug torque, factory tire pressure, load index, and staggered fitment detection. No external dependencies. Fully controlled dataset for tire and wheel ecommerce.',
+  description: 'Production-grade vehicle fitment API with bolt patterns, center bore, wheel sizes, tire sizes, lug torque, factory tire pressure, load index, speed rating, and staggered fitment detection. No external dependencies. Fully controlled dataset for tire and wheel ecommerce.',
 };
 
 // Primary API Example for hero section
@@ -20,7 +20,7 @@ const primaryApiExample = {
     boltPattern: '6x135',
     centerBore: 87.1,
     threadSize: 'M14x1.5',
-    serviceSpecs: { lugTorqueFtlb: 150, tirePressureFrontPsi: 36, tirePressureRearPsi: 36, oemLoadIndex: 110 },
+    serviceSpecs: { lugTorqueFtlb: 150, tirePressureFrontPsi: 36, tirePressureRearPsi: 36, oemLoadIndex: 110, oemSpeedRating: 'T' },
     offsetRange: [20, 44],
     wheelSizes: ['17x7.5', '18x8', '20x9'],
     tireSizes: ['265/70R17', '275/65R18'],
@@ -321,7 +321,7 @@ export default function FitmentApiPage() {
               { field: 'Lug Torque', example: '100, 140, 150 ft-lb' },
               { field: 'Factory Tire Pressure', example: '35 psi, F 36 / R 32' },
               { field: 'OE Load Index', example: '95, 103, 110' },
-              { field: 'Service Specs', example: 'null when not on file' },
+              { field: 'OE Speed Rating', example: 'S, T, H, V, W, Y' },
             ].map((item, i) => (
               <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
                 <div className="font-semibold text-white mb-1">{item.field}</div>

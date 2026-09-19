@@ -12,6 +12,7 @@ type NormalizedFitment = {
   tirePressureFrontPsi?: number;
   tirePressureRearPsi?: number;
   oemLoadIndex?: number;
+  oemSpeedRating?: string;
   wheelDiameterRangeIn?: [number, number];
   wheelWidthRangeIn?: [number, number];
   offsetRangeMm?: [number, number];
@@ -227,6 +228,7 @@ export function RecommendedFitmentCard({
                 tirePressureFrontPsi: number | null;
                 tirePressureRearPsi: number | null;
                 oemLoadIndex: number | null;
+                oemSpeedRating?: string | null;
               } | null;
               offsetRange: { min: number | null; max: number | null };
               oemWheelSizes: Array<{ diameter: number; width: number; offset: number | null }>;
@@ -272,6 +274,7 @@ export function RecommendedFitmentCard({
             tirePressureFrontPsi: dbProfile.serviceSpecs?.tirePressureFrontPsi ?? undefined,
             tirePressureRearPsi: dbProfile.serviceSpecs?.tirePressureRearPsi ?? undefined,
             oemLoadIndex: dbProfile.serviceSpecs?.oemLoadIndex ?? undefined,
+            oemSpeedRating: dbProfile.serviceSpecs?.oemSpeedRating ?? undefined,
             wheelDiameterRangeIn: oemWheelDias.length ? [Math.min(...oemWheelDias), Math.max(...oemWheelDias)] : undefined,
             wheelWidthRangeIn: oemWheelWidths.length ? [Math.min(...oemWheelWidths), Math.max(...oemWheelWidths)] : undefined,
             offsetRangeMm: dbProfile.offsetRange?.min != null && dbProfile.offsetRange?.max != null 
@@ -545,10 +548,18 @@ export function RecommendedFitmentCard({
             </div>
           ) : null}
 
-          {details?.oemLoadIndex ? (
+          {details?.oemLoadIndex || details?.oemSpeedRating ? (
             <div className="flex items-center justify-between gap-3">
-              <span className="text-neutral-600">Min. tire load index</span>
-              <span className="font-semibold">{details.oemLoadIndex}</span>
+              <span className="text-neutral-600">
+                {details.oemLoadIndex && details.oemSpeedRating
+                  ? "OE load index / speed rating"
+                  : details.oemLoadIndex
+                    ? "OE load index"
+                    : "OE speed rating"}
+              </span>
+              <span className="font-semibold">
+                {[details.oemLoadIndex, details.oemSpeedRating].filter(Boolean).join(" / ")}
+              </span>
             </div>
           ) : null}
 
