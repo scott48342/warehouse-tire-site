@@ -58,7 +58,15 @@ export interface WheelsStyleCardHorizontalProps {
   buildRequirement?: BuildRequirement;
   isSelected?: boolean;
   hasSelection?: boolean;
-  onSelect?: (wheelState: { imageUrl?: string; price?: number; finish?: string; sku: string }) => void;
+  onSelect?: (wheelState: {
+    imageUrl?: string;
+    price?: number;
+    finish?: string;
+    sku: string;
+    pair?: WheelPair;
+    setPrice: number | null;
+    staggered: boolean;
+  }) => void;
   showOffset?: boolean;
   topPickCategory?: TopPickCategory;
   isTopPick?: boolean;
@@ -109,8 +117,24 @@ export function WheelsStyleCardHorizontal({
   const [selectedPair, setSelectedPair]                 = useState<WheelPair | undefined>(pair);
   const [isAdding, setIsAdding]                         = useState(false);
 
-  const setPrice =
-    typeof selectedPrice === "number" ? selectedPrice * 4 : null;
+  // Staggered pair for the DISPLAYED sku only (a pair from another finish never applies).
+  const activePair: WheelPair | undefined = (() => {
+    const cp = selectedPair || pair;
+    if (!cp?.staggered || !cp.rear) return undefined;
+    const shown = selectedSku || baseSku;
+    return !cp.front?.sku || cp.front.sku === shown ? cp : undefined;
+  })();
+  const isStaggeredCard = Boolean(activePair);
+  // Square = 4 x unit; staggered = 2 x front + 2 x rear, null when the rear is unpriced
+  // (never 4 x front - safety review Q1-2, 2026-09-19).
+  const setPrice: number | null = isStaggeredCard
+    ? (() => {
+        if (typeof activePair?.setPrice === "number" && Number.isFinite(activePair.setPrice)) return activePair.setPrice;
+        const fp = typeof activePair?.front?.price === "number" ? activePair.front.price : (typeof selectedPrice === "number" ? selectedPrice : null);
+        const rp = typeof activePair?.rear?.price === "number" ? activePair.rear.price : null;
+        return fp != null && rp != null ? Math.round((fp * 2 + rp * 2) * 100) / 100 : null;
+      })()
+    : typeof selectedPrice === "number" ? selectedPrice * 4 : null;
 
   const currentDiameter = selectedPair?.front?.diameter ?? sizeLabel?.diameter;
   const currentWidth    = selectedPair?.front?.width    ?? sizeLabel?.width;
@@ -165,8 +189,9 @@ export function WheelsStyleCardHorizontal({
         ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
         : undefined;
 
-    const cp            = selectedPair || pair;
+    const cp            = activePair;
     const effectiveSku  = selectedSku || cp?.front?.sku || baseSku;
+    if (cp && setPrice == null) { setIsAdding(false); return; } // unpriced rear: refuse
     const effectiveDia  = cp?.front?.diameter ?? sizeLabel?.diameter;
     const effectiveW    = cp?.front?.width    ?? sizeLabel?.width;
     const effectiveOff  = cp?.front?.offset   ?? specLabel?.offset;
@@ -175,18 +200,25 @@ export function WheelsStyleCardHorizontal({
       addItem({
         type:         "wheel",
         sku:          effectiveSku,
+        rearSku:      cp?.rear?.sku,
         brand,
         model:        title,
         finish:       selectedFinish,
+        rearFinish:   cp?.rear?.finish ?? selectedFinish,
         diameter:     effectiveDia,
         width:        effectiveW,
+        rearWidth:    cp?.rear?.width,
         offset:       effectiveOff,
+        rearOffset:   cp?.rear?.offset,
         boltPattern:  specLabel?.boltPattern,
         imageUrl:     selectedImage,
-        unitPrice:    typeof selectedPrice === "number" ? selectedPrice : 0,
+        unitPrice:    cp && setPrice != null ? Math.round((setPrice / 4) * 100) / 100 : (typeof selectedPrice === "number" ? selectedPrice : 0),
+        frontUnitPrice: cp ? (typeof cp.front?.price === "number" ? cp.front.price : selectedPrice) : undefined,
+        rearUnitPrice:  cp ? (typeof cp.rear?.price === "number" ? cp.rear.price : undefined) : undefined,
         quantity:     4,
         fitmentClass,
         vehicle,
+        staggered:    Boolean(cp),
       });
 
       // Auto-add accessories (fail-soft)
@@ -453,18 +485,22 @@ export function WheelsStyleCardHorizontal({
           type="button"
           onClick={() => {
             if (isSelected) return;
+            if (isStaggeredCard && setPrice == null) return;
             if (onSelect) {
               onSelect({
                 imageUrl: selectedImage,
                 price:    selectedPrice,
                 finish:   selectedFinish,
                 sku:      selectedSku || baseSku,
+                pair:     activePair,
+                setPrice,
+                staggered: isStaggeredCard,
               });
             } else {
               addToPackage();
             }
           }}
-          disabled={isAdding || isSelected}
+          disabled={isAdding || isSelected || (isStaggeredCard && setPrice == null)}
           className={`
             text-[10px] font-bold uppercase rounded-md px-2 py-2
             leading-tight text-center transition-all

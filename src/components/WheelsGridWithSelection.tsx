@@ -56,6 +56,8 @@ export type SelectedWheel = {
   brand: string;
   model: string;
   finish?: string;
+  /** Finish of the rear SKU (staggered) - must equal `finish` for a sellable pair. */
+  rearFinish?: string;
   diameter?: string;
   width?: string;
   rearWidth?: string;
@@ -65,10 +67,107 @@ export type SelectedWheel = {
   centerbore?: string; // For accessory calculation
   imageUrl?: string;
   price?: number;
+  /** Per-wheel front price (staggered) - authoritative from the card's pair. */
+  frontUnitPrice?: number;
+  /** Per-wheel rear price (staggered) - authoritative from the card's pair. */
+  rearUnitPrice?: number;
+  /** Set total: 4 x unit (square) or 2 x front + 2 x rear (staggered). */
   setPrice: number;
   fitmentClass?: string;
   staggered?: boolean;
 };
+
+/** Card state handed to `onSelect` by WheelsStyleCard (authoritative pair + set price). */
+export type CardSelectState = {
+  imageUrl?: string;
+  price?: number;
+  finish?: string;
+  sku: string;
+  pair?: WheelPair;
+  setPrice: number | null;
+  staggered: boolean;
+};
+
+const money = (n: number) => Math.round(n * 100) / 100;
+
+/**
+ * Build the grid selection from the CARD's state, never from the base SKU's
+ * pair (safety review Q1-2 / Q1-3, 2026-09-19):
+ * - staggered: front = card's displayed SKU, rear = the pair the card resolved
+ *   for THAT finish; set price = 2 x front + 2 x rear from the pair's own
+ *   prices. Returns null (no selection) when the rear SKU or either price is
+ *   missing, or when front/rear finishes differ - never 4 x front, never $0.
+ * - square: 4 x the displayed variant's price.
+ * Exported for contract tests.
+ */
+export function buildSelectedWheel(
+  w: Pick<WheelItem, "sku" | "finish" | "diameter" | "width" | "offset" | "boltPattern" | "centerbore" | "imageUrl" | "price" | "fitmentClass" | "pair">,
+  brand: string,
+  model: string,
+  card: CardSelectState | undefined,
+): SelectedWheel | null {
+  const sku = card?.sku || String(w.sku || "");
+  if (!sku) return null;
+  const finish = card?.finish ?? w.finish;
+  const pair = card?.pair;
+  const staggered = Boolean(card?.staggered && pair?.staggered && pair.rear);
+
+  if (staggered && pair && pair.rear) {
+    if (pair.front?.sku && pair.front.sku !== sku) return null; // pair belongs to another variant
+    const fp = typeof pair.front?.price === "number" && Number.isFinite(pair.front.price) && pair.front.price > 0
+      ? pair.front.price
+      : (typeof card?.price === "number" && Number.isFinite(card.price) && card.price > 0 ? card.price : null);
+    const rp = typeof pair.rear.price === "number" && Number.isFinite(pair.rear.price) && pair.rear.price > 0 ? pair.rear.price : null;
+    if (fp == null || rp == null || !pair.rear.sku) return null;
+    const rearFinish = pair.rear.finish;
+    if (rearFinish && finish && rearFinish.trim().toLowerCase() !== finish.trim().toLowerCase()) return null;
+    const setPrice = typeof card?.setPrice === "number" && Number.isFinite(card.setPrice) && card.setPrice > 0
+      ? money(card.setPrice)
+      : money(fp * 2 + rp * 2);
+    return {
+      sku,
+      rearSku: pair.rear.sku,
+      brand,
+      model,
+      finish,
+      rearFinish: rearFinish ?? finish,
+      diameter: pair.front?.diameter ?? w.diameter,
+      width: pair.front?.width ?? w.width,
+      rearWidth: pair.rear.width,
+      offset: pair.front?.offset ?? w.offset,
+      rearOffset: pair.rear.offset,
+      boltPattern: w.boltPattern,
+      centerbore: w.centerbore,
+      imageUrl: card?.imageUrl ?? w.imageUrl,
+      price: money(setPrice / 4),
+      frontUnitPrice: fp,
+      rearUnitPrice: rp,
+      setPrice,
+      fitmentClass: w.fitmentClass,
+      staggered: true,
+    };
+  }
+
+  const unit = typeof card?.price === "number" && Number.isFinite(card.price) ? card.price
+    : (typeof w.price === "number" && Number.isFinite(w.price) ? w.price : null);
+  if (unit == null || unit <= 0) return null;
+  return {
+    sku,
+    brand,
+    model,
+    finish,
+    diameter: w.diameter,
+    width: w.width,
+    offset: w.offset,
+    boltPattern: w.boltPattern,
+    centerbore: w.centerbore,
+    imageUrl: card?.imageUrl ?? w.imageUrl,
+    price: unit,
+    setPrice: money(unit * 4),
+    fitmentClass: w.fitmentClass,
+    staggered: false,
+  };
+}
 
 type ViewParams = {
   year?: string;
@@ -1072,7 +1171,12 @@ export function WheelsGridWithSelection({
         rearOffset: selectedWheel.rearOffset,
         boltPattern: selectedWheel.boltPattern,
         imageUrl: selectedWheel.imageUrl,
-        unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
+        // Blended unit so the cart total equals 2 x front + 2 x rear; the axle
+        // prices travel with the line and checkout re-prices server-side.
+        unitPrice: money(selectedWheel.setPrice / 4),
+        frontUnitPrice: selectedWheel.frontUnitPrice,
+        rearUnitPrice: selectedWheel.rearUnitPrice,
+        rearFinish: selectedWheel.rearFinish,
         quantity: 4, // Total wheels (2 front + 2 rear)
         fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
         vehicle: vehicleInfo,
@@ -1445,31 +1549,8 @@ export function WheelsGridWithSelection({
             isTopPick={isTopPick}
             freeShipping={w.freeShipping}
             onSelect={(wheelState) => {
-              const effectivePrice = wheelState?.price ?? w.price;
-              const setPrice = typeof effectivePrice === "number" ? effectivePrice * 4 : 0;
-              const isStaggered = w.pair?.staggered || false;
-              const rearSku = isStaggered && w.pair?.rear?.sku ? w.pair.rear.sku : undefined;
-              const rearWidth = isStaggered && w.pair?.rear?.width ? w.pair.rear.width : undefined;
-              const rearOffset = isStaggered && w.pair?.rear?.offset ? w.pair.rear.offset : undefined;
-              handleWheelSelect({
-                sku: wheelState?.sku || String(w.sku || ""),
-                rearSku,
-                brand,
-                model,
-                finish: wheelState?.finish ?? w.finish,
-                diameter: w.diameter,
-                width: w.width,
-                rearWidth,
-                offset: w.offset,
-                rearOffset,
-                boltPattern: w.boltPattern,
-                centerbore: w.centerbore,
-                imageUrl: wheelState?.imageUrl ?? w.imageUrl,
-                price: effectivePrice,
-                setPrice,
-                fitmentClass: w.fitmentClass,
-                staggered: isStaggered,
-              });
+              const sel = buildSelectedWheel(w, brand, model, wheelState);
+              if (sel) handleWheelSelect(sel);
             }}
           />
         ) : (
@@ -1514,33 +1595,8 @@ export function WheelsGridWithSelection({
             isTopPick={isTopPick}
             freeShipping={w.freeShipping}
             onSelect={(wheelState) => {
-              // Use current card state (may have changed if user selected a different finish)
-              const effectivePrice = wheelState?.price ?? w.price;
-              const setPrice = typeof effectivePrice === "number" ? effectivePrice * 4 : 0;
-              // Extract staggered info from pair if available
-              const isStaggered = w.pair?.staggered || false;
-              const rearSku = isStaggered && w.pair?.rear?.sku ? w.pair.rear.sku : undefined;
-              const rearWidth = isStaggered && w.pair?.rear?.width ? w.pair.rear.width : undefined;
-              const rearOffset = isStaggered && w.pair?.rear?.offset ? w.pair.rear.offset : undefined;
-              handleWheelSelect({
-                sku: wheelState?.sku || String(w.sku || ""),
-                rearSku,
-                brand,
-                model,
-                finish: wheelState?.finish ?? w.finish,
-                diameter: w.diameter,
-                width: w.width,
-                rearWidth,
-                offset: w.offset,
-                rearOffset,
-                boltPattern: w.boltPattern,
-                centerbore: w.centerbore,
-                imageUrl: wheelState?.imageUrl ?? w.imageUrl,
-                price: effectivePrice,
-                setPrice,
-                fitmentClass: w.fitmentClass,
-                staggered: isStaggered,
-              });
+              const sel = buildSelectedWheel(w, brand, model, wheelState);
+              if (sel) handleWheelSelect(sel);
             }}
           />
         )}

@@ -570,7 +570,22 @@ export function WheelsStyleCard({
   // Selection state props
   isSelected?: boolean;
   hasSelection?: boolean;
-  onSelect?: (wheelState: { imageUrl?: string; price?: number; finish?: string; sku: string }) => void;
+  /**
+   * Selection callback for grids that own the sticky selection bar.
+   * The card passes its AUTHORITATIVE pair + set price (2 front + 2 rear for
+   * staggered, 4 x unit for square) so callers never re-derive 4 x front or
+   * pick the base SKU's rear for a different finish (safety review Q1-2/Q1-3).
+   * `setPrice` is null when the set cannot be priced (rear price unknown).
+   */
+  onSelect?: (wheelState: {
+    imageUrl?: string;
+    price?: number;
+    finish?: string;
+    sku: string;
+    pair?: WheelPair;
+    setPrice: number | null;
+    staggered: boolean;
+  }) => void;
   // Homepage intent: show offset in size display (for lifted builds)
   showOffset?: boolean;
   // NEW: Top Pick category for guided selection
@@ -726,6 +741,8 @@ export function WheelsStyleCard({
     // Staggered cart line: 4 wheels (2+2) at the blended unit price so the cart
     // total equals 2 x front + 2 x rear. Requires both prices; otherwise 0 (call).
     const staggeredUnit = currentPair && setPrice != null ? Math.round((setPrice / 4) * 100) / 100 : null;
+    // Unpriced staggered set: refuse to add a $0 x 4 line (safety review Q1-5).
+    if (currentPair && staggeredUnit == null) { setIsAdding(false); return; }
 
     setTimeout(() => {
       // Add wheel to cart
@@ -736,6 +753,7 @@ export function WheelsStyleCard({
         brand,
         model: title,
         finish: selectedFinish,
+        rearFinish: currentPair?.rear?.finish ?? selectedFinish,
         diameter: effectiveDia,
         width: effectiveWidth,
         rearWidth: currentPair?.rear?.width,
@@ -744,6 +762,8 @@ export function WheelsStyleCard({
         boltPattern: specLabel?.boltPattern,
         imageUrl: selectedImage,
         unitPrice: currentPair ? (staggeredUnit ?? 0) : (typeof selectedPrice === "number" ? selectedPrice : 0),
+        frontUnitPrice: currentPair ? (typeof currentPair.front?.price === "number" ? currentPair.front.price : (typeof selectedPrice === "number" ? selectedPrice : undefined)) : undefined,
+        rearUnitPrice: currentPair ? (typeof currentPair.rear?.price === "number" ? currentPair.rear.price : undefined) : undefined,
         quantity: 4,
         fitmentClass,
         vehicle,
@@ -1204,18 +1224,23 @@ export function WheelsStyleCard({
           type="button"
           onClick={() => {
             if (isSelected) return;
+            // Staggered set with an unpriced rear: never add a 4 x front or $0 line.
+            if (isStaggeredCard && setPrice == null) return;
             if (onSelect) {
               onSelect({
                 imageUrl: selectedImage,
                 price: selectedPrice,
                 finish: selectedFinish,
                 sku: selectedSku || baseSku,
+                pair: activePair,
+                setPrice,
+                staggered: isStaggeredCard,
               });
             } else {
               addToPackage();
             }
           }}
-          disabled={isAdding || isSelected}
+          disabled={isAdding || isSelected || (isStaggeredCard && setPrice == null)}
           data-cta-variant={ctaVariant}
           data-selected={isSelected}
           className={`

@@ -29,6 +29,10 @@ type AddToCartButtonProps = {
     modification?: string;
   };
   staggered?: boolean;
+  /** Staggered: per-wheel front / rear prices and rear finish (checkout re-prices server-side). */
+  frontUnitPrice?: number;
+  rearUnitPrice?: number;
+  rearFinish?: string;
   quantity?: number;
   className?: string;
   variant?: "primary" | "secondary";
@@ -62,6 +66,9 @@ export function AddToCartButton({
   fitmentClass,
   vehicle,
   staggered,
+  frontUnitPrice,
+  rearUnitPrice,
+  rearFinish,
   quantity = 4,
   className = "",
   variant = "primary",
@@ -198,6 +205,9 @@ export function AddToCartButton({
       fitmentClass,
       vehicle,
       staggered,
+      frontUnitPrice: staggered ? frontUnitPrice : undefined,
+      rearUnitPrice: staggered ? rearUnitPrice : undefined,
+      rearFinish: staggered ? rearFinish : undefined,
       source: source || "wheelpros",
       // Wheel-1 landed-cost: freight baked into unit price, $0 shipping in cart
       freeShipping: freeShipping === true || undefined,

@@ -220,6 +220,9 @@ export function WheelBuyBox({
             unitPrice={hasPrice ? cartUnitPrice : 0}
             quantity={quantity}
             staggered={isStaggered || undefined}
+            frontUnitPrice={isStaggered ? unitPrice : undefined}
+            rearUnitPrice={isStaggered && hasRearPrice ? (rearPrice as number) : undefined}
+            rearFinish={isStaggered ? (staggered?.rearFinish ?? finish) : undefined}
             vehicle={vehicle}
             className="w-full"
             showPriceInButton={hasPrice}

@@ -87,6 +87,12 @@ export type CartWheelItem = {
   brand: string;
   model: string;
   finish?: string;
+  /** Finish of the rear SKU on a staggered line (should equal `finish`). */
+  rearFinish?: string;
+  /** Per-wheel FRONT price on a staggered line (2 of these). Checkout re-prices server-side. */
+  frontUnitPrice?: number;
+  /** Per-wheel REAR price on a staggered line (2 of these). Checkout re-prices server-side. */
+  rearUnitPrice?: number;
   diameter?: string;
   width?: string;
   rearWidth?: string;
@@ -150,6 +156,20 @@ export type CartTireItem = {
 };
 
 export type CartItem = CartWheelItem | CartTireItem | CartAccessoryItem;
+
+/**
+ * Cart line identity. A staggered wheel set (front SKU + rear SKU) is a
+ * different line from a square set of the same front SKU - merging them would
+ * put 8 wheels at one price on one line (safety review Q1-4).
+ */
+export function cartLineKey(i: Pick<CartItem, "sku" | "type"> & { rearSku?: string }): string {
+  return `${i.type}|${i.sku}|${(i as { rearSku?: string }).rearSku ?? ""}`;
+}
+
+/** Staggered wheel/tire lines are fixed at 4 units (2 front + 2 rear). */
+export function isFixedQuantityLine(i: CartItem): boolean {
+  return (i.type === "wheel" || i.type === "tire") && Boolean((i as { rearSku?: string }).rearSku);
+}
 
 type CartContextValue = {
   items: CartItem[];
@@ -304,12 +324,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
     
     setItems((prev) => {
-      // Check if item already exists (same SKU and type)
-      const existingIndex = prev.findIndex(
-        (i) => i.sku === item.sku && i.type === item.type
-      );
+      // Same line = same type + front SKU + rear SKU (staggered vs square never merge)
+      const key = cartLineKey(item);
+      const existingIndex = prev.findIndex((i) => cartLineKey(i) === key);
 
       if (existingIndex >= 0) {
+        // Staggered lines are always exactly one 2+2 set - re-adding replaces, never stacks.
+        if (isFixedQuantityLine(item)) {
+          const updated = [...prev];
+          updated[existingIndex] = { ...item, quantity: 4 } as CartItem;
+          return updated;
+        }
         // Update quantity of existing item
         const updated = [...prev];
         updated[existingIndex] = {
@@ -320,7 +345,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
 
       // Add new item
-      return [...prev, item];
+      return [...prev, isFixedQuantityLine(item) ? ({ ...item, quantity: 4 } as CartItem) : item];
     });
     setLastAddedItem(item);
     setIsOpen(true);
@@ -440,7 +465,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
       setItems((prev) =>
         prev.map((i) =>
-          i.sku === sku && i.type === type ? { ...i, quantity } : i
+          i.sku === sku && i.type === type
+            ? (isFixedQuantityLine(i) ? { ...i, quantity: 4 } : { ...i, quantity })
+            : i
         )
       );
     },

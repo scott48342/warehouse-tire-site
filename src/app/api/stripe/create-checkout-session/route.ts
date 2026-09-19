@@ -7,6 +7,8 @@ import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
 import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } from "@/lib/shopContext";
 import { validateSavedQuoteOwnership } from "@/lib/savedQuotes/checkoutIntegration";
+import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
+import { defaultCatalogPriceResolver } from "@/lib/checkout/repriceCatalog";
 
 export const runtime = "nodejs";
 
@@ -23,8 +25,19 @@ async function validateWheelAvailability(items: CartItem[]): Promise<{
   ok: boolean;
   unavailable?: Array<{ sku: string; name: string; requestedQty: number; availableQty: number }>;
 }> {
-  // Filter to wheel items only (tires/accessories have different supply chains)
-  const wheelItems = items.filter((i) => i.type === "wheel" && i.sku);
+  // Filter to wheel items only (tires/accessories have different supply chains).
+  // Staggered lines are expanded to front x2 + rear x2 so the REAR SKU's stock
+  // is checked too (previously only front stock >= 4 was checked).
+  const wheelItems: CartItem[] = items
+    .filter((i) => i.type === "wheel" && i.sku)
+    .flatMap((i) => {
+      const rearSku = (i as { rearSku?: string }).rearSku;
+      if (!rearSku) return [i];
+      return [
+        { ...i, quantity: 2 } as CartItem,
+        { ...i, sku: rearSku, quantity: 2, model: `${(i as any).model || i.sku} (rear)` } as CartItem,
+      ];
+    });
   
   if (wheelItems.length === 0) {
     return { ok: true }; // No wheels to validate
@@ -108,12 +121,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "email_or_phone_required" }, { status: 400 });
     }
 
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // AVAILABILITY VALIDATION - SOFT CHECK
     // Only WARN on availability issues, don't block checkout.
     // We trust the SFTP feed data shown on the website.
     // API check is informational only - block only on explicit 0 stock with high confidence.
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     try {
       const availCheck = await validateWheelAvailability(items);
       if (!availCheck.ok && availCheck.unavailable) {
@@ -132,9 +145,9 @@ export async function POST(req: Request) {
     // Cart ID for linking add-to-cart events to purchases
     const cartId = typeof body.cartId === "string" ? body.cartId.trim() : undefined;
     
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // LOCAL MODE DETECTION - Install store tagging for local orders
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     const shopContext = detectShopContext(new Headers(req.headers));
     const isLocalMode = shopContext.mode === 'local';
     
@@ -148,33 +161,23 @@ export async function POST(req: Request) {
     const taxAmount = Number(taxInfo.amount) || 0;
     const taxState = String(taxInfo.state || "").toUpperCase();
 
-    // Convert cart items to quote lines.
+    // Convert cart items to quote lines - SERVER-SIDE re-priced, staggered sets
+    // split into front x2 + rear x2 so the order snapshot and supplier PO carry
+    // both SKUs (safety review Q1-1 / Q7-2, 2026-09-19). Unpriceable wheel/tire
+    // SKUs reject the checkout; they never fall back to the client price or $0.
     // IMPORTANT: keep $0 REQUIRED install hardware in the quote snapshot / order payload.
-    const linesAll: QuoteLine[] = items
-      .map((i: any) => {
-        const kind: QuoteLine["kind"] = "product";
-        const name = String(i.model || i.name || i.sku || "Item").trim();
-        const sku = String(i.sku || "").trim() || undefined;
-        const unitPriceUsd = Number(i.unitPrice || 0);
-        const qty = Math.max(1, Math.trunc(Number(i.quantity || 1)));
-        const taxable = i.type === "wheel" || i.type === "tire"; // accessories treated as non-taxable for now
-
-        const meta = {
-          cartType: i.type,
-          category: i.category,
-          required: !!i.required,
-          wheelSku: i.wheelSku,
-          spec: i.spec,
-          meta: i.meta,
-          // Supplier source for internal tracking (shown in admin email)
-          source: i.source,
-          // Brand name for supplier order placement (needed for USAF lineCode)
-          brand: i.brand,
-        };
-
-        return { kind, name, sku, unitPriceUsd, qty, taxable, meta };
-      })
-      .filter((l) => l.qty > 0);
+    const built = await buildCheckoutLines(items, defaultCatalogPriceResolver);
+    if (!built.ok) {
+      console.warn("[checkout] rejected lines:", built.rejected);
+      return NextResponse.json(
+        { ok: false, error: "line_unpriceable", detail: "One or more items could not be priced or matched to a rear wheel. Please remove and re-add them.", rejected: built.rejected },
+        { status: 409 }
+      );
+    }
+    if (built.repriced.length > 0) {
+      console.warn("[checkout] client/server price mismatch (server price charged):", built.repriced);
+    }
+    const linesAll: QuoteLine[] = built.lines.filter((l) => l.qty > 0);
 
     if (linesAll.length === 0) {
       return NextResponse.json({ ok: false, error: "empty_cart" }, { status: 400 });
@@ -207,9 +210,9 @@ export async function POST(req: Request) {
       });
     }
 
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // LOCAL MODE SERVICE FEES - Installation, recycling, card processing
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     const localFees = body.localFees && typeof body.localFees === "object" ? body.localFees : null;
     
     console.log(`[checkout] isLocalMode=${isLocalMode}, localFees=`, localFees);
@@ -360,7 +363,7 @@ export async function POST(req: Request) {
       console.log(`[checkout] Payment methods for $${totalUsd.toFixed(2)}:`, paymentMethodTypes);
     }
 
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // SAVED QUOTE CONVERSION TRACKING
     // If checkout was initiated from a resumed saved quote, validate ownership
     // and attach the quote ID to Stripe metadata for conversion tracking.
@@ -369,7 +372,7 @@ export async function POST(req: Request) {
     // until Affirm test environment verification is complete. The order will
     // still be created normally, but the Saved Quote won't auto-mark as Purchased.
     // TODO: Enable Affirm saved quote conversion after test environment verification.
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     let validatedSavedQuoteId: string | undefined;
     const clientSavedQuoteId = body.savedQuoteId;
     const isAffirmCheckout = requestedPaymentMethod === "affirm";
@@ -380,7 +383,7 @@ export async function POST(req: Request) {
       const validation = await validateSavedQuoteOwnership(clientSavedQuoteId);
       if (validation.valid && validation.quoteId) {
         validatedSavedQuoteId = validation.quoteId;
-        console.log(`[checkout] ✓ Saved quote ${validatedSavedQuoteId} validated for conversion tracking`);
+        console.log(`[checkout] âœ“ Saved quote ${validatedSavedQuoteId} validated for conversion tracking`);
       } else {
         // Log but don't fail checkout - customer can still purchase
         console.warn(`[checkout] Saved quote validation failed: ${validation.reason}`);
@@ -390,12 +393,12 @@ export async function POST(req: Request) {
       console.log(`[checkout] Saved quote conversion skipped for Affirm checkout (not yet verified)`);
     }
 
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     // USAF FULFILLMENT BRANCH SELECTION
     // Pick the nearest USAF warehouse with complete stock so the order ships
     // from the same origin used for the freight quote. Persisted in metadata
     // and submitted as <branch> when the supplier order is placed.
-    // ═══════════════════════════════════════════════════════════════════════════
+    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     let usafBranch: string | undefined;
     if (!isLocalMode && shippingInfo.zip) {
       try {
