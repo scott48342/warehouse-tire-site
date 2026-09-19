@@ -87,6 +87,8 @@ export type PlusSizeResult = {
     totalSizesInDb: number;
     sizesMatchingRim: number;
     sizesWithin3Percent: number;
+    sizesExcludedByWidth?: number;
+    widthWindowMm?: { oem: number; min: number; max: number };
   };
 };
 
@@ -305,12 +307,24 @@ export function generatePlusSizeCandidates(
     wheelWidth?: number;        // Optional wheel width filter (inches)
     maxOdDiffPercent?: number;  // Max OD difference (default: 3%)
     primaryOdDiffPercent?: number; // Primary threshold (default: 2%)
+    /**
+     * Audit M3 (2026-09-18): plus-sizing matched on overall diameter alone,
+     * so 235/45R18 -> 20" offered 325/25R20 as a PRIMARY pick. Section width
+     * is now bounded relative to the OEM width. Defaults allow the common
+     * plus-one/plus-two widening (+40 mm) and a modest narrowing (-20 mm).
+     * Pass `maxWidthIncreaseMm: Infinity` / `maxWidthDecreaseMm: Infinity`
+     * to disable (e.g. the "any size" alternate-size tool).
+     */
+    maxWidthIncreaseMm?: number; // default 40
+    maxWidthDecreaseMm?: number; // default 20
   } = {}
 ): PlusSizeResult {
   const {
     wheelWidth,
     maxOdDiffPercent = 3,
     primaryOdDiffPercent = 2,
+    maxWidthIncreaseMm = 40,
+    maxWidthDecreaseMm = 20,
   } = options;
 
   // Parse OEM size
@@ -345,6 +359,7 @@ export function generatePlusSizeCandidates(
 
   // Score each candidate by OD difference
   const scoredCandidates: PlusSizeCandidate[] = [];
+  let excludedByWidth = 0;
 
   for (const size of sizesMatchingRim) {
     const parsed = parseMetricSize(size);
@@ -360,6 +375,13 @@ export function generatePlusSizeCandidates(
 
     // Skip if outside acceptable range
     if (absOdDiffPercent > maxOdDiffPercent) continue;
+
+    // M3: skip unrealistic section widths relative to OEM
+    const widthDelta = parsed.width - oemParsed.width;
+    if (widthDelta > maxWidthIncreaseMm || -widthDelta > maxWidthDecreaseMm) {
+      excludedByWidth++;
+      continue;
+    }
 
     // Optional: filter by wheel width compatibility
     if (wheelWidth && !isWidthCompatible(parsed.width, wheelWidth)) continue;
@@ -399,6 +421,8 @@ export function generatePlusSizeCandidates(
       totalSizesInDb: tireSizesData.metric.length,
       sizesMatchingRim: sizesMatchingRim.length,
       sizesWithin3Percent: scoredCandidates.length,
+      sizesExcludedByWidth: excludedByWidth,
+      widthWindowMm: { oem: oemParsed.width, min: oemParsed.width - maxWidthDecreaseMm, max: oemParsed.width + maxWidthIncreaseMm },
     },
   };
 }
@@ -414,6 +438,8 @@ export function generatePlusSizeCandidatesMulti(
     wheelWidth?: number;
     maxOdDiffPercent?: number;
     primaryOdDiffPercent?: number;
+    maxWidthIncreaseMm?: number;
+    maxWidthDecreaseMm?: number;
   } = {}
 ): PlusSizeCandidate[] {
   if (oemSizes.length === 0) return [];

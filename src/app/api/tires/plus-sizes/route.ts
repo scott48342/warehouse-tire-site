@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import {
   generatePlusSizeCandidates,
   generatePlusSizeCandidatesMulti,
@@ -86,6 +86,10 @@ export async function GET(req: Request) {
     wheelWidth: wheelWidth && Number.isFinite(wheelWidth) ? wheelWidth : undefined,
     maxOdDiffPercent,
     primaryOdDiffPercent,
+    // Audit M3: width bounded to OEM +40/-20 mm by default; anyWidth=1 disables.
+    ...(url.searchParams.get("anyWidth") === "1"
+      ? { maxWidthIncreaseMm: Infinity, maxWidthDecreaseMm: Infinity }
+      : {}),
   };
 
   // Generate candidates
