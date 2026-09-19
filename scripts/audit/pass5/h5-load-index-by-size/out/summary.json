@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-09-19T13:15:05.314Z",
+  "mode": "dry-run",
+  "live_rows": 32740,
+  "proposals": 28268,
+  "complete_maps": 27774,
+  "partial_maps": 494,
+  "skipped": {
+    "no_pass2_match": 2911,
+    "no_cached_payload": 0,
+    "no_oe_size": 3,
+    "no_size_matched_at_usaf": 1558,
+    "li_zero_sizes": 3478
+  },
+  "tireguide_rows_scalar_kept": 365,
+  "safety": {
+    "rows_with_map": 28268,
+    "multi_size_rows": 16453,
+    "scalar_is_first": 28134,
+    "scalar_below_max": 12188,
+    "staggered_rows": 576,
+    "staggered_rear_gt_stored": 402,
+    "staggered_examples": [
+      {
+        "ymm": "1997 chevrolet corvette [Z51]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "1998 chevrolet corvette [Z51]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "1999 chevrolet corvette [Z51]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2000 chevrolet corvette [Base]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2000 chevrolet corvette [Z51]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2001 chevrolet corvette [Base]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2001 chevrolet corvette [Z51]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2002 chevrolet corvette [Base]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2002 chevrolet corvette [Z51]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2003 chevrolet corvette [Base]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2003 chevrolet corvette [Z51]",
+        "stored": 89,
+        "rear_li": 94,
+        "by_size": {
+          "245/45R17": 89,
+          "275/40R18": 94
+        }
+      },
+      {
+        "ymm": "2003 dodge viper [Base]",
+        "stored": 87,
+        "rear_li": 98,
+        "by_size": {
+          "275/35R18": 87,
+          "345/30R19": 98
+        }
+      }
+    ]
+  },
+  "note": "DRY RUN writes nothing. --apply requires --approved-by scott and migration 0051. oem_load_index (scalar) is never changed by this script."
+}
