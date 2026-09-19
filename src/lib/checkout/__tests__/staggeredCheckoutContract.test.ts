@@ -188,15 +188,15 @@ describe("checkout -> snapshot -> supplier PO", () => {
     expect(!r2.ok && r2.rejected[0].reason).toBe("finish_mismatch");
   });
 
-  it("square wheel line: server-priced, quantity preserved; accessory keeps client $0", async () => {
+  it("square wheel line: server-priced, quantity preserved; placeholder lug kit is included at $0", async () => {
     const square: CartWheelItem = { type: "wheel", sku: FRONT, brand: "KMC", model: "KM700", unitPrice: 250, quantity: 4, source: "wheelpros" };
-    const lugs: CartItem = { type: "accessory", sku: "LUG-1", brand: "Gorilla", model: "Lug Nuts", unitPrice: 0, quantity: 1, required: true, category: "lug-nuts" } as any;
+    const lugs: CartItem = { type: "accessory", sku: "LUGKIT-M14x1.5", brand: "Gorilla", model: "Lug Nuts", unitPrice: 0, quantity: 1, required: true, category: "lug-nuts" } as any;
     const r = await buildCheckoutLines([square, lugs], resolver);
     expect(r.ok).toBe(true);
     if (!r.ok) return;
     expect(r.lines[0]).toMatchObject({ sku: FRONT, qty: 4, unitPriceUsd: 300 });
-    expect(r.lines[1]).toMatchObject({ sku: "LUG-1", qty: 1, unitPriceUsd: 0 });
-    expect(r.lines[1].meta?.required).toBe(true);
+    expect(r.lines[1]).toMatchObject({ sku: "LUGKIT-M14x1.5", qty: 1, unitPriceUsd: 0 });
+    expect((r.lines[1].meta as any).priceSource).toBe("included_hardware");
   });
 
   it("supplier PO built from the snapshot orders 2 front + 2 rear (was FRONT x4)", async () => {
@@ -217,10 +217,11 @@ describe("accessory price authority (release review 2026-09-19)", () => {
   // Accessory catalog the server would see: a $38 lug kit, a $1,895 lift kit.
   const LIFT = "RC-LIFTKIT-6IN";
   const LUGS = "GOR-LUG-14x1.5";
+  // Catalog category travels with the server price; the client's `category` is never consulted.
   const accResolver: CatalogPriceResolver = async (sku, ctx) => {
     if (ctx.type === "accessory") {
-      if (sku === LIFT) return { sku, unitPrice: 1895, source: "suspension_db" };
-      if (sku === LUGS) return { sku, unitPrice: 38, source: "accessories_db" };
+      if (sku === LIFT) return { sku, unitPrice: 1895, category: "suspension", source: "suspension_db" };
+      if (sku === LUGS) return { sku, unitPrice: 38, category: "lug_nut", source: "accessories_db" };
       if (sku === "TPMS-SENSOR-UNIVERSAL") return { sku, unitPrice: 49.99, source: "fixed" };
       return null;
     }
@@ -228,6 +229,11 @@ describe("accessory price authority (release review 2026-09-19)", () => {
   };
   const acc = (over: Record<string, unknown>): CartItem =>
     ({ type: "accessory", brand: "X", model: "Acc", quantity: 1, required: false, category: "other", ...over } as any);
+  /** A square wheel set the server can price (1 wheel set => 1 free lug kit + 1 free hub-ring set). */
+  const wheelSet = (quantity = 4): CartItem =>
+    ({ type: "wheel", sku: FRONT, brand: "KMC", model: "KM700", unitPrice: 300, quantity, source: "wheelpros" } as any);
+  const accLines = (r: Awaited<ReturnType<typeof buildCheckoutLines>>) =>
+    r.ok ? r.lines.filter((l) => (l.meta as any).cartType === "accessory").map((l) => [l.sku, l.unitPriceUsd, (l.meta as any).priceSource]) : r;
 
   it("charges the catalog price when a lift kit's client price is tampered to $1", async () => {
     const r = await buildCheckoutLines([acc({ sku: LIFT, unitPrice: 1, category: "suspension" })], accResolver);
@@ -244,24 +250,78 @@ describe("accessory price authority (release review 2026-09-19)", () => {
     expect(r.lines[0]).toMatchObject({ sku: LIFT, unitPriceUsd: 1895 });
   });
 
-  it("genuine included hardware (required, $0, lug_nut, cheap in catalog or unknown) stays $0", async () => {
+  it("genuine included hardware WITH a wheel set: catalog lug kit (<= $75, catalog category) and placeholder hub rings stay $0", async () => {
     const r = await buildCheckoutLines(
-      [acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" }), acc({ sku: "HUB-73-66", unitPrice: 0, required: true, category: "hub-rings" })],
+      [wheelSet(), acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" }), acc({ sku: "HR-73-66", unitPrice: 0, required: true, category: "hub-rings" })],
       accResolver,
     );
-    expect(r.ok).toBe(true);
-    if (!r.ok) return;
-    expect(r.lines.map((l) => [l.sku, l.unitPriceUsd, (l.meta as any).priceSource])).toEqual([
+    expect(accLines(r)).toEqual([
       [LUGS, 0, "included_hardware"],
-      ["HUB-73-66", 0, "included_hardware"],
+      ["HR-73-66", 0, "included_hardware"],
     ]);
   });
 
-  it("a non-required lug kit is charged catalog price even if the client sent $0", async () => {
-    const r = await buildCheckoutLines([acc({ sku: LUGS, unitPrice: 0, required: false, category: "lug_nut" })], accResolver);
-    expect(r.ok).toBe(true);
-    if (!r.ok) return;
-    expect(r.lines[0]).toMatchObject({ sku: LUGS, unitPriceUsd: 38 });
+  it("entitlement ignores client flags: a plain $0 catalog lug kit with a wheel set is included even without required=true", async () => {
+    const r = await buildCheckoutLines([wheelSet(), acc({ sku: LUGS, unitPrice: 0, required: false, category: "other" })], accResolver);
+    expect(accLines(r)).toEqual([[LUGS, 0, "included_hardware"]]);
+  });
+
+  it("NO qualifying wheel set: a cheap catalog lug kit sent as required $0 is charged catalog price", async () => {
+    const r = await buildCheckoutLines([acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" })], accResolver);
+    expect(accLines(r)).toEqual([[LUGS, 38, "accessories_db"]]);
+    if (r.ok) expect(r.repriced).toEqual([{ sku: LUGS, clientUnitPrice: 0, serverUnitPrice: 38 }]);
+  });
+
+  it("NO qualifying wheel set: placeholder hardware ($0, no catalog price) is rejected as hardware_not_entitled, not sold for $0", async () => {
+    const r = await buildCheckoutLines([acc({ sku: "LUGKIT-M14x1.5", unitPrice: 0, required: true, category: "lug_nut" })], accResolver);
+    expect(r).toEqual({ ok: false, rejected: [{ reason: "hardware_not_entitled", sku: "LUGKIT-M14x1.5", name: "Acc" }] });
+    const tires = await buildCheckoutLines(
+      [{ type: "tire", sku: "T1", brand: "B", model: "M", size: "275/55R20", unitPrice: 200, quantity: 4 } as any, acc({ sku: "HR-73-66", unitPrice: 0, required: true, category: "hub_ring" })],
+      async (sku, ctx) => (ctx.type === "tire" ? { sku, unitPrice: 200, source: "tireweb" } : accResolver(sku, ctx)),
+    );
+    expect(tires.ok).toBe(false); // tires alone are not a wheel set
+  });
+
+  it("unknown hardware SKU is ALWAYS rejected, even sent as required $0 lug nuts with a wheel set", async () => {
+    for (const sku of ["GHOST-LUGS", "LUGKIT-", "LUGKIT-NOTATHREAD", "HR-ABC", "HR-73"]) {
+      const r = await buildCheckoutLines([wheelSet(), acc({ sku, unitPrice: 0, required: true, category: "lug_nut" })], accResolver);
+      expect(r).toEqual({ ok: false, rejected: [{ reason: "unpriceable", sku, name: "Acc" }] });
+    }
+  });
+
+  it("a known catalog SKU relabelled as required $0 hardware is charged when its CATALOG category is not hardware", async () => {
+    // client says lug_nut/required/$0; catalog says it is a $1,895 suspension kit
+    const r = await buildCheckoutLines([wheelSet(), acc({ sku: LIFT, unitPrice: 0, required: true, category: "lug_nut" })], accResolver);
+    expect(accLines(r)).toEqual([[LIFT, 1895, "suspension_db"]]);
+  });
+
+  it("excess quantity / extra lines beyond the wheel-set entitlement are not free", async () => {
+    // quantity 3 lug kits for one wheel set: over quota -> whole line charged catalog price
+    const q = await buildCheckoutLines([wheelSet(), acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut", quantity: 3 })], accResolver);
+    expect(accLines(q)).toEqual([[LUGS, 38, "accessories_db"]]);
+    // a second lug-kit line for the same single wheel set: first free, second charged
+    const two = await buildCheckoutLines(
+      [wheelSet(), acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" }), acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" })],
+      accResolver,
+    );
+    expect(accLines(two)).toEqual([[LUGS, 0, "included_hardware"], [LUGS, 38, "accessories_db"]]);
+    // placeholder over quota (2 hub-ring sets, 1 wheel set): the excess is rejected, never $0
+    const ph = await buildCheckoutLines(
+      [wheelSet(), acc({ sku: "HR-73-66", unitPrice: 0, category: "hub_ring" }), acc({ sku: "HR-73-66", unitPrice: 0, category: "hub_ring" })],
+      accResolver,
+    );
+    expect(ph).toEqual({ ok: false, rejected: [{ reason: "hardware_not_entitled", sku: "HR-73-66", name: "Acc" }] });
+    // two wheel sets (8 wheels) entitle two lug kits
+    const eight = await buildCheckoutLines([wheelSet(8), acc({ sku: LUGS, unitPrice: 0, quantity: 2 })], accResolver);
+    expect(accLines(eight)).toEqual([[LUGS, 0, "included_hardware"]]);
+  });
+
+  it("a $0 client price only picks WHICH eligible line takes the free slot; a paid line never displaces it", async () => {
+    const r = await buildCheckoutLines(
+      [wheelSet(), acc({ sku: LUGS, unitPrice: 38, category: "lug_nut" }), acc({ sku: "LUGKIT-M14x1.5", unitPrice: 0, category: "lug_nut" })],
+      accResolver,
+    );
+    expect(accLines(r)).toEqual([["LUGKIT-M14x1.5", 0, "included_hardware"], [LUGS, 38, "accessories_db"]]);
   });
 
   it("rejects an accessory the catalog cannot price (no client-price fallback) and one without a SKU", async () => {

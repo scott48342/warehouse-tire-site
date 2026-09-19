@@ -4,6 +4,7 @@
  * displayed price and the charged price cannot drift (checkout price authority,
  * release review 2026-09-19).
  */
+import { parseThreadSize } from "@/lib/fitment/accessories";
 
 /** Universal pre-programmed TPMS sensors, sold per sensor. */
 export const TPMS_SENSOR_UNIVERSAL_SKU = "TPMS-SENSOR-UNIVERSAL";
@@ -20,22 +21,57 @@ export function roadHazardPerTireUsd(tireSubtotalUsd: number, tireCount: number)
   return Math.round(Math.max(ROAD_HAZARD_MIN_PER_TIRE_USD, avg * ROAD_HAZARD_RATE) * 100) / 100;
 }
 
+/** Optional upsells offered by CompleteYourSetup / the cart upsell (synthetic SKUs). */
+export const LUG_KIT_CHROME_SKU = "LUG-KIT-CHROME";
+export const LUG_KIT_CHROME_UNIT_USD = 79.99;
+export const HUB_CENTRIC_RINGS_SKU = "HUB-CENTRIC-RINGS";
+export const HUB_CENTRIC_RINGS_UNIT_USD = 24.99;
+
 /** Fixed-price synthetic SKUs (server authority). */
 export const FIXED_PRICE_SKUS: Readonly<Record<string, number>> = Object.freeze({
   [TPMS_SENSOR_UNIVERSAL_SKU]: TPMS_SENSOR_UNIVERSAL_UNIT_USD,
+  [LUG_KIT_CHROME_SKU]: LUG_KIT_CHROME_UNIT_USD,
+  [HUB_CENTRIC_RINGS_SKU]: HUB_CENTRIC_RINGS_UNIT_USD,
 });
 
 /**
- * Hardware that ships free with a wheel purchase (lug nuts / hub rings / valve
- * stems the fitment engine marks `required`). A $0 line is honoured ONLY for
- * these categories, and only while the catalog says the part is cheap hardware
- * - a lift kit relabelled "lug_nut, required, $0" is still charged catalog price.
+ * Included install hardware (release review 2026-09-19, tightened after Codex
+ * acceptance question): a $0 line is honoured ONLY when the SERVER decides the
+ * line is included hardware. Nothing the client sends (`required`, `category`,
+ * `unitPrice`) can create the entitlement; it can only choose which eligible
+ * line takes a free slot.
+ *
+ *  - Kind comes from the SKU: the fitment engine's placeholder formats
+ *    (`LUGKIT-<thread>` with a parseable thread, `HR-<outer>-<inner>` hub rings)
+ *    or the catalog's own `accessories.category` for a real part number.
+ *  - Entitlement requires a wheel set in the same order: one lug kit and one
+ *    hub-ring set per wheel set, unit quantity <= wheel sets.
+ *  - A real part number is included only while the catalog price is at or
+ *    under INCLUDED_HARDWARE_MAX_UNIT_USD; above that it is charged catalog
+ *    price. A lift kit relabelled "lug_nut, required, $0" is charged.
+ *  - An unknown SKU that is not a recognised placeholder is always rejected.
  */
 export const INCLUDED_HARDWARE_MAX_UNIT_USD = 75;
 
-const INCLUDED_HARDWARE_CATEGORIES = new Set(["lugnut", "lugnuts", "lugbolt", "lugbolts", "hubring", "hubrings", "valvestem", "valvestems"]);
+export type IncludedHardwareKind = "lug_kit" | "hub_ring" | "valve_stem";
 
-export function isIncludedHardwareCategory(category: unknown): boolean {
+const LUG_KIT_PLACEHOLDER = /^LUGKIT-(.+)$/i;
+const HUB_RING_PLACEHOLDER = /^HR-\d{2,3}-\d{2,3}$/i;
+
+/** Placeholder SKUs the fitment engine emits before a catalog kit is looked up. */
+export function includedHardwarePlaceholderKind(sku: string): IncludedHardwareKind | null {
+  const s = String(sku || "").trim();
+  const lug = LUG_KIT_PLACEHOLDER.exec(s);
+  if (lug) return parseThreadSize(lug[1]) ? "lug_kit" : null;
+  if (HUB_RING_PLACEHOLDER.test(s)) return "hub_ring";
+  return null;
+}
+
+/** Catalog category (from `accessories.category`, never the client) -> hardware kind. */
+export function includedHardwareKindFromCatalogCategory(category: unknown): IncludedHardwareKind | null {
   const key = String(category || "").toLowerCase().replace(/[^a-z]/g, "");
-  return INCLUDED_HARDWARE_CATEGORIES.has(key);
+  if (key === "lugnut" || key === "lugnuts" || key === "lugbolt" || key === "lugbolts") return "lug_kit";
+  if (key === "hubring" || key === "hubrings" || key === "hubcentricring" || key === "hubcentricrings") return "hub_ring";
+  if (key === "valvestem" || key === "valvestems") return "valve_stem";
+  return null;
 }

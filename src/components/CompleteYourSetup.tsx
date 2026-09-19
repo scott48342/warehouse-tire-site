@@ -3,6 +3,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useCart, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import {
+  HUB_CENTRIC_RINGS_SKU,
+  HUB_CENTRIC_RINGS_UNIT_USD,
+  LUG_KIT_CHROME_SKU,
+  LUG_KIT_CHROME_UNIT_USD,
+  TPMS_SENSOR_UNIVERSAL_SKU,
+  TPMS_SENSOR_UNIVERSAL_UNIT_USD,
+} from "@/lib/checkout/fixedPriceSkus";
 
 // ============================================================================
 // Types
@@ -36,20 +44,20 @@ interface CompleteYourSetupProps {
 
 const DEFAULT_ACCESSORIES: Omit<Accessory, "selected">[] = [
   {
-    sku: "TPMS-SENSOR-UNIVERSAL",
+    sku: TPMS_SENSOR_UNIVERSAL_SKU,
     name: "TPMS Sensors",
     description: "Pre-programmed tire pressure monitoring sensors",
-    price: 49.99,
+    price: TPMS_SENSOR_UNIVERSAL_UNIT_USD, // server authority: src/lib/checkout/fixedPriceSkus.ts
     imageUrl: null,
     category: "tpms",
     required: false, // Optional - customer may reuse existing sensors
     quantity: 4,
   },
   {
-    sku: "LUG-KIT-CHROME",
+    sku: LUG_KIT_CHROME_SKU,
     name: "Chrome Lug Nut Kit",
     description: "Complete lug nut set with lock key",
-    price: 79.99,
+    price: LUG_KIT_CHROME_UNIT_USD,
     imageUrl: null,
     category: "lug_nut",
     required: false, // Optional - customer may reuse existing hardware
@@ -57,10 +65,10 @@ const DEFAULT_ACCESSORIES: Omit<Accessory, "selected">[] = [
   },
   // Valve stems removed - included with installation
   {
-    sku: "HUB-CENTRIC-RINGS",
+    sku: HUB_CENTRIC_RINGS_SKU,
     name: "Hub Centric Rings",
     description: "Eliminate vibration with proper wheel centering",
-    price: 24.99,
+    price: HUB_CENTRIC_RINGS_UNIT_USD,
     imageUrl: null,
     category: "hub_ring",
     required: false,

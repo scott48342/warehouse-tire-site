@@ -23,6 +23,9 @@ export type ResolvedCatalogPrice = {
   sku: string;
   unitPrice: number;
   finish?: string;
+  /** Catalog's own category for accessories (`accessories.category`); the server-side
+   *  basis for included-hardware eligibility. Never taken from the client. */
+  category?: string | null;
   source: "wheelpros" | "techfeed" | "wheel1" | "wsi" | "tireweb" | "fixed" | "accessories_db" | "suspension_db";
 };
 
@@ -145,13 +148,13 @@ export async function resolveAccessoryPrice(sku: string): Promise<ResolvedCatalo
     return null;
   }
   try {
-    const acc = await pool.query<{ sku: string; sell_price: unknown; msrp: unknown }>(
-      `SELECT sku, sell_price, msrp FROM accessories WHERE UPPER(sku) = UPPER($1) LIMIT 1`,
+    const acc = await pool.query<{ sku: string; sell_price: unknown; msrp: unknown; category: string | null }>(
+      `SELECT sku, sell_price, msrp, category FROM accessories WHERE UPPER(sku) = UPPER($1) LIMIT 1`,
       [clean],
     );
     const a = acc.rows[0];
     const accPrice = a ? positive(a.sell_price) ?? positive(a.msrp) : null;
-    if (a && accPrice != null) return { sku: a.sku || clean, unitPrice: accPrice, source: "accessories_db" };
+    if (a && accPrice != null) return { sku: a.sku || clean, unitPrice: accPrice, category: a.category ?? null, source: "accessories_db" };
 
     const sus = await pool.query<{ sku: string; msrp: unknown; map_price: unknown }>(
       `SELECT sku, msrp, map_price FROM suspension_fitments WHERE UPPER(sku) = UPPER($1) LIMIT 1`,

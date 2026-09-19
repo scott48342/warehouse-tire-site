@@ -14,9 +14,12 @@
  * - Accessories are ALSO server-priced (release review 2026-09-19): fixed
  *   synthetic SKUs, the `accessories` table, or `suspension_fitments`. Road
  *   hazard (RH-PROTECT-2YR) is recomputed from the server-priced tire lines.
- *   The only client-trusted accessory value is a $0 line for REQUIRED included
- *   hardware (lug nuts / hub rings / valve stems) whose catalog price, if any,
- *   is cheap hardware; anything else that cannot be priced is rejected.
+ *   Included install hardware ($0) is a SERVER entitlement: the hardware kind
+ *   comes from the SKU (fitment-engine placeholder format or the catalog's own
+ *   category), the free slots from the wheel sets accepted in this order (one
+ *   lug kit + one hub-ring set per wheel set), and the price cap from the
+ *   catalog. Client `required`/`category`/`unitPrice` never grant it. An
+ *   unknown SKU that is not a recognised placeholder is always rejected.
  * - Staggered lines are forced to 2+2 regardless of the client quantity.
  *
  * Pure: no I/O besides the injected resolver, so it is unit-testable.
@@ -24,10 +27,19 @@
 import type { QuoteLine } from "@/lib/quotes";
 import type { CartItem, CartWheelItem, CartTireItem } from "@/lib/cart/CartContext";
 import type { CatalogPriceResolver } from "./repriceCatalog";
-import { INCLUDED_HARDWARE_MAX_UNIT_USD, ROAD_HAZARD_SKU, isIncludedHardwareCategory, roadHazardPerTireUsd } from "./fixedPriceSkus";
+import {
+  INCLUDED_HARDWARE_MAX_UNIT_USD,
+  ROAD_HAZARD_SKU,
+  includedHardwareKindFromCatalogCategory,
+  includedHardwarePlaceholderKind,
+  roadHazardPerTireUsd,
+  type IncludedHardwareKind,
+} from "./fixedPriceSkus";
 
 export type CheckoutLineRejection = {
-  reason: "unpriceable" | "rear_unresolved" | "finish_mismatch";
+  /** `hardware_not_entitled`: a $0 placeholder hardware line with no wheel set in the order,
+   *  or more free hardware lines/units than the wheel sets entitle. */
+  reason: "unpriceable" | "rear_unresolved" | "finish_mismatch" | "hardware_not_entitled";
   sku: string;
   axle?: "front" | "rear";
   name: string;
@@ -70,6 +82,11 @@ export async function buildCheckoutLines(
   const repriced: Array<{ sku: string; clientUnitPrice: number; serverUnitPrice: number }> = [];
 
   const roadHazard: Array<{ i: any; name: string }> = [];
+  // Accessories are priced AFTER the wheel/tire lines so included-hardware entitlement
+  // can be derived from the wheel sets the server actually accepted.
+  const accessories: Array<{ i: any; name: string; sku: string; clientUnit: number; qtyClient: number }> = [];
+  // Wheel sets accepted so far: a staggered pair is one set, a square line is ceil(qty/4).
+  let wheelSets = 0;
 
   for (const raw of items) {
     const i = raw as any;
@@ -87,22 +104,7 @@ export async function buildCheckoutLines(
         roadHazard.push({ i, name }); // priced after the tire lines are known
         continue;
       }
-      const server = await resolvePrice(sku, { type: "accessory" });
-      const includedHardware =
-        !!i.required && clientUnit === 0 && isIncludedHardwareCategory(i.category) &&
-        (server == null || server.unitPrice <= INCLUDED_HARDWARE_MAX_UNIT_USD);
-      if (includedHardware) {
-        lines.push({ kind: "product", name, sku, unitPriceUsd: 0, qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: "included_hardware", catalogUnitPrice: server?.unitPrice }) });
-        continue;
-      }
-      if (!server) {
-        rejected.push({ reason: "unpriceable", sku, name });
-        continue;
-      }
-      if (Math.abs(server.unitPrice - clientUnit) > 0.005) {
-        repriced.push({ sku, clientUnitPrice: clientUnit, serverUnitPrice: server.unitPrice });
-      }
-      lines.push({ kind: "product", name, sku, unitPriceUsd: money(server.unitPrice), qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: server.source, clientUnitPrice: clientUnit }) });
+      accessories.push({ i, name, sku, clientUnit, qtyClient });
       continue;
     }
 
@@ -125,6 +127,7 @@ export async function buildCheckoutLines(
     }
 
     if (!rearSku) {
+      if (type === "wheel") wheelSets += Math.max(1, Math.ceil(qtyClient / 4));
       lines.push({
         kind: "product",
         name,
@@ -161,6 +164,7 @@ export async function buildCheckoutLines(
       repriced.push({ sku: rearSku, clientUnitPrice: clientRear, serverUnitPrice: rear.unitPrice });
     }
     const setId = `${sku}+${rearSku}`;
+    if (type === "wheel") wheelSets += 1;
     lines.push({
       kind: "product",
       name: `${name} (front)`,
@@ -190,6 +194,39 @@ export async function buildCheckoutLines(
         finish: type === "wheel" ? ((i as CartWheelItem).rearFinish ?? (i as CartWheelItem).finish) : undefined,
       }),
     });
+  }
+
+  // Accessories. Included-hardware entitlement is SERVER-derived: kind from the SKU
+  // (placeholder format or catalog category), slots from the accepted wheel sets,
+  // price cap from the catalog. Client `required`/`category`/`unitPrice` never grant
+  // it; a client $0 only says which eligible line should take a free slot first.
+  const freeSlots: Record<IncludedHardwareKind, number> = { lug_kit: wheelSets, hub_ring: wheelSets, valve_stem: wheelSets };
+  const accOrder = accessories
+    .map((a, idx) => ({ a, idx }))
+    .sort((x, y) => (x.a.clientUnit === 0 ? 0 : 1) - (y.a.clientUnit === 0 ? 0 : 1) || x.idx - y.idx);
+  for (const { a } of accOrder) {
+    const { i, name, sku, clientUnit, qtyClient } = a;
+    const server = await resolvePrice(sku, { type: "accessory" });
+    const placeholderKind = includedHardwarePlaceholderKind(sku);
+    const kind: IncludedHardwareKind | null =
+      placeholderKind ?? (server ? includedHardwareKindFromCatalogCategory(server.category) : null);
+    const cheapEnough = server == null || server.unitPrice <= INCLUDED_HARDWARE_MAX_UNIT_USD;
+    const entitled = kind != null && cheapEnough && wheelSets > 0 && freeSlots[kind] >= qtyClient;
+
+    if (entitled) {
+      freeSlots[kind!] -= qtyClient;
+      lines.push({ kind: "product", name, sku, unitPriceUsd: 0, qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: "included_hardware", hardwareKind: kind, catalogUnitPrice: server?.unitPrice, wheelSets }) });
+      continue;
+    }
+    if (!server) {
+      // Recognised placeholder without entitlement (no wheel set / over quota) vs. an unknown SKU.
+      rejected.push({ reason: placeholderKind ? "hardware_not_entitled" : "unpriceable", sku, name });
+      continue;
+    }
+    if (Math.abs(server.unitPrice - clientUnit) > 0.005) {
+      repriced.push({ sku, clientUnitPrice: clientUnit, serverUnitPrice: server.unitPrice });
+    }
+    lines.push({ kind: "product", name, sku, unitPriceUsd: money(server.unitPrice), qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: server.source, clientUnitPrice: clientUnit }) });
   }
 
   // Road hazard: 20% of the SERVER tire price per tire ($15 min), one unit per tire
