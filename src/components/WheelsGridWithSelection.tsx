@@ -217,7 +217,7 @@ type WheelsGridProps = {
    * fitment-search `fitment.certificationBlock`. When set, no card may render
    * a "Guaranteed Fit"/"Good Fit" label; cards show a neutral trim prompt.
    */
-  certificationBlock?: "trim_required" | "fallback_unverified" | null;
+  certificationBlock?: "trim_required" | "fallback_unverified" | "source_unverified" | "aftermarket_stagger" | "stagger_unverified" | null;
   diameterParam?: string;
   widthParam?: string;
   showRecommended?: boolean;

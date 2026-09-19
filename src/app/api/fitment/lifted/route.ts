@@ -141,7 +141,9 @@ export async function GET(request: NextRequest) {
   let liftLevelParam = liftLevelRaw || "stock";
   let liftInchesRequested: number | null = null;
   if (!liftLevelRaw && liftInchesRaw != null) {
-    const inches = Number(liftInchesRaw);
+    // Strict decimal only: Number("") = 0, Number("0x10") = 16, Number("1e1") = 10
+    // would all be silently accepted (review Q5-1). Empty string = missing value.
+    const inches = /^\s*\d{1,2}(\.\d+)?\s*$/.test(liftInchesRaw) ? Number(liftInchesRaw) : NaN;
     if (!Number.isFinite(inches) || inches < 0 || inches > 24) {
       return NextResponse.json(
         { success: false, error: `Invalid lift inches: "${liftInchesRaw}". Expected a number 0-24, or liftLevel=stock|daily|offroad|extreme` },

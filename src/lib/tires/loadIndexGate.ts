@@ -230,7 +230,13 @@ export function assessLoadIndex(
     requiredLoadIndexSource,
     loadIndexOk: ok,
     loadIndexChecked: true,
-    loadIndexNote: ok ? null : `Load rating ${li} is below the ${required} this vehicle requires`,
+    // Hedge unless the requirement itself is verified (review Q4-4): a stored
+    // record value can be wrong-high (e.g. optional LT size on a 1-size record).
+    loadIndexNote: ok
+      ? null
+      : sourceVerified
+        ? `Load rating ${li} is below the ${required} this vehicle requires`
+        : `Load rating ${li} is below the ${required} on file for this vehicle`,
     fitBadgeAllowed: badge,
     packageEligible: ok, // EXCLUDE from packages when below required
     packageExclusionReason: ok ? null : "load_index_below_required",

@@ -143,7 +143,7 @@ describe("assessLoadIndex", () => {
       expect(result.requiredLoadIndexSource).toBe("vehicle_record_unverified");
       expect(result.loadIndexOk).toBe(false);
       expect(result.loadIndexChecked).toBe(true);
-      expect(result.loadIndexNote).toBe("Load rating 110 is below the 119 this vehicle requires");
+      expect(result.loadIndexNote).toBe("Load rating 110 is below the 119 on file for this vehicle") // unverified source -> hedged (review Q4-4);
       expect(result.fitBadgeAllowed).toBe(false);
       expect(result.packageEligible).toBe(false);
       expect(result.packageExclusionReason).toBe("load_index_below_required");
@@ -292,7 +292,7 @@ describe("R5 load-index gate cases", () => {
     expect(a.packageExclusionReason).toBe("load_index_below_required");
     expect(a.fitBlockReason).toBe("load_index_below_required");
     expect(a.requiredLoadIndexSource).toBe("vehicle_record_unverified");
-    expect(a.loadIndexNote).toBe("Load rating 110 is below the 119 this vehicle requires");
+    expect(a.loadIndexNote).toBe("Load rating 110 is below the 119 on file for this vehicle") // unverified source -> hedged (review Q4-4);
     expect(certifiedPathBlock(a)).toEqual({ blocked: true, reason: "load_index_below_required" });
   });
   test("99 < 100 (M4) -> blocked", () => {

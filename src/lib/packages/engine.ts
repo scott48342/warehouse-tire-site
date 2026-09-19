@@ -818,6 +818,9 @@ function parseTireSize(size: string): { width: number; aspectRatio: number; rimD
     const sectionWidthInches = parseFloat(flotationMatch[2]);
     const rimDiameter = parseInt(flotationMatch[3], 10);
     if (!Number.isFinite(overallDiameterInches) || !Number.isFinite(sectionWidthInches) || sectionWidthInches <= 0 || !Number.isFinite(rimDiameter)) return null;
+    // Review Q2-2: "33x1250R20" (decimal dropped) parses as a 1250-inch section.
+    // Real flotation sections are ~7-18 in and the tire must stand taller than the rim.
+    if (sectionWidthInches < 5 || sectionWidthInches > 20 || overallDiameterInches <= rimDiameter) return null;
     
     return {
       width: Math.round(sectionWidthInches * 25.4),

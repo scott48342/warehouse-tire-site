@@ -552,7 +552,7 @@ export function WheelsStyleCard({
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
   /** 2026-09-18 (audit F7/C4): when set, suppress fit-class labels; show trim prompt */
-  certificationBlock?: "trim_required" | "fallback_unverified" | null;
+  certificationBlock?: "trim_required" | "fallback_unverified" | "source_unverified" | "aftermarket_stagger" | "stagger_unverified" | null;
   isPopular?: boolean;
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
