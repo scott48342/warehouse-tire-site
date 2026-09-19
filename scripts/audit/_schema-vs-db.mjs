@@ -1,0 +1,10 @@
+﻿import pg from "pg"; import fs from "fs";
+const p = new pg.Pool({ connectionString: process.env.POSTGRES_URL, max: 1 }); const c = await p.connect();
+await c.query("SET default_transaction_read_only = on");
+const live = new Set((await c.query("select column_name from information_schema.columns where table_name='vehicle_fitments'")).rows.map(r=>r.column_name));
+const lines = fs.readFileSync("src/lib/fitment-db/schema.ts","utf8").split(/\r?\n/).slice(59, 178).join("\n");
+const cols = [...new Set([...lines.matchAll(/:\s*\w+\("([a-z_0-9]+)"/g)].map(m=>m[1]))];
+const missing = cols.filter(x=>!live.has(x));
+console.log("vehicle_fitments columns in schema.ts:", cols.length, "| live:", live.size, "| MISSING in live DB:", JSON.stringify(missing));
+console.log("branch-relevant present:", ["oem_speed_rating","load_index_source","oem_load_index","wheel_specs_source","audit_original_data","quarantined_at"].map(k=>k+"="+live.has(k)).join(" "));
+await c.release(); await p.end();
