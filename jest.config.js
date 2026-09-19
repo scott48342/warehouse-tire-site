@@ -6,6 +6,8 @@ module.exports = {
   testMatch: ['**/*.test.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    // Legacy vitest-style suites run under jest via this shim (2026-09-19)
+    '^vitest$': '<rootDir>/test-shims/vitest.ts',
   },
   transform: {
     '^.+\\.tsx?$': ['ts-jest', {

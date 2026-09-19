@@ -1,9 +1,9 @@
 /**
- * Package generation gap fixes Ã¢â‚¬â€ regression tests
+ * Package generation gap fixes - regression tests
  *
  * Covers the three root causes found in the 2026-06-10 investigation:
- * 1. Per-rim OEM baseline (multi-size vehicles falsely failed Ã‚Â±3% validation)
- * 2. Offset pre-filter aligned with validateFitment Ã‚Â±5mm tolerance
+ * 1. Per-rim OEM baseline (multi-size vehicles falsely failed -+/-3% validation)
+ * 2. Offset pre-filter aligned with validateFitment -+/-5mm tolerance
  *    (degenerate min===max offset ranges rejected all inventory)
  * 3. Diameter fallback handled in generatePackages (integration-level;
  *    findBestWheel itself unchanged for strict targets)
@@ -45,8 +45,8 @@ describe("parseTireSize", () => {
 });
 
 describe("resolveOemBaseline (root cause 1: multi-size vehicles)", () => {
-  // Alfa Romeo 4C: 205/45R17 Ã¢â€ â€™ 24.3", 235/35R19 Ã¢â€ â€™ 25.5"
-  // Old code used a single 24.3" baseline Ã¢â€ â€™ 19" candidates failed at +5%
+  // Alfa Romeo 4C: 205/45R17 - - 24.3", 235/35R19 - - 25.5"
+  // Old code used a single 24.3" baseline - - 19" candidates failed at +5%
   const od17 = calculateOverallDiameter(205, 45, 17);
   const od18 = calculateOverallDiameter(205, 40, 18);
   const od19 = calculateOverallDiameter(235, 35, 19);
@@ -69,7 +69,7 @@ describe("resolveOemBaseline (root cause 1: multi-size vehicles)", () => {
     expect(resolveOemBaseline(f, 18)).toBe(30);
   });
 
-  it("19in OEM-equivalent package passes Ã‚Â±3% with per-rim baseline", () => {
+  it("19in OEM-equivalent package passes -+/-3% with per-rim baseline", () => {
     const candidate = calculateOverallDiameter(235, 35, 19);
     const baseline = resolveOemBaseline(fitment, 19)!;
     const v = validateFitment(candidate, baseline, 40, fitment.offsetRange);
@@ -91,8 +91,8 @@ describe("findBestWheel offset pre-filter (root cause 2: degenerate ranges)", ()
     },
   ] as any[];
 
-  it("accepts a wheel within Ã‚Â±5mm of a degenerate min===max range", () => {
-    // Subaru BRZ record: offset min=max=48; wheel offset 45 is 3mm off Ã¢â€ â€™ valid
+  it("accepts a wheel within -+/-5mm of a degenerate min===max range", () => {
+    // Subaru BRZ record: offset min=max=48; wheel offset 45 is 3mm off - - valid
     const best = findBestWheel(wheels, {
       targetDiameters: [17],
       preferredBrands: ["KM"],
@@ -104,11 +104,25 @@ describe("findBestWheel offset pre-filter (root cause 2: degenerate ranges)", ()
     expect(best!.sku).toBe("W1");
   });
 
-  it("still rejects offsets beyond the Ã‚Â±5mm hard bound", () => {
+  // 2026-06-30 engine change: the flat +/-5mm filter became a LOOSE +/-15mm
+  // pre-filter; validateFitment (geometry) is the authoritative offset gate.
+  // Assert the pre-filter that actually exists (test was stale, 2026-09-19).
+  it("pre-filter keeps a wheel 10mm outside the range (geometry decides later)", () => {
     const best = findBestWheel(wheels, {
       targetDiameters: [17],
       preferredBrands: ["KM"],
-      offsetRange: { min: 55, max: 60 }, // wheel at 45 Ã¢â€ â€™ 10mm below min - 5
+      offsetRange: { min: 55, max: 60 }, // wheel at 45 = 10mm below min: inside the 15mm pre-filter
+      offsetPreference: "oem",
+      priceRange: "value",
+    });
+    expect(best).not.toBeNull();
+  });
+
+  it("pre-filter still rejects offsets beyond the +/-15mm loose bound", () => {
+    const best = findBestWheel(wheels, {
+      targetDiameters: [17],
+      preferredBrands: ["KM"],
+      offsetRange: { min: 61, max: 70 }, // wheel at 45 = 16mm below min
       offsetPreference: "oem",
       priceRange: "value",
     });
@@ -116,7 +130,7 @@ describe("findBestWheel offset pre-filter (root cause 2: degenerate ranges)", ()
   });
 });
 
-describe("validateFitment Ã‚Â±3% rule unchanged (safety)", () => {
+describe("validateFitment -+/-3% rule unchanged (safety)", () => {
   it("rejects >3% diameter change", () => {
     const v = validateFitment(28.9, 28, 40, { min: 20, max: 50 });
     expect(v.safe).toBe(false);
