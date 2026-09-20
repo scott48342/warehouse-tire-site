@@ -74,14 +74,18 @@ describe("applyInputKey - any fingerprint change invalidates everything the shop
     expect(beginIntentRequest(r2.session).tag.acceptedTotal).toBeNull();
   });
 
-  it("keeps an earlier abandoned intent id if it was never sent for cancellation (no live intent to replace it)", () => {
-    const r1 = applyInputKey(liveSession(), KEY_B); // queues pi_live_0000000001
-    const r2 = applyInputKey(r1.session, "key-c");   // no live intent now
+  it("a second change with no live intent still bumps the generation (any in-flight request for the previous key is abandoned)", () => {
+    const r1 = applyInputKey(liveSession(), KEY_B);
+    const r2 = applyInputKey(r1.session, "key-c");
+    expect(r2).toMatchObject({ changed: true, invalidatedIntent: false });
+    expect(r2.session.generation).toBe(r1.session.generation + 1);
+    expect(r2.session.currentKey).toBe("key-c");
+    expect(liveClientSecret(r2.session, "key-c")).toBeNull();
   });
 });
 
 describe("in-flight request + input change: stale replies are ignored (success, revision, error, completion)", () => {
-  it("stale SUCCESS installs nothing, marks nothing loading, and queues the orphaned intent for cancellation", async () => {
+  it("stale SUCCESS installs nothing and marks nothing loading (the orphaned intent is never confirmed; nothing is cancelled on client say-so)", async () => {
     let s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
     const { fetchImpl, resolve } = deferredFetch();
     const b = beginIntentRequest(s);
