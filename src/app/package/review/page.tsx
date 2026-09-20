@@ -80,6 +80,9 @@ function VehicleConfirmation({
 
 function WheelItem({ item }: { item: CartWheelItem }) {
   const lineTotal = cartLineTotal(item);
+  const staggered = Boolean(item.staggered && item.rearSku);
+  const rearWidth = item.rearWidth ?? item.width;
+  const rearOffset = item.rearOffset ?? item.offset;
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -98,6 +101,26 @@ function WheelItem({ item }: { item: CartWheelItem }) {
         <h3 className="font-extrabold text-neutral-900">{item.model}</h3>
         {item.finish && <div className="text-sm text-neutral-600">{item.finish}</div>}
         
+        {staggered ? (
+          /* 2026-09-20 (Codex review acceptance): a staggered set is 2 front + 2 rear wheels with
+             different width/offset/SKU and usually price. The card showed only the front SKU with a
+             blended "each" price, so half of the set was invisible on the review step. Mirror the
+             cart drawer and checkout summary: both axles, both SKUs, exact 2+2 money. */
+          <div className="mt-1 text-sm text-neutral-600 space-y-0.5" data-testid="review-wheel-staggered">
+            <p className="font-medium text-neutral-700">Staggered set: 2 front + 2 rear</p>
+            <p>
+              Front x2: {item.diameter}x{item.width}
+              {item.offset ? ` ET${item.offset}` : ""}
+              {item.boltPattern ? ` · ${item.boltPattern}` : ""} · <span className="font-mono text-xs text-neutral-500">{item.sku}</span>
+            </p>
+            <p>
+              Rear x2: {item.diameter}x{rearWidth}
+              {rearOffset ? ` ET${rearOffset}` : ""}
+              {item.boltPattern ? ` · ${item.boltPattern}` : ""} · <span className="font-mono text-xs text-neutral-500">{item.rearSku}</span>
+            </p>
+          </div>
+        ) : (
+          <>
         <div className="mt-1 flex flex-wrap gap-2 text-sm text-neutral-600">
           {item.diameter && <span>{item.diameter}"</span>}
           {item.width && <span>× {item.width}"</span>}
@@ -107,15 +130,21 @@ function WheelItem({ item }: { item: CartWheelItem }) {
         
         {/* SKU / Part Number */}
         <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+          </>
+        )}
       </div>
 
       {/* Price */}
       <div className="text-right flex-shrink-0">
         <div className="text-sm text-neutral-500">Qty: {item.quantity}</div>
         <div className="font-extrabold text-neutral-900">${lineTotal.toFixed(2)}</div>
-        {item.quantity > 1 && (
+        {staggered && item.frontUnitPrice != null && item.rearUnitPrice != null ? (
+          <div className="text-xs text-neutral-500" data-testid="review-wheel-staggered-price">
+            2 x ${item.frontUnitPrice.toFixed(2)} + 2 x ${item.rearUnitPrice.toFixed(2)}
+          </div>
+        ) : item.quantity > 1 ? (
           <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
-        )}
+        ) : null}
       </div>
     </div>
   );
