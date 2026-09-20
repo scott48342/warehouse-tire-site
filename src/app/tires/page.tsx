@@ -179,13 +179,13 @@ export async function generateMetadata({
   if (year && make && model) {
     const vehiclePart = `${year} ${make} ${model}`;
     title = `Tires for ${vehiclePart} | Warehouse Tire Direct`;
-    description = `Shop tires for your ${vehiclePart}. Guaranteed fitment, competitive prices, expert support.`;
+    description = `Shop tires for your ${vehiclePart}. Fitment checked before shipping, competitive prices, expert support.`;
   } else if (size) {
     title = `${size} Tires | Warehouse Tire Direct`;
     description = `Shop ${size} tires. Wide selection, competitive prices, expert support.`;
   } else {
     title = "Tires | Warehouse Tire Direct";
-    description = "Shop tires with guaranteed fitment. Browse by vehicle or tire size for the perfect match.";
+    description = "Shop tires with fitment checked before shipping. Browse by vehicle or tire size for the perfect match.";
   }
   
   const canonicalUrl = buildCanonicalUrl(sp);

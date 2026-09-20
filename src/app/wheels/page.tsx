@@ -110,8 +110,8 @@ export async function generateMetadata({
     : "Wheels | Warehouse Tire Direct";
   
   const description = vehiclePart
-    ? `Shop aftermarket wheels for your ${vehiclePart}. Guaranteed fitment, competitive prices, expert support.`
-    : "Shop aftermarket wheels with guaranteed fitment. Browse by vehicle for perfect fit.";
+    ? `Shop aftermarket wheels for your ${vehiclePart}. Fitment checked before shipping, competitive prices, expert support.`
+    : "Shop aftermarket wheels with fitment checked before shipping. Browse by vehicle for perfect fit.";
   
   const canonicalUrl = buildCanonicalUrl(sp);
   
@@ -2165,7 +2165,7 @@ export default async function WheelsPage({
                 </div>
                 <div className="text-xs text-green-700 font-semibold">
                   {/* 2026-09-20 (Codex): guarantee copy only when every listed SKU is server-certified */}
-                  {allCertified ? "No guesswork - guaranteed fitment" : "Fit confirmed before you buy"}
+                  {allCertified ? "No guesswork - fitment checked before shipping" : "Fit confirmed before you buy"}
                 </div>
               </div>
             ) : null}

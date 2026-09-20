@@ -56,6 +56,8 @@ export type QuickViewWheelData = {
   stockQty?: number;
   inventoryType?: string;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  /** 2026-09-20 (Codex): server certification for the active vehicle. Without `true` the modal never claims fit. */
+  certified?: boolean;
   // Vehicle context from search
   year?: string;
   make?: string;
@@ -360,7 +362,12 @@ function WheelQuickViewContent({
   vehicleLabel: string;
 }) {
   const setPrice = typeof data.price === "number" ? data.price * 4 : null;
-  const fitmentConfig = data.fitmentClass ? FITMENT_CONFIG[data.fitmentClass] : null;
+  // 2026-09-20 (Codex): surefit/specfit are fit CLAIMS - only render them when the caller passed certified:true
+  const fitmentConfig = !data.fitmentClass
+    ? null
+    : data.fitmentClass === "extended" || data.certified === true
+      ? FITMENT_CONFIG[data.fitmentClass]
+      : { label: "Fit not yet confirmed", icon: "", className: "bg-neutral-200 text-neutral-700" };
 
   // Build view href
   const viewHref = (() => {
@@ -818,6 +825,7 @@ export function QuickViewModal({ open, data, onClose }: QuickViewModalProps) {
         unitPrice: data.price || 0,
         quantity: 4,
         fitmentClass: data.fitmentClass,
+        fitVerified: data.certified === true,
         vehicle: activeVehicle
           ? {
               year: activeVehicle.year,
@@ -851,6 +859,7 @@ export function QuickViewModal({ open, data, onClose }: QuickViewModalProps) {
         unitPrice: data.wheel.price || 0,
         quantity: 4,
         fitmentClass: data.wheel.fitmentClass,
+        fitVerified: data.wheel.certified === true,
         vehicle: activeVehicle
           ? {
               year: activeVehicle.year,

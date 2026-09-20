@@ -197,7 +197,7 @@ export default async function WheelsForVehiclePage({
         {/* Intro */}
         <p className="mb-8 max-w-3xl text-lg text-neutral-600">
           {hasResults
-            ? `Shop ${formatCount(counts.wheels)} wheels that fit your ${vehicleName}. ${fitment?.boltPattern ? `Your vehicle uses a ${fitment.boltPattern} bolt pattern.` : ""} Browse aftermarket and OEM-style options with guaranteed fitment.`
+            ? `Shop ${formatCount(counts.wheels)} wheels that fit your ${vehicleName}. ${fitment?.boltPattern ? `Your vehicle uses a ${fitment.boltPattern} bolt pattern.` : ""} Browse aftermarket and OEM-style options with fitment checked before shipping.`
             : `Looking for wheels for your ${vehicleName}? Contact our team at (248) 332-4120 for fitment verification.`}
         </p>
         

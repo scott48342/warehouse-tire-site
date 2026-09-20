@@ -118,7 +118,7 @@ export function BuildStyleHero() {
 
         {/* Trust line */}
         <div className="mt-6 text-center text-xs text-neutral-500">
-          ✓ Verified fitment for your specific vehicle • ✓ Expert guidance included
+          ✓ Fitment checked for your specific vehicle • ✓ Expert guidance included
         </div>
       </div>
     </section>

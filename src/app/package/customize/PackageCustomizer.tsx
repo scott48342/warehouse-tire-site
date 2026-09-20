@@ -323,7 +323,7 @@ export default function PackageCustomizer() {
 
       {/* Trust Badges */}
       <TrustBadgesRow
-        badges={["fitment_guaranteed", "verified_vehicle", "no_rubbing"]}
+        badges={["fit_rated", "free_shipping", "expert_support"]} /* 2026-09-20 (Codex): no blanket guarantee before certification */
         size="md"
         variant="outline"
         className="mb-8"

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
-import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { useCart, cartLineTotal, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { AccessoryRecommendations } from "./AccessoryRecommendations";
 import {
   loadLiftedContext,
@@ -27,13 +27,17 @@ const FITMENT_LABELS = {
   specfit: { label: "Good Fit", color: "text-blue-700", bg: "bg-blue-100" },
   extended: { label: "Aggressive Fit", color: "text-orange-700", bg: "bg-orange-100" },
 } as const;
+// 2026-09-20 (Codex): the class label is a fit CLAIM. It is shown only when the line was added through
+// the server-certified path (fitVerified === true); otherwise the drawer says the fit is not confirmed yet.
+const FIT_UNCONFIRMED = { label: "Fit not yet confirmed", color: "text-neutral-600", bg: "bg-neutral-100" } as const;
 
 function WheelItemCard({ item }: { item: CartWheelItem }) {
-  const fitment = item.fitmentClass ? FITMENT_LABELS[item.fitmentClass] : null;
+  const fitment = item.fitmentClass ? (item.fitVerified === true ? FITMENT_LABELS[item.fitmentClass] : FIT_UNCONFIRMED) : null;
   // Defensive: handle corrupted items with missing prices
   const unitPrice = item.unitPrice ?? 0;
   const quantity = item.quantity ?? 0;
-  const total = unitPrice * quantity;
+  // 2026-09-20 (Codex): staggered lines carry a BLENDED unitPrice; sum the axles exactly (matches the server charge)
+  const total = cartLineTotal({ ...item, unitPrice, quantity });
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -115,7 +119,8 @@ function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
   // Defensive: handle corrupted items with missing prices
   const unitPrice = item.unitPrice ?? 0;
   const quantity = item.quantity ?? 1;
-  const total = unitPrice * quantity;
+  // 2026-09-20 (Codex): staggered lines carry a BLENDED unitPrice; sum the axles exactly (matches the server charge)
+  const total = cartLineTotal({ ...item, unitPrice, quantity });
 
   // Icon based on category
   const iconMap: Record<string, string> = {
@@ -172,7 +177,8 @@ function TireItemCard({ item }: { item: CartTireItem }) {
   // Defensive: handle corrupted items with missing prices
   const unitPrice = item.unitPrice ?? 0;
   const quantity = item.quantity ?? 0;
-  const total = unitPrice * quantity;
+  // 2026-09-20 (Codex): staggered lines carry a BLENDED unitPrice; sum the axles exactly (matches the server charge)
+  const total = cartLineTotal({ ...item, unitPrice, quantity });
   
   // Build load/speed display (e.g., "102H")
   const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
@@ -254,12 +260,12 @@ export function CartSlideout() {
   // Calculate tire subtotal for out-the-door pricing
   const tireSubtotal = items
     .filter((i): i is CartTireItem => i.type === "tire")
-    .reduce((sum, t) => sum + t.unitPrice * t.quantity, 0);
+    .reduce((sum, t) => sum + cartLineTotal(t), 0);
   
   // Calculate wheel subtotal (no install fees for wheel-only)
   const wheelSubtotal = items
     .filter((i): i is CartWheelItem => i.type === "wheel")
-    .reduce((sum, w) => sum + w.unitPrice * w.quantity, 0);
+    .reduce((sum, w) => sum + cartLineTotal(w), 0);
   
   // For local mode, get full price breakdown (per item so commercial
   // medium-truck tires get commercial labor/disposal rates)

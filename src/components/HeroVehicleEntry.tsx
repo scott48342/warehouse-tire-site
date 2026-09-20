@@ -84,7 +84,7 @@ export function HeroVehicleEntry() {
           imageSrc="/images/hero/wheel.webp"
           imageAlt="Aftermarket wheel"
           title="Wheels"
-          subtitle="Guaranteed fit"
+          subtitle="Fit checked by vehicle"
           onClick={() => openSearch("wheels")}
           bgColor="bg-white"
         />

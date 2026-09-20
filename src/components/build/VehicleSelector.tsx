@@ -247,7 +247,7 @@ export function VehicleSelector() {
       {/* Trust signals */}
       <div className="mt-6 flex items-center justify-center gap-4 text-xs text-neutral-500">
         <span className="flex items-center gap-1">
-          <span className="text-green-500">✓</span> Guaranteed Fit
+          <span className="text-green-500">✓</span> Fit checked by vehicle
         </span>
         <span className="flex items-center gap-1">
           <span className="text-green-500">✓</span> Easy Returns

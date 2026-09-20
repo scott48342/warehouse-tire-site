@@ -163,7 +163,7 @@ export default async function BlogPostPage({
           <div className="mt-12 bg-red-600 text-white rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold mb-2">Ready to Upgrade Your Ride?</h2>
             <p className="mb-4 text-red-100">
-              Shop our selection of wheels, tires, and packages with guaranteed fitment.
+              Shop our selection of wheels, tires, and packages with fitment checked before shipping.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 

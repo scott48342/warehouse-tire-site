@@ -366,7 +366,7 @@ export async function generateMetadata({
     // Fallback for missing products
     return {
       title: `Wheel ${decodedSku} | ${BRAND.name}`,
-      description: `Shop custom wheels at ${BRAND.name}. Fast shipping, guaranteed fitment, expert support.`,
+      description: `Shop custom wheels at ${BRAND.name}. Fast shipping, fitment checked before shipping, expert support.`,
       alternates: { canonical: canonicalUrl },
     };
   }
@@ -383,7 +383,7 @@ export async function generateMetadata({
   if (wheel.finish) descParts.push(`in ${wheel.finish} finish`);
   if (wheel.diameter) descParts.push(`${wheel.diameter}" diameter`);
   if (wheel.boltPattern) descParts.push(`${wheel.boltPattern} bolt pattern`);
-  descParts.push("Fast shipping. Guaranteed fitment. Expert support.");
+  descParts.push("Fast shipping. Fitment checked before shipping. Expert support.");
   const description = descParts.join(". ").slice(0, 160);
 
   return {
@@ -655,7 +655,7 @@ export default async function WheelDetailPage({
     diameter && width ? `${diameter}" x ${width}" size` : null,
     boltPattern ? `${boltPattern} bolt pattern` : null,
     offset ? `${offset}mm offset` : null,
-    "Fast shipping. Guaranteed fitment.",
+    "Fast shipping. Fitment checked before shipping.",
   ].filter(Boolean).join(". ");
 
   return (

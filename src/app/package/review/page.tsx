@@ -79,7 +79,7 @@ function VehicleConfirmation({
 }
 
 function WheelItem({ item }: { item: CartWheelItem }) {
-  const lineTotal = item.unitPrice * item.quantity;
+  const lineTotal = cartLineTotal(item);
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -122,7 +122,7 @@ function WheelItem({ item }: { item: CartWheelItem }) {
 }
 
 function TireItem({ item }: { item: CartTireItem }) {
-  const lineTotal = item.unitPrice * item.quantity;
+  const lineTotal = cartLineTotal(item);
   
   // Build load/speed display (e.g., "102H")
   const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
@@ -172,7 +172,7 @@ function TireItem({ item }: { item: CartTireItem }) {
 }
 
 function AccessoryItem({ item }: { item: CartAccessoryItem }) {
-  const lineTotal = item.unitPrice * item.quantity;
+  const lineTotal = cartLineTotal(item);
   const isRequired = item.required;
 
   // Icon based on category

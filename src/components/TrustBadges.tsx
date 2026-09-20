@@ -318,10 +318,10 @@ export function CartTrustSection({ className = "", fitVerified = false }: { clas
 // Package Trust Badges (for package cards)
 // ============================================================================
 
-export function PackageTrustBadges({ className = "" }: { className?: string }) {
+export function PackageTrustBadges({ className = "", fitVerified = false }: { className?: string; /** true only when every line of the package is server-certified */ fitVerified?: boolean }) {
   return (
     <TrustBadgesRow
-      badges={["fitment_guaranteed", "verified_vehicle"]}
+      badges={fitVerified ? ["fitment_guaranteed", "verified_vehicle"] : ["fit_rated", "expert_support"]}
       size="sm"
       variant="subtle"
       className={className}

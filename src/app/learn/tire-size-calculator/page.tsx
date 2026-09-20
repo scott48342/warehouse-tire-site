@@ -138,7 +138,7 @@ export default function TireSizeCalculatorPage() {
       <section className="mt-12 rounded-2xl bg-neutral-900 p-8 text-center">
         <h2 className="text-2xl font-bold text-white">Found Your Size?</h2>
         <p className="mx-auto mt-2 max-w-xl text-neutral-300">
-          Shop tires by size or get a complete wheel &amp; tire package with guaranteed fitment
+          Shop tires by size or get a complete wheel &amp; tire package with fitment checked before shipping
           for your vehicle.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
