@@ -5,6 +5,7 @@
  */
 
 import type { CartWheelItem, CartTireItem, CartAccessoryItem, CartItem } from "@/lib/cart/CartContext";
+import { cartLineTotal } from "@/lib/cart/CartContext";
 
 export type PackageValidationResult = {
   isValid: boolean;
@@ -115,9 +116,10 @@ export function validatePackage(items: CartItem[]): PackageValidationResult {
   }
 
   // Calculate totals with precision
-  const wheelSubtotal = wheels.reduce((sum, w) => sum + w.unitPrice * w.quantity, 0);
-  const tireSubtotal = tires.reduce((sum, t) => sum + t.unitPrice * t.quantity, 0);
-  const accessorySubtotal = accessories.reduce((sum, a) => sum + a.unitPrice * a.quantity, 0);
+  // 2026-09-20: exact per-line money (staggered sets are 2 front + 2 rear, not blended unit x 4)
+  const wheelSubtotal = wheels.reduce((sum, w) => sum + cartLineTotal(w), 0);
+  const tireSubtotal = tires.reduce((sum, t) => sum + cartLineTotal(t), 0);
+  const accessorySubtotal = accessories.reduce((sum, a) => sum + cartLineTotal(a), 0);
   const subtotal = wheelSubtotal + tireSubtotal + accessorySubtotal;
   
   // Shipping (free over $500)

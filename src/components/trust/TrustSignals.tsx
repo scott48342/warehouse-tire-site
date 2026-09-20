@@ -150,7 +150,8 @@ export function ReviewCarousel({ className = "" }: { className?: string }) {
 }
 
 /* ── Near Add-to-Cart product trust block ──────────────────────────────── */
-export function ProductTrustBlock({ className = "" }: { className?: string }) {
+/** fitVerified: server certified this SKU for the shopper's vehicle (2026-09-20, Codex). Omitted/false = neutral copy. */
+export function ProductTrustBlock({ className = "", fitVerified = false }: { className?: string; fitVerified?: boolean }) {
   return (
     <div
       className={`rounded-xl border border-neutral-200 bg-white p-3 ${className}`}
@@ -163,7 +164,7 @@ export function ProductTrustBlock({ className = "" }: { className?: string }) {
       </div>
       <ul className="mt-2 grid grid-cols-1 gap-1 text-xs text-neutral-600">
         <li className="inline-flex items-center gap-1.5">🏆 {TRUST.sinceDisplay}</li>
-        <li className="inline-flex items-center gap-1.5">✅ Fitment Guarantee</li>
+        <li className="inline-flex items-center gap-1.5">✅ {fitVerified ? "Fitment Guarantee" : "Fit confirmed before shipping"}</li>
         <li className="inline-flex items-center gap-1.5">🔒 Secure Checkout</li>
         <li className="inline-flex items-center gap-1.5">
           📞 Phone Support:{" "}
@@ -177,12 +178,13 @@ export function ProductTrustBlock({ className = "" }: { className?: string }) {
 }
 
 /* ── Cart pre-checkout trust module ────────────────────────────────────── */
-export function CartTrustModule({ className = "" }: { className?: string }) {
+export function CartTrustModule({ className = "", fitVerified = false }: { className?: string; fitVerified?: boolean }) {
   const items = [
     { icon: "⭐", label: `${TRUST.reviewsDisplay} ${TRUST.googleSource}` },
     { icon: "🔒", label: "Secure Checkout (Stripe)" },
     { icon: "↩️", label: "Easy Returns & Exchanges" },
-    { icon: "✅", label: "Fitment Guarantee" },
+    // 2026-09-20 (Codex): guarantee only when every vehicle line in the cart is server-certified
+    { icon: "✅", label: fitVerified ? "Fitment Guarantee" : "Fit confirmed before shipping" },
     { icon: "💳", label: "Financing Available" },
   ];
   return (
@@ -206,7 +208,7 @@ export function CartTrustModule({ className = "" }: { className?: string }) {
 }
 
 /* ── Checkout badges (low friction) ────────────────────────────────────── */
-export function CheckoutTrustBadges({ className = "" }: { className?: string }) {
+export function CheckoutTrustBadges({ className = "", fitVerified = false }: { className?: string; fitVerified?: boolean }) {
   return (
     <div
       className={`flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[11px] font-medium text-neutral-500 ${className}`}
@@ -215,7 +217,7 @@ export function CheckoutTrustBadges({ className = "" }: { className?: string }) 
         <StarRating size="xs" /> {TRUST.reviewsDisplay} reviews
       </span>
       <span className="inline-flex items-center gap-1">🔒 Secure Stripe checkout</span>
-      <span className="inline-flex items-center gap-1">✅ Fitment guarantee</span>
+      <span className="inline-flex items-center gap-1">✅ {fitVerified ? "Fitment guarantee" : "Fit confirmed before shipping"}</span>
       <span className="inline-flex items-center gap-1">↩️ Easy returns</span>
     </div>
   );

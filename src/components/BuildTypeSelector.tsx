@@ -718,7 +718,7 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
           
           {/* Confidence Copy */}
           <p className="mt-3 text-sm text-neutral-700 text-center font-medium">
-            Everything shown will fit your exact setup — no guesswork.
+            Filtered to your vehicle's bolt pattern, hub bore and factory sizes - every wheel shows its own fit rating.
           </p>
           <p className="mt-1 text-xs text-neutral-500 text-center">
             {selectedLiftKit && "Your lift kit will be added to cart. "}
@@ -731,7 +731,7 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
               <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              Guaranteed Fit
+              Fit rated per wheel
             </span>
             <span className="flex items-center gap-1">
               <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">

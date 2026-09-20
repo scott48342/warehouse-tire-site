@@ -603,7 +603,7 @@ export function POSWheelPDPClient({ sku, year, make, model, trim }: Props) {
               {/* Trust signals */}
               <div className="mt-4 flex flex-wrap gap-4 text-xs text-neutral-600">
                 <span className="flex items-center gap-1">
-                  <span className="text-green-600">✓</span> Fitment guaranteed
+                  <span className="text-green-600">✓</span> Fitment reviewed before shipping
                 </span>
                 <span className="flex items-center gap-1">
                   <span className="text-green-600">✓</span> Ships fast

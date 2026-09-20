@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { useRouter } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { normalizeTireSize } from "@/lib/productFormat";
@@ -236,10 +236,26 @@ function AccessoryItem({ item }: { item: CartAccessoryItem }) {
   );
 }
 
-function FitmentGuarantee({ fitmentClass }: { fitmentClass?: "surefit" | "specfit" | "extended" }) {
+function FitmentGuarantee({ fitmentClass, certified }: { fitmentClass?: "surefit" | "specfit" | "extended"; certified: boolean }) {
   const fitmentInfo = fitmentClass ? FITMENT_CLASS_INFO[fitmentClass] : null;
-  const description = fitmentInfo?.description || 
-    "All items in this package have been verified to fit your vehicle.";
+  // Uncertified package (or extended geometry): no guarantee language - state the process.
+  if (!certified || !fitmentInfo || fitmentClass === "extended") {
+    return (
+      <div className="rounded-2xl bg-neutral-50 border border-neutral-200 p-5">
+        <div className="flex items-start gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-300 text-white text-xl">i</div>
+          <div className="flex-1">
+            <h3 className="font-extrabold text-neutral-900">Fit not yet confirmed</h3>
+            <p className="mt-1 text-sm text-neutral-700">
+              We confirm fitment for your vehicle before this order ships and contact you first if anything
+              in this package can&apos;t be confirmed.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  const description = fitmentInfo.description;
 
   return (
     <div className="rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 border border-green-200 p-5">
@@ -599,12 +615,17 @@ export default function ReviewPackagePage() {
 
   // Extract vehicle from first wheel (source of truth)
   const vehicle = wheels[0]?.vehicle || tires[0]?.vehicle;
-  const fitmentClass = wheels[0]?.fitmentClass;
+  // 2026-09-20 (Codex review): the fit label must follow the server's per-SKU certification
+  // (fitVerified, set at add-to-cart from the fitment-search response), not the raw geometry
+  // class. An uncertified "specfit" wheel (e.g. missing OE offset provenance) is shown as
+  // "Fit not yet confirmed", never "Guaranteed/Verified Fit".
+  const reviewFitCertified = wheels.length > 0 && wheels.every((w) => w.fitVerified === true);
+  const fitmentClass = reviewFitCertified ? wheels[0]?.fitmentClass : undefined;
 
-  // Calculate subtotals
-  const wheelSubtotal = wheels.reduce((sum, w) => sum + w.unitPrice * w.quantity, 0);
-  const tireSubtotal = tires.reduce((sum, t) => sum + t.unitPrice * t.quantity, 0);
-  const accessorySubtotal = accessories.reduce((sum, a) => sum + a.unitPrice * a.quantity, 0);
+  // Calculate subtotals - exact per-line money (staggered sets are 2 front + 2 rear)
+  const wheelSubtotal = wheels.reduce((sum, w) => sum + cartLineTotal(w), 0);
+  const tireSubtotal = tires.reduce((sum, t) => sum + cartLineTotal(t), 0);
+  const accessorySubtotal = accessories.reduce((sum, a) => sum + cartLineTotal(a), 0);
 
   const isComplete = hasWheels() && hasTires();
 
@@ -734,7 +755,7 @@ export default function ReviewPackagePage() {
             )}
 
             {/* Fitment Guarantee */}
-            <FitmentGuarantee fitmentClass={fitmentClass} />
+            <FitmentGuarantee fitmentClass={fitmentClass} certified={reviewFitCertified} />
           </div>
 
           {/* Sidebar */}

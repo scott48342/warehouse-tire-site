@@ -178,7 +178,7 @@ export function TireBuyBox({
       <EnhancedTrustStrip hasVehicle={hasVehicle} hasWarranty={hasWarranty} />
 
       {/* Social proof + guarantees right at the decision point */}
-      <ProductTrustBlock className="mt-3" />
+      <ProductTrustBlock className="mt-3" fitVerified={false} />
     </div>
   );
 }

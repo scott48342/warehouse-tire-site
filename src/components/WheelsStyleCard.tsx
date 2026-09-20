@@ -174,7 +174,7 @@ function generateWhyThisWheel(params: {
   if (topPickCategory) {
     switch (topPickCategory) {
       case "best-overall":
-        return "Perfect blend of style, fitment, and value";
+        return "Strong blend of style, sizing and value";
       case "most-popular":
         return "Customer favorite for this vehicle";
       case "best-style":
@@ -474,12 +474,13 @@ function StyleTagsDisplay({ tags }: { tags: WheelStyleTag[] }) {
 // ═══════════════════════════════════════════════════════════════════════════════
 // TRUST STRIP - Near CTA for conversion confidence (refined colors)
 // ═══════════════════════════════════════════════════════════════════════════════
-function TrustStrip({ showHardware = true, freeShipping = false }: { showHardware?: boolean; freeShipping?: boolean }) {
+function TrustStrip({ showHardware = true, freeShipping = false, fitClaim = false }: { showHardware?: boolean; freeShipping?: boolean; fitClaim?: boolean }) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 font-medium">
+      {/* 2026-09-20 (Codex): "Guaranteed Fit" only on a server-certified card; otherwise a neutral support line */}
       <span className="inline-flex items-center gap-1">
         <span className="text-emerald-500">✓</span>
-        <span>Guaranteed Fit</span>
+        <span>{fitClaim ? "Guaranteed Fit" : "Fitment support"}</span>
       </span>
       {showHardware && (
         <span className="inline-flex items-center gap-1">
@@ -821,6 +822,14 @@ export function WheelsStyleCard({
 
   // Top Pick category badge config
   const topPickConfig = topPickCategory ? TOP_PICK_CONFIG[topPickCategory] : null;
+  // 2026-09-20 (Codex): every positive fit statement on the card (Perfect Fit / Recommended guidance,
+  // 'Stock size - No modifications needed', OEM+ Fit / Flush Fit tags, 'Guaranteed Fit' strip) is
+  // allowed only when THIS SKU (both axles when staggered) is server-certified and nothing blocks it.
+  const fitClaimOk = fitCertified === true && !certificationBlock;
+  const gatedFitmentLevel: FitmentLevel | undefined =
+    fitClaimOk ? fitmentLevel : (fitmentLevel === "perfect" || fitmentLevel === "recommended" ? undefined : fitmentLevel);
+  const gatedStyleTags = fitClaimOk ? styleTags : styleTags.filter((t) => t !== "oem-plus" && t !== "flush-fit");
+  const gatedSizeContext = fitClaimOk || (sizeContext && sizeContext.type !== "stock") ? sizeContext : null;
 
   return (
     <div 
@@ -1056,31 +1065,31 @@ export function WheelsStyleCard({
         {/* ═══════════════════════════════════════════════════════════════════════
             STYLE TAGS (Visual decision helpers)
             ═══════════════════════════════════════════════════════════════════════ */}
-        <StyleTagsDisplay tags={styleTags} />
+        <StyleTagsDisplay tags={gatedStyleTags} />
 
         {/* ═══════════════════════════════════════════════════════════════════════
             SIZE CONTEXT (Stock vs Upgraded) - Deprecated, replaced by Fitment Guidance
             ═══════════════════════════════════════════════════════════════════════ */}
-        {!fitmentLevel && sizeContext && (
+        {!gatedFitmentLevel && gatedSizeContext && (
           <div className={`mt-2 flex items-center gap-1.5 text-xs font-medium ${
-            sizeContext.type === "stock" ? "text-green-700" : "text-blue-700"
+            gatedSizeContext.type === "stock" ? "text-green-700" : "text-blue-700"
           }`}>
             <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] ${
-              sizeContext.type === "stock" ? "bg-green-100" : "bg-blue-100"
+              gatedSizeContext.type === "stock" ? "bg-green-100" : "bg-blue-100"
             }`}>
-              {sizeContext.icon}
+              {gatedSizeContext.icon}
             </span>
-            {sizeContext.text}
+            {gatedSizeContext.text}
           </div>
         )}
 
         {/* ═══════════════════════════════════════════════════════════════════════
             FITMENT GUIDANCE BADGES (2026-04-07)
             ═══════════════════════════════════════════════════════════════════════ */}
-        {fitmentLevel && (
+        {gatedFitmentLevel && (
           <div className="mt-2">
             <FitmentGuidanceStrip
-              level={fitmentLevel}
+              level={gatedFitmentLevel}
               buildRequirement={buildRequirement || "stock"}
               variant="compact"
             />
@@ -1218,7 +1227,7 @@ export function WheelsStyleCard({
               TRUST STRIP (Near CTA)
               ═══════════════════════════════════════════════════════════════════ */}
           <div className="mt-3">
-            <TrustStrip showHardware={!!fitmentClass} freeShipping={freeShipping} />
+            <TrustStrip showHardware={!!fitmentClass} freeShipping={freeShipping} fitClaim={fitCertified === true && !certificationBlock} />
           </div>
         </div>
 

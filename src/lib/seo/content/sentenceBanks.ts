@@ -314,10 +314,10 @@ const FITMENT_SENTENCES = [
 ];
 
 const FITMENT_SENTENCES_NO_OEM = [
-  "We verify every wheel fits your {year} {make} {model} before shipping.",
+  "Every wheel is checked against your {year} {make} {model} bolt pattern, hub bore and factory sizes.",
   "All wheels shown are fitment-verified for the {year} {make} {model}.",
   "Every option is compatible with your {year} {make} {model}.",
-  "Guaranteed fitment for your {year} {make} {model}—no guesswork needed.",
+  "Every wheel for your {year} {make} {model} shows its own fit rating.",
 ];
 
 // ============================================================================

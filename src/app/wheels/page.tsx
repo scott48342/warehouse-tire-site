@@ -1181,6 +1181,12 @@ export default async function WheelsPage({
     }
   });
 
+  // 2026-09-20 (Codex): page-level fit claims need at least one server-certified result.
+  // fitment.confidence describes the VEHICLE data, not whether any wheel on screen is a verified fit.
+  const certifiedCount = items.filter((w) => w.fitCertified === true).length;
+  const anyCertified = certifiedCount > 0;
+  const allCertified = items.length > 0 && certifiedCount === items.length;
+
   // Show ALL non-excluded results (don't filter by image availability).
   // Wheels without images will show a placeholder; fitmentClass controls sort order, not visibility.
   const itemsFinal0 = items;
@@ -1739,6 +1745,7 @@ export default async function WheelsPage({
             vehicleMake={make}
             vehicleModel={model}
             modification={modification || undefined}
+            fitCertified={allCertified}
           />
         </div>
       )}
@@ -1788,11 +1795,21 @@ export default async function WheelsPage({
                     <span className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-bold text-neutral-600">
                       {fitCertificationBlock === "trim_required" ? "Select trim to confirm fit" : "Fit not yet confirmed"}
                     </span>
-                  ) : hasVehicle && !effectivelyBlocked && !data?.error && fitmentConfidence === "high" ? (
-                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-bold text-green-700">
+                  ) : hasVehicle && !effectivelyBlocked && !data?.error && !anyCertified && items.length > 0 ? (
+                    /* 2026-09-20: results exist but none is server-certified (e.g. staggered without per-axle OE offsets) */
+                    <span className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-bold text-neutral-600" data-testid="wheels-header-fit-unconfirmed">
+                      Fit not yet confirmed
+                    </span>
+                  ) : hasVehicle && !effectivelyBlocked && !data?.error && anyCertified && !allCertified ? (
+                    /* 2026-09-20 (Codex): mixed list - a blanket claim would let one certified wheel label the rest */
+                    <span className="rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-bold text-green-700" data-testid="wheels-header-fit-mixed">
+                      Verified options available
+                    </span>
+                  ) : hasVehicle && !effectivelyBlocked && !data?.error && allCertified && fitmentConfidence === "high" ? (
+                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-bold text-green-700" data-testid="wheels-header-fit-verified">
                       Verified Fit
                     </span>
-                  ) : hasVehicle && !effectivelyBlocked && !data?.error && fitmentConfidence === "medium" ? (
+                  ) : hasVehicle && !effectivelyBlocked && !data?.error && allCertified ? (
                     <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-bold text-amber-700">
                       Good Fit
                     </span>
@@ -2147,7 +2164,8 @@ export default async function WheelsPage({
                   </span>
                 </div>
                 <div className="text-xs text-green-700 font-semibold">
-                  No guesswork - guaranteed fitment
+                  {/* 2026-09-20 (Codex): guarantee copy only when every listed SKU is server-certified */}
+                  {allCertified ? "No guesswork - guaranteed fitment" : "Fit confirmed before you buy"}
                 </div>
               </div>
             ) : null}

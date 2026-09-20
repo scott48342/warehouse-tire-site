@@ -24,14 +24,14 @@ export function Footer() {
               </h2>
             </Link>
             <p className="mt-2 text-sm text-neutral-400">
-              Quality wheels & tires with verified fitment for your vehicle.
+              Quality wheels & tires, fit-rated for your vehicle.
             </p>
             
             {/* Trust Badge */}
             <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-neutral-800 px-3 py-2 text-xs">
               <span className="text-green-400">✓</span>
               <span className="text-neutral-300">
-                Verified fitment for 99% of vehicles (2000–{currentYear})
+                Fitment data for vehicles 2000-{currentYear} - every item shows its fit rating
               </span>
             </div>
           </div>

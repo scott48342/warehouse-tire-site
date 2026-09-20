@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { normalizeTireSize } from "@/lib/productFormat";
 import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
@@ -117,7 +117,7 @@ function WheelCartItem({
   // 2026-09-20 (Codex): the class badge is a fit CLAIM ("Good Fit"), so it is shown only
   // for a server-certified line; an unverified line gets the neutral text below instead.
   const fitment = item.fitVerified === true && item.fitmentClass ? FITMENT_LABELS[item.fitmentClass] : null;
-  const total = item.unitPrice * item.quantity;
+  const total = cartLineTotal(item);
 
   return (
     <div className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-5">
@@ -259,7 +259,7 @@ function TireCartItem({
   onRemove: () => void;
   onUpdateQty: (qty: number) => void;
 }) {
-  const total = item.unitPrice * item.quantity;
+  const total = cartLineTotal(item);
 
   // Build load/speed display (e.g., "102H" or "102 H")
   const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
@@ -358,7 +358,7 @@ function AccessoryCartItem({
   item: CartAccessoryItem;
   onRemove: () => void;
 }) {
-  const total = item.unitPrice * item.quantity;
+  const total = cartLineTotal(item);
 
   // Icon based on category
   const iconMap: Record<string, string> = {
@@ -476,6 +476,10 @@ export default function CartPage() {
   const itemCount = getItemCount();
   const wheels = getWheels();
   const vehicle = wheels[0]?.vehicle;
+  // 2026-09-20 (Codex): every guarantee/verified string on this page keys off this one flag -
+  // true only when EVERY vehicle-tagged wheel/tire line was added through the server-certified path.
+  const vehicleLines = items.filter((i): i is CartWheelItem | CartTireItem => (i.type === "wheel" || i.type === "tire") && Boolean(i.vehicle));
+  const cartFitVerified = vehicleLines.length > 0 && vehicleLines.every((i) => i.fitVerified === true);
 
   // Shipping estimation (only used in national mode)
   const {
@@ -759,7 +763,7 @@ export default function CartPage() {
               )}
 
               {/* Social proof right at the decision point */}
-              <CartTrustModule className="mt-5" />
+              <CartTrustModule className="mt-5" fitVerified={cartFitVerified} />
 
               <div className="mt-4 space-y-3">
                 <Link
@@ -819,7 +823,7 @@ export default function CartPage() {
             <CheckoutTrustStrip className="mt-4" />
 
             {/* Why Shop With Us */}
-            <CartTrustSection className="mt-4" />
+            <CartTrustSection className="mt-4" fitVerified={cartFitVerified} />
 
             {/* Customer Reviews */}
             <ReviewsMini count={2} />

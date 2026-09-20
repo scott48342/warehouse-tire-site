@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
@@ -389,7 +389,7 @@ export default function CheckoutPage() {
   const taxableSubtotal = useMemo(() => {
     return items
       .filter((item) => item.type === "wheel" || item.type === "tire")
-      .reduce((sum, item) => sum + (item.unitPrice || 0) * (item.quantity || 1), 0);
+      .reduce((sum, item) => sum + cartLineTotal(item), 0);
   }, [items]);
 
   const calculatedTax = taxableSubtotal * taxRate;
@@ -983,7 +983,7 @@ export default function CheckoutPage() {
                         <p className="text-sm font-semibold text-neutral-900 truncate">{w.brand} {w.model}</p>
                         <WheelSummaryDetails wheel={w} />
                       </div>
-                      <div className="text-sm font-semibold">${(w.unitPrice * w.quantity).toFixed(2)}</div>
+                      <div className="text-sm font-semibold">${cartLineTotal(w).toFixed(2)}</div>
                     </div>
                   ))}
                   {tires.map((t) => (
@@ -999,7 +999,7 @@ export default function CheckoutPage() {
                         <p className="text-sm font-semibold text-neutral-900 truncate">{t.brand} {t.model}</p>
                         <p className="text-xs text-neutral-500">{t.size} • Qty: {t.quantity}</p>
                       </div>
-                      <div className="text-sm font-semibold">${(t.unitPrice * t.quantity).toFixed(2)}</div>
+                      <div className="text-sm font-semibold">${cartLineTotal(t).toFixed(2)}</div>
                     </div>
                   ))}
                   {accessories.map((a) => (
@@ -1011,7 +1011,7 @@ export default function CheckoutPage() {
                         <p className="text-sm font-semibold text-neutral-900 truncate">{a.name}</p>
                         <p className="text-xs text-neutral-500">Qty: {a.quantity}</p>
                       </div>
-                      <div className="text-sm font-semibold">${(a.unitPrice * a.quantity).toFixed(2)}</div>
+                      <div className="text-sm font-semibold">${cartLineTotal(a).toFixed(2)}</div>
                     </div>
                   ))}
                   <div className="pt-3 border-t border-neutral-100 flex justify-between font-bold text-lg">
@@ -1430,7 +1430,7 @@ export default function CheckoutPage() {
                       <WheelSummaryDetails wheel={wheel} />
                     </div>
                     <div className="text-sm font-semibold text-neutral-900">
-                      ${(wheel.unitPrice * wheel.quantity).toFixed(2)}
+                      ${cartLineTotal(wheel).toFixed(2)}
                     </div>
                   </div>
                 ))}
@@ -1453,7 +1453,7 @@ export default function CheckoutPage() {
                       )}
                     </div>
                     <div className="text-sm font-semibold text-neutral-900">
-                      ${(tire.unitPrice * tire.quantity).toFixed(2)}
+                      ${cartLineTotal(tire).toFixed(2)}
                     </div>
                   </div>
                 ))}
@@ -1467,7 +1467,7 @@ export default function CheckoutPage() {
                       <p className="text-xs text-neutral-500">Qty: {acc.quantity}</p>
                     </div>
                     <div className="text-sm font-semibold text-neutral-900">
-                      ${(acc.unitPrice * acc.quantity).toFixed(2)}
+                      ${cartLineTotal(acc).toFixed(2)}
                     </div>
                   </div>
                 ))}
@@ -1643,7 +1643,7 @@ export default function CheckoutPage() {
 
             {/* Minimal trust line - LOCAL (conversion content moved to left column) */}
             {isLocal ? (
-              <CheckoutTrustBadges className="py-2" />
+              <CheckoutTrustBadges className="py-2" fitVerified={allFitVerified} />
             ) : (
               <>
                 {/* National Mode: Keep existing trust strip */}
@@ -1714,7 +1714,7 @@ function CheckoutItem({
   onRemove: () => void;
   onQuantityChange: (newQty: number) => void;
 }) {
-  const lineTotal = item.unitPrice * item.quantity;
+  const lineTotal = cartLineTotal(item);
   
   // Quantity constraints
   // Wheels/tires: 4 (standard) or 5 (with spare), accessories: 1-99

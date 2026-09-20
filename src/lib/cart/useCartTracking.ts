@@ -10,6 +10,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
+import { cartLineTotal } from "@/lib/cart/CartContext";
 import type { CartItem, CartWheelItem, CartTireItem } from "./CartContext";
 
 const CART_ID_KEY = "wt_cart_id";
@@ -83,7 +84,7 @@ function extractVehicle(items: CartItem[]): { year?: string; make?: string; mode
  * Calculate cart totals
  */
 function calculateTotals(items: CartItem[]): { subtotal: number; estimatedTotal: number } {
-  const subtotal = items.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
+  const subtotal = items.reduce((sum, item) => sum + cartLineTotal(item), 0);
   // For now, estimated total is same as subtotal (taxes/shipping calculated at checkout)
   return { subtotal, estimatedTotal: subtotal };
 }

@@ -173,6 +173,8 @@ interface PackageBridgeCTAProps {
   modification?: string;
   wheelDiameter?: number;
   className?: string;
+  /** true only when every listed wheel is server-certified for the vehicle (2026-09-20) */
+  fitCertified?: boolean;
 }
 
 export function PackageBridgeCTA({
@@ -182,6 +184,7 @@ export function PackageBridgeCTA({
   modification,
   wheelDiameter,
   className = "",
+  fitCertified = false,
 }: PackageBridgeCTAProps) {
   const searchParams = useSearchParams();
   
@@ -324,7 +327,7 @@ export function PackageBridgeCTA({
             {/* Trust signals - inline with CTA */}
             <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-600">
               <span className="flex items-center gap-1">
-                <span className="text-green-500">✓</span> Fitment guaranteed
+                <span className="text-green-500">✓</span> {fitCertified ? "Fitment guaranteed" : "Fit confirmed before you buy"}
               </span>
               <span className="flex items-center gap-1">
                 <span className="text-green-500">✓</span> As low as $99/mo with Affirm

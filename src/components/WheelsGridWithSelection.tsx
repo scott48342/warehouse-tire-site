@@ -1703,9 +1703,18 @@ export function WheelsGridWithSelection({
                   <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
                     {certificationBlock === "trim_required" ? "Select trim to confirm fit" : "Fit not yet confirmed"}
                   </span>
-                ) : (
+                ) : filteredRecommended.slice(0, 4).length > 0 && filteredRecommended.slice(0, 4).every((w) => w.fitCertified === true) ? (
+                  /* 2026-09-20 (Codex): blanket claim only when EVERY displayed pick is server-certified */
                   <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
                     <span className="text-green-600">&#10003;</span> Verified Fitment
+                  </span>
+                ) : filteredRecommended.slice(0, 4).some((w) => w.fitCertified === true) ? (
+                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
+                    <span className="text-green-600">&#10003;</span> Verified options available
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
+                    Fit not yet confirmed
                   </span>
                 )}                <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
                   <span className="text-neutral-400">🔧</span> Hardware Included

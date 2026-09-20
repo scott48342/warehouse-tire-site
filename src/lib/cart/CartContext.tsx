@@ -171,6 +171,37 @@ export function isFixedQuantityLine(i: CartItem): boolean {
   return (i.type === "wheel" || i.type === "tire") && Boolean((i as { rearSku?: string }).rearSku);
 }
 
+/**
+ * Exact money for one cart line (2026-09-20, Codex 'totals' finding).
+ * A staggered set stores a BLENDED unitPrice = round((2*front + 2*rear) / 4), so unitPrice * 4 can
+ * differ from the true set price by a cent or two (RIDLER 652: 2 x 336.12 + 2 x 345.41 = 1363.06,
+ * blended 340.77 x 4 = 1363.08). The server charges the exact 2+2 split, so every client sum
+ * (cart line, subtotal, checkout summary, tax base) must use this helper instead of unitPrice * qty.
+ */
+/**
+ * A usable axle price is a finite, non-negative number (or a numeric string of one). Number(null),
+ * Number("") and Number(undefined-as-0) must NOT count - a persisted/legacy staggered line with a
+ * null or blank axle price falls back to unitPrice * quantity instead of undercounting one axle.
+ */
+function axlePrice(v: unknown): number | null {
+  if (typeof v === "number") return Number.isFinite(v) && v >= 0 ? v : null;
+  if (typeof v === "string" && v.trim() !== "") {
+    const n = Number(v);
+    return Number.isFinite(n) && n >= 0 ? n : null;
+  }
+  return null;
+}
+
+export function cartLineTotal(i: Pick<CartItem, "type" | "unitPrice" | "quantity"> & { rearSku?: string; frontUnitPrice?: number | null; rearUnitPrice?: number | null; staggered?: boolean }): number {
+  const f = axlePrice(i.frontUnitPrice);
+  const r = axlePrice(i.rearUnitPrice);
+  if ((i.type === "wheel" || i.type === "tire") && i.rearSku && f !== null && r !== null) {
+    // fixed 4-unit set: 2 front + 2 rear (isFixedQuantityLine pins quantity to 4)
+    return Math.round((2 * f + 2 * r) * 100) / 100;
+  }
+  return Math.round((Number(i.unitPrice) || 0) * (Number(i.quantity) || 0) * 100) / 100;
+}
+
 type CartContextValue = {
   items: CartItem[];
   /** Whether cart has loaded from localStorage (safe to check items.length) */
@@ -527,7 +558,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [items]);
 
   const getTotal = useCallback(() => {
-    return items.reduce((sum, i) => sum + i.unitPrice * i.quantity, 0);
+    // exact per-line money (staggered 2+2 split) - see cartLineTotal
+    return Math.round(items.reduce((sum, i) => sum + cartLineTotal(i), 0) * 100) / 100;
   }, [items]);
 
   const hasWheels = useCallback(() => {

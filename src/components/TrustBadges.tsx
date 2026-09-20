@@ -11,7 +11,8 @@ export type TrustBadgeType =
   | "verified_vehicle"
   | "no_rubbing"
   | "free_shipping"
-  | "expert_support";
+  | "expert_support"
+  | "fit_rated";
 
 export type TrustBadgeSize = "sm" | "md" | "lg";
 export type TrustBadgeVariant = "filled" | "outline" | "subtle";
@@ -85,6 +86,17 @@ const BADGE_CONFIG: Record<TrustBadgeType, {
     color: "text-amber-700",
     bgColor: "bg-amber-50",
     borderColor: "border-amber-200",
+  },
+  // 2026-09-20 (Codex): neutral replacement for the blanket guarantees when a cart holds items
+  // that are not server-certified for the vehicle.
+  fit_rated: {
+    icon: "i",
+    label: "Fit Rating on Every Item",
+    shortLabel: "Fit rated",
+    description: "Each wheel and tire shows how it was checked against your vehicle",
+    color: "text-neutral-700",
+    bgColor: "bg-neutral-50",
+    borderColor: "border-neutral-200",
   },
   expert_support: {
     icon: "👨‍🔧",
@@ -289,12 +301,13 @@ export function VehicleVerifiedBadge({
 // Cart Trust Section
 // ============================================================================
 
-export function CartTrustSection({ className = "" }: { className?: string }) {
+export function CartTrustSection({ className = "", fitVerified = false }: { className?: string; /** true only when EVERY vehicle-tagged line in the cart is server-certified (same rule as the checkout bullets) */ fitVerified?: boolean }) {
   return (
-    <div className={`rounded-lg border border-neutral-200 bg-white p-4 ${className}`}>
+    <div className={`rounded-lg border border-neutral-200 bg-white p-4 ${className}`} data-testid={fitVerified ? "cart-trust-verified" : "cart-trust-neutral"}>
       <h3 className="font-semibold text-neutral-900 mb-3">Why Shop With Us</h3>
+      {/* 2026-09-20 (Codex): 'Fitment Guaranteed' / 'No Rubbing Guarantee' were unconditional even when the cart held Custom Fit lines */}
       <TrustBadgesStack
-        badges={["fitment_guaranteed", "no_rubbing", "free_shipping", "expert_support"]}
+        badges={fitVerified ? ["fitment_guaranteed", "no_rubbing", "free_shipping", "expert_support"] : ["fit_rated", "free_shipping", "expert_support"]}
         size="sm"
       />
     </div>

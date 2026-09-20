@@ -17,12 +17,12 @@ type GuideMessageKey =
 
 const GUIDE_MESSAGES: Record<GuideMessageKey, string> = {
   "vehicle-start": "Let's find your perfect wheel and tire setup.",
-  "wheels-intro": "Let's start with wheels — I'll make sure everything fits perfectly.",
-  "wheels-selected": "Nice choice — these will fit great. Let me show you the best tires to match.",
-  "tires-intro": "These tires are matched specifically to your wheels and vehicle.",
+  "wheels-intro": "Let's start with wheels - each one shows its own fit rating for your vehicle.",
+  "wheels-selected": "Nice choice. Let me show you tires sized to these wheels.",
+  "tires-intro": "These tires are sized to your wheels and your vehicle's factory specs.",
   "tires-selected": "Great pick. Your setup is looking solid.",
-  "review-intro": "Everything here is guaranteed to fit your vehicle — no guesswork.",
-  "review-complete": "You're all set — this setup will fit perfectly.",
+  "review-intro": "Here's your setup - check each item's fit rating before you check out.",
+  "review-complete": "You're all set. Your cart shows the fit status of every item.",
 };
 
 // ============================================================================

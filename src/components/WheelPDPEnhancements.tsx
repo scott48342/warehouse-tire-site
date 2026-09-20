@@ -347,7 +347,7 @@ export function WheelWarrantySupport() {
         </li>
         <li className="flex items-start gap-3 text-sm text-neutral-700">
           <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs">✓</span>
-          <span>Fitment guaranteed — we verify before shipping</span>
+          <span>Fitment reviewed before shipping</span>
         </li>
         <li className="flex items-start gap-3 text-sm text-neutral-700">
           <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs">✓</span>
