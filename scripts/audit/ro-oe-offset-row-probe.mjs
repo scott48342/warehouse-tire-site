@@ -1,0 +1,10 @@
+﻿import pg from "pg";
+const url = process.env.POSTGRES_URL;
+const c = new pg.Client({ connectionString: url, ssl: { rejectUnauthorized: false } });
+await c.connect();
+await c.query("SET default_transaction_read_only = on");
+const r = await c.query(`select id, year, make, model, display_trim, raw_trim, modification_id, bolt_pattern, center_bore_mm, offset_min_mm, offset_max_mm, oem_wheel_sizes::text, source, quality_tier, certification_status, confidence_tag, wheel_specs_source, wheel_specs_confidence, wheel_specs_verified_at, quarantined_at, updated_at from vehicle_fitments where year=2020 and make ilike 'Ford' and model ilike 'Mustang' order by display_trim`);
+console.log(JSON.stringify(r.rows, null, 1));
+const cf = await c.query(`select count(*) n from information_schema.tables where table_name='classic_fitments'`);
+console.log("classic_fitments table:", cf.rows[0].n);
+await c.end();

@@ -62,6 +62,8 @@ export type FitmentEnvelope = {
   mode: FitmentMode;
   // Whether offset ranges are based on verified OEM data or a generic fallback
   oemOffsetVerified: boolean;
+  /** Where the OE offset range came from (2026-09-20). */
+  oemOffsetSource?: "oem_wheel_sizes" | "db_offset_range" | "conflicting" | "unverified";
   /**
    * Whether oemMinDiameter came from real factory wheel data (vs. the 17" fallback).
    * When true, wheels smaller than oemMinDiameter are EXCLUDED (brake clearance) — see NO-DOWNSIZE RULE.
@@ -326,6 +328,14 @@ export type OEMSpecs = {
     rimWidth: number;
     offset: number | null;
   }>;
+  /**
+   * Sourced OE offset range from vehicle_fitments.offset_min_mm / offset_max_mm (2026-09-20).
+   * Used when no per-wheel inline offset exists in oem_wheel_sizes. 18.5k of 32.6k certified
+   * rows have ONLY this range; without it the envelope centred on 0 mm (a missing-value default)
+   * and certified 0-offset wheels on cars whose factory offset is +30..+55.
+   */
+  offsetMinMm?: number | null;
+  offsetMaxMm?: number | null;
 };
 
 /**
@@ -348,7 +358,10 @@ export function buildFitmentEnvelope(
   // Extract OEM ranges from wheel specs
   const diameters = oem.wheelSpecs.map(s => s.rimDiameter).filter(d => d > 0);
   const widths = oem.wheelSpecs.map(s => s.rimWidth).filter(w => w > 0);
-  const offsets = oem.wheelSpecs.map(s => s.offset).filter((o): o is number => o !== null);
+  // 2026-09-20: finite values only - null/undefined/NaN/Infinity are all "no data", never a range end.
+  const offsets = oem.wheelSpecs
+    .map(s => (s.offset == null ? NaN : Number(s.offset)))
+    .filter((o): o is number => Number.isFinite(o));
 
   // CONSERVATIVE FALLBACK: Use 17" minimum when no OEM data exists.
   // This prevents showing invalid 15-16" wheels on modern vehicles.
@@ -359,13 +372,31 @@ export function buildFitmentEnvelope(
   const oemMaxDiameter = diameters.length > 0 ? Math.max(...diameters) : 22;
   const oemMinWidth = widths.length > 0 ? Math.min(...widths) : 7;
   const oemMaxWidth = widths.length > 0 ? Math.max(...widths) : 10;
-  // NOTE (2026-06-30): When no inline offset data exists, the envelope offset
-  // range is set to a wide permissive range so classification doesn't break.
-  // The geometry validator in fitment-search/route.ts is the actual hard gate.
-  // oemOffsetVerified=false signals that the offset range is unverified.
-  const oemOffsetVerified = offsets.length > 0;
-  const oemMinOffset = offsets.length > 0 ? Math.min(...offsets) : 0;
-  const oemMaxOffset = offsets.length > 0 ? Math.max(...offsets) : 0;
+  // OE offset range precedence (2026-09-20, Codex review of fba009bb):
+  //   1. inline per-wheel offsets from oem_wheel_sizes (axle-specific, most precise)
+  //   2. the row's sourced offset_min_mm / offset_max_mm range
+  //   3. nothing -> UNVERIFIED. The 0/0 below is a placeholder so downstream math
+  //      does not break; validateWheel treats an unverified offset as a major
+  //      deviation (never surefit/specfit). A genuine 0 mm factory offset arrives
+  //      through 1 or 2 and is verified like any other value.
+  // Before this change only (1) was consulted, so every row with just the DB range
+  // (18,511 certified rows) classified and RANKED wheels around 0 mm: a 20x10 ET0 on
+  // a 2020 Mustang GT PP (factory +30..+52) was "specfit"/certified while factory-offset
+  // wheels were "extended".
+  const dbMin = oem.offsetMinMm != null && Number.isFinite(Number(oem.offsetMinMm)) ? Number(oem.offsetMinMm) : null;
+  const dbMax = oem.offsetMaxMm != null && Number.isFinite(Number(oem.offsetMaxMm)) ? Number(oem.offsetMaxMm) : null;
+  // An inverted range (min > max) is conflicting data, not a range: do NOT quietly swap the
+  // ends - treat it as unverified so nothing can be certified against it (Codex 2026-09-20).
+  const dbRangeInverted = dbMin !== null && dbMax !== null && dbMin > dbMax;
+  if (dbRangeInverted) {
+    console.warn(`[buildFitmentEnvelope] inverted OE offset range ${dbMin}..${dbMax} mm for ${oem.boltPattern} - treating offset as UNVERIFIED`);
+  }
+  const hasDbRange = dbMin !== null && dbMax !== null && !dbRangeInverted;
+  const oemOffsetVerified = offsets.length > 0 || hasDbRange;
+  const oemOffsetSource: FitmentEnvelope["oemOffsetSource"] =
+    offsets.length > 0 ? "oem_wheel_sizes" : hasDbRange ? "db_offset_range" : dbRangeInverted ? "conflicting" : "unverified";
+  const oemMinOffset = offsets.length > 0 ? Math.min(...offsets) : hasDbRange ? dbMin! : 0;
+  const oemMaxOffset = offsets.length > 0 ? Math.max(...offsets) : hasDbRange ? dbMax! : 0;
 
   // Parse bolt pattern for studHoles and pcd if not provided
   let studHoles = oem.studHoles;
@@ -427,6 +458,7 @@ export function buildFitmentEnvelope(
 
     mode,
     oemOffsetVerified,
+    oemOffsetSource,
     oemDiameterVerified,
   };
 }
@@ -600,7 +632,15 @@ export function validateWheel(
   // Offset classification
   let offsetInRange = true;
   let offsetDeviation: "none" | "minor" | "major" = "none";
-  if (wheel.offset !== undefined) {
+  if (envelope.oemOffsetVerified === false) {
+    // 2026-09-20: no sourced OE offset at all. The envelope's 0/0 is a placeholder, not a
+    // measurement, so no offset can be judged "within OEM range". Fail closed on the CLAIM
+    // (extended, never certified) without excluding the wheel; the route's hard gate already
+    // returns no results when the row has neither inline offsets nor a DB range.
+    offsetInRange = false;
+    offsetDeviation = "major";
+    classificationReasons.push("OEM offset unverified for this vehicle - fit cannot be certified");
+  } else if (wheel.offset !== undefined) {
     const inOemRange = wheel.offset >= envelope.oemMinOffset && wheel.offset <= envelope.oemMaxOffset;
     const inAllowedRange = wheel.offset >= envelope.allowedMinOffset && wheel.offset <= envelope.allowedMaxOffset;
     
@@ -637,11 +677,17 @@ export function validateWheel(
   if (!hardRulesPass) {
     // Hard rule failure = EXCLUDED (this is the ONLY way to be excluded)
     fitmentClass = "excluded";
-  } else if (hasMajorDeviation) {
-    // Major deviation in soft rules = extended (truck aftermarket style)
+  } else if (hasMajorDeviation || hasMissingData) {
+    // Major deviation in soft rules = extended (truck aftermarket style).
+    // 2026-09-20: a wheel with an UNKNOWN width/offset/diameter/bore is also "extended" -
+    // it used to be "specfit" (certified "Good Fit") on data we never saw. Fail closed on
+    // the claim, keep the wheel browsable.
+    if (hasMissingData && !hasMajorDeviation) {
+      classificationReasons.push("Wheel width/offset/diameter/bore incomplete in catalog - fit cannot be certified");
+    }
     fitmentClass = "extended";
-  } else if (hasMinorDeviation || hasMissingData) {
-    // Minor deviation or missing data = specfit
+  } else if (hasMinorDeviation) {
+    // Minor deviation = specfit
     fitmentClass = "specfit";
   } else {
     // All rules pass within OEM ranges = surefit

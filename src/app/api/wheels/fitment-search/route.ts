@@ -1409,6 +1409,11 @@ async function handleDbProfilePath(
     boltPattern: dbProfile.boltPattern!,
     centerBore: Number(dbProfile.centerBoreMm || 0) || 0,
     wheelSpecs,
+    // 2026-09-20 (Codex review of fba009bb): the row's sourced OE offset range. Without it the
+    // envelope defaulted to 0/0 whenever oem_wheel_sizes had no inline offsets (18.5k rows) and
+    // classified/ranked wheels around ET0 instead of the factory +30..+52 on this Mustang.
+    offsetMinMm: dbProfile.offsetMinMm,
+    offsetMaxMm: dbProfile.offsetMaxMm,
   };
 
   let envelope = buildFitmentEnvelope(oem, mode);
@@ -2139,6 +2144,26 @@ async function handleDbFirstWheelResults(opts: {
             activeOemGeo = Math.abs(cw - fw) <= Math.abs(cw - rw)
               ? activeGeoFront
               : activeGeoRear;
+          }
+
+          // 2026-09-20 (Codex review of fba009bb): a staggered axle with NO per-axle inline
+          // offset resolved to {missing:true} and this block was silently SKIPPED - the only
+          // offset safety gate never ran, so a 20x10 ET0 rear on a 2020 Mustang GT PP (factory
+          // 9.5" +30..+52, i.e. ~47 mm more outboard) was certified "specfit". Fall back to
+          // the sourced DB-range midpoint (what every non-staggered vehicle already uses) so
+          // the gate runs; if even that is missing the route returned before this loop.
+          if (activeOemGeo?.missing && activeGeoPrimary && !activeGeoPrimary.missing) {
+            if (debug) console.log(`[fitment-search] GEO per-axle offset missing for ${c.sku}; using ${activeGeoPrimary.source} reference`);
+            activeOemGeo = activeGeoPrimary;
+            // Codex 2026-09-20: a shared vehicle range can hide DIFFERENT front/rear factory
+            // offsets, so the midpoint may only gate browsing - it never justifies a certified
+            // per-axle fit. Cap the claim at extended (Custom Fit); the geometry gate below still
+            // excludes unsafe candidates. This is why RC7/RIDLER pairs on the 2020 Mustang GT PP
+            // now browse as Custom Fit instead of Good Fit until per-axle OE offsets are sourced.
+            if ((v.fitmentClass as string) !== "excluded") {
+              v.fitmentClass = "extended";
+              v.classificationReasons.push("Factory front/rear offsets not known per axle - staggered fit cannot be certified");
+            }
           }
 
           if (activeOemGeo && !activeOemGeo.missing) {
@@ -3416,6 +3441,15 @@ async function handleDbFirstWheelResults(opts: {
       // (exact/equivalent certified fallback AND no-trim gate certifiable).
       showGuaranteedFit,
       certificationBlock,
+      // 2026-09-20: where the OE offset used for classification/ranking came from
+      // (oem_wheel_sizes | db_offset_range | unverified) and which reference the geometry gate used.
+      oemOffset: {
+        source: envelope.oemOffsetSource ?? (envelope.oemOffsetVerified ? "oem_wheel_sizes" : "unverified"),
+        verified: envelope.oemOffsetVerified,
+        geometryReference: opts.oemOffsetResult && !opts.oemOffsetResult.missing ? opts.oemOffsetResult.source : "missing",
+        frontAxleSpecific: !!(opts.frontOemOffsetResult && !opts.frontOemOffsetResult.missing && opts.frontOemOffsetResult.source === "oem_wheel_sizes_axle"),
+        rearAxleSpecific: !!(opts.rearOemOffsetResult && !opts.rearOemOffsetResult.missing && opts.rearOemOffsetResult.source === "oem_wheel_sizes_axle"),
+      },
       // Per-field approved-source verdict (states only; source names stay internal)
       sourceVerification: toPublicSourceVerification(opts.sourceVerification),
       // R3 no-trim gate (2026-09-18, audit F7)
@@ -3790,6 +3824,9 @@ async function handleLegacyPath(
       rimWidth: Number(ws.rimWidth),
       offset: ws.offset,
     })),
+    // 2026-09-20: sourced OE offset range (see the DB-first path above)
+    offsetMinMm: universalResult.offsetRange?.min ?? null,
+    offsetMaxMm: universalResult.offsetRange?.max ?? null,
   };
 
   const envelope = buildFitmentEnvelope(oemSpecs, mode);
