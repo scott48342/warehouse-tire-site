@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { rearAxleSpec, REAR_SIZE_UNCONFIRMED_COPY } from "@/lib/cart/staggeredWheelLine";
 import { useRouter } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { normalizeTireSize } from "@/lib/productFormat";
@@ -81,8 +82,9 @@ function VehicleConfirmation({
 function WheelItem({ item }: { item: CartWheelItem }) {
   const lineTotal = cartLineTotal(item);
   const staggered = Boolean(item.staggered && item.rearSku);
-  const rearWidth = item.rearWidth ?? item.width;
-  const rearOffset = item.rearOffset ?? item.offset;
+  // Rear axle from its OWN record (2026-09-20): mixed-diameter sets exist and a missing rear
+  // field is not evidence of a same-size set - show "not confirmed" instead of the front size.
+  const rear = rearAxleSpec(item);
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -114,8 +116,8 @@ function WheelItem({ item }: { item: CartWheelItem }) {
               {item.boltPattern ? ` · ${item.boltPattern}` : ""} · <span className="font-mono text-xs text-neutral-500">{item.sku}</span>
             </p>
             <p>
-              Rear x2: {item.diameter}x{rearWidth}
-              {rearOffset ? ` ET${rearOffset}` : ""}
+              Rear x2: {rear.rearConfirmed ? `${rear.diameter}x${rear.width}` : REAR_SIZE_UNCONFIRMED_COPY}
+              {rear.rearConfirmed && rear.offset ? ` ET${rear.offset}` : ""}
               {item.boltPattern ? ` · ${item.boltPattern}` : ""} · <span className="font-mono text-xs text-neutral-500">{item.rearSku}</span>
             </p>
           </div>

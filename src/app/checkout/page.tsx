@@ -9,6 +9,7 @@ import {
 } from "@/lib/checkout/paymentIntentSession";
 import { useRouter } from "next/navigation";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { rearAxleSpec, REAR_SIZE_UNCONFIRMED_COPY } from "@/lib/cart/staggeredWheelLine";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
@@ -46,8 +47,8 @@ import { CART_RECOVERY_CONSENT_WORDING } from "@/lib/cart/recoveryConsentWording
  */
 function WheelSummaryDetails({ wheel }: { wheel: CartWheelItem }) {
   if (wheel.staggered && wheel.rearSku) {
-    const rearWidth = wheel.rearWidth ?? wheel.width;
-    const rearOffset = wheel.rearOffset ?? wheel.offset;
+    // Rear axle from its OWN record (2026-09-20): never the front diameter for the rear.
+    const rear = rearAxleSpec(wheel);
     return (
       <div className="text-xs text-neutral-500 space-y-0.5" data-testid="checkout-wheel-staggered">
         <p className="font-medium text-neutral-600">Staggered set · 2 front + 2 rear</p>
@@ -56,8 +57,8 @@ function WheelSummaryDetails({ wheel }: { wheel: CartWheelItem }) {
           {wheel.offset ? ` ET${wheel.offset}` : ""} · <span className="font-mono">{wheel.sku}</span>
         </p>
         <p>
-          Rear ×2: {wheel.diameter}x{rearWidth}
-          {rearOffset ? ` ET${rearOffset}` : ""} · <span className="font-mono">{wheel.rearSku}</span>
+          Rear ×2: {rear.rearConfirmed ? `${rear.diameter}x${rear.width}` : REAR_SIZE_UNCONFIRMED_COPY}
+          {rear.rearConfirmed && rear.offset ? ` ET${rear.offset}` : ""} · <span className="font-mono">{wheel.rearSku}</span>
         </p>
         {wheel.frontUnitPrice != null && wheel.rearUnitPrice != null ? (
           <p>

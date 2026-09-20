@@ -63,6 +63,8 @@ export type SelectedWheel = {
   rearFinish?: string;
   diameter?: string;
   width?: string;
+  /** Rear axle diameter (staggered). Mixed-diameter sets exist - never assume `diameter`. */
+  rearDiameter?: string;
   rearWidth?: string;
   offset?: string;
   rearOffset?: string;
@@ -146,6 +148,7 @@ export function buildSelectedWheel(
       rearFinish: rearFinish ?? finish,
       diameter: String(pair.front.diameter),
       width: String(pair.front.width),
+      rearDiameter: pair.rear.diameter != null ? String(pair.rear.diameter) : undefined,
       rearWidth: pair.rear.width != null ? String(pair.rear.width) : undefined,
       offset: pair.front.offset != null ? String(pair.front.offset) : undefined,
       rearOffset: pair.rear.offset != null ? String(pair.rear.offset) : undefined,
@@ -334,7 +337,7 @@ function SelectionConfirmation({
               </div>
               <div className="text-xs text-neutral-500">
                 {wheel.staggered ? (
-                  <>F: {wheel.diameter}&quot;×{wheel.width}&quot; / R: {wheel.diameter}&quot;×{wheel.rearWidth}&quot;</>
+                  <>F: {wheel.diameter}&quot;×{wheel.width}&quot; / R: {wheel.rearDiameter ?? wheel.diameter}&quot;×{wheel.rearWidth}&quot;</>
                 ) : (
                   <>{wheel.diameter}&quot; × {wheel.width}&quot;</>
                 )}
@@ -1111,8 +1114,11 @@ export function WheelsGridWithSelection({
       if (selectedWheel.rearSku) params.set("wheelSkuRear", selectedWheel.rearSku);
       if (selectedWheel.rearWidth) params.set("wheelWidthRear", selectedWheel.rearWidth);
       if (selectedWheel.rearOffset) params.set("wheelOffsetRear", selectedWheel.rearOffset);
-      // Pass rear diameter for proper tire matching
-      if (selectedWheel.diameter) params.set("wheelDiaRear", selectedWheel.diameter); // Same dia typically
+      // Rear diameter from the REAR record (2026-09-20): mixed-diameter sets exist.
+      const rearDia = selectedWheel.rearDiameter ?? selectedWheel.diameter;
+      if (rearDia) params.set("wheelDiaRear", rearDia);
+      if (selectedWheel.diameter) params.set("wheelDiaFront", selectedWheel.diameter);
+      if (selectedWheel.width) params.set("wheelWidthFront", selectedWheel.width);
     }
     
     // Pass lifted context if present
@@ -1181,6 +1187,7 @@ export function WheelsGridWithSelection({
         finish: selectedWheel.finish,
         diameter: selectedWheel.diameter,
         width: selectedWheel.width,
+        rearDiameter: selectedWheel.rearDiameter,
         rearWidth: selectedWheel.rearWidth,
         offset: selectedWheel.offset,
         rearOffset: selectedWheel.rearOffset,
@@ -1354,6 +1361,7 @@ export function WheelsGridWithSelection({
       finish: selectedWheel.finish,
       diameter: selectedWheel.diameter,
       width: selectedWheel.width,
+      rearDiameter: selectedWheel.rearDiameter,
       rearWidth: selectedWheel.rearWidth,
       offset: selectedWheel.offset,
       rearOffset: selectedWheel.rearOffset,

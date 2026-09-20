@@ -3,6 +3,7 @@
 import { useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { useCart, cartLineTotal, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { buildTiresHandoff, isStaggeredWheelLine, rearAxleSpec } from "@/lib/cart/staggeredWheelLine";
 import { AccessoryRecommendations } from "./AccessoryRecommendations";
 import {
   loadLiftedContext,
@@ -65,13 +66,20 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
         ) : null}
 
         <div className="mt-1 flex flex-wrap gap-1 text-xs">
-          {item.staggered && item.rearWidth ? (
-            // Staggered: show front and rear specs
-            <>
-              <span className="text-neutral-600">F: {item.diameter}&quot;×{item.width}&quot;</span>
-              <span className="text-neutral-600">R: {item.diameter}&quot;×{item.rearWidth}&quot;</span>
-            </>
-          ) : (
+          {isStaggeredWheelLine(item) ? (() => {
+            // Staggered: front and rear from their OWN records (2026-09-20: never the front diameter for the rear)
+            const rear = rearAxleSpec(item);
+            return (
+              <>
+                <span className="text-neutral-600">F: {item.diameter}&quot;×{item.width}&quot;</span>
+                {rear.rearConfirmed ? (
+                  <span className="text-neutral-600">R: {rear.diameter}&quot;×{rear.width}&quot;</span>
+                ) : (
+                  <span className="text-amber-700">R: size not confirmed</span>
+                )}
+              </>
+            );
+          })() : (
             // Square: show single spec
             <>
               {item.diameter ? <span className="text-neutral-600">{item.diameter}&quot;</span> : null}
@@ -392,32 +400,10 @@ export function CartSlideout() {
     lastAddedVehicle ?? (distinctVehicleKeys.size === 1 ? cartVehicles[0] : undefined);
   // ─────────────────────────────────────────────────────────────────────────
 
-  // Build tires URL with vehicle, wheel, and lifted info
-  const tiresParams = new URLSearchParams();
-  if (vehicle) {
-    tiresParams.set("year", vehicle.year);
-    tiresParams.set("make", vehicle.make);
-    tiresParams.set("model", vehicle.model);
-    if (vehicle.trim) tiresParams.set("trim", vehicle.trim);
-    if (vehicle.modification) tiresParams.set("modification", vehicle.modification);
-  }
-  if (wheels[0]) {
-    tiresParams.set("wheelSku", wheels[0].sku);
-    if (wheels[0].diameter) tiresParams.set("wheelDia", wheels[0].diameter);
-    if (wheels[0].width) tiresParams.set("wheelWidth", wheels[0].width);
-    
-    // For staggered wheels, pass both front and rear specs so tires page knows exact wheel sizes
-    if (wheels[0].staggered) {
-      tiresParams.set("staggered", "true");
-      // Front specs (wheelDia/wheelWidth already set above - that's the front diameter)
-      if (wheels[0].width) tiresParams.set("wheelWidthFront", wheels[0].width);
-      // Rear specs - same diameter but different width
-      if (wheels[0].rearWidth) tiresParams.set("wheelWidthRear", wheels[0].rearWidth);
-      // For staggered with same diameter front/rear, use wheelDia for both
-      // wheelDiaRear is same as wheelDia for same-diameter staggered (e.g., 20x9 / 20x11)
-      if (wheels[0].diameter) tiresParams.set("wheelDiaRear", wheels[0].diameter);
-    }
-  }
+  // Build tires URL with vehicle, wheel, and lifted info. Staggered lines hand over BOTH axles
+  // from their own records; a line with an unconfirmed rear axle gets no tires hand-off (2026-09-20).
+  const tiresHandoff = buildTiresHandoff(wheels[0], vehicle);
+  const tiresParams = tiresHandoff.ok ? tiresHandoff.params : new URLSearchParams();
 
   // Include lifted context if it matches the current vehicle
   // This ensures lifted tire sizes are used instead of OEM sizes
@@ -441,7 +427,7 @@ export function CartSlideout() {
     }
   }
 
-  const tiresUrl = `/tires?${tiresParams.toString()}`;
+  const tiresUrl = tiresHandoff.ok ? `/tires?${tiresParams.toString()}` : tiresHandoff.reAddHref;
   const checkoutUrl = `/checkout`;
 
   return (
@@ -707,7 +693,7 @@ export function CartSlideout() {
               onClick={() => setIsOpen(false)}
               className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors gap-2"
             >
-              <span>Select Tires</span>
+              <span>{tiresHandoff.ok ? "Select Tires" : "Confirm rear wheel size first"}</span>
               <span className="text-red-200">→</span>
             </Link>
           ) : (

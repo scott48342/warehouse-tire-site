@@ -14,6 +14,8 @@ type AddToCartButtonProps = {
   finish?: string;
   diameter?: string;
   width?: string;
+  /** Rear axle diameter (staggered) - mixed-diameter sets exist (19 front / 20 rear). */
+  rearDiameter?: string;
   rearWidth?: string;
   offset?: string;
   rearOffset?: string;
@@ -57,6 +59,7 @@ export function AddToCartButton({
   finish,
   diameter,
   width,
+  rearDiameter,
   rearWidth,
   offset,
   rearOffset,
@@ -195,6 +198,7 @@ export function AddToCartButton({
       finish,
       diameter,
       width,
+      rearDiameter: staggered ? rearDiameter : undefined,
       rearWidth,
       offset,
       rearOffset,

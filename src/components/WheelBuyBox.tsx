@@ -212,6 +212,7 @@ export function WheelBuyBox({
             finish={finish}
             diameter={diameter}
             width={width}
+            rearDiameter={isStaggered ? staggered?.rearDiameter : undefined}
             rearWidth={isStaggered ? staggered?.rearWidth : undefined}
             offset={offset}
             rearOffset={isStaggered ? staggered?.rearOffset : undefined}

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { normalizeTireSize } from "@/lib/productFormat";
+import { buildTiresHandoff, isStaggeredWheelLine, rearAxleSpec, REAR_SIZE_UNCONFIRMED_COPY } from "@/lib/cart/staggeredWheelLine";
 import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
@@ -148,7 +149,7 @@ function WheelCartItem({
         {/* Release review 2026-09-19 (Codex browser acceptance): a staggered wheel line is 2 front +
             2 rear wheels with different width/offset/SKU. The cart used to show only the front size
             and SKU, hiding half of what the shopper is buying. Both axles are now itemised. */}
-        {item.staggered && item.rearSku ? (
+        {isStaggeredWheelLine(item) ? (() => { const rear = rearAxleSpec(item); return (
           <div className="mt-2 space-y-1 text-sm text-neutral-700" data-testid="cart-wheel-staggered">
             <div className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Staggered set · 2 front + 2 rear</div>
             <div className="flex flex-wrap gap-x-2">
@@ -159,13 +160,19 @@ function WheelCartItem({
             </div>
             <div className="flex flex-wrap gap-x-2">
               <span className="font-semibold">Rear ×2:</span>
-              <span>{item.diameter}" × {item.rearWidth ?? item.width}"</span>
-              {item.rearOffset ?? item.offset ? <span>• ET{item.rearOffset ?? item.offset}</span> : null}
-              <span className="font-mono text-xs text-neutral-400 self-center">SKU {item.rearSku}</span>
+              {rear.rearConfirmed ? (
+                <>
+                  <span data-testid="cart-wheel-rear-size">{rear.diameter}" × {rear.width}"</span>
+                  {rear.offset ? <span>• ET{rear.offset}</span> : null}
+                </>
+              ) : (
+                <span data-testid="cart-wheel-rear-unconfirmed" className="text-amber-800">{REAR_SIZE_UNCONFIRMED_COPY}</span>
+              )}
+              <span className="font-mono text-xs text-neutral-400 self-center">SKU {rear.sku}</span>
             </div>
             {item.boltPattern ? <div className="text-xs text-neutral-500">{item.boltPattern}</div> : null}
           </div>
-        ) : (
+        ); })() : (
           <>
             <div className="mt-2 flex flex-wrap gap-2 text-sm text-neutral-600">
               {item.diameter ? <span>{item.diameter}"</span> : null}
@@ -491,22 +498,13 @@ export default function CartPage() {
     isValidZip,
   } = useCartShipping(items, subtotal);
 
-  // Build URLs for next steps
-  const tiresParams = new URLSearchParams();
-  if (vehicle) {
-    tiresParams.set("year", vehicle.year);
-    tiresParams.set("make", vehicle.make);
-    tiresParams.set("model", vehicle.model);
-    if (vehicle.trim) tiresParams.set("trim", vehicle.trim);
-    if (vehicle.modification) tiresParams.set("modification", vehicle.modification);
-  }
-  if (wheels[0]) {
-    tiresParams.set("wheelSku", wheels[0].sku);
-    if (wheels[0].diameter) tiresParams.set("wheelDia", wheels[0].diameter);
-    if (wheels[0].width) tiresParams.set("wheelWidth", wheels[0].width);
-  }
-
-  const tiresUrl = `/tires?${tiresParams.toString()}`;
+  // Build URLs for next steps. A staggered wheel line hands the tires page BOTH axles
+  // (2026-09-20: the cart used to send only wheelDia/front SKU, so a 19/20 set searched 19" square).
+  // A staggered line whose rear axle is not recorded gets NO tires hand-off: the shopper re-adds
+  // the set from the PDP first (the tires page would otherwise assert the front diameter for the rear).
+  const tiresHandoff = buildTiresHandoff(wheels[0], vehicle);
+  const tiresUrl = tiresHandoff.ok ? `/tires?${tiresHandoff.params.toString()}` : tiresHandoff.reAddHref;
+  const tiresCta = tiresHandoff.ok ? "Add Tires" : "Confirm rear wheel size first";
 
   if (items.length === 0) {
     return (
@@ -668,8 +666,9 @@ export default function CartPage() {
                     <Link
                       href={tiresUrl}
                       className="mt-3 inline-flex h-10 items-center justify-center rounded-xl bg-amber-600 px-5 text-sm font-extrabold text-white hover:bg-amber-700"
+                      data-testid="cart-add-tires"
                     >
-                      Add Tires
+                      {tiresCta}
                     </Link>
                   </div>
                 </div>
@@ -778,7 +777,7 @@ export default function CartPage() {
                     href={tiresUrl}
                     className="flex h-11 w-full items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 text-sm font-bold text-neutral-900 hover:bg-neutral-50"
                   >
-                    Add Tires First
+                    {tiresHandoff.ok ? "Add Tires First" : tiresCta}
                   </Link>
                 ) : null}
               </div>

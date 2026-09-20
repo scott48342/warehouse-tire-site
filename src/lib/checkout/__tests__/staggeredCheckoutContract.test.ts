@@ -86,6 +86,7 @@ function toCartLine(sel: NonNullable<ReturnType<typeof buildSelectedWheel>>): Ca
     rearFinish: sel.rearFinish,
     diameter: sel.diameter,
     width: sel.width,
+    rearDiameter: sel.rearDiameter,
     rearWidth: sel.rearWidth,
     offset: sel.offset,
     rearOffset: sel.rearOffset,
@@ -109,8 +110,23 @@ describe("/wheels card -> selection (buildSelectedWheel)", () => {
     expect(sel.frontUnitPrice).toBe(300);
     expect(sel.rearUnitPrice).toBe(340);
     expect(sel.rearWidth).toBe("10");
+    expect(sel.rearDiameter).toBe("20");
     expect(sel.finish).toBe("Bronze");
     expect(sel.rearFinish).toBe("Bronze");
+  });
+
+  it("mixed-diameter pair (19 front / 20 rear): the selection carries the REAR diameter (2026-09-20 Codex live check)", () => {
+    const mixed = {
+      ...baseWheel, diameter: "19",
+      pair: { staggered: true, front: { ...baseWheel.pair.front, diameter: "19", width: "8.5" }, rear: { ...baseWheel.pair.rear, diameter: "20", width: "9.5" } },
+    };
+    const sel = buildSelectedWheel(mixed, "KMC", "KM700", { ...cardState, pair: mixed.pair })!;
+    expect(sel).not.toBeNull();
+    expect(sel.diameter).toBe("19");
+    expect(sel.rearDiameter).toBe("20");
+    expect(sel.rearWidth).toBe("9.5");
+    const line = toCartLine(sel);
+    expect(line.rearDiameter).toBe("20");
   });
 
   it("refuses a pair whose front SKU is a different variant than the displayed SKU (Q1-3)", () => {
@@ -184,8 +200,32 @@ describe("checkout -> snapshot -> supplier PO", () => {
     expect(f.meta?.axle).toBe("front"); expect(b.meta?.axle).toBe("rear");
     expect(f.meta?.staggeredSetId).toBe(b.meta?.staggeredSetId);
     expect(b.meta?.spec?.width).toBe("10");
+    expect(b.meta?.spec?.diameter).toBe("20");
+    expect(b.meta?.spec?.rearConfirmed).toBe(true);
     const total = r.lines.reduce((s, l) => s + l.unitPriceUsd * l.qty, 0);
     expect(total).toBe(1280);
+  });
+
+  it("mixed 19/20 line: the rear order line records 20, never the front 19", async () => {
+    const mixedLine: CartWheelItem = { ...line, diameter: "19", width: "8.5", rearDiameter: "20", rearWidth: "9.5" };
+    const r = await buildCheckoutLines([mixedLine], resolver);
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    const [f, b] = r.lines;
+    expect(f.meta?.spec?.diameter ?? mixedLine.diameter).toBe("19");
+    expect(b.meta?.spec?.diameter).toBe("20");
+    expect(b.meta?.spec?.width).toBe("9.5");
+  });
+
+  it("legacy staggered line with no rear record: rear order line has NO diameter and rearConfirmed=false (not the front's)", async () => {
+    const legacy: CartWheelItem = { ...line, diameter: "19", width: "8.5", rearDiameter: undefined, rearWidth: undefined, rearOffset: undefined };
+    const r = await buildCheckoutLines([legacy], resolver);
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    const b = r.lines[1];
+    expect(b.meta?.spec?.diameter).toBeUndefined();
+    expect(b.meta?.spec?.width).toBeUndefined();
+    expect(b.meta?.spec?.rearConfirmed).toBe(false);
   });
 
   it("charges the SERVER price when the client price was tampered (Q7-2)", async () => {

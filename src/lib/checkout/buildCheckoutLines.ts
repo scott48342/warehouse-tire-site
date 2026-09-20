@@ -74,6 +74,21 @@ export type BuildCheckoutLinesResult =
 const money = (n: number) => Math.round(n * 100) / 100;
 
 /**
+ * Order-record spec for the REAR line of a staggered wheel set. Diameter/width/offset come from
+ * the rear fields; when the cart line never recorded one, the key is absent (`rearConfirmed: false`
+ * is stamped) rather than filled from the front axle. Display-only metadata (see baseMeta).
+ */
+export function rearWheelSpecForRecord(i: Pick<CartWheelItem, "rearDiameter" | "rearWidth" | "rearOffset">, spec: Record<string, unknown> | undefined): Record<string, unknown> {
+  const out: Record<string, unknown> = { ...(spec || {}) };
+  delete out.diameter; delete out.width; delete out.offset;
+  if (i.rearDiameter) out.diameter = i.rearDiameter;
+  if (i.rearWidth) out.width = i.rearWidth;
+  if (i.rearOffset) out.offset = i.rearOffset;
+  out.rearConfirmed = Boolean(i.rearDiameter && i.rearWidth);
+  return out;
+}
+
+/**
  * Order-record metadata for a line. `spec`, `meta`, `source`, `brand` and the tire display
  * fields are copied from the CLIENT for the order snapshot / emails only - they are claims.
  * Nothing that prices, taxes or ships the order may read them: pricing uses `priceSource`
@@ -226,9 +241,10 @@ export async function buildCheckoutLines(
         priceSource: rear.source,
         catalog: rear.shipping ?? {},
         clientUnitPrice: clientUnit,
-        // Rear axle specs travel with the rear line for the order record.
+        // Rear axle specs travel with the rear line for the order record. From the REAR fields
+        // only (2026-09-20): a rear line must never inherit the front diameter/width/offset.
         spec: type === "wheel"
-          ? { ...(i.spec || {}), width: (i as CartWheelItem).rearWidth ?? i.spec?.width, offset: (i as CartWheelItem).rearOffset ?? i.spec?.offset }
+          ? rearWheelSpecForRecord(i as CartWheelItem, i.spec)
           : { ...(i.spec || {}), size: rearSize ?? i.spec?.size },
         finish: type === "wheel" ? ((i as CartWheelItem).rearFinish ?? (i as CartWheelItem).finish) : undefined,
       }),

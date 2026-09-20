@@ -41,6 +41,9 @@ async function trackAddToCartEvent(
         offset: wheel.offset,
         boltPattern: wheel.boltPattern,
         staggered: wheel.staggered,
+        rearDiameter: wheel.rearDiameter,
+        rearWidth: wheel.rearWidth,
+        rearOffset: wheel.rearOffset,
       };
     } else {
       const tire = item as CartTireItem;
@@ -95,6 +98,12 @@ export type CartWheelItem = {
   rearUnitPrice?: number;
   diameter?: string;
   width?: string;
+  /**
+   * Rear axle diameter on a staggered line (2026-09-20). Mixed-diameter sets
+   * (19 front / 20 rear) exist; consumers read the rear axle via
+   * `rearAxleSpec()` in lib/cart/staggeredWheelLine, never `diameter`.
+   */
+  rearDiameter?: string;
   rearWidth?: string;
   offset?: string;
   rearOffset?: string;
