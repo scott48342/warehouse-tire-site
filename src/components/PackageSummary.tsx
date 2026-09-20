@@ -1,8 +1,17 @@
 "use client";
 
-import { useCart, cartLineTotal } from "@/lib/cart/CartContext";
+import { useCart, cartLineTotal, type CartWheelItem } from "@/lib/cart/CartContext";
 import Link from "next/link";
 import { StaggeredTireLineDetails, isStaggeredTireLine } from "@/components/cart/StaggeredTireLineDetails";
+import { isStaggeredWheelLine, rearAxleSpec, axleSizeLabel } from "@/lib/cart/staggeredWheelLine";
+
+/** 2 x front + 2 x rear, each axle at its own price; only when the line carries both axle prices. */
+const wheelAxlePrices = (w: CartWheelItem): { front: number; rear: number } | null => {
+  const { frontUnitPrice, rearUnitPrice } = w;
+  return isStaggeredWheelLine(w) && frontUnitPrice != null && rearUnitPrice != null
+    ? { front: frontUnitPrice, rear: rearUnitPrice }
+    : null;
+};
 
 /**
  * PackageSummary - Live package builder showing wheels + tires + accessories
@@ -36,9 +45,10 @@ export function PackageSummary({
   const isComplete = wheels.length > 0 && tires.length > 0;
 
   // Calculate subtotals (defensive: handle items with missing unitPrice/quantity)
-  // 2026-09-20 (Codex live 16:59): tire lines use cartLineTotal - a staggered 2+2 set is exact
-  // 2xfront + 2xrear (523.98), not the blended unit x4 (524.00) the sidebar used to print.
-  const wheelSubtotal = wheels.reduce((sum, w) => sum + (w.unitPrice ?? 0) * (w.quantity ?? 0), 0);
+  // 2026-09-20 (Codex live 16:59 / 17:47): wheel AND tire lines use cartLineTotal - a staggered
+  // 2+2 set is exact 2xfront + 2xrear (tires 523.98, wheels 1363.06), not the blended unit x4
+  // (524.00 / 1363.08) the sidebar used to print. Same function the cart total already uses.
+  const wheelSubtotal = wheels.reduce((sum, w) => sum + cartLineTotal(w), 0);
   const tireSubtotal = tires.reduce((sum, t) => sum + cartLineTotal(t), 0);
   const accessorySubtotal = accessories.reduce((sum, a) => sum + (a.unitPrice ?? 0) * (a.quantity ?? 0), 0);
 
@@ -102,12 +112,12 @@ export function PackageSummary({
         <div className="space-y-2">
           {/* Wheels */}
           {wheels.map((w) => (
-            <div key={w.sku} className="flex items-center justify-between text-sm">
+            <div key={`${w.sku}-${w.rearSku ?? ""}`} className="flex items-center justify-between text-sm" data-testid="package-summary-wheel-line">
               <div className="flex items-center gap-2">
                 <span className="text-green-600">✓</span>
-                <span className="font-semibold text-neutral-900">{w.quantity ?? 0}× {w.brand} {w.model}</span>
+                <span className="font-semibold text-neutral-900">{isStaggeredWheelLine(w) ? "2 front + 2 rear" : <>{w.quantity ?? 0}&times;</>} {w.brand} {w.model}</span>
               </div>
-              <span className="font-semibold text-neutral-700">${((w.unitPrice ?? 0) * (w.quantity ?? 0)).toFixed(0)}</span>
+              <span className="font-semibold text-neutral-700">${cartLineTotal(w).toFixed(0)}</span>
             </div>
           ))}
 
@@ -200,7 +210,7 @@ export function PackageSummary({
 
           {wheels.length > 0 ? (
             wheels.map((w) => (
-              <div key={w.sku} className="ml-7 rounded-lg bg-neutral-50 p-3">
+              <div key={`${w.sku}-${w.rearSku ?? ""}`} className="ml-7 rounded-lg bg-neutral-50 p-3" data-testid="package-summary-wheel-line">
                 <div className="flex gap-3">
                   {w.imageUrl && (
                     <img src={w.imageUrl} alt={w.model} className="h-12 w-12 rounded-lg object-contain bg-white border border-neutral-200" />
@@ -208,14 +218,34 @@ export function PackageSummary({
                   <div className="flex-1 min-w-0">
                     <div className="text-xs font-semibold text-neutral-600">{w.brand}</div>
                     <div className="text-sm font-extrabold text-neutral-900 truncate">{w.model}</div>
-                    <div className="text-xs text-neutral-600">
-                      {w.diameter && `${w.diameter}"`} {w.finish && `• ${w.finish}`}
-                    </div>
+                    {isStaggeredWheelLine(w) ? (() => {
+                      const rear = rearAxleSpec(w);
+                      const frontLabel = axleSizeLabel({ diameter: w.diameter, width: w.width }) || (w.diameter ? `${w.diameter}"` : "");
+                      const rearLabel = axleSizeLabel(rear) || (rear.diameter ? `${rear.diameter}"` : "size not confirmed");
+                      return (
+                        <div className="text-xs text-neutral-600" data-testid="package-summary-wheel-axles">
+                          <div>Front &times;2: {frontLabel} &middot; {w.sku}</div>
+                          <div>Rear &times;2: {rearLabel} &middot; {rear.sku}</div>
+                          {w.finish && <div>{w.finish}</div>}
+                        </div>
+                      );
+                    })() : (
+                      <div className="text-xs text-neutral-600">
+                        {w.diameter && `${w.diameter}"`} {w.finish && `• ${w.finish}`}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="mt-2 flex items-center justify-between text-sm">
-                  <span className="text-neutral-600">{w.quantity ?? 0}× ${(w.unitPrice ?? 0).toFixed(2)}</span>
-                  <span className="font-extrabold text-neutral-900">${((w.unitPrice ?? 0) * (w.quantity ?? 0)).toFixed(2)}</span>
+                  {(() => {
+                    const axle = wheelAxlePrices(w);
+                    return axle ? (
+                      <span className="text-neutral-600">2 &times; ${axle.front.toFixed(2)} front + 2 &times; ${axle.rear.toFixed(2)} rear</span>
+                    ) : (
+                      <span className="text-neutral-600">{w.quantity ?? 0}× ${(w.unitPrice ?? 0).toFixed(2)}</span>
+                    );
+                  })()}
+                  <span className="font-extrabold text-neutral-900">${cartLineTotal(w).toFixed(2)}</span>
                 </div>
               </div>
             ))

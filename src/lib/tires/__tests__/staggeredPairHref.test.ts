@@ -69,7 +69,7 @@ describe("tires results pair card (source pin)", () => {
 describe("PackageSummary (tires page sidebar) - source pin", () => {
   const src = read("src/components/PackageSummary.tsx");
   test("tire lines and tire subtotal use cartLineTotal; staggered lines render the shared axle display", () => {
-    expect(src).toMatch(/import \{ useCart, cartLineTotal \} from "@\/lib\/cart\/CartContext"/);
+    expect(src).toMatch(/import \{ useCart, cartLineTotal(, type CartWheelItem)? \} from "@\/lib\/cart\/CartContext"/);
     expect(src).toMatch(/import \{ StaggeredTireLineDetails, isStaggeredTireLine \} from "@\/components\/cart\/StaggeredTireLineDetails"/);
     expect(src).toMatch(/const tireSubtotal = tires\.reduce\(\(sum, t\) => sum \+ cartLineTotal\(t\), 0\);/);
     expect(src).toMatch(/<StaggeredTireLineDetails tire=\{t\} compact \/>/);

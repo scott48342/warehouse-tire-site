@@ -355,15 +355,19 @@ export function SmartTireUpsell({
           </div>
         </div>
 
-        {/* Trust bullets */}
-        <div className="mt-4 flex flex-wrap gap-3 text-xs">
-          <div className="flex items-center gap-1.5 text-green-700">
-            <span>✓</span>
-            <span>Fits your selected wheels</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-green-700">
-            <span>✓</span>
-            <span>No modifications needed</span>
+        {/* Facts only (Codex 17:47): /api/recommendations/tire-for-wheels returns no vehicle
+            certification, so this card states only the rim-diameter match it can prove (not width/clearance) and
+            the same neutral fit copy as the tire cards - no fit/installation claims. */}
+        <div className="mt-4 flex flex-wrap gap-3 text-xs" data-testid="smart-tire-upsell-facts">
+          {wheelDiameter && (
+            <div className="flex items-center gap-1.5 text-neutral-700">
+              <span>•</span>
+              <span>Rim diameter matches your {wheelDiameter}&quot; wheels</span>
+            </div>
+          )}
+          <div className="flex items-center gap-1.5 text-neutral-600">
+            <span>•</span>
+            <span>Fit not yet confirmed</span>
           </div>
           {recommendation.inStock && (
             <div className="flex items-center gap-1.5 text-green-700">
