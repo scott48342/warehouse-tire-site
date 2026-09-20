@@ -28,6 +28,7 @@ import { SeoContentBlock } from "@/components/SeoContentBlock";
 import { type FitmentLevel, type BuildRequirement } from "@/lib/fitment/guidance";
 import { filterWheelsForBuildType, type BuildType as BuildTypeEnum } from "@/lib/fitment/buildTypeFilter";
 import { pairCertified, pairFitmentClass } from "@/lib/fitment-db/fitCertification";
+import { isCompleteStaggeredPair } from "@/lib/fitment/staggeredPairIntegrity";
 import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { HomepageIntentBar } from "@/components/HomepageIntentBar";
@@ -1074,8 +1075,13 @@ export default async function WheelsPage({
     const stockQty = localStock + globalStock;
     const inventoryType = typeof inventory?.type === "string" ? inventory.type.toUpperCase() : undefined;
 
-    // Extract staggered pair info from fitment-search API response
-    const pair = (it as any)?.pair;
+    // Extract staggered pair info from fitment-search API response.
+    // 2026-09-20 (Codex live check hotfix): a pair is only usable when BOTH axles
+    // are fully described (sku, diameter, width, price). Otherwise the card would
+    // back-fill the front from its own (rear) size/price and link a front SKU with
+    // the wrong specs. Incomplete -> treated as an unpaired (square) candidate.
+    const rawPair = (it as any)?.pair;
+    const pair = (isCompleteStaggeredPair(rawPair) ? rawPair : undefined) as Wheel["pair"] | undefined;
     // Staggered (2026-09-20, Codex): the card sells BOTH axles, so its fit class is
     // the weaker of front/rear (e.g. RC7: front specfit, rear ET20 outside the
     // offset envelope -> extended => card says Custom Fit, not Good Fit), and it is

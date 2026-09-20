@@ -63,6 +63,7 @@ import {
 } from "@/lib/fitment/hdFitmentResolver";
 import { listLocalFitments, listFitmentsWithTierFilter } from "@/lib/fitment-db/getFitment";
 import { canDetectStaggered, isStaggeredCapableVehicle, analyzeStaggeredData, isConfirmedSquareSetup, type QualityTier } from "@/lib/fitment-db/qualityTier";
+import { pairSatisfiesSizeFilter } from "@/lib/fitment/staggeredPairIntegrity";
 import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 import {
   buildFitmentEnvelope,
@@ -2891,6 +2892,31 @@ async function handleDbFirstWheelResults(opts: {
       (c) => !c.candidate.width || Number(c.candidate.width) === Number(width)
     );
   }
+  // 2026-09-20 (Codex live check, hotfix): the staggered pairing above ran on the
+  // UNFILTERED pool, so under diameter=20 a 20x9.5 rear survived the filter while
+  // its paired 19x8.5 front did not. The card then had a pair whose front carried
+  // no specs/price, fell back to the rear's 20x9.5 label and 4 x rear price
+  // ($1,430), and linked the PDP to a front SKU that resolved to 19x8.5 ($1,346.80).
+  // A set is only offered under a size filter when BOTH axles satisfy it; otherwise
+  // the item is a plain (square) candidate again.
+  if (diameter || width) {
+    const candidateBySku = new Map(preSizeFilterCandidates.map((c) => [c.candidate.sku, c.candidate]));
+    let unpaired = 0;
+    for (const c of rankedCandidates) {
+      const sp = (c as any).staggeredPair as { frontSku: string; rearSku: string } | undefined;
+      if (!sp) continue;
+      if (!pairSatisfiesSizeFilter(candidateBySku.get(sp.frontSku), candidateBySku.get(sp.rearSku), { diameter, width })) {
+        delete (c as any).staggeredPair;
+        unpaired++;
+      }
+    }
+    if (unpaired > 0) {
+      console.log(`[fitment-search] size filter (dia=${diameter || "-"} w=${width || "-"}): ${unpaired} staggered pair(s) dropped - partner axle outside the requested size`);
+      if (staggeredOnlyRequested && opts.staggeredInfo?.isStaggered) {
+        rankedCandidates = rankedCandidates.filter((c) => (c as any).staggeredPair?.staggered === true);
+      }
+    }
+  }
 
   const totalCount = rankedCandidates.length;
   const startIdx = (requestedPage - 1) * requestedPageSize;
@@ -2908,8 +2934,10 @@ async function handleDbFirstWheelResults(opts: {
     debugTrace.push(`6. In current page (${startIdx+1}-${startIdx+requestedPageSize}): ${!!inPage}`);
   }
 
-  // Build a lookup map for staggered pair specs (SKU Ã¢â€ â€™ wheel specs)
-  // This lets us populate BOTH front and rear specs on each paired wheel
+  // Build a lookup map for staggered pair specs (SKU -> wheel specs)
+  // This lets us populate BOTH front and rear specs on each paired wheel.
+  // 2026-09-20: built from the PRE-size-filter pool so a pair partner that is
+  // not itself in the filtered results still reports its real specs and price.
   const wheelSpecsBySku = new Map<string, { diameter: number; width: number; offset: number; finish?: string; price: number | null }>();
   // Sell price for any ranked candidate (same rules as the result item below).
   // Used for the item itself AND for the paired rear wheel so a staggered card
@@ -2932,7 +2960,7 @@ async function handleDbFirstWheelResults(opts: {
     const n = Number(raw);
     return Number.isFinite(n) && n > 0 ? n : null;
   };
-  for (const item of rankedCandidates) {
+  for (const item of preSizeFilterCandidates) {
     const c = item.candidate;
     wheelSpecsBySku.set(c.sku, {
       diameter: Number(c.diameter) || 0,
@@ -3129,6 +3157,12 @@ async function handleDbFirstWheelResults(opts: {
         let rearSpecs = wheelSpecsBySku.get(staggeredPair.rearSku);
         let frontSku = staggeredPair.frontSku;
         let rearSku = staggeredPair.rearSku;
+        // 2026-09-20 (hotfix): a pair whose axle has no catalog record cannot be
+        // described or priced - emit no pair rather than half a set the card would
+        // back-fill with its own size/price.
+        if (!frontSpecs || !rearSpecs || !frontSpecs.diameter || !rearSpecs.diameter || !frontSpecs.width || !rearSpecs.width) {
+          return undefined;
+        }
         
         // Swap if front is wider or has larger diameter than rear
         if (frontSpecs && rearSpecs) {

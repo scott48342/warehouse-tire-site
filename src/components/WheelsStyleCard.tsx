@@ -11,6 +11,7 @@ import { QuickViewButton, buildWheelQuickViewData } from "@/components/QuickView
 // import { WheelVisualizeButton } from "@/components/WheelVisualizeButton";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { FinancingBadge } from "@/components/FinancingBadge";
+import { isCompleteStaggeredPair, staggeredSetPrice, pairFrontSize } from "@/lib/fitment/staggeredPairIntegrity";
 import { 
   isAccessoryAutoAddEnabled, 
   safeAutoAddAccessories, 
@@ -620,6 +621,11 @@ export function WheelsStyleCard({
   const activePair: WheelPair | undefined = (() => {
     const cp = selectedPair || pair;
     if (!cp?.staggered || !cp.rear) return undefined;
+    // 2026-09-20 (Codex live check hotfix): a pair drives the badge, the size
+    // label, the link and the price for BOTH axles, so it must be complete
+    // (sku + diameter + width + price on each side). Never back-fill the front
+    // from this card's own size/price.
+    if (!isCompleteStaggeredPair(cp)) return undefined;
     return cp.front?.sku === displayedSku ? cp : undefined;
   })();
   const isStaggeredCard = Boolean(activePair);
@@ -629,9 +635,7 @@ export function WheelsStyleCard({
   const setPrice: number | null = isStaggeredCard
     ? (() => {
         if (typeof activePair?.setPrice === "number" && Number.isFinite(activePair.setPrice)) return activePair.setPrice;
-        const fp = typeof activePair?.front?.price === "number" ? activePair.front.price : (typeof selectedPrice === "number" ? selectedPrice : null);
-        const rp = typeof activePair?.rear?.price === "number" ? activePair.rear.price : null;
-        return fp != null && rp != null ? Math.round((fp * 2 + rp * 2) * 100) / 100 : null;
+        return staggeredSetPrice(activePair);
       })()
     : typeof selectedPrice === "number" ? selectedPrice * 4 : null;
   const fromSetPrice = useMemo(() => {
@@ -697,9 +701,12 @@ export function WheelsStyleCard({
     }
     
     const currentPair = activePair;
-    const dia = currentPair?.front?.diameter ?? sizeLabel?.diameter;
-    const wid = currentPair?.front?.width ?? sizeLabel?.width;
-    const off = currentPair?.front?.offset ?? specLabel?.offset;
+    // Staggered: the link describes the FRONT SKU, so its size comes from the
+    // front record only (activePair is complete by construction). Square: this card's size.
+    const frontSize = pairFrontSize(currentPair);
+    const dia = frontSize ? frontSize.diameter : sizeLabel?.diameter;
+    const wid = frontSize ? frontSize.width : sizeLabel?.width;
+    const off = currentPair ? currentPair.front?.offset : specLabel?.offset;
     const bolt = specLabel?.boltPattern;
     
     if (dia) sp.set("wheelDia", String(dia));

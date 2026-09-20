@@ -9,6 +9,7 @@ import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/a
 import { FitmentDiameterChips, type DiameterOption } from "./FitmentDiameterChips";
 import { useCart, type CartWheelItem } from "@/lib/cart/CartContext";
 import { type FitmentLevel, type BuildRequirement } from "@/lib/fitment/guidance";
+import { isCompleteStaggeredPair } from "@/lib/fitment/staggeredPairIntegrity";
 
 // Add gtag type for analytics
 declare global {
@@ -125,11 +126,12 @@ export function buildSelectedWheel(
 
   if (staggered && pair && pair.rear) {
     if (pair.front?.sku && pair.front.sku !== sku) return null; // pair belongs to another variant
-    const fp = typeof pair.front?.price === "number" && Number.isFinite(pair.front.price) && pair.front.price > 0
-      ? pair.front.price
-      : (typeof card?.price === "number" && Number.isFinite(card.price) && card.price > 0 ? card.price : null);
-    const rp = typeof pair.rear.price === "number" && Number.isFinite(pair.rear.price) && pair.rear.price > 0 ? pair.rear.price : null;
-    if (fp == null || rp == null || !pair.rear.sku) return null;
+    // 2026-09-20 (Codex live check hotfix): the front price/size must come from
+    // the front SKU's own catalog record. Falling back to the card's price made a
+    // 20x9.5 rear card sell "2 front" at the rear price ($1,430 vs $1,346.80 real).
+    if (!isCompleteStaggeredPair(pair)) return null;
+    const fp = pair.front.price;
+    const rp = pair.rear.price;
     const rearFinish = pair.rear.finish;
     if (rearFinish && finish && rearFinish.trim().toLowerCase() !== finish.trim().toLowerCase()) return null;
     const setPrice = typeof card?.setPrice === "number" && Number.isFinite(card.setPrice) && card.setPrice > 0
@@ -142,11 +144,11 @@ export function buildSelectedWheel(
       model,
       finish,
       rearFinish: rearFinish ?? finish,
-      diameter: pair.front?.diameter ?? w.diameter,
-      width: pair.front?.width ?? w.width,
-      rearWidth: pair.rear.width,
-      offset: pair.front?.offset ?? w.offset,
-      rearOffset: pair.rear.offset,
+      diameter: String(pair.front.diameter),
+      width: String(pair.front.width),
+      rearWidth: pair.rear.width != null ? String(pair.rear.width) : undefined,
+      offset: pair.front.offset != null ? String(pair.front.offset) : undefined,
+      rearOffset: pair.rear.offset != null ? String(pair.rear.offset) : undefined,
       boltPattern: w.boltPattern,
       centerbore: w.centerbore,
       imageUrl: card?.imageUrl ?? w.imageUrl,
