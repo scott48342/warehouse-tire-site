@@ -67,6 +67,18 @@ export function includedHardwarePlaceholderKind(sku: string): IncludedHardwareKi
   return null;
 }
 
+/** Thread the client's `LUGKIT-<thread>` placeholder CLAIMS (validated server-side at checkout). */
+export function parseLugKitPlaceholder(sku: string) {
+  const lug = LUG_KIT_PLACEHOLDER.exec(String(sku || "").trim());
+  return lug ? parseThreadSize(lug[1]) : null;
+}
+
+/** Outer/inner mm the client's `HR-<outer>-<inner>` placeholder CLAIMS (validated server-side at checkout). */
+export function parseHubRingPlaceholder(sku: string): { outer: number; inner: number } | null {
+  const m = /^HR-(\d{2,3})-(\d{2,3})$/i.exec(String(sku || "").trim());
+  return m ? { outer: Number(m[1]), inner: Number(m[2]) } : null;
+}
+
 /** Catalog category (from `accessories.category`, never the client) -> hardware kind. */
 export function includedHardwareKindFromCatalogCategory(category: unknown): IncludedHardwareKind | null {
   const key = String(category || "").toLowerCase().replace(/[^a-z]/g, "");

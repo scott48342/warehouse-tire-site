@@ -34,6 +34,42 @@ import { logCheckoutDiagnostic } from "@/lib/checkout/diagnosticsClient";
 import { CART_RECOVERY_CONSENT_WORDING } from "@/lib/cart/recoveryConsentWording";
 
 /**
+ * Wheel line description for the Order Summary (release review 2026-09-19, Codex browser
+ * acceptance): a staggered set is 2 front + 2 rear wheels with different width/offset/SKU
+ * and (usually) price. The summary used to print only the front size, so half of the
+ * order was invisible at the moment of payment.
+ */
+function WheelSummaryDetails({ wheel }: { wheel: CartWheelItem }) {
+  if (wheel.staggered && wheel.rearSku) {
+    const rearWidth = wheel.rearWidth ?? wheel.width;
+    const rearOffset = wheel.rearOffset ?? wheel.offset;
+    return (
+      <div className="text-xs text-neutral-500 space-y-0.5" data-testid="checkout-wheel-staggered">
+        <p className="font-medium text-neutral-600">Staggered set · 2 front + 2 rear</p>
+        <p>
+          Front ×2: {wheel.diameter}x{wheel.width}
+          {wheel.offset ? ` ET${wheel.offset}` : ""} · <span className="font-mono">{wheel.sku}</span>
+        </p>
+        <p>
+          Rear ×2: {wheel.diameter}x{rearWidth}
+          {rearOffset ? ` ET${rearOffset}` : ""} · <span className="font-mono">{wheel.rearSku}</span>
+        </p>
+        {wheel.frontUnitPrice != null && wheel.rearUnitPrice != null ? (
+          <p>
+            2 × ${wheel.frontUnitPrice.toFixed(2)} + 2 × ${wheel.rearUnitPrice.toFixed(2)}
+          </p>
+        ) : null}
+      </div>
+    );
+  }
+  return (
+    <p className="text-xs text-neutral-500">
+      {wheel.diameter}{wheel.width ? `x${wheel.width}` : ""} · Qty: {wheel.quantity}
+    </p>
+  );
+}
+
+/**
  * Checkout Page
  * 
  * Cart is the single source of truth.
@@ -97,6 +133,11 @@ export default function CheckoutPage() {
   const fitmentClass = wheels[0]?.fitmentClass as FitmentClass | undefined;
   const fitmentMessaging = getFitmentMessaging(fitmentClass);
   const fitmentColors = getFitmentColors(fitmentClass);
+  // Release review 2026-09-19: the summary's "Fitment verified" / "matched specifically" bullets
+  // were unconditional. They may only appear when EVERY vehicle-tagged wheel/tire line carries the
+  // verified-fit flag set by the certified add-to-cart path (same rule as the cart's "Fits" pill).
+  const vehicleLines = [...wheels, ...tires].filter((i) => i.vehicle);
+  const allFitVerified = vehicleLines.length > 0 && vehicleLines.every((i) => i.fitVerified === true);
 
   // Form state - single page checkout (no steps)
   const [mobileOrderSummaryOpen, setMobileOrderSummaryOpen] = useState(false);
@@ -670,7 +711,8 @@ export default function CheckoutPage() {
 
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok || !data?.url) {
-        setStripeError(String(data?.error || data?.detail || "Stripe checkout failed"));
+        // Show the human `detail` first; `error` is a machine code (e.g. checkout_failed, hardware_unverified).
+        setStripeError(String(data?.detail || data?.error || "Stripe checkout failed"));
         logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-checkout-session", httpStatus: res.status, errorCode: String(data?.error || "stripe_session_failed") });
         setProcessing(false);
         return;
@@ -748,7 +790,7 @@ export default function CheckoutPage() {
 
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok || !data?.clientSecret) {
-        setStripeError(String(data?.error || data?.detail || "Failed to initialize payment"));
+        setStripeError(String(data?.detail || data?.error || "Failed to initialize payment"));
         logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-payment-intent", httpStatus: res.status, errorCode: String(data?.error || "payment_intent_failed") });
         return;
       }
@@ -934,7 +976,7 @@ export default function CheckoutPage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-semibold text-neutral-900 truncate">{w.brand} {w.model}</p>
-                        <p className="text-xs text-neutral-500">{w.diameter}{w.width ? `x${w.width}` : ''} • Qty: {w.quantity}</p>
+                        <WheelSummaryDetails wheel={w} />
                       </div>
                       <div className="text-sm font-semibold">${(w.unitPrice * w.quantity).toFixed(2)}</div>
                     </div>
@@ -1380,7 +1422,7 @@ export default function CheckoutPage() {
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-neutral-500">{wheel.brand}</p>
                       <p className="text-sm font-semibold text-neutral-900 truncate">{wheel.model}</p>
-                      <p className="text-xs text-neutral-500">{wheel.diameter}{wheel.width ? `x${wheel.width}` : ''} • Qty: {wheel.quantity}</p>
+                      <WheelSummaryDetails wheel={wheel} />
                     </div>
                     <div className="text-sm font-semibold text-neutral-900">
                       ${(wheel.unitPrice * wheel.quantity).toFixed(2)}
@@ -1565,17 +1607,26 @@ export default function CheckoutPage() {
                 
                 {/* Value Framing */}
                 <div className="mt-3 pt-3 border-t border-neutral-100 space-y-1">
-                  <p className="text-xs text-green-600 font-medium">
-                    ✔ Complete wheel & tire package — ready to install
-                  </p>
-                  <p className="text-xs text-green-600 font-medium">
-                    ✔ Everything matched specifically for your vehicle
-                  </p>
-                  {vehicle && (
+                  {/* Release review 2026-09-19: every claim below is derived from the cart, never static. */}
+                  {hasWheels() && hasTires() ? (
                     <p className="text-xs text-green-600 font-medium">
-                      ✔ Fitment verified for your {vehicle.year} {vehicle.make} {vehicle.model}
+                      ✔ Complete wheel & tire package — ready to install
                     </p>
-                  )}
+                  ) : null}
+                  {vehicle && allFitVerified ? (
+                    <>
+                      <p className="text-xs text-green-600 font-medium">
+                        ✔ Everything matched specifically for your vehicle
+                      </p>
+                      <p className="text-xs text-green-600 font-medium" data-testid="checkout-fit-verified">
+                        ✔ Fitment verified for your {vehicle.year} {vehicle.make} {vehicle.model}
+                      </p>
+                    </>
+                  ) : vehicle ? (
+                    <p className="text-xs text-neutral-600 font-medium" data-testid="checkout-fit-unconfirmed">
+                      Selected for your {vehicle.year} {vehicle.make} {vehicle.model} · fit not yet confirmed
+                    </p>
+                  ) : null}
                 </div>
                 {!totalCheck.matches && (
                   <p className="text-xs text-amber-600 mt-1">

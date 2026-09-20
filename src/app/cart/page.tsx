@@ -143,15 +143,39 @@ function WheelCartItem({
           ) : null}
         </div>
 
-        <div className="mt-2 flex flex-wrap gap-2 text-sm text-neutral-600">
-          {item.diameter ? <span>{item.diameter}"</span> : null}
-          {item.width ? <span>× {item.width}"</span> : null}
-          {item.boltPattern ? <span>• {item.boltPattern}</span> : null}
-          {item.offset ? <span>• ET{item.offset}</span> : null}
-        </div>
+        {/* Release review 2026-09-19 (Codex browser acceptance): a staggered wheel line is 2 front +
+            2 rear wheels with different width/offset/SKU. The cart used to show only the front size
+            and SKU, hiding half of what the shopper is buying. Both axles are now itemised. */}
+        {item.staggered && item.rearSku ? (
+          <div className="mt-2 space-y-1 text-sm text-neutral-700" data-testid="cart-wheel-staggered">
+            <div className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Staggered set · 2 front + 2 rear</div>
+            <div className="flex flex-wrap gap-x-2">
+              <span className="font-semibold">Front ×2:</span>
+              <span>{item.diameter}" × {item.width}"</span>
+              {item.offset ? <span>• ET{item.offset}</span> : null}
+              <span className="font-mono text-xs text-neutral-400 self-center">SKU {item.sku}</span>
+            </div>
+            <div className="flex flex-wrap gap-x-2">
+              <span className="font-semibold">Rear ×2:</span>
+              <span>{item.diameter}" × {item.rearWidth ?? item.width}"</span>
+              {item.rearOffset ?? item.offset ? <span>• ET{item.rearOffset ?? item.offset}</span> : null}
+              <span className="font-mono text-xs text-neutral-400 self-center">SKU {item.rearSku}</span>
+            </div>
+            {item.boltPattern ? <div className="text-xs text-neutral-500">{item.boltPattern}</div> : null}
+          </div>
+        ) : (
+          <>
+            <div className="mt-2 flex flex-wrap gap-2 text-sm text-neutral-600">
+              {item.diameter ? <span>{item.diameter}"</span> : null}
+              {item.width ? <span>× {item.width}"</span> : null}
+              {item.boltPattern ? <span>• {item.boltPattern}</span> : null}
+              {item.offset ? <span>• ET{item.offset}</span> : null}
+            </div>
 
-        {/* SKU / Part Number */}
-        <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+            {/* SKU / Part Number */}
+            <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+          </>
+        )}
 
         {/* Audit 2026-09-18: the cart claimed "Fits <vehicle>" for any item carrying a vehicle. Only a
 
@@ -184,17 +208,25 @@ function WheelCartItem({
         <div className="mt-4 flex flex-wrap items-center justify-between gap-y-3">
           <div className="flex items-center gap-3">
             <label className="text-sm font-medium text-neutral-600">Qty:</label>
-            <select
-              value={item.quantity}
-              onChange={(e) => onUpdateQty(Number(e.target.value))}
-              className="h-9 rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold"
-            >
-              {[1, 2, 4, 5, 6, 8].map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
+            {item.staggered && item.rearSku ? (
+              // Staggered sets are fixed at 2 front + 2 rear (CartContext pins quantity to 4;
+              // checkout forces 2+2). A dropdown here only suggested a choice that does not exist.
+              <span className="h-9 inline-flex items-center rounded-lg border border-neutral-200 bg-neutral-50 px-3 text-sm font-semibold" data-testid="cart-wheel-fixed-qty">
+                4 (2 front + 2 rear)
+              </span>
+            ) : (
+              <select
+                value={item.quantity}
+                onChange={(e) => onUpdateQty(Number(e.target.value))}
+                className="h-9 rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold"
+              >
+                {[1, 2, 4, 5, 6, 8].map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </select>
+            )}
             <button onClick={onRemove} className="text-sm text-red-600 hover:text-red-700 font-medium">
               Remove
             </button>
@@ -202,7 +234,13 @@ function WheelCartItem({
 
           <div className="text-right ml-auto">
             <div className="text-xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
-            <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
+            {item.staggered && item.rearSku && item.frontUnitPrice != null && item.rearUnitPrice != null ? (
+              <div className="text-xs text-neutral-500" data-testid="cart-wheel-split-price">
+                2 × ${item.frontUnitPrice.toFixed(2)} front + 2 × ${item.rearUnitPrice.toFixed(2)} rear
+              </div>
+            ) : (
+              <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
+            )}
           </div>
         </div>
       </div>

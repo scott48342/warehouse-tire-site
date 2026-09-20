@@ -20,29 +20,51 @@
  *   lug kit + one hub-ring set per wheel set), and the price cap from the
  *   catalog. Client `required`/`category`/`unitPrice` never grant it. An
  *   unknown SKU that is not a recognised placeholder is always rejected.
+ *   Placeholder DIMENSIONS are validated too (Codex acceptance 2026-09-19):
+ *   the thread must equal the VEHICLE's fitment-record thread and the hub-ring
+ *   outer/inner must equal the selected WHEEL's catalog bore / the vehicle hub
+ *   bore, both derived server-side through `HardwareSpecResolver`. A
+ *   placeholder the server cannot derive (`hardware_unverifiable`) or that
+ *   disagrees with the server (`hardware_mismatch`) blocks the checkout.
  * - Staggered lines are forced to 2+2 regardless of the client quantity.
  *
- * Pure: no I/O besides the injected resolver, so it is unit-testable.
+ * Pure: no I/O besides the injected resolvers, so it is unit-testable.
  */
 import type { QuoteLine } from "@/lib/quotes";
 import type { CartItem, CartWheelItem, CartTireItem } from "@/lib/cart/CartContext";
 import type { CatalogPriceResolver } from "./repriceCatalog";
+import type { HardwareSpecResolver, HardwareSpecVehicle } from "./hardwareSpec";
+import { calculateHubRingSpec, formatThreadSize, parseThreadSize } from "@/lib/fitment/accessories";
 import {
   INCLUDED_HARDWARE_MAX_UNIT_USD,
   ROAD_HAZARD_SKU,
   includedHardwareKindFromCatalogCategory,
   includedHardwarePlaceholderKind,
+  parseHubRingPlaceholder,
+  parseLugKitPlaceholder,
   roadHazardPerTireUsd,
   type IncludedHardwareKind,
 } from "./fixedPriceSkus";
 
 export type CheckoutLineRejection = {
   /** `hardware_not_entitled`: a $0 placeholder hardware line with no wheel set in the order,
-   *  or more free hardware lines/units than the wheel sets entitle. */
-  reason: "unpriceable" | "rear_unresolved" | "finish_mismatch" | "hardware_not_entitled";
+   *  or more free hardware lines/units than the wheel sets entitle.
+   *  `hardware_unverifiable`: the server could not derive the vehicle thread / hub bore or the
+   *  wheel bore needed to validate a placeholder (no vehicle on the wheel line, wheel not in the
+   *  order, fitment record or catalog silent). `hardware_mismatch`: the placeholder's dimensions
+   *  differ from what the server derived (`detail` carries the expected placeholder SKU). */
+  reason:
+    | "unpriceable"
+    | "rear_unresolved"
+    | "finish_mismatch"
+    | "hardware_not_entitled"
+    | "hardware_unverifiable"
+    | "hardware_mismatch";
   sku: string;
   axle?: "front" | "rear";
   name: string;
+  /** Machine-readable cause for `hardware_*` rejections (server-side diagnostics, safe to log). */
+  detail?: string;
 };
 
 export type BuildCheckoutLinesResult =
@@ -76,6 +98,7 @@ function lineName(i: any, name: string) {
 export async function buildCheckoutLines(
   items: CartItem[],
   resolvePrice: CatalogPriceResolver,
+  resolveHardwareSpec: HardwareSpecResolver,
 ): Promise<BuildCheckoutLinesResult> {
   const lines: QuoteLine[] = [];
   const rejected: CheckoutLineRejection[] = [];
@@ -87,6 +110,8 @@ export async function buildCheckoutLines(
   const accessories: Array<{ i: any; name: string; sku: string; clientUnit: number; qtyClient: number }> = [];
   // Wheel sets accepted so far: a staggered pair is one set, a square line is ceil(qty/4).
   let wheelSets = 0;
+  // Accepted wheel lines (front SKU, all SKUs in the set, vehicle) for placeholder validation.
+  const acceptedWheels: Array<{ frontSku: string; skus: string[]; vehicle: HardwareSpecVehicle | null }> = [];
 
   for (const raw of items) {
     const i = raw as any;
@@ -127,7 +152,10 @@ export async function buildCheckoutLines(
     }
 
     if (!rearSku) {
-      if (type === "wheel") wheelSets += Math.max(1, Math.ceil(qtyClient / 4));
+      if (type === "wheel") {
+        wheelSets += Math.max(1, Math.ceil(qtyClient / 4));
+        acceptedWheels.push({ frontSku: sku, skus: [sku], vehicle: (i as CartWheelItem).vehicle ?? null });
+      }
       lines.push({
         kind: "product",
         name,
@@ -164,7 +192,10 @@ export async function buildCheckoutLines(
       repriced.push({ sku: rearSku, clientUnitPrice: clientRear, serverUnitPrice: rear.unitPrice });
     }
     const setId = `${sku}+${rearSku}`;
-    if (type === "wheel") wheelSets += 1;
+    if (type === "wheel") {
+      wheelSets += 1;
+      acceptedWheels.push({ frontSku: sku, skus: [sku, rearSku], vehicle: (i as CartWheelItem).vehicle ?? null });
+    }
     lines.push({
       kind: "product",
       name: `${name} (front)`,
@@ -214,8 +245,19 @@ export async function buildCheckoutLines(
     const entitled = kind != null && cheapEnough && wheelSets > 0 && freeSlots[kind] >= qtyClient;
 
     if (entitled) {
+      // A placeholder (no catalog row) must ALSO match what the server derives for the
+      // selected wheel + vehicle; the client-formatted digits are only a claim.
+      let hardwareSpec: Record<string, unknown> | undefined;
+      if (placeholderKind && !server) {
+        const check = await validatePlaceholderHardware(sku, placeholderKind, i, acceptedWheels, resolveHardwareSpec);
+        if (!check.ok) {
+          rejected.push({ reason: check.reason, sku, name, detail: check.detail });
+          continue;
+        }
+        hardwareSpec = check.spec;
+      }
       freeSlots[kind!] -= qtyClient;
-      lines.push({ kind: "product", name, sku, unitPriceUsd: 0, qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: "included_hardware", hardwareKind: kind, catalogUnitPrice: server?.unitPrice, wheelSets }) });
+      lines.push({ kind: "product", name, sku, unitPriceUsd: 0, qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: "included_hardware", hardwareKind: kind, catalogUnitPrice: server?.unitPrice, wheelSets, ...(hardwareSpec ? { hardwareSpec } : {}) }) });
       continue;
     }
     if (!server) {
@@ -250,4 +292,73 @@ export async function buildCheckoutLines(
 
   if (rejected.length > 0) return { ok: false, rejected };
   return { ok: true, lines, repriced };
+}
+
+type PlaceholderCheck =
+  | { ok: true; spec: Record<string, unknown> }
+  | { ok: false; reason: "hardware_unverifiable" | "hardware_mismatch"; detail: string };
+
+/**
+ * Compare a placeholder hardware SKU against the SERVER-derived dimensions for the wheel set
+ * it belongs to (the accessory's `wheelSku`, else the only accepted set) and that set's vehicle.
+ */
+async function validatePlaceholderHardware(
+  sku: string,
+  kind: IncludedHardwareKind,
+  i: any,
+  acceptedWheels: Array<{ frontSku: string; skus: string[]; vehicle: HardwareSpecVehicle | null }>,
+  resolveHardwareSpec: HardwareSpecResolver,
+): Promise<PlaceholderCheck> {
+  const wantSku = String(i.wheelSku || "").trim().toUpperCase();
+  const set = wantSku
+    ? acceptedWheels.find((w) => w.skus.some((s) => s.toUpperCase() === wantSku))
+    : acceptedWheels.length === 1
+      ? acceptedWheels[0]
+      : undefined;
+  if (!set) return { ok: false, reason: "hardware_unverifiable", detail: wantSku ? "wheel_not_in_order" : "wheel_ambiguous" };
+  if (!set.vehicle) return { ok: false, reason: "hardware_unverifiable", detail: "vehicle_missing" };
+
+  const derived = await resolveHardwareSpec({ wheelSku: set.frontSku, vehicle: set.vehicle });
+
+  if (kind === "lug_kit") {
+    const claimed = parseLugKitPlaceholder(sku);
+    const actual = parseThreadSize(derived.vehicleThreadSize);
+    if (!claimed) return { ok: false, reason: "hardware_mismatch", detail: "thread_unparseable" };
+    if (!actual) return { ok: false, reason: "hardware_unverifiable", detail: "vehicle_thread_unknown" };
+    const same =
+      claimed.isMetric === actual.isMetric &&
+      Math.abs(claimed.threadDiameter - actual.threadDiameter) < 0.01 &&
+      Math.abs(claimed.threadPitch - actual.threadPitch) < 0.01;
+    if (!same) return { ok: false, reason: "hardware_mismatch", detail: `expected LUGKIT-${formatThreadSize(actual)}` };
+    return {
+      ok: true,
+      spec: { threadSize: formatThreadSize(actual), seatType: derived.vehicleSeatType ?? undefined, wheelSku: set.frontSku, sources: derived.sources },
+    };
+  }
+
+  if (kind === "hub_ring") {
+    const claimed = parseHubRingPlaceholder(sku);
+    if (!claimed) return { ok: false, reason: "hardware_mismatch", detail: "hub_ring_unparseable" };
+    if (derived.vehicleHubMm == null) return { ok: false, reason: "hardware_unverifiable", detail: "vehicle_hub_unknown" };
+    if (derived.wheelBoreMm == null) return { ok: false, reason: "hardware_unverifiable", detail: "wheel_bore_unknown" };
+    const ring = calculateHubRingSpec(derived.vehicleHubMm, derived.wheelBoreMm);
+    if (!ring) {
+      return {
+        ok: false,
+        reason: "hardware_mismatch",
+        detail: derived.wheelBoreMm < derived.vehicleHubMm ? "wheel_bore_smaller_than_hub" : "no_ring_needed",
+      };
+    }
+    const expected = `HR-${ring.outerDiameter.toFixed(0)}-${ring.innerDiameter.toFixed(0)}`;
+    if (claimed.outer !== Number(ring.outerDiameter.toFixed(0)) || claimed.inner !== Number(ring.innerDiameter.toFixed(0))) {
+      return { ok: false, reason: "hardware_mismatch", detail: `expected ${expected}` };
+    }
+    return {
+      ok: true,
+      spec: { outerDiameter: ring.outerDiameter, innerDiameter: ring.innerDiameter, wheelSku: set.frontSku, sources: derived.sources },
+    };
+  }
+
+  // valve_stem has no placeholder format today; nothing to compare.
+  return { ok: true, spec: { wheelSku: set.frontSku } };
 }

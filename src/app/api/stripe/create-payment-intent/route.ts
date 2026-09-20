@@ -9,6 +9,8 @@ import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } f
 import { validateSavedQuoteOwnership } from "@/lib/savedQuotes/checkoutIntegration";
 import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
 import { defaultCatalogPriceResolver } from "@/lib/checkout/repriceCatalog";
+import { defaultHardwareSpecResolver } from "@/lib/checkout/hardwareSpec";
+import { checkoutFailureResponse, rejectedLinesResponse } from "@/lib/checkout/responses";
 
 export const runtime = "nodejs";
 
@@ -148,14 +150,8 @@ export async function POST(req: Request) {
     // builder as create-checkout-session (release review 2026-09-19: this embedded
     // Payment Element path previously charged the client-sent unitPrice for every
     // item and never split staggered sets). Unpriceable lines reject the checkout.
-    const built = await buildCheckoutLines(items, defaultCatalogPriceResolver);
-    if (!built.ok) {
-      console.warn("[checkout/payment-intent] rejected lines:", built.rejected);
-      return NextResponse.json(
-        { ok: false, error: "line_unpriceable", detail: "One or more items could not be priced or matched to a rear wheel. Please remove and re-add them.", rejected: built.rejected },
-        { status: 409 }
-      );
-    }
+    const built = await buildCheckoutLines(items, defaultCatalogPriceResolver, defaultHardwareSpecResolver);
+    if (!built.ok) return rejectedLinesResponse("checkout/payment-intent", built.rejected);
     if (built.repriced.length > 0) {
       console.warn("[checkout/payment-intent] client/server price mismatch (server price charged):", built.repriced);
     }
@@ -417,7 +413,7 @@ export async function POST(req: Request) {
       paymentMethods: paymentMethodTypes,
     });
   } catch (e: any) {
-    console.error("[checkout/payment-intent] Error:", e);
-    return NextResponse.json({ ok: false, error: e?.message || String(e) }, { status: 500 });
+    // Generic client message + reference id; the real error stays in the server log.
+    return checkoutFailureResponse("checkout/payment-intent", e);
   }
 }

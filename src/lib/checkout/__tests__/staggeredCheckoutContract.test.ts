@@ -8,8 +8,9 @@
  */
 import { buildSelectedWheel } from "@/components/WheelsGridWithSelection";
 import { cartLineKey, isFixedQuantityLine, type CartItem, type CartWheelItem } from "@/lib/cart/CartContext";
-import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
+import { buildCheckoutLines as buildCheckoutLinesRaw } from "@/lib/checkout/buildCheckoutLines";
 import type { CatalogPriceResolver } from "@/lib/checkout/repriceCatalog";
+import type { HardwareSpecResolver } from "@/lib/checkout/hardwareSpec";
 
 // supplierOrderService pulls in pg + supplier clients at module load; stub them.
 jest.mock("pg", () => ({ __esModule: true, default: { Pool: jest.fn() } }));
@@ -33,6 +34,18 @@ const resolver: CatalogPriceResolver = async (sku) => {
   const hit = catalog[sku];
   return hit ? { sku, unitPrice: hit.price, finish: hit.finish, source: "wheelpros" } : null;
 };
+
+/** Vehicle the wheel lines in this suite are sold for; what the server would derive for it. */
+const VEHICLE = { year: "2024", make: "Chevrolet", model: "Silverado 1500", trim: "LT" };
+const hardware: HardwareSpecResolver = async () => ({
+  vehicleThreadSize: "M14x1.5",
+  vehicleSeatType: "conical",
+  vehicleHubMm: 66.1,
+  wheelBoreMm: 73.1, // -> HR-73-66
+  sources: { vehicle: "vehicle_fitments:complete", wheel: "wheelpros" },
+});
+/** Existing contract tests run with the server agreeing with the cart's placeholders. */
+const buildCheckoutLines = (items: CartItem[], r: CatalogPriceResolver) => buildCheckoutLinesRaw(items, r, hardware);
 
 const baseWheel = {
   sku: FRONT,
@@ -82,6 +95,7 @@ function toCartLine(sel: NonNullable<ReturnType<typeof buildSelectedWheel>>): Ca
     quantity: 4,
     staggered: true,
     source: "wheelpros",
+    vehicle: VEHICLE,
   };
 }
 
@@ -189,7 +203,7 @@ describe("checkout -> snapshot -> supplier PO", () => {
   });
 
   it("square wheel line: server-priced, quantity preserved; placeholder lug kit is included at $0", async () => {
-    const square: CartWheelItem = { type: "wheel", sku: FRONT, brand: "KMC", model: "KM700", unitPrice: 250, quantity: 4, source: "wheelpros" };
+    const square: CartWheelItem = { type: "wheel", sku: FRONT, brand: "KMC", model: "KM700", unitPrice: 250, quantity: 4, source: "wheelpros", vehicle: VEHICLE };
     const lugs: CartItem = { type: "accessory", sku: "LUGKIT-M14x1.5", brand: "Gorilla", model: "Lug Nuts", unitPrice: 0, quantity: 1, required: true, category: "lug-nuts" } as any;
     const r = await buildCheckoutLines([square, lugs], resolver);
     expect(r.ok).toBe(true);
@@ -231,7 +245,7 @@ describe("accessory price authority (release review 2026-09-19)", () => {
     ({ type: "accessory", brand: "X", model: "Acc", quantity: 1, required: false, category: "other", ...over } as any);
   /** A square wheel set the server can price (1 wheel set => 1 free lug kit + 1 free hub-ring set). */
   const wheelSet = (quantity = 4): CartItem =>
-    ({ type: "wheel", sku: FRONT, brand: "KMC", model: "KM700", unitPrice: 300, quantity, source: "wheelpros" } as any);
+    ({ type: "wheel", sku: FRONT, brand: "KMC", model: "KM700", unitPrice: 300, quantity, source: "wheelpros", vehicle: VEHICLE } as any);
   const accLines = (r: Awaited<ReturnType<typeof buildCheckoutLines>>) =>
     r.ok ? r.lines.filter((l) => (l.meta as any).cartType === "accessory").map((l) => [l.sku, l.unitPriceUsd, (l.meta as any).priceSource]) : r;
 
@@ -376,11 +390,14 @@ describe("both Stripe routes go through the server price authority (wiring guard
   const fs = require("fs") as typeof import("fs");
   const path = require("path") as typeof import("path");
   for (const route of ["create-checkout-session", "create-payment-intent"]) {
-    it(`${route} builds lines via buildCheckoutLines and never reads the client unitPrice`, () => {
+    it(`${route} builds lines via buildCheckoutLines (+ hardware validation), never reads the client unitPrice, never leaks raw errors`, () => {
       const src = fs.readFileSync(path.join(process.cwd(), "src/app/api/stripe", route, "route.ts"), "utf8");
-      expect(src).toMatch(/buildCheckoutLines\(items, defaultCatalogPriceResolver\)/);
+      expect(src).toMatch(/buildCheckoutLines\(items, defaultCatalogPriceResolver, defaultHardwareSpecResolver\)/);
       expect(src).not.toMatch(/Number\(i\.unitPrice/);
-      expect(src).toMatch(/line_unpriceable/);
+      // rejections and failures go through the shared, sanitised responses
+      expect(src).toMatch(/rejectedLinesResponse\(/);
+      expect(src).toMatch(/checkoutFailureResponse\(/);
+      expect(src).not.toMatch(/error: e\?\.message/);
     });
   }
 });
