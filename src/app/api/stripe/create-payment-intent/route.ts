@@ -8,6 +8,14 @@ import type { CartItem } from "@/lib/cart/CartContext";
 import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } from "@/lib/shopContext";
 import { validateSavedQuoteOwnership } from "@/lib/savedQuotes/checkoutIntegration";
 import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
+import {
+  needsTotalsReview,
+  resolveServerTotals,
+  revisedTotalsPayload,
+  totalsReviewDetail,
+  totalsToQuoteLines,
+  type CartItemHint,
+} from "@/lib/checkout/orderTotals";
 import { defaultCatalogPriceResolver } from "@/lib/checkout/repriceCatalog";
 import { defaultHardwareSpecResolver } from "@/lib/checkout/hardwareSpec";
 import { checkoutFailureResponse, rejectedLinesResponse } from "@/lib/checkout/responses";
@@ -124,8 +132,6 @@ export async function POST(req: Request) {
 
     const vehicle = body.vehicle && typeof body.vehicle === "object" ? body.vehicle : undefined;
     const shippingInfo = body.shipping && typeof body.shipping === "object" ? body.shipping : {};
-    const shippingAmount = Number(shippingInfo.amount) || 0;
-    const shippingIsFree = !!shippingInfo.isFree;
     
     // Cart ID for linking add-to-cart events to purchases
     const cartId = typeof body.cartId === "string" ? body.cartId.trim() : undefined;
@@ -143,8 +149,6 @@ export async function POST(req: Request) {
     const installStore = installStoreId ? STORES[installStoreId] : undefined;
     
     const taxInfo = body.tax && typeof body.tax === "object" ? body.tax : {};
-    const taxAmount = Number(taxInfo.amount) || 0;
-    const taxState = String(taxInfo.state || "").toUpperCase();
 
     // Convert cart items to quote lines - SERVER-SIDE re-priced through the same
     // builder as create-checkout-session (release review 2026-09-19: this embedded
@@ -161,84 +165,40 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "empty_cart" }, { status: 400 });
     }
 
-    // Add shipping as a quote line if applicable
-    if (shippingAmount > 0 && !shippingIsFree) {
-      linesAll.push({
-        kind: "product",
-        name: "Shipping & Handling",
-        sku: undefined,
-        unitPriceUsd: shippingAmount,
-        qty: 1,
-        taxable: false,
-        meta: { type: "shipping", zip: shippingInfo.zip },
-      });
+    // ------------------------------------------------------------------------------------
+    // SERVER-AUTHORITATIVE TOTALS (Codex release review 2026-09-20)
+    // Tax, shipping, local service fees and the discount are recomputed here from the
+    // server-priced lines; the client-sent amounts are only logged as deltas. A total that
+    // differs from what the shopper was shown (expectedTotal), or a discount that no longer
+    // validates, returns a recoverable 409 for review - nothing is created or charged.
+    // ------------------------------------------------------------------------------------
+    const db = getPool();
+    const totalsResult = await resolveServerTotals({
+      db,
+      productLines: linesAll,
+      cartHints: items as CartItemHint[],
+      isLocal: isLocalMode,
+      claim: { shipping: shippingInfo, tax: taxInfo, discount: body.discount, localFees: body.localFees, expectedTotal: body.expectedTotal },
+    });
+    if (!totalsResult.ok) {
+      console.warn(`[checkout/payment-intent] totals blocked: ${totalsResult.error}`, { zip: shippingInfo.zip });
+      return NextResponse.json({ ok: false, error: totalsResult.error, detail: totalsResult.detail }, { status: 409 });
     }
-
-    // Add tax as a quote line if applicable
-    if (taxAmount > 0) {
-      console.log(`[checkout] Adding tax line: $${taxAmount} (${taxState})`);
-      linesAll.push({
-        kind: "product",
-        name: `Sales Tax${taxState ? ` (${taxState})` : ""}`,
-        sku: undefined,
-        unitPriceUsd: taxAmount,
-        qty: 1,
-        taxable: false,
-        meta: { type: "tax", state: taxState },
-      });
+    const totals = totalsResult.totals;
+    if (Object.values(totals.clientDelta).some((d) => Math.abs(d) >= 0.01)) {
+      console.warn(`[checkout/payment-intent] client/server totals mismatch (server totals charged):`, totals.clientDelta);
     }
-
-    // ═══════════════════════════════════════════════════════════════════════════
-    // LOCAL MODE SERVICE FEES
-    // ═══════════════════════════════════════════════════════════════════════════
-    const localFees = body.localFees && typeof body.localFees === "object" ? body.localFees : null;
-    
-    console.log(`[checkout] isLocalMode=${isLocalMode}, localFees=`, localFees);
-    
-    if (isLocalMode && localFees) {
-      const installAmount = Number(localFees.installation) || 0;
-      const recyclingAmount = Number(localFees.recycling) || 0;
-      const cardFeeAmount = Number(localFees.cardProcessing) || 0;
-      const tireCount = Number(localFees.tireCount) || 0;
-      
-      if (installAmount > 0) {
-        linesAll.push({
-          kind: "product",
-          name: `Installation (${tireCount} tires)`,
-          sku: undefined,
-          unitPriceUsd: installAmount,
-          qty: 1,
-          taxable: false,
-          meta: { type: "service", serviceType: "installation", tireCount },
-        });
-      }
-      
-      if (recyclingAmount > 0) {
-        linesAll.push({
-          kind: "product",
-          name: `Tire Recycling (${tireCount})`,
-          sku: undefined,
-          unitPriceUsd: recyclingAmount,
-          qty: 1,
-          taxable: false,
-          meta: { type: "service", serviceType: "recycling", tireCount },
-        });
-      }
-      
-      if (cardFeeAmount > 0) {
-        linesAll.push({
-          kind: "product",
-          name: "Non-Cash Price",
-          sku: undefined,
-          unitPriceUsd: cardFeeAmount,
-          qty: 1,
-          taxable: false,
-          meta: { type: "fee", feeType: "card_processing" },
-        });
-      }
-      
-      console.log(`[checkout] LOCAL FEES - Install: $${installAmount}, Recycling: $${recyclingAmount}, Card Fee: $${cardFeeAmount}`);
+    if (needsTotalsReview(totals, body.expectedTotal)) {
+      return NextResponse.json(
+        { ok: false, error: "totals_changed", detail: totalsReviewDetail(totals, body.expectedTotal), revised: revisedTotalsPayload(totals, body.expectedTotal) },
+        { status: 409 },
+      );
     }
+    linesAll.push(...totalsToQuoteLines(totals, { zip: String(shippingInfo.zip || "").trim() || undefined }));
+    const taxState = totals.taxState;
+    const taxAmount = totals.taxUsd;
+    const shippingAmount = totals.shippingUsd;
+    const discountCents = Math.round(totals.discountUsd * 100);
 
     // Stripe line items: exclude $0 lines
     const stripeLines = linesAll.filter((l) => l.unitPriceUsd > 0);
@@ -254,7 +214,6 @@ export async function POST(req: Request) {
       );
     }
 
-    const db = getPool();
     const stripeConn = await getStripeClient(db);
     if (!stripeConn) {
       return NextResponse.json({ ok: false, error: "stripe_not_configured" }, { status: 400 });
@@ -272,15 +231,10 @@ export async function POST(req: Request) {
       installStoreAddress: `${installStore.address}, ${installStore.city}, ${installStore.state} ${installStore.zip}`,
     } : undefined;
 
-    // Extract discount info from request body (if applied at checkout)
-    const discountInfo = body.discount && typeof body.discount === "object" ? {
-      code: String(body.discount.code || "").trim(),
-      amount: Number(body.discount.amount) || 0,
-      type: (body.discount.type || "manual") as "first_order" | "promo" | "manual",
-    } : undefined;
-    
-    // Only include discount if it has a valid code and amount
-    const discountData = discountInfo?.code && discountInfo.amount > 0 ? discountInfo : undefined;
+    // Discount as validated on the server (never the client-sent amount)
+    const discountData = totals.discountCode && totals.discountUsd > 0
+      ? { code: totals.discountCode, amount: totals.discountUsd, type: totals.discountType || "promo" }
+      : undefined;
 
     // Build customer address (saved for ALL orders - shipping for national, billing/contact for local)
     const shippingAddressData = shippingInfo.address ? {
@@ -300,8 +254,17 @@ export async function POST(req: Request) {
       shippingAddress: shippingAddressData,
     });
 
-    // Calculate total in cents
-    const totalCents = stripeLines.reduce((sum, l) => sum + moneyToCents(l.unitPriceUsd) * l.qty, 0);
+    // Charge = server lines minus the server-validated discount (the discount was previously
+    // only recorded in quote metadata and never taken off the charge).
+    const grossCents = stripeLines.reduce((sum, l) => sum + moneyToCents(l.unitPriceUsd) * l.qty, 0);
+    const totalCents = grossCents - discountCents;
+    if (totalCents !== Math.round(totals.totalUsd * 100)) {
+      console.error("[checkout/payment-intent] internal totals disagreement", { grossCents, discountCents, totalCents, serverTotal: totals.totalUsd });
+      return NextResponse.json({ ok: false, error: "totals_internal_mismatch", detail: "We couldn't confirm your order total. Please refresh and try again." }, { status: 409 });
+    }
+    if (totalCents < 50) {
+      return NextResponse.json({ ok: false, error: "total_below_minimum", detail: "Order total is below the minimum card charge." }, { status: 400 });
+    }
     const totalUsd = totalCents / 100;
 
     // Payment methods: Card only for embedded form
@@ -360,6 +323,8 @@ export async function POST(req: Request) {
       ...(shippingAmount > 0 ? { shippingAmount: String(shippingAmount.toFixed(2)) } : {}),
       ...(shippingInfo.zip ? { shippingZip: shippingInfo.zip } : {}),
       ...(usafBranch ? { usafBranch } : {}),
+      ...(discountCents > 0 ? { discountCode: totals.discountCode || "", discountAmount: totals.discountUsd.toFixed(2) } : {}),
+      serverTotal: totals.totalUsd.toFixed(2),
     };
     
     // Add local mode metadata

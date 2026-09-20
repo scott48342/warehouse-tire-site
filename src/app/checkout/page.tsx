@@ -103,7 +103,7 @@ export default function CheckoutPage() {
   const { isLocal, selectedStore, storeInfo } = useShopContext();
   
   // Discount context
-  const { activeDiscount, calculateDiscount, hasDiscount } = useDiscount();
+  const { activeDiscount, calculateDiscount, hasDiscount, removeDiscount } = useDiscount();
 
   // Validate package
   const validation = validatePackage(items);
@@ -340,6 +340,40 @@ export default function CheckoutPage() {
   }, []);
   
   const [stripeError, setStripeError] = useState<string | null>(null);
+  // Server-authoritative totals review (2026-09-20): when the server's total differs from the
+  // one shown here (or a discount code no longer validates) the Stripe routes answer 409
+  // totals_changed with the revised breakdown. Nothing is charged until the shopper accepts it.
+  type RevisedTotals = {
+    expectedTotal: number | null; total: number; subtotal: number; discount: number; discountCode?: string;
+    tax: number; taxRate: number; taxState?: string; shipping: number; shippingIsFree: boolean;
+    installation: number; recycling: number; discountRejected?: { code: string; reason: string };
+    retry: "embedded" | "hosted" | "affirm";
+  };
+  const [pendingRevision, setPendingRevision] = useState<RevisedTotals | null>(null);
+  const [acceptedServerTotal, setAcceptedServerTotal] = useState<number | null>(null);
+  const acceptedTotalRef = useRef<number | null>(null);
+  const round2 = (n: number) => Math.round(n * 100) / 100;
+  function takeTotalsRevision(data: any, retry: RevisedTotals["retry"]): boolean {
+    if (data?.error !== "totals_changed" || !data?.revised) return false;
+    if (data.revised.discountRejected) removeDiscount();
+    acceptedTotalRef.current = null;
+    setAcceptedServerTotal(null);
+    setPendingRevision({ ...data.revised, retry });
+    setStripeError(null);
+    logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "fail", endpoint: retry === "embedded" ? "/api/stripe/create-payment-intent" : "/api/stripe/create-checkout-session", errorCode: "totals_changed" });
+    return true;
+  }
+  function acceptRevision() {
+    if (!pendingRevision) return;
+    const t = pendingRevision.total;
+    acceptedTotalRef.current = t;
+    setAcceptedServerTotal(t);
+    const retry = pendingRevision.retry;
+    setPendingRevision(null);
+    if (retry === "hosted") void startStripeCheckout({ expectedTotal: t });
+    else if (retry === "affirm") void startStripeCheckout({ forceAffirm: true, expectedTotal: t });
+    // embedded: the PaymentIntent effect re-fires now that no revision is pending
+  }
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
   
@@ -596,6 +630,10 @@ export default function CheckoutPage() {
   // Use subtotal + our own shipping/tax/fees calculation (validation.totals.total has shipping baked in)
   // Subtract discount from subtotal
   const totalWithTaxAndShipping = validation.totals.subtotal - discountAmount + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
+  // What the shopper sees as the amount to pay: the server total they accepted, else the client estimate.
+  const displayTotal = acceptedServerTotal ?? totalWithTaxAndShipping;
+  // Any change to the client estimate (cart, address, discount) voids a previously accepted server total.
+  useEffect(() => { acceptedTotalRef.current = null; setAcceptedServerTotal(null); }, [totalWithTaxAndShipping]);
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -662,7 +700,7 @@ export default function CheckoutPage() {
     }
   }
 
-  async function startStripeCheckout(options?: { forceAffirm?: boolean }) {
+  async function startStripeCheckout(options?: { forceAffirm?: boolean; expectedTotal?: number }) {
     try {
       setStripeError(null);
       setProcessing(true);
@@ -686,6 +724,9 @@ export default function CheckoutPage() {
           ...(resumedFromQuoteId ? { savedQuoteId: resumedFromQuoteId } : {}),
           // Force Affirm-only checkout
           ...(options?.forceAffirm ? { paymentMethod: "affirm" } : {}),
+          // The total the shopper is looking at; the server refuses to charge a different one silently.
+          expectedTotal: options?.expectedTotal ?? acceptedTotalRef.current ?? round2(totalWithTaxAndShipping),
+          ...(hasDiscount && activeDiscount ? { discount: { code: activeDiscount.code, amount: discountAmount, type: activeDiscount.source } } : {}),
           // Local mode: include install store for order routing
           ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
           shipping: {
@@ -716,6 +757,7 @@ export default function CheckoutPage() {
 
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok || !data?.url) {
+        if (takeTotalsRevision(data, options?.forceAffirm ? "affirm" : "hosted")) { setProcessing(false); return; }
         // Show the human `detail` first; `error` is a machine code (e.g. checkout_failed, hardware_unverified).
         setStripeError(String(data?.detail || data?.error || "Stripe checkout failed"));
         logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-checkout-session", httpStatus: res.status, errorCode: String(data?.error || "stripe_session_failed") });
@@ -782,7 +824,7 @@ export default function CheckoutPage() {
               tireCount,
             },
           } : {}),
-          // Include discount info if active (for purchase analytics)
+          // Discount code - validated and re-priced on the server; the amount here is only a claim
           ...(hasDiscount && activeDiscount ? {
             discount: {
               code: activeDiscount.code,
@@ -790,11 +832,13 @@ export default function CheckoutPage() {
               type: activeDiscount.source,
             },
           } : {}),
+          expectedTotal: acceptedTotalRef.current ?? round2(totalWithTaxAndShipping),
         }),
       });
 
       const data = await res.json().catch(() => null);
       if (!res.ok || !data?.ok || !data?.clientSecret) {
+        if (takeTotalsRevision(data, "embedded")) return;
         setStripeError(String(data?.detail || data?.error || "Failed to initialize payment"));
         logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-payment-intent", httpStatus: res.status, errorCode: String(data?.error || "payment_intent_failed") });
         return;
@@ -813,7 +857,7 @@ export default function CheckoutPage() {
   }, [
     clientSecret, paymentLoading, shipping, items, vehicle, isLocal, selectedStore,
     shippingAmount, shippingEstimate.isFree, taxRate, calculatedTax, 
-    localServiceFees, cardProcessingFee, tireCount
+    localServiceFees, cardProcessingFee, tireCount, totalWithTaxAndShipping, hasDiscount, activeDiscount, discountAmount
   ]);
 
   // Check if shipping form is complete
@@ -831,12 +875,12 @@ export default function CheckoutPage() {
 
   // Create PaymentIntent when shipping info is complete
   useEffect(() => {
-    if (isShippingComplete && !clientSecret && !paymentLoading) {
+    if (isShippingComplete && !clientSecret && !paymentLoading && !pendingRevision) {
       checkoutStepRef.current = "payment";
       createPaymentIntent();
       trackAddPaymentInfo(cartTotal);
     }
-  }, [isShippingComplete, clientSecret, paymentLoading, createPaymentIntent, cartTotal]);
+  }, [isShippingComplete, clientSecret, paymentLoading, createPaymentIntent, cartTotal, pendingRevision]);
 
   // Handle successful payment
   const handlePaymentSuccess = useCallback((paymentIntentId: string) => {
@@ -957,7 +1001,7 @@ export default function CheckoutPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-bold text-neutral-900">${totalWithTaxAndShipping.toFixed(2)}</span>
+                  <span className="font-bold text-neutral-900">${displayTotal.toFixed(2)}</span>
                   <svg 
                     className={`w-5 h-5 text-neutral-500 transition-transform ${mobileOrderSummaryOpen ? 'rotate-180' : ''}`} 
                     fill="none" 
@@ -1016,7 +1060,7 @@ export default function CheckoutPage() {
                   ))}
                   <div className="pt-3 border-t border-neutral-100 flex justify-between font-bold text-lg">
                     <span>Total</span>
-                    <span>${totalWithTaxAndShipping.toFixed(2)}</span>
+                    <span>${displayTotal.toFixed(2)}</span>
                   </div>
                 </div>
               )}
@@ -1307,6 +1351,36 @@ export default function CheckoutPage() {
                     </div>
                   )}
 
+                  {/* Server revised the total - explicit review before any payment UI */}
+                  {pendingRevision && (
+                    <div className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900" data-testid="totals-revision">
+                      <p className="font-bold">
+                        {pendingRevision.discountRejected
+                          ? `Discount code ${pendingRevision.discountRejected.code} ${pendingRevision.discountRejected.reason === "expired" ? "has expired" : pendingRevision.discountRejected.reason === "already_redeemed" ? "has already been used" : "is no longer valid"} and was removed.`
+                          : "Your order total was updated."}
+                      </p>
+                      <p className="mt-1">
+                        {pendingRevision.expectedTotal != null && <span className="line-through text-amber-700 mr-2">${pendingRevision.expectedTotal.toFixed(2)}</span>}
+                        <span className="font-extrabold text-neutral-900">${pendingRevision.total.toFixed(2)}</span>
+                      </p>
+                      <ul className="mt-2 space-y-0.5 text-xs text-amber-900/90">
+                        <li>Items: ${pendingRevision.subtotal.toFixed(2)}</li>
+                        {pendingRevision.discount > 0 && <li>Discount{pendingRevision.discountCode ? ` (${pendingRevision.discountCode})` : ""}: -${pendingRevision.discount.toFixed(2)}</li>}
+                        {pendingRevision.tax > 0 && <li>Sales tax{pendingRevision.taxState ? ` (${pendingRevision.taxState})` : ""}: ${pendingRevision.tax.toFixed(2)}</li>}
+                        {!isLocal && <li>Shipping: {pendingRevision.shippingIsFree ? "Included" : `$${pendingRevision.shipping.toFixed(2)}`}</li>}
+                        {pendingRevision.installation > 0 && <li>Installation: ${pendingRevision.installation.toFixed(2)}</li>}
+                        {pendingRevision.recycling > 0 && <li>Tire recycling: ${pendingRevision.recycling.toFixed(2)}</li>}
+                      </ul>
+                      <button
+                        type="button"
+                        onClick={acceptRevision}
+                        className="mt-3 w-full rounded-lg bg-neutral-900 px-4 py-2 text-sm font-bold text-white hover:bg-neutral-800"
+                      >
+                        Continue with ${pendingRevision.total.toFixed(2)}
+                      </button>
+                    </div>
+                  )}
+
                   {/* Error state */}
                   {stripeError && (
                     <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
@@ -1373,7 +1447,7 @@ export default function CheckoutPage() {
                         onSuccess={handlePaymentSuccess}
                         onError={handlePaymentError}
                         onProcessing={handlePaymentProcessing}
-                        totalAmount={totalWithTaxAndShipping}
+                        totalAmount={displayTotal}
                         returnUrl={`${typeof window !== 'undefined' ? window.location.origin : ''}/checkout/success?quote_id=${quoteId}`}
                       />
                     )}
@@ -1592,7 +1666,7 @@ export default function CheckoutPage() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-bold text-neutral-900">Total</span>
                   <span className="text-2xl font-extrabold text-neutral-900">
-                    ${totalWithTaxAndShipping.toFixed(2)}
+                    ${displayTotal.toFixed(2)}
                   </span>
                 </div>
                 {calculatedTax > 0 && (
@@ -1605,7 +1679,7 @@ export default function CheckoutPage() {
                 {isLocal && (
                   <div className="mt-3 py-2.5 px-3 -mx-1 bg-green-50 border border-green-200 rounded-lg text-center">
                     <p className="text-sm font-bold text-green-800">
-                      🚗 Drive out installed today for ${totalWithTaxAndShipping.toFixed(2)}
+                      🚗 Drive out installed today for ${displayTotal.toFixed(2)}
                     </p>
                   </div>
                 )}
