@@ -116,6 +116,10 @@ export type CartWheelItem = {
    * "fit not confirmed" line instead of the green "Fits <vehicle>" claim.
    */
   fitVerified?: boolean;
+  /** Evidence version that produced fitVerified (see FIT_EVIDENCE_VERSION). Missing/old => not trusted. */
+  fitVerifiedVersion?: string;
+  /** Set when a persisted certification was invalidated on hydration/restore (no auto re-check; re-add via the live path to certify). */
+  fitRevalidate?: boolean;
   staggered?: boolean;
   /** Supplier source (e.g., "wheelpros", "wheel1") - for internal use only */
   source?: string;
@@ -148,6 +152,10 @@ export type CartTireItem = {
   };
   /** See CartWheelItem.fitVerified - only a verified fit may claim "Fits". */
   fitVerified?: boolean;
+  /** See CartWheelItem.fitVerifiedVersion */
+  fitVerifiedVersion?: string;
+  /** See CartWheelItem.fitRevalidate */
+  fitRevalidate?: boolean;
   staggered?: boolean;
   /** Supplier source (e.g., "tireweb:atd", "km") - for internal use only */
   source?: string;
@@ -248,6 +256,51 @@ const CartContext = createContext<CartContextValue | null>(null);
 
 const CART_STORAGE_KEY = "wt_cart";
 
+/**
+ * 2026-09-20 (Codex): certification rules changed (OE offset provenance, per-axle envelopes,
+ * approved-source gate). A `fitVerified: true` persisted under older rules is NOT evidence.
+ * Bump this string whenever the certification rules change; every persisted cart / saved quote
+ * then drops back to "fit not yet confirmed" until the line is re-added through the live certified path.
+ */
+export const FIT_EVIDENCE_VERSION = "2026-09-20.oe-offset-provenance";
+
+/**
+ * Sanitize items coming from ANY persisted source (localStorage hydration, saved-quote restore,
+ * cart restore). Keeps every line, SKU, price and quantity; only the fit CLAIM is touched:
+ * - fitVerified:true with the current evidence version -> kept
+ * - fitVerified:true with a missing/older version      -> fitVerified:false + fitRevalidate:true
+ * - anything else                                        -> unchanged
+ * Non-array input or non-object entries are dropped (never NaN carts).
+ *
+ * There is deliberately NO automatic re-certification of invalidated lines (Codex review
+ * 2026-09-20): check-fitment answers for ONE sku and would let a front-only fits:true re-mint
+ * a staggered pair claim, and its geometry path does not yet carry the selected trim exactly.
+ * A persisted line becomes verified again only by being re-added through the live certified
+ * path (or once a per-axle + exact-trim re-certification endpoint exists).
+ */
+export function sanitizePersistedCartItems(raw: unknown): CartItem[] {
+  if (!Array.isArray(raw)) return [];
+  const out: CartItem[] = [];
+  for (const entry of raw) {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) continue;
+    const item = entry as CartItem;
+    if ((item.type === "wheel" || item.type === "tire") && item.fitVerified === true && item.fitVerifiedVersion !== FIT_EVIDENCE_VERSION) {
+      out.push({ ...item, fitVerified: false, fitRevalidate: true } as CartItem);
+      continue;
+    }
+    out.push(item);
+  }
+  return out;
+}
+
+/** Live add-to-cart path: a fresh `fitVerified: true` is stamped with the current evidence version. */
+function stampFitEvidence(item: CartItem): CartItem {
+  if ((item.type === "wheel" || item.type === "tire") && item.fitVerified === true) {
+    return { ...item, fitVerifiedVersion: FIT_EVIDENCE_VERSION, fitRevalidate: undefined } as CartItem;
+  }
+  return item;
+}
+
 const RESUMED_QUOTE_KEY = "wt_resumed_quote";
 
 export function CartProvider({ children }: { children: ReactNode }) {
@@ -267,7 +320,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed)) {
-          setItems(parsed);
+          // 2026-09-20 (Codex): never trust a persisted certification boolean - see sanitizePersistedCartItems
+          setItems(sanitizePersistedCartItems(parsed));
         }
       }
       // Also load resumed quote ID if present
@@ -354,6 +408,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
       localStorage.removeItem("wt_resumed_quote");
     }
     
+    // 2026-09-20 (Codex): the live add path is the only place a certification is minted
+    item = stampFitEvidence(item);
     setItems((prev) => {
       // Same line = same type + front SKU + rear SKU (staggered vs square never merge)
       const key = cartLineKey(item);
@@ -525,6 +581,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
    */
   const replaceCart = useCallback((newItems: CartItem[], quoteId?: string) => {
     console.log("[cart] Replacing cart with", newItems.length, "items", quoteId ? `(from quote ${quoteId})` : "");
+    // 2026-09-20 (Codex): a saved quote's fitVerified was minted under the rules of its day
+    newItems = sanitizePersistedCartItems(newItems);
     setItems(newItems);
     setLastAddedItem(newItems.length > 0 ? newItems[0] : null);
     // Track resumed quote for checkout linking
