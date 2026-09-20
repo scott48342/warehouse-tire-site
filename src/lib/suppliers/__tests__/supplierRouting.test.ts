@@ -27,7 +27,9 @@ import { placeWheelProsOrder } from "@/lib/wheelpros/orderClient";
 import {
   extractItemsBySupplier,
   resolveLineSupplierSource,
+  resolveLineIdentity,
   canAutoOrder,
+  autoOrderHoldReasons,
   processSupplierOrders,
   type SupplierOrderItem,
 } from "@/lib/suppliers/supplierOrderService";
@@ -35,10 +37,14 @@ import {
 const usaf = placeUSAF as jest.Mock;
 const wp = placeWheelProsOrder as jest.Mock;
 
+// NOTE: every line carries a CLIENT brand claim ("General") and a brand-looking name so the tests
+// prove neither is ever used for identity.
 const line = (sku: string, cartType: "wheel" | "tire", meta: Record<string, unknown>, qty = 4): QuoteLine => ({
-  kind: "product", name: `${cartType} ${sku}`, sku, unitPriceUsd: 100, qty, taxable: true,
-  meta: { cartType, brand: "General", ...meta },
+  kind: "product", name: `General Altimax ${sku} 245/45R18`, sku, unitPriceUsd: 100, qty, taxable: true,
+  meta: { cartType, brand: "General", brandName: "General", ...meta },
 });
+// catalog tire block with identity, as resolveTirePrice writes it
+const tireCat = (supplierSource: string, extra: Record<string, unknown> = {}) => ({ sizeLabel: "245/45R18", supplierSource, brand: "Toyo", brandCode: "TOY", ...extra });
 const snap = (lines: QuoteLine[]): QuoteSnapshot => ({ lines, totals: { subtotalUsd: 0, taxUsd: 0, totalUsd: 0 } } as unknown as QuoteSnapshot);
 const shipTo: Parameters<typeof processSupplierOrders>[3] = { name: "T", address1: "1", city: "Pontiac", state: "MI", zip: "48340" };
 
@@ -91,9 +97,36 @@ describe("extractItemsBySupplier - groups on the catalog, not the client", () =>
   });
 });
 
+describe("resolveLineIdentity - brand / USAF lineCode from the catalog only", () => {
+  it("catalog brandCode wins; client meta.brand / brandName / name are ignored", () => {
+    expect(resolveLineIdentity(line("T1", "tire", { brand: "General", catalog: tireCat("usautoforce") })))
+      .toEqual({ brand: "Toyo", lineCode: "TOY", identityTrust: "catalog" });
+  });
+  it("catalog brand without a code maps through the USAF brand table (catalog name, not the client's)", () => {
+    expect(resolveLineIdentity(line("T1", "tire", { brand: "General", catalog: tireCat("usautoforce", { brandCode: undefined, brand: "BFGoodrich" }) })))
+      .toEqual({ brand: "BFGoodrich", lineCode: "BFG", identityTrust: "catalog" });
+  });
+  it("catalog block with no brand info -> none, even though the client claims 'General' and the name says General", () => {
+    expect(resolveLineIdentity(line("T1", "tire", { catalog: { sizeLabel: "245/45R18", supplierSource: "usautoforce" } })))
+      .toEqual({ identityTrust: "none" });
+  });
+  it("legacy snapshot (no catalog block) -> none; the client brand is never a fallback", () => {
+    expect(resolveLineIdentity(line("T1", "tire", { source: "tireweb:usautoforce", brand: "General" }))).toEqual({ identityTrust: "none" });
+  });
+  it("extractItemsBySupplier carries only the catalog identity", () => {
+    const m = extractItemsBySupplier(snap([
+      line("T1", "tire", { catalog: tireCat("usautoforce") }),
+      line("L1", "tire", { source: "tireweb:usautoforce", brand: "General" }),
+    ]));
+    const items = m.get("usautoforce")!;
+    expect(items.find((i) => i.partNumber === "T1")).toMatchObject({ brand: "Toyo", lineCode: "TOY", identityTrust: "catalog" });
+    expect(items.find((i) => i.partNumber === "L1")).toMatchObject({ brand: undefined, lineCode: undefined, identityTrust: "none", sourceTrust: "legacy_client" });
+  });
+});
+
 describe("canAutoOrder", () => {
-  const item = (sourceTrust: SupplierOrderItem["sourceTrust"]): SupplierOrderItem =>
-    ({ partNumber: "X", quantity: 4, source: "wheelpros", sourceTrust, lineName: "x" });
+  const item = (sourceTrust: SupplierOrderItem["sourceTrust"], identityTrust: SupplierOrderItem["identityTrust"] = "catalog", lineCode: string | null = "TOY"): SupplierOrderItem =>
+    ({ partNumber: "X", quantity: 4, source: "wheelpros", sourceTrust, lineName: "x", identityTrust, lineCode: lineCode ?? undefined });
   it("true only for an auto-order supplier whose EVERY item is catalog-routed", () => {
     expect(canAutoOrder("wheelpros", [item("catalog")])).toBe(true);
     expect(canAutoOrder("usautoforce", [item("catalog")])).toBe(true);
@@ -102,6 +135,15 @@ describe("canAutoOrder", () => {
     expect(canAutoOrder("usautoforce", [item("unknown")])).toBe(false);
     expect(canAutoOrder("atd", [item("catalog")])).toBe(false);
     expect(canAutoOrder("wheelpros", [])).toBe(false);
+  });
+  it("US AutoForce additionally requires a catalog-derived lineCode on every item; WheelPros (partNumber-keyed) does not", () => {
+    expect(canAutoOrder("usautoforce", [item("catalog", "none", null)])).toBe(false);
+    expect(canAutoOrder("usautoforce", [item("catalog", "catalog", null)])).toBe(false);
+    expect(canAutoOrder("usautoforce", [item("catalog"), item("catalog", "none", null)])).toBe(false);
+    expect(canAutoOrder("wheelpros", [item("catalog", "none", null)])).toBe(true);
+    expect(autoOrderHoldReasons("usautoforce", [item("catalog", "none", null), item("legacy_client")]))
+      .toEqual(["X lineCode=missing", "X routing=legacy_client"]);
+    expect(autoOrderHoldReasons("usautoforce", [item("catalog")])).toEqual([]);
   });
 });
 
@@ -133,12 +175,34 @@ describe("processSupplierOrders - mocked clients + db; nothing is ordered for no
 
   it("mixed group: one catalog + one legacy item for the same auto-order supplier -> whole group held", async () => {
     await processSupplierOrders(db, "WTD-3", snap([
-      line("T1", "tire", { catalog: { sizeLabel: "245/45R18", supplierSource: "usautoforce" } }),
+      line("T1", "tire", { catalog: tireCat("usautoforce") }),
       line("T2", "tire", { source: "usautoforce" }),
     ]), shipTo);
     expect(usaf).not.toHaveBeenCalled();
     const insert = dbCalls.find((p) => p[0] === "WTD-3")!;
     expect(insert[4]).toBe("manual");
+  });
+
+  it("catalog-routed USAF tires WITH catalog lineCode -> API order (mock) carries the CATALOG code, not the client's brand", async () => {
+    const res = await processSupplierOrders(db, "WTD-5", snap([line("T1", "tire", { brand: "General", catalog: tireCat("usautoforce") })]), shipTo, { usafBranch: "4101" });
+    expect(usaf).toHaveBeenCalledTimes(1);
+    const req = usaf.mock.calls[0][0] as { items: Array<{ partNumber: string; lineCode: string }> };
+    expect(req.items).toEqual([{ partNumber: "T1", quantity: 4, lineCode: "TOY" }]);
+    expect(res[0]).toMatchObject({ supplier: "usautoforce", success: true });
+  });
+
+  it("TAMPER: catalog-routed USAF tire whose catalog has NO brand code -> held for review even though the client supplied brand 'General' (GEN) and a General-looking name", async () => {
+    const res = await processSupplierOrders(db, "WTD-6", snap([
+      line("T1", "tire", { brand: "General", brandName: "General", catalog: { sizeLabel: "245/45R18", supplierSource: "usautoforce" } }),
+    ]), shipTo);
+    expect(usaf).not.toHaveBeenCalled();
+    expect(res[0]).toMatchObject({ supplier: "usautoforce", supplierPO: "MANUAL-REVIEW-WTD-6" });
+    expect(res[0].errorMessage).toContain("T1 lineCode=missing");
+    const insert = dbCalls.find((p) => p[0] === "WTD-6")!;
+    expect(insert[4]).toBe("manual");
+    const persisted = JSON.parse(insert[5] as string) as SupplierOrderItem[];
+    expect(persisted[0]).toMatchObject({ identityTrust: "none" });
+    expect(persisted[0].lineCode).toBeUndefined();
   });
 
   it("non-auto supplier (ATD) stays manual with the plain MANUAL PO, regardless of trust", async () => {

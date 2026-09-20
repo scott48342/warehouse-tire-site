@@ -41,10 +41,16 @@ export interface SupplierOrderItem {
   source: string;
   sourceTrust: SupplierSourceTrust;
   lineName: string;
-  /** Brand name (e.g., "General", "BF Goodrich") */
+  /** Brand name as the CATALOG names it (meta.catalog.brand). Never client meta.brand / line name. */
   brand?: string;
-  /** USAF brand code (e.g., "GEN", "BFG") - required for USAF orders */
+  /**
+   * USAF brand/line code - required for USAF orders. Only ever the catalog's own code
+   * (meta.catalog.brandCode) or the mapping of the catalog's brand name; never derived from
+   * the client's brand claim or the product name.
+   */
   lineCode?: string;
+  /** Where brand/lineCode came from: catalog | none. Legacy client brand is not used. */
+  identityTrust: "catalog" | "none";
 }
 
 export interface SupplierOrderRequest {
@@ -130,9 +136,42 @@ export function resolveLineSupplierSource(line: QuoteLine): { source: string; so
   return legacy ? { source: legacy, sourceTrust: "legacy_client" } : { source: "unknown", sourceTrust: "unknown" };
 }
 
-/** An auto-order API call is allowed only when EVERY item's routing came from the catalog. */
+/**
+ * Product identity for the supplier PO from the catalog block only. The client's meta.brand /
+ * meta.brandName and the (client-built) line name are never consulted: a shopper could set them
+ * to any brand and, for US AutoForce, any lineCode - which is what the supplier actually ships.
+ */
+export function resolveLineIdentity(line: QuoteLine): { brand?: string; lineCode?: string; identityTrust: "catalog" | "none" } {
+  const meta = (line.meta || {}) as Record<string, unknown>;
+  const catalog = meta.catalog;
+  if (!catalog || typeof catalog !== "object") return { identityTrust: "none" };
+  const c = catalog as Record<string, unknown>;
+  const brand = typeof c.brand === "string" && c.brand.trim() ? c.brand.trim() : undefined;
+  const code = typeof c.brandCode === "string" && c.brandCode.trim() ? c.brandCode.trim().toUpperCase() : undefined;
+  const lineCode = code ?? (brand ? getUSAFBrandCode(brand) ?? undefined : undefined);
+  if (!brand && !lineCode) return { identityTrust: "none" };
+  return { brand, lineCode, identityTrust: "catalog" };
+}
+
+/**
+ * An auto-order API call is allowed only when EVERY item's routing came from the catalog and,
+ * for US AutoForce (whose order API keys on lineCode), every item's lineCode is catalog-derived.
+ */
 export function canAutoOrder(supplier: string, items: SupplierOrderItem[]): boolean {
-  return isAutoOrderSupplier(supplier) && items.length > 0 && items.every((i) => i.sourceTrust === "catalog");
+  if (!isAutoOrderSupplier(supplier) || items.length === 0) return false;
+  if (!items.every((i) => i.sourceTrust === "catalog")) return false;
+  if (supplier === "usautoforce") return items.every((i) => i.identityTrust === "catalog" && !!i.lineCode);
+  return true;
+}
+
+/** Human-readable reasons an auto-order group is held; empty when canAutoOrder is true. */
+export function autoOrderHoldReasons(supplier: string, items: SupplierOrderItem[]): string[] {
+  const out: string[] = [];
+  for (const i of items) {
+    if (i.sourceTrust !== "catalog") out.push(`${i.partNumber} routing=${i.sourceTrust}`);
+    else if (supplier === "usautoforce" && (i.identityTrust !== "catalog" || !i.lineCode)) out.push(`${i.partNumber} lineCode=missing`);
+  }
+  return out;
 }
 
 /**
@@ -152,12 +191,9 @@ export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, Sup
     
     if (!partNumber) continue;
     
-    // Extract brand from meta or from line name
-    // Brand can be stored as meta.brand, meta.brandName, or parsed from name
-    const brand = line.meta?.brand || line.meta?.brandName || extractBrandFromName(line.name);
-    
-    // Get USAF brand code if we have a brand
-    const lineCode = brand ? getUSAFBrandCode(brand) : undefined;
+    // Product identity (brand / USAF lineCode): catalog block only - never meta.brand,
+    // meta.brandName or the client-built line name (Codex supplier trust review 2026-09-20).
+    const { brand, lineCode, identityTrust } = resolveLineIdentity(line);
     
     const item: SupplierOrderItem = {
       partNumber,
@@ -166,8 +202,9 @@ export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, Sup
       source,
       sourceTrust,
       lineName: line.name,
-      brand: brand || undefined,
-      lineCode: lineCode || undefined,
+      brand,
+      lineCode,
+      identityTrust,
     };
     
     // Normalize supplier name
@@ -180,48 +217,6 @@ export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, Sup
   }
   
   return bySupplier;
-}
-
-/**
- * Try to extract brand name from product line name
- * e.g., "General Altimax Arctic 12 225/60R16" → "General"
- * e.g., "BF Goodrich Advantage Control 225/60R16" → "BF Goodrich"
- */
-function extractBrandFromName(name: string): string | null {
-  if (!name) return null;
-  
-  // Known multi-word brand patterns
-  const multiWordBrands = [
-    "BF Goodrich",
-    "BFGoodrich", 
-    "Mickey Thompson",
-    "Dick Cepek",
-    "GT Radial",
-    "Multi-Mile",
-    "Multi Mile",
-    "Trail Guide",
-    "Wild Country",
-    "Road One",
-    "Le Mans",
-    "Lion Sport",
-    "Toyo Open Country",
-    "Toyo Proxes",
-  ];
-  
-  const upper = name.toUpperCase();
-  for (const brand of multiWordBrands) {
-    if (upper.startsWith(brand.toUpperCase())) {
-      return brand;
-    }
-  }
-  
-  // Default: first word is brand
-  const firstWord = name.split(/\s+/)[0];
-  if (firstWord && firstWord.length > 2) {
-    return firstWord;
-  }
-  
-  return null;
 }
 
 /**
@@ -458,16 +453,17 @@ export async function processSupplierOrders(
     const autoOrder = canAutoOrder(supplier, items);
     
     if (isAutoOrderSupplier(supplier) && !autoOrder) {
-      // The supplier could take an API order, but at least one item's routing did not come
-      // from the catalog (legacy snapshot or unknown source). Hold for a human - never place
-      // a supplier order on a client-claimed source.
-      const untrusted = items.filter((i) => i.sourceTrust !== "catalog").map((i) => `${i.partNumber} (${i.sourceTrust})`);
-      console.warn(`[supplier-order] ${supplier} order for ${orderId} held for review - routing source not catalog-verified:`, untrusted);
+      // The supplier could take an API order, but at least one item's routing or product
+      // identity (USAF lineCode) did not come from the catalog (legacy snapshot, unknown
+      // source, or catalog without a brand code). Hold for a human - never place a supplier
+      // order on a client-claimed source or brand.
+      const reasons = autoOrderHoldReasons(supplier, items);
+      console.warn(`[supplier-order] ${supplier} order for ${orderId} held for review - not catalog-verified:`, reasons);
       result = {
         success: true,
         supplier,
         supplierPO: `MANUAL-REVIEW-${orderId}`,
-        errorMessage: `Held for review: supplier routing not catalog-verified for ${untrusted.join(", ")}`,
+        errorMessage: `Held for review: supplier routing/identity not catalog-verified for ${reasons.join(", ")}`,
         items,
       };
     } else if (autoOrder) {

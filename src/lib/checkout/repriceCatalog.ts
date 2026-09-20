@@ -33,6 +33,10 @@ export type CatalogShippingAttrs = {
   weightLbs?: number;
   /** Supplier/source tag from the catalog hit (e.g. "wheelpros", "tireweb:atd", "usautoforce"). */
   supplierSource?: string;
+  /** Brand as the catalog names it (tires). Product identity for the supplier PO - never client meta. */
+  brand?: string;
+  /** Supplier brand/line code from the catalog hit (US AutoForce StockCheck brandCode). */
+  brandCode?: string;
 };
 
 export type ResolvedCatalogPrice = {
@@ -156,6 +160,10 @@ export async function resolveTirePrice(sku: string, size?: string): Promise<Reso
           sizeLabel: typeof hit.size === "string" && hit.size.trim() ? hit.size.trim() : undefined,
           weightLbs: positive(hit.badges?.tireWeight) ?? undefined,
           supplierSource: typeof hit.source === "string" && hit.source ? hit.source : undefined,
+          brand: typeof hit.brand === "string" && hit.brand.trim() ? hit.brand.trim() : undefined,
+          brandCode: typeof hit.usafEnrichment?.brandCode === "string" && hit.usafEnrichment.brandCode.trim()
+            ? hit.usafEnrichment.brandCode.trim().toUpperCase()
+            : undefined,
         },
       };
     }
