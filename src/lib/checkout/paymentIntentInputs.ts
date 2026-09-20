@@ -26,6 +26,10 @@ export type PaymentIntentInputs = {
   isLocal: boolean;
   selectedStore?: string | null;
   discountCode?: string | null;
+  /** Vehicle the cart was built for - fitment-verified pricing/eligibility depends on it. */
+  vehicle?: { year?: string | number | null; make?: string | null; model?: string | null; trim?: string | null } | null;
+  /** The amount the shopper is being shown; if it moves for any reason the intent is stale. */
+  displayedTotal?: number | null;
 };
 
 const s = (v: unknown) => String(v ?? "").trim();
@@ -42,5 +46,7 @@ export function paymentIntentInputKey(input: PaymentIntentInputs): string {
     local: Boolean(input.isLocal),
     store: s(input.selectedStore),
     discount: s(input.discountCode).toUpperCase(),
+    vehicle: input.vehicle ? [s(input.vehicle.year), s(input.vehicle.make).toUpperCase(), s(input.vehicle.model).toUpperCase(), s(input.vehicle.trim).toUpperCase()] : null,
+    total: n(input.displayedTotal),
   });
 }

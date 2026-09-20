@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { paymentIntentInputKey } from "@/lib/checkout/paymentIntentInputs";
+import {
+  initialPaymentIntentSession, applyInputKey, liveClientSecret, canCreateIntent, beginIntentRequest,
+  settleIntentRequest, runIntentRequest, withPendingRevision, acceptPendingRevision, type PaymentIntentSession,
+} from "@/lib/checkout/paymentIntentSession";
 import { useRouter } from "next/navigation";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
@@ -350,42 +354,43 @@ export default function CheckoutPage() {
     installation: number; recycling: number; discountRejected?: { code: string; reason: string };
     retry: "embedded" | "hosted" | "affirm";
   };
-  const [pendingRevision, setPendingRevision] = useState<RevisedTotals | null>(null);
-  const [acceptedServerTotal, setAcceptedServerTotal] = useState<number | null>(null);
-  const acceptedTotalRef = useRef<number | null>(null);
+  // PaymentIntent lifecycle (stale-intent invalidation, Codex review 2026-09-20). One pure
+  // state machine (src/lib/checkout/paymentIntentSession.ts) owns the live intent, the in-flight
+  // request generation, the abandoned-intent id and the pending/accepted totals revision.
+  const [piSession, setPiSession] = useState<PaymentIntentSession<RevisedTotals>>(() => initialPaymentIntentSession<RevisedTotals>());
+  const piSessionRef = useRef(piSession);
+  piSessionRef.current = piSession;
+  const pendingRevision = piSession.pendingRevision;
+  const acceptedServerTotal = piSession.acceptedTotal;
   const round2 = (n: number) => Math.round(n * 100) / 100;
+  // Hosted / Affirm paths: the server revised the total -> park it for explicit review.
   function takeTotalsRevision(data: any, retry: RevisedTotals["retry"]): boolean {
     if (data?.error !== "totals_changed" || !data?.revised) return false;
-    if (data.revised.discountRejected) removeDiscount();
-    acceptedTotalRef.current = null;
-    setAcceptedServerTotal(null);
-    setPendingRevision({ ...data.revised, retry });
+    // A rejected discount is removed when the shopper ACCEPTS the revision, not here: removing it
+    // now would change the intent fingerprint and drop this very revision before it is shown.
+    setPiSession((s) => withPendingRevision(s, { ...data.revised, retry }));
     setStripeError(null);
     logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "fail", endpoint: retry === "embedded" ? "/api/stripe/create-payment-intent" : "/api/stripe/create-checkout-session", errorCode: "totals_changed" });
     return true;
   }
   function acceptRevision() {
-    if (!pendingRevision) return;
-    const t = pendingRevision.total;
-    acceptedTotalRef.current = t;
-    setAcceptedServerTotal(t);
-    const retry = pendingRevision.retry;
-    setPendingRevision(null);
-    if (retry === "hosted") void startStripeCheckout({ expectedTotal: t });
-    else if (retry === "affirm") void startStripeCheckout({ forceAffirm: true, expectedTotal: t });
-    // embedded: the PaymentIntent effect re-fires now that no revision is pending
+    const rev = piSessionRef.current.pendingRevision;
+    if (!rev) return;
+    const t = rev.total;
+    const omitDiscount = Boolean(rev.discountRejected);
+    setPiSession((s) => acceptPendingRevision(s));
+    if (omitDiscount) removeDiscount();
+    if (rev.retry === "hosted") void startStripeCheckout({ expectedTotal: t, omitDiscount });
+    else if (rev.retry === "affirm") void startStripeCheckout({ forceAffirm: true, expectedTotal: t, omitDiscount });
+    // embedded: the PaymentIntent effect re-fires now that no revision is pending (if the discount
+    // was removed the fingerprint changes and the new intent is created without it)
   }
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
   
-  // Embedded Payment Element state
-  const [clientSecret, setClientSecret] = useState<string | null>(null);
-  const [paymentIntentId, setPaymentIntentId] = useState<string | null>(null);
-  // Id of an intent this checkout abandoned because its inputs changed; sent with the next
-  // create request so the server cancels it (stale PI invalidation, Codex review 2026-09-20).
-  const supersededPiRef = useRef<string | null>(null);
-  const [quoteId, setQuoteId] = useState<string | null>(null);
-  const [paymentLoading, setPaymentLoading] = useState(false);
+  // Embedded Payment Element state lives in piSession (see above).
+  const quoteId = piSession.quoteId;
+  const paymentLoading = piSession.inFlight !== null;
   
   // Tax rate based on shipping state (local mode: auto-apply Michigan 6%)
   const MICHIGAN_TAX_RATE = 0.06;
@@ -635,9 +640,8 @@ export default function CheckoutPage() {
   // Subtract discount from subtotal
   const totalWithTaxAndShipping = validation.totals.subtotal - discountAmount + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
   // What the shopper sees as the amount to pay: the server total they accepted, else the client estimate.
+  // (The client estimate is part of the intent fingerprint, so any change to it voids the accepted total.)
   const displayTotal = acceptedServerTotal ?? totalWithTaxAndShipping;
-  // Any change to the client estimate (cart, address, discount) voids a previously accepted server total.
-  useEffect(() => { acceptedTotalRef.current = null; setAcceptedServerTotal(null); }, [totalWithTaxAndShipping]);
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -704,7 +708,7 @@ export default function CheckoutPage() {
     }
   }
 
-  async function startStripeCheckout(options?: { forceAffirm?: boolean; expectedTotal?: number }) {
+  async function startStripeCheckout(options?: { forceAffirm?: boolean; expectedTotal?: number; omitDiscount?: boolean }) {
     try {
       setStripeError(null);
       setProcessing(true);
@@ -729,8 +733,8 @@ export default function CheckoutPage() {
           // Force Affirm-only checkout
           ...(options?.forceAffirm ? { paymentMethod: "affirm" } : {}),
           // The total the shopper is looking at; the server refuses to charge a different one silently.
-          expectedTotal: options?.expectedTotal ?? acceptedTotalRef.current ?? round2(totalWithTaxAndShipping),
-          ...(hasDiscount && activeDiscount ? { discount: { code: activeDiscount.code, amount: discountAmount, type: activeDiscount.source } } : {}),
+          expectedTotal: options?.expectedTotal ?? piSessionRef.current.acceptedTotal ?? round2(totalWithTaxAndShipping),
+          ...(hasDiscount && activeDiscount && !options?.omitDiscount ? { discount: { code: activeDiscount.code, amount: discountAmount, type: activeDiscount.source } } : {}),
           // Local mode: include install store for order routing
           ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
           shipping: {
@@ -792,45 +796,42 @@ export default function CheckoutPage() {
     isLocal,
     selectedStore: selectedStore ? String(selectedStore) : null,
     discountCode: activeDiscount?.code ?? null,
-  }), [items, shipping.address, shipping.address2, shipping.city, shipping.state, shipping.zip, shipping.email, isLocal, selectedStore, activeDiscount?.code]);
-  const paymentIntentKeyRef = useRef<string | null>(null);
+    vehicle: vehicle ? { year: vehicle.year, make: vehicle.make, model: vehicle.model, trim: vehicle.trim } : null,
+    displayedTotal: round2(totalWithTaxAndShipping),
+  }), [items, shipping.address, shipping.address2, shipping.city, shipping.state, shipping.zip, shipping.email, isLocal, selectedStore, activeDiscount?.code, vehicle, totalWithTaxAndShipping]);
+  // Derived from the CURRENT fingerprint: the Payment Element unmounts in the same render the
+  // inputs change, before the session effect below has even run.
+  const clientSecret = liveClientSecret(piSession, paymentInputKey);
   useEffect(() => {
-    if (!clientSecret) return;
-    if (paymentIntentKeyRef.current === paymentInputKey) return;
-    // Inputs changed under a live intent: invalidate it. The create effect below re-fires.
-    supersededPiRef.current = paymentIntentId;
-    paymentIntentKeyRef.current = null;
-    setClientSecret(null);
-    setPaymentIntentId(null);
-    setQuoteId(null);
-    logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "ok", endpoint: "/api/stripe/create-payment-intent", errorCode: "stale_intent_invalidated" });
-  }, [paymentInputKey, clientSecret, paymentIntentId]);
+    const r = applyInputKey(piSessionRef.current, paymentInputKey);
+    if (!r.changed) return;
+    setPiSession(r.session);
+    if (r.invalidatedIntent || r.abandonedRequest) {
+      logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "ok", endpoint: "/api/stripe/create-payment-intent", errorCode: r.invalidatedIntent ? "stale_intent_invalidated" : "stale_intent_request_abandoned" });
+    }
+  }, [paymentInputKey]);
 
   const createPaymentIntent = useCallback(async () => {
-    // Skip if already created or loading
-    if (clientSecret || paymentLoading) return;
-    const inputKeyAtRequest = paymentInputKey;
-    
-    try {
-      setPaymentLoading(true);
-      setStripeError(null);
+    const current = piSessionRef.current;
+    if (!canCreateIntent(current, true) || current.currentKey !== paymentInputKey) return;
+    const { session: started, tag } = beginIntentRequest(current);
+    piSessionRef.current = started;
+    setPiSession(started);
+    setStripeError(null);
 
-      const customer = {
-        firstName: shipping.firstName,
-        lastName: shipping.lastName,
-        email: shipping.email,
-        phone: shipping.phone,
-      };
+    const customer = {
+      firstName: shipping.firstName,
+      lastName: shipping.lastName,
+      email: shipping.email,
+      phone: shipping.phone,
+    };
 
-      const res = await fetch("/api/stripe/create-payment-intent", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
+    const outcome = await runIntentRequest<RevisedTotals>(fetch, {
           items,
           customer,
           vehicle,
           cartId: getCartId(),
-          supersedesPaymentIntentId: supersededPiRef.current || undefined,
+          supersedesPaymentIntentId: tag.supersedesPaymentIntentId || undefined,
           // If cart was resumed from a saved quote, include for conversion tracking
           ...(resumedFromQuoteId ? { savedQuoteId: resumedFromQuoteId } : {}),
           ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
@@ -864,32 +865,31 @@ export default function CheckoutPage() {
               type: activeDiscount.source,
             },
           } : {}),
-          expectedTotal: acceptedTotalRef.current ?? round2(totalWithTaxAndShipping),
-        }),
-      });
+          expectedTotal: tag.acceptedTotal ?? round2(totalWithTaxAndShipping),
+    });
 
-      const data = await res.json().catch(() => null);
-      if (!res.ok || !data?.ok || !data?.clientSecret) {
-        if (takeTotalsRevision(data, "embedded")) return;
-        setStripeError(String(data?.detail || data?.error || "Failed to initialize payment"));
-        logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-payment-intent", httpStatus: res.status, errorCode: String(data?.error || "payment_intent_failed") });
-        return;
-      }
+    // Generation gate: a reply for inputs the shopper has since changed is ignored entirely
+    // (success, revision, error and completion). The fresh generation has its own request.
+    const settled = settleIntentRequest(piSessionRef.current, tag, outcome.kind === "revision" ? { ...outcome, revised: { ...outcome.revised, retry: "embedded" as const } } : outcome);
+    if (settled.stale) {
+      piSessionRef.current = settled.session;
+      setPiSession(settled.session);
+      logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "ok", endpoint: "/api/stripe/create-payment-intent", errorCode: "stale_intent_response_ignored" });
+      return;
+    }
+    piSessionRef.current = settled.session;
+    setPiSession(settled.session);
+    if (outcome.kind === "intent") {
       logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "ok", endpoint: "/api/stripe/create-payment-intent" });
-
-      supersededPiRef.current = null;
-      paymentIntentKeyRef.current = inputKeyAtRequest;
-      setClientSecret(data.clientSecret);
-      setPaymentIntentId(data.paymentIntentId);
-      setQuoteId(data.quoteId);
-    } catch (e: any) {
-      setStripeError(e?.message || String(e));
-      logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "error", endpoint: "/api/stripe/create-payment-intent", errorCode: String(e?.message || "payment_intent_exception") });
-    } finally {
-      setPaymentLoading(false);
+    } else if (outcome.kind === "revision") {
+      setStripeError(null);
+      logCheckoutDiagnostic({ eventType: "api_failure", checkoutStep: "payment", status: "fail", endpoint: "/api/stripe/create-payment-intent", errorCode: "totals_changed" });
+    } else {
+      setStripeError(outcome.message);
+      logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: outcome.code === "payment_intent_exception" ? "error" : "fail", endpoint: "/api/stripe/create-payment-intent", httpStatus: outcome.httpStatus, errorCode: outcome.code });
     }
   }, [
-    clientSecret, paymentLoading, shipping, items, vehicle, isLocal, selectedStore,
+    shipping, items, vehicle, isLocal, selectedStore,
     shippingAmount, shippingEstimate.isFree, taxRate, calculatedTax, 
     localServiceFees, cardProcessingFee, tireCount, totalWithTaxAndShipping, hasDiscount, activeDiscount, discountAmount,
     paymentInputKey,
@@ -910,7 +910,7 @@ export default function CheckoutPage() {
 
   // Create PaymentIntent when shipping info is complete
   useEffect(() => {
-    if (!(isShippingComplete && !clientSecret && !paymentLoading && !pendingRevision)) return;
+    if (!canCreateIntent(piSession, isShippingComplete) || piSession.currentKey !== paymentInputKey) return;
     // Short settle window so a burst of edits (typing a zip, adjusting quantities) yields one
     // intent instead of one per keystroke.
     const t = setTimeout(() => {
@@ -919,7 +919,7 @@ export default function CheckoutPage() {
       trackAddPaymentInfo(cartTotal);
     }, 400);
     return () => clearTimeout(t);
-  }, [isShippingComplete, clientSecret, paymentLoading, createPaymentIntent, cartTotal, pendingRevision]);
+  }, [isShippingComplete, piSession, paymentInputKey, createPaymentIntent, cartTotal]);
 
   // Handle successful payment
   const handlePaymentSuccess = useCallback((paymentIntentId: string) => {
