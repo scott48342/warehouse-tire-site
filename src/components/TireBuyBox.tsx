@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { QuantitySelector } from "./QuantitySelector";
 import { AddTiresToCartButton } from "./AddTiresToCartButton";
+import { StaggeredTireSetBuy } from "./StaggeredTireSetBuy";
+import type { StaggeredTireSet } from "@/lib/tires/staggeredPairContext";
 import { FinancingBadge } from "./FinancingBadge";
 import { EnhancedTrustStrip } from "./TirePDPEnhancements";
 import { InstallTimeIndicator } from "./InstallTimeIndicator";
@@ -31,6 +33,12 @@ type TireBuyBoxProps = {
   source?: string;
   /** Tire weight in pounds - for accurate shipping calculation */
   weightLbs?: number;
+  /**
+   * PDP opened from a staggered pair (2026-09-20): sells exactly 2 front + 2 rear at each
+   * axle's price via StaggeredTireSetBuy, or nothing when the rear is unresolved/unpriced.
+   * The square quantity picker and square Add button are not rendered.
+   */
+  staggeredSet?: StaggeredTireSet | null;
   delivery: {
     text: string;
     color: string;
@@ -57,6 +65,7 @@ export function TireBuyBox({
   hasWarranty = true,
   source,
   weightLbs,
+  staggeredSet,
   delivery,
 }: TireBuyBoxProps) {
   const [quantity, setQuantity] = useState(4);
@@ -93,7 +102,7 @@ export function TireBuyBox({
         )}
       </div>
       
-      {hasPrice && !isLocal && (
+      {hasPrice && !isLocal && !staggeredSet && (
         <div className="mt-1 text-sm text-neutral-600">
           {quantity === 1 ? (
             <span>Single tire</span>
@@ -106,7 +115,7 @@ export function TireBuyBox({
       )}
 
       {/* Local mode: out-the-door breakdown (matches desktop, prevents cart sticker shock) */}
-      {hasPrice && isLocal && otd && (
+      {hasPrice && isLocal && otd && !staggeredSet && (
         <div className="mt-3 rounded-xl border border-green-200 bg-white/70 p-3 text-sm">
           <div className="flex items-center justify-between text-neutral-600">
             <span>Tires ({quantity}×{fmtMoney(unitPrice)})</span>
@@ -141,8 +150,25 @@ export function TireBuyBox({
         <span>{delivery.text}</span>
       </div>
 
-      {/* Quantity Selector - only show when we have a price */}
-      {hasPrice && (
+      {staggeredSet ? (
+        <StaggeredTireSetBuy
+          sku={sku}
+          brand={brand}
+          model={model}
+          size={size}
+          frontUnitPrice={unitPrice}
+          set={staggeredSet}
+          loadIndex={loadIndex}
+          speedRating={speedRating}
+          imageUrl={imageUrl}
+          vehicle={vehicle}
+          source={source}
+          weightLbs={weightLbs}
+        />
+      ) : null}
+
+      {/* Quantity Selector - only show when we have a price (square sets only) */}
+      {hasPrice && !staggeredSet && (
         <div className="mt-4">
           <QuantitySelector
             value={quantity}
@@ -153,7 +179,7 @@ export function TireBuyBox({
         </div>
       )}
       
-      {hasPrice && (
+      {hasPrice && !staggeredSet && (
         <div className="mt-4">
           <AddTiresToCartButton
             sku={sku}

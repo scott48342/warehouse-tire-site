@@ -49,6 +49,7 @@ import { detectShopContext } from "@/lib/shopContext";
 import { notFound } from "next/navigation";
 // SEO structured data (2026-06-09)
 import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
+import { appendForwardedPairParams, loadStaggeredTireSet, type StaggeredTireSet } from "@/lib/tires/staggeredPairContext";
 
 export const runtime = "nodejs";
 
@@ -584,6 +585,12 @@ export default async function TireDetailPage({
   const source = String((sp as any).source || "");
   const size = String((sp as any).size || "");
 
+  // Staggered pair context (2026-09-20): a PDP opened from "Select Staggered Set" sells exactly
+  // 2 front + 2 rear at each axle's own price - or nothing if the rear cannot be resolved.
+  // The square Add buttons (buy box qty picker, mobile sticky) are not offered on a pair PDP,
+  // including an INCOMPLETE pair URL (dropped param) - that fails closed too.
+  const staggeredSet: StaggeredTireSet | null = await loadStaggeredTireSet(sp, getBaseUrl());
+
   // Detect shop mode (local vs national) for delivery messaging
   const headersList = await headers();
   const shopContext = detectShopContext(headersList);
@@ -874,6 +881,7 @@ export default async function TireDetailPage({
                       hasWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) > 0 : true}
                       source={tire.rawSource || tire.source || "tireweb"}
                       weightLbs={tire.badges?.tireWeight ? Number(tire.badges.tireWeight) : undefined}
+                      staggeredSet={staggeredSet}
                       delivery={delivery}
                     />
 
@@ -956,8 +964,8 @@ export default async function TireDetailPage({
                 <div className="mt-6 text-xs text-neutral-400">SKU: {safeSku}</div>
               </div>
 
-              {/* Mobile sticky CTA - actual add-to-cart button (fixed 2026-06-12) */}
-              <MobileStickyAddToCart
+              {/* Mobile sticky CTA - actual add-to-cart button (fixed 2026-06-12). Not on a pair PDP: it can only add 4 x front. */}
+              {!staggeredSet ? <MobileStickyAddToCart
                 type="tire"
                 sku={tire.partNumber || safeSku}
                 brand={tire.brand || "Tire"}
@@ -970,7 +978,7 @@ export default async function TireDetailPage({
                 quantity={4}
                 vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
                 source={tire.rawSource || tire.source || "tireweb"}
-              />
+              /> : null}
             </main>
             </>
           );
@@ -1045,7 +1053,9 @@ export default async function TireDetailPage({
   if (!t && !source) {
     const cache = await lookupTireWebCache(safeSku);
     if (cache && cache.size) {
-      const redirectUrl = buildResolvableTireWebPath(safeSku, cache.source, cache.size);
+      // Carry the vehicle + staggered pair through the hop (2026-09-20): the bare redirect used
+      // to drop rearSku/rearSize, so the KM PDP sold 4 front tires for a 19/20 pair.
+      const redirectUrl = appendForwardedPairParams(buildResolvableTireWebPath(safeSku, cache.source, cache.size), sp);
       // Guard against a no-op redirect back to the same bare path.
       if (redirectUrl && redirectUrl !== `/tires/${encodeURIComponent(safeSku)}`) {
         const { redirect } = await import("next/navigation");
@@ -1312,6 +1322,7 @@ export default async function TireDetailPage({
               hasWarranty={t.mileage_warranty ? Number(t.mileage_warranty) > 0 : true}
               source="wheelpros"
               weightLbs={t.tire_weight ? Number(t.tire_weight) : undefined}
+              staggeredSet={staggeredSet}
               delivery={delivery}
             />
 
@@ -1417,8 +1428,8 @@ export default async function TireDetailPage({
         <div className="mt-6 text-xs text-neutral-400">SKU: {safeSku}</div>
       </div>
 
-      {/* Mobile sticky CTA - actual add-to-cart button (fixed 2026-06-12) */}
-      <MobileStickyAddToCart
+      {/* Mobile sticky CTA - actual add-to-cart button (fixed 2026-06-12). Not on a pair PDP: it can only add 4 x front. */}
+      {!staggeredSet ? <MobileStickyAddToCart
         type="tire"
         sku={safeSku}
         brand={String(t.brand_desc || "Tire")}
@@ -1431,7 +1442,7 @@ export default async function TireDetailPage({
         quantity={4}
         vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
         source="wheelpros"
-      />
+      /> : null}
     </main>
     </>
   );

@@ -9,6 +9,8 @@ import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/t
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
 // Add to cart (same as main PDP)
 import { AddTiresToCartButton } from "@/components/AddTiresToCartButton";
+import { StaggeredTireSetBuy } from "@/components/StaggeredTireSetBuy";
+import { loadStaggeredTireSet, type StaggeredTireSet } from "@/lib/tires/staggeredPairContext";
 // PDP Conversion Enhancements (shared with main PDP)
 import { 
   BestForMicro, 
@@ -230,6 +232,11 @@ export default async function KmTireDetailPage({
   
   const displayTrim = getDisplayTrim({ trim });
   const hasVehicle = Boolean(year && make && model);
+
+  // Staggered pair context (2026-09-20): opened from "Select Staggered Set" (directly or via the
+  // bare-URL redirect) this page sells exactly 2 front + 2 rear, or nothing if the rear is unresolved
+  // or the pair URL is incomplete (fails closed - no square Add).
+  const staggeredSet: StaggeredTireSet | null = await loadStaggeredTireSet(sp, getBaseUrl());
 
   const backQs = new URLSearchParams();
   if (year) backQs.set("year", year);
@@ -479,7 +486,7 @@ export default async function KmTireDetailPage({
                   <div className="text-xl font-bold text-neutral-700">Call for pricing</div>
                 )}
               </div>
-              {displayPrice != null && (
+              {displayPrice != null && !staggeredSet && (
                 <div className="mt-1 text-sm text-neutral-600">
                   Set of 4: <span className="font-bold text-green-700">{fmtMoney(displayPrice * 4)}</span>
                 </div>
@@ -490,8 +497,24 @@ export default async function KmTireDetailPage({
                 <span>{delivery.text}</span>
               </div>
               
-              {/* Primary CTA: Add to Cart (same as main PDP) */}
-              {displayPrice != null && (
+              {staggeredSet ? (
+                <StaggeredTireSetBuy
+                  sku={safePart}
+                  brand={brand}
+                  model={title}
+                  size={normalizedSize}
+                  frontUnitPrice={displayPrice}
+                  set={staggeredSet}
+                  loadIndex={loadIndex || undefined}
+                  speedRating={speedRating || undefined}
+                  imageUrl={enrichedImageUrl || undefined}
+                  vehicle={hasVehicle ? { year, make, model, trim: trim || undefined, modification: modification || undefined } : undefined}
+                  source={item.rawSource || item.source || "km"}
+                />
+              ) : null}
+
+              {/* Primary CTA: Add to Cart (same as main PDP) - square sets only */}
+              {displayPrice != null && !staggeredSet && (
                 <div className="mt-4">
                   <AddTiresToCartButton
                     sku={safePart}

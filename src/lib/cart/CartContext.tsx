@@ -147,6 +147,10 @@ export type CartTireItem = {
   model: string;
   size: string;
   rearSize?: string;
+  /** Per-tire FRONT price on a staggered line (2 of these). Checkout re-prices server-side. */
+  frontUnitPrice?: number;
+  /** Per-tire REAR price on a staggered line (2 of these). Checkout re-prices server-side. */
+  rearUnitPrice?: number;
   loadIndex?: string;
   speedRating?: string;
   imageUrl?: string;

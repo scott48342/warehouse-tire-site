@@ -8,6 +8,9 @@ import { getOutTheDoorTotal } from "@/lib/localPricing";
 type AddTiresToCartButtonProps = {
   sku: string;
   rearSku?: string;
+  /** Staggered set: per-tire front / rear prices (2 + 2). Checkout re-prices server-side. */
+  frontUnitPrice?: number;
+  rearUnitPrice?: number;
   brand: string;
   model: string;
   size: string;
@@ -37,6 +40,8 @@ type AddTiresToCartButtonProps = {
 export function AddTiresToCartButton({
   sku,
   rearSku,
+  frontUnitPrice,
+  rearUnitPrice,
   brand,
   model,
   size,
@@ -69,6 +74,8 @@ export function AddTiresToCartButton({
       model,
       size,
       rearSize,
+      frontUnitPrice: staggered && rearSku ? frontUnitPrice : undefined,
+      rearUnitPrice: staggered && rearSku ? rearUnitPrice : undefined,
       loadIndex,
       speedRating,
       imageUrl,
@@ -86,10 +93,19 @@ export function AddTiresToCartButton({
     }, 150);
   };
 
-  // In local mode the button reflects the out-the-door total (install + tax + fees)
-  // so the price doesn't jump when the item lands in the cart.
-  const total = isLocal ? getOutTheDoorTotal(unitPrice, quantity, size) : unitPrice * quantity;
+  // Staggered set: exact 2 x front + 2 x rear (2026-09-20), never 4 x the blended unit.
+  const isStaggeredSet = Boolean(staggered && rearSku && frontUnitPrice != null && rearUnitPrice != null);
+  const setTotal = isStaggeredSet ? Math.round((2 * (frontUnitPrice as number) + 2 * (rearUnitPrice as number)) * 100) / 100 : unitPrice * quantity;
+  // In local mode the button reflects the out-the-door total (install + tax + fees) so the price
+  // doesn't jump when the item lands in the cart. Staggered: each axle priced with ITS OWN size
+  // (install tiers differ by size), 2 + 2 - never the front size x4. Server totals remain authority.
+  const total = isLocal
+    ? (isStaggeredSet
+        ? Math.round((getOutTheDoorTotal(frontUnitPrice as number, 2, size) + getOutTheDoorTotal(rearUnitPrice as number, 2, rearSize)) * 100) / 100
+        : getOutTheDoorTotal(unitPrice, quantity, size))
+    : setTotal;
   const otdSuffix = isLocal ? " out the door" : "";
+  const setLabel = isStaggeredSet ? "Add Staggered Set (2 front + 2 rear)" : `Add Set of ${quantity}`;
 
   const baseStyles = {
     primary: "flex h-12 items-center justify-center rounded-2xl px-5 text-sm font-extrabold bg-gradient-to-b from-red-500 to-red-600 text-white hover:from-red-500 hover:to-red-700 hover:brightness-105 active:scale-[0.98] transition-all duration-250 ease-out shadow-md shadow-red-600/20 hover:shadow-lg hover:shadow-red-600/30 hover:scale-[1.015]",
@@ -133,8 +149,8 @@ export function AddTiresToCartButton({
       ) : (
         <span>
           {showPriceInButton && Number.isFinite(total) && total > 0 
-            ? `Add Set of ${quantity} — $${total.toFixed(2)}${otdSuffix}`
-            : `Add Set of ${quantity} to Cart`
+            ? `${setLabel} — $${total.toFixed(2)}${otdSuffix}`
+            : `${setLabel} to Cart`
           }
         </span>
       )}
