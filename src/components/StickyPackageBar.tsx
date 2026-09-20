@@ -216,7 +216,7 @@ export function StickyPackageBar({
                 <div className="hidden lg:flex items-center gap-4 text-xs text-neutral-500 border-l border-neutral-200 pl-4">
                   <span className="flex items-center gap-1">
                     <span className="text-green-600">✓</span>
-                    Fitment Guaranteed
+                    Fit checked before shipping{/* 2026-09-20 (Codex live check hotfix): unconditional guarantee removed */}
                   </span>
                 </div>
               </div>

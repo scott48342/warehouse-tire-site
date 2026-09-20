@@ -43,6 +43,8 @@ import { ProductPageSchema, type BreadcrumbItem } from "@/components/seo";
 import { MobileStickyAddToCart } from "@/components/MobileStickyAddToCart";
 // Inventory cache for stock availability (2026-08-21)
 import { getInventoryForSku } from "@/lib/inventoryCache";
+// Fit-claim wording (2026-09-20): neutral unless server certification is passed
+import { quickBenefitFitLine } from "@/lib/fitment/fitClaimCopy";
 
 type WheelProsBrand = {
   code?: string;
@@ -606,9 +608,12 @@ export default async function WheelDetailPage({
     return `/wheels?${new URLSearchParams(params).toString()}`;
   };
 
-  // Quick benefits for above-the-fold
+  // Quick benefits for above-the-fold.
+  // 2026-09-20 (Codex live check hotfix): a selected vehicle is NOT a verified fit.
+  // This page has no per-SKU/per-axle certification for the exact trim, so it makes
+  // no "verified/guaranteed" claim - neutral wording only (same rule as SRP cards).
   const quickBenefits = [
-    hasVehicle ? "Verified fitment guaranteed" : null,
+    quickBenefitFitLine(hasVehicle, false),
     "Premium quality construction",
   ].filter(Boolean).slice(0, 2);
 
@@ -720,7 +725,7 @@ export default async function WheelDetailPage({
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-xs">✓</span>
                   <div>
                     <div className="text-sm font-bold text-green-900">Shopping for {year} {make} {model}</div>
-                    <div className="text-[11px] text-green-700">Fitment support included</div>
+                    <div className="text-[11px] text-green-700">Fit not yet confirmed - checked before shipping</div>
                   </div>
                 </div>
                 <Link href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`} className="text-xs font-semibold text-green-700 hover:underline">
@@ -852,7 +857,8 @@ export default async function WheelDetailPage({
             ROW 2: Supporting Cards (3-column)
             ═══════════════════════════════════════════════════════════════════ */}
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <WhyChooseThisWheel finish={finish} hasVerifiedFit={hasVehicle} />
+          {/* 2026-09-20: no certification evidence on this page -> never claim a verified fit */}
+          <WhyChooseThisWheel finish={finish} fitCertified={false} />
           <WheelComparisonContext finish={finish} diameter={diameter} />
           <WheelWhatHappensNext />
         </div>

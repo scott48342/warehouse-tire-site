@@ -9,6 +9,8 @@
  * @created 2026-04-06
  */
 
+import { pdpFitLine, whyChooseFitBullet } from "@/lib/fitment/fitClaimCopy";
+
 // ============================================================================
 // TYPES
 // ============================================================================
@@ -132,11 +134,17 @@ function getIdealForLine(style?: WheelStyle, finish?: string): string | null {
 interface WhyChooseThisWheelProps {
   style?: WheelStyle;
   finish?: string;
-  hasVerifiedFit?: boolean;
+  /**
+   * 2026-09-20 (Codex live check hotfix): renamed from `hasVerifiedFit`, which
+   * every caller fed with "a vehicle is selected". A verified-fit bullet needs
+   * server certification of THIS SKU (both axles for a staggered set) for the
+   * exact trim. No PDP caller has that evidence yet, so they pass false.
+   */
+  fitCertified?: boolean;
 }
 
-export function WhyChooseThisWheel({ style, finish, hasVerifiedFit }: WhyChooseThisWheelProps) {
-  const bullets = getWhyChooseBullets(style, finish, hasVerifiedFit);
+export function WhyChooseThisWheel({ style, finish, fitCertified }: WhyChooseThisWheelProps) {
+  const bullets = getWhyChooseBullets(style, finish, fitCertified === true);
   
   if (bullets.length === 0) return null;
   
@@ -158,7 +166,7 @@ export function WhyChooseThisWheel({ style, finish, hasVerifiedFit }: WhyChooseT
   );
 }
 
-function getWhyChooseBullets(style?: WheelStyle, finish?: string, hasVerifiedFit?: boolean): string[] {
+export function getWhyChooseBullets(style?: WheelStyle, finish?: string, fitCertified?: boolean): string[] {
   const bullets: string[] = [];
   const effectiveStyle = style || inferStyleFromFinish(finish);
   
@@ -192,12 +200,8 @@ function getWhyChooseBullets(style?: WheelStyle, finish?: string, hasVerifiedFit
       bullets.push('Popular choice for custom wheel upgrades');
   }
   
-  // Add fitment confidence if verified
-  if (hasVerifiedFit) {
-    bullets.push('Verified fitment for confident installation');
-  } else {
-    bullets.push('Professional fitment verification included');
-  }
+  // Fitment line: a claim only on proven certification; otherwise neutral (lib/fitment/fitClaimCopy).
+  bullets.push(whyChooseFitBullet(fitCertified));
   
   return bullets.slice(0, 3);
 }
@@ -306,15 +310,19 @@ export function WheelWhatHappensNext() {
 
 interface WheelTrustStripProps {
   hasVehicle: boolean;
+  /** Server-certified fit for this exact SKU set + trim. Undefined/false = neutral wording. */
+  fitCertified?: boolean;
 }
 
-export function WheelTrustStrip({ hasVehicle }: WheelTrustStripProps) {
+export function WheelTrustStrip({ hasVehicle, fitCertified }: WheelTrustStripProps) {
+  // 2026-09-20 (Codex live check hotfix): "Verified fit" only with certification evidence
+  const fitLine = pdpFitLine(hasVehicle, fitCertified);
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[11px] text-green-700 py-2 border-t border-green-200/50 mt-3">
-      {hasVehicle && (
+      {fitLine && (
         <span className="inline-flex items-center gap-1">
           <span>✔</span>
-          <span>Verified fit for your vehicle</span>
+          <span>{fitLine}</span>
         </span>
       )}
       <span className="inline-flex items-center gap-1">

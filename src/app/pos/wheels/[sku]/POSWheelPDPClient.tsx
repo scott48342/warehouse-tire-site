@@ -427,7 +427,7 @@ export function POSWheelPDPClient({ sku, year, make, model, trim }: Props) {
           {hasVehicle && (
             <div className="flex items-center gap-2 rounded-lg bg-green-50 border border-green-200 px-3 py-2">
               <span className="text-green-600">✓</span>
-              <span className="text-sm font-medium text-green-800">Verified Fit</span>
+              <span className="text-sm font-medium text-green-800">Vehicle selected - fit checked before sale</span>{/* 2026-09-20 (Codex live check hotfix): a selected vehicle is not a verified fit */}
             </div>
           )}
         </div>

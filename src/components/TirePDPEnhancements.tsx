@@ -15,6 +15,7 @@
  */
 
 import { useState } from "react";
+import { pdpFitLine } from "@/lib/fitment/fitClaimCopy";
 
 // ============================================================================
 // SECTION 1: ABOVE THE FOLD ENHANCEMENTS
@@ -151,15 +152,22 @@ function getIdealForLine(category: TireCategory, mileageWarranty?: number | null
 interface EnhancedTrustStripProps {
   hasVehicle: boolean;
   hasWarranty?: boolean;
+  /** Server-certified fit for this exact tire size + trim. Undefined/false = neutral wording. */
+  fitCertified?: boolean;
 }
 
-export function EnhancedTrustStrip({ hasVehicle, hasWarranty = true }: EnhancedTrustStripProps) {
+// 2026-09-20 (Codex live check hotfix): the tire PDP trust lines said "Verified fit
+// for your vehicle" whenever a vehicle was selected - the same false-claim mechanism
+// as the wheel PDP. Wording is decided in lib/fitment/fitClaimCopy: a claim needs
+// certification evidence; a selected vehicle alone gets the neutral line.
+export function EnhancedTrustStrip({ hasVehicle, hasWarranty = true, fitCertified }: EnhancedTrustStripProps) {
+  const fitLine = pdpFitLine(hasVehicle, fitCertified);
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[11px] text-green-700 py-2 border-t border-green-200/50 mt-3">
-      {hasVehicle && (
+      {fitLine && (
         <span className="inline-flex items-center gap-1">
           <span>✔</span>
-          <span>Verified fit for your vehicle</span>
+          <span>{fitLine}</span>
         </span>
       )}
       <span className="inline-flex items-center gap-1">
@@ -626,16 +634,18 @@ export function WarrantySupport({ mileageWarranty, hasRoadHazard = true }: Warra
  */
 interface FinalTrustReminderProps {
   hasVehicle: boolean;
+  fitCertified?: boolean;
 }
 
-export function FinalTrustReminder({ hasVehicle }: FinalTrustReminderProps) {
+export function FinalTrustReminder({ hasVehicle, fitCertified }: FinalTrustReminderProps) {
+  const fitLine = pdpFitLine(hasVehicle, fitCertified);
   return (
     <div className="rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 px-4 py-3">
       <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-green-800">
-        {hasVehicle && (
+        {fitLine && (
           <span className="inline-flex items-center gap-1.5">
             <span className="text-green-600">✔</span>
-            <span className="font-medium">Verified fit for your vehicle</span>
+            <span className="font-medium">{fitLine}</span>
           </span>
         )}
         <span className="inline-flex items-center gap-1.5">
