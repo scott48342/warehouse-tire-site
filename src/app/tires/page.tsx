@@ -2311,6 +2311,17 @@ export default async function TiresPage({
   const wpSize = searchSizeForFetch;
   
   // For staggered vehicles in package flow, also fetch tire pairs
+  // 2026-09-20 (Codex review of the tires hand-off): the front pair size was generated from the
+  // wheel width alone (245/35R19 for an 8.5" wheel) while the "Tire Size for 19in wheels" strip
+  // showed a different selected size (255/40R19). The shopper's selected FRONT size wins for the
+  // matched pairs whenever it is a metric size on the front wheel diameter; the rear stays the
+  // rear wheel's size. Selection and displayed pairs now agree.
+  if (staggeredFrontTireSize && staggeredRearTireSize && actualFrontDia) {
+    const m = /^(\d{3})\/(\d{2})Z?R(\d{2})$/i.exec(String(selectedSize || "").toUpperCase());
+    if (m && Number(m[3]) === Number(actualFrontDia)) {
+      staggeredFrontTireSize = `${m[1]}/${m[2]}R${m[3]}`;
+    }
+  }
   const shouldFetchStaggeredPairs = isStaggeredVehicle && isPackageFlow && staggeredFrontTireSize && staggeredRearTireSize;
   
   // Determine fetch strategy based on search mode
