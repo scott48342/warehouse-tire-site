@@ -29,7 +29,8 @@
  */
 import type pg from "pg";
 import type { QuoteLine } from "@/lib/quotes";
-import { getStateTaxRate } from "@/lib/tax/stateTaxRates";
+import { getStateTaxRate, DEFAULT_STATE_TAX_RATES } from "@/lib/tax/stateTaxRates";
+import type { StoreInfo } from "@/lib/shopContext";
 import { TAX_RATE as LOCAL_TAX_RATE, isCommercialTireSize } from "@/lib/localPricing";
 import {
   calculateShipping,
@@ -67,8 +68,21 @@ export type ShippingInput = {
   diameterInches?: number;
 };
 
+/**
+ * Where the order is actually fulfilled - the ONLY input to the tax jurisdiction and the
+ * shipping rate. National orders ship to the card's billing address (fraud policy 2026-09-03);
+ * local orders are installed/picked up at a store. Never a separate client "tax" claim.
+ */
+export type Fulfillment =
+  | { kind: "ship"; address: { state?: unknown; zip?: unknown } | null | undefined }
+  | { kind: "store"; store: Pick<StoreInfo, "id" | "state"> };
+
+/** US sales-tax jurisdictions we can price (50 states + DC). Anything else is not shippable. */
+export const TAX_JURISDICTIONS: ReadonlySet<string> = new Set(Object.keys(DEFAULT_STATE_TAX_RATES));
+
 export type ClientTotalsClaim = {
-  shipping?: { zip?: string; state?: string; amount?: number; isFree?: boolean } | null;
+  /** Client-displayed amounts. Logged as deltas only - never used to compute a charge. */
+  shipping?: { amount?: number; isFree?: boolean } | null;
   tax?: { amount?: number; rate?: number; state?: string } | null;
   discount?: { code?: string; amount?: number; type?: string } | null;
   localFees?: { installation?: number; recycling?: number; cardProcessing?: number; tireCount?: number } | null;
@@ -103,7 +117,15 @@ export type ServerTotals = {
 
 export type ServerTotalsResult =
   | { ok: true; totals: ServerTotals }
-  | { ok: false; error: "shipping_unavailable" | "invalid_shipping_zip"; detail: string };
+  | { ok: false; error: "shipping_unavailable" | "invalid_shipping_zip" | "invalid_shipping_address"; detail: string };
+
+/** A shown total we can compare against: finite and non-negative. Anything else is not a claim. */
+export function validExpectedTotal(v: unknown): number | null {
+  // Only a number or a numeric string is a claim: Number([]) is 0 and Number(true) is 1.
+  if (typeof v !== "number" && (typeof v !== "string" || v.trim() === "")) return null;
+  const n = Number(v);
+  return Number.isFinite(n) && n >= 0 ? n : null;
+}
 
 export const money = (n: number) => Math.round((Number(n) || 0) * 100) / 100;
 
@@ -229,19 +251,35 @@ export async function resolveServerTotals(params: {
   /** raw cart items from the request body - weight/diameter hints only */
   cartHints?: CartItemHint[];
   isLocal: boolean;
+  /** ship-to address (national) or install store (local) - the fulfillment point of record */
+  fulfillment: Fulfillment;
   claim: ClientTotalsClaim;
 }): Promise<ServerTotalsResult> {
-  const { db, productLines, isLocal, claim } = params;
+  const { db, productLines, isLocal, fulfillment, claim } = params;
   const shipInputs = shippingInputsFromLines(productLines, params.cartHints || []);
 
   const productSubtotalUsd = money(productLines.reduce((s, l) => s + (Number(l.unitPriceUsd) || 0) * (Number(l.qty) || 0), 0));
   const taxableSubtotalUsd = money(productLines.filter((l) => l.taxable !== false).reduce((s, l) => s + (Number(l.unitPriceUsd) || 0) * (Number(l.qty) || 0), 0));
 
-  // ---- tax: OUR state table (national) or the Michigan rate (local) -------------------
-  const taxState = String(claim.tax?.state || claim.shipping?.state || "").trim().toUpperCase();
-  let taxRate = 0;
-  if (isLocal) taxRate = LOCAL_TAX_RATE;
-  else if (/^[A-Z]{2}$/.test(taxState)) taxRate = Number(await getStateTaxRate(db, taxState)) || 0;
+  // ---- tax jurisdiction: the fulfillment point, never a client tax claim ---------------
+  // Local: the install/pickup store's state at the existing local rate (6% MI).
+  // National: the ship-to (= billing) address state, priced from OUR state table. A missing
+  // or unknown state is a blocked checkout, not a $0-tax order (Codex review 2026-09-20).
+  let taxState: string;
+  let taxRate: number;
+  if (isLocal) {
+    const storeState = fulfillment.kind === "store" ? String(fulfillment.store.state || "").trim().toUpperCase() : "";
+    taxState = storeState || "MI";
+    taxRate = LOCAL_TAX_RATE;
+  } else {
+    const addr = fulfillment.kind === "ship" ? fulfillment.address : null;
+    taxState = String(addr?.state ?? "").trim().toUpperCase();
+    if (!TAX_JURISDICTIONS.has(taxState)) {
+      return { ok: false, error: "invalid_shipping_address", detail: "A valid US state is required on the shipping address to calculate tax." };
+    }
+    const rate = Number(await getStateTaxRate(db, taxState));
+    taxRate = Number.isFinite(rate) && rate >= 0 ? rate : 0; // table rows may legitimately be 0 (OR, MT, NH, DE, AK)
+  }
   const taxUsd = money(taxableSubtotalUsd * taxRate);
 
   // ---- shipping ------------------------------------------------------------------------
@@ -251,7 +289,7 @@ export async function resolveServerTotals(params: {
   if (isLocal) {
     shippingSource = "local"; // store delivery included
   } else {
-    const zipRaw = String(claim.shipping?.zip || "").trim();
+    const zipRaw = String((fulfillment.kind === "ship" ? fulfillment.address?.zip : "") ?? "").trim();
     if (!zipRaw || !isValidZipCode(zipRaw)) {
       return { ok: false, error: "invalid_shipping_zip", detail: "A valid 5-digit US ZIP code is required to price shipping." };
     }
@@ -334,21 +372,22 @@ export function totalsToQuoteLines(t: ServerTotals, opts: { zip?: string }): Quo
 }
 
 /**
- * The shopper must review a total that differs from the one they were shown, and must be
- * told when their discount was dropped. `expectedTotal` absent (legacy client) -> only a
- * rejected discount forces review; the server total is charged as computed.
+ * Payment proceeds only when the shopper has acknowledged THIS total: `expectedTotal` must be
+ * a finite non-negative number equal (in cents) to the server total, and the discount must
+ * still validate. A missing/invalid expectedTotal (legacy or tampered client) is a review,
+ * never a silent charge (Codex review 2026-09-20).
  */
 export function needsTotalsReview(t: ServerTotals, expectedTotal: unknown): boolean {
   if (t.discountRejected) return true;
-  const exp = num(expectedTotal);
-  if (exp == null) return false;
+  const exp = validExpectedTotal(expectedTotal);
+  if (exp == null) return true;
   // Compare in whole cents (a float x - 0.01 can land at 0.00999...).
   return Math.round(exp * 100) !== Math.round(t.totalUsd * 100);
 }
 
 /** Customer-facing revised breakdown (no internals). */
 export function revisedTotalsPayload(t: ServerTotals, expectedTotal: unknown) {
-  const exp = num(expectedTotal);
+  const exp = validExpectedTotal(expectedTotal);
   return {
     expectedTotal: exp,
     total: t.totalUsd,
@@ -371,8 +410,8 @@ export function totalsReviewDetail(t: ServerTotals, expectedTotal: unknown): str
     const why = t.discountRejected.reason === "expired" ? "has expired" : t.discountRejected.reason === "already_redeemed" ? "has already been used" : "is no longer valid";
     return `Discount code ${t.discountRejected.code} ${why} and was removed. Please review your updated total of $${t.totalUsd.toFixed(2)} before paying.`;
   }
-  const exp = num(expectedTotal);
+  const exp = validExpectedTotal(expectedTotal);
   return exp == null
-    ? `Please review your updated total of $${t.totalUsd.toFixed(2)} before paying.`
+    ? `Please review your total of $${t.totalUsd.toFixed(2)} before paying.`
     : `Your total was updated from $${exp.toFixed(2)} to $${t.totalUsd.toFixed(2)}. Please review it before paying.`;
 }

@@ -20,7 +20,10 @@ jest.mock("@/lib/shopContext", () => ({
   buildLocalOrderMetadata: jest.fn(() => ({})),
   STORES: {},
 }));
-jest.mock("@/lib/tax/stateTaxRates", () => ({ getStateTaxRate: jest.fn(async () => 0.06) }));
+jest.mock("@/lib/tax/stateTaxRates", () => {
+  const actual = jest.requireActual("@/lib/tax/stateTaxRates");
+  return { DEFAULT_STATE_TAX_RATES: actual.DEFAULT_STATE_TAX_RATES, getStateTaxRate: jest.fn(async (_db: unknown, s: string) => (s === "MI" ? 0.06 : s === "TX" ? 0.0625 : 0)) };
+});
 jest.mock("@/lib/shipping/fedexRates", () => {
   const actual = jest.requireActual("@/lib/shipping/fedexRates");
   return { ...actual, getFedExShippingRate: jest.fn(async () => ({ success: false, groundRate: null })) };
@@ -112,10 +115,35 @@ describe("create-payment-intent - server totals authority", () => {
     expect(lines.find((l) => l.name === "Shipping & Handling")?.unitPriceUsd).toBe(zoneShipping);
   });
 
-  it("legacy client (no expectedTotal): server totals are charged, client amounts ignored", async () => {
-    const res = await POST(req({ tax: { amount: 1, state: "MI" }, shipping: { address: "1 Main St", city: "Pontiac", state: "MI", zip: "48340", amount: 1 } }));
+  it("NEGATIVE: legacy/tampered client without a valid expectedTotal -> 409 review, never a silent charge", async () => {
+    for (const expectedTotal of [undefined, null, "abc", -1, NaN]) {
+      const res = await POST(req({ expectedTotal, tax: { amount: 1, state: "MI" } }));
+      const json = await res.json();
+      expect(res.status).toBe(409);
+      expect(json.error).toBe("totals_changed");
+      expect(json.revised.total).toBe(serverTotal);
+      expect(json.revised.expectedTotal).toBeNull();
+    }
+    expect(quote).not.toHaveBeenCalled();
+    expect(piCreate).not.toHaveBeenCalled();
+  });
+
+  it("NEGATIVE: client tax.state is ignored - jurisdiction is the ship-to address (MI), TX claim changes nothing", async () => {
+    const res = await POST(req({ expectedTotal: serverTotal, tax: { amount: 85.19, rate: 0.0625, state: "TX" } }));
     expect(res.status).toBe(200);
     expect(piCreate.mock.calls[0][0].amount).toBe(Math.round(serverTotal * 100));
+    expect(piCreate.mock.calls[0][0].metadata.taxState).toBe("MI");
+    expect(piCreate.mock.calls[0][0].metadata.taxAmount).toBe("81.78");
+  });
+
+  it("NEGATIVE: ship-to address without a valid state -> 409 invalid_shipping_address, not a $0-tax charge", async () => {
+    for (const state of [undefined, "", "ZZ", "Michigan"]) {
+      const res = await POST(req({ expectedTotal: 1363.06, tax: { amount: 0, state: "MI" }, shipping: { address: "1 Main St", city: "Pontiac", state, zip: "48340" } }));
+      expect(res.status).toBe(409);
+      expect((await res.json()).error).toBe("invalid_shipping_address");
+    }
+    expect(quote).not.toHaveBeenCalled();
+    expect(piCreate).not.toHaveBeenCalled();
   });
 
   it("valid discount is validated server-side and taken off the charge (was metadata-only before)", async () => {

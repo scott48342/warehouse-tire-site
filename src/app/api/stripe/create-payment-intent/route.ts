@@ -178,7 +178,13 @@ export async function POST(req: Request) {
       productLines: linesAll,
       cartHints: items as CartItemHint[],
       isLocal: isLocalMode,
-      claim: { shipping: shippingInfo, tax: taxInfo, discount: body.discount, localFees: body.localFees, expectedTotal: body.expectedTotal },
+      // Tax jurisdiction + shipping rate come from the fulfillment point of record: the
+      // ship-to (= billing) address nationally, the install store locally. body.tax is
+      // logged as a delta only.
+      fulfillment: isLocalMode
+        ? { kind: "store", store: installStore ?? STORES.pontiac }
+        : { kind: "ship", address: { state: shippingInfo.state, zip: shippingInfo.zip } },
+      claim: { shipping: { amount: shippingInfo.amount, isFree: shippingInfo.isFree }, tax: taxInfo, discount: body.discount, localFees: body.localFees, expectedTotal: body.expectedTotal },
     });
     if (!totalsResult.ok) {
       console.warn(`[checkout/payment-intent] totals blocked: ${totalsResult.error}`, { zip: shippingInfo.zip });
