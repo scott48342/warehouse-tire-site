@@ -98,6 +98,7 @@ import { resolveVehicleFitment } from "@/lib/fitment/canonicalResolver";
 import { getWheelSizeGateDecisionWithTrimMapping } from "@/lib/tires/wheelSizeGateDecisionServer";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
 import { trimGateHref } from "@/lib/tires/trimGateHref";
+import { buildStaggeredPairHref } from "@/lib/tires/staggeredPairContext";
 import {
   type RearWheelConfig,
   isDRWCapable,
@@ -3996,19 +3997,41 @@ export default async function TiresPage({
                             ${(pair.setPrice / 4).toFixed(2)}/ea × 4 tires
                           </div>
                           
-                          {/* Select button */}
-                          <Link
-                            href={`/tires/${pair.front.partNumber}?size=${encodeURIComponent(pair.front.size)}&year=${year}&make=${make}&model=${model}&staggeredPair=${encodeURIComponent(pair.pairId)}&rearSku=${encodeURIComponent(pair.rear.partNumber)}&rearSize=${encodeURIComponent(pair.rear.size)}`}
-                            className="block w-full rounded-full bg-red-600 py-3 text-center text-sm font-bold text-white hover:bg-red-700 transition-colors"
-                          >
-                            Select Staggered Set
-                          </Link>
-                          <Link
-                            href={`/tires/${pair.front.partNumber}?size=${encodeURIComponent(pair.front.size)}&year=${year}&make=${make}&model=${model}`}
-                            className="mt-2 block w-full text-center text-xs font-medium text-neutral-500 hover:text-neutral-700"
-                          >
-                            View Details
-                          </Link>
+                          {/* 2026-09-20 (Codex live 16:59): BOTH links on a pair card carry the full pair
+                              (staggeredPair + rearSku + rearSize) and the vehicle incl. trim/modification.
+                              "View Details" used to drop the pair, so the PDP fell back to a square set of 4 fronts. */}
+                          {(() => {
+                            const pairHref = buildStaggeredPairHref({
+                              frontPartNumber: pair.front.partNumber,
+                              frontSize: pair.front.size,
+                              pairId: pair.pairId,
+                              rearPartNumber: pair.rear.partNumber,
+                              rearSize: pair.rear.size,
+                              year,
+                              make,
+                              model,
+                              trim,
+                              modification,
+                            });
+                            return (
+                              <>
+                                <Link
+                                  href={pairHref}
+                                  data-testid="pair-select-link"
+                                  className="block w-full rounded-full bg-red-600 py-3 text-center text-sm font-bold text-white hover:bg-red-700 transition-colors"
+                                >
+                                  Select Staggered Set
+                                </Link>
+                                <Link
+                                  href={pairHref}
+                                  data-testid="pair-details-link"
+                                  className="mt-2 block w-full text-center text-xs font-medium text-neutral-500 hover:text-neutral-700"
+                                >
+                                  View Details
+                                </Link>
+                              </>
+                            );
+                          })()}
                         </div>
                       </div>
                     </div>

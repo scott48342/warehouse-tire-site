@@ -1,7 +1,8 @@
 "use client";
 
-import { useCart } from "@/lib/cart/CartContext";
+import { useCart, cartLineTotal } from "@/lib/cart/CartContext";
 import Link from "next/link";
+import { StaggeredTireLineDetails, isStaggeredTireLine } from "@/components/cart/StaggeredTireLineDetails";
 
 /**
  * PackageSummary - Live package builder showing wheels + tires + accessories
@@ -35,8 +36,10 @@ export function PackageSummary({
   const isComplete = wheels.length > 0 && tires.length > 0;
 
   // Calculate subtotals (defensive: handle items with missing unitPrice/quantity)
+  // 2026-09-20 (Codex live 16:59): tire lines use cartLineTotal - a staggered 2+2 set is exact
+  // 2xfront + 2xrear (523.98), not the blended unit x4 (524.00) the sidebar used to print.
   const wheelSubtotal = wheels.reduce((sum, w) => sum + (w.unitPrice ?? 0) * (w.quantity ?? 0), 0);
-  const tireSubtotal = tires.reduce((sum, t) => sum + (t.unitPrice ?? 0) * (t.quantity ?? 0), 0);
+  const tireSubtotal = tires.reduce((sum, t) => sum + cartLineTotal(t), 0);
   const accessorySubtotal = accessories.reduce((sum, a) => sum + (a.unitPrice ?? 0) * (a.quantity ?? 0), 0);
 
   // Log state changes for debugging
@@ -110,12 +113,14 @@ export function PackageSummary({
 
           {/* Tires */}
           {tires.map((t) => (
-            <div key={t.sku} className="flex items-center justify-between text-sm">
+            <div key={`${t.sku}|${t.rearSku ?? ""}`} className="flex items-center justify-between text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-green-600">✓</span>
-                <span className="font-semibold text-neutral-900">{t.quantity ?? 0}× {t.brand} {t.model}</span>
+                <span className="font-semibold text-neutral-900">
+                  {isStaggeredTireLine(t) ? "2 front + 2 rear" : `${t.quantity ?? 0}×`} {t.brand} {t.model}
+                </span>
               </div>
-              <span className="font-semibold text-neutral-700">${((t.unitPrice ?? 0) * (t.quantity ?? 0)).toFixed(0)}</span>
+              <span className="font-semibold text-neutral-700">${cartLineTotal(t).toFixed(0)}</span>
             </div>
           ))}
 
@@ -237,7 +242,7 @@ export function PackageSummary({
 
           {tires.length > 0 ? (
             tires.map((t) => (
-              <div key={t.sku} className="ml-7 rounded-lg bg-neutral-50 p-3">
+              <div key={`${t.sku}|${t.rearSku ?? ""}`} className="ml-7 rounded-lg bg-neutral-50 p-3" data-testid="package-summary-tire-line">
                 <div className="flex gap-3">
                   {t.imageUrl && (
                     <img src={t.imageUrl} alt={t.model} className="h-12 w-12 rounded-lg object-contain bg-white border border-neutral-200" />
@@ -245,12 +250,18 @@ export function PackageSummary({
                   <div className="flex-1 min-w-0">
                     <div className="text-xs font-semibold text-neutral-600">{t.brand}</div>
                     <div className="text-sm font-extrabold text-neutral-900 truncate">{t.model}</div>
-                    <div className="text-xs text-neutral-600">{t.size}</div>
+                    {isStaggeredTireLine(t) ? (
+                      <StaggeredTireLineDetails tire={t} compact />
+                    ) : (
+                      <div className="text-xs text-neutral-600">{t.size}</div>
+                    )}
                   </div>
                 </div>
                 <div className="mt-2 flex items-center justify-between text-sm">
-                  <span className="text-neutral-600">{t.quantity ?? 0}× ${(t.unitPrice ?? 0).toFixed(2)}</span>
-                  <span className="font-extrabold text-neutral-900">${((t.unitPrice ?? 0) * (t.quantity ?? 0)).toFixed(2)}</span>
+                  <span className="text-neutral-600">
+                    {isStaggeredTireLine(t) ? "Set of 4 (2 front + 2 rear)" : `${t.quantity ?? 0}× $${(t.unitPrice ?? 0).toFixed(2)}`}
+                  </span>
+                  <span className="font-extrabold text-neutral-900">${cartLineTotal(t).toFixed(2)}</span>
                 </div>
               </div>
             ))

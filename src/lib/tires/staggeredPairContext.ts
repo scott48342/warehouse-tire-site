@@ -46,6 +46,35 @@ export function readStaggeredPairParams(sp: RawSearchParams): StaggeredPairParam
 /** Params a PDP redirect must carry forward so the pair (and vehicle) survive the hop. */
 export const PAIR_FORWARD_KEYS = ["year", "make", "model", "trim", "modification", "staggeredPair", "rearSku", "rearSize"] as const;
 
+/**
+ * The ONE href a tire-results pair card may link to (Select Staggered Set AND View Details).
+ * Carries the full pair (staggeredPair + rearSku + rearSize) plus the vehicle incl. trim/modification,
+ * so the PDP resolves the rear axle instead of falling back to a square set of 4 fronts.
+ * Mirrors PAIR_FORWARD_KEYS so what the card sends is exactly what the redirect forwards.
+ */
+export function buildStaggeredPairHref(p: {
+  frontPartNumber: string;
+  frontSize: string;
+  pairId: string;
+  rearPartNumber: string;
+  rearSize: string;
+  year?: string | null;
+  make?: string | null;
+  model?: string | null;
+  trim?: string | null;
+  modification?: string | null;
+}): string {
+  const q = new URLSearchParams();
+  q.set("size", p.frontSize);
+  for (const [k, v] of [["year", p.year], ["make", p.make], ["model", p.model], ["trim", p.trim], ["modification", p.modification]] as const) {
+    if (v) q.set(k, v);
+  }
+  q.set("staggeredPair", p.pairId);
+  q.set("rearSku", p.rearPartNumber);
+  q.set("rearSize", p.rearSize);
+  return `/tires/${encodeURIComponent(p.frontPartNumber)}?${q.toString()}`;
+}
+
 export function appendForwardedPairParams(redirectUrl: string, sp: RawSearchParams): string {
   const [path, existing = ""] = redirectUrl.split("?");
   const params = new URLSearchParams(existing);
