@@ -139,13 +139,21 @@ export async function ensureStateTaxTable(db: pg.Pool) {
  * Returns 0 if state not found (safe default).
  */
 export async function getStateTaxRate(db: pg.Pool, stateCode: string): Promise<number> {
-  await ensureStateTaxTable(db);
   const code = stateCode.toUpperCase().trim();
-  
-  const { rows } = await db.query({
-    text: `SELECT tax_rate FROM state_tax_rates WHERE state_code = $1 LIMIT 1`,
-    values: [code],
-  });
+  const select = { text: `SELECT tax_rate FROM state_tax_rates WHERE state_code = $1 LIMIT 1`, values: [code] };
+
+  // Read first; only create/seed the table when it is actually missing (42P01). The old
+  // unconditional CREATE TABLE IF NOT EXISTS on every lookup is DDL inside a read path and
+  // fails on a read-only connection (2026-09-20 preview: "cannot execute CREATE TABLE in a
+  // read-only transaction" turned every checkout into a 500).
+  let rows: Array<{ tax_rate: unknown }>;
+  try {
+    rows = (await db.query(select)).rows;
+  } catch (e: any) {
+    if (e?.code !== "42P01") throw e;
+    await ensureStateTaxTable(db);
+    rows = (await db.query(select)).rows;
+  }
 
   const rate = Number(rows[0]?.tax_rate);
   return Number.isFinite(rate) ? rate : 0;
