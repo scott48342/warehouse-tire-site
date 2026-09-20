@@ -3533,6 +3533,7 @@ export default async function TiresPage({
             selectedSize={selectedSize}
             vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
             baseUrl={basePath}
+            staggeredAxles={isStaggeredVehicle && wheelSkuRear ? { wheelSkuRear, wheelDiaFront, wheelWidthFront, wheelDiaRear, wheelWidthRear } : null}
           />
         ) : wheelDia && !isPackageFlow && selectedSize ? (
           /* Tire-only flow: Simple size context (no package language) */

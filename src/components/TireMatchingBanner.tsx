@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/lib/cart/CartContext";
+import { appendStaggeredAxleParams, type StaggeredAxleParams } from "@/lib/tires/trimGateHref";
 
 type TireSize = {
   size: string;
@@ -26,6 +27,8 @@ type TireMatchingBannerProps = {
     modification?: string;
   };
   baseUrl: string;
+  /** Staggered hand-off context; every size link keeps both axles (2026-09-20). */
+  staggeredAxles?: StaggeredAxleParams | null;
 };
 
 export function TireMatchingBanner({
@@ -37,6 +40,7 @@ export function TireMatchingBanner({
   selectedSize,
   vehicle,
   baseUrl,
+  staggeredAxles,
 }: TireMatchingBannerProps) {
   const { getWheels, getTotal, hasWheels, hasTires } = useCart();
   const [mounted, setMounted] = useState(false);
@@ -97,6 +101,7 @@ export function TireMatchingBanner({
     if (wheelDiameter) params.set("wheelDia", wheelDiameter);
     if (wheelWidth) params.set("wheelWidth", wheelWidth);
     params.set("size", size);
+    appendStaggeredAxleParams(params, staggeredAxles);
     return `${baseUrl}?${params.toString()}`;
   }
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
+import { appendStaggeredAxleParams } from "@/lib/tires/trimGateHref";
 
 type CompactHeaderProps = {
   // Vehicle info
@@ -300,6 +301,9 @@ export function TirePageCompactHeader({
           if (wheelFinish) params.set("wheelFinish", wheelFinish);
           if (sort) params.set("sort", sort);
           params.set("size", s);
+          // Staggered set: keep BOTH axles on every size link (2026-09-20) - a link with only the
+          // front wheelDia makes the page search a square set at the front diameter.
+          appendStaggeredAxleParams(params, isStaggered ? { wheelSkuRear, wheelDiaFront, wheelWidthFront, wheelDiaRear, wheelWidthRear } : null);
           // Append lifted params (already formatted as &key=value string)
           const base = `${basePath}?${params.toString()}`;
           return liftedParams ? `${base}${liftedParams}` : base;

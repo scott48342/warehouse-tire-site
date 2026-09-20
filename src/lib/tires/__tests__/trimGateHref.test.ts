@@ -6,7 +6,7 @@
  */
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import { trimGateHref } from "@/lib/tires/trimGateHref";
+import { appendStaggeredAxleParams, trimGateHref } from "@/lib/tires/trimGateHref";
 
 const CART_HANDOFF = {
   year: "2020", make: "Ford", model: "Mustang", trim: "GT Performance Pack",
@@ -47,5 +47,36 @@ describe("trimGateHref", () => {
     expect(src).toMatch(/import \{ trimGateHref \} from "@\/lib\/tires\/trimGateHref";/);
     expect((src.match(/href=\{trimGateHref\(sp, /g) || []).length).toBe(2);
     expect(src).not.toMatch(/href=\{`\/tires\?year=\$\{year\}&make=\$\{encodeURIComponent\(make\)\}&model=\$\{encodeURIComponent\(model\)\}&modification=/);
+  });
+});
+
+describe("appendStaggeredAxleParams (size links on the tires page)", () => {
+  const axles = { wheelSkuRear: "TR04209551435BK", wheelDiaFront: "19", wheelWidthFront: "8.5", wheelDiaRear: "20", wheelWidthRear: "9.5" };
+
+  test("a front-size link keeps the rear axle (20) so the page cannot fall back to a square 19 search", () => {
+    const p = new URLSearchParams({ year: "2020", make: "Ford", model: "Mustang", wheelSku: "TR04198551435BK", wheelDia: "19", wheelWidth: "8.5", size: "255/40R19" });
+    appendStaggeredAxleParams(p, axles);
+    expect(p.get("size")).toBe("255/40R19");
+    expect(p.get("wheelSkuRear")).toBe("TR04209551435BK");
+    expect(p.get("wheelDiaRear")).toBe("20");
+    expect(p.get("wheelWidthRear")).toBe("9.5");
+    expect(p.get("wheelDiaFront")).toBe("19");
+    expect(p.get("setup")).toBe("staggered");
+  });
+
+  test("square set: adds nothing", () => {
+    const p = new URLSearchParams({ wheelDia: "20", size: "275/40R20" });
+    appendStaggeredAxleParams(p, null);
+    appendStaggeredAxleParams(p, { wheelDiaRear: "20" });
+    expect([...p.keys()].sort()).toEqual(["size", "wheelDia"]);
+  });
+
+  test("both size-link builders on the tires page carry the staggered axles", () => {
+    const header = readFileSync(resolve(__dirname, "../../../components/TirePageCompactHeader.tsx"), "utf-8");
+    const banner = readFileSync(resolve(__dirname, "../../../components/TireMatchingBanner.tsx"), "utf-8");
+    const page = readFileSync(resolve(__dirname, "../../../app/tires/page.tsx"), "utf-8");
+    expect(header).toMatch(/appendStaggeredAxleParams\(params, isStaggered \? \{ wheelSkuRear, wheelDiaFront, wheelWidthFront, wheelDiaRear, wheelWidthRear \} : null\)/);
+    expect(banner).toMatch(/appendStaggeredAxleParams\(params, staggeredAxles\)/);
+    expect(page).toMatch(/staggeredAxles=\{isStaggeredVehicle && wheelSkuRear \? \{ wheelSkuRear, wheelDiaFront, wheelWidthFront, wheelDiaRear, wheelWidthRear \} : null\}/);
   });
 });

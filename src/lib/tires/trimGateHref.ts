@@ -25,3 +25,29 @@ export function trimGateHref(sp: RawSearchParams, modificationId: string): strin
   params.set("modification", modificationId);
   return `/tires?${params.toString()}`;
 }
+
+/** Rear/front axle context a staggered hand-off carries; every /tires size or trim link must keep it. */
+export type StaggeredAxleParams = {
+  wheelSkuRear?: string;
+  wheelDiaFront?: string;
+  wheelWidthFront?: string;
+  wheelDiaRear?: string;
+  wheelWidthRear?: string;
+};
+
+/**
+ * Append the staggered axle params to a size/trim link. A link that keeps only wheelDia (front)
+ * makes the tires page treat the set as square at the FRONT diameter - the OEM-19 fallback the
+ * 2026-09-20 live check flagged. Adds nothing when the set is not staggered.
+ */
+export function appendStaggeredAxleParams(params: URLSearchParams, s: StaggeredAxleParams | null | undefined): URLSearchParams {
+  if (!s || !s.wheelSkuRear) return params;
+  params.set("setup", "staggered");
+  params.set("staggered", "true");
+  params.set("wheelSkuRear", s.wheelSkuRear);
+  if (s.wheelDiaFront) params.set("wheelDiaFront", s.wheelDiaFront);
+  if (s.wheelWidthFront) params.set("wheelWidthFront", s.wheelWidthFront);
+  if (s.wheelDiaRear) params.set("wheelDiaRear", s.wheelDiaRear);
+  if (s.wheelWidthRear) params.set("wheelWidthRear", s.wheelWidthRear);
+  return params;
+}
