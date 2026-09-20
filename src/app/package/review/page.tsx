@@ -504,7 +504,7 @@ function IncompletePackage({
             {vehicle && (
               <VehicleConfirmation 
                 vehicle={vehicle} 
-                fitmentClass={wheels[0]?.fitmentClass}
+                fitmentClass={wheels.length > 0 && wheels.every((w) => w.fitVerified === true) ? wheels[0]?.fitmentClass : undefined}
               />
             )}
 
