@@ -97,6 +97,7 @@ import { getOemTireSizesByFamily } from "@/lib/fitment-db/getOemTireSizesByFamil
 import { resolveVehicleFitment } from "@/lib/fitment/canonicalResolver";
 import { getWheelSizeGateDecisionWithTrimMapping } from "@/lib/tires/wheelSizeGateDecisionServer";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
+import { trimGateHref } from "@/lib/tires/trimGateHref";
 import {
   type RearWheelConfig,
   isDRWCapable,
@@ -1656,7 +1657,7 @@ export default async function TiresPage({
                   {availableTrimsForGate.map((trim) => (
                     <a
                       key={trim.value}
-                      href={`/tires?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&modification=${encodeURIComponent(trim.modificationId || trim.value)}`}
+                      href={trimGateHref(sp, trim.modificationId || trim.value)}
                       className="inline-flex flex-col items-start rounded-xl border-2 border-amber-300 bg-white px-5 py-4 text-sm hover:border-amber-500 hover:bg-amber-50 transition-colors shadow-sm"
                     >
                       <span className="font-extrabold text-neutral-900 text-base">{trim.label}</span>
@@ -4274,7 +4275,7 @@ export default async function TiresPage({
                         {availableTrims.map((trim) => (
                           <a
                             key={trim.modificationId}
-                            href={`/tires?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&modification=${encodeURIComponent(trim.modificationId)}`}
+                            href={trimGateHref(sp, trim.modificationId)}
                             className="inline-flex flex-col items-start rounded-xl border-2 border-amber-300 bg-white px-4 py-3 text-sm hover:border-amber-500 hover:bg-amber-50 transition-colors"
                           >
                             <span className="font-extrabold text-neutral-900">{trim.displayTrim}</span>
