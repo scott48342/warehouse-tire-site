@@ -25,11 +25,21 @@ import { getUSAFBrandCode } from "@/lib/usautoforce/brandCodes";
 // TYPES
 // ============================================================================
 
+/**
+ * Where the routing source of an item came from:
+ *  - catalog:       meta.catalog.supplierSource written server-side by the price resolver (trusted)
+ *  - legacy_client: snapshot predates catalog attrs (before 2026-09-20); only the client's
+ *                   meta.source exists - grouped for visibility, NEVER auto-ordered
+ *  - unknown:       no usable source at all - manual
+ */
+export type SupplierSourceTrust = "catalog" | "legacy_client" | "unknown";
+
 export interface SupplierOrderItem {
   partNumber: string;
   quantity: number;
   cost?: number;
   source: string;
+  sourceTrust: SupplierSourceTrust;
   lineName: string;
   /** Brand name (e.g., "General", "BF Goodrich") */
   brand?: string;
@@ -103,6 +113,29 @@ export async function ensureSupplierOrdersTable(db: pg.Pool): Promise<void> {
 // ============================================================================
 
 /**
+ * Routing source for a snapshot line. The CATALOG's supplierSource (written by the server-side
+ * price resolver into meta.catalog) is the only trusted routing key; the client's meta.source is
+ * an order-record field a shopper can set to anything. Legacy snapshots (no meta.catalog object)
+ * fall back to meta.source for grouping/visibility but are flagged so they are never auto-ordered.
+ */
+export function resolveLineSupplierSource(line: QuoteLine): { source: string; sourceTrust: SupplierSourceTrust } {
+  const meta = (line.meta || {}) as Record<string, unknown>;
+  const catalog = meta.catalog;
+  if (catalog && typeof catalog === "object") {
+    const cs = (catalog as Record<string, unknown>).supplierSource;
+    const trusted = typeof cs === "string" ? cs.trim() : "";
+    return trusted ? { source: trusted, sourceTrust: "catalog" } : { source: "unknown", sourceTrust: "unknown" };
+  }
+  const legacy = typeof meta.source === "string" ? meta.source.trim() : "";
+  return legacy ? { source: legacy, sourceTrust: "legacy_client" } : { source: "unknown", sourceTrust: "unknown" };
+}
+
+/** An auto-order API call is allowed only when EVERY item's routing came from the catalog. */
+export function canAutoOrder(supplier: string, items: SupplierOrderItem[]): boolean {
+  return isAutoOrderSupplier(supplier) && items.length > 0 && items.every((i) => i.sourceTrust === "catalog");
+}
+
+/**
  * Extract ALL items (wheels + tires) from order snapshot, grouped by supplier
  */
 export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, SupplierOrderItem[]> {
@@ -114,7 +147,7 @@ export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, Sup
     // Only process tire and wheel items
     if (cartType !== "tire" && cartType !== "wheel") continue;
     
-    const source = line.meta?.source || "unknown";
+    const { source, sourceTrust } = resolveLineSupplierSource(line);
     const partNumber = line.sku;
     
     if (!partNumber) continue;
@@ -131,6 +164,7 @@ export function extractItemsBySupplier(snapshot: QuoteSnapshot): Map<string, Sup
       quantity: line.qty,
       cost: line.meta?.cost,
       source,
+      sourceTrust,
       lineName: line.name,
       brand: brand || undefined,
       lineCode: lineCode || undefined,
@@ -421,8 +455,22 @@ export async function processSupplierOrders(
     };
     
     let result: SupplierOrderResult;
+    const autoOrder = canAutoOrder(supplier, items);
     
-    if (isAutoOrderSupplier(supplier)) {
+    if (isAutoOrderSupplier(supplier) && !autoOrder) {
+      // The supplier could take an API order, but at least one item's routing did not come
+      // from the catalog (legacy snapshot or unknown source). Hold for a human - never place
+      // a supplier order on a client-claimed source.
+      const untrusted = items.filter((i) => i.sourceTrust !== "catalog").map((i) => `${i.partNumber} (${i.sourceTrust})`);
+      console.warn(`[supplier-order] ${supplier} order for ${orderId} held for review - routing source not catalog-verified:`, untrusted);
+      result = {
+        success: true,
+        supplier,
+        supplierPO: `MANUAL-REVIEW-${orderId}`,
+        errorMessage: `Held for review: supplier routing not catalog-verified for ${untrusted.join(", ")}`,
+        items,
+      };
+    } else if (autoOrder) {
       // Auto-order supported - place order via API
       if (supplier === "usautoforce") {
         result = await placeUSAutoForceSupplierOrder(request);
@@ -459,7 +507,7 @@ export async function processSupplierOrders(
       supplier,
       result.supplierOrderNumber || null,
       result.supplierPO || null,
-      result.success ? (isAutoOrderSupplier(supplier) ? "placed" : "manual") : "failed",
+      result.success ? (autoOrder ? "placed" : "manual") : "failed",
       JSON.stringify(items),
       JSON.stringify(shipTo),
       result.errorMessage || null,

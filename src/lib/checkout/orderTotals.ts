@@ -62,7 +62,12 @@ export type ShippingInput = {
   quantity: number;
   unitPrice: number;
   sku?: string;
+  /** Tire size as the CATALOG knows it. Never the client's label (see clientSizeLabel). */
   sizeLabel?: string;
+  /** true when the size (tires) comes from the catalog; wheels/accessories are always true. */
+  sizeTrusted: boolean;
+  /** The size the client sent with the cart item - order record / wording only, never pricing. */
+  clientSizeLabel?: string;
   source?: string;
   freeShipping: boolean;
   weightLbs?: number;
@@ -153,7 +158,7 @@ export type ServerTotals = {
 
 export type ServerTotalsResult =
   | { ok: true; totals: ServerTotals }
-  | { ok: false; error: "shipping_unavailable" | "invalid_shipping_zip" | "invalid_shipping_address"; detail: string };
+  | { ok: false; error: "shipping_unavailable" | "invalid_shipping_zip" | "invalid_shipping_address" | "tire_size_unresolved"; detail: string };
 
 /** A shown total we can compare against: finite and non-negative. Anything else is not a claim. */
 export function validExpectedTotal(v: unknown): number | null {
@@ -191,7 +196,8 @@ const str = (v: unknown): string | undefined => (typeof v === "string" && v.trim
  * buildCheckoutLines from the price resolver) or from a conservative floor:
  *   - freeShipping: catalog price source only (landed-cost suppliers);
  *   - origin/source: catalog supplier tag only - client `item.source` is ignored;
- *   - tire size: catalog size only; an unknown size is shipped at the heavy floor;
+ *   - tire size: catalog size only; an unknown size is shipped at the heavy floor and, for a
+ *     local install, blocks checkout (tire_size_unresolved) - the client label never classifies;
  *   - weight / diameter: max(catalog, floor, client hint) - a client hint can only raise.
  * Client `spec`, `size`, `source` and weights are never allowed to lower a rate.
  */
@@ -209,10 +215,14 @@ export function shippingInputsFromLines(lines: QuoteLine[], hints: CartItemHint[
     const catalog = (meta.catalog && typeof meta.catalog === "object" ? meta.catalog : {}) as CatalogShippingAttrs;
     const hint = hints.find((h) => h && typeof h === "object" && h.sku && l.sku && String(h.sku) === String(l.sku));
 
-    // Tire size: catalog only. The client label is kept for the record/fee wording when the
-    // catalog has none, but the rate then uses the unknown-size (heavy) floor.
+    // Tire size: catalog ONLY. The client's label is carried separately for the order record
+    // and is never consulted by the rate engine or the local service-fee schedule: an unknown
+    // catalog size ships at the heavy floor and, locally, blocks checkout for review
+    // (tire_size_unresolved) instead of taking the shopper's cheaper classification.
     const catalogSize = type === "tire" ? str(catalog.sizeLabel) : undefined;
-    const sizeLabel = type === "tire" ? catalogSize ?? str(meta.tireSize) : undefined;
+    const sizeLabel = catalogSize;
+    const clientSizeLabel = type === "tire" ? str(meta.tireSize) : undefined;
+    const sizeTrusted = type !== "tire" || !!catalogSize;
 
     // Weight: never below the floor; catalog and client can only raise it.
     const floor = weightFloorLbs(type, catalogSize);
@@ -235,6 +245,8 @@ export function shippingInputsFromLines(lines: QuoteLine[], hints: CartItemHint[
       unitPrice: Number(l.unitPriceUsd) || 0,
       sku: l.sku,
       sizeLabel,
+      sizeTrusted,
+      clientSizeLabel,
       source: str(catalog.supplierSource) ?? (priceSource || undefined),
       freeShipping: LANDED_COST_PRICE_SOURCES.has(priceSource),
       weightLbs,
@@ -261,20 +273,37 @@ function toFedExItems(items: ShippingInput[]): CartItemForShipping[] {
   }));
 }
 
-/** Local install/disposal from the server lines (tires by size, wheel-only sets) - mirrors the checkout UI. */
-export function computeLocalServiceFees(items: ShippingInput[]): { installUsd: number; recyclingUsd: number; tireCount: number } {
+export type LocalServiceFees = {
+  installUsd: number;
+  recyclingUsd: number;
+  tireCount: number;
+  /** Tire SKUs whose size the catalog could not resolve - the schedule cannot be trusted for them. */
+  unresolvedSizeSkus: string[];
+};
+
+/**
+ * Local install/disposal from the server lines (tires by size, wheel-only sets) - mirrors the
+ * checkout UI. The passenger/commercial split is decided ONLY by the catalog size: a tire with
+ * no trusted size is priced at the commercial (higher) rate here AND reported in
+ * unresolvedSizeSkus so resolveServerTotals blocks the local checkout for review. The client's
+ * own size label never selects the cheaper class (Codex review 2026-09-20).
+ */
+export function computeLocalServiceFees(items: ShippingInput[]): LocalServiceFees {
   const tires = items.filter((i) => i.type === "tire");
   const wheels = items.filter((i) => i.type === "wheel");
   const tireCount = tires.reduce((s, t) => s + t.quantity, 0);
   const wheelOnlyCount = wheels.length > 0 && tires.length === 0 ? wheels.reduce((s, w) => s + w.quantity, 0) : 0;
   let install = wheelOnlyCount * LOCAL_SERVICE_FEES.installPerWheel;
   let disposal = 0;
+  const unresolvedSizeSkus: string[] = [];
   for (const t of tires) {
-    const commercial = isCommercialTireSize(t.sizeLabel);
+    const trusted = t.sizeTrusted && !!t.sizeLabel;
+    if (!trusted) unresolvedSizeSkus.push(String(t.sku || "unknown-sku"));
+    const commercial = trusted ? isCommercialTireSize(t.sizeLabel) : true;
     install += t.quantity * (commercial ? LOCAL_SERVICE_FEES.commercialInstallPerTire : LOCAL_SERVICE_FEES.installPerTire);
     disposal += t.quantity * (commercial ? LOCAL_SERVICE_FEES.commercialDisposalPerTire : LOCAL_SERVICE_FEES.disposalPerTire);
   }
-  return { installUsd: money(install), recyclingUsd: money(disposal), tireCount };
+  return { installUsd: money(install), recyclingUsd: money(disposal), tireCount, unresolvedSizeSkus };
 }
 
 /**
@@ -380,7 +409,16 @@ export async function resolveServerTotals(params: {
   }
 
   // ---- local service fees ---------------------------------------------------------------
-  const fees = isLocal ? computeLocalServiceFees(shipInputs) : { installUsd: 0, recyclingUsd: 0, tireCount: 0 };
+  const fees: LocalServiceFees = isLocal ? computeLocalServiceFees(shipInputs) : { installUsd: 0, recyclingUsd: 0, tireCount: 0, unresolvedSizeSkus: [] };
+  if (isLocal && fees.unresolvedSizeSkus.length > 0) {
+    // The install/disposal schedule depends on the tire class; without a catalog size we will
+    // not let the shopper's own label pick the cheaper class. Block for review.
+    return {
+      ok: false,
+      error: "tire_size_unresolved",
+      detail: `We couldn't confirm the tire size for ${fees.unresolvedSizeSkus.join(", ")} to price installation. Please call the store at (248) 332-4120 to complete this order.`,
+    };
+  }
 
   // ---- discount -------------------------------------------------------------------------
   const disc = await resolveServerDiscount(claim.discount, productSubtotalUsd);

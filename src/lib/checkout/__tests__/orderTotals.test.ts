@@ -101,7 +101,9 @@ describe("shippingInputsFromLines - TAMPER: client spec/size/source never lower 
   it("tire whose size the catalog does not know ships at the heavy/unknown floor regardless of the client label", () => {
     const line = tireLine("T1", 120, 4, "205/55R16", "tireweb", { catalog: { supplierSource: "tireweb:atd" } });
     const [s] = shippingInputsFromLines([line], [{ sku: "T1", weightLbs: 12, diameter: 20 }]);
-    expect(s.sizeLabel).toBe("205/55R16"); // record label only
+    expect(s.sizeLabel).toBeUndefined(); // the client label NEVER becomes the pricing size
+    expect(s.sizeTrusted).toBe(false);
+    expect(s.clientSizeLabel).toBe("205/55R16"); // order record only
     expect(s.weightLbs).toBe(SHIPPING_FLOORS.tireUnknownSizeWeightLbs);
     expect(s.diameterInches).toBe(SHIPPING_FLOORS.tireDiameterInches);
   });
@@ -186,11 +188,45 @@ describe("shippingInputsFromLines - TAMPER: client spec/size/source never lower 
 
 describe("computeLocalServiceFees - same schedule as the checkout UI, from server lines", () => {
   it("4 passenger tires = $80 install + $20 disposal; wheel-only set = $15/wheel", () => {
-    expect(computeLocalServiceFees(shippingInputsFromLines([tireLine("T", 150, 4, "245/45R18")]))).toEqual({ installUsd: 80, recyclingUsd: 20, tireCount: 4 });
-    expect(computeLocalServiceFees(shippingInputsFromLines(ridlerPair))).toEqual({ installUsd: 60, recyclingUsd: 0, tireCount: 0 });
+    expect(computeLocalServiceFees(shippingInputsFromLines([tireLine("T", 150, 4, "245/45R18")]))).toEqual({ installUsd: 80, recyclingUsd: 20, tireCount: 4, unresolvedSizeSkus: [] });
+    expect(computeLocalServiceFees(shippingInputsFromLines(ridlerPair))).toEqual({ installUsd: 60, recyclingUsd: 0, tireCount: 0, unresolvedSizeSkus: [] });
   });
   it("commercial sizes use commercial rates", () => {
-    expect(computeLocalServiceFees(shippingInputsFromLines([tireLine("C", 400, 2, "11R22.5")]))).toEqual({ installUsd: 80, recyclingUsd: 50, tireCount: 2 });
+    expect(computeLocalServiceFees(shippingInputsFromLines([tireLine("C", 400, 2, "11R22.5")]))).toEqual({ installUsd: 80, recyclingUsd: 50, tireCount: 2, unresolvedSizeSkus: [] });
+  });
+  it("TAMPER: a commercial tire whose catalog size is missing cannot take the passenger rate from the client's label", () => {
+    // catalog knows the SKU but published no size; the client labelled it as a passenger size
+    const line = tireLine("C1", 400, 2, "205/55R16", "tireweb", { catalog: { supplierSource: "tireweb:atd" } });
+    const fees = computeLocalServiceFees(shippingInputsFromLines([line]));
+    // conservative (commercial) schedule AND flagged for review - never $20/$5 from the client label
+    expect(fees).toEqual({ installUsd: 80, recyclingUsd: 50, tireCount: 2, unresolvedSizeSkus: ["C1"] });
+  });
+  it("a passenger tire the client labels as commercial is still priced from the CATALOG size", () => {
+    const line = tireLine("P1", 150, 4, "245/45R18", "tireweb", { tireSize: "11R22.5" });
+    expect(computeLocalServiceFees(shippingInputsFromLines([line]))).toEqual({ installUsd: 80, recyclingUsd: 20, tireCount: 4, unresolvedSizeSkus: [] });
+  });
+});
+
+describe("resolveServerTotals - unresolved catalog tire size", () => {
+  const noSize = (sku: string) => tireLine(sku, 150, 4, "205/55R16", "tireweb", { catalog: { supplierSource: "tireweb:atd" } });
+  it("LOCAL: blocks for review (tire_size_unresolved) instead of charging the client-classified fee", async () => {
+    const r = await resolveServerTotals({ db, productLines: [noSize("T9")], isLocal: true, fulfillment: PONTIAC, claim: { localFees: { installation: 80, recycling: 20 } } });
+    expect(r.ok).toBe(false);
+    if (r.ok) return;
+    expect(r.error).toBe("tire_size_unresolved");
+    expect(r.detail).toContain("T9");
+    expect(r.detail).toContain("(248) 332-4120");
+  });
+  it("NATIONAL: no service fees are involved; the tire ships at the heavy floor and checkout proceeds (fail-closed only if FedEx has no rate)", async () => {
+    fedex.mockResolvedValue({ success: true, groundRate: 61.2 });
+    const r = await resolveServerTotals({ db, productLines: [noSize("T9")], isLocal: false, fulfillment: ship("CO", "80202"), claim: {} });
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    expect(r.totals.installUsd).toBe(0);
+    expect(r.totals.shippingSource).toBe("fedex");
+    const sent = fedex.mock.calls[0][2] as Array<{ weightLbs?: number; sizeLabel?: string }>;
+    expect(sent[0].weightLbs).toBe(SHIPPING_FLOORS.tireUnknownSizeWeightLbs);
+    expect(sent[0].sizeLabel).toBeUndefined();
   });
 });
 
