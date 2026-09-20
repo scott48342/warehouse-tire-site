@@ -465,4 +465,31 @@ describe("groupWheelsBySpec", () => {
     // Should prefer in-stock Silver despite higher price
     expect(result[0].selectedFinish).toBe("Silver");
   });
+  // 2026-09-20 (Codex): a style group may claim a certified fit only when EVERY
+  // finish variant carries the server's `certified` verdict (fail closed).
+  describe("fitCertified (server certification verdict)", () => {
+    const base = { brand: "Brand", model: "Model", diameter: "20", width: "9", offset: "20", boltPattern: "5x114.3", centerbore: "73.1", price: 200, stockQty: 5, inventoryType: "ST" };
+
+    it("is true only when every variant in the group is certified", () => {
+      const all = groupWheelsBySpec([
+        { ...base, sku: "A-BLK", finish: "Black", fitmentClass: "specfit", fitCertified: true },
+        { ...base, sku: "A-SIL", finish: "Silver", fitmentClass: "specfit", fitCertified: true },
+      ]);
+      expect(all).toHaveLength(1);
+      expect(all[0].fitCertified).toBe(true);
+
+      const mixed = groupWheelsBySpec([
+        { ...base, sku: "B-BLK", finish: "Black", fitmentClass: "surefit", fitCertified: true },
+        { ...base, sku: "B-SIL", finish: "Silver", fitmentClass: "surefit" }, // verdict missing
+      ]);
+      expect(mixed).toHaveLength(1);
+      expect(mixed[0].fitmentClass).toBe("surefit"); // geometry class still reported
+      expect(mixed[0].fitCertified).toBe(false);    // but no certified claim
+    });
+
+    it("never invents certification from fitmentClass", () => {
+      const r = groupWheelsBySpec([{ ...base, sku: "C-BLK", finish: "Black", fitmentClass: "surefit" }]);
+      expect(r[0].fitCertified).toBe(false);
+    });
+  });
 });

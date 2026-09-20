@@ -508,6 +508,7 @@ export function WheelsStyleCard({
   selectToTires,
   pair,
   fitmentClass,
+  fitCertified = false,
   certificationBlock = null,
   isPopular,
   dbProfile,
@@ -551,6 +552,8 @@ export function WheelsStyleCard({
   selectToTires?: boolean;
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  /** Server per-SKU certification (both axles when staggered); becomes cart fitVerified. */
+  fitCertified?: boolean;
   /** 2026-09-18 (audit F7/C4): when set, suppress fit-class labels; show trim prompt */
   certificationBlock?: "trim_required" | "fallback_unverified" | "source_unverified" | "aftermarket_stagger" | "stagger_unverified" | null;
   isPopular?: boolean;
@@ -766,6 +769,8 @@ export function WheelsStyleCard({
         rearUnitPrice: currentPair ? (typeof currentPair.rear?.price === "number" ? currentPair.rear.price : undefined) : undefined,
         quantity: 4,
         fitmentClass,
+        // Server-certified for this vehicle (both axles when staggered) and no page-level block.
+        fitVerified: fitCertified === true && !certificationBlock,
         vehicle,
         staggered: Boolean(currentPair),
       });

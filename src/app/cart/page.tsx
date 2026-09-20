@@ -114,7 +114,9 @@ function WheelCartItem({
   onRemove: () => void;
   onUpdateQty: (qty: number) => void;
 }) {
-  const fitment = item.fitmentClass ? FITMENT_LABELS[item.fitmentClass] : null;
+  // 2026-09-20 (Codex): the class badge is a fit CLAIM ("Good Fit"), so it is shown only
+  // for a server-certified line; an unverified line gets the neutral text below instead.
+  const fitment = item.fitVerified === true && item.fitmentClass ? FITMENT_LABELS[item.fitmentClass] : null;
   const total = item.unitPrice * item.quantity;
 
   return (

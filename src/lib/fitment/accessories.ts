@@ -251,6 +251,24 @@ export function formatHubRingSpec(spec: HubRingSpec): string {
   return `${spec.outerDiameter.toFixed(1)}mm → ${spec.innerDiameter.toFixed(1)}mm`;
 }
 
+/**
+ * Canonical mm text for a hub-ring dimension: ALWAYS one decimal ("73.1", "74.0").
+ * Hub rings are machined to tenths; rounding to whole mm collapsed physically
+ * different rings (73.1→70.5 and 72.6→71.4 both became "73-71").
+ */
+export function formatHubRingMm(mm: number): string {
+  return (Math.round(mm * 10) / 10).toFixed(1);
+}
+
+/**
+ * Canonical placeholder SKU for a hub-ring set, `HR-<outer>-<inner>` in tenths
+ * of a mm (e.g. `HR-73.1-70.5`). Cart generation and checkout validation MUST
+ * both use this so the SKU identifies exactly one physical ring.
+ */
+export function formatHubRingSku(spec: Pick<HubRingSpec, "outerDiameter" | "innerDiameter">): string {
+  return `HR-${formatHubRingMm(spec.outerDiameter)}-${formatHubRingMm(spec.innerDiameter)}`;
+}
+
 // ============================================================================
 // Main Service
 // ============================================================================
@@ -390,7 +408,7 @@ export function getAccessoryFitment(
       
       if (includePlaceholders) {
         matches.push({
-          sku: `HR-${ringSpec.outerDiameter.toFixed(0)}-${ringSpec.innerDiameter.toFixed(0)}`,
+          sku: formatHubRingSku(ringSpec),
           name: `Hub Centric Ring ${formatHubRingSpec(ringSpec)}`,
           type: "hub_ring",
           unitPrice: 8.00,

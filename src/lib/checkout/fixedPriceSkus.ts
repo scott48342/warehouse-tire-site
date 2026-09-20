@@ -56,7 +56,10 @@ export const INCLUDED_HARDWARE_MAX_UNIT_USD = 75;
 export type IncludedHardwareKind = "lug_kit" | "hub_ring" | "valve_stem";
 
 const LUG_KIT_PLACEHOLDER = /^LUGKIT-(.+)$/i;
-const HUB_RING_PLACEHOLDER = /^HR-\d{2,3}-\d{2,3}$/i;
+// Canonical form is tenths of a mm (`HR-73.1-70.5`, see formatHubRingSku). Whole-mm
+// digits (`HR-73-71`, pre-2026-09-20 carts) still PARSE so they reach the server
+// comparison and are rejected as hardware_mismatch instead of silently unpriceable.
+const HUB_RING_PLACEHOLDER = /^HR-(\d{2,3}(?:\.\d)?)-(\d{2,3}(?:\.\d)?)$/i;
 
 /** Placeholder SKUs the fitment engine emits before a catalog kit is looked up. */
 export function includedHardwarePlaceholderKind(sku: string): IncludedHardwareKind | null {
@@ -73,10 +76,15 @@ export function parseLugKitPlaceholder(sku: string) {
   return lug ? parseThreadSize(lug[1]) : null;
 }
 
-/** Outer/inner mm the client's `HR-<outer>-<inner>` placeholder CLAIMS (validated server-side at checkout). */
-export function parseHubRingPlaceholder(sku: string): { outer: number; inner: number } | null {
-  const m = /^HR-(\d{2,3})-(\d{2,3})$/i.exec(String(sku || "").trim());
-  return m ? { outer: Number(m[1]), inner: Number(m[2]) } : null;
+/**
+ * Outer/inner mm the client's `HR-<outer>-<inner>` placeholder CLAIMS (validated
+ * server-side at checkout). `tenths` is false when the SKU carries whole-mm digits
+ * only, which can never identify one physical ring.
+ */
+export function parseHubRingPlaceholder(sku: string): { outer: number; inner: number; tenths: boolean } | null {
+  const m = HUB_RING_PLACEHOLDER.exec(String(sku || "").trim());
+  if (!m) return null;
+  return { outer: Number(m[1]), inner: Number(m[2]), tenths: m[1].includes(".") && m[2].includes(".") };
 }
 
 /** Catalog category (from `accessories.category`, never the client) -> hardware kind. */

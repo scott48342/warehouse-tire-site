@@ -83,3 +83,23 @@ export function gatedFitmentClass<T extends string>(
 export function isCertifiedFit(geometryClass: string, block: FitCertificationBlock): boolean {
   return !block && (geometryClass === "surefit" || geometryClass === "specfit");
 }
+
+type CustomerFitClass = "surefit" | "specfit" | "extended" | undefined;
+const CUSTOMER_CLASS_RANK: Record<string, number> = { surefit: 0, specfit: 1, extended: 2 };
+
+/**
+ * Fit class a staggered CARD may claim (2026-09-20, Codex review): the card
+ * sells both axles, so it is the WEAKER of the two per-SKU classes. A rear whose
+ * verdict is unknown (not in the response) fails closed to "extended";
+ * an unknown front stays unknown (no badge at all).
+ */
+export function pairFitmentClass(front: CustomerFitClass, rear: CustomerFitClass | null): CustomerFitClass {
+  if (rear === null || rear === undefined) rear = "extended";
+  if (!front) return undefined;
+  return CUSTOMER_CLASS_RANK[front] >= CUSTOMER_CLASS_RANK[rear] ? front : rear;
+}
+
+/** A staggered pair is certified only when BOTH SKUs carry the server's certified verdict. */
+export function pairCertified(frontCertified: boolean | undefined, rearCertified: boolean | undefined | null): boolean {
+  return frontCertified === true && rearCertified === true;
+}

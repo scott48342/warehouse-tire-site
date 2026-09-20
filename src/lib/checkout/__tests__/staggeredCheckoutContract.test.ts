@@ -41,7 +41,7 @@ const hardware: HardwareSpecResolver = async () => ({
   vehicleThreadSize: "M14x1.5",
   vehicleSeatType: "conical",
   vehicleHubMm: 66.1,
-  wheelBoreMm: 73.1, // -> HR-73-66
+  wheelBoreMm: 73.1, // -> HR-73.1-66.1 (tenths)
   sources: { vehicle: "vehicle_fitments:complete", wheel: "wheelpros" },
 });
 /** Existing contract tests run with the server agreeing with the cart's placeholders. */
@@ -135,6 +135,20 @@ describe("/wheels card -> selection (buildSelectedWheel)", () => {
     expect(sel.staggered).toBe(false);
     expect(sel.rearSku).toBeUndefined();
     expect(sel.setPrice).toBe(1200);
+  });
+
+  // 2026-09-20 (Codex): the cart's fitVerified is the SERVER's per-SKU `certified`
+  // verdict carried through the card, never derived from fitmentClass or the badge.
+  it("carries the server certification verdict; absent/false => not verified, whatever the fit class says", () => {
+    const certified = buildSelectedWheel({ ...baseWheel, fitCertified: true }, "KMC", "KM700", cardState)!;
+    expect(certified.fitCertified).toBe(true);
+    // surefit geometry alone is NOT a verified fit (certification may be blocked server-side)
+    const surefitOnly = buildSelectedWheel({ ...baseWheel, fitmentClass: "surefit" }, "KMC", "KM700", cardState)!;
+    expect(surefitOnly.fitCertified).toBe(false);
+    const blocked = buildSelectedWheel({ ...baseWheel, fitmentClass: "surefit", fitCertified: false }, "KMC", "KM700", cardState)!;
+    expect(blocked.fitCertified).toBe(false);
+    const sq = buildSelectedWheel({ ...baseWheel, pair: undefined, fitCertified: true }, "KMC", "KM700", { sku: FRONT, price: 300, finish: "Bronze", setPrice: 1200, staggered: false })!;
+    expect(sq.fitCertified).toBe(true);
   });
 });
 
@@ -266,12 +280,12 @@ describe("accessory price authority (release review 2026-09-19)", () => {
 
   it("genuine included hardware WITH a wheel set: catalog lug kit (<= $75, catalog category) and placeholder hub rings stay $0", async () => {
     const r = await buildCheckoutLines(
-      [wheelSet(), acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" }), acc({ sku: "HR-73-66", unitPrice: 0, required: true, category: "hub-rings" })],
+      [wheelSet(), acc({ sku: LUGS, unitPrice: 0, required: true, category: "lug_nut" }), acc({ sku: "HR-73.1-66.1", unitPrice: 0, required: true, category: "hub-rings" })],
       accResolver,
     );
     expect(accLines(r)).toEqual([
       [LUGS, 0, "included_hardware"],
-      ["HR-73-66", 0, "included_hardware"],
+      ["HR-73.1-66.1", 0, "included_hardware"],
     ]);
   });
 
@@ -290,7 +304,7 @@ describe("accessory price authority (release review 2026-09-19)", () => {
     const r = await buildCheckoutLines([acc({ sku: "LUGKIT-M14x1.5", unitPrice: 0, required: true, category: "lug_nut" })], accResolver);
     expect(r).toEqual({ ok: false, rejected: [{ reason: "hardware_not_entitled", sku: "LUGKIT-M14x1.5", name: "Acc" }] });
     const tires = await buildCheckoutLines(
-      [{ type: "tire", sku: "T1", brand: "B", model: "M", size: "275/55R20", unitPrice: 200, quantity: 4 } as any, acc({ sku: "HR-73-66", unitPrice: 0, required: true, category: "hub_ring" })],
+      [{ type: "tire", sku: "T1", brand: "B", model: "M", size: "275/55R20", unitPrice: 200, quantity: 4 } as any, acc({ sku: "HR-73.1-66.1", unitPrice: 0, required: true, category: "hub_ring" })],
       async (sku, ctx) => (ctx.type === "tire" ? { sku, unitPrice: 200, source: "tireweb" } : accResolver(sku, ctx)),
     );
     expect(tires.ok).toBe(false); // tires alone are not a wheel set
@@ -321,10 +335,10 @@ describe("accessory price authority (release review 2026-09-19)", () => {
     expect(accLines(two)).toEqual([[LUGS, 0, "included_hardware"], [LUGS, 38, "accessories_db"]]);
     // placeholder over quota (2 hub-ring sets, 1 wheel set): the excess is rejected, never $0
     const ph = await buildCheckoutLines(
-      [wheelSet(), acc({ sku: "HR-73-66", unitPrice: 0, category: "hub_ring" }), acc({ sku: "HR-73-66", unitPrice: 0, category: "hub_ring" })],
+      [wheelSet(), acc({ sku: "HR-73.1-66.1", unitPrice: 0, category: "hub_ring" }), acc({ sku: "HR-73.1-66.1", unitPrice: 0, category: "hub_ring" })],
       accResolver,
     );
-    expect(ph).toEqual({ ok: false, rejected: [{ reason: "hardware_not_entitled", sku: "HR-73-66", name: "Acc" }] });
+    expect(ph).toEqual({ ok: false, rejected: [{ reason: "hardware_not_entitled", sku: "HR-73.1-66.1", name: "Acc" }] });
     // two wheel sets (8 wheels) entitle two lug kits
     const eight = await buildCheckoutLines([wheelSet(8), acc({ sku: LUGS, unitPrice: 0, quantity: 2 })], accResolver);
     expect(accLines(eight)).toEqual([[LUGS, 0, "included_hardware"]]);

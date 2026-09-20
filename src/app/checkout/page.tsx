@@ -131,13 +131,18 @@ export default function CheckoutPage() {
   // Get vehicle and fitment from cart
   const vehicle = wheels[0]?.vehicle || tires[0]?.vehicle;
   const fitmentClass = wheels[0]?.fitmentClass as FitmentClass | undefined;
-  const fitmentMessaging = getFitmentMessaging(fitmentClass);
-  const fitmentColors = getFitmentColors(fitmentClass);
   // Release review 2026-09-19: the summary's "Fitment verified" / "matched specifically" bullets
   // were unconditional. They may only appear when EVERY vehicle-tagged wheel/tire line carries the
   // verified-fit flag set by the certified add-to-cart path (same rule as the cart's "Fits" pill).
   const vehicleLines = [...wheels, ...tires].filter((i) => i.vehicle);
   const allFitVerified = vehicleLines.length > 0 && vehicleLines.every((i) => i.fitVerified === true);
+  // 2026-09-20 (Codex): the "Fitment for <vehicle>" chip used getFitmentMessaging(fitmentClass),
+  // which DEFAULTS to "Good Fit" when the class is unknown and never looked at certification.
+  // It now claims a fit class only when every vehicle line is server-verified; otherwise neutral.
+  const fitmentMessaging = allFitVerified ? getFitmentMessaging(fitmentClass) : null;
+  const fitmentColors = allFitVerified
+    ? getFitmentColors(fitmentClass)
+    : { bg: "bg-neutral-50", border: "border-neutral-200", text: "text-neutral-700", badge: "bg-neutral-200 text-neutral-800" };
 
   // Form state - single page checkout (no steps)
   const [mobileOrderSummaryOpen, setMobileOrderSummaryOpen] = useState(false);
@@ -1028,8 +1033,8 @@ export default function CheckoutPage() {
                       {vehicle.trim && ` ${vehicle.trim}`}
                     </div>
                   </div>
-                  <div className={`px-3 py-1 rounded-full text-sm font-bold ${fitmentColors.badge}`}>
-                    {fitmentMessaging.icon} {fitmentMessaging.shortLabel}
+                  <div className={`px-3 py-1 rounded-full text-sm font-bold ${fitmentColors.badge}`} data-testid="checkout-fit-chip">
+                    {fitmentMessaging ? `${fitmentMessaging.icon} ${fitmentMessaging.shortLabel}` : "Fit not yet confirmed"}
                   </div>
                 </div>
               </div>

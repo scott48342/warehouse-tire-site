@@ -27,6 +27,7 @@ import { getIndexingDecision, buildPageIndexingData, getRobotsContent } from "@/
 import { SeoContentBlock } from "@/components/SeoContentBlock";
 import { type FitmentLevel, type BuildRequirement } from "@/lib/fitment/guidance";
 import { filterWheelsForBuildType, type BuildType as BuildTypeEnum } from "@/lib/fitment/buildTypeFilter";
+import { pairCertified, pairFitmentClass } from "@/lib/fitment-db/fitCertification";
 import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { HomepageIntentBar } from "@/components/HomepageIntentBar";
@@ -145,6 +146,12 @@ type Wheel = {
   inventoryType?: string; // WheelPros inventory type code (ST, BW, SO, CS, DB, etc.)
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended"; // Fitment classification from validation engine
+  /**
+   * fitment-search `fitmentValidation.certified` (profile certified for THIS
+   * vehicle AND geometry passed). For a staggered pair, BOTH SKUs must be
+   * certified. Becomes the cart line's `fitVerified`; never derived here.
+   */
+  fitCertified?: boolean;
   finishThumbs?: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number; inventoryType?: string }[];
   pair?: {
     staggered: boolean;
@@ -1001,6 +1008,19 @@ export default async function WheelsPage({
     ? maybeData.items
     : (Array.isArray(maybeData?.results) ? maybeData.results : []));
 
+  // Server per-SKU verdicts, so a staggered pair can be judged on BOTH axles: the
+  // card's fit class is the WEAKER axle and certification needs both (fail closed).
+  const certifiedBySku = new Map<string, boolean>();
+  const classBySku = new Map<string, Wheel["fitmentClass"]>();
+  for (const itUnknown of rawItems) {
+    const it = itUnknown as { sku?: string; fitmentValidation?: { certified?: boolean; fitmentClass?: string } };
+    if (!it?.sku) continue;
+    const key = String(it.sku).toUpperCase();
+    certifiedBySku.set(key, it.fitmentValidation?.certified === true);
+    const fc = it.fitmentValidation?.fitmentClass;
+    classBySku.set(key, fc === "surefit" || fc === "specfit" || fc === "extended" ? fc : undefined);
+  }
+
   const itemsUnsorted: Wheel[] = rawItems.map((itUnknown) => {
     const it = itUnknown as WheelProsItem;
 
@@ -1044,7 +1064,8 @@ export default async function WheelsPage({
 
     // Extract fitmentClass from validation engine (from fitment-search endpoint)
     const fitmentValidation = (it as any)?.fitmentValidation;
-    const fitmentClass = fitmentValidation?.fitmentClass as Wheel["fitmentClass"] | undefined;
+    const ownClass = fitmentValidation?.fitmentClass as Wheel["fitmentClass"] | undefined;
+    const ownCertified = fitmentValidation?.certified === true;
 
     // Extract inventory counts (local + global) and type
     const inventory = it?.inventory;
@@ -1055,6 +1076,15 @@ export default async function WheelsPage({
 
     // Extract staggered pair info from fitment-search API response
     const pair = (it as any)?.pair;
+    // Staggered (2026-09-20, Codex): the card sells BOTH axles, so its fit class is
+    // the weaker of front/rear (e.g. RC7: front specfit, rear ET20 outside the
+    // offset envelope -> extended => card says Custom Fit, not Good Fit), and it is
+    // certified only when BOTH SKUs are. A rear missing from this response fails closed.
+    const rearSku = pair?.staggered && pair?.rear?.sku ? String(pair.rear.sku).toUpperCase() : null;
+    const fitmentClass: Wheel["fitmentClass"] = rearSku
+      ? pairFitmentClass(ownClass, classBySku.has(rearSku) ? classBySku.get(rearSku) : null)
+      : ownClass;
+    const fitCertified = rearSku ? pairCertified(ownCertified, certifiedBySku.get(rearSku)) : ownCertified;
 
     // Extract fitment guidance from API response (2026-04-07)
     const fitmentGuidanceRaw = (it as any)?.fitmentGuidance;
@@ -1082,6 +1112,7 @@ export default async function WheelsPage({
       inventoryType,
       styleKey,
       fitmentClass,
+      fitCertified,
       pair,
       fitmentGuidance,
       supplier:     (it as any)?.supplier || undefined,
@@ -1112,6 +1143,7 @@ export default async function WheelsPage({
     inventoryType: g.inventoryType,
     styleKey: g.styleKey,
     fitmentClass: g.fitmentClass,
+    fitCertified: g.fitCertified === true,
     pair: g.pair,
     finishThumbs: g.finishOptions,
     fitmentGuidance: g.fitmentGuidance,
@@ -2148,6 +2180,7 @@ export default async function WheelsPage({
                 inventoryType: w.inventoryType,
                 styleKey: w.styleKey,
                 fitmentClass: w.fitmentClass,
+                fitCertified: w.fitCertified === true,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
@@ -2202,6 +2235,7 @@ export default async function WheelsPage({
                 inventoryType: w.inventoryType,
                 styleKey: w.styleKey,
                 fitmentClass: w.fitmentClass,
+                fitCertified: w.fitCertified === true,
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,

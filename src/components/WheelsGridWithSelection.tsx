@@ -36,6 +36,8 @@ export type WheelItem = {
   inventoryType?: string;
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  /** Server `fitmentValidation.certified` (both axles for a pair). See wheels/page.tsx. */
+  fitCertified?: boolean;
   finishThumbs?: WheelFinishThumb[];
   pair?: WheelPair;
   boltPattern?: string;
@@ -74,6 +76,12 @@ export type SelectedWheel = {
   /** Set total: 4 x unit (square) or 2 x front + 2 x rear (staggered). */
   setPrice: number;
   fitmentClass?: string;
+  /**
+   * Cart `fitVerified`. True ONLY when the server certified this SKU (and its
+   * rear, if staggered) for the selected vehicle. Never derived from
+   * fitmentClass or the page badge; absent => cart says "fit not yet confirmed".
+   */
+  fitCertified?: boolean;
   staggered?: boolean;
 };
 
@@ -101,13 +109,16 @@ const money = (n: number) => Math.round(n * 100) / 100;
  * Exported for contract tests.
  */
 export function buildSelectedWheel(
-  w: Pick<WheelItem, "sku" | "finish" | "diameter" | "width" | "offset" | "boltPattern" | "centerbore" | "imageUrl" | "price" | "fitmentClass" | "pair">,
+  w: Pick<WheelItem, "sku" | "finish" | "diameter" | "width" | "offset" | "boltPattern" | "centerbore" | "imageUrl" | "price" | "fitmentClass" | "fitCertified" | "pair">,
   brand: string,
   model: string,
   card: CardSelectState | undefined,
 ): SelectedWheel | null {
   const sku = card?.sku || String(w.sku || "");
   if (!sku) return null;
+  // 2026-09-20 (Codex): certification is the SERVER's per-SKU verdict, and a
+  // certification block downgrades every card, so it also downgrades the cart.
+  const fitCertified = w.fitCertified === true;
   const finish = card?.finish ?? w.finish;
   const pair = card?.pair;
   const staggered = Boolean(card?.staggered && pair?.staggered && pair.rear);
@@ -144,6 +155,7 @@ export function buildSelectedWheel(
       rearUnitPrice: rp,
       setPrice,
       fitmentClass: w.fitmentClass,
+      fitCertified,
       staggered: true,
     };
   }
@@ -165,6 +177,7 @@ export function buildSelectedWheel(
     price: unit,
     setPrice: money(unit * 4),
     fitmentClass: w.fitmentClass,
+    fitCertified,
     staggered: false,
   };
 }
@@ -1179,6 +1192,8 @@ export function WheelsGridWithSelection({
         rearFinish: selectedWheel.rearFinish,
         quantity: 4, // Total wheels (2 front + 2 rear)
         fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+        // Server-certified for this vehicle (both axles when staggered) and no page-level block.
+        fitVerified: selectedWheel.fitCertified === true && !certificationBlock,
         vehicle: vehicleInfo,
         staggered: true,
         // Supplier metadata — used for shipping calculation
@@ -1205,6 +1220,8 @@ export function WheelsGridWithSelection({
         unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
         quantity: 4,
         fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+        // Server-certified for this vehicle (both axles when staggered) and no page-level block.
+        fitVerified: selectedWheel.fitCertified === true && !certificationBlock,
         vehicle: vehicleInfo,
         staggered: false,
         // Supplier metadata — used for shipping calculation
@@ -1343,6 +1360,8 @@ export function WheelsGridWithSelection({
       unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
       quantity: 4,
       fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+      // Server-certified for this vehicle (both axles when staggered) and no page-level block.
+      fitVerified: selectedWheel.fitCertified === true && !certificationBlock,
       vehicle: vehicleInfo,
       staggered: true,
     } : {
@@ -1359,6 +1378,8 @@ export function WheelsGridWithSelection({
       unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
       quantity: 4,
       fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+      // Server-certified for this vehicle (both axles when staggered) and no page-level block.
+      fitVerified: selectedWheel.fitCertified === true && !certificationBlock,
       vehicle: vehicleInfo,
       staggered: false,
     };
@@ -1536,6 +1557,7 @@ export function WheelsGridWithSelection({
             }}
             finishThumbs={w.finishThumbs}
             fitmentClass={w.fitmentClass}
+            fitCertified={w.fitCertified === true}
             certificationBlock={certificationBlock}
             viewParams={viewParams}
             dbProfile={dbProfile}
@@ -1577,6 +1599,7 @@ export function WheelsGridWithSelection({
             }}
             finishThumbs={w.finishThumbs}
             fitmentClass={w.fitmentClass}
+            fitCertified={w.fitCertified === true}
             certificationBlock={certificationBlock}
             isPopular={isRecommended && (idx === 0 || idx === 1)}
             viewParams={viewParams}

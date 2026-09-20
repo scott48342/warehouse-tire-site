@@ -34,7 +34,7 @@ import type { QuoteLine } from "@/lib/quotes";
 import type { CartItem, CartWheelItem, CartTireItem } from "@/lib/cart/CartContext";
 import type { CatalogPriceResolver } from "./repriceCatalog";
 import type { HardwareSpecResolver, HardwareSpecVehicle } from "./hardwareSpec";
-import { calculateHubRingSpec, formatThreadSize, parseThreadSize } from "@/lib/fitment/accessories";
+import { calculateHubRingSpec, formatHubRingMm, formatHubRingSku, formatThreadSize, parseThreadSize } from "@/lib/fitment/accessories";
 import {
   INCLUDED_HARDWARE_MAX_UNIT_USD,
   ROAD_HAZARD_SKU,
@@ -248,6 +248,9 @@ export async function buildCheckoutLines(
       // A placeholder (no catalog row) must ALSO match what the server derives for the
       // selected wheel + vehicle; the client-formatted digits are only a claim.
       let hardwareSpec: Record<string, unknown> | undefined;
+      // The line name fulfilment sees is SERVER-derived for placeholders; the client's
+      // "Hub Rings — Included (73.1mm → 70.5mm)" text is just a display string.
+      let lineLabel = name;
       if (placeholderKind && !server) {
         const check = await validatePlaceholderHardware(sku, placeholderKind, i, acceptedWheels, resolveHardwareSpec);
         if (!check.ok) {
@@ -255,9 +258,10 @@ export async function buildCheckoutLines(
           continue;
         }
         hardwareSpec = check.spec;
+        if (check.name) lineLabel = check.name;
       }
       freeSlots[kind!] -= qtyClient;
-      lines.push({ kind: "product", name, sku, unitPriceUsd: 0, qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: "included_hardware", hardwareKind: kind, catalogUnitPrice: server?.unitPrice, wheelSets, ...(hardwareSpec ? { hardwareSpec } : {}) }) });
+      lines.push({ kind: "product", name: lineLabel, sku, unitPriceUsd: 0, qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: "included_hardware", hardwareKind: kind, catalogUnitPrice: server?.unitPrice, wheelSets, ...(hardwareSpec ? { hardwareSpec } : {}) }) });
       continue;
     }
     if (!server) {
@@ -295,8 +299,11 @@ export async function buildCheckoutLines(
 }
 
 type PlaceholderCheck =
-  | { ok: true; spec: Record<string, unknown> }
+  | { ok: true; spec: Record<string, unknown>; name: string }
   | { ok: false; reason: "hardware_unverifiable" | "hardware_mismatch"; detail: string };
+
+/** Hub-ring dimensions agree when they round to the same tenth of a mm. */
+const HUB_RING_MATCH_TOLERANCE_MM = 0.05;
 
 /**
  * Compare a placeholder hardware SKU against the SERVER-derived dimensions for the wheel set
@@ -330,9 +337,11 @@ async function validatePlaceholderHardware(
       Math.abs(claimed.threadDiameter - actual.threadDiameter) < 0.01 &&
       Math.abs(claimed.threadPitch - actual.threadPitch) < 0.01;
     if (!same) return { ok: false, reason: "hardware_mismatch", detail: `expected LUGKIT-${formatThreadSize(actual)}` };
+    const threadLabel = formatThreadSize(actual);
     return {
       ok: true,
-      spec: { threadSize: formatThreadSize(actual), seatType: derived.vehicleSeatType ?? undefined, wheelSku: set.frontSku, sources: derived.sources },
+      spec: { threadSize: threadLabel, seatType: derived.vehicleSeatType ?? undefined, wheelSku: set.frontSku, sources: derived.sources },
+      name: `Lug Kit ${threadLabel}${derived.vehicleSeatType ? ` (${derived.vehicleSeatType} seat)` : ""} - Included`,
     };
   }
 
@@ -349,16 +358,32 @@ async function validatePlaceholderHardware(
         detail: derived.wheelBoreMm < derived.vehicleHubMm ? "wheel_bore_smaller_than_hub" : "no_ring_needed",
       };
     }
-    const expected = `HR-${ring.outerDiameter.toFixed(0)}-${ring.innerDiameter.toFixed(0)}`;
-    if (claimed.outer !== Number(ring.outerDiameter.toFixed(0)) || claimed.inner !== Number(ring.innerDiameter.toFixed(0))) {
+    // Compare in tenths of a mm: a whole-mm placeholder (`HR-73-71`) cannot name one
+    // physical ring (73.1→70.5 and 72.6→71.4 both round to it) and is rejected even
+    // when the rounded digits happen to agree.
+    const expected = formatHubRingSku(ring);
+    const outerOk = Math.abs(claimed.outer - ring.outerDiameter) <= HUB_RING_MATCH_TOLERANCE_MM;
+    const innerOk = Math.abs(claimed.inner - ring.innerDiameter) <= HUB_RING_MATCH_TOLERANCE_MM;
+    if (!claimed.tenths || !outerOk || !innerOk) {
       return { ok: false, reason: "hardware_mismatch", detail: `expected ${expected}` };
     }
+    const outerMm = Number(formatHubRingMm(ring.outerDiameter));
+    const innerMm = Number(formatHubRingMm(ring.innerDiameter));
     return {
       ok: true,
-      spec: { outerDiameter: ring.outerDiameter, innerDiameter: ring.innerDiameter, wheelSku: set.frontSku, sources: derived.sources },
+      spec: {
+        outerDiameterMm: outerMm,
+        innerDiameterMm: innerMm,
+        // Unrounded inputs the ring was derived from, for fulfilment traceability.
+        wheelBoreMm: derived.wheelBoreMm,
+        vehicleHubMm: derived.vehicleHubMm,
+        wheelSku: set.frontSku,
+        sources: derived.sources,
+      },
+      name: `Hub Centric Rings ${formatHubRingMm(ring.outerDiameter)}mm -> ${formatHubRingMm(ring.innerDiameter)}mm (set of 4) - Included`,
     };
   }
 
   // valve_stem has no placeholder format today; nothing to compare.
-  return { ok: true, spec: { wheelSku: set.frontSku } };
+  return { ok: true, spec: { wheelSku: set.frontSku }, name: "" };
 }

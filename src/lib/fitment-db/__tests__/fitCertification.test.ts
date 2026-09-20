@@ -7,6 +7,8 @@ import {
   gatedFitmentClass,
   isCertifiedFit,
   isFallbackCertified,
+  pairCertified,
+  pairFitmentClass,
 } from "../fitCertification";
 
 describe("computeCertificationBlock", () => {
@@ -74,5 +76,28 @@ describe("isFallbackCertified", () => {
     expect(isFallbackCertified(undefined)).toBe(true);
     expect(isFallbackCertified("needs_manual_verification")).toBe(false);
     expect(isFallbackCertified("blocked")).toBe(false);
+  });
+});
+
+// 2026-09-20 (Codex review): a staggered card sells BOTH axles.
+describe("pairFitmentClass / pairCertified", () => {
+  it("claims the WEAKER axle's class (RC7: front specfit, rear extended -> Custom Fit, not Good Fit)", () => {
+    expect(pairFitmentClass("specfit", "extended")).toBe("extended");
+    expect(pairFitmentClass("surefit", "specfit")).toBe("specfit");
+    expect(pairFitmentClass("specfit", "surefit")).toBe("specfit");
+    expect(pairFitmentClass("surefit", "surefit")).toBe("surefit");
+  });
+
+  it("fails closed when the rear verdict is unknown; an unknown front makes no claim", () => {
+    expect(pairFitmentClass("surefit", null)).toBe("extended");
+    expect(pairFitmentClass("surefit", undefined)).toBe("extended");
+    expect(pairFitmentClass(undefined, "surefit")).toBeUndefined();
+  });
+
+  it("is certified only when BOTH SKUs are", () => {
+    expect(pairCertified(true, true)).toBe(true);
+    expect(pairCertified(true, false)).toBe(false);
+    expect(pairCertified(true, undefined)).toBe(false);
+    expect(pairCertified(false, true)).toBe(false);
   });
 });

@@ -37,6 +37,12 @@ export interface WheelVariantInput {
   inventoryType?: string;
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  /**
+   * fitment-search `fitmentValidation.certified`: true only when the vehicle
+   * profile is certified for THIS vehicle AND geometry passed at spec level.
+   * Carried to the cart as `fitVerified`; never derived client-side.
+   */
+  fitCertified?: boolean;
   pair?: {
     staggered: boolean;
     front: { sku: string; diameter?: string; width?: string; offset?: string; finish?: string; price?: number | null };
@@ -83,6 +89,8 @@ export interface GroupedWheel {
   inventoryType?: string;
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  /** true only when EVERY variant in the group is certified (fail closed). */
+  fitCertified?: boolean;
   pair?: WheelVariantInput["pair"];
   
   // Fitment guidance (2026-04-07)
@@ -393,6 +401,9 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       if (fitmentPriority(v.fitmentClass) < fitmentPriority(best)) return v.fitmentClass;
       return best;
     }, undefined as WheelVariantInput["fitmentClass"]);
+
+    // A group may only claim a certified fit when every finish variant does.
+    const groupCertified = variants.every((v) => v.fitCertified === true);
     
     // Determine best fitmentGuidance (most conservative: perfect > recommended > popular > aggressive)
     const fitmentGuidancePriority = (fg: WheelVariantInput["fitmentGuidance"]) => {
@@ -429,6 +440,7 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       inventoryType: defaultFinish?.inventoryType ?? representative.inventoryType,
       styleKey: representative.styleKey,
       fitmentClass: bestFitmentClass,
+      fitCertified: groupCertified,
       pair: defaultFinish?.pair || representative.pair,
       fitmentGuidance: bestFitmentGuidance,
       supplier:     representative.supplier,
@@ -468,6 +480,7 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       inventoryType: w.inventoryType,
       styleKey: w.styleKey,
       fitmentClass: w.fitmentClass,
+      fitCertified: w.fitCertified === true,
       pair: w.pair,
       fitmentGuidance: w.fitmentGuidance,
       supplier:     w.supplier,

@@ -17,6 +17,7 @@ import {
   extractVehicleFitmentData,
   formatThreadSize,
   formatHubRingSpec,
+  formatHubRingSku,
   type AccessoryFitmentResult,
   type VehicleFitmentData,
   type WheelData,
@@ -127,7 +128,7 @@ export function useAccessoryFitment(
       const item: CartAccessoryItem = {
         type: "accessory",
         category: "hub_ring",
-        sku: `HR-${spec.outerDiameter.toFixed(0)}-${spec.innerDiameter.toFixed(0)}`,
+        sku: formatHubRingSku(spec),
         name: `Hub Rings — Included (${formatHubRingSpec(spec)})`,
         unitPrice: 0, // Included
         quantity: 1,
@@ -278,7 +279,7 @@ export function calculateAccessoryFitment(
     const item: CartAccessoryItem = {
       type: "accessory",
       category: "hub_ring",
-      sku: `HR-${spec.outerDiameter.toFixed(0)}-${spec.innerDiameter.toFixed(0)}`,
+      sku: formatHubRingSku(spec),
       name: `Hub Rings — Included (${formatHubRingSpec(spec)})`,
       unitPrice: 0,
       quantity: 1,
