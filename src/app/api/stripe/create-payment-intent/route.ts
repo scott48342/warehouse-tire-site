@@ -6,6 +6,7 @@ import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
 import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } from "@/lib/shopContext";
+import { cancelSupersededPaymentIntent } from "@/lib/checkout/supersededPaymentIntent";
 import { validateSavedQuoteOwnership } from "@/lib/savedQuotes/checkoutIntegration";
 import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
 import {
@@ -251,15 +252,6 @@ export async function POST(req: Request) {
       zip: String(shippingInfo.zip || "").trim(),
     } : undefined;
 
-    const { id: quoteId } = await createQuote(db, {
-      customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
-      vehicle,
-      lines: linesAll,
-      localMode: localModeData,
-      discount: discountData,
-      shippingAddress: shippingAddressData,
-    });
-
     // Charge = server lines minus the server-validated discount (the discount was previously
     // only recorded in quote metadata and never taken off the charge).
     const grossCents = stripeLines.reduce((sum, l) => sum + moneyToCents(l.unitPriceUsd) * l.qty, 0);
@@ -272,6 +264,17 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "total_below_minimum", detail: "Order total is below the minimum card charge." }, { status: 400 });
     }
     const totalUsd = totalCents / 100;
+
+    // The quote records the exact charge it was created for; the webhook fulfils nothing else.
+    const { id: quoteId } = await createQuote(db, {
+      customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
+      vehicle,
+      lines: linesAll,
+      localMode: localModeData,
+      discount: discountData,
+      shippingAddress: shippingAddressData,
+      expectedChargeCents: totalCents,
+    });
 
     // Payment methods: Card only for embedded form
     // BNPL options (Affirm, Afterpay, Klarna) use hosted checkout session
@@ -350,6 +353,10 @@ export async function POST(req: Request) {
       .slice(0, 5) // First 5 items
       .map(l => `${l.name} x${l.qty}`)
       .join(", ") + (stripeLines.length > 5 ? ` +${stripeLines.length - 5} more` : "");
+
+    // The shopper changed cart/address/discount after an intent existed and sent the old id back:
+    // cancel it so the stale amount can never be confirmed. Cart-owned intents only; best effort.
+    await cancelSupersededPaymentIntent(stripeConn.stripe, body.supersedesPaymentIntentId, cartId);
 
     // Create PaymentIntent
     const paymentIntent = await stripeConn.stripe.paymentIntents.create({

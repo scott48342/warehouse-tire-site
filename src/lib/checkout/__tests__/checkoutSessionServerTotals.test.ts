@@ -143,6 +143,9 @@ describe("create-checkout-session - server totals authority", () => {
     const lines = quote.mock.calls[0][1].lines as Array<{ name: string; unitPriceUsd: number }>;
     expect(lines.find((l) => l.name.startsWith("Sales Tax"))?.unitPriceUsd).toBe(81.78);
     expect(lines.find((l) => l.name === "Shipping & Handling")?.unitPriceUsd).toBe(zoneShipping);
+    // quote records the exact charge the webhook may fulfil (Codex review 2026-09-20)
+    expect(quote.mock.calls[0][1].expectedChargeCents).toBe(Math.round(serverTotal * 100));
+    expect(quote.mock.calls[0][1].expectedChargeCents).toBe(chargedCents(params));
   });
 
   it("NEGATIVE: legacy/tampered client without a valid expectedTotal -> 409 review, never a silent charge", async () => {
@@ -264,6 +267,8 @@ describe("create-checkout-session - server totals authority", () => {
     expect(chargedCents(params) - 13631).toBe(Math.round(discounted * 100));
     expect(params.metadata.discountAmount).toBe("136.31");
     expect(quote.mock.calls[0][1].discount).toEqual({ code: "WELCOME10", amount: 136.31, type: "first_order" });
+    // expected charge is the NET (after coupon) - what Stripe reports as amount_total
+    expect(quote.mock.calls[0][1].expectedChargeCents).toBe(Math.round(discounted * 100));
   });
 
   it("rejected discount -> 409 totals_changed with discountRejected; no quote, no session, no coupon", async () => {

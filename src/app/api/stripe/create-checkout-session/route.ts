@@ -265,17 +265,6 @@ export async function POST(req: Request) {
       zip: String(shippingInfo.zip || "").trim(),
     } : undefined;
 
-    const { id: quoteId } = await createQuote(db, {
-      customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
-      vehicle,
-      lines: linesAll,
-      localMode: localModeData,
-      discount: totals.discountCode && totals.discountUsd > 0
-        ? { code: totals.discountCode, amount: totals.discountUsd, type: totals.discountType || "promo" }
-        : undefined,
-      shippingAddress: shippingAddressData,
-    });
-
     const origin = new URL(req.url).origin;
 
     // Build Stripe line items from stripeLines (which already includes shipping + tax from linesAll)
@@ -309,6 +298,19 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "total_below_minimum", detail: "Order total is below the minimum card charge." }, { status: 400 });
     }
     const totalUsd = totalCents / 100;
+
+    // The quote records the exact charge it was created for; the webhook fulfils nothing else.
+    const { id: quoteId } = await createQuote(db, {
+      customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
+      vehicle,
+      lines: linesAll,
+      localMode: localModeData,
+      discount: totals.discountCode && totals.discountUsd > 0
+        ? { code: totals.discountCode, amount: totals.discountUsd, type: totals.discountType || "promo" }
+        : undefined,
+      shippingAddress: shippingAddressData,
+      expectedChargeCents: totalCents,
+    });
     let stripeDiscounts: Array<{ coupon: string }> | undefined;
     if (discountCents > 0) {
       const coupon = await (stripeConn.stripe.coupons.create as Function)({

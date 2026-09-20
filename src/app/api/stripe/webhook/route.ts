@@ -7,6 +7,7 @@ import { sendOrderConfirmationEmail } from "@/lib/email";
 import { markCartEventsPurchased } from "@/lib/cart/cartAddEventService";
 import { markCartRecovered } from "@/lib/cart/abandonedCartService";
 import { logCheckoutDiagnosticServer } from "@/lib/checkout/diagnosticsServer";
+import { paidAmountMismatch } from "@/lib/checkout/paidAmountGuard";
 import { processSupplierOrders } from "@/lib/suppliers/supplierOrderService";
 import { markSavedQuoteConverted } from "@/lib/savedQuotes/checkoutIntegration";
 import {
@@ -104,6 +105,24 @@ export async function POST(req: Request) {
     if (!quote) {
       console.error(`[stripe/webhook] Quote not found: ${quoteId}`);
       return NextResponse.json({ error: "quote_not_found" }, { status: 400 });
+    }
+
+    // Fulfil only the charge this quote was created for (paidAmountGuard.ts). The amount is
+    // server-set on both flows, so a mismatch is a stale/duplicated intent or a bug: record it,
+    // stop, and leave the payment for manual reconciliation. Never ship on it.
+    const paidMismatch = paidAmountMismatch(quote.snapshot, amountTotal);
+    if (paidMismatch) {
+      console.error(`[stripe/webhook] PAID AMOUNT MISMATCH quote=${quoteId} expected=${paidMismatch.expectedCents} paid=${paidMismatch.paidCents} event=${event.type}`);
+      await logCheckoutDiagnosticServer({
+        eventType: "payment_provider_error",
+        cartId,
+        checkoutStep: "post_payment",
+        status: "error",
+        endpoint: `stripe_webhook:${event.type}`,
+        errorCode: "paid_amount_mismatch",
+        detail: { quoteId, ...paidMismatch },
+      });
+      return NextResponse.json({ error: "paid_amount_mismatch" }, { status: 400 });
     }
 
     // Create order (note: no stripeSessionId for PaymentIntent flow)
@@ -277,6 +296,24 @@ export async function POST(req: Request) {
     if (!quote) {
       console.error(`[stripe/webhook] Quote not found: ${quoteId}`);
       return NextResponse.json({ error: "quote_not_found" }, { status: 400 });
+    }
+
+    // Fulfil only the charge this quote was created for (paidAmountGuard.ts). The amount is
+    // server-set on both flows, so a mismatch is a stale/duplicated intent or a bug: record it,
+    // stop, and leave the payment for manual reconciliation. Never ship on it.
+    const paidMismatch = paidAmountMismatch(quote.snapshot, amountTotal);
+    if (paidMismatch) {
+      console.error(`[stripe/webhook] PAID AMOUNT MISMATCH quote=${quoteId} expected=${paidMismatch.expectedCents} paid=${paidMismatch.paidCents} event=${event.type}`);
+      await logCheckoutDiagnosticServer({
+        eventType: "payment_provider_error",
+        cartId,
+        checkoutStep: "post_payment",
+        status: "error",
+        endpoint: `stripe_webhook:${event.type}`,
+        errorCode: "paid_amount_mismatch",
+        detail: { quoteId, ...paidMismatch },
+      });
+      return NextResponse.json({ error: "paid_amount_mismatch" }, { status: 400 });
     }
 
     // Create order

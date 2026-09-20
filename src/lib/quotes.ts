@@ -76,6 +76,11 @@ export type QuoteSnapshot = {
     state: string;
     zip: string;
   };
+  /**
+   * Exact amount (cents) the Stripe route charged for this quote. The webhook fulfils only when
+   * Stripe reports this amount paid (see paidAmountGuard.ts). Absent on pre-2026-09-20 quotes.
+   */
+  expectedChargeCents?: number;
 };
 
 export type QuoteRecord = {
@@ -156,6 +161,7 @@ export async function createQuote(
     localMode,
     discount,
     shippingAddress,
+    expectedChargeCents,
   }: {
     customer: QuoteSnapshot["customer"];
     vehicle?: QuoteSnapshot["vehicle"];
@@ -163,6 +169,7 @@ export async function createQuote(
     localMode?: QuoteSnapshot["localMode"];
     discount?: QuoteSnapshot["discount"];
     shippingAddress?: QuoteSnapshot["shippingAddress"];
+    expectedChargeCents?: number;
   }
 ) {
   await ensureQuoteSystem(db);
@@ -170,7 +177,10 @@ export async function createQuote(
   const taxRate = await getTaxRate(db);
   const totals = computeTotals(lines, taxRate);
 
-  const snap: QuoteSnapshot = { customer, vehicle, lines, taxRate, totals, localMode, discount, shippingAddress };
+  const snap: QuoteSnapshot = {
+    customer, vehicle, lines, taxRate, totals, localMode, discount, shippingAddress,
+    ...(typeof expectedChargeCents === "number" && Number.isFinite(expectedChargeCents) ? { expectedChargeCents: Math.round(expectedChargeCents) } : {}),
+  };
   const id = newId();
   const vlabel = vehicleLabel(vehicle) || null;
 

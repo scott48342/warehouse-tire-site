@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { paymentIntentInputKey } from "@/lib/checkout/paymentIntentInputs";
 import { useRouter } from "next/navigation";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
@@ -380,6 +381,9 @@ export default function CheckoutPage() {
   // Embedded Payment Element state
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [paymentIntentId, setPaymentIntentId] = useState<string | null>(null);
+  // Id of an intent this checkout abandoned because its inputs changed; sent with the next
+  // create request so the server cancels it (stale PI invalidation, Codex review 2026-09-20).
+  const supersededPiRef = useRef<string | null>(null);
   const [quoteId, setQuoteId] = useState<string | null>(null);
   const [paymentLoading, setPaymentLoading] = useState(false);
   
@@ -776,9 +780,36 @@ export default function CheckoutPage() {
   }
 
   // Create PaymentIntent for embedded Payment Element
+  // Everything that prices the PaymentIntent. When this changes after an intent exists, the
+  // intent and its quote are stale: drop them (and cancel server-side on the next create) so the
+  // Payment Element can never confirm an amount the shopper is no longer looking at.
+  const paymentInputKey = useMemo(() => paymentIntentInputKey({
+    items: items.map((i) => ({
+      type: i.type, sku: i.sku, rearSku: (i as any).rearSku, quantity: i.quantity, unitPrice: i.unitPrice,
+      frontUnitPrice: (i as any).frontUnitPrice, rearUnitPrice: (i as any).rearUnitPrice,
+    })),
+    shipping: { address: shipping.address, address2: shipping.address2, city: shipping.city, state: shipping.state, zip: shipping.zip, email: shipping.email },
+    isLocal,
+    selectedStore: selectedStore ? String(selectedStore) : null,
+    discountCode: activeDiscount?.code ?? null,
+  }), [items, shipping.address, shipping.address2, shipping.city, shipping.state, shipping.zip, shipping.email, isLocal, selectedStore, activeDiscount?.code]);
+  const paymentIntentKeyRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!clientSecret) return;
+    if (paymentIntentKeyRef.current === paymentInputKey) return;
+    // Inputs changed under a live intent: invalidate it. The create effect below re-fires.
+    supersededPiRef.current = paymentIntentId;
+    paymentIntentKeyRef.current = null;
+    setClientSecret(null);
+    setPaymentIntentId(null);
+    setQuoteId(null);
+    logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "ok", endpoint: "/api/stripe/create-payment-intent", errorCode: "stale_intent_invalidated" });
+  }, [paymentInputKey, clientSecret, paymentIntentId]);
+
   const createPaymentIntent = useCallback(async () => {
     // Skip if already created or loading
     if (clientSecret || paymentLoading) return;
+    const inputKeyAtRequest = paymentInputKey;
     
     try {
       setPaymentLoading(true);
@@ -799,6 +830,7 @@ export default function CheckoutPage() {
           customer,
           vehicle,
           cartId: getCartId(),
+          supersedesPaymentIntentId: supersededPiRef.current || undefined,
           // If cart was resumed from a saved quote, include for conversion tracking
           ...(resumedFromQuoteId ? { savedQuoteId: resumedFromQuoteId } : {}),
           ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
@@ -845,6 +877,8 @@ export default function CheckoutPage() {
       }
       logCheckoutDiagnostic({ eventType: "payment_element_init", checkoutStep: "payment", status: "ok", endpoint: "/api/stripe/create-payment-intent" });
 
+      supersededPiRef.current = null;
+      paymentIntentKeyRef.current = inputKeyAtRequest;
       setClientSecret(data.clientSecret);
       setPaymentIntentId(data.paymentIntentId);
       setQuoteId(data.quoteId);
@@ -857,7 +891,8 @@ export default function CheckoutPage() {
   }, [
     clientSecret, paymentLoading, shipping, items, vehicle, isLocal, selectedStore,
     shippingAmount, shippingEstimate.isFree, taxRate, calculatedTax, 
-    localServiceFees, cardProcessingFee, tireCount, totalWithTaxAndShipping, hasDiscount, activeDiscount, discountAmount
+    localServiceFees, cardProcessingFee, tireCount, totalWithTaxAndShipping, hasDiscount, activeDiscount, discountAmount,
+    paymentInputKey,
   ]);
 
   // Check if shipping form is complete
@@ -875,11 +910,15 @@ export default function CheckoutPage() {
 
   // Create PaymentIntent when shipping info is complete
   useEffect(() => {
-    if (isShippingComplete && !clientSecret && !paymentLoading && !pendingRevision) {
+    if (!(isShippingComplete && !clientSecret && !paymentLoading && !pendingRevision)) return;
+    // Short settle window so a burst of edits (typing a zip, adjusting quantities) yields one
+    // intent instead of one per keystroke.
+    const t = setTimeout(() => {
       checkoutStepRef.current = "payment";
       createPaymentIntent();
       trackAddPaymentInfo(cartTotal);
-    }
+    }, 400);
+    return () => clearTimeout(t);
   }, [isShippingComplete, clientSecret, paymentLoading, createPaymentIntent, cartTotal, pendingRevision]);
 
   // Handle successful payment
