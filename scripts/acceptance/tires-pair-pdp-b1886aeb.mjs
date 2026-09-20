@@ -58,6 +58,17 @@ const setHref = await page.evaluate(() => { const a = [...document.querySelector
 log("pair.selectHref", setHref);
 check("pair.hrefHasRearSkuAndSize", !!setHref && /rearSku=/.test(setHref) && /rearSize=/.test(setHref) && /staggeredPair=/.test(setHref));
 if (!setHref) { await browser.close(); process.exit(1); }
+// 3a) (Codex live 16:59) EVERY pair card's "View Details" must be the SAME href as its "Select Staggered Set",
+//     and every pair href must carry the modification (trim gate context) - no bare front-PDP escape hatch.
+const pairCards = await page.$$eval('[data-testid="pair-select-link"]', (sels) => sels.map((s) => {
+  const card = s.closest("div");
+  const det = card && card.querySelector('[data-testid="pair-details-link"]');
+  return { select: s.getAttribute("href"), details: det ? det.getAttribute("href") : null };
+}));
+log("pair.cards", pairCards.length);
+check("pair.viewDetailsEqualsSelect", pairCards.length >= 1 && pairCards.every((c) => c.details && c.details === c.select), pairCards.slice(0, 2));
+check("pair.hrefsCarryModification", pairCards.every((c) => /modification=/.test(c.select) && /rearSku=/.test(c.select) && /rearSize=/.test(c.select)));
+check("pair.noBareFrontHref", (await page.$$eval("a", (as) => as.map((a) => a.getAttribute("href") || ""))).filter((h) => /^\/tires\/[^/?]+\?size=/.test(h) && !/rearSku=/.test(h)).length === 0);
 const hrefFrontSku = (setHref.match(/\/tires\/(?:km\/)?([^/?]+)/) || [])[1];
 const hrefRearSku = decodeURIComponent((setHref.match(/rearSku=([^&]+)/) || [])[1] || "");
 const hrefRearSize = decodeURIComponent((setHref.match(/rearSize=([^&]+)/) || [])[1] || "");
@@ -100,6 +111,29 @@ check("cart.lineHasBothSkus", !!t && t.sku === hrefFrontSku && t.rearSku === hre
 check("cart.lineHasBothSizes", !!t && t.size === hrefFrontSize && t.rearSize === hrefRearSize);
 check("cart.lineQty4Staggered", !!t && t.quantity === 4 && t.staggered === true);
 check("cart.linePrices2F2R", !!t && t.frontUnitPrice === frontEa && t.rearUnitPrice === rearEa && r2(2 * t.frontUnitPrice + 2 * t.rearUnitPrice) === setTotal);
+
+// 3b) (Codex live 16:59) tires-page package sidebar (PackageSummary) must print the exact 2F+2R line total,
+//     not blended unit x 4. Sidebar only renders with wheels in the cart -> add a wheel line client-side
+//     (same shape the wheels page writes), then reload /tires with the vehicle.
+await page.evaluate((extra) => {
+  const c = JSON.parse(localStorage.getItem("wt_cart") || "[]");
+  c.unshift(extra);
+  localStorage.setItem("wt_cart", JSON.stringify(c));
+}, { type: "wheel", sku: "TR04198551435BK", brand: "Touren", model: "TR04", finish: "Black", diameter: 19, width: 8.5, quantity: 4, unitPrice: 315.9, staggered: false });
+await page.setViewport({ width: 1400, height: 1000 }); // sidebar lives in the lg: grid column
+// package-flow hand-off URL (wheelSku present) renders the results layout incl. the sidebar; a bare
+// vehicle URL without wheelSku hits the wheel-size gate, which has no sidebar.
+await page.goto(`${BASE}${gtpp}`, { waitUntil: "networkidle2" });
+const sidebarLines = await page.$$eval('[data-testid="package-summary-tire-line"]', (els) => els.map((e) => e.textContent.replace(/\s+/g, " ").trim()));
+log("tiresSidebar.lines", sidebarLines);
+const blended4x = r2(4 * t.unitPrice);
+// tires/page.tsx renders PackageSummary in two layout branches (3608 + 3703) -> one line per rendered sidebar
+check("tiresSidebar.exact2F2R", sidebarLines.length >= 1 && sidebarLines.every((l) => l.includes(`$${setTotal.toFixed(2)}`) && l.includes(hrefRearSize) && l.includes(hrefRearSku) && /Set of 4 \(2 front \+ 2 rear\)/.test(l)), { setTotal, blended4x, sidebars: sidebarLines.length });
+check("tiresSidebar.noBlended4x", blended4x === setTotal || !sidebarLines.some((l) => l.includes(`$${blended4x.toFixed(2)}`)), blended4x);
+await page.evaluate(() => {
+  const c = JSON.parse(localStorage.getItem("wt_cart") || "[]").filter((i) => i.type !== "wheel");
+  localStorage.setItem("wt_cart", JSON.stringify(c));
+});
 
 await page.goto(`${BASE}/cart`, { waitUntil: "networkidle2" });
 body = await bodyText();
