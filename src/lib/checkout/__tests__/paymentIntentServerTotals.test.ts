@@ -49,8 +49,8 @@ const shopContext = detectShopContext as jest.Mock;
 const piCreate = jest.fn(async (params: any) => ({ id: "pi_test", client_secret: "cs_test", amount: params.amount }));
 
 const ridlerLines = [
-  { kind: "product", name: "RIDLER 652 (front)", sku: "652-2865GBD", unitPriceUsd: 336.12, qty: 2, taxable: true, meta: { cartType: "wheel", priceSource: "wheelpros", axle: "front" } },
-  { kind: "product", name: "RIDLER 652 (rear)", sku: "652-2165GBD", unitPriceUsd: 345.41, qty: 2, taxable: true, meta: { cartType: "wheel", priceSource: "wheelpros", axle: "rear" } },
+  { kind: "product", name: "RIDLER 652 (front)", sku: "652-2865GBD", unitPriceUsd: 336.12, qty: 2, taxable: true, meta: { cartType: "wheel", priceSource: "wheelpros", axle: "front", catalog: { diameterInches: 20, supplierSource: "wheelpros" } } },
+  { kind: "product", name: "RIDLER 652 (rear)", sku: "652-2165GBD", unitPriceUsd: 345.41, qty: 2, taxable: true, meta: { cartType: "wheel", priceSource: "wheelpros", axle: "rear", catalog: { diameterInches: 20, supplierSource: "wheelpros" } } },
 ];
 const cartItems = [{ id: "w1", type: "wheel", sku: "652-2865GBD", rearSku: "652-2165GBD", quantity: 4, unitPrice: 340.77, staggered: true }];
 
@@ -242,7 +242,7 @@ describe("create-payment-intent - server totals authority", () => {
   it("heavy tires with no live FedEx rate -> 409 shipping_unavailable (client 'Call for Quote' $0 is not payable)", async () => {
     built.mockResolvedValue({
       ok: true, repriced: [],
-      lines: [{ kind: "product", name: "LT285/70R17 Tire", sku: "LT1", unitPriceUsd: 320, qty: 4, taxable: true, meta: { cartType: "tire", priceSource: "tireweb", tireSize: "LT285/70R17" } }],
+      lines: [{ kind: "product", name: "LT285/70R17 Tire", sku: "LT1", unitPriceUsd: 320, qty: 4, taxable: true, meta: { cartType: "tire", priceSource: "tireweb", tireSize: "LT285/70R17", catalog: { sizeLabel: "LT285/70R17", supplierSource: "tireweb:atd" } } }],
     });
     const res = await POST(req({ expectedTotal: 1356.8 }));
     const json = await res.json();
@@ -251,6 +251,32 @@ describe("create-payment-intent - server totals authority", () => {
     expect(json.detail).toMatch(/call/i);
     expect(quote).not.toHaveBeenCalled();
     expect(piCreate).not.toHaveBeenCalled();
+  });
+
+  it("TAMPER: client size/weight/diameter/source on an LT tire cannot buy a passenger-tire rate - catalog attributes win, fail closed", async () => {
+    // The client claims a light 15" passenger tire from USAF; the catalog says LT285/70R17 from ATD.
+    built.mockResolvedValue({
+      ok: true, repriced: [],
+      lines: [{ kind: "product", name: "205/55R16 Tire", sku: "LT1", unitPriceUsd: 320, qty: 4, taxable: true, meta: { cartType: "tire", priceSource: "tireweb", tireSize: "205/55R16", source: "usautoforce", spec: { diameter: 15 }, catalog: { sizeLabel: "LT285/70R17", supplierSource: "tireweb:atd" } } }],
+    });
+    const res = await POST(req({
+      expectedTotal: 1356.8,
+      items: [{ id: "t1", type: "tire", sku: "LT1", size: "205/55R16", quantity: 4, unitPrice: 320, weightLbs: 10, diameter: 15, source: "usautoforce", freeShipping: true }],
+    }));
+    const json = await res.json();
+    expect(res.status).toBe(409);
+    expect(json.error).toBe("shipping_unavailable");
+    expect(quote).not.toHaveBeenCalled();
+    expect(piCreate).not.toHaveBeenCalled();
+  });
+
+  it("TAMPER: a small client wheel diameter cannot shrink the package - accepted totals equal the catalog-dimension totals", async () => {
+    // Same RIDLER cart, client claims 15" wheels weighing 5 lbs: the server total must be unchanged.
+    const res = await POST(req({
+      expectedTotal: serverTotal,
+      items: [{ ...cartItems[0], diameter: 15, weightLbs: 5, spec: { diameter: "15" }, source: "wheel1", freeShipping: true }],
+    }));
+    expect(res.status).toBe(200);
   });
 
   it("national order with an invalid ZIP is refused before anything is created", async () => {

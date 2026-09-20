@@ -73,6 +73,13 @@ export type BuildCheckoutLinesResult =
 
 const money = (n: number) => Math.round(n * 100) / 100;
 
+/**
+ * Order-record metadata for a line. `spec`, `meta`, `source`, `brand` and the tire display
+ * fields are copied from the CLIENT for the order snapshot / emails only - they are claims.
+ * Nothing that prices, taxes or ships the order may read them: pricing uses `priceSource`
+ * and shipping uses `catalog` (CatalogShippingAttrs from the resolver). Re-pricing a line
+ * does not make its client metadata authoritative.
+ */
 function baseMeta(i: any, extra: Record<string, unknown> = {}) {
   return {
     cartType: i.type,
@@ -163,7 +170,7 @@ export async function buildCheckoutLines(
         unitPriceUsd: money(front.unitPrice),
         qty: qtyClient,
         taxable: true,
-        meta: baseMeta(i, { priceSource: front.source, clientUnitPrice: clientUnit }),
+        meta: baseMeta(i, { priceSource: front.source, catalog: front.shipping ?? {}, clientUnitPrice: clientUnit }),
       });
       continue;
     }
@@ -203,7 +210,7 @@ export async function buildCheckoutLines(
       unitPriceUsd: money(front.unitPrice),
       qty: 2,
       taxable: true,
-      meta: baseMeta(i, { axle: "front", staggeredSetId: setId, pairedSku: rearSku, priceSource: front.source, clientUnitPrice: clientUnit }),
+      meta: baseMeta(i, { axle: "front", staggeredSetId: setId, pairedSku: rearSku, priceSource: front.source, catalog: front.shipping ?? {}, clientUnitPrice: clientUnit }),
     });
     lines.push({
       kind: "product",
@@ -217,6 +224,7 @@ export async function buildCheckoutLines(
         staggeredSetId: setId,
         pairedSku: sku,
         priceSource: rear.source,
+        catalog: rear.shipping ?? {},
         clientUnitPrice: clientUnit,
         // Rear axle specs travel with the rear line for the order record.
         spec: type === "wheel"
@@ -272,7 +280,7 @@ export async function buildCheckoutLines(
     if (Math.abs(server.unitPrice - clientUnit) > 0.005) {
       repriced.push({ sku, clientUnitPrice: clientUnit, serverUnitPrice: server.unitPrice });
     }
-    lines.push({ kind: "product", name, sku, unitPriceUsd: money(server.unitPrice), qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: server.source, clientUnitPrice: clientUnit }) });
+    lines.push({ kind: "product", name, sku, unitPriceUsd: money(server.unitPrice), qty: qtyClient, taxable: false, meta: baseMeta(i, { priceSource: server.source, catalog: server.shipping ?? {}, clientUnitPrice: clientUnit }) });
   }
 
   // Road hazard: 20% of the SERVER tire price per tire ($15 min), one unit per tire

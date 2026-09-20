@@ -32,7 +32,7 @@ const catalog: Record<string, { price: number; finish: string }> = {
 
 const resolver: CatalogPriceResolver = async (sku) => {
   const hit = catalog[sku];
-  return hit ? { sku, unitPrice: hit.price, finish: hit.finish, source: "wheelpros" } : null;
+  return hit ? { sku, unitPrice: hit.price, finish: hit.finish, source: "wheelpros", shipping: { diameterInches: 20, supplierSource: "wheelpros" } } : null;
 };
 
 /** Vehicle the wheel lines in this suite are sold for; what the server would derive for it. */

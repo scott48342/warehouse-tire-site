@@ -40,6 +40,7 @@ import {
   type ShippingItem,
 } from "@/lib/shipping/shippingService";
 import { getFedExShippingRate, shouldUseFedExLookup, type CartItemForShipping } from "@/lib/shipping/fedexRates";
+import type { CatalogShippingAttrs } from "@/lib/checkout/repriceCatalog";
 import { validateDiscount } from "@/lib/discounts/firstOrderService";
 import { validateCampaignDiscount } from "@/lib/discounts/campaignDiscountService";
 
@@ -90,8 +91,43 @@ export type ClientTotalsClaim = {
   expectedTotal?: number | null;
 };
 
-/** Optional per-line hints from the raw cart (weights/diameters); validated, never trusted downward. */
+/**
+ * Optional per-line hints from the raw cart (weights/diameters). A hint can only RAISE a
+ * weight or dimension above what the catalog / conservative floor says; it can never lower
+ * one, change the tire size, or move the ship origin (`source` is ignored for shipping).
+ */
 export type CartItemHint = { sku?: string; type?: string; weightLbs?: number; diameter?: string | number; source?: string };
+
+/** Conservative floors used when the catalog does not publish an attribute. */
+export const SHIPPING_FLOORS = {
+  /** Wheel weight (lbs) and rim diameter (in). */
+  wheelWeightLbs: 28,
+  wheelDiameterInches: 20,
+  /** Tire weights: known passenger size / known LT-oversized size / size unknown to the catalog. */
+  tireWeightLbs: 25,
+  tireOversizedWeightLbs: 65,
+  tireUnknownSizeWeightLbs: 65,
+  /** Tire overall diameter (in) when the size cannot be parsed. */
+  tireDiameterInches: 30,
+} as const;
+
+/**
+ * Overall tire diameter (inches) from a size label: metric "285/70R17" -> 32.7,
+ * flotation "35x12.50R17" -> 35. Returns null when the label cannot be parsed.
+ */
+export function tireOverallDiameterInches(size?: string | null): number | null {
+  const s = String(size || "").trim().toUpperCase();
+  if (!s) return null;
+  const flot = s.match(/^(\d{2}(?:\.\d+)?)X/);
+  if (flot) return Math.round(Number(flot[1]) * 10) / 10;
+  const metric = s.match(/^(?:P|LT|T|ST)?(\d{3})\/(\d{2,3})\s*[A-Z]*R?(\d{2}(?:\.\d)?)/);
+  if (!metric) return null;
+  const width = Number(metric[1]);
+  const aspect = Number(metric[2]);
+  const rim = Number(metric[3]);
+  if (!(width > 0 && aspect > 0 && rim > 0)) return null;
+  return Math.round(((2 * width * aspect) / 100 / 25.4 + rim) * 10) / 10;
+}
 
 export type ServerTotals = {
   productSubtotalUsd: number;
@@ -135,17 +171,29 @@ const num = (v: unknown): number | null => {
   return Number.isFinite(n) ? n : null;
 };
 
-/** Size-based default weight used by fedexRates when none is supplied. */
-function defaultWeightLbs(type: ShippingInput["type"], sizeLabel?: string): number {
-  if (type === "tire") return isOversizedTireSize(sizeLabel) ? 65 : 25;
-  if (type === "wheel") return 28;
+/** Weight floor (lbs) for a line whose size the CATALOG knows (or does not). */
+function weightFloorLbs(type: ShippingInput["type"], catalogSize: string | undefined): number {
+  if (type === "tire") {
+    if (!catalogSize) return SHIPPING_FLOORS.tireUnknownSizeWeightLbs;
+    return isOversizedTireSize(catalogSize) ? SHIPPING_FLOORS.tireOversizedWeightLbs : SHIPPING_FLOORS.tireWeightLbs;
+  }
+  if (type === "wheel") return SHIPPING_FLOORS.wheelWeightLbs;
   return 0;
 }
 
+const str = (v: unknown): string | undefined => (typeof v === "string" && v.trim() ? v.trim() : undefined);
+
 /**
  * Shipping inputs from the server-priced product lines. Service/hardware/road-hazard lines
- * are not shippable goods and are skipped. `freeShipping` is derived from the catalog
- * price source only.
+ * are not shippable goods and are skipped.
+ *
+ * Every attribute the rate engine uses comes from the CATALOG (`meta.catalog`, written by
+ * buildCheckoutLines from the price resolver) or from a conservative floor:
+ *   - freeShipping: catalog price source only (landed-cost suppliers);
+ *   - origin/source: catalog supplier tag only - client `item.source` is ignored;
+ *   - tire size: catalog size only; an unknown size is shipped at the heavy floor;
+ *   - weight / diameter: max(catalog, floor, client hint) - a client hint can only raise.
+ * Client `spec`, `size`, `source` and weights are never allowed to lower a rate.
  */
 export function shippingInputsFromLines(lines: QuoteLine[], hints: CartItemHint[] = []): ShippingInput[] {
   const out: ShippingInput[] = [];
@@ -158,22 +206,39 @@ export function shippingInputsFromLines(lines: QuoteLine[], hints: CartItemHint[
     const qty = Number(l.qty) || 0;
     if (qty <= 0) continue;
     const type = cartType as ShippingInput["type"];
-    const sizeLabel = type === "tire" ? (meta.tireSize ? String(meta.tireSize) : undefined) : undefined;
+    const catalog = (meta.catalog && typeof meta.catalog === "object" ? meta.catalog : {}) as CatalogShippingAttrs;
     const hint = hints.find((h) => h && typeof h === "object" && h.sku && l.sku && String(h.sku) === String(l.sku));
-    const floor = defaultWeightLbs(type, sizeLabel);
-    const hintW = num(hint?.weightLbs);
-    const weightLbs = hintW != null && hintW >= floor ? hintW : undefined; // never below the size default
-    const hintD = num(hint?.diameter ?? meta.spec?.diameter);
+
+    // Tire size: catalog only. The client label is kept for the record/fee wording when the
+    // catalog has none, but the rate then uses the unknown-size (heavy) floor.
+    const catalogSize = type === "tire" ? str(catalog.sizeLabel) : undefined;
+    const sizeLabel = type === "tire" ? catalogSize ?? str(meta.tireSize) : undefined;
+
+    // Weight: never below the floor; catalog and client can only raise it.
+    const floor = weightFloorLbs(type, catalogSize);
+    const weightLbs = type === "accessory"
+      ? undefined
+      : Math.max(floor, num(catalog.weightLbs) ?? 0, num(hint?.weightLbs) ?? 0);
+
+    // Diameter: catalog (wheel rim / tire size-derived) else floor; client can only raise.
+    const catalogDiameter = type === "tire"
+      ? tireOverallDiameterInches(catalogSize)
+      : type === "wheel" ? num(catalog.diameterInches) : null;
+    const diameterFloor = type === "tire" ? SHIPPING_FLOORS.tireDiameterInches : type === "wheel" ? SHIPPING_FLOORS.wheelDiameterInches : 0;
+    const diameterBase = catalogDiameter != null && catalogDiameter > 0 ? catalogDiameter : diameterFloor;
+    const hintD = num(hint?.diameter);
+    const diameterInches = type === "accessory" ? undefined : Math.max(diameterBase, hintD != null && hintD > 0 ? hintD : 0);
+
     out.push({
       type,
       quantity: qty,
       unitPrice: Number(l.unitPriceUsd) || 0,
       sku: l.sku,
       sizeLabel,
-      source: meta.source ? String(meta.source) : priceSource || undefined,
+      source: str(catalog.supplierSource) ?? (priceSource || undefined),
       freeShipping: LANDED_COST_PRICE_SOURCES.has(priceSource),
       weightLbs,
-      diameterInches: hintD != null && hintD > 0 ? hintD : undefined,
+      diameterInches,
     });
   }
   return out;

@@ -19,10 +19,28 @@ import { FIXED_PRICE_SKUS } from "./fixedPriceSkus";
 import { getWheel1WheelBySku, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
 import { getWSIWheelBySku, computeWSISellPrice, type WSICandidate } from "@/lib/wsi/catalog";
 
+/**
+ * Shipping attributes as the CATALOG knows them. This is the only source the rate engine
+ * trusts (Codex release review 2026-09-20): client `spec`/`size`/`source`/weight hints can
+ * never lower a package dimension, weight, or move the ship origin.
+ */
+export type CatalogShippingAttrs = {
+  /** Wheel rim diameter (in). Tires derive their overall diameter from `sizeLabel`. */
+  diameterInches?: number;
+  /** Tire size as listed by the supplier feed (e.g. "LT285/70R17"). */
+  sizeLabel?: string;
+  /** Per-unit weight (lbs) from the supplier feed when it publishes one. */
+  weightLbs?: number;
+  /** Supplier/source tag from the catalog hit (e.g. "wheelpros", "tireweb:atd", "usautoforce"). */
+  supplierSource?: string;
+};
+
 export type ResolvedCatalogPrice = {
   sku: string;
   unitPrice: number;
   finish?: string;
+  /** Catalog-resolved shipping attributes; see CatalogShippingAttrs. */
+  shipping?: CatalogShippingAttrs;
   /** Catalog's own category for accessories (`accessories.category`); the server-side
    *  basis for included-hardware eligibility. Never taken from the client. */
   category?: string | null;
@@ -66,6 +84,7 @@ export async function resolveWheelPrice(sku: string): Promise<ResolvedCatalogPri
           unitPrice: price,
           finish: props.finish || props.abbreviated_finish_desc || props.fancy_finish_desc || undefined,
           source: "wheelpros",
+          shipping: { diameterInches: positive(props.diameter ?? props.wheel_diameter) ?? undefined, supplierSource: "wheelpros" },
         };
       }
     }
@@ -77,7 +96,7 @@ export async function resolveWheelPrice(sku: string): Promise<ResolvedCatalogPri
     const tf: any = await getTechfeedWheelBySku(clean);
     const price = positive(tf?.msrp);
     if (tf && price != null) {
-      return { sku: tf.sku || clean, unitPrice: price, finish: tf.abbreviated_finish_desc || tf.fancy_finish_desc || undefined, source: "techfeed" };
+      return { sku: tf.sku || clean, unitPrice: price, finish: tf.abbreviated_finish_desc || tf.fancy_finish_desc || undefined, source: "techfeed", shipping: { diameterInches: positive(tf.diameter) ?? undefined, supplierSource: "wheelpros" } };
     }
   } catch {}
   // 3) Wheel-1
@@ -92,7 +111,7 @@ export async function resolveWheelPrice(sku: string): Promise<ResolvedCatalogPri
       });
       const price = positive(sell);
       if (price != null) {
-        return { sku: (w1 as any).sku || clean, unitPrice: price, finish: (w1 as any).abbreviated_finish_desc || (w1 as any).fancy_finish_desc || undefined, source: "wheel1" };
+        return { sku: (w1 as any).sku || clean, unitPrice: price, finish: (w1 as any).abbreviated_finish_desc || (w1 as any).fancy_finish_desc || undefined, source: "wheel1", shipping: { diameterInches: positive((w1 as any).diameter) ?? undefined, supplierSource: "wheel1" } };
       }
     }
   } catch {}
@@ -106,7 +125,7 @@ export async function resolveWheelPrice(sku: string): Promise<ResolvedCatalogPri
       });
       const price = positive(sell);
       if (price != null) {
-        return { sku: (wsi as any).sku || clean, unitPrice: price, finish: (wsi as any).abbreviated_finish_desc || (wsi as any).fancy_finish_desc || undefined, source: "wsi" };
+        return { sku: (wsi as any).sku || clean, unitPrice: price, finish: (wsi as any).abbreviated_finish_desc || (wsi as any).fancy_finish_desc || undefined, source: "wsi", shipping: { diameterInches: positive((wsi as any).diameter) ?? undefined, supplierSource: "wsi" } };
       }
     }
   } catch {}
@@ -128,7 +147,18 @@ export async function resolveTirePrice(sku: string, size?: string): Promise<Reso
       (t) => norm(t?.partNumber) === target || norm(t?.mfgPartNumber) === target || norm(t?.sku) === target
     );
     const price = positive(hit?.price ?? hit?.sellPrice);
-    if (hit && price != null) return { sku: hit.partNumber || hit.sku || clean, unitPrice: price, source: "tireweb" };
+    if (hit && price != null) {
+      return {
+        sku: hit.partNumber || hit.sku || clean,
+        unitPrice: price,
+        source: "tireweb",
+        shipping: {
+          sizeLabel: typeof hit.size === "string" && hit.size.trim() ? hit.size.trim() : undefined,
+          weightLbs: positive(hit.badges?.tireWeight) ?? undefined,
+          supplierSource: typeof hit.source === "string" && hit.source ? hit.source : undefined,
+        },
+      };
+    }
   } catch (e) {
     console.warn(`[checkout/reprice] tire lookup failed for ${clean}:`, e instanceof Error ? e.message : e);
   }

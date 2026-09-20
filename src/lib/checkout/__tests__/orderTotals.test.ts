@@ -27,12 +27,17 @@ import { getStateTaxRate } from "@/lib/tax/stateTaxRates";
 import { getFedExShippingRate } from "@/lib/shipping/fedexRates";
 import { validateDiscount } from "@/lib/discounts/firstOrderService";
 import { validateCampaignDiscount } from "@/lib/discounts/campaignDiscountService";
+import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
+import type { CatalogPriceResolver } from "@/lib/checkout/repriceCatalog";
+import type { HardwareSpecResolver } from "@/lib/checkout/hardwareSpec";
 import {
   computeLocalServiceFees,
   needsTotalsReview,
   resolveServerTotals,
   revisedTotalsPayload,
   shippingInputsFromLines,
+  tireOverallDiameterInches,
+  SHIPPING_FLOORS,
   totalsReviewDetail,
   totalsToQuoteLines,
 } from "@/lib/checkout/orderTotals";
@@ -46,9 +51,9 @@ const wheelLine = (sku: string, unit: number, qty: number, priceSource = "wheelp
   kind: "product", name: `Wheel ${sku}`, sku, unitPriceUsd: unit, qty, taxable: true,
   meta: { cartType: "wheel", priceSource, source: priceSource, ...extra },
 });
-const tireLine = (sku: string, unit: number, qty: number, size: string, priceSource = "tireweb"): QuoteLine => ({
+const tireLine = (sku: string, unit: number, qty: number, size: string, priceSource = "tireweb", extra: Record<string, unknown> = {}): QuoteLine => ({
   kind: "product", name: `${size} Tire`, sku, unitPriceUsd: unit, qty, taxable: true,
-  meta: { cartType: "tire", priceSource, source: priceSource, tireSize: size },
+  meta: { cartType: "tire", priceSource, source: priceSource, tireSize: size, catalog: { sizeLabel: size, supplierSource: priceSource }, ...extra },
 });
 const hardwareLine = (): QuoteLine => ({
   kind: "product", name: "Lug kit (included)", sku: "LUGKIT-M14x1.5", unitPriceUsd: 0, qty: 1, taxable: false,
@@ -72,10 +77,110 @@ describe("shippingInputsFromLines - shipping inputs come from server lines, not 
     expect(inputs.find((i) => i.sku === "W1")?.freeShipping).toBe(true);
     expect(inputs.find((i) => i.sku === "W2")?.freeShipping).toBe(false);
   });
-  it("a client weight below the size default is ignored; above is kept (never lowers the rate)", () => {
+  it("a client weight below the size floor is ignored; above is kept (never lowers the rate)", () => {
     const lt = tireLine("T1", 300, 4, "LT285/70R17");
-    expect(shippingInputsFromLines([lt], [{ sku: "T1", weightLbs: 10 }])[0].weightLbs).toBeUndefined();
+    expect(shippingInputsFromLines([lt], [{ sku: "T1", weightLbs: 10 }])[0].weightLbs).toBe(SHIPPING_FLOORS.tireOversizedWeightLbs);
     expect(shippingInputsFromLines([lt], [{ sku: "T1", weightLbs: 72 }])[0].weightLbs).toBe(72);
+    // catalog weight above the floor is used; a lower client hint cannot undercut it
+    const heavy = tireLine("T2", 300, 4, "LT285/70R17", "tireweb", { catalog: { sizeLabel: "LT285/70R17", weightLbs: 70 } });
+    expect(shippingInputsFromLines([heavy], [{ sku: "T2", weightLbs: 10 }])[0].weightLbs).toBe(70);
+  });
+});
+
+describe("shippingInputsFromLines - TAMPER: client spec/size/source never lower a package or move the origin", () => {
+  const LT = "LT285/70R17";
+  it("tire size comes from the catalog; a passenger-size client label on an LT tire still ships as LT/oversized", () => {
+    // client copied size "205/55R16" into the cart item (meta.tireSize) and hinted a light small tire
+    const line = tireLine("T1", 300, 4, LT, "tireweb", { tireSize: "205/55R16" });
+    const [s] = shippingInputsFromLines([line], [{ sku: "T1", type: "tire", weightLbs: 10, diameter: 15 }]);
+    expect(s.sizeLabel).toBe(LT);
+    expect(s.weightLbs).toBe(SHIPPING_FLOORS.tireOversizedWeightLbs);
+    expect(s.diameterInches).toBe(tireOverallDiameterInches(LT));
+    expect(s.diameterInches).toBeCloseTo(32.7, 1);
+  });
+  it("tire whose size the catalog does not know ships at the heavy/unknown floor regardless of the client label", () => {
+    const line = tireLine("T1", 120, 4, "205/55R16", "tireweb", { catalog: { supplierSource: "tireweb:atd" } });
+    const [s] = shippingInputsFromLines([line], [{ sku: "T1", weightLbs: 12, diameter: 20 }]);
+    expect(s.sizeLabel).toBe("205/55R16"); // record label only
+    expect(s.weightLbs).toBe(SHIPPING_FLOORS.tireUnknownSizeWeightLbs);
+    expect(s.diameterInches).toBe(SHIPPING_FLOORS.tireDiameterInches);
+  });
+  it("wheel diameter comes from the catalog; client spec/hint can only raise it", () => {
+    const w = wheelLine("W1", 300, 4, "wheelpros", { catalog: { diameterInches: 22, supplierSource: "wheelpros" }, spec: { diameter: "15" } });
+    expect(shippingInputsFromLines([w], [{ sku: "W1", diameter: 15 }])[0].diameterInches).toBe(22);
+    expect(shippingInputsFromLines([w], [{ sku: "W1", diameter: "24" }])[0].diameterInches).toBe(24);
+    expect(shippingInputsFromLines([w])[0].diameterInches).toBe(22);
+    // no catalog diameter -> floor, and a small client hint cannot go under it
+    const bare = wheelLine("W2", 300, 4, "wheelpros", { spec: { diameter: "15" } });
+    expect(shippingInputsFromLines([bare], [{ sku: "W2", diameter: 15 }])[0].diameterInches).toBe(SHIPPING_FLOORS.wheelDiameterInches);
+    expect(shippingInputsFromLines([bare])[0].weightLbs).toBe(SHIPPING_FLOORS.wheelWeightLbs);
+  });
+  it("ship origin/source is the catalog supplier tag; a client 'usautoforce' claim on a WheelPros wheel is ignored", () => {
+    const w = wheelLine("W1", 300, 4, "wheelpros", { source: "usautoforce", catalog: { diameterInches: 20, supplierSource: "wheelpros" } });
+    expect(shippingInputsFromLines([w], [{ sku: "W1", source: "usautoforce" }])[0].source).toBe("wheelpros");
+    const t = tireLine("T1", 200, 4, "245/45R18", "tireweb", { source: "usautoforce", catalog: { sizeLabel: "245/45R18", supplierSource: "tireweb:atd" } });
+    expect(shippingInputsFromLines([t])[0].source).toBe("tireweb:atd");
+    // no catalog tag -> the server price source, never the client claim
+    const noTag = wheelLine("W3", 300, 4, "wheelpros", { source: "usautoforce", catalog: {} });
+    expect(shippingInputsFromLines([noTag])[0].source).toBe("wheelpros");
+  });
+  it("landed-cost (free) shipping is still only a catalog price-source fact", () => {
+    const w = wheelLine("W1", 300, 4, "wheelpros", { source: "wheel1", catalog: { supplierSource: "wheel1" } });
+    expect(shippingInputsFromLines([w])[0].freeShipping).toBe(false);
+  });
+  it("tireOverallDiameterInches parses metric, LT, ZR and flotation sizes; garbage -> null", () => {
+    expect(tireOverallDiameterInches("285/70R17")).toBeCloseTo(32.7, 1);
+    expect(tireOverallDiameterInches("LT285/70R17")).toBeCloseTo(32.7, 1);
+    expect(tireOverallDiameterInches("P255/40ZR19")).toBeCloseTo(27.0, 1);
+    expect(tireOverallDiameterInches("35x12.50R17")).toBe(35);
+    expect(tireOverallDiameterInches("11R22.5")).toBeNull();
+    expect(tireOverallDiameterInches("")).toBeNull();
+    expect(tireOverallDiameterInches(undefined)).toBeNull();
+  });
+  it("buildCheckoutLines writes meta.catalog from the RESOLVER; client spec/size/source stay record-only claims", async () => {
+    const resolver: CatalogPriceResolver = async (sku, ctx) => {
+      if (ctx.type === "tire") return { sku, unitPrice: 320, source: "tireweb", shipping: { sizeLabel: LT, weightLbs: 58, supplierSource: "tireweb:atd" } };
+      return { sku, unitPrice: 300, source: "wheelpros", shipping: { diameterInches: 22, supplierSource: "wheelpros" } };
+    };
+    const hardware: HardwareSpecResolver = async () => ({ vehicleThreadSize: null, vehicleSeatType: null, vehicleHubMm: null, wheelBoreMm: null, sources: {} } as any);
+    const r = await buildCheckoutLines(
+      [
+        { id: "t1", type: "tire", sku: "LT1", size: "205/55R16", quantity: 4, unitPrice: 320, brand: "X", source: "usautoforce", spec: { diameter: 15 } } as any,
+        { id: "w1", type: "wheel", sku: "W1", rearSku: "W2", quantity: 4, unitPrice: 300, source: "wheel1", spec: { diameter: "15" }, staggered: true } as any,
+      ],
+      resolver,
+      hardware,
+    );
+    expect(r.ok).toBe(true);
+    if (!r.ok) return;
+    const tire = r.lines.find((l) => l.sku === "LT1")!;
+    expect(tire.meta?.catalog).toEqual({ sizeLabel: LT, weightLbs: 58, supplierSource: "tireweb:atd" });
+    expect(tire.meta?.tireSize).toBe("205/55R16"); // client claim, record only
+    const front = r.lines.find((l) => l.sku === "W1")!;
+    const rear = r.lines.find((l) => l.sku === "W2")!;
+    expect(front.meta?.catalog).toEqual({ diameterInches: 22, supplierSource: "wheelpros" });
+    expect(rear.meta?.catalog).toEqual({ diameterInches: 22, supplierSource: "wheelpros" });
+    expect(front.meta?.priceSource).toBe("wheelpros");
+    // and the rate engine reads only the catalog block
+    const inputs = shippingInputsFromLines(r.lines, [{ sku: "LT1", weightLbs: 10, diameter: 15 }, { sku: "W1", diameter: 15 }]);
+    const t = inputs.find((i) => i.sku === "LT1")!;
+    // catalog says 58 lb but the LT floor is 65: the floor wins whenever it is higher (conservative), never lower
+    expect(t).toMatchObject({ sizeLabel: LT, weightLbs: SHIPPING_FLOORS.tireOversizedWeightLbs, source: "tireweb:atd", freeShipping: false });
+    expect(t.diameterInches).toBeCloseTo(32.7, 1);
+    expect(inputs.find((i) => i.sku === "W1")).toMatchObject({ diameterInches: 22, weightLbs: 28, source: "wheelpros", freeShipping: false });
+    expect(inputs.find((i) => i.sku === "W2")).toMatchObject({ diameterInches: 22, source: "wheelpros" });
+  });
+
+  it("END TO END: tampered light/small client attributes on an LT tire still fail closed without a live FedEx rate", async () => {
+    fedex.mockResolvedValue({ success: false, groundRate: null, error: "no rate" });
+    const line = tireLine("LT1", 320, 4, LT, "tireweb", { tireSize: "205/55R16", source: "usautoforce" });
+    const r = await resolveServerTotals({
+      db, productLines: [line], isLocal: false, fulfillment: ship("CO", "80202"),
+      cartHints: [{ sku: "LT1", type: "tire", weightLbs: 10, diameter: 15, source: "usautoforce" }],
+      claim: { shipping: { amount: 0, isFree: true } },
+    });
+    expect(r.ok).toBe(false);
+    expect(!r.ok && r.error).toBe("shipping_unavailable");
   });
 });
 
