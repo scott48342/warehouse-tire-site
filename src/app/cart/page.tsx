@@ -4,6 +4,7 @@ import Link from "next/link";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { normalizeTireSize } from "@/lib/productFormat";
 import { buildTiresHandoff, isStaggeredWheelLine, rearAxleSpec, REAR_SIZE_UNCONFIRMED_COPY } from "@/lib/cart/staggeredWheelLine";
+import { StaggeredTireLineDetails, isStaggeredTireLine, STAGGERED_TIRE_QTY_COPY } from "@/components/cart/StaggeredTireLineDetails";
 import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
@@ -270,6 +271,9 @@ function TireCartItem({
 
   // Build load/speed display (e.g., "102H" or "102 H")
   const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
+  // 2026-09-20 (Codex CUA): a staggered tire line is exactly 2 front + 2 rear - fixed quantity, both
+  // sizes/SKUs/prices shown; never "$<blended> each" or a 1/2/4/5/6/8 picker on a pair.
+  const staggered = isStaggeredTireLine(item);
 
   return (
     <div className="flex gap-3 sm:gap-4 rounded-2xl border border-neutral-200 bg-white p-4 sm:p-5">
@@ -285,21 +289,21 @@ function TireCartItem({
         <div className="text-sm font-semibold text-neutral-500">{item.brand}</div>
         <h3 className="font-extrabold text-lg text-neutral-900 break-words">{item.model}</h3>
 
-        {/* Tire size with load/speed rating */}
-        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
-          <span className="font-semibold text-neutral-900">{normalizeTireSize(item.size)}</span>
-          {loadSpeedDisplay ? (
-            <span className="text-neutral-600">• {loadSpeedDisplay}</span>
-          ) : null}
-        </div>
-
-        {/* Staggered rear size */}
-        {item.staggered && item.rearSize ? (
-          <div className="text-sm text-neutral-500">Rear: {normalizeTireSize(item.rearSize)}</div>
-        ) : null}
-
-        {/* SKU / Part Number */}
-        <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+        {staggered ? (
+          <div className="mt-1"><StaggeredTireLineDetails tire={item} /></div>
+        ) : (
+          <>
+            {/* Tire size with load/speed rating */}
+            <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
+              <span className="font-semibold text-neutral-900">{normalizeTireSize(item.size)}</span>
+              {loadSpeedDisplay ? (
+                <span className="text-neutral-600">• {loadSpeedDisplay}</span>
+              ) : null}
+            </div>
+            {/* SKU / Part Number */}
+            <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+          </>
+        )}
 
         {/* Audit 2026-09-18: the cart claimed "Fits <vehicle>" for any item carrying a vehicle. Only a
 
@@ -331,18 +335,26 @@ function TireCartItem({
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-y-3">
           <div className="flex items-center gap-3">
-            <label className="text-sm font-medium text-neutral-600">Qty:</label>
-            <select
-              value={item.quantity}
-              onChange={(e) => onUpdateQty(Number(e.target.value))}
-              className="h-9 rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold"
-            >
-              {[1, 2, 4, 5, 6, 8].map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
+            {staggered ? (
+              <span className="h-9 inline-flex items-center rounded-lg border border-neutral-200 bg-neutral-50 px-3 text-sm font-semibold" data-testid="cart-tire-fixed-qty" title={STAGGERED_TIRE_QTY_COPY}>
+                Set of 4 · 2 front + 2 rear
+              </span>
+            ) : (
+              <>
+                <label className="text-sm font-medium text-neutral-600">Qty:</label>
+                <select
+                  value={item.quantity}
+                  onChange={(e) => onUpdateQty(Number(e.target.value))}
+                  className="h-9 rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                >
+                  {[1, 2, 4, 5, 6, 8].map((n) => (
+                    <option key={n} value={n}>
+                      {n}
+                    </option>
+                  ))}
+                </select>
+              </>
+            )}
             <button onClick={onRemove} className="text-sm text-red-600 hover:text-red-700 font-medium">
               Remove
             </button>
@@ -350,7 +362,7 @@ function TireCartItem({
 
           <div className="text-right ml-auto">
             <div className="text-xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
-            <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
+            {staggered ? null : <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>}
           </div>
         </div>
       </div>
@@ -559,20 +571,18 @@ export default function CartPage() {
                 <div className="mt-1 text-sm text-neutral-300">
                   {wheels[0]?.diameter ? `${wheels[0].diameter}" ` : ""}
                   {wheels[0]?.brand} Wheels
-                  {items.find(i => i.type === "tire") ? (
-                    <>
-                      {" • "}
-                      {(items.find(i => i.type === "tire") as CartTireItem)?.size} Tires
-                    </>
-                  ) : null}
+                  {(() => {
+                    // 2026-09-20: a staggered tire set has two sizes - never print only the front
+                    const t = items.find(i => i.type === "tire") as CartTireItem | undefined;
+                    if (!t) return null;
+                    return <>{" • "}{isStaggeredTireLine(t) ? `${t.size} / ${t.rearSize}` : t.size} Tires</>;
+                  })()}
                 </div>
               </div>
               <div className="flex items-center gap-4 text-xs">
-                <span className="flex items-center gap-1.5 text-green-400">
-                  <span>✓</span> Fitment support
-                </span>
-                <span className="flex items-center gap-1.5 text-green-400">
-                  <span>✓</span> Ready for Install
+                {/* 2026-09-20 (Codex): the install-readiness badge was an unconditional claim on any wheel+tire cart */}
+                <span className="flex items-center gap-1.5 text-neutral-300" data-testid="cart-package-neutral">
+                  Wheels &amp; tires in one order · fit not yet confirmed
                 </span>
               </div>
             </div>

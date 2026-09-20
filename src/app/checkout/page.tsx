@@ -10,6 +10,7 @@ import {
 import { useRouter } from "next/navigation";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { rearAxleSpec, REAR_SIZE_UNCONFIRMED_COPY } from "@/lib/cart/staggeredWheelLine";
+import { StaggeredTireLineDetails, isStaggeredTireLine } from "@/components/cart/StaggeredTireLineDetails";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
@@ -1091,7 +1092,11 @@ export default function CheckoutPage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-semibold text-neutral-900 truncate">{t.brand} {t.model}</p>
-                        <p className="text-xs text-neutral-500">{t.size} • Qty: {t.quantity}</p>
+                        {isStaggeredTireLine(t) ? (
+                          <StaggeredTireLineDetails tire={t} compact />
+                        ) : (
+                          <p className="text-xs text-neutral-500">{t.size} • Qty: {t.quantity}</p>
+                        )}
                       </div>
                       <div className="text-sm font-semibold">${cartLineTotal(t).toFixed(2)}</div>
                     </div>
@@ -1579,10 +1584,16 @@ export default function CheckoutPage() {
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-neutral-500">{tire.brand}</p>
                       <p className="text-sm font-semibold text-neutral-900 truncate">{tire.model}</p>
-                      <p className="text-xs text-neutral-500">{tire.size} • Qty: {tire.quantity}</p>
-                      {/* Per-tire price visibility for local checkout */}
-                      {isLocal && tire.quantity > 1 && (
-                        <p className="text-[10px] text-neutral-400">${tire.unitPrice.toFixed(2)} per tire × {tire.quantity}</p>
+                      {isStaggeredTireLine(tire) ? (
+                        <StaggeredTireLineDetails tire={tire} compact />
+                      ) : (
+                        <>
+                          <p className="text-xs text-neutral-500">{tire.size} • Qty: {tire.quantity}</p>
+                          {/* Per-tire price visibility for local checkout */}
+                          {isLocal && tire.quantity > 1 && (
+                            <p className="text-[10px] text-neutral-400">${tire.unitPrice.toFixed(2)} per tire × {tire.quantity}</p>
+                          )}
+                        </>
                       )}
                     </div>
                     <div className="text-sm font-semibold text-neutral-900">
@@ -1745,10 +1756,13 @@ export default function CheckoutPage() {
                 
                 {/* Value Framing */}
                 <div className="mt-3 pt-3 border-t border-neutral-100 space-y-1">
-                  {/* Release review 2026-09-19: every claim below is derived from the cart, never static. */}
+                  {/* Release review 2026-09-19: every claim below is derived from the cart, never static.
+                      2026-09-20 (Codex CUA): the complete-package / install-readiness line was shown for
+                      8 wheels + 4 tires with an unconfirmed rear; wheel+tire presence proves neither a
+                      complete package nor installability, so the copy states only what the cart contains. */}
                   {hasWheels() && hasTires() ? (
-                    <p className="text-xs text-green-600 font-medium">
-                      ✔ Complete wheel & tire package — ready to install
+                    <p className="text-xs text-neutral-600 font-medium" data-testid="checkout-wheels-and-tires">
+                      Wheels & tires in one order · set contents confirmed before shipping
                     </p>
                   ) : null}
                   {vehicle && allFitVerified ? (

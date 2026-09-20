@@ -3979,7 +3979,7 @@ export default async function TiresPage({
                         
                         {/* Audit 2026-09-18: staggered pairs are not per-tire certified here - neutral, not a fit claim */}
                         <div className="mb-2 text-xs text-neutral-500">
-                          Sized for {year} {make} {model} · fit not yet confirmed
+                          Front and rear sizes as selected · fit not yet confirmed
                         </div>
                         
                         {/* Stock & availability */}
@@ -4756,7 +4756,7 @@ function TireCard({
         <div className={`relative z-10 mt-3 text-[11px] font-medium ${(t as { fitBadgeAllowed?: boolean }).fitBadgeAllowed === true ? "text-green-700" : "text-neutral-500"}`}>
           {(t as { fitBadgeAllowed?: boolean }).fitBadgeAllowed === true
             ? <><span className="text-green-600">✓</span> Fits {year} {make} {model}</>
-            : <>Sized for {year} {make} {model} · fit not yet confirmed</>}
+            : <>Fit not yet confirmed</>}
           {(() => {
             const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
             const tireRimDia = (() => {

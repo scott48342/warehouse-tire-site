@@ -4,6 +4,7 @@ import { useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { useCart, cartLineTotal, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { buildTiresHandoff, isStaggeredWheelLine, rearAxleSpec } from "@/lib/cart/staggeredWheelLine";
+import { StaggeredTireLineDetails, isStaggeredTireLine } from "./cart/StaggeredTireLineDetails";
 import { AccessoryRecommendations } from "./AccessoryRecommendations";
 import {
   loadLiftedContext,
@@ -190,6 +191,7 @@ function TireItemCard({ item }: { item: CartTireItem }) {
   
   // Build load/speed display (e.g., "102H")
   const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
+  const staggered = isStaggeredTireLine(item);
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -211,28 +213,32 @@ function TireItemCard({ item }: { item: CartTireItem }) {
         <div className="text-xs font-semibold text-neutral-500">{item.brand}</div>
         <div className="font-extrabold text-neutral-900 truncate">{item.model}</div>
         
-        {/* Tire size with load/speed rating */}
-        <div className="text-sm text-neutral-600">
-          {item.size}
-          {loadSpeedDisplay ? ` ${loadSpeedDisplay}` : null}
-        </div>
-        
-        {/* SKU */}
-        <div className="text-[10px] text-neutral-400 font-mono">{item.sku}</div>
-
-        {item.staggered && item.rearSize ? (
-          <div className="mt-1 text-xs text-amber-700 font-medium">
-            Staggered: Front {item.size} / Rear {item.rearSize}
-          </div>
-        ) : null}
+        {staggered ? (
+          /* 2026-09-20: shared 2 front + 2 rear display - both sizes, both SKUs, both prices */
+          <div className="mt-1"><StaggeredTireLineDetails tire={item} compact /></div>
+        ) : (
+          <>
+            {/* Tire size with load/speed rating */}
+            <div className="text-sm text-neutral-600">
+              {item.size}
+              {loadSpeedDisplay ? ` ${loadSpeedDisplay}` : null}
+            </div>
+            {/* SKU */}
+            <div className="text-[10px] text-neutral-400 font-mono">{item.sku}</div>
+          </>
+        )}
 
         <div className="mt-2 text-sm">
           <span className="font-extrabold text-neutral-900">
             ${total.toFixed(2)}
           </span>
-          <span className="text-neutral-500 ml-1">
-            ({quantity} × ${unitPrice.toFixed(2)})
-          </span>
+          {staggered ? (
+            <span className="text-neutral-500 ml-1">(set of 4: 2 front + 2 rear)</span>
+          ) : (
+            <span className="text-neutral-500 ml-1">
+              ({quantity} × ${unitPrice.toFixed(2)})
+            </span>
+          )}
         </div>
       </div>
     </div>

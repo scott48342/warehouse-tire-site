@@ -19,7 +19,8 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 // Image import removed - using native img for tireweb.tirelibrary.com compatibility
-import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from '@/lib/cart/CartContext';
+import { useCart, cartLineTotal, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from '@/lib/cart/CartContext';
+import { StaggeredTireLineDetails, isStaggeredTireLine } from '@/components/cart/StaggeredTireLineDetails';
 import { useShopContext, useIsLocalMode } from '@/contexts/ShopContextProvider';
 import { STORES, type LocalStore } from '@/lib/shopContext';
 import { StripePaymentElement } from '@/components/StripePaymentElement';
@@ -104,6 +105,9 @@ function MobileItemCard({
   
   const sku = item.sku;
   const qty = item.quantity;
+  // 2026-09-20: staggered tire line = exactly 2 front + 2 rear; fixed qty, both axles, exact 2+2 total
+  const staggeredTire = type === 'tire' && isStaggeredTireLine(item as CartTireItem);
+  const lineTotal = cartLineTotal(item as CartWheelItem | CartTireItem | CartAccessoryItem);
   
   return (
     <div className="bg-neutral-50 rounded-xl p-3">
@@ -126,34 +130,47 @@ function MobileItemCard({
         {/* Info */}
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-neutral-900 truncate">{displayName}</p>
-          {'size' in item && item.size && (
-            <p className="text-xs text-neutral-500">{item.size}</p>
+          {staggeredTire ? (
+            <StaggeredTireLineDetails tire={item as CartTireItem} compact />
+          ) : (
+            <>
+              {'size' in item && item.size && (
+                <p className="text-xs text-neutral-500">{item.size}</p>
+              )}
+              <p className="text-sm font-bold text-neutral-900 mt-1">
+                ${(item.unitPrice || 0).toFixed(2)} each
+              </p>
+            </>
           )}
-          <p className="text-sm font-bold text-neutral-900 mt-1">
-            ${(item.unitPrice || 0).toFixed(2)} each
-          </p>
         </div>
       </div>
       
       {/* Qty controls and total */}
       <div className="flex items-center justify-between mt-3 pt-3 border-t border-neutral-200">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => qty > 1 ? onUpdateQty(sku, qty - 1) : onRemove(sku)}
-            className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100"
-          >
-            {qty === 1 ? '🗑️' : '−'}
-          </button>
-          <span className="w-8 text-center font-bold text-base">{qty}</span>
-          <button
-            onClick={() => onUpdateQty(sku, qty + 1)}
-            className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100"
-          >
-            +
-          </button>
-        </div>
+        {staggeredTire ? (
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold text-neutral-700" data-testid="local-tire-fixed-qty">Set of 4 · 2 front + 2 rear</span>
+            <button onClick={() => onRemove(sku)} className="text-sm text-red-600 font-medium">Remove</button>
+          </div>
+        ) : (
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => qty > 1 ? onUpdateQty(sku, qty - 1) : onRemove(sku)}
+              className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100"
+            >
+              {qty === 1 ? '🗑️' : '−'}
+            </button>
+            <span className="w-8 text-center font-bold text-base">{qty}</span>
+            <button
+              onClick={() => onUpdateQty(sku, qty + 1)}
+              className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100"
+            >
+              +
+            </button>
+          </div>
+        )}
         <span className="text-base font-bold text-neutral-900">
-          ${((item.unitPrice || 0) * qty).toFixed(2)}
+          ${lineTotal.toFixed(2)}
         </span>
       </div>
     </div>

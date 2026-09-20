@@ -10,6 +10,7 @@ import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 import { SmartTireUpsell } from "@/components/SmartTireUpsell";
+import { StaggeredTireLineDetails, isStaggeredTireLine } from "@/components/cart/StaggeredTireLineDetails";
 
 /**
  * Review Package Page
@@ -174,27 +175,29 @@ function TireItem({ item }: { item: CartTireItem }) {
         <div className="text-sm font-semibold text-neutral-500">{item.brand}</div>
         <h3 className="font-extrabold text-neutral-900">{item.model}</h3>
         
-        {/* Tire size with load/speed rating */}
-        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
-          <span className="font-medium text-neutral-800">{normalizeTireSize(item.size)}</span>
-          {loadSpeedDisplay ? (
-            <span className="text-neutral-600">• {loadSpeedDisplay}</span>
-          ) : null}
-        </div>
-        
-        {item.staggered && item.rearSize && (
-          <div className="text-sm text-neutral-500">Rear: {normalizeTireSize(item.rearSize)}</div>
+        {isStaggeredTireLine(item) ? (
+          /* 2026-09-20: shared 2 front + 2 rear display (both sizes, SKUs, prices) */
+          <div className="mt-1"><StaggeredTireLineDetails tire={item} compact /></div>
+        ) : (
+          <>
+            {/* Tire size with load/speed rating */}
+            <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
+              <span className="font-medium text-neutral-800">{normalizeTireSize(item.size)}</span>
+              {loadSpeedDisplay ? (
+                <span className="text-neutral-600">• {loadSpeedDisplay}</span>
+              ) : null}
+            </div>
+            {/* SKU / Part Number */}
+            <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+          </>
         )}
-        
-        {/* SKU / Part Number */}
-        <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
       </div>
 
       {/* Price */}
       <div className="text-right flex-shrink-0">
-        <div className="text-sm text-neutral-500">Qty: {item.quantity}</div>
+        <div className="text-sm text-neutral-500">{isStaggeredTireLine(item) ? "Set of 4 (2 + 2)" : `Qty: ${item.quantity}`}</div>
         <div className="font-extrabold text-neutral-900">${lineTotal.toFixed(2)}</div>
-        {item.quantity > 1 && (
+        {item.quantity > 1 && !isStaggeredTireLine(item) && (
           <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
         )}
       </div>
