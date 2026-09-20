@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { paymentIntentInputKey } from "@/lib/checkout/paymentIntentInputs";
 import {
-  initialPaymentIntentSession, applyInputKey, liveClientSecret, canCreateIntent, beginIntentRequest,
-  settleIntentRequest, runIntentRequest, withPendingRevision, acceptPendingRevision, type PaymentIntentSession,
+  initialPaymentIntentSession, applyInputKey, liveClientSecret, canCreateIntent, beginIntentRequest, retryAfterError, settleAgainstLatestKey,
+  runIntentRequest, withPendingRevision, acceptPendingRevision, type PaymentIntentSession,
 } from "@/lib/checkout/paymentIntentSession";
 import { useRouter } from "next/navigation";
 import { cartLineTotal, useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
@@ -356,10 +356,13 @@ export default function CheckoutPage() {
   };
   // PaymentIntent lifecycle (stale-intent invalidation, Codex review 2026-09-20). One pure
   // state machine (src/lib/checkout/paymentIntentSession.ts) owns the live intent, the in-flight
-  // request generation, the abandoned-intent id and the pending/accepted totals revision.
+  // request generation and the pending/accepted totals revision.
   const [piSession, setPiSession] = useState<PaymentIntentSession<RevisedTotals>>(() => initialPaymentIntentSession<RevisedTotals>());
   const piSessionRef = useRef(piSession);
   piSessionRef.current = piSession;
+  // Fingerprint of the LATEST render (assigned below, once computed). Replies are settled against
+  // this, not against the committed session, which only catches up in an effect.
+  const latestInputKeyRef = useRef<string | null>(null);
   const pendingRevision = piSession.pendingRevision;
   const acceptedServerTotal = piSession.acceptedTotal;
   const round2 = (n: number) => Math.round(n * 100) / 100;
@@ -801,6 +804,7 @@ export default function CheckoutPage() {
   }), [items, shipping.address, shipping.address2, shipping.city, shipping.state, shipping.zip, shipping.email, isLocal, selectedStore, activeDiscount?.code, vehicle, totalWithTaxAndShipping]);
   // Derived from the CURRENT fingerprint: the Payment Element unmounts in the same render the
   // inputs change, before the session effect below has even run.
+  latestInputKeyRef.current = paymentInputKey;
   const clientSecret = liveClientSecret(piSession, paymentInputKey);
   useEffect(() => {
     const r = applyInputKey(piSessionRef.current, paymentInputKey);
@@ -867,9 +871,16 @@ export default function CheckoutPage() {
           expectedTotal: tag.acceptedTotal ?? round2(totalWithTaxAndShipping),
     });
 
-    // Generation gate: a reply for inputs the shopper has since changed is ignored entirely
-    // (success, revision, error and completion). The fresh generation has its own request.
-    const settled = settleIntentRequest(piSessionRef.current, tag, outcome.kind === "revision" ? { ...outcome, revised: { ...outcome.revised, retry: "embedded" as const } } : outcome);
+    // Generation + current-key gate: a reply for inputs the shopper has since changed is ignored
+    // entirely (success, revision, error and completion). Settled against the LATEST rendered key:
+    // if the inputs changed in a render whose effect has not run yet, the session is advanced here
+    // first (idempotent with that effect) so this reply can never mutate against the old key.
+    const settled = settleAgainstLatestKey(
+      piSessionRef.current,
+      latestInputKeyRef.current ?? tag.inputKey,
+      tag,
+      outcome.kind === "revision" ? { ...outcome, revised: { ...outcome.revised, retry: "embedded" as const } } : outcome,
+    );
     if (settled.stale) {
       piSessionRef.current = settled.session;
       setPiSession(settled.session);
@@ -1423,6 +1434,15 @@ export default function CheckoutPage() {
                   {stripeError && (
                     <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
                       <p>{stripeError}</p>
+                      {piSession.error && !clientSecret && (
+                        <button
+                          type="button"
+                          onClick={() => { setStripeError(null); setPiSession((s) => retryAfterError(s)); }}
+                          className="mt-2 rounded-md border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-800 hover:bg-red-100"
+                        >
+                          Try again
+                        </button>
+                      )}
                     </div>
                   )}
 

@@ -6,8 +6,8 @@
  */
 import {
   initialPaymentIntentSession, applyInputKey, liveClientSecret, canCreateIntent, beginIntentRequest,
-  settleIntentRequest, classifyIntentResponse, runIntentRequest, withPendingRevision, acceptPendingRevision,
-  type PaymentIntentSession,
+  settleIntentRequest, settleAgainstLatestKey, classifyIntentResponse, runIntentRequest, withPendingRevision, acceptPendingRevision,
+  retryAfterError, type PaymentIntentSession,
 } from "@/lib/checkout/paymentIntentSession";
 import { paymentIntentInputKey } from "@/lib/checkout/paymentIntentInputs";
 
@@ -152,8 +152,87 @@ describe("in-flight request + input change: stale replies are ignored (success, 
   });
 });
 
+describe("render-to-effect window: reply settles against the LATEST rendered key, not the committed session", () => {
+  // In React the committed session only learns a changed key in an effect. A reply arriving in
+  // between sees a session whose generation still matches its tag; without a key check it would
+  // install/mutate against inputs the shopper no longer sees.
+  it("stale SUCCESS in the window is ignored, and the session is advanced exactly as the effect would", async () => {
+    let s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
+    const b = beginIntentRequest(s);
+    s = b.session; // committed session: still KEY_A, generation matches the tag
+    expect(settleIntentRequest(s, b.tag, { kind: "intent", clientSecret: "sec", paymentIntentId: "pi_x", quoteId: "q" }).stale).toBe(false); // the naive path WOULD accept it
+    const r = settleAgainstLatestKey(s, KEY_B, b.tag, { kind: "intent", clientSecret: "sec", paymentIntentId: "pi_x", quoteId: "q" });
+    expect(r).toMatchObject({ stale: true, synced: true });
+    expect(r.session).toMatchObject({ currentKey: KEY_B, generation: s.generation + 1, clientSecret: null, paymentIntentId: null, quoteId: null, inFlight: null, error: null });
+    expect(liveClientSecret(r.session, KEY_B)).toBeNull();
+    // the effect that follows finds nothing left to do (idempotent)
+    expect(applyInputKey(r.session, KEY_B).changed).toBe(false);
+  });
+
+  it("stale REVISION and stale ERROR in the window mutate nothing (no pending revision, no error banner)", () => {
+    let s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
+    const b = beginIntentRequest(s);
+    s = b.session;
+    const rev = settleAgainstLatestKey(s, KEY_B, b.tag, { kind: "revision", revised: { total: 999, retry: "embedded" } });
+    expect(rev).toMatchObject({ stale: true, synced: true });
+    expect(rev.session.pendingRevision).toBeNull();
+    const err = settleAgainstLatestKey(s, KEY_B, b.tag, { kind: "error", message: "boom", code: "x" });
+    expect(err).toMatchObject({ stale: true, synced: true });
+    expect(err.session.error).toBeNull();
+  });
+
+  it("same latest key: settles normally and reports synced=false", () => {
+    const s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
+    const b = beginIntentRequest(s);
+    const r = settleAgainstLatestKey(b.session, KEY_A, b.tag, { kind: "intent", clientSecret: "sec", paymentIntentId: "pi_x", quoteId: "q" });
+    expect(r).toMatchObject({ stale: false, synced: false });
+    expect(liveClientSecret(r.session, KEY_A)).toBe("sec");
+  });
+
+  it("settleIntentRequest itself also refuses a tag whose inputKey is not the session's current key", () => {
+    const s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
+    const b = beginIntentRequest(s);
+    const forged = { ...b.tag, inputKey: KEY_B };
+    expect(settleIntentRequest(b.session, forged, { kind: "intent", clientSecret: "sec", paymentIntentId: "pi_x", quoteId: "q" }).stale).toBe(true);
+  });
+});
+
+describe("terminal errors do not auto-retry", () => {
+  const fail = { kind: "error" as const, message: "Stripe unavailable", code: "payment_intent_failed", httpStatus: 503 };
+  it("after an error canCreateIntent is false, so the settle-timer effect cannot loop", () => {
+    let s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
+    const b = beginIntentRequest(s);
+    s = settleIntentRequest(b.session, b.tag, fail).session;
+    expect(s).toMatchObject({ error: "Stripe unavailable", inFlight: null, clientSecret: null });
+    expect(canCreateIntent(s, true)).toBe(false);
+    // simulate the effect re-evaluating any number of times: still no new request
+    for (let i = 0; i < 5; i++) expect(canCreateIntent(s, true)).toBe(false);
+  });
+  it("an explicit retry clears the error and allows exactly one new request; identity when there is no error", () => {
+    let s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
+    const b = beginIntentRequest(s);
+    s = settleIntentRequest(b.session, b.tag, fail).session;
+    const retried = retryAfterError(s);
+    expect(retried.error).toBeNull();
+    expect(canCreateIntent(retried, true)).toBe(true);
+    const b2 = beginIntentRequest(retried);
+    expect(canCreateIntent(b2.session, true)).toBe(false); // in flight
+    s = settleIntentRequest(b2.session, b2.tag, fail).session;
+    expect(canCreateIntent(s, true)).toBe(false); // failed again: parked again
+    expect(retryAfterError(retried)).toBe(retried);
+  });
+  it("an input change also clears the error (new fingerprint, fresh attempt)", () => {
+    let s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
+    const b = beginIntentRequest(s);
+    s = settleIntentRequest(b.session, b.tag, fail).session;
+    const changed = applyInputKey(s, KEY_B).session;
+    expect(changed.error).toBeNull();
+    expect(canCreateIntent(changed, true)).toBe(true);
+  });
+});
+
 describe("canCreateIntent gating", () => {
-  it("requires complete inputs, an applied fingerprint, no live intent, nothing in flight, no revision awaiting review", () => {
+  it("requires complete inputs, an applied fingerprint, no live intent, nothing in flight, no revision awaiting review, no terminal error", () => {
     const s0 = initialPaymentIntentSession<Rev>();
     expect(canCreateIntent(s0, true)).toBe(false); // no fingerprint yet
     const armed = applyInputKey(s0, KEY_A).session;
@@ -164,6 +243,7 @@ describe("canCreateIntent gating", () => {
     const parked = withPendingRevision(armed, { total: 1, retry: "embedded" });
     expect(canCreateIntent(parked, true)).toBe(false);
     expect(canCreateIntent(acceptPendingRevision(parked), true)).toBe(true);
+    expect(canCreateIntent({ ...armed, error: "x" }, true)).toBe(false);
   });
 });
 

@@ -74,8 +74,7 @@ export function applyInputKey<R extends RevisionLike>(s: PaymentIntentSession<R>
       paymentIntentId: null,
       quoteId: null,
       inFlight: null,
-      // Keep an earlier abandoned id if it has not been sent for cancellation yet.
-        pendingRevision: null,
+      pendingRevision: null,
       acceptedTotal: null,
       error: null,
     },
@@ -88,9 +87,19 @@ export function liveClientSecret<R extends RevisionLike>(s: PaymentIntentSession
   return s.clientSecret && s.intentKey === currentKey ? s.clientSecret : null;
 }
 
-/** A create request may start: shopper inputs complete, no live intent, nothing in flight, no revision awaiting review. */
+/**
+ * A create request may start: shopper inputs complete, no live intent, nothing in flight, no
+ * revision awaiting review, and NO terminal error. An error is terminal until the shopper either
+ * changes an input (applyInputKey clears it) or explicitly retries (retryAfterError) - otherwise a
+ * failing server would be re-requested forever from the settle-timer effect.
+ */
 export function canCreateIntent<R extends RevisionLike>(s: PaymentIntentSession<R>, inputsComplete: boolean): boolean {
-  return inputsComplete && s.currentKey !== null && !s.clientSecret && s.inFlight === null && s.pendingRevision === null;
+  return inputsComplete && s.currentKey !== null && !s.clientSecret && s.inFlight === null && s.pendingRevision === null && s.error === null;
+}
+
+/** Explicit shopper retry after a terminal error. Identity when there is no error. */
+export function retryAfterError<R extends RevisionLike>(s: PaymentIntentSession<R>): PaymentIntentSession<R> {
+  return s.error === null ? s : { ...s, error: null };
 }
 
 export type IntentRequestTag = {
@@ -142,7 +151,7 @@ export type SettleResult<R extends RevisionLike> = { session: PaymentIntentSessi
  * never installed, so an abandoned intent simply expires unconfirmed on Stripe's side.
  */
 export function settleIntentRequest<R extends RevisionLike>(s: PaymentIntentSession<R>, tag: IntentRequestTag, outcome: IntentRequestOutcome<R>): SettleResult<R> {
-  if (tag.generation !== s.generation) return { session: s, stale: true };
+  if (tag.generation !== s.generation || tag.inputKey !== s.currentKey) return { session: s, stale: true };
   const settled: PaymentIntentSession<R> = { ...s, inFlight: null };
   switch (outcome.kind) {
     case "intent":
@@ -155,6 +164,22 @@ export function settleIntentRequest<R extends RevisionLike>(s: PaymentIntentSess
     case "error":
       return { session: { ...settled, error: outcome.message }, stale: false };
   }
+}
+
+/**
+ * Settle against the LATEST rendered fingerprint, not just the last committed session. In React
+ * the session catches up with a changed input in an effect, so a reply can land between the
+ * changed-input render and that effect while the stored session still carries the old key and
+ * generation. This first applies `latestKey` (advancing the generation exactly as the effect
+ * would, so the two are idempotent) and only then settles - a reply for the old key is stale.
+ * Returns `synced` when the key had to be applied here so the caller commits the new session.
+ */
+export function settleAgainstLatestKey<R extends RevisionLike>(
+  s: PaymentIntentSession<R>, latestKey: string, tag: IntentRequestTag, outcome: IntentRequestOutcome<R>,
+): SettleResult<R> & { synced: boolean } {
+  const applied = applyInputKey(s, latestKey);
+  const settled = settleIntentRequest(applied.session, tag, outcome);
+  return { ...settled, synced: applied.changed };
 }
 
 /** Server revised the total on a non-embedded path (hosted / Affirm): park it for review. */
