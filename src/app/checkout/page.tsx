@@ -831,7 +831,6 @@ export default function CheckoutPage() {
           customer,
           vehicle,
           cartId: getCartId(),
-          supersedesPaymentIntentId: tag.supersedesPaymentIntentId || undefined,
           // If cart was resumed from a saved quote, include for conversion tracking
           ...(resumedFromQuoteId ? { savedQuoteId: resumedFromQuoteId } : {}),
           ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),

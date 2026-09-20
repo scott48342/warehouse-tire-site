@@ -6,7 +6,6 @@ import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
 import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } from "@/lib/shopContext";
-import { cancelSupersededPaymentIntent } from "@/lib/checkout/supersededPaymentIntent";
 import { validateSavedQuoteOwnership } from "@/lib/savedQuotes/checkoutIntegration";
 import { buildCheckoutLines } from "@/lib/checkout/buildCheckoutLines";
 import {
@@ -265,7 +264,7 @@ export async function POST(req: Request) {
     }
     const totalUsd = totalCents / 100;
 
-    // The quote records the exact charge it was created for; the webhook fulfils nothing else.
+    // The quote records the exact charge it was created for (reconciliation record).
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,
@@ -353,10 +352,6 @@ export async function POST(req: Request) {
       .slice(0, 5) // First 5 items
       .map(l => `${l.name} x${l.qty}`)
       .join(", ") + (stripeLines.length > 5 ? ` +${stripeLines.length - 5} more` : "");
-
-    // The shopper changed cart/address/discount after an intent existed and sent the old id back:
-    // cancel it so the stale amount can never be confirmed. Cart-owned intents only; best effort.
-    await cancelSupersededPaymentIntent(stripeConn.stripe, body.supersedesPaymentIntentId, cartId);
 
     // Create PaymentIntent
     const paymentIntent = await stripeConn.stripe.paymentIntents.create({

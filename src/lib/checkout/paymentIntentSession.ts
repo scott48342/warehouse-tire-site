@@ -33,8 +33,6 @@ export type PaymentIntentSession<R extends RevisionLike = RevisionLike> = {
   quoteId: string | null;
   /** Generation of the create request in flight, if any. */
   inFlight: number | null;
-  /** Intent abandoned by an input change; the next create asks the server to cancel it. */
-  supersededPaymentIntentId: string | null;
   /** Server-revised totals awaiting the shopper's explicit acceptance. */
   pendingRevision: R | null;
   /** Server total the shopper accepted; sent as expectedTotal until inputs change again. */
@@ -45,7 +43,7 @@ export type PaymentIntentSession<R extends RevisionLike = RevisionLike> = {
 export function initialPaymentIntentSession<R extends RevisionLike = RevisionLike>(): PaymentIntentSession<R> {
   return {
     generation: 0, currentKey: null, intentKey: null, clientSecret: null, paymentIntentId: null, quoteId: null,
-    inFlight: null, supersededPaymentIntentId: null, pendingRevision: null, acceptedTotal: null, error: null,
+    inFlight: null, pendingRevision: null, acceptedTotal: null, error: null,
   };
 }
 
@@ -77,8 +75,7 @@ export function applyInputKey<R extends RevisionLike>(s: PaymentIntentSession<R>
       quoteId: null,
       inFlight: null,
       // Keep an earlier abandoned id if it has not been sent for cancellation yet.
-      supersededPaymentIntentId: (invalidatedIntent ? s.paymentIntentId : null) || s.supersededPaymentIntentId,
-      pendingRevision: null,
+        pendingRevision: null,
       acceptedTotal: null,
       error: null,
     },
@@ -99,8 +96,6 @@ export function canCreateIntent<R extends RevisionLike>(s: PaymentIntentSession<
 export type IntentRequestTag = {
   generation: number;
   inputKey: string;
-  /** Sent as `supersedesPaymentIntentId` so the server cancels the abandoned intent. */
-  supersedesPaymentIntentId: string | null;
   /** Sent as `expectedTotal` when the shopper accepted a server revision. */
   acceptedTotal: number | null;
 };
@@ -109,7 +104,7 @@ export function beginIntentRequest<R extends RevisionLike>(s: PaymentIntentSessi
   if (s.currentKey === null) throw new Error("beginIntentRequest: no fingerprint applied");
   return {
     session: { ...s, inFlight: s.generation, error: null },
-    tag: { generation: s.generation, inputKey: s.currentKey, supersedesPaymentIntentId: s.supersededPaymentIntentId, acceptedTotal: s.acceptedTotal },
+    tag: { generation: s.generation, inputKey: s.currentKey, acceptedTotal: s.acceptedTotal },
   };
 }
 
@@ -143,21 +138,16 @@ export function classifyIntentResponse<R extends RevisionLike>(httpStatus: numbe
 export type SettleResult<R extends RevisionLike> = { session: PaymentIntentSession<R>; stale: boolean };
 
 /**
- * Settle a create request. A reply for a superseded generation changes nothing the shopper can
- * see; if it carried a new intent, that intent is queued for server-side cancellation.
+ * Settle a create request. A reply for a superseded generation changes nothing: its secret is
+ * never installed, so an abandoned intent simply expires unconfirmed on Stripe's side.
  */
 export function settleIntentRequest<R extends RevisionLike>(s: PaymentIntentSession<R>, tag: IntentRequestTag, outcome: IntentRequestOutcome<R>): SettleResult<R> {
-  if (tag.generation !== s.generation) {
-    if (outcome.kind === "intent" && outcome.paymentIntentId && !s.supersededPaymentIntentId) {
-      return { session: { ...s, supersededPaymentIntentId: outcome.paymentIntentId }, stale: true };
-    }
-    return { session: s, stale: true };
-  }
+  if (tag.generation !== s.generation) return { session: s, stale: true };
   const settled: PaymentIntentSession<R> = { ...s, inFlight: null };
   switch (outcome.kind) {
     case "intent":
       return {
-        session: { ...settled, intentKey: tag.inputKey, clientSecret: outcome.clientSecret, paymentIntentId: outcome.paymentIntentId, quoteId: outcome.quoteId, supersededPaymentIntentId: null, error: null },
+        session: { ...settled, intentKey: tag.inputKey, clientSecret: outcome.clientSecret, paymentIntentId: outcome.paymentIntentId, quoteId: outcome.quoteId, error: null },
         stale: false,
       };
     case "revision":

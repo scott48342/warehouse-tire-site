@@ -299,7 +299,7 @@ export async function POST(req: Request) {
     }
     const totalUsd = totalCents / 100;
 
-    // The quote records the exact charge it was created for; the webhook fulfils nothing else.
+    // The quote records the exact charge it was created for (reconciliation record).
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,

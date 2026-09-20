@@ -77,8 +77,8 @@ export type QuoteSnapshot = {
     zip: string;
   };
   /**
-   * Exact amount (cents) the Stripe route charged for this quote. The webhook fulfils only when
-   * Stripe reports this amount paid (see paidAmountGuard.ts). Absent on pre-2026-09-20 quotes.
+   * Exact amount (cents) the Stripe route charged for this quote, recorded for reconciliation.
+   * Absent on pre-2026-09-20 quotes.
    */
   expectedChargeCents?: number;
 };

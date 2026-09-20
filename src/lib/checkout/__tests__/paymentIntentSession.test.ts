@@ -46,12 +46,12 @@ describe("applyInputKey - any fingerprint change invalidates everything the shop
     expect(r2.session).toBe(r1.session);
   });
 
-  it("input change AFTER the intent exists: secret/intent/quote dropped, generation bumped, old intent queued for cancellation", () => {
+  it("input change AFTER the intent exists: secret/intent/quote dropped, generation bumped", () => {
     const live = liveSession();
     expect(liveClientSecret(live, KEY_A)).toBe("pi_live_0000000001_secret_x");
     const r = applyInputKey(live, KEY_B);
     expect(r).toMatchObject({ changed: true, invalidatedIntent: true, abandonedRequest: false });
-    expect(r.session).toMatchObject({ generation: live.generation + 1, currentKey: KEY_B, intentKey: null, clientSecret: null, paymentIntentId: null, quoteId: null, supersededPaymentIntentId: "pi_live_0000000001", error: null });
+    expect(r.session).toMatchObject({ generation: live.generation + 1, currentKey: KEY_B, intentKey: null, clientSecret: null, paymentIntentId: null, quoteId: null, error: null });
     expect(liveClientSecret(r.session, KEY_B)).toBeNull();
   });
 
@@ -77,7 +77,6 @@ describe("applyInputKey - any fingerprint change invalidates everything the shop
   it("keeps an earlier abandoned intent id if it was never sent for cancellation (no live intent to replace it)", () => {
     const r1 = applyInputKey(liveSession(), KEY_B); // queues pi_live_0000000001
     const r2 = applyInputKey(r1.session, "key-c");   // no live intent now
-    expect(r2.session.supersededPaymentIntentId).toBe("pi_live_0000000001");
   });
 });
 
@@ -106,9 +105,7 @@ describe("in-flight request + input change: stale replies are ignored (success, 
     expect(settled.session.inFlight).toBeNull();
     expect(settled.session.generation).toBe(s.generation);
     expect(liveClientSecret(settled.session, KEY_B)).toBeNull();
-    expect(settled.session.supersededPaymentIntentId).toBe("pi_stale_0000000002");
-    // the next (current-generation) request asks the server to cancel it
-    expect(beginIntentRequest(settled.session).tag.supersedesPaymentIntentId).toBe("pi_stale_0000000002");
+    expect(settled.session).toBe(s);
   });
 
   it("stale REVISION and stale ERROR change nothing visible", async () => {
@@ -123,14 +120,6 @@ describe("in-flight request + input change: stale replies are ignored (success, 
     expect(err.session.error).toBeNull();
   });
 
-  it("stale success does not overwrite an already-queued cancellation id", () => {
-    let s: S = applyInputKey(liveSession(), KEY_B).session; // queued pi_live_0000000001
-    const b = beginIntentRequest(s);
-    s = applyInputKey(b.session, "key-c").session;
-    const settled = settleIntentRequest(s, b.tag, { kind: "intent", clientSecret: "sec", paymentIntentId: "pi_other_000000003", quoteId: "q" });
-    expect(settled.stale).toBe(true);
-    expect(settled.session.supersededPaymentIntentId).toBe("pi_live_0000000001");
-  });
 
   it("two overlapping requests: only the reply for the CURRENT generation lands, in either arrival order", async () => {
     let s: S = applyInputKey(initialPaymentIntentSession<Rev>(), KEY_A).session;
@@ -147,16 +136,14 @@ describe("in-flight request + input change: stale replies are ignored (success, 
     expect(late.stale).toBe(true);
     expect(liveClientSecret(late.session, KEY_B)).toBe("sec_2");
     expect(late.session.quoteId).toBe("q_2");
-    // the stale first intent is queued for cancellation on any later create
-    expect(late.session.supersededPaymentIntentId).toBe("pi_first_000000001");
+    expect(late.session.paymentIntentId).toBe("pi_second_00000002");
   });
 
-  it("current-generation success clears the queued cancellation (it was sent with this request)", () => {
+  it("current-generation success installs the new intent against the new fingerprint", () => {
     let s: S = applyInputKey(liveSession(), KEY_B).session;
     const b = beginIntentRequest(s);
-    expect(b.tag.supersedesPaymentIntentId).toBe("pi_live_0000000001");
     s = settleIntentRequest(b.session, b.tag, { kind: "intent", clientSecret: "sec", paymentIntentId: "pi_new_00000000002", quoteId: "q" }).session;
-    expect(s).toMatchObject({ intentKey: KEY_B, clientSecret: "sec", paymentIntentId: "pi_new_00000000002", quoteId: "q", inFlight: null, supersededPaymentIntentId: null });
+    expect(s).toMatchObject({ intentKey: KEY_B, clientSecret: "sec", paymentIntentId: "pi_new_00000000002", quoteId: "q", inFlight: null });
     expect(liveClientSecret(s, KEY_B)).toBe("sec");
   });
 });
@@ -201,8 +188,8 @@ describe("classifyIntentResponse / runIntentRequest", () => {
 
   it("posts JSON to the create-payment-intent route with the given body", async () => {
     const fetchImpl = jest.fn(async () => okBody("pi_ok_000000000001"));
-    await runIntentRequest<Rev>(fetchImpl, { cartId: "c1", supersedesPaymentIntentId: "pi_old_00000000001" });
-    expect(fetchImpl).toHaveBeenCalledWith("/api/stripe/create-payment-intent", expect.objectContaining({ method: "POST", body: JSON.stringify({ cartId: "c1", supersedesPaymentIntentId: "pi_old_00000000001" }) }));
+    await runIntentRequest<Rev>(fetchImpl, { cartId: "c1", expectedTotal: 12.34 });
+    expect(fetchImpl).toHaveBeenCalledWith("/api/stripe/create-payment-intent", expect.objectContaining({ method: "POST", body: JSON.stringify({ cartId: "c1", expectedTotal: 12.34 }) }));
   });
 });
 

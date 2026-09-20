@@ -47,8 +47,6 @@ const taxRate = getStateTaxRate as jest.Mock;
 const shopContext = detectShopContext as jest.Mock;
 
 const piCreate = jest.fn(async (params: any) => ({ id: "pi_test", client_secret: "cs_test", amount: params.amount }));
-const piRetrieve = jest.fn();
-const piCancel = jest.fn(async (id: string, _params?: { cancellation_reason?: string }) => ({ id, status: "canceled" }));
 
 const ridlerLines = [
   { kind: "product", name: "RIDLER 652 (front)", sku: "652-2865GBD", unitPriceUsd: 336.12, qty: 2, taxable: true, meta: { cartType: "wheel", priceSource: "wheelpros", axle: "front", catalog: { diameterInches: 20, supplierSource: "wheelpros" } } },
@@ -83,9 +81,7 @@ beforeEach(() => {
   jest.spyOn(console, "warn").mockImplementation(() => {});
   jest.spyOn(console, "error").mockImplementation(() => {});
   built.mockReset().mockResolvedValue({ ok: true, lines: ridlerLines, repriced: [] });
-  stripeClient.mockReset().mockResolvedValue({ mode: "test", stripe: { paymentIntents: { create: piCreate, retrieve: piRetrieve, cancel: piCancel } } });
-  piRetrieve.mockReset();
-  piCancel.mockClear();
+  stripeClient.mockReset().mockResolvedValue({ mode: "test", stripe: { paymentIntents: { create: piCreate } } });
   shopContext.mockReset().mockReturnValue({ mode: "national" });
   taxRate.mockClear();
   quote.mockClear();
@@ -300,49 +296,4 @@ describe("create-payment-intent - stale PaymentIntent invalidation (Codex review
     expect(piCreate.mock.calls[0][0].amount).toBe(quote.mock.calls[0][1].expectedChargeCents);
   });
 
-  it("superseded intent owned by this cart and still awaiting payment is cancelled before the new one is created", async () => {
-    piRetrieve.mockResolvedValue({ id: "pi_oldstale001", status: "requires_payment_method", metadata: { cartId: "cart-abc" } });
-    const res = await POST(req({ expectedTotal: serverTotal, cartId: "cart-abc", supersedesPaymentIntentId: "pi_oldstale001" }));
-    expect(res.status).toBe(200);
-    expect(piRetrieve).toHaveBeenCalledWith("pi_oldstale001");
-    expect(piCancel).toHaveBeenCalledTimes(1);
-    expect(piCancel.mock.calls[0][0]).toBe("pi_oldstale001");
-    expect(piCancel.mock.calls[0][1]).toEqual({ cancellation_reason: "abandoned" });
-    expect(piCreate).toHaveBeenCalledTimes(1);
-    // cancel happened first
-    expect(piCancel.mock.invocationCallOrder[0]).toBeLessThan(piCreate.mock.invocationCallOrder[0]);
-  });
-
-  it("TAMPER: an intent belonging to another cart is never cancelled; the request still succeeds", async () => {
-    piRetrieve.mockResolvedValue({ id: "pi_someoneelse01", status: "requires_payment_method", metadata: { cartId: "cart-VICTIM" } });
-    const res = await POST(req({ expectedTotal: serverTotal, cartId: "cart-abc", supersedesPaymentIntentId: "pi_someoneelse01" }));
-    expect(res.status).toBe(200);
-    expect(piCancel).not.toHaveBeenCalled();
-    expect(piCreate).toHaveBeenCalledTimes(1);
-  });
-
-  it("an intent already succeeded/processing is never cancelled", async () => {
-    for (const status of ["succeeded", "processing", "canceled", "requires_capture"]) {
-      piRetrieve.mockResolvedValue({ id: "pi_notcancelable1", status, metadata: { cartId: "cart-abc" } });
-      const res = await POST(req({ expectedTotal: serverTotal, cartId: "cart-abc", supersedesPaymentIntentId: "pi_notcancelable1" }));
-      expect(res.status).toBe(200);
-    }
-    expect(piCancel).not.toHaveBeenCalled();
-  });
-
-  it("malformed / missing supersedesPaymentIntentId is ignored without touching Stripe", async () => {
-    for (const bad of [undefined, null, "", "cs_test_123", "pi_", 42, { id: "pi_x" }, "pi_x; DROP"]) {
-      const res = await POST(req({ expectedTotal: serverTotal, cartId: "cart-abc", supersedesPaymentIntentId: bad }));
-      expect(res.status).toBe(200);
-    }
-    expect(piRetrieve).not.toHaveBeenCalled();
-    expect(piCancel).not.toHaveBeenCalled();
-  });
-
-  it("Stripe failing to cancel the old intent does not block the new one (webhook guard is the hard stop)", async () => {
-    piRetrieve.mockRejectedValue(new Error("stripe down"));
-    const res = await POST(req({ expectedTotal: serverTotal, cartId: "cart-abc", supersedesPaymentIntentId: "pi_oldstale001" }));
-    expect(res.status).toBe(200);
-    expect(piCreate).toHaveBeenCalledTimes(1);
-  });
 });
