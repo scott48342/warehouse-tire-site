@@ -56,9 +56,9 @@ describe('Staggered Fitment Tests', () => {
         inventoryFacets: CORVETTE_INVENTORY_FACETS,
       });
 
-      // Should include all 5 sizes from inventory
+      // Inventory sizes plus common chips kept visible when facets are filtered.
       const diameters = options.map(o => o.diameter).sort((a, b) => a - b);
-      expect(diameters).toEqual([19, 20, 21, 22, 24]);
+      expect(diameters).toEqual([19, 20, 21, 22, 24, 26]);
     });
 
     it('CRITICAL: does NOT cap at +3" upsize limit', () => {
@@ -142,12 +142,12 @@ describe('Staggered Fitment Tests', () => {
       });
 
       const diameters = options.map(o => o.diameter).sort((a, b) => a - b);
-      expect(diameters).toEqual([17, 18, 20, 22]);
+      expect(diameters).toEqual([17, 18, 19, 20, 22, 24, 26]);
     });
   });
 
   describe('Empty inventory facets', () => {
-    it('returns OEM sizes when no inventory facets', () => {
+    it('returns OEM sizes and common chips when no inventory facets', () => {
       const options = buildDiameterOptions({
         isClassicVehicle: false,
         isLiftedBuild: false,
@@ -160,7 +160,7 @@ describe('Staggered Fitment Tests', () => {
       });
 
       const diameters = options.map(o => o.diameter).sort((a, b) => a - b);
-      expect(diameters).toEqual([19, 20]);
+      expect(diameters).toEqual([19, 20, 22, 24, 26]);
     });
   });
 

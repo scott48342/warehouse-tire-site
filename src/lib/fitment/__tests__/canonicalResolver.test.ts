@@ -31,6 +31,7 @@ jest.mock("@/lib/fitment-db/applyOverrides", () => ({
 
 jest.mock("@/lib/fitment-db/modelAliases", () => ({
   getModelVariants: jest.fn((model: string) => [model.toLowerCase()]),
+  extractBmwModelAndTrim: jest.requireActual("@/lib/fitment-db/modelAliases").extractBmwModelAndTrim,
 }));
 
 jest.mock("@/lib/fitment-db/keys", () => ({
