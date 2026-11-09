@@ -611,6 +611,8 @@ export default async function TireDetailPage({
   // ═══════════════════════════════════════════════════════════════════════════
   if (source === "tireweb" && size) {
     try {
+      // Capital Tire is local-only, so resolve local PDPs against the local search feed.
+      const searchBaseUrl = isLocalSite ? "https://shop.warehousetire.net" : getBaseUrl();
       // ═══════════════════════════════════════════════════════════════════════
       // PHASE 2B FIX (2026-06-22): resilient TireWeb PDP lookup by part number.
       //
@@ -632,7 +634,7 @@ export default async function TireDetailPage({
 
       const fetchTireWeb = async (qs: string): Promise<any[]> => {
         try {
-          const r = await fetch(`${getBaseUrl()}/api/tires/search?${qs}`, { cache: "no-store" });
+          const r = await fetch(`${searchBaseUrl}/api/tires/search?${qs}`, { cache: "no-store" });
           if (!r.ok) return [];
           const j = await r.json();
           return Array.isArray(j?.results) ? j.results : [];
