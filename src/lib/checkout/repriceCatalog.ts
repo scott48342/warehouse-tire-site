@@ -18,6 +18,7 @@ import { getDbPool } from "@/lib/db/pool";
 import { FIXED_PRICE_SKUS } from "./fixedPriceSkus";
 import { getWheel1WheelBySku, computeWheel1SellPrice, type Wheel1Candidate } from "@/lib/wheel1/catalog";
 import { getWSIWheelBySku, computeWSISellPrice, type WSICandidate } from "@/lib/wsi/catalog";
+import { headers } from "next/headers";
 
 /**
  * Shipping attributes as the CATALOG knows them. This is the only source the rate engine
@@ -60,6 +61,18 @@ function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
   return `http://localhost:${process.env.PORT || 3000}`;
+}
+
+async function getTireSearchBaseUrl(): Promise<string> {
+  try {
+    const host = (await headers()).get("host")?.toLowerCase().replace(/:\d+$/, "");
+    if (host === "shop.warehousetire.net" || host === "local.warehousetire.net" || host === "warehousetire.net") {
+      return "https://shop.warehousetire.net";
+    }
+  } catch {
+    // Non-request callers use the configured application URL.
+  }
+  return getBaseUrl();
 }
 
 const positive = (v: unknown): number | null => {
@@ -144,7 +157,7 @@ export async function resolveTirePrice(sku: string, size?: string): Promise<Reso
   const qs = new URLSearchParams({ partNumber: clean, pageSize: "100" });
   if (size) qs.set("size", size);
   try {
-    const res = await fetch(`${getBaseUrl()}/api/tires/search?${qs.toString()}`, { cache: "no-store" });
+    const res = await fetch(`${await getTireSearchBaseUrl()}/api/tires/search?${qs.toString()}`, { cache: "no-store" });
     if (!res.ok) return null;
     const j = (await res.json()) as { results?: any[] };
     const hit = (Array.isArray(j?.results) ? j.results : []).find(

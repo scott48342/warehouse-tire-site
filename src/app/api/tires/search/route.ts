@@ -75,6 +75,8 @@ import { annotateLoadIndex, resolveRequiredLoadIndex, countLoadIndexFailures } f
 import { assessOeStagger } from "@/lib/fitment/oeStagger";
 import { toPublicSourceVerification } from "@/lib/fitment-db/sourceVerification";
 import { convertLegacyTireSize, convertTireSizesForSearch } from "@/lib/legacyTireConverter";
+import { isCapitalConfigured, searchCapitalTires } from "@/lib/capitalTire/client";
+import { detectShopContextFromHostPath } from "@/lib/shopContext";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -706,6 +708,43 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
   }
   
   return tires;
+}
+
+async function searchTiresCapitalFormatted(size: string, enabled: boolean): Promise<TireResult[]> {
+  if (!enabled) return [];
+  try {
+    const items = await searchCapitalTires(size);
+    return items.map((item): TireResult => {
+      const rim = item.size.match(/R(\d{2}(?:\.5)?)/i);
+      const adder = isCommercialTruckSize(item.size) ? COMMERCIAL_TIRE_ADDER : STANDARD_TIRE_ADDER;
+      return {
+        partNumber: item.manufacturerSku,
+        mfgPartNumber: item.manufacturerSku,
+        brand: normalizeBrandName(item.brand),
+        model: item.model,
+        description: item.description,
+        cost: item.cost,
+        price: Math.round((item.cost + adder) * 100) / 100,
+        quantity: { primary: item.quantity, alternate: 0, national: 0 },
+        imageUrl: null,
+        size: item.size,
+        simpleSize: toSimpleSize(item.size),
+        rimDiameter: rim ? Number(rim[1]) : null,
+        source: "capital",
+        badges: {
+          terrain: null, construction: null, warrantyMiles: null,
+          loadIndex: null, speedRating: null,
+        },
+      };
+    });
+  } catch (error) {
+    console.warn("[capital] Inventory search unavailable:", error instanceof Error ? error.message : error);
+    return [];
+  }
+}
+
+function hideCapitalDealerCost(tires: TireResult[]): TireResult[] {
+  return tires.map((tire) => tire.source === "capital" ? { ...tire, cost: null } : tire);
 }
 
 /**
@@ -1552,7 +1591,8 @@ async function mergeTireResults(
   twResults: TireResult[],
   kmResults: TireResult[],
   usafResults: TireResult[] = [],
-  minQty: number
+  minQty: number,
+  capitalResults: TireResult[] = [],
 ): Promise<TireResult[]> {
   const merged = new Map<string, TireResult>();
   
@@ -1662,7 +1702,7 @@ async function mergeTireResults(
       // Supplier priority: ALWAYS prefer auto-orderable suppliers to save staff workload
       // Even if manual source is cheaper, auto-order saves time and reduces errors
       const AUTO_ORDER_SOURCES = ['usautoforce', 'wheelpros'];
-      const MANUAL_SOURCES = ['tireweb:atd', 'tireweb:ntw', 'tireweb:km', 'tireweb:usautoforce'];
+      const MANUAL_SOURCES = ['tireweb:atd', 'tireweb:ntw', 'tireweb:km', 'tireweb:usautoforce', 'capital'];
       
       const newIsAutoOrder = AUTO_ORDER_SOURCES.includes(tire.source || '');
       const newIsManual = !newIsAutoOrder && MANUAL_SOURCES.some(s => (tire.source || '').startsWith(s));
@@ -1708,6 +1748,7 @@ async function mergeTireResults(
         // Update to this source's price
         existing.cost = tire.cost;
         existing.price = tire.price;
+        existing.source = tire.source;
         (existing as any).priceSource = tire.source;
         (existing as any).priceSourceQty = tireSourceQty;
         // Keep TireLibrary image if existing has one
@@ -1732,6 +1773,7 @@ async function mergeTireResults(
   for (const tire of wpResults) addTire(tire, true);
   for (const tire of twResults) addTire(tire, true);
   for (const tire of enrichedKmResults) addTire(tire, true);
+  for (const tire of capitalResults) addTire(tire, true);
   
   // USAF Enrichment Pass (2026-05-09)
   // For any tire that has USAF data available, add the richer usafEnrichment fields
@@ -2000,6 +2042,10 @@ export async function GET(req: Request) {
   
   try {
     const url = new URL(req.url);
+    const host = req.headers.get("host") || req.headers.get("x-forwarded-host") || url.host;
+    const capitalEnabled = detectShopContextFromHostPath(host, url.pathname).mode === "local" && isCapitalConfigured();
+    const capitalCacheSuffix = capitalEnabled ? ":capital-local-v1" : "";
+    const capitalCacheOptions = capitalEnabled ? { cacheTtlMs: 5 * 60_000, staleTtlMs: 2 * 60_000 } : {};
     
     // Direct size search
     const sizeRaw = (url.searchParams.get("size") || url.searchParams.get("tireSize") || "").trim();
@@ -2037,7 +2083,7 @@ export async function GET(req: Request) {
     
     // Case 1: Direct size search
     if (sizeRaw) {
-      const cacheKey = buildSizeCacheKey(sizeRaw);
+      const cacheKey = buildSizeCacheKey(sizeRaw) + capitalCacheSuffix;
       const tSearch0 = Date.now();
       
       // ═══════════════════════════════════════════════════════════════════════
@@ -2046,20 +2092,22 @@ export async function GET(req: Request) {
       // ═══════════════════════════════════════════════════════════════════════
       const cacheResult = await cachedTireSearch({
         cacheKey,
+        ...capitalCacheOptions,
         searchFn: async () => {
           // Query all sources in parallel
           // TireWeb may be rate-limited (ErrorCode 127), K&M provides backup inventory
           // USAF direct provides richer data than TireWeb (MAP, FET, warranty, specs)
-          const [wpResults, twResults, kmResults, usafResults] = await Promise.all([
+          const [wpResults, twResults, kmResults, usafResults, capitalResults] = await Promise.all([
             searchTiresBySize(db, sizeRaw, minQty, pageSize * 2), // Fetch extra for filtering
             searchTiresTireWebFormatted(sizeRaw),
             searchTiresKM(sizeRaw), // K&M/Keystone for additional inventory
             searchTiresUSAF(sizeRaw), // US AutoForce direct (better data than TireWeb)
+            searchTiresCapitalFormatted(sizeRaw, capitalEnabled),
           ]);
           
           // Merge and dedupe by partNumber
           // Priority: USAF direct > TireWeb (USAF has richer data) > WheelPros > K&M
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, usafResults, minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, usafResults, minQty, capitalResults);
           
           // Apply cached TireLibrary images (from Vercel Blob)
           const withCachedImages = await applyCachedImages(merged);
@@ -2074,6 +2122,7 @@ export async function GET(req: Request) {
               tireweb: twResults.length,
               km: kmResults.length,
               usautoforce: usafResults.length,
+              capital: capitalResults.length,
             },
           };
         },
@@ -2231,7 +2280,7 @@ export async function GET(req: Request) {
       const resultsWithMap = await applyMapFloorBatch(finalResults.slice(0, pageSize));
       
       return NextResponse.json({
-        results: resultsWithMap,
+        results: hideCapitalDealerCost(resultsWithMap),
         mode: "size",
         size: sizeRaw,
         ...(brandFilter && { brand: brandFilter }),
@@ -2745,14 +2794,16 @@ export async function GET(req: Request) {
     
     if (sizesToSearch.length > 0) {
       // Build cache key for this set of sizes
-      const vehicleCacheKey = buildVehicleCacheKey(sizesToSearch.slice(0, 5), wheelDiameter || undefined);
+      const vehicleCacheKey = buildVehicleCacheKey(sizesToSearch.slice(0, 5), wheelDiameter || undefined) + capitalCacheSuffix;
       
       const cacheResult = await cachedTireSearch({
         cacheKey: vehicleCacheKey,
+        ...capitalCacheOptions,
         searchFn: async () => {
           let wpResults: TireResult[] = [];
           let twResults: TireResult[] = [];
           let kmResults: TireResult[] = [];
+          let capitalResults: TireResult[] = [];
           
           // Search using modern P-metric sizes (converted from legacy if needed)
           const searchPromises: Promise<void>[] = [];
@@ -2777,12 +2828,16 @@ export async function GET(req: Request) {
               searchTiresKM(size)
                 .then((results) => { kmResults.push(...results); })
             );
+            searchPromises.push(
+              searchTiresCapitalFormatted(size, capitalEnabled)
+                .then((results) => { capitalResults.push(...results); })
+            );
           }
           
           await Promise.all(searchPromises);
           
           // Merge results from all sources
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty, capitalResults);
           
           // Apply cached TireLibrary images
           const withCachedImages = await applyCachedImages(merged);
@@ -2796,6 +2851,7 @@ export async function GET(req: Request) {
               wheelpros: wpResults.length,
               tireweb: twResults.length,
               km: kmResults.length,
+              capital: capitalResults.length,
             },
           };
         },
@@ -2979,14 +3035,16 @@ export async function GET(req: Request) {
         };
       }
       
-      const liftedCacheKey = buildVehicleCacheKey(liftedSizes, wheelDiameter);
+      const liftedCacheKey = buildVehicleCacheKey(liftedSizes, wheelDiameter) + capitalCacheSuffix;
       
       const cacheResult = await cachedTireSearch({
         cacheKey: liftedCacheKey,
+        ...capitalCacheOptions,
         searchFn: async () => {
           let wpResults: TireResult[] = [];
           let twResults: TireResult[] = [];
           let kmResults: TireResult[] = [];
+          let capitalResults: TireResult[] = [];
           
           const searchPromises: Promise<void>[] = [];
           for (const size of liftedSizes) {
@@ -2998,10 +3056,14 @@ export async function GET(req: Request) {
               searchTiresTireWebFormatted(size)
                 .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
             );
+            searchPromises.push(
+              searchTiresCapitalFormatted(size, capitalEnabled)
+                .then((results) => { capitalResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+            );
           }
           await Promise.all(searchPromises);
           
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty, capitalResults);
           const withCachedImages = await applyCachedImages(merged);
           const withOverrides = await applyImageOverrides(db, withCachedImages);
           
@@ -3011,6 +3073,7 @@ export async function GET(req: Request) {
               wheelpros: wpResults.length,
               tireweb: twResults.length,
               km: kmResults.length,
+              capital: capitalResults.length,
             },
           };
         },
@@ -3065,14 +3128,16 @@ export async function GET(req: Request) {
       console.log(`  Rear sizes: ${rearSizes.join(", ")}`);
       
       const combinedSizes = [...frontSizes, ...rearSizes];
-      const staggeredCacheKey = buildVehicleCacheKey(combinedSizes, wheelDiameter);
+      const staggeredCacheKey = buildVehicleCacheKey(combinedSizes, wheelDiameter) + capitalCacheSuffix;
       
       const cacheResult = await cachedTireSearch({
         cacheKey: staggeredCacheKey,
+        ...capitalCacheOptions,
         searchFn: async () => {
           let wpResults: TireResult[] = [];
           let twResults: TireResult[] = [];
           let kmResults: TireResult[] = [];
+          let capitalResults: TireResult[] = [];
           
           const searchPromises: Promise<void>[] = [];
           for (const size of combinedSizes) {
@@ -3084,10 +3149,14 @@ export async function GET(req: Request) {
               searchTiresTireWebFormatted(size)
                 .then((results) => { twResults.push(...results); })
             );
+            searchPromises.push(
+              searchTiresCapitalFormatted(size, capitalEnabled)
+                .then((results) => { capitalResults.push(...results); })
+            );
           }
           await Promise.all(searchPromises);
           
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty, capitalResults);
           const withCachedImages = await applyCachedImages(merged);
           const withOverrides = await applyImageOverrides(db, withCachedImages);
           
@@ -3097,6 +3166,7 @@ export async function GET(req: Request) {
               wheelpros: wpResults.length,
               tireweb: twResults.length,
               km: kmResults.length,
+              capital: capitalResults.length,
             },
           };
         },
@@ -3195,14 +3265,16 @@ export async function GET(req: Request) {
         console.log(`[tires/search] ⚠️ Direct search fallback for CAR (${model}): ${commonSizes.join(", ")}`);
       }
       
-      const directCacheKey = buildVehicleCacheKey(commonSizes, wheelDiameter);
+      const directCacheKey = buildVehicleCacheKey(commonSizes, wheelDiameter) + capitalCacheSuffix;
       
       const cacheResult = await cachedTireSearch({
         cacheKey: directCacheKey,
+        ...capitalCacheOptions,
         searchFn: async () => {
           let wpResults: TireResult[] = [];
           let twResults: TireResult[] = [];
           let kmResults: TireResult[] = [];
+          let capitalResults: TireResult[] = [];
           
           const searchPromises: Promise<void>[] = [];
           for (const size of commonSizes) {
@@ -3214,10 +3286,14 @@ export async function GET(req: Request) {
               searchTiresTireWebFormatted(size)
                 .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
             );
+            searchPromises.push(
+              searchTiresCapitalFormatted(size, capitalEnabled)
+                .then((results) => { capitalResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+            );
           }
           await Promise.all(searchPromises);
           
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, [], minQty, capitalResults);
           const withCachedImages = await applyCachedImages(merged);
           const withOverrides = await applyImageOverrides(db, withCachedImages);
           
@@ -3227,6 +3303,7 @@ export async function GET(req: Request) {
               wheelpros: wpResults.length,
               tireweb: twResults.length,
               km: kmResults.length,
+              capital: capitalResults.length,
             },
           };
         },
@@ -3479,7 +3556,7 @@ export async function GET(req: Request) {
     }
     
     return NextResponse.json({
-      results: finalResults,
+      results: hideCapitalDealerCost(finalResults),
       mode: "vehicle",
       vehicle: { year, make, model, modification },
       wheelDiameter: wheelDiameter || null,

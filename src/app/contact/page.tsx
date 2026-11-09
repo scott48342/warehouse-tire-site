@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { useCart } from '@/lib/cart/CartContext'
 
 export default function ContactPage() {
+  const { items } = useCart()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,6 +17,20 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('from') !== 'cart' || items.length === 0) return
+    const selection = items.map(item => {
+      const name = 'brand' in item && 'model' in item ? `${item.brand} ${item.model}` : item.sku
+      const size = 'size' in item ? `, size ${item.size}` : ''
+      return `${item.quantity} × ${name}${size} (SKU ${item.sku})`
+    }).join('\n')
+    setFormData(previous => previous.message ? previous : {
+      ...previous,
+      subject: 'quote',
+      message: `I would like to order these items. Please confirm fitment, availability, and final price:\n\n${selection}`,
+    })
+  }, [items])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
