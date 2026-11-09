@@ -35,6 +35,20 @@ const getBaseUrl = () => {
   return process.env.NEXT_PUBLIC_BASE_URL || "https://shop.warehousetiredirect.com";
 };
 
+async function getTireSearchBaseUrl(defaultBaseUrl: string): Promise<string> {
+  try {
+    // Jake runs on both storefronts. Capital inventory is intentionally local-only.
+    const { headers } = await import("next/headers");
+    const host = (await headers()).get("host")?.toLowerCase().replace(/:\d+$/, "");
+    if (host === "shop.warehousetire.net" || host === "local.warehousetire.net" || host === "warehousetire.net") {
+      return "https://shop.warehousetire.net";
+    }
+  } catch {
+    // Standalone evaluation and non-request callers use their configured base URL.
+  }
+  return defaultBaseUrl;
+}
+
 // Public URL for customer-facing links (ALWAYS use production domain, never preview URLs)
 const getPublicUrl = () => {
   // Check if we're on the local site
@@ -632,7 +646,7 @@ Collect the customer's email and send them the build details so they can purchas
   },
   {
     name: "build_cart",
-    description: `Generate a ready-to-checkout cart link for the customer's selected wheels and/or tires. Call this whenever the customer agrees to a build, says they want to buy / check out / add to cart, or you've presented a final total. Pass every product they're buying (each wheel position and each tire position) using the sku/partNumber and price from your earlier search results. Returns a cartUrl the UI shows as a green "Your Cart is Ready" checkout button. For staggered setups include all front AND rear items with their correct quantities (usually 2 each). ALWAYS prefer this over telling the customer to call the store.`,
+    description: `Build a cart selection link for the customer's selected wheels and/or tires. Pass each product's SKU, quantity, and price from search results. For staggered setups include both front and rear items. Local customers can check out online. National customers can use the selection to contact the team and complete the sale directly while national checkout is paused.`,
     input_schema: {
       type: "object" as const,
       properties: {
@@ -1159,7 +1173,7 @@ export async function executeTool(
       // Request more results when filtering by brand so we have good selection
       params.set("limit", brand ? String(Math.max(Number(limit), 15)) : String(limit));
       
-      const url = `${baseUrl}/api/tires/search?${params}`;
+      const url = `${await getTireSearchBaseUrl(baseUrl)}/api/tires/search?${params}`;
       console.log(`[Jake Tool] search_tires: ${url}`);
       
       try {
@@ -1324,7 +1338,7 @@ export async function executeTool(
         if (tireSku && tireSize) {
           try {
             const tParams = new URLSearchParams({ size: String(tireSize), partNumber: String(tireSku), limit: "1" });
-            const tLookupUrl = `${baseUrl}/api/tires/search?${tParams}`;
+            const tLookupUrl = `${await getTireSearchBaseUrl(baseUrl)}/api/tires/search?${tParams}`;
             console.log(`[Jake Tool] Resolving tire image: ${tLookupUrl}`);
             const tRes = await fetch(tLookupUrl, { cache: "no-store" });
             if (tRes.ok) {

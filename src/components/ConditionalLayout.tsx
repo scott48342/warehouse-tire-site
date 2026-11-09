@@ -9,7 +9,10 @@ import { CartSlideout } from "@/components/CartSlideout";
 import { FirstOrderPopup } from "@/components/FirstOrderPopup";
 import { CompareFloatingBadge } from "@/components/CompareFloatingBadge";
 import { ComparePanel } from "@/components/ComparePanel";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
+import Link from "next/link";
+import { useShopContext } from "@/contexts/ShopContextProvider";
+import { NATIONAL_CHECKOUT_PAUSED } from "@/lib/nationalCatalog";
 
 interface ConditionalLayoutProps {
   children: React.ReactNode;
@@ -17,6 +20,9 @@ interface ConditionalLayoutProps {
 
 export function ConditionalLayout({ children }: ConditionalLayoutProps) {
   const pathname = usePathname();
+  const { isNational } = useShopContext();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const isPOS = pathname?.startsWith("/pos");
   const isJake = pathname === "/jake";
   const isGarage = pathname?.startsWith("/garage");
@@ -45,6 +51,12 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
       <Suspense fallback={<div className="h-16" />}>
         <Header />
       </Suspense>
+      {mounted && NATIONAL_CHECKOUT_PAUSED && isNational && (
+        <div className="bg-neutral-900 px-4 py-2 text-center text-sm font-medium text-white">
+          Browse our catalog and contact our team to place an order. Online checkout is paused for the season.{" "}
+          <Link href="/national-catalog" className="font-bold underline underline-offset-2">How to order</Link>
+        </div>
+      )}
       <main className="flex-1">
         {children}
       </main>
@@ -52,7 +64,7 @@ export function ConditionalLayout({ children }: ConditionalLayoutProps) {
         <Footer />
       </div>
       <CartSlideout />
-      <FirstOrderPopup />
+      {mounted && (!NATIONAL_CHECKOUT_PAUSED || !isNational) && <FirstOrderPopup />}
       <CompareFloatingBadge />
       <ComparePanel />
     </>

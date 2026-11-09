@@ -43,9 +43,10 @@ export interface PackagePrioritizableItem {
  * Supplier priority for STANDARD searches (not package flows)
  * Lower number = higher priority
  */
-export type SupplierPriority = 1 | 2 | 3 | 4;
+export type SupplierPriority = 0 | 1 | 2 | 3 | 4;
 
 const SUPPLIER_PRIORITY_MAP: Record<string, SupplierPriority> = {
+  'capital': 0,       // Local in-stock supplier; visible in the first page of local results
   'tireweb': 1,       // TireWeb is primary source
   'tireweb:atd': 1,
   'tireweb:ntw': 1,
@@ -63,7 +64,7 @@ export function getSupplierPriority(supplier: string | undefined): SupplierPrior
   const normalized = supplier.toLowerCase();
   
   // Check exact match first
-  if (SUPPLIER_PRIORITY_MAP[normalized]) {
+  if (SUPPLIER_PRIORITY_MAP[normalized] !== undefined) {
     return SUPPLIER_PRIORITY_MAP[normalized];
   }
   

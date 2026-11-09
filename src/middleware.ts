@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { NATIONAL_CHECKOUT_PAUSED, isNationalCatalogHost, isNewPaymentEndpoint } from "@/lib/nationalCatalog";
 import { cookieName, verifyAdminToken } from "@/lib/adminAuth";
 import { 
   checkBotProtection, 
@@ -63,6 +64,24 @@ function geoBlocked(req: NextRequest, pathname: string): boolean {
 
 export async function middleware(req: NextRequest) {
   const { pathname, searchParams } = req.nextUrl;
+  const requestHost = req.headers.get("host") || req.headers.get("x-forwarded-host") || "";
+
+  // Keep product pages available, but prevent new national checkout sessions.
+  // Return and capture routes remain open for purchases already in progress.
+  if (NATIONAL_CHECKOUT_PAUSED && isNationalCatalogHost(requestHost)) {
+    if (pathname.replace(/\/+$/, "") === "/checkout") {
+      const url = req.nextUrl.clone();
+      url.pathname = "/national-catalog";
+      url.search = "";
+      return NextResponse.redirect(url, { status: 307 });
+    }
+    if (req.method === "POST" && isNewPaymentEndpoint(pathname)) {
+      return NextResponse.json(
+        { ok: false, error: "national_checkout_paused", detail: "Please contact Warehouse Tire Direct to place your order." },
+        { status: 423, headers: { "cache-control": "no-store" } },
+      );
+    }
+  }
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
              req.headers.get("x-real-ip") || 
              "unknown";

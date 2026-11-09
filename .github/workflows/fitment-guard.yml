@@ -94,7 +94,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
 
       - name: Install dependencies
@@ -106,11 +106,13 @@ jobs:
       - name: Run deprecated usage check
         run: npm run fitment:deprecated-check || echo "::warning::Deprecated check script not found"
 
-      - name: Build project
-        run: npm run build
+      # Vercel runs the production build with the project's database settings.
+      # This job has no database credentials, so check TypeScript here instead.
+      - name: Check TypeScript
+        run: npx tsc --noEmit
 
       - name: Run fitment tests
-        run: npm run test -- --testPathPattern="fitment|makeNormalization" --passWithNoTests
+        run: npm run test -- --testPathPatterns="fitment|makeNormalization" --passWithNoTests
 
   fitment-smoke-test:
     name: Fitment Smoke Test
@@ -123,7 +125,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
 
       - name: Install dependencies

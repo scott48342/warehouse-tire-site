@@ -152,7 +152,9 @@ export async function getCachedSearch<T>(key: string): Promise<{ data: T; isStal
 export async function setCachedSearch<T>(
   key: string, 
   data: T, 
-  sources: { wheelpros: number; tireweb: number; km: number }
+  sources: { wheelpros: number; tireweb: number; km: number },
+  cacheTtlMs: number = CONFIG.CACHE_TTL_MS,
+  staleTtlMs: number = CONFIG.STALE_TTL_MS,
 ): Promise<void> {
   const redis = getRedis();
   if (!redis) return;
@@ -162,13 +164,13 @@ export async function setCachedSearch<T>(
     const entry: TireSearchCacheEntry<T> = {
       data,
       cachedAt: now,
-      staleAt: now + CONFIG.STALE_TTL_MS,
-      expiresAt: now + CONFIG.CACHE_TTL_MS,
+      staleAt: now + staleTtlMs,
+      expiresAt: now + cacheTtlMs,
       sources,
     };
     
     // Set with TTL slightly longer than expiresAt for safety
-    const ttlSeconds = Math.ceil(CONFIG.CACHE_TTL_MS / 1000) + 300; // +5 min buffer
+    const ttlSeconds = Math.ceil(cacheTtlMs / 1000) + 300; // +5 min buffer
     await redis.set(key, entry, { ex: ttlSeconds });
     
     console.log(`[tire-search-cache] Cached ${key}: ${sources.wheelpros} WP + ${sources.tireweb} TW results`);
@@ -220,7 +222,9 @@ const revalidating = new Set<string>();
  */
 export function triggerSearchRevalidation<T>(
   key: string,
-  searchFn: () => Promise<{ results: T; sources: { wheelpros: number; tireweb: number; km: number } }>
+  searchFn: () => Promise<{ results: T; sources: { wheelpros: number; tireweb: number; km: number } }>,
+  cacheTtlMs: number = CONFIG.CACHE_TTL_MS,
+  staleTtlMs: number = CONFIG.STALE_TTL_MS,
 ): void {
   if (revalidating.has(key)) {
     return; // Already revalidating
@@ -233,7 +237,7 @@ export function triggerSearchRevalidation<T>(
     try {
       console.log(`[tire-search-cache] Background revalidation for ${key}`);
       const { results, sources } = await searchFn();
-      await setCachedSearch(key, results, sources);
+      await setCachedSearch(key, results, sources, cacheTtlMs, staleTtlMs);
     } catch (err) {
       console.error(`[tire-search-cache] Revalidation failed for ${key}:`, err);
     } finally {
@@ -252,6 +256,9 @@ export interface CachedSearchOptions<T> {
   
   /** The actual search function (queries suppliers, merges, enriches) */
   searchFn: () => Promise<{ results: T[]; sources: { wheelpros: number; tireweb: number; km: number } }>;
+  /** Shorter TTL for feeds with fast-changing live stock. */
+  cacheTtlMs?: number;
+  staleTtlMs?: number;
 }
 
 export interface CachedSearchResult<T> {
@@ -272,7 +279,7 @@ export interface CachedSearchResult<T> {
 export async function cachedTireSearch<T>(
   options: CachedSearchOptions<T>
 ): Promise<CachedSearchResult<T>> {
-  const { cacheKey, searchFn } = options;
+  const { cacheKey, searchFn, cacheTtlMs, staleTtlMs } = options;
   
   // Step 1: Check cache
   const cached = await getCachedSearch<T[]>(cacheKey);
@@ -291,7 +298,7 @@ export async function cachedTireSearch<T>(
     
     // Stale cache - return but trigger revalidation
     console.log(`[tire-search-cache] Cache HIT (stale): ${cacheKey}`);
-    triggerSearchRevalidation(cacheKey, searchFn);
+    triggerSearchRevalidation(cacheKey, searchFn, cacheTtlMs, staleTtlMs);
     
     return { 
       results: cached.data, 
@@ -308,7 +315,7 @@ export async function cachedTireSearch<T>(
   
   // Step 3: Cache the results (only if we got some)
   if (results.length > 0) {
-    await setCachedSearch(cacheKey, results, sources);
+    await setCachedSearch(cacheKey, results, sources, cacheTtlMs, staleTtlMs);
   }
   
   return { 

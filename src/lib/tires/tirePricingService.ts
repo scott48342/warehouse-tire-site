@@ -16,6 +16,8 @@
 
 import { searchTiresTireWeb, tireWebTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
 import { checkStockBySize as checkStockUSAF, getStatus as getUSAFStatus, type USAutoForceStockItem } from "@/lib/usautoforce";
+import { isCapitalConfigured, searchCapitalTires } from "@/lib/capitalTire/client";
+import { getMapPrice, enforceMapFloor } from "@/lib/pricing/mapPriceFloor";
 
 // ============================================================================
 // Pricing Constants
@@ -118,6 +120,16 @@ export interface TireLookupResult {
   };
   imageUrl: string | null;
   source: string;
+}
+
+async function isLocalStorefrontRequest(): Promise<boolean> {
+  try {
+    const { headers } = await import("next/headers");
+    const host = (await headers()).get("host")?.toLowerCase().replace(/:\d+$/, "");
+    return host === "shop.warehousetire.net" || host === "local.warehousetire.net" || host === "warehousetire.net";
+  } catch {
+    return false;
+  }
 }
 
 // ============================================================================
@@ -251,6 +263,37 @@ export async function lookupTireDirect(
     }
   } catch (err) {
     console.error("[tirePricingService] USAF search failed:", err);
+  }
+
+  // Capital Tire is a local, manually fulfilled supplier. Use this fallback
+  // for Capital-only products when a saved quote is revalidated.
+  if (isCapitalConfigured() && await isLocalStorefrontRequest()) {
+    try {
+      const capitalItems = await searchCapitalTires(size);
+      const item = capitalItems.find((candidate) =>
+        candidate.manufacturerSku.toUpperCase() === sku.toUpperCase() ||
+        candidate.itemNumber.toUpperCase() === sku.toUpperCase()
+      );
+      if (item) {
+        const calculated = calculateTireSellPrice(item.cost, item.size);
+        const map = await getMapPrice(item.manufacturerSku, { size: item.size, model: item.model, brand: item.brand });
+        return {
+          found: true,
+          partNumber: item.manufacturerSku,
+          mfgPartNumber: item.manufacturerSku,
+          brand: item.brand,
+          model: item.model,
+          size: item.size,
+          cost: item.cost,
+          price: calculated == null ? null : enforceMapFloor(calculated, map?.mapPrice).price,
+          quantity: { primary: item.quantity, alternate: 0, national: 0 },
+          imageUrl: null,
+          source: "capital",
+        };
+      }
+    } catch (err) {
+      console.warn("[tirePricingService] Capital inventory unavailable:", err instanceof Error ? err.message : err);
+    }
   }
   
   return null;

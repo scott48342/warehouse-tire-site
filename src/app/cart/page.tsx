@@ -26,6 +26,7 @@ import {
 } from "@/lib/localPricing";
 import { useDiscount } from "@/lib/discounts/DiscountContext";
 import { DiscountBanner, DiscountCodeInput } from "@/components/DiscountBanner";
+import { NATIONAL_CHECKOUT_PAUSED } from "@/lib/nationalCatalog";
 
 // ============================================================================
 // National Order Summary with Discount Support
@@ -81,10 +82,10 @@ function NationalOrderSummary({
       </div>
       <div className="flex justify-between">
         <span className="text-neutral-600">Tax</span>
-        <span className="text-neutral-500">Calculated at checkout</span>
+        <span className="text-neutral-500">Confirmed by our team</span>
       </div>
       <div className="mt-4 pt-4 border-t border-neutral-200 flex justify-between items-center">
-        <span className="text-lg font-bold text-neutral-900">Estimated Total</span>
+        <span className="text-lg font-bold text-neutral-900">Estimated Total Before Tax</span>
         <span className="text-2xl font-extrabold text-neutral-900">
           ${finalTotal.toFixed(2)}
         </span>
@@ -775,12 +776,24 @@ export default function CartPage() {
               <CartTrustModule className="mt-5" fitVerified={cartFitVerified} />
 
               <div className="mt-4 space-y-3">
-                <Link
-                  href={isLocal ? "/checkout?mode=local" : "/checkout"}
-                  className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
-                >
-                  Proceed to Checkout
-                </Link>
+                {NATIONAL_CHECKOUT_PAUSED && !isLocal ? (
+                  <>
+                    <p className="text-sm text-neutral-700">Online checkout is paused. Contact our team with the items in your cart to confirm fitment, availability, and price.</p>
+                    <a href={BRAND.links.tel} className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700">
+                      Call {BRAND.phone.callDisplay} to order
+                    </a>
+                    <Link href="/contact?from=cart" className="flex h-11 w-full items-center justify-center rounded-xl border border-neutral-300 bg-white px-4 text-sm font-bold text-neutral-900 hover:bg-neutral-50">
+                      Send this selection to our team
+                    </Link>
+                  </>
+                ) : (
+                  <Link
+                    href={isLocal ? "/checkout?mode=local" : "/checkout"}
+                    className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
+                  >
+                    Proceed to Checkout
+                  </Link>
+                )}
 
                 {hasWheels() && !hasTires() ? (
                   <Link

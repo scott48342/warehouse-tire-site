@@ -23,6 +23,8 @@ import { getOutTheDoorBreakdown } from "@/lib/localPricing";
 import { InstallTimeIndicator } from "./InstallTimeIndicator";
 import { EarlyEmailCapture } from "./EarlyEmailCapture";
 import { SaveQuoteButton } from "./SaveQuoteButton";
+import { BRAND } from "@/lib/brand";
+import { NATIONAL_CHECKOUT_PAUSED } from "@/lib/nationalCatalog";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -434,7 +436,7 @@ export function CartSlideout() {
   }
 
   const tiresUrl = tiresHandoff.ok ? `/tires?${tiresParams.toString()}` : tiresHandoff.reAddHref;
-  const checkoutUrl = `/checkout`;
+  const checkoutUrl = NATIONAL_CHECKOUT_PAUSED && !isLocal ? "/national-catalog" : "/checkout";
 
   return (
     <>
@@ -680,7 +682,7 @@ export function CartSlideout() {
             )}
             
             {/* Affirm financing messaging */}
-            {subtotal >= 50 && (
+          {subtotal >= 50 && (isLocal || !NATIONAL_CHECKOUT_PAUSED) && (
               <div className="pt-2">
                 <FinancingBadge price={isLocal && localOutTheDoorTotal ? localOutTheDoorTotal : subtotal} variant="inline" />
               </div>
@@ -708,9 +710,20 @@ export function CartSlideout() {
               onClick={() => setIsOpen(false)}
               className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors gap-2"
             >
-              <span>Checkout</span>
+              <span>{NATIONAL_CHECKOUT_PAUSED && !isLocal ? "How to order" : "Checkout"}</span>
               <span className="text-red-200">→</span>
             </Link>
+          )}
+
+          {NATIONAL_CHECKOUT_PAUSED && !isLocal && (
+            <div className="flex gap-2">
+              <a href={BRAND.links.tel} className="flex h-10 flex-1 items-center justify-center rounded-xl border border-red-600 bg-white px-3 text-sm font-bold text-red-700 hover:bg-red-50">
+                Call {BRAND.phone.callDisplay}
+              </a>
+              <Link href="/contact?from=cart" onClick={() => setIsOpen(false)} className="flex h-10 flex-1 items-center justify-center rounded-xl border border-neutral-300 bg-white px-3 text-sm font-bold text-neutral-700 hover:bg-neutral-50">
+                Send selection
+              </Link>
+            </div>
           )}
 
           {/* Secondary action */}
