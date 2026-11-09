@@ -2044,7 +2044,7 @@ export async function GET(req: Request) {
     const url = new URL(req.url);
     const host = req.headers.get("host") || req.headers.get("x-forwarded-host") || url.host;
     const capitalEnabled = detectShopContextFromHostPath(host, url.pathname).mode === "local" && isCapitalConfigured();
-    const capitalCacheSuffix = capitalEnabled ? ":capital-local-v1" : "";
+    const capitalCacheSuffix = capitalEnabled ? ":capital-local-v2" : "";
     const capitalCacheOptions = capitalEnabled ? { cacheTtlMs: 5 * 60_000, staleTtlMs: 2 * 60_000 } : {};
     
     // Direct size search
