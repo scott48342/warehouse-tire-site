@@ -15,7 +15,8 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
-import { JAKE_SYSTEM_PROMPT } from "./systemPrompt";
+import { JAKE_SYSTEM_PROMPT, NATIONAL_CATALOG_JAKE_GUIDANCE } from "./systemPrompt";
+import { NATIONAL_CHECKOUT_PAUSED } from "@/lib/nationalCatalog";
 import { JAKE_TOOLS, executeTool } from "./tools";
 import { fitmentCache } from "./fitmentCache";
 
@@ -167,6 +168,8 @@ Otherwise, assume all fitment questions are for the ${vehicleStr}.`;
     // Add local mode context
     if (isLocal) {
       systemPrompt += `\n\nNOTE: This customer is on the LOCAL site (warehousetire.net). They can get installation at our Pontiac or Waterford locations. Mention installation is available when relevant.`;
+    } else if (NATIONAL_CHECKOUT_PAUSED) {
+      systemPrompt += `\n\n${NATIONAL_CATALOG_JAKE_GUIDANCE}`;
     }
     
     // Add gallery build context (from "Build Something Similar")

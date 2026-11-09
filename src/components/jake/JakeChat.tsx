@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { JakeProductCard, JakePackageCard, ParsedProduct } from "./JakeProductCards";
+import { NATIONAL_CHECKOUT_PAUSED } from "@/lib/nationalCatalog";
 import { JakeComparePanel, CompareFloatingBar } from "./JakeComparePanel";
 import { trackJakeEvent, trackJakeMessage, getJakeSessionId, setJakeSessionId, resetJakeSessionId } from "./JakeAnalytics";
 import { JakeAvatar } from "./JakeAvatar";
@@ -425,6 +426,7 @@ interface JakeChatProps {
 }
 
 export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = false, buildContext }: JakeChatProps) {
+  const nationalCatalog = NATIONAL_CHECKOUT_PAUSED && !isLocal;
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -1403,7 +1405,7 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                         }}
                         className="flex-1 rounded-lg bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 px-3 py-2.5 text-white text-sm font-bold transition-all shadow-lg flex items-center justify-center gap-2"
                       >
-                        🛒 Checkout
+                        {nationalCatalog ? "View selection" : "🛒 Checkout"}
                       </button>
                       <button
                         onClick={() => handleSend("I'd like to make some changes to this build.")}
@@ -1685,16 +1687,16 @@ export function JakeChat({ embedded = false, initialPrompt, onClose, isLocal = f
                 <div className="mt-3 space-y-2">
                   <a
                     href={message.cartUrl}
-                    onClick={() => trackJakeEvent("checkout_started")}
+                    onClick={() => { if (!nationalCatalog) trackJakeEvent("checkout_started"); }}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-green-500/20"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    Your Cart is Ready →
+                    {nationalCatalog ? "Your selection is ready →" : "Your Cart is Ready →"}
                   </a>
                   <p className="text-white/40 text-xs">
-                    ✓ Built by Jake • Click to complete your order
+                    {nationalCatalog ? "Built by Jake • Contact our team to place your order" : "✓ Built by Jake • Click to complete your order"}
                   </p>
                 </div>
               )}
