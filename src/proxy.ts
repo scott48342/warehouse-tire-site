@@ -62,7 +62,7 @@ function geoBlocked(req: NextRequest, pathname: string): boolean {
   return true;
 }
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname, searchParams } = req.nextUrl;
   const requestHost = req.headers.get("host") || req.headers.get("x-forwarded-host") || "";
 
