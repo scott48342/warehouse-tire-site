@@ -27,6 +27,7 @@ import { eq, and, isNull, isNotNull, lt, sql, desc } from "drizzle-orm";
 import { hasCartRecoveryConsent } from "@/lib/cart/recoveryConsent";
 import { decideRecoveryEmail } from "@/lib/cart/recoveryEligibility";
 import { signCartToken } from "@/lib/cart/recoveryLink";
+import { NATIONAL_CHECKOUT_PAUSED, isNationalCatalogHost } from "@/lib/nationalCatalog";
 import {
   emailWrapper,
   infoBar,
@@ -274,6 +275,7 @@ function getItemSummary(items: any[]): { wheels: any[]; tires: any[]; accessorie
 // ============================================================================
 
 function buildSubject(cart: AbandonedCart, step: EmailStep): string {
+  const nationalCatalog = NATIONAL_CHECKOUT_PAUSED && isNationalCatalogHost(cart.hostname || "");
   const vehicle = cart.vehicleYear && cart.vehicleMake
     ? `${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel || ""}`
     : null;
@@ -287,7 +289,7 @@ function buildSubject(cart: AbandonedCart, step: EmailStep): string {
       : "Your cart is about to expire",
     third: vehicle
       ? `Last chance: Your ${vehicle} package`
-      : "Final reminder: Complete your order",
+      : nationalCatalog ? "Final reminder: Ask us about your selection" : "Final reminder: Complete your order",
   };
 
   return subjects[step];
@@ -298,6 +300,7 @@ function buildSubject(cart: AbandonedCart, step: EmailStep): string {
 // ============================================================================
 
 function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
+  const nationalCatalog = NATIONAL_CHECKOUT_PAUSED && isNationalCatalogHost(cart.hostname || "");
   const recoveryLink = generateTrackedClickLink(cart.cartId);
   const trackingPixel = generateTrackingPixelHtml(cart.cartId);
   const customerName = cart.customerFirstName || null;
@@ -314,7 +317,9 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
   const contentByStep: Record<EmailStep, { headline: string; intro: string; urgency: string }> = {
     first: {
       headline: "You left something behind",
-      intro: "We noticed you didn't finish checking out. No worries — your cart is saved and ready when you are.",
+      intro: nationalCatalog
+        ? "Your selection is saved. Review it and contact our team when you're ready to talk through the details."
+        : "We noticed you didn't finish checking out. No worries — your cart is saved and ready when you are.",
       urgency: "",
     },
     second: {
@@ -390,8 +395,10 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
       </tr>
     ` : ""}
     ${priceSummary(summaryLines, "Estimated Total", totalValue)}
-    ${textSection("Ready to get rolling? Click below to restore your cart — all items saved.", true)}
-    ${ctaButton("Complete My Order", recoveryLink)}
+    ${textSection(nationalCatalog
+      ? "Ready to get rolling? Review your selection and contact our team for help with the purchase."
+      : "Ready to get rolling? Click below to restore your cart — all items saved.", true)}
+    ${ctaButton(nationalCatalog ? "Review My Selection" : "Complete My Order", recoveryLink)}
     ${footer({
       showPhone: true,
       unsubscribeUrl: generateRecoveryOptOutLink(cart.cartId),
@@ -408,6 +415,7 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
 }
 
 function buildEmailText(cart: AbandonedCart, step: EmailStep): string {
+  const nationalCatalog = NATIONAL_CHECKOUT_PAUSED && isNationalCatalogHost(cart.hostname || "");
   const customerName = cart.customerFirstName || "there";
   const vehicleLabel = cart.vehicleYear && cart.vehicleMake
     ? `${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel || ""}`.trim()
@@ -416,7 +424,9 @@ function buildEmailText(cart: AbandonedCart, step: EmailStep): string {
   const recoveryLink = generateRecoveryLink(cart.cartId);
 
   const contentByStep: Record<EmailStep, string> = {
-    first: "We noticed you didn't finish checking out. No worries — your cart is saved.",
+    first: nationalCatalog
+      ? "Your selection is saved. Review it and contact our team when you're ready to discuss the purchase."
+      : "We noticed you didn't finish checking out. No worries — your cart is saved.",
     second: "Just a friendly reminder that your cart is still waiting. Prices can change!",
     third: "This is our final reminder. Your cart will expire soon.",
   };
@@ -432,7 +442,7 @@ ${contentByStep[step]}
 ${vehicleLabel ? `Vehicle: ${vehicleLabel}\n` : ""}
 Estimated Total: ${formatMoney(totalValue)}
 
-Complete your order: ${recoveryLink}
+${nationalCatalog ? "Review your selection" : "Complete your order"}: ${recoveryLink}
 
 Questions? Reply to this email or call ${BRAND.phone?.callDisplay || "us"}.
 

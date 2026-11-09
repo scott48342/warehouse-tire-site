@@ -122,6 +122,16 @@ export interface TireLookupResult {
   source: string;
 }
 
+async function isLocalStorefrontRequest(): Promise<boolean> {
+  try {
+    const { headers } = await import("next/headers");
+    const host = (await headers()).get("host")?.toLowerCase().replace(/:\d+$/, "");
+    return host === "shop.warehousetire.net" || host === "local.warehousetire.net" || host === "warehousetire.net";
+  } catch {
+    return false;
+  }
+}
+
 // ============================================================================
 // Simple Size Conversion
 // ============================================================================
@@ -257,7 +267,7 @@ export async function lookupTireDirect(
 
   // Capital Tire is a local, manually fulfilled supplier. Use this fallback
   // for Capital-only products when a saved quote is revalidated.
-  if (isCapitalConfigured()) {
+  if (isCapitalConfigured() && await isLocalStorefrontRequest()) {
     try {
       const capitalItems = await searchCapitalTires(size);
       const item = capitalItems.find((candidate) =>
