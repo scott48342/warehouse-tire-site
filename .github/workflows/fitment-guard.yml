@@ -112,7 +112,7 @@ jobs:
         run: npx tsc --noEmit
 
       - name: Run fitment tests
-        run: npm run test -- --testPathPattern="fitment|makeNormalization" --passWithNoTests
+        run: npm run test -- --testPathPatterns="fitment|makeNormalization" --passWithNoTests
 
   fitment-smoke-test:
     name: Fitment Smoke Test
