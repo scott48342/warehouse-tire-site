@@ -19,6 +19,7 @@ import {
 import { defaultCatalogPriceResolver } from "@/lib/checkout/repriceCatalog";
 import { defaultHardwareSpecResolver } from "@/lib/checkout/hardwareSpec";
 import { checkoutFailureResponse, rejectedLinesResponse } from "@/lib/checkout/responses";
+import { nationalCheckoutBlockedResponse } from "@/lib/nationalCheckoutGuard";
 
 export const runtime = "nodejs";
 
@@ -101,6 +102,8 @@ async function validateWheelAvailability(items: CartItem[]): Promise<{
 }
 
 export async function POST(req: Request) {
+  const blocked = nationalCheckoutBlockedResponse(req);
+  if (blocked) return blocked;
   try {
     const body = await req.json().catch(() => ({} as any));
     const items: CartItem[] = Array.isArray(body.items) ? body.items : [];
