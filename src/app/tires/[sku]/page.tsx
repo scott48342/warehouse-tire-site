@@ -665,7 +665,7 @@ export default async function TireDetailPage({
         if (tire) {
           const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
           const price = typeof tire.price === "number" && tire.price > 0 ? tire.price : null;
-          const displayPrice = (price && cost && price > cost)
+          const displayPrice = (price && (!cost || price > cost))
             ? price
             : cost
               ? cost + 50
