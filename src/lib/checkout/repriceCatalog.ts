@@ -54,7 +54,7 @@ export type ResolvedCatalogPrice = {
 
 export type CatalogPriceResolver = (
   sku: string,
-  ctx: { type: "wheel" | "tire" | "accessory"; size?: string },
+  ctx: { type: "wheel" | "tire" | "accessory"; size?: string; quantity?: number; verifyStock?: boolean },
 ) => Promise<ResolvedCatalogPrice | null>;
 
 function getBaseUrl() {
@@ -149,13 +149,18 @@ export async function resolveWheelPrice(sku: string): Promise<ResolvedCatalogPri
   return null;
 }
 
-export async function resolveTirePrice(sku: string, size?: string): Promise<ResolvedCatalogPrice | null> {
+export async function resolveTirePrice(sku: string, size?: string, quantity?: number, verifyStock = false): Promise<ResolvedCatalogPrice | null> {
   const clean = String(sku || "").trim();
   if (!clean) return null;
   const norm = (v: unknown) => String(v || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
   const target = norm(clean);
   const qs = new URLSearchParams({ partNumber: clean, pageSize: "100" });
   if (size) qs.set("size", size);
+  if (verifyStock && size) {
+    qs.set("minQty", "4");
+    qs.set("pageSize", "500");
+    qs.set("includePartialStock", "1");
+  }
   try {
     const res = await fetch(`${await getTireSearchBaseUrl()}/api/tires/search?${qs.toString()}`, { cache: "no-store" });
     if (!res.ok) return null;
@@ -163,6 +168,10 @@ export async function resolveTirePrice(sku: string, size?: string): Promise<Reso
     const hit = (Array.isArray(j?.results) ? j.results : []).find(
       (t) => norm(t?.partNumber) === target || norm(t?.mfgPartNumber) === target || norm(t?.sku) === target
     );
+    if (verifyStock && quantity != null) {
+      const available = Math.max(0, Number(hit?.quantity?.primary) || 0, Number(hit?.quantity?.alternate) || 0, Number(hit?.quantity?.national) || 0);
+      if (available < quantity) return null;
+    }
     const price = positive(hit?.price ?? hit?.sellPrice);
     if (hit && price != null) {
       return {
@@ -221,4 +230,4 @@ export async function resolveAccessoryPrice(sku: string): Promise<ResolvedCatalo
 }
 
 export const defaultCatalogPriceResolver: CatalogPriceResolver = (sku, ctx) =>
-  ctx.type === "wheel" ? resolveWheelPrice(sku) : ctx.type === "tire" ? resolveTirePrice(sku, ctx.size) : resolveAccessoryPrice(sku);
+  ctx.type === "wheel" ? resolveWheelPrice(sku) : ctx.type === "tire" ? resolveTirePrice(sku, ctx.size, ctx.quantity, ctx.verifyStock) : resolveAccessoryPrice(sku);
