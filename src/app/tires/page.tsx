@@ -553,7 +553,7 @@ async function fetchActiveRebates() {
 async function fetchTireWebTires(
   tireSize: string, 
   brand?: string,
-  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number },
+  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number; includePartialCapital?: boolean },
   baseUrl = getBaseUrl()
 ) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
@@ -573,6 +573,7 @@ async function fetchTireWebTires(
     if (vehicle?.make) params.set("make", vehicle.make);
     if (vehicle?.model) params.set("model", vehicle.model);
     if (vehicle?.wheelDiameter) params.set("wheelDiameter", String(vehicle.wheelDiameter));
+    if (vehicle?.includePartialCapital) params.set("includePartialCapital", "1");
     
     const res = await fetch(`${baseUrl}/api/tires/search?${params.toString()}`, {
       cache: "no-store",
@@ -2361,6 +2362,7 @@ export default async function TiresPage({
             make: make || undefined,
             model: model || undefined,
             wheelDiameter: wheelDiaNum || undefined,
+            includePartialCapital: isLocalMode,
           }, searchBaseUrl)
         : hasBrandSearch 
           ? fetchTiresByBrand(brandParam, searchBaseUrl)
@@ -2922,6 +2924,9 @@ export default async function TiresPage({
       default: return 0;
     }
   });
+  const inStockItemCount = items.filter(t =>
+    Math.max(t.quantity?.primary ?? 0, t.quantity?.alternate ?? 0, t.quantity?.national ?? 0) >= 4
+  ).length;
 
   // ═══════════════════════════════════════════════════════════════════════════
   // POPULARITY SIGNALS - Fetch batch data for visible products (cached, non-blocking)
@@ -3679,7 +3684,7 @@ export default async function TiresPage({
                 wheelDia,
                 
                 // Stock info
-                inStockCount: items.length,
+                inStockCount: inStockItemCount,
                 totalCount: itemsEnriched.length,
               }}
             />
@@ -3765,7 +3770,7 @@ export default async function TiresPage({
                 sort,
                 wheelSku,
                 wheelDia,
-                inStockCount: items.length,
+                inStockCount: inStockItemCount,
                 totalCount: itemsEnriched.length,
               }}
             />
@@ -4104,7 +4109,7 @@ export default async function TiresPage({
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {displaySize ? <Chip active>{displaySize}</Chip> : null}
-                <Chip>In stock</Chip>
+                <Chip>{inStockItemCount === items.length ? "In stock" : "Limited stock shown"}</Chip>
                 {displaySize ? <TireSizeGuide variant="icon" className="ml-1" /> : null}
               </div>
             </div>
@@ -4508,6 +4513,7 @@ function TireCard({
   const national = typeof q.national === "number" ? q.national : 0;
   const maxQty = Math.max(primary, alternate, national, 0);
   const inStock = maxQty >= 4;
+  const limitedCapitalStock = t.rawSource === "capital" && maxQty > 0 && maxQty < 4;
 
   const tireSku = String(t.partNumber || t.mfgPartNumber || "").trim();
   // Clean the display title: remove redundant brand (shown separately) and "/sl" load markers
@@ -4810,6 +4816,11 @@ function TireCard({
           // Local mode: just show install time indicator (replaces "in stock" text)
           inStock ? (
             <InstallTimeIndicator variant="inline" />
+          ) : limitedCapitalStock ? (
+            <>
+              <span className="text-amber-500">📦</span>
+              <span className="text-amber-700">{maxQty} available • Call for a set of 4</span>
+            </>
           ) : (
             <>
               <span className="text-amber-500">📦</span>
@@ -4941,6 +4952,7 @@ function TireCard({
               unitPrice={getDisplayPrice(t)!}
               vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
               source={t.rawSource}
+              availableQty={limitedCapitalStock ? maxQty : undefined}
             />
           ) : (
             <QuickAddTireButton
@@ -4968,11 +4980,11 @@ function TireCard({
               ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, ...(liftedQuery || {}) }).toString()}`
               : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber
                 ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb", ...(liftedQuery || {}) }).toString()}`
-                : "#"
+                : t.rawSource === "capital" ? BRAND.links.tel : "#"
           }
           className="rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
         >
-          View Details
+          {t.rawSource === "capital" ? (limitedCapitalStock ? "Call for set of 4" : "Call for details") : "View Details"}
         </Link>
       </div>
     </article>

@@ -22,6 +22,7 @@ type LocalTireAddButtonProps = {
     modification?: string;
   };
   source?: string;
+  availableQty?: number;
 };
 
 const QTY_OPTIONS = [1, 2, 3, 4] as const;
@@ -37,14 +38,18 @@ export function LocalTireAddButton({
   unitPrice,
   vehicle,
   source,
+  availableQty,
 }: LocalTireAddButtonProps) {
   const { addItem, hasWheels } = useCart();
-  const [quantity, setQuantity] = useState<number>(4);
+  const maxSelectableQty = availableQty == null ? 4 : Math.max(1, Math.min(4, Math.floor(availableQty)));
+  const limitedStock = maxSelectableQty < 4;
+  const [quantity, setQuantity] = useState<number>(maxSelectableQty);
   const [isAdding, setIsAdding] = useState(false);
 
   const isPackageFlow = hasWheels();
 
   const handleAdd = () => {
+    if (quantity > maxSelectableQty) return;
     setIsAdding(true);
     setTimeout(() => {
       addItem({
@@ -76,7 +81,12 @@ export function LocalTireAddButton({
   return (
     <div className="w-full max-w-full overflow-hidden space-y-2">
       {/* Install time indicator - same-day before 11am, next-day after */}
-      <InstallTimeIndicator variant="badge" />
+      {!limitedStock && <InstallTimeIndicator variant="badge" />}
+      {limitedStock && (
+        <div className="text-xs font-semibold text-amber-700">
+          {maxSelectableQty} available for online checkout. Call us for a set of four.
+        </div>
+      )}
       
       {/* Price row - matches national layout */}
       <div className="flex items-baseline gap-2 flex-wrap">
@@ -84,7 +94,7 @@ export function LocalTireAddButton({
         <span className="text-sm text-neutral-500">/ea</span>
         <span className="text-sm text-neutral-500 ml-auto">Qty:</span>
         <div className="flex gap-1">
-          {QTY_OPTIONS.map((q) => (
+          {QTY_OPTIONS.filter(q => q <= maxSelectableQty).map((q) => (
             <button
               key={q}
               onClick={() => setQuantity(q)}
@@ -121,7 +131,7 @@ export function LocalTireAddButton({
       {/* Add to Cart Button */}
       <button
         onClick={handleAdd}
-        disabled={isAdding}
+        disabled={isAdding || quantity > maxSelectableQty}
         className={buttonStyles + " w-full"}
       >
         {isAdding ? (

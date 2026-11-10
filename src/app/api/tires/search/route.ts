@@ -1593,6 +1593,7 @@ async function mergeTireResults(
   usafResults: TireResult[] = [],
   minQty: number,
   capitalResults: TireResult[] = [],
+  includePartialCapital = false,
 ): Promise<TireResult[]> {
   const merged = new Map<string, TireResult>();
   
@@ -1824,7 +1825,8 @@ async function mergeTireResults(
   // NOW filter by minQty after all sources are merged
   const filtered = Array.from(merged.values()).filter(tire => {
     const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
-    return minQty <= 0 || totalQty >= minQty;
+    return minQty <= 0 || totalQty >= minQty ||
+      (includePartialCapital && tire.source === "capital" && totalQty > 0);
   });
   
   // Sort by PRICE ascending (lowest first), then by brand
@@ -2083,7 +2085,9 @@ export async function GET(req: Request) {
     
     // Case 1: Direct size search
     if (sizeRaw) {
-      const cacheKey = buildSizeCacheKey(sizeRaw) + capitalCacheSuffix;
+      const includePartialCapital = capitalEnabled && url.searchParams.get("includePartialCapital") === "1";
+      // Merge happens before caching, so quantity/page-size variants need distinct entries.
+      const cacheKey = `${buildSizeCacheKey(sizeRaw)}${capitalCacheSuffix}:qty${minQty}:page${pageSize}${includePartialCapital ? ":partial-capital-v1" : ""}`;
       const tSearch0 = Date.now();
       
       // ═══════════════════════════════════════════════════════════════════════
@@ -2107,7 +2111,7 @@ export async function GET(req: Request) {
           
           // Merge and dedupe by partNumber
           // Priority: USAF direct > TireWeb (USAF has richer data) > WheelPros > K&M
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, usafResults, minQty, capitalResults);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, usafResults, minQty, capitalResults, includePartialCapital);
           
           // Apply cached TireLibrary images (from Vercel Blob)
           const withCachedImages = await applyCachedImages(merged);
