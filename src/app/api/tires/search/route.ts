@@ -474,6 +474,8 @@ interface TireResult {
   description: string;
   cost: number | null;
   price?: number | null;
+  priceSource?: string;
+  priceSourceQty?: number;
   quantity: { primary: number; alternate: number; national: number };
   imageUrl: string | null;
   size: string;
@@ -1594,8 +1596,23 @@ async function mergeTireResults(
   minQty: number,
   capitalResults: TireResult[] = [],
   includePartialCapital = false,
+  includePartialStock = false,
 ): Promise<TireResult[]> {
   const merged = new Map<string, TireResult>();
+  // Keep each supplier's price and stock together. Merged quantities can include
+  // several suppliers and must not be used to sell a partial set at one price.
+  const stockCandidates = new Map<string, Array<{
+    source: TireResult["source"];
+    cost: TireResult["cost"];
+    price: TireResult["price"];
+    available: number;
+  }>>();
+  const availableAtOneLocation = (tire: TireResult) => Math.max(
+    0,
+    tire.quantity.primary || 0,
+    tire.quantity.alternate || 0,
+    tire.quantity.national || 0,
+  );
   
   // Build USAF lookup for enrichment - keyed by part number
   // When we see the same tire from TireWeb, we'll add USAF's richer data
@@ -1657,6 +1674,14 @@ async function mergeTireResults(
   // This prevents showing ATD's $104 price when ATD only has 2 but customer needs 4
   const addTire = (tire: TireResult, skipMinQtyCheck: boolean = false) => {
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
+    if (includePartialStock) {
+      const available = availableAtOneLocation(tire);
+      if (available > 0 && ((tire.price ?? 0) > 0 || (tire.cost ?? 0) > 0)) {
+        const candidates = stockCandidates.get(key) || [];
+        candidates.push({ source: tire.source, cost: tire.cost, price: tire.price, available });
+        stockCandidates.set(key, candidates);
+      }
+    }
     
     // Calculate this source's available quantity
     const tireSourceQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
@@ -1822,10 +1847,40 @@ async function mergeTireResults(
     }
   }
   
+  // For local single-tire and pair shopping, use a supplier that actually has
+  // the displayed quantity. Keep the existing full-set price when its source
+  // has four or more in one location.
+  if (includePartialStock) {
+    for (const [key, tire] of merged) {
+      const candidates = stockCandidates.get(key) || [];
+      const current = candidates.find(candidate => candidate.source === tire.source && candidate.available >= minQty);
+      if (current) continue;
+
+      const fullSet = candidates.filter(candidate => candidate.available >= minQty);
+      const eligible = fullSet.length ? fullSet : candidates;
+      if (!eligible.length) continue;
+      eligible.sort((a, b) => {
+        if (!fullSet.length && a.available !== b.available) return b.available - a.available;
+        const aAuto = a.source === "usautoforce" || a.source === "wheelpros" ? 1 : 0;
+        const bAuto = b.source === "usautoforce" || b.source === "wheelpros" ? 1 : 0;
+        if (aAuto !== bAuto) return bAuto - aAuto;
+        return (a.cost ?? a.price ?? Infinity) - (b.cost ?? b.price ?? Infinity);
+      });
+      const selected = eligible[0];
+      tire.source = selected.source;
+      tire.cost = selected.cost;
+      tire.price = selected.price;
+      tire.quantity = { primary: selected.available, alternate: 0, national: 0 };
+      tire.priceSource = selected.source;
+      tire.priceSourceQty = selected.available;
+    }
+  }
+
   // NOW filter by minQty after all sources are merged
   const filtered = Array.from(merged.values()).filter(tire => {
     const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
     return minQty <= 0 || totalQty >= minQty ||
+      (includePartialStock && (stockCandidates.get(normalizeProductKey(tire.mfgPartNumber, tire.brand))?.length ?? 0) > 0) ||
       (includePartialCapital && tire.source === "capital" && totalQty > 0);
   });
   
@@ -2086,8 +2141,9 @@ export async function GET(req: Request) {
     // Case 1: Direct size search
     if (sizeRaw) {
       const includePartialCapital = capitalEnabled && url.searchParams.get("includePartialCapital") === "1";
+      const includePartialStock = url.searchParams.get("includePartialStock") === "1";
       // Merge happens before caching, so quantity/page-size variants need distinct entries.
-      const cacheKey = `${buildSizeCacheKey(sizeRaw)}${capitalCacheSuffix}:qty${minQty}:page${pageSize}${includePartialCapital ? ":partial-capital-v1" : ""}`;
+      const cacheKey = `${buildSizeCacheKey(sizeRaw)}${capitalCacheSuffix}:qty${minQty}:page${pageSize}${includePartialCapital ? ":partial-capital-v1" : ""}${includePartialStock ? ":partial-all-v1" : ""}`;
       const tSearch0 = Date.now();
       
       // ═══════════════════════════════════════════════════════════════════════
@@ -2102,7 +2158,7 @@ export async function GET(req: Request) {
           // TireWeb may be rate-limited (ErrorCode 127), K&M provides backup inventory
           // USAF direct provides richer data than TireWeb (MAP, FET, warranty, specs)
           const [wpResults, twResults, kmResults, usafResults, capitalResults] = await Promise.all([
-            searchTiresBySize(db, sizeRaw, minQty, pageSize * 2), // Fetch extra for filtering
+            searchTiresBySize(db, sizeRaw, includePartialStock ? 1 : minQty, pageSize * 2), // Fetch extra for filtering
             searchTiresTireWebFormatted(sizeRaw),
             searchTiresKM(sizeRaw), // K&M/Keystone for additional inventory
             searchTiresUSAF(sizeRaw), // US AutoForce direct (better data than TireWeb)
@@ -2111,7 +2167,7 @@ export async function GET(req: Request) {
           
           // Merge and dedupe by partNumber
           // Priority: USAF direct > TireWeb (USAF has richer data) > WheelPros > K&M
-          const merged = await mergeTireResults(wpResults, twResults, kmResults, usafResults, minQty, capitalResults, includePartialCapital);
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, usafResults, minQty, capitalResults, includePartialCapital, includePartialStock);
           
           // Apply cached TireLibrary images (from Vercel Blob)
           const withCachedImages = await applyCachedImages(merged);

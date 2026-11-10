@@ -1864,9 +1864,9 @@ function CheckoutItem({
   const lineTotal = cartLineTotal(item);
   
   // Quantity constraints
-  // Wheels/tires: 4 (standard) or 5 (with spare), accessories: 1-99
-  const minQty = type === "accessory" ? 1 : 4;
-  const maxQty = type === "accessory" ? 99 : 5;
+  // Tires may be singles or pairs; limited-stock lines stop at supplier stock.
+  const minQty = type === "wheel" ? 4 : 1;
+  const maxQty = type === "accessory" ? 99 : type === "tire" ? Math.min(5, (item as CartTireItem).availableQty ?? Infinity) : 5;
   const canDecrement = item.quantity > minQty;
   const canIncrement = item.quantity < maxQty;
 

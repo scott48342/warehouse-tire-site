@@ -156,6 +156,8 @@ export type CartTireItem = {
   imageUrl?: string;
   unitPrice: number;
   quantity: number;
+  /** Maximum quantity reported by the selected supplier when stock is limited. */
+  availableQty?: number;
   vehicle?: {
     year: string;
     make: string;
@@ -363,13 +365,19 @@ export function CartProvider({ children }: { children: ReactNode }) {
       for (const tire of tireItems) {
         try {
           // Fetch current price for this tire
-          const res = await fetch(
-            `/api/tires/search?partNumber=${encodeURIComponent(tire.sku)}&limit=1`
-          );
+          const limitedStockParams = tire.availableQty != null
+            ? new URLSearchParams({ size: tire.size, minQty: "4", pageSize: "500", includePartialStock: "1", partNumber: tire.sku })
+            : null;
+          const res = await fetch(limitedStockParams
+            ? `/api/tires/search?${limitedStockParams.toString()}`
+            : `/api/tires/search?partNumber=${encodeURIComponent(tire.sku)}&limit=1`);
           if (!res.ok) continue;
           
           const data = await res.json();
-          const result = data?.results?.[0];
+          const result = limitedStockParams
+            ? data?.results?.find((candidate: { partNumber?: string; mfgPartNumber?: string }) =>
+                candidate.partNumber === tire.sku || candidate.mfgPartNumber === tire.sku)
+            : data?.results?.[0];
           if (!result) continue;
 
           // Calculate correct display price (sell price, or cost + $50)
@@ -377,12 +385,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
           const sellPrice = typeof result.price === "number" && result.price > 0 ? result.price : null;
           const currentPrice = sellPrice || (cost ? cost + 50 : null);
 
-          if (currentPrice && Math.abs(currentPrice - tire.unitPrice) > 0.01) {
-            // Price has changed - update it
-            console.log(`[Cart] Refreshing tire price: ${tire.sku} $${tire.unitPrice} → $${currentPrice}`);
+          const refreshedAvailable = limitedStockParams
+            ? Math.max(0, result.quantity?.primary ?? 0, result.quantity?.alternate ?? 0, result.quantity?.national ?? 0)
+            : null;
+          if (currentPrice && (Math.abs(currentPrice - tire.unitPrice) > 0.01 ||
+              (refreshedAvailable != null && (refreshedAvailable !== tire.availableQty || result.source !== tire.source)))) {
+            // Keep a saved limited-stock cart aligned with the current supplier quote.
+            console.log(`[Cart] Refreshing tire quote: ${tire.sku}`);
             const idx = updatedItems.findIndex(i => i.sku === tire.sku && i.type === "tire");
             if (idx >= 0) {
-              updatedItems[idx] = { ...updatedItems[idx], unitPrice: currentPrice };
+              updatedItems[idx] = {
+                ...updatedItems[idx], unitPrice: currentPrice,
+                ...(refreshedAvailable != null && refreshedAvailable > 0 ? {
+                  availableQty: refreshedAvailable < 4 ? refreshedAvailable : undefined,
+                  quantity: Math.min(updatedItems[idx].quantity, refreshedAvailable),
+                  source: result.source || tire.source,
+                } : {}),
+              };
               hasUpdates = true;
             }
           }
@@ -437,9 +456,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
         }
         // Update quantity of existing item
         const updated = [...prev];
+        const existingItem = updated[existingIndex];
+        const availableQty = item.type === "tire"
+          ? Math.min(
+              item.availableQty ?? Infinity,
+              existingItem.type === "tire" ? existingItem.availableQty ?? Infinity : Infinity,
+            )
+          : Infinity;
         updated[existingIndex] = {
-          ...updated[existingIndex],
-          quantity: updated[existingIndex].quantity + item.quantity,
+          ...existingItem,
+          quantity: Math.min(existingItem.quantity + item.quantity, availableQty),
+          ...(item.type === "tire" && Number.isFinite(availableQty) ? { availableQty } : {}),
         };
         return updated;
       }
@@ -566,7 +593,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
       setItems((prev) =>
         prev.map((i) =>
           i.sku === sku && i.type === type
-            ? (isFixedQuantityLine(i) ? { ...i, quantity: 4 } : { ...i, quantity })
+            ? (isFixedQuantityLine(i)
+                ? { ...i, quantity: 4 }
+                : { ...i, quantity: i.type === "tire" ? Math.min(quantity, i.availableQty ?? Infinity) : quantity })
             : i
         )
       );
