@@ -2410,6 +2410,7 @@ export default async function TiresPage({
     description?: string;
     cost?: number;
     price?: number;
+    priceSourceQty?: number;
     quantity?: { primary?: number; alternate?: number; national?: number };
     imageUrl?: string;
     tireLibraryId?: number;
