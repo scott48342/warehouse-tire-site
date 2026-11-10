@@ -94,12 +94,17 @@ export function LocalTireAddButton({
         <span className="text-sm text-neutral-500">/ea</span>
         <span className="text-sm text-neutral-500 ml-auto">Qty:</span>
         <div className="flex gap-1">
-          {QTY_OPTIONS.filter(q => q <= maxSelectableQty).map((q) => (
+          {QTY_OPTIONS.map((q) => (
             <button
               key={q}
               onClick={() => setQuantity(q)}
+              disabled={q > maxSelectableQty}
+              aria-label={q > maxSelectableQty ? `${q} tires unavailable; ${maxSelectableQty} in stock` : `${q} tire${q === 1 ? "" : "s"}`}
+              title={q > maxSelectableQty ? `Only ${maxSelectableQty} available` : undefined}
               className={`w-8 h-8 rounded-lg text-xs font-bold transition-all ${
-                quantity === q
+                q > maxSelectableQty
+                  ? "bg-neutral-100 text-neutral-400 line-through cursor-not-allowed opacity-70"
+                  : quantity === q
                   ? "bg-green-600 text-white shadow-sm"
                   : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
               }`}
