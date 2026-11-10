@@ -164,7 +164,12 @@ export async function buildCheckoutLines(
     const size = type === "tire" ? (i as CartTireItem).size : undefined;
     const rearSku = String(i.rearSku || "").trim() || undefined;
 
-    const front = await resolvePrice(sku, { type, size });
+    const front = await resolvePrice(sku, {
+      type, size,
+      ...(type === "tire" && !rearSku && Number.isFinite((i as CartTireItem).availableQty)
+        ? { quantity: qtyClient, verifyStock: true }
+        : {}),
+    });
     if (!front) {
       rejected.push({ reason: "unpriceable", sku, axle: rearSku ? "front" : undefined, name });
       continue;

@@ -163,7 +163,8 @@ function MobileItemCard({
             <span className="w-8 text-center font-bold text-base">{qty}</span>
             <button
               onClick={() => onUpdateQty(sku, qty + 1)}
-              className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100"
+              disabled={item.type === 'tire' && item.availableQty != null && qty >= item.availableQty}
+              className="w-9 h-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-lg font-bold text-neutral-700 active:bg-neutral-100 disabled:opacity-40 disabled:cursor-not-allowed"
             >
               +
             </button>

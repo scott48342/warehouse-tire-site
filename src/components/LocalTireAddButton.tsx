@@ -63,6 +63,7 @@ export function LocalTireAddButton({
         imageUrl,
         unitPrice,
         quantity,
+        ...(availableQty != null ? { availableQty: Math.floor(availableQty) } : {}),
         vehicle,
         source,
       });

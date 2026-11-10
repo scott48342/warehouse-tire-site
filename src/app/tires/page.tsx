@@ -222,6 +222,7 @@ type Tire = {
   /** Retail price / MAP (what customer pays) - use this for display when available */
   price?: number;
   quantity?: { primary?: number; alternate?: number; national?: number };
+  priceSourceQty?: number;
   imageUrl?: string;
   displayName?: string;
   /** Tire size (e.g., "275/60R20") */
@@ -553,7 +554,7 @@ async function fetchActiveRebates() {
 async function fetchTireWebTires(
   tireSize: string, 
   brand?: string,
-  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number; includePartialCapital?: boolean },
+  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number; includePartialStock?: boolean },
   baseUrl = getBaseUrl()
 ) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
@@ -573,7 +574,7 @@ async function fetchTireWebTires(
     if (vehicle?.make) params.set("make", vehicle.make);
     if (vehicle?.model) params.set("model", vehicle.model);
     if (vehicle?.wheelDiameter) params.set("wheelDiameter", String(vehicle.wheelDiameter));
-    if (vehicle?.includePartialCapital) params.set("includePartialCapital", "1");
+    if (vehicle?.includePartialStock) params.set("includePartialStock", "1");
     
     const res = await fetch(`${baseUrl}/api/tires/search?${params.toString()}`, {
       cache: "no-store",
@@ -2362,7 +2363,7 @@ export default async function TiresPage({
             make: make || undefined,
             model: model || undefined,
             wheelDiameter: wheelDiaNum || undefined,
-            includePartialCapital: isLocalMode,
+            includePartialStock: isLocalMode,
           }, searchBaseUrl)
         : hasBrandSearch 
           ? fetchTiresByBrand(brandParam, searchBaseUrl)
@@ -2409,6 +2410,7 @@ export default async function TiresPage({
     description?: string;
     cost?: number;
     price?: number;
+    priceSourceQty?: number;
     quantity?: { primary?: number; alternate?: number; national?: number };
     imageUrl?: string;
     tireLibraryId?: number;
@@ -2445,6 +2447,7 @@ export default async function TiresPage({
       cost: t.cost,
       price: t.price, // Retail price / MAP from TireWeb
       quantity: t.quantity,
+      priceSourceQty: t.priceSourceQty,
       imageUrl: t.imageUrl, // TireLibrary images!
       displayName: t.model ? `${t.brand || ''} ${t.model}`.trim() : undefined,
       badges: t.badges,
@@ -4511,9 +4514,12 @@ function TireCard({
   const primary = typeof q.primary === "number" ? q.primary : 0;
   const alternate = typeof q.alternate === "number" ? q.alternate : 0;
   const national = typeof q.national === "number" ? q.national : 0;
-  const maxQty = Math.max(primary, alternate, national, 0);
+  const reportedQty = Math.max(primary, alternate, national, 0);
+  const maxQty = t.priceSourceQty && t.priceSourceQty > 0
+    ? Math.min(reportedQty, t.priceSourceQty)
+    : reportedQty;
   const inStock = maxQty >= 4;
-  const limitedCapitalStock = t.rawSource === "capital" && maxQty > 0 && maxQty < 4;
+  const limitedStock = maxQty > 0 && maxQty < 4;
 
   const tireSku = String(t.partNumber || t.mfgPartNumber || "").trim();
   // Clean the display title: remove redundant brand (shown separately) and "/sl" load markers
@@ -4816,7 +4822,7 @@ function TireCard({
           // Local mode: just show install time indicator (replaces "in stock" text)
           inStock ? (
             <InstallTimeIndicator variant="inline" />
-          ) : limitedCapitalStock ? (
+          ) : limitedStock ? (
             <>
               <span className="text-amber-500">📦</span>
               <span className="text-amber-700">{maxQty} available • Call for a set of 4</span>
@@ -4952,7 +4958,7 @@ function TireCard({
               unitPrice={getDisplayPrice(t)!}
               vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
               source={t.rawSource}
-              availableQty={limitedCapitalStock ? maxQty : undefined}
+              availableQty={maxQty > 0 ? maxQty : undefined}
             />
           ) : (
             <QuickAddTireButton
@@ -4984,7 +4990,7 @@ function TireCard({
           }
           className="rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
         >
-          {t.rawSource === "capital" ? (limitedCapitalStock ? "Call for set of 4" : "Call for details") : "View Details"}
+          {t.rawSource === "capital" ? (limitedStock ? "Call for set of 4" : "Call for details") : "View Details"}
         </Link>
       </div>
     </article>

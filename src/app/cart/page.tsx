@@ -348,7 +348,7 @@ function TireCartItem({
                   onChange={(e) => onUpdateQty(Number(e.target.value))}
                   className="h-9 rounded-lg border border-neutral-200 bg-white px-3 text-sm font-semibold"
                 >
-                  {[1, 2, 4, 5, 6, 8].map((n) => (
+                  {[1, 2, 3, 4, 5, 6, 8].filter((n) => item.availableQty == null || n <= item.availableQty).map((n) => (
                     <option key={n} value={n}>
                       {n}
                     </option>
