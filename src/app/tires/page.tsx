@@ -222,6 +222,7 @@ type Tire = {
   /** Retail price / MAP (what customer pays) - use this for display when available */
   price?: number;
   quantity?: { primary?: number; alternate?: number; national?: number };
+  priceSourceQty?: number;
   imageUrl?: string;
   displayName?: string;
   /** Tire size (e.g., "275/60R20") */
@@ -2445,6 +2446,7 @@ export default async function TiresPage({
       cost: t.cost,
       price: t.price, // Retail price / MAP from TireWeb
       quantity: t.quantity,
+      priceSourceQty: t.priceSourceQty,
       imageUrl: t.imageUrl, // TireLibrary images!
       displayName: t.model ? `${t.brand || ''} ${t.model}`.trim() : undefined,
       badges: t.badges,
@@ -4511,7 +4513,10 @@ function TireCard({
   const primary = typeof q.primary === "number" ? q.primary : 0;
   const alternate = typeof q.alternate === "number" ? q.alternate : 0;
   const national = typeof q.national === "number" ? q.national : 0;
-  const maxQty = Math.max(primary, alternate, national, 0);
+  const reportedQty = Math.max(primary, alternate, national, 0);
+  const maxQty = t.priceSourceQty && t.priceSourceQty > 0
+    ? Math.min(reportedQty, t.priceSourceQty)
+    : reportedQty;
   const inStock = maxQty >= 4;
   const limitedStock = maxQty > 0 && maxQty < 4;
 
@@ -4952,7 +4957,7 @@ function TireCard({
               unitPrice={getDisplayPrice(t)!}
               vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
               source={t.rawSource}
-              availableQty={limitedStock ? maxQty : undefined}
+              availableQty={maxQty > 0 ? maxQty : undefined}
             />
           ) : (
             <QuickAddTireButton

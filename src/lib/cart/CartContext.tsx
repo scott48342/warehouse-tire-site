@@ -397,7 +397,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
               updatedItems[idx] = {
                 ...updatedItems[idx], unitPrice: currentPrice,
                 ...(refreshedAvailable != null && refreshedAvailable > 0 ? {
-                  availableQty: refreshedAvailable < 4 ? refreshedAvailable : undefined,
+                  availableQty: refreshedAvailable,
                   quantity: Math.min(updatedItems[idx].quantity, refreshedAvailable),
                   source: result.source || tire.source,
                 } : {}),

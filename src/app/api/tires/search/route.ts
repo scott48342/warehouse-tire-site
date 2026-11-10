@@ -1684,7 +1684,9 @@ async function mergeTireResults(
     }
     
     // Calculate this source's available quantity
-    const tireSourceQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
+    const tireSourceQty = includePartialStock
+      ? availableAtOneLocation(tire)
+      : tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
     
     if (!merged.has(key)) {
       // For TireWeb results, check if K&M has inventory for this part number
@@ -1854,7 +1856,11 @@ async function mergeTireResults(
     for (const [key, tire] of merged) {
       const candidates = stockCandidates.get(key) || [];
       const current = candidates.find(candidate => candidate.source === tire.source && candidate.available >= minQty);
-      if (current) continue;
+      if (current) {
+        tire.quantity = { primary: current.available, alternate: 0, national: 0 };
+        tire.priceSourceQty = current.available;
+        continue;
+      }
 
       const fullSet = candidates.filter(candidate => candidate.available >= minQty);
       const eligible = fullSet.length ? fullSet : candidates;
