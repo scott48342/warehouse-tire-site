@@ -552,7 +552,8 @@ async function fetchActiveRebates() {
 async function fetchTireWebTires(
   tireSize: string, 
   brand?: string,
-  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number }
+  vehicle?: { year?: string; make?: string; model?: string; wheelDiameter?: number },
+  baseUrl = getBaseUrl()
 ) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
   try {
@@ -572,7 +573,7 @@ async function fetchTireWebTires(
     if (vehicle?.model) params.set("model", vehicle.model);
     if (vehicle?.wheelDiameter) params.set("wheelDiameter", String(vehicle.wheelDiameter));
     
-    const res = await fetch(`${getBaseUrl()}/api/tires/search?${params.toString()}`, {
+    const res = await fetch(`${baseUrl}/api/tires/search?${params.toString()}`, {
       cache: "no-store",
     });
     if (!res.ok) return { results: [] };
@@ -597,6 +598,7 @@ async function fetchLiftedTires(opts: {
   liftInches: number;
   buildType: string;
   brand?: string;
+  baseUrl?: string;
 }) {
   try {
     const params = new URLSearchParams({
@@ -613,7 +615,7 @@ async function fetchLiftedTires(opts: {
       params.set("brand", opts.brand);
     }
     console.log(`[fetchLiftedTires] Fetching lifted tires: ${opts.make} ${opts.model}, ${opts.liftInches}" lift, ${opts.wheelDiameter}" wheels`);
-    const res = await fetch(`${getBaseUrl()}/api/tires/search?${params.toString()}`, {
+    const res = await fetch(`${opts.baseUrl || getBaseUrl()}/api/tires/search?${params.toString()}`, {
       cache: "no-store",
     });
     if (!res.ok) {
@@ -633,9 +635,9 @@ async function fetchLiftedTires(opts: {
  * Fetch tires by brand only (no size required)
  * Used for brand browsing mode
  */
-async function fetchTiresByBrand(brand: string) {
+async function fetchTiresByBrand(brand: string, baseUrl = getBaseUrl()) {
   try {
-    const res = await fetch(`${getBaseUrl()}/api/tires/search?brand=${encodeURIComponent(brand)}&minQty=4&pageSize=100`, {
+    const res = await fetch(`${baseUrl}/api/tires/search?brand=${encodeURIComponent(brand)}&minQty=4&pageSize=100`, {
       cache: "no-store",
     });
     if (!res.ok) return { results: [] };
@@ -1076,6 +1078,9 @@ export default async function TiresPage({
   // Support ?mode=local query param for dev/testing (server-side check)
   const modeOverride = Array.isArray(sp.mode) ? sp.mode[0] : sp.mode;
   const isLocalMode = modeOverride === 'local' || shopContext.mode === 'local';
+  // The shared NEXT_PUBLIC_BASE_URL points at the national shop. Local searches
+  // must use the local API so local-only suppliers such as Capital appear.
+  const searchBaseUrl = isLocalMode ? "https://shop.warehousetire.net" : getBaseUrl();
   const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
   const sort = (sortRaw ?? "price_asc").trim();
   const pageRaw = Array.isArray(sp.page) ? sp.page[0] : sp.page;
@@ -2347,6 +2352,7 @@ export default async function TiresPage({
           liftInches: liftedInches,
           buildType: "lifted",
           brand: brandParam || undefined,
+          baseUrl: searchBaseUrl,
         })
       : (wpSize || selectedSize) 
         ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined, {
@@ -2354,9 +2360,9 @@ export default async function TiresPage({
             make: make || undefined,
             model: model || undefined,
             wheelDiameter: wheelDiaNum || undefined,
-          }) 
+          }, searchBaseUrl)
         : hasBrandSearch 
-          ? fetchTiresByBrand(brandParam) 
+          ? fetchTiresByBrand(brandParam, searchBaseUrl)
           : null,
     shouldFetchStaggeredPairs 
       ? fetchStaggeredTirePairs(staggeredFrontTireSize!, staggeredRearTireSize!)
