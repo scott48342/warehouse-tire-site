@@ -31,6 +31,7 @@ import {
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { isPremiumTrimUxEnabled } from "@/lib/features/premiumTrimUx";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
+import { getDelinteModelImage } from "@/lib/images/delinteModelImages";
 import { TireFilterSidebar } from "@/components/TireFilterSidebar";
 import { MobileFilterDrawer } from "@/components/MobileFilterDrawer";
 import { MiniRatings, PerformanceIndicators } from "@/components/PerformanceIndicators";
@@ -2355,7 +2356,7 @@ export default async function TiresPage({
           baseUrl: searchBaseUrl,
         })
       : (wpSize || selectedSize) 
-        ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined, {
+        ? fetchTireWebTires(wpSize || selectedSize, undefined, {
             year: year || undefined,
             make: make || undefined,
             model: model || undefined,
@@ -2436,7 +2437,7 @@ export default async function TiresPage({
       rawSource: t.source, // Preserve full source for cart tracking (e.g., "tireweb:atd")
       partNumber: t.partNumber,
       mfgPartNumber: t.mfgPartNumber,
-      brand: t.brand,
+      brand: String(t.brand || "").toUpperCase() === "STR" ? "Starfire" : t.brand,
       model: t.model, // Model name (e.g., "OPEN COUNTRY A/T III")
       description: t.description || (t.brand && t.model ? `${t.brand} ${t.model}` : undefined),
       cost: t.cost,
@@ -2599,7 +2600,7 @@ export default async function TiresPage({
     return {
       ...t,
       displayName: asset?.display_name || t.displayName || undefined,
-      imageUrl: asset?.image_url || t.imageUrl || undefined,
+      imageUrl: asset?.image_url || t.imageUrl || getDelinteModelImage(t.brand, t.model) || undefined,
       prettyName,
     };
   });

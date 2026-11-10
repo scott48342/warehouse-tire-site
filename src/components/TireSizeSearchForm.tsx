@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import tireSizes from "@/data/tire-sizes.json";
 
 function normalizeTireSize(width: number | null, aspect: number | null, rim: number | null) {
@@ -27,7 +26,7 @@ export function TireSizeSearchForm({
   initialAspectRatio = "",
   initialDiameter = "",
 }: TireSizeSearchFormProps) {
-  const router = useRouter();
+  const navigate = (url: string) => window.location.assign(url);
 
   // Metric tire state
   const [tireStep, setTireStep] = useState<"w" | "a" | "r">(
@@ -201,7 +200,7 @@ export function TireSizeSearchForm({
                     }
                     const next = new URLSearchParams();
                     next.set("size", nextSize);
-                    router.push(`/tires?${next.toString()}`);
+                    navigate(`/tires?${next.toString()}`);
                   }}
                 />
               ))}
@@ -252,7 +251,7 @@ export function TireSizeSearchForm({
               onClick={() => {
                 const next = new URLSearchParams();
                 next.set("size", metricSelected);
-                router.push(`/tires?${next.toString()}`);
+                navigate(`/tires?${next.toString()}`);
               }}
               className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)] disabled:opacity-60"
             >
@@ -336,7 +335,7 @@ export function TireSizeSearchForm({
                     const next = new URLSearchParams();
                     next.set("flotation", final);
                     if (rawSize) next.set("size", rawSize);
-                    router.push(`/tires?${next.toString()}`);
+                    navigate(`/tires?${next.toString()}`);
                   }}
                 />
               ))}
@@ -388,7 +387,7 @@ export function TireSizeSearchForm({
               onClick={() => {
                 const next = new URLSearchParams();
                 next.set("flotation", flotationSelected);
-                router.push(`/tires?${next.toString()}`);
+                navigate(`/tires?${next.toString()}`);
               }}
               className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)] disabled:opacity-60"
             >
@@ -416,7 +415,7 @@ export function TireSizeSearchForm({
                   onClick={() => {
                     const next = new URLSearchParams();
                     next.set("size", s);
-                    router.push(`/tires?${next.toString()}`);
+                    navigate(`/tires?${next.toString()}`);
                   }}
                 />
               ))}
@@ -432,7 +431,7 @@ export function TireSizeSearchForm({
       <p className="mt-6 text-center text-xs text-neutral-500">
         Not sure of your size?{" "}
         <button 
-          onClick={() => router.push("/tires")}
+          onClick={() => navigate("/tires")}
           className="text-blue-600 hover:underline font-semibold"
         >
           Search by vehicle instead
