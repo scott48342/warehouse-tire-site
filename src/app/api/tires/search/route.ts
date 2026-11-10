@@ -1676,7 +1676,7 @@ async function mergeTireResults(
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
     if (includePartialStock) {
       const available = availableAtOneLocation(tire);
-      if (available > 0 && ((tire.price ?? 0) > 0 || (tire.cost ?? 0) > 0)) {
+      if (available > 0) {
         const candidates = stockCandidates.get(key) || [];
         candidates.push({ source: tire.source, cost: tire.cost, price: tire.price, available });
         stockCandidates.set(key, candidates);
@@ -1855,7 +1855,10 @@ async function mergeTireResults(
   if (includePartialStock) {
     for (const [key, tire] of merged) {
       const candidates = stockCandidates.get(key) || [];
-      const current = candidates.find(candidate => candidate.source === tire.source && candidate.available >= minQty);
+      const hasPrice = (candidate: typeof candidates[number]) =>
+        (candidate.price ?? 0) > 0 || (candidate.cost ?? 0) > 0;
+      const current = candidates.find(candidate =>
+        candidate.source === tire.source && candidate.available >= minQty && hasPrice(candidate));
       if (current) {
         tire.quantity = { primary: current.available, alternate: 0, national: 0 };
         tire.priceSourceQty = current.available;
@@ -1863,10 +1866,16 @@ async function mergeTireResults(
       }
 
       const fullSet = candidates.filter(candidate => candidate.available >= minQty);
-      const eligible = fullSet.length ? fullSet : candidates;
+      const pricedFullSet = fullSet.filter(hasPrice);
+      const pricedCandidates = candidates.filter(hasPrice);
+      // A priced single or pair must remain buyable even if another supplier
+      // reports a larger quantity but has not supplied a price.
+      const eligible = pricedFullSet.length ? pricedFullSet
+        : pricedCandidates.length ? pricedCandidates
+        : fullSet.length ? fullSet : candidates;
       if (!eligible.length) continue;
       eligible.sort((a, b) => {
-        if (!fullSet.length && a.available !== b.available) return b.available - a.available;
+        if (eligible !== pricedFullSet && a.available !== b.available) return b.available - a.available;
         const aAuto = a.source === "usautoforce" || a.source === "wheelpros" ? 1 : 0;
         const bAuto = b.source === "usautoforce" || b.source === "wheelpros" ? 1 : 0;
         if (aAuto !== bAuto) return bAuto - aAuto;
@@ -1874,8 +1883,8 @@ async function mergeTireResults(
       });
       const selected = eligible[0];
       tire.source = selected.source;
-      tire.cost = selected.cost;
-      tire.price = selected.price;
+      tire.cost = (selected.cost ?? 0) > 0 ? selected.cost : null;
+      tire.price = (selected.price ?? 0) > 0 ? selected.price : null;
       tire.quantity = { primary: selected.available, alternate: 0, national: 0 };
       tire.priceSource = selected.source;
       tire.priceSourceQty = selected.available;
@@ -1967,13 +1976,7 @@ async function applyCachedImages(results: TireResult[]): Promise<TireResult[]> {
  * Check if an image URL is valid and not a placeholder/noimage
  * Feature flag: set TIRE_ALLOW_NO_IMAGE=true to disable filtering (for testing)
  */
-function isValidProductImage(imageUrl: string | null | undefined): boolean {
-  // TEMPORARY: Disable image filtering until we have better image coverage
-  // Feature flag: set TIRE_ALLOW_NO_IMAGE=false to re-enable filtering
-  if (process.env.TIRE_ALLOW_NO_IMAGE !== "false") {
-    return true;
-  }
-  
+function hasUsableProductImage(imageUrl: string | null | undefined): boolean {
   // Must have a URL
   if (!imageUrl || typeof imageUrl !== "string") return false;
   
@@ -1981,8 +1984,8 @@ function isValidProductImage(imageUrl: string | null | undefined): boolean {
   const url = imageUrl.trim().toLowerCase();
   if (!url || url.length < 10) return false;
   
-  // Must start with http/https
-  if (!url.startsWith("http://") && !url.startsWith("https://")) return false;
+  // Supplier URLs and our own catalog assets are valid image locations.
+  if (!url.startsWith("http://") && !url.startsWith("https://") && !url.startsWith("/images/")) return false;
   
   // Block known placeholder/noimage patterns
   const invalidPatterns = [
@@ -2008,6 +2011,11 @@ function isValidProductImage(imageUrl: string | null | undefined): boolean {
   }
   
   return true;
+}
+
+function isValidProductImage(imageUrl: string | null | undefined): boolean {
+  // Preserve the existing image-filter feature flag for non-local searches.
+  return process.env.TIRE_ALLOW_NO_IMAGE !== "false" || hasUsableProductImage(imageUrl);
 }
 
 /**
@@ -2149,7 +2157,7 @@ export async function GET(req: Request) {
       const includePartialCapital = capitalEnabled && url.searchParams.get("includePartialCapital") === "1";
       const includePartialStock = url.searchParams.get("includePartialStock") === "1";
       // Merge happens before caching, so quantity/page-size variants need distinct entries.
-      const cacheKey = `${buildSizeCacheKey(sizeRaw)}${capitalCacheSuffix}:qty${minQty}:page${pageSize}${includePartialCapital ? ":partial-capital-v1" : ""}${includePartialStock ? ":partial-all-v1" : ""}`;
+      const cacheKey = `${buildSizeCacheKey(sizeRaw)}${capitalCacheSuffix}:qty${minQty}:page${pageSize}${includePartialCapital ? ":partial-capital-v1" : ""}${includePartialStock ? ":partial-all-v2" : ""}`;
       const tSearch0 = Date.now();
       
       // ═══════════════════════════════════════════════════════════════════════
@@ -2200,10 +2208,17 @@ export async function GET(req: Request) {
       // EXCEPTION (2026-08-05): commercial/medium-truck sizes (19.5"/22.5"/24.5", 11R22.5)
       // have very limited product imagery — keep results, cards render brand fallback
       const debug = url.searchParams.get("debug") === "true";
-      const skipImageFilter = isCommercialTruckSize(sizeRaw);
+      const skipImageFilter = isCommercialTruckSize(sizeRaw) || includePartialStock;
       let { filtered: finalResults, stats: imageStats } = skipImageFilter
         ? { filtered: cacheResult.results, stats: { total: cacheResult.results.length, valid: cacheResult.results.length, invalid: 0, invalidReasons: {} as Record<string, number> } }
         : filterTiresWithValidImages(cacheResult.results, debug);
+      // Local shoppers can ask about stocked tires even when the supplier has no photo.
+      // Clear known placeholder URLs so the card renders its branded illustration.
+      if (includePartialStock) {
+        finalResults = finalResults.map(tire => hasUsableProductImage(tire.imageUrl)
+          ? tire
+          : { ...tire, imageUrl: null });
+      }
       
       // ═══════════════════════════════════════════════════════════════════════
       // SINGLE-TIRE LOOKUP BY PART NUMBER (for PDP detail pages)

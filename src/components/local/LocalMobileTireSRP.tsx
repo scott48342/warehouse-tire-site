@@ -23,6 +23,8 @@ import { useIsLocalMode } from '@/contexts/ShopContextProvider';
 import { TirePriceDisplay } from '@/components/TirePriceDisplay';
 import { InstallTimeIndicator } from '@/components/InstallTimeIndicator';
 import { LocalTireAddButton } from '@/components/LocalTireAddButton';
+import { TireProductImage } from '@/components/TireProductImage';
+import { BRAND } from '@/lib/brand';
 
 // ============================================================================
 // TYPES
@@ -118,8 +120,8 @@ function MobileTireCard({
   tire: TireProduct;
   onAddToCart?: (tire: TireProduct, qty: number) => void;
 }) {
-  const [qty, setQty] = useState(4);
   const stock = getTotalStock(tire);
+  const [qty, setQty] = useState(Math.max(1, Math.min(4, stock)));
   const price = getDisplayPrice(tire);
   const category = tire.enrichment?.treadCategory || tire.badges?.terrain || 'All-Season';
   const mileage = tire.enrichment?.mileage || tire.badges?.warrantyMiles;
@@ -148,19 +150,13 @@ function MobileTireCard({
         href={`/tires/${encodeURIComponent(tire.partNumber)}?source=tireweb&size=${encodeURIComponent(tire.size)}`}
         className="flex justify-center"
       >
-        {tire.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={tire.imageUrl}
-            alt={`${tire.brand} ${tire.model}`}
-            loading="lazy"
-            className="h-[180px] w-[180px] object-contain"
-          />
-        ) : (
-          <div className="w-[180px] h-[180px] bg-neutral-100 rounded-xl flex items-center justify-center">
-            <span className="text-4xl">🛞</span>
-          </div>
-        )}
+        <TireProductImage
+          imageUrl={tire.imageUrl}
+          brand={tire.brand}
+          model={tire.model}
+          imageClassName="h-[180px] w-[180px] object-contain"
+          fallbackClassName="flex h-[180px] w-[180px] flex-col items-center justify-center rounded-xl bg-neutral-50 p-2 text-center"
+        />
       </Link>
       
       {/* Badges Row */}
@@ -186,7 +182,7 @@ function MobileTireCard({
         <div className="flex items-baseline justify-between">
           <span className="text-sm text-neutral-600">Per tire</span>
           <span className="text-xl font-bold text-neutral-900">
-            ${price?.toFixed(2) || '—'}
+            {price != null ? `$${price.toFixed(2)}` : 'Call for price'}
           </span>
         </div>
         
@@ -220,7 +216,7 @@ function MobileTireCard({
               <p className="text-xs text-neutral-500">Installed, balanced, disposal</p>
             </div>
             <span className="text-2xl font-extrabold text-green-600">
-              ${setTotal.toFixed(2)}
+              {price != null ? `$${setTotal.toFixed(2)}` : 'Call for price'}
             </span>
           </div>
         </div>
@@ -248,14 +244,19 @@ function MobileTireCard({
       
       {/* Action buttons */}
       <div className="space-y-3">
-        <LocalTireAddButton
-          sku={tire.partNumber}
-          brand={tire.brand}
-          model={tire.model || 'Tire'}
-          size={tire.size}
-          imageUrl={tire.imageUrl}
-          unitPrice={price || 0}
-        />
+        {price != null ? (
+          <LocalTireAddButton
+            sku={tire.partNumber}
+            brand={tire.brand}
+            model={tire.model || 'Tire'}
+            size={tire.size}
+            imageUrl={tire.imageUrl}
+            unitPrice={price}
+            availableQty={stock > 0 ? stock : undefined}
+          />
+        ) : (
+          <a href={BRAND.links.tel} className="block w-full rounded-xl bg-red-600 px-4 py-3 text-center font-bold text-white">Call for price</a>
+        )}
         <Link
           href={`/tires/${encodeURIComponent(tire.partNumber)}?source=tireweb&size=${encodeURIComponent(tire.size)}`}
           className="block w-full h-[52px] rounded-xl border-2 border-neutral-200 bg-white hover:bg-neutral-50 text-neutral-900 font-semibold text-base text-center leading-[48px] transition-colors"

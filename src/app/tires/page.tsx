@@ -12,6 +12,7 @@ import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 import { LocalTireAddButton } from "@/components/LocalTireAddButton";
+import { TireProductImage } from "@/components/TireProductImage";
 import { InstallTimeIndicator } from "@/components/InstallTimeIndicator";
 import { PackageSummary } from "@/components/PackageSummary";
 // PackageJourneyBar removed - not wanted
@@ -4701,20 +4702,12 @@ function TireCard({
 
       {/* Product image with badge stack overlay */}
       <div className="tire-card-image-container relative z-10 mt-4 overflow-hidden rounded-lg pointer-events-none">
-        {t.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={t.imageUrl}
-            alt={displayTitle}
-            loading="lazy"
-            className="transition-transform duration-300 ease-out group-hover:scale-[1.02]"
-          />
-        ) : (
-          <div className="tire-card-image-placeholder">
-            <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-            <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
-          </div>
-        )}
+        <TireProductImage
+          imageUrl={t.imageUrl}
+          brand={t.brand}
+          model={displayTitle}
+          imageClassName="transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+        />
         
         {/* Badge stack - top left of image (constrained to prevent overflow) */}
         <div className="absolute top-2 left-2 right-2 flex flex-col items-start gap-1 overflow-hidden">
