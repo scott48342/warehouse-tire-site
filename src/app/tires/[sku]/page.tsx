@@ -9,6 +9,7 @@ import { TireBuyBox } from "@/components/TireBuyBox";
 import { BackToTiresButton } from "@/components/BackToTiresButton";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
+import { getDelinteModelImage } from "@/lib/images/delinteModelImages";
 import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tires/normalization";
 import { derivePerformanceRatings, parseUTQG, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
@@ -665,6 +666,11 @@ export default async function TireDetailPage({
 
       {
         if (tire) {
+          tire = {
+            ...tire,
+            brand: String(tire.brand || "").toUpperCase() === "STR" ? "Starfire" : tire.brand,
+            imageUrl: tire.imageUrl || getDelinteModelImage(tire.brand, tire.model),
+          };
           const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
           const price = typeof tire.price === "number" && tire.price > 0 ? tire.price : null;
           const displayPrice = (price && (!cost || price > cost))

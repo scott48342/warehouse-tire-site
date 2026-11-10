@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import type { TreadCategory, MileageBand } from "@/lib/tires/normalization";
 import { TireTypesGuide } from "@/components/BuyingGuides";
@@ -229,9 +229,13 @@ function PriceInput({
 ============================================================================= */
 
 export function TireFilterSidebar({ data }: { data: FilterData }) {
-  const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  // The server builds the tire list. A full navigation keeps the visible cards
+  // and URL together even when a client-side RSC navigation stalls.
+  const navigate = useCallback((url: string) => {
+    window.location.assign(url);
+  }, []);
   
   const buildUrl = useCallback((updates: Record<string, string | string[] | null>) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -266,21 +270,21 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
   const toggleArrayFilter = useCallback((key: string, value: string, currentValues: string[]) => {
     const newValues = currentValues.includes(value)
       ? currentValues.filter(v => v !== value)
-      : [...currentValues, value];
-    router.push(buildUrl({ [key]: newValues }));
-  }, [router, buildUrl]);
+      : key === "brand" ? [value] : [...currentValues, value];
+    navigate(buildUrl({ [key]: newValues }));
+  }, [navigate, buildUrl]);
   
   const toggleBooleanFilter = useCallback((key: string, currentValue: boolean) => {
-    router.push(buildUrl({ [key]: currentValue ? null : "1" }));
-  }, [router, buildUrl]);
+    navigate(buildUrl({ [key]: currentValue ? null : "1" }));
+  }, [navigate, buildUrl]);
   
   const setSingleFilter = useCallback((key: string, value: string | null) => {
-    router.push(buildUrl({ [key]: value }));
-  }, [router, buildUrl]);
+    navigate(buildUrl({ [key]: value }));
+  }, [navigate, buildUrl]);
   
   const updatePrice = useCallback((minOrMax: "priceMin" | "priceMax", value: string) => {
-    router.push(buildUrl({ [minOrMax]: value || null }));
-  }, [router, buildUrl]);
+    navigate(buildUrl({ [minOrMax]: value || null }));
+  }, [navigate, buildUrl]);
   
   const clearAllUrl = buildUrl({
     brand: null,
@@ -322,12 +326,12 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
       <div className="flex items-center justify-between pb-2 border-b border-neutral-200">
         <h2 className="text-sm font-semibold text-neutral-900">Filters</h2>
         {activeFilterCount > 0 && (
-          <Link
+          <a
             href={clearAllUrl}
             className="text-[11px] font-medium text-neutral-500 hover:text-neutral-800 hover:underline transition-colors"
           >
             Clear ({activeFilterCount})
-          </Link>
+          </a>
         )}
       </div>
       
@@ -418,7 +422,7 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         {(data.priceMin !== null || data.priceMax !== null) && (
           <button
             type="button"
-            onClick={() => router.push(buildUrl({ priceMin: null, priceMax: null }))}
+            onClick={() => navigate(buildUrl({ priceMin: null, priceMax: null }))}
             className="mt-1.5 text-[11px] text-neutral-500 hover:text-neutral-800 hover:underline"
           >
             Clear
